@@ -1,0 +1,21 @@
+slug: value-proposition-builder
+name: "Value proposition builder"
+summary: "Paste your offer and customer facts. Get a value pitch in five and a half parts that ends with proof of profit."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: offer, required: false}
+  - {type: brand_brain, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [jeffrey-gitomer]
+credits:
+  - {title: "Show Me the Value, or I'll Show You the Door", by: "Jeffrey Gitomer (2016)", used: "Building a value statement from company, product and seller value, an incentive, the customer's profit, a half step for value after the sale, and proof from a similar customer"}
+  - {title: "Uncovering your own secret of selling, why you buy", by: "Jeffrey Gitomer (2016)", used: "Checking the pitch against the buyer's own reasons and doubts"}

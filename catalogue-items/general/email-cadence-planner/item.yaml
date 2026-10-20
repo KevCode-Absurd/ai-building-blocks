@@ -1,0 +1,19 @@
+slug: email-cadence-planner
+name: "Email cadence planner"
+summary: "Paste your list size, send history and offers. Get a weekly email plan, a story for each, the offer in the P.S."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: email_flow}
+origin: rebuilt
+version: 1.0.0
+minds: [john-carlton]
+credits:
+  - {title: "Really Stupid Blunders You're Making With Your Biz & Career", by: "John Carlton, 2023", used: "Emailing more often at a pace you can keep, one story or tactic per email, the offer in the P.S., curious subject lines, and tracking unsubscribes without panic"}

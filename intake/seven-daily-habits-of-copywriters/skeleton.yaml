@@ -1,0 +1,43 @@
+# Workflow skeleton for The 7 Daily Habits of Successful Copywriters (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: seven-daily-habits-of-copywriters
+source:
+  title: "The 7 Daily Habits of Successful Copywriters"
+  by: "Clayton Makepeace"
+  kind: talk
+  rights: ideas-only
+  year: 2005
+minds: [clayton-makepeace]
+workflow:
+  slug: research-your-buyer-and-outline-the-sales-letter
+  name: "Research your buyer and outline the sales letter"
+  summary: "Give it your product material. Get sorted research, the feeling to write to and a full sales letter outline."
+  when: "you are about to write a long sales page or letter and want the research done first."
+  job: write-landing-page
+  level: intermediate
+steps:
+  - name: "Copy research file builder"
+    skill: copy-research-file-builder
+    job: research
+    task: understand-customers
+    from: "The 7 Daily Habits of Successful Copywriters, AWAI 2005"
+    method: ["Gather every issue, bonus and past promotion you can, newest first", "Read them and copy passages into separate files by purpose", "Make one file for the people behind the product and their stories", "Make one for passages that touch the buyer's strongest emotions", "Make one for passages that make the buyer's problem real and show why others failed to fix it", "For each bonus, note its value and write a small ad for it", "Pull out proof elements you can give away and lines that fascinate", "Study the top two or three past hits"]
+    inputs: [product_data, brand_brain!, voc_reviews!]
+    outputs: [angle_library, brand_brain]
+    note: "Sorted research files and a short list of proof you can give away"
+  - name: "Dominant emotion finder"
+    skill: dominant-emotion-finder
+    job: research
+    task: understand-customers
+    from: "The 7 Daily Habits of Successful Copywriters, AWAI 2005"
+    method: ["Think first about the buyer, not the product", "List the events, trends or experiences the buyer has lived through lately", "For each, write how the buyer likely feels about it", "Note what works and fails in this market, and why strong controls connect", "Study the product for how it solves the most frightening or frustrating problem and delivers the deepest desire", "Name the one dominant emotion, fear or desire, mild to intense, that is already there", "Leave it a day or two, talk it over with someone, then choose the main theme"]
+    inputs: [angle_library, product_data!, persona!, voc_reviews!]
+    outputs: [persona, angle_library]
+    note: "The strongest feeling to write to and where it comes from. Reads the angle library from the step before"
+  - name: "Sales letter outline planner"
+    skill: sales-letter-outline-planner
+    job: page
+    from: "The 7 Daily Habits of Successful Copywriters, AWAI 2005"
+    method: ["State the theme and the reader's dominant emotion", "Gather a pile of headline and subhead ideas from the research", "Choose the order of the whole piece before writing any copy", "Note which claims need proof and find it for each", "Plan sidebars and boxes for the proof that would slow the main story", "Put extra effort into headline, deck and lead-in, which can move response most", "Confirm what the client wants: break-even response or profit on each send", "Show the outline to a person outside the project"]
+    inputs: [angle_library, persona!, product_data]
+    outputs: [brief]
+    note: "A full outline, with headline ideas and the proof each claim needs. Reads the angle library from the step before"

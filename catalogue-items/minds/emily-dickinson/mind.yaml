@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "Her letters to T. W. Higginson, printed in his essay \"Emily Dickinson\" in Carlyle's Laugh and Other Surprises (1909; Project Gutenberg eBook #68129)", by: "Emily Dickinson and Thomas Wentworth Higginson", url: "https://www.gutenberg.org/cache/epub/68129/pg68129-images.html", kind: own-words}
   - {n: 4, title: "Emily Dickinson", by: "Academy of American Poets (poets.org)", url: "https://poets.org/poet/emily-dickinson", kind: reference}
   - {n: 5, title: "Because I could not stop for Death", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Because_I_could_not_stop_for_Death", kind: reference}
+
 tests:
   - {kind: use, prompt: "Write an eight-line poem about waiting for test results, in the manner of Emily Dickinson."}
   - {kind: use, prompt: "Here is my 120-word thank-you note. Cut it to 30 words without losing the feeling."}

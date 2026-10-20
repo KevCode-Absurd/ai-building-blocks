@@ -1,0 +1,127 @@
+new_slug: sales-role-splitter
+name: "Sales role splitter"
+summary: "List who does which sales job. Get which job to split out first, who owns it and what to track."
+job: lead-people
+thinking: medium
+thinking_why: "It weighs time shares and picks a split, but the rules are fixed."
+
+headline: "Sales role splitter"
+subhead: "Give it who does which sales job today and the plan from the step before. It shows where the time goes, picks the first job to split out, sets the handoff and picks result numbers. You get a short sales role plan."
+
+explain: |
+  In a small team, one person often finds leads, answers inbound, closes deals and looks after customers. The jobs that feel urgent win, and finding new leads is usually the one that loses. Growth then stalls without anyone noticing why.
+
+  This skill lists every sales job with its share of time and flags side jobs that take more than a fifth of a role. It picks the first job to split out, sets the niche that person works, defines what counts as a qualified opportunity and picks result numbers instead of activity counts. It also notes what is lost at each handoff.
+
+when:
+  - "Your closers also find their own leads, and leads dry up when they are busy."
+  - "You are about to make your first sales hire."
+  - "Deals stall at a handoff and you do not know why."
+
+you_give:
+  - "Your sales plan or niche"
+  - "Who does each sales job and roughly how long it takes"
+  - "Numbers such as leads per month (optional)"
+you_get:
+  - "A job table with time shares"
+  - "The first job to split and why"
+  - "A handoff rule that defines qualified"
+  - "Two or three result numbers per role"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your plan, then list each person and the sales jobs they do."
+  - "Check the time shares. Correct any that are guesses."
+  - "Share the handoff rule with both sides before the first hire."
+
+how_it_works:
+  - title: "Lists the jobs"
+    text: "Prospecting, inbound, closing and account care."
+  - title: "Flags side jobs"
+    text: "Anything over a fifth of a role."
+  - title: "Picks the first split"
+    text: "Usually the job that gets squeezed."
+  - title: "Sets the niche"
+    text: "The one customer type that person works."
+  - title: "Defines the handoff"
+    text: "What qualified means and who qualifies."
+  - title: "Chooses numbers"
+    text: "Results, not call counts."
+  - title: "Notes lost context"
+    text: "What is lost and how to keep it."
+
+output_shape: |
+  JOBS
+  <job> | owner <name> | <share of week>
+
+  SIDE JOBS
+  <person>: <job> at <share>
+
+  FIRST SPLIT
+  <job> to <role> because <reason>
+  Their day: <list>
+
+  NICHE
+  <customer + pain>
+
+  HANDOFF
+  Qualified means: <rule>
+  Qualified by: <role> | Received by: <role>
+  Sent with it: <list>
+
+  RESULT NUMBERS
+  <role>: <number> measured by <how>
+
+  LOST CONTEXT
+  <handoff>: <what is lost> -> <fix>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "Time shares"
+    how: "Use real hours if you have them. Guesses are marked and weaken the call."
+  - what: "Team size"
+    how: "Say how many people sell. A team of two splits differently from six."
+  - what: "What counts as qualified"
+    how: "Give your own tests: budget, need, timing, decision maker."
+  - what: "Deal length"
+    how: "A long sales cycle needs more notes at the handoff."
+
+judge:
+  - "Every job has an owner and a time share."
+  - "The first split has a reason from the table."
+  - "Qualified is defined in tests someone can check."
+  - "No role is measured by calls or emails alone."
+  - "Each handoff names what could be lost."
+
+test:
+  - "Run it on your own team and see if the table matches what you know."
+  - "Ask a closer to read the handoff rule and say what they would change."
+  - "Run it twice. The first split should be the same job."
+  - "After a month, check one result number against actual sales."
+
+improve:
+  - "Add your own definition of qualified in step 5."
+  - "Add your CRM stage names to the handoff."
+  - "Record handoff notes from real deals to improve step 7."
+  - "Pair it with a stranger first-message writer for the new lead generator."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Building the table and plan is text work."}
+    - {name: "A CRM such as HubSpot or Pipedrive", why: "Tracks leads, owners and stages so the result numbers are real."}
+  inputs:
+    - "Your CRM export"
+    - "A calendar of one week for each seller"
+    - "The niche sentence"
+    - "Two recent lost deals"
+
+terms:
+  - term: "Prospecting"
+    meaning: "Finding and starting talks with people who might buy."
+  - term: "Qualified opportunity"
+    meaning: "A lead that meets your tests for need, timing and decision power."

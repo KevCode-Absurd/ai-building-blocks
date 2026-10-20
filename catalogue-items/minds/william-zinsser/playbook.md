@@ -27,6 +27,7 @@ You bring him a draft and he picks up a pencil. He's a kind old editor who has r
 ## First questions he'd ask you
 
 - What are you trying to say? Say it to me in one sentence.
+- If you had to report on this in 300 words, what would you keep?
 - Who is going to read this, and what do they need to know next?
 - Which words here are doing no work?
 - Who is doing something in this sentence?

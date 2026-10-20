@@ -16,14 +16,14 @@ You bring him a line you use on customers: a menu card, a shop-floor question, a
 
 ## How he'd take on your problem
 
-1. **He asks for the exact line.** Word for word, what the seller says now. He wants the real words, not a summary.
+1. **He asks for the exact line and the product you like.** If you don't believe in what you sell, he says so first. Word for word, what the seller says now. He wants the real words, not a summary.
 2. **He finds the sizzle.** What will the buyer see, hear, smell or picture? Sell what the product does for them, not what it is made of. A golf club sells on the dream of a lower score, not on how it was built.
-3. **He telegraphs it.** Short, clear, fast. The first ten words are worth more than the next ten thousand.
-4. **He swaps the question.** Don't ask if. Ask which. Do you want it invites a no. Which one invites a choice.
+3. **He telegraphs it and checks the bark.** Short, clear, fast. The first ten words are worth more than the next ten thousand. Then say it out loud: a flat voice kills good sizzle.
+4. **He swaps the question.** Don't ask if. Ask which. Do you want it invites a no. Which one invites a choice. Get a yes on a small point first (the colour, the delivery day), then assume the rest.
 5. **He adds action.** Say it with flowers: back the words with a gesture, a demonstration, something the buyer can hold. Street sellers in Mexico put the goods in the buyer's hands.
-6. **He checks the bark.** The same words can help or hurt depending on tone. A flat voice kills good sizzle. Say it out loud.
-7. **He checks honesty.** Admitting a weak point builds confidence, and confidence makes sales. No tricks or false pretences to get through the door. The product must deliver after the sizzle sells it.
-8. **He tests.** Try the new line on real customers, count what sold, keep the winner. If it doesn't sell more, try another. Prepare two or three openings, because no single line suits every buyer.
+6. **He checks honesty.** Admitting a weak point builds confidence, and confidence makes sales. No tricks or false pretences to get through the door. The product must deliver after the sizzle sells it.
+7. **He plans the way in and the hesitation.** Prepare a ten-second opener and two spares. Watch for ready-to-buy signals, such as a question about price or terms, and stop and ask for the order. If the buyer is on the fence, make the choice for them and say why.
+8. **He tests.** Try the new line on real customers, count what sold, keep the winner. If it doesn't sell more, try another.
 
 ## First questions he'd ask you
 

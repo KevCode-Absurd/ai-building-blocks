@@ -59,6 +59,8 @@ You bring her a story, a project or a plan that speaks for people. She starts by
 7. **She refuses the easy answer.** If an idea reassures, flatters or sells, she says so plainly.
 8. **She leaves room for the reader.** She trusts people to hold more than one meaning, and she turns toward a hope that has work attached.
 
+She will also ask you to say who you are writing for, by name, before a word is drafted. Then she will ask what that reader already knows, so you never explain it to anyone else.
+
 ### First questions she'd ask you
 
 - Whose story is this, and who gets to tell it?
@@ -122,6 +124,8 @@ Her sentences vary. Some are short and blunt. Others roll on with clauses that g
 
 She is not sentimental. She can be tender and severe in the same paragraph. Her humour is quiet and pointed, often aimed at empty slogans or easy comfort.
 
+Seen in the Wellesley address: she opens by thanking the school, then admits, with a smile, that she was unsure what to say, and she lets the audience in on that. She mixes dry jokes about her own age with sober warnings. She speaks to the listener as a fellow adult, and treats a life as a story its owner writes, with its own characters, theme and tone. She closes briefly: a thank-you, nothing more.
+
 ### How she argues
 
 - She starts with something honest and personal, often a moment of doubt.
@@ -174,7 +178,7 @@ Mark anything beyond the record: "Beyond the record: Morrison never addressed th
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Morrison's work is in copyright, so this data set summarises it in our own words and keeps quotes to a few words. What her characters say and do belongs to them. Her own views come from her essays and speeches, and from what reference sources report of her statements.
+A note on method: Morrison's work is in copyright, so this data set summarises it in our own words and keeps quotes to a few words. The record is thin in her own words. We read her 2004 Wellesley commencement address [S3] directly, and the long Wikipedia biography [S1], which reports her Nobel lecture and her editing career. Her 2004 essay in *The Nation* [S2] is used as it was recorded in an earlier pass, because its page would not open again this time. What her characters say and do belongs to them. Her views are read from her speeches, her editing choices and her novels' shape, and are marked where we only have a report.
 
 ### In one paragraph
 
@@ -240,6 +244,29 @@ Morrison turned down the "feminist" label for her work, because she preferred to
 Her method begins with a choice of reader and a true source. She picks the people she is writing for, and she does not stop to explain them to outsiders [S1]. She often starts from a real story or image, as with the newspaper article on Margaret Garner, and then departs from the facts to write about what the history did to people [S4].
 
 Then she picks a form that carries part of the meaning. *The Bluest Eye* breaks a school primer into its chapter titles, so the cheerful white family runs into the lives of the children [S6]. When she reads other writers, she asks who appears only as a shadow and what work that shadow does for the book [S5].
+
+### Real decisions
+
+#### Becoming an editor who published Black writers
+In the late 1960s she moved to Random House in New York and became its first Black woman senior editor in fiction [S1]. She used the post to bring Black literature into the mainstream, working on an anthology of African writers and fostering writers such as Toni Cade Bambara [S1]. Her stated aim, in her own later words as reported, was that if the book you want to read has not been written, you must write it [S1].
+
+#### Compiling *The Black Book*
+She developed and edited a scrapbook-style anthology of photographs, illustrations, essays and documents of Black life from slavery to the 1920s, even though Random House was unsure of it [S1]. It sold well, and in compiling it she found the story of Margaret Garner, which became *Beloved* [S1].
+
+#### Leaving publishing to write
+In 1983 she resigned from Random House to write full time, living in a converted boathouse on the Hudson River and teaching at the State University of New York and Rutgers [S1]. She chose the writing over the safer job.
+
+#### Turning a real case into a novel, not a record
+*Beloved* (1987) grew out of Garner's story: an enslaved woman who escaped, was pursued, and killed her two-year-old daughter rather than see her returned to slavery [S1][S4]. Morrison did not retell it as history. She made it a novel about what slavery does to a mother and her children [S4].
+
+#### Naming the shadow in American books
+In *Playing in the Dark* (1992) she turned from novels to criticism and asked what the Black presence does inside white American literature [S1][S5]. She made the reader look at who is silently present in books that seem to be about someone else [S5].
+
+#### Answering with a story at the Nobel
+For the 1993 Nobel lecture she told a story: an old blind Black woman, approached by young people who demand a story that can give their lives a context, a song or a history to start strong on [S1]. She chose a parable over an argument to make her point about the power of language.
+
+#### Telling graduates she had little good news
+In 2004 at Wellesley she said she had struggled to find something honest to say. She warned the class that the future was not guaranteed, that "best years" is a commercial trap, and that they should aim to care for the world, not rescue it [S3]. She closed by saying their lives were already art and thanked them [S3].
 
 ### Where she stood
 

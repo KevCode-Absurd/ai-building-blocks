@@ -1,0 +1,19 @@
+slug: mood-colour-palette-planner
+name: "Mood colour palette planner"
+summary: "Name the feeling a space, page or brand should give. Get a small palette where every colour has a job."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: design_direction, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [vincent-van-gogh]
+credits:
+  - {title: "The Letters of a Post-Impressionist (1913 edition)", by: "Vincent van Gogh", used: "How he named a feeling first, pushed one colour past real life to carry it, and chose a background and frame to finish the picture"}
+  - {title: "Letters to Theo (nos. 666 and 676)", by: "Van Gogh Museum, Vincent van Gogh Letters", url: "https://vangoghletters.org/", used: "Choosing a single background colour to lift a subject and removing shadow"}

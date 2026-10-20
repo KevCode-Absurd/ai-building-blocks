@@ -1,0 +1,132 @@
+new_slug: smallest-audience-picker
+name: "Smallest audience picker"
+summary: "Paste who you serve now and who you could serve. Get the smallest group worth serving and what would delight them."
+job: understand-customers
+thinking: medium
+thinking_why: "It weighs groups against the money needed and chooses one, within fixed steps."
+
+headline: "Smallest audience picker"
+subhead: "Give it who you serve now, who you could serve and the income the work needs. It lists the groups, picks the smallest that could keep you going, and says who you are not for. You get a one-line group, what would delight them and the first ten people."
+
+explain: |
+  A message made for everyone fits no one. When you water it down to suit the average buyer, no one feels it was made for them, so no one repeats it to a friend. Many small businesses stay stuck because they are afraid to say who they are not for.
+
+  This skill lists the groups you could serve, and what people like them do and believe. It works out how many customers you need, and picks the smallest group that could supply them. It writes who you are not for, what would delight the group in specific terms, and the standard you will hold. It then names the first ten people and plans how word of mouth would carry the work to people like them.
+
+when:
+  - "Your offer, website or ads speak to everyone and get little response."
+  - "You are about to launch and cannot say who it is for in one sentence."
+  - "You are choosing between two audiences."
+
+you_give:
+  - "What you make, who you serve now and who you could serve"
+  - "The income the work needs and the yearly price per customer (optional)"
+  - "Reviews, emails or call notes (optional)"
+  - "A buyer persona (optional)"
+you_get:
+  - "The groups and what people like them do and believe"
+  - "The smallest group worth serving, in one line, with the numbers"
+  - "Who you are not for"
+  - "What would delight them, the standard you will hold and the first ten people"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe what you make and the groups you serve or could serve."
+  - "Add the income you need and the price per customer."
+  - "Read the chosen group and the not-for line out loud. Check they feel true."
+  - "Start with the first ten and tell them what you are for."
+
+how_it_works:
+  - title: "Lists the groups"
+    text: "Writes four to eight groups and what marks each out."
+  - title: "Writes habits and beliefs"
+    text: "Records what people like them do and believe, with evidence."
+  - title: "Picks the smallest"
+    text: "Works the customers needed and picks the smallest group that passes."
+  - title: "Says who it is not for"
+    text: "Writes a line a stranger could repeat."
+  - title: "Writes the delight"
+    text: "Lists specific things that would make the group tell others."
+  - title: "Sets the standard"
+    text: "Fixes a promise you can keep and names the first ten people."
+  - title: "Plans word of mouth"
+    text: "Writes how the group would spread it, and the next group after."
+
+output_shape: |
+  GROUPS
+  <group> | what marks them | size | what people like them do / believe
+
+  THE ONE TO SERVE
+  <one line>
+  Numbers: <income> / <price> = <customers needed>; group size <n>
+
+  NOT FOR
+  <one line>; because <three short reasons>
+
+  WHAT WOULD DELIGHT THEM
+  1. <specific thing>
+  Stop doing: <one thing>
+
+  STANDARD
+  <promise>
+
+  FIRST TEN
+  <names or types, and where to find them>
+
+  WORD OF MOUTH
+  They would say: <line>; they gather at <places>; we will not change: <thing>
+  Next group: <name>
+
+  PERSONA UPDATE
+  <the chosen group>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "The income you need"
+    how: "Give a yearly figure and the price per customer. The smallest group is chosen on the numbers."
+  - what: "Your real customers"
+    how: "Add what your best customers do and say. It picks the group they belong to."
+  - what: "Groups you want to rule out"
+    how: "Say who you will not serve. It writes the not-for line from that."
+  - what: "How you work"
+    how: "Say how many customers you can serve well. It caps the group size."
+
+judge:
+  - "You can say the group in one line."
+  - "The numbers show they could keep you going."
+  - "A stranger could repeat who you are not for."
+  - "Each delight can be checked."
+  - "You can name or describe ten people to call this week."
+
+test:
+  - "Give it a business where you know the best customers. See if the group matches them."
+  - "Say the one-line group to three people in it. Check they say yes, that is me."
+  - "Run it twice. The chosen group should stay the same."
+  - "Contact the first ten and note how many respond."
+
+improve:
+  - "Add the price and yearly income of your type of work to step 3 so the sums start from them."
+  - "Add what you will never do, to feed the not-for line."
+  - "Save the chosen group and the standard to your brand file."
+  - "Pair it with Hungry audience ranker to rank where to reach them."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing groups and writing a clear one-line choice is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Lets you check the customers-needed sum and group sizes."}
+  inputs:
+    - "Your best customers' words about why they chose you"
+    - "Group sizes from a public source"
+    - "Your cost per customer to serve"
+    - "Past customers who left, and why"
+
+terms:
+  - term: "Smallest viable audience"
+    meaning: "The smallest group of people that could provide enough income to keep the work going."
+  - term: "Delight"
+    meaning: "Something specific enough that a customer would mention it to a friend."

@@ -1,0 +1,19 @@
+slug: weak-part-design-out-planner
+name: "Weak part design-out planner"
+summary: "Describe a product, process or system that keeps breaking. Get the part that causes most trouble and ways to design it out."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [nikola-tesla]
+credits:
+  - {title: "A New System of Alternating Current Motors and Transformers (1888 lecture)", by: "Nikola Tesla", used: "The habit of finding the one part that causes most of the trouble, asking why it must exist, and removing it with a different design"}
+  - {title: "Experiments with Alternate Currents of High Potential and High Frequency", by: "Nikola Tesla", used: "Stating the trade-off of each choice and checking that the whole system works together"}

@@ -1,0 +1,18 @@
+slug: teaching-story-writer
+name: "Teaching story writer"
+summary: "Give it a lesson you want to teach. Get a short funny story that carries it, with a turn to the reader."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [rumi]
+credits:
+  - {title: "The Mesnevi, Book the First (1881 translation)", by: "Jalaluddin Rumi, translated by James W. Redhouse", used: "Short tales from ordinary life with a comic turn, an aside to the reader, then a return to the tale"}
+  - {title: "The Persian Mystics: Rumi (1907 selections)", by: "Jalalu'd-Din Rumi, edited by F. Hadland Davis", used: "Pairs of things that look alike and are not, used to sharpen a point"}

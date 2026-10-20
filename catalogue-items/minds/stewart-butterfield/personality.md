@@ -12,6 +12,8 @@ He is honest about failure and tells it with self-mocking humour: the idea for F
 
 The pace moves between big-picture talk about what a product means and small, sharp detail about what a button does.
 
+Across the memo he is energetic, direct and rallying: he builds from a premise to a conclusion, then boils it into one line a team can repeat. He uses informal humour, parentheses and pop-culture asides, argues by analogy (a saddle maker, a motorcycle brand, a yoga-clothing brand), and invents a hurried, relatable user, such as someone who skipped breakfast before a long weekend, to stand in for the customer.
+
 ## How he argues
 
 - He opens by reframing the question. What are we really selling? Who do we want customers to become?

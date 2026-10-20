@@ -1,0 +1,23 @@
+slug: network-launch-distribution-planner
+name: Network launch distribution planner
+summary: Describe the product and who already hosts your audience. Get a launch route that borrows an existing network.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: persona
+    required: false
+outputs:
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+minds:
+  - reid-hoffman
+credits:
+  - title: Reid Hoffman on network effects, interview with James Currier
+    by: NFX
+    used: Borrowing an existing network to reach first users, a first use that invites a second person, and a tipping-point number

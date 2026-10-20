@@ -17,6 +17,7 @@ uses: [buyer-brief-writer]
 origin: rebuilt
 source_ids: [CES-022, CES-043]
 version: 3.0.0
+minds: [john-caples, eugene-schwartz, david-ogilvy]
 credits:
   - {title: "Tested Advertising Methods", by: "John Caples", url: "https://en.wikipedia.org/wiki/John_Caples", used: "Headlines that select the reader; self-interest, news and curiosity, with curiosity weakest alone"}
   - {title: "Breakthrough Advertising", by: "Eugene M. Schwartz", url: "https://breakthroughadvertisingbook.com/", used: "The five stages of buyer awareness: what the opening must name and which moves fit each"}

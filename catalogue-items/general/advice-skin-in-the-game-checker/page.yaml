@@ -1,0 +1,124 @@
+new_slug: advice-skin-in-the-game-checker
+name: "Advice skin-in-the-game checker"
+summary: "Paste advice or a pitch. Get who pays if it is wrong, who gains, and how far to trust it."
+job: think-and-decide
+thinking: medium
+thinking_why: "It weighs motives and evidence in someone else's advice, but the questions are fixed."
+
+headline: "Advice skin-in-the-game checker"
+subhead: "Paste the advice or pitch and say who gave it. It asks what the adviser loses if wrong and gains if right, looks for hidden unevenness, and hands back a trust level with one question to put to them."
+
+explain: |
+  Most advice arrives from someone who is paid the same whether or not it works. A seller, a consultant, a friend with a hot tip, a manager with a pet plan. You cannot read their mind, but you can read their position.
+
+  This skill writes down the advice, then asks what the person loses if they are wrong and what they gain if they are right. It looks for fees on the upside with no share of the downside, checks how long the idea or adviser has lasted, and judges skill and honesty as two separate things. It does not accuse anyone. It tells you how much weight the advice has earned and what to ask next.
+
+when:
+  - "A salesperson, agent or consultant is pushing you toward a purchase or a contract."
+  - "A friend or colleague gives you strong advice about money, hiring or a career move."
+  - "You are about to follow an expert's recommendation and want to know what they stand to lose."
+
+you_give:
+  - "The advice or pitch, pasted as given"
+  - "Who gave it and how they are paid or rewarded, if you know"
+  - "What you would do if you follow it"
+  - "How long the adviser or the idea has been around (optional)"
+you_get:
+  - "What the adviser loses if wrong and gains if right, with the evidence"
+  - "Hidden unevenness in fees, rewards or blame"
+  - "A trust level with the reason"
+  - "One question to put to the adviser"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the advice as it was given, then add who gave it and what you know about how they are paid."
+  - "Say what following it would cost you."
+  - "Read the trust level and the missing facts. Ask the closing question before you act."
+  - "If a fact is marked MISSING, find it first and run the skill again."
+
+how_it_works:
+  - title: "Write down the advice"
+    text: "States the advice and who gave it, in plain words."
+  - title: "Ask what they lose"
+    text: "Lists what the adviser loses if wrong, and whether it is known or guessed."
+  - title: "Ask what they gain"
+    text: "Lists what they gain if you follow it, win or lose."
+  - title: "Look for hidden unevenness"
+    text: "Finds setups where the adviser shares wins but not losses."
+  - title: "Check how long it has lasted"
+    text: "Asks how long the adviser or idea has survived real use."
+  - title: "Judge skill and honesty apart"
+    text: "Rates skill and honesty on two separate lines."
+  - title: "Set the weight and the question"
+    text: "Gives a trust level and one question to ask."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  THE ADVICE
+  <one or two sentences, who gave it, what it asks of you>
+
+  WHAT THEY LOSE IF WRONG
+  - <item> | Seen or guessed: <seen / guessed>
+
+  WHAT THEY GAIN IF RIGHT
+  - <item> | Applies even if it fails: <yes / no>
+
+  HIDDEN UNEVENNESS
+  - <setup> | Who carries the cost: <who>
+
+  HOW LONG IT HAS LASTED
+  <years in use and what tested it>
+
+  SKILL: <low / medium / high> | <evidence>
+  HONESTY OF INCENTIVES: <low / medium / high> | <evidence>
+
+  TRUST LEVEL: <low / medium / high> | <reason>
+  ASK THEM: <one question>
+
+  MISSING
+  <facts that would change the rating>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "How the adviser is paid"
+    how: "Say so if you know it. A fee on the sale and a fee on the outcome give very different ratings."
+  - what: "What you would do if you follow it"
+    how: "The bigger the cost to you, the harder it looks at the adviser's side of the deal."
+  - what: "Whether you trust the person already"
+    how: "Say it. The skill checks the stake first and your feelings second."
+  - what: "How old the idea is"
+    how: "A new method with no track record gets a lower weight than one that has been tried for years."
+
+judge:
+  - "Every rating points at something the adviser stands to lose or gain."
+  - "Nobody is called dishonest without evidence."
+  - "A missing stake is kept apart from a bad idea."
+  - "Skill and honesty are rated on separate lines."
+  - "It ends with one question you can ask."
+
+test:
+  - "Run it on advice you took in the past and know the result of. See if the rating would have warned you."
+  - "Run it on advice from a person who clearly has a stake, and one from a person who clearly has none. The two ratings should differ."
+  - "Run it twice on the same input. The trust level should stay in the same band."
+
+improve:
+  - "Add the ways advisers in your own field get paid, so step 3 names them every time."
+  - "Add people whose advice you trust and why, so it can compare."
+  - "Keep a log of advice you checked and what happened, and paste it in as history."
+  - "Pair it with Hidden value check when the advice is to cut or automate something."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Judging advice and asking sharp questions is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "The adviser's fee or pay terms"
+    - "Their past record on similar advice"
+    - "Other advice on the same question"
+    - "What you will lose if the advice is wrong"
+
+terms:
+  - {term: "Skin in the game", meaning: "A real share of the loss when you are wrong, not only a share of the win."}
+  - {term: "Hidden unevenness", meaning: "A deal where one side keeps the gains and the other side pays the losses."}

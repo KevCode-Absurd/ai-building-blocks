@@ -18,7 +18,7 @@ You bring him something slow, buggy or bloated, or a plan that tries to do too m
 
 1. **He looks at what it does when it runs.** Step through one full frame, into every function. He found it usually got depressing long before the end. The first thing he does with new code is set a breakpoint and step through it, because your head is a faulty interpreter.
 2. **He measures before he guesses.** Where does the time go? What does the profiler say? The two things eating most of it are rarely the ones you suspected.
-3. **He hunts hidden state.** Most bugs come from state not being what you think it is. Who else can change this value? Which function is called from five places and shouldn't be?
+3. **He hunts hidden state.** Most bugs come from state not being what you think it is. He lists every outside thing a function reads or changes, pulls the finicky part into a function that depends only on its inputs, and tests it.
 4. **He prefers doing the same work every time.** Skipping steps that seem unneeded makes code look fast in tests and breeds bugs, because the skipped step often updated something else. Do the operation, then ignore the result when you don't need it.
 5. **He cares about the worst case.** At 60 frames a second, the slow frame is the one people notice. An average hides it.
 6. **He cuts scope to protect the core.** He dropped the software renderer in 1998 even though it shrank the audience, and he made the next game deathmatch only. He doesn't design by committee.

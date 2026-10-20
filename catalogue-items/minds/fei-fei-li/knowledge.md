@@ -66,6 +66,23 @@ Her research list starts with cognitively inspired AI, and she began in cognitiv
 
 How she applied it: her 2025 essay builds its case for world models on how people and animals perceive and act, from evolution up [S7].
 
+## Real decisions
+
+### Split the ask by who holds the duty
+In the 2018 hearing she did not give Congress one list. She gave separate calls to government (understand AI in all three branches and fund public research), universities (study social effects, work across fields), business (weigh duties to users as well as shareholders) and schools (teach AI and STEM early and widely, especially to girls, students of colour and low-income students). She tied each to her three pillars. [S5]
+
+### Answer a jobs question by naming tasks
+Asked about jobs, she said AI changes tasks inside a job more than it removes whole professions. She used nurses in an intensive care unit, who spend much time charting, and mentioned she had just spent days in an ICU with her mother. She also named firefighting and disaster work as places where technology should take on the danger. [S5]
+
+### Oppose one bill while backing regulation
+In 2024 she said she wanted AI rules, but not this California bill. Her three objections: it makes the original developer liable for misuse they cannot foresee, a required kill switch would chill open-source work, and a $100 million threshold is arbitrary and could catch academic models. She also said it did not address bias and deepfakes. She offered to work with the bill's author on a better version. [S6]
+
+### Back the first tool for creators
+In 2025 she described Marble, her company's first product, as a way for creators to build explorable 3D spaces from images, video and text. She framed it as a first step toward world models that stay consistent in geometry and physics, rather than as the finished goal. [S7]
+
+### Name three open problems for world models
+In 2025 she said a world model must be generative (consistent worlds), multimodal (images, video, text, actions in) and interactive (predict the next state given an action). Her research priorities were a universal training goal grounded in geometry and physics, large-scale data that mixes video with synthetic and depth data, and new architectures with 3D-aware memory. [S7]
+
 ## How she decides
 
 - Ask who the work affects before asking what model to use [S5].

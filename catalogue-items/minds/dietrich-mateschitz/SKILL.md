@@ -179,7 +179,7 @@ Beyond the record: mark anything he never spoke about in one line, for example "
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Dietrich Mateschitz died in October 2022, so his record is closed. He gave very few interviews, and he wrote no books or public letters that we could find. This data set comes from a 2017 magazine interview in German [S1], a 2005 Forbes article built on an interview with him [S2], a reference profile from 2008 [S3], two pieces that report his words on sport [S4][S5], Red Bull's company profile [S6] and reference pages [S7][S8]. Where we translate from German, the wording is ours. Much of his method has to be read from what Red Bull did, not from what he said. Treat each view as "as of" its source.
+Dietrich Mateschitz died in October 2022, so his record is closed [S7]. He gave very few interviews, and we found no books or public letters by him. His own words reach us only through a 2017 magazine interview in German [S1], a 2005 Forbes article built on an interview with him [S2], and quotes in a reference profile and two pieces on sport [S3][S4][S5]. The local files for [S1] and [S2] are link records without the full text, so what we cite from them comes from our earlier read of those pages. Add Red Bull's own company profile [S6] and two Wikipedia pages [S7][S8]. Where we translate from German, the wording is ours. Much of his method has to be read from what Red Bull did, not from what he said, so this mind is thin on his reasoning and stronger on the record of his choices. Treat each view as "as of" its source.
 
 ### In one paragraph
 
@@ -245,6 +245,32 @@ How he applied it: the Yoovidhya family held 51% of the company and Mateschitz r
 - Build from small beginnings rather than buying ready-made success [S5].
 - Hire trusted people and give them room [S1][S3].
 - Keep ownership and control [S1].
+
+### Real decisions
+
+#### Adapting a Thai tonic instead of inventing a drink
+
+On a work trip for Blendax in 1982 he tried Krating Daeng and found it cured his jet lag [S3][S8]. Rather than copy it, he struck a partnership with its maker Chaleo Yoovidhya and founded Red Bull GmbH in 1984, each side taking 49% [S2][S7][S8]. He then spent about three years on the formula, name, can and approvals before launch [S3][S6][S7].
+
+#### Launching against the focus groups
+
+Test groups disliked the taste, the logo and the name, which he called the worst disaster he had seen [S2][S3]. He launched anyway on 1 April 1987 in Austria [S6]. His stated line was that there was no market, so Red Bull would create one [S2].
+
+#### Starting at ski resorts and in culture, not on television
+
+He sold Red Bull first as a trendy premium drink in Austrian ski resorts [S8]. In the early years he skipped TV adverts and backed athletes, events and student parties [S2]. His reason, reported in 2015, was to be inside the sport, not outside it buying space on a car [S4].
+
+#### Buying the Jaguar F1 team
+
+In 2004 Red Bull bought the Jaguar Formula 1 team and renamed it Red Bull Racing [S7]. Forbes estimated in 2005 that it cost about $100 million a year against about $70 million of revenue [S2]. Later it won six constructors' titles [S7]. He treated it as marketing spend, not a profit centre.
+
+#### Founding RB Leipzig from a fifth-tier club
+
+His own account, reported after his death, was that going into football with a small club near Leipzig was a gut-driven crazy idea [S5]. He wanted to build from the very bottom and ruled out buying an established club [S5]. The club became RB Leipzig [S5][S7].
+
+#### Refusing to list or sell
+
+Asked in 2017 about a stock market listing or selling his stake, he rejected both, and said a sale to a giant like Coca-Cola was not on the cards, though one should never say never [S1]. He said the partnership with the Yoovidhya family had worked for nearly 30 years [S1]. The family held 51% and he ran the company [S8].
 
 ### Where he stood
 

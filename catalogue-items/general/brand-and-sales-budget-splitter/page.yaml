@@ -1,0 +1,124 @@
+new_slug: brand-and-sales-budget-splitter
+name: "Brand and sales budget splitter"
+summary: "Paste your ad spend by channel and market numbers. Get a brand versus sales split, a share-of-voice check and what to shift."
+job: plan-strategy
+thinking: high
+thinking_why: "It sorts channels by what they really do and compares market figures, where a wrong sort changes the advice."
+
+headline: "Brand and sales budget splitter"
+subhead: Give it your spend by channel and, if you have them, your market share and rivals' spend. It sorts each channel as brand building or sales activation, shows your split, checks share of voice against share of market, and proposes the smallest shift to test.
+
+explain: |
+  Spend that chases sales this month tends to feed on people who are already ready to buy. Over time the pool of ready buyers shrinks, and results flatten. Spend that builds the brand reaches people who are not yet buying, and pays back more slowly and for longer.
+
+  This skill sorts each of your channels into one of the two jobs, works out your current split and compares it with a starting point near 60 percent brand and 40 percent activation. That figure is a guide, not a rule. It compares your share of voice with your share of market to see if you are set to grow or shrink, checks that messages have an emotional side and that reach goes beyond existing customers, and proposes one small shift to test.
+
+when:
+  - Most of your ad spend goes to people who are already looking to buy.
+  - Sales from ads are flat and you suspect you are fishing in the same small pond.
+  - You are setting next year's budget and want a reason for the split.
+
+you_give:
+  - Your spend by channel for a recent period
+  - Your scorecard or audit report of what each channel delivers
+  - Your market share and rivals' spend, if you know them (optional)
+  - Your brand file (optional)
+you_get:
+  - Each channel sorted as brand building or sales activation
+  - Your current split beside a starting guide
+  - A share-of-voice against share-of-market check
+  - The smallest shift to test, with the expected effect and how long it takes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your spend by channel and, if you have it, the scorecard from "Marketing scorecard builder".
+  - Add your market share and rivals' spend if you know them. If not, say so.
+  - Pick the shift it proposes and test it for the time it names before judging.
+
+how_it_works:
+  - title: Sorts the channels
+    text: Labels each channel as brand building or sales activation by what it does.
+  - title: Works out the split
+    text: Adds up spend in each group and compares it with a starting point near 60 and 40.
+  - title: Compares voice and share
+    text: Compares your share of voice with your share of market to see if you are set to grow or shrink.
+  - title: Reads the messages
+    text: Checks whether messages are mostly rational or have an emotional side that builds the brand over years.
+  - title: Checks reach
+    text: Checks that reach is broad and not limited to current customers or ready buyers.
+  - title: Proposes one shift
+    text: Suggests the smallest change to test and what the split depends on for this brand.
+
+output_shape: |
+  CHANNEL SORT
+  <channel> | <spend> | <brand building or activation> | <why>
+
+  CURRENT SPLIT
+  Brand <n>% | Activation <n>% | Starting guide: about 60 / 40 (a guide, not a rule)
+
+  SHARE OF VOICE VS SHARE OF MARKET
+  Voice <n>% | Market <n>% | Reading: <set to grow, hold or shrink, or unknown>
+
+  MESSAGES AND REACH
+  Messages: <rational, emotional, mixed> | Reach: <broad or narrow> | Note: <note>
+
+  THE SHIFT TO TEST
+  <change> | expected effect: <effect> | shows up in: <time> | measured by: <measure>
+
+  WHAT THE SPLIT DEPENDS ON
+  <brand size, category, buying cycle, other>
+
+  MEASURES
+  Short-term: <list> | Long-term: <list>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Spend by channel
+    how: Use real money for one period. Rough figures work if you say so.
+  - what: Market numbers
+    how: Share of market and rivals' spend turn the voice check from unknown to a reading.
+  - what: Buying cycle
+    how: Say how long customers take to buy. A long cycle favours more brand spend.
+  - what: Your size
+    how: Small and new brands may need more activation to survive. Say your stage.
+
+judge:
+  - The split is labelled a starting guide, not a rule.
+  - Share of voice is compared with share of market, or marked unknown.
+  - Each shift names its expected effect and how long it takes to show.
+  - Short-term and long-term measures are both named.
+  - Every channel has a reason for its sort.
+
+test:
+  - Sort three channels yourself first. Compare with the skill's sort and look at the differences.
+  - Run it with market numbers and without. The reading should change from unknown to a call.
+  - Test the proposed shift on a small part of spend, and check it only after the time window named.
+  - Run it twice on the same input. The split should stay close.
+
+improve:
+  - Add your own channel list so the sort uses your names.
+  - Add how long your customers take to buy, so the time window fits your field.
+  - Save past shifts and what happened in your brand file.
+  - Pair it with "Marketing scorecard builder" so measures match the shift.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Holds spend by channel and makes the split a one-line sum."}
+    - {name: "Any good chat AI", why: "Does the sorting and reasoning from your pasted figures."}
+  inputs:
+    - "Your market share for the last year"
+    - "A rough estimate of rivals' ad spend"
+    - "Your scorecard from Marketing scorecard builder"
+
+terms:
+  - term: Brand building
+    meaning: Spend that reaches many people over time to make your brand familiar and liked before they buy.
+  - term: Sales activation
+    meaning: Spend that targets people close to buying, to get a sale soon.
+  - term: Share of voice
+    meaning: Your share of all ad spend in your market.

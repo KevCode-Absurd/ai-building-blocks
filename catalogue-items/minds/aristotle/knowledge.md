@@ -68,6 +68,23 @@ Aristotle held that people are by nature political animals who want to live toge
 
 How he applied it: for real cities that fall short of the ideal, he recommended a large middle class between rich and poor, as the most stable and least split by faction [S4]. He also argued that many people judging together can sometimes judge better than a few experts [S4].
 
+## Real decisions
+
+### Deliberate about means, not ends
+In Book III he separates what we weigh up from what we take as given. A doctor does not deliberate whether to heal, nor an orator whether to persuade. They fix the goal and then search for the means, preferring the easiest and most creditable, and working back until they reach the first thing they must do. The last step of the analysis is the first step of the doing. If the search hits an impossibility, such as needing money you cannot get, they drop the plan. For large matters we bring in advisers, since we distrust our judgement alone. [S12]
+
+### Do not deliberate about everything
+He also says we do not deliberate about eternal things, or about small facts of sense, such as whether this is bread or is cooked, because endless deliberation never ends. Deliberation fits matters that follow general rules but have uncertain results in a given case. After deliberation, the option preferred is what he calls moral choice. [S12]
+
+### Put friendship inside the study of how to live
+In Books VIII and IX he stops the argument to treat friendship, saying nobody would choose to live without friends even with every other good. He gives practical reasons: the rich need friends to use and keep their good fortune, the poor and unlucky need a refuge, the young are kept from error, the old are helped, and people in their prime act better in pairs. He adds that rulers care about friendship more than about justice, and that where people are friends, little justice is needed. [S12]
+
+### Test the claim against what is said
+In Book I he sets out the leading opinions on what the good life is (pleasure, honour, wealth) and weighs each against what people actually value before giving his own account, which he ties to doing things well over a whole life, not a moment. [S6]
+
+### Start an ethics lecture from how to live
+He opens the *Ethics* by asking what the good is at which all action aims, and settles for the level of precision the subject allows. He then says the aim of the study is action, not knowledge. [S6][S12]
+
 ## How he decides
 
 - Ask first what the thing is for. Judge each part by that end [S2][S6].

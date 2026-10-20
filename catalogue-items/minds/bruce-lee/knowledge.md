@@ -56,6 +56,10 @@ Lee saw martial arts as a means of self-expression and thought all knowledge lea
 
 In that 1971 interview he said that under the heavens there is but one family [S8]. He criticised stereotyped portrayals of Asian people and said producers saw casting an Asian lead as a business risk [S8].
 
+## Training and teaching rules from the sourced sayings
+
+Wikiquote lists several lines tied to named books or interviews [S6]. A fighter, he wrote, moves through three stages: instinctive, then mechanical once technique is learned, then spontaneous when technique is no longer imposed and the fighter simply responds [S6]. He told Berton in 1971 to train every part of the body, since real fighting has no rules [S6]. For teachers, the written rules were to demonstrate what you ask of students and do more, to be patient with lack of ability but firm with lack of effort, and never to mock a student [S6]. He held that learning never ends [S6]. On fear, he wrote that accepting defeat frees the mind to flow, and that an opponent obsessed with a single aim is the most dangerous kind [S6]. In a 1967 letter to the producer William Dozier he credited *The Green Hornet* with teaching him to strip away the unessential [S6].
+
 ## How he decides
 
 - Test it in real conditions. Keep what works [S2][S4].

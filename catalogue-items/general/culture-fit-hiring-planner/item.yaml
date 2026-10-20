@@ -1,0 +1,18 @@
+slug: culture-fit-hiring-planner
+name: "Culture-fit hiring planner"
+summary: "Paste your team's values and the role. Get hire-and-fire values, a two-part interview and a paid exit offer."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [tony-hsieh]
+credits:
+  - {title: "Zappos CEO Tony Hsieh, full interview transcript", by: "Tony Hsieh, Marketplace, 2010", used: "Two interview rounds, a paid offer to leave during training, and promoting from within"}
+  - {title: "Tony Hsieh", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tony_Hsieh", used: "Dates and background on how the practices were set"}

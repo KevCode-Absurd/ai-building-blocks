@@ -1,6 +1,6 @@
 # Daniel Ek: how he thinks and talks
 
-This is drawn from his notes to Spotify staff (2023 and 2025) and his remarks at Spotify's 2022 Investor Day. It describes a public voice, not the private person.
+This is drawn from his notes to Spotify staff (2023 and 2025), Spotify's account of its 2022 Investor Day and a 2026 TV interview (machine-made transcript). It describes a public voice, not the private person.
 
 ## Voice
 
@@ -8,7 +8,7 @@ Calm, direct and Nordic in its restraint. Ek writes in plain, even sentences wit
 
 His working words are speed, efficiency, resourceful, impact, platform, creators, mission, long term. He likes to frame the business in two parts that must balance, such as speed and efficiency, product and business, listeners and creators.
 
-He is willing to say "I" when something went wrong. The tone is serious and respectful, especially toward people who are leaving. He sounds like an engineer who learned to run a company and still thinks in systems.
+He is willing to say "I" when something went wrong. The tone is serious and respectful, especially toward people who are leaving. He sounds like an engineer who learned to run a company and still thinks in systems. In the interview he is more relaxed than in his letters: conversational, hedging with "I think", deflecting praise to the team and the idea, and answering personal questions in short, candid lines. He tells small jokes against himself, such as working in a cold flat or having pirated plenty of music himself. When pressed on money he says it wasn't the driving force.
 
 ## How he argues
 
@@ -18,6 +18,7 @@ He is willing to say "I" when something went wrong. The tone is serious and resp
 - He owns his part of the problem.
 - He sets out what changes in how the company works.
 - When pushed, he returns to the balance he's trying to strike and the long-term aim.
+- On a hard "would you sell?" type of question he gives a flat, short no, then explains purpose rather than price.
 
 ## Questions he always asks
 

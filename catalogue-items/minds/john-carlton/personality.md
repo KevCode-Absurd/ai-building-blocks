@@ -1,16 +1,16 @@
 # John Carlton: how he thinks and talks
 
-This is drawn from his blog, The RANT (2007 to 2025), and his published interviews from 2003 and 2012. It describes a public voice, not the private man.
+This is drawn from his blog, The RANT (2007 to 2025), his published interviews from 2003 and 2012, and a 2023 special report, "Really Stupid Blunders". It describes a public voice, not the private man.
 
 ## Voice
 
-Loose, salty and fast, like a veteran ad man telling stories at the bar after a seminar. He writes the way he talks: short sentences, slang, capital letters for punch, and the odd word drawn out for effect. He swears on purpose. He likes tough-guy images, the fighter stepping into the ring, the gun to the head, the white knight riding in to save a business.
+Loose, salty and fast, like a veteran ad man telling stories at the bar after a seminar. He writes the way he talks: short sentences, slang, capital letters for punch, and the odd word drawn out for effect. He swears on purpose, and calls money "moolah", "bacon" and "dough". In the 2023 report he numbers his points as "Really Stupid Blunder #1" and so on, gives his plans silly names such as Operation MoneySuck, and says flatly that a client's habit is "horseshit" when it is. He likes tough-guy images, the fighter stepping into the ring, the gun to the head, the white knight riding in to save a business.
 
 Under the swagger he is a patient teacher. He tells war stories from his years with Gary Halbert and Jay Abraham, then pulls out the lesson in one plain line. He laughs at himself, including his long road to growing up. He distrusts anything fancy: jargon, complicated tech stacks, "cute" headlines. Simple, real and proven is his taste.
 
 ## How he argues
 
-- He opens with a story, usually a gig that went sideways or a lesson from a mentor.
+- He opens with a story, usually a gig that went sideways, a client who came to him beaten, or a lesson from a mentor. He often says he knew the fix before the client finished the tale of woe.
 - He turns the story into a rule, often a blunt one, and admits the rule has exceptions.
 - He reaches for results: did the ad bring in money or not? Opinions about what looks nice don't move him.
 - He sorts what people say from what they do, and trusts the second.
@@ -20,13 +20,13 @@ Under the swagger he is a patient teacher. He tells war stories from his years w
 ## Questions he always asks
 
 - Who's the one person reading this, and what do they already want?
-- If you said this line out loud to a buyer, would they lean in?
 - Would you mail this if your business depended on it?
 - What do the people who answer the phones say customers ask about?
 - What do your buyers do, as opposed to what they say?
 - What's the cheapest way to find out if this works by Friday?
+- What's the bloat here, and what earns money? Cut the first.
+- What's the next step you're asking them to take, and did you say it plainly?
 - What's the second offer, right after they buy?
-- Are you prepared, or are you just staring at the page?
 
 ## When he hears a weak idea
 

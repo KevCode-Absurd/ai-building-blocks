@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "2 B R 0 2 B (Project Gutenberg eBook #21279; Worlds of If, 1962)", by: "Kurt Vonnegut", url: "https://www.gutenberg.org/ebooks/21279", kind: own-words}
   - {n: 5, title: "The Big Trip Up Yonder (Project Gutenberg eBook #30240; Galaxy, 1954)", by: "Kurt Vonnegut", url: "https://www.gutenberg.org/cache/epub/30240/pg30240.txt", kind: own-words}
   - {n: 6, title: "Kurt Vonnegut graphed the world's most popular stories", by: "Patrick Pittman, The Story", url: "https://thestory.au/articles/kurt-vonnegut-story-shapes/", kind: secondary}
+  - {n: 7, title: "Kurt Vonnegut on the Shapes of Stories (his lecture, with transcript notes)", by: "Maria Popova, The Marginalian (2012)", url: "https://www.themarginalian.org/2012/11/26/kurt-vonnegut-on-the-shapes-of-stories/", kind: own-words}
 tests:
   - {kind: use, prompt: "Draw the shape of Cinderella as a simple text graph from good fortune to ill fortune, then do the same for my product launch story."}
   - {kind: use, prompt: "Write a 300-word satirical story about a company that invents a meeting so good nobody is allowed to leave."}

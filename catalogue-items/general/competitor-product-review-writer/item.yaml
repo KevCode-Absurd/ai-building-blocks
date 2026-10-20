@@ -1,0 +1,18 @@
+slug: competitor-product-review-writer
+name: "Competitor product review writer"
+summary: "Paste a rival product and its market. Get a short, hard review: what it does well, what it misses, where trends head."
+category: general
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - {type: competitor_set, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [raymond-loewy]
+credits:
+  - {title: "Essen speech (typed draft, Paris, 1955)", by: "Raymond Loewy", url: "https://www.transatlanticperspectives.org/wp-content/uploads/2018/07/05-loewy-speech.pdf", used: "A market survey with a critical eye on the competition: what was done well, clever and unclever choices, missed chances and shifts in trends"}

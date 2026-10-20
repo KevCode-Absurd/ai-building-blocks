@@ -17,6 +17,7 @@ origin: rebuilt
 source_ids: [CES-022]
 old_name: headline and image words writer
 version: 2.0.0
+minds: [john-caples, claude-hopkins, david-ogilvy, eugene-schwartz]
 credits:
   - {title: "Tested Advertising Methods", by: "John Caples", url: "https://en.wikipedia.org/wiki/John_Caples", used: "Self-interest, news and curiosity as headline appeals, with curiosity weakest alone"}
   - {title: "Scientific Advertising", by: "Claude C. Hopkins", url: "https://www.holloway.com/g/scientific-advertising", used: "The headline calls out the right reader; an exact fact beats a general claim"}

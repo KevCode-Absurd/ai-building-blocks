@@ -1,0 +1,127 @@
+new_slug: competitor-product-review-writer
+name: "Competitor product review writer"
+summary: "Paste a rival product and its market. Get a short, hard review: what it does well, what it misses, where trends head."
+job: study-competitors
+thinking: medium
+thinking_why: "It forms a critical judgement from what is seen, within fixed steps."
+
+headline: "Competitor product review writer"
+subhead: "Give it a rival product and its market. It surveys the range, names what is done well and badly, lists missed chances and trend shifts, and keeps a critical eye. You get a short study with weak points and strong ones, and the chances you can use."
+
+explain: |
+  Many competitor reviews are either a feature table or a pat on the back. A table counts what exists but not whether it is any good. Praise warms the room but gives you nothing to act on. The reviews that help are compact, fair and a little severe.
+
+  This skill surveys the rival's range and then judges it. It notes what was done well and who made the choice, which choices were clever or unclever and why, what buyers wanted that the product ignored, and where the market is shifting. It keeps trends apart from facts. It ends with the chances your side could use, so the study leads to a next step.
+
+when:
+  - "You are about to launch against a rival and want an honest read on it."
+  - "Your team keeps comparing feature lists and learning nothing."
+  - "You need to brief a designer or maker on what the market has missed."
+
+you_give:
+  - "The rival product or range and its market"
+  - "Your own product facts (optional)"
+  - "Reviews, photos or spec sheets of the rival (optional)"
+you_get:
+  - "A survey of the range"
+  - "Strengths and weak points, each with evidence"
+  - "Missed chances and trends, labelled as seen, inferred or trend"
+  - "A compact study and the chances your side could use"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the rival product, its price and what you know of its market."
+  - "Attach photos, reviews or a spec sheet if you have them."
+  - "Read the weak points and check each against the product."
+  - "Use the list of chances in your next product or brief."
+
+how_it_works:
+  - title: "Surveys the range"
+    text: "Lists each rival product with what a buyer sees."
+  - title: "Names the strengths"
+    text: "Cites what is visibly done well and who chose it."
+  - title: "Judges the choices"
+    text: "Marks choices clever or unclever, with a reason."
+  - title: "Finds missed chances"
+    text: "Uses reviews to see what the product left out."
+  - title: "Notes the trends"
+    text: "Marks market shifts as trends, with sources."
+  - title: "Keeps a critical eye"
+    text: "Cuts bland lines and states weak points plainly."
+  - title: "Writes the study"
+    text: "Gives a compact review with evidence for each point."
+  - title: "Lists your chances"
+    text: "Names chances you can act on."
+
+output_shape: |
+  THE RANGE
+  <product | price | features | form | first impression>
+
+  DONE WELL
+  1. <strength> | evidence <what is visible> | chosen by <party>
+
+  CLEVER AND UNCLEVER
+  <choice> | clever/unclever | because <reason> | by <party>
+
+  WEAK POINTS
+  <point> | cost to the buyer <what> | evidence <what>
+
+  MISSED CHANCES
+  <chance> | seen/inferred | <source>
+
+  TRENDS
+  <trend> | source, date
+
+  CHANCES FOR US
+  1. <chance> | needs <x> | rests on <evidence>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "Evidence you attach"
+    how: "Photos and spec sheets let it cite what is visible. Without them it works from your description."
+  - what: "The buyer"
+    how: "Say who the product is for. The test for clever or unclever uses what the buyer came to do."
+  - what: "How severe you want it"
+    how: "Ask for the sharpest version if you need to decide something, and the balanced one for a team."
+  - what: "Your product"
+    how: "Add your facts so the chances can be matched to what you can build."
+
+judge:
+  - "Strengths are named, not just faults."
+  - "Every point cites something you can see."
+  - "Trends have a source and a date."
+  - "The weak points name a cost to the buyer."
+  - "It ends with chances you could act on."
+
+test:
+  - "Review a product you know well and check it names the flaws you already know."
+  - "Check three claims against the product."
+  - "Run it twice. The weak points should overlap closely."
+  - "Show it to someone who owns the rival product and see if they agree."
+
+improve:
+  - "Add the traits your buyers care about to step 3 as the test for clever or unclever."
+  - "Add a source list of trade news you trust to step 5."
+  - "Save each review to your brand file to track rival changes."
+  - "Pair it with Disruption risk checker if the rival is a cheaper entrant."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing a critical, evidence-based review from your notes is text work any strong chat AI does well with this skill."}
+    - {name: "The rival product itself", why: "Handling it yourself gives you evidence no listing shows."}
+  inputs:
+    - "Reviews of the rival with dates"
+    - "Photos from several angles"
+    - "The rival's price history"
+    - "Notes from a customer who owns both products"
+
+terms:
+  - term: "Missed chance"
+    meaning: "Something buyers want that the product does not give them."
+  - term: "Trend"
+    meaning: "A change in the market that appears to be under way, which is not yet proven."

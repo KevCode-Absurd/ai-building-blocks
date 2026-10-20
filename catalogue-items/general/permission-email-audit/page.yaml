@@ -1,0 +1,124 @@
+new_slug: permission-email-audit
+name: "Permission email audit"
+summary: "Paste your email list source and last ten messages. Get which contacts gave real permission and which messages earn it."
+job: check-ads
+thinking: medium
+thinking_why: "It judges consent and message value from your own evidence, in fixed steps."
+
+headline: "Permission email audit"
+subhead: "Give it where your email addresses come from and your last ten messages. It tests whether each group gave real permission and whether each message earns its place. You get a score out of 100, the changes to make and a promise to check against."
+
+explain: |
+  A list can be large and still full of people who never asked to hear from you. They ignore the messages, mark them as spam, or leave. The cost is attention you spent and trust you lost.
+
+  This skill asks why each group of contacts gave you their address and whether that was an open invitation or a box buried in small print. Then it tests each message: would they miss it if it stopped, is it expected, is it personal, is it useful? It looks for signs the relationship is valued, such as replies and forwards. It ends with a few changes and the promise you made at sign-up, checked against your next three messages.
+
+when:
+  - "Your list is growing but opens and replies are falling."
+  - "You bought, borrowed or collected addresses at events and are unsure what you can send."
+  - "You send many messages and want to know which ones to cut."
+
+you_give:
+  - "Where your addresses come from, with the sign-up wording"
+  - "Your last ten messages"
+  - "Replies, forwards or complaints you have received (optional)"
+  - "Opens, clicks and unsubscribes by message (optional)"
+you_get:
+  - "Each contact group with its reason for contact and a permission verdict"
+  - "Each message tested for expectation, personal fit and use"
+  - "A score out of 100, with how it was worked out"
+  - "The sign-up promise and a short list of changes"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste each way someone joins your list, with the exact words on the form or at the till."
+  - "Paste your last ten messages, subject line and body."
+  - "Add any replies or numbers you have."
+  - "Make the changes it lists and check the next three messages against the promise."
+
+how_it_works:
+  - title: "Names the reasons"
+    text: "Writes down why each group of contacts gave their address."
+  - title: "Sorts the consent"
+    text: "Marks sign-ups as an open invitation or buried in small print."
+  - title: "Runs the miss-it test"
+    text: "Asks if they would miss each message if it stopped."
+  - title: "Checks fit"
+    text: "Checks each message is expected, personal and useful to them."
+  - title: "Looks for value signs"
+    text: "Looks for replies, forwards and other signs the relationship is valued."
+  - title: "Cuts what does not earn it"
+    text: "Marks messages to cut or change."
+  - title: "Checks the promise"
+    text: "Writes the sign-up promise and holds the next three messages to it."
+
+output_shape: |
+  SCORE: <n>/100 (consent 40, messages 40, value signs 20)
+
+  CONTACT GROUPS
+  <group> | Why they gave their address: <reason> | Permission: real, weak or none
+
+  MESSAGES
+  <n>. <subject> | Expected: <y/n> | Personal: <y/n> | Missed if stopped: <y/n/unknown> | Verdict: keep, change or cut
+
+  SIGNS THE RELATIONSHIP IS VALUED
+  <list>
+
+  THE SIGN-UP PROMISE
+  <what you said you would send, how often>
+  Next three messages against it: <fit or not>
+
+  CHANGES (no more than 5)
+  1. <change>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "The sign-up wording"
+    how: "Paste the exact words. A pre-ticked box or a line in the terms is read as weak permission."
+  - what: "Replies and forwards"
+    how: "Add them. They are the best sign a message is valued."
+  - what: "Number of messages"
+    how: "Ten gives a clear pattern. Fewer than five shows little."
+  - what: "Segments"
+    how: "Name your groups, such as buyers and event leads. Each gets its own verdict."
+
+judge:
+  - "Each group has a stated reason for contact."
+  - "Messages are tested against the miss-it test."
+  - "Small-print consent is not counted as permission."
+  - "The sign-up promise is quoted back."
+  - "Next actions are limited to a few changes."
+
+test:
+  - "Run it on a list you know is clean. Check it finds real permission."
+  - "Run it on a list from a giveaway or event. It should rate that group weaker."
+  - "Send the cut-or-change messages to a friend on your list and ask which they would miss."
+  - "Run it again after three months of changes and compare the scores."
+
+improve:
+  - "Add the laws that apply where you send, such as consent rules, so weak permission is flagged for legal review."
+  - "Add your own pattern for a welcome message, so the promise is set at the start."
+  - "Keep the sign-up promise in your brand file and use it in every welcome email."
+  - "Pair it with a flow audit once permission is sorted."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Judging consent wording and message value is text work any strong chat AI does with this skill."}
+    - {name: "Your email platform's reports", why: "Gives opens, replies and unsubscribes by message."}
+  inputs:
+    - "Unsubscribe and spam complaint counts"
+    - "Replies from customers"
+    - "The form screenshots for each sign-up point"
+
+terms:
+  - term: "Permission"
+    meaning: "Your contacts' agreement to hear from you, given because they want what you send."
+  - term: "Miss-it test"
+    meaning: "Asking if people would be sorry if a message stopped arriving."
+  - term: "Sign-up promise"
+    meaning: "What you told people they would get when they gave you their address."

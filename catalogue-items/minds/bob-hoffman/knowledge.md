@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Bob Hoffman is alive, and views can change. This data set comes from his blog, The Ad Contrarian, mainly posts from December 2020 to 2021 and the sayings in its sidebar, plus his own website's biography [S1][S2][S3][S4][S5]. He has written seven books and many newsletters we didn't open, so treat this as a sample of his thinking [S5]. His birth year isn't in our sources. Treat each view as "as of" the date of its post.
+Bob Hoffman is alive, and views can change. This data set comes from his blog, The Ad Contrarian, mainly posts from December 2020 to 2021 and the sayings in its sidebar, plus his own website's biography [S1][S2][S3][S4][S5]. We also read his free 2024 book *Inside the Black Box*, a collection of his pieces on online ad waste, which gives his fullest argument on fraud and what to do about it [S6]. He has written other books and many newsletters we didn't open, so treat this as a sample of his thinking [S5]. His birth year isn't in our sources. Treat each view as "as of" the date of its post.
 
 ## In one paragraph
 
@@ -64,6 +64,34 @@ Hoffman makes his doubts part of the argument. In the 2020 post he said plainly 
 
 How he applied it: he proposed a better test of his own belief, blind judging of creativity compared with business results, even though no one had run it [S2]. For anyone using his method, the lesson is simple. Label each claim as known, likely or guessed before you argue for it.
 
+## Real decisions
+
+These come from *Inside the Black Box* (2024) [S6].
+
+### Giving the book away
+
+He published the book free, saying the last thing readers need is someone else cheating them. He aimed it at chief executives and finance chiefs who hope their marketing people know what they are talking about, at marketers who believe their suppliers, and at media buyers who think they know what they are buying [S6].
+
+### Crediting the researchers and staying a stenographer
+
+He says much of the knowledge in the book came from two researchers, Augustine Fou and Krzysztof Franaszek, and calls himself merely a stenographer. He also warns that fraud estimates in different pieces differ because they were written at different times, for example $80 billion in one and $100 billion in another [S6].
+
+### Gathering the figures from industry bodies
+
+He built the case from trade-body and research numbers, not from his own audits: a UK study that found about half of programmatic money going to middlemen, an ANA study that put wasted programmatic spend at about a quarter, a research firm's $84 billion fraud estimate for 2023, and a count of 40,000 websites in an average programmatic campaign. He admits the numbers overlap and may double-count, yet argues the waste is huge whichever is right [S6].
+
+### Blaming perverse incentives, not only criminals
+
+He asks why advertisers do not act. His answer is that nobody wants the numbers examined while they look good: the client wants them to rise, the planner and the agency are paid on volume, and the chief marketing officer has told the board for years that online works. He says agencies are paid before any fraud is found [S6].
+
+### Calling it a conspiracy of silence
+
+He points out that no media agency exposed any of the online media scandals, which were found by reporters and researchers. He says either the agencies are very naive or they stayed quiet, and he does not call it a plot by bad people but a choice by frightened ones to say nothing [S6].
+
+### Giving a short protection list
+
+His advice to someone who still buys online ads: buy direct from quality publishers, stay away from open networks and programmatic, distrust agency reports and fraud-checker reports and seals of approval, ask "How do you know this?" of everything, and hire a trusted consultant if the spend is large [S6].
+
 ## How he decides
 
 - Who benefits if I believe this? [S3]
@@ -101,6 +129,8 @@ How he applied it: he proposed a better test of his own belief, blind judging of
 - Is praised by researchers such as Mark Ritson and Byron Sharp, whose endorsements appear on his blog [S1][S5].
 
 ## Where he was wrong or criticised
+
+- **Big numbers from uneven sources.** In the book the waste and fraud figures come from trade bodies and research firms, and he concedes they likely overlap. He says some are low estimates, but a reader should treat the total as a range, not a fact [S6].
 
 - **Logic without data.** His fraud argument is built on reasoning, not new measurements, as he says himself [S3]. A reader who wants hard numbers may find it unproven, and he agrees state involvement wasn't shown [S3].
 - **One-sided on digital.** His jokes about social media and the web [S1] can undersell what targeted and digital channels do well, such as search and direct sales.

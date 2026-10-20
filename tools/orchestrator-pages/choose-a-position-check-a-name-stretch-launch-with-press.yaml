@@ -1,0 +1,89 @@
+new_slug: choose-a-position-check-a-name-stretch-launch-with-press
+name: Choose a position, check a name stretch, launch with press
+summary: Paste your product and rivals. Get one position to own, a name check for the new product and a press-first launch.
+job: plan-strategy
+thinking: high
+thinking_why: It has to weigh rivals, a brand name and a launch order together. Give it your strongest model.
+headline: Own one idea in buyers' minds, then launch it with press before ads
+subhead: Paste your product and your main rivals. It finds the one idea you can own and writes it as a line. Then it checks whether your brand name can stretch to a new product, and plans a launch that starts with press and begins ads only once people believe you.
+explain: |
+  A brand that tries to stand for everything stands for nothing. Buyers already hold a ladder of brands in their heads for each category, and a new name that blurs what you mean makes the whole brand weaker. Many launches also start with ads, which people trust less than a story someone else tells.
+
+  This workflow picks one attribute to own and writes it as one plain line. It then tests whether your brand name can cover a new product or needs its own, and plans a launch that starts with a news angle and third-party stories before you spend on ads. The order comes from Al Ries and Jack Trout, who wrote "The Positioning Era Cometh" in 1972, and from Ries's later writing on branding and publicity.
+when:
+  - You are launching a product and need one clear idea to own against rivals.
+  - You want to add a product under your brand name and fear it will blur what the brand means.
+  - You have little ad money and want coverage first, so ads start when people already trust you.
+you_give:
+  - Your product and who it is for
+  - Your main rivals and what each is known for
+  - What you can truthfully claim (optional)
+  - Your brand file, or a few lines on what your brand stands for
+  - The new product you want to add, and what it is (optional)
+  - Product facts such as price, benefits and proof
+you_get:
+  - One position to own, the weak spot of the leader you can use, and a one-line statement
+  - A short brief for your team
+  - A name check score out of 100 and a call to use the name, make a new one or skip
+  - What happens to your core product if the stretch fails
+  - A launch order with press first, a news angle, and the point of trust at which ads start
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your product and rivals, plus your brand file if you have one. It works step by step and saves each result.
+  - Check the weak-spot claim against a real source before you use it anywhere public.
+how_it_works:
+  - title: Finds your position
+    text: Maps who tops each category in buyers' minds, what each rival owns and which true weak spot you can use, then picks one attribute to own.
+  - title: Writes the one line
+    text: Writes the position as one plain line and tests that it needs no explaining.
+  - title: Checks the name stretch
+    text: Takes the position and compares what your name means today with what the new product would mean, then scores the stretch and makes the call.
+  - title: Sets the limit
+    text: If the name stays, sets a limit so it does not mean less, and says what the core product risks.
+  - title: Plans the press first
+    text: Finds a news angle a reporter would care about and plans press and third-party stories before any ad.
+  - title: Sets the ad point
+    text: Sets the point of trust at which ads begin and how much to spend on them.
+output_shape: |-
+  STEP 1: POSITIONING STATEMENT
+    The ladders: <category> | top rung <brand> | where you sit <rung or none>
+    What each rival owns: <rival> | <one word or attribute>
+    The weak spot you can use: <rival> can't <weakness> because <reason>
+    Your position: <one attribute to own>
+    One-line statement: <line>
+
+  STEP 2: BRAND NAME STRETCH CHECK
+    What the name means now: <one word or line>
+    Stretch score: <n>/100 (how safely the name can cover this product)
+    Call: <use the name / make a new one / skip> | cost to the core if it fails <what>
+
+  STEP 3: PRESS-FIRST LAUNCH PLAN
+    Category and the idea to own: <category> | <one word or idea>
+    News angle: <angle> | why a reporter cares <reason>
+    Press and third-party plan: <who> | <pitch> | <date>
+    Ads begin when: <point of trust> | budget <amount>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The rivals you list
+    how: List the brands buyers really compare you with, not the ones you admire. Wrong rivals give a position nobody needs.
+  - what: What you can truthfully claim
+    how: Give it proof you have. A position you can't back up fails the first time a reporter checks.
+  - what: How narrow the category is
+    how: If you can't be first in a broad category, say so. A narrower category you can lead beats a broad one where you are third.
+judge:
+  - The position is one idea, and the line needs no explaining.
+  - The rival weakness is true and says how to check it.
+  - The stretch score says what it measures and how it was worked out.
+  - The call (use the name, new name or skip) is clear, with the cost if it fails.
+  - The launch plan puts press before ads, and says when ads start.
+test:
+  - Give it a brand name that clearly can't stretch, such as a sports brand adding a bank. The check should say make a new name or skip.
+  - Read the one-line statement to someone who doesn't know your market. They should say what you stand for without help.
+  - Swap one rival for another and run it again. The position can change, but it should still be one idea.
+improve:
+  - Save your position and the line to your brand file, so ads, pages and press use the same words.
+  - Add press you have already won, so the plan builds on stories that exist.
+  - Re-run the name check each time you think of a new product under the same name.

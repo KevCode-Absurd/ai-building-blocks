@@ -1,0 +1,124 @@
+new_slug: what-you-really-sell-finder
+name: "What you really sell finder"
+summary: "Paste your product and buyer. Get a long list of what you are really selling, and the best three as test angles."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It must push past obvious answers and drop the ones the product cannot honestly deliver."
+
+headline: "What you really sell finder"
+subhead: Give it your product and your buyer. It writes at least ten answers to what you are really selling, pushes each from the thing to the result or feeling, drops the ones you can't deliver, and picks the best three as test angles. You get a test plan where only the angle changes.
+
+explain: |
+  Most owners name what they make, not what the buyer gets. Grass seed is grass seed, but the buyer may be buying a greener lawn, a quiet weekend or a neighbour's envy. Each real answer is a separate way to sell the same product.
+
+  This skill states the product plainly and names the buyer. It asks what you are really selling and writes at least ten answers, past the obvious one. It pushes each answer from the thing to the result, the feeling or the status the buyer wants, and asks the same question of the whole business to find new markets or uses. It drops answers the product can't honestly deliver, picks the strongest three, writes a test headline for each and sets the test so only the angle changes.
+
+when:
+  - You have one message and suspect the product could be sold in other ways.
+  - You need new angles to test and keep reusing the same one.
+  - You are entering a new market or use for an existing product.
+
+you_give:
+  - Your product facts
+  - Your buyer, or a persona (optional)
+  - Customer reviews or buyer words (optional)
+you_get:
+  - At least ten answers to what you are really selling
+  - Each answer pushed from the thing to the result, feeling or status
+  - The three strongest picks, each with a reason and a test headline
+  - A test plan where only the angle changes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts and name the buyer. Add reviews if you have them.
+  - Cross out any answer you couldn't honestly deliver.
+  - Run the test for the three picks with the same offer, picture and audience.
+  - Keep the losing angles in your angle library.
+
+how_it_works:
+  - title: States product and buyer
+    text: Writes the product in plain terms and names the buyer.
+  - title: Lists ten or more answers
+    text: Asks what you are really selling and writes at least ten answers, past the obvious one.
+  - title: Pushes to the result
+    text: Moves each answer from the thing to the result, the feeling or the status the buyer wants.
+  - title: Widens the question
+    text: Asks the same question of the whole business to find new markets or uses.
+  - title: Drops what you can't deliver
+    text: Removes answers the product cannot honestly deliver.
+  - title: Picks three
+    text: Picks the three strongest, with a stated reason, and writes a test headline for each.
+  - title: Sets the test
+    text: Sets the test so only the angle changes.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  PRODUCT AND BUYER
+  <plain product statement> | Buyer: <who>
+
+  WHAT YOU ARE REALLY SELLING
+  1. <answer> -> Result/feeling/status: <push> | Deliverable? <yes / no because ...>
+  ... (at least 10)
+
+  NEW MARKETS OR USES
+  <from asking the question of the whole business>
+
+  THE THREE TO TEST
+  1. <answer> | Why: <reason> | Test headline: <line>
+  2. ...
+  3. ...
+
+  TEST PLAN
+  Same: <offer, picture, audience, budget>
+  Different: <only the angle>
+  Measure: <metric> | Run: <length>
+
+  MISSING
+  <facts needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Buyer detail
+    how: Name a specific buyer. Answers sharpen when the buyer is one clear kind of person.
+  - what: Buyer words
+    how: Paste reviews. Answers that echo the buyer's words rank higher.
+  - what: What you can deliver
+    how: List the limits and what the product cannot do, so it drops the wrong answers.
+  - what: Test budget
+    how: State the budget so the plan sizes the test to what it can show.
+
+judge:
+  - At least ten answers are listed.
+  - Each kept answer is something the product really delivers.
+  - Test angles differ only in the angle.
+  - The three picks have a stated reason.
+  - No answer rests on an invented fact.
+
+test:
+  - Run it on a product you know well. See if it finds the angle your best customers mention.
+  - Check each of the three picks against the product facts.
+  - Run it twice. The top three should overlap.
+  - Run the three tests and see which angle wins.
+
+improve:
+  - Add the angles you've already tested with results, so it avoids repeats.
+  - Add reviews that show why people buy, so the answers use their words.
+  - Save the winning angle to your brand file.
+  - Pair it with "Shared want hook mapper" to build hooks on the winner.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Brainstorming and ranking answers is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Reviews and support messages"
+    - "Past tests with results"
+    - "A list of what the product cannot do"
+
+terms:
+  - term: Angle
+    meaning: The reason someone buys, in their words.
+  - term: Test angle
+    meaning: One reason to buy that you test against others while everything else stays the same.

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Alex Hormozi is alive and still publishing, so his views can change. What follows comes from his book pages (books published 2021 to 2025), his company's site, two long interviews from around 2022, a 2025 podcast summary, and outside coverage up to February 2026. Read each view as "as of" those dates. Many numbers about his businesses come from Hormozi's own company and have not been checked by an outside auditor [S9]. We say so where it matters.
+Alex Hormozi is alive and still publishing, so his views can change. The one piece of his own long writing we hold in full is an eight-page official sample from *$100M Offers*, the "Lost Chapter" on finding your first customer type [S11]. The rest of the book is not in our folder; the offer ideas below come from his book pages, interviews and the Acquisition.com course outline [S12]. What follows comes from his book pages (books published 2021 to 2025), his company's site, two long interviews from around 2022, a 2025 podcast summary, and outside coverage up to February 2026. Read each view as "as of" those dates. Many numbers about his businesses come from Hormozi's own company and have not been checked by an outside auditor [S9]. We say so where it matters.
 
 ## In one paragraph
 
@@ -35,13 +35,21 @@ He argues that racing to the lowest price is a trap. When buyers can't tell sell
 
 How he applied it: he describes a company in his portfolio that raised prices by 50% and tripled its profit within three months [S5]. The book frames this as becoming a "category of one," serving a smaller market for more money, and a "virtuous cycle of price" [S2].
 
+### Find your best customers first (the lost chapter)
+
+In this sample chapter he starts with a story from 2019. A speaker who had worked at a large software investment firm explained how that firm judged a company: score each customer by how long they stay and how much they pay, then buy the company if there is a vein of valuable customers it under-serves [S11]. After buying, the firm cut the channels that brought low-value customers and doubled down on those that brought the best ones [S11]. Hormozi called it the 80/20 rule "on steroids" and made it part of his firm's method for speeding up value [S11].
+
+His four steps: (1) survey customers on who they are, their numbers before and now, what they wanted, and how they bought (the trigger, what they read or watched, who referred them); (2) sort by who you like most, who spent most and who stayed longest, and keep the top 20% only; (3) read the answers and find the fewest things the best customers share, usually three to five; (4) act, by speaking to that customer in your ads and turning others away, and by rebuilding the buying path your best customers took [S11].
+
+How he applied it: at Gym Launch the best customers shared a lease, at least one employee, a monthly revenue floor and a minimum client count [S11]. About 78% of top customers had consumed at least two long pieces of content before buying, so every lead then got two such pieces, and sales staff hand-picked two or three more [S11]. He says he looked at a rival serving the same gym owners with the same sales count and found it earned 70 times less profit, because it took anyone with a card [S11]. These are his own figures.
+
 ### Pick the right market
 
 An offer only works in a market that wants it. He looks for buyers with a painful problem, money to spend, and a market that is growing rather than shrinking [S5]. He calls the best case a "starving crowd": people hungry for what you sell [S5].
 
 ### Make the offer hard to refuse
 
-Once the core is right, he adds layers: scarcity, urgency, bonuses, guarantees and a clear name [S2]. Guarantees matter most to him because they move risk from the buyer to the seller, which raises the buyer's belief that they'll get the result [S5]. His book lists several types of guarantee with examples, plus a formula for naming offers [S2]. A later reviewer noted that his own sales pages avoid fake countdown timers and made-up scarcity [S9].
+Once the core is right, he adds layers: scarcity, urgency, bonuses, guarantees and a clear name [S2]. Guarantees matter most to him because they move risk from the buyer to the seller, which raises the buyer's belief that they'll get the result [S5]. His book lists several types of guarantee with examples, plus a formula for naming offers [S2]. The Acquisition.com offer course lays the order out as: choose a market, decide what the outcome is worth, check the value equation, build the core offer, add bonuses and a guarantee, then scarcity, urgency and a name [S12]. The same outline says price affects how many customers you get, how much each buys, and how often they return [S12]. A later reviewer noted that his own sales pages avoid fake countdown timers and made-up scarcity [S9].
 
 ### Leads: people who know you and people who don't
 
@@ -65,6 +73,8 @@ How he applied it: he describes his gyms, where the cost of getting a member was
 
 - Fix the offer before you spend on leads [S2][S3].
 - Judge any change by the four parts of value. Which one does it move? [S5]
+- Know which customers are worth most before you spend on more leads. Survey, sort, find what the top 20% share [S11].
+- Quality over quantity: more leads from looser qualifying costs more than it earns [S11].
 - If buyers compare you on price, change the offer until they can't [S5].
 - Choose markets with pain, money and growth [S5].
 - Do the boring basics in volume. He built his sales skill by running a very high number of one-on-one sales talks [S6].
@@ -72,6 +82,26 @@ How he applied it: he describes his gyms, where the cost of getting a member was
 - It's fine to leave money on the table to get a better deal done [S6].
 - Give up a good option to take a great one [S6].
 - Cut commitments down to a few priorities. He says a focus coach helped him do this [S6].
+
+## Real decisions
+
+### Copying an investor's customer scoring
+In 2019, at a table of software owners, he heard how a large software investor scored customers by tenure and spend and then cut the channels that brought poor ones [S11]. His reaction was to wonder how to apply it across his own portfolio, and it became a pillar of his firm's method [S11].
+
+### Surveying Gym Launch customers and narrowing the avatar
+He and his team surveyed customers, sorted for the top spenders, listed what they shared, and then rewrote ads and pages to state the requirements plainly, talking only to the best customers' problems [S11]. His reasoning: you repel the bad customers and attract the good ones [S11].
+
+### Putting two long pieces of content in every buyer journey
+After finding that most top customers had read or watched at least two long pieces before buying, he injected two into each lead's path and raised overall content output [S11]. He says they were real value-in-advance, not disguised sales pitches [S11].
+
+### Refusing to cut qualification steps for volume
+Rivals copied the journey but panicked and cut steps for more leads. He says each time his team removed a qualification step, lead volume rose and money fell [S11]. He then merged marketing and sales into one acquisition department so neither could blame the other [S11].
+
+### Paying more to acquire a better customer
+His stated rule: he would rather pay $5,000 to acquire $45,000 than pay $1,000 to acquire $5,000, though the first costs five times as much [S11]. The context was a lifetime value of $45,000 and up for his customers, against about $6,000 to $8,000 at a typical rival [S11]. Those are his claims.
+
+### Walking through a possible stake in a rival
+He once considered buying a stake in a business-services company in his own market. He spent a morning on the owner's numbers and found equal sales but far lower profit [S11].
 
 ## Where he stood
 
@@ -120,4 +150,4 @@ The same reviewer also praised his free material as valuable and his track recor
 - "Everyone wants a bargain, but it doesn't mean cheap." (interview, around 2022) [S5]
 - "it's okay to leave money on the table" (interview) [S6]
 - "you only need to be right once" (interview) [S6]
-- "the best way to learn is to seek out experts" (interview) [S6]
+- "More of the high profit customers. Fewer low profit customers." (Lost Chapter) [S11]

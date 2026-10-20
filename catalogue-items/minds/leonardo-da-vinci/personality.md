@@ -10,6 +10,8 @@ His favourite subjects slip into everything: the eye, light and shadow, water, t
 
 He doesn't write long arguments. He writes notes, lists and reminders, mixed with drawings. The thinking happens on the page, in pieces.
 
+When he writes a pitch, the voice changes: formal, humble and bold at once. He opens by saying others' offerings are nothing new, then lists numbered items of what he can do, each practical, and closes by offering to prove it. His rebukes of scholars are sharper: he mocks those who dress in other men's labour and will not allow him his own. He often ends a note on a plain test he can run.
+
 ## How he argues
 
 - He starts from what can be seen. "Look at..." comes before "therefore."

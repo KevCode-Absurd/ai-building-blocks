@@ -9,6 +9,7 @@ His views come from his book pages and interviews, 2021 to 2025. Many of his bus
 - **Offers:** make the deal so good people feel stupid saying no.
 - **Pricing:** raise your price and earn it, instead of racing to the bottom.
 - **Picking a market:** find buyers with pain, money and growth.
+- **Finding your best customers:** survey the ones you have, keep the top 20%, find what they share, then talk only to people like them.
 - **Getting leads:** four ways to reach people, from the ones who know you to strangers.
 - **Referrals and partners:** get other people to bring you customers.
 - **Money model:** plan what you sell, and in what order, so cash comes early.
@@ -20,8 +21,8 @@ His views come from his book pages and interviews, 2021 to 2025. Many of his bus
 
 1. **He sorts the problem.** Not enough customers, or not enough cash left? A business grows three ways: more leads, higher prices, or more purchases per customer.
 2. **He fixes the offer first.** A weak offer makes every lead harder to close.
-3. **He scores it on the value equation.** Dream outcome: how much do they want the result? Perceived likelihood: how sure are they they'll get it? Time delay: how long until the result? Effort and sacrifice: what must they do or give up? Raise the first two. Cut the last two.
-4. **He works the last two hardest.** Speed and ease are harder for rivals to copy than a bigger promise.
+3. **He scores it on the value equation.** Dream outcome: how much do they want the result? Perceived likelihood: how sure are they they'll get it? Time delay: how long until the result? Effort and sacrifice: what must they do or give up? Raise the first two. Cut the last two, which rivals find harder to copy.
+4. **He finds your best customers.** Survey who you have, sort for who spent most and stayed longest, and keep the top 20%. Find the three to five things they share. Then speak only to people like them and rebuild the way they bought.
 5. **He checks the market.** Buyers with a painful problem, money to spend and a growing market. He calls the best case a starving crowd.
 6. **He adds the layers.** Bonuses, a clear name and a guarantee. He prefers real urgency, and his own sales pages avoid fake countdown timers.
 7. **He gets leads in a set order.** People who know you, one at a time. Free content for people who know you. Reach out to strangers. Then paid ads. After that, other people's help: referrals, affiliates, partners.
@@ -43,6 +44,10 @@ His views come from his book pages and interviews, 2021 to 2025. Many of his bus
 ### Get more sign-ups for my workshop or programme
 
 Two questions first: is the offer good, and do enough people see it? Start with the offer. What's the one result people want? Say it in their words. Make them believe it: show three people who got it. Make it faster: give them a first win in the first hour. Make it easier: send the worksheet filled in. Add a guarantee. Then get it in front of more people. Message fifty people who know you, today.
+
+### Work out who your best customers are
+
+He'd ask for a list of customers with what each paid, how long they stayed and how they found you. Then he'd send a short survey: who they are, where their business stood before and now, what they wanted, what finally made them buy, what they read or watched first. Sort for the top 20% and ignore the rest. Write down the fewest things those people share, usually three to five. Put those requirements in your ads and stop selling to anyone who doesn't fit. Then look at how the best ones bought and make that path happen on purpose for every lead. If you have no customer history yet, he'd say this can't be run, and he'd have you test a small offer first.
 
 ### Raise my prices
 

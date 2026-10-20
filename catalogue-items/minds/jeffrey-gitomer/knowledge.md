@@ -74,6 +74,28 @@ How he applied it: he said he keeps his own goals on his bathroom mirror [S5].
 - Plan what you'll give after the sale [S3].
 - Take a small action today instead of waiting for a perfect plan [S5].
 
+## Real decisions
+
+### Asking readers to list their own "buts"
+
+He told readers to list every "but" they said after buying, like "it was OK, but...". His reason was that those doubts are the same ones blocking their own customers. He then asked whether you would buy from you, and said most would not [S1].
+
+### Setting value against pain-finding systems
+
+In his value column he set his approach against selling "systems" and pain-finding methods, which he saw as manipulative [S2].
+
+### Laying out the 5.5 parts of value
+
+He built a value proposition from company value, product value, salesperson value, a short-term incentive, the ways the customer produces, benefits or profits, and a half step of continuing value after the sale. He called the profit part the most important and the least used [S2][S3].
+
+### Putting value into the bid
+
+He told readers to include their value and profit points in any bid or request for proposal, so rivals must prove their value while also deciding how far to cut prices [S3].
+
+### Making a one-time incentive clearly one-time
+
+He warned that a free starter kit or rebate can backfire because customers will want it again, so say it is one time only [S2].
+
 ## Where he stood
 
 **Is closing technique the key to sales?** No. He put value, relationships and loyalty first [S8].

@@ -2,119 +2,129 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Gary Bencivenga is alive, and views can change. He has written no book. His own words in public are mainly two sign-up pages for free e-letters: Bencivenga Bullets, launched in 2004 [S2], and its successor, Marketing Maxims, whose page we read as it stood in 2026 [S1]. Both pages describe his ideas and promise to reveal "secrets" to subscribers, so they tell us his themes more than his full method. The issues themselves we could not open. His best-known framework, the "persuasion equation", reaches us through other writers' summaries [S3][S4]. His big results are reported by clients and peers whose praise he quotes on his own pages [S1][S2]. Treat all views below as "as of" the page they come from. He was 58 in 2004, by his own account, so he was born around 1946 [S2]. Nothing here covers his private life or plans.
+A note on the record: Gary Bencivenga is alive, and views can change. He has written no book. The core of this file is now his own e-letter, read in full for its first 29 issues, called Bencivenga Bullets and later Marketing Bullets [S6]. The collection is a PDF the publisher offers with his permission. It gives his method in his own voice, with the tests and stories behind it. The two sign-up pages, from 2004 [S2] and 2026 [S1], describe his themes and quote the praise he chose to print. His "persuasion equation" of problem, promise, proof and proposition still reaches us only through other writers [S3][S4]. The Bullets never state it in those words, but they cover each part. Bob Bly's 2005 list ranks him among the best [S5]. His results are mostly self-reported. Treat each view as "as of" its issue. He was 58 in 2004, so he was born about 1946 [S2]. Nothing here covers his private life or plans.
 
 ## In one paragraph
 
-Bencivenga is a direct response copywriter who learned the trade from John Caples at BBDO and David Ogilvy at Ogilvy & Mather, then from tough copy chiefs and clients such as Ted Nicholas and Max Sackheim [S1][S2]. He wrote for publishers and marketers including Boardroom, Phillips, Rodale, KCI, Forbes and Merrill Lynch, mostly on a fee-plus-royalty basis tied to results [S2]. By his account, his work beat the competing copy in more than 80 percent of head-to-head tests, and for some mailers it never lost [S2]. Peers such as Gene Schwartz, Gary Halbert and Bob Bly ranked him among the very best [S1][S2][S5]. He frames persuasion as a set of parts that must all be present, usually summarised as problem, promise, proof and proposition [S3][S4]. His core habits are to prove every claim, to test everything, and to turn hard-won lessons into short maxims you can remember under pressure [S1][S2].
+Bencivenga is a direct response copywriter who learned from John Caples and David Ogilvy, and later from copy chiefs and clients such as Ted Nicholas and Max Sackheim [S1][S2][S6]. He wrote for publishers and marketers on a fee-plus-royalty basis, and says his copy beat the control package in more than 80 percent of head-to-head tests [S2]. His working rule for a crowded, sceptical market is simple. Never make a claim bigger than your proof, and keep the claim and its proof together in the headline [S6]. Around that rule sit a handful of habits. Ask what you are really selling. Give a reason why in three places. Make an offer so strong that only a fool would refuse. Let a split-run test overrule everyone's taste [S6]. He teaches in short issues, one idea at a time, and ties each to a story and a source [S6].
 
 ## Core ideas
 
-### The persuasion equation
+### Never make the claim bigger than the proof
 
-Writers who follow him summarise his "persuasion equation" as a problem, plus a promise, plus proof, plus a proposition, which together add up to persuasion [S4]. One article calls it a set of easy-to-use factors that go into any serious attempt to persuade a buyer [S3]. Leave one out and the sale weakens.
+Bullet 3 explains why the old advice to shout big benefits no longer works. The giants who wrote the classic books wrote when buyers saw far less advertising. Today, words like "free" and "new" and huge promises trigger a flat "Yeah, sure" and the message is tossed [S6]. His fix is to bind each claim to its proof "at the hip", so the reader never meets one without the other [S6]. He says to avoid worn-out phrases and to look for every way to bolster credibility, not just testimonials, which are now overused [S6].
+How he applied it: one headline for a financial newsletter beat another because of its form. It put an easy requirement first and a strong promise second ("if you have 20 minutes a month, I guarantee..."). He says the IF-THEN shape seems to switch off the reader's alarm. He then reused it for a weight-loss newsletter against a strong control, and it won again [S6].
 
-How he applies it: a podcast guest who uses it describes the problem as one that only the seller can solve, so the promise is specific and the proof must back it [S4]. A related checklist built on his work adds that proof must be believable and that the offer must be easy to accept [S3].
+### Predict the winner by asking which headline carries more proof
 
-### Proof decides belief
+Bullet 7 gives a free way to guess a test result before you spend on it. Ask which headline or theme offers the more compelling proof [S6]. Readers ask two questions: is this of interest to me, and is it believable? Most writers pour their effort into the first and ignore the second [S6]. He cites a Caples test: "When doctors have headaches, what do they do?" beat "Tension headache?" by 71 percent, because the word "doctors" lifts the proof [S6]. He quotes Caples's definition of effective advertising as a believable promise to the right audience [S6]. He tells writers to read their own copy as a "Yeah, sure" sceptic and to ask what proof would convince a fair-minded jury beyond reasonable doubt [S6].
 
-His seat on a council is proof and believability. His pages lean on proof at every turn: thousands of split-run tests, named clients, win rates and quoted praise from peers [S1][S2]. His own sign-up pages are an example. Before asking for anything, they stack up evidence from people the reader respects [S1][S2].
+### Ask "What are we really selling?"
 
-How he applies it: one testimonial he prints makes the point for him, noting that superlatives are empty in sales copy unless you have the evidence to back them [S1][S2].
+Bullet 4 is built on a single question, taught to him early by an old copy chief [S6]. You are not selling grass seed, you are selling a greener lawn. Write a long list of answers, then test an ad built around each of the best [S6]. He also applies it to a whole company. The railroads, he says, could have seen they were in transportation. Cigarette makers moved from taste to a cooler self-image, and car makers from basic transport to personal style [S6]. This is the question the 2026 page only teased [S1].
 
-### Let split-run tests decide
+### Reasons why, in three places, and the word "because"
 
-He says he has supervised thousands of split-run tests of headlines, offers, formats, copy and design, and collected the winning techniques [S1][S2]. His e-letter promised the results of tests on headlines, designs, formats, offers, premiums and guarantees, many of them surprising [S2]. Like his teachers Caples and Ogilvy, he trusts what buyers do over what experts think [S1][S2].
+Bullet 9 says the most persuasive tool is the reason why, and he credits Ogilvy as the greatest reason-why copywriter [S6]. Give a reason why you are better than every alternative, including doing nothing. Give a reason to believe it. Give a reason to act today [S6]. Examples: a soft drink that says it tastes better because it has 10 percent fruit juice, and a half-price sale that works once it says it is a fire sale because of a fire [S6]. Bullet 10 adds the Langer copy-machine study as quoted by Cialdini. Nearly everyone let a stranger skip the line when the request included "because", even when the reason added nothing [S6]. He says to follow "because" with a real reason, and calls this the most ethical kind of persuasion, since it gives people honest reasons to act in their own interest [S6].
 
-How he applies it: he worked on a fee-plus-royalty basis, so his pay rose and fell with the measured results [S2].
+### The product is the star
 
-### Test the business before you leap
+Bullet 19 argues that a gifted product beats a gifted pen. He quotes Bill Bernbach, who said advertising cannot invent an advantage that does not exist [S6]. The client's job is to build a product with a clear, unique, wanted advantage. The copywriter's job is deep research, and he lists ten questions to ask the client and its best salespeople before writing a word [S6]. They cover why the product is made as it is, who says it works besides the seller, the strongest proof, who the heavy users are, and which offers and premiums might lift sales [S6]. He tells writers to resist being clever, since puns call attention to the writer and away from the product. He also tells them to pick strong products to write for, as a jockey picks fast horses [S6].
 
-He tells would-be founders to "dig your tunnel at night": build and prove the new business before giving up the job that pays the bills [S1]. He says that is what he did [S1]. He also promised a strategy to raise the odds of a new product succeeding many times over, and ways to use the internet to pretest products and campaigns cheaply [S2].
+### The offer is the second-most-important part
 
-How he applies it: one client quoted on his page left a secure job to launch a newsletter only once Bencivenga agreed to write the copy, and reported over $3 back for every marketing dollar [S1][S2].
+Bullet 21 sets out a checklist of offer ideas [S6]. The list comes first, the offer second, the copy third, so test offers as hard as headlines. Among his points: make the offer one a fool would take; give a believable reason for any special deal; sell one thing per ad; add a deluxe option so the choice becomes A or B and not yes or no; make the guarantee strong, since longer guarantees cut refunds; test a price ending in 7, a tip he credits to Ted Nicholas; sell by "till forbid" continuity where you can; add early-bird bonuses worded as "within 7 days", not a fixed date; and use takeaway offers only with limits you really keep [S6].
 
-### Find the starving crowd
+### Find customers where they are already looking
 
-Among the topics he promised subscribers was how to find large new "starving crowds" of prospects who already spend freely [S1][S2]. The idea, common in direct response, is that the market matters as much as the message. A hungry audience forgives weak copy. A cold one ignores strong copy.
+Bullets 16 and 18 teach him to meet the hungry crowd. A master salesman told him to intercept customers where they look for someone like you, and online that means matching the way people search [S6]. His seven-step online plan: take a narrow niche; give away something valuable; promote it everywhere; collect email in return, never giving the tips away on the site; pile on value before selling; never sell hard inside the free letter; then collect physical addresses with a free gift so direct mail can follow [S6]. He passes on Gary Halbert's report that mail to those addresses can pull up to four times the sales of web-only copy [S6].
 
-How he applies it: the client list on his pages is full of newsletter and book publishers, whose buyers already pay for advice [S2].
+### Test before you leap, and learn from every loss
 
-### Supply, not just demand
+The 2004 and 2026 pages stress thousands of split-run tests, and his advice to "dig your tunnel at night", proving a business before you quit your job [S1][S2]. Bullet 8 adds the lesson in losing. After a test defeat he made himself ask why his copy lost, and vowed it would not happen again. He says his biggest advances came from defeats [S6]. His story of a mail-order apple seller whose hail-marked fruit sold better once he explained the marks as proof of mountain growing is his favourite example [S6].
 
-He notes that most marketers focus only on creating demand, but you can often sell more by restricting the supply or availability of a product or premium [S1][S2]. Scarcity, used honestly, raises desire.
+### Metaphor, curiosity and names
 
-How he applies it: he promised many creative ways to limit availability, from the product itself to the gift that comes with it [S2].
-
-### Salesmanship and psychology in print
-
-He describes his work as "persuasion-in-print" and promises to translate the closing methods of great salespeople into direct response copy [S1][S2]. He also says direct marketers have ignored a large body of psychology research, and that he and his clients have used it for years [S1][S2].
-
-How he applies it: the 2004 page promised "psychological triggers" that make people act, buy more and come back [S2].
-
-### Count sales, not traffic
-
-In 2004 he called the internet the cheapest printing press joined to the cheapest post office, a medium the old masters would have loved [S2]. But he warned against measuring visits. Hits, he joked, stand for "How Idiots Track Success". You want sales [S2].
-
-How he applies it: he urged marketers to build their own lists, raise the share of visitors who buy, and use membership models that renew automatically [S2].
-
-### Maxims for the moment of truth
-
-As of 2026 he teaches through maxims: short sentences you can remember when you face a blank screen or a big presentation [S1]. He argues that nobody can recall a textbook under pressure, but anyone can recall one sentence that keeps them on target [S1]. He promises a 12-word sentence at the base of all persuasion, and a six-word "mother of all maxims" [S1].
-
-How he applies it: he pairs copy advice with personal growth, such as using the subconscious mind to find headlines and replacing anxious self-talk with confidence [S1].
+Other issues give craft habits. Ask the six questions (who, what, why, how, where, when), and send "Mr. Why" to gather seven times more facts than you can use (Bullet 14). Name a product so the benefit is built in (Bullet 17). Use metaphor to carry a point past argument (Bullet 25). Test headlines against the "shake-me-awake-at-three-a.m." check, and write 30 to 50 headlines before choosing one (Bullet 24) [S6].
 
 ## How he decides
 
-- Name the problem, the promise, the proof and the proposition [S3][S4].
-- Ask what proof would convince a sceptic [S1][S2].
-- Test it before you trust it [S1][S2].
+- Is the claim bigger than the proof? If so, shrink the claim or add proof [S6].
+- Which of two headlines carries more proof? Bet on that one, then test [S6].
+- Have we listed what we are really selling, and tested the best answers? [S6]
+- Are the three reasons why on the page: why us, why true, why now? [S6]
+- Is the offer so strong that only a fool would refuse? [S6]
+- Does the test result, not the loudest opinion, make the call? [S1][S2]
 - Prove a business small before you bet on it [S1].
-- Pick a hungry market first [S2].
-- Count sales, not clicks [S2].
-- Boil each lesson down to one maxim [S1].
+
+## Real decisions (enriched minds)
+
+### Reusing the IF-THEN headline
+
+A financial newsletter's magalog tested two headlines on the same cover photo. One was a plain label with a question. The other promised a financial miracle to anyone with 20 minutes a month. The second beat the first by a wide margin and ran for years [S6]. The publisher asked Bencivenga to adapt it for a weight-loss letter, and he kept every other element and changed only the promise, dropping the exclamation marks as hype signals. It beat a hard-to-beat control [S6].
+
+### Choosing "doctors" over a bare symptom
+
+For a free aspirin sample, he ranked two headlines by the proof they carried. The one naming doctors won against a plain symptom line, by 71 percent in the Caples test [S6]. He then noted a current Boardroom health control that uses the same shape [S6]. His point was that the form had worked for decades.
+
+### Picking the bogo
+
+He asked which of three equal discounts would pull best. Buy one, get one free beat 50 percent off and half price by 40 percent in Bob Stone's report, and matched his own experience [S6]. His caveat: a neurosurgeon should not run a bogo. He also pitched a "give one, get one" renewal offer for a newsletter he co-owned, and one reader gave 62 subscriptions [S6].
+
+### Telling a newsletter star to cap his list
+
+Louis Rukeyser's newsletter had about 500,000 subscribers and he wanted a million. Bencivenga advised a strict cap at one million so that the cutoff would pull people in. Rukeyser refused to limit growth, and by Bencivenga's account never came close to a million [S6]. The lesson he drew is that a limit works only if you mean it.
+
+### Splitting his own e-letter
+
+In Bullet 29 he built the e-letter on copywriting because it was his strongest proof. He then saw that the best copywriters master both their craft and success principles. Fans liked the mix, but he judged each topic needed its own depth, so he split it in two: Marketing Bullets for copy and a new Success Bullets for personal achievement [S6].
+
+### Making the guarantee longer
+
+He found that a longer money-back guarantee lowered refunds. A one-year full guarantee gave buyers more confidence and drew fewer returns than shorter terms, and five years did better still, because a disappointed buyer felt there was plenty of time and never got round to it [S6]. He told marketers to make the guarantee as strong as they can stand.
 
 ## Where he stood
 
-**Hype or proof?** Proof. His own pages lean on evidence and named sources [S1][S2].
+**Hype or proof?** Proof. Yelling is not selling [S6].
+
+**Do the old masters still work?** Their core lessons do, but the "big benefit, big claim" advice needs proof beside it [S6].
 
 **Is the internet good for direct response?** Yes, as of 2004, if you measure sales and build your own list [S2].
 
-**Should content be free?** Not always. In 2004 he backed paid memberships against the idea that all online content wants to be free [S2].
+**Are persuasion tricks unethical?** Not when the reasons are true. He calls "because" plus an honest reason the most ethical persuasion [S6].
 
-**Are "NEW" and "FREE" still the strongest words?** He said in 2004 that they no longer are, and promised subscribers two words that work better. The page doesn't name them, so neither do we [S2].
+**Is writing about the product or the writer?** The product. "Magic is in the product" is his reading of Bernbach [S6].
 
-**Do old lessons still work?** Yes. He says winning techniques can be reused, often setting new records when applied to a different product or market [S1][S2].
+**Can copy be learned?** Yes, through tested winners and repeated maxims [S1].
 
-**Can copy be learned?** Yes, by studying tested winners and repeating maxims until they become habit [S1].
+## Their work and record
 
-## His work and record
-
-- Learned direct response under John Caples at BBDO and David Ogilvy at Ogilvy & Mather [S1][S2].
-- Worked with Ted Nicholas and Max Sackheim, among others [S1][S2].
+- Learned direct response under Caples and Ogilvy, and from Nicholas and Sackheim [S1][S2].
 - Wrote for Boardroom, Phillips, Rodale, KCI, Prentice-Hall, Doubleday, *Business Week*, *Forbes* and Merrill Lynch [S2].
 - Reports a win rate above 80 percent in head-to-head tests [S2].
-- Launched Bencivenga Bullets in 2004, saying he was semi-retired at 58 [S2].
-- Later relaunched it as Marketing Maxims, and says he no longer works for clients [S1].
-- Ranked among the best working copywriters by Bob Bly in 2005 [S5].
+- Wrote for the Charles Givens and Richard Simmons newsletters, as he describes in the Bullets [S6].
+- Started Bencivenga Bullets in 2004, then Marketing Maxims [S1][S2].
+- Named by Bob Bly in 2005 among the best [S5].
 
 ## Where he was wrong or criticised
 
-- **Self-reported results.** Most claims about his wins come from his own pages and the praise he chose to print [S1][S2]. We found no independent audit.
-- **Teaser marketing.** His sign-up pages promise big percentage lifts and secret techniques without showing them [S1][S2]. That is effective direct response, but it is the kind of hype a sceptic should question.
-- **Secondhand framework.** His "persuasion equation" is widely quoted, but we saw it only in others' words [S3][S4].
+- **Self-reported results.** Win rates, lifts and the 71, 40 and 400 percent figures are his or the people he cites, and I found no audit [S2][S6].
+- **Teaser marketing.** His pages promise "secrets" and big lifts. That is effective, but a sceptic should note the style [S1][S2].
+- **Borrowed science.** His persuasion claims lean on one famous study of line-cutting, and he says "because" works even without a real reason. Later copywriters should rely on real reasons, as he advises [S6].
+- **Secondhand framework.** The persuasion equation reaches us through others [S3][S4].
 
 ## Blind spots to watch
 
-- He comes from mail-order publishing. Brand building and long-term reputation get less attention.
-- Scarcity and "triggers" can slide into pressure. Keep them honest.
-- His proof standard needs real evidence. If you don't have it, he can't help you invent it.
-- He is alive and still writing. Don't speak for his current views.
+- He comes from mail-order publishing. Brand building and long-term reputation get less room.
+- Takeaway offers and "triggers" can slide into pressure. Keep limits real.
+- His proof standard needs real evidence. If you have none, he cannot help you invent it.
+- Some of his tips, such as seven-ending prices, were tested for his markets only.
+- He is alive and still writing. Do not speak for his current views.
 
 ## Short phrases on the record
 
+- "What are we really selling?" (Bullet 4, the question he calls most important) [S6]
+- "Never make your claim bigger than your proof." (Bullet 3, repeated in Bullet 7) [S6]
+- "Without belief, nobody buys." (Bullet 7) [S6]
+- "Yelling is not selling." (Bullet 7) [S6]
 - "dig your tunnel at night" (Marketing Maxims page, as of 2026) [S1]
-- "the world's cheapest printing press hooked up to the world's cheapest post office" (2004) [S2]
-- "Hits stands for 'How Idiots Track Success'!" (Bencivenga Bullets page, 2004) [S2]
-- "secrets of persuasion-in-print" (Bencivenga Bullets page, 2004) [S2]
-- "Problem + Promise + Proof + Proposition = Persuasion" (as summarised by a podcast, 2019) [S4]

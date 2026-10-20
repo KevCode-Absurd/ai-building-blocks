@@ -1,0 +1,21 @@
+slug: hedgehog-focus-finder
+name: "Hedgehog focus finder"
+summary: "Describe what you do and what you do well. Get a plain statement of the one thing to focus on."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [jim-collins, lisa-su]
+credits:
+  - {title: "The Hedgehog Concept", by: "Jim Collins", url: "https://www.jimcollins.com/concepts/the-hedgehog-concept.html", used: "Finding where passion, what you can be best at and what drives your resource engine overlap, and writing it as an understanding, not a goal"}
+  - {title: "CEO of the Year: A conversation with AMD's revolutionary Lisa Su", by: "Chief Executive", used: "Asking what you want to be when you grow up as an identity, naming what you are fundamentally best at and picking large markets about to change"}
+  - {title: "Dream Big: Lisa Su talks chips, curiosity and chance", by: "Lisa Su", used: "Choosing a bet that fits a named strength"}

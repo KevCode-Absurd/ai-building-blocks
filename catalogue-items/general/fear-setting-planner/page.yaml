@@ -1,0 +1,124 @@
+new_slug: fear-setting-planner
+name: "Fear-setting planner"
+summary: "Paste a decision you keep putting off. Get the worst case, how to repair it and what waiting costs."
+job: think-and-decide
+thinking: medium
+thinking_why: "It rates and repairs each fear and prices the cost of waiting. The steps are fixed and the judgement is light."
+
+headline: "Fear-setting planner"
+subhead: "Tell it the move you keep putting off. It writes the worst realistic outcomes, rates how bad and how likely each is, and lists how you would repair each one. It prices what waiting costs at one, five and ten years. You get a first step you can take within a day."
+
+explain: |
+  When you put off a decision, the fear usually stays vague. Vague fears feel huge, and the cost of doing nothing feels like zero. Both are wrong, and the mistake grows every month you wait.
+
+  This skill makes the fear exact. It writes each realistic worst case, rates how much lasting harm it would do and how likely it is, and lists how you could repair or limit it. It lists what you gain from a partial or full win. Then it prices waiting at one, five and ten years and picks one step small enough to take within a day. It does not give medical, legal or investment advice.
+
+when:
+  - You have been meaning to make a change for months and keep finding reasons to wait.
+  - A decision feels risky but you cannot say exactly what could go wrong.
+  - You want to see the cost of staying put next to the cost of acting.
+
+you_give:
+  - The move you are putting off, in one or two sentences
+  - What you are afraid will happen (optional)
+  - What would change if it went well (optional)
+  - Limits that matter, such as savings, dependants or a lease (optional)
+you_get:
+  - The worst realistic outcomes, each rated for harm and for odds
+  - A repair or limit step for each fear
+  - The gains from a partial or full win
+  - The cost of doing nothing at one, five and ten years, and a first step for today
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the move you are putting off and say what scares you about it.
+  - Add the limits that are real, such as money you need or people who rely on you.
+  - Read the harm and odds ratings and correct any that seem off.
+  - Do the first step within a day.
+
+how_it_works:
+  - title: Names the move
+    text: States what you are putting off in one clear line.
+  - title: Writes the worst cases
+    text: Lists the realistic bad outcomes and rates each one's lasting harm from 1 to 10.
+  - title: Rates the odds
+    text: Rates how likely each case is, separately from how bad it is.
+  - title: Plans the repair
+    text: Lists how you would limit or repair each one.
+  - title: Lists the gains
+    text: Writes what a partial win and a full win would give you.
+  - title: Prices waiting
+    text: States the cost of doing nothing at one, five and ten years.
+  - title: Picks a first step
+    text: Chooses a step you can take within a day.
+
+output_shape: |
+  THE MOVE
+  <what you are putting off>
+
+  WORST CASES
+  1. <outcome> | Harm: <1-10> | Odds: <low/medium/high or %> | Repair: <steps>
+  2. ...
+  3. ...
+
+  GAINS
+  Partial win: <what you get>
+  Full win: <what you get>
+
+  COST OF DOING NOTHING
+  1 year: <cost>
+  5 years: <cost>
+  10 years: <cost>
+
+  FIRST STEP
+  <step that takes under a day> | When: <day and time>
+
+  MISSING
+  <facts that would change the ratings>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your real limits
+    how: Savings, rent and who relies on you set the ceiling on harm. Be honest about them.
+  - what: How exact the fear is
+    how: "\"I might fail\" is vague. \"I might lose three months of income\" can be rated and repaired."
+  - what: The time frame
+    how: Say when you would need to act, so the cost of waiting is priced against a real date.
+  - what: A partial version
+    how: Say if you could test a small version first. Many repairs are a smaller first step.
+
+judge:
+  - Each fear has a repair step.
+  - Harm and odds are rated separately.
+  - The cost of waiting is stated for three time spans.
+  - The first step can be done in a day.
+  - Nothing here is medical or investment advice.
+
+test:
+  - Run it on a past decision that went fine. Check the worst case it predicts is the one you feared.
+  - Rate the worst case yourself first, then compare with the skill's rating.
+  - Run it twice. The harm ratings should stay close.
+  - Take the first step and note after a week how the fear compares with the facts.
+
+improve:
+  - Add your fixed limits (savings floor, family duties) so repairs always respect them.
+  - Add repairs that worked for you before, so they come up first.
+  - Keep a log of fears you set and what actually happened, and paste it in as a record.
+  - Pair it with "Not-to-do list builder" to free the time the first step needs.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing, rating and pricing the cost of waiting is plain text work."}
+    - {name: "A notebook", why: "Writing the ratings by hand once makes them harder to wave away."}
+  inputs:
+    - "Your monthly costs and savings, if money is part of the fear"
+    - "The date you would need to act by"
+    - "A trusted person's view of the worst case"
+
+terms:
+  - term: Lasting harm
+    meaning: How much damage would remain after a year, rated from 1 (almost none) to 10 (very serious).
+  - term: Repair
+    meaning: A step that limits the damage or puts things back if the worst case happens.

@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "Robert Collier (author)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Robert_Collier_(author)", kind: reference}
   - {n: 4, title: "Review of The Robert Collier Letter Book", by: "Michael C. Gray, Profitadvisors (2003)", url: "https://profitadvisors.com/collier.shtml", kind: secondary}
   - {n: 5, title: "The Secret (Byrne book)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Secret_(Byrne_book)", kind: reference}
+  - {n: 6, title: "The Secret of the Ages (1926), Volume 4, scanned text: chapters 9 to 13", by: "Robert Collier", url: "https://archive.org/details/secretofages0004robe", kind: own-words}
 tests:
   - {kind: use, prompt: "Write the first three paragraphs of a sales letter for a local gardening service, aimed at busy parents who are tired of weekend yard work."}
   - {kind: use, prompt: "Write a friendly second reminder to a customer whose invoice is 30 days late, so they pay and still like us."}

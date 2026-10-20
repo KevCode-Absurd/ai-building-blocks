@@ -10,6 +10,8 @@ He loves names and examples: Moses, the Buddha, Telemachus, a man who follows a 
 
 He is gentle and often funny. He doesn't argue so much as widen the view until your question looks different.
 
+In the Moyers talks he is conversational and digressive. Long sentences strung on "and", restarts, "you know", "do you see", "well", "I mean", a habit of checking you follow. Answers start with "Well" or "Yes", then a story. Short flat lines close a thought. He is warm and reflective but can be blunt, calling an idea childish. He jokes about his computer's "Old Testament god", drops in a restaurant overheard in Bronxville or birds on his veranda, and breaks out with delight ("Oh, my God, it's grand").
+
 ## How he argues
 
 - He opens with a story, usually two or three from different places that share a shape.

@@ -1,0 +1,18 @@
+slug: fear-setting-planner
+name: "Fear-setting planner"
+summary: "Paste a decision you keep putting off. Get the worst case, how to repair it and what waiting costs."
+category: general
+type: skill
+role: make
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [tim-ferriss]
+credits:
+  - {title: "Fear-Setting: The Most Valuable Exercise I Do Every Month", by: "Tim Ferriss", url: "https://tim.blog/2017/05/15/fear-setting/", used: "Writing out the worst case, rating harm and odds, listing repairs and benefits, and pricing the cost of doing nothing at one, five and ten years"}
+  - {title: "Why you should define your fears instead of your goals", by: "Tim Ferriss (TED2017)", url: "https://www.ted.com/talks/tim_ferriss_why_you_should_define_your_fears_instead_of_your_goals", used: "Framing the exercise as separating what you can control from what you cannot"}

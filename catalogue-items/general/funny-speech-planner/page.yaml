@@ -1,0 +1,120 @@
+new_slug: funny-speech-planner
+name: "Funny speech planner"
+summary: "Give one true story and the room. Get a deadpan speech with the wander, the dropped remark and the pause marked."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It shapes timing and tone from one story, and judges what the room can take."
+
+headline: "Funny speech planner"
+subhead: Give it one true story and tell it who will be listening. It writes a deadpan speech, with the small absurd details strung together, one dropped remark and the pause marked. You get a script and a note on whether the room can take it.
+
+explain: |
+  Most speeches that try to be funny announce the joke, explain it and laugh first. The room feels pushed and stops laughing. Dry humour works the other way. You tell something that really happened, with a straight face, and let the room find it funny.
+
+  This skill builds a short speech from one true story. It tells it gravely and never says it is funny. It adds small absurd details, with exact numbers in the exaggerations. It slurs the main point and lets one remark drop as if you were thinking aloud, then marks the pause and how long to hold it. It also checks that the room can take the joke, since the same speech can land well with friends and fall flat with a formal crowd.
+
+when:
+  - You are giving a toast, retirement speech or after-dinner talk and want the room to laugh.
+  - You have one good story from real life and no idea how to tell it in four minutes.
+  - You want to open a talk with humour that does not feel forced.
+
+you_give:
+  - One true story, in a few lines, about something that happened to someone
+  - Who is in the room and the occasion
+  - A first draft or key facts (optional)
+you_get:
+  - A deadpan speech script of about three to five minutes
+  - The pause and the dropped remark marked
+  - A check on whether the room can take the joke
+  - Two lines you can cut if time runs short
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Tell the story as you would to a friend. Include the true details, even small ones.
+  - Say who will be in the room and who is the subject, if anyone.
+  - Practise the script aloud with the pause marked, and time it.
+  - Cut anything that makes you laugh at your own joke.
+
+how_it_works:
+  - title: Picks the story
+    text: Chooses one true story that happened to someone, and drops others.
+  - title: Sets the gravity
+    text: Writes the story in a serious voice and never says it is funny.
+  - title: Strings absurd details
+    text: Adds small odd details together as though the speaker did not notice.
+  - title: Uses exact numbers
+    text: Makes exaggerations specific, because exact figures sound more serious.
+  - title: Drops the remark
+    text: Slurs the point and drops one remark as if thinking aloud.
+  - title: Marks the pause
+    text: Puts a pause after the remark and says how long to hold it.
+  - title: Checks the room
+    text: Says whether the room can take the joke and who it might hurt.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE STORY
+  <one true story in a line>
+
+  THE ROOM
+  <who is there> | Safe to joke about: <list> | Leave alone: <list>
+
+  SCRIPT
+  <speech with [PAUSE: n seconds] and [DROP] marked>
+
+  WHERE THE ROOM LAUGHS
+  - <line> | Why
+
+  IF TIME RUNS SHORT, CUT
+  - <line>
+
+  MISSING
+  <facts that would sharpen the story>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The true details
+    how: Give names, numbers and places that really happened. Real details are funnier than invented ones.
+  - what: The room
+    how: Tell it who is there and what they would not like. It sets the limits.
+  - what: Length
+    how: Say how many minutes you have. Absurd details are added or cut to fit.
+  - what: Your own manner
+    how: Say if you speak slowly or fast. The pause marks are set to suit you.
+
+judge:
+  - The speech never says the story is funny.
+  - The punchline is not repeated or explained.
+  - The pause is marked and its length given.
+  - The joke does not pick on the weak, or on one person in the room.
+  - Every detail is true or marked as an exaggeration.
+
+test:
+  - Read it aloud to one person and watch where they smile.
+  - Time it with the pause. Stop at the point where you want to laugh and do not.
+  - Run it twice. The story and the dropped remark should stay close.
+  - Show it to someone who knows the room and ask if anyone could be hurt.
+
+improve:
+  - Add your own favourite true stories to a list, and paste it in as a bank.
+  - Add the names and topics to avoid for your workplace or family.
+  - Record yourself and note where you rush the pause.
+  - Pair it with "Read-aloud speech shaper" if the speech needs a more serious part.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Shaping a script from a true story is text work any strong chat AI does well with this skill."}
+    - {name: "A phone voice recorder", why: "To hear your timing and check that the pause is long enough."}
+  inputs:
+    - "The true story, told as you would tell a friend"
+    - "Who is in the room, and the occasion"
+    - "Topics and people to leave alone"
+
+terms:
+  - term: Deadpan
+    meaning: Telling something funny in a serious voice, with no sign that it is a joke.
+  - term: Dropped remark
+    meaning: A short aside said as if the speaker is thinking aloud, which carries the point.

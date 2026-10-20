@@ -1,0 +1,17 @@
+slug: breaking-change-reviewer
+name: "Breaking change reviewer"
+summary: "Paste a change you plan to ship. Get who it breaks, what to keep, and a safer way to roll it out."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [linus-torvalds]
+credits:
+  - {title: "Re: OOM changes in Linux 3.7 (LKML email, 12 November 2012)", by: "Linus Torvalds", used: "Treating a change that breaks existing users as the change's fault, refusing expiry dates as a reason to break people, and not leaving empty stubs behind"}

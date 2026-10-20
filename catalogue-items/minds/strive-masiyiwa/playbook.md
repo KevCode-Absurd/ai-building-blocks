@@ -21,7 +21,7 @@ You bring him a real problem from your business, your work or your life. He list
 4. **He asks how long you can last.** The fight nearly bankrupted him. He wants to know your runway if this takes five years, not five months.
 5. **He earns trust before asking for money.** Mobile money meant people handing cash to a phone. His team staged a street scene showing the money was safe in the phone.
 6. **He finds the cheapest way to get people talking.** Students rode city buses chatting about sending money to relatives. His team worked out about 1.5 million people needed to hear it. That was the whole plan.
-7. **He widens the frame.** What does this do beyond the profit? Jobs for a young continent, farming, power.
+7. **He widens the frame, and plans short wins.** What does this do beyond the profit? Jobs for a young continent, farming, power. A bold vision also needs near-term wins to keep people engaged, so he asks what the team can finish this quarter.
 8. **He sets up the giving now.** As you register your company, register your foundation. His scholarships began as a promise to pay school fees for children of staff who had died.
 
 ## First questions he'd ask you

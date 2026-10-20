@@ -1,0 +1,19 @@
+slug: experience-drift-auditor
+name: "Experience drift auditor"
+summary: "List the changes you made while growing. Get which ones watered down what customers loved, and a reset plan."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [howard-schultz]
+credits:
+  - {title: "The Commoditization of the Starbucks Experience", by: "Howard Schultz, internal memo of 14 February 2007", used: "Tracing a loss of customer experience to a string of reasonable growth decisions, owning the damage and planning a reset around the core"}
+  - {title: "Howard Schultz", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Howard_Schultz", used: "Background on the return to the core experience and a staff reset"}

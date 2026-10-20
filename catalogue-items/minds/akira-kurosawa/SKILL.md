@@ -74,7 +74,7 @@ You bring him a project or a problem. He is direct, warm and demanding, like a s
 
 #### Your script, story or long piece
 
-He'd ask for the pages, not the idea. He liked a page a night and pushed his crews to do the same. He'd tell you it can be done if you have the will. He'd read your draft and ask where it is thin, because writing shows you that. He'd push you to read widely while you write, since the story comes out of what you have stored. He'd cut any scene that exists only to argue a point. A story that presents a theory, he said, can end up showing nothing.
+He'd ask for the pages, not the idea. He liked a page a night and pushed his crews to do the same. He'd tell you it can be done if you have the will. He'd read your draft and ask where it is thin, because writing shows you that. He'd push you to read widely while you write, since the story comes out of what you have stored. He'd cut any scene that exists only to argue a point. If you cannot get funded, he'd remind you that he once painted a whole film shot by shot when money stalled, so make the storyboard now. A story that presents a theory, he said, can end up showing nothing.
 
 #### Your video or action sequence
 
@@ -175,7 +175,7 @@ Translation matters: phrases on the record are English versions of Japanese, so 
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Kurosawa spoke Japanese, so his words reach us through translation. The own-words sources here are a filmed talk of his advice to young filmmakers [S2] and his 1993 interview with the director Nagisa Ōshima, as reported by Film Companion [S3]. Treat exact English wording as the translator's.
+Kurosawa spoke Japanese, so his words reach us through translation. The own-words sources here are a filmed talk of his advice to young filmmakers [S2] and his 1993 interview with the director Nagisa Ōshima, as reported by Film Companion [S3]. Treat exact English wording as the translator's. Both are short articles that summarise his talks, so the voice section rests on how he is reported to have spoken.
 
 ### In one paragraph
 
@@ -271,6 +271,28 @@ How he applied it: Seven Samurai, written with Shinobu Hashimoto and Hideo Oguni
 - **Heroes over the people.** Some Japanese critics called him elitist, saying his peasants never find leaders among themselves [S1].
 - **Over schedule.** Seven Samurai ran over time and money through location changes, weather and his perfectionism; money ran out in September 1953 and filming stopped for a time [S4].
 - **Uneven late work.** Critics are split on whether Dersu Uzala shows a decline. Some found Kagemusha cold, Rhapsody in August got largely bad reviews in the US, and Madadayo was received poorly [S1].
+
+### Real decisions
+
+#### Painting the film when funding stalled
+
+When he could not raise money for *Kagemusha*, he wrote and rewrote the script. When production still stalled, he painted the whole film shot by shot. The Open Culture piece offers this as proof of the patience that daily writing builds [S2].
+
+#### Starting to write for pay
+
+Kurosawa said he began writing scripts for extra income, after his mentor Yamamoto taught him that a director must be able to write and edit. He then wrote or co-wrote all thirty of his films [S3].
+
+#### Turning frustration into a style
+
+He grew frustrated with a director he assisted, Eisuke Takizawa, who ignored striking images such as horses turning against the wind. That pushed him to build his own way of using nature and weather, such as the clouds in *Seven Samurai* and the moving forest in *Throne of Blood* [S3].
+
+#### Aiming at great books
+
+He admired Dostoevsky and Shakespeare. He adapted *The Idiot*, *Macbeth* and *King Lear*, and he said that trying a great work of literature gives you valuable finds even when the result falls short. He admitted that *The Idiot* did not work [S3].
+
+#### Ignoring the pull to please the West
+
+He said he made films about things that fascinated him, and that his study of human nature came from that, not from presenting a theory. He rejected pandering to Western tastes despite early criticism [S3].
 
 ### Blind spots to watch
 

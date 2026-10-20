@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Rebuilt 2026-10-20 from the full text of her 2018 IEEE Software essay [S2]; the 1976 paper is known only by its abstract [S3]. Much of this is her own telling, years later.
+
 Margaret Hamilton died on 30 September 2026, at 90, a few weeks before this file was built [S7]. Her views here come mostly from her own 2018 essay on the lessons of Apollo [S2], the 1976 paper that set out her first theory [S3], and interviews quoted by others [S6][S7]. Her papers are in copyright, so this is our summary, with a few short quotes. Much of what we know about her Apollo methods comes from her own telling, years later. Where other accounts differ, we say so.
 
 ## In one paragraph
@@ -64,6 +66,12 @@ Hamilton began using the term "software engineering" to give software the same s
 
 How she applied it: the group she led at MIT was called the Software Engineering Division [S1][S4]. In 2018 she wrote for the issue of IEEE Software that marked the field's 50th birthday [S2].
 
+**Use every sense, and keep a record of who broke what.** On the SAGE air defence computer a crash set off loud sirens and the halting place was shown on a console, so everyone knew whose program had failed. She says that made her spend more time up front on code, and she took a Polaroid of each programmer beside his or her bug [S2]. Her team also found a new way to debug by sound, after an operator called at four in the morning to say her program no longer sounded like a seashore [S2].
+
+**Mission experts and software experts become one.** She wrote that requirements were once thrown over the wall from mission experts to software experts, but that over time mission engineers and software engineers became interchangeable, since a system is a system whichever discipline it came from [S2]. Where answers did not exist, her team invented them [S2].
+
+**Define the what, not the how.** In her language, users define all the relationships in the system with Function Maps and Type Maps, built from three primitive structures: join for dependencies, include for independencies and or for alternatives [S2]. Priority is built into the grammar, so no one assigns it by hand [S2]. Application changes are made to the definition, not to the code, and only the changed part is regenerated [S2].
+
 ## How she decides
 
 - Ask what happens if the "impossible" mistake happens. Then guard against it [S6].
@@ -74,6 +82,29 @@ How she applied it: the group she led at MIT was called the Software Engineering
 - Require a reason and an approval for every change [S2].
 - Test with the people in the loop, not only the code [S2].
 - Study your own errors, sort them by cause, and change the method so they can't come back [S2][S5].
+
+## Real decisions
+
+### Treating every Apollo change as controlled
+Every change to the flight software, with its reason, needed approval before entering an official version. Code from other groups, such as navigation analysis, came under her team's supervision and had to follow the same rules [S2].
+
+### Adding an eyeball check by a named person
+Each mission's code had an Assembly Control Supervisor who read through it by eye, looking for interface errors and broken coding rules [S2].
+
+### Testing by simulation because flying was not an option
+Since the software could not be tested by flying real missions, her team used hardware and digital simulations of every aspect of each mission, with real or simulated people in the loop [S2].
+
+### Building priority displays that interrupt the crew
+She made the crew and the software parallel processes: urgent displays replaced the normal ones and gave a go or no-go choice. This needed the hardware team to change their hardware and the Houston planners to change astronaut procedures [S2].
+
+### Warning, not blocking, after NASA said no
+When her daughter crashed a simulator by starting a prelaunch program in flight, Hamilton wanted code to block it. NASA declined, saying astronauts would not make that mistake, so she added a warning to the documents. On Apollo 8 an astronaut did select that program in flight [S6].
+
+### Studying the errors to change the method
+With funding from NASA and the Department of Defense, her team ran an empirical study of the Apollo errors. It led to a theory of errors and then to development before the fact [S2].
+
+### Moving from fixing to preventing
+She wrote that the root problem with traditional methods is that they help people fix wrong things after the fact instead of doing things right in the first place [S2].
 
 ## Where she stood
 

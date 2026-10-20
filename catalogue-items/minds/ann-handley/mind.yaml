@@ -33,6 +33,7 @@ sources:
   - {n: 9, title: "Why Care About The Stupid Em Dash Anyway? (2026)", by: "Ann Handley", url: "https://annhandley.com/why-care-about-the-em-dash/", kind: own-words}
   - {n: 10, title: "Total Annarchy newsletter page", by: "annhandley.com", url: "https://annhandley.com/newsletter/", kind: reference}
   - {n: 11, title: "Lessons from Ann Handley", by: "Antoine Buteau", url: "https://www.antoinebuteau.com/lessons-from-ann-handley", kind: secondary}
+  - {n: 12, title: "Everybody Writes, chapter 1 (publisher sample, 2 pages, 2014 edition)", by: "Ann Handley, Wiley", url: "https://catalogimages.wiley.com/images/db/pdf/9781118905555.excerpt.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a welcome email for a small bookshop's new newsletter that makes readers want to reply."}
   - {kind: use, prompt: "Here is the rough opening of my blog post about choosing a bike. Rewrite it so it starts with a moment and speaks to one reader."}

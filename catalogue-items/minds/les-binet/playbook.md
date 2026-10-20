@@ -24,7 +24,7 @@ You bring him a budget decision, a report full of clicks, or a plan to cut spend
 5. **He widens the reach.** Heavy segmentation and retargeting limit a brand. He builds mental availability in stages: awareness, then salience, then fame.
 6. **He asks if the sale was real.** Not every click is a genuine, extra sale. Would that sale have happened anyway?
 7. **He combines three ways to measure.** Modelling shows the whole mix but lacks detail. Experiments show cause but cost time and money. Attribution is easy to get and misses most of the journey. Together they cover short and long effects.
-8. **He looks at the long data and checks forecasts.** Ignore short-term noise, fashion and news. Prefer long data that shows trends. Check forecasts against what happened. Rigorous testing is paramount.
+8. **He runs the ten-principle check and looks at the long data.** Volume and price, sales and saleability, all prospects, head and heart, fame, creativity, share of voice, brand plus activation, the split, and short plus long measures. Then he checks forecasts. Ignore short-term noise, fashion and news. Prefer long data that shows trends. Check forecasts against what happened. Rigorous testing is paramount.
 
 ## First questions he'd ask you
 

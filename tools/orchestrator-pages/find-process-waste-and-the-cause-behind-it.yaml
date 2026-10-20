@@ -1,0 +1,85 @@
+new_slug: find-process-waste-and-the-cause-behind-it
+name: Find process waste and the cause behind it
+summary: Paste your process step by step. Get the waste named, one change to try and the root cause behind it.
+job: plan-strategy
+thinking: high
+thinking_why: It has to check each why against facts and not accept easy answers. Give it your strongest model.
+headline: Cut the waste out of a process, and fix the cause that keeps it coming back
+subhead: Paste your process step by step, with who does each step. It marks every step as value or waste and names the worst waste. Then it follows that waste back through a chain of whys, checked against facts, to a cause your team can change.
+explain: |
+  Most slow or error-prone processes are full of steps nobody questioned. People work harder inside the process instead of asking whether a step should exist, and when a problem repeats, the fix is a patch on the symptom. The cause stays, and the problem comes back.
+
+  This workflow follows the order from Taiichi Ohno's interview on the Toyota production system. First, it lists each step with its work time and wait time and marks it as something the customer would pay for or not. It names the kind of waste, finds the worst and asks who required each step. Then it uses the five whys on that waste: it asks why until it reaches a cause in your process or training, and checks each answer against the real place or record.
+when:
+  - A process feels slow and you can't say which steps are the problem.
+  - The same mistake keeps happening, and each fix lasts only a few weeks.
+  - You inherited a process and want to know which steps can be deleted.
+you_give:
+  - Your process, step by step, with who does each step
+  - Times for work and waiting (optional)
+  - Where it hurts, or the problem that keeps coming back, with the place and date
+  - Logs, tickets, photos or notes (optional)
+  - What was tried before (optional)
+you_get:
+  - A table of steps with work time and wait time
+  - Each step marked value or waste, with the kind of waste named
+  - The worst waste, backed by the time line, and the step to delete or change first
+  - A chain of whys with evidence at each level, and a second branch in case there is more than one cause
+  - The root cause your team can change, a fix and a check that it stays fixed
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your process and the problem. It works step by step and saves each result.
+  - Go and look at the real place or record for any why it can't check, then bring back what you find.
+how_it_works:
+  - title: Lays out the steps
+    text: Lists each step with who does it, how long it takes and how long it waits, from the customer's order to cash in hand.
+  - title: Marks value and waste
+    text: Marks each step as value or waste, names the kind of waste and finds the worst one.
+  - title: Asks who required each step
+    text: Lists who asked for each step, questions each requirement and picks one change to try.
+  - title: States the problem
+    text: Takes the worst waste and the problem you gave, and states it as something seen, with the place and date.
+  - title: Asks why, with evidence
+    text: Asks why of each answer and checks it against a record, not a guess, until it reaches a cause you can fix.
+  - title: Tries a second branch
+    text: Follows a second chain in case there are two causes, then writes the fix and how to check it held.
+output_shape: |-
+  STEP 1: PROCESS WASTE MAP
+    Steps: <n>. <step> | who | work time | wait time | makes
+    Time line: total <t> | work <t> (<%>) | wait <t> (<%>)
+    Value or waste: <step> | value / needed / waste | kind | reason
+    Worst waste: <what> because <evidence from the time line>
+    Who asked: <step> | <name>
+    One change to try, and a review date
+
+  STEP 2: ROOT CAUSE
+    Problem: on <date>, at <place>, <what was seen>
+    Records: <record> | shows <x> | missing <y>
+    Chain A: why 1 <answer> | evidence, down to the root cause <cause the team can change>
+    Chain B: <second branch>
+    Fix and prevention check: <what> | <how to check it held>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Times for work and waiting
+    how: Even rough numbers help. The waiting time is often most of the total, and people leave it out.
+  - what: Who asked for each step
+    how: Give names where you can. A step "everyone knows we do" often has no owner, and those are the ones to question first.
+  - what: The place and date of the problem
+    how: State what was seen, such as "twelve orders shipped late on 3 March." A vague problem leads to a vague cause.
+judge:
+  - Every step has a who, a work time and a wait time, or is marked missing.
+  - Each why is backed by a record or something seen, not a guess.
+  - The root cause is something your team can change, not a person's character.
+  - There is a second branch checked, and a check that the fix held.
+  - No step, time or record is invented.
+test:
+  - Give it a process with an approval nobody uses. It should flag that step as waste and ask who requires it.
+  - Give it a problem and a cause you already know. The chain of whys should reach it.
+  - Give it a why with no record behind it. It should mark it as unchecked, not accept it.
+improve:
+  - Keep the process map and update it after each change, so you can see the waiting time fall.
+  - Add the records you have, such as tickets and logs, so the whys have evidence.
+  - Re-run the waste map after the change, to find the next worst waste.

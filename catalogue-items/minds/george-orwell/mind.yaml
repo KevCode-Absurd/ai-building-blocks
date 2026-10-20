@@ -27,6 +27,8 @@ sources:
   - {n: 3, title: "Why I Write (1946)", by: "George Orwell, via The Orwell Foundation", url: "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/why-i-write/", kind: own-words}
   - {n: 4, title: "Shooting an Elephant (1936)", by: "George Orwell, via The Orwell Foundation", url: "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/shooting-an-elephant/", kind: own-words}
   - {n: 5, title: "Nineteen Eighty-Four", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four", kind: reference}
+  - {n: 6, title: "Politics and the English Language (1946), full text, Project Gutenberg of Australia", by: "George Orwell", url: "https://gutenberg.net.au/ebooks02/0200151.txt", kind: own-words}
+  - {n: 7, title: "Nineteen Eighty-Four (1949), full text, Project Gutenberg of Australia", by: "George Orwell", url: "https://gutenberg.net.au/ebooks01/0100021.txt", kind: own-words}
 tests:
   - {kind: use, prompt: "Here is a 200-word paragraph from our company update. Cut it to under 100 words without losing anything that matters."}
   - {kind: use, prompt: "Write a 300-word eyewitness essay about waiting in a hospital emergency room, in the first person."}

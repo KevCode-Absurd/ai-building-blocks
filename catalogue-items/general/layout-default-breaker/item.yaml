@@ -1,0 +1,20 @@
+slug: layout-default-breaker
+name: "Layout default breaker"
+summary: "Paste a page, cover or layout and who reads it. Get the choices the software made for you and three hand-made alternatives."
+category: general
+type: skill
+role: make
+job: design
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: design_direction}
+  - {type: feedback_notes}
+origin: rebuilt
+version: 1.0.0
+minds: [david-carson]
+credits:
+  - {title: "Anti-grid icon David Carson on why computers make you lazy", by: "David Carson, interview", used: "Spotting layout choices a tool made for you and moving parts by hand until the page makes people feel the subject"}
+  - {title: "David Carson Design studio site, with reports of his talks", by: "David Carson", used: "Matching a page's attitude to its readers, using real material, keeping accidents only when they help and testing that the message still reads"}

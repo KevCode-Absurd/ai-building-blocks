@@ -1,0 +1,123 @@
+new_slug: direct-mail-package-reviewer
+name: "Direct mail package reviewer"
+summary: "Paste your mailing, envelope line and letter. Get a review of the envelope, offer, copy and look, with fixes."
+job: check-ads
+thinking: medium
+thinking_why: "It judges each part of the package against fixed checks and weighs what a reader would do."
+
+headline: "Direct mail package reviewer"
+subhead: Give it your mailing, including the envelope line, letter, offer and any prize or gift. It checks each part against a short list, marks what to change, and gives a score out of 100 with how it was worked out. You get a fix for each problem.
+
+explain: |
+  A mailing is read in seconds. The envelope decides whether the letter is opened, and the letter has to keep the reader moving. Teams often build the copy and the look apart, and it shows.
+
+  This skill checks whether the writer and designer worked together, and judges the outer envelope as the reason to open. It checks that savings are in money, that the letter speaks to you and treats the reader as an equal, and that any prize draw fits the product. It reads the copy aloud for stumbles, judges length by interest, and checks the signature and type. The score is the share of checks passed.
+
+when:
+  - You are about to print a mailing, postcard or letter and want a second look.
+  - Your mailing gets few opens and you don't know whether the envelope or the letter is the problem.
+  - You write an email series styled as a letter and want it to hold a reader.
+
+you_give:
+  - "Your mailing: envelope line, letter and any offer, prize or reply card"
+  - A brief with who it is for (optional)
+you_get:
+  - A score out of 100 and how it was worked out
+  - A check of the envelope, offer, letter, prize and look
+  - The read-aloud stumbles, listed
+  - A fix for each problem
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the envelope line, letter and offer. Say how it looks, such as type, colours and layout.
+  - Attach pictures of the pieces if you can.
+  - Make the fixes the review lists, starting with the envelope.
+  - Run it again on the fixed version to see the score.
+
+how_it_works:
+  - title: Checks the team
+    text: Asks whether the writer and designer worked together from the start.
+  - title: Judges the envelope
+    text: Judges the outer envelope as the reason to open.
+  - title: Checks savings
+    text: Checks that any saving is stated in money, not percent.
+  - title: Checks the voice
+    text: Checks the letter says you and speaks up to the reader.
+  - title: Checks prizes
+    text: Checks that any prize draw fits the product.
+  - title: Reads it aloud
+    text: Reads the copy as a harsh listener would and marks the stumbles.
+  - title: Judges length
+    text: Judges length and size by whether they hold interest, not by a rule.
+  - title: Checks the look
+    text: Checks the signature looks credible and the type is readable.
+
+output_shape: |
+  SCORE
+  <0 to 100> | Worked out as: <checks passed out of checks counted, each check equal>
+
+  CHECKS
+  Team worked together: <pass / fail / not known> | <note>
+  Envelope earns an open: <pass / fail> | <note>
+  Savings in money: <pass / fail / not used>
+  Letter says you, speaks up: <pass / fail>
+  Prize fits the product: <pass / fail / not used>
+  Read-aloud: <pass / fail> | Stumbles: <list>
+  Length holds interest: <pass / fail>
+  Signature and type: <pass / fail>
+
+  FIXES
+  1. <part> | Problem: <what> | Fix: <new text or change>
+  ...
+
+  SCORE AFTER FIXES
+  <0 to 100>, same method
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Pictures of the pieces
+    how: Attach photos or scans. Type, colour and layout checks need them.
+  - what: The reader
+    how: Say who gets the mailing. Judging the envelope depends on who is holding it.
+  - what: Offer details
+    how: Give prices, savings and end dates so the money check can be made.
+  - what: Rules you follow
+    how: Say if you have firm length or format rules from a printer or regulator.
+
+judge:
+  - The envelope line is judged as a reason to open.
+  - Savings are in money terms.
+  - Prizes tie to the product.
+  - The read-aloud notes are listed.
+  - No rule is applied without checking it against interest.
+
+test:
+  - Run it on a mailing you know performed well. See which checks it passes.
+  - Run it on a weak one and see whether the problems it names match what you suspected.
+  - Run it twice. The pass and fail marks should stay close.
+  - Have a harsh reader go through it and compare notes.
+
+improve:
+  - Add your own house rules on type and length, so the look checks fit them.
+  - Add past mailings with their results, so the review learns what holds your reader.
+  - Save the fixes you accept to your brand file.
+  - Pair it with "Slippery slide copy checker" for a line-by-line pass on the letter.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reviewing copy and flagging stumbles is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Photos or scans of the printed pieces"
+    - "Past mailings with results"
+    - "Your offer terms and end dates"
+
+terms:
+  - term: Outer envelope
+    meaning: The envelope your mailing arrives in, which decides whether the letter is opened.
+  - term: Read-aloud test
+    meaning: Reading the copy aloud to someone who enjoys finding fault, and marking where they stumble.

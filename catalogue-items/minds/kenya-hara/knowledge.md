@@ -74,6 +74,36 @@ How he applied it: he became chief creative director of Japan House, a project o
 - Start each project by sharing the vision with the whole team [S5].
 - Commit so fully that you can't imagine dying before it's done [S3].
 
+## Real decisions
+
+### Taking over MUJI from Ikko Tanaka (early 2000s)
+
+Tanaka, the earlier art director, handed over the role after seeing Hara's *RE-DESIGN* exhibition. [S1] Hara says the show showed him that design can change basic, ordinary products. [S1] He was drawn by the chance to help a brand that had succeeded at home spread across the world. [S2]
+
+### Choosing packaging over advertising
+
+At MUJI he put his effort into package design rather than advertising, which he called ordinary but hard to control. [S1] The brand carries no logo on its products. [S1][S6]
+
+### Growing MUJI in America like water (2017)
+
+For the US expansion he did not plan a loud launch. He said the brand fills the gaps it finds, so its presence can grow without a dramatic push. [S1] He is not concerned with which products sell best, because customers walk in with no item in mind. [S1]
+
+### Running thought games about MUJI everything
+
+To anticipate future needs, he and the team imagine MUJI as a hotel, a sports team, an airline or a travel company. [S1] The purpose is to keep the brand a question rather than a fixed answer. [S1]
+
+### Explaining emptiness to the world
+
+He decided to use emptiness, not simplicity, to explain MUJI to the West, and traced the idea to fifteenth-century Kyoto and the empty space of a Zen garden. [S2][S1] His stated reason: simplicity is a Western value, while emptiness invites people to bring their own meaning. [S2]
+
+### Committing to a project fully
+
+He says he judges his work by how fully he commits, treating each project as something he must see through. This habit, he says, sets his personal standard. [S3]
+
+### Turning to the roots of the word "mathematics"
+
+In 2014 he said his current interest was the word's origin, which he reads as a call to review and rethink what you already know. He says this idea is changing his work. [S3]
+
 ## Where he stood
 
 **Is MUJI minimalist?** No. He said it is about more than minimalism and simplicity. It is about emptiness [S1][S2].

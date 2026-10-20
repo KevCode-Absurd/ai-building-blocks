@@ -1,0 +1,126 @@
+new_slug: single-effect-draft-checker
+name: "Single-effect draft checker"
+summary: "Paste your draft and the feeling you meant. Get each line checked against it, where attention slips and what to cut."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It judges each paragraph against one stated effect, which needs care but follows set rules."
+
+headline: "Single-effect draft checker"
+subhead: "Paste your draft and the feeling you meant. It checks each line against that feeling, and marks where attention slips. You get a paragraph-by-paragraph review, cuts and fixes, and a score out of 100 that shows how it was worked out."
+
+explain: |
+  A draft can be full of good sentences and still leave no feeling behind. The usual reason is that some parts pull toward a different effect, or one passage is so strong it takes the ending's place. Writers rarely see this in their own work.
+
+  This skill asks you to state the feeling first. It then judges the first sentence, marks each paragraph as serving, neutral or competing, and finds the line where attention first slips. It checks length against one sitting and finds strong passages that steal the climax. Each failure is pinned to an exact line and given one fix. The score is the share of paragraphs that serve the effect, with the working shown.
+
+when:
+  - "You finished a draft and it feels flat, but you cannot say why."
+  - "You have a speech, ad or story that tries to do two things and you want to know which to keep."
+  - "You need to cut a piece to length and want each cut to have a reason."
+
+you_give:
+  - "Your draft, in full"
+  - "The feeling you meant, in a sentence"
+  - "Where it will be read or heard and how long it can run (optional)"
+you_get:
+  - "A paragraph-by-paragraph review: serving, neutral or competing"
+  - "The line where attention first slips"
+  - "A list of cuts and fixes, each tied to the effect"
+  - "A score out of 100 with its working shown"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the draft and say, in one sentence, what feeling it should leave."
+  - "Say how long it needs to be."
+  - "Go through the list of cuts and fixes one by one and accept or reject each."
+  - "Run it again on the fixed draft to see the score change."
+
+how_it_works:
+  - title: "States the effect"
+    text: "In one line, before any judgment."
+  - title: "Judges the first sentence"
+    text: "Serves, neutral or against."
+  - title: "Marks each paragraph"
+    text: "Serving, neutral or competing, with a reason."
+  - title: "Finds the slip"
+    text: "The first line where a reader drifts."
+  - title: "Checks length"
+    text: "Whether it fits one sitting."
+  - title: "Checks the climax"
+    text: "Finds passages that outshine the intended peak."
+  - title: "Lists cuts and fixes"
+    text: "Each tied to the effect."
+  - title: "Scores and checks"
+    text: "Shows the working, and names any check it missed."
+
+output_shape: |
+  EFFECT
+  <one line>   First sentence: <serves / neutral / against> - <why>
+
+  PARAGRAPHS
+  <n>. SERVING / NEUTRAL / COMPETING - <reason>
+
+  ATTENTION SLIPS
+  <paragraph and line>, <why>, <change>
+
+  LENGTH
+  <words or time> - <fits one sitting? where it loses tension>
+
+  STOLEN CLIMAX
+  <passage and what to do, or none>
+
+  CUTS AND FIXES
+  <line> | <cut or fix> | <tie to effect>
+
+  SCORE
+  <n>/100 = <working>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The effect you name"
+    how: "Be exact. A vague feeling gives vague marks."
+  - what: "Length limit"
+    how: "Give a real limit and it will judge fit against it."
+  - what: "Which parts are fixed"
+    how: "Say what cannot be cut. It works around those parts."
+  - what: "Strictness"
+    how: "Say \"strict\" if only parts that build the feeling should stay."
+
+judge:
+  - "The effect is named before any judgment."
+  - "Each failure points to an exact line."
+  - "Each cut has a reason tied to the effect."
+  - "The comments are about the work, not you."
+  - "You can recompute the score from the working."
+
+test:
+  - "Run it on a piece you know is strong and see that most paragraphs are marked SERVING."
+  - "Run it on a draft you know drifts and check it finds the slip you felt."
+  - "Run it twice and compare the marks."
+  - "Apply two cuts and re-run to see the score rise."
+
+improve:
+  - "Add effects you use often, so you can pick one by name."
+  - "Add the length limits for your channels."
+  - "Change the weights in step 8 to fit your use."
+  - "Pair it with \"Ending-first story planner\" and \"Plain English editor\"."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Marking paragraphs against a stated aim is text work any strong chat AI does well with this skill."}
+    - {name: "A printed copy and a pen", why: "Marking your own draft by hand first makes the review easier to compare."}
+  inputs:
+    - "A sentence on your intended effect"
+    - "The channel and length limit"
+    - "An earlier draft to compare against"
+
+terms:
+  - term: "Effect"
+    meaning: "The single feeling or idea the piece should leave."
+  - term: "Competing"
+    meaning: "A paragraph that pulls toward a different feeling than the one intended."

@@ -1,0 +1,110 @@
+new_slug: thumbnail-and-title-planner
+name: Thumbnail and title planner
+summary: Paste your video idea and channel. Get title and thumbnail pairs to test, with the first minute written to pay them off.
+job: grow-social
+thinking: medium
+thinking_why: It judges what a single clear promise is and designs fair tests.
+headline: Thumbnail and title planner
+subhead: Give it a video idea and a channel. It writes the title and thumbnail before the shoot, makes a dozen or more pairs that differ by one change, and writes the first minute to pay off the promise. You get pairs to test and a result log.
+explain: |
+  Many videos are made first and titled last. The title and thumbnail are what decide whether anyone clicks, so they set the promise the video has to keep. A thumbnail with three ideas, clashing colours or tiny details is lost in a feed.
+
+  This skill works backwards from the title and thumbnail. It cuts each thumbnail to one clear idea that reads at feed size and writes a title that makes the same single promise. It builds a dozen or more pairs that change one thing at a time, so the results can be read. It writes the first minute to pay off the promise fast, and sets a log so the next batch starts from the winner.
+when:
+  - You have a video idea and have not yet chosen the title or the thumbnail.
+  - Your views are low and you think people are not clicking.
+  - You want to test, but your tests change too many things at once.
+you_give:
+  - The video idea and what the viewer gets out of it
+  - Your channel, your audience and your usual style
+  - Past results with views and click rates (optional)
+  - Notes on what worked or failed before (optional)
+you_get:
+  - A dozen or more title and thumbnail pairs, each changed by one thing
+  - A one-idea description of each thumbnail
+  - The first minute written to pay off the promise
+  - A result log, ready before the first test
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the video idea, your channel and what the viewer gets.
+  - Paste past results if you have them.
+  - Make the thumbnails and test them one pair at a time.
+  - After publishing, note where viewers left and bring the numbers back.
+how_it_works:
+  - title: Writes the promise
+    text: Puts the video's single promise in one line, before the shoot.
+  - title: Makes the pairs
+    text: Writes a dozen or more title and thumbnail pairs.
+  - title: Changes one thing
+    text: Each pair differs from the base by one change, such as clothing, colour or background.
+  - title: Cuts to one idea
+    text: Each thumbnail holds a single idea that reads at feed size.
+  - title: Clears the clutter
+    text: Removes clashing colours and objects that do not read at a glance.
+  - title: Writes the first minute
+    text: Pays off the promise fast so viewers stay.
+  - title: Sets the log
+    text: A table for results, ready before the first test.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  THE PROMISE
+  <one line the title and thumbnail both make>
+
+  BASE PAIR
+  Title: <...>
+  Thumbnail: <one idea, subject, colour, text of 3 words or less>
+
+  PAIRS TO TEST
+  <n>. Change: <the one thing changed> | Title: <...> | Thumbnail: <...>
+  ...
+
+  READS AT FEED SIZE?
+  <pair>: <yes or no, why>
+
+  THE FIRST MINUTE
+  0:00 to 0:10: <...> | 0:10 to 0:30: <...> | 0:30 to 1:00: <...>
+
+  RESULT LOG (fill after publishing)
+  Pair | Click rate | Where viewers left | What to try next
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: The promise
+    how: State what the viewer gets or sees. A vague promise gives pairs that look alike.
+  - what: What you can change
+    how: List what you can shoot or edit, such as clothing, colour or background. Pairs only change those.
+  - what: Past results
+    how: Paste the pairs that did well and badly. The base pair starts from the winners.
+  - what: How many pairs
+    how: A dozen is the floor. Say if you can make more.
+judge:
+  - The title and thumbnail make the same single promise.
+  - Each thumbnail reads when shrunk to feed size.
+  - Pairs differ from the base by one change.
+  - The first minute pays off the promise.
+  - A result log is set up before the first test.
+test:
+  - Shrink each thumbnail to the size of a phone feed and check you can still say what it shows.
+  - Show the pairs to someone who has not seen the video and ask what it promises.
+  - Test two pairs that differ by one change and see if the result is clear.
+  - Compare where viewers left to the promise, and check that the first minute fits.
+improve:
+  - Add your channel's usual colours and fonts to the clutter step.
+  - Add words your channel never uses in titles.
+  - Save the winning pair and why it won to your results file.
+  - Pair it with a shot list writer for the shoot itself.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Writing pairs and a first minute is text work any strong chat AI does well with this skill.
+    - name: YouTube Studio
+      why: Its click rate and audience retention reports show which pair won and where viewers left.
+  inputs:
+    - Click rates and retention for past videos
+    - Screenshots of your best and worst thumbnails
+    - A short list of channels in your space that do well
+terms:
+  - term: Feed size
+    meaning: How small a thumbnail looks in a phone feed, where it must still be clear.

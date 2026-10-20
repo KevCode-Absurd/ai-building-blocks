@@ -1,0 +1,123 @@
+new_slug: decision-bias-pileup-checker
+name: "Decision bias pile-up checker"
+summary: "Describe a decision you are about to make. Get the pressures bending your judgment, and a calmer version of the choice."
+job: think-and-decide
+thinking: high
+thinking_why: "It has to separate real reasons from pressure and judge how they combine, which takes careful reasoning."
+
+headline: "Decision bias pile-up checker"
+subhead: Give it a decision you are close to making. It writes down your plain reasons first, then checks for outside pressures such as a reward, a favour owed or a crowd. You get the strongest pressures, a cooling-off step and a calmer version of the choice.
+
+explain: |
+  Most bad decisions are not stupid. Several small pressures lean the same way at once: you were given something, you already said yes in public, everyone else is buying, and you hate to lose what you have. Any one is easy to resist. Together they can push judgment off course.
+
+  This skill writes the sound reasons for the decision first. It then checks the situation for five pressures: reward, a favour owed, being consistent with what you said before, what others are doing, and fear of loss. It counts how many point the same way, names the strongest, and suggests a pause or a step away. It also asks whether you have real practice and fast feedback in this kind of call, and whether your confidence rests on a record or on a neat story.
+
+when:
+  - You are about to sign, buy, hire or commit, and the room is pushing you.
+  - You feel certain and cannot say exactly why.
+  - A deadline, a discount or a pitch is rushing a big choice.
+
+you_give:
+  - The decision, and the date you must make it
+  - Your reasons for it, in your words
+  - Who is involved, what they gain and what you have already said or paid (optional)
+you_get:
+  - Your rational case, written before the pressure check
+  - The pressures present, each tied to a fact in your situation
+  - A flag when three or more stack, with a cooling-off step
+  - A calmer version of the choice, and a rating of how much to trust your gut
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the decision and give your honest reasons. Say who else benefits from a yes.
+  - Read the rational case first. Fix anything it got wrong.
+  - Read the pressures it found. Mark any that you disagree with, and say why.
+  - Use the calmer version, or the pause it suggests, before you commit.
+
+how_it_works:
+  - title: Writes the clear case
+    text: States the decision and the plain reasons for it, before any bias is mentioned.
+  - title: Checks five pressures
+    text: Looks for reward, favours owed, consistency with past commitments, social proof and fear of loss.
+  - title: Counts the pile-up
+    text: Notes how many point the same way, since several together bend judgment most.
+  - title: Names the strongest
+    text: Picks the one or two that matter most in this case and ties each to a fact.
+  - title: Cools the pressure
+    text: Suggests a delay or a step away from the setting that is pushing you.
+  - title: Rates your gut
+    text: Asks if the field gives regular practice and fast feedback, and if confidence comes from a record or a story.
+  - title: Writes the calmer choice
+    text: Restates the decision as you would make it with the pressure removed.
+
+output_shape: |
+  THE DECISION
+  <one line, who decides, by when>
+
+  THE CLEAR CASE
+  <reasons, written first>
+
+  PRESSURES PRESENT
+  Pressure | Fact in your situation | Strength (low/medium/high)
+
+  PILE-UP
+  <count and which ones agree>  Strongest: <one or two>
+
+  COOLING-OFF STEP
+  <what to delay or leave>
+
+  HOW MUCH TO TRUST YOUR GUT
+  Practice and quick feedback: <yes/no, why>  Record or story: <which>
+
+  THE CALMER VERSION
+  <the decision with pressure removed>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Honest reasons
+    how: Give the reasons you would say out loud, then the ones you would not. It reads both.
+  - what: Who gains
+    how: Name each person who gains from a yes. Rewards are the pressure most often missed.
+  - what: What you have already said
+    how: Include earlier promises, deposits and public statements. They create the pull to stay consistent.
+  - what: Deadline
+    how: Give the real deadline. A pause only helps if there is room for one.
+
+judge:
+  - The clear case was written before any pressure was named.
+  - Each pressure points to a fact from your description, not a general warning.
+  - Three or more stacked pressures are flagged as a pile-up.
+  - A pause or step away is suggested when pressures stack.
+  - The gut rating gives a reason, not just a label.
+
+test:
+  - Run it on a decision you made last year and know the outcome of. See whether it flags what went wrong.
+  - Run it on a choice you feel calm about. It should find few pressures, and say so.
+  - Run it twice on the same choice. The strongest pressures should stay the same.
+  - Show the output to someone you trust and ask if the pressures match what they saw.
+
+improve:
+  - Add pressures that are common in your field, such as a sales close, a team vote or a sunk cost.
+  - Add your own rule for when to pause, for example "no signing within 24 hours of a pitch".
+  - Save past decisions and outcomes to a file so the gut rating rests on your record.
+  - Pair it with "Reversible decision sorter" to see how much review the choice needs.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It is a reasoning task on text that any strong chat AI can do with this skill."}
+    - {name: "A trusted second reader", why: "A person outside the situation can spot pressures you cannot see from inside."}
+  inputs:
+    - "A decision log with past choices and what happened"
+    - "The message, pitch or offer that is pushing the decision"
+
+terms:
+  - term: Pile-up
+    meaning: Several pressures pointing the same way at once, which together can push judgment further than any one would.
+  - term: Social proof
+    meaning: Taking what others are doing as a sign that it is right.

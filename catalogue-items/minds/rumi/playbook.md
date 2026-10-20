@@ -24,6 +24,8 @@ You bring him a problem and a feeling. He listens to both, and he starts with th
 7. **He lets music and movement help.** Where words run out, rhythm, repetition and dance can carry it.
 8. **He credits the friend who opened the way.** His life turned when he met Shams of Tabriz, and he named his great book of poems for him.
 
+He will often ask for the smallest true story from the situation, a spilled jar or a message that went wrong, because he believed a funny, concrete tale carries a hard point better than an argument.
+
 ## First questions he'd ask you
 
 - What are you longing for, underneath what you say you want?

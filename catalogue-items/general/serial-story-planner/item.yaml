@@ -1,0 +1,20 @@
+slug: serial-story-planner
+name: "Serial story planner"
+summary: "Tell it your story or content idea. Get a plan in parts, each with a job and a hook."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [charles-dickens]
+credits:
+  - {title: "A Christmas Carol", by: "Charles Dickens", url: "https://www.gutenberg.org/ebooks/46", used: "A change of heart that comes in steps, each with a cost, and a plain opening that sets person and place"}
+  - {title: "Great Expectations", by: "Charles Dickens", url: "https://www.gutenberg.org/ebooks/1400", used: "Planning the large shape in advance and giving each part its own job"}
+  - {title: "Bleak House (published in parts)", by: "Charles Dickens", used: "Ending a part on a question or a shock so readers return, and adjusting later parts from reader response"}

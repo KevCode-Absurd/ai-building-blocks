@@ -1,0 +1,115 @@
+new_slug: contrary-evidence-log-keeper
+name: "Contrary evidence log keeper"
+summary: "Describe the belief you are building. Get a log of every fact against it, plus a weekly review."
+job: think-and-decide
+thinking: low
+thinking_why: "It sets up a log and a review routine from fixed rules, with little judgment needed."
+
+headline: "Contrary evidence log keeper"
+subhead: Give it the belief you are working on, such as a business idea or a theory about why sales dropped. It sets up a log for facts that count against it and a short weekly review. You get the log, the review questions and a restated belief.
+
+explain: |
+  When you favour an idea, facts that support it stick in your mind and facts against it slip away. A few weeks later the idea feels proven, and you could not say why. The fix is plain: write the awkward fact down the day you meet it.
+
+  This skill states your belief in one line, then builds a log with a date, the fact, where it came from and which part of the belief it hits. It marks the facts you are most likely to forget because you dislike them. On a set day each week it walks you through a review, asks what the belief can still explain, and restates or narrows the belief when the log keeps growing.
+
+when:
+  - You are building a plan or theory and feel sure of it already.
+  - Something odd keeps turning up and you keep brushing it aside.
+  - You want a team to track doubts in one place instead of in heads.
+
+you_give:
+  - The belief or plan you are working on, in a sentence or two
+  - Facts that already go against it (optional)
+  - The day of the week you can review (optional)
+you_get:
+  - A one-line version of your belief
+  - A log table ready to fill in, with the rows you already have
+  - A weekly review script and a restated belief after each review
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Write the belief as you would say it to a friend. Add any facts you have been ignoring.
+  - Copy the log into a note or sheet you open every day.
+  - Add to the log the same day you meet a fact against the belief.
+  - On your review day, paste the log back in and run the review.
+
+how_it_works:
+  - title: States the belief
+    text: Cuts your belief to one line, so it is clear what a fact would count against.
+  - title: Builds the log
+    text: Sets up columns for date, fact, source and the part of the belief it hits.
+  - title: Sets entry rules
+    text: Gives you a rule for writing each fact down on the day, plus a trigger list for what counts.
+  - title: Flags forgettable facts
+    text: Marks the facts you dislike or find annoying, since those fade first.
+  - title: Runs the review
+    text: On the set day, asks which logged facts the belief can still explain and which it cannot.
+  - title: Revises the belief
+    text: Narrows or rewrites the belief when the log keeps growing, and records the new version.
+
+output_shape: |
+  THE BELIEF
+  <one line>
+
+  THE LOG
+  Date | Fact | Source | Part of the belief it hits | Easy to forget? (yes/no)
+  <rows>
+
+  HOW TO ADD TO IT
+  <short rules>
+
+  THIS WEEK'S REVIEW
+  Facts the belief still explains: <list>
+  Facts it cannot explain: <list>
+  Weakest part of the belief: <part>
+
+  THE BELIEF, RESTATED
+  <one line>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How narrow the belief is
+    how: A belief with a clear edge ("returns rise after the new box") is easier to log against than a broad one ("customers like us").
+  - what: Review day
+    how: Pick a fixed day and put it in your calendar. A review that floats tends to get skipped.
+  - what: Who adds entries
+    how: If a team uses the log, say so. It adds a column for who spotted the fact.
+  - what: Facts you already know
+    how: Paste them in. They become the first rows, dated as best you know.
+
+judge:
+  - Every row has a date and a source.
+  - The log holds as many facts against the belief as for it.
+  - The review names the weakest part of the belief in plain words.
+  - The belief is restated after each review, even if the words barely change.
+  - No fact is dropped because it seems minor.
+
+test:
+  - Run it on a belief you held a month ago and fill the log from memory. See how many against-facts you can still recall.
+  - Use it for two weeks, then count the rows against the belief. Zero rows usually means you are not looking.
+  - Ask a colleague to read your log without your comments. They should be able to say what the belief is.
+  - Compare your restated belief with the first one. It should have changed, or you should be able to say why not.
+
+improve:
+  - Add the usual signs of an against-fact in your field to the trigger list, such as a refund reason, a lost deal or a failed test.
+  - Add a column for how much the fact would cost if it proves true.
+  - Save the finished log to your lessons file so the next project starts with it.
+  - Pair it with "Findings and guesses separator" before you present the belief to others.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Setting up the log and running the review is text work any strong chat AI handles well."}
+    - {name: "A spreadsheet or notes app", why: "A table you open every day keeps the log alive better than a chat that scrolls away."}
+  inputs:
+    - "Past results, support emails or test data that might hold against-facts"
+    - "Notes from calls where someone doubted the plan"
+
+terms:
+  - term: Against-fact
+    meaning: A fact, example or result that does not fit your belief or that argues against it.

@@ -30,6 +30,7 @@ sources:
   - {n: 6, title: "Strive Masiyiwa proves you can succeed in business while creating value for society (2015)", by: "NYU Stern Center for Business and Human Rights", url: "https://bhr.stern.nyu.edu/?p=4605", kind: secondary}
   - {n: 7, title: "Strive Masiyiwa", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Strive_Masiyiwa", kind: reference}
   - {n: 8, title: "Econet Wireless", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Econet_Wireless", kind: reference}
+  - {n: 9, title: "GLS18 session notes: Strive Masiyiwa one-on-one with Bishop T. D. Jakes (Global Leadership Summit, 2018)", by: "Global Leadership Summit", url: "https://www.globalleadership.org/article/gls18-session-notes-strive-masiyiwa-one-on-one-with-bishop-t-d-jakes", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a short, polite reply to a middleman who says my permit will move faster if I pay a 'facilitation fee'."}
   - {kind: use, prompt: "Plan a low-cost word-of-mouth campaign to get people who don't trust banks to try a new savings app."}

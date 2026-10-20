@@ -1,0 +1,125 @@
+new_slug: one-on-one-meeting-planner
+name: "One-on-one meeting planner"
+summary: "Name the person who reports to you and their job. Get a meeting plan with agenda rules, timing and follow-up."
+job: lead-people
+thinking: low
+thinking_why: "It sets a schedule and agenda from a clear set of rules."
+
+headline: "One-on-one meeting planner"
+subhead: "Name the person who reports to you and what they do. It judges how experienced they are at the task, sets how often to meet and for how long, and hands back an agenda frame they own, with a hold file and follow-up rules."
+
+explain: |
+  Many one-on-ones turn into a status update that the manager runs and the other person sits through. The worrying signs stay in the person's head, the hard topics get squeezed out, and nothing is written down to check next time.
+
+  This skill sets the meeting up so it belongs to the person who reports to you. It judges their experience at the task they do now, which sets how often you meet. It asks for an hour at least, near their work when you can, and has them write the outline and bring the numbers. The outline covers warning indicators, what happened since last time and nagging worries. It adds a hold file for items that can wait, and ends with written actions you check next time.
+
+when:
+  - "You manage someone new and have no regular meeting."
+  - "Your current one-on-ones feel like status updates."
+  - "A person's work is slipping and you want a regular place to catch it."
+
+you_give:
+  - "Who the person is and what job they do"
+  - "How experienced they are at the task they do now"
+  - "Where and when you can meet"
+  - "Their current numbers or measures (optional)"
+you_get:
+  - "How often to meet, and how long"
+  - "A meeting outline they write, with the parts you require"
+  - "Rules for the meeting: questions, notes, the hold file"
+  - "A follow-up routine for actions"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Name the person, their job and how long they have done this exact task."
+  - "Add where you can meet and any numbers they track."
+  - "Send them the outline and ask them to fill it in before the meeting."
+  - "Check last meeting's actions at the start of the next one."
+
+how_it_works:
+  - title: "Judge their task experience"
+    text: "Judges their experience at the task they do now."
+  - title: "Set how often"
+    text: "Sets the rhythm: weekly for a new hand, longer for a veteran."
+  - title: "Set the time and place"
+    text: "Blocks an hour at least, near their work if possible."
+  - title: "Make it their meeting"
+    text: "Has the person write the outline and bring the numbers."
+  - title: "Add the required parts"
+    text: "Adds warning signs, what happened and nagging worries."
+  - title: "Write the meeting rules"
+    text: "Writes the rules: one more question, shared notes, a hold file."
+  - title: "Set the follow-up"
+    text: "Ends with written actions that get checked next time."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  THE PERSON AND THE TASK
+  <name or role> | Task: <what> | Experience at this task: <judgment, evidence>
+
+  RHYTHM
+  Every <interval> | Length: <time> | Place: <where>
+
+  OUTLINE THEY WRITE
+  1. Warning indicators: <numbers or signs>
+  2. Since last time: <what happened>
+  3. Nagging worries: <even vague ones>
+  4. Their topics: <list>
+
+  YOUR RULES
+  - One more question when they stop
+  - Notes on the shared outline
+  - Hold file for items that can wait
+
+  ACTIONS
+  <action> | Owner: <who> | By: <date>
+  Checked first at the next meeting.
+
+  MISSING
+  <facts that would change the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Experience at this task"
+    how: "Be honest about this one. It sets the whole rhythm."
+  - what: "Numbers they track"
+    how: "List them. They become the warning indicators in the outline."
+  - what: "Remote or in person"
+    how: "For remote, the skill moves the place to a shared document and keeps the hour."
+  - what: "How many reports you have"
+    how: "A bigger team means shorter gaps for veterans. Say so if time is tight."
+
+judge:
+  - "The person sets the agenda."
+  - "The meeting is long enough for hard topics."
+  - "Warning numbers and vague worries are on the outline."
+  - "It ends with written actions that are checked next time."
+  - "The rhythm matches their experience at the task."
+
+test:
+  - "Run it for a person you already meet. Compare the rhythm and outline to what you do now."
+  - "Hold one meeting with the outline and note what came up that did not before."
+  - "After three meetings, check how many actions were done."
+
+improve:
+  - "Add the numbers each role in your team tracks."
+  - "Add a template with your own headings to the outline."
+  - "Keep a hold file for each person."
+  - "Pair it with Objectives and key results writer to give the outline numbers to track."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Structuring decisions and writing plans is text work any strong chat AI does well with this skill."}
+    - {name: "A shared document", why: "Gives both of you the same outline and notes, and a place for the hold file."}
+  inputs:
+    - "The person's job description and current measures"
+    - "Notes from earlier meetings"
+    - "Their goals for the quarter"
+    - "Calendar limits"
+
+terms:
+  - {term: "Warning indicator", meaning: "A number or sign that something may go wrong soon, before it shows up in results."}
+  - {term: "Hold file", meaning: "A list of items that can wait, to be raised when they matter."}

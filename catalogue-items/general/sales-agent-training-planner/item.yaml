@@ -1,0 +1,19 @@
+slug: sales-agent-training-planner
+name: "Sales agent training planner"
+summary: "Describe your product and who could sell it. Get a short course, a pay and prize plan and a first-month schedule."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [madam-cj-walker]
+credits:
+  - {title: "Madam C. J. Walker", by: "Wikipedia contributors (licensed text)", url: "https://en.wikipedia.org/wiki/Madam_C._J._Walker", used: "Testing a product on people you know, training agents in a method, commission, prizes and local clubs and gatherings"}
+  - {title: "Madam C.J. Walker study notes", by: "Study notes from public sources", used: "The agent course and records approach"}

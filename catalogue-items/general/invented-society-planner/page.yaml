@@ -1,0 +1,130 @@
+new_slug: invented-society-planner
+name: "Invented society planner"
+summary: "Paste your world idea. Get a working society: food, homes, quarrels, customs and one strange rule, all fitted together."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "Many details must fit one another, and it has to find contradictions and hidden costs."
+
+headline: "Invented society planner"
+subhead: "Paste your world idea. It starts from the place, works out food, building and trade, details one home room by room, adds how quarrels are settled and one strange custom, then checks every detail against the rest and names who gains and who pays."
+
+explain: |
+  Invented worlds fall apart when details are chosen one at a time. A desert people with a taste for fish, a village with stone houses and no stone, a law that nobody could enforce. Readers feel it, even when they cannot say why.
+
+  This skill starts from the place and lets everything follow. It works out climate, land, rock, wood and water, then what people eat, build with and trade. It details one home, with floor plan, roof and where animals are kept. It decides how this society settles quarrels and who pays when that fails, and adds one custom that an outsider would find strange, with its reason inside the society. It looks for the balance the society depends on, checks every detail against every other, and asks who this way of living frees and who it costs.
+
+when:
+- "You are writing fiction or a game and want a world that feels lived in."
+- "You are building a scenario for a workshop or a plan and need a society that is consistent."
+- "Your world has a good idea but the details contradict each other."
+
+you_give:
+- "Your world idea, even a few lines"
+- "The place or climate, if you know it (optional)"
+- "Any rules or customs you already want (optional)"
+- "How the world will be used: story, game, scenario (optional)"
+you_get:
+- "The place and what it provides"
+- "Food, building and trade that follow from it"
+- "One home, worked out room by room"
+- "A way of settling quarrels, one strange custom with its reason, and who gains and who pays"
+
+how_to_use:
+- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+- "Paste your world idea."
+- "Say what the world is used for."
+- "Read the contradictions list and decide which to fix."
+- "Ask for a second home or a second quarrel to test the rules."
+
+how_it_works:
+  - title: "Start with the place"
+    text: "Describe the climate, land, rock, wood and water in six to eight lines."
+  - title: "Work out food, building and trade"
+    text: "From the place, list what people eat, what they build with and what they trade."
+  - title: "Detail one home"
+    text: "Describe one typical home: floor plan with each room and its use, the roof and walls, where heat, water and animals are kept, and who sleeps where."
+  - title: "Work out quarrels"
+    text: "Decide how this society settles quarrels: who hears them, what is owed, who pays when the settlement fails."
+  - title: "Add one strange custom"
+    text: "Add one custom an outsider would find strange."
+  - title: "Find the balance"
+    text: "Name the balance the society depends on, such as water, grain or trust."
+  - title: "Cross-check every detail"
+    text: "Make a short list of the key details and check each pair for contradiction."
+  - title: "Check it"
+    text: "Go through \"Check before you hand it back\" one line at a time and fix any check that fails, if you can."
+
+output_shape: |
+  PLACE
+  <climate, land, rock, wood, water>
+
+  FOOD, BUILDING, TRADE
+  <item> | source: <from the place or a named route>
+
+  ONE HOME
+  <rooms, roof, walls, heat, water, animals>
+
+  QUARRELS
+  <who hears, what is owed, who pays> | Example: <>
+
+  THE STRANGE CUSTOM
+  <custom> | Reason: <>
+
+  THE BALANCE
+  <what it rests on, who could upset it>
+
+  CONTRADICTION CHECK
+  <pair> | clash or fine | fix
+
+  WHO IT FREES, WHO IT COSTS
+  <both>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The place"
+    how: "The more you say about land and water, the more the rest follows."
+  - what: "Use"
+    how: "A game needs rules. A story needs a home and a quarrel."
+  - what: "Fixed rules"
+    how: "Say what cannot change. The rest is built around it."
+  - what: "Size"
+    how: "A village is easier to make consistent than a nation."
+
+judge:
+- "You can trace each detail back to the land."
+- "The home has real rooms with real uses."
+- "Nothing contradicts anything else."
+- "The strange custom makes sense to the people in it."
+- "The costs are as clear as the freedoms."
+
+test:
+- "Pick three details and ask where each came from. The answer should be the place."
+- "Ask for a second home. It should follow the same rules."
+- "Give it a quarrel and see if the settlement fits."
+- "Show it to a friend and ask what feels wrong."
+
+improve:
+- "Add maps or climate notes to the place step."
+- "Add the periods of history you have written."
+- "Save the contradiction check from each run."
+- "Pair it with \"Name family planner\" to name its people and places."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Working out consistent details from a place is text work."}
+    - {name: "A map or climate source", why: "Real climate data helps the place feel right."}
+  inputs:
+    - "A map or a list of places"
+    - "Existing names and customs"
+    - "How many people live there"
+
+terms:
+  - term: "Balance"
+    meaning: "The thing the society depends on to keep going, such as water or trust."
+  - term: "Contradiction check"
+    meaning: "A pass that compares each detail with the others to find clashes."

@@ -32,6 +32,7 @@ sources:
   - {n: 8, title: "Yuval Harari Issues Warning at Davos 2020 (blog post, 26 April 2020, quoting the speech)", by: "John G. Messerly", url: "https://www.goodreads.com/author_blog_posts/19771352-yuval-harari-issues-warning-at-davos-2020", kind: secondary}
   - {n: 9, title: "AI has hacked the operating system of human civilisation (Economist essay, April 2023, opening as reposted)", by: "Yuval Noah Harari, via Bioethics.com", url: "https://bioethics.com/?p=69968", kind: own-words}
   - {n: 10, title: "The Dangerous Populist Science of Yuval Noah Harari (Current Affairs, 2022)", by: "Darshana Narayanan", url: "https://www.currentaffairs.org/2022/07/the-dangerous-populist-science-of-yuval-noah-harari", kind: secondary}
+  - {n: 11, title: "Conversation with Maria Ressa and Carole Cadwalladr on AI, superintelligence, fascism and regulation (2026)", by: "Yuval Noah Harari, The Nerve", url: "https://www.thenerve.news/p/yuval-noah-harari-maria-ressa-carole-cadwalladr-conversation-ai-superintelligence-fascism-regulation", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a 200-word opening for a talk on why money works, starting with early humans."}
   - {kind: use, prompt: "Explain to a group of teenagers how a company is a 'shared story', and why that matters."}

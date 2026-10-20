@@ -27,6 +27,7 @@ sources:
   - {n: 4, title: "Bill Gates", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bill_Gates", kind: reference}
   - {n: 5, title: "United States v. Microsoft Corp.", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/United_States_v._Microsoft_Corp.", kind: reference}
   - {n: 6, title: "Bill Gates announces plan to give 'virtually all' his money away and end foundation in 20 years (8 May 2025)", by: "ABC7 News / Associated Press", url: "https://abc7news.com/post/bill-gates-announces-plan-give-virtually-money-away-end-foundation-20-years/16357672/", kind: reference}
+  - {n: 7, title: "Harvard commencement address, 2007 (study notes)", by: "Bill Gates, Harvard Magazine", url: "https://www.harvardmagazine.com/print/33991?page=all", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page memo to my 15-person team saying that a new tool in our field changes our priorities, and what we'll do this quarter."}
   - {kind: use, prompt: "We run a free after-school tutoring programme. Pick the numbers we should track to know if it works, and say how to keep the data honest."}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Peep Laja is alive, and views can change. Everything below comes from his own website, podcast transcripts from 2015 and 2021, short written answers he posted on a Q&A site, two podcast summaries from around 2023 and 2024, and his companies' own pages. Treat each view as "as of" the year of its source. His main blog posts sit on a site that blocked our reader, so we could not use them. We also could not find his birth year or birthplace in a source we could open, so both are left out. Nothing here tells you what he thinks about events after these sources.
+Peep Laja is alive, and views can change. His 2016 keynote slides (S10), the 2015 Brainfluence interview (S4) and the 2021 Supermetrics transcript (S6) were read on 2026-10-20 and carry the method. Beyond those, everything below comes from his own website, podcast transcripts from 2015 and 2021, short written answers he posted on a Q&A site, two podcast summaries from around 2023 and 2024, and his companies' own pages. Treat each view as "as of" the year of its source. His main blog posts sit on a site that blocked our reader, so we could not use them. We also could not find his birth year or birthplace in a source we could open, so both are left out. Nothing here tells you what he thinks about events after these sources.
 
 ## In one paragraph
 
@@ -15,6 +15,12 @@ Laja is an entrepreneur who started in software, marketing and sales, then ran a
 Laja's starting point is that you should learn what is wrong before you fix anything. His agency, now Speero, treats research as the core of testing, used to find what matters to users and customers [S2]. In 2015 he warned that many people running tests pick random elements to try, rather than testing ideas that come from research [S4].
 
 How he applied it: he says people often build a page without thinking about the campaign first. He wanted the ad, the traffic source and the page planned together, so the ad's promise matches the page [S4].
+
+### The five-step research process (the 2016 keynote)
+
+In his 2016 keynote he blamed weak testing on two things: teams pick tests from lists of tactics found online, and nobody has a way to rank ideas. His answer is a fixed order of work. First find where the problems are. Then find what they are. Then find why. Then turn each known issue into a test hypothesis. Last, rank tests and quick fixes [S10]. The research behind it, which his firm called ResearchXL, mixes web analytics (with a health check first), mouse tracking and session replays, a heuristic review of key pages, user testing, technical checks such as cross-browser and speed, and surveys, chats and interviews [S10]. Each issue is put in one of five buckets: fix the tracking, investigate further, build a hypothesis, test it, or just do it when the fix is obvious. His own example of "just do it" was text too small to read [S10]. He also split work into obvious fixes and a top tier of "innovative testing" for creative ideas [S10]. He lists the skills the job needs: analytics, qualitative research, usability, technical skills, heuristics and copywriting [S10].
+
+How he applied it: the keynote shows lab tests where a large product image raised perceived value for a spec product, a hard drive, but lowered it for a style product, a shirt. Eye-tracking showed no clear difference in attention, with odds that the means differed of 55 to 83 percent [S10]. His point was that what works depends on the product.
 
 ### Clear beats clever, and talk about their problems
 
@@ -42,6 +48,9 @@ How he applied it: he suggested that a site needs a fair amount of traffic, on t
 
 ### Iterate instead of redesigning
 
+In the 2015 interview he reports one blog test where a scroll-triggered box beat an exit popup by a wide margin, and all three offers together captured about 30 percent more emails. He also cut his blog home page down to a single offer and says signups doubled or tripled [S4]. He cites Marks & Spencer's costly relaunch as a redesign that was followed by a sales drop [S4].
+
+
 Full redesigns are risky and costly, Laja argues, and they often fail to lift conversions [S4]. He calls a redesign a resource black hole. He recommends first checking how each page performs. Keep the layout of pages that work and rethink only the weak ones [S4]. A full redesign makes sense mainly if a site is badly out of date or gets little traffic [S4].
 
 How he applied it: he pointed to Amazon, which changes its site step by step through testing, and to a retailer whose sales fell after a big redesign [S4].
@@ -58,7 +67,10 @@ By the 2020s Laja was saying that copywriting has little effect on its own if th
 
 How he applied it: he recommends a strategic narrative, a story about how the world is changing that creates a need for your product, and revisiting it every two to four years [S9]. He also argues that business buyers are people too, so business messaging doesn't have to be stiff [S9].
 
-### Listen for patterns in what customers say
+**Listen for patterns in what customers say.**
+
+In 2021 he described how he worked before Wynter had enough users for numbers: 15 to 20 demos a week, interviews with paying test customers, and live chat answered himself. Repeated asks, such as for B2B audiences, were a signal. He ran a manual version with a form that also took payment before building software [S6].
+
 
 In a young company there isn't enough data for numbers to mean much, so Laja leaned on qualitative data. He drew it from sales demos, customer interviews and live chat, and looked for themes that kept coming up [S6]. He found sign-up counts less useful, because most people who signed up did nothing [S6].
 
@@ -75,6 +87,23 @@ How he applied it: he said he was running 15 to 20 demos a week himself at Wynte
 - Fix weak pages one at a time instead of redesigning everything [S4].
 - Get positioning right before you polish copy [S9].
 - Look for patterns across many conversations, not one loud opinion [S6].
+
+## Real decisions (enriched minds)
+
+### Starting a conversion blog and agency (2011)
+He co-founded CXL with Viljo Vabrit in 2011 and built the agency and ConversionXL blog [S2][S4]. He says the field was immature and full of false claims, which led him to start a conference [S4].
+
+### Stripping his own blog home page to one offer
+He kept removing items from his blog home page until only one offer stayed. He reports signups doubled or tripled and the rate rose from about 2 to about 12 percent [S4].
+
+### Running three email offers at once
+He tested a static sidebar offer, a scroll-triggered box and an exit popup. The scroll box beat the popup by a wide margin, and using all three captured about 30 percent more emails, which he judged worth some annoyed readers [S4].
+
+### Naming the five-step research order (2016)
+In his keynote he blamed weak programs on tactic lists and no way to rank ideas. He set a fixed order: where, what, why, hypotheses, priorities [S10].
+
+### Building Wynter on conversations before code
+Before there were enough users for numbers, he ran 15 to 20 demos a week, interviewed paying testers and answered live chat himself. When buyers kept asking for B2B audiences, he sold a manual version with a form and payment before building it [S3][S6].
 
 ## Where he stood
 

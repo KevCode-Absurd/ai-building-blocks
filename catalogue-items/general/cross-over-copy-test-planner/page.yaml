@@ -1,0 +1,132 @@
+new_slug: cross-over-copy-test-planner
+name: "Cross-over copy test planner"
+summary: "Paste two versions of copy and where they will run. Get a fair keyed test that swaps places, plus a winner rule."
+job: plan-ad-tests
+thinking: high
+thinking_why: "It has to design a fair test across places and control the things that could skew the result."
+
+headline: "Cross-over copy test planner"
+subhead: "Give it two versions of your copy and the places where they can run. It splits the places fairly, keys each version, swaps them in a second round and sets a winner rule. You get a test plan and a report format that compares cost per reply and then sales."
+
+explain: |
+  Put version A in one place and version B in another, and the better place can win for reasons that have nothing to do with the copy. A magazine may reach richer readers. A town may have a bigger market. You pick the wrong winner and think you learned something.
+
+  This skill sets up a cross-over test. Each version runs in half of the matched places with equal spend and its own key. In round two the versions swap places. The same follow-up goes to every reply, and you compare cost per reply and then the sales each version led to. The result is a winner you can trust, and a record to reuse.
+
+when:
+  - "You have two versions of a sales message and want a fair way to choose."
+  - "You run in several magazines, towns, lists or channels and the places differ."
+  - "You count replies but have never followed them through to sales."
+
+you_give:
+  - "Two versions of the copy"
+  - "The places they can run, with the cost of each"
+  - "What counts as a reply and what the follow-up is"
+  - "Past results for these places (optional)"
+you_get:
+  - "A split of places into two matched halves"
+  - "A keyed plan for round one and a swap for round two"
+  - "A report format: cost per reply, then sales per version"
+  - "A winner rule and a record sheet"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste both versions and list the places with their costs."
+  - "Say what a reply is and what you send to everyone who replies."
+  - "Create the keys it lists and run round one, then the swap."
+  - "Bring the counts back and ask it to fill the report."
+
+how_it_works:
+  - title: "Picks the places"
+    text: "Groups similar places such as two matched markets or a set of magazines."
+  - title: "Splits fairly"
+    text: "Runs each version in half the places with equal spend, each keyed."
+  - title: "Counts replies"
+    text: "Divides the cost of the space by the replies."
+  - title: "Swaps the versions"
+    text: "Reverses the places for round two."
+  - title: "Sends one follow-up"
+    text: "Sends the same follow-up to every reply."
+  - title: "Compares sales"
+    text: "Compares cost per reply, then sales from each version."
+  - title: "Keeps a record"
+    text: "Records results so the winner can be reused."
+
+output_shape: |
+  PLACES
+  Half 1: <places and costs>
+  Half 2: <places and costs>
+  Why matched: <reason>
+
+  ROUND ONE
+  Version A in half 1, key <code>
+  Version B in half 2, key <code>
+  Spend: equal, <amount> each
+
+  ROUND TWO (swap)
+  Version A in half 2, key <code>
+  Version B in half 1, key <code>
+
+  FOLLOW-UP SENT TO EVERY REPLY
+  <what and when>
+
+  REPORT
+  <version> | Spend | Replies | Cost per reply | Sales | Cost per sale
+
+  WINNER RULE
+  <set before the test>
+
+  RECORD
+  <what to keep>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "How alike the places are"
+    how: "Give audience or past results for each place. It uses them to match the halves."
+  - what: "Number of places"
+    how: "Four or more places give a fairer split than two."
+  - what: "Sales window"
+    how: "State how long you wait for sales. A longer window can change the winner."
+  - what: "Spend per version"
+    how: "Give a number so the plan can say how many replies make a fair read."
+
+judge:
+  - "Spend is equal for both versions."
+  - "Every version is keyed."
+  - "The second round swaps places."
+  - "Sales are counted, not only replies."
+  - "A record is kept."
+
+test:
+  - "Check the halves against each other: do they look alike in audience and cost?"
+  - "Ask a colleague to follow the keys and find which place each reply came from."
+  - "Run round one and round two and see if the winner is the same in both."
+  - "Compare cost per reply with cost per sale. If the winner changes, trust the sales."
+
+improve:
+  - "Add your channels and their usual quirks to step 1 so matching is realistic."
+  - "Add the key method each channel allows, such as codes or numbers."
+  - "Keep a running record of every test in one sheet."
+  - "Pair it with a cost per customer check on the winner."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Laying out a test design and report is text work any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Holds the counts and works out cost per reply and per sale."}
+  inputs:
+    - "Past results by place"
+    - "The cost of each place"
+    - "The follow-up message or offer"
+
+terms:
+  - term: "Cross-over test"
+    meaning: "A test where each version runs in each group of places, by swapping them in a second round."
+  - term: "Key"
+    meaning: "A code, link or number that shows which version drew a reply."
+  - term: "Cost per reply"
+    meaning: "The cost of the space or send divided by the replies it drew."

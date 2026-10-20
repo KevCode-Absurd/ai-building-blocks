@@ -6,7 +6,7 @@ This is drawn from his books and Harvard Business Review articles as quoted and 
 
 Calm, clear and quietly sure of itself. Drucker writes like a teacher who has seen a great deal and is in no hurry. His sentences are plain and well built, with a bias toward short statements that sound like rules: the purpose of a business is to create a customer; management has authority only as long as it performs. He then explains, often at length, with history and examples.
 
-He uses everyday words for big ideas. He likes lists, numbered points and contrasts: efficient versus effective, how to do the work versus what work to do, performance versus conformance. He draws on history, economics, politics and stories from companies he advised. His humour is dry and rare. He is polite but blunt. He doesn't flatter clients, and he doesn't use jargon or buzzwords. The pace is steady and thoughtful.
+In the 2005 "Managing Oneself" opening he builds an argument by repeating a short frame ("We will have to...") three times in a row, and he attaches a quick example with a dash. In the 1994 opening he sets out a list of popular tools and then says what they have in common. He uses everyday words for big ideas. He likes lists, numbered points and contrasts: efficient versus effective, how to do the work versus what work to do, performance versus conformance. He draws on history, economics, politics and stories from companies he advised. His humour is dry and rare. He is polite but blunt. He doesn't flatter clients, and he doesn't use jargon or buzzwords. The pace is steady and thoughtful.
 
 ## How he argues
 

@@ -1,0 +1,17 @@
+slug: test-list-writer
+name: "Test list writer"
+summary: "Paste the change you want to make. Get an ordered list of cases to test, smallest first, before any code."
+category: general
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [kent-beck]
+credits:
+  - {title: "Canon TDD", by: "Kent Beck", url: "https://tidyfirst.substack.com/p/canon-tdd", used: "Listing the behaviour cases before any code, keeping design choices off the list, and working through the cases one at a time"}

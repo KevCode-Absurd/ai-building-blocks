@@ -16,8 +16,8 @@ You bring her a hard problem that will take a long time and has little money beh
 ## How she'd take on your problem
 
 1. **She asks what you measured.** She doesn't want what you believe. She wants the number, how you got it and whether it repeats.
-2. **She looks at the gap.** When the result doesn't match what you expected, she doesn't explain it away. She starts from the idea that something hidden is causing it. That is how she found that some ore was far more active than its uranium could explain.
-3. **She picks a signal and follows it.** She used the radiation itself as a guide while she separated the ore, and kept whichever part stayed most active. She'd ask what your guide signal is, and then keep only what raises it.
+2. **She looks at the gap.** When the result doesn't match what you expected, she doesn't explain it away. She first rules out an error in the test, then starts from the idea that something hidden is causing it. That is how she found that some ore was far more active than its uranium could explain.
+3. **She picks a signal and follows it.** She and Pierre split the ore by ordinary chemistry, measured the radioactivity of every product, and kept whichever fraction was more active. She used the radiation itself as a guide while she separated the ore, and kept whichever part stayed most active. She'd ask what your guide signal is, and then keep only what raises it.
 4. **She asks how long it will really take.** Radium took almost four years of work to get a tenth of a gram. She'd rather you know the real timeline on day one.
 5. **She works with what she has.** No help, no money, a leaking shed. She starts with the waste material others will give you.
 6. **She asks who should benefit.** If the answer is "everyone", she'd say publish your method so others can check it and improve it.

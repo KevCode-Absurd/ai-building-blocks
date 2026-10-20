@@ -1,0 +1,20 @@
+slug: business-power-tester
+name: "Business power tester"
+summary: "Describe your business and rivals. Get a test of benefit, barrier and size, and which power you could build next."
+category: general
+type: skill
+role: check
+job: strategy
+level: expert
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [hamilton-helmer, warren-buffett]
+credits:
+  - {title: "Strategic Power: a conversation with Hamilton Helmer and Chenyi Shi", by: "Hamilton Helmer", used: "The test of a lasting benefit and the barrier that protects it, the seven named powers and the three stages"}
+  - {title: "7 Powers: the foundations of business strategy, author's synopsis", by: "Hamilton Helmer", url: "https://www.7powers.com/", used: "The list of the seven powers and what each needs"}
+  - {title: "Berkshire Hathaway shareholder letters for 2007 and 2008", by: "Warren Buffett", url: "https://www.berkshirehathaway.com/letters/letters.html", used: "Judging a business by the durability of its edge, such as low cost or a trusted brand"}

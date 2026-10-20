@@ -1,0 +1,133 @@
+new_slug: habit-plan-builder
+name: "Habit plan builder"
+summary: "Say a habit to start or stop. Get a two-minute first step, a cue, ways to add friction and a restart plan."
+job: think-and-decide
+thinking: low
+thinking_why: "It applies a fixed habit method to your situation, with little hard judgment."
+
+headline: "Habit plan builder"
+subhead: Tell it a habit you want to start or stop. It starts from the kind of person who does it, picks a first step that takes under two minutes, ties it to a cue you already have, and maps cue, craving, response and reward. You get a plan and a restart rule that does not shame.
+
+explain: |
+  Habits fail when the first step is too big, when there is no cue, and when one missed day turns into a lost month. A plan that starts small, hangs on something you already do and expects slips will last longer than a big resolution.
+
+  This skill writes who you are becoming as a short statement. It ranks versions of the habit from easiest to hardest and picks a gateway step of under two minutes. It attaches that step to a cue you already do every day. For a habit to start, it makes the cue obvious and the step easy. For a habit to stop, it hides the cue and adds friction. It names each habit as a short rule, sets up a simple tracking table, and writes a restart plan for after a miss.
+
+when:
+  - You keep starting a habit and dropping it within a week.
+  - You want to stop a habit, such as scrolling late at night, and willpower is not working.
+  - You are helping a team or client build a routine.
+
+you_give:
+  - The habit to start or stop, and why it matters to you
+  - What your day looks like (wake time, meals, work, bed)
+  - What has stopped you before (optional)
+you_get:
+  - A short statement of the kind of person who does this habit
+  - Versions of the habit ranked easiest to hardest, and a gateway step under two minutes
+  - The habit mapped as cue, craving, response and reward
+  - Ways to add or remove friction, a tracking table and a restart plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say the habit and what a normal day looks like, hour by hour.
+  - Pick the cue it suggests from things you already do. Change it if it does not fit your day.
+  - Do the gateway step tomorrow, even if you do not feel like more.
+  - Use the restart rule the first time you miss, and keep the tracking table where you can see it.
+
+how_it_works:
+  - title: Names the identity
+    text: Writes who you are becoming as a short statement, such as "I am someone who writes every day".
+  - title: Ranks the versions
+    text: Lists versions of the habit from easiest to hardest.
+  - title: Picks a gateway step
+    text: Chooses a first step that takes under two minutes.
+  - title: Finds a cue
+    text: Attaches the step to something you already do each day.
+  - title: Maps the four parts
+    text: Writes the habit as cue, craving, response and reward.
+  - title: Adjusts friction
+    text: Makes the cue obvious and the step easy for a habit to start, or hidden and harder for a habit to stop.
+  - title: Writes the rule and table
+    text: Gives the habit a short rule with a plain meaning and a daily tracking table.
+  - title: Plans the restart
+    text: Writes a plan for after a miss, with no shame.
+
+output_shape: |
+  THE PERSON YOU ARE BECOMING
+  "I am someone who <habit>"
+
+  VERSIONS, EASIEST FIRST
+  1. <under two minutes> ... <n>. <full version>
+
+  GATEWAY STEP
+  <step> | Takes: <time>
+
+  CUE
+  After I <existing daily action>, I <gateway step>
+
+  THE FOUR PARTS
+  Cue: <>  Craving: <>  Response: <>  Reward: <>
+
+  FRICTION
+  Make it easier: <list>  Make the cue obvious / hidden: <list>
+
+  THE RULE
+  <short name>: <plain meaning>
+
+  TRACKING TABLE
+  Day | Done? | Note
+
+  IF YOU MISS A DAY
+  <restart rule>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Your daily routine
+    how: Give real times. The cue only works if it is something you do daily.
+  - what: Start or stop
+    how: Say which. The friction advice flips for stopping a habit.
+  - what: What has failed before
+    how: Name it, such as "I forgot" or "I got bored". The restart plan answers it.
+  - what: The reward
+    how: Say what you enjoy. A reward you like keeps the habit going.
+
+judge:
+  - The first step takes under two minutes.
+  - The cue is something you already do daily.
+  - There is an identity statement.
+  - There is a restart rule that does not shame.
+  - All four of cue, craving, response and reward are mapped.
+
+test:
+  - Do the gateway step for three days. If you skip it, make it smaller.
+  - Ask a friend if the cue happens every day in your life as they know it.
+  - Read the restart rule on a bad day and see if it feels kind and doable.
+  - After two weeks, check the table and move to the next version only if the step feels easy.
+
+improve:
+  - Add your own cues from your routine, such as "after the kettle clicks".
+  - Add habits you have kept before, and what made them work.
+  - Add a list of the friction you can change at home or at work.
+  - Pair it with "Contrary evidence log keeper" if you want to test whether the habit works for you.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Applying a habit method to your day is text work any strong chat AI handles with this skill."}
+    - {name: "A paper calendar or tracking app", why: "Marking the day takes seconds and the streak is easy to see."}
+  inputs:
+    - "A rough hour-by-hour day"
+    - "Past attempts and where they broke down"
+
+terms:
+  - term: Gateway step
+    meaning: A tiny first version of the habit that takes under two minutes, such as putting on running shoes.
+  - term: Cue
+    meaning: The thing that starts the habit, such as a time, a place or an action you already do.
+  - term: Friction
+    meaning: Anything that makes an action harder or easier to do.

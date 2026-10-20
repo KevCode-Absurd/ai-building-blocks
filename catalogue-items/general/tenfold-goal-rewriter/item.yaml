@@ -1,0 +1,18 @@
+slug: tenfold-goal-rewriter
+name: "Tenfold goal rewriter"
+summary: "Paste a goal that aims for 10 percent more. Get a tenfold version, what must change and a small first test."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [larry-page]
+credits:
+  - {title: "2004 founders' IPO letter: An Owner's Manual for Google's Shareholders", by: "Larry Page and Sergey Brin, 2004", used: "Funding long bets and side projects with a small share of effort while the core stays strong"}
+  - {title: "2012 founders' letter, with the 2012 update from the CEO", by: "Larry Page, Google", used: "Aiming at a tenfold change instead of a small gain, and closing products to focus"}

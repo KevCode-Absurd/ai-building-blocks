@@ -1,0 +1,122 @@
+new_slug: growth-idea-ranker
+name: "Growth idea ranker"
+summary: "Paste your list of growth ideas. Get each scored for impact, confidence and ease, with the first three to test."
+job: plan-strategy
+thinking: low
+thinking_why: "Scoring and sorting by a fixed rule is quick, though your scores need honest reasons."
+
+headline: "Growth idea ranker"
+subhead: "Give it your list of ideas for getting more customers, plus what you know so far. It scores each from 1 to 10 for impact, confidence and ease, averages them, and sorts the list. You get the first three to test, each with a measure and a stop date."
+
+explain: |
+  A list of ten growth ideas usually gets argued about, and the loudest one wins. Without a shared way to rank them, the team ends up testing whatever someone feels strongly about, and the results never feed back into the list.
+
+  This skill puts every idea on one list, gathers ideas from across the team, and scores each for impact (how much it could move the number), confidence (how sure you are, and why) and ease (how fast and cheap it is to try). It averages the scores, sorts, writes one test per top idea with a measure and a stop date, and sets the order of the quickest tests first. After the tests, it re-scores the list with what you learned.
+
+when:
+  - You have many growth ideas and no way to choose.
+  - Meetings about what to try next end in a debate.
+  - You ran tests and want the results to change the ranking.
+
+you_give:
+  - Your list of ideas, from everyone who has them
+  - What you know so far, such as results from earlier checks
+  - Your goal number and what you tried before (optional)
+you_get:
+  - Each idea scored for impact, confidence and ease, with a reason for each score
+  - The list sorted by average score
+  - One test per top idea with a measure and a stop date
+  - A run order, quickest first, and a re-score step
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste every idea, including odd ones. Ask others on your team to add theirs.
+  - Share any results or notes from earlier checks.
+  - Run the tests it sets in the order it gives.
+  - Come back with the results so it can re-score the list.
+
+how_it_works:
+  - title: Collects the ideas
+    text: Puts ideas from across the team on one list.
+  - title: Scores each one
+    text: Scores each from 1 to 10 for impact, confidence and ease, with a reason.
+  - title: Averages and sorts
+    text: Averages the three scores and sorts the list.
+  - title: Writes the tests
+    text: Writes one test per top idea with a measure and a stop date.
+  - title: Orders by speed
+    text: Puts the quickest tests first.
+  - title: Re-scores
+    text: After each test, records what it showed and re-scores the list.
+
+output_shape: |
+  THE LIST, SCORED AND SORTED
+  Rank | Idea | Impact | Confidence | Ease | Average | Why the scores
+  1 | <idea> | <n> | <n> | <n> | <n> | <reason for each>
+  ...
+
+  THE FIRST THREE TO TEST
+  1. <idea> | Test: <what you do> | Measure: <number> | Stop date: <date> | Time to run: <days>
+  2. ...
+  3. ...
+
+  RUN ORDER
+  <quickest first, with why>
+
+  FLAGGED AS LONG BUILDS
+  <ideas that need a long build, kept off the first round>
+
+  AFTER THE TESTS
+  Idea | What it showed | New scores | New rank
+
+  MISSING
+  <facts that would sharpen the scores>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your goal number
+    how: State the number you want to move. Impact is scored against it.
+  - what: What you know already
+    how: Share earlier results. Confidence rises when you have real evidence, and stays low when you only hope.
+  - what: How much you can run at once
+    how: Say how many tests you can handle. It trims the first round to fit.
+  - what: Ideas from others
+    how: Include them all. Scores are compared across ideas, so a missing idea can't be ranked.
+
+judge:
+  - Every idea has three scores and a reason for each.
+  - Each test has a measure and a stop date.
+  - Scores are compared across ideas, not defended one by one.
+  - Results update the list.
+  - Ideas that need long builds are marked.
+
+test:
+  - Score an idea you know worked and one you know failed. See if the ranking matches what happened.
+  - Ask two people to score the same ideas separately and compare.
+  - Run the top test, then bring back the result and check the list moves.
+  - Check the measure on each test is a number you can pull.
+
+improve:
+  - Add your own scoring notes, such as what a 10 for ease means in your team.
+  - Add a fourth score, such as cost, if money is tight.
+  - Save the list after each round as your record of what you learned.
+  - Pair it with "Must-have survey planner" to find out what to aim the ideas at.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Scoring and sorting ideas against notes is text work that any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Keeps the scores, averages and test results in one table you can re-sort."}
+  inputs:
+    - "Results from earlier tests"
+    - "Findings from a survey or a customer check"
+    - "Your goal number and deadline"
+
+terms:
+  - term: Impact
+    meaning: How much the idea could move your goal number if it works.
+  - term: Confidence
+    meaning: How sure you are that it will work, based on evidence, not hope.
+  - term: Ease
+    meaning: How quick and cheap the idea is to try.

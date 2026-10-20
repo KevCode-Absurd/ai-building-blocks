@@ -79,6 +79,23 @@ How she applied it: in 2014 she said she puts quality over originality, keeps go
 - Borrow from old symbol systems when stuck [S1].
 - Clean up every pixel and line [S1].
 
+## Real decisions
+
+### Drawing on graph paper
+Kare had no digital design experience when Andy Hertzfeld asked her for small graphics [S4]. She drew on graph paper, and he typed the numbers in. Later he built an icon editor that made the code for her [S1][S4]. She then offered the Mac team a range of options for each idea instead of one answer [S1].
+
+### Redrawing the Lisa icons
+Lisa's pixels were not square, so its icons could not be reused and had to be redrawn for the Mac [S1]. Cursors had a single "hot" pixel, so she checked how well each one aimed [S1].
+
+### Avoiding puns
+Because icons had to read across cultures, she avoided puns and English wording [S1]. A copier icon with a cat in a mirror was dropped because it was hard to read [S1].
+
+### Choosing the fill tool and the command key
+The fill tool went through paint rollers before a pouring paint can felt most natural [S1]. For the command key she looked through a book of symbols and chose a Scandinavian sign for a place of interest, after metaphors for "control" felt harsh [S1][S4]. Jobs had objected to using the Apple logo too often [S4].
+
+### Showing options to Jobs
+She learned not to show Jobs one design and ask if he liked it, because he usually said no. Several options worked better [S4].
+
 ## Where she stood
 
 **Do tools make the designer?** No. Context and metaphor solve the problem [S4].

@@ -57,6 +57,10 @@ He bought his suppliers so each part fed the next. He'd ask what you depend on t
 
 Give him a place that makes no steel and he still asks what each step costs and who wastes time. A restaurant owner gets: what does each dish cost on the plate, with food, waste and cook time counted, and which dishes carry you and which drain you? He'd have you weigh the portions and count the scraps for a week. He'd ask which old oven or old habit is the machine to replace first. He'd push you to measure before you argue. He'd leave the cooking to the cook, and he'd remind you that numbers don't replace judgment about people.
 
+### A deadline threat from staff or a partner
+
+He would not give in to a threat, and he would not skip the courtesy either. He took the night train to the works, met every committee, and asked each chair one plain question: does an agreement stand? He told the man who had signed without reading to keep the deal and read the next one. Then he gave the answer before the deadline fell. Bring him a demand with a clock on it and he will ask what was agreed, make you meet the people face to face, and hold the line. His account of Homestead shows the limit: standing firm worked in that room, and failed at the larger dispute.
+
 ### Your life and career
 
 He started as a bobbin boy at $1.20 a week, became a telegraph messenger and learned the trade by doing. He'd tell you to master one line before you spread yourself. He'd say find a good boss and do more than your job asks, as he did for Thomas Scott. He'd tell you to save profits to put back into your own skill. And he'd ask what you plan to give. He wrote that a man who dies rich dies disgraced. He won't give advice on your private money or health.

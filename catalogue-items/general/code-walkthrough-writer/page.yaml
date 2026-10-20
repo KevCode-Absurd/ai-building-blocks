@@ -1,0 +1,120 @@
+new_slug: code-walkthrough-writer
+name: "Code walkthrough writer"
+summary: "Paste working code. Get an explanation for people, with each piece of code placed in reading order."
+job: build-software
+thinking: medium
+thinking_why: "It reads code closely and orders ideas for a reader, but the steps are fixed."
+
+headline: "Code walkthrough writer"
+subhead: Paste code that works, or a script, formula or automation you built. It lists the ideas a reader must hold, writes each as a short passage with its code piece beside it, and hands back a walkthrough a newcomer can follow without you in the room.
+
+explain: |
+  Code is written in the order the computer needs it. A person needs a different order. They need the big idea first, then the small ideas it rests on, each one with the reason it is there. Comments on single lines rarely do that, so the next person has to guess.
+
+  This skill reads your code and lists the ideas in the order a newcomer should meet them. It writes each as a short passage to a human reader and places the matching code inside it. It names every piece, explains what happens when a user makes a mistake, and marks which claims are proved and which are only tested. It reads the result aloud to an imagined newcomer and fixes each place they would stop.
+
+when:
+  - You wrote something that works and nobody else can follow it.
+  - A new hire or a client has to maintain your script, sheet formulas or automation.
+  - You want a handover document that stays true to the code.
+
+you_give:
+  - The code, script or formula set, pasted in full
+  - Who will read the walkthrough, and what they already know (optional)
+  - What the code is for, and any parts you are unsure about (optional)
+you_get:
+  - A walkthrough in reading order, with each code piece beside the reason it exists
+  - Named pieces so the text can point to them
+  - A section on what happens when users make mistakes
+  - A note on which claims are proved and which are only tested
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your code in full. Say who will read the walkthrough.
+  - Tell it which parts you are not sure about, so they are marked and not guessed.
+  - Read the walkthrough as a newcomer. Note each place you got lost and send those back.
+  - Run the code again against the walkthrough to see that nothing in the text disagrees with it.
+
+how_it_works:
+  - title: Reads the code
+    text: Lists the ideas a reader must hold, in the order they should meet them.
+  - title: Writes passages
+    text: Turns each idea into a short passage written to a person, with the reason for it.
+  - title: Places the code
+    text: Puts the matching code piece inside each passage so reason and code sit together.
+  - title: Names the pieces
+    text: Gives each piece a name so the text can refer back to it.
+  - title: Explains mistakes
+    text: Notes what the code does when a user enters something wrong or leaves something out.
+  - title: Tests on a newcomer
+    text: Reads it aloud as a newcomer would and fixes every place they would stop.
+  - title: Labels proof
+    text: Marks what is proved by reasoning and what is only tested by running.
+
+output_shape: |
+  WHAT THIS DOES AND FOR WHOM
+  <two sentences>
+
+  THE IDEAS, IN ORDER
+  1. <idea> 2. <idea> ...
+
+  WALKTHROUGH
+  ## <idea 1, in plain words>
+  <passage written to the reader, saying why>
+  <code piece name>: <code>
+
+  WHEN THE USER MAKES A MISTAKE
+  <input> -> <what the code does>
+
+  PROVED OR ONLY TESTED
+  <claim> | proved / tested / not checked
+
+  MISSING
+  <parts the code does not explain on its own>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Who the reader is
+    how: A new hire, a client and a future you need different depth. Say which, and what they already know.
+  - what: The goal of the code
+    how: One sentence on what it is for lets the walkthrough start with the right big idea.
+  - what: Parts you are unsure about
+    how: Name them. They are marked as unclear instead of explained as if known.
+  - what: Test results
+    how: Paste any test output so claims can be marked as tested and not guessed.
+
+judge:
+  - Every code piece sits beside the reason it exists.
+  - You can follow the order without opening the original file.
+  - Claims about what the code does match what the code does.
+  - The mistake section covers real wrong inputs, not just a sentence saying errors are handled.
+  - Proved and tested claims are labelled apart.
+
+test:
+  - Give it to someone who did not write the code. Ask them to explain it back in their own words.
+  - Change one line of the code and see which passage becomes wrong. That is where the walkthrough is tied to the code.
+  - Run it twice. The order of ideas should stay close even if the wording changes.
+  - Compare with your current comments. Count what the walkthrough explains that the comments do not.
+
+improve:
+  - Add your team's names for things to the skill, so pieces are named the way people already talk.
+  - Add a rule on how long a passage may be, if your readers prefer short ones.
+  - Keep the finished walkthrough next to the code and update it when the code changes.
+  - Pair it with "Function purity refactor planner" when the explanation shows tangled hidden state.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading code and writing an ordered explanation is text work any strong chat AI does."}
+    - {name: "A plain text or markdown file", why: "A walkthrough kept beside the code is easy to update when the code changes."}
+  inputs:
+    - "A short description of who uses the code and what it is for"
+    - "Test output or sample inputs and results"
+    - "A glossary of the words your team uses"
+
+terms:
+  - term: Walkthrough
+    meaning: An explanation of code written for a person, in the order they need it.
+  - term: Proved and tested
+    meaning: Proved means shown by reasoning to be true in every case. Tested means run on some cases and found to work.

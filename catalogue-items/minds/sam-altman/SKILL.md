@@ -252,6 +252,34 @@ How he applied it: he pointed to social media feeds as an example of a system tu
 - If you will regret not trying, try [S2].
 - Pause before acting, longer when angry [S2].
 
+### Real decisions
+
+These come from the Wikipedia biography [S7], which gives the facts but rarely his reasons. Where he gave a reason in his own writing, it is tied to that essay.
+
+#### Selling Loopt (2012)
+
+Altman dropped out of Stanford at 19 and ran Loopt, a location app, as CEO, raising more than $30 million [S7]. In March 2012 Green Dot bought it for $43.4 million [S7]. In April 2012 he co-founded a $21 million fund with his brother, which drew on part of his sale proceeds and put most of its money into Y Combinator companies [S7]. His career essay also tells people to own equity in what they build [S1].
+
+#### Widening Y Combinator (2014 to 2016)
+
+He took over as YC president in February 2014. He wanted YC to fund 1,000 companies a year and to back harder technology startups, not just software [S7]. In 2016 his role grew to run YC Group, which held YC and other units [S7].
+
+#### Founding OpenAI as a nonprofit (2015)
+
+OpenAI began as a nonprofit with Altman, Greg Brockman, Elon Musk and others, backed by pledges of $1 billion [S7]. He recruited researchers such as Ilya Sutskever with attention and YC stock [S7]. Only part of the pledged money was collected by 2019 [S7]. He said the lab might need more capital than any nonprofit had raised [S7].
+
+#### Leaving YC for OpenAI (2019)
+
+In March 2019 he left YC to run OpenAI full time [S7]. Sutskever had opposed the move, partly over unclear motives and the risk of one person holding too much power [S7]. YC's founder Paul Graham later said partners distrusted Altman and the move out was not as smooth as first told [S7].
+
+#### Fighting to return as CEO (November 2023)
+
+The board removed him on 17 November 2023, saying he was not consistently candid [S7]. Within days Microsoft offered him a research team, and over 700 of 770 staff signed a letter threatening to leave unless he returned [S7]. He was back on 21 November with a new board [S7]. A former board member later said he had withheld information [S7].
+
+#### Writing the case for shared gains (2021)
+
+In 2021 he wrote "Moore's Law for Everything." It argued that within ten years AI could create enough value to pay every adult in the United States a basic income, funded by taxes on companies and land [S4][S7]. In 2024 he floated "universal basic compute" in its place [S7].
+
 ### Where he stood
 
 **Should a startup worry about competitors?** Mostly no, until a rival beats it with a real product. Most startups die from their own mistakes [S3].

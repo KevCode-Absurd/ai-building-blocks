@@ -1,0 +1,123 @@
+new_slug: marketing-plan-order-checker
+name: "Marketing plan order checker"
+summary: "Paste your marketing plan. Get it sorted into diagnosis, strategy and tactics, the gaps named and a score out of 100."
+job: plan-strategy
+thinking: medium
+thinking_why: "It sorts lines into three kinds and checks links between them, which needs care but follows set rules."
+
+headline: "Marketing plan order checker"
+subhead: Paste your marketing plan. It sorts every line into diagnosis, strategy or tactic, finds tactics with no strategy above them, lists what research is missing and rebuilds the plan in the right order. You get a score out of 100 for how sound the order is.
+
+explain: |
+  Many marketing plans start with the fun part: the posts, the emails, the ads. The questions that should come first, such as who you are selling to and why they would choose you, are skipped or answered by opinion. Then tactics get changed every month because nothing says what they are for.
+
+  This skill puts the plan in the order that works: diagnose the market, choose a target and a position, set objectives, then pick tactics. It marks tactics with nothing above them, checks product and price as well as promotion, and lists the research to do rather than guessing. The score counts how many of six checks the plan passes, and shows each one.
+
+when:
+  - Your plan is a list of channels and posting dates with no stated reason.
+  - You were told to "do digital" and nobody said what for.
+  - A new owner or agency has handed you a plan and you cannot tell if it is sound.
+
+you_give:
+  - Your marketing plan, in whatever form it exists
+  - What you know about your market and customers
+  - Your brand file or recent results (optional)
+you_get:
+  - Every line sorted into diagnosis, strategy or tactic
+  - The tactics that have no strategy above them
+  - The research you need to do before the strategy can be sound
+  - The plan rebuilt in order, and a score out of 100 with the checks shown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your plan as it is, messy is fine. Add what you know about the market.
+  - Read the list of tactics with no strategy first.
+  - Do the research list, then run the skill again on the rebuilt plan.
+
+how_it_works:
+  - title: Sorts every line
+    text: Labels each line as diagnosis, strategy or tactic.
+  - title: Tests the diagnosis
+    text: Checks that the diagnosis rests on research into the market and not on opinion.
+  - title: Asks the strategy questions
+    text: Looks for who the target is, what the position is and what each objective is.
+  - title: Marks orphan tactics
+    text: Finds tactics with no strategy line above them.
+  - title: Checks product and price
+    text: Checks that product and price were considered and not only promotion.
+  - title: Rebuilds the plan
+    text: Rewrites the plan in order and lists what must be found out first.
+  - title: Scores the order
+    text: Counts how many of six checks the plan passes.
+
+output_shape: |
+  SORT
+  Diagnosis: <lines> | Strategy: <lines> | Tactics: <lines>
+
+  TACTICS WITH NO STRATEGY ABOVE THEM
+  <tactic> | needs: <target, position or objective>
+
+  RESEARCH TO DO FIRST
+  <question> | <how to find out>
+
+  THE PLAN IN ORDER
+  1. Diagnosis: <what is known> | <what is missing>
+  2. Target: <who>
+  3. Position: <what we stand for to them>
+  4. Objectives: <objective> | measured by <measure>
+  5. Product, price, place, promotion: <choices>
+  6. Tactics: <tactic> -> <target, position, objective>
+
+  SCORE
+  <n> out of 100: <six checks, pass or fail>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How much of the plan you paste
+    how: Paste all of it, including budgets. A partial plan gives a partial sort.
+  - what: What you know about customers
+    how: Add notes from sales calls, reviews and surveys. They count as research.
+  - what: Where digital sits
+    how: Say if digital is a separate plan. The check will ask why.
+  - what: The goal
+    how: Give the real objective, such as sales or margin. Vague goals are marked as missing.
+
+judge:
+  - Every tactic points to a target, a position and an objective.
+  - Missing diagnosis is listed as research to do, not guessed.
+  - Digital is not treated as a separate plan.
+  - Each objective has a way to be measured.
+  - The score shows which checks failed.
+
+test:
+  - Run it on an old plan and see whether the tactics that failed were the ones with no strategy.
+  - Rebuild a plan you like and check it passes. Fix the skill's sort if it does not.
+  - Run it twice. The tactics with no strategy should be the same.
+  - Give a plan to a colleague and compare their sort with the skill's.
+
+improve:
+  - Add your standard objectives, such as repeat rate, so the measure check uses your terms.
+  - Add the research you already hold, so it is not asked for again.
+  - Save the rebuilt plan in your brand file as the base for next year.
+  - Pair it with "Five forces industry checker" for the market part of the diagnosis.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting lines into three kinds and checking links is text work any strong chat AI can do."}
+  inputs:
+    - "Customer research, such as reviews or survey results"
+    - "Sales and margin by product for the last year"
+    - "A list of rivals and what they charge"
+
+terms:
+  - term: Diagnosis
+    meaning: What is true about your market, customers, rivals and results, found by research.
+  - term: Strategy
+    meaning: The choices of who to target, what position to take and what to achieve.
+  - term: Tactic
+    meaning: A single action, such as a post, an email or an ad.

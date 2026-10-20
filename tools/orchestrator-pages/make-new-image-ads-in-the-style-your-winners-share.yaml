@@ -1,0 +1,160 @@
+new_slug: make-new-image-ads-in-the-style-your-winners-share
+name: "Make new image ads in the style your winners share"
+summary: "Give it your ads with results. Get the style your winners share, new ad plans, and image prompts ready to make."
+job: make-image-ads
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+
+headline: "Make new image ads that keep what your winners share"
+subhead: Give it your image ads and their results. It finds the style your best ads have in common, plans new ads that each change one thing, writes the image prompts, and after you make the pictures, sets up a clean upscale of the ones you keep.
+
+explain: |
+  When one image ad wins, the usual move is to copy it. That copies the wrong things: the exact words, the offer and the date, which were only true for that ad. What carried over from ad to ad is the style, such as the layout, who speaks and how the picture opens.
+
+  This workflow compares your top ads with your weakest ones and keeps only the traits that separate them. Each new ad keeps that style and changes one thing, such as the argument, the buyer or the product shown. The settings are locked in one brief, so every ad is made the same way. You make the pictures, pick the keepers, and the last step sets up an upscale that keeps every word and detail.
+
+when:
+  - You have at least six image ads with results and want more that work the same way.
+  - Your winners all feel alike but you cannot say why.
+  - You want new ads that test one change at a time, not ten new guesses.
+
+you_give:
+  - Your image ads, as pictures, with their results (spend, sales or clicks)
+  - Your product facts and photos
+  - Your brand file (optional)
+  - How many new ads you want, and the sizes
+you_get:
+  - The traits your winners share, and the ones to drop
+  - New ad plans that each change one thing
+  - A brief with every setting locked
+  - The words, layout and feed copy for each ad
+  - One image prompt per ad that keeps your real product
+  - After you pick your images, an upscale plan for each
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Your ads as pictures with their results, your product facts and photos, and a line on how many new ads you want.
+  - Check the style list and the new ad plans when it stops. Fix anything that is wrong before it writes the prompts.
+  - Make the images in your image tool, pick the ones to keep, then bring them back for the upscale step.
+
+how_it_works:
+  - title: Finds the style your winners share
+    text: Uses the style finder skill to compare your best and weakest ads on five traits, keep the ones that split them, and plan new ads that change one thing each.
+  - title: Locks the settings
+    text: Uses the settings picker skill to turn the plans into one brief where every choice is filled and no two settings clash.
+  - title: Plans each ad
+    text: Uses the image ad planner to write the one-sentence argument, the claim, the layout and the feed copy for each ad.
+  - title: Writes the image prompts
+    text: Uses the product image ad skill to give every photo one job and write a prompt that keeps your real product.
+  - title: Waits while you make the images
+    text: You make the pictures, look at each at full size and pick the ones to keep.
+  - title: Sets up the upscale
+    text: Uses the upscale checker to check the original, work out the real size needed and set up a faithful upscale.
+
+output_shape: |
+  STYLE (from <n> ads, top <n> against bottom <n>)
+  Kept: <traits the winners share and the weak ads do not>
+  Dropped: <the winners' words, numbers and offers>
+  Evidence missing: <what could not be read>
+
+  NEW AD <n>: <short name>
+  Changes: <the one thing it changes>
+  Argument: <this buyer should do this because one fact on file>
+  On the image: <headline> / <support line>
+  Feed copy: <first line, headline, button> (counts)
+
+  BRIEF: <every setting with its choice>   CONFLICTS: <none or list>
+
+  IMAGE PROMPT, AD <n>
+  <one prompt per size>   References: <photo: its job>
+
+  UPSCALE (after you pick)
+  Target: <width x height>   Setup: <tool settings>   Changes found: <list>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Ads: the 9 image ads in ads/ with ad-results.csv (spend and sales)
+    Product facts and photos: the product table and 6 pack photos
+    What I want: 3 new ads for Facebook and Instagram, square and 4:5
+  output: |
+    STYLE (from 9 ads, top 3 against bottom 3)
+    Kept: a hand holding the pack, eight words or fewer on the image,
+    one number as the proof, a warm daylight look.
+    Dropped: "Day 1 of 30" counters, the spring sale, the 20% off line.
+    Evidence missing: ad 7 is a video, so it was left out.
+
+    NEW AD 1: The commute fix
+    Changes: the buyer, from the gut-fix seeker to the busy commuter
+    Argument: busy commuters should try Sprout because one small pack
+    needs no water or mixing.
+    On the image: "Greens you can eat on the train." / 6g fiber
+    Feed copy: "If your greens powder stays in the cupboard, this goes
+    in your bag." (73) Headline: Greens with no shaker (22)
+
+    BRIEF: size 1440 x 1800, hand holds the pack, daylight, real pouch
+    from photo 2.   CONFLICTS: none
+
+    IMAGE PROMPT, AD 1 (4:5)
+    Photo of a hand holding a torn flat pack of green gummies on a train
+    seat, soft window light. Headline across the top on a cream band:
+    "Greens you can eat on the train."
+    References: photo 2 (real pouch), photo 5 (how the pack opens)
+    (cut for length: ads 2 and 3 and the square prompts)
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-04. MISSING: a result for ad 5;
+    the finished images, so the upscale step cannot run yet.
+
+tweaks:
+  - what: Which result decides a winner
+    how: Say "judge on sales", "judge on cost per sale" or "judge on clicks". The top and bottom groups change with it.
+  - what: How many new ads
+    how: Ask for three to five. Each changes a different thing, so you can tell what made one win.
+  - what: Keep the buyer fixed
+    how: Say "same buyer, new argument" and every new ad changes the argument only.
+  - what: Skip the upscale
+    how: Stop after the image prompts if your image tool already makes the size you need.
+
+judge:
+  - The style list names traits, not the winners' sentences, numbers or offers.
+  - Each new ad changes one named thing, and no two change the same thing the same way.
+  - Every number on an ad appears in your facts.
+  - The image prompt describes your real pack, not a made-up one.
+  - The run ends with a summary that lists every file and every MISSING line in one place.
+
+test:
+  - Give it ten ads where you already know why one won. The style list should name that reason, or say it could not tell.
+  - Check that no winner's headline or offer appears in a new ad.
+  - Check every number and claim on each new ad against your facts.
+  - Paste one image prompt into your image tool and compare the pack with your real photo.
+
+improve:
+  - Run it again each month with fresh results, so the style list follows what is working now.
+  - Add a step after the image prompts that checks each ad against Meta's ad rules.
+  - Tune step 3's skill with your own character limits and your offer terms, word for word.
+  - Pair it with a skill that reads your ad results and lists what you have not tried.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds nine ads, their results and four steps of work in one run."}
+    - {name: "GPT Image", why: "Takes your product photos as references and keeps short headline words readable."}
+    - {name: "Nano Banana", why: "Takes many reference photos at once and handles shiny packs such as foil pouches."}
+  inputs:
+    - "At least six ads with results, so there is a top and a bottom group to compare"
+    - "Full-size photos of your pack from the front and in use"
+    - "The date range of each result, so ads are not compared across a sale"
+
+terms:
+  - term: Image ad
+    meaning: An ad that is a single picture, with words on it and text above it in the feed.
+  - term: Image prompt
+    meaning: The written instructions you give an image tool so it makes the picture you planned.
+  - term: Upscale
+    meaning: Making a picture bigger without changing what is in it.

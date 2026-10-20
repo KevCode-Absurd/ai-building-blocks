@@ -1,0 +1,134 @@
+new_slug: negotiation-call-prep-planner
+name: "Negotiation call prep planner"
+summary: "Paste the deal and what the other side may think. Get lines to open with, questions to ask and what to hear."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It has to guess what the other side fears and judge which lines fit, but the steps are fixed."
+
+headline: "Negotiation call prep planner"
+subhead: "Give it the deal and what you know about the other side. It writes what they may assume about you, an opening that names it first, feeling statements and how and what questions. You also get the facts to learn before you give anything."
+
+explain: |
+  Going into a hard talk with only your own case makes the other side defend theirs. They also answer yes just to end the talk, and then nothing happens.
+
+  This skill plans the first ten minutes around them. It lists what they may assume about you and opens by saying it. It writes feeling labels as statements and questions that start with how or what. It adds a question where no is a safe answer, and a test for a yes that comes too fast. It ends with the facts you still need before you concede anything. Labels are short statements of a feeling you expect, such as "It seems like time is tight."
+
+when:
+  - "You have a price, raise or contract talk this week and want an opening that lowers the heat."
+  - "A client or supplier keeps saying yes and nothing changes."
+  - "You tend to split the difference to get out of an awkward talk."
+
+you_give:
+  - "The deal and what you want from it"
+  - "What you know about the other side (optional)"
+  - "Your limits and what you could give (optional)"
+you_get:
+  - "An opening that names what they may fear about you"
+  - "Feeling labels and how and what questions"
+  - "A safe-no question and a test for a fast yes"
+  - "A ranked list of facts to find"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the talk in a few lines. Say who is on the other side and what you want."
+  - "Add anything they have said before, word for word if you can."
+  - "Take the plan with you. Use it as a running order, not a script."
+  - "After the talk, add what you learned and run it again before the next one."
+
+how_it_works:
+  - title: "Names their fears first"
+    text: "Lists what they may assume about you and writes an opening that says it out loud."
+  - title: "Writes feeling labels"
+    text: "Statements that name the feeling you expect, each followed by a pause."
+  - title: "Writes how and what questions"
+    text: "Questions that make them solve your problem with you."
+  - title: "Plans a safe no"
+    text: "A question where no is easy and still tells you something."
+  - title: "Tests a quick yes"
+    text: "A follow-up that asks how and who before you count it."
+  - title: "Lists hidden facts"
+    text: "What you must learn before you give anything."
+  - title: "Sets the order"
+    text: "A short run of play, with a plan for the talk turning angry."
+  - title: "Checks the plan"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  THE TALK
+  <who, what you want, deadline>
+
+  WHAT THEY MAY ASSUME ABOUT YOU
+  1. <assumption> | KNOWN or GUESS
+
+  OPENING
+  <two or three sentences that say it first>
+
+  FEELING LABELS
+  <label> | then wait
+
+  HOW AND WHAT QUESTIONS
+  1. <question>
+
+  SAFE-NO QUESTION
+  <question> | A no means: <meaning> | A yes means: <meaning>
+
+  IF THEY AGREE FAST
+  <follow-up>
+
+  FACTS TO FIND (RANKED)
+  1. <fact>
+
+  RUN OF PLAY
+  <opening, labels, questions, safe no, ask>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "What you know about them"
+    how: "Quote their real words. Labels built on what they said land better than guesses."
+  - what: "Your limits"
+    how: "Give them, and the plan keeps you from conceding before you have asked."
+  - what: "Tone you can carry"
+    how: "Say if you are blunt or gentle by nature, and the lines are written in a voice you can say."
+  - what: "The one thing you fear"
+    how: "Name your own fear in the talk. It shapes what you hear."
+
+judge:
+  - "Every label is a statement, not a question."
+  - "The opening names a fear without confessing to it."
+  - "No question has a hidden trap in it."
+  - "You could say every line out loud without a script."
+  - "The plan asks before it gives anything up."
+
+test:
+  - "Run it on a past talk where you know how it went. See if the facts to find include what you missed."
+  - "Say the opening to a friend. Ask if it sounds honest."
+  - "Practise one label in a low-stakes talk, such as a bill or a booking, then wait in silence for a few seconds."
+  - "Use it before a real talk and note which fact on the list changed the deal."
+
+improve:
+  - "Add your own field's usual hidden facts to step 7, such as renewal dates or who signs."
+  - "Add words your counterpart uses so labels sound like theirs."
+  - "Save past plans and results in a notes file so the next plan starts from them."
+  - "Pair it with \"Buy-in conversation planner\" when you need someone to want your idea, not only accept a term."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning and wording lines is text work any strong chat AI does well with this skill."}
+    - {name: "A notes app", why: "Keep the running order on one screen during the call."}
+  inputs:
+    - "Past emails or messages from the other side"
+    - "Your best and worst outcome, in numbers"
+    - "Who else has a say in their decision"
+
+terms:
+  - term: "Label"
+    meaning: "A short statement that names a feeling, such as \"It seems like you are under a lot of pressure.\""
+  - term: "Safe no"
+    meaning: "A question where answering no feels comfortable, so people speak more openly."
+  - term: "Hidden fact"
+    meaning: "Something you do not know yet that could change the whole deal."

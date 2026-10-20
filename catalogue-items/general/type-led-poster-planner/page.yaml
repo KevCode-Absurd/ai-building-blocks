@@ -1,0 +1,133 @@
+new_slug: type-led-poster-planner
+name: "Type-led poster planner"
+summary: "Paste your event and where the poster hangs. Get a type-only poster plan that reads from far away."
+job: design-work
+thinking: low
+thinking_why: "It follows fixed steps to turn words into a type plan."
+
+headline: "Type-led poster planner"
+subhead: "Give it your event or cause and where the poster will hang. It picks the one or two words that carry the point and a typeface that fits the mood. You get a type-only poster plan with swap points and a far-away test."
+
+explain: |
+  Most event posters fight for attention with a photo, six lines of detail and a logo. From across a street, none of it reads. A poster has about two seconds, so the words must do the work, and they must be big.
+
+  This skill picks who will see the poster and where it hangs, then the one or two words that carry the point. It chooses a typeface whose feel matches the mood before anyone reads a word, sets those words huge and cuts everything else. It adds one joke or twist if the subject allows, plans for one word to be swapped if the date or name changes, and ends with a test from across the street.
+
+when:
+  - "You need a poster for an event, sale, cause or show and have no image."
+  - "Your last poster looked busy and nobody read it."
+  - "Details like the date may change, and you do not want to redo the design."
+
+you_give:
+  - "What the event or cause is, and the date and place"
+  - "Where the poster will hang and how far away people will see it"
+  - "The mood: serious, playful, urgent"
+  - "Your brand file (optional)"
+you_get:
+  - "The one or two words that carry the point"
+  - "A typeface feel, sizes and what is cut"
+  - "A twist, if the subject allows"
+  - "Swap points and a far-away test"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the event and say where the poster will hang."
+  - "Say the mood in one word."
+  - "Print the plan at poster size, even roughly, and tape it on a wall."
+  - "Walk to the far end of the room or street and see what you can read."
+  - "Change the date or name on the plan to check the swap works."
+
+how_it_works:
+  - title: "Finds the viewer"
+    text: "Who will see it, from where and for how long."
+  - title: "Picks the words"
+    text: "The one or two words that carry the point."
+  - title: "Matches the type to the mood"
+    text: "A typeface feel chosen before anyone reads."
+  - title: "Sets the words huge"
+    text: "Cuts everything else."
+  - title: "Adds a twist"
+    text: "One joke or turn if the subject allows."
+  - title: "Plans for change"
+    text: "One word can be swapped without a redesign."
+  - title: "Tests from far"
+    text: "Plans a look from across the street."
+  - title: "Checks the set"
+    text: "Runs its own checks and names any missed."
+
+output_shape: |
+  VIEWER AND PLACE
+  <who> | <where> | <distance and time>
+
+  THE WORDS
+  Main: "<one or two words>" | why: <reason>
+
+  TYPE
+  Feel: <describe the letter shape and weight> | matches mood: <mood>
+  Size: <how big the main words are>
+
+  CUT
+  <what was removed and why>
+
+  THE TWIST
+  <one joke or turn, or none>
+
+  SWAP POINTS
+  <the word or line that can change> | stays fixed: <the rest>
+
+  SMALL PRINT
+  <date, place, link, set small and last>
+
+  FAR-AWAY TEST
+  <how to run it and what to look for>
+
+  MISSING
+  <facts that would change the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The mood"
+    how: "One word such as \"urgent\" or \"wry\" steers the typeface feel."
+  - what: "Distance"
+    how: "Give real distance. A poster at a bus stop needs bigger words than one in a lobby."
+  - what: "What may change"
+    how: "Name the date, price or name that might change. It is set as a swap point."
+  - what: "Humour"
+    how: "Say if the subject suits a joke. Without permission it adds no twist."
+
+judge:
+  - "It reads from far away."
+  - "There is one main message only."
+  - "The type feel matches the mood."
+  - "A changed date or name can be swapped without a redesign."
+  - "Nothing small and fussy is needed to understand it."
+
+test:
+  - "Print the plan and read it from across the room or street."
+  - "Ask a stranger what the poster is for after two seconds."
+  - "Swap the date on the plan and see if the design still holds."
+  - "Run it twice. The main words should be close."
+
+improve:
+  - "Add typefaces you already own to the type step."
+  - "Add your venues and their viewing distances to \"What you need\"."
+  - "Save posters that worked, with the plan, in your brand file."
+  - "Pair it with \"Design brief rules writer\" for a longer campaign."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Choosing words and writing a type plan is text work any strong chat AI does."}
+    - {name: "A printer or a wall", why: "The far-away test only works at poster size."}
+  inputs:
+    - "The venue and viewing distance"
+    - "Your brand fonts and colours"
+    - "A photo of the wall or board"
+    - "Past posters and how they did"
+
+terms:
+  - term: "Type-led"
+    meaning: "A design where the words, set large, make the picture."
+  - term: "Swap point"
+    meaning: "A part of the design that can change without redoing the rest."

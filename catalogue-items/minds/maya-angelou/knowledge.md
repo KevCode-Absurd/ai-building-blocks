@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Angelou's poems and memoirs are in copyright. This data set describes them in our own words and quotes only a few words. Her views come from her own interview with the Academy of Achievement (1997) and from what reference sources report. In her memoirs the "I" is Angelou, but she shaped her life story with the tools of fiction, so the books are not a strict record of fact.
+A note on method: Angelou's poems and memoirs are in copyright. This data set describes them in our own words and quotes only a few words. Her views come from three kinds of source in her own words: the long 1997 Academy of Achievement interview [S2], the Bill Moyers documentary Facing Evil and a later Moyers episode [S8], and the shape of two poems read in full on poets.org [S5][S6]. Reference pages give the facts of her life. We did not read her memoirs. In her memoirs the "I" is Angelou, but she shaped her life story with the tools of fiction, so the books are not a strict record of fact.
 
 ## In one paragraph
 
@@ -36,7 +36,7 @@ How she wrote it: an editor, Robert Loomis, told her that writing autobiography 
 
 ### Turn pain into strength by going through it
 
-Angelou told students to learn painful history rather than avoid it, because the only way out of something is all the way through it [S2]. Wikipedia reports her saying that she dealt with pain by admitting it and letting it come [S1]. Her memoirs return to hard memories on purpose, and her poems turn hurt into defiance.
+Angelou told students to learn painful history rather than avoid it, because the only way out of something is all the way through it [S2]. Wikipedia reports her saying that she dealt with pain by admitting it and letting it come [S1]. Her memoirs return to hard memories on purpose, and her poems turn hurt into defiance. In the Moyers programmes she says evil has often been built into history in the name of good, that trauma can breed cynicism, which she calls a tragedy, and that suffering can be turned into strength [S8]. She also warned that guilt immobilises [S2].
 
 ### Speak to everyone in the room
 
@@ -62,6 +62,26 @@ Angelou wrote in rented hotel rooms with the pictures taken down, lying on the b
 - Cut hard: a long day's pages become a few good ones [S1].
 - End on a simple human gesture, not a big claim [S5].
 - Speak to everyone, and leave no one out [S5].
+
+## Real decisions
+
+### Reading and memorising during five years of silence
+After being raped as a child she stopped speaking for about five years. She read widely and memorised poems and plays in that time [S8]. She later said she had a voice and refused to use it, and she credits a teacher with bringing her back to speech through books [S2][S1].
+
+### Boycotting the movie house in Arkansas
+As a child she was sent up the side steps of a movie house to a cramped seating area, while white children were sold tickets at the front. She decided to boycott movies [S2].
+
+### Taking on a book the editor called nearly impossible
+An editor told her it was almost impossible to write autobiography as literature. She took it as a challenge and wrote I Know Why the Caged Bird Sings, using dialogue, character and theme and arranging it in short episodes [S3].
+
+### Writing the inaugural poem from notes
+For the 1993 inauguration she followed her usual routine. She wrote down all she could about America, then shaped the notes into a poem with three voices, a rock, a river and a tree, that speak to every kind of person. The poem ends on a plain greeting [S4][S5].
+
+### Calming a young man on a film set
+On the set of Poetic Justice she talked a young man down when he was about to fight, and he later greeted her warmly. She also tells of calming a frightened passenger on a bumpy flight by reaching out, and says helping others also frees you from fear [S2].
+
+### Writing in a hotel room, cutting hard
+She rented a plain hotel room, took the pictures off the walls, and wrote on legal pads from early morning. She wrote 10 to 12 pages a day and cut them to three or four [S1].
 
 ## Where she stood
 

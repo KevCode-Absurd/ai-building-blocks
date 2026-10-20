@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Orwell's essays may still be under copyright in some countries, so this data set summarises them in our own words and keeps quotes short. When a line is spoken by a character in a novel, it belongs to that character, not to Orwell. His own views come from his essays, where he speaks in the first person.
+A note on method: Orwell died in 1950, and his essays are in the public domain in some countries and not in others, so we summarise them in our own words and keep quotes short. This version rests on his own essays: the full text of "Politics and the English Language" [S6] and the Orwell Foundation pages for it, "Why I Write" and "Shooting an Elephant" [S2][S3][S4], plus the full text of *Nineteen Eighty-Four* [S7]. A line spoken by a character in the novel belongs to that character, not to Orwell. His own views come from the essays, where he speaks as "I". Wikipedia [S1][S5] supplies dates and reception only. He left no recorded interview, so how he talks is read from prose.
 
 ## In one paragraph
 
@@ -86,6 +86,26 @@ How he applied it: "Shooting an Elephant" (1936) tells of a young police officer
 - Judge a political view by what it does to real people, on all sides [S3][S4].
 - Break your own rules rather than write something ugly [S2].
 
+## Real decisions
+
+### Quitting the police in Burma
+He served as a young imperial police officer in Burma and left after five years [S1]. In "Shooting an Elephant" he says the job taught him how empire works from the inside, and that he came to hate the system while still having to enforce it [S4]. He chose to leave and to write about the poor and the colonised instead [S1][S3].
+
+### Shooting the elephant
+In the essay, the officer finds a tame elephant calm and no longer dangerous, and still shoots it because a crowd of Burmans expects him to [S4]. His own explanation is that a ruler who fears being laughed at ends up acting a part, and that his real motive was to avoid looking a fool [S4]. He lets the reader see the shabby reason and does not excuse it. The lesson he draws is that tyranny wrecks the freedom of the tyrant too [S4].
+
+### Taking a side in 1936
+He says that until about 1936 he had not fully known where he stood. After Spain, every serious line he wrote was against totalitarianism and for democratic socialism [S3]. His stated reason: in his time a writer could not stay out of politics, and pretending to is itself a political choice [S3].
+
+### Keeping the digression in *Homage to Catalonia*
+He says a long chapter in that book was criticised as spoiling it. He kept it because it was needed to expose a lie about the war [S3]. Where truth and neatness pulled apart, he chose truth.
+
+### Picking real passages for the language essay
+He did not argue from invented examples. He quoted five passages by real, named writers of his day and took each apart: Laski's five negatives in 53 words, a piece that "plays ducks and drakes" with a metaphor, and so on [S6]. He also admits that the essay itself, on reread, commits some of the faults he attacks [S6].
+
+### Writing *Animal Farm* as a fable
+He calls it the first book where he tried, knowing what he was doing, to join political purpose and artistic purpose [S3]. He told a political point as a short story about animals, so the plain events carry it [S1][S3].
+
 ## Where he stood
 
 **Which side should a writer take?** He thought no writer of his time could stay out of politics. The only real question was which side, and how [S3]. His answer: against totalitarianism of every kind, and for democratic socialism [S1][S3].
@@ -134,10 +154,13 @@ His words have passed into the language: Orwellian, Big Brother, doublethink, Ne
 - His "common decency" reflected one class, country and time. Check it against other views.
 - People across politics claim him. Don't use him to score points on today's debates.
 
+### Newspeak and doublethink, as the novel states them
+In the novel the Party's language is built to shrink the range of thought, and doublethink means holding two opposite beliefs and believing both [S7]. The Ministry of Truth's main job is supplying every kind of printed and spoken information, not only rewriting old records [S7]. This is fiction, but it follows from the essay's claim that language can corrupt thought [S6][S7].
+
 ## Short phrases on the record
 
 - "Good prose is like a window pane." ("Why I Write," 1946) [S3]
-- "The great enemy of clear language is insincerity." ("Politics and the English Language," 1946) [S2]
+- "The great enemy of clear language is insincerity." ("Politics and the English Language," 1946) [S2][S6]
 - "Never use a long word where a short one will do." (rule 2, "Politics and the English Language") [S2]
 - "He wears a mask, and his face grows to fit it." ("Shooting an Elephant," 1936) [S4]
 - "In our time, political speech and writing are largely the defence of the indefensible." ("Politics and the English Language") [S2]

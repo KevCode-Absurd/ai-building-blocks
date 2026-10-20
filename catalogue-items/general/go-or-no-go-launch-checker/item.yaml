@@ -1,0 +1,24 @@
+slug: go-or-no-go-launch-checker
+name: Go or no-go launch checker
+summary: Paste your plan. Get a go or no-go against the book's six faults and three halfway checks.
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+outputs:
+  - type: audit_report
+origin: rebuilt
+version: 1.0.0
+minds:
+  - sun-tzu
+credits:
+  - title: The Art of War, Lionel Giles translation (1910)
+    by: Sun Tzu
+    url: https://www.gutenberg.org/ebooks/132
+    used: The six faults that lose a contest and the three halfway checks before moving

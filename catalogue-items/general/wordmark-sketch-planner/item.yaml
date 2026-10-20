@@ -1,0 +1,20 @@
+slug: wordmark-sketch-planner
+name: "Wordmark sketch planner"
+summary: "Paste a name and its meaning. Get five letter-shape ideas that act it out, with a pick."
+category: general
+type: skill
+role: make
+job: design
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: design_direction, required: true}
+  - {type: image_plan, required: true}
+minds: [herb-lubalin]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "Herbert Lubalin, advocate of provocative typography", by: "Type Directors Club, 1962", used: "Letters can carry the meaning alone, and impact is weighed against ease of reading"}
+  - {title: "If You Had To Do It All Over Again poster series, U&lc 1978", by: "Herb Lubalin", used: "Judging old work with fresh eyes, one idea per design, and what to cut"}

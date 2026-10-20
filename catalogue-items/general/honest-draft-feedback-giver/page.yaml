@@ -1,0 +1,128 @@
+new_slug: honest-draft-feedback-giver
+name: "Honest draft feedback giver"
+summary: "Paste a draft. Get feedback that names the weak lines, asks if you are fine with them and says what to keep."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It reads closely and writes notes line by line, which takes taste, within a fixed method."
+
+headline: "Honest draft feedback giver"
+subhead: "Paste a draft of a script, page, story or message and say what it is for. It reads it whole, points at the weak lines as questions, says what to leave alone and checks each action against the character."
+
+explain: |
+  Feedback often fails because it is vague ("make it punchier") or because it is a list of orders the maker did not ask for. The maker then defends the draft or changes the wrong thing.
+
+  This skill starts by asking what the maker loves in the piece. It reads the whole draft first, marks where a reader leans in and where they drift, then points at specific weak lines and asks if the maker is fine with each. If the maker defends one well, the note is dropped. It reads in order and starts with what is natural and good, asks what idea each scene carries, and checks each action against what the character would do. It says nothing about whether the draft will sell.
+
+when:
+  - "You wrote a script, page or story and want honest notes."
+  - "You are reviewing someone else's draft and want to be useful without taking over."
+  - "A draft feels flat and you cannot say why."
+
+you_give:
+  - "The draft, pasted whole"
+  - "What it is for and who reads it"
+  - "What you love in it, or what excited you (optional)"
+  - "A brief, if there is one (optional)"
+you_get:
+  - "A short note on what is working"
+  - "Notes on specific weak lines, each as a question"
+  - "Where the reader leans in and where they drift"
+  - "A leave-alone list and a check of each action against the character"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the whole draft and say what it is for."
+  - "Say what you love about it, even if it is small."
+  - "Answer each question the notes ask. Drop a note if you can defend the line."
+  - "Make changes only on notes you agree with, then run it again if you like."
+
+how_it_works:
+  - title: "Ask what the maker loves"
+    text: "Asks what the maker loves about the piece."
+  - title: "Take in the whole"
+    text: "Reads the whole draft before any comment."
+  - title: "Mark lean-in and drift"
+    text: "Marks where the reader leans in and where they drift."
+  - title: "Note what is natural first"
+    text: "Names what is natural and good first."
+  - title: "Ask what the scene carries"
+    text: "Asks what idea each scene was meant to carry."
+  - title: "Check actions against character"
+    text: "Checks each action against the person's character."
+  - title: "Ask about each weak line"
+    text: "Points at weak lines as questions and drops defended ones."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  WHAT YOU LOVE
+  <the maker's words, or MISSING>
+
+  THE WHOLE
+  <one sentence on what it does>
+
+  WHAT IS WORKING
+  - "<few words>" | Why: <reason>
+
+  LEAVE ALONE
+  - <part> | Why: <reason>
+
+  WHERE THE READER LEANS IN / DRIFTS
+  Leans in: <places>
+  Drifts: <places>
+
+  WHAT EACH SCENE CARRIES
+  - <scene> | Carries: <idea or none>
+
+  CHARACTER CHECK
+  - <action> | Would they? <question>
+
+  QUESTIONS ABOUT WEAK LINES
+  1. "<few words>" | Are you fine with <what>? | Because: <reason>
+
+  MISSING
+  <what would change the notes>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "What it is for"
+    how: "Say who reads it and what you want them to do. Notes follow the purpose."
+  - what: "What you love"
+    how: "It anchors the notes. Leave it out for a colder read."
+  - what: "How rough the draft is"
+    how: "Say so. For a first draft it asks about ideas before lines."
+  - what: "How many notes"
+    how: "Ask for the top five. Otherwise it gives all it finds."
+
+judge:
+  - "Every note points at a specific line, not the draft as a whole."
+  - "Nothing is praised that the reviewer did not feel."
+  - "Each weak line comes as a question, not an order."
+  - "At least one part is marked leave alone."
+  - "No note is about whether it will sell."
+
+test:
+  - "Run it on a draft you know well and check whether its questions match your doubts."
+  - "Defend a line it questioned and see if it drops the note."
+  - "Run it twice. The leave-alone list should stay the same."
+
+improve:
+  - "Add a note about your voice, so it knows what is on purpose."
+  - "Add the character notes or style guide for your piece."
+  - "Keep a file of notes you accepted."
+  - "Pair it with Shortlist and running-order planner to choose among drafts."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning, questioning and structuring are text work any strong chat AI does well with this skill."}
+  inputs:
+    - "A brief or purpose line"
+    - "Character notes or a style guide"
+    - "Earlier drafts"
+    - "Who reads it"
+
+terms:
+  - {term: "Leave alone", meaning: "A part of the draft that works and should not be changed."}
+  - {term: "Lean in and drift", meaning: "Where a reader pays more attention, and where their mind wanders."}

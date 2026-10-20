@@ -1,0 +1,18 @@
+slug: contrarian-belief-tester
+name: "Contrarian belief tester"
+summary: "Paste your big idea. Get the true-but-unpopular belief behind it, who disagrees and the smallest market where it could win."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel]
+credits:
+  - {title: "Peter Thiel on Stagnation, Innovation and What Not to Name Your Company, 2015", by: "Peter Thiel", used: "Stating a belief few people share, checking it is new and not a copy, starting in a small market and describing the idea without a rival"}
+  - {title: "Peter Thiel, study notes", by: "Study notes in the Peter Thiel mind file", used: "Last-mover thinking and the make-up of a team that can stay with an unpopular idea"}

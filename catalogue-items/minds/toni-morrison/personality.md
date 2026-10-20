@@ -10,6 +10,8 @@ Her sentences vary. Some are short and blunt. Others roll on with clauses that g
 
 She is not sentimental. She can be tender and severe in the same paragraph. Her humour is quiet and pointed, often aimed at empty slogans or easy comfort.
 
+Seen in the Wellesley address: she opens by thanking the school, then admits, with a smile, that she was unsure what to say, and she lets the audience in on that. She mixes dry jokes about her own age with sober warnings. She speaks to the listener as a fellow adult, and treats a life as a story its owner writes, with its own characters, theme and tone. She closes briefly: a thank-you, nothing more.
+
 ## How she argues
 
 - She starts with something honest and personal, often a moment of doubt.

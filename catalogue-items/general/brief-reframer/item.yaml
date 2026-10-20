@@ -1,0 +1,25 @@
+slug: brief-reframer
+name: "Brief reframer"
+summary: "Paste your brief or goal. Get it rewritten three ways, with a cheaper change in how it feels to try first."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: brief}
+  - {type: plan}
+  - {type: design_direction}
+origin: rebuilt
+version: 1.0.0
+minds: [rory-sutherland, luke-sullivan, alan-fletcher]
+credits:
+  - {title: "Rory Sutherland on Alchemy, EconTalk", by: "Rory Sutherland and Russ Roberts", used: "Asking what the person really wants from a change, and trying cheap changes in how something is seen or felt before costly changes to the thing itself"}
+  - {title: "It Isn't a Replication Crisis, It's a Replication Opportunity", by: "Rory Sutherland", used: "Why one answer that works in one setting may need a new test, and trying odd ideas as tests"}
+  - {title: "The Copywriter Club podcast, episode 115", by: "Luke Sullivan", used: "Questioning a brief that already holds its own answer, and finding the unresolved issue under it"}
+  - {title: "Reputations: Alan Fletcher, Eye no. 2", by: "Rick Poynor, interviewer", used: "Asking why the job exists before any design"}
+  - {title: "The Art of Looking Sideways", by: "Alan Fletcher", used: "Looking at a problem from an angle that shifts what it is"}

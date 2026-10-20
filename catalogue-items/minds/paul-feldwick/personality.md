@@ -1,12 +1,14 @@
 # Paul Feldwick: how he thinks and talks
 
-This is drawn from his 2022 Q&A interview, a 2020 extract from *The Anatomy of Humbug*, and reports of his books and talks. It describes a public voice, not the private man.
+This is drawn from his 2022 Q&A interview, a 2020 extract from *The Anatomy of Humbug*, his 2022 compendium of essays on fame, and reports of his books and talks. It describes a public voice, not the private man.
 
 ## Voice
 
 Thoughtful, wry and well read, like a senior planner who has seen every theory come and go and still loves the circus. He writes in clear, measured sentences, with a scholar's habit of tracing an idea back to where it came from. He enjoys history: medieval pedlars, P. T. Barnum, Jenny Lind, the old London agencies.
 
 His humour is gentle and a little mischievous. He likes the word "humbug" and the louche side of advertising's past. He quotes others generously, from Howard Gossage to Martin Boase to Jeff Bezos. He praises work he loves in warm, concrete terms: the music, the human story, the charm. He is skeptical of jargon and of the industry's wish to look like a science.
+
+In his own essays he works like a historian. He opens with a small story (a design student paid two dollars an hour for a logo, a cartoon cereal man in 1902), asks what the received version leaves out, and goes back to the record. He says "I believe" and "I want to suggest" more than he declares. He offers his own framework "tentatively, as a work in progress" and invites correction. He gives credit loudly and corrects himself in public: a postscript to one piece says readers had pointed out whose idea it really was, and he would not rule on shares.
 
 ## How he argues
 

@@ -1,0 +1,131 @@
+new_slug: reason-why-deal-writer
+name: "Reason-why deal writer"
+summary: "Paste your product and the deal you want to run. Get the deal with a believable reason why, in three versions."
+job: make-offer
+thinking: medium
+thinking_why: "It judges which reason is true and fits the reader, but the steps are fixed."
+
+headline: "Reason-why deal writer"
+subhead: "Give it your product, the deal and the group it is for. It lists why a stranger would doubt the deal, finds reasons you can prove and honour, and adds a clear picture and exact claim steps. You get the deal in three versions."
+
+explain: |
+  People distrust a deal that has no explanation. If the price is low or the gift is large, the buyer wonders what the catch is. Making the offer bigger does not fix that. A true reason does.
+
+  This skill states the deal plainly first, then lists the doubts a stranger would have. It writes reasons the buyer already knows, such as a sale or a clear-out, and stronger ones that fit this reader, such as their trade, their town or their name. It keeps only a reason you can prove and will honour, adds a clear picture of what the buyer gets, and ends with exact steps to claim. You get three versions you can use in different places.
+
+when:
+  - "You want to run a discount or a gift and fear it will look too good to be true."
+  - "Your offer is fair but readers ignore it."
+  - "You are testing different reasons for the same deal."
+
+you_give:
+  - "The deal you want to run, with real numbers"
+  - "Your product facts and costs"
+  - "The group it is for"
+  - "A persona or brand file (optional)"
+you_get:
+  - "The deal in one plain sentence"
+  - "The doubts a stranger would have"
+  - "Reasons ranked, with the one you can prove for each version"
+  - "Three versions of the deal copy with exact claim steps"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the deal with its real price, gift or discount and end date."
+  - "Paste your product facts and the group it is for."
+  - "Check the reason it picked against what you can actually prove."
+  - "Test the three versions on your chosen group."
+
+how_it_works:
+  - title: "States the deal"
+    text: "Writes the price, gift or discount and terms in one plain sentence."
+  - title: "Lists the doubts"
+    text: "Names why a stranger would not believe it."
+  - title: "Writes familiar reasons"
+    text: "Lists true reasons the buyer already knows, such as a sale or clear-out."
+  - title: "Writes personal reasons"
+    text: "Lists reasons that single out this reader."
+  - title: "Picks what you can prove"
+    text: "Keeps only reasons you can show and will honour."
+  - title: "Adds a picture"
+    text: "Swaps a vague promise for a concrete scene from your facts."
+  - title: "Writes the claim steps"
+    text: "Gives the exact steps, dates and contact."
+  - title: "Writes three versions"
+    text: "One with a familiar reason, one with a personal reason, one short."
+
+output_shape: |
+  THE DEAL
+  <price/gift/discount, terms, end date>
+
+  DOUBTS
+  <list>
+
+  REASONS CONSIDERED
+  <reason> | proof needed <fact> | kept/dropped
+
+  THE PICTURE
+  <one or two sentences>
+
+  CLAIM STEPS
+  1. <step>
+
+  VERSION 1 (familiar reason: <reason>)
+  <80 to 150 words>
+
+  VERSION 2 (reason for this reader: <reason>)
+  <80 to 150 words>
+
+  VERSION 3 (short)
+  <line>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "The real saving"
+    how: "Give the exact numbers. The copy never claims more than the real difference."
+  - what: "What you can prove"
+    how: "Tell it what is true, such as stock levels or a real anniversary. It only uses reasons you supply."
+  - what: "The reader"
+    how: "Add trade, place or other facts about the group. They open the stronger personal reasons."
+  - what: "Your voice"
+    how: "Paste a sample of your writing so the versions sound like you."
+
+judge:
+  - "You could show proof for the reason right now."
+  - "The deal is in the first line, before the reason."
+  - "The reason fits this group and not every group."
+  - "A stranger could follow the claim steps without asking you a question."
+  - "The saving matches your real numbers."
+
+test:
+  - "Give it a deal you ran before. See if a reason it suggests is one you could have used."
+  - "Ask a friend which version they believe most and why."
+  - "Check that every fact in the copy appears in what you gave it."
+  - "Test version 1 against version 2 with one change at a time."
+
+improve:
+  - "Add the true reasons your business already has, such as seasonal stock, to step 3."
+  - "Add personal reasons that suit your trade to step 4."
+  - "Add words you never use in a deal to the avoid list."
+  - "Save the winning reason to your brand file. Pair it with Small test and rollout planner."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Drafting several versions from your facts is text work any strong chat AI does well with this skill."}
+    - {name: "Your checkout or form tool", why: "Tests whether your claim steps work exactly as written."}
+  inputs:
+    - "Your exact stock levels, dates and costs"
+    - "A customer quote about your fair price"
+    - "Past deals and how they did"
+    - "The group chosen by Hungry audience ranker"
+
+terms:
+  - term: "Proposition"
+    meaning: "The deal itself: the price, the gift or the discount."
+  - term: "Reason why"
+    meaning: "The true explanation for why the deal exists."

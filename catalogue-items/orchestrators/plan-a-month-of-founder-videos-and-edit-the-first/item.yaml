@@ -1,0 +1,23 @@
+slug: plan-a-month-of-founder-videos-and-edit-the-first
+name: "Plan a month of founder videos and edit the first"
+summary: "Give it your brand file. Get ten founder video episodes, a script for the first, and an edit plan for your footage."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: organic
+level: beginner
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: footage, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: edit_plan}
+uses: [founder-video-series-planner, founder-video-ad-script-writer, ad-script-read-aloud-editor, social-video-edit-planner]
+steps:
+  - {uses: founder-video-series-planner, note: "Turns your brand file into ten episodes and a brief for the first one."}
+  - {uses: founder-video-ad-script-writer, note: "Takes the first episode's brief and writes a script that sounds like the founder."}
+  - {uses: ad-script-read-aloud-editor, note: "Reads the script aloud line by line and fixes the places a person would stumble."}
+  - {uses: social-video-edit-planner, note: "Plans cuts, captions, cover and export for the footage you filmed."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-plan-a-month-of-founder-videos-and-get-the-first-one-edited/skeleton.yaml

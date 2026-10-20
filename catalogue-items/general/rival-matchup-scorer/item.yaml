@@ -1,0 +1,24 @@
+slug: rival-matchup-scorer
+name: Rival matchup scorer
+summary: Describe you and a rival. Get a side-by-side on the five factors, with where to fight and where to avoid.
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - type: competitor_set
+    required: false
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+origin: rebuilt
+version: 1.0.0
+minds:
+  - sun-tzu
+credits:
+  - title: The Art of War, Lionel Giles translation (1910)
+    by: Sun Tzu
+    url: https://www.gutenberg.org/ebooks/132
+    used: The five factors to compare two sides, the seven questions, the ranking of ways to win, and the cost of a long contest

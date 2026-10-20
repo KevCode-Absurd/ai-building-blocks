@@ -1,0 +1,72 @@
+new_slug: find-what-you-really-sell-and-prove-every-claim
+name: Find what you really sell and prove every claim
+summary: Give it your product and buyer. Get angles worth testing, a checked offer and every claim matched to proof.
+job: write-ad-copy
+thinking: high
+thinking_why: It runs three skills in a row and has to catch claims that outrun their proof. Give it your strongest model.
+headline: Find what you really sell and prove every claim
+subhead: Give it your product and your buyer. It lists at least ten things you could really be selling, picks the best three as test angles, then reviews your offer against a tested checklist. Last, it pairs every claim in your copy with its proof and fixes the gaps.
+explain: |
+  Most copy fails in one of three places. It sells the thing instead of the result the buyer wants. The offer is fine but nobody has pushed on it, so the deal, the guarantee and the framing stay at their first draft. Or the copy makes a big claim and puts the proof somewhere else, or nowhere. Readers notice, and they stop believing the rest.
+
+  The steps run in a fixed order, and each one starts from the result of the one before. First it finds what you are really selling and picks three angles to test. Then it checks your offer against a list of offer tests and ranks the three changes worth trying first. Then it matches each claim to proof, and shrinks, supports or moves the claims that lack it. The order comes from Gary Bencivenga's Marketing Bullets Collection.
+when:
+  - Your ad or page makes big claims and you want each one to hold up before it goes live.
+  - You keep describing your product the same way and want fresh angles to test against each other.
+  - Your offer converts but you suspect the deal, the guarantee or the way you state the price could do better.
+you_give:
+  - Your product facts, such as what it is, who it is for and what it costs
+  - Your buyer or a persona (optional)
+  - Customer reviews or buyer words (optional)
+  - Your current offer, price and guarantee
+  - The ad or page copy you want checked
+  - Your proof, such as test results, numbers, reviews and awards (optional)
+you_get:
+  - A long list of what you could really be selling, with the best three as test angles and a test headline for each
+  - Your offer in one line, a checklist review of it, and the three changes to test first
+  - Every claim in your copy paired with its proof, with the gaps and the fixes listed
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your product facts, offer and copy ready. It works step by step and saves each result.
+  - Split-test the angles and offer changes it picks. Those tests need time and traffic, so give them time before you judge them.
+how_it_works:
+  - title: Find what you sell
+    text: Lists at least ten answers to what you are really selling, pushes each toward the result the buyer wants, and picks the best three as test angles.
+  - title: Review the offer
+    text: Takes the angles from the step before and checks your offer against a tested checklist. It ranks the changes and picks three to split-test.
+  - title: Match claims to proof
+    text: Takes the offer from the step before, lists every claim in your copy, and puts the proof next to each one. Claims bigger than their proof are shrunk, supported or moved.
+output_shape: |-
+  STEP 1: ANGLES TO TEST
+    Ten or more answers to "what am I really selling?" | best three, each with a reason and a test headline | test plan where only the angle changes
+
+  STEP 2: OFFER REVIEW
+    Offer in one line | checklist review | revised offer | three changes to test first, each with a measure
+
+  STEP 3: CLAIMS AND PROOF
+    Each claim | its proof or a gap flag | claims bigger than their proof | fixes
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How exact your product facts are
+    how: Every later step builds on the first one. Real numbers, real limits and the words buyers use give better angles than a loose description.
+  - what: Your proof
+    how: Give it everything you can back up, such as test results, review counts and dates. A claim with no proof either shrinks or gets flagged, so more proof keeps more of your copy.
+  - what: Your guarantee and deal terms
+    how: Say what you will truly keep, such as a refund window or a price rise date. It will not suggest a limit or deadline you do not mean.
+judge:
+  - Each step used the result of the step before.
+  - The angles are about the buyer's result, not only the product's features.
+  - No claim was invented or made bigger to fit a gap.
+  - Every claim has proof beside it or a flag saying it has none.
+  - The three offer tests each name one thing to change and one number to watch.
+test:
+  - Run it on copy where you know one claim has no proof. That claim should come back flagged, not passed.
+  - Run it twice on the same input. The steps should land in the same places, even if the wording differs.
+  - Stop it after step 1 and read the three angles yourself before you let it carry on.
+improve:
+  - Save the three angles and your proof into your brand file, so later runs can start from step 2.
+  - Add the claims you are not allowed to make to your brand file, so step 3 flags them first.
+  - After a test ends, add the winner and what it showed, and run step 1 again for the next round.

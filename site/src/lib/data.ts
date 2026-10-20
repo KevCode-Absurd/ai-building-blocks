@@ -31,6 +31,12 @@ export type Block = {
   years?: string;
   living?: boolean;
   face?: Face;
+  /** For a skill: the minds whose work it comes from, strongest first (item.yaml `minds`, docs/SOURCE-SKILLS-PRD.md). */
+  minds?: string[];
+  /** For a mind: the skills from their work, worked out from the skills' `minds` lists. */
+  skills?: string[];
+  /** For a mind: the workflows from their work. */
+  flows?: string[];
   inputs: Port[];
   outputs: Port[];
   uses: string[];
@@ -182,6 +188,17 @@ export const TASKS: { id: string; name: string }[] = [
   { id: "grow-social", name: "Grow on social" },
   { id: "set-up-ai", name: "Set up AI to work for you" },
   { id: "think-with-minds", name: "Talk it through with great minds" },
+  { id: "test-an-idea", name: "Test an idea before you build it" },
+  { id: "plan-strategy", name: "Plan your strategy" },
+  { id: "build-product", name: "Build a product people want" },
+  { id: "build-software", name: "Build and ship software" },
+  { id: "sell-and-negotiate", name: "Sell and negotiate" },
+  { id: "lead-people", name: "Lead and manage people" },
+  { id: "speak-and-persuade", name: "Speak and persuade" },
+  { id: "write-and-tell-stories", name: "Write and tell stories" },
+  { id: "design-work", name: "Design things people love" },
+  { id: "think-and-decide", name: "Think it through and decide" },
+  { id: "money-and-investing", name: "Handle money and investing" },
 ];
 export const taskOf = (b: Block) => TASKS.find((t) => t.id === b.task) ?? TASKS[0];
 
@@ -203,20 +220,28 @@ export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[
   { id: "social", name: "Grow on social", line: "Posts that build an audience", tasks: ["grow-social"] },
   { id: "founder", name: "Set up AI for your work", line: "Your brand file and AI, set up once for every job", tasks: ["set-up-ai", "brand-file"] },
   { id: "minds", name: "Think with great minds", line: "Borrow one mind's thinking, or seat a council", tasks: ["think-with-minds"] },
+  { id: "validator", name: "Test your idea", line: "Talk to customers before you build", tasks: ["test-an-idea", "understand-customers"] },
+  { id: "strategy", name: "Plan your strategy", line: "Where to play, how to win, and the money", tasks: ["plan-strategy", "money-and-investing"] },
+  { id: "product", name: "Build a product", line: "Products and software people use", tasks: ["build-product", "build-software"] },
+  { id: "seller", name: "Sell more", line: "Sell, negotiate and win people over", tasks: ["sell-and-negotiate", "speak-and-persuade"] },
+  { id: "leader", name: "Lead people", line: "Run a team, a meeting or a company", tasks: ["lead-people", "speak-and-persuade"] },
+  { id: "writer", name: "Write and tell stories", line: "Books, essays, scripts and talks", tasks: ["write-and-tell-stories"] },
+  { id: "maker", name: "Design things", line: "Products, brands and pages people love", tasks: ["design-work"] },
+  { id: "thinker", name: "Think it through", line: "Hard problems, big decisions, new ideas", tasks: ["think-and-decide"] },
 ];
 
 /** The broad areas above the groups (docs/MINDS-PRD.md §3). A group can sit in more than one; a mind sits in its own areas. */
 export const AREAS: { id: string; name: string; fns: string[] }[] = [
   { id: "marketing", name: "Marketing", fns: ["copywriter", "media-buyer", "ads", "cro", "strategist", "social"] },
-  { id: "design", name: "Design", fns: ["ads", "photos"] },
-  { id: "business", name: "Business", fns: ["strategist", "founder", "minds"] },
-  { id: "sales", name: "Sales", fns: [] },
-  { id: "leadership", name: "Leadership", fns: [] },
-  { id: "writing", name: "Writing", fns: ["copywriter"] },
-  { id: "arts", name: "Arts", fns: [] },
-  { id: "coding", name: "Coding", fns: [] },
-  { id: "science", name: "Science", fns: [] },
-  { id: "thinking", name: "Thinking", fns: ["minds"] },
+  { id: "design", name: "Design", fns: ["ads", "photos", "maker", "product"] },
+  { id: "business", name: "Business", fns: ["strategist", "founder", "validator", "strategy", "product", "minds"] },
+  { id: "sales", name: "Sales", fns: ["seller", "validator"] },
+  { id: "leadership", name: "Leadership", fns: ["leader", "strategy"] },
+  { id: "writing", name: "Writing", fns: ["copywriter", "writer"] },
+  { id: "arts", name: "Arts", fns: ["writer", "maker"] },
+  { id: "coding", name: "Coding", fns: ["product"] },
+  { id: "science", name: "Science", fns: ["thinker"] },
+  { id: "thinking", name: "Thinking", fns: ["thinker", "minds"] },
 ];
 export const areasOf = (b: Block): string[] => (b.type === "mind" ? [b.area ?? "", ...(b.also ?? [])].filter(Boolean) : AREAS.filter((a) => a.fns.some((f) => FUNCTIONS.find((x) => x.id === f)?.tasks.includes(b.task))).map((a) => a.id));
 /** Old links to the two functions that became "Create ads". */

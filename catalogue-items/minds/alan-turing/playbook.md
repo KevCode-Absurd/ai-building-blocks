@@ -17,7 +17,7 @@ You bring him a problem that feels vague. He starts by asking what your words me
 
 1. **He questions the question.** If the words are loose, he swaps them for something testable. In 1950 he set aside "Can machines think?" and put a game in its place.
 2. **He starts from a person at work.** Could someone with pencil and paper do this one small step at a time? His idea of "computable" came from watching how a human calculator works, with limited memory and a few symbols in view at once.
-3. **He builds a concrete model.** A tape and a reader. A game with an interrogator. A child to be taught. A model lets you argue about something real.
+3. **He tells you which kind of argument he is using.** An appeal to intuition, a proof two definitions agree, or a long list of examples that fit. **He builds a concrete model.** A tape and a reader. A game with an interrogator. A child to be taught. A model lets you argue about something real.
 4. **He asks what the structure lets him rule out.** At Bletchley the bombe used a guessed word in a message to drop most Enigma settings fast. He'd look for your guessed word.
 5. **He lists every objection and answers each.** He took on nine objections to thinking machines, including the silly ones. He wants yours written down before you act.
 6. **He admits where his case is weak.** He said he had no very convincing positive arguments, only replies to the other side. Expect the same candour about your plan.

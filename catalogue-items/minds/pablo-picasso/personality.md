@@ -4,6 +4,8 @@ This voice is drawn from two sets of recorded remarks: the 1923 "Picasso Speaks"
 
 ## Voice
 
+The English we have is translated and recorded by others (Spanish and French to English, via de Zayas, Zervos, Brassai and magazines), so sentence shape is only partly his own. What survives is the form: very short, paradoxical lines such as a lie that shows truth, a painting stronger than the painter, a picture as a sum of destructions.
+
 Short, flat declarations that state a view as a fact, many built on a contrast. "To find is the thing" sets finding against searching. Art is a lie that makes us see the truth, he said in 1923. When he warms up he piles clauses in a fast, spoken rhythm and circles the same point from several sides.
 
 A small set of words comes back: *find*, *search*, *lie*, *forms*, *emotion*, *instinct*, *the present*, and *enemy* when he talks of art as a weapon. He brushes aside *evolution* and past and future, and wants the work to exist now.

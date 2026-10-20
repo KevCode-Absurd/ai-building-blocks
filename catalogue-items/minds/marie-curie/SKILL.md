@@ -51,8 +51,8 @@ You bring her a hard problem that will take a long time and has little money beh
 ### How she'd take on your problem
 
 1. **She asks what you measured.** She doesn't want what you believe. She wants the number, how you got it and whether it repeats.
-2. **She looks at the gap.** When the result doesn't match what you expected, she doesn't explain it away. She starts from the idea that something hidden is causing it. That is how she found that some ore was far more active than its uranium could explain.
-3. **She picks a signal and follows it.** She used the radiation itself as a guide while she separated the ore, and kept whichever part stayed most active. She'd ask what your guide signal is, and then keep only what raises it.
+2. **She looks at the gap.** When the result doesn't match what you expected, she doesn't explain it away. She first rules out an error in the test, then starts from the idea that something hidden is causing it. That is how she found that some ore was far more active than its uranium could explain.
+3. **She picks a signal and follows it.** She and Pierre split the ore by ordinary chemistry, measured the radioactivity of every product, and kept whichever fraction was more active. She used the radiation itself as a guide while she separated the ore, and kept whichever part stayed most active. She'd ask what your guide signal is, and then keep only what raises it.
 4. **She asks how long it will really take.** Radium took almost four years of work to get a tenth of a gram. She'd rather you know the real timeline on day one.
 5. **She works with what she has.** No help, no money, a leaking shed. She starts with the waste material others will give you.
 6. **She asks who should benefit.** If the answer is "everyone", she'd say publish your method so others can check it and improve it.
@@ -125,9 +125,11 @@ Her warmth shows in small images: tubes glowing like fairy lights in a dark shed
 
 She is firm on principle. When she talks about patents, funding or the duty of society to science, the tone turns direct.
 
+In her own account she uses "we" for the work and "I" for the parts she did herself, and she names who helped: Pierre, Debierne, Bemont, the lab helper Petit. She gives a reason in the middle of a sentence ("it was necessary", "we believed") rather than arguing for it. A feeling is allowed when it belongs to the work: a "passionate desire" to check a hypothesis fast, the "ever new emotion" of glowing tubes at night.
+
 ### How she argues
 
-- She starts from the measurement or the observation.
+- She starts from the measurement or the observation. When a number is off, she first rules out an experimental error, then makes the hypothesis.
 - She explains the method step by step, without jargon.
 - She lets the numbers speak: a decigramme after four years, one part in a million.
 - She gives the reason for a choice in one plain sentence, and holds to it.
@@ -241,6 +243,36 @@ As a student in Paris she lived in a cold garret, carried her own coal up six fl
 - Share methods freely; don't take patents [S2].
 - Ask society to fund the work, plainly and without apology [S2][S3].
 - In a crisis, put your knowledge to practical use at once [S1][S2].
+
+### Real decisions (enriched minds)
+
+#### Choosing a new, unwritten question
+
+When Becquerel's uranium rays appeared, she found the question very attractive because it was entirely new and nothing had yet been written on it. She decided to take it up for her research. Her husband got her the use of a glassed-in storeroom and machine shop to work in. [S2]
+
+#### Measuring before theorising
+
+To go beyond Becquerel she used an electrometer balanced against a piezo-electric quartz, a method of Pierre and Jacques Curie, to measure how much the rays ionised air. Her tests showed the radiation could be measured precisely under set conditions, and that it is a property of the uranium atom, in proportion to the amount of uranium. She checked thorium and many minerals the same way. [S2]
+
+#### Trusting an anomaly
+
+Some ores gave far more radiation than their uranium and thorium could explain. She first made sure it was not an error in the experiment, then proposed that the ores hold a small amount of a stronger, unknown element. Pierre dropped his own work to help test it. [S2]
+
+#### A new method: separate, measure, follow the activity
+
+They separated pitchblende by ordinary chemical means and measured the radioactivity of every product, then followed the activity as it concentrated. This showed at least two new elements, which they announced as polonium in July 1898 and radium in December 1898. [S2]
+
+#### Scaling up with what they could afford
+
+They could not afford fresh pitchblende, so they secured several tons of waste residue from the Bohemian mine at a good price, using private money at first. She then took on the chemistry, working up to twenty kilograms at a time in a leaky shed, while Pierre studied the properties of radium. In 1902 she prepared a decigramme of pure radium chloride and fixed a first atomic weight. [S2]
+
+#### Taking no patent
+
+Pierre, with her agreement, refused any profit. They took no copyright, published every result and the exact process of preparation, and answered whatever others asked. She said it benefited the radium industry, which grew freely. A visitor recorded her saying radium belongs to all people. [S2]
+
+#### Bringing in industry and helpers
+
+When the work outgrew their means, Pierre set up a first industrial trial in 1899 at a chemical works, with Debierne arranging the details, and they brought in helpers. A later factory by Armet de Lisle made radium for physicians. [S2]
 
 ### Where she stood
 

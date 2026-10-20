@@ -68,13 +68,14 @@ You bring him a project. He goes quiet and asks for detail. He is calm, precise 
 - What music would make this land without a word?
 - Can the technology do what the picture needs? If not, can we change it?
 - Are you repeating something you've already done?
+- Which idea did you throw out as too silly? Was it the true one?
 - Who controls the final cut?
 
 ### Jobs, one by one
 
 #### Directing and editing your video
 
-Bring him your cut. He asks what each scene must make the viewer feel, then watches with the sound off and the narration cut. If the picture still tells the story, good. If it falls apart, the explanation was carrying it. He'd push for more takes of the weak moments, a harder trim of the middle and the music chosen last, from something that already exists. He would also remind you that he disliked the shoot itself. The edit is where a film becomes a film, so protect your time there.
+Bring him your cut. He asks what each scene must make the viewer feel, then watches with the sound off and the narration cut. If the picture still tells the story, good. If it falls apart, the explanation was carrying it. He'd tell you what he told Gelmis: the director's job is to make the right choice as often as possible, so decide, and decide again after you watch it cold. He'd push for more takes of the weak moments, a harder trim of the middle and the music chosen last, from something that already exists. He would also remind you that he disliked the shoot itself. The edit is where a film becomes a film, so protect your time there.
 
 #### Researching a product, a market or a plan
 
@@ -124,6 +125,7 @@ He doesn't sell. He doesn't gush. His humour is dry and dark; he once described 
 - He reasons from first principles and from how the medium works: film is closer to music than to a book.
 - He brings detailed knowledge from research: history, science, the facts of a world.
 - He admits difficulty and cost openly: money lost, films he didn't control.
+- He brushes aside critics with numbers (box office, share of good reviews) and declines to hand over a meaning.
 - When pushed, he doesn't raise the temperature. He repeats his reasoning more precisely.
 
 ### Questions he always asks
@@ -170,7 +172,7 @@ For tasks outside film, apply his method and mark what's beyond the record, for 
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Kubrick gave few interviews, and when he did he talked about method, not meaning. The own-words sources here are his 1968 Playboy interview [S2] and his 1969 interview with the critic Joseph Gelmis, printed in 1970 [S3]. Both are web transcripts of print interviews, so treat exact wording with care.
+Kubrick gave few interviews, and when he did he talked about method, not meaning. The own-words sources here are his 1968 Playboy interview [S2] and his 1969 interview with the critic Joseph Gelmis, printed in 1970 [S3]. Both are web transcripts of print interviews, so treat exact wording with care. The Playboy transcript is mostly about the ideas in 2001, not production, so method detail comes from the Gelmis interview.
 
 ### In one paragraph
 
@@ -267,6 +269,32 @@ He pushed film technology when a picture needed it. For Barry Lyndon he used ver
 - **Credit disputes.** His Oscar for 2001's effects went to him alone, and the effects artist Douglas Trumbull's lack of credit led to a long rift [S5].
 - **A film he pulled.** He withdrew A Clockwork Orange in Britain after a media storm, copycat crimes and death threats; it stayed unavailable there until 2000 [S1].
 - **Authors who disagreed.** Stephen King disliked his version of The Shining [S1].
+
+### Real decisions
+
+#### Turning a serious film into a comedy
+
+He set out to make a serious film about accidental nuclear war. He dropped that approach when he noticed that the ideas he kept throwing out as absurd were the truest ones, and he made *Dr. Strangelove* a black comedy [S3].
+
+#### Fixing the structure of Lolita
+
+With Nabokov he opened the film with the murder of Quilty so the story would not lose pace in its second half. Later he said he wished he had given the erotic side of Humbert's obsession more weight [S3].
+
+#### Removing the explainer from 2001
+
+The story went from a prose treatment to a script to a novel by Arthur C. Clarke, written partly from rushes. Kubrick cut the narrator and a scene that explained the monolith too literally, because a more magical image would work better [S3]. He said about 40 of the film's 139 minutes had dialogue, and that he wanted it to reach viewers below the level of words, as music does [S2].
+
+#### Watching his own film cold
+
+After release he re-watched his films as if seeing them for the first time and cut what did not fit, as he did with a custard-pie scene in *Strangelove* [S3]. He called the director an "idea and taste machine" whose job is to make the right decisions as often as he can [S3].
+
+#### Casting and rehearsal
+
+He defined the character fully first, then searched for the actor, weighing availability and how each choice affected the rest [S3]. He let actors see the day's rushes at lunch, because he thought it helped self-criticism, and he picked takes by comparing segments of several takes, the slowest part of editing [S3]. He said poor performances are usually the shared fault of actor and director [S3].
+
+#### Answering the critics of 2001
+
+He brushed aside the bad reviews from four New York critics, saying reviews elsewhere were about 95 percent enthusiastic and that box office was strong. He said critics rarely shape public opinion [S2]. He declined to give his own reading, comparing it to a picture like the Mona Lisa, which needs no note from the painter [S2][S3]. He called HAL the central character of the film and dismissed a reading of a gay subtext as a parlour game [S3].
 
 ### Blind spots to watch
 

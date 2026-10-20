@@ -1,0 +1,24 @@
+slug: offer-useful-information-first-and-follow-up-with-stalled-leads
+name: "Offer useful information first and follow up with stalled leads"
+summary: "Give it your product and who has the costly problem. Get an information offer and follow-up emails for stalled leads."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: email_flow}
+uses: [information-led-lead-offer-planner, almost-buyer-follow-up-writer]
+steps:
+  - {uses: information-led-lead-offer-planner, note: "A useful-information offer, a reply step and a plan to route replies"}
+  - {uses: almost-buyer-follow-up-writer, note: "A follow-up email series with a new reason each time. Reads the offer from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [dan-kennedy, robert-collier]
+credits:
+  - {title: "The 10 Rules of Direct Response Marketing", by: "Dan Kennedy", used: "The order of the steps: information-led lead offer planner, almost-buyer follow-up writer"}
+generated_from: intake/dan-kennedy-direct-response/skeleton.yaml

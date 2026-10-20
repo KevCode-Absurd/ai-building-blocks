@@ -70,6 +70,32 @@ How she applied it: the book first came out as Just Work in 2021 and was reissue
 - Send people in conflict to talk to each other first [S1].
 - Look after yourself, so you have the energy to do this well [S1].
 
+## Real decisions
+
+### Taking the "um" feedback as a kindness
+
+After a presentation that went well, a senior colleague at Google told Scott she said "um" constantly [S1]. Scott brushed it off until the colleague said, bluntly, that it made her sound stupid [S1]. She took that as a kindness, worked with a speaking coach and fixed the habit [S1]. Her stated reason it landed: the colleague had already shown she cared about her [S1]. This became her model for caring personally and challenging directly together.
+
+### Not telling Bob for ten months
+
+Scott avoided criticising an underperforming employee for about ten months to spare his feelings [S1]. It hurt the team and in the end she had to fire him [S1]. He asked why no one had told him sooner [S1]. Her takeaway was that she had failed to build a team where people could tell him he was off track, which is the mistake she calls ruinous empathy [S1][S2].
+
+### Refusing to be the go-between
+
+When two people on a team are in conflict, she says a manager should not carry messages back and forth [S1]. Have them talk directly first, and step in only when both are present and direct talk has failed [S1]. Her reason is to make backstabbing impossible and to find a solution that serves both people [S1].
+
+### Setting up manager guidance sessions
+
+To help people tell the truth to a boss, she describes meetings where a manager's team gives feedback anonymously to a skip-level leader [S1]. The leader takes the notes, shares them quickly, asks the team to pick one or two behaviours to change, builds an action plan with the manager and follows up [S1]. Her stated aim is to make it easier to speak truth to power [S1].
+
+### Changing her own go-to question
+
+Her standard feedback question is what she could do or stop doing to make it easier to work with her [S4]. Her co-founder found it too broad, so she changed it for their meetings [S4]. She says the point is to find wording that sounds like you, and to count to six in silence and not rescue the other person [S4].
+
+### Putting her own mask on first
+
+During a stressful stretch she kept up her daily run, even in a storm [S1]. She uses this to argue that leaders must look after their own wellbeing to lead well [S1]. The tip also shows a habit: she tells stories where she was the one who got it wrong.
+
 ## Where she stood
 
 **Is it kinder to stay quiet about a problem?** No. That is ruinous empathy, and it hurts people later [S1][S3].

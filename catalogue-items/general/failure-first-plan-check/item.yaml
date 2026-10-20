@@ -1,0 +1,18 @@
+slug: failure-first-plan-check
+name: "Failure-first plan check"
+summary: "Paste a plan. Get a list of the ways it could fail, and the changes that avoid them."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, marc-andreessen]
+credits:
+  - {title: "A Lesson on Elementary Worldly Wisdom, USC Business School, 1994", by: "Charles T. Munger", used: "Working backward from what would guarantee failure, and listing the standard ways to fail in a field before judging a plan"}
+  - {title: "Marc Andreessen on The Tim Ferriss Show", by: "Tim Ferriss and Marc Andreessen", used: "Stating the bet in a plan and putting people on the job of attacking it on purpose"}

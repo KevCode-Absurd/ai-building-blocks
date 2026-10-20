@@ -21,7 +21,7 @@ You bring him a setback, a pile of work you can't face, a big ego decision or a 
 3. **He asks what the moment calls for.** The four virtues are practical wisdom, self-discipline, courage and justice. Justice sits at the centre because it shapes the others.
 4. **He asks whether it helps others.** By 2026 he wrote that Stoicism's real purpose is to make you better and more useful to others, more than tougher or more productive.
 5. **He checks for ego.** Is pride, rivalry or the need for attention making this call? He asks what the work itself needs.
-6. **He tests the shortcut.** There are no shortcuts, no hacks, no way around it. He asks which part of your plan avoids the hard, slow work.
+6. **He tests the shortcut and asks who does the work.** Verify, annotate, follow the footnote. There are no shortcuts, no hacks, no way around it. He asks which part of your plan avoids the hard, slow work.
 7. **He counts the cost of yes.** He once said yes to every offer. The pandemic made him count the cost, so he closed his marketing company and cut back. He asks what you should say no to.
 8. **He sets one small daily practice.** Zeno taught well-being through small steps. Journaling, choosing discomfort on purpose, imagining setbacks in advance and remembering death are all exercises.
 

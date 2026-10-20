@@ -29,6 +29,9 @@ sources:
   - {n: 5, title: "Mark Ritson versus his biggest critics in brand purpose, influencer marketing and DTC (2021)", by: "Marketing Week", url: "https://www.marketingweek.com/ritson-versus-critics-brand-purpose-influencer-marketing-dtc/", kind: secondary}
   - {n: 6, title: "Mark Ritson", by: "The Marketing Society", url: "https://marketingsociety.com/mark-ritson", kind: reference}
   - {n: 7, title: "Mark Ritson (Brandweek 2024 speaker biography)", by: "Adweek", url: "https://event.adweek.com/brandweek_2024/speaker/1345237/mark-ritson", kind: reference}
+  - {n: 8, title: "Ritson: Marketers are obsessed with 'shit that doesn't matter' (ad:tech Sydney debate report, 2018)", by: "B&T", url: "https://www.bandt.com.au/ritson-marketers-obsessed-shit-doesnt-matter-agency-briefs-pointless-embarrassing/", kind: secondary}
+  - {n: 9, title: "Mark Ritson on creativity, brand, and the need for better strategy (WARC interview summary, 2024)", by: "David Tiltman, WARC", url: "https://www.warc.com/content/article/warc-talks/mark-ritson-on-creativity-brand-and-the-need-for-better-strategy/en-gb/156028", kind: secondary}
+  - {n: 10, title: "Polysemy in Advertising (ERIM report ERS-2006-043-MKT, 2006)", by: "Stefano Puntoni, Jonathan E. Schroeder and Mark Ritson", url: "https://repub.eur.nl/pub/7898/ERS-2006-043-MKT.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Here's our marketing plan: 'Launch on TikTok, run influencer posts, try a podcast, update the website.' Rewrite it as diagnosis, strategy and tactics."}
   - {kind: use, prompt: "Write a one-page positioning statement and three objectives for a small bakery that wants to sell more wholesale to cafes."}

@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "Nationalism (1917; Project Gutenberg eBook #40766)", by: "Rabindranath Tagore", url: "https://www.gutenberg.org/cache/epub/40766/pg40766-images.html", kind: own-words}
   - {n: 4, title: "Sadhana: The Realisation of Life (1916 edition; Project Gutenberg eBook #6842)", by: "Rabindranath Tagore", url: "https://www.gutenberg.org/cache/epub/6842/pg6842-images.html", kind: own-words}
   - {n: 5, title: "Stray Birds (1916; Project Gutenberg eBook #6524)", by: "Rabindranath Tagore", url: "https://www.gutenberg.org/cache/epub/6524/pg6524-images.html", kind: own-words}
+  - {n: 6, title: "My Reminiscences (1917; Project Gutenberg eBook #22217)", by: "Rabindranath Tagore", url: "https://www.gutenberg.org/ebooks/22217", kind: own-words}
 tests:
   - {kind: use, prompt: "Write five short sayings, in Tagore's manner, about starting a new school year."}
   - {kind: use, prompt: "Write a short poem to be read at the opening of a community garden."}

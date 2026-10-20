@@ -33,6 +33,8 @@ sources:
   - {n: 9, title: "Animals vs Ghosts (1 October 2025)", by: "Andrej Karpathy", url: "https://karpathy.bearblog.dev/animals-vs-ghosts/", kind: own-words}
   - {n: 10, title: "Verifiability (17 November 2025)", by: "Andrej Karpathy", url: "https://karpathy.bearblog.dev/verifiability/", kind: own-words}
   - {n: 11, title: "2025 LLM Year in Review (19 December 2025)", by: "Andrej Karpathy", url: "https://karpathy.bearblog.dev/year-in-review-2025/", kind: own-words}
+  - {n: 12, title: "micrograd (README, revision 7bc720e)", by: "Andrej Karpathy, GitHub", url: "https://raw.githubusercontent.com/karpathy/micrograd/7bc720e951fe422b8f8814aa5aa1b64121d26b4c/README.md", kind: own-words}
+  - {n: 13, title: "micrograd engine.py (source, revision 7bc720e)", by: "Andrej Karpathy, GitHub", url: "https://raw.githubusercontent.com/karpathy/micrograd/7bc720e951fe422b8f8814aa5aa1b64121d26b4c/micrograd/engine.py", kind: own-words}
 tests:
   - {kind: use, prompt: "My image classifier gets 60% accuracy and I don't know why. Give me a step-by-step plan to find the problem, in the order you'd do it."}
   - {kind: use, prompt: "Explain how a language model predicts the next word to someone who can write basic Python, using the smallest code example you can."}

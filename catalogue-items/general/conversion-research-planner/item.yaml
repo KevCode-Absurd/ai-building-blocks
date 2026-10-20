@@ -1,0 +1,20 @@
+slug: conversion-research-planner
+name: "Conversion research planner"
+summary: "Paste your page and analytics. Get a research order that finds where, what and why before you test anything."
+category: general
+type: skill
+role: make
+job: research
+level: advanced
+inputs:
+  - {type: web_page, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peep-laja]
+credits:
+  - {title: "Optimizing Optimization (opening keynote, 2016)", by: "Peep Laja, CXL", url: "https://cxl.com/", used: "Research before testing: check the analytics, find where people drop, review the pages, then learn why with replays, tests and surveys"}
+  - {title: "Ep 40: Smarter conversions with Peep Laja (Brainfluence podcast, 2015)", by: "Peep Laja", used: "The order of research and the focus on why visitors hesitate"}

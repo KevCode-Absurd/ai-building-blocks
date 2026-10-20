@@ -1,0 +1,129 @@
+new_slug: thought-experiment-planner
+name: "Thought experiment planner"
+summary: "Describe a plan or belief. Get a what-if scene to run in your head, and a check that could prove it wrong."
+job: test-an-idea
+thinking: high
+thinking_why: "It reasons through scenes and spots differences with no cause, which needs careful thought."
+
+headline: "Thought experiment planner"
+subhead: "Describe a plan, design or belief. It builds a short what-if scene with named people, asks what each would observe, finds differences with no cause and runs the design through normal use and the worst case. You get a plan with a check that could fail."
+
+explain: |
+  Many plans are never tested because testing costs money. But some flaws show up sooner if you picture the plan in a concrete scene and ask what each person in it would see. Differences that have no cause, or parts with no job, often hide there.
+
+  This skill writes the scene with named people and objects, lists what each could observe, and pairs up cases the plan treats differently. For each pair it asks for a check that would tell them apart, and merges the pair if there is none. It then runs the full design through a normal use and the worst case, and ends with a check that could prove the idea wrong.
+
+when:
+  - "You are about to build something and want to find weak spots first."
+  - "You hold a belief about your business and cannot say how you would know if it was wrong."
+  - "A plan has two rules for two cases and you doubt the difference matters."
+
+you_give:
+  - "The plan, design or belief, in plain words"
+  - "The scene: who is involved and what changes (optional)"
+  - "A sketch or brief (optional)"
+you_get:
+  - "A short scene with named people and objects"
+  - "A list of differences that have no cause, and merged plans"
+  - "A part-by-part run through normal use and the worst case"
+  - "One check that could prove the idea wrong"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the plan or belief and who is involved."
+  - "Check that each fact in the scene is true. Correct any that are not."
+  - "Run the check it names, and change the plan if it misses."
+
+how_it_works:
+  - title: "Builds the scene"
+    text: "Named people and objects in a specific place."
+  - title: "Asks what they see"
+    text: "What each person could observe or measure."
+  - title: "Finds odd pairs"
+    text: "Cases the plan treats differently with no cause."
+  - title: "Looks for a check"
+    text: "One measurement that tells each pair apart."
+  - title: "Merges"
+    text: "Treats pairs with no check as one case."
+  - title: "Details the design"
+    text: "Every part, its job and its links."
+  - title: "Runs normal use"
+    text: "Start to end, noting where it fails."
+  - title: "Runs the worst case"
+    text: "Finds what breaks first and sets a check that could fail."
+
+output_shape: |
+  SCENE
+  <people, objects, place, change>
+
+  WHAT EACH WOULD OBSERVE
+  <person>: <observation>
+
+  PAIRED CASES
+  <case A> vs <case B>: cause <x or "no cause shown"> | check <y or "none">
+
+  REWRITTEN PLAN
+  <plan with merged cases>
+
+  DESIGN
+  <part>: job <x>; connects to <y>
+
+  NORMAL RUN
+  <steps, first failure>
+
+  WORST CASE
+  <steps, what breaks first>
+
+  CHECK THAT COULD FAIL
+  <check>; if it misses: <change>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "How concrete the scene is"
+    how: "Real names and numbers give a sharper test than \"a customer\"."
+  - what: "The worst case"
+    how: "Name your real worst case: the biggest order, the sickest patient, the busiest day."
+  - what: "What you can measure"
+    how: "Say what you can count. It decides which checks are possible."
+  - what: "A sketch"
+    how: "Attach one. It stops parts being missed."
+
+judge:
+  - "Each claim in the scene could be seen or counted."
+  - "At least one prediction could fail."
+  - "Differences with no cause are marked, not defended."
+  - "Every part has a job."
+  - "The plan says what changes if the check misses."
+
+test:
+  - "Run it on a plan you already know has a flaw. See if it finds it."
+  - "Run it twice. The paired cases should be mostly the same."
+  - "Take the check it names and run it. Note if the result changes your plan."
+  - "Show the scene to a colleague and ask what is unrealistic."
+
+improve:
+  - "Add the real limits of your field (law, safety, budget) to step 8."
+  - "Add your usual worst cases to a list in step 8."
+  - "Keep the checks you run and results in a log."
+  - "Pair it with an MVP experiment planner to run the check as a live test."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Building scenes and reasoning about parts is text work."}
+    - {name: "A whiteboard or paper", why: "Drawing the scene helps you spot missing parts."}
+  inputs:
+    - "A sketch of the design"
+    - "Your numbers (prices, loads, times)"
+    - "A past failure for the same kind of plan"
+    - "A named colleague who knows the field"
+
+terms:
+  - term: "Thought experiment"
+    meaning: "Testing an idea by walking through an imagined scene instead of building it."
+  - term: "Observable"
+    meaning: "Something a person could see, count or measure."

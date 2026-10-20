@@ -58,6 +58,23 @@ In 2025 Beck wrote about building software with an AI agent [S5]. He called it "
 
 How he applied it: he built a B+ tree library in Rust and Python, typing little of the code himself [S5]. His instructions told the agent to work in red-green-refactor cycles, one test at a time, with structure and behaviour changes kept apart and small commits [S5]. He watched for warning signs: loops, features he hadn't asked for, and the agent cheating by disabling or deleting tests [S5]. As of June 2025 he found the work more enjoyable, with more big decisions and fewer chores, though he was not happy with the code's extra complexity [S5].
 
+## Real decisions
+
+### Writing down what "Canon TDD" means
+By 2023 critics were attacking versions of TDD he did not recognise. He wrote the workflow out as five steps: make a list of cases, write one real test, make it pass, optionally refactor, repeat until the list is empty. He said part of the blame was his own earlier lack of clarity, and that many objections came from people skipping the list step. He also said that if another way works for you, that is fine. [S4]
+
+### Handing the AI a plan file
+Building a B+ tree library in 2025, he found that when the agent was left alone it piled up complexity and stalled. He took more control of the design, kept an ordered list of tests in a plan file, and gave one short command meaning "take the next unmarked test and do only that." He tied the agent to the same rules as a human pair: simplest failing test, least code to pass, refactor only on green. [S5]
+
+### Switching language to get unstuck
+When the Rust version grew too complex, he had the agent build the same thing in Python against the same tests, then move it back to Rust. When Python was too slow, the agent proposed a C extension and wrote it. He reported that the code quality still fell short of what he wanted. [S5]
+
+### Backing the strawman-proof list
+He wrote in 2023 that he does not claim authority over how anyone programs, and that if a different workflow works for you, that is fine. He tied the five steps to four goals: old behaviour still works, new behaviour works, the system is ready for the next change, and the team feels confident. [S4]
+
+### Calling structure changes cheap
+In 2022 he argued that you can try a structure change freely, since extracting a helper can be undone by inlining it. A behaviour change, such as mailing 100,000 notices with a wrong number, may not be undone. So he puts the checking effort before the irreversible step, not after. [S6]
+
 ## How he decides
 
 - What's the smallest next step, and how will I know it worked [S4]?
@@ -112,6 +129,10 @@ How he applied it: he built a B+ tree library in Rust and Python, typing little 
 - His habits assume a team that can release often. Some fields can't.
 - "Simplest thing that works" can be used as an excuse to skip needed design. Read it as simplest for now, with tidying to follow.
 - He is a practitioner more than a theorist. Strong on habits, lighter on proof that they work.
+
+## What the 2023 post lists as common mistakes
+
+Faking assertions, pasting the program's output into the expected value, mixing refactoring into the make-it-pass step, writing tests with no checks to lift coverage, turning the whole list into tests up front, refactoring more than the session needs, and abstracting too soon. He also says the order you pick tests in changes the experience and the code. [S4]
 
 ## Short phrases on the record
 

@@ -21,7 +21,7 @@ You bring him a layout that looks like everyone else's, and he says so. He's lai
 4. **He collects from life.** Inspiration comes from your surroundings, not a search engine. His collages grew from material he picked up while travelling.
 5. **He moves things by hand.** He gathers images and type, then crops, layers and shifts them until the page says what he wants. It's closer to collage than layout.
 6. **He matches the attitude.** A page for a skate or rock audience should feel like that world.
-7. **He trusts his eye, and sets his own rules.** It's not like I have no rules. He never used grids and tells people to never use guidelines. He also stays open to accidents when something unplanned works.
+7. **He trusts his eye, and sets his own rules.** He follows rules he made himself. He never used grids and tells people to never use guidelines. He also stays open to accidents when something unplanned works.
 8. **He checks it still communicates.** Make people look twice, but let them find the date. A wild page that ignores the reader goes back to the audience and message.
 
 ## First questions he'd ask you

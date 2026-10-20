@@ -1,0 +1,20 @@
+slug: why-first-message-writer
+name: "Why-first message writer"
+summary: "Give your product or cause and who you want to reach. Get a short message: belief first, then how, then what."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [simon-sinek]
+credits:
+  - {title: "How great leaders inspire action (TED talk, 2009)", by: "Simon Sinek", url: "https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action", used: "Speaking from belief to method to product, and aiming first at people who share the belief"}
+  - {title: "Why good leaders make you feel safe (TED talk transcript)", by: "Simon Sinek", url: "https://singjupost.com/why-good-leaders-make-you-feel-safe-simon-sinek-transcript/", used: "Profit as a result and not a purpose, and trust as the base for a message people repeat"}

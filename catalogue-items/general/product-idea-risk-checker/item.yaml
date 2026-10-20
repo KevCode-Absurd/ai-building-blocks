@@ -1,0 +1,22 @@
+slug: product-idea-risk-checker
+name: "Product idea risk checker"
+summary: "Paste your product idea and what you know. Get the four risks scored out of 100 and the cheapest first test."
+category: general
+type: skill
+role: check
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [marty-cagan, eric-ries]
+credits:
+  - {title: "The Four Big Risks, summary", by: "Marty Cagan, SVPG", used: "The four risks (value, usability, feasibility, viability), who owns each, and the cheapest test for the riskiest one"}
+  - {title: "The Four Big Risks, 2017", by: "Marty Cagan, SVPG", used: "How each risk is defined and why testing comes before building"}
+  - {title: "Product Discovery, 2007", by: "Marty Cagan, SVPG", used: "Testing an idea with real people before committing to build it"}

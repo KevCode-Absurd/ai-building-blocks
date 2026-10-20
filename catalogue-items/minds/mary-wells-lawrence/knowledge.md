@@ -68,6 +68,23 @@ How she applied it: for American Motors, a smaller carmaker, the agency ran the 
 - Bring in the best outside talent, from designers to fashion houses [S7][S8].
 - Say the big idea out loud, with confidence, to the person who can approve it [S5].
 
+## Real decisions
+
+### She started her own agency
+She started Wells Rich Greene in April 1966 after being denied a promotion she had been promised [S1][S2]. Braniff moved its account to the new agency as its first client [S2][S5].
+
+### She painted the planes
+At Braniff, TIME said she proposed painting the jets in pastel colours and talked its president, Harding Lawrence, into trying it [S5]. Her stated reason was that the colours felt big, friendly and newsworthy [S9].
+
+### She let the product joke about itself
+For Alka-Seltzer she worked with Richard Rich and Stewart Greene on comic ads that TIME said helped lift sales by $13.3 million [S5]. The agency's later spot "I Can't Believe I Ate the Whole Thing" won a Clio in 1971 [S1].
+
+### She won TWA without entering the contest
+In 1968 TWA moved an account worth about $18 million a year to her agency. Wells Rich Greene had not entered the contest that eight leading agencies had spent months on [S6]. The win took billings past $90 million [S6].
+
+### She sold the agency in 1990
+She stepped down in 1990 and the agency was sold to Boulet Dru Dupuy Petit [S2]. The agency closed in 1998 and gave its archive to Duke University [S2].
+
 ## Where she stood
 
 **What should an ad do?** Get noticed and talked about. Her agency promised ads that would make their own publicity [S5].

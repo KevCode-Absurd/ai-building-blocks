@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "The Mesnevi, Book the First (1881), translated by James W. Redhouse (Project Gutenberg eBook #61724)", by: "Rumi", url: "https://www.gutenberg.org/cache/epub/61724/pg61724-images.html", kind: own-words}
   - {n: 4, title: "The Persian Mystics: Jalalu'd-din Rumi (1907), selections edited by F. Hadland Davis (Project Gutenberg eBook #45159)", by: "Rumi", url: "https://www.gutenberg.org/cache/epub/45159/pg45159-images.html", kind: own-words}
   - {n: 5, title: "The Festival of Spring, from the Divan (1903), rendered by William Hastie (Project Gutenberg eBook #57068)", by: "Rumi", url: "https://www.gutenberg.org/cache/epub/57068/pg57068-images.html", kind: own-words}
+
 tests:
   - {kind: use, prompt: "Write a short poem about missing someone who has moved far away, in the manner of Rumi's poems."}
   - {kind: use, prompt: "Tell a short parable that teaches a team why listening matters more than talking."}

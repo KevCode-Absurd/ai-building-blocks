@@ -1,0 +1,19 @@
+slug: number-to-picture-translator
+name: "Number-to-picture translator"
+summary: "Paste the key figures and who will hear them. Get each number turned into a picture the room can feel."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [chip-heath]
+credits:
+  - {title: "Make numbers count: how to translate data for your audience", by: "Chip Heath, Stanford Graduate School of Business insights, 2022", used: "Swapping figures for comparisons the audience knows, counts of people, human stakes and one vivid image"}
+  - {title: "The curse of knowledge", by: "Chip Heath and Dan Heath, Harvard Business Review, 2006", used: "Why experts forget how a number sounds to someone new, and testing the new version on a non-expert"}

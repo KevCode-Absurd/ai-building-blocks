@@ -1,0 +1,20 @@
+slug: sales-letter-outline-planner
+name: "Sales letter outline planner"
+summary: "Paste your research and chosen theme. Get a full outline, with headline ideas and the proof each claim needs."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: angle_library, required: true}
+  - {type: persona, required: false}
+  - {type: product_data, required: true}
+outputs:
+  - {type: brief}
+origin: rebuilt
+version: 1.0.0
+minds: [clayton-makepeace]
+credits:
+  - {title: "The 7 Daily Habits of Successful Copywriters", by: "Clayton Makepeace, AWAI, 2005", used: "Outline the whole piece before writing, plan proof for each claim, and spend extra effort on headline, deck and lead-in"}
+  - {title: "In His Own Words: Banishing Writer's Block", by: "Clayton Makepeace, AWAI, 2005", url: "https://www.awai.com/2005/04/banishing-writers-block/", used: "Confirming the client's goal, planning sidebars, and showing the plan to someone outside the project"}

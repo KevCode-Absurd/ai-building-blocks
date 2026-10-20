@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: our best source for his own views is a long interview Rick Poynor did with him for *Eye* magazine. The page is dated winter 1990 and says it first appeared in 1991 [S2]. We also use a review of his book *The Art of Looking Sideways* that quotes him and the book [S6], a short set of excerpts from the book [S7], a tribute by his publisher [S3] and reference pages. His book is largely an anthology of other people's sayings, so we take care not to credit its quoted lines to him [S6]. He died in 2006 [S1].
+A note on the record: our best source for his own views is the long interview Rick Poynor did with him for *Eye* magazine, dated winter 1990 and first printed in 1991 [S2]. We also use a review of his book *The Art of Looking Sideways* that quotes him [S6], a page of excerpts from the book with notes on how it is organised [S7], a short blurb page [S9], a tribute by his publisher [S3], a design-magazine piece on the V&A mark [S4] and reference pages [S1][S5][S8]. The book is largely an anthology of other people's sayings, so we do not credit its quoted lines to him [S6][S7]. Reports of its length differ, about 500 pages in one review and over 1,000 in another note [S6][S9]. He died in 2006 [S1].
 
 ## In one paragraph
 
@@ -30,6 +30,8 @@ How he applied it: the V&A job began as a signage system. While that was under w
 
 ### Drop your crutches
 
+He also said the designer sheep are separated from the goats by whether they push a job to the edge, and that you have to throw away the crutches [S2].
+
 Fletcher warned designers against repeating what they do well until it becomes a habit. Do that, and you become a graphic cliché [S2]. He said many designers claim to be free but make work that looks the same, and he counted himself among them [S2].
 
 How he applied it: he even admitted that his own handwriting style might have become a crutch, and that a critic who said so would probably be right [S2].
@@ -42,7 +44,9 @@ How he applied it: his publisher said his hand-made style of handwriting, cut-up
 
 ### Look sideways and keep notes
 
-*The Art of Looking Sideways* grew out of notes Fletcher made over many years when something caught his eye, from a flower in a crack in the pavement to a basket's print in the earth [S6]. It has no thesis and no beginning, middle or end [S9]. It mixes sayings, his own art and odd facts, grouped under themes like seeing and meaning [S6]. He described it as opening little windows [S6]. Its excerpts deal with how lines behave, how we see and how the mind fills gaps [S7].
+He reduced things to their essence so he would not get trapped in a style, and said his curiosity was insatiable even though he was not given to self-analysis [S2].
+
+*The Art of Looking Sideways* grew out of notes Fletcher made over many years when something caught his eye, from a flower in a crack in the pavement to a basket's print in the earth [S6]. It has no thesis and no beginning, middle or end [S9]. It mixes sayings, his own art and odd facts, grouped under themes like seeing and meaning [S6]. He described it as opening little windows [S6]. Its excerpts are grouped as tools, seeing, thinking and imaging. They hold the idea that we do not think in words, and that looking slowly means setting aside the label for the thing you see [S7].
 
 How he applied it: in the 1990 interview he said the book was really a scrapbook sorted into pigeon-holes such as taste, perception and imagination, and that he was using words like pictures [S2]. He called himself driven by curiosity [S2]. In the book he gathered thinkers who all say creativity comes from joining unlike ideas [S6].
 
@@ -57,6 +61,29 @@ How he applied it: he designed the jacket for *The Art Book* in 1994, a low-pric
 Fletcher valued the informal critique at Pentagram. Partners would pass by and give opinions he had to take seriously. That stopped him fooling himself that a job was good when it was only 80% there [S2]. He said what drove the partners was pride in the work, not how much a job earned [S2].
 
 How he applied it: paying clients funded the projects he enjoyed most, such as calendars and the Pentagram Papers [S2]. Pentagram itself was set up with five partners, each in charge of their own work but sharing resources [S5].
+
+## Real decisions
+
+### Answering the IBM placard with a poster series
+IBM wanted a simple notice that a painting was coming to its new Paris office. He said that if he had answered the brief as given, they would have got a straightforward placard. Instead he made posters on the meaning of the word art, and put the line about the painting in 6 point type along the bottom [S2].
+
+### Giving Polaroid an inkblot
+For Polaroid's colour film he made a Rorschach-style poster in colour. He liked that it was open ended, and was happy when a client asked what it meant and he just shrugged and smiled [S2].
+
+### Starting to letter by hand
+He began writing headlines by hand because it saved money, not because he planned a style. He then found that every letter is a symbol, so you can play games with it [S2].
+
+### Making the V&A mark from a missing bar
+The museum job began as signage. Once the team saw the many logo versions, they spent a week or two testing weights and redrawn ampersands in Bodoni. The answer came the morning of the presentation: let the ampersand's stroke complete the A [S4].
+
+### Sharing a book jacket like a bone
+At the early firm Fletcher/Forbes/Gill, the three partners sketched ideas over coffee and shared a jacket for Penguin like a bone between them [S2].
+
+### Asking why before he designed at Phaidon
+After leaving Pentagram in 1992, he asked what each book was for and what the point was before he drew anything. His publisher found this slow at first, then valued it [S3][S1].
+
+### Splitting his time
+He called himself a split personality: large, complex identity jobs on one side, small projects of his own on the other. He said paying clients gave him time and money for his own indulgences, and that Pentagram's partners acted as an irritating self-protection system by criticising each other's work [S2].
 
 ## How he decides
 
@@ -113,7 +140,7 @@ How he applied it: paying clients funded the projects he enjoyed most, such as c
 ## Short phrases on the record
 
 - "Every job has to have an idea." (Eye interview) [S2]
-- "The rest of it is just layout." (Eye interview) [S2]
 - "You become a graphic cliché." (Eye interview) [S2]
-- "I always think of writing as drawing." (Eye interview) [S2]
+- "Every letter is a symbol, so you can begin to play games." (Eye interview) [S2]
+- "I only started writing instead of typesetting to save money." (Eye interview) [S2]
 - "Unless your mind's free about it, it just gets labored." (quoted in the Christian Science Monitor, 2002) [S6]

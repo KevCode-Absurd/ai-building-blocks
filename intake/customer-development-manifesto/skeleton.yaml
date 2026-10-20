@@ -1,0 +1,43 @@
+# Workflow skeleton for The Customer Development Manifesto (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: customer-development-manifesto
+source:
+  title: "The Customer Development Manifesto"
+  by: "Steve Blank"
+  kind: blog
+  rights: ideas-only
+  year: 2010
+minds: [steve-blank]
+workflow:
+  slug: turn-your-plan-into-guesses-and-test-them-with-customers
+  name: "Turn your plan into guesses and test them with customers"
+  summary: "Give it your business plan. Get testable guesses, an interview plan and the smallest test of the riskiest one."
+  when: "you have a business plan on paper and have not yet tested it on customers."
+  job: test-an-idea
+  level: intermediate
+steps:
+  - name: "Business model guess tester"
+    skill: business-model-guess-tester
+    job: research
+    from: "What's A Startup? First Principles"
+    method: ["Say whether you are still searching or ready to execute", "Lay the plan out on a one-page model of customers, value, channels, revenue and costs", "Turn each box into a guess", "Order the guesses by risk", "Pair each with a cheap test and a pass line", "Keep sales and marketing departments off until the model is found", "Log what changed after each test"]
+    inputs: [brief, question!]
+    outputs: [plan]
+    note: "It rewritten as testable guesses on one page, with a test and a pass line for each"
+  - name: "Customer discovery interview planner"
+    skill: customer-discovery-interview-planner
+    job: research
+    task: understand-customers
+    from: "The Customer Development Manifesto: Reasons for the Revolution, part 1"
+    method: ["Write the business model as guesses: customers, channels, price, demand, partners", "Rank guesses by risk", "List who to talk to for each guess", "Write questions about their current behaviour, not your product", "Plan for founders to do the first conversations, not hired sellers", "Record what people did and said", "Update the model and decide what changes"]
+    inputs: [plan, question]
+    outputs: [plan]
+    note: "Your guesses, who to talk to and questions that test them outside the building. Reads the plan from the step before"
+  - pause: "Talk to customers about each guess and write notes after each talk."
+  - name: "MVP experiment planner"
+    skill: mvp-experiment-planner
+    job: research
+    from: "Minimum Viable Product: a guide"
+    method: ["Write the guesses the idea depends on", "Pick the riskiest one", "Design the smallest product or ad test that can teach you about it", "Set the numbers that would count as a pass before you run it", "Run it with real customers, one group at a time", "Read what customers did, not what they said", "Decide to pivot or persevere"]
+    inputs: [plan!, question]
+    outputs: [plan]
+    note: "The riskiest guess, the smallest test and a pivot or persevere rule"

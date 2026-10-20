@@ -1,0 +1,126 @@
+new_slug: ad-meaning-test-planner
+name: "Ad meaning test planner"
+summary: "Paste your ad and your audience groups. Get a simple test of whether each group reads it as you mean."
+job: check-ads
+thinking: high
+thinking_why: "It has to imagine readings you did not intend, then design fair questions around them."
+
+headline: "Ad meaning test planner"
+subhead: "Give it your ad and the groups of people who will see it. It lists the parts that can be read more than one way, writes the reading you intend and the rival readings, and designs two short questions for each group. You get a test plan."
+
+explain: |
+  An ad is not read the same way by everyone. A joke, a slogan, a picture or a word can mean one thing to your team and something different, or even the opposite, to a group with another background. You find out after launch, when the comments arrive.
+
+  This skill finds the parts of your ad that lean on meaning beyond the literal. It writes down the reading you want and the plausible rival readings, including mocking ones. Then it designs a word-association question and a recognition question for each group, with wrong answers that match the rival readings. It tells you how to read the results: group by group, never as one average.
+
+when:
+  - "You are about to run an ad in a new country, age group or community."
+  - "Your ad uses a joke, a pun, a slang word or a picture that may land differently."
+  - "Your team loves the ad but you have not heard from anyone outside it."
+
+you_give:
+  - "Your ad: the text, and the picture if it has one"
+  - "The groups who will see it (or a persona from your buyer notes)"
+  - "What you want the ad to make people think or feel"
+  - "Where it will run (optional)"
+you_get:
+  - "A list of the parts of the ad that can be read more than one way"
+  - "Your intended reading next to the rival readings"
+  - "Two test questions per group, with answer options"
+  - "A plan for reading results by group, with the limits stated"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your ad and attach the picture if there is one."
+  - "Name each audience group and where they live, work and spend time online."
+  - "Say in one line what the ad should mean to them."
+  - "Run the questions on five to ten people per group, then bring the answers back and ask it to read them by group."
+
+how_it_works:
+  - title: "Lists meaning-heavy parts"
+    text: "Finds slogans, images, jokes, words and symbols that carry meaning beyond what they literally say."
+  - title: "Names the groups"
+    text: "Describes each group by culture, setting and the media they use."
+  - title: "Writes the readings"
+    text: "Writes the reading you intend, then the plausible others, including subversive ones."
+  - title: "Designs word association"
+    text: "Writes an open prompt for each group that shows what comes to mind first."
+  - title: "Designs recognition"
+    text: "Writes a closed question whose wrong answers match the rival readings."
+  - title: "Plans the read-out"
+    text: "Says how to show results by group and what the limits are."
+
+output_shape: |
+  AD PARTS THAT CAN BE READ MORE THAN ONE WAY
+  1. <part> | <why it is open>
+
+  GROUPS
+  <group> | <culture, setting, media>
+
+  READINGS
+  <part>
+    Intended: <reading>
+    Rival: <reading> | who might hold it
+
+  TEST FOR EACH GROUP
+  <group>
+    Word association: <prompt>
+    Recognition: <question> | <answers, one per reading, plus one wrong answer>
+
+  HOW TO READ RESULTS
+  <by group, what counts as a mismatch>
+
+  LIMITS
+  <sample size, what the test cannot show>
+
+  MISSING
+  <what would sharpen the test>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "How you describe each group"
+    how: "Name the setting, not just an age. Late-shift nurses and retired teachers read the same joke differently."
+  - what: "Rival readings you already fear"
+    how: "Tell it about any reaction you have seen before. It will build a test answer for it."
+  - what: "Group count"
+    how: "Two or three groups give clean results. More than five makes the test too long to run."
+  - what: "The picture"
+    how: "Attach it. Many meanings sit in the image, and a text description hides them."
+
+judge:
+  - "The intended and rival readings are written before any question."
+  - "Every group gets the same questions."
+  - "Each wrong answer in the recognition question matches a rival reading."
+  - "The plan says how many people to ask and why that is only a rough guide."
+  - "Nothing says the ad will work or fail. It only says where readings may split."
+
+test:
+  - "Run it on an ad that once drew an odd reaction. Check that the rival reading you saw is on the list."
+  - "Ask five people in one group the word-association prompt. Check the answers are open and not led."
+  - "Run it twice. The list of open parts should stay close, even if the wording changes."
+  - "Compare its rival readings with what friends outside your team say about the ad."
+
+improve:
+  - "Add the groups you always sell to, with how they speak, so rival readings fit them."
+  - "Add a line to step 3 listing slang or symbols that have gone wrong for you before."
+  - "Save each test result to your brand file so the next ad starts from what you learned."
+  - "Pair it with a clarity check on the same ad before you test the meaning."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Finding rival readings and writing fair questions is text work any strong chat AI does with this skill."}
+    - {name: "A free survey form", why: "Lets you send the same questions to each group and export the answers by group."}
+  inputs:
+    - "A persona for each group, written from real customer words"
+    - "Past comments on similar ads"
+    - "The place each ad will run, so the media context is clear"
+
+terms:
+  - term: "Polysemy"
+    meaning: "When one sign, such as a word or picture, can be read more than one way."
+  - term: "Word association"
+    meaning: "A prompt that asks what comes to mind first, with no answer choices."
+  - term: "Recognition test"
+    meaning: "A question with set answers, where the wrong answers are chosen to match other readings."

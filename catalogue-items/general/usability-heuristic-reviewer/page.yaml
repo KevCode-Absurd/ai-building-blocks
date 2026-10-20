@@ -1,0 +1,126 @@
+new_slug: usability-heuristic-reviewer
+name: "Usability heuristic reviewer"
+summary: "Paste a page or form. Get a score out of 100, each usability break and ranked fixes."
+job: design-work
+thinking: high
+thinking_why: "It must judge many small breaks and rank them by harm, and each finding needs evidence."
+
+headline: "Usability heuristic reviewer"
+subhead: "Give it a page, screen or form and the task a visitor came to do. It checks the design against ten usability rules and ranks every break by harm to the user. You get a score out of 100, evidence for each finding and fixes in order."
+
+explain: |
+  Teams argue about design by taste. One person likes the button, another does not, and the loudest voice wins. A rule-based review settles most of it. Ten well-known usability rules cover things such as showing where you are, using the user's words, offering a way out, keeping things consistent and preventing mistakes.
+
+  This skill names the task first, then walks the design against each rule and notes every break, citing the screen or step. It ranks breaks by cost to the user, so a mistake that loses someone's order comes before an awkward label. It also marks what a review cannot settle and needs a real test with real people. The score starts at 100 and shows its deductions.
+
+when:
+  - "A form, checkout or sign-up loses people and you do not know why."
+  - "Your team is arguing over design and needs something firmer than taste."
+  - "You want a fast expert-style check before paying for user tests."
+
+you_give:
+  - "The page, screen or form (attach a screenshot or link, your AI can see pictures)"
+  - "The task a visitor came to do, in one sentence"
+  - "Who the visitor is and how new they are (optional)"
+  - "Anything you already know is broken (optional)"
+you_get:
+  - "A score out of 100 with the deductions shown"
+  - "Every break, with the rule it breaks and the screen or step"
+  - "Fixes ranked by cost to the user"
+  - "A list of what still needs a real test"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say the task a visitor came to do in one sentence."
+  - "Attach a screenshot or link for each screen in the task, in order."
+  - "Say who the visitor is, and whether they have used you before."
+  - "Fix the top three items, then run it again on the new version."
+  - "Use the \"needs a real test\" list to plan your next test with a small test planner."
+
+how_it_works:
+  - title: "Names the task"
+    text: "Writes what the visitor came to do, so every finding ties to a goal."
+  - title: "Takes a newcomer's view"
+    text: "Looks as someone who does not yet want the product."
+  - title: "Walks ten rules"
+    text: "Checks each screen against each usability rule and notes each break."
+  - title: "Checks the seams"
+    text: "Looks where two parts meet, such as page to email or form to payment."
+  - title: "Checks familiar patterns"
+    text: "Asks if the design behaves like the sites people already know."
+  - title: "Ranks the breaks"
+    text: "Puts costly errors first and small frustrations after."
+  - title: "Marks what needs a test"
+    text: "Lists doubts a review cannot settle."
+  - title: "Scores and checks"
+    text: "Shows the deductions, the score after fixes and any check missed."
+
+output_shape: |
+  TASK
+  <what the visitor came to do>
+
+  SCORE
+  <n> out of 100 = 100 minus <high-cost breaks x 10> minus <medium x 5> minus <small x 2>.
+  Score if the fixes are made: <n>
+
+  FINDINGS, WORST FIRST
+  <n>. <screen or step> | Rule: <rule broken> | Cost: <high / medium / small>
+     What happens: <what the visitor sees or does>
+     Fix: <specific change>
+
+  SEAMS
+  <where two parts meet, and who owns the join>
+
+  NEEDS A REAL TEST
+  <doubt a review cannot settle, and how to test it>
+
+  MISSING
+  <what would change a finding>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The task"
+    how: "A specific task such as \"book a table for four\" gives sharper findings than \"use the site\"."
+  - what: "Who the visitor is"
+    how: "Say if they are new. A newcomer shows breaks that a regular user has learned to ignore."
+  - what: "Screens given"
+    how: "Give every screen in the path. Findings cite the screen, so skipped screens go unchecked."
+  - what: "Known problems"
+    how: "Tell it what you already fixed so it does not repeat the obvious."
+
+judge:
+  - "Each finding names the rule it breaks."
+  - "Findings are ranked by harm to the user, not by how easy they are to fix."
+  - "No finding rests on taste alone."
+  - "The report says what still needs a real test."
+  - "Every item cites the screen or step."
+
+test:
+  - "Give it a form you know is bad. Check it finds the thing you already know."
+  - "Run it twice on the same screens. The top three findings should match."
+  - "Fix the top item and run it again. The score should rise by the amount it said."
+  - "Watch one person try the task and compare what they struggled with to the findings."
+
+improve:
+  - "Add your common visitor tasks to \"What you need\" so you never retype them."
+  - "Add a list of patterns your visitors already know from the sites they use."
+  - "Change the deduction weights in step 6 if your costs differ, for example a lost sale being worth more."
+  - "Pair it with \"Small usability test planner\" to test what the review could not settle."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It needs to look at screenshots, so use an AI that accepts attachments."}
+    - {name: "A screen recorder", why: "Record yourself doing the task, to catch what a static screenshot hides."}
+  inputs:
+    - "A screenshot of every screen in the task"
+    - "Your top three tasks by traffic"
+    - "Analytics showing where people drop off"
+    - "Support emails that mention the page"
+
+terms:
+  - term: "Usability heuristic"
+    meaning: "A broad rule of thumb for judging whether a design is easy to use."
+  - term: "Seam"
+    meaning: "The point where two parts of a service meet, such as a page and the email that follows it."

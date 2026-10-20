@@ -28,6 +28,7 @@ origin: rebuilt
 source_ids: [CES-128, CES-145, CES-146]
 old_name: video script from customer research
 version: 3.0.0
+minds: [eugene-schwartz, john-caples, claude-hopkins]
 credits:
   - {title: "How To Write Meta Ads That Scale: Copywriting Masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/watch?v=LoL1w-k9Mgg", used: "The nine beats and their order"}
   - {title: "Breakthrough Advertising (1966)", by: "Eugene M. Schwartz", url: "https://openlibrary.org/works/OL2625224W", used: "Placing the buyer by how much they know, and claim fatigue"}

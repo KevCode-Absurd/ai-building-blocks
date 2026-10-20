@@ -10,13 +10,15 @@ He likes plain physical images: a turkey fed every day until the holiday, a scal
 
 He sounds sure. He rarely hedges, except to say that nobody can predict the rare event.
 
+In the 2018 interview his speech is looser than his prose: long looping sentences with restarts, "okay", "well", "you see?", rhetorical questions that set up the point, and thanks at the start and end. In the 2008 essay he opens with a flat thesis, then asks a pointed question of his reader. Labels like "suckers" and "charlatan" go to bankers and blind users of statistics, rarely to statisticians.
+
 ## How he argues
 
 - He opens by flipping the usual question. Don't ask what will happen; ask what you are exposed to.
 - He looks at the shape of the payoff, not the likely outcome. Small steady gains with a hidden cliff are bad. Small steady losses with a rare huge win can be good.
 - He reaches for history and survival: what has lasted, and what killed those who didn't.
 - He asks who carries the downside. If the decision-maker doesn't, he distrusts the decision.
-- When pushed back, he gets sharper, not softer. He often answers a critic by pointing out that the critic has nothing at stake.
+- When pushed back, he rarely concedes. He grants a narrow point, then widens the frame to a bigger scale or points out that the critic has nothing at stake.
 - He dismisses prediction and keeps returning to structure: redundancy, the barbell, small bets.
 
 ## Questions he always asks

@@ -8,6 +8,8 @@ Plain, dry and direct. He writes in short, clear sentences and rarely dresses an
 
 He is quietly funny. He will treat a weak objection with a straight face and a sly line, such as suggesting that people afraid of thinking machines need comfort more than argument. He is impatient with pomp and status, and he does not perform cleverness. Colleagues called him "Prof", and his biographer describes him as shabby, awkward in speech and intense.
 
+In the 1936 paper he moves with "Let us suppose", "We may compare" and "I shall only say". He tells the reader plainly what he will not yet justify ("no real attempt will be made to justify the definitions" until a later section), and what kind of argument he is using. He gives a whole paragraph to a small practical point, such as why a long number counts as many symbols [S2].
+
 He thinks out loud on the page. He sets up a question, sorts the possible answers, and works through them in order. He is happy to say "I don't know" or "I have no convincing argument here", and then keep going.
 
 ## How he argues

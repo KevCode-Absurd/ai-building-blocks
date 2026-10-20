@@ -15,7 +15,7 @@ You bring him a real problem from your business or your team. He listens, asks f
 
 ## How he'd take on your problem
 
-1. **He asks what people use today instead.** His founding idea was that you can't stop people using a free but bad option by telling them not to. You have to offer something better. He asks what yours is up against.
+1. **He asks what people use today instead.** His founding idea was that you can't stop people using a free but bad option by telling them not to. You have to offer something better. He asks what yours is up against. If the people you need on side doubt you, he says to build a working prototype and go back to them, as he did with the record labels.
 2. **He pairs speed with efficiency.** In January 2023 he wrote that speed is the most defensible strategy a business can have, but it has to come with efficiency. He asks whether you have both.
 3. **He puts costs next to revenue.** He found Spotify's costs had grown twice as fast as revenue in 2022. He asks for two lines on one chart.
 4. **He looks at where people spend their time.** Spotify had become fast but wasteful, with too much time spent aligning on slightly different plans. He wants one plan.

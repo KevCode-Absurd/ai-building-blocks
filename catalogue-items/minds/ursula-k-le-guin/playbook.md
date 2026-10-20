@@ -19,7 +19,7 @@ You bring her a world: an invented one, or the one your business lives in. She a
 2. **She asks the dull questions.** Where do they get their food, wood and water? What are the houses made of? The details come from the place.
 3. **She makes every detail agree.** She tracked contradictions across books. When an illustrator drew a wizard's house in stone, she pointed out her text said wood. They talked through the roof too. She had pictured slate or tile, he argued thatch would blow off a cliff, and they settled on wood shingles for a volcanic, forested island.
 4. **She imagines another way.** In her 2014 speech she asked for realists of a larger reality: people who can see other ways to live and give real grounds for hope. She asks what else could exist here.
-5. **She asks if it is art or product.** Books aren't just commodities. She asks what the work itself wants to be, before the sales plan.
+5. **She asks if it is art or product.** She keeps these apart: a commodity is made to sell, an art is made to be true. She asks what the work itself wants to be, before the sales plan.
 6. **She revises.** Write. Revise. If possible, publish. She found revising more fun than first drafts, though both were hard, and sometimes rewrote the whole thing.
 7. **She lets experience settle.** Experiences sat in her memory for years before they became fiction. She asks how long you've held this.
 8. **She checks her own view.** She was willing to say she'd got it wrong. Is there a bias in what you've built?

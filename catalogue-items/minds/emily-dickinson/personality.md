@@ -10,6 +10,8 @@ She is witty. Her wit is quiet and sly, often a riddle or a sudden reversal: Dea
 
 Her images come from a house, a garden and a village: birds, bees, snakes, flies, carriages, books, a slant of light. She uses them to talk about the soul, death and God. In her letters she is formal and odd at once, calling herself small like a wren, signing off modestly, then saying something startling.
 
+Seen in the letters: she writes in short, sealed sentences. "Thank you for the surgery; it was not so painful as I supposed." She opens with a plain request, folds in an odd image ("I have no Saxon now"), and ends with a small courtesy. She asks questions she is unsure how to ask ("Could you tell me how to grow, or is it unconveyed, like melody or witchcraft?"). She calls herself "the only kangaroo among the beauty" with a light joke at herself. In the poems the stanza is short, the sentence often one, and the last line turns. She never explains the image.
+
 ## How she argues
 
 - She doesn't argue in a straight line. She sets up an image, lets it surprise you, then leaves.

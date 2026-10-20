@@ -1,0 +1,119 @@
+new_slug: witty-line-punch-up
+name: "Witty line punch-up"
+summary: "Paste a toast, speech or bio. Get a few turned sayings that are sharp and true, with the rest left plain."
+job: speak-and-persuade
+thinking: low
+thinking_why: "It finds a few lines to turn and reverses them by a fixed method."
+
+headline: "Witty line punch-up"
+subhead: Paste a toast, speech, bio or any short text. It finds the lines that lean on a familiar saying, turns a few of them around, checks that each still holds a true point, and leaves the rest plain. You get your text back with two or three sharp lines.
+
+explain: |
+  Forced jokes sink a speech. A few well-turned lines lift it. The trick is to take a saying everyone knows, turn it so it sounds absurd, and make sure the turned version is still true. A line that is clever but false, or that picks on someone, does harm.
+
+  This skill finds the obvious saying behind a line, reverses it, and tests whether the reversal holds a true point on a second read. It keeps only two or three such lines per page, says each one flat, with no sign it is a joke, and leaves serious moments plain. The piece still sounds like you.
+
+when:
+  - Your toast or speech is correct but flat.
+  - Your bio or intro reads like everyone else's.
+  - You want one or two lines people will quote.
+
+you_give:
+  - Your text, such as a toast, speech, bio or short piece
+  - Who will read or hear it
+  - Any parts that must stay serious (optional)
+you_get:
+  - Your text with two or three turned lines
+  - For each, the saying it came from and the true point it holds
+  - The serious parts left plain
+  - A short list of lines it tried and rejected
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your text and say who it is for.
+  - Mark any part that must stay serious, such as a mention of someone who died.
+  - Read the new lines aloud, and cut any that do not sound like you.
+  - Keep no more than three per page.
+
+how_it_works:
+  - title: Finds the obvious line
+    text: Writes down the saying everyone would use at each candidate spot.
+  - title: Reverses it
+    text: Turns the saying around so it sounds absurd.
+  - title: Tests for truth
+    text: Checks the turned line holds a true point on a second read, and drops it if not.
+  - title: Says it flat
+    text: Writes it as plain speech, with no sign that it is a joke.
+  - title: Keeps few
+    text: Keeps two or three lines and leaves the rest of the text plain.
+  - title: Protects serious moments
+    text: Leaves serious or sad parts simple and unturned.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  TURNED LINES
+  1. Was: <original line>
+     Saying behind it: <familiar saying>
+     Now: <turned line>
+     True point: <what it really says>
+     Where: <place in text>
+
+  REJECTED
+  - <line tried> | Why it failed
+
+  LEFT PLAIN
+  - <passage> | Why
+
+  YOUR TEXT, REVISED
+  <full text with the turned lines in place>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Who the audience is
+    how: A turned line about work suits a work crowd. Say who will hear it.
+  - what: How many lines
+    how: Ask for one if you want it light. More than three per page loses the effect.
+  - what: Your own sayings
+    how: Paste phrases you use. The turned lines will sound like you.
+  - what: Serious parts
+    how: Mark them. They stay plain.
+
+judge:
+  - Every turned line holds a true point.
+  - No more than three per page.
+  - Serious moments are left plain.
+  - The piece still sounds like the speaker.
+  - No turned line mocks a person in the room.
+
+test:
+  - Read each turned line aloud and ask whether someone could object that it is false.
+  - Show the text to a friend and ask which line they remember.
+  - Run it twice. The kept lines should be close.
+  - Remove the turned lines and compare. The text should still work.
+
+improve:
+  - Add sayings from your field to a list so it can find them.
+  - Add your own favourite phrases and words to avoid.
+  - Keep a log of lines that got a reaction, and paste it in.
+  - Pair it with "Funny speech planner" if you want a whole humorous speech.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Finding sayings and turning them is text work any strong chat AI does well with this skill."}
+    - {name: "A friend with a sense of humour", why: "A person can tell you if a turned line is sharp or just odd."}
+  inputs:
+    - "The occasion and who will hear it"
+    - "Phrases you often use"
+    - "Topics and people to leave alone"
+
+terms:
+  - term: Turned line
+    meaning: A familiar saying reversed so it sounds absurd, while still holding a true point.
+  - term: Flat delivery
+    meaning: Saying a witty line in an ordinary voice, with no sign that it is a joke.

@@ -1,0 +1,121 @@
+new_slug: conversion-research-planner
+name: "Conversion research planner"
+summary: "Paste your page and analytics. Get a research order that finds where, what and why before you test anything."
+job: audit-landing-page
+thinking: medium
+thinking_why: "It plans an order of work from what you have, with fixed steps."
+
+headline: "Conversion research planner"
+subhead: "Give it your page and whatever analytics or customer words you have. It builds a research order that finds where people drop, what is on the page and why they hesitate, before any test. You get a plan with the question each step answers."
+
+explain: |
+  Teams often jump to testing a new button colour or headline. A test needs an idea worth testing, and ideas that come from opinion rarely are. If the tracking is wrong, even the results mislead you.
+
+  This skill puts the research first. It checks that analytics are set up and not double counting. It finds the pages and steps where people drop, reviews the key pages for clarity, relevance and friction, and plans replays and simple user tests. It plans surveys or chats to learn why people hesitate. It writes the findings as issues that are ready to be sorted. It leaves out tests until the research is done.
+
+when:
+  - "Your page converts poorly and you do not know where to start."
+  - "Your team is full of test ideas and none come from evidence."
+  - "You are about to trust analytics you have never checked."
+
+you_give:
+  - "Your page address or saved page (optional)"
+  - "Your analytics: visits, steps and sales by page (optional)"
+  - "Customer words from reviews, chats or surveys (optional)"
+  - "Your goal for the page (optional)"
+you_get:
+  - "A research order with the question each step answers"
+  - "A tracking check to run first"
+  - "A plan for replays, user tests and surveys"
+  - "A template for writing findings as issues"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste what you have, even if it is only the page address."
+  - "Do the research steps in the order it gives."
+  - "Write each finding in the issue format it shows."
+  - "Bring the issue list to the next skill that sorts them."
+
+how_it_works:
+  - title: "Checks the tracking"
+    text: "Checks analytics are set up and not double counting."
+  - title: "Finds the drops"
+    text: "Finds the pages and steps where people drop."
+  - title: "Reviews the pages"
+    text: "Reviews key pages for clarity, relevance and friction."
+  - title: "Plans replays and tests"
+    text: "Plans session replays and simple user tests."
+  - title: "Plans the why"
+    text: "Plans surveys or chats to learn why people hesitate."
+  - title: "Writes issues"
+    text: "Writes the findings as issues ready to be sorted."
+
+output_shape: |
+  WHAT WE HAVE
+  <page, analytics, customer words, goal>
+
+  RESEARCH ORDER
+  1. Check the tracking | Question: <what> | How: <steps> | Done when: <rule>
+  2. Find where people drop | Question: <what> | How: <steps>
+  3. Review the key pages | Question: <what> | How: <clarity, relevance, friction>
+  4. Watch replays and run user tests | Question: <what> | Who and how many: <plan>
+  5. Ask why they hesitate | Question: <what> | Survey or chat questions: <list>
+
+  HOW TO WRITE EACH FINDING
+  Issue: <what> | Where: <page or step> | Proof: <data or quote> | Effect: <on the goal>
+
+  NOT YET
+  Tests wait until steps 1 to 5 are done.
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "What data you have"
+    how: "List it honestly. The plan changes shape when analytics, replays or survey data are missing."
+  - what: "Your goal"
+    how: "Name the action that counts, such as a booking or purchase. It sets which drops matter."
+  - what: "Your traffic"
+    how: "Give visits per month. It decides if you can run user tests or only surveys."
+  - what: "Customer words"
+    how: "Paste reviews or chats. They shorten the why step."
+
+judge:
+  - "Tracking is checked before any numbers are trusted."
+  - "Each research step names the question it answers."
+  - "It leaves out tests until the research is done."
+  - "It lists the data still missing."
+  - "Each step says what done looks like."
+
+test:
+  - "Run it for a page you already know has a problem. Check the plan would find it."
+  - "Check that each step uses data you have or says how to get it."
+  - "Run it twice. The order should stay the same."
+  - "Do step 1 and see if the check found a real tracking fault."
+
+improve:
+  - "Add the tools you already use for replays and surveys, so steps name them."
+  - "Add your own rules for how many people to ask."
+  - "Save each finding to a log so the next run starts from it."
+  - "Pair it with an issue sorter once the findings are written."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning an order of research is text work any strong chat AI does with this skill."}
+    - {name: "Google Analytics", why: "Shows pages, steps and where people leave."}
+    - {name: "A session replay tool", why: "Lets you watch real visits to a page."}
+  inputs:
+    - "Funnel numbers by step"
+    - "Customer reviews, chats or survey answers"
+    - "The page as a screenshot or saved file"
+
+terms:
+  - term: "Session replay"
+    meaning: "A recording of what one visitor did on a page."
+  - term: "Friction"
+    meaning: "Anything on the page that makes it harder to act."
+  - term: "Double counting"
+    meaning: "When the same visit or sale is recorded twice, which inflates numbers."

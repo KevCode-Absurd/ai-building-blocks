@@ -1,0 +1,18 @@
+slug: plain-words-interface-rewriter
+name: "Plain words interface rewriter"
+summary: "Paste a form, screen text or process steps. Get a rewrite in the words your users already say, with a read-aloud test."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [grace-hopper]
+credits:
+  - {title: "Oral History of Captain Grace Hopper", by: "Grace Hopper, interviewed by Angeline Pantages, 1980", used: "Writing instructions in the words users already say, and testing them with a person who was never trained"}

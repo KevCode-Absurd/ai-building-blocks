@@ -1,0 +1,114 @@
+new_slug: plain-english-editor
+name: "Plain English editor"
+summary: "Paste a draft. Get it back in plain words, with each cut explained and a check that you would still say it."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It follows a fixed list of moves and explains each one."
+
+headline: "Plain English editor"
+subhead: "Paste a draft and say who will read it. It states your point, marks padded and stale words, and rewrites in short, plain sentences. You get the edited text, a reason for every change and a read-aloud check."
+
+explain: |
+  Most drafts are weaker than the thought behind them. The writer reaches for long words, stock phrases and passive lines, and the reader has to dig for who is doing what. The fixes are simple, but they are hard to see in your own work.
+
+  This skill first writes the point of the piece in one sentence. It marks stale images, padded phrases, show-off words and empty words, and swaps each for a short one or cuts it. It turns passive lines into active ones, cuts adverbs and fancy speech tags, and finds long nouns that hide the actor. Every change is listed with its reason, so you keep control. The last step is to check you would say it aloud.
+
+when:
+  - "An email, report or page you wrote sounds stiff or padded."
+  - "A draft is full of jargon and you want a stranger to follow it."
+  - "You want to cut length without losing what you mean."
+
+you_give:
+  - "Your draft"
+  - "Who will read it and what they should do (optional)"
+  - "Your brand file or voice notes (optional)"
+you_get:
+  - "The edited text in plain words"
+  - "A list of every cut or swap, with its reason"
+  - "The point of the piece in one sentence"
+  - "Questions where a fact was missing"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the draft as it is."
+  - "Say who reads it and what you want them to do."
+  - "Go through the list of changes and put back any you disagree with."
+  - "Read the result aloud. If you would not say a line, change it."
+
+how_it_works:
+  - title: "States the point"
+    text: "One sentence on what the piece says."
+  - title: "Marks dead words"
+    text: "Stale, padded, show-off and empty."
+  - title: "Swaps and cuts"
+    text: "Short words, and cuts of anything that does no work."
+  - title: "Turns passive to active"
+    text: "Says who did what."
+  - title: "Cuts adverbs and tags"
+    text: "Repeats of what the verb already says."
+  - title: "Finds hidden actors"
+    text: "Long abstract nouns that hide who acts."
+  - title: "Names every actor"
+    text: "Every sentence has a person or thing doing something."
+  - title: "Checks it aloud"
+    text: "Would you say it? Then names any check it missed."
+
+output_shape: |
+  THE POINT
+  <one sentence>
+
+  EDITED TEXT
+  <the draft in plain words>
+
+  CHANGES
+  <original> -> <new>  | <reason>
+
+  QUESTIONS
+  <MISSING: who or what, for which line>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The reader"
+    how: "A line on who reads it and what they know sets the level of words."
+  - what: "Your voice"
+    how: "Paste a sample of your writing. It keeps your phrases that carry weight."
+  - what: "How hard to cut"
+    how: "Say \"light\" to keep most of it, or \"hard\" to cut everything that can go."
+  - what: "Words to keep"
+    how: "List terms of art or legal terms that must stay."
+
+judge:
+  - "You can still say the point in one sentence."
+  - "Each change has a reason you agree with."
+  - "No stock phrase remains."
+  - "Each sentence names who does what."
+  - "You would say each line aloud."
+
+test:
+  - "Run it on a message you sent and see how many words it cuts without losing meaning."
+  - "Show the result to someone who has not seen the original and ask what it says."
+  - "Check the list of changes for any that changed the meaning."
+  - "Run it twice and compare the results."
+
+improve:
+  - "Add your pet phrases to step 2 so they are always flagged."
+  - "Add terms that must not change, such as product names."
+  - "Add sample before-and-after pairs from your own work."
+  - "Pair it with \"Show-don't-tell scene rewriter\" for stories."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Editing a draft with a fixed list of moves is text work any strong chat AI does well with this skill."}
+    - {name: "A read-aloud tool", why: "Hearing the result spoken shows where a line does not sound like you."}
+  inputs:
+    - "A sample of your best writing"
+    - "The words you never want in your work"
+    - "Who reads the piece and what they know"
+
+terms:
+  - term: "Passive"
+    meaning: "A sentence where the actor is hidden, such as \"the form was filled in\"."
+  - term: "Padding"
+    meaning: "Words that add length and no meaning, such as \"in order to\"."

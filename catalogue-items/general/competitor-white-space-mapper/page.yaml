@@ -1,0 +1,121 @@
+new_slug: competitor-white-space-mapper
+name: "Competitor white space mapper"
+summary: "Paste your rivals and what buyers value. Get a grid that shows where nobody is strong and where to stop fighting."
+job: study-competitors
+thinking: medium
+thinking_why: "It rates rivals on evidence and picks gaps, where a lazy rating gives a false gap."
+
+headline: "Competitor white space mapper"
+subhead: Give it your rivals and what buyers in your category care about. It grids each rival against those features, marks the gaps nobody serves well, picks the ones that fit you and plans a small, cheap test. You also get the gaps it rejects, with reasons.
+
+explain: |
+  Most businesses fight rivals on the same few features, because that is where the competition looks. The result is a price war or a quiet loss. A gap that nobody serves well is easy to miss if you only compare yourself with the rival next door.
+
+  This skill lists rivals the way buyers see them, which can differ from how you see them. It lists the features that decide success in the category, grids every rival against them and rates each one on evidence. It marks the gaps where nobody is strong, picks those that suit what you love to do and how much risk you can take, and plans a small test of the gap. At least one gap is rejected with a reason, so the result is not wishful.
+
+when:
+  - You compete on the same features as everyone else and margins are thin.
+  - You are planning a new offer and want to know where nobody is strong.
+  - You need a reason to stop fighting in one area and put effort in another.
+
+you_give:
+  - Your rivals, including those buyers might compare you with
+  - What buyers in your category value, in their words if you have them
+  - Your brand file and what you love to do (optional)
+you_get:
+  - A grid of rivals against the features that decide the choice
+  - The gaps nobody serves well, each with evidence
+  - Where to stop fighting
+  - A small, cheap, reversible test of the best gap
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your rivals and paste reviews or notes about what buyers value.
+  - Say what you like to do and how much risk you can take.
+  - Run the test it proposes before building anything big.
+
+how_it_works:
+  - title: Lists rivals as buyers see them
+    text: Includes rivals buyers compare you with, even if they do not look like you.
+  - title: Lists success features
+    text: Lists the features that decide who wins in the category.
+  - title: Grids and rates
+    text: Rates each rival against each feature, with evidence.
+  - title: Marks the gaps
+    text: Marks the features where nobody is strong and the buyer still cares.
+  - title: Picks the fit
+    text: Picks gaps that match what you love and the risk you can take.
+  - title: Plans a small test
+    text: Plans a cheap test, even under a separate name.
+
+output_shape: |
+  RIVALS AS BUYERS SEE THEM
+  <rival> | why buyers compare | source
+
+  FEATURES THAT DRIVE SUCCESS
+  <feature> | evidence buyers care
+
+  THE GRID
+  <feature> | <rival A: strong, middle, weak, unknown> | <rival B> | ... | you
+
+  GAPS NOBODY SERVES
+  <gap> | evidence: <quote or fact> | fit with you: <why>
+
+  WHERE TO STOP FIGHTING
+  <feature> | <why it is crowded>
+
+  GAP REJECTED
+  <gap> | <reason>
+
+  SMALL TEST
+  <what> | cost: <> | time: <> | how to reverse: <> | name to use: <>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Buyer words
+    how: Reviews and notes from buyers keep ratings tied to what they say, not what you assume.
+  - what: Who counts as a rival
+    how: Include substitutes, such as doing it yourself. Buyers often compare with those.
+  - what: Your limits
+    how: Say what you will not do and the risk you can afford. Gaps outside them are rejected.
+  - what: Evidence
+    how: Paste rival pages or prices. Ratings with no evidence are marked unknown.
+
+judge:
+  - Rivals are rated as customers see them, not as the company sees them.
+  - Each gap is backed by a customer quote or fact.
+  - The test is small, cheap and reversible.
+  - At least one gap is rejected with a reason.
+  - Unknown ratings are marked, not filled.
+
+test:
+  - Ask three customers which rivals they considered. Compare with your list.
+  - Check two ratings against the rival's own page.
+  - Run the small test and see if buyers respond before spending more.
+  - Run it twice. The top gap should stay.
+
+improve:
+  - Add the features your field uses to judge, so the grid fits it.
+  - Keep a log of past gaps and what happened.
+  - Pair it with "Onliness statement writer" to turn the gap into a sentence.
+  - Rerun each year, because gaps close.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Gridding and rating from pasted evidence is text work any strong chat AI can do."}
+    - {name: "A spreadsheet", why: "Holds the grid so you can add rivals and rerun."}
+  inputs:
+    - "Rival pages, prices and reviews"
+    - "Your own customer reviews"
+    - "A list of what you will not do"
+
+terms:
+  - term: White space
+    meaning: A need buyers have that no rival serves well.
+  - term: Grid
+    meaning: A table with rivals down the side and features across the top.

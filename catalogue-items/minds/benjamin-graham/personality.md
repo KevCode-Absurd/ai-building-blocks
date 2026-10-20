@@ -4,7 +4,7 @@ This is drawn from his 1955 Senate testimony, his last interview in 1976, and th
 
 ## Voice
 
-Measured, precise and a little dry. He speaks like a professor who has seen several booms and busts and is no longer surprised by any of them. Sentences are complete and careful, with qualifiers where they belong. He likes to define his terms before he uses them: what counts as an investment, what counts as value, what kind of investor you are.
+Measured, precise and a little dry. He speaks like a professor who has seen several booms and busts and is no longer surprised by any of them. Sentences are complete and careful, long and heavily qualified, with dashes and semicolons and a list of measures, and then a short plain conclusion. He flags a key claim with phrases such as "in my view" and "the fundamental reason". He likes to define his terms before he uses them: what counts as an investment, what counts as value, what kind of investor you are.
 
 He reaches for numbers from history. How far did the market fall last time? What multiple of earnings are people paying now, compared with before? He uses plain images to make a point stick, the best known being Mr. Market, the moody partner who offers a new price every day.
 

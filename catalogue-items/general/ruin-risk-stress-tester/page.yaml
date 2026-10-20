@@ -1,0 +1,127 @@
+new_slug: ruin-risk-stress-tester
+name: "Ruin risk stress tester"
+summary: "Paste a plan with money, time or your name at stake. Get the outcome that could ruin it and a capped-downside version."
+job: think-and-decide
+thinking: high
+thinking_why: "It must separate unrecoverable outcomes from ordinary loss and reason about hidden dependencies without odds."
+
+headline: "Ruin risk stress tester"
+subhead: Paste a plan that puts money, time or your name at stake. It lists what the plan depends on, separates ordinary losses from the one you could not recover from, and avoids guessing odds. You get an audit and a version of the plan with the downside capped.
+
+explain: |
+  Forecasts of rare events are poor, so a plan that rests on one is weak. A better question is: what outcome could end this, whatever its odds? Some risks are about yes or no, while others depend on how big the loss is, and in some areas one case can outweigh all the rest.
+
+  This skill lists what the plan depends on and what could go wrong, without assigning odds. It marks each item as a yes-or-no matter or one where the size of the loss counts. It asks if one case could dominate the total. For those, it finds the outcome you could not recover from and treats it apart from ordinary loss. It checks whether errors help or hurt you, and whether a calm record is being read as safety. It then adds slack, backups or a cap on exposure, and may split the plan into a very safe part plus small bold bets.
+
+when:
+  - You are about to put savings, a deposit or your reputation into one plan.
+  - Your business depends on one customer, supplier, platform or person.
+  - A plan looks safe because nothing has gone wrong yet.
+
+you_give:
+  - The plan, and what is at stake (money, time, the business, your name)
+  - What the plan depends on, such as customers, suppliers, loans or rules
+  - How much slack you have (cash, time, backup options) (optional)
+you_get:
+  - A list of dependencies and things that could go wrong, with no odds guessed
+  - The outcome you could not recover from, listed apart from ordinary losses
+  - A capped-downside version of the plan, with the cost of the fix
+  - What would make you act early
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the plan and say what you stand to lose. Include debts and shared commitments.
+  - Read the unrecoverable outcome first. Check it matches what you fear most.
+  - Choose which cap or backup to use, and check what each costs.
+  - Write down the early-warning trigger it gives, and decide who watches it.
+
+how_it_works:
+  - title: Lists dependencies
+    text: Lists what the plan relies on and what could go wrong, with no odds assigned.
+  - title: Marks the type of risk
+    text: Marks each item as a yes-or-no matter or one where the size of the loss counts.
+  - title: Checks for a dominant case
+    text: Asks whether one case could outweigh the total, as with wealth, or none can, as with body weight.
+  - title: Finds the unrecoverable outcome
+    text: For the dominant risks, names the outcome you could not recover from.
+  - title: Checks errors and calm
+    text: Asks whether errors help or hurt you, and whether a quiet record is being read as safety.
+  - title: Adds slack and caps
+    text: Adds backups, slack or a cap on exposure, and may split into very safe plus small bold bets.
+  - title: Names the early trigger
+    text: Names what would make you act before the worst arrives.
+
+output_shape: |
+  THE PLAN AND WHAT IS AT STAKE
+  <summary> | At stake: <money, time, name>
+
+  DEPENDENCIES AND WHAT COULD GO WRONG
+  <item> | Type: yes/no matter or size of loss | Can one case dominate? <yes/no>
+
+  THE UNRECOVERABLE OUTCOME
+  <outcome> | Why it cannot be undone: <reason>
+
+  ORDINARY LOSSES
+  <list>
+
+  ERRORS AND CALM
+  Do errors help or hurt you? <answer>  Is a quiet record being read as safety? <answer>
+
+  THE CAPPED-DOWNSIDE VERSION
+  Slack and backups: <list>  Cap on exposure: <limit>  Safe part: <share>  Small bold bets: <share>
+  Cost of these fixes: <time, money, speed>
+
+  ACT EARLY IF
+  <trigger>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: What is at stake
+    how: Include non-money items such as your name, your health or a partner's money. They are often the unrecoverable ones.
+  - what: Debts and fixed costs
+    how: List them. Fixed payments turn a slow period into a ruin risk.
+  - what: Single points
+    how: Name any one customer, supplier, tool or person the plan cannot work without.
+  - what: Slack you have
+    how: State cash, time and backup options. The cap is set against them.
+
+judge:
+  - The unrecoverable outcome is listed apart from ordinary losses.
+  - It does not rely on a forecast of a rare event.
+  - It says what the fix costs, since slack is not free.
+  - It gives no investment buy or sell advice.
+  - Each fix ties to a named dependency.
+
+test:
+  - Run it on a past plan where something went badly wrong and see if it names the real cause.
+  - Remove the capped-downside fixes and check the plan still has a way to survive the worst case.
+  - Ask someone who knows the field whether the unrecoverable outcome is the right one.
+  - Run it twice and compare the unrecoverable outcomes. They should match.
+
+improve:
+  - Add the dependencies common in your field, such as platform rules, one big client or seasonal cash gaps.
+  - Add your own limit, such as the share of savings you will risk in one plan.
+  - Keep the early-warning triggers on a page you read weekly.
+  - Pair it with "Failure-first plan check" for a full list of other failure modes.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing dependencies and testing plans in text is what any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Handy for putting fixed costs, cash and exposure side by side."}
+  inputs:
+    - "A list of debts, fixed costs and cash on hand"
+    - "A list of your biggest customers, suppliers or platforms"
+    - "Past bad months or years and what happened"
+
+terms:
+  - term: Unrecoverable outcome
+    meaning: A result you could not come back from, such as bankruptcy, a lost licence or a ruined name.
+  - term: Exposure
+    meaning: How much you stand to lose if something goes wrong.
+  - term: Slack
+    meaning: Spare cash, time or options that let you survive a bad period.

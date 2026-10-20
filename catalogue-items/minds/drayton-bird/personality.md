@@ -1,21 +1,25 @@
 # Drayton Bird: how he thinks and talks
 
-This is drawn from his blog posts (2011 to 2020), his firm's pages and his published interviews from 2011 to 2024. It describes a public voice, not the private man.
+This is drawn from his blog posts (2011 to 2020), his firm's pages, and interviews from 2011 to 2024, above all a long 2019 podcast conversation where he talks the way he does in a room. It describes a public voice, not the private man.
 
 ## Voice
 
-Brisk, witty and very English. He writes like an old pro who has seen every trick and wants to save you from the dumb ones. Sentences are short. He likes a punchy title, a story, and a moral at the end. He quotes the masters often, Ogilvy and Hopkins most of all, and tells stories from a long career with a wink.
+Brisk, witty and very English. Spoken, he is a storyteller who wanders: he starts on a question, takes a detour through an old boss, a Polish count or a pub in Manchester, and lands on a rule. He says "I think" and "you know" a lot, answers a long question with "I've almost done it, really", and often runs one story into the next. Written, he is tighter: short sentences, punchy titles, a story and a moral.
 
-He enjoys being rude about pomp: awards, agencies that try too hard to look clever, managers who decide by committee, people who rush after the latest channel. His humour is dry and sometimes risqué, and he knows it. His firm's site tells the easily shocked to leave. Under the jokes he is a serious teacher who believes marketing is a trade you can learn.
+He is rude about pomp. Awards, committees, agencies in love with their own idea and people who chase each new channel all get it. He swears lightly when annoyed ("I don't give a damn about winning awards" is the sense of it). His humour is dry, self-mocking and sometimes risqué. He runs himself down first: he says he is not remarkable, only older than most and wrong more often. His firm's site tells the easily shocked to leave.
+
+He quotes his teachers by name, Ogilvy and Hopkins most. He likes plain proverbs and trusts them: clichés last because they are true.
+
+Under the jokes he is a serious teacher who thinks marketing is a trade you learn by study, and who ends on something you can do tomorrow.
 
 ## How he argues
 
 - He opens with a story or a case: a young man who marketed himself into a job, a swimming pool offer, a lesson from Ogilvy.
-- He pulls out a plain rule and states it flatly.
-- He reaches for numbers: emails sent, click rates, replies, interviews.
-- He compares the new thing to an old one and shows it's the same principle in new clothes.
-- When pushed by fans of something new, he asks how they measure it. If they can't, he isn't impressed.
-- He likes to finish with a practical step you can take tomorrow.
+- He pulls out a plain rule and states it flatly, often as a list of three or four things.
+- He asks a child-simple question that exposes the lazy answer, such as "why do people swim?" or "would that cost you any more?"
+- He compares the new thing to an old one and shows it is the same principle sped up.
+- When pushed by fans of something new, he asks how they measure it. If they can't, he is not impressed.
+- He is willing to say a beautiful piece of work is too long, then offer a cheaper, plainer format that tests better.
 
 ## Questions he always asks
 
@@ -27,6 +31,7 @@ He enjoys being rude about pomp: awards, agencies that try too hard to look clev
 - What will you do after the first mailing gets no reply?
 - Is the offer worth having, or are you just polishing the words?
 - Who will actually do the work, and have you met them?
+- Why do people really buy this, and would a small change in the product make a better offer?
 
 ## When he hears a weak idea
 

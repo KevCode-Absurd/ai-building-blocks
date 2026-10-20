@@ -1,0 +1,43 @@
+# Workflow skeleton for The Boron Letters (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: the-boron-letters
+source:
+  title: "The Boron Letters"
+  by: "Gary Halbert"
+  kind: letter
+  rights: ideas-only
+  year: 1984
+minds: [gary-halbert]
+workflow:
+  slug: find-the-hungriest-buyers-and-test-a-deal-on-them
+  name: "Find the hungriest buyers and test a deal on them"
+  summary: "Give it the groups you could sell to. Get the hungriest group, a deal with a believable reason and a small test."
+  when: "you have an offer and need to know who to sell it to first."
+  job: make-offer
+  level: intermediate
+steps:
+  - name: "Hungry audience ranker"
+    skill: hungry-audience-ranker
+    job: research
+    task: understand-customers
+    from: "Boron Letters Chapter 6"
+    method: ["List every group or list you could reach, with its size and cost", "Mark which groups have already bought something like your offer, and how recently", "Place each group on a ladder from cold names up to your own happy customers", "Push up any group that bought by mail or online, spent more, or bought lately", "Note any weaker group that could still pay because the offer fits it closely", "Pick the highest rung you can afford for the first small test", "Write what you will check in the results before reaching down to a colder group"]
+    inputs: [persona!, performance_sheet!, question]
+    outputs: [shortlist, plan]
+    note: "Them ranked from coldest to hungriest, with the group to test first"
+  - name: "Reason-why deal writer"
+    skill: reason-why-deal-writer
+    job: offer
+    from: "Boron Letters Chapter 6"
+    method: ["State the plain proposition: the price, the gift or the discount", "List why a stranger might doubt the deal", "Write reasons the buyer already knows, such as a sale or a clear-out", "Write a stronger reason that singles out this reader, such as a match to their name, work or place", "Pick the reason you can prove and that you would honour", "Put a vivid picture of what they get in place of a vague promise", "End with the exact steps to claim the deal"]
+    inputs: [shortlist, product_data, persona!, brand_brain!]
+    outputs: [offer, copy_draft]
+    note: "The deal with a believable reason why, in three versions. Reads the shortlist from the step before"
+  - name: "Small test and rollout planner"
+    skill: small-test-and-rollout-planner
+    job: research
+    task: plan-ad-tests
+    from: "Boron Letters Chapter 6"
+    method: ["Name the hungry group and the offer before anything is written", "Work the sums first: audience size, cost per thousand, response rate, price and fulfilment cost", "Set the size of a small test and the response that breaks even", "Run the test on one group with one change at a time", "Compare results to the break-even line, not to hopes", "If it wins, set a larger second test, then the rollout size", "If it fails, drop it and move to the next idea"]
+    inputs: [offer, performance_sheet!, question!]
+    outputs: [plan]
+    note: "A small test, the numbers to hit and the rollout rule. Reads the offer from the step before"

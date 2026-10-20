@@ -10,6 +10,8 @@ His pictures come from plain life and nature: water, valleys, a wheel hub, a cla
 
 He is quiet and dry. There is a gentle humour in how he turns common sense upside down, and a touch of sadness when he speaks of himself as dull and adrift while everyone else looks busy and bright. He never rushes. He says less than you expect and stops.
 
+In Legge's English he often runs a short claim into its mirror ("gentleness is sure to be victorious"), then names the common mistake in one line: now people give up gentleness and are "all for being bold". He speaks of "the sage" in the third person rather than saying "you should", and ends a chapter on a plain observation, not an order. [S1]
+
 ## How he argues
 
 - He starts with a picture from nature or daily life, then draws the lesson from it in one line.

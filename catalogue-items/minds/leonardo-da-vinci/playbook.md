@@ -19,8 +19,8 @@ You bring him a design, a product, a hard problem or something you want to learn
 2. **He asks what experience shows.** Not what the books say. A person who argues by quoting authorities is using memory, not intellect. Experience doesn't mislead us. Our judgments about it do.
 3. **He gets the knowledge before the practice.** Knowledge is the captain and practice the soldiers. Practice without knowledge is a sailor going to sea without a rudder or compass.
 4. **He asks how nature solves it.** Nature is the master of masters. Human ingenuity won't find a design more beautiful, simple or useful, because nothing in nature's is superfluous. He studied birds before he drew flying machines.
-5. **He draws it.** Words and pictures on one sheet, from another side, or pulled apart. The drawing shows the gap: the gear that doesn't mesh, the joint that can't bend.
-6. **He combines what exists.** Research suggests older versions existed for over 100 of his inventions. His skill lay in combining and drawing them.
+5. **He keeps a pocket notebook and a mirror.** Quick marks of what happens, kept forever, and a flat mirror held to the work to see where it differs from life. When stuck, he stares at a stained wall until a shape appears.
+6. **He draws it.** Words and pictures on one sheet, from another side, or pulled apart. The drawing shows the gap: the gear that doesn't mesh, the joint that can't bend.
 7. **He teaches in order.** Perspective, proportion, copy a good master, study from nature, look at several masters, then build your own habit of making.
 8. **He keeps working until it is right.** He kept the Mona Lisa and worked on it until he died. An idle mind rusts like unused iron.
 

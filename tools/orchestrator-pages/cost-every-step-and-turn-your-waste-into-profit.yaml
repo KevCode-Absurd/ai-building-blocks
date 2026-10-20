@@ -1,0 +1,84 @@
+new_slug: cost-every-step-and-turn-your-waste-into-profit
+name: Cost every step and turn your waste into profit
+summary: Describe how you make or deliver your product. Get a cost for every step and a price on each kind of waste.
+job: plan-strategy
+thinking: high
+thinking_why: It builds a cost model from your steps and then prices the waste from it. Give it your strongest model.
+headline: Know what every step costs, and turn your waste into money
+subhead: Describe how you make or deliver your product, step by step. It puts a measure on each step and builds a cost sheet and a weekly count. Then it finds everything you throw away or leave idle, and prices each item as a product, a reuse or a saving.
+explain: |
+  Most owners know their total costs but not what each step costs. A product that looks like a winner can lose money once you count the steps, and the scrap, offcuts, idle time and returns that you throw away each month are rarely counted at all.
+
+  This workflow counts first. It puts a measure on each step, builds a monthly cost per product and ranks products by what they really earn. It then walks the whole process for waste, values each item by the labour in it as well as the material, and asks who would buy it or what it could feed. The method comes from Andrew Carnegie's autobiography, which describes how he tracked cost at every step and treated waste as a source of profit.
+when:
+  - You do not know which products earn money after all the steps are counted.
+  - You throw away scrap, leftovers, returns or idle time and suspect some of it is worth something.
+  - Costs keep rising and you want to find the step to fix first.
+you_give:
+  - How each product is made or delivered, step by step
+  - What you buy, sell and pay for each, if you have figures
+  - A sales or cost sheet for a closed period (optional)
+  - Who does each step (optional)
+  - What you throw away, leave idle or redo, with any amounts you know
+you_get:
+  - A step list with a measure on each step
+  - A monthly cost-per-product sheet and a weekly count sheet
+  - Products ranked by true earnings, and the lines that carry the business and the lines that drain it
+  - A list of waste with a monthly amount, priced in labour as well as material
+  - A buyer or reuse for each item (or "no use"), the first three actions with owners and dates, and a re-count date
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe your process and add any figures you have. It works step by step and saves each result.
+  - Hold the count on the dates it sets, and bring the new numbers back for a re-count.
+how_it_works:
+  - title: Lists every step
+    text: Lists every step from raw material to sale and puts a weight, a count or a time on each.
+  - title: Builds the cost sheet
+    text: Records the cost per product each month, and compares people, shifts or batches for who saved and who wasted.
+  - title: Ranks the products
+    text: Ranks products by what they earn after all steps, and names the lines that carry the business and those that drain it.
+  - title: Finds the waste
+    text: Walks the process again with the cost report and lists everything thrown away or left idle, with a monthly amount.
+  - title: Prices each item
+    text: Values each item by the labour in it, then asks who would buy it or what it could feed.
+  - title: Ranks and sets dates
+    text: Ranks by money recovered against effort, and sets the first three actions, their owners and a date to count again.
+output_shape: |-
+  STEP 1: STEP COST TRACKER
+    Steps and measures: <product> | <step> | measure <unit> | counted by <name> | day <day>
+    Cost sheet (monthly): <product> | cost per unit <figure> | price <figure> | earns <figure>
+    Ranking: <product> | earns <figure>
+    Carry and drain: <lines that carry> | <lines that drain>
+    Fix first: <one waste> | next count date <date>
+
+  STEP 2: WASTE AND BY-PRODUCT LIST
+    Waste list: <item> | source step | amount per month | labour in it | value
+    Buyer or reuse: <item> | who would buy it or what it could feed | cost to reclaim
+    What you reclaim now: <item> | recovered | cost
+    Ranked: <item> by money recovered against effort
+    First three actions: <action> | owner | date
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How exact your figures are
+    how: Real costs per step beat guesses. Where you have none, it labels the number as an assumption so you can replace it.
+  - what: How you measure each step
+    how: Pick something you can count in under a minute, such as weight, units or minutes. A measure nobody will keep is worse than a rough one.
+  - what: How wide you look for waste
+    how: Include idle time, rework and returns, not only scrap. They often hold the largest amounts.
+judge:
+  - Every step has a measure, and it says who counts it and when.
+  - Products are ranked on what they earn after all steps, not on price or sales alone.
+  - Waste is valued in labour as well as material.
+  - Any number that is a guess is labelled as an assumption.
+  - Nothing about your costs, buyers or prices is invented.
+test:
+  - Give it a product you know the true margin on. The ranking should match what you know.
+  - Name a scrap item you throw away. The waste list should price it and name a possible buyer or reuse.
+  - Run it twice on the same figures. The ranking of products should come out in the same order.
+improve:
+  - Keep the weekly count sheet going and bring a month of counts back for a re-run.
+  - Add your supplier prices, so it can check what a rival's waste would cost you to buy.
+  - After you act on the first waste, re-run the steps to see the cost per unit move.

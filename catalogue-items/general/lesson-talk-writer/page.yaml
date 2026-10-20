@@ -1,0 +1,123 @@
+new_slug: lesson-talk-writer
+name: "Lesson talk writer"
+summary: "Paste your stories and their lessons. Get a short talk that builds each lesson on a story, ending on a next step."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It matches stories to lessons and shapes a talk, with fixed steps."
+
+headline: "Lesson talk writer"
+subhead: Give it the true stories you could tell and the lessons you trust. It picks two or three, ties each lesson to one story from a low point, writes each as a sentence people can repeat, and ends on one next step. You get a short talk script.
+
+explain: |
+  Talks full of advice slide off the audience, because advice with no story behind it is easy to forget. A story with no lesson is only entertainment. The two together make something people repeat on the way home.
+
+  This skill chooses two or three lessons you trust and ties each to one true story from your own low point. It writes each lesson as a single short sentence a listener can repeat, backs it with an outside voice or idea, and speaks straight to the listener with a question they can answer. It opens with a joke at your own expense about why you are the one speaking, and closes on a next step, not a summary.
+
+when:
+  - You are asked to give a graduation, commencement, team or community talk.
+  - You have many stories and many pieces of advice and no order.
+  - You want a talk that ends with something the audience will do.
+
+you_give:
+  - The true stories you could tell, with what happened
+  - The lessons you believe, in any wording
+  - Who the audience is and how long you have
+you_get:
+  - Two or three lessons, each tied to one true story
+  - Each lesson as one repeatable sentence
+  - A script with an opening joke, a question and a close with a next step
+  - A list of claims to check before you speak
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your stories and lessons in any order, with true details.
+  - Say who the audience is and how long you have.
+  - Read each lesson sentence aloud. Change any you would not say to a friend.
+  - Check each fact and quote before you speak.
+
+how_it_works:
+  - title: Picks the lessons
+    text: Chooses the two or three you trust most and drops the rest.
+  - title: Pairs each with a story
+    text: Matches each lesson with a true story from a low point of your own.
+  - title: Says it in one sentence
+    text: Writes each lesson as one short sentence a listener can repeat.
+  - title: Adds an outside voice
+    text: Brings in one outside idea or voice to back each lesson, marked for checking.
+  - title: Speaks to the listener
+    text: Adds a question the audience can answer silently.
+  - title: Opens with a self joke
+    text: Writes a joke at your expense about why you are the one speaking.
+  - title: Makes time visible
+    text: Adds one hard fact about time that the audience can picture.
+  - title: Ends on a next step
+    text: Closes with one thing the listener can do, and checks the set.
+
+output_shape: |
+  LESSONS
+  1. <one sentence> | Story: <true story in a line>
+
+  OPENING
+  <joke at your own expense, 2 to 3 lines>
+
+  TALK
+  <script, lesson by lesson, with the story, the sentence, the outside voice and the question>
+
+  PICTURE ABOUT TIME
+  <one hard fact the audience can picture>
+
+  THE CLOSE
+  <next step in one line>
+
+  CLAIMS TO CHECK
+  - <claim or quote> | Source needed
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How low the story is
+    how: The lesson lands harder when the story shows a real low point. Give the honest version.
+  - what: Audience
+    how: Name their age, work and stage of life. The question and the time fact change.
+  - what: Length
+    how: Say the minutes. Two lessons suit five minutes, and three suit ten.
+  - what: Outside voices
+    how: Give a quote or idea you trust. It is used as given and marked for checking.
+
+judge:
+  - Each lesson is tied to one true story.
+  - Each lesson is one sentence people can repeat.
+  - The close names one next step.
+  - No lesson is a claim you cannot back.
+  - The opening joke is at your own expense, not the audience's.
+
+test:
+  - Say the lesson sentences to a friend and ask them to repeat one tomorrow.
+  - Check every outside quote or fact against its source.
+  - Run it twice. The chosen lessons should stay close.
+  - Time the talk aloud and trim to the slot.
+
+improve:
+  - Add a bank of your own stories with true details, and paste it in each time.
+  - Add topics and people you do not want to mention.
+  - Add your brand file if the talk is for work, so tone and claims stay on message.
+  - Pair it with "Read-aloud speech shaper" to add breath marks and a refrain.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Matching stories to lessons and drafting a script is text work any strong chat AI does well with this skill."}
+    - {name: "A phone voice recorder", why: "To hear whether each lesson sentence sounds natural when you say it."}
+  inputs:
+    - "True stories with real details"
+    - "Quotes or ideas you want to use, with their sources"
+    - "Facts about the audience"
+
+terms:
+  - term: Lesson sentence
+    meaning: One short sentence that states a lesson so a listener can repeat it.
+  - term: Low point
+    meaning: A real time when things went badly, used as the story behind a lesson.

@@ -1,0 +1,17 @@
+slug: short-piece-reporter
+name: "Short piece reporter"
+summary: "Name a place or person and a word limit. Get a reporting plan and a tight piece in three jobs."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [william-zinsser]
+credits:
+  - {title: "The 300-Word Challenge", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/the-300-word-challenge-2/", used: "Picking a subject near enough to visit in a day, reporting as for a longer piece, giving each paragraph one job and ending on a human voice"}

@@ -1,6 +1,6 @@
 # Richard Branson: how he thinks and talks
 
-This is drawn from his books *Losing My Virginity* (1998) and *The Virgin Way* (2014), as quoted in public collections, and his interviews and blog lines. It describes a public voice, as of those dates, not the private person.
+This is drawn from his books *Losing My Virginity* (1998) and *The Virgin Way* (2014), as quoted in public collections, and his interviews and blog lines, including a TED interview. It describes a public voice, as of those dates, not the private person.
 
 ## Voice
 
@@ -8,7 +8,7 @@ Upbeat, informal and cheeky. Branson writes like he talks: chatty, warm and full
 
 He loves an underdog angle. Big, stuffy rivals are the villains of his stories, and Virgin is the cheeky challenger. He mixes business advice with life advice, and he isn't afraid to sound like an optimist.
 
-Humour is playful and self-mocking, with a taste for stunts and dressing up. He's modest about his school record and open about his failures.
+He calls himself "Dr. Yes" and makes the joke at his own expense, about the Virgin Cola stunt in New York or his dyslexia. He answers a hard point with a story or a joke more than with a counter-argument. He is open about his shyness as a teenager and wary of leaders who hide behind titles and formality. Humour is playful and self-mocking, with a taste for stunts and dressing up. He's modest about his school record and open about his failures.
 
 ## How he argues
 

@@ -1,0 +1,131 @@
+new_slug: copy-research-file-builder
+name: "Copy research file builder"
+summary: "Paste your product material and past issues. Get sorted research files and a short list of proof you can give away."
+job: understand-customers
+thinking: low
+thinking_why: "It sorts and copies passages by rules, with few judgement calls."
+
+headline: "Copy research file builder"
+subhead: "Give it your product material, such as issues, emails, bonuses and old promotions. It copies passages into separate files by purpose, values each bonus and picks proof you can give away. You get sorted research files and a short list of proof."
+
+explain: |
+  Writers lose days to a pile of material they have only half read. Passages that would make a strong opening sit next to ones that prove a claim, and nothing is findable when the writing starts. Then the writer reaches for general phrases instead.
+
+  This skill reads it all once and sorts it. Passages go into files by what they are for: the people behind the product, the buyer's strongest feelings, and the real problem. Each bonus gets a value and a mini-ad. Proof you can give away is marked, and the past hits are studied for why they worked. Every passage keeps its source, and nothing is added.
+
+when:
+  - "You have years of emails, issues or old pages and have not read them in order."
+  - "You are taking over a product and need to learn it fast."
+  - "You want a research base before writing a sales page, launch or email series."
+
+you_give:
+  - "Product material: issues, emails, bonuses, old promotions, with dates"
+  - "Your brand file (optional)"
+  - "Customer words with dates (optional)"
+you_get:
+  - "Sorted files of passages, each with its source"
+  - "A value note and mini-ad for each bonus"
+  - "A list of proof you can give away and fascinating lines"
+  - "The top past hits with why each worked"
+  - "An angle library and brand file additions"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Gather every piece of product material you can find, and give each a title and date."
+  - "Paste it in, newest first. If it is too long, send it in parts."
+  - "Check the files against your own memory of what matters."
+  - "Take the angle library to Dominant emotion finder."
+
+how_it_works:
+  - title: "Takes stock"
+    text: "Lists every item with title and date and flags what is missing."
+  - title: "Sorts by purpose"
+    text: "Copies passages word for word into people, feeling and problem files, each with a source."
+  - title: "Values the bonuses"
+    text: "Writes a value and a short mini-ad for each extra."
+  - title: "Picks proof to share"
+    text: "Marks tips and facts you can give away without hurting sales."
+  - title: "Studies the winners"
+    text: "Notes why the top pieces worked, using the results in your sources."
+  - title: "Builds the outputs"
+    text: "Turns the files into a ranked angle library and brand file notes."
+
+output_shape: |
+  WHAT I READ
+  <item, date> (newest first)
+
+  PEOPLE FILE
+  <passage> (<source>)
+
+  FEELING FILE
+  <passage> (<source>)
+
+  PROBLEM FILE
+  <passage> (<source>)
+
+  BONUSES
+  <bonus>: value <amount or MISSING>. Mini-ad: <two sentences>
+
+  PROOF TO GIVE AWAY
+  <tip or fact> (<source>) Safe to give away: <yes/no>
+  Fascinating lines: <list>
+
+  PAST HITS
+  <piece>: promise, lead, feeling, offer. Worked because <reason>
+
+  ANGLE LIBRARY
+  <ranked angles with passages and proof>
+
+  BRAND FILE ADDITIONS
+  <people, claims with sources, bonus notes>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "How much you paste"
+    how: "More material gives better files. Give at least a year if you have it, newest first."
+  - what: "Dates and titles"
+    how: "Label each item. Without dates, it cannot tell newest from oldest or match results to the right piece."
+  - what: "Results"
+    how: "Add sales or response figures for old promotions. Without them it cannot say which hits worked."
+  - what: "Your focus"
+    how: "Say which product or theme matters most this quarter, and it sorts that material first."
+
+judge:
+  - "Every passage in a file has a source line you can find."
+  - "A passage in the problem file really shows the problem, not just the product."
+  - "Each bonus has a value or a MISSING note."
+  - "The proof list is something you would be happy to publish."
+  - "Nothing appears that is not in your material."
+
+test:
+  - "Pick one passage you know well and check it sits in the right file with the right source."
+  - "Run it twice on the same material. The file contents should match closely."
+  - "Ask a colleague to find a fact using only the files. See how fast they get it."
+  - "Check that the past hits match what you remember winning."
+
+improve:
+  - "Add your own file names to step 2 if your work needs others, such as a file for objections."
+  - "Add a rule for which sources you trust most and which are marketing only."
+  - "Save the people file and proof list to your brand file so later skills can use them."
+  - "Pair it with Dominant emotion finder next."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting passages by rules works well in any strong chat AI with this skill."}
+    - {name: "A folder of text files", why: "Saving each file by name makes it easy to reuse the research on the next project."}
+  inputs:
+    - "Sales or response figures for old promotions"
+    - "A list of the customers' most common questions"
+    - "Notes from a team member who knows the history"
+    - "A competitor's page, for contrast"
+
+terms:
+  - term: "Research file"
+    meaning: "A set of copied passages on one topic, each with its source, kept so you can find them while writing."
+  - term: "Proof to give away"
+    meaning: "A useful tip or fact you share for free to show you know the subject."

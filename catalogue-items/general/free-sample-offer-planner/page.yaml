@@ -1,0 +1,130 @@
+new_slug: free-sample-offer-planner
+name: "Free sample offer planner"
+summary: "Paste your product and price. Get a free sample offer, who gets it, how to claim it and a cost-per-customer check."
+job: make-offer
+thinking: medium
+thinking_why: "It makes choices about the sample, its audience and its cost, from a set of fixed rules."
+
+headline: "Free sample offer planner"
+subhead: "Give it your product and price. It chooses the smallest piece buyers can try, says who should get it and how they claim it, and sets a sample budget with a cap. You get a free sample offer, a plan and a cost-per-customer check."
+
+explain: |
+  A free sample lets a buyer prove your claim for themselves. Done badly, it hands product to people who never wanted it, or costs more than the customers it brings in are worth.
+
+  This skill decides whether a small sample shows the product at its best, and if not, offers a full-size trial. The offer is truly free, with no stamp or small fee, and says Free plainly. Your story comes first, so only interested people ask. It picks the claim method on ease for the buyer, limits one per household, and ties the sample to a purchase or visit so it reaches buyers, not strangers. A budget caps the cost, and every reply is keyed so you can work out cost per customer.
+
+when:
+  - "You have a new product and want people to try it before you advertise widely."
+  - "You hand out samples but do not know what a customer costs."
+  - "You are not sure if a small sample shows your product well."
+
+you_give:
+  - "Your product facts: what it is, size, cost to make"
+  - "Your price"
+  - "Your current offer, if any (optional)"
+  - "A sample budget and where you would offer it (optional)"
+you_get:
+  - "A sample offer in words you can use"
+  - "Who gets it and how they claim it"
+  - "A sample budget with a cap and keys on every reply"
+  - "A cost-per-customer check before you start"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your product facts and price."
+  - "Give a budget and a place you could reach people, such as a shop, event or list."
+  - "Set up the keys and claim method it lists."
+  - "Run it small, then use the test planner and cost check that follow."
+
+how_it_works:
+  - title: "Tests the sample"
+    text: "Decides if a small sample shows the product at its best or if a full-size trial is better."
+  - title: "Makes it free"
+    text: "Offers it free, with no stamp or fee, and says Free."
+  - title: "Tells the story first"
+    text: "Puts your story ahead of the offer so only interested people ask."
+  - title: "Makes claiming easy"
+    text: "Picks the claim method on ease for the buyer."
+  - title: "Limits it"
+    text: "Limits it to one per home, with age limits where needed."
+  - title: "Picks the piece"
+    text: "Chooses the smallest piece a buyer can try at home."
+  - title: "Ties it to a visit"
+    text: "Ties the sample to a purchase or visit so it reaches buyers."
+  - title: "Sets the cap"
+    text: "Sets a sample budget and a cap."
+
+output_shape: |
+  SAMPLE
+  What they get: <smallest piece or full-size trial>
+  Why this shows the product at its best: <reason>
+
+  OFFER WORDS
+  <headline with Free> | <story first, then the offer>
+
+  WHO GETS IT
+  <people and where> | Limit: <one per home and any age limit>
+
+  HOW TO CLAIM
+  <method> | Why it is easy for the buyer: <reason> | Key: <code per source>
+
+  TIED TO
+  <purchase, visit or other step>
+
+  BUDGET AND CAP
+  Unit cost: <amount> | Samples: <n> | Cap: <amount> | Stop rule: <rule>
+
+  COST PER CUSTOMER CHECK
+  Sample cost per buyer: <cost / buyers> | Most you can pay for a customer: <value> | Fits: <yes or no>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Cost of a sample"
+    how: "Give the real unit cost, including packing and postage. It drives the whole cap."
+  - what: "Value of a customer"
+    how: "Give an average first sale and repeat rate if you know it. The check needs them."
+  - what: "Where people are"
+    how: "Say where you can reach them. The claim method depends on it."
+  - what: "Product type"
+    how: "Say if the product can be sampled in a small size. Some cannot, and need a trial."
+
+judge:
+  - "The sample is free with no hidden charge."
+  - "A claim method is chosen on ease for the buyer."
+  - "Every reply can be traced to its ad."
+  - "Cost per customer is worked out, not just cost per request."
+  - "The sample cost per buyer is shown."
+
+test:
+  - "Run it for a product you already sample. Check the cost it works out matches your books."
+  - "Ask a friend to read the offer words and say what they get."
+  - "Try the claim method yourself and time it."
+  - "Run a small batch and count requests and buyers against the plan."
+
+improve:
+  - "Add your product's safety or age rules so limits are right."
+  - "Add your own cost to make and pack a sample."
+  - "Save the key list and offer wording to your brand file."
+  - "Pair it with a small launch test and a cost-per-customer calculation."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing an offer and a cost check is text work any strong chat AI does with this skill."}
+    - {name: "A form tool with unique links", why: "Gives each source its own key so you can trace replies."}
+  inputs:
+    - "Cost to make and pack one sample"
+    - "Average first sale and repeat rate"
+    - "A list of places you can reach likely buyers"
+
+terms:
+  - term: "Sample"
+    meaning: "A small piece of your product given so a buyer can try it."
+  - term: "Key"
+    meaning: "A code or link that shows where each reply came from."
+  - term: "Cost per customer"
+    meaning: "What you spend, including samples, divided by the buyers you gain."

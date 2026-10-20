@@ -1,0 +1,20 @@
+slug: mvp-experiment-planner
+name: "MVP experiment planner"
+summary: "Paste your product idea. Get the riskiest guess, the smallest test and a pivot or persevere rule."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: plan, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [eric-ries, steve-blank]
+credits:
+  - {title: "The Lean Startup", by: "Eric Ries", url: "https://theleanstartup.com/", used: "Build, measure, learn; testing the riskiest guess with the smallest product; deciding to pivot or persevere"}
+  - {title: "Minimum Viable Product: a guide", by: "Eric Ries", used: "Defining a minimum product as the smallest thing that teaches you about a guess"}
+  - {title: "The Customer Development Manifesto", by: "Steve Blank", used: "Treating the plan as guesses to test with customers outside the building"}

@@ -1,0 +1,19 @@
+slug: keyed-headline-test-planner
+name: "Keyed headline test planner"
+summary: "Paste your offer and headline options. Get headlines sorted by appeal, a keyed small test and a rule for picking the winner."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: hooks, required: true}
+  - {type: offer, required: true}
+outputs:
+  - {type: plan, required: true}
+  - {type: shortlist, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [john-caples, victor-schwab]
+credits:
+  - {title: "They Laughed When I Sat Down at the Piano (ad, Screenland, 1926) and the study notes on it", by: "John Caples", used: "Sorting headlines by self-interest, news or curiosity, tying curiosity to a promise, keying each version and testing small before spending big"}

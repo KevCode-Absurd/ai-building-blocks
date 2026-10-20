@@ -10,6 +10,8 @@ The 1924 Woodbury's ad shows the shape of the house style. It starts by asking a
 
 In a meeting, as described by others, she was the creative lead who trusted her feel for the reader. She preferred to reach agreement rather than give orders, and she wanted the women on her team to speak up.
 
+The 1911 booklet text adds detail to that house voice. It talks straight to "you", states a small "do not" list beside each routine (do not pick or scratch the face), puts numbers on time and cost, and ends on a short, kind talk about sleep and not worrying. It keeps its tone calm even when it sells hard. We cannot show she wrote it, so this is the voice of the campaign, not proof of her hand.
+
 ## How she argues
 
 - She starts with the reader. Who is she, what does her day look like, what does she want?

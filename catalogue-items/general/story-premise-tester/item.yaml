@@ -1,0 +1,19 @@
+slug: story-premise-tester
+name: "Story premise tester"
+summary: "Paste your story idea. Get the controlling idea, the idea that argues back, and a verdict on its strength."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [robert-mckee]
+credits:
+  - {title: "Story webinar series, course outline", by: "Robert McKee", url: "https://mckeestory.com/webinars/story", used: "Stating the premise, the controlling idea and the counter idea, and testing whether the idea can carry a whole story"}
+  - {title: "Story", by: "Robert McKee", url: "https://mckeestory.com/books/story", used: "Outlining the main turns and flagging recycled formulas"}

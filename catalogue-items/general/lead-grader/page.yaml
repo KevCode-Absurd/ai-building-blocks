@@ -1,0 +1,100 @@
+new_slug: lead-grader
+name: Lead grader
+summary: Paste your prospects. Get each graded A, B or C by how soon they need to act, with a follow-up.
+job: sell-and-negotiate
+thinking: low
+thinking_why: It sorts a list by one rule that is clear and applies it each time.
+headline: Lead grader
+subhead: Give it your prospects with what you know about each. It grades each A, B or C by when they need to act, drops the C's from active follow-up and plans fast follow-up for the A's and a light rhythm for the B's. You get a dated, graded list.
+explain: |
+  Most sales lists treat every prospect the same, so time goes to the people least likely to act. A person who needs to move this month is worth more of your day than one who may need you in two years.
+
+  This skill asks one question of each prospect: when do they need to act? It grades A for soon, B for later and C for no clear need. It drops the C's from active follow-up, gives A's fast personal follow-up with a next step within a day, keeps B's warm with light, regular contact and sets a day to re-grade the list. Each grade rests on a stated timing, never a guess.
+when:
+  - Your list of prospects is long and you cannot follow up with all of them.
+  - You chase everyone and the people who are ready get lost.
+  - You want a weekly routine for who to call first.
+you_give:
+  - Your prospects, one per line, with what you know about each
+  - What you sell and how long a sale usually takes
+  - The date to re-grade (optional)
+  - Notes from past calls or messages (optional)
+you_get:
+  - Each prospect graded A, B or C, with the timing it rests on
+  - A follow-up for each grade
+  - C's removed from active follow-up
+  - A re-grade day on the list
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the list with what you know about each person's timing.
+  - Ask the people with no timing when they need to move, then add it.
+  - Contact the A's within a day.
+  - Re-grade on the day set.
+how_it_works:
+  - title: Asks about timing
+    text: Finds when each prospect needs to move.
+  - title: Grades each one
+    text: A for soon, B for later, C for no clear need.
+  - title: Drops the C's
+    text: Removes them from active follow-up.
+  - title: Plans the A's
+    text: Fast, personal follow-up with a next step within a day.
+  - title: Plans the B's
+    text: Regular light contact to keep them warm.
+  - title: Sets the re-grade
+    text: Dates the list and sets a day to grade it again.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  LIST DATED: <date> | RE-GRADE ON: <date>
+
+  A (soon)
+  <name> | Timing: <what they said, when> | Next step: <within a day> | Owner: <...>
+
+  B (later)
+  <name> | Timing: <...> | Contact rhythm: <how often, how> | Next touch: <date>
+
+  C (no clear need)
+  <name> | Why: <...> | Removed from active follow-up
+
+  NEED TIMING
+  <name>: <question to ask them>
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: What soon means
+    how: Define it for your sale, such as 'within 30 days'. Without it, the grades drift.
+  - what: What you know about each person
+    how: A date or an event beats a feeling. 'Lease ends in March' is better than 'interested'.
+  - what: How many you can follow up
+    how: Say how many A's you can handle in a week. The grading adjusts.
+judge:
+  - Every grade rests on a stated timing.
+  - C's are removed, not chased.
+  - A's have a next step within a day.
+  - B's have a contact rhythm.
+  - The list is dated.
+test:
+  - "Check three A's: did they say or show they need to move soon?"
+  - Run it twice. The grades should hold.
+  - Add a new fact for a C, such as a deadline, and see if it moves up.
+  - Re-grade on the day set and see how many B's became A's.
+improve:
+  - Add your own definition of soon for each product or service.
+  - Add the signals your best deals showed before they closed.
+  - Save the list after each re-grade to track movement.
+  - Pair it with a skill that writes the follow-up messages.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Sorting a list by a fixed rule is text work any strong chat AI does well with this skill.
+    - name: A spreadsheet or CRM
+      why: Holds the grade, the next step and the re-grade date for every prospect.
+  inputs:
+    - Dates or events for each prospect
+    - Notes from past calls
+    - Your typical time to close
+terms:
+  - term: Re-grade
+    meaning: Grading the list again on a set day, since timing changes.

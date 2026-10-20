@@ -1,0 +1,20 @@
+slug: repeat-chore-automation-planner
+name: "Repeat chore automation planner"
+summary: "List what your team does each week. Get the chores worth handing to a tool, with steps a new hire can run."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan, required: true}
+  - {type: audit_report, required: false}
+origin: rebuilt
+version: 1.0.0
+minds: [grace-hopper, ada-lovelace]
+credits:
+  - {title: "Oral History of Captain Grace Hopper (1980)", by: "Grace Hopper, interviewed", used: "Watching the people who do the job, writing steps so someone else can follow them, and building the smallest version that works beside the hand method"}
+  - {title: "Grace Murray Hopper interview (1968)", by: "Grace Hopper, interviewed by Uta Merzbach", used: "Defining terms before using them and testing each step against the hand method"}
+  - {title: "Sketch of the Analytical Engine, with Notes by the Translator (1843)", by: "L. F. Menabrea and Ada Lovelace", url: "https://www.fourmilab.ch/babbage/sketch.html", used: "Separating the operation from what it works on, and listing the parts of a machine: what stores, what works, what orders"}

@@ -175,6 +175,8 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Wa
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Honesty note (2026-10-20 check): the local record is the Wikipedia article on Walton plus short excerpts of the 10 rules and the memoir quotes page. The 10 rules [S1] and the Walmart history pages [S2][S3][S6] were summarised in an earlier build and could not be re-read on disk, so treat them as less checked than the dated facts from Wikipedia [S4]. Very little of his own voice is available online, which is why this record has only two own-words sources.
+
 A note on method: Walton died on 5 April 1992 [S4]. His fullest statement of his ideas is his memoir, *Sam Walton: Made in America* (1992, written with John Huey) [S4]. The memoir is copyrighted and we couldn't open a full public copy, so this data set leans on Walmart's own published version of his "10 Rules for Building a Business" [S1], short lines from the memoir on a public quotes page [S7], Walmart's history pages [S2][S3][S6], and reference pages [S4][S5]. Where Walmart describes its founder, read it as the company's view of him.
 
 ### In one paragraph
@@ -249,6 +251,26 @@ How he applied it: he went to small towns when others went to cities [S4]. He al
 - Copy good ideas from rivals without shame [S4][S7].
 - Decide, then act. Don't let "let's think about it" stall the work [S7].
 - Keep score, then change things before you get predictable [S1].
+
+### Real decisions
+
+#### Buying a variety store in Newport at 26
+In 1945, after the army, Walton bought a Ben Franklin variety store in Newport, Arkansas, with a $20,000 loan from his father-in-law and $5,000 he had saved [S4]. He learned the franchise's methods, then added a second store next door to his main competitor [S4]. Sales grew from $80,000 to $225,000 in three years [S4].
+
+#### Losing the Newport lease and starting again
+The Newport lease had no renewal option and cost 5% of sales. The landlord, who wanted the store for his own son, refused to renew, though he paid $50,000 for the stock and fixtures, which Walton called fair [S4]. Walton took it as an early business lesson and moved to Bentonville, where he opened a new store on 9 May 1950. The landlord next door refused six times to give him the lease he needed until his father-in-law quietly paid $20,000 [S4].
+
+#### Matching big-town prices in small towns
+His idea was that if he sold at prices as good as or better than stores four hours away in the city, people would shop at home [S4]. In the discount format he put stores in small towns, not big cities, because competition was thin and a large store could discourage other merchants from entering [S4].
+
+#### Flying to scout and giving managers a stake
+Tired of driving between stores, he bought a small second-hand plane to scout sites, as his brother and later his son did too [S4]. He also asked managers to invest in their own store, often up to about $1,000, so they would act as owners [S4].
+
+#### Building the warehouse and trucks first
+To make small-town stores work, he placed them within a day's drive of regional warehouses and ran his own trucks. Buying in volume and efficient delivery let him sell discounted name brands. The chain grew from 190 stores in 1977 to 800 in 1985 [S4].
+
+#### Copying a rival's format
+He said openly that his one-stop shopping format was based on Meijer's original idea [S4]. The first true Walmart opened in Rogers, Arkansas on 2 July 1962, with a drive to find American makers whose prices could meet foreign competition [S4].
 
 ### Where he stood
 

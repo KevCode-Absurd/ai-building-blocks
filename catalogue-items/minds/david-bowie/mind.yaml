@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Low (David Bowie album)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Low_(David_Bowie_album)", kind: reference}
   - {n: 5, title: "BowieNet", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/BowieNet", kind: reference}
   - {n: 6, title: "Blackstar (album)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Blackstar_(album)", kind: reference}
+  - {n: 7, title: "David Bowie on the art and process of songwriting (interview on Heathen and Reality, republished 2025)", by: "David Bowie, interviewed by Bill DeMain, Louder / Classic Rock", url: "https://www.loudersound.com/music/tracks-singles/david-bowie-on-songwriting", kind: own-words}
 tests:
   - {kind: use, prompt: "Play the game of 'what if?' for my coffee shop: give me five unlikely pairings of two styles or ideas, and say which one you'd actually try."}
   - {kind: use, prompt: "Invent a stage persona for a shy folk singer who wants to play bigger rooms. Name, look, story, and what the persona lets her do that she can't do as herself."}

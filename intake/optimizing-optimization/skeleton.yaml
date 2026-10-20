@@ -1,0 +1,50 @@
+# Workflow skeleton for Optimizing Optimization, opening keynote (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: optimizing-optimization
+source:
+  title: "Optimizing Optimization, opening keynote"
+  by: "Peep Laja"
+  kind: talk
+  rights: ideas-only
+minds: [peep-laja]
+workflow:
+  slug: find-whats-wrong-with-your-page-and-pick-tests
+  name: "Find what's wrong with your page and pick tests"
+  summary: "Give it your page and analytics. Get a research plan, ranked page problems and a check that you can test."
+  when: "your page converts poorly and you do not know what to fix or test first."
+  job: audit-landing-page
+  level: advanced
+steps:
+  - name: "Conversion research planner"
+    skill: conversion-research-planner
+    job: analysis
+    from: "Optimizing Optimization: opening keynote"
+    method: ["Check that analytics are set up and not double counting", "Find the pages and steps where people drop", "Review the key pages for clarity, relevance and friction", "Plan session replays and simple user tests for those pages", "Plan surveys or chats to learn why people hesitate", "Write the findings as issues, ready to be sorted"]
+    inputs: [web_page!, performance_sheet!, voc_reviews!]
+    outputs: [plan]
+    note: "A research order that finds where, what and why before you test anything"
+  - pause: "Do the research the plan lists: analytics, a walk-through and customer questions."
+  - name: "Landing page auditor"
+    skill: landing-page-auditor
+    job: page
+    from: "skill: landing-page-auditor"
+    method: ["Name the page's job and check the scent", "Read it as a glance, a skim and a doubt", "Check the phone basics", "Rank the fixes, quick wins first"]
+    inputs: [landing_page, brand_brain!]
+    outputs: [audit_report]
+    note: "Reads the finished page like a stranger and ranks what to fix before it goes live."
+  - name: "Page issue sorter"
+    skill: page-issue-sorter
+    job: analysis
+    from: "Optimizing Optimization: opening keynote"
+    method: ["List every issue with the proof for it", "Tag tracking faults first, since they break the data", "Tag obvious fixes to do now", "Tag unclear causes to investigate", "Turn the rest into a test idea with a reason it might work", "Rank by likely gain and effort"]
+    inputs: [audit_report]
+    outputs: [plan]
+    note: "Each one sorted into fix now, investigate, test or tracking, with a ranked order. Reads the audit report from the step before"
+  - pause: "Pull your visits and orders for the page you want to test."
+  - name: "A/B test traffic checker"
+    skill: ab-test-traffic-checker
+    job: analysis
+    from: "skill: ab-test-traffic-checker"
+    method: ["Work out the honest numbers", "Pick the smallest lift worth finding", "Size the test and give the verdict", "Set the rules for running it"]
+    inputs: [performance_sheet]
+    outputs: [audit_report]
+    note: "Says whether your traffic can prove the new page works and how many weeks that takes."

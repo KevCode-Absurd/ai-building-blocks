@@ -1,0 +1,130 @@
+new_slug: design-principles-checker
+name: "Design principles checker"
+summary: "Paste a spec, API or tool design. Get a score out of 100 against six design principles, with fixes."
+job: build-software
+thinking: high
+thinking_why: "It must judge a design against six principles with reasons, which needs careful reading."
+
+headline: "Design principles checker"
+subhead: Paste a spec, an API, a file format or the design of a tool. It checks the design against six principles, simplicity, modularity, tolerance, decentralisation, independent invention and least power, and hands back a score out of 100 with the reason for each result and what to change.
+
+explain: |
+  Designs that other people have to build on tend to fail in the same ways. They have too many basic parts, one hidden point everything depends on, or features that every other spec must then handle. Teams find this out after others have built on them, when changing it is expensive.
+
+  This skill counts the basic building blocks and what the design can do with them. It checks that parts are tight inside and loosely linked, looks for any single point of control, and asks if it could work beside a rival design made by someone else. It finds the least powerful form that still does the job, checks the design accepts what it can but sends only what is strict, and lists any extra feature that other specs would have to handle.
+
+when:
+  - You are about to publish a spec, an API or a file format that others will build on.
+  - You are choosing between two designs and want a clear way to compare them.
+  - A tool you built is getting hard to extend and you do not know why.
+
+you_give:
+  - The design, as a spec, API description, file format or tool overview
+  - What it is for and who builds on it (optional)
+  - A rival design to compare against (optional)
+you_get:
+  - A pass, partial or fail with reasons for each of the six principles
+  - A score out of 100 and how it was worked out
+  - Any single point of control, and the extra features that burden others
+  - Changes to make, in order
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the design in full, or the parts that others must build on.
+  - Say who builds on it and what could change in the future.
+  - Read the failed principles first, then the single points of control.
+  - Make the changes, then run it again and compare scores.
+
+how_it_works:
+  - title: Counts the building blocks
+    text: Lists the basic parts and what the design can do with them.
+  - title: Checks the joins
+    text: Checks that parts are tight inside and linked loosely, with simple interfaces.
+  - title: Hunts the single point
+    text: Looks for any one thing everything depends on.
+  - title: Tests a rival
+    text: Asks whether it would work beside a rival design that someone else invented.
+  - title: Finds the least power
+    text: Finds the least powerful form that does the job and prefers it.
+  - title: Checks tolerance
+    text: Checks that it accepts what it can and sends only what is strict.
+  - title: Lists the burden
+    text: Notes any extra feature that every other spec would have to handle.
+
+output_shape: |
+  THE DESIGN
+  <what it is, who builds on it>
+
+  SCORE: <n>/100
+  How it was worked out: <six principles, each full, half or none, shown>
+
+  SIMPLICITY: pass / partial / fail
+  <building blocks counted, reason>
+
+  MODULARITY: pass / partial / fail
+  <parts and interfaces, reason>
+
+  TOLERANCE: pass / partial / fail
+  <what it accepts, what it sends, reason>
+
+  DECENTRALISATION: pass / partial / fail
+  <single point of control, or none>
+
+  INDEPENDENT INVENTION: pass / partial / fail
+  <could it run beside a rival, reason>
+
+  LEAST POWER: pass / partial / fail
+  <least powerful form that works, reason>
+
+  BURDEN ON OTHERS
+  <extra features every other spec must handle>
+
+  CHANGES, IN ORDER
+  1. <change> | fixes: <principle>
+
+  MISSING / CHECKS MISSED
+  <lists>
+
+tweaks:
+  - what: Who builds on it
+    how: Name them. Burden and tolerance are judged from their side.
+  - what: A rival design
+    how: Paste one. The independent invention check is run against it.
+  - what: Future change
+    how: Say what could change next year. The modularity check tests that it can.
+  - what: What must stay strict
+    how: Name safety or legal parts. Tolerance never loosens them.
+
+judge:
+  - Every principle has a pass, partial or fail with a reason.
+  - Any single point of control is named.
+  - The least powerful option is considered.
+  - Extra features that burden other specs are listed.
+  - Findings say what to change.
+
+test:
+  - Run it on a design you know is good. The score should be high.
+  - Run it on a design you know caused trouble. See if it names the cause.
+  - Run it twice. The pass or fail marks should match.
+  - Make the changes and check that the score goes up as expected.
+
+improve:
+  - Add principles your field cares about, such as privacy or cost, as extra checks.
+  - Add examples of single points of control in your field to step 3.
+  - Keep a record of scores for each version of your design.
+  - Pair it with "Breaking change reviewer" before you ship any change to it.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Judging a design against fixed principles and writing the reasons is text work any strong chat AI does."}
+    - {name: "A diagram tool", why: "Drawing the parts and links makes single points of control easy to see."}
+  inputs:
+    - "The full spec or API description"
+    - "A list of who builds on it"
+    - "A rival design to compare"
+
+terms:
+  - term: Least power
+    meaning: Choosing the simplest form that does the job, so more tools can read and reuse it.
+  - term: Tolerance
+    meaning: Being forgiving in what you accept and strict in what you send out.

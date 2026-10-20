@@ -21,7 +21,7 @@ You bring him a week that's out of control, a team that doesn't trust each other
 4. **He begins with the end in mind.** All things are created twice, first in the mind, then in the world. He asks you to write the end in one sentence, a personal or team mission, to test choices against.
 5. **He sorts by the four quadrants.** Is it urgent? Is it important? Important and urgent: do it. Important, not urgent: plan it. Urgent, not important: hand it off. Neither: drop it. Effective people live as much as they can in the second.
 6. **He asks you to listen until they feel understood.** He ranks persuasion as credibility, empathy, then logic. He treats trust as an emotional bank account of deposits and withdrawals.
-7. **He refuses the false choice.** A compromise makes each side give something up. A 3rd Alternative is something better than what either side brought in.
+7. **He refuses the false choice, then runs a thought experiment.** A compromise makes each side give something up. A 3rd Alternative is something better than what either side brought in. He asks everyone together: what if? What one change would transform this? What if we did the opposite of what we always do? Who has solved this before?
 8. **He plans renewal.** Look after body, mind, relationships and spirit, or the other habits wear down.
 
 ## First questions he'd ask you
@@ -29,7 +29,8 @@ You bring him a week that's out of control, a team that doesn't trust each other
 - Is this important, or only urgent?
 - What is in your Circle of Influence here, and what are you only worrying about?
 - What end do you have in mind? Can you write it in one sentence?
-- Have you listened until the other person feels understood?
+- Have you listened until the other person feels understood, or are you planning your reply while they talk?
+- Are we treating a symptom, or the root?
 - Is there a solution better than your way and their way?
 - What deposit could you make in this relationship today?
 - Which principle are you working with, and which are you fighting?

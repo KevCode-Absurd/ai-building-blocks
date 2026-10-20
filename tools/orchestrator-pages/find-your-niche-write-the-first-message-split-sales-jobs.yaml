@@ -1,0 +1,72 @@
+new_slug: find-your-niche-write-the-first-message-split-sales-jobs
+name: Find your niche, write the first message, split sales jobs
+summary: Give it your offer and how customers found you. Get a niche verdict, a stranger-friendly message and a sales role split.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It judges your niche on hard counts and then writes for a cold reader. Give it your strongest model.
+headline: Find your niche, write the first message and split sales jobs
+subhead: Give it your offer and a list of how each paying customer found you. It counts the ones who came cold, tells you if your niche is ready, and writes a first message a stranger can read in seconds. Then it picks which sales job to hand off first.
+explain: |
+  Outbound sales stalls for three reasons. The offer is spread over too many customers, so the message fits none of them. The first message is long and clever, and a stranger gives it five seconds. And one person does prospecting, closing and account care at once, so none of it gets done well.
+
+  The steps go in the order that fixes them. First it counts the customers who found you cold and decides whether your niche is ready or still too wide. Then it writes a short first message for that niche, with a referral ask in place of a pitch. Last, it lists every sales job and picks the first one to hand off, with a clear line for what counts as a qualified lead. The order comes from From Impossible to Inevitable by Aaron Ross and Jason Lemkin, plus a note on specialised sales teams based on an interview with David Skok.
+when:
+  - You want outbound sales to work and need to know who to write to first.
+  - Your leads come from friends, past clients and referrals, and you cannot tell whether strangers would buy.
+  - You are doing every sales job yourself and need to know which one to give away first.
+you_give:
+  - What you sell, at what price and to whom
+  - A list of your paying customers and how each one found you
+  - Reviews or call notes (optional)
+  - The person, role or company you want to reach (optional)
+  - Who does each sales job today and roughly how long each takes
+  - Numbers such as leads per month (optional)
+you_get:
+  - A count of customers who found you cold, a one-line niche statement and a verdict with the next step
+  - A short first message, a 30-word email and a 15-second call opening, with a polite way out
+  - A table of your sales jobs, the first job to split out, a rule for what counts as qualified and two or three result numbers per role
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Share your offer and your customer list with how each one found you. It checks the niche first.
+  - Check the local rules on email and cold calls before you send the message. It lists the rules to check.
+how_it_works:
+  - title: Check the niche
+    text: Counts the customers who found you cold, checks the warning signs, and writes one sentence for who you serve and what you fix.
+  - title: Write the first message
+    text: Takes the niche from the step before and writes a short message for a stranger, with one hook, one easy reply and a polite way out.
+  - title: Split the sales jobs
+    text: Takes the plan from the step before, lists who does which sales job, and picks the first one to hand off with a rule for what counts as qualified.
+output_shape: |-
+  STEP 1: NICHE CHECK
+    Cold customers counted | warning signs | niche sentence | keep, pause or drop for each offer | verdict and next step
+
+  STEP 2: FIRST MESSAGE
+    Main message under 60 words | 30-word email | 15-second call opening | hook and proof | polite way out | rules to check
+
+  STEP 3: SALES ROLE SPLIT
+    Jobs and time shares | first job to split | who owns it | qualified lead rule | result numbers
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How honestly you count cold customers
+    how: Leave out friends, past clients and referrals. A short, honest count gives a better verdict than a long one that flatters you.
+  - what: How many offers you list
+    how: Each extra offer is tested against the niche sentence. Listing everything lets it drop what blurs the message.
+  - what: Who you say the first message is for
+    how: A named role at a type of company gives a sharper message than "small businesses". Name the one person who feels the problem.
+judge:
+  - The cold customer count leaves out friends, past clients and referrals.
+  - The niche sentence names one pain, one customer and a way to find them again.
+  - The first message has one idea and one easy reply, and it does not promise more than you can show.
+  - The split names which job goes first, who qualifies the leads and what to track, and counts results, not calls.
+  - Nothing about your customers or results is invented.
+test:
+  - Give it a customer list where every customer came by referral. It should say the niche is not proven and name where to build momentum.
+  - Read the first message out loud. A stranger should get the point in about ten seconds and know how to reply.
+  - Give step 3 a one-person sales setup. It should pick one job to split first, not four.
+improve:
+  - Save the niche sentence into your brand file, so your site, ads and emails all say the same thing.
+  - Add examples of cold messages that got replies, so step 2 can match the tone that worked.
+  - Run step 1 again once you reach ten cold customers, and set the next target as it suggests.

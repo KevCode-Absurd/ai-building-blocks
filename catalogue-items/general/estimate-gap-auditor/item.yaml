@@ -1,0 +1,18 @@
+slug: estimate-gap-auditor
+name: "Estimate gap auditor"
+summary: "Paste two teams' odds for the same thing. Get the gap, what each side bases it on and a quick sanity estimate."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [richard-feynman]
+credits:
+  - {title: "Appendix F: Personal observations on the reliability of the Shuttle", by: "Richard P. Feynman, Rogers Commission report, 1986", url: "https://www.nasa.gov/history/rogersrep/v2appf.htm", used: "Comparing two sets of odds side by side, asking how each was reached, checking against past cases, and treating warning signs as findings, not margins"}

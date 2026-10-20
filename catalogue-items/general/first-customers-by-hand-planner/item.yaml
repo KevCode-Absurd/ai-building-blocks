@@ -1,0 +1,35 @@
+slug: first-customers-by-hand-planner
+name: First customers by hand planner
+summary: Paste your product and the first customers you want. Get a plan to win them one by one and what to learn.
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - type: persona
+    required: false
+  - type: brief
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: plan
+  - type: lessons_register
+origin: rebuilt
+version: 1.0.0
+minds:
+  - paul-graham
+  - sahil-lavingia
+credits:
+  - title: Do Things that Don't Scale
+    by: Paul Graham
+    url: https://paulgraham.com/ds.html
+    used: Recruiting the first users one at a time, giving them far more service than a big company would, and doing by hand what you plan to automate
+  - title: The Minimalist Entrepreneur
+    by: Sahil Lavingia
+    url: https://www.minimalistentrepreneur.com/
+    used: Starting with a community you belong to, working backwards from the income you need, and running the product by hand first
+  - title: Reflecting on My Failure to Build a Billion-Dollar Company
+    by: Sahil Lavingia
+    used: Why a smaller, steady business built on real customers can work better than chasing scale

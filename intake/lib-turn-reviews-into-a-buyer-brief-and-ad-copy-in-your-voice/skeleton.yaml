@@ -1,0 +1,47 @@
+# Workflow skeleton chaining existing library skills (docs/INTAKE.md).
+id: lib-turn-reviews-into-a-buyer-brief-and-ad-copy-in-your-voice
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: turn-reviews-into-ad-copy-in-your-brand-voice
+  name: "Turn reviews into ad copy in your brand voice"
+  summary: "Give it customer reviews and your brand file. Get a buyer brief, an ad angle, fact-based ad copy and a voice check."
+  when: "you have customer words and need ad copy that sounds like your brand and rests on real facts."
+  job: understand-customers
+  level: intermediate
+steps:
+  - name: Write the buyer brief
+    skill: buyer-brief-writer
+    job: copy
+    from: "skill: buyer-brief-writer"
+    method: ["Find the moment they started looking", "Sort evidence into the four forces", "Place what the buyer already knows", "Write the job line and quote their words"]
+    inputs: [voc_reviews, brand_brain!]
+    outputs: [brief]
+    note: "Reads the reviews and writes who the buyer is, what pushes them and what holds them back."
+  - name: Pick the ad angle
+    skill: ad-angle-planner
+    job: copy
+    from: "skill: ad-angle-planner"
+    method: ["Place the promise by how many others make it", "Pick the buyer's level and stage", "Copy the matching argument into the brief", "Note the assumptions"]
+    inputs: [brief, brand_brain!]
+    outputs: [brief]
+    note: "Takes the buyer brief and chooses the argument an ad should make for that buyer."
+  - name: Write fact-based copy
+    skill: fact-based-ad-copy-writer
+    job: copy
+    from: "skill: fact-based-ad-copy-writer"
+    method: ["Start with the buyer's situation", "Find the one fact that answers their doubt", "Say what the fact changes for them", "Edit each line for the decision"]
+    inputs: [brief, product_data]
+    outputs: [ad_copy]
+    note: "Writes ad copy from the angle in the brief and the product facts, one fact per ad."
+  - name: Check it sounds like your brand
+    skill: brand-voice-editor
+    job: copy
+    from: "skill: brand-voice-editor"
+    method: ["Read the voice rules and never-say list", "Flag lines that break them", "Fix with the customer's own word first", "Score the share of lines in your voice"]
+    inputs: [script!, ad_copy!, brand_brain]
+    outputs: [audit_report]
+    note: "Checks the ad copy line by line against your brand voice and fixes the lines that miss."

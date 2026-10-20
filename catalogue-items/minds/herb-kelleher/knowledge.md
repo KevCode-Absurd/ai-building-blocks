@@ -75,6 +75,32 @@ How he applied it: in 1992 a trademark dispute over the slogan "Just Plane Smart
 - Fix problems person to person, not with new rules [S3].
 - Act first, refine as you go [S2].
 
+## Real decisions
+
+### Fighting four years of lawsuits to fly (1967 to 1971)
+
+After he and Rollin King incorporated the airline in 1967, rival carriers sued to stop it [S1]. Key court wins came in December 1970 and June 1971, and the first flights took off on 18 June 1971 [S1]. He chose to keep going through the delay rather than give up the plan of cheap flights linking three Texas cities [S1].
+
+### One plane type, point to point, fast turns
+
+Southwest flew only Boeing 737s for most of its history, flew point to point instead of through hubs, and aimed for gate turnarounds of about 15 minutes [S1][S4][S5]. He said a plane earns money only in the air [S3]. Union contracts let staff cross over between jobs, and he personally approved spending over $1,000 [S4].
+
+### Settling a slogan dispute with an arm-wrestle (1992)
+
+When another company claimed the slogan "Just Plane Smart," Kelleher settled it by arm-wrestling the other firm's boss in a match billed as "Malice in Dallas" [S1]. He lost, Southwest kept the slogan and money went to charity [S1].
+
+### Adding flights, not raising fares
+
+When planes filled, Southwest added flights rather than raising fares [S2]. His reason was that low fares create new travellers, lifting traffic on a route by 100% to 300% in a year [S3]. He preferred a small profitable share to a large losing one [S3].
+
+### Replacing rule books with guidelines
+
+He described swapping thick operations manuals for short guidelines for leaders, which said they could be broken when needed [S3]. When a service problem came up he preferred to talk to the employee involved rather than write a new rule for everyone [S3].
+
+### Planning for bad years, and protecting jobs
+
+He credited the airline's record of no furloughs to keeping a strong balance sheet and not over-hiring in a boom [S3]. After the September 11 attacks, staff helped stranded crews and passengers [S3]. He stepped down as CEO in March 2001 and as chairman in 2008 [S1].
+
 ## Where he stood
 
 **Who comes first, customers or employees?** Employees. Happy staff make happy customers, who make happy shareholders [S2].

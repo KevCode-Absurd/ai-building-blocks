@@ -1,0 +1,132 @@
+new_slug: small-test-and-rollout-planner
+name: "Small test and rollout planner"
+summary: "Paste your offer, price and costs. Get a small test, the numbers to hit and the rollout rule."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It works sums and sets rules from them, but the method is fixed."
+
+headline: "Small test and rollout planner"
+subhead: "Give it your offer, price and costs, and the group you will test. It works the sums, sets the response that breaks even and sizes a test you can afford to lose. You get the numbers to hit and a rule for rolling out or stopping."
+
+explain: |
+  A big launch on a guess can cost more than a business can lose. A small test costs little and tells you the truth, if you decide what the numbers must be before you run it. People often skip the sums and judge by feel, so an offer that loses money looks like a success because it got attention.
+
+  This skill works the sums first: how many people, what it costs to reach them, what each order earns after delivery, and the response needed to break even. It sets a test small enough to lose, changes one thing at a time, and compares the result to the break-even line. It then writes the rules in numbers: when to run a larger second test, when to roll out, and when to stop.
+
+when:
+  - "You are about to buy ads, a list or a mailing and want to test first."
+  - "You do not know what response you need to break even."
+  - "A test is over and you cannot decide whether to scale it."
+
+you_give:
+  - "Your offer, price and terms"
+  - "What it costs to make and deliver each order"
+  - "The group you will test, and how much you can afford to lose"
+  - "Past response numbers (optional)"
+you_get:
+  - "The sums, each figure sourced or labelled as an assumption"
+  - "The break-even response"
+  - "A test size and the one thing to change"
+  - "A result table and rules for second test, rollout or stop"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your offer with its price and terms."
+  - "List your costs for each order, including delivery and returns."
+  - "Say which group you will test and how much you can lose."
+  - "Run the test and fill the result table."
+  - "Bring the results back to decide the next step."
+
+how_it_works:
+  - title: "Names the group and offer"
+    text: "Fixes who is tested and what is offered."
+  - title: "Works the sums"
+    text: "Calculates cost per thousand, profit per order and the break-even response."
+  - title: "Sizes the test"
+    text: "Sets a size you can lose, with about ten orders expected at break-even."
+  - title: "Changes one thing"
+    text: "Tests one variable and holds the rest fixed."
+  - title: "Sets the result table"
+    text: "Gives you a sheet to fill in against the break-even line."
+  - title: "Writes the rules"
+    text: "States in numbers when to scale, change once, or stop."
+  - title: "Plans the fall-back"
+    text: "Names the next idea if this one fails."
+
+output_shape: |
+  GROUP AND OFFER
+  <group>; <offer, price, terms>
+
+  THE SUMS
+  Reach: <n> (<source or assumption>)
+  Cost per thousand: <amount>
+  Profit per order: <price> - <delivery cost> = <amount>
+  Break-even response: <percent>, shown as <calculation>
+  Low / middle / high case: <responses>
+
+  THE TEST
+  Size: <n>   Money at risk: <amount>
+  Orders expected at break-even: <n>
+  One change: <what>   Fixed: <list>
+
+  RESULT TABLE
+  Reached | Responses | Orders | Revenue | Costs | Profit | vs break-even
+
+  RULES
+  Above <x>: <second test of size n>
+  Between <x> and <y>: <change one thing, run once>
+  Below <y>: stop
+
+  FALL-BACK
+  <next idea>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "Your real costs"
+    how: "Add delivery, fees and returns. The break-even line moves a lot when they are included."
+  - what: "Past response"
+    how: "Give response rates for similar offers. Without them, the sums run on labelled assumptions in three cases."
+  - what: "Your loss limit"
+    how: "State the most you can lose. The test is sized to it."
+  - what: "What you test"
+    how: "Name the one thing you want to learn. It will not test more than one."
+
+judge:
+  - "The break-even response is a number, and you can check the sum."
+  - "You could lose the whole test and be fine."
+  - "Only one thing differs between runs."
+  - "The stop rule is written before the test."
+  - "Delivery and returns are in the costs."
+
+test:
+  - "Give it an old offer where you know the real result. Check the break-even line would have told you the truth."
+  - "Recalculate one sum by hand."
+  - "Run it twice with the same inputs. The break-even response should match."
+  - "After a real test, check if you followed the rule or argued yourself out of it."
+
+improve:
+  - "Add your usual extra costs, such as payment fees, to step 2."
+  - "Change the ten-orders rule in step 3 if your market needs a different minimum."
+  - "Save each test and its result in your brand file so you build a record."
+  - "Pair it with Hungry audience ranker first, and Reason-why deal writer if the offer needs work."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Showing the sums step by step is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Lets you check the sums and keep the result table for each test."}
+  inputs:
+    - "Response rates from past similar offers"
+    - "Your exact delivery, fee and refund costs"
+    - "The price of reaching the group (cost per thousand or per click)"
+    - "The test group chosen by Hungry audience ranker"
+
+terms:
+  - term: "Break-even response"
+    meaning: "The share of people reached who must buy for the money in to equal the money out."
+  - term: "Rollout"
+    meaning: "Selling to the whole audience after a test has shown the offer pays."

@@ -1,0 +1,116 @@
+new_slug: test-list-writer
+name: "Test list writer"
+summary: "Paste the change you want to make. Get cases to test, smallest first, before any code."
+job: build-software
+thinking: medium
+thinking_why: "It lists and orders cases with a few rules, which takes care but not deep reasoning."
+
+headline: "Test list writer"
+subhead: Describe a change you want to make to software, a spreadsheet, a form or a process. It states the change in one line, lists every case it must handle including old behaviour that must stay, and orders them smallest first so you start with a case you can finish today.
+
+explain: |
+  Most changes start with code or edits and discover the edge cases later, by breaking things. A list of cases made first shows you the shape of the work before you have spent anything on it, and it gives you a clear next step each time you sit down.
+
+  This skill states the change in one line, then lists the cases the change must handle, including the edge cases and the old behaviour that must keep working. It keeps how-to-build choices off the list, because the list is about what should happen. It orders the cases so the smallest, most teaching one comes first and marks which one to turn into a real test now. As new cases appear, you add them. As cases pass, you cross them off.
+
+when:
+  - You are about to change something that works and you are afraid of breaking it.
+  - A task feels huge and you do not know where to start.
+  - You are about to ask an AI to write code and want to tell it exactly what must be true.
+
+you_give:
+  - The change you want to make, in your own words
+  - What it does today, and any code or notes (optional)
+  - Cases you already know about, such as past bugs (optional)
+you_get:
+  - The change in one line
+  - A list of cases, each describing behaviour and not how to build it
+  - The order to work through them, smallest first
+  - The one case to turn into a real test now
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the change in a few sentences and say what it does today.
+  - Add any known odd cases, such as old bugs or special customers.
+  - Take the first case on the list and turn it into a real test or check.
+  - Come back to add new cases and cross off the ones that pass.
+
+how_it_works:
+  - title: States the change
+    text: Writes the behaviour change in one line so everyone agrees what is being done.
+  - title: Lists the cases
+    text: Lists what the change must handle, including edge cases and old behaviour that must stay.
+  - title: Keeps design off the list
+    text: Removes any case that says how to build it and keeps only what should happen.
+  - title: Orders by size
+    text: Puts the smallest, most teaching case first and the hardest last.
+  - title: Marks the next test
+    text: Names the one case to turn into a real test now.
+  - title: Keeps the list alive
+    text: Shows how to add new cases as they appear and cross off those that pass.
+
+output_shape: |
+  THE CHANGE
+  <one line: what behaves differently after>
+
+  CASES, IN ORDER
+  1. <given this, when that, then this> | size: <small/medium/large>
+  2. ...
+  Stays working: <old behaviour that must not change>
+  Edge cases: <empty, repeated, too large, wrong order>
+
+  START WITH
+  <case number, and why it is the smallest useful one>
+
+  HOW TO KEEP THE LIST
+  <add new cases at the end, cross off passed cases>
+
+  MISSING
+  <questions that would add cases>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: What it does today
+    how: Describe it. Cases that keep old behaviour come from this.
+  - what: Known problems
+    how: List past bugs and odd customers. Each becomes a case.
+  - what: How big a sitting is
+    how: Say how long you have. The first case is sized to finish in one go.
+  - what: Where it will be tested
+    how: Name your tool or say "by hand". Cases are written so either works.
+
+judge:
+  - Every case describes behaviour, not how to build it.
+  - Edge cases and keeps-working cases are included.
+  - The first case is small enough to finish in one sitting.
+  - No case is a vague area such as "handle errors".
+  - Each case could clearly pass or fail.
+
+test:
+  - Run it on a change you already made. See if it lists the case that gave you trouble.
+  - Give the list to someone else. Ask if they could build the change from it alone.
+  - Run it twice. The first case and the main edge cases should repeat.
+  - Work through the first case and check that it really took one sitting.
+
+improve:
+  - Add the edge cases your field always hits, such as time zones, duplicates or blank fields, to step 2.
+  - Add a size scale that matches your team, so the order matches how you work.
+  - Keep the list in a file with the code and update it as you go.
+  - Pair it with "Structure and behaviour change splitter" to plan the tidy-ups.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing and ordering cases is text work any strong chat AI does."}
+    - {name: "Your test runner or a checklist", why: "Each case becomes a real test or a tick box you can run."}
+  inputs:
+    - "The current code or process notes"
+    - "A bug list or support tickets for this area"
+    - "Examples of real inputs"
+
+terms:
+  - term: Test list
+    meaning: A list of behaviours the change must show, written before the work starts.
+  - term: Edge case
+    meaning: An unusual input at the limit of what the change should handle, such as empty or very large.

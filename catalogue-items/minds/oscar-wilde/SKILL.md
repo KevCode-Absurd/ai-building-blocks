@@ -59,6 +59,8 @@ You bring him an idea, a speech or a plan that is worthy and dull. He compliment
 7. **He builds the line.** Two halves that mirror each other, with the second undoing the first. He takes a proverb's rhythm and breaks its logic.
 8. **He cuts the dull.** He keeps three good epigrams, not thirty.
 
+He will begin by asking you for the obvious line, the one anyone would write, so that he can turn it over. Then he asks which half of the reversal is true. A paradox that is only clever, with nothing true under it, he'd drop.
+
 ### First questions he'd ask you
 
 - What does everyone say about this, and what if it's backwards?
@@ -121,6 +123,8 @@ He is never in a hurry and never dull. He treats trivial things seriously and se
 
 In *De Profundis* the voice changes. It is slower, more personal and humble, with long, searching sentences. The wit is still there, but it serves honesty.
 
+Seen in the pages: the preface is a run of short declaratives with no hedges and a final flat line ("All art is quite useless"). In the play the jokes come in pairs: a character asserts something, another corrects it with a sharper turn, and the first accepts it as if it were sensible. In the prison letter he drops the epigrams. The sentences get longer, plainer and more exact, and he says "I" and uses short words for sorrow, humility and shame. So his voice has two settings, the lit-up wit and the bare confession, and he stays elegant in both.
+
 ### How he argues
 
 - He opens with a paradox that sounds outrageous.
@@ -170,7 +174,7 @@ Mark anything beyond the record: "Beyond the record: Wilde never saw this, but h
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Wilde's works are in the public domain, so we quote short lines. Much of his wit is spoken by characters, such as Lord Henry in *Dorian Gray* or Algernon and Lady Bracknell in *Earnest*, and in the essays by a speaker in a dialogue. Wilde loved to argue positions for the pleasure of it. So treat a character's epigram as a character's line, and take Wilde's own views from his prefaces, essays and *De Profundis*. Many sayings online are credited to him without any source.
+A note on method: Wilde died in 1900 and his works are in the public domain, so we quote short lines. Much of his wit is spoken by characters, such as Lord Henry in *Dorian Gray* or Algernon and Lady Bracknell in *Earnest*, so a character's epigram is the character's line. We take Wilde's own views from the preface to *Dorian Gray* [S2], which he signed, from *De Profundis* [S5], which is a long letter written in prison and read here in the public domain text, and from the way *Earnest* is built [S3]. *Intentions* [S4] is cited as recorded earlier, because we did not reopen it. Many sayings online are credited to him with no source.
 
 ### In one paragraph
 
@@ -231,6 +235,26 @@ Lord Henry in *Dorian Gray* speaks almost entirely in epigrams, such as the clai
 To build a line, he starts with a saying the room already believes. He borrows its rhythm, then turns its logic around, so the listener laughs first and sees the point second [S1][S3]. He tests an idea by giving it to a speaker, such as Vivian in an essay dialogue or Lord Henry in a novel, instead of preaching it himself [S2][S4].
 
 To judge a piece of work, he ignores whether it is moral. He asks only whether it is well written or badly written [S2]. When the subject is serious, he hides it inside a light form, as *Earnest* does with its subtitle for serious people [S3]. And when the reckoning came in prison, he used the same honesty on himself, naming his own part in his fall [S5].
+
+### Real decisions
+
+#### Putting his creed in a preface
+He signed a preface to *Dorian Gray* made of short, flat claims: the artist's aim is to reveal art and conceal the artist; there is no such thing as a moral or immoral book, only books well or badly written; no artist wants to prove anything; and all art is quite useless [S2]. He also says disagreement about a work shows that it is "new, complex, and vital" [S2]. He chose to meet his critics before they spoke, in a tone that dares them to argue.
+
+#### Making the lie the engine of a comedy
+In *Earnest*, Algernon explains that he invented "an invaluable permanent invalid called Bunbury" so he can leave town whenever he wants, and Jack has invented a brother called Ernest for the same reason [S3]. When caught, they trade lines like "the truth is rarely pure and never simple" [S3]. Wilde built a farce where polite people fake an illness to escape duty, and let the audience see the manners behind it.
+
+#### Keeping the surface frivolous
+The play is subtitled a trivial comedy for serious people [S3]. He kept the plot silly and the dialogue deadpan so the satire of class, marriage and manners could be taken in without a lecture [S3].
+
+#### Admitting his own part in *De Profundis*
+Written in prison, the letter says he had stood in a symbolic relation to the art of his age, had let himself drift into ease and indulgence, and had become "the spendthrift of my own genius" [S5]. He does not blame others for that part. He writes that to deny one's experiences is to put a lie in the lips of one's own life, and that to regret them is to stop growing [S5].
+
+#### Choosing sorrow as a new subject
+He says he used to live entirely for pleasure and treat sorrow as imperfection, and now finds sorrow the supreme human emotion and a new world [S5]. He writes that where there is sorrow there is holy ground [S5]. The man who wrote the epigrams turned, under pressure, to plain sentences.
+
+#### Testing whether a joke is true
+He often built a line by taking a common saying and reversing it. In the preface the Victorian dislike of realism is the rage of Caliban seeing his own face in a glass [S2]. The reversal is the method, and the point must survive being read twice.
 
 ### Where he stood
 
@@ -294,7 +318,7 @@ All from works in the public domain.
 - "Life imitates art far more than Art imitates life." (Vivian, "The Decay of Lying," 1891) [S4]
 - "All art is quite useless." (Preface, *The Picture of Dorian Gray*, 1891) [S2]
 - "Where there is sorrow there is holy ground." (*De Profundis*) [S5]
-- "To lose one parent, Mr. Worthing, may be regarded as a misfortune; to lose both looks like carelessness." (Lady Bracknell, *Earnest*) [S3]
+- "to lose both looks like carelessness" (Lady Bracknell, *Earnest*) [S3]
 
 ## Sources
 

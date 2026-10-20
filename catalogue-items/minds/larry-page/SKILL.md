@@ -175,7 +175,7 @@ Beyond the record: mark anything he never addressed in one line, for example "Be
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Larry Page is alive, and views can change. This data set comes mainly from Google's founders' letters: the 2004 letter he wrote with Sergey Brin when Google went public [S1], his 2012 update as CEO [S2], his 2013 letter [S3] and his 2015 letter creating Alphabet [S4]. It adds public reference pages [S5][S6]. Treat each view as "as of" the year of its letter. He stepped down as Alphabet's CEO in December 2019 and has said little in public since [S5]. Nothing here tells you what he thinks about events after that.
+Larry Page is alive, and views can change. This data set comes mainly from Google's founders' letters: the 2004 letter he wrote with Sergey Brin when Google went public [S1], his 2012 update as CEO [S2], his 2013 letter [S3] and his 2015 letter creating Alphabet [S4]. It adds public reference pages [S5][S6]. The record of what he decided comes from the Wikipedia biography, which sits at the level of facts and context, not his reasoning. The letters on disk for this rebuild are short excerpts, so quoted wording stays within the earlier reading of the letters. Treat each view as "as of" the year of its letter. He stepped down as Alphabet's CEO in December 2019 and has said little in public since [S5]. Nothing here tells you what he thinks about events after that.
 
 ### In one paragraph
 
@@ -246,6 +246,34 @@ How he applied it: Sundar Pichai became Google's CEO in 2015, and replaced Page 
 - Keep most effort on the core, and place a few strange side bets [S1].
 - Close what isn't working so you can focus [S2].
 - Give each big bet its own owner and structure [S4].
+
+### Real decisions
+
+These are choices from the record, mostly as told by the Wikipedia biography [S5]. His own letters give the reasons where they cover the same ground.
+
+#### Trying to run engineers without managers (2001)
+
+In his first spell as CEO, Page tried to remove Google's project managers. Every engineer would report up through one VP of engineering to him. His stated reason was that he did not like people without technical knowledge supervising engineers [S5]. He also wrote down his management tenets as a reference for his team [S5].
+
+#### Stepping aside for a hired CEO (2001)
+
+Google's two big investors pressed Page to let a more experienced leader build a management team. He came round after talking with other technology CEOs, including Steve Jobs and Andy Grove of Intel. Eric Schmidt took the CEO job in August 2001 and Page became president of products [S5].
+
+#### Buying Android on a small cheque (2005)
+
+Page led the $50 million purchase of Android because he wanted Google to reach people on handheld computers anywhere. Schmidt was not told beforehand, but did not object given the size [S5]. By 2012 Android was being switched on over 850,000 times a day [S2]. He pushed later to protect it, announcing the $12.5 billion Motorola Mobility deal in August 2011 mainly to get patents against lawsuits [S5].
+
+#### Closing products and unifying the rest (2011 to 2013)
+
+On his return in 2011 Page cut products so the company would not spread thin. His 2012 letter counts more than 30 closed or merged; the biography says at least 70 were shut down by March 2013 [S2][S5]. The rest were redesigned under a project codenamed Kennedy, so they looked and worked as a set [S5].
+
+#### Zero tolerance for fighting (2011)
+
+In the early days Page had used hard arguments with Brin as the model for senior staff. After his years away he decided that big goals needed a calm team, and he set a rule of zero tolerance for fighting. He also formed a group of senior vice presidents, the L-Team, who worked near him [S5].
+
+#### Taking himself out of daily product decisions (2014 to 2015)
+
+In October 2014 he restructured so he no longer ran daily product choices, leaving the core to Sundar Pichai while he worked on later bets such as Google X, Calico and Nest [S5]. In August 2015 he made Alphabet, so unrelated companies could run on their own with strong CEOs [S4][S5]. His stated reason was management scale: run things independently that are not very related [S5].
 
 ### Where he stood
 

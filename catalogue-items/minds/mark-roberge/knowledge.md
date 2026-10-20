@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Mark Roberge is alive, and views can change. Everything below comes from two transcripts of him talking (a 2020 Intercom interview and a SaaStr question-and-answer session), his HubSpot and Stage 2 Capital bios, and three write-ups of his book and talks by others. We could not find his birth year in our sources. His books, *The Sales Acceleration Formula* and *The Science of Scaling*, are not online, so we use them only through those summaries. Treat each view as "as of" about 2019 to 2022. Nothing here tells you what he thinks about events after that. He now invests in startups, and here he explains frameworks only, never which companies to back.
+Mark Roberge is alive, and views can change. Everything below comes from his own first chapter, two transcripts of him talking (a 2020 Intercom interview and a SaaStr question-and-answer session), his HubSpot and Stage 2 Capital bios, and three write-ups of his book and talks by others. We could not find his birth year in our sources. The first chapter of *The Sales Acceleration Formula* (2015) is available as a publisher excerpt, and we read it in full [S8]. The rest of that book and *The Science of Scaling* are not online, so we know them only through summaries. Treat each view as "as of" about 2019 to 2022. Nothing here tells you what he thinks about events after that. He now invests in startups, and here he explains frameworks only, never which companies to back.
 
 ## In one paragraph
 
@@ -16,7 +16,11 @@ Roberge argues that a data-driven, repeatable sales engine is a lasting edge, be
 
 How he applied it: when a client blamed marketing for a sales drop, he checked a long-serving rep with steady results. If that rep was still on target, the problem was more likely hiring, onboarding or leads than the market or the product [S2].
 
-### Hire for coachability, and test your guess
+### Engineer your hiring formula, and hire for coachability
+
+In chapter 1 of his book, Roberge says his early recruiting failed in a useful way. He chased people who had topped the table at bigger firms, and some did badly at HubSpot. Their strength was fast, high-activity calling in a market where buyers already knew why they needed the product. HubSpot in 2007 was an educating sale with an unknown brand [S8]. His conclusion: the ideal formula differs for every company, but the process of building it is the same [S8]. Step 1 is a theory of the traits that predict success, each with a written definition and a 1 to 10 scale. Step 2 is a plan to test each trait, such as behavioural questions, role plays, a pre-interview exercise or reference checks. Step 3 is to score every candidate on a simple scorecard, and he did it in a spreadsheet, saying the discipline mattered more than the tool. Step 4 is to go back to the scorecards of your best and slowest hires, raise the weight of traits the winners share, cut the ones that do not matter, and look for traits you missed [S8].
+
+How he applied it: after about a year of hiring he had enough data to run a regression of scorecard traits against later sales results, and the team reran it every 6 to 12 months [S8]. In that first model, traits long linked to pushy selling, such as aggression and objection handling, had the weakest link to success. Intelligent, helpful people did best. He read this as buyers having more power than sellers once the web gave them information [S8]. He also said that looking back at only two or three hires can teach you something [S8].
 
 His hiring formula starts with a guess about which traits predict success, tests them in interviews with a scorecard, then checks the guess against how hires actually perform after about six months [S7]. At HubSpot the five traits were coachability, curiosity, prior success, intelligence and work ethic [S6][S7]. He said coachability was the trait he looked for above all, ahead of industry or sales experience [S2].
 
@@ -65,7 +69,7 @@ Roberge advised splitting inbound and outbound lead roles, because salespeople w
 How he applied it: he had leaders present each month to a small internal board of the CEO, CFO, head of sales and head of marketing, and organised teams by small, mid-size and large customers [S2].
 
 ## How he decides
-
+- Choose the one fire worth putting out first. He picked hiring, because great training could not rescue a weak team, and a strong team finds a way [S8].
 - Measure first. Lean on the numbers over gut feel [S1].
 - Prove retention before you scale [S1].
 - Set a leading sign you can check in 30 to 60 days [S1].
@@ -73,6 +77,28 @@ How he applied it: he had leaders present each month to a small internal board o
 - Coach one skill a month [S2].
 - Check what the pay plan rewards [S5].
 - Plan for turnover, ramp time and lead limits [S2].
+
+## Real decisions
+
+### Betting his first months on hiring
+
+In 2007 Roberge was HubSpot's first sales hire and signed 23 customers in his first month [S8]. The to-do list to scale the team was endless, and doing everything well would have meant roughly a 150-hour week against the 80 he could give [S8]. He asked which single area he could make world class, and picked sales hiring. His reason was that a team of top performers wins under any conditions, while excellent coaching cannot make up for a mediocre team [S8]. He also noted that many executives pour energy into closing one big deal and wing their own recruiting, which he compared to winning a battle and losing the war [S8].
+
+### Dropping the "top dog" hiring bet
+
+Some of his earliest hires had been top performers at other firms, and he recruited them hard with lunches and dinners. Several did not become top performers at HubSpot [S8]. He studied why, found the mismatch between their strengths and HubSpot's sales context, and rebuilt his scorecard around what worked there [S8].
+
+### Rewriting the pay plan after churn rose
+
+The first commission plan paid $2 for every $1 of monthly recurring revenue, with a clawback if the customer left in four months. Sales grew, but churn rose [S5]. He found churn varied about tenfold between reps, so he paid by churn quartile, $4 down to $1 per dollar, and churn fell by 70% in two quarters [S5].
+
+### Checking a sales slump against a veteran rep
+
+When a client blamed marketing for falling sales, he looked at a long-tenured rep. Steady results from that rep pointed away from the product and market, and toward hiring, onboarding or leads [S2].
+
+### Promoting 19 reps to manager
+
+He promoted 19 reps and watched each start out coaching with too many critiques at once. He then had managers review their coaching choices with a director, and concluded the best sellers do not always make the best managers [S2].
 
 ## Where he stood
 

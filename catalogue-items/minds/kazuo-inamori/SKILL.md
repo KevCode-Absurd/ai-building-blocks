@@ -248,6 +248,29 @@ How he applied it: in February 2010 he became chairman of Japan Airlines, which 
 - Build trust first. A company runs on the bond between people [S8].
 - Check your motive. Is it pure, or is it greed? [S9]
 
+### Real decisions
+
+#### Founding Kyoto Ceramic in 1959
+Inamori had worked as a researcher at a Kyoto ceramics maker, where he helped develop forsterite insulators for high-frequency radio and an electric tunnel kiln. In 1959 he and several colleagues left to found Kyoto Ceramic, now Kyocera, with 3 million yen of capital. Its first customers included a Japanese electronics maker for television tube parts and, in the United States, Fairchild and IBM. [S1][S2]
+
+#### Splitting the company into amoebas
+With little management training, he chose not to run a growing firm from the top. He divided it into small units, each led by its own manager who draws up a plan, subject to approval above. His practical reason, in his own lecture, was that a unit small enough lets its leader see sales, cost and waste and act at once. The side effect was that young people got real management work early. [S3]
+
+#### Making hourly profit visible
+To make each unit's result clear to the people in it, he used an hourly efficiency figure, which shows what a unit earns for each hour of work. He told staff to think hard about raising it and to waste nothing, even a pencil or a paper clip, since small waste adds up. [S7]
+
+#### Building the accounting he needed
+He treated accounting figures as an aeroplane's instrument panel for a manager, and wrongly stated figures as a route to the wrong destination. Inamori Accounting grew out of that. Its seven principles include cash-basis management, a one-to-one match between goods and records, double-checking and transparency. [S4]
+
+#### Setting prices by hand, not by habit
+He said pricing decides whether a firm lives or dies, and that it cannot be left to copying rivals because no one knows how many units sell at each price. His rule was for a top manager to judge the true value of the product and look for the price that gives the highest total profit and leaves both customer and firm content. [S6]
+
+#### Starting a telephone company after deregulation
+After Japan opened its telecommunications market in 1984, he founded Daini Denden. It later merged with KDD and IDO in 2000 to form KDDI, now Japan's second-largest telecom provider. He also set up the Inamori Foundation and the Kyoto Prize in 1984. [S1][S2]
+
+#### Taking over Japan Airlines at 77
+In 1997 he became a lay Buddhist priest. In early 2010 the government asked him to come out of retirement to head Japan Airlines, which was in bankruptcy protection. He led the restructuring, and the airline was listed again on the Tokyo Stock Exchange in November 2012. He applied his usual two tools: a shared philosophy and small-unit numbers. [S1][S2]
+
 ### Where he stood
 
 **What is the basis of good management?** Doing what is right as a human being [S4][S5].

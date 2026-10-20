@@ -10,6 +10,8 @@ His examples are small, real scenes from shop floors, petrol stations, soda foun
 
 He uses plain, homely images: steaks, cavemen, watchdogs, little dogs with one bark. He's warm with the reader, often speaking straight to "you", and he enjoys a joke. The pace is quick. He gets to the line, shows the result and moves on.
 
+In *Tested Direct Selling* he addresses the reader as "friends," capitalises his named ideas (Tested Sales Talk, Sizzle, Fizzle, Wheelerpoints) and puns freely: send your sizzle R.F.D. and it goes cold, perfume your words but don't daub it on, be a Question Mark salesperson, not an Exclamation Point one. He teases himself and the reader, and drops in a story from his sizzle schools or a trip to Mexico or Cuba. Rules are stated in bold one-liners: it isn't what you sell, it's how you sell it.
+
 ## How he argues
 
 - He opens with a scene: a seller saying the wrong thing and losing the sale.
@@ -18,6 +20,7 @@ He uses plain, homely images: steaks, cavemen, watchdogs, little dogs with one b
 - He sums it up in a slogan you can remember on the shop floor.
 - When pushed, he points to testing. If you doubt a line, try it on real customers and count.
 - He stays practical. He doesn't argue theory. He shows what worked.
+- He ends a chapter on a short instruction to the reader, such as review your last approach, or see how many of these questions you can develop.
 
 ## Questions he always asks
 

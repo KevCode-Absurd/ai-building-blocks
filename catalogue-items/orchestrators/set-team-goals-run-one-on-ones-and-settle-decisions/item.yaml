@@ -1,0 +1,24 @@
+slug: set-team-goals-run-one-on-ones-and-settle-decisions
+name: "Set team goals, run one-on-ones and settle decisions"
+summary: "Describe your team and the quarter. Get goals with key results, a one-on-one plan and a way to settle disputes."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+uses: [objectives-and-key-results-writer, one-on-one-meeting-planner, informed-captain-decision-planner]
+steps:
+  - {uses: objectives-and-key-results-writer, note: "A few objectives, each with dated key results that show if you got there"}
+  - {uses: one-on-one-meeting-planner, note: "A meeting plan with agenda rules, timing and follow-up. Reads the plan from the step before"}
+  - {uses: informed-captain-decision-planner, note: "One named owner, a plan to collect dissent, and a review date. Reads the plan from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [andy-grove]
+credits:
+  - {title: "High Output Management", by: "Andy Grove", used: "The order of the steps: objectives and key results writer, one-on-one meeting planner, informed captain decision planner"}
+generated_from: intake/high-output-management/skeleton.yaml

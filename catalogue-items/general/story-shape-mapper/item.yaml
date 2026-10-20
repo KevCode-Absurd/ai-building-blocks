@@ -1,0 +1,18 @@
+slug: story-shape-mapper
+name: "Story shape mapper"
+summary: "Paste your story, talk or pitch. Get its fortune line drawn in text, the flat spots, and a fix."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [kurt-vonnegut]
+credits:
+  - {title: "Kurt Vonnegut on the Shapes of Stories", by: "Kurt Vonnegut, via The Marginalian, 2012", used: "Plotting a story as good or ill fortune over time, and the named shapes of those lines"}

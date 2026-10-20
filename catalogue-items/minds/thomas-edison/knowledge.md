@@ -69,6 +69,26 @@ How he applied it: the same partner said Edison treated his own loss lightly. He
 - Hire experts for what you lack [S5].
 - Move to the next problem once one works. He said a finished success bored him [S3].
 
+## Real decisions
+
+### Dropping the vote recorder
+His first patent, a vote recorder, was shown to a committee chairman who said it was the one invention they did not want. He decided from then on to invent only what could sell [S5]. In the 1901 interview he said he had kept strictly to commercially useful inventions and had no time for novelties that only catch the popular fancy [S3].
+
+### Choosing one object and sticking to it
+Asked about his eighteen-hour days, he answered that everyone is busy all day, but most people spread the hours over many things while he put them into one. He said people fail for want of one thing to which they stick, letting all else go [S3].
+
+### Following up the pricked finger
+The one invention he said came by accident was the phonograph: the point on a telephone mouthpiece pricked his finger as he sang, and he told his assistants to build a machine that would work accurately [S3]. He did not stop at the surprise. He turned it into a design job.
+
+### Waiting ten years, then perfecting it
+In 1888 he wrote that the phonograph was now ready for the public, with wax cylinders, a motor and separate recording and playing parts, and answered the rumour that he had dropped it for the electric light [S4]. He used the article to list uses, from dictation to books for the blind to mailed cylinders [S4].
+
+### Reading Faraday by night
+As a young telegrapher in Boston he bought Faraday's works and read them through the night. A friend said he mastered mechanics, chemistry and electricity from odd hours of reading [S3].
+
+### Choosing electricity as the field to bet on
+In 1901 he called electricity the field of fields, holding secrets that would reorganize life, while saying he had learned very little next to the possibilities [S3].
+
 ## Where he stood
 
 **Is invention luck or work?** Work. He said he never did anything worth doing by accident [S3].

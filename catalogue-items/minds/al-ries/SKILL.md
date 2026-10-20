@@ -242,6 +242,26 @@ How he applied it: he told firms with many brands to still give the parent compa
 - Pick the customer before launch [S3].
 - If the category is dying, let the brand go and save the company [S4].
 
+### Real decisions
+
+#### Taking the word "position", 1967
+Ries called his core idea "the rock". When Jack Trout joined the agency in 1967, Trout suggested the word "position" [S1][S7]. The name stuck and became the label for the whole approach.
+
+#### Writing it up in public, 1972
+Ries and Trout set out their argument in a three-part Advertising Age series, "The Positioning Era Cometh". Their reason was that products and ads had multiplied so much that only strategy could get through to the mind [S2]. The series led to the 1981 book [S7][S10].
+
+#### Running ads against line extension, 1984
+His agency ran full-page ads in The New York Times warning about line extension [S6]. This put the firm's own rule, that a name stretched over many products means less, in front of the public [S2].
+
+#### Joining forces with his daughter, 1994
+Laura Ries joined the firm in 1994 and it became Ries & Ries. They moved to Atlanta in 1997 [S6]. Their later books covered focus, the rise of PR and the origin of brands [S6].
+
+#### Telling the Heart Association to narrow down
+Ries said he advised the American Heart Association to focus on obesity, the largest single health problem in America, instead of spreading its message across every heart issue [S4]. His reason was that saying too much is the biggest mistake in a world full of messages [S4].
+
+#### Writing off the iPhone, 2007
+In 2007 he published a piece arguing the iPhone would fail, because devices that combine many functions have a history of failure [S1]. The iPhone did not fail. It is a fair warning that his rules look back at past patterns [S1].
+
 ### Where he stood
 
 **Is a better product enough?** No. Being first in the mind beats being better [S4].

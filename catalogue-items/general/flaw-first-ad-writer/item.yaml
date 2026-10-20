@@ -1,0 +1,22 @@
+slug: flaw-first-ad-writer
+name: "Flaw-first ad writer"
+summary: "Paste your product and its real weaknesses. Get an ad that states the flaw first and makes it a reason to buy."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: ad_copy}
+  - {type: hooks}
+origin: rebuilt
+version: 1.0.0
+minds: [bill-bernbach, joseph-sugarman]
+credits:
+  - {title: "Facts Are Not Enough (speech and related pieces)", by: "Bill Bernbach", used: "Starting from the honest fact, saying the hard thing about the product, and making sure the twist comes out of the product"}
+  - {title: "Joseph Sugarman", by: "Wikipedia article", url: "https://en.wikipedia.org/wiki/Joseph_Sugarman", used: "Stating a product's drawback openly in the ad as a way to earn trust"}

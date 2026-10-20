@@ -1,0 +1,19 @@
+slug: case-first-story-builder
+name: "Case-first story builder"
+summary: "Give it your topic and notes. Get the one case to build on, the surprise underneath and an outline."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: brief}
+origin: rebuilt
+version: 1.0.0
+minds: [malcolm-gladwell]
+credits:
+  - {title: "The Tim Ferriss Show: Malcolm Gladwell (episode transcripts)", by: "Tim Ferriss and Malcolm Gladwell", used: "Starting from one person or event, asking what if the obvious story is backwards, and looking past where research usually stops"}
+  - {title: "Gladwell.com home page, with a Q&A", by: "Malcolm Gladwell", url: "https://www.gladwell.com/", used: "Building a piece around a single case and walking around it from each side"}

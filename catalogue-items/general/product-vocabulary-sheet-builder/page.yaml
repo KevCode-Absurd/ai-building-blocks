@@ -1,0 +1,126 @@
+new_slug: product-vocabulary-sheet-builder
+name: "Product vocabulary sheet builder"
+summary: "Paste a book, manual or product page. Get a sorted sheet of its own phrases, ready for headlines, proof and demos."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It sorts and shortens real material, and it must keep each phrase traceable to its source."
+
+headline: "Product vocabulary sheet builder"
+subhead: Give it the material behind your product, such as a book, manual, spec sheet or product page. It marks the strongest phrases, keeps them in your own words, and sorts them into piles for headlines, proof and demonstrations. You get a sheet you can write from.
+
+explain: |
+  Most weak copy is written before the writer knows the product. The best lines are often already in the source material, in the maker's own words, buried on page 40. A writer who has not read it all writes generic lines.
+
+  This skill reads your material several times, marks every strong phrase, and collects them in one plain list. It keeps your product's words and marks any idea of its own apart. It sorts the list into piles by use, finds the most dramatic points, and shortens each long idea into a ten-word headline to force it tight. Every claim is traced back to the source page.
+
+when:
+  - You are about to write copy and have a manual, book or long page you have not mined.
+  - You have a founder talk or transcript full of good lines nobody has used.
+  - Your headlines feel generic and you suspect better ones are already in your material.
+
+you_give:
+  - "The product material: a book, manual, spec sheet, product page or transcript"
+  - Customer reviews or buyer words (optional)
+you_get:
+  - A list of strong phrases with their source locations
+  - Piles sorted for headlines, long copy, side notes, proof and demonstrations
+  - The most dramatic points, marked
+  - A ten-word headline for each long idea
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the product material. Keep page numbers or section titles in, so phrases can be traced.
+  - Add reviews if you have them.
+  - Check that each phrase shown appears in the source.
+  - Take the headline pile into "Ad headline writer" or "Shared want hook mapper".
+
+how_it_works:
+  - title: Listens to the source
+    text: Reads what the owner wrote or said, before anything else.
+  - title: Marks strong phrases
+    text: Reads the material more than once and marks every phrase with pull.
+  - title: Collects one list
+    text: Gathers the marked phrases into a single plain list with their locations.
+  - title: Keeps the product's words
+    text: Leaves the source's wording intact and marks the AI's own ideas apart.
+  - title: Sorts into piles
+    text: Splits the list into headlines, letter, sidebars, proof and demonstrations.
+  - title: Marks the strongest points
+    text: Highlights the points that jump out as the most dramatic.
+  - title: Shortens each idea
+    text: Writes a ten-word headline from each long idea to force it tight.
+  - title: Checks the claims
+    text: Checks every claim against the source before it is used.
+
+output_shape: |
+  SOURCE
+  <what was read, with sections or pages>
+
+  PHRASE LIST
+  1. "<phrase in the source's words>" | Where: <section or page>
+  ...
+
+  OUR OWN IDEAS (marked apart)
+  - <idea> | Not in the source
+
+  PILES
+  Headlines: <numbers>
+  Long copy: <numbers>
+  Side notes: <numbers>
+  Proof: <numbers>
+  Demonstrations: <numbers>
+
+  MOST DRAMATIC POINTS
+  <numbers and why>
+
+  TEN-WORD HEADLINES
+  <headline> | From: <phrase number>
+
+  MISSING
+  <what the source does not cover>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How much material
+    how: Paste the full text, not a summary. Strong phrases are often in the details.
+  - what: Source locations
+    how: Keep headings or page numbers in the paste so each phrase can be traced.
+  - what: The use you need
+    how: Say if you need headlines, proof or demos most. It will say which pile to go to first.
+  - what: Reviews
+    how: Add them so buyer words sit beside the maker's words.
+
+judge:
+  - Every phrase is traced to a location in the source.
+  - Our own ideas are marked apart from the source's words.
+  - Each pile has a clear use.
+  - No claim is kept that the source does not support.
+  - The ten-word headlines are tight and still true.
+
+test:
+  - Paste a page you know well. Check that the strongest phrases you know are on the list.
+  - Pick five phrases at random and find them in the source.
+  - Run it twice. The piles should be close even if the order shifts.
+  - Write one headline from the sheet and one from memory. Compare.
+
+improve:
+  - Add your own product notes to the paste so the sheet covers more.
+  - Add a list of words your brand never uses, so it skips them.
+  - Save the sheet to your brand file as the vocabulary.
+  - Pair it with "Shared want hook mapper" to turn the piles into hooks.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading a long document and sorting phrases is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Transcripts of talks or calls with the maker"
+    - "Customer reviews in the buyers' own words"
+    - "The product page and manual together"
+
+terms:
+  - term: Vocabulary sheet
+    meaning: A list of the strong phrases in your product material, kept in its own words.
+  - term: Pile
+    meaning: A group of phrases sorted by the use they suit, such as headlines or proof.

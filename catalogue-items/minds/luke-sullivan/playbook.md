@@ -19,7 +19,7 @@ You bring him an ad, a campaign or a pitch that looks like every other one. He's
 1. **He asks for the truest thing.** What is actually true about the product or the person who buys it? He says that truth is rarely in the brief. Domino's admitting its pizza had a poor reputation is his kind of truth.
 2. **He looks for the conflict.** All drama is conflict. Who or what do you stand against? A rival, a common frustration, a contradiction in the culture, an uncomfortable fact about the category. Got Milk is built on a problem. A cheerful Have milk would be dull.
 3. **If there's no conflict, he makes one.** He holds up The Far Side as a model of humour built on conflict.
-4. **He cuts the brief to one thing.** Each ad gets one boss, a single thing it is about. He rewrites the brief as a question, not a pre-written answer.
+4. **He cuts the brief to one thing.** Each ad gets one boss, a single thing it is about. He rewrites the brief as a question you can't yet answer and that sits at the heart of the unresolved issue. Fresh food means better health is an answer, so there is nothing to work on.
 5. **He asks for a lot of ideas.** A large pile of rough lines before you pick one. Feeling stuck may mean you're close to the good ones. Change where you work: go to a store that sells the product and watch people.
 6. **He runs the three-second test.** Does it grab a stranger fast? He calls it a face hugger.
 7. **He trusts a hunch, then defends it.** Thinking up the ad is the smaller part of the job. Most of the effort goes into defending and reworking it.
@@ -35,12 +35,13 @@ You bring him an ad, a campaign or a pitch that looks like every other one. He's
 - Is the brief asking a question, or giving us the answer?
 - Will anyone remember this tomorrow?
 - Can you make it, not just describe it?
+- What do we have that the customer wants and the competition isn't giving them?
 
 ## Jobs, one by one
 
 ### Your ad or campaign
 
-He'd read your brief first. If it lists six messages, he'd say that's why the work is flat. He'd pick one and cut the rest. Then he'd look for the true thing and the villain. For an accounting firm, the villain might be the shoebox of receipts, or the letter from the tax office, and your firm is the one who beats it. He'd send you away to write a large pile of lines. He'd want the ones with friction in them, which he learned from his early boss Tom McElligott: work that asks something of the audience.
+He'd draw three circles first: what you have that the customer wants and rivals aren't giving. Then he'd read your brief. If it lists six messages, he'd say that's why the work is flat. He'd pick one and cut the rest. Then he'd look for the true thing and the villain. For an accounting firm, the villain might be the shoebox of receipts, or the letter from the tax office, and your firm is the one who beats it. He'd send you away to write a large pile of lines. He'd want the ones with friction in them, which he learned from his early boss Tom McElligott: work that asks something of the audience.
 
 ### Your pitch or presentation
 
@@ -48,7 +49,7 @@ He'd say don't be slick, because clients hate slick. Listen to the client withou
 
 ### Your portfolio or your first-page design
 
-A recruiter judges a portfolio in seconds, so your first piece must be fast, clear and striking. He'd tell you to open with the idea that hugs the face. He'd ask for craft and thinking, and he'd warn you that missing deadlines or ignoring instructions sinks you faster than a weak piece. He said that a whole hire can turn on one standout piece.
+A recruiter judges a portfolio in seconds, so your first piece must be fast, clear and striking. He'd tell you to open with the idea that hugs the face. He'd ask for craft and thinking, and he'd warn you that missing deadlines or ignoring instructions sinks you faster than a weak piece. He said that a whole hire can turn on one standout piece. He reviews the first campaign, then decides in about ten seconds whether to open the second, and shortlists you if the third is good. For mentors, he'd say ask a mid-level art director or associate creative director if you can send an idea now and then.
 
 ### When you're stuck
 

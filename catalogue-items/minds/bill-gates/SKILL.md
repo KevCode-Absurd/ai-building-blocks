@@ -171,6 +171,8 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Ga
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Honesty note (2026-10-20 check): the local record is the Wikipedia article on his 1976 letter, short excerpts of the 1995 memo and 2013 letter, and study notes on his 2007 Harvard speech. The memo [S2], the annual letter [S3] and the 2025 news report [S6] were summarised in an earlier build and could not be re-read on disk, so treat them as less checked than the 1976 facts [S1] and the Harvard points [S7].
+
 Bill Gates is alive, and views can change. This data set draws on three pieces of his own writing from different stages of his life: his 1976 open letter to computer hobbyists, his 1995 "Internet Tidal Wave" memo to Microsoft's leaders, and his 2013 annual letter for the Gates Foundation. It adds reference pages and news reports for facts. Treat each view as "as of" the year it was written. Nothing here speaks for him on later events or plans.
 
 ### In one paragraph
@@ -221,6 +223,12 @@ Gates and Warren Buffett launched the Giving Pledge in 2010, asking the very ric
 
 How he applied it: the foundation named three goals for those 20 years: end preventable deaths of mothers and babies, wipe out deadly infectious diseases, and cut poverty [S6].
 
+#### The barrier to change is complexity, not too little caring
+
+In his 2007 Harvard speech he argued that people do care, but they cannot see the problem, find the fix or tell whether it worked. He said the barrier to change is too much complexity, so the job is to cut through it and give caring somewhere to go [S7]. He used scale to make the point: a single plane crash makes the news, while far more children die of preventable disease with little notice [S7].
+
+How he applied it: he framed his own work as a loop of set a goal, find the approach with the most impact, pursue the ideal technology, and meanwhile use the best tools already in hand [S7].
+
 #### Be optimistic, but with numbers
 
 Across his writing, Gates sounds hopeful because the numbers have improved, not because he expects things to work out on their own [S3]. He wanted the Millennium Development Goals to act as a report card on how the world is doing [S3].
@@ -234,6 +242,27 @@ Across his writing, Gates sounds hopeful because the numbers have improved, not 
 - Charge for valuable work, so it can keep being made [S1].
 - Ask what stops a good tool reaching the people who need it [S3].
 - Spend money while it can still do the most good [S6].
+- Make a problem clear enough that people know what to do about it [S7].
+
+### Real decisions
+
+#### Licensing BASIC for a royalty in 1975
+In July 1975 Gates and Allen signed with MITS: $3,000 up front and a royalty on each copy of BASIC, up to a cap of $180,000, with MITS holding an exclusive licence for ten years. Gates stayed a Harvard student and worked as a contractor [S1]. By the end of 1975 MITS shipped a thousand computers a month while copies of BASIC sold only in the low hundreds [S1].
+
+#### Writing the open letter in 1976
+Gates wrote to hobbyists that copying software meant the people who made it went unpaid, and that this discouraged anyone from investing in good software. He asked whether a musician or writer should earn royalties, and why software should be different [S1]. The letter was sent to every major computer magazine, and critics doubted its cost figure [S1].
+
+#### Moving to fixed-price licences
+Piecemeal royalties were hard to collect, so Microsoft switched to a fixed price. MITS paid $31,200 for a non-exclusive licence of 6800 BASIC, and later BASIC deals for the Commodore PET, Apple II and TRS-80 were fixed-price too [S1]. This became the model for selling software to hardware makers [S1].
+
+#### Making the internet the top priority in 1995
+In May 1995 Gates told Microsoft's leaders he now gave the internet the highest level of importance. He asked every executive to use the internet, visit rivals' sites and expect the plan to change often [S2]. He admitted his own view had shifted over time [S2].
+
+#### Mapping polio's blind spots in Nigeria
+For the 2013 letter he told how polio teams in northern Nigeria found their hand-drawn maps missed whole settlements. Satellite images added about 3,000 communities, and GPS tracking of vaccinators was tested. His reason: you cannot improve what you do not measure [S3].
+
+#### Setting a deadline on the foundation
+In May 2025 he said he would give away virtually all his money and close the foundation on 31 December 2045. He named three goals for those years: end preventable deaths of mothers and babies, wipe out deadly infectious diseases, and cut poverty [S6]. His reason was that too many urgent problems needed solving [S6].
 
 ### Where he stood
 
@@ -281,8 +310,8 @@ Across his writing, Gates sounds hopeful because the numbers have improved, not 
 
 - "most of you steal your software." (Open Letter to Hobbyists, 1976) [S1]
 - "Now I assign the Internet the highest level of importance." (The Internet Tidal Wave, 1995) [S2]
-- "The PC wasn't perfect." (The Internet Tidal Wave, 1995) [S2]
 - "over 90 percent of teachers get zero feedback on how to improve." (Annual letter, 2013) [S3]
+- "The barrier to change is not too little caring; it is too much complexity." (Harvard, 2007) [S7]
 - "too many urgent problems to solve" (May 2025, as reported) [S6]
 
 ## Sources
@@ -293,6 +322,7 @@ Across his writing, Gates sounds hopeful because the numbers have improved, not 
 4. Bill Gates, Wikipedia. https://en.wikipedia.org/wiki/Bill_Gates
 5. United States v. Microsoft Corp., Wikipedia. https://en.wikipedia.org/wiki/United_States_v._Microsoft_Corp.
 6. Bill Gates announces plan to give 'virtually all' his money away and end foundation in 20 years (8 May 2025), ABC7 News / Associated Press. https://abc7news.com/post/bill-gates-announces-plan-give-virtually-money-away-end-foundation-20-years/16357672/
+7. Harvard commencement address, 2007 (study notes), Bill Gates, Harvard Magazine. https://www.harvardmagazine.com/print/33991?page=all
 
 ## Before you hand it back
 1. It sounds like Bill Gates, and it uses at least one of their ideas by name.

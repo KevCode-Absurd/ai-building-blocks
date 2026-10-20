@@ -1,0 +1,121 @@
+new_slug: plain-words-interface-rewriter
+name: "Plain words interface rewriter"
+summary: "Paste a form, screen text or process steps. Get a rewrite in your users' own words, with a read-aloud test."
+job: design-work
+thinking: low
+thinking_why: "It swaps terms for the words users say and tidies steps, which follows a fixed method."
+
+headline: "Plain words interface rewriter"
+subhead: Paste a form, screen text, menu or process steps, and say who uses it. It collects the words each group already says, swaps every code and bit of jargon for them, starts each instruction with a verb, and gives a read-aloud test and the questions a new hire would still ask.
+
+explain: |
+  Forms and screens are often written in the words of the people who built them: codes, labels and terms that mean something only inside the company. Users guess, make mistakes or call support.
+
+  This skill names who uses the text and marks who likes symbols and who wants words. It collects the words each group already says out loud and replaces every code, label and bit of jargon with them. Each instruction starts with one verb so it reads as a command. It reads the result aloud and fixes every sentence where you stumble, then lists the questions a new hire with no help would still ask. Every step of the original is kept.
+
+when:
+  - Customers or staff keep misreading a form, screen or set of steps.
+  - Your text uses internal terms, codes or vendor words that users do not say.
+  - You are writing instructions for someone who has had no training.
+
+you_give:
+  - The form, screen text, menu or process steps
+  - Who uses it, and the words they use for the things in it
+  - A buyer or user profile (optional)
+you_get:
+  - A rewrite in the words your users say
+  - A list of old terms and their replacements
+  - Instructions that start with a verb
+  - A read-aloud check and the questions a new hire would still ask
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the text exactly as it appears, and say who uses it.
+  - Paste a few real messages or calls from users, so it can pick up their words.
+  - Read the result aloud to someone. Mark any line where you stumble.
+  - Give it to a new person with no help and note what they ask.
+
+how_it_works:
+  - title: Names the groups
+    text: Names who uses it and marks who prefers symbols and who prefers words.
+  - title: Collects their words
+    text: Collects the words each group already says out loud for the things in the text.
+  - title: Swaps the jargon
+    text: Replaces every code, label and bit of jargon with those words.
+  - title: Starts with a verb
+    text: Puts one verb at the start of each instruction.
+  - title: Reads it aloud
+    text: Reads the result aloud and fixes each sentence where you stumble.
+  - title: Plans a new-hire test
+    text: Lists the questions a new hire with no help would still ask.
+  - title: Checks the rewrite
+    text: Checks that no step was lost, runs its own checks and names any it missed.
+
+output_shape: |
+  WHO USES IT
+  <group> | Prefers: <words / symbols> | Their words: <list>
+
+  WORD SWAPS
+  <old term> -> <their word> | Where it appears
+
+  REWRITE
+  <the full rewritten text>
+
+  READ-ALOUD FIXES
+  <sentence> -> <easier version>
+
+  NEW-HIRE TEST
+  <questions someone with no help would still ask>
+
+  STEPS KEPT
+  <original step count> -> <new step count>
+
+  MISSING
+  <words or facts to confirm>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Real user words
+    how: Paste support messages, call notes or reviews. Their words are better than a guess.
+  - what: The groups
+    how: Name each kind of user. A nurse, a driver and a manager may use different words for the same thing.
+  - what: What cannot change
+    how: List legal terms and names of products or laws that must stay. They are kept and explained.
+  - what: Where it appears
+    how: Say if it is a button, an email or a spoken script. Length and tone change.
+
+judge:
+  - No term is left that the vendor uses and the user does not.
+  - Every instruction starts with a verb.
+  - Each sentence survives a read-aloud without a stumble.
+  - The rewrite keeps every step of the original.
+  - A test line lists the questions a new hire would still ask.
+
+test:
+  - Give the original and the rewrite to two people and time how long each takes to finish the task.
+  - Read the rewrite aloud and count the stumbles. There should be none.
+  - Count the steps in both. They should match unless you chose to merge.
+  - Ask a new hire to do the task with no help and list what they ask.
+
+improve:
+  - Add a word list of your users' terms, so each rewrite uses the same word for the same thing.
+  - Add the legal terms that must stay and their plain explanations.
+  - Keep a list of the questions new hires ask, and fix the text that causes them.
+  - Pair it with the "Hard-to-use thing diagnoser" if mistakes continue after the rewrite.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting text in a given set of words is work any strong chat AI does well."}
+    - {name: "A person who has never used it", why: "A new hire shows which words still confuse. No tool replaces that test."}
+  inputs:
+    - "Support messages in users' words"
+    - "A short profile of each user group"
+    - "A list of terms that cannot change"
+
+terms:
+  - term: Jargon
+    meaning: A word or code that only people inside a field or company understand.
+  - term: Read-aloud test
+    meaning: Reading the text out loud to find sentences that are hard to say, which are often hard to follow.

@@ -1,0 +1,123 @@
+new_slug: must-have-survey-planner
+name: "Must-have survey planner"
+summary: "Paste your product and users. Get a short survey, the 40 percent test and a plan to learn from fans."
+job: test-an-idea
+thinking: low
+thinking_why: "The survey and the scoring rule are fixed, so the work is filling in your product details."
+
+headline: "Must-have survey planner"
+subhead: "Give it your product and the people who use it. It writes a short survey whose key question asks how they would feel if they could no longer use it, sets the 40 percent test, and plans how to study the people who would be very upset. You get the survey and a plan."
+
+explain: |
+  Compliments and sales do not tell you whether people truly need what you made. A better sign is how they would feel if it vanished. When 40 percent or more of active users say they would be very disappointed, growth tends to follow. Below that line, spending on growth often leaks.
+
+  This skill picks who to ask: active users who have tried the core experience. It writes one fixed question with fixed answers, two open questions on the main benefit and who it suits, and how to count the result. It plans how to study the very disappointed group, one change aimed at them, and a second round of the survey. With too few users, it plans interviews first.
+
+when:
+  - You can't tell if your users really need your product or just like it.
+  - You are about to spend on growth and want to know if the product is ready.
+  - You have users but no clear idea who your keenest ones are.
+
+you_give:
+  - What your product does and the core experience a user should have had
+  - How many active users you have and how to reach them
+  - A buyer profile or customer reviews (optional)
+you_get:
+  - A short survey with one fixed key question and open follow-ups
+  - How to count the 40 percent test and what it means
+  - A plan to study the group who would be very disappointed
+  - One change to try and a plan to run the survey again
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the product, its core experience and how many active users you have.
+  - Send the survey to active users only, and wait for the answers.
+  - Bring the answers back so it can count the score and study the fans.
+
+how_it_works:
+  - title: Picks who to ask
+    text: Chooses active users who have tried the core experience.
+  - title: Writes the key question
+    text: Asks how they would feel if they could no longer use the product, with fixed answers.
+  - title: Adds open questions
+    text: Asks what the main benefit is and who they think it suits.
+  - title: Counts the 40 percent line
+    text: Counts the share who say very disappointed against the 40 percent line.
+  - title: Studies the fans
+    text: Studies the very disappointed group to see what they value and who they are.
+  - title: Plans one change
+    text: Plans one change aimed at that group and a second round of the survey.
+  - title: Handles small numbers
+    text: If there are too few users, plans interviews first.
+
+output_shape: |
+  WHO TO ASK
+  <active users who have <core experience>> | Count: <n> | Enough for a survey: <yes/no>
+
+  THE SURVEY
+  1. How would you feel if you could no longer use <product>?
+     Very disappointed / Somewhat disappointed / Not disappointed / I no longer use it
+  2. What is the main benefit you get from <product>?
+  3. What type of person do you think would benefit most?
+  4. <one more open question suited to the product>
+
+  HOW TO COUNT
+  Very disappointed / all answers = <share> against 40 percent. A signal, not proof.
+
+  AFTER THE ANSWERS
+  Study the very disappointed group: <what they value> | <who they are>
+  One change aimed at them: <change>
+  Re-run on: <date, group>
+
+  IF TOO FEW USERS
+  <interview plan>
+
+  MISSING
+  <facts that would sharpen the survey>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Who counts as active
+    how: Define it with a number, such as "used it twice in the last month". It sets the sample.
+  - what: Core experience
+    how: Say what a user must have done to know the product. People who have not done it are left out.
+  - what: Your user count
+    how: State it. Under about 30 answers the skill plans interviews first.
+  - what: Open questions
+    how: Add anything you are curious about, but keep the survey short.
+
+judge:
+  - The key question and its answers are fixed and unleading.
+  - The sample size is stated and its limits named.
+  - The 40 percent line is called a signal, not proof.
+  - The next test targets the very disappointed group.
+  - Interviews are planned when users are few.
+
+test:
+  - Send the survey to five friendly users first. Check the questions are clear.
+  - Check that the answers are one of the fixed choices, so they can be counted.
+  - Run it twice on the same product. The key question should stay the same.
+  - Re-run the survey after your change and compare the share.
+
+improve:
+  - Add your own definition of active user to step 1.
+  - Add one open question that matters in your field.
+  - Save each round's share and date so you can see the trend.
+  - Pair it with "Growth idea ranker" to pick what to test next.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing the survey and counting answers is text work that any strong chat AI does with this skill."}
+    - {name: "A free form tool", why: "Collects the answers in a table you can paste back."}
+  inputs:
+    - "A list of active users and how to contact them"
+    - "Reviews that show what users value"
+    - "The date of the last big product change"
+
+terms:
+  - term: Very disappointed
+    meaning: The answer a user gives when they would be very upset if the product went away.
+  - term: 40 percent line
+    meaning: A rule of thumb. When this share say very disappointed, the product is likelier to grow.

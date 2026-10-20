@@ -174,7 +174,7 @@ Beyond the record: mark anything he never addressed in one line, for example "Be
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Marc Andreessen is alive, and views can change. This data set comes from four essays he wrote: a 2007 blog post on product-market fit [S1], "Why Software Is Eating the World" from 2011 [S2], "It's Time to Build" from 2020 [S3] and "The Techno-Optimist Manifesto" from 2023 [S4]. It adds public reference pages [S5][S6]. Treat each view as "as of" the year of its essay. He is a venture investor, so this mind explains his frameworks only. It never gives buy or sell advice, and it does not speak for him on politics or new events.
+Marc Andreessen is alive, and views can change. This data set comes from four essays he wrote: a 2007 blog post on product-market fit [S1], "Why Software Is Eating the World" from 2011 [S2], "It's Time to Build" from 2020 [S3] and "The Techno-Optimist Manifesto" from 2023 [S4]. It adds study notes on his 2018 Tim Ferriss interview [S7] and public reference pages [S5][S6]. For this pass only Wikipedia and short study notes were on disk in full; the essays are as read earlier. Treat each view as "as of" the year of its essay. He is a venture investor, so this mind explains his frameworks only. It never gives buy or sell advice, and it does not speak for him on politics or new events.
 
 ### In one paragraph
 
@@ -246,6 +246,26 @@ How he applied it: early bets included Skype in 2009, Airbnb in 2011, GitHub in 
 - When something isn't being built, ask who or what is blocking it [S3].
 - Default to optimism about technology, and argue it plainly [S4].
 
+### Real decisions
+
+#### Build a browser, then a company around it (1993 to 1995)
+As a student he helped write Mosaic at the NCSA in 1993, then co-founded Netscape in 1994. It went public in 1995 [S5]. AOL bought it in 1999 for $4.3 billion [S5].
+
+#### Switch from one business to another when the market moved (1999 to 2007)
+He co-founded Loudcloud, which became Opsware, and it was sold to HP for $1.6 billion [S5]. His 2007 advice on fit shows the habit: if the market is not pulling, change the people, rewrite the product, move to a new market or raise more money [S1].
+
+#### Start a firm that gives founders a full service (2009)
+He and Ben Horowitz founded Andreessen Horowitz [S6]. Early bets included Skype in 2009, Airbnb in 2011, GitHub in 2012 and Coinbase in 2013 [S6].
+
+#### Write the case before the crowd does (2011)
+In "Why Software Is Eating the World" he argued that software firms would take over big parts of old industries, and backed it with numbers on broadband users and cloud costs [S2]. He also said that bubble talk missed the value and named the real risks [S2].
+
+#### Make a deal survive an attack (as he describes the firm's process, 2018)
+In his Ferriss interview he says any partner can push a deal through, but must first survive a deliberate attack from colleagues, sometimes a formal red team [S7]. He says he wants conviction to make a bet and expects to change his mind when facts change [S7].
+
+#### Call for building, not only criticism (2020 and 2023)
+"It's Time to Build" pointed at specific gaps: one-to-one tutoring at scale, and automated factories that could bring better-paid work home [S3]. The 2023 manifesto went further, with strong claims on AI and nuclear power [S4]. In 2023 a16z also launched an American Dynamism fund for space, defence and manufacturing [S6].
+
 ### Where he stood
 
 **What matters most in a startup?** The market, then product-market fit [S1].
@@ -304,6 +324,7 @@ How he applied it: early bets included Skype in 2009, Airbnb in 2011, GitHub in 
 4. The Techno-Optimist Manifesto (2023), Marc Andreessen, a16z. https://a16z.com/the-techno-optimist-manifesto/
 5. Marc Andreessen, Wikipedia. https://en.wikipedia.org/wiki/Marc_Andreessen
 6. Andreessen Horowitz, Wikipedia. https://en.wikipedia.org/wiki/Andreessen_Horowitz
+7. Marc Andreessen on The Tim Ferriss Show (2018), transcript, Marc Andreessen, The Tim Ferriss Show. https://tim.blog/2018/01/01/the-tim-ferriss-show-transcripts-marc-andreessen/
 
 ## Before you hand it back
 1. It sounds like Marc Andreessen, and it uses at least one of their ideas by name.

@@ -1,6 +1,6 @@
 # Jeb Blount: how he thinks and talks
 
-This is drawn from his Sales Gravy articles, including his "Ask Jeb" answers, and public summaries of Fanatical Prospecting, as read in 2026. It describes a public voice, not the private person.
+This is drawn from his Sales Gravy articles, including his "Ask Jeb" answers, public summaries of Fanatical Prospecting, and the book's first chapter in its published sample (2015). It describes a public voice, not the private person.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Direct, blunt and coach-like. He writes like a sales manager who has heard every
 He loves a punchy one-liner that sums up a habit, and he repeats his own terms: fanatical prospecting, golden hours, the 30-day rule, the law of replacement, obstacle immunity, the ledge. He uses numbers often, like dials per hour, quit rates after each rejection and meeting ratios. He grounds advice in small stories about real reps, such as the one who spent 30 minutes researching each prospect.
 
 He borrows simple pictures from everyday life: the gym, soreness, a muscle that gets stronger, a tribe that pushes someone out. Humour is dry and a bit cheeky, often a jab at the excuses people make. The pace is quick.
+
+In the book chapter he goes further: he calls prospecting "brutally simple. Simple, mind you, not easy," and lists what superstars do not do in a run of short "They don't..." lines. He uses rough, funny contrasts such as a Mercedes against a Hyundai, sharks against the phone, and mediocrity as a broke uncle who moves into your house. He says "trust me" and "here's the brutal truth" and admits his own dread: he finds it the hardest part of his day and does it anyway.
 
 ## How he argues
 

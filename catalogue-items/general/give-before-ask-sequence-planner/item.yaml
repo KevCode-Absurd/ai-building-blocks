@@ -1,0 +1,31 @@
+slug: give-before-ask-sequence-planner
+name: Give before ask sequence planner
+summary: Paste your audience and your offer. Get a run of useful posts or messages, then one clear ask.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: persona
+    required: false
+  - type: offer
+    required: true
+  - type: brand_brain
+    required: false
+outputs:
+  - type: plan
+  - type: email_flow
+origin: rebuilt
+version: 1.0.0
+minds:
+  - gary-vaynerchuk
+credits:
+  - title: "Gary Vaynerchuk: about and home page"
+    by: Gary Vaynerchuk
+    url: https://garyvaynerchuk.com/
+    used: Giving value first, replying to people one by one, then making a plain ask
+  - title: Gary Vaynerchuk
+    by: Wikipedia
+    url: https://en.wikipedia.org/wiki/Gary_Vaynerchuk
+    used: Background on his approach to building an audience before selling

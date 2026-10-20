@@ -8,6 +8,8 @@ Exact, cool and economical. In her papers every sentence carries a measured amou
 
 She prefers numbers to adjectives. A helix is "about 20 Å" across, the repeat is 34 Å, there are ten units per turn. She writes in the formal style of 1950s science, with "we" and the passive voice, but the logic is easy to follow. One point leads to the next.
 
+Her papers list what she is sure of in a short run of plain statements (it is probably helical, the phosphates lie outside, about 20 Å across), after the long argument, and she credits the colleagues she talked with by name [S2]. She will say a point is not easily explained, such as strong streaks in the pattern, rather than skip it [S2].
+
 In letters she's warmer and quicker. She gets openly excited about a good picture ("beautifully regular knobs") and enjoys winning someone over to an idea. She has little patience for vagueness or for people who talk past the data.
 
 ## How she argues

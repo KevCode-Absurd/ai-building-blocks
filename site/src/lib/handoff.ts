@@ -276,3 +276,61 @@ export async function buildSkillZip(slug: string, skill: string, files: string[]
   }
   return new Blob([zipSync(tree)], { type: "application/zip" });
 }
+
+/** One mind and the skills from their work you ticked, as one pack (docs/SOURCE-SKILLS-PRD.md): a README, the mind's
+ *  folder (SKILL.md plus its playbook, personality, knowledge and sources as their own files) and one folder per skill.
+ *  Each skill gets a short "Done the way of" section, so with the mind added it runs with their method and voice. */
+export async function buildMindPack(c: Catalogue, mindSlug: string, skillSlugs: string[]) {
+  const m = c.bySlug[mindSlug];
+  if (!m) return { error: "That mind isn't in the library." } as const;
+  const mindSkill = await loadSkillText(mindSlug);
+  if (!mindSkill) return { error: `Couldn't load ${m.name}. Check your connection and try again.` } as const;
+  const { strToU8, zipSync } = await import("fflate");
+  const first = m.name.split(" (")[0];
+  const root = `${mindSlug}-pack`;
+  const tree: Zippable = {};
+  tree[`${root}/${mindSlug}/SKILL.md`] = strToU8(mindSkill);
+  for (const f of m.files ?? []) {
+    const t = await loadSkillText(mindSlug, f);
+    if (t) tree[`${root}/${mindSlug}/${f}`] = strToU8(t);
+  }
+  const got: { slug: string; name: string; summary: string }[] = [];
+  for (const s of skillSlugs) {
+    const b = c.bySlug[s];
+    const t = b && (await loadSkillText(s));
+    if (!b || !t) continue;
+    const way = `\n\n## Done the way of ${first}\nIf the \`${mindSlug}\` skill is added too, do this job the way ${first} would: read it first, ask their questions, follow their method and use their voice. Mark anything that goes beyond their public record. Without it, run this skill as written.\n`;
+    tree[`${root}/${s}/SKILL.md`] = strToU8(t.replace(/\s*$/, "") + way);
+    for (const f of b.files ?? []) {
+      const x = await loadSkillText(s, f);
+      if (x) tree[`${root}/${s}/${f}`] = strToU8(x);
+    }
+    got.push({ slug: s, name: b.name, summary: b.summary });
+  }
+  const readme = [
+    `# ${first}: mind and skills`,
+    "",
+    `An AI playing ${first} from their public work, with ${got.length === 1 ? "1 skill" : `${got.length} skills`} that come from that work. From AI Blocks (useaiblocks.com/minds/${mindSlug}). It isn't ${first}, and ${first} hasn't endorsed it.`,
+    "",
+    "## What's inside",
+    `- \`${mindSlug}/\`: the mind. \`SKILL.md\` is the whole mind in one file. The same parts are here on their own too:`,
+    "  - `playbook.md`: what to hire them for, how they'd take on your problem, and their first questions.",
+    "  - `personality.md`: how they think and talk.",
+    "  - `knowledge.md`: what they knew and believed, tagged with its sources.",
+    "  - `sources.md`: the public work it's built from.",
+    ...got.map((g) => `- \`${g.slug}/\`: **${g.name}.** ${g.summary}`),
+    "",
+    "## Add it to your AI",
+    "- **Claude:** in Settings, under Capabilities, upload each folder as a skill (zip the folder first).",
+    "- **Claude Code:** copy each folder into `~/.claude/skills/`, or into your project's `.claude/skills/`.",
+    `- **ChatGPT, Gemini or any chat AI:** paste \`${mindSlug}/SKILL.md\` first, then the skill you want to run.`,
+    "",
+    "## Use them together",
+    `Each skill does one job on its own. With the mind added as well, the skill is done the way ${first} would do it: their questions first, then their method, in their voice, with anything beyond their record marked.`,
+    "",
+    got.length ? `To start, say: "Use the ${got[0].name} skill, done the way of ${first}." Or just ask ${first} a question.` : `To start, ask ${first} a question, or give them a task.`,
+    "",
+  ].join("\n");
+  tree[`${root}/README.md`] = strToU8(readme);
+  return { blob: new Blob([zipSync(tree)], { type: "application/zip" }), filename: `${root}.zip`, skills: got.length } as const;
+}

@@ -70,6 +70,32 @@ How she applied it: she quoted the old newsroom rule that even if your mother sa
 - Lower the friction for the habit you want, so it takes almost no effort [S6].
 - Measure a good week by energy and judgement as well as output [S2][S3].
 
+## Real decisions
+
+### Starting a site on other people's voices (2005)
+
+She co-founded The Huffington Post on 9 May 2005 as an alternative to news aggregators, mixing links with original posts from a wide network of unpaid contributors [S1][S8]. It raised money at a $100 million valuation in 2008 [S8]. The cost of the model was criticism over unpaid writers and, later, weak checks on contributors [S8].
+
+### Selling to AOL (2011)
+
+In March 2011 she sold the site to AOL for $315 million and stayed as editor-in-chief [S8]. The site went on to win a Pulitzer Prize in 2012 [S1][S8]. Some bloggers sued after the sale, and the court dismissed the case [S8].
+
+### Changing course after the collapse (2007 to 2014)
+
+In 2007 she collapsed from exhaustion and broke her cheekbone, then had tests to rule out anything else and asked whether this was what success felt like [S2][S10]. She took that question into her 2014 book *Thrive*, which argued for a wider measure of success [S2].
+
+### Leaving HuffPost to found Thrive Global (2016)
+
+In August 2016 she left HuffPost and started Thrive Global, which sells behaviour-change tools to employers [S1][S9]. She also joined Uber's board that year [S1]. The company raised $80 million in 2021 [S9].
+
+### Speaking up about her own illness (2016)
+
+She wrote about running with walking pneumonia as a teachable moment, and used a candidate's illness in the 2016 campaign to argue that politics rewards exhaustion [S3]. Her stated view was that admitting a need for rest is a sign of strength [S3].
+
+### Moving from big resolutions to Microsteps (as of 2026)
+
+By 2026 her method was to start tiny, because big habit changes fail when they rely on willpower [S6]. Her examples include turning off devices at a set time and declaring the workday over [S6].
+
 ## Where she stood
 
 **What is success?** As of 2014, more than money and power. It should include wellbeing, wisdom, wonder and giving [S1][S2].

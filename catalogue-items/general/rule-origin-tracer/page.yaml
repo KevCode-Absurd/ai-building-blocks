@@ -1,0 +1,117 @@
+new_slug: rule-origin-tracer
+name: "Rule origin tracer"
+summary: "Paste a rule or habit your team follows. Get where it came from, who it served and if it earns its place."
+job: think-and-decide
+thinking: medium
+thinking_why: "It needs reasoning about motives and viewpoints, but the steps are fixed and the call is small."
+
+headline: "Rule origin tracer"
+subhead: Paste a rule your team follows without question, such as "we never discount" or "all work goes through me". It asks who first needed the rule and why, looks at it from other points of view, and lists who gains and who pays. You get a keep, change or drop call with a small test.
+
+explain: |
+  Many rules outlive the problem they were made for. Someone was burned once, or afraid, or short of time, and a rule grew out of it. Years later nobody remembers why, and people defend it as plain common sense.
+
+  This skill takes the rule in the words people use. It asks who first needed it and what they feared or wanted, and whether it came from confidence or from a grudge or worry. It looks at the rule from at least two other points of view, such as a newcomer and a rival. It lists who gains and who pays today, then gives a call to keep, change or drop it, with a small test you can run before deciding for good.
+
+when:
+  - A rule or habit gets defended with "that is just how we do it".
+  - A new person asks why you do something and nobody has an answer.
+  - You are reviewing policies, pricing rules or ways of working.
+
+you_give:
+  - The rule, as people say it
+  - What you know of its history (when it started, who set it, what happened before) (optional)
+  - Who follows it and who is affected (optional)
+you_get:
+  - The rule quoted as stated
+  - A short history of who needed it and why, with gaps marked
+  - Views from two or more other positions
+  - A list of who gains and who pays now, and a call with a small test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the rule in the words your team uses, not your tidy version.
+  - Add what you know of its start. Say "unknown" where you do not know.
+  - Ask a long-time member to read the origin story and correct it.
+  - Run the small test before changing the rule for everyone.
+
+how_it_works:
+  - title: Quotes the rule
+    text: States the rule exactly as people say it, so the check is about the real rule.
+  - title: Finds who needed it
+    text: Asks who first needed the rule and what they feared or wanted at the time.
+  - title: Reads the root
+    text: Judges whether it grew from strength and a clear aim, or from fear, a grudge or convenience.
+  - title: Takes other views
+    text: Looks at the rule as a newcomer would and as a rival would.
+  - title: Counts gains and costs
+    text: Lists who gains and who pays today, by name or role.
+  - title: Makes the call
+    text: Decides keep, change or drop, and sets a small test.
+
+output_shape: |
+  THE RULE
+  "<as people say it>"
+
+  WHERE IT CAME FROM
+  Who needed it: <person or role> | They feared or wanted: <what> | Evidence: <source or "unknown">
+
+  WHAT IT GREW FROM
+  <confidence and a clear aim / fear / grudge / convenience> because <reason>
+
+  OTHER POINTS OF VIEW
+  A newcomer sees: <view>  A rival sees: <view>  (more if useful)
+
+  WHO GAINS AND WHO PAYS NOW
+  Gains: <list>  Pays: <list>
+
+  THE CALL
+  Keep / change / drop | Reason: <line>
+  Small test: <what to try, for how long, what result decides it>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: The exact words
+    how: Use the words people use. A softened version hides what the rule really does.
+  - what: History you have
+    how: Add dates, names and the event that started it. Anything unknown is marked, not guessed.
+  - what: Who is affected
+    how: List customers, staff and partners. The gains and costs list is only as good as this.
+  - what: How much change you can take
+    how: Say if you can only trial, not scrap. The call adjusts.
+
+judge:
+  - The rule is quoted as people state it.
+  - At least two other points of view are written.
+  - Gains and costs name real people or roles.
+  - Where the history is unknown, it says so.
+  - The call comes with a small test, not just a verdict.
+
+test:
+  - Run it on a rule you know the origin of. See whether the origin story fits what you know.
+  - Show the output to someone who has been there longest and see what they correct.
+  - Run the small test it proposes for two weeks and note what changed.
+  - Run it on a rule you believe in. The call should be allowed to say keep.
+
+improve:
+  - Add your team's common rule types, such as approval steps, pricing rules and reporting habits.
+  - Add the history you hold on file, meaning why each rule started and who set it.
+  - Keep the finished calls in one list and review the "keep" ones once a year.
+  - Pair it with "Incentive checker" when the rule is tied to pay or targets.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reasoning about motives and viewpoints in text is what any strong chat AI does with this skill."}
+    - {name: "A long-serving colleague", why: "The history of a rule is often in someone's memory and not on paper."}
+  inputs:
+    - "Old emails, notes or meeting records from when the rule began"
+    - "Complaints or workarounds people have around the rule"
+
+terms:
+  - term: Small test
+    meaning: A short, low-risk trial that shows whether dropping or changing the rule causes the problem it was meant to prevent.

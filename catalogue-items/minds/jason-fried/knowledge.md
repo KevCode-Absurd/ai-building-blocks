@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Jason Fried is alive, and views can change. Everything below comes from his company's free book Getting Real, the company's book pages, a 2013 interview, his blog posts from 2021 to 2025, and a public reference page. Getting Real and the other books were published under the 37signals or Basecamp name, so treat their ideas as the company's views, which Fried co-founded and led [S1][S3]. Date each view to the source it comes from, as of 2013, 2021 or 2025. Nothing here tells you what he thinks about later events. His exact birth year isn't in our sources. He was at university from 1992 to 1996, so it is roughly 1974 [S2].
+Jason Fried is alive, and views can change. The deepest source here is the full text of Getting Real, the company's free 2006 book, which we read in the official PDF [S14]. Around it sit the book's web chapters, the company's book pages, a 2013 interview, his blog posts from 2021 to 2025 and a public reference page. Getting Real and the other books were published under the 37signals or Basecamp name, so treat their ideas as the company's views, which Fried co-founded and led [S1][S3][S14]. The book is about web software, so its rules on features, launches and hiring are tuned to that world. Date each view to the source it comes from, as of 2006, 2013, 2021 or 2025. Nothing here tells you what he thinks about later events. His exact birth year isn't in our sources. He was at university from 1992 to 1996, so it is roughly 1974 [S2].
 
 ## In one paragraph
 
@@ -34,25 +34,21 @@ Outside money should be the fallback [S7]. Investors want their money back, ofte
 
 How he applied it: the chapter compares two companies started by the same founder. The funded one had high expectations and pressure to sell. The self-funded one grew slower but built a better product and stayed independent [S7]. In 2006 Jeff Bezos did buy a minority stake in 37signals, so the company was not free of outside owners [S1].
 
-### Calm is a choice
+### Calm is a choice, and meetings are a last resort
 
 The book It Doesn't Have to Be Crazy at Work argues that chaos shouldn't be the normal state at work [S9]. Anxiety isn't needed for progress, and a day full of meetings isn't needed for success. The book calls these the side effects of broken models and false "best practices" [S9]. In 2013 Fried said staff worked no more than 40 hours a week, and that overwork was one of his main worries [S2].
 
 How he applied it: he grew the company slowly. After 14 years it had 36 people, the most it had ever had [S2]. He said he kept it small by doing one or two things at a time, and hired slowly because each hire is costly and needs real work to do [S2].
 
-### Meetings are a last resort
-
 Getting Real calls meetings toxic to getting work done [S8]. They break the day into pieces, talk about ideas instead of real work, share little per minute and drift off topic. A meeting is often a sign the idea isn't clear yet. Simplify it and talk it through in writing or chat [S8]. If you must meet, keep it under 30 minutes, invite as few people as possible and have a clear agenda [S8].
 
 How he applied it: the same part of the book has a chapter called "Alone Time", about protecting long stretches of quiet work [S3].
 
-### Decide with what you know now
+### Decide with what you know now, and learn by doing
 
 In 2025 Fried argued against working from a long backlog or a ranked list [S11]. A list records what someone believed earlier. Deciding in the moment uses newer information. Past decisions carry no special weight, and every choice is still a yes or a no [S11].
 
 How he applied it: he wrote the post to answer people who asked how his team chooses what to do next without a backlog. His answer was to decide as you go [S11]. In 2021 he made a related change at Basecamp: make a decision, explain it once and move on, instead of going over old choices again [S10].
-
-### You learn business by doing it
 
 In 2025 Fried wrote that books and threads can inform you, but they can't teach you to hire, build a product or run a company [S12]. You get better at hiring by hiring. He compared it to playing guitar: reading a hundred books won't make you play well. He called business a form of muscle memory [S12].
 
@@ -63,6 +59,28 @@ How he applied it: in 2013 he told the same kind of story about himself. He sold
 In 2025 Fried argued that owning an independent company gives you room to try things others would never allow [S13]. Owners can back strange ideas from their team and protect odd experiments even when success looks unlikely. Big public companies can't do this, which gives small owners an edge [S13]. Skipping that chance means missing one of the best parts of running a company [S13].
 
 How he applied it: 37signals has kept trying new products and models. It launched HEY email in 2020, the ONCE line of software you buy once and run yourself in 2024, and Fizzy in 2025 [S1].
+
+### Take sides
+
+Pick an enemy.
+Getting Real says the best way to know what your product should be is to know what it shouldn't be [S14]. For Basecamp the enemy was heavyweight project software and the managers who used it to crack the whip, so the team built the anti-project tool around communication [S14]. For Writeboard the enemy was feature-heavy rivals, and for Backpack it was rigid forms and rules [S14]. A chosen enemy also gives a clear marketing story, because people understand a product by comparing it and then take sides [S14].
+
+How he applied it: the book also warns not to get obsessed with rivals, since over-analysing them limits your own vision [S14].
+
+Build software around general ideas and let people shape their own use, then step out of the way [S14]. Ta-da List had no due dates or categories, so users typed a due date or a tag in square brackets at the start of an item [S14]. The book admits this is not ideal, but says it is endlessly flexible, and that building for each case would make the tool worse for everyone else [S14].
+
+How he applied it: the same chapter argues that software should take sides and carry a vision, so some people will not like it, and that is fine [S14].
+
+### Run real things, then launch like a film
+
+
+The book says running software, not stories, wireframes or mock-ups, is the way to build momentum and reach agreement [S14]. People argue over sketches, but their views converge once they can use the real thing [S14]. It also says to work in loops: design screens, use them, analyse, and start again, since you do not need to ship perfection on the web [S14].
+
+How he applied it: in the same spirit the book tells you to use real words instead of lorem ipsum, and to type real names and cities into forms yourself, so you feel what a customer feels [S14]. It adds that copywriting is interface design: the label on a button, the length of a message and the use of jargon all count [S14].
+
+For launches, the book proposes a teaser, a preview and then the launch [S14]. Months ahead you drop hints and collect email addresses. Weeks ahead you show features and the ideas behind them, and offer a few early users a golden ticket [S14]. A promo site holds the overview, tour, screenshots, a manifesto, case studies, praise, pricing and a sign-up [S14]. The book also favours free samples, such as free versions of each product, and teaching what you know as a soft way to promote it [S14].
+
+How he applied it: Basecamp's team posted its manifesto for Backpack before launch to start conversation [S14].
 
 ## How he decides
 
@@ -75,6 +93,32 @@ How he applied it: 37signals has kept trying new products and models. It launche
 - Prefer steady growth to big risks. Don't put too much on the table at once [S2].
 - Decide with what you know today, explain it once, move on [S10][S11].
 - Give customers more value than they pay for [S2].
+
+## Real decisions
+
+### Starting Basecamp with messages only
+
+When building Basecamp, the team began with just the messages section, because it was the heart of the app [S14]. They ignored milestones and to-do lists at first, so that later choices could rest on how people used it, not on hunches [S14]. This is the clearest example of half a product, not a half-baked one [S4][S14].
+
+### Dropping a meetings tab
+
+People asked for a meetings tab in Basecamp. The team traced what it would need, including location, time, room, people, invites, calendar links, help pages, tour pages, the terms of service and more [S14]. Their method for any feature is a long chain, from "say no" through sketch, design, code, many rounds of testing, help text, tour, marketing copy and terms to a launch, which is why the first answer is no [S14].
+
+### Throwing away the request list
+
+At first the team logged every major feature request on a Basecamp to-do list and added a mark each time someone repeated it [S14]. They never looked at the list again, because customers kept repeating what mattered [S14]. They concluded that you should read requests, drop them and let customers be your memory [S14]. Even so, a high count is not a reason to build something that breaks the vision [S14].
+
+### Leaving out due dates in Ta-da List
+
+They left out assignments, due dates and categories on purpose [S14]. Users made their own conventions by typing dates and tags into the item [S14]. The team judged that more flexible than any built-in version.
+
+### Building Basecamp from their own client problem
+
+The design firm needed a simple way to talk to clients. Hand-edited client sites went stale, and the tools they tried were either missing something or bloated with billing, strict access controls and charts [S14]. So they built their own, reasoning that if they had the problem, many others did too [S14]. In 2006 the company, after funding itself, also took a minority investment from Jeff Bezos [S1].
+
+### The 2021 changes
+
+In April 2021 he announced six changes at Basecamp, including the end of political talk on the company account [S10]. About a third of staff left [S1][S10]. He explained the company makes software and is not a social impact company [S10].
 
 ## Where he stood
 

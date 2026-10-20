@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Bowie gave many interviews, but few full transcripts are online in stable places. The own-words sources here are his 1999 commencement address at Berklee College of Music [S2] and his filmed advice to young artists, as quoted in 2020 [S3]. This file never quotes his song lyrics.
+Bowie gave many interviews, but few full transcripts are online in stable places. The own-words sources here are his 1999 commencement address at Berklee College of Music [S2], his filmed advice to young artists, as quoted in 2020 [S3], and the first part of an interview about songwriting for the albums Heathen and Reality, republished in 2025 [S7]. The Berklee page was read through its published summary of the speech; the songwriting interview page was cut off, so it covers only place, limits and accident. Wikipedia pages give dates and album facts only [S1][S4][S5][S6]. This file never quotes his song lyrics.
 
 ## In one paragraph
 
@@ -13,6 +13,8 @@ David Bowie was born David Robert Jones in Brixton, London, on 8 January 1947, a
 ### The game of "what if?"
 
 At Berklee in 1999, Bowie said he couldn't play music as written; his attempts came out as noise [S2]. So he decided his strength was not conventional skill. It was imagining odd combinations: Brecht and Weill with rhythm and blues, French chanson with the Philadelphia soul sound [S2]. He joked about pairing Schoenberg with Little Richard, and admitted that only some of these ideas worked [S2].
+
+Bowie said early gigs in working-men's clubs taught him that mixing bad taste with good often gives interesting results [S2]. He loved both avant-garde figures such as Coltrane and John Cage and odd, unfashionable performers [S2].
 
 How he applied it: he learned enough saxophone, guitar and what he called composer's piano to explain his ideas to skilled players, and let them carry the parts [S2]. On his late albums he paired himself with jazz players, and on Blackstar he and Tony Visconti set out to avoid rock and roll, citing Kendrick Lamar as an influence [S6].
 
@@ -34,17 +36,13 @@ At Berklee he said he moved away from personal, confessional songwriting toward 
 
 How he applied it: he worked through characters such as Ziggy Stardust and the Thin White Duke [S1]. He was also a painter and writer, and called art the thing he bought obsessively [S1].
 
-### Mix good taste and bad
-
-Bowie said early gigs in working-men's clubs taught him that mixing bad taste with good often gives interesting results [S2]. He loved avant-garde figures such as Coltrane, Eric Dolphy and John Cage, and also loved odd, unfashionable performers [S2]. He wanted to change the kind of information rock music carried [S2].
-
-### Learn from mentors who mix art forms
-
-He called John Lennon his most important mentor, admiring how Lennon fused pop with other arts to make strong, strange work [S2]. They co-wrote Fame, Bowie's first US No. 1 [S1]. Early on he took saxophone lessons from the baritone player Ronnie Ross, whom he phoned at about 14 [S2].
-
 ### Work with people who change you
 
-Bowie chose collaborators who pulled him somewhere new. Brian Eno shaped the sound textures of the Berlin records; Tony Visconti created Low's famous drum sound with a pitch-shifting device [S4]. Later he made Black Tie White Noise with Nile Rodgers, toured with Nine Inch Nails, and made Blackstar with a jazz band led by saxophonist Donny McCaslin [S1][S6]. One of the Blackstar players said Bowie gave them freedom to just play [S6].
+Bowie chose collaborators who pulled him somewhere new. Brian Eno shaped the sound textures of the Berlin records; Tony Visconti created Low's famous drum sound with a pitch-shifting device [S4]. Later he made Black Tie White Noise with Nile Rodgers, toured with Nine Inch Nails, and made Blackstar with a jazz band led by saxophonist Donny McCaslin [S1][S6]. One of the Blackstar players said Bowie gave them freedom to just play [S6]. He called John Lennon his most important mentor, admiring how Lennon fused pop with other arts, and they co-wrote Fame [S1][S2]. At about 14 he phoned the baritone saxophonist Ronnie Ross for lessons [S2].
+
+### Set a limit, let the accident in, notice the place
+
+In the Louder interview Bowie said it is essential that he is surprised and excited by his own work [S7]. He sometimes limits a song to five or six chords, which he calls a dogma, and says the rule shapes the song more than his mood does, though he cheats by moving a strong idea to another key [S7]. He values process, and says allowing the accident is often very good [S7]. He also says wherever he writes, the place shows: Heathen, written in the Woodstock mountains, sounds magnificent and indifferent, and Reality sounds like New York, with about seven street references that he and Tony Visconti counted [S7].
 
 ### Get to the new channel first
 
@@ -67,6 +65,29 @@ The Next Day was recorded in secret in 2011 and 2012 and announced without warni
 - Learn just enough craft to explain your idea to skilled players, then let them carry it [S2].
 - Keep what hurts as proof. He kept RCA's rejection letter for Low [S4].
 - Keep big moves quiet until they are ready. The Next Day and Blackstar were made in secret [S1][S6].
+
+## Real decisions (enriched minds)
+
+### Releasing Low against the label's wishes (1977)
+RCA rejected Low and asked for something closer to Young Americans [S4]. Bowie kept the rejection letter and released the record anyway, telling the players it might never come out but that he had to make it [S4]. It reached No. 2 in the UK [S4].
+
+### Learning just enough craft (1960s)
+He told Berklee in 1999 that he could not play music as written and that his attempts came out as noise [S2]. So he learned enough saxophone, guitar and composer's piano to explain his ideas to skilled players, and let them carry the parts [S2]. At about 14 he had found a baritone saxophonist's number and phoned him for lessons [S2].
+
+### Choosing to work with Eno and Visconti in Berlin (1976 to 1979)
+Eno shaped the textures of the Berlin records, and Visconti made Low's famous drum sound with a pitch-shifting device [S4]. The second side of Low was long instrumentals he described as musical pictures of Berlin [S4]. He moved to Berlin partly to escape drugs [S4].
+
+### Setting a five-chord rule for a song
+For some songs he writes with only five or six chords, and treats it as a dogma [S7]. He says the rule shapes the result more than his feeling at the time, but he bends it if a strong idea needs a new key [S7].
+
+### Launching BowieNet (1998) and Bowie Bonds (1997)
+He started his own internet service with email, exclusive audio and video and chat rooms, where he sometimes took part under other names [S5]. In 1997 he borrowed $55 million against future royalties on older albums [S1]. Telling Lies (1996) was among the first singles sold as a download [S1].
+
+### Making The Next Day in secret (2011 to 2013)
+He recorded the album quietly and announced it without warning on his 66th birthday, after a decade without a new record [S1].
+
+### Making Blackstar with a jazz band (2015)
+He and Tony Visconti set out to avoid rock and roll for Blackstar, with a band led by Donny McCaslin and Kendrick Lamar as an influence [S6]. A player said Bowie gave them freedom to just play [S6]. It came out two days before he died [S6].
 
 ## Where he stood
 
@@ -121,6 +142,6 @@ The Next Day was recorded in secret in 2011 and 2012 and announced without warni
 
 - "the game of 'what if?'" (Berklee, 1999) [S2]
 - "if it itches, play it" (Berklee, 1999) [S2]
-- "the house that I live in" (on music, Berklee, 1999) [S2]
+- "allow the accidental to take place" (on songwriting) [S7]
 - "Never play to the gallery." (filmed advice to young artists) [S3]
 - "you're not working in the right area" (on feeling safe in your work) [S3]

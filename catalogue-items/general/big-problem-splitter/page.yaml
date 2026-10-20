@@ -1,0 +1,128 @@
+new_slug: big-problem-splitter
+name: "Big problem splitter"
+summary: "Describe a problem that feels too big. Get it split into small steps, each with a test and a clear next move."
+job: plan-strategy
+thinking: medium
+thinking_why: "It must find the real cause and size a first step well, but it follows a fixed order."
+
+headline: "Big problem splitter"
+subhead: Describe a goal or problem that feels too big to start. It finds the root cause, names the fear that makes it feel big, and splits it into small steps. Each step has a test, and you get one move you can make this week.
+
+explain: |
+  A big problem feels impossible partly because it is one lump. You look at all of it, freeze, and pick the wrong thing to fix because you never found the cause. Adding rules and checkpoints then makes it worse.
+
+  This skill first asks why five times to reach the root, and asks what you are afraid of. It looks for an early sign of trouble that is still easy to fix. It shrinks the first move until it fits in a week, plans the middle with a light touch rather than constant poking, and adds a check for the last stretch. The goal stays on every step in one line.
+
+when:
+  - A project feels too big and you keep putting off the start.
+  - You keep fixing symptoms and the problem comes back.
+  - You have too many rules and checks and the work is not moving.
+
+you_give:
+  - The goal or problem in your own words
+  - The fear or doubt that makes it feel big
+  - What you have already tried (optional)
+  - Customer or user words about the problem (optional)
+you_get:
+  - The root problem, found by five whys
+  - The goal in one line
+  - A plan of small steps, each with a test
+  - One first move for this week, and one thing to stop forcing
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the problem and say what makes it feel too big. Be honest about the fear.
+  - Answer its why questions. Short answers work best.
+  - Do the first move this week. Come back and run the skill again on the next step.
+
+how_it_works:
+  - title: Names the goal
+    text: Writes the big goal in one line that stays on every step.
+  - title: Names the fear
+    text: Asks what makes the project feel too big and writes it down.
+  - title: Asks why five times
+    text: Follows each answer with why until it reaches a root cause that can be acted on.
+  - title: Finds an early sign
+    text: Looks for the small trouble that is easy to deal with now.
+  - title: Shrinks the first move
+    text: Cuts the first step until it fits in a week and has a test.
+  - title: Finds what you are forcing
+    text: Asks what you are pushing against, and what to stop doing.
+  - title: Plans the middle lightly
+    text: Sets few checkpoints with a clear rule for when to look.
+  - title: Guards the last stretch
+    text: Adds a final check so the end gets as much care as the start.
+
+output_shape: |
+  THE GOAL IN ONE LINE
+  <goal>
+
+  WHAT MAKES IT FEEL BIG
+  <the fear>
+
+  THE FIVE WHYS
+  1. <why> -> <answer> ... 5. <root cause>
+
+  EARLY SIGN
+  <small trouble that is easy to deal with now>
+
+  THE STEPS
+  Step <n>: <small action> | Test: <how you know it is done> | Goal: <goal line>
+
+  STOP FORCING
+  <what to stop pushing>
+
+  FIRST MOVE THIS WEEK
+  <one action, who, when>
+
+  LAST-STRETCH CHECK
+  <what to check before calling it done>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How honest the fear is
+    how: Name the real worry, such as being judged or running out of money. It shapes the first step.
+  - what: Time you have
+    how: Say how many hours a week you can give. The steps shrink to fit.
+  - what: What you have tried
+    how: List past attempts. It skips them and looks for the cause instead.
+  - what: Customer words
+    how: If the problem is about customers, paste their words. The whys use what they said.
+
+judge:
+  - The first step is small enough to do this week.
+  - The root cause is something you can act on, not a feeling.
+  - One thing to stop forcing is named.
+  - A last-stretch check is on the plan.
+  - Every step carries the goal line.
+
+test:
+  - Try the first move. Time how long it takes. It should fit in the week you gave.
+  - Ask someone who knows the problem if the root cause rings true.
+  - Run it again on the same problem a week later. The root cause should hold.
+  - Count the rules and checks in your old plan and in this one. This one should have fewer.
+
+improve:
+  - Add your own common fears to step two so it can name yours faster.
+  - Change the five whys to three if your problems are simple.
+  - Save finished plans in your files to see which first moves worked.
+  - Pair it with "Work-backwards plan checker" once the first steps are done.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Asking why in turns and shrinking a step is plain text work any strong chat AI does well."}
+  inputs:
+    - "Notes on what you have already tried"
+    - "A calendar showing real free hours this week"
+    - "Words from customers or users about the problem"
+
+terms:
+  - term: Root cause
+    meaning: The deepest cause you can act on, found by asking why until the answers stop changing.
+  - term: Five whys
+    meaning: Asking why after each answer, about five times, to get past symptoms.

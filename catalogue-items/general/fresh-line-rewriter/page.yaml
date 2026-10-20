@@ -1,0 +1,124 @@
+new_slug: fresh-line-rewriter
+name: "Fresh line rewriter"
+summary: "Paste your main claim and rival ads. Get fresh ways to say the same true claim, with a swap test."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It must judge which versions keep the claim unchanged and which a rival could also say."
+
+headline: "Fresh line rewriter"
+subhead: Give it your ad copy and, if you have them, your rivals' ads. It keeps your claim exactly as true as it is, writes several fresh ways to say it, and runs a swap test on each. You get the lines no rival could use.
+
+explain: |
+  A true claim said the way everyone says it disappears. Buyers see "fast", "easy" and "trusted" on every page, so none of them stick. The fix is a new way to say the same claim, not a bigger claim.
+
+  This skill writes your claim in its flat form, collects how rivals say it, and writes fresh versions that keep the claim unchanged. It prefers a detail, a picture or a surprise that proves the claim over a word that names it. Each version gets a swap test: could a rival put the flat line in its ad and sound the same. It then picks one and trims it.
+
+when:
+  - Your ad says what every rival's says, in the same words.
+  - You have a claim that is true and tested, but it reads like wallpaper.
+  - A line performed once and is now tired.
+
+you_give:
+  - The ad copy or main claim you want to say better
+  - Rival ads or lines (optional)
+  - A brief with the buyer and the point to make (optional)
+you_get:
+  - Your claim in its flat form
+  - A list of how rivals say it
+  - Several fresh versions that keep the claim the same
+  - A swap-test result for each, and one picked line
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the ad copy or the claim you want to say better.
+  - Paste three or more rival ads if you have them.
+  - Read each fresh version against the flat claim. Make sure nothing was added.
+  - Test the picked line against your current one.
+
+how_it_works:
+  - title: States the claim flat
+    text: Writes the researched claim in its plainest form, with no style.
+  - title: Collects rival wording
+    text: Lists how rivals say the same thing, so you know what to avoid.
+  - title: Writes fresh versions
+    text: Writes several new versions that keep the claim unchanged.
+  - title: Proves instead of naming
+    text: Uses a picture, a detail or a surprise that shows the claim in place of a word that names it.
+  - title: Runs the swap test
+    text: Tests whether a rival could put the flat line in its ad and sound the same.
+  - title: Reads the feeling
+    text: Checks the feeling each version leaves, not only the facts.
+  - title: Picks and trims
+    text: Chooses one and cuts any word that does not carry the point.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  FLAT CLAIM
+  <the plain, true claim>
+
+  HOW RIVALS SAY IT
+  <short list of their wording>
+
+  FRESH VERSIONS
+  1. <line>
+     Same claim? <yes, with the check>
+     Swap test: <rival could say it / could not>
+     Feeling: <what the reader is left with>
+  ...
+
+  PICKED LINE
+  <line> because <reason>
+  Trimmed: <what was cut>
+
+  PICTURE NOTE
+  <what the picture should show to match the words>
+
+  MISSING
+  <facts needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Rival ads
+    how: Paste more of them. Lines that echo them get cut.
+  - what: How far from plain you want to go
+    how: Say if you want a mild lift or a bold change. Plain and exact is the default.
+  - what: The claim itself
+    how: State one claim. If you paste three, it will rewrite the strongest and ask about the rest.
+  - what: Proof you can show
+    how: Add a detail, a number or a scene the product really has. It becomes the line.
+
+judge:
+  - The claim is the same in every version.
+  - At least one version could not appear in a rival's ad.
+  - The picture and the words make one point.
+  - The line is believable, not just louder.
+  - Nothing is added that the product cannot do.
+
+test:
+  - Run it on a claim whose flat form you know. Confirm every version still means the same thing.
+  - Show the versions with the brand hidden. See whether people can tell whose ad each could be.
+  - Run it twice. The flat claim should stay identical.
+  - Split-test the picked line against your current line.
+
+improve:
+  - Add a list of overused words in your market, so it avoids them.
+  - Add details only your product has, such as materials, times or places.
+  - Save the winning line to your brand file as a proven phrasing.
+  - Pair it with "Flaw-first ad writer" when the freshest angle is an honest drawback.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting and comparing lines is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Screenshots of rival ads"
+    - "A list of facts only your product has"
+    - "Your past winning lines"
+
+terms:
+  - term: Swap test
+    meaning: Put the plain version of your claim into a rival's ad. If it fits just as well, your line is not yours.
+  - term: Flat claim
+    meaning: The true statement with no style, used to check that the fresh versions say the same thing.

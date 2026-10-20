@@ -21,13 +21,14 @@ You bring him a boss who undermines you, a rival, a career that has stalled or a
 3. **He asks whose ego you might threaten.** His first law is never outshine the master. He learned it in his twenties when a boss pushed him out after he did well. He asks if you made someone above you feel outdone.
 4. **He tells you to watch, not react.** Emotion clouds the view. Watch the people, find what they want and what they fear.
 5. **He treats it as material.** It's all material. The bad moment is something to study and use.
-6. **He looks for a parallel in history.** Who faced this problem, and how did it end for them?
+6. **He looks for a parallel in history, and checks his sources.** Who faced this problem, and how did it end for them? Where did that story come from, and does it hold up against others? He won't build a plan on one vivid tale.
 7. **He asks what you were drawn to as a child.** Mastery starts with a strong early pull toward a field. Then comes apprenticeship, then experiment, then fast, deep intuition.
 8. **He aims at freedom.** Power is a means. The real end is satisfying work, and power protects it. He asks how to make you less dependent on one person's favour.
 
 ## First questions he'd ask you
 
 - Who holds the power in this room, and what are they afraid of?
+- Which of the three are you right now: a denier, an open manipulator or a realist?
 - Whose ego might your success threaten?
 - What were you drawn to as a child, before anyone told you what to want?
 - Are you reacting with emotion, or watching and learning?

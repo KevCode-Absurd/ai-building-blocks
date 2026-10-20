@@ -173,7 +173,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: sh
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Jill Konrath is alive, and views can change. Everything below comes from articles and book pages on her own website, her About page and a reference page. Two articles carry a 2019 date. The rest are undated, so treat her views as "as of" the late 2010s. We could not find her birth year in our sources. Her books, *Selling to Big Companies*, *SNAP Selling*, *Agile Selling* and *More Sales, Less Time*, are not online, so we use only what her book pages and Wikipedia say about them. Her About page says she has moved on from sales advice to a new project, and that her sales material stays online for free [S10]. Nothing here tells you what she thinks about events after that.
+**An honest note on the sources.** Jill Konrath is alive, and views can change. The articles and book pages we cite (S1 to S9) were studied from her own website earlier. In our folder today we hold only short excerpts of two of them (S1 and S2), plus a Wikipedia article (S11) that we can check against saved text. So the career facts are firm, and her method points rest on the earlier study. They should be re-checked against the full pages before anyone leans on a detail. Two articles carry a 2019 date and the rest are undated, so treat her views as "as of" the late 2010s. We could not find her birth year. Her books, *Selling to Big Companies*, *SNAP Selling*, *Agile Selling* and *More Sales, Less Time*, are not online, so we use only what her book pages and Wikipedia say about them. Her About page says she has moved on from sales advice to a new project, and that her sales material stays online for free [S10]. Nothing here tells you what she thinks about events after that.
 
 ### In one paragraph
 
@@ -245,6 +245,28 @@ How she applied it: in 2013 she surveyed more than 3,000 sales professionals abo
 - Aim the first meeting at curiosity and a next step [S3].
 - Spend energy only on what you can control [S6].
 
+### Real decisions
+
+#### Leaving teaching for sales
+
+She began as a high school teacher with an education degree, wanted out of teaching, and took a sales job at Xerox, then moved into computer sales [S11]. Her stated reason in the record is only that she wanted to leave teaching.
+
+#### Starting her own consulting firm
+
+In 1987 she launched Leapfrog Strategies, a sales consulting firm [S11]. From there she built her name on writing for sellers who want to reach big accounts, which led to *Selling to Big Companies* in 2005 [S11].
+
+#### Writing from the buyer's chair
+
+For *SNAP Selling* in 2010 she chose to write from the mind of a busy customer, not the seller [S11][S7]. Her reason, as the book page puts it, was that a frazzled buyer makes a quick call on whether you deserve any time. The book hit number one on Amazon's sales list within hours of release, according to Wikipedia [S11].
+
+#### Asking customers who had just switched
+
+When one printing-system company's sales stalled after its early adopters, she advised interviewing recent switchers, not long-time fans. One printer said the system cut his prepress staff by a third and trimmed turnaround by two to three days. The company relaunched on those results and, she said, reached 50% market share within a year, a figure that comes from her own article [S5].
+
+#### Surveying sellers about LinkedIn
+
+In 2013 she surveyed more than 3,000 sales professionals and reported that only 5% used LinkedIn to its full power while 55% did not use it at all. She turned the findings into an ebook, *Cracking the LinkedIn Sales Code* [S11].
+
 ### Where she stood
 
 **What do buyers care about?** Results for their business, not your product [S1][S5].
@@ -268,6 +290,7 @@ How she applied it: in 2013 she surveyed more than 3,000 sales professionals abo
 - LinkedIn sales survey and ebook, 2013 [S11].
 - *Agile Selling*, released May 29, 2014 [S11].
 - *More Sales, Less Time* [S8][S9].
+- *Get Back to Work Faster*, a 2009 guide for job seekers, with a free webinar series [S11].
 - Twice named LinkedIn's top business-to-business sales expert, according to her site [S10].
 
 ### Where she was wrong or criticised

@@ -1,0 +1,126 @@
+new_slug: ending-first-story-planner
+name: "Ending-first story planner"
+summary: "Tell it the one feeling you want. Get a story or talk plan built backward from the last line."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It has to choose one feeling and rank every beat against it."
+
+headline: "Ending-first story planner"
+subhead: "Tell it the one feeling you want and the form you are writing in. It plans backward from the last line, so every beat leads there. You get the ending, ranked beats, an opening and a repeating phrase."
+
+explain: |
+  Pieces that try to say too many things leave the audience with a blur. They finish, and nobody can say what they felt. Short forms cannot carry more than one big feeling.
+
+  This skill picks the one effect first and sets the length to fit one sitting. It chooses the tone at the peak and finds a phrase or image that can repeat and shift meaning each time. It writes the ending before anything else, then ranks earlier beats from mild to strong so each one steps up toward it. Any beat that outshines the ending is weakened. The opening is written to lean toward the effect, and the setting is narrowed to one room or one moment.
+
+when:
+  - "You are writing a short story, speech, ad or film and it has no single feeling."
+  - "You know how you want people to feel at the end and need a way to get there."
+  - "Your piece peaks in the middle and the ending feels like an afterthought."
+
+you_give:
+  - "The feeling you want, and the form"
+  - "The facts, people or setting you want to use (optional)"
+  - "Length and where it is read or heard (optional)"
+you_get:
+  - "The effect in one sentence, with length and tone"
+  - "A phrase or image that returns and changes meaning"
+  - "The ending written first, then the beats in order up to it"
+  - "An opening line and a narrowed setting"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say the feeling you want and the form."
+  - "Paste the material you want to use, if any."
+  - "Give the length, such as 600 words or two minutes."
+  - "Read the ending aloud first. If it does not give the feeling, fix it before the rest."
+
+how_it_works:
+  - title: "Picks the effect"
+    text: "One feeling out of all the possible ones."
+  - title: "Sets the length"
+    text: "Short enough for one sitting."
+  - title: "Chooses the tone"
+    text: "The tone at the highest point."
+  - title: "Finds a repeating phrase"
+    text: "Same words, new meaning each time."
+  - title: "Writes the ending first"
+    text: "The last line, then the beats before it."
+  - title: "Ranks the beats"
+    text: "Mild to strong, each a step up."
+  - title: "Writes the opening"
+    text: "A first line that leans toward the effect."
+  - title: "Closes the setting"
+    text: "One room or one moment. Then names any check it missed."
+
+output_shape: |
+  EFFECT
+  When it ends, the audience feels <x> because <y>.
+
+  LENGTH / TONE
+  <size> because <why> / <tone at the peak>
+
+  REPEATING DEVICE
+  <phrase or image>: 1 <meaning> 2 <meaning> 3 <meaning>
+
+  ENDING
+  <last line or moment, written out>
+
+  BEATS, MILD TO STRONG
+  1. <beat> ... n. <beat before the ending>
+
+  OPENING
+  <first line>
+
+  SETTING
+  Inside: <x>  Outside: <y>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The feeling"
+    how: "Be exact. \"Unease that something was missed\" gives a better plan than \"emotional\"."
+  - what: "Length"
+    how: "Shorter pieces get a stronger effect. Give a limit."
+  - what: "The material"
+    how: "Real facts and events can be used as beats. Mark any you want kept."
+  - what: "The form"
+    how: "A talk needs a phrase you can say aloud. A story can use an object."
+
+judge:
+  - "You can state the single effect in one line."
+  - "The ending was written before the rest."
+  - "Each beat is stronger than the last."
+  - "The repeated phrase means something new each time."
+  - "Nothing in the plan competes with the end."
+
+test:
+  - "Show the plan to someone and ask what feeling it aims at."
+  - "Write the piece from the plan and see if the ending feels earned."
+  - "Check each beat against the effect and cut any that does not point to it."
+  - "Run it twice and check the effect stays the same."
+
+improve:
+  - "Add feelings you often use, so the skill can offer familiar options."
+  - "Add length limits for your channels."
+  - "Keep a list of repeating phrases that worked."
+  - "Pair it with \"Single-effect draft checker\" once you have a draft."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ranking beats and drafting an ending is text work any strong chat AI does well with this skill."}
+    - {name: "A timer", why: "Reading the piece aloud against a clock shows whether it fits one sitting."}
+  inputs:
+    - "The facts or events you must include"
+    - "A past piece with the feeling you want"
+    - "The place it will be read or heard"
+
+terms:
+  - term: "Effect"
+    meaning: "The single feeling or idea the audience leaves with."
+  - term: "Climax block"
+    meaning: "The last moment and the one or two beats just before it."

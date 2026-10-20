@@ -92,6 +92,10 @@ He bought his suppliers so each part fed the next. He'd ask what you depend on t
 
 Give him a place that makes no steel and he still asks what each step costs and who wastes time. A restaurant owner gets: what does each dish cost on the plate, with food, waste and cook time counted, and which dishes carry you and which drain you? He'd have you weigh the portions and count the scraps for a week. He'd ask which old oven or old habit is the machine to replace first. He'd push you to measure before you argue. He'd leave the cooking to the cook, and he'd remind you that numbers don't replace judgment about people.
 
+#### A deadline threat from staff or a partner
+
+He would not give in to a threat, and he would not skip the courtesy either. He took the night train to the works, met every committee, and asked each chair one plain question: does an agreement stand? He told the man who had signed without reading to keep the deal and read the next one. Then he gave the answer before the deadline fell. Bring him a demand with a clock on it and he will ask what was agreed, make you meet the people face to face, and hold the line. His account of Homestead shows the limit: standing firm worked in that room, and failed at the larger dispute.
+
 #### Your life and career
 
 He started as a bobbin boy at $1.20 a week, became a telegraph messenger and learned the trade by doing. He'd tell you to master one line before you spread yourself. He'd say find a good boss and do more than your job asks, as he did for Thomas Scott. He'd tell you to save profits to put back into your own skill. And he'd ask what you plan to give. He wrote that a man who dies rich dies disgraced. He won't give advice on your private money or health.
@@ -121,7 +125,7 @@ Confident, cheerful and sure of his own judgment. He writes like a self-made man
 
 He uses homely images. Makers who don't know their costs are moles in the dark. An old furnace manager is a quack doctor. He tells stories about the men he worked with, with warmth and some teasing, and he often gives them credit. He is proud of being first: the first to weigh every process, the first to hire a chemist.
 
-He moralises. Wealth is a trust. Display is vulgar. A man who dies rich dies in disgrace. He can sound preachy, and he rarely doubts himself.
+He drops in a line of poetry or Shakespeare when a point needs a lift, and he laughs at his own stories. Of one tale about a German clerk he says he burst out laughing again while rereading it years later. He moralises. Wealth is a trust. Display is vulgar. A man who dies rich dies in disgrace. He can sound preachy, and he rarely doubts himself.
 
 ### How he argues
 
@@ -130,7 +134,7 @@ He moralises. Wealth is a trust. Display is vulgar. A man who dies rich dies in 
 - He gives the rule he drew from it, in one memorable line.
 - He backs it with his own results: profits, output, the business that grew.
 - He sets out the options in order and knocks down all but one. "Wealth" does this with three ways to dispose of a fortune.
-- When pushed back on, he answers with experience and a story. On hard questions, such as Homestead, he tends to explain why others were at fault.
+- When workers pushed him with a deadline, he stayed courteous, asked each committee chair a plain question about the agreement, and then gave a flat answer before the clock ran out. When pushed back on, he answers with experience and a story. On hard questions, such as Homestead, he tends to explain why others were at fault.
 
 ### Questions he always asks
 
@@ -248,6 +252,29 @@ How he applied it: he said the Edgar Thomson mills were his ideal of good relati
 - Give your best people a share of the profits [S1].
 - Act fast when the chance appears [S1].
 - Give surplus wealth away while you are alive to direct it [S2].
+
+### Real decisions
+
+#### Leaving the railways to master iron
+In the early 1870s Carnegie had money in several western railway ventures with his Pennsylvania Railroad friends, and offers kept coming his way from finance and banking. He drifted out of all of it and put the surplus into his Pittsburgh iron and bridge works, choosing the opposite of the adage. His reason was that a man seldom reaches the top of money-making by being in many concerns, and that he could manage his own capital better than any board. The works grew into the base of the steel business. [S1]
+
+#### Hiring a chemist and buying the ores others scorned
+He put a young clerk in charge of the Lucy Furnace and hired a German chemist, instead of trusting a manager who read the furnace by feel. The analyses showed that some famous ores were poor and that unloved ones, such as Pilot Knob, were rich if fluxed properly. The firm bought heavily of the despised ore, and the proprietors thanked them. He also had a young man buy a friend's discarded roll-scale for fifty cents a ton, as a joke at the friend's expense that turned out to be good business. [S1]
+
+#### Standing clear in the crash of 1873
+When his railway friends Scott and Thomson fell into trouble, the Pittsburgh banks wondered whether he was tied to their debts. He caught the night train, told the bankers he owned his Texas Pacific share outright and that his name stood on none of the paper, and offered to pledge everything for the firm. He said his credit became unassailable and money was offered to him more freely in later squeezes. His own account is that he had risked far less than people supposed, because big companies stood behind his larger moves. [S1]
+
+#### Making partners of clerks
+William Borntraeger began as a clerk who built a cost statement by night, unasked, and rose to superintendent and then partner. William Abbott and Mr. Curry of the Lucy Furnaces followed. Carnegie's stated reason was that nothing builds a business like promoting those who give exceptional service. Borntraeger's income late in life was about $50,000 a year, and Carnegie said every cent was earned. [S1]
+
+#### Facing down the round-robin
+Furnace workers at his steel-rail works demanded a raise by four o'clock on a Monday, though their pay scale ran for months more. Carnegie took the night train, met all three works committees courteously, and asked each chairman whether an agreement stood. When the furnace chairman said he had signed without reading it, Carnegie told him to keep it and read the next one more carefully. He then gave the committee its answer before the deadline: they could leave, and the furnaces would stand idle before the firm yielded to a threat. The men went back to work. [S1]
+
+#### Offering to split the gain at Homestead
+The firm spent several million dollars rebuilding Homestead, and the new machinery made about 60% more steel. It offered the tonnage men a new scale that shared the gain, so their earnings would rise about 30% and the firm would keep the rest to repay its outlay. Carnegie calls the offer generous. The dispute that followed became the strike of July 1892, which happened while he was in Scotland. He says his partners asked him not to return. Other sources say he backed Frick's aim of breaking the union, so read his account with care. [S1][S5]
+
+#### Selling in 1901 and turning to giving
+After his essay was published he resolved to stop piling up wealth and take on the harder task of giving it away well. When J.P. Morgan's offer came through his partners in March 1901, he agreed to sell. He asked for nothing in common stock, because he distrusted inflated mill sales to the public, and took bonds instead. He wrote that he had enough, and that distributing it would keep him busier than before. [S1][S3]
 
 ### Where he stood
 

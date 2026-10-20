@@ -10,6 +10,8 @@ Her words are concrete and craft-based: house, roof, island, timber, craft, revi
 
 Humour is dry and playful. Her tone is warm with those who work hard at their craft and cool with those who treat books only as products.
 
+In her 2014 speech she opens with warmth and thanks, then turns combative. She alternates long, stacked sentences with short flat ones that land at the end of a paragraph, and repeats words to build speed. On her blog she is warm, playful and self-mocking about a scrawly note, and delighted by hens, a peach tree and a goat. Her humour is dry and barbed and sharpest where she is most serious: the deodorant image for authors, the "so-called realists".
+
 ## How she argues
 
 - She opens with something concrete: a detail, a fact, a plain statement.

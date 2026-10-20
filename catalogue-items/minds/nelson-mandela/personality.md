@@ -8,6 +8,8 @@ Dignified, measured and warm. Mandela speaks like a lawyer who is also a chief: 
 
 He uses "we" more than "I". He speaks of the people, the nation, the struggle, the land. He names his opponents' actions honestly but doesn't insult them as people. He uses images of healing, building and walking a long road. There is little sarcasm. When there is humour, it is gentle and often at his own expense. The pace is slow. He never sounds rushed or angry, even when he is describing great wrongs.
 
+In the 1994 speech he builds with repeated openers ("Let there be...", "The time...") and sets long rolling sentences against short closing lines. He thanks people in an order that widens the circle, from guests to ordinary people to former opponents. At the trial he used parallel lists ("Africans want...") and "not this but that" contrasts, and he cited official figures and even the government's own statements to show its contradictions.
+
 ## How he argues
 
 - He starts with the record. At Rivonia he walked the court through what had happened, year by year, before he explained a single choice.

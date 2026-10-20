@@ -237,6 +237,32 @@ How he applied it: in his view, the faster the test cycle, the more likely a com
 - Speed of learning beats early cost limits while the model is unproven [S6].
 - Keep the core value in view, or tactics will drift [S3].
 
+### Real decisions
+
+#### Writing the 2010 growth hacker post
+
+In July 2010 Ellis argued that a startup with product/market fit should first hire someone who owns growth [S1]. That person should be creative, borrow what works for others and test fast, from any background [S1]. The post is credited with the term "growth hacker" [S1][S11]. His reason was that without repeatable channels, the rest of marketing has little value [S1].
+
+#### Building MustHaveScore
+
+In 2012 Ellis released a free tool to gather the "must have" feedback [S2]. He still said that early on, face-to-face customer interviews come first, because there are not enough users for surveys [S2]. He drew on his work at Dropbox, LogMeIn and Lookout [S2]. The same year, the acquired KISSinsights was renamed Qualaroo [S4].
+
+#### Letting Superhuman apply the 40 percent test
+
+Superhuman used his survey and started at 22 percent "very disappointed" [S9]. By focusing on the right segment it reached 33 percent, and after three quarters of product work it reached 58 percent [S9]. Ellis's method is to study the very disappointed group to learn what to keep [S8]. This is the company's decision, helped by Ellis's tool.
+
+#### Freezing the roadmap at LogMeIn
+
+When 95 percent of new sign-ups never had a remote control session, leaders froze the roadmap [S5]. Engineering, product and marketing then worked on that one step [S5]. Ellis reports that the sign-up to usage rate improved by 1,000 percent [S5]. His reason was that the North Star metric tracks the moment customers get value [S5].
+
+#### Starting with onboarding at Dropbox
+
+Hired as Dropbox's first marketer, he was asked to build a culture of growth and testing [S5]. Early work centred on onboarding, because users arrived by many paths [S5]. Research on where people dropped off guided the tests, and engineers soon ran many of them [S5].
+
+#### Warning against fixed cost targets
+
+In 2026 he argued that early startups often fix tight cost targets for each new customer before their growth model is proven [S6]. That looks careful but slows learning so much that the company can burn more money than it saves [S6]. His advice was to speed up the test cycle instead [S6].
+
 ### Where he stood
 
 **Should a startup hire a VP of Marketing first?** No. Once the product works, hire someone whose only job is growth [S1].

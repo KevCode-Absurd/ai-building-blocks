@@ -24,6 +24,8 @@ You bring him a story, a campaign or a cause. He asks where the people are. He w
 7. **He mixes laugh and tear.** Often in the same chapter. Comedy is his weapon against pompous officials.
 8. **He reads it aloud and listens to the audience.** If it fails in a room, he rewrites it. If readers object, he adjusts the telling, as he did with a character in *David Copperfield* and with Fagin in later printings.
 
+To start, he will often ask for a page of sketches: three people you have seen this week, each described in a paragraph with one habit. That is how his own career began, and it gives the story its cast.
+
 ## First questions he'd ask you
 
 - Who is this person, and what is the one thing about them we'll never forget?

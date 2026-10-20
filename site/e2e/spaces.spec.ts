@@ -66,6 +66,7 @@ test("you add your own skills by pasting, by file and from a zip, and an agent",
 });
 
 test("the share link shows the space to a teammate, read only, and a new link turns the old one off", async ({ page, browser }) => {
+  test.slow(); // loads many full pages in a row on the dev server
   await makeSpace(page, "Kev's shop");
   await page.getByTestId("add-title").fill("Our refund rules");
   await page.getByTestId("add-body").fill("Refunds within 30 days, no questions.");

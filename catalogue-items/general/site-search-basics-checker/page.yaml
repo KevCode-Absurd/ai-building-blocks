@@ -1,0 +1,130 @@
+new_slug: site-search-basics-checker
+name: "Site search basics checker"
+summary: "Paste your site address and page list. Get a short fix list for duplicate titles, a missing sitemap and dead-end 404 pages."
+job: audit-landing-page
+thinking: low
+thinking_why: "It checks a short list of basic faults and ranks them by pages affected."
+
+headline: "Site search basics checker"
+subhead: "Give it your site address and a list of your pages. It checks three basics: duplicate titles and descriptions, a missing sitemap, and dead-end 404 pages. You get a score out of 100 and a short fix list ranked by pages affected."
+
+explain: |
+  Many sites lose search traffic to small, boring faults. Dozens of pages carry the same title, so search engines cannot tell them apart. There is no sitemap to list the pages. Visitors who land on a missing page hit a dead end and leave.
+
+  This skill lists page titles and descriptions and flags the repeats, especially on tag, category and paged pages. It checks that an XML sitemap exists and is submitted, and reads how many pages get indexed. It collects 404 errors, decides where each should go, and turns the 404 page into a helpful one. It ranks fixes by the number of pages affected. The advice is from 2013 and you must check it against current search guidance.
+
+when:
+  - "Your site has grown by adding tags, categories or paged lists."
+  - "Some pages get no search traffic and you do not know why."
+  - "Visitors land on error pages from old links."
+
+you_give:
+  - "Your site address"
+  - "A list of pages with titles and descriptions (or an export from your site)"
+  - "Your list of 404 errors and search traffic by page (optional)"
+  - "Whether you use a plugin or a hosted platform (optional)"
+you_get:
+  - "Duplicate titles and descriptions grouped by pattern"
+  - "Whether a sitemap exists, is submitted and how many pages are indexed"
+  - "Each 404 with a suggested destination"
+  - "A score out of 100 and a fix list ranked by pages affected"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your site address and an export of your pages with titles and descriptions."
+  - "Add your 404 list and pages with no search traffic if you have them."
+  - "Work down the fix list from the top."
+  - "Check your search traffic again after a few weeks."
+
+how_it_works:
+  - title: "Lists titles"
+    text: "Lists page titles and descriptions and flags the duplicates."
+  - title: "Checks the sitemap"
+    text: "Checks that an XML sitemap exists and is submitted, and reads the indexed count."
+  - title: "Collects 404s"
+    text: "Collects 404 errors and decides where each should go."
+  - title: "Finds unseen pages"
+    text: "Lists pages with no search traffic and tests whether they are indexed."
+  - title: "Fixes the 404 page"
+    text: "Turns the 404 page into a helpful page with related pages."
+  - title: "Ranks the fixes"
+    text: "Ranks fixes by pages affected and sets a re-check."
+
+output_shape: |
+  SCORE: <n>/100 (titles 30, sitemap 25, 404 handling 25, indexed pages 20)
+
+  DUPLICATE TITLES AND DESCRIPTIONS
+  <pattern> | Pages affected: <n> | Examples: <urls>
+
+  SITEMAP
+  Exists: <yes/no> | Submitted: <yes/no/unknown> | Pages indexed: <n of n>
+
+  404 ERRORS
+  <url> | Seen <n> times | Send to: <page or show the 404 page>
+
+  PAGES WITH NO SEARCH TRAFFIC
+  <url> | Indexed: <yes/no/unknown>
+
+  THE 404 PAGE
+  Should offer: <related pages, including not yet indexed ones, and search>
+
+  FIX LIST, RANKED BY PAGES AFFECTED
+  1. <fix> | Pages: <n>
+
+  CHECK AGAIN ON
+  <date>
+
+  DATED ADVICE
+  Based on 2013 guidance. Check against current search guidance.
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "A full page export"
+    how: "Give every page, not a sample. Counts of pages affected need the full list."
+  - what: "Your platform"
+    how: "Say which one you use. It changes how titles and sitemaps are fixed."
+  - what: "Search traffic by page"
+    how: "Add it to find pages with none."
+  - what: "The 404 list"
+    how: "Add error counts. It ranks which dead links matter first."
+
+judge:
+  - "Each finding names the exact pages affected."
+  - "Fixes are ranked by pages affected, not by ease."
+  - "Nothing is stated as a ranking guarantee."
+  - "The advice is dated and flagged for you to check against current guidance."
+  - "Each 404 has a destination or a reason to leave it."
+
+test:
+  - "Run it on a site you know has duplicates. Check it groups them by pattern."
+  - "Test two of the 404 destinations by hand."
+  - "Make one fix and recheck pages affected."
+  - "Check your search traffic for those pages after a few weeks."
+
+improve:
+  - "Add the page types your site has, such as tags or filters, so each gets its own rule."
+  - "Add a line saying which pages should never be indexed."
+  - "Save the final sitemap and 404 rules to your site notes."
+  - "Pair it with a landing page audit for your top pages."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Grouping titles and ranking fixes is text work any strong chat AI does with this skill."}
+    - {name: "Google Search Console", why: "Shows indexed pages, sitemap status and 404 errors for your own site."}
+  inputs:
+    - "A crawl export of your pages"
+    - "Search Console index and error reports"
+    - "Traffic by page from your analytics"
+
+terms:
+  - term: "XML sitemap"
+    meaning: "A file that lists the pages on your site for search engines."
+  - term: "404 page"
+    meaning: "The page shown when a visitor asks for a page that does not exist."
+  - term: "Indexed"
+    meaning: "Stored by a search engine so it can show the page in results."

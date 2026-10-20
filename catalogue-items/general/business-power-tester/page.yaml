@@ -1,0 +1,129 @@
+new_slug: business-power-tester
+name: "Business power tester"
+summary: "Describe your business and rivals. Get a test of benefit, barrier and size, and which power you could build next."
+job: plan-strategy
+thinking: high
+thinking_why: "It has to tell a lasting edge from good execution, and the answer depends on weak evidence and fine distinctions."
+
+headline: "Business power tester"
+subhead: Give it your business, how it makes money and who competes with it. It tests whether you have a lasting edge by naming the benefit, the barrier and whether it is big enough to matter, then matches it to one of seven powers and the stage you are in.
+
+explain: |
+  A list of strengths is not an edge. A business has a lasting edge only if it earns something rivals do not, such as a higher price or a lower cost, and something stops rivals from taking it. Good execution, a fast team and a nice culture are real, but rivals can copy them.
+
+  This skill makes you name the benefit in numbers and the barrier in words, then checks that it is large enough to show up in the results. It matches the edge to one of seven powers (scale, network effects, counter-positioning, switching costs, brand, cornered resource or process), checks which stage you are in, and tests whether you can explain how the business makes money in a few sentences. If you cannot, it marks the business too hard to judge and stops. No investment advice.
+
+when:
+  - You think you have a moat but cannot say what stops a rival copying it.
+  - You are choosing which advantage to build next with limited time and money.
+  - You are judging whether a rival's edge is real before you decide how to respond.
+
+you_give:
+  - A description of the business and how it makes money (required)
+  - Your price, cost and margin if you know them (optional, in the same message)
+  - Your main rivals and what they do (optional)
+  - The stage of the business, whether starting, growing or mature (optional)
+you_get:
+  - The benefit named in numbers and the barrier in words
+  - A materiality test with a number or a clear reason
+  - A match to one of the seven powers, and the stage check
+  - The edge to build next and the evidence still missing
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe how the business makes money in a few sentences. Add price, cost and margin if you have them.
+  - Name your closest rivals and what stops them copying you, as you see it.
+  - Read the verdict, then the evidence list. Gather what is missing before you commit money.
+  - Re-run it every year or after a big change in your market.
+
+how_it_works:
+  - title: Name the benefit
+    text: States the benefit in numbers, as price, cost or margin.
+  - title: Name the barrier
+    text: States what stops rivals taking the benefit.
+  - title: Test materiality
+    text: Checks the benefit is large enough to matter, not just present.
+  - title: Match a power
+    text: Matches the edge to one of the seven powers.
+  - title: Check the stage
+    text: Checks whether the business is at origination, take-off or stability.
+  - title: Explain the money
+    text: Says in a few sentences how the business makes money, or stops if it cannot.
+  - title: Name the edge
+    text: Names the edge, such as low cost or a trusted brand, or says none was found.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  HOW THE BUSINESS MAKES MONEY
+  <a few sentences, or TOO HARD TO JUDGE and why>
+
+  BENEFIT
+  <price higher / cost lower / margin> | Size: <number or MISSING>
+
+  BARRIER
+  <what stops rivals taking it> | Evidence: <fact>
+
+  MATERIALITY
+  <does it show up in price, cost or margin> | Reason: <number or clear reason>
+
+  POWER AND STAGE
+  Power: <one of seven or none> | Stage: <origination / take-off / stability>
+
+  THE EDGE
+  <low cost / trusted brand / other / none found>
+
+  WHAT TO BUILD NEXT
+  <power and first move> | Evidence still needed: <list>
+
+  MISSING
+  <what would sharpen the test>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Numbers on price and cost
+    how: Give them. A benefit without numbers cannot pass the materiality test.
+  - what: Rivals and their reaction
+    how: Say what they would lose by copying you. It points toward counter-positioning.
+  - what: Customer switching
+    how: Say what it costs a customer in time or money to leave you. It points toward switching costs.
+  - what: The stage
+    how: Say whether you are still finding the model, growing fast or steady. The powers you can build change with the stage.
+
+judge:
+  - Both the benefit and the barrier are named.
+  - Materiality has a number or a clear reason.
+  - Claims of network effects show an effect on cost or price.
+  - Power is not confused with good execution.
+  - Missing evidence is listed.
+
+test:
+  - Run it on a business you know well, such as a market leader, and see if it finds the known edge.
+  - Remove the price and cost figures and see that it marks the result as unproven.
+  - Run it twice. The matched power should stay the same.
+  - Show the result to someone who competes with you and ask whether the barrier holds.
+
+improve:
+  - Add numbers for your own price premium or cost advantage so the materiality test is exact.
+  - Add the rivals that would be hurt by copying you, so counter-positioning is checked.
+  - Save the verdict and the evidence list to your brand file.
+  - Pair it with "Second business picker" when you consider a new market.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing evidence against a fixed list of tests is reasoning work any strong chat AI does well."}
+    - {name: "Your accounts or margin report", why: "Real margins make the materiality test a number, not an opinion."}
+  inputs:
+    - "Your price and cost per unit, side by side with a rival's"
+    - "Customer churn and what it costs to switch"
+    - "Contracts, patents or exclusive deals you hold"
+
+terms:
+  - term: Power
+    meaning: A lasting edge that lets a business earn more than rivals, with a barrier that stops them copying it.
+  - term: Counter-positioning
+    meaning: A better model that a bigger rival will not copy because doing so would hurt its own business.
+  - term: Switching costs
+    meaning: What it costs a customer, in time or money, to leave you for someone else.

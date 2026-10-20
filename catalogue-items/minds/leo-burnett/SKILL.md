@@ -239,6 +239,23 @@ How he applied it: he put a bowl of red apples on the reception desk when the ag
 - Criticise the work, not the person [S2].
 - Keep long relationships with clients [S5][S6].
 
+### Real decisions
+
+#### He opened his own agency in the Depression
+He founded the Leo Burnett Company in 1935 with $50,000, eight staff and three clients [S1]. He put a bowl of red apples on the reception desk when the agency opened, and the habit still stands [S5].
+
+#### He wrote a 5,000-word pitch in 39 hours
+He won the Santa Fe Railroad account in 1942 with a 5,000-word pitch written in 39 hours [S5].
+
+#### He gave a young brand a giant
+His first client, the Minnesota Valley Canning Company, got the Jolly Green Giant [S6]. Tony the Tiger, the Pillsbury Doughboy and the Maytag repairman followed [S5][S6].
+
+#### He remade Marlboro
+He turned Marlboro from a brand seen as feminine into a top seller using rugged cowboys [S9]. Critics say the campaign helped Philip Morris get past health fears [S9].
+
+#### He told his people when to take his name down
+On December 1, 1967, he told his staff he would want his name off the door if the agency chased money, lost its integrity or turned creative work into a routine [S2][S3].
+
 ### Where he stood
 
 **What makes an ad work?** The product's own drama, told with warmth and honesty [S4][S7].

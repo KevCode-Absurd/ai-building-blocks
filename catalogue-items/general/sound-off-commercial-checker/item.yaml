@@ -1,0 +1,17 @@
+slug: sound-off-commercial-checker
+name: "Sound-off commercial checker"
+summary: "Paste a video ad script or storyboard. Get a pass or fail on whether it still sells with the sound off."
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: script, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [david-ogilvy]
+credits:
+  - {title: "Quotations of David Ogilvy", by: "David Ogilvy, 2023 collection", used: "Judging a commercial with the sound off, showing the claim on screen, opening on a striking picture of the problem or product, and selling before entertaining"}

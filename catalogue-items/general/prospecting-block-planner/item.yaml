@@ -1,0 +1,19 @@
+slug: prospecting-block-planner
+name: "Prospecting block planner"
+summary: "Paste your week and target list. Get a protected call block, a two-minute research batch and one reason to call each lead."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [jeb-blount]
+credits:
+  - {title: "Fanatical Prospecting, chapter 1 (publisher sample)", by: "Jeb Blount", used: "Protected prospecting time, batching, filling the pipeline and counting conversations"}
+  - {title: "How Much Research Preparation Should You Do Before a Cold Call", by: "Jeb Blount (study note)", used: "Capping lead research at a few minutes for one or two useful facts"}

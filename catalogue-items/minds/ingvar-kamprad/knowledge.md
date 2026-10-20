@@ -76,6 +76,32 @@ How he applied it: IKEA Museum notes that the Testament was hopeful about the fu
 - Build your own reserves so you stay independent [S9].
 - When a door shuts, look for a new route [S6][S8].
 
+## Real decisions
+
+### Designing his own furniture after the boycott (1950 to 1952)
+
+Trade fairs banned IKEA in 1950 for showing consumer prices, and Swedish suppliers boycotted it from 1952 [S6]. Kamprad rented his own space in central Stockholm so customers and suppliers could come to him [S6]. With suppliers shut off, IKEA designed its own furniture and found makers abroad, which led to a look of its own [S6][S8]. He said the boycott only made the firm stronger [S6].
+
+### Opening a showroom (1953)
+
+Mail order had become a race to the bottom on quality. In 1953 he opened a showroom in Älmhult so people could see and test furniture before buying [S7]. The first full IKEA store opened there on 28 October 1958 [S7].
+
+### Buying chairs in Poland (1961)
+
+IKEA was short of about half the 40,000 dining chairs it needed. Kamprad went to Poland, placed large long-term orders and decided quickly because one person made the call [S8]. Polish prices were reported as nearly 50% below Swedish costs [S8].
+
+### Writing the Testament and moving abroad (1976)
+
+In 1976 he wrote the nine-point Testament to keep the culture alive as he moved further from staff [S2]. That year he also began a stay in Switzerland that lasted until 2014 [S1]. The text stresses few rules, asking why and fixing mistakes rather than fearing them [S2][S3].
+
+### Putting ownership in foundations (1980s)
+
+In the 1980s he set up Inter IKEA Group and the Interogo Foundation to secure the company's independence and long life [S9]. He wanted IKEA to hold its own financial reserves so it never depended on others [S9]. One side effect is that his personal wealth is hard to estimate, with rankings from 11th to 162nd in two years [S1].
+
+### Owning up to the fascist past (1994)
+
+In a 1994 letter to staff he called his teenage involvement with a pro-fascist movement the greatest mistake of his life [S1][S5]. He had joined at 16, in 1942, and stayed active until 1945 [S1].
+
 ## Where he stood
 
 **Is profit good?** Yes, as a resource for growth, balanced against low prices [S2][S3].

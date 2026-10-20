@@ -1,0 +1,122 @@
+new_slug: hidden-value-check
+name: "Hidden value check"
+summary: "Paste a job, step or rule you want to cut or automate. Get what it quietly does besides the obvious task."
+job: think-and-decide
+thinking: medium
+thinking_why: "It looks for unstated effects, which needs imagination, but the questions are fixed."
+
+headline: "Hidden value check"
+subhead: "Paste a job, step or rule you plan to cut or automate. It names the obvious task, lists what else it does that nobody wrote down, asks who gains from each, prices the hidden value and gives a decision: cut, keep or replace."
+
+explain: |
+  Before cutting a step to save time or money, we list what it was meant to do. We rarely list what it does besides. A handwritten thank-you note is meant to say thanks, but it also tells the customer someone cared enough to spend time. A slow sign-up step is meant to collect an email, but it also filters out people who would never buy.
+
+  This skill names the job in its simplest form, lists everything it does that nobody wrote down, and asks who benefits from each hidden part and how. It asks what would break or be lost if the job went and checks whether a long-standing habit has a reason you do not know yet. It prices the hidden value as best it can and ends with cut, keep, or cut and replace the hidden parts.
+
+when:
+  - "You plan to automate a manual step and want to know what you would lose."
+  - "A rule feels pointless and you are about to remove it."
+  - "A cost-cutting list has items that look wasteful but have been there for years."
+
+you_give:
+  - "The job, step or rule, described in plain words"
+  - "Why you want to cut or automate it"
+  - "Who does it and who sees the result"
+  - "How long it has existed (optional)"
+you_get:
+  - "The job in its simplest form"
+  - "A list of hidden parts, each with who gains"
+  - "What would break if it went, and an estimated cost"
+  - "A decision: cut, keep or replace"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the job and say why you want to cut it."
+  - "Say who does it, who receives it and how long it has been done."
+  - "Read the hidden parts first. Add any you know that it missed."
+  - "If the answer is replace, act on the named replacement first, then cut."
+
+how_it_works:
+  - title: "Name the job simply"
+    text: "Names the job in its simplest form."
+  - title: "List what it does unseen"
+    text: "Lists everything it does that nobody wrote down."
+  - title: "Ask who gains"
+    text: "Names who benefits from each hidden part."
+  - title: "Ask what would break"
+    text: "Asks what would break or be lost if it went."
+  - title: "Question the habit"
+    text: "Checks if a long-standing habit has a reason you do not know."
+  - title: "Price the hidden value"
+    text: "Prices the hidden value as best it can."
+  - title: "Decide"
+    text: "Decides: cut, keep or replace."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  THE JOB
+  <plain sentence> | Reason given: <reason>
+
+  WHAT IT DOES UNSEEN
+  - <hidden part> | Who gains: <who> | <known / guessed>
+
+  WHAT WOULD BREAK
+  - <part> | Shows up: <when> | Cost: <range and assumption>
+
+  HABIT CHECK
+  <possible reason, and who to ask>
+
+  SAVING FROM CUTTING: <figure>
+  VALUE AT RISK: <range>
+
+  DECISION: <cut / keep / replace>
+  Replacements: <replacement for each part kept>
+  Watch after: <what and how long>
+
+  MISSING
+  <facts that would change the decision>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Who does the job"
+    how: "Add their view. People doing it know what it quietly does."
+  - what: "How long it has existed"
+    how: "A long history raises the odds of an unwritten reason."
+  - what: "The saving"
+    how: "Give a figure. The comparison needs it."
+  - what: "What you replace it with"
+    how: "Say if you have a replacement in mind. It checks it covers the hidden parts."
+
+judge:
+  - "Hidden parts outnumber the obvious ones in the list."
+  - "Each is tied to a person who gains."
+  - "The cost of losing each is estimated."
+  - "A replacement is named for any part kept."
+  - "The decision is one of cut, keep or replace."
+
+test:
+  - "Run it on a step you removed in the past and see if it finds what you lost."
+  - "Ask the person who does the job whether the hidden list is right."
+  - "After a cut, watch for the losses it named."
+
+improve:
+  - "Add the steps in your business that were once cut and brought back."
+  - "Add what customers say they like about the small things."
+  - "Keep a log of cuts and what followed."
+  - "Pair it with Advice skin-in-the-game checker when the advice to cut came from someone selling a replacement."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning, questioning and structuring are text work any strong chat AI does well with this skill."}
+  inputs:
+    - "The people who do the job"
+    - "Customer feedback on it"
+    - "What it costs now"
+    - "When and why it started"
+
+terms:
+  - {term: "Hidden value", meaning: "A benefit a step provides that nobody wrote down as its purpose."}
+  - {term: "Replacement", meaning: "A cheaper way to keep a hidden benefit when the step itself goes."}

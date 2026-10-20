@@ -1,0 +1,121 @@
+new_slug: business-mission-writer
+name: "Business mission writer"
+summary: "Say what you make and who it helps. Get a one-paragraph mission bigger than profit, a staged plan and an announcement day."
+job: plan-strategy
+thinking: medium
+thinking_why: "It needs careful wording and judgement about what is true for your business, but follows a fixed order."
+
+headline: "Business mission writer"
+subhead: Tell it what you make, who it helps and what the business is like today. It asks what good the work does beyond profit, writes a one-paragraph mission in plain words, plans the stages to reach it and plans the day you announce it.
+
+explain: |
+  Many missions say "leading provider of innovative solutions". They fit any company, so they guide nobody. A good mission lets a new hire choose between two tasks, and tells a customer why you exist.
+
+  This skill starts with the duty of your work: what good it does for the people it serves. It names those people and what they can do afterwards that they could not before. It cuts adjectives and keeps one verb, sets a long plan in stages with dates, and says what the business will not do for growth. It then plans the announcement, including a spoken version, so the team hears it from you and can answer.
+
+when:
+  - Your current mission could belong to any company in your field.
+  - The business is changing direction and you need to tell the team why.
+  - You are new in a leader role and need your first message to the team.
+
+you_give:
+  - What you make or do, and who it helps
+  - Your current mission or goal, if you have one (optional)
+  - Your brand file (optional)
+you_get:
+  - A one-paragraph mission that names who is helped and how
+  - A staged plan with dates, and what this stage must do
+  - A list of what the business will not do for growth
+  - An announcement plan with a spoken version
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you make, who buys it, and who uses it. Paste your current mission if you have one.
+  - Answer its question about what good the work does. Say it badly if you need to.
+  - Read the mission aloud. Change any word you would not say.
+
+how_it_works:
+  - title: Asks the higher question
+    text: Asks what duty the business has beyond profit.
+  - title: Names the good done
+    text: Writes in one sentence what good the product does for people.
+  - title: Names who is helped
+    text: Names the people served and what they can do afterwards.
+  - title: Cuts the adjectives
+    text: Removes words like leading and innovative and keeps one verb.
+  - title: Sets the stages
+    text: Writes a long plan in stages with dates and what this stage must do.
+  - title: Limits growth
+    text: Says growth serves the mission and what the business will not do to grow.
+  - title: Explains the change
+    text: States the old goal and why it no longer fits.
+  - title: Plans the announcement
+    text: Plans an in-person day with a spoken version and room for each person to respond.
+
+output_shape: |
+  THE MISSION
+  <one paragraph>
+
+  WHO IS HELPED
+  <people> | <what they can do afterwards>
+
+  THE STAGES
+  Stage <n>: <years or dates> | <what it must do> | <how we will know>
+
+  WHAT WE WILL NOT DO FOR GROWTH
+  <list>
+
+  WHY THE OLD GOAL NO LONGER FITS
+  <old goal> | <reason>
+
+  ANNOUNCEMENT PLAN
+  <when, where, who speaks> | <spoken version, under 90 seconds> | <how each person responds>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How concrete the people are
+    how: Name a real kind of person ("home bakers with a day job"), not "customers". It writes a sharper mission.
+  - what: Time span
+    how: Say how far ahead you can honestly plan. The stages scale to it.
+  - what: What you will not do
+    how: Add one or two things you have said no to before. They go in the limits.
+  - what: Voice
+    how: Paste something you wrote in your own voice. The mission will sound like you.
+
+judge:
+  - The mission names who is helped and what they can do afterwards.
+  - It has one verb and no empty adjectives.
+  - Each stage has a date and a way to tell it is done.
+  - It says what the business will not do for growth.
+  - A new hire could use it to pick between two tasks.
+
+test:
+  - Read it aloud to someone who does not know your work. Ask them to say what you do and for whom.
+  - Give two real tasks to a team member and ask which one the mission favours.
+  - Run it twice. The people named and the verb should stay close.
+  - Compare it with your current mission. It should say something yours does not.
+
+improve:
+  - Add your real founding story to the input so the higher duty is yours.
+  - Save the final mission in your brand file so every other skill uses it.
+  - Change the announcement step to your real setting, such as a team call or a shop floor.
+  - Pair it with "Onliness statement writer" when you need the one-line version for rivals.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Drafting and tightening a short text is easy for any strong chat AI."}
+  inputs:
+    - "Your brand file, so the mission matches your voice and facts"
+    - "A few real customer quotes about what changed for them"
+    - "A short history of why you started"
+
+terms:
+  - term: Mission
+    meaning: A short statement of who you help and what good the work does for them.
+  - term: Stage
+    meaning: One step of a long plan, with its own dates and a test for when it is done.

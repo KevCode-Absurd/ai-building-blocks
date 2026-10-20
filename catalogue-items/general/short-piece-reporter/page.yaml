@@ -1,0 +1,116 @@
+new_slug: short-piece-reporter
+name: "Short piece reporter"
+summary: "Name a place or person and a word limit. Get a reporting plan and a tight piece in three jobs."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "The plan and piece follow a fixed shape, and the work is mostly shaping facts you supply."
+
+headline: "Short piece reporter"
+subhead: Name a place or person and a word limit. It plans a day of reporting, tells you whom to ask and what to note, then helps you write a short piece where each paragraph does one job and the ending is a person's voice.
+
+explain: |
+  Short pieces are hard because there is no room for filler. Most people write them from a desk, with general facts, and they read like a leaflet. A good short piece is built from a day spent at a real place, with notes as if for a much longer article, then cut down hard.
+
+  This skill helps you pick a subject near enough to visit in a day, and plans the visit and one interview with someone who cares for the place or knows it well. After you report, it helps you write the piece. Each paragraph has one job, such as the setting, the people or the voices. Facts go into controlled sentences with active verbs and concrete detail, and the piece ends on a human voice, not a summary.
+
+when:
+  - You need a 300-word profile of a shop, a site, a team member or a customer.
+  - You write a newsletter, case study or local story and want it tight.
+  - You have a word limit and too much material.
+
+you_give:
+  - A place or person you can reach, and your word limit
+  - Your notes after the visit, when you have them
+you_get:
+  - A plan for one day of reporting, with questions to ask
+  - A paragraph map with one job per paragraph
+  - A tight draft within your word limit, from your notes only
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name your subject and your word limit. Say how far you can travel.
+  - Ask for the reporting plan first. Visit, interview and take far more notes than you need.
+  - Paste your notes and ask for the draft.
+  - Check each fact against your notes before you publish.
+
+how_it_works:
+  - title: Picks the subject
+    text: Suggests a place or person you can visit in a day and checks it can be told in your word limit.
+  - title: Plans the interview
+    text: Names someone who cares for the place or knows it well, and lists what to ask.
+  - title: Plans the site day
+    text: Lists what to look at, who to watch and what to note, as if for a far longer article.
+  - title: Maps the paragraphs
+    text: Gives each paragraph one job, such as setting, people or voices.
+  - title: Writes tight sentences
+    text: Packs facts into controlled sentences with active verbs and concrete detail.
+  - title: Ends on a voice
+    text: Closes on something a person said, not a recap.
+  - title: Checks the piece
+    text: Counts words, checks every fact against your notes and names any check it missed.
+
+output_shape: |
+  SUBJECT AND LIMIT
+  <place or person> | Words: <limit>
+
+  REPORTING PLAN
+  Who to ask: <person and why>
+  Questions: <list>
+  What to look at and note: <list>
+
+  PARAGRAPH MAP
+  1. <job>  2. <job>  3. <job> ...
+
+  DRAFT
+  <the piece>
+
+  FACT CHECK
+  <each fact and the note it came from>
+
+  MISSING
+  <notes or facts you still need>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Word limit
+    how: Give an exact number. A 300-word piece needs about four paragraphs; a 150-word piece needs about two.
+  - what: Who you interview
+    how: Choose someone who cares about the place or knows it well, not a spokesperson.
+  - what: How much you report
+    how: Take notes as if for something ten times longer. It is what makes the short piece feel solid.
+  - what: The ending
+    how: Look through your notes for a line a person said that sums up the place without you summing it up.
+
+judge:
+  - Each paragraph does only one job.
+  - The ending is a person's voice, not a recap.
+  - Facts are specific and come from your notes.
+  - The piece is at or under the word limit.
+  - Verbs are active and sentences are short.
+
+test:
+  - Give it notes you took earlier and compare the draft with your own version.
+  - Mark each fact in the draft and find it in your notes. Every one should be there.
+  - Ask a reader what the one idea is. They should name it at once.
+  - Cut it by 20 percent and see if the ending still lands.
+
+improve:
+  - Add your house style, such as how you write numbers, names and titles.
+  - Add a list of places and people you can reach in a day, so the subject step uses them.
+  - Keep a file of good closing quotes from past interviews.
+  - Pair it with a fact checker or a line editor.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning and tightening short text is work any strong chat AI does well."}
+    - {name: "A voice recorder or notebook", why: "You need real quotes and detail from the visit."}
+  inputs:
+    - "Your own notes from the visit"
+    - "A photo of the place"
+    - "A sample of your past writing, for voice"
+
+terms:
+  - term: Paragraph job
+    meaning: The one thing a paragraph does, such as showing the setting, introducing a person or giving a voice.

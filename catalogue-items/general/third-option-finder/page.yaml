@@ -1,0 +1,128 @@
+new_slug: third-option-finder
+name: "Third option finder"
+summary: "Paste the two plans people are stuck on. Get a third option that beats both, and a small test of it."
+job: think-and-decide
+thinking: high
+thinking_why: "Finding an option that is more than a split of the difference takes real creative reasoning, then a fair test of it."
+
+headline: "Third option finder"
+subhead: "Tell it the two plans two sides are stuck on. It finds what each side is really protecting, widens the question, and builds options beyond the two on the table. You get one option that is not a simple compromise, plus a small first step both sides can try."
+
+explain: |
+  When two sides each hold a plan, the usual way out is to split the difference. Both lose a little, and nobody is glad. A better way out is an option neither side has named yet, one that meets each side's core need and does more than either plan did.
+
+  This skill writes each plan fairly, with what each side is protecting. It checks whether this is a true clash of worldviews or just two fixed plans. It sets the positions aside and asks what could be better than anything yet thought of. It runs a what-if round, asks who has solved something like this, widens the brief, and tests every new option against each side's core need. Then it picks one and shapes a small first step.
+
+when:
+  - Two people or teams are stuck on opposite plans and the talks go in circles.
+  - A decision keeps ending in a split-the-difference that nobody likes.
+  - You need a way forward at home or at work that both sides can say yes to.
+
+you_give:
+  - The two plans, in each side's own words
+  - What each side cares about and fears losing (optional)
+  - Constraints that cannot move, such as a budget or a date (optional)
+  - What has already been tried (optional)
+you_get:
+  - Each side's plan and core need, written without taking a side
+  - Whether this is a real clash of worldviews or two fixed plans
+  - At least three options beyond the original two, each tested against both needs
+  - One chosen option and a small first step both sides can try this week
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe both plans as fairly as you can. Better still, write each in the words that side would use.
+  - Add the limits that cannot move.
+  - Share the chosen option and first step with both sides before the next meeting.
+  - Run the small test and come back with what happened.
+
+how_it_works:
+  - title: States both plans
+    text: Writes each plan and what each side is protecting, without taking a side.
+  - title: Names the kind of fight
+    text: Says if it is a real clash of worldviews or two fixed plans.
+  - title: Sets positions aside
+    text: Asks if there is something better than any side has thought of.
+  - title: Runs a what-if round
+    text: Asks what one change would transform this, and what happens if you do the opposite of the usual.
+  - title: Looks for solved cases
+    text: Asks who has solved something like this and how.
+  - title: Widens the brief
+    text: Puts every option on the table, not only the two named.
+  - title: Tests each option
+    text: Checks whether each side keeps its core need, or whether it is only a split.
+  - title: Picks and shrinks
+    text: Chooses one option and sets a small first step both sides agree to try.
+
+output_shape: |
+  THE TWO PLANS
+  Side A: <plan> | Protecting: <core need>
+  Side B: <plan> | Protecting: <core need>
+
+  KIND OF FIGHT
+  <clash of worldviews / two fixed plans> | Why: <reason>
+
+  OPTIONS BEYOND THE TWO
+  1. <option> | A keeps: <need> | B keeps: <need> | Better than a split? <yes/no, why>
+  2. ...
+  3. ...
+
+  WHAT-IF ROUND
+  <changes and opposites considered>
+  Who has solved this: <example>
+
+  THE CHOSEN OPTION
+  <option> | Why: <reason>
+
+  FIRST STEP THIS WEEK
+  <small step> | Who: <names> | Done when: <result>
+
+  MISSING
+  <facts that would change the choice>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Each side's own words
+    how: Paste what each side would say, not your summary. The core need shows in how they put it.
+  - what: What cannot move
+    how: List hard limits so the options are real, not hopeful.
+  - what: Who is in the room
+    how: Say who will decide. An option needs a person who can say yes.
+  - what: What has failed
+    how: List earlier fixes and why they fell short, so they are not repeated.
+
+judge:
+  - The chosen option differs from a simple compromise and each side gains something.
+  - Each side's core need is named and kept.
+  - There are at least three options beyond the original two.
+  - The first step is small enough to start this week.
+  - Neither side is described as the villain.
+
+test:
+  - Run it on a dispute you already solved. See if it finds your answer or a better one.
+  - Show each side their own plan as the skill wrote it. They should say it is fair.
+  - Run it twice. The options may differ, but the core needs should match.
+  - Try the first step for a week and see if both sides stay in.
+
+improve:
+  - Add the sort of fights your team has, with what worked, to the skill as examples.
+  - Add rules your organisation cannot break, such as budget or policy.
+  - Add a list of people who can break a tie, so each option names who must agree.
+  - Pair it with "Advisory council" for a hard decision with high stakes.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reframing positions into needs and generating options is text work."}
+    - {name: "A shared doc", why: "Both sides can read and comment on the options at the same time."}
+  inputs:
+    - "A short note from each side in its own words"
+    - "The numbers behind each plan"
+    - "Past attempts and why they stalled"
+
+terms:
+  - term: Core need
+    meaning: What a side must keep for any plan to be acceptable to it, under the plan it named.
+  - term: Compromise
+    meaning: A deal where each side gives something up, so both end up with less than they hoped.

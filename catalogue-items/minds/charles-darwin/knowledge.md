@@ -70,6 +70,36 @@ How he applied it: the *Origin* sold out its first 1,250 copies at once [S6]. Th
 - Be ready to drop a pet idea when the facts turn [S1].
 - Take time, but watch for others closing in [S1][S6].
 
+## Real decisions (enriched minds)
+
+### Collecting facts on a wholesale scale, with no theory yet
+
+In July 1837 he opened his first notebook on species and, in his words, worked on Baconian principles: facts gathered widely, mostly about domesticated animals and plants, through printed questions, talks with breeders and gardeners, and heavy reading. He saw that selection was the key to breeders' success, but how it could work in the wild stayed a mystery for a time. [S1]
+
+### Reading Malthus and seeing the mechanism
+
+In October 1838, fifteen months into the enquiry, he read Malthus on population for amusement. Because he already knew the struggle for existence from years of watching animals and plants, he saw at once that useful variations would be kept and harmful ones lost, and that new species would follow. [S1]
+
+### Holding off writing it down
+
+Having a theory to work with, he was so anxious to avoid prejudice that he decided not to write even a brief sketch for some time. He first let himself write a 35-page pencil abstract in June 1842, and enlarged it to 230 pages in 1844. [S1] In January 1844 he told Hooker he was almost convinced that species are not fixed, and did not publish. [S3]
+
+### Fixing a problem he had overlooked
+
+He later saw he had missed why descendants of one stock diverge. He remembered the exact spot on the road, in his carriage, where the answer came: the changed offspring of dominant, spreading forms adapt to many different places in nature's economy. [S1]
+
+### Writing the bad news down at once
+
+His rule was that whenever a published fact, observation or thought went against his general results, he made a note of it at once and without fail, because such facts slip from memory far faster than welcome ones. [S1]
+
+### Sharing credit when Wallace wrote
+
+In early summer 1858 Wallace sent him an essay with exactly his theory. He was at first unwilling to let his own extract be published beside it, fearing Wallace would find it unjustified, but Lyell and Hooker arranged a joint paper in 1858. He then wrote the Origin as an abstract of his larger work. [S1]
+
+### Answering objections in the book itself
+
+In the Origin he gave a whole chapter to difficulties of the theory, and called the book only an abstract of a larger body of facts, so imperfect. [S2] When critics said new views need a long explanation, he agreed: only a lengthy account could win public attention. [S1]
+
 ## Where he stood
 
 **Are species fixed?** No. He was "fully convinced" that species are not fixed, and that natural selection was the main way they change [S2].

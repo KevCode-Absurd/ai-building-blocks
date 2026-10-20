@@ -1,0 +1,122 @@
+new_slug: feature-cutting-planner
+name: "Feature cutting planner"
+summary: "Paste your feature list and the users' main job. Get what to keep, cut and merge so it explains itself."
+job: design-work
+thinking: medium
+thinking_why: "It weighs every feature against one job and decides keep, cut or merge, with reasons."
+
+headline: "Feature cutting planner"
+subhead: Give it your list of features and the one job users hire the product for. It checks each feature against that job, marks keep, cut or merge, orders what is left so it shows how to use it, and returns a dated plan with reasons for every cut.
+
+explain: |
+  Products grow by adding. Each feature seems small, and soon nobody can say what the product is for. The same happens to services, courses and web pages: every section has a reason, and the whole has none.
+
+  This skill starts by stating the one job the product does for the user and who would want to own the result. It lists every part, feature and step, and asks whether each helps that job, helps people understand it, or whether another part already does the work. It removes decoration and anything that exists only to impress. What remains is arranged in an order that shows how to use it, and checked for consistency of size, colour and wording. You get a plan with the cuts and their reasons.
+
+when:
+  - Your product has more features than users can name.
+  - A review found parts that serve no purpose and you need a plan.
+  - You are planning a simpler next version.
+
+you_give:
+  - Your list of features, parts or steps
+  - The main job users hire the product for
+  - The report from "Design ten-principles reviewer" (optional if you have another review)
+  - Product facts such as usage data (optional)
+you_get:
+  - A keep, cut or merge decision for every part, with a reason
+  - The order the remaining parts should take
+  - A consistency check on size, colour and wording
+  - A dated plan, with the order to make the changes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your feature list and the main job. If you ran the reviewer, paste its report too.
+  - Add anything that cannot be cut, such as legal needs or promises to customers.
+  - Read each cut and its reason. Overrule any you disagree with.
+  - Follow the plan in order and test with a user after each stage.
+
+how_it_works:
+  - title: States the one job
+    text: Writes the single job the product does for the user and who would want to own the result.
+  - title: Lists every part
+    text: Lists each feature, part and step, using the review if you have one.
+  - title: Tests each part
+    text: Asks if each part helps the job, helps people understand it, or repeats another part.
+  - title: Removes the extras
+    text: Cuts decoration and anything that exists only to impress.
+  - title: Orders what is left
+    text: Arranges the remaining parts in a clear order that shows how to use the product.
+  - title: Checks consistency
+    text: Checks size, colour and wording are the same across parts.
+  - title: Writes the plan
+    text: Lists cuts, merges and changes in order, with reasons and checks.
+
+output_shape: |
+  THE ONE JOB
+  <job> | Who would own the result: <user>
+
+  PART BY PART
+  <part> | Decision: keep / cut / merge into <part> | Reason: <why>
+
+  ORDER OF WHAT IS LEFT
+  1. <part> - <why first> ...
+
+  CONSISTENCY
+  <size, colour, wording issues and fixes>
+
+  DURABILITY
+  <what will still work in years>
+
+  PLAN
+  Step 1 (<date>): <change> | Check: <how you will know>
+
+  MISSING
+  <what would change a decision>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: The one job
+    how: Write it as a sentence a user would say. A job like "get my invoices out" cuts more cleanly than "manage finance".
+  - what: Things that cannot go
+    how: List legal needs, contract promises and parts that bring in revenue. They are kept and marked fixed.
+  - what: Usage data
+    how: Add counts of how often each feature is used. It shows which parts nobody touches.
+  - what: How bold the cuts are
+    how: Say if you want a small trim or a rebuild. It sets how many parts are merged.
+
+judge:
+  - Every kept feature is tied to the main job.
+  - Cuts are listed with reasons.
+  - The remaining order explains use without a manual.
+  - Durability is addressed.
+  - Every part has a stated job.
+
+test:
+  - Run it on a product you know and see if it marks the features you already feel are extra.
+  - Show the cut version to a new user and see if they find the main job without help.
+  - Run it twice. The kept core should be close each time.
+  - Check one cut by asking the people who use that feature and see what they say.
+
+improve:
+  - Add a rule for revenue features, so they are marked fixed without a debate.
+  - Add the user's words for each feature so reasons use their language.
+  - Keep a cut log so a removed feature is not added back by accident.
+  - Run the "Design ten-principles reviewer" again after the cuts.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing a list of features against one job is text work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "A part-by-part table with usage counts makes decisions easy to see."}
+  inputs:
+    - "Usage counts per feature"
+    - "Support requests, grouped by feature"
+    - "A list of promises made to customers"
+
+terms:
+  - term: Merge
+    meaning: Combining two parts that do the same job into one.
+  - term: Fixed part
+    meaning: A part that cannot be cut, such as a legal need, and is kept with a note on why.

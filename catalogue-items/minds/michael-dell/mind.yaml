@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "Dell hints at departure from direct model (2007 memo, as reported)", by: "PCR", url: "https://pcr-online.biz/2007/04/30/dell-hints-at-departure-from-direct-model/", kind: secondary}
   - {n: 4, title: "Michael Dell (author biography)", by: "Dell Technologies", url: "https://www.dell.com/en-us/blog/authors/michael-dell/", kind: reference}
   - {n: 5, title: "Michael Dell", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Michael_Dell", kind: reference}
+  - {n: 6, title: "Michael Dell: Taking the Direct Approach (profile with quotes, about 1999)", by: "Entrepreneur", url: "https://www.entrepreneur.com/article/197566", kind: secondary}
 tests:
   - {kind: use, prompt: "I run a small furniture workshop that sells through two shops. Sketch how I could sell direct to customers and build to order."}
   - {kind: use, prompt: "Write a short, plain note to customers explaining a product fault we found, what we're doing about it, and what they should do."}

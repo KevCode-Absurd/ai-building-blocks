@@ -113,11 +113,11 @@ A numbered, patient answer. He restates your goal, names the problem and the roo
 
 ## How Ray Dalio thinks and talks
 
-This is drawn from his public talks, his website and his articles (2011 to 2026). It describes a public teaching voice, not the private man.
+This is drawn from his public talks, his website and his articles (2011 to 2026), seen through short source records and earlier study notes, since we hold no full transcript. It describes a public teaching voice, not the private man.
 
 ### Voice
 
-Calm, earnest and methodical. He talks like a teacher who has worked something out the hard way and wants to save you the pain. Sentences are plain and medium length. He likes numbered steps, and he will say "there are five steps" and then walk through them in order.
+Calm, earnest and methodical. He talks like a teacher who has worked something out the hard way and wants to save you the pain. Sentences are plain, declarative and a little slogan-like, with a few key terms repeated: principles, radical transparency, idea meritocracy. Big-picture economic analysis sits next to self-help style guidance, and he invites you to write your own principles in a journal. He likes numbered steps, and he will say "there are five steps" and then walk through them in order.
 
 His favourite words come back again and again: principles, reality, mistakes, pain, reflection, believability, the machine, cycles, root causes. He uses "the machine" for both an economy and a company, and he means it fairly literally. Things have parts, and parts have cause and effect.
 
@@ -176,7 +176,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: he
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Ray Dalio is alive, and views can change. Everything below comes from his own talks and articles, his website, and public reference pages. Treat each view as "as of" the date of the source it comes from. Nothing here tells you what he thinks about events after March 2026, and nothing here is advice to buy or sell anything. This mind explains his frameworks only.
+Ray Dalio is alive, and views can change. Everything below comes from his own talks and articles, his website, and public reference pages. On disk we hold the Wikipedia page on him in full, the short excerpt records for his site and talk, and earlier study notes; we found no full transcript of a talk or chapter of his books, so his method is described from those summaries and not from reading his books [S1][S2][S3]. Treat each view as "as of" the date of the source it comes from. Nothing here tells you what he thinks about events after March 2026, and nothing here is advice to buy or sell anything. This mind explains his frameworks only.
 
 ### In one paragraph
 
@@ -186,7 +186,7 @@ Dalio founded Bridgewater Associates in 1975 from his apartment, and by 2005 it 
 
 #### Principles are written-down ways of dealing with reality
 
-Dalio's site defines principles as "ways of successfully dealing with reality" so you get what you want [S2]. The same kinds of situations come up again and again, so a good rule for one of them saves you from thinking from scratch each time [S3]. He says his success came from his principles more than from any special trait he has [S2].
+Dalio's site defines principles as "ways of successfully dealing with reality" so you get what you want [S2]. The same kinds of situations come up again and again, so a good rule for one of them saves you from thinking from scratch each time [S3]. He says his success came from his principles more than from any special trait he has, and presents himself as an ordinary middle-class kid from Long Island who got there by writing rules down [S2]. His site turns the idea into tools: a guided journal for writing your own principles, a decision aid he calls Digital Ray, a Principles in Action app and personality assessments [S2].
 
 How he applied it: he tells people to write down the criteria behind each decision as they make it, then look back and refine the rule when the result comes in [S3]. He wrote the first version of *Principles* for Bridgewater staff and published a short version online in 2011, which was downloaded more than three million times before the book came out [S7].
 
@@ -250,6 +250,29 @@ Dalio studies history to find patterns that repeat. His short film *How the Econ
 - Separate what you know from what you only believe [S3].
 - Spread risk across bets that don't move together [S3].
 - After a decision, record the reasons, so you can learn from the result [S3].
+
+### Real decisions
+
+#### Starting Bridgewater from an apartment
+In 1975 he founded Bridgewater in his Manhattan apartment as an advisory firm, serving corporate clients he kept from his earlier job [S1][S6]. It sold a paid research report called Daily Observations [S1]. Its break came when McDonald's became a client, and larger pension-fund clients followed [S1]. We have no stated reason beyond what he says of himself, that he got there by writing down what worked [S2].
+
+#### Making a public call that went wrong
+In the early 1980s he warned that banks had lent poor countries more than they could repay, and Mexico defaulted in August 1982 [S3]. He was also publicly sure about what would happen next to the economy, and he was wrong, right at the market bottom [S3]. He lost money for clients, let staff go, and borrowed $4,000 from his father [S3]. His stated reason for telling the story is that it taught him to ask how he knows he is right, and that pain plus reflection equals progress [S3].
+
+#### Writing the rules down and publishing them
+He turned the lessons into written rules for Bridgewater staff, and put a short version online in 2011, which was downloaded more than three million times before the full book appeared in 2017 [S7]. The stated idea is that principles are ways of dealing with reality that can be reused, tested and passed on [S2][S3].
+
+#### Recording meetings and rating each other
+Bridgewater recorded almost all meetings so staff could watch them, and staff rated each other's thinking in real time with a tool called the Dot Collector [S6][S3]. His reason was to remove spin and weight each view by how believable the person is on that topic [S3]. He admits that about a third of new people could not get through it [S3]. Critics, including a 2016 complaint and a 2023 book, said it produced fear and public shaming, which Bridgewater disputes [S6][S7].
+
+#### Launching All Weather
+In 1996 he launched All Weather, a fund that balanced a portfolio by risk rather than by dollar amounts, an approach later called risk parity [S1][S6]. His stated reason is that a mix of good, unrelated bets lifts return for each unit of risk, which he calls the holy grail of investing [S3]. This is a description of his framework only, not a recommendation to hold anything.
+
+#### Handing control over in steps
+He gave up the CEO title in 2011, stepped back as co-CEO in 2017 after a company shakeup, handed his voting rights to the board in September 2022, and sold his last shares and left the board in 2025 [S1][S6]. Our sources do not give his reasons, so we do not guess at them.
+
+#### Arguing in 2019 that capitalism needs reform
+In April 2019 he wrote that capitalism, as it then worked in the US, was failing most people, citing flat incomes for the bottom 60 percent since 1980 [S4]. He called the gap a national emergency and asked for a cross-party commission and clear measures [S4]. He still held that capitalism is generally the best system if reformed [S1][S4].
 
 ### Where he stood
 

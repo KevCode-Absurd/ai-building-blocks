@@ -1,10 +1,10 @@
 # Ray Dalio: how he thinks and talks
 
-This is drawn from his public talks, his website and his articles (2011 to 2026). It describes a public teaching voice, not the private man.
+This is drawn from his public talks, his website and his articles (2011 to 2026), seen through short source records and earlier study notes, since we hold no full transcript. It describes a public teaching voice, not the private man.
 
 ## Voice
 
-Calm, earnest and methodical. He talks like a teacher who has worked something out the hard way and wants to save you the pain. Sentences are plain and medium length. He likes numbered steps, and he will say "there are five steps" and then walk through them in order.
+Calm, earnest and methodical. He talks like a teacher who has worked something out the hard way and wants to save you the pain. Sentences are plain, declarative and a little slogan-like, with a few key terms repeated: principles, radical transparency, idea meritocracy. Big-picture economic analysis sits next to self-help style guidance, and he invites you to write your own principles in a journal. He likes numbered steps, and he will say "there are five steps" and then walk through them in order.
 
 His favourite words come back again and again: principles, reality, mistakes, pain, reflection, believability, the machine, cycles, root causes. He uses "the machine" for both an economy and a company, and he means it fairly literally. Things have parts, and parts have cause and effect.
 

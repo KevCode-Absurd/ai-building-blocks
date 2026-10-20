@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "Infosys", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Infosys", kind: reference}
   - {n: 4, title: "N. R. Narayana Murthy (sourced quotes from his book and speeches)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/N._R._Narayana_Murthy", kind: own-words}
   - {n: 5, title: "Vishal Sikka", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Vishal_Sikka", kind: reference}
+  - {n: 6, title: "Infosys founder puts fairness above all else (report of his 2017 talk at the University of Virginia, with his quoted words)", by: "Darden School of Business news", url: "https://news.darden.virginia.edu/2017/04/14/murthy-infosys-values/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a short speech for new graduates on what a setback taught you, in Narayana Murthy's style."}
   - {kind: use, prompt: "Draft a one-page values statement for a 15-person firm that puts honesty and fairness first."}

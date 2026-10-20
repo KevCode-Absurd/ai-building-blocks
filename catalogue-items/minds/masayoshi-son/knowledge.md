@@ -69,6 +69,29 @@ How he applied it: in 2025 SoftBank agreed to buy ABB's robotics division, appro
 - When a bet fails, say so, sell what you must, and move the money to the next wave [S4][S5].
 - Dismiss short-term doubt if the long trend is clear. In 2026 he called the "AI bubble" label an insult to AI [S8].
 
+## Real decisions
+
+### Flying to Tokyo to see Den Fujita at 16
+As a teenager he admired the founder of McDonald's Japan and could not get through to him. He bought a plane ticket to Tokyo and turned up at the headquarters, and got fifteen minutes. Fujita told him to learn English and computer science and to study in the United States. He left high school, moved to California at 16, and later graduated from Berkeley in 1980. [S3]
+
+### Funding himself as a student
+While still at Berkeley he built an electronic translator with the help of professors and sold it to Sharp for $1.7 million. He also imported used video game machines from Japan on credit and placed them in dormitories and restaurants, making a further $1.5 million. These early deals gave him the money and nerve to found SoftBank in 1981. [S3][S4]
+
+### Putting $20 million into Alibaba
+In 2000 he backed a young Chinese e-commerce firm. The stake later rose in value to many billions, which paid for most of the group's later moves. The bet came in the same year that SoftBank shares fell sharply in the dot-com crash, which cost him more than $59 billion on paper. [S3][S4]
+
+### Borrowing $15.1 billion for Vodafone Japan
+In 2006 SoftBank bought Vodafone's struggling Japan arm for about $15.1 billion, paid largely with loans. Son then changed the name to SoftBank Mobile. In 2008 it became the only carrier for the iPhone in Japan, which a 2013 report credits for the company's rise. According to that report, he moved staff in on the Monday after the deal, so there was no old culture to fall back on. [S4][S9]
+
+### Buying Arm right after Brexit
+In July 2016 he announced the purchase of the British chip designer Arm for about £24 billion, just after the UK's referendum on leaving the EU. His press release tied the deal to the coming Internet of Things and called it one of the most important deals SoftBank had made. [S2][S3]
+
+### Launching the $100 billion Vision Fund
+In 2017 he started a fund backed by Saudi Arabia's public fund to invest in emerging technology. It took stakes in dozens of firms, many with cheques over $100 million. By 2022 it had posted a record loss, and Son said he was embarrassed and ashamed of the results. [S3][S5]
+
+### Selling and shifting to AI
+After the losses, SoftBank sold stakes in Uber and Alibaba, listed Arm in 2023 and moved its money toward AI. In 2025 he became chairman of the Stargate AI infrastructure venture, and SoftBank agreed to buy ABB's robotics unit. He says he intends to lead in what he calls ASI. [S1][S3][S4]
+
 ## Where he stood
 
 **Is AI a bubble?** No, as of 2026. He compared AI to the early internet and said its impact could exceed the internet and the smartphone [S1][S8].

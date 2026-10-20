@@ -1,0 +1,18 @@
+slug: online-media-buy-auditor
+name: "Online media buy auditor"
+summary: "Paste your online ad plan and reports. Get a list of where the money may leak and what to ask each supplier."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [bob-hoffman]
+credits:
+  - {title: "Inside the Black Box (2024)", by: "Bob Hoffman", used: "Splitting direct from programmatic buys, asking who made each number and how they know, spotting where money leaks, and checking who gains if the numbers look good"}

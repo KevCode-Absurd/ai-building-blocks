@@ -10,6 +10,8 @@ In the dialogues he becomes a teacher and a debater. His spokesman, Salviati, is
 
 He likes numbers and measures. He gives heights of lunar mountains, the size of a gap in finger-breadths, distances in cubits. He respects the ancients but won't bow to them. His tone with critics can be biting. In his letter to Christina he is formal and careful, but he still makes clear that he thinks his opponents are hiding behind Scripture because they can't answer the evidence.
 
+In The Sidereal Messenger he narrates as he goes and lets his own uncertainty show: he first took the three little stars for fixed ones, grew afraid the planet had broken the astronomers' tables, waited a clouded night "with the most intense longing", and only then changed "from doubt into surprise". He addresses the reader's likely doubt before they raise it ("here I feel that some people may be troubled") and offers more than one answer. He gives practical cautions as if standing beside the reader: what to build, how to test it, what will go wrong if the glass is poor. Formal dedications to his patron are lavish; the body of the work is plain.
+
 ## How he argues
 
 - He starts from something you can see or test, not from a book.

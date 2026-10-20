@@ -1,0 +1,132 @@
+new_slug: buy-in-conversation-planner
+name: "Buy-in conversation planner"
+summary: "Paste who you need to win over and what you want. Get a plan that starts from what they want."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It predicts someone's doubts and judges fairness, but follows a fixed order."
+
+headline: "Buy-in conversation planner"
+subhead: "Give it who you need to win over and what you want from them. It writes what they want in their words, their likely doubts with replies, and a friendly opening. You also get questions that let them talk first."
+
+explain: |
+  Most pushes for agreement open with your case. The other side then spends the talk defending a position, and nothing moves.
+
+  This skill starts from what they want and plans a talk where they speak first. It predicts their doubts before you walk in and gives each an answer or a question. It plans a friendly opening and one small point you both agree on. It leaves space in the plan for them to shape the idea, and it picks a fair reason bigger than money. If the plan relies on a trick, it flags it.
+
+when:
+  - "You need your boss, client or team to back an idea."
+  - "You expect resistance and want to prepare the doubts."
+  - "You keep winning arguments and losing the person."
+
+you_give:
+  - "Who you need to win over and what you want"
+  - "What you know about them (optional)"
+  - "What you could change if they push back (optional)"
+you_get:
+  - "Their wants and why your request fits them"
+  - "Their likely doubts with replies or questions"
+  - "An opening and a first small yes"
+  - "Questions that make them do most of the talking"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the person and your request in a few lines."
+  - "Add what you know about how they react."
+  - "Read the plan once, then say the opening out loud."
+  - "After the talk, tell it what they said and run it again for the next round."
+
+how_it_works:
+  - title: "Finds what they want"
+    text: "Lists their wants in their words, marked known or guess."
+  - title: "Links it to your request"
+    text: "Writes one honest sentence for each want that fits."
+  - title: "Predicts doubts"
+    text: "Gives each likely doubt an answer or a question."
+  - title: "Plans a warm start"
+    text: "A friendly opening and a small first yes."
+  - title: "Plans listening"
+    text: "Questions that put them in the lead."
+  - title: "Leaves them room"
+    text: "Gaps in the plan they can fill."
+  - title: "Picks a higher reason"
+    text: "A fair reason and a way to show it."
+  - title: "Prepares to own mistakes"
+    text: "Plain sentences that admit faults first."
+
+output_shape: |
+  THE REQUEST
+  <person, request>
+
+  WHAT THEY WANT
+  1. <want> | KNOWN or GUESS
+
+  WHY THEY WOULD WANT IT
+  <want> -> <honest link>
+
+  LIKELY ANSWER AND DOUBTS
+  <doubt> | Reply or question: <text>
+
+  OPENING AND FIRST SMALL YES
+  <lines>
+
+  QUESTIONS THAT LET THEM TALK
+  1. <question>
+
+  WHERE THEY SHAPE IT
+  <gap you leave open>
+
+  THE BETTER REASON AND HOW TO SHOW IT
+  <reason, demo or challenge>
+
+  MISTAKES TO OWN
+  <sentence>
+
+  MISSING
+  <what to learn>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "What you know about them"
+    how: "The more of their own words you give, the less the plan guesses."
+  - what: "What you can change"
+    how: "Say what is open. It gives them room to shape the idea."
+  - what: "The stakes"
+    how: "Say what happens if they say no, so the plan sizes the effort."
+  - what: "Who is in the room"
+    how: "A group needs one want per person. Name them."
+
+judge:
+  - "The first thing in the plan is their want."
+  - "You could say the opening without sounding forced."
+  - "Each doubt is answered with a fact or asked as a question."
+  - "At least once, they talk before you do."
+  - "Nothing relies on them not knowing your plan."
+
+test:
+  - "Run it on a request you already won or lost. See if the doubts match what they said."
+  - "Read the opening to a friend and ask if it sounds like you."
+  - "Run it twice. Their top wants should stay close."
+  - "Use it in a real talk and note which question got them talking."
+
+improve:
+  - "Add your workplace's common doubts, such as budget or time, so they show up every run."
+  - "Add a house rule on what you will not promise."
+  - "Save the wants of people you meet often in a notes file."
+  - "Pair it with \"Negotiation call prep planner\" when price or terms are on the table."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It does this planning with just the text of the situation."}
+    - {name: "A notes app", why: "Keep a short card per person so their wants carry over."}
+  inputs:
+    - "Their past messages to you"
+    - "Meeting notes where they spoke"
+    - "Anyone who has already agreed"
+
+terms:
+  - term: "Small yes"
+    meaning: "A point you both already agree on, used to start the talk warmly."
+  - term: "Objection map"
+    meaning: "A list of doubts each paired with an answer or a question."

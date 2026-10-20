@@ -1,0 +1,117 @@
+new_slug: show-dont-tell-scene-rewriter
+name: "Show-don't-tell scene rewriter"
+summary: "Paste a paragraph that names the feeling. Get it rewritten in short, plain sentences where things carry it."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It reshapes a paragraph with a few fixed moves and little judgement."
+
+headline: "Show-don't-tell scene rewriter"
+subhead: "Paste a paragraph that names the feeling and, if you have them, the facts of what happened. It swaps the feeling words for the things that caused them. You get short, plain sentences and a list of what it changed."
+
+explain: |
+  When a paragraph says "she felt lost" or "it was a wonderful day", the reader has to take your word for it. Telling is quick, but it keeps the reader outside the moment. What works is the thing they can picture: the unopened mail, the cold coffee, the chair left out.
+
+  This skill lists what happened in plain order and finds one exact detail that carries the feeling. It cuts each feeling word and puts its cause in its place. It shortens sentences, links actions with "and" for speed, and leaves out what the reader can see for themselves. It never adds events you did not give it. It ends on an action or a plain line, and reads the result for rhythm.
+
+when:
+  - "Your story or customer case reads like a summary of feelings."
+  - "A speech or post says \"amazing\" and \"incredible\" and nobody believes it."
+  - "You have the facts of a scene but the writing keeps explaining them."
+
+you_give:
+  - "The paragraph that names the feeling"
+  - "Facts about what happened (optional)"
+  - "Who is telling it and how formal (optional)"
+you_get:
+  - "The paragraph rewritten in short, plain sentences"
+  - "A list of feeling words cut and what replaced each"
+  - "The one detail it used and where it came from"
+  - "Gaps marked where it needs a fact from you"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the paragraph exactly as it is."
+  - "Add anything else you remember about that moment: objects, words said, the place."
+  - "Check that every detail in the rewrite is true."
+  - "Read it aloud and change any line that sounds written."
+
+how_it_works:
+  - title: "Lists what happened"
+    text: "Plain order, no feeling words."
+  - title: "Finds the true detail"
+    text: "One exact thing that stands for the feeling."
+  - title: "Cuts feeling words"
+    text: "Puts the cause in their place."
+  - title: "Shortens sentences"
+    text: "Simple, with \"and\" for speed."
+  - title: "Repeats on purpose"
+    text: "Keeps a word only when it carries weight."
+  - title: "Leaves out the known"
+    text: "Never the unknown, which it asks about."
+  - title: "Ends on an act"
+    text: "An action or a short plain line."
+  - title: "Reads it aloud"
+    text: "Fixes the rhythm, then names any check it missed."
+
+output_shape: |
+  REWRITE
+  <paragraph in short, plain sentences>
+
+  WHAT HAPPENED, IN ORDER
+  <one plain line per event>
+
+  FEELING WORDS CUT
+  <word> -> <the thing that caused it>
+
+  THE DETAIL
+  <what it is and where it came from>
+
+  MISSING
+  <facts needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Extra facts"
+    how: "Add what you remember. More true detail gives a better rewrite."
+  - what: "Sentence length"
+    how: "Say \"very short\" or \"a little longer\". The default is short."
+  - what: "Voice"
+    how: "A line on who is telling it keeps the rewrite from sounding like someone else."
+  - what: "What must stay"
+    how: "Mark any line that cannot change, such as a quote."
+
+judge:
+  - "No sentence names a big feeling."
+  - "You can picture every noun."
+  - "It ends on an action or a short plain line."
+  - "No fact was added that you did not give."
+  - "You feel the moment without being told."
+
+test:
+  - "Run it on a paragraph you know well and check that every detail is true."
+  - "Show the rewrite and the original to a friend and ask which feels more real."
+  - "Count the feeling words left; there should be none."
+  - "Run it twice. The detail it picks should be the same."
+
+improve:
+  - "Add words you overuse to step 3."
+  - "Add the lines in your work that must not change, such as quotes."
+  - "Keep a list of exact details from your own experience."
+  - "Pair it with \"Plain English editor\" for the text around the scene."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting a paragraph with fixed moves is text work any strong chat AI does well with this skill."}
+    - {name: "A notebook", why: "Writing down the exact objects of a real moment gives the skill true detail to use."}
+  inputs:
+    - "A list of objects in the room"
+    - "What was said, word for word"
+    - "A photo of the place described"
+
+terms:
+  - term: "Feeling word"
+    meaning: "A word that names an emotion or judges a moment, such as \"heartbreaking\"."
+  - term: "True detail"
+    meaning: "One exact thing a person could see or hear that stands for the feeling."

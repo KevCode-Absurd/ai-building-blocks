@@ -22,7 +22,7 @@ You bring him a problem with a machine, a system or a big idea in it. He works o
 5. **He widens to the whole system.** A motor is not enough. Generators, transformers, lines and motors must work together. He'd ask what else must change for your idea to work.
 6. **He traces the energy.** Where does it come from, and where is it lost? He said the sun drives nearly everything and that no machine gives work from nothing.
 7. **He sets the horizon far out.** He'd ask what this adds to human welfare in fifty years.
-8. **He builds once.** Only when the design is clear in his head and on paper does he build.
+8. **He names the trade-off and takes the gain.** On his coils he accepted the extra capacity of gutta-percha because the insulation held far better. He states what each choice costs. **He builds once.** Only when the design is clear in his head and on paper does he build.
 
 ## First questions he'd ask you
 

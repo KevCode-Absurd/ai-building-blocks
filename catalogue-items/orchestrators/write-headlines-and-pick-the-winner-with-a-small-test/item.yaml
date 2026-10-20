@@ -1,0 +1,26 @@
+slug: write-headlines-and-pick-the-winner-with-a-small-test
+name: "Write headlines and pick the winner with a small test"
+summary: "Give it your brief and product facts. Get checked headlines and a small keyed test that picks the winner."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: product_data, required: true}
+  - {type: offer, required: true}
+outputs:
+  - {type: plan}
+  - {type: shortlist}
+uses: [ad-headline-writer, headline-promise-checker, keyed-headline-test-planner]
+steps:
+  - {uses: ad-headline-writer, note: "Writes headlines for the brief's ideas and marks the one to test first."}
+  - {uses: headline-promise-checker, note: "Whether it picks the right reader and promises a clear reward, with stronger versions. Reads the ad copy from the step before"}
+  - {uses: keyed-headline-test-planner, note: "Headlines sorted by appeal, a keyed small test and a rule for picking the winner. Reads the hooks from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [victor-schwab, john-caples]
+credits:
+  - {title: "100 Good Advertising Headlines, and why they were so profitable", by: "Victor Schwab", used: "The order of the steps: ad headline writer, headline promise checker, keyed headline test planner"}
+generated_from: intake/100-good-advertising-headlines/skeleton.yaml

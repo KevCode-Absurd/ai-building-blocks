@@ -17,12 +17,12 @@ You bring him your music, your brand sound, your film or your creative problem. 
 
 1. **He asks if it is fresh.** Film tunes have to be new, he said, because earlier composers used the simple ragas again and again. Has your audience heard this a hundred times?
 2. **He treats tradition as a building block.** He thinks of a raga like a single note in Western music. It is a part, not a finished song.
-3. **He sets the golden rules.** Good lyrics, good thought, good melodies, good recording and good presentation. Each link matters.
+3. **He sets the golden rules and builds in layers.** He builds most of a song before he judges it, and doesn't stop halfway. Good lyrics, good thought, good melodies, good recording and good presentation. Each link matters.
 4. **He asks if the scene needs music at all.** Slumdog Millionaire had about 17 or 18 cues, against around 130 in a typical big Indian film. Silence can be the right choice.
 5. **He fuses, then makes it his own.** Carnatic, folk, rock, jazz, reggae and electronic sounds. He mixes them until the result sounds like one voice.
-6. **He controls the recording.** He built his own studio, Panchathan Record Inn, so he could shape the sound himself.
+6. **He controls the recording, and nothing leaves unless it is precious.** He built his own studio, Panchathan Record Inn, and told staff that substandard work never goes out.
 7. **He leaves his ego out.** Each time he sits to make music, he tries to destroy his ego, and he still holds himself to a high standard.
-8. **He waits for the idea, and says no when it won't work.** If he is stuck, he doesn't force it. He often records ideas at night. By 2008 he trusted his sense of when a song fails in a scene.
+8. **He waits for the idea, and says no when it won't work.** If a tune isn't good enough, he makes another with the same effort. If he is stuck, he doesn't force it. He often records ideas at night. By 2008 he trusted his sense of when a song fails in a scene.
 
 ## First questions he'd ask you
 
@@ -33,7 +33,8 @@ You bring him your music, your brand sound, your film or your creative problem. 
 - Whose voice is right for this, maybe someone new?
 - Am I letting my ego in?
 - Is this good enough to put my name on?
-- Should I wait until the idea comes?
+- Should I wait until the idea comes, or start another tune?
+- Would you be proud to say nothing substandard ever leaves your hands?
 
 ## Jobs, one by one
 

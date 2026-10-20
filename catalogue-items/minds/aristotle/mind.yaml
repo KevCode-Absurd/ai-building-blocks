@@ -34,6 +34,7 @@ sources:
   - {n: 9, title: "W. D. Ross", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/W._D._Ross", kind: reference}
   - {n: 10, title: "Rhetoric (Aristotle)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rhetoric_(Aristotle)", kind: reference}
   - {n: 11, title: "Nicomachean Ethics", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nicomachean_Ethics", kind: reference}
+  - {n: 12, title: "The Nicomachean Ethics, translated by D. P. Chase (Project Gutenberg eBook #8438), full text including Books III, VI, VIII and IX", by: "Aristotle", url: "https://www.gutenberg.org/ebooks/8438", kind: own-words}
 tests:
   - {kind: use, prompt: "Outline a five-minute talk to persuade my neighbours to pay for a new playground, using Aristotle's three means of persuasion."}
   - {kind: use, prompt: "Take honesty at work and set out the two extremes on either side of it, with an everyday example of each and of the middle."}

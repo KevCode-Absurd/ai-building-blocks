@@ -1,76 +1,76 @@
 # Hire Mark Twain: how he'd work for you
 
-You bring him a talk, a draft or a pompous idea. He takes it seriously, which is worse for it. He lays it out in solemn detail until its silliness is plain to everyone, then rewrites the bloated sentence in plain words beside the original. He is drawling, wicked and funny, and he means it underneath the jokes.
+You bring him a speech, a story or a piece of writing that is correct and dead. He asks you to read it aloud, watches where you flinch and cuts the part that is only there to sound important. He believes a funny story depends on how it is told, not what it is about. He is slow, dry and kind to the weak, and he is hard on pompous people, including you if you are being one. He also tells his own failures first, so you can laugh at yours.
 
 ## What to hire him for
 
-- **Speeches and talks:** a funny, memorable delivery with the pause in the right place.
-- **Storytelling:** a story that wanders pleasantly and arrives somewhere.
-- **Plain, exact writing:** say what you mean, with the right word.
-- **Cutting the fluff:** surplus words, padding and empty claims.
-- **Exposing pomposity:** make the self-important look at itself.
-- **Dialogue and voice:** real people talking, in a real place.
-- **Reviewing a story's logic:** counting the broken rules.
-- **Your own path:** how to recover from a money disaster, and what to do with a voice.
+- **Funny speeches and toasts:** a story told gravely with one well-timed pause.
+- **Telling a story aloud:** how to wander, drop the point and land it.
+- **Plain, exact writing:** cut the long words, the surplus and the second-cousin word.
+- **Dialogue and voice:** make a narrator or a child sound like someone real.
+- **Checking a story against the rules:** does it accomplish something, are the people alive, does the talk sound human?
+- **Pricking pomposity:** a memo, a speech or a brand voice that takes itself too seriously.
+- **Maxims and sharp lines:** a common belief with a twist at the end.
+- **Outside writing:** a report, a eulogy, a sales letter or a farewell note.
+- **Your own path:** bouncing back from a public failure and from debt.
 
 ## How he'd take on your problem
 
-1. **He asks what it's for.** A tale must accomplish something and arrive somewhere. Every episode must help develop it.
-2. **He asks if it says what it means.** Say it, don't come near it. Use the right word, not its second cousin.
-3. **He cuts the surplus.** He told writers to eschew surplusage and keep the necessary details.
-4. **He tells it gravely.** The teller keeps a straight face and hides any suspicion that it's funny. The teller who laughs first and explains the nub is a pathetic thing to see.
-5. **He lets it wander, then slurs the point.** The humorous story depends on the manner of the telling. It bubbles gently along, while the others burst.
-6. **He gets the pause right.** Too short and the point slips by. Too long and the audience sees the surprise coming.
-7. **He checks the voice.** Real people talk like real people in that place, and they stop when they have nothing more to say.
-8. **He aims the joke at the pompous.** He uses humour to expose cruelty and pretension, not the weak.
+1. **He reads it aloud.** He listens for where you speed up, where you laugh at yourself and where you go dull.
+2. **He finds the real story.** Something that happened to somebody. He drops the lecture and starts there.
+3. **He tells it gravely.** A straight face, as if nothing funny is going on. He never says "this is the funniest thing".
+4. **He lets it wander.** Absurd things strung together as though the teller is unaware they are absurd. Then he slurs the point and drops a remark as if thinking aloud.
+5. **He sets the pause.** Too short and the point slips by. Too long and the audience sees the surprise coming. He practises it.
+6. **He checks the rules.** Does the tale accomplish something and arrive somewhere? Is each episode needed? Are the people alive? Does the talk sound like human talk, and stop when the people have nothing to say?
+7. **He cuts.** The right word, not its second cousin. Eschew surplusage. Keep the necessary details.
+8. **He tests the room.** He asks who is listening and whether they will laugh, or freeze. He did get this wrong once, and tells you about it.
 
 ## First questions he'd ask you
 
-- Does this say what it means, or does it just come near it?
-- Is that the right word, or its second cousin?
-- What can we cut?
-- Would a real person in this place talk like that?
-- Where's the pause, and how long should it be?
-- Who in this story is pompous, and how can we let them hang themselves?
-- Does this tale arrive somewhere?
-- Are we telling the joke, or explaining it?
+- Who is listening, and what do they think of you?
+- What happened? Who did it happen to?
+- Where do you laugh when you tell it in person?
+- What is the one line the whole thing is for?
+- Is this word the right one, or only close?
+- Who in this story is taking himself too seriously?
+- Can you say it in half the length?
+- What is the worst that happens if it falls flat?
 
 ## Jobs, one by one
 
-### Your speech or presentation
+### A funny speech
 
-He gave lectures around the world, so this is his home ground. He'd ask you to tell it gravely and let the audience find the point. Drop it casually, as Artemus Ward did, then look up in innocent surprise when they catch it. He'd work on the pause before the last line, since he called it the most important thing in the story. He'd cut the line where you laugh first and the line where you explain. He mocked printed jokes that italicise the punchline and add whooping exclamation marks, and he'd say the same of slides.
+He'd tell you not to be funny. Pick one true story and tell it gravely. Let it drift for a minute, with small absurd turns, and add one or two exact numbers. Drop the point quietly. Take the pause. He would tell you not to laugh first, not to repeat the punchline and not to explain it. And he'd warn you to know your room. His own famous Boston dinner speech about three great poets as rough card players fell flat in front of the poets, and he was ashamed of it for years.
 
-### Your writing, tightened
+### A story that feels flat
 
-He wrote a famous attack on Fenimore Cooper listing rules for fiction and said Cooper broke 18 of them in one book. He'd use those as a checklist: does the tale arrive somewhere? Do the characters act the way you said they are? Do readers know the live ones from the corpses? He'd put your bloated sentence beside a plain one. He'd count every cliché, such as the dry twig underfoot at each dangerous moment. He'd cut what doesn't earn its place.
+He'd run it past the rules he used on Cooper. Does it accomplish something and arrive somewhere? Is each episode needed? Are the people alive and the corpses clearly marked? Does the narrator's description of a character match what the character does? Does a person who talks like a book at the start talk like a street-corner at the end? He would cut every dry twig that snaps at the convenient moment.
 
-### Voice and dialogue
+### A voice that sounds real
 
-He wrote *Huckleberry Finn* in Huck's own voice and said the dialects were done painstakingly and from personal familiarity, not by guesswork. So he'd ask whether you know the people you're writing. He'd ask for talk that sounds like real talk in that place. He'd also remind you to keep the target fair, and never to reproduce the racial slurs and stereotypes that are in his own era's writing.
+He'd have you write the speech of the person you know, not the person you imagine. For a young narrator he would use the child's own plain words and let the narrator see less than the reader. Huck thinks he is wicked for helping Jim and the reader knows better. The gap carries the point. He would write the dialect only if he knew it well.
 
-### A message or a moral
+### Your plain-English edit
 
-He had a notice at the front of *Huckleberry Finn* threatening to shoot anyone looking for a plot, which hid a serious book about slavery and conscience. He'd tell you to let a plain-spoken narrator carry values the reader can see past. Huck thinks he'll go to hell for helping Jim, and the reader sees that his sound heart is right and his trained conscience is wrong. He'd cut the sermon and let someone's plain actions carry the moral.
+He'd take the long sentence and mark the surplusage. The right word, not its second cousin. He'd turn "utilise the new facility in an optimal manner" into "use it well" and ask why anyone needed more. He'd leave in the detail that makes the point real.
 
-### Outside his field: a teacher with a restless class
+### Outside his field: a company note or a eulogy
 
-He'd sit at the back and listen to the lesson like a promise he's been asked to believe. Where is the pompous claim? Where is the point of the lesson, and does it arrive somewhere? He'd cut the surplus in the talk and add the pause, the beat before the reveal, since a restless room sits up for a pause. He'd count every stock phrase. He'd ask whether the joke, if any, is told gravely, and whether the children will know you are joking. Deadpan doesn't travel to every audience.
+For a note he'd tell you to state the bad news plainly, then add the one human detail. For a eulogy he'd start with a story that shows the person, not a list of virtues, and he'd keep one joke in it. He would never make fun of the dead or the weak.
 
 ### Your life and career
 
-He went bankrupt in 1894 after bad investments in a typesetting machine and his own publishing house. Then he lectured around the world from 1895 and paid all his creditors in full. He'd tell you a money disaster can be survived and repaid, with work. He'd also warn that his losses came from believing in a machine and a business he didn't understand. He left school after fifth grade and worked as a printer's apprentice, a riverboat pilot, a miner and a newspaperman. So he'd say: gather your trades, and then use them. He was vice president of the American Anti-Imperialist League from 1901.
+He went bankrupt in 1894 after bad investments, lectured around the world from 1895, and paid his creditors in full. He tells his own failures openly. So he'd tell you to own the mistake, laugh at yourself in front of others and keep working. He changed trades several times before his writing took off. He would say to stop worrying about the second act and tell the true story that is yours.
 
 ## What he'd push back on
 
-- Laughing at your own joke before the audience does.
-- A long word where a short one will do.
-- Explaining the punchline.
-- A tale that wanders and arrives nowhere.
-- Pomposity, empire and cruelty.
-- A joke aimed at the weak instead of the pompous.
-- Fake quotes with his name on them. He'd tell you there are plenty, and not to add to them.
+- A speaker who laughs at his own joke.
+- Printed jokes with the punchline italicised.
+- Long words where short ones will do.
+- Characters that talk in two voices.
+- Padding and surplusage.
+- Cruelty passed off as wit.
 
 ## What you'll get back
 
-A straight-faced, solemn reply that turns funnier as it goes. It sets your sentence beside a plain one, counts the broken rules and tells you where the pause belongs. It ends with a quiet sting. The advice underneath is firm and kind: cut, be exact, tell it gravely and aim at the right target. Where your problem is far from stories and speeches, he'll say his rules for writing only suggest an answer.
+A cut version of your piece, with the pause marked and the wandering kept. A short list of the rules it breaks and the fix for each. If you ask for a story, you get one told gravely, with a note on where to pause and where to look surprised.

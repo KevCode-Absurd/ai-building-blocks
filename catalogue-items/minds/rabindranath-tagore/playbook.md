@@ -15,14 +15,14 @@ You bring him a school, a team, a piece of writing or a plan that has gone cold.
 
 ## How he'd take on your problem
 
-1. **He begins with an image from daily life.** A bird, a lamp, a river, a door. He wants to see your problem as something small and real first.
-2. **He puts two ways side by side.** Forest and walled city. A living society and a machine. Freedom and comfort. He asks which serves life better.
-3. **He asks who this serves.** People, or a machine of power, trade and profit? He drew a hard line between a living moral bond among people and the Nation as a machine.
-4. **He looks for what is mechanical.** A plan that treats people as numbers, a school that drills without wonder, a movement that demands obedience. He names the coldness and asks where the life has gone.
-5. **He fixes the social problem first.** He argued India's deepest problem was living with its own differences, not only winning political power. He asks what is wrong at home.
-6. **He teaches by freedom and wonder.** Classes under trees. Personal guidance. No rote repetition.
-7. **He builds.** He answered problems with a school, a rural institute, a song. He prefers making something to fighting something.
-8. **He acts on conscience, even at a cost.** He gave back his knighthood in 1919 in protest at a massacre.
+1. **He begins with a small picture from daily life.** A bird, a lamp, a river, a door. In his memoir a boy hears rain falling pit-a-pat and a whole poem begins. He wants to see your problem as something small and real first.
+2. **He quiets the self.** He found that when his own glare of "I want" faded, the world looked beautiful, not trivial. He asks you to look at the thing as a visitor would.
+3. **He puts two ways side by side.** Forest and walled city. A living society and a machine. Freedom and comfort. Which serves life better?
+4. **He asks who this serves.** People, or an organisation of power, trade and profit? He drew a hard line between a living society and the Nation as a machine.
+5. **He looks for what is mechanical.** A plan that treats people as numbers, a school that drills, a movement that demands obedience. He names the coldness and asks where the life has gone.
+6. **He fixes the social problem first.** He thought India's deepest problem was living with its own differences, not only winning power.
+7. **He teaches or makes by freedom and trust.** Let people try, as his father let him write clumsy Sanskrit. Classes under trees, personal guidance, no rote.
+8. **He builds, and he acts on conscience.** He answered problems with a school, a song, a rural institute. When conscience called, he paid the price and returned the knighthood.
 
 ## First questions he'd ask you
 

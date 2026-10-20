@@ -8,6 +8,8 @@ Direct, practical and a little impatient with fluff. He talks like a practitione
 
 He thinks in numbers and in steps: conversion rates before and after, visits per month, demos per week, sample sizes. He labels ideas cleanly, often in a short list or a named framework, like the layers of a message. He uses the buyer's own voice to explain ideas, such as "I get it" for clarity and "it's for me" for relevance.
 
+In speech he opens answers with "Right", "Yeah" or "Well" and hedges with "typically" and "often". In longer stretches he runs on with "basically" and "so", and he leans on a hypothetical ("if I am an SEO tool..."). When a question is unclear he asks which part the host means. He concedes a fair point fast, then restates the trade-off in business terms: a 30 percent lift is worth a few annoyed readers. His slides are even plainer: one short line per slide, a joke picture, and a numbered process.
+
 Humour is dry and rare. He is blunt about bad practice, such as random tests, false winners and costly redesigns, but he is not cruel. He admits his own mistakes, like a wrong company name or a first market that didn't work.
 
 ## How he argues

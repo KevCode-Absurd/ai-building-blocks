@@ -1,0 +1,42 @@
+# Workflow skeleton for The Brand Gap (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: the-brand-gap
+source:
+  title: "The Brand Gap"
+  by: "Marty Neumeier"
+  kind: book
+  rights: ideas-only
+minds: [marty-neumeier]
+workflow:
+  slug: find-a-space-no-rival-holds-and-win-buy-in
+  name: "Find a space no rival holds and win buy-in"
+  summary: "Paste your rivals and what buyers value. Get a white-space map, a one-line only-ness statement and a buy-in plan."
+  when: "you need a brand position that rivals do not hold and your team will back."
+  job: plan-strategy
+  level: intermediate
+steps:
+  - name: "Competitor white space mapper"
+    skill: competitor-white-space-mapper
+    job: research
+    task: study-competitors
+    from: "Your radio station needs to zag: an interview with author Marty Neumeier"
+    method: ["List rivals the way customers see them", "List the features that drive success in the category", "Grid rivals against those features and rate each", "Mark the gaps nobody serves", "Pick gaps that match what you love and the risk you can take", "Plan a small cheap test of the gap, even under a separate name"]
+    inputs: [competitor_set, voc_reviews!, brand_brain!]
+    outputs: [audit_report]
+    note: "A grid that shows where nobody is strong and where to stop fighting"
+  - name: "Onliness statement writer"
+    skill: onliness-statement-writer
+    job: ops
+    from: "The Only-ness Statement"
+    method: ["Answer the six prompts: what, how, who, where, why, when", "Draft the sentence naming what you are the only one to do", "Swap each named rival into it", "If the sentence still fits a rival, narrow it and redo", "Keep the two or three strongest versions", "Check the focus: who you are, what you do, why it matters"]
+    inputs: [audit_report, brand_brain, competitor_set!, voc_reviews!]
+    outputs: [brief]
+    note: "One sentence on what only you do, with a rival swap test. Reads the audit report from the step before"
+  - name: "Idea buy-in pitch planner"
+    skill: idea-buy-in-pitch-planner
+    job: ops
+    task: speak-and-persuade
+    from: "The Four Stages of Buy-In"
+    method: ["Name the idea and who will react in each of the four stages", "Expect dismissal and treat strong resistance as a signal, not a stop", "Write a short story that carries the idea", "Describe a vision picture of life after the change, not a numeric plan", "Pick rough measures that reduce uncertainty", "List each person who can say yes or no", "For each, write why they need the idea, leaving yourself out", "Find the allies who already want it and line them up first"]
+    inputs: [brief, question, persona!]
+    outputs: [plan, script]
+    note: "A story, a vision picture and a plan through four stages. Reads the brief from the step before"

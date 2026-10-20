@@ -1,0 +1,123 @@
+new_slug: objectives-and-key-results-writer
+name: "Objectives and key results writer"
+summary: "Describe your team and the quarter. Get a few objectives, each with dated key results that show if you got there."
+job: plan-strategy
+thinking: medium
+thinking_why: "It picks few goals and writes measurable ones, which needs judgment, within a fixed pattern."
+
+headline: "Objectives and key results writer"
+subhead: "Describe your team, its aim and the period. It writes a few short objectives, each with key results that carry a number and a date, links them to the level above and checks that each result can be marked done or not."
+
+explain: |
+  Goal lists fail in two ways. They are long, so nothing gets focus, or they are vague, so no one can say at the end whether they were met. People also tend to treat them as a file for reviews, which makes them play safe.
+
+  This skill asks where you want to go and writes that as one short objective. It then asks how you will know you are on pace and writes key results, each with a number and a date. It keeps to a few objectives and says what you will not do. It uses a short period, so feedback comes fast, and ties each person's objectives to the one above. It treats the set as a pacing tool and leaves room for new openings.
+
+when:
+  - "It is the start of a quarter and your team has too many priorities."
+  - "Your goals are vague and no one can say if they were met."
+  - "You need each person's goals to line up with the team's."
+
+you_give:
+  - "What your team or business does and the period"
+  - "Where you want to go in that period"
+  - "The objectives of the level above (optional)"
+  - "Last period's results (optional)"
+you_get:
+  - "A few short objectives"
+  - "Key results for each, with a number and a date"
+  - "A link from each to the level above"
+  - "A list of what you will not do, and a note on how to use the set"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe your team and the period. Say where you want to be at the end."
+  - "Add the objectives of the level above if you have them."
+  - "Read each key result and ask if you could mark it done or not done without an argument."
+  - "Review the set on the dates it gives, not only at the end."
+
+how_it_works:
+  - title: "Write the objective"
+    text: "Writes where you want to go as a short objective."
+  - title: "Write the key results"
+    text: "Writes key results with a number and a date."
+  - title: "Keep to a few"
+    text: "Keeps to a few objectives and lists what you will not do."
+  - title: "Pick a short period"
+    text: "Sets a quarter or a month so feedback comes fast."
+  - title: "Link up the levels"
+    text: "Ties each objective to the level above."
+  - title: "Test each result"
+    text: "Checks every result can be marked done or not with no argument."
+  - title: "Say how to use the set"
+    text: "Notes it is a pacing tool, not a review file."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  PERIOD AND TEAM
+  <period> | <team> | Aim: <direction>
+
+  OBJECTIVE 1: <short objective>
+  Supports: <objective above>
+  - KR1: <result> | From <start> to <target> by <date>
+  - KR2: ...
+
+  OBJECTIVE 2: ...
+
+  WHAT WE WILL NOT DO
+  - <item>
+
+  CHECK-INS
+  <dates and who looks at what>
+
+  HOW TO USE THIS
+  Pacing tool, not a review file. Missing an objective is not doing badly. Room kept for new openings.
+
+  MISSING
+  <start figures or facts>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The period"
+    how: "A month gives faster feedback. A quarter fits slower work."
+  - what: "Start figures"
+    how: "Add where each number stands now. Results without a start point are weak."
+  - what: "The level above"
+    how: "Paste its objectives so yours link up."
+  - what: "How bold to be"
+    how: "Say whether you want a stretch or a safe commitment. The note on missing changes with it."
+
+judge:
+  - "There are only a few objectives."
+  - "Each key result has a date and a number."
+  - "The objectives link to the level above."
+  - "There is a note that missing an objective is not the same as doing badly."
+  - "You could mark every result done or not done."
+
+test:
+  - "Run it for last quarter and check whether you could have marked each result."
+  - "Give the output to a colleague and ask what they think each key result means."
+  - "Check it halfway through the period and see which results were off pace."
+
+improve:
+  - "Add your top-level goals so every run links up."
+  - "Add the measures you already track so key results use real numbers."
+  - "Keep each period's set and score it at the end."
+  - "Pair it with One-on-one meeting planner so the numbers appear in each person's outline."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning, questioning and structuring are text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Lets you track each key result against its date and share it with the team."}
+  inputs:
+    - "Last period's results"
+    - "The level above's objectives"
+    - "The numbers you track now"
+    - "Known constraints such as budget or headcount"
+
+terms:
+  - {term: "Objective", meaning: "A short statement of where you want to go in the period."}
+  - {term: "Key result", meaning: "A measure with a number and a date that shows if you are getting there."}

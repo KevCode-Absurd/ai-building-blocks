@@ -1,0 +1,35 @@
+# Workflow skeleton for Key to Sustaining Rapid Growth (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: sean-ellis-growth-survey
+source:
+  title: "Key to Sustaining Rapid Growth"
+  by: "Sean Ellis"
+  kind: blog
+  rights: ideas-only
+  year: 2012
+minds: [sean-ellis]
+workflow:
+  slug: would-people-miss-your-product-then-pick-growth-tests
+  name: "Would people miss your product? Then pick growth tests"
+  summary: "Give it your product and users. Get a short survey, the 40 percent test and ranked growth ideas."
+  when: "you want to know if your product is a must-have before you push growth."
+  job: test-an-idea
+  level: intermediate
+steps:
+  - name: "Must-have survey planner"
+    skill: must-have-survey-planner
+    job: research
+    from: "Key to Sustaining Rapid Growth, 2012"
+    method: ["Pick active users who have tried the core experience", "Ask how they would feel if they could no longer use the product, with fixed answers", "Add open questions on the main benefit and who it is for", "Count the share who say very disappointed against the 40 percent line", "Study that group to see what they value and who they are", "Plan one change aimed at that group and re-run the survey", "If there are too few users, plan interviews first"]
+    inputs: [persona!, voc_reviews!]
+    outputs: [plan, audit_report]
+    note: "A short survey, the 40 percent test and a plan to learn from fans"
+  - pause: "Send the survey and wait for the answers."
+  - name: "Growth idea ranker"
+    skill: growth-idea-ranker
+    job: ops
+    task: plan-strategy
+    from: "Find a Growth Hacker for Your Startup, 2010"
+    method: ["Collect ideas from across the team into one list", "Score each from 1 to 10 for impact, confidence and ease", "Average the three scores and sort", "Write one test per top idea with a measure and a stop date", "Run the quickest tests first", "Record what each test showed and re-score the list"]
+    inputs: [audit_report, question!, lessons_register!]
+    outputs: [plan, shortlist]
+    note: "Each scored for impact, confidence and ease, with the first three to test"

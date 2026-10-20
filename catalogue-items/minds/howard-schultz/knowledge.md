@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Howard Schultz is alive, and views can change. Everything below comes from his own words in a 2007 memo to Starbucks leaders, his statements when he returned as CEO in 2008, his 2018 farewell letter to staff as quoted by Starbucks, and from public reference pages. He last stepped down from running Starbucks in March 2023, when his time as interim CEO ended [S1]. Treat each view as "as of" the document it comes from. Nothing here tells you what he thinks about events after 2023.
+Howard Schultz is alive, and views can change. Everything below comes from his own words in a 2007 memo to Starbucks leaders, his statements when he returned as CEO in 2008, his 2018 farewell letter to staff as quoted by Starbucks, and from public reference pages. He last stepped down from running Starbucks in March 2023, when his time as interim CEO ended [S1]. On disk we hold the full 2018 farewell news release with his letter to partners [S5], the full Wikipedia pages [S1], and only short excerpt records of the 2007 memo and the 2008 results statement, so the memo and 2008 points rest on earlier reading of those pages [S3][S4]. We found no interview in his own voice. Treat each view as "as of" the document it comes from. Nothing here tells you what he thinks about events after 2023.
 
 ## In one paragraph
 
@@ -68,6 +68,29 @@ How he applied it: after stepping down as CEO in 2017, he focused on premium Res
 - Look after the people who serve the customer, including part-timers [S1][S5].
 - Weigh profit against conscience, and look for a way to have both [S5].
 - Keep reimagining the brand, and never treat it as finished [S5].
+
+## Real decisions
+
+### Taking espresso bars to a company that said no
+After a 1983 buying trip to Milan he tried to persuade Starbucks' owners to sell traditional espresso drinks. A pilot café worked, but they cited the cost of machines, thin repair skills in America and Americans' lack of familiarity with the drink, and chose not to go further [S1]. He left in 1985. His stated pull was the community, romance and theatre of the Italian coffee bars [S5].
+
+### Raising money through 217 refusals
+To start his own café he needed $400,000. He visited over 500 espresso bars in Milan, and of the 242 investors he approached, 217 said no [S1]. Starbucks put in $150,000 and a local doctor $100,000 [S1]. His café, Il Giornale, opened in 1986, and he bought Starbucks in 1987 and renamed his cafés Starbucks [S1][S2].
+
+### Owning every store
+Schultz did not believe in franchising and made Starbucks keep ownership of every domestic outlet [S1]. The record we hold gives no reason in his words. It fits his stress on control of the experience [S3]. Starbucks listed in June 1992, and the IPO raised $271 million, which financed doubling the store count [S1].
+
+### Paying for benefits others skipped
+Starbucks, under his leadership, offered healthcare, stock ownership and free college tuition even to part-timers, and became the first US company to offer part-time workers healthcare [S1][S5]. His stated reason, in his 2018 letter, was to build a company his father, a blue-collar worker, never had a chance to work for [S5].
+
+### Writing the 2007 memo
+In February 2007 he wrote to Starbucks leaders that a string of reasonable decisions had watered down the experience, calling the damage self induced and asking leaders to get back to the core [S3]. He named specific changes, such as the tall automatic machines that blocked the customer's view of the drink [S3].
+
+### Coming back as CEO in 2008
+On January 7, 2008, during the financial crisis, he returned as CEO after eight years [S1]. He led a mass firing of executives and employees, closed hundreds of stores and temporarily closed all US locations to retrain staff in making espresso [S1]. He framed 2008 as a year of refocus and renewal [S4]. In March 2009 he and the board approved a $100 million settlement of a barista-led suit over tips [S1].
+
+### Selling the SuperSonics
+In 2001 he led ten investors who bought the Seattle SuperSonics and Storm for $200 million. He was criticised for running the team as a business and for a feud with a star player [S1]. He sold them in 2006 for $350 million after failing to win public funding for a new arena, and later sued to undo the sale and dropped the suit [S1]. It is a case outside coffee, where his instinct for community did not carry over.
 
 ## Where he stood
 

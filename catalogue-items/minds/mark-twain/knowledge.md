@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Twain wrote openly about his craft, so this data set uses his own essays: "How to Tell a Story" [S1] and "Fenimore Cooper's Literary Offences" [S2]. We read his methods in *Adventures of Huckleberry Finn* [S3] and in the maxims of *Pudd'nhead Wilson* [S4], and take facts about his life from reference pages [S5][S6]. All of these works are in the public domain, so we quote a few short lines. Huck and Pudd'nhead are characters, so their words aren't always Twain's own views. Many quotes credited to Twain online are not his. Only use the ones in this file.
+A note on method: Twain wrote openly about his craft, so this data set uses his own essays: "How to Tell a Story" [S1] and "Fenimore Cooper's Literary Offences" [S2]. We read his methods in *Adventures of Huckleberry Finn* [S3] and in the maxims of *Pudd'nhead Wilson* [S4], and take facts about his life from reference pages [S5][S6]. In this pass we also read two essays in his own words that were not used before: the speeches collected in 1910, including the story of his failed 1877 Boston dinner speech and the New England weather speech [S7], and his dialogue What Is Man? [S8]. We re-read "How to Tell a Story" and the opening rules of the Cooper essay in full text; the two novels are cited from their public-domain texts and were not re-read. All of these works are in the public domain, so we quote a few short lines. Huck and Pudd'nhead are characters, so their words aren't always Twain's own views. Many quotes credited to Twain online are not his. Only use the ones in this file.
 
 ## In one paragraph
 
@@ -52,6 +52,12 @@ Each chapter of *Pudd'nhead Wilson* opens with a saying from Pudd'nhead's "Calen
 
 How to use it: state a common belief, then add a twist that reveals the truth under it.
 
+### Training, not personal merit
+
+In What Is Man? an old man argues with a young man that people are machines run by their inheritance, their training and their surroundings [S8]. The old man says a brave man did not create his bravery, and that a baby born with a fortune has no personal merit in it [S8]. What does matter, he says, is training in right directions. A timid man who beats his cowardice shows the value of good training, not personal merit [S8]. The young man calls the idea infamous, and the old man replies that it is not a doctrine but a fact [S8].
+
+How he applied it: he put a hard idea into a dialogue, so an objecting voice could say what the reader was thinking [S8]. This is a character-driven argument, and the old man's view is not proven to be Twain's whole view.
+
 ### Humour against cruelty and pretension
 
 The famous notice at the front of *Huckleberry Finn* threatens to prosecute anyone looking for a motive, banish anyone looking for a moral, and shoot anyone looking for a plot [S3]. The joke hides a serious book about slavery and conscience [S6]. In public life he was vice president of the American Anti-Imperialist League from 1901 and opposed the Philippine–American War [S5].
@@ -66,6 +72,29 @@ The famous notice at the front of *Huckleberry Finn* threatens to prosecute anyo
 - Make talk sound like real people in that place [S2][S3].
 - Make characters act the way you said they are [S2].
 - Use humour to expose cruelty and pretension [S3][S5].
+
+## Real decisions
+
+### Writing out and memorising a speech for the Whittier dinner
+In December 1877 he wrote a funny speech the day before and memorised it for a dinner honouring the poet John Greenleaf Whittier's seventieth birthday. In it a miner complains that three famous poets, Longfellow, Emerson and Holmes, spent a night at his cabin as drunken card players. Twain followed a polished poem by another speaker. The room, with the poets at the top table, received it coldly, and Boston papers called it irreverent [S7].
+
+### Looking at the speech again twenty-nine years later
+In 1906 a reader wrote to say it was funny. Twain had spent a year or two ashamed and then pushed it out of his mind for about twenty-five years. He had the speech copied from the Boston papers and judged it innocently and ridiculously funny. He found that friends he met in Venice had been angry on his behalf at the cold reception [S7].
+
+### Building the weather speech on one false claim
+For the New England Society dinner, he opened by saying the Maker makes everything in New England but the weather. He then piled on exact numbers and a visiting collector who had weather to spare. He gave a local audience a joke about itself that it could enjoy [S7].
+
+### Counting the rules Cooper broke
+He listed nineteen rules for romantic fiction and said Cooper's Deerslayer broke eighteen of them. He then went through the rules one by one, so each charge was a specific, checkable one [S2].
+
+### Telling a story as Artemus Ward did
+In "How to Tell a Story" he studied how Artemus Ward spoke with animation about a man in New Zealand with no teeth, let the energy die, and added in a dreamy aside that the man could beat a drum better than anyone. Twain used it to show that the pause and the aside are the mine that explodes [S1].
+
+### Giving Huck the narration
+He wrote Huckleberry Finn from first to last in Huck's own voice and added a note saying the dialects were painstakingly done. Huck decides to help Jim and says he will go to hell for it. The reader sees that the boy's heart is right and his training is wrong [S3][S6].
+
+### Paying his creditors after bankruptcy
+After the 1894 bankruptcy he lectured around the world from 1895 and paid all his creditors in full [S5].
 
 ## Where he stood
 

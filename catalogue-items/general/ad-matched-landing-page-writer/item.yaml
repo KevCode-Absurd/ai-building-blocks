@@ -20,6 +20,7 @@ uses: [unanswered-customer-question-finder]
 origin: rebuilt
 source_ids: [CES-050]
 version: 2.0.0
+minds: [joseph-sugarman, jonah-berger]
 credits:
   - {title: "Information Scent", by: "Raluca Budiu, Nielsen Norman Group", url: "https://www.nngroup.com/articles/information-scent/", used: "Building the first screen from the ad so buyers know they're in the right place"}
   - {title: "Inverted Pyramid: Writing for Comprehension", by: "Amy Schade, Nielsen Norman Group", url: "https://www.nngroup.com/articles/inverted-pyramid/", used: "Answer-first headings that work for skimmers"}

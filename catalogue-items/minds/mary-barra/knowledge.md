@@ -68,6 +68,32 @@ How she applied it: she paired the electric and self-driving bets with what she 
 - Fund the future from a disciplined core business [S3].
 - Trust people with simple rules, and hold them to account [S2][S6].
 
+## Real decisions
+
+### Hiring an outsider to find the cause
+
+Barra became CEO on 15 January 2014 and within weeks faced a recall over faulty ignition switches [S4]. GM hired a former federal prosecutor, Anton Valukas, to investigate [S4]. When his report in June was harshly critical of past practices, she fired 15 employees [S4]. Her reason was accountability at every level: the company had to own its failures, not just explain them [S4].
+
+### Telling the story to the engineers first
+
+On 31 March 2014 she held a town hall at GM's technical centre to introduce a new global safety chief [S4]. She told the engineers she knew they were upset and that the company would improve for customers [S4]. The choice shows her habit of speaking to the people who must fix a problem before the public hears it.
+
+### Paying victims through an independent expert
+
+She brought in a compensation expert to run a programme that paid claims to victims and families [S6]. She also said GM would not hide from the crisis but learn from the errors that caused it [S6]. She noted that investigators found no clear trade of cost against safety in the Cobalt case, yet she said no one had done enough to protect customers [S4].
+
+### Widening the recall
+
+On 30 June 2014 GM announced a recall of another 7.4 million vehicles, which she described as the most comprehensive safety review in the company's history [S4]. She also told shareholders in a 10 June letter that silos and poor information sharing across the company were at the core of the failure [S4]. Her stated reason was to move information freely across functions and to act on any new issue without delay [S4].
+
+### Cutting the dress code to two words
+
+She replaced a ten-page dress code with two words: dress appropriately [S6]. Her reason was that it signals management trusts employees, and she used it to set a new culture [S6]. She also told engineers and designers to stop building poor cars, and that budget and resource limits would no longer be excuses [S6].
+
+### Making the long-term case in public
+
+In a 2016 talk to Stanford business graduates she set out four leadership habits: listen, care, inspire and work [S7]. She argued that trust in big business is low, that leaders should think beyond the next quarter, and that profit and social good can go together [S7]. She cited GM's $9.7 billion profit in 2015 and its first mass-market all-electric car as evidence [S7].
+
 ## Where she stood
 
 **How should a leader handle a deadly mistake?** Openly. She called for total accountability and hired a compensation expert to pay victims' claims [S4][S6].

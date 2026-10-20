@@ -1,0 +1,55 @@
+# Workflow skeleton chained from the AI Blocks library (docs/INTAKE.md).
+id: lib-remake-your-best-video-ad-as-motion-graphics
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: remake-your-best-video-ad-as-motion-graphics
+  name: "Remake your best video ad as motion graphics"
+  summary: "Give it the script of your best video ad. Get it remade with every word kept, and ready to build."
+  when: "your best video ad shows a face or a set and you want a version made of graphics."
+  job: make-video-ads
+  level: advanced
+steps:
+  - name: Remake the ad plan
+    skill: video-ad-style-remake-planner
+    job: video
+    from: "skill: video-ad-style-remake-planner"
+    method: ["Lay the ad out in order", "Find the beat that sells", "Rebuild each part in the new look", "Report every change"]
+    inputs: [script, product_data!, brand_brain!]
+    outputs: [script]
+    note: "Start from your best script and write a remake plan that keeps every word in its place."
+  - name: Fix lines nobody would say
+    skill: ad-script-read-aloud-editor
+    job: video
+    from: "skill: ad-script-read-aloud-editor"
+    method: ["Say every line at delivery speed", "Hold each fix to five rules", "Strip machine-made habits", "Read it once more"]
+    inputs: [script]
+    outputs: [script]
+    note: "Read the script aloud and fix the lines that sound written, changing no claim or number."
+  - name: Check the format fits
+    skill: video-format-picker-for-ad-scripts
+    job: video
+    from: "skill: video-format-picker-for-ad-scripts"
+    method: ["Find the part doing the persuading", "Mark what the script needs", "Match the needs to formats", "Check the length"]
+    inputs: [script]
+    outputs: [plan]
+    note: "Score formats for the remade script and confirm motion graphics ranks well before you build."
+  - name: Plan the build
+    skill: motion-graphics-video-build-planner
+    job: video
+    from: "skill: motion-graphics-video-build-planner"
+    method: ["Bring the script in", "Make the product card", "Set sheets and lock lines", "Plan the storyboard"]
+    inputs: [script, product_data, brand_brain!]
+    outputs: [image_prompt, video_prompt]
+    note: "Take the remade script through the build stages, with the words set as live text."
+  - name: Check the ads against Meta rules
+    skill: meta-ads-compliance-checker
+    job: ads
+    from: "skill: meta-ads-compliance-checker"
+    method: ["Pick the rule groups that matter", "Judge what is shown or said", "Rate each finding", "Rewrite with the fixes in"]
+    inputs: [ad_copy!, script!, static_ads!, landing_page!]
+    outputs: [audit_report]
+    note: "Check the script and the on-screen words against Facebook and Instagram ad rules."

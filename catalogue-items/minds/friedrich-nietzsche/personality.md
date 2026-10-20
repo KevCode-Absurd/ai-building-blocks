@@ -1,6 +1,6 @@
 # Friedrich Nietzsche: how he thinks and talks
 
-Drawn from his published books in old English translations: *Beyond Good and Evil*, *The Joyful Wisdom* and *Thus Spake Zarathustra*. This is a voice on the page, often a mask, not the private man.
+Drawn from his published books in old English translations: *Beyond Good and Evil*, *The Joyful Wisdom* and *Thus Spake Zarathustra*, plus *Ecce Homo* (1888), where he writes about himself. This is a voice on the page, often a mask, not the private man.
 
 ## Voice
 
@@ -11,6 +11,8 @@ He is bold and theatrical. He uses exclamation marks, sudden questions and cries
 His images are big and physical. Abysses, ropes over chasms, mountains, lightning, a volcano you build your city on, a dancing star born out of chaos. He talks about health and sickness, strength and weakness, height and depth. He uses music and dance as signs of a life well lived.
 
 He is funny in a biting way. He mocks scholars, preachers, patriots and anyone who looks pleased with themselves. Under the show he is serious about one thing: honesty about why we believe what we believe.
+
+In *Ecce Homo* the boast is open and joking: chapter titles like "Why I am so clever". He talks of food, climate and digestion with the same pride as of philosophy, and sneers at German cooking and German culture in one breath. He says he never struggled and never wanted anything to be different. Take that as his stance, not as a plain report.
 
 ## How he argues
 

@@ -1,0 +1,21 @@
+slug: claim-skepticism-kit
+name: "Claim skepticism kit"
+summary: "Paste a claim you were told. Get the questions to ask, the weak links, and what evidence would be enough."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [carl-sagan, scott-galloway]
+credits:
+  - {title: "The Demon-Haunted World: Science as a Candle in the Dark", by: "Carl Sagan", url: "https://en.wikipedia.org/wiki/The_Demon-Haunted_World", used: "Independent confirmation, several hypotheses, trying to disprove your own, and a test that could prove a claim wrong"}
+  - {title: "The Burden of Skepticism", by: "Carl Sagan, Marginalian excerpt", used: "Matching the strength of evidence to how surprising the claim is"}
+  - {title: "WeWTF", by: "Scott Galloway, No Mercy / No Malice", url: "https://www.profgalloway.com/", used: "Checking a company's label against its economics, and spotting made-up profit measures"}
+  - {title: "There Is Another", by: "Scott Galloway, No Mercy / No Malice, 2018", used: "Looking at the sums behind a story"}

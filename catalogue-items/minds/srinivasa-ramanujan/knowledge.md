@@ -73,6 +73,26 @@ Ramanujan recorded his results in notebooks and published only a small part of t
 - Send your best work to the best person you can reach [S1][S2].
 - Let a careful partner test your claims [S1][S2].
 
+## Real decisions
+
+### Writing to Hardy with a list, not a pitch
+In January 1913, a clerk with no degree, he mailed a Cambridge mathematician a long list of results without proofs and said he had struck out a path of his own [S1]. Wolfram counts over 120 results across at least nine pages. Hardy and Littlewood sorted them into known, new but minor, and new and important [S1][S3].
+
+### Keeping his methods to himself
+When Hardy asked for proofs, Ramanujan was wary of explaining how he got his results, and wrote that if he did, Hardy might think him mad [S3]. Hardy kept pressing, and the Cambridge years were a trade between his instinct and Hardy's proofs [S1].
+
+### Leaving for England in 1914
+After Madras gave him a scholarship, he sailed on 17 March 1914 and moved into Trinity rooms that April [S1]. It meant leaving home and family, and the war later made his stay hard [S1].
+
+### Working with Hardy on partitions
+Working from small values of p(n), he and Hardy wrote the 1918 paper giving a formula for the number of partitions: start with a rough estimate, then sharpen it until it is exact [S1][S3]. Rademacher later proved the sharper version [S1].
+
+### Using the numbers as evidence
+He used numerical data to test guesses and kept going when the data fit. Wolfram calls him an experimental mathematician, and notes that modern software confirms nearly all his formulas [S3].
+
+### Leaving the notebooks open
+He published only a small share of what he found. Roughly 3,000 results sat in notebooks, and sorting them took scholars until the 1970s [S3]. Watson published 14 papers of them under the title *Theorems stated by Ramanujan* [S1].
+
 ## Where he stood
 
 **Is proof needed?** He saw results first and often could not say how he got them [S2]. Hardy pushed him hard on proof, and his later papers do give proofs, sometimes only in outline [S2][S5][S6].

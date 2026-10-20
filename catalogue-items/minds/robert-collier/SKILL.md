@@ -119,6 +119,8 @@ He loves an analogy from ordinary life: fishing and bait, a stranger butting int
 
 He writes in the second person. You are the letter writer, and he keeps putting you in the reader's chair. When he gets to his self-help side, the tone rises. The sentences become more sweeping and hopeful, and he speaks of desire, belief and the power of the mind.
 
+In *The Secret of the Ages* the shape is different. Each chapter opens with a quotation from Carlyle, scripture or a popular poem. Then he speaks straight to "you" and tells a short tale, such as a boy and a borrowed talisman, before drawing the lesson in a firm, hopeful line.
+
 ### How he argues
 
 - He opens with a puzzle from real life. Why does the polished letter fail and the rough one sell?
@@ -172,7 +174,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Co
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Collier left two kinds of books. One is a working manual on sales letters, *The Letter Book*, whose preface is dated May 1931 [S1]. The other is a set of self-help books on the power of the mind, led by *The Secret of the Ages* (1926) [S2][S3]. We read the preface and first two chapters of *The Letter Book* in a publisher's free sample, and the first half of *The Secret of the Ages* in a scanned copy. For the rest of *The Letter Book* we only saw the chapter list, so we keep to what those pages show. Collier is often credited with a line about entering "the conversation already going on" in the reader's mind. That wording is a later summary of his idea [S4]. In his own text the idea appears as a reader "deep in a discussion with himself" [S1]. Sources also disagree on when *The Letter Book* first came out: 1931 or 1934 [S3][S4]. We go with 1931, the date on its preface.
+A note on the record: Collier left two kinds of books. One is a working manual on sales letters, *The Letter Book*, whose preface is dated May 1931 [S1]. The other is a set of self-help books on the power of the mind, led by *The Secret of the Ages* (1926) [S2][S3]. We read the preface and first two chapters of *The Letter Book* in a publisher's free sample, and the first half of *The Secret of the Ages* in a scanned copy, plus the fourth volume of the 1926 set on belief and success [S6]. For the rest of *The Letter Book* we only saw the chapter list, so we keep to what those pages show. Collier is often credited with a line about entering "the conversation already going on" in the reader's mind. That wording is a later summary of his idea [S4]. In his own text the idea appears as a reader "deep in a discussion with himself" [S1]. Sources also disagree on when *The Letter Book* first came out: 1931 or 1934 [S3][S4]. We go with 1931, the date on its preface.
 
 ### In one paragraph
 
@@ -226,6 +228,8 @@ How he applied it: he admitted his book shows few failed letters, and argued tha
 
 In *The Secret of the Ages*, Collier argued that the mind comes first and that thought shapes circumstance [S2]. Desire is the "first law of gain": know exactly what you want, then focus on it with a single purpose [S2]. He urged readers to picture their goal vividly and in detail, and to reach big goals through many small, steady steps [S2]. He also said wealth comes from ideas and from meeting needs, and that you should work hard without anxiety [S2].
 
+In volume four, the chapter "The Formula of Success" puts belief at the center: the power behind people who suddenly win after years of struggle is faith in themselves [S6]. He tells a story to show it. A timid country boy is given a "talisman" by his grandmother, wins his first fight, and builds a bold reputation. She then tells him it was a bit of junk and that belief was all he needed [S6]. He follows it with a second tale of a mediocre painter who finds a lump of metal at Waterloo and rises until he loses it [S6]. His lesson: you can do what you think you can [S6]. Another chapter lists three requisites for success and ends with the reader's right to "dominion" over his work and health [S6]. His own sources here are scripture, Carlyle and popular verse, which the book uses as chapter epigraphs [S6].
+
 How he applied it: the same ideas sold well by mail. *The Secret of the Ages* sold over 300,000 copies in his lifetime, and his company kept publishing his work after his death [S3].
 
 ### How he decides
@@ -237,6 +241,28 @@ How he applied it: the same ideas sold well by mail. *The Secret of the Ages* so
 - Treat attention as a step, and plan for interest [S1].
 - Judge a letter only by real replies from real buyers [S1].
 - Know exactly what you want before you go after it [S2].
+
+### Real decisions
+
+#### Teaching the bait with a ragged boy
+
+Collier asked why a polished letter can fail while a rough one brings in orders [S1]. He told of a ragged boy catching fish with a crude line next to a well-equipped sportsman who caught nothing [S1]. The boy knew what the fish wanted [S1]. His answer: find the bait before you write.
+
+#### Testing on real letters
+
+He thanked John Blair for many chances to test his ideas on real letters to real buyers, with records of which theories worked [S1]. He called that the only test that gives dependable results [S1].
+
+#### Deciding the feeling first
+
+Before writing a word, he said to decide what feeling you want the reader to have at the end [S1]. He used the Greek speakers: crowds praised one for cleverness and forgot Demosthenes because they were busy wanting to act [S1]. He applied the rule to letters that sell, collect a debt or answer a complaint [S1].
+
+#### Selling classics by mail
+
+He wrote mail-order copy for books such as O. Henry's stories and Wells's Outline of History [S1][S4]. His chapters show these as case studies, with the order he taught: news interest, word pictures, motives, proof and the push to act [S1].
+
+#### Publishing his own mind books
+
+He published The Book of Life in seven volumes in 1925 and The Secret of the Ages in 1926 [S2][S3]. In volume four he tells of a boy given a talisman to show that belief matters [S6]. His company began a monthly magazine in May 1929 [S3].
 
 ### Where he stood
 
@@ -292,6 +318,7 @@ How he applied it: the same ideas sold well by mail. *The Secret of the Ages* so
 3. Robert Collier (author), Wikipedia. https://en.wikipedia.org/wiki/Robert_Collier_(author)
 4. Review of The Robert Collier Letter Book, Michael C. Gray, Profitadvisors (2003). https://profitadvisors.com/collier.shtml
 5. The Secret (Byrne book), Wikipedia. https://en.wikipedia.org/wiki/The_Secret_(Byrne_book)
+6. The Secret of the Ages (1926), Volume 4, scanned text: chapters 9 to 13, Robert Collier. https://archive.org/details/secretofages0004robe
 
 ## Before you hand it back
 1. It sounds like Robert Collier, and it uses at least one of their ideas by name.

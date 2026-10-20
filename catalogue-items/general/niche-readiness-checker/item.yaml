@@ -1,0 +1,20 @@
+slug: niche-readiness-checker
+name: "Niche readiness checker"
+summary: "Paste your offer and how customers found you. Get a niche verdict, a one-line niche statement and the next step."
+category: general
+type: skill
+role: check
+job: research
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report, required: true}
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [aaron-ross]
+credits:
+  - {title: "From Impossible to Inevitable, chapter 1 (publisher sample)", by: "Aaron Ross and Jason Lemkin", used: "Counting customers who found you cold, the warning signs of a blurred focus, the one-sentence niche and the doubling target"}

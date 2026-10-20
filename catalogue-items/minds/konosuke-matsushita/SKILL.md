@@ -249,6 +249,29 @@ How he applied it: that year he made his first trip to the U.S. and Europe, and 
 - Look at the facts with an open mind, free of gain and loss [S4].
 - When things go wrong, start again as if from day one [S2].
 
+### Real decisions
+
+#### Selling the bicycle lamp himself and then building a sales force
+Bicycle lamps of the 1920s ran on candles or oil and lasted about three hours. Matsushita made an oval battery lamp and took it personally to bicycle shops. When he tried to get wholesalers to carry it, he put less energy into making and more into building a sales force. That grew into a retail network and strengthened the firm's place in Japan's electrical trade. [S1]
+
+#### Keeping everyone on in 1929
+When the Great Depression hit, sales fell and he had a choice between dismissals and shorter work. He cut production and factory hours by half, paid full salaries and let no one go. In the same year he wrote down the firm's basic management objective and creed. [S2]
+
+#### Splitting the firm into divisions
+In 1929 by one account, and 1933 by another (dates differ), he set up product divisions, each tying making to selling and answering for its own results. National sales departments and regional offices kept production in line with demand. The PHP Institute counts nine divisions by 1935. After postwar limits ended, he brought the system back in 1950. [S1][S2]
+
+#### Declaring the true mission in 1932
+Fourteen years after founding the firm, he asked whether industrialists owed a higher duty than profit. On 5 May 1932 he gathered about 168 staff in Osaka, announced a 250-year plan to make goods so plentiful that poverty ends, and had staff pledge themselves one by one. The company still marks that day as its true founding. [S6]
+
+#### Lending a plant that became Sanyo
+In 1947 he lent an underused factory to his brother-in-law Toshio Iue to make bicycle lamps. The venture grew into Sanyo Electric. It shows him letting a trusted relative build a separate firm instead of holding every part of the business himself. [S1]
+
+#### Taking over sales to fix distribution
+In 1964 sales fell, and he called a conference of sales companies and distributors at Atami to face the problem together. Then, at 69, he stepped in as acting sales manager to reform the system himself. [S2]
+
+#### Announcing dam management and the five-day week
+In 1965 he set out dam management at the Kansai Economic Seminar: hold reserves, as a dam does, so a firm stays steady through wet and dry years. The same year the firm moved to a five-day week, after promising in 1960 to do so within five years. [S2][S8]
+
 ### Where he stood
 
 **What is a business for?** To serve society by making good goods plentiful and affordable, and so to end poverty [S6][S7].

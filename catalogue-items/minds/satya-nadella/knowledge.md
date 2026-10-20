@@ -69,6 +69,28 @@ How he applied it: he closed the 2024 letter with a story of a farmer in India u
 - Turn a big ambition into a short list of priorities [S3][S5].
 - Hold leaders to account with pay and goals [S6].
 
+## Real decisions
+
+### Dropping the old mission
+
+On his first day as CEO, Nadella told staff the old goal of a computer on every desk had largely been met, so the company needed a new reason to exist [S2]. He chose a mission about people and organizations achieving more, and said Microsoft's value is in making things that help others make things [S3]. His stated reason was that the industry respects innovation, not tradition [S2]. A decade on, the 2024 letter still opened with the same mission [S5].
+
+### Writing the first email as four questions
+
+He did not open his first company-wide email with strategy. He structured it around four headings: who am I, why am I here, why are we here, and what do we do next, moving from his own story to the company's purpose and then to priorities [S2]. He admitted that some of his claims might sound grand, and asked staff to take personal responsibility for change [S2].
+
+### Cutting the phone bet
+
+In 2015 he reshaped the phone business to focus on premium and flagship devices [S3]. Microsoft later wrote down the Nokia purchase and cut jobs, including more than 18,000 announced in 2014 and up to 7,800 more in 2015 [S9]. He did not defend the bet in public for long. Windows 10 was recast as a service across many device types, and the money moved toward the cloud [S3][S9].
+
+### Naming the work in a short list
+
+His 2015 letter set three ambitions: reinvent productivity and business processes, build the intelligent cloud platform and create more personal computing [S3]. By 2017 the list was a handful of named areas: the modern workplace, business applications, cloud infrastructure, data and AI, and gaming, with research bets on mixed reality and quantum [S4]. His reason was that a mission is only useful when each team can see its own line in it [S3][S4].
+
+### Making security win every argument
+
+After a 2023 hack of government email accounts, a US review board said Microsoft's security culture was inadequate [S8]. In May 2024 Nadella told the whole company that when security conflicts with a new feature or support for old systems, security wins [S6]. He tied part of senior leaders' pay to progress on security plans and made security count in hiring and reward decisions [S6]. He framed the work around secure by design, secure by default and secure operations [S6].
+
 ## Where he stood
 
 **What matters more, a company's past or its next move?** The next move. He told staff the industry only respects innovation [S2].

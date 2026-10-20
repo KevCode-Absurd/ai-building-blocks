@@ -1,0 +1,21 @@
+slug: layoff-plan-writer
+name: "Layoff plan writer"
+summary: "Describe the cuts you must make. Get a decision check, a manager script and a company announcement."
+category: general
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [ben-horowitz, brian-chesky, patrick-collison, tobi-lutke]
+credits:
+  - {title: "The Right Way to Lay People Off", by: "Ben Horowitz, 21 September 2010", url: "https://a16z.com/the-right-way-to-lay-people-off/", used: "Checking your own head, timing, blaming the company's plan not staff, managers telling their own teams and a whole-company message first"}
+  - {title: "A message from co-founder and CEO Brian Chesky, 5 May 2020", by: "Brian Chesky, Airbnb", used: "Stating what is uncertain, owning the decision in the first person and listing support in specifics"}
+  - {title: "Crisis focus and communication summary", by: "AI Blocks mind file", used: "Naming the core, pausing projects without judging the teams and keeping the staff who stay focused"}

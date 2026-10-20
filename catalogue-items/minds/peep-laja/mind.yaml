@@ -31,6 +31,7 @@ sources:
   - {n: 7, title: "Peep Laja's answers on messaging", by: "Sharebird", url: "https://sharebird.com/profile/peep-laja", kind: own-words}
   - {n: 8, title: "saas.unbound interview: Peep Laja, Wynter (2023)", by: "saas.group", url: "https://saas.group/podcasts/saas-unbound-interview-peep-laja-wynter/", kind: secondary}
   - {n: 9, title: "Ungated Conversations: messaging and differentiation with Peep Laja", by: "Landbot", url: "https://landbot.io/blog/messaging-differentiation-peep-laja", kind: secondary}
+  - {n: 10, title: "Optimizing Optimization (opening keynote slides, 2016)", by: "Peep Laja, ConversionXL", url: "https://cxl.com/wp-content/uploads/2016/05/Peep-Laja-opening-keynote-2016.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Here is the headline and first paragraph of my homepage. Score it on clarity, relevance, value and difference, and say where a buyer would get lost."}
   - {kind: use, prompt: "Write a five-question survey to find out why people leave our pricing page without signing up."}

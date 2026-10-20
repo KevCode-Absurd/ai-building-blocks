@@ -1,0 +1,127 @@
+new_slug: process-waste-finder
+name: "Process waste finder"
+summary: "Paste your process step by step. Get each step marked value or waste, the worst waste named and one change to try."
+job: plan-strategy
+thinking: medium
+thinking_why: "It sorts steps and ranks waste with fixed categories, and the arithmetic is simple."
+
+headline: "Process waste finder"
+subhead: "Paste your process step by step with who does each and how long it takes. It marks each step value or waste, names the kind of waste, finds the worst and asks who asked for every step. You get an audit and one change to try."
+
+explain: |
+  Slow processes rarely come from slow people. Work sits in queues, waits for approval or gets made before the next step needs it. Because each step looks busy, no one sees the long gaps between them.
+
+  This skill writes down each step with work time and wait time and totals the whole time line from the customer order to the money. It marks each step as value or waste using the standard list of wastes, finds the worst one and asks who asked for each step. It deletes before it improves, and picks one change to try on one step first.
+
+when:
+  - "A process takes weeks and you cannot say why."
+  - "You are about to add a tool or a hire to speed up work."
+  - "Steps exist that nobody can explain."
+
+you_give:
+  - "Your process, step by step, with who does each"
+  - "Times for work and waiting (optional)"
+  - "Where it hurts (optional)"
+you_get:
+  - "A table of steps with times"
+  - "Each step marked value or waste with a named kind"
+  - "The worst waste, backed by the time line"
+  - "One change to try, and a review date"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your steps in order, with who does them and rough times."
+  - "Check the owner list. Ask each owner why their step exists."
+  - "Try the single change for two weeks, then review the standard."
+
+how_it_works:
+  - title: "Writes each step"
+    text: "Owner, work time and wait time."
+  - title: "Follows the time line"
+    text: "From order to cash in hand."
+  - title: "Marks value or waste"
+    text: "Would the customer pay for it?"
+  - title: "Names the waste"
+    text: "From the standard list of eight."
+  - title: "Finds the worst"
+    text: "Backed by the time line."
+  - title: "Asks who asked"
+    text: "A name for every step and requirement."
+  - title: "Deletes then changes"
+    text: "One pull change on one step."
+
+output_shape: |
+  STEPS
+  <n>. <step> | <who> | work <t> | wait <t> | makes <x>
+
+  TIME LINE
+  Total <t> | Work <t> (<%>) | Wait <t> (<%>)
+
+  VALUE OR WASTE
+  <step>: value/needed/waste | <kind> | <reason>
+
+  WORST WASTE
+  <what> because <evidence from time line> | causes <x>
+
+  WHO ASKED
+  <step>: <name or role> | still needed? <y/n>
+  DELETE LIST: <steps>  WATCH LIST (may add back): <steps>
+
+  ONE CHANGE
+  <step>: <pull change>; try for <time>
+
+  STANDARD
+  Review on <date>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "Times"
+    how: "Real times beat estimates. Use a stopwatch or timestamps for one run."
+  - what: "Where you start and stop"
+    how: "From customer order to money in hand gives the full time line."
+  - what: "Who asked"
+    how: "Name people or roles. A step with no owner is easy to cut."
+  - what: "Rules you cannot change"
+    how: "List legal or safety steps so they are marked needed, not deleted."
+
+judge:
+  - "Every step has an owner and a time."
+  - "Each waste has a name from the standard list."
+  - "The worst waste is backed by numbers."
+  - "The delete list has owners."
+  - "The change is small enough to try on one step."
+
+test:
+  - "Run it on a process you know well. See if it finds the waste you suspected."
+  - "Run it twice. The worst waste should be the same."
+  - "Time one run by hand and compare with the estimates."
+  - "Try the single change and measure the time line again."
+
+improve:
+  - "Add your industry's required steps (law, safety) to step 3."
+  - "Add your tool names to the step table."
+  - "Keep before and after time lines."
+  - "Pair it with a root cause finder when one step keeps failing."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting steps and ranking waste is text work."}
+    - {name: "A spreadsheet", why: "Adds up work and wait time and shows the share."}
+  inputs:
+    - "Timestamps from your system"
+    - "A walk-through of the process by someone who does it"
+    - "Past complaints"
+    - "The cost of an hour of delay"
+
+terms:
+  - term: "Pull"
+    meaning: "The next step asks for work when it is ready, instead of the earlier step sending it."
+  - term: "Waste"
+    meaning: "Anything in a process the customer would not pay for."
+  - term: "Time line"
+    meaning: "The full time from order to cash, split into work and waiting."

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Michael Bierut is alive, and views can change. This data set comes from three of his Design Observer pieces (2004, 2007 and 2017), the summary page of a 2009 talk, his Pentagram partner page, a Pentagram project page and Wikipedia. We could not open his books or most of his video talks. Treat each view as "as of" the year of the source. Sources differ slightly on when he stepped back at Pentagram: the firm says he took an advisory role in October 2024 [S6], while Wikipedia says early 2025 [S5]. His writing is under copyright, so we quote only a few short phrases.
+Michael Bierut is alive, and views can change. This data set rests on four pieces of his own words: three Design Observer pieces (a 2004 discussion, a 2007 essay and a 2017 essay) [S1][S2][S3], a 2025 radio interview [S8], and the short summary page of a 2009 talk [S4]. It also uses his Pentagram partner page and a project page [S6][S7] and Wikipedia [S5]. We could not open his books or the full video of his talks. Treat each view as "as of" the year of the source. Sources differ slightly on when he stepped back at Pentagram: the firm says he took an advisory role in October 2024 [S6], while Wikipedia says early 2025 [S5]. His writing is under copyright, so we quote only a few short phrases.
 
 ## In one paragraph
 
@@ -28,11 +28,21 @@ Bierut saw the square H as a window that others could fill [S1]. That made it a 
 
 How he applied it: the logo was redrawn in rainbow colours on April 28, 2015, for a Supreme Court case on same-sex marriage, the first of many changes for different occasions [S1]. The Mastercard identity Pentagram describes also works as a system: refined circles, a new type family, a warm grey base and shapes that create patterns [S7].
 
-### Make the familiar fresh
+### Familiar plus surprising
 
 Much identity work starts with something people already know. The challenge is to update it without losing what they recognise [S1][S7].
 
 How he applied it: Pentagram's Mastercard project kept the two overlapping circles used since 1968 but made them crisper and better for screens, with a brighter orange where they overlap. It looked back to a 1979 logo for ideas [S7]. The firm reports that 81% of consumers recognised the new symbol without the name [S7]. A lowercase "c" signalled that the brand was more than a card [S7].
+
+He credits Raymond Loewy with the idea that good design balances what people already know with something new. [S1][S8] In the 2015 Clinton brief the candidate already had near-total name recognition, so the task was to keep that familiarity and add freshness. [S1]
+
+How he applied it: he contrasted the open, join-in H with the 2008 Obama identity, which had made an unknown candidate look polished and established. [S1] He also admired a recent campaign that borrowed from taxi cabs, corner shops and local sports colours, and said design cannot make meaning from nothing; it must point to something that already carries it. [S8]
+
+### Listen, then ask another question
+
+Early in his career he argued too much with clients. By the 1990s he had learned to ask another question and let them talk. [S8] He says strong work needs a strong client, and that clients are partners, not obstacles. [S8][S2]
+
+How he applied it: the Clinton team worked with a candidate who called herself "not an art person" but who listened closely and engaged with the design. [S1]
 
 ### Indulge your obsessions
 
@@ -58,12 +68,6 @@ Bierut's first published essay was formal and bland, and he felt it didn't sound
 
 How he applied it: his first book, *Seventy-Nine Short Essays on Design* (2007), had 272 pages and no pictures, and set each essay in a different typeface [S3]. He made it a book because designers make things, and the final form matters [S3].
 
-### Learn from a strong mentor
-
-Bierut worked for Massimo Vignelli from 1980 to 1990, rising to vice president [S5][S6]. He has said he learned a great deal from Vignelli about being a good designer [S5]. He noted that Vignelli was a committed modernist, while designers today tend to work through smaller, scattered efforts rather than big movements [S2].
-
-How he applied it: his work often uses Helvetica [S5], and he appeared in the 2007 documentary *Helvetica* [S6].
-
 ## How he decides
 
 - Read the brief closely. The answer is often in it [S4].
@@ -73,6 +77,32 @@ How he applied it: his work often uses Helvetica [S5], and he appeared in the 20
 - Keep what people already recognise [S7].
 - Ride out early criticism and let use prove the design [S1].
 - Write it down plainly, in your own voice [S3].
+
+## Real decisions
+
+### Starting from the candidate's fame (2015)
+
+Situation: a secret volunteer brief for a campaign whose candidate was known to everyone. [S1] He chose to build on that familiarity and add one surprising move, a square H that worked as a frame others could change, with a forward arrow. [S1] His stated reason was that the mark had to be simple enough for anyone to draw by hand and suited to phones. [S1] It launched to mockery and later won praise as it was reused. [S1]
+
+### A no-comment policy at launch (2015)
+
+When the logo was attacked online, the team chose not to defend it. [S1] Bierut says the criticism was hard to take, and that his wife helped him see it was about more than a logo. [S1] The campaign's rainbow version before a Supreme Court case on same-sex marriage did the answering. [S1]
+
+### Writing the way he talked (c. 1980s)
+
+His first piece for a design magazine was correct, balanced and lifeless. He threw out that tone and wrote it as he would say it, opinionated and a bit unfair. [S3] A former teacher wrote an irritated letter and a respected writer sent praise, which showed him that people read what has a voice. [S3]
+
+### Choosing graphic design (age 15)
+
+He chose graphic design because he knew he could not be a fine artist, and he loved record sleeves and movie posters. [S2] He says he never had a unique vision to protect, and found the work of answering someone else's problem a strength. [S2]
+
+### Taking the middle road on clients (2004)
+
+By 2004 more than half his work was for non-profit clients. He found they could be as demanding as corporate ones, so he stopped treating them as a refuge. [S2] He refused both selling out and retreating to the margins. [S2]
+
+### Rebuilding a familiar mark (Mastercard)
+
+Pentagram kept the two overlapping circles people already knew, sharpened them for screens and added a new type family and a lowercase c. [S7] The firm reports that most people recognised the new symbol without the name. [S7]
 
 ## Where he stood
 
@@ -121,4 +151,4 @@ How he applied it: his work often uses Helvetica [S5], and he appeared in the 20
 - "Don't avoid the obvious" (2009 talk) [S4]
 - "Indulge your obsessions" (2009 talk) [S4]
 - "I am concerned by our eagerness to retreat to the margins" (2004) [S2]
-- "Designers make things." (2007) [S3]
+- "It works! It works!" (2025 interview, on seeing a finished sign) [S8]

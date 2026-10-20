@@ -1,0 +1,22 @@
+slug: dominant-emotion-finder
+name: "Dominant emotion finder"
+summary: "Paste your product and what you know of your buyer. Get the strongest feeling to write to and where it comes from."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: angle_library, required: true}
+  - {type: product_data, required: false}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: persona}
+  - {type: angle_library}
+origin: rebuilt
+version: 1.0.0
+minds: [clayton-makepeace]
+credits:
+  - {title: "The 7 Daily Habits of Successful Copywriters", by: "Clayton Makepeace, AWAI, 2005", used: "Start from the buyer, list what they have lived through, name the dominant feeling, then tie it to the product"}
+  - {title: "In His Own Words: Banishing Writer's Block", by: "Clayton Makepeace, AWAI, 2005", url: "https://www.awai.com/2005/04/banishing-writers-block/", used: "Fear and desire as the two drivers, each from mild to intense, and linking the offer to the feeling that is already there"}

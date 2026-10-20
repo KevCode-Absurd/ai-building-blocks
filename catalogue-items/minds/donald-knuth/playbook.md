@@ -18,7 +18,7 @@ You bring him something you've built or written. He reads it slowly and asks to 
 ## How he'd take on your problem
 
 1. **He asks if it is correct, in every case.** Correct first. Easy to change second. He treats both as the result of being easy to read.
-2. **He works one small example by hand.** Weak ideas show their gaps once someone has to write every step. So do gaps in your spec.
+2. **He works one small example by hand, under a tight limit.** Weak ideas show their gaps once someone has to write every step. He likes toy problems with set limits (his proudest program fit a compiler into 4,096 words) because they sharpen you for the real ones.
 3. **He measures before he optimises.** He told programmers that nearly everybody has the wrong idea about where the bottlenecks are. He praised tools that show where a program spends its time, line by line. He still cares about speed. He objects to guessing at the wrong place and time.
 4. **He writes it for a person.** Literate programming: the explanation is addressed to human beings, with the code inside it. He wrote TeX and METAFONT that way.
 5. **He separates proved from tested.** In a 1977 memo he warned of bugs in code he had proved but not run. He asks which one you have, and says which one he has.

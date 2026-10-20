@@ -1,0 +1,127 @@
+new_slug: breaking-change-reviewer
+name: "Breaking change reviewer"
+summary: "Paste a change you plan to ship. Get a safety score, who it breaks, what to keep and a safer rollout."
+job: build-software
+thinking: medium
+thinking_why: "It checks a change against fixed questions and scores it, which takes care but not deep reasoning."
+
+headline: "Breaking change reviewer"
+subhead: Paste a change you plan to ship, such as a feature removal, a new format, a price change or a policy. It lists who it breaks, what must keep working, and gives a score out of 100 with a one-sentence verdict, a revert path and a safer rollout.
+
+explain: |
+  Teams often justify a change that breaks existing users with a date: "we announced it" or "it is deprecated". Users who rely on the old behaviour do not read announcements. If a change breaks what people use, the fault is in the change, not in the people.
+
+  This skill lists what the change removes or alters for people who already use it. It asks if anyone has reported or could report breakage, and refuses any plan that treats a date as making breakage acceptable. It decides what to do with options kept as empty shells. It plans a fix-on-report path and a revert path, scores the change out of 100 on six checks, and writes the rule in one flat sentence the team can repeat.
+
+when:
+  - You plan to remove a feature, rename something or change a format that people use.
+  - You are about to set a deadline after which the old way stops working.
+  - A change already shipped and users are complaining it broke their work.
+
+you_give:
+  - The change you plan, with what it replaces
+  - Who uses the old behaviour, and how you know (optional)
+  - Any reports or support tickets about it (optional)
+you_get:
+  - Each group of users the change touches and what breaks for them
+  - A score out of 100 for how safe the change is, and how it was worked out
+  - What to keep, and what to do with any empty leftover options
+  - A fix-on-report path, a revert path and a one-sentence verdict
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the change and who uses what it touches. Paste support tickets or usage numbers if you have them.
+  - Say whether any dates or announcements are part of the plan.
+  - Read the verdict first, then the list of who it breaks.
+  - Make the fixes it asks for, then run it again to see the new score.
+
+how_it_works:
+  - title: Lists what changes
+    text: Writes what is removed or altered for people who already use it.
+  - title: Names who it breaks
+    text: Names each user group and what stops working for them.
+  - title: Checks for reports
+    text: Asks whether anyone has reported or could report breakage.
+  - title: Rejects date excuses
+    text: Refuses any plan that uses an expiry date as the reason breaking is fine.
+  - title: Settles leftover options
+    text: Decides whether an empty option should work again or be removed with proof nobody uses it.
+  - title: Plans fix and revert
+    text: Writes the fix-on-report path and the revert path.
+  - title: Scores and gives a verdict
+    text: Scores six checks out of 100 and writes the rule in one flat sentence.
+
+output_shape: |
+  THE CHANGE
+  <what changes, what it replaces>
+
+  WHO IT BREAKS
+  <group> | what stops working | evidence: <report, usage or MISSING>
+
+  WHAT MUST KEEP WORKING
+  <behaviour to preserve>
+
+  DATES AND ANNOUNCEMENTS
+  <any plan that relies on them, rejected or kept, and why>
+
+  LEFTOVER OPTIONS
+  <option> | make it work / remove, with proof: <evidence>
+
+  SAFETY SCORE: <n>/100
+  How it was worked out: <six checks, each full, half or none, shown>
+
+  SAFER ROLLOUT
+  <steps, the fix-on-report path, the revert path>
+
+  VERDICT
+  <one flat sentence>
+
+  MISSING
+  <what would change the score>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Usage evidence
+    how: Paste usage counts or tickets. With none, the groups are marked as unproven and the score drops.
+  - what: Who the users are
+    how: Name each group, such as customers, partners or staff, so none are missed.
+  - what: Your announced dates
+    how: Include them. They are tested and not treated as permission.
+  - what: Revert cost
+    how: Say how hard it is to undo the change after it ships.
+
+judge:
+  - Every affected user group is named, with what breaks.
+  - No date is used as the reason to break anything.
+  - No empty leftover option remains.
+  - A revert path exists and can be done in practice.
+  - The verdict is a single sentence the team can repeat.
+
+test:
+  - Run it on a change that went badly in the past. See if it names the group that was hurt.
+  - Add a deprecation date to a plan and check it rejects the date as the reason.
+  - Run it twice on the same input. The score should differ by only a few points.
+  - Give a safe change, such as a bug fix, and check that the score is high.
+
+improve:
+  - Add your user groups to step 2 so none are skipped.
+  - Add your support channels to the evidence check, so reports are searched in the right places.
+  - Add your rollout tools, such as flags or staged release, to the rollout steps.
+  - Pair it with "Weak part design-out planner" if the change removes a part of your product.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Checking a plan against fixed questions and writing a verdict is text work any strong chat AI does."}
+    - {name: "Your support inbox or ticket tool", why: "Real reports are the best evidence of who relies on the old behaviour."}
+  inputs:
+    - "Support tickets or complaints about the area"
+    - "Usage counts for the thing being changed"
+    - "The list of partners or systems that connect to it"
+
+terms:
+  - term: Breaking change
+    meaning: A change that makes something people already use stop working or work differently.
+  - term: Revert path
+    meaning: The steps to put the old behaviour back if the change causes harm.

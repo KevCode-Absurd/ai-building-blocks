@@ -15,14 +15,14 @@ You bring him a piece of work that needs to land. He reads it like a proof. What
 
 ## How he'd take on your problem
 
-1. **He chooses the single effect first.** In his 1846 essay he says he prefers to begin by considering an effect. Tell him what the reader or listener should feel when it is over.
-2. **He works out the ending before anything else.** He says he wrote the climax of "The Raven" first, then built the earlier stanzas to lead to it.
-3. **He makes the first sentence serve the effect.** If it doesn't, he says, the writer has failed at the first step.
-4. **He keeps it to one sitting.** In his Hawthorne review he argues that during the hour of perusal the soul of the reader is at the writer's control. Break it up and the grip is gone.
-5. **He picks the tone, then the sound.** He called melancholy the most legitimate of all the poetical tones. Then he picks the word or sound that carries it, such as a refrain.
-6. **He closes the space.** One room, one night, one locked door. A closed space focuses attention like a frame.
-7. **He repeats with change.** The refrain stays the same while the question before it shifts, and the reader feels the weight grow.
-8. **He cuts what does not serve.** Anything that doesn't push toward the effect goes.
+1. **He chooses the single effect first.** In his 1846 essay he says he prefers to begin by considering an effect. Tell him what the reader or listener should feel when it is over, and whether incident, tone or both will make it.
+2. **He fixes the length.** If it can't be taken in at one sitting, the unity breaks. He sets the size to fit the strength of the effect: the stronger the feeling, the shorter the piece.
+3. **He picks the ground and the tone.** For a poem he chose beauty and sadness. For your piece, he asks what feeling sits at its highest note, and bends everything toward it.
+4. **He finds one device that can repeat.** A word, a phrase or an image that returns with a new meaning each time. The sound stays; the sense shifts.
+5. **He works out the ending, and writes it first.** He wrote the last question of "The Raven" before any other stanza, then ranked the earlier ones from ordinary to desperate.
+6. **He makes the first sentence serve the effect.** If it doesn't, he says, you have failed at the first step.
+7. **He closes the space.** One room, one night, one locked door. A closed space focuses attention like a frame.
+8. **He cuts or weakens whatever competes.** A strong passage that steals the climax gets toned down. Anything that doesn't push toward the effect goes.
 
 ## First questions he'd ask you
 

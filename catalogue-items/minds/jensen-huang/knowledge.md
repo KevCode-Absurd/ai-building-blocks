@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Jensen Huang is alive, and views can change. This data set comes from his public talks, mainly his 2023 National Taiwan University and 2024 Caltech commencement speeches and a 2024 Stanford talk, plus NVIDIA's own pages and reference sources. Treat each view as "as of" the talk it comes from. Nothing here speaks for him on later events, NVIDIA's plans or its products.
+Jensen Huang is alive, and views can change. This data set comes from his public talks, mainly his 2023 National Taiwan University and 2024 Caltech commencement speeches and a 2024 Stanford talk, plus NVIDIA's own pages and reference sources. The Stanford and Stripe Sessions talks reach us through earlier study notes, because the saved pages hold only a short excerpt and machine transcripts of them may contain errors [S3][S8]. The Wikipedia pages supply dates and facts [S6][S7]. We found no full spoken transcript on disk. Treat each view as "as of" the talk it comes from. Nothing here speaks for him on later events, NVIDIA's plans or its products.
 
 ## In one paragraph
 
@@ -15,6 +15,11 @@ Huang co-founded NVIDIA in 1993 at a Denny's restaurant in San Jose and has run 
 Huang tries to rethink problems from the ground up instead of improving the current way a little [S3]. He asks what today's tools and conditions allow, then how he would rebuild the whole thing from scratch [S3].
 
 How he applied it: he described computing as moving from general processors running hand-written instructions to accelerated computing and AI, where software learns from data [S1]. NVIDIA built for that shift before the market existed [S1].
+
+
+In the Stripe Sessions talk he said he would rather create a market than take a share of one [S8]. He pairs a technology bet with a market that barely exists yet: 3D graphics with games, then deep learning [S8]. A test he uses is whether the world would go without the work if his company didn't do it [S8].
+
+How he applied it: when he reasons about a plan, he talks it through in words step by step and distrusts spreadsheets, because a spreadsheet can be bent to say anything [S8].
 
 ### Hold a core belief, and check it every day
 
@@ -56,7 +61,7 @@ How he applied it: for years he opened staff talks with NVIDIA's unofficial mott
 
 Huang runs a flat structure with about 60 direct reports as of November 2024 [S6]. He reasons that his top people should need little hand-holding [S6]. He believes leaders should share context widely so staff can make good choices without waiting for orders [S3]. He sees the CEO's job as creating the conditions for people to do their life's work [S3].
 
-How he applied it: he has no fixed office and works out of meeting rooms around the headquarters [S6].
+How he applied it: he has no fixed office and works out of meeting rooms around the headquarters [S6]. He avoids one-on-ones, gives feedback in front of the group so others learn from it too, and prefers to coach before he fires [S3][S8].
 
 ### Do first what matters most
 
@@ -72,6 +77,29 @@ At the close of his Caltech speech, Huang told a story about a gardener in a Kyo
 - Leave a market that has turned into a commodity [S2].
 - Share information widely, then let people decide [S3].
 - Start the day with the highest-priority work [S1].
+
+## Real decisions
+
+### Starting NVIDIA at a Denny's
+In 1993, at age 30, he and two co-founders started NVIDIA after meeting in a Denny's restaurant in San Jose, a chain where he had worked as a teenager [S6][S8]. He has told the story with humour at his own expense, and the stated point is that big companies can begin small and unglamorous [S8].
+
+### Telling Sega the truth
+NVIDIA's first chip, the NV1, used a way of drawing 3D shapes the industry then dropped [S7][S6]. Huang told Sega, a customer, that the design was wrong and gave up the contract. The honest answer could have bankrupted NVIDIA. Sega's leaders chose to invest $5 million in it anyway [S2][S6]. His reason: confront the mistake with humility and ask for help [S2].
+
+### Rebuilding the chip with about a month of pay left
+By 1997 NVIDIA had roughly one month of payroll in the bank [S6]. Its next chip, the RIVA 128 in August 1997, saved the company [S6]. In the Stripe talk he described how, when Direct3D made the first design obsolete, he found the OpenGL specification in a shop and handed it to his engineers, saying a new topic is probably a textbook away [S8].
+
+### Putting CUDA in every chip
+From 2007 NVIDIA built CUDA into all its graphics chips so they could do general computing as well as drawing [S2]. It raised costs, lowered margins for years and drew doubters [S2][S8]. His stated reason was the belief that computing would shift toward accelerated work [S1]. It paid off when researchers began to train neural networks on NVIDIA chips [S2][S7].
+
+### Leaving the phone market
+Around 2010 NVIDIA chased the mobile phone market, which turned into a low-margin commodity [S2]. He pulled the company out and took public criticism [S2]. He later called it a strategic retreat that opened robotics and self-driving cars [S2].
+
+### Holding steady when the share price fell about 80 percent
+In the financial crisis, NVIDIA's shares fell about 80 percent [S3]. He kept his routine and asked whether any assumption behind his choices had changed. None had, so he kept going [S3]. The test he gives others is whether the underlying facts changed, not whether the quarter was bad [S3].
+
+### Dropping the Arm deal
+NVIDIA announced a plan in 2020 to buy the chip designer Arm for about $40 billion, and abandoned it in 2022 after regulators objected [S7]. The record we hold does not give his reasons, so we do not guess at them.
 
 ## Where he stood
 
@@ -117,7 +145,7 @@ At the close of his Caltech speech, Huang told a story about a gardener in a Kyo
 ## Short phrases on the record
 
 - "Run. Don't walk." (NTU commencement, 2023) [S2]
-- "Our strategic retreat paid off." (NTU commencement, 2023) [S2]
 - "I hope you will see setbacks as new opportunities." (Caltech commencement, 2024) [S1]
 - "Unless something changes your mind, you continue to believe in it." (Stanford GSB, 2024) [S3]
-- "Our company is thirty days from going out of business." (NVIDIA's unofficial motto, used in his staff talks) [S6]
+- "I'd rather be a market maker, market creator than a market taker." (Stripe Sessions, 2024) [S8]
+- "Did physics change? Did gravity change?" (Stanford GSB, 2024) [S3]

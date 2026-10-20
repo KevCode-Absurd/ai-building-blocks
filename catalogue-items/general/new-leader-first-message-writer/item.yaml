@@ -1,0 +1,17 @@
+slug: new-leader-first-message-writer
+name: "New leader first message writer"
+summary: "Paste your background and your team's situation. Get a first-week message: who you are, why you are here, what happens next."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [satya-nadella, mary-barra]
+credits:
+  - {title: "Email to employees on his first day as CEO, 4 February 2014", by: "Satya Nadella", used: "The frame of a personal opening, the shift in the field, four questions answered, honesty about what he did not know, and a closing ask"}

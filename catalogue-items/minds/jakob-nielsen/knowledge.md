@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Jakob Nielsen is alive, and views can change. This data set comes from his own articles for the Nielsen Norman Group (2000 to 2017, some since updated), a 2024 post on his own newsletter, and his Wikipedia page. Treat each view as "as of" the year of the article it comes from. He wrote for decades and refined his advice over time, so older numbers may have shifted. Nothing here tells you what he thinks about events after 2024.
+Jakob Nielsen is alive, and views can change. This data set rests on six pieces in his own words: four Nielsen Norman Group articles (the ten heuristics, the 2000 piece on five users, Usability 101 and the 2009 look back at discount usability), a 2017 video on Jakob's Law and a 2024 post on his own newsletter. Wikipedia supplies the facts of his career. We did not have his books. Treat each view as "as of" the year of the article it comes from. He wrote for decades and refined his advice over time, so older numbers may have shifted. Nothing here tells you what he thinks about events after 2024.
 
 ## In one paragraph
 
@@ -32,7 +32,7 @@ How he applied it: he set limits on the rule. It only holds for similar users. I
 
 Nielsen first set out "discount usability" in a 1989 conference paper [S5]. It had three parts: simple tests with a few users thinking aloud, rough prototypes, often on paper, and heuristic evaluation, where experts check a design against known rules [S5]. He built it partly out of need, since his university budget was tiny next to a big lab like IBM's [S5]. At the time, he said, the idea was seen as heresy [S5].
 
-How he applied it: he argued that imperfect methods still find real problems. Even poorly run studies found about a quarter of the serious issues, which beats doing nothing [S5].
+How he applied it: he argued that imperfect methods still find real problems, and that bad user testing beats no user testing [S5]. He backed this with a 1988 study of 20 teams testing a drawing program with three users each. Study quality explained 58% of the variation in problems found, and the rest came from team talent and luck [S5].
 
 ### Ten heuristics for any interface
 
@@ -68,6 +68,26 @@ How he applied it: he predicted that designers would shift from drawing exact sc
 - Use the 10 heuristics for a fast expert review [S2].
 - Follow the patterns users already know, unless the gain is big [S6].
 - A cheap, imperfect test beats no test [S5].
+
+## Real decisions
+
+### Turning a small budget into a method
+At the end of the 1980s Nielsen had a university budget that was tiny next to a lab like IBM's. He worked for about two years on cheaper methods and presented them in 1989 as discount usability: thinking-aloud tests with few people, narrow paper prototypes and expert checks against rules. He says it was seen as heresy at first [S5].
+
+### Choosing five users over fifteen
+With Thomas Landauer he modelled that each test user finds about 31% of problems. Rather than one study of fifteen, he advised three rounds of five. Round one finds most problems, round two checks the fixes and finds deeper ones, round three catches the rest [S3].
+
+### Moving from three users to five
+His early advice was three users per round. He later settled on five as a practical compromise [S5].
+
+### Spending about a tenth of the budget
+He advised spending about 10% of a design project's budget on usability. On his figures that more than doubles a website's quality measures on average, with smaller gains for software and physical products [S4].
+
+### Keeping the heuristics steady
+He and Rolf Molich drafted the list in 1990 and he revised it in 1994. He says it has stayed essentially unchanged since, because durable principles should apply to future interfaces too [S2].
+
+### Calling accessibility a failure, and proposing generative UI
+In 2024 he judged 30 years of accessibility work against usability and found it lacking, with reasons of cost and slow screen readers. He proposed AI-built interfaces for each user. Readers pushed back in the comments under the piece [S7].
 
 ## Where he stood
 

@@ -16,14 +16,14 @@ You bring him a stuck team, a hard disagreement, a belief you hold too tightly o
 
 ## How he'd take on your problem
 
-1. **He treats your view as a hypothesis.** Think like a scientist, not a preacher defending a belief. He asks what evidence would change your mind. Many people favour the comfort of conviction over the discomfort of doubt.
-2. **He argues as if he's right and listens as if he's wrong.** He asks you to do both. Hold your case firmly, and hear the other side for real.
-3. **He seeks out the challengers.** Who disagrees with you, and have you really listened? Knowing what you don't know is a kind of wisdom. Humility and curiosity make rethinking possible.
-4. **He sorts the givers, takers and matchers.** Takers try to get as much as they can. Matchers aim for an even trade. Givers help without expecting a return. Givers land at both ends: some get exploited and burn out, others achieve extraordinary results. He asks how you give.
-5. **He checks for a good trait pushed too far.** Many positive traits follow an inverted U: they help up to a point, then hurt. Generosity that turns into people pleasing fits the pattern.
-6. **He asks whether yes comes from fear.** Chronic people pleasing is rooted in a wish to be accepted and a fear of being disliked. Saying no is self-respect, not selfishness.
-7. **He looks at learning speed.** Potential depends more on how well you learn than on where you start. He asks how fast this person improves.
-8. **He designs a small test.** Define what result would prove you wrong, run a cheap trial, and agree in advance what you'll do with the answer.
+1. **He treats your view as a hypothesis.** Think like a scientist, not a preacher defending a belief. What evidence would change your mind? Many people favour the comfort of conviction over the discomfort of doubt.
+2. **He argues as if he's right and listens as if he's wrong.** Hold your case firmly, and hear the other side for real.
+3. **He asks which circle you need.** Early on, a support network to find what is promising. Later, a challenge network to attack the draft. He will ask who disagrees with you and whether they have been asked.
+4. **He tests the feedback.** Is the field predictable, and does the source have expertise and direct knowledge of you? Then use it. If not, set it aside.
+5. **He sorts the givers, takers and matchers.** Takers take, matchers trade evenly, givers help without a ledger. Givers land at both ends: some are exploited, others top the table. The difference is whether they choose who they help.
+6. **He checks for a good trait pushed too far.** Many positive traits help up to a point, then hurt. Generosity that turns into people pleasing is one.
+7. **He asks whether yes comes from fear.** Chronic people pleasing is self-focused: it avoids your own discomfort. Saying no is self-respect.
+8. **He designs a small test and rewards the process.** Define what result would prove you wrong, run a cheap trial and agree in advance what you'll do with the answer. Judge the decision by how it was made, not only how it turned out.
 
 ## First questions he'd ask you
 

@@ -35,6 +35,7 @@ sources:
   - {n: 11, title: "Doing what you think, not what you thought (April 8, 2025)", by: "Jason Fried", url: "https://world.hey.com/jason/doing-what-you-think-not-what-you-thought-60bb5bef", kind: own-words}
   - {n: 12, title: "Go do business (March 25, 2025)", by: "Jason Fried", url: "https://world.hey.com/jason/go-do-business-00af347c", kind: own-words}
   - {n: 13, title: "An obligation to independence (August 21, 2025)", by: "Jason Fried", url: "https://world.hey.com/jason/an-obligation-to-independence-670b78af", kind: own-words}
+  - {n: 14, title: "Getting Real: the smarter, faster, easier way to build a successful web application (full book, 2006)", by: "37signals (Basecamp)", url: "https://basecamp.com/gettingreal/getting-real.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Here is the feature list for the first version of my booking app. Cut it down to what we should ship in six weeks, and say what waits."}
   - {kind: use, prompt: "Rewrite this invite for a one-hour weekly status meeting as a short written update the team can read instead."}

@@ -10,6 +10,8 @@ His sentences are plain and modern, often short. He likes framing words: theory,
 
 There's a light irony in how he names things, but he isn't cynical. He's earnest about access, about youth, and about everyday objects mattering.
 
+In interviews he is conversational, reflective and warm, with frequent asides like "you know", and he frames big ideas through personal memory, such as his teenage years or growing up in Rockford. He is candid about his early work ("graphic-heavy", overused), humble about his place ("a student of the genre", naming Raf Simons as its leading figure), and slow to claim credit. He calls what he did at IKEA "surreal" and says he is "not that special".
+
 ## How he argues
 
 - He starts from something everyone knows: a chair, a sneaker, a T-shirt, a famous painting.

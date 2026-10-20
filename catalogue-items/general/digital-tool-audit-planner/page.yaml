@@ -1,0 +1,113 @@
+new_slug: digital-tool-audit-planner
+name: "Digital tool audit planner"
+summary: "List the apps and habits you use. Get each kept, cut or limited by two questions: what value, and is it best."
+job: think-and-decide
+thinking: low
+thinking_why: "It applies two fixed questions to a list you provide."
+
+headline: "Digital tool audit planner"
+subhead: "List the apps and habits that take your attention and what you care about. It asks of each what value it adds and whether it is the best way to get it. You get a keep, cut or limit call, with a rule for each limit."
+
+explain: |
+  Almost every app offers some benefit. That is how it gets onto your phone and stays there. But the attention it takes is never on the receipt, and what you value most gets whatever is left.
+  
+  This skill starts from what you value. It lists each tool and habit and asks two questions. Does it add real value to something you named? Is it the best way to get that value, or only a way? It marks tools that solve an old problem and ones that made a new habit, then gives each a keep, cut or limit with a rule, and sets a review in a month.
+
+when:
+  - "You pick up your phone without knowing why."
+  - "Your team has too many chat channels and tools."
+  - "You want to cut back but do not know where to start."
+
+you_give:
+  - "Your tools and habits"
+  - "What you value most"
+  - "Rough weekly time on each (optional)"
+you_get:
+  - "Your values written as a short list"
+  - "A call on every tool: keep, cut or limit"
+  - "Rules for the limits and replacements for the cuts"
+  - "A review date and question"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Write your three to six values first, before the tool list."
+  - "List every app, feed, channel and habit, even small ones."
+  - "Follow the calls for one month."
+  - "On the review date, answer the question it set."
+
+how_it_works:
+  - title: "Write what you value"
+    text: "Writes down what you value most."
+  - title: "List every tool and habit"
+    text: "Lists every tool and habit that takes attention."
+  - title: "Ask: does it add real value"
+    text: "Asks if each adds real value to one of those things."
+  - title: "Ask: is it the best way"
+    text: "Asks if it is the best way to get that value, or only a way."
+  - title: "Sort old problem versus new habit"
+    text: "Marks tools that solve an old problem versus those that invent a new habit."
+  - title: "Decide keep, cut or limit"
+    text: "Decides keep, cut or limit for each, with rules for the limits."
+  - title: "Set the review"
+    text: "Reviews after a month."
+  - title: "Checks its own work"
+    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+
+output_shape: |
+  VALUES
+  <3 to 6 values>
+  
+  TOOLS
+  <tool> | Time/week | Value it adds (ties to <value>) | Best way or only a way | Old problem / new habit | Call: keep / cut / limit | Rule
+  
+  REPLACEMENTS
+  <cut tool>: <what covers the need>
+  
+  REVIEW
+  <date> | Ask: <question> | Count: <...>
+  
+  MISSING
+  <gaps>
+  
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Your values"
+    how: "Specific values give sharper calls. 'Be a good parent' is looser than 'be at dinner at six'."
+  - what: "Your role"
+    how: "Say what your job needs. Work tools may stay with limits."
+  - what: "Time spent"
+    how: "Real hours make limits easier to set."
+  - what: "Team or personal"
+    how: "For a team, list shared channels too."
+
+judge:
+  - "Every tool points to a value you named."
+  - "The best-way question has an answer."
+  - "Every keep has a limit."
+  - "Each cut says what replaces it."
+  - "There is a review date."
+
+test:
+  - "Follow the calls for a week and note what you missed."
+  - "Check if you miss the cut tools a month later."
+  - "Run it twice. The keep list should stay close."
+
+improve:
+  - "Add the tools you often forget to list, such as notifications."
+  - "Add your own limit rules to step 6."
+  - "Re-run it every six months."
+  - "Pair it with \"Process and meeting cull planner\" for team habits."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and weighing written facts is text work any strong chat AI does well with this skill."}
+    - {name: "Your phone's screen-time report", why: "It gives real weekly minutes for each app."}
+  inputs:
+    - "Screen-time numbers"
+    - "A list of your work tools"
+    - "Your calendar for a typical week"
+
+terms:
+

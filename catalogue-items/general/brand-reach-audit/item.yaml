@@ -1,0 +1,20 @@
+slug: brand-reach-audit
+name: "Brand reach audit"
+summary: "Paste your sales and what you know of your buyers. Get where you are hard to think of or hard to buy."
+category: general
+type: skill
+role: check
+job: strategy
+level: advanced
+inputs:
+  - {type: performance_sheet, required: false}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [byron-sharp]
+credits:
+  - {title: "How Brands Grow", by: "Byron Sharp", url: "https://en.wikipedia.org/wiki/Byron_Sharp", used: "Growth comes mostly from more buyers, including light and occasional ones; being easy to think of and easy to buy; recognisable brand cues"}

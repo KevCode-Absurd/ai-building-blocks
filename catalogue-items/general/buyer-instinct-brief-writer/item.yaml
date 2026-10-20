@@ -1,0 +1,19 @@
+slug: buyer-instinct-brief-writer
+name: "Buyer instinct brief writer"
+summary: "Paste your product facts and buyer words. Get a brief naming the drive behind buying and the feeling the ad must leave."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: brief}
+origin: rebuilt
+version: 1.0.0
+minds: [bill-bernbach]
+credits:
+  - {title: "Facts Are Not Enough (speech and related pieces)", by: "Bill Bernbach", used: "Treating facts as a springboard, reading for the drive under the stated want, and briefing on what the reader should take away"}

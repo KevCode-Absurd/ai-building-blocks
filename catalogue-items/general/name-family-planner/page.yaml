@@ -1,0 +1,125 @@
+new_slug: name-family-planner
+name: "Name family planner"
+summary: "Describe your world, brand or product range. Get names that share one root, each with a meaning and a short history."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It must keep sound rules consistent across many names and judge how they read aloud."
+
+headline: "Name family planner"
+subhead: "Describe your world, brand or product range. It picks one root language or sound style, builds a small word list, then makes names from it. Each name gets a meaning, an older form and a read-aloud check."
+
+explain: |
+  A set of names made one at a time sounds like a set of strangers. One came from a dictionary, one from a joke, one from a trend. Readers and customers feel the mismatch even if they cannot say why.
+
+  This skill starts from one source: a language, a region or a set of sound habits that fit the tone and the people. It writes down the sounds that source likes and avoids, and a short list of root words with meanings. Every name is built from those roots, never from unrelated sources. Each gets a short meaning and an older form behind it. The set is read aloud and checked as a whole, so it sounds like one people or one house.
+
+when:
+- "You are naming characters, places or a fictional world and want them to feel connected."
+- "You are naming a product range or a set of plans and want them to sound like one family."
+- "Your current names clash in sound or came from different places."
+
+you_give:
+- "The world, brand or range in a few sentences, and its tone"
+- "How many names you need and what each names"
+- "A source language or region you like (optional)"
+- "Your brand file (optional)"
+- "Names you already have (optional)"
+you_get:
+- "The root language or sound style and its sound rules"
+- "A small word list with meanings"
+- "Each name with its meaning and older form"
+- "A note on which names to leave half-explained"
+
+how_to_use:
+- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+- "Describe the world or range and its tone."
+- "Say how many names you need and what each is for."
+- "Read the names aloud and mark any you dislike."
+- "Ask it to rebuild only the ones you marked, from the same roots."
+
+how_it_works:
+  - title: "Choose one root"
+    text: "Pick one source language, region or invented sound style that fits the tone and the people."
+  - title: "Write its sound habits"
+    text: "List the sounds this source favours and avoids: common starts and endings, vowel feel, clusters it never uses."
+  - title: "Build the word list"
+    text: "Write 10 to 20 root words, each with a plain meaning, from that source or an invented one that follows the rules."
+  - title: "Make the names"
+    text: "Build each name by joining roots from the list and applying the sound rules."
+  - title: "Add meaning and old form"
+    text: "Give each name a one-line meaning and an older or fuller form it came from, plus one line of history, such as who first used it."
+  - title: "Read aloud and drop clashes"
+    text: "Say each name aloud, then in pairs."
+  - title: "Check the set and leave gaps"
+    text: "Check the whole set sounds like one people or house."
+  - title: "Check it"
+    text: "Go through \"Check before you hand it back\" one line at a time and fix any check that fails, if you can."
+
+output_shape: |
+  ROOT
+  <source and why>
+
+  SOUND RULES
+  1. <rule>
+
+  WORD LIST
+  <root> = <meaning>
+
+  NAMES
+  <name> | names: <what> | roots: <a + b> | meaning: <line> | older form: <form> | history: <line>
+
+  DROPPED
+  <name and why>
+
+  LEFT HALF-EXPLAINED
+  <names>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Tone"
+    how: "Say if the names should sound old, plain, strict or warm. It picks the root from this."
+  - what: "A source you like"
+    how: "Name one. The skill uses it and keeps to its sounds."
+  - what: "Number of names"
+    how: "A smaller set is easier to keep consistent. Ask for 6 first."
+  - what: "Where the names will be read"
+    how: "Say if they are spoken, printed or used in search."
+
+judge:
+- "You can hear the same sound habits in every name."
+- "Each name has a meaning you can say in a few words."
+- "No name feels like it came from another place."
+- "You can say them all out loud without tripping."
+- "The word list is short enough to keep."
+
+test:
+- "Cover the meanings and read the names aloud to a friend. Ask if they sound like one place."
+- "Add one name from outside the set. Check how it stands out."
+- "Run it twice with the same facts. The sound rules should stay close."
+- "Search each name before you use it in public."
+
+improve:
+- "Add the words your world uses for common things to the word list."
+- "Add sounds you dislike to the sound rules."
+- "Save the word list so later names use the same roots."
+- "Pair it with \"Invented society planner\" so names fit the customs and places."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It can build and check names from rules."}
+    - {name: "A trademark or domain search", why: "Use it before any name goes public."}
+  inputs:
+    - "Your brand file"
+    - "A map or place list"
+    - "Names you already love or hate"
+
+terms:
+  - term: "Root"
+    meaning: "A small word piece with a meaning that other names are built from."
+  - term: "Older form"
+    meaning: "An earlier or fuller version of a name that explains how it came about."

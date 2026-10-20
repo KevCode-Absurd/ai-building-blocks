@@ -1,0 +1,124 @@
+new_slug: number-to-picture-translator
+name: "Number-to-picture translator"
+summary: "Paste the key figures and who will hear them. Get each number turned into a picture the room can feel."
+job: speak-and-persuade
+thinking: low
+thinking_why: "It turns each figure into a comparison with a few fixed moves."
+
+headline: "Number-to-picture translator"
+subhead: Give it the figures that matter and who will hear them. It keeps the few that carry the message, then turns each into a familiar comparison, a count of people or a human cost. You get the numbers written so a non-expert can repeat them.
+
+explain: |
+  Numbers are easy to say and hard to feel. "Churn is 4.2 percent" means a lot to you and nothing to a new listener. If the room cannot picture a figure, they cannot act on it.
+
+  This skill picks the few figures that carry your message and drops the rest. It matches each to something the audience already knows, such as a span of time or a familiar size. It turns percentages into a count of people you can picture, adds the human cost or reward behind the figure, and gives one vivid image to spark curiosity. The original number stays in view, so nothing is hidden.
+
+when:
+  - You must explain results to people who do not read spreadsheets.
+  - A report is accurate and nobody remembers it.
+  - You are pitching and want one number the room will repeat.
+
+you_give:
+  - The figures you want to share, with what each measures
+  - Who will hear them and what they already know
+  - Where you will use them, such as a slide, a speech or an email
+you_get:
+  - A short list of the figures worth keeping
+  - Each one as a comparison, a count of people or a human picture
+  - The original figure next to each version
+  - A note on what to ask a non-expert to test it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your figures with a line on what each one measures.
+  - Say who will hear them and where.
+  - Read each new version aloud. Replace any that feel stretched.
+  - Test the final set on one person outside your field.
+
+how_it_works:
+  - title: Picks the figures
+    text: Keeps the few numbers that carry the message and sets the rest aside.
+  - title: Finds a familiar comparison
+    text: Matches each figure to something the audience already knows, such as a span of time or a familiar size.
+  - title: Counts people
+    text: Turns percentages into a number of people you can picture.
+  - title: Adds the human side
+    text: Writes the cost or reward behind each number so it carries feeling.
+  - title: Adds one vivid image
+    text: Gives a single hypothetical or picture that sparks curiosity, marked as an illustration.
+  - title: Keeps the original
+    text: Shows the exact figure next to each new version.
+  - title: Plans the test
+    text: Writes what to ask a non-expert after they hear it.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  FIGURES KEPT
+  1. <figure> | Measures: <what> | Why it matters
+
+  FIGURES SET ASIDE
+  - <figure> | Why
+
+  PICTURES
+  1. Original: <exact figure>
+     Comparison: <familiar thing>
+     In people: <count>
+     Human side: <cost or reward>
+     Line to say: <sentence>
+
+  ONE VIVID IMAGE
+  <image, marked as an illustration>
+
+  TEST WITH A NON-EXPERT
+  Ask: <question> | Good answer: <what they should repeat>
+
+  MISSING
+  <facts needed to check a comparison>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Who the audience is
+    how: A comparison works only if they know the thing. Name the audience, so familiar means familiar to them.
+  - what: Where you will use it
+    how: A slide needs shorter lines than a speech. Say which.
+  - what: How exact it must be
+    how: For a legal or financial setting, say so. Comparisons are then kept closer to the data.
+  - what: The total behind the percent
+    how: Give the full count. Without it, a percentage cannot become people.
+
+judge:
+  - Every number has a picture an outsider could repeat.
+  - No figure is stretched past what the data supports.
+  - The feeling matches the facts and is not exaggerated.
+  - The original figure is still shown nearby.
+  - The comparison is something your audience really knows.
+
+test:
+  - Read the new version to a person outside your field and ask them to say it back.
+  - Check each comparison by doing the sum yourself.
+  - Run it twice. The kept figures should stay close.
+  - Show both the old and new slide to a colleague and ask which they remember tomorrow.
+
+improve:
+  - Add comparisons your audience loves, such as local places, sports or common objects.
+  - Add the units you always use, so it never swaps them.
+  - Keep a list of figures you already turned into pictures, and reuse them.
+  - Pair it with "Talk tension planner" to place the strongest picture early.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Finding comparisons and checking the sums is work any strong chat AI does well with this skill."}
+    - {name: "A calculator or spreadsheet", why: "To check each comparison against the real figure."}
+  inputs:
+    - "The data table or report the figures came from"
+    - "Facts about your audience, such as their town or work"
+    - "The total count behind each percentage"
+
+terms:
+  - term: Comparison
+    meaning: A familiar thing set beside a figure so the figure can be felt.
+  - term: Curse of knowledge
+    meaning: Experts forget what it is like not to know the topic, so their numbers mean little to others.

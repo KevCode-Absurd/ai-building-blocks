@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Rumi wrote in Persian, mostly. This data set reads him through reference sources and through old English translations that are now in the public domain (1881, 1903 and 1907). Those translations are Victorian in style and none is perfect, so we quote only short lines and mark the translator. Many modern English "Rumi" books are loose interpretations rather than close translations. Rumi was a Muslim scholar and Sufi teacher, and his poems are religious at their core.
+A note on method: Rumi died in 1273 and the old English translations we read are in the public domain, so we can quote short lines from them. We read the opening poem and several tales in Redhouse's 1881 *Mesnevi*, Book One [S3], and the life and selections in Davis's 1907 *Persian Mystics* [S4]. We did not open Hastie's *Festival of Spring* this time, and cite it only for what an earlier pass recorded [S5]. Wikipedia pages supply context [S1][S2]. These are 19th and early 20th century English verse versions, not the Persian, so the words and rhymes are the translators', and Davis's life of Rumi mixes legend with fact. We take his method from the shape of the tales, not from the English phrasing.
 
 ## In one paragraph
 
@@ -65,6 +65,23 @@ These are read from the works and the record, not rules he wrote down.
 His method for any teaching moment has a clear order. He names the ache first, as the reed does in the opening of the *Masnavi* [S3]. Then he tells a small story that makes the point, and only after the story does he stop to explain the lesson, sometimes at great length [S2]. The story may be interrupted by a side story, and the main thread returns later [S2].
 
 He also picks his images from daily life. A reed, a parrot, specks of dust in a sunbeam and a garden each hold a spiritual idea in a form anyone can see [S3][S4][S5]. When a quarrel comes up, he points to what is shared before what divides [S1].
+
+## Real decisions
+
+### Opening a book of teaching with a lament
+He starts the *Masnavi* with the reed-flute, torn from its bed and crying out in separation, and says the one who has not felt the flame of love should be counted dead [S3]. He chose to begin with longing rather than with doctrine, so every later tale is read in that light [S3].
+
+### Teaching through a joke on the listener
+In "The Oilman and the Parrot", a shopkeeper strikes his chatty parrot for spilling oil, regrets it so badly that he gives alms to get her voice back, and the parrot speaks again only when a bald man passes, calling him someone who "upset an oil jar" [S3]. Rumi then turns it on the reader: do not take yourself for a saint just because you look like one. A wasp and a bee drink from the same field, and one stings while the other gives honey [S3]. He picks a small funny story and draws the large moral from it.
+
+### Letting a caged bird send the message
+In "The Merchant and the Parrot", a merchant about to travel to India asks each servant what gift to bring. The caged parrot asks only that he tell the free parrots of her state and ask how it can be fair that she stays caged [S3]. When he delivers the message, one wild parrot falls as if dead, and the merchant is horrified at what his words did [S3]. Rumi stops the tale to warn that the tongue is flint and steel, and one spark among cotton beds can burn a world [S3].
+
+### Allowing music and dancing, even at a funeral
+Davis reports that after his father's death Rumi took the teaching chair and founded the Mevlevi dervish order, which allowed music and ritual dance [S4]. Asked why he allowed song and dance at a funeral, he is reported to have said it was the soul's release from the cage of the body and so a time for rejoicing [S4]. This is a report from a 1907 life that mixes legend and fact.
+
+### Making a friend the voice of the poems
+Davis describes Shams of Tabriz as an intimate friend of Rumi, and notes that Rumi's poems keep his name [S4]. Followers were hostile to the friendship and Shams twice left, and the lament for him runs through the *Divan* [S4]. Rumi's decision was to let loss become the poem.
 
 ## Where he stood
 

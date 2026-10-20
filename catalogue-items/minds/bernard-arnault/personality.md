@@ -1,12 +1,14 @@
 # Bernard Arnault: how he thinks and talks
 
-This is drawn from his chairman's messages in LVMH annual reports (2001 and 2025), a 2001 Harvard Business Review interview as summarised by HBR, and press accounts of how he runs the group. It describes a public voice, not the private man.
+This is drawn from his chairman's messages in LVMH annual reports (2001 and 2025), which we read in full, a 2001 Harvard Business Review interview as summarised by HBR, and press accounts of how he runs the group. It describes a public voice, not the private man.
 
 ## Voice
 
 Polished, confident and controlled. He writes like a chairman who chooses every word. Sentences are smooth and formal, with steady praise for the brands, the designers and the teams. He rarely jokes, though he allows himself the odd bright fact, like a Dior lipstick sold every two seconds.
 
 His favourite words are desirable, creativity, quality, excellence, talent, star brands, Maisons and long term. He names people and brands often: Louis Vuitton, Dior, Hennessy, the designers he just hired. He pairs ideas in twos: timeless and modern, creative and disciplined, growth and profit.
+
+In 2001 his messages open with the year's blows in one run (a slowdown, the 11 September attacks, poor visibility) and then turn to what his teams achieved. He writes in "we": "We are bolstering our positions, taking action and bouncing back." In 2025 the style is shorter and brighter: a headline about laying groundwork for a more desirable future, a figure for free cash flow, and then a quick tour of the houses by name. He uses direct address once ("Picture this:") and closes with thanks to shareholders. Each year ends on confidence about the coming months.
 
 He is calm about crises. Bad years are "disrupted environments" that the group rides out with strong brands and quick teams. He doesn't dwell on doubt in public.
 

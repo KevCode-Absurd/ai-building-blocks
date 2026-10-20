@@ -57,6 +57,33 @@ How he applied it: he suggested testing public figures by asking whether they pa
 
 For things that don't age, like books, ideas and technologies, the longer they have lasted, the longer they are likely to last [S6]. So time is the best judge of quality [S6]. Separately, a small, stubborn minority can set the rules for everyone when the majority doesn't mind either way. His example: most US soft drinks are kosher because kosher drinkers won't switch, while others don't care [S6][S9].
 
+## The 2008 essay in detail
+
+The essay is built as a chain [S3]. First, split decisions into yes/no ones and ones where size matters. Second, split randomness into Mediocristan (no single case moves the total, like body weight) and Extremistan (one case can dominate, like wealth). Third, cross them into four quadrants. Fourth, name two traps: the inverse problem (we see events, not the odds behind them, so many models fit the same past and part ways later) and pre-asymptotics (textbook results assume limits that real data never reaches) [S3].
+
+He gave numbers to make it bite. A derivatives portfolio had nearly all of twenty years of daily movement in one day. Drug sales forecasts for hits were off by up to twenty-two times. Lowering a tail exponent in a book-sales model from 2.3 to 2 about triples the count of million-copy sellers, and the error in estimating that exponent is larger than the change [S3]. His list of rules also said to check whether your errors help you (convex) or hurt you (concave), and to be wary of how risk is phrased, since "once in thirty years" and "3% a year" are heard very differently [S3].
+
+## Real decisions
+
+### Warning the Federal Reserve chair in public (2008)
+In the Edge essay he told readers that banks and regulators were using models of uncertainty to produce certainty, pointed at LTCM in 1998 and the 2007 to 2008 crisis, and said low volatility was being misread as safety. He named the chair of the Federal Reserve as someone to pass the message to [S3]. His stated reason: banks lost more in a crash than they had earned in their whole history [S3].
+
+### Acting before the numbers were in (January 2020)
+With two co-authors he argued that officials should restrict movement in the first stage of the new coronavirus outbreak, before the facts were known. His reasons: early estimates are biased low, uncertainty mostly makes things worse, and repeated exposure to a ruinous risk makes collapse likely over time, so ordinary cost-benefit sums do not apply [S5]. He also said fatalism was wrong, since good measures work [S5].
+
+### Setting a narrow zone for precaution (2014)
+In the precautionary principle paper, he and four co-authors limited the principle to risks that are both fat-tailed and able to spread through the whole system. They argued that applying it everywhere would freeze action [S4].
+
+### Answering reviewers with the skin test
+When *The Guardian* and *The Economist* gave *Skin in the Game* hard reviews, he replied that reviewers have no skin in the game [S9]. It shows how he turns criticism back on the critic's exposure.
+
+### Publishing his statistics book free
+*Statistical Consequences of Fat Tails* (2020) is offered in electronic form at no cost on his home page and arXiv [S1][S2].
+
+## How he talked in the 2018 interview
+
+Taleb opened with thanks to the host, then looped through long sentences with restarts, filler like "okay" and "you see?" and rhetorical questions that set up his point [S6]. He rarely gave ground. Faced with "couldn't people just offload the downside?" he widened the frame to family, tribe and the planet instead of answering at the level asked, though he granted narrow points, such as that tort law can reduce some asymmetry [S6]. His examples were vivid: Roman emperors who rarely died in bed, a banker who loaded a bank with hidden risk and left the losses to the public, fishermen whose cooperation breaks as the group grows, and desert hosts who treat strangers well because they may need the same one day [S6]. He also said ethics comes in tiers: family first, then community, then strangers on fairer, more distant terms [S6].
+
 ## How he decides
 
 - Ask what could ruin you before you ask what could pay off [S4][S6].

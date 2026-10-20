@@ -1,0 +1,126 @@
+new_slug: top-priority-shift-memo-writer
+name: "Top-priority shift memo writer"
+summary: "Describe a change that breaks your plan. Get a one-page memo that resets the top priority and each person's next step."
+job: lead-people
+thinking: medium
+thinking_why: "It organises facts and writes a clear memo, with some judgment about what to change, but the shape is fixed."
+
+headline: "Top-priority shift memo writer"
+subhead: Describe a change in your market or work that breaks the plan. It writes a one-page memo that says what changed, how your view moved, what rivals do well, the new top priority, what each area does differently and when the plan will be revised.
+
+explain: |
+  When something big changes, leaders often send a vague note: "we need to be more agile." The team nods and carries on with the old plan, because no one said what to stop or what to do next.
+
+  This skill writes the memo that does. It states what changed and how your own view moved, compares it to an earlier shift you lived through and names the rivals who do parts of it well. It sets the new top priority in one line, lists the changes area by area, asks each leader to try the new thing and study rivals' versions, and sets a date to revise the plan.
+
+when:
+  - A change in your market makes the current plan wrong.
+  - Your team keeps working on last quarter's priority.
+  - You need every leader to change direction in the same week.
+
+you_give:
+  - "What changed, in your own words"
+  - "How your view of it has moved"
+  - "Your areas or teams and what each does now"
+  - "Rivals or others who are handling it (optional)"
+
+you_get:
+  - "A one-page memo with the new priority in the first lines"
+  - "A change for each area, in concrete terms"
+  - "A request to each leader to use the new thing and study rivals"
+  - "A date when the plan will be revised"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe what changed and how you used to see it."
+  - "List your teams and what each is working on now."
+  - "Name rivals you admire on this point."
+  - "Read the draft aloud, change anything that does not sound like you and send it."
+
+how_it_works:
+  - title: States what changed
+    text: Says what changed and how your own view moved.
+  - title: Compares with an earlier shift
+    text: Links it to a past shift you lived through, to give scale.
+  - title: Names rivals' strengths
+    text: Says honestly what rivals do well.
+  - title: Sets the priority
+    text: Writes the new top priority in one line, in the first lines of the memo.
+  - title: Lists changes by area
+    text: Gives each area a concrete change.
+  - title: Asks leaders to try it
+    text: Asks each leader to use the new thing and look at rivals' versions.
+  - title: Promises a revision
+    text: States that the plan will be revised and on what date.
+
+output_shape: |
+  <MEMO TITLE>
+  To: <who> | From: <you> | Date: <date>
+
+  THE NEW TOP PRIORITY
+  <one line>
+
+  WHAT CHANGED
+  <three to five sentences, including how your view moved>
+
+  AN EARLIER SHIFT
+  <one short comparison>
+
+  WHO IS DOING IT WELL
+  <rival or other> | <what they do well>
+
+  WHAT CHANGES IN EACH AREA
+  <area> | stop | start | owner | date
+
+  WHAT I ASK OF EACH LEADER
+  <the ask, with dates>
+
+  WHEN THE PLAN IS REVISED
+  <date>
+
+  MISSING
+  <what you did not tell me>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How your view moved
+    how: Say what you used to believe and what changed your mind. It is the most believable part of the memo.
+  - what: Your areas
+    how: List every team that will be affected. Unnamed areas get no change.
+  - what: Rivals
+    how: Name one or two real ones and what they do well. Say it plainly, with no jabs.
+  - what: Length
+    how: One page is the target. Ask for a shorter version for a message app.
+
+judge:
+  - The new priority is in the first lines.
+  - Rivals' strengths are named honestly.
+  - Each area has a concrete change.
+  - The memo states when the plan will be reviewed.
+  - It says what stops, not only what starts.
+
+test:
+  - "Give the memo to a team member and ask them to say what they will do on Monday."
+  - "Check every area has a different change, not the same line repeated."
+  - "Run it twice. The priority line should stay the same."
+
+improve:
+  - "Add your company's way of writing, such as plain or formal, by pasting a past memo."
+  - "Add a standing list of your areas so none are left out."
+  - "Save each memo with its revision date and compare later."
+  - "Pair it with a plan builder to turn each area's change into dated tasks."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It organises facts and writes a short memo in plain text."}
+    - {name: "A shared document", why: "Leaders can read, comment and confirm their part in one place."}
+  inputs:
+    - "Your current plan or roadmap"
+    - "A past memo in your voice"
+    - "Notes on what rivals have done"
+
+terms:
+  - term: Top priority
+    meaning: The one thing every team puts first when choices clash.

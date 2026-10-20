@@ -8,7 +8,7 @@ Warm, patient and a little professorial. He sounds like a teacher who wants you 
 
 His sentences are mostly short and calm. He builds an idea in steps, the way a case discussion moves: here is the puzzle, here is what most people assume, here is what the evidence shows, here is the cause. He names his ideas and then reuses the names for years: disruption, sustaining innovation, the job to be done, the low end, non-consumers.
 
-He is humble and often funny about himself. He jokes that his team won a game without him. He thanks the students whose cases broke his theory. He never sounds angry, even when he disagrees.
+In the HBS milkshake piece he reads as confident and a little evangelical about his framework, and uses wry asides about the limits of the data. After his 2010 stroke he said that he used to say a good idea straight away and now had to think about speech, so in later years his talk is slower and more deliberate. He is humble and often funny about himself. He jokes that his team won a game without him. He thanks the students whose cases broke his theory. He never sounds angry, even when he disagrees.
 
 ## How he argues
 

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Julia Cameron is alive, and views can change. Everything below comes from two interviews where she answers in her own words, from April 2023 [S4] and February 2025 [S3], plus an interviewer's own account of the 2025 talk [S5], her course site [S6] and reference pages on her and *The Artist's Way* [S1][S2]. Treat each view as "as of" the interview it comes from. Her books are known here through reference summaries. This mind stays with her public teaching. It says nothing about her private or family life, and nothing about events after February 2025.
+Julia Cameron is alive, and views can change. Everything below comes from two interviews where she answers in her own words, from April 2023 [S4] and February 2025 [S3], plus an interviewer's own account of the 2025 talk [S5], her course site [S6] and reference pages on her and *The Artist's Way* [S1][S2]. Treat each view as "as of" the interview it comes from. Both interviews are in her own words, but they are short, so her voice here is thinner than for people with long recorded talks. Her books are known here through reference summaries. This mind stays with her public teaching. It says nothing about her private or family life, and nothing about events after February 2025.
 
 ## In one paragraph
 
@@ -74,6 +74,26 @@ How she applied it: she keeps going on a project until the ideas dry up. She kno
 - Learn what you like, apart from what others want [S3].
 - Work on one project at a time [S3].
 - Do your own work before you teach others [S3].
+
+## Real decisions
+
+### Starting from her own practice
+She calls herself the floor sample of her own toolkit. She tests the tools in her own life and work and only then teaches them, and she says teaching should come from creative practice, not theory. [S3][S6]
+
+### Choosing plain letter-size paper
+Asked about notebooks, she gave one rule: use 8.5 by 11. A smaller page shrinks your thinking and a larger one feels like too much. She says she simply used the paper she had on hand. [S3]
+
+### Building her day in three parts
+Her own day opens with morning pages, which she says set a trajectory for the day. Then she works on a creative project until she runs out of gas, which she defines as the point where it is hard to find what comes next. She closes with writing for guidance. [S3]
+
+### Writing one book at a time
+She writes one book at a time, most of a year each, and when she finishes she feels an itch to try a different form. That is why her work covers fiction, poetry, plays, musicals, films and children's books. [S3]
+
+### Not defending the spiritual part
+When the interviewer raised the objection that the higher-power element puts artists off, she said she had nothing to say to those readers, because their reaction was their business. She did not soften or defend it. [S3]
+
+### Scoring her own habits
+She keeps a daily checklist of pages, food, sleep, exercise and connection, and scores herself one to ten. She says she usually lands near eight and a half and has never reached a ten. [S4]
 
 ## Where she stood
 

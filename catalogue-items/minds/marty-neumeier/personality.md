@@ -10,6 +10,8 @@ He loves a tidy model. A formula (trust is reliability plus delight), a children
 
 His tone is confident but not loud. He makes big claims in plain words, then backs them with a famous example: the Prius, the Aeron chair, eBay, Microsoft's early vision. There is a dry wit in his titles and a habit of turning a familiar idea upside down.
 
+In the Level C and buy-in pieces he adds a warmer, mentor's tone, with vivid analogies (an upside-down map, a plane ticket halfway to Hawaii, launching an innovation like a birth), short fragments for emphasis, and direct questions to the reader about their own career. He quotes other thinkers to back a point and is not shy about promoting his own programs.
+
 ## How he argues
 
 - He opens by redefining the word everyone thinks they know. A brand isn't a logo. It's a feeling.

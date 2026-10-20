@@ -1,0 +1,65 @@
+new_slug: mine-your-products-own-words-and-find-the-shared-want
+name: Mine your product's own words and find the shared want
+summary: Paste a product page or manual. Get its own phrases sorted for headlines, plus the one want buyers share.
+job: write-ad-copy
+thinking: high
+thinking_why: It has to keep your product's real words and not slide into made-up claims. Give it your strongest model.
+headline: Mine your product's own words and find the want buyers share
+subhead: Paste a product page, manual, book or transcript. It pulls out the strongest phrases and sorts them into piles for headlines, long copy, proof and demos. Then it names the one want your buyers share, splits it into smaller wants and writes a hook for each.
+explain: |
+  Fresh hooks are hard when you start from a blank page. Writers reach for the same stock lines, or invent claims the product cannot back. Meanwhile the best phrases are often already in the manual, the founder's notes or the product page, and nobody has pulled them out. Buyers also arrive with a want that was there before your ad, and copy that tries to create it falls flat.
+
+  The steps start with what you already have. First it reads your material and collects every strong phrase in your product's own words, then sorts them for different jobs. Then it names the want that already exists in your market, breaks it into smaller wants, and writes a hook for each with its proof and feeling. The order comes from Eugene Schwartz's The Lost Secrets of Breakthrough Advertising.
+when:
+  - You need fresh hooks and angles and want them built from what your product already says.
+  - You have a thick manual, book or transcript and need to find the lines worth using in ads and pages.
+  - Your ads all lean on one benefit and you suspect your buyers share a want you have not named.
+you_give:
+  - Your product material, such as a product page, manual, spec sheet, book or transcript
+  - Customer reviews or buyer words (optional)
+  - A persona or a short description of your buyers (optional)
+you_get:
+  - A list of strong phrases from your own material, each with where it came from
+  - Your phrases sorted into headlines, long copy, side notes, proof and demonstrations, with the most dramatic points marked
+  - The one want your buyers share, its smaller wants, and a hook for each with the proof and feeling behind it
+  - A running order for the hooks and a plan to test hooks that differ in appeal, not only in wording
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste or attach your product material. It builds the phrase sheet first.
+  - Add reviews or buyer words if you have them. It uses them to name the shared want.
+how_it_works:
+  - title: Mine the phrases
+    text: Reads your material, marks every strong phrase in your own words, and sorts them into piles for headlines, copy, proof and demos.
+  - title: Name the shared want
+    text: Takes the phrase sheet from the step before, names the want buyers already have, splits it into smaller wants and writes a hook for each.
+output_shape: |-
+  STEP 1: PHRASE SHEET
+    Strong phrases with their source | piles: headlines, long copy, side notes, proof, demonstrations | most dramatic points | ten-word headline for each long idea
+
+  STEP 2: SHARED WANT AND HOOKS
+    The shared want in the buyers' words | smaller wants | hook for each, with how it works, proof and feeling | running order | test plan
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How much of the product's own material you give
+    how: More source gives more real phrases. A one-line description gives it almost nothing to mine.
+  - what: Buyer words
+    how: Reviews, emails and call notes show how buyers say the want. Without them, the shared want rests on your material alone and says so.
+  - what: How you describe the group
+    how: Say who your buyers are and what situation they are in. The smaller wants are built from that.
+judge:
+  - The phrases are in the product's own words, and anything the AI added is marked apart.
+  - Every claim in a hook traces back to your material.
+  - The shared want is one a buyer would say as their own.
+  - Each hook appeals to a different smaller want, not the same one reworded.
+  - It says what it could not find in what you gave it.
+test:
+  - Paste a page where you know the best line. That line should appear on the phrase sheet.
+  - Check three hooks against your material. Each claim should be there.
+  - Run step 2 twice. The wording can change but the smaller wants should mostly match.
+improve:
+  - Save the phrase sheet and the shared want into your brand file, so every writer and tool starts with the same words.
+  - Add the phrases you must not use, such as claims you cannot prove, so they are marked early.
+  - Test the hooks as the plan sets out, then save the winner and what it showed.

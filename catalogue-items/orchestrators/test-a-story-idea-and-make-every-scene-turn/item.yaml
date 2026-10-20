@@ -1,0 +1,25 @@
+slug: test-a-story-idea-and-make-every-scene-turn
+name: "Test a story idea and make every scene turn"
+summary: "Paste your story idea. Get a premise verdict, scenes marked for what changes, and a voice-over test."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: script, required: true}
+outputs:
+  - {type: feedback_notes}
+  - {type: script}
+uses: [story-premise-tester, scene-turn-checker, voice-over-stripping-test]
+steps:
+  - {uses: story-premise-tester, note: "The controlling idea, the idea that argues back, and a verdict on its strength"}
+  - {uses: scene-turn-checker, note: "Each scene marked for what changes and which choice changes it, with weak scenes flagged. Reads the plan from the step before"}
+  - {uses: voice-over-stripping-test, note: "A verdict on each line: does the story work without it?"}
+origin: rebuilt
+version: 1.0.0
+minds: [robert-mckee]
+credits:
+  - {title: "Story webinar series", by: "Robert McKee", used: "The order of the steps: story premise tester, scene turn checker, voice-over stripping test"}
+generated_from: intake/robert-mckee-story/skeleton.yaml

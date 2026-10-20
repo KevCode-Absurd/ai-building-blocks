@@ -1,0 +1,113 @@
+new_slug: marketing-scorecard-builder
+name: "Marketing scorecard builder"
+summary: "Paste the numbers you track now. Get a balanced scorecard with short-term and long-term measures and what each tells you."
+job: read-ad-results
+thinking: medium
+thinking_why: "It sorts and pairs measures with fixed rules, so mistakes are easy to spot."
+
+headline: "Marketing scorecard builder"
+subhead: Paste the figures you track today. It sorts them into short term and long term, adds the long-term measures most scorecards miss, pairs each with the question it answers and its time lag, and lays them out so you do not judge slow things on a fast clock.
+
+explain: |
+  Most dashboards show clicks, orders and cost per sale. Those move within days, so they get all the attention. The things that decide next year, such as how price-sensitive buyers are or how well known you are, move slowly and usually are not tracked at all.
+
+  This skill lists what you track and sorts it into short term and long term. It adds three long-term measures: price sensitivity over three years, your share of voice minus your market share, and brand responses such as people who name you unprompted. Each measure gets the question it answers and its time lag. It flags measures that mislead alone, lays the scorecard out with long-term results on top, and sets a review rhythm.
+
+when:
+  - Your reports show only clicks and sales, and nothing about the brand.
+  - You are asked to defend brand spend and have no measure for it.
+  - You keep judging slow measures after one bad week.
+
+you_give:
+  - The numbers you track now, with the period (a performance sheet or a list)
+  - Your brand file (optional)
+you_get:
+  - A scorecard with long-term results at the top and short-term response at the base
+  - The question each measure answers and its time lag
+  - Warnings on measures that mislead alone
+  - A review rhythm, and a list of data you do not have
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the metrics you track and a recent set of values. A list of names also works.
+  - Read the warnings first, then the long-term section.
+  - Put the review rhythm in your calendar and use it.
+
+how_it_works:
+  - title: Lists what you track
+    text: Sorts every metric you give into short term or long term.
+  - title: Adds long-term measures
+    text: Adds price sensitivity over three years, share of voice minus market share, and brand responses.
+  - title: Pairs question and lag
+    text: Writes the question each measure answers and how long it takes to move.
+  - title: Flags misleading measures
+    text: Marks any measure that misleads alone, such as click-based sales.
+  - title: Lays out the scorecard
+    text: Puts long-term business results at the top and short-term response at the base.
+  - title: Sets the rhythm
+    text: Sets when each measure is reviewed so slow ones are not judged on short windows.
+
+output_shape: |
+  SCORECARD (TOP TO BASE)
+  Long-term results: <measure> | answers: <question> | lag: <time> | source: <where>
+  Brand responses: <measure> | answers: <question> | lag: <time> | source: <where>
+  Short-term response: <measure> | answers: <question> | lag: <time> | source: <where>
+
+  WHAT MISLEADS ALONE
+  <measure> | <why> | <what to read it with>
+
+  REVIEW RHYTHM
+  <measure> | reviewed <how often> | judged over <window>
+
+  DATA WE DO NOT HAVE
+  <measure> | <how to start tracking>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: The metrics you list
+    how: Give names and recent values. Without values the scorecard is a template.
+  - what: Your market
+    how: Say how long customers take to buy. It sets the lags.
+  - what: Rival data
+    how: If you know rivals' spend, share of voice minus market share can be filled.
+  - what: Who reads it
+    how: Say if it is for you or for a board. The wording and order adjust.
+
+judge:
+  - Both short-term and long-term measures are present.
+  - Each measure has a time lag stated.
+  - No measure is read outside its time window.
+  - Missing data is listed, not guessed.
+  - Each misleading measure says what to read it with.
+
+test:
+  - Check the long-term list against what you could really collect this quarter.
+  - Compare your old report with the new scorecard and see what the old one hid.
+  - Fill in a full cycle of review dates and see if any slow measure is judged too early.
+  - Run it twice. The sort of your metrics should be the same.
+
+improve:
+  - Add your own metrics to the sort, such as repeat orders, so the lags suit your field.
+  - Save the scorecard in your brand file and reuse it each period.
+  - Set the review rhythm to match your real reporting dates.
+  - Pair it with "Brand and sales budget splitter" to act on what the card shows.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Holds the scorecard and the values by period."}
+    - {name: "Any good chat AI", why: "Sorts and pairs the measures from your pasted list."}
+  inputs:
+    - "Three years of price and sales data for price sensitivity"
+    - "A brand survey or search-term data for brand responses"
+    - "Your market share and rivals' spend"
+
+terms:
+  - term: Time lag
+    meaning: How long a measure takes to move after you change what you do.
+  - term: Share of voice minus market share
+    meaning: Your share of ad spend in your market, less your share of sales. Positive suggests growth.

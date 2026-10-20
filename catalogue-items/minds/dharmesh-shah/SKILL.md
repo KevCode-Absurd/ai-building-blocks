@@ -173,7 +173,7 @@ Beyond the record: when a question goes past what he has written, say so in one 
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Dharmesh Shah is alive, and views can change. Everything below comes from his own blog, OnStartups, an edited interview transcript from 2020, a podcast transcript he posted, reports on his talks, and reference pages. Treat each view as "as of" the year of its source, from 2013 to 2023. We could not find his birth year in a reliable source, so it is left blank. Nothing here tells you what he thinks about events after 2023.
+Dharmesh Shah is alive, and views can change. The three sources read in full on 2026-10-20 are his OnStartups posts on SaaS success (2017) and FlashTags (2019) and the long video transcript of his frameworks talk; the rest comes from reference and secondary pages, a 2020 interview record and reports on his talks. His first-hand words on culture and on freemium were not read in full. Treat each view as "as of" the year of its source, from 2013 to 2023. We could not find his birth year in a reliable source, so it is left blank. Nothing here tells you what he thinks about events after 2023.
 
 ### In one paragraph
 
@@ -229,11 +229,21 @@ In a growing company, a passing comment from a founder can be read as an order, 
 
 How he applied it: he wrote the idea on HubSpot's internal wiki in 2017 and published it in 2019 [S6].
 
+**Put a price on your time.**
+
+In the frameworks talk he says to give your hour a dollar value, list what fills your week, and hand off or drop any task that is worth less than that rate. He gives his own lawn mowing as a case where paying about $75 an hour for a chore he dislikes is a good trade [S7].
+
+**Start first, then find the better idea.**
+
+He warns that a good-looking idea can eat years, so he prefers to start, talk to customers and let a better version appear. Mediocrity worries him more than failure [S7].
+
 #### Focus on a few things you're good at
 
 He limits himself to about three priorities at a time and changes them every few years. Past ones included brand, culture and boldness [S7]. He chose to have no direct reports, because he would rather build on his strengths than become a better manager [S7]. A 2015 profile describes him as the quiet tinkerer next to the outgoing Halligan [S2].
 
 How he applied it: he puts a dollar value on his own hour and drops or hands off any task worth less than that [S7].
+
+Two details from the talk: a diagnostic tool works best when it shows the visitor a relative score, such as a percentile, because people react to "better than most"; and he built Website Grader for himself first, then published it [S7]. For SaaS, he sets out three places to spend on customer success: onboarding, education (HubSpot Academy) and community (inbound.org, which he said had over 200,000 members in 2017) [S5].
 
 ### How he decides
 
@@ -246,6 +256,26 @@ How he applied it: he puts a dollar value on his own hour and drops or hands off
 - Tag how strongly you hold a view before you share it [S6].
 - Keep culture as a living document and update it [S3][S10].
 - Value your time, and hand off what's worth less than it [S7].
+
+### Real decisions (enriched minds)
+
+#### Staying in Cambridge to start HubSpot (2006)
+He and Brian Halligan founded HubSpot in Cambridge, Massachusetts and chose to stay there rather than move to Silicon Valley [S2][S9]. The founding idea was that cold calls and email blasts were losing power, so firms should get found instead [S2].
+
+#### Giving away a grader for free
+He built Website Grader for his own use, then published it. It drew a lot of traffic and showed him that a diagnostic can make a visitor see they need the product. He adds that you should show a relative score and always collect an email address [S7].
+
+#### Spending millions on customer success (2017)
+He wrote that a subscription firm survives only if customers get results. HubSpot therefore put money into onboarding, HubSpot Academy and the inbound.org community [S5]. His reason was that a customer who does not succeed simply cancels [S5].
+
+#### Publishing the Culture Code (2013)
+He chose to put HubSpot's culture on public slides and treat it as a product to update. By his own account he spent about 300 hours studying decks to improve it [S1][S4][S7].
+
+#### Making a tag system for his own opinions (2019)
+After colleagues took casual shares as orders and a strong email got buried, he wrote FlashTags: #fyi, #suggestion, #recommendation and #plea, tied to how hard he would fight for the point [S6].
+
+#### Choosing three priorities and no direct reports
+He says he picks about three things to focus on, revisits them every few years, and has had no direct reports in 15 years, because he amplifies strengths and does not try to fix weaknesses [S7].
 
 ### Where he stood
 

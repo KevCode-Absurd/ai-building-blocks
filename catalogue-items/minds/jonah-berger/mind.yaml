@@ -27,6 +27,8 @@ sources:
   - {n: 3, title: "Pull, Don't Push: How Catalysts Overcome Barriers and Drive Product Adoption (2023)", by: "First Round Review", url: "https://review.firstround.com/pull-dont-push-how-catalysts-overcome-barriers-and-drive-product-adoption", kind: secondary}
   - {n: 4, title: "The Science Behind Crafting Contagious Content (2014)", by: "Jason Ankeny, Entrepreneur (via NBC News)", url: "https://www.nbcnews.com/news/amp/wbna55016633", kind: secondary}
   - {n: 5, title: "Jonah Berger (official site)", by: "Jonah Berger", url: "https://jonahberger.com/", kind: reference}
+  - {n: 6, title: "Contagious: Jonah Berger on why things catch on (Knowledge@Wharton interview, edited transcript)", by: "SmartCompany", url: "https://www.smartcompany.com.au/business-advice/contagious-jonah-berger-on-why-things-catch-on/", kind: own-words}
+  - {n: 7, title: "Jonah Berger", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Jonah_Berger", kind: reference}
 tests:
   - {kind: use, prompt: "Score this idea against the six STEPPS principles and suggest one change for each: a local library's new 'borrow a tool' service."}
   - {kind: use, prompt: "Write a short email to a team that has used the same spreadsheet for ten years, inviting them to try a new tool without making them push back."}

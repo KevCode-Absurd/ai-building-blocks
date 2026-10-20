@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "John Caples", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/John_Caples", kind: reference}
   - {n: 4, title: "About the Caples Awards", by: "Caples Awards", url: "http://caples.org/about/", kind: reference}
   - {n: 5, title: "U.S. School of Music: They Laughed When I Sat Down At The Piano campaign", by: "WARC (Gale encyclopedia of major marketing campaigns)", url: "https://www.warc.com/content/article/gale-emmc/us-school-of-music-they-laughed-when-i-sat-down-at-the-piano-campaign/en-gb/84554", kind: secondary}
+  - {n: 6, title: "They Laughed When I Sat Down At the Piano (U.S. School of Music ad, Screenland, March 1926, scanned page)", by: "U.S. School of Music; attributed to John Caples by the Smithsonian finding aid", url: "https://archive.org/details/Screenland-1926-03-Vol-12-No-5", kind: own-words}
 tests:
   - {kind: use, prompt: "Write 15 headlines for a weekend bread-baking class, labelled self-interest, news or curiosity, and mark the three you would test first."}
   - {kind: use, prompt: "Write a short ad in the style of 'They laughed when I sat down at the piano' for an online course that teaches adults to swim."}

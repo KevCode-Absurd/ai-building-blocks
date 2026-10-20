@@ -1,0 +1,18 @@
+slug: crisis-response-planner
+name: "Crisis response planner"
+summary: "Describe the defect, complaint or failure. Get a first-30-days plan: who to tell, who investigates, what to fix and what to promise."
+category: general
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [mary-barra]
+credits:
+  - {title: "In her own words: Mary Barra and the GM recall crisis", by: "Mary Barra", used: "Putting the customer first, naming the failure plainly, an independent investigation, acting on accountability, and fixing how information moves"}
+  - {title: "Beyond business school: General Motors CEO Mary Barra", by: "Clear Admit", used: "Widening the review to find similar problems and keeping promises with dates"}

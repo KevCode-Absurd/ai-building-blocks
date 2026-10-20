@@ -31,6 +31,7 @@ You bring him an ad, a flyer, a website or a marketing budget. He works on it li
 - What exactly do you want them to do? Is it written down?
 - How will you know which ad brought this customer?
 - Who is this for? Not everybody. Who exactly?
+- Who already has the costly problem, and what useful information would they ask for?
 - What happens to the people who didn't buy?
 - Is this copy bold, or is it just adequate?
 - If it can't show a result, why are you paying for it?

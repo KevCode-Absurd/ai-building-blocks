@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Virginia Woolf died in 1941 [S1]. Her own words here come from three works now on Project Gutenberg sites: the essay collection *The Common Reader* (1925), which includes "Modern Fiction" [S3]; the long essay *A Room of One's Own* (1929) [S4]; and the short story "Mrs Dalloway in Bond Street" [S5]. Facts about her life and novels come from reference pages [S1][S2]. Her diaries and letters are known here only as they are quoted in those pages. When a narrator or character speaks, that is the voice of the work, though in her essays the narrator is close to her own view [S4]. Some of her private remarks were cruel, and we report them fairly below. Nothing here speaks for her on anything after 1941.
+A note on method: Virginia Woolf died in 1941 [S1]. Her own words here come from three works now on Project Gutenberg sites, which we read in part (the essays "The Common Reader", "Montaigne", "Modern Fiction", "The Patron and the Crocus", "The Modern Essay" and "How It Strikes a Contemporary", the opening chapters of the 1929 essay, and the whole short story): the essay collection *The Common Reader* (1925), which includes "Modern Fiction" [S3]; the long essay *A Room of One's Own* (1929) [S4]; and the short story "Mrs Dalloway in Bond Street" [S5]. Facts about her life and novels come from reference pages [S1][S2]. Her diaries and letters are known here only as they are quoted in those pages. When a narrator or character speaks, that is the voice of the work, though in her essays the narrator is close to her own view [S4]. Some of her private remarks were cruel, and we report them fairly below. Nothing here speaks for her on anything after 1941.
 
 ## In one paragraph
 
@@ -64,6 +64,43 @@ Woolf built *The Common Reader* around a reader who reads for their own pleasure
 
 How she applied it: the book's essays range from Chaucer and Montaigne to Jane Austen and Conrad, written for general readers rather than scholars [S3].
 
+**The writer needs a patron: know who you write for**
+
+In "The Patron and the Crocus" she argued that the usual advice to young writers, to write as shortly and clearly as possible and think of nothing else, leaves out the one thing needed: choose your patron wisely [S3]. A book is always written for somebody. Her image was a crocus seen in a London park: it is "an imperfect crocus until it has been shared", so you cannot simply ignore readers [S3]. But writers who despise the public (she named Butler, Meredith and Henry James) grow awkward and obscure, and newspaper writing, however skilful, fades when it is put in a book [S3]. The ideal reader, she said, makes a single real crocus feel important and does not want to be lectured or improved [S3].
+
+**Tell the truth about yourself (Montaigne)**
+
+She admired Montaigne for drawing his own soul with a pen, with all its confusion and variety. She noted two hard things: the difficulty of expression, because thoughts escape before you can catch them, and the harder difficulty of being yourself, because the inner voice often says the opposite of what other people say [S3]. He refused to teach or preach, and kept saying he was like other people [S3].
+
+**The essay's one duty is pleasure**
+
+In "The Modern Essay" she said the essay should give pleasure, cast a spell from the first word, and never rouse the reader. Learning must be so fused into the writing that no fact juts out; she faulted writers who served up research raw, and those who scold [S3].
+
+**Trust your own judgement on new work**
+
+In "How It Strikes a Contemporary" she pointed out that two critics will give opposite verdicts on a book that is two months old, though they agree on Milton. Her answer was to follow your own instincts and check them by reading the masterpieces again and again [S3].
+
+**The common reader**
+
+Her opening essay defines the common reader as one who reads for pleasure, not to teach or to correct others, and who builds out of odds and ends some kind of whole: a portrait, a sketch of an age, a theory of writing [S3].
+
+## Real decisions
+
+### Choosing a story about gloves
+She began *Mrs Dalloway* as a short story, "Mrs Dalloway in Bond Street" (1923), in which a woman sets out to buy gloves. Big Ben strikes eleven and the errand quickly fills with memory and the thoughts of strangers [S5]. She then grew it into the novel [S2].
+
+### Founding her own press
+With Leonard she founded the Hogarth Press, which published much of her work, so she did not have to answer to a publisher's taste [S1].
+
+### Inventing a narrator
+For *A Room of One's Own* she admitted at the start that she could not answer "women and fiction" outright. She offered a narrator, an invented college and an invented sister for Shakespeare, and said her "truth" would mix with fiction and prejudice, so listeners should judge for themselves [S4].
+
+### Treating anger as evidence
+In the British Museum she read books by men about women, found they contradicted each other, and decided they had been written in the heat of emotion. She read the men's anger as a clue and moved from resentment to pity [S4].
+
+### Taking the legacy
+Her narrator's five hundred pounds a year from an aunt took away fear and bitterness and let her judge books on their own terms [S4].
+
 ## How she decides
 
 - Look at an ordinary mind on an ordinary day [S3].
@@ -73,6 +110,9 @@ How she applied it: the book's essays range from Chaucer and Montaigne to Jane A
 - Ask who had the money, time and room to write, and who didn't [S4].
 - Write without letting anger bend the work [S4].
 - Let a small errand or a single day carry the weight [S2][S5].
+- Choose your reader before you write, and write for a patron who treats your one crocus as important [S3].
+- Fuse the research so no fact juts out [S3].
+- Check your instincts against the old masterpieces, not the latest critic [S3].
 
 ## Where she stood
 

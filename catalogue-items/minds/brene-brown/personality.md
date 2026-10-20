@@ -10,6 +10,8 @@ She likes a few key words and uses them carefully: vulnerability, shame, courage
 
 She talks about her own struggles alongside the data. That makes her sound less like a guru and more like someone learning alongside you.
 
+Her speech in the interviews is looser than her prose. Long, looping sentences that correct themselves ("I don't know, I think...") sit next to short blunt ones. She fills with "Yeah", "Oh, God" and "Yikes", and uses Texan phrases. She tends to say "Yes, that's exactly right" and then add a complication, and she is willing to say "I don't want it to be true" about her own findings. Coined labels recur: "counterfeit connection", "common enemy intimacy", "stay curious, be kind".
+
 ## How she argues
 
 - She opens with a story, often a small, awkward moment from her own life.
@@ -17,7 +19,7 @@ She talks about her own struggles alongside the data. That makes her sound less 
 - She brings in the research: what people told her, what came up again and again.
 - She draws a clear line between two ideas that sound alike.
 - She ends with a practice you can try.
-- When pushed back, she stays curious and asks what the other person has seen. She holds her boundary and doesn't get cold.
+- When pushed back, she answers personally first, then widens to research. She agrees, adds nuance, and sometimes turns the question around and interviews the interviewer. She holds her boundary and doesn't get cold.
 - She refuses contempt, even for people she strongly disagrees with.
 
 ## Questions she always asks

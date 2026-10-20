@@ -1,0 +1,127 @@
+new_slug: ad-reading-flow-checker
+name: "Ad reading-flow checker"
+summary: "Paste or describe a print ad layout. Get notes on where the eye goes first, what to move and what to cut."
+job: check-ads
+thinking: low
+thinking_why: "The checks are fixed layout questions that can be answered by looking at the ad."
+
+headline: "Ad reading-flow checker"
+subhead: Give it an image ad, a print layout or a description of one. It finds where the eye lands first, checks the picture-headline-copy order, the headline size and the brand, and gives a score out of 100. You get a fix for each part of the layout.
+
+explain: |
+  People do not read ads from the top left like a page. The eye lands on the biggest picture, then drops down to whatever sits below it. If the headline is lost, the logo is small or the bottom is cluttered, the ad is skipped in a second.
+
+  This skill finds where the eye lands first, which is usually the picture. It checks that the picture sits above the headline so the eye moves down, that the headline is a readable size in the real placement, and that the look fits or stands out from the pages around it. It cuts clutter from the bottom, checks the brand is easy to see, and judges the content before the typeface. Each fix names the part of the layout it changes.
+
+when:
+  - You have a print, magazine, newsletter or image ad and want a layout check before it runs.
+  - Your image ads get seen but not read.
+  - You are choosing between two layouts and want a reason.
+
+you_give:
+  - The ad as an image (best), or a layout description with sizes and positions
+  - Where it will run, such as a page or feed (optional)
+you_get:
+  - A score out of 100 and how it was worked out
+  - Where the eye goes first and next
+  - Fixes that name the part of the layout they change
+  - A cut list for clutter
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach the ad as an image. If your AI can't take files, describe each part and where it sits.
+  - Say where it will run and what is around it.
+  - Make the fixes, starting with order and headline size.
+  - Run it on the changed version.
+
+how_it_works:
+  - title: Finds the first look
+    text: Finds where the eye lands first, which is usually the picture.
+  - title: Checks the order
+    text: Checks that the picture sits above the headline so the eye moves down.
+  - title: Checks headline size
+    text: Checks the headline is readable at the size it will really appear.
+  - title: Compares the setting
+    text: Compares the look with the pages around it and the article-like feel.
+  - title: Cuts clutter
+    text: Cuts clutter from the bottom of the ad.
+  - title: Checks the brand
+    text: Checks the brand name or logo is easy to see.
+  - title: Judges content first
+    text: Judges the content before the typeface.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  SCORE
+  <0 to 100> | Worked out as: <checks passed of checks counted>
+
+  EYE PATH
+  First: <what> | Next: <what> | Last: <what>
+
+  CHECKS
+  Picture above headline: <pass / fail>
+  Headline legible at real size: <pass / fail>
+  Fits or stands out from the page around it: <pass / fail>
+  Bottom clear of clutter: <pass / fail>
+  Brand easy to see: <pass / fail>
+  Content before typeface: <pass / fail>
+
+  FIXES
+  1. <part of layout> | Change: <what to move, resize or cut>
+  ...
+
+  CUT LIST
+  <items to remove>
+
+  SCORE AFTER FIXES
+  <0 to 100>, same method
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Real size
+    how: State the print size or the feed width. The headline check depends on it.
+  - what: Surrounding pages
+    how: Describe or attach what sits next to the ad. The setting check needs it.
+  - what: The ad as an image
+    how: Attach the image. A description loses position and size detail.
+  - what: Your one point
+    how: Say what the ad must make the reader do, so the check can judge what belongs.
+
+judge:
+  - The picture and headline order matches how people scan.
+  - The headline is legible at real size.
+  - Brand identification is clear.
+  - Each fix names the part of the layout it changes.
+  - The score names how it was worked out.
+
+test:
+  - Run it on an ad you know performed well and see which checks it passes.
+  - Shrink the ad to its real size and look. Compare with the report.
+  - Ask a friend to look for three seconds and say what they saw first. Compare with the eye path.
+  - Run it twice. The marks should stay close.
+
+improve:
+  - Add your brand's minimum logo and headline sizes.
+  - Add examples of past ads with the reach they got, so the layout notes match your market.
+  - Save the layout rules you keep to your brand file.
+  - Pair it with "Sound-off commercial checker" when the same idea runs as video.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that can see images", why: "Eye path and layout checks need the AI to look at the picture."}
+  inputs:
+    - "The ad as an image at real size"
+    - "A screenshot of the page or feed around it"
+    - "Your brand's logo and size rules"
+
+terms:
+  - term: Eye path
+    meaning: The order in which a viewer's eye moves across the ad.
+  - term: Legible at real size
+    meaning: Readable at the size the ad will really appear, not just on your screen.

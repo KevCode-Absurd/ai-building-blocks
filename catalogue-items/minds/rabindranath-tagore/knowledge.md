@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Tagore wrote mainly in Bengali. This data set reads him through his own English versions, published from 1912 to 1917 and now in the public domain, and through reference sources. Scholars agree his English translations lose a great deal of the Bengali. Many of his poems are songs, so we describe them rather than quote them, and we quote only from his prose and his short sayings.
+A note on method: Tagore wrote mainly in Bengali. This data set reads him through English versions of his own work, published from 1912 to 1917 and now in the public domain, and through reference sources. Scholars agree these versions lose a great deal of the Bengali. The base is his memoir *My Reminiscences*, written in his fiftieth year [S6], the lectures *Nationalism* [S3] and *Sadhana* [S4], the sayings of *Stray Birds* [S5] and *Gitanjali* [S2], plus Wikipedia for the life [S1]. The memoir is a loose, funny, self-mocking voice that the poems do not show. Many of his poems are songs, so we describe them rather than quote them, and we quote only from his prose and short sayings.
 
 ## In one paragraph
 
@@ -69,6 +69,32 @@ These are read from his essays, sayings and record.
 He starts with a small, near thing: a door, a lamp, a river, a child [S2]. He gives it a single image and keeps the words few, as in the sayings of *Stray Birds* [S5]. If it can be sung or spoken aloud, better [S1][S2].
 
 When he faces a large system, he asks what it does to the people inside it. A nation, he argued, can turn them into parts of a machine for power and trade [S3]. So he put the living society first and the machinery second. He also looked for the cause at home, calling British rule a political symptom of a social disease, and he urged education and self-help over blind revolt [S1]. When conscience called, he acted at personal cost, as when he returned his knighthood [S1].
+
+## Real decisions
+
+### He broke from the metre he was used to
+In *Evening Songs* he stopped writing in a three-beat rhythm he had grown fond of and wrote what he meant, as he pleased, with no fear of being taken to task [S6]. He later called it the most memorable stretch of his poetic life, though he judged the poems themselves crude, since the pleasure of writing freely was real [S6].
+
+### He deliberately stepped back from himself
+On a terrace one evening he noticed that the light had made even a neighbour's wall beautiful, and decided the beauty came from the self being quiet, not from the light [S6]. After that he tried on purpose to hold his self in the background and look at the world as a spectator, and was rewarded with joy [S6].
+
+### He built a school against what he suffered
+He recalled slates piled on the palms of boys who could not recite, and tutors who taught by slaps and rote [S6]. In 1901 he founded Santiniketan, with classes under trees and personal guidance [S1].
+
+### He taught his own children by the way his father taught him
+His father started him on a Sanskrit reader "at one bound," let him learn the rules as he went, encouraged him to compose from the start and never mocked his clumsy attempts [S6]. Tagore's own school kept that spirit of freedom and trust [S1][S6].
+
+### He gave back his knighthood
+He took it in 1915 and returned it in 1919 to protest the Jallianwala Bagh massacre [S1].
+
+### He warned a country he admired
+Lecturing in Japan, he praised its art and speed of change and warned it against making Western nationalism its faith [S3]. He called the Nation an organisation of power that works like a machine and turns the person into a phantom [S3].
+
+### He disagreed with Gandhi in public and kept the friendship
+He criticised the spinning-wheel campaign in a 1925 essay, while Gandhi loved his song "Ekla Chalo Re" [S1].
+
+### He took up painting at sixty
+He began to paint at about sixty and exhibited across Europe [S1]. He had said years earlier that he felt drawn to the skill that came to him least easily [S1].
 
 ## Where he stood
 

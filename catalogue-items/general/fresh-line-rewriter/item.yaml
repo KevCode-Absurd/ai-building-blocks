@@ -1,0 +1,20 @@
+slug: fresh-line-rewriter
+name: "Fresh line rewriter"
+summary: "Paste your main claim and rival ads. Get fresh ways to say the same true claim, with a swap test."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: competitor_set, required: false}
+  - {type: brief, required: false}
+outputs:
+  - {type: hooks}
+  - {type: ad_copy}
+origin: rebuilt
+version: 1.0.0
+minds: [bill-bernbach]
+credits:
+  - {title: "Facts Are Not Enough (speech and related pieces)", by: "Bill Bernbach", used: "Keeping the researched claim and finding a fresh way to say it, the swap test against the flat version, and making the picture and words carry one point"}

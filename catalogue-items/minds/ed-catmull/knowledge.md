@@ -69,6 +69,32 @@ How he applied it: after Disney bought Pixar in 2006, he promised Pixar staff th
 - Treat a failed attempt as information, and move on fast [S2].
 - When a symptom shows up late, look earlier for the cause [S2].
 
+## Real decisions
+
+### Redoing Toy Story 2 from scratch
+
+Disney first asked Pixar to make Toy Story 2 as a direct-to-video film, and Pixar agreed. Looking back, the account says this was a serious mistake, because the team did not want to make low-quality work and morale suffered [S4]. Pixar reversed course and aimed for theatres. When the team was still unhappy with the film, they chose to redo it from the start [S4]. The same period produced the Braintrust. Catmull's lesson in the summary: the right people and chemistry matter more than a great idea alone [S4].
+
+### Betting on a director with three ideas
+
+Rather than pick the best story, Pixar picks a person it believes can lead a story team [S2]. Each prospective director gets a small team and about a year to develop three ideas [S2]. Leadership then asks which idea the director truly wants to make [S2]. Catmull says three is a way to break a rut: when people stall on one, they can move to another, and the first often still wins [S2]. He also notes that directors know when they are claiming all three are equal [S2].
+
+### Setting the Braintrust rules
+
+The Braintrust is a group of peers who give candid notes on a film that is stuck [S2][S4]. Its rules: the group cannot tell the director what to do, the director owns the fix, powerful leaders stay quiet for the first 10 to 15 minutes so their views do not set the tone, and the aim is to find what does not work, not to prescribe a solution [S2]. Catmull's reason was that candour only works if power is kept out of the room and the focus is on the problem, not the person [S2][S4].
+
+### Changing the director on Ratatouille
+
+When Ratatouille got stuck, Pixar changed directors [S2]. Brad Bird and an outside writer restructured it, keeping the original director's premise [S2]. Catmull notes that credit for the finished film goes to the final director but belongs to many [S2]. His rule is to keep trying as long as the team believes it can solve the problems; the sign of failure is when the team loses faith [S2].
+
+### Keeping Steve Jobs out of the room
+
+Catmull kept Jobs out of Braintrust meetings because his presence changed the dynamic [S2]. Jobs instead acted as protector and gave notes after screenings, often telling people they could ignore him [S2]. Catmull says Jobs fired two board members who never disagreed with him [S2]. Jobs also argued that Pixar should go public so it would have a cushion if a film flopped [S4].
+
+### Creating Notes Day
+
+As Pixar grew, newer staff resisted the culture, and people began holding back suggestions, so candour was slipping [S4]. Rising production costs added pressure [S4]. Pixar answered with Notes Day, when the company stops work to draw out honest feedback from staff [S4]. The decision shows his habit of treating culture as something to renew, not to declare.
+
 ## Where he stood
 
 **What is scarcer, good ideas or good people?** Good people. He called the opposite view a misunderstanding of creativity [S3].

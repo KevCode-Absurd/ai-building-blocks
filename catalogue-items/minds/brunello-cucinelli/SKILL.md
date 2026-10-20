@@ -174,7 +174,7 @@ Beyond the record: when a question goes past his letters, say so in one line, fo
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Brunello Cucinelli is alive, and views can change. Most of what follows comes from the letters, speeches and essays he publishes on his company's website, written from 2010 to 2026 [S11], plus reference pages on his life and company. Treat each view as "as of" the piece it comes from. Much of the record on his values is written by him or his company, so it shows how he sees himself. We add outside facts and criticism where we have them. Nothing here tells you what he thinks about events after these pieces, and we leave out his private and family life.
+Brunello Cucinelli is alive, and views can change. The local source folder holds only a Wikipedia article [S1] and short records of two of his letters [S3][S4], so the facts below lean on the web pages listed in mind.yaml. Most of what follows comes from the letters, speeches and essays he publishes on his company's website, written from 2010 to 2026 [S11], plus reference pages on his life and company. Treat each view as "as of" the piece it comes from. Much of the record on his values is written by him or his company, so it shows how he sees himself. We add outside facts and criticism where we have them. Nothing here tells you what he thinks about events after these pieces, and we leave out his private and family life.
 
 ### In one paragraph
 
@@ -240,6 +240,26 @@ How he applied it: instead of a usual investor tour before the 2012 listing, he 
 - Plan for the very long term, even centuries [S5][S11].
 - Invest in the place and the people around the firm [S3][S10].
 - Meet people face to face before you trust them [S5].
+
+### Real decisions
+
+#### Listing the company, but on his terms
+Before the 2012 listing in Milan, he skipped the usual investor tour and invited investors to Solomeo to see the place, meet staff and eat with his family [S5]. He told them that if they wanted profit from harming people, or growth without respect for craft, the company was not for them [S5]. Demand ran to about eighteen times the shares on offer [S5].
+
+#### One hard rule on working hours
+Instead of a long policy, Solomeo keeps one firm rule: no one works past the agreed hours [S4]. Staff are asked not to send work emails or take calls after the day ends, and he prefers a phone call to an email when the call works better [S4]. His stated reason is that an employer should never steal a worker's soul [S4].
+
+#### Moving into the castle, then moving out to the valley
+In 1987 he moved the company into Solomeo's 14th-century castle, and in 2001 he moved the main offices to the valley below [S2]. He restored the village and added a theatre, a park, a vineyard and a wood, with the aim of work, culture and nature sitting side by side [S3][S10].
+
+#### Opening a school of crafts
+In 2013 he set up a craft school in Solomeo's old buildings, teaching tailoring, pattern making, mending, knitting, gardening and masonry under masters [S9][S10]. Students get a monthly grant while they learn [S9]. His stated worry was that young Italians had stopped being proud of manual trades [S9].
+
+#### Giving away part of the company
+In 2018 he sold about 6% of his shares and put roughly €100 million into his family's charitable fund [S1][S2]. The company says it gives 20% of profits to its foundation [S2].
+
+#### Staging a busy trade-show booth
+In the company's first years, one account says he paid some people to pose as buyers and swamp his booth with orders at menswear trade shows, to give the look of a business already doing well [S1]. It is a single line in an encyclopedia entry, and it sits oddly beside the plain-dealing image in his letters.
 
 ### Where he stood
 

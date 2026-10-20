@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Rebuilt 2026-10-20 from the full text of the two oral histories [S2][S3]; the 1980 transcript is an edited interview.
+
 A note on method: Hopper gave long interviews about her life, and two of them are our main sources: one with the Smithsonian in July 1968 [S3] and one for the Computer History Museum in December 1980 [S2]. These are her own memories, told decades later, and she liked a good story. Where she claims credit, we say it's her claim. Two popular stories need care. She didn't find the famous moth "bug" herself, and the word "bug" is older than computers [S1][S6]. She is often called the inventor of COBOL, but COBOL was designed by a committee she advised [S1][S2]. Her views on women's rights are her views as of 1980, given here because they are on the record [S2].
 
 ## In one paragraph
@@ -52,6 +54,10 @@ Hopper said there's no use doing anything unless you can communicate it [S2]. Sh
 
 How she applied it: Howard Aiken, her first boss, ordered her to write the Mark I's manual. She protested she couldn't write a book, and he told her she was in the Navy now [S2][S3]. He taught her to read her writing aloud and fix any sentence where she stumbled [S2]. She passed that on, along with taping your talks to hear how they sound [S2]. She also handed out lengths of wire to show how far electricity travels in a nanosecond [S1].
 
+**Nothing general-purpose in the final program.** Hopper called herself a Scot about waste: she wanted nothing in a finished program that did not pay off [S2]. She disliked big operating systems because they carried general-purpose code for everything when a given job needed only a little [S2]. Her answer was to build specialised generators ahead of time, one for data, one for interrupts, one for input and output, and run only what the job needed [S2]. She says the original UNIVAC II COBOL built the input and output routines for each specific problem when it compiled [S2].
+
+**Pass on what you learn, or the next generation has to rediscover it.** She called it a big failure that the early programmers who learned modular programming never passed it on, because they were too busy getting programs onto computers. By the time they got round to it, big memories had arrived and people sprawled, so modules had to be invented again [S2]. She also wanted computer work written up like a lab report, since every science experiment she did in college had one [S2].
+
 ### Give the credit to the people who did the work
 
 She said a boss should give the credit to the people who did the work, and let them present it [S2]. She took her whole team to briefings and had each person present their own part [S2]. She praised Betty Holberton for writing a program that wrote a program before her own compiler, and said that work gave her the nerve to build hers [S2].
@@ -70,6 +76,29 @@ Hopper said a new idea takes five to ten years to get across. It did for compile
 - Give one machine one job, and keep each program lean [S2].
 - Give credit away freely [S2].
 - Document the work, the way a science student writes up an experiment [S2].
+
+## Real decisions
+
+### Writing the compiler instead of copying code by hand (1952)
+Programmers copied pieces of code from a library by hand and often miscopied them or added up addresses wrong. Her stated reason for acting was that copying is exactly what a computer does well, so why not make it do that [S2]. She says her nerve came partly from Betty Holberton having already written a program that wrote a program [S2]. People did not believe it and the idea took years to be used [S2].
+
+### Building a small model compiler to win a budget
+Her group built a preliminary compiler that took only about twenty statements but had all the controls, so they could get funding. She says the more they looked, the more trivial it seemed next to the biggest budget they had asked for, so they decided to do more first [S2].
+
+### Using French and German words in the demonstration
+Her group made every statement start with a verb, then swapped in French and German words and ran the same program to show the language was not tied to English. Marketing and non-technical management rejected it, saying a computer built in Philadelphia could not understand German [S2]. She later pointed out that COBOL programs worldwide mixed English verbs and connecting words with local nouns [S2].
+
+### Giving credit to a rival language to win support for COBOL
+She says FLOW-MATIC was about ninety-five per cent of COBOL 60, yet she backed describing it as a mix of FLOW-MATIC and the rival Commercial Translator. Her reason was practical: if the rival's backers got credit they would join, and if not they would fight. She sums it up as "you can always afford to" give credit [S2]. This is her own account.
+
+### Objecting to general-purpose code in compilers
+She disagreed with colleagues who wanted a compiler that kept absorbing new general-purpose code, saying it would mushroom until it outgrew the machine. She also objected to generating code at run time, since it would be rebuilt every run. Her view was to compile once, store the result and keep the final program tight [S2].
+
+### Cutting a table of values from a cord of paper to two volumes (wartime Navy)
+When a Navy group asked for values every foot along a curve, the team worked out the printout would fill a cord of paper. They explained that the numbers were needed only where the curve changed, and cut the job to two volumes [S3].
+
+### Writing the Mark I manual when told to
+Aiken told her she was going to write a book. She said she had never written one, and he answered that she was in the Navy now. She wrote it, and says she picked the chapter headings carefully [S3][S2].
 
 ## Where she stood
 

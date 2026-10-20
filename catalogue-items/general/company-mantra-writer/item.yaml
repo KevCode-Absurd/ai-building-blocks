@@ -1,0 +1,17 @@
+slug: company-mantra-writer
+name: "Company mantra writer"
+summary: "Describe what you do and for whom. Get three two-to-four word mantras and a niche check."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: brief}
+origin: rebuilt
+version: 1.0.0
+minds: [guy-kawasaki]
+credits:
+  - {title: "The Art of Innovation", by: "Guy Kawasaki, TEDxBerkeley 2014 talk", used: "Replacing a long mission statement with a two-to-four word mantra built on the meaning the work makes, and checking the idea on a grid of value against uniqueness"}

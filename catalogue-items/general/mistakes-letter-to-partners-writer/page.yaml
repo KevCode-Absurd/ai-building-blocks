@@ -1,0 +1,126 @@
+new_slug: mistakes-letter-to-partners-writer
+name: "Mistakes letter to partners writer"
+summary: "Paste your year's results and slip-ups. Get an honest owners' letter naming each mistake, its cost and the change."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It puts numbers on each mistake and chooses what to say first, but follows a set letter shape."
+
+headline: "Mistakes letter to partners writer"
+subhead: Give it your year's results and a list of what went wrong. It writes a plain letter to owners, partners or investors that leads with the numbers, names every mistake with what it cost, says what changes, and describes your cash and risk.
+
+explain: |
+  When a year goes badly, many letters hide behind soft words or bury the bad news on page three. Owners and partners then trust the next letter less. A small business, a fund, a club or a charity can all gain by saying plainly what went wrong.
+
+  This skill opens with the results in plain numbers, bad year included, then draws a simple picture of what happened in the wider world. It lists each mistake, what you did or failed to do, and puts a figure on its cost. Mistakes of doing and of not doing both get covered. It says what you learned and what you will do differently, describes your cash and risk so readers can judge how safe things are, and closes on one line lesson.
+
+when:
+  - You must write to owners, partners, members or backers after a poor year.
+  - You made a costly mistake and want to say so before someone else does.
+  - Your yearly letter reads like a press release and you want it honest.
+
+you_give:
+  - Your year's results as numbers (a performance sheet)
+  - A list of what went wrong or what you missed
+  - Your plan for next year (optional)
+you_get:
+  - A letter to owners that leads with the numbers
+  - Each mistake named, with its cost
+  - A plain statement of cash and risk
+  - A list of facts you still need to supply
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your results and list every mistake you can think of, including things you did not do.
+  - Give the cost of each mistake if you know it. Say so if you do not.
+  - Read the letter once as an owner. Mark any line you would not believe.
+  - Send it only after you have checked every figure against your records.
+
+how_it_works:
+  - title: Leads with the numbers
+    text: Opens with results in plain figures, including the bad year.
+  - title: Pictures the outside world
+    text: Describes what happened in the wider market or world in a simple scene.
+  - title: Lists each mistake
+    text: Names what you did and what you failed to do.
+  - title: Puts a cost on each
+    text: Gives the figure for each mistake, or marks it as missing.
+  - title: Says what changes
+    text: States what you learned and what you will do differently.
+  - title: Shows cash and risk
+    text: Describes your cash and debt so readers can judge safety.
+  - title: Closes with one line
+    text: Ends on a short lesson, with a little humour at your own expense if it fits.
+  - title: Checks the letter
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  LETTER TO <owners / partners / members>
+
+  RESULTS
+  <the year in plain numbers, bad news first>
+
+  WHAT HAPPENED AROUND US
+  <one plain picture of the wider world>
+
+  OUR MISTAKES
+  <n>. <what we did or did not do> | Cost: <figure or MISSING>
+     Why it happened: <reason>
+
+  WHAT WE LEARNED AND WHAT CHANGES
+  <list>
+
+  CASH AND RISK
+  <cash, debt and what could go wrong>
+
+  CLOSING LINE
+  <one line lesson>
+
+  MISSING
+  <figures or facts to supply>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Mistakes of not doing
+    how: List the chances you saw and passed over. They often cost more than the mistakes you made.
+  - what: The cost of each mistake
+    how: Give actual figures. If a cost is a guess, say how you reached it.
+  - what: Who the letter is for
+    how: Say whether readers are owners, members or lenders. It changes what they need to know about risk.
+  - what: Tone
+    how: Say how formal your usual letters are. It keeps the voice yours.
+
+judge:
+  - Every mistake has a cost in numbers or a clear note that the figure is missing.
+  - Mistakes of doing and of not doing are both covered.
+  - No jargon appears without a one-line explanation.
+  - The bad news comes before the good news.
+  - The letter says what changes.
+
+test:
+  - Give it last year's real results and see if the mistakes it lists match your own list.
+  - Ask someone outside the business to read the letter and say what went wrong and how safe things are.
+  - Remove all the costs and run it again. It should mark each as missing and not invent a number.
+  - Compare it with your last real letter and note what it says that yours hid.
+
+improve:
+  - Add the measures your owners care about, such as cash on hand, margin or member numbers.
+  - Add a house rule on how formal or warm your letters are.
+  - Save the mistakes list each year and use it to look for repeats.
+  - Pair it with a numbers check before sending.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Drafting and tightening a letter is text work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Your figures should be checked in the sheet they came from before the letter goes out."}
+  inputs:
+    - "Last year's letter, for tone"
+    - "Your cash and debt figures"
+    - "A list of decisions you passed on"
+
+terms:
+  - term: Mistake of not doing
+    meaning: A chance you saw and did not take, which cost you something.
+  - term: Cash position
+    meaning: How much money you have on hand and how much you owe, which tells readers how safe you are.

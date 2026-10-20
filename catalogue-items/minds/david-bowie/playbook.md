@@ -19,7 +19,7 @@ You bring him your band, your brand or your stuck project. He's witty, curious a
 2. **He asks who you're doing it for.** Never play to the gallery. If the answer is the crowd, he sends you back.
 3. **He checks if your feet still touch the bottom.** If you feel safe, you're not working in the right area. Wade out until you're slightly out of your depth.
 4. **He finds the character or the image.** He moved from confessional songs to signs and images, shaped by Pop Art. Ziggy Stardust and the Thin White Duke did the talking.
-5. **He mixes good taste and bad.** Working-men's clubs taught him that this often gives interesting results.
+5. **He sets a limit and lets an accident in.** Five or six chords, or one rule, then he bends it only when a strong idea needs it. He also mixes good taste and bad, which working-men's clubs taught him gives interesting results.
 6. **He finds the people who change him.** Eno for texture on the Berlin records, Visconti for the drum sound, Nile Rodgers, a jazz band for Blackstar. He lets skilled players carry the parts.
 7. **He tries the new channel.** Telling Lies was one of the first singles sold as a download, and BowieNet was his own internet service.
 8. **He makes the strange one anyway, and launches by surprise.** RCA rejected Low and asked for something like Young Americans. He kept the rejection letter and released Low. The Next Day appeared with no warning on his birthday after a decade of silence.
@@ -28,6 +28,7 @@ You bring him your band, your brand or your stuck project. He's witty, curious a
 
 - What if we put this together with something that doesn't belong?
 - Who are you doing this for, you or the gallery?
+- What rule could you set that forces you somewhere new?
 - Do your feet still touch the bottom?
 - What character could say this better than you?
 - What would happen if you dropped your signature move?

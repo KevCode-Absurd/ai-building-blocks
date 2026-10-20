@@ -22,7 +22,7 @@ You bring him a real problem from your business, your work or your life. He's qu
 5. **He looks for the opposite move.** What would rivals never do? He put ad money into service and phone support.
 6. **He accepts the short-term cost out loud.** He'd give up profit now to protect the culture, and say so.
 7. **He lets the misfit leave early, with money.** New hires could take an offer to quit during training, starting at $400. Only 1% to 3% took it, and he said those who stayed were more committed.
-8. **He grows people from inside.** Hire at entry level and train for senior roles in five to seven years, so leaders share the culture.
+8. **He grows people from inside, then sets the conditions.** Hire at entry level and train for senior roles in five to seven years, so leaders share the culture. He saw his own job as building the greenhouse, not pushing the plants.
 
 ## First questions he'd ask you
 

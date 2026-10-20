@@ -17,6 +17,7 @@ uses: []
 origin: rebuilt
 source_ids: [CES-028]
 version: 2.0.0
+minds: [jakob-nielsen]
 credits:
   - {title: "Scrolling and Attention", by: "Therese Fessenden, Nielsen Norman Group", url: "https://www.nngroup.com/articles/scrolling-and-attention/", used: "Most viewing time goes to the first screens, so position weights each finding"}
   - {title: "F-Shaped Pattern of Reading on the Web", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/", used: "Scanning, skimming and full-reading modes behind the three reads"}

@@ -1,0 +1,121 @@
+new_slug: program-keep-or-cut-reviewer
+name: "Program keep-or-cut reviewer"
+summary: "Paste results for the projects you run. Get each one marked keep, cut or double down, judged on cash and customer value."
+job: plan-strategy
+thinking: high
+thinking_why: "It weighs cash, customer signals and growth needs across many lines, which takes careful comparison."
+
+headline: "Program keep-or-cut reviewer"
+subhead: Paste what each of your projects, products or campaigns cost and returned. It checks customer signals first, then cash over paper figures, then how much new money each needs to grow. You get each line marked keep, cut or double down, with a short reason you can share.
+
+explain: |
+  Most teams keep every project running, because each one has a defender. Spending then spreads thin across lines that earn little, and the few that work do not get enough. A clear review sorts lines by what they return in cash and what customers do, not by how the numbers look on paper.
+
+  This skill lists each program with its cost and return. It looks at customer signals first: repeat purchases, word of mouth, brand strength. It prefers real cash to accounting figures, and drops what does not earn an acceptable return. It tests each line on four points: you understand it, its long-term economics are favourable, the people running it are able and trusted, and the price is sensible. It then measures the new money each line needs to grow, and sorts it as great, good or gruesome.
+
+when:
+  - You run several products, campaigns, clients or services and cannot fund all of them well.
+  - A budget review is coming and you need a clear reason for each line.
+  - A program has run for a year and nobody has asked if it should continue.
+
+you_give:
+  - A table of programs with what each cost and returned over a period
+  - Cash figures where you have them, not only profit on paper
+  - Customer signals such as repeat rate or referrals (optional)
+you_get:
+  - A verdict for each line, either keep, cut or double down
+  - Earnings and new cash needed side by side
+  - The four tests for each line, and a note on what customers are doing
+  - A lesson for every cut line, and a reason short enough to share
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your results. Include cost, return, and cash where possible.
+  - Add any customer signals, such as repeat orders, referrals or complaints.
+  - Read the verdicts and challenge any where you hold facts it does not.
+  - Share the short reasons with the people affected, then plan the changes.
+
+how_it_works:
+  - title: Lists each program
+    text: Puts each program in a table with what it cost and what it returned.
+  - title: Reads customer signals first
+    text: Checks repeat purchase, word of mouth and brand strength before the money.
+  - title: Prefers cash
+    text: Judges real cash over how the figures look on paper.
+  - title: Runs four tests
+    text: Asks if you understand it, if the long-term economics are good, if the people are able and trusted, and if the price is sensible.
+  - title: Measures new cash needed
+    text: Works out how much new money each line needs to grow its earnings.
+  - title: Sorts great, good or gruesome
+    text: Marks lines as growing on little cash, earning well but needing reinvestment, or growing fast while eating cash.
+  - title: Gives the verdict
+    text: Marks each line keep, cut or double down, and writes the lesson for each cut.
+
+output_shape: |
+  PROGRAMS
+  Program | Cost | Return | Cash (real) | Earnings | New cash needed
+
+  CUSTOMER SIGNALS
+  <program>: repeat <>, word of mouth <>, brand <>
+
+  FOUR TESTS
+  <program>: understood? <>  good long-term economics? <>  people able and trusted? <>  sensible price? <>
+
+  SORT
+  Great: <list>  Good: <list>  Gruesome: <list>
+
+  VERDICTS
+  <program>: keep / cut / double down | Reason: <short line>
+
+  LESSONS FROM CUTS
+  <program>: <lesson>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Cash versus paper figures
+    how: Give cash in and out where you can. A profit figure that hides slow payment hides the real state.
+  - what: Time window
+    how: State the period. A line that is new may need longer before it is judged.
+  - what: Customer signals
+    how: Give repeat rates, referrals or complaints. They are checked before the money.
+  - what: Return you accept
+    how: State the minimum return that counts as acceptable. The cut line follows from it.
+
+judge:
+  - Each program has a cost, a return and a verdict.
+  - Cash is judged apart from appearance.
+  - Dropped programs have a lesson written down.
+  - The reasoning is short enough to share with the people affected.
+  - Each line has earnings and new cash needed side by side.
+
+test:
+  - Run it on last year's lines and compare the verdicts to what you chose.
+  - Check one cut line by hand to see if the numbers support it.
+  - Ask the owner of a cut line if the reasons are fair and the facts correct.
+  - Run it again six months on and see how the verdicts moved.
+
+improve:
+  - Add your minimum acceptable return to the skill, so the cut line is always the same.
+  - Add the customer signals you can measure in your field.
+  - Add a rule on how long a new program is protected before review.
+  - Pair it with "Long-shot bet planner" for new bets that replace the cut lines.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Comparing lines and writing verdicts is text and table work that any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "The skill reads tables best, and you can check its sums against yours."}
+  inputs:
+    - "Cash flow by program, not only profit"
+    - "Repeat purchase, referral or renewal rates"
+    - "The minimum return you will accept"
+
+terms:
+  - term: Double down
+    meaning: Put more money and effort into a program that is working.
+  - term: New cash needed
+    meaning: The extra money a program takes in to grow its earnings, beyond what it earns itself.

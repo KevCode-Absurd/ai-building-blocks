@@ -1,0 +1,21 @@
+slug: onliness-statement-writer
+name: "Onliness statement writer"
+summary: "Paste your brand file and rivals. Get one sentence on what only you do, with a rival swap test."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: brand_brain, required: true}
+  - {type: competitor_set, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: brief}
+origin: rebuilt
+version: 1.0.0
+minds: [marty-neumeier]
+credits:
+  - {title: "The Only-ness Statement", by: "Marty Neumeier, 2018 (as described by Dan Mall)", url: "https://danmall.com/posts/onlyness", used: "The six prompts and the sentence that names the one thing only you do"}
+  - {title: "The Brand Gap (slide presentation)", by: "Marty Neumeier, 2003", used: "Checking focus: who you are, what you do and why it matters"}

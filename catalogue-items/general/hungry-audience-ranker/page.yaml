@@ -1,0 +1,123 @@
+new_slug: hungry-audience-ranker
+name: "Hungry audience ranker"
+summary: "Paste the groups you could sell to. Get them ranked from coldest to hungriest, with the group to test first."
+job: understand-customers
+thinking: medium
+thinking_why: "It ranks groups by evidence of past buying, and weighing that evidence takes judgement."
+
+headline: "Hungry audience ranker"
+subhead: "Give it the groups you could sell to and what you sell. It places each on a ladder by proof of past buying, lifts groups that bought lately, and picks the first group to test. You get a ranked list, the test group and what would make it fail."
+
+explain: |
+  Most selling goes wrong before any words are written, because the offer goes to the wrong people. A group that has never bought anything like it needs to be taught and persuaded. A group that bought something similar last month only needs a reason to choose you.
+
+  This skill ranks every group you could reach on a ladder, from cold names up to your own happy customers. It moves groups up when they bought by mail or online, spent more, or bought lately. It notes any weaker group that fits the offer closely enough to still pay. It then picks the highest rung you can afford for a small first test and writes down, before you spend, what would count as a fail.
+
+when:
+  - "You have an offer and several lists, audiences or channels and cannot decide where to start."
+  - "A cheap list or audience looks tempting and you want to check it is worth it."
+  - "You are about to buy a list, rent a partner's list or set ad targeting."
+
+you_give:
+  - "What you sell and the groups you could reach"
+  - "Size and cost for each group, if you know them"
+  - "Results showing who bought what, and when (optional)"
+  - "A buyer persona (optional)"
+you_get:
+  - "Every group ranked on a ladder, with a reason"
+  - "The proof of buying behind each rank"
+  - "The first test group, two backups and what is at risk"
+  - "The checks to run and the pass line"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Write what you sell and list every group you could reach."
+  - "Add size and cost beside each group, and any results that show past buying."
+  - "Say how much you can afford to lose on a first test."
+  - "Read the ladder and the test group, then take it to Small test and rollout planner."
+
+how_it_works:
+  - title: "Lists the groups"
+    text: "Puts every group in a table with how to reach it, its size and cost."
+  - title: "Marks proof of buying"
+    text: "Records who bought something like your offer, where, how lately and for how much."
+  - title: "Builds the ladder"
+    text: "Places groups from the coldest names up to your own customers."
+  - title: "Pushes groups up"
+    text: "Lifts those that bought by mail or online, spent more or bought lately."
+  - title: "Flags close fits"
+    text: "Marks weaker groups that match the offer closely as a second test."
+  - title: "Picks the test group"
+    text: "Chooses the highest rung you can afford and names backups."
+  - title: "Writes the checks"
+    text: "Sets what to check in the results and when to step down a rung."
+
+output_shape: |
+  THE LADDER (hungriest first)
+  <rung>. <group> | size <n> | cost <amount> | reached by <how>
+     Proof: <bought what, where, when, how much / unknown>
+     Why here: <reason>
+
+  FIT EXCEPTIONS
+  <group> because <reason>. Second test only.
+
+  FIRST TEST
+  Group: <name>   Why: <reason>
+  Backups: <two groups>
+  Money at risk: <amount>
+
+  CHECKS
+  Pass line: <numbers>
+  Check: <responses, cost per order, returns>
+  Step down if: <what>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "Past buying records"
+    how: "An export of who bought what and when moves groups up on facts, not guesses."
+  - what: "Your own customers"
+    how: "Say how many you have and what they bought. They sit at the top of the ladder."
+  - what: "Cost and size per group"
+    how: "Give your best estimates. The ladder shows cost beside each rung so cheap does not hide cold."
+  - what: "How much you can lose"
+    how: "State a number. The first test is chosen to fit it."
+
+judge:
+  - "Every group has a reason for its place."
+  - "Groups that bought are above groups that only seem interested."
+  - "Your own customers are at the top, if you have any."
+  - "The test group fits what you can afford to lose."
+  - "It says what would count as a fail before the test."
+
+test:
+  - "Give it groups where you already know which one buys best. Check the ladder agrees."
+  - "Run it twice. The first test group should stay the same."
+  - "Take the top group and one lower group and test both with the same offer. See which wins."
+  - "Check one claimed buying record against your own sales data."
+
+improve:
+  - "Add your own rungs to step 3, for example a rung for event attendees."
+  - "Add what recent means in your market to step 4, such as 90 days or one year."
+  - "Save the result of each test to your brand file so the ladder uses real results next time."
+  - "Pair it with Small test and rollout planner next."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ranking groups by stated evidence is text work any strong chat AI does well with this skill."}
+    - {name: "Your sales or email export", why: "Shows who actually bought what and when, which is the proof the ladder runs on."}
+  inputs:
+    - "A sales export with dates, products and amounts"
+    - "Your list sizes and costs per thousand or per click"
+    - "Notes from a list owner or partner on who is on their list"
+    - "Results of past tests on any of the groups"
+
+terms:
+  - term: "Ladder"
+    meaning: "Groups put in order from the coldest, who have shown no sign of buying, up to your own happy customers."
+  - term: "Fit exception"
+    meaning: "A group lower on the ladder that matches your offer so closely it may still pay."

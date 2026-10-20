@@ -1,0 +1,28 @@
+slug: review-a-pages-ease-of-use-then-plan-a-test
+name: "Review a page's ease of use, then plan a test"
+summary: "Give it a page or screen. Get usability problems, unclear clicks rated, and a one-morning test with three people."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: beginner
+inputs:
+  - {type: web_page, required: true}
+  - {type: question, required: true}
+  - {type: landing_page, required: false}
+  - {type: store_capture, required: false}
+  - {type: page_layout_spec, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+uses: [usability-heuristic-reviewer, click-choice-clarity-checker, small-usability-test-planner]
+steps:
+  - {uses: usability-heuristic-reviewer, note: "It checked against ten usability rules, with fixes ordered by cost to the user"}
+  - {uses: click-choice-clarity-checker, note: "Each choice rated for how hard it is, with a plain rewrite. Reads the audit report from the step before"}
+  - {uses: small-usability-test-planner, note: "A one-morning test plan: three people, tasks, a read-aloud script and a fix list. Reads the audit report from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [steve-krug, jakob-nielsen]
+credits:
+  - {title: "Don't Make Me Think, Revisited", by: "Steve Krug", used: "The order of the steps: usability heuristic reviewer, click choice clarity checker, small usability test planner"}
+generated_from: intake/dont-make-me-think/skeleton.yaml

@@ -21,7 +21,7 @@ You bring her a system that has to work when it matters. She is calm, exact and 
 3. **She makes the system catch its own errors and recover.** Detection is half the job. Her recovery programs could stop everything and restart from a saved safe point while keeping the key jobs running.
 4. **She designs the warning for the person.** An urgent alarm that interrupts the normal screen and gives a clear choice. The person and the software are partners, and each can interrupt the other.
 5. **She looks at the seams.** In her team's study of Apollo errors, 75% or more were interface errors, clashes of data, timing and priority between parts. Hardware, people and mission plans count as parts too.
-6. **She requires a reason and an approval for every change.** Code from other groups came under the same rules. Someone reads each version by eye for interface errors.
+6. **She requires a reason and an approval for every change, and one pair of eyes.** Every change had a written reason and an approval, and a named supervisor read each mission's code by eye for seam errors.
 7. **She tests with a real person in the loop.** Simulations of every part of a flight, with real or simulated crew, because you can't try it out by flying.
 8. **She studies the errors and changes the method.** What kind of error is this, and how do we stop the whole kind? Her answer grew into "development before the fact": define the system correctly, so many errors can't get in.
 

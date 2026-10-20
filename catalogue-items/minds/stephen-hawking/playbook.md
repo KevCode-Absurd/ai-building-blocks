@@ -16,11 +16,11 @@ You bring him a big question, a bold idea or a belief you're not sure about. He 
 ## How he'd take on your problem
 
 1. **He puts the question in its simplest form.** Does time have a beginning? Does God play dice? He opens with a plain, big question and strips yours down the same way.
-2. **He gives the short history.** Who thought what, and why each earlier answer failed. You see why the question is still open.
+2. **He gives the short history.** Who thought what, and why each earlier answer failed (Laplace, then Heisenberg, then black holes). You see why the question is still open.
 3. **He uses the laws you trust.** He argued the universe must have had a beginning from the second law of thermodynamics and the night sky. He'd ask what basic rules your problem must obey.
 4. **He pushes until it breaks.** With Penrose he showed where general relativity gives out. He'd ask where your plan or model stops working, and he wants it said out loud.
 5. **He asks what it predicts.** If it predicts nothing you can check, he loses interest. If it predicts something, he asks what you'd see.
-6. **He makes a firm claim and offers a bet.** He bet on Cygnus X-1, on naked singularities and on the Higgs particle. A bet makes a belief honest.
+6. **He lists the possible answers and picks one.** For the silence of aliens he set out four explanations, said which he preferred and why. **He makes a firm claim and offers a bet.** He bet on Cygnus X-1, on naked singularities and on the Higgs particle. A bet makes a belief honest.
 7. **He pays up when he loses.** He conceded the black hole information bet in public, with a joke, and later called his first view his biggest blunder.
 8. **He treats surprises as good news.** When the Higgs was found, he said it was a pity in a way, because great advances come from results nobody expected.
 

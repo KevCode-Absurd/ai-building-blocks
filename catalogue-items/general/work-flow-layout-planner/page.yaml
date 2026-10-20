@@ -1,0 +1,129 @@
+new_slug: work-flow-layout-planner
+name: "Work flow layout planner"
+summary: "Describe a repeated job. Get a layout where the work moves to the person, with fewer steps and less walking."
+job: build-product
+thinking: high
+thinking_why: "It redesigns how people and parts move, and a bad layout wastes time and may harm people."
+
+headline: "Work flow layout planner"
+subhead: Describe a job your team repeats, with its steps and who does them. It counts the moves, orders tools and people by the order of the work and splits the job into small steps. You get a layout, step times, a before and after count and a one-job trial.
+
+explain: |
+  Many jobs lose time before anything is made. A person fetches a part, waits for a tool or turns to a different task. Each small trip repeats hundreds of times and nobody sees the total.
+
+  This skill lists the steps in order and counts the moves each person makes. It places tools and people in the order of the work so each part travels the shortest distance, and gives each person one set place to pass the work on. It splits the job into small steps, times each one, and groups steps by skill so each person does a few. It asks staff what they see before rollout and tests the change on one job.
+
+when:
+  - A job takes many people and a lot of walking, searching or waiting.
+  - You are setting up a space, a kitchen, a desk or a workshop for repeated work.
+  - Output stalls because people switch between tasks.
+
+you_give:
+  - The job and its steps in order, with who does each
+  - The space or the tools available
+  - Rough times for each step, if known (optional)
+  - What staff say slows them down (optional)
+you_get:
+  - A layout in words, in the order of the work
+  - A before and after count of steps and moves
+  - A list of small steps with times, each marked measured or guessed
+  - A one-job trial and a staff check
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List the steps of the job and who does each one now.
+  - Describe the space and where tools and parts sit.
+  - Time one run of the job and give it the numbers.
+  - Run the one-job trial it names and ask staff before changing anything else.
+
+how_it_works:
+  - title: Lists steps and counts moves
+    text: Writes every step in order and counts the moves each person makes.
+  - title: Orders the layout
+    text: Places tools and people in the order of the work so parts travel the shortest distance.
+  - title: Sets drop places
+    text: Gives each person one set place to hand the part on.
+  - title: Brings parts to the worker
+    text: Plans how work reaches each person at a convenient height instead of being fetched.
+  - title: Splits the work
+    text: Breaks the job into small steps so each person makes few movements.
+  - title: Times each step
+    text: Records a time for each step and notes where people switch tasks.
+  - title: Groups by skill
+    text: Groups steps so each person does a few things well.
+  - title: Plans the trial
+    text: Names a one-job trial and a staff check before rollout.
+  - title: Checks the layout
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE JOB
+  <job> | Steps: <n> | People: <n>
+
+  BEFORE
+  Moves per unit: <n> | Distance or walking: <figure>
+
+  STEPS IN ORDER
+  <n>. <step> | Who: <person or role> | Time: <figure> (measured / guess)
+
+  LAYOUT
+  <station order, where each part comes from and goes to, height>
+
+  AFTER
+  Moves per unit: <n> | Saving: <figure>
+
+  STAFF CHECK
+  <questions to ask before rollout>
+
+  ONE-JOB TRIAL
+  <job, what to time, what counts as a pass>
+
+  MISSING
+  <measures needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Step times
+    how: A stopwatch time on one real run beats a guess. Mark guesses and it will too.
+  - what: The space
+    how: Say what cannot move, such as a sink or a door. The layout works around it.
+  - what: Safety rules
+    how: Name any rule on lifting, heat or tools. The layout respects it.
+  - what: Staff input
+    how: Paste what staff say slows them. It uses it before changing the plan.
+
+judge:
+  - Steps and moves are counted before and after.
+  - No one has to stoop or take extra steps without a reason.
+  - A time test on one job is included.
+  - Staff are asked what they see before rollout.
+  - Every step has a time, or a guess marked as a guess.
+
+test:
+  - Walk through the layout on paper with someone who does the job and mark anything awkward.
+  - Time one job under the old and new layout and compare.
+  - Check the heights and distances against the people who will use them.
+  - Run it twice and compare the station order.
+
+improve:
+  - Add your space limits and safety rules to step 2.
+  - Add typical step times for your job so the guesses are closer.
+  - Save the trial results to your notes.
+  - Pair it with "Waste and by-product finder" to find scrap and idle time in the new flow.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Counting moves and reordering steps is text work any strong chat AI handles."}
+    - {name: "A stopwatch or phone timer", why: "Real step times make the before and after real."}
+  inputs:
+    - "A sketch or photo of the space"
+    - "The count of units made per day"
+    - "Where mistakes or delays happen now"
+
+terms:
+  - term: Move
+    meaning: One time a person or a part changes place to do the next step.
+  - term: Drop place
+    meaning: The set spot where a person leaves the work for the next person.

@@ -1,0 +1,133 @@
+new_slug: customer-success-plan-writer
+name: "Customer success plan writer"
+summary: "Paste why customers cancel. Get a plan for getting buyers to a result, with onboarding, teaching and a community step."
+job: understand-customers
+thinking: medium
+thinking_why: "It sorts cancel reasons and chooses where to spend, within fixed steps."
+
+headline: "Customer success plan writer"
+subhead: "Give it the reasons customers cancel and what you can spend. It names the result they paid for, finds where they stall and plans onboarding, teaching and a community step. You get a dated plan with a warning signal for each risk."
+
+explain: |
+  When a customer pays and then stalls, the sale was only half done. They did not get what they paid for, so they leave, and the money you spent to win them goes with them. Most fixes go straight to new features, which rarely addresses where people got stuck.
+
+  This skill starts from the result the customer wanted and works back. It sorts the reasons people leave, finds the first moment each group stalled, then plans three things: the first days, teaching that doubles as public content, and a place where customers help each other. For each risk it picks a signal you can watch and a response. Each step has an owner, a date and a cost that fits your budget.
+
+when:
+  - "Many new customers cancel or go quiet in the first weeks."
+  - "You have cancel survey answers or support emails and no plan from them."
+  - "You sell on repeat payments and want fewer people to leave."
+
+you_give:
+  - "What you want to fix, and what you can spend"
+  - "Cancel reasons, support messages or reviews with dates (optional)"
+  - "What the customer is trying to achieve, if you know it (optional)"
+you_get:
+  - "The result the customer paid for, in their words"
+  - "The leave reasons in groups with the stall points"
+  - "A first-days plan, teaching list and community step"
+  - "Warning signals with a response, plus owners, dates and cost"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say what you sell and what you want to fix."
+  - "Paste cancel reasons, support emails or reviews, with dates."
+  - "State your budget in time and money."
+  - "Pick one step from the plan to start this week, usually the first-days plan."
+
+how_it_works:
+  - title: "States the result"
+    text: "Writes what the customer paid for in their words, not as a feature."
+  - title: "Sorts the exits"
+    text: "Groups the reasons people leave and counts them."
+  - title: "Finds the stall"
+    text: "Pins down the first moment each group stopped moving."
+  - title: "Plans the first days"
+    text: "Lays out a day-by-day start with an early first win."
+  - title: "Plans teaching"
+    text: "Lists lessons that answer the stalls and also help non-customers."
+  - title: "Plans a community"
+    text: "Picks a simple place for customers to help each other."
+  - title: "Sets warning signals"
+    text: "Names a visible sign and a response for each risk."
+  - title: "Fits the budget"
+    text: "Gives each step an owner, date and cost, and trims to what you can pay."
+
+output_shape: |
+  RESULT THE CUSTOMER PAID FOR
+  <one line in their words>
+
+  WHY THEY LEAVE
+  <group>: <count> | Top two marked
+
+  WHERE THEY STALL
+  <group>: <day or step> | <quote>
+
+  FIRST DAYS
+  Day <n>: customer does <action>; we do <action>
+  First win: <sign> by day <n>
+
+  TEACHING
+  <n>. <lesson> | answers <stall> | format <x>
+
+  COMMUNITY
+  <form, host, first month, rule>
+
+  WARNING SIGNALS
+  <risk> | <signal and threshold> | <response, who, days>
+
+  STEPS, OWNERS, COST
+  <step> | <owner> | <date> | <cost>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "The cancel data"
+    how: "Real reasons with dates give you real stall points. Without them, every stall is a guess and marked as one."
+  - what: "Your budget"
+    how: "Say how many hours and how much money. The plan is trimmed to fit."
+  - what: "The result"
+    how: "If you know exactly what customers want to achieve, say it. It sharpens the first win."
+  - what: "Team size"
+    how: "A team of one gets a very small community step. Say who is available."
+
+judge:
+  - "The result is something a customer would say, not a feature."
+  - "Each stall point is backed by a line from your data."
+  - "The first win can be checked, not just felt."
+  - "Every warning signal is something you can actually see."
+  - "Every step has a name and a date."
+
+test:
+  - "Run it on a past month of cancel reasons and see if the top group matches what your team feels."
+  - "Check one stall point against your records of what customers did."
+  - "Try the first-days plan with five new customers and count how many reach the first win."
+  - "Re-run in three months and see if the top reason moved."
+
+improve:
+  - "Add your real onboarding steps to the skill file so the plan builds on what exists."
+  - "Add your product's usual first win to step 4."
+  - "Save each quarter's cancel groups to your brand file to track change."
+  - "Pair it with Customer buying reasons finder to learn why people joined."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting cancel reasons and drafting a plan is text work any strong chat AI does well with this skill."}
+    - {name: "Your help desk or survey tool", why: "Gives you the cancel reasons and dates to paste in."}
+  inputs:
+    - "A cancel survey export"
+    - "Support tickets from customers who left"
+    - "Login or usage data for a few customers who stayed and a few who left"
+    - "Your current onboarding emails"
+
+terms:
+  - term: "First win"
+    meaning: "A small sign, early on, that the customer is getting the result."
+  - term: "Onboarding"
+    meaning: "The steps you take to get a new customer started."
+  - term: "Stall point"
+    meaning: "The step or day where a customer stopped making progress."

@@ -1,0 +1,106 @@
+new_slug: guide-outreach-list-planner
+name: Guide outreach list planner
+summary: Paste your new guide and topic. Get lists of who to contact, a personal note for each type, and a send-and-track plan.
+job: grow-social
+thinking: medium
+thinking_why: It builds lists and writes personal notes, which needs judgement about fit.
+headline: Guide outreach list planner
+subhead: Give it your new guide and its topic. It checks the guide is worth sharing, builds lists of who to contact by type, writes a note template for each type and plans a small first send. You get the lists, the notes and a way to track replies.
+explain: |
+  A guide that nobody hears about does nothing. Sending the same message to thousands of people rarely works, and people can tell. Outreach works when the guide is better than what is already out there and each note shows you read the other person's site.
+
+  This skill checks the guide first: is it more detailed than the top rival page and well designed? It then builds four lists of about 200 contacts by type, with names and emails. It writes the note templates before the guide goes live, plans a small first send so you can learn which wording works, and tracks replies per list. The reply rates it quotes are from a 2013 interview. They are a reference, not a promise.
+when:
+  - You have just finished a long guide and need people to see it.
+  - You are about to email many people and want each note to feel personal.
+  - You sent outreach before and got no replies.
+you_give:
+  - The guide (a link, or its text) and its topic
+  - Who the guide is for
+  - The top rival pages on the same topic (optional)
+  - What you offer the people you contact (optional)
+you_get:
+  - A check that the guide is worth sharing
+  - Four lists of about 200 contacts each, by type
+  - A personal note template for each type
+  - A send-and-track plan with a small first send
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Give the guide and the topic, and name the top rival pages if you know them.
+  - Review the lists, and add real names and emails from your research.
+  - Write each note with the person's own site in it, then send a few hundred first.
+  - Track replies by list, then bring the numbers back.
+how_it_works:
+  - title: Checks the guide
+    text: Compares it with the top rival page for depth and design.
+  - title: Builds four lists
+    text: Relevant sites, blogs on the topic, Facebook pages and Twitter profiles, about 200 each.
+  - title: Writes the templates
+    text: One note per type, drafted before the guide goes live.
+  - title: Makes each note personal
+    text: Names the person's site and says why the guide fits their readers.
+  - title: Plans a small send
+    text: A few hundred first, learn the wording, then grow slowly.
+  - title: Sets the tracking
+    text: Replies and shares per list, with a comparison to a launch without outreach.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  GUIDE CHECK
+  Rival page: <the top rival> | Ours is more detailed: <yes or no, how> | Designed: <yes or no>
+
+  LISTS (about 200 each)
+  Sites: <who fits, how to find them> | Blogs: <...> | Facebook pages: <...> | Twitter profiles: <...>
+  Each row: name | site | email or handle | why it fits
+
+  NOTES (one per list)
+  <type>: Subject: <...>
+  Hi <name>, <line naming their site>... <why the guide fits their readers>... <the link>
+
+  SEND PLAN
+  Batch 1: <n> | Stop rule: <...> | Then: <...>
+
+  TRACKING
+  Replies and shares per list | Compare with: <a launch without outreach>
+  (2013 reference rates, not promises)
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: The rival pages
+    how: Name the top two or three. The depth check needs them.
+  - what: How personal the notes are
+    how: Add a fact about each person's site. Notes with a real detail get more replies than templates.
+  - what: The send size
+    how: A few hundred is the start. Raise it only after the first replies.
+  - what: The list types
+    how: Swap a type that does not fit your field for one that does, such as podcasts or newsletters.
+judge:
+  - Every note names the person's own site.
+  - No two notes in a send are identical.
+  - The guide is checked as more detailed than the top rival page before outreach.
+  - The send size starts small with a stated stop rule.
+  - Rates quoted are labelled as 2013 figures, not promises.
+test:
+  - Read one note as if you were the recipient. Would you reply?
+  - Send ten notes and count replies before you send more.
+  - Run it twice. The list types should stay the same.
+  - Compare your reply rates with the 2013 reference and note any difference.
+improve:
+  - Add the sites and communities you already know to the lists.
+  - Add words you never use in a note to the personal step.
+  - Save the wording that got replies to your outreach file.
+  - Pair it with a skill that writes the guide itself.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Drafting notes and sorting lists is text work any strong chat AI does well with this skill.
+    - name: A spreadsheet
+      why: Holds the lists, the notes sent and the replies, one row per person.
+  inputs:
+    - The top rival pages on your topic
+    - A list of sites you already know and read
+    - The stats of past outreach, if any
+terms:
+  - term: Outreach
+    meaning: Contacting people one by one to show them something, in the hope they share or link to it.

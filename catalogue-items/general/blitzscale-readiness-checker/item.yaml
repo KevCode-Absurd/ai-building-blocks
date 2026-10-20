@@ -1,0 +1,19 @@
+slug: blitzscale-readiness-checker
+name: "Blitzscale readiness checker"
+summary: "Describe your product and market. Get a check on whether to grow at speed, and a plan for the chaos."
+category: general
+type: skill
+role: check
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [reid-hoffman]
+credits:
+  - {title: "Reid Hoffman on blitzscaling, GIC Meets interview", by: "Reid Hoffman", used: "Choosing speed over efficiency only when the conditions hold, and planning for what breaks first"}
+  - {title: "Reid Hoffman on network effects, interview with James Currier", by: "NFX", used: "Whether a product gets more valuable with each user, and how people find it"}

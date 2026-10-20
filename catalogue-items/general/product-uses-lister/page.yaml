@@ -1,0 +1,115 @@
+new_slug: product-uses-lister
+name: "Product uses lister"
+summary: "Paste what your product does. Get a long list of uses, ranked by who would pay, with the first one to prove."
+job: plan-strategy
+thinking: medium
+thinking_why: "It needs wide, creative listing first and then careful sorting by who pays, but the steps are fixed."
+
+headline: "Product uses lister"
+subhead: Paste what your product or invention does in plain terms. It lists every use it can think of, groups them by who would pay, marks which ones a buyer wants now and picks the first one to prove, with the test that proves it.
+
+explain: |
+  Most makers see one use for their product, the one they built it for. That use may be the weakest market. Others have been waiting for it and you never looked.
+
+  This skill starts from what the product does, not what you sold it for. It lists many uses, even odd ones, then groups them by who would pay. It marks which uses a buyer wants now, names what else a buyer needs for each use to work (a skill, a part, a permission), and picks the first use to prove. It ends with the test that would show if people pay, and states the limits so nothing is claimed that the product cannot do.
+
+when:
+  - You have a product or tool and only one way to sell it.
+  - Sales have stalled in your first market.
+  - You are about to choose where to focus a launch.
+
+you_give:
+  - "What the product does, in plain terms and measured facts"
+  - "What it cannot do or where it fails"
+  - "Who buys it now (optional)"
+  - "Cost to make and a rough price (optional)"
+
+you_get:
+  - "At least ten uses, each with a payer"
+  - "Uses grouped by who would pay, with the ones a buyer wants now marked"
+  - "What else a buyer needs for each top use to work"
+  - "The first use to prove, and a test with a pass line"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Write what the product does, using facts: speed, size, cost, what it replaces."
+  - "Add its limits and who buys it today."
+  - "Read the groups and cross out any use you know is wrong, then ask it to rank again."
+  - "Run the first-use test with real buyers."
+
+how_it_works:
+  - title: States what it does
+    text: Writes the product's function in plain terms, using only the facts given.
+  - title: Lists every use
+    text: Writes as many uses as it can, including odd ones.
+  - title: Groups by payer
+    text: Sorts uses by who would pay, such as a person, a business or an institution.
+  - title: Marks what is wanted now
+    text: Flags uses where a buyer already has the need and a budget.
+  - title: Names the extras
+    text: Writes what a buyer also needs for a use to work.
+  - title: Picks the first proof
+    text: Chooses one use and designs a test with a pass line.
+
+output_shape: |
+  WHAT IT DOES
+  <function in plain terms> | limits: <what it cannot do>
+
+  USES BY PAYER
+  <payer group>
+    <use> | wanted now? yes or no | what else the buyer needs
+
+  TOP THREE USES
+  <use> | payer | why now | what stands in the way
+
+  FIRST USE TO PROVE
+  <use> | test: <what you do> | pass line: <number> | by <date>
+
+  MISSING
+  <what would sharpen the list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How exact the product facts are
+    how: Give numbers, such as speed, weight or price. Uses depend on them.
+  - what: Where you can sell
+    how: Say which places and buyers you can reach this year. Ranking favours those.
+  - what: Limits
+    how: State what it cannot do. The list will not claim it.
+  - what: Odd uses
+    how: Say if you want more odd ideas. They stay marked as odd.
+
+judge:
+  - At least ten uses are listed.
+  - Each use names a payer.
+  - The first use has a proof test with a pass line.
+  - Nothing is claimed that the product cannot do.
+  - Odd uses are marked as odd.
+
+test:
+  - "Run it on a product you already sell and check whether it finds a use you already earn from."
+  - "Show the top three to a person who might buy and ask which they would pay for."
+  - "Run it twice. The top three should overlap."
+
+improve:
+  - "Add the groups of buyers your field knows well, such as schools, clinics or studios."
+  - "Add rules your field has on claims, so uses stay within them."
+  - "Keep a log of tested uses and their results."
+  - "Pair it with a customer interview skill to test the top use."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Wide listing and sorting by group is text work any strong chat AI does well."}
+    - {name: "A short survey form", why: "A fast way to ask ten likely buyers what they would pay for."}
+  inputs:
+    - "A spec sheet or data sheet for the product"
+    - "Notes from calls with current buyers"
+    - "Support questions that show unplanned uses"
+
+terms:
+  - term: Payer
+    meaning: The person or group that would hand over money for a use, who may not be the one who uses it.
+  - term: Pass line
+    meaning: The result a test must reach, set before the test starts, to count as a yes.

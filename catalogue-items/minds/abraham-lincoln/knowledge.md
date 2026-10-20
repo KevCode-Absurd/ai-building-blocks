@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Re-read on 2026-10-20 from the 1907 collection of his speeches and letters (S10): the Greeley reply, the letters to McClellan and to Grant, and the 1864 letter to Grant.
+
 A note on method: Lincoln was a political leader, so this data set sticks to his leadership and ideas as the record shows them. It says nothing about today's politics. His speeches and letters are in the public domain, and we quote a few short lines from them. He lived in a time of slavery and civil war, and some of his views on race were those of his era; the criticism section covers them. Where he changed his mind, we say when.
 
 ## In one paragraph
@@ -46,6 +48,16 @@ He kept a close eye on the army and its generals [S1]. He removed George McClell
 
 How he applied it: when he gave Joseph Hooker command in 1863, he wrote a letter that praised Hooker's courage and skill, then told him plainly what he was not satisfied with, including loose talk that the country needed a dictator [S8]. He replied that only generals who win can set up dictators, so Hooker should bring him victories, and warned him against rashness [S8].
 
+### Put your doubts as questions, not orders
+
+When Lincoln and McClellan had rival plans for the army in February 1862, Lincoln wrote that he would gladly drop his own if McClellan answered five questions. Does your plan cost more time and money? Is victory surer, and worth more? Does it cut the enemy's lines of supply? Is retreat harder if it fails? [S10] In the same letter he told McClellan privately how his stand on army corps was being read by others, and asked whether he was strong enough to face his own senior officers [S10]. He did not give a command. He asked for answers, and told the man what was being said behind his back.
+
+How he applied it: when he wrote to Horace Greeley in 1862 he left the other man's facts and tone alone, saying that if the letter had an impatient tone he waived it for an old friend, and then stated his one object [S7][S10].
+
+**Give room once trust is earned.**
+
+In April 1864 he wrote to Grant that he neither knew nor sought the details of the plans, that Grant was vigilant and self-reliant, and that he would not impose constraints. He only asked to be told if anything within his power was missing [S10]. This is the opposite of his handling of McClellan.
+
 ### Admit when you were wrong
 
 Lincoln was willing to say in writing that he had misjudged. After Grant took Vicksburg in July 1863, Lincoln wrote to him to say he had doubted Grant's plan at several points, and that Grant had been right and he had been wrong [S9].
@@ -68,6 +80,26 @@ How he applied it: a keen reader and a storyteller who drew crowds even as a you
 - Judge by results, and replace people who won't act [S1].
 - Admit mistakes openly [S9].
 - Put the case in short, plain words that anyone can follow [S2].
+
+## Real decisions (enriched minds)
+
+### Answering Horace Greeley (22 August 1862)
+Greeley wrote an open letter to him in a newspaper. Lincoln did not argue the facts or the tone, and stated one object: to save the Union. He said he would use whatever step on slavery served it [S7][S10].
+
+### Questioning McClellan's plan (3 February 1862)
+Instead of an order, he asked five plain questions on time and money, certainty of victory, value, supply lines and retreat. He also told McClellan how his stance on army corps was being read in Washington [S10].
+
+### Giving Hooker command with a warning (26 January 1863)
+He praised Hooker, named what he disliked, including talk of a dictator, and said only winning generals set up dictators [S8].
+
+### Owning a mistake to Grant (13 July 1863)
+After Vicksburg, he wrote that he had doubted Grant's moves, and that Grant was right and he was wrong [S9][S10].
+
+### Leaving Grant room (30 April 1864)
+Having found a general who fights, he said he neither knew nor sought the plans and imposed no constraints [S10].
+
+### Keeping rivals in the cabinet
+He named Seward, Chase and Bates, who had run against him, and later made Chase chief justice [S1].
 
 ## Where he stood
 
@@ -119,5 +151,5 @@ All from works in the public domain.
 - "A house divided against itself cannot stand." (House Divided speech, 1858) [S4]
 - "As our case is new, so we must think anew, and act anew." (Message to Congress, 1862) [S6]
 - "you were right, and I was wrong." (Letter to Grant, 1863) [S9]
-- "government of the people, by the people, for the people, shall not perish from the earth" (Gettysburg Address, 1863) [S2]
+- "government of the people, by the people, for the people" (Gettysburg Address, 1863) [S2]
 - "With malice toward none; with charity for all" (Second Inaugural, 1865) [S3]

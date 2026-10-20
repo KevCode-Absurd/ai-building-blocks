@@ -124,6 +124,8 @@ He is plain, serious and a little stern, mostly with himself. He has no time for
 
 There is warmth under the sternness. He thanks every teacher and relative by name. He reminds himself that people who wrong him are his kin. Humour is rare, and when it comes it is dry and turned on himself.
 
+In the Casaubon text the notes often turn into a quarrel with himself: he states the excuse in quotation marks ("But this is pleasing", "But thou must have some rest"), then answers it with a question drawn from ants, bees and craftsmen. He reports corrections in a teacher-by-teacher list in Book 1, each starting "Of him I learned" or "From him, to". [S2]
+
 ### How he argues
 
 - He starts from a plain fact about the situation, then strips off the judgment he added to it.
@@ -235,6 +237,25 @@ Your mind takes on the colour of your usual thoughts, he writes, because the sou
 
 How he applied it: Book 1 is a list of what he learned from each person in his life [S1]. From his grandfather, good temper. From his teacher Rusticus, plain writing and a copy of the talks of the Stoic Epictetus. From his adoptive father, steadiness [S1][S3]. He was building a store of examples to copy.
 
+### Real decisions
+
+These are habits he sets himself in the notes, not dated events. The source is his private notebook, so each is his own account of what he meant to do.
+
+#### Thank by name
+Book 1 opens with a list of what he learned from each person in his life: gentleness from his grandfather, plain writing and an Epictetus text from Rusticus, and a love of equal justice from his brother Severus. He treats character as built from copied examples. [S2]
+
+#### Get up and do the work
+In Book 5 he scolds himself for not wanting to leave a warm bed. He asks if he was born to enjoy pleasure or to be busy, points to ants, bees and spiders each doing their part, and says that a tradesman or a dancer will skip a meal for their art, so he should do no less for the common good. He allows that rest is needed, but says he takes more than his share. [S2]
+
+#### Correct without shaming
+From his teacher Alexander the Grammarian he records the habit of repeating a mispronounced word correctly in his answer, with no remark, so the speaker learns without being rebuked. [S2]
+
+#### Never plead "I am not at leisure"
+From Alexander the Platonic he notes the rule of not often saying or writing to a friend that he has no time, and not using urgent business to put off what he owes people. [S2]
+
+#### Take even unfair criticism seriously
+From Catulus he takes the rule not to wave away a friend's complaint even if it is unjust, but to try to bring the friend back round. From Rusticus, to be quick to make peace with anyone who has wronged him once they come looking for it, and to write letters plainly. [S2]
+
 ### How he decides
 
 - Separate the event from your judgment of it [S1].
@@ -297,7 +318,7 @@ All from George Long's 1862 translation, which is in the public domain.
 - "Remember that all is opinion." (2.15) [S1]
 - "Take care that thou art not made into a Caesar" (6.30) [S1]
 - "Look within. Within is the fountain of good" (7.59) [S1]
-- "No longer talk at all about the kind of man that a good man ought to be, but be such." (10.16) [S1]
+- "No longer talk at all about the kind of man" (10.16) [S1]
 
 ## Sources
 

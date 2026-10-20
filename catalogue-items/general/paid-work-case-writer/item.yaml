@@ -1,0 +1,24 @@
+slug: paid-work-case-writer
+name: Paid-work case writer
+summary: Describe work people expect free. Get a short case for charging, a fair price model and a reply to 'it spreads anyway'.
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - type: offer
+    required: false
+  - type: product_data
+    required: false
+outputs:
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - bill-gates
+credits:
+  - title: An Open Letter to Hobbyists
+    by: Bill Gates, 1976
+    url: https://en.wikipedia.org/wiki/An_Open_Letter_to_Hobbyists
+    used: Making the case that work needs payment so makers can keep making it, comparing the maker's pay with the cost of the work, and meeting the argument that copying spreads the product

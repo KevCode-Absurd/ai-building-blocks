@@ -1,0 +1,118 @@
+new_slug: role-task-breakdown-for-ai-help
+name: "Role task breakdown for AI help"
+summary: "Describe a job and who does it. Get the tasks that drain or endanger people and where AI can help."
+job: set-up-ai
+thinking: medium
+thinking_why: "It sorts tasks and flags risks with fixed questions, which takes care but not deep reasoning."
+
+headline: "Role task breakdown for AI help"
+subhead: Describe a job and the people who do it. It breaks the job into tasks, marks those that drain time, tire people or put them at risk, and picks where AI can take the load, with a person in charge of every decision that matters.
+
+explain: |
+  Plans to add AI to a job usually start from the tool: where can we use it? That gets you automation of whatever is easy, and sometimes of the part of the job people care about most. It rarely asks which tasks wear people down or put them at risk.
+
+  This skill starts from the job. It breaks the role into tasks, not the whole job, and marks the tasks that drain time, tire people or put them at risk. It picks those where AI can take the load and leaves the human work to people. A person stays in charge of each decision that matters. It asks who builds the AI, who checks it, and who could be left out or harmed, and it sets how to test the change with the people who do the job.
+
+when:
+  - You want AI to help a team and are not sure which tasks to start with.
+  - People in a role are overloaded and you suspect much of it is routine.
+  - You need to show that a plan to use AI protects people and their judgment.
+
+you_give:
+  - The role, who does it and a typical week
+  - Where people lose time, get tired or face risk (optional)
+  - What data or tools the role uses (optional)
+you_get:
+  - The role broken into tasks, each marked for drain, tiredness or risk
+  - The tasks where AI can take the load, and the human work it leaves
+  - A named person in charge of each decision, and the risks to check
+  - How to test it with the people who do the job
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the role and a typical week. Ask people in the role to add what they dread doing.
+  - Check the task list with people who do the job before you trust the picks.
+  - Read the risks list. Fix any gaps in who checks the AI.
+  - Run the small test it sets with a few of the people before you roll it out.
+
+how_it_works:
+  - title: Breaks the role into tasks
+    text: Splits the role into tasks, not treating the whole job as one thing.
+  - title: Marks the drain and risk
+    text: Marks tasks that drain time, tire people or put them at risk.
+  - title: Picks where AI helps
+    text: Picks tasks where AI can take the load and leaves the human work to people.
+  - title: Keeps a person in charge
+    text: Names a human owner for each decision that matters.
+  - title: Asks who and how
+    text: Asks who built it, who checks it, and who could be left out or harmed.
+  - title: Plans the test
+    text: Sets how to test the change with the people who do the job.
+
+output_shape: |
+  THE ROLE
+  <role, who does it, what a week looks like>
+
+  TASKS
+  <task> | how often: <n> | drain / tiring / risky: <which, why> | AI: take / assist / leave to people
+
+  WHAT AI TAKES ON
+  <task> | what it does | human owner of the decision: <name or role>
+
+  WHAT STAYS WITH PEOPLE
+  <task> | why
+
+  RISKS TO CHECK
+  Built by: <who>  Checked by: <who>
+  Could be left out or harmed: <groups>
+  Privacy and bias: <risks>
+
+  HOW TO TEST WITH THE PEOPLE WHO DO THE JOB
+  <steps, who is asked, what counts as success>
+
+  MISSING / CHECKS MISSED
+  <lists>
+
+tweaks:
+  - what: A typical week
+    how: List what people do hour by hour. Tasks come from it, not from the job title.
+  - what: The people in the role
+    how: Say how many, and how they feel about the work. Their views shape what is taken on.
+  - what: What is risky
+    how: Name physical, legal or safety risks. These tasks are marked first.
+  - what: Data and tools used
+    how: Say what personal data is involved. Privacy risks are listed from it.
+
+judge:
+  - The plan removes tasks and not whole roles unless you said so.
+  - Each AI task has a human owner.
+  - Bias and privacy risks are named.
+  - People who do the job were asked, or a way to ask is set.
+  - Tasks are marked with a reason, not just a label.
+
+test:
+  - Show the task list to two people in the role. Ask what is missing or wrong.
+  - Try one chosen task with a small group and compare time and tiredness before and after.
+  - Run it twice. The tasks marked as draining should be similar.
+  - Check that every decision on the list has a named person.
+
+improve:
+  - Add the tasks your sector always has, such as handovers or reports, to step 1.
+  - Add your privacy rules to the risks list.
+  - Ask the people in the role to rank the tasks by how much they dread them.
+  - Pair it with "Repeat chore automation planner" to turn the chosen tasks into steps.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting tasks and listing risks is text work any strong chat AI does."}
+    - {name: "A short survey form", why: "Asking the people who do the job is the best source of which tasks drain them."}
+  inputs:
+    - "A time log or diary from a typical week"
+    - "Incident or complaint records for the role"
+    - "Notes from people who do the job"
+
+terms:
+  - term: Human owner
+    meaning: The person who makes the final call on a decision, even when AI helps prepare it.
+  - term: Bias
+    meaning: A pattern where a tool works worse for some people or groups than for others.

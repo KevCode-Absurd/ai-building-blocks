@@ -1,0 +1,22 @@
+slug: pricing-decision-planner
+name: "Pricing decision planner"
+summary: "Paste your product, its costs and what rivals charge. Get three test prices, the number to watch and the one you pick."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: true}
+  - {type: competitor_set, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+  - {type: offer}
+origin: rebuilt
+version: 1.0.0
+minds: [kazuo-inamori]
+credits:
+  - {title: "Pricing Is Management", by: "Kazuo Inamori", used: "Setting a price from the true value to the buyer, finding the price with the highest total profit, and making the top leader own the decision"}
+  - {title: "Kazuo Inamori study notes", by: "Kazuo Inamori (as summarised in the mind file)", used: "Not copying rivals, checking that the buyer is still happy at the price, and reviewing sales and margin on a set date"}

@@ -1,0 +1,124 @@
+new_slug: step-cost-tracker
+name: "Step cost tracker"
+summary: "Describe how you make your product. Get a cost for each step, a weekly count sheet and the lines that drain you."
+job: plan-strategy
+thinking: medium
+thinking_why: "It sets up counts and ranks products by true earnings, which is arithmetic with a few judgement calls."
+
+headline: "Step cost tracker"
+subhead: Describe how you make or deliver each product, from raw material to sale. It puts a count or a measure on every step and lays out a cost sheet you fill in monthly. You get the cost per product, a ranking by true earnings, the lines that drain you and the first waste to fix.
+
+explain: |
+  Many businesses know their total costs and their total sales and nothing in between. They cannot say which product earns, which step wastes or which shift does better. A year-end figure is too late to act on.
+
+  This skill lists every step from raw material to sale and puts a weight, count or timed measure on each. It sets a monthly cost per product, compares people, shifts or batches, and ranks products by what they earn after all steps. It names the lines that carry the business and the lines that drain it. It then picks one waste to fix first and sets the next count date, with a named person for each count.
+
+when:
+  - You know your sales but not what each product really costs to make.
+  - You suspect one product or step loses money but cannot show it.
+  - You want a simple count sheet your team can fill in each week.
+
+you_give:
+  - How each product is made or delivered, step by step
+  - What you buy, sell and pay for each, if you have figures
+  - A sales or cost sheet for a closed period (optional)
+  - Who does each step (optional)
+you_get:
+  - A step list with a measure for each step
+  - A monthly cost-per-product sheet and a weekly count sheet
+  - Products ranked by true earnings, and the lines that drain you
+  - The one waste to fix first, with who counts what and by when
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe each product and the steps behind it.
+  - Paste any cost or sales sheet you have for a past month.
+  - Hand the count sheet to the people who do each step.
+  - Bring the numbers back at month end and ask for the ranking again.
+
+how_it_works:
+  - title: Lists every step
+    text: Writes each step from raw material to sale, for each product.
+  - title: Sets a measure
+    text: Puts a weight, count or timed measure on each step.
+  - title: Builds the monthly sheet
+    text: Lays out cost per product by month, not once a year.
+  - title: Compares people and batches
+    text: Compares shifts, people or batches to see who saved and who wasted.
+  - title: Ranks by true earnings
+    text: Ranks products by what they earn after all steps, with shared costs spread by a stated rule.
+  - title: Names carriers and drains
+    text: Names the lines that carry the business and the lines that drain it.
+  - title: Picks the first fix
+    text: Picks one waste to fix first and sets the next count date.
+  - title: Checks the report
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  STEPS AND MEASURES
+  <product> | <step> | Measure: <unit> | Counted by: <name> | When: <day>
+
+  COST SHEET (monthly)
+  <product> | <step cost lines> | Cost per unit: <figure> | Price: <figure> | Earns: <figure>
+
+  PEOPLE, SHIFTS OR BATCHES
+  <comparison and what it shows>
+
+  RANKING
+  1. <product> | Earns: <figure>
+
+  CARRY AND DRAIN
+  Carry: <lines> | Drain: <lines>
+
+  FIX FIRST
+  <waste> | Owner: <name> | Next count: <date>
+
+  MISSING
+  <figures not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Shared costs
+    how: Say how rent or wages are shared across products. It states the rule it used so you can change it.
+  - what: Number of products
+    how: Start with the top three. A short list gets counted.
+  - what: How you count today
+    how: Tell it what you already record. It builds on that and does not ask for double entry.
+  - what: Who counts
+    how: Name the people. A count with no owner does not happen.
+
+judge:
+  - Every step has a number beside it.
+  - Costs are monthly, not year-end.
+  - Each product is ranked by true earnings.
+  - Missing figures are listed, not guessed.
+  - The report names who counts what and by when.
+
+test:
+  - Fill the sheet for one past month and see if the ranking matches your instinct. Look into any surprise.
+  - Ask the person who does a step if the measure is easy to take.
+  - Check that cost per unit times units made adds up to your total cost.
+  - Run it twice on the same data and compare the ranking.
+
+improve:
+  - Add your shared cost rules to step 3.
+  - Add steps that are easy to forget, such as returns or storage.
+  - Save each month's sheet so you can compare over time.
+  - Pair it with "Waste and by-product finder" to price what the drain lines throw away.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Building the sheet and ranking products is text and arithmetic work any strong chat AI handles."}
+    - {name: "A spreadsheet", why: "Holds the monthly sheet and adds up costs for you."}
+  inputs:
+    - "A month of costs by type"
+    - "Units made and sold by product"
+    - "Time sheets or batch records"
+
+terms:
+  - term: True earnings
+    meaning: What a product brings in after the cost of every step behind it, including a fair share of shared costs.
+  - term: Drain
+    meaning: A product or step that costs more than it earns.

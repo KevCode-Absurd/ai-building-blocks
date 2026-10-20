@@ -1,0 +1,132 @@
+new_slug: counter-demo-script-writer
+name: "Counter demo script writer"
+summary: "Describe your product and who tries it. Get a short demo script that explains it, then lets the buyer see the result."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It writes a short script to a fixed pattern from the facts given."
+
+headline: "Counter demo script writer"
+subhead: "Give it your product facts and who tries it. It names a result a buyer can see in a minute, writes a one-line explanation and plans the moment the product goes on the buyer. You also get a short version, a close and what to bring."
+
+explain: |
+  Buyers trust what they feel more than what they are told. A pitch that explains for minutes before they touch the product loses them.
+
+  This skill finds the result a buyer can see or feel quickly and sets up a before-and-after. It writes a one-line explanation, puts the product on the buyer and asks what they notice. It uses their words for the close, offers a sample or next step and asks who else would like one. It also cuts the pitch to a short slot and lists what to carry. A claim here means any promise the demo makes about results.
+
+when:
+  - "You sell at a counter, a stall, a meeting or a short pitch slot."
+  - "Your explanation is longer than the buyer's patience."
+  - "You get five minutes with a buyer and need a plan."
+
+you_give:
+  - "Your product facts"
+  - "Who tries it and where (optional)"
+  - "What you can prove (optional)"
+you_get:
+  - "A demo script, step by step"
+  - "A before-and-after set-up the buyer can see"
+  - "A short version and a packing list"
+  - "A close, a referral ask and a stop line"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your product facts and say how it is used."
+  - "Say where you will demo and how much time you get."
+  - "Practise on a friend until you can do it without notes."
+  - "Tell the skill what the buyer said and ask it to tighten the script."
+
+how_it_works:
+  - title: "Names the quick result"
+    text: "What a buyer can see or feel in a minute."
+  - title: "Finds the before and after"
+    text: "One comparison visible in seconds."
+  - title: "Writes one line"
+    text: "A short explanation of what it does and why."
+  - title: "Puts it on the buyer"
+    text: "Lines that invite them to try it."
+  - title: "Captures their words"
+    text: "An open question and what to do with the answer."
+  - title: "Closes small"
+    text: "A sample or next step and a referral ask."
+  - title: "Fits the slot"
+    text: "A short version and a packing list."
+  - title: "Adds a stop line"
+    text: "When not to push."
+
+output_shape: |
+  RESULT THE BUYER CAN SEE
+  <result>
+
+  BEFORE AND AFTER
+  <set-up>
+
+  ONE-LINE EXPLANATION
+  <20 words max>
+
+  DEMO SCRIPT
+  1. You say: <line> | You do: <action>
+
+  THE BUYER'S WORDS
+  Ask: <question> | Then: <what you do with the answer>
+
+  CLOSE
+  <sample or next step> | Ask: <who else>
+
+  SHORT VERSION (<time>)
+  <steps>
+
+  WHAT TO BRING
+  <list>
+
+  WHEN NOT TO PUSH
+  <line>
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "The time you get"
+    how: "Give the minutes. The script is cut to fit."
+  - what: "What you can carry"
+    how: "Say what is in the bag so the demo works without your office."
+  - what: "The result"
+    how: "A result seen now beats one promised later."
+  - what: "The buyer"
+    how: "Say who tries it. A shy buyer needs a gentler script."
+
+judge:
+  - "The buyer sees the result before the pitch ends."
+  - "You can prove every claim in front of them."
+  - "The explanation fits in one breath."
+  - "You ask what they notice and write it down."
+  - "There is a way to leave if they say no."
+
+test:
+  - "Time the short version. It should fit the slot you have."
+  - "Run the demo on a friend and see if they can say the difference themselves."
+  - "Run it twice. The before and after should stay close."
+  - "Try it on five buyers and count how many say what they notice."
+
+improve:
+  - "Add your product's usual set-up steps."
+  - "Add your safety or care notes that must be said."
+  - "Save the best buyer quotes in a notes file."
+  - "Pair it with \"Post-sale follow-up planner\" for after they buy."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing a short script from product facts is simple work for any strong chat AI."}
+    - {name: "A phone camera", why: "Film a practice run and watch where you talk too long."}
+  inputs:
+    - "Photos of the product in use"
+    - "A sample you can leave"
+    - "Quotes from buyers who tried it"
+
+terms:
+  - term: "Before and after"
+    meaning: "Two states of the same thing shown side by side."
+  - term: "Referral ask"
+    meaning: "A request for the names of others who might want the product."

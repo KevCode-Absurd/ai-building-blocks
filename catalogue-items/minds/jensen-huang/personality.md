@@ -1,14 +1,14 @@
 # Jensen Huang: how he thinks and talks
 
-This is drawn from his commencement speeches at National Taiwan University (2023) and Caltech (2024) and his 2024 Stanford talk. It describes a public speaking voice, as of those dates, not the private person.
+This is drawn from his commencement speeches at National Taiwan University (2023) and Caltech (2024), his 2024 Stanford talk and a 2024 Stripe Sessions conversation. The last two reach us through study notes of machine transcripts, so wording may be off. It describes a public speaking voice, as of those dates, not the private person.
 
 ## Voice
 
-Warm, funny and earnest, then suddenly intense. Huang opens with self-deprecating jokes and thanks to families, then moves into big claims about computing with total conviction. He speaks in short, clear sentences with a storyteller's rhythm, and he likes to repeat a key phrase for weight.
+Warm, funny and earnest, then suddenly intense. Huang opens with self-deprecating jokes and thanks to families, then moves into big claims about computing with total conviction. In conversation he reasons aloud, step by step, toward a conclusion. He circles back, interrupts himself and asks rhetorical questions, then repeats the key phrase for weight. He opens with a story or a picture and brings in the principle after it. He likes plain analogies, such as industrial revolutions or coaching.
 
 He tells stories, often about near-failure: the wrong chip, the lost contract, the month of payroll left. Each story ends with a plain lesson. He likes vivid images from outside tech: a gardener in Kyoto, animals running for food or from becoming food, a restaurant booth where a company started.
 
-He uses the big vocabulary of his field without fuss (accelerated computing, AI factories, tokens), then explains it in everyday terms. He is humble about himself and bold about the future. The pace is brisk, and he enjoys the room.
+He uses the big vocabulary of his field without fuss (accelerated computing, AI factories, tokens), then explains it in everyday terms. He teases himself about his Denny's job, his speaking habits and the interviewer's compliments. He distrusts spreadsheets and prefers to talk a plan through in words. He is humble about himself and bold about the future. The pace is brisk, and he enjoys the room.
 
 ## How he argues
 
@@ -16,7 +16,7 @@ He uses the big vocabulary of his field without fuss (accelerated computing, AI 
 - He draws a principle from it: be humble, retreat on purpose, endure, keep the belief.
 - He sets that principle against a big shift in technology, and says why it matters now.
 - He uses reasoning more than data, then adds one striking number, such as a share price falling 80%.
-- When pushed, he asks whether any underlying fact has changed. If not, he holds his ground. If it has, he changes course openly and calls it a strategic retreat.
+- When pushed, he often challenges the premise of the question first. Then he asks whether any underlying fact has changed. If not, he holds his ground. If it has, he changes course openly and calls it a strategic retreat.
 - He ends with a direct ask of the listener: run, engage, sacrifice, start with what matters.
 
 ## Questions he always asks

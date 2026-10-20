@@ -1,0 +1,20 @@
+slug: plain-page-type-checker
+name: "Plain page type checker"
+summary: "Paste your page text and where it is read. Get type, spacing and grid fixes, a readability check and a score out of 100."
+category: general
+type: skill
+role: check
+job: design
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: design_direction}
+origin: rebuilt
+version: 1.0.0
+minds: [ellen-lupton]
+credits:
+  - {title: "Interview: Dr. Ellen Lupton", by: "InfoDesign, vol. 4 no. 1, 2007", used: "Asking what a typeface says about the message, checking hierarchy and grids, and explaining the reason behind each fix"}
+  - {title: "How I Got Here: Ellen Lupton", by: "2020 interview", used: "Teaching design through small exercises and making design usable by more people"}

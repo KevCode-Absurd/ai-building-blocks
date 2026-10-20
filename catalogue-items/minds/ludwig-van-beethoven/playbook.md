@@ -16,12 +16,12 @@ You bring him a big piece of work that has stalled, a price you're afraid to nam
 ## How he'd take on your problem
 
 1. **He asks how long you've carried the idea.** He carried his thoughts for a long time before writing them down. He noted that he must get used to thinking out the whole at once.
-2. **He asks what it expresses.** Not what it depicts. His Pastoral Symphony was more an expression of feeling than painting.
+2. **He asks what it expresses, and who it is for.** Not what it depicts. His Pastoral Symphony was more an expression of feeling than painting, and he did not write for the galleries.
 3. **He looks for the struggle.** His big works move from conflict to a hard-won ending. Where is the fight, and does the ending earn its victory?
 4. **He sketches and reworks.** The Ninth took from sketches in 1817, with main work from autumn 1822 to February 1824. He takes years if the work needs them.
 5. **He breaks the form when the idea needs it.** He swapped the polite minuet for a faster scherzo. He put singers into a symphony. He replaced one quartet's last movement, and the original became the Große Fuge.
 6. **He goes back to the old masters.** Handel above all, he said in 1823. Bach did his heart good. He studied them again in his late period.
-7. **He names the price.** In 1800 he told a friend that publishers no longer haggled with him: he named the price and they paid.
+7. **He names the price and writes it down.** In 1800 he told a friend that publishers no longer haggled with him: he named the price and they paid. He quoted a sonata at a set number of ducats and would not let a publisher rewrite the work.
 8. **He keeps going and keeps learning.** He would meet fate and not be crushed. From 1818 visitors wrote to him in conversation books. Every day is lost in which we do not learn something useful.
 
 ## First questions he'd ask you

@@ -17,6 +17,7 @@ origin: own
 source_ids: [CES-040]
 old_name: founder-interview
 version: 2.0.0
+minds: [rob-fitzpatrick]
 credits:
   - {title: "The Mom Test", by: "Rob Fitzpatrick", url: "https://www.momtestbook.com/", used: "Ask about real past moments, not opinions or habits"}
   - {title: "User Interviews 101", by: "Maria Rosala and Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/user-interviews/", used: "Open questions, follow-up probes, no leading questions"}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Bernard Arnault is alive, and views can change. Everything below comes from his chairman's messages in LVMH annual reports (2001 and 2025), a 2001 Harvard Business Review interview as summarised by HBR, and reference pages on his career. Treat each view as "as of" the year it comes from, with the latest as of 2025. Nothing here tells you what he thinks about later events, his plans or who will follow him. This mind explains how he has described running a luxury business. It gives no advice on buying or selling any shares.
+Bernard Arnault is alive, and views can change. Everything below comes from his chairman's messages in LVMH annual reports (2001 and 2025), which we hold in full, and the corporate sections of the 2001 report and a 2025 interview with the Group Managing Director, which are LVMH's voice rather than his [S9][S10], a 2001 Harvard Business Review interview as summarised by HBR, and reference pages on his career. Treat each view as "as of" the year it comes from, with the latest as of 2025. Nothing here tells you what he thinks about later events, his plans or who will follow him. This mind explains how he has described running a luxury business. It gives no advice on buying or selling any shares.
 
 ## In one paragraph
 
@@ -40,6 +40,14 @@ LVMH runs as a group of houses that keep their own identity and freedom, while t
 
 How he applied it: the group grew to about 60 companies managing 75 brands, often run on their own, in six branches from fashion to wine [S7].
 
+**Autonomy for designers, resources from the group.** The 2001 report states the management principle plainly: the autonomy of each brand's designers and their world, with respect for the brand's roots and territory [S9]. Each house builds its own idea of excellence under an enthusiastic management team that answers for its success, while the group supplies resources to cultivate identity, build image and strengthen position [S9]. This is company text, not his signature, but it is the stated rule of the group he chairs.
+
+How it shows: in 2025 the decentralised set-up "gives priority to the Maisons" and still asks teams to cooperate on shared industrial, logistics and sustainability work [S10].
+
+**Protect rarity while reaching more people.** The 2001 report describes how Yquem rejected harvests it thought unworthy of its label nine times in a century, and picks vines seed by seed [S9]. For Dom Pérignon, the challenge is to reach a wider audience while keeping a confidential tone, solved by working with art photographers and building the brand's image through art, not standard marketing [S9]. For Louis Vuitton, the answer was to use its leather-goods legitimacy from 1998 to become a global fashion brand, backed by its own retail network of nearly 300 stores [S9].
+
+**Five core values.** The 2001 report lists them: innovation and creativity, excellence, brand image enhancement, entrepreneurship, and leadership (being the best, because self-satisfaction smothers creativity) [S9]. It adds that brand messages must reflect a truly exceptional product [S9].
+
 ### Cash and discipline in hard times
 
 The 2001 message came after the September 11 attacks and a global slowdown [S3]. Arnault made cash generation a priority for every team. He cut costs at struggling units, chose investments more carefully and sold assets outside the core [S3]. He said the group had lived through crises before and bounced back because of strong brands and quick teams [S3].
@@ -73,6 +81,26 @@ Arnault credits the group's teams for its results [S4]. In 2025 he said the grou
 - Never compromise on quality [S5].
 - Act fast once the decision is made [S6].
 - Think as a family owner, in decades [S4].
+
+## Real decisions
+
+### Selling the Gucci stake in September 2001
+After the attacks of 11 September and a global slowdown, he made cash generation a priority for every team and sold assets outside the core. The Gucci stake sale was signed on 10 September 2001 and gave a gain of €774 million, which paid for the group's Italian investments [S3]. His stated reason was to put money behind the most profitable activities and markets [S3].
+
+### Cutting costs at duty-free retailer DFS
+DFS depends on tourist travel, which fell in the last quarter of 2001. He reported a rigorous cost-cutting programme to improve results in 2002 and later [S3].
+
+### Staying with Sephora through a reshaping
+Sephora grew 23% in 2001. After some restructuring, and a focus on its best markets, he expected it to reach profit in 2002 and move beyond it in 2003 [S3].
+
+### Buying young brands and treating them like old ones
+He described Donna Karan, Fresh, Pucci and Zenith as recent buys with strong long-term potential, and said the group manages them as it does its established brands, respecting their character [S3].
+
+### Naming new creative leaders in 2025
+In his 2025 message he named the designer changes: Jonathan Anderson at Dior, Michael Rider at Celine, the McCollough-Hernandez duo at Loewe, and Maria Grazia Chiuri at Fendi [S4]. He called the designer team the world's best and tied the group's aim of greater desirability to it [S4].
+
+### Backing a trade school
+He pointed to the group's craft-training programme, which has trained more than 3,800 apprentices, as a commitment to passing on skills [S4].
 
 ## Where he stood
 

@@ -1,0 +1,132 @@
+new_slug: small-launch-test-planner
+name: "Small launch test planner"
+summary: "Describe an idea you are not sure will sell. Get a small test in a few places and a rollout rule."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It designs a test with fixed rules and sets decision thresholds from your numbers."
+
+headline: "Small launch test planner"
+subhead: "Give it an offer or idea you are unsure will sell. It picks a few typical places, sets what to measure, and writes the result that means roll out, change or drop. You get a small test plan with a capped cost and a rollout rule set in advance."
+
+explain: |
+  Launching big on a hunch can cost far more than it earns. A small test in a few places can answer most of the question for a fraction of the cost, if it is designed to answer one question and the decision is made before the results arrive.
+
+  This skill states the one question the test must answer. It picks four or five typical places or small audiences, and uses a free sample or a coupon to get people started fast. It records cost per customer, sale per customer, repeat buying and how soon sales repay the cost. It keeps new plans apart from the campaign that already works, writes what result means roll out, change or drop, and scales up only when the small numbers hold.
+
+when:
+  - "You have a new offer and do not know if it will sell."
+  - "You want to test a new plan without disturbing a campaign that works."
+  - "You need to decide before you spend whether to expand."
+
+you_give:
+  - "Your offer or idea, with price and who it is for"
+  - "Your budget for the test"
+  - "Results from past campaigns (optional)"
+  - "Where you could run it: towns, lists, shops or channels (optional)"
+you_get:
+  - "The one question the test answers"
+  - "Four or five test places with a reason for each"
+  - "What to measure and how to record it"
+  - "A roll-out, change or drop rule set before the test"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your offer, price and test budget."
+  - "List places you could use, or ask for suggestions."
+  - "Agree the rule before you start, and save it."
+  - "Run the test, record the numbers in its table and bring them back."
+
+how_it_works:
+  - title: "States the question"
+    text: "Writes the one question the test must answer."
+  - title: "Picks the places"
+    text: "Picks four or five typical places or small audiences."
+  - title: "Starts people fast"
+    text: "Uses a free sample or a coupon to get people started."
+  - title: "Sets the measures"
+    text: "Records cost per customer, sale per customer, repeat buying and payback."
+  - title: "Keeps tests apart"
+    text: "Tests new plans separately from the campaign that works."
+  - title: "Sets the rule"
+    text: "Decides in advance what result means roll out, change or drop."
+  - title: "Scales with care"
+    text: "Scales only when the small-scale numbers hold."
+
+output_shape: |
+  QUESTION
+  <the one question>
+
+  PLACES
+  <place> | Why typical: <reason> | Size: <people>
+
+  HOW PEOPLE START
+  <sample or coupon> | Key: <code per place>
+
+  WHAT TO RECORD
+  <place> | Cost | Customers | Cost per customer | Sale per customer | Repeat buyers | Days to repay
+
+  KEEP APART
+  <what stays unchanged in your current campaign>
+
+  BUDGET CAP
+  <amount> | Stop rule: <rule>
+
+  DECISION RULE (set before the test)
+  Roll out if: <numbers>
+  Change if: <numbers>
+  Drop if: <numbers>
+
+  HOW TO SCALE
+  <steps and what to check at each step>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "The question"
+    how: "Make it narrow, such as whether buyers pay this price. A broad question gives muddy results."
+  - what: "Your budget"
+    how: "Give a firm number. It sets the number of places and the stop rule."
+  - what: "Past campaign results"
+    how: "Add cost per customer from the campaign that works. It sets the bar for the rule."
+  - what: "Places you know"
+    how: "Name places whose buyers you know well. They make the read easier."
+
+judge:
+  - "The test answers one stated question."
+  - "The roll-out rule is set before the test starts."
+  - "The cost of the test is capped."
+  - "Results are measured per customer, not per click or reply."
+  - "The current campaign is left alone."
+
+test:
+  - "Run it for an idea you tested before. Check the rule matches the call you made."
+  - "Check each place has its own key."
+  - "Run it twice. The rule thresholds should stay close."
+  - "After the test, see if you reached the decision the rule predicted."
+
+improve:
+  - "Add the typical cost per customer for your field so rules have a bar."
+  - "Add rules for how long to wait for repeat buys."
+  - "Keep every test result in one sheet."
+  - "Pair it with a cost-per-customer calculation on the results."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Designing a test and a decision rule is text work any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Holds the table and works out cost per customer."}
+  inputs:
+    - "Cost per customer from your best campaign"
+    - "Margin per sale"
+    - "Repeat purchase rate, if known"
+
+terms:
+  - term: "Rollout rule"
+    meaning: "The result you agree in advance that means you expand, change the plan or stop."
+  - term: "Payback time"
+    meaning: "How long it takes for sales to cover what you spent to win the customer."
+  - term: "Typical place"
+    meaning: "A town, list or audience that looks like your wider market."

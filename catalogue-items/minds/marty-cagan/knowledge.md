@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Marty Cagan is alive, and views can change. Everything below comes from articles he has published on the Silicon Valley Product Group (SVPG) website between 2007 and 2026, an SVPG overview of the product operating model, a 2024 interview write-up, and his public bio. Treat each view as "as of" the article it comes from. His birth year is not in our sources, so we show the years he has been active. We leave out his private life, and nothing here speaks for him on later events.
+Marty Cagan is alive, and views can change. The local source folder holds a two-page excerpt of the second edition of INSPIRED [S12] and short records of his articles; most detail below comes from the articles themselves as listed in mind.yaml. Everything below comes from articles he has published on the Silicon Valley Product Group (SVPG) website between 2007 and 2026, an SVPG overview of the product operating model, a 2024 interview write-up, and his public bio. Treat each view as "as of" the article it comes from. His birth year is not in our sources, so we show the years he has been active. We leave out his private life, and nothing here speaks for him on later events.
 
 ## In one paragraph
 
@@ -33,6 +33,14 @@ How he applied it: he gave each risk an owner. The product manager owns value an
 In 2019 he split teams into three kinds [S5]. Delivery teams mostly work through a backlog, which he called waterfall in new packaging. Feature teams get a ranked list of features with dates, known as a roadmap, and are judged on what they ship [S5]. Empowered product teams get problems to solve and are judged on outcomes. Their job is to solve problems in ways customers love and the business can use [S5].
 
 How he applied it: he argued that with feature teams, the executive who asked for a feature carries the risk of whether it works. With empowered teams, the team carries it, and the product manager owns value and viability [S5].
+
+### Behind every great product is a product manager
+
+The opening of INSPIRED (second edition, 2017) states the book's central belief: behind every great product there is someone, usually out of sight, who led the team to combine technology and design to solve real customer problems in a way that met the needs of the business [S12]. That person usually has the title product manager, but may be a start-up co-founder, a CEO or anyone who stepped up [S12]. He says the role differs from design, engineering, marketing and project management, and is hard, "and anyone who tells you otherwise" is no favour to you [S12].
+
+How he applied it: he describes a typical product team as a product manager plus two to ten engineers, and a product designer if the product faces users [S12]. He says he knows few people who can do the job in under 60 hours a week, so he treats it as a full-time assignment, not a side duty for a designer or engineer [S12].
+
+**How he diagnoses a team.** In the 2019 article he gives tests rather than definitions: do you get a feature roadmap with dates, did your OKRs turn into a feature list, and are your people missionaries or mercenaries [S5]. He traces knock-on effects: without empowerment, designers are weak, product managers drift into project management, engineers are underused and leave [S5]. He admits exceptions: a distrustful leader can turn a good company's team into a feature team [S5]. In his own voice he signposts where he is going deeper, warns the reader in advance and answers objections before they are raised [S5].
 
 ### Outcomes over output, and over predictability
 
@@ -68,6 +76,26 @@ How he applied it: he advised people at risk to assess their skills honestly and
 - Ship small changes often [S6].
 - Let product, design and engineering share the work from the start [S2][S6].
 - Earn trust from executives by delivering outcomes [S10].
+
+## Real decisions
+
+### Calling it "discovery" instead of "requirements"
+In 2007 he chose the word discovery because it admits how uncertain the work is, and set two questions before any build: is there a real market, and can we find a solution that is useful, usable and possible [S2]. Result: a method of talking to users, prototyping with a designer and changing course on what is learned [S2].
+
+### Bringing engineers into discovery early
+He suggested engineers join while the team searches for a working solution, so they can prepare the groundwork and hiring can wait [S2]. His reason: one person making prototypes for a few weeks often learns more than a whole team spending several releases on what is really a costly prototype [S2].
+
+### Giving each risk an owner
+In 2017 he named four risks and gave each an owner: product management for value and viability, design for usability, engineering for feasibility [S3]. He also stressed that the work is shared and that strong teams tackle all four before building [S3].
+
+### Splitting teams into three kinds
+In 2019 he separated delivery teams, feature teams and empowered product teams, since people used "product team" for all three [S5]. He used it to show who carries the risk: with a feature team, the executive who asked for the feature owns whether it works; with an empowered team, the product manager owns value and viability [S5].
+
+### Writing "product management theater"
+In January 2024 he wrote that many with product titles were really backlog administrators or coordinators, and expected generative AI to speed up a reckoning [S7]. He told at-risk people to assess their skills honestly and build knowledge of the business, the data and the customer [S7].
+
+### Treating the PM job as full-time
+In INSPIRED he said the product manager role is rarely possible in under 60 hours a week, and warned that a designer or engineer who also takes it on takes on an immense amount of work [S12].
 
 ## Where he stood
 

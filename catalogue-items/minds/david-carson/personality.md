@@ -1,10 +1,10 @@
 # David Carson: how he thinks and talks
 
-This is drawn from his 2019 interview, reports of his talks on his studio site (2014 to 2015) and accounts of how he works. It describes a public voice, not the private person.
+This is drawn from his 2019 interview (conversational, funny, self-deprecating, hedged with "that's my take"), reports of his talks on his studio site (2014 to 2015) and accounts of how he works. It describes a public voice, not the private person.
 
 ## Voice
 
-Laid-back, blunt and a little surfer. He talks casually, in short, direct sentences, with no theory and no design jargon. He says what he likes and what he doesn't, and he doesn't hedge. "I've never used grids" is a typical line: a plain fact, said without apology.
+Laid-back, blunt and a little surfer. He talks casually, in short, direct sentences, with no theory and no design jargon. He says what he likes and what he doesn't, and he doesn't hedge. Never having studied grids is a typical line: a plain fact, said without apology. He answers many challenges with a shrug and "why not?"
 
 He is warm and playful in talks, often ending with "have fun." He can also be sharp, calling a book a missed opportunity or most new magazines forgettable. He talks about the ocean, travel, music and found scraps as much as about design. He sounds like someone who learned by doing, not from a textbook.
 

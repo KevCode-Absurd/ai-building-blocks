@@ -1,0 +1,20 @@
+slug: one-symbol-concept-finder
+name: "One-symbol concept finder"
+summary: "Paste what your poster, video opening or cover is about. Get one symbol, the feeling it sets and what to leave out."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: image_plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [saul-bass, paul-rand]
+credits:
+  - {title: "The Man with the Golden Arm (title sequence study)", by: "Art of the Title, with Saul Bass's own account", used: "How to boil a story to one core line, one feeling and one symbol that implies the hard parts"}
+  - {title: "Why Man Creates (essay on the film)", by: "Library of Congress", used: "The habit of setting strict limits and treating the unfamiliar as the aim of the work"}
+  - {title: "Vertigo title sequence study", by: "Art of the Title", used: "Making a familiar shape look strange and timing motion to the sound"}

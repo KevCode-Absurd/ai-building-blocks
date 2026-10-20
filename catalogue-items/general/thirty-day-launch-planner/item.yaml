@@ -1,0 +1,21 @@
+slug: thirty-day-launch-planner
+name: "Thirty day launch planner"
+summary: "Paste your idea, budget and tools. Get a 30-day plan to launch, take payment and decide to keep, kill or change."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [pieter-levels, sara-blakely]
+credits:
+  - {title: "12 Startups in 12 Months", by: "Pieter Levels", used: "A fixed deadline to launch, building with tools you already know, and sharing progress in public"}
+  - {title: "How I build my minimum viable products", by: "Pieter Levels", used: "Building only the core, putting a card payment in early and launching where the exact audience gathers"}
+  - {title: "Pieter Levels, study notes", by: "Notes in the Pieter Levels mind file", used: "Calling a project after a month and moving to the next"}
+  - {title: "Sara Blakely, what she knew and believed", by: "Notes in the Sara Blakely mind file", used: "Starting from a problem you have yourself, keeping regular income during the test and splitting work between what you do and what you pay for"}
+  - {title: "Sara Blakely, sourced quotes", by: "Collected public interviews", used: "Spending caps and getting the product in front of one key buyer"}

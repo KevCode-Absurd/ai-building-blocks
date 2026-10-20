@@ -42,6 +42,10 @@ You bring him something you want people to talk about, or a change you want peop
 
 He'd run STEPPS and pick what fits. Is there a way to make people feel like insiders? He pointed to a hidden New York bar entered through a phone booth in a hot dog shop. Is there an everyday cue? Is there a story that carries the product the way a Trojan horse carries soldiers? Blendtec's video of an iPhone shredded in a blender carried the product, and he cited a sales rise of 700 percent, though that figure comes from the company story and not a controlled study. He'd tell you the goal is rarely millions of views. It's turning customers into advocates.
 
+### An ordinary product that nobody talks about
+
+He'd say any product can be remarkable, and your job is to find the unusual or emotional angle in what you already sell. He'd ask what a customer could do with it that nobody has seen, as Blendtec did by blending odd things on a small budget. He'd ask how a private act could become visible, as Movember did with moustaches. And he'd ask what the product says about the person who shares it.
+
 ### Getting your team to use a new tool
 
 Don't push harder, because pushing makes people push back. Ask what's stopping them. Maybe the old spreadsheet feels free, so show what it really costs in hours each week. Maybe the new tool feels risky, so let one small team try it for a week with no strings. Give people a choice of how to start, so it's their decision. Then make it visible: when others see a teammate using it, they'll follow. Start with a smaller ask if the full change sits too far from what people believe today.

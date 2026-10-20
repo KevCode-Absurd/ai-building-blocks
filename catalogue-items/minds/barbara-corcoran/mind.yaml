@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Speaking", by: "barbaracorcoran.com", url: "https://www.barbaracorcoran.com/speaking/", kind: reference}
   - {n: 6, title: "Shark Tank", by: "barbaracorcoran.com", url: "https://www.barbaracorcoran.com/shark-tank/", kind: reference}
   - {n: 7, title: "Barbara Corcoran", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Barbara_Corcoran", kind: reference}
+  - {n: 8, title: "The Tim Ferriss Show #725: Barbara Corcoran (6 March 2024), transcript", by: "Barbara Corcoran with Tim Ferriss", url: "https://tim.blog/2024/03/06/barbara-corcoran-transcript/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short, upbeat follow-up email to a buyer who turned down my handmade furniture last week."}
   - {kind: use, prompt: "Make a one-day plan to test a new kitchen gadget idea on strangers before I build it."}

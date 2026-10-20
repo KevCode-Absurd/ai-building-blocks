@@ -63,6 +63,36 @@ In 1917 he added a cosmological constant to his equations so the universe could 
 - Talk it over with a trusted friend; Michele Besso was his sounding board [S5].
 - Change the model when observation changes [S1].
 
+## Real decisions (enriched minds)
+
+### Defining "at the same time" by a procedure
+
+Faced with the claim that two lightning strokes were simultaneous, Einstein refused to accept the word until there was a way to decide it by experiment. He put an observer at the midpoint between the two places and asked whether the flashes arrive together. He then raised the objection himself: this assumes light travels both halves at the same speed, which seemed to need a clock already. His answer was that the equal speed is not a discovery but a stipulation made freely, because the only demand on a definition is that it gives an empirical decision in a real case. [S2]
+
+### Asking why one case is favoured
+
+He objected that classical mechanics and the special theory both favour some reference bodies with no cause shown. He compared it to two pans on a gas range, one steaming and one not, with no flame under either: he would stay dissatisfied until some circumstance explained the difference. He said Newton saw the objection, Mach saw it most clearly, and only a theory valid for every body of reference could remove it. [S2]
+
+### The chest in empty space
+
+To link gravity and acceleration he imagined a chest pulled upward by a rope far from any star. The man inside feels pressure on his feet and sees all dropped bodies fall alike, so he may reasonably say he is at rest in a gravity field. Einstein drew from this that light must bend in a gravity field, and he warned the reader that gravity is not always only apparent: only special fields can be removed by choosing another reference body. [S2]
+
+### Naming a test that could fail
+
+He stated that light passing the sun at grazing incidence should be bent by about 1.7 seconds of arc, visible in star positions during a total eclipse, and called checking this a problem of the greatest importance for astronomers. A note in the revised edition records that the 1919 eclipse expeditions confirmed a deflection. He also stated, from the same theory, that Mercury's orbit should turn by 43 seconds of arc a century. [S2]
+
+### Keeping rods and clocks, knowing they are provisional
+
+In 1921 he said Poincare was right in the long run: rods and clocks are not irreducible elements, but built from deeper physics. He still chose to keep them as separate ideas for now, because physics had no exact theory of solid bodies and clocks to put in their place. [S3]
+
+### Dropping the state of rest for the ether
+
+In his 1920 Leiden address he argued that the ether of general relativity may exist, but cannot be given a state of motion. Giving it one would add a distinction with no physical meaning, so he kept the word and dropped the property. He called a unified field theory a great advance if it could be found, and doubted a rival attempt by Weyl would match reality. [S3]
+
+### Showing that Euclid is not forced on us
+
+To show that a finite but unbounded space is thinkable, he used flat discs and shadows on a plane and rigid figures on a sphere. His point was that whether real space is Euclidean is a question for measurement, not for pure thought. [S3]
+
 ## Where he stood
 
 **Is mathematics reality? (1921)** No. Where it is certain, it is not about reality [S3].

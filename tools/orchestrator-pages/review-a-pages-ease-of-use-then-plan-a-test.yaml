@@ -1,0 +1,108 @@
+new_slug: review-a-pages-ease-of-use-then-plan-a-test
+name: "Review a page's ease of use, then plan a test"
+summary: "Give it a page or screen. Get its usability problems, every unclear choice rated, and a one-morning test plan for three people."
+job: audit-landing-page
+thinking: high
+thinking_why: "It runs three skills in a row and has to judge a page the way a first-time visitor would. Give it your strongest model."
+
+headline: "Find where visitors get lost on a page, and test the fix in one morning"
+subhead: "Give it a page or screen and what visitors should be able to do on it. It checks the page against ten usability rules, rates every choice a first-time visitor has to make, and rewrites the vague ones. Then it plans a test you can run in one morning with three people."
+
+explain: |
+  When a page confuses people, the team that built it is the last to see it. You know where everything is, so you click through without thinking. Visitors stop at a label that could mean two things, guess wrong, and leave without telling you why.
+
+  This workflow reviews the page first, so you know what to look for. It then rates each choice by how much thought it takes, with a plain rewrite for the hard ones. The last step turns what it found into a short test: three people, a few tasks, a script to read aloud and a list of the worst problems to fix. The order comes from Steve Krug's book Don't Make Me Think, Revisited, which argues that a small test with a few people beats a large test you never get round to.
+
+when:
+  - Visitors reach your page but don't do the thing it is for, and you can't see why.
+  - You are about to pay for a redesign and want to know which problems are real before you do.
+  - You have changed a page or screen and want a quick check with real people before it goes live.
+
+you_give:
+  - The page or screen to review (a link, a screenshot or the text)
+  - What a visitor should be able to do on it, such as buy, book or find a price
+  - A saved copy of the page, if the live one can't be opened (optional)
+  - A screenshot of your store or app (optional)
+  - Notes on the layout, such as which blocks sit where (optional)
+  - A short description of your typical visitor (optional)
+  - A morning, and three people to test with, for the last step
+
+you_get:
+  - A list of usability problems on the page, with the costliest ones first
+  - Every choice a first-time visitor faces, rated for how much thought it takes, with a plain rewrite for the hard ones
+  - A one-morning test plan with who to ask, the tasks, a script to read aloud and a sheet for noting what you see
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it the page and say what a visitor should be able to do on it.
+  - It works step by step and saves each result. Read the choice ratings before you plan the test, since they tell you which tasks to give people.
+  - Run the test with three people, then fix the worst problems first.
+
+how_it_works:
+  - title: Review against ten rules
+    text: "Walks the page as a newcomer would and checks it against ten well-known usability rules. Problems are ordered by what they cost the visitor."
+  - title: Rate every choice
+    text: "Takes the problems from the review and lists each choice on the way to the goal. Rates it as obvious or needing thought, and rewrites vague labels."
+  - title: Plan the morning test
+    text: "Uses the problems and ratings to pick the few tasks that matter. Writes the script, how to find three people and a sheet for the worst problems you see."
+
+output_shape: |-
+  STEP 1: PROBLEM LIST
+    Goal: <what a visitor came to do>
+    Problems: <rule broken | where | what it costs the visitor | fix>
+    Needs a real user: <what review can't settle>
+
+  STEP 2: CHOICE RATINGS
+    Choice: <what the visitor decides> | <obvious / needs thought> | <plain rewrite>
+    Help to add: <only where a choice stays hard>
+
+  STEP 3: ONE-MORNING TEST PLAN
+    People: <three, and who to ask>
+    Tasks: <the few that matter most>
+    Script: <what to read aloud>
+    Notes sheet: <where they paused, what they said>
+    Fix list: <worst problems first>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: The goal you give it
+    how: "A goal such as buy the blue jacket in size M is checked step by step. A goal such as look around gives it nothing to measure against."
+  - what: A saved copy of the page
+    how: If the page can't be opened, give it the full text or a screenshot of each screen. It can only rate choices it can see.
+  - what: A description of your visitor
+    how: Say how much they already know about you. A first-time visitor and a returning customer get stuck in different places.
+
+judge:
+  - Every problem names the rule it breaks and where on the page it happens.
+  - The choice ratings cover the whole path to the goal, not only the first screen.
+  - Each rewrite is plainer than the label it replaces and not just a synonym.
+  - The test has three or four tasks, each one a real goal and not a quiz on your page.
+  - Nothing is claimed about how real visitors behaved, since no one has watched them yet.
+
+test:
+  - Give it a page you already know confuses people. The problem you know about should be on the list.
+  - Run it on the same page twice. The top three problems should match even if the wording differs.
+  - Run the plan with three people. Check how many of the worst problems the test also found.
+
+improve:
+  - Put your usual visitor and your top goals into the file you give it, so later runs start from them.
+  - After the test, add what people said and where they paused, and run the review again on the fixed page.
+  - Add any label you keep rewriting to a short list of words your site always uses.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reads a screenshot of the page and works through all three steps."}
+    - {name: "A screen recorder", why: "Lets you record the test sessions and replay the moments where people paused."}
+  inputs:
+    - "A screenshot of each screen on the path to the goal"
+    - "Any support questions or complaints about the page"
+    - "Your best guess at where visitors give up"
+
+terms:
+  - term: Usability rules
+    meaning: Ten widely used checks for whether a screen is clear, such as showing what is happening and matching words people already know.
+  - term: Think aloud
+    meaning: Asking a test person to say out loud what they are looking at and thinking as they use the page, while you watch and stay quiet.

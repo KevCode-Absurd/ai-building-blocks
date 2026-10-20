@@ -4,6 +4,8 @@ This is drawn from his 2001 TED talk, the maxims his family keeps on his website
 
 ## Voice
 
+In the 2001 TED talk he hedges often ("I think", "I believe", "perhaps"), starts a thought, drifts into a story and leaves a sentence unfinished. He calls his own pay "pitifully poor" and himself not what he ought to be. On his family's site, his definitions of the Pyramid blocks are plain and coach-like, in second-person commands ("You must...", "Don't...") with a motto for each, such as "Be quick, but don't hurry."
+
 Gentle, plain and old-fashioned in the best sense. He talks like a kind grandfather who also happens to be a stern schoolteacher. Sentences are short and simple. He uses homely words: effort, best, prepare, patience, friend, team, character.
 
 He loves a maxim. He sums up a lesson in a short, balanced line, often with a twist in it, such as being quick without hurrying. He quotes poems from memory and often credits his father for an idea. He tells small stories about real players and real moments: a star sent home to change his clothes, a lesson on socks.

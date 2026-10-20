@@ -1,0 +1,122 @@
+new_slug: page-issue-sorter
+name: "Page issue sorter"
+summary: "Paste a list of site problems. Get each one sorted into fix now, investigate, test or tracking, with a ranked order."
+job: audit-landing-page
+thinking: medium
+thinking_why: "It sorts into fixed buckets and ranks with reasons, which needs judgement on gain and effort."
+
+headline: "Page issue sorter"
+subhead: "Give it a list of problems from an audit or a research round. It checks the proof for each, puts every issue in exactly one bucket (tracking, fix now, investigate or test) and ranks them. You get a plan with the reasons shown."
+
+explain: |
+  A long list of page problems feels like work to do, but some items are not problems at all, some are obvious fixes, and some need a test. Mixed together, the list stalls. The team argues over the button colour while a tracking fault is corrupting every number.
+
+  This skill lists each issue with its proof. It tags tracking faults first, since they break the data. It tags obvious fixes to do now, unclear causes to investigate, and turns the rest into test ideas with a reason each might work. It ranks by likely gain and effort. Every issue sits in one bucket, and quick fixes are not held up for a test.
+
+when:
+  - "You finished an audit and have a list too long to act on."
+  - "Your team keeps debating what to test first."
+  - "You want to separate fixes you can make today from ideas that need a test."
+
+you_give:
+  - "Your list of issues, from an audit report or research notes"
+  - "The proof for each: a number, quote or screenshot"
+  - "Your goal for the page (optional)"
+  - "How many people can work on fixes (optional)"
+you_get:
+  - "Each issue in one bucket with its reason"
+  - "Test ideas written as: change, expected effect, why"
+  - "A ranked order by likely gain and effort"
+  - "A list of issues dropped for lack of proof"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your issue list and the proof for each."
+  - "Say the page goal and how much effort you can give."
+  - "Do the tracking and fix-now items first."
+  - "Plan tests only for the items in the test bucket."
+
+how_it_works:
+  - title: "Lists with proof"
+    text: "Lists every issue with the proof for it."
+  - title: "Tags tracking first"
+    text: "Tags tracking faults first, since they break the data."
+  - title: "Tags obvious fixes"
+    text: "Tags obvious fixes to do now."
+  - title: "Tags unclear causes"
+    text: "Tags unclear causes to investigate."
+  - title: "Writes test ideas"
+    text: "Turns the rest into test ideas with a reason each might work."
+  - title: "Ranks them"
+    text: "Ranks by likely gain and effort."
+
+output_shape: |
+  TRACKING
+  <issue> | Proof: <proof> | Fix: <step>
+
+  FIX NOW
+  <issue> | Proof: <proof> | Effort: <low, medium, high>
+
+  INVESTIGATE
+  <issue> | What is unclear: <question> | How to find out: <step>
+
+  TEST
+  <issue> | Change: <what> | Expected effect: <metric and direction> | Why it might work: <reason>
+
+  NO PROOF YET
+  <issue> | What proof is needed
+
+  RANKED ORDER
+  1. <issue> | Bucket | Likely gain | Effort | Reason
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Proof for each issue"
+    how: "Add a number, quote or screenshot. Issues with no proof go to a separate list."
+  - what: "Your goal"
+    how: "Name the action that counts. Gain is judged against it."
+  - what: "Your capacity"
+    how: "Say how much you can do per week. It sets how the ranking weighs effort."
+  - what: "Your traffic"
+    how: "Give visits and orders. It helps judge which test ideas you can ever read."
+
+judge:
+  - "Every issue sits in exactly one bucket."
+  - "Each test idea states what it expects to change."
+  - "Quick fixes are not held up for a test."
+  - "The ranking reasons are shown."
+  - "Tracking faults come first."
+
+test:
+  - "Run it on an old audit list. See if the obvious fixes match what your team did."
+  - "Check that no issue appears in two buckets."
+  - "Run it twice. Buckets should match for most items."
+  - "Do the fix-now items and see if any needed a test after all."
+
+improve:
+  - "Add your own rule for what counts as obvious, such as a broken link or an error message."
+  - "Add the effort scale your team uses."
+  - "Keep the ranked list as a living backlog."
+  - "Pair it with research planning for the issues you need to investigate."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and ranking a list with reasons is text work any strong chat AI does with this skill."}
+    - {name: "A spreadsheet or task board", why: "Holds the ranked list and tracks what is done."}
+  inputs:
+    - "Screenshots or numbers for each issue"
+    - "Your analytics funnel"
+    - "Notes from user tests or surveys"
+
+terms:
+  - term: "Tracking fault"
+    meaning: "A problem in how visits or sales are measured, so the numbers cannot be trusted."
+  - term: "Bucket"
+    meaning: "One of four groups an issue is sorted into: tracking, fix now, investigate or test."
+  - term: "Test idea"
+    meaning: "A change to try with a reason it might work and a number it should move."

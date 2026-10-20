@@ -75,6 +75,40 @@ How he applied it: that June he became Mathematician and Philosopher to the Gran
 - Let experience and proof decide questions about nature [S4].
 - Invite others to check your results [S3].
 
+## Real decisions (enriched minds)
+
+### Building the instrument from a rumour
+
+Around ten months before writing, Galileo heard that a Dutchman had made a telescope. A letter from Paris confirmed it, and he decided to work out the principle through the theory of refraction rather than buy or copy one. His first tube was lead, with a convex and a concave lens, giving about nine times magnification. He then made a better one above sixty times, and finally one near a thousand times, sparing neither labour nor expense. [S3]
+
+### Telling readers how to check the instrument
+
+He warned that anyone trying to repeat his sky findings needs a telescope good enough, with at least 400 times area magnification and no mistiness. To check this, he said, put two paper squares on a wall, one twenty times wider than the other, and look at the small one through the telescope with one eye and the large one bare with the other. If the two look equal, the power is right. [S3]
+
+### Raising the objection about the Moon's edge himself
+
+After arguing that the Moon is rough and mountainous, he put to the reader a serious doubt: if the lit part is so uneven, why does the Moon's rim look perfectly round? He gave two separate answers. [S3]
+
+### Watching Jupiter night after night
+
+On 7 January 1610 he noted three small stars in a line near Jupiter and took them for fixed stars. The next night they had moved to the other side, so he feared the planet had moved against the astronomers' tables. Cloud blocked 9 January. On 10 January only two showed, and by the 11th he concluded the changes belonged to the little stars, and that they should be watched with more care. [S3]
+
+### Calling on others to finish the timing
+
+He did not have time to work out the periods of the new moons, and so he summoned all astronomers to do it, warning them they would need a very accurate telescope. He also named the four bodies the Medicean stars, after his patron. [S3]
+
+### Taking the old claim at its word
+
+In Two New Sciences his spokesman ties a light stone to a heavy one and shows the old rule predicts two opposite things for the pair. He then admits the real heavy ball lands slightly ahead, by about two finger-breadths, against the ninety-nine cubits the old rule predicted. [S5]
+
+### Setting the cause aside
+
+When studying accelerated fall he declined to judge the many proposed causes. He worked out how motion behaves, in odd-number steps, and left why to later. [S6]
+
+### Writing to the Grand Duchess about Scripture and nature
+
+In 1615 he wrote that the Bible was written for ordinary people and is not a book of astronomy, so questions of nature should start from experience and proof. He said he would retract any error shown to him. [S4]
+
 ## Where he stood
 
 **Does the Earth move?** Yes. He backed Copernicus and argued for it in letters, in his 1632 *Dialogue* and against his critics [S1][S2].

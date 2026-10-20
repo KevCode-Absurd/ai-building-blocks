@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Erik Spiekermann is alive, and views can change. This data set comes mostly from his own blog posts (2016 to 2023), a 2018 interview, and reference pages from Wikipedia and the German National Library. One post is in German, and we summarise it in English. Treat each view as "as of" the year of the post it comes from. The Wikipedia article on him carries warnings about weak sourcing, so we use it for basic facts and check them where we can. Nothing here tells you what he thinks about events after 2023, apart from the facts of a 2026 prize.
+Erik Spiekermann is alive, and views can change. This data set rests on five pieces in his own words: his blog posts (2016 to 2023), the 2018 Forward Festival interview and a 2015 FontShop interview about his typeface FF Real [S10]. Reference pages from Wikipedia and the German National Library give the facts. We did not have his books, so his method for type is taken from the interviews and posts, not from the books themselves. One post is in German, and we summarise it in English. Treat each view as "as of" the year of the post it comes from. The Wikipedia article on him carries warnings about weak sourcing, so we use it for basic facts and check them where we can. Nothing here tells you what he thinks about events after 2023, apart from the facts of a 2026 prize.
 
 ## In one paragraph
 
@@ -68,6 +68,26 @@ How he applied it: he has taught as an honorary professor at the University of t
 - Before taking work: does the world need it, are the people good, do you need the money [S3]?
 - Work with your tools' limits, not against them [S6].
 - Never promise more than you can deliver [S3].
+
+## Real decisions
+
+### Making yellow the colour of Berlin transit
+After the Wall fell, Berlin had two transit networks with different looks. His team chose yellow as the shared colour for vehicles, stops and the BVG logo, and gave each mode a smaller label [S5]. In 2018 he named this the work he is proudest of and said nobody gets lost anymore. The old vehicles had all been beige [S3].
+
+### Using three questions to filter work
+By 2018 he was officially retired. He took a project only if the world needed it, the clients were decent, and he needed the money [S3]. He said he does not position his work; clients bring projects and he decides [S3].
+
+### Replying to a bland rebrand in public
+In late 2023 he wrote a quick LinkedIn reply about a large company's new logo, then reposted it on his blog as a rant. He said marketing teams overrule designers, that simplifying for screens is old thinking, and that the beigest brand will not win. He added that he did not know the full story and that some client limits are real [S4].
+
+### Building FF Real on an old model
+For FF Real he went back to a lighter medium weight of Akzidenz Grotesk that he had long admired. He said the digital medium weight had come out heavier than the old one, and he used Zurich Airport signs as the comparison. He drew a separate italic, because a slanted sans is not a proper italic. He added round punctuation and a double-storey g so a uniform face would not go flat [S10].
+
+### Keeping a letterpress shop alive with digital plates
+At his Berlin workshop p98a he made plates digitally for old presses. His line was preservation through production: working machines keep the skills alive. He ran workshops for up to twelve people on slowing down and working within limits [S7][S8].
+
+### Giving Fira Sans away
+Fira Sans was designed for Firefox OS and released free in 2013 [S1]. It shows his view that a typeface is a working tool made for a job.
 
 ## Where he stood
 

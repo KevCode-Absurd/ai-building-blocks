@@ -1,0 +1,125 @@
+new_slug: not-to-do-list-builder
+name: "Not-to-do list builder"
+summary: "Paste your week and your habits. Get a list of what to stop, with a rule and a swap for each."
+job: think-and-decide
+thinking: medium
+thinking_why: "It judges which habits cost the most and writes a checkable rule for each. The method is fixed."
+
+headline: "Not-to-do list builder"
+subhead: "Give it your week and the habits that eat it. It finds the ones that cause false emergencies, runs an 80/20 check on your tasks and clients, and writes a stop rule with a number for each. You get a short list, auto-reply and agenda wording, and a review date."
+
+explain: |
+  A to-do list says what to add. It rarely says what to remove, so it only grows. What you refuse to do decides how much of the important work gets done. The costly habits are often small: checking email all day, taking meetings with no end time, answering every ping at once.
+
+  This skill starts from where your time went. It marks the habits that make false emergencies, finds the costly few tasks and clients with an 80/20 check, and writes one stop rule per habit with a number or limit you can check. It adds an auto-reply or agenda rule where that helps, sets a protected block away from devices, and fixes a date to review what held.
+
+when:
+  - Your day is a string of small requests and the real work waits.
+  - You know which habits waste your time but have no rule that stops them.
+  - A few clients or tasks seem to take most of your energy for little return.
+
+you_give:
+  - A plan or calendar of last week, or a list of how your days went
+  - The habits you suspect cost you most
+  - Your goals this quarter (optional)
+  - Rules you cannot change, such as on-call hours (optional)
+you_get:
+  - A short list of what to stop, each with a rule that has a number or limit
+  - An 80/20 check on tasks and clients, with any to refer out and a script
+  - Wording for auto-replies or agenda rules where they help
+  - A protected block, and a review date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your week and list the habits you think cost you most.
+  - Tell it which rules you cannot change.
+  - Pick the three rules you will start with, not all of them.
+  - Set the review date and check what held.
+
+how_it_works:
+  - title: Looks at where time went
+    text: Lists where last week's time went, block by block.
+  - title: Marks false emergencies
+    text: Finds habits that create urgency that is not real, such as all-day email.
+  - title: Runs an 80/20 check
+    text: Finds the costly few tasks and clients that take most of the effort.
+  - title: Writes stop rules
+    text: Writes one rule per habit with a number or limit you can check.
+  - title: Adds helpers
+    text: Adds an auto-reply or agenda rule where it helps.
+  - title: Sets a device-free block
+    text: Protects a day or block away from devices.
+  - title: Sets a review
+    text: Fixes a date to see which rules held.
+
+output_shape: |
+  WHERE THE TIME WENT
+  <block or habit> | <hours> | <false emergency? yes/no>
+
+  80/20 CHECK
+  Costly few: <tasks or clients> | Share of effort: <x> | Share of return: <y>
+  Refer out: <name> | Script: <words>
+
+  THE NOT-TO-DO LIST
+  1. Stop <habit> | Rule: <number or limit> | Swap: <what to do instead>
+  2. ...
+
+  HELPERS
+  Auto-reply: <wording>
+  Agenda rule: <wording>
+
+  PROTECTED BLOCK
+  <day or time> away from <devices>
+
+  REVIEW
+  Check on <date>: keep <what held>, change <what did not>
+
+  MISSING
+  <facts that would change the list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your real week
+    how: Paste actual blocks or a log. Guesses hide the habits you are not aware of.
+  - what: Hard limits
+    how: Name rules you cannot change, such as on-call windows, so the skill does not stop them.
+  - what: Costly clients
+    how: Say which ones are hard to work with. The skill checks effort against return, not feelings.
+  - what: How bold you are
+    how: Say if you want three rules or ten. Three that hold beat ten that do not.
+
+judge:
+  - Each habit has a rule you can check.
+  - Limits have numbers.
+  - Any client to refer out is named with a script.
+  - Nothing on the list adds work.
+  - A review date is set.
+
+test:
+  - Pick one rule and keep it for a week. Count how often you broke it.
+  - Send the auto-reply for a week and check whether urgent messages still reach you.
+  - Run it again after the review with the new week. See which habits moved.
+  - Show the list to a colleague and ask which rule they would break first.
+
+improve:
+  - Add your own recurring habits (chat apps, news, sales calls) so they appear by name.
+  - Add the numbers that matter in your work, such as a client's revenue, for the 80/20 check.
+  - Keep each review's result in a file and paste it in next time.
+  - Pair it with "Weekly time audit planner" to see which stops free the most hours.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing rules and reply wording from a list of habits is plain text work."}
+    - {name: "Your email app's auto-reply and scheduled send", why: "It turns a stop rule into something that runs without willpower."}
+  inputs:
+    - "A time log from last week"
+    - "A list of clients with revenue and hours"
+    - "Your calendar with meeting lengths"
+
+terms:
+  - term: False emergency
+    meaning: A request that feels urgent only because of how it arrived, such as a ping, and could wait.
+  - term: 80/20 check
+    meaning: A look at whether a small share of tasks or clients takes most of your effort or brings most of your results.

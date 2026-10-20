@@ -1,0 +1,121 @@
+new_slug: team-experiment-week-planner
+name: "Team experiment week planner"
+summary: "Paste your team size and work. Get a protected experiment week, a change of setting and a way to share results."
+job: lead-people
+thinking: low
+thinking_why: "It fits your facts into a fixed plan with simple choices."
+
+headline: "Team experiment week planner"
+subhead: "Paste your team size and the work you do. It names what has gone flat, books the week before client dates, picks a new setting and sets a rule for each experiment. You get a one-page plan with a way to share results."
+
+explain: |
+  Teams that never stop delivering also stop learning. A day for ideas gets swallowed by email, and loose experiments rarely finish or reach real work.
+  
+  This skill plans one protected week. It first names what is behind the flat patch: boredom, dull content or fear. It books the week before any client dates, picks a change of setting and gives every experiment a rule that keeps it small. No client work is taken in the week. At the end, results are shown and an owner and date carry the useful ones into paid work.
+
+when:
+  - "Your team feels flat and the work all looks the same."
+  - "You have wanted to try new things but never found the time."
+  - "You want to turn a quiet season into something useful."
+
+you_give:
+  - "Team size and the work you do"
+  - "Calendar or client dates (optional)"
+  - "An existing plan (optional)"
+you_get:
+  - "A named reason for the week"
+  - "Dates, a setting and an experiments table with rules"
+  - "A show-and-keep plan and a hand-back list"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say how many people you have and what you deliver."
+  - "Paste your busy dates, or say when you are quietest."
+  - "Ask each person for one idea, however rough."
+  - "Book the week on the shared calendar the same day."
+
+how_it_works:
+  - title: "Name the block"
+    text: "Names the block: boredom, dull content or fear."
+  - title: "Put the week on the calendar first"
+    text: "Puts the experiment week on the calendar before client dates."
+  - title: "Pick a change of setting"
+    text: "Picks a change of setting for the week."
+  - title: "Set a rule for each experiment"
+    text: "Sets a rule or limit for each experiment."
+  - title: "Take no client work"
+    text: "Takes no client work in the week."
+  - title: "Choose what to show and keep"
+    text: "Chooses what to show and what to keep."
+  - title: "Hand results back to paid work"
+    text: "Decides where results feed paid work."
+  - title: "Checks its own work"
+    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+
+output_shape: |
+  THE BLOCK
+  <boredom / dull content / fear> | Sign: <what you saw>
+  
+  THE WEEK
+  <dates> | Clashes checked: <yes/no>
+  
+  SETTING
+  <place or setup>, booked by <who>
+  
+  EXPERIMENTS
+  <person> | <idea> | Rule: <limit> | Done when: <state>
+  
+  COVER
+  <who handles urgent items, what is said to clients>
+  
+  SHOW AND KEEP
+  <what is shown, to whom, what stays private>
+  
+  HAND-BACK
+  <result> -> <paid work> | Owner | Date
+  
+  MISSING
+  <gaps>
+  
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Team size"
+    how: "A team of three needs one shared experiment. A team of twelve needs groups."
+  - what: "Season"
+    how: "Tell it when you are quietest. It aims the week there."
+  - what: "Budget"
+    how: "Give a number. The setting and materials depend on it."
+  - what: "The block"
+    how: "If you are unsure what is behind the flat patch, say what people complain about."
+
+judge:
+  - "The dates are in the calendar and clear of client work."
+  - "Each experiment has a rule and a done-state."
+  - "A cover plan exists."
+  - "At least one result has an owner and a date to reach paid work."
+  - "The setting differs from the daily one."
+
+test:
+  - "Check every client date against the proposed week."
+  - "Ask a team member to say what their experiment is and where it stops."
+  - "Run it twice and see if the block named stays close."
+
+improve:
+  - "Add your own list of limits to step 4, such as fixed time or one material."
+  - "Add a recurring quarter to the plan."
+  - "Keep a log of results that reached paid work."
+  - "Pair it with \"Process and meeting cull planner\" to free time."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning and rewording are text work any strong chat AI does well with this skill."}
+    - {name: "A shared calendar", why: "Blocking the week on a team calendar makes it hard to cancel."}
+  inputs:
+    - "Your client or busy-season calendar"
+    - "Ideas people already have"
+    - "A budget figure"
+
+terms:
+

@@ -1,0 +1,18 @@
+slug: channel-decay-checker
+name: "Channel decay checker"
+summary: "Paste your results by channel over time. Get which channels are fading, why, and what to refresh or try next."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report, required: true}
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [andrew-chen]
+credits:
+  - {title: "The Law of Sh*tty Clickthroughs (2012)", by: "Andrew Chen", used: "The pattern that response falls as a channel ages, and the three causes: novelty wearing off, rivals copying and a wider audience"}

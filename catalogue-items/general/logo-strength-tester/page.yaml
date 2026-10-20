@@ -1,0 +1,124 @@
+new_slug: logo-strength-tester
+name: "Logo strength tester"
+summary: "Paste your logo ideas. Get each scored out of 100 on seven tests, with a keep or drop call."
+job: design-work
+thinking: high
+thinking_why: "It scores each idea on several tests and weighs old value against change, which needs judgement."
+
+headline: "Logo strength tester"
+subhead: "Give it your logo ideas, what the business is and where the mark will be used. It runs each idea through seven tests plus a one-colour and small-size check. You get a score out of 100 per idea and a keep, fix or drop call with one reason."
+
+explain: |
+  People judge logos by first reaction: "I like it" or "it looks dated". First reactions fade, and a mark's value comes from years of use. A good mark identifies a business, it does not explain it. A weak one gets chosen because it pictures the product, or changed because someone is bored.
+
+  This skill scores each idea on seven tests: distinct, visible, usable, memorable, universal, durable and timeless. It checks the mark in one colour and at a very small size, and asks if it only works because it pictures what you sell. For a redesign, it names who wants the change and why, and separates a real fault from a wish for change. It gives each idea a keep, fix or drop call.
+
+when:
+  - "You have several logo ideas and need a way to choose that is not taste."
+  - "Someone wants to change a mark that has been used for years."
+  - "A designer sent options and you are not sure how to judge them."
+
+you_give:
+  - "Your logo ideas (attach images; your AI can see pictures)"
+  - "What the business is and does"
+  - "Where the mark will be used, and the smallest size"
+  - "For a redesign: the current mark, how long it has been used and why change is wanted"
+you_get:
+  - "A score out of 100 for each idea, with the working"
+  - "Seven test results plus the one-colour and small-size check"
+  - "A keep, fix or drop call with one reason"
+  - "For a redesign, a plain note on who wants the change and whether the fault is real"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Attach each logo idea, one per image."
+  - "Say what the business does and where the mark will be used."
+  - "For a redesign, attach the current mark and say how long it has been in use."
+  - "Print each idea at the smallest size, in one colour, and compare with its small-size result."
+  - "Fix the \"fix\" ideas and run them again."
+
+how_it_works:
+  - title: "Says what it identifies"
+    text: "Writes what the mark must identify, not explain."
+  - title: "Runs seven tests"
+    text: "Distinct, visible, usable, memorable, universal, durable and timeless."
+  - title: "Checks one colour and small size"
+    text: "The mark must hold up with colour and detail taken away."
+  - title: "Checks for picture-leaning"
+    text: "Asks if it works only because it pictures what the business sells."
+  - title: "Sets reactions aside"
+    text: "Judges what it could mean after years of use."
+  - title: "Asks who wants change"
+    text: "Names who wants a redesign and why."
+  - title: "Separates fault from wish"
+    text: "A real fault is ugly, out of date or wrong; the rest is a wish for change."
+  - title: "Finds public use"
+    text: "Notes how long the mark has been used and how well known it is."
+
+output_shape: |
+  WHAT THE MARK MUST IDENTIFY
+  <business and what makes it different>
+
+  IDEA <n>
+  Distinct <0-10> | Visible <0-10> | Usable <0-10> | Memorable <0-10>
+  Universal <0-10> | Durable <0-10> | Timeless <0-10>
+  One colour and small size <0-15>: <what happens at the smallest size>
+  Not just a picture of the product <0-15>: <yes or no, why>
+  Score: <n> out of 100
+  Call: <keep / fix / drop> because <one reason>
+
+  FOR A REDESIGN
+  Who wants the change: <who> | Why: <reason>
+  Real fault or wish: <call and evidence>
+  Public use: <years in use, how well known>
+
+  MISSING
+  <facts that would change a score>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Smallest size"
+    how: "Give the real smallest size, such as a favicon or a pen. The small-size test uses it."
+  - what: "What the business does"
+    how: "One line is enough. It decides if the mark only pictures the product."
+  - what: "Current mark"
+    how: "For a redesign, always give the current mark. Public use counts in the call."
+  - what: "Number of ideas"
+    how: "Five or fewer gives sharper comparisons."
+
+judge:
+  - "All seven tests are scored for every idea."
+  - "The one-colour and small-size check is done."
+  - "Taste words such as like or love are not used as reasons."
+  - "Each call is keep, fix or drop with one reason."
+  - "The reason for any change is named in plain words."
+
+test:
+  - "Run it on a famous mark and see whether the scores match its reputation."
+  - "Print an idea at the smallest size in one colour and check it against the result."
+  - "Run it twice on the same ideas. The calls should match."
+  - "Show two ideas to someone for two seconds and ask which they would remember."
+
+improve:
+  - "Add your real smallest and largest sizes to \"What you need\"."
+  - "Add your competitors' marks so \"distinct\" is judged against them."
+  - "Change the weights in step 8 if one test matters more to you."
+  - "Pair it with \"Brand mark system planner\" to plan the mark as a system."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It needs to look at the logo images."}
+    - {name: "A design tool", why: "Use it to shrink and desaturate each idea for the small-size check."}
+  inputs:
+    - "The current mark with the date it started"
+    - "Competitor marks"
+    - "A list of places the mark will appear"
+    - "Customer awareness data, such as brand recall"
+
+terms:
+  - term: "Equity"
+    meaning: "The value a mark has built up from being seen and known over time."
+  - term: "Identify"
+    meaning: "Tell people who you are, as opposed to explaining what you do."

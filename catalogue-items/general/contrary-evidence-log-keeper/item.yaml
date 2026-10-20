@@ -1,0 +1,17 @@
+slug: contrary-evidence-log-keeper
+name: "Contrary evidence log keeper"
+summary: "Describe the belief you are building. Get a log of every fact against it, plus a weekly review."
+category: general
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: lessons_register}
+origin: rebuilt
+version: 1.0.0
+minds: [charles-darwin]
+credits:
+  - {title: "The Autobiography of Charles Darwin", by: "Charles Darwin", used: "The habit of writing down facts that cut against a favourite idea at once, because they fade from memory faster than the welcome ones"}

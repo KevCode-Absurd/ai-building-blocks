@@ -1,0 +1,64 @@
+# Workflow skeleton chained from the AI Blocks library (docs/INTAKE.md).
+id: lib-get-a-phone-style-video-ad-from-idea-to-cut-list
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: get-a-phone-style-video-ad-from-idea-to-cut-list
+  name: "Get a phone-style video ad from idea to cut list"
+  summary: "Give it your product and buyer. Get a creator script, a filming brief, and after filming a timed cut list."
+  when: "you want a video ad a creator films on a phone, with a script they can say naturally."
+  job: make-video-ads
+  level: intermediate
+steps:
+  - name: Pick the buyer and the angle
+    skill: ad-angle-planner
+    job: copy
+    from: "skill: ad-angle-planner"
+    method: ["Pick one level and one stage", "Copy that row into the brief", "Fill in the buyer and their doubt", "Check the brief"]
+    inputs: [brief, brand_brain!]
+    outputs: [brief]
+    note: "Start from the idea and write the brief that fixes who the ad is for and what it argues."
+  - name: Write the phone-style script
+    skill: selfie-style-video-ad-script-writer
+    job: video
+    from: "skill: selfie-style-video-ad-script-writer"
+    method: ["Settle who is speaking", "Write the spine in one line", "Write five beats", "Make it sound spoken"]
+    inputs: [brief, voc_reviews, brand_brain, persona!, product_data!]
+    outputs: [script]
+    note: "Write the creator script from the brief, with picture notes and a shot list."
+  - name: Check every line
+    skill: video-ad-script-line-checker
+    job: video
+    from: "skill: video-ad-script-line-checker"
+    method: ["Label each line by beat", "Run the checks", "Quote each weak line with a fix", "Count spoken words against the budget"]
+    inputs: [script!]
+    outputs: [audit_report]
+    note: "Check the script line by line and list the weak lines with fixes."
+  - name: Fix lines nobody would say
+    skill: ad-script-read-aloud-editor
+    job: video
+    from: "skill: ad-script-read-aloud-editor"
+    method: ["Say every line at delivery speed", "Hold each fix to five rules", "Strip machine-made habits", "Read it once more"]
+    inputs: [script]
+    outputs: [script]
+    note: "Read the script aloud and fix the lines that sound written, changing no claim or number."
+  - name: Write the filming brief
+    skill: creator-filming-brief-writer
+    job: video
+    from: "skill: creator-filming-brief-writer"
+    method: ["Write the idea in two or three sentences", "Set the run order for the shoot", "Split must-have from maybe", "Check it"]
+    inputs: [script, product_data]
+    outputs: [brief]
+    note: "Turn the final script into a brief a creator can film from."
+  - pause: "Send the brief to the creator and get the footage back."
+  - name: Plan the edit
+    skill: video-ad-edit-planner
+    job: video
+    from: "skill: video-ad-edit-planner"
+    method: ["Sort the footage by job", "Open on a clean first frame", "Plan captions and sound", "Set the exports"]
+    inputs: [footage, script, offer!, product_data!]
+    outputs: [edit_plan]
+    note: "Use the footage and the final script to write a timed cut list."

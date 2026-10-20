@@ -1,0 +1,43 @@
+id: lib-rebuild-a-page-you-admire-as-your-own-shopify-page
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: rebuild-a-page-you-admire-as-your-own-shopify-page
+  name: "Rebuild a page you admire as your own Shopify page"
+  summary: "Give it a page screenshot, your brand file and product facts. Get your own page, a design plan and Shopify files."
+  when: "you like how another brand's page is laid out and want yours built the same way in Shopify."
+  job: write-landing-page
+  level: intermediate
+steps:
+  - name: Plan the layout in your own words
+    skill: competitor-landing-page-layout-planner
+    job: page
+    from: "skill: competitor-landing-page-layout-planner"
+    method: ["Read the image before designing", "Log the system, not the content", "Decide what may be borrowed", "Build the slot map and write your copy for each slot"]
+    inputs: [reference_set, brand_brain, offer!]
+    outputs: [page_layout_spec, landing_page]
+    note: "Keeps the layout idea and fills every slot with your own facts and words."
+  - name: Plan the design
+    skill: landing-page-design-planner
+    job: page
+    from: "skill: landing-page-design-planner"
+    method: ["Settle the type, colour and rules", "Make three directions", "Design the buying moment", "Write a build brief for the chosen one"]
+    inputs: [brand_brain, landing_page]
+    outputs: [design_direction]
+    note: "Turns the page copy into three on-brand designs and a build brief."
+  - name: Build the Shopify files
+    skill: shopify-landing-page-builder
+    job: page
+    from: "skill: shopify-landing-page-builder"
+    method: ["Plan the files", "Put the words in settings, not the markup", "Read price and facts from the store", "Check before handing over"]
+    inputs: [landing_page, product_data!, design_direction!]
+    outputs: [theme_files]
+    note: "Loads the page copy and chosen design into theme files, with install steps."
+  - pause: "Upload the files to your theme, publish the page and save screenshots of it on a phone and a computer."
+  - name: Audit the live page
+    skill: product-page-screenshot-auditor
+    job: analysis
+    from: "skill: product-page-screenshot-auditor"
+    method: ["Record only what you see", "Treat your reading as a guess to test", "Compare like with like", "Score it"]
+    inputs: [store_capture, brand_brain!]
+    outputs: [audit_report]
+    note: "Looks at the built page as a shopper would and lists what blocks buying."

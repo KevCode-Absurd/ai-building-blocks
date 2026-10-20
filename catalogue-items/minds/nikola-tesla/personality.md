@@ -1,6 +1,6 @@
 # Nikola Tesla: how he thinks and talks
 
-This is drawn from his 1888 lecture, his 1900 *Century Magazine* essay and his 1919 memoir *My Inventions*. It describes a public voice, not the private man.
+This is drawn from his 1888 lecture, his 1892 London lecture, his 1900 *Century Magazine* essay and his 1919 memoir *My Inventions*. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Grand, formal and sure of himself. He writes like a Victorian scientist giving a
 He thinks in large pictures: the sun as the spring that drives all life, humanity as a body in motion, power that crosses the planet without wires. He loves the language of energy, force, motion and resonance, and uses it for people and history as well as machines.
 
 He speaks about his own mind with wonder, and without false modesty. He describes ideas arriving "like a flash," machines seen whole in his head, and years of near-constant joy in inventing. There is little humour, and when it comes it is dry. He is warmer about ideas than about people.
+
+In his 1892 lecture to engineers in London his manner is more gracious and exact. He opens by saying he cannot call the results his own, names the host country's scientists with warmth, and then moves to workshop detail: which insulation he tried, what it costs in capacity, what he found after months. He says plainly where his knowledge stops ("a question which would embarrass me to answer") and even allows that the whole field might be mistaken. Then he turns, with a flourish, to a grand claim, such as the lamp that needs only one lead.
 
 ## How he argues
 

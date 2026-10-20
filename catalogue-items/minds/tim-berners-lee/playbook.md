@@ -19,7 +19,7 @@ You bring him a system, a tool or a pile of information that has gone out of con
 1. **He starts with a real, local problem.** At CERN, knowledge about old projects kept getting lost because people kept leaving. Where do things get lost in your world?
 2. **He asks if it's a tree pretending to be a web.** A tree puts each item in one place. Real information belongs in many. Keywords only help if everyone picks the same words, and they rarely do.
 3. **He draws it.** Circles and arrows can stand for anything. The links should say how things relate: "depends on", "is part of", "made by".
-4. **He starts with what people already have.** His proposal planned gateways that showed existing sources, like the phone book, as linked pages. It had to be useful from day one, across all kinds of computers, starting with plain text.
+4. **He starts with what people already have.** His proposal planned read-only gateways that showed existing systems as linked views, plain text first, and left fancy interfaces until the core worked.
 5. **He hunts the single point of control.** Any shared point limits growth and risks total failure. Can people add to it without asking a central keeper, and without a day when everything must switch over at once?
 6. **He picks the least powerful tool.** A plain description can be read, sorted and reused by many programs. A program can only be run. He chose not to make HTML a programming language for that reason.
 7. **He runs the test of independent invention.** If someone else invented something similar on their own, would the two still work side by side?

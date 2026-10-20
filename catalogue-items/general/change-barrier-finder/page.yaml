@@ -1,0 +1,125 @@
+new_slug: change-barrier-finder
+name: "Change barrier finder"
+summary: "Describe the change you want from a person or group. Get the barriers and a plan that removes them instead of pushing."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It tests each barrier against what the person said, which takes judgement."
+
+headline: "Change barrier finder"
+subhead: "Describe the change you want and what the person or group has said. It tests five common barriers against their actual words and ranks them. You get a plan that removes the biggest barrier first, starting with a small ask and a choice of options."
+
+explain: |
+  Pushing for change makes people feel told what to do, and they resist. Often the real block is something else: attachment to what they have, a step that is too far, fear of the unknown or not enough proof.
+
+  This skill checks for five barriers and tests each against what the person said. It ranks them and writes a plan that removes the biggest one first, with a small first ask, a menu of options, an honest cost of doing nothing and a low-risk trial. Barriers with no support in their words are marked as guesses. Reactance means the urge to resist when told what to do.
+
+when:
+  - "A person or group keeps saying no to a change you believe in."
+  - "You have pushed hard and it made things worse."
+  - "You need a plan for a big change that cannot happen in one step."
+
+you_give:
+  - "The change and who must make it"
+  - "What they have said or done"
+  - "What you can offer or change (optional)"
+you_get:
+  - "Five barrier checks with evidence"
+  - "The barriers ranked"
+  - "A plan with a small first ask and choices"
+  - "An honest cost of doing nothing and a low-risk trial"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the change in a sentence."
+  - "Paste their words, emails or notes from talks."
+  - "Read the ranked barriers and check them against what you know."
+  - "Tell the skill what happened after the first ask and run it again."
+
+how_it_works:
+  - title: "States the change"
+    text: "One sentence and the person who must act."
+  - title: "Checks feeling pushed"
+    text: "Signs of resistance and a menu of options."
+  - title: "Checks attachment"
+    text: "The honest cost of doing nothing."
+  - title: "Checks distance"
+    text: "A smaller first step inside what they accept."
+  - title: "Checks uncertainty"
+    text: "A low-risk trial."
+  - title: "Checks proof"
+    text: "Two or three sources and who delivers them."
+  - title: "Ranks the barriers"
+    text: "In order, with evidence."
+  - title: "Writes the plan"
+    text: "Biggest barrier first, small ask first."
+
+output_shape: |
+  THE CHANGE
+  <change> | Who must make it: <person or group>
+
+  BARRIER CHECKS
+  Feeling pushed: <evidence or GUESS> | Fix: <questions, menu>
+  Attachment to now: <evidence or GUESS> | Fix: <cost of doing nothing>
+  Distance: <evidence or GUESS> | Fix: <smaller step>
+  Uncertainty: <evidence or GUESS> | Fix: <trial>
+  Proof: <evidence or GUESS> | Fix: <sources and who>
+
+  BARRIERS RANKED
+  1. <barrier> | Because: <their words>
+
+  THE PLAN
+  First small ask: <words>
+  Choices on offer: <list>
+  If yes: <next> | If no: <next>
+
+  MISSING
+  <what to ask them>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "Their own words"
+    how: "Quotes make the barrier tests exact. Paste them."
+  - what: "The size of the change"
+    how: "Say if it can be split into steps."
+  - what: "Who they trust"
+    how: "Name the people whose view they respect."
+  - what: "What a trial could cost"
+    how: "Say what is safe to test."
+
+judge:
+  - "Each barrier cites something they said or is marked guess."
+  - "The plan offers choices."
+  - "The first ask is small."
+  - "The cost of doing nothing is true and not scary for show."
+  - "The biggest barrier is the one addressed first."
+
+test:
+  - "Run it on a change that failed. See if the barrier ranked first matches what happened."
+  - "Run it twice. The top barrier should stay close."
+  - "Try the first small ask and note the reply."
+  - "Ask a colleague whether the ranked barriers match their view."
+
+improve:
+  - "Add the barriers common in your field to the checks."
+  - "Add rules for the size of a safe trial."
+  - "Save outcomes by barrier in a notes file."
+  - "Pair it with \"Buy-in conversation planner\" for the talk."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Testing barriers against text and writing a plan is language work a strong chat AI does well."}
+    - {name: "A notes app", why: "Keep their words and your trial results together."}
+  inputs:
+    - "Meeting notes or emails from the person"
+    - "Past attempts at the change"
+    - "A list of who else they listen to"
+
+terms:
+  - term: "Barrier"
+    meaning: "Something that holds a person back from changing."
+  - term: "Reactance"
+    meaning: "The urge to resist when someone tells you what to do."
+  - term: "Low-risk trial"
+    meaning: "A small, short, reversible test of the change."

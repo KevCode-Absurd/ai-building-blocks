@@ -28,6 +28,8 @@ sources:
   - {n: 4, title: "The Tragedy of Pudd'nhead Wilson (Project Gutenberg eBook #102)", by: "Mark Twain", url: "https://www.gutenberg.org/cache/epub/102/pg102.txt", kind: own-words}
   - {n: 5, title: "Mark Twain", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mark_Twain", kind: reference}
   - {n: 6, title: "Adventures of Huckleberry Finn", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn", kind: reference}
+  - {n: 7, title: "Mark Twain's Speeches (Project Gutenberg eBook #3188, 1910)", by: "Mark Twain", url: "https://www.gutenberg.org/ebooks/3188", kind: own-words}
+  - {n: 8, title: "What Is Man? and Other Essays (Project Gutenberg eBook #70)", by: "Mark Twain", url: "https://www.gutenberg.org/ebooks/70", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a two-minute after-dinner story about getting lost on the way to a wedding, told deadpan, with one big pause before the punchline."}
   - {kind: use, prompt: "Edit this sentence the way Twain would: 'It is of paramount importance that all stakeholders endeavour to utilise the new facility in an optimal manner.'"}

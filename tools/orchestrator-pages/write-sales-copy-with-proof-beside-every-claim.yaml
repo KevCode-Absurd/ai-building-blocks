@@ -1,0 +1,124 @@
+new_slug: write-sales-copy-with-proof-beside-every-claim
+name: "Write sales copy with proof beside every claim"
+summary: "Give it customer reviews and product facts. Get a buyer brief, two openings to test and a body with proof."
+job: write-landing-page
+
+headline: "Sales copy where every claim has its proof beside it"
+subhead: Give it customer reviews and your product facts. It writes a brief on your buyer, two different openings to test against each other, then the body and close with proof next to every claim and the deal stated plainly.
+
+explain: |
+  A long sales page fails in one of two places. The opening doesn't make the reader stop, or the body makes claims the reader can't believe. Both come from writing before you know who the reader is and what they would accept as proof.
+
+  This workflow starts with a short brief on one buyer, taken from your reviews. It then writes two openings that start from neighbouring leads, so you can test which one grabs your readers. Last, it writes the body and close from the opening's promise: it builds on one true detail, matches proof to each doubt, states the price, delivery and guarantee with every condition, and ends on one clear action.
+
+when:
+  - You're writing a long sales page or letter and want each claim to be believable.
+  - You can't decide between two ways to open and want both written to test.
+  - Your page makes claims and readers say they don't believe them.
+
+you_give:
+  - Customer reviews, copied as written
+  - Your product facts, including your price, delivery and guarantee terms
+  - Your brand file, if you have one (optional)
+  - Your offer, if you have one (optional)
+
+you_get:
+  - A short brief on the buyer and the one thing the page must move
+  - Two openings to test, from neighbouring lead types
+  - The body and close, with proof beside every claim
+  - The deal stated plainly, with every condition, and one clear ask
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Real reviews, your product facts, and your exact price and guarantee terms.
+  - It works step by step and saves each result. Choose one opening before step 3, or run step 3 on each.
+  - Check each claim against the proof beside it before the page goes live.
+
+how_it_works:
+  - title: Writes the buyer brief
+    text: Uses the buyer brief skill to find the moment people started looking and the one thing the page must move.
+  - title: Writes two openings
+    text: Uses the opening skill to find the starting lead and write opening A and a neighbouring opening B, then name the promise the close must keep.
+  - title: Writes the body and close
+    text: Uses the proof-backed copy skill to build on one true detail, match proof to each doubt, state the deal and end on one action.
+
+output_shape: |
+  BUYER BRIEF
+  Moment: <what happened right before they looked> | Stops them: <fear or habit>
+
+  OPENINGS
+  A: <opening> | B: <opening> | The close must keep: <promise>
+
+  BODY AND CLOSE
+  <claim> | Proof: <fact or review>
+  ...
+  Deal: <what they get, price, delivery, conditions>
+  Guarantee: <real terms> | Last doubt answered: <doubt>
+  Ask: <one action>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+    Reviews: reviews.md (22 reviews)
+    Product facts: Sprout greens gummies. 2025 study, 120 adults, 12 weeks. Blood vitamin C up 40.1%. 30-day money-back guarantee, first order only.
+  output: |
+    BUYER BRIEF
+    Moment: the third tub went stale | Stops them: "Is this just candy?"
+    
+    OPENINGS
+    A: Nine days, one full shaker. | B: Greens you will actually finish. | The close must keep: you will finish it
+    
+    BODY AND CLOSE
+    Tested for what your body absorbs | Proof: 2025 study, 120 adults, 12 weeks, blood vitamin C up 40.1%
+    Guarantee: 30-day money-back, first order only
+    Ask: See the first box
+    
+    MISSING: shipping after the first box
+
+tweaks:
+  - what: Which opening
+    how: Say which opening to build on. The default is A. Run step 3 once for each opening to compare them.
+  - what: How it is bought
+    how: Say whether people buy once or come back. The deal block then shows the full cost of that path.
+  - what: Reading level
+    how: Give your readers' level, such as "grade 8". The body then keeps to it.
+  - what: Length
+    how: Give a word target. The body then cuts the weakest proof first.
+
+judge:
+  - Every claim has a fact or review beside it. Check three.
+  - The close keeps the promise the opening made.
+  - The deal block states price, delivery and every condition of the guarantee.
+  - Nothing in the body is a fact you didn't give.
+  - The run ends with every MISSING line in one list.
+
+test:
+  - Read each claim and ask "says who?". Each should point to the proof beside it.
+  - Check the price and guarantee against your store.
+  - Show both openings to five people in your audience and ask which one makes them read on.
+  - Compare the promise in the opening with the last paragraph. They should match.
+
+improve:
+  - In the builder, drop step 1 if you already have a buyer brief.
+  - Add a step at the end that edits the copy for machine-sounding lines.
+  - Add a step at the end that checks the copy before it goes live.
+  - Pair it with the workflow that gives reasons to switch, if buyers use a rival today.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Keeps the brief, both openings and the proof straight across three steps."}
+  inputs:
+    - "Reviews that show a result, with the numbers"
+    - "Your exact guarantee and delivery terms"
+    - "Any test or study you can show, with its source"
+
+terms:
+  - term: Lead
+    meaning: The kind of opening a piece of copy uses, such as a story, a number or a question.
+  - term: Proof
+    meaning: A fact, number or customer quote that backs a claim.

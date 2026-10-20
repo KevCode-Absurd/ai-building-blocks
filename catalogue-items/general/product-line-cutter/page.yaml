@@ -1,0 +1,124 @@
+new_slug: product-line-cutter
+name: "Product line cutter"
+summary: "List everything you sell. Get what to keep and what to cut, and a simple grid of the plan."
+job: plan-strategy
+thinking: medium
+thinking_why: "It sorts a list against fixed tests and needs sound judgment about overlaps, but not deep research."
+
+headline: "Product line cutter"
+subhead: List everything you sell with sales and margin. It finds products buyers cannot tell apart, picks the stars, draws a simple grid with one great product in each box and tells you what to cut, with a reason you can repeat.
+
+explain: |
+  Product lists grow because adding is easy and cutting feels like losing. Over time buyers cannot tell your items apart, your team spreads thin, and cash is tied up in slow lines.
+
+  This skill lists every product with its sales, margin and the cash it brings in. It tests whether a customer, or your own team, can tell two items apart, marks the stars (already leading, and both timeless and fresh) and names the two splits that matter most, such as buyer type and format. It draws a grid with one great product in each box, cuts the road map hard to the best few, and gives each cut a plain reason.
+
+when:
+  - You sell more items than your team or buyers can keep straight.
+  - Two or three products seem to do the same job.
+  - You need to free up cash and focus before a new season or year.
+
+you_give:
+  - "A list of every product or service, with sales and margin for each"
+  - "Who buys each one, and in what format or size"
+  - "Cash tied up in stock or work in progress (optional)"
+  - "Your brand file or brief, and what is already planned (optional)"
+
+you_get:
+  - "Every product placed in one group with a reason"
+  - "The two splits that matter, and a grid of the plan"
+  - "A keep list with the star products marked"
+  - "A cut list where each cut has a plain reason the team can repeat"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your list of products with sales, margin and cash tied up."
+  - "Say who buys each one, and what is on your road map."
+  - "Read the grid and check each box has one clear product."
+  - "Share the cut list with the team, with the reasons."
+
+how_it_works:
+  - title: Lists every product
+    text: Puts sales, margin and cash brought in next to each product.
+  - title: Tests for overlap
+    text: Checks if a customer, or you, can tell two products apart.
+  - title: Marks the stars
+    text: Flags products already leading that are both timeless and fresh.
+  - title: Cuts the road map
+    text: Keeps only the best few planned products and drops the rest.
+  - title: Names the two splits
+    text: Picks the two splits that matter, such as buyer type and format, and draws the grid.
+  - title: Fills each box
+    text: Gives each box one great product and a reason for every cut.
+
+output_shape: |
+  EVERY PRODUCT
+  <product> | sales | margin | cash brought in | group
+
+  OVERLAPS
+  <product A> and <product B> | can a buyer tell them apart? | evidence
+
+  THE STARS
+  <product> | why it leads | why it is timeless and fresh
+
+  THE GRID
+  Split one: <name>   Split two: <name>
+  <box> | <the one product kept>
+
+  KEEP
+  <product> | box | reason
+
+  CUT
+  <product> | reason the team can repeat | what happens to current buyers
+
+  ROAD MAP CUT
+  <planned product> | keep or drop | reason
+
+  MISSING
+  <what you did not give>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The two splits
+    how: Suggest your own, such as buyer type and price tier. Otherwise it proposes two and says why.
+  - what: Cash tied up
+    how: Add stock value or work in progress. Slow lines with big stock rise on the cut list.
+  - what: Contracts or promises
+    how: List any product you must keep for a client or law. It stays and is marked as fixed.
+  - what: How many boxes you can handle
+    how: Say how many products your team can run well. The grid is built to that size.
+
+judge:
+  - Every kept item has a box in the grid.
+  - No two kept items overlap for the same buyer.
+  - Each cut has a plain reason the team can repeat.
+  - Nothing is kept only because it was already built.
+  - Every product lands in exactly one group with a reason.
+
+test:
+  - "Run it on your list and check that the sales and margin it prints match your sheet."
+  - "Ask a team member to explain a cut in one sentence from the reason given."
+  - "Run it twice. The keep list should stay close."
+
+improve:
+  - "Add the splits your buyers actually use, such as use case or skill level."
+  - "Add your rule for the lowest margin or sales you will keep."
+  - "Save the grid and review it each season."
+  - "Pair it with a plan builder to schedule wind-down dates for cut items."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a product list and writing a grid are text tasks any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Gives it clean sales and margin by product to paste in."}
+  inputs:
+    - "Product margin by item, after costs"
+    - "Customer reviews that mix up two of your products"
+    - "Your stock levels"
+
+terms:
+  - term: Star
+    meaning: A product already leading its group that is both timeless and fresh.
+  - term: Margin
+    meaning: What is left of each sale after the cost of making and delivering the product.

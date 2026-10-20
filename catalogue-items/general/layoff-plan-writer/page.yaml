@@ -1,0 +1,128 @@
+new_slug: layoff-plan-writer
+name: "Layoff plan writer"
+summary: "Describe the cuts you must make. Get a decision check, a manager script and a company announcement."
+job: lead-people
+thinking: high
+thinking_why: "People will be hurt by the result, so it needs careful reasoning, plain honesty and a check for what you may have missed."
+
+headline: "Layoff plan writer"
+subhead: Describe the shock, the roles at risk and your cash. It checks that the cut is needed, ties each role to a reason, lists support in numbers, then writes the manager script and the message to the whole company, in your voice and owning the decision.
+
+explain: |
+  A layoff handled badly harms the people who leave, the people who stay and the name of the business for years. Common mistakes are waiting once the choice is made, blaming staff, letting people learn from a group message and leaving managers without words.
+
+  This skill checks your own thinking first: is the cut needed and final. It then sets the timing, writes the reason as the company's plan not meeting reality, ties each cut to a capability you will not need, and sets support in numbers. It trains managers to tell their own people in person, drafts the company message to go first, and writes what the people who stay need to hear.
+
+when:
+  - Cash or demand has dropped and you may have to cut roles.
+  - You have decided to cut and need the words and the order of events.
+  - You want a check on your reasoning before you act.
+
+you_give:
+  - "What happened and how much you must save"
+  - "Roles or teams at risk and how many people each"
+  - "The support you can afford: pay weeks, health cover, equity, equipment, job help"
+  - "Your cash position and any legal rules you must follow (optional)"
+
+you_get:
+  - "A decision check that says if the cut is needed and final"
+  - "A reason for each cut tied to a capability, not to a person"
+  - "A manager script for one-to-one talks"
+  - "A company message that owns the decision, and a note for those who stay"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe what happened, the roles at risk and what you can offer."
+  - "Answer its decision check honestly before it writes anything."
+  - "Check the plan with a lawyer or HR adviser for your country before acting."
+  - "Send the company message only after the managers are ready to talk."
+
+how_it_works:
+  - title: Checks your own head
+    text: Asks if the cut is truly needed and final, and what else you tried.
+  - title: Sets the timing
+    text: Fixes the day so there is no delay once it is decided.
+  - title: Writes the reason
+    text: States the reason as the company missing its plan, not staff falling short.
+  - title: Ties cuts to capabilities
+    text: Links each cut role to a capability you will not need, and pauses projects without judging teams.
+  - title: Sets the support
+    text: Lists pay weeks, health cover, equity, equipment and job help in numbers.
+  - title: Scripts the managers
+    text: Gives each manager words to tell their own people in person.
+  - title: Writes the messages
+    text: Drafts the company message to send first, and the note for those who stay.
+
+output_shape: |
+  DECISION CHECK
+  Needed? <answer, evidence> | Final? <answer> | What else was tried: <list>
+
+  TIMING
+  <day, order of events, hours between steps>
+
+  THE REASON
+  <two or three plain sentences, in the first person, owning the call>
+
+  WHO AND WHY
+  <role> | how many | the capability no longer needed
+
+  SUPPORT
+  <item> | amount in weeks, money or months | who gets it
+
+  MANAGER SCRIPT
+  Open: <line>  Say: <lines>  Questions: <likely questions and answers>  Do not say: <lines>
+
+  COMPANY MESSAGE (SEND FIRST)
+  <draft>
+
+  NOTE TO THOSE WHO STAY
+  <draft, what happens next, what is still uncertain>
+
+  MISSING
+  <what you did not tell me>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Support you can afford
+    how: Give real numbers. Vague help is the first thing people notice.
+  - what: Your country and rules
+    how: Say where staff work. Notice periods and consultation rules differ and need an adviser.
+  - what: Your own voice
+    how: Paste a past message you wrote. The drafts take your tone.
+  - what: How many remain
+    how: Say who stays and what they will carry. The note to them depends on it.
+
+judge:
+  - The reason blames the plan, not the people.
+  - Managers deliver the news to their own teams.
+  - The company is told before the news can spread.
+  - Support for leavers is listed in numbers.
+  - Staying staff get a clear message.
+
+test:
+  - "Read the message aloud and ask whether a person cut tomorrow would feel respected."
+  - "Give the manager script to a manager and ask them to say it back in their own words."
+  - "Ask an adviser to check the dates and support against local rules."
+
+improve:
+  - "Add your local legal steps to the timing step, as given by your adviser."
+  - "Add your values to the message guide, such as how you speak to staff."
+  - "Save the drafts with the date so you can learn from the plan later."
+  - "Pair it with a cost or cash planner if you are unsure of the size of the cut."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It drafts scripts and messages in plain text from your facts."}
+    - {name: "An HR or employment adviser", why: "Rules on notice, pay and consultation differ by country and need a person who knows them."}
+  inputs:
+    - "A list of roles at risk and headcount per team"
+    - "Your current benefits and what you can extend"
+    - "A message you wrote to staff before"
+
+terms:
+  - term: Whole-company message
+    meaning: The note sent to everyone first, so no one hears the news from rumor.
+  - term: Capability
+    meaning: A kind of work or skill the business needs, as opposed to a person.

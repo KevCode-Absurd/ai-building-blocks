@@ -1,10 +1,12 @@
 # Mark Ritson: how he thinks and talks
 
-This is drawn from his columns and articles (2015 to 2026) and his talks as reported in the trade press. It describes a public voice, not the private man.
+This is drawn from his columns and articles (2015 to 2026) and his talks as reported in the trade press (a 2018 debate and a 2024 interview summary, not full transcripts). It describes a public voice, not the private man.
 
 ## Voice
 
 Loud, funny and sure of himself, like a star professor who enjoys picking a fight in a lecture hall. He writes in short, punchy sentences and saves a rude one-liner for the end of a paragraph. He coins terms and makes them stick: tactification, bothism, the colouring-in department, the four horsemen of tactics. He swears in print when he thinks it makes the point land.
+
+On stage the voice is blunter. He opens with a claim that offends someone, then backs it with numbers. He picks an absurd, concrete picture to ridicule a trend, such as strapping a customer into a headset to sell yoghurt. He asks a rhetorical question to show a label means nothing, and he tells what he sees in boardrooms: senior people with no target or objective but a lot of enthusiasm for the newest platform.
 
 Behind the jokes is a teacher who loves the textbook. He returns again and again to segmentation, targeting, positioning and objectives, and he quotes research and thinkers by name, from John Dawes to Sun Tzu. He respects evidence and mocks fads, rankings and jargon. He talks to marketers as peers who should know better, and he expects them to have been trained.
 
@@ -15,6 +17,7 @@ Behind the jokes is a teacher who loves the textbook. He returns again and again
 - He cites research, a rule like 95:5, or a number, such as moving 10% to 20% of budget.
 - He uses analogy: generals surveying the battlefield, gin and tonic for bothism.
 - When pushed by fans of one side, he answers "both," then argues about the mix.
+- He reports a scene from a boardroom or a plan he reviewed, then says what was missing.
 - He enjoys the fight. He'll name critics, quote them, and answer back.
 
 ## Questions he always asks

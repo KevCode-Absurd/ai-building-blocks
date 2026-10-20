@@ -1,0 +1,121 @@
+new_slug: hero-story-mapper
+name: "Hero story mapper"
+summary: "Paste the facts of a founder, project or life change. Get it mapped as a call, threshold, trial, change and return."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It must match true facts to story stages without forcing them, which takes judgment."
+
+headline: "Hero story mapper"
+subhead: "Paste the facts about a founder, a project or a life change. It lists them in order, then maps them to call, threshold, trial, change and return, using only what you gave it, and cuts any stage the facts do not support."
+
+explain: |
+  A true story of change often reads as a pile of events. The reader cannot tell what mattered, so the story never lands. A shape helps, but a shape forced onto the facts makes a story that rings false.
+
+  This skill lists the facts first, in order, and marks each one. It looks for the call (what pulled the person out of the old life, and whether they chose it, stumbled into it or were pushed), the threshold where the old world ended, the trial or low point and what was lost in it, what the person took in, and what they brought back for others. It builds a map from your facts only. Where the facts show fewer stages, it leaves the others out and says so.
+
+when:
+- "You are writing a founder story, an about page or a talk and the facts feel flat."
+- "You want to tell a personal change in a way a stranger will follow."
+- "You have a project history and need the one story inside it."
+
+you_give:
+- "The true facts, in any order: what happened, when, and what it cost"
+- "Who the story is for"
+- "How you want to use it (page, talk, post) (optional)"
+- "Anything you do not want mentioned (optional)"
+you_get:
+- "The facts in order, each marked"
+- "A map of call, threshold, trial, change and return"
+- "A note on where the story is thin or forced"
+- "A short draft built only from the map"
+
+how_to_use:
+- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+- "Paste the facts as plain notes. Do not polish them first."
+- "Say who will read or hear the story."
+- "Read the map and mark any fact it got wrong."
+- "Ask for the short draft once the map is right."
+
+how_it_works:
+  - title: "List the facts"
+    text: "Write every true fact the person gave, in time order, one line each, with a date or a rough time if known."
+  - title: "Mark the call"
+    text: "Find the event or pressure that pulled the person from their old life."
+  - title: "Find the threshold"
+    text: "Find the point where going back stopped being easy: a quit job, a spent saving, a public promise."
+  - title: "Find the trial and the loss"
+    text: "Find the hardest stretch or the low point."
+  - title: "Name what they took in"
+    text: "State in one line what the person learned or became through the trial, using only what the facts show, such as a new skill, a changed belief or a new way of working."
+  - title: "Describe the return"
+    text: "Find what the person brought back and who gains from it."
+  - title: "Cut the forced stages"
+    text: "Read the map against the facts."
+  - title: "Check it"
+    text: "Go through \"Check before you hand it back\" one line at a time and fix any check that fails, if you can."
+
+output_shape: |
+  FACTS IN ORDER
+  1. <fact> (<time>)
+
+  MAP
+  Call (<chosen / accidental / imposed>): <fact>
+  Threshold: <fact and what ended>
+  Trial and loss: <fact and what it cost>
+  What they took in: <one line>
+  Return: <what was brought back and who gains>
+
+  CUT OR THIN
+  <stages the facts do not support>
+
+  SHORT DRAFT
+  <120 to 200 words>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Facts, not feelings"
+    how: "Give dates, costs and what you gave up. The map is only as true as the facts."
+  - what: "The reader"
+    how: "Say who reads it. A customer wants the return, a hiring manager wants the trial."
+  - what: "Length of the story"
+    how: "A small change gets a short map. Say if the story is small."
+  - what: "Whether the call was chosen"
+    how: "Say honestly whether you chose it. It changes how the story sounds."
+
+judge:
+- "Every stage points to a fact you gave."
+- "The call is labelled chosen, accidental or imposed."
+- "It left out a stage rather than make one up."
+- "The return says who else gains."
+- "The draft has no new facts."
+
+test:
+- "Run it on a story you know well and check each stage against what really happened."
+- "Give it a story with no low point. It should say so, not invent one."
+- "Run it twice. The labels should stay the same."
+- "Read the draft to someone who knows you and ask what felt untrue."
+
+improve:
+- "Add your own life facts to a file and paste them in each time."
+- "Add a rule for words you never use about yourself."
+- "Pair it with \"Story shape mapper\" to see the fortune line of the finished draft."
+- "Pair it with \"Scene turn checker\" if you tell the story as scenes."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Mapping facts to stages is text work any strong chat AI can do."}
+  inputs:
+    - "Dates and amounts, so the trial is concrete"
+    - "A quote from someone who was there"
+    - "Your brand file, so the voice fits"
+
+terms:
+  - term: "Threshold"
+    meaning: "The point where the old way of life ended and going back stopped being easy."
+  - term: "Return"
+    meaning: "What the person brought back that helps others."

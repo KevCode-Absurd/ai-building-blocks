@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Stephen King is alive, and his books are in copyright. This data set summarises his public statements on craft in our own words and keeps quotes short. Views are dated where we can date them, and they may have changed. It covers his work and stated ideas about writing, not his private life, health or plans. What his characters think and do belongs to them, not to King.
+A note on method: Stephen King is alive, and his books are in copyright. This data set summarises his public statements in our own words and keeps quotes short. It rests on three pages: the answers on his official FAQ page [S2], the text of his 2001 Vassar commencement speech on his site [S3] and Maria Popova's account of his craft rules from *On Writing* [S5]. The facts of his career come from Wikipedia [S1] and the book pages [S4][S6]. We did not have the book text, so the craft rules are as reported by [S5] and [S1]. Views are dated and may have changed. His characters' thoughts belong to them.
 
 ## In one paragraph
 
@@ -67,6 +67,26 @@ When he edits, he asks one question of each word: did it come from trust in the 
 
 When he starts, he does not wait for a full plan. He takes a situation, asks what would happen next, and lets the characters answer [S1][S2]. He says ideas come when two unrelated things collide, and he would rather think up his own than take one from a reader [S2].
 
+## Real decisions
+
+### Bringing back the pages of *Carrie*
+King has said *Carrie* began when two unrelated ideas, adolescent cruelty and telekinesis, came together in a short story [S1]. He threw the first three pages in the trash. His wife Tabitha took them out and told him she wanted to know what happened next, and he expanded the story into a novel [S1]. His decision was to trust a reader's curiosity over his own doubt.
+
+### Taking a pen name to publish more than one book a year
+He published five novels as Richard Bachman because publishers then believed the public would take only one book a year from an author [S1][S2]. When the first pseudonym leaked, he picked a new one on the spot: "Richard" from a novel on his desk and "Bachman" from a song playing nearby [S2]. His stated lesson: you can change a name but you can't really disguise a style [S2].
+
+### Releasing a novel in monthly parts
+In 1996 he published *The Green Mile* as a serial in six parts, and it held several places on the paperback best-seller list at once [S1]. He chose a form that made readers wait, as the Victorian serial writers had.
+
+### Selling online on the honour system
+After *Riding the Bullet* became an early mass e-book with more than 500,000 downloads, he began *The Plant* in online instalments and asked readers to pay a dollar each [S1]. He said he would carry on only if three quarters paid. When it stopped, he later said he had simply run out of story [S1]. It is now free on his site [S1].
+
+### Refusing to read strangers' manuscripts
+He does not read manuscripts sent to him. He says it is often clear after a page or two that one is not working and he does not want to tell people so, and he adds that he has faced plagiarism claims [S2]. He sends writers to his craft book and to standard guides to agents and publishers [S2].
+
+### Giving a pledge instead of a lecture
+At Vassar in 2001 he opened by teasing the college for inviting a boogeyman, then moved to the point: money cannot save you, so give. He backed it with a $20,000 pledge to a local food bank and clothing project and asked the audience to match it as they could [S3]. He closed by thanking them and wishing them well [S3].
+
 ## Where he stood
 
 All views are dated to the source and may have changed.
@@ -119,6 +139,9 @@ All views are dated to the source and may have changed.
 
 - His craft advice grew out of fiction. Journalism, business writing and scripts have rules he does not cover.
 - Cutting every adverb can become a rule that flattens a voice. Use it to find weak spots, not to ban a word.
+
+### The picnic and the scorpion
+In the Vassar speech he uses two images to make an abstract point concrete. One is a comfortable family eating at a backyard picnic while hungry people watch from behind the fence. The other is the scorpion parable: you knew what I was when you picked me up [S3]. He uses them to say that rich countries know what they are doing when they keep what they have [S3].
 
 ## Short phrases on the record
 

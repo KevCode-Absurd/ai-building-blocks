@@ -1,0 +1,21 @@
+slug: thought-experiment-planner
+name: "Thought experiment planner"
+summary: "Describe a plan or belief. Get a what-if scene to run in your head, and a check that could prove it wrong."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: false}
+  - {type: image_plan, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [albert-einstein, nikola-tesla]
+credits:
+  - {title: "Relativity: The Special and General Theory", by: "Albert Einstein, tr. Robert W. Lawson", url: "https://www.gutenberg.org/ebooks/5001", used: "Turning an idea into a simple scene, asking what each observer would measure, and merging cases that no check can tell apart"}
+  - {title: "My Inventions", by: "Nikola Tesla (1919)", used: "Holding a full design in the mind, running it through normal use, then through the hardest case"}
+  - {title: "Experiments with Alternate Currents of High Potential and High Frequency", by: "Nikola Tesla", used: "Describing each part by its job and testing a design step by step"}

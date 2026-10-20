@@ -68,6 +68,23 @@ How she applied it: the music passage in Note A is the clearest case. A careful 
 - Picture uses far beyond the first job, then test them against how the machine works [S1][S4].
 - State plainly what a tool cannot do, as well as what it can [S1].
 
+## Real decisions
+
+### Naming the repeat
+In her notes she defines a "cycle" as any set of operations repeated more than once, even only twice, because the repeat is what makes it a cycle. She then points to cycles of cycles, such as dividing one series by another. She says the arrangement is simpler when the number-cards can repeat as well as the operation-cards [S1].
+
+### Working one full example in a table
+She chose the Bernoulli numbers as the worked case and set the whole run out step by step with columns of working, to show what the engine would need to be told [S1].
+
+### Separating the engine from the claims
+She wrote that it was right to guard against exaggerated ideas of its powers, and that it has no pretensions to originate anything [S1]. She gave her imagination room (algebraic patterns woven like flowers) and then drew the line [S1].
+
+### Treating a confusion as a problem with words
+Writing to De Morgan around 1841, she traced puzzles to meanings of terms rather than to bad reasoning, and asked him again until the terms were clear [S2][S5].
+
+### Checking the expert's working
+She found a mistake in the Bernoulli working and sent it back to Babbage [S6]. She read De Morgan's texts with care and flagged misprints [S2][S5].
+
 ## Where she stood
 
 **Can a machine handle more than numbers?** Yes. If symbols such as musical notes follow rules, the engine could work on them too [S1].

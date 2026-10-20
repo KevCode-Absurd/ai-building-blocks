@@ -1,0 +1,123 @@
+new_slug: spending-story-reviewer
+name: "Spending story reviewer"
+summary: "Paste a purchase you are weighing. Get what drives it, its hidden costs and a small test of whether it pleases."
+job: money-and-investing
+thinking: medium
+thinking_why: "It traces a motive and adds up costs. The steps are fixed, with some judgement on what is driving you."
+
+headline: "Spending story reviewer"
+subhead: "Tell it what you want to buy and what you feel about it. It traces the feeling to its source, adds up the long-run costs, asks who is really watching and checks whether a smaller version would do. You get the real driver, the full cost list and a small test to run first."
+
+explain: |
+  A purchase is rarely only about the thing. A car, a house or a course can carry a wish to be seen, a memory from childhood or a reward after hard work. The price tag shows the cost on day one, not the upkeep, the taxes and the hours that follow, and not whether the joy will last.
+
+  This skill separates the story from the sum. It writes what you want and the feeling behind it, traces the feeling to its source, and adds up the costs over the years. It asks who is really watching and how much they notice. It checks whether the joy fades as comfort grows, and whether a smaller version would please you as well. Then it designs a small test purchase to run first. It never tells you what to buy.
+
+when:
+  - You are about to buy something big because it feels like the time to treat yourself.
+  - You can't tell if you want the thing or what it says about you.
+  - You want the full cost of an item, not just the price.
+
+you_give:
+  - What you want to buy and its price
+  - The feeling behind it, in a sentence or two
+  - Your monthly money picture, roughly (optional)
+  - What you already own that does the same job (optional)
+you_get:
+  - The real driver in plain words
+  - "A list of long-run costs: upkeep, taxes and time"
+  - A check of who is watching, and whether joy fades with comfort
+  - A small test purchase to try before the big one
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say what you want, the price and what it would feel like to own it.
+  - Answer the questions about where the feeling comes from.
+  - Read the cost list and the test before you decide.
+  - Run the small test and come back with how it felt.
+
+how_it_works:
+  - title: Writes the wish
+    text: States what you want to buy and the feeling behind it.
+  - title: Traces the source
+    text: "Looks for the root: upbringing, status, a wish to be seen or comfort after effort."
+  - title: Adds the long-run costs
+    text: Lists upkeep, taxes and time, over the years you would own it.
+  - title: Asks who is watching
+    text: Asks who you imagine is noticing, and how much they actually do.
+  - title: Checks the fade
+    text: Asks if the joy fades as comfort grows, and whether a smaller version would do.
+  - title: Designs a small test
+    text: Sets up a cheap way to learn what satisfies you before the big spend.
+
+output_shape: |
+  THE WISH
+  <item> | Price: <price> | Feeling: <feeling>
+
+  WHERE IT COMES FROM
+  <source: upbringing / status / wish to be seen / comfort after effort / other> | Evidence: <what you said>
+
+  LONG-RUN COSTS
+  Upkeep: <amount per year or MISSING>
+  Taxes and fees: <amount or MISSING>
+  Time: <hours per month>
+  Total over <years>: <amount>
+
+  WHO IS WATCHING
+  <who you imagine> | How much they actually notice: <honest estimate>
+
+  DOES THE JOY FADE
+  <likely pattern> | Smaller version: <option>
+
+  THE SMALL TEST
+  <cheap trial> | Cost: <amount> | Run for: <time> | Learn: <what>
+
+  MISSING
+  <facts that would change the review>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your honest feeling
+    how: Say what it feels like, such as pride, relief or envy. The source is easier to find from the feeling.
+  - what: Real running costs
+    how: Add the numbers for insurance, repairs, fees and taxes. The skill marks the ones it lacks.
+  - what: How long you would keep it
+    how: Say the years. Costs per year look different over three years and over twenty.
+  - what: What you own already
+    how: Say what already does the job. It tests whether the new thing adds real value.
+
+judge:
+  - The real driver is named in plain words.
+  - The upkeep costs are listed.
+  - There is a small test to run first.
+  - No product or investment is recommended.
+  - Missing costs are marked as missing.
+
+test:
+  - Run it on a purchase you made last year. See if the driver it names rings true.
+  - Compare its cost list with what the purchase really cost you since.
+  - Run the small test it designs and check if it answers the question.
+  - Run it twice. The driver should stay close.
+
+improve:
+  - Add your own past purchases that pleased you and ones that did not, as examples.
+  - Add the usual upkeep costs for items you often buy, such as a vehicle or a house.
+  - Add a yearly spending limit for treats, so the test fits it.
+  - Pair it with "Room for error plan checker" for large purchases that touch your savings.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Asking about motives and adding up costs is text work."}
+    - {name: "A notebook", why: "Writing the feeling down by hand once often makes the source clearer."}
+  inputs:
+    - "Quotes or receipts for upkeep, insurance and taxes"
+    - "A short note on past purchases you regret or love"
+    - "Your yearly budget for non-essentials"
+
+terms:
+  - term: Driver
+    meaning: The feeling or need that is really behind a purchase, apart from the item itself.
+  - term: Test purchase
+    meaning: A small, cheap trial of the same kind of experience, to learn what satisfies you before the big spend.

@@ -1,0 +1,127 @@
+new_slug: price-first-cost-squeeze-planner
+name: "Price-first cost planner"
+summary: "Name the price you want to sell at. Get a plan that works backward from it to cut cost."
+job: make-offer
+thinking: high
+thinking_why: "It weighs cost lines against what the customer needs and estimates volume and margin, so errors are costly."
+
+headline: "Price-first cost planner"
+subhead: Tell it the price you want to sell at and who it is for. It sets the price first, lists every cost behind your product and asks of each whether the customer needs it. You get a plan with the savings, a price gap against the far-off alternative and one small test.
+
+explain: |
+  Most businesses add up cost, add a margin and call the result the price. That keeps the price tied to what you do today. The other way is to pick the price the buyer can pay, then ask what the product would have to be to hit it.
+
+  This skill sets the target price below where your costs sit now. It lists every cost line, step and part, and asks for each whether the customer needs it to get the service. It removes or simplifies first and only then looks at speed. It looks for places where competition is thin and people travel far to buy, estimates volume and margin, and names a single-job test to run before any wide change.
+
+when:
+  - Your price is too high for the people you most want to serve.
+  - A rival sells for less and you do not know where the cost gap is.
+  - You are about to add features and want to ask first what you could remove.
+
+you_give:
+  - Your product or service, its price and what goes into it
+  - The price you want to sell at, or who you want to reach and what they can pay
+  - Your cost lines (optional)
+  - Rivals and their prices, or the far-off store people use now (optional)
+you_get:
+  - A target price and the cost it implies
+  - Every cost line with a keep, simplify or remove decision
+  - Volume and margin estimates at the target price
+  - A single-job test and the price gap to the alternative
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product, current price and your cost lines.
+  - Name the price you want, or the people you want to reach.
+  - Add what rivals charge and where people travel to buy now.
+  - Run the test it names on one job before changing anything else.
+
+how_it_works:
+  - title: Sets who and what price
+    text: Names the buyers and the price they can pay, then sets the target below today's cost.
+  - title: Lists every cost line
+    text: Every step, part and fee behind the product, each with a cost or marked missing.
+  - title: Asks if it is needed
+    text: For each line, asks whether the customer needs it to receive the service.
+  - title: Removes before speeding up
+    text: Lists what can be removed or simplified before looking at faster ways to do the same thing.
+  - title: Finds thin competition
+    text: Looks for places where few sell and people travel far to buy.
+  - title: Sizes the market
+    text: Names the many people served and what they can pay, then estimates volume and margin.
+  - title: Compares with the far-off store
+    text: Gives the price gap to the alternative as a number.
+  - title: Names the test
+    text: Picks one job to test the plan before any wide change.
+  - title: Checks the plan
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  TARGET
+  Who: <buyers> | Price they can pay: <price> | Target price: <price>
+  Cost it implies: <figure, with margin>
+
+  COST LINES
+  <line> | Now: <cost> | Needed? <yes / no / partly> | Action: <keep / simplify / remove> | Saving: <figure>
+
+  WHERE COMPETITION IS THIN
+  <place or group, who travels far now>
+
+  VOLUME AND MARGIN
+  <estimate at the target price, with the guess marked>
+
+  PRICE GAP
+  <your target vs the alternative, as a number>
+
+  SINGLE-JOB TEST
+  <one job, what to measure, what counts as a pass>
+
+  MISSING
+  <figures needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your real cost lines
+    how: Paste actual costs. Without them it lists lines and marks each cost MISSING.
+  - what: The price target
+    how: A price in your head beats "cheaper". Give a number or a group and what they pay now.
+  - what: What the customer values
+    how: Say which parts the customer asks for. It will keep those.
+  - what: Rivals
+    how: Give their prices. The gap to the far-off store is only a number if you do.
+
+judge:
+  - The target price comes before the cost sheet.
+  - Each removed part or step is listed with its saving.
+  - Volume and margin are both estimated, with guesses marked.
+  - A single-job test is named before any wide change.
+  - The price gap to the far-off store is a number.
+
+test:
+  - Check each "not needed" line with a customer or someone who serves them.
+  - Add up the savings and see if they reach the target price.
+  - Run the single-job test and compare real cost to the plan.
+  - Run the skill twice and compare which lines it would remove.
+
+improve:
+  - Add your must-keep rules, such as safety or legal parts, to step 3.
+  - Add your real volume numbers so the estimate is not a guess.
+  - Save the savings that held in the test to your notes.
+  - Pair it with "Waste and by-product finder" to find savings in what you throw away.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing cost lines and estimating the effect of cuts is text and arithmetic work any strong chat AI handles."}
+    - {name: "A spreadsheet", why: "Keeps cost lines, savings and margin in one place you can change."}
+  inputs:
+    - "A bill of parts, steps or fees for one unit"
+    - "Prices of the alternatives people use now"
+    - "Past sales at different prices, if you have them"
+
+terms:
+  - term: Price-first
+    meaning: Setting the price the buyer can pay before working out how to make the product at that cost.
+  - term: Single-job test
+    meaning: A small trial on one order or one batch before you change everything.

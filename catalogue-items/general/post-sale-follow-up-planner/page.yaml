@@ -1,0 +1,126 @@
+new_slug: post-sale-follow-up-planner
+name: "Post-sale follow-up planner"
+summary: "Paste what you sell and a customer's details. Get a thank-you note, a contact schedule and what to record about the buyer."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It writes a short note and a schedule from a fixed pattern."
+
+headline: "Post-sale follow-up planner"
+subhead: "Give it what you sell and a customer's details. It writes a personal thank-you, a service promise you can keep and a dated contact schedule. You also get a list of what to record about them and a referral ask that comes after good service."
+
+explain: |
+  Buyers who feel forgotten after paying do not come back and do not refer anyone. Sellers who stay in touch win repeat business at lower cost than finding a new buyer.
+
+  This skill writes a personal thank-you and an open invitation with a service promise you can keep. It lists what to record about each buyer, sets a dated contact schedule and plans what to do first when they have a problem. The referral ask comes once service has been felt. A referral is a name of someone else who might want what you sell.
+
+when:
+  - "You just made a sale and have no plan for what comes next."
+  - "Your repeat business is lower than you want."
+  - "You want referrals and do not know when to ask."
+
+you_give:
+  - "What you sell and what service you can promise"
+  - "The customer's details"
+  - "Your contact channels (optional)"
+you_get:
+  - "A personal thank-you note"
+  - "A dated contact schedule"
+  - "A list of what to record about the buyer"
+  - "A plan for a problem and a referral ask"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste what you sell and what you can promise."
+  - "Add the customer's name, what they bought and anything they told you."
+  - "Send the note and put the dates in your calendar."
+  - "After each contact, add what you learned to the record."
+
+how_it_works:
+  - title: "Writes the thank-you"
+    text: "A short personal note naming a smart choice."
+  - title: "Writes the invitation"
+    text: "An open door with a promise you can keep."
+  - title: "Lists what to record"
+    text: "Personal facts to serve them better."
+  - title: "Sets the schedule"
+    text: "Dated contacts, each with a reason."
+  - title: "Plans for a problem"
+    text: "What you do first and say first."
+  - title: "Plans the referral ask"
+    text: "After service, with their agreement."
+  - title: "Keeps the door open"
+    text: "Help first, no pressure to buy."
+  - title: "Checks the plan"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  THANK-YOU NOTE
+  <under 80 words>
+
+  OPEN INVITATION AND PROMISE
+  <lines>
+
+  WHAT TO RECORD
+  <fact> | Kept in: <place>
+
+  CONTACT SCHEDULE
+  <date or trigger> | Reason: <what helps the buyer>
+
+  IF THEY HAVE A PROBLEM
+  First move: <steps> | Opening line: <line>
+
+  REFERRAL ASK
+  <when and what to say>
+
+  BUY-AGAIN RULE
+  <when it is fair to mention something new>
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "The detail you give"
+    how: "A real remark from the buyer makes the note personal."
+  - what: "The promise"
+    how: "State only what you can do, with a time."
+  - what: "The channel"
+    how: "A call, a card and an email each change the wording."
+  - what: "The buyer's own dates"
+    how: "Birthdays and renewals make the schedule useful."
+
+judge:
+  - "The note could only be to this buyer."
+  - "You could keep every promise this week."
+  - "Every contact in the schedule has a date or trigger."
+  - "The referral ask comes after a good contact."
+  - "Nothing pushes another sale."
+
+test:
+  - "Send the note to one real buyer and see if they reply."
+  - "Check each date against your calendar."
+  - "Run it twice. The schedule should stay close."
+  - "After three months, count repeat orders and names given."
+
+improve:
+  - "Add your service times to the promise step."
+  - "Add the facts your trade needs to record."
+  - "Save the notes in a spreadsheet or a contact tool."
+  - "Pair it with \"Counter demo script writer\" for the sale itself."
+
+works_best_with:
+  tools:
+    - {name: "A contact or spreadsheet tool", why: "Keep the buyer record and the dates in one place."}
+    - {name: "Any good chat AI", why: "Short notes and schedules are simple text work."}
+  inputs:
+    - "What the buyer said during the sale"
+    - "Your service times and costs"
+    - "The list of past buyers"
+
+terms:
+  - term: "Referral"
+    meaning: "A name of someone else who might want what you sell."
+  - term: "Service promise"
+    meaning: "What you will do after the sale, and how fast."

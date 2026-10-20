@@ -1,0 +1,134 @@
+new_slug: commitment-ask-planner
+name: "Commitment ask planner"
+summary: "Say where you are and what people said. Get the next step to ask for and which leads are real."
+job: test-an-idea
+thinking: medium
+thinking_why: "It weighs what each person gave up, but the framework is fixed."
+
+headline: "Commitment ask planner"
+subhead: Tell it your stage and what people said at the end of a meeting. It decides what to ask for, in time, reputation or money, writes the words, and sorts each reply into a real step, a stall or a polite no. You get the ask, a fallback and a verdict on every lead.
+
+explain: |
+  A meeting that "went well" often ends with "Looks great, let me know when it launches." That is a compliment and a stall. It feels like a lead, and it costs the person nothing, so it tells you nothing. Pipelines fill with zombie leads, people who stay friendly and never buy.
+
+  This skill asks what the person gave up. It uses three currencies: time (a clear next meeting, a real trial), reputation (an intro to a boss, a testimonial) and money (a deposit, a pre-order, a letter of intent). It sets the right size of ask for your stage, writes the exact words, and turns fuzzy promises into specific ones. It then sorts each lead into real, stalled or dead, so a "no" counts as useful data.
+
+when:
+  - You finish meetings with praise and no clear next step.
+  - People say "I'd definitely buy that" and then go quiet.
+  - You have a list of leads and can't tell which are real.
+
+you_give:
+  - What you have today, such as an idea, a prototype or a product
+  - What each person said or did at the end of the meeting
+  - What you'd like to happen next, if you know (optional)
+  - Notes sorted by the Customer conversation notes sorter (optional)
+you_get:
+  - The commitment to ask for, in time, reputation or money, sized to your stage
+  - The exact words to ask, and a fallback if they say no
+  - Each reply sorted into compliment, stall, fuzzy promise or real commitment
+  - A verdict on each lead, and the one question that settles it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say what you have today and who you are meeting or have met.
+  - Paste what each person said at the end, word for word if you can.
+  - Use the ask it writes in your next meeting, before you leave the room.
+  - Record the answer, yes or no, and bring it back to update the verdict.
+
+how_it_works:
+  - title: Checks the plan
+    text: If you want opinions on your idea or plan to "follow up later", it says why that leaves you with nothing and moves you to a concrete ask.
+  - title: Reads your stage
+    text: Works out what you can honestly ask for given what you have today and what the person already gave.
+  - title: Picks the currency
+    text: Chooses time, reputation or money, or a mix, with options that fit the stage.
+  - title: Writes the ask
+    text: The exact words, a version for a person who is brushing you off, and a fallback.
+  - title: Raises a cheap trial
+    text: If trying it costs them nothing, adds something to put at stake, such as a case study or a team rollout.
+  - title: Sorts what was said
+    text: Marks each reply as a compliment, a stall, a fuzzy promise or a real commitment, and turns fuzzy ones into specific asks.
+  - title: Flags zombies and false positives
+    text: Spots friendly leads with no step and signals that look like demand but aren't.
+  - title: Gives the verdict
+    text: Marks each lead as real, stalled or dead, with the next question.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  YOUR STAGE
+  <what you have, and what that lets you ask for>
+
+  THE ASK
+  Currency: <time / reputation / money>
+  Words: <what to say>
+  If they brush you off: <line>
+  Fallback: <smaller ask>
+
+  WHAT WAS SAID
+  <n>. "<their words>" | Kind: <compliment / stall / fuzzy promise / real commitment>
+     What they gave up: <nothing, or what>
+     Make it specific: <the question that turns it into a step>
+
+  EACH LEAD
+  <name>: <real / stalled / dead>, because <reason>
+     Settle it by: <one question or ask>
+
+  ZOMBIES AND FALSE POSITIVES
+  <leads or signals that look good and aren't, and why>
+
+  NEXT STEPS TO KNOW BEFORE YOU WALK IN
+  <your own next steps for each outcome>
+
+  MISSING
+  <what would sharpen the verdicts>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your stage
+    how: Say honestly what you have. An idea can ask for introductions; a working product can ask for a deposit.
+  - what: Exact words
+    how: Paste what they said, not your summary of it. "Let me know when it launches" and "when can we start" mean different things.
+  - what: Who else is involved
+    how: Name the budget holder and anyone who could block it. A step that brings them in is a strong signal.
+  - what: How hard you want to push
+    how: Say if the person is a close contact. The ask can be softer, but still needs to cost them something.
+
+judge:
+  - Every ask is something the person gives up, not an opinion.
+  - The ask fits your stage and is not rude.
+  - Compliments and stalls are not counted as progress.
+  - Each lead has a verdict and one question that settles it.
+  - A "no" is recorded as useful, not as a failure.
+
+test:
+  - Run it on past meetings you know ended badly. See if it calls the leads that went nowhere.
+  - Use the ask in your next meeting and note what they gave up.
+  - Run it twice on the same replies. The verdicts should agree.
+  - Compare its verdicts to what really happened with each lead a month later.
+
+improve:
+  - Add the commitments that make sense in your field to step 3, such as a paid pilot or a signed letter.
+  - Add your usual stall phrases to step 6 so it spots them fast.
+  - Keep a list of real commitments you got and what each one led to.
+  - Pair it with "Idea evidence review" to count commitments across a batch of talks.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting replies and writing asks is text work any strong chat AI does well with this skill."}
+    - {name: "A shared spreadsheet", why: "One row per lead, with the last commitment and date, makes zombie leads obvious."}
+  inputs:
+    - "The exact last words of each meeting, not a summary"
+    - "Notes sorted by the Customer conversation notes sorter"
+    - "The price or deposit you could honestly ask for today"
+
+terms:
+  - term: Commitment
+    meaning: Something the person gives up to show they mean it, such as time, their reputation or money.
+  - term: Advancement
+    meaning: A move to the next real step toward a sale, such as meeting their boss or starting a trial.
+  - term: Zombie lead
+    meaning: A contact who stays friendly and keeps meeting you but never buys or moves forward.

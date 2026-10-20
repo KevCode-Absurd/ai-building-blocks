@@ -69,6 +69,26 @@ How he applied it: the work has influenced later research on animal coat pattern
 - Expect early versions to fail, and plan to try again [S1].
 - Ask what a problem's structure lets you rule out, so the search shrinks [S3].
 
+## Real decisions
+
+### Defining "computable" from a person at a desk
+In the 1936 paper he admits the definition cannot be proved, only argued: all such arguments are appeals to intuition, and the real question is what processes can be carried out in computing a number [S2]. He then gives three kinds of support: a direct appeal to intuition, a proof that two definitions agree, and examples of large families of computable numbers [S2].
+
+### Cutting the paper to a tape and a few symbols
+He set aside the two-dimensional page of arithmetic as unnecessary and kept a one-dimensional tape of squares with a finite set of symbols. Long numbers count as many symbols, because we cannot tell at a glance whether two long strings of nines are the same. A limited memory justifies finitely many states [S2].
+
+### Describing every machine as a number
+He gave each machine a description number so a single universal machine could read any other machine's table and do its work. That let him build the diagonal argument that some questions cannot be answered by any machine [S2].
+
+### Putting a game in place of "can machines think?"
+In 1950 he said the question was too loose and replaced it with an imitation game [S1][S6].
+
+### Using a guessed word at Bletchley
+The wartime Ultra effort used statistics and likely words in messages to narrow the huge number of settings to try [S5][S7].
+
+### Choosing teaching over writing it all out
+He suggested building a machine that learns like a child and teaching it, not coding adult thought by hand [S1].
+
 ## Where he stood
 
 **Can machines think?** He thought the question was too vague to answer as asked. But he believed that by about 2000, people would speak of machines thinking without being contradicted [S1].

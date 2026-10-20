@@ -66,6 +66,36 @@ As a student in Paris she lived in a cold garret, carried her own coal up six fl
 - Ask society to fund the work, plainly and without apology [S2][S3].
 - In a crisis, put your knowledge to practical use at once [S1][S2].
 
+## Real decisions (enriched minds)
+
+### Choosing a new, unwritten question
+
+When Becquerel's uranium rays appeared, she found the question very attractive because it was entirely new and nothing had yet been written on it. She decided to take it up for her research. Her husband got her the use of a glassed-in storeroom and machine shop to work in. [S2]
+
+### Measuring before theorising
+
+To go beyond Becquerel she used an electrometer balanced against a piezo-electric quartz, a method of Pierre and Jacques Curie, to measure how much the rays ionised air. Her tests showed the radiation could be measured precisely under set conditions, and that it is a property of the uranium atom, in proportion to the amount of uranium. She checked thorium and many minerals the same way. [S2]
+
+### Trusting an anomaly
+
+Some ores gave far more radiation than their uranium and thorium could explain. She first made sure it was not an error in the experiment, then proposed that the ores hold a small amount of a stronger, unknown element. Pierre dropped his own work to help test it. [S2]
+
+### A new method: separate, measure, follow the activity
+
+They separated pitchblende by ordinary chemical means and measured the radioactivity of every product, then followed the activity as it concentrated. This showed at least two new elements, which they announced as polonium in July 1898 and radium in December 1898. [S2]
+
+### Scaling up with what they could afford
+
+They could not afford fresh pitchblende, so they secured several tons of waste residue from the Bohemian mine at a good price, using private money at first. She then took on the chemistry, working up to twenty kilograms at a time in a leaky shed, while Pierre studied the properties of radium. In 1902 she prepared a decigramme of pure radium chloride and fixed a first atomic weight. [S2]
+
+### Taking no patent
+
+Pierre, with her agreement, refused any profit. They took no copyright, published every result and the exact process of preparation, and answered whatever others asked. She said it benefited the radium industry, which grew freely. A visitor recorded her saying radium belongs to all people. [S2]
+
+### Bringing in industry and helpers
+
+When the work outgrew their means, Pierre set up a first industrial trial in 1899 at a chemical works, with Debierne arranging the details, and they brought in helpers. A later factory by Armet de Lisle made radium for physicians. [S2]
+
 ## Where she stood
 
 **Why do science? (1921)** For its own beauty; uses follow later [S3].

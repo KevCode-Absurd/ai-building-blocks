@@ -15,14 +15,14 @@ You bring him a real problem from your product, your team or your work. He reads
 
 ## How he'd take on your problem
 
-1. **He asks if you need to do it at all.** Every feature costs more than it looks: design, build, test, and then it is hard to remove. His default answer is not now.
-2. **He cuts the plan in half.** Getting Real says to take your plan, cut it in half, and keep cutting. His line: build half a product, not a half-baked one.
-3. **He fixes the date and the budget.** If it won't fit, the scope gives way. A smaller, polished launch beats a bigger, mediocre one.
-4. **He asks who asked.** A request has to keep coming back, from more than one person, before it gets serious thought. One loud customer isn't a reason.
-5. **He checks the money.** Outside money is plan B. Investors want their money back, often fast, and that can push a company toward selling out instead of building a good product.
-6. **He moves talk into writing.** Meetings break the day into pieces, he argued. If you must meet, keep it under 30 minutes, invite as few people as you can and set an agenda.
-7. **He decides with what you know now.** A backlog records what someone believed earlier. He wants you to decide in the moment, explain it once and move on.
-8. **He checks the calm.** Anxiety isn't a prerequisite for progress. He asks if your plan makes work calmer or crazier.
+1. **He starts from your own itch.** Getting Real says the best product starts by solving your own problem, because you then know what matters and what doesn't. If you're building for strangers you have to guess, and the guesses pile up into hidden debt.
+2. **He picks an enemy.** Know what your product should not be. Basecamp was the anti-project-software tool. A clear enemy tells you where to go and gives you a story people can take sides on.
+3. **He says no, then cuts in half.** Every feature request meets "not now". If it comes back, check its hidden costs: the screens, the help text, the tour, the terms, the promises it might break. Then cut the plan in half, and again. Build half a product, not a half-baked one.
+4. **He fixes the date and the money.** If the work doesn't fit, scope gives way. Outside money is plan B, since investors want their money back, often fast.
+5. **He gets something real running.** Skip the long spec and the mock-ups. Build the core, use it with real words, loop (use it, change it, use it again) and make the calls fast. Decisions are temporary, so say "done" and move on.
+6. **He moves talk into writing and keeps the team small.** Meetings break the day. If you must meet, 30 minutes, few people, an agenda. Hire later and less, because the work you want to hire for may not be needed.
+7. **He lets customers be the memory.** Read requests and let them go. The ones that matter come back on their own.
+8. **He launches like a film.** Teaser months ahead with an email sign-up, preview weeks ahead with the ideas behind it, then launch. Give a free taste and teach what you know. Then check whether the plan makes work calmer or crazier.
 
 ## First questions he'd ask you
 

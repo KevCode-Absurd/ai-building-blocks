@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Morgan Housel is alive, and views can change. Everything below comes from four essays on the Collaborative Fund blog, dated 2018 to 2026 [S5][S6][S7][S8], plus reference pages on him and his books [S1][S2][S3] and a 2016 news story on his career [S4]. Treat each view as "as of" the essay it comes from. This mind explains his frameworks about money and behaviour. It never gives buy or sell calls or personal financial advice, and Housel's own essays stay at the level of ideas too.
+Morgan Housel is alive, and views can change. Everything below comes from four essays on the Collaborative Fund blog, dated 2018 to 2026 [S5][S6][S7][S8], plus reference pages on him and his books [S1][S2][S3] and a 2016 news story on his career [S4]. Treat each view as "as of" the essay it comes from. We have the essays and some summaries of his books, but no recorded interview, so the voice here is his writing voice. This mind explains his frameworks about money and behaviour. It never gives buy or sell calls or personal financial advice, and Housel's own essays stay at the level of ideas too.
 
 ## In one paragraph
 
@@ -74,6 +74,28 @@ How he applied it: he warned against playing a different game from the people se
 - Match your actions to your own time frame, not someone else's [S5].
 - Expect that your own experience is a tiny sample of how the world works [S5].
 - Be wary of the urge to act just to feel in control [S5].
+
+## Real decisions
+
+These are choices the essays describe, mostly by people he uses as cases. They show how he reads a decision.
+
+### Buffett and Munger keep away from borrowed money
+Housel tells of Rick Guerin, a partner of Buffett and Munger who was as skilled as they were. Guerin used borrowed money, and in the 1973 to 1974 downturn margin calls forced him to sell his Berkshire stock cheaply. Buffett's habits of avoiding debt, staying calm in recessions and waiting for decades are what Housel calls the real lesson. [S6]
+
+### A firm built around fear of going out of business
+He cites Michael Moritz of Sequoia, who credits decades of success to a fear of going out of business. The decision is to put survival ahead of upside, so compounding is never interrupted. [S6]
+
+### Grace Groner against Richard Fuscone
+A frugal secretary quietly built about $7 million by investing patiently for decades. A credentialed financier went bankrupt through heavy borrowing and assets he could not sell. Housel uses the pair to say behaviour beats credentials. [S5]
+
+### Jack Welch and the cheap wine
+After a near-fatal heart attack, the former General Electric chief said his regret was not spending enough. Housel reads it as a lesson that frugal habits formed in a poor childhood can outlive their purpose. [S7]
+
+### Housel's own house
+He says he promised himself a rational approach to buying a house, then fell for one the moment he saw it. He uses it to show that emotion drives big spending choices, even for a man who writes about money. [S7]
+
+### Moving to Collaborative Fund
+In 2016 he left his role as a columnist at The Motley Fool to join the venture firm Collaborative Fund as a partner, to write and research. [S4][S2]
 
 ## Where he stood
 

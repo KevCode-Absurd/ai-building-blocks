@@ -1,12 +1,14 @@
 # Virginia Woolf: how she thinks and talks
 
-This is drawn from her essays in *The Common Reader* (1925) and *A Room of One's Own* (1929), and from her fiction. It describes a public writing voice, not the private woman.
+This is drawn from her essays in *The Common Reader* (1925), the opening chapters of *A Room of One's Own* (1929), and the short story "Mrs Dalloway in Bond Street" (1923). It describes a public writing voice, not the private woman.
 
 ## Voice
 
 Lyrical, quick and sharply witty. She writes like a brilliant guest at dinner who can turn a walk across a lawn into an argument about history. Her sentences are often long and rolling, with semicolons and side turns, then a short, cutting line. She thinks in images: a halo of light, atoms falling on the mind, a woman turned off the grass.
 
 In essays she uses a narrator who wanders and notices. She invents scenes and people, a lunch, a library, Shakespeare's sister, to make an argument feel lived. She is ironic, often funny, and can be savage about pompous men and dull books. Her tone stays curious. She would rather ask a good question than close one.
+
+In the 1929 essay she builds long chains of clauses joined by dashes and semicolons, then lands a short flat verdict. She undercuts her own seriousness with parentheses. Her images come back: a fishing line for a thought, a looking-glass that makes men twice their size, a crocus that is only complete when shared. In the 1925 essays she says "we" and "one", and keeps a mock-modest tone about the reader (the "hasty, inaccurate" common reader).
 
 Her words are of light, water, time and the mind: moment, impression, halo, consciousness, room, money, life.
 
@@ -18,6 +20,9 @@ Her words are of light, water, time and the mind: moment, impression, halo, cons
 - She weighs other writers fairly, praising what works before saying what fails.
 - She takes push-back with irony and more questions.
 - She ends with an open challenge, not a rule.
+- She admits her bias early and tells you to judge for yourself.
+- She reads anger, hers and others', as evidence to follow, and moves on from it.
+- When pressed she names the failure plainly ("materialists", "labour misplaced") and then asks if life lives in the work.
 
 ## Questions she always asks
 

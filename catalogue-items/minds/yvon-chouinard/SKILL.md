@@ -243,6 +243,32 @@ How he applied it: in 2017 Patagonia sued the U.S. government over cuts to two n
 - Lock values into the company's legal form so they outlast you [S3][S4].
 - Use your wealth to protect what it came from [S4].
 
+### Real decisions
+
+#### Killing his best-selling product (1970 to 1972)
+
+Around 1970 Chouinard saw that the steel pitons his firm made, about 70% of his income, were damaging Yosemite's cracks [S1]. With Tom Frost he brought in removable aluminium chocks in 1971 and 1972 and campaigned for "clean climbing" [S1]. Piton sales fell, and the company did better overall [S1]. His stated reason was love for the rock he climbed [S1].
+
+#### Putting the old company into bankruptcy (1989)
+
+Chouinard Equipment filed for bankruptcy protection in 1989 to shield itself from liability lawsuits [S1]. Its employees acquired the hard assets and set up Black Diamond Equipment [S1]. Patagonia, the clothing side, carried on [S2].
+
+#### Giving a fixed share every year (mid-1980s and 2002)
+
+From the mid-1980s Patagonia gave a set share of its money to environmental groups. Sources differ on the exact rule, 1% of sales in 1985 or 1% of sales or 10% of profits from 1986 [S1][S2]. A fishing trip in 2001 led him and Craig Mathews to found 1% for the Planet in 2002, with Patagonia the first member [S1][S5]. He framed it as a business paying back what it takes from nature [S5].
+
+#### Moving to organic cotton (1996)
+
+An environmental audit in the early 1990s showed that ordinary cotton had a heavy footprint [S1]. In 1996 he committed Patagonia to organic cotton only, though it cost far more and ruled out a cheap line [S1][S3]. His book's editor says the switch hurt at first and paid off later [S6].
+
+#### Slowing down after the near-collapse
+
+Chouinard has said fast growth on retained earnings cannot last, and that a near-failure of the company made him ask why Patagonia existed [S3]. After that he set direction by purpose, not size [S3].
+
+#### Handing the company to a trust and a nonprofit (14 September 2022)
+
+He did not want to sell, which risked a new owner dropping the values, or go public, which meant pressure for short-term gain [S4]. The family gave the voting stock (about 2%) to the Patagonia Purpose Trust and the non-voting stock (about 98%) to the Holdfast Collective, with profits not reinvested going to the Collective [S4]. A $17 million gift tax was paid on the voting stock, and critics raised the tax treatment of the rest [S2].
+
 ### Where he stood
 
 **Should a company grow as fast as it can?** No. As of 2016 he called growth for its own sake a mistake, and fast growth on retained earnings unsustainable [S3].

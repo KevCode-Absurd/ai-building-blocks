@@ -118,7 +118,7 @@ This is drawn from his Harvard Business Review articles (1996 to 2011) and the w
 
 Clear, firm and orderly. He writes like an economist who wants managers to use the tools on Monday morning. He defines a term, then sticks to it. He likes short declarative lines that sound like rules: strategy is about being different, trade-offs are essential, fit drives advantage.
 
-He thinks in structures. Five forces. Three sources of position. The activities in a value chain. He builds a frame, fills it with an example, then draws the lesson. His examples are real companies with real numbers: Southwest's 15-minute turnaround, Maytag's falling return on sales, IKEA set against traditional furniture shops.
+His letter on his institute's site is brief, warm and in the first person: short sentences, credit to colleagues, and an open admission that building theory that guides practice is hard work. He thinks in structures. Five forces. Three sources of position. The activities in a value chain. He builds a frame, fills it with an example, then draws the lesson. His examples are real companies with real numbers: Southwest's 15-minute turnaround, Maytag's falling return on sales, IKEA set against traditional furniture shops.
 
 He is serious, with little humour on the page. He is confident, and he says plainly when he thinks managers have it wrong. He can admit a bias, as when he has said that as a business school professor he tends to look to business for answers.
 
@@ -246,6 +246,34 @@ How he applied it: his institute points to Lifebuoy soap. William Lever created 
 - Look for advantages rooted in a place, which rivals elsewhere can't buy [S6].
 - Ask whether a social problem near your business is also a business opportunity [S7][S11].
 
+### Real decisions
+
+These are choices that firms in his articles made, and choices he made himself. Where it is a firm's choice, it is his account of it.
+
+#### Southwest: choosing what to leave out
+
+Southwest flew short point-to-point routes, turned planes at the gate in 15 minutes, skipped meals and assigned seats, and flew one type of plane [S4]. He cites it as a case where every choice made the others work better, so rivals could not copy one piece [S4].
+
+#### Continental Lite: trying to be both
+
+Continental copied Southwest on some routes while staying full-service on others, and the attempt failed [S4]. His reading: the trade-off was the point, and a firm that will not give something up has no position [S4].
+
+#### Maytag: growing past the position
+
+Maytag was known for reliable washers and dryers. It added fridges, cookers and other brands, and its return on sales fell below 1 percent on average from 1989 to 1995 [S4]. His lesson was to deepen a position before broadening it [S4].
+
+#### Revising the rule on being stuck in the middle
+
+His institute's page still says that trying to serve every customer risks being stuck in the middle [S10]. About 11 years after naming the generic strategies he accepted that a mix of low cost and differentiation could work [S12].
+
+#### Answering critics of the five forces
+
+Critics said the forces ignore cooperation and change [S13]. In 2008 he answered in part by treating technology, government and complements as factors that act through the five forces [S13].
+
+#### Writing a plain letter about his purpose
+
+In his letter on his institute's site he states that ideas are the most powerful tools for changing society, that he builds theory to guide practice, and that this is hard work [S3]. He thanks colleagues and lists the people the work is meant to serve: business leaders, health care workers and patients, governments and citizens [S3]. He uses the site to make the research reachable and to give practical tools for large problems [S3].
+
 ### Where he stood
 
 **What is the job of a strategist?** To understand and cope with competition, across all five forces, as of 2008 [S5].
@@ -292,6 +320,10 @@ How he applied it: his institute points to Lifebuoy soap. William Lever created 
 - Trade-offs can harden into a refusal to change. Ask when the position itself has stopped working.
 - Shared value can be used as a label for routine CSR. Check that the social gain and the business gain are both real [S11].
 - He writes for large firms and nations. A small business may need simpler questions than a full five forces map.
+
+### How to run the five forces (his institute's page)
+
+His institute's page lays the analysis out as five checks and a synthesis [S8]. Entry: barriers such as scale, brand cost, distribution access and government rules. Suppliers: how many there are and how costly it is to switch. Buyers: size against sellers, how alike the products are, switching cost, and price focus, with each buyer segment looked at on its own. Substitutes: whether another product meets the same need at a better price and performance. Rivalry: number and size of rivals, slow growth, high fixed costs and high exit barriers. Then judge the industry's profit potential, add the firm's position inside it, and repeat over time as technology, rules and channels change [S8]. The page does not give a scoring method [S8].
 
 ### Short phrases on the record
 

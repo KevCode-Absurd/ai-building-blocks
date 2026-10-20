@@ -1,0 +1,126 @@
+new_slug: contrarian-belief-tester
+name: "Contrarian belief tester"
+summary: "Paste your big idea. Get the true-but-unpopular belief behind it, who disagrees and the smallest market where it could win."
+job: test-an-idea
+thinking: high
+thinking_why: "It must tell a real insight from a popular opinion or a copy, which needs careful reasoning."
+
+headline: "Contrarian belief tester"
+subhead: Give it your big idea. It finds the belief underneath that few people share, checks if it is also true, and asks if the idea is new or a copy. You get the smallest market where it could win, how to describe it without naming a rival, and who needs to hold it with you.
+
+explain: |
+  An idea that everyone already agrees with has no edge. Many new ventures are copies of something that works, entering a crowded market with one more feature. The ones that stand out rest on something the founder believes that most people don't, and that turns out to be right.
+
+  This skill writes your idea as one belief that few people share, then tests whether it is rare and also supported by evidence. It asks whether the thing is new or a copy, picks the narrowest market you could own first, and checks that you can describe it without naming a rival. It ends with what you would need to be the last company in the category.
+
+when:
+  - Your idea sounds like "X, but better" and you can't say why it matters.
+  - You want to know if you have a real insight or only an opinion.
+  - You are choosing where to start and want a small market you can win.
+
+you_give:
+  - Your big idea in a few sentences
+  - Why you think it will work
+  - Who is on the team and how long they have worked together (optional)
+you_get:
+  - Your idea as one belief that few agree with
+  - A split between evidence and hope
+  - The narrowest first market
+  - A description of the idea that names no rival
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your idea and the reasons you believe it. Say who disagrees, if anyone does.
+  - Answer its questions about evidence honestly, and mark anything you are guessing.
+  - Take the first market and the new description to your next conversation with a buyer or partner.
+
+how_it_works:
+  - title: States the belief
+    text: Writes your idea as one thing you believe that very few people agree with.
+  - title: Tests it
+    text: Checks that it is unusual and also right, with evidence listed on each side.
+  - title: Checks for a copy
+    text: Asks if it is new or a version of something that already exists.
+  - title: Finds the first market
+    text: Defines the narrowest market you could own first.
+  - title: Drops the rival
+    text: Describes the idea without naming any competitor.
+  - title: Plans for the long run
+    text: Asks what you would need to be the last mover in the category.
+  - title: Checks the team
+    text: Notes who must hold the belief with you and how long they have worked together.
+
+output_shape: |
+  THE BELIEF
+  <one sentence someone could disagree with>
+
+  WHO DISAGREES
+  <group> because <their reason>
+
+  EVIDENCE AND HOPE
+  Evidence for: <list with source>
+  Hope, not evidence: <list>
+
+  NEW OR A COPY
+  <verdict and what it copies, if anything>
+
+  THE FIRST MARKET
+  <narrowest market> | Why you could dominate it: <reason>
+
+  THE IDEA, WITHOUT A RIVAL
+  <description>
+
+  THE LAST-MOVER QUESTION
+  <what you would need in place to be the last company in the category>
+
+  THE PEOPLE
+  <who must hold this belief, how long they have worked together, gaps>
+
+  MISSING
+  <facts that would sharpen the test>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Why you believe it
+    how: Give reasons and examples you have seen. Evidence is separated from hope.
+  - what: Who disagrees
+    how: Name who would push back. The best test of a belief is the reasons people reject it.
+  - what: Your reach
+    how: Say which small groups you can reach. It picks a first market from those.
+  - what: Your team
+    how: Say who is involved and for how long. It checks if they can hold the belief together.
+
+judge:
+  - The belief is stated so someone could disagree with it.
+  - Evidence is separated from hope.
+  - The first market is small enough to dominate.
+  - No rival is used to define the idea.
+  - It says whether the idea is new or a copy.
+
+test:
+  - Run it on an idea everyone agrees with. It should say the belief is not unusual.
+  - Run it on a real idea of yours and show the belief to someone who disagrees. See if they recognise the objection.
+  - Run it twice. The belief should stay close.
+  - Check the first market by counting how many such buyers you can name.
+
+improve:
+  - Add the markets you know well, so the first market comes from real options.
+  - Add the objections you hear most, so it tests the belief against them.
+  - Save the belief and revisit it when evidence changes.
+  - Pair it with "Positioning statement writer" once the belief holds.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Testing a belief against reasons and evidence is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Evidence you have seen with your own eyes"
+    - "Reasons people give for saying no"
+    - "A list of similar ideas already in the market"
+
+terms:
+  - term: Contrarian belief
+    meaning: Something you believe that is true and that few people agree with.
+  - term: Last mover
+    meaning: The company that is still leading its category long after others have entered.

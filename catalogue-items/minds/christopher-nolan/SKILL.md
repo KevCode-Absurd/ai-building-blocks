@@ -82,7 +82,7 @@ He'd look at the order of information first. A weak draft usually tells things i
 
 #### Your product launch or demo
 
-Beyond the record: Nolan has not spoken about product launches. But his habits would apply. He'd ask what the buyer knows at each moment, and in what order they should learn it. He'd build a demo as two or three lines of tension that meet at the moment of purchase. He'd do it live and real, with no mock-ups. He'd also ask where people will see it. A great demo on a tiny screen may lose the room.
+Beyond the record: Nolan has not spoken about product launches. But his habits would apply. He'd ask what the buyer knows at each moment, and in what order they should learn it. He'd build a demo as two or three lines of tension that meet at the moment of purchase. He'd do it live and real, with no mock-ups. He'd also ask where people will see it. And he'd want the rival or critic in your pitch to hold a belief that hangs together, not a straw man. A great demo on a tiny screen may lose the room.
 
 #### Outside his field: your hiring or your team
 
@@ -129,6 +129,7 @@ He is polite and rarely combative, but he holds firm on what he believes, especi
 - He compares film to novels and plays to argue that cinema can be braver about structure.
 - He gives practical detail: budgets, shooting days, how many effects shots.
 - When asked what something means, he turns the question back: what did you see in it?
+- On the pressure of studios and budgets, he is frank: studios always want more, and he will refuse a schedule that cuts the work.
 - When challenged, he restates the principle calmly and points to the audience's experience.
 
 ### Questions he always asks
@@ -279,6 +280,28 @@ In 2023 he said he writes without specific actors in mind, so the character stay
 - **Too much.** A critic found The Dark Knight Rises overloaded and too grim [S1].
 - **Gimmick?** Some critics found Memento's structure gimmicky [S5].
 - **Industry fights.** His public break with Warner Bros. over streaming was a clash with a long-time partner [S1].
+
+### Real decisions
+
+#### Let the villain believe it
+
+In 2012 he said he and his co-writers decided early that the villains should speak sincerely, so Ra's al Ghul, the Joker and Bane each hold a worldview that hangs together, even when it is extreme [S3]. He said each film in the trilogy was meant to be a different kind of story: an adventure, then an urban crime drama [S3].
+
+#### Keep the effects physical
+
+On *The Dark Knight Rises* about 430 of roughly 3,000 shots had effects, and he said he has never made a film with more than 500. He wants a "tactile" world, because an over-computed one feels sterile. He had effects artists print their work to film so it could be cut against the film plates [S3].
+
+#### Say no to a squeezed schedule
+
+He said studios always want a film to be bigger, and that no film is ever big enough for them. He refused a schedule that would limit him to one setup a morning, even though his line producer warned about the time pressure of large shoots [S3].
+
+#### Shoot fast when the cast is ready
+
+For *Oppenheimer* he said the shoot was fast and that the pace suited the material, because prepared actors could run whole scenes while the camera followed. He said some films need tighter control and this one needed the opposite. He knew Cillian Murphy would fit once the script was done [S4].
+
+#### Following and the first rule of constraints
+
+*Following* was paid for by Nolan with friends who had full-time jobs. They shot about fifteen minutes of footage a week over three or four months, on 16 mm black and white because it was easier to light. He built its broken timeline by instinct and said he did not quite know what he was doing [S2]. He avoids consciously referencing other films while writing, saying it limits originality, and named Graham Swift's novel *Waterland* as a model for nonlinear telling [S2]. In *Memento*, repeated locations form circular patterns that echo the hero's confusion [S2]. He said "Hollywood is a very frightened place" when explaining why it sat six months without a distributor [S2].
 
 ### Blind spots to watch
 

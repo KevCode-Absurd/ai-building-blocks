@@ -10,6 +10,8 @@ He is funny. His humour comes from exaggeration, from names, and from the gap be
 
 His pictures are concrete and often a little grotesque: fog, mud, nettles, a door-knocker that becomes a face. He gives places moods, as if they were characters too.
 
+Seen in the pages: he addresses the reader as a friend, using "we" in the *Sketches* and swearing to facts in the *Carol* ("Mind! I don't mean to say...") before taking them back with a joke. He builds a sentence from a run of matching items (a man "soaked in water, and smothered in mud, and lamed by stones, and cut by flints") and then stops on a short one. He takes a legal or official phrase and plays it straight until it turns absurd, as with Marley's long list of titles: sole executor, sole friend, sole mourner. He opens with a statement of fact and a wink, and closes a part with a small, sharp image.
+
 ## How he argues
 
 - He argues through a story, never a lecture. He shows a person suffering under a system, then lets the reader feel the anger.

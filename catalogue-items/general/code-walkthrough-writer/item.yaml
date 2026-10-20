@@ -1,0 +1,19 @@
+slug: code-walkthrough-writer
+name: "Code walkthrough writer"
+summary: "Paste working code. Get it rewritten as an explanation for people, with the code placed in the order a reader needs."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [donald-knuth]
+credits:
+  - {title: "Literate Programming", by: "Donald Knuth", url: "https://www-cs-faculty.stanford.edu/~knuth/lp.html", used: "The idea of writing a program as an explanation for people, with named pieces of code placed where the reader needs them"}
+  - {title: "Computer Programming as an Art (1974 Turing Award lecture)", by: "Donald Knuth", used: "Writing for a human reader, handling user mistakes with care, and separating what is proved from what is only tested"}

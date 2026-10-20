@@ -1,0 +1,142 @@
+new_slug: sales-letter-outline-planner
+name: "Sales letter outline planner"
+summary: "Paste your research and chosen theme. Get a full outline, with headline ideas and the proof each claim needs."
+job: write-landing-page
+thinking: medium
+thinking_why: "It orders a whole piece and decides what each claim needs, within fixed steps."
+
+headline: "Sales letter outline planner"
+subhead: "Give it your angle library, product facts and chosen theme. It orders the whole piece, with the yes each section must win, a pile of headline ideas and the proof each claim needs. You get an outline and a brief, with no body copy yet."
+
+explain: |
+  Most weak sales pages were weak before the first sentence. The order was wrong, or claims had no proof, or the opening spoke about the seller instead of the reader. Fixing that after drafting means rewriting everything.
+
+  This skill plans the piece first. It sorts headline ideas by how they lead, sets the order of sections so each wins one small yes from the reader, and gives every benefit depth. It lists each claim with its proof, and cuts what cannot be shown. It spends extra effort on the headline, the deck and the opening, and records what the piece must achieve for the client. It asks an outside reader for a note before drafting.
+
+when:
+  - "You are about to write a long sales page, letter or email launch."
+  - "A draft you wrote feels disordered and you cannot say why."
+  - "You need a brief for a writer or an AI to write from."
+
+you_give:
+  - "An angle library with a chosen theme"
+  - "Your product facts: price, contents, guarantee, proof"
+  - "A buyer persona (optional)"
+  - "The goal for the piece, such as break-even or profit per send (optional)"
+you_get:
+  - "A section-by-section outline, each section with the yes it must win"
+  - "A pile of headline ideas sorted by how they lead"
+  - "A table of claims with the proof for each"
+  - "Three options for the headline, deck and lead-in"
+  - "A brief another writer or AI can write from"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your angle library and product facts."
+  - "Say what the piece must achieve for you."
+  - "Read the outline for order and check each claim's proof."
+  - "Show it to someone outside the project and bring back their notes."
+  - "Use the brief to write the piece."
+
+how_it_works:
+  - title: "States the theme"
+    text: "Sets the theme and the dominant feeling in two lines."
+  - title: "Piles up headlines"
+    text: "Writes a dozen or more ideas and sorts them by benefit, feeling or news."
+  - title: "Orders the piece"
+    text: "Plans each section and the small yes it must win, before any copy."
+  - title: "Gives benefits depth"
+    text: "Takes each from feature to a picture of it in daily life."
+  - title: "Matches proof to claims"
+    text: "Lists each claim with its proof, or marks it cut."
+  - title: "Plans the boxes"
+    text: "Moves slow material into sidebars so the main story keeps moving."
+  - title: "Confirms the goal"
+    text: "States whether the piece must break even or earn a profit."
+  - title: "Plans an outside read"
+    text: "Writes questions for someone not on the project."
+
+output_shape: |
+  THEME
+  <theme>   Feeling: <dominant emotion>
+
+  HEADLINE PILE
+  Benefit: <ideas>
+  Feeling: <ideas>
+  News: <ideas>
+
+  OUTLINE
+  <n>. <section> (<length>)
+     Holds: <what>
+     Wins: <the yes>
+
+  BENEFIT CHAINS
+  <feature> -> <why it matters> -> <benefit> -> <daily picture> -> <benefit of the benefit>
+
+  CLAIMS AND PROOF
+  <claim> | <proof or MISSING> | <keep/cut>
+
+  BOXES
+  <material> goes in a box after <section>
+
+  TOP OPTIONS
+  Headline x3, deck x3, lead-in direction x3
+
+  CLIENT GOAL
+  <break-even or profit per send, and what it changes>
+
+  OUTSIDE READ
+  <questions and notes>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "The theme"
+    how: "Name the feeling and angle you want. Without one, it takes the top angle in your library."
+  - what: "How much proof you hold"
+    how: "Add test results, quotes and numbers. Each one saves a claim from being cut."
+  - what: "The client goal"
+    how: "Say whether you need break-even or profit on each send. It changes how long the piece should be and how bold the offer."
+  - what: "Piece length"
+    how: "Say whether it is a long letter or a short page. A short page may win only some of the yeses."
+
+judge:
+  - "You could hand the outline to a writer who has never met you."
+  - "Each section has one clear yes to win."
+  - "Every claim names its proof, or is marked cut."
+  - "There are real options for the headline and the opening."
+  - "No section is there only because you like it."
+
+test:
+  - "Run it on a page you already sold well with. See if the outline matches the order you used."
+  - "Hide the headline from a friend and ask what the outline promises. It should match your theme."
+  - "Write the opening from the brief and see if it speaks to the feeling."
+  - "Run it twice. The section order should stay close."
+
+improve:
+  - "Add your own required sections, such as a legal line, to step 3."
+  - "Add the proof types you hold, such as awards or lab tests, to step 5."
+  - "Save outlines that worked to your brand file as patterns to start from."
+  - "Pair it with Dominant emotion finder before it and a copy checker after it."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ordering sections and matching proof to claims is text work any strong chat AI does well with this skill."}
+    - {name: "A shared document", why: "Lets the outside reader comment on each section of the outline."}
+  inputs:
+    - "Past pages or letters that sold well, to match the order"
+    - "Customer quotes with sources"
+    - "Your guarantee and its exact terms"
+    - "Notes on what the client or boss expects"
+
+terms:
+  - term: "Lead"
+    meaning: "The opening that the reader meets first, either a big benefit, their strongest feeling, or news they care about."
+  - term: "Deck"
+    meaning: "The short line of text just under the headline."
+  - term: "Sidebar"
+    meaning: "A boxed note set beside the main text, used for proof that would slow the story."

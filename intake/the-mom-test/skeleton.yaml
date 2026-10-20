@@ -1,0 +1,73 @@
+# Workflow skeleton for The Mom Test (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: the-mom-test
+source:
+  title: "The Mom Test"
+  by: "Rob Fitzpatrick"
+  url: "https://www.momtestbook.com/"
+  kind: book
+  rights: ideas-only
+  year: 2013
+minds: [rob-fitzpatrick]
+workflow:
+  slug: find-out-if-your-idea-is-worth-building
+  name: "Find out if your idea is worth building"
+  summary: "Give it your idea. Get who to talk to, what to ask, and a keep, change or stop call."
+  when: "you have an idea and want to know if it is worth building before you spend on it."
+  job: test-an-idea
+  level: beginner
+steps:
+  - name: Pick who to talk to first
+    skill: first-customer-group-picker
+    job: research
+    task: test-an-idea
+    from: "Chapter 7, customer segments"
+    method: ["Slice the broad market into smaller groups by who has the problem worst", "For each, name where they can be found this week", "Drop any group you cannot reach or that is too broad to act on", "Pick one who-where pair to start with"]
+    inputs: [brief, persona!]
+    outputs: [shortlist]
+    note: "Slice the market until you have a who and a where you could reach this week."
+  - name: Write the questions
+    skill: customer-interview-question-writer
+    job: research
+    task: test-an-idea
+    from: "Chapters 1 to 3, the three rules and asking important questions"
+    method: ["Ask about their life, not your idea", "Ask about specific past events, not opinions or the future", "Pick the three unknowns that could change the plan", "Plan the scary question"]
+    inputs: [brief, shortlist!]
+    outputs: [plan]
+    note: "Questions about their life and the last time the problem happened, never about the idea."
+  - name: Write the messages that get the talks
+    skill: customer-conversation-request-writer
+    job: research
+    task: test-an-idea
+    from: "Chapters 4 and 6, keeping it casual and finding conversations"
+    method: ["Start from warm intros, then cold", "Ask for help, not a sale", "Frame the ask in a few plain parts", "Keep the talk casual"]
+    inputs: [brief, shortlist!]
+    outputs: [copy_draft]
+    note: "Warm-intro and cold messages that ask for help, not a sale."
+  - pause: "Have five to ten conversations and write notes after each one."
+  - name: Sort what you heard
+    skill: customer-conversation-notes-sorter
+    job: analysis
+    task: understand-customers
+    from: "Chapters 2 and 8, bad data and writing it down"
+    method: ["Mark facts, pains, workarounds and commitments", "Flag compliments, vague claims and feature ideas", "Write the follow-up you should have asked"]
+    inputs: [voc_reviews, brief!]
+    outputs: [audit_report]
+    note: "Split the notes into what people did, what it cost them and what they committed to."
+  - name: Plan the commitment to ask for
+    skill: commitment-ask-planner
+    job: research
+    task: test-an-idea
+    from: "Chapter 5, commitment and advancement"
+    method: ["Name the next step for each person", "Make it cost time, reputation or money", "Mark praise with no commitment as a zombie lead"]
+    inputs: [brief, audit_report!]
+    outputs: [plan]
+    note: "For each person, the next step to ask for in time, reputation or money."
+  - name: Make the call
+    skill: idea-evidence-review
+    job: analysis
+    task: test-an-idea
+    from: "Chapters 5 and 8, after the conversation"
+    method: ["Set what you believed against what people did", "Weigh commitments over compliments", "Say keep going, change or stop, and why", "Name the next three talks"]
+    inputs: [brief, audit_report]
+    outputs: [audit_report]
+    note: "Keep going, change or stop, the reason, and the next three talks."

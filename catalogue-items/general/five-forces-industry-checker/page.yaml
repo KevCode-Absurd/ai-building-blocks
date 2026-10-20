@@ -1,0 +1,125 @@
+new_slug: five-forces-industry-checker
+name: "Five forces industry checker"
+summary: "Name your industry and buyers. Get a five-force read of where profit comes from and a score out of 100."
+job: plan-strategy
+thinking: medium
+thinking_why: "It judges five forces from facts you give, and weak evidence changes the answer, but the frame is fixed."
+
+headline: "Five forces industry checker"
+subhead: "Name your industry and who you sell to. It reads the five forces that set profit: new entrants, suppliers, buyers, substitutes and rivalry. It judges the industry's profit potential, picks the one or two forces that decide the answer and says what could change them. You also get a score out of 100."
+
+explain: |
+  Profit in a field is shaped less by how good you are than by the structure around you. Easy entry, strong buyers, strong suppliers, easy substitutes and fierce rivalry each push profit down. If you only watch your direct rival you miss the force that is actually taking the margin.
+
+  This skill checks each force with the questions that matter. For entrants it looks at scale, cost of a brand, access to distribution and rules. For suppliers and buyers it looks at number, switching cost and how alike the products are. For substitutes it asks what meets the same need better or cheaper. For rivalry it looks at count, growth and exit costs. It then calls out the one or two forces that decide the answer. The score shows how complete the read is.
+
+when:
+  - You are choosing a market or deciding whether to enter one.
+  - Margins are thin and you do not know whether it is you or the industry.
+  - You want to know which force to work on first.
+
+you_give:
+  - Your industry or category, and who you sell to
+  - What you know about rivals, buyers, suppliers and substitutes
+  - Your rivals list (optional)
+you_get:
+  - A read of each of the five forces
+  - A call on the industry's profit potential
+  - The one or two forces that decide, and what could shift them
+  - A score out of 100 for how complete the read is
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say what you sell and to whom. Add what you know about each force.
+  - Read the call on profit potential, then the deciding forces.
+  - Rerun it in six or twelve months or after a big change.
+
+how_it_works:
+  - title: Checks new entrants
+    text: Looks at scale, cost of a brand, distribution access and rules.
+  - title: Checks suppliers
+    text: Counts suppliers and the cost of switching.
+  - title: Checks buyers by segment
+    text: Looks at size, how alike products are, switching cost and price focus, by segment.
+  - title: Checks substitutes
+    text: Finds things that meet the same need at a better price or performance.
+  - title: Checks rivalry
+    text: Looks at the number and size of rivals, slow growth, fixed costs and hard exits.
+  - title: Judges profit potential
+    text: Calls the industry's profit potential, then places your firm in it.
+  - title: Picks deciding forces
+    text: Names the one or two forces that decide the answer and what could shift them.
+  - title: Scores the read
+    text: Counts how many of six checks the read passes.
+
+output_shape: |
+  INDUSTRY AND BUYERS
+  <industry> | <buyer segments>
+
+  THE FIVE FORCES
+  New entrants: <strong, medium, weak> | <evidence>
+  Suppliers: <> | <evidence>
+  Buyers (by segment): <segment: force> | <evidence>
+  Substitutes: <named substitute> | <evidence>
+  Rivalry: <> | <evidence>
+
+  PROFIT POTENTIAL
+  <high, medium, low> | <why> | your firm's place: <>
+
+  DECIDING FORCES
+  <force> | what could shift it: <>
+
+  RERUN WHEN
+  <events or date>
+
+  SCORE
+  <n> out of 100: <six checks, pass or fail>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How narrow the industry is
+    how: Pet food gives a better read than retail. Be as narrow as your buyers are.
+  - what: Buyer segments
+    how: List the types of buyer. Forces differ a lot by segment.
+  - what: Evidence
+    how: Add numbers and examples. Forces with no evidence are marked unknown.
+  - what: Your place
+    how: Say your share and your cost position. The placement uses them.
+
+judge:
+  - Are buyers split by segment?
+  - Is a substitute named?
+  - Are only the one or two deciding forces called out?
+  - Is there a note on what would change the read?
+  - Do ratings rest on stated evidence?
+
+test:
+  - Check two ratings against an industry report or trade press.
+  - Run it for a rival's position and see if the read differs for them.
+  - Run it twice. The deciding forces should be the same.
+  - Rerun after a big change, such as a new rule, and see which force moved.
+
+improve:
+  - Add your field's own questions to each force, such as licence rules.
+  - Keep each run in your files so you can see change over time.
+  - Add your cost and share figures so the placement is exact.
+  - Pair it with "Strategy trade-off planner" to act on the deciding force.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Applying a fixed five-part frame to facts you paste is text work any strong chat AI can do."}
+  inputs:
+    - "A list of rivals with size and prices"
+    - "Your supplier list and switching costs"
+    - "Notes on buyer groups and what they compare"
+
+terms:
+  - term: Five forces
+    meaning: The five pressures that set how much profit an industry can earn.
+  - term: Substitute
+    meaning: A different product that meets the same need, such as a video call in place of a flight.

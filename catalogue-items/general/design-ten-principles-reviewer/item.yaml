@@ -1,0 +1,22 @@
+slug: design-ten-principles-reviewer
+name: "Design ten-principles reviewer"
+summary: "Describe or attach your product or page. Get a review against ten principles of good design, with what to remove and a score out of 100."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: web_page, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [dieter-rams, herb-lubalin, neville-brody, jony-ive]
+credits:
+  - {title: "Design by Vitsoe, speech delivered in New York", by: "Dieter Rams, 1976", url: "https://www.vitsoe.com/gb/about/good-design", used: "The ten principles of good design, and the test of what the product is for and who uses it"}
+  - {title: "If You Had To Do It All Over Again poster series, U&lc", by: "Herb Lubalin, 1978", used: "Listing every element on a piece, even small ones such as page numbers"}
+  - {title: "Neville Brody, Blueprint interview, May 1985", by: "Martin Colyer", used: "Writing down what the design was meant to say in one line"}
+  - {title: "Jonathan Ive profile and Q and A, Design Museum", by: "Design Museum, 2003", used: "Stating what the product is for and who holds it"}

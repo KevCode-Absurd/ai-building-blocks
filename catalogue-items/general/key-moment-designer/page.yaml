@@ -1,0 +1,127 @@
+new_slug: key-moment-designer
+name: "Key moment designer"
+summary: "Name an event like a first day or a launch. Get the one peak to build and the rest kept simple."
+job: lead-people
+thinking: medium
+thinking_why: "It weighs several ideas and picks one, but the parts it works with are fixed."
+
+headline: "Key moment designer"
+subhead: Give it an event, such as a first day, a launch or a farewell, and who it is for. It finds where people expect a set routine, picks one peak worth real effort and plans the rest to stay simple. You get a short plan with owners and dates.
+
+explain: |
+  People do not remember an event evenly. They remember a few high points, the start, the end and the moments where something changed. Most teams spread effort across every step, so the event feels smooth and is forgotten by Friday.
+
+  This skill picks the single moment people will talk about. It looks for the step everyone expects to go a set way and breaks that script on purpose. It then adds one lift (something that raises feeling), one proof of progress or new insight, and one link to other people or to a shared purpose. It plans who does what, and takes cost out of the steps that do not matter. It also refuses to dress up an event where the basics are broken.
+
+when:
+  - You are planning a first day, launch, farewell, event or customer visit and every step looks the same.
+  - Your budget is small and you need to know where one effort counts most.
+  - People leave your event happy and cannot say what it was like a week later.
+
+you_give:
+  - The event, who it is for and when it happens
+  - What usually happens at this kind of event
+  - Your budget and who can help (optional)
+  - What went wrong or felt flat last time (optional)
+you_get:
+  - The one peak to build, with the reason it was chosen
+  - The expected step you will break and how
+  - A plan with owners, dates and costs, and the steps kept plain
+  - A note on any basic that must be fixed before the peak will work
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the event, the people it is for and what normally happens.
+  - Say what it costs to do things and who is available. Mention any known problem, such as a late start or a dirty room.
+  - Read the chosen peak. If it does not suit your people, say why and ask for the next best one.
+  - Give each owner their line of the plan.
+
+how_it_works:
+  - title: Picks the moment
+    text: Lists the moments in your event and chooses the one people would tell a story about.
+  - title: Finds the script
+    text: Writes down what people expect at each step, then picks one expectation to break on purpose.
+  - title: Adds one lift
+    text: Adds something special that raises feeling, such as a surprise, a place or a performance.
+  - title: Adds pride or insight
+    text: Adds a way for people to see their progress or learn something about themselves.
+  - title: Adds a link
+    text: Connects people to each other or to the reason the event exists.
+  - title: Plans cost and owners
+    text: Gives each piece an owner, a date and a cost, and cuts polish from the steps that do not matter.
+  - title: Checks the basics
+    text: Flags any broken basic that a peak cannot cover, and runs its own checks.
+
+output_shape: |
+  EVENT
+  <event, who it is for, date>
+
+  THE PEAK
+  <the one moment to build and why people will tell stories about it>
+
+  THE SCRIPT WE BREAK
+  Expected: <what people assume>   Instead: <what happens>
+
+  THE PARTS OF THE PEAK
+  Lift: <what raises feeling>
+  Insight or pride: <what people learn or see about their progress>
+  Link: <the tie to other people or purpose>
+
+  THE REST, KEPT SIMPLE
+  <step> | Do: <plain version>
+
+  WHO DOES WHAT
+  <owner> | <task> | <date> | <cost>
+
+  BASICS TO FIX FIRST
+  <any broken basic>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: What people expect
+    how: Describe the usual routine in detail. The more exact it is, the easier it is to find a script worth breaking.
+  - what: Your budget
+    how: Give a real number. A peak that fits the money is better than a grand idea that gets cut.
+  - what: The people
+    how: Say who they are and what they care about, so the lift and the link fit them.
+  - what: Past flat events
+    how: Describe what people said afterwards. It shows which steps were forgettable.
+
+judge:
+  - There is one peak, not five.
+  - At least one expected step is broken on purpose and the plan says how.
+  - Each part has an owner and a date.
+  - The cheap steps are plain and still done well.
+  - A broken basic is named and fixed, not covered with a surprise.
+
+test:
+  - Run it on an event you already held. See whether the peak it picks matches the moment people actually remembered.
+  - Ask two people in the audience which part they would tell a friend about. Compare with the peak.
+  - Run it twice on the same event. The chosen peak should be close each time, even if the details change.
+  - After the next event, ask people what they remember and write down what the plan got right.
+
+improve:
+  - Add your usual routine for each type of event, so it starts from your real script.
+  - Add a list of things that have worked for your people before, to draw the lift from.
+  - Save each event's result in a file the skill reads next time.
+  - Pair it with a message writer for the invitation or announcement.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Choosing a peak and writing the plan is text work any strong chat AI does well."}
+    - {name: "A shared task list", why: "The owners and dates in the plan go straight into a list the team can tick off."}
+  inputs:
+    - "Feedback comments from the last event"
+    - "A list of what the budget can and cannot cover"
+    - "A short profile of the people attending"
+
+terms:
+  - term: Peak
+    meaning: The one moment in an event that people remember and talk about afterwards.
+  - term: Script
+    meaning: The set of steps people expect from an event of this kind.

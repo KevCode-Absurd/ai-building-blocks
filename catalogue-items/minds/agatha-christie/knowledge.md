@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Christie's later books are still in copyright, so we summarise them and keep quotes short. Her first two novels are public domain in the United States, and we read them directly. What Poirot or her other characters say belongs to them. Her own views come from what reference sources report of her autobiography and interviews.
+A note on method: Christie's later books are still in copyright, so we summarise them and keep quotes short. Her first two novels are public domain in the United States, and we read them directly: the full text of *The Mysterious Affair at Styles* [S3], including the closing explanation, and *The Secret Adversary* [S4]. We found no essay or interview of hers in her own words, so her working method comes from the reference pages [S1][S2][S5], and her taste for clues and tricks is read from the books themselves. What Poirot or her other characters say belongs to them.
 
 ## In one paragraph
 
@@ -66,6 +66,29 @@ When she adapted her novels for the stage, she sometimes removed Poirot, believi
 Put together, her habit was to work from the end back to the start. She chose the culprit and the method, then built the cast and setting around that choice [S1]. She listed the scenes where each clue would come out and moved them until the trail was fair but hard to follow [S1]. Only after that did she draft, and much of the dialogue was already worked out in her head [S1].
 
 For details she used what she knew. Her dispensary work gave her poisons, and her travels with Max Mallowan gave her places [S1][S2]. She also tried out ideas by acting chapters aloud on walks and asking neighbours and experts for facts [S2].
+
+## Real decisions
+
+### Making the detective a man of method
+In *Styles*, Poirot is introduced as a retired Belgian detective, and Hastings recalls him saying good detective work is a matter of method [S3]. Poirot's highest praise for anyone is that he is "a man of method", and he says the case must be solved from within, by the little grey cells, not by chasing the letter that might have settled it [S3]. Christie made the thinking itself the hero.
+
+### Clearing away manufactured clues first
+Mid-book, Poirot says the poison clue was planted, so he sets those aside and hunts the real ones: who could have passed the coffee, who could have posed as the husband [S3]. The reader is shown the planted trail and the real one together. The decision to reveal that some evidence was staged is what turns the plot.
+
+### Reading the victim's mood, not only the facts
+Poirot builds his answer from a timeline of the victim's feelings: calm and angry at four, in distress at five, anxious to burn her new will [S3]. He says he reasoned "psychologically" and saw that the second scandal she spoke of was about herself [S3]. The twist depended on a feeling the reader had been shown but not weighed.
+
+### The killer who wants to be arrested
+The *Styles* solution is a double bluff. The guilty man planted evidence against himself, wanted to be tried, and planned to produce an alibi so he could never be tried again for the same crime [S3]. She chose a plot where the obvious suspect is a trap he set himself.
+
+### Using an advert as the engine
+In *The Secret Adversary*, two broke friends draft a newspaper advertisement for "two young adventurers for hire", cutting a line that looks too eager [S4]. A later ad asking for news of Jane Finn brings the replies that drive the plot [S4]. A small, ordinary act in the first chapter starts the whole machine.
+
+### Naming the threat and keeping it unseen
+The villain is "Mr. Brown", a name the other characters speak with dread long before anyone sees him. The last chapters tell us only that he commands and also serves, which means he is someone near the heroes [S4]. A plain name plus a hint that he is among them keeps the whole cast under suspicion.
+
+### Pushing the narrator trick to the limit
+In *The Murder of Roger Ackroyd* she made the trusted narrator the killer. Some readers felt cheated and others said she broke no rule [S5]. Her choice was to bet that fair play meant every sentence true, not every fact told [S1][S5].
 
 ## Where she stood
 

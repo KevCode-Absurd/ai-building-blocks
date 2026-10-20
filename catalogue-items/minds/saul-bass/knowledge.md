@@ -67,6 +67,23 @@ His firm's corporate marks were unusually long-lived. A 2011 analysis found they
 - Imply the hard parts instead of showing them [S2].
 - Treat the work as a job to do well, not a star turn [S3].
 
+## Real decisions
+
+### Showing the addiction without showing the drug
+For the Golden Arm titles in 1955, Bass wanted the film's drama and intensity without sensationalising a taboo subject [S2]. He built a jagged, black, distorted arm out of white bars appearing against black, so the look was spare, gaunt and tense [S2]. He designed to the counts the composer Elmer Bernstein gave him [S2]. He called the first screening a great moment [S2].
+
+### Borrowing a specialist for Vertigo
+For Vertigo in 1958, the spiral-like wave patterns came from the animator John Whitney, and Bass's direction placed them against close-ups of the actor's face and Bernard Herrmann's score [S10]. The essayist says the abstract pattern hints at the story without depicting it [S10].
+
+### Serving the film
+The Art of the Title designer page quotes Bass saying that he and his wife and partner Elaine were there to serve the film, and that he saw a lot of pyrotechnics elsewhere [S6]. Elaine worked beside him on most later title and film work [S6].
+
+### Leaving titles, then coming back
+From the mid-1960s to the late 1980s the Basses largely left main titles to make films and raise a family. Bass said they had seen a lot of tricks and lost interest [S6]. They returned when Martin Scorsese and James L. Brooks asked, and made titles for films such as Goodfellas and Casino [S6]. They said they still loved the process [S6].
+
+### Making a film about creativity and keeping it loose
+For Why Man Creates (1968), a sponsored film, Bass resisted the sponsor's chosen title and called it the creativity film [S1]. The sponsor found his first bookends too eye-popping and asked for a plainer version [S1]. He kept it playful, voicing comic sound effects himself, and said he wanted viewers to feel the agony, discipline, mess and failure of creative work [S1].
+
 ## Where he stood
 
 **Do titles matter?** Yes. In 1960 he argued they deserve serious design, and his work proved it [S4].

@@ -243,6 +243,28 @@ His day was run by habits, not moods. He used every free moment for prospecting 
 
 He also kept the long view. A customer kept costs far less than a new one found, and one buyer may purchase many cars and send friends and family [S3].
 
+### Real decisions
+
+#### Writing a thank-you to every buyer, every night
+
+Girard noticed most salespeople never thank customers after the sale. He wrote a personal letter to each one, congratulating them, calling the purchase a smart choice, inviting them to call at any time and promising long-term service. His reason was that buyers often have second thoughts, and praise eases the doubt and turns a buyer into a loyal customer [S4].
+
+#### Treating an upset customer as the first step to the next sale
+
+Where other salespeople avoided unhappy customers, he treated fixing the problem as the way to the next sale, and promised to be there whenever they needed him. He said keeping a customer costs far less than finding a new one [S3].
+
+#### Hiring staff to screen prospects
+
+After his third year he hired people to screen and pre-qualify prospects so he could spend his time selling, and he ran appointments like a doctor's office [S2].
+
+#### Recording what he learned about each customer
+
+After each sale he noted family, hobbies and travel, so he could talk about what mattered to the customer [S6].
+
+#### Changing his working name
+
+He shortened Girardi to Girard to avoid bias against Sicilian and Italian customers [S1][S2].
+
 ### Where he stood
 
 **Is the job to close deals?** Closing is only the beginning. The real job is keeping the customer for life [S3][S4].

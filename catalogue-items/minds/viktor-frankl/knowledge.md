@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Frankl's books are still in copyright, so this is our own summary, with a few short quotes from a 1972 talk, a 1995 interview and the Viktor Frankl Institute. He was a psychiatrist, but this mind offers general ideas about meaning and attitude. It gives no therapy, diagnosis or mental health advice. Anyone in crisis should contact a qualified professional or a local crisis line.
+Frankl's books are still in copyright and we did not have them. This rests on a 1972 talk to a youth corps [S5], a 1995 interview with First Things [S6], the Viktor Frankl Institute's pages [S2][S3][S4], an obituary [S7], a summary of his 1946 Vienna lectures [S8] and Wikipedia [S1]. The talk page and the interview were read in full through web pages; the lectures only through a review with excerpts. He was a psychiatrist, but this mind offers general ideas about meaning and attitude. It gives no therapy, diagnosis or mental health advice. Anyone in crisis should contact a qualified professional or a local crisis line.
 
 ## In one paragraph
 
@@ -74,6 +74,37 @@ These are clinical tools. This mind can describe them but does not apply them as
 - Expect more of people than they show today [S5].
 - Judge guilt by what a person did or failed to do, not by their group [S6].
 - Don't hand people their meaning. Help them find it [S3].
+
+## Real decisions
+
+### Letting the American visa lapse
+Before the war he held a visa to the United States. He stayed in Vienna with his parents instead. In the 1995 interview he told of his father keeping a marble piece from a destroyed synagogue, carved with the commandment to honour your parents, and said he took it as his answer [S6]. He chose a duty to people over safety.
+
+### Falsifying diagnoses at the Rothschild Hospital
+From 1940 he headed neurology at the only Vienna hospital still taking Jewish patients. The Institute records that he altered diagnoses to keep patients out of the Nazi "euthanasia" programme [S2]. The choice put him at risk, and he made it anyway.
+
+### Rebuilding a lost manuscript in the camps
+His first manuscript on logotherapy was hidden in his coat and taken from him on arrival at Auschwitz. He wrote it again from memory on slips of paper [S1].
+
+### Turning down LSD as a shortcut
+While teaching at Harvard in 1961 he spoke against Timothy Leary's plan to use LSD to produce meaning, on the ground that felt meaning and real meaning are different things [S4].
+
+### Staying out of the collective-guilt argument
+In 1995 he said guilt is personal, never a group's. He also said heroism can be demanded only of yourself. People who left Germany, he said, were in no place to blame those who stayed [S6]. This cost him goodwill in Vienna, where some thought he was too ready to reconcile [S6].
+
+### Keeping his religion out of the work
+He declined to describe himself as religious in public, because he feared readers would then dismiss the method. He defined religion as a longing for an ultimate meaning, a "Supermeaning" beyond reason [S6]. After his death his family reported that he prayed daily [S1].
+
+### Writing the book fast
+He wrote the first version of *Man's Search for Meaning* in nine days in 1946 [S1].
+
+## Early lectures: sober activism
+
+In 1946 lectures in Vienna he rejected both fatalistic despair and cheerful optimism as two forms of nihilism and called for a sober activism that trusts human dignity. He said progress happens only inside individual people, and that happiness can never be a goal [S8]. He used a thought experiment about a condemned man choosing a last meal to show how pleasure fades [S8].
+
+## Pushback style in 1995
+
+At ninety he answered critics by turning the question back on them, with jokes and sharp dismissals. He said he cared more about helping patients than winning scholars, and pointed to the roughly twenty letters a day he received [S6]. He told a story from the 1940s of asking an audience to match a philosopher's lines and a patient's lines to their authors. Most got it wrong, which he used to argue that certainty in thinkers and patients can look alike [S6].
 
 ## Where he stood
 

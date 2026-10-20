@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Graham's two big books are still under copyright, so this data set summarises them through reference pages and adds his own words from two public records: his 1955 testimony to a US Senate committee and his last interview, in 1976. It also uses Warren Buffett's 1984 talk about Graham's students. This mind explains frameworks. It never tells anyone what to buy or sell.
+A note on method: Graham's two big books are still under copyright and are not on disk, so this data set summarises them through reference pages and adds his own words from two public records: his 1955 testimony to a US Senate committee and his last interview, in 1976. We hold only a short excerpt record of each, plus earlier study notes and the full Wikipedia page on him, so the Mr. Market and margin of safety ideas come from reference pages and not from his own pages [S1][S4][S6][S7]. It also uses Warren Buffett's 1984 talk about Graham's students. This mind explains frameworks. It never tells anyone what to buy or sell.
 
 ## In one paragraph
 
@@ -42,6 +42,10 @@ Graham split investors into two types [S1]. The defensive investor wants to keep
 
 Later in life Graham trusted simple rules more than detailed analysis. He favoured buying a group of stocks that each met a simple test of cheapness, rather than studying single companies in depth, and said earnings tests gave the best results [S2]. In his 1976 interview he said he had lost most of his interest in the fine detail of security analysis, and that a few techniques and simple principles were enough [S7]. What matters, he said, is having "the right general principles and the character to stick to them" [S7].
 
+### Shareholder activism as a tool
+
+Early in his career he made his name in "The Northern Pipeline Affair". His research showed that the company held large cash and bond assets that were not being used well, so he bought enough shares to force a proxy vote to hand the assets back to shareholders [S1]. It shows the same habit as the rest of his work: look at what the business really holds before looking at the quote.
+
 ### Moods drive prices in the short run
 
 Graham saw markets swing between hope and fear. In 1955 he told senators that the market had risen since 1953 mostly because people's mood had changed from doubt to confidence, with prices rising from about 8 to about 14 times earnings while earnings had barely moved [S6]. He warned that mood alone, "not supported by any visible change in value," can move prices a long way [S6]. He also reminded them that the Dow fell 90% from 1929 to 1932 [S6]. In 1976 he compared the cycle to a Ferris wheel or a seesaw [S7].
@@ -57,6 +61,29 @@ How he applied it: asked by the committee chairman how a cheap stock ever gets n
 - Know which kind of investor you are, and follow that kind's rules [S1].
 - Prefer a few simple principles you will stick to over clever forecasts [S7].
 - Don't try to forecast the market. In his experience people don't succeed at it [S7].
+
+## Real decisions
+
+### Taking a Wall Street job to support his mother
+After graduating from Columbia at about 20, Graham chose a Wall Street job to help support his widowed mother, instead of an academic post [S1]. The reference page gives that reason and nothing more about the choice [S1].
+
+### Forcing Northern Pipeline to release its assets
+He found that Northern Pipeline held vast cash and bond assets that were not being put to good use. He bought enough shares to force a proxy vote to distribute them to shareholders, an early case of shareholder activism that involved John D. Rockefeller [S1]. The stated logic was that the assets, not the price, showed what the company was worth [S1].
+
+### Defining investment, after the crash
+With David Dodd he published *Security Analysis* in 1934 and gave a clear definition of investment: an operation that, on thorough analysis, promises safety of principal and a satisfactory return, with everything else called speculation [S1][S3]. The book came after the huge early Depression losses [S1].
+
+### Buying half of GEICO
+In 1948 the Graham-Newman fund bought a 50 percent interest in GEICO for $712,500, which became its largest gain [S1]. The Securities and Exchange Commission ordered the fund to hand the shares on to its investors. An investor with 100 shares in the fund in 1948, who kept the GEICO stock, would have had $1.66 million by 1972 [S1].
+
+### Hiring a student who first offered to work for free
+Buffett offered to work for Graham for nothing and was turned down, reportedly because Graham judged him overvalued, and Graham-Newman hired him in 1954 [S1][S5]. We read this in reference pages, not in Graham's own words.
+
+### Telling senators what he did not know
+In March 1955 he told the Senate Banking Committee that the market's rise since 1953 came from a change of mood, not of earnings: the multiple paid per dollar of earnings had gone from about 8 to about 14 while earnings barely moved [S6]. Asked how a cheap stock ever gets noticed, he said the market catches up with value but how that happens was one of the mysteries of the business [S6].
+
+### Closing the fund and simplifying
+Graham-Newman closed in 1956 when he retired from active investing [S1]. In his 1976 interview he said he had lost most of his interest in fine detail and that a few simple techniques were enough, and he suggested funds start from an index [S7].
 
 ## Where he stood
 

@@ -1,0 +1,19 @@
+slug: marketing-brief-writer
+name: "Marketing brief writer"
+summary: "Paste what you know about your product and buyers. Get a one-page brief: what to say, to whom and what next."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: brand_brain, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: offer, required: false}
+outputs:
+  - {type: brief}
+origin: rebuilt
+version: 1.0.0
+minds: [drayton-bird]
+credits:
+  - {title: "The Copywriter Club podcast, episode 165, with Drayton Bird", by: "Kira Hug and Rob Marsh, with Drayton Bird", used: "Start from what has been tried, who buys and why, say the one thing before being creative, check whether the offer could change, and end with the action and how it is counted"}

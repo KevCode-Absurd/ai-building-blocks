@@ -1,0 +1,120 @@
+new_slug: new-user-drop-off-finder
+name: "New user drop-off finder"
+summary: "Paste visits, sign-ups and 30-day users. Get where new people leave and the first-visit fix to try before any new feature."
+job: build-product
+thinking: medium
+thinking_why: "It does simple funnel arithmetic and then judges which step to fix. The steps are fixed."
+
+headline: "New user drop-off finder"
+subhead: "Paste your counts of visits, sign-ups and people still active after 30 days. It finds the biggest drop in share terms, estimates how many people a proposed feature could reach and looks at the first visit for the missing step. You get the drop-off, a fix for new users and a measure."
+
+explain: |
+  When people stop using a product, the usual answer is to build another feature. But features mostly reach people who already use the product a lot, and they are few. The bigger loss happens earlier, in the first visit, when new people leave before they see why it is worth their time.
+
+  This skill lays out your funnel from visit to sign-up to 30-day use and finds the biggest drop in share terms. It checks whether the feature you are considering would reach only the engaged few, looks at the landing page and first visit for the missing step, and names the few actions that make someone active. Then it plans one change for new and casual users with a measure and a date. It gives a clear audit and a short plan.
+
+when:
+  - Sign-ups are fine but few people are still around after a month.
+  - Your team wants to build a new feature to bring users back.
+  - You need to choose between a first-visit fix and a feature.
+
+you_give:
+  - "Counts for the period: visits, sign-ups and users still active at 30 days"
+  - The feature you are thinking of building (optional)
+  - A description or screenshot of the landing page and first visit (optional)
+  - What an active user does (optional)
+you_get:
+  - A funnel with counts and shares at each step
+  - The biggest drop, ranked, before any feature idea
+  - An estimate of how many people the feature would reach
+  - One change for new users, with a measure and a date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your counts for one clear period, with the period named.
+  - Describe the first visit, or attach a screenshot.
+  - Add the feature idea if there is one, and who it is for.
+  - Run the planned change, then measure on the date it sets.
+
+how_it_works:
+  - title: Lays out the funnel
+    text: Writes visits, sign-ups and 30-day users with counts and shares.
+  - title: Finds the biggest drop
+    text: Compares steps in share terms to find where most people leave.
+  - title: Checks the feature's reach
+    text: Estimates whether the feature reaches only engaged users.
+  - title: Looks at the first visit
+    text: Reads the landing page and first visit for the missing step.
+  - title: Names the active actions
+    text: Finds the few actions that make someone an active user.
+  - title: Plans one change
+    text: Plans a change for new and casual users with a measure and a date.
+
+output_shape: |
+  THE FUNNEL (period: <dates>)
+  Visits: <n> | Sign-ups: <n> (<share of visits>) | Active at 30 days: <n> (<share of sign-ups>)
+
+  BIGGEST DROP
+  <step to step> | Lost: <n people, share> | Ranked: <1, 2>
+
+  THE FEATURE IDEA
+  <feature> | Reaches: <who> | Estimate: <n people, share of sign-ups>
+
+  THE FIRST VISIT
+  Missing: <step or message> | Evidence: <what the page shows>
+
+  ACTIONS THAT MAKE SOMEONE ACTIVE
+  <action 1>, <action 2>, <action 3> | Source: <data or MISSING>
+
+  THE CHANGE TO TRY
+  <change for new users> | Measure: <metric> | Target: <number> | Check on: <date>
+
+  MISSING
+  <facts that would change the findings>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: One clear period
+    how: Use the same dates for every count. Mixed periods make the shares meaningless.
+  - what: A real definition of active
+    how: Say what active means, such as three sessions in a week. The 30-day count depends on it.
+  - what: The first visit
+    how: Attach a screenshot of what a new person sees, or describe the first five clicks.
+  - what: The feature's audience
+    how: Say who it is for. The skill compares that group with your 30-day users.
+
+judge:
+  - Each step shows counts and shares.
+  - The drop-off comes before feature ideas.
+  - The feature's reach is estimated.
+  - The change targets new users.
+  - A measure and a date are set.
+
+test:
+  - Check the shares by hand with a calculator for each step.
+  - Run it on an older period where you know what fixed the drop, and see if it points the same way.
+  - Run the planned change for the length it states and compare the measure.
+  - Run it twice. The biggest drop should be the same.
+
+improve:
+  - Add your own definition of an active user and the actions that lead to it.
+  - Add the numbers by source, such as ads or referrals, so new users from each can be compared.
+  - Keep each period's funnel in a file and paste last quarter's in to see the trend.
+  - Pair it with "Sales funnel drop-off finder" if your funnel ends in a purchase.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Funnel shares and plain-language findings are text and arithmetic work."}
+    - {name: "Your analytics tool", why: "Gives the exact counts the skill needs, by period."}
+  inputs:
+    - "Counts by source of visits"
+    - "A screenshot of the landing page and first screen"
+    - "A list of the actions your active users take"
+
+terms:
+  - term: Funnel
+    meaning: The steps people pass through, such as visit, sign-up and still active, with fewer people at each step.
+  - term: Active user
+    meaning: Someone who keeps doing the actions that show your product is useful to them.

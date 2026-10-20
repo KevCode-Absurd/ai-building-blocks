@@ -1,0 +1,18 @@
+slug: investment-or-speculation-sorter
+name: "Investment or speculation sorter"
+summary: "Paste a purchase you are weighing and why. Get it sorted as investment or speculation, with the questions a careful buyer asks."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "A Conversation with Ben Graham", by: "Benjamin Graham, Financial Analysts Journal (1976)", used: "The test for an investment, valuing a business apart from its price and how much room to leave for being wrong"}
+  - {title: "The Mysteries of the Stock Market (1955 Senate testimony)", by: "Benjamin Graham", used: "Why the quoted price is only an offer and not proof of value"}

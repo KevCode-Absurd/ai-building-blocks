@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "A New System of Alternating Current Motors and Transformers (AIEE lecture, May 1888), Wikisource", by: "Nikola Tesla", url: "https://en.wikisource.org/wiki/A_New_System_of_Alternating_Current_Motors_and_Transformers", kind: own-words}
   - {n: 5, title: "Tesla Says Edison Was an Empiricist (The New York Times, 19 October 1931), hosted by Tesla Universe", by: "Nikola Tesla, statement as reported", url: "https://teslauniverse.com/nikola-tesla/articles/tesla-says-edison-was-empiricist", kind: own-words}
   - {n: 6, title: "War of the currents", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/War_of_the_currents", kind: reference}
+  - {n: 7, title: "Experiments with Alternate Currents of High Potential and High Frequency (lecture to the Institution of Electrical Engineers, London, February 1892), in The Inventions, Researches and Writings of Nikola Tesla (T. C. Martin, 1894; Project Gutenberg eBook #39272)", by: "Nikola Tesla", url: "https://www.gutenberg.org/ebooks/39272", kind: own-words}
 tests:
   - {kind: use, prompt: "Describe, step by step, how you would design a quieter household fan before building a single prototype."}
   - {kind: use, prompt: "Write a short essay on how a small town could use its energy better, organised the way you would organise it."}

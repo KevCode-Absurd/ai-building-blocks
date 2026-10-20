@@ -1,0 +1,124 @@
+new_slug: value-ladder-planner
+name: "Value ladder planner"
+summary: "Paste your product, prices and what buyers do next. Get a ladder from a free first step to a top tier."
+job: make-offer
+thinking: medium
+thinking_why: "It arranges your offers and picks one rung to fix, which takes some judgement, but the steps are fixed."
+
+headline: "Value ladder planner"
+subhead: Give it everything you sell, its prices and what buyers do next. It starts a ladder with a free or very cheap first step, puts each rung higher in price and result, and adds one recurring rung. You get the ladder, what moves a buyer up and the one rung to work on this quarter.
+
+explain: |
+  Many businesses have one offer at one price. A buyer who is not ready for it leaves, and a buyer who wants more has nowhere to go. A value ladder is a set of offers in order, from a free or low first step to a top tier, where each rung solves a bigger problem for the same buyer at a higher price.
+
+  This skill lists everything you sell and what each costs the buyer. It starts the ladder with a free or very cheap step that solves one small problem, then puts each next rung at a higher price and a bigger result. It adds one recurring-fee rung so income repeats, marks one core path, writes what moves a buyer up each rung and picks the single rung to build or fix this quarter.
+
+when:
+  - You sell one main thing and lose buyers who are not ready for it.
+  - You have many products with no clear order between them.
+  - Buyers stop after one purchase and you do not know what to offer next.
+
+you_give:
+  - Everything you sell, with prices
+  - What each offer gives the buyer
+  - Who your best buyers are (optional)
+  - Sales by offer, if you have them (optional)
+you_get:
+  - A ladder of rungs from free or low to top tier
+  - The result and price of each rung
+  - What moves a buyer from one rung to the next
+  - The one core path and the single rung to work on this quarter
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your offers and prices, even rough ones.
+  - Add what buyers do after each purchase, if you know.
+  - Read the ladder and check that each rung really suits the same buyer.
+  - Work on the one rung it picks before the others.
+
+how_it_works:
+  - title: Lists what you sell
+    text: Writes every offer with its price and what it gives the buyer.
+  - title: Starts with a free step
+    text: Puts a free or very cheap first step at the bottom that solves one small problem.
+  - title: Raises each rung
+    text: Puts each next rung at a higher price and a bigger result for the same buyer.
+  - title: Adds a recurring rung
+    text: Adds one rung with a repeat fee so income repeats.
+  - title: Marks the core path
+    text: Marks one core path and which side offers feed it.
+  - title: Writes the move-up
+    text: States what moves a buyer from each rung to the next.
+  - title: Picks one rung
+    text: Chooses the single rung to fix or build this quarter.
+  - title: Checks the ladder
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHAT YOU SELL
+  <offer> | Price: <figure> | Result for the buyer: <result>
+
+  THE LADDER
+  Rung 1 (free or low): <offer> | Solves: <one small problem>
+  Rung 2: <offer> | Price: <figure> | Result: <bigger result>
+  ...
+  Recurring rung: <offer> | Fee: <figure per period>
+
+  CORE PATH
+  <the rungs most buyers should take> | Side offers: <list and what they feed>
+
+  WHAT MOVES A BUYER UP
+  Rung <n> to <n+1>: <trigger or event>
+
+  WORK ON THIS QUARTER
+  <rung> because <reason>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Real prices
+    how: Give actual prices. The ladder should rise, and it tells you where it does not.
+  - what: What buyers do next
+    how: Say what they buy after the first step. It builds the move-up on that.
+  - what: Your capacity
+    how: Say what you can deliver. It will not put a rung you cannot serve on the ladder.
+  - what: Recurring income
+    how: Say if you could charge a repeat fee. It picks the best fit, or leaves it blank.
+
+judge:
+  - Rungs rise in price and in result.
+  - The first rung is free or low and solves one problem.
+  - One core path is marked.
+  - Every step names what moves the buyer up.
+  - Only one rung is chosen to fix first.
+
+test:
+  - Give the ladder to a customer and ask which rung they would take next.
+  - Check each rung really delivers a bigger result than the one below.
+  - Check you could serve the top rung if many came.
+  - Run it twice and compare the rung it picks.
+
+improve:
+  - Add the sales you have for each offer to the input.
+  - Add rungs you will not offer to the rules.
+  - Save the quarter's result for the chosen rung to your notes.
+  - Pair it with "After-sale offer planner" to test add-ons at each rung.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ordering offers and writing the move-up is text work any strong chat AI handles."}
+    - {name: "A spreadsheet", why: "Lets you see sales, price and next purchase by rung."}
+  inputs:
+    - "Sales by offer for the last year"
+    - "What customers bought second"
+    - "Your best buyers' goals"
+
+terms:
+  - term: Value ladder
+    meaning: A set of offers in order from a free or low first step to a top tier.
+  - term: Rung
+    meaning: One offer on the ladder.

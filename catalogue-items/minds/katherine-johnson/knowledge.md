@@ -72,6 +72,23 @@ In her later years she tutored young people and talked with children about caree
 - If nobody says you can't be in the meeting, ask to go [S6].
 - Do your best the first time, so it doesn't need doing over [S5].
 
+## Real decisions
+
+### Doing the return trip backwards
+For early flights she was asked to find the launch time that would bring a capsule down at a set spot. She started from the landing point and worked back, and called that her strong suit [S3].
+
+### Writing the report as a method with two worked cases
+Her 1960 report with Skopinski sets out expressions for the burnout direction that puts a satellite over a chosen place on a rotating, bulging Earth. The bulge enters as small corrections inside a repeated solution. It includes an eastward and a westward example, a comparison with a computer program, and a check of how small changes in direction and latitude shift the result [S4].
+
+### Checking the computer before Glenn flew
+NASA asked her to verify the electronic computer's trajectory for the 1962 orbital flight. She confirmed it was correct, so the machine was checked by a person and the person by the machine [S3][S5].
+
+### Asking for a seat in the briefings
+When told women did not attend, she asked whether there was a law, then joined and pressed on until she was in the room [S6].
+
+### Staying calm before Apollo 11
+She said she was nervous, but calm because she trusted the calculations [S3].
+
 ## Where she stood
 
 **Should you trust a computer's answer?** Only once you've checked it against work you understand. She checked Glenn's orbit by hand before he flew [S3][S5].

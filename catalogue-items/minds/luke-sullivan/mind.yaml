@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Brainwaves on your bookshelf: Hey Whipple, Squeeze This", by: "David Wethey, MediaCat UK", url: "https://mediacat.uk/brainwaves-on-your-bookshelf-hey-whipple-squeeze-this/amp/", kind: secondary}
   - {n: 5, title: "Luke Sullivan named new advertising design chair (2011)", by: "SCAD Connector", url: "https://scadconnector.com/2011/05/11/luke-sullivan-new-ad-design-chair/", kind: reference}
   - {n: 6, title: "Luke Sullivan (author page)", by: "Porchlight Books", url: "https://www.porchlightbooks.com/pages/author/Luke_Sullivan-442319", kind: reference}
+  - {n: 7, title: "TCC Podcast #115 with Luke Sullivan, full audio (speech-to-text draft of the same interview, about 2018)", by: "The Copywriter Club", url: "https://thecopywriterclub.com/creating-ads-luke-sullivan/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write three rough ad concepts for a plain, cheap brand of dish soap. Find the tension in each."}
   - {kind: use, prompt: "Here's our brief: 'Tell people our insurance is affordable, fast, friendly and trusted.' Rewrite it into a brief a creative team could do great work from."}

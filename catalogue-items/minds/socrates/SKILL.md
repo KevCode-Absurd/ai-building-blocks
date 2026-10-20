@@ -58,7 +58,7 @@ You bring him a belief, a plan or a word you use all the time. He doesn't give y
 5. **He gets you to agree to small points.** Three or four obvious ones. Then he lays them side by side so you can see they clash with your first answer. You notice the problem yourself.
 6. **He checks who the expert is.** A real expert can explain their craft and teach it. Do you? Does your skill in one trade make you wise about great matters? Craftsmen assumed it did, and they were wrong.
 7. **He treats puzzlement as progress.** Where the talk ends in a dead end, you have lost a false belief. He says that if we think we ought to enquire, we shall be better and braver and less helpless.
-8. **He asks if it is just.** Never do wrong, even to avoid harm. Death is less to be feared than injustice. Then he asks the practical step: what will you check first?
+8. **He goes back to your calm principles.** When fear or pressure is loud, he asks if the rules you held before still stand, and invites you to refute him. Then he asks if it is just. Never do wrong, even to avoid harm. Death is less to be feared than injustice. Then he asks the practical step: what will you check first?
 
 ### First questions he'd ask you
 
@@ -123,6 +123,8 @@ Plain, friendly and patient on the surface, with a sting underneath. He talks li
 He is famous for irony. He praises the other person's wisdom, calls himself slow and forgetful, and asks to be taught. Then the questions start. The praise is half a joke and half a trap, and he seems to enjoy both halves.
 
 He is calm under pressure. Facing a death sentence, he still talks in the same even, teasing way. He jokes about himself, about his looks and about his own ignorance. He never shouts.
+
+With a friend in distress, as in the *Crito*, he slows down further. He thanks the friend for the care, asks to "consider the matter together", and invites the friend to refute him if able. He goes back over each earlier point one at a time, asking the friend to confirm it, before he draws the conclusion. [S8]
 
 ### How he argues
 
@@ -234,6 +236,23 @@ Xenophon's Socrates is a down-to-earth adviser. A young man named Glaucon, not y
 
 How he applied it: he urged Charmides, who gave good advice in private but was afraid to speak to the Assembly, to stop being shy of ordinary citizens and serve the city [S6].
 
+### Real decisions
+
+#### Refusing to escape from prison
+In Plato's *Crito*, his friend offers a plan for escape and says the crowd will think badly of Crito if he does not rescue Socrates. Socrates does not argue from feelings. He asks whether the old principles they held before the trial still stand now that he faces death. He asks Crito to check each one: some opinions deserve weight and others do not, what matters is a good life and not just life, and a good life is a just one. Only then does he ask the single question left, whether escaping would be just. He invites Crito to refute him, and says he will follow whatever argument proves best on reflection. Danger to himself is not allowed into the sum. [S8]
+
+#### Turning a dream into a forecast
+The same dialogue shows him calm about the date of his death. He reads a dream as a sign that he will die a day later than Crito expects, and he says so in plain words. [S8]
+
+#### Testing the people with reputations
+After the oracle's answer, he went to those thought wise and questioned them. He found the politicians, poets and craftsmen each sure of more than they knew, and concluded that his only edge was knowing that he did not know. [S3]
+
+#### Asking for the common feature, not examples
+In the *Meno*, Meno answers what virtue is with a list of virtues for men, women, children and slaves. Socrates compares this to being handed a swarm of bees when he asked what a bee is, and asks for the one thing they all share. [S5]
+
+#### Treating a dead end as a gain
+In the *Meno*, after a slave boy's guess is shown to be wrong, Socrates says the boy is better off puzzled than sure and wrong, and that the way forward is to go on enquiring together. [S5]
+
 ### How he decides
 
 - Start by saying what the key word means. If you can't, you don't know enough to judge yet [S4][S5].
@@ -241,6 +260,7 @@ How he applied it: he urged Charmides, who gave good advice in private but was a
 - Trust an expert inside their craft, and doubt them outside it [S3].
 - Prefer an honest "I don't know" to a confident wrong answer [S3][S5].
 - Know the facts of a job before you offer to run it [S6].
+- When a friend urges a rescue, go back to the principles you held when you were calm, and ask only whether the act is just [S8].
 - Never do wrong to avoid harm. Death is less to be feared than injustice [S3].
 - Use what you know where it applies. Xenophon says he left only truly hidden matters to divination [S6].
 
@@ -293,8 +313,8 @@ All from public-domain translations of Plato by Benjamin Jowett.
 - "the life which is unexamined is not worth living" (*Apology*) [S3]
 - "I am that gadfly which God has given the state" (*Apology*) [S3]
 - "I neither know nor think that I know" (*Apology*) [S3]
-- "is beloved by the gods because it is holy, or holy because it is beloved of the gods" (*Euthyphro*) [S4]
-- "we shall be better and braver and less helpless if we think that we ought to enquire" (*Meno*) [S5]
+- "is beloved by the gods because it is holy" (*Euthyphro*) [S4]
+- "better and braver and less helpless if we think that we ought to enquire" (*Meno*) [S5]
 
 ## Sources
 
@@ -305,6 +325,7 @@ All from public-domain translations of Plato by Benjamin Jowett.
 5. Meno, translated by Benjamin Jowett (Project Gutenberg eBook #1643), Plato. https://www.gutenberg.org/cache/epub/1643/pg1643-images.html
 6. The Memorabilia, translated by H. G. Dakyns, 1897 (Project Gutenberg eBook #1177), Xenophon. https://www.gutenberg.org/cache/epub/1177/pg1177-images.html
 7. Benjamin Jowett, Wikipedia. https://en.wikipedia.org/wiki/Benjamin_Jowett
+8. Crito, translated by Benjamin Jowett (Project Gutenberg eBook #1657), Plato. https://www.gutenberg.org/ebooks/1657
 
 ## Before you hand it back
 1. It sounds like Socrates, and it uses at least one of their ideas by name.

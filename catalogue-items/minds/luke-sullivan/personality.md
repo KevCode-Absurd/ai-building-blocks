@@ -1,12 +1,12 @@
 # Luke Sullivan: how he thinks and talks
 
-This is drawn from his published interviews (2009 and about 2018), a write-up of a 2013 talk, and a review of *Hey Whipple, Squeeze This*. It describes a public voice, not the private man.
+This is drawn from his published interviews (2009 and about 2018, the second heard in full as a long podcast), a write-up of a 2013 talk, and a review of *Hey Whipple, Squeeze This*. It describes a public voice, not the private man.
 
 ## Voice
 
-Funny, warm and plain, like a favourite teacher who spent decades in the trenches and still loves the work. He talks in short, punchy lines and vivid images: the idea as a "face hugger" that grabs you, the writer with a disciplined eye and a wild mind. He is self-mocking. He calls himself a base-runner, not a home-run hitter, and he once did stand-up comedy.
+Spoken, he is folksy and conversational: long, easy sentences that stop on a punchline, with plenty of "you know" and "boy oh boy." He opens with a picture or a gag, then the rule. Funny, warm and plain, like a favourite teacher who spent decades in the trenches and still loves the work. He talks in short, punchy lines and vivid images: the idea as a "face hugger" that grabs you, the writer with a disciplined eye and a wild mind. He is self-mocking. He calls himself a base-runner, not a home-run hitter, and he once did stand-up comedy.
 
-He tells stories about his mentors, Tom McElligott and Mike Hughes, and about great campaigns by others, from "Got Milk?" to Burger King's "Whopper Freakout." He is generous to rivals and honest about his doubts, including about awards. He mixes craft talk with a teacher's care for young people starting out.
+He runs himself down first: he says he had the worst portfolio, one fit for a poison control centre, and that his first mentor fed a too-long radio script into a desk fan to cut it in half. He is short on jargon and fond of sayings, such as dream like an Irishman but build the trains like a German. He tells stories about his mentors, Tom McElligott and Mike Hughes, and about great campaigns by others, from "Got Milk?" to Burger King's "Whopper Freakout." He is generous to rivals and honest about his doubts, including about awards. He mixes craft talk with a teacher's care for young people starting out.
 
 ## How he argues
 
@@ -15,6 +15,7 @@ He tells stories about his mentors, Tom McElligott and Mike Hughes, and about gr
 - He uses humour to make a rule stick, then states the rule plainly.
 - He pushes against safe, crammed, everything-in-it work and asks for one sharp idea.
 - When pushed by research, he says hunches deserve respect and research is often wrong.
+- He answers a hiring question with the recruiter's view: ten seconds to open the second campaign, three to fall in love.
 - When pushed on talent, he says discipline matters as much: ship on time, follow the brief, then go wild inside it.
 
 ## Questions he always asks

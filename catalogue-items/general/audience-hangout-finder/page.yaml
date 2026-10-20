@@ -1,0 +1,124 @@
+new_slug: audience-hangout-finder
+name: "Audience hangout finder"
+summary: "Describe your buyer group. Get a map of the sites, shows, accounts and communities they use, and where to show up first."
+job: understand-customers
+thinking: medium
+thinking_why: "It weighs which places matter most, and some picks need judgement."
+
+headline: "Audience hangout finder"
+subhead: "Give it a description of your buyers and any customer words. It maps what they read, watch, follow and join, marks which places keep them on the platform, and picks where to show up first. You get a ranked map and a lift measure for each place."
+
+explain: |
+  Many marketing plans start with a channel and then look for the audience on it. That leaves you guessing where your buyers are. And more and more searches and posts end without a click, so a plan that counts only visits misses much of the picture.
+
+  This skill starts with the audience instead. It defines your buyers by what they do, then maps what they read, watch, listen to and follow, with the evidence for each. It marks which places send people on to your site and which keep them on the page, finds topics they discuss before they search, and picks the few places where one useful post or guest spot would reach them. Each pick gets a lift measure, so you can tell if it worked.
+
+when:
+  - "You are planning where to spend your marketing time and have no data on where your buyers are."
+  - "Your site traffic is falling and you want to know if your audience moved."
+  - "You are choosing between starting a podcast, a newsletter or guesting on someone else's."
+
+you_give:
+  - "Who your buyers are and what they do"
+  - "Customer words that mention where they read or ask for advice (optional)"
+  - "Traffic, survey or follower data (optional)"
+you_get:
+  - "A map of the places your audience gives its attention, each with its evidence"
+  - "The topics they discuss before they search"
+  - "Three to five places to start, with what to publish in each"
+  - "A lift measure for each place and a date to re-run"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe your buyers by what they do."
+  - "Paste any customer words, survey answers or data about where they read, watch or follow."
+  - "Check the places it marks \"to check\" using the method it names."
+  - "Start with the top place and note your baseline before you post."
+
+how_it_works:
+  - title: "Defines the audience"
+    text: "Describes buyers by what they do, not just who they are."
+  - title: "Maps their places"
+    text: "Lists sites, shows, accounts and communities, each with evidence."
+  - title: "Compares to average"
+    text: "Marks where your audience goes more than most people."
+  - title: "Marks the platform type"
+    text: "Shows which places keep people on the page and which send them on."
+  - title: "Finds early topics"
+    text: "Lists what people discuss before they search for it."
+  - title: "Picks where to start"
+    text: "Ranks places by reach into your audience and chooses three to five."
+  - title: "Names the lift measure"
+    text: "Sets a baseline and a sign of lift for each place."
+  - title: "Sets the re-run"
+    text: "Picks a date and names the tools so you can run it again."
+
+output_shape: |
+  AUDIENCE IN ACTIONS
+  <three to five actions>
+
+  THE MAP
+  <place> | type <site/podcast/...> | evidence <source or guess> | more than average? | keeps them on platform? | to check: <how>
+
+  EARLY TOPICS
+  <topic> | seen at <place> | searched yet? <check>
+
+  START HERE (ranked)
+  1. <place> | reach <share> | publish: <what> | lift: <baseline -> sign>
+
+  SEARCH-ONLY WARNING
+  <flag if the plan relies only on search>
+
+  RE-RUN
+  <date>; tools: <names>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "How you describe the buyer"
+    how: "Actions beat labels. Say what they buy and read, not just who they are."
+  - what: "Data you hold"
+    how: "An export from an audience research tool or a survey turns guesses into evidence."
+  - what: "Your time"
+    how: "State the hours a week you have. It picks fewer places if time is short."
+  - what: "Your goal"
+    how: "Tie it to a business goal such as new buyers or repeat sales. It decides which lift measure matters."
+
+judge:
+  - "Every place has evidence or is marked to check."
+  - "The places are ranked by how much of your audience they reach."
+  - "It flags if the plan depends only on search."
+  - "Each pick has a way to tell if it worked."
+  - "It names the tools so you can re-run it."
+
+test:
+  - "Ask five customers where they get advice. See how many of the places the map lists."
+  - "Check one claimed place with an audience research tool or search suggestions."
+  - "Run it twice. The top three places should match."
+  - "Post in the top place and compare your brand searches over the next month."
+
+improve:
+  - "Add the audience research tools you can use to step 2."
+  - "Add places you have already ruled out so it skips them."
+  - "Add your current baseline numbers to step 7 so lift can be read at once."
+  - "Pair it with a copy skill for what to say in each place."
+
+works_best_with:
+  tools:
+    - {name: "An audience research tool such as SparkToro", why: "Shows which sites, podcasts and accounts an audience follows more than average."}
+    - {name: "Any good chat AI", why: "Turns your notes and data into a ranked map with this skill."}
+  inputs:
+    - "A survey of customers asking where they get advice"
+    - "Your top referring sites and social accounts"
+    - "Follower lists or comments from your own channels"
+    - "Search suggestion results for your topic"
+
+terms:
+  - term: "Zero-click"
+    meaning: "A search or post that gives the answer on the page itself, so the reader never clicks through."
+  - term: "Lift"
+    meaning: "Growth in signs that people know and want you, such as brand searches, mentions and conversion rate."

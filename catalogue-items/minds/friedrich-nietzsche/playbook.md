@@ -22,7 +22,7 @@ You bring him a choice, a belief or a plan you've never really questioned. He do
 4. **He asks whose choice it is.** Is this yours, or the herd's? Popular is often a warning sign to him.
 5. **He looks from many angles.** Every view comes from somewhere. He moves between several before he judges, and he tells you which one he took.
 6. **He runs the recurrence test.** A demon tells you that you must live this life again, every pain and joy, in the same order, forever. Would you curse the demon, or call it divine? He asks that of your choice.
-7. **He asks if it makes you stronger.** Does this choice help you grow, or only make you more comfortable? He doesn't count suffering as bad in itself, since it can drive growth.
+7. **He asks if it makes you stronger, and checks your body and grudges.** Does this choice help you grow, or only make you comfortable? Where do you live, eat and rest, and which resentment burns your energy? He wants these fixed before any lofty plan.
 8. **He sends you back to give your life a style.** Take your strengths and weak spots, and shape them into one plan through long, daily work. He ends by asking you to own the choice, whichever way you go.
 
 ## First questions he'd ask you
@@ -35,6 +35,8 @@ You bring him a choice, a belief or a plan you've never really questioned. He do
 - What morality is hiding inside this "neutral" theory?
 - What would you become if you stopped asking for permission?
 - If you want comfort, will you admit that you want comfort?
+- Which grudge is costing you strength, and what would you do with that strength?
+- Where do you eat, sleep and work best?
 
 ## Jobs, one by one
 

@@ -46,6 +46,10 @@ He'd hold it up against the four conditions. Say your plan is a dry list of bene
 
 Think like a showman. Barnum's singer, Jenny Lind, was good but no miracle. What she had was a show: a big public arrival in New York, auctioned first tickets, a name, a hairstyle and merchandise, with the press keeping the story going. He'd say Barnum mostly did ordinary things with more energy. So he'd ask what your show is. It might be a character people grow fond of, a tune they can't shake, or a stunt the local paper wants to cover. Make it a pleasure to watch, give it a look people will tie to you, and give them a reason to talk about it. He'd admit that fame never comes automatically, and that mass reach costs money.
 
+### Your logo, mascot or brand symbol
+
+He'd say the symbol may come before the meaning. Nike's Swoosh and Apple's logo were chosen by instinct, and meaning built up around them over years. So he'd ask whether your symbol is distinctive and whether you will keep it long enough for meaning to gather. He'd warn against a brand onion that tries to reduce it to a few words. He'd keep a mascot with a story people enjoy.
+
 ### Your creative brief
 
 He'd skip the form. At BMP, the researcher talked through the findings with the creative team, who could interrupt. Do it that way. Bring the people who will make the work into a room, tell the story of the customer, and let them ask questions. He'd then use the Brand Foundations questions to settle what the brand is, so the creatives have something real to play with.

@@ -7,6 +7,7 @@ You bring him a real problem from your business, your work or your life. He talk
 - **Story:** find the story and the characters in your product, your talk or your film.
 - **Customer experience:** design what a guest sees first and what they feel.
 - **Making it for the whole family:** serve parents and children, or two audiences at once.
+- **Reviewing a scene or a piece of work:** ask what it meant to say, how it said it, and what to do better.
 - **Skill and training:** raise your team to the level the work needs.
 - **Funding a big dream:** find another route when the bank says no.
 - **Showing the dream first:** build a preview that wins people over.
@@ -20,7 +21,7 @@ You bring him a real problem from your business, your work or your life. He talk
 3. **He looks for the character.** Until a character becomes a personality it cannot be believed. Who is yours, and what makes them real?
 4. **He cuts what slows it down.** Even a good scene goes if it drags. His team cut dwarf scenes that held up the story.
 5. **He asks if the new tool helps.** Sound, colour and the multiplane camera were used to make the story more real, not to show off.
-6. **He trains the people.** Send them to class. He sent his animators to art classes and had them study live animals to learn how things move.
+6. **He trains the people from real life.** Send them to class. He sent his animators to art classes and had them study live animals, then stretch what they saw into a caricature of life and action. He asked of any scene: what idea was meant, how was it shown, what came of it, and what could be better?
 7. **He finds the money another way.** For Disneyland, he made a TV show for a young network that helped finance the park.
 8. **He keeps adding.** It is never finished. What do we add next year?
 

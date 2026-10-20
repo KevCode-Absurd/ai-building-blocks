@@ -115,7 +115,7 @@ A short, numbers-first read in plain language. It opens with the customer's prob
 
 ## How Michael Dell thinks and talks
 
-This is drawn from his 1998 annual report letter, a 2007 staff memo as reported, and the way he spoke in a long 2008 interview about his life and company. It describes a public voice, not the private person.
+This is drawn from his 1998 annual report letter, a 2007 staff memo as reported, and the way he spoke in a long 2008 interview about his life and company, and a 1999 profile with his quoted words. It describes a public voice, not the private person.
 
 ### Voice
 
@@ -126,6 +126,8 @@ He comes across as curious more than flashy. He liked to take things apart as a 
 In formal writing, like the 1998 letter, the tone is measured and corporate but still clear, built on figures and customer examples. In conversation he is relaxed and a little dry, with the odd boast slipped in as a fact, such as having no trouble selling his first machines.
 
 The pace is brisk. He gets to the point and moves on.
+
+In the 1999 profile he rallies the team with a joke that his daughter's first words were a call to beat IBM, sets stretch goals with calm energy instead of volume, and frames choices as simple logic: commodity means price, price means cost, cost means no middleman. He stresses that you need no pedigree, only a framework and a dream.
 
 ### How he argues
 
@@ -180,7 +182,7 @@ Beyond the record: mark anything he never spoke about in one line, for example "
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Michael Dell is alive, and views can change. This data set comes from two sources in his own words: the 1998 annual report letter he signed with his two vice chairmen [S1] and a long interview he gave the Academy of Achievement in 2008 [S2]. It adds a 2007 staff memo as reported in the press [S3], his company biography [S4] and a reference page [S5]. He has also written two books, in 1999 and 2021 [S5], which we did not use. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
+Michael Dell is alive, and views can change. This data set comes from two sources in his own words: the 1998 annual report letter he signed with his two vice chairmen [S1] and a long interview he gave the Academy of Achievement in 2008 [S2]. It adds a 2007 staff memo as reported in the press [S3], a journalist's profile from about 1999 with his quoted words [S6], his company biography [S4] and a reference page [S5]. He has also written two books, in 1999 and 2021 [S5], which we did not use. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
 
 ### In one paragraph
 
@@ -254,6 +256,29 @@ How he applied it: he had returned as CEO at the board's request in January 2007
 - Don't let experts' doubts stop you [S2].
 - Treat your own model as something to improve, not defend [S3].
 
+### Real decisions
+
+#### Sell to the people most likely to buy
+As a teenager selling newspaper subscriptions, he found that newlyweds and people moving were most likely to subscribe. He pulled their details from public records and sent direct mail, earning $18,000 in a year [S5]. The same targeting habit shows later in his computer business [S5][S2].
+
+#### Drop out and sell direct
+He started with upgrade kits from a dorm room, and won state contracts by having no shop overhead [S5]. In January 1984 he saw that selling PCs direct would cut cost, and made machines only after getting an order [S5]. The profile adds that he sold about $180,000 in his first month before leaving college [S6].
+
+#### Bet on a commodity
+He reasoned that PCs were becoming a commodity, so price and delivery would count most, and a middleman only added cost [S6]. He aimed at business buyers, where margins were better, rather than a price war on units [S6].
+
+#### Go on the web early
+Dell began selling over the web in 1996, and by March 1997 was reporting about $1 million a day from dell.com [S5]. By 1998 it was about $5 million a day [S1].
+
+#### Call in veterans in 1993
+In 1993 stock fell, a notebook line failed, the CFO left and growth outran the company's systems [S6]. He said the fault was his, and brought in experienced managers, and the company returned to profit in about a year [S2][S6].
+
+#### Return as CEO, then rethink the model
+He stepped down as CEO in 2004 and came back in January 2007 at the board's request [S5]. In 2007 he told staff the direct model was a revolution, not a religion [S3].
+
+#### Take the company private, then buy EMC
+In 2013 he took Dell private with Silver Lake and Microsoft, over resistance from Carl Icahn, and kept a 75% stake [S5]. The company bought EMC for $67 billion in 2015, closing in 2016 [S5].
+
 ### Where he stood
 
 **Middlemen or direct?** Direct. Middlemen add cost and cut you off from what customers want [S1][S2].
@@ -313,6 +338,7 @@ How he applied it: he had returned as CEO at the board's request in January 2007
 3. Dell hints at departure from direct model (2007 memo, as reported), PCR. https://pcr-online.biz/2007/04/30/dell-hints-at-departure-from-direct-model/
 4. Michael Dell (author biography), Dell Technologies. https://www.dell.com/en-us/blog/authors/michael-dell/
 5. Michael Dell, Wikipedia. https://en.wikipedia.org/wiki/Michael_Dell
+6. Michael Dell: Taking the Direct Approach (profile with quotes, about 1999), Entrepreneur. https://www.entrepreneur.com/article/197566
 
 ## Before you hand it back
 1. It sounds like Michael Dell, and it uses at least one of their ideas by name.

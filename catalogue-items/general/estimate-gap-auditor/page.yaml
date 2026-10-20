@@ -1,0 +1,126 @@
+new_slug: estimate-gap-auditor
+name: "Estimate gap auditor"
+summary: "Paste two teams' odds for the same thing. Get the gap, what each side bases it on and a quick sanity estimate."
+job: think-and-decide
+thinking: high
+thinking_why: "It compares two estimates and tests them against a rough one of its own, which needs careful reasoning."
+
+headline: "Estimate gap auditor"
+subhead: "Paste two estimates for the same event, such as odds of failure from the engineers and from management. It shows the gap, asks what each is based on, tests each against past cases and gives a rough estimate of its own."
+
+explain: |
+  When two groups give very different odds for the same event, the usual reaction is to split the difference or to side with the more senior group. Neither tells you which number is right. A big gap is a sign that someone is using different facts or a different method.
+
+  This skill sets the two numbers side by side and asks each how it was reached and what history it used. It checks both against the record of past cases in the same way, makes a rough estimate with rounded figures, and treats a large gap as a finding. It looks for a warning sign that has been relabelled as a safety margin, and ends by saying who to ask next and what test would settle it.
+
+when:
+  - "Two teams give very different forecasts, risk scores or timelines."
+  - "A report says a risk is tiny while the people doing the work say it is not."
+  - "You have a number and want a sanity check on how it was made."
+
+you_give:
+  - "Each side's number for the same event, with their names or roles"
+  - "How each side says it got the number"
+  - "The past cases or data available (optional)"
+  - "What decision depends on the number (optional)"
+you_get:
+  - "Both numbers side by side with their basis"
+  - "A check of each against the record"
+  - "A rough estimate with its steps"
+  - "Who to ask next and what test would settle it"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste both numbers and say what event they are about."
+  - "Add how each side got its number, as best you know."
+  - "Add past cases and counts, even rough ones."
+  - "Take the closing questions to both sides before you decide."
+
+how_it_works:
+  - title: "Put the numbers side by side"
+    text: "Sets each team's number for the same event side by side."
+  - title: "Ask how each was reached"
+    text: "Asks how each was reached and what history it used."
+  - title: "Check against the record"
+    text: "Checks each number against past cases, the same way for both."
+  - title: "Make a rough estimate"
+    text: "Makes a rough estimate with rounded figures."
+  - title: "Treat the gap as a finding"
+    text: "Treats a large gap as a finding, not noise."
+  - title: "Look for relabelled warnings"
+    text: "Looks for warning signs counted as safety margins."
+  - title: "Say what to do next"
+    text: "Names who to ask next and what test would settle it."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  THE EVENT
+  <one line> | Units: <units>
+
+  THE TWO NUMBERS
+  Side A: <number> | By: <who> | Basis: <data / model / judgment>
+  Side B: <number> | By: <who> | Basis: <data / model / judgment>
+  Gap: <ratio>
+
+  AGAINST THE RECORD
+  - Side A: <fit>
+  - Side B: <fit>
+  Same test for both: <yes / no>
+
+  ROUGH ESTIMATE
+  <steps with rounded figures> | Range: <range>
+
+  WARNING SIGNS CALLED MARGINS
+  - <sign> | What it shows: <note>
+
+  NEXT
+  Ask: <who> | Test: <what>
+
+  MISSING
+  <facts that would sharpen the audit>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The record"
+    how: "Add counts of events and near misses. The more past cases, the better the check."
+  - what: "How each side got its number"
+    how: "Paste their reasoning. Without it the skill marks the basis MISSING."
+  - what: "The cost of being wrong"
+    how: "Say it. It sets how much gap you can accept."
+  - what: "Units"
+    how: "State per year, per use or per run. Mixed units hide the gap."
+
+judge:
+  - "Both numbers are shown with their basis."
+  - "History is used the same way for both sides."
+  - "A rough estimate is included with its steps."
+  - "Warning signs are not counted as safety margins."
+  - "The gap is shown as a ratio, not averaged away."
+
+test:
+  - "Run it on a past forecast dispute with a known outcome. See which side it backed."
+  - "Check its rough estimate by hand."
+  - "Give the output to someone on each side and ask if it treated them fairly."
+
+improve:
+  - "Add the records you keep, such as incident logs, so step 3 can use them."
+  - "Add how your teams usually make estimates."
+  - "Keep a file of past gaps and what resolved them."
+  - "Pair it with Mistake-to-principle writer to turn what you find into a rule."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning, questioning and structuring are text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Lets you check the rough estimate and rerun it with other figures."}
+  inputs:
+    - "Incident or near-miss logs"
+    - "The method each side used"
+    - "Past cases of similar events"
+    - "The cost of being wrong"
+
+terms:
+  - {term: "Near miss", meaning: "An event that came close to failing but did not."}
+  - {term: "Safety margin", meaning: "A real buffer built in on purpose. A warning sign is not a margin."}

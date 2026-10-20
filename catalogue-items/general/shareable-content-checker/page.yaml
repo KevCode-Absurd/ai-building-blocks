@@ -1,0 +1,110 @@
+new_slug: shareable-content-checker
+name: Shareable content checker
+summary: Paste your post, video or product idea. Get a score on six reasons people share and the one change most worth testing.
+job: grow-social
+thinking: medium
+thinking_why: It judges each reason from your draft and picks the change that matters most.
+headline: Shareable content checker
+subhead: Give it a post, a video script or a product idea. It rates six reasons people pass things on, each with a reason, and names the weakest. You get a score out of 30, one angle that makes an ordinary thing worth talking about, and one change to test.
+explain: |
+  People share things for reasons that have little to do with how good the thing is. They share what makes them look good, what is on their mind every day, what stirs a strong feeling, what others can see, what helps a friend and what fits into a story. Most drafts rest on one of these at best.
+
+  This skill rates your draft 0 to 5 on each of six reasons, with the evidence from the draft beside each rating. The six ratings add up to a score out of 30. The score shows how many reasons your draft gives people to pass it on. It does not predict reach or going viral. It names the weakest reason and suggests one concrete angle to test, with your brand inside the story rather than tagged on the end.
+when:
+  - You have a post, video or idea and want to know if anyone would pass it on.
+  - You are choosing between two ideas and want a way to compare them.
+  - A piece got little sharing and you want to see which reason was missing.
+you_give:
+  - The post, script or product idea (as text, or attach the picture or video)
+  - A brief or goal (optional)
+  - A buyer description (optional)
+  - Where it will appear (optional)
+you_get:
+  - Six ratings from 0 to 5, each with a reason from your draft
+  - A total out of 30 and how it was worked out
+  - The weakest reason, named
+  - One angle to test, and the one change that adds it
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the draft, or attach the picture or video. Say who it is for.
+  - Read the six reasons and the weakest one.
+  - Test the suggested change against your original with the same audience.
+  - Do not treat the score as a forecast of reach.
+how_it_works:
+  - title: Reads the draft
+    text: Pulls out what the thing is, who sees it and what it asks them to do.
+  - title: Tests status
+    text: Asks if sharing makes the sharer look good or in the know.
+  - title: Finds a cue
+    text: Looks for something in daily life that brings it back to mind.
+  - title: Checks emotion
+    text: Looks for a feeling strong enough to make people act.
+  - title: Checks visibility
+    text: Asks if using or owning it can be seen by others.
+  - title: Checks practical value
+    text: Looks for help a person would pass to a friend.
+  - title: Checks the story
+    text: Asks if the brand sits inside a story people would retell.
+  - title: Names the change
+    text: Rates all six, names the weakest and suggests one angle to test.
+output_shape: |
+  THE DRAFT
+  <one line: what it is and who sees it>
+
+  SIX REASONS (0 to 5 each)
+  Looks good to share: <n> | <reason from the draft>
+  Daily cue: <n> | <reason>
+  Strong feeling: <n> | <reason>
+  Visible to others: <n> | <reason>
+  Practical value: <n> | <reason>
+  Story with the brand inside: <n> | <reason>
+
+  SCORE: <n> out of 30 (the six ratings added up)
+  This measures how many reasons the draft gives people to pass it on. It does not predict reach.
+
+  WEAKEST: <reason>
+
+  ANGLE TO TEST
+  <one angle that makes an ordinary thing worth talking about>
+
+  ONE CHANGE
+  <the change, and where in the draft>
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: Who the audience is
+    how: Name the group. What makes a nurse look good to share differs from what works for a student.
+  - what: Where it will appear
+    how: Say the place. Visibility and cues depend on it.
+  - what: Which of two drafts
+    how: Run both and compare the ratings and the weakest reason.
+  - what: The product behind it
+    how: Give plain facts. The story angle needs something real to build on.
+judge:
+  - Each of the six has a rating and a reason from the draft.
+  - The score is out of 30 and the sum is correct.
+  - The score does not promise reach or virality.
+  - The brand is inside the story, not a tag at the end.
+  - One concrete change is offered to test.
+test:
+  - Score a piece you already published that spread well. Check that its score is higher than one that did not.
+  - Run it twice on the same draft. The weakest reason should match.
+  - Make the suggested change and share both versions with a small group.
+  - Check that no rating is given without a reason from the draft.
+improve:
+  - Add the topics your audience talks about every day to the cue step.
+  - Add words that are off-brand to the story step.
+  - Save the highest-scoring pieces and what they shared to your brand file.
+  - Pair it with Platform-native content planner to plan the posts.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Rating a draft against fixed reasons is text work any strong chat AI does well with this skill.
+  inputs:
+    - The picture or video, attached, so visibility can be judged
+    - A buyer description with their words
+    - Results of past pieces, so the ratings can be checked against what spread
+terms:
+  - term: Cue
+    meaning: A thing in daily life, such as a time, place or object, that reminds people of your idea.

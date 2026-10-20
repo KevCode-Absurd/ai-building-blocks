@@ -1,6 +1,6 @@
 # Robert McKee: how he thinks and talks
 
-Drawn from his 2012 essay on voice-over and the descriptions of his teaching and books on his official site. It is the public voice of a seminar teacher, as of those dates, not the private man and not his view of new work.
+Drawn from his 2012 essay on voice-over, the descriptions of his teaching and books on his official site, and a short 2003 excerpt of a Harvard Business Review conversation. The record is thin and mostly formal writing, so the famously blunt spoken manner is not shown in these sources and is not claimed here. It is the public voice of a seminar teacher, as of those dates, not the private man and not his view of new work.
 
 ## Voice
 

@@ -89,6 +89,8 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
       words: skill.split(/\s+/).length,
       // The same look in the other format: a video block's image twin, or the other way round.
       twin: item.twin ?? null,
+      // The minds whose work the skill comes from (docs/SOURCE-SKILLS-PRD.md). Checked against the roster below.
+      minds: Array.isArray(item.minds) ? item.minds.map(String) : [],
       files,
       added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
     });
@@ -111,6 +113,12 @@ for (const r of roster.minds) {
   const skill = fs.readFileSync(skillPath, "utf8");
   fs.mkdirSync(path.join(OUT_SKILLS, r.slug), { recursive: true });
   fs.copyFileSync(skillPath, path.join(OUT_SKILLS, r.slug, "SKILL.md"));
+  // The parts go too, so a mind's pack can carry its playbook, personality, knowledge and sources as their own files.
+  const mindFiles = ["playbook.md", "personality.md", "knowledge.md"].filter((f) => fs.existsSync(path.join(folder, f)));
+  for (const f of mindFiles) fs.copyFileSync(path.join(folder, f), path.join(OUT_SKILLS, r.slug, f));
+  const srcList = (m.sources ?? []).filter((s) => s.title).map((s) => `${s.n}. ${s.title}${s.by ? `, ${s.by}` : ""} (${s.kind ?? "source"})${s.url ? `: ${s.url}` : ""}`);
+  fs.writeFileSync(path.join(OUT_SKILLS, r.slug, "sources.md"), [`# Sources: ${m.name}`, "", "The public work this mind was built from. knowledge.md cites them as [S1], [S2] and so on.", "", ...srcList, ""].join("\n"));
+  mindFiles.push("sources.md");
   const first = m.name.split(" (")[0];
   const knowledge = fs.existsSync(path.join(folder, "knowledge.md")) ? fs.readFileSync(path.join(folder, "knowledge.md"), "utf8").replace(/\r\n?/g, "\n") : "";
   // Their big ideas: the ### headings under "Core ideas", each with its first sentence, tags removed.
@@ -153,12 +161,19 @@ for (const r of roster.minds) {
     seats: m.seats.map((s) => s.seat), area: m.area, also: m.also ?? [], years: m.years ?? "", living: !!m.living, face: faces[r.slug] ?? {},
     inputs: [{ type: "question", required: true }], outputs: [{ type: "mind_view", required: true }],
     uses: [], steps: [], origin: "own", tested: null, version: String(m.version ?? "1.0.0"), words: skill.split(/\s+/).length,
-    twin: null, files: [], added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
+    twin: null, files: mindFiles, minds: [], skills: [], flows: [], added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
   });
 }
 
 // How many workflows use each block: the honest "popular" signal until people can vote.
 const bySlug = Object.fromEntries(blocks.map((b) => [b.slug, b]));
+// Each skill names the minds whose work it comes from; each mind then lists those skills, the ones it leads first.
+for (const b of blocks) for (const ms of b.minds ?? []) {
+  const m = bySlug[ms];
+  if (!m || m.type !== "mind") { problems.push(`${b.slug}: minds lists "${ms}", which isn't a built mind`); continue; }
+  (b.category === "orchestrator" || b.type === "workflow" ? m.flows : m.skills).push(b.slug);
+}
+for (const b of blocks) if (b.type === "mind") b.skills.sort((x, y) => bySlug[x].minds.indexOf(b.slug) - bySlug[y].minds.indexOf(b.slug) || bySlug[x].name.localeCompare(bySlug[y].name));
 for (const b of blocks) b.usedIn = 0;
 for (const b of blocks) for (const u of new Set([...b.uses, ...b.steps.map((s) => s.uses)])) if (bySlug[u] && u !== b.slug) bySlug[u].usedIn++;
 for (const b of blocks) for (const u of [...b.uses, ...b.steps.map((s) => s.uses)]) if (!bySlug[u]) problems.push(`${b.slug}: uses unknown block "${u}"`);
@@ -210,7 +225,7 @@ fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new
 const SITE = "https://useaiblocks.com";
 const kindPath = (b) => (b.type === "mind" ? "minds" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
-const urls = ["/", "/how-it-works", "/minds", "/tools", ...TOOLS.map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+const urls = ["/", "/how-it-works", "/minds", "/from-a-source", "/tools", ...TOOLS.map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
 fs.writeFileSync("public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`);
 fs.writeFileSync("public/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 console.log(`sitemap: ${urls.length} pages`);

@@ -34,6 +34,7 @@ You bring him a product idea, a roadmap or a team that never seems to deliver re
 - What is the cheapest way to learn this before we build?
 - Is this team being given a problem or a list of features?
 - Is the product manager doing product work, or just coordinating?
+- Is anyone on this team doing the product manager job on top of another full-time role?
 
 ## Jobs, one by one
 
@@ -44,6 +45,10 @@ He'd say a request is not a requirement. First ask what problem the report solve
 ### Your roadmap
 
 He'd look at your list of features with dates and call it the mark of a feature team. The executive who asked for each feature carries the risk of whether it works, and rarely holds that risk. He'd push you to rewrite it as three to five problems, each with a measurable outcome, and hand one to each team. He'd also warn you that promising a predictable roadmap can get in the way of learning. He knows some teams have little control, so for a stuck team he'd offer one small first step: pick one problem and ask for a month to test it.
+
+### Is your team a feature team?
+
+He'd give you three quick tests from his 2019 article. Do you get a roadmap of features with dates? Did your OKRs turn into a feature list? Are your people missionaries or mercenaries? Then he'd trace the knock-on effects: no empowerment, so weak design, so the product manager drifts into project management, so engineers are underused and leave. He'd allow for exceptions, since a distrustful leader can turn a good company's team into a feature team. His first fix is small: pick one problem, ask for a month, and show an outcome.
 
 ### Your team and its roles
 

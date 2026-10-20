@@ -122,6 +122,8 @@ He loves a tidy model. A formula (trust is reliability plus delight), a children
 
 His tone is confident but not loud. He makes big claims in plain words, then backs them with a famous example: the Prius, the Aeron chair, eBay, Microsoft's early vision. There is a dry wit in his titles and a habit of turning a familiar idea upside down.
 
+In the Level C and buy-in pieces he adds a warmer, mentor's tone, with vivid analogies (an upside-down map, a plane ticket halfway to Hawaii, launching an innovation like a birth), short fragments for emphasis, and direct questions to the reader about their own career. He quotes other thinkers to back a point and is not shy about promoting his own programs.
+
 ### How he argues
 
 - He opens by redefining the word everyone thinks they know. A brand isn't a logo. It's a feeling.
@@ -205,7 +207,7 @@ How he applied it: he advised testing a risky idea small and cheap first, even u
 
 #### Say what only you do, and keep focus
 
-Neumeier's "onliness" exercise asks a brand to finish one sentence about what it is the only one of. Designer Dan Mall described the template's six prompts: what, how, who, where, why and when [S11]. To test it, swap in a rival's name. If the sentence still fits, it isn't distinct yet [S11]. *The Brand Gap* gives a simpler focus test with three questions: who are you, what do you do, and why does it matter [S1]. People notice only what is different, so brand extensions that blur the focus do harm [S1].
+Neumeier's "onliness" exercise asks a brand to finish one sentence about what it is the only one of. Designer Dan Mall described the template's six prompts: what, how, who, where, why and when [S11]. To test it, swap in a rival's name. If the sentence still fits, it isn't distinct yet [S11]. *The Brand Gap* gives a simpler focus test with three questions: who are you, what do you do, and why does it matter [S1]. People notice only what is different, and the brain filters out what is familiar, so brand extensions that blur the focus do harm [S1].
 
 How he applied it: Mall's worked example, built on Neumeier's format, describes Harley-Davidson as the only maker of big, loud motorbikes for a certain kind of rider [S11].
 
@@ -229,7 +231,7 @@ How he applied it: he used eBay as the scissors example, a focused company that 
 
 #### Sell a new idea with a story and a picture
 
-His essay on buy-in borrows four stages of reaction to new ideas: dismissal, grudging interest, reluctant agreement, then people claiming they backed it all along [S4]. He read strong early resistance as a sign of a strong idea [S4]. To speed people through, tell a simple story, show a vision instead of a plan, and protect the idea with rough metrics and a senior sponsor [S4].
+His essay on buy-in borrows from the geneticist J. B. S. Haldane four stages of reaction to new ideas (worthless nonsense, interesting but perverse, true but unimportant, and "I always said so"): this is his scale for how colleagues take a game-changing idea [S4]. He read strong early resistance as a sign of a strong idea [S4]. To speed people through, tell a simple story, show a vision instead of a plan, and protect the idea with rough metrics and a senior sponsor [S4].
 
 How he applied it: he contrasted a money target, like a revenue goal in five years, with Microsoft's early picture of a computer on every desk and in every home, which people could see in their heads [S4].
 
@@ -249,6 +251,32 @@ How he applied it: he made this the subject of his 2012 book *Metaskills* [S12][
 - Treat strong pushback on an idea as a possible good sign [S4].
 - Show a picture of the future, not a list of facts [S4].
 - Keep books and decks short [S7].
+
+### Real decisions
+
+#### Putting a radio station's zag in a separate brand (2007)
+
+Asked how a station should differentiate, he advised building a separate online brand that could grow or be dropped without harming the main station. [S2] His stated reason: the strongest signal is a prototype people find unusual yet valuable, and small, cheap tests keep the risk low. [S2]
+
+#### Teaching "onliness" with a swap test
+
+His statement uses six prompts (what, how, who, where, why, when). [S11] Its test is to put a rival's name in the sentence: if it still fits, the statement is not distinct, and if it turns awkward or false, it is strong. [S11] In a group, people fill in worksheets alone, then merge in pairs, fours and eights until two or three statements are left. [S11]
+
+#### Writing short, picture-heavy books
+
+He chose books of about 150 pages built like slide decks, with a bold line and a small picture on each spread, over long dense ones. [S7][S1] His reason was that busy leaders would read and use them. [S7]
+
+#### Founding Level C (c. 2019)
+
+He had predicted in *The Brand Gap* that branding would matter as much to business as the spreadsheet, and by about 2019 felt it had. [S6] Because books and talks could not reach enough executives, and online courses could not build a real community, he and Andy Starr started in-person, two-day masterclasses with five certification levels. [S6]
+
+#### Answering automation with metaskills
+
+Watching routine work slide down the Robot Curve toward machines, he decided to teach people the skills that stay at the top: feeling, seeing, dreaming, making and learning. [S5] He also argued for project-based schooling over test prep. [S5]
+
+#### Naming the failure of Critique
+
+He starts from the plain fact that his magazine *Critique* ran about five years and failed, and says so. [S7][S12]
 
 ### Where he stood
 

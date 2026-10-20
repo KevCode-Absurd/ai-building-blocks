@@ -1,0 +1,118 @@
+new_slug: culture-fit-hiring-planner
+name: "Culture-fit hiring planner"
+summary: "Paste your team's values and the role. Get hire-and-fire values, a two-part interview and a paid exit offer."
+job: lead-people
+thinking: medium
+thinking_why: "It must turn vague values into behaviours and guard against bias."
+
+headline: "Culture-fit hiring planner"
+subhead: "Paste your team's values and the role. It turns each value into a behaviour you hire or fire by, plans a skills round and a separate culture round, and writes a paid, optional exit offer for training."
+
+explain: |
+  Hiring on skill alone brings in people who do the job and damage the team. Hiring on fit alone can bring in people who think like you. The fix is to define fit as behaviours and test it on its own.
+  
+  This skill turns each value into a behaviour you would hire for and one you would let someone go for. It plans two interview rounds, one for skills and one for culture, and a candidate must pass both. It adds questions about how people treat those who cannot help them, a paid offer to leave during training, a review section on the values and a plan to promote from within. Check employment law before using it.
+
+when:
+  - "You are about to make a first or tenth hire and want a clear bar."
+  - "A skilled person joined and the team got worse."
+  - "You say you have values but nobody hires by them."
+
+you_give:
+  - "Your team's values or ways of working"
+  - "The role"
+  - "Pay limits and size (optional)"
+you_get:
+  - "Each value as a behaviour you hire or fire by"
+  - "A two-round interview with culture questions"
+  - "A paid exit offer and a review section"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "List your values in your own words, even rough."
+  - "Describe the role and who it works with."
+  - "Add what you can pay for an exit offer."
+  - "Ask someone outside the team to read the questions for bias."
+
+how_it_works:
+  - title: "Turn each value into a behaviour"
+    text: "Writes each value as a behaviour you would hire or fire by."
+  - title: "Split the interview in two"
+    text: "Splits the interview into a skills round and a culture round, with a pass needed on both."
+  - title: "Write the culture questions"
+    text: "Asks how the candidate treated people who could not help them."
+  - title: "Plan the paid exit offer"
+    text: "Plans a paid offer to leave during training for people who feel it is not a fit."
+  - title: "Tie reviews to the values"
+    text: "Puts part of every review on living the values."
+  - title: "Plan growth from within"
+    text: "Plans to grow senior people from within."
+  - title: "Checks its own work"
+    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+
+output_shape: |
+  VALUES AS BEHAVIOURS
+  <value> | Hire for: <behaviour> | Let go for: <behaviour>
+  
+  INTERVIEW
+  Round 1 (skills): <who, what>
+  Round 2 (culture): <who, what>
+  Pass needed: both
+  
+  CULTURE QUESTIONS
+  <6 to 8 questions> | How others who met them are asked: <method>
+  
+  EXIT OFFER
+  <sum, timing, optional> | Check: local employment law
+  
+  REVIEWS
+  <values share, who rates, evidence>
+  
+  GROWTH FROM WITHIN
+  <rule>
+  
+  MISSING
+  <gaps>
+  
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Values list"
+    how: "Give them in your words. Vague values get dropped, so be honest."
+  - what: "Company size"
+    how: "A team of four needs one culture round. A team of forty can use a panel."
+  - what: "Exit sum"
+    how: "Give a figure you can pay. It will not suggest one."
+  - what: "Role level"
+    how: "Senior roles get more questions on how they treat junior staff."
+
+judge:
+  - "Every value has a hire and a let-go behaviour."
+  - "Culture can fail a candidate alone."
+  - "The exit offer is paid and optional."
+  - "Reviews carry a share for values."
+  - "No question asks about age, family or other protected traits."
+
+test:
+  - "Run the culture questions on someone already on your team and see if answers match what you know."
+  - "Ask a peer to rate the behaviours for clarity."
+  - "Run it twice. The behaviours should stay close."
+
+improve:
+  - "Add your own near-misses as culture questions."
+  - "Add local legal notes for the exit offer."
+  - "Record why each hire passed, to see patterns."
+  - "Pair it with \"Team culture memo writer\" for the full picture."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a list into keep, simplify or drop is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Your last three hires and how they went"
+    - "A written list of your values"
+    - "Your pay bands"
+
+terms:
+  - term: "Culture fit"
+    meaning: "How well a person's behaviour matches the behaviours the team says it values."

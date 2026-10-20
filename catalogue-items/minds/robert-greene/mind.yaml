@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "The Laws of Human Nature", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Laws_of_Human_Nature", kind: reference}
   - {n: 5, title: "Hidden Powers & My Book Mastery", by: "Robert Greene, Power Seduction and War blog (c. 2012)", url: "https://powerseductionandwar.com/hidden-powers-my-next-book-mastery-part-1/", kind: own-words}
   - {n: 6, title: "Robert Greene's Speech at Yale", by: "Robert Greene, Power Seduction and War blog (c. 2010)", url: "https://powerseductionandwar.com/robert-greenes-speech-at-yale/", kind: own-words}
+  - {n: 7, title: "I'm Sorry But There's No Shortcut for This (and That's a Good Thing)", by: "Ryan Holiday (2026), on working as Robert Greene's research assistant", url: "https://ryanholiday.net/im-sorry-but-theres-no-shortcut-for-this-and-thats-a-good-thing/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a 300-word story from history that shows why it's risky to make your boss look bad, and end with the lesson."}
   - {kind: use, prompt: "Lay out the stages of becoming a master at copywriting, from first job to the point where you can break the rules."}

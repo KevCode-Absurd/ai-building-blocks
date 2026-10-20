@@ -243,6 +243,32 @@ How she applied it: she founded Children on the Edge in 1990, after visiting orp
 - Accept a short-term cost if the cause is right, but be honest that it is a cost [S4].
 - Don't trust a code of conduct you haven't checked on the ground [S5].
 
+### Real decisions
+
+#### Refilling bottles in the first shop (1976)
+
+The first Brighton shop ran short of bottles, so it refilled them [S2]. She tied this to her mother's wartime habit of reusing everything [S7]. It became policy: a discount for bringing bottles back, and small sample sizes so customers could try before buying [S1][S6].
+
+#### Taking a partner to open the second shop (1976)
+
+Her first shop was paid for with a bank loan of about $6,500 backed by the family hotel [S6][S7]. For a second shop that year she took money from a local mechanic, Ian McGlinn, who took half the company [S6]. She then grew through franchising, reaching 138 stores by 1984 [S2][S6].
+
+#### Windows that carry causes, not claims (from 1986)
+
+She filled shop windows with campaign posters on recycling, the rainforest and Greenpeace, and put activist contact details on delivery trucks [S3][S6]. In 2001 she said the human rights posters caused a small dip in sales, and she kept them anyway [S4]. In 1989 the company began campaigning against animal testing [S2].
+
+#### Buying direct from producers (1987)
+
+She launched Community Trade in 1987, on the view that fair trade did more good than aid [S2][S6]. A Brazilian factory bought Brazil nut oil from the Kayapo people with no middlemen [S6]. A critic argued that these purchases were a tiny share of turnover [S2].
+
+#### Building a soap factory in Glasgow (1988)
+
+The company built a soap factory in a poor part of Glasgow, at a cost of about 30% more than the alternative [S6]. It is one of the cases where she accepted a higher cost on purpose for the cause.
+
+#### Selling to L'Oréal (2006)
+
+In March 2006 she sold The Body Shop to L'Oréal for £652 million [S1]. She said she hoped to push the buyer toward better standards from inside [S1][S2]. Critics pointed to L'Oréal's animal testing and its part-ownership by Nestlé [S1]. In 2005 she had said she would give her fortune away, and her estate went to charity [S1].
+
 ### Where she stood
 
 **What is business for?** More than profit. She called the idea that business exists to maximise profit a myth [S4].

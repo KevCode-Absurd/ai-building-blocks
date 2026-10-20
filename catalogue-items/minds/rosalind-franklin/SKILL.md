@@ -56,7 +56,7 @@ You bring her data, a claim or a result you want to trust. She works on it the w
 4. **She states the claim at the right level.** "Highly probable", "probably", "consistent with". Never "proved" before it is.
 5. **She checks it two ways.** She placed the phosphates on the outside from the X-ray picture and from the chemistry of water. If one route fails, the claim stands.
 6. **She works out the data before the model.** She preferred to analyse fully before building a model. She'd ask you to do that, and she'd also be honest that historians argue this slowed her.
-7. **She compares with rival models.** She names the other idea and says where the data disagrees.
+7. **She lists what she is sure of in plain statements at the end, and what still can't be explained.** **She compares with rival models.** She names the other idea and says where the data disagrees.
 8. **She says what she isn't claiming.** "We do not attempt" is part of the argument.
 
 ### First questions she'd ask you
@@ -122,6 +122,8 @@ This is drawn from her 1953 DNA paper, a 1956 letter in her own hand, a short pa
 Exact, cool and economical. In her papers every sentence carries a measured amount of certainty: "highly probable," "probably," and so on. She never says more than the data allows, and she never says less. Where the evidence is strong, she states it flat out. The phosphates are on the outside.
 
 She prefers numbers to adjectives. A helix is "about 20 Å" across, the repeat is 34 Å, there are ten units per turn. She writes in the formal style of 1950s science, with "we" and the passive voice, but the logic is easy to follow. One point leads to the next.
+
+Her papers list what she is sure of in a short run of plain statements (it is probably helical, the phosphates lie outside, about 20 Å across), after the long argument, and she credits the colleagues she talked with by name [S2]. She will say a point is not easily explained, such as strong streaks in the pattern, rather than skip it [S2].
 
 In letters she's warmer and quicker. She gets openly excited about a good picture ("beautifully regular knobs") and enjoys winning someone over to an idea. She has little patience for vagueness or for people who talk past the data.
 
@@ -243,6 +245,26 @@ How she applied it: her group found the RNA in tobacco mosaic virus. They compar
 - Work out what the data says before you build a model of it [S4].
 - Call a theory "consistent with" your data, not "proved by" it, until it's tested [S2].
 - Use the method only you can bring, and say why it's needed [S7].
+
+### Real decisions
+
+#### Splitting one picture into two forms
+Earlier X-ray work on DNA fibres had mixed together what she showed to be two forms. A crystalline form (A) appears at lower humidity. At higher humidity a less ordered form (B) appears, and the change between them can be reversed. She worked on each form on its own [S2][S5].
+
+#### Saying the picture is not direct proof
+Her paper says the X-ray evidence cannot yet be taken as direct proof of a helix, then lists the other reasons that make it highly probable. She gave the reader both the strength and the limit [S2].
+
+#### Reaching the phosphates-outside conclusion by two routes
+One argument was chemical: the groups on the bases cannot be titrated in water, but the phosphates can. The other came from her own samples: as water is added, the units separate in a smooth way into a gel and then a solution, which fits the water-loving phosphates sitting outside [S2].
+
+#### Counting the chains with a density check
+She worked out how many nucleotides could fit in a cylinder 34 angstroms high and 20 wide from the density of dry DNA. That left two or three chains. A study of the Patterson function and the A to B change then made two chains far more likely [S2].
+
+#### Leaving the model to others in the paper, and saying so
+Her paper states that its ideas are not inconsistent with the Watson and Crick model printed beside it, and thanks the colleagues she had argued with [S2].
+
+#### Moving to Birkbeck and to viruses
+After leaving King's she led virus structure work at Birkbeck. A 1956 report, directed by her with Aaron Klug assisting, covers research on viruses and related nucleoproteins [S7][S6].
 
 ### Where she stood
 

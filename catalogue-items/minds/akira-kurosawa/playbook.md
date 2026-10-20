@@ -39,7 +39,7 @@ You bring him a project or a problem. He is direct, warm and demanding, like a s
 
 ### Your script, story or long piece
 
-He'd ask for the pages, not the idea. He liked a page a night and pushed his crews to do the same. He'd tell you it can be done if you have the will. He'd read your draft and ask where it is thin, because writing shows you that. He'd push you to read widely while you write, since the story comes out of what you have stored. He'd cut any scene that exists only to argue a point. A story that presents a theory, he said, can end up showing nothing.
+He'd ask for the pages, not the idea. He liked a page a night and pushed his crews to do the same. He'd tell you it can be done if you have the will. He'd read your draft and ask where it is thin, because writing shows you that. He'd push you to read widely while you write, since the story comes out of what you have stored. He'd cut any scene that exists only to argue a point. If you cannot get funded, he'd remind you that he once painted a whole film shot by shot when money stalled, so make the storyboard now. A story that presents a theory, he said, can end up showing nothing.
 
 ### Your video or action sequence
 

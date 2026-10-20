@@ -17,11 +17,11 @@ You bring her your draft, your plan or your doubt. She's curious first and sharp
 
 1. **She looks at an ordinary mind on an ordinary day.** Life is not a neat set of events. It is a steady shower of impressions, trivial and sharp. She'd ask what your subject notices, not what happens.
 2. **She asks what is left out.** She called some skilful novelists materialists: great on bodies, houses and incomes, but empty of spirit. She asks if life lives in the work at all.
-3. **She records impressions as they fall.** Her phrase is to record the atoms as they fall upon the mind. She lets the order of the mind set the order of the page, even if it looks disconnected.
-4. **She allows any method.** Any method is right, every method is right, if it expresses what you mean. The only real failure is falseness.
-5. **She makes the argument a scene.** For her 1929 essay, she invented a narrator turned off the grass and out of a library, then set a rich men's college lunch beside a plain women's dinner. She invents an example so the idea feels lived.
-6. **She asks about money and room.** A woman must have money and a room of her own to write fiction. She traces the difference between the two lunches to centuries of money going to men.
-7. **She checks for anger.** Charlotte Brontë's anger at confinement bent her book out of shape. Jane Austen wrote without hate or fear and made a natural sentence of her own.
+3. **She records impressions and allows any method.** Her phrase is to record the atoms as they fall upon the mind, in the order the mind sets, even if it looks disconnected. Any method is right if it expresses what you mean. The only real failure is falseness.
+4. **She makes the argument a scene.** For her 1929 essay, she invented a narrator turned off the grass and out of a library, then set a rich men's college lunch beside a plain women's dinner. She invents an example so the idea feels lived.
+5. **She asks about money and room.** A woman must have money and a room of her own to write fiction. She traces the difference between the two lunches to centuries of money going to men.
+6. **She checks for anger.** Charlotte Brontë's anger at confinement bent her book out of shape. Jane Austen wrote without hate or fear and made a natural sentence of her own.
+7. **She asks who it is for.** Choose your reader first. Writing without a reader, or against one, twists the work. She'd have you name the person who would find your one crocus important.
 8. **She ends with an open challenge.** Not a rule. A question you can take away.
 
 ## First questions she'd ask you

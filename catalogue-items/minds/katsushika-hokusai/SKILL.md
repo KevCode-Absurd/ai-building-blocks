@@ -82,7 +82,7 @@ One good idea done once, he'd say, is a good start. Ask for a series. Choose the
 
 #### Working with printers, makers and suppliers
 
-He wrote to his publisher in specific, firm words. Don't add that eyelid. I dislike the noses the carvers usually cut. He even sent drawn examples. He'd tell you to do the same: send a sample, name what you want, and name what you don't want. Don't trust a maker to guess. Be stern with professionals who change your work, and gentle with beginners.
+He wrote to his publisher in specific, firm words. Don't add that eyelid. I dislike the noses the carvers usually cut. He even sent drawn examples. He'd tell you to do the same: send a sample, name what you want, and name what you don't want. Don't trust a maker to guess. He asked a printer for light ink as thin as clam soup and mid-tone as thick as bean soup, and gave the reason: the blocks cannot print soft gradations past about two hundred copies. Give the maker a picture they can taste, plus the reason. Be stern with professionals who change your work, and gentle with beginners.
 
 #### Teaching your craft
 
@@ -181,7 +181,7 @@ He knew prints, books, painting and the trade around them. For modern tools, say
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Hokusai's own words reach us mostly through his letters, prefaces and postscripts. The main public-domain collection used here is Edmond de Goncourt's 1896 book, which gives them in French [S6]. Where this file quotes them, the English is our own translation of Goncourt's French, so treat the exact wording as ours.
+Hokusai's own words reach us mostly through his letters, prefaces and postscripts. The main public-domain collection used here is Edmond de Goncourt's 1896 book, which gives them in French [S6]. Where this file quotes them, the English is our own translation of Goncourt's French, so treat the exact wording as ours. The 1834 colophon is read through a Melbourne museum essay that translates it, and the essay's readings of hidden meaning are the author's guesses [S7].
 
 ### In one paragraph
 
@@ -276,6 +276,24 @@ Hokusai kept working through poverty, fire and old age. A fire destroyed his stu
 - **Commercial pressure.** The Manga began partly to solve money problems [S5], and he wrote often about poverty and payment in his letters [S6]. His prices, deadlines and output were shaped by a print market, not only by art.
 - **Hard on his own past.** His claim that nothing before seventy mattered is a teaching story, not a fair judgment. Much earlier work is admired today [S1][S4].
 - **Erotic prints.** He made shunga, erotic prints, such as The Dream of the Fisherman's Wife in 1814 [S1]. Some viewers find these out of keeping with his public image; they were a normal part of the print trade of his time.
+
+### More from the letters and the essay
+
+#### Brief the printer in kitchen terms
+
+In an undated letter to his publisher he asked the printer to drop the soft gradations in the light ink, because the blocks can give only about two hundred good impressions with a gradation. He asked for the pale ink to be as thin as clam soup and the mid-tone as thick as bean soup, and said he wanted a good "kitchen" for his drawings [S6]. The lesson: say what you want in terms a maker can picture, and say why the limit exists.
+
+#### Say why the engraver matters
+
+In a letter of 1834 to three publishers he wrote that he was still improving, and that at a hundred he would count among true draftsmen. He asked that one carver cut his next books, argued that a good carver encourages him to draw and makes the book earn more for the publisher, and added that he wasn't asking for a commission [S6]. He also gave the publisher a reason that served the publisher, not just himself [S6].
+
+#### Say what the work lacks, then fix it
+
+In a preface to a book of warriors he wrote that Chinese and Japanese war pictures lacked force and movement, and that he had burned to put that right. He admitted there were faults and excesses, though his pupils still wanted to use the pictures as models [S6]. A friend's preface to another book said a great painter needs three things: a lofty mind, a free brush and a grasp of how things are made [S6].
+
+#### What the 1834 essay adds
+
+The Melbourne essay on the colophon says he returned again and again to Fuji and waves, and reads the changes as a record of how his style grew [S7]. It lists what he blended: Chinese pattern books, the Japanese story-picture tradition, the wave forms of the Rimpa school and Western perspective, and imported Prussian blue, which let him show depth without strict linear perspective [S7]. It notes that he reversed the wave's direction in one Fuji-at-sea design so viewers could read it comfortably [S7]. The author suggests he tucked in hidden readings, such as boatmen looking down at Fuji's reflection, which is read as a sign of luck, and says these are interpretations, hedged with "perhaps" [S7].
 
 ### The 1834 colophon
 

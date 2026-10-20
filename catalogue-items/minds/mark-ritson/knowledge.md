@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Mark Ritson is alive, and views can change. This data set draws on two pieces he wrote, a 2016 Marketing Week column and a 2026 article on "bothism," plus Marketing Week's own round-ups of his columns, a write-up of a podcast, and speaker biographies [S1][S2][S3][S4][S5][S6][S7]. His birth year isn't in our sources. He has written many columns we didn't open, so treat this as a sample of his views. Treat each view as "as of" the date of its source, from 2015 to 2026.
+Mark Ritson is alive, and views can change. This data set draws on two pieces he wrote, a 2016 Marketing Week column and a 2026 article on "bothism," plus Marketing Week's own round-ups of his columns, a write-up of a podcast, and speaker biographies [S1][S2][S3][S4][S5][S6][S7]. His birth year isn't in our sources. He has written many columns we didn't open, so treat this as a sample of his views. We also used study notes on a 2018 conference-debate report and a 2024 interview summary, which carry his live voice but not the audio [S8][S9], and a 2006 academic paper he co-wrote on how one ad gets read in different ways [S10]. The paper is a literature review, not a how-to; we use it only for what it says about testing meaning. Treat each view as "as of" the date of its source, from 2006 to 2026.
 
 ## In one paragraph
 
@@ -64,6 +64,32 @@ His columns often mock fads that lack evidence. In 2015 he called the obsession 
 
 How he applied it: he blamed Google Glass's failure on design, because it made wearers look foolish, a point he put far more bluntly [S3].
 
+## Real decisions
+
+### Telling a client the plan has no strategy
+
+In 2016 he reviewed a plan full of digital tactics and asked the manager about targeting, positioning and objectives. The manager was lost, and Ritson used the case to argue that the tactics came before the thinking [S1].
+
+### Taking the "technology is a distraction" side in a debate
+
+At the 2018 ad:tech Sydney debate he argued that marketers were obsessed with things that do not matter, such as new technology bolted onto brands with no reason. He mocked virtual reality used to sell yoghurt and described boardrooms where senior people had no target or objective but loved Instagram. According to the report, he won the audience vote [S8].
+
+### Pointing at product and pricing
+
+In a 2024 interview he said that the areas marketers neglect are product and pricing, and that the return on each marketing dollar has fallen since about 2012 because tactics get mistaken for strategy [S9]. His own answer is to put the effort back into the dull front end of strategy [S9][S1].
+
+### Adopting the name "bothism"
+
+When a commenter used the word "bothism" for his view that brand and performance, or digital and traditional, are not opposites, he kept it. He then used it as a frame for choosing mixes in proportions, not splits [S2].
+
+### Building a lasting teaching programme
+
+He left in-house work at LVMH in 2015 after 13 years and founded the Mini MBA in Marketing, which has since trained over 35,000 people [S6][S7].
+
+### Co-writing a framework on how one ad is read many ways
+
+In 2006, with two colleagues, he reviewed psychology, semiotics and reader-response theory to list what makes the same ad mean different things to different people, such as culture, social setting, media setting and who holds power over the meaning. They argued that how an ad is read should count as a way to split an audience into segments. They suggested testing it with word association and with recognition tests that include wrong answers matching other readings [S10].
+
 ## How he decides
 
 - Diagnose before you prescribe [S1][S4].
@@ -89,6 +115,8 @@ How he applied it: he blamed Google Glass's failure on design, because it made w
 **Should top marketers chase status?** In 2015 he questioned why chief marketing officers flew to Davos when their own firms had poor service ratings [S3]. He suggested the trip was more about networking than marketing.
 
 **Can a product's image sink it?** Yes. He cited Google Glass and Windows 8 as failures where the product and how it looked to users undid the marketing [S3].
+
+**Does an ad mean one thing?** Not for everyone. The 2006 paper says audiences read the same ad differently depending on culture, social setting and media setting, and that managers who assume a narrow, positive reading can be wrong. It adds that bored or frustrated viewers can read an ad against its maker's intent [S10].
 
 **Is marketing just advertising?** No. Pricing, product and sales alignment can matter more than campaigns, especially in B2B [S4].
 

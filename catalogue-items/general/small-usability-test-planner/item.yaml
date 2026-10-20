@@ -1,0 +1,23 @@
+slug: small-usability-test-planner
+name: "Small usability test planner"
+summary: "Name what people should do. Get a one-morning test plan with tasks, a script and a fix list."
+category: general
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: true}
+  - {type: persona, required: false}
+  - {type: web_page, required: false}
+outputs:
+  - {type: plan, required: true}
+minds: [steve-krug, jakob-nielsen, melanie-perkins, don-norman]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "Don't Make Me Think, Revisited", by: "Steve Krug", url: "https://sensible.com/dont-make-me-think/", used: "A small test with a few people, a script that says the site is under test, and fixing the worst problems first"}
+  - {title: "Why You Only Need to Test with 5 Users", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/", used: "Small rounds repeated beat one big test"}
+  - {title: "The Author of Don't Make Me Think Discusses UX Design's 20-Year Evolution", by: "Steve Krug, interview", used: "Having a true beginner try it and watching from the first screen"}
+  - {title: "Melanie Perkins, SV001 talk and first-person feature", by: "Melanie Perkins", used: "Cutting every step that is not what the person came to do"}

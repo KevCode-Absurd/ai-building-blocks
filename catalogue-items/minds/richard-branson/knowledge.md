@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Richard Branson is alive, and views can change. His views here come from his books *Losing My Virginity* (1998) and *The Virgin Way* (2014), as quoted on public quote pages [S1][S2], from interviews and blog lines collected with their sources [S3], and from reference pages [S4][S5][S6]. His books are copyrighted, so we use only a few short lines. Treat each view as "as of" its source. Nothing here covers his private life or his current plans.
+Richard Branson is alive, and views can change. His views here come from his books *Losing My Virginity* (1998) and *The Virgin Way* (2014), as quoted on public quote pages [S1][S2], from interviews and blog lines collected with their sources [S3], from a TED interview transcript, where he talks about saying yes first and learning after [S7], and from reference pages [S4][S5][S6]. His books are copyrighted, so we use only a few short lines. Treat each view as "as of" its source. Nothing here covers his private life or his current plans.
 
 ## In one paragraph
 
@@ -21,6 +21,8 @@ How he applied it: he wrote that he had never gone into a business purely to mak
 Branson argues that you only get anywhere by being bold [S1]. But a risk-taker's real skill is limiting what can go wrong [S1]. His motto, in his memoir, was "nothing ventured, nothing gained" [S1].
 
 How he applied it: when Virgin Atlantic was in trouble in 2020, he put up his Necker Island as security for a loan to help save it [S4]. He joked in an interview that the way to become a millionaire is to start with a billion and launch an airline, a nod to how risky airlines are [S3].
+
+**Say yes, then figure it out.** In his TED interview, Branson says he is known as "Dr. Yes". He would rather accept the chance and learn the skill afterwards [S7]. He says most jobs can be learned on the job in a couple of months, so he hires for personal qualities more than credentials [S7]. He describes life as a long education, and says that over a whole life boldness is safer than caution [S7]. How he applied it: he tells the story of his mother pushing him out of the car as a child to find his own way, and the failed Virgin Cola stunt in New York, which he tells as a joke on himself [S7]. He also says presentations should come from people being themselves, not from a heap of slides [S7].
 
 ### Take on the big, sleepy incumbent
 
@@ -73,6 +75,32 @@ How he applied it: he co-founded The B Team and supports The Elders, and he has 
 - What does my gut say [S1]?
 - Have I listened, and written down what I heard [S2]?
 - If it's not working, can we stop fast [S2]?
+
+## Real decisions
+
+### Starting a record shop by mail, then a label
+
+Branson began with a magazine called *Student*, then a mail-order record business, and in 1972 he founded Virgin Records [S4]. Records were the base the Virgin name grew from [S4][S5].
+
+### Entering the airline market in 1984
+
+He launched Virgin Atlantic in 1984, taking on the large established airlines with a more fun and human offer [S4]. He later joked that the way to become a millionaire is to start with a billion and launch an airline, which shows he knew the risk [S3].
+
+### Selling the record label
+
+In 1992 he sold the Virgin record label to EMI [S4]. The group moved from music into airlines, trains and phones, and kept the name through licensing and separate companies [S4][S5].
+
+### Splitting companies when they grow
+
+When a Virgin venture got too big, he split it into smaller units so each could stand on its own feet and give people the chance to run a company [S1]. The group became a mix of separately owned and licensed businesses [S5].
+
+### Putting his island up to save the airline
+
+In 2020, when Virgin Atlantic was in trouble, he put up Necker Island as security for a loan to help save it [S4]. This sits oddly beside his 2009 view that weak companies should be allowed to fail [S3].
+
+### Flying to space himself
+
+On 11 July 2021 he flew to the edge of space on Virgin Galactic's *Unity* [S6]. He had made himself the public face of the brand and its stunts [S3][S4]. The regulator briefly grounded the fleet after the flight because *Unity* strayed outside its cleared airspace [S6].
 
 ## Where he stood
 

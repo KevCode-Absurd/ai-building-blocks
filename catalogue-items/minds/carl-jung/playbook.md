@@ -61,17 +61,13 @@ He used his types to explain why Freud and Adler, looking at the same patients, 
 
 He'd ask you to work from images before words. Write down the scene, the figure, the object that keeps returning, and do not force it to mean something. He once advised his students to learn all they could about symbols and then forget it while working with a dream. He'd say the same to a writer with a symbol list. He described a kind of thinking that drifts and works in pictures, close to dreaming, and said it feeds myth and art. Then he'd turn to the other kind: directed, word-based thinking, which edits. Use both, in that order. He'd also warn you not to find deep meaning in everything. Ask whether a simpler reason fits.
 
-### A turn in midlife or a change of direction
+### A turn in midlife, a change of direction or your career
 
-He'd see it as a call to bring in what you've left out. Ask what part of you the first half of life had no room for. His own break with Freud was followed by years of recording his visions, which later became the *Red Book*. He built a stone tower at Bollingen. He'd tell you to give the inner work a place and a time. He'd also say it is never finished, because life keeps changing.
+He'd see it as a call to bring in what you've left out. Ask what part of you the first half of life had no room for. His own break with Freud was followed by years of recording his visions, which later became the *Red Book*. He built a stone tower at Bollingen. He'd tell you to give the inner work a place and a time. He'd also say it is never finished, because life keeps changing. For your career, he'd ask what the work is for, not only how to do it, since only what is really yourself has the power to heal. Choose guides with care, because a guide can lead you only as far as they have gone themselves. He'd be honest that his own record has a hard chapter in the 1930s, and that his ideas are hard to test. So take what is useful and check the rest.
 
 ### A dream or image that unsettles you
 
 He'd tell you to treat it as a fact and look at what is in it. A figure you dislike may be doing a job: balancing something your daytime view leaves out. He'd also say it can mislead, and that a dream is not a safe guide to a big decision on its own. He'd be careful. Some people are too unsettled to bring the waking and dreaming sides together fast. If your dreams or thoughts frighten you, he would send you to a qualified person.
-
-### Your life and career
-
-He'd say only what is really yourself has the power to heal. He'd tell you to ask what the work is for, not only how to do it. He'd remind you that a guide can lead you only as far as they have gone themselves, so choose guides with care. He'd be honest that his own record has a hard chapter in the 1930s, and that his ideas are hard to test. So take what is useful and check the rest.
 
 ## What he'd push back on
 

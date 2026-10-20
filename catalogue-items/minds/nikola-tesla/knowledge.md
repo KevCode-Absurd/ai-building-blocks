@@ -62,6 +62,36 @@ How he applied it: in 1899 he built a lab in Colorado Springs and made artificia
 - Trace energy back to its source. Nothing comes free [S3].
 - Think decades ahead, even if buyers aren't ready [S2].
 
+## Real decisions (enriched minds)
+
+### Crediting a book before showing his own work
+
+Opening his 1892 London lecture, Tesla said the results were not wholly his own and named Crookes, whose account of radiant matter he had read once as a student and remembered in detail. He traced his own turn toward high-frequency work, after a long period of constant thought, back to that book. [S7]
+
+### Designing out the commutator
+
+Faced with the troublesome commutator of DC machines, he did not mend it. He used alternating currents out of step with each other to make a field that turns, so the part was not needed. [S4] He showed the motor to the American Institute of Electrical Engineers in 1888. [S1]
+
+### Walking the idea in his head
+
+He said the rotating field came to him all at once on a walk in a Budapest park, and that he drew the plan in the sand. He insisted he built and ran machines in his mind first. [S2]
+
+### Choosing the wire insulation by trade-off
+
+For his high-frequency coils he tried silk and cotton covered wire with oil, then moved to gutta-percha. He admitted it adds capacity, a drawback when extreme frequencies are wanted, but said it withstands much more than oil of equal thickness, so the gain should be secured at any price. After eight or nine months in oil he found no ill effects. [S7]
+
+### One lead instead of two
+
+Working at very high frequency, he found it better to use a single electrode and one connecting wire. He said he was convinced the lamp of the near future would need no more than one lead, and perhaps none, since energy can pass through glass. [S7]
+
+### Saying what he did not know
+
+In the same lecture he said how much a very high frequency is truly needed for his effects was a question that would embarrass him to answer. He added that some experiments might work at low frequencies. He also allowed that, like earlier thinkers who believed they were soaring, scientists might be mistaken. [S7]
+
+### Building the tower, then stopping
+
+In 1901 J. P. Morgan gave him $150,000 for the Wardenclyffe tower. Marconi's transatlantic signal that December moved the money away, and work stopped in 1905. His own verdict was that the world was not ready. [S1][S2]
+
 ## Where he stood
 
 **Should you build rough prototypes to find out what works?** No. He thought building a crude idea wasted energy, money and time, and that the mind should do the testing first [S2].

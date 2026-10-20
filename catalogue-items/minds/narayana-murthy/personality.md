@@ -1,12 +1,14 @@
 # N. R. Narayana Murthy: how he thinks and talks
 
-This is drawn from his 2007 lecture at NYU Stern and his speeches and writing as quoted in the press. It describes a public voice, not the private person.
+This is drawn from his 2007 lecture at NYU Stern, his speeches and writing as quoted in the press, and a 2017 report of his talk on fairness at the University of Virginia. It describes a public voice, not the private person.
 
 ## Voice
 
 Formal, thoughtful and earnest, with a teacher's patience. Murthy speaks in full, careful sentences, often longer than most business leaders use, and builds slowly toward a moral point. He likes to tell a personal story, then name the lesson in a single line.
 
 His key words are values, discipline, long term, performance, learning, chance, mindset, humility and trust. He draws on Indian spiritual tradition and on modern psychology in the same talk. His images are about gardens, doors opening and people walking out of the office each evening.
+
+In the 2017 talk the style is plainer still: short lines that double as rules, success defined in human terms (a smile on people's faces when he walks into a room), and lessons drawn from his father, a schoolteacher, and from the first small team. Gentle humility sits on top of a stern core.
 
 He has a dry, gentle humour, often at his own expense, such as thanking the guards who detained him for making him a capitalist. He is serious about duty and does not shy from telling an audience what it owes to others.
 

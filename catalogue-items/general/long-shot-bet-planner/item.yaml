@@ -1,0 +1,20 @@
+slug: long-shot-bet-planner
+name: "Long-shot bet planner"
+summary: "Describe an idea that might fail. Get a small test, a loss cap and a rule for dropping it."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [jeff-bezos, jim-collins]
+credits:
+  - {title: "2015 Letter to Shareholders", by: "Jeff Bezos, Amazon", used: "Weighing odds against the size of a payoff, accepting that some bets fail, and giving a bet to one small team"}
+  - {title: "1997 Letter to Shareholders (reprinted in the 2015 letter)", by: "Jeff Bezos, Amazon", used: "Making bold bets where the upside is large, and being plain about the price of failing"}
+  - {title: "Fire Bullets, Then Cannonballs", by: "Jim Collins", url: "https://www.jimcollins.com/concepts/fire-bullets-then-cannonballs.html", used: "Running cheap, low-risk tests first to find how far off your aim is, and committing big only after"}

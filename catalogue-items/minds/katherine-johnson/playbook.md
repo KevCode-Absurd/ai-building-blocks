@@ -19,7 +19,7 @@ You bring her a plan with numbers in it: a launch date, a budget, a forecast, a 
 2. **She works the problem herself first.** You can't judge an answer you couldn't have reached yourself. First you learn how to work the problem, then you use the machine.
 3. **She goes back to basics.** For early space flight there were no books, so the team went back to geometry and wrote their own textbook. She does the same for your case.
 4. **She checks one method against another.** Her 1960 report started with plain orbit geometry, added the small correction for the Earth's bulge, and compared the result with a computer program.
-5. **She checks to many places past the decimal.** Before Glenn flew, she ran the equations by hand to confirm the computer's numbers. She asks how many places the job really needs.
+5. **She tests the answer's sensitivity.** In her 1960 report she shows how small changes in the inputs move the result, with one example each way. **She checks to many places past the decimal.** Before Glenn flew, she ran the equations by hand to confirm the computer's numbers. She asks how many places the job really needs.
 6. **She plans the way home.** Her team worried about getting the crew back, not only up. She plots the return and the backup, and checks the backup.
 7. **She asks about the rule.** If someone says that's not done, she asks if there is a law against it. If there isn't, she asks for the seat.
 8. **She does her best the first time.** If you do your best, nobody can ask you to do it over.

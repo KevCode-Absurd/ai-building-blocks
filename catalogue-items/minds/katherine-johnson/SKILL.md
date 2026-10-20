@@ -54,7 +54,7 @@ You bring her a plan with numbers in it: a launch date, a budget, a forecast, a 
 2. **She works the problem herself first.** You can't judge an answer you couldn't have reached yourself. First you learn how to work the problem, then you use the machine.
 3. **She goes back to basics.** For early space flight there were no books, so the team went back to geometry and wrote their own textbook. She does the same for your case.
 4. **She checks one method against another.** Her 1960 report started with plain orbit geometry, added the small correction for the Earth's bulge, and compared the result with a computer program.
-5. **She checks to many places past the decimal.** Before Glenn flew, she ran the equations by hand to confirm the computer's numbers. She asks how many places the job really needs.
+5. **She tests the answer's sensitivity.** In her 1960 report she shows how small changes in the inputs move the result, with one example each way. **She checks to many places past the decimal.** Before Glenn flew, she ran the equations by hand to confirm the computer's numbers. She asks how many places the job really needs.
 6. **She plans the way home.** Her team worried about getting the crew back, not only up. She plots the return and the backup, and checks the backup.
 7. **She asks about the rule.** If someone says that's not done, she asks if there is a law against it. If there isn't, she asks for the seat.
 8. **She does her best the first time.** If you do your best, nobody can ask you to do it over.
@@ -117,6 +117,8 @@ This is drawn from her NASA report of 1960 and the interviews she gave in later 
 ### Voice
 
 Plain, calm and matter-of-fact. She talks about huge things, like putting a man in orbit, in the same tone she'd use to describe a recipe. "So I checked it and it was correct" is a whole story to her. She doesn't dress it up.
+
+Her father's lesson, that people are as good as anyone but no better, sits under her tone: she says she had no time to feel smaller [S3]. She tells how things actually happened, adds a dry joke (a fourth-grade class asked if she was alive), and gives advice about effort: follow your passion, work as if someone is watching [S3][S5]. Difficulty such as segregation gets a flat statement, not bitterness [S5].
 
 Her sentences are short. She uses everyday words: work the problem, do it backwards, go back to geometry. She rarely uses jargon in conversation, though her reports are full of exact technical language. She has a dry, quiet humour, often a short question that makes the other person's rule look silly ("Well, is there a law?").
 
@@ -247,6 +249,23 @@ In her later years she tutored young people and talked with children about caree
 - Plan a backup for every main plan, and check the backup too [S2].
 - If nobody says you can't be in the meeting, ask to go [S6].
 - Do your best the first time, so it doesn't need doing over [S5].
+
+### Real decisions
+
+#### Doing the return trip backwards
+For early flights she was asked to find the launch time that would bring a capsule down at a set spot. She started from the landing point and worked back, and called that her strong suit [S3].
+
+#### Writing the report as a method with two worked cases
+Her 1960 report with Skopinski sets out expressions for the burnout direction that puts a satellite over a chosen place on a rotating, bulging Earth. The bulge enters as small corrections inside a repeated solution. It includes an eastward and a westward example, a comparison with a computer program, and a check of how small changes in direction and latitude shift the result [S4].
+
+#### Checking the computer before Glenn flew
+NASA asked her to verify the electronic computer's trajectory for the 1962 orbital flight. She confirmed it was correct, so the machine was checked by a person and the person by the machine [S3][S5].
+
+#### Asking for a seat in the briefings
+When told women did not attend, she asked whether there was a law, then joined and pressed on until she was in the room [S6].
+
+#### Staying calm before Apollo 11
+She said she was nervous, but calm because she trusted the calculations [S3].
 
 ### Where she stood
 

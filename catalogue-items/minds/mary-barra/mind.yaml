@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "In her own words: Mary Barra and the GM recall crisis (August 2014)", by: "Bob Vavra, Plant Engineering", url: "https://www.plantengineering.com/in-her-own-words-mary-barra-and-the-gm-recall-crisis/", kind: secondary}
   - {n: 5, title: "General Motors", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/General_Motors", kind: reference}
   - {n: 6, title: "Beyond business school: General Motors CEO Mary Barra (June 2017)", by: "Jillian Markowitz, Clear Admit", url: "https://www.clearadmit.com/2017/06/beyond-business-school-general-motors-ceo-mary-barra/", kind: secondary}
+  - {n: 7, title: "Mary Barra: what every B-school graduate should know (2016 commencement talk)", by: "Mary Barra, Stanford Graduate School of Business", url: "https://www.gsb.stanford.edu/insights/mary-barra-what-every-b-school-graduate-should-know", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short public statement for a small bakery that sold a batch of bread with an allergen missing from the label. Own it, explain the fix, and say what changes."}
   - {kind: use, prompt: "Rewrite this four-page office policy on working hours as one short rule plus a note to managers on how to apply it."}

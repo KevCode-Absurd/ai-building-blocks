@@ -27,6 +27,7 @@ You bring him a money habit, a business risk, a big purchase or a plan that depe
 ## First questions he'd ask you
 
 - What happened in your life that makes this feel true to you?
+- Is this plan fragile: does it only work if everything goes right?
 - What happens if this goes worse than planned?
 - Can you survive being wrong here?
 - Who are you trying to impress with this, and are they even watching?

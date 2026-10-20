@@ -1,0 +1,119 @@
+new_slug: hard-no-planner
+name: "Hard no planner"
+summary: "Paste the request you must turn down and why. Get a word-for-word no that keeps trust and points to another path."
+job: lead-people
+thinking: low
+thinking_why: "It follows a short fixed pattern and writes a few lines."
+
+headline: "Hard no planner"
+subhead: Paste a request you must turn down, who asked and why you cannot say yes. It restates what they asked, lists your real reasons, writes a clear no and offers another route to what they want. You get the exact words to say or send.
+
+explain: |
+  A no that is vague or hidden behind policy makes people feel brushed off. A no that is harsh makes them feel small. In both cases they leave without a path forward and trust drops.
+
+  This skill starts from how you would want to be treated in their place. It restates their request so they know you understood it, lists the reasons that are really true, and says no in one plain sentence. It then offers another route to the goal behind the request. It checks that the no is fair to the company and to everyone else who might ask, and that you are not using "policy" to avoid saying why.
+
+when:
+  - Someone asks for a raise, a favour, a refund or an exception you cannot give.
+  - You keep putting off an answer because you do not want to disappoint them.
+  - You are about to write "unfortunately due to policy" and know it will land badly.
+
+you_give:
+  - The request and who made it
+  - Your real reasons for saying no
+  - What the person is trying to achieve (optional)
+  - What you can offer instead (optional)
+you_get:
+  - A restatement of their request in your words
+  - A clear no in one sentence
+  - The real reasons, in plain words
+  - Another route to their goal, and the words to offer it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the request and say who asked and what they probably need.
+  - List your true reasons, even if they feel awkward.
+  - Say what you can offer instead, or ask the skill to suggest options.
+  - Read the words aloud and change any that do not sound like you.
+
+how_it_works:
+  - title: Takes their seat
+    text: Writes how you would want to be treated if you were asking.
+  - title: Restates the request
+    text: Says what they asked so they know you listened.
+  - title: Lists real reasons
+    text: Writes the reasons that are true, and drops the ones that hide behind policy.
+  - title: Says no plainly
+    text: One direct sentence that cannot be misread.
+  - title: Offers another route
+    text: Suggests a path to the goal behind the request.
+  - title: Checks fairness
+    text: Checks the no is fair to the company and others, and that nothing blames the person.
+  - title: Checks the draft
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHAT THEY ASKED
+  <request restated>
+
+  WHAT THEY MAY BE AFTER
+  <the goal behind it>
+
+  THE NO, WORD FOR WORD
+  <opening restatement>
+  <real reasons>
+  <the no in one sentence>
+  <another route>
+
+  FAIRNESS CHECK
+  <fair to the company and to others>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Your real reasons
+    how: Be honest about them. If a reason cannot be told, the skill says so rather than inventing a cover story.
+  - what: The goal behind the request
+    how: Say what you think they want. A good alternative depends on it.
+  - what: How you will deliver it
+    how: Say if it is spoken or written. A spoken no is shorter and warmer than a written one.
+  - what: What you can offer
+    how: List real options, even small ones. A true small offer beats a vague promise.
+
+judge:
+  - It restates the request before giving any reason.
+  - The no is stated directly and not left to be guessed.
+  - Reasons are real, with no hiding behind policy.
+  - Another path is offered that serves their goal.
+  - Nothing in it blames the person.
+
+test:
+  - Give the draft to a colleague and ask what you are saying. They should say no, plainly.
+  - Read it aloud. Mark any line you would not say to a face.
+  - Run it twice. The no and the reasons should stay the same.
+  - After you send it, note how the person responded and what they did next.
+
+improve:
+  - Add your standard reasons for each common request, so the reasons are ready and true.
+  - Add options you can offer for common requests.
+  - Save your best no's in one file the skill reads for style.
+  - Pair it with a feedback conversation planner when the no is about performance.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Restating a request and writing a short reply is text work any strong chat AI does well."}
+    - {name: "Your email or chat app", why: "Check the length and tone in the place the message will be read."}
+  inputs:
+    - "The original message asking for the request"
+    - "The policy or limit you are working under"
+    - "Options you can honestly offer"
+
+terms:
+  - term: Restate
+    meaning: To say what someone asked in your own words so they know you understood.
+  - term: Hide behind policy
+    meaning: To cite a rule as the reason when the real reason is something else.

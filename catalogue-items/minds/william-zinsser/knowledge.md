@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: William Zinsser died in 2015 [S1]. His best-known book, *On Writing Well* (1976), is known here through reference pages [S1][S2]. His own words come from four pieces in *The American Scholar*, where he wrote a weekly column late in life [S1]: a 2009 talk to foreign journalism students [S3], a 2012 talk on the same theme [S6], an essay on memoir [S4] and an essay on writing in 300 words [S5]. Some of these were reposted by the magazine after his death, so the posting date isn't always the writing date. Nothing here tells you what he would think about writing tools or media after 2015.
+A note on method: William Zinsser died in 2015 [S1]. His best-known book, *On Writing Well* (1976), is known here through reference pages [S1][S2]. His own words come from four pieces in *The American Scholar*, where he wrote a weekly column late in life [S1]: a 2009 talk to foreign journalism students [S3], a 2012 talk on the same theme [S6], an essay on memoir [S4] and an essay on writing in 300 words [S5]. Some of these were reposted by the magazine after his death, so the posting date isn't always the writing date. Nothing here tells you what he would think about writing tools or media after 2015. We have no interview of him, so his voice rests on these essays.
 
 ## In one paragraph
 
@@ -74,6 +74,26 @@ How he applied it: in memoir, he pointed to books that look back with love and f
 - Choose the small, telling moment over the big subject [S4].
 - Gather much more than you will use [S5].
 - Sound like yourself [S4].
+
+## Real decisions
+
+### Writing the 300 words about a site near home
+An editor asked for short essays on American sites. Zinsser first offered to condense old chapters, then agreed to write a 300-word piece from scratch on one condition: the site had to be near home. He chose Ellis Island, reachable by subway and ferry. [S5]
+
+### Reporting far more than he would use
+For those 300 words he interviewed the superintendent, because a place becomes meaningful through the people who care for it, then walked the grounds for a day and took notes as if for a 5,000-word article. His reason: you can't predict which details will earn their place. [S5]
+
+### Giving each paragraph one job
+The finished piece had three paragraphs. One set the place and its weight, one filled the empty rooms with the people and the food that surprised them, and one gave the immigrants' faces and voices. It ends on a human voice, not a summary. [S5]
+
+### Telling a student to follow her own search
+He taught a student, Helen Blatt, who could not rebuild her father's early life as a Holocaust survivor. He helped her see that her search for that past was itself the story. He presents the result with evident admiration. [S4]
+
+### Choosing the boxcar over the war
+For his own memories he skipped the war and wrote about a six-day ride in a crowded French boxcar across North Africa. It showed him that small, vivid episodes carry more than big subjects, and he says the ride shaped his love of travel. [S4]
+
+### Rewriting Thoreau in the passive
+In his talk to foreign students he took a passage from *Walden*, built from active verbs and mostly one-syllable words, and rewrote it in the passive. Thoreau disappeared from it. He used it to teach why active verbs matter. [S3]
 
 ## Where he stood
 

@@ -1,0 +1,120 @@
+new_slug: feature-request-screener
+name: "Feature request screener"
+summary: "Paste your feature requests and who asked. Get a yes, later or no on each, with the full cost of every yes."
+job: build-product
+thinking: medium
+thinking_why: "It counts repeat requests, lists hidden costs and tests each against your vision. The steps are fixed, with judgement on fit."
+
+headline: "Feature request screener"
+subhead: "Paste your feature requests with who asked and when. It starts every answer at not now, counts only repeat requests from different people, lists the hidden costs of each repeat and tests it against your vision. You get a yes, later or no with a reason, and a short reply."
+
+explain: |
+  Every request sounds small. But each feature you add brings screens, help text, a tour, marketing copy, new terms, pricing questions and a promise you now have to keep. A product that says yes to everyone turns into a product nobody can explain.
+
+  This skill starts with not now for every request. It counts only the requests that repeat from different people over time, and drops one loud voice. For each repeat it lists the full cost of saying yes. It tests the request against your product's stated vision and says which side it takes. Then it rules yes, later or no with one reason, and drafts a short reply that reminds the customer why they chose a focused product, with no promised date.
+
+when:
+  - Your request list is long and each item has a champion.
+  - A big customer is pushing for something that would change what the product is.
+  - You need a reply that says no without losing the customer.
+
+you_give:
+  - The request list, with who asked and when
+  - Your product's vision or stated purpose in a sentence or two
+  - Your current plan or roadmap
+  - Customer comments or support emails (optional)
+you_get:
+  - A repeat count per request, from different people, over time
+  - The hidden costs of each request that repeats
+  - A yes, later or no with one reason, and the vision conflict named
+  - A short reply for each customer that promises no date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the requests with names or accounts and dates, and your vision in a sentence.
+  - Paste your current plan so it can see what is already committed.
+  - Read the costs for each yes before you agree to any.
+  - Send the replies, edited to sound like you.
+
+how_it_works:
+  - title: Starts at not now
+    text: Gives every request the default answer of not now.
+  - title: Counts the repeats
+    text: Counts only requests that come from different people over time and drops the rest.
+  - title: Lists hidden costs
+    text: Lists screens, help text, tour, copy, terms, promises it could break and pricing for each repeat.
+  - title: Tests the vision
+    text: Says which side of your stated vision the request takes.
+  - title: Rules on each
+    text: Gives yes, later or no with one reason.
+  - title: Writes the reply
+    text: Drafts a short note that reminds the customer why they like the focused product.
+
+output_shape: |
+  THE VISION
+  <product purpose in a sentence>
+
+  REQUESTS
+  <request> | Asked by: <n different people> | Over: <time> | Counts: <yes/no>
+
+  HIDDEN COSTS (repeats only)
+  <request>: screens <n>, help text, tour change, marketing copy, terms, promises at risk, pricing effect | Total effort: <estimate>
+
+  VISION TEST
+  <request> | Takes the side of: <vision / against vision> | Why: <reason>
+
+  RULINGS
+  1. <request> | <yes / later / no> | Reason: <one sentence>
+
+  REPLY (for each)
+  <short note, no date promised>
+
+  MISSING
+  <facts that would change a ruling>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Who asked and when
+    how: Names or accounts and dates let it count real repeats. One loud customer counts once.
+  - what: Your vision
+    how: State what the product is for and who it is not for. The test depends on it.
+  - what: Effort estimates
+    how: Give rough hours or weeks for known features. The skill marks the rest as missing.
+  - what: Your tone
+    how: Add a sample of how you write to customers so the replies sound like you.
+
+judge:
+  - Every yes has a written cost list.
+  - Repeat counts come from different people, not one loud voice.
+  - The vision conflict is named for each item.
+  - The reply promises no date.
+  - Nothing is approved only because it is easy.
+
+test:
+  - Run it on a list where you know what you built and regret. See if it would have said no.
+  - Check one repeat count by hand against your support inbox.
+  - Send one reply to a friendly customer and see how it lands.
+  - Run it again in three months and see which later items returned.
+
+improve:
+  - Add past features that cost more than expected, to calibrate the cost list.
+  - Add your product's statement on who it is not for.
+  - Keep a file of rulings and reasons, and paste it in so it stays consistent.
+  - Pair it with "Launch scope cutter" when the yes list needs to fit a date.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Counting, costing and drafting short replies is text work."}
+    - {name: "Your support inbox or feedback tool", why: "Real request counts come from there."}
+  inputs:
+    - "Support emails and survey answers with dates"
+    - "Your product vision and who it is not for"
+    - "Estimates from your builders for known features"
+
+terms:
+  - term: Hidden cost
+    meaning: A cost of a feature beyond building it, such as help text, a tour, copy, terms or a promise to keep.
+  - term: Repeat request
+    meaning: A request that comes from different people at different times, not the same person asking again.

@@ -1,0 +1,17 @@
+slug: storyboard-first-story-builder
+name: "Storyboard-first story builder"
+summary: "Paste your places, memories and hero. Get a rough board that finds the story before you write."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [hayao-miyazaki]
+credits:
+  - {title: "Hayao Miyazaki interview, Paris press conference for Spirited Away", by: "Hayao Miyazaki", used: "Building a hero from a real person, drawing the story as rough boards, letting the ending come from them, and keeping the plot logical in a strange world"}

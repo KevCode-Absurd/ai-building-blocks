@@ -1,0 +1,19 @@
+slug: post-sale-follow-up-planner
+name: "Post-sale follow-up planner"
+summary: "Paste what you sell and a customer's details. Get a thank-you note, a contact schedule and what to record about the buyer."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [joe-girard]
+credits:
+  - {title: "Tell Customers You Appreciate Their Business (public page)", by: "Joe Girard", used: "A personal thank-you after the sale and an open invitation to call"}
+  - {title: "Repeat Business and Referrals (public page)", by: "Joe Girard", used: "Keeping notes on each buyer, contact over time and asking for referrals once service is felt"}

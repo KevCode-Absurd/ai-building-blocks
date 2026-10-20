@@ -65,6 +65,26 @@ From the 1930s Wright designed Usonian houses: small, one-storey homes for middl
 - Make the interior space the real building [S6].
 - Bring good design to people of modest means [S5].
 
+## Real decisions
+
+### Putting Fallingwater above the falls
+Edgar Kaufmann expected a house facing the waterfall from downstream. Wright placed it over the falls so the family would live with the water, not just look at it [S4]. Breezes and the sound of the water reach the rooms, and he built braces around existing trees [S4].
+
+### Overruling the engineers
+The client's engineers listed at least eight problems at Fallingwater and Wright overruled them. Contractors added steel he had rejected [S4]. The terraces later sagged about seven inches and needed a $4 million repair in 2001 to 2002 [S4]. It is a case of his confidence costing the client.
+
+### Standing up for the machine in 1901
+Speaking to the Chicago Architectural Club, he praised William Morris, then disagreed with him: the machine, he said, was a marvelous simplifier and would serve democracy if artists took it up [S1]. His reason was that the artist had to solve the riddle of the machine, not run from it [S1].
+
+### Proposing a society that studies factories
+In the same talk he proposed an arts and crafts society whose first work would be to study factories and processes, and he criticised art schools for not teaching the tools students would use [S1].
+
+### Building small houses for the middle class
+From the 1930s he made more than 300 Usonian designs, about 140 of them built, with open plans, carports, radiant heating and native materials [S5]. The Jacobs House in Madison (1937) is often called the first [S5]. The aim was good design at low cost for families on middle incomes [S5].
+
+### Reading Japanese prints as structure
+In 1912 he wrote that Japanese prints show simplification by eliminating the insignificant, with geometry as the skeleton [S2]. He used them to teach architects to build from an inner idea, not copy old styles [S2].
+
 ## Where he stood
 
 **Is the machine good or bad for art?** Good, if artists master it. It is "the creature and not the creator of iniquity" (1901) [S1].

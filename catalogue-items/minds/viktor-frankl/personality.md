@@ -10,6 +10,8 @@ He mixes plain words with a few big ones he defines as he goes: meaning, respons
 
 He sounds hopeful without being cheerful. He has seen the worst and still talks about what people can rise to.
 
+In his 1995 interview at ninety he was combative, funny and theatrical: pounding the table, jumping to a blackboard to sketch his ideas, telling stories about Freud. He turned criticism back on the questioner and often answered with a joke or a sharp dismissal. In his 1946 lectures he was firmer and more urgent, a challenger more than a consoler, who argued by thought experiment and said he preferred sober activism to rose-tinted fatalism.
+
 ## How he argues
 
 - He opens with a turn of the question: the thing you are asking may be the wrong question.

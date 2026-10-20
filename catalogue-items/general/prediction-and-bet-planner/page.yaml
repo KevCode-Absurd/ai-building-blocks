@@ -1,0 +1,127 @@
+new_slug: prediction-and-bet-planner
+name: "Prediction and bet planner"
+summary: "Paste a belief you hold. Get what it predicts, what would prove it wrong, a small bet and a date to check."
+job: test-an-idea
+thinking: medium
+thinking_why: "It turns a loose belief into checkable claims and weighs rival explanations, which needs some judgment."
+
+headline: "Prediction and bet planner"
+subhead: "Give it a belief you hold about your market, your customers or your work. It states the belief simply, writes what it predicts that you could check, and what result would prove you wrong. You get a small stake, a date to check and the rival explanations set out fairly."
+
+explain: |
+  Beliefs that cannot be wrong cannot be useful. "Customers like our brand" or "this channel will grow" feel true, and since nothing could disprove them, nobody checks. Putting a stake and a date on a claim forces the question of what you would see if you were wrong.
+
+  This skill strips the belief down to its simplest form and writes what it predicts. It writes the result that would prove you wrong before you test, sets a small stake and a date, and lists the rival explanations with the one you prefer and why. At the date, it asks you to check and settle openly, and records what changed your mind.
+
+when:
+  - You hold a strong view about your market and have never tested it.
+  - Two people in your team disagree and neither can say what would change their mind.
+  - You want to learn from your own predictions instead of explaining them away afterward.
+
+you_give:
+  - The belief, in your own words
+  - What is at stake if you are right or wrong
+  - Rival views you have heard (optional)
+you_get:
+  - The belief in its simplest form
+  - What it predicts that you could check
+  - The result that would prove you wrong, written before the test
+  - A stake, a date and the rival explanations
+  - A record of what changed your mind, after the date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Write the belief the way you would say it to a friend.
+  - Name a stake you would be happy to pay, such as a lunch, a donation or an hour of work.
+  - Check on the date, settle the bet in public, and bring back what happened.
+
+how_it_works:
+  - title: Simplifies the belief
+    text: States the belief in its plainest form, without hedges.
+  - title: Writes the predictions
+    text: Writes what the belief predicts that you could check.
+  - title: Names the losing result
+    text: Writes the result that would prove you wrong, before any test.
+  - title: Sets the stake and date
+    text: Sets a small stake and a date for checking.
+  - title: Lists rival explanations
+    text: Sets out the other explanations fairly and says which you prefer and why.
+  - title: Settles the bet
+    text: At the date, checks the result and pays up in public if you lost.
+  - title: Records the change of mind
+    text: Notes what changed your mind or confirmed your view.
+
+output_shape: |
+  THE BELIEF
+  <simplest form>
+
+  WHAT IT PREDICTS
+  1. <thing you could check> | Where to look: <source> | By: <date>
+  ...
+
+  WHAT WOULD PROVE ME WRONG
+  <result, as a number or an outcome>
+
+  THE BET
+  Stake: <what> | Held by: <who> | Check on: <date>
+
+  RIVAL EXPLANATIONS
+  1. <rival view> | Fits the facts because <reason>
+  2. ...
+  I prefer: <which> because <reason>
+
+  AT THE DATE
+  Result: <fill in> | Won or lost: <fill in> | Settled in public: <how>
+
+  WHAT CHANGED MY MIND
+  <fill in>
+
+  MISSING
+  <facts that would sharpen the bet>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Wording of the belief
+    how: Say it plainly, without "might" or "tends to". Vague words make wrong results hard to see.
+  - what: The stake
+    how: Choose something you would feel, but not fear. A stake you ignore does nothing.
+  - what: The date
+    how: Pick one when the evidence will exist. Too early and nothing shows, too late and you forget.
+  - what: Rival views
+    how: Add the strongest rival you have heard. It will be set out fairly.
+
+judge:
+  - Every prediction can be checked by a named result.
+  - A losing result is written down before the test.
+  - The stake and date are set.
+  - At least one rival explanation is listed fairly.
+  - The belief can be wrong.
+
+test:
+  - Try a belief you already know turned out false. See if the plan would have caught it.
+  - Show the losing result to a colleague. Ask if they would agree it counts as wrong.
+  - Run it twice on the same belief. The predictions should be close.
+  - At the date, check that the result was easy to read against what you wrote.
+
+improve:
+  - Add the numbers you can pull to the prediction step, so predictions use real sources.
+  - Add the kind of stake your team likes, such as a lunch or a donation.
+  - Keep a list of bets and results to see how often you are right.
+  - Pair it with "One-change experiment planner" when a bet needs a proper test.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Turning a belief into checkable claims is text work that any strong chat AI does with this skill."}
+    - {name: "A shared note or doc", why: "Lets others see the bet and the date, which keeps you honest."}
+  inputs:
+    - "Numbers that bear on the belief"
+    - "The strongest rival view you have heard"
+    - "The names of people who will see the bet"
+
+terms:
+  - term: Prediction
+    meaning: A claim about what you will see if the belief is true, which you can check.
+  - term: Stake
+    meaning: The small price you agree to pay if you turn out to be wrong.

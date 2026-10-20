@@ -1,0 +1,126 @@
+new_slug: layout-default-breaker
+name: "Layout default breaker"
+summary: "Paste a page or layout and its readers. Get the choices software made for you, plus three hand-made alternatives."
+job: design-work
+thinking: medium
+thinking_why: "It must tell chosen from inherited layout choices and invent different options, with a risk check on each."
+
+headline: "Layout default breaker"
+subhead: Give it a page, cover or layout, its message and who reads it. It marks every layout choice as made by you or inherited from a template, then gives three different hand-made alternatives that fit the readers' attitude and a two-reader test for the message.
+
+explain: |
+  Most pages look the way they do because the software offered that margin, that grid and that font size. The result is clean, and it looks like every other page. Readers feel nothing because nothing was decided.
+
+  This skill starts from the audience and the message. It lists each choice in the layout and marks it as one you made or one a template made. It then guides you to gather real material from your own surroundings, to cut or print the parts and move them by hand until the page makes people feel the subject, and to match the attitude of the page to the attitude of its readers. One accident may stay if it helps. You get three alternatives and a plan to check the message still gets through with two real readers.
+
+when:
+  - Your page, poster, cover or slide looks clean and forgettable.
+  - You used a template and want to know which choices you never made.
+  - You want to try a bolder layout without losing the message.
+
+you_give:
+  - A page, cover or layout, as a file or description
+  - Who reads it and what the message is
+  - The copy (optional)
+you_get:
+  - A list of layout choices marked as made or inherited
+  - Three different alternatives with reasons
+  - A plan for hand-made trials
+  - A two-reader test plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach your layout, and say who reads it and what the message is.
+  - Read the made-or-inherited list and note any choice you never decided.
+  - Try one alternative by hand with paper, scissors or a rough mock-up.
+  - Show it to two real readers and ask them what it says.
+
+how_it_works:
+  - title: States audience and message
+    text: Writes who reads it and what must get through before touching the layout.
+  - title: Marks every choice
+    text: Lists each layout choice and marks it made by you or inherited from a template.
+  - title: Gathers real material
+    text: Suggests things from your own surroundings to use, rather than a search.
+  - title: Moves parts by hand
+    text: Plans a hand trial where parts are printed or cut and moved until the page feels right.
+  - title: Matches the attitude
+    text: Sets the page's attitude to fit its readers.
+  - title: Allows one accident
+    text: Keeps one accident only if it helps the message.
+  - title: Tests with readers
+    text: Plans a check with two real readers that the message still gets through.
+
+output_shape: |
+  AUDIENCE AND MESSAGE
+  <who reads it> | Message: <one sentence>
+
+  CHOICES
+  <choice> | Made by you / Inherited | Why it matters
+
+  REAL MATERIAL TO GATHER
+  <list from your own surroundings>
+
+  THREE ALTERNATIVES
+  A. <idea> | Attitude: <x> | What changes: <list> | Risk: <y>
+  B. ...
+  C. ...
+
+  HAND TRIAL
+  <steps with paper or rough mock-up>
+
+  ACCIDENT RULE
+  <what may stay, what must go>
+
+  READER TEST
+  <two readers, the question, what counts as a pass>
+
+  MISSING
+  <what would sharpen the options>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: The audience
+    how: Describe real readers, such as late-shift nurses or teenage gamers. The attitude of the page follows from them.
+  - what: How far to go
+    how: Say if the page can be wild or must stay safe. It scales the three alternatives.
+  - what: The one thing that must read
+    how: Name it, such as a date or price. The alternatives will protect it.
+  - what: Medium
+    how: Say if it is print, screen or both. It changes what can be done by hand.
+
+judge:
+  - Every default is marked as chosen or inherited.
+  - Three different alternatives are made.
+  - The message still reads for a real reader.
+  - The attitude matches the audience.
+  - Any wild move has a reason.
+
+test:
+  - Run it on a layout you know came from a template and see if it spots the template choices.
+  - Print the alternatives and show them to two people from your audience. Ask what the page says.
+  - Run it twice and check the three options are different each time in kind, not only in colour.
+  - Cover the headline and see if the page still feels like its subject.
+
+improve:
+  - Add your brand rules, so the alternatives stay within the parts you cannot change.
+  - Add a list of materials from your own world, such as tickets, labels or photos.
+  - Add a rule for the minimum legibility any option must keep.
+  - Pair it with a type and spacing checker after you choose an option.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reviewing layout choices from an image and a brief is something any strong chat AI that can see images does well."}
+    - {name: "Paper, scissors and a printer", why: "Moving parts by hand shows options software hides."}
+  inputs:
+    - "A photo or scan of the current layout"
+    - "Real objects or photos from the subject's world"
+    - "Two readers willing to give feedback"
+
+terms:
+  - term: Inherited choice
+    meaning: A layout setting you did not decide, such as a margin or font size a template supplied.
+  - term: Hand trial
+    meaning: Moving printed or cut parts around by hand to find a layout, before building it on screen.

@@ -1,0 +1,18 @@
+slug: advice-skin-in-the-game-checker
+name: "Advice skin-in-the-game checker"
+summary: "Paste advice or a pitch. Get who pays if it is wrong, who gains, and how far to trust it."
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [nassim-taleb]
+credits:
+  - {title: "Podcast #395: Nassim Taleb on Skin in the Game", by: "The Art of Manliness, 2018", used: "The test of asking what an adviser loses when wrong and gains when right, and how hidden unevenness shows up in fees and rewards"}
+  - {title: "Skin in the Game: Hidden Asymmetries in Daily Life", by: "Nassim Nicholas Taleb", url: "https://en.wikipedia.org/wiki/Skin_in_the_Game_(book)", used: "Age as a clue for things that do not perish, and trust that needs both skill and honesty"}

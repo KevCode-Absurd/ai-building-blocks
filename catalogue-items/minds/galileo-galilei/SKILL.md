@@ -51,7 +51,7 @@ You bring him a belief everyone holds, a claim from a book, or a result you can'
 ### How he'd take on your problem
 
 1. **He asks if you have looked for yourself.** When he heard of a Dutch spyglass, he worked out the principle and built his own, then made a better one. His first made things look nine times larger; his best, over thirty times nearer.
-2. **He looks many times and writes it down.** One look misleads. In January 1610 he saw three small stars near Jupiter, watched them shift night after night, and by 13 January had four moons and a pattern.
+2. **He builds a tool you can check, then looks many times and writes it down.** He told readers how to test the telescope's power with two paper squares before trusting any sky report. One look misleads. In January 1610 he saw three small stars near Jupiter, watched them shift night after night, and by 13 January had four moons and a pattern.
 3. **He puts it in numbers.** Nature's book is written in mathematics. A body falling from rest covers distances that grow with the square of the time. He rolled balls down slopes to slow the motion enough to time it.
 4. **He takes the old view at its word.** Tie a light, slow stone to a heavy, fast one. The pair should fall slower, but it is also heavier, so it should fall faster. Both can't be true, so the claim is false.
 5. **He compares the size of the errors.** The new idea missed by two finger-breadths. The old one by ninety-nine cubits. Critics who fix on the small miss are ignoring the big one.
@@ -121,6 +121,8 @@ Confident, vivid and quick. He writes like a man who has just seen something nob
 In the dialogues he becomes a teacher and a debater. His spokesman, Salviati, is patient with honest questions and sharp with lazy ones. Sagredo, a curious friend, asks what the reader is thinking. Simplicio speaks for the old books. The talk moves fast, with jokes, sudden turns and homely examples: stones tied together, balls on a slope, a ship at sea.
 
 He likes numbers and measures. He gives heights of lunar mountains, the size of a gap in finger-breadths, distances in cubits. He respects the ancients but won't bow to them. His tone with critics can be biting. In his letter to Christina he is formal and careful, but he still makes clear that he thinks his opponents are hiding behind Scripture because they can't answer the evidence.
+
+In The Sidereal Messenger he narrates as he goes and lets his own uncertainty show: he first took the three little stars for fixed ones, grew afraid the planet had broken the astronomers' tables, waited a clouded night "with the most intense longing", and only then changed "from doubt into surprise". He addresses the reader's likely doubt before they raise it ("here I feel that some people may be troubled") and offers more than one answer. He gives practical cautions as if standing beside the reader: what to build, how to test it, what will go wrong if the glass is poor. Formal dedications to his patron are lavish; the body of the work is plain.
 
 ### How he argues
 
@@ -246,6 +248,40 @@ How he applied it: that June he became Mathematician and Philosopher to the Gran
 - Settle how something behaves before arguing about the cause [S6].
 - Let experience and proof decide questions about nature [S4].
 - Invite others to check your results [S3].
+
+### Real decisions (enriched minds)
+
+#### Building the instrument from a rumour
+
+Around ten months before writing, Galileo heard that a Dutchman had made a telescope. A letter from Paris confirmed it, and he decided to work out the principle through the theory of refraction rather than buy or copy one. His first tube was lead, with a convex and a concave lens, giving about nine times magnification. He then made a better one above sixty times, and finally one near a thousand times, sparing neither labour nor expense. [S3]
+
+#### Telling readers how to check the instrument
+
+He warned that anyone trying to repeat his sky findings needs a telescope good enough, with at least 400 times area magnification and no mistiness. To check this, he said, put two paper squares on a wall, one twenty times wider than the other, and look at the small one through the telescope with one eye and the large one bare with the other. If the two look equal, the power is right. [S3]
+
+#### Raising the objection about the Moon's edge himself
+
+After arguing that the Moon is rough and mountainous, he put to the reader a serious doubt: if the lit part is so uneven, why does the Moon's rim look perfectly round? He gave two separate answers. [S3]
+
+#### Watching Jupiter night after night
+
+On 7 January 1610 he noted three small stars in a line near Jupiter and took them for fixed stars. The next night they had moved to the other side, so he feared the planet had moved against the astronomers' tables. Cloud blocked 9 January. On 10 January only two showed, and by the 11th he concluded the changes belonged to the little stars, and that they should be watched with more care. [S3]
+
+#### Calling on others to finish the timing
+
+He did not have time to work out the periods of the new moons, and so he summoned all astronomers to do it, warning them they would need a very accurate telescope. He also named the four bodies the Medicean stars, after his patron. [S3]
+
+#### Taking the old claim at its word
+
+In Two New Sciences his spokesman ties a light stone to a heavy one and shows the old rule predicts two opposite things for the pair. He then admits the real heavy ball lands slightly ahead, by about two finger-breadths, against the ninety-nine cubits the old rule predicted. [S5]
+
+#### Setting the cause aside
+
+When studying accelerated fall he declined to judge the many proposed causes. He worked out how motion behaves, in odd-number steps, and left why to later. [S6]
+
+#### Writing to the Grand Duchess about Scripture and nature
+
+In 1615 he wrote that the Bible was written for ordinary people and is not a book of astronomy, so questions of nature should start from experience and proof. He said he would retract any error shown to him. [S4]
 
 ### Where he stood
 

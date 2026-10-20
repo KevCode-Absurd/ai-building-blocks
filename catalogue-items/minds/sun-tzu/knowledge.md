@@ -1,6 +1,6 @@
 # Sun Tzu: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-20. The book text (S1) was re-read in the chapters on plans, terrain, fire and spies on 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: we don't know much about Sun Tzu as a person, and some scholars doubt he existed at all [S3]. "Sun Tzu" is a title that means "Master Sun" [S3][S5]. The book credited to him, *The Art of War*, was probably written down a century or more after the dates given for his life, perhaps by several hands [S3][S4]. So this data set treats "Sun Tzu" as the voice of the book. It reads his ideas from the 13 chapters, in Lionel Giles's English translation of 1910, which is in the public domain [S1][S2]. We quote a few short lines from it. Where this file says "he", read "the book".
 
@@ -58,6 +58,12 @@ The first chapter says all warfare is based on deception [S1]. When able, seem u
 
 How he applied it: the book treats the enemy's view of you as something you can shape, and their signals as something you must read with suspicion [S1].
 
+**Six ways a force courts defeat.**
+
+Chapter X says an army can fall to six faults, and each is the commander's, not nature's: sending a force against one ten times its size so it flees; strong soldiers under weak officers, which breeds disobedience; angry officers who fight on their own before the commander can judge; a weak general with unclear orders; an inability to size up the enemy, so a small detachment meets a large one; and no picked troops at the front [S1]. The same chapter says that knowing your men can attack is only half the answer. You also need to know the enemy can be attacked, and that the ground allows it [S1]. It adds that a general who advances without craving fame and retreats without fearing blame is a treasure to the state, and that kindness without the power to enforce makes soldiers like spoilt children [S1].
+
+How he applied it: the rule reads as a pre-launch check for any team: size of the task against your strength, who is in charge, whether orders are clear, and whether anyone is acting out of resentment [S1].
+
 ### Information comes from people
 
 The last chapter is on spies. Foreknowledge can't come from spirits, from past cases or from calculation. It comes only from people who know the enemy [S1]. The book names five kinds of spy and says to use them together, to reward them well and to check their reports [S1]. It closes by saying an army's ability to move depends on them [S1].
@@ -76,6 +82,25 @@ How he applied it: the cost case for spies (cheap next to years of war) shows ho
 - Don't act from anger. Anger can turn to gladness, but a ruined state and the dead don't come back [S1].
 - Pay for good information and test it [S1].
 - Treat your people with care but keep firm discipline [S1].
+
+## Real decisions (enriched minds)
+
+These are rulings the book gives, not recorded acts of a known person. Legends about the author are in the record section [S3].
+
+### Go only if you can win, even against the ruler
+The book says if victory is sure, the general should fight even when the ruler forbids it, and if it is not, he should not fight even at the ruler's bidding [S1]. Its reason is that the general must serve the country, not his own fame or fear of blame [S1].
+
+### Do not fight in anger
+It warns that anger can turn to gladness, but a ruined state and the dead do not come back [S1]. A leader should move only when it serves the state.
+
+### Make the siege the last choice
+The ranking in the third chapter puts breaking the enemy's plans first, then his alliances, then his army, and attacking walled cities last [S1]. The stated reason is cost.
+
+### Guard against the six faults of command
+Chapter X lists six faults, all the commander's, such as sending a force against one ten times larger or leaving orders unclear [S1].
+
+### Pay for spies instead of waiting
+The final chapter argues that a small sum spent on spies is far cheaper than years of war, and that refusing to spend it is cruel [S1].
 
 ## Where he stood
 
@@ -122,5 +147,5 @@ All from Lionel Giles's 1910 translation, which is in the public domain.
 - "All warfare is based on deception." (Chapter I) [S1]
 - "There is no instance of a country having benefited from prolonged warfare." (Chapter II) [S1]
 - "supreme excellence consists in breaking the enemy's resistance without fighting." (Chapter III) [S1]
-- "If you know the enemy and know yourself, you need not fear the result of a hundred battles." (Chapter III) [S1]
-- "Water shapes its course according to the nature of the ground over which it flows." (Chapter VI) [S1]
+- "you need not fear the result of a hundred battles." (Chapter III) [S1]
+- "Water shapes its course according to the nature of the ground." (Chapter VI) [S1]

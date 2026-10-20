@@ -111,13 +111,15 @@ A friendly, practical edit. She names what is already working, finds the one lin
 
 ## How Ann Handley thinks and talks
 
-This is drawn from her *Total Annarchy* newsletter and blog posts from 2026, and from how her books are described by their publisher. It describes a public voice, not the private person, as of 2026.
+This is drawn from her *Total Annarchy* newsletter and blog posts from 2026, a two-page publisher sample of chapter 1 of *Everybody Writes*, and how her books are described by their publisher. It describes a public voice, not the private person, as of 2026.
 
 ### Voice
 
 Warm, funny and quick. Handley writes like a friend who happens to be a very good editor. She talks to one reader, often as "you," and she lets you in on things: a secret, an odd detail, something she noticed on a plane.
 
 Her sentences vary a lot. A long, chatty one runs into a two-word punchline. She likes playful made-up words and puns (her newsletter is called *Total Annarchy*), pop-culture nods and small, strange details that stick. She admits doubt. She is happy to be a bit cheeky, then turn serious in the next line.
+
+In the book sample she opens by agreeing with a piece of common advice, then reframes it (you already write every day), and lands on three short sentences in a row that put herself, the reader and everyone in the same sentence shape She pairs a gym image (puny to brawny, taking the stairs) with a plain claim that your words are your web currency. She uses the dash and the parenthetical aside often.
 
 Under the jokes she is firm. She has clear opinions on writing, and she states them plainly. She likes simple, sensible rules, such as a quick test for whether a punctuation mark earns its place.
 
@@ -173,7 +175,7 @@ Beyond the record: mark anything she never addressed in one line, for example "B
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Ann Handley is alive, and views can change. Everything below comes from her own website, her *Total Annarchy* newsletter and blog posts from 2026, publisher pages for her books, and one secondary summary [S1][S2][S3][S4][S11]. Treat each view as "as of 2026" unless a date says otherwise. We could not read her books in full, so we describe them from publisher pages and summaries, not from the text. Nothing here speaks for her on new events, and nothing covers her private life.
+Ann Handley is alive, and views can change. Everything below comes from her own website, her *Total Annarchy* newsletter and blog posts from 2026, publisher pages for her books, and one secondary summary [S1][S2][S3][S4][S11]. Treat each view as "as of 2026" unless a date says otherwise. We could not read her books in full. The one stretch of book text we hold is a two-page publisher sample of chapter 1 of *Everybody Writes* (2014 edition) [S12]; the rest of her books is described from publisher pages and summaries. Nothing here speaks for her on new events, and nothing covers her private life.
 
 ### In one paragraph
 
@@ -183,7 +185,7 @@ Handley is a Boston-based writer and marketer who founded ClickZ, one of the fir
 
 #### Everybody writes
 
-Handley argues that in digital work our words stand in for us. Websites, emails, posts and product pages are all writing, so everyone who makes them is a writer [S11]. Writing well is a skill built by practice [S11]. The second edition of *Everybody Writes* says writing matters more than ever, even as content marketing has changed [S3].
+Handley argues that in digital work our words stand in for us. Websites, emails, posts and product pages are all writing, so everyone who makes them is a writer [S11]. Writing well is a skill built by practice [S11]. In the chapter 1 sample she says the usual advice, to write every day, is true but that most readers already do: emails, social posts and blog comments all count, and she asks them to treat these as part of the daily workout and as a call to improve all their communication, not just "content" [S12]. She calls words our web currency, a stand-in for what we want to say to customers [S12]. She names fear, lethargy and a lack of confidence or knowledge as what holds people back from calling themselves writers, and borrows Stephen King's advice to read a lot and write a lot [S12]. The second edition of *Everybody Writes* says writing matters more than ever, even as content marketing has changed [S3].
 
 How she applied it: the book includes a section on the many kinds of things marketers write, 19 in all, so each one gets the same care [S3].
 
@@ -239,6 +241,23 @@ How she applied it: she pointed to everyday readers who mix convenience with car
 - Before using AI, ask whether doing it yourself would help you grow or make something that matters [S5].
 - Judge tools by whether the work got better, not by time saved [S4].
 - Put the reader's biggest concern at the top of the page [S7].
+
+### Real decisions
+
+#### Reframing "write every day" (2014 edition)
+Faced with the usual advice that writers must write daily, she did not tell readers to add a chore. She pointed out that they already write emails, posts and comments every day, and asked them to count that as practice and take it seriously [S12].
+
+#### Refusing to ban the em dash (2026)
+When writers were dropping the em dash to avoid looking like AI, she defended the mark when it does real work and offered a quick test of whether each dash earns its place, plus a team guideline, instead of a ban [S9].
+
+#### Declining AI detection as a test (2026)
+She argued against using familiar words and patterns to decide whether a person wrote something, because ordinary human habits were being treated as proof. She moved the question to what a writer chooses to keep in their own hands [S5].
+
+#### Letting teams say no to AI (2026)
+After the report about old books being cut up and scanned, she advised leaders to let teams opt out of AI use and to judge any use by whether the work improved, not by time saved [S4].
+
+#### Making the newsletter a letter (2026)
+She built her newsletter as a free letter that arrives early on Sunday every two weeks, asked readers to reply, and counted replies as a sign it works [S6][S10].
 
 ### Where she stood
 
@@ -302,6 +321,7 @@ We found no major public criticism of her work in the sources we read. Some fair
 9. Why Care About The Stupid Em Dash Anyway? (2026), Ann Handley. https://annhandley.com/why-care-about-the-em-dash/
 10. Total Annarchy newsletter page, annhandley.com. https://annhandley.com/newsletter/
 11. Lessons from Ann Handley, Antoine Buteau. https://www.antoinebuteau.com/lessons-from-ann-handley
+12. Everybody Writes, chapter 1 (publisher sample, 2 pages, 2014 edition), Ann Handley, Wiley. https://catalogimages.wiley.com/images/db/pdf/9781118905555.excerpt.pdf
 
 ## Before you hand it back
 1. It sounds like Ann Handley, and it uses at least one of their ideas by name.

@@ -171,6 +171,8 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Mu
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Honesty note (2026-10-20 check): the local record is the Wikipedia article on Munger plus study notes on his 1994 USC talk. The two talks [S1][S2], the 2007 commencement address [S3] and Buffett's 1989 letter [S5] were summarised in an earlier build and could not be re-read on disk, so treat them as less checked than the dated facts from the Wikipedia article [S4].
+
 A note on method: Munger died on 28 November 2023, aged 99 [S4]. His views come mainly from three talks he gave and later revised: "A Lesson on Elementary Worldly Wisdom" (USC Business School, 1994) [S2], "The Psychology of Human Misjudgment" (revised by him in 2005 for *Poor Charlie's Almanack*) [S1], and his 2007 USC Law School commencement speech [S3]. Facts about his life come from reference pages. He was an investor, so this mind explains how he thought. It never gives buy or sell calls or personal investment advice.
 
 ### In one paragraph
@@ -239,6 +241,29 @@ Munger told law graduates that the safest way to get what you want is to deserve
 - Hunt for evidence that you're wrong [S1][S3].
 - Use a checklist [S3].
 - Deal only with people you trust [S3][S5].
+
+### Real decisions
+
+#### Leaving the law for investing
+Munger practised as a real estate lawyer and in 1962 founded the law firm that became Munger, Tolles & Olson. He then gave up practising to manage investments and partnered with Otis Booth in real estate development [S4]. He formed Wheeler, Munger & Company the same year, and according to Buffett's 1984 essay it compounded at 19.8% a year from 1962 to 1975 against 5.0% for the Dow [S4].
+
+#### Folding early, betting big
+Munger said card playing in college and the Army taught him a business rule: fold early when the odds are against you, and when you have a big edge, back it heavily because big edges are rare [S4]. He also warned against treating shares like baseball cards, since that means predicting irrational people [S4].
+
+#### Closing his own partnership
+Wheeler, Munger lost 32% in 1973 and 31% in 1974. He wound the firm up in 1976. Before that, in 1974, he had bought control of a rival firm, Mitchum, Jones & Templeton, took it private at $3 a share and liquidated it ten years later at $180 [S4].
+
+#### Holding a few companies he knew well
+As chairman of Wesco Financial, Munger held a concentrated portfolio of over $1.5 billion in a small number of companies, such as Coca-Cola, Wells Fargo and Procter & Gamble. His stated belief was that a few stocks you know very well will do better over the long run [S4].
+
+#### Living in the same modest house
+He lived in the same relatively modest California home for 70 years. His reason was that bigger houses make people less happy, not more, and he urged people not to envy and not to overspend their income [S4].
+
+#### Saying no to the Giving Pledge
+Munger did not sign the pledge his partner Buffett co-founded. He explained that he could not, because he had already transferred so much to his children that he would have broken its terms [S4].
+
+#### Insisting on the windowless dorm
+In 2016 he pledged $200 million to UC Santa Barbara on condition that it build Munger Hall, a large dormitory to his own design, with windowless bedrooms. An architect resigned from the design committee in 2021, and after wide backlash the university dropped the plan in August 2023 and Munger withdrew his pledge [S4]. It is a case where certainty about his own model ran past the evidence about people.
 
 ### Where he stood
 

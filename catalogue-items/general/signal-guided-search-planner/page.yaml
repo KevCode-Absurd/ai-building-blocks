@@ -1,0 +1,124 @@
+new_slug: signal-guided-search-planner
+name: "Signal-guided search planner"
+summary: "Describe a hunt for a cause or winner. Get a plan that splits the pile, measures one signal and follows it."
+job: test-an-idea
+thinking: high
+thinking_why: "It has to judge whether an odd result is a real finding or a test error, and decide where to keep digging."
+
+headline: "Signal-guided search planner"
+subhead: Give it a pile to search, such as hundreds of ads, customers or products, and the one number that tells you a part is promising. It plans how to split the pile, measure every part the same way and keep digging where the signal is strongest. You get a search plan.
+
+explain: |
+  When you hunt for the cause of a problem or the one winner in a big pile, it is tempting to look at the top few and stop. That misses the part you didn't measure, and it mixes up a lucky result with a real one. Searching well means one signal, measured the same way every time, on every part.
+
+  This skill picks that signal and checks your measuring setup on a case where you know the answer. It plans to split the pile by ordinary means, measure every part, and keep only the part where the signal is strongest. When a result is a surprise, it rules out a test error before calling it real. It stops when the signal stops concentrating.
+
+when:
+  - You have a large pile of ads, products or customers and need to find where the good ones come from.
+  - A number is off and you need to find which part of the business causes it.
+  - Results look odd and you don't know if it is a real find or a measuring mistake.
+
+you_give:
+  - The pile you are searching and the thing you want to find
+  - A sheet with results per item, for a stated period
+  - Anything you can split the pile by, such as channel, product type or date (optional)
+you_get:
+  - The one signal to follow, with how to measure it the same way every time
+  - A test of the measuring setup on a known case
+  - How to split the pile, and which part to keep at each round
+  - A write-up plan that lists what was thrown away and why
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the pile and what you want to find. Paste the results sheet.
+  - Name any split you already know, such as by channel or month.
+  - Follow the rounds it sets. After each round, bring back the numbers for the next.
+
+how_it_works:
+  - title: Picks one signal
+    text: Chooses a number you can measure the same way every time and defines how.
+  - title: Tests the setup
+    text: Runs the measure on a case where you already know the answer, to see that it reads true.
+  - title: Splits the pile
+    text: Divides the pile by ordinary means, such as source or type, and measures every part.
+  - title: Compares to expected
+    text: Sets what each part should score and flags any gap between expected and measured.
+  - title: Rules out test error
+    text: Checks the measuring, the dates and the sample size before calling a gap real.
+  - title: Keeps the strongest part
+    text: Keeps and re-splits only the part where the signal is strongest, and repeats.
+  - title: Stops and writes up
+    text: Stops when the signal stops concentrating and writes what was found and what was dropped.
+
+output_shape: |
+  THE SIGNAL
+  Measure: <what is measured>
+  How: <the same way every time>
+  Check on a known case: <case and result>
+
+  ROUND 1
+  Split by: <how>
+  Part | Expected | Measured | Gap | Test error ruled out?
+  <part> | <n> | <n> | <n> | <yes/no/how>
+  Keep: <part>  Drop: <parts and why>
+
+  ROUND 2 ... (repeat)
+
+  STOP RULE
+  <what shows the signal has stopped concentrating>
+
+  WHAT WAS FOUND
+  <result>
+
+  WHAT WAS THROWN AWAY AND WHY
+  <part | reason>
+
+  MISSING
+  <facts that would sharpen the search>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The signal
+    how: Name one number, such as orders per 100 visits. A single measure keeps every part comparable.
+  - what: How you split the pile
+    how: Offer splits that cost nothing to make, such as by source, month or price band.
+  - what: Expected values
+    how: Give typical results per part. It uses them to flag gaps instead of guessing.
+  - what: Sample size per part
+    how: Say how many items sit in each part. Small parts get a warning, not a verdict.
+
+judge:
+  - The signal is defined and can be repeated the same way each time.
+  - Every part was measured, not just the best one.
+  - Each gap was checked for test error before it was called real.
+  - The write-up lists what was dropped and why.
+  - The search stops on a stated rule, not on a feeling.
+
+test:
+  - Hide a known winner in a small pile and see that the plan finds it.
+  - Give it a pile where nothing stands out. It should stop and say the signal didn't concentrate.
+  - Run the same sheet twice. The parts it keeps should match.
+  - Check one dropped part by hand to confirm the signal really was weak there.
+
+improve:
+  - Add the splits that are normal in your field (channel, store, supplier) to step 3.
+  - Add your usual test errors, such as a tracking gap or a sale period, to the error check.
+  - Save each round's table so you can restart the search later.
+  - Pair it with "One-change experiment planner" once you have found the part worth testing.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning the rounds and reading the tables is text work that any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Holds the per-part numbers and the gaps from each round."}
+  inputs:
+    - "Results per item for the same dates"
+    - "A known case where you already know the answer"
+    - "Notes on anything that changed in the period"
+
+terms:
+  - term: Signal
+    meaning: The one number that tells you how promising a part of the pile is.
+  - term: Test error
+    meaning: A mistake in how you measured, such as a tracking gap, that can fake a result.

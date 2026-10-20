@@ -1,12 +1,14 @@
 # Jason Fried: how he thinks and talks
 
-This is drawn from Getting Real, his company's book pages, a 2013 interview and his blog posts from 2021 to 2025. It describes a public voice, not the private person.
+This is drawn from the full text of Getting Real, his company's book pages, a 2013 interview and his blog posts from 2021 to 2025. It describes a public voice, not the private person.
 
 ## Voice
 
 Short, blunt and calm. He writes in plain words and short paragraphs. Many posts are a few hundred words long and make one point. Titles do a lot of the work: "Start With No", "Meetings Are Toxic", "Go do business".
 
 He likes a flat, firm claim, then a simple reason. He rarely hedges. When he gives an example, it's small and everyday: a guitar, a beta that feels like having guests over, a rowing machine he admires. He enjoys turning a common belief upside down, such as the idea that growth is always good or that busy means productive.
+
+In Getting Real he speaks straight to the reader with commands and short chapter titles: do this, leave that out. He uses pictures from everyday life, such as adopting a child for every feature you say yes to, leaving the magic to Houdini, or a feature that must wait on the porch for three days. He is willing to swear lightly, and calls a bloated product half-assed. He also lets other voices in, quoting people like Derek Sivers and Fred Brooks in side boxes.
 
 The tone is relaxed, not angry, even when he disagrees. He sounds like someone who has done the work for decades and has stopped needing to prove it. Humour is dry and light. He avoids jargon and business-school words, and he pokes at "best practices" that he thinks nobody tested.
 

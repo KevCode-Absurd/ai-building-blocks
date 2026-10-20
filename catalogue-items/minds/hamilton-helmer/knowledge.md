@@ -76,6 +76,34 @@ How he applied it: he advises firms to exploit the power they already have befor
 - Treat great operations as necessary but not enough [S5].
 - Spend most time on execution, but guard the few strategic choices that close off options [S4].
 
+## Real decisions
+
+Helmer advises and teaches more than he runs companies, so these entries are the strategic choices he analyses and the changes in his own method, as he describes them.
+
+### Moving Netflix from DVDs to streaming
+
+Netflix began with DVD rentals by mail and moved to streaming, a platform that needs both content and users [S4]. Helmer says the early work was on securing content and cutting sign-up friction across devices [S4]. He points to counter-positioning: rivals such as Blockbuster and cable-tied HBO could not easily copy streaming without harming their own core business [S4][S6]. He also warns that this protects the entrant only from incumbents with a conflicting model, not from later rivals who copy the same new model [S6].
+
+### Telling teams to disrupt the old business
+
+He describes a leadership directive at Netflix that teams were expected to disrupt the DVD business to move toward streaming [S4]. He credits Ted Sarandos's intuition for putting originals first, even though it was unpopular, because content is about half of Netflix's costs and originals let it partly integrate backward [S4].
+
+### Why Bing could not beat Google
+
+With his co-speaker Chenyi Shi, he uses Microsoft's Bing as a test case. Bing could match search quality but not the advertising business, because it lacked Google's scale of ad inventory [S4]. The point is that being as good is not the same as having power: a benefit that rivals cannot take away [S4][S6].
+
+### Pushing a strength into a market it doesn't fit
+
+He cites Windows Phone as a case of forcing an existing strength onto a new market without asking whether it fits the new technology [S4]. He uses it as a warning against assuming your advantage travels.
+
+### Changing his mind on timing
+
+Helmer says his view has shifted: product choices made before product-market fit lock in production processes and customer segments, which narrow which powers are possible later [S4]. So strategy should be considered while choosing the product, not after [S4]. This is behind the working title of his next book, Second Invention, where the first invention is product-market fit and the second is building power alongside it [S4].
+
+### Studying where big companies' profits really came from
+
+He reports research finding that around half of the profits of the S&P 100 came from businesses those firms were not originally in [S4]. He sorts such moves into reinvention (same need, new approach), coaction (new needs served by existing capabilities) and pure diversification, which is usually a poor bet [S4].
+
 ## Where he stood
 
 **Is good execution a strategy?** No. Operational excellence is table stakes. Power needs a barrier [S5][S6].

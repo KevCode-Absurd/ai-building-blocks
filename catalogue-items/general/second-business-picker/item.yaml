@@ -1,0 +1,18 @@
+slug: second-business-picker
+name: "Second business picker"
+summary: "List your strengths and new market ideas. Get each sorted as reinvention, coaction or diversification, with a pick."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: shortlist}
+origin: rebuilt
+version: 1.0.0
+minds: [hamilton-helmer]
+credits:
+  - {title: "Strategic Power: a conversation with Hamilton Helmer and Chenyi Shi", by: "Hamilton Helmer", used: "Sorting a move into a new market as reinvention, coaction or diversification, and asking which power can be built there and at what stage"}

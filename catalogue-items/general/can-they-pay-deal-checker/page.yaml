@@ -1,0 +1,123 @@
+new_slug: can-they-pay-deal-checker
+name: "Can-they-pay deal checker"
+summary: "Paste your terms and what you know of their means. Get a range they can pay and a sum they can meet."
+job: sell-and-negotiate
+thinking: high
+thinking_why: "It estimates a range from thin evidence and must keep guesses separate from facts."
+
+headline: "Can-they-pay deal checker"
+subhead: "Give it your terms and what you know of their means. It splits the ask into parts, puts a range on each and estimates what they can pay. You get a verdict, a fixed sum or terms they can meet, and what would change the number."
+
+explain: |
+  A demand larger than the other side can pay produces delay and ill will, not money. Sellers and creditors often name a number without checking this.
+
+  This skill splits the ask into parts and gives each a low, middle and high figure with its source. It estimates what the other side can pay and still keep something, compares the two and names who needs what to win. It proposes one fixed sum with a reason and says what would change it. Every guess is marked as one. A range here is a low and a high figure with evidence behind both.
+
+when:
+  - "You are setting a price, fee or settlement and doubt they can pay it."
+  - "A debt or invoice keeps going unpaid."
+  - "You want a firm figure to offer instead of an open demand."
+
+you_give:
+  - "Your terms and their parts"
+  - "What you know of their means"
+  - "Your own needs (optional)"
+you_get:
+  - "The ask split into parts with ranges"
+  - "A payment range for them, with assumptions"
+  - "A verdict and a fixed sum or terms"
+  - "What would change the number"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your terms, split into items if you can."
+  - "Add everything you know about their means and mark what is a guess."
+  - "Check the sources it lists for each figure."
+  - "Update the range when you learn more and run it again."
+
+how_it_works:
+  - title: "Splits the ask"
+    text: "Separate parts with dates and reasons."
+  - title: "Prices each part"
+    text: "Low, middle and high, with sources."
+  - title: "Estimates their means"
+    text: "What they can pay and still run."
+  - title: "Compares"
+    text: "The ask against the range."
+  - title: "Names the table"
+    text: "What each side needs to look like a winner."
+  - title: "Proposes a sum"
+    text: "One fixed figure or terms, with a reason."
+  - title: "Names what changes it"
+    text: "Facts that would move the number."
+  - title: "Gives a verdict"
+    text: "Can be met, can with changes, or cannot."
+
+output_shape: |
+  THE ASK, IN PARTS
+  <part> | Low / Middle / High | Source or GUESS
+
+  WHAT THEY CAN PAY
+  Range: <low to high> | Assumptions: <list>
+
+  COMPARISON AND VERDICT
+  <below, inside or above, and by how much>
+
+  WHO GAINS FROM EACH TERM
+  <side>: needs <x> | Met by: <term>
+
+  PROPOSED SUM OR TERMS
+  <figure, schedule> | Reason: <two sentences>
+
+  WHAT WOULD CHANGE THE NUMBER
+  1. <fact> | Check by: <how>
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "Their means"
+    how: "Real figures beat estimates. Say what is known and what is guessed."
+  - what: "Your own floor"
+    how: "Give the least you can accept so the proposal respects it."
+  - what: "The time frame"
+    how: "A longer schedule can lower each payment and widen what is possible."
+  - what: "The relationship"
+    how: "Say if you will deal with them again. It changes how hard to press."
+
+judge:
+  - "Every figure shows its source or says guess."
+  - "The proposed sum is inside their range."
+  - "You could explain the reasoning to the other side."
+  - "Each term says who gains."
+  - "The verdict follows from the numbers."
+
+test:
+  - "Run it on a past unpaid bill. See if the range matches what they could pay."
+  - "Change one assumption and check the range moves."
+  - "Run it twice. The range should stay close."
+  - "Offer the proposed terms to a real counterpart and note their response."
+
+improve:
+  - "Add the cost items common in your trade to step 1."
+  - "Add a rule for when you accept a payment plan."
+  - "Save past outcomes with their ranges in a notes file."
+  - "Pair it with \"Negotiation call prep planner\" for the talk."
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Hold the parts, ranges and schedule so numbers add up."}
+    - {name: "Any good chat AI", why: "Structuring the case and writing the reason is text work."}
+  inputs:
+    - "Their accounts or filings, if public"
+    - "Past payment history"
+    - "Your minimum need and dates"
+
+terms:
+  - term: "Range"
+    meaning: "A low and a high figure, each with evidence."
+  - term: "Fixed sum"
+    meaning: "One agreed amount, instead of an open-ended demand."

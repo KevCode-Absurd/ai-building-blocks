@@ -62,6 +62,30 @@ In *How the Mighty Fall* (2009) he named five stages of decline [S11][S8]: hubri
 
 How to use it: the stages work as a checklist. A team can ask which stage it might already be in.
 
+## Real decisions
+
+These are cases he tells on his own site. They are his account of other people's choices.
+
+### Apple and the iPod: bullets first
+
+By 2002 the iPod was under 3 percent of Apple's sales, a bullet, not a core business [S7]. Customers loved it, iTunes for Mac was in demand, iPod sales doubled, piracy was hurting music makers, and staff wanted a legal way to buy music [S7]. A 99-cent song store was a second bullet and it worked, and demand for a Windows version added proof [S7]. Only then did Apple fire the cannonball [S7]. His point: it looks like one creative leap in hindsight, but it was a run of tests that moved the aim [S7].
+
+### Steve Jobs and the twelve years away
+
+After his 1985 ouster, Jobs built NeXT and worked with Pixar for 12 years [S7]. Collins says he already knew how to make great products and had to learn to build a great company [S7].
+
+### The walker who kept to 20 miles
+
+On a walk from San Diego to Maine, one walker covers 20 miles every day in any weather, and another logs 40 on day one and rests in bad weather [S6]. The second gets caught in a storm, exhausted, and falls far behind [S6]. Collins says the 10X firms in unstable fields kept to such a march, and had adopted it well before they were large [S6].
+
+### Hedgehogs and foxes
+
+Good-to-great leaders drove toward one clear concept and their world got simpler, while the comparison firms set goals from bravado and stayed scattered [S3]. He warns about "the curse of competence": being good at something does not mean you can be the best at it [S3].
+
+### Getting people on the bus before choosing the road
+
+Good-to-great leaders got the right people on, moved the wrong people off, and put people in the key seats before they set direction [S2]. They said they did not yet know where to drive, but trusted the team to find a great destination [S2]. Pay did not explain the leap [S2].
+
 ## How he decides
 
 - Pick the people before the plan [S2].
@@ -122,4 +146,4 @@ How to use it: the stages work as a checklist. A team can ask which stage it mig
 - "Great vision without great people is irrelevant." [S2]
 - "an unwavering faith in the endgame" (on the Stockdale Paradox) [S5]
 - "discipline amidst chaos" (on the 20 Mile March) [S6]
-- "Level 5 is an empirical finding, not an ideological one." [S1]
+- "the curse of competence" (on the hedgehog concept) [S3]

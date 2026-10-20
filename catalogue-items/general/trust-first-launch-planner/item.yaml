@@ -1,0 +1,27 @@
+slug: trust-first-launch-planner
+name: Trust-first launch planner
+summary: Describe a product people are wary of. Get the number who must hear about it, cheap trust tactics and a proof sequence.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: persona
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - strive-masiyiwa
+credits:
+  - title: Report of Strive Masiyiwa's talk at Stanford GSB
+    by: Stanford Graduate School of Business, 2018
+    used: Naming the doubt that stops people, estimating how many must hear the message and using cheap public ways to build trust
+  - title: Global Leadership Summit 2018, session notes
+    by: Strive Masiyiwa
+    used: Starting with the people others overlook and ordering proof from small to large

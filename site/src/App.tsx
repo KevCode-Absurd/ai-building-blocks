@@ -34,6 +34,7 @@ const PAGES = {
   space: () => import("./space/SpacePage"),
   minds: () => import("./MindsPage"),
   builder: () => import("./Builder"),
+  intake: () => import("./IntakePage"),
 };
 const BlockPage = lazy(PAGES.block);
 const HowItWorks = lazy(PAGES.guide);
@@ -41,6 +42,7 @@ const ToolsPage = lazy(PAGES.tools);
 const AppsPage = lazy(PAGES.apps);
 const SpacePage = lazy(PAGES.space);
 const MindsPage = lazy(PAGES.minds);
+const IntakePage = lazy(PAGES.intake);
 /**
  * An in-page link (#install) scrolls smoothly, and a page loading in the background can cut that scroll short.
  * Once it has had time to land, finish the jump if the target still isn't on screen.
@@ -94,6 +96,7 @@ function Header({ onKits }: { onKits: () => void }) {
           <Link to="/#build">Builder</Link>
           <Link to="/minds" data-testid="nav-minds">Minds</Link>
           <Link to="/tools">Tools</Link>
+          <Link to="/from-a-source" data-testid="nav-intake">From a source</Link>
           <Link to="/apps">Apps</Link>
           <Link to="/space" data-testid="nav-space">My space</Link>
         </nav>
@@ -376,6 +379,8 @@ export default function App() {
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><SpacePage path={path} c={c} toast={setToast} /></Suspense>
       ) : path === "/minds" ? (
         c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><MindsPage c={c} toBuilder={toBuilder} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
+      ) : path === "/from-a-source" ? (
+        c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><IntakePage c={c} toast={setToast} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
       ) : path === "/how-it-works" ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><HowItWorks toast={setToast} /></Suspense>
       ) : pageSlug ? (
@@ -388,6 +393,7 @@ export default function App() {
           <span>© 2026 AI Blocks · useaiblocks.com</span>
           <nav aria-label="More">
             <Link to="/tools">Mini tools</Link>
+            <Link to="/from-a-source">Turn a source into a workflow</Link>
             <Link to="/apps">Apps</Link>
             <Link to="/apps/starter-pack">App starter pack</Link>
             <Link to="/space">My space</Link>

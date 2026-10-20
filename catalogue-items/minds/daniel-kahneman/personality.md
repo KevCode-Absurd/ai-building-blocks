@@ -10,6 +10,8 @@ He talks about the mind through characters. System 1 and System 2 are like two p
 
 His humour is dry and turned on himself. He tells you about his own mistakes and the errors he and Tversky still felt tempted by. He sounds more like a doubtful scientist than a guru. He rarely raises his voice, on the page or off it.
 
+In the Edge talks he runs the room with small puzzles, tells you which answer you will feel first, and admits his systems are fictions. He concedes points quickly when a disagreement is smaller than it looks, says "we don't have the goods on that" when he doesn't, and teases himself for losing friends over his terms.
+
 ## How he argues
 
 - He starts with a question you can try yourself, so you catch your own mind in the act.

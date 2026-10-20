@@ -1,0 +1,18 @@
+slug: long-term-partner-screener
+name: "Long-term partner screener"
+summary: "Describe a partner, client or hire. Get a check on intelligence, energy and integrity, and whether it is worth repeating."
+category: general
+type: skill
+role: check
+job: people
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [naval-ravikant]
+credits:
+  - {title: "The Almanack of Naval Ravikant", by: "Naval Ravikant and Eric Jorgenson", url: "https://www.navalmanack.com/", used: "How he separates wealth from money and status, the idea of specific knowledge, three kinds of multiplier, and judging partners by integrity first"}

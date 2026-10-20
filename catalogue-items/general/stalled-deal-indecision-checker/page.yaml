@@ -1,0 +1,126 @@
+new_slug: stalled-deal-indecision-checker
+name: "Stalled deal indecision checker"
+summary: "Paste notes on a quiet deal. Get whether the buyer doubts you or fears a mistake, a firm recommendation and safety nets."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It reads between the lines of notes to name a cause, which takes judgement."
+
+headline: "Stalled deal indecision checker"
+subhead: "Give it your notes on a quiet deal. It reads the signs, names whether the buyer doubts the choice, wants endless research or fears a mistake, and rates how deep it goes. You get a firm recommendation, safety nets and a message to send."
+
+explain: |
+  A deal that goes quiet is usually not lost to a rival. The buyer is stuck, and sending more information or a nudge often makes it worse.
+
+  This skill reads your notes for signs of indecision and names the cause. It judges how deep it runs, so you know whether to count the deal. It writes a personal recommendation, limits what you offer to explore and pairs each fear with a safety net such as an opt-out or a first-value plan. It rules out fake urgency. Indecision here means the buyer cannot choose, not that they said no.
+
+when:
+  - "A deal has gone quiet after good meetings."
+  - "The buyer keeps asking for more research."
+  - "You are tempted to add a deadline or discount to force a decision."
+
+you_give:
+  - "Notes on the deal"
+  - "Your offer and what you can adjust (optional)"
+  - "Past outcomes (optional)"
+you_get:
+  - "The cause of the stall, with quotes"
+  - "How deep the indecision runs and what it means for your forecast"
+  - "A personal recommendation"
+  - "Safety nets and a message to send"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste emails, call notes and any buyer words."
+  - "Say what you can offer as a safety net."
+  - "Check the cause against what you know of the buyer."
+  - "Send the message and note the reply."
+
+how_it_works:
+  - title: "Reads the signs"
+    text: "Quotes stalls and requests with dates."
+  - title: "Names the cause"
+    text: "Doubt of the choice, endless learning or fear of a result."
+  - title: "Judges depth"
+    text: "Light, moderate or deep, and the forecast advice."
+  - title: "Recommends"
+    text: "A personal pick with a reason."
+  - title: "Limits exploration"
+    text: "What to stop offering and what is enough."
+  - title: "Adds safety nets"
+    text: "A net for each fear you can really offer."
+  - title: "Removes fake urgency"
+    text: "Real dates only."
+  - title: "Writes the message"
+    text: "Short and ready to send."
+
+output_shape: |
+  SIGNS FOUND
+  "<quote>" | <date>
+
+  CAUSE
+  <one of three> | Evidence: <quotes>
+
+  DEPTH AND FORECAST
+  <light, moderate or deep> | Count in forecast: <advice>
+
+  RECOMMENDATION
+  <what you would choose in their place and why>
+
+  STOP OFFERING
+  <list> | What is enough to decide: <sentence>
+
+  SAFETY NETS
+  Fear: <x> | Net: <y> | Can offer: <yes or MISSING>
+
+  MESSAGE
+  <under 150 words>
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "Buyer quotes"
+    how: "Their exact words make the cause clearer."
+  - what: "What you can offer"
+    how: "List the nets you can give: refunds, trials, start help."
+  - what: "How long it has been quiet"
+    how: "Give dates so depth can be judged."
+  - what: "The size of the deal"
+    how: "A larger deal may need nets that match."
+
+judge:
+  - "The cause matches the quotes."
+  - "The recommendation names a specific option."
+  - "Each fear has a net you can really give."
+  - "Nothing adds pressure or a made-up deadline."
+  - "The message is short enough to send today."
+
+test:
+  - "Run it on a deal that went cold. See whether the cause fits what the buyer later said."
+  - "Run it twice. The cause should stay the same."
+  - "Send the message to one stalled buyer and note the reply."
+  - "Compare deals you counted before and after in your forecast."
+
+improve:
+  - "Add the safety nets you can offer as a standing list."
+  - "Add your own rule for when to count a deal."
+  - "Save outcomes by cause in a notes file."
+  - "Pair it with \"Ask-which closing planner\" once they are ready to choose."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading notes and drafting a short message is text work a strong chat AI does well."}
+    - {name: "Your CRM or notes tool", why: "Keep dates and quotes for each deal in one place."}
+  inputs:
+    - "The full email thread"
+    - "Your trial and refund terms"
+    - "Notes from other deals that stalled"
+
+terms:
+  - term: "Indecision"
+    meaning: "When a buyer cannot choose, as opposed to saying no."
+  - term: "Safety net"
+    meaning: "An offer that lowers the risk of saying yes, such as a refund or a trial."

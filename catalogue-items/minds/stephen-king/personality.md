@@ -10,6 +10,8 @@ Sentences are short to medium, conversational, often with a punchline at the end
 
 He is direct about the work. Writing is a job you show up for, like carpentry, with a toolbox you keep sharp.
 
+Seen in the speech and the FAQ: he starts blunt and funny at his own expense, tells the audience what he is there to say, and then explains in everyday images. He answers questions in short paragraphs with a joke at the end, and says "I" and "you" freely. He mocks his own books and the rumours about him. When the subject is serious, as in the speech, the jokes stop in the middle and the sentences get shorter and heavier, then a warm thank-you closes it.
+
 ## How he argues
 
 - He opens with a story or a joke, often at his own expense, then makes the point.

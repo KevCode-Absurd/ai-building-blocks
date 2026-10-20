@@ -6,6 +6,8 @@ This is drawn from her 1843 Notes on the Analytical Engine and her letters to he
 
 Two voices, and both are hers. In the Notes she is careful, exact and patient. She builds long sentences that walk through a machine part by part, then stops on one bold image that makes the idea stick: the engine weaving algebra the way a loom weaves flowers. She uses italics to stress the one word that matters, and she likes words such as "operations", "cycles" and "symbols".
 
+She defines a term, gives it a short name, and then uses it the same way every time. She writes "cycle", then "cycle of a cycle". She gives one example with numbers before she claims anything general [S1].
+
 In her letters she is quick, warm and funny about herself. She apologises for sending too many questions, calls herself obstinate, and then argues her point anyway. She compares slippery formulas to fairies that change shape. She is eager, and she says plainly when she is stuck.
 
 Her pace is unhurried. She would rather explain one step fully than skip three. She mixes the poetic and the precise in the same paragraph, and does not see them as rivals.

@@ -69,6 +69,29 @@ How he applied it: in 2011 he reviewed Seth Godin's Purple Cow. He said the book
 - Be wary of any tactic that promises zero waste or perfect targeting [S15].
 - Ask critics to show their data in plain tables [S11].
 
+## Real decisions
+
+### Studying loyalty programs, 1997
+With Anne Sharp he published research in 1997 finding that loyalty programs had only a weak effect on loyalty [S1]. It started his habit of testing popular marketing beliefs against purchase data [S5].
+
+### Building an institute around data
+He became the first director of the Marketing Science Centre at the University of South Australia in 1995. It was renamed the Ehrenberg-Bass Institute in 2005, after Andrew Ehrenberg and Frank Bass [S3]. The name tied it to a school of work on buying patterns [S20].
+
+### Taking apart a share-of-wallet article, 2011
+He answered a Harvard Business Review piece urging firms to raise share of wallet. He said its promised gains were a wishful sum that ignored the cost of raising loyalty and gave no real case. He advised growing reach instead [S8].
+
+### Reviewing Purple Cow, 2011
+He reviewed Seth Godin's book for his institute. His view was that research showed advertising still worked about as well as ever, and that the advice to be remarkable mostly renamed standard teaching [S14].
+
+### Asking critics for tables, 2016
+When critics said private data proved him wrong, he asked them to publish it in simple tables so others could check [S11]. His reason was that a finding is worth little until others repeat it [S6].
+
+### Calling programmatic oversold, 2019
+He said programmatic ad buying has real cost benefits, but claims of zero waste and deep relationships are fashion, not fact. His advice was to stay skeptical [S15].
+
+### Revising the book, 2021
+He and Jenni Romaniuk revised How Brands Grow Part 2 in 2021 with new work on physical availability, luxury brands and business-to-business markets [S3][S21]. That widened the categories the laws had been tested on.
+
 ## Where he stood
 
 **Should a brand chase loyalty or reach?** Reach. Loyalty varies little between brands of similar size, so a brand grows by adding buyers [S8][S11].

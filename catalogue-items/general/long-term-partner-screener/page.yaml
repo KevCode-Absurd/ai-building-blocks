@@ -1,0 +1,125 @@
+new_slug: long-term-partner-screener
+name: "Long-term partner screener"
+summary: "Describe a partner, client or hire. Get a check on intelligence, energy and integrity, and whether it is worth repeating."
+job: lead-people
+thinking: medium
+thinking_why: "It scores people on three traits from evidence, which takes careful reading but follows a fixed frame."
+
+headline: "Long-term partner screener"
+subhead: "Describe a partner, client or hire and what you have seen of them. It scores intelligence, energy and integrity with integrity first, flags cynicism, tests the history, and gives a keep, test-first or walk-away call."
+
+explain: |
+  Work with the right person for ten years and the gains stack up. Work with the wrong one and a single bad deal can cost you more than a dozen good ones earned. Most of us pick on charm, skill or a good first meeting.
+
+  This skill starts with the game: what are you doing together and how often will you play it? It scores intelligence, energy and integrity from what you have seen, weighting integrity first because the other two make a person who lacks it more costly. It flags habits like cynicism, tests the record for who rounds up in whose favour, and asks whether a one-off win here would hurt the relationship. It ends with a call and says what would change it.
+
+when:
+  - "You are about to sign a long contract or take on a co-founder."
+  - "A client is great on revenue but you have a bad feeling about them."
+  - "You are choosing between two hires or two vendors."
+
+you_give:
+  - "Who the person is and the game you would play together"
+  - "What you have seen them do, with dates if possible"
+  - "How often and for how long you would work together"
+  - "References or past dealings (optional)"
+you_get:
+  - "Scores for intelligence, energy and integrity, each with evidence"
+  - "Flags for habits that tend to repeat"
+  - "A history test of how they handle small costs and credit"
+  - "A keep, test-first or walk-away call with what would change it"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the person and what you would do together. Add what you have actually seen, not feelings."
+  - "Add anything from other people who have dealt with them."
+  - "Read integrity first, then the other two."
+  - "Use the test-first plan if it says so, then bring back what happened."
+
+how_it_works:
+  - title: "State the game"
+    text: "States what you would do together and how often."
+  - title: "Score the three traits"
+    text: "Scores intelligence, energy and integrity from evidence, integrity first."
+  - title: "Flag cynicism"
+    text: "Flags pessimism and cynicism that tend to come true."
+  - title: "Test the history"
+    text: "Tests how they handle small costs, credit and fairness."
+  - title: "Ask about a one-off win"
+    text: "Asks whether a one-off win would cost the relationship."
+  - title: "Give the call"
+    text: "Gives a keep, test-first or walk-away call and what would change it."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  THE GAME
+  <what you would do, how long, how often>
+
+  SCORES (integrity first)
+  Integrity: <low / medium / high> | Seen: <evidence>
+  Intelligence: <low / medium / high> | Seen: <evidence>
+  Energy: <low / medium / high> | Seen: <evidence>
+
+  FLAGS
+  - <habit> | Seen: <what>
+
+  HISTORY TEST
+  - Rounds in whose favour: <note>
+  - Quietly pays small costs: <note>
+  - When fairness cost them: <note>
+
+  ONE-OFF WIN RISK
+  <note>
+
+  CALL: <keep / test first / walk away>
+  Reason: <two sentences>
+  Test (if any): <small test and date>
+  Would change if: <what>
+
+  WHAT IS UNKNOWN
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The length of the game"
+    how: "A ten-year deal makes the same scores look worse than a one-week job."
+  - what: "Who you heard it from"
+    how: "Mark each fact as seen or told. Told facts count for less."
+  - what: "Your own stake"
+    how: "Say what you would lose. A bigger loss tightens the call."
+  - what: "Two candidates"
+    how: "Run it twice and compare the scores, not the charm."
+
+judge:
+  - "Each score cites something observed, not an impression."
+  - "Integrity is judged before talent."
+  - "The call names what would change it."
+  - "It says what is unknown about the person."
+  - "Facts you heard from others are marked as told."
+
+test:
+  - "Run it on someone you have worked with for years and see if the scores match your experience."
+  - "Run it on a person who burned you, with only the facts you had at the start. See if it would have warned you."
+  - "Run it twice. The call should not flip between runs."
+
+improve:
+  - "Add the red flags you have learned from your own past deals."
+  - "Add what you consider fair for small costs in your field."
+  - "Keep a log of people you screened and how it went."
+  - "Pair it with Advice skin-in-the-game checker for a person who is selling you something."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Judging advice and asking sharp questions is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "What other people say about the person"
+    - "Past deals or contracts with them"
+    - "How they behaved when something went wrong"
+    - "How long you plan to work together"
+
+terms:
+  - {term: "Integrity", meaning: "Doing what they said they would do, and being fair when nobody is checking."}
+  - {term: "Repeated game", meaning: "A relationship where you deal with the same person many times, so trust compounds."}

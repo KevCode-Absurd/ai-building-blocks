@@ -1,0 +1,122 @@
+new_slug: wayfinding-sign-planner
+name: "Wayfinding sign planner"
+summary: "Describe your place and its routes. Get a sign plan a first-time visitor can follow, with one lead mark."
+job: design-work
+thinking: medium
+thinking_why: "It walks each route and decides where signs go and what they say, which takes judgement about a place."
+
+headline: "Wayfinding sign planner"
+subhead: Describe your site, building or campus and the routes people take. It walks each route as a first-time visitor, marks every decision point, picks one lead mark and master colour, writes what a lost person needs next, and gives rules so staff can add signs.
+
+explain: |
+  Signs are often added one at a time, by different people, in different styles. The visitor sees a pile of arrows, logos and warnings and still gets lost. A sign system works when it is planned from the visitor's walk, not from what the operator wants to say.
+
+  This skill walks each route as a first-time visitor and lists every point where they must choose. It picks one dominant mark that reads from far away at any size, and lets one master colour or mark lead, with smaller labels under it. It writes the information a lost person needs next, in order. Repetition makes the mark trustworthy: same place, same look every time. It records the rules so staff can add signs later without you.
+
+when:
+  - Visitors keep asking staff where things are.
+  - You are opening, moving or expanding a site and need signs that fit together.
+  - Your signs were added over the years and now clash.
+
+you_give:
+  - A description or map of the place, its entrances and main destinations
+  - The routes people take, and the usual starting points
+  - Existing signs and what you cannot change (optional)
+you_get:
+  - A list of decision points for every route
+  - One lead mark and master colour, with the rule for smaller labels
+  - What each sign says, in the order a lost person needs it
+  - Rules that staff can follow to add signs
+  - A walkthrough as a first-time visitor
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the place, or attach a floor plan or map. Name the entrances and the main places people want to reach.
+  - Say where first-time visitors start and what they usually ask.
+  - Walk the plan yourself with a stranger and note where they hesitate.
+  - Give the rules page to whoever orders new signs.
+
+how_it_works:
+  - title: Walks each route
+    text: Walks each route as a first-time visitor and lists every point where they must choose.
+  - title: Picks the lead mark
+    text: Chooses one dominant mark that reads from far away and at any size.
+  - title: Sets a master colour
+    text: Lets one master colour or mark lead and gives each area a smaller label under it.
+  - title: Writes what a lost person needs
+    text: Writes what a lost person needs next, in the order they need it.
+  - title: Uses repetition
+    text: Keeps the same place looking the same every time so the mark can be trusted.
+  - title: Records the rules
+    text: Writes rules so staff can add signs without you.
+  - title: Walks it through
+    text: Walks the finished plan as a stranger and runs its own checks.
+
+output_shape: |
+  PLACE AND ROUTES
+  <place> | Entrances: <list> | Main destinations: <list>
+
+  DECISION POINTS
+  <route>: <point 1>, <point 2> ...
+
+  LEAD MARK
+  <mark> | Master colour: <colour> | Smallest size it reads at: <size and distance>
+
+  SIGN LIST
+  <point> | Sign type | Says: <text in order of need>
+
+  RULES FOR NEW SIGNS
+  <rules>
+
+  WALKTHROUGH
+  <step by step as a first-time visitor>
+
+  MISSING
+  <what would improve the plan>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Entrances and starting points
+    how: List every way in, including the side door people use. Each is a place where a visitor needs a sign.
+  - what: Viewing distance
+    how: Say how far away the farthest sign must read. It sets the minimum size of the lead mark.
+  - what: Languages and readers
+    how: Name any languages and visitors with low vision or reduced mobility. It changes the wording and placement.
+  - what: What cannot change
+    how: List fixed signs, such as safety or legal ones. The plan works around them.
+
+judge:
+  - Every decision point has a sign.
+  - The lead mark is readable at the farthest viewing distance.
+  - No two signs use competing marks.
+  - Each sign says what a lost person needs next, not what the operator wants to say.
+  - The rules let someone else add a sign correctly.
+
+test:
+  - Ask a stranger to find three places using only the planned signs and watch where they hesitate.
+  - Stand at the farthest viewing point and check the lead mark can be seen.
+  - Have a staff member write one new sign from your rules and compare it with the plan.
+  - Check each existing sign against the plan and mark any that clash.
+
+improve:
+  - Add the exact fonts, colours and sizes you use, so signs ordered later match.
+  - Add a list of words you always use for places, and words you never use.
+  - Add the list of safety signs and codes that apply to your site.
+  - Pair it with the "Plain words interface rewriter" to check the wording on each sign.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning decision points and sign text is text work any strong chat AI does well."}
+    - {name: "A floor plan and a friend", why: "A stranger walking the route shows where signs fail faster than any review."}
+  inputs:
+    - "A floor plan or map"
+    - "Photos of the current signs"
+    - "Questions visitors ask staff most often"
+
+terms:
+  - term: Decision point
+    meaning: A place where a visitor must choose which way to go.
+  - term: Lead mark
+    meaning: The one dominant symbol or colour that marks your system and reads from far away.

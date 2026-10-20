@@ -1,0 +1,121 @@
+new_slug: capability-pitch-letter-writer
+name: "Capability pitch letter writer"
+summary: "Paste what you can do and who you are writing to. Get a numbered offer letter ending in a proof to run."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It picks and orders concrete items and keeps claims honest, with a fixed letter shape."
+
+headline: "Capability pitch letter writer"
+subhead: "Give it what you can do and who you are writing to. It writes a short letter with a numbered list of concrete things you can do for their main need. It offers a trial for anything hard to believe, then checks that you can show every item."
+
+explain: |
+  A letter that opens with your history or says you are the best asks the reader to take your word. Most do not.
+
+  This skill writes a letter around the reader's main need. It says what their usual suppliers offer, then lists what you can do as numbered, concrete lines, with the biggest need first. It adds a quiet-time offer and one visible project, and it offers a trial for anything hard to believe. It closes with one polite line, then checks that every item is something you can show. A trial here means a test the reader can watch on their own ground.
+
+when:
+  - "You are writing to offer your skills to a person or company."
+  - "Your pitch emails get no answer."
+  - "You want a proposal that is concrete and easy to check."
+
+you_give:
+  - "What you can do and past work"
+  - "Who you are writing to and what they need most"
+  - "Your brand file (optional)"
+you_get:
+  - "A letter with a numbered list of concrete offers"
+  - "A proof offer for any hard-to-believe item"
+  - "A check of what you can and cannot show"
+  - "A list of items cut"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste what you can do and past work."
+  - "Describe the reader and their main need."
+  - "Read the check table and cut or fix anything marked CANNOT SHOW."
+  - "Send the letter and note the response."
+
+how_it_works:
+  - title: "Names usual suppliers"
+    text: "What they get now and why it is ordinary."
+  - title: "Promises plain methods"
+    text: "You will show how you work."
+  - title: "Lists concrete offers"
+    text: "Numbered, biggest need first."
+  - title: "Adds quiet-time offers"
+    text: "What you do beyond the main need."
+  - title: "Adds a visible project"
+    text: "One thing they can see."
+  - title: "Offers a trial"
+    text: "Proof on their ground."
+  - title: "Closes politely"
+    text: "One line of respect."
+  - title: "Checks each item"
+    text: "Can show or cannot show."
+
+output_shape: |
+  LETTER
+  <opening on their need and usual suppliers>
+  <promise to show methods>
+  1. <concrete offer, main need first>
+  2. ...
+  Quiet times: <offer>
+  Visible project: <offer>
+  Trial: <offer to prove, on their ground>
+  <polite close and contact>
+
+  CHECK TABLE
+  <item> | CAN SHOW or CANNOT SHOW | Based on: <proof>
+
+  ITEMS CUT
+  <item and why>
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "The reader's main need"
+    how: "A sharp statement of their need puts the right items first."
+  - what: "Your past work"
+    how: "Real examples let you mark more items CAN SHOW."
+  - what: "Your voice"
+    how: "Share your brand file or a sample email so it sounds like you."
+  - what: "Trial terms"
+    how: "Say what you can run and where."
+
+judge:
+  - "Every item is one concrete line."
+  - "The first item answers their biggest need."
+  - "Anything hard to believe has a proof offer."
+  - "You could show every item today."
+  - "The letter is short enough to read in two minutes."
+
+test:
+  - "Show the letter to someone in the reader's field and ask which item they believe least."
+  - "Run it twice. The first items should stay close."
+  - "Send to five readers and count replies."
+  - "Run a trial for one reader and note what they check."
+
+improve:
+  - "Add your best past project as an example under the visible-project step."
+  - "Add your trade's usual standards to the item lines."
+  - "Save letters and replies in a notes file."
+  - "Pair it with \"Objection answer sheet writer\" for the questions they raise."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Drafting and trimming a letter is text work any strong chat AI does well."}
+    - {name: "A notes app", why: "Keep your list of items you can show, with proof, ready to reuse."}
+  inputs:
+    - "Your brand file"
+    - "Links to past work"
+    - "Recent news about the reader's company"
+
+terms:
+  - term: "Trial"
+    meaning: "A test the reader can watch on their own ground."
+  - term: "Visible project"
+    meaning: "One piece of work the reader can see at the end."

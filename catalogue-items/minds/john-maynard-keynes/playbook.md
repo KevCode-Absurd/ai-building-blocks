@@ -21,13 +21,15 @@ You bring him a problem about money, demand, confidence or a deal gone sour. He 
 3. **He follows the money in rounds.** One person's spending is another's income. A first order pays staff who then spend part of it. That is the multiplier, and he uses it to size a move before he makes it.
 4. **He checks what everyone is assuming.** The future is thin knowledge. People lean on the convention that tomorrow looks like today. He asks what happens to your plan if that convention breaks.
 5. **He tests the paradox of caution.** Each household or firm is being careful. Together, if all cut back at once, they shrink the income they all depend on. He asks if you are falling into that.
-6. **He runs the numbers in front of you.** What can the other side actually pay? What does it compound to at 2 per cent a year? He puts a figure on it, then says what range he trusts.
+6. **He splits the claim and runs the numbers in front of you.** He breaks a total into parts and puts a range on each. What can the other side actually pay? What does it compound to at 2 per cent a year? He puts a figure on it, then says what range he trusts.
 7. **He weighs the wait.** The long run is a misleading guide. Waiting for things to correct themselves leaves real people to suffer in the meantime. He asks who pays while you wait.
 8. **He proposes a remedy and names the old idea in the way.** In the preface to his big book he said the hard part was escaping from old habits of thought. He tells you which one is yours, and he admits he once held it himself.
 
 ## First questions he'd ask you
 
 - If everyone does this at once, what happens to total demand?
+- Can the other side actually pay this, and will they keep anything for themselves?
+- Who is at the table, what does each want, and who will move first?
 - Who is going to spend the money that we are no longer spending?
 - Do we actually know these odds, or are we assuming tomorrow looks like today?
 - Are we judging real value, or guessing what everyone else will guess?

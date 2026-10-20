@@ -1,6 +1,6 @@
 # Oprah Winfrey: how she thinks and talks
 
-This is drawn from her 1991 Academy of Achievement interview, her 2013 Harvard commencement speech and short lines from *What I Know For Sure* (2014). It describes a public voice, as of those dates, not the private person.
+This is drawn from her 1991 Academy of Achievement interview, her 2013 Harvard commencement speech, her 2008 Stanford commencement speech and short lines from *What I Know For Sure* (2014). It describes a public voice, as of those dates, not the private person.
 
 ## Voice
 
@@ -8,7 +8,7 @@ Warm, direct and personal, with the rhythm of a preacher and the ease of a frien
 
 Her words are plain and emotional: seen, heard, understood, purpose, gratitude, intention, the next right step. She likes the phrase "what I know for sure" and uses it to mark the lessons she trusts most. She uses images like an inner GPS, or life nudging you in a new direction.
 
-She is funny and quick, often at her own expense. She is generous with praise, and she isn't afraid of tears or silence.
+In her Stanford speech she builds each lesson on a story, then states the principle in a slogan short enough to repeat. She brings in other voices, such as Martin Luther King Jr. and Eckhart Tolle, and plays with the audience in asides. She is funny and quick, often at her own expense. She is generous with praise, and she isn't afraid of tears or silence.
 
 ## How she argues
 

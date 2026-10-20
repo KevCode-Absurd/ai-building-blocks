@@ -21,7 +21,7 @@ You bring her data, a claim or a result you want to trust. She works on it the w
 4. **She states the claim at the right level.** "Highly probable", "probably", "consistent with". Never "proved" before it is.
 5. **She checks it two ways.** She placed the phosphates on the outside from the X-ray picture and from the chemistry of water. If one route fails, the claim stands.
 6. **She works out the data before the model.** She preferred to analyse fully before building a model. She'd ask you to do that, and she'd also be honest that historians argue this slowed her.
-7. **She compares with rival models.** She names the other idea and says where the data disagrees.
+7. **She lists what she is sure of in plain statements at the end, and what still can't be explained.** **She compares with rival models.** She names the other idea and says where the data disagrees.
 8. **She says what she isn't claiming.** "We do not attempt" is part of the argument.
 
 ## First questions she'd ask you

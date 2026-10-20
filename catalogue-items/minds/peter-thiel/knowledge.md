@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Peter Thiel is alive, and views can change. Everything below comes from his own essay, interviews and talks (2009 to 2015) and from public reference pages. Treat each view as "as of" the date of its source. This mind covers his ideas about building and backing companies. It gives no buy or sell calls, and it doesn't speak for him on politics or new events.
+Peter Thiel is alive, and views can change. Everything below comes from his own essay, interviews and talks (2009 to 2015) and from public reference pages. On disk we hold the full Wikipedia page on him, short excerpt records of the Cowen conversation and the 2009 essay, and earlier study notes of the Cowen interview, so the ideas are taken from those and from summaries, not from reading *Zero to One* itself [S1][S3][S4]. Treat each view as "as of" the date of its source. This mind covers his ideas about building and backing companies. It gives no buy or sell calls, and it doesn't speak for him on politics or new events.
 
 ## In one paragraph
 
@@ -64,6 +64,26 @@ In 2014 he said he was personally skeptical of the Lean Startup approach of cons
 - Go all in or don't start [S5].
 - Check the team's history together before you trust it [S4][S5].
 - Don't follow one-size-fits-all advice, about college or anything else [S5].
+
+## Real decisions
+
+### Leaving a law firm after under a year
+After Stanford Law and a clerkship, Thiel worked as a securities lawyer at Sullivan & Cromwell in New York and left in under a year [S1]. In the Cowen conversation he tells the story against himself, as an escape from a prestige path [S4]. It fits his stated rule to favour substance over status [S4].
+
+### Building PayPal around a gap in payments
+At Confinity he saw that many merchants had no card hardware, so buyers had to pay in cash or by cheque, and he pushed a digital wallet that encrypted data on devices [S1]. PayPal launched in 1999, and in a press-conference demo representatives from Nokia and Deutsche Bank sent $3 million of funding to him by PalmPilot [S1]. The later book draws on his PayPal and Palantir years as examples of doing something new [S2].
+
+### Backing Facebook as its first outside investor
+In August 2004 he bought 10.2 percent of Facebook for $500,000, as its first outside investor [S1]. He later used Facebook as his example of starting with one narrow group of users and then spreading outward, rather than fighting a bigger rival [S6].
+
+### Funding Palantir when venture firms stayed away
+Palantir was formed after the September 11 attacks, building on PayPal's anti-fraud technology [S1]. When it launched in 2004, venture firms showed little interest, so Thiel and his own fund largely paid the first $30 million [S1]. Its stated aim, in his words as Wikipedia reports them, was cutting-edge technology with built-in policing so the state would use its power legally [S1]. Critics say its software enables surveillance, a point the same page reports [S1].
+
+### Losing money at Clarium
+His hedge fund Clarium Capital lost 7.8 percent in 2006, returned 40.3 percent in 2007 to more than $7 billion under management, then fell after markets collapsed in 2008 and 2009 [S1]. By 2011 investors had left and its assets had dropped to $350 million, two thirds of it his own money [S1]. Even a careful thinker on conviction bets paid for large macro bets that did not hold.
+
+### Funding the Gawker lawsuits
+In 2016 he said he had spent about $10 million funding lawsuits against Gawker Media, including Hulk Hogan's case, which won a $140 million verdict, and Gawker closed that year [S1]. He said his reason was a 2007 article that outed him [S1].
 
 ## Where he stood
 

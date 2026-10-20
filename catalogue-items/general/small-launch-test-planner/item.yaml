@@ -1,0 +1,18 @@
+slug: small-launch-test-planner
+name: "Small launch test planner"
+summary: "Describe an idea you are not sure will sell. Get a small test in a few places and a rollout rule."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [claude-hopkins]
+credits:
+  - {title: "Scientific Advertising (1923)", by: "Claude C. Hopkins", used: "Testing a plan in a few typical places before a full launch, recording cost per customer and repeat buying, and deciding the roll-out rule in advance"}

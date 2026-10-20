@@ -1,0 +1,125 @@
+new_slug: almost-buyer-follow-up-writer
+name: "Almost-buyer follow-up writer"
+summary: "Paste your offer and what leads did before they stopped. Get a follow-up email series with a new reason each time."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It matches a reason to each stage of drop-off, which takes some judgement, but the structure is fixed."
+
+headline: "Almost-buyer follow-up writer"
+subhead: Give it your offer and what people did before they stopped, such as opened an email, read a page or started a form. It sorts them by how far they got and writes a short series where each message gives a new reason to act. You get the emails, a schedule and a way to trace each sale.
+
+explain: |
+  Most people who stop did not say no. They got busy, had a doubt or forgot. If your only follow-up is the same reminder sent three times, the second and third messages teach them to ignore you.
+
+  This skill sorts the people who did not buy by how far they got. It restates your offer in one line and finds a real reason to act now. The first message reminds them of the offer and the exact next step. Each later message brings a new reason, such as proof, an answer to a doubt or a deadline. It sets the spacing, when to stop, how each message ties to a sale, and what happens to people who never respond.
+
+when:
+  - People start to buy, read or sign up and then go quiet.
+  - You send one reminder and stop, or send the same reminder repeatedly.
+  - You cannot tell which follow-up message led to a sale.
+
+you_give:
+  - Your offer, with its price, terms and any real deadline
+  - What these people did before they stopped, and how far they got
+  - Who they are, in a few lines (optional)
+  - Reviews, replies or questions that show their doubts, word for word (optional)
+you_get:
+  - A series of follow-up emails, each with a subject line, a body, one next step and a new reason
+  - The group each message is for
+  - A send schedule, a stop rule and a plan for people who still do not respond
+  - A way to link each message to a sale
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your offer and describe what people did before they stopped.
+  - Add any doubts you have heard, word for word, and any real deadline.
+  - Load the emails into your email tool and set the schedule it gives you.
+  - Use the link or code plan so each sale is tied to a message.
+
+how_it_works:
+  - title: Sorts the drop-offs
+    text: Groups people by how far they got, such as clicked, started, or asked a question.
+  - title: States the offer and the reason now
+    text: Restates the offer in one line and finds a deadline or limit that is real, or says none is on file.
+  - title: Writes message one
+    text: A short reminder of the offer with the exact next step.
+  - title: Adds a new reason each time
+    text: Each later message brings proof, an answer to a doubt or a deadline, never a repeat.
+  - title: Sets the spacing
+    text: Spaces the messages and sets when to stop writing to the same person.
+  - title: Ties messages to sales
+    text: Gives each message a link or reply code so a sale can be traced back.
+  - title: Plans the silent ones
+    text: Decides what happens to people who still do not respond.
+  - title: Checks the series
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  GROUPS
+  <group> | <how far they got> | Gets messages: <numbers>
+
+  THE OFFER IN ONE LINE
+  <offer> | Reason to act now: <real deadline or limit, or none>
+
+  MESSAGE <n> | Send: <day> | For: <group>
+  New reason: <proof / doubt answered / deadline / reminder>
+  Subject: <subject>
+  <body>
+  Next step: <one action>
+  Tracking: <link or code>
+
+  SCHEDULE AND STOP
+  <days between, when to stop>
+
+  IF THEY STAY SILENT
+  <what happens next>
+
+  MISSING
+  <facts a message would need>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How far people got
+    how: The more steps you can name, the better it can fit each message to the person. Say if some opened but never clicked.
+  - what: The deadline
+    how: Give only a real dated limit. If none, it writes the series without urgency and says so.
+  - what: Real doubts
+    how: Paste actual questions and reviews. It will answer those, not guesses.
+  - what: How long it can run
+    how: Give the longest series you want. It trims the weakest reasons first.
+
+judge:
+  - Each message states the offer and one next step.
+  - No two messages give the same reason.
+  - Any deadline is real and has a date.
+  - You can say which message led to a given sale.
+  - No claim goes beyond your offer facts.
+
+test:
+  - Read the series in order as if you were the person who stopped. Mark any message that feels like a repeat.
+  - Send message one to a small group and see whether the next step is clear enough to act on.
+  - Check each deadline against your calendar before you send.
+  - Run it twice and compare the reasons it chose. They should stay close.
+
+improve:
+  - Add your real objections to step 4 so proof always matches.
+  - Add your rule for how many messages one person may get.
+  - Save the message that closed the most sales to your brand file.
+  - Pair it with "Information-led lead offer planner" to bring new leads into the series.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Drafting short emails from your facts is text work any strong chat AI handles."}
+    - {name: "Your email tool", why: "It sends on a schedule and shows which message each sale came from."}
+  inputs:
+    - "Lists of who opened, clicked or abandoned, with dates"
+    - "Customer questions you hear before they buy"
+    - "Real proof, such as a result or quote you may use"
+
+terms:
+  - term: Almost-buyer
+    meaning: Someone who showed interest and then stopped before buying.
+  - term: Tracking code
+    meaning: A link or word in a message that tells you which message led to a sale.

@@ -1,0 +1,31 @@
+slug: platform-native-content-planner
+name: Platform-native content planner
+summary: Paste your business and the platform. Get a month of content made for that place and a daily habit.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: true
+  - type: persona
+    required: false
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+  - type: hooks
+origin: rebuilt
+version: 1.0.0
+minds:
+  - gary-vaynerchuk
+credits:
+  - title: "Gary Vaynerchuk: about and home page"
+    by: Gary Vaynerchuk
+    url: https://garyvaynerchuk.com/
+    used: Making content for each platform's own habits, many small pieces, posting daily
+  - title: Gary Vaynerchuk
+    by: Wikipedia
+    url: https://en.wikipedia.org/wiki/Gary_Vaynerchuk
+    used: Background on his platform-first approach to social media

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Tobi Lütke is alive, and views can change. This data set comes from two texts in his own words: his letter to investors in Shopify's 2015 prospectus [S1] and his July 2022 memo to staff [S2]. It adds the highlights of a podcast interview [S5], a report that quotes his April 2025 memo on AI [S6], and public reference pages [S3][S4]. Treat each view as "as of" the date of its source, 2015 to 2025. Nothing here tells you what he thinks about events after that.
+Tobi Lütke is alive, and views can change. This data set comes from two texts in his own words: his letter to investors in Shopify's 2015 prospectus [S1] and his July 2022 memo to staff [S2]. It adds the highlights of a podcast interview [S5], a report that quotes his April 2025 memo on AI [S6], and public reference pages [S3][S4]. Treat each view as "as of" the date of its source, 2015 to 2025. Study notes on his 2019 Tim Ferriss interview add his own account of how he learns and hires [S7]. Nothing here tells you what he thinks about events after that. For this pass only Wikipedia and short study notes were on disk in full; the memos are as read earlier.
 
 ## In one paragraph
 
@@ -74,6 +74,29 @@ How he applied it: the memo said Shopify was all in on AI and that it would chan
 - Charge trust on purpose, and talk about it openly [S5].
 - When a bet fails, say it was your call, fix it and refocus on the core [S2].
 - Before adding people, ask whether a tool such as AI can do the work [S6].
+
+## Real decisions
+
+### Build his own store software (2004)
+He and two partners tried to open an online snowboard shop and found the software costly, complex and built for big firms [S1]. He wrote his own on Ruby on Rails, and in 2006 they launched it as Shopify for new entrepreneurs rather than big retailers [S1][S3][S4].
+
+### Learn the investors' language before raising money
+In his own telling, he went to Silicon Valley, wrote down the terms investors used and looked each one up, and he studies the incentives of those who advise him [S7].
+
+### Open the platform to others (2009)
+Shopify opened its API and App Store in 2009 [S4]. The 2015 letter says it chose to give up some short-term revenue to help partners grow [S1]. In 2021 it dropped its 20% cut from app developers who earn under $1 million a year [S4].
+
+### Go public with a stated priority (May 2015)
+Shopify listed on 21 May 2015 [S4]. His letter said the company would not chase revenue as its main driver and set its mission as making commerce better for everyone [S1].
+
+### Call a meeting-heavy culture into question
+He sorts company process into three kinds: what makes the impossible possible, what makes the possible simpler, and the rest, which he put at 99.9% of corporate process [S5]. He uses the "trust battery" as a neutral way to talk about how much two people trust each other [S5].
+
+### Own a wrong bet and cut 10% (July 2022)
+He wrote that betting on a lasting jump in online shopping was his call and he got it wrong [S2]. About 10% of staff left, mostly in recruiting, support and sales, with 16 weeks of pay plus a week per year served, health cover, job help and a free Shopify account for those starting a business [S2]. Shopify bought Deliverr for $2.1 billion that year [S3][S4]. In 2023 about 20% of staff were cut and the logistics arm was sold to Flexport [S4].
+
+### Make AI a baseline skill (April 2025, as reported)
+A report on his memo says reflexive AI use is now a baseline expectation at Shopify [S6].
 
 ## Where he stood
 

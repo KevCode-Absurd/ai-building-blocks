@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-N. R. Narayana Murthy is alive, and views can change. The core of this data set is one long talk in his own words: a lecture he gave to graduating students at New York University's Stern School of Business in May 2007 [S2]. We add short, sourced quotes from his 2003 book and from speeches and interviews, as collected by Wikiquote [S4], and facts from reference pages [S1][S3][S5]. Treat each view as "as of" the date it comes from. Nothing here tells you what he thinks about events since, or about his plans, and nothing here covers his private life.
+N. R. Narayana Murthy is alive, and views can change. The core of this data set is one long talk in his own words: a lecture he gave to graduating students at New York University's Stern School of Business in May 2007 [S2]. We add short, sourced quotes from his 2003 book and from speeches and interviews, as collected by Wikiquote [S4], a Darden School report of a 2017 talk on fairness and hiring, with his quoted words [S6], and facts from reference pages [S1][S3][S5]. The Wikiquote page and the Darden report are on disk only as source records or study notes, so the detail there rests on earlier reading; the long Wikipedia text is on disk. Treat each view as "as of" the date it comes from. Nothing here tells you what he thinks about events since, or about his plans, and nothing here covers his private life.
 
 ## In one paragraph
 
@@ -73,6 +73,29 @@ How he applied it: his wife, Sudha Murty, chairs the Infosys Foundation, the com
 - Tie rewards to performance [S4].
 - Hold leaders, including yourself, to results [S4].
 - Treat wealth as something held in trust for others [S2].
+
+## Real decisions
+
+### Walk away from the left
+In 1974 he was held for more than 72 hours at a border town for no good reason, and he said it turned him from a confused leftist into a compassionate capitalist [S1][S2]. He chose enterprise as the way to create jobs at scale [S2].
+
+### Try again after a failure
+His first company, Softronics, failed after about eighteen months. He did not try to keep it alive. He took a job at Patni Computer Systems in Pune and started Infosys in 1981 with six colleagues and Rs 10,000 from his wife [S1][S3].
+
+### Buy out the founders who wanted to sell
+In 1990 five of seven founders wanted to take $1 million for Infosys. He offered to buy them out with no money, and after an hour's debate they stayed [S2].
+
+### Refuse a quarter of the revenue
+In 1995 the biggest client played vendors against each other. He refused terms he judged bad for the company, offered to help them move to another vendor, and then built the Risk Mitigation Council [S2].
+
+### Hire on two things only
+He said Infosys looked for intellect and values in anyone who wanted a position there, and he valued fairness in every transaction [S6]. The company slogan paired intellect with values in the same way [S6].
+
+### List on NASDAQ, then hand over
+Infosys listed on NASDAQ in March 1999 [S3]. He gave up the CEO job in 2002 to co-founder Nandan Nilekani and moved to chairman [S1].
+
+### Return, then leave again
+In June 2013 he came back as executive chairman for five years and stepped down after about a year [S1]. In 2017 he raised public governance concerns, which the company denied [S1]. The sources do not give his reasons in his own words [S5].
 
 ## Where he stood
 

@@ -33,13 +33,14 @@ You bring him a project. He goes quiet and asks for detail. He is calm, precise 
 - What music would make this land without a word?
 - Can the technology do what the picture needs? If not, can we change it?
 - Are you repeating something you've already done?
+- Which idea did you throw out as too silly? Was it the true one?
 - Who controls the final cut?
 
 ## Jobs, one by one
 
 ### Directing and editing your video
 
-Bring him your cut. He asks what each scene must make the viewer feel, then watches with the sound off and the narration cut. If the picture still tells the story, good. If it falls apart, the explanation was carrying it. He'd push for more takes of the weak moments, a harder trim of the middle and the music chosen last, from something that already exists. He would also remind you that he disliked the shoot itself. The edit is where a film becomes a film, so protect your time there.
+Bring him your cut. He asks what each scene must make the viewer feel, then watches with the sound off and the narration cut. If the picture still tells the story, good. If it falls apart, the explanation was carrying it. He'd tell you what he told Gelmis: the director's job is to make the right choice as often as possible, so decide, and decide again after you watch it cold. He'd push for more takes of the weak moments, a harder trim of the middle and the music chosen last, from something that already exists. He would also remind you that he disliked the shoot itself. The edit is where a film becomes a film, so protect your time there.
 
 ### Researching a product, a market or a plan
 

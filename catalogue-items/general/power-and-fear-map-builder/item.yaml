@@ -1,0 +1,20 @@
+slug: power-and-fear-map-builder
+name: "Power and fear map builder"
+summary: "Describe a team, deal or dispute. Get who really holds power, what each person wants and fears, and your safest first move."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [niccolo-machiavelli]
+credits:
+  - {title: "The Prince, chapters 3, 15 and 20 (W. K. Marriott translation)", by: "Niccolo Machiavelli", url: "https://www.gutenberg.org/ebooks/1232", used: "Looking at how people really act, relying on your own strength rather than borrowed forces, and the hazards of being hated"}
+  - {title: "Discourses on Livy, book 1 chapters 4 and 5 and book 3 chapter 6 (Ninian Hill Thomson translation)", by: "Niccolo Machiavelli", url: "https://www.gutenberg.org/ebooks/10827", used: "Who guards and who threatens a settled order, and how plots and rivals are read"}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Hawking's books and lectures are still in copyright, so this is our summary of his ideas. The few quotes are short and sourced. Most of his own words here come from public lectures his estate posts online, given between 1996 and 2008 [S3][S4][S5][S6][S7]. He died in 2018 [S1][S2], and physics has moved on since, so some of his claims were later revised or are still argued over. We mark those. His illness shaped how he worked and spoke, and we mention it only where it does.
+Hawking's books and lectures are still in copyright, so this is our summary of his ideas. We read four of the five lectures in full online (1996 to 2008) and used Wikipedia and two news and college pages for facts and dates. The few quotes are short and sourced. Most of his own words here come from public lectures his estate posts online, given between 1996 and 2008 [S3][S4][S5][S6][S7]. He died in 2018 [S1][S2], and physics has moved on since, so some of his claims were later revised or are still argued over. We mark those. His illness shaped how he worked and spoke, and we mention it only where it does.
 
 ## In one paragraph
 
@@ -58,6 +58,14 @@ How he applied it: *A Brief History of Time* spent a record 237 weeks on the *Su
 
 In "Life in the Universe" (1996), he argued that life keeps itself ordered by giving off disorder as heat [S6]. Humans moved from slow change through genes to fast change through language and books [S6]. He expected people to start editing their own genes, warned of the politics of "super humans", and said computer viruses should count as a form of life [S6]. He thought self-designing machines might one day travel to the stars more easily than people [S6]. He also warned that answering signals from aliens too soon could be risky [S6], and repeated that warning in 2010 [S1].
 
+**Weigh the answers, then pick one.**
+
+In "Life in the Universe" he listed the reasons we might see no aliens: life is very rare, intelligence is unlikely, intelligence destroys itself, or it exists and we missed it [S6]. He argued that life appeared on Earth soon after conditions allowed, about 3.5 billion years ago against a sun that lasts ten billion, which hints that life arises fairly easily [S6]. He then said which answer he preferred and why [S6]. He took the weak anthropic principle (ask what follows from our being here) and rejected the strong one because it needs universes nobody can observe [S6].
+
+**Walk the failed idea step by step.**
+
+In "Does God Play Dice" he took each step in turn: Laplace's clockwork universe, chaos (a butterfly in Central Park changes the weather), Planck's quanta, Heisenberg's limit, and Bell's experiments against hidden variables [S4]. He then argued black holes add a new loss of prediction, ending with the line that God plays dice where they cannot be seen [S4].
+
 ## How he decides
 
 - State the question in its simplest, sharpest form [S3].
@@ -67,6 +75,23 @@ In "Life in the Universe" (1996), he argued that life keeps itself ordered by gi
 - If the evidence goes against you, concede in public [S8][S10].
 - Treat a surprise as good news. Unexpected results drive progress [S10].
 - Explain it with one clear picture and a joke [S5].
+
+## Real decisions
+
+### Betting against a black hole in Cygnus X-1
+In the mid-1970s he bet Kip Thorne that Cygnus X-1 was not a black hole. He called it an insurance policy: if he lost, at least black holes were real, which he had spent years on. He conceded in 1990 [S1][S8].
+
+### Publishing that black holes destroy information
+In 1976 he argued that what falls into a black hole is lost when it evaporates, which clashed with quantum theory [S9]. He held the view for nearly thirty years and bet Preskill on it in 1997 [S8].
+
+### Conceding in Dublin
+On 21 July 2004 he told a conference he now thought information is not lost, and paid Preskill with a baseball encyclopedia [S8]. In his 2008 lecture he explained the new view with the burned-encyclopedia picture and said "there's a way out" for things in a hole [S5].
+
+### Betting Gordon Kane on the Higgs
+He bet $100 the Higgs would not be found. When it was, in 2012, he said so on air and said Higgs deserved a Nobel [S10].
+
+### Warning about contact with aliens
+After listing the explanations for the silence, he said we should be careful about replying to any signal, and used the Columbus comparison [S6].
 
 ## Where he stood
 

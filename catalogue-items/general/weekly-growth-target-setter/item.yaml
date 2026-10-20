@@ -1,0 +1,18 @@
+slug: weekly-growth-target-setter
+name: "Weekly growth target setter"
+summary: "Paste your weekly numbers. Get one growth target, what it means for the week and what to skip."
+category: general
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [paul-graham]
+credits:
+  - {title: "Startup = Growth", by: "Paul Graham", url: "https://paulgraham.com/growth.html", used: "Picking one measure of real use, a weekly growth rate as the target, and letting the number decide which tasks to skip"}
+  - {title: "Paul Graham: what he knew and believed", by: "AI Blocks mind file", used: "Revenue first, active users as a stand-in, and not faking or counting one-off spikes"}

@@ -1,0 +1,18 @@
+slug: values-to-week-planner
+name: "Values-to-week planner"
+summary: "Share your roles, values and calendar. Get a plan from values to quarter, week and day, with protected hours for hard work."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [cal-newport]
+credits:
+  - {title: "Study notes on Cal Newport, Tim Ferriss Show episode 568", by: "Cal Newport", used: "Planning from a short statement of roles and values down to quarter, week and day; protected blocks for hard work; fixed times to check messages"}
+  - {title: "Digital Minimalism", by: "Cal Newport", used: "Choosing tools and habits by the values they serve, and judging a pace by what it produces over months"}

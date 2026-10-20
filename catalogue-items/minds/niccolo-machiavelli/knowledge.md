@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Machiavelli wrote in Italian. We read him in two old English translations now in the public domain: W. K. Marriott's *The Prince* and Ninian Hill Thomson's 1883 *Discourses on the First Decade of Titus Livius* [S4][S5]. He never published *The Prince* himself, and Marriott notes its text is still disputed [S4]. Readers have argued for centuries about what he meant. Some take *The Prince* as sincere advice. Others read it as satire, or as a warning that exposes how tyrants work [S1][S3]. The famous phrase "the end justifies the means" is not his. Attributing it to him is an error [S2]. His two main books also pull in different directions: one advises a single ruler, the other praises free republics, and scholars still debate which is the "real" Machiavelli [S1].
+A note on method: this version rests on the full text of the two main books, read in the public-domain translations, with the SEP and Wikipedia pages as context only [S1][S2][S3]. Rules about advisers, arms, fortresses and conspiracies come from chapters 15, 20, 23 and 7 of *The Prince* [S4] and from books 1 and 3 of the *Discourses* [S5]. We have no letters or talks of his in full, so his private voice rests only on what Marriott quotes. Machiavelli wrote in Italian. We read him in two old English translations now in the public domain: W. K. Marriott's *The Prince* and Ninian Hill Thomson's 1883 *Discourses on the First Decade of Titus Livius* [S4][S5]. He never published *The Prince* himself, and Marriott notes its text is still disputed [S4]. Readers have argued for centuries about what he meant. Some take *The Prince* as sincere advice. Others read it as satire, or as a warning that exposes how tyrants work [S1][S3]. The famous phrase "the end justifies the means" is not his. Attributing it to him is an error [S2]. His two main books also pull in different directions: one advises a single ruler, the other praises free republics, and scholars still debate which is the "real" Machiavelli [S1].
 
 ## In one paragraph
 
@@ -21,6 +21,36 @@ How he applied it: he built *The Prince* from cases he knew, ancient and modern,
 Machiavelli held that fortune rules about half of what we do, and leaves the other half, or a little less, to us [S4]. He compared fortune to a river in flood. You can't stop the flood, but in calm weather you can build banks and dykes so the next flood does less harm [S4]. The skill he prized, *virtù*, means ability and readiness, not moral virtue [S1].
 
 How he applied it: he said Italy suffered from foreign invasions because it was an open country with no defences, while Germany, Spain and France had prepared [S4].
+
+### Follow the real truth, not the imagination of it
+
+In chapter 15 of *The Prince* he says he will depart from other writers. He wants to write something useful, so he follows what really happens, not what people picture. Many have imagined republics that never existed, and a man who acts only on his professions of virtue soon meets what destroys him among so much evil [S4]. A ruler must learn how to do wrong, and use it or not as need requires. He then sorts the praise-and-blame pairs: generous or miserly, cruel or kind, faithful or faithless. No one holds all the good ones, so avoid the vices that would lose the state, and do not fret about those without which it can hardly be saved [S4]. Some things that look like virtue lead to ruin, and some that look like vice bring safety [S4].
+
+How he applied it: he warns that a ruler who wants a name for generosity will end up squeezing his people to pay for it, and so be hated [S4].
+
+### Choose your advisers, then decide yourself
+
+Chapter 23 says courts are full of flatterers, since people are pleased with their own affairs. If anyone may tell you the truth, you lose respect. So pick a few wise men, give only them the freedom to speak truth, and only on what you ask [S4]. Question them on everything, listen, then decide alone and keep to it. Let each know that the more freely he speaks, the more he is favoured [S4]. If someone lies to you, let your anger be felt [S4].
+
+How he applied it: he cites Fra Luca's remark on the emperor Maximilian, who consulted no one yet never got his way. He was secretive, then his plans leaked in execution, and the people around him talked him out of them, so he undid by night what he did by day [S4]. A prince who is not wise himself will never take good advice, and counsel from many leads to disunited counsel [S4].
+
+#### Arm the people you want loyal
+
+In chapter 20 he says a new prince has never disarmed his subjects. If they are unarmed he arms them, because those arms become his and the doubtful turn faithful [S4]. When you disarm people you offend them by showing you distrust them. He says to judge such tools as fortresses by the facts of each state, and the best fortress is not to be hated [S4].
+
+#### Who should guard freedom: the people or the great?
+
+Discourses I.5 asks it as an open question. By reasons, those who least want to take things for themselves should be the guards, and that is the commons. By results, the nobles seem better, since Sparta and Venice outlasted Rome [S5]. He gives both sides and ends by backing the Roman choice with caution [S5].
+
+#### The ruler hurt by being hated, and the plot that fails on secrecy
+
+Book 3, chapter 6 of the *Discourses* says conspiracies kill more princes than open war, since anyone can conspire, but they usually fail [S5]. The weightiest cause is being hated by the whole community. A plotter must tell people who are ready to die for him, or men who are discontented, and giving a discontented man a secret hands him a way to become content again by betraying it [S5]. The Pazzi plot against the Medici was known to over fifty people and still held until the day [S5], which he calls a near miracle.
+
+How he applied it: the chapter is written for both sides, to warn princes and to make subjects cautious about plotting [S5].
+
+#### Read what your opponent will do
+
+Discourses III.18 quotes Epaminondas that the commander's best skill is to see through an adversary's plans. Because that is hard directly, it is better done by conjecture. He warns that after a long fight each side may wrongly think it lost, as Cassius did at Philippi when he killed himself over a wing that had lost while the army had won [S5].
 
 ### Fit your method to the times
 
@@ -52,13 +82,13 @@ He argued that hired soldiers are useless and dangerous: disloyal, undisciplined
 
 How he applied it: he organised Florence's citizen militia, which took Pisa in 1509 [S1][S2]. He used the preacher Savonarola as his example of an unarmed prophet who fell once people stopped believing in him [S4].
 
-### Conflict can keep a republic free
+#### Conflict can keep a republic free
 
 Many writers blamed Rome's quarrels between nobles and common people for its troubles. Machiavelli argued the opposite [S5]. In every republic there are two sides, the people and the nobles, and laws that protect freedom come out of their struggle [S5]. He also argued that a people is wiser and steadier than a prince [S5]. The SEP explains that he valued liberty over mere security, and thought only a republic gives it [S1].
 
 How he applied it: he pointed out that in about 300 years of Roman quarrels, few people were exiled or killed, and the result was laws that served public liberty [S5].
 
-### Go back to the beginning
+#### Go back to the beginning
 
 He wrote that states and sects last longest when they are brought back, now and then, to their first principles [S5]. Every founding has some first excellence that won it its name. Over time that excellence decays, and unless something renews it, the body dies [S5]. Renewal can come by accident from outside, or by foresight from within [S5].
 
@@ -66,6 +96,10 @@ How he applied it: he read the sack of Rome by the Gauls as a shock that forced 
 
 ## How he decides
 
+- Plan from what people really do, and not from the picture of how they should act [S4].
+- Take counsel only when you ask for it, from a few wise men, then decide alone [S4].
+- Arm the people you want loyal, and do not be hated [S4].
+- Try to guess the opponent's plan before you commit [S5].
 - Start from what people actually do, not what they say or should do [S4].
 - Plan for bad behaviour. A lawgiver must assume people will act badly when given the chance [S5].
 - Prepare in calm times for the storm [S4].
@@ -74,6 +108,28 @@ How he applied it: he read the sack of Rome by the Gauls as a shock that forced 
 - Depend on your own people, not on hired help or allies [S4].
 - Get advice from a few wise people, let them speak freely when asked, then decide yourself [S4].
 - Guard against flatterers, the pest that fills every court [S4].
+
+## Real decisions
+
+### Cesare Borgia sends in a harsh governor, then ends him
+
+Borgia took the Romagna from weak masters who let it fall into robbery. He chose Ramiro d'Orco, swift and cruel, with full power, and peace came. Then he feared the man's power would make him odious, so he set up a court under a good president, and had d'Orco executed in public. His stated aim in the account: to show the people that any cruelty came from the minister's nature, and not from him [S4].
+
+### Agathocles takes Syracuse
+
+A potter's son who rose by the army, he called the senators and the richest citizens together and had them killed in one night [S4]. Machiavelli says this won him power but not glory.
+
+### Rome chooses the commons as guardians
+
+Rome put the guard of liberty in the hands of the common people, Sparta and Venice in the nobles. Machiavelli sets out why each side could be argued [S5].
+
+### Maximilian keeps his plans to himself
+
+The emperor told no one and was talked out of his plans by those around him when they leaked. Machiavelli uses him as the case of the wrong way to take counsel [S4].
+
+### Fabius is slow when the times turn fast
+
+He praises Fabius for the delay that wore down Hannibal, then notes that the same man opposed attacking Africa when the time for that had come [S5].
 
 ## Where he stood
 
@@ -124,8 +180,8 @@ How he applied it: he read the sack of Rome by the Gauls as a shock that forced 
 
 All from works in the public domain, in the translations named above.
 
-- "it is much safer to be feared than loved, when, of the two, either must be dispensed with" (*The Prince*, chapter 17) [S4]
-- "it is necessary to be a fox to discover the snares and a lion to terrify the wolves" (*The Prince*, chapter 18) [S4]
+- "it is much safer to be feared than loved" (*The Prince*, chapter 17) [S4]
+- "a fox to discover the snares and a lion to terrify the wolves" (*The Prince*, chapter 18) [S4]
 - "Fortune is the arbiter of one-half of our actions" (*The Prince*, chapter 25) [S4]
 - "all armed prophets have conquered, and the unarmed ones have been destroyed" (*The Prince*, chapter 6) [S4]
 - "a people is more prudent, more stable, and of better judgment than a prince" (*Discourses*, Book 1, chapter 58) [S5]

@@ -75,6 +75,26 @@ How he applied it: *Gates of Fire* is taught at West Point, the U.S. Naval Acade
 - Stop waiting for fairness. You chose this [S7].
 - Solve your own fear. No group can do it for you [S6].
 
+## Real decisions
+
+### Finishing a book that would not sell
+It took him seven years to complete his first book, and he could not sell it. A novel of his did not get published for another twenty-one years. He says finishing that first manuscript still mattered enormously, because finishing once gives you a lasting capacity to finish. [S4]
+
+### Learning the screenwriters' trick of incorporating
+On moving to Los Angeles he learned that many working screenwriters had their own corporations and sold their services as one-person businesses. He took from it more than the tax benefit: a split between the artist who does the work and the boss who directs it, which gives distance from rejection and a firmer hand with pricing. [S3]
+
+### Leaving a group for the fear of success
+He joined a group for people afraid of success, mostly actors and screenwriters in Los Angeles. It grew so popular it had to disband, and on the drive home he decided the fear had to be solved alone. [S6]
+
+### Telling the freelancer she is on her own
+In the entrepreneur series he does not give a system. He asks a long run of questions about waking, eating, thoughts, rent and failure, so that self-direction becomes a set of decisions. He compares it with a nation that has won independence and must now govern itself. [S5]
+
+### Raising the pressure near the end
+He retells a legend about Michael Crichton: close to the end of a book he got up earlier and earlier, then moved into a hotel so as not to disturb his house. Pressfield reads it as matching the intensity of Resistance, and his advice is to push harder at the finish line, not ease off. [S4]
+
+### Declaring himself a pro
+He ends the You, Inc. excerpt by stating that he is a professional. The choice is to run the work as a business with a steady manager inside, so that praise and blame both land more softly. [S3]
+
 ## Where he stood
 
 **Where does creativity come from?** From the muse, who rewards disciplined work [S2].

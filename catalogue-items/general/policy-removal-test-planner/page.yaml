@@ -1,0 +1,123 @@
+new_slug: policy-removal-test-planner
+name: "Policy removal test planner"
+summary: "Name a policy you suspect is not working. Get a small, dated test to remove it and what to measure."
+job: lead-people
+thinking: medium
+thinking_why: "It weighs risk and legal limits, but the test shape is fixed."
+
+headline: "Policy removal test planner"
+subhead: Name a rule, approval or ritual you think does more harm than good. It writes down the problem the rule was meant to solve, your fear, any legal or safety need, and a small test with an end date. You get a plan with what to measure and when to stop.
+
+explain: |
+  Many rules exist because one person once misused a freedom. Over time they add approvals, forms and waiting for everyone else. Few people ask if the rule still pays for itself, because removing it feels risky.
+
+  This skill makes removal a small experiment. It names the problem the policy was meant to solve and states plainly what you fear will happen without it. It checks whether a law, a contract or safety requires the rule, since those stay. It picks one team or one period for the test, defines what you will measure and what result would make you stop, then sets a time to review. At the end you decide to keep, change or drop the policy.
+
+when:
+  - A rule slows people down and nobody remembers why it exists.
+  - You want to remove an approval step but worry about what will go wrong.
+  - Someone says "we have always done it this way" and you want to test it.
+
+you_give:
+  - The policy and what it requires people to do
+  - What problem you think it was meant to solve
+  - What you fear will happen if it goes
+  - Any legal, contract or safety rules that touch it (optional)
+you_get:
+  - The original problem and what is at stake without the rule
+  - A legal and safety check with questions to take to an adviser
+  - A small test with a scope, a start date and an end date
+  - What to measure, a stop rule and a decision date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name the policy, who it affects and what it costs in time or money.
+  - Say what you fear will happen if it is removed.
+  - Check any legal or safety point with an adviser before the test starts.
+  - Run the test, record the measures and come back to decide.
+
+how_it_works:
+  - title: Names the problem
+    text: Writes what the policy was meant to solve and when it began.
+  - title: States the fear
+    text: Writes what you fear will happen without it.
+  - title: Checks law and safety
+    text: Flags rules that must stay and questions for an adviser.
+  - title: Picks the test
+    text: Chooses one team or one period for the removal.
+  - title: Sets the measures
+    text: Defines what you will measure and the result that means stop.
+  - title: Plans the review
+    text: Sets a date to decide whether to keep, change or drop the policy.
+
+output_shape: |
+  THE POLICY
+  <what it requires and who it affects>
+
+  THE PROBLEM IT WAS MEANT TO SOLVE
+  <problem>
+
+  THE FEAR
+  <what you think will happen without it>
+
+  LAW AND SAFETY CHECK
+  Must stay: <yes, no or unsure>   Ask your adviser: <questions>
+
+  THE TEST
+  Scope: <team or area>   Start: <date>   End: <date>
+
+  MEASURES
+  <measure> | Before: <value> | Stop if: <value>
+
+  REVIEW
+  Date: <date>   Decide: keep, change or drop
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: The fear
+    how: Describe it in detail. A clear fear gives a clear stop rule.
+  - what: The scope
+    how: Pick the smallest group that gives a real answer. A smaller test is easier to reverse.
+  - what: What you measure now
+    how: Give the numbers you have before the test. The skill needs a starting point to compare.
+  - what: How long it takes to see results
+    how: Say how long effects take to show. The test length depends on it.
+
+judge:
+  - The original problem is named.
+  - A legal check is done.
+  - The test is small and has an end date.
+  - There is a stop rule.
+  - The measures can be read from data you already have.
+
+test:
+  - Pick a policy you already removed and see if the plan would have caught what mattered.
+  - Ask the people affected if the stop rule feels fair.
+  - Run it twice. The scope and the measures should be close.
+  - At the review date, compare actual results with the stop value.
+
+improve:
+  - Add a list of rules in your field that are set by law, so the check is faster.
+  - Add the measures you already track, so the test uses them.
+  - Keep a log of every policy test and the result.
+  - Pair it with a decision helper when the team disagrees about the result.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a fear into a test and a stop rule is text work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Record your measures before and during the test in one place."}
+  inputs:
+    - "The text of the policy"
+    - "Numbers on how long it takes or how often it is used"
+    - "Any past incident that led to the rule"
+
+terms:
+  - term: Stop rule
+    meaning: A result that, if seen during the test, ends the test early and brings the policy back.
+  - term: Scope
+    meaning: The team, place or time the test covers.

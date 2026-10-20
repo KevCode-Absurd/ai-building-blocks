@@ -1,0 +1,130 @@
+new_slug: customer-conversation-request-writer
+name: "Customer conversation request writer"
+summary: "Say who you want to talk to. Get a warm intro note, a cold message and an opening line."
+job: test-an-idea
+thinking: low
+thinking_why: "It follows one fixed format and fills it from what you give it."
+
+headline: "Customer conversation request writer"
+subhead: Tell it who you want to talk to, what you're stuck on and who might introduce you. It picks the easiest route, writes the message to the person or to the friend who will introduce you, and an opening for the talk itself. You get messages ready to send and a casual option to try first.
+
+explain: |
+  The first conversation is the hardest to get. Messages that ask to "interview" someone, ask for their "opinion" or ask for "a coffee sometime" get ignored, because they sound like work, like a pitch, or like a waste of time.
+
+  This skill follows Rob Fitzpatrick's advice. It first looks for a casual route, such as a chat at an event, which needs no request at all. When a meeting is needed, it writes the request in five parts: your mission, where you are and that you're not selling, the exact thing you're stuck on, why this person can help, and a clear ask. It writes the cold version, the version for a friend to forward, and the opening lines for the meeting. It never mentions your idea.
+
+when:
+  - You know who you want to talk to but can't get a first meeting.
+  - A friend offered an introduction and you need to make it easy to forward.
+  - You're about to message strangers and your draft sounds like a sales pitch.
+
+you_give:
+  - Who you want to talk to and what you're trying to learn
+  - How you could reach them, such as people you know, events, places, a blog or none yet
+  - What you are stuck on, in a line
+  - What stage you're at and whether you have anything to sell (optional)
+you_get:
+  - The easiest route to a first conversation, casual before formal
+  - A message in the five-part shape for a warm intro, a cold approach or a friend to forward
+  - An opening for the meeting that keeps you in charge
+  - A list of wording to avoid
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say who you want to talk to and what you are stuck on. Mention anyone who might introduce you.
+  - Choose the route it suggests. Try the casual one first if you can.
+  - Edit the message so it sounds like you, but keep the five parts.
+  - Send it to the first two or three people. Don't wait for a perfect message.
+
+how_it_works:
+  - title: Checks the plan
+    text: If you want to pitch or ask for approval, it says why that leads to polite refusals and points you at what you're stuck on.
+  - title: Tries casual first
+    text: Looks for a way to start a chat with no meeting, such as an event, a shared place or a reason you'd naturally talk.
+  - title: Picks the route
+    text: Chooses between a warm intro, a cold approach and ways to bring people to you, such as a small event, a talk or a post.
+  - title: Writes the five parts
+    text: Mission, where you are and that you aren't selling, what you're stuck on, why this person, and a clear ask.
+  - title: Writes the forwardable note
+    text: A short note a friend can forward as it is, so the introduction costs them little.
+  - title: Writes the cold version
+    text: A shorter message built to get a yes from a few people, since the reply rate doesn't matter.
+  - title: Writes the opening
+    text: A repeat of your framing and a first question, so you stay in charge of the talk.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  ROUTE
+  <casual, warm intro, cold or bring them to you, and why>
+
+  CASUAL OPENER
+  <one question to start a chat with no request>
+
+  MESSAGE
+  <the request, in five parts, ready to send>
+  Parts: mission / where you are / what you're stuck on / why them / ask
+
+  NOTE FOR A FRIEND TO FORWARD
+  <short note>
+
+  COLD VERSION
+  <shorter message>
+
+  OPENING FOR THE MEETING
+  <what you say first, then your first question>
+
+  AVOID
+  <wording to leave out, and why>
+
+  MISSING
+  <what would sharpen the message>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: What you're stuck on
+    how: Be specific. "I don't understand how landlords decide on rent" works better than "I want your views".
+  - what: Whether you have anything to sell
+    how: If you don't, say so. It builds trust, and the skill puts it in the framing.
+  - what: Who might introduce you
+    how: Name them. A warm intro is much easier than a cold message, so the skill leans on it.
+  - what: Where the person goes
+    how: Give events, shops, forums or groups. The casual route depends on knowing where they are.
+
+judge:
+  - The message never names your idea or product.
+  - It says what you are stuck on and why this person can help.
+  - It says you're not selling, if that's true.
+  - The ask is clear and small.
+  - It doesn't say "interview", "opinion" or "coffee sometime".
+
+test:
+  - Show the message to a friend. Ask what they think you want. They should say advice, not a sale.
+  - Send it to three people. Count how many reply, and how many say yes.
+  - Try the casual opener at an event and see if the chat lasts longer than a meeting would.
+  - Run it twice. The five parts should stay in place even if the wording changes.
+
+improve:
+  - Add the names and places you can already reach to "What you need", so routes use them.
+  - Save the message that got replies and edit step 4 to match its tone.
+  - Add words your field uses for its problems, so messages sound like an insider's.
+  - Pair it with "Customer interview question writer" for what to ask once they say yes.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Short message drafting works well in any strong chat AI with this skill."}
+    - {name: "LinkedIn", why: "A common place to find the person and a friend who knows them."}
+  inputs:
+    - "The first-customer group from the First customer group picker, so the message fits one type of person"
+    - "A list of people who said 'let me know how I can help', so you can ask for introductions"
+    - "A link to a post or blog about the field, which makes a cold message more credible"
+
+terms:
+  - term: Warm intro
+    meaning: An introduction from someone you both know, which gives you a reason to be there.
+  - term: Cold approach
+    meaning: A message to someone who has never heard of you.
+  - term: Framing
+    meaning: Telling the person in a few lines what the meeting is for, so it doesn't turn into a sales meeting.

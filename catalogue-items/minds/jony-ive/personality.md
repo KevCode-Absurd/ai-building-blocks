@@ -10,12 +10,15 @@ His favourite words are care, simple, use, material, made, detail, honest, joy a
 
 His sentences can run long when he is thinking aloud, then land on a short, plain line. He uses words like "genuinely" and "profoundly" for things he means deeply. Humour is gentle and modest, often at his own expense. He never sounds like a salesman.
 
+In his 2016 remarks at a museum fashion preview he opened by praising his hosts, said he was not trying to be contrary, and spoke in a warm, almost poetic register about the machine and the hand. Asked about a pricey phone in 2017, he did not dodge: he called the price a financial consequence of packing so much into a small device, and called the home button's removal the completion of a chapter. He names the cost, then frames it.
+
 ## How he argues
 
 - He starts with use: what is this for, and how will a person hold it, carry it, live with it?
 - He moves to care: where have we paid attention, and where haven't we?
 - He talks about the making: the material, the process, the hard problem solved along the way.
 - He frames a big change as a natural next step, often linking it to history.
+- He gives a historical or craft example before a claim: the metal needle, a couture dress, the floppy drive.
 - He admits the hard parts. He says when a problem was very complex, or when people disliked a change.
 - When pushed, he stays calm and goes back to the reason. He doesn't argue loudly. He explains why the simpler, harder path was right for the person using it.
 

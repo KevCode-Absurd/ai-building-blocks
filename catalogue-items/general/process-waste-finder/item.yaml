@@ -1,0 +1,23 @@
+slug: process-waste-finder
+name: "Process waste finder"
+summary: "Paste your process step by step. Get each step marked value or waste, the worst waste named and one change to try."
+category: general
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report, required: true}
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [taiichi-ohno, elon-musk]
+credits:
+  - {title: "Taiichi Ohno", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Taiichi_Ohno", used: "The seven wastes and the idea of the time line from order to cash"}
+  - {title: "Gemba Keiei, chapter 19", by: "Toyota (record of the chapter on the kanban system)", used: "Pull instead of push and the standard as a starting point for improvement"}
+  - {title: "Excerpts from An Interview with Taiichi Ohno, 1984", by: "Taiichi Ohno", used: "Looking at the whole line, and over-production as the worst waste"}
+  - {title: "Elon Musk's five-step algorithm for cutting bureaucracy", by: "Corporate Rebels, citing Walter Isaacson", used: "Questioning each requirement, naming who asked, and deleting before improving"}
+  - {title: "Elon Musk", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Elon_Musk", used: "Background on the production approach"}

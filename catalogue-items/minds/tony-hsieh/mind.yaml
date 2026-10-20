@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "A motivating place to work: the case of Zappos (Organizational Behavior, open textbook)", by: "Saylor Academy", url: "https://saylordotorg.github.io/text_organizational-behavior-v1.1/s09-01-a-motivating-place-to-work-the.html", kind: secondary}
   - {n: 6, title: "Tony Hsieh", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tony_Hsieh", kind: reference}
   - {n: 7, title: "Zappos", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Zappos", kind: reference}
+  - {n: 8, title: "Zappos CEO Tony Hsieh: full interview transcript", by: "Tony Hsieh, Marketplace (19 August 2010)", url: "http://www.marketplace.org/story/2010/08/19/zappos-ceo-tony-hsieh-full-interview-transcript", kind: own-words}
 tests:
   - {kind: use, prompt: "Write five core values for a 12-person design studio that are specific enough to hire and fire by."}
   - {kind: use, prompt: "A customer's order arrived late for her daughter's birthday. Write the reply from our support team."}

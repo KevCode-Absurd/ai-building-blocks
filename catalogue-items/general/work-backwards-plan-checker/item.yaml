@@ -1,0 +1,22 @@
+slug: work-backwards-plan-checker
+name: "Work-backwards plan checker"
+summary: "Paste your goal and plan. Get it rebuilt from the end date, checked a second way, with a score out of 100."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [katherine-johnson, jeff-bezos, aristotle]
+credits:
+  - {title: "She Was a Computer When Computers Wore Skirts (NASA interview)", by: "NASA, 2008", url: "https://www.nasa.gov", used: "Starting from the landing point and working back to the launch, and checking a machine's answer by hand"}
+  - {title: "Determination of Azimuth Angle at Burnout for Placing a Satellite over a Selected Earth Position (NASA TN D-233)", by: "Katherine Johnson and Ted Skopinski, 1960", url: "https://ntrs.nasa.gov", used: "Solving the same case by two methods and showing how small changes in the inputs move the answer"}
+  - {title: "Katherine Johnson interview", by: "AARP, 2018", url: "https://www.aarp.org", used: "Learning to work the problem yourself before trusting the tool"}
+  - {title: "Nicomachean Ethics, Book III on deliberation", by: "Aristotle, Chase translation", used: "Fixing the end first, then listing the means within your power and picking the easiest and most creditable"}

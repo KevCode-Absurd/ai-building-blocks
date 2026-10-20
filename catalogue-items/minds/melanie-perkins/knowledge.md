@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Melanie Perkins is alive, and views can change. Everything below comes from a first-person article she wrote in 2017, an interview feature from 2022, a 2018 article that quotes her own blog post, and public reference pages [S3][S4][S5]. Treat each view as "as of" the piece it comes from. She has given many talks and podcasts, but we only use pages we could read. Nothing here tells you what she thinks about events since, or about Canva's future plans, and nothing here covers her private life.
+Melanie Perkins is alive, and views can change. Everything below comes from a first-person article she wrote in 2017, an interview feature from 2022, a 2018 article that quotes her own blog post, her 2019 podcast interview [S6] and the Wikipedia pages on her and on Canva [S1][S2]. The full web articles are not stored on disk, only short source records, so detail leans on the Wikipedia text and on study notes taken from the podcast (first two thirds; the transcript is machine made, so meaning is safer than exact wording). Treat each view as "as of" the piece it comes from. She has given many talks and podcasts, but we only use pages we could read. Nothing here tells you what she thinks about events since, or about Canva's future plans, and nothing here covers her private life.
 
 ## In one paragraph
 
@@ -77,6 +77,29 @@ How she applied it: she said the gap between where Canva was and where it could 
 - Build the free version so it gives real value on its own [S5].
 - Treat mistakes as fuel, and keep perspective by remembering everyone is a first-timer [S5].
 
+## Real decisions
+
+### Test the idea on school yearbooks first
+In 2007 she and Cliff Obrecht started Fusion Books, an online drag-and-drop yearbook maker for schools, rather than a tool for all of design [S1][S6]. Yearbooks were one narrow market with a clear buyer. It grew in Australia and later ran in New Zealand and France [S1]. It proved the drag-and-drop idea before Canva [S3].
+
+### Ask investors for advice, not money
+In San Francisco in 2012 she opened meetings by asking for advice [S6]. She revised the deck after each meeting, and many early slides survived the many rewrites [S6]. More than 100 investors said no, citing Australia, the couple's relationship and no technical background [S1]. She kept going and sought the missing skill instead of arguing [S1][S3].
+
+### Watch real users, then add play
+Videos of people trying the product showed they were scared to click [S6]. The team added playful first steps, such as putting a hat on a monkey, so a beginner got a quick win [S6]. The choice came from watching users, not from a design theory [S6].
+
+### Name one leader
+An investor told the founders to pick a single leader. Obrecht put Perkins forward as CEO [S1]. She tells the story as a team call, and credits co-founders before herself [S6].
+
+### Move to Sydney to find builders
+After a technical co-founder, Cameron Adams, joined, the founders moved from Perth to Sydney to hire engineers [S1]. She said Sydney beat Silicon Valley partly because key co-founders were there [S6]. Location was a choice, not a default [S6].
+
+### One priority per year
+She used annual company priorities in sequence [S1]. In 2016 it was going international, with six languages added. In 2017 it was rewriting the editor code, which later made video editing possible [S1]. Canva reported positive free cash flow every year from 2017 [S1].
+
+### Free core, paid upgrades
+She kept the core product free and charged for extras such as premium images and printing [S6]. She credited the free version, which gives real value, for part of early growth [S5].
+
 ## Where she stood
 
 **Do design tools need to be hard?** No. As of 2017 she argued they would become simple, online and shared [S3].
@@ -123,6 +146,7 @@ These are fair points from the record. Her own words give her reasoning, not her
 - "Crazy big goals" can stretch a small team too far. Pair her with someone who watches cash and focus.
 - Simple tools for beginners can frustrate experts. Ask who might be left behind.
 - Her record here is short articles and interviews. Mark inferences beyond them.
+- She reports her own pitch story. We have no investor's account of those meetings [S6].
 - Fast growth raises the stakes on security and trust, as the 2019 breach showed [S2].
 
 ## Short phrases on the record

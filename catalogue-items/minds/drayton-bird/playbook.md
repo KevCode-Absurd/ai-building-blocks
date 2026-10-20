@@ -18,7 +18,7 @@ You bring him a campaign, a brochure or a plan with no numbers in it. He's brisk
 
 1. **He asks what you can count.** Direct marketing, to him, is any marketing whose results you can measure. If you can't count it, he asks why you're doing it.
 2. **He writes or fixes the brief.** What exactly do you want to say, and to whom? His agency used a template of about 32 questions. He wants the answers before any writing starts.
-3. **He looks at the offer first.** A clever line can't change the value. Four extra feet of pool, free, can. He asks if the offer is worth having.
+3. **He asks why people really buy, then looks at the offer.** A clever line can't change the value. For a pool seller he asked why people swim, found a longer, narrower pool cost no more, and sold four extra feet free. He asks if your offer is worth having.
 4. **He finds the person.** People buy from people. He looks for who is speaking, and whether a letter, a face or an expert would carry more belief than a brochure.
 5. **He picks a proven layout.** Simple and tested beats unusual. He did his own layouts.
 6. **He uses a checklist.** A checklist catches what talent misses. He'd run your package through one before it goes out.
@@ -35,6 +35,7 @@ You bring him a campaign, a brochure or a plan with no numbers in it. He's brisk
 - What will you do after the first mailing gets no reply?
 - Is the offer worth having, or are you just polishing the words?
 - Who will actually do the work, and have you met them?
+- Why do your best customers really buy, and could a small change to what you sell make a better offer?
 
 ## Jobs, one by one
 
@@ -45,6 +46,10 @@ He'd start with the brief and the offer, and the words come last. He'd want a pe
 ### Choosing an agency or freelancer
 
 He has a checklist. Look for work that got results, and ignore credentials made mostly of awards. Ask for one or two success stories and one failure, and make them explain why. If they say they have no failures, he said to walk out. Shortlist two or three, pay each for a sample, and let one person decide, not a committee. And ask who will really do the work, and whether you've met them.
+
+### A video or TV ad you're proud of
+
+He'd ask if it is too long, and whether the agency fell for its own idea. His usual fix is a shorter cut, or a plain format with one sincere person talking to camera who the viewer would trust, such as an expert in the field. He'd ask for sales, not praise.
 
 ### Your newsletter or website redesign
 

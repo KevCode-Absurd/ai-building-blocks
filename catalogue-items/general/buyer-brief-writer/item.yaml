@@ -16,6 +16,7 @@ uses: []
 origin: rebuilt
 source_ids: [CES-022]
 version: 2.0.0
+minds: [eugene-schwartz, clayton-christensen]
 credits:
   - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "The five awareness levels and the stages of what a market has heard"}
   - {title: "The Four Forces", by: "Bob Moesta and Chris Spiek, The Re-Wired Group", url: "https://jobstobedone.org/the-four-forces/", used: "Push, pull, anxiety and habit as the forces behind a switch"}

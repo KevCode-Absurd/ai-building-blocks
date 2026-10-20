@@ -1,0 +1,132 @@
+new_slug: brand-mark-system-planner
+name: "Brand mark system planner"
+summary: "Paste your brief and brand file. Get a mark plan that starts from the brief and tests small."
+job: design-work
+thinking: medium
+thinking_why: "It weighs obvious options against surprising ones, but follows a fixed order."
+
+headline: "Brand mark system planner"
+subhead: "Give it your brief and your brand file. It reads the brief for the answer already in it, lists the obvious options and plans a mark that tests at tiny and huge sizes. You get a mark plan and a soft strategy."
+
+explain: |
+  The first logo idea is often the obvious one, and designers skip it to be original. But the brief usually holds a plain answer that most people know already, and a mark that builds on what people recognise starts ahead. Then comes the test: marks fail when they are shrunk to a thumbnail or blown up on a wall.
+
+  This skill reads the brief for that plain answer, lists the obvious solutions and keeps the ones that work. It adds one surprising move on top of what people know. It plans the mark as a frame others can fill, simple enough to draw by hand, and tests it at the smallest and largest sizes. It writes a short soft strategy and starts with paper sketches.
+
+when:
+  - "You have a brief and need to plan a mark before sketching."
+  - "Your mark must work in many sizes and be used by many people."
+  - "You want a plan that a non-designer on the team can follow."
+
+you_give:
+  - "The brief for the mark"
+  - "Your brand file, with what people already know about you (optional)"
+  - "Reference marks you admire or want to avoid (optional)"
+  - "Notes from a call or visit with the client (optional)"
+you_get:
+  - "The answer already in the brief"
+  - "Obvious options tried, with the ones that work"
+  - "One surprising move on top of what people know"
+  - "A mark plan: tests, frame rules and a list of ideas to sketch"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the brief, or run \"Design brief rules writer\" first."
+  - "Add your brand file and the marks you use now."
+  - "Hold a listening call or visit before sketching, using the questions in the plan."
+  - "Sketch the listed ideas on paper before you open software."
+  - "Test each sketch at thumbnail and wall size."
+
+how_it_works:
+  - title: "Reads the brief"
+    text: "Finds the answer already in it."
+  - title: "Lists obvious options"
+    text: "Tries them before rejecting any."
+  - title: "Keeps what is known"
+    text: "Adds one surprising move."
+  - title: "Tests at both ends"
+    text: "Smallest and largest uses."
+  - title: "Plans a frame"
+    text: "A mark others can fill, simple enough to draw by hand."
+  - title: "Holds a listening call"
+    text: "Questions on goals and problems."
+  - title: "Writes a soft strategy"
+    text: "What the mark must do and who it fits."
+  - title: "Plans paper sketches"
+    text: "A list of ideas before software."
+
+output_shape: |
+  THE ANSWER IN THE BRIEF
+  <line from the brief that already points to a mark>
+
+  OBVIOUS OPTIONS
+  <option> | tried: <result> | keep or drop: <why>
+
+  KEEP AND ADD
+  Known by people: <what to keep> | One surprising move: <move>
+
+  LISTENING CALL
+  <five questions on goals and problems>
+
+  SOFT STRATEGY
+  The mark must <do> for <who>. It fits <where>.
+
+  THE FRAME
+  <how others fill it in, what stays fixed, can it be drawn by hand>
+
+  TESTS
+  Smallest use: <size and result> | Largest use: <size and result>
+
+  SKETCH LIST
+  <ideas to draw on paper first>
+
+  MISSING
+  <facts that would change the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The brief"
+    how: "The more exact the brief, the more the plan can lift from it. Run the brief writer first."
+  - what: "What people already know"
+    how: "Say what your audience already recognises about you. It is kept."
+  - what: "Smallest and largest use"
+    how: "Give real sizes, such as a favicon and a billboard."
+  - what: "Who fills the frame"
+    how: "Say who else will use the mark. The frame is built for them."
+
+judge:
+  - "Every idea traces back to a line in the brief."
+  - "The obvious option was tried before it was rejected."
+  - "The mark still reads at tiny and huge sizes."
+  - "A non-designer could reproduce it by hand."
+  - "Nothing drops the old equity without a reason."
+
+test:
+  - "Check each idea against a line in the brief and cross out any with no link."
+  - "Ask someone to draw the mark from your description. See how close they get."
+  - "Print the smallest size and check it reads."
+  - "Run it twice. The obvious options should be the same."
+
+improve:
+  - "Add your standing visual rules to \"What you need\"."
+  - "Add the questions you always ask a client to step 6."
+  - "Save the soft strategy in your brand file."
+  - "Pair it with \"Logo strength tester\" to score finished options."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading a brief and planning a mark is text work any strong chat AI does well."}
+    - {name: "Paper and a marker", why: "The plan starts with paper sketches. Software comes after."}
+  inputs:
+    - "Your current mark and how it is used"
+    - "Notes from a listening call"
+    - "Reference marks you like or want to avoid"
+    - "Sizes of every place the mark appears"
+
+terms:
+  - term: "Soft strategy"
+    meaning: "A short note on what the mark must do and who it fits, not a full strategy document."
+  - term: "Frame"
+    meaning: "A simple mark that others can fill in with their own content."

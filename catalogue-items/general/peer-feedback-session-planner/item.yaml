@@ -1,0 +1,20 @@
+slug: peer-feedback-session-planner
+name: "Peer feedback session planner"
+summary: "Paste the stuck project and who could review it. Get a session plan with rules so notes stay honest."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: plan}
+  - {type: feedback_notes}
+origin: rebuilt
+version: 1.0.0
+minds: [ed-catmull]
+credits:
+  - {title: "The Interview: Ed Catmull, founder and president of Pixar", by: "Ed Catmull", used: "Early work is rough, peers who have faced the problem give honest notes, and the owner keeps the decision"}
+  - {title: "How Pixar Fosters Collective Creativity", by: "Ed Catmull, Harvard Business Review", url: "https://hbr.org/2008/09/how-pixar-fosters-collective-creativity", used: "Peer review where notes name problems and not fixes, and where senior voices do not dominate"}

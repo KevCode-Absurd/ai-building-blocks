@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-David Carson is alive, and views can change. Everything below comes from a 2019 interview [S2], his studio's own site, which reports what he said at talks around 2014 to 2015 [S3], two reference pages [S1][S4] and a 2016 article about a film on him [S5]. Treat each view as "as of" its source. Reference pages differ on his birth year, 1954 or 1955, so we use 1955 with that caveat [S1][S4]. Nothing here tells you what he thinks about events after 2019.
+David Carson is alive, and views can change. Everything below comes from a 2019 interview with the AIGA's Eye on Design [S2], his studio's own site, which reports what he said at talks around 2014 to 2015, including a Grafik15 talk in Zurich [S3], two reference pages [S1][S4] and a 2016 article about a film on him, which has no direct quotes from him and is used only for how he lives [S5]. Treat each view as "as of" its source. Reference pages differ on his birth year, 1954 or 1955, so we use 1955 with that caveat [S1][S4]. Nothing here tells you what he thinks about events after 2019.
 
 ## In one paragraph
 
@@ -64,6 +64,26 @@ On *Ray Gun* Carson handled letters like raw material, as an artist handles pain
 
 How he applied it: his method is closer to collage than to layout. He gathers images and type, then crops, layers and shifts them by hand until the page says what he wants [S2]. He sees the hand-made look as a strength now that so much design comes out of the same software [S2]. A practical way to borrow this is to print your parts, cut them up and move them on a table before you touch the screen. That last step is our suggestion, drawn from his habit of working by hand, not a rule he wrote down.
 
+## Real decisions
+
+### Never learning grids
+He is self-taught. When he came across grids, he saw no reason to use them, and he has not used them since [S2].
+
+### Setting the Ferry interview in Dingbats
+In 1994 he was handed an interview with Bryan Ferry that he found dull. His attitude was, in his words, why not, says who, let's try it. He set it in a symbol font and printed the readable text at the back. He now calls it design-wise average and leaves it out of his talks [S2].
+
+### Starting from audience and message, then going looser
+He begins with who the work is for and what it should say, then goes more abstract, looser and more intuitive. He collects torn posters and found objects on his travels and moves them around art boards until they communicate [S2].
+
+### Working with music on
+He says he cannot work without music and that it has always been a huge part of his process [S2].
+
+### Staying open to accidents
+He tells designers not to use guidelines and to be open to accidents. He means staying open to unexpected results rather than trying to control the outcome [S3].
+
+### Criticising his own Ray Gun book
+He called the Rizzoli Ray Gun book a horrible missed opportunity, citing poor photo quality and wrong colours and credits. He also doubts a project as fresh as the magazine could be repeated now [S2].
+
 ## How he decides
 
 - Ask who the audience is and what the message is [S2].
@@ -123,7 +143,7 @@ How he applied it: his method is closer to collage than to layout. He gathers im
 ## Short phrases on the record
 
 - "Designers have become lazy and let computers make too many decisions for them." (Eye on Design, 2019) [S2]
-- "I've never used grids; I still don't." (Eye on Design, 2019) [S2]
-- "you either have that eye or you don't." (Eye on Design, 2019) [S2]
-- "It's not like I have no rules or set out to break rules" (Eye on Design, 2019) [S2]
+- "I never studied or learned about them" (on grids, Eye on Design, 2019) [S2]
+- "you either have that eye or you don't" (Eye on Design, 2019) [S2]
+- "Why not? Says who? Let's try it." (on the Ferry spread, Eye on Design, 2019) [S2]
 - "Never use guidelines." (Grafik15 talk, reported on his site) [S3]

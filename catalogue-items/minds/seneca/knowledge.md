@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Seneca wrote in Latin, for readers, and meant his work to be published [S4]. His letters to his friend Lucilius read like private notes, but scholars warn that they are not a diary. He builds a literary self in them, so we can't read them as plain fact about his life [S3]. His birth year is not certain. It is usually given as about 4 BC, though some sources say about 1 BC [S3][S5]. For the letters we use Richard Mott Gummere's translation, published in three volumes in 1917, 1920 and 1925 [S1]. For *On the Shortness of Life* we use John W. Basore's translation of 1932 [S2]. Both are free to read on Wikisource. Letter numbers follow Gummere [S1].
+A note on method: this data set now rests on Seneca's own words in two places. One is the Letters to Lucilius [S1] and *On the Shortness of Life* [S2] (Gummere and Basore, via Wikisource). The other is the full text of the Minor Dialogues in Aubrey Stewart's 1900 translation from Project Gutenberg [S6], which covers *On Anger*, *On Peace of Mind*, *On Leisure*, *On a Happy Life* and the letters of consolation. The three reference pages are context only [S3][S4][S5]. Seneca wrote in Latin, for readers, and meant his work to be published [S4]. His letters to his friend Lucilius read like private notes, but scholars warn that they are not a diary. He builds a literary self in them, so we can't read them as plain fact about his life [S3]. His birth year is not certain. It is usually given as about 4 BC, though some sources say about 1 BC [S3][S5]. For the letters we use Richard Mott Gummere's translation, published in three volumes in 1917, 1920 and 1925 [S1]. For *On the Shortness of Life* we use John W. Basore's translation of 1932 [S2]. Both are free to read on Wikisource. Letter numbers follow Gummere [S1].
 
 ## In one paragraph
 
@@ -46,13 +46,39 @@ He passes on a line from Epicurus that contented poverty is an honourable state 
 
 How he applied it: he doesn't tell Lucilius to give his money away. He says he may own wealth, but should own it without fear, by learning he could be happy without it [S1].
 
-### Read deeply, and take good ideas from anyone
+#### Read deeply, and take good ideas from anyone
 
 Reading many authors in a hurry leaves you with no real friends among them, like a traveller who has many acquaintances but no friends [S1]. Stick to a few great thinkers, and each day pick one thought to digest [S1]. In a later letter he compares good reading to bees making honey. Gather from many sources, then blend it into something your own, as a child looks like a father and not like a painting [S1].
 
 How he applied it: many early letters end with a short saying as a gift, often taken from Epicurus, a rival school [S1][S5]. He says he crosses into the enemy camp as a scout, not as a deserter [S1], and that whatever is well said by anyone is his [S1].
 
-### Your mind matters more than your place
+### Delay is the best cure for anger
+
+In *On Anger* he says the strongest remedy is delay. Ask anger to wait, not to forgive, but so it can judge fairly. Its first rush is fierce and will fade if it is not fed [S6]. Do not try to crush it all at once. Take it apart piece by piece [S6].
+
+How he applied it: he told the angry reader to treat a friend the way a judge treats a lawsuit. Hear both sides, ask for a witness, give it time. He noticed that the man who tells you a tale in secret will often deny it when called to prove it [S6]. He also asked the reader to consider the offender: a child, a woman who erred, a man who was ordered to do it, a person you hurt first [S6]. Expect everything, he says, because wrongs hurt most when they are unexpected [S6].
+
+#### Review your own day each night
+
+He praised Sextius, who asked his spirit each night which bad habit it had cured and in what way it was better [S6]. Seneca did the same after the lamp went out, going over what he had said and done and hiding nothing from himself. His sample verdict on himself is short: he forgave himself once, and told himself to stop arguing with people who have never been taught, and to check whether a person can bear a truth before telling it [S6].
+
+How he applied it: he said anger grows gentler when it knows it must stand before this judge every day, and that sleep after such a review is calm [S6].
+
+### Size up yourself, the task and the company before you take it on
+
+In *On Peace of Mind* he tells the reader to examine three things before any undertaking: yourself, the business, and the people you do it with [S6]. Most of us think we can do more than we can. The bearer should be stronger than the load. Refuse work that breeds more work, and do not start what you cannot leave [S6]. He also warned that money is the richest source of human sorrow, since it is easier never to have had it than to lose it [S6].
+
+How he applied it: he used himself as the case. He told his friend Serenus that he swung between wanting public office and wanting to retire into leisure, and that he worried there was more wrong with him than he saw [S6].
+
+#### Leisure is not an escape from duty
+
+In *On Leisure* he argues that a man can give his life to thinking, and that a man who has done his years of service may retire with a clear claim. He quotes both Epicurus and Zeno on whether a wise man should enter politics, and says that following only one teacher makes you a partisan, not a thinker [S6]. This is why he borrows from rivals [S1][S6].
+
+#### Other people's demands eat the self
+
+In *On the Shortness of Life*, he lists the ways time goes: greed, tiring busyness, wine, sloth, ambition, soldiering, service to great men. Then he says that in all these crowds, no one lays claim to their own self [S6]. People fear everything like mortals and want everything like immortals [S6]. The full treatise is also on Wikisource [S2].
+
+#### Your mind matters more than your place
 
 Lucilius travelled far and still felt low. Seneca told him he needed a change of soul, not a change of climate [S1]. The person you are matters more than where you go, and you can live well anywhere [S1]. He also warned about crowds. He says he never comes home with quite the same character he went out with [S1].
 
@@ -72,8 +98,33 @@ How he applied it: he mocks rich hosts who make slaves stand silent and hungry a
 - Ask whether a want could ever be satisfied [S1].
 - Practise the worst case in small doses [S1].
 - Read a little, deeply, and keep one idea [S1].
+- Hear both sides and wait before you act on anger, as a judge would [S6].
+- Before taking on work, check yourself, the task and the people [S6].
+- Review your day each night, like a hearing [S6].
 - Don't act in anger. He held that anger can't be kept in check by halves and should be avoided altogether [S1][S3].
 - Judge yourself harshly first. Act as the prosecutor, then the judge, then the one who pleads for mercy [S1].
+
+## Real decisions
+
+### Defending a rich life while teaching plain living
+
+Accused of not living as he preached, he answered in *On a Happy Life* that he speaks of virtue, not of himself, and that he follows it from far behind with a halting step [S6]. He said the same critics would think Diogenes not poor enough [S6]. His reason: the point of teaching is the direction, not the proof of his own life. Critics still use this gap against him [S5].
+
+### Staying at court, and wanting to leave
+
+He served as adviser to Nero from 54 and was twice refused leave to retire after 62 [S5]. In *On Peace of Mind* he explains the pull of both lives, public use and private study, and chooses neither fully [S6].
+
+### Going through a day on trial before sleep
+
+Each night he held a private hearing of the day and let himself off lightly but made notes on what to change [S6]. The reason he gave was practical: it kept his anger in check.
+
+### Taking a rival's saying as his own
+
+He quoted Epicurus often in the letters, saying he crossed into the enemy camp as a scout [S1]. In *On Leisure* he adds that following a single teacher makes a man a partisan [S6].
+
+### Writing to Nero on mercy
+
+He wrote *On Clemency* for the young emperor in the early years of the reign [S6][S5]. His stated aim: show a ruler what mercy looks like. It did not stop later killings [S5].
 
 ## Where he stood
 
@@ -121,7 +172,7 @@ How he applied it: he mocks rich hosts who make slaves stand silent and hungry a
 From Gummere's translation of the letters and Basore's of *On the Shortness of Life*.
 
 - "Nothing, Lucilius, is ours, except time." (Letter 1) [S1]
-- "Everywhere means nowhere." (Letter 2) [S1]
-- "we suffer more often in imagination than in reality" (Letter 13) [S1]
 - "You need a change of soul rather than a change of climate." (Letter 28) [S1]
 - "life, if you know how to use it, is long" (On the Shortness of Life, chapter 2) [S2]
+- "The greatest remedy for anger is delay." (On Anger, book 3, chapter 29) [S6]
+- "the bearer ought always to be more powerful than his load" (On Peace of Mind) [S6]

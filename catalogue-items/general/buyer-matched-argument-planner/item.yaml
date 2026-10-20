@@ -1,0 +1,18 @@
+slug: buyer-matched-argument-planner
+name: "Buyer-matched argument planner"
+summary: "List your selling points and the buyer types you meet. Get which argument leads for each and what to ask first."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: angle_library}
+origin: rebuilt
+version: 1.0.0
+minds: [david-ogilvy, elmer-wheeler]
+credits:
+  - {title: "The Unpublished David Ogilvy (publisher sample, with the 1935 Aga cooker sales manual)", by: "David Ogilvy", used: "Listing every argument, researching the prospect, saying frankly why you came and matching the argument to the listener"}

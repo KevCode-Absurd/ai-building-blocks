@@ -1,0 +1,118 @@
+new_slug: blitzscale-readiness-checker
+name: "Blitzscale readiness checker"
+summary: "Describe your product and market. Get a check on whether to grow at speed, and a plan for the chaos."
+job: plan-strategy
+thinking: high
+thinking_why: "It weighs four conditions that each depend on uncertain facts and must say unknown instead of guessing."
+
+headline: "Blitzscale readiness checker"
+subhead: Describe your product, how people find it and the market around you. It checks four conditions for growing at speed, marks each yes, no or unknown, names what will break first and offers a slower plan if the answer is no.
+
+explain: |
+  Blitzscaling means putting speed ahead of efficiency to win a market fast. It can win a market, and it can burn a company that was never in a race. The cost is real: waste, chaos and bets on things you do not yet know.
+
+  This skill tests whether the conditions for a fast push hold. It asks if the product is worth more as more people use it, how people find it, whether the market rewards the fastest mover and is still uncertain, and whether your business model can scale and there is room to grow. If the answer is yes, it lists what will break first, who owns each risk and what the efficiency losses cost. If no, it offers a slower plan that still builds the network.
+
+when:
+  - Investors, advisers or rivals tell you to grow faster and you are unsure.
+  - Your product seems to get better as more people join, and you want to test that.
+  - You are about to spend heavily on growth before the model is proven.
+
+you_give:
+  - "What the product is and who uses it"
+  - "How new people find it today"
+  - "What you know about rivals, market size and how fast the market is moving"
+  - "Your business model and costs per customer"
+  - "A growth plan you already have (optional)"
+
+you_get:
+  - "Each of four conditions marked yes, no or unknown, with the evidence"
+  - "A clear answer: push now, not yet or slower"
+  - "If yes, the things that will break first with an owner for each"
+  - "If no, a slower plan that still builds the network"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the product, who uses it and how they find it."
+  - "Add what you know about rivals, the market size and your unit costs."
+  - "Mark anything you only believe and cannot show."
+  - "Take the break-first list to the people it names."
+
+how_it_works:
+  - title: Tests the network
+    text: Asks if each new user makes the product more valuable to others.
+  - title: Checks how people find it
+    text: Looks at existing networks, sharing and ads as the ways in.
+  - title: Reads the market
+    text: Asks if the fastest mover wins and if the market is still uncertain.
+  - title: Checks the lasting-growth conditions
+    text: Tests that the model scales and that there is room to grow.
+  - title: Names what breaks first
+    text: If the answer is yes, lists the risks and an owner for each.
+  - title: Offers a slower plan
+    text: If the answer is no, writes a plan that builds the network at a steady pace.
+
+output_shape: |
+  THE FOUR CONDITIONS
+  1. More valuable with more users: yes, no or unknown | evidence
+  2. Ways people find it: yes, no or unknown | evidence
+  3. Market rewards the fastest mover and is uncertain: yes, no or unknown | evidence
+  4. Model scales and there is room to grow: yes, no or unknown | evidence
+
+  THE ANSWER
+  <push now, not yet, or go slower> and why
+
+  IF YES: WHAT BREAKS FIRST
+  <thing> | <who owns it> | <early sign> | <price of the loss>
+
+  IF NO: THE SLOWER PLAN
+  <step> | <what it builds> | <date>
+
+  MISSING
+  <facts that would settle an unknown>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Proof for network value
+    how: Give any number that shows use rising with users, such as invitations sent or repeat use.
+  - what: Your cost to win a customer
+    how: Give the real number. Growth that costs more than a customer is worth should not be pushed.
+  - what: Who else is racing
+    how: Name rivals and their funding. A market with no race may not need speed.
+  - what: Your cash runway
+    how: State months of cash. It sets how long a push can run.
+
+judge:
+  - Each of the four conditions is marked yes, no or unknown.
+  - The first things to break are named with an owner.
+  - A slower option is offered if the answer is no.
+  - Efficiency losses are priced, not ignored.
+  - Unknowns are not turned into yeses.
+
+test:
+  - "Run it on a company whose outcome you know. Check that its answer fits what happened."
+  - "Change one answer from yes to unknown and see that the final answer changes too."
+  - "Run it twice. The four marks should stay the same."
+
+improve:
+  - "Add the facts of your field to condition 3, such as how fast customers switch."
+  - "Add your own list of what usually breaks, such as hiring, support or fraud."
+  - "Save the unknowns as a list of tests to run before you push."
+  - "Pair it with a plan builder to put dates on the slower plan."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It weighs claims and writes a check report in plain text."}
+    - {name: "A spreadsheet", why: "Holds your cost to win a customer and the lifetime value."}
+  inputs:
+    - "Cohort data showing whether users stay"
+    - "Your cost to win a customer"
+    - "Notes on rivals' funding and speed"
+
+terms:
+  - term: Blitzscaling
+    meaning: Growing as fast as possible and accepting waste along the way, to win a market before others do.
+  - term: Network effect
+    meaning: A product that becomes more useful to each person as more people use it.

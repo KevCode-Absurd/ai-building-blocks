@@ -1,0 +1,20 @@
+slug: customer-conversation-notes-sorter
+name: "Customer conversation notes sorter"
+summary: "Paste raw notes from customer talks. Get facts, praise and feature ideas told apart, plus the follow-up question for each."
+category: general
+type: skill
+role: compress
+job: research
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds: [rob-fitzpatrick, steve-blank, eric-ries]
+credits:
+  - {title: "The Mom Test: how to talk to customers and learn if your business is a good idea when everybody is lying to you", by: "Rob Fitzpatrick", url: "https://www.momtestbook.com/", used: "The three kinds of bad data (compliments, fluff, ideas), how to deflect, anchor and dig, and the note-taking marks for emotions, pains, goals, obstacles, workarounds, money and follow-ups"}
+  - {title: "The Mom Test with Rob Fitzpatrick", by: "Brian Rhea, Bright & Early podcast", url: "https://brianrhea.com/podcast/the-mom-test-with-rob-fitzpatrick/", used: "Recording exact words with emotion markers and sharing raw notes with the team, not only conclusions"}

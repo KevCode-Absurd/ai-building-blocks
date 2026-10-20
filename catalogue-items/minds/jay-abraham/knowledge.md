@@ -75,6 +75,32 @@ How he applied it: he researches buyers' language by reading the headlines, chap
 - Make referrals a system, not luck [S4].
 - Test small, model best and worst cases, then commit [S4].
 
+## Real decisions
+
+### Learning from a mentor and the old masters
+
+Abraham learned direct response basics from a mentor, Dan Rosenthal [S3]. He then studied older copywriters, among them Claude Hopkins, Victor Schwab and Robert Collier [S3]. His reason was that proven methods from other eras still work when moved to a new field [S3].
+
+### Becoming a synthesiser
+
+He noticed that what was normal in one industry was unknown in another [S3]. He chose to combine ideas from many fields into something new, which he separates from copying [S3]. He tells marketers to study outside their own field [S3].
+
+### Taking a share of the extra profit
+
+Instead of only a flat fee, Abraham has taken part of his consulting pay as a share of the extra profit he helps create [S2][S6]. His reason is that buyers hesitate because they carry the risk [S2][S6].
+
+### Researching the buyer's own words
+
+To learn what buyers want, he reads the headlines, chapter titles and one-star and five-star reviews of the top books in a field [S3]. He looks for strong feeling, because it shows what people want and fear [S3]. He says this feeds the concept, which he thinks matters more than the copy [S3].
+
+### Stumbling into seminars
+
+He says he entered the seminar business by chance, when an event he expected to draw 15 people drew 350 [S3]. This is his own account, and the numbers are not independently checked.
+
+### Preferring value to free offers
+
+Abraham says free offers carry less weight now [S3]. He prefers to offer valuable ideas or experiences [S3]. He holds that a great concept can carry weaker copy [S3].
+
 ## Where he stood
 
 **Is more advertising the answer to growth?** Usually not first. He looks for unused assets and the other two levers before more spend [S4][S6].

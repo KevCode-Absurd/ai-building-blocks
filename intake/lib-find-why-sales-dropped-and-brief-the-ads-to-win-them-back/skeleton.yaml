@@ -1,0 +1,47 @@
+# Workflow skeleton chaining existing library skills (docs/INTAKE.md).
+id: lib-find-why-sales-dropped-and-brief-the-ads-to-win-them-back
+source:
+  title: "AI Blocks library"
+  by: "AI Blocks"
+  kind: other
+  rights: ours
+workflow:
+  slug: find-why-sales-dropped-and-brief-your-next-ads
+  name: "Find why sales dropped and brief your next ads"
+  summary: "Give it your ad results. Get the reasons sales fell, ideas you haven't tried, a test brief and headlines."
+  when: "your cost per sale rose and you need to know why and what to make next."
+  job: read-ad-results
+  level: advanced
+steps:
+  - name: Find why sales dropped
+    skill: ad-sales-drop-analyst
+    job: analysis
+    from: "skill: ad-sales-drop-analyst"
+    method: ["Recalculate every rate from its totals", "Check the counting first", "Split the change into its links", "Rank the reasons and propose fixes"]
+    inputs: [performance_sheet]
+    outputs: [audit_report]
+    note: "Works out which link in the chain moved and ranks the likely reasons."
+  - name: Find what you have not tried
+    skill: untried-ad-idea-finder
+    job: analysis
+    from: "skill: untried-ad-idea-finder"
+    method: ["Record every past ad", "Map moments, values, buyer knowledge, openings and form", "Rank the five biggest gaps", "Write one idea per gap"]
+    inputs: [brand_brain, performance_sheet!, reference_set!, audit_report!, voc_reviews!, persona!]
+    outputs: [audit_report, brief]
+    note: "Uses the drop report to aim new ideas at places your ads have not been."
+  - name: Write the test brief
+    skill: ad-test-brief-writer
+    job: ads
+    from: "skill: ad-test-brief-writer"
+    method: ["Grade the evidence", "Choose explore, extend or refresh", "Aim ideas at different buyer doubts", "Write three versions per idea"]
+    inputs: [brand_brain, performance_sheet!, voc_reviews!, competitor_set!, audit_report!, brief!]
+    outputs: [brief]
+    note: "Turns the ideas into a brief that fits what your results prove."
+  - name: Write the headlines
+    skill: ad-headline-writer
+    job: copy
+    from: "skill: ad-headline-writer"
+    method: ["Set what the line may say", "List the material for each way in", "Write one line per way in", "Mark the line to test first"]
+    inputs: [brief, product_data]
+    outputs: [ad_copy]
+    note: "Writes headlines for the brief's ideas and marks the one to test first."

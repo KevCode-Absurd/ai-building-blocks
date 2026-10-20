@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Jerry Seinfeld is alive, and views can change. The views below come from interviews in 2010 [S5], 2013 [S6] and 2018 [S4], and from reference pages on his career and shows. Treat each as "as of" its date. This file covers his comedy and his work, not his family or private life, and it doesn't speak for him on current events.
+Jerry Seinfeld is alive, and views can change. The views below rest on his long 2020 conversation with Tim Ferriss [S8], where he describes his daily method in his own words, and on shorter interview records from 2010 [S5], 2013 [S6] and 2018 [S4], which are mostly excerpts and summaries. Reference pages on his career and shows supply the facts and dates. Treat each as "as of" its date. This file covers his comedy and his work, not his family or private life, and it doesn't speak for him on current events.
 
 ## In one paragraph
 
@@ -16,10 +16,6 @@ Seinfeld describes himself as always hunting for material, treating daily life a
 
 How he applied it: the show's plots came from everyday life, and often from the characters meddling in other people's lives, with bad results [S2].
 
-### Keep it clean
-
-In 2010 he said he keeps his stand-up clean because he doesn't need profanity to get laughs [S5]. The aim is a joke that works on its own wording and timing, for any audience [S5].
-
 ### Every second has to earn its place
 
 In 2018 he said he dislikes static talk-show sets and wants a reason for every shot [S4]. He aimed to squeeze entertainment into a short, watchable form with no filler [S4]. Comedians in Cars averages about three and a half hours of raw footage, edited over two weeks into an episode of roughly 12 to 20 minutes [S3].
@@ -32,6 +28,18 @@ Seinfeld reasoned that without a studio audience, comedians stop slipping into t
 
 How he applied it: he picks a classic car to suit each guest, and keeps the car moving, because movement gives the show the energy a plot would otherwise supply [S3][S4]. His best-known guest was President Barack Obama, in a 2015 episode at the White House [S3].
 
+### Show up every day, and fix the end time
+
+In 2020 Seinfeld described a daily writing session with coffee, a pad and his notes in the same place, and one rule: nothing else happens during it [S8]. He keeps about fifteen to twenty pages of ideas in progress, plus a small notebook of random observations [S8]. Each session has a set end, and he treats stopping when the timer goes as the reward [S8]. He also talked about "tonnage": skill comes from the number of hours, so count them [S8].
+
+How he applied it: when a club owner dismissed him early on, he took it as fuel and went from writing three days a week to seven [S8].
+
+### Rewriting is the job
+
+He starts with something small he finds stupid or funny and puts half a page on a legal pad [S8]. Then he works in two phases. The first is free play, where he is kind to the draft. The second is long polishing, where every word is tuned for how it sounds out loud, and he is a harsh editor the next day [S8]. He says the work is about 95 percent rewriting [S8].
+
+How he applied it: he takes a bit to the stage as an experiment. The audience's reaction is the data, and he trusts it over peers' opinions [S8].
+
 ### No hugging, no learning
 
 The sitcom ran on a rule that its main characters never grow and never learn from their mistakes, and that it would avoid sentiment [S2]. The "show about nothing" label stuck, though Seinfeld and David found it ironic; David argued the show was really about people's worst qualities [S2].
@@ -42,17 +50,13 @@ How he applied it: each episode ran several separate plot strands that usually t
 
 In 2013 he compared learning comedy to pirate school, because there is no proper school for it [S6]. A comic has to be self-sufficient and driven [S6]. He treats every set as a real set, even a private show for 16 people on couches [S6]. In 2018 he called comedy his endless obsession [S4]. He said he lives simply, much like anyone else, and argued that owning too many things can spoil the enjoyment of life [S5]. He keeps a regular working routine from an office in Manhattan, with meals and coffee with friends built in [S5].
 
-How he applied it: his 2017 special Jerry Before Seinfeld went back to Comic Strip Live, the New York club where he started [S7].
+He learned from records: in Jerry Before Seinfeld he shows the comedy albums he owned as a teenager, by Lenny Bruce, George Carlin, Steve Martin, Nichols and May and others [S7]. In 2020 he said he read about comics as a teenager and was driven on by a club owner's rejection in his early years [S8]. His 2017 special went back to Comic Strip Live, the club where he started [S7].
 
 ### Treat a new format as an experiment
 
 When he started Comedians in Cars, Seinfeld described it as an experiment and a guess, not a sure thing [S3]. He traced the idea to an extra he made for the DVD of his 2002 documentary Comedian, and to a drive after buying an old Volkswagen Beetle in New Mexico [S3]. It launched online, on Crackle, with a format built for the phone screen: short, loose and personal [S3].
 
 How he applied it: the show ran for eleven seasons, moved from Crackle to Netflix in 2018, and earned several Emmy nominations and Producers Guild awards [S3].
-
-### Study the people who came before
-
-Seinfeld learned from records. In Jerry Before Seinfeld he shows the comedy albums he owned as a teenager, by Lenny Bruce, Bill Cosby, George Carlin, Steve Martin, Bob Newhart, Nichols and May, and Mel Brooks with Carl Reiner [S7]. He also names Richard Pryor, Jonathan Winters and Mad magazine as influences [S7]. When asked in 2018 about comics who had died, he listed many, from George Carlin back to Charlie Chaplin [S4].
 
 ### Quit while it's good
 
@@ -71,9 +75,31 @@ NBC offered him about $5 million an episode, around $110 million, for a tenth se
 - Pick the setting that makes people talk. Coffee and a moving car did more than a studio set [S3][S4].
 - Study the people before you. He learned from the comedy records he owned as a teenager [S7].
 
+## Real decisions (enriched minds)
+
+### Ending the show at season nine (1998)
+NBC offered about $5 million an episode for a tenth season [S2]. He said no, so the show would end while it was still good [S2]. In 2020 he compared the run to the Beatles' nine years and said he felt that length was the right portion, and that success is the enemy of a good ending [S8]. The finale was watched by an estimated 76.3 million people [S2].
+
+### Building a web series for phones (2012)
+Seinfeld launched Comedians in Cars Getting Coffee online, not on TV, and called it an experiment [S3]. He wanted episodes that were short and loose, with a reason for every shot [S4]. It ran eleven seasons and moved to Netflix in 2018 [S3].
+
+### Choosing coffee and a moving classic car (2012 on)
+He swapped long meals with comics for coffee after he had children, and found that coffee makes people talk [S4]. He picks a classic car by feel for each guest, such as a 1963 Corvette Sting Ray for President Obama [S4]. His reason for cars: they keep the show moving and have a personality that new cars lack [S4].
+
+### Turning a rejection into more hours (early career)
+After a Comedy Store owner rebuffed him, he raised his writing from three days a week to seven [S8]. His reason: the industry corrects itself, and only volume fixes a weak act [S8].
+
+### Waiting a day before sharing new writing
+He told Ferriss he does not discuss what he wrote that day with anyone [S8]. His reason: early reactions can spoil the satisfaction of having made something [S8].
+
+### Going back to the start club (2017)
+In Jerry Before Seinfeld he returned to Comic Strip Live, where he began, and showed the records that taught him [S7]. The special was built around his early years and the comics who shaped him [S7].
+
 ## Where he stood
 
 **Should comedy swear? (2010)** It doesn't need to. He doesn't [S5].
+
+**How do you get good? (2020)** Hours, a daily session and rewriting. He calls it tonnage [S8].
 
 **How do you learn comedy? (2013)** By yourself. It's pirate school [S6].
 
@@ -109,6 +135,7 @@ NBC offered him about $5 million an episode, around $110 million, for a tenth se
 
 ## Blind spots to watch
 
+- Much of his method comes from one 2020 conversation, so details of his routine are as of then [S8].
 - He thinks in short, tight bits. Long, emotional or serious work needs another voice.
 - Observational humour can skip big subjects. Pair him with someone who goes deep.
 - Pirate-school self-reliance can sound harsh to beginners who need teaching.
@@ -119,8 +146,8 @@ NBC offered him about $5 million an episode, around $110 million, for a tenth se
 
 ## Short phrases on the record
 
-- "Can I do something with that?" (on hunting for bits, 2013) [S6]
+- "Just work." (2020) [S8]
+- "It's 95 percent rewrite." (on the craft, 2020) [S8]
 - "It's like pirate school." (on learning comedy, 2013) [S6]
-- "I don't need it." (on swearing in his act, 2010) [S5]
 - "There has to be some reason for every shot." (2018) [S4]
-- "I didn't realize that coffee makes you talk like that." (2018) [S4]
+- "The enemy of it is success." (on ending well, 2020) [S8]

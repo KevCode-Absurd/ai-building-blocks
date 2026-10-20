@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "A Tale of Two Cities (Project Gutenberg eBook #98)", by: "Charles Dickens", url: "https://www.gutenberg.org/files/98/98-h/98-h.htm", kind: own-words}
   - {n: 5, title: "Bleak House in parts (Book of the Month, November 2004)", by: "University of Glasgow Library", url: "https://www.gla.ac.uk/myglasgow/library/files/special/exhibns/month/nov2004.html", kind: reference}
   - {n: 6, title: "Oliver Twist (Project Gutenberg eBook #730)", by: "Charles Dickens", url: "https://www.gutenberg.org/files/730/730-h/730-h.htm", kind: own-words}
+  - {n: 7, title: "Sketches by Boz (1836), including Our Parish, Sketches of Young Gentlemen and The Pantomime of Life", by: "Charles Dickens", url: "https://www.gutenberg.org/ebooks/882", kind: own-words}
 tests:
   - {kind: use, prompt: "Plan a six-part email series about learning to cook, where every email ends on a reason to open the next one."}
   - {kind: use, prompt: "Write the opening 150 words of a story about a grumpy landlord who finds a letter under his door."}

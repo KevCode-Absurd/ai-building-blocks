@@ -30,6 +30,7 @@ sources:
   - {n: 6, title: "Stripe, Inc.", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Stripe,_Inc.", kind: reference}
   - {n: 7, title: "About Stripe", by: "Stripe", url: "https://stripe.com/about", kind: reference}
   - {n: 8, title: "Stripe 2023 annual letter (introduction)", by: "Stripe", url: "https://stripe.com/annual-updates/2023", kind: reference}
+  - {n: 9, title: "Patrick Collison on Fast, Progress and Economics (Conversations with Tyler, Collison as interviewer)", by: "Tyler Cowen and Patrick Collison, Conversations with Tyler", url: "https://conversationswithtyler.com/episodes/patrick-collison/", kind: own-words}
 tests:
   - {kind: use, prompt: "Our small team takes three months to launch a simple new web page. Write a one-page plan to do it in two weeks, and list what slows us down now."}
   - {kind: use, prompt: "Write a list of ten open questions about how small shops could sell more online, the kind nobody has answered well."}

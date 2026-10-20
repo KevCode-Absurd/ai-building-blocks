@@ -1,0 +1,123 @@
+new_slug: ai-model-training-debugger
+name: "AI model training debugger"
+summary: "Describe your model, data and what goes wrong. Get a check order that finds silent bugs before tuning."
+job: set-up-ai
+thinking: high
+thinking_why: "It must reason about why a model could fail silently, across data, code and settings."
+
+headline: "AI model training debugger"
+subhead: Describe the model you are training, your data and what goes wrong. It gives a fixed order of checks, from looking at the data by hand to overfitting one tiny batch, so you find silent bugs before you spend time tuning settings.
+
+explain: |
+  Model training fails quietly. Code runs, numbers come out, and the model is still wrong because of a bad label, a mixed-up shape or a wrong setting. People then tune settings for days on top of a bug.
+
+  This skill sets an order of work. It starts with looking through the data by hand for a long time, then a small model that is hard to break, with a fixed seed and a dumb baseline. It checks the starting loss against what chance predicts, tries to overfit one tiny batch, grows the model one piece at a time, and only then adds limits to reduce overfitting. Before every step it states the expected result, so a surprise tells you something.
+
+when:
+  - Your model trains without errors and still gives poor results.
+  - You are about to tune settings and are not sure the pipeline is right.
+  - A model that worked before has stopped improving.
+
+you_give:
+  - The model, the task and the data, with sizes
+  - What you see, such as loss curves or scores (optional)
+  - Your training code or settings (optional)
+you_get:
+  - The order of checks for your case, with the expected result for each
+  - What each failed check points to
+  - A list of changes made one at a time with results
+  - Where to stop checking and start tuning
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the model, the task, the data and what goes wrong. Paste the loss curve or scores if you have them.
+  - Do the first check it gives and send back what you saw.
+  - Make only one change per run and write down the result.
+  - Move to tuning only when all the checks pass.
+
+how_it_works:
+  - title: Inspects the data
+    text: Looks through the data by hand for duplicates, bad labels, imbalance and odd cases.
+  - title: Builds a baseline
+    text: Builds a small model that is hard to break, with a fixed seed, and a dumb baseline to beat.
+  - title: Checks the start
+    text: Compares the starting loss with what chance predicts.
+  - title: Overfits one batch
+    text: Trains on one tiny batch. If it will not overfit, there is a bug.
+  - title: Grows the model
+    text: Makes the model big enough to overfit, adding one piece at a time.
+  - title: Regularises
+    text: Adds more real data first, then augmentation, then limits.
+  - title: Tunes last
+    text: Searches settings at random, then ensembles and waits for the final gain.
+
+output_shape: |
+  THE SETUP
+  <model, task, data, size, symptom>
+
+  CHECK ORDER
+  1. Data by hand | expected: <result> | found: <result or MISSING>
+  2. Small baseline | expected: <score> | found: <...>
+  3. Starting loss | expected: <value from chance> | found: <...>
+  4. Overfit one batch | expected: <near zero loss> | found: <...>
+  5. Grow the model | expected: <...> | found: <...>
+  6. Regularise | expected: <...> | found: <...>
+  7. Tune | expected: <...> | found: <...>
+
+  WHAT EACH FAIL POINTS TO
+  <check> | likely cause: <list>
+
+  CHANGE LOG
+  Run <n> | one change: <what> | expected: <result> | result: <...>
+
+  STOP POINT
+  <where checking ends and tuning starts>
+
+  MISSING / CHECKS MISSED
+  <lists>
+
+tweaks:
+  - what: Data details
+    how: Give sizes, label types and how the data was collected. The first check depends on it.
+  - what: Loss curve and scores
+    how: Paste them. The starting loss and the fit checks are read from them.
+  - what: Number of classes
+    how: Needed to work out the starting loss expected from chance.
+  - what: Your code
+    how: Paste the training loop and data code. Common silent bugs are in them.
+
+judge:
+  - The data was inspected by hand before any model change.
+  - A baseline score is recorded.
+  - One tiny batch can be overfit.
+  - Only one change was made per run.
+  - Every step states the expected result before it ran.
+
+test:
+  - Run it on a model with a bug you already fixed. See if the check order finds it.
+  - Remove the loss curve and see that the first checks do not depend on it.
+  - Run it twice. The check order should repeat.
+  - Follow it on a small model and see that each expected result matches what you saw.
+
+improve:
+  - Add your framework's common silent bugs, such as wrong shapes or missing resets, to the fail list.
+  - Add the metric you care about, so the baseline uses it.
+  - Keep the change log across projects so you learn which bugs repeat.
+  - Pair it with a data cleaning pass if the first check finds many bad labels.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reasoning about causes and planning the check order is text work any strong chat AI does."}
+    - {name: "Your training framework and a notebook", why: "Each check is a small run you do and report back."}
+  inputs:
+    - "A sample of the data with labels"
+    - "The loss curve from a run"
+    - "The training code"
+
+terms:
+  - term: Overfit one batch
+    meaning: Train on a very small set until the model gets nearly everything right. A model that cannot do this has a bug.
+  - term: Baseline
+    meaning: A simple model or rule that sets the score a better model must beat.
+  - term: Regularise
+    meaning: Add limits or data that stop a model from memorising the training set.

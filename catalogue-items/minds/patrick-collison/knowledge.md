@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Patrick Collison is alive, and views can change. This data set comes from pages on his personal website, which he updates over time: a list of fast projects [S1], advice to his younger self [S2], and a list of open questions [S3]. It adds his 2022 email to Stripe staff [S4], Stripe's own pages [S7][S8], and public reference pages [S5][S6]. Treat each view as "as of" the date we read it, 2026, or the date of the email, 2022. Nothing here tells you what he thinks about events after that.
+Patrick Collison is alive, and views can change. This data set comes from pages on his personal website, which he updates over time: a list of fast projects [S1], advice to his younger self [S2], and a list of open questions [S3]. It adds his 2022 email to Stripe staff [S4], Stripe's own pages [S7][S8], and public reference pages [S5][S6]. Treat each view as "as of" the date we read it, 2026, or the date of the email, 2022. Study notes on a live interview where he questions the economist Tyler Cowen show how he probes an answer [S9]. Nothing here tells you what he thinks about events after that. For this pass only Wikipedia and short study notes were on disk in full; his own pages are as read earlier.
 
 ## In one paragraph
 
@@ -74,6 +74,29 @@ How he applied it: those leaving got at least 14 weeks of pay, their 2022 bonus,
 - Trust your own sense of what's important, even if others disagree [S2].
 - When you're wrong, say what you got wrong and own it [S4].
 - Build tools that help many other firms grow [S7].
+
+## Real decisions
+
+### Leave college and keep building (2007 to 2009)
+He and John founded the company that became Auctomatic in 2007 and sold it in March 2008 [S5]. He then left MIT in 2009 after starting businesses and started Stripe in 2010 [S5]. His advice page says to go deep, become an expert and skip the default path [S2].
+
+### Run a private beta before launch (2011)
+Stripe ran a private beta, then launched in September 2011 [S6]. The stated focus was craft and reliability before reach [S6].
+
+### Build the next product on the same base (2012 to 2018)
+Stripe built in layers, from Connect in 2012 to fraud tools and card issuing in 2018, with Atlas in 2016 for founders abroad [S6]. The stated aim was to improve the conditions for economic growth [S7].
+
+### Fund COVID research without the usual delay (April 2020)
+With Tyler Cowen he launched Fast Grants to fund COVID-19 research quickly [S5]. It followed from his page on how fast big projects were once built and how slow they are now [S1][S5].
+
+### Fund a new kind of science institute (2021)
+He co-founded the Arc Institute, a non-profit for biomedical research [S5].
+
+### Cut 14% of staff and say why (November 2022)
+He wrote that Stripe had hired too many people for the world it was in and that costs had grown too fast [S4]. Leavers got at least 14 weeks of pay, their 2022 bonus, paid-out leave, six months of health costs, faster vesting and help with visas and jobs [S4]. Each person heard it one to one from a manager [S4].
+
+### Ask the question instead of giving the view (live interview)
+In a live interview with Tyler Cowen he pressed on whether economics can reach settled answers or mostly explains events after the fact, and asked "But wait" when an answer came fast [S9]. In his own words he prefers to ask [S9].
 
 ## Where he stood
 

@@ -1,0 +1,129 @@
+new_slug: sales-agent-training-planner
+name: "Sales agent training planner"
+summary: "Describe your product and who could sell it. Get a short course, a pay and prize plan and a first-month schedule."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It designs pay and training together and must keep promises affordable."
+
+headline: "Sales agent training planner"
+subhead: "Give it your product and the people who could sell it. It writes the method as repeatable steps and builds a short course. You also get a pay and prize plan, the records to keep and a first-month schedule."
+
+explain: |
+  Agents quit when they do not know what to do, what they will earn or whether anyone else is doing it. Owners lose money when pay promises outrun the margin.
+
+  This skill starts from a product tested on real people and writes the method as steps an agent can repeat and show. It builds a short course, sets commission so a first week's pay is easy to see, and adds prizes beyond sales. It plans how agents meet, lists the records and who keeps them, and sets a month schedule. Commission is the part of each sale paid to the agent.
+
+when:
+  - "You want others to sell your product."
+  - "Agents sign up and drop out in the first month."
+  - "You need a plan for pay, prizes and training that you can afford."
+
+you_give:
+  - "Your product and the problem it solves"
+  - "Who could sell it"
+  - "Your price, cost and what you can afford (optional)"
+you_get:
+  - "A short course, module by module"
+  - "Commission with a first-week pay example"
+  - "Prizes and a meeting plan"
+  - "Records to keep and a first-month schedule"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe your product and who could sell it."
+  - "Add price and cost if you have them."
+  - "Run the course with one or two agents before you recruit more."
+  - "Tell the skill what they found hard and ask it to revise."
+
+how_it_works:
+  - title: "Tests the product"
+    text: "On people you know, with a clear result."
+  - title: "Writes the method"
+    text: "Steps an agent can repeat and show."
+  - title: "Builds the course"
+    text: "Modules in order, each with a check."
+  - title: "Sets the pay"
+    text: "Commission with a first-week example."
+  - title: "Adds prizes"
+    text: "Beyond sales: recruiting, repeat buyers, local good."
+  - title: "Plans meetings"
+    text: "A local group and a yearly gathering."
+  - title: "Lists records"
+    text: "Who keeps what."
+  - title: "Sets the month"
+    text: "A week-by-week schedule."
+
+output_shape: |
+  PRODUCT TEST
+  <people, questions, what counts as working>
+
+  METHOD STEPS
+  1. <step> | NEEDS DEMO or can be shown
+
+  COURSE
+  <module> | Time: <x> | Check: <how>
+
+  PAY
+  Commission: <rule> | Week one at <3 levels>: <amounts> | Affordable: <yes/no/unknown>
+
+  PRIZES
+  <prize> | Won by: <rule>
+
+  MEETINGS
+  <local>, <yearly>
+
+  RECORDS
+  <record> | Kept by: <who>
+
+  FIRST MONTH
+  Week 1: <...> Week 2: <...> ...
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "Price and cost"
+    how: "Real numbers make the pay plan exact."
+  - what: "Agent time"
+    how: "Part-time and full-time agents need different courses."
+  - what: "Where agents work"
+    how: "Door to door, online and at events change the method."
+  - what: "Your size"
+    how: "A few agents need less record keeping than many."
+
+judge:
+  - "A new agent could say their week-one pay."
+  - "Every method step can be shown."
+  - "Prizes reward more than sales."
+  - "Each record has an owner."
+  - "The pay plan is affordable at your margin."
+
+test:
+  - "Train one agent with the course and note where they get stuck."
+  - "Check week-one pay against your margin."
+  - "Run it twice. The course order should stay close."
+  - "Hold one meeting and note what agents ask for."
+
+improve:
+  - "Add your product care or safety steps to the course."
+  - "Add your own limits on pay."
+  - "Save agent feedback in a notes file."
+  - "Pair it with \"Post-sale follow-up planner\" so agents keep their buyers."
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Model the pay at three sales levels against your margin."}
+    - {name: "Any good chat AI", why: "Drafting the course and schedule is text work."}
+  inputs:
+    - "Price, cost and margin"
+    - "Results from people who tried the product"
+    - "A list of likely agents and their time"
+
+terms:
+  - term: "Commission"
+    meaning: "The share of each sale paid to the agent."
+  - term: "Agent"
+    meaning: "A person who sells your product for you."

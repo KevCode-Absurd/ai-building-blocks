@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-April Greiman is alive, and views can change. Everything below comes from a long interview she gave in 2019 [S2], her own account of making *Does It Make Sense?* in 1986 [S3], short quotes in a museum post from 2025 [S4] and an overview article [S5], plus a reference page [S1]. Treat each view as "as of" its source. Nothing here tells you what she thinks about tools or events after 2025.
+April Greiman is alive, and views can change. Everything below comes from a long interview she gave in 2019 [S2], her own account of making *Does It Make Sense?* in 1986 [S3], a museum post from 2025 that describes her method and quotes her [S4] and an overview article [S5], plus a reference page [S1]. Treat each view as "as of" its source. Nothing here tells you what she thinks about tools or events after 2025.
 
 ## In one paragraph
 
@@ -64,6 +64,29 @@ Her 1986 project shows a working method in three stages. First she spent months 
 
 How she applied it: she put her own body, life-size and pixelated, at the centre of a design magazine, and wrote her own text about chaos, order and creation around it [S3]. A museum later called the result a step beyond the rigid, formula-driven computer graphics of the period [S3].
 
+## Real decisions
+
+### Buying a Mac on a whim, 1984
+She went to Alan Kay's talk through a friend, then bought her first Macintosh from a store in Carmel, thinking she could have some fun with it. She could not stop looking at it. She called it a kind of co-creator [S2]. In the same year she dropped the title graphic designer and began calling herself a trans media designer and artist [S4].
+
+### Making herself the canvas
+Invited to do an issue of *Design Quarterly*, she was flattered and daunted. She chose to make an actual-size image of herself as the underlying idea, a way to show the evolution of thinking [S3][S2].
+
+### Choosing the tools and their limits
+She sketched in MacPaint, digitized in MacVision, composed in MacDraw and printed on a LaserWriter as separate sheets to be joined. The whole 4 by 8 foot image could be seen on one screen at once [S3].
+
+### Setting the size and the binding
+The printer could handle 3 by 6 feet, but the piece grew. Folding limits led to 33 by 76.5 inches, then 25.5 by 76.5 by moving text to the back. She avoided staples that could tear the poster and used a slipcase with a printed spine [S3].
+
+### Pushing the nude through
+The printer first refused to donate paper because of the nude self-portrait. The client argued that refusing was pre-Renaissance thinking, and the paper came on condition that the printer's name stayed off it [S2].
+
+### Learning to back up
+A system error and an overnight print left out the bottom half of her body. She says the crew learned the hard lesson about backup copies [S3].
+
+### Keeping the textures apart
+She set hand-set type next to bitmapped type, and a coarse video still next to a Hasselblad photograph, so each kept its own texture [S4].
+
 ## How she decides
 
 - Gather widely first, then sketch, then compose in layers [S3].
@@ -124,6 +147,6 @@ How she applied it: she put her own body, life-size and pixelated, at the centre
 
 - "It makes sense if you give it sense." (Eye on Design, 2019) [S2]
 - "Whenever I encounter fear, I don't flee" (Eye on Design, 2019) [S2]
-- "In fact it wasn't true that the Mac was just another pencil." (Eye on Design, 2019) [S2]
-- "Emerging technology was provocative for me" (LACMA, 2025) [S4]
-- "I'm just a very curious person." (Adobe) [S5]
+- "kind of a co-creator, if you will" (Eye on Design, 2019) [S2]
+- "For me, it was playtime." (LACMA, 2025) [S4]
+- "as soon as you've given it a name, it's dead" (Eye on Design, 2019) [S2]

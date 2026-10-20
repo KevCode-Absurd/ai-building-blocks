@@ -1,0 +1,21 @@
+slug: hard-to-use-thing-diagnoser
+name: "Hard-to-use thing diagnoser"
+summary: "Describe a thing people get wrong, or paste support complaints. Get what in the design misleads them and how to fix it."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [don-norman, jony-ive]
+credits:
+  - {title: "Signifiers, not affordances", by: "Don Norman, 2008", used: "Treating the clues a thing gives, signifiers, as the cause of misuse, and blaming the design before the person"}
+  - {title: "How I taught Design for a Better World", by: "Don Norman, 2025", used: "Asking why repeatedly to reach a root cause and testing a fix with someone who has not seen it"}
+  - {title: "Design for a Better World teacher toolkit", by: "Don Norman", used: "Checking that feedback shows what just happened and starting from the smallest fix"}

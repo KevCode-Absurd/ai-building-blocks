@@ -26,6 +26,7 @@ sources:
   - {n: 4, title: "Henry Ford", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Henry_Ford", kind: reference}
   - {n: 5, title: "The Dearborn Independent", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Dearborn_Independent", kind: reference}
   - {n: 6, title: "Ford Model T", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ford_Model_T", kind: reference}
+  - {n: 7, title: "Today and Tomorrow (1926, with Samuel Crowther)", by: "Henry Ford", url: "https://archive.org/details/todaytomorrow0000ford_t6y5", kind: own-words}
 tests:
   - {kind: use, prompt: "Here are the 12 steps it takes us to pack and ship one order. Rewrite the process so the work comes to the packer and wasted steps are gone."}
   - {kind: use, prompt: "Our product has 14 features. Write a one-page case for a simpler version with only the ones customers truly need."}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Neil Patel is alive, and views can change. Everything below comes from interviews he gave in 2013, 2015 and around 2022, from company pages, and from two independent write-ups [S1][S2][S3][S4][S5][S7]. His own website blocked our reader, so we have not used it. Search changes fast, and so does his advice. Treat each view as "as of" the interview it comes from. Nothing here tells you what he thinks about events after that, and nothing covers his private life or plans. His age and birthplace are not confirmed in the sources we read, so we leave them out.
+Neil Patel is alive, and views can change. The firmest base here is the full transcript of a 2013 interview with Pat Flynn on the Smart Passive Income podcast, where he talks at length about how he built traffic and what he tested [S4]. Two more interviews, from 2015 and about 2022, are in the set, but we hold only short records of them, so claims from those lean on earlier study notes and are marked by source [S2][S3]. The rest is company pages and two independent write-ups [S1][S5][S6][S7]. His own website blocked our reader, so we have not used it. Search changes fast, and so does his advice. Treat each view as "as of" the interview it comes from, and note that the 2013 tactics are old. Nothing here tells you what he thinks about events after those dates, and nothing covers his private life or plans. His age and birthplace are not confirmed in the sources we read, so we leave them out.
 
 ## In one paragraph
 
@@ -40,6 +40,24 @@ Patel doesn't expect good content to find readers on its own [S7]. In 2014 he de
 
 How he applied it: he grew the KISSmetrics blog partly with data-driven infographics, built on research, kept to five or six main points, and offered with embed code so other sites would share them with a link back [S7].
 
+### Outreach beats waiting: the 200 list
+
+In 2013 he said a new guide from someone with no following needs a push. His method: pay a freelancer to build four lists of 200 each, covering relevant websites, blogs that cover the topic, Facebook pages and Twitter profiles, with names and emails. Write the outreach templates before launch, post the guide quietly, then send each person a personal note that names their site and why the guide fits their readers [S4]. He put the response at about 5% for sites and blogs, 3% to 5% for Twitter messages and about 2% for Facebook pages [S4]. Generic repeat messages on Twitter get you penalised, so each one must be unique [S4].
+
+How he applied it: he compared two guides of his own. The one he promoted to the 200 lists got close to three times the traffic of the one he held back, until he ran the outreach a few days late and it caught up [S4].
+
+**Make the content worth paying for.** He argued that blog posts are no longer the most striking format. In 2013 he listed podcasts, long guides, comics and long screen-capture video courses as formats few people bother to make, because they take time and money [S4]. His first big guide ran over 45,000 words and the free download crashed his file host's bandwidth limit within an hour [S4]. He hired a co-author when he lacked time and paid a designer to illustrate the guide instead of dropping it into a plain document [S4].
+
+How he applied it: he said he was picky and would "go overboard", and that readers wrote to say they would pay for it [S4].
+
+**Black hat fades, links from real authority last.** He said he once ranked in the top three for hard terms such as online casino and web hosting using black hat tricks, and that the money was good but short-lived [S4]. His view in 2013 was that content marketing and links from authority sites would stay hard to get and so stay worth having [S4]. He expected search engines to compare your link profile with a natural one, for example too many links pointing at the home page looks off [S4]. He thought bought links on sponsored-review blogs had stopped working [S4].
+
+**Fix the dull on-site problems.** Looking at large publishers, he named the common faults: duplicate titles and descriptions across tag and category pages, no XML sitemap, and weak 404 pages [S4]. His trick on a big news site was to list pages that got no search traffic, test whether they were indexed, and show those pages as "related pages" on the 404 screen, which got more of them indexed and lifted traffic [S4]. He said a plugin such as Yoast fixes most of this on WordPress [S4].
+
+**Infographics: design, six points, embed code.** In 2013 he said search engines were devaluing infographic links, but that a well-designed one on a topic relevant to your business can still help [S4]. His rules: keep to about six main points, keep it visual, add an embed code so sharers link back, promote it like any other piece, and choose data-heavy topics that are hard to follow in plain text [S4].
+
+**Mass outreach only with a clean list.** He described a tool that harvests thousands of sites in a category, and said the white-hat use is to have a person clean the list of competitors and junk before mailing it [S4]. He told listeners to start with a few hundred emails, learn what message works, then grow slowly so the list isn't bored or flagged as spam [S4].
+
 ### Measure content by leads and money
 
 He pushes back on the idea that content can't be measured. In 2015 he named three measures: extra traffic, more email sign-ups, and more leads or sales traced back to the blog [S3]. You may not get an exact revenue number, but you can know what a lead is worth [S3]. His own companies, he said, treated content as cash-flow positive [S3]. He was also frank that he doesn't know the exact return on content, or how long it will take [S2].
@@ -68,6 +86,25 @@ How he applied it: he tested video on his About page and home page, and found it
 - Get the email address first, build trust, then sell [S2].
 - Test a channel small, and invest once it proves itself [S2].
 - Adapt when the platforms change [S2].
+- Write the outreach templates before launch and send them personally [S4].
+- Start a mass mailing small, and clean the list first [S4].
+
+## Real decisions
+
+### Writing what people want, not what the keyword tool shows (2013)
+Where most people started from keyword research, he surveyed audiences through Facebook polls, other pages' polls, a site survey tool and talk at events, and wrote what people asked for, expecting search to catch up [S4].
+
+### Holding a launch for outreach (2013)
+He compared his first guide, promoted to the 200 lists, with his second, promoted by his own list first. Traffic to the second was about a third of the first until he sent the outreach, after which it followed the same path [S4].
+
+### Giving half the guide, asking for a tweet (2013)
+He tested a pop-up that offered the rest of a guide after a tweet or like, with a "no thanks" button that let readers carry on. He said many people shared, which sped up reach, and that a developer could build one for around a hundred dollars [S4].
+
+### Leaving black hat (2013)
+After ranking for lucrative terms with tricks, he moved to content and real links because the gains did not last [S4].
+
+### Spending on a long course (2013)
+He said he had signed a $90,000 contract to make about 300 short screen-capture videos covering every part of internet marketing, because few would invest that effort [S4].
 
 ## Where he stood
 
@@ -88,6 +125,7 @@ How he applied it: he tested video on his About page and home page, and found it
 - The same introduction said the *Wall Street Journal* named him a top web influencer and credited him with traffic growth for TechCrunch and Gawker sites [S4]. These are claims from the show's introduction.
 - By 2014, the KISSmetrics blog drew more than 600,000 visitors a month, according to a podcast write-up [S7].
 - Took over Ubersuggest in 2017 and grew it from a free suggestion tool into a full SEO suite [S5].
+- In 2013 he named QuickSprout, Crazy Egg, Hello Bar and KISSmetrics as his ventures, said he sold the survey tool KISSinsights, and described the Advanced Guide to SEO [S4].
 - Co-founded NP Digital with Mike Kamo in 2017. By 2026 the company listed more than 1,000 staff and work in 28 countries [S1].
 - NP Digital also runs the AnswerThePublic tool and the Marketing School podcast [S1].
 - NP Digital describes him as a *New York Times* best-selling author [S1].
@@ -98,6 +136,7 @@ How he applied it: he tested video on his About page and home page, and found it
 - **Different accounts of credit.** Interview introductions call him a co-founder of Crazy Egg [S4], while Crazy Egg's own About page names Amee Shah and John Butler as its co-founders and doesn't mention him [S6]. Treat founder claims carefully.
 - **Advice that assumes resources.** Listeners pointed out that his suggested $500 to $1,000 infographic budget was out of reach for many beginners [S7]. His high-volume method also assumes a team.
 - **Uncertain return.** He has admitted he doesn't know the exact return on content or how long it takes [S2]. Planning on his method means accepting a long, uncertain wait.
+- **Old tactics.** The 2013 interview endorses outreach lists, tweet-to-read gates and mass mailing from harvested lists. Search and platform rules have changed since, and some of these would now risk penalties or spam flags [S4].
 - **Self-reported numbers.** Many figures about his reach come from his companies or show introductions, not independent checks [S1][S4].
 
 ## Blind spots to watch

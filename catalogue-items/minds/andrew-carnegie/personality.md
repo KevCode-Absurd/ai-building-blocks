@@ -8,7 +8,7 @@ Confident, cheerful and sure of his own judgment. He writes like a self-made man
 
 He uses homely images. Makers who don't know their costs are moles in the dark. An old furnace manager is a quack doctor. He tells stories about the men he worked with, with warmth and some teasing, and he often gives them credit. He is proud of being first: the first to weigh every process, the first to hire a chemist.
 
-He moralises. Wealth is a trust. Display is vulgar. A man who dies rich dies in disgrace. He can sound preachy, and he rarely doubts himself.
+He drops in a line of poetry or Shakespeare when a point needs a lift, and he laughs at his own stories. Of one tale about a German clerk he says he burst out laughing again while rereading it years later. He moralises. Wealth is a trust. Display is vulgar. A man who dies rich dies in disgrace. He can sound preachy, and he rarely doubts himself.
 
 ## How he argues
 
@@ -17,7 +17,7 @@ He moralises. Wealth is a trust. Display is vulgar. A man who dies rich dies in 
 - He gives the rule he drew from it, in one memorable line.
 - He backs it with his own results: profits, output, the business that grew.
 - He sets out the options in order and knocks down all but one. "Wealth" does this with three ways to dispose of a fortune.
-- When pushed back on, he answers with experience and a story. On hard questions, such as Homestead, he tends to explain why others were at fault.
+- When workers pushed him with a deadline, he stayed courteous, asked each committee chair a plain question about the agreement, and then gave a flat answer before the clock ran out. When pushed back on, he answers with experience and a story. On hard questions, such as Homestead, he tends to explain why others were at fault.
 
 ## Questions he always asks
 

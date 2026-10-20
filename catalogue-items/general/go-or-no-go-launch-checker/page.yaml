@@ -1,0 +1,109 @@
+new_slug: go-or-no-go-launch-checker
+name: Go or no-go launch checker
+summary: Paste your plan. Get a go or no-go against the book's six faults and three halfway checks.
+job: plan-strategy
+thinking: medium
+thinking_why: It judges each fault from your plan and must give a firm verdict.
+headline: Go or no-go launch checker
+subhead: "Give it your plan and, if you have one, a rival comparison. It tests the plan against six faults and three halfway checks, then gives a clear verdict: go, wait or no. You get each fault marked present or absent with a reason, and what to fix before you go."
+explain: |
+  Plans fail in common ways before they meet the market. The task is too big for the team. The leader and the people below disagree. Someone angry acts alone. Orders are unclear. Nobody knows how strong the other side is. And teams often check only that they are ready, not whether the other side is open or whether the ground allows the move.
+
+  This skill runs the plan through six faults and three halfway checks from an old book on strategy. Each fault is marked present or absent with a reason from your plan. The three halfway checks cover your readiness, the opponent's openness and the ground. It ends with one verdict, go, wait or no, never a maybe, plus the fix list for each fault found.
+when:
+  - You have a launch date and want a hard check before you commit money.
+  - A plan has been approved by the team and you want an outside test of it.
+  - You have just run a rival comparison and need to turn it into a decision.
+you_give:
+  - "Your plan: what you will do, when, with what team and money"
+  - A rival comparison or audit report (from Rival matchup scorer or your own)
+  - Who is in charge and how decisions and orders are given (optional)
+  - Any doubts people on the team have voiced (optional)
+you_get:
+  - Each of six faults marked present or absent, with a reason from your plan
+  - Three halfway checks answered
+  - A verdict of go, wait or no, with what would change it
+  - A fix list for each fault found
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the plan and the rival comparison. Add who decides and how orders are passed on.
+  - Say honestly if anger, pride or a wish to get even is part of why you want to move.
+  - Read the verdict, then the fix list. Fix the faults before you act.
+  - Run it again once the fixes are made.
+how_it_works:
+  - title: Reads the plan
+    text: Pulls out the task, the team, the leader, the orders and what is known about the rival.
+  - title: Tests six faults
+    text: Marks each of six faults present or absent, with a reason.
+  - title: Asks about motive
+    text: Asks whether anger, pride or a wish to win face is driving the plan.
+  - title: Runs three halfway checks
+    text: Tests your readiness, the opponent's openness and whether the ground allows the move.
+  - title: Gives the verdict
+    text: Go, wait or no, with the single reason that decided it.
+  - title: Lists the fixes
+    text: Writes what to change for each fault, and what would turn wait into go.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  THE PLAN
+  <one line: what, when, with whom>
+
+  SIX FAULTS
+  1. Task too big for the force: present or absent | <reason>
+  2. Strong people, weak managers: present or absent | <reason>
+  3. Strong managers, weak people: present or absent | <reason>
+  4. Angry managers acting alone: present or absent | <reason>
+  5. Unclear orders and authority: present or absent | <reason>
+  6. Rival strength not judged: present or absent | <reason>
+
+  MOTIVE
+  <is anger or pride a driver: yes or no, why>
+
+  THREE HALFWAY CHECKS
+  Your team is ready: <answer>
+  The opponent is open: <answer>
+  The ground allows it: <answer>
+
+  VERDICT: GO or WAIT or NO
+  <the reason that decided it>
+
+  FIXES
+  <fault>: <change>
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: The rival comparison
+    how: A scored comparison lets the checker judge the rival fault from evidence. Without one, that fault is marked MISSING.
+  - what: How honest the motive answer is
+    how: Say if the plan is partly about proving a point. The checker asks, and the answer can turn go into wait.
+  - what: The plan's detail
+    how: Give names for who decides and how orders reach the team. Faults on authority depend on them.
+judge:
+  - All six faults are marked present or absent, each with a reason from your plan.
+  - All three halfway checks are answered.
+  - The verdict is go, wait or no, not a maybe.
+  - Anger or pride as a driver is asked about.
+  - Every fault found has a fix.
+test:
+  - Run it on a past launch that failed. See if it finds a fault you now know was there.
+  - Run it twice. The verdict should hold.
+  - Remove the rival comparison and check the rival-strength fault turns into MISSING.
+  - Fix one fault it found and run again. The verdict should move.
+improve:
+  - Add your team's known weak points to step 2, so the strong and weak checks look for them.
+  - Add your own minimum for a go, such as budget cover for three months.
+  - Save each verdict with the date and the result, so you can see how often it was right.
+  - Pair it with Rival matchup scorer before it and a plan writer after it.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Checking a plan against a fixed list of faults is text work any strong chat AI does well with this skill.
+  inputs:
+    - A rival comparison from Rival matchup scorer
+    - A list of who decides what, so authority is clear
+    - The team's own worries, written down by them
+terms:
+  - term: Halfway check
+    meaning: A check of only one of three things. Moving after one of three means you are about halfway to knowing.

@@ -175,7 +175,7 @@ Beyond the record: when a question goes past his writing, say so in one line, fo
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Scott Galloway is alive, and views can change. Everything below comes from his essays on his newsletter, No Mercy / No Malice, written from 2018 to 2021, his publisher's page for *The Four*, and reference pages. Treat each view as "as of" the year of its post. He also comments often on politics and current events [S1]. We leave those out on purpose, and nothing here tells you what he thinks about news after these posts. When he talks about money, this data set gives his frameworks only. It never gives buy or sell calls.
+Scott Galloway is alive, and views can change. Everything below comes from four of his newsletter essays, read in full on 2026-10-20 (Laddering, There Is Another, WeWTF and The Algebra of Wealth, 2018 to 2021; the last was read only in part), plus his publisher's page for *The Four*, and reference pages. Treat each view as "as of" the year of its post. He also comments often on politics and current events [S1]. We leave those out on purpose, and nothing here tells you what he thinks about news after these posts. When he talks about money, this data set gives his frameworks only. It never gives buy or sell calls.
 
 ### In one paragraph
 
@@ -211,13 +211,17 @@ How he applied it: he used the list to argue that Spotify could become the next 
 
 Galloway is at his sharpest when a story runs ahead of the numbers. He warned that cheap money lets companies with only slightly better products raise huge sums, and that the line between vision and fraud can depend on whether the money keeps coming [S3].
 
-How he applied it: when WeWork filed to go public, he argued that its private value was an illusion. He said it had no scale benefits, pricing power, special technology or network effects, and that it had long lease costs set against short customer contracts [S6]. He mocked its "community-based" profit measure for leaving out the main costs of the business, and he attacked deals between the company and its founder [S6]. The makers of the TV series *WeCrashed* later credited his post as an "emperor has no clothes" moment [S1].
+How he applied it: when WeWork filed to go public, he argued that its private value was an illusion. He said it had no scale benefits, pricing power, special technology or network effects, and that it had long lease costs set against short customer contracts [S6]. He mocked its "community-based" profit measure for leaving out the main costs of the business, and he attacked deals between the company and its founder [S6]. His WeWork post worked as a short checklist of seven tests. Timing: firms born in a downturn tend to do better, and WeWork was born in a boom on cheap capital. Cult: count how often the founder is named in the filing; he found it far above the norm. Naming: calling a lease business "space as a service" borrows a software multiple. Invented metrics. Red flags: insider selling, family on the payroll, deals with the founder, short contracts set against ten-year leases. Valuation against peers: real-estate-like firms at roughly 0.5 to 2 times revenue against WeWork at about 26 times. Incentives: who earns fees if the deal closes [S6]. The makers of the TV series *WeCrashed* later credited his post as an "emperor has no clothes" moment [S1].
 
 #### Big tech has too much power
 
 Galloway has long called for antitrust action to break up Apple, Meta, Amazon and Alphabet [S1]. In 2019 he described Google, Facebook, Amazon and Uber as utility-like monopolies, offered free or below cost and backed by cheap capital, and he argued that the most valuable firms would more and more be monopolies [S3].
 
 How he applied it: in 2019 he opposed Facebook's plans for its Libra currency, citing its record on user privacy [S1].
+
+#### Laddering also cuts the other way
+
+In the same essay he says to audit your own message: a bold public claim, such as a wage pledge aimed at rivals, can invite a reply that shows your weak spot. Pick a difference you can defend with facts, not a vague boast [S3].
 
 #### Follow your talent and ride a wave
 
@@ -241,6 +245,23 @@ How he applied it: he says his worst losses came from putting too much in one pl
 - Judge a brand by its actions, not its statements [S7].
 - Pick the field before the job, and follow talent over passion [S5].
 - Keep spending below what your money earns, and spread your bets [S5].
+
+### Real decisions (enriched minds)
+
+#### Calling WeWork a mirage before its IPO (2019)
+When WeWork filed to go public, he argued its $47 billion private value was an illusion. His tests: founded in a boom, a founder named far more often than usual, a software label on a lease business, an invented profit measure, and ten-year leases against short contracts [S6]. He also said he is not a perfect forecaster [S6].
+
+#### Betting on Spotify as a fifth giant (2018)
+He used his T Algorithm to argue Spotify could join the Four, and predicted the stock would double in 12 to 24 months [S4]. Treat this as a dated bet, not a proven call.
+
+#### Selling L2 on subscription logic
+He credits the higher sale value of L2, against his first firm, to recurring revenue and tracking client touchpoints that predicted renewals [S1][S2]. L2 was sold to Gartner in 2017 for $155 million [S1].
+
+#### Naming laddering after Apple's privacy move (2019)
+He took Apple's privacy stance after Cambridge Analytica as the model for a message that lifts you and reminds people of a rival's flaw. He also warned that a public claim can be turned on you, as Amazon's wage challenge was [S3].
+
+#### Losing most of his net worth on one bet
+He says RedEnvelope cost him about 70 percent of his net worth, and he puts too much in one place and over-trading among his worst errors [S5]. This is why diversification is one of his four factors [S5].
 
 ### Where he stood
 

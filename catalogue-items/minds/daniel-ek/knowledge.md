@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Daniel Ek is alive, and views can change. Everything below comes from three notes he wrote to Spotify staff, in January 2023, December 2023 and September 2025, from Spotify's account of its 2022 Investor Day, and from public reference pages [S3][S4][S5][S6]. Treat each view as "as of" the piece it comes from. He became Spotify's executive chairman in January 2026 [S5]. Nothing here tells you what he thinks about events after these pieces, or about Spotify's future plans, and nothing here covers his private life.
+Daniel Ek is alive, and views can change. Everything below comes from three notes he wrote to Spotify staff, in January 2023, December 2023 and September 2025, from Spotify's account of its 2022 Investor Day, a 2026 Skavlan interview [S7], and public reference pages [S1][S2]. The notes to staff and the Investor Day account are held on disk only as short source records, so the detail on them rests on earlier reading of the pages. The interview transcript looks machine made, so its meaning is safer than its exact words, and it is a single interview. Treat each view as "as of" the piece it comes from. He became Spotify's executive chairman in January 2026 [S5]. Nothing here tells you what he thinks about events after these pieces, or about Spotify's future plans, and nothing here covers his private life.
 
 ## In one paragraph
 
@@ -66,8 +66,32 @@ How he applied it: Spotify reported net income of â‚¬1.14 billion for 2024 and â
 - If a cut is needed, make one clear decision rather than many small ones [S4].
 - Own the mistake in your own name [S3].
 - Treat people who leave well, and spell out how [S3][S4].
+- Ask what matters to you and what you enjoy, before what looks impressive [S7].
 - Set long-range targets, then focus on the few moves that matter [S6].
 - Hand over a role when the team is ready [S5].
+
+## Real decisions
+
+### Retire, then start again
+After Advertigo was sold, he had enough money to stop and did, for a few months [S1]. He then wanted a new project, which became Spotify [S1]. In the interview he said money was not what drove him. The aim was to see if music could work better for listeners and artists [S7].
+
+### Go back to the sceptical record labels
+Napster, he argued, was a good service that failed artists, and weak legal choices fed piracy [S7]. He kept returning to doubtful music executives, argued with them, and let a working prototype win them over [S7]. Spotify launched legally in October 2008 [S1].
+
+### Turn down the big buyers
+He has said he refused to sell Spotify to large technology firms, and did not dwell on valuation figures [S7]. He later put another $50 million of his own money into Spotify shares in 2022 [S1]. His reason in the interview was about purpose, not price [S7].
+
+### Move off peer-to-peer
+Spotify first ran on a peer-to-peer model like the one he knew from uTorrent, then switched to a server-client model in 2014 [S1]. The record does not give his reasoning in his own words, so treat the cause as unstated.
+
+### Warn the government, in public
+In 2016 he and Martin Lorentzon wrote an open letter saying Spotify would have to leave Sweden unless rules on housing, stock option tax and schooling changed [S1]. His stated reason was that high tax on stock options made it hard to hire programmers [S1].
+
+### Cut costs in one move
+In January 2023 he cut staff and took the blame for investing ahead of revenue [S3]. By December 2023 he judged smaller cuts were not enough and cut about 17% in one step instead of two years of trims [S4]. He spelled out severance and support for those who left [S3][S4].
+
+### Step back from CEO
+In September 2025 he said he would move to executive chairman, with two co-CEOs reporting to him, calling it his next mission [S5][S1]. He kept control of capital, long-term strategy and regulation [S1].
 
 ## Where he stood
 

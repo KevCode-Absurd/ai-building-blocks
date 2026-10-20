@@ -1,0 +1,42 @@
+# Workflow skeleton for Story webinar series (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: robert-mckee-story
+source:
+  title: "Story webinar series"
+  by: "Robert McKee"
+  kind: course
+  rights: ideas-only
+minds: [robert-mckee]
+workflow:
+  slug: test-a-story-idea-and-make-every-scene-turn
+  name: "Test a story idea and make every scene turn"
+  summary: "Paste your story idea. Get a premise verdict, scenes marked for what changes, and a voice-over test."
+  when: "you are writing a story, script or case study and want it to hold together."
+  job: write-and-tell-stories
+  level: intermediate
+steps:
+  - name: "Story premise tester"
+    skill: story-premise-tester
+    job: ops
+    from: "Story webinar series, course outline"
+    method: ["State the premise in one plain sentence", "Name the truth the story expresses as its controlling idea", "Name the counter idea that argues back", "Test whether the idea can grow from start to end without running out", "Outline the main turns step by step", "Mark where the idea is a recycled formula and what would make it original", "Give a go, rework or drop verdict"]
+    inputs: [question]
+    outputs: [plan, audit_report]
+    note: "The controlling idea, the idea that argues back, and a verdict on its strength"
+  - name: "Scene turn checker"
+    skill: scene-turn-checker
+    job: ops
+    from: "Story webinar series, course outline"
+    method: ["List the scenes in order", "For each scene write what changes in it", "Name the character choice that causes the change", "Mark scenes where nothing turns", "Check that the choice costs the character something, since pressure reveals true character", "Check set-ups have pay-offs later", "Propose cuts, merges or a sharper turn for each flagged scene"]
+    inputs: [plan, question!]
+    outputs: [plan, audit_report]
+    note: "Each scene marked for what changes and which choice changes it, with weak scenes flagged. Reads the plan from the step before"
+  - pause: "Write the script or draft from the scene list."
+  - name: "Voice-over stripping test"
+    skill: voice-over-stripping-test
+    job: ops
+    task: make-video-ads
+    from: "A Study in Voice Over Narration from two recent films, McKee, 9 July 2012"
+    method: ["Split the script into narration lines and scene content", "Remove all narration and read what is left", "Judge whether the story is still well told on its own", "Sort each narration line as telling (replaces drama) or counterpoint (adds a new layer)", "Cut or dramatise every telling line", "Keep only counterpoint lines that add meaning the pictures cannot", "Re-read the stripped version once more"]
+    inputs: [script]
+    outputs: [feedback_notes, script]
+    note: "A verdict on each line: does the story work without it?"

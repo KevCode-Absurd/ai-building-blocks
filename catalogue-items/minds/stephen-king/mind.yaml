@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "On Writing: A Memoir of the Craft", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/On_Writing:_A_Memoir_of_the_Craft", kind: reference}
   - {n: 5, title: "Stephen King on writing, fear and the atrocity of adverbs (2013)", by: "Maria Popova, The Marginalian", url: "https://www.themarginalian.org/2013/03/13/stephen-king-on-adverbs/", kind: secondary}
   - {n: 6, title: "On Writing: A Memoir of the Craft (book page)", by: "Stephen King (official site)", url: "https://stephenking.com/works/nonfiction/on-writing-a-memoir-of-the-craft.html", kind: reference}
+
 tests:
   - {kind: use, prompt: "Write the first 200 words of a story that starts from: what if the town's only grocery store never closed, not even at night?"}
   - {kind: use, prompt: "Here is a paragraph from my short story. Cut the adverbs and weak verbs, and show me what you changed."}

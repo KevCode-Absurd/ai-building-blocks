@@ -1,0 +1,21 @@
+slug: counter-demo-script-writer
+name: "Counter demo script writer"
+summary: "Describe your product and who tries it. Get a short demo script that explains it, then lets the buyer see the result."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: script}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [estee-lauder, sara-blakely]
+credits:
+  - {title: "Estée Lauder quotes", by: "Estée Lauder", used: "Letting the buyer try the product, giving samples and asking who else would like one"}
+  - {title: "Estée Lauder", by: "Wikipedia contributors (licensed text)", url: "https://en.wikipedia.org/wiki/Est%C3%A9e_Lauder_(businesswoman)", used: "Background on how she sold by demonstration and samples"}
+  - {title: "How I Built This: Spanx, with Sara Blakely", by: "NPR, 15 September 2016", used: "Putting the product in a buyer's hands, a visible before and after and fitting a pitch into a short slot"}

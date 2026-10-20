@@ -1,0 +1,19 @@
+slug: ai-coding-agent-rules-writer
+name: "AI coding agent rules writer"
+summary: "Describe your project. Get a plan file and standing rules that make an AI coding agent work one test at a time."
+category: general
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [kent-beck]
+credits:
+  - {title: "Augmented Coding: Beyond the Vibes", by: "Kent Beck", url: "https://newsletter.kentbeck.com/p/augmented-coding-beyond-the-vibes", used: "A plan file with a one-word next-test command, standing rules for the agent, and warning signs to watch for"}
+  - {title: "Canon TDD", by: "Kent Beck", url: "https://tidyfirst.substack.com/p/canon-tdd", used: "The ordered test list and the order of test, code and clean-up"}

@@ -175,7 +175,7 @@ Beyond the record: mark anything he never addressed in one line, for example "Be
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Brian Chesky is alive, and views can change. This data set comes from three letters he wrote and Airbnb published: a 2018 open letter on the kind of company Airbnb should be [S2], his 2020 message on layoffs [S1], and a 2022 email on remote work [S3]. It adds Paul Graham's 2024 essay on a talk Chesky gave [S6] and public reference pages [S4][S5]. Treat each view as "as of" the date of its source, 2018 to 2024. Nothing here tells you what he thinks about events after that.
+Brian Chesky is alive, and views can change. This data set comes from three letters he wrote and Airbnb published: a 2018 open letter on the kind of company Airbnb should be [S2], his 2020 message on layoffs [S1], and a 2022 email on remote work [S3]. It adds Paul Graham's 2024 essay on a talk Chesky gave [S6] and public reference pages [S4][S5]. Treat each view as "as of" the date of its source, 2018 to 2024. Nothing here tells you what he thinks about events after that. For this pass the Wikipedia article and a short summary of the 2020 message were on disk; the letters themselves come from earlier reading of the pages in mind.yaml.
 
 ### In one paragraph
 
@@ -246,6 +246,26 @@ How he applied it: the policy tied flexibility to one shared calendar and roadma
 - Build trust into the product, because strangers have to rely on each other [S2].
 - In a crisis, set clear principles for hard choices first, then act [S1].
 - Keep the company on one roadmap and a fixed release rhythm [S3].
+
+### Real decisions
+
+#### Rent out air mattresses to cover rent (2007 to 2008)
+Short of money in San Francisco, he and Joe Gebbia put air mattresses in their flat for a design conference [S4]. They turned it into Airbedandbreakfast.com in August 2008 and renamed it Airbnb in 2009 [S5]. By March 2009 the company had about 10,000 users and 2,500 listings [S5].
+
+#### Respond to a hosting scandal with an outside review (2016)
+After reports that some hosts turned away guests whose names suggested they were Black, Airbnb hired former U.S. attorney general Eric Holder [S5]. Guest photos are now hidden until a booking is accepted [S5]. The 2018 letter also names trust between strangers as the base of the company [S2].
+
+#### Write down what kind of company this will be (January 2018)
+In an open letter he promised an infinite time horizon, a first yearly stakeholder report and the first independent director on the board, Ken Chenault [S2]. His stated reason was that a 21st-century company should become a 22nd-century one [S2].
+
+#### Cut a quarter of the staff in a travel collapse (May 2020)
+He cut about 25% of staff, narrowed the company to everyday home hosts and experiences, and paused or cut back side projects such as transport and hotels, saying this did not reflect on the teams [S1]. He tied each cut to a future capability and said he would support people with 14 weeks of pay plus a week per year served, a year of health cover, equity for recent hires, laptops and job help [S1]. He listed process rules too: tell people personally, and wait until the details are settled before sharing individual decisions [S1]. Airbnb listed on Nasdaq on 10 December 2020 [S5].
+
+#### Put the whole company on one roadmap (2022)
+A 2022 email set out a live-and-work-anywhere policy, one company calendar and a multi-year roadmap with two big releases a year, in May and November [S3]. His stated reason was that a spread-out company still has to ship together [S3].
+
+#### Stay close to the details (reported 2024)
+Paul Graham reports that after a talk by Chesky he named the idea "founder mode": founders staying in the details rather than handing all to managers [S6]. Graham says Airbnb's free cash flow margin was among the best in Silicon Valley afterwards [S6]. This is Graham's account of Chesky's practice, not Chesky's own text [S6].
 
 ### Where he stood
 

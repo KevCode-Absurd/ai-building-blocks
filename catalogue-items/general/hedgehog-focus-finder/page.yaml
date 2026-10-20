@@ -1,0 +1,129 @@
+new_slug: hedgehog-focus-finder
+name: "Hedgehog focus finder"
+summary: "Describe what you do and what you do well. Get a plain statement of the one thing to focus on."
+job: plan-strategy
+thinking: high
+thinking_why: "It has to find an honest overlap of three things and separate real strengths from competence, which needs careful judgement."
+
+headline: "Hedgehog focus finder"
+subhead: "Give it what you do, what you love and what you do well. It finds where three things overlap: what you care about, what you can be best at and what drives your money. You get a plain statement of the one thing to focus on, a stop-doing list and a bet."
+
+explain: |
+  Many businesses spread across everything they could do. The ones that stay strong find a single focus where three circles overlap: what they are deeply passionate about, what they can be best in the world at, and what drives their money or resource engine. The result is not a goal. It is an understanding of what you are, written as a plain fact.
+
+  This skill asks about each circle, including what you cannot be best at. It names the one measure that drives your engine and writes the overlap in plain words, free of bravado. It then asks what you want to be when you grow up, as an identity and not a cost goal, names what you are fundamentally best at and checks which markets are large and about to change. It ends with a stop-doing list and a bet that fits a named strength.
+
+when:
+  - You are doing too many things and cannot say which one to put first.
+  - You are setting a direction for the next few years and want it grounded in fact.
+  - A new market is tempting you and you want to test it against what you are best at.
+
+you_give:
+  - What you do and who you do it for (required)
+  - What you love, what you do well and what you do badly (required, in the same message)
+  - Your brand file or notes on strengths (optional)
+  - Rivals and what they do best (optional)
+you_get:
+  - A plain statement of the one thing to focus on
+  - The three circles with evidence for each
+  - The measure that drives your money or resource engine
+  - A stop-doing list and a bet that fits a named strength
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you do, what you love and what you do well. Be honest about what you do badly.
+  - Name the one number that drives your income or resources, if you know it.
+  - Read the statement and the stop-doing list. Ask a colleague whether they agree.
+  - Revisit it once a year, or when you face a major choice.
+
+how_it_works:
+  - title: What you love
+    text: Lists what you are deeply passionate about.
+  - title: What you can be best at
+    text: Lists what you could be best in the world at, and what you cannot be best at.
+  - title: The engine measure
+    text: Names the one measure that drives your money or resource engine.
+  - title: Find the overlap
+    text: Finds where the three overlap and writes it as a plain fact, not a goal.
+  - title: Strip the bravado
+    text: Checks the statement is free of bravado and not merely competence.
+  - title: Your identity
+    text: Asks what you want to be when you grow up, as an identity not a cost goal.
+  - title: Large changing markets
+    text: Checks which markets are large and about to change, and picks a bet that fits a strength.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE THREE CIRCLES
+  Passion: <list> | Evidence: <fact>
+  Best at: <list> | Cannot be best at: <list>
+  Engine measure: <one measure> | Why this one: <reason>
+
+  THE FOCUS
+  <one or two sentences, a plain fact, not a goal>
+
+  WHAT YOU WANT TO BE
+  <identity in a sentence>
+
+  FUNDAMENTALLY BEST AT
+  <named strength> | Proof: <fact>
+
+  LARGE MARKETS ABOUT TO CHANGE
+  <market> | Why it is changing: <reason> | Fit with strength: <yes/no/partly>
+
+  THE BET
+  <bet> | Fits: <named strength>
+
+  STOP DOING
+  1. <item> | Why: <reason>
+
+  MISSING
+  <what would sharpen the statement>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Honesty about weaknesses
+    how: Name what you do badly. The best-at circle is only as good as the list of things you cannot be best at.
+  - what: The engine measure
+    how: Pick one measure, such as profit per customer or revenue per hour. Two measures blur the focus.
+  - what: Your rivals
+    how: List what they do best. It shows where being best is out of reach.
+  - what: Proof for strengths
+    how: Give a fact for each strength, such as a result, a rating or a repeat customer.
+
+judge:
+  - It is an understanding, not a goal.
+  - It says what you cannot be best at.
+  - The economic engine is named with a measure.
+  - There is a stop-doing list.
+  - The bet fits a named strength.
+
+test:
+  - Read the focus to a colleague and ask if it describes the business or just sounds good.
+  - Try the stop-doing list on one item for a quarter and see what you miss.
+  - Run it twice. The focus should stay close.
+  - Compare the focus with the last five big choices you made and see how many fit.
+
+improve:
+  - Add your own proof for each strength so the best-at circle is firm.
+  - Add the measure your team already tracks as the engine measure.
+  - Save the focus in your brand file and check new ideas against it.
+  - Pair it with "Business power tester" to test the edge behind the focus.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Probing for the overlap of three ideas is reasoning work any strong chat AI does well."}
+    - {name: "A trusted colleague", why: "Someone who will say when a strength is only competence is worth more than any tool."}
+  inputs:
+    - "Your results by product or service, to find the engine measure"
+    - "Customer reviews that name what you do best"
+    - "A list of things you said no to and the reasons"
+
+terms:
+  - term: Engine measure
+    meaning: The one number that best shows what drives your money or resources, such as profit per customer.
+  - term: Stop-doing list
+    meaning: A list of things you drop because they do not fit the focus.

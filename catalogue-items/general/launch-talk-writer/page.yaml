@@ -1,0 +1,127 @@
+new_slug: launch-talk-writer
+name: "Launch talk writer"
+summary: "Describe your product and who it is for. Get a short launch talk built on one story."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It decides what to cut and which single story carries the talk."
+
+headline: "Launch talk writer"
+subhead: "Describe what you are launching, who it is for and where you will speak. It builds a short talk around one problem, one reveal and one true story. You get a timed script of about two minutes that ends on a belief."
+
+explain: |
+  Most launch talks fail the same way: they walk through features and the room learns nothing it can repeat. The audience wants to know what was wrong, what is now different, and why they should care.
+
+  This skill starts with the problem in the words of the people who have it, then names what is wrong with today's choices in one line. It sets up a reveal by listing pieces people see as separate, then shows they are one thing. It shows the product working with no spec dump, adds one real story if you have it, and ends on a belief a stranger could repeat. It times the talk to two minutes and cuts the weakest part first.
+
+when:
+  - "You are launching a product, feature or project and have two minutes on stage or camera."
+  - "Your team keeps adding features to the talk and it has no clear point."
+  - "You need a short intro for a demo day, a town hall or a launch video."
+
+you_give:
+  - "What you are launching and who it is for"
+  - "Where the talk happens: stage, call or video"
+  - "Product facts and numbers you may quote (optional)"
+  - "One real story from making or using it (optional)"
+you_get:
+  - "A timed script of about two minutes"
+  - "The reveal set up and the demo written as actions"
+  - "One story slot, filled or clearly marked"
+  - "A closing belief line, plus what was cut"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe what you are launching and who has the problem it solves."
+  - "Tell it where you will speak and how long you have."
+  - "Paste the two or three facts that matter, and one true story if you have it."
+  - "Read the script aloud with a timer and change any line that sounds written."
+
+how_it_works:
+  - title: "States the problem"
+    text: "In the words of the people who have it, with no product name yet."
+  - title: "Names what fails today"
+    text: "One plain line on why the current choices let people down."
+  - title: "Sets up the reveal"
+    text: "Lists the separate pieces, then shows they are one thing."
+  - title: "Shows it working"
+    text: "Two or three actions, no spec dump."
+  - title: "Tells one story"
+    text: "A real moment with one lesson, or a marked gap."
+  - title: "Ends on the belief"
+    text: "A line a stranger could repeat, with nothing after it."
+  - title: "Fits the clock"
+    text: "Times each part and cuts the weakest first. Then names any check it missed."
+
+output_shape: |
+  TALK (<total time>)
+
+  PROBLEM (<time>)
+  <one or two sentences in the audience's words>
+
+  WHAT FAILS TODAY (<time>)
+  <one plain line>
+
+  THE REVEAL (<time>)
+  <the separate pieces, then the one thing>
+
+  SHOWN WORKING (<time>)
+  <two or three actions>
+
+  STORY (<time>)
+  <four to six true sentences, or MISSING: story>
+
+  CLOSE (<time>)
+  <the belief line>
+
+  CUT
+  <what was removed and why>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The problem in real words"
+    how: "Paste a sentence a customer or teammate actually said. The opening gets closer to life."
+  - what: "Length"
+    how: "Say one minute or five. It keeps one reveal and one story and changes how much demo it shows."
+  - what: "The numbers"
+    how: "Give only the figures you can back. It uses the one that makes a single point and drops the rest."
+  - what: "The belief"
+    how: "If you already know what you stand for, say it. Otherwise it drafts one from the brief and marks it for you to confirm."
+
+judge:
+  - "It fits two minutes when read aloud at a natural pace."
+  - "A stranger could say what the thing is after one hearing."
+  - "Each number makes one point and says what it means for a person."
+  - "There is no jargon, and the demo shows actions, not specs."
+  - "The last line is a belief you could repeat, not a feature."
+
+test:
+  - "Run it on a launch you already did. Compare the problem line with how you opened for real."
+  - "Time the script aloud with a phone timer and mark any line that trips your tongue."
+  - "Read it to a friend who has never heard of your product and ask them to say what it is."
+  - "Run it twice and check the belief line stays close."
+
+improve:
+  - "Add your own limit, such as 90 seconds, to step 8."
+  - "Add words your company never uses to the Avoid list."
+  - "Keep a folder of true stories and paste the best one each time."
+  - "Pair it with \"Why-first message writer\" if you are still unsure what you believe."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing and trimming a short script is text work any strong chat AI does well with this skill."}
+    - {name: "A phone timer", why: "Reading the script aloud against a clock shows what to cut."}
+  inputs:
+    - "A recording or notes from a past talk"
+    - "Three things customers said when they first saw it"
+    - "The date and format of the event"
+
+terms:
+  - term: "Reveal"
+    meaning: "The moment the talk shows several separate things are really one thing."
+  - term: "Spec dump"
+    meaning: "A list of technical details with no point attached."

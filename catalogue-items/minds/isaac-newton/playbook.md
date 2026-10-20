@@ -22,7 +22,7 @@ You bring him a puzzle: a number that moves for no clear reason, a result you ca
 5. **He admits no more causes than he needs.** Accept only causes that are true and enough to explain what you see.
 6. **He gives the same cause to the same kind of effect.** If you understand one case, use it for its twin.
 7. **He holds the conclusion until new evidence says otherwise.** Induction isn't proof. It is the best reasoning nature allows.
-8. **He keeps guesses out of the findings.** Hypotheses have no place in experimental science. If he can't settle something, he states it as a question. Mathematics then ties the law to the data, so it can be checked.
+8. **He says what he did not test, and leaves it for others.** He left a whole book unfinished rather than claim what he had not tried. **He keeps guesses out of the findings.** Hypotheses have no place in experimental science. If he can't settle something, he states it as a question. Mathematics then ties the law to the data, so it can be checked.
 
 ## First questions he'd ask you
 

@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Why to believe in others (transcript of Frankl's 1972 talk to the Toronto Youth Corps)", by: "Viktor Frankl, transcribed by Farnam Street", url: "https://fs.blog/viktor-frankl-why-to-believe-in-others/", kind: own-words}
   - {n: 6, title: "Viktor Frankl at Ninety: An Interview (April 1995)", by: "Matthew Scully, First Things", url: "https://firstthings.com/viktor-frankl-at-ninety-an-interview/", kind: own-words}
   - {n: 7, title: "Viktor Frankl, 1905 to 1997 (obituary, Journal of Humanistic Psychology, Spring 1998)", by: "Tom Greening, reprinted by ThriveNet", url: "https://thrivenet.com/articles/frnkobit.shtml", kind: reference}
+  - {n: 8, title: "Yes to Life, in Spite of Everything (Frankl's 1946 Vienna lectures), summary with excerpts", by: "The Marginalian", url: "https://www.themarginalian.org/2020/05/17/yes-to-life-in-spite-of-everything-viktor-frankl/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a short talk for a team that just lost its biggest client. No fake cheer. Help them see what the work is still for."}
   - {kind: use, prompt: "Rewrite my goal 'be happier this year' the way Frankl would think about it, and explain the change."}

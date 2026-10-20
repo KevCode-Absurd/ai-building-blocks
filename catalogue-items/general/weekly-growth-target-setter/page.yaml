@@ -1,0 +1,119 @@
+new_slug: weekly-growth-target-setter
+name: "Weekly growth target setter"
+summary: "Paste your weekly numbers. Get one growth target, what it means for the week and what to skip."
+job: plan-strategy
+thinking: low
+thinking_why: "It is mostly arithmetic on a table and a short list of rules, so a fast model works."
+
+headline: "Weekly growth target setter"
+subhead: Paste your weekly numbers for revenue or active users. It works out your real growth rate, sets one weekly target, shows what that adds up to in a year and tells you which tasks to skip this week.
+
+explain: |
+  Teams that work hard without one number tend to drift. Every task feels useful, so nothing gets cut. Growth that looks good one week may be a one-off spike that never repeats.
+
+  This skill picks one measure of real use, with revenue first and active users as a stand-in. It works out your weekly growth rate over the last several weeks, ignoring one-off spikes, then sets a target rate and shows what it adds up to over a year. Each task on your list is checked against the number, and any task that does not help it is marked skip. It repeats each week and changes the work if the rate falls.
+
+when:
+  - You work all week but cannot say whether the business grew.
+  - Your task list is long and everything feels urgent.
+  - You want a simple target that your whole team can read.
+
+you_give:
+  - "Weekly figures for revenue or active users, ideally six weeks or more"
+  - "A note on any one-off event that moved a week, such as a sale or a press mention"
+  - "Your task list for this week"
+  - "What your team can spend (optional)"
+
+you_get:
+  - "The one measure it picked and why"
+  - "Your recent weekly growth rate, worked out in the open"
+  - "A target rate, with what it adds up to in a year"
+  - "Each task marked do, defer or skip, with a reason"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your weekly numbers with the date of each week."
+  - "Mark any week that had a one-off boost or drop, and say what caused it."
+  - "Paste this week's task list."
+  - "Come back every week with the new number and ask for a review."
+
+how_it_works:
+  - title: Picks the measure
+    text: Chooses revenue if you have it, and active users as a stand-in if not.
+  - title: Works out the weekly rate
+    text: Calculates growth from one week to the next across recent weeks and shows the sums.
+  - title: Removes spikes
+    text: Leaves out one-off jumps and says what was removed.
+  - title: Sets the target
+    text: Proposes a weekly rate and shows what it adds up to in a year.
+  - title: Tests each task
+    text: Marks each task as help, hold or skip against the number.
+  - title: Reviews weekly
+    text: Compares the new week to the target and changes the work if the rate falls.
+
+output_shape: |
+  THE MEASURE
+  <revenue or stand-in> and why
+
+  YOUR RATE
+  Week | value | change from last week
+  Average weekly growth over <n> weeks: <percent>
+  Left out as one-offs: <weeks and reasons>
+
+  THE TARGET
+  <percent> a week, which is about <multiple> in a year
+
+  THIS WEEK'S TASKS
+  <task> | does it move the number? | do, defer or skip | reason
+
+  WHAT TO WATCH
+  <the sign that the rate is falling and what you will change>
+
+  MISSING
+  <what would sharpen the target>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Number of weeks
+    how: Six or more weeks gives a steadier rate. Fewer than four is marked as thin.
+  - what: Your honest measure
+    how: Give revenue if you can. If you only have sign-ups, say if they pay or use the product.
+  - what: One-off notes
+    how: Tell it about sales, launches and outages. These change a week without changing the trend.
+  - what: How bold the target is
+    how: Say whether you want a safe or a stretch rate. It shows both and states what each needs.
+
+judge:
+  - The measure is revenue or a clear stand-in for it.
+  - The weekly rate is calculated, with the working shown.
+  - At least one task is marked skip.
+  - No one-off spike is counted.
+  - The yearly figure matches the weekly rate.
+
+test:
+  - "Run it on figures from a past quarter. Check that the rate matches your own sums."
+  - "Add a fake spike week and confirm it is left out and explained."
+  - "Run it with a task list that helps nothing and see whether it dares to skip tasks."
+
+improve:
+  - "Add the numbers your field watches, such as repeat orders or retention, as stand-ins."
+  - "Add a rule for tasks your team must do even if they do not move the number, such as tax."
+  - "Keep a running sheet of weekly figures and paste it each time."
+  - "Pair it with a plan builder when you need a longer calendar."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Short sums on a table and a list of tasks are easy for any strong chat AI."}
+    - {name: "A spreadsheet", why: "Keeps the weekly figures and shows the trend as you add each week."}
+  inputs:
+    - "Your payment processor or sales export by week"
+    - "Notes on every promotion or event in the period"
+    - "Active user counts, if you have them"
+
+terms:
+  - term: Weekly growth rate
+    meaning: The percent by which this week's number is higher than last week's.
+  - term: Stand-in measure
+    meaning: A number that follows real use when revenue is not available, such as active users.

@@ -22,7 +22,7 @@ You bring him a pile of numbers, cases or examples and ask what pattern is hidin
 5. **He tests it on cases he hasn't looked at.** If a claimed rule fails on the fifth case, he shows the fifth case, quietly, and the matter is closed.
 6. **He asks for the whole list.** In his 1917 paper he did not stop at one set of answers. He found all 55 sets and sorted them into seven cases.
 7. **He states the size of the error.** With his near-squaring of the circle, he said the side would be off by about an inch for a circle of 140,000 square miles.
-8. **He hands it to a checker.** He sent his work to Hardy, who sorted it into groups and asked for proofs. He kept the idea and welcomed the check.
+8. **He sorts what he has into known, new, and doubtful, then hands it to a checker.** (Hardy sorted his letter into three piles.) He sent his work to Hardy, who sorted it into groups and asked for proofs. He kept the idea and welcomed the check.
 
 ## First questions he'd ask you
 

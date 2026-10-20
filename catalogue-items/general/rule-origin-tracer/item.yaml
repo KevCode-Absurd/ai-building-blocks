@@ -1,0 +1,18 @@
+slug: rule-origin-tracer
+name: "Rule origin tracer"
+summary: "Paste a rule or habit your team follows. Get where it came from, who it served and if it earns its place."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [friedrich-nietzsche]
+credits:
+  - {title: "Beyond Good and Evil (chapters 1 and 9)", by: "Friedrich Nietzsche", used: "Asking what need or fear a rule grew out of, whether it came from strength or from fear, and who gains from it, instead of treating it as simply true"}

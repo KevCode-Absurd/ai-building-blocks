@@ -1,0 +1,130 @@
+new_slug: design-brief-rules-writer
+name: "Design brief rules writer"
+summary: "Describe the design job. Get a brief with tight limits that leave room to play."
+job: design-work
+thinking: medium
+thinking_why: "It chooses limits and one idea, which takes judgement, but the brief shape is fixed."
+
+headline: "Design brief rules writer"
+subhead: "Give it the design job in a few lines. It pulls out the core facts, picks the one idea the work must carry and sets three to five firm limits. You get a brief that says what is fixed, what is free and who it is for."
+
+explain: |
+  A blank brief ("make something that expresses us") sounds generous and produces weak work. The designer has nothing to push against, so they reach for what they did last time. Briefs that name the audience, the need and a few hard limits give a designer something to work with.
+
+  This skill pulls out the core facts: what, why, when and where. It picks the one idea the work must carry, one that can be got in a glance. It sets three to five limits, such as a size, a grid, two colours, one typeface or a deadline, and names what is left free on purpose. It adds a collecting step, so the designer starts from ten things that catch the eye.
+
+when:
+  - "You are about to brief a designer, a printer or an AI tool and have only a general wish."
+  - "Past projects came back off-target because the brief was too loose."
+  - "You want a one-page brief that a new person can follow."
+
+you_give:
+  - "A few lines on the job: what it is for, when and where"
+  - "Who it is for and what they should do or see differently"
+  - "Limits you already know, such as budget or size (optional)"
+  - "Your brand file (optional)"
+you_get:
+  - "Core facts: what, why, when and where"
+  - "The one idea the work must carry, in a sentence"
+  - "Three to five firm limits and what is left free"
+  - "A collecting step and a plain statement of the need"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the job in a few lines, even if rough."
+  - "Say who the audience is and what you want them to do."
+  - "Paste any limits you already know."
+  - "Read the limits aloud. Remove any that you would break in a minute."
+  - "Send the brief with the collecting step to the designer."
+
+how_it_works:
+  - title: "Pulls out the facts"
+    text: "What, why, when and where, in short lines."
+  - title: "Picks the one idea"
+    text: "One idea that can be got in a glance."
+  - title: "Sets the limits"
+    text: "Three to five, each specific, such as a size or two colours."
+  - title: "Names what is free"
+    text: "The room left on purpose for the designer."
+  - title: "Adds a collecting step"
+    text: "Ten images or objects that catch the eye."
+  - title: "Names audience and client"
+    text: "Who it is for and what they should do or see differently."
+  - title: "States the need"
+    text: "What the design must do for them."
+  - title: "Checks the set"
+    text: "Runs its own checks and names any missed."
+
+output_shape: |
+  CORE FACTS
+  What: <job> | Why: <reason> | When: <date> | Where: <place or channel>
+
+  AUDIENCE AND CLIENT
+  Audience: <one sentence> | Client: <who decides>
+  They should: <do or see differently>
+
+  THE NEED
+  <what the design must do>
+
+  THE ONE IDEA
+  <one sentence, can be got in a glance>
+
+  LIMITS
+  1. <limit, specific> 2. ... (three to five)
+
+  LEFT FREE ON PURPOSE
+  <what the designer decides>
+
+  COLLECT FIRST
+  <ten images or objects that catch the eye, from where>
+
+  MISSING
+  <facts that would sharpen a limit>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The audience"
+    how: "One sentence is enough, but make it specific: \"first-time buyers aged 30 to 45\" beats \"everyone\"."
+  - what: "Your known limits"
+    how: "Tell it what is already fixed, such as brand colours or print size. They become limits."
+  - what: "The deadline"
+    how: "A date is itself a limit and shapes the others."
+  - what: "What you will not decide"
+    how: "Say what the designer owns. It goes into \"left free\"."
+
+judge:
+  - "There are limits, and each one is specific."
+  - "At least one thing is left free."
+  - "The one idea fits in a sentence."
+  - "It is not a request to express yourself with no rules."
+  - "The audience is named in one sentence."
+
+test:
+  - "Give the brief to someone who has not heard about the job. Ask them to say the one idea back."
+  - "Check each limit by asking: could someone tell if it was broken?"
+  - "Run it twice. The limits can differ, but the one idea should stay close."
+  - "Compare the work that comes back to a past project made from a loose brief."
+
+improve:
+  - "Add your standing limits (brand colours, fonts) to \"What you need\" so every brief starts with them."
+  - "Add your usual list of places to collect images, such as your own archive."
+  - "Save the best briefs and the work they produced in your brand file."
+  - "Pair it with \"Brand mark system planner\" or \"Wordmark sketch planner\" for the next step."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Shaping a loose job into a brief is text work any strong chat AI does well."}
+    - {name: "A shared folder or board", why: "The collecting step needs a place where ten images can sit side by side."}
+  inputs:
+    - "Past briefs that worked and ones that failed"
+    - "The budget and deadline"
+    - "Your brand file"
+    - "Examples of work you admire and why"
+
+terms:
+  - term: "Limit"
+    meaning: "A fixed rule for the job, such as a size, a number of colours or a date."
+  - term: "Left free"
+    meaning: "The part of the job the designer decides on their own."

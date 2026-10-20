@@ -29,6 +29,9 @@ sources:
   - {n: 5, title: "Where do I start when I want to optimize an email automation? (2025)", by: "Joanna Wiebe, Copyhackers", url: "https://copyhackers.com/2025/03/how-to-optimize-an-email/", kind: own-words}
   - {n: 6, title: "About Copyhackers", by: "Copyhackers", url: "https://copyhackers.com/about/", kind: reference}
   - {n: 7, title: "Joanna Wiebe (expert profile)", by: "Forget The Funnel", url: "https://forgetthefunnel.com/expert/joanna-wiebe", kind: reference}
+  - {n: 8, title: "How to Write Effective Marketing Copy That Converts with Copy Hackers' Joanna Wiebe (podcast with transcript)", by: "Small Business Big Marketing", url: "https://smallbusinessbigmarketing.com/how-to-write-effective-marketing-copy-that-converts-with-copy-hackers-joanna-wiebe/", kind: own-words}
+  - {n: 9, title: "Copy Hackers: Joanna Wiebe (Intercom podcast, edited transcript)", by: "Geoffrey Keating, Intercom", url: "https://www.intercom.com/blog/podcasts/copy-hackers-joanna-wiebe", kind: own-words}
+  - {n: 10, title: "I Love Your Copy: companion workbook for the creativity sessions (2022)", by: "Copyhackers", url: "https://downloads.copyhackers.com/i-love-your-copy/resources/workbook.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Here are ten customer reviews of a meal-prep service. Pull out the phrases worth using and write a homepage headline and subhead from them."}
   - {kind: use, prompt: "Rewrite this button text so more people click: 'Submit'. The page offers a free 7-day trial of a budgeting app."}

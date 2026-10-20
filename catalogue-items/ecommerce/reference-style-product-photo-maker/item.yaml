@@ -19,6 +19,7 @@ origin: rebuilt
 source_ids: [CES-009]
 old_name: product photos from a reference
 version: 2.0.0
+minds: [jakob-nielsen]
 credits:
   - {title: "How to prompt Gemini 2.5 Flash Image Generation for the best results", by: "Philipp Schmid, Logan Kilpatrick, Alisa Fortin, Google", url: "https://developers.googleblog.com/en/how-to-prompt-gemini-2-5-flash-image-generation-for-the-best-results/", used: "Describe the scene in photographer's terms; say which element comes from which image"}
   - {title: "Gpt-image-1.5 Prompting Guide", by: "OpenAI Cookbook", url: "https://developers.openai.com/cookbook/examples/multimodal/image-gen-1.5-prompting_guide", used: "Labelled prompt parts, image roles by index, an explicit keep list"}

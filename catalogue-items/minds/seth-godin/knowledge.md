@@ -72,6 +72,26 @@ How he applied it: he created the altMBA in 2015 as a 30-day online workshop, an
 - When fear gets loud near the finish, ship anyway [S7].
 - Don't wait to be chosen [S8].
 
+## Real decisions
+
+### Leaving a job to package books, 1986
+Godin left the software firm Spinnaker and started Seth Godin Productions, a book packaging business, funded with $20,000 and run from a studio flat in New York [S1]. This fits his later advice to pick yourself rather than wait to be chosen [S8]. The sources do not give his private reasons at the time.
+
+### Selling Yoyodyne to Yahoo, 1998
+He launched Yoyodyne in 1995 with Mark Hurst, running contests and games people chose to join. Yahoo bought it in 1998 for $29.6 million and he became its vice president of direct marketing [S1]. The company was built on the permission idea he later wrote up [S3].
+
+### Disowning a cow stunt, 2005
+When a casino painted real cows pink and purple as moving billboards, he wrote that he had nothing to do with it. He called it funny and harmless but not Purple Cow marketing, because the stunt was the story and the product was not [S4].
+
+### Posting every day
+He has put out a blog post every day for more than a decade [S2]. His own account of fear says the lizard brain pushes people to hold back and play safe near the finish, and the job is to notice it and ship anyway [S7]. The habit is his own proof of that rule.
+
+### Teaching online, starting 2015
+He created the altMBA in 2015 as a 30-day online workshop, and says more than 60,000 people have taken his online courses [S1][S2]. His about page says the altMBA and Akimbo, which had been spun out, were wound down by their leaders in 2024 [S2]. Read that as a project that ran its course, not a claim about why.
+
+### Naming quitters, 2007
+In April 2007 he ran a series of posts and a contest about famous people who quit one thing to become the best at another [S13]. It was a public way of working through the idea in The Dip: quit dead ends early, push through the dip that leads somewhere [S13].
+
 ## Where he stood
 
 **Should you try to reach everyone?** No. Aim at the smallest market you can imagine, and serve it so well that word spreads [S11][S12].

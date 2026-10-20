@@ -31,6 +31,7 @@ sources:
   - {n: 7, title: "Craft (2023)", by: "Erik Spiekermann, Spiekerblog", url: "https://spiekermann.com/en/craft", kind: own-words}
   - {n: 8, title: "Spiekermann.com home page and news", by: "Erik Spiekermann", url: "https://spiekermann.com/", kind: reference}
   - {n: 9, title: "FontFont", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/FontFont", kind: reference}
+  - {n: 10, title: "FontShop interview with Erik Spiekermann and Ralph Olivier du Carrois on the typeface FF Real (2015)", by: "Erik Spiekermann, FontShop (mirrored on MyFonts)", url: "https://www.myfonts.com/pages/fontshop-interview-with-erik-spiekermann-and-ralph-olivier-du-carrois-1", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short sign plan for a small community centre with three floors, so first-time visitors can find the hall, the toilets and the exit."}
   - {kind: use, prompt: "Write a one-page brand rules sheet for a five-person bakery so anyone on the team can make a poster that still looks like us."}

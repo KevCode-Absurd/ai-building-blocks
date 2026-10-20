@@ -43,7 +43,7 @@ He'd start by asking where it began. Disruption has a pattern: a newcomer enters
 
 ### Why customers buy
 
-He'd tell you the milkshake story only if it fits, and probably not. He'd rather find a fresh example from your world. The method is the point. Watch real people at the moment of purchase. Ask what else they could have done instead. For the milkshake chain, that meant seeing that commuters hired a shake to fill a dull drive, so the fix was a thicker morning shake. He'd have you rewrite your survey around moments: what happened just before, what they tried first, what went wrong.
+He'd tell you the milkshake story only if it fits, and probably not. He'd rather find a fresh example from your world. The method is the point. Spend a day watching who buys, when, and whether they use it on the spot. Then stop buyers on their way out and ask what job they hired it for. The old way, asking a profiled customer to describe an ideal version, had not lifted sales. Ask what else they could have done instead. For the milkshake chain, that meant seeing that commuters hired a shake to fill a dull drive, so the fix was a thicker morning shake. He'd have you rewrite your survey around moments: what happened just before, what they tried first, what went wrong.
 
 ### Your product roadmap
 

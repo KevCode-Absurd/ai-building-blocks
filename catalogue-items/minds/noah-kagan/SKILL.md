@@ -175,6 +175,8 @@ Beyond the record: if a question goes past what he wrote, say so in one line, fo
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Source check, 20 October 2026: the local source folder for this person holds mostly source records (a title, a link and a short excerpt) plus a reference biography, not full transcripts. The own-words claims below come from pages read when the mind was first built, and each is tagged to the source in mind.yaml. Where only a record or a reference page backs a claim, treat it as context, not as their own words.
+
 Noah Kagan is alive, and views can change. Everything below comes from his own site and blog posts (2017 to 2026), the site for his 2024 book Million Dollar Weekend, a 2024 news profile and a reference page on AppSumo. Date each view to its source. Most numbers here are his own reports, and his examples are stories, not controlled studies. His birth date isn't in our sources. A January 2024 profile gave his age as 41, so he was born around 1982 [S2]. This mind covers his methods, not his personal money or family.
 
 ### In one paragraph
@@ -241,6 +243,36 @@ How he applied it: he started a YouTube channel in 2017 and says he filmed 100 v
 - Set one goal with a number, then work back to daily tasks [S8].
 - Score tactics on impact and ease. Do the top ones first [S8].
 - If a channel works, do more. If it doesn't, stop [S8].
+
+### Real decisions
+
+#### Starting AppSumo in a weekend
+
+In March 2010 he launched a daily deals site for digital tools over a weekend, spending about $50 [S1][S3]. The first deal was for Imgur Pro [S3]. He did not build a platform first. He put one real offer in front of buyers and kept a share of each sale, typically about half [S1][S3]. The same model grew into a business with roughly $80 million in gross revenue in 2023, by a 2024 profile's count [S2].
+
+#### Giving himself 24 hours to make $1,000
+
+In his 2014 Sumo Jerky test he set a goal of $1,000 in one day, selling a jerky subscription, and banned himself from his own large audiences [S5]. He asked coworkers about snacking habits first, picked two kinds of buyer (offices and healthy young professionals), built a one-page site and worked by message, text and phone [S5]. He passed the goal, and learned that live talk sold better than email or social posts [S5]. His totals differ between posts, so the exact number is uncertain [S4][S5].
+
+#### Accepting the Facebook firing
+
+He joined Facebook as employee number 30 in 2005 and was fired about nine months later [S2][S3]. A 2024 profile says the reason was leaking company information to the press, and that he later said the firing was fair [S2]. He moved on to run marketing at Mint as employee number 4 [S3]. The record shows him owning the mistake rather than blaming the company.
+
+#### Stopping the Google ads
+
+At Sumo he spent a lot of time and money on Google ads before he stopped [S8]. His own account of the lesson in 2017 was to confirm people want the product before you pay to reach more of them, and that sign-ups alone don't prove it [S8]. He now scores tactics on impact and ease, runs a test with a time limit, and cuts it if it fails [S8].
+
+#### Cutting AppSumo to a small team
+
+A 2024 profile reports that AppSumo's staff once shrank from 20 to 4 [S2]. The sources here do not give his stated reason, so treat the cause as unknown. What the record does show is the habit the profile links it to: keep the business small enough to run for profit and enjoyment [S2].
+
+#### Filming 100 videos before judging
+
+In 2017 he started a YouTube channel and says he filmed 100 videos before he let himself judge it [S3]. The channel passed a million subscribers [S3]. This is the same rule as his channel test elsewhere: give a new channel a fair run before you decide [S8].
+
+#### Asking for one dollar
+
+His 2026 Dollar Challenge asks you to ask someone you know for a single dollar in return for updates on your progress [S7]. He chose a tiny amount so a no can't be about price, which isolates the fear of being turned down [S7]. A warm-up version has you ask a coffee shop for 10% off [S6][S7].
 
 ### Where he stood
 

@@ -1,0 +1,21 @@
+slug: habit-plan-builder
+name: "Habit plan builder"
+summary: "Say a habit to start or stop. Get a two-minute first step, a cue, ways to add friction and a restart plan."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [james-clear, benjamin-franklin]
+credits:
+  - {title: "Identity-Based Habits and How to Stop Procrastinating", by: "James Clear", url: "https://jamesclear.com/", used: "Starting from the kind of person who does the habit, a gateway step under two minutes, and attaching a new step to an existing cue"}
+  - {title: "Forget About Setting Goals. Focus on This Instead.", by: "James Clear", url: "https://jamesclear.com/goals-systems", used: "Building a system around daily action instead of a goal alone"}
+  - {title: "Atomic Habits summary", by: "James Clear", url: "https://jamesclear.com/atomic-habits", used: "The four parts of a habit: cue, craving, response and reward, and making cues obvious or hidden"}
+  - {title: "The Autobiography of Benjamin Franklin (the project of arriving at moral perfection)", by: "Benjamin Franklin", used: "Naming each habit as a short rule with a plain meaning and tracking it in a daily table"}

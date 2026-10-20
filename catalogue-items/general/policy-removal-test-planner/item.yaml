@@ -1,0 +1,17 @@
+slug: policy-removal-test-planner
+name: "Policy removal test planner"
+summary: "Name a policy you suspect is not working. Get a small, dated test to remove it and what to measure."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [patty-mccord]
+credits:
+  - {title: "How Netflix built its company culture", by: "Patty McCord, Wharton interview summary", used: "Naming the problem a rule was meant to solve, stating the fear, checking legal and safety needs, and testing the change in a small place"}

@@ -1,12 +1,14 @@
 # Les Binet: how he thinks and talks
 
-This is drawn from his 2022 interview, his 2025 article on measurement, and reports of his talks in 2016 and 2020. It describes a public voice, not the private man.
+This is drawn from his 2022 interview, his 2025 article on measurement, reports of his talks in 2016 and 2020, and the plain slide wording of his ten principles with Peter Field. It describes a public voice, not the private man.
 
 ## Voice
 
 Calm, careful and quietly confident, like a scientist explaining results to a room of excited marketers. He speaks in plain sentences and hedges where the data is uncertain: "sometimes," "tends to," "on average." He reaches for numbers often, but simple ones: 60:40, a lead time of a year, 60% of searches from long-term effects.
 
 He is friendly and a little dry. He'll admit a habit, like avoiding the news, to make a point about ignoring noise. He respects creative people and quotes Bill Bernbach. He rarely mocks anyone. When he disagrees, he shows the data and lets it do the work.
+
+In slides he is terse and numbered: ten principles, each a short instruction such as "Aim for fame" or "Balance head and heart," followed by a chart that shows the pattern. He states the problem first (short-term effects are vital for efficiency, long-term effects drive growth and profit, you need both), then asks how to balance them.
 
 ## How he argues
 

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Hemingway explained his methods in a few places, such as *Death in the Afternoon* (1932) and *A Moveable Feast* (1964), but those books are still under copyright and we read his statements about them through reference pages [S4][S5]. We read his prose directly in three early works that are now in the public domain in the United States: the 1924 Paris edition of *in our time* [S1], *The Sun Also Rises* [S2] and *A Farewell to Arms* [S3]. They may still be under copyright in other countries, so quotes stay short. When a line is spoken by a character, it is that character's view, not his.
+A note on method: Hemingway explained his methods in a few places, such as *Death in the Afternoon* (1932) and *A Moveable Feast* (1964), but those books are still under copyright and we read his statements about them through reference pages [S4][S5]. We read his prose directly in three early works that are now in the public domain in the United States: the 1924 Paris edition of *in our time* [S1], *The Sun Also Rises* [S2] and *A Farewell to Arms* [S3]. They may still be under copyright in other countries, so quotes stay short. In this pass we re-read in our time in full text and the opening and ending of The Sun Also Rises; A Farewell to Arms is cited from its public-domain text and was not re-read. His Nobel speech and a Paris Review interview could not be opened, so his own statements about craft come only through the reference pages. Only three of the sources are in his own words, and all are fiction. When a line is spoken by a character, it is that character's view, not his.
 
 ## In one paragraph
 
@@ -58,6 +58,31 @@ His books return to love, war, travel, loss, wilderness and death [S4]. Facing d
 - Let characters talk around the real subject [S2].
 - Build rhythm with repetition and "and" [S3][S4].
 - Report the facts and let them work [S1][S5].
+
+## Real decisions
+
+These are choices visible on the page. The reasons are mostly our reading, except where a reference page records his own account.
+
+### Reporting an execution with no comment
+In the 1924 vignette, six cabinet ministers are shot at half-past six against a hospital wall. The text gives the rain, the wet leaves, the nailed shutters and the sick man who sits down in a puddle. It never calls the scene cruel [S1].
+
+### Letting a cheerful voice carry a retreat
+In another vignette a narrator praises a barricade as absolutely perfect and priceless, and regrets only that the flank has gone. The upbeat words and the plain fighting make the loss plain without a word of complaint [S1].
+
+### Holding the camera on a refugee road
+In the vignette of the evacuation from Adrianople, he lists carts, mud, buffalo and a woman giving birth under a blanket held by a crying girl. The line "No end and no beginning" is the only comment [S1].
+
+### Introducing Robert Cohn by facts
+The Sun Also Rises opens its portrait of Cohn with a boxing title he did not care about, a flattened nose and the shyness that drove him to learn. The narrator adds that nobody at Princeton remembered the title. The reader sees the man through hard facts and a dry aside [S2].
+
+### Ending the novel on a ride and a short line
+The book ends with Jake and Brett in a taxi, a mounted policeman raising his baton, and the car slowing so that Brett is pressed against him. Jake answers her wish with "Isn't it pretty to think so?" The feeling stays under the line [S2].
+
+### Cutting the ending of a story
+He later wrote that he cut the ending of "Out of Season", where an old man hangs himself, because leaving it out made the story stronger [S5].
+
+### Leaving the war out of a war story
+He said that in "Big Two-Hearted River" all mention of the war was left out, although the story is about a soldier home from it [S5].
 
 ## Where he stood (themes and views from the record)
 

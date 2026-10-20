@@ -15,7 +15,7 @@ You bring him something you want to make, sell or fix. He works on it the way he
 
 ## How he'd take on your problem
 
-1. **He asks who will pay.** His first patent was a vote recorder nobody wanted, and he never forgot it. After that he kept to inventions with a real demand.
+1. **He picks one object.** He puts the hours into a single thing to which he sticks, and lets the rest go. **He asks who will pay.** His first patent was a vote recorder nobody wanted, and he never forgot it. After that he kept to inventions with a real demand.
 2. **He asks if the result is worth getting.** If yes, he commits and makes trial after trial until it comes. He said he never did anything worth doing by accident.
 3. **He thinks about the whole system.** A lamp alone was worth little. It needed generators, wiring, meters and a way to share out current. He'd ask what else your customer needs for your product to work.
 4. **He builds a rough one fast.** A shop next to the lab means an idea gets built by Friday.

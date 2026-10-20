@@ -1,0 +1,134 @@
+new_slug: thirty-day-launch-planner
+name: "Thirty day launch planner"
+summary: "Paste your idea, budget and tools. Get a 30-day plan to launch, take payment and decide to keep, kill or change."
+job: test-an-idea
+thinking: medium
+thinking_why: "It has to fit a plan to your skills, budget and tools, but the structure of the 30 days is fixed."
+
+headline: "Thirty day launch planner"
+subhead: "Give it your idea, your budget and the tools you already use. It sets a fixed 30-day deadline, builds only the core, puts a payment step in early and picks where to launch. You get a day-by-day plan with a spending cap and a keep, kill or change rule."
+
+explain: |
+  Ideas stall in planning. People wait for the perfect version, learn a new tool or build a full product before anyone pays. A fixed deadline, a core-only build and a card payment before launch cut through all three, and a month is long enough to learn whether anyone wants it.
+
+  This skill starts from a problem you have yourself and a 30-day end date. It picks tools you already know, splits the work into what you do cheaply and the one hard part worth paying an expert for, and puts a payment step in before launch. It sets a spending cap while you keep your regular income, chooses where to launch and writes the decision rule before you start. Failures are logged, not hidden.
+
+when:
+  - You have been planning for months and nothing has launched.
+  - You want to test an idea without leaving your job or spending much.
+  - You want a plan that ends with a decision, not a list of tasks.
+
+you_give:
+  - Your idea and the problem it solves, ideally one you have yourself
+  - Your budget, the hours you can give and the tools you already use
+  - Where your audience gathers, if you know
+you_get:
+  - A fixed 30-day plan, day by day or week by week
+  - A split of the work into what you do and the one part to pay for
+  - A payment step placed before launch
+  - A spending cap and a written decision rule
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the idea, the problem you have, your budget, weekly hours and tools you know.
+  - Name the places your exact audience gathers.
+  - Write the deadline and the decision rule where others can see them.
+  - Update the log of problems each week and bring it back on day 30.
+
+how_it_works:
+  - title: Starts from your problem
+    text: States the problem you have yourself and who else shares it.
+  - title: Sets the deadline
+    text: Fixes a 30-day end date and writes it down in public.
+  - title: Picks known tools
+    text: Chooses tools you already know and builds only the core.
+  - title: Adds payment early
+    text: Puts a card payment in early, even if the rest is done by hand.
+  - title: Splits the work
+    text: Separates what you do cheaply from the one hard part worth paying an expert for.
+  - title: Sets the budget
+    text: Sets a spending cap and keeps your regular income during the test.
+  - title: Chooses where to launch
+    text: Picks where your exact audience gathers and plans progress posts.
+  - title: Writes the decision rule
+    text: States the keep, kill or change rule before launch.
+
+output_shape: |
+  THE PROBLEM
+  <the problem you have> | Others who share it: <who>
+
+  THE DEADLINE
+  Launch by day 30: <date>  Shared where: <place>
+
+  BUDGET AND LIMITS
+  Spending cap: <amount>  Hours per week: <n>  Income kept: <yes/how>
+
+  TOOLS
+  <tools you already know> | Core to build: <one line> | Left out: <list>
+
+  DO IT YOURSELF / PAY FOR
+  Yourself: <list>
+  Pay for (one thing): <task> | Estimated cost: <amount or MISSING>
+
+  THE 30 DAYS
+  Week 1: <steps>  Week 2: <steps>  Week 3: <steps>  Week 4: <steps>
+  Payment step goes in by day: <n>
+
+  WHERE TO LAUNCH
+  <place> | Progress posts: <schedule>
+
+  DECISION RULE (written now)
+  Keep if <result>. Change if <result>. Kill if <result>.
+
+  FAILURE LOG
+  <how problems get recorded, by day>
+
+  MISSING
+  <facts that would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your hours and tools
+    how: Say how many hours a week and which tools you know. The plan is cut to fit.
+  - what: The problem is yours
+    how: Say if you have the problem. If not, it asks who does and how you will reach them.
+  - what: Spending cap
+    how: Give a hard number. Anything over it needs a new decision.
+  - what: Where your audience is
+    how: Name the exact place or group. A named place makes the launch step specific.
+
+judge:
+  - The deadline is 30 days and fixed.
+  - The tools are ones the owner already knows.
+  - A payment step exists before launch.
+  - The decision rule is written before launch.
+  - Failures are logged, not hidden.
+
+test:
+  - Run it on a project you already launched. See if the plan would have got you there sooner.
+  - Check that every task fits inside your weekly hours.
+  - Run it twice. The core and the payment step should stay close.
+  - On day 30, apply the decision rule as written and see if it was clear.
+
+improve:
+  - Add the tools you know best so it never proposes new ones.
+  - Add the places your audience gathers to the launch step.
+  - Save the failure log from each 30-day run for the next one.
+  - Pair it with "Three-buyer idea test planner" if you want a faster test before building.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Fitting a plan to your hours and tools is text work that any strong chat AI does with this skill."}
+    - {name: "A payment link tool", why: "Lets you take a card payment before the product is finished."}
+  inputs:
+    - "A list of the tools you use every week"
+    - "Where your buyers already gather online or in person"
+    - "Your fixed monthly costs, so the spending cap is safe"
+
+terms:
+  - term: Core
+    meaning: The one part of the product that delivers the main benefit, built before anything else.
+  - term: Decision rule
+    meaning: A rule written before launch that says what result means keep, change or kill.

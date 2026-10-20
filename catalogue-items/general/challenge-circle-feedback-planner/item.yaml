@@ -1,0 +1,19 @@
+slug: challenge-circle-feedback-planner
+name: "Challenge circle feedback planner"
+summary: "Paste your draft or plan. Get who to ask for early support, who to ask for attack, and the questions to send."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [adam-grant]
+credits:
+  - {title: "Wondering Q&A archive: challenge network", by: "Adam Grant", used: "A challenge network of people who attack your draft, kept apart from your support circle"}
+  - {title: "The Truth About People Pleasing, 2026", by: "Adam Grant", used: "Choosing feedback sources by relevant knowledge and a predictable field"}

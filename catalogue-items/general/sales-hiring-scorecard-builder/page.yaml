@@ -1,0 +1,122 @@
+new_slug: sales-hiring-scorecard-builder
+name: "Sales hiring scorecard builder"
+summary: "Describe your sale and past hires. Get a 1 to 10 scorecard with a test for each trait."
+job: lead-people
+thinking: medium
+thinking_why: "It matches traits to your kind of sale, but the scorecard shape and steps are fixed."
+
+headline: "Sales hiring scorecard builder"
+subhead: Describe what you sell, who buys it and how your past sales hires turned out. It defines the traits that fit your sale, writes what a 1, a 5 and a 10 look like for each, and picks a test for every trait. You get a scorecard and a date to check it.
+
+explain: |
+  Most sales hiring runs on gut feel and a strong first impression. A person who did well at a big company with a well-known product may struggle at a small one that has to explain what it does. Without a written scorecard, every interviewer scores a different thing and nobody can learn what worked.
+
+  This skill starts from your sale: who buys, how hard the product is to explain and how long a deal takes. It lists the traits you think predict success, defines each one and writes what a score of 1, 5 and 10 looks like. It chooses one test for each trait, such as a question, a role play, an exercise or a reference check. After you have hired, it compares the scorecards of your best and slowest hires, and shows which traits to raise, cut or add.
+
+when:
+  - You are hiring your first salespeople and have no way to compare candidates.
+  - Your recent hires have done much worse than the interviews suggested.
+  - Each interviewer asks different questions and the team cannot agree on who to hire.
+
+you_give:
+  - What you sell, who buys and how long a sale takes
+  - How hard the product is to explain to a new buyer
+  - How your past hires turned out, with a few notes on each (optional)
+  - Traits you think matter (optional)
+you_get:
+  - A sale profile in plain words
+  - A list of traits with a definition and a 1, 5 and 10 anchor for each
+  - A test for each trait and a one-page scorecard
+  - A date and method to check the scorecard against real results
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your sale and your best and slowest past hires, even if you have only two or three.
+  - List the traits you already believe in. Say why you think they matter.
+  - Use the scorecard for every candidate, and write the scores before you discuss them.
+  - After six months, bring the hires' real results back to the skill and update the scorecard.
+
+how_it_works:
+  - title: Describes your sale
+    text: Writes who buys, how hard the product is to explain and how long a deal takes.
+  - title: Lists the traits
+    text: Chooses traits that fit this kind of sale and defines each in plain words.
+  - title: Writes the anchors
+    text: Describes what a 1, a 5 and a 10 look like for each trait.
+  - title: Picks a test
+    text: Chooses one test per trait, such as a question, role play, exercise or reference check.
+  - title: Builds the scorecard
+    text: Puts all traits on one page, with space for each score and a note.
+  - title: Compares to results
+    text: Lines up the scorecards of your best and slowest hires to find traits to raise, cut or add.
+  - title: Sets the re-check
+    text: Sets a date to compare scores with real results.
+
+output_shape: |
+  YOUR SALE
+  Buyer: <who>   Explaining effort: <low, medium, high>   Length of sale: <time>
+
+  TRAITS
+  <trait> | Meaning: <definition>
+    1: <what it looks like>  5: <...>  10: <...>
+    Test: <question, role play, exercise or reference check>
+
+  SCORECARD
+  Candidate: <name>   Date: <date>
+  <trait> | Score 1 to 10 | Evidence
+
+  WHAT PAST HIRES SUGGEST
+  <trait> | Raise, cut or add | Reason
+
+  RE-CHECK
+  Date: <date>   Compare: <scores against results>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How hard the product is to explain
+    how: Say how much a buyer needs to be taught. It changes which traits count most.
+  - what: Past hire notes
+    how: Give even short notes on the best and slowest hires. The comparison step needs them.
+  - what: Your own list of traits
+    how: Add the traits you believe in and say why. The skill keeps them if they fit your sale.
+  - what: Stage of your company
+    how: Say whether you are early or established. Early firms need people who can work without a set process.
+
+judge:
+  - Every trait has a written definition and score anchors.
+  - Each trait has a named test.
+  - The traits fit your sale, not a general idea of a seller.
+  - A re-check date is set against real results.
+  - Traits are not chosen only because past stars shared them.
+
+test:
+  - Score your last two hires with the scorecard from memory. Check whether the scores match how they performed.
+  - Ask two interviewers to score the same candidate separately. Compare the scores.
+  - Run it twice with the same input. The traits should be close.
+  - After six months, compare scorecards to results and update.
+
+improve:
+  - Add the exact role-play scene your sales team faces most often.
+  - Add your own scoring notes after each hire, so the anchors become more exact.
+  - Save the scorecards and the results in one file the skill reads each time.
+  - Pair it with the sales pay plan checker once you have a team.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Defining traits and writing anchors is text work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Keep one row per hire with scores and results so you can compare them later."}
+  inputs:
+    - "Notes from past interviews and how those hires did"
+    - "A description of a typical sale from first call to close"
+    - "Feedback from managers on what the best sellers did differently"
+
+terms:
+  - term: Anchor
+    meaning: A written description of what a certain score, such as 1, 5 or 10, looks like for a trait.
+  - term: Role play
+    meaning: A short acted scene in which a candidate does part of the job, such as a first call.

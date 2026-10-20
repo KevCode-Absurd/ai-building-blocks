@@ -1,0 +1,117 @@
+new_slug: scene-want-and-tactic-rewriter
+name: "Scene want-and-tactic rewriter"
+summary: "Paste a scene that only explains. Get it rebuilt so each person wants something and uses words to get it."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It must work out what each speaker wants and rewrite lines to match, which takes judgement, but the method is fixed."
+
+headline: "Scene want-and-tactic rewriter"
+subhead: Give it a scene or dialogue where people mostly explain things. It works out what each speaker wants and who stands in the way, gives each a different tactic, and rewrites the scene to open on an event and turn late. You get a rewrite and a read-aloud check.
+
+explain: |
+  Scenes go dead when people take turns telling the reader what they feel and what happened before. The same fault shows up in sales scripts, training role plays and video dialogue, where two people share facts but nobody is trying to get anything.
+
+  This skill starts by stating what each person wants in the scene and who or what blocks them. It opens on an event or a question, not on background. It gives each speaker a different tactic, such as pleading, joking, dodging or pressing. It marks what the audience knows that a character does not, so the gap does some work. One speech ends in a decision that changes the next scene, and the turn is placed late. You get the rewrite and a note for reading it aloud.
+
+when:
+  - A scene or script is full of characters explaining things to each other.
+  - Two speakers in your dialogue sound the same.
+  - A role play, sketch or video script has facts but no pull.
+
+you_give:
+  - The scene or dialogue as it stands
+  - Who is in it and what happens just before and after (optional)
+you_get:
+  - A short table of what each speaker wants, who blocks them and their tactic
+  - A rewritten scene
+  - A note on what the audience knows that a character does not
+  - A read-aloud check
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the scene exactly as it is, even if it is rough.
+  - Say what must happen by the end of the scene, if you know.
+  - Read the rewrite aloud with a friend, one voice each. Mark every line where you stumble.
+  - Ask for a second pass with the marked lines changed.
+
+how_it_works:
+  - title: States each want
+    text: Writes what each person wants in the scene and who or what stands in the way.
+  - title: Opens on an event
+    text: Starts the scene on something happening or a question being asked, not on background.
+  - title: Gives different tactics
+    text: Assigns each speaker a different way of getting what they want.
+  - title: Marks what the audience knows
+    text: Notes what the audience knows that a character does not, and uses the gap.
+  - title: Ends in a decision
+    text: Lets one speech end in a choice that changes the next scene.
+  - title: Places the turn late
+    text: Moves the turning point near the end.
+  - title: Reads it aloud
+    text: Tests every line for rhythm and flags any a speaker would stumble on.
+
+output_shape: |
+  WANTS AND TACTICS
+  <speaker> | Wants: <goal> | Blocked by: <person or thing> | Tactic: <how they try>
+
+  WHAT THE AUDIENCE KNOWS
+  <fact the audience has and the character lacks>
+
+  REWRITTEN SCENE
+  <the scene>
+
+  THE TURN AND THE DECISION
+  <where the turn falls and what is decided>
+
+  READ-ALOUD NOTES
+  <lines flagged and how they were eased>
+
+  MISSING
+  <what would sharpen the scene>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: What happens before and after
+    how: Tell it what the last scene ended on and what the next one needs. It then ends this scene on the right decision.
+  - what: How different the speakers should be
+    how: Describe each person in a line. Different tactics follow from different people.
+  - what: Length
+    how: Give a line or word limit. It then cuts background first and keeps wants.
+  - what: Spoken or written
+    how: Say if it is for the stage, screen, audio or print. It affects how lines are broken.
+
+judge:
+  - Every speaker wants something and it is clear what.
+  - No speech only describes a feeling.
+  - The scene ends with a changed decision or relationship.
+  - The lines can be spoken without stumbling.
+  - Each speaker uses a different tactic.
+
+test:
+  - Read the original and the rewrite aloud to a friend and ask which one they would keep watching.
+  - Ask someone to say what each speaker wants. They should name it without prompting.
+  - Cover the speaker names and see if two voices can still be told apart.
+  - Run it twice and compare the wants. They should stay close, even if the lines differ.
+
+improve:
+  - Add a list of tactics that suit your world, such as flattering, stalling or threatening.
+  - Add notes on how your characters really talk, so the lines sound like them.
+  - Save the wants table and reuse it for the next scene with the same people.
+  - Pair it with a line editor for rhythm after the rewrite is settled.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting dialogue is text work any strong chat AI does well."}
+    - {name: "A friend with a voice", why: "Reading aloud with someone shows stumbles that silent reading misses."}
+  inputs:
+    - "A line on what each person fears losing"
+    - "The scene before and the scene after"
+    - "A sample of how each person talks"
+
+terms:
+  - term: Tactic
+    meaning: The way a speaker tries to get what they want, such as pleading, joking or pressing.
+  - term: The turn
+    meaning: The moment in a scene when something shifts and the decision changes.

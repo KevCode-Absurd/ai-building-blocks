@@ -1,0 +1,128 @@
+new_slug: findings-and-guesses-separator
+name: "Findings and guesses separator"
+summary: "Paste a report or analysis. Get every line sorted into proven, likely or guess, plus the open questions left over."
+job: think-and-decide
+thinking: high
+thinking_why: "It has to judge how well each claim is supported and spot hidden leaps, which takes careful reading."
+
+headline: "Findings and guesses separator"
+subhead: Paste a report, analysis or write-up. It lists the terms it relies on, sorts every claim into observed, inferred or guess, and ties each inference to its evidence. You get a clean version and a separate list of open questions.
+
+explain: |
+  Reports often mix three things in one voice: what was seen, what was worked out from it, and what someone hopes is true. A reader cannot tell which is which, so a guess gets repeated as a finding.
+
+  This skill defines the key terms first, then sorts each claim as observed, inferred or guess. For each inference it names the observation underneath. It tests whether each claim uses the fewest causes that still explain it, and whether two separate routes support it. Guesses are rewritten as open questions. It also writes each claim in one sentence, the public claim in one line, and checks whether the data behind it is the best available.
+
+when:
+  - You are about to share a report, case study or recommendation.
+  - You are reading an analysis from someone else and want to know what is solid.
+  - A team has started repeating a claim as fact and nobody can say where it came from.
+
+you_give:
+  - The report or analysis, as text
+  - The data it rests on, such as a sheet or results (optional)
+  - The decision or question it is meant to answer (optional)
+you_get:
+  - A list of defined terms
+  - Every claim sorted into proven, likely or guess, with the observation behind it
+  - A rewritten version with guesses moved out
+  - A separate block of open questions
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the report. Attach the data if you have it.
+  - Say what decision the report is for.
+  - Check the sorted list. Challenge any line you think was rated too high or too low.
+  - Share the clean version and the open questions, not the original.
+
+how_it_works:
+  - title: Defines the terms
+    text: Lists the words the report relies on and what each means here.
+  - title: Sorts the claims
+    text: Marks each as observed, inferred or guess.
+  - title: Ties inferences to evidence
+    text: Names the observation that each inference rests on.
+  - title: Trims the causes
+    text: Gives each claim the fewest causes that still explain it.
+  - title: Checks two routes
+    text: Looks for a second, independent route to each claim, or marks it single-route.
+  - title: Moves guesses out
+    text: Rewrites guesses as open questions in their own block.
+  - title: Writes the claims plainly
+    text: States each claim in one sentence and the public claim in one line.
+  - title: Checks the data
+    text: Asks whether the data behind each claim is the best you can get.
+
+output_shape: |
+  TERMS USED
+  <term>: <meaning in this report>
+
+  CLAIMS, SORTED
+  <n>. <claim in one sentence>
+     Status: proven / likely / guess
+     Rests on: <named observation> | Routes: <two or single-route>
+     Causes needed: <the fewest>
+
+  THE CLEAN VERSION
+  <report text with guesses removed>
+
+  OPEN QUESTIONS
+  <guesses rewritten as questions>
+
+  THE PUBLIC CLAIM
+  <one line>
+
+  DATA QUALITY
+  <is this the best data available, and what would improve it>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: The data
+    how: Attach the numbers behind the report. Without them, claims can only be sorted by wording.
+  - what: What the report is for
+    how: State the decision. It affects how strong a claim must be before it is used.
+  - what: Terms you use
+    how: Tell it if a word has a special meaning in your field, so it is defined correctly.
+  - what: How strict
+    how: Say if this is for a public claim or an internal note. Public claims get a tighter standard.
+
+judge:
+  - Every proven line points to a named observation.
+  - No guess is written as a finding.
+  - Each cause used is needed to explain the data.
+  - Open questions are listed in a separate block.
+  - Every claim has two routes or is marked single-route.
+
+test:
+  - Run it on a report you wrote last year. See whether it finds claims that outran the data.
+  - Run it on a report you trust. Most lines should be proven or likely, and the rest guesses it explains.
+  - Check one proven line by hand against the data.
+  - Run it twice and compare the status given to the same claims.
+
+improve:
+  - Add what counts as an observation in your field, such as a recorded sale, a test result or a signed document.
+  - Add your standard for public claims, such as needing two sources.
+  - Keep the open-questions block in your notes and tick off each one as it is answered.
+  - Pair it with "Contrary evidence log keeper" for work that is still in progress.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and testing claims in text is work any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Lets you check a proven line against the figures behind it."}
+  inputs:
+    - "The raw data or export the report was built from"
+    - "The sources the report cites"
+    - "Earlier versions of the same report"
+
+terms:
+  - term: Observed
+    meaning: Something directly seen, measured or recorded.
+  - term: Inferred
+    meaning: Worked out from what was observed, not seen directly.
+  - term: Single-route
+    meaning: A claim supported by only one line of evidence, with no second, independent check.

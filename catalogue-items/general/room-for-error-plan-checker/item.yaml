@@ -1,0 +1,18 @@
+slug: room-for-error-plan-checker
+name: "Room for error plan checker"
+summary: "Paste a budget or business plan. Get a survival score out of 100, where it breaks in a bad year, and fixes."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [morgan-housel]
+credits:
+  - {title: "Getting Wealthy vs. Staying Wealthy", by: "Morgan Housel (Collaborative Fund, 2022)", url: "https://collabfund.com/blog/getting-wealthy-vs-staying-wealthy/", used: "Survival before upside, the ruin point, borrowed money that can be called in and the need for a margin of safety"}
+  - {title: "The Psychology of Money", by: "Morgan Housel (Collaborative Fund, 2018)", url: "https://collabfund.com/blog/the-psychology-of-money/", used: "Being bold over the long run while cautious in the short run, and a rule that stops panic moves"}

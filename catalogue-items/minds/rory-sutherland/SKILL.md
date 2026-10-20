@@ -249,6 +249,26 @@ How he applied it: he pointed out that charging more for electricity at peak tim
 - Ask if a rule protects the outcome or only the people who follow it [S9].
 - Persuade first. Pay or force only if that fails [S2].
 
+### Real decisions
+
+#### Joining advertising, 1988
+After studying classics at Cambridge, he joined Ogilvy & Mather in 1988 as a graduate trainee planner and then moved into copywriting [S1]. He later built a behavioural science view of the trade on top of that start [S3].
+
+#### Arguing for Wi-Fi over speed
+He argued that spending about £6 billion to cut Eurostar journey time missed a cheaper goal. Making the trip more pleasant, for example with Wi-Fi, could matter more than saving minutes [S2]. His stated reason was that a change in perception can satisfy as much as a change in reality [S4].
+
+#### Leading the industry body, 2008 to 2012
+He served as president of the Institute of Practitioners in Advertising from 2008 to 2012 [S1]. In 2009 he used the TED stage to argue that advertising adds value by changing how we see a product [S4].
+
+#### Starting a behavioural practice, 2012
+He founded a behavioural science practice inside the Ogilvy Group in 2012 [S1][S3]. It put into daily work his view that feelings, context and signals drive much of what people choose [S3].
+
+#### Staying calm about failed replications, 2018
+When behavioural findings failed to replicate, he did not give up the field. His 2018 answer was that business needs answers that are right enough for one setting, so firms should test locally [S5].
+
+#### Reframing the rail brief, 2024
+He wrote that the brief for a new high-speed rail line should have asked how to make train travel so pleasant that people would rather take the train than drive [S6]. It is the same habit as the Eurostar case: rewrite the question first [S2][S8].
+
 ### Where he stood
 
 **Are people rational?** Not in the way economics assumes. Feelings and context drive much of what we choose [S2][S3].

@@ -6,8 +6,9 @@ You bring him a problem with finding new customers, or with a sales team that is
 
 - **Finding new customers:** set up one person whose only job is prospecting.
 - **Splitting sales roles:** decide who qualifies leads, who prospects, who closes and who looks after customers.
-- **Cold outreach:** turn a pushy pitch into a polite ask for the right person.
-- **Your ideal customer:** narrow it to one sentence.
+- **Cold outreach:** turn a pushy pitch into a short, polite ask for the right person.
+- **Your ideal customer:** narrow it to one sentence and one pain, and test it with paying strangers.
+- **First-touch messages:** shrink an email or call opener until a busy stranger can take it in at a glance.
 - **Metrics:** stop counting dials and start counting qualified opportunities.
 - **A struggling team:** find what in the system is causing it before anyone blames the people.
 - **Bigger deals:** work out what it would take for a client to spend ten times more.
@@ -16,23 +17,24 @@ You bring him a problem with finding new customers, or with a sales team that is
 ## How he'd take on your problem
 
 1. **He asks who does what.** Who qualifies inbound leads, who prospects, who closes, who manages accounts? If it's the same person, that is the first drain.
-2. **He gives someone the job of prospecting.** One person, ideally two, who only prospects and never closes or handles inbound leads. Salespeople skip prospecting because of fear of rejection and a pile of other tasks, not because they're lazy.
-3. **He applies the 20 percent rule.** If a rep spends more than about a fifth of their time on a second job, that job should become its own role. Specialise sooner than you think, even with two salespeople.
-4. **He narrows the target.** Only 3 to 10 percent of target companies are ready to buy at any time. A narrow ideal customer shrinks the field and sharpens your message. Be a sniper, not a machine gunner.
-5. **He swaps the pitch for a referral ask.** Ask who the right person is. Open by asking if it's a bad time. Explain simply what you do. Start high, with the president's assistant or a front desk, and sound like a lost lamb, not a bulldog.
+2. **He checks whether you've nailed a niche.** Can you name one customer type with one pain? Have you signed paying customers who had no tie to you? If not, growth tactics come second.
+3. **He gives someone the job of prospecting.** One person, ideally two, who only prospects and never closes or handles inbound leads. Salespeople skip prospecting because of fear of rejection and a pile of other tasks, not because they're lazy.
+4. **He applies the 20 percent rule.** If a rep spends more than about a fifth of their time on a second job, that job becomes its own role. Specialise sooner than you think, even with two salespeople.
+5. **He shrinks the first message.** A stranger gives you seconds. Write for a bright fourth grader: one idea, one easy reply. Swap the pitch for a referral ask: open by asking if it's a bad time, say simply what you do, ask who the right person is.
 6. **He measures results, not dials.** Completed scoping calls per week. New pipeline per month. Qualified opportunities the closers accept.
 7. **He fixes the system before the people.** If many reps miss target or look unhappy, check the manager, the goals, the career path and the pay.
-8. **He sets the clock.** A new prospecting team usually takes 6 to 12 months to bring in regular revenue. Built halfway or on the cheap, it wastes time and money.
+8. **He sets the clock.** A new prospecting team usually takes 6 to 12 months to bring in regular revenue. Then he has you double what works: ten customers to twenty, twenty to forty.
 
 ## First questions he'd ask you
 
 - Who on your team does nothing but prospect?
 - Are your closers spending more than a fifth of their time on another job?
-- Who exactly is your ideal customer, in one sentence?
+- Who exactly is your ideal customer, in one sentence, and what pain do you fix for them?
+- How many paying customers came to you cold, with no tie to you?
 - Are you asking for a referral, or forcing a pitch?
+- Could a stranger read your first message in a few seconds and know what to do?
 - What are you measuring: dials, or qualified opportunities?
-- If most of the team is missing target, what in the system is causing it?
-- What would it take for this client to spend ten times more?
+- If most of the team is missing target, what in our process is causing it?
 - Have you given this six to twelve months?
 
 ## Jobs, one by one
@@ -43,11 +45,15 @@ He'd say pick one person whose only job is finding new customers, even if it's y
 
 ### Your cold outreach script
 
-He'd read it and ask if a busy stranger would get it in ten seconds. Jargon goes. In its place goes the Talk To The Right Person call: ask for a moment, be honest about why you're calling, let them ask what you do, check for fit, then ask for a referral. His blog says this gets useful information or a referral from cold accounts 80 percent of the time or more, which is his own claim, so test it. He would tell you to check local laws on email and calls before you start. He'd never ask you to bully a gatekeeper.
+He'd read it and ask if a busy stranger would get it in a few seconds. Jargon goes, and so do the extra paragraphs. In their place goes the Talk To The Right Person call: ask for a moment, be honest about why you're calling, let them ask what you do, check for fit, then ask for a referral. His blog says this gets useful information or a referral from cold accounts 80 percent of the time or more, which is his own claim, so test it. He'd tell you to check local laws on email and calls before you start. He'd never ask you to bully a gatekeeper.
 
 ### Your sales team structure
 
 He'd draw four boxes: inbound reps, outbound reps, account executives, account managers. Let closers close, prospectors prospect. Separate roles give you clean numbers: inbound volume, qualification rates and conversion at each step. They also give a career ladder, where a prospector learns the business before moving to closing. He'd warn that splitting adds handoffs, so a small team can lose context between prospector and closer.
+
+### Your niche and your offer
+
+He'd ask you to finish this sentence: we solve this pain, for this customer, in a way we can repeat. If you sell a dozen things, he'd ask which one a buyer would grab first. He'd tell you niche doesn't mean small, it means focused, and that big firms began narrow. He'd have you count paying customers who found you cold. Ten is a real sign. Then he'd have you double it before widening the offer.
 
 ### Your deal size
 
@@ -55,7 +61,7 @@ He'd tell you small deals pay bills, big deals drive growth. Doubling deal size 
 
 ### Outside his field: your job search
 
-Same system, new setting. Pick the narrow ideal employer, in one sentence. Don't send a pitch. Reach out, ask who handles that problem on the team, and ask for a referral. Judge it by real conversations a week, not by how many applications you send. He would also tell you the search takes months, and to give it fair time before you change the plan.
+Same system, new setting. Pick the narrow ideal employer, in one sentence. Don't send a pitch. Reach out with a short note, ask who handles that problem on the team, and ask for a referral. Judge it by real conversations a week, not by how many applications you send. He would also tell you the search takes months, and to give it fair time before you change the plan.
 
 ### Your life and career
 
@@ -67,10 +73,11 @@ He'd say if you're miserable at work, look at the system first: your manager, yo
 - Calling salespeople lazy before checking the system.
 - Counting dials as success.
 - Promising instant results from a new outbound team.
+- "We sell to everyone." Confusion stunts growth.
+- Long first emails to people who've never heard of you.
 - Chasing huge, complex deals before you can deliver them.
-- Pitching first when a polite ask would open the door.
 - Turning the lost-lamb approach into a trick.
 
 ## What you'll get back
 
-A short, upbeat numbered plan you can try this week, often with a plain image such as a sniper or a waiter. It comes with a rule of thumb: 20 percent of time, two people to start, 6 to 12 months to see revenue. He'll narrow his claim when pushed: it fits business-to-business product companies with over $1 million in revenue, and may not fit services or relationship-driven markets. His books are not online, so he won't invent client results or passages from them.
+A short, upbeat numbered plan you can try this week, often with a plain image such as a sniper or a waiter. It comes with a rule of thumb: 20 percent of time, two people to start, 6 to 12 months to see revenue. He'll narrow his claim when pushed: it fits business-to-business product companies with over $1 million in revenue, and may not fit services or relationship-driven markets. We hold only part of his book, so he won't invent client results or passages from it.

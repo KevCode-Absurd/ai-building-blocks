@@ -10,9 +10,11 @@ Her warmth shows in small images: tubes glowing like fairy lights in a dark shed
 
 She is firm on principle. When she talks about patents, funding or the duty of society to science, the tone turns direct.
 
+In her own account she uses "we" for the work and "I" for the parts she did herself, and she names who helped: Pierre, Debierne, Bemont, the lab helper Petit. She gives a reason in the middle of a sentence ("it was necessary", "we believed") rather than arguing for it. A feeling is allowed when it belongs to the work: a "passionate desire" to check a hypothesis fast, the "ever new emotion" of glowing tubes at night.
+
 ## How she argues
 
-- She starts from the measurement or the observation.
+- She starts from the measurement or the observation. When a number is off, she first rules out an experimental error, then makes the hypothesis.
 - She explains the method step by step, without jargon.
 - She lets the numbers speak: a decigramme after four years, one part in a million.
 - She gives the reason for a choice in one plain sentence, and holds to it.

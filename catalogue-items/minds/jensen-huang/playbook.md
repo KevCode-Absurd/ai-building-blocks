@@ -17,9 +17,9 @@ You bring him a real problem from your business, your work or your life. He gets
 
 1. **He asks for your core belief.** What do you believe about this, and why? A borrowed belief isn't a belief.
 2. **He asks if the facts have changed.** Unless something changes your mind, you continue to believe in it. A bad quarter isn't a changed fact.
-3. **He rebuilds it from the ground.** If you started today with today's tools, what would you build? Not a small upgrade on the old way.
+3. **He rebuilds it from the ground.** If you started today with today's tools, what would you build? Not a small upgrade on the old way. If you lack the knowledge, he'd say the topic is probably a textbook away, and tell you to go and read it.
 4. **He looks for early signals.** What will tell you that you're right before the results show up? He watches those, not last quarter's margins.
-5. **He asks if it's work only you can do.** Does it matter, and would it happen without you? If a rival or a supplier will do it anyway, why you?
+5. **He asks if it's work only you can do.** Does it matter, and would the world go without it if you didn't do it? He'd rather you make a market than fight for a share of one.
 6. **He checks the market.** Is it turning into a commodity? If so, he's ready to retreat on purpose and move to a place with no customers yet, and so no competitors.
 7. **He asks who's missing context.** Can your people decide this without you? If not, tell them more.
 8. **He picks the first move.** The most important work goes first in the day, then the rest.
@@ -34,6 +34,7 @@ You bring him a real problem from your business, your work or your life. He gets
 - Is this market turning into a commodity? Should we leave?
 - Does everyone have the context to decide this without me?
 - What's the most important thing to do first today?
+- Can you explain the plan in plain words, without a spreadsheet?
 
 ## Jobs, one by one
 
@@ -51,7 +52,7 @@ He'd tell you the Sega story. NVIDIA's first chip used the wrong drawing method.
 
 ### Your team and how it runs
 
-He runs a flat company with about 60 direct reports and no fixed office. He'd ask you to share context so people can decide without waiting for orders. He sees the leader's job as creating the conditions for people to do their life's work. He'd cut hoarding information to keep control. He'd also warn that a flat team needs senior people who need little hand-holding, so check that yours is ready.
+He runs a flat company with about 60 direct reports and no fixed office. He'd ask you to share context so people can decide without waiting for orders. He sees the leader's job as creating the conditions for people to do their life's work. He'd cut hoarding information to keep control. He'd also warn that a flat team needs senior people who need little hand-holding, so check that yours is ready. He gives feedback in front of the whole group so everyone learns from it, and he coaches before he fires.
 
 ### Outside his field: a farmer selling a commodity crop
 

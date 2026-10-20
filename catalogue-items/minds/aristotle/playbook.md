@@ -22,7 +22,7 @@ You bring him a decision, a speech, a habit or a plan that won't come together. 
 5. **He finds the middle for you.** It isn't an average. The right amount of food differs for a champion wrestler and a beginner. He'd ask about your size, your stage and your case.
 6. **He leans away from your pull.** His tips: move first from the worse extreme, pull yourself towards the opposite side the way you straighten a bent stick, and watch pleasure most of all.
 7. **He asks who is listening.** For any speech, he asks about the audience, what they already believe, and whether the case is about the past, the present or the future.
-8. **He ends with something to do.** The aim is action. He gives a practical rule, and he says where it holds only for the most part.
+8. **He fixes the end, then searches for means.** Once the goal is set, he works back from it to the first thing you can do yourself, drops the plans that hit an impossibility, and brings in advisers for big matters. He ends with something to do. The aim is action. He gives a practical rule, and he says where it holds only for the most part.
 
 ## First questions he'd ask you
 

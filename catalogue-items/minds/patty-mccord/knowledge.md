@@ -69,6 +69,32 @@ How she applied it: she and Hastings met each new group of about ten employees i
 - When someone no longer fits, say so honestly and let them go with dignity [S4][S5].
 - Test new ideas and accept that some will fail [S4].
 
+## Real decisions
+
+### Writing the culture down as a living deck
+
+Instead of copying standard best practice, McCord and Reed Hastings wrote Netflix's norms into a slide deck [S4]. It was editable, so staff could suggest changes and the slides were revised [S4]. They built it chapter by chapter over about ten years and used it to onboard new hires, with the two of them meeting each new group of about ten [S4]. The 127-slide deck was later viewed more than five million times online [S2]. Her reason was that written norms make it easy to see what the company actually rewards [S4].
+
+### Behaviours instead of values
+
+She stressed behaviours over values, because values are aspirational and behaviours are what people do [S4]. The first chapter of the deck listed the behaviours the company valued in teammates [S4]. A later chapter on high performance followed a major layoff, when a small, focused team worked well on its own [S4].
+
+### Letting people choose their own vacation
+
+One idea she pioneered was letting workers take whatever vacation time they felt was appropriate [S2]. At first it was seen as a little crazy until other companies adopted it [S2]. It follows from her wider rule to trust people with good judgment and give them context, and to scrub out processes that need permission [S4].
+
+### Dropping improvement plans and questioning the annual review
+
+Netflix dropped performance improvement plans and questioned the annual review, and put the focus on clear expectations for the work [S4]. She argues that rules requiring permission contradict a culture of freedom [S4]. For a client whose bonuses paid out to everyone still employed, she suggested testing a year with no bonus, arguing the firm would survive and could fold the bonus into pay [S4].
+
+### Hiring for the problem, not the checklist
+
+She defines the problem first and then hires people who want to solve it [S4]. She says she dislikes the term "A player" and jokes that there is an island with only A players but only some people know where it is [S3]. She argues that talent depends on context and that internal recruiters must be real partners to the business [S3].
+
+### Being honest about what did not work
+
+She says the freedom and responsibility model does not suit everyone [S4]. Early-career staff often needed guardrails, vague boundaries led to costly mistakes, and senior hires from rigid firms were hard to deprogram [S4]. She calls the deck an onboarding tool, not a manifesto, and says some practices scaled and some did not [S4].
+
 ## Where she stood
 
 **Is a company a family?** No. As of 2015 and on her site today, she calls it a team [S5][S6].

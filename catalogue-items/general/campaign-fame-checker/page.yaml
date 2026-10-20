@@ -1,0 +1,128 @@
+new_slug: campaign-fame-checker
+name: "Campaign fame checker"
+summary: "Paste your campaign plan or ad. Get it scored on four fame facets, with the weakest one and the first fix."
+job: check-ads
+thinking: medium
+thinking_why: "It rates four facets against a plan, which needs judgement but follows a fixed frame."
+
+headline: "Campaign fame checker"
+subhead: "Give it your campaign plan, and your ad or script if you have one. It rates the plan on four facets of fame, each with a reason from the plan. You get a score out of 100, the weakest facet and one change to test first."
+
+explain: |
+  Plenty of campaigns reach people and still leave no mark. They give nobody a reason to enjoy them, nothing to remember them by, and nothing to pass on. The plan looks sound and nothing gets talked about.
+
+  This skill checks four things: does the work give people some pleasure apart from the sales message, does the plan reach a mass audience, does it use distinctive assets every time, and does it invite people to take part. Each facet gets 25 points. The weakest one is named, because a weak facet drags the others down. It also says plainly what it cannot know, since fame cannot be fully planned.
+
+when:
+  - "You have a campaign plan and wonder if anyone would notice it."
+  - "Your ads are clear but forgettable."
+  - "You are choosing between two ideas and want a fair way to compare them."
+
+you_give:
+  - "Your campaign plan or brief"
+  - "The ad copy or script (optional)"
+  - "Your planned reach and spend (optional)"
+  - "Any character, colour, tune, slogan or look you use (optional)"
+you_get:
+  - "A score out of 100, with how it was worked out"
+  - "A rating and a reason for each of the four facets"
+  - "The weakest facet and one change to test"
+  - "A list of what the plan leaves unknown"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your plan. Add the ad or script if you have it."
+  - "List any distinctive assets you already use, such as a mascot, colour or sound."
+  - "Read the weakest facet first and decide on the one change to test."
+  - "Run the check again on the changed plan."
+
+how_it_works:
+  - title: "Checks the pleasure"
+    text: "Asks if the work itself gives people enjoyment or satisfaction, apart from the product message."
+  - title: "Checks the reach"
+    text: "Asks if the plan reaches a mass audience and lets people see that it does."
+  - title: "Lists distinctive assets"
+    text: "Names the character, colour, tune, slogan or look, and checks each is used every time."
+  - title: "Checks taking part"
+    text: "Asks how the public will talk about, share, wear or argue about it."
+  - title: "Weighs the four together"
+    text: "Notes that one weak facet drags the rest."
+  - title: "Names the fix"
+    text: "Picks the weakest facet and one change to test, and says fame cannot be fully planned."
+
+output_shape: |
+  SCORE: <n>/100 (four facets, 25 points each)
+
+  PLEASURE <n>/25
+  <reason from the plan>
+
+  REACH <n>/25
+  <reason from the plan>
+
+  DISTINCTIVE ASSETS <n>/25
+  Assets named: <list>
+  Used every time: <yes or no, where>
+
+  TAKING PART <n>/25
+  <reason from the plan>
+
+  WEAKEST FACET
+  <facet> | <why it drags the others>
+
+  FIRST CHANGE TO TEST
+  <one change and how you will read it>
+
+  WHAT IS UNKNOWN
+  <list>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Reach figures"
+    how: "Give audience size and spend. Without them the reach facet is marked MISSING and cannot score high."
+  - what: "Your distinctive assets"
+    how: "Name them. It checks each against where it appears, so an unnamed asset scores nothing."
+  - what: "Ad or script"
+    how: "Add it. Pleasure is judged from the work itself, not the plan alone."
+  - what: "Two plans"
+    how: "Run both and compare the four facets side by side."
+
+judge:
+  - "Each facet has a rating and a reason taken from your plan."
+  - "A hope that people will share it does not replace paid reach."
+  - "Distinctive assets are named, not described as a feeling."
+  - "The score shows how it was worked out."
+  - "The report says what it does not know."
+
+test:
+  - "Run it on a famous campaign you know well. Check that its strong facets match what you remember."
+  - "Run it on your own plan, then change only the weakest facet and run it again. The score should move."
+  - "Run it twice on the same plan. Scores should stay within a few points."
+  - "Show the weakest facet to a colleague and ask if they agree."
+
+improve:
+  - "Add your category's usual assets to step 3, so it can tell what is already taken."
+  - "Add a line to the pleasure step about what your audience enjoys, such as humour, music or craft."
+  - "Save your named distinctive assets to your brand file."
+  - "Pair it with a media plan check so reach is measured, not guessed."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rating a plan against four named facets is text work any strong chat AI does with this skill."}
+    - {name: "Your ad platform's reach report", why: "Gives real reach numbers for the reach facet."}
+  inputs:
+    - "Reach and frequency figures from past campaigns"
+    - "A list of your rivals' colours, characters and slogans"
+    - "Examples of comments or shares on past work"
+
+terms:
+  - term: "Distinctive asset"
+    meaning: "A character, colour, tune, slogan or look that people link to you without seeing your name."
+  - term: "Fame"
+    meaning: "How widely a brand and its work are known, noticed and talked about."
+  - term: "Mass audience"
+    meaning: "A wide group, including people who do not buy from you yet."

@@ -16,6 +16,7 @@ He doesn't sell. He doesn't gush. His humour is dry and dark; he once described 
 - He reasons from first principles and from how the medium works: film is closer to music than to a book.
 - He brings detailed knowledge from research: history, science, the facts of a world.
 - He admits difficulty and cost openly: money lost, films he didn't control.
+- He brushes aside critics with numbers (box office, share of good reviews) and declines to hand over a meaning.
 - When pushed, he doesn't raise the temperature. He repeats his reasoning more precisely.
 
 ## Questions he always asks

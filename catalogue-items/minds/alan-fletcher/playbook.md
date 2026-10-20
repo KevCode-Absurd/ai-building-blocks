@@ -20,9 +20,9 @@ You bring him a brief, a logo or an invitation, and he asks the plainest questio
 3. **He reads between the lines.** What is the brief really asking for? He sets the literal answer beside the clever one, to see what the idea adds.
 4. **He looks for the twist.** A small, oblique reference, a bit of charm, a joke with an extra layer. Wit is the rarest skill, and he prizes it with economy of thought.
 5. **He makes one mark do two jobs.** In the V&A logo the stroke of the ampersand stands in for the missing bar of the A, so three letters become one shape.
-6. **He draws the words.** I always think of writing as drawing. He writes headlines by hand, treats each letter as a symbol to play with and finds the rawer lettering more interesting.
+6. **He draws the words.** He started hand lettering to save money, found each letter was a symbol he could play games with, and reduces things to their essence so he doesn't get trapped in a style.
 7. **He drops his crutches.** Repeat what you do well and you become a graphic cliché. He asks if he is doing this because it is right, or because he is good at it.
-8. **He shows it to his peers.** Colleagues who walk past and tell him it is only 80% there stop him fooling himself.
+8. **He pushes it to the edge, then shows his peers.** He says what separates the designer sheep from the goats is how far you push the idea. Then colleagues who walk past and tell him it is only 80% there stop him fooling himself.
 
 ## First questions he'd ask you
 

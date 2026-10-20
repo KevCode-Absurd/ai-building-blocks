@@ -1,0 +1,122 @@
+new_slug: customer-discovery-interview-planner
+name: "Customer discovery interview planner"
+summary: "Paste your business idea. Get your guesses, who to talk to and questions that test them outside the building."
+job: understand-customers
+thinking: medium
+thinking_why: "It ranks guesses and plans talks, but the structure is fixed."
+
+headline: "Customer discovery interview planner"
+subhead: "Paste your business idea and plan. It turns the plan into guesses, ranks them by risk, lists who to talk to for each and writes questions about what people do now. You get a talk plan and a rule for changing the model."
+
+explain: |
+  Most plans read like facts, but they are guesses about customers, channels, price and demand. Writing them as facts hides what you have not tested, and building first costs months before you find out.
+
+  This skill writes your model as guesses and ranks them by how bad it would be to be wrong and how little you know. For the top ones it names who to talk to, where to find them and what to ask about their current behaviour. It also plans for the founders to do the first talks, keeps a record, and sets a rule for when the model changes.
+
+when:
+  - "You have a plan and have not yet talked to customers."
+  - "You talked to a few people and are unsure what to change."
+  - "You are about to hire someone to do the first talks."
+
+you_give:
+  - "Your plan or idea"
+  - "The decision you want the research to help with"
+  - "People or places you can reach (optional)"
+you_get:
+  - "Your guesses ranked by risk"
+  - "Who to talk to for each, with where to find them"
+  - "Behaviour questions for each guess"
+  - "A record sheet and a rule for changing the model"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your plan and the decision you want to make."
+  - "Book the first five talks yourself."
+  - "After five talks, bring back your record sheet and apply the rule."
+
+how_it_works:
+  - title: "Writes guesses"
+    text: "Customers, problem, channels, price, demand, partners."
+  - title: "Ranks by risk"
+    text: "Cost of being wrong times how little you know."
+  - title: "Lists who to see"
+    text: "Type, place and number for each guess."
+  - title: "Writes questions"
+    text: "About what people do now."
+  - title: "Puts founders in"
+    text: "The first talks are done by the founders."
+  - title: "Plans the record"
+    text: "One row per talk, with a quote."
+  - title: "Sets the change rule"
+    text: "When a guess is confirmed, rejected or changed."
+
+output_shape: |
+  GUESSES
+  1. We guess that <x> | evidence <x or MISSING> | risk <n>
+
+  TALK PLAN
+  <guess>: see <person type> at <place>, <n> people
+
+  QUESTIONS
+  <guess>:
+    - <behaviour question>
+
+  WHO TALKS
+  <name>: <why>
+
+  RECORD SHEET
+  date | person | guess | what they did | what they said | quote | supports/weakens/no news
+
+  MODEL RULE
+  Confirmed when <x>; rejected when <y>; next guess <z>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "How many guesses"
+    how: "Five is enough for a first round. More spreads the talks thin."
+  - what: "Who you can reach"
+    how: "Name real people or groups. The plan will use them."
+  - what: "What you already know"
+    how: "State past talks or data. It changes the risk scores."
+  - what: "Your decision"
+    how: "Say what you will do with the answer, such as build, pause or change price."
+
+judge:
+  - "Each top guess has a person type and a place."
+  - "No question names your product."
+  - "The founders are in the talks."
+  - "The rule says what confirms and what rejects a guess."
+  - "You could start booking talks tomorrow."
+
+test:
+  - "Run it on a plan you already tried. See if it finds the guess that was wrong."
+  - "Run it twice. The top five guesses should overlap."
+  - "Do three talks and see if the questions got facts, not opinions."
+  - "After the first batch, check that the model changed."
+
+improve:
+  - "Add your industry's usual channels to step 1."
+  - "Add the tools you use for notes to step 6."
+  - "Keep the record sheet and review it every five talks."
+  - "Pair it with an MVP experiment planner for the guess talks cannot settle."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ranking guesses and writing questions is text work."}
+    - {name: "A shared spreadsheet or notes app", why: "Holds the record sheet so all founders see the same data."}
+  inputs:
+    - "A one-page version of the plan"
+    - "A list of people you could ask"
+    - "Notes from past talks"
+    - "The decision date"
+
+terms:
+  - term: "Guess"
+    meaning: "A belief in the plan that you have not yet tested with customers."
+  - term: "Model"
+    meaning: "The plan laid out as customers, problem, channels, price and costs."

@@ -20,6 +20,7 @@ origin: rebuilt
 source_ids: [CES-077]
 old_name: offer image ad set
 version: 2.0.0
+minds: [eugene-schwartz]
 credits:
   - {title: "Guides Against Deceptive Pricing (16 CFR Part 233)", by: "US Federal Trade Commission", url: "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233", used: "Savings only against a price really charged for a fair stretch"}
   - {title: "Breakthrough Advertising", by: "Eugene M. Schwartz", url: "https://openlibrary.org/works/OL2625224W", used: "Offer ads for people who already know the product"}

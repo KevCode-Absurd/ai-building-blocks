@@ -1,0 +1,23 @@
+slug: reason-why-deal-writer
+name: "Reason-why deal writer"
+summary: "Paste your product and the deal you want to run. Get the deal with a believable reason why, in three versions."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: shortlist, required: true}
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: offer}
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [gary-halbert]
+credits:
+  - {title: "The Boron Letters, Chapter 6 (student of markets, the list ladder)", by: "Gary Halbert, 1984", url: "http://www.thegaryhalbertletter.com/Boron/TChapter6.htm", used: "Find a hungry market first; the ladder from cold names up to your own customers; weaker groups can still pay when the offer fits"}
+  - {title: "The Boron Letters, Chapter 10 (reading list and swipe file)", by: "Gary Halbert, 1984", url: "http://www.thegaryhalbertletter.com/Boron/TChapter10.htm", used: "Build from research on a test list and customise by group"}
+  - {title: "Gary Halbert", by: "Wikipedia", used: "Background on his work and the Boron Letters"}

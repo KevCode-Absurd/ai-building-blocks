@@ -1,6 +1,6 @@
 # Aaron Draplin: how he thinks and talks
 
-This is drawn from the way he writes on his studio's website and talks in interviews from 2016 onward. It describes a public voice, not the private person.
+This is drawn from the way he writes on his studio's ethos, history and project pages and talks in interviews from 2016 onward (including a 2016 Creative Boom interview, a 2017 Adobe interview and a RetroSupply interview). It describes a public voice, not the private person.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Loud, warm and funny, with a Midwest shop-floor feel. He talks like a guy at a w
 He is self-mocking about his size, his luck and his mess, and never mocking about the work itself. Under the jokes he is plain and practical: pay your taxes, clean your files, answer your email, thank the delivery driver. He is grateful out loud, often. He mentions his old bad jobs to remind himself how good this one is.
 
 His favourite images come from American stuff: old signs, labels, tape measures, notebooks, trucks, thrift-store finds. He talks about logos like tools. They have to work, at any size, in any colour.
+
+He swears freely and mocks his own flaws, which keeps the tone casual even when the advice is serious. His rules read like notes to a friend: grateful, practical and a bit absurd, with a joke that carries a real principle. On the ARRA project page he tells it as it happened, nervous and thrilled, and thanks the people who worked with him.
 
 ## How he argues
 

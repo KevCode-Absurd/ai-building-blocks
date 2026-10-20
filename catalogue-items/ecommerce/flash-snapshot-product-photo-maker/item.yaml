@@ -19,6 +19,7 @@ origin: rebuilt
 source_ids: [CES-036]
 old_name: candid flash photo set
 version: 2.0.0
+minds: [jakob-nielsen]
 credits:
   - {title: "Bounce flash photography & The Inverse Square Law", by: "Neil van Niekerk, Tangents", url: "https://neilvn.com/tangents/bounce-flash-photography-and-inverse-square-law/", used: "Why direct flash leaves the background dark, and how distance to the wall changes falloff"}
   - {title: "Flash synchronization", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Flash_synchronization", used: "Flash with a slow shutter: lit areas sharp, ambient areas glowing with motion trails"}

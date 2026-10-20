@@ -1,0 +1,128 @@
+new_slug: hours-to-assets-planner
+name: "Hours-to-assets planner"
+summary: "Paste how you earn today. Get which parts pay only while you work, and a plan to build something you own."
+job: plan-strategy
+thinking: high
+thinking_why: "It reshapes how someone earns, so it has to weigh trade-offs between several routes."
+
+headline: "Hours-to-assets planner"
+subhead: "Paste how you earn today, hours and rates if you know them. It splits pay that stops when you stop from anything that earns without you, picks one way to multiply your work, and plans the first week."
+
+explain: |
+  If every dollar you earn needs another hour of your time, your income has a ceiling set by the clock. Some work escapes it: a product, a tool, a piece of media, a team that works for you, money that earns. It is hard to see which parts of your pay are which.
+
+  This skill splits your earnings into time-tied and not time-tied, names which kind of multiplier could carry each piece (other people, money, or code and media that cost nothing to copy), and prefers the kind that needs no one's permission. It turns one skill or piece of judgment into a product you could own, sets your real hourly rate, and lists work to stop or buy back. It promises no income and no timeline.
+
+when:
+  - "You are busy and well paid but stop earning the day you stop working."
+  - "You want to turn a service into a product and do not know which part."
+  - "You are weighing a raise or offer and want to know what you would own at the end."
+
+you_give:
+  - "How you earn today: clients, roles, products, hours and rates"
+  - "The skill or judgment people pay you for"
+  - "Your goal or income target (optional)"
+  - "A sales or income sheet (optional)"
+you_get:
+  - "Each income line marked time-tied or not"
+  - "One multiplier route chosen, with the reason"
+  - "A product idea built from your own skill or name"
+  - "Your hourly rate, a stop or buy-back list and a first step for this week"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste what you earn and from where, with hours where you know them."
+  - "Say what you are known for. That is the piece most likely to become the product."
+  - "Read the time-tied lines first, then the route it picked."
+  - "Do the one-week step and come back at the review date."
+
+how_it_works:
+  - title: "Split how you earn"
+    text: "Splits income into time-tied and not time-tied."
+  - title: "Name the multipliers"
+    text: "Names which kind of multiplier could carry each line."
+  - title: "Prefer the one needing no permission"
+    text: "Prefers the route that needs no one's approval."
+  - title: "Turn a skill into a product"
+    text: "Turns one skill into a product that could be owned."
+  - title: "Decide what goes under your name"
+    text: "Names what goes under your own name and the risk."
+  - title: "Set a rate and a stop list"
+    text: "Sets an hourly rate and lists work to drop or hire out."
+  - title: "Write the first step"
+    text: "Writes a first step for this week and a review date."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  HOW YOU EARN
+  - <line> | <hours per week> | <income> | <time-tied / beyond hours>
+  Share tied to hours: <share>
+
+  MULTIPLIER FOR EACH LINE
+  - <line> | <people / money / code and media> | Needs: <what>
+
+  THE ROUTE
+  <chosen route and why it needs no permission, or what permission it needs>
+
+  THE PRODUCT
+  <who it is for, the problem, what it replaces>
+
+  UNDER YOUR NAME
+  <what, and the risk>
+
+  YOUR RATE AND STOP LIST
+  Rate: <figure and how it was worked out>
+  - <task> | stop / hire out / automate
+
+  FIRST STEP THIS WEEK
+  <one step>
+  REVIEW ON: <date> | Look at: <what>
+
+  MISSING
+  <facts that would change the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Hours per line"
+    how: "Real hours make the split and the rate sharper. Estimates are fine if you mark them."
+  - what: "Your goal"
+    how: "A goal changes how aggressive the first step is. Leave it out for a gentler plan."
+  - what: "What you are known for"
+    how: "Say what clients say about you. The product comes from that."
+  - what: "How much risk you will take"
+    how: "Say how much time and money you can lose. The route is sized to fit."
+
+judge:
+  - "Each income line says whether it pays only while you work or beyond."
+  - "The plan uses one multiplier route, not all of them."
+  - "Your name or judgment is part of the product."
+  - "No income figure or timeline is promised."
+  - "The first step fits in one week."
+
+test:
+  - "Run it on your last year of income and check the time-tied share against what you feel."
+  - "Ask it for the stop list and see if you would really hand off those tasks."
+  - "Do the one-week step and write down what you learned before the review date."
+
+improve:
+  - "Add your usual hourly rate and the tasks you hate, so step 6 names them."
+  - "Add products you have thought of before, so it builds on them."
+  - "Save the review date notes to a file and paste them in next time."
+  - "Pair it with Specific knowledge finder if you do not yet know what your product should be about."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Judging advice and asking sharp questions is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Lets you keep hours and income per line so the split is easy to redo each quarter."}
+  inputs:
+    - "Hours per week for each income line"
+    - "A sales or income sheet for the last year"
+    - "Your specific knowledge (from Specific knowledge finder)"
+    - "Clients' comments on what they value"
+
+terms:
+  - {term: "Time-tied", meaning: "Pay that stops when you stop working."}
+  - {term: "Multiplier", meaning: "A way to carry your work to more people without more of your hours: people, money, or code and media."}

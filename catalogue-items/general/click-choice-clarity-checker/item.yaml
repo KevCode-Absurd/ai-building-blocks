@@ -1,0 +1,19 @@
+slug: click-choice-clarity-checker
+name: "Click choice clarity checker"
+summary: "Paste your menu and labels. Get a score out of 100, each choice rated and rewritten."
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: audit_report, required: true}
+  - {type: web_page, required: true}
+  - {type: page_layout_spec, required: false}
+outputs:
+  - {type: audit_report, required: true}
+minds: [steve-krug]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "Don't Make Me Think, Revisited", by: "Steve Krug", url: "https://sensible.com/dont-make-me-think/", used: "Counting thought rather than clicks, the scent of where a link leads, and short, timely help"}

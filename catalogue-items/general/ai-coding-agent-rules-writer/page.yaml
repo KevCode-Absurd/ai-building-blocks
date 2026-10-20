@@ -1,0 +1,126 @@
+new_slug: ai-coding-agent-rules-writer
+name: "AI coding agent rules writer"
+summary: "Describe your project. Get a plan file and standing rules that make an AI coding agent work one test at a time."
+job: set-up-ai
+thinking: medium
+thinking_why: "It turns known rules into files for your project, which needs care but not deep reasoning."
+
+headline: "AI coding agent rules writer"
+subhead: Describe your project and paste your test list or plan. It writes a plan file, a one-word command that means take the next test only, and standing rules for the agent. It adds warning signs to watch and says when to take the design back.
+
+explain: |
+  An AI coding agent left alone tends to build far more than you asked for. It may write many features at once, skip or delete tests that get in its way, and loop on a problem it cannot solve. You then have a large change that no one understands.
+
+  This skill gives the agent a short, fixed way of working. The plan file holds the ordered test list. A one-word command makes the agent take the next unmarked test and nothing else. Standing rules say to write the simplest failing test, add the least code and tidy only when tests pass. Structure and behaviour changes go in separate commits. The skill also lists the warning signs that tell you the agent has drifted, and when to take the design back yourself.
+
+when:
+  - You are starting a project with an AI coding agent and want it kept on a short lead.
+  - An agent keeps adding things you did not ask for.
+  - You found it disabled or deleted a test to make a run pass.
+
+you_give:
+  - A description of the project and the language or tools
+  - Your test list or plan, if you have one
+  - Rules your team already has for commits and checks (optional)
+you_get:
+  - A plan file with the ordered tests and what is done
+  - A one-word command and what it must do
+  - Standing rules for the agent that you can check from the commit history
+  - Warning signs and when to take the design back
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the project and paste the test list or plan from the step before.
+  - Save the plan file and the rules in your project, in the place your agent reads rules from.
+  - Start the agent with the one-word command and watch the first run closely.
+  - After a few tests, check the commit history against the rules and tighten any that were missed.
+
+how_it_works:
+  - title: Writes the plan file
+    text: Puts the ordered test list in one file with a mark for done and not done.
+  - title: Sets the command
+    text: Defines a one-word command that means take the next unmarked test only.
+  - title: Writes standing rules
+    text: Simplest failing test, least code to pass, tidy only when tests pass.
+  - title: Separates commits
+    text: Keeps structure changes and behaviour changes in separate commits.
+  - title: Gates commits
+    text: Allows a commit only when tests pass and warnings are clear.
+  - title: Lists warning signs
+    text: Names loops, unasked features and deleted or disabled tests as signs to stop.
+  - title: Says when to take over
+    text: Names when you should take back the design from the agent.
+
+output_shape: |
+  PLAN FILE (save as plan.md)
+  Goal: <one line>
+  Tests, in order:
+  [ ] <test 1>
+  [ ] <test 2>
+  Done: <list>
+
+  THE COMMAND
+  "<word>" means: <what the agent does, and nothing else>
+
+  STANDING RULES
+  1. <rule> | how to check: <from commit history>
+  ...
+
+  COMMITS
+  <what a structure commit holds, what a behaviour commit holds, when allowed>
+
+  WARNING SIGNS
+  <sign> | what to do
+
+  WHEN TO TAKE THE DESIGN BACK
+  <situations>
+
+  MISSING
+  <what the rules still need>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The test list
+    how: Paste the ordered list from the step before. Without one, the plan file starts with a single small test.
+  - what: Your commit rules
+    how: Paste any rules you already use, so the standing rules match them.
+  - what: How closely you will watch
+    how: Say if you will review every test or only every few. The warning signs and checkpoints change.
+  - what: The agent you use
+    how: Name it so the rules are saved in the file it reads.
+
+judge:
+  - The rules forbid deleting or disabling tests.
+  - Each rule can be checked from the commit history.
+  - The plan file has at least one small first test.
+  - Warning signs are named so you can spot them.
+  - The command takes one test, never a batch.
+
+test:
+  - Run the agent on a small task with the rules. Check that it stops after one test.
+  - Try asking the agent to skip a test. It should refuse.
+  - Read the commits. Structure and behaviour should be apart.
+  - Run the skill twice and compare the rules. They should agree.
+
+improve:
+  - Add rules for mistakes your agent makes often, such as extra libraries.
+  - Add the checks your project already has, such as a lint run, to the commit gate.
+  - Update the warning signs after each project with what you saw.
+  - Pair it with "Test list writer" to make the plan and "Structure and behaviour change splitter" for the commits.
+
+works_best_with:
+  tools:
+    - {name: "Claude Code", why: "Reads project rule files and a plan file, so the rules apply to every session."}
+    - {name: "Any coding agent that reads a rules file", why: "The rules and plan file are plain text any agent can follow."}
+  inputs:
+    - "An ordered test list"
+    - "Your current commit or review rules"
+    - "A few examples of what the agent did wrong before"
+
+terms:
+  - term: Standing rules
+    meaning: Rules the agent follows in every session, saved in a file it reads first.
+  - term: Plan file
+    meaning: A file holding the list of tests to do, with a mark for those that are done.

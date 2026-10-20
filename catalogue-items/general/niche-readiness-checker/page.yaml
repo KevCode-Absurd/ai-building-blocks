@@ -1,0 +1,124 @@
+new_slug: niche-readiness-checker
+name: "Niche readiness checker"
+summary: "Paste your offer and how customers found you. Get a niche verdict, a one-line niche statement and the next step."
+job: test-an-idea
+thinking: medium
+thinking_why: "It counts and weighs evidence, but the tests are fixed."
+
+headline: "Niche readiness checker"
+subhead: "Give it what you sell and how your paying customers first found you. It counts the ones who came cold, checks warning signs of a blurred focus and writes your niche in one sentence. You get a verdict and a next step."
+
+explain: |
+  Many small businesses sell to anyone and grow by luck. Referrals and friends feel like proof, yet they tell you little about whether strangers will buy. Without a narrow focus, every new offer makes it harder to be found.
+
+  This skill counts only customers who found you with no tie to you. It checks four warning signs, writes one sentence for the pain and customer you serve, and tests every other offer against it. If you have ten or more cold customers it sets a target to double; if not, it names one place to build momentum first.
+
+when:
+  - "Most of your sales come from people who already know you."
+  - "You sell several things and cannot say what you are known for."
+  - "You are about to add a new offer or a new customer type."
+
+you_give:
+  - "What you sell, at what price and to whom"
+  - "A list of paying customers and how each found you"
+  - "Reviews or call notes (optional)"
+you_get:
+  - "The count of cold customers and what was set aside"
+  - "A niche sentence in one line"
+  - "A keep, pause or drop list for each offer"
+  - "A verdict and the next step"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your offer and a list of customers with how each found you."
+  - "Check the cold count against your own memory and correct any wrong tie."
+  - "Use the next step as your goal for the next month."
+
+how_it_works:
+  - title: "Lists customers"
+    text: "Each paying customer and how they found you."
+  - title: "Counts the cold ones"
+    text: "Sets aside friends, past clients and referrals."
+  - title: "Checks warning signs"
+    text: "Four signs of a blurred focus, each with evidence."
+  - title: "Writes the niche"
+    text: "One pain, one customer type, one way to find them."
+  - title: "Tests extra offers"
+    text: "Keep, pause or drop against the sentence."
+  - title: "Sets the target"
+    text: "Double the cold count, or build in one place."
+  - title: "Gives the verdict"
+    text: "Ready, close or not yet, with two facts."
+
+output_shape: |
+  CUSTOMERS
+  <id> | <date> | <how found> | <tie or none>
+
+  COLD COUNT
+  Cold: <n>  Set aside: <n> (<reasons>)
+
+  WARNING SIGNS
+  <sign>: yes/no/unsure | <evidence>
+
+  NICHE SENTENCE
+  We solve <pain> for <customer> in a repeatable way, found by <way>.
+
+  OFFERS
+  <offer>: keep/pause/drop | <reason>
+
+  NEXT STEP
+  <target or first step>
+
+  VERDICT
+  <ready/close/not yet>: <two facts>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "How you list customers"
+    how: "Add the date and the first thing they did. It makes the cold count exact."
+  - what: "What counts as a tie"
+    how: "Say who you already know. Anyone you have worked with is a tie."
+  - what: "Customer words"
+    how: "Paste reviews. They show the pain in the buyer's words."
+  - what: "Your target market"
+    how: "If you already have a niche in mind, say it. The skill will test it."
+
+judge:
+  - "The cold count excludes every tie."
+  - "The niche sentence names one pain and one customer type."
+  - "Each warning sign has evidence."
+  - "The next step has a number or a named place."
+  - "No customer data was invented."
+
+test:
+  - "Run it on a business you know well. Check the cold count by hand."
+  - "Run it twice. The verdict should be the same."
+  - "Change one customer from cold to referral and see if the verdict moves."
+  - "Show the niche sentence to a customer and ask if it fits."
+
+improve:
+  - "Add your own list of ties (for example \"former employer\") in step 2."
+  - "Add the offers you plan to launch so they are tested in step 5."
+  - "Save the niche sentence in your brand file."
+  - "Pair it with a stranger first-message writer to reach more cold customers."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Counting and weighing evidence from a list works in any strong chat AI."}
+    - {name: "A spreadsheet", why: "Keeps your customer list and sources in one place."}
+  inputs:
+    - "A customer list with dates and sources"
+    - "Reviews or call notes"
+    - "Your price list"
+    - "The channels you use now"
+
+terms:
+  - term: "Cold customer"
+    meaning: "A paying customer with no tie to you before they bought."
+  - term: "Niche"
+    meaning: "One kind of customer with one kind of pain that you serve better than most."

@@ -1,0 +1,18 @@
+slug: three-buyer-idea-test-planner
+name: "Three-buyer idea test planner"
+summary: "Paste your business idea. Get the one-minute math and a weekend plan to ask ten people to pay."
+category: general
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [noah-kagan]
+credits:
+  - {title: "How to Validate a Business Idea in 48 Hours", by: "Noah Kagan", used: "The one-minute math, the ten-person list, asking for payment instead of opinions, and the three-buyer go rule"}
+  - {title: "Million Dollar Weekend", by: "Noah Kagan", used: "The weekend structure for testing an idea with real asks"}

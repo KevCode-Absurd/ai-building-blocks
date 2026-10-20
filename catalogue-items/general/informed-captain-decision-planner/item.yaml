@@ -1,0 +1,19 @@
+slug: informed-captain-decision-planner
+name: "Informed captain decision planner"
+summary: "Paste a big decision and who is involved. Get one named owner, a plan to gather dissent, and a review date."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [reed-hastings, andy-grove]
+credits:
+  - {title: "Netflix Culture", by: "Netflix", url: "https://jobs.netflix.com/culture", used: "Giving one informed person the call, gathering the strongest case against, and the habit of disagreeing in the open and then committing"}
+  - {title: "High Output Management", by: "Andy Grove", url: "https://en.wikipedia.org/wiki/High_Output_Management", used: "How a manager's output is the output of the team, and the structure of regular meetings, goals and checks"}

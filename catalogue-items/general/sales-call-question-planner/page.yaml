@@ -1,0 +1,124 @@
+new_slug: sales-call-question-planner
+name: "Sales call question planner"
+summary: "Paste what you know about the buyer. Get the order of questions that finds their problem, its cost and the fix's value."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It sorts facts from questions and orders them for one buyer, but the question types are fixed."
+
+headline: "Sales call question planner"
+subhead: Give it what you know about the buyer and what you sell. It splits what you can look up from what you must ask, then writes questions that find the problem, its cost and the value of a fix. You get a call plan in order.
+
+explain: |
+  Most sales calls go wrong in the first ten minutes. The seller asks a pile of background questions the buyer finds dull, then starts pitching before the buyer has said what hurts. The buyer nods politely and does nothing.
+
+  This skill plans the call around four kinds of question. Situation questions cover facts you could not find by research. Problem questions find what is not working. Cost questions show what the problem does to time, money and people. Value questions let the buyer say what a fix is worth, in their words. It also marks where to change the order and removes any question that is really a pitch.
+
+when:
+  - You have a first call with a buyer and only a page of notes about them.
+  - Your calls end with "send me a quote" and no real need was found.
+  - You sell something expensive that several people at the buyer must agree to.
+
+you_give:
+  - What you sell and who the buyer is, with anything you know about their company or role
+  - What you already researched (optional)
+  - The person who will be on the call (optional)
+you_get:
+  - A list of facts to look up first, so you ask few background questions
+  - Problem, cost and value questions in the order to ask them
+  - Notes on when to skip ahead or go back
+  - A check that no question is a pitch in disguise
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what you sell and what you know about the buyer. Add anything you found online.
+  - Say how many meetings you expect and who else may join the decision.
+  - Print the plan. Use it as a guide on the call, not a script.
+  - After the call, note which questions got the buyer talking and keep those for next time.
+
+how_it_works:
+  - title: Sorts facts from questions
+    text: Lists what research can answer, so the call only asks what research cannot show.
+  - title: Writes problem questions
+    text: Questions that find what is not working now, in the buyer's own terms.
+  - title: Writes cost questions
+    text: Questions that show what the problem does to time, money and people, without scaring them.
+  - title: Writes value questions
+    text: Questions that let the buyer say what a fix is worth, so you do not have to.
+  - title: Marks where to switch
+    text: Says when to skip a stage because the problem is already plain, or to go back for more detail.
+  - title: Checks for hidden pitches
+    text: Rewrites any question that is a sales line with a question mark on the end.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  BUYER IN ONE LINE
+  <who they are and what you sell them>
+
+  LOOK UP FIRST
+  - <fact> | where to find it
+
+  BACKGROUND QUESTIONS (only what research cannot show)
+  1. <question>
+
+  PROBLEM QUESTIONS
+  1. <question> | Listen for: <what a useful answer sounds like>
+
+  COST QUESTIONS
+  1. <question> | Who else it affects: <role>
+
+  VALUE QUESTIONS
+  1. <question> | Buyer should say: <the benefit, in their words>
+
+  WHEN TO CHANGE THE ORDER
+  - <situation> -> <what to do>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How much you researched
+    how: The more you paste, the fewer background questions you get. Paste their website text, news and job posts.
+  - what: Size of the sale
+    how: A large sale across several meetings gets more cost and value questions. A small one needs fewer.
+  - what: How well you know the buyer's problem
+    how: If it is already plain, say so. The plan moves its weight to cost and value questions.
+  - what: The decision makers
+    how: Name who else must agree. Cost questions are then written for each of them.
+
+judge:
+  - Background questions ask only what you could not find out yourself.
+  - The buyer would state the value of a fix, not you.
+  - Cost questions are fair and do not scare the buyer.
+  - You can see where to change the order if the call goes differently.
+  - No question sounds like a pitch.
+
+test:
+  - Run it on a past call you lost. See if the plan finds a question you never asked.
+  - Use the plan on a friendly buyer first and note which questions felt awkward.
+  - Run it twice on the same notes. The problem questions should stay close even if the wording changes.
+  - Compare how much the buyer talks on a planned call and on your usual one.
+
+improve:
+  - Add the problems your buyers name most often to step 3, so the questions start closer to home.
+  - Add your own rule on how many background questions are too many.
+  - Save good questions after each call, and paste them in next time.
+  - Pair it with "Hardest objections answer writer" for the push-back you will still get.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and ordering questions is text work any strong chat AI does well with this skill."}
+    - {name: "A call recorder or notes app", why: "You can check afterwards which questions got long answers."}
+  inputs:
+    - "Text from the buyer's website, news and job posts"
+    - "Notes from earlier calls with this company"
+    - "A list of the problems your current customers had before they bought"
+
+terms:
+  - term: Situation question
+    meaning: A question about the buyer's facts, such as team size or tools in use. Ask few of them.
+  - term: Value question
+    meaning: A question that gets the buyer to say what a fix would be worth to them.

@@ -1,0 +1,18 @@
+slug: scene-want-and-tactic-rewriter
+name: "Scene want-and-tactic rewriter"
+summary: "Paste a scene that only explains. Get it rebuilt so each person wants something and uses words to get it."
+category: general
+type: skill
+role: make
+job: creative
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [william-shakespeare]
+credits:
+  - {title: "Hamlet", by: "William Shakespeare", url: "https://www.gutenberg.org/ebooks/1524", used: "Scenes driven by what each speaker wants, with different tactics, an audience that knows more than a character, and a speech that ends in a decision"}
+  - {title: "Shakespeare's Sonnets", by: "William Shakespeare", url: "https://www.gutenberg.org/ebooks/1041", used: "Compact speech built to turn late, and meant to be read aloud"}

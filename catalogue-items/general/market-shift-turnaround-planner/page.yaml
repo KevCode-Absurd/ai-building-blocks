@@ -1,0 +1,127 @@
+new_slug: market-shift-turnaround-planner
+name: "Market shift turnaround planner"
+summary: "Describe a business losing share. Get what changed in the market, a new range and a survive-the-year plan."
+job: plan-strategy
+thinking: high
+thinking_why: "It must find a cause in messy facts, redesign a range and plan cash under doubt, so it needs careful reasoning."
+
+headline: "Market shift turnaround planner"
+subhead: Describe a business that is losing share and what you know about the market. It finds when the fall began, names the shift you missed, designs a range for the new market and plans cash month by month for the year ahead.
+
+explain: |
+  Businesses rarely lose share overnight. A change in the market starts small, gets called a toy or a fad, and by the time sales fall it is the main event. Cost cuts then make the product worse for the new buyer.
+
+  This skill charts your share over the years and finds the point where it began to fall. It names the shift, lists what a product for that market needs, and builds that list with your design or research lead before touching costs. It plans cash month by month, picks one near market to enter once the core is steady, and sets a share target and date.
+
+when:
+  - Your sales have slipped for more than a year and the cause is not clear.
+  - A newer kind of rival or product is taking your buyers.
+  - You may struggle to cover payroll in the coming months.
+
+you_give:
+  - "Your share or sales by year, as far back as you have it"
+  - "What your business sells and to whom"
+  - "What changed around you: rivals, buyers, technology, rules"
+  - "Your cash position and monthly costs"
+  - "Customer reviews or notes about why people left (optional)"
+
+you_get:
+  - "The year your share began to fall and what changed then"
+  - "The market shift named in plain words"
+  - "A new range brief for the new buyer"
+  - "A month-by-month cash plan, one near market to move into, and a share target with a date"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your share or sales by year and a description of your products and buyers."
+  - "List what changed in your market and anything you called a fad."
+  - "Paste your monthly cash in, cash out and cash on hand."
+  - "Take the range brief to your design or research lead before cutting any costs."
+
+how_it_works:
+  - title: Charts your share
+    text: Lays out share by year and finds the point where it began to fall.
+  - title: Names the shift
+    text: Identifies the change in the market that you dismissed or underrated.
+  - title: Lists what the new market needs
+    text: Writes what a product for the new buyer must do, with your design or research lead in the room.
+  - title: Redesigns the range
+    text: Builds the new range around that list before any cost cutting.
+  - title: Plans cash monthly
+    text: Sets cash in and out for each month, with the point where payroll is at risk.
+  - title: Picks one near market
+    text: Chooses a close market to enter once the core is steady.
+  - title: Sets the target
+    text: States the share you want back and the date.
+
+output_shape: |
+  WHEN IT BEGAN
+  <year share began to fall> | <what changed that year>
+
+  THE SHIFT
+  <the change, who moved first, what you called it, what it really was>
+
+  WHAT THE NEW MARKET NEEDS
+  <need> | <who confirmed it> | <what it means for the product>
+
+  THE NEW RANGE
+  <product> | for whom | key change | cost to build
+
+  CASH PLAN
+  Month | cash in | cash out | cash left | risk
+  First month payroll is at risk: <month or none>
+
+  ONE NEAR MARKET
+  <market> | why it is close | when to enter
+
+  TARGET
+  <share> by <date>
+
+  MISSING
+  <what you could not tell from the facts>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How far back the data goes
+    how: Five years or more shows when the fall began. Short data gives a vague answer.
+  - what: Voices from buyers
+    how: Reviews and exit notes show what the new market wants. Add them if you have them.
+  - what: Your cash facts
+    how: Give real monthly numbers. The plan is only as good as the figures.
+  - what: What you refuse to give up
+    how: Name any promise to staff or customers that must stand.
+
+judge:
+  - The shift in the market and its start date are named.
+  - There is a month-by-month cash plan.
+  - The new range comes from the design or research lead, not from cost cuts alone.
+  - A share target and a date are set.
+  - Facts you did not give are marked MISSING.
+
+test:
+  - "Run it on a past decline you understand well. Check that it finds the same cause you now see."
+  - "Remove the buyer notes and see whether it asks for them or guesses."
+  - "Check the cash plan against your bank balance for the first month."
+
+improve:
+  - "Add your field's usual warning signs, such as new entrants or a rule change."
+  - "Add a list of who you will include in the range design: sales, support, design."
+  - "Keep the cash plan as a living sheet and rerun it every month."
+  - "Pair it with a layoff or cost plan if the cash plan shows a gap."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It organises facts, finds patterns and drafts plans in plain text."}
+    - {name: "A spreadsheet", why: "Holds the monthly cash table so you can change one figure and see the effect."}
+  inputs:
+    - "Industry or sales reports showing your share over time"
+    - "Win and loss notes from your sales team"
+    - "Your last year of bank statements"
+
+terms:
+  - term: Share
+    meaning: Your slice of all the sales in your market, as a percentage.
+  - term: Near market
+    meaning: A market close to your own, where you already have skills, customers or parts you can reuse.

@@ -1,0 +1,18 @@
+slug: launch-scope-cutter
+name: "Launch scope cutter"
+summary: "Paste your launch plan, date and budget. Get the same date with half the scope, the core first and the rest parked."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [jason-fried]
+credits:
+  - {title: "Getting Real", by: "Jason Fried and 37signals", url: "https://basecamp.com/gettingreal", used: "Build less, fix time and budget and flex scope, half a product and not a half-baked one, and calling it done"}

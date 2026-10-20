@@ -1,0 +1,19 @@
+slug: hard-feedback-message-writer
+name: "Hard feedback message writer"
+summary: "Paste what went wrong and who needs to hear it. Get a message that changes the behaviour without making an enemy."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie, abraham-lincoln]
+credits:
+  - {title: "How to Win Friends and Influence People, Part Four", by: "Dale Carnegie", used: "Praise first, join praise to the change with and, point out mistakes indirectly, speak of your own mistakes first, and leave a way to save face"}
+  - {title: "Speeches and Letters of Abraham Lincoln, 1832-1865", by: "Abraham Lincoln", used: "The model of a letter that names real strengths, says plainly what is not satisfactory, and puts doubts as numbered questions on cost, certainty, value and risk"}

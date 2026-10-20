@@ -1,0 +1,18 @@
+slug: world-detail-consistency-checker
+name: "World detail consistency checker"
+summary: "Paste your story world notes and drafts. Get every clash between details, a fix for each and a score out of 100."
+category: general
+type: skill
+role: check
+job: creative
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [ursula-k-le-guin]
+credits:
+  - {title: "A Work in Progress: Earthsea Sketches by Charles Vess", by: "Ursula K. Le Guin", url: "https://www.ursulakleguin.com/blog/125-a-work-in-progress-earthsea-sketches-by-charles-vess", used: "Checking a new picture against the text, and settling a clash by deciding which detail stands and why"}

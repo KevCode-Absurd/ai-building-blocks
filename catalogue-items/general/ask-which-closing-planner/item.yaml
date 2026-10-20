@@ -1,0 +1,19 @@
+slug: ask-which-closing-planner
+name: "Ask-which closing planner"
+summary: "Paste your offer and where buyers stall. Get closing questions that offer two ways to say yes."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: offer, required: true}
+  - {type: objection_map, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [elmer-wheeler]
+credits:
+  - {title: "Tested Direct Selling", by: "Elmer Wheeler", used: "Asking which instead of whether, small agreements first, ready-to-buy signals, choosing for a buyer on the fence and asking more than once"}

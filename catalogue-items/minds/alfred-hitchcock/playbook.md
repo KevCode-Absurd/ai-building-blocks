@@ -43,7 +43,7 @@ He'd say you are saving your big news for the last slide and hoping it shocks th
 
 ### Your video, ad or trailer
 
-He came up in silent film, designing title cards. He'd ask for the cut as a list of shots and strip out anything that is only talking. He'd put sound over a different picture, such as a voice heard over another face, because it moves faster. He'd use colour sparingly, for emphasis, like one red hat in a dark room. He'd also warn you to make it clear enough for any audience to follow.
+He came up in silent film, designing title cards. He'd ask for the cut as a list of shots and strip out anything that is only talking. He'd put sound over a different picture, such as a voice heard over another face, because it moves faster. He'd use colour sparingly, for emphasis, like one red hat in a dark room. He'd also warn you to make it clear enough for any audience to follow. He said he aimed to tell a story in the simplest way he could.
 
 ### Your project plan
 

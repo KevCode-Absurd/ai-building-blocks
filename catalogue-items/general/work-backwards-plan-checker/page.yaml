@@ -1,0 +1,128 @@
+new_slug: work-backwards-plan-checker
+name: "Work-backwards plan checker"
+summary: "Paste your goal and plan. Get it rebuilt from the end date, checked a second way, with a score out of 100."
+job: plan-strategy
+thinking: high
+thinking_why: "It has to rebuild the plan and recompute numbers by a second route, and a slip in either is easy to miss."
+
+headline: "Work-backwards plan checker"
+subhead: Give it the result you need, the date you need it by and your current plan. It rebuilds the plan from the end point, solves it a second way, tests small changes and adds a return path. You get a checked plan and a score out of 100.
+
+explain: |
+  Most plans start at today and hope to arrive. They look fine until one date slips and nobody can say what moves with it. A plan with numbers in it can also look right because a spreadsheet or tool produced it, when nobody has checked it another way.
+
+  This skill fixes the end first and writes it once. It then works backwards, step by step, to the first thing you do this week. It solves two cases in full, compares the results from two methods, nudges each key input to see how far the answer moves, and writes a backup route. The score counts how many of six checks your original plan passes.
+
+when:
+  - You have a launch date, budget or forecast and nobody has checked it a second way.
+  - Your plan starts with "first we" and never says what has to be true the week before the end.
+  - You trust a tool's number and want to know if it holds up.
+
+you_give:
+  - Your goal, and the date or limit you must meet
+  - Your current plan, even rough
+  - The numbers behind the plan, such as costs, hours or volumes (optional)
+you_get:
+  - The plan rebuilt from the end point back to the first step
+  - A second-method check with the gap between the two answers explained
+  - A table of small input changes and how far each moves the result
+  - A return path, a backup, and a score out of 100 with how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your goal, the date and your plan. Add the numbers if you have them.
+  - Read the rebuilt plan first, then the gap between the two methods.
+  - Fix the steps marked as one-miss-ends-it, then run the skill again on the new plan.
+
+how_it_works:
+  - title: Fixes the end
+    text: Writes the result and date once, in measurable words, and does not reopen it.
+  - title: Works backwards
+    text: Asks what must be true the step before, repeating until it reaches this week.
+  - title: Solves two cases
+    text: Works two realistic cases in full, with the arithmetic shown.
+  - title: Checks a second way
+    text: Gets the answer by a different route and explains any gap.
+  - title: Tests the inputs
+    text: Moves each key input a little and records how far the result moves.
+  - title: Lists the means
+    text: Lists ways to reach each step that are within your power, including help from others, and picks the simplest.
+  - title: Adds a return path
+    text: Writes a backup for each step where one miss ends the plan, and checks the backup too.
+  - title: Scores the plan
+    text: Counts how many of six checks the original plan passes.
+
+output_shape: |
+  THE END POINT
+  <result, measure, date>
+
+  THE PLAN, BUILT BACKWARDS
+  <date>: <what must be true> | <who or what> | <one miss ends it? yes or no>
+
+  TWO METHODS
+  Method A: <working> = <answer>
+  Method B: <working> = <answer>
+  Gap: <difference and why>
+
+  SMALL CHANGES
+  <input> changed by <amount> moves <result> by <amount>
+
+  CHEAPEST MEANS PER STEP
+  <step>: <option chosen> | <options dropped and why>
+
+  RETURN PATH AND BACKUP
+  <step>: <backup> | <how it was checked>
+
+  SCORE
+  <n> out of 100: <the six checks, pass or fail>
+
+  MISSING
+  <what was needed and not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How exact the end point is
+    how: A date and a number give the best result. "Soon, and good" gives a plan that cannot be checked.
+  - what: The numbers you include
+    how: Costs, hours and volumes let it run both methods. Without them it marks MISSING and checks the order of steps only.
+  - what: The inputs you suspect
+    how: Name the two or three you are least sure of, and it tests those first.
+  - what: How exact the answer must be
+    how: Say if you need a rough range or an exact figure. It stops adding precision once the decision is clear.
+
+judge:
+  - The goal is written once, with a measure and a date.
+  - The plan is built from the end, and each step says what must be true before it.
+  - The two methods give the same answer, or the gap is explained.
+  - Small input changes are tried and written down.
+  - Each one-miss-ends-it step has a backup.
+  - The score shows which checks failed.
+
+test:
+  - Run it on a plan whose result you already know. Check that both methods match what happened.
+  - Change one number in your input and run it again. The sensitivity table should move the way you expect.
+  - Run it twice on the same plan. The last step and the biggest risk should stay the same.
+  - Give it a plan with a deliberate error in the arithmetic and see if the second method finds it.
+
+improve:
+  - Add the checks your field cares about to the steps, such as lead times or approval gates.
+  - Save your usual cost and time figures in your brand file so it has numbers every run.
+  - Add a line for how much error is acceptable in your work, so it knows when to stop.
+  - Pair it with "Big problem splitter" when the goal is too large to plan yet.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Backward planning and a second-method check are text and arithmetic work any strong chat AI can do."}
+    - {name: "A spreadsheet", why: "Lets you rerun the small-changes table with your own numbers."}
+  inputs:
+    - "A calendar of fixed dates, such as holidays or supplier cut-offs"
+    - "Past results from similar plans, so it can check the numbers"
+    - "A list of who must approve each step"
+
+terms:
+  - term: Second method
+    meaning: A different route to the same answer, such as a rough hand estimate beside a spreadsheet figure.
+  - term: Return path
+    meaning: The backup that gets you to an acceptable result if the main route fails.

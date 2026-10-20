@@ -1,0 +1,50 @@
+id: lib-get-ad-copy-built-on-one-buyer-and-one-real-fact
+source: {title: "AI Blocks library", by: "AI Blocks", kind: other, rights: ours}
+workflow:
+  slug: get-ad-copy-for-one-buyer-built-on-one-fact
+  name: "Get ad copy for one buyer, built on one fact"
+  summary: "Give it customer reviews and product facts. Get a buyer brief, ten first lines, the ad copy and headlines to test."
+  when: "you need ad copy that speaks to one buyer and rests on a fact you can prove."
+  job: write-ad-copy
+  level: intermediate
+steps:
+  - name: Write the buyer brief
+    skill: buyer-brief-writer
+    job: copy
+    from: "skill: buyer-brief-writer"
+    method: ["Find the moment buyers started looking", "Sort the evidence into four forces", "Place their awareness and what the market has heard", "Pick the one force the copy must move"]
+    inputs: [voc_reviews, brand_brain!]
+    outputs: [brief]
+    note: "Turns the reviews into one buyer, one moment and the force the ad has to move."
+  - name: Choose how the ad opens and argues
+    skill: ad-angle-planner
+    job: copy
+    from: "skill: ad-angle-planner"
+    method: ["Pick one awareness level and one market stage", "Copy that row and argument into the brief", "Fill in the buyer's starting situation and doubt", "Say why this level and stage"]
+    inputs: [brief, brand_brain!]
+    outputs: [brief]
+    note: "Reads the buyer brief and returns a short brief on how the ad opens, argues and asks."
+  - name: Write ten first lines
+    skill: ad-first-line-writer-and-scorer
+    job: copy
+    from: "skill: ad-first-line-writer-and-scorer"
+    method: ["Name a moment or object the buyer owns", "Pick moves that fit their awareness", "Write each line in 12 words or fewer", "Score each line out of 100 and say what a win would tell you"]
+    inputs: [brief, brand_brain!, ad_copy!]
+    outputs: [hooks]
+    note: "Uses the angle brief to write first lines that name the buyer's moment, then scores them."
+  - name: Write the ad on one real fact
+    skill: fact-based-ad-copy-writer
+    job: copy
+    from: "skill: fact-based-ad-copy-writer"
+    method: ["Start with the buyer's situation", "Find the one fact that answers their want or doubt", "Say what it means for them in plain words", "Write the words and note the source of every line"]
+    inputs: [brief, product_data]
+    outputs: [ad_copy]
+    note: "Builds the ad body on one product fact that answers the doubt in the brief."
+  - name: Write headlines to test
+    skill: ad-headline-writer
+    job: copy
+    from: "skill: ad-headline-writer"
+    method: ["Set what the line may say from the buyer's awareness", "List the material for each way in", "Write one line per way in and count characters", "Mark the line to test first"]
+    inputs: [brief, product_data]
+    outputs: [ad_copy]
+    note: "Writes short headlines from the same brief and facts, and marks which to test first."

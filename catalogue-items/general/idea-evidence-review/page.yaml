@@ -1,0 +1,136 @@
+new_slug: idea-evidence-review
+name: "Idea evidence review"
+summary: "Paste your beliefs and notes from customer talks. Get a keep going, change or stop call and your next three talks."
+job: test-an-idea
+thinking: high
+thinking_why: "It weighs mixed evidence against your beliefs and has to make a call."
+
+headline: "Idea evidence review"
+subhead: Give it what you believed before your customer talks and what people said and did. It checks each belief against facts and commitments, ignores praise, spots the traps that make evidence misleading and makes a call. You get a keep going, change or stop verdict and your next three conversations.
+
+explain: |
+  After a batch of talks it is tempting to count the nice things people said. But a pile of compliments is not evidence. People are kind, and they guess badly about their own future. What counts is what they did, what they tried, and what they gave up to show they care.
+
+  This skill sets what you believed against what happened. Each belief is marked supported, weakened, untested or wrong, using only facts and commitments. It looks for traps: the wrong people, a group that is too broad, a risk that sits in your product and not the market, and meetings that were just going through the motions. It then makes a call, keep going, change or stop, with a reason and a rule for when to stop. It ends with your next three questions and conversations.
+
+when:
+  - You've done five or so customer talks and don't know what they add up to.
+  - Everyone seemed positive but nobody has paid, booked or introduced you.
+  - You need to tell a partner or investor what you've really learned.
+
+you_give:
+  - What you believed before the talks, and your big questions
+  - Your notes, ideally already sorted by the Customer conversation notes sorter
+  - What people committed to, if anything (time, introductions or money)
+  - How many people you talked to, and which types (optional)
+you_get:
+  - Each belief marked supported, weakened, untested or wrong, with the evidence
+  - The traps that may be skewing what you heard
+  - A keep going, change or stop call, with the reason and a stop rule
+  - Your next three questions and the next three conversations to have
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Write what you believed before the talks, as plainly as you can, even if you've changed your mind since.
+  - Paste your sorted notes and say what anyone committed to.
+  - Read the call and the traps, then decide. The call is a recommendation, not a ruling.
+  - Book the next three conversations it suggests before you close the chat.
+
+how_it_works:
+  - title: Checks the ask
+    text: If you ask it to confirm the idea or to count praise, it explains that only facts and commitments count and carries on.
+  - title: Writes down the beliefs
+    text: Lists what you believed before, including the riskiest assumption and the big questions you set.
+  - title: Collects what happened
+    text: Counts the conversations, the types of people and the facts, commitments and real next steps you got.
+  - title: Grades each belief
+    text: Marks it supported, weakened, untested or wrong, using only facts and commitments, and names the evidence.
+  - title: Looks for traps
+    text: Checks for the wrong people, a group that is too broad, product risk, talking too much and going through the motions.
+  - title: Notes the surprises
+    text: Lists unexpected answers and whether they changed the plan. If nothing did, it asks why.
+  - title: Makes the call
+    text: Keep going, change or stop, with the reason, what would change the call, and a rule for when to stop talking.
+  - title: Plans the next round
+    text: Sets the next three big questions and three conversations, with who, where and what to ask for.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHAT HAPPENED
+  <conversations, types of people, facts, commitments>
+
+  BELIEFS CHECKED
+  <n>. Believed: <belief>
+     Result: <supported / weakened / untested / wrong>
+     Evidence: <facts and commitments only, with who>
+
+  TRAPS
+  <wrong people / too broad / product risk / talking too much / going through the motions: which apply and how>
+
+  SURPRISES
+  <unexpected answers, and what they changed>
+
+  THE CALL
+  <keep going / change / stop>
+  Why: <reason>
+  What would change this call: <evidence>
+  Stop rule: <when to stop talking and do something else>
+
+  NEXT THREE QUESTIONS
+  1. ...  2. ...  3. ...
+
+  NEXT THREE CONVERSATIONS
+  <who, where, what to ask for>
+
+  MISSING
+  <evidence that would settle the call>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your beliefs before the talks
+    how: Write them before you look at the notes. Beliefs written afterwards drift toward what you heard.
+  - what: Commitments
+    how: List what anyone gave up, such as time, introductions or money. Without them, expect a weak call.
+  - what: The group you talked to
+    how: Say how narrow it was. A wide group means mixed answers, and the skill will say so.
+  - what: What stopping means
+    how: Say what you could do instead. A stop call is easier to act on if there is a next idea.
+
+judge:
+  - Every belief is graded from facts or commitments, never praise.
+  - The call is keep going, change or stop, with a reason.
+  - It says what evidence would change the call.
+  - Product risk is separated from market risk.
+  - The next three conversations have a who, a where and a question.
+
+test:
+  - Run it on a past batch where you know how things turned out. See if its call matches what happened.
+  - Add a few made-up compliments to the notes. The call should not move.
+  - Run it twice. The call should be the same, even if the wording changes.
+  - Show the call to a partner and see if they would reach the same one from the notes.
+
+improve:
+  - Add the stop rule you already use, such as "no paid pilot after ten talks", to step 7.
+  - Add the commitments that count in your field to step 3.
+  - Save each review with its date, so you can see how your beliefs changed.
+  - Pair it with "Commitment ask planner" before the next round, so you ask for more.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing notes against beliefs is text work any strong chat AI does well with this skill."}
+    - {name: "A shared document", why: "Keeping beliefs, notes and calls in one place lets a partner check your reasoning."}
+  inputs:
+    - "Notes sorted by the Customer conversation notes sorter"
+    - "A list of commitments with dates and who gave them"
+    - "Your first-customer group from the First customer group picker"
+
+terms:
+  - term: Commitment
+    meaning: Something a person gives up to show they mean it, such as time, their reputation or money.
+  - term: Market risk and product risk
+    meaning: Market risk is whether people want it and will pay. Product risk is whether you can build and grow it.
+  - term: Stop rule
+    meaning: A point you decide in advance at which you stop gathering opinions and act.

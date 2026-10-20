@@ -1,0 +1,20 @@
+slug: feature-request-screener
+name: "Feature request screener"
+summary: "Paste your feature requests and who asked. Get a yes, later or no on each, with the full cost of every yes."
+category: general
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [jason-fried]
+credits:
+  - {title: "Getting Real", by: "Jason Fried and 37signals", url: "https://basecamp.com/gettingreal", used: "Starting with no, counting only repeat requests, hidden costs of a feature, ignoring feature requests that do not fit the vision and making opinionated software"}

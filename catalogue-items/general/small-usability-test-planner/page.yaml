@@ -1,0 +1,133 @@
+new_slug: small-usability-test-planner
+name: "Small usability test planner"
+summary: "Name what people should do. Get a one-morning test plan with tasks, a script and a fix list."
+job: design-work
+thinking: medium
+thinking_why: "It picks tasks and people, and must keep the script neutral."
+
+headline: "Small usability test planner"
+subhead: "Give it what people should be able to do and, if you have one, a review of the page. It picks the few tasks that matter, plans three testers plus one outsider and writes a read-aloud script. You get a one-morning plan and a fix list template."
+
+explain: |
+  Most teams skip user tests because they sound big and costly. A test with three people and a morning is small enough to do, and it shows the worst problems quickly. The usual failures are testing too many things, helping people when they stall and writing down every small problem instead of the worst ones.
+
+  This skill picks the few tasks that matter most, recruits three people loosely plus one outside your target group, and writes a short script that tells them you are testing the site, not them. It sets rules for the watchers (say nothing, note every pause) and ends with a fix list limited to the worst problems seen.
+
+when:
+  - "You have a page or app people struggle with and you want evidence, not opinions."
+  - "A review found problems, and you need to know which ones real people hit."
+  - "You want a repeatable monthly test that takes one morning."
+
+you_give:
+  - "What you want people to be able to do"
+  - "A review of the page, from a reviewer skill (attach it)"
+  - "Who your visitors are, or a visitor profile (optional)"
+  - "A link to the page or app (optional)"
+you_get:
+  - "The three to five tasks to test, in order"
+  - "Who to recruit and how, including one outsider"
+  - "A read-aloud script and a note sheet"
+  - "A fix list template, limited to the worst problems"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say what people should be able to do in one sentence."
+  - "Attach the review if you have one."
+  - "Recruit three people, plus one outside your target group, using the plan."
+  - "Run the test in one morning with the team watching from another room or screen."
+  - "Fill in the fix list, fix the worst three and book the next round."
+
+how_it_works:
+  - title: "Picks the tasks"
+    text: "Chooses the few tasks that matter most for the goal."
+  - title: "Plans the people"
+    text: "Three loose-fit testers plus one outsider, with a real beginner among them."
+  - title: "Writes the script"
+    text: "A short read-aloud script that says you are testing the site, not them."
+  - title: "Sets watcher rules"
+    text: "Team watches and says nothing. Think aloud, record from the first screen."
+  - title: "Notes the stalls"
+    text: "A sheet for every pause, wrong click or fear of clicking."
+  - title: "Builds the fix list"
+    text: "Keeps the worst problems seen, not every problem."
+  - title: "Plans the next round"
+    text: "Names who watches and when the next small test is."
+  - title: "Checks the set"
+    text: "Runs its own checks and names any missed."
+
+output_shape: |
+  GOAL
+  <what people should be able to do>
+
+  TASKS
+  1. <task as a visitor would say it> | why it matters: <reason> | done when: <sign>
+
+  WHO TO RECRUIT
+  3 from the target group: <how to find them>
+  1 outside it: <who>
+
+  SCRIPT (read aloud)
+  <welcome, "we are testing the site, not you", think-aloud ask, task cards>
+
+  WATCHER RULES
+  <say nothing, note each pause, record from screen one>
+
+  NOTE SHEET
+  Task | Where they stalled | What they said | Fear of clicking? (yes or no)
+
+  FIX LIST
+  Worst problems seen only: <problem> | seen by <n> of 4 | fix
+
+  NEXT ROUND
+  <who watches, when>
+
+  MISSING
+  <facts that would change the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The goal"
+    how: "One goal gives a tighter plan. \"Order a pizza\" beats \"use the site\"."
+  - what: "The review"
+    how: "Attaching a review lets it choose tasks that cover the breaks it found."
+  - what: "Who the beginner is"
+    how: "Say who is truly new. A real beginner shows problems experts skip."
+  - what: "Remote or in person"
+    how: "Say which. It adjusts the script and the recording advice."
+
+judge:
+  - "Each task is something a real visitor would do."
+  - "The script never helps or leads."
+  - "The plan names who watches and when the next round is."
+  - "The fix list holds only problems seen, not guesses."
+  - "There is one tester from outside the target group."
+
+test:
+  - "Run the plan on a page you know well and check the tasks match what visitors really do."
+  - "Read the script aloud to a friend. Cut any line that hints at where to click."
+  - "Run one round and count how many problems were seen by at least two people."
+  - "Compare the fix list to the review. Keep the ones both found."
+
+improve:
+  - "Add your usual visitor types to \"What you need\" so recruiting is faster."
+  - "Save your script and note sheet and reuse them each month."
+  - "Add a line to the script about recording rules that fit your country."
+  - "Pair it with \"Usability heuristic reviewer\" to run the cheap check before the test."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning tasks and writing the script is text work any strong chat AI does with this skill."}
+    - {name: "A screen and voice recorder", why: "Record each session from the first screen so you can replay the pauses."}
+  inputs:
+    - "A review from the usability heuristic reviewer"
+    - "A visitor profile of your typical user"
+    - "Analytics on where people leave"
+    - "Support questions about the page"
+
+terms:
+  - term: "Think aloud"
+    meaning: "Asking the tester to say what they are thinking as they go."
+  - term: "Outsider"
+    meaning: "A tester who is not in your target group, to show problems experts miss."

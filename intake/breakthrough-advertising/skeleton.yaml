@@ -1,0 +1,34 @@
+# Workflow skeleton for The Lost Secrets of Breakthrough Advertising (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: breakthrough-advertising
+source:
+  title: "The Lost Secrets of Breakthrough Advertising"
+  by: "Eugene Schwartz"
+  kind: talk
+  rights: ideas-only
+  year: 1993
+minds: [eugene-schwartz]
+workflow:
+  slug: mine-your-products-own-words-and-find-the-shared-want
+  name: "Mine your product's own words and find the shared want"
+  summary: "Paste a product page or manual. Get its own phrases sorted for headlines, plus the one want buyers share."
+  when: "you need fresh hooks and angles built from what your product already says."
+  job: write-ad-copy
+  level: intermediate
+steps:
+  - name: "Product vocabulary sheet builder"
+    skill: product-vocabulary-sheet-builder
+    job: copy
+    from: "The Lost Secrets of Breakthrough Advertising, lecture transcript, 1993"
+    method: ["Listen to the owner first, by reading what they wrote or recording a talk", "Read the product material several times and mark every strong phrase", "Collect the marked phrases as one plain list", "Keep the product's own words, and mark your own ideas apart in bold or italics", "Split the list into piles: headlines, letter, sidebars, proof and demonstrations", "Highlight the points that jump out as the most dramatic points of contact", "Write a ten-word headline from each long idea to force it tight", "Check every claim against the source before it is used"]
+    inputs: [product_data, voc_reviews!]
+    outputs: [angle_library, hooks]
+    note: "A sorted sheet of its own phrases, ready for headlines, proof and demos"
+  - name: "Shared want hook mapper"
+    skill: shared-want-hook-mapper
+    job: research
+    task: understand-customers
+    from: "The Lost Secrets of Breakthrough Advertising, lecture transcript, 1993"
+    method: ["Name the want that already exists in the market; you channel it, you do not create it", "Describe the group as people who share one private want, and address them as you", "Split the want into smaller wants, such as separate symptoms or situations", "Write a hook for each smaller want, and a line that lets every part of the group in", "Pair each hook with how it works, proof and the feeling behind it", "Order the lines so that each one earns the reading of the next", "Plan tests for hooks that differ in appeal, not just in wording"]
+    inputs: [angle_library, persona!, voc_reviews!, product_data]
+    outputs: [angle_library, hooks]
+    note: "The one want they share, its smaller parts and a hook for each. Reads the angle library from the step before"

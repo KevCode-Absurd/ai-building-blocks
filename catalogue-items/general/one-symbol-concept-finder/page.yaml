@@ -1,0 +1,129 @@
+new_slug: one-symbol-concept-finder
+name: "One-symbol concept finder"
+summary: "Paste what your poster, video opening or cover is about. Get one symbol, the feeling it sets and what to leave out."
+job: design-work
+thinking: medium
+thinking_why: "It makes a creative choice among options, but the steps and checks are fixed."
+
+headline: "One-symbol concept finder"
+subhead: "Give it what your poster, cover or video opening is about and where people will see it. It finds the one line, the feeling and one symbol, sets the limits and lists what to leave out. You get a short concept plan."
+
+explain: |
+  Design that tries to say everything says nothing. A poster with six ideas gets a glance and no memory. The hard part is deciding what one idea to carry, and that decision usually gets skipped.
+
+  This skill works backward from the feeling. It writes the core in one line, names the feeling a stranger should have, lists symbols that could stand for it and picks one. It then sets limits (shapes, colours, moves), twists the symbol so it looks fresh, and lists what you are leaving out on purpose. You get a plan you can hand to a designer or an image tool.
+
+when:
+  - "You are about to brief a poster, cover, logo or event graphic and have too many ideas."
+  - "You need the first ten seconds of a video or talk to set one mood."
+  - "Your design feels busy and you cannot say what to cut."
+
+you_give:
+  - "What the piece is about, in a few sentences"
+  - "Where and how long people will see it"
+  - "Fixed items such as colours, logo or required words (optional)"
+you_get:
+  - "The core in one line and the feeling it should set"
+  - "One chosen symbol, with the options you did not use"
+  - "Limits for shapes, colour and motion"
+  - "A list of what to leave out and why"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste what the piece is about, where it will be seen and any fixed items."
+  - "Read the core line first. If it is wrong, say so and rerun before looking at the symbol."
+  - "Pick the symbol, then pass the plan to your designer or to an image prompt writer."
+
+how_it_works:
+  - title: "Writes the core"
+    text: "One sentence that says what the piece is about, not what happens in it."
+  - title: "Names the feeling"
+    text: "One plain feeling word, tied to the core."
+  - title: "Lists symbols"
+    text: "Six options, each with what it says and what it might say by mistake."
+  - title: "Picks and hints"
+    text: "Chooses one symbol and plans how to hint at the hard parts."
+  - title: "Sets limits"
+    text: "Shapes, colours and moves, written so you can check them."
+  - title: "Makes it strange"
+    text: "One way to break or change the symbol so people look twice."
+  - title: "Times the motion"
+    text: "For moving pieces, sets the beat before any picture."
+  - title: "Cuts"
+    text: "Lists what to leave out and why, then checks itself."
+
+output_shape: |
+  CORE
+  <one sentence>
+
+  FEELING
+  <one word> because <reason>
+
+  SYMBOL OPTIONS
+  1. <object>: says <x>, might say <y>
+  ... (six)
+  CHOSEN: <symbol> because <reason>
+  HINTED, NOT SHOWN: <thing> via <how>
+
+  LIMITS
+  Shapes: <n>  Colours: <list>  Moves: <list>  Type: <rule>
+
+  THE TWIST
+  <how the symbol is made strange>
+
+  TIMING (if it moves)
+  <beat, entry, exit>
+
+  LEFT OUT ON PURPOSE
+  - <item>: <reason>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "Where it will be seen"
+    how: "A thumbnail needs a simpler symbol than a wall poster. Say the size and the time people have."
+  - what: "The feeling you want"
+    how: "If you already know it, say so. It saves a round and the symbols fit better."
+  - what: "Limits you will accept"
+    how: "Tell it the colours or shapes you must use. Fewer fixed items give it more room."
+  - what: "Anything off limits"
+    how: "Name symbols you have seen too often in your field so it skips them."
+
+judge:
+  - "You can say the idea out loud in one sentence."
+  - "The chosen symbol would still read at a small size."
+  - "The feeling is one word, not a list."
+  - "At least three things are left out, each with a reason."
+  - "Someone else could check the limits by looking."
+
+test:
+  - "Run it on a piece you already made. See if the plan matches the best part of it."
+  - "Show the symbol and feeling to a friend for three seconds. Ask what they felt. Compare it with the named feeling."
+  - "Run it twice. The core line should stay close even if the symbols change."
+  - "Give the plan to a designer and ask what was unclear."
+
+improve:
+  - "Add your brand colour and type limits to step 5 so every plan starts inside them."
+  - "Add symbols that are overused in your field to a \"skip\" list in step 3."
+  - "Save the feelings you pick to your brand file so later pieces stay consistent."
+  - "Pair it with an image prompt writer to turn the plan into a prompt."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Choosing and trimming ideas is text work any strong chat AI does well with this skill."}
+    - {name: "ChatGPT or Gemini", why: "They draw the picture once you have the plan."}
+  inputs:
+    - "A one-page brief for the piece"
+    - "Two or three pieces you like and why"
+    - "Your brand colours and type"
+    - "The size and place it will appear"
+
+terms:
+  - term: "Symbol"
+    meaning: "One simple object or shape that stands for the whole idea."
+  - term: "Limits"
+    meaning: "Rules you set before designing, such as two colours and three shapes."

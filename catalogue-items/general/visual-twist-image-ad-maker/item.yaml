@@ -21,6 +21,7 @@ origin: rebuilt
 source_ids: [CES-135]
 old_name: problem-first image ad
 version: 2.0.0
+minds: [john-caples]
 credits:
   - {title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?", by: "Susan Heckler and Terry Childers, Journal of Consumer Research", url: "https://doi.org/10.1086/209275", used: "The unexpected-and-relevant check"}
   - {title: "Beyond Visual Metaphor: A New Typology of Visual Rhetoric in Advertising", by: "Barbara J. Phillips and Edward F. McQuarrie, Marketing Theory", url: "https://doi.org/10.1177/1470593104044089", used: "Side by side, merged and swapped in, ordered by how much they ask of the viewer"}

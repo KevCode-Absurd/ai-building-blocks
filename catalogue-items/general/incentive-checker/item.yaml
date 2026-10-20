@@ -1,0 +1,20 @@
+slug: incentive-checker
+name: "Incentive checker"
+summary: "Describe a team, plan or deal. Get who is rewarded for what, where it pulls the wrong way, and a fix."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: plan, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, daniel-pink, adam-smith]
+credits:
+  - {title: "A Lesson on Elementary Worldly Wisdom, USC Business School, 1994", by: "Charles T. Munger", used: "The habit of asking how each person is rewarded before predicting what they will do, and fixing a pull by changing the reward"}
+  - {title: "The puzzle of motivation (TEDGlobal 2009)", by: "Daniel Pink", used: "Taking money off the table with fair pay, and treating routine work and thinking work differently"}
+  - {title: "An Inquiry into the Nature and Causes of the Wealth of Nations (Book I chapter 10, Book V chapter 1)", by: "Adam Smith", used: "The point that people who manage other people's money or work, and do not bear the result, tend to look after it less closely"}

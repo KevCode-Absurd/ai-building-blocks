@@ -1,0 +1,17 @@
+slug: pitch-deck-checker-10-20-30
+name: "Pitch deck 10/20/30 checker"
+summary: "Paste your pitch deck. Get a score out of 100 on slide count, length, text size and opening, with fixes."
+category: general
+type: skill
+role: check
+job: strategy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [guy-kawasaki]
+credits:
+  - {title: "The Art of Innovation, TEDxBerkeley 2014 transcript", by: "Guy Kawasaki", used: "The ten slide, twenty minute and thirty point rules, a custom opening for each audience, and aiming to avoid being ruled out"}

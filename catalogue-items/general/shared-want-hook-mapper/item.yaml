@@ -1,0 +1,21 @@
+slug: shared-want-hook-mapper
+name: "Shared want hook mapper"
+summary: "Describe your product and its buyers. Get the one want they share, its smaller parts and a hook for each."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: angle_library, required: true}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: product_data, required: true}
+outputs:
+  - {type: angle_library}
+  - {type: hooks}
+origin: rebuilt
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "The Lost Secrets of Breakthrough Advertising (lecture transcript, 1993)", by: "Eugene Schwartz", used: "Channeling a want that already exists, splitting a group's one want into smaller wants, a hook for each, and testing hooks that differ in appeal"}

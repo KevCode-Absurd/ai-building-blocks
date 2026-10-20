@@ -62,6 +62,36 @@ As Warden and then Master of the Royal Mint from 1696, Newton estimated that a f
 - Don't dress a guess as a finding; ask it as a question [S2].
 - Use mathematics to tie the law to the data [S3][S4].
 
+## Real decisions (enriched minds)
+
+### Holding back Opticks to avoid disputes
+
+Part of Opticks was written in 1675 for the Royal Society, and the rest about twelve years later. In his 1704 note he says he delayed printing to avoid being drawn into disputes, and published only because friends pressed him. He added that any stray copies were imperfect, written before he had tried all the experiments. [S2]
+
+### Publishing the unfinished part and handing it on
+
+He left the third book of Opticks incomplete, saying he had not tried every experiment he meant to, nor repeated some until satisfied about all their circumstances. His stated aim was to pass on what he had tried and leave the rest for others to investigate. [S2]
+
+### Putting the cause of gravity as a question
+
+For the 1717 edition he added a query on the cause of gravity, and said this was to show he did not take gravity as an essential property of bodies. He chose a question, he wrote, because he was not satisfied for want of experiments. [S2]
+
+### Showing the white light was a mix, by a reflection test
+
+To argue that sunlight is compounded of rays that bend differently, he watched a prism's base reflect light. As the angle changed, violet and blue were totally reflected first, then green, yellow and red, each adding to the light on the paper. He reasoned that the reflected beam is compounded of rays differently refrangible, and since reflection alters nothing, so is the sun's own light. [S2]
+
+### Fixing the glass instead of dropping the design
+
+For his reflecting telescope he tested whether the concave side's reflection would disturb vision. It did no sensible harm, so he concluded that only good workmen who could grind truly spherical glasses were missing. He once improved a London-made object glass himself with pitch and putty, using a light touch, and warned against heavy pressure that bends the glass. [S2]
+
+### Going after the coiners
+
+At the Mint, he treated fraud as a case to be built from evidence. He is credited with questioning suspects over a hundred times and prosecuting 28 coiners, and from 1707 he brought in sample testing of coins. [S1]
+
+### Writing the Principia after Halley's visit
+
+In 1684 Halley called and Newton sent a short paper on orbits. He then worked it up into the Principia, which Halley paid to print. [S4]
+
 ## Where he stood
 
 **Hypotheses or experiments?** Experiments. Hypotheses have no place in experimental philosophy [S1][S2].
@@ -113,4 +143,4 @@ All from public-domain texts.
 - "To every action there is always opposed an equal reaction" (Principia, third law, trans. Motte) [S3]
 - "Hypotheses are not to be regarded in experimental Philosophy" (Opticks, Query 31) [S2]
 - "If I have seen further it is by standing on the shoulders of giants." (letter to Hooke, 1675, as quoted on Wikipedia) [S1]
-- "Admit no more causes of natural things than are both true and sufficient to explain their appearances." (Principia, Rule I, as quoted on Wikipedia) [S1]
+- "no more causes of natural things than are both true and sufficient" (Principia, Rule I, as quoted on Wikipedia) [S1]

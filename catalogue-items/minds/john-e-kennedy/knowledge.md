@@ -58,6 +58,12 @@ In his 1908 essay Kennedy wrote that publishers sell space, but space isn't adve
 
 How he applied it: he argued that six strong pieces of copy, rotated through a year, earn far more than 52 weak "space-fillers". He said four years and more than 35 campaigns showed that repeating good copy did not much reduce its pull [S2].
 
+### Count in two steps: inquiries, then sales
+
+The book treats an inquiry as the first sign the money is earning something, whether it is a question across a counter or a letter in the mail [S1]. For mail-order tests, send the same follow-up booklets and letters to the inquiries from both pieces of copy. The share that turns into sales then shows which copy made the better profit, not just the cheaper inquiry [S1].
+
+How he applied it: the agency kept a "Record of Results", a cabinet of data from hundreds of competing pieces of copy for mail-order clients. It said the cabinet cost over $100,000 to build and guided both copy and choice of magazines [S1]. This is the agency's own claim.
+
 ## How he decides
 
 - Ask what the ad would say if it were a salesperson [S1].
@@ -68,6 +74,39 @@ How he applied it: he argued that six strong pieces of copy, rotated through a y
 - Write in a voice that fits the reader [S1].
 - Prefer a positive promise to a negative warning [S3].
 - Spend on a few strong ads, repeated, over many weak ones [S2].
+- Describe the goods and the reason to buy, not the scenery around them [S1].
+- Count inquiries first, then the sales that follow, before naming a winner [S1].
+- Don't copy a campaign just because it worked for someone else [S1].
+
+## Real decisions
+
+### Writing a note from the café
+
+Kennedy sent a note up to Albert Lasker's office from the café downstairs, saying he could tell them what advertising is [S3]. Lasker saw him, and Kennedy answered in three words: salesmanship in print [S3]. Lasker said the idea changed the agency and, in time, the trade [S3]. Sources disagree on whether this happened in 1904 or 1905 [S3][S5].
+
+### Rewriting the washing machine ad
+
+Kennedy took apart an ad headed "Don't be chained to the wash tub", which was negative and said little about the machine [S3]. His new version showed a woman resting as she turned it, under the headline "Let This Washing Machine Pay for Itself" [S3]. It used a short story of buying a horse on trial, offered four weeks free and let the machine pay for itself from the money it saved [S3]. Lasker remembered inquiries falling from about $20 each to a few cents [S3]. This is Lasker's memory, not an audited figure.
+
+### Testing copy in two cities for four months
+
+For goods sold in shops, the agency's book told advertisers to pick two similar cities and count stock on retailers' shelves [S1]. One city got the old copy and the other got the reason-why copy, with the same spend, for four months [S1]. Stock was counted again, the copy was crossed over for four more months, and the difference showed which copy sold more [S1]. The book's reason was that without a record, advertising is guesswork [S1].
+
+### Keying mail-order ads and swapping magazines
+
+For mail-order work the book told advertisers to key each ad in each magazine with a slightly different reply address [S1]. They then divided the cost of space by the inquiries for each piece of copy [S1]. The next month they swapped the ads between magazines, so each ad had a fair turn in each place [S1]. It added that the same follow-up should go to every inquiry, so the share that bought would show true profit [S1].
+
+### Aiming at readers who can pay
+
+An article using 1900 census figures argued that many readers of a paper can never afford a piano [S1]. For costly goods Kennedy's agency chose the right class of readers over the largest audience [S1]. It said catchy copy that draws crowds is wasted on them [S1]. Goods the masses can use have many more possible buyers [S1].
+
+### Choosing six strong pieces over fifty-two weak ones
+
+In 1908 he wrote that six strong pieces of copy rotated through a year earn far more than 52 weak space-fillers [S2]. He said four years and more than 35 campaigns showed that repeating good copy did not much reduce its pull [S2]. His reason was that space is only a vehicle and its value depends on the selling force put into it [S2].
+
+### Leaving the agency to freelance
+
+He stayed at Lord & Thomas just over two years [S6]. He then worked as a highly paid freelance adviser and writer [S4][S5][S6]. By 1912 four national advertisers paid him $10,000 a year each for a week a month of his time [S4]. B.F. Goodrich paid him $20,000 a year for half-time work [S6].
 
 ## Where he stood
 
@@ -80,6 +119,12 @@ How he applied it: he argued that six strong pieces of copy, rotated through a y
 **Is the cheapest reader the best?** No. The right reader matters more than the number of readers [S1].
 
 **Does repeating an ad wear it out?** Only slowly, in his experience. Good copy could be repeated for a long time [S1][S2].
+
+**What goes in the copy?** Facts about what the goods do. In one article he pictures selling a load of hay: you would not point out the daisies, the horses or the driver's beard, but describe how well it feeds a horse and name the delivered price [S1]. The same holds when you sell by letter [S1].
+
+**Do shop-sold goods need mail-order copy?** Yes. A shopper sent to a store by weak copy can be switched to a rival line the retailer has in stock [S1]. The agency said half the money spent on "keeping the name before the people" ends up selling rivals' goods [S1].
+
+**Should you copy what just worked for someone else?** No. He borrows Carlyle's picture of sheep that all jump a rope after the leader, though the rope now lies on the ground [S1]. The article says advertisers did this with jingles and catch-phrases after one famous campaign, and that Sapolio went back to plain reason-why copy once the jingles faded [S1]. It claims sixty in a hundred advertisers fail because they fill space with anything catchy [S1]. These are the agency's figures.
 
 ## His work and record
 

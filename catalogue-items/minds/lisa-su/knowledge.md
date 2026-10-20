@@ -70,6 +70,32 @@ How she applied it: AMD backs an open software ecosystem with partners such as M
 - Gather input from engineers, customers and the lab as well as your staff [S4].
 - Review each launch for what to do better [S3].
 
+## Real decisions
+
+### Saying no to phones
+
+When she became CEO in 2014, AMD was in debt, had cut a quarter of its staff and held only a sliver of the server market [S4][S5]. Some board members wanted AMD to make low-power chips for phones, which were booming [S3][S5]. She declined. Her reason was that the company should bet on what it was best at, which was high-performance computing [S3][S5]. She said being the cheap alternative was a path to permanent second place [S4].
+
+### Starting the processor over
+
+Instead of polishing an old design, her engineers started clean and built around chiplets, small circuits joined together, under the Zen name [S4][S5]. She told the board it would take about three product generations to reach the top, and showed proof points along the way [S3][S4]. Zen 2 arrived early [S4]. She said competitors now use the same approach [S4].
+
+### Paying for the long project with short ones
+
+A new processor takes years, and AMD had little cash. She signed deals to supply chips for game consoles to bring in revenue while the longer work matured [S5]. She saw her job as giving engineers the time to finish [S5]. She also drove to see a customer chief in person to promise delivery on the new roadmap, because she held that her word had to hold [S4].
+
+### The China licensing deal
+
+In 2016 she licensed AMD designs to a group of Chinese companies for chips aimed at their home market, which brought in $293 million [S5]. TIME reported that it later became a liability, and that US defence officials had tried to block it, which AMD disputed [S5]. It shows the cost of taking short-term money for a long-term position.
+
+### Choosing an open ecosystem for AI
+
+After ChatGPT arrived in 2022, AMD built a more powerful data-centre graphics chip line [S5]. She chose an open approach, letting customers pick the best part at each layer, rather than one closed stack [S3][S5]. She said the broader the ecosystem, the bigger the party [S5]. She spoke well of her main rival while doing it [S3]. AI chip revenue rose from almost nothing to about $5 billion in a year [S5].
+
+### Cutting 4% to focus
+
+In November 2024 AMD announced layoffs of 4% of its workforce, framed as focusing on AI opportunities [S5]. Even after a strong run, she kept to the idea that the company should put its people on the biggest bet [S5].
+
 ## Where she stood
 
 **Can you cut your way back to health?** No. Cutting costs alone doesn't make a winner. You need a clear view of what you will build [S3].

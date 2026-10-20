@@ -1,0 +1,18 @@
+slug: mistake-to-principle-writer
+name: "Mistake-to-principle writer"
+summary: "Describe a mistake and what happened. Get the root cause and a written rule you can check next time."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: lessons_register}
+origin: rebuilt
+version: 1.0.0
+minds: [ray-dalio]
+credits:
+  - {title: "Principles", by: "Ray Dalio", url: "https://www.principles.com/", used: "Writing a lesson as a rule that names its situation, tracing a problem to its root cause, and testing a rule against past cases"}
+  - {title: "Principles for Success: talk and Q&A", by: "Ray Dalio, Summit", used: "Looking for the cause in your own choices and traits, and asking who would be the best-informed critic of a rule"}

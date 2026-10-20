@@ -74,6 +74,23 @@ How he applied it: after his illness he rebuilt M&Co as a smaller studio focused
 - Use commercial tools to sell good ideas [S1].
 - Say the uncomfortable thing in public [S5].
 
+## Real decisions
+
+### Starting without training
+Kalman began by designing a bookstore's displays, ads and packaging when the regular designer did not turn up [S2]. The habit of doing the job first and learning on the way shaped M&Co [S1][S2].
+
+### Founding M&Co and moving toward culture
+He founded M&Co in 1979. It first took whatever commercial work it could get, then moved to cultural clients and wider fields such as products, film titles, TV, children's books and architecture [S1]. After about 15 years he said he had pretty much used up what a designer could do, and wanted to make the things people buy, not only their packaging [S1].
+
+### Taking the editor's job at Colors
+When Benetton's creative director recruited him in 1990, he wanted to be editor, not art director [S1]. He modelled the magazine on *Life* before 1965 and said the company's sponsorship pressed on him less than on some "independent" magazines [S1]. He closed M&Co in 1993 and moved to Rome to run it [S1][S2].
+
+### The "What if" race issue
+He used computer graphics to change the races of famous people in an issue of *Colors*. It brought the magazine worldwide attention [S6]. He left after repeated clashes with Benetton's creative director, and after his cancer symptoms appeared [S6].
+
+### Working through illness
+Back in New York in 1995 after his diagnosis, he kept working [S2]. He pressed the AIGA to make members do charity work, and oversaw two books in his last years, including *Perverse Optimist* [S6]. A colleague said his illness made him easier to work with [S6].
+
 ## Where he stood
 
 **Is professional polish enough?** No. Mere competence is mediocrity [S5].

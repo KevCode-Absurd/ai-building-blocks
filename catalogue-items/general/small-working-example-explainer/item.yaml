@@ -1,0 +1,18 @@
+slug: small-working-example-explainer
+name: "Small working example explainer"
+summary: "Name a mechanism you need to teach. Get the smallest example that shows it, with traced values and predictions to check."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [andrej-karpathy]
+credits:
+  - {title: "micrograd (README and engine source)", by: "Andrej Karpathy", url: "https://github.com/karpathy/micrograd", used: "Cutting a mechanism down to single numbers so every step can be traced, and checking the small version against a trusted reference"}
+  - {title: "Autograd teaching task evidence (build notes)", by: "Andrej Karpathy", used: "Asking what the learner already knows and adding predictions they can check by hand"}

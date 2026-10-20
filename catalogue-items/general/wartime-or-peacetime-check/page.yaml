@@ -1,0 +1,118 @@
+new_slug: wartime-or-peacetime-check
+name: "Wartime or peacetime check"
+summary: "Describe your company's position. Get a call on which mode you are in and how to lead in it."
+job: think-and-decide
+thinking: medium
+thinking_why: "It weighs evidence for a call and has to test a tempting shortcut."
+
+headline: "Wartime or peacetime check"
+subhead: "Describe your company's position and any numbers you hold. It calls peacetime or wartime with evidence, tests the shortcut people want and sets what to cut, widen and tell the team. You get a plan and a signal for changing mode."
+
+explain: |
+  A calm company needs a leader who builds process and widens the market. A company under threat needs one who cuts, decides fast and tells the team the truth. Using the wrong style does damage: debate in a fight, or panic in a calm period.
+  
+  This skill asks for the facts, lists the evidence for each mode and calls it. It then gives the plan that fits: widen and delegate, or cut and stop debating. It tests the shortcut people are asking for, such as a pivot or a deal, against fixing the real problem. It also sets what the team hears and writes the signal that tells you the mode has changed.
+
+when:
+  - "Results are slipping and you do not know if it is a blip or a threat."
+  - "People keep proposing a pivot."
+  - "Your team is arguing about details while cash falls."
+
+you_give:
+  - "Your situation and what worries you"
+  - "Numbers such as growth, cash months or churn (optional)"
+  - "The shortcut people want (optional)"
+you_get:
+  - "A call on peacetime or wartime with the evidence"
+  - "A plan for that mode"
+  - "A shortcut test and a change signal"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe where you stand in a paragraph."
+  - "Add the numbers you trust."
+  - "Say what shortcut people are pushing."
+  - "Share the team message only after you have read the plan twice."
+
+how_it_works:
+  - title: "Describe the threat"
+    text: "Describes the threat to the company, if any."
+  - title: "Call the mode"
+    text: "Decides if you hold a big lead in a growing market or face a threat to survival."
+  - title: "If peacetime, plan to widen"
+    text: "If peacetime, lists where to widen the market and delegate detail."
+  - title: "If wartime, plan to fight"
+    text: "If wartime, lists what to cut, the details that matter and what to stop debating."
+  - title: "Test the shortcut"
+    text: "Names the shortcut people want and tests it against fixing the real problem."
+  - title: "Set what you tell the team"
+    text: "Sets what you will tell the team and how often."
+  - title: "Write the signal for changing mode"
+    text: "Writes the signal that tells you the mode has changed."
+  - title: "Checks its own work"
+    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+
+output_shape: |
+  THREAT
+  <paragraph, or none>
+  
+  MODE
+  <peacetime / wartime> | Evidence for: <...> | Evidence against: <...> | Would settle it: <...>
+  
+  PLAN
+  Widen / delegate: <...>   or   Cut / details that matter / stop debating: <...>
+  
+  SHORTCUT TEST
+  <shortcut> | Solves: <...> | Leaves: <...> | Evidence: <...>
+  
+  TEAM MESSAGE
+  <what, how often, who>
+  
+  CHANGE SIGNAL
+  <measure or event>
+  
+  MISSING
+  <gaps>
+  
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Numbers"
+    how: "Cash months, growth and churn move the call more than words."
+  - what: "Your size"
+    how: "A five-person team and a fifty-person team decide differently."
+  - what: "The shortcut"
+    how: "Name it exactly. The test depends on it."
+  - what: "Your time frame"
+    how: "Say how long you can wait for evidence."
+
+judge:
+  - "The mode has figures behind it."
+  - "The shortcut is questioned."
+  - "The plan lists what to stop."
+  - "A sign for changing mode is named."
+  - "No figure appears that you did not give."
+
+test:
+  - "Run it on a past period and see if the call matches what happened."
+  - "Show the mode call to a colleague who disagrees and note why."
+  - "Run it twice with the same facts. The call should not flip."
+
+improve:
+  - "Add the figures you trust most to the evidence step."
+  - "Add a past crisis as a test case."
+  - "Save the change signal in your review notes."
+  - "Pair it with \"Claim skepticism kit\" to test the shortcut."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a list into keep, simplify or drop is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Cash and runway figures"
+    - "Competitor moves"
+    - "Customer churn or lost-deal notes"
+
+terms:
+  - term: "Peacetime and wartime"
+    meaning: "Calm growth with a lead, against a fight for survival."

@@ -33,6 +33,7 @@ sources:
   - {n: 9, title: "Drayton Bird (author biography)", by: "SOFII", url: "https://sofii.org/author/drayton bird", kind: reference}
   - {n: 10, title: "Drayton Bird Associates Limited: officers", by: "Companies House", url: "https://find-and-update.company-information.service.gov.uk/company/05170643/officers", kind: reference}
   - {n: 11, title: "Review of Commonsense Direct Marketing", by: "Michael C. Gray, Profit Advisors", url: "https://www.profitadvisors.com/commonsense.shtml", kind: secondary}
+  - {n: 12, title: "TCC Podcast #165 with Drayton Bird, full audio (speech-to-text draft of the same interview, 2019)", by: "The Copywriter Club", url: "https://thecopywriterclub.com/interesting-man-world-drayton-bird/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short follow-up email for a small accounting firm to send to people who downloaded its free tax guide but didn't book a call."}
   - {kind: use, prompt: "Draft a one-page creative brief for a new leaflet for a local gym."}

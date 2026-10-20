@@ -1,0 +1,122 @@
+new_slug: feedback-request-script-writer
+name: "Feedback request script writer"
+summary: "Say who you manage and what you want to learn. Get your go-to question and how to handle silence."
+job: lead-people
+thinking: low
+thinking_why: "It follows a fixed pattern and writes a few short lines in your voice."
+
+headline: "Feedback request script writer"
+subhead: Tell it who you work with and what you want to learn about how you lead or work. It writes a go-to question in your voice, a follow-up question, a plan for the silence and the lines to use after you hear the answer. You get a short script.
+
+explain: |
+  Asking "Any feedback for me?" gets "No, it's all good" nearly every time. People answer to be polite, and criticising someone with power over them feels risky. You learn nothing and the problems stay hidden.
+
+  This skill writes a question that needs a specific answer, sounds like you and is asked at a set moment. It plans a pause of about six seconds after the question, because the silence is when people decide whether to speak. It adds a second question tied to a recent project, a line to repeat back what you heard, and a way to reward the honesty by fixing the issue or explaining why you will not. If you disagree, it writes a line that finds the part you agree with first.
+
+when:
+  - You want honest feedback from your team or a client and you only get polite answers.
+  - You are starting a new role and want to learn how you come across.
+  - You froze last time someone gave you criticism and want lines ready.
+
+you_give:
+  - Who you will ask and how they relate to you
+  - What you want to learn about, such as how you run meetings
+  - How you speak (a line or two you wrote, optional)
+  - A recent project you worked on together (optional)
+you_get:
+  - A go-to question in your voice
+  - A second, more specific question tied to a project
+  - A plan for the silence after you ask
+  - Lines to repeat back, reward candour and handle disagreement
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say who you will ask, what you want to learn and how you usually speak.
+  - Practise the lines out loud until they sound like you.
+  - Ask at the end of a regular one-to-one, then count to six in silence.
+  - Come back and tell the skill what you heard, to plan what to fix.
+
+how_it_works:
+  - title: Writes the question
+    text: A go-to question that needs a specific answer and sounds like you.
+  - title: Plans the silence
+    text: Plans a pause of about six seconds after you ask, and what to do with your hands and eyes.
+  - title: Adds a second question
+    text: A more specific question about a recent project you shared.
+  - title: Prepares the repeat back
+    text: A line to say what you heard in your own words before you answer.
+  - title: Plans the reward
+    text: A plan to fix the issue or explain why you will not, and when you will report back.
+  - title: Plans disagreement
+    text: A line to find the part you agree with first, if you disagree.
+  - title: Checks the script
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  GO-TO QUESTION
+  <the question, in your voice>
+
+  THE SILENCE
+  <how long to wait and what to do while you wait>
+
+  SECOND QUESTION
+  <a question tied to a recent project>
+
+  REPEAT BACK
+  <line to use>
+
+  REWARD THE CANDOUR
+  Fix it: <what to say and when>   Not fixing: <how to explain why>
+
+  IF YOU DISAGREE
+  <line that starts with what you agree with>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Your own words
+    how: Paste a short note or message you wrote. The question will use your phrases.
+  - what: Who you ask
+    how: Say how senior they are compared to you. A question to a boss is not worded like one to a new hire.
+  - what: What you want to learn
+    how: Be specific, such as how clear your instructions are. A narrow topic gets a narrow, useful answer.
+  - what: The setting
+    how: Say if it happens in a meeting, a call or a walk. The silence plan changes with it.
+
+judge:
+  - The question cannot be answered with yes or no.
+  - It includes a plan for the silence.
+  - It has a way to reward the candour.
+  - It sounds like the person speaking.
+  - The second question names a real project.
+
+test:
+  - Ask the question out loud to a friend and see if they answer with detail.
+  - Try it with one person this week and note how long the silence felt.
+  - Run it twice with different wording notes and compare which sounds more like you.
+  - After a month, count how many pieces of feedback you acted on.
+
+improve:
+  - Add words you use often, so the question sounds like you.
+  - Add a list of topics you want to learn about, to rotate through.
+  - Keep a record of what people told you and what you did about it.
+  - Pair it with the feedback conversation planner when you have feedback to give back.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing a few lines in your voice is text work any strong chat AI does well."}
+    - {name: "A notebook", why: "Write down what you hear straight away, before you reply."}
+  inputs:
+    - "A message you wrote that sounds like you"
+    - "Notes on a recent project you shared"
+    - "Past feedback you got, if any"
+
+terms:
+  - term: Go-to question
+    meaning: One question you ask the same way each time to invite honest feedback.
+  - term: Candour
+    meaning: Saying plainly what you think, even when it is hard to hear.

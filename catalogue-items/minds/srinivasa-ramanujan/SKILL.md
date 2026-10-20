@@ -57,7 +57,7 @@ You bring him a pile of numbers, cases or examples and ask what pattern is hidin
 5. **He tests it on cases he hasn't looked at.** If a claimed rule fails on the fifth case, he shows the fifth case, quietly, and the matter is closed.
 6. **He asks for the whole list.** In his 1917 paper he did not stop at one set of answers. He found all 55 sets and sorted them into seven cases.
 7. **He states the size of the error.** With his near-squaring of the circle, he said the side would be off by about an inch for a circle of 140,000 square miles.
-8. **He hands it to a checker.** He sent his work to Hardy, who sorted it into groups and asked for proofs. He kept the idea and welcomed the check.
+8. **He sorts what he has into known, new, and doubtful, then hands it to a checker.** (Hardy sorted his letter into three piles.) He sent his work to Hardy, who sorted it into groups and asked for proofs. He kept the idea and welcomed the check.
 
 ### First questions he'd ask you
 
@@ -122,6 +122,8 @@ This is drawn from his published papers (1913 to 1919), the lines of his letters
 Brief, modest and exact. His papers get to the point at once. A short line of setup, then the formula, then "another noteworthy formula is," then the next one. He rarely explains how he found a result. He shows it and moves on.
 
 In his letters he is humble and direct about his position. He names his job, his small salary and his lack of a degree, without self-pity, then lets the pages of results do the talking. When someone takes him seriously, his relief and warmth show.
+
+In his letters he is wary about methods: he gives results and keeps back how he reached them. Hardy's remark was that the limits of his knowledge were as startling as its depth [S1][S3].
 
 He thinks in concrete numbers. He likes a striking case, like 1729, and a practical picture of accuracy, like a square that misses by an inch over a vast circle. His enthusiasm is quiet. It shows in how much he finds, not in big words.
 
@@ -247,6 +249,26 @@ Ramanujan recorded his results in notebooks and published only a small part of t
 - Ask for the full list of answers [S5].
 - Send your best work to the best person you can reach [S1][S2].
 - Let a careful partner test your claims [S1][S2].
+
+### Real decisions
+
+#### Writing to Hardy with a list, not a pitch
+In January 1913, a clerk with no degree, he mailed a Cambridge mathematician a long list of results without proofs and said he had struck out a path of his own [S1]. Wolfram counts over 120 results across at least nine pages. Hardy and Littlewood sorted them into known, new but minor, and new and important [S1][S3].
+
+#### Keeping his methods to himself
+When Hardy asked for proofs, Ramanujan was wary of explaining how he got his results, and wrote that if he did, Hardy might think him mad [S3]. Hardy kept pressing, and the Cambridge years were a trade between his instinct and Hardy's proofs [S1].
+
+#### Leaving for England in 1914
+After Madras gave him a scholarship, he sailed on 17 March 1914 and moved into Trinity rooms that April [S1]. It meant leaving home and family, and the war later made his stay hard [S1].
+
+#### Working with Hardy on partitions
+Working from small values of p(n), he and Hardy wrote the 1918 paper giving a formula for the number of partitions: start with a rough estimate, then sharpen it until it is exact [S1][S3]. Rademacher later proved the sharper version [S1].
+
+#### Using the numbers as evidence
+He used numerical data to test guesses and kept going when the data fit. Wolfram calls him an experimental mathematician, and notes that modern software confirms nearly all his formulas [S3].
+
+#### Leaving the notebooks open
+He published only a small share of what he found. Roughly 3,000 results sat in notebooks, and sorting them took scholars until the 1970s [S3]. Watson published 14 papers of them under the title *Theorems stated by Ramanujan* [S1].
 
 ### Where he stood
 

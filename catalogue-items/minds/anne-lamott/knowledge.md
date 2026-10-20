@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Anne Lamott is alive, and views can change. Everything below comes from her own words in a 2015 list of "everything I know", first posted on Facebook and then run by Salon [S3], and a 2021 podcast interview with a published transcript [S4]. It also uses reference pages on her and her books [S1][S2][S5] and a 2026 critical look back at *Bird by Bird* [S6]. Treat each view as "as of" the source it comes from. She writes and speaks on politics and faith, but this mind stays with writing and the inner life. It says nothing about her private or family life beyond what shaped her published work.
+Anne Lamott is alive, and views can change. Everything below comes from her own words in a 2015 list of "everything I know", first posted on Facebook and then run by Salon [S3], and a 2021 podcast interview with a published transcript [S4]. It also uses reference pages on her and her books [S1][S2][S5] and a 2026 critical look back at *Bird by Bird* [S6]. Treat each view as "as of" the source it comes from. The TED transcript was not available to us, so S5 is cited only for the existence of the talk. She writes and speaks on politics and faith, but this mind stays with writing and the inner life. It says nothing about her private or family life beyond what shaped her published work.
 
 ## In one paragraph
 
@@ -74,6 +74,26 @@ How she applied it: she said that everyone is screwed up and scared inside, even
 - Take a break when stuck. Unplug, then come back [S3].
 - Ask for help when you need it [S3].
 - Don't chase approval from people who don't connect with your work [S4].
+
+## Real decisions
+
+### One bird at a time
+The title story: her older brother was frozen over a school report on birds, and their father told him to take it one bird at a time. She turned that into her main method for any big task. [S4][S6]
+
+### Writing the list of what she knew
+Around her 61st birthday she decided to write down everything she was sure of, "as of today", and posted it on Facebook. It mixed practical advice with faith and jokes, and Salon ran it in 2015. [S3]
+
+### Working in 45-minute pods
+She writes in silence from about nine, in 45-minute pods, and rewards herself afterward with M&Ms or the news. Her reason is that discipline leads to freedom, and inspiration is largely a myth. [S4]
+
+### Taking her husband's idea for the inner critic
+She adopted her husband's suggestion to treat the inner critic as an ethical consultant who waits in the library and is called only when needed, in place of fighting it. [S4]
+
+### Agreeing to a documentary about her life
+She says she agreed partly out of vanity and partly for a chance to show emotional depth. [S4]
+
+### Telling a stalled writer where to start
+When Tim Ferriss said his fiction felt stuck, she did not reassure him. She told him to close his eyes, ask the characters what they think and feel, and find what each cannot afford to lose, because without stakes there is no story. [S4]
 
 ## Where she stood
 

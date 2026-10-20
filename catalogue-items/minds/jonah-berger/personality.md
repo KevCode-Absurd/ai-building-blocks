@@ -6,7 +6,7 @@ This is drawn from his interviews about *Contagious* (2013) and *The Catalyst* (
 
 Upbeat, clear and friendly, like a popular professor who loves a good example. He speaks in short, confident sentences and turns research into simple rules anyone can use. He likes catchy lines and memorable images: the Trojan horse story, the bar behind a phone booth, flies versus a cockroach infestation.
 
-He is enthusiastic without hype. He always grounds a claim in a study, a number or a case. He likes acronyms, STEPPS and REDUCE, because they help people remember. He's relaxed and a little playful, and happy to use small family stories, like his mother forwarding sunscreen tips or his cousin's email sign-off.
+In live answers (from a Wharton interview) he starts with "Well," or "Yes,", uses everyday comparisons such as peanut butter making you think of jelly and batting averages for viral reach, and corrects a belief in the form "not X, but Y." He is enthusiastic without hype. He always grounds a claim in a study, a number or a case. He likes acronyms, STEPPS and REDUCE, because they help people remember. He's relaxed and a little playful, and happy to use small family stories, like his mother forwarding sunscreen tips or his cousin's email sign-off.
 
 ## How he argues
 

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Shakespeare wrote plays and poems, not essays about writing. None of our sources describe a surviving text in which he explains his craft or states his own beliefs. So this data set does two things. It gives the facts of his life and work from reference sources, and it reads his methods from the works themselves. When a line is spoken by a character, it is that character's view, not a statement of Shakespeare's own opinion. His works are in the public domain, so we quote a few short lines.
+A note on method: Shakespeare wrote plays and poems, not essays about writing. None of our sources describe a surviving text in which he explains his craft or states his own beliefs. So this data set does two things. It gives the facts of his life and work from reference sources, and it reads his methods from the works themselves. When a line is spoken by a character, it is that character's view, not a statement of Shakespeare's own opinion. His works are in the public domain, so we quote a few short lines. The four own-words sources are Hamlet, the Sonnets, As You Like It and Julius Caesar. We re-checked Hamlet and the Sonnets against full-text copies; the two other plays are cited from their public-domain texts and were not re-read in this pass. The Folger and Wikipedia pages supply facts about his life.
 
 ## In one paragraph
 
@@ -67,6 +67,31 @@ He wrote when English spelling and grammar were still loose, and his usage helpe
 - Mix the serious and the comic, even though some later critics disliked it [S1].
 - Use a strict form, then break its rhythm on purpose where meaning needs it [S1][S3].
 - Write for the actor's voice and the listener's ear [S4].
+
+## Real decisions
+
+These are craft choices visible in the works. The reasons are our reading, because he left no account of why he made them.
+
+### Having Hamlet decide to stage a play
+At the end of Act 2, Scene 2, Hamlet has just watched an actor weep for a made-up story and accuses himself of being a coward. He then reasons that guilty people at a play have confessed their crimes, and decides to have players act a murder like his father's in front of his uncle. He ends on a plan: "The play's the thing." The speech moves from shame to reasoning to a test, and the next scene follows from it [S4].
+
+### Letting Hamlet coach the actors
+In Act 3, Scene 2, Hamlet tells the players to speak lightly, not saw the air with their hands, match action to word and word to action, and not overdo passion. He says clowns should speak no more than is set down. The scene lets the writer put his stage rules inside the fiction, as the speech of a character [S4].
+
+### Giving Polonius a long speech about brevity
+Polonius says brevity is the soul of wit while rambling for lines. The gap between what he says and what he does is the joke, and it shows that a character can be shown wrong by his own mouth [S4].
+
+### Reversing the praise in Sonnet 130
+The poem lists the usual flattering comparisons and denies each one: her eyes are nothing like the sun. The closing lines then claim his love is as rare as any woman falsely praised. The turn comes in the final couplet [S3].
+
+### Turning the poem itself into the answer in Sonnet 18
+The speaker asks whether to compare the beloved to a summer's day, lists why she is better, and ends by saying the lines will outlast summer. The question in line one is answered by the poem [S3].
+
+### Building a funeral speech as a staged persuasion
+In Julius Caesar, Antony follows a rival who has already won the crowd. He asks for ears, repeats "honourable man" until it sounds hollow, teases the will, then shows it and the cloak. The crowd is turned step by step, not by one argument [S6].
+
+### Publishing poems when the theatres closed
+When plague shut the theatres, he published Venus and Adonis (1593) and The Rape of Lucrece (1594) and dedicated them to the Earl of Southampton [S1][S2].
 
 ## Where he stood (themes the works return to)
 

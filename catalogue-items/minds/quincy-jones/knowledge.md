@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Quincy Jones died on 3 November 2024, aged 91 [S1]. His views here come mainly from two long interviews: one for the Academy of Achievement in 2000 [S2], and one from 2010, published in 2023 [S3]. Treat each view as "as of" its date. He told many stories over a long life, and some numbers vary between tellings; where they do, this file says so.
+Quincy Jones died on 3 November 2024, aged 91 [S1]. His views here rest on three interviews in his own words: one for the Academy of Achievement in 2000 [S2], a 2010 masterclass published in 2023 [S3], and a 2011 AARP interview [S6]. The first two are read from the publishers' pages and a write-up of the masterclass, so the wording is theirs and the ideas are his. The reference pages give dates and album facts only [S1][S4][S5]. Treat each view as "as of" its date. He told many stories over a long life, and some numbers vary between tellings; where they do, this file says so.
 
 ## In one paragraph
 
@@ -23,6 +23,8 @@ Jones said putting the songs in the right order is half the job of making an alb
 ### The arranger finds what isn't obvious
 
 An arranger, he said, raises a song's impact by finding the less obvious possibilities in it and developing them fully [S3]. He credited both intuition and years of training [S3]. From an early age he heard arrangements in his head, and he wanted to know how to write for a big band without every section sounding the same [S2].
+
+He compared building a record to painting: sketch first, add layers, then fix [S3]. For Rock With You he asked the drummer for a one-bar figure people could hum [S3]. He also singled out the Billie Jean bass line as part of the record's hook [S3].
 
 How he applied it: for Billie Jean, he had Jackson record some vocal layers through a six-foot cardboard tube [S5]. For Beat It, he and Jackson wanted a rock song with wide appeal and spent weeks finding guitarists, ending with Eddie Van Halen on the solo [S5]. He brought in the actor Vincent Price to speak the closing lines of Thriller [S5].
 
@@ -54,6 +56,7 @@ How he applied it: he produced Lesley Gore's It's My Party, a No. 1 in 1963, whi
 
 ### Humility with creativity, grace with success
 
+He also said excellence is a habit, not an act, and traced his pace to teenage jobs where he decided to be the best at whatever he did [S6]. He learned the business side the hard way: he worked on Lesley Gore's first hit without realising producers got paid [S6]. 
 He told musicians to listen more than they talk and to stay humble [S3]. He warned that fame can inflate an artist's sense of self, and framed success as a channel for something bigger than the person [S3]. In 2000 he credited his own success to obsession and humility [S2].
 
 ## How he decides
@@ -69,6 +72,29 @@ He told musicians to listen more than they talk and to stay humble [S3]. He warn
 - When the artist insists, weigh it. Jackson kept the long Billie Jean intro because it made him want to dance, and Jones let it stay [S5].
 - Set the room's rules before the work starts. A sign on the door did that for We Are the World [S4].
 - Write the warnings down. For that session the team asked artists not to copy or share the tape [S4].
+
+## Real decisions (enriched minds)
+
+### Turning down a scholarship to tour with Hampton
+Jones left Berklee's forerunner to go on the road with Lionel Hampton [S3]. In 2000 he described learning by playing in bands from age 13 and on the road with Hampton [S2]. It was with Hampton that his arranging talent first showed [S3].
+
+### Moving to Paris to study composition (1957)
+He went to Paris to study with Nadia Boulanger and to work for a record company [S2]. From Boulanger he took the lesson that there are only twelve notes, so study what everyone has done with them [S2]. She also said a musician needs a full life to have something to say [S3].
+
+### Taking the Mercury vice presidency
+Jones accepted a vice presidency at Mercury Records to pay off debts and learn the business [S2]. He became the first African American in that role [S1]. He advised musicians to learn the business side [S3].
+
+### Cutting about 800 songs to nine for Thriller (1982)
+He and the team recorded far more songs than the album needed, then chose honestly, replacing weak finalists with stronger ones and putting ego aside [S3]. He called sequencing half the job [S3]. Reference accounts say the pool was about 30 songs, so treat his figure as a story [S5].
+
+### Keeping the Sinatra set list private (1966)
+In Las Vegas, Sinatra wanted to open the set with a song Jones disagreed with. Jones objected softly in rehearsal and offered a different order in private, and Sinatra took it [S3]. His reason: let a star keep their standing in public [S3].
+
+### Returning half the fee (the Basie story)
+In the 2000 interview he told of a Basie concert where half the fee was given back [S2]. He tells it as a story about fairness to the people paying you [S2].
+
+### Writing the ground rules for We Are the World (1985)
+A sign on the studio door told stars to check their egos there [S4]. The team picked a guide vocal with less thought in it, warned against self-congratulation, and asked artists not to share the tape [S4]. The song raised over $80 million [S4].
 
 ## Where he stood
 
@@ -123,4 +149,4 @@ He told musicians to listen more than they talk and to stay humble [S3]. He warn
 - "There is no science for melody." (2010) [S3]
 - "The more mistakes you make, the more you learn" (2010) [S3]
 - "suggest to them in private, rather than tell them in public" (2010) [S3]
-- "I am very nosy so I am constantly exploring." (2000) [S2]
+- "Excellence is not an act; it's a habit." (2011) [S6]

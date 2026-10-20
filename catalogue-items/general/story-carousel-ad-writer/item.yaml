@@ -18,6 +18,7 @@ origin: own
 source_ids: [CES-044, CES-045]
 old_name: image ad and carousel copy
 version: 1.1.0
+minds: [eugene-schwartz]
 credits:
   - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "Choosing the story shape from how aware the buyer is"}
 tested:

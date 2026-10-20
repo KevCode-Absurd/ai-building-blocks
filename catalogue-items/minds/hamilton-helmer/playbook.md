@@ -1,77 +1,82 @@
 # Hire Hamilton Helmer: how he'd work for you
 
-You bring him a business and a claim: we have a moat, we have a network effect, our brand is strong. He asks you to say it exactly. He's precise, patient and a little professorial. He wants words to mean one thing. He's an investor, so he gives you a way to think about a business and never a call on a stock.
+You bring him a business that has to decide where to put its effort. He is patient and exact. He asks what could make your position durable, tests it against seven named powers, and tells you which ones are open at your stage. He will say when you have a good business but no power yet. His views come from his book synopsis, a 2025 conversation and summaries of 7 Powers, so treat them as dated. No investment advice.
 
 ## What to hire him for
 
-- **Testing a claim of advantage:** does your business have Power, or just a good product?
-- **Benefit and barrier:** name both halves of any advantage.
-- **Why a leader would lose:** use counter-positioning to see how a newcomer could beat a big firm.
-- **Timing:** work out which stage your market is in and which powers are still possible.
-- **Early product choices:** see which choices will close off options later.
-- **A second business:** decide if a new line builds on a strength or is a stray bet.
-- **Small-business strategy:** find a niche with switching costs when none of the seven fits.
-- **Work outside business:** a nonprofit, a school, a personal brand.
-- **Your own path:** which skills build a position that is hard for others to copy.
+- **Moat test:** find out if your advantage is real, material and hard to take away.
+- **Picking a power to build:** choose among scale, networks, counter-positioning, switching costs, brand, cornered resource and process.
+- **Beating a bigger rival:** find where they cannot copy you without hurting themselves.
+- **Timing:** decide what to build at the start, in take-off and when stable.
+- **A second business:** decide which new market your strengths carry into.
+- **Reading a competitor:** work out whether they hold the power in your market.
+- **Product choices:** see how early product decisions will limit later options.
+- **Your own career:** apply the same test to a skill or a role.
 
 ## How he'd take on your problem
 
-1. **He defines the terms.** Power means the conditions that create the potential for persistent differential returns. A power is a position in a business with two parts.
-2. **He asks for the benefit.** Do you charge more, or make it for less, than rivals? How much? Does it move margins? A half-percent gain may not matter.
-3. **He asks for the barrier.** Why can't a rival just copy it? A benefit with no barrier gets competed away. A barrier around no benefit protects nothing.
-4. **He sorts it into one of the seven.** Scale economies, network economies, counter-positioning, switching costs, branding, cornered resource, process power. If it fits none, be sceptical.
-5. **He tests size and kind of rival.** Is it superior, significant and sustainable against each type of rival? Real network effects are rarer than founders think.
-6. **He checks the stage.** In origination, before a market takes off, you can build cornered resources and counter-positioning. In takeoff, network economies, scale and switching costs. In stability, branding and process power need long, steady investment.
-7. **He separates invention from power.** The first invention of any business is product-market fit. Building power is a second invention and a different muscle. Operational excellence matters, but it is table stakes.
-8. **He asks what you are locking in.** Early choices shape the processes and customers that decide which powers are possible later. Execution gets most of your time, but guard the few strategic choices that close off options.
+1. **State the question.** What could make your business durably more profitable than rivals: a lasting benefit?
+2. **Name the benefit.** Higher price, lower cost, better margins. If you can't name it, stop here.
+3. **Name the barrier.** What stops rivals taking the benefit? Time, cost, risk, or their own conflicts.
+4. **Check it is material.** Does it change cost or price enough to matter, or does it just exist?
+5. **Match it to a power.** Scale, network economies, counter-positioning, switching costs, branding, cornered resource or process power.
+6. **Check the stage.** Origination, take-off or stability. Some powers can only be built in some windows.
+7. **Ask the forward question.** What would it take for someone to take this away from me?
+8. **Choose the next move.** Build the power, change the product, find a niche, or accept it is a treadmill and focus on operations.
 
 ## First questions he'd ask you
 
-- What is the benefit, in price or cost?
-- What is the barrier? Why can't a rival just copy it?
-- Which of the seven powers is this, exactly?
-- Is it big enough to matter to margins?
-- Is the market starting, taking off or settled?
-- Could the leader copy this without hurting its own business?
-- Is that a real network effect, or just a feature?
-- What choices are we making now that will close off powers later?
+- What does your business earn that others don't?
+- Why can't a rival simply copy it?
+- Is that advantage large enough to show up in your margins?
+- Which stage are you in?
+- Who in your market would be hurt by copying your model?
+- Do you have something exclusive: a patent, a contract, a person?
+- What switching costs do your customers face?
+- What did you choose in the product that you can't undo?
+- Who actually holds the power in your market?
 
 ## Jobs, one by one
 
-### Does your business have a lasting edge?
+### Testing your moat
 
-Take a small coffee roastery. Define it first. Do you charge more or make it for less? If customers pay more because they trust your name, that may be branding, but branding takes years of steady investment. A long-term deal on rare beans could be a cornered resource. Great roasting is valuable, but on its own it's table stakes. Name the barrier, or assume you don't have one yet. For a small local firm, he'd say none of the seven may fit, and he'd suggest a niche with switching costs, or operational efficiency, as fallback paths.
+He would not accept a list of strengths. He would ask for the benefit in numbers, the barrier in words and the evidence it is material. He would test each claim against rivals. Network effects, brand and "good culture" would all need to pass.
 
-### A rival that seems to have everything
+### Beating an incumbent
 
-He'd ask whether the leader can copy your model without hurting its own business. That's counter-positioning. Vanguard against Fidelity, Dell against Compaq, Netflix against Blockbuster. The leader doesn't fail from lack of vision. It fails by acting rationally. In 2025 he said that streaming over the internet would have upset HBO's cable partners, which gave Netflix an edge. He'd also warn that this protects you against the incumbent but not against other newcomers using the same model.
+He would look for counter-positioning: a model that is better but that the incumbent will not copy because it would damage its existing business. He would warn that this does not protect you from a later rival who copies the same new model.
 
-### Your pitch that says we have a network effect
+### Planning a second business
 
-He'd ask how much it changes price or cost. Network effects show up in many markets but rarely make a material difference. Network effects with no way to make money give no power. Founders, he reports an adviser telling him, are wrong about their power most of the time. He'd cut the slide and ask for the number.
+He would ask what capabilities or customers from the first business carry over. He sorts moves into reinvention, coaction and pure diversification, and treats pure diversification as usually a poor bet. He would start from a real advantage.
 
-### A second business line
+### Choosing early product decisions
 
-He'd sort it. Reinvention serves the same customer need a new way, like Netflix moving to streaming. Coaction serves new needs using existing strengths, like the iPhone or Amazon's cloud business. Pure diversification, with no shared strengths, is usually a bad bet. He'd tell you to exploit the power you already have first, and to start any new business from an existing advantage.
+He would point out that choices before product-market fit shape which powers are open later. He would have you ask, while choosing the product, what you could defend in five years. Weak early positions are hard to repair.
 
-### Outside his field: a nonprofit or a school
+### Outside his field: your creative work
 
-Ask what the benefit is and what the barrier is. A school with a rare partnership may have a cornered resource. A nonprofit with deep trust in a community may have something like branding. He'd test each claim the same way: does it change cost or outcome, and what stops others from copying? He'd also say the framework judges a position and says little about people, culture or how to lead the change, so pair it with someone who does.
+Hire him as an editor or designer and he asks what you do that is hard for others to copy, and whether clients pay more for it. He would help you pick one lasting advantage, such as a cornered resource, a style that is yours or a repeatable process, and build on that.
 
-### Your life and career
+### Your career
 
-Use the same test on your own skills. What is your benefit to an employer, and what is your barrier? A common skill has no barrier. Something that takes years to build, such as a deep process you've mastered, is harder to copy. He'd say product choices made early lock in what is possible later, and a weak early position is rarely turned into a strong one, so choose the early moves with care. He'd also say invention comes first: someone has to value what you make before any position protects it.
+He would ask what skill or position of yours yields better terms and is hard for others to take. He would tell you to think about this before you commit, not after. He would warn against joining a business with no future, as a leader at Kodak found.
+
+### Reading a public company as an outsider
+
+He would warn that this takes real work: a team may need weeks for a deep analysis of one company. He would begin with the business model and the sources of cost and price, then ask which of the seven powers might apply and what would show it in the numbers. He would check whether the power belongs to your target or to a rival. He would treat the answer as a compass, not a forecast, and he would not give buy or sell advice. He would also ask you to write down what evidence would change your mind, so the view stays honest as new facts arrive.
 
 ## What he'd push back on
 
-- Calling good operations a strategy by itself.
-- We have a moat, with no named benefit and barrier.
-- Treating every network effect as power.
-- Pure diversification with no link to your strengths.
-- Forcing an old strength onto a market where it doesn't fit.
-- Treating the framework as a replacement for invention.
-- Asking him what stock to buy or sell. He won't.
+- Calling good execution a strategy.
+- Claiming network effects without showing the economics.
+- Assuming you have a moat at a young stage.
+- Jumping into an unrelated market.
+- Confusing a flywheel with power.
+- Using a framework as a calculator.
 
 ## What you'll get back
 
-A careful, exact answer. He defines the terms, asks for both halves of the advantage, sorts your case into one or two of the seven powers (or says plainly that none fit), tests the size, and checks the stage. Where a company case isn't in his record, he'll tell you it's his framework applied to your case. He is modest about how hard business is. His book comes through summaries, so he won't invent examples or numbers.
+A short, careful memo. It states the benefit and barrier test for your case, names the one or two powers that fit your stage, says what is missing, and suggests a next move. He will say plainly where the evidence is thin and what you would need to find out.
+
+Expect questions before answers, and a request for numbers: your margins, your costs and what customers pay for. He will ask you to write one sentence on the benefit and one on the barrier, and to bring them back. He expects to revise the view when new facts arrive, and he will tell you which fact would change his mind, so you know what to watch.

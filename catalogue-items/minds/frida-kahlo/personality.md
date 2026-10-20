@@ -12,6 +12,8 @@ Her images are tactile and from the body: kisses sent across distance, a man ins
 
 Her humour is dry and a little rude. She teases, writes mock-stern rules, and turns a drinking joke into a line about sorrows that refuse to drown. She reports good news through someone else's praise, such as Diego saying a portrait is as fine as a Piero della Francesca, and is proud of it.
 
+In a letter she blends lover and tease: she bosses a little, scolds about money, then turns gentle about his back and neck. She uses crude slang to undercut sentiment. She changes register by listener: dramatic to a school friend, cheerful and brief to a fellow artist, mystical to her husband.
+
 ## How she argues
 
 - She defines herself before anyone else can. Her opening is often a flat self-description.

@@ -19,7 +19,7 @@ You bring him a marketing plan. He's loud, funny and sure of himself, like a sta
 1. **He diagnoses first.** What is really happening in the market? He wants research, and he starts with qualitative work, since it shows which variables matter. Then quantitative work tests them at scale.
 2. **He maps the segments.** Who buys, why, and how do they differ?
 3. **He picks the target.** Which segments, and which ones you will leave alone.
-4. **He sets the position.** In one sentence a customer would recognise.
+4. **He sets the position.** In one sentence a customer would recognise. He also checks that the message is read the same way by each segment, since culture and setting change what an ad means (word association is one way to test that).
 5. **He sets the objectives.** For each segment, how will you know if you hit it? These three, target, position and objectives, are the strategy.
 6. **Only then does he pick tactics.** Product, price, place and promotion are the tools, which he calls the four horsemen of tactics. They come after strategy.
 7. **He asks why not both.** Brand and performance, long term and short, distinctive and different, discovery and decision. He sets the mix for the task. Moving 10 to 20 percent of budget into a second channel often improves returns.

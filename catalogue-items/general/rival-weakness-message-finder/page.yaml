@@ -1,0 +1,124 @@
+new_slug: rival-weakness-message-finder
+name: "Rival weakness message finder"
+summary: "Name a rival and your strengths. Get the one strength that is also their weakness, as a message you can defend."
+job: study-competitors
+thinking: medium
+thinking_why: "It matches strengths to weak spots and weighs which message holds up."
+
+headline: "Rival weakness message finder"
+subhead: "Give it a rival and your real strengths. It lists the rival's weak spots from public facts and matches each to a strength of yours on the same axis. You get the best pair as a message you can defend, with the rival's likely reply."
+
+explain: |
+  Saying you are better than a rival, with no proof, persuades nobody. And naming the rival in your message invites it to answer. The strongest message is about something you do well that is also something your rival does badly, and that a buyer can check in a few minutes.
+
+  This skill builds that message in steps. It lists the rival's weak spots from public facts, lists your real strengths with proof, and matches them only when they sit on the same axis. It drops pairs a buyer cannot check, writes the message about your strength without naming the rival, and tests how the rival could reply. The best pair comes back first, with the risk if the rival hits back.
+
+when:
+  - "You are writing positioning against a named rival."
+  - "Your ads say you are better and no one believes them."
+  - "A rival has just had a problem and you want to use it fairly."
+
+you_give:
+  - "The rival and public facts about it, with sources"
+  - "Your strengths and the proof for each"
+  - "Your brand file (optional)"
+you_get:
+  - "The rival's weak spots with sources"
+  - "Pairs matched on the same axis"
+  - "Messages that do not name the rival, each with how a buyer can check it"
+  - "The rival's likely reply and a ranked angle list"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Name the rival and paste public facts about it, with dates."
+  - "List your strengths and the proof for each."
+  - "Read the pairs and the reply risk. Drop any message you cannot defend."
+  - "Use the top message in one ad or page and watch the response."
+
+how_it_works:
+  - title: "Lists weak spots"
+    text: "Writes the rival's weaknesses from public facts, each with a source."
+  - title: "Lists your strengths"
+    text: "Writes what you do better, with proof."
+  - title: "Matches on one axis"
+    text: "Pairs a weak spot and a strength only if they are on the same axis."
+  - title: "Checks it can be shown"
+    text: "Drops pairs a buyer cannot check themselves."
+  - title: "Writes the message"
+    text: "Writes about your strength without naming the rival."
+  - title: "Tests the reply"
+    text: "Looks at how the rival could answer and expose you."
+  - title: "Ranks the angles"
+    text: "Hands back the best message first."
+
+output_shape: |
+  RIVAL WEAK SPOTS
+  <weak spot> | <source, date>
+
+  OUR STRENGTHS
+  <strength> | proof <what>; Claim only: <list>
+
+  PAIRS (same axis)
+  <axis> | their weak spot <x> | our strength <y>
+  Buyer can check by: <how>
+
+  MESSAGES
+  <n>. <headline>
+     Evidence: <line>
+
+  LIKELY REPLY
+  <reply> | our exposure <what> | keep/rewrite/drop
+
+  RANKED ANGLES
+  1. <message> | evidence | rival weakness behind it | reply risk
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "Sources"
+    how: "Give dated, public sources for the rival's weak spots. Without them it drops the weak spot."
+  - what: "Proof of your strength"
+    how: "Add numbers, policies or tests. A strength with no proof stays on the claim-only list."
+  - what: "How direct to be"
+    how: "Say if you are in a market where naming a rival is normal. It still writes without naming unless you ask."
+  - what: "Your own weak spots"
+    how: "Tell it where you are weaker. It uses them to test the rival's reply."
+
+judge:
+  - "Every weak spot has a source and a date."
+  - "Each pair is on the same axis."
+  - "A buyer could check the difference in a few minutes."
+  - "The message never names or insults the rival."
+  - "You can answer the reply it predicts."
+
+test:
+  - "Give it a rival you know well and see if the weak spots match what your customers say."
+  - "Check one weak spot against its source."
+  - "Show the message to a customer and ask if they would check it."
+  - "Imagine the rival's reply yourself and see if the skill listed it."
+
+improve:
+  - "Add your approved claims to the skill so strengths come with their conditions."
+  - "Add words your brand never uses against a rival."
+  - "Save the winning message to your brand file with the date and the rival's status."
+  - "Pair it with Disruption risk checker if the rival is a cheaper entrant."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Matching facts and writing a careful message is text work any strong chat AI does well with this skill."}
+    - {name: "Your rival's own public pages and reviews", why: "They are the dated sources for the weak spots."}
+  inputs:
+    - "Dated reviews of the rival"
+    - "The rival's pricing and policy pages"
+    - "Your approved claims and proof"
+    - "Past ads that named a rival and how they did"
+
+terms:
+  - term: "Same axis"
+    meaning: "The same measure for both sides, such as price, speed or support."
+  - term: "Positioning"
+    meaning: "Where you stand in the buyer's mind compared with the other choices."

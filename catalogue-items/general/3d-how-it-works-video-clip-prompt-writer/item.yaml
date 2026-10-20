@@ -22,6 +22,7 @@ origin: rebuilt
 source_ids: [CES-152]
 old_name: 3D how-it-works explainer video prompts
 version: 2.1.0
+minds: [charles-and-ray-eames]
 credits:
   - {title: "Powers of Ten (film)", by: "Wikipedia, on Charles and Ray Eames (1977)", url: "https://en.wikipedia.org/wiki/Powers_of_Ten_(film)", used: "Starting at human size and moving down through scale in one continuous move, then back"}
   - {title: "Communications Toolkit: And, But, Therefore Statement", by: "SESYNC, after Randy Olson", url: "https://www.sesync.org/resources/communications-toolkit-and-therefore-statement", used: "A chain that needs a snag link and a product link"}

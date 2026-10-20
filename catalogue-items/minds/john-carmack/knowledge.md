@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Rebuilt 2026-10-20 from his 1998 plan file, his 2012 essay and his 2022 memo as read online [S3][S5][S7]. The 2007 inlined-code email could not be opened this time.
+
 John Carmack is alive, and views can change. This data set comes from his own public writing and talk: his 1998 .plan file updates, a 2007 email to id Software staff on coding style with a note he added in 2014, a 2012 essay on functional programming, a 2022 podcast interview, and his 2022 farewell memo to Meta. Reference pages fill in dates. Treat each view as "as of" the year of its source. The podcast transcript we used is a third-party transcript, so small wording slips are possible. His work on artificial general intelligence (AGI) at Keen Technologies is described only as it was announced in 2022 and 2023. Nothing here covers his private life, and nothing here tells you what he thinks now.
 
 ## In one paragraph
@@ -75,6 +77,29 @@ How he applied it: in 2022 he said he tries to keep the larger value to the user
 - Test in public, early and often [S3][S8].
 - Work hard and long, but sleep [S6].
 - When you were wrong, say so and fix it [S3].
+
+## Real decisions
+
+### Moving game mods to an interpreted virtual machine (1998)
+In November 1998 he wrote that Quake 3's game logic would run in an interpreted C virtual machine, with binary libraries kept only for debugging. His reason was security and portability, and he called it the right choice [S3].
+
+### Smoothing mouse input at the cost of latency (1998)
+He found that Windows 95 sampled the mouse only about every 25 ms, which made movement stutter at higher frame rates. He added three input modes and made the smoothed one the default [S3].
+
+### Abandoning dual-processor rendering after measuring (1998)
+After timing about 12 ms to fill the command queue and 17 ms to read it, he dropped the dual-processor approach and wrote it off in a line [S3].
+
+### Refusing design by committee
+In 1998 he pointed players to a public suggestion site to filter feedback, asked for specific benefits and clean interfaces, and said the studio did not follow community votes [S3].
+
+### Releasing tools and source
+He committed to publishing editor changes after the game shipped, and gave a casino win to the Free Software Foundation while saying he did not share all its views [S3].
+
+### Making code pure where it was finicky
+He tells programmers to pull finicky code out into a function that depends only on its inputs, then test it, which often turns up bugs. He admits this costs extra copying and is a continuum, not a switch [S5].
+
+### Leaving Meta (2022)
+His memo says the headset he wanted had largely arrived, but that wasteful effort, such as a GPU at about 5 per cent use, hurt him. He blames his own lack of persuasion for not stopping bad decisions, and says he left to work on his own company [S7].
 
 ## Where he stood
 

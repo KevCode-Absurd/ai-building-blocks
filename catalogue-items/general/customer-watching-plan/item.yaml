@@ -1,0 +1,21 @@
+slug: customer-watching-plan
+name: "Customer watching plan"
+summary: "Name who you want to understand. Get a plan to watch them first-hand, log what you see and test odd moments."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [jane-goodall]
+credits:
+  - {title: "Jane Goodall: What It Means to Be Human", by: "On Being, 2020", url: "https://onbeing.org/?p=1368166", used: "Watching patiently for a long time, naming individuals, and using empathy to find insight"}
+  - {title: "The Shadow of Humanity and the Spirit of Animals", by: "Orion Magazine, 2020", url: "https://orionmagazine.org/article/the-shadow-of-humanity-and-the-spirit-of-animals/", used: "A careful single observation counts as data; empathy gives the moment of insight after careful watching"}
+  - {title: "Jane Goodall: The Legend, the Lessons, the Hope", by: "The Tim Ferriss Show, 2020", used: "Facing the dark findings too, and starting from the individual"}

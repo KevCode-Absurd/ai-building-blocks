@@ -62,6 +62,30 @@ How she applied it: she pointed to Hurricane Harvey in Houston, where neighbours
 
 *Dare to Lead* (2018) draws on two decades of research on emotion and seven years of work with leaders and teams, from startups to very large companies [S5]. The book argues that daring leadership is a set of four skills that are teachable, observable and measurable, built on human traits like empathy, connection and courage [S5].
 
+## How her research worked
+
+She began by studying shame, first with women only, and widened to men after a conversation at a book signing [S2]. She coded interview data for repeating words and themes and sorted what she found into two lists: what wholehearted people chose and what they moved away from, drawing on about eleven thousand pieces of data [S2]. She had assumed these people simply had easier lives. They did not: their rates of divorce, bankruptcy, trauma and addiction matched everyone else's, and what set them apart was meeting life from a sense of worthiness [S2]. Shame, she found, carries two tapes, "not good enough" and "who do you think you are" [S2]. The triggers differ by gender: women feel pressure to do it all perfectly and make it look easy, men feel pressure never to look weak [S2].
+
+## Real decisions
+
+### Putting her own habits on the wrong list
+In 2006 and 2007, sitting at her kitchen table, she saw her perfectionism, her habit of treating exhaustion as a badge and her habit of measuring herself by output on the list of things the wholehearted had let go. She called it a breakdown and a spiritual awakening, went to therapy, and began practising vulnerability on purpose, including bringing her own weak spots into her work [S2]. Her stated reason: the data pointed at her too.
+
+### Treating the backlash as a test
+When the 2010 talk went viral and brought sharp criticism, she treated it as a live test of her own findings and noticed when she was putting on armour [S2][S6].
+
+### Naming belonging as four practices
+In 2018 she set out four elements of true belonging: move close to people you are tempted to hate, speak truth while staying civil, hold a strong back with a soft front and a wild heart, and share joy and pain even with strangers [S3]. She tested the ideas with focus groups, interviews and audience polls, and asked leaders the same questions [S3].
+
+### Drawing a line on abuse
+Even while urging people to move in, she said she would not tolerate abuse or dehumanising language [S3].
+
+### Teaching parents to stop shielding
+She argued that how parents engage with the world matters more than technique, that hope is learned through struggle with trusted people nearby, and that the real harm is the isolation around a hard moment, not the moment itself. She used the example of parents calling HR about an adult child's review to show over-control [S2].
+
+### Taking leadership out of titles
+For *Dare to Lead* she drew on about two decades of research and about seven years with leaders, and held that leadership means taking responsibility for finding potential in people and ideas, not holding a title. She said daring leaders do not pretend to know everything, share power, and have tough conversations [S5].
+
 ## How she decides
 
 - Ask what you're afraid to be seen doing, and whether that fear is blocking the brave choice [S2].

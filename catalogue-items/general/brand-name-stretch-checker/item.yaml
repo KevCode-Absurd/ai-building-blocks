@@ -1,0 +1,24 @@
+slug: brand-name-stretch-checker
+name: "Brand name stretch checker"
+summary: "Paste your brand and the new product. Get a stretch score out of 100 and a call on the name."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: brand_brain, required: true}
+  - {type: product_data, required: true}
+  - {type: plan, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [al-ries]
+credits:
+  - {title: "The Positioning Era Cometh, Advertising Age articles, 1972", by: "Al Ries and Jack Trout", used: "A name holds one meaning in the buyer's mind, and stretching it over new products makes it mean less"}
+  - {title: "Interview with Al Ries on Brands and Branding, August", by: "Al Ries", used: "Categories splitting into narrower branches, and new idea means new name"}
+  - {title: "Al Ries", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Al_Ries", used: "Background on the line extension trap and the law of focus"}
+  - {title: "Al Ries mind knowledge file", by: "Notes citing the 1972 articles, a 2006 interview and a 2009 article", used: "The check on whether to keep a name or start a new one"}

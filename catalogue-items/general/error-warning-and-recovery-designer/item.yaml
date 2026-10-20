@@ -1,0 +1,18 @@
+slug: error-warning-and-recovery-designer
+name: "Error warning and recovery designer"
+summary: "Describe a system and its operators. Get what the alarm says, what the person decides and how the system recovers."
+category: general
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [margaret-hamilton]
+credits:
+  - {title: "What the Errors Tell Us", by: "Margaret Hamilton, IEEE Software, Sept/Oct 2018", used: "Treating impossible mistakes as likely, detecting errors while running, a safe restart point, alarms that name the decision, and reviewing errors by kind to change the method"}

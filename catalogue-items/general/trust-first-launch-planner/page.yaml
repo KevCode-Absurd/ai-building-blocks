@@ -1,0 +1,104 @@
+new_slug: trust-first-launch-planner
+name: Trust-first launch planner
+summary: Describe a product people are wary of. Get the number who must hear about it, cheap trust tactics and a proof sequence.
+job: grow-social
+thinking: medium
+thinking_why: It estimates audience size and sequences proof, which needs judgement.
+headline: Trust-first launch planner
+subhead: Give it a product or service people are wary of. It names the doubt that stops them, estimates how many people must hear about it and picks cheap public ways to show it is safe. You get the audience number, the tactics and a proof sequence from small to big.
+explain: |
+  Some products meet doubt before they meet demand. People may fear a scam, a poor result or a change in how they do something. Paid ads do not fix that, because an ad is something the seller says.
+
+  This skill starts with the doubt in the buyer's own words. It estimates how many people must hear the message before it spreads by talk. It picks cheap, public ways to show the product is safe, such as people talking about it or a staged demo, and sends the first message to the most overlooked group. It orders proofs from smallest to biggest and tracks sign-ups after the first weeks, dropping what does not move them.
+when:
+  - People like the idea of your product but hold back from trying it.
+  - You are launching somewhere that has seen products fail or cheat people.
+  - You have little money and need trust, not reach.
+you_give:
+  - The product and what it promises
+  - The people you want and what makes them wary
+  - A buyer description (optional)
+  - What proof you already have
+you_get:
+  - The core doubt in the buyer's words
+  - The number of people who must hear about it, and its basis
+  - Cheap, public trust tactics
+  - A proof sequence from smallest to biggest
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the product, the people and what makes them wary.
+  - List the proof you have, even small.
+  - Run the first tactic in the plan.
+  - Count sign-ups after the first weeks and bring the numbers back.
+how_it_works:
+  - title: Names the doubt
+    text: States what stops people from trying, in their own words.
+  - title: Sizes the audience
+    text: Estimates how many people must hear before it spreads.
+  - title: Picks cheap tactics
+    text: Chooses public, low-cost ways to show it is safe.
+  - title: Starts with the overlooked
+    text: Sends the first message to the group others ignore.
+  - title: Orders the proof
+    text: Puts proofs in order from smallest to biggest.
+  - title: Tracks sign-ups
+    text: Counts sign-ups after the first weeks and drops what does not move them.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  THE DOUBT
+  <what stops people, in their words>
+
+  HOW MANY MUST HEAR
+  <number> | Basis: <how it was worked out>
+
+  TRUST TACTICS
+  <tactic> | Cost: <low> | Public because: <...> | Honest because: <...>
+
+  FIRST MESSAGE
+  Group: <the overlooked group> | Message: <...>
+
+  PROOF SEQUENCE
+  1. <smallest proof> 2. <next> ... n. <biggest proof>
+
+  TRACKING
+  Sign-ups by week | Keep if: <...> | Drop if: <...>
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: The doubt
+    how: Use words a real buyer used. A doubt you made up leads to tactics that miss.
+  - what: The group
+    how: Name the group who are most often ignored by others. They are often the first to say yes.
+  - what: Proof you have
+    how: List even small proof, such as one customer or one test. The sequence starts from it.
+  - what: Your area or market
+    how: Say where. How many people must hear depends on the size of the place.
+judge:
+  - The core doubt is stated in the buyer's words.
+  - The audience size has a stated basis.
+  - Each tactic costs little and is public.
+  - No tactic misleads people about what the product does.
+  - The proof runs from smallest to biggest.
+test:
+  - Ask three people in the group what stops them. Does it match the doubt?
+  - Check the audience number against the size of the place.
+  - Run the first tactic and count sign-ups after two weeks.
+  - Check that no tactic shows more than the product really does.
+improve:
+  - Add the proof you are not allowed to use to the tactics step.
+  - Add the local places where trust is built, such as a market or a club.
+  - Save sign-up counts per tactic to your results file.
+  - Pair it with a skill that writes the message itself.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Sizing an audience and sequencing proof is text work any strong chat AI does well with this skill.
+  inputs:
+    - Words real buyers used about their doubts
+    - The size of the area or group
+    - Any proof you already hold
+terms:
+  - term: Proof sequence
+    meaning: The proofs you show, in order from small and cheap to large and costly.

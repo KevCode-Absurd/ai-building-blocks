@@ -1,0 +1,120 @@
+new_slug: ten-second-opener-writer
+name: "Ten-second opener writer"
+summary: "Paste what you sell and who you are about to meet. Get a ten-second opener and two spares, as short honest questions."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It writes a few very short lines from a fixed pattern."
+
+headline: "Ten-second opener writer"
+subhead: "Give it your ranked reasons people buy and who you will meet. It turns the best one into a ten-word question about what the buyer gets, plus two spares for other moods and settings. You also get a quick way to test them."
+
+explain: |
+  A buyer decides within seconds whether to hear you out. An opener about your company or your product's parts loses them.
+
+  This skill takes your strongest honest reason to buy and says it as a short question about what the buyer will get or see. It cuts the question to about ten words and writes two spares, since no single line suits everyone. It rules out false reasons for the visit, such as fake surveys or prizes. A hook here means the first line you say to get attention.
+
+when:
+  - "You are meeting buyers face to face and need a first line."
+  - "Your cold messages get no replies."
+  - "You have one opener and it fails on some people."
+
+you_give:
+  - "Your ranked reasons people buy (angle library)"
+  - "Who you will meet and where (optional)"
+  - "Your offer and product facts (optional)"
+you_get:
+  - "A ten-word lead opener"
+  - "Two spares for other moods or settings"
+  - "A short test plan"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your ranked reasons people buy, or the output of \"Buyer-matched argument planner\"."
+  - "Say who you meet and where: a doorstep, a stall, an inbox."
+  - "Say each opener out loud before using it."
+  - "Try them on real buyers and tell the skill which one worked."
+
+how_it_works:
+  - title: "Picks a true reason"
+    text: "Chooses the angle you can say honestly."
+  - title: "Names the result"
+    text: "Turns it into what the buyer sees or gets."
+  - title: "Writes a question"
+    text: "A short did-you-know, have-you-heard or would-you-like line."
+  - title: "Cuts to ten words"
+    text: "Counts and trims, then reads it aloud."
+  - title: "Adds two spares"
+    text: "One for a rushed buyer and one for a sceptical one."
+  - title: "Adds an honest extra"
+    text: "A true compliment or a free item, never a trick."
+  - title: "Plans a test"
+    text: "Which to use first and what counts as a win."
+  - title: "Checks the set"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  LEAD OPENER
+  <about ten words> | Words: <n>
+  Result it points at: <what the buyer gets>
+
+  SPARE 1 (<setting or mood>)
+  <opener> | Words: <n>
+
+  SPARE 2 (<setting or mood>)
+  <opener> | Words: <n>
+
+  HONEST EXTRA
+  <compliment or free item, or none>
+
+  HOW TO TEST
+  <order, number of buyers, what counts as a win>
+
+  MISSING
+  <what would sharpen the lines>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "The setting"
+    how: "A doorstep, a market stall and an email need different openers. Name yours."
+  - what: "The buyer type"
+    how: "A rushed buyer needs fewer words than a curious one."
+  - what: "Your angle library"
+    how: "A ranked list with real buyer words gives better lines than a guess."
+  - what: "Your free item"
+    how: "If you give one, say what it costs you and whether it is always on offer."
+
+judge:
+  - "You can say each opener in one breath."
+  - "Each points at a result, not a part."
+  - "None gives a reason for being there that is not true."
+  - "The spares differ from the lead in more than wording."
+  - "You would be happy if the buyer heard your real plan."
+
+test:
+  - "Try all three openers on five people and note which one gets a response."
+  - "Run it twice. The lead angle should stay close."
+  - "Count how many buyers let you continue after each opener over a week."
+  - "Swap the worst opener for a new version and test again."
+
+improve:
+  - "Add words your buyers actually use so the lines sound like them."
+  - "Add a rule for what you will never say at the door."
+  - "Save the winning opener and its setting in a notes file."
+  - "Pair it with \"Objection answer sheet writer\" for what comes after the opener."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Short lines from a fixed pattern are easy work for any strong chat AI."}
+    - {name: "A voice memo app", why: "Recording yourself reveals lines you stumble on."}
+  inputs:
+    - "Real buyer quotes"
+    - "Photos of the product in use"
+    - "The hours and places you meet buyers"
+
+terms:
+  - term: "Opener"
+    meaning: "The first line you say to get a buyer to listen."
+  - term: "Spare"
+    meaning: "A second or third opener for a different mood or place."

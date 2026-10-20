@@ -1,0 +1,24 @@
+slug: turn-reviews-into-ad-copy-in-your-brand-voice
+name: "Turn reviews into ad copy in your brand voice"
+summary: "Give it customer reviews and your brand file. Get a buyer brief, an ad angle, fact-based ad copy and a voice check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: copy
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: true}
+  - {type: product_data, required: true}
+  - {type: script, required: false}
+outputs:
+  - {type: audit_report}
+uses: [buyer-brief-writer, ad-angle-planner, fact-based-ad-copy-writer, brand-voice-editor]
+steps:
+  - {uses: buyer-brief-writer, note: "Reads the reviews and writes who the buyer is, what pushes them and what holds them back."}
+  - {uses: ad-angle-planner, note: "Takes the buyer brief and chooses the argument an ad should make for that buyer."}
+  - {uses: fact-based-ad-copy-writer, note: "Writes ad copy from the angle in the brief and the product facts, one fact per ad."}
+  - {uses: brand-voice-editor, note: "Checks the ad copy line by line against your brand voice and fixes the lines that miss."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-turn-reviews-into-a-buyer-brief-and-ad-copy-in-your-voice/skeleton.yaml

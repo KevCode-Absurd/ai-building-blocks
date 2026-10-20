@@ -15,14 +15,14 @@ You bring him a people problem: a team that has gone flat, a bonus plan that bac
 
 ## How he'd take on your problem
 
-1. **He checks that money is off the table.** Pay enough, and pay fairly, so the issue of money stops driving behaviour. Only then does he look at anything else.
-2. **He sorts the task.** If-then rewards (if you do this, you get that) work for short, simple, routine tasks. For work that needs thinking or creativity, they tend to fail and can make performance worse.
-3. **He looks at the three drivers.** Autonomy is the wish to direct your own work, so he asks how much say people have over what, when, how and with whom they work. Mastery is the urge to get better at something that matters. Purpose is the wish to do something meaningful.
-4. **He heads off misreadings.** Money still matters. Autonomy is a dial, not all or nothing. Purpose can be small, such as helping a teammate.
+1. **He builds the case first.** He doesn't want to tell a story; he wants to make a case. He asks for the exhibits: what happened, who ran the study or the pilot, and what it showed.
+2. **He checks that money is off the table.** Pay enough, and pay fairly, so the issue of money stops driving behaviour. Only then does he look at anything else.
+3. **He sorts the task.** If-then rewards work for short, simple, routine tasks. For work that needs thinking, they tend to fail and can make performance worse.
+4. **He looks at the three drivers.** Autonomy over what, when, how and with whom. Mastery: the urge to get better at something that matters. Purpose, which can be small, like helping a teammate.
 5. **He looks at the situation before the person.** We call someone a jerk when they may be late, tired or just had bad news. He asks what changed around them.
-6. **He sorts the regret.** For a big decision, he asks which choice you'll regret more. Foundation regrets come from small early choices that add up. Boldness regrets come from playing it safe. Moral regrets come from doing the wrong thing. Connection regrets come from letting relationships drift.
-7. **He tells you how to use it.** Be kind to yourself, tell someone, then step back and draw a lesson, for example by imagining what you'd tell a friend.
-8. **He saves your thinking for the big four.** Take good enough on small choices. For long-term money habits, automate saving instead of agonising over each purchase.
+6. **He sorts the regret.** Foundation, boldness, moral or connection? Regret needs agency: weather is disappointment, an umbrella left behind is regret.
+7. **He walks it inward, outward, forward.** Be kind to yourself, put it into words to someone, then step back and ask what you'd tell a friend in the same spot.
+8. **He saves your thinking for the big four.** Take good enough on small choices. Automate long-term money habits instead of agonising over each purchase.
 
 ## First questions he'd ask you
 

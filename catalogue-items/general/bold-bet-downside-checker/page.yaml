@@ -1,0 +1,124 @@
+new_slug: bold-bet-downside-checker
+name: "Bold bet downside checker"
+summary: "Paste a bold plan. Get the worst case, how to cap it, and a clear go or no-go."
+job: think-and-decide
+thinking: medium
+thinking_why: "It looks for the worst case and ways to cap it, and gives a verdict, using fixed questions."
+
+headline: "Bold bet downside checker"
+subhead: "Paste a bold plan and what you can afford to lose. It writes the worst case in numbers, lists ways to cap it, collects the view of people close to customers, sets a stop signal and gives a one-word verdict: go, change or no."
+
+explain: |
+  Bold plans are often judged on the upside alone. The excitement fills the space where the worst case should be. Then a plan that could have been tried small is tried all at once, and the loss hits the main business.
+
+  This skill writes the bold move in one sentence and the worst case in plain numbers, and names what you cannot afford to lose. It lists ways to cap the loss, such as a smaller first version, a licence, a partner or a separate company. It asks what the people closest to customers think, sets a stop signal and a review date, and only then checks the gut feeling. The verdict is go, change or no, with one reason.
+
+when:
+  - "You are about to launch a new product line, enter a new market or sign a big contract."
+  - "A partner wants you to commit a large sum quickly."
+  - "You feel strongly about a plan and want a cold check before you act."
+
+you_give:
+  - "The plan in a few lines"
+  - "What you would spend, in money and time"
+  - "What you cannot afford to lose"
+  - "The people closest to customers and what they have said (optional)"
+you_get:
+  - "The bold move in one sentence"
+  - "The worst case in numbers"
+  - "Ways to cap it and which are doable"
+  - "A stop signal, a review date and a one-word verdict"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the plan, the budget and what the business could not survive losing."
+  - "Add what your customer-facing people think, even if they are unsure."
+  - "Read the worst case first. Check the numbers against your own."
+  - "If the verdict is change, adopt a cap and run it again."
+
+how_it_works:
+  - title: "Say the move in one sentence"
+    text: "Writes the bold move in one sentence."
+  - title: "Write the worst case in numbers"
+    text: "Writes the worst case in plain numbers."
+  - title: "List ways to cap the loss"
+    text: "Lists ways to cap the downside and what each costs."
+  - title: "Ask the people near customers"
+    text: "Collects the view of people close to customers."
+  - title: "Set the stop signal"
+    text: "Sets a stop signal and a review date."
+  - title: "Check the gut feeling last"
+    text: "Checks the gut feeling last, after the numbers."
+  - title: "Give the verdict"
+    text: "Gives a go, change or no verdict with one reason."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  THE MOVE
+  <one sentence>
+
+  WORST CASE
+  - Money: <figure> | Time: <figure> | Other: <figure>
+  Cannot afford to lose: <what>
+
+  WAYS TO CAP IT
+  - <cap> | Doable: <yes / no> | Costs in upside: <note>
+
+  WHAT THE PEOPLE NEAR CUSTOMERS SAY
+  - <person or role> | View: <view> | Would test: <what>
+
+  STOP SIGNAL: <figure or event> | LOOK ON: <date>
+
+  GUT CHECK
+  <what was said, and how it compares>
+
+  VERDICT: <go / change / no>
+  Reason: <one sentence>
+
+  MISSING
+  <facts that would change the verdict>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "What you can afford to lose"
+    how: "Be exact. A cap is judged against this figure."
+  - what: "What you have already tried"
+    how: "Add it. A past pilot makes the worst case smaller."
+  - what: "The people you ask"
+    how: "Name them. Their views carry more weight than an average."
+  - what: "Time pressure"
+    how: "Say if there is a deadline. It changes which caps are still possible."
+
+judge:
+  - "The worst case has a number."
+  - "At least one cap is listed and doable."
+  - "A stop signal and a review date are written."
+  - "The verdict is one word with one reason."
+  - "The people near customers were asked."
+
+test:
+  - "Run it on a past bet that went badly. See if the cap list would have saved you."
+  - "Run it on a bet that went well and check it did not say no."
+  - "Compare its worst case with your own estimate."
+
+improve:
+  - "Add your own limit for losses to the notes."
+  - "Add structures you use, such as separate entities or pilots."
+  - "Keep a list of bets and results."
+  - "Pair it with Informed captain decision planner for who decides."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning, questioning and structuring are text work any strong chat AI does well with this skill."}
+  inputs:
+    - "The budget and cash position"
+    - "Customer feedback on the idea"
+    - "Past similar bets and results"
+    - "Legal or contract terms"
+
+terms:
+  - {term: "Cap", meaning: "A limit that stops a loss from growing past what you can afford."}
+  - {term: "Stop signal", meaning: "A figure or event, set in advance, at which you stop or change course."}

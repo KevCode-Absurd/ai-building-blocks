@@ -1,0 +1,124 @@
+new_slug: pitch-deck-checker-10-20-30
+name: "Pitch deck 10/20/30 checker"
+summary: "Paste your pitch deck. Get a score out of 100 on slide count, length, text size and opening, with fixes."
+job: speak-and-persuade
+thinking: low
+thinking_why: "It counts and compares against fixed limits, then lists fixes."
+
+headline: "Pitch deck 10/20/30 checker"
+subhead: Paste your pitch deck text, with the talk time and the font size if you know them. It counts slides, times the talk, checks text size, the opening and the stated niche, and gives a score out of 100. You get fixes in order, each tied to a slide.
+
+explain: |
+  Decks that run too long, hold too much text and open with company history lose the room. The audience reads instead of listening, runs out of patience and cannot say what you do.
+
+  This checker measures a deck against three limits: ten slides, twenty minutes and thirty point type. It also checks that the opening is made for this audience, that the aim is to avoid being ruled out rather than to win every point, and that the niche is stated as both valuable and unique. The score is out of 100 and shows how it was worked out, check by check. Every fix names the slide it touches.
+
+when:
+  - Your deck has twenty slides and you have a short slot.
+  - You are not sure the text is big enough for the room.
+  - You use the same opening with every audience.
+
+you_give:
+  - The text of your deck, slide by slide
+  - How long you have to speak, and the room or screen
+  - The smallest font size in the deck (optional)
+you_get:
+  - A score out of 100, with the points for each check
+  - Slide count, timing and text size results
+  - Fixes in order of impact, each tied to a slide
+  - A note on the opening for this audience
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the deck text, with a heading for each slide.
+  - Say who you are pitching to and how long you have.
+  - Fix the highest-impact items first, then run it again.
+  - Keep both scores to see what changed.
+
+how_it_works:
+  - title: Counts the slides
+    text: Compares slide count with the ten slide limit and names slides to merge or cut.
+  - title: Times the talk
+    text: Estimates talk time from the words and compares with twenty minutes or your slot.
+  - title: Checks text size
+    text: Compares the font size you give with thirty points, and flags slides with too much text.
+  - title: Checks the opening
+    text: Looks for an opening made for this audience, not a general company history.
+  - title: Checks the aim
+    text: Checks the deck aims to avoid being ruled out, not to win every point.
+  - title: Checks the niche
+    text: Looks for a stated niche that is valuable and unique.
+  - title: Scores and fixes
+    text: Adds up the points, then lists fixes in order, each naming a slide.
+
+output_shape: |
+  SCORE: <n> out of 100
+  How it was worked out: slides <n>/20, length <n>/20, text size <n>/20, opening <n>/20, aim and niche <n>/20
+
+  SLIDES
+  Count: <n> | Limit: 10 | Merge or cut: <slide numbers>
+
+  LENGTH
+  Words: <n> | Estimated time: <minutes> | Limit: <minutes>
+
+  TEXT SIZE
+  Smallest font: <pt or MISSING> | Slides with too much text: <numbers>
+
+  OPENING
+  <what it does now, and what a custom opening needs>
+
+  AIM AND NICHE
+  <what the deck says, and what is missing>
+
+  FIXES, IN ORDER
+  1. Slide <n>: <fix>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your talk time
+    how: Give the real slot. The limit changes from twenty minutes to whatever you have.
+  - what: Font size
+    how: Say the smallest size used. Without it, text size is only judged from word counts.
+  - what: Who you pitch to
+    how: Name the person or firm. The opening check needs it.
+  - what: Speaker notes
+    how: Paste them separately. Time is based on what you will say, not on the slide text.
+
+judge:
+  - Slide count and timing are reported with numbers.
+  - Text size is checked, or marked MISSING if not given.
+  - The opening is judged against this audience.
+  - Every fix says which slide it touches.
+  - The score shows how it was worked out.
+
+test:
+  - Run it on a deck you already know is too long. The score should be low and the fixes clear.
+  - Cut the slides it names, run it again and compare the scores.
+  - Time yourself speaking the deck and compare it with the estimate.
+  - Show the deck to a stranger for one minute and ask what you do.
+
+improve:
+  - Change the limits in step 1 if your event sets different ones, such as eight slides.
+  - Add your investor or client list so the opening check knows their interests.
+  - Add your own points system if you want to weight length higher.
+  - Pair it with "Talk tension planner" to order the beats before you check them.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Counting, timing and listing fixes is text work any strong chat AI does well with this skill."}
+    - {name: "Slide software", why: "To check font size and view the deck as the audience will."}
+  inputs:
+    - "The slide text, one block per slide"
+    - "Your speaker notes"
+    - "Who you are pitching to and what they invest in"
+
+terms:
+  - term: 10/20/30
+    meaning: A rule of thumb for decks of ten slides, twenty minutes and type no smaller than thirty points.
+  - term: Niche
+    meaning: The narrow place where you are both valuable to a buyer and different from rivals.

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Reed Hastings is alive, and views can change. This data set comes from two Netflix letters to shareholders from 2011 that he signed as CEO [S1][S2], the current Netflix culture memo, which grew out of the culture he set up [S3][S6], a page on his 2020 book with Erin Meyer [S6], and public reference pages [S4][S5]. Treat each view as "as of" its source. He left the CEO job in 2023, and in April 2026 Netflix said he would leave its board in June 2026 [S4]. Nothing here tells you what he thinks about events after that.
+Reed Hastings is alive, and views can change. This data set comes from two Netflix letters to shareholders from 2011 that he signed as CEO [S1][S2], the current Netflix culture memo, which grew out of the culture he set up [S3][S6], a page on his 2020 book with Erin Meyer [S6], and public reference pages [S4][S5]. Treat each view as "as of" its source. He left the CEO job in 2023, and in April 2026 Netflix said he would leave its board in June 2026 [S4]. Nothing here tells you what he thinks about events after that. Only the Wikipedia article and short study notes were on disk in full for this pass, so the account of the 2011 letters and the culture memo rests on earlier reading of those pages.
 
 ## In one paragraph
 
@@ -76,6 +76,29 @@ How he applied it: Netflix publishes its culture as a public memo and keeps revi
 - Bet on the format that is coming, even while the old one still pays [S1][S2].
 - When you get it wrong with customers, say so plainly, stop the damage and rebuild with steady service [S1].
 - Judge people on their whole record, not one failed bet [S3].
+
+## Real decisions
+
+### Start a flat-rate DVD rental by mail (1997 to 1999)
+With Marc Randolph he combined two new things: DVDs, which were easy to mail, and a website to order them [S4]. Hastings has said he had no idea at the start whether customers would use it [S4]. In 1999 Netflix moved to a monthly subscription [S5].
+
+### Bet on streaming while discs still paid the bills (2007)
+Netflix began streaming in January 2007 with about 1,000 titles against 70,000 on DVD [S5]. Hastings credits YouTube for shifting his view of where video was going [S4]. By 2011 his letters said the future was streaming and that Netflix would keep spending on it as DVD shrank [S1][S2].
+
+### Publish the culture memo and hire for it (2009)
+After meeting staff to talk about the culture, he posted an internal guide publicly in August 2009 [S4]. It turned into a screen that put off people who would not fit [S4]. The current memo asks for high performers, top-of-market pay and candid feedback instead of many rules [S3].
+
+### Split DVD from streaming, then undo it (2011)
+In September 2011 he and his finance chief said the split was the right long-term choice for four reasons: focus, faster streaming improvement, growth that funds shows, and low prices [S2]. A month later they said the price change had greatly upset members, that Netflix had misjudged how fast to move, and that the DVD rebrand was dropped [S1]. U.S. members fell to 23.8 million that quarter, yet streaming hours had more than tripled [S1].
+
+### Make its own shows (2013)
+House of Cards premiered in February 2013, which moved Netflix from renting other firms' films to owning content [S5]. The stated logic in the 2011 letters was that growth could pay for more streaming shows [S2].
+
+### Go to nearly every country at once (2016)
+In January 2016 the service launched in about 130 more countries [S5]. In 2011 he had done the opposite: after a bruise, the letters paused new countries beyond the UK and Ireland [S1].
+
+### Share the top job (2020 and 2023)
+Ted Sarandos became co-CEO in 2020, and Hastings moved to executive chairman in 2023 [S4][S5].
 
 ## Where he stood
 

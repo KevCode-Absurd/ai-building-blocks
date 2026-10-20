@@ -1,0 +1,24 @@
+slug: product-line-cutter
+name: "Product line cutter"
+summary: "List everything you sell. Get what to keep and what to cut, and a simple grid of the plan."
+category: general
+type: skill
+role: compress
+job: strategy
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: false}
+  - {type: brief, required: false}
+  - {type: brand_brain, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+  - {type: shortlist}
+origin: rebuilt
+version: 1.0.0
+minds: [steve-jobs, bernard-arnault, indra-nooyi]
+credits:
+  - {title: "Speech to Apple employees (September 1997) and Macworld speech (July 1998)", by: "Steve Jobs", url: "https://book.stevejobsarchive.com/", used: "Cutting the road map hard and a simple grid with one great product in each box"}
+  - {title: "Chairman's message, LVMH Annual Report 2001", by: "Bernard Arnault", used: "Keeping only products that are both timeless and fresh, and putting stars first"}
+  - {title: "Indra Nooyi: what she knew and believed", by: "AI Blocks mind file", used: "Listing every product with its sales, margin and cash it brings in before deciding"}
+  - {title: "PepsiCo Most Powerful Women Summit on-stage interview with Stephanie Mehta", by: "Indra Nooyi, 5 October 2011", used: "Sorting products by what they earn and what they stand for"}

@@ -1,0 +1,113 @@
+new_slug: error-message-rewriter
+name: "Error message rewriter"
+summary: "Paste your error messages. Get each rewritten with what went wrong and what to do next."
+job: design-work
+thinking: low
+thinking_why: "It rewrites short messages by fixed rules, with few judgement calls."
+
+headline: "Error message rewriter"
+subhead: "Give it your error messages and what triggers each one. It strips codes and jargon and says what went wrong in one sentence. You get a rewritten list with a next step for each, ranked by the cost of the mistake."
+
+explain: |
+  Error messages are written by developers in a hurry, so they come out as codes, blame or vague apologies: "Error 4012", "Invalid input", "You entered the wrong date". The user is left stuck, often at the moment they were about to pay or sign up.
+
+  This skill lists each message and what triggers it, then rewrites it in the user's own words. Each message says what went wrong in one sentence and what to do next, and never blames the user. It also asks whether the error could be prevented before it shows, and ranks messages by the cost of the mistake, so the ones that lose money or data are fixed first.
+
+when:
+  - "Your app or checkout shows messages that are codes or stock phrases."
+  - "Support gets the same question again and again after an error."
+  - "You are launching a form and want every failure to have a clear way out."
+
+you_give:
+  - "Every error message as it now appears"
+  - "What triggers each one, if you know"
+  - "Your voice notes, such as formal or friendly (optional)"
+  - "The screen or step it appears on (optional)"
+you_get:
+  - "Each message rewritten in plain words"
+  - "What went wrong in one sentence and the next step"
+  - "Where the error could be prevented before it shows"
+  - "The messages ranked by the cost of the mistake"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste every error message, one per line, with what triggers it."
+  - "Add your voice notes if you have them."
+  - "Review the ranking and fix the top ones first."
+  - "Show the rewrites to someone outside the team and ask what they would do next."
+  - "Paste the winners into your code and your style guide."
+
+how_it_works:
+  - title: "Lists each message"
+    text: "Writes down every message and what triggers it."
+  - title: "Strips jargon"
+    text: "Removes codes and technical words, using the user's own."
+  - title: "Says what went wrong"
+    text: "One short sentence, no blame."
+  - title: "Gives the way out"
+    text: "Says how to fix it, or where to go for help."
+  - title: "Asks about prevention"
+    text: "Checks if the error could be stopped before it shows."
+  - title: "Ranks by cost"
+    text: "Puts mistakes that lose money or data first."
+  - title: "Checks the set"
+    text: "Runs its own checks and names any missed."
+
+output_shape: |
+  MESSAGES, COSTLIEST FIRST
+  <n>. Was: <original>
+     Trigger: <what causes it>
+     Cost of the mistake: <high / medium / small> because <reason>
+     Now: <what went wrong in one sentence>. <next step>.
+     Prevent it by: <change that stops the error, or none>
+
+  MISSING
+  <trigger or fix not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Triggers"
+    how: "The more exactly you describe the trigger, the more exact the fix. \"Card declined\" and \"card expired\" need different words."
+  - what: "Voice"
+    how: "Say if the voice is formal, friendly or dry. The wording follows it."
+  - what: "Where it appears"
+    how: "A message in a form field can be shorter than a full-page failure."
+  - what: "Languages"
+    how: "Name the user's language and reading level if it is not plain English."
+
+judge:
+  - "No message shows a code without a plain sentence."
+  - "Every message offers a next step."
+  - "Blame is never placed on the user."
+  - "The costly errors come first."
+  - "You could read each one aloud to a stranger and they would know what to do."
+
+test:
+  - "Show the old and new messages to someone who has never used the product and ask what they would do."
+  - "Trigger three of the errors yourself and check the new text fits."
+  - "Run it twice. The ranking should stay close."
+  - "Count support emails about these errors before and after you ship the new wording."
+
+improve:
+  - "Add your support team's common replies as \"what to do next\" lines."
+  - "Add banned words and your voice rules to step 2."
+  - "Save the final messages in a style guide so new ones match."
+  - "Pair it with \"Usability heuristic reviewer\" to check the whole flow, not only the errors."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Short rewrites from fixed rules are well within any strong chat AI."}
+    - {name: "Your error log", why: "Real counts show which messages are shown most often."}
+  inputs:
+    - "An error log with counts"
+    - "Support emails that mention an error"
+    - "Your voice rules"
+    - "The screen where each message shows"
+
+terms:
+  - term: "Error message"
+    meaning: "The text shown when something goes wrong."
+  - term: "Way out"
+    meaning: "A clear step the user can take to fix the problem or get help."

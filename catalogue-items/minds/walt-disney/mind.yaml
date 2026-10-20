@@ -29,6 +29,8 @@ sources:
   - {n: 7, title: "Walt Celebrates Disneyland (transcript of his off-the-cuff talk to Disneyland cast members, 17 July 1965, transcribed by Wade Sampson)", by: "Walt Disney, Mouse Planet", url: "https://mouseplanet.com/walt-celebrates-disneyland-1965/2164/", kind: own-words}
   - {n: 8, title: "Walt Battles the Communists, Part Two (transcript of his testimony to the House Un-American Activities Committee, 24 October 1947)", by: "Walt Disney, Mouse Planet", url: "https://mouseplanet.com/walt-battles-the-communists-part-two/4937/", kind: own-words}
   - {n: 9, title: "The Magic of Walt Disney’s Words", by: "Toastmasters International", url: "https://www.toastmasters.org/magazine/magazine-issues/2020/jan/the-magic-of-walt-disneys-words", kind: secondary}
+  - {n: 10, title: "Memo from Walt Disney to Don Graham on training young animators (23 December 1935)", by: "Walt Disney, reproduced on Bulletproof Screenwriting", url: "https://bulletproofscreenwriting.tv/walt-disney-memo/", kind: own-words}
+  - {n: 11, title: "Interview of Walt Disney by Cecil B. DeMille, transcript", by: "Walt Disney, Dix Project", url: "https://www.dix-project.net/index.php/document/misc-books_2005_interview-of-walt-disney-by-cecil-b-demille", kind: own-words}
 tests:
   - {kind: use, prompt: "Our local museum's kids' corner is boring. Redesign the visit as a story, from the entrance to the gift shop."}
   - {kind: use, prompt: "Give the cartoon mascot of a small bakery a personality, a name and three habits people will remember."}

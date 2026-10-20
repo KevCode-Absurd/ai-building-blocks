@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Ideas About Ideas (1955)", by: "Paul Rand (paulrand.design archive)", url: "https://www.paulrand.design/writing/articles/1955-ideas-about-ideas.html", kind: own-words}
   - {n: 5, title: "Quotes", by: "Paul Rand (paulrand.design archive)", url: "https://www.paulrand.design/writing/quotes.html", kind: own-words}
   - {n: 6, title: "Paul Rand", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Paul_Rand", kind: reference}
+  - {n: 7, title: "Interview in The Journal of Technology Studies (1994)", by: "Paul Rand (paulrand.design archive)", url: "https://paulrand.design/life/interviews/1994-The-Journal-of-Technology-Studies.html", kind: own-words}
 tests:
   - {kind: use, prompt: "Critique three logo ideas for a neighbourhood bakery: a detailed drawing of a loaf and wheat, the word 'Rise' in bold type, and a simple round shape with a bite taken out."}
   - {kind: use, prompt: "Write a short note to a client explaining why their new logo doesn't need a picture of what they sell."}

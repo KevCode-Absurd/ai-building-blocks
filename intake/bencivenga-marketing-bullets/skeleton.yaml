@@ -1,0 +1,43 @@
+# Workflow skeleton for Gary Bencivenga's Marketing Bullets Collection (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: bencivenga-marketing-bullets
+source:
+  title: "Gary Bencivenga's Marketing Bullets Collection"
+  by: "Gary Bencivenga"
+  kind: other
+  rights: ideas-only
+minds: [gary-bencivenga]
+workflow:
+  slug: find-what-you-really-sell-and-prove-every-claim
+  name: "Find what you really sell and prove every claim"
+  summary: "Give it your product and buyer. Get angles worth testing, a checked offer and every claim matched to proof."
+  when: "your copy makes big claims and you want each one to hold up."
+  job: write-ad-copy
+  level: intermediate
+steps:
+  - name: "What you really sell finder"
+    skill: what-you-really-sell-finder
+    job: research
+    task: plan-ad-tests
+    from: "Gary Bencivenga's Marketing Bullets Collection"
+    method: ["State the product in plain terms and name the buyer", "Ask what you are really selling and write at least ten answers, past the obvious one", "Push each answer from the thing to the result, the feeling or the status the buyer wants", "Ask the same question of the whole business to find new markets or uses", "Drop answers the product cannot honestly deliver", "Pick the three strongest and write one test headline for each", "Set the test so only the angle changes"]
+    inputs: [product_data, persona!, voc_reviews!]
+    outputs: [angle_library, plan]
+    note: "A long list of what you are really selling, and the best three as test angles"
+  - name: "Offer checklist reviewer"
+    skill: offer-checklist-reviewer
+    job: offer
+    task: make-offer
+    from: "Gary Bencivenga's Marketing Bullets Collection"
+    method: ["Write the offer in one line and check it sells one thing", "Ask whether it is strong enough that only a fool would refuse", "Check there is a believable reason for any special deal", "Add a deluxe version so the choice is A or B, not yes or no", "Test the framing of the discount, such as buy one get one against percent off", "Lengthen the guarantee and say it plainly", "Check for a repeat or continuity option, an early-bird bonus worded in days, and any limit or price rise you will truly keep", "Rank the changes and pick three to split-test"]
+    inputs: [angle_library, offer, product_data!]
+    outputs: [offer, plan]
+    note: "A review against a tested offer checklist, and the three changes worth testing first. Reads the angle library from the step before"
+  - name: "Claim and proof matcher"
+    skill: claim-and-proof-matcher
+    job: analysis
+    task: check-ads
+    from: "Gary Bencivenga's Marketing Bullets Collection"
+    method: ["List every claim in the copy, headline first", "Next to each, write the proof that sits beside it on the page", "Mark any claim bigger than its proof and any proof that sits far from its claim", "Read each line as a 'yeah, sure' sceptic and note what would convince a fair-minded jury", "Shrink the claim, add real proof, or move the proof next to the claim", "State the claim and what it leads a reader to think", "List every factual claim and implied claim", "Check if it is true and also whether the implication is true"]
+    inputs: [copy_draft, offer!, product_data!, voc_reviews!]
+    outputs: [audit_report]
+    note: "Every claim paired with proof, the claims that outrun it, and fixes. Reads the offer from the step before"

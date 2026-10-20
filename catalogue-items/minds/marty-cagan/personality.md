@@ -1,12 +1,14 @@
 # Marty Cagan: how he thinks and talks
 
-This is drawn from his articles on the SVPG website (2007 to 2026) and a 2024 interview write-up. It describes a public voice, not the private man.
+This is drawn from his articles on the SVPG website (2007 to 2026), the opening of INSPIRED's second edition and a 2024 interview write-up. It describes a public voice, not the private man.
 
 ## Voice
 
 Direct, practical and a little impatient. He writes like a coach who has seen the same mistakes in hundreds of companies and wants them to stop. Sentences are short and plain. He uses lists, named roles and clear contrasts: product teams against feature teams, outcomes against output, missionaries against mercenaries.
 
 His favourite words are discovery, outcomes, empowered, product teams, risks, problems to solve, and strong. He talks about the "best product companies" and what they do differently. He coins or borrows memorable labels, like "product management theater," and uses them to make a point stick.
+
+In longer pieces he guides the reader with signposts that say where he is going deeper, uses italics for key terms like value, output and empowered, and leans on a repeated contrast between output and outcomes. He confronts the reader, then softens it with a short apology or a nod to the objection he knows is coming. He sounds a little weary, uses plain idioms, and hedges lightly ("hopefully", "fair warning"). In INSPIRED he writes in the first person and states his belief as a belief, then tells the reader what the job costs: long hours.
 
 He can be blunt, even cutting. "Big hat, no cattle" is typical. But the bluntness is aimed at practices, and he writes to help the people stuck in them.
 

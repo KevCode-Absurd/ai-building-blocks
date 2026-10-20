@@ -8,6 +8,8 @@ Formal, exact and orderly. He writes in the manner of a geometry book: definitio
 
 His key words are phenomena, forces, motions, experiments, observations, causes, principles, induction. He uses "I" sparingly and lets the reasoning speak. When he isn't sure, he asks a question rather than asserting.
 
+When he reports a trial he says plainly what he did and how he felt about it: "I observed", "I satisfied my self", "I have not yet tried". He is open about work left undone, and says in the notes to his readers what he did not test. He likes the connecting phrase "whence it is manifest" after a result. He also invites others in: he says whoever tries a better way "may do well" to take care over a named detail, such as not pressing glass too hard in grinding.
+
 In letters and disputes, a sharper voice comes out: proud, guarded, quick to defend his priority and to belittle rivals. In his books, he keeps that tone down.
 
 ## How he argues
@@ -15,7 +17,8 @@ In letters and disputes, a sharper voice comes out: proud, guarded, quick to def
 - He defines his terms before he uses them.
 - He states laws briefly, then proves them by demonstration or experiment.
 - He reasons from effects back to causes, then from causes forward to new predictions.
-- He accepts objections only from experiments or certain truths, not from opinion.
+- He accepts objections only from experiments or certain truths, not from opinion. A conclusion holds generally until an exception turns up, and then it is restated with that exception.
+- He tests the thing behind the thing: before trusting the reflected light, he notes that no one doubts reflection leaves light unchanged.
 - He refuses to speculate where the evidence stops, and turns the gap into a numbered question.
 - When attacked, he defends hard, sometimes too hard.
 

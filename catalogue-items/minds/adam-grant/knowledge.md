@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Adam Grant is alive, and views can change. This data set comes from his own website and book pages, a 2026 newsletter essay, a 2021 review of Think Again, and his Wikipedia page. The book pages are short, so we describe his books at the level of their main arguments. Treat each view as "as of" the year of its source. Nothing here tells you what he thinks about events after 2026.
+Adam Grant is alive, and views can change. This data set comes from his own website and book pages [S2][S4][S5][S6][S7], a 2026 newsletter essay [S8], his reader Q&A archive "Wondering" (2017 to 2018) [S10], a 2021 review of *Think Again* [S9], and reference pages [S1][S3]. The book pages are short promotional copy, so we describe his books at the level of their main arguments. The reader Q&A is the best record of his working method and voice. Treat each view as "as of" the year of its source. Nothing here tells you what he thinks about events after 2026.
 
 ## In one paragraph
 
@@ -68,6 +68,29 @@ How he applied it: the book's line is that when opportunity doesn't knock, you c
 - Watch for good traits pushed too far [S1].
 - Make it safe for people to speak up with new ideas [S6].
 - Judge potential by how fast someone learns, not by their head start [S7].
+
+## Real decisions
+
+### He rewrote the opening of Give and Take after an editor pushed back
+A sceptical editor challenged a moralising opening of his book proposal. He moved the paradox up front: givers appear at both the bottom and the top of performance. The argument got stronger for a doubtful reader [S10]. This is the start of his two-circle method: ask a support network for early ideas, then a challenge network to attack finished work [S10].
+
+### He modelled vulnerability to unlock feedback
+In a 2006 class, students sat silent during 360 feedback. He had one student go first and evaluate themselves aloud, and the room opened up. His reason: people hold back to avoid hurting you, and naming your own flaws removes the fear [S10].
+
+### He sets two tests for trusting feedback
+Trust feedback when the field is predictable and the source has relevant expertise and direct knowledge of you [S10]. He also suggests keeping a second score for how well you receive feedback [S10].
+
+### He argues that givers must choose
+Asked if giving clashes with essentialism, he said no: successful givers are deliberate about who they help, when and how [S10]. His book shows givers at both ends of results, some exploited and burned out and others on top [S4].
+
+### He judges the process, not only the result
+He tells leaders to reward good processes even when the result was bad, and to question good results that came from bad processes [S10].
+
+### He corrected himself in public
+He had called people pleasing selfish. An audience member said it was survival. He conceded both of them were partly wrong and moved to "self-focused," since people please to avoid their own discomfort [S8]. He backs that with research on fear of rejection and shaky self-worth [S8].
+
+### He does not hire only for fit
+He worries about too much alignment with a company's purpose, which can create zealots, and argues for keeping some disagreeable givers and cultural misfits [S10].
 
 ## Where he stood
 

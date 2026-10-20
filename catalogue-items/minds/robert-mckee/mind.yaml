@@ -31,6 +31,7 @@ sources:
   - {n: 7, title: "Storynomics (book page)", by: "McKee Story (official site)", url: "https://mckeestory.com/books/storynomics/", kind: own-words}
   - {n: 8, title: "Story webinar series (course outline)", by: "McKee Story (official site)", url: "https://mckeestory.com/webinars/story", kind: own-words}
   - {n: 9, title: "Adaptation (film)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Adaptation_(film)", kind: reference}
+  - {n: 10, title: "Storytelling That Moves People: A Conversation with Screenwriting Coach Robert McKee (Harvard Business Review, June 2003; excerpt page)", by: "Robert McKee, via Daily Good", url: "https://www.dailygood.org/2008/01/19/storytelling-that-moves-people/", kind: secondary}
 tests:
   - {kind: use, prompt: "Here's my premise: a retired teacher starts a podcast to find her missing brother. Test it. Will it carry a 90-minute film? What has to be true for it to work?"}
   - {kind: use, prompt: "Rewrite this flat scene so every line of dialogue is a character trying to get something: two flatmates argue about the rent."}

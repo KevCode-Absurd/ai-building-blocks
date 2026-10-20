@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Tolkien's work is in copyright, so this data set summarises it and keeps quotes short. His own views come from letters and notes published by the Tolkien Estate, and from what reference sources report of his lecture "On Fairy-Stories." What Gandalf, Frodo or any other character says belongs to that character.
+A note on method: Tolkien's work is in copyright, so this data set summarises it and keeps quotes short. His own views come from three pieces of his writing: the 1951 letter to his publisher Milton Waldman [S3], the 1955 letter to the poet W. H. Auden [S4] and a note on translating *Beowulf* from about 1963 [S6]. The Tolkien Estate biography [S2] and Wikipedia [S1][S5] give the life and the lecture "On Fairy-Stories." The letters read as a modest, rambling, learned man explaining his work to one reader. What Gandalf, Frodo or any other character says belongs to that character.
 
 ## In one paragraph
 
@@ -72,6 +72,29 @@ In a note on translating *Beowulf*, from about 1963, Tolkien said a translator o
 He builds from the bottom up. He starts with words and names, since he said his world began with the languages he had made [S3]. From the names comes a history, and from the history a map and a setting [S2][S3]. He checks that every detail fits the rest, because one odd detail on its own is not enough to make a world [S5].
 
 When he writes, he does not hold a rigid plan. He follows what surprises him, and says he felt more like a reporter than an inventor [S4]. He tells the great events through ordinary eyes, because he saw that as making the tale more human [S3]. And when he works from an old source, he gives it his full loyalty and keeps its meaning, style and form [S6].
+
+## Real decisions
+
+### He wrote a mythology because England had none of its own
+By his account to Waldman, he wanted a body of legend for England, rooted in its air and soil, cool and clear in tone [S3]. King Arthur would not do: it is only partly English and openly Christian, which he thought wrong for this kind of myth [S3]. So he began his own, and by 1916 had a first near-complete story, *The Fall of Gondolin* [S4].
+
+### He let invented languages decide the names
+He told both Waldman and Auden that the languages came first and the stories grew to give them a home [S3][S4]. A Finnish grammar pushed him to drop a Germanic invented tongue and rebuild around Finnish sounds [S4]. His reason was consistency: names from one source gave the legends an air of real history [S3].
+
+### He turned a children's book into a sequel
+After *The Hobbit* sold well, the publisher asked for more hobbits. Tolkien offered older *Silmarillion* material, which was turned down [S2]. He wrote a new story instead, which grew over about twelve years into an adult epic [S2]. He told Auden that the Ring was the natural link and that the Dark Lord appeared as soon as he reached that point [S4].
+
+### He followed surprises
+Strider, Saruman and Tom Bombadil were not planned. He said he often felt he was reporting what he found, and he did not know why some things arrived as they did [S4].
+
+### He kept the small people at the centre
+He kept hobbits small so the story would show hidden courage in ordinary people, and he summed up the moral as the high and the simple needing each other [S3].
+
+### He refused the allegory reading
+Asked about meaning, he said he disliked allegory, and he drew a line: a story that comes alive can be applied by readers, but he had little conscious intention beyond a gripping tale [S3][S4].
+
+### He translated for the ear
+For *Beowulf* he set a rule: owe absolute loyalty to the original's meaning, style and form, and use modern literary English as the tool so a modern reader can hear the old work [S6]. He had the prose done by 1926 and kept revising it as his reading changed, never treating it as final [S6].
 
 ## Where he stood
 

@@ -1,0 +1,28 @@
+slug: turn-competitor-gaps-into-image-ad-copy-that-passes-meta
+name: "Turn competitor gaps into image ad copy that passes Meta"
+summary: "Give it competitor ads. Get their gaps, image ad copy for each gap, and a Meta rules check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: advanced
+inputs:
+  - {type: reference_set, required: true}
+  - {type: brand_brain, required: true}
+  - {type: competitor_set, required: false}
+  - {type: offer, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: script, required: false}
+  - {type: static_ads, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: audit_report}
+uses: [competitor-ad-swipe-file-builder, competitor-ad-gap-finder, image-ad-copy-writer, meta-ads-compliance-checker]
+steps:
+  - {uses: competitor-ad-swipe-file-builder, note: "Sorts the competitor ads into a board of types so patterns show."}
+  - {uses: competitor-ad-gap-finder, note: "Uses the sorted ads to map what is crowded and what no one says, then briefs the gaps."}
+  - {uses: image-ad-copy-writer, note: "Writes headline and text for each gap brief, with one appeal tested per version."}
+  - {uses: meta-ads-compliance-checker, note: "Checks the new copy against Meta ad rules and rewrites any line that would be rejected."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-turn-competitor-gaps-into-image-ad-copy-that-passes-meta/skeleton.yaml

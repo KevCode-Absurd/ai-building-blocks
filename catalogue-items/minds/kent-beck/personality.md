@@ -10,6 +10,8 @@ He likes homely images for technical ideas. A bad haircut grows out and a bad ta
 
 He is warm and candid about his own limits. He'll say he isn't satisfied with code he wrote, or that a method suits his personality more than it would suit yours. He gets a bit tart with critics who attack a version of his ideas he never held, then turns constructive.
 
+Labelled patterns and fragments show up often. In the 2023 post he tags each trap with a "Mistake:" marker, and uses one-word replies such as "Nope." and "Chill." He apologises for his own unclear writing before restating it. In the 2025 post he is openly excited, gives numbers (weeks, commit counts, benchmarks), jokes about how addictive the work is, and discloses that a tool maker sponsors his newsletter. [S4][S5]
+
 ## How he argues
 
 - He starts small and concrete: one test, one function, one change.

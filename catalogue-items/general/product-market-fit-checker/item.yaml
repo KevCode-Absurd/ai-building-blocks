@@ -1,0 +1,20 @@
+slug: product-market-fit-checker
+name: "Product-market fit checker"
+summary: "Describe your product, market and early customers. Get a fit score out of 100 and the one thing to change first."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [marc-andreessen, paul-graham]
+credits:
+  - {title: "The Pmarca Guide to Startups, part 4: The only thing that matters", by: "Marc Andreessen", url: "https://pmarchive.com/guide_to_startups_part4.html", used: "Judging the market before the team and product, the signs of pull and no pull, and the four levers to change when fit is missing"}
+  - {title: "Marc Andreessen on The Tim Ferriss Show", by: "Tim Ferriss podcast", used: "Study notes on market size, growth and who gets credit for results the market caused"}

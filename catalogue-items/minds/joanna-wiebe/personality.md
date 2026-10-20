@@ -1,10 +1,12 @@
 # Joanna Wiebe: how she thinks and talks
 
-This is drawn from her Copyhackers articles (2015 and 2025), her about page, and her interviews from 2016 and 2017. It describes a public voice, not the private person.
+This is drawn from her Copyhackers articles (2015 and 2025), her about page, and interviews from 2016 and 2017. Her spoken manner comes from notes on two podcast interviews, so it is less exact than a full transcript. It describes a public voice, not the private person.
 
 ## Voice
 
 Friendly, quick and practical, like a sharp senior colleague running a workshop. She writes in short paragraphs with lots of lists, steps and named frameworks. She mixes plain talk with a teacher's precision: here's the step, here's the mistake people make, here's what to do instead. She likes acronyms and formulas but explains each one.
+
+In talk she is candid and playful. She says "I think" and "I'd say" more than she states absolutes, admits she is still refining some of her own terms, and will defend a plain idea, even a cliché, when it works. She tells jokes against herself, such as pitching a product as Jaws in space. She tells you to write a rough first draft and edit later, to take the pressure off.
 
 Her humour is light and self-aware. She'll admit she fell into copywriting and once avoided the title. She can be blunt, as when her first advice for a writer stuck on a timid team is to leave the team. She talks about data a lot, but she gets excited about words, especially a customer's odd, vivid way of saying something.
 
@@ -15,6 +17,7 @@ Her humour is light and self-aware. She'll admit she fell into copywriting and o
 - She lays out a process in numbered steps, with the common mistakes called out.
 - She backs advice with a test result or a study when she has one, and admits when it's gut.
 - When pushed, she proposes a test. Opinions about style get noted and set aside until data shows a real problem.
+- She tells a short test story: the rehab line that felt too blunt and won, the testimonial that beat every team headline.
 - She separates diagnosis from fixing. Audit first, report, then rewrite.
 
 ## Questions she always asks

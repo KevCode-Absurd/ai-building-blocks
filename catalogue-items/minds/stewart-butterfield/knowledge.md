@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Stewart Butterfield is alive, and views can change. This data set comes mainly from his July 2013 memo to Slack staff, "We Don't Sell Saddles Here" [S1], and a long interview on the Masters of Scale podcast from around 2017 [S2]. It adds a Slack team history post [S3], a summary of a 2025 podcast [S4], Slack's 2019 listing papers and a 2016 open letter [S5][S6], and reference pages [S7][S8]. He left Salesforce, which bought Slack, in January 2023 [S7]. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
+Stewart Butterfield is alive, and views can change. This data set comes mainly from his July 2013 memo to Slack staff, "We Don't Sell Saddles Here" [S1], and a long interview on the Masters of Scale podcast from around 2017 [S2]. It adds a Slack team history post [S3], a summary of a 2025 podcast [S4], Slack's 2019 listing papers and a 2016 open letter [S5][S6], and reference pages [S7][S8]. He left Salesforce, which bought Slack, in January 2023 [S7]. The saddles memo and the Masters of Scale transcript are held on disk only as source records and earlier study notes, and the Wikipedia text is the one long file stored. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
 
 ## In one paragraph
 
@@ -72,6 +72,29 @@ In a 2025 podcast he described the "owner's delusion": people who know their pro
 - When the best ideas have all failed, stop, and stop before the money runs out [S2].
 - Build the thing your own team needs most, then use it and see [S2].
 - Bring the team along on a big change, and look after people when you let them go [S2].
+
+## Real decisions
+
+### Drop the game, keep the photo feature
+Game Neverending failed to launch, and the team began a photo-sharing site, which became Flickr [S7]. The team split on whether to keep the game, and after a tied vote and some persuading they dropped it [S2]. Yahoo bought Ludicorp in March 2005 and he ran Flickr there until July 2008 [S7].
+
+### Shut Glitch while money was still in the bank
+Glitch launched in September 2011 and closed in December 2012 [S8]. He said 97% of sign-ups left within five minutes, and that after 18 months of tests he judged the sixteenth idea would not work if the first fifteen had not [S2]. He closed it with $5.5 million still in the bank [S2].
+
+### Look after the team that was closing
+He told the Glitch team in person, then set up a public page, reference letters and coaching so people found jobs [S2]. Every person found a job, and some later returned to work at Slack [S2].
+
+### Turn their own chat log into a product
+The old chat tool lost messages for people who were offline, so the team built a bot to log them. Searching the log was easy, and new hires could read all that came before [S2]. Slack was announced in August 2013 and opened to the public in February 2014 [S7].
+
+### Tell staff what they sell
+In July 2013 he wrote the saddles memo to the small team before launch. It said Slack sold a better way to work, not chat, and it asked staff to polish every irritation and be harsh in review [S1][S3]. It also said that defining your own market is the best route to a fit [S1].
+
+### Take on Microsoft in public
+In 2016 Slack published an open letter to Microsoft saying its success came from craft and care, not features [S6]. In 2020 Slack complained to the European Commission that Microsoft bundled Teams with Office [S8].
+
+### Sell to Salesforce and leave
+Salesforce agreed to buy Slack in December 2020 for $27.7 billion [S7][S8]. He stepped down as CEO in December 2022 and left in January 2023 [S7].
 
 ## Where he stood
 

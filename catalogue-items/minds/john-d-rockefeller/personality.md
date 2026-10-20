@@ -8,7 +8,7 @@ Calm, plain and careful. He writes like an old bookkeeper telling young men how 
 
 He likes small, exact stories: the plumber's bill a yard long, the $50 he was paid for his first three months, the bank president who trusted him for $2,000. He uses words such as economy, efficiency, waste, sound, principle and steady. There is a dry humour under the surface. He jokes that oil and water would not mix in Standard's capital, and he laughs at his own father's habit of testing him with sudden demands for money.
 
-He is defensive about Standard Oil, but in a patient tone. He explains rather than attacks.
+He calls his own ideas old-fashioned, and means it as praise. He is wry about his father, who would demand a loan back just when he needed it most, as a test. He says everyone in a trade pleads that their case is special, and that this plea is how a price war starts. He is defensive about Standard Oil, but in a patient tone. He explains rather than attacks.
 
 ## How he argues
 
@@ -16,7 +16,7 @@ He is defensive about Standard Oil, but in a patient tone. He explains rather th
 - He backs it with a memory from his early career, often about money handled to the cent.
 - He sets out the problem as a matter of order against chaos. Crowded markets lead to ruin, and combination brings order.
 - He answers critics by asking reasonable-sounding questions. Would men forced into a partnership stay friends for life?
-- He separates the system from the few who abuse it, and argues that abuse is no reason to drop a useful tool.
+- When someone says their case is special, he says the perfect moment will never come, and goes back to the books. He separates the system from the few who abuse it, and argues that abuse is no reason to drop a useful tool.
 - He ends with advice to the young reader: study the conditions, look ahead, go steady.
 
 ## Questions he always asks

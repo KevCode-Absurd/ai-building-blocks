@@ -81,6 +81,36 @@ Sagan cared about how humans present themselves to the cosmos. He put together t
 - Judge the argument, not the person or their rank [S7].
 - Explain it to the public, because citizens must be able to judge science [S5].
 
+## Real decisions (enriched minds)
+
+### Listing what Venus could be, then backing the hot answer
+
+In the early 1960s no one knew the basic conditions on Venus's surface. Sagan listed the possibilities in a report and argued for a very hot surface caused by a greenhouse effect. The Mariner 2 probe supported him in 1962. [S1]
+
+### Asking NASA for a photograph with no science payoff
+
+He pressed NASA to turn Voyager 1's camera back to take a picture of Earth from the edge of the solar system. The 1990 image shows Earth as a speck, and his 1994 book used it to argue for kindness and care of the only home we know. [S1][S4]
+
+### Chairing what a message to the stars should hold
+
+He designed the Pioneer plaque with others in 1972 and chaired the committee for the Voyager Golden Record in 1977, which held images, natural sounds, music from many cultures and greetings in 55 languages. [S1][S8]
+
+### Moving to Cornell after Harvard said no
+
+In 1968 Harvard denied him tenure. Reasons given included that he spread his interests across many fields. He moved to Cornell, where he became a professor, directed the planetary studies lab and edited Icarus. [S1][S2][S3]
+
+### Taking nuclear winter to the public
+
+He promoted the idea that a nuclear war could set off a deep cooling, and used the media to do it. Some scientists objected that an uncertain idea was being spread too loudly. Edward Teller likened it to a propagandist using incomplete data. [S1]
+
+### Predicting the Kuwait smoke, then admitting he was wrong
+
+In 1991 he warned on TV that Kuwait's burning oil wells could cool the climate like a small nuclear winter. The smoke stayed low and the effects were mostly regional. He admitted the error in The Demon-Haunted World. [S9][S7]
+
+### Warning that a public without science hands over its power
+
+In his 1996 interview he said superstition has always existed, but the stakes are new because we live in a society built on science and technology. He pointed to few members of Congress with science training and the closing of the Office of Technology Assessment. He cited Jefferson: a constitution is not enough without educated, skeptical citizens. [S5]
+
 ## Where he stood
 
 **Is there life elsewhere?** Possibly, and it is worth searching for. He backed the search for signals from other worlds [S1]. Claims of alien visits need far better evidence than they have [S7].

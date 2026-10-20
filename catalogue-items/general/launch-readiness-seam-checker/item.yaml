@@ -1,0 +1,17 @@
+slug: launch-readiness-seam-checker
+name: "Launch readiness seam checker"
+summary: "Describe a launch, migration or release. Get the joins between parts, what wins when things pile up, and a run-through plan."
+category: general
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [margaret-hamilton]
+credits:
+  - {title: "What the Errors Tell Us", by: "Margaret Hamilton, IEEE Software, Sept/Oct 2018", used: "Looking for errors at the joins between parts, giving every job a priority, planning for overload, change control with approvals, and a full run-through with a person in the loop"}

@@ -1,0 +1,17 @@
+slug: spending-story-reviewer
+name: "Spending story reviewer"
+summary: "Paste a purchase you are weighing. Get what drives it, its hidden costs and a small test of whether it pleases."
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [morgan-housel]
+credits:
+  - {title: "The Art and Science of Spending Money", by: "Morgan Housel (Collaborative Fund)", url: "https://collabfund.com/blog/the-art-and-science-of-spending-money/", used: "Tracing a purchase to its source in upbringing and status, counting long-run costs, asking who is watching and testing with small spending first"}

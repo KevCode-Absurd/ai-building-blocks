@@ -1,0 +1,24 @@
+slug: price-first-cost-squeeze-planner
+name: "Price-first cost planner"
+summary: "Name the price you want to sell at. Get a plan that works backward from it to cut cost."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: question, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [henry-ford, sam-walton, ingvar-kamprad]
+credits:
+  - {title: "My Life and Work", by: "Henry Ford with Samuel Crowther (1922)", used: "Setting the price first and working backward, and removing parts that the customer does not need"}
+  - {title: "Today and Tomorrow", by: "Henry Ford with Samuel Crowther (1926)", used: "Cutting the cost of making before changing the product, and growing the market by lowering the price"}
+  - {title: "Sam Walton", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sam_Walton", used: "Serving places where people travel far to buy, and lower prices on high volume"}
+  - {title: "10 Rules for Building a Better Business", by: "Sam Walton (excerpt)", used: "Passing savings on to the customer to earn more volume"}
+  - {title: "The Testament of a Furniture Dealer", by: "Ingvar Kamprad (1976)", used: "Designing a product for a low price from the start"}
+  - {title: "Cheap is good, says furniture magnate", by: "Swiss TV interview report", used: "Serving the many who can pay little"}

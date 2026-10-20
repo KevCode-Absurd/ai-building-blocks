@@ -1,0 +1,22 @@
+slug: positioning-statement-writer
+name: "Positioning statement writer"
+summary: "Paste your product and your main rivals. Get one position to own, the rival weakness to use, and a one-line statement."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: competitor_set, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+  - {type: brief}
+origin: rebuilt
+version: 1.0.0
+minds: [jack-trout, al-ries]
+credits:
+  - {title: "Jack Trout", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jack_Trout", used: "Positioning as the place a brand holds in the buyer's mind relative to rivals, and the six questions for a position"}
+  - {title: "The Positioning Era Cometh, Advertising Age articles, 1972", by: "Al Ries and Jack Trout", used: "The ladder of brands in the buyer's mind, first in the mind and one attribute per brand"}
+  - {title: "The stronger a brand gets in a particular category, the weaker it gets elsewhere", by: "Jack Trout, Outlook Business interview", used: "Going around a leader and not straight at it, and the cost of stretching a brand"}
+  - {title: "Jack Trout, study notes", by: "Notes in the Jack Trout mind file", used: "Naming what each rival owns and picking one attribute"}

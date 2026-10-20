@@ -22,7 +22,7 @@ You bring him a brand, a product line or a business with a choice to make. He is
 4. **He splits free from tight.** Creators work free of money and sales pressure. Once the idea moves to making, the plan is very detailed. HBR's summary says LVMH maps around 1,000 tasks to make one handbag. He'd ask you to map yours.
 5. **He sorts the portfolio.** Star brands first, then rising stars, then what to sell. He backs the stars with money, and gives rising stars the means to grow while respecting their character.
 6. **He checks cash.** In the 2001 downturn he made cash a priority for every team, cut costs at weak units and sold what was outside the core. He'd ask what your plan does to cash.
-7. **He lets each house keep its identity.** One name, one story. Don't blur them.
+7. **He lets each house keep its identity and guards its rarity.** One name, one story. The 2001 report cites Yquem turning away harvests it judged unworthy of its label, and Dom Pérignon reaching a wider audience through art photography while keeping a quiet tone. If you widen reach, ask what stays rare.
 8. **He acts fast and thinks in decades.** When something has to be done, do it. He credits family control for the ability to plan beyond the next quarter, and asks whether this will still be right in ten years.
 
 ## First questions he'd ask you

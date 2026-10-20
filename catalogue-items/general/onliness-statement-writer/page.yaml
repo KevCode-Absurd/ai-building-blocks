@@ -1,0 +1,120 @@
+new_slug: onliness-statement-writer
+name: "Onliness statement writer"
+summary: "Paste your brand file and rivals. Get one sentence on what only you do, with a rival swap test."
+job: plan-strategy
+thinking: medium
+thinking_why: "It drafts and narrows a short sentence against real rivals, which needs care but follows a fixed test."
+
+headline: "Onliness statement writer"
+subhead: Give it your brand file and the rivals you are compared with. It answers six prompts about what you do, drafts a sentence that names what only you do, swaps each rival into it, and narrows the sentence until none of them can claim it.
+
+explain: |
+  Many brand lines could sit on any competitor's website. "Quality products for busy people" fits a hundred firms. When a line fits everyone, it tells a buyer nothing about why to pick you.
+
+  This skill answers six prompts: what, how, who, where, why and when. It drafts a sentence in the form "We are the only [category] that [does what] for [whom] in [where] who [want what] at [when]". It then swaps each rival into the sentence and asks if the rival could say it truthfully. If yes, it narrows the sentence and tries again. It keeps the two or three strongest versions and checks focus: who you are, what you do and why it matters.
+
+when:
+  - Your brand line could belong to any of your rivals.
+  - You are writing an about page, pitch or ad and need one sharp sentence first.
+  - You have just finished work on the market and need to state your place in it.
+
+you_give:
+  - Your brand file with what you offer, who for and what you can prove
+  - The audit report or research on your market
+  - The rivals buyers compare you with (optional)
+  - Customer reviews or quotes (optional)
+you_get:
+  - Answers to the six prompts
+  - Two or three versions of the sentence
+  - A swap test for each named rival
+  - A brief that carries the chosen sentence
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brand file and the market work. Add the names of your rivals.
+  - Read the swap test first. A version that fails on any rival goes back for narrowing.
+  - Say the winning sentence aloud. If it needs breath, shorten it.
+
+how_it_works:
+  - title: Answers six prompts
+    text: Writes what, how, who, where, why and when from your brand file.
+  - title: Drafts the sentence
+    text: Names what you are the only one to do, in one sentence.
+  - title: Swaps in each rival
+    text: Puts each named rival into the sentence and asks if they could say it truthfully.
+  - title: Narrows it
+    text: If a rival fits, it narrows the sentence and tests again.
+  - title: Keeps the strongest
+    text: Keeps the two or three versions that pass the test.
+  - title: Checks the focus
+    text: Checks the sentence says who you are, what you do and why it matters.
+
+output_shape: |
+  THE SIX PROMPTS
+  What: <> | How: <> | Who: <> | Where: <> | Why: <> | When: <>
+
+  VERSIONS
+  1. <sentence>
+  2. <sentence>
+  3. <sentence>
+
+  RIVAL SWAP TEST
+  <rival> into version <n>: <could say it truthfully? yes or no> | <why>
+
+  CHOSEN SENTENCE
+  <sentence> | proof in the brand file: <where>
+
+  FOCUS CHECK
+  Who we are: <> | What we do: <> | Why it matters: <>
+
+  BRIEF
+  <the sentence, who it is for, what we will and will not claim>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Named rivals
+    how: List the real ones buyers compare you with. A short list that is wrong gives a false pass.
+  - what: Who and where
+    how: The narrower, the better. "Home cooks in small kitchens" beats "people who cook".
+  - what: Proof in the brand file
+    how: Add facts you can back. Claims with no proof are dropped.
+  - what: Length
+    how: Say if the sentence is for speech or print. Spoken versions are shorter.
+
+judge:
+  - No named rival can claim the sentence as written.
+  - The sentence names a real who and where, not "everyone".
+  - Every claim is backed by something in the brand file.
+  - The sentence is short enough to say aloud.
+  - It states who you are, what you do and why it matters.
+
+test:
+  - Show the sentence to a customer. Ask which other brand it could be.
+  - Show it to a rival's customer. Ask if the rival does the same thing.
+  - Run the swap test again with a rival you left out.
+  - Read it aloud in one breath.
+
+improve:
+  - Add rivals the first time you meet them, so every later run is tested against them.
+  - Add proof to the brand file as you collect it.
+  - Change the six prompts to match words your field uses.
+  - Pair it with "Competitor white space mapper" before it, to find where to stand.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Drafting and testing a one-sentence statement is text work any strong chat AI can do."}
+  inputs:
+    - "A list of three to five rivals with their taglines"
+    - "Customer quotes about why they chose you"
+    - "A grid from Competitor white space mapper"
+
+terms:
+  - term: Onliness statement
+    meaning: One sentence that says what only your business does, for whom, where and when.
+  - term: Swap test
+    meaning: Putting a rival's name into your sentence to see if they could say it too.

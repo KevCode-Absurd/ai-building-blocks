@@ -247,6 +247,26 @@ How he applied it: he admits that for years he avoided hard conversations as a m
 - Start small with limited releases and learn from the feedback [S13].
 - Tell people the truth about their work, kindly [S9].
 
+### Real decisions
+
+#### Taking over the family store, 1998
+After college he took over his father's wine store, renamed it Wine Library and moved it online [S1]. By Wikipedia's account the shop grew from about $3 million to about $60 million a year, though Fortune gave a lower figure [S1][S15].
+
+#### Filming wine reviews, 2006
+He started Wine Library TV in February 2006, a wine video show that reached 1,000 episodes in 2011 [S1]. He credits part of its rise to replying to viewers one at a time for years [S5]. His 2018 look back put the payoff at about ten and a half years of steady work [S5].
+
+#### Delivering wine in a snowstorm
+He tells of driving a case of cheap wine to a customer in a holiday snowstorm, at a loss. Weeks later the customer's son placed a very large order. He says the order might have come anyway, and the point was to put the customer first [S6].
+
+#### Starting an agency, 2009
+He founded VaynerMedia in 2009 to help big companies with social media [S1]. Ad Age named it to its A-List in 2015 [S1]. A 2014 Fortune profile reported critics saying his stakes in social platforms clashed with advising brands to use them. He replied that clients knew about his investments [S15].
+
+#### Backing NFTs, 2021
+He backed NFTs heavily in 2021 and created the VeeFriends series. Christie's sold NFT art from one of his collections for about $1.2 million in October 2021 [S1]. By May 2022 daily NFT sales had fallen about 92% from their September 2021 level [S16]. Our sources do not say how his own projects fared.
+
+#### Working on kind candour, 2021
+He admits that for years he avoided hard conversations as a manager and then fired people abruptly. He rated his own kind candour at about 10 out of 100, rising to about 60 by late 2021 [S9]. That is why the book Twelve and a Half names it as the "half" he was still learning [S4][S9].
+
 ### Where he stood
 
 **Should content sell?** Mostly no. He says good content isn't about selling, but about joining what the audience already cares about [S10].

@@ -1,0 +1,19 @@
+slug: recognition-plan-designer
+name: "Recognition plan designer"
+summary: "Describe your team and goals. Get a reward plan where anyone who reaches a set level wins, with a public moment."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [mary-kay-ash]
+credits:
+  - {title: "Mary Kay: the make-up of sales success (1982 interview)", by: "Mary Kay Ash", used: "Praising people to success, and rewarding levels people can reach so many can win"}
+  - {title: "The Mary Kay Way, contents with her chapter summaries", by: "Mary Kay Ash", used: "Public recognition, prizes people have dreamed about and checking pay is fair first"}

@@ -23,7 +23,7 @@ This playbook draws only on his leadership and ideas from the record. He takes n
 4. **He refuses the inquest.** In June 1940 he explained the disaster in France and then refused to hold an inquest on who was to blame, calling blame at such a time useless and even harmful. He asked each member to look at their own record.
 5. **He keeps the right people inside.** He kept Chamberlain, the man whose policy he had attacked, in his War Cabinet. Unity in the room came before the score from the past.
 6. **He wins the argument in private first.** When his Foreign Secretary proposed seeking peace terms, he won over the wider cabinet over three days of meetings. Only then did he speak to the public.
-7. **He works on allies in person.** The destroyers deal, Lend-Lease and the meeting at sea with Roosevelt were all patient, personal work.
+7. **He works on allies in person.** The destroyers deal, Lend-Lease and the meeting at sea with Roosevelt were all patient, personal work. He also checks the supply line: he wrote that a campaign is mainly won by moving men and goods, so he asks how your plan gets what it needs to the front.
 8. **He warns early and keeps warning.** He did it in the 1930s when it cost him office. He asks what you can already see coming and why you are waiting.
 
 ## First questions he'd ask you

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Robert Greene is alive, and views can change. Everything below comes from reference pages about him and his books [S1][S2][S3][S4], and from two posts on his own blog: a talk he gave at Yale, posted around 2010 [S6], and an account of how he wrote *Mastery*, posted around 2012 [S5]. Treat each view as "as of" that source. His later books, up to *The Daily Laws* in 2021, are known here only through reference summaries [S1]. Nothing here tells you what he thinks about recent events.
+Robert Greene is alive, and views can change. Everything below comes from reference pages about him and his books [S1][S2][S3][S4], and from two posts on his own blog: a talk he gave at Yale, posted around 2010 [S6], and an account of how he wrote *Mastery*, posted around 2012 [S5]. One more page, by his former research assistant Ryan Holiday, shows how Greene ran research [S7]. The Yale talk is spoken and loose, so it shows his voice well; we have no recorded interview beyond it. Treat each view as "as of" that source. His later books, up to *The Daily Laws* in 2021, are known here only through reference summaries [S1]. Nothing here tells you what he thinks about recent events.
 
 ## In one paragraph
 
@@ -74,6 +74,27 @@ How he applied it: he pairs this with empathy. Understanding how others think ma
 - Learn the culture before you try to change it [S6].
 - Prefer self-reliance to depending on one boss or one patron [S6].
 - Expect failure as part of learning [S6].
+- Ask of every source where it came from, what its context is, whether it holds against other sources and whether you are only confirming what you want to believe [S7].
+
+## Real decisions
+
+### Leaving the job where success got him pushed out
+In his mid-twenties he did well at a magazine job, and his boss still pushed him out, blaming an "attitude" he never saw. He quit, thought hard about what had happened, and later read it as having outshone his superior. The lesson he took was to watch people instead of reacting with emotion. [S6]
+
+### Making "It's all material" a working rule
+He decided that every setback, whether firing, failure or a bad boss, could be studied and used. He tells Yale students to observe people the way a lab observes mice. His long string of odd jobs became the raw stuff of his books. [S6][S1]
+
+### Pitching a book through one story
+The first pitch for *The 48 Laws of Power* was a short treatment built around Julius Caesar's choice to cross the Rubicon. He sold the book through a story from history, not a theory. [S2]
+
+### Waiting for the pattern across eleven years
+Greene says he studied powerful figures for about eleven years before the idea for *Mastery* came to him in 2007: very different people from very different eras had followed a similar path. He signed with a publisher in 2008 and began serious writing in 2010. [S5]
+
+### Training himself so the book would not fade
+He feared that long nonfiction books lose energy in the last chapters. So he ran a self-experiment on body and mind while writing, as he had tested strategy ideas through games while writing *War*. [S5]
+
+### Making his research assistant chase every source
+Holiday says Greene pushed him to ask where each source came from, to check it against others, to chase obscure texts, to transcribe interviews and to keep organised notes. Greene wanted the evidence, not the gist. [S7]
 
 ## Where he stood
 

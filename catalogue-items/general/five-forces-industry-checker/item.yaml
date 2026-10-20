@@ -1,0 +1,19 @@
+slug: five-forces-industry-checker
+name: "Five forces industry checker"
+summary: "Name your industry and buyers. Get a five-force read of where profit comes from and a score out of 100."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [michael-porter]
+credits:
+  - {title: "The Five Forces", by: "Michael Porter, Institute for Strategy and Competitiveness, Harvard Business School", url: "https://www.isc.hbs.edu/strategy/business-strategy/Pages/the-five-forces.aspx", used: "The five forces and what makes each one strong or weak"}
+  - {title: "What Is Strategy?", by: "Michael Porter, Harvard Business Review, 1996", used: "Reading the industry's profit potential, then placing the firm inside it"}

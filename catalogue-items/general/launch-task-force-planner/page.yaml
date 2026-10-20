@@ -1,0 +1,124 @@
+new_slug: launch-task-force-planner
+name: "Launch task force planner"
+summary: "Paste your new product idea and your team. Get a kickoff plan that puts design, sales, marketing and engineering first."
+job: plan-strategy
+thinking: medium
+thinking_why: "It sets roles, trims data and checks a product against two tests, which takes judgment but follows a fixed outline."
+
+headline: "Launch task force planner"
+subhead: Paste your new product or service idea and the people you have. It lists the roles needed on day one, plans a single kickoff, caps the data the team reads, adds a second parallel team for options and checks the idea is easy to advertise and sell.
+
+explain: |
+  Many launches go wrong in order: engineering builds, then design polishes, then sales and marketing are told what to say. Each group meets the product too late to shape it.
+
+  This skill puts design, engineering, sales and marketing in the room at the start. It plans one kickoff so everyone hears the job, the timing and the method together. It adds market analysis done by people who understand both design and selling, keeps the data short so nobody is buried, and sets up a second, free-running team to find options the first team cannot see. Last it checks the product against two tests: is it easy to advertise, and is it easy to sell.
+
+when:
+  - You have a new product or service idea and a team that works in separate silos.
+  - Your launches keep reaching sales and marketing too late.
+  - You want a kickoff agenda and a set of roles for the first two weeks.
+
+you_give:
+  - "A short description of the product or service idea"
+  - "The people or roles you have, and who is missing"
+  - "Your timing and any fixed limits such as budget or launch date"
+  - "Any early plan or notes (optional)"
+
+you_get:
+  - "A roster of every role needed at the start, with the gaps"
+  - "A one-page kickoff agenda"
+  - "A data pack list kept short, with what to leave out"
+  - "A second team's brief, and a result for the two sell tests"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the product idea and who is on your team."
+  - "Add your launch date and any limits."
+  - "Read the roster and fill any gap with a person or a partner."
+  - "Run the kickoff using the agenda, and hand the second team its brief."
+
+how_it_works:
+  - title: Lists the starting roles
+    text: Names design, engineering, sales and marketing, plus any role the idea needs, and who fills each.
+  - title: Plans one kickoff
+    text: Gets everyone to hear the job, the timing and the method at once.
+  - title: Adds market analysis
+    text: Gives it to people who also understand design and selling.
+  - title: Caps the data
+    text: Keeps the pack short so the team is not buried.
+  - title: Runs a parallel team
+    text: Sets up a second free team to find options the first cannot see.
+  - title: Applies two tests
+    text: Checks the product is easy to advertise and easy to sell.
+
+output_shape: |
+  THE JOB
+  <product or service, buyer, launch date>
+
+  ROLES AT THE START
+  <role> | who | what they decide | gap?
+
+  KICKOFF AGENDA
+  <time> | <topic> | <who leads> | <output>
+
+  MARKET ANALYSIS
+  <who does it> | <questions to answer>
+
+  DATA PACK
+  In: <short list> | Left out: <list and why>
+
+  SECOND TEAM
+  <members> | <brief> | <what they hand back and when>
+
+  SELL TESTS
+  Easy to advertise: <result and reason>
+  Easy to sell: <result and reason>
+
+  MISSING
+  <what you could not tell>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Team size
+    how: Give the real headcount. A team of three plays several roles, and the plan says so.
+  - what: How much time you have
+    how: Give the launch date. A six-week plan differs from a six-month plan.
+  - what: Who knows the buyer
+    how: Name them. They join the market analysis.
+  - what: Existing data
+    how: Paste your research. The plan trims it instead of adding more.
+
+judge:
+  - Every role is in the kickoff.
+  - The data pack is capped and summarised.
+  - A parallel option team is named.
+  - Both sell tests are answered with a reason.
+  - Roles you do not have are listed as gaps.
+
+test:
+  - "Run it on a past launch that went wrong. See whether it would have caught the late roles."
+  - "Give the agenda to a colleague and ask if it can be run in one meeting."
+  - "Run it twice. The role list should stay close."
+
+improve:
+  - "Add roles special to your field, such as legal, safety or supply."
+  - "Add your house limits on data pack length."
+  - "Save your kickoff agenda and reuse it for the next launch."
+  - "Pair it with a product page or ad writer once the product is set."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Setting roles and agendas is text work any strong chat AI does well."}
+    - {name: "A shared document", why: "The whole team can read the one-page plan and comment in one place."}
+  inputs:
+    - "Notes from past launches"
+    - "Early customer research"
+    - "A rough price and cost per unit"
+
+terms:
+  - term: Task force
+    meaning: A small team with all the skills a project needs, brought together for one job.
+  - term: Kickoff
+    meaning: The first meeting where everyone hears the job, the timing and the plan together.

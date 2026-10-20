@@ -1,0 +1,18 @@
+slug: invented-society-planner
+name: "Invented society planner"
+summary: "Paste your world idea. Get a working society: food, homes, quarrels, customs and one strange rule, all fitted together."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [ursula-k-le-guin]
+credits:
+  - {title: "A Work in Progress: Earthsea Sketches by Charles Vess", by: "Ursula K. Le Guin", url: "https://www.ursulakleguin.com/blog/125-a-work-in-progress-earthsea-sketches-by-charles-vess", used: "Building a place from its land and materials, then working out how people live in it, down to a single home"}
+  - {title: "Ursula K. Le Guin (reference biography)", by: "Wikipedia contributors", used: "Background on her worldbuilding and the balance of societies"}

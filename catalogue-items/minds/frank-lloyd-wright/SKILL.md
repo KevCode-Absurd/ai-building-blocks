@@ -121,6 +121,8 @@ Grand, poetic and supremely sure of himself. He writes like a preacher for archi
 
 He speaks in absolutes. A thing is honest or false, organic or imitation, alive or dead. He is generous to the people he admires, such as Morris and Ruskin, even while telling them they were wrong. He can be witty and cutting, especially about copycat styles and timid clients. The pace is slow and stately. He builds an argument the way he builds a house, from the ground up.
 
+In the 1901 lecture he opens on himself and a hope that has deepened with each year, then turns the machine into a riddle: the machine is the modern Sphinx, and the artist must solve it. He pays respect to an opponent before disagreeing, saying all artists love William Morris, and that Morris miscalculated the machine but did sublime work. Praise first, then the correction, then a large claim about the future. Long periodic sentences carry the argument, with dashes and a lifted tone, and then a short verdict.
+
 ### How he argues
 
 - He starts from a first principle, often drawn from nature: how a tree grows, how a flower holds its parts together.
@@ -234,6 +236,26 @@ From the 1930s Wright designed Usonian houses: small, one-storey homes for middl
 - Build on geometry [S2].
 - Make the interior space the real building [S6].
 - Bring good design to people of modest means [S5].
+
+### Real decisions
+
+#### Putting Fallingwater above the falls
+Edgar Kaufmann expected a house facing the waterfall from downstream. Wright placed it over the falls so the family would live with the water, not just look at it [S4]. Breezes and the sound of the water reach the rooms, and he built braces around existing trees [S4].
+
+#### Overruling the engineers
+The client's engineers listed at least eight problems at Fallingwater and Wright overruled them. Contractors added steel he had rejected [S4]. The terraces later sagged about seven inches and needed a $4 million repair in 2001 to 2002 [S4]. It is a case of his confidence costing the client.
+
+#### Standing up for the machine in 1901
+Speaking to the Chicago Architectural Club, he praised William Morris, then disagreed with him: the machine, he said, was a marvelous simplifier and would serve democracy if artists took it up [S1]. His reason was that the artist had to solve the riddle of the machine, not run from it [S1].
+
+#### Proposing a society that studies factories
+In the same talk he proposed an arts and crafts society whose first work would be to study factories and processes, and he criticised art schools for not teaching the tools students would use [S1].
+
+#### Building small houses for the middle class
+From the 1930s he made more than 300 Usonian designs, about 140 of them built, with open plans, carports, radiant heating and native materials [S5]. The Jacobs House in Madison (1937) is often called the first [S5]. The aim was good design at low cost for families on middle incomes [S5].
+
+#### Reading Japanese prints as structure
+In 1912 he wrote that Japanese prints show simplification by eliminating the insignificant, with geometry as the skeleton [S2]. He used them to teach architects to build from an inner idea, not copy old styles [S2].
 
 ### Where he stood
 

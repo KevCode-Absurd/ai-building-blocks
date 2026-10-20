@@ -1,0 +1,102 @@
+new_slug: opponent-favour-request-writer
+name: Opponent favour request writer
+summary: Name someone who works against you. Get a small, flattering favour to ask for, the note to write and the thank-you.
+job: sell-and-negotiate
+thinking: medium
+thinking_why: It must pick a fitting favour and word the note with care.
+headline: Opponent favour request writer
+subhead: Give it the name of someone who works against you and what they oppose. It finds a small thing only they can lend or share, writes a short note to ask for it and a thank-you. You get the ask, the note, the thank-you and how to speak to them next.
+explain: |
+  When someone works against you, the usual choices are to fight them or to avoid them. Neither makes them a friend. A third path is to ask them for a small favour. People who do a favour tend to think better of the person they helped, because they have a reason to explain their own help.
+
+  This skill finds something small that only this person can lend or share. It writes a short note that asks for it with no flattery about anything else, and a thank-you that names the favour and goes out fast. It plans how to speak to them next time as a friend with no mention of the dispute, and tells you to watch for change over weeks, not days.
+when:
+  - A colleague, neighbour or rival has been against you and you want it to ease.
+  - Someone on a board or team opposes your plan.
+  - You need a working relationship with a person who does not like you.
+you_give:
+  - "The person: who they are and your relationship"
+  - What they oppose and why you think they do
+  - What they have, know or own that you could ask for
+  - How you usually contact them (optional)
+you_get:
+  - A small, specific favour to ask for
+  - A short note asking for it
+  - A thank-you that names the favour
+  - How to behave toward them afterwards
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the person, what they oppose and what they have or know.
+  - Send the note in your usual way.
+  - Return what you borrowed fast and send the thank-you within a week.
+  - Wait weeks before judging whether anything changed.
+how_it_works:
+  - title: Names the person
+    text: Says who they are and what they oppose.
+  - title: Finds the favour
+    text: Something small that only they can lend or share.
+  - title: Writes the note
+    text: A short ask with no flattery about anything else.
+  - title: Plans the return
+    text: Returns the item fast with a thank-you that names the favour.
+  - title: Sets the next talk
+    text: Speaks to them as a friend, with no mention of the dispute.
+  - title: Sets the wait
+    text: Looks for change over weeks, not days.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  THE PERSON
+  <who> | Opposes: <what>
+
+  THE FAVOUR
+  <the small thing only they can lend or share> | Why them: <...> | Why it is small: <...>
+
+  THE NOTE
+  <2 to 4 sentences, specific ask, no claim about the dispute>
+
+  THE THANK-YOU
+  <names the favour> | Send by: <date within a week>
+
+  NEXT TIME
+  <how to speak to them as a friend, with no mention of the dispute>
+
+  WATCH FOR
+  <signs of change over weeks>
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: What they have
+    how: "Name something real: a book, a contact, a tool, a skill, a view. The favour comes from it."
+  - what: How you contact them
+    how: Say if it is email, a message or in person. The note is written for it.
+  - what: The history
+    how: Say how bad it has been. A harsh history means a smaller favour.
+judge:
+  - The ask is small and specific.
+  - The note makes no claim about the dispute.
+  - The thank-you comes within a week.
+  - The plan has no demand in it.
+  - The favour is something only they can give.
+test:
+  - Read the note as if you were the other person. Does it sound like a request or a trick?
+  - Check the favour can be done in a day or less.
+  - Run it twice. The favour should stay close.
+  - Look after four weeks for any change in how they speak to you.
+improve:
+  - Add things you would never ask for to the favour step.
+  - Add your usual way of writing a note, so it sounds like you.
+  - Save what worked to your notes file.
+  - Pair it with a skill for hard conversations.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Writing a short, careful note is text work any strong chat AI does well with this skill.
+  inputs:
+    - What the person has, knows or owns
+    - How you usually contact them
+    - A short history of the dispute
+terms:
+  - term: Favour
+    meaning: A small act of help you ask of someone, such as lending a book or sharing a contact.

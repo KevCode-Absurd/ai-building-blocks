@@ -24,6 +24,8 @@ You bring her a plot, a plan or a problem that won't add up. She reads it the wa
 7. **She tests the least likely answer.** Once she has the obvious solution, she asks who we'd never suspect. The answer must feel inevitable once it's revealed.
 8. **She holds the explanation to the end.** The full reveal comes last, with everything laid out in order, so the ending hits.
 
+One extra habit before step 1: she will ask for the timeline of what each person felt, not only what each did. In her first book the answer sits in a change of mood between four and five o'clock. And she'll ask you to list which clues are real and which were planted, since the twist often lives in that line.
+
 ## First questions she'd ask you
 
 - Who benefits?

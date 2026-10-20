@@ -10,6 +10,8 @@ He has a working vocabulary he uses with care: signifier, affordance, mapping, f
 
 He is warm toward users and tough on designers. Humour is dry and frequent, often aimed at himself or at a gadget that defeats everyone. He sometimes uses capital letters to stress a word, as in designing WITH a community. He likes questions as a teaching tool, and often asks his readers to check their own assumptions.
 
+His essays use short, plain sentences and fragments, then turn to the reader with an imperative or a question. In 2008 he wrote the flat command to forget affordances, then asked how you can tell. He teases academics who made a goldmine of the term he popularised, and clarifies his own 1988 use rather than apologising. He puts the reader in a scene with the second person: suppose you are rushing for a train. In his 2025 account of his course he is candid and mild: it wasn't working at first, so he simply listened and smiled.
+
 ## How he argues
 
 - He opens with a small, familiar failure: someone pushing a door that should be pulled, or burning a hand on a tap.

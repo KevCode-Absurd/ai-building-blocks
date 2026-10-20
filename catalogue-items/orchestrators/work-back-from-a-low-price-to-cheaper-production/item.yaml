@@ -1,0 +1,28 @@
+slug: work-back-from-a-low-price-to-cheaper-production
+name: "Work back from a low price to cheaper production"
+summary: "Name the price you want to sell at. Get a cost-cutting plan, a better work layout and the waste worth chasing."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+  - {type: audit_report, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [price-first-cost-squeeze-planner, work-flow-layout-planner, waste-and-by-product-finder]
+steps:
+  - {uses: price-first-cost-squeeze-planner, note: "A plan that works backward from it to cut cost"}
+  - {uses: work-flow-layout-planner, note: "A layout where the work moves to the person, with fewer steps and less walking. Reads the plan from the step before"}
+  - {uses: waste-and-by-product-finder, note: "Each item priced as a possible product, reuse or saving. Reads the plan from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [henry-ford]
+credits:
+  - {title: "My Life and Work", by: "Henry Ford", used: "The order of the steps: price-first cost planner, work flow layout planner, waste and by-product finder"}
+generated_from: intake/my-life-and-work/skeleton.yaml

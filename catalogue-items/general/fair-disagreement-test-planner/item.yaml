@@ -1,0 +1,18 @@
+slug: fair-disagreement-test-planner
+name: "Fair disagreement test planner"
+summary: "Describe a dispute where each side thinks it is right. Get a test both accept in advance and written predictions."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [daniel-kahneman]
+credits:
+  - {title: "Adversarial Collaboration", by: "Daniel Kahneman, Edge", url: "https://www.edge.org/adversarial-collaboration-daniel-kahneman", used: "Having rivals agree on a test and write predictions before seeing results, with a neutral person to run it"}
+  - {title: "The Marvels and the Flaws of Intuitive Thinking (Edge Master Class)", by: "Daniel Kahneman", used: "How people on opposing sides each judge the same evidence in their own favour"}

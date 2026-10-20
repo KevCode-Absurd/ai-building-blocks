@@ -10,6 +10,8 @@ He loves an analogy from ordinary life: fishing and bait, a stranger butting int
 
 He writes in the second person. You are the letter writer, and he keeps putting you in the reader's chair. When he gets to his self-help side, the tone rises. The sentences become more sweeping and hopeful, and he speaks of desire, belief and the power of the mind.
 
+In *The Secret of the Ages* the shape is different. Each chapter opens with a quotation from Carlyle, scripture or a popular poem. Then he speaks straight to "you" and tells a short tale, such as a boy and a borrowed talisman, before drawing the lesson in a firm, hopeful line.
+
 ## How he argues
 
 - He opens with a puzzle from real life. Why does the polished letter fail and the rough one sell?

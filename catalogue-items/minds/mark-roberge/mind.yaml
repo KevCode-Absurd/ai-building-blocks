@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Sales Compensation (chapter in Data Driven Sales)", by: "David Skok, via Clearbit", url: "https://clearbit.com/resources/books/data-driven-sales/sales-compensation", kind: secondary}
   - {n: 6, title: "Scaling lessons from Mark Roberge (summit write-up)", by: "Nupura Ughade, Chargebee", url: "https://blog.chargebee.com/blog/scaling-lessons-mark-roberge/", kind: secondary}
   - {n: 7, title: "A 12-minute summary of The Sales Acceleration Formula (2019)", by: "Freshworks", url: "https://www.freshworks.com/crm/sales/resources/sales-acceleration-formula-summary-blog/", kind: secondary}
+  - {n: 8, title: "The Sales Acceleration Formula, Chapter 1: Uncovering the Characteristics of a Successful Salesperson (2015, publisher excerpt)", by: "Mark Roberge, Wiley", url: "https://catalogimages.wiley.com/images/db/pdf/9781119047070.excerpt.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a five-trait hiring scorecard for a first salesperson at a small software company, with one interview test for each trait."}
   - {kind: use, prompt: "Define a leading sign of customer success for a meal-kit subscription, in the form 'P percent of customers do E within T days'."}

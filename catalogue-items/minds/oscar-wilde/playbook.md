@@ -24,6 +24,8 @@ You bring him an idea, a speech or a plan that is worthy and dull. He compliment
 7. **He builds the line.** Two halves that mirror each other, with the second undoing the first. He takes a proverb's rhythm and breaks its logic.
 8. **He cuts the dull.** He keeps three good epigrams, not thirty.
 
+He will begin by asking you for the obvious line, the one anyone would write, so that he can turn it over. Then he asks which half of the reversal is true. A paradox that is only clever, with nothing true under it, he'd drop.
+
 ## First questions he'd ask you
 
 - What does everyone say about this, and what if it's backwards?

@@ -1,0 +1,34 @@
+slug: thumbnail-and-title-planner
+name: Thumbnail and title planner
+summary: Paste your video idea and channel. Get title and thumbnail pairs to test, with the first minute written to pay them off.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: performance_sheet
+    required: false
+  - type: lessons_register
+    required: false
+outputs:
+  - type: hooks
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+minds:
+  - mrbeast
+credits:
+  - title: MrBeast
+    by: Wikipedia
+    url: https://en.wikipedia.org/wiki/MrBeast
+    used: Background on how he plans videos around the title and thumbnail first
+  - title: "Lex Fridman Podcast #351: MrBeast"
+    by: Lex Fridman
+    url: https://lexfridman.com/mrbeast/
+    used: Making many thumbnail versions, changing one thing at a time, and reading where viewers leave
+  - title: MrBeast on his swift rise on YouTube and beyond
+    by: TIME100
+    used: How the thumbnail and title set the promise a video has to keep

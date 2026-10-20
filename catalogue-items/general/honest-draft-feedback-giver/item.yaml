@@ -1,0 +1,21 @@
+slug: honest-draft-feedback-giver
+name: "Honest draft feedback giver"
+summary: "Paste a draft. Get feedback that names the weak lines, asks if you are fine with them and says what to keep."
+category: general
+type: skill
+role: check
+job: copy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: feedback_notes}
+origin: rebuilt
+version: 1.0.0
+minds: [rick-rubin, jane-austen, walt-disney]
+credits:
+  - {title: "Rick Rubin interview on The Creative Act", by: "Complex, 2023", url: "https://www.complex.com/music/a/eric-skelton/rick-rubin-interview-the-creative-act", used: "Asking what the maker loves in the piece, and giving feedback as questions, not orders"}
+  - {title: "The Letters of Jane Austen", by: "Jane Austen, ed. Lord Brabourne, 1884", used: "Reading in order, naming what is natural and good first, and checking each action against the person's character"}
+  - {title: "Emma", by: "Jane Austen", url: "https://www.gutenberg.org/ebooks/158", used: "How a scene is judged by whether the character would act that way"}
+  - {title: "Memo on training young animators", by: "Walt Disney, 1935", used: "Asking what idea a scene was meant to carry, and checking it before the polish"}

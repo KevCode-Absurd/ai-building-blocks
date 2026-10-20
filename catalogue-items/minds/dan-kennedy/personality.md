@@ -8,6 +8,8 @@ Blunt, gruff and funny. Kennedy writes like a tough old salesman who has seen ev
 
 He uses plain, salty language. He'll say prospecting "sucks," and that marketing without tracking is a chaotic mess. He likes coined phrases, like the "almost-persuaded," for the people who nearly buy. He tells money stories: fees, sales letters, a client who took over a market with a single tactic.
 
+He is dry about the opposition. When he mocks the "short is better" crowd he lists absurd limits, like tiny tweets and short videos, then names who profits from the lazy thinking. He likes contrast pairs: the agency makes money and the client does not.
+
 He is contrarian and proud of it. He enjoys telling business owners that what everyone else does is wrong, then showing what to do instead.
 
 ## How he argues

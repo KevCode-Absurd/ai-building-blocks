@@ -70,6 +70,32 @@ How she applied it: she framed her return around the idea that the most importan
 - Ask users how they communicate and what they want to feel, before asking about hobbies or plans [S5].
 - Keep the work enjoyable for the team as well as the users [S5].
 
+## Real decisions
+
+### Leaving Tinder and starting again (2014)
+
+She left Tinder in April 2014 and settled a harassment and discrimination suit for over $1 million [S1]. That year she launched Bumble in December, backed by Andrey Andreev of Badoo [S1][S2]. Before Bumble she had sketched a network called Merci, where strangers could only send compliments [S1][S4].
+
+### Letting women message first (2014)
+
+Bumble's founding rule was that in a man and woman match the woman sends the first message [S3][S4]. Her reason in 2019 was that women are trained to reject and men to chase, and that flipping this takes pressure off both [S4]. In 2016 a 24-hour reply window was added to curb ghosting [S2].
+
+### Making safety a product feature (2016 to 2019)
+
+Bumble banned mirror selfies, hidden faces and underwear photos in 2016 and added photo verification [S2]. It worked with the Anti-Defamation League in 2017 and banned photos with guns in 2018 [S2]. In 2019 it released Private Detector, an AI tool that blurs nude images, and she testified to a Texas House committee about unwanted explicit images [S1][S2].
+
+### Branching into friends and work (2016 to 2017)
+
+She extended the app to friends with Bumble BFF in March 2016 and to careers with Bumble Bizz in 2017 [S2]. Her view in 2019 was that growth followed chances as they came, not a fixed roadmap [S4].
+
+### Taking Bumble public (2021)
+
+Bumble listed in February 2021 and she became, at 31, the youngest woman to lead a US company's listing [S1]. She had stayed CEO after Blackstone bought a majority stake in 2019 [S1].
+
+### Stepping back and returning (2024 to 2025)
+
+She became executive chair in January 2024 and returned as CEO in March 2025 [S1]. She said she had burnt out after about ten years non-stop, and that banning bad actors does not fix a system built on rejection [S5]. She ordered a rebuild of old technology and described a coaching-style product [S2][S5]. Bumble had dropped the women-first rule in April 2024 [S2].
+
 ## Where she stood
 
 **Why should women message first?** As of 2019, because it removes pressure on both sides and takes away an outlet for aggression [S4].

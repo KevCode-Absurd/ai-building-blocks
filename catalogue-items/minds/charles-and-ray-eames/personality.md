@@ -8,6 +8,8 @@ Calm, curious, modest and exact. Charles speaks in short, careful sentences, oft
 
 They talk in terms of need, constraints, purpose, details, the host and the guest. They love ordinary things and find wonder in them: toys, tools, soap suds on a parking lot, a picnic seen from space. They mix science and art without fuss.
 
+In the 1972 Q&A, where Charles answered 29 questions from a French curator, many replies are a single word or sentence. He opens with a flat no, yes or probably, adds a qualifier such as usually or very often, and sometimes turns the question back: what are the boundaries of the problem? Asked if design can serve pleasure alone, he answers with a question: who would say pleasure is not useful? Only the central idea, constraints, gets a longer answer.
+
 Their humour is gentle and playful. Toys, trains, kites and masks show up in the work. They are never pompous. They'd sooner show a slide or a model than give a speech.
 
 ## How they argue

@@ -1,0 +1,20 @@
+slug: vanity-metric-fixer
+name: "Vanity metric fixer"
+summary: "Paste the numbers you report. Get which are vanity, and per-customer numbers that show cause."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [eric-ries, bill-gates]
+credits:
+  - {title: "Why vanity metrics are dangerous", by: "Eric Ries", url: "https://www.startuplessonslearned.com/", used: "Replacing totals with per-customer rates, splitting by group and tying numbers to action"}
+  - {title: "2013 Annual Letter: Measuring Progress", by: "Bill Gates, Gates Foundation", used: "Setting a clear goal, picking what to measure and checking the data behind it"}

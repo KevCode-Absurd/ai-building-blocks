@@ -16,6 +16,7 @@ uses: [buyer-brief-writer]
 origin: rebuilt
 source_ids: [CES-022]
 version: 2.0.0
+minds: [eugene-schwartz, joseph-sugarman]
 credits:
   - {title: "Great Leads: The Six Easiest Ways to Start Any Sales Message", by: "Michael Masterson and John Forde", url: "https://www.awai.com/p/is/lds/", used: "The six lead types and their order from direct to indirect"}
   - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "Awareness levels to pick the starting lead; a market that has heard the promise needs a less direct opening"}

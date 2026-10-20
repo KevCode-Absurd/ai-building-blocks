@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "About Sales Gravy", by: "Sales Gravy", url: "https://salesgravy.com/about/", kind: reference}
   - {n: 6, title: "Books by Jeb Blount (catalogue search)", by: "Open Library", url: "https://openlibrary.org/search.json?author=jeb+blount&fields=title,first_publish_year,publisher&limit=40", kind: reference}
   - {n: 7, title: "Jeb Blount (official site)", by: "Jeb Blount International", url: "https://www.jebblount.com/", kind: reference}
+  - {n: 8, title: "Fanatical Prospecting, chapter 1, The Case for Prospecting (publisher sample, 2015)", by: "Jeb Blount, Wiley", url: "https://catalogimages.wiley.com/images/db/pdf/9781119144755.excerpt.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a 30-second phone opener for a local web designer calling a dentist's office to ask for a 20-minute meeting."}
   - {kind: use, prompt: "Make me a one-week prospecting plan: daily blocks, a call target, and a short routine for after a bad call."}

@@ -68,6 +68,28 @@ How he applied it: at Oxford he would not play in a championship basketball game
 - Give a disruptive project its own unit, with its own processes and values [S5].
 - Expect that the uses of a new idea cannot be known in advance, so learn by trying [S5].
 
+## Real decisions
+
+### The milkshake study
+
+A fast-food chain tried to sell more milkshakes by profiling the typical shake drinker and asking people in that profile to describe an ideal shake. Sales did not improve [S12]. A researcher then spent a day in a restaurant noting who bought shakes and when, and found that 40 percent were bought early by commuters taking them to go [S12]. He asked those buyers what job they had hired the shake to do. They wanted something to occupy one hand on a dull drive and to keep them full until noon [S12]. The chain made a thicker morning shake with fruit pieces, and a thinner one for children [S12].
+
+### Turning the disk-drive pattern into a theory
+
+Christensen's PhD looked at the disk-drive industry, and he saw the same pattern in retail, mainframes, cars and steel [S13]. He concluded that successful firms failed because of their best practices: they served loyal, high-margin customers and could not respond to cheaper, simpler products arriving at the bottom [S13]. To stress-test it, he told his students that part of their assignment was to bring cases the theory did not explain [S13].
+
+### Explaining the model to Andy Grove
+
+When Intel's chairman gave him ten minutes, Christensen insisted the model needed longer, since advice about Intel would make no sense without it [S9]. Grove cut in and asked what the model meant for Intel. Christensen took that as the fair test of any theory [S9].
+
+### Choosing to keep Sundays
+
+He set Sundays aside for family and church, and turned down a game on a Sunday even with a title at stake [S13][S3]. He later said his team was not as dependent on him as he thought [S3].
+
+### Illness and what he asked of himself
+
+After a heart attack in 2008, cancer treatment in 2010 and a stroke that hurt his speech, he struggled and was depressed [S13]. He recovered by turning back to helping others and to his personal mission statement. He said there is no virtue in long life, and the real question is where he can do the most good [S13].
+
 ## Where he stood
 
 **Why do great companies fail?** Mostly because they are well run in the usual way. They serve their best customers and chase margins, which makes the low end and small new markets look unattractive [S5][S13].

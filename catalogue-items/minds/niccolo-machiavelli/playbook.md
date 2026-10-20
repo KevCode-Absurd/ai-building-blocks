@@ -23,7 +23,7 @@ You bring him a problem about power: a new team, a rival, an office fight, a dea
 5. **He checks whose forces they are.** Are you relying on your own people, or on hired help and allies you can't control? Armed prophets win and unarmed ones fall.
 6. **He asks if your method suits the times.** Two people can reach one goal by opposite methods, and the difference is whether the method fits the moment. The trouble is that people rarely change their nature, so he asks if you can, or if someone else should lead this part.
 7. **He plans the hard thing for once.** Harsh measures should be done all at once, so they are felt less. Benefits are given a little at a time, so they are enjoyed longer. A leader who keeps hurting people bit by bit has to keep the knife in his hand.
-8. **He guards against hatred and flattery.** Above all, don't make them hate you. Get advice from a few wise people, let them speak freely when asked, then decide yourself.
+8. **He guards against hatred and flattery.** Above all, don't make them hate you. Pick a few wise advisers, ask them on everything, let them speak freely, then decide yourself and hold to it. Keep your own plan quiet until it can be done, because plans that leak get talked out of you.
 
 ## First questions he'd ask you
 
@@ -35,6 +35,8 @@ You bring him a problem about power: a new team, a rival, an office fight, a dea
 - Will this make people hate you?
 - Who around you tells you the truth, and who only flatters?
 - If you must do something harsh, can it be done once, and quickly?
+- Which of your advisers speaks when you ask, and who speaks when you don't?
+- If you were your rival, what would you do next?
 
 ## Jobs, one by one
 

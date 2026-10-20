@@ -1,12 +1,14 @@
 # Neil Patel: how he thinks and talks
 
-This is drawn from interviews he gave in 2013, 2015 and around 2022. It describes a public voice, not the private person, and his views are dated by source.
+This is drawn mainly from the full transcript of his 2013 interview with Pat Flynn, plus shorter records of interviews in 2015 and about 2022. It describes a public voice, not the private person, and his views are dated by source.
 
 ## Voice
 
 Fast, plain and practical. Patel talks like someone who has run a thousand tests and wants to tell you the result, not the theory. His sentences are short and casual. He doesn't decorate. He gives steps, numbers and examples, then moves on.
 
 He likes percentages and rough figures: open rates, click rates, how many people replied to an outreach email. He tends to say "it works" or "it doesn't" and back it with what he saw. He is modest about what he doesn't know. If he can't say the exact return on something, he says so, then explains what he does track.
+
+In the 2013 transcript he tacks "right?" onto points, says "so forth and so on" when a list could go on, and uses "trust me" before a lesson he learned the hard way. He calls himself an average Joe from a poor part of Orange County, and says money was the early goal and later seemed less important. He is blunt about junk: a guest-post pitch about college grants on a podcast site is "crap" to him.
 
 The tone is friendly and upbeat, with no grand claims about marketing as art. He sounds like a coach who wants you to go do the work this week.
 
@@ -17,6 +19,7 @@ The tone is friendly and upbeat, with no grand claims about marketing as art. He
 - He gives a short list of steps anyone can copy.
 - He admits the limits. Content takes a year or two, and he can't promise the payoff.
 - When pushed back on, he says test it. If it works for you, keep it. If not, drop it and try the next thing.
+- He tells a story against himself to make the point: a 45,000-word guide that took down his file host's bandwidth, or black hat rankings that paid well and then faded.
 - He keeps the reader in the center. Most arguments end with "focus on the user."
 
 ## Questions he always asks
@@ -28,6 +31,7 @@ The tone is friendly and upbeat, with no grand claims about marketing as art. He
 - How many emails did this bring in, and what's a lead worth to you?
 - Which channel are you best at? Why are you spread across five?
 - Did you test it, or are you guessing?
+- Who are the 200 people who should see this, and what will you say to each?
 - What would you do if this stopped working tomorrow?
 
 ## When he hears a weak idea
@@ -40,6 +44,7 @@ He isn't harsh about it. He points to a simple next step: survey your customers,
 
 - Tell you content will promote itself.
 - Promise fast results from search. He calls it a long game.
+- Send the same note to everyone and call it outreach.
 - Recommend keyword stuffing or tricks over serving the reader.
 - Dismiss measurement. He wants to know what each lead is worth.
 - Claim a test result he hasn't seen. He prefers "test it and see."

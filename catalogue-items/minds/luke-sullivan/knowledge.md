@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Luke Sullivan is alive, and views can change. His main work is the book *Hey Whipple, Squeeze This*, first published in 1998 and since revised several times [S1][S5]. We couldn't open the book or his blog, so this data set draws on what he said in a 2009 email interview and a podcast from about 2018, a write-up of a 2013 talk, a review of the book, and two short biographies [S1][S2][S3][S4][S5][S6]. The talk write-up was built from live tweets, so its wording is the blogger's [S3]. His birth year isn't in our sources. Treat each view as "as of" the date of its source.
+Luke Sullivan is alive, and views can change. His main work is the book *Hey Whipple, Squeeze This*, first published in 1998 and since revised several times [S1][S5]. We couldn't open the book or his blog, so this data set draws on what he said in a 2009 email interview and a podcast from about 2018, a write-up of a 2013 talk, a review of the book, and two short biographies [S1][S2][S3][S4][S5][S6]. The talk write-up was built from live tweets, so its wording is the blogger's [S3]. His birth year isn't in our sources. We also read a machine transcript of the full audio of the podcast, which is unchecked and may mishear names, so we use it for method and stories only [S7]. Treat each view as "as of" the date of its source.
 
 ## In one paragraph
 
@@ -63,6 +63,34 @@ How he applied it: he credited Fallon's success at its peak to everyone being al
 As of about 2018, he said the old "idea guy" role is outdated [S1]. Copywriters should be hybrid creatives who can sketch, make and even code their ideas, and learn the design tools [S1].
 
 How he applied it: the fifth edition of his book added a co-author, Edward Boches, to cover newer media [S1].
+
+## Real decisions
+
+These are stories he told on the podcast, in his own telling [S7].
+
+### Rewriting the brief as a question
+
+Sullivan says most briefs hand over a solution. His example is a brief that says fresh food means better health: the team stared at it and nothing moved, because it was an answer, not a problem. At the urging of an agent he finally worked out his own way to write a brief, as a well-defined question that can only be answered creatively. He gives two tests for it: you don't already know the answer, and it comes from the heart of the unresolved issue. He cites Dan Wieden for the idea that a good assignment is a question [S7].
+
+### Starting from the truest thing, not the facts
+
+He asks for the truest thing about the product, which he says is rarely in the brief, because clients deal in facts and facts are boring. His example is milk: stronger bones was a fact nobody cared about, while the truth that milk goes with things led to "Got Milk?" He also credits Alex Bogusky with the question "what is the elephant in the room," and says Domino's real problem was that its pizza was bad, whatever the delivery time [S7].
+
+### Sketching three circles before ideas
+
+Before he starts on ideas he draws three circles and asks what the product has that the customer wants and the competition isn't giving them. He calls this acting as his own account executive, and says it needs a real grasp of the customer and of the rivals' strengths and weaknesses [S7].
+
+### Reading a portfolio the way recruiters do
+
+He says a reviewer clicks the first campaign and wants it to leap out, and decides in about ten seconds whether to open the second. A recruiter told him to make the reviewer fall in love in three seconds. He wants about nine campaigns in a book, but says a person is usually hired on the first three, and that a top agency may hire someone on one great piece [S7].
+
+### Finding mentors by asking
+
+He advises students to find an art director or associate creative director, not the chief creative officer, and to ask to send an idea from time to time without bombarding them. He pays forward the help two mentors gave him in 1979 and after [S7].
+
+### Adding a co-author for the fifth edition
+
+By the fifth edition of the book he decided he was not an expert in the newest media, so he invited Edward Boches to write the chapters on social and interactive. In the third edition he had a direct marketing chapter that he cut in the fourth to make room for the web [S7].
 
 ## How he decides
 

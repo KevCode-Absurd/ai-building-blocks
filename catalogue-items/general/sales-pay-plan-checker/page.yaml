@@ -1,0 +1,125 @@
+new_slug: sales-pay-plan-checker
+name: "Sales pay plan checker"
+summary: "Paste your commission plan and churn by rep. Get what it rewards and ignores, plus one change to test."
+job: lead-people
+thinking: high
+thinking_why: "It reads a pay plan against data and must not overclaim from a small number of reps."
+
+headline: "Sales pay plan checker"
+subhead: Paste your commission plan and how many customers each rep signed and kept. It writes what the plan really pays for, ranks reps by retention and finds the gap between top earners and keepers. You get a short report and one change to test.
+
+explain: |
+  A pay plan steers behaviour. If it pays only for new sales, reps will sign anyone who says yes, and some of those customers will leave. The plan then rewards the very thing that hurts the business later.
+
+  This skill states in plain words what your plan pays for. It ranks reps by customer churn or retention and looks for a gap between the people who earn the most and the people whose customers stay. It tests a payout tied to retention bands and asks whether expansion pays more than a first sale. It ends with one behaviour you want to see and how you will tell within two quarters whether it changed. It marks guesses as guesses and does not claim a result you have not measured.
+
+when:
+  - Sales are up but customers keep leaving.
+  - You are changing a commission plan and want to know what the old one rewarded.
+  - You suspect your best earners are not your best keepers.
+
+you_give:
+  - Your pay plan in words or a table (rates, bonuses, targets)
+  - Each rep's sales and how many of their customers stayed or left
+  - The period the figures cover
+  - What you want reps to do more of (optional)
+you_get:
+  - What the plan pays for and what it ignores, in plain words
+  - A ranking of reps by churn next to their earnings
+  - One change to test, with the number that would show it worked
+  - A list of guesses and gaps in the data
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the plan and the rep table with churn and earnings for the same period.
+  - Say what behaviour you want more of.
+  - Read the report and pick the change to test with one team or one quarter.
+  - Come back after two quarters and compare.
+
+how_it_works:
+  - title: States the plan
+    text: Writes what the plan pays for in plain words.
+  - title: Ranks by churn
+    text: Orders reps by how many of their customers left.
+  - title: Finds the gap
+    text: Compares top earners with top keepers.
+  - title: Tests a retention band
+    text: Works out what a payout tied to churn bands would have paid.
+  - title: Checks expansion
+    text: Asks if growth from existing customers pays as much as a first sale.
+  - title: Names the behaviour
+    text: Names the behaviour you want and how you would see it in two quarters.
+  - title: Marks guesses
+    text: Labels what is data and what is a guess.
+
+output_shape: |
+  WHAT THE PLAN PAYS FOR
+  <plain words>
+
+  WHAT IT IGNORES
+  <plain words>
+
+  REPS BY CHURN
+  <rep> | Customers: <n> | Left: <n> | Churn: <percent> | Earned: <amount>
+
+  THE GAP
+  <how top earners and top keepers differ>
+
+  TEST THIS ONE CHANGE
+  <change>   Would have paid: <figures>   Behaviour wanted: <behaviour>
+
+  HOW YOU WILL KNOW
+  Number: <metric>   After: <two quarters>
+
+  GUESSES
+  <what is a guess and why>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Retention data per rep
+    how: Give customers signed and customers who left, per rep. Without it the report can only describe the plan.
+  - what: Period
+    how: Say how long customers had to stay. A short period makes churn look better than it is.
+  - what: Number of reps
+    how: With a small team, treat the ranking as a hint. The report will say so.
+  - what: Behaviour wanted
+    how: Name it. The test change is chosen to push toward it.
+
+judge:
+  - It states what the plan rewards and what it ignores.
+  - It uses retention data, not only sales.
+  - It proposes one change, not a rebuild.
+  - It names the number that would show it worked.
+  - It marks guesses as guesses.
+
+test:
+  - Work out one rep's churn by hand and compare it with the report.
+  - Check that the test payout would have paid the totals the report shows.
+  - Run it twice. The rewards and ignores should be the same.
+  - Test the change with one team for two quarters and compare churn.
+
+improve:
+  - Add your own churn bands and rates, so the test change matches your costs.
+  - Add the length of your typical contract, so the retention period fits.
+  - Save each quarter's table, so you can see the effect of changes.
+  - Pair it with the sales hiring scorecard builder so hiring and pay point the same way.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Churn by rep and a trial payout are simple sums in a sheet, and you can check them."}
+    - {name: "Any good chat AI", why: "Reading a plan and writing the report is text work any strong chat AI does well."}
+  inputs:
+    - "A list of customers by rep with start and end dates"
+    - "The full text of the commission plan"
+    - "Cost to win a customer"
+
+terms:
+  - term: Churn
+    meaning: The share of customers who leave in a set period.
+  - term: Expansion
+    meaning: More money from an existing customer, such as an upgrade or an added user.

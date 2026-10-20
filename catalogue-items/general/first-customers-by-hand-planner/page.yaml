@@ -1,0 +1,112 @@
+new_slug: first-customers-by-hand-planner
+name: First customers by hand planner
+summary: Paste your product and the first customers you want. Get a plan to win them one by one and what to learn.
+job: grow-social
+thinking: medium
+thinking_why: It judges who to approach first and what to do by hand, but the steps are clear.
+headline: First customers by hand planner
+subhead: Give it your product and the first customers you want. It picks a narrow group you can reach, plans how to win them one at a time, marks each hand step to keep or automate later and sets what to learn. You get a plan with named people and places.
+explain: |
+  Most new products start with a launch and a wait. Few people come, and the founder is left with no idea why. A better start is a small group you can reach yourself, won one at a time, with more service than any big company would give.
+
+  This skill picks a narrow group, lists where they gather and who to contact by name, and plans how to recruit and set each one up yourself. It marks every manual step as one to automate later or one to keep. It works backwards from the income you need to a number of customers, and it names a community you already belong to. The plan has a way to record what each user says, and it does not depend on a big launch.
+when:
+  - You have a product and no customers yet.
+  - You are about to launch and have no way to find the first ten buyers.
+  - You think you need software or a team before you can serve anyone.
+you_give:
+  - Your product or service in a few lines
+  - The kind of customer you want first
+  - A buyer description (optional)
+  - What you already know about them, or a community you are in (optional)
+you_get:
+  - A narrow starting group with named places and people
+  - A plan to win each one by hand
+  - A list of manual steps marked automate later or keep
+  - A way to record what each user says
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the product and the first customers you want.
+  - Name any community you belong to and the income you need.
+  - Contact the first five people this week, using the plan.
+  - Write down what each says and bring the notes back.
+how_it_works:
+  - title: Picks a narrow group
+    text: Chooses a group you can reach in person or by message.
+  - title: Names where they gather
+    text: Lists places and people to contact by name.
+  - title: Recruits one at a time
+    text: Plans how to win each person and set them up yourself.
+  - title: Overserves them
+    text: Gives much more service than a big company would, such as setting up their account on the spot.
+  - title: Does it by hand
+    text: Runs the product manually first and notes the steps.
+  - title: Uses your community
+    text: Names a community you belong to that trusts you.
+  - title: Works backwards from income
+    text: Turns the income you need into a number of customers.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  THE FIRST GROUP
+  <who, and why you can reach them>
+
+  WHERE THEY GATHER
+  <place or person> | <how to contact> | <why they would care>
+  (real names only; MISSING if none known)
+
+  HOW TO WIN EACH ONE
+  <recruit by hand> | <set them up yourself> | <extra service>
+
+  DONE BY HAND
+  Step | Keep or automate later | Why
+
+  YOUR COMMUNITY
+  <community> | <why they trust you>
+
+  THE NUMBER
+  Income needed: <n> | Price: <n> | Customers: <n>
+
+  WHAT TO RECORD
+  Per user: <what they said, what they did, what stopped them>
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: How narrow the group is
+    how: Pick a group small enough to name ten people in. 'Small shops' is too wide. 'Bakers in my city's market' is not.
+  - what: The community you belong to
+    how: Name a real one. A group you do not belong to will not trust you.
+  - what: The income you need
+    how: Give a real figure. The number of customers comes from it.
+  - what: Your time
+    how: Say how many hours a week you have. The plan is sized to that.
+judge:
+  - Each target is a named person or a named place.
+  - Every manual step is marked to automate later or keep.
+  - The plan has a way to record what each user said.
+  - It does not depend on a big launch or a partnership.
+  - The community is one the owner truly belongs to.
+test:
+  - Contact the first five people from the plan and see how many reply.
+  - Run it twice. The starting group should stay close.
+  - Check the customers number against your income and price by hand.
+  - Look at your notes after ten users. What did the plan miss?
+improve:
+  - Add your own network to the places step.
+  - Add which steps you will never automate to the by-hand step.
+  - Save what users said to a lessons file.
+  - Pair it with a customer interview question writer for the conversations.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Planning and drafting outreach is text work any strong chat AI does well with this skill.
+    - name: A spreadsheet
+      why: Holds the list of people, the date you contacted them and what each said.
+  inputs:
+    - A list of ten people you could name in your first group
+    - Notes from any talks with customers so far
+    - Your income and price
+terms:
+  - term: By hand
+    meaning: Done by a person, such as you, instead of by software.

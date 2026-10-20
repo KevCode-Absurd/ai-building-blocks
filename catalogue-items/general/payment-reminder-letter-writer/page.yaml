@@ -1,0 +1,121 @@
+new_slug: payment-reminder-letter-writer
+name: "Payment reminder letter writer"
+summary: "Paste the invoice facts and your history with the customer. Get a reminder that starts where they are and keeps their goodwill."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It is a short letter built from a few facts and a fixed order of parts."
+
+headline: "Payment reminder letter writer"
+subhead: Give it the invoice facts and how you have worked with this customer. It works out what they are likely thinking about the bill, then writes a reminder with the amount, the date and one easy way to pay. You get a letter and a follow-up for if it is ignored.
+
+explain: |
+  A late payment reminder usually opens with the debt, which is what the customer least wants to read about. A harsh one costs you the customer. A weak one gets ignored. Most late payers are not refusing. They are busy, confused by the invoice or waiting on someone else.
+
+  This skill starts with the feeling you want the customer to have when they finish reading, then writes from where they are. It opens on something they already agree with, states the amount, date and how to pay in plain words, gives one reason to pay now, and makes paying one step. It never threatens or shames. It also writes the next letter in case this one is ignored.
+
+when:
+  - An invoice is a week or two late and you want to keep the customer.
+  - You are tired of writing reminders that sound either meek or angry.
+  - A good customer has missed one payment after years of paying on time.
+
+you_give:
+  - The invoice number, amount, due date and how to pay
+  - How long you have worked with this customer, and how they usually pay
+  - Whether this is the first reminder or a later one (optional)
+you_get:
+  - A short reminder letter or email with a subject line
+  - A follow-up for if they do not reply
+  - A note on the tone chosen and why
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the invoice facts and a few lines on your history with this customer.
+  - Say whether you want a letter or an email, and who signs it.
+  - Check every number and date against your own record before sending.
+  - Send the first letter, and keep the follow-up for the date you set.
+
+how_it_works:
+  - title: Sets the feeling
+    text: Decides what you want the customer to feel at the end, such as respected and clear on what to do.
+  - title: Reads their mind
+    text: Lists what the customer is likely thinking about this bill, using your history with them.
+  - title: Opens on agreement
+    text: Starts with a point they already agree with, not the debt.
+  - title: States the facts
+    text: Gives the amount, due date and how to pay, in plain words.
+  - title: Gives one reason
+    text: Offers one reason to pay now that matters to them, with no threats.
+  - title: Makes paying easy
+    text: Names one step to pay and puts it where they will see it.
+  - title: Writes the follow-up
+    text: Drafts the next letter for use if there is no reply.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  FEELING WE WANT
+  <how the customer should feel at the end>
+
+  WHAT THEY MAY BE THINKING
+  - <thought> | Source: <your history or a guess marked as such>
+
+  LETTER
+  Subject: <line>
+  <opening on a point they agree with>
+  <amount, date, how to pay>
+  <one reason to pay now>
+  <one easy step>
+  <warm close>
+
+  FOLLOW-UP (if no reply by <date>)
+  <letter>
+
+  MISSING
+  <facts to fill in>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your history with the customer
+    how: A long, good history changes the opening to one that thanks them. A new customer gets a clearer, more formal one.
+  - what: How late the payment is
+    how: Give the days late. A few days gets a light note, and weeks gets a plainer one.
+  - what: Pay step
+    how: Give a link, bank details or a phone number. One step is easier than three.
+  - what: Who signs
+    how: A name from a person is warmer than "Accounts".
+
+judge:
+  - The opening is not the debt.
+  - Amount, due date and how to pay are exact and match your records.
+  - No threat, guilt or shame is used.
+  - The reader can pay in one step.
+  - The tone fits how long you have worked together.
+
+test:
+  - Check every figure in the letter against the invoice.
+  - Read it as the customer and say if it sounds like someone who wants to keep working with you.
+  - Send it to one customer first and note how long they take to reply.
+  - Run it twice and see if the opening changes while the facts stay the same.
+
+improve:
+  - Add your payment terms and late fee policy so the letter mentions them only if true.
+  - Add your usual sign-off and name for a voice that sounds like you.
+  - Keep a short list of reasons customers give for paying late, and paste it in.
+  - Pair it with "Honest persuasion editor" if you want to check the letter for pressure.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing a short letter is a task any strong chat AI does well with this skill."}
+    - {name: "Your invoicing tool", why: "It holds the real amount, date and pay link, so the letter matches your record."}
+  inputs:
+    - "The invoice as a PDF or text"
+    - "Earlier emails with this customer"
+    - "Your payment terms"
+
+terms:
+  - term: Reminder
+    meaning: A first note that an invoice has passed its due date, written to get payment without damaging the relationship.
+  - term: Follow-up
+    meaning: The next letter you send if the first one gets no reply.

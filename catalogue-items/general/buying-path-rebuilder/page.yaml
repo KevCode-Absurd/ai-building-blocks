@@ -1,0 +1,125 @@
+new_slug: buying-path-rebuilder
+name: "Buying path rebuilder"
+summary: "Paste what your best customers read, watched or did before buying. Get the steps every new lead should follow."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It finds a pattern in small data and decides what may be chance, but the steps are fixed."
+
+headline: "Buying path rebuilder"
+subhead: Give it what each of your best customers saw or did, in order, before they bought. It counts how many did each step and finds the pattern most share. You get the steps to add to every lead's path, the best pieces to hand-pick and a test with the number that counts as a win.
+
+explain: |
+  Your best customers often did something your average lead does not. Many of them read a certain number of long pieces, watched a talk or took a call before they ever asked for a price. Leads who skip those steps are less ready, and sales time goes on people who are not.
+
+  This skill lists what each top customer saw or did, in order, and counts how many did each step. It finds the pattern most of them share and checks whether weaker customers skipped it. It adds the missing steps to every lead's path, picks the best pieces of all time for the sales team to hand out, and sets a test of leads who got the steps against leads who did not. It marks where the pattern may be chance.
+
+when:
+  - Your best customers seem to have something in common in how they found you.
+  - Sales spends time with leads who are not ready.
+  - You have good content that only some leads ever see.
+
+you_give:
+  - What each top customer read, watched or did before buying, in order
+  - Reviews or notes in their words (required in effect)
+  - How weaker customers behaved, if known (optional)
+  - A profile of the best customer (optional)
+you_get:
+  - A count of how many top customers did each step
+  - The pattern most of them share
+  - The steps to add to every lead's path
+  - A shortlist of pieces for sales to hand-pick and a test with a win rule
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what each top customer did before buying, as a list per person.
+  - Add the same for a few weaker customers, if you can.
+  - Add the profile from "Best customer finder" if you have it.
+  - Run the test it sets and look at the win rule before you roll it out.
+
+how_it_works:
+  - title: Lists each path
+    text: Writes what each top customer saw or did before buying, in order.
+  - title: Counts each step
+    text: Counts how many of them did each piece or step.
+  - title: Finds the shared pattern
+    text: Finds what most of them share, such as a number of long pieces read first.
+  - title: Compares with weaker customers
+    text: Checks whether weaker customers skipped it.
+  - title: Adds the missing steps
+    text: Puts the missing steps into the path of every lead.
+  - title: Picks the best pieces
+    text: Chooses the best pieces of all time for sales to hand-pick from.
+  - title: Plans the test
+    text: Compares leads who got the steps with leads who did not.
+  - title: Checks the plan
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  PATHS
+  <customer> | Steps in order: <list>
+
+  COUNTS
+  <step> | Did it: <x> of <n> top customers | Weaker customers: <y> of <m>
+
+  THE PATTERN
+  <what most share>, true of <x> of <n>
+  May be chance because: <reason, or none seen>
+
+  STEPS FOR EVERY LEAD
+  1. <step> | Delivered by: <channel> | When: <trigger>
+
+  BEST PIECES FOR SALES
+  <piece> | Why: <reason from the paths>
+
+  TEST
+  Group A (gets the steps): <n> | Group B (does not): <n> | Win if: <number>
+
+  MISSING
+  <data not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Weaker customers
+    how: Their paths show whether the pattern is real. Without them it says the pattern is unchecked.
+  - what: Detail of each path
+    how: Counts, lengths and dates beat "they read some content". Give them if you have them.
+  - what: Qualification steps
+    how: Say which steps filter out poor fits. It will not remove them to get more leads.
+  - what: Size of test
+    how: Say how many leads you get a month. It sizes the test to match.
+
+judge:
+  - Every step comes from what top customers actually did, not a guess.
+  - The content helps the buyer before it sells.
+  - It does not cut a qualification step just to get more leads.
+  - It states the test and the number that would count as a win.
+  - It marks where the pattern may be chance.
+
+test:
+  - Check each count against your records.
+  - Ask two top customers if the steps match how they remember buying.
+  - Run the test and compare the groups against the win number.
+  - Run the skill twice and compare the pattern.
+
+improve:
+  - Add how you track what leads read or watch, to step 1.
+  - Add steps that must stay in the path, such as a qualifying call.
+  - Save the test result to your notes.
+  - Pair it with "Best customer finder" for the profile to match the path to.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Counting steps across a list of paths is work any strong chat AI handles."}
+    - {name: "Your CRM or email tool", why: "Shows what each lead opened, read or booked and lets you split a test."}
+  inputs:
+    - "Dates for each step"
+    - "The profile from Best customer finder"
+    - "Your best-read pieces and their reads"
+
+terms:
+  - term: Buying path
+    meaning: The steps a person takes between first hearing of you and buying.
+  - term: Qualification step
+    meaning: A step that checks if a lead is a good fit before sales spends time.

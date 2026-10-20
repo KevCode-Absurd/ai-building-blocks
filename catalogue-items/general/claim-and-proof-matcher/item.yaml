@@ -1,0 +1,22 @@
+slug: claim-and-proof-matcher
+name: "Claim and proof matcher"
+summary: "Paste your ad or page and your proof. Get every claim paired with proof, the claims that outrun it, and fixes."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: offer, required: false}
+  - {type: product_data, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [gary-bencivenga, richard-feynman, milton-glaser]
+credits:
+  - {title: "Gary Bencivenga's Marketing Bullets", by: "Gary Bencivenga", used: "Pairing every claim with proof beside it, reading as a doubting reader, and shrinking the claim or adding real proof when the claim is bigger"}
+  - {title: "Cargo Cult Science", by: "Richard Feynman, Caltech commencement address, 1974", url: "https://calteches.library.caltech.edu/51/2/CargoCult.htm", used: "Reporting what could make you wrong and not fooling yourself with proof that only agrees with you"}
+  - {title: "Ambiguity and Truth", by: "Milton Glaser", url: "https://www.miltonglaser.com", used: "Checking what a claim leads a reader to think, and whether the implied claim is true as well as the stated one"}

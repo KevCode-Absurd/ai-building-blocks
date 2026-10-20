@@ -1,0 +1,20 @@
+slug: pitch-revision-log
+name: "Pitch revision log"
+summary: "Paste your pitch and each no you heard. Get the doubts ranked, a revised pitch and the next advice questions to ask."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: lessons_register}
+origin: rebuilt
+version: 1.0.0
+minds: [melanie-perkins]
+credits:
+  - {title: "Melanie Perkins, SV001 study notes", by: "Study notes from public interviews", used: "Asking for advice at the start of each meeting, recording the exact doubt after every no, and rewriting the pitch around the problem and market size"}
+  - {title: "Melanie Perkins", by: "Wikipedia, licensed secondary biography", used: "Background on how a pitch was changed over many meetings"}

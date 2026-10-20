@@ -1,0 +1,125 @@
+new_slug: growth-lever-audit
+name: "Growth lever audit"
+summary: "Paste your customer count, average sale and repeat rate. Get the three growth levers sized and the one to pull first."
+job: plan-strategy
+thinking: medium
+thinking_why: "The sums are fixed, but choosing the cheapest lever takes a judgement about effort and cost."
+
+headline: "Growth lever audit"
+subhead: Give it your number of customers, your average sale, how often they buy and what a new customer costs. It sizes a modest gain in each of three levers, multiplies them, finds the cheapest lever to pull and plans one test with a measure and a date.
+
+explain: |
+  There are three ways to grow revenue: win more customers, raise the average sale, or get each customer to buy more often. Most plans focus on the first, which is usually the most costly. Yet a modest gain in each lever multiplies, not adds. A 10% gain in all three is a 33% gain in revenue, not 30%.
+
+  This skill lists your numbers, models a modest gain in each lever and multiplies them. It then maps every way money comes in and every step from first contact to repeat buyer, so it can find the cheapest lever to pull. It checks how people who did not buy could still be served at a profit, and ends by choosing one lever and one test with a measure and a date. It lists missing numbers, and never guesses them.
+
+when:
+  - You want to grow and do not know whether to chase new customers, bigger sales or repeat orders.
+  - Your ad costs are rising and you want a cheaper source of growth.
+  - You are setting next quarter's plan and need numbers behind your choice.
+
+you_give:
+  - A performance sheet with customers, orders, revenue and repeat rate (required)
+  - Your cost to win a new customer (optional but needed for a firm answer)
+  - Product or price facts (optional)
+  - Ways money comes in today, such as products, services and add-ons (optional)
+you_get:
+  - Your numbers laid out for each lever
+  - A modest gain modelled in each lever and the multiplied result
+  - A map of the steps from lead to repeat buyer, with the weakest points
+  - One lever and one test with a measure and a date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your numbers for one period, such as the last 12 months. Say which period.
+  - List every product or service and every step a customer goes through.
+  - Read the lever sizes, then the pick. Check any figure marked MISSING.
+  - Run the test for the stated period and bring the result back.
+
+how_it_works:
+  - title: List the numbers
+    text: Lists buyers, average sale, purchases per buyer and the cost to win a buyer.
+  - title: Multiply the gains
+    text: Models a modest gain in each of the three levers and multiplies them.
+  - title: Map the money
+    text: Lists every way money comes in and every step from lead to repeat buyer.
+  - title: Find the cheapest lever
+    text: Finds the lever that costs least to pull, often not new customers.
+  - title: Serve non-buyers
+    text: Checks how people who did not buy could still be served at a profit.
+  - title: Pick one test
+    text: Picks one lever and one test with a measure and a date.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  YOUR NUMBERS
+  Period: <dates> | Buyers: <n> | Average sale: <amount> | Purchases per buyer: <n> | Cost to win a buyer: <amount or MISSING>
+
+  THE THREE LEVERS
+  More buyers: +<x>% -> <result>
+  Bigger sale: +<x>% -> <result>
+  More purchases: +<x>% -> <result>
+  Together (multiplied): +<x>% -> <revenue>
+
+  THE MAP
+  <step from lead to repeat buyer> | Drop-off or gap: <fact>
+
+  CHEAPEST LEVER
+  <lever> | Why cheapest: <reason>
+
+  NON-BUYERS
+  <how they could be served at a profit, or not>
+
+  THE TEST
+  Change: <what> | Measure: <metric> | Target: <number> | Date: <date>
+
+  MISSING
+  <numbers that would sharpen the audit>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The period
+    how: Use a full year if you can. A short period can mislead if you have a season.
+  - what: The size of the gain
+    how: Choose a modest gain you think you can reach, such as 5% or 10%. The multiplication holds at any size.
+  - what: Cost per new buyer
+    how: Include ads, discounts and sales time. Leaving out costs makes new buyers look cheap.
+  - what: Every step in the buyer path
+    how: List each step, from first visit to second order. The weakest step is often the cheapest fix.
+
+judge:
+  - Gains are multiplied, not added.
+  - Each lever uses your own numbers.
+  - The cheapest lever is chosen with a reason.
+  - The test has a measure and a date.
+  - Missing numbers are listed, not guessed.
+
+test:
+  - Check the sums by hand with a calculator. The multiplied result should match.
+  - Change one input by 10% and see how the pick changes.
+  - Run it twice on the same numbers. The pick should stay the same.
+  - Run the test and compare the result with the modelled gain.
+
+improve:
+  - Add your own extra levers, such as referrals or price tiers, to the step list.
+  - Add your real cost of each step to the map.
+  - Save the numbers and the result of each test in your notes so the next audit starts from facts.
+  - Pair it with "Customer value and spend limit calculator" for the cost side.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Lets you change the percentages and see the multiplied result at once."}
+    - {name: "Any good chat AI", why: "Handles the sorting, the map and the plan once the numbers are in."}
+  inputs:
+    - "An order export with customer IDs and dates"
+    - "Your ad and discount spend for the same period"
+    - "A list of leads who did not buy, with their source"
+
+terms:
+  - term: Lever
+    meaning: One of the three numbers that set your revenue. These are how many buy, how much each sale is and how often they buy.
+  - term: Multiplied gain
+    meaning: Gains in each lever compound, so three small gains give more than their sum.

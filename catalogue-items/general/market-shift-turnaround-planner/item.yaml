@@ -1,0 +1,18 @@
+slug: market-shift-turnaround-planner
+name: "Market shift turnaround planner"
+summary: "Describe a business losing share. Get what changed in the market, a new range and a survive-the-year plan."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [ratan-tata]
+credits:
+  - {title: "Oral History of Ratan Tata", by: "Uday Kapoor, interviewer, 2017", used: "Finding when share began to fall, taking a market shift seriously, redesigning the range with the design lead, planning cash month by month and picking one near market to enter"}

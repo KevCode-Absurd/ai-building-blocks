@@ -1,0 +1,20 @@
+slug: ten-second-opener-writer
+name: "Ten-second opener writer"
+summary: "Paste what you sell and who you are about to meet. Get a ten-second opener and two spares, as short honest questions."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: angle_library, required: true}
+  - {type: persona, required: false}
+  - {type: offer, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: hooks}
+origin: rebuilt
+version: 1.0.0
+minds: [elmer-wheeler]
+credits:
+  - {title: "Tested Direct Selling", by: "Elmer Wheeler", used: "Selling the result not the process, short opening questions, a planned set of spare openers and refusing false pretexts"}

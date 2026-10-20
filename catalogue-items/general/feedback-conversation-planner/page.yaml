@@ -1,0 +1,122 @@
+new_slug: feedback-conversation-planner
+name: "Feedback conversation planner"
+summary: "Describe the person and the problem. Get the conversation: what to praise, what to say and how to say it."
+job: lead-people
+thinking: medium
+thinking_why: "It reads a situation and adapts, but the conversation steps are fixed."
+
+headline: "Feedback conversation planner"
+subhead: Describe a person and a problem at work. It places the situation on a care and challenge chart, picks one piece of specific praise, words the problem as a behaviour and its effect, and plans the follow-up. You get a conversation plan to use in person.
+
+explain: |
+  Feedback fails when it is vague, late or about the person. People hear "you are careless" as an attack and defend themselves. They hear nothing at all when the message is padded with kind words. In both cases the behaviour continues.
+
+  This skill uses a two-part check. Do you show you care about the person, and do you say plainly what is wrong? It places your situation on that chart and tells you which of four boxes you are in. It then plans a talk that starts with one specific, sincere piece of praise, describes the behaviour and its effect in plain words, and is humble, helpful, immediate and in person. It leaves room for the other person to answer and sets a follow-up.
+
+when:
+  - You have been avoiding a talk with someone for days or weeks.
+  - You are not sure whether you are too soft or too harsh with someone.
+  - You have a draft message and need to turn it into a conversation.
+
+you_give:
+  - The person, your relationship and how long the problem has gone on
+  - What you saw them do and the effect it had
+  - What you have already said, if anything
+  - A draft message (optional)
+you_get:
+  - Which box on the chart you are in now, and what to change
+  - One piece of specific praise to open with
+  - The behaviour and effect, in words to say
+  - Questions to ask and a follow-up date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the person, what happened and what you have said so far.
+  - Add any draft message you wrote earlier.
+  - Read the plan and choose the time and place. Do it soon, in person.
+  - Afterwards, tell the skill how it went and plan the next step.
+
+how_it_works:
+  - title: Places the situation
+    text: Decides how much you show you care and how directly you challenge, and names the box you are in.
+  - title: Picks the praise
+    text: Chooses one specific, sincere piece of praise from what you shared.
+  - title: Describes the behaviour
+    text: Writes what happened and its effect, in plain words and not about character.
+  - title: Sets the manner
+    text: Makes it humble, helpful, immediate, in person and about the behaviour.
+  - title: Plans the listening
+    text: Writes questions and a plan to listen without defending.
+  - title: Sets the follow-up
+    text: Agrees a date to check what changed.
+  - title: Checks the plan
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHERE YOU ARE
+  Care: <low or high>   Challenge: <low or high>   Box: <name and what it means>
+
+  OPEN WITH
+  <specific, sincere praise>
+
+  SAY
+  Behaviour: <what happened>   Effect: <what it caused>
+
+  HOW TO SAY IT
+  <humble, helpful, immediate, in person, about behaviour>
+
+  ASK AND LISTEN
+  <question> | If they push back: <what to do>
+
+  FOLLOW-UP
+  Date: <date>   Check: <what you will look for>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Your relationship
+    how: Say how long you have known the person and how much they trust you. It changes how much care you show first.
+  - what: How long it has gone on
+    how: Give dates. The plan changes if you waited weeks and need to say so.
+  - what: A draft message
+    how: Paste it. The plan keeps what works and says what to change.
+  - what: How they react to criticism
+    how: Say if they get defensive. The questions and the pause are planned for that.
+
+judge:
+  - The criticism is about the behaviour and its effect, not the person.
+  - The praise is specific and sincere.
+  - The plan is for a conversation in person, soon.
+  - There is room for the other person to answer.
+  - A follow-up date is set.
+
+test:
+  - Pick a past talk that went badly. Rebuild it with the skill and compare.
+  - Say the opening aloud. Check you could say it without changing a word.
+  - Run it twice on the same case. The box and the behaviour line should stay the same.
+  - After the talk, check whether the behaviour changed by the follow-up date.
+
+improve:
+  - Add words that sound like you for the opening and the ask.
+  - Add examples of praise that has worked with your team.
+  - Keep a log of talks and follow-ups so you see which ones land.
+  - Pair it with the feedback request script writer so you ask for feedback too.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Placing the situation and writing the plan is text work any strong chat AI does well."}
+    - {name: "A calendar", why: "Book the talk and the follow-up date straight away."}
+  inputs:
+    - "Notes on what you have seen over the past weeks"
+    - "A draft message, if you wrote one"
+    - "How the person has responded to feedback before"
+
+terms:
+  - term: Care and challenge chart
+    meaning: A two-way check of how much you show you care about the person and how directly you say what is wrong.
+  - term: Behaviour and effect
+    meaning: What the person did, and what it caused, said in plain words.

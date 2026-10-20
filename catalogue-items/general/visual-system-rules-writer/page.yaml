@@ -1,0 +1,133 @@
+new_slug: visual-system-rules-writer
+name: "Visual system rules writer"
+summary: "Describe your brand or event. Get the feeling first, then firm rules for colour, type and grid."
+job: design-work
+thinking: medium
+thinking_why: "It turns a feeling into firm rules, which needs judgement but follows a fixed order."
+
+headline: "Visual system rules writer"
+subhead: "Give it the brand or event and every place it will show up. It writes the feeling first, then a few firm tools: colour with a reason, type, page format and grid. You get a one-page rule sheet with room for play."
+
+explain: |
+  A brand that shows up in many places, such as signs, print, screens, uniforms and a website, needs rules, or it looks different each time. But rules that come before a feeling produce a look with no point. Teams then argue about colours instead of what the brand should be like.
+
+  This skill starts with the feeling the place or event should give, and what it must not look like. It then picks colours for what they mean where people will see them, and lists the ones ruled out. It fixes a few tools only, draws signs on one grid so they read in any language, and keeps the rules short. It marks where the team may play and names who checks the final work.
+
+when:
+  - "You are launching an event, venue, product line or brand that will appear in many places."
+  - "Your materials look different from one channel to another."
+  - "You need rules short enough that a new designer or supplier will follow them."
+
+you_give:
+  - "What the event or brand is, and what it is for"
+  - "Every place it will show up"
+  - "Your brand file (optional)"
+  - "Looks or histories you want to avoid (optional)"
+you_get:
+  - "The feeling in a few lines"
+  - "What it must not look like"
+  - "Colours with a meaning and reason each, and ruled-out colours"
+  - "Tools for type, page format and grid, plus play room and a named checker"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the event or brand and where it will appear."
+  - "Say what you want people to feel, and what to avoid."
+  - "Paste your brand file if you have one."
+  - "Test the rules by giving them to someone who was not in the room and asking them to make one item."
+  - "Name the person who checks final work against the rules."
+
+how_it_works:
+  - title: "Writes the feeling first"
+    text: "Sets the feeling before any look or feature."
+  - title: "Lists what to avoid"
+    text: "Names looks and histories to stay away from."
+  - title: "Chooses colours"
+    text: "Each with a meaning and a reason, plus ruled-out colours."
+  - title: "Fixes a few tools"
+    text: "Colour, type, page format and grid only."
+  - title: "Draws signs on one grid"
+    text: "Simple figures that read in any language."
+  - title: "Keeps rules short"
+    text: "One page, with room marked for play."
+  - title: "Names the checker"
+    text: "One person checks final work against the grid."
+  - title: "Tests with a stranger"
+    text: "Plans a test with someone who does not know the language."
+
+output_shape: |
+  FEELING
+  <two to four short lines>
+
+  MUST NOT LOOK LIKE
+  <look or history to avoid> because <reason>
+
+  COLOURS
+  <colour> | means: <meaning where seen> | because: <reason>
+  Ruled out: <colour> because <reason>
+
+  TOOLS
+  Type: <family and weights> | Page format: <sizes> | Grid: <description>
+
+  SIGNS AND ICONS
+  <how they are drawn, on which grid, what keeps them simple>
+
+  WHERE THE TEAM MAY PLAY
+  <what can vary, and by how much>
+
+  WHO CHECKS
+  <name or role>
+
+  STRANGER TEST
+  <how to run it>
+
+  MISSING
+  <facts that would change a rule>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Where it shows up"
+    how: "List every place: signs, print, screens, uniforms. Rules cover only what you list."
+  - what: "The feeling"
+    how: "Say it in plain words. \"Calm and open\" gives firmer rules than \"modern\"."
+  - what: "What to avoid"
+    how: "Name a competitor or era you must not resemble."
+  - what: "Languages"
+    how: "Say which languages the signs must work in."
+
+judge:
+  - "The feeling is written before any look."
+  - "Every colour has a stated meaning and a stated reason."
+  - "The rules fit on one page."
+  - "Play room is marked."
+  - "Final work is checked by a named person."
+
+test:
+  - "Give the rule sheet to someone new and ask them to make a sign. Compare it with your own."
+  - "Show a sign to a person who does not speak the language and ask what it means."
+  - "Check each colour in the place it will be seen, such as in daylight or on a dark wall."
+  - "Run it twice. The feeling lines should stay close."
+
+improve:
+  - "Add your places and sizes to \"What you need\" so rules cover them."
+  - "Add colours you already own to step 3 so it works with them."
+  - "Save the rule sheet in your brand file and date it."
+  - "Pair it with \"Page grid and type planner\" to set the grid for your pages."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing short firm rules from a description is text work any strong chat AI does."}
+    - {name: "A design tool with shared styles", why: "Figma or similar can lock the colours, type and grid into styles your team shares."}
+  inputs:
+    - "Photos of the places where it will appear"
+    - "Your current logo and colours"
+    - "Colours used by neighbours or rivals"
+    - "A list of languages for signs"
+
+terms:
+  - term: "Visual system"
+    meaning: "A small set of rules that keeps a brand looking the same in every place."
+  - term: "Grid"
+    meaning: "A fixed frame that signs and layouts are drawn on."

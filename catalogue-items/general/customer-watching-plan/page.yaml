@@ -1,0 +1,125 @@
+new_slug: customer-watching-plan
+name: "Customer watching plan"
+summary: "Name who you want to understand. Get a plan to watch them first-hand, log what you see and test odd moments."
+job: understand-customers
+thinking: medium
+thinking_why: "It plans fieldwork and judges what counts as an odd moment, within fixed steps."
+
+headline: "Customer watching plan"
+subhead: "Give it the type of customer you want to understand. It picks a few real people, plans long quiet watching and sets a sheet that keeps what you saw apart from what you think. You get a plan, a note sheet and tests for the odd moments."
+
+explain: |
+  Reports flatten people. Averages hide the person who set the product up in a way nobody planned, and a survey cannot show what customers do not know they do. The surest way to learn how people really behave is to watch them, for a long time, before asking anything.
+
+  This skill plans that watching. It picks a few individuals and names them, so they stay people and not a segment. It sets long, quiet sessions and a note sheet that keeps what you saw apart from what you think. It flags odd moments, and checks each guess about them against the notes. It keeps the awkward findings, and only turns patterns shared by more than one person into tests.
+
+when:
+  - "You know your customers from surveys and reports but have never watched one use your product."
+  - "Your numbers show a problem and you cannot say what is behind it."
+  - "You want to test an idea that comes from something odd you saw."
+
+you_give:
+  - "The type of customer you want to understand and what you want to learn"
+  - "Where and how often you can see them (optional)"
+  - "Earlier notes, reviews or support emails (optional)"
+you_get:
+  - "A list of individuals to watch, with a reason for each"
+  - "A watching plan and a note sheet"
+  - "A way to flag and check odd moments"
+  - "A findings report outline and tests tied to patterns"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say who you want to understand and what you want to learn."
+  - "Tell it where you can see them and how often."
+  - "Get each person's permission, then watch and fill in the note sheet."
+  - "Bring your notes back to turn them into the report and tests."
+
+how_it_works:
+  - title: "Chooses individuals"
+    text: "Picks a few real people, names them and includes one unlike the rest."
+  - title: "Plans the watching"
+    text: "Sets where, when and how long, with no questions at first."
+  - title: "Sets the note sheet"
+    text: "Keeps what you saw apart from what you think it means."
+  - title: "Flags odd moments"
+    text: "Records exactly what happened when something does not fit."
+  - title: "Checks the guesses"
+    text: "Writes two guesses and tests them against the notes."
+  - title: "Keeps the awkward parts"
+    text: "Records findings that are uncomfortable for your product or for you."
+  - title: "Turns patterns into tests"
+    text: "Makes tests from patterns seen in more than one person."
+
+output_shape: |
+  WHO I WILL WATCH
+  <name or code>: <who, where, why chosen>
+
+  THE PLAN
+  Where / when / how long / sessions: <details>
+  First sessions: watch only, no questions
+  If my presence changes things: <how to log it>
+
+  NOTE SHEET
+  Date | Person | What happened | Before / after | My guess (later)
+
+  ODD MOMENTS
+  <ODD> <person>: <what happened, time, lead-up>
+  Guess 1 / Guess 2: <why> | Supports: <notes> | Against: <notes>
+
+  REPORT OUTLINE
+  Findings (evidence) | Guesses | Awkward findings
+
+  TESTS
+  <pattern, seen in who> -> <change to try> -> <expected> -> <result that would change my mind>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "How many people"
+    how: "Three to six works for a first round. Add more only when the odd moments keep changing."
+  - what: "How long you can watch"
+    how: "State your hours. The plan fits them, but warns when a short watch will miss things."
+  - what: "The question behind it"
+    how: "Name what you want to understand, such as setup or first use. It decides which moments to watch."
+  - what: "Where you watch"
+    how: "Their own place gives better notes than yours. Say what is possible."
+
+judge:
+  - "The notes could be read by someone who was not there and still make sense."
+  - "Guesses are in their own column."
+  - "Each pattern names at least two people."
+  - "There is at least one finding you would rather not publish."
+  - "Every test says what would change your mind."
+
+test:
+  - "Watch two customers and read your notes cold the next day. Check whether you can tell seen from guessed."
+  - "Take one odd moment and see if the second guess is better supported than the first."
+  - "Compare your findings to your last survey. Note what the survey missed."
+  - "Run one test from the plan and see if it matches what the notes predicted."
+
+improve:
+  - "Add the moments that matter most in your product to step 4, such as setup, first use and returns."
+  - "Add your privacy rules and consent wording to step 1."
+  - "Add what your team normally ignores as noise to the odd-moment rule."
+  - "Pair it with Customer interview question writer for the talk after you have watched."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning the sessions and sorting notes is text work any strong chat AI does well with this skill."}
+    - {name: "A notebook or a shared sheet", why: "Easier than a laptop for writing what you see as it happens."}
+  inputs:
+    - "Support tickets from the same customers"
+    - "Usage data for the people you watch"
+    - "Photos or screen recordings the customer agrees to share"
+    - "Earlier interview notes"
+
+terms:
+  - term: "Odd moment"
+    meaning: "Something that happened once, a workaround, or an action that does not fit the pattern."
+  - term: "Note sheet"
+    meaning: "A log that keeps what you saw in one column and what you think it means in another."

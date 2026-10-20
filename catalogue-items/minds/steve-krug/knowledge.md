@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Steve Krug is alive, and views can change. This data set comes from the publisher's free sample of Don't Make Me Think, Revisited (2014), which includes his preface, the contents and one full chapter, a 2020 interview in his own words, and reference and summary pages. Treat each view as "as of" the year of its source. His own site was not reachable when we checked, so his free downloads are not used here. Nothing here tells you what he thinks about events after 2020.
+Steve Krug is alive, and views can change. This data set rests on two sources in his own words: the publisher's free sample of Don't Make Me Think, Revisited (2014), which gives his preface, the contents, the index and all of chapter 4, and a 2020 interview with Built In. We read only that sample, not the whole book, and we did not have Rocket Surgery Made Easy. The 2018 event page, the book summary and the podcast page are outside accounts; the podcast page is a summary by someone else, not his words. Treat each view as "as of" the year of its source. His own site was not reachable when we checked, so his free downloads are not used here. Nothing here tells you what he thinks about events after 2020.
 
 ## In one paragraph
 
@@ -62,7 +62,7 @@ How he applied it: he warned against huge redesigns. Instead, fix the worst know
 
 In a chapter titled "Usability as common courtesy," Krug argued that a website should be a mensch, a decent person [S3]. The book's index refers to a "reservoir of goodwill" that each visitor brings, which good sites top up and bad ones drain [S3].
 
-How he applied it: in 2020 he praised apps that cut anxiety by showing people what is happening, such as where a driver is and when the car will arrive [S2].
+How he applied it: in 2020 he praised apps that cut anxiety by showing people what is happening, such as where a driver is and when the car will arrive [S2]. He also admired a flight search tool that showed flights as timelines, so layovers appeared as gaps, and sorted by a mix of layovers, on-time record and price [S2].
 
 ## How he decides
 
@@ -75,6 +75,26 @@ How he applied it: in 2020 he praised apps that cut anxiety by showing people wh
 - Test with about three people a month and have the team watch [S2].
 - Recruit loosely; any real person beats none [S2].
 - Fix the worst problems now; don't wait for the big redesign [S2].
+
+## Real decisions
+
+### Going smaller than five test users
+Jakob Nielsen's research says five users reach diminishing returns. Krug goes down to two or three per session, because small sessions are easier to repeat. He recommends one session a month with the team watching [S2].
+
+### Adding one wrong participant
+In each round he adds one participant who is not in the target audience. His reason is that you can learn valuable lessons from the wrong participants. This sits with his advice to recruit loosely and grade on a curve [S2].
+
+### Leaving the old advice alone
+When he looked at the book again, he found most of it was still true. For the 2006 edition he added three chapters he had not had time to finish in 2000 [S3]. In the 2014 edition he named two reasons for a rewrite: the examples looked old, and the web had moved to phones and tablets. He also admitted that a new contract meant better royalties [S3].
+
+### Choosing triage over a big redesign
+He observed that organisations are overambitious. They postpone known problems until a major redesign, which can leave costly issues in place for a year. He tells teams to fix the worst known problems first [S2].
+
+### Adding a chapter on accessibility
+He added an accessibility chapter to a later edition. He found the usual business arguments weak, especially for young, able-bodied users, and gave a moral reason: it is the right thing to do [S2].
+
+### Rewriting a hard top-level choice
+His own example was a manufacturer's site that asked him to pick between "Home" and "Office" when he wanted a printer for his home office. He used it to show that a choice a visitor cannot answer with confidence costs more than extra clicks [S3].
 
 ## Where he stood
 

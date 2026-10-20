@@ -1,0 +1,18 @@
+slug: ad-meaning-test-planner
+name: "Ad meaning test planner"
+summary: "Paste your ad and your audience groups. Get a simple test of whether each group reads it as you mean."
+category: general
+type: skill
+role: make
+job: research
+level: advanced
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [mark-ritson]
+credits:
+  - {title: "Polysemy in Advertising (ERIM report, 2006)", by: "Stefano Puntoni, Jonathan Schroeder and Mark Ritson", used: "The idea that one ad can be read several ways, the word-association and recognition tests, and reading results as differences between groups"}

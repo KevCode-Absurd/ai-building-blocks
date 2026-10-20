@@ -30,6 +30,8 @@ sources:
   - {n: 6, title: "Arnault, Bernard 1949–", by: "Encyclopedia.com", url: "https://www.encyclopedia.com/economics/news-wires-white-papers-and-books/arnault-bernard-1949", kind: reference}
   - {n: 7, title: "LVMH", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/LVMH", kind: reference}
   - {n: 8, title: "Hermès", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Herm%C3%A8s", kind: reference}
+  - {n: 9, title: "LVMH Annual Report 2001, company sections: Passionate about creativity, Developing the star brands, Cultivating the exceptional (corporate text, not signed by him)", by: "LVMH", url: "https://ddd.uab.cat/pub/infanu/30082/iaLVMHa2001ieng.pdf", kind: reference}
+  - {n: 10, title: "Interview with the Group Managing Director, LVMH Annual Report 2025 (Stephane Bianchi)", by: "LVMH", url: "https://hosting.fluidbook.com/LVMH/2025interactiveannualreport/en/data/texts.pdf", kind: reference}
 tests:
   - {kind: use, prompt: "Write a one-page note to my team explaining how we will make our candle brand more desirable without cutting prices."}
   - {kind: use, prompt: "Here are the six products my small company sells. Sort them into stars, rising stars and distractions, and say why."}

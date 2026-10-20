@@ -1,0 +1,41 @@
+# Workflow skeleton for The Sales Acceleration Formula (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: sales-acceleration-formula
+source:
+  title: "The Sales Acceleration Formula"
+  by: "Mark Roberge"
+  kind: book
+  rights: ideas-only
+minds: [mark-roberge]
+workflow:
+  slug: hire-pay-and-measure-a-sales-team-on-what-works
+  name: "Hire, pay and measure a sales team on what works"
+  summary: "Describe your sale and past hires. Get a hiring scorecard, a pay plan check and one early sign of customer success."
+  when: "you are building a sales team and want hiring, pay and targets to rest on data."
+  job: lead-people
+  level: advanced
+steps:
+  - name: "Sales hiring scorecard builder"
+    skill: sales-hiring-scorecard-builder
+    job: ops
+    from: "The Sales Acceleration Formula, Chapter 1"
+    method: ["Describe your sales context: who buys, how hard it is to explain, how long it takes", "List the traits you think predict success and define each", "Write what a 1, a 5 and a 10 look like for each trait", "Choose a test for each trait: questions, role play, exercise or reference check", "Score each candidate on one simple scorecard", "Compare scorecards of your best and slowest hires and raise, cut or add traits", "Set a date to re-check against real results"]
+    inputs: [question, lessons_register!]
+    outputs: [plan]
+    note: "A 1 to 10 scorecard with a test for each trait"
+  - name: "Sales pay plan checker"
+    skill: sales-pay-plan-checker
+    job: ops
+    from: "Sales Compensation, chapter in Data Driven Sales"
+    method: ["Write down what the plan pays for in plain words", "Rank reps by customer churn or retention", "Look for a gap between top earners and keepers", "Test a payout tied to churn bands", "Check whether expansion pays more than a first sale", "Name the behaviour you want and how you will see it in two quarters"]
+    inputs: [performance_sheet, plan, question!]
+    outputs: [audit_report]
+    note: "What it rewards and ignores, plus one change to test. Reads the plan from the step before"
+  - name: "Customer success leading-sign definer"
+    skill: customer-success-leading-sign-definer
+    job: research
+    task: test-an-idea
+    from: "The appliance of science: Mark Roberge's formula for scaling, 2020"
+    method: ["Ask whether customers stay and renew, not whether they bought", "List what retained customers did early that others did not", "Write one sign as: P percent of customers do E within T days", "Set P and T so they can be checked in 30 to 60 days", "Measure it by cohort", "Check lifetime value against cost to win before adding sellers"]
+    inputs: [audit_report!, voc_reviews!, performance_sheet!, question]
+    outputs: [plan]
+    note: "One early sign of success: a percent, an action and a time limit. Reads the audit report from the step before"

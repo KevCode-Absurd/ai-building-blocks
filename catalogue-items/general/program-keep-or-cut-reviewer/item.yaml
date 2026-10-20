@@ -1,0 +1,20 @@
+slug: program-keep-or-cut-reviewer
+name: "Program keep-or-cut reviewer"
+summary: "Paste results for the projects you run. Get each one marked keep, cut or double down, judged on cash and customer value."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [jeff-bezos, warren-buffett]
+credits:
+  - {title: "1997 Letter to Shareholders (reprinted in the 2015 letter)", by: "Jeff Bezos, Amazon", used: "Looking at customer signals first, preferring cash to how numbers look, dropping what does not earn an acceptable return, and spending more on what works"}
+  - {title: "2007 Letter to Berkshire Hathaway Shareholders", by: "Warren Buffett", url: "https://www.berkshirehathaway.com/letters/2007ltr.pdf", used: "The four tests for a business, and sorting businesses by how much new money they need to grow their earnings"}

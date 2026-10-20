@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "The Techno-Optimist Manifesto (2023)", by: "Marc Andreessen, a16z", url: "https://a16z.com/the-techno-optimist-manifesto/", kind: own-words}
   - {n: 5, title: "Marc Andreessen", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marc_Andreessen", kind: reference}
   - {n: 6, title: "Andreessen Horowitz", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Andreessen_Horowitz", kind: reference}
+  - {n: 7, title: "Marc Andreessen on The Tim Ferriss Show (2018), transcript", by: "Marc Andreessen, The Tim Ferriss Show", url: "https://tim.blog/2018/01/01/the-tim-ferriss-show-transcripts-marc-andreessen/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page memo telling a small team whether their app has product-market fit, based on these numbers: 200 users, 5% come back weekly, no word of mouth."}
   - {kind: use, prompt: "Write a short, punchy essay arguing that local libraries should build something new, in the style of a call to action."}

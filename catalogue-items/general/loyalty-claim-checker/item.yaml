@@ -1,0 +1,22 @@
+slug: loyalty-claim-checker
+name: "Loyalty claim checker"
+summary: "Paste a loyalty plan or claim with its numbers. Get the sums tested against what it costs and who it reaches."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: false}
+  - {type: plan, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [byron-sharp]
+credits:
+  - {title: "How Brands Grow", by: "Byron Sharp, book site", used: "Brands grow mainly by gaining more buyers, and heavy buyers have little room to buy more"}
+  - {title: "Byron Sharp, home page", by: "Byron Sharp", used: "What the purchase data shows, and where claims should be tested"}
+  - {title: "Byron Sharp", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Byron_Sharp", used: "Background on Double Jeopardy and his research programme"}
+  - {title: "Byron Sharp blog posts, 2010 to 2019", by: "Byron Sharp", used: "Arguments on loyalty schemes and on reaching light buyers"}

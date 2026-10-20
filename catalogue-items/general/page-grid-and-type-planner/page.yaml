@@ -1,0 +1,128 @@
+new_slug: page-grid-and-type-planner
+name: "Page grid and type planner"
+summary: "Paste your content and page type. Get a grid, a short type list and a white-space plan."
+job: design-work
+thinking: medium
+thinking_why: "It makes layout choices by fixed rules, with judgement on type and white space."
+
+headline: "Page grid and type planner"
+subhead: "Give it your content and the type of page. It asks what the page is for and who reads it, then sets margins, columns, a short type list and the white space. You get a grid and type plan for every page in the set."
+
+explain: |
+  Pages built without a grid look arranged by luck. Elements sit a little off one another, type comes in six sizes and three faces, and the page has no clear order. Readers cannot say what to look at first, and every new page is a fresh set of decisions.
+
+  This skill starts with what the page means and who reads it. It then sets margins, picks columns and modules to suit the content and the image shapes, and chooses one or two typefaces from a short classic list and one or two sizes. It uses large type against small type, and white space, to set order. It lays out every page in the series and marks changes that have no reason.
+
+when:
+  - "You are laying out a report, site, menu, poster set or catalogue and want a system."
+  - "Your pages look busy and nobody can say what to look at first."
+  - "You need pages by several people to look like one set."
+
+you_give:
+  - "Your content, or a list of what each page holds"
+  - "The page type and size, such as web, A4 or poster"
+  - "Your brand file or current look (optional)"
+  - "The image shapes you must fit (optional)"
+you_get:
+  - "A grid: margins, columns and modules"
+  - "A short type list with one or two typefaces and one or two sizes"
+  - "A white-space plan"
+  - "A layout for every page in the series, with unneeded changes marked"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your content and say what the page type is."
+  - "Say who reads it and what you want them to do."
+  - "Paste your brand file or sizes already in use, if any."
+  - "Lay out one page on the grid and check the order reads at a glance."
+  - "Apply the grid to the rest of the pages."
+
+how_it_works:
+  - title: "Asks what it means"
+    text: "Sets what the page says and who reads it."
+  - title: "Sets the margins"
+    text: "Tighter for tension, wider for calm."
+  - title: "Chooses the grid"
+    text: "Columns and modules fit the content and image shapes."
+  - title: "Picks the type"
+    text: "One or two typefaces from a short list, one or two sizes."
+  - title: "Sets the order"
+    text: "Big type against small, and white space, show what comes first."
+  - title: "Lays out the series"
+    text: "Plans every page and marks changes with no reason."
+  - title: "Keeps it plain"
+    text: "Asks what each piece has to do and cuts the rest."
+  - title: "Checks the set"
+    text: "Runs its own checks and names any missed."
+
+output_shape: |
+  MEANING AND READER
+  <what the page says> | read by: <who> | should do: <action>
+
+  GRID
+  Page: <size> | Margins: top <n> bottom <n> inside <n> outside <n>
+  Columns: <n> | Rows or modules: <n> | Gutter: <n>
+
+  TYPE
+  Family: <one typeface family> | Sizes: <size 1>, <size 2>
+  Weights used: <light, regular, bold>
+
+  ORDER AND WHITE SPACE
+  First thing seen: <element>. Then: <element>. Empty on purpose: <area>.
+
+  PAGES
+  <page>: <what sits on which columns and modules>
+  Changes with no reason: <list, or none>
+
+  MISSING
+  <facts that would change the grid>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Tension"
+    how: "Say if you want calm or tense. Tighter margins and bigger type against small raise tension."
+  - what: "Image shapes"
+    how: "Give shapes and counts. The grid has to fit them."
+  - what: "Existing type"
+    how: "Name the typeface you already use. It will stay unless the page needs a change."
+  - what: "Series length"
+    how: "Say how many pages. More pages need a tighter system."
+
+judge:
+  - "Only one or two type sizes are in the plan."
+  - "Every element sits on the grid."
+  - "White space is planned, not left over."
+  - "A new reader could say what the page is for in five seconds."
+  - "Only one typeface family is chosen."
+
+test:
+  - "Squint at the layout. The first thing you see should be the one you planned."
+  - "Show it to someone for five seconds and ask what the page is for."
+  - "Move one element a few points off the grid. The page should look wrong."
+  - "Lay out a page you did not plan for and see whether the grid holds."
+
+improve:
+  - "Add your common page types to \"What you need\" with their sizes."
+  - "Add your approved typefaces to step 4 so it never suggests others."
+  - "Save the grid as a template in your design tool."
+  - "Pair it with \"Visual system rules writer\" for colour and sign rules."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Setting a grid and type list from rules is text and number work any strong chat AI does."}
+    - {name: "A design tool with layout grids", why: "Figma, InDesign and similar tools let you set the grid and test the pages."}
+  inputs:
+    - "A sample of the real content, not placeholders"
+    - "Images with their real shapes and sizes"
+    - "Printed or screen size limits"
+    - "Your brand file"
+
+terms:
+  - term: "Grid"
+    meaning: "The columns and rows that every element on the page lines up with."
+  - term: "Module"
+    meaning: "One block formed where the columns and rows cross."
+  - term: "White space"
+    meaning: "Empty area left on purpose to give order and rest."

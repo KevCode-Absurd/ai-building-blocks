@@ -1,0 +1,131 @@
+new_slug: icon-set-planner
+name: "Icon set planner"
+summary: "Paste the actions or objects you need icons for. Get a plan for a small, clear icon set with a reading test."
+job: design-work
+thinking: medium
+thinking_why: "It weighs several options for each icon, but the set rules stay fixed."
+
+headline: "Icon set planner"
+subhead: "Give it the actions or objects you need icons for and where people will see them. It sets the grid and colour rules, plans several options for each meaning and removes puns. You get an icon plan and a reading test."
+
+explain: |
+  Icons fail in small ways. One has a joke nobody gets, another is too detailed at small size, and a third looks like it came from a different set. Fixing them one by one after the fact costs more than planning the set once.
+
+  This skill lists the meaning of every icon, sets the grid, stroke and colour limits, and collects references people already know. It plans three different drawings per meaning, cuts puns and local words, checks the set as one family and writes a test you can run with five people. You get a plan to hand to a designer.
+
+when:
+  - "You are adding icons to an app, a site or a document and want them to feel like one set."
+  - "Your current icons look mixed or people ask what they mean."
+  - "You need signs or symbols for a place with visitors from many countries."
+
+you_give:
+  - "The list of actions or objects that need icons"
+  - "Where they will appear and the smallest size"
+  - "Your brand file or style rules (optional)"
+you_get:
+  - "Grid, stroke and colour rules for the set"
+  - "Three drawing options per meaning, with a pick"
+  - "A cut list of puns and unclear options"
+  - "A reading test with a pass line"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your list of meanings, where they appear and the smallest size."
+  - "Add your brand rules if you have them."
+  - "Hand the plan to a designer, then run the reading test on the finished icons."
+
+how_it_works:
+  - title: "Lists meanings"
+    text: "A table of what each icon says, where and for whom."
+  - title: "Fixes the rules"
+    text: "Grid, stroke, corners, colours and smallest size."
+  - title: "Gathers references"
+    text: "Where people already see each meaning."
+  - title: "Plans options"
+    text: "Three different drawings for each meaning."
+  - title: "Cuts puns"
+    text: "Removes jokes, words and unclear gestures."
+  - title: "Checks the family"
+    text: "Lists what must match across the set."
+  - title: "Plans the test"
+    text: "Five people, no labels, a pass line."
+  - title: "Plans the clean-up"
+    text: "What to remove so each reads fast."
+
+output_shape: |
+  MEANINGS
+  <icon>: says <meaning> | appears <where> | seen by <who>
+
+  RULES
+  Grid: <n>  Stroke: <n>  Corners: <style>  Colours: <list>  Smallest size: <n>
+
+  PER ICON
+  <icon>
+    References: <list>
+    Option A: <drawing>
+    Option B: <drawing>
+    Option C: <drawing>
+    Pick: <letter> because <reason>
+
+  CUT
+  - <option>: <pun, word or unclear gesture>
+
+  FAMILY CHECK
+  <what must match; any icon that stands out>
+
+  READING TEST
+  <steps and pass line>
+
+  CLEAN-UP
+  <per icon>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "Smallest size"
+    how: "The size sets how much detail is allowed. Give the real number."
+  - what: "Where people see them"
+    how: "A phone toolbar and a road sign need different rules."
+  - what: "How many icons"
+    how: "Under about twenty keeps the family check useful. Group larger sets by area."
+  - what: "Your brand file"
+    how: "Colours and corner style from your brand file keep the set on brand."
+
+judge:
+  - "Every meaning has three options that differ."
+  - "The rules name a grid, stroke and smallest size."
+  - "No option relies on a pun or a word."
+  - "The reading test can be run by someone who did not make the icons."
+  - "Hard-to-tell-apart meanings are flagged."
+
+test:
+  - "Plan icons for five actions you already have icons for. Compare with what you use now."
+  - "Run the reading test on your current icons to see which fail."
+  - "Run it twice. The rules should stay the same even if the options change."
+  - "Show the plan to a designer and ask what they would still need."
+
+improve:
+  - "Add your platform's own icon rules to step 2."
+  - "Add a list of symbols that mean different things in your markets to step 5."
+  - "Save the final grid and stroke rules in your brand file."
+  - "Pair it with a design brief writer when you commission the drawings."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning, comparing and writing tests is text work."}
+    - {name: "Figma", why: "A common tool for drawing icons on a grid and checking the set at small size."}
+  inputs:
+    - "Your brand file with colours"
+    - "Screenshots of where icons will sit"
+    - "Icons you already have and like"
+    - "A list of the languages your users speak"
+
+terms:
+  - term: "Grid"
+    meaning: "The fixed square of units each icon is drawn inside, so lines line up across the set."
+  - term: "Stroke"
+    meaning: "The thickness of the lines in an icon."

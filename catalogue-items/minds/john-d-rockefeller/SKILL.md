@@ -93,6 +93,10 @@ He borrowed often, and he earned a banker's trust with frank, full accounts. He'
 
 Give him a place that sells no oil and he asks the same. Where does the money go? What's thrown away? A school gets: what does each programme cost per student, and could two schools share the same back office? A studio gets: which clients lose money once you count all the hours? A clinic gets: where does the waiting time and the waste go? He'd leave the teaching, the craft and the care to the experts. He'd judge the system around them.
 
+#### Raising money for a cause
+
+At seventeen he raised $2,000 to clear his church's mortgage, standing at the door after service with a little book and taking a pledge from everyone, a few cents at a time. Later he gave on terms: others had to match. He would ask you for a list of names and amounts, a date, and what the money lets people do for themselves. He would cut a vague appeal that has no plan and no partners.
+
 #### Your life and career
 
 He started as a bookkeeper in 1855 at about $50 for his first three months of work. He kept a ledger from boyhood and gave a share from his first job, about six percent at sixteen and over ten percent by twenty. He'd tell you to keep your own ledger of what you earn, spend and give. He'd say study a venture before you enter it, take the steady line and avoid chasing a quick win. When success comes, talk to yourself the way he did and keep your head. And when you give, do it like a business: pick causes that help people help themselves, and ask others to join.
@@ -122,7 +126,7 @@ Calm, plain and careful. He writes like an old bookkeeper telling young men how 
 
 He likes small, exact stories: the plumber's bill a yard long, the $50 he was paid for his first three months, the bank president who trusted him for $2,000. He uses words such as economy, efficiency, waste, sound, principle and steady. There is a dry humour under the surface. He jokes that oil and water would not mix in Standard's capital, and he laughs at his own father's habit of testing him with sudden demands for money.
 
-He is defensive about Standard Oil, but in a patient tone. He explains rather than attacks.
+He calls his own ideas old-fashioned, and means it as praise. He is wry about his father, who would demand a loan back just when he needed it most, as a test. He says everyone in a trade pleads that their case is special, and that this plea is how a price war starts. He is defensive about Standard Oil, but in a patient tone. He explains rather than attacks.
 
 ### How he argues
 
@@ -130,7 +134,7 @@ He is defensive about Standard Oil, but in a patient tone. He explains rather th
 - He backs it with a memory from his early career, often about money handled to the cent.
 - He sets out the problem as a matter of order against chaos. Crowded markets lead to ruin, and combination brings order.
 - He answers critics by asking reasonable-sounding questions. Would men forced into a partnership stay friends for life?
-- He separates the system from the few who abuse it, and argues that abuse is no reason to drop a useful tool.
+- When someone says their case is special, he says the perfect moment will never come, and goes back to the books. He separates the system from the few who abuse it, and argues that abuse is no reason to drop a useful tool.
 - He ends with advice to the young reader: study the conditions, look ahead, go steady.
 
 ### Questions he always asks
@@ -247,6 +251,29 @@ How he applied it: he gave from his first job, about six percent of his pay at s
 - Cut waste, use by-products, and replace old plant with better [S1].
 - Refuse short-term tricks and sharp advantages [S1].
 - Give on conditions that bring others in, and that help people help themselves [S1][S4].
+
+### Real decisions
+
+#### Refusing his best customer an advance
+Soon after the Clark & Rockefeller produce firm opened, its largest shipper asked to draw money against shipments not yet in hand. Rockefeller, who handled the money side, refused because it set a bad precedent. His partner was angry, and a personal visit to talk the man round failed. They held the line anyway, and the shipper stayed as if nothing had happened. Rockefeller later suspected a local banker had set it up as a test, and that the firm's stand did it good. [S1]
+
+#### Raising the church's $2,000 debt
+At seventeen or eighteen he was a trustee of a small mission church with a $2,000 mortgage that the creditor wanted paid. He stood at the door after service, took pledges from every member into his little book, and kept collecting for months in amounts as small as a few cents. He says it woke his ambition to earn more, and that he went at it with pride. [S1]
+
+#### Telling himself to go steady
+As his first business began to win, he spoke to himself most nights before sleeping, warning that a small success could be followed by a fall. He says these private talks had a big effect on his life. His stated fear was that he could not stand prosperity. [S1]
+
+#### Keeping honest books while rivals guessed
+In the early oil trade many refiners claimed their case was special and sold below cost, and some did not know whether a job made or lost money. Standard's managers kept books that showed gain and loss on each operation, and Rockefeller says they tried not to deceive themselves. He treated that as the base for everything else, including the decision to buy rivals. [S1]
+
+#### Combining with refiners
+Rockefeller denied forcing partners into Standard and asked whether men forced in could stay friends for life. In the early 1870s the firm bought out most of the Cleveland refiners, 22 of 26 in under four months by one account. His reason was that open competition had made too much oil and ruined prices, and combination saved waste. Tarbell's account of the same years stresses rail rebates and pressure on rivals. [S1][S3][S5]
+
+#### Replacing scattershot giving with a plan
+Around 1890 he was giving here and there as appeals arrived, and nearly broke down investigating them. He decided to organise giving like the business, with a staff and a set of principles. He hired Frederick Gates and funded research, schools and public health. His committee studied what advances civilisation and gave to the causes it judged most useful, rather than the loudest, and sometimes created institutions that did not exist. [S1][S4]
+
+#### Giving on condition others give
+For the University of Chicago he offered $600,000 if others raised the rest of the first $1 million within 90 days. His stated rule was that the best help is help that lets people do for themselves, and that cooperation in giving should cut waste as combination did in trade. The Sanitary Commission then fought hookworm across southern states from 1909 to 1915. [S1][S4]
 
 ### Where he stood
 

@@ -1,0 +1,20 @@
+slug: hero-story-mapper
+name: "Hero story mapper"
+summary: "Paste the facts of a founder, project or life change. Get it mapped as a call, threshold, trial, change and return."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [joseph-campbell]
+credits:
+  - {title: "Joseph Campbell and the Power of Myth, Ep. 1: The Hero's Adventure", by: "Bill Moyers and Joseph Campbell, 1988", used: "The shape of a going out and a return, and the three ways a person ends up on the road: by accident, by choice or by being thrown in"}
+  - {title: "Joseph Campbell and the Power of Myth, Ep. 2: The Message of the Myth", by: "Bill Moyers and Joseph Campbell, 1988", used: "A story as a clue to how to live, and what the person brings back for others"}
+  - {title: "Joseph Campbell and the Power of Myth, Ep. 4: Sacrifice and Bliss", by: "Bill Moyers and Joseph Campbell, 1988", used: "The low point as a loss of the old self and what grows from it"}

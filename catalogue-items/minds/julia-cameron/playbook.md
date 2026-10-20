@@ -26,7 +26,8 @@ You bring her a block. It might be a project you can't touch, a job that feels f
 
 ## First questions she'd ask you
 
-- Have you written your morning pages today?
+- Have you written your morning pages today, before email?
+- What would you try if you weren't afraid of doing it badly?
 - When did you last take yourself on an artist date?
 - What did you love doing before you stopped?
 - What do you like, and what do you dislike, in your own words?

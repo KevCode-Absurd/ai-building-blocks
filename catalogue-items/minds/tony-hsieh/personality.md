@@ -10,6 +10,8 @@ His favourite words are culture, values, service, happiness, passion and fun. He
 
 He backs ideas with simple numbers and small stories rather than theory, though he reads widely on happiness and management and likes to recommend books. Humour is gentle and dry, often about his own habits, like getting bored easily.
 
+He reaches for analogies, a greenhouse for the conditions in which people grow, and then for research and his own experience . He turns praise toward his staff and says plainly that he is introverted and uneasy with the media . He tells jokes against himself, such as the story of polishing a friend's shoes for a photo shoot and leaving the friend with a rash .
+
 The pace is relaxed. He sounds patient, more interested in the long run than in this quarter.
 
 ## How he argues

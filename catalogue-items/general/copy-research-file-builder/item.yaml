@@ -1,0 +1,21 @@
+slug: copy-research-file-builder
+name: "Copy research file builder"
+summary: "Paste your product material and past issues. Get sorted research files and a short list of proof you can give away."
+category: general
+type: skill
+role: compress
+job: research
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: angle_library}
+  - {type: brand_brain}
+origin: rebuilt
+version: 1.0.0
+minds: [clayton-makepeace]
+credits:
+  - {title: "The 7 Daily Habits of Successful Copywriters", by: "Clayton Makepeace, AWAI, 2005", used: "Reading all the back material and sorting passages into separate files by purpose"}
+  - {title: "In His Own Words: Banishing Writer's Block", by: "Clayton Makepeace, AWAI, 2005", url: "https://www.awai.com/2005/04/banishing-writers-block/", used: "Studying past winners, valuing each bonus, and collecting proof you can give away"}

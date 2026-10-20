@@ -31,6 +31,7 @@ sources:
   - {n: 7, title: "Hidden Potential (book page)", by: "Adam Grant, adamgrant.net", url: "https://adamgrant.net/book/hidden-potential/", kind: own-words}
   - {n: 8, title: "The Truth About People Pleasing (2026), with reader comments", by: "Adam Grant, Granted newsletter", url: "https://adamgrant.substack.com/p/the-truth-about-people-pleasing", kind: own-words}
   - {n: 9, title: "Think Again review (2021)", by: "Allan Schweyer, getAbstract", url: "https://www.getabstract.com/en/summary/think-again/40716", kind: secondary}
+  - {n: 10, title: "Wondering: reader questions answered (archive, 2017 to 2018)", by: "Adam Grant, adamgrant.net", url: "https://adamgrant.net/writing/wondering/archive/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page guide for a team leader on running a meeting where people feel free to disagree."}
   - {kind: use, prompt: "Write a short set of questions I can use to test my own strong opinion about whether remote work hurts teamwork."}

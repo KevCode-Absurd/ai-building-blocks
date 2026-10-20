@@ -1,0 +1,124 @@
+new_slug: values-to-week-planner
+name: "Values-to-week planner"
+summary: "Share your roles, values and calendar. Get a plan from values to quarter, week and day, with protected hours for hard work."
+job: plan-strategy
+thinking: low
+thinking_why: "It follows a fixed order of steps and fits your calendar, with few judgement calls."
+
+headline: "Values-to-week planner"
+subhead: Give it your roles, what you value and your calendar for a normal week. It turns them into quarter goals, a short list of projects, protected blocks for hard work and set times for messages. You get a week you can keep up for a year.
+
+explain: |
+  A full calendar is not a plan. When every day is cut up by meetings and messages, the work that matters gets the scraps, and you end the week busy with little finished. Most people plan by adding to a list, so nothing traces back to what they care about.
+
+  This skill works from the top down. It writes a short statement of your roles and values, turns that into goals for the quarter, then picks a few projects for the week. It finds two-hour blocks in your real calendar and protects them, and places short check times for messages around those blocks. It adds quiet seasons or a no-meeting day, then checks whether the pace is one you could hold for a year.
+
+when:
+  - You are busy every day but cannot name what you finished this month.
+  - Your hardest work keeps getting pushed to evenings or weekends.
+  - You are starting a new quarter and want your goals to show up in your week.
+
+you_give:
+  - Your roles and what you value, in a few lines (required)
+  - Your calendar for a normal week, with fixed meetings and duties (required)
+  - Projects and goals already on your plate (optional)
+  - How often you must answer messages or calls (optional)
+you_get:
+  - A short statement of your roles and values
+  - Goals for the quarter and projects for the week
+  - Protected hard-work blocks placed in your calendar
+  - Message check times, a quiet-season idea and a plan for how to judge it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your roles and what you value, then paste your normal week as it is, meetings and all.
+  - Say how fast people expect a reply, so the message checks are realistic.
+  - Try the week for two weeks, then tell the skill what broke and ask for a fix.
+  - Review at the end of the quarter by what you finished, not by how busy you were.
+
+how_it_works:
+  - title: Roles and values
+    text: Writes a short statement of the roles you hold and what you value in each.
+  - title: Quarter goals
+    text: Turns that statement into a few goals for the next three months.
+  - title: Weekly projects
+    text: Picks a few projects for the week that serve those goals.
+  - title: Protected blocks
+    text: Finds two-hour blocks in your real calendar for hard work and marks them as off limits.
+  - title: Message checks
+    text: Sets short check times for email and chat around the blocks.
+  - title: Quiet seasons
+    text: Adds a quiet season or a no-meeting day to keep the pace sustainable.
+  - title: Judge by months
+    text: Sets how to judge the plan by what you finished over months.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  ROLES AND VALUES
+  <role>: <what you value in it>
+
+  QUARTER GOALS
+  1. <goal> | Serves: <value>
+
+  THIS WEEK
+  Projects: <two to four projects> | Serves: <goal>
+
+  YOUR WEEK
+  <day>: Block <time>: <hard work task> | Checks: <times> | Meetings: <fixed ones>
+
+  QUIET SEASONS
+  <idea and when>
+
+  HOW TO JUDGE IT
+  <what you should have finished by the end of the quarter>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your values
+    how: Write them as what you would defend, such as "making work I am proud of", not as slogans.
+  - what: Your real calendar
+    how: Include the meetings you cannot move. A plan built around a made-up week will fail.
+  - what: Reply speed
+    how: If people need an answer inside an hour, say so. The check times change to fit.
+  - what: Hard work
+    how: Name the task that needs long focus, such as writing, design or analysis, so the blocks go to it.
+
+judge:
+  - Every task on the plan traces to a value you stated.
+  - At least two protected blocks are placed in your real calendar.
+  - Message checks sit outside the blocks.
+  - The pace is one you could keep for a year.
+  - Nothing in your input was invented.
+
+test:
+  - Try one week and count the hours of hard work you finished against a normal week.
+  - Ask a colleague whether the check times work for them. Adjust if not.
+  - Run it with a different set of values and see whether the weekly projects change.
+  - After a month, compare what you finished with the quarter goals.
+
+improve:
+  - Add your fixed duties, such as school pickup, to the steps so blocks never clash with them.
+  - Add your own rule for how many projects you can hold at once.
+  - Keep your roles and values in your brand file or notes and reuse them each quarter.
+  - Pair it with "Money-first business cut planner" if too many projects are the problem.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a calendar into blocks and checks is text work any strong chat AI does well."}
+    - {name: "Your calendar app", why: "Put the blocks in as real events so they cannot be booked over."}
+  inputs:
+    - "An export or screenshot of your last two weeks"
+    - "A list of recurring meetings and who asked for each"
+    - "A list of the commitments you made this quarter"
+
+terms:
+  - term: Hard work
+    meaning: Work that needs long, undisturbed focus and uses your best skills, such as writing, design or analysis.
+  - term: Protected block
+    meaning: A stretch of calendar kept clear of meetings and messages for hard work.

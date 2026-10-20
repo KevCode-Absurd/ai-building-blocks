@@ -75,6 +75,29 @@ How she applied it: she kept control through a stream of letters to Ransom from 
 - Be honest and straight in every deal [S4].
 - If you're left out, speak up [S3].
 
+## Real decisions
+
+### Leaving the washtub for her own formula
+After years as a laundress in St. Louis, she had learned hair care from her brothers, who were barbers, and had sold products as a commission agent for another entrepreneur, Annie Malone. In July 1905 she moved to Denver with her daughter, kept selling for Malone at first, and built her own product line. The two women fell out when Malone accused her of taking her formula. [S1][S2]
+
+### Taking a new name and selling door to door
+After marrying Charles Walker in 1906 she began to market herself as Madam C.J. Walker, a name taken from women pioneers of the French beauty trade. Her husband advised on advertising. She sold door to door and taught other Black women how to groom and style their hair, so that each sale was also a lesson. She put her daughter in charge of the mail-order side in Denver. [S1][S4]
+
+### Opening a training college in 1908
+She and her husband moved to Pittsburgh in 1908 and opened Lelia College to train hair culturists. It offered a correspondence course in her method. She had decided that the trade needed trained workers as well as customers, and the training gave her agents a way to earn healthy commissions. [S1][S2][S6]
+
+### Building a base in Indianapolis
+In 1910 she moved the headquarters to Indianapolis, which had eight railway lines and a large Black community. She bought a house and factory, then built a factory, a salon, a beauty school and a laboratory. She incorporated in 1911 as the sole stockholder. In 1912 she told a business audience she had built her own factory on her own ground. [S1][S4][S6]
+
+### Standing up uninvited in 1912
+At the 1912 National Negro Business League convention, the chair did not call on her. She stood anyway and said she began with $1.50 and was not ashamed of her past as a laundress. The next year the league invited her as a main speaker. [S3][S4][S7]
+
+### Putting a manager in charge of the books
+As she travelled and spoke, she gave the daily running and finances to Freeman Ransom, a lawyer who became general manager, and she sent him a stream of letters to keep control. Her daughter A'Lelia ran Pittsburgh and then the New York and Harlem operation. [S1][S6]
+
+### Rewarding charity at the 1917 convention
+At her agents' first national convention in Philadelphia in 1917 she gave prizes for sales and recruiting and also for charity work in agents' communities. In 1918 she pledged $5,000 to the NAACP's anti-lynching fund. [S1][S2]
+
 ## Where she stood
 
 **Can a poor woman build a business?** Yes. She did it with $1.50, and she said so in public [S4].

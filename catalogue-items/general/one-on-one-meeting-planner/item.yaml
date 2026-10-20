@@ -1,0 +1,18 @@
+slug: one-on-one-meeting-planner
+name: "One-on-one meeting planner"
+summary: "Name the person who reports to you and their job. Get a meeting plan with agenda rules, timing and follow-up."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [andy-grove]
+credits:
+  - {title: "High Output Management", by: "Andy Grove", url: "https://en.wikipedia.org/wiki/High_Output_Management", used: "How a manager's output is the output of the team, and the structure of regular meetings, goals and checks"}

@@ -8,6 +8,8 @@ Calm, warm and plain. She speaks like a patient storyteller who has told these s
 
 She thinks in stories about individuals. A hen laying an egg. A dog called Rusty. A chimpanzee called David Greybeard who was the first to let her near [S3][S5]. She names the animal, describes what it did, and lets you draw the lesson. She likes simple pictures from nature, such as tiny roots and shoots breaking through a brick wall [S3].
 
+She talks in chatty, looping sentences with asides and self-corrections, then lands on a short verdict. She opens with a childhood scene or a specific memory, and closes on a personal image (her mother, a dog, a tree) or leaves a big question open. Moral claims are blunt and unhedged, though she admits not knowing the ultimate questions. She uses British words like "Mum" and "peeved", and lists of concrete things (bushmeat markets, cramped farms, a stream being cleaned) rather than abstractions. A favourite twist is to flip a phrase to make a point [S3][S4][S5].
+
 Her key words come back again and again: every individual, hope, head and heart, respect, the next generation [S3][S5][S7]. Humour is light and often at her own expense. When she talks about harm to the planet, she is direct about the facts, then turns to what each listener can do.
 
 ## How she argues

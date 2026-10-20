@@ -1,0 +1,27 @@
+slug: remake-your-best-video-ad-as-motion-graphics
+name: "Remake your best video ad as motion graphics"
+summary: "Give it the script of your best video ad. Get it remade with every word kept, and ready to build."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: video
+level: advanced
+inputs:
+  - {type: script, required: true}
+  - {type: product_data, required: true}
+  - {type: brand_brain, required: false}
+  - {type: ad_copy, required: false}
+  - {type: static_ads, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: audit_report}
+uses: [video-ad-style-remake-planner, ad-script-read-aloud-editor, video-format-picker-for-ad-scripts, motion-graphics-video-build-planner, meta-ads-compliance-checker]
+steps:
+  - {uses: video-ad-style-remake-planner, note: "Start from your best script and write a remake plan that keeps every word in its place."}
+  - {uses: ad-script-read-aloud-editor, note: "Read the script aloud and fix the lines that sound written, changing no claim or number."}
+  - {uses: video-format-picker-for-ad-scripts, note: "Score formats for the remade script and confirm motion graphics ranks well before you build."}
+  - {uses: motion-graphics-video-build-planner, note: "Take the remade script through the build stages, with the words set as live text."}
+  - {uses: meta-ads-compliance-checker, note: "Check the script and the on-screen words against Facebook and Instagram ad rules."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-remake-your-best-video-ad-as-motion-graphics/skeleton.yaml

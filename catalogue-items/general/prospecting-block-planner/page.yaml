@@ -1,0 +1,127 @@
+new_slug: prospecting-block-planner
+name: "Prospecting block planner"
+summary: "Paste your week and target list. Get a protected call block, a two-minute research batch and one reason to call each lead."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It builds a schedule and list from a fixed method."
+
+headline: "Prospecting block planner"
+subhead: "Give it your week and your list of leads. It fences off a call block in your buyers' best hours, caps research at two minutes a lead and writes one reason to call each. You also get a pipeline rule and the numbers to count."
+
+explain: |
+  Outreach slips because easier work fills the day and because prep grows to avoid the first call. Both leave your pipeline thin.
+
+  This skill finds the hours buyers can be reached and protects a block in them. It sizes the list to the block, caps research at about two minutes a lead and writes one reason for each call. It starts the block with a timed sprint, sets how many opportunities to add as others leave, and counts conversations at the end of the day. A pipeline here means everyone you are currently trying to win.
+
+when:
+  - "You plan to call new leads and keep putting it off."
+  - "You spend too long researching each lead."
+  - "Your pipeline is thinner than you want."
+
+you_give:
+  - "Your week and fixed commitments"
+  - "Your list of leads"
+  - "Your pipeline numbers (optional)"
+you_get:
+  - "A protected block in the best hours"
+  - "A list sized to the block, with a reason per lead"
+  - "A research batch with a time cap"
+  - "A pipeline rule and an end-of-day count"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your week and your list of leads."
+  - "Say when your buyers usually pick up or reply."
+  - "Put the block in your calendar as a fixed event."
+  - "At the end of the week, tell the skill your counts and ask it to adjust."
+
+how_it_works:
+  - title: "Finds reachable hours"
+    text: "When your buyers are easiest to reach."
+  - title: "Fences the block"
+    text: "Fixed time with nothing else allowed."
+  - title: "Sizes the list"
+    text: "Enough leads for the block, plus spare."
+  - title: "Batches research"
+    text: "Two minutes a lead, one or two facts."
+  - title: "Writes the reason"
+    text: "One sentence per lead."
+  - title: "Starts a sprint"
+    text: "A timed start that skips waiting for the mood."
+  - title: "Sets the pipeline rule"
+    text: "New opportunities for each one that leaves."
+  - title: "Counts the day"
+    text: "Conversations held, not plans made."
+
+output_shape: |
+  REACHABLE HOURS
+  <hours> | KNOWN or GUESS
+
+  BLOCK SCHEDULE
+  <day, time, length> | Protection rule: <rule>
+
+  LIST FOR THE FIRST BLOCK
+  1. <lead> | Facts: <one or two> | Reason for the call: <sentence>
+
+  RESEARCH BATCH
+  <slot, cap per lead>
+
+  SPRINT START
+  <time, first leads>
+
+  PIPELINE RULE
+  <number added for each that leaves>
+
+  END OF DAY COUNT
+  Calls: <n> | Conversations: <n> | Opportunities added: <n>
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "Your buyers' hours"
+    how: "Real data on when they pick up beats a guess."
+  - what: "Block length"
+    how: "Shorter blocks work if the calls are long."
+  - what: "List quality"
+    how: "A list that fits your offer saves time in every call."
+  - what: "Your pipeline numbers"
+    how: "Real counts make the refill rule exact."
+
+judge:
+  - "The block is in fixed time with nothing else in it."
+  - "No lead has more than a few minutes of research."
+  - "Every lead has a reason for the call."
+  - "The day ends with a count of conversations."
+  - "The schedule fits your real week."
+
+test:
+  - "Run one block this week and see how many calls you actually made."
+  - "Time the research batch against the cap."
+  - "Run it twice. The block hours should stay close."
+  - "Compare conversations held before and after for two weeks."
+
+improve:
+  - "Add your usual fixed meetings to step 1."
+  - "Add your own cap on research time."
+  - "Save your weekly counts in a notes file."
+  - "Pair it with \"Negotiation call prep planner\" for the harder talks."
+
+works_best_with:
+  tools:
+    - {name: "A calendar app", why: "Block the time as a fixed, repeating event."}
+    - {name: "Any good chat AI", why: "Building the schedule and lines is simple text work."}
+    - {name: "A spreadsheet", why: "Keep your weekly counts."}
+  inputs:
+    - "Your call and reply history by hour"
+    - "A target list with a role and company per lead"
+    - "Your close and drop numbers"
+
+terms:
+  - term: "Pipeline"
+    meaning: "Everyone you are currently trying to win, at any stage."
+  - term: "Sprint"
+    meaning: "A short timed burst of calls at the start of the block."

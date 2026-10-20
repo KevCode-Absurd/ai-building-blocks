@@ -1,0 +1,18 @@
+slug: not-to-do-list-builder
+name: "Not-to-do list builder"
+summary: "Paste your week and your habits. Get a list of what to stop, with a rule and a swap for each."
+category: general
+type: skill
+role: make
+job: analysis
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [tim-ferriss]
+credits:
+  - {title: "The Not-To-Do List: 9 Habits to Stop Now", by: "Tim Ferriss", used: "Stopping false-emergency habits with numeric limits, auto-replies, agenda rules and a day away from devices"}

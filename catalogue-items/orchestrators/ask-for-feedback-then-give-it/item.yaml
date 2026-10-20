@@ -1,0 +1,22 @@
+slug: ask-for-feedback-then-give-it
+name: "Ask for feedback, then give it"
+summary: "Say who you manage. Get a go-to question to ask for feedback and a plan for the next conversation you lead."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [feedback-request-script-writer, feedback-conversation-planner]
+steps:
+  - {uses: feedback-request-script-writer, note: "Your go-to question and how to handle silence"}
+  - {uses: feedback-conversation-planner, note: "The conversation: what to praise, what to say and how to say it. Reads the copy draft from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [kim-scott]
+credits:
+  - {title: "How do you get feedback? The four steps to solicit Radical Candor", by: "Kim Scott", used: "The order of the steps: feedback request script writer, feedback conversation planner"}
+generated_from: intake/radical-candor-feedback/skeleton.yaml

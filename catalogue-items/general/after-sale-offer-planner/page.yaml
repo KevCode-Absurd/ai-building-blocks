@@ -1,0 +1,125 @@
+new_slug: after-sale-offer-planner
+name: "After-sale offer planner"
+summary: "Paste your product and customer list. Get follow-on offers to try, each with a small test."
+job: make-offer
+thinking: medium
+thinking_why: "It judges which add-ons fit and works out extra profit, but the steps are fixed."
+
+headline: "After-sale offer planner"
+subhead: Give it your product, your current offer and what you know of your buyers. It lists what they need after the first sale, picks add-ons that fit and cost little, writes each as an easy yes and plans a one-change test. You get offers to try, extra profit per order and a log for each test.
+
+explain: |
+  The first sale is the most costly one to win. Many buyers need something else within days or weeks: a refill, a care item, a second one, a service. If you do not offer it, they find it elsewhere, or they never buy it.
+
+  This skill lists what buyers need after the first purchase and picks offers that fit the same buyer and cost little to add. It writes each so a yes is easy at the moment of buying, sets a plain follow-up to learn what else they want, and plans a test of one offer at a time against the plain sale. It works out the extra profit per order, keeps the winners, drops the rest and logs what each test taught, including the failures.
+
+when:
+  - You sell one thing and your buyers could use more.
+  - Your average order is small and you want a bigger one.
+  - You tried an add-on once and cannot say whether it worked.
+
+you_give:
+  - Your product, price and cost
+  - Your current offer and how buyers pay
+  - Past sales or customer data (optional)
+  - What buyers say they need next (optional)
+you_get:
+  - A list of what buyers need after the first sale
+  - Two to four follow-on offers, each written as an easy yes
+  - A test plan with one change at a time and extra profit per order
+  - A log sheet for results and lessons
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product, price, cost and current offer.
+  - Add what buyers have asked for after buying, if you know.
+  - Run the first test on a share of orders and keep the rest plain.
+  - Write the result in the log when the test ends, even a bad one.
+
+how_it_works:
+  - title: Lists what buyers need next
+    text: Care items, refills, a second one or a service that follows the first purchase.
+  - title: Picks fitting offers
+    text: Chooses offers for the same buyer that cost little to add.
+  - title: Writes the easy yes
+    text: Writes each offer so it is simple to accept at the moment of buying.
+  - title: Plans the follow-up
+    text: Sets a plain follow-up after the sale to learn what else they want.
+  - title: Sets one-change tests
+    text: Tests one offer at a time against the plain sale.
+  - title: Works out profit
+    text: Works out the extra profit per order for each offer.
+  - title: Keeps and drops
+    text: Keeps offers with the best extra profit and drops the rest.
+  - title: Logs the lessons
+    text: Writes what each test taught, including failures.
+  - title: Checks the plan
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHAT BUYERS NEED NEXT
+  <need> | Source: <what you told it or MISSING>
+
+  OFFERS TO TRY
+  <n>. <offer> | Fits because: <reason> | Price: <price> | Cost to you: <cost>
+     The ask at the moment of buying: <line>
+     Extra profit per order: <figure>
+
+  FOLLOW-UP AFTER THE SALE
+  <when and what you ask>
+
+  TEST PLAN
+  Test <n>: <one change> | Compared with: <plain sale> | Run for: <orders or days> | Win if: <rule>
+
+  TEST LOG
+  <date> | <offer> | <result> | <lesson>
+
+  MISSING
+  <figures not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Cost per item
+    how: Give your cost for each add-on so the extra profit is real, not guessed.
+  - what: Order volume
+    how: Say how many orders you get. It sets the test length to match.
+  - what: What buyers asked for
+    how: Real asks beat guesses. Paste emails or notes.
+  - what: Terms
+    how: State returns, delivery and any limits. Offers show them.
+
+judge:
+  - Each offer fits the first purchase.
+  - The extra profit is worked out per order.
+  - Only one offer changes per test.
+  - No offer hides cost or terms.
+  - Failures are logged with a lesson.
+
+test:
+  - Check each offer with a buyer and ask if they would have said yes.
+  - Recompute the extra profit from your own cost and price.
+  - Run the first test and compare orders with the plain sale.
+  - Run the skill twice and compare which offers it picks.
+
+improve:
+  - Add your list of products that pair well to step 1.
+  - Add your rules on what you will not sell together.
+  - Save the winning offers and their profit per order to your notes.
+  - Pair it with "Value ladder planner" if you want a full set of offers from free to top tier.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing needs and writing short offers is text work any strong chat AI handles."}
+    - {name: "Your checkout or order tool", why: "It shows add-on take rates and lets you split orders for a test."}
+  inputs:
+    - "A list of repeat purchases and what was bought together"
+    - "Customer questions after delivery"
+    - "Your refund and return rates"
+
+terms:
+  - term: Add-on
+    meaning: A smaller offer made at or just after the first sale.
+  - term: One-change test
+    meaning: A test where only one thing differs from the plain sale, so the result is clear.

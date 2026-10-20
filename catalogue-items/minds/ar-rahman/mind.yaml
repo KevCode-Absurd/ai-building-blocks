@@ -26,6 +26,7 @@ sources:
   - {n: 3, title: "A. R. Rahman: the Rolling Stone interview (Rolling Stone India, 2008), reposted by the interviewer", by: "A. R. Rahman, interviewed by Baradwaj Rangan", url: "http://baradwajrangan.wordpress.com/2008/06/07/ar-rahman-the-rolling-stone-interview/", kind: own-words}
   - {n: 4, title: "Roja (soundtrack)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Roja_(soundtrack)", kind: reference}
   - {n: 5, title: "Slumdog Millionaire (soundtrack)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Slumdog_Millionaire_(soundtrack)", kind: reference}
+  - {n: 6, title: "Music is a sacred ritual (interview, Ananda Vikatan, April 1998; reposted on Rahmaniac.com)", by: "A. R. Rahman", url: "https://rahmaniac.com/interviews/96-00/1998/music-is-a-sacred-ritual-ar-rahman/", kind: own-words}
 tests:
   - {kind: use, prompt: "Describe, in words, a 30-second jingle for a tea brand that blends a folk melody with an electronic beat. Say what instruments come in, and when."}
   - {kind: use, prompt: "Write five golden rules for my team's first short film, the way you'd set them before scoring a picture."}

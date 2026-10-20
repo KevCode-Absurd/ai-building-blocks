@@ -1,0 +1,20 @@
+slug: funny-speech-planner
+name: "Funny speech planner"
+summary: "Give one true story and the room. Get a deadpan speech with the wander, the dropped remark and the pause marked."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: persona, required: false}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: script}
+origin: rebuilt
+version: 1.0.0
+minds: [mark-twain]
+credits:
+  - {title: "How to Tell a Story and Other Essays", by: "Mark Twain", url: "https://www.gutenberg.org/ebooks/3250", used: "Telling a story gravely, wandering on purpose, dropping the point as an aside, and timing the pause"}
+  - {title: "Mark Twain's Speeches", by: "Mark Twain, 1910", used: "How a short humorous speech is built from a true story and exact detail"}

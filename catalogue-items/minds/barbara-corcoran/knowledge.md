@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Barbara Corcoran is alive, and views can change. This data set comes from her own words on her website and her members' newsletter, mainly a written question-and-answer post from December 2024 and a January 2025 post [S1][S2][S3], plus her site's own descriptions of her story, talks and Shark Tank deals [S4][S5][S6] and a reference page [S7]. Her books, including Shark Tales (2011), are a richer record of her methods [S7], but we did not use them directly. Treat each view as "as of" its source. Nothing here tells you what she thinks about events after these dates, and nothing here is property or investment advice.
+Barbara Corcoran is alive, and views can change. This data set comes from her own words on her website and her members' newsletter, mainly a written question-and-answer post from December 2024 and a January 2025 post [S1][S2][S3], plus her site's own descriptions of her story, talks and Shark Tank deals [S4][S5][S6]. The strongest material is a long 2024 interview with Tim Ferriss, where she tells her stories in her own voice [S8]; our notes on it cover the first part of the transcript. Facts about the Corcoran Group and Shark Tank come from a licensed Wikipedia article [S7]. The local files for [S1] and [S2] are link records only, so lines tagged to them come from our earlier read. Her books, including Shark Tales (2011), are a richer record of her methods [S7], but we did not use them directly. Treat each view as "as of" its source. Nothing here tells you what she thinks about events after these dates, and nothing here is property or investment advice.
 
 ## In one paragraph
 
@@ -74,6 +74,32 @@ How she applied it: she also teaches how to spot and recruit talent, drawing on 
 - Trust your gut once you've done the work [S1].
 - Start before it's perfect [S2].
 - Keep moving when the market turns [S5].
+
+## Real decisions
+
+### Starting a firm on a $1,000 loan
+
+In 1973 she was a receptionist for a New York real estate company when she co-founded her first firm with her boyfriend, who lent her $1,000 [S7][S8]. In her telling the deal gave him 51 percent [S8]. Seven years later he left her for her secretary [S7][S8]. She split the company and started again, which she uses as her proof that recovery is most of life [S8].
+
+### Running a same-price sale to sell 88 apartments
+
+She tells of a sale of 88 apartments at one price, framed as picking from the litter, which sold out in about three hours [S8]. The point she draws is that scarcity and a clear rule make people act fast [S8].
+
+### Advertising one empty desk
+
+When recruiting, she ran an ad for a single empty desk rather than a general job notice [S8]. Her reason was scarcity: one seat made it feel like a prize [S8].
+
+### Grading buyers A, B and C
+
+She sorted buyers by how soon they needed to move and dropped the C's [S8]. This saved her agents' time for people who would act [S8].
+
+### Fighting the commission lawsuit
+
+She says she fights only when a moral principle and real money are both at stake, and first asks how much energy a fight will take and for how long [S8]. She won a commission dispute with a well-known developer, and the returned flowers marked "Rejected" are a story she tells with relish [S8].
+
+### Selling the firm in 2001
+
+She sold the Corcoran Group to NRT for $66 million in 2001 and left the company soon after [S7]. In 1973 she had wanted to be her own boss, and she did not stay on as an employee [S7].
 
 ## Where she stood
 

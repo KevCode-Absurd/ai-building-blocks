@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Walt Disney died on 15 December 1966 [S2]. He wrote no full book about his methods, and most of his famous lines come to us through later collections and biographies. We use the lines that a quote collection ties to a named source [S1], the words of the Disneyland dedication [S4] and his EPCOT film [S6]. Two longer records of him speaking now sit beside them: a transcript of an off-the-cuff talk to Disneyland cast members in July 1965, taken from a tape and marked in places as garbled [S7], and a transcript of his October 1947 testimony to Congress, where he was answering hostile questions under oath [S8]. A Toastmasters article on his public speaking is a secondary read [S9]. Neither transcript is a polished speech, so they show how he talked, not how he wrote. We could not find a full transcript of his 1955 dedication speech or his 1963 and 1966 filmed interviews. Quotes marked as misattributed, such as "If you can dream it, you can do it," are left out, because an Imagineer later said he wrote that line [S1]. Facts come from reference pages.
+A note on method: Walt Disney died on 15 December 1966 [S2]. He wrote no full book about his methods, and most of his famous lines come to us through later collections and biographies. We use the lines that a quote collection ties to a named source [S1], the words of the Disneyland dedication [S4] and his EPCOT film [S6]. Two longer records of him speaking now sit beside them: a transcript of an off-the-cuff talk to Disneyland cast members in July 1965, taken from a tape and marked in places as garbled [S7], and a transcript of his October 1947 testimony to Congress, where he was answering hostile questions under oath [S8]. A Toastmasters article on his public speaking is a secondary read [S9]. Two more pages of his own words, a 1935 memo to Don Graham on training animators [S10] and an interview with Cecil B. DeMille [S11], come to us through study notes, not full text on disk. Neither transcript is a polished speech, so they show how he talked, not how he wrote. We could not find a full transcript of his 1955 dedication speech or his 1963 and 1966 filmed interviews. Quotes marked as misattributed, such as "If you can dream it, you can do it," are left out, because an Imagineer later said he wrote that line [S1]. Facts come from reference pages.
 
 ## In one paragraph
 
@@ -22,11 +22,15 @@ Disney had high standards and high expectations of the people around him [S2]. H
 
 How he applied it: that training gave the studio the skills to make its first feature film [S5].
 
+**Study real movement, then exaggerate it.** In a 1935 memo on training young animators, Disney wrote that the studio should study real movement closely and use it as the base for fantasy and exaggeration, not copy it [S10]. He wanted animators to learn walking, lifting and bending through a comic, caricatured lens, and to let the whole body carry the emotion, with face and costume adding to a sound underlying action [S10]. He wrote that comedy has to make contact with the audience, and that it should rest on things the audience already knows [S10]. He called the result a caricature of life and action [S10]. How he applied it: he planned a training course so animators learn together, and gave a four-question way to review a scene: what idea was meant, how it was shown, what came of it, and what could be better [S10].
+
 ### Use new technology to tell the story better
 
 Disney kept adopting new tools when they made the audience feel more. *Steamboat Willie* in 1928 was an early cartoon with synchronised sound [S2]. *Flowers and Trees* in 1932 won the first Academy Award for a cartoon short [S2]. The studio developed the multiplane camera to give flat drawings depth [S2].
 
 How he applied it: each step, from sound to colour to depth, was used to make the story more real, not to show off [S2].
+
+**Do what the medium does best.** Asked about his rule for picking a picture, Disney told DeMille not to do what another medium can do better, so he avoids stories that work better in live action [S11]. He joked that the studio would never do Hamlet, and he did not take a bet when DeMille pressed him on drawing human figures [S11]. He steered the talk back to what animation can and cannot do, and he tried to keep daydreams about the far future of the medium from crowding out the problems in front of him [S11].
 
 ### Bet big on what you believe in
 
@@ -77,6 +81,8 @@ How he applied it: the EPCOT film was shown to Florida legislators in February 1
 - If the bank says no, find another way to fund it [S4][S5].
 - Design for the whole family [S4].
 - Keep adding to it. It's never finished [S1][S6].
+- Would live action do this better? If so, don't draw it [S11].
+- Does the movement start from something real and then stretch it [S10]?
 
 ## Real decisions
 

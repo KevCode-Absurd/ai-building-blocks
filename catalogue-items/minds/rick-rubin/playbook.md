@@ -15,13 +15,13 @@ You bring him a draft, a product, a song or a setback. He listens all the way th
 
 ## How he'd take on your problem
 
-1. **He listens first.** He hears or reads the whole thing without comment. He has said his skill is closer listening, not playing or engineering.
+1. **He starts with what you love.** With Johnny Cash he began by listening to Cash's favourite music. He asks what you are drawn to, then hears or reads the whole thing without comment. He has said his skill is closer listening, not playing or engineering.
 2. **He asks how it feels.** Not what you know about it, what happens in your body. In 2023 he said it's not about knowing, it's all about feeling.
 3. **He looks for the moment you lean forward.** That is the part he calls ecstatic. Find it. That is where the work starts.
-4. **He takes things away.** Strings, backing vocals, reverb, paragraphs, features, anything that hides the core. On Johnny Cash's American Recordings, most songs were one man and one guitar.
+4. **He asks you to write the true story.** One artist wrote a long prose essay on what the song was really about, and he rebuilt the lyrics from its strongest lines. Then he takes things away. Strings, backing vocals, reverb, paragraphs, features, anything that hides the core. On Johnny Cash's American Recordings, most songs were one man and one guitar.
 5. **He checks it still serves the work.** Bare for its own sake is not the goal. Some of his later records were more layered. The rule is to serve the song.
 6. **He lets the best idea win.** Only the ego cares whose idea it was. If the intern's line beats yours, use the intern's.
-7. **He gets one trusted ear.** Make a lot, then play it for one friend with good taste. Watch their face.
+7. **He points at one line and asks.** He names the specific line that feels weak and asks if you are fine with it, on your team. If you defend it well, he drops it. Then he gets one trusted ear: make a lot, play it for one friend with good taste, watch their face.
 8. **He zooms out when things go wrong.** Zoom in and obsess. Zoom out and observe. A setback may be the setup for what comes next.
 
 ## First questions he'd ask you
@@ -29,6 +29,8 @@ You bring him a draft, a product, a song or a setback. He listens all the way th
 - What do you feel when you hear it?
 - What makes you lean forward?
 - What can we take away?
+- Which line are you not sure about?
+- What did you love first, before you started?
 - What is this really about?
 - Is the rough version truer than the polished one?
 - Whose idea is it, and does that matter?

@@ -1,0 +1,129 @@
+new_slug: channel-decay-checker
+name: "Channel decay checker"
+summary: "Paste your results by channel over time. Get which channels are fading, why, and what to refresh or try next."
+job: read-ad-results
+thinking: medium
+thinking_why: "It reads trends and weighs three causes against your numbers."
+
+headline: "Channel decay checker"
+subhead: "Give it your results by channel over several months. It finds where each channel began to fall and tests three causes against your numbers. You get a score out of 100, which channels are fading, and what to refresh or test next with a date to look again."
+
+explain: |
+  Almost every channel works at first and then gets worse. Cost per customer creeps up, response drops, and you blame the creative or the month. If you do not see the pattern, you keep paying for a channel that has already peaked, or drop one that only needs a fresh start.
+
+  This skill lines up each channel's response and cost per customer by month, marks where each one began to fall and tests three causes: novelty wearing off, rivals copying, and a wider, less keen audience. It also checks if early small-scale results were trusted too much. It then names small refreshes to try, one untried channel to test, and a date to check the numbers again.
+
+when:
+  - "A channel that used to work is costing more each month."
+  - "You are deciding where to move next quarter's budget."
+  - "Your early results were great and later ones are not."
+
+you_give:
+  - "Results by channel for at least six months"
+  - "Spend, responses and customers per channel"
+  - "Changes you made along the way, such as new creative or targeting (optional)"
+  - "Channels you have not yet tried (optional)"
+you_get:
+  - "Each channel's trend with the month it began to fall"
+  - "The likely cause for each, with the numbers behind it"
+  - "A score out of 100, with how it was worked out"
+  - "A refresh list, one channel to test next and a date to re-check"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste or attach your results, one row per channel per month."
+  - "List what you changed and when."
+  - "Pick the channel it says to test and set its measure."
+  - "Put the re-check date in your calendar."
+
+how_it_works:
+  - title: "Lines up the data"
+    text: "Puts each channel's response rate and cost per customer in monthly order."
+  - title: "Finds the turn"
+    text: "Marks the month each channel began to fall."
+  - title: "Tests three causes"
+    text: "Tests novelty, rivals copying and a wider audience."
+  - title: "Checks early trust"
+    text: "Flags small early results that were taken as proof."
+  - title: "Suggests refreshes"
+    text: "Names creative or publisher changes for small gains."
+  - title: "Picks a new test"
+    text: "Chooses one untried channel to test next."
+  - title: "Sets a date"
+    text: "Sets a date to check the numbers again."
+
+output_shape: |
+  SCORE: <n>/100 (100 means no channel is fading; points lost per fading channel and by size of fall)
+
+  CHANNEL TRENDS
+  <channel> | Response: <start to now> | Cost per customer: <start to now> | Began to fall: <month> | Evidence: <numbers>
+
+  CAUSES
+  <channel>
+    Novelty wearing off: <supported, not supported or unknown>
+    Rivals copying: <...>
+    Wider audience: <...>
+
+  EARLY RESULTS TRUSTED TOO MUCH
+  <channel, how many customers it was based on>
+
+  REFRESH FIRST
+  1. <channel> | <change> | Measure: <metric>
+
+  TEST NEXT
+  <one untried channel> | Measure: <metric> | Budget cap: <amount>
+
+  CHECK AGAIN ON
+  <date>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Months of data"
+    how: "Six or more months show a real trend. Three months can be noise."
+  - what: "Changes you made"
+    how: "List them with dates. A fall after a change may be the change, not the channel."
+  - what: "Customers, not clicks"
+    how: "Give customers per channel. Clicks alone hide cost per customer."
+  - what: "Audience size"
+    how: "Add reach per channel. It helps test the wider-audience cause."
+
+judge:
+  - "Each fall is tied to a date and a number."
+  - "All three causes are considered."
+  - "Small-scale results are flagged."
+  - "The channel test has a measure."
+  - "No cause is stated as fact without data."
+
+test:
+  - "Run it on a channel you know has faded. Check it finds the right month."
+  - "Remove a change from the notes and see if the cause shifts."
+  - "Run it twice. The fading channels should stay the same."
+  - "Act on one refresh and check the numbers on the date it sets."
+
+improve:
+  - "Add your own cost limit per customer so a channel is flagged when it passes it."
+  - "Add the channels you have tried before and why you stopped them."
+  - "Keep the monthly table in one sheet so each run starts from it."
+  - "Pair it with a cost per customer calculation for each channel."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading a table of results and weighing causes is work any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Keeps the monthly table and charts cost per customer."}
+  inputs:
+    - "Customers and revenue per channel per month"
+    - "Notes on creative or targeting changes"
+    - "Reach or audience size by channel"
+
+terms:
+  - term: "Channel"
+    meaning: "A route to customers, such as search ads, email or a partner."
+  - term: "Decay"
+    meaning: "The slow fall in response as a channel ages."
+  - term: "Cost per customer"
+    meaning: "Total spend on a channel divided by the customers it brought."

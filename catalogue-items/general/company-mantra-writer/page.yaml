@@ -1,0 +1,123 @@
+new_slug: company-mantra-writer
+name: "Company mantra writer"
+summary: "Describe what you do and for whom. Get three two-to-four word mantras and a niche check."
+job: plan-strategy
+thinking: medium
+thinking_why: "Short phrases take careful word choice, and the grid test needs a judgement about value and uniqueness."
+
+headline: "Company mantra writer"
+subhead: Give it what you do and who it is for. It finds the benefit you give, writes three mantras of two to four words, tests each against the long mission statement it replaces and places your idea on a value-by-uniqueness grid. You get three options and a pick.
+
+explain: |
+  A long mission statement is rarely read and almost never remembered. A mantra is a short phrase, two to four words, that says why the work exists in terms people can repeat. It is for the team first: it tells them what to do when a choice is unclear.
+
+  This skill starts with the benefit you give, not the product you make, and asks what meaning the work makes. It writes three mantras, drops vague words such as "excellence" or "solutions", and tests each against the long statement. It then places the idea on a grid of value against uniqueness and picks the one in the valuable and unique corner. Last, it tests the pick on three people who can repeat it back.
+
+when:
+  - Your mission statement is a paragraph nobody can recall.
+  - Your team keeps debating what to say yes and no to, and needs a short shared reference.
+  - You are starting a business and want a short line that says what it is for.
+
+you_give:
+  - What you do, in a few lines (required)
+  - Who it is for (required)
+  - Your current mission statement (optional)
+  - What your customers say you give them (optional)
+you_get:
+  - The benefit you give, in a sentence
+  - Three mantras, two to four words each
+  - A value-and-uniqueness grid check for each
+  - A pick, and a plan to test it on three people
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you do and who it is for. Paste your current mission statement if you have one.
+  - Read the three mantras aloud. Drop any you would be embarrassed to say to a customer.
+  - Ask three people to say it back to you a day later.
+  - Use the winner as the first line in your team notes and website.
+
+how_it_works:
+  - title: Benefit, not product
+    text: Writes the benefit you give in a sentence, not the product you make.
+  - title: Find the meaning
+    text: Asks what meaning the work makes in people's lives.
+  - title: Write three mantras
+    text: Writes three options of two to four words each.
+  - title: Strip vague words
+    text: Compares each with a long mission statement and drops vague words.
+  - title: Value and uniqueness
+    text: Places the idea on a grid of value against uniqueness.
+  - title: Choose the corner
+    text: Picks the mantra in the valuable and unique corner.
+  - title: Test on three
+    text: Plans a test on three people who must repeat it back.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE BENEFIT
+  <one sentence: what the person gets>
+
+  THE MEANING
+  <how the work changes someone's day or life>
+
+  THREE MANTRAS
+  1. <two to four words> | Replaces: <vague line it would cut> | Grid: value <high/low>, unique <high/low>
+  2. ...
+  3. ...
+
+  THE PICK
+  <mantra> | Why: <reason>
+
+  THE TEST
+  Ask three people: <question> | Pass if: <all three repeat it>
+
+  MISSING
+  <what would sharpen the options>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The benefit
+    how: Write what the buyer gets in their words. "Sleep through the night" is better than "premium bedding".
+  - what: Your current mission
+    how: Paste it so the skill can name the vague words it replaces.
+  - what: Your rivals
+    how: List what rivals say. A mantra that sounds like theirs fails the uniqueness test.
+  - what: Who will use it
+    how: Say whether the mantra is for your team, your customers or both. The best word choice changes.
+
+judge:
+  - Each mantra is two to four words.
+  - It names a benefit, not a product.
+  - It passes the value and uniqueness grid.
+  - Three people can repeat it back.
+  - Nothing is claimed that you cannot back.
+
+test:
+  - Say each mantra to a friend and ask what they think you do.
+  - Ask three people to repeat the winner a day later without looking.
+  - Use it to settle a real decision on your team and see if it helps.
+  - Run it twice. The pick may change, but the benefit sentence should stay close.
+
+improve:
+  - Add words you never want in a mantra, such as your industry's overused terms.
+  - Add your customers' own phrases for what you give them.
+  - Save the winner in your brand file as the top line.
+  - Pair it with "Product differentiation checker" if no option is unique.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Generating and testing short phrases against a rule is something any strong chat AI does well."}
+    - {name: "A group of three friendly listeners", why: "Whether a phrase sticks only shows up when someone else says it back."}
+  inputs:
+    - "Your current mission statement or about page"
+    - "Reviews that say what your customers get from you"
+    - "The lines your closest rivals use"
+
+terms:
+  - term: Mantra
+    meaning: A short phrase, two to four words, that says why your work exists.
+  - term: Value-and-uniqueness grid
+    meaning: A two-way check of whether an idea is worth having and whether anyone else offers it.

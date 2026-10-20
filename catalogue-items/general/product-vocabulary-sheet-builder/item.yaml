@@ -1,0 +1,19 @@
+slug: product-vocabulary-sheet-builder
+name: "Product vocabulary sheet builder"
+summary: "Paste a book, manual or product page. Get a sorted sheet of its own phrases, ready for headlines, proof and demos."
+category: general
+type: skill
+role: compress
+job: copy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: angle_library}
+  - {type: hooks}
+origin: rebuilt
+version: 1.0.0
+minds: [eugene-schwartz]
+credits:
+  - {title: "The Lost Secrets of Breakthrough Advertising (lecture transcript, 1993)", by: "Eugene Schwartz", used: "Reading product material several times, collecting its own phrases, sorting them into piles by use, and forcing each long idea into a short headline"}

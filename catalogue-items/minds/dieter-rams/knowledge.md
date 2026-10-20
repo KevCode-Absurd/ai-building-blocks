@@ -67,6 +67,32 @@ The Design Museum notes that he urged designers to question everything generally
 - Make it fit with the other things around it [S1].
 - Ask whether it should exist at all, given what the world can afford [S1][S2].
 
+## Real decisions
+
+### A transparent lid on the SK 4
+
+In 1956 Rams worked with Hans Gugelot on the SK 4 record player. He suggested a plastic cover in place of the original metal one, which vibrated too much [S5]. The lid became the product's best-known feature, so a fix for a technical fault ended up as its look. It fits his view that form follows from solving the problem [S1][S5].
+
+### One system for the home, not one product
+
+In 1957 he began a storage system that became the 606 shelving, produced by Vitsoe since 1959 [S1][S5]. He said it works because it fits any home and does not shout, living quietly beside furniture from any designer and era [S1]. He made it adaptable in design and manufacture so it can change over time and not be thrown away [S1].
+
+### Fixing a design language at Braun
+
+As design director from 1962, he codified Braun's system in 1963: uniform unit sizes, white or charcoal grey with aluminium covers, grey controls and a green on-off switch [S5]. He did this so products would be understood by everyone and fit together [S1][S5]. His stated reason was that order makes a product useful by showing what it is for [S1].
+
+### Adding black to the range
+
+In 1965 he introduced black bases with the Studio 1000 hi-fi system, a shift that influenced consumer electronics for around thirty years [S5]. The choice shows the same restraint: change one thing for a reason, not for fashion.
+
+### Designing inside one company
+
+In his 1976 New York speech he said he had worked only for two companies, Braun and Vitsoe, for about 20 years [S1]. He argued that a designer cannot do good design from outside the company, because the ideas must match the company's aims, especially for a system [S1]. He chose long relationships over many clients.
+
+### Looking back with regret
+
+In a 2019 film, as reported by its director, Rams accepts that his work at Braun helped feed today's overconsumption and regrets not spreading his ideas on sustainability further [S3]. The same account says that if he started again, he would not choose design but landscape architecture or urban planning [S3]. This is second-hand, through the film director.
+
 ## Where he stood
 
 **What is design for?** For people. It is a practical, rational job of making useful things clear and lasting, not decoration (as of 1976) [S1].

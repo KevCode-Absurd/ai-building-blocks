@@ -237,6 +237,7 @@ minds:
   - {slug: ben-horowitz, name: "Ben Horowitz", area: business, living: true, seat: "When things go wrong"}
   - {slug: eric-ries, name: "Eric Ries", area: business, living: true, seat: "Test the idea first"}
   - {slug: steve-blank, name: "Steve Blank", area: business, living: true, seat: "Get out of the building"}
+  - {slug: rob-fitzpatrick, name: "Rob Fitzpatrick", area: business, living: true, seat: "What customers really do"}
   - {slug: guy-kawasaki, name: "Guy Kawasaki", area: business, living: true, seat: "Pitching and evangelism"}
   - {slug: ruth-handler, name: "Ruth Handler", area: business, living: false, seat: "Toys and what kids want"}
   - {slug: milton-hershey, name: "Milton Hershey", area: business, living: false, seat: "Trying again after failure"}

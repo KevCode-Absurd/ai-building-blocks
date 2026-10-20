@@ -1,0 +1,116 @@
+new_slug: specific-knowledge-finder
+name: "Specific knowledge finder"
+summary: "Say what came easily to you and what people ask you for. Get your specific knowledge, with a cheap test for each."
+job: think-and-decide
+thinking: medium
+thinking_why: "It sorts what the person says into teachable and not teachable, which takes judgment."
+
+headline: "Specific knowledge finder"
+subhead: "Tell it what came easily to you, what friends ask you for and what you are curious about. It sorts what only you can offer from what anyone could be trained to do, then hands back a cheap test for each pick."
+
+explain: |
+  Many people build a career on skills that anyone can learn from a course. Those are easy to hire and easy to replace. The edge is in the things you picked up because you were curious, the things that felt like play to you and looked like work to others.
+
+  This skill collects those things from what you tell it: what you did easily as a child, what people ask you for, what you read for fun. It marks which items can be taught in a class and which cannot, checks each against the edge of a field where few people have gone deep, and picks one or two. For each pick it gives a low-cost test, such as a small public project. It makes no promise of income.
+
+when:
+  - "You are choosing a direction and everything you can do feels common."
+  - "You want to sell a service and need to know what makes you different."
+  - "People keep asking you for the same help and you do not see why."
+
+you_give:
+  - "What came easily to you as a child or teenager, and what others noticed"
+  - "What people ask you for now"
+  - "What you are curious about, and what feels like play to you"
+  - "Your current work (optional)"
+you_get:
+  - "A list of your candidate knowledge, each traced to something you said"
+  - "A mark on each: trainable or specific"
+  - "One or two picks with the basics you still need"
+  - "A cheap test and a date for each pick"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Answer the prompts freely. Messy, short answers are fine."
+  - "Ask a friend or family member what you were like at ten, and paste what they say."
+  - "Read which items it marked as trainable. Those are skills, not your edge."
+  - "Run the test on your top pick before the date it gives you."
+
+how_it_works:
+  - title: "List what came easily"
+    text: "Collects what came easily to you and what others noticed."
+  - title: "Add what pulls you now"
+    text: "Adds present curiosity, play and what people ask you for."
+  - title: "Sort teachable from specific"
+    text: "Marks each item as trainable or specific."
+  - title: "Test against the edge of a field"
+    text: "Checks each against how few people have gone deep."
+  - title: "Pick one or two"
+    text: "Picks one or two and names the basics still needed."
+  - title: "Design a cheap test"
+    text: "Gives each pick a low-cost test and a date."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  WHAT YOU TOLD ME
+  <items, each tagged: childhood / asked for / curiosity / play>
+
+  SORTED
+  - <item> | <trainable / specific> | Why: <reason>
+
+  THE EDGE OF THE FIELD
+  - <specific item> | Field: <field> | How few go deep: <note>
+
+  YOUR PICKS
+  1. <pick> | Why: <one sentence> | Basics first: <list>
+
+  CHEAP TESTS
+  1. <pick> | Test: <small project> | By: <date> | Good sign: <sign>
+
+  MISSING
+  <what would sharpen the list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Other people's words"
+    how: "What a parent, old friend or colleague says about you is often sharper than your own list."
+  - what: "How long you can test"
+    how: "Say how many hours a week you have. The test is sized to fit."
+  - what: "The field you work in"
+    how: "Name it. The edge-of-field check is much sharper with a field to compare against."
+  - what: "Things you dislike doing"
+    how: "Add them. Items you avoid help the skill see what you do not want to build on."
+
+judge:
+  - "Every item comes from something you said, not from a guess."
+  - "Things anyone could be trained to do are marked as such."
+  - "Each pick has one low-cost test and a date."
+  - "Nothing in it promises income or a result."
+  - "The basics you still need are named."
+
+test:
+  - "Run it, then show the picks to someone who knows you well. Ask if they sound like you."
+  - "Run it twice with slightly different answers. The top pick should stay close."
+  - "Do the test for your top pick and note what you learn within the date it gave."
+
+improve:
+  - "Add a list of the fields you know people in, so the edge check can name real corners."
+  - "Add what you have already tried and dropped, with the reason."
+  - "Keep the results of each test in a notes file and bring them back to the skill."
+  - "Pair it with Hours-to-assets planner to turn a pick into something you own."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Judging advice and asking sharp questions is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "What friends or family say you were like as a child"
+    - "Your work history and what you did well in it"
+    - "Books, videos and topics you return to"
+    - "People who have asked you for help"
+
+terms:
+  - {term: "Specific knowledge", meaning: "Know-how you picked up through your own curiosity that cannot be taught in a class."}
+  - {term: "Trainable", meaning: "A skill that a course or manual could teach to most people."}

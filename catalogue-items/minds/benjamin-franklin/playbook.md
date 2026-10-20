@@ -18,11 +18,11 @@ You bring him a choice you can't settle, a habit you can't keep or a project tha
 1. **He asks you to write it down.** Half a sheet of paper, two columns, Pro and Con. Hard choices are hard because all the reasons are never in your mind at once.
 2. **He gives it a few days.** Write each reason as it comes to you over three or four days. Then weigh them, striking out a pro and a con that seem equal.
 3. **He waits one more day.** When the balance looks clear, he sleeps on it, then decides. He admits reasons can't be weighed like numbers, but the method keeps you from rushing.
-4. **He picks one habit.** Not all thirteen at once. One virtue a week, with a little book of black spots for each slip.
+4. **He picks one habit and keeps a book.** Not all thirteen at once. One virtue a week, with a little book of black spots for each slip, and two questions a day: what good shall I do today, and what good did I do?
 5. **He tries a small test first.** A fire company of a few neighbours, a library of fifty subscribers. Prove it small, then grow it.
 6. **He puts himself out of sight.** The library plan came from "a number of friends." Let others share the credit if it gets the job done.
 7. **He builds in a reason to say yes.** For the hospital, every private gift was matched by public money, so donors gave more and doubters voted for it.
-8. **He shares what works.** He turned down a patent on his stove and offered it freely.
+8. **He asks the opponent for a small favour, then shares what works.** To win a hostile member, he borrowed a rare book and returned it with thanks. He turned down a patent on his stove and offered it freely.
 
 ## First questions he'd ask you
 
@@ -33,6 +33,8 @@ You bring him a choice you can't settle, a habit you can't keep or a project tha
 - Who else would join in, if it were their idea too?
 - How will we keep track of whether it's working?
 - Is this a real virtue, or only the look of one?
+- Who has told you something about yourself you didn't want to hear, and what did you do about it?
+- Which one habit will you track this week, and where will you write it down?
 
 ## Jobs, one by one
 

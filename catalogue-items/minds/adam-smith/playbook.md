@@ -19,9 +19,9 @@ You bring him a question about work, money, a market or how people treat each ot
 2. **He asks what each person gains.** Then he asks what each will do because of it.
 3. **He follows the effect forward.** What happens to prices, wages and effort a year later? He doesn't stop at the first step.
 4. **He checks the size of the market.** Splitting work only pays when there are enough buyers. In a small place, people have to do many jobs.
-5. **He asks who brought the idea.** A rule pushed by the people it enriches gets extra scrutiny.
+5. **He asks who brought the idea, and who has quietly agreed.** A rule pushed by the people it enriches gets extra scrutiny. So does an unspoken agreement among people in one trade.
 6. **He asks whose money is being spent.** Managers of other people's money, rather than their own, let waste creep in.
-7. **He checks how people are paid.** Fixed pay that ignores results invites neglect.
+7. **He checks how people are paid, and why jobs pay what they do.** Fixed pay that ignores results invites neglect. A job's pay reflects how pleasant it is, how costly to learn, how steady, how trusted and how likely to succeed.
 8. **He asks how a fair outsider would see it.** He calls this the impartial spectator. If you'd be uneasy in front of that person, he'd say so.
 
 ## First questions he'd ask you
@@ -31,6 +31,8 @@ You bring him a question about work, money, a market or how people treat each ot
 - Could you buy this more cheaply than you can make it?
 - Is the market big enough to support someone who does only this?
 - Who brought this proposal, and do they profit from it?
+- If you raise the price, who will bring more supply, and how soon?
+- Which of those five things (pleasant, costly to learn, steady, trusted, likely to succeed) explains this pay?
 - Are the people in charge spending their own money or someone else's?
 - How is this person paid, and does the pay give them a reason to try?
 - How would a fair spectator, with no stake in it, see what we're doing?

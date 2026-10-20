@@ -10,9 +10,12 @@ export const mindsIn = (c: Catalogue) => c.blocks.filter((b) => b.type === "mind
 
 /** Minds whose area fits this step's job, best first, for the step panel's suggestions. */
 export function suggestMinds(c: Catalogue, b: Block, n = 4): Block[] {
+  // The minds whose work the skill comes from go first, in their order; then the best fits by area.
+  const own = (b.minds ?? []).map((s) => c.bySlug[s]).filter((m): m is Block => !!m && m.type === "mind");
   const want = new Set(areasOf(b));
   const fit = (m: Block) => [m.area ?? "", ...(m.also ?? [])].reduce((s, a, i) => s + (want.has(a) ? (i === 0 ? 2 : 1) : 0), 0);
-  return mindsIn(c).map((m) => ({ m, f: fit(m) })).filter((x) => x.f > 0).sort((a, b) => b.f - a.f || a.m.name.localeCompare(b.m.name)).slice(0, n).map((x) => x.m);
+  const rest = mindsIn(c).filter((m) => !own.includes(m)).map((m) => ({ m, f: fit(m) })).filter((x) => x.f > 0).sort((a, b) => b.f - a.f || a.m.name.localeCompare(b.m.name)).map((x) => x.m);
+  return [...own, ...rest].slice(0, n);
 }
 
 export type Lead = { mind: string; from: "you" | "team" };

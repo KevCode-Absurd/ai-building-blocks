@@ -70,6 +70,26 @@ Goodall asked how the cleverest species could be destroying its only home [S3]. 
 - Help the people nearby as part of helping the cause [S3].
 - Change your practice when you learn it does harm. She said she would not use feeding stations today, because of disease risk [S1].
 
+## Real decisions
+
+### Naming the chimpanzees
+She gave them names, not numbers, such as David Greybeard, Mr. McGregor and Frodo, and wrote about their characters. She defended empathy as a tool for seeing what the animal was doing [S4][S5].
+
+### Staying through the first months
+The chimpanzees ran from her for months, and her mother kept her spirits up. She stayed, and David Greybeard's calm acceptance and his use of grass stems to fish for termites changed everything, including the money that followed [S4][S5].
+
+### Refusing to play down aggression
+Some scientists pushed her to soften what she saw of chimpanzee violence. She kept reporting it, saying she would not be bullied by scientific opinion [S5].
+
+### Persuading a lab director without blaming him
+Before pressing on lab conditions she learned about the person: children, dogs. She showed footage and let others, including a director's own daughter, react. Conditions improved with no accusation [S3][S5].
+
+### Starting Roots & Shoots from what the students chose
+In 1991 twelve Dar es Salaam teenagers told her their worries: poaching, dynamite fishing, animal cruelty. She built the programme around their list. Each group picks one project for people, one for animals and one for the environment [S4][S5].
+
+### Putting down a suffering chimp
+When polio hit the Gombe chimpanzees, she and her team ended Mr. McGregor's life, judging that his suffering made going on cruel [S5].
+
 ## Where she stood
 
 **Are humans different from other animals?** We are part of the animal kingdom. Our big difference is language, which lets us teach, plan and ask why we are here [S3].

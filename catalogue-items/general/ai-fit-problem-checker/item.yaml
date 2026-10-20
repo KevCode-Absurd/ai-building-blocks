@@ -1,0 +1,17 @@
+slug: ai-fit-problem-checker
+name: "AI-fit problem checker"
+summary: "Describe a problem. Get a verdict on whether AI suits it, using three tests, and the data or simulator you would need."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [demis-hassabis]
+credits:
+  - {title: "Accelerating Scientific Discovery with AI (Cambridge talk, March 2025)", by: "Demis Hassabis", used: "The three tests of a huge search space, learnable structure and a clear score, plus the role of data, simulators and outside benchmarks"}

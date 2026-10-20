@@ -1,0 +1,123 @@
+new_slug: disruption-risk-checker
+name: "Disruption risk checker"
+summary: "List a cheaper rival and your best customers. Get a check of whether it is a nuisance or a real threat."
+job: study-competitors
+thinking: high
+thinking_why: "It tests a theory against facts, looks for a counter-case and weighs a verdict."
+
+headline: "Disruption risk checker"
+subhead: "Give it a cheaper or simpler rival, your best customers and your own numbers. It checks where the rival started, whether you overshoot your buyers and whether its model beats yours. You get a pattern-fit score out of 100, a verdict and a response."
+
+explain: |
+  When a small, cheap rival appears, there are two mistakes. One is to ignore it because your best customers do not want it. The other is to panic about every new entrant. Often the right answer is to watch, and sometimes it is to act now.
+
+  This skill tests the rival against one pattern. A disruptor starts at the low end, or with people who were not buying at all. It sells something your best customers do not need, at a price its model can support, and it improves until it is good enough for your mainstream. The skill checks each part, scores the fit out of 100 from the facts you give it, looks for a fact that argues against the verdict, and gives a response with an owner.
+
+when:
+  - "A cheaper or simpler rival has appeared and your team disagrees about how worried to be."
+  - "Your best customers say they do not want what the rival offers."
+  - "You are deciding whether to build a simpler version or start a new unit."
+
+you_give:
+  - "The rival: price, buyers, how it makes money, when it started"
+  - "Your best customers, prices and margins"
+  - "Dated facts on the rival's growth or changes (optional)"
+you_get:
+  - "A pattern-fit score out of 100, with what it measures"
+  - "A verdict: nuisance, watch or real threat"
+  - "A fact that argues against the verdict"
+  - "A response with an owner and a date"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the rival: price, buyers, how it earns money."
+  - "Describe your best customers and your own margins."
+  - "Read the score and the verdict, then the counter-fact."
+  - "Take the response to the owner it names."
+
+how_it_works:
+  - title: "Finds the start"
+    text: "Checks if the rival began at the low end or with non-buyers."
+  - title: "Checks overshoot"
+    text: "Sees if you are improving faster than your best customers can use."
+  - title: "Checks your blind spot"
+    text: "Finds why your own numbers make the rival's market look small."
+  - title: "Checks the model"
+    text: "Compares the rival's economics at its price with yours."
+  - title: "Finds the counter-case"
+    text: "Looks for a fact that argues against the verdict."
+  - title: "Scores and decides"
+    text: "Adds the scores, subtracts for the counter-case and gives a verdict."
+  - title: "Names a response"
+    text: "Chooses watch, respond or a separate unit, with an owner and date."
+
+output_shape: |
+  SCORE: <n>/100  (<band>)
+  Measures: how closely this rival fits the disruption pattern, from the facts given. Not a forecast.
+
+  VERDICT
+  <nuisance / watch / real threat>
+
+  THE TESTS
+  1. Where it started: <low end / non-consumers / neither> | <fact> | <0-25>
+  2. Overshoot: <what customers do not need> | <0-25>
+  3. Why our numbers look away: <reason> | <0-20>
+  4. Business model: <comparison> | <0-30>
+
+  ARGUES AGAINST
+  <fact> | points subtracted: <0-15>
+
+  RESPONSE
+  <watch / respond / separate unit> | Owner: <name> | By: <date>
+  If watch: look for <signs>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "How much you know about the rival"
+    how: "Give its price, buyers and how it makes money. Each unknown scores zero on its test, and the score falls."
+  - what: "Your best customers"
+    how: "Say what they use and ignore. The overshoot test depends on it."
+  - what: "Dated changes"
+    how: "Add when the rival launched and what it changed. It shows if it is climbing."
+  - what: "Your numbers"
+    how: "Add margins and order sizes. They show why you might be ignoring the rival."
+
+judge:
+  - "The first test says where the rival began and quotes a fact."
+  - "A strong rival that is not a disruptor can score low."
+  - "There is one real fact against the verdict."
+  - "The score explains what it measures."
+  - "The response has a name and a date."
+
+test:
+  - "Run it on a rival from your past that you know the outcome of. Check it matches what happened."
+  - "Run it twice. The verdict band should stay the same."
+  - "Give it a strong rival that entered at the top. It should not call it a disruptor."
+  - "Check one number in the score against your own data."
+
+improve:
+  - "Add your own margin and customer facts to the skill so tests 2 and 3 start from them."
+  - "Adjust the bands in step 6 to how much risk your business can take."
+  - "Save each rival's score and date to track whether it climbs."
+  - "Pair it with Rival weakness message finder."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Testing a rival against stated facts and writing the verdict is text work any strong chat AI does well with this skill."}
+    - {name: "Your own sales and margin data", why: "The overshoot and numbers tests rely on real figures."}
+  inputs:
+    - "Your margins by product and customer type"
+    - "The rival's price list and review themes"
+    - "Dated growth figures for the rival"
+    - "Notes from customers who switched to or from the rival"
+
+terms:
+  - term: "Low-end disruption"
+    meaning: "A rival that starts with buyers who find your product more than they need or too costly, then improves."
+  - term: "Non-consumers"
+    meaning: "People who could not use or afford the product at all until a simpler version came."

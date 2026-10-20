@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Drucker wrote 39 books and decades of articles [S2]. Almost all of it is under copyright and behind paywalls, so this data set leans on reference pages about his work, the openings of three of his Harvard Business Review articles, and short lines from his books as collected, with page numbers, on Wikiquote. Where we only saw the opening of an article, we say only what the opening says. Drucker himself admitted he used stories to make a point rather than to record history [S1], so treat his anecdotes as teaching tools.
+A note on method: Drucker wrote 39 books and decades of articles [S2]. Almost all of it is under copyright and behind paywalls, so this data set leans on reference pages about his work, the openings of three of his Harvard Business Review articles, and short lines from his books as collected, with page numbers, on Wikiquote. In October 2026 we re-opened the three Harvard Business Review pages and the Wikiquote page; the three articles are behind a paywall and gave only their openings, so nothing here claims to know the full method of those articles. Drucker himself admitted he used stories to make a point rather than to record history [S1], so treat his anecdotes as teaching tools.
 
 ## In one paragraph
 
@@ -72,8 +72,32 @@ How he applied it: he advised the Red Cross and the Girl Scouts, and created an 
 - Build on strengths, your own and your team's [S3].
 - Drop what no longer works, even if it once made you famous [S1][S6].
 - Judge by results, not by style or charm [S5][S6].
+- A decision is needed when a condition will get worse if nothing is done [S6].
+- Do not risk disaster this year for a grand future [S6].
 - Think before you act; action without thought leads to failure [S1].
 - Know the cost of the whole chain, not only your own part of it [S1].
+
+## Real decisions
+
+### Studying General Motors from the inside, 1943 to 1946
+
+Drucker spent time inside GM and wrote *Concept of the Corporation* from it [S1][S2]. He urged GM, then seen as the best-run firm in the world, to rethink long-held policies [S1]. Chairman Alfred Sloan called the critique dead wrong and ignored the book, and GM executives shunned Drucker for years [S1]. He kept the work and went on to make management a field of study [S1].
+
+### Refusing the "wonderful meeting"
+
+He told Donald Keough of Coca-Cola not to report that a meeting had been wonderful [S2]. His test for a meeting was whether it changed what people did next [S2][S6].
+
+### Answering the Wall Street Journal
+
+When *The Wall Street Journal* reported in 1987 that he sometimes got facts wrong, he did not fight the charge. He said he used anecdotes to make a point, not to write history [S1].
+
+### Taking the nonprofit sector seriously
+
+Drucker advised the Red Cross and the Girl Scouts and in 1991 created an award for innovation by nonprofits [S2]. His stated view was that nonprofits could be run very well and that volunteering gave people purpose and a sense of community [S1][S2].
+
+### Choosing to teach and write into old age
+
+He taught his last class at 92 and kept writing almost to the end, which fits his view that a working life now runs about 50 years and the person must keep themselves engaged [S1][S3].
 
 ## Where he stood
 
@@ -121,5 +145,5 @@ How he applied it: he advised the Red Cross and the Girl Scouts, and created an 
 - "There is only one valid definition of a business purpose: to create a customer." (*The Practice of Management*, 1954) [S6]
 - "Success always obsoletes the very behavior that achieved it." (*Management: Tasks, Responsibilities, Practices*, 1973) [S6]
 - "Management has authority only as long as it performs." (*Management: Tasks, Responsibilities, Practices*, 1973) [S6]
-- "the test is performance not conformance" (*The Effective Executive*) [S6]
+- "The first managerial skill is, therefore, the making of effective decisions." (*Management*, 1973) [S6]
 - "I use anecdotes to make a point, not to write history." (to *The Wall Street Journal*, 1987) [S1]

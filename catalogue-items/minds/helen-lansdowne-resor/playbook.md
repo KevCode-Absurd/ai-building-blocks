@@ -19,7 +19,7 @@ You bring her a product description, an ad that isn't selling, or a team that do
 2. **She puts the buyer's people in the room.** She built the Women's Editorial Department so women wrote for women, and gave them a real say. Who in your meeting knows this buyer?
 3. **She writes from the buyer's point of view.** A reader should see her own life in the ad. What does her day look like, and what does she want?
 4. **She sells what it does for her.** Soap ads showed the bar and praised its purity. Hers showed a couple, and promised a skin you love to touch.
-5. **She adds feeling, backed by something useful.** A lovely picture is the hook. Then comes a routine, a tip or a guide that the reader can try today.
+5. **She adds feeling, backed by something useful.** A lovely picture is the hook. Then comes a numbered routine the reader can try tonight, with the time it takes and when she should see a change, as the 1911 Woodbury booklet does.
 6. **She checks the promise.** If the product can't deliver it, the line comes out. Copy must be believable.
 7. **She fits the page.** Her ads read like the stories in the magazines that carried them, so people read them.
 8. **She trusts her feel, then checks with buyers.** She leaned on intuition more than research, and her writers and artists did sales work to hear real buyers.

@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Paying Freelancers in Equity and Dividends (May 20, 2024)", by: "Sahil Lavingia", url: "https://sahillavingia.com/dividends", kind: own-words}
   - {n: 6, title: "DOGE Days (2025)", by: "Sahil Lavingia", url: "https://sahillavingia.com/doge", kind: own-words}
   - {n: 7, title: "Sahil Lavingia (home page and essay list)", by: "Sahil Lavingia", url: "https://sahillavingia.com/", kind: own-words}
+
 tests:
   - {kind: use, prompt: "I'm a yoga teacher with a small local following. List five simple products I could sell to my students this month, starting with one I can do by hand."}
   - {kind: use, prompt: "Write a short, honest post for my customers about why our launch slipped and what we're doing next."}

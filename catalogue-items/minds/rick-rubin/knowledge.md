@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Rick Rubin is alive, and views can change. The views below come from his 2023 book The Creative Act, as excerpted in 2024 [S2], a 2023 interview about the book [S3], a 2023 TV piece [S4] and reference pages. Treat each as "as of" its date. Nothing here speaks for him on current projects or new events, and this file leaves out his private life.
+Rick Rubin is alive, and views can change. The views below come from his 2023 book The Creative Act, as excerpted in 2024 [S2], a 2023 interview about the book with the writer Eric Skelton [S3], a page of his quoted lines from the book and an Esquire interview in 2007 [S6], a 2023 TV piece [S4] and reference pages. Most of the first-hand material is excerpt or fragment, not a full book or transcript, so method claims here stay close to what these pieces say. Treat each as "as of" its date. Nothing here speaks for him on current projects or new events, and this file leaves out his private life.
 
 ## In one paragraph
 
@@ -38,6 +38,10 @@ Rubin worked across genres that were thought to be far apart. He co-produced Run
 
 How he applied it: at Def Jam, early hip-hop was seen by most people as not even music, he recalled in 2023 [S3][S4]. He backed it anyway. An early record with the Def Jam logo listed his dorm as the address, and demo tapes started to arrive, including one from a teenage LL Cool J [S4].
 
+### Catch what arrives in between
+
+In The Creative Act he suggests that the drowsy moments before sleep and right after waking can surface useful ideas, and that a notebook by the bed, used at once on waking, may help [S6]. He also says that if several directions appeal, you should try more than one at a time, which brings a healthy sense of detachment [S6]. When a work is nearly whole, the last details get easier to place, like the final puzzle piece [S6]. In 2007 he said making art is a mystical process that artists often cannot explain, and that young artists in particular feel and see more than others [S6].
+
 ### Zoom out from setbacks
 
 In The Creative Act, Rubin suggests looking at personal setbacks, like a lost manuscript, a break-up or a layoff, as scenes in a film rather than drowning in them [S2]. He argues that hard times can be the setup for something good later, and that no single result is the final word [S2]. Zooming in makes events feel like disasters; zooming out shows them as small parts of a bigger life, and that view is a choice [S2]. Light and dark, he writes, are both part of a cycle, neither good nor bad in itself [S2].
@@ -63,6 +67,29 @@ Rubin describes creativity as something everyone does, not only professional art
 - Ask a simple question instead of giving an order. He says his value is listening closely and asking [S3].
 - Choose from a wide field. For Cash he drew songs from Cash himself, older recordings and new writers [S5].
 - Test an early draft on one person with good taste, not a crowd [S3].
+
+## Real decisions (enriched minds)
+
+### Running Def Jam from a dorm (1984)
+Rubin was a student at New York University when early hip-hop was a niche taste that most people did not call music [S4]. He put out a record with the Def Jam address, his dorm, printed on it, and demo tapes began to arrive, including one from a teenage LL Cool J [S4]. He made LL Cool J's first record because of the music he heard [S4].
+
+### Starting with Cash by listening (1993)
+Seeing Johnny Cash at a dinner theater in Orange County, Rubin saw a man who felt the world had passed him by [S4]. He began by spending time listening to Cash's favourite music, and offered a deal with no brief beyond doing what felt right [S4][S5]. Most songs on American Recordings were just Cash and an acoustic guitar, and the record won a Grammy [S5]. They made seven albums together before Cash died in 2003 [S4].
+
+### Naming a weak line with a question (Neil Young)
+Rubin questioned a lyric line for Neil Young. Young admitted he had let it slide, and the line was fixed [S3]. His approach was to point at the specific line and ask if the artist was fine with it, on the artist's team [S3].
+
+### Being told he was wrong (Tom Petty)
+Rubin called a chorus line lazy. Petty defended it and said it was the best line in the song [S3]. Rubin accepted that the line was the core of the song, and left it [S3].
+
+### Rebuilding lyrics from an essay
+With one artist he asked her to write a long prose essay on the true story behind the song. He then pulled the strongest content from the essay to rebuild the lyrics [S3]. His reason was to get the work connected to what it was really about [S3].
+
+### Favouring the rough version
+Asked about demos, Rubin said he often prefers an early, rough version to a polished one, like a sketch against a finished painting [S3]. He trusts bodily signals, such as leaning in, rewinding or losing track of time, over the thought that something will sell [S3]. He shares early work with one trusted friend of good taste [S3].
+
+### Pairing metal and rap on one label (1986 to 1988)
+Rubin co-produced Walk This Way with Run-DMC and Aerosmith, and Slayer's Reign in Blood, both in 1986 [S1]. His later label signed metal bands and rap acts side by side [S1].
 
 ## Where he stood
 

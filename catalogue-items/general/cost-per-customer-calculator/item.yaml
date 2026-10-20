@@ -1,0 +1,17 @@
+slug: cost-per-customer-calculator
+name: "Cost per customer calculator"
+summary: "Paste ad costs, samples and orders. Get what a customer really costs, how soon it pays back and which ads to keep."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [claude-hopkins]
+credits:
+  - {title: "Scientific Advertising (1923)", by: "Claude C. Hopkins", used: "Judging ads by cost per customer, not per reply, by keying every ad, and working out the most you can pay for a customer"}

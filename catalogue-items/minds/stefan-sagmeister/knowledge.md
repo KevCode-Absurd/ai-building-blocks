@@ -68,6 +68,23 @@ How he applied it: the series has toured to Tokyo and Seoul, and an expanded ver
 - When bored or afraid, change your setting or take time off [S1][S2].
 - Look at long-term data before you despair [S1].
 
+## Real decisions
+
+### Cutting the talk into his own skin
+For an AIGA Detroit lecture poster, he had the text cut into his skin and photographed it [S6]. His reason was to show the pain that seems to come with most design projects [S6]. The shock suited his own brand, and it would be a risk for a client [S6].
+
+### Closing the studio for a year
+He closed the studio to client work every seven years and used the year for experiments [S1][S10]. He was nervous before the first one and called his clients to explain [S1]. He says he often works more hours on a sabbatical than in a normal year, and that everyone he knows who took one rates it among their best choices [S2]. He chose three places for the third one (Mexico City, Tokyo and Schwarzenberg) so he would not repeat old experiences [S2].
+
+### Changing his mind on beauty
+Early on he agreed with his mentor Tibor Kalman, who found beauty uninteresting [S2]. After about thirty years he said beauty and form are central to function [S1][S2]. The proof came from the studio: when it took form seriously, client goals were met more often [S3]. He tells how a Memphis conference full of cheapest-and-fastest objects felt next to a Lisbon castle with patterned doorknobs, and asks what happened to us [S1].
+
+### Running a critique salon
+He copied artist Louise Bourgeois's Sunday living-room critiques and ran Monday evening salons for up to twelve designers [S1]. He critiques about one in ten Instagram submissions, picking work he can push further [S1]. He avoids snarky reviews because they hurt and teach nothing [S1].
+
+### Moving the office upstairs
+During his time in Mexico he moved his office from a basement to a high-ceilinged upstairs living room and became far more productive [S2]. He treats atmosphere as part of the method [S2].
+
 ## Where he stood
 
 **Is beauty superficial?** No. As of 2017 he called it central to being human and a strong tool for communication [S2][S3].

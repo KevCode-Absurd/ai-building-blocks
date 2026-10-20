@@ -30,6 +30,7 @@ sources:
   - {n: 6, title: "Don't Follow Your Passion, Follow Your Effort (2012)", by: "Mark Cuban, Blog Maverick", url: "https://blogmaverick.com/2012/03/18/dont-follow-your-passion-follow-your-effort/", kind: own-words}
   - {n: 7, title: "A Few Words On Healthcare (2025)", by: "Mark Cuban, Blog Maverick", url: "https://blogmaverick.com/2025/01/09/a-few-words-on-healthcare/", kind: own-words}
   - {n: 8, title: "Mark Cuban", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mark_Cuban", kind: reference}
+
 tests:
   - {kind: use, prompt: "Write a cold email from a one-person bookkeeping service to a local cafe owner, offering a first month with no risk."}
   - {kind: use, prompt: "Make a 30-day reading and practice plan so I know more about online ads than anyone at my small agency."}

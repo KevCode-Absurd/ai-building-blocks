@@ -1,0 +1,117 @@
+new_slug: voice-over-stripping-test
+name: "Voice-over stripping test"
+summary: "Paste a script with narration. Get a verdict on each line: does the story work without it?"
+job: make-video-ads
+thinking: medium
+thinking_why: "Each line needs a judgment call, but the sort is simple: telling or counterpoint."
+
+headline: "Voice-over stripping test"
+subhead: "Paste a script with narration. It strips all narration, judges whether the picture still tells the story, sorts each line as telling or counterpoint, cuts the telling lines and keeps only the ones that add meaning the picture cannot."
+
+explain: |
+  Narration often explains what the viewer is already looking at. A voice says "he was nervous" over a shot of a man gripping a chair. The line steals the moment from the picture and makes the viewer a listener, not a watcher.
+
+  This skill runs a stripping test. It splits the script into narration and scene, names the feeling each scene should leave, removes all the narration and reads what is left. If the story still works, most narration was not needed. It sorts each line as telling (it replaces the picture) or counterpoint (it adds something the picture cannot). It cuts or turns telling lines into action, keeps only counterpoint, and rereads the result cold. It also keeps ambiguity that is there on purpose.
+
+when:
+- "Your video script has a voice that feels like it is explaining everything."
+- "A video ad runs long and you need to cut words, not pictures."
+- "You are not sure whether the narration helps."
+
+you_give:
+- "The full script with narration marked (voice-over or VO)"
+- "What each scene should make the viewer feel (optional)"
+- "The length limit (optional)"
+you_get:
+- "A verdict on every narration line: telling or counterpoint"
+- "A stripped version of the script"
+- "A reason for each cut or kept line"
+- "A final cold read verdict"
+
+how_to_use:
+- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+- "Paste the script with narration clearly marked."
+- "Write the feeling you want for each scene, if you know it."
+- "Review each verdict and say which cuts you reject."
+- "Use the stripped script as your next draft."
+
+how_it_works:
+  - title: "Split narration from scene"
+    text: "Separate the script into narration lines and scene content (what is seen and heard)."
+  - title: "Name the feeling"
+    text: "For each scene, write in one line what the viewer should feel or understand."
+  - title: "Strip and reread"
+    text: "Remove all narration and read what is left from start to end."
+  - title: "Sort each line"
+    text: "Label every narration line."
+  - title: "Cut or dramatise"
+    text: "For each telling line, either cut it or turn it into something seen or done, and write the replacement action."
+  - title: "Keep counterpoint only"
+    text: "Keep counterpoint lines only if the stripped version cannot say it."
+  - title: "Reread cold"
+    text: "Read the new version once more from the top as if for the first time."
+  - title: "Check it"
+    text: "Go through \"Check before you hand it back\" one line at a time and fix any check that fails, if you can."
+
+output_shape: |
+  STRIPPED READ
+  <does the story still work, which scenes broke>
+
+  NARRATION LINES
+  1. "<line>" | telling or counterpoint | reason | action: cut / show as <> / keep
+
+  REVISED SCRIPT
+  <the script with the changes>
+
+  AMBIGUITY KEPT
+  <where and why>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Scene feeling"
+    how: "State the feeling for each scene. Cuts are judged against it."
+  - what: "Length limit"
+    how: "Give a time limit. It decides how many counterpoint lines survive."
+  - what: "Required claims"
+    how: "Mark any line that must stay for legal or product reasons."
+  - what: "Picture detail"
+    how: "Describe each shot. The test needs to know what is seen."
+
+judge:
+- "No kept line describes what is on screen."
+- "Each cut line has a reason."
+- "The stripped version makes sense on its own."
+- "The remaining narration is shorter than before."
+- "Nothing you needed to say is missing."
+
+test:
+- "Read the stripped script aloud to someone and ask what they understood."
+- "Check each kept line adds a fact, contrast or irony the picture cannot."
+- "Run it twice. The telling and counterpoint sort should match."
+- "Film or storyboard one cut scene and see if it works."
+
+improve:
+- "Add your brand's required lines to a must-keep list."
+- "Add the type of narration your style uses, such as a founder voice."
+- "Keep a file of counterpoint lines that worked."
+- "Pair it with an on-screen text planner if you move words to the screen."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting lines and rewriting scenes is text work."}
+    - {name: "A video editor", why: "Cut the real footage after the script is stripped."}
+  inputs:
+    - "A shot list or storyboard"
+    - "The brand's required claims"
+    - "The length limit in seconds"
+
+terms:
+  - term: "Telling"
+    meaning: "A narration line that says what the picture already shows or explains a feeling."
+  - term: "Counterpoint"
+    meaning: "A narration line that adds meaning the picture cannot, such as a contrast or irony."

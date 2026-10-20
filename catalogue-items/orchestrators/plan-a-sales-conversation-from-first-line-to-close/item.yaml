@@ -1,0 +1,29 @@
+slug: plan-a-sales-conversation-from-first-line-to-close
+name: "Plan a sales conversation from first line to close"
+summary: "Give it your product and buyer. Get the lead argument, a ten-second opener, answers to doubts and a close."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: true}
+  - {type: persona, required: false}
+  - {type: objection_map, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: copy_draft}
+uses: [buyer-matched-argument-planner, ten-second-opener-writer, objection-answer-sheet-writer, ask-which-closing-planner]
+steps:
+  - {uses: buyer-matched-argument-planner, note: "Which argument leads for each and what to ask first"}
+  - {uses: ten-second-opener-writer, note: "A ten-second opener and two spares, as short honest questions. Reads the angle library from the step before"}
+  - {uses: objection-answer-sheet-writer, note: "An answer sheet that agrees where true, restates each doubt as a yes-question and brings proof. Reads the angle library from the step before"}
+  - {uses: ask-which-closing-planner, note: "Closing questions that offer two ways to say yes. Reads the objection map from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [elmer-wheeler, david-ogilvy]
+credits:
+  - {title: "Tested Direct Selling", by: "Elmer Wheeler", used: "The order of the steps: buyer-matched argument planner, ten-second opener writer, objection answer sheet writer, ask-which closing planner"}
+generated_from: intake/tested-direct-selling/skeleton.yaml

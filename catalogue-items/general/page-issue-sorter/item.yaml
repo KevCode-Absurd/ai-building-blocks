@@ -1,0 +1,17 @@
+slug: page-issue-sorter
+name: "Page issue sorter"
+summary: "Paste a list of site problems. Get each one sorted into fix now, investigate, test or tracking, with a ranked order."
+category: general
+type: skill
+role: compress
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peep-laja]
+credits:
+  - {title: "Optimizing Optimization (opening keynote, 2016)", by: "Peep Laja, CXL", url: "https://cxl.com/", used: "Sorting every issue into tracking, fix now, investigate or test, and ranking by likely gain and effort"}

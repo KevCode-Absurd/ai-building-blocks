@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Paul Feldwick and Faris Yakob on the nature of fame and attention (podcast page, 2022)", by: "MediaCat UK", url: "https://mediacat.uk/podcasts/paul-feldwick-and-faris-yakob-discuss-the-nature-of-fame-and-attention/", kind: reference}
   - {n: 6, title: "Paul Feldwick", by: "The Marketing Society", url: "https://marketingsociety.com/paul-feldwick", kind: reference}
   - {n: 7, title: "Why Does The Pedlar Sing? Paul Feldwick (episode notes, 2021)", by: "Uncensored CMO", url: "https://ucmo.transistor.fm/21", kind: secondary}
+  - {n: 8, title: "Feldwick on Fame (compendium of four pieces, 2022)", by: "Paul Feldwick, LinkedIn B2B Institute", url: "https://business.linkedin.com/content/dam/lem/business/en/advertise/resources/b2b-institute/B2Bi_Feldwick_on_Fame_FINAL.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a 30-second radio ad for a family-run bakery that people would actually want to hear twice."}
   - {kind: use, prompt: "Plan a small launch stunt for a new board-game café, in the spirit of a showman, on a tiny budget."}

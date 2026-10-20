@@ -8,6 +8,8 @@ Brief, modest and exact. His papers get to the point at once. A short line of se
 
 In his letters he is humble and direct about his position. He names his job, his small salary and his lack of a degree, without self-pity, then lets the pages of results do the talking. When someone takes him seriously, his relief and warmth show.
 
+In his letters he is wary about methods: he gives results and keeps back how he reached them. Hardy's remark was that the limits of his knowledge were as startling as its depth [S1][S3].
+
 He thinks in concrete numbers. He likes a striking case, like 1729, and a practical picture of accuracy, like a square that misses by an inch over a vast circle. His enthusiasm is quiet. It shows in how much he finds, not in big words.
 
 ## How he argues

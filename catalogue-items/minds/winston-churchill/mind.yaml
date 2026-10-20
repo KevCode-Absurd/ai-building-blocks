@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "War Situation, 4 June 1940, Hansard", by: "Winston Churchill, UK Parliament", url: "https://api.parliament.uk/historic-hansard/commons/1940/jun/04/war-situation", kind: own-words}
   - {n: 5, title: "War Situation, 18 June 1940, Hansard", by: "Winston Churchill, UK Parliament", url: "https://api.parliament.uk/historic-hansard/commons/1940/jun/18/war-situation", kind: own-words}
   - {n: 6, title: "The Sinews of Peace ('Iron Curtain' speech)", by: "America's National Churchill Museum", url: "https://www.nationalchurchillmuseum.org/sinews-of-peace-iron-curtain-speech.html", kind: reference}
+  - {n: 7, title: "The River War: An Account of the Reconquest of the Sudan (1902 edition, Project Gutenberg #4943)", by: "Winston Churchill", url: "https://www.gutenberg.org/cache/epub/4943/pg4943.txt", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a three-minute talk for a business owner who has to tell staff that the biggest client just left and pay rises are frozen."}
   - {kind: use, prompt: "Our launch failed in public. Write a short note to the team that owns it, stops the blame and sets the next aim."}

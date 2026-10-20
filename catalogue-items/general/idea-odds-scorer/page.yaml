@@ -1,0 +1,120 @@
+new_slug: idea-odds-scorer
+name: "Idea odds scorer"
+summary: "List your ideas. Get each scored on upside, passion and odds, with the best next small step."
+job: test-an-idea
+thinking: low
+thinking_why: "The steps are fixed and the scoring is simple arithmetic with reasons."
+
+headline: "Idea odds scorer"
+subhead: "List your ideas. It scores each one from 0 to 10 on profit if it goes well, your passion and the odds of success, multiplies them and weighs long shots separately. You get a ranked list and the next small step for the best ones."
+
+explain: |
+  When you have three ideas, you tend to pick the one you like most that week. Passion matters, but so do the size of the prize and the chance of getting it, and few people weigh all three in the same way for each idea.
+
+  This skill gives every idea the same three scores, each with a reason, and multiplies them so the weak spot in an idea drags it down. It then checks long shots by expected value so a big prize with low odds is not lost. Last, it picks a next step that puts the idea in front of a real customer, not another round of planning.
+
+when:
+  - "You have several ideas and keep switching between them."
+  - "A friend is excited about an idea and you want a fair view."
+  - "You are about to spend months on something you have not compared."
+
+you_give:
+  - "Your ideas, one sentence each"
+  - "What you know about the market and your skills (optional)"
+  - "Your time and money limits (optional)"
+you_get:
+  - "A table with profit, passion and odds scores and reasons"
+  - "A ranking and expected value for long shots"
+  - "The top idea and the best long shot"
+  - "A first small step with a real customer"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your ideas and anything you know about each."
+  - "Change any score you disagree with and give your reason."
+  - "Take the first small step within two weeks."
+
+how_it_works:
+  - title: "Writes ideas"
+    text: "One line each: who, what, result."
+  - title: "Scores profit"
+    text: "0 to 10 if it goes as well as it can."
+  - title: "Scores passion"
+    text: "0 to 10 for how much you want it."
+  - title: "Scores odds"
+    text: "0 to 10 for how likely it is to work."
+  - title: "Multiplies"
+    text: "The product, shown in a sorted table."
+  - title: "Weighs long shots"
+    text: "Expected value for high-profit, low-odds ideas."
+  - title: "Picks a step"
+    text: "One step with a real customer."
+
+output_shape: |
+  IDEAS
+  1. <one line>
+
+  SCORES
+  <idea> | profit <n> (<reason>) | passion <n> (<reason>) | odds <n> (<reason>) | product <n>
+
+  LONG SHOTS
+  <idea>: chance <%> x payoff <x> - cost <x> = <value>
+
+  TOP IDEA
+  <idea> and why
+  BEST LONG SHOT
+  <idea> and why
+
+  FIRST SMALL STEPS
+  <idea>: <step with a real customer, within <time>>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "Reasons"
+    how: "Write why you gave a score. The skill checks the reason against your facts."
+  - what: "How far ahead"
+    how: "Say if you want a result in three months or three years."
+  - what: "Your limits"
+    how: "Time and money change the odds score."
+  - what: "How many ideas"
+    how: "Three to seven works best."
+
+judge:
+  - "Each score has a one-line reason."
+  - "Long shots are shown with expected value."
+  - "The next step involves a real customer."
+  - "No score was changed just to make the table work."
+  - "The top idea would still make sense after a good night's sleep."
+
+test:
+  - "Run it on ideas you already tried. See if the ranking matches how they went."
+  - "Run it twice. The top two should stay the same."
+  - "Ask a friend to score the same ideas on their own and compare."
+  - "Take the first step and update the odds score with what you learn."
+
+improve:
+  - "Add your own fourth score, such as fit with your skills, in step 5."
+  - "Add past ideas and results as examples in step 4."
+  - "Keep a log of scores and what happened."
+  - "Pair it with an MVP experiment planner for the first step."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Scoring with reasons and sorting is text work."}
+    - {name: "A spreadsheet", why: "Lets you change a score and watch the ranking move."}
+  inputs:
+    - "Market size or competitor figures"
+    - "Your skills and hours per week"
+    - "A budget limit"
+    - "Notes from past attempts"
+
+terms:
+  - term: "Expected value"
+    meaning: "The chance of success times the payoff, minus what it costs to try."
+  - term: "Long shot"
+    meaning: "An idea with big upside and low odds."

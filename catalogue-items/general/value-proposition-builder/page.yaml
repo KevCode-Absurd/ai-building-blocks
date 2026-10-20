@@ -1,0 +1,127 @@
+new_slug: value-proposition-builder
+name: "Value proposition builder"
+summary: "Paste your offer and customer facts. Get a value pitch in five and a half parts that ends with proof of profit."
+job: make-offer
+thinking: medium
+thinking_why: "It chooses which facts become value and proof, and refuses claims without evidence, but the structure is fixed."
+
+headline: "Value proposition builder"
+subhead: Give it your offer, what you know about a customer and any proof. It writes your company, product and personal value, one incentive, the customer's profit, what you keep giving after the sale and proof from a similar customer. You get a value pitch draft and its checks.
+
+explain: |
+  A buyer hears the same claims from every seller: quality, service, experience. A pitch that lists what you are gives them nothing to weigh. What they weigh is what they will gain: money earned, money saved, time freed or risk avoided, and whether you will still be there after they pay.
+
+  This skill builds the pitch in five and a half parts. It lists your company value, your product value and your own value as the seller. It adds one incentive marked one time only, then states how the customer produces, benefits or profits, with numbers where you have them. The half step is the value you keep giving after the sale. It closes with proof from a similar customer, and checks the draft against the buyer's own after-purchase doubts.
+
+when:
+  - Your pitch lists features and the buyer asks what is in it for them.
+  - You are about to meet a buyer and want your value on one page.
+  - You offer a deal and cannot say what it is worth to the customer.
+
+you_give:
+  - Your offer or what you sell, with price
+  - What you know about the customer and what they want to gain
+  - Your facts, such as results, case notes, reviews and numbers (optional)
+  - Your brand file (optional)
+you_get:
+  - Your company, product and seller value, each stated plainly
+  - One incentive, marked one time only
+  - The customer's profit, with figures where you have them
+  - What you keep giving after the sale, and a proof line from a similar customer
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your offer, the customer facts and any proof you may use.
+  - Add the doubts buyers say they have after they buy, if you know them.
+  - Edit the draft into your own voice and cut anything you cannot prove.
+  - Keep it ready to show in a meeting or on a page.
+
+how_it_works:
+  - title: Lists your three values
+    text: Writes company value, product value and your value as the seller, each from facts you gave.
+  - title: Adds one incentive
+    text: Writes one short-term incentive and marks it one time only.
+  - title: States the customer profit
+    text: Writes how the customer produces, benefits or profits, with numbers where you have them.
+  - title: Adds the half step
+    text: Writes what you keep giving after the sale.
+  - title: Adds similar proof
+    text: Adds proof from a customer like this one.
+  - title: Checks buyer doubts
+    text: Checks the draft against the buyer's own after-purchase doubts.
+  - title: Checks the draft
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  YOUR VALUE
+  Company: <value>
+  Product: <value>
+  You as the seller: <value>
+
+  INCENTIVE (one time only)
+  <incentive, limit or end>
+
+  WHAT THE CUSTOMER GAINS
+  <how they produce, benefit or profit, with figures>
+
+  AFTER THE SALE (the half step)
+  <what you keep giving>
+
+  PROOF FROM A SIMILAR CUSTOMER
+  <customer type, result, source>
+
+  THE PITCH
+  <draft in the buyer's words>
+
+  BUYER DOUBTS AFTER PURCHASE
+  <doubt> | Answered by: <line>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Figures
+    how: Numbers for profit, saving or time turn a claim into value. With none, the skill says the gain in plain words and marks MISSING.
+  - what: Proof
+    how: Give a real result with a source. The skill never invents a case.
+  - what: The incentive
+    how: State what it is and when it ends. It marks it one time.
+  - what: The buyer's doubts
+    how: Paste the doubts your buyers voice after buying. The draft answers each.
+
+judge:
+  - The customer's profit is stated and is not a vague promise.
+  - The incentive is marked one time.
+  - The proof comes from a similar situation.
+  - There is no claim of honesty or quality without evidence.
+  - The value you keep giving after the sale is named.
+
+test:
+  - Read the pitch to a customer and ask what they would want proved.
+  - Check each figure against your records.
+  - Remove the incentive and see if the pitch still holds.
+  - Run it twice and compare the customer profit it states.
+
+improve:
+  - Add your strongest case and its numbers to the input every time.
+  - Add claims you must not make to the checks.
+  - Save pitch versions that won deals to your brand file.
+  - Pair it with a skill that writes your sales page or letter.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing a short pitch from your facts is text work any strong chat AI handles."}
+    - {name: "Your CRM or deal notes", why: "Holds the real results and the objections buyers raised."}
+  inputs:
+    - "A case with before and after numbers"
+    - "Customer reviews with their words"
+    - "What it costs a customer to not buy"
+
+terms:
+  - term: Incentive
+    meaning: A reason to act soon, such as a bonus or a limited price.
+  - term: Half step
+    meaning: The value you keep giving after the sale, such as support or updates.

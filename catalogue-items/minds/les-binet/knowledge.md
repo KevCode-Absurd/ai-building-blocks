@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Les Binet is alive, and views can change. This data set comes from a 2022 interview he gave, an article he wrote in 2025, reports of his talks in 2016 and 2020, and biographies [S1][S2][S3][S4][S5][S6]. His books with Peter Field are summarised here only through those reports, since we didn't open the books themselves. His birth year isn't in our sources. Treat each view as "as of" the date of its source.
+Les Binet is alive, and views can change. This data set comes from a 2022 interview he gave, an article he wrote in 2025, reports of his talks in 2016 and 2020, and biographies [S1][S2][S3][S4][S5][S6]. His books with Peter Field are summarised here through those reports and through the authors' own slide summary of the research behind *The Long and the Short of It*, which lists ten principles and shows charts without the full text [S7]. Chart numbers are read off the slides and are rough. His birth year isn't in our sources. Treat each view as "as of" the date of its source.
 
 ## In one paragraph
 
@@ -64,6 +64,34 @@ In 2022 he said marketers should ignore short-term noise, fashion and news, and 
 
 How he applied it: he pointed to Google Trends search data, which goes back to 2004, as an example of long data [S2][S3].
 
+## Real decisions
+
+These are research choices and rules from the slide summary [S7], plus one habit from his 2022 interview [S1].
+
+### Judging campaigns on short and long effects together
+
+The research reviewed 996 campaigns across 700 brands and 83 categories from the IPA effectiveness databank, and compared strategies over the short and the long term. The authors' framing is that there are no long-term effects without short-term ones, but that the two are different: short-term effects drive efficiency and long-term effects drive growth and profit, so you need both [S7].
+
+### Setting the starting split at about 60 to 40
+
+The summary's budget chart peaks at roughly 40 percent of budget on activation, which gives the 60:40 rule. In the media mix they showed, brand channels took about 61 percent and activation channels about 39 percent of UK spend in 2011 [S7]. In 2022 he called the split a guide, not an iron rule, since it differs by brand and situation [S1].
+
+### Choosing broad reach over narrow targeting
+
+The slides show that campaigns aimed at the whole market produced the most very large effects and the strongest effect on price sensitivity and profit, compared with campaigns aimed only at existing customers or only at new ones [S7]. That is the basis for his advice to talk to all your prospects, not just those ready to buy [S7].
+
+### Putting TV and brand channels first for long-term profit
+
+For campaigns lasting three years or more, adding TV was the biggest single channel boost to profit in the slides. Online channels split: websites and interactive formats added brand effects, while social, mobile and search were weaker for brand building [S7]. The authors' phrase for this is "horses for courses" [S7].
+
+### Treating pre-testing and short-term data with care
+
+The slides warn that short-term metrics alone can mislead, and show creatively awarded and fame campaigns doing better on the big business results than rational ones. They also show campaigns that were pre-tested doing worse over the long run than ones that were tracked, which the authors use to argue for tracking over pre-testing [S7].
+
+### Keeping out of the news cycle
+
+In 2022 he said he likes not to be distracted by short-term things, and that he keeps to stable parts of human behaviour [S1].
+
 ## How he decides
 
 - Is this job brand building, sales activation, or both? [S1][S4]
@@ -106,6 +134,7 @@ How he applied it: he pointed to Google Trends search data, which goes back to 2
 
 ## Where he was wrong or criticised
 
+- **Slides, not the full report.** The ten-principle slides show charts without the method detail, so a number such as the 60:40 peak is a pattern from a large database, not a controlled test [S7].
 - **Rules taken too literally.** The 60:40 split is often quoted as a law. He has said himself that it varies and can be 50:50 [S1]. Users who copy the number without the caveat misuse his work.
 - **Hard for small budgets.** Long-term brand building and share of voice above market share assume money to spend [S1][S4]. A small or cash-poor business may not survive long enough to see the long-term payoff.
 - **Award-winning creative.** The finding that awarded creative is more efficient [S4] can be read as backing award culture. Skeptics of creative awards would want to see how cases were selected.

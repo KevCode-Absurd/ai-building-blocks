@@ -1,0 +1,125 @@
+new_slug: recognition-plan-designer
+name: "Recognition plan designer"
+summary: "Describe your team and goals. Get a reward plan where anyone who reaches a set level wins, with a public moment."
+job: lead-people
+thinking: medium
+thinking_why: "It balances fairness, budget and goals, but the plan shape is fixed."
+
+headline: "Recognition plan designer"
+subhead: Describe your team, your goals and what you give out now. It checks who always wins, sets levels that anyone can reach, picks prizes people want and plans a public moment and specific praise for each level. You get a reward plan that fits your budget.
+
+explain: |
+  A contest where only the top few win teaches everyone else to stop trying. The same people take the prizes every time, and the rest decide the game is not for them. Praise given in private or in vague words does little.
+
+  This skill reviews what you do now and who wins. It sets goal levels so that anyone who reaches a level wins, not only the highest few. It picks prizes your people have wanted, not only cash, and plans where each win is announced in public. For every level it writes the praise in specific words. It checks that pay is fair first, because a prize cannot stand in for a fair income, and that the plan fits the real budget.
+
+when:
+  - The same few people win every contest and the rest have gone quiet.
+  - You want to thank people for work and do not know how.
+  - You are running a sales push, a project or a season and want a plan that keeps people trying.
+
+you_give:
+  - Your team, its size and its goals
+  - What you reward now and who has won in the last year
+  - Your budget for prizes and events
+  - Anything people have said they would like (optional)
+you_get:
+  - A review of who wins now and why that matters
+  - Levels and goals that anyone can reach on their own
+  - Prizes, public moments and praise lines for each level
+  - A budget check and a pay fairness check
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the team, the goal and the last contest results.
+  - State the real budget and the dates the plan covers.
+  - Ask people on the team what they would like as a prize and add the answers.
+  - Share the levels and prizes with the team at the start, not at the end.
+
+how_it_works:
+  - title: Reviews the current plan
+    text: Looks at who has won and who never does.
+  - title: Sets levels
+    text: Writes goal levels so that anyone who reaches one wins.
+  - title: Picks prizes
+    text: Chooses things people have wanted, not only cash.
+  - title: Plans public moments
+    text: Decides where and how each win is announced.
+  - title: Writes praise
+    text: Writes the specific words of praise for each level.
+  - title: Checks pay fairness
+    text: Checks that pay is fair so prizes do not stand in for income.
+  - title: Checks the budget
+    text: Works out the cost of the plan and compares it with the budget.
+
+output_shape: |
+  WHO WINS NOW
+  <who has won, who has not, what it does to the rest>
+
+  PAY CHECK
+  <is pay fair before prizes>
+
+  LEVELS
+  <level> | Goal: <number or action> | Prize: <prize>
+
+  PUBLIC MOMENTS
+  <level> | Where: <place or event> | Who announces: <role>
+
+  PRAISE LINES
+  <level> | <specific praise to say>
+
+  BUDGET
+  Cost: <total>   Budget: <amount>   Gap: <amount>
+
+  CALENDAR
+  <date> | <what happens>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Past winners
+    how: Say who won in the last year. If the same few always did, the skill sets levels that change that.
+  - what: What people want
+    how: Ask the team. Prizes people picked themselves work better than ones you guess.
+  - what: Budget
+    how: Give a real amount. The plan fits the budget and tells you what to cut if it does not.
+  - what: Goals
+    how: Give numbers or actions people can control. Levels must be things a person can reach alone.
+
+judge:
+  - No level depends on beating a named colleague.
+  - Every prize is tied to a level a person can reach alone.
+  - Each win has a public moment and named words of praise.
+  - Pay fairness is checked before prizes.
+  - The plan fits the real budget.
+
+test:
+  - Check the levels against last year's results. Count how many more people would have won.
+  - Ask three team members which prize they would work for. See if the plan includes it.
+  - Run it twice. The levels and the public moments should be close.
+  - After the first round, ask people if they thought it was fair.
+
+improve:
+  - Add a list of prizes your team has asked for in the past.
+  - Add your calendar of existing meetings and events where wins can be announced.
+  - Keep each round's results to adjust the levels next time.
+  - Pair it with a message writer for the announcement of each level.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Turning goals and a budget into levels and praise lines is text work any strong chat AI does well."}
+    - {name: "A shared spreadsheet", why: "A visible tracker lets people see their own progress toward each level."}
+  inputs:
+    - "Results from the last contest"
+    - "A short survey of what the team would like as prizes"
+    - "Your payroll or pay bands, so the fairness check is real"
+
+terms:
+  - term: Level
+    meaning: A set goal that earns a prize for anyone who reaches it, whatever others do.
+  - term: Public moment
+    meaning: A time when a win is announced in front of the team or the wider group.

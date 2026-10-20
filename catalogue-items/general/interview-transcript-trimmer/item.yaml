@@ -1,0 +1,18 @@
+slug: interview-transcript-trimmer
+name: "Interview transcript trimmer"
+summary: "Paste a long interview transcript. Get it cut in passes to the few truly interesting passages, with the order to use them."
+category: general
+type: skill
+role: compress
+job: ops
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: edit_plan}
+  - {type: feedback_notes!}
+origin: rebuilt
+version: 1.0.0
+minds: [malcolm-gladwell]
+credits:
+  - {title: "The Tim Ferriss Show: Malcolm Gladwell (episode transcripts)", by: "Tim Ferriss and Malcolm Gladwell", used: "Underlining what surprises you, copying it out, cutting in passes to a tenth, and ordering by feeling"}

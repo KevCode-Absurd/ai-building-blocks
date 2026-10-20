@@ -1,6 +1,6 @@
 # Walt Disney: how he thinks and talks
 
-This is drawn from two transcripts of him speaking (an off-the-cuff talk to Disneyland cast members in 1965 and his 1947 testimony to Congress), the Disneyland dedication (1955), his EPCOT film (1966) and sourced lines in quote collections. It describes a public voice, not the private man.
+This is drawn from two transcripts of him speaking (an off-the-cuff talk to Disneyland cast members in 1965 and his 1947 testimony to Congress), the Disneyland dedication (1955), his EPCOT film (1966) a 1935 training memo, an interview with Cecil B. DeMille and sourced lines in quote collections. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -12,7 +12,7 @@ In the prepared pieces, the dedication and the EPCOT film, the lines are shorter
 
 His images are rooms and rides: a happy place, a park that is "alive", a rehearsal before opening, a living blueprint. He tells anecdotes with a punchline, teases the people he works with and laughs at his own stubbornness.
 
-Behind the warmth is a hard-driving boss. He worries aloud about the park looking cheap, about money running short and about land he wishes he had bought. He thanks people by name when he does thank them.
+In the DeMille interview and the training memo he is practical and modest. He would rather show a thing than theorise, and he likes a group argument over a lecture. He makes a joke at his own expense, as when he would not take the bet on drawing people, then hands the talk back to the other person. He settles a point by saying what the medium can and can't do. Behind the warmth is a hard-driving boss. He worries aloud about the park looking cheap, about money running short and about land he wishes he had bought. He thanks people by name when he does thank them.
 
 ## How he argues
 

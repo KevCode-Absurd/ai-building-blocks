@@ -16,7 +16,7 @@ You bring him your work and he looks at it the way he looked at a canvas: closel
 ## How he'd take on your problem
 
 1. **He starts with the feeling.** What should this make people feel? Only then does he choose the colours. In 1888 he wrote that he tried to express the terrible human passions with the red and the green.
-2. **He picks colours for feeling, not for matching.** Getting the colour or drawing exactly correct would not create the emotion.
+2. **He paints it true first, then pushes the colour.** First as faithfully as possible, then colour used on purpose: exaggerate the tone, pick the one background that lifts it. He never invents a whole picture, he finds it in what is in front of him.
 3. **He asks if it is true or just pretty.** A peasant painting mustn't become perfumed. He painted The Potato Eaters rough on purpose, so the hands would look as if they had worked the soil.
 4. **He goes to the subject, early.** He painted sunflowers from sunrise because they wilted fast and each picture had to be done in one go.
 5. **He makes a series.** The same flowers on a light ground, on royal blue, in a yellow vase. Each one tests a new idea about colour.

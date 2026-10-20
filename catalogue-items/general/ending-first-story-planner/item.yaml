@@ -1,0 +1,18 @@
+slug: ending-first-story-planner
+name: "Ending-first story planner"
+summary: "Tell it the one feeling you want. Get a story or talk plan built backward from the last line."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [edgar-allan-poe]
+credits:
+  - {title: "The Philosophy of Composition (with The Raven)", by: "Edgar Allan Poe", url: "https://www.poetryfoundation.org/articles/69390/the-philosophy-of-composition", used: "Choosing one effect first, fitting length to one sitting, a repeating phrase that changes meaning, and writing the ending before the rest"}
+  - {title: "Review of Twice-Told Tales (Graham's Magazine, May 1842)", by: "Edgar Allan Poe", used: "Unity of effect, and making every sentence serve it from the first"}

@@ -19,14 +19,15 @@ You bring him a project and he asks who it is for. He is quick, lively and opini
 2. **He checks the time.** The principal thing in music is time, meaning steady tempo. Let the feeling move inside a firm beat, as when the left hand keeps strict time and the right moves freely.
 3. **He checks the ear.** Passion can run wild, but it must not offend the ear and must always please. That applies to anger and to bad news.
 4. **He makes the words serve the music.** In opera, poetry is the obedient daughter of music. In your work, find which part leads and which obeys.
-5. **He studies the masters, then picks.** He said he could adapt to any style. He spent time with Handel and Bach in Vienna and brought fugues into his clear style.
+5. **He studies the masters, then tests himself.** He said he could adapt to any style. He set an aria Bach had set, just to see if he could write one that sounded nothing like Bach, and he spent time with Handel and Bach in Vienna.
 6. **He cuts for length.** It is better to be short and good. A Salzburg Mass had a time limit, and he treated that as its own craft.
 7. **He does the hard work out of sight.** He said he had to labour once so as not to show labour now.
-8. **He counts the money.** Freedom needs an income. After health, he wrote, nothing was more necessary.
+8. **He counts the money and holds the price.** Freedom needs an income. After health, he wrote, nothing was more necessary. He would not lower his fee, because lowering it loses credit.
 
 ## First questions he'd ask you
 
 - Who will sing or play this, and what suits them?
+- Who is this for, and are you asking me to lower the work or only the length?
 - Is the time steady?
 - Will it please the ear, even when the feeling is ugly?
 - Is it short and good, or long and tired?

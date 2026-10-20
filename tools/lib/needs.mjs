@@ -159,7 +159,26 @@ export const NEXT_JOB = {
   "grow-social": "Grow on social",
   "set-up-ai": "Set up AI to work for you",
   "think-with-minds": "Talk it through with great minds",
+  "test-an-idea": "Test the idea with real people",
+  "plan-strategy": "Plan your strategy",
+  "build-product": "Shape the product",
+  "build-software": "Build it",
+  "sell-and-negotiate": "Sell it",
+  "lead-people": "Lead the team",
+  "speak-and-persuade": "Say it to the room",
+  "write-and-tell-stories": "Tell it as a story",
+  "design-work": "Design it",
+  "think-and-decide": "Decide what to do",
+  "money-and-investing": "Check the money",
 };
+/** Families of jobs (everything not listed is marketing), and the result types broad enough to feed any job. */
+const FAMILY = {
+  "test-an-idea": "business", "plan-strategy": "business", "build-product": "business", "money-and-investing": "business", "think-and-decide": "business",
+  "lead-people": "people", "speak-and-persuade": "people", "sell-and-negotiate": "people",
+  "write-and-tell-stories": "craft", "design-work": "craft", "build-software": "software",
+};
+const familyOf = (task) => FAMILY[task] ?? "marketing";
+const BROAD = new Set(["audit_report", "plan", "brief", "question", "feedback_notes", "shortlist", "copy_draft"]);
 const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "video-ad-script-writer-from-customer-quotes", "meta-ads-compliance-checker", "buyer-brief-writer", "hidden-offer-finder"];
 
 /**
@@ -184,12 +203,18 @@ export function nextOf(b, all, max = 5) {
       .map((x) => ({ job: x.task, label: NEXT_JOB[x.task] ?? x.name, ...ref(x), takes: [...new Set(x.inputs.filter((p) => outs.has(p.type)).map((p) => bare(INPUTS[p.type]?.label ?? p.type)))] }));
   }
   const fit = (x) => x.inputs.filter((p) => outs.has(p.type)).reduce((s, p) => s + (p.required ? 3 : 1), 0)
-    + (START_HERE.includes(x.slug) ? 2 : 0) + (x.usedIn?.length ? 1 : 0) - (x.inputs.filter((p) => p.required && !outs.has(p.type)).length * 0.5);
+    + (START_HERE.includes(x.slug) ? 2 : 0) + (x.usedIn?.length ? 1 : 0) - (x.inputs.filter((p) => p.required && !outs.has(p.type)).length * 0.5)
+    // A skill tested on a real business comes before a newer one for the same job.
+    + (x.tested?.result === "pass" ? 3 : 0);
   // A check comes next only after something people will see: an ad, a script, a page.
   const creative = [...outs].some((t) => ["hooks", "ad_copy", "script", "static_ads", "video_ads", "landing_page", "copy_draft", "pdp_copy", "email_flow", "image_prompt", "video_prompt"].includes(t));
+  // A report, a plan or a brief can feed almost anything. A match on one of those only counts within the same family
+  // of jobs, so a product page audit doesn't lead to a hiring plan.
+  const sameFamily = (x) => familyOf(b.task) === familyOf(x.task);
+  const linked = (x) => x.inputs?.some((p) => outs.has(p.type) && (!BROAD.has(p.type) || sameFamily(x)));
   const best = new Map();
   for (const x of all) {
-    if (x.slug === b.slug || x.category === "orchestrator" || x.twin === b.slug || !x.inputs?.some((p) => outs.has(p.type))) continue;
+    if (x.slug === b.slug || x.category === "orchestrator" || x.twin === b.slug || !linked(x)) continue;
     if (!creative && (x.task === "check-ads" || x.task === "audit-landing-page")) continue;
     const score = fit(x);
     const job = x.task;
@@ -249,7 +274,8 @@ export function afterSection(plan, nl = "\n") {
   return [
     "## After this",
     "When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:",
-    ...plan.next.map((x) => `- **${x.label}** with the [${x.name}](${x.url}). It takes the ${takes(x)}.`),
+    // A job with no "next" label falls back to the skill's own name; then just name the skill once.
+    ...plan.next.map((x) => (x.label === x.name ? `- The [${x.name}](${x.url}). It takes the ${takes(x)}.` : `- **${x.label}** with the [${x.name}](${x.url}). It takes the ${takes(x)}.`)),
     "If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.",
   ].join(nl);
 }

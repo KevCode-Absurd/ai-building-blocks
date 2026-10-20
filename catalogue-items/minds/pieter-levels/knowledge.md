@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Pieter Levels is alive, and views can change. Everything below comes from his blog posts from 2014 to 2026, the web edition of his book MAKE, his own list of projects, a 2024 podcast transcript and a book chapter about him. Date each view to its source: as of 2014, as of 2024 or as of early 2026. Most numbers here are his own reports, not audited figures. His exact birth date isn't in our sources. He was 27 in April 2013, so he was born around 1986 [S1].
+Pieter Levels is alive, and views can change. Everything below comes from his blog posts from 2014 to 2026, the web edition of his book MAKE, his own list of projects, a 2024 podcast transcript, a book chapter about him and, new in this pass, his 2012 master's thesis on how technology changed the music industry [S10]. The thesis is academic and about music, so we use it only to show how he thought about falling barriers to entry before he started building. The local folder holds the thesis text and short link records for [S2] and [S3]; the other posts and the podcast come from our earlier read of those pages. Date each view to its source: as of 2012, 2014, 2024 or early 2026. Most numbers here are his own reports, not audited figures. His exact birth date isn't in our sources. He was 27 in April 2013, so he was born around 1986 [S1].
 
 ## In one paragraph
 
@@ -52,6 +52,12 @@ MAKE says to launch early and often, on large sites and in the places where your
 
 How he applied it: he has posted on X since 2013 [S5]. Nomad List grew with the wave of press about digital nomads from 2014 to 2017, and became a symbol of that way of life [S1]. His sites handled traffic spikes from Hacker News and Product Hunt in 2014 [S3]. MAKE says he was twice named Product Hunt's Maker of the Year [S4].
 
+### Cheap entry means crowds, so earn a direct audience
+
+In his 2012 thesis he found that falling production and distribution costs had brought a flood of new artists, so competition rose and the listener won [S10]. He argued that with so much on offer, listeners are less swayed by marketing, so a transparent brand and a good product matter more, and the link between artist and audience becomes direct [S10]. He also noted that curation becomes a need when volume explodes, and that fans' loyalty to any one artist weakens [S10].
+
+How he applied it: the same logic shows in his later view that once AI lets anyone build an app, distribution is the hard part, so he builds in public and talks to users directly [S6][S10].
+
 ### Expect most ideas to fail, and pivot
 
 He expects most ideas to fail [S8]. His project list is open about it, marking 19 projects as failed [S5]. MAKE warns that his own lessons may suffer from survivorship bias [S4].
@@ -69,6 +75,32 @@ How he applied it: his AI work moved from a site of AI-made house images, to Int
 - Automate anything you do more than twice [S6].
 - If there is no demand within a month, call it and move on [S2].
 - Let serious buyers come to you if you ever sell, and prefer cash [S4].
+
+## Real decisions
+
+### Selling his things and moving to Thailand
+
+In 2013 he sold his belongings and left for Thailand to work from the road [S1]. Nomad List grew out of that life, and he wrote its first lines of code in a coworking space in Bali [S1]. His reason, as the chapter tells it, was a problem he had himself [S1][S3].
+
+### Setting a 12 startups in 12 months challenge
+
+In March 2014 he set himself a public challenge to launch a startup a month [S2]. He named perfectionism and fear of failing in public as the real blocks and used a fixed monthly deadline to beat both [S2]. Each month tested demand, and a flop counted as a result [S2]. Nomad List and Remote OK came from the year [S2][S5].
+
+### Keeping data in text files on one cheap server
+
+In 2014 he described running his sites on one rented server for about $40 a month and storing data in plain text files, planning to move to a database only if needed [S3]. His reason was to avoid complexity he did not need yet [S3]. He later said he still prefers tools that just work, such as PHP, jQuery and SQLite [S8].
+
+### Charging from the first day
+
+He treats a paying card, not a sign-up, as proof of an idea [S8]. He added Stripe checkout early, even when the login and other parts were rough or manual [S8]. His 2026 guide says free users add support work and bring no revenue [S6].
+
+### Moving between AI products
+
+His AI work went from a site of AI-made house images to Interior AI, then Avatar AI, then Photo AI [S5][S8]. In 2024 he said Avatar AI went viral and made money, but felt too cheesy and faded, and bigger funded rivals copied it [S8]. He marked 19 of his projects as failures on his own list [S5].
+
+### Refusing investors and co-founders
+
+His 2026 guide tells founders to turn down investors, co-founders and advisers who want a share for introductions, and to keep costs to $5 to $20 a month for hosting [S6]. He has run his companies for over ten years with no employees and no outside money [S6]. In 2026 he wrote that Photo AI runs from a single PHP file of 40,870 lines [S7].
 
 ## Where he stood
 

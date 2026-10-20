@@ -1,0 +1,125 @@
+new_slug: weekly-time-audit-planner
+name: "Weekly time audit planner"
+summary: "Paste last week's calendar. Get a count of what you chose and what was taken, and one hour won back."
+job: think-and-decide
+thinking: medium
+thinking_why: "It sorts and adds up your hours, then makes a few judgement calls about who gains. The steps are fixed."
+
+headline: "Weekly time audit planner"
+subhead: "Give it last week's calendar or a list of what you did. It marks each block as chosen by you or taken by someone or something else, adds up the hours and names your three biggest takers. You get a count and one protected hour."
+
+explain: |
+  Most people can say what they spent last month in money to the pound, but not where last Tuesday went. Hours leave in small pieces: a meeting that was not needed, an inbox check, a favour you could not refuse. Nobody sends a bill, so nobody notices.
+
+  This skill borrows the idea of an account book. It lists every block of the week and marks it as chosen by you, taken by another person, or taken by habit. It adds up each pile and asks who gains from the biggest takers. Then it picks one hour a day that is yours, ties it to a real work item, and swaps every "later" for a dated first step.
+
+when:
+  - You end most weeks sure you were busy, but not sure what you got done.
+  - Your calendar is full of things other people put there.
+  - You keep saying you will start the important thing when you have time.
+
+you_give:
+  - Last week's calendar, or a plain list of what you did each day
+  - The work you most want to make progress on
+  - Fixed commitments you cannot move, such as a school run or a shift (optional)
+  - Your usual working hours (optional)
+you_get:
+  - Every block sorted into chosen, taken by others, or taken by habit
+  - Hours added up in each pile
+  - Your three biggest takers, with what each costs you and who gains
+  - One protected hour a day, tied to a named piece of work, and dated first steps
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste last week's calendar or write out your days, even roughly. Add the one piece of work you most want to move.
+  - Answer any question it asks about a block it cannot sort.
+  - Put the protected hour in your calendar before you close the chat.
+  - Run it again in a week and compare the piles.
+
+how_it_works:
+  - title: Lists the blocks
+    text: Writes down every block of last week, including gaps, commutes and scrolling, so nothing hides in "other".
+  - title: Marks who chose it
+    text: Tags each block as chosen by you, taken by someone else, or taken by habit. It asks when it cannot tell.
+  - title: Adds up the piles
+    text: Totals the hours in each pile, like an account book, and shows each as a share of the week.
+  - title: Names the takers
+    text: Picks the three biggest takers, states what each costs and who gains from it.
+  - title: Protects one hour
+    text: Picks an hour a day that is yours and names the work item it protects.
+  - title: Dates the promises
+    text: Turns every "later" and "someday" into a first step with a day and a time.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE WEEK IN BLOCKS
+  <day> <time> <what happened> | <hours> | <chosen / taken by others / taken by habit>
+
+  THE COUNT
+  Chosen by you: <hours> (<share>)
+  Taken by others: <hours> (<share>)
+  Taken by habit: <hours> (<share>)
+  Not accounted for: <hours>
+
+  THREE BIGGEST TAKERS
+  1. <taker> | <hours> | Cost: <what it displaced> | Who gains: <person or thing>
+  2. ...
+  3. ...
+
+  THE PROTECTED HOUR
+  <day and time each day> for <named work item>
+  Why this one: <reason>
+
+  DATED FIRST STEPS
+  <old "later" promise> -> <step> on <day> at <time>
+
+  MISSING
+  <facts that would change the count>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How detailed your calendar is
+    how: A calendar with real meeting names sorts better than blocks called "busy". Add short notes for gaps.
+  - what: The work you want to move
+    how: Name one concrete item. "Finish the draft of the proposal" gives the protected hour a purpose; "be more productive" does not.
+  - what: Fixed commitments
+    how: List what cannot move so the skill does not suggest cutting it.
+  - what: Your honesty about habit
+    how: Say how long phone and inbox checks really took. Guessing low hides the biggest taker.
+
+judge:
+  - Every hour of the week is in one of the piles, or listed as not accounted for.
+  - Each of the three takers has a cost and a person or thing that gains.
+  - The protected hour names a real piece of work, not "focus time".
+  - No step says "someday" or "when I have time".
+  - The piles add up to the hours you gave it.
+
+test:
+  - Run it on a week you remember well. Check that the blocks you call chosen really were.
+  - Run the same week twice. The three takers should stay close.
+  - Add one dated step to your calendar and see if you keep it for a week.
+  - Compare the piles for two weeks in a row to see if the takers shrank.
+
+improve:
+  - Add your own habit list (feeds, chat apps, check-ins) so the skill spots them by name.
+  - Add the hours you can control to the skill, so it never suggests moving a fixed shift.
+  - Save the three takers each week in one file and look for the ones that return.
+  - Pair it with "Not-to-do list builder" to turn the takers into stop rules.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and adding up a list of blocks is plain text work."}
+    - {name: "Your calendar app's export", why: "A real export is faster and more honest than memory."}
+  inputs:
+    - "A time log kept for three days, so habit blocks are not guessed"
+    - "A list of your top three goals this quarter"
+    - "The names of people who send you most of your requests"
+
+terms:
+  - term: Taker
+    meaning: A person, task or habit that takes your hours without you having chosen to give them.
+  - term: Protected hour
+    meaning: A block in your day that only you may use, tied to one named piece of work.

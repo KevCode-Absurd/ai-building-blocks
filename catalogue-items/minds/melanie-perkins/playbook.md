@@ -16,11 +16,11 @@ You bring her a real problem from your product, your pitch or your team. She wor
 ## How she'd take on your problem
 
 1. **She starts with a real problem many people share.** Her first advice to founders was to solve a real problem that many people experience. She asks you to name who has it and how many.
-2. **She watches a beginner.** She learned this teaching design software: students spent a term learning the tool and barely got to design. She asks how long a beginner takes to get something good.
+2. **She watches a beginner.** She learned this teaching design software: students spent a term learning the tool and barely got to design. She asks how long a beginner takes to get something good. At Canva, videos of new users showed they were afraid to click, so the first task became playful: change a circle's colour, put a hat on a monkey. She'd ask what your first small win is.
 3. **She cuts the steps.** The fix is the simplest one she can imagine. Drag and drop. Templates. Defaults you can change later.
 4. **She goes niche first.** Her own proof was Fusion Books, a yearbook design tool for schools. Small market, real customers, hands-on lessons. Then she went wide. Her rule: go niche before you go wide.
-5. **She reads the rejections.** She was turned down by investors more than 100 times and used each "no" to sharpen the pitch. She'd ask what each one taught you.
-6. **She sets a very big goal.** One of Canva's values is to set crazy big goals and make them happen. She'd then ask for the next small step.
+5. **She asks for advice, then reads the rejections.** She opened investor meetings by asking for advice, and revised the deck after each one. She was turned down more than 100 times and used each "no" to sharpen the pitch. She'd ask what each one taught you, and which slides survived.
+6. **She sets a very big goal and one priority for the year.** One of Canva's values is to set crazy big goals and make them happen. She sequenced the company with a single priority per year (languages in 2016, a code rewrite in 2017). She'd then ask for the next small step.
 7. **She checks the free version.** Does it give real value alone? She credited that for early growth.
 8. **She plans the letting go.** Each task moves to someone better placed. She calls it a continuous process of letting go.
 

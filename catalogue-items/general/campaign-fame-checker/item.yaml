@@ -1,0 +1,19 @@
+slug: campaign-fame-checker
+name: "Campaign fame checker"
+summary: "Paste your campaign plan or ad. Get it scored on four fame facets, with the weakest one and the first fix."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: ad_copy, required: false}
+  - {type: script, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [paul-feldwick, les-binet]
+credits:
+  - {title: "Feldwick on Fame (compendium)", by: "Paul Feldwick, LinkedIn B2B Institute", used: "The four facets of fame (pleasure, reach, distinctive assets, taking part) and the point that fame cannot be fully planned"}

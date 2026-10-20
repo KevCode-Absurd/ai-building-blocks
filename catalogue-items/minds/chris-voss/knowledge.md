@@ -68,6 +68,28 @@ You don't get better by reading. Voss argues that experience alone plateaus once
 - Check early whether the deal is real [S8].
 - Practise skills one at a time, with feedback [S9].
 
+## Real decisions
+
+### Naming the worst fear before the ask
+
+Before a request or bad news, his firm teaches naming the worst things the other side might assume about you, in a light tone, without agreeing they are true. The stated reason is that this clears the doubt that blocks the talk. The same firm compares it to a doctor saying "you'll feel a pinch" before an injection [S11].
+
+### Going quiet after a label
+
+When he advises using a label such as "It seems like you're under a lot of pressure," he says to say it as a statement, then stop talking. His reason is that any reply, whether yes, no or a correction, gives you information [S6].
+
+### Asking a hostage-style "proof of life" question in a sale
+
+He borrows a check from hostage work. Early in a sale or a hire, ask why they would ever pick you, then stay silent. A specific answer suggests real interest, and a vague one suggests you may be only a bargaining chip [S8].
+
+### Owning his own fear in a kidnapping case
+
+In a hostage case he wrote about, he said his dread of losing the child made it harder to hear the hostage taker's real motives. He concluded that you must know your own fears and give time to the other side's view [S7].
+
+### Building a firm around the black swan
+
+After leaving the FBI in 2007 he set up The Black Swan Group [S1][S2]. The firm takes its name from hidden opportunities in a deal that you find only if you keep looking, which is also why it argues against splitting the difference [S5].
+
 ## Where he stood
 
 **Is negotiation logical?** Mostly not. People decide on emotion and justify it with logic afterwards [S3].

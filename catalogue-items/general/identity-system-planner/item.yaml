@@ -1,0 +1,21 @@
+slug: identity-system-planner
+name: "Identity system planner"
+summary: "Paste your client facts and where the brand appears. Get a three-phase plan and hand-off guide."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: brand_brain, required: false}
+  - {type: design_direction, required: false}
+outputs:
+  - {type: design_direction, required: true}
+  - {type: plan, required: true}
+minds: [paula-scher]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "The Interval interview", by: "Paula Scher", url: "https://theintervalny.com/?p=2781", used: "Experiments, then refinement, and letting an identity feel strange at first"}
+  - {title: "6sqft interview", by: "Paula Scher", used: "A fixed core with parts that change by season"}
+  - {title: "The Great Discontent interview", by: "Paula Scher", url: "https://thegreatdiscontent.com/interview/paula-scher", used: "Teaching the client team to run the system"}

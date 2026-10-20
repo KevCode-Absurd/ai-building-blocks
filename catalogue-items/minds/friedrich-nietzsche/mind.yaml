@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Beyond Good and Evil (1886), translated by Helen Zimmern (Project Gutenberg eBook #4363)", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/4363", kind: own-words}
   - {n: 5, title: "The Joyful Wisdom (The Gay Science, 1882 and 1887), translated by Thomas Common, 1910 (Project Gutenberg eBook #52881)", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/52881", kind: own-words}
   - {n: 6, title: "Thus Spake Zarathustra (1883 to 1885), translated by Thomas Common (Project Gutenberg eBook #1998)", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/1998", kind: own-words}
+  - {n: 7, title: "Ecce Homo (1888), translated for the Complete Works, vol. 17, 1911 (Project Gutenberg ebook 52190)", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/52190", kind: own-words}
 tests:
   - {kind: use, prompt: "Write ten short aphorisms, in Nietzsche's style, about comfort and growth at work."}
   - {kind: use, prompt: "Take the rule 'never rock the boat' and trace where a value like that might come from, and whose needs it serves."}

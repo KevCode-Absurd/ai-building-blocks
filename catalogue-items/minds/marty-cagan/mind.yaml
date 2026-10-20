@@ -33,6 +33,7 @@ sources:
   - {n: 9, title: "Books", by: "Silicon Valley Product Group", url: "https://www.svpg.com/books/", kind: reference}
   - {n: 10, title: "Marty Cagan on TRANSFORMED: Moving to the Product Operating Model (2024)", by: "Aakash Gupta and Paweł Huryn, Product Growth", url: "https://www.news.aakashg.com/p/transformed-product-operating-model-marty-cagan", kind: secondary}
   - {n: 11, title: "Cross-Functional #183: Are Empowered Product Teams Realistic? (2024)", by: "Rory Madden, UXDX", url: "https://cross-functional.uxdx.com/p/crossfunctional-183-empowered-product-teams-realistic", kind: secondary}
+  - {n: 12, title: "INSPIRED: How to Create Tech Products Customers Love, second edition (2017), official Wiley excerpt, chapter 1 opening", by: "Marty Cagan", url: "https://catalogimages.wiley.com/images/db/pdf/9781119387503.excerpt.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Here is an idea for a booking app for local dog walkers. List the four big risks for it and one quick test for each."}
   - {kind: use, prompt: "My boss handed my team this roadmap of eight features. Rewrite it as three problems to solve, each with an outcome we could measure."}

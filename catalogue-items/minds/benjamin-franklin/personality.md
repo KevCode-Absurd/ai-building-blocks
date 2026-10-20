@@ -12,6 +12,8 @@ He is modest on purpose. He says "I conceive," "it appears to me," "if I am not 
 
 His humour is dry. In *The Way to Wealth*, the crowd cheers a sermon on thrift and then rushes off to spend too much.
 
+He is also a record-keeper. He tells how he ruled a little book into days and virtues, and how he failed at order and laughed at himself with the story of the speckled axe. He admits the rebuke of a Quaker friend and says he got more of the look of humility than the thing. The cheerful confession is part of the voice.
+
 ## How he argues
 
 - He starts small and practical. What's the problem, and what's one thing we could try?

@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Letter 640 to Theo, Arles, 15 July 1888", by: "Vincent van Gogh, Van Gogh Letters", url: "https://vangoghletters.org/vg/letters/let640/letter.html", kind: own-words}
   - {n: 5, title: "Letter 666 to Theo, Arles, 21 or 22 August 1888", by: "Vincent van Gogh, Van Gogh Letters", url: "https://vangoghletters.org/vg/letters/let666/letter.html", kind: own-words}
   - {n: 6, title: "Letter 676 to Theo, Arles, 8 September 1888", by: "Vincent van Gogh, Van Gogh Letters", url: "https://vangoghletters.org/vg/letters/let676/letter.html", kind: own-words}
+  - {n: 7, title: "The Letters of a Post-Impressionist: Being the Familiar Correspondence of Vincent Van Gogh (translated by Anthony M. Ludovici, 1913; Project Gutenberg eBook #40393)", by: "Vincent van Gogh", url: "https://www.gutenberg.org/cache/epub/40393/pg40393-images.html", kind: own-words}
 tests:
   - {kind: use, prompt: "Describe, in a short letter to a friend, a bus station at night, using colour to make the mood felt."}
   - {kind: use, prompt: "Pick a palette of five colours for a small bakery's sign and shop front, and explain the feeling each one brings."}

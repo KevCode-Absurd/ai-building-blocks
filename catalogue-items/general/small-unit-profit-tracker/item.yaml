@@ -1,0 +1,18 @@
+slug: small-unit-profit-tracker
+name: "Small-unit profit tracker"
+summary: "List your teams and their income and costs. Get small units, a profit-per-hour figure for each and a weekly sheet."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [kazuo-inamori]
+credits:
+  - {title: "Guangzhou Amoeba Management lecture (study notes)", by: "Kazuo Inamori", used: "Splitting a business into small units with a named leader, counting hours as well as money, and showing each unit its profit per hour every week"}

@@ -1,0 +1,120 @@
+new_slug: small-unit-profit-tracker
+name: "Small-unit profit tracker"
+summary: "List your teams and their income and costs. Get small units, a profit-per-hour figure for each and a weekly sheet."
+job: plan-strategy
+thinking: medium
+thinking_why: "It splits a business into units and does simple arithmetic, but the rules are fixed."
+
+headline: "Small-unit profit tracker"
+subhead: Give it your teams or services, what each earns and spends, and the hours worked. It splits the business into units one leader can see, works out profit per hour for each, and builds a weekly sheet every unit can read.
+
+explain: |
+  A team can work hard all week and the business can still lose money, because nobody sees which part earns and which part leaks. Money totals hide this. A busy unit that takes 40 hours to earn 200 looks the same as a quiet one that earns 200 in 8, until you count hours.
+
+  This skill cuts the business into small units, names one leader for each, and counts income, costs and hours for every unit. It divides to get profit per hour, builds a one-page weekly sheet, and sets a rule for when a unit needs a review. It also checks that each unit's goal fits the whole business goal, so units do not win at each other's cost.
+
+when:
+  - Everyone is busy but money is still tight, and you cannot say which part pays.
+  - A team has grown past the point where one person can see all of it.
+  - You want each person to see their own result without reading a full report.
+
+you_give:
+  - Your teams, services or product lines, and who works in each
+  - Income, costs and hours for each, for a recent week or month
+  - Your overall goal for the business (optional)
+you_get:
+  - A list of small units, each with one named leader
+  - Profit per hour for every unit, with the working shown
+  - A one-page weekly sheet and a review rule
+  - Notes on shared costs and on goals that clash
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your teams, what each one sold and spent, and the hours worked. Rough figures are fine if you say so.
+  - Check the units it proposes. Move anyone who sits in two units.
+  - Print the weekly sheet and share each unit's line with its leader.
+
+how_it_works:
+  - title: Splits into units
+    text: Cuts the work into units small enough for one leader to see income, costs and waste.
+  - title: Names a leader
+    text: Gives each unit one named owner and a short plan in the owner's words.
+  - title: Counts the money and hours
+    text: Adds up income, costs and hours worked for each unit.
+  - title: Works out profit per hour
+    text: Subtracts costs from income and divides by hours, showing the sum.
+  - title: Builds the weekly sheet
+    text: Lays out one line per unit, shown to everyone in that unit each week.
+  - title: Checks the goals
+    text: Asks each leader to weigh the unit's goal against the business goal and flags clashes.
+  - title: Sets a review rule
+    text: Marks any unit whose figure falls two weeks in a row for review.
+
+output_shape: |
+  UNITS AND LEADERS
+  <unit> | <leader> | <what the unit does> | <people>
+
+  THIS PERIOD
+  <unit> | income <n> | costs <n> | hours <n> | profit per hour <n>
+
+  SHARED COSTS
+  <cost> | <how it was shared and why>
+
+  WEEKLY SHEET
+  <unit> | this week | last week | change | note
+
+  GOAL CHECK
+  <unit goal> vs <business goal>: <fits or clashes>
+
+  REVIEW RULE
+  <when a unit gets reviewed and by whom>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Size of the unit
+    how: Small enough that one leader sees sales, costs and waste. If a leader cannot see all three, split again.
+  - what: Hours
+    how: Give real hours, not headcount. Without them the figure is only profit, not profit per hour.
+  - what: Shared costs
+    how: Say how rent, tools and management time should be shared. If you do not, it picks a simple rule and states it.
+  - what: Long-term work
+    how: Tell it which work will not pay this month, such as research, so it is tracked apart from the weekly figure.
+
+judge:
+  - Each unit has one named leader.
+  - Hours are counted as well as money.
+  - Every sum can be followed from the figures you gave.
+  - Each unit sees its own figure every week.
+  - A unit's goal is checked against the business goal.
+
+test:
+  - Use a month you know well. Check that the totals of all units add up to your real totals.
+  - Ask a unit leader if the line for their unit matches how the week felt.
+  - Run it with a different shared-cost rule and see which unit changes most.
+  - After four weeks, check whether the review rule would have caught a real problem earlier.
+
+improve:
+  - Add a line for work that pays later, so research or training is not judged on a weekly number.
+  - Save your usual shared-cost rule in your brand file.
+  - Change the review rule to match how often your income really moves.
+  - Pair it with "Strategy trade-off planner" to decide which units to grow or stop.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Holds the weekly figures so the sheet is updated by pasting new numbers."}
+    - {name: "Any good chat AI", why: "Does the splitting and sums from your pasted figures."}
+  inputs:
+    - "A time sheet or a rough record of who worked how many hours"
+    - "Your last three months of income and costs by team"
+    - "Your business goal for the year"
+
+terms:
+  - term: Profit per hour
+    meaning: A unit's income minus its costs, divided by the hours worked.
+  - term: Unit
+    meaning: A small group with one leader that has its own income, costs and plan.

@@ -102,6 +102,32 @@ The Boy and the Heron takes its Japanese title from a 1937 novel, How Do You Liv
 - **A dangerous method.** He admits that working without a script is risky [S2], and his films take years [S5].
 - **Succession.** Ghibli's leadership and future have long been in doubt; the studio paused production in 2014 to restructure, and in 2023 chose outside ownership [S4].
 
+## Real decisions
+
+### How a character and a place get found
+
+In 2001 he said he imagines himself as the character, visits the story's locations many times, and draws the character over and over, finishing just before the deadline. He said he keeps a store of landscapes and childhood memories for years, and that the forest setting of *Totoro* had been in his head for thirteen years [S2]. He keeps staff work even when it does not fit, and finds a use for it [S2].
+
+### No ending in advance
+
+For *Spirited Away* he had planned about 1,200 shots and ended with 1,415. He did not know the ending in advance, saying the film makes itself and he must follow [S2]. He said a producer would warn of another year of work to push him on, which made him return to the desk faster [S2]. He found the meaning of the last train ride only while making it: the flooded land earlier sets it up, and the view from the train is blank, which matches how people remember a first trip alone [S2].
+
+### Test every trial against a real girl
+
+Chihiro was modelled on real ten-year-old girls he had watched, and he tested each challenge by asking whether a girl like a friend's daughter could manage it [S2]. He called himself a pessimist, but said he keeps that from children so they can form their own view [S2]. He said films for children can please adults, but not the other way round, because a children's story allows a fresh start and an adult story cannot undo what happened [S2]. Asked why his heroines are young girls, he joked that it was because he loves women very much, and he answered some questions with humour instead of at length [S2]. Asked whether success would change his methods, he said no, since the methods had worked [S2].
+
+### Writing the museum list
+
+The statement also says the shop should not chase revenue and should sell original items found only there, and that the museum should keep taking in new ideas and pay for it [S3]. It should not be a retrospective of old films, and should commission new works, including original short films for the venue [S3]. The writing is in the first person, in short parallel lines, and ends with a list of what the museum must not be [S3].
+
+### Making a film around a question he could not answer
+
+For *The Boy and the Heron* he took the Japanese title from a 1937 novel, *How Do You Live?*, and said in 2021 he was making the film because he had no answer to that question. The film took about seven years [S5].
+
+### Keeping the staff's off-cuts
+
+He keeps staff work even when it does not fit the scene, and finds a use for it later, rather than throwing it out [S2][S4].
+
 ## Blind spots to watch
 
 - He resists shortcuts and tools. For a team on a tight budget, someone must weigh time against craft.

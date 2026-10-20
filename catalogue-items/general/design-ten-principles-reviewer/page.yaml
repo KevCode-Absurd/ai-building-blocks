@@ -1,0 +1,119 @@
+new_slug: design-ten-principles-reviewer
+name: "Design ten-principles reviewer"
+summary: "Describe or attach your product or page. Get a ten-principle design review, what to remove and a score."
+job: design-work
+thinking: medium
+thinking_why: "It judges ten separate points with reasons, but the criteria and scoring are fixed."
+
+headline: "Design ten-principles reviewer"
+subhead: Describe or attach your product, page or piece. It states what it is for, lists every part and its job, scores it against ten principles of good design with a reason for each, marks parts that serve no purpose, and gives a score out of 100.
+
+explain: |
+  A product can look fine and still be cluttered, unclear or dishonest. Reviews often stay vague: "needs more polish". A set of ten fixed principles gives every part something to answer to, whether it is a device, an app screen, a page, a poster or a service.
+
+  This skill writes the purpose in one sentence, then lists every part, even small ones such as page numbers or footers, and what each is for. It scores the whole against ten principles: innovative, useful, aesthetic, understandable, unobtrusive, honest, durable, consistent in detail, kind to the environment, and as little design as possible. It marks parts with no purpose, proposes cuts, and checks the principles again. The score is out of 100, ten points per principle.
+
+when:
+  - Your product or page has grown cluttered and you cannot say why.
+  - You want a reasoned review, not a matter of taste.
+  - You need a list of what to remove before a redesign.
+
+you_give:
+  - What the product, page or piece is, in your words
+  - A screenshot, link or photos (optional)
+  - Product facts such as price, materials and how it is used (optional)
+you_get:
+  - One-sentence purpose and a list of every part with its job
+  - A verdict and reason for each of the ten principles
+  - Parts that serve no purpose, with proposed cuts
+  - A score out of 100, with how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach a screenshot or photos, or describe the product in detail. Say who uses it.
+  - Read the list of parts and fix anything it missed.
+  - Go through the cuts one at a time and decide which to make.
+  - Run it again on the changed version and compare scores.
+
+how_it_works:
+  - title: States purpose and user
+    text: Writes what the product is for in one sentence, and who holds or uses it.
+  - title: Writes the intended message
+    text: Records what the design was meant to say in one line.
+  - title: Lists every part
+    text: Lists every element, even small ones, with the job of each.
+  - title: Scores ten principles
+    text: Gives each principle a verdict and a reason, using only what it was shown.
+  - title: Marks the idle parts
+    text: Marks each part that serves no purpose.
+  - title: Proposes cuts
+    text: Suggests cuts, tied to a principle, and re-checks the principles after.
+  - title: Scores and checks
+    text: Gives a score out of 100, runs its own checks and names any it missed.
+
+output_shape: |
+  PURPOSE
+  <one sentence> | Used by: <who> | Meant to say: <one line>
+
+  PARTS AND JOBS
+  <part> | Job: <what it does> | Purpose: <serves / none>
+
+  TEN PRINCIPLES
+  1. Innovative | <0-10> | <reason>
+  ... (ten lines)
+
+  WHAT TO CUT
+  <part> | Principle: <which> | After the cut: <effect>
+
+  SCORE
+  <score> out of 100. Worked out as: <sum of ten, 0-10 each>
+
+  MISSING
+  <what could not be judged>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Who uses it
+    how: Name a specific user. Useful, understandable and durable all depend on who holds it.
+  - what: Attach the real thing
+    how: Photos or screenshots let it judge what is there. A description only shows what you chose to say.
+  - what: Include the small parts
+    how: Page numbers, footers, labels and settings screens are where clutter hides.
+  - what: Which principles matter most
+    how: Say if some are fixed by rules or law. They are then judged as given and not marked down.
+
+judge:
+  - The purpose is one sentence.
+  - Every principle gets a verdict and a reason.
+  - Each cut is tied to a principle.
+  - Nothing is claimed that was not shown.
+  - Every fault has a fix beside it.
+
+test:
+  - Run it on something you know well and see if its list of parts is complete.
+  - Run it twice on the same product. The scores should stay within about 10 points.
+  - Make the cuts it suggests on a copy and run it again. The score should rise.
+  - Ask a user to point at a part that seems useless and check it appears in the cuts.
+
+improve:
+  - Add a note on what each principle means in your field, such as durable for software or for a service.
+  - Add a list of parts that must stay, such as legal text, so they are not cut.
+  - Save the part list and scores each time to track clutter.
+  - Pair it with the "Feature cutting planner" to turn the cuts into a plan.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It can judge what is in a screenshot or photo, not only your description."}
+    - {name: "A notebook or spreadsheet", why: "Keeping the part list and scores side by side shows progress between reviews."}
+  inputs:
+    - "Photos from several angles"
+    - "Product facts such as materials or price"
+    - "The brief the design started from"
+
+terms:
+  - term: Design principle
+    meaning: One of ten tests of good design, such as useful, honest or understandable.
+  - term: Idle part
+    meaning: A part, feature or element that serves no purpose, or whose job another part already does.

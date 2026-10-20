@@ -1,0 +1,119 @@
+new_slug: repeat-chore-automation-planner
+name: "Repeat chore automation planner"
+summary: "List what your team does each week. Get the chores worth handing to a tool, with steps a new hire can run."
+job: set-up-ai
+thinking: medium
+thinking_why: "It sorts chores and writes steps with fixed rules, which takes care but not deep reasoning."
+
+headline: "Repeat chore automation planner"
+subhead: List what your team does each week, with who does it and how often. It marks the chores done twice or more, picks those a tool does well, writes the steps so a new hire can follow them, and plans the smallest version to run beside the hand method.
+
+explain: |
+  Teams automate what is loud, not what is repeated. They also write steps the author understands and nobody else can follow. The tool then breaks when its builder is away, and nobody can say whether it does the same as the old way.
+
+  This skill starts by watching what people do, not what the manual says. It lists every task done by hand and marks the ones done twice or more. For each, it asks if a machine is already good at copying, adding or sorting it. It writes the steps like a lab report so another person can repeat them, and defines each term before using it. It then plans the smallest version that does the chore, run beside the hand method, so the two can be compared.
+
+when:
+  - Your team repeats the same tasks every week and nobody has time to fix it.
+  - You have one person who knows how a process works and nobody else does.
+  - You want to automate something and need to be sure the result matches the hand method.
+
+you_give:
+  - The tasks your team does in a week, with who does them and how often
+  - The tools and files they use (optional)
+  - What went wrong last time someone tried to automate (optional)
+you_get:
+  - A list of chores worth handing to a tool, ranked
+  - The parts of each chore, split into what stores, what works and what gives orders
+  - Written steps a new hire can run, with terms defined
+  - A small first version and a check against the hand method
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List every task from a typical week, with who does it and how often.
+  - Ask the people who do the work, not the manager, to read the list and correct it.
+  - Build the first small version it names and run it beside the hand method for a week.
+  - Compare results, fix the differences, then hand the steps to a new hire to test.
+
+how_it_works:
+  - title: Watches the work
+    text: Lists the tasks as people really do them, not as the manual says.
+  - title: Marks the repeats
+    text: Marks every task done by hand twice or more.
+  - title: Asks what machines do well
+    text: Asks if each task is copying, adding or sorting, which tools already do well.
+  - title: Writes the steps
+    text: Writes steps like a lab report, with each term defined before it is used.
+  - title: Lists the parts
+    text: Lists what stores things, what does the work and what gives orders.
+  - title: Splits action from material
+    text: Separates the operation from what it works on.
+  - title: Plans the small version
+    text: Builds the smallest version and runs it beside the hand method.
+
+output_shape: |
+  TASKS AS DONE TODAY
+  <task> | who: <name or role> | how often: <n per week> | done twice or more: yes / no
+
+  WORTH HANDING TO A TOOL (ranked)
+  1. <chore> | why: <copying / adding / sorting / checking> | time saved: <number or MISSING>
+
+  FOR EACH CHORE
+  Parts: stores: <...> | does the work: <...> | gives the orders: <...>
+  Operation: <what is done>  Works on: <what it is done to>
+  Terms: <term> = <meaning>
+  Steps (a new hire can run):
+  1. <step> | check against the hand method: <how>
+
+  FIRST VERSION
+  <smallest version, run beside the hand method for how long>
+
+  FIRST WEEK'S FIX
+  <small thing to ship>
+
+  MISSING / CHECKS MISSED
+  <lists>
+
+tweaks:
+  - what: Real task list
+    how: Ask the people who do the work. Tasks that managers forget to list are often the repeated ones.
+  - what: How often and how long
+    how: Give numbers. Time saved is only worked out from them, and is marked missing without them.
+  - what: The tools you already have
+    how: List them. The first version uses what you have before anything new.
+  - what: Past attempts
+    how: Say what failed. The plan avoids those causes.
+
+judge:
+  - Every chore on the list names who does it and how often.
+  - Each automated chore has written steps a new hire can follow.
+  - The plan never builds a general tool when one job-specific tool will do.
+  - Each step has a check against the hand method.
+  - The first week's fix is small enough to ship.
+
+test:
+  - Give the steps to a new hire and see if they can run them without help.
+  - Run the first version beside the hand method on the same week and compare results.
+  - Run the skill twice. The ranked list should hold the same top chores.
+  - Check that every term used in the steps is defined.
+
+improve:
+  - Add the chores your field always has, such as invoicing or reporting, to step 2.
+  - Add your tools to the checks, so first versions use them.
+  - Keep the written steps in a shared place and date each change.
+  - Pair it with "Role task breakdown for AI help" to check what to protect.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting chores and writing steps is text work any strong chat AI does."}
+    - {name: "A spreadsheet or automation tool you already use", why: "The first version should use what your team already knows."}
+  inputs:
+    - "A time log from a typical week"
+    - "The files and exports the chores use"
+    - "Screen recordings or notes of the chore being done"
+
+terms:
+  - term: Hand method
+    meaning: The way the chore is done today by a person, kept as the standard to compare against.
+  - term: Operation
+    meaning: The thing that is done, such as adding or sorting, apart from the data it is done to.

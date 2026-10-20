@@ -1,0 +1,19 @@
+slug: witty-line-punch-up
+name: "Witty line punch-up"
+summary: "Paste a toast, speech or bio. Get a few turned sayings that are sharp and true, with the rest left plain."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [oscar-wilde]
+credits:
+  - {title: "The Picture of Dorian Gray, with its preface", by: "Oscar Wilde, 1891", url: "https://www.gutenberg.org/ebooks/174", used: "Turning a familiar saying so it sounds absurd but holds a true point"}
+  - {title: "The Importance of Being Earnest", by: "Oscar Wilde, 1895", url: "https://www.gutenberg.org/ebooks/844", used: "Saying a turned line flat, with no sign it is a joke"}
+  - {title: "De Profundis", by: "Oscar Wilde", used: "Dropping the wit where the moment is serious and saying it simply"}

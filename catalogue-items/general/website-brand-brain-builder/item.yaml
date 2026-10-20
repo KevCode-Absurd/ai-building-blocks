@@ -20,6 +20,7 @@ origin: rebuilt
 source_ids: [CES-010, CES-082]
 old_name: brand knowledge folder from a website
 version: 2.1.0
+minds: [april-dunford]
 credits:
   - {title: "Obviously Awesome: How to Nail Product Positioning so Customers Get It, Buy It, Love It", by: "April Dunford", url: "https://www.aprildunford.com/books", used: "Positioning parts in business.md and the options buyers weigh in market.md"}
   - {title: "The Four Dimensions of Tone of Voice", by: "Kate Moran, Nielsen Norman Group", url: "https://www.nngroup.com/articles/tone-of-voice-dimensions/", used: "The four voice scales in voice-and-look.md"}

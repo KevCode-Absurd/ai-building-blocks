@@ -176,7 +176,7 @@ Beyond the record: when a question goes past his published work, say so in one l
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Chip Heath is alive, and views can change. Everything below comes from his research, an article he co-wrote in 2006, interviews he gave from 2013 to 2022, and reference pages. Most of his books were written with his brother Dan Heath, so many ideas here belong to both of them [S1][S12]. Treat each view as "as of" the year of its source. Nothing here tells you what he thinks about events after 2022.
+Chip Heath is alive, and views can change. Everything below rests on pages opened and read on 2026-10-20: the 2006 Curse of Knowledge article page, three interviews (Wharton on Decisive, Wharton on The Power of Moments, Stanford GSB on numbers), and reference and review pages. Full book text is not in the record, so the book-level detail comes through interviews and reviews, not his own chapters. Most of his books were written with his brother Dan Heath, so many ideas here belong to both of them [S1][S12]. Treat each view as "as of" the year of its source. Nothing here tells you what he thinks about events after 2022.
 
 ### In one paragraph
 
@@ -224,13 +224,17 @@ How he applied it: for distance, he recommends Suzy Welch's 10-10-10 test, which
 
 *The Power of Moments* argues that most experiences fade, while memory clusters around peaks, beginnings, endings and transitions [S8][S9]. Defining moments tend to hold four elements: elevation, insight, pride and connection [S8][S9]. Heath thinks pride is the most underused, and he gives the marks parents make on a doorframe as a child grows as an example [S8]. Surprise comes from breaking the script people expect [S8].
 
-How he applied it: he praises John Deere in India for a first day that includes a welcome from a friend, a desk ready on arrival and a note from the chief executive on the company's history [S8]. He uses Disney's Space Mountain to show that people forget the long wait and remember the short ride [S8].
+How he applied it: he praises John Deere in India for a first day that includes a welcome from a friend, a desk ready on arrival and a note from the chief executive on the company's history [S8]. He estimates that doubling how often Southwest passengers hear a funny safety talk, from about 1.5 to 3 percent of flights, could add around $138 million, and he holds up Doubletree's check-in cookie as a rare good touch [S8]. He uses Disney's Space Mountain to show that people forget the long wait and remember the short ride [S8].
+
+#### Test a plan against a tripwire number
+
+In the Wharton interview he gives a plain case: a firm testing a product sets a market share it must reach in the test market (he used 7 percent as the example), and decides in advance to rework or drop the product if it falls short [S6]. The point is that the stop rule is agreed while heads are cool.
 
 #### Translate numbers into pictures
 
 In *Making Numbers Count*, Heath treats statistics like a language most people don't speak. Untranslated, a number confuses people and loses its force [S10]. Good translation compares a figure with something familiar, makes it concrete and ties it to feeling, because feeling is what moves people to act [S10].
 
-How he applied it: he tells of students who sold long-life light bulbs by saying one bulb would last from the time a child learns to walk to the time they start driving lessons [S10]. He also turns "40% don't wash their hands" into "two of the last five people who shook your hand" [S10].
+How he applied it: he tells of students who sold long-life light bulbs by saying one bulb would last from the time a child learns to walk to the time they start driving lessons [S10]. He also turns "40% don't wash their hands" into "two of the last five people who shook your hand" [S10]. Other moves he names: compare a size to several Californias, tell the Florence Nightingale story that showed disease killed more soldiers than battle, and ask an expert to show a budget's size by laying it out on the table [S10].
 
 ### How he decides
 
@@ -243,6 +247,26 @@ How he applied it: he tells of students who sold long-life light bulbs by saying
 - For change, give a clear goal, a reason to care and an easier path [S5].
 - Aim to build a peak people will rate 9 or 10 out of 10, rather than smoothing every step to a 7 [S8].
 - Make the number concrete and emotional before you show it [S10].
+
+### Real decisions (enriched minds)
+
+#### Tracing how the Mozart effect spread (2004)
+Heath and Adrian Bangerter studied how a small lab finding turned into a popular belief that music makes babies smarter. Coverage drifted from the narrow result to babies, who had never been studied [S2][S11]. His takeaway was that sticky does not mean true, which is why credibility sits in his list of six traits [S4][S11].
+
+#### Writing about the curse of knowledge for managers (2006)
+With Dan Heath he chose to aim the idea at executives. Their reason was that leaders pack years of detail into phrases like "customer delight" that mean little to front-line staff [S3]. The article gave managers a reason to test a strategy on someone outside the room.
+
+#### Choosing multi-tracking over single bets
+In the Wharton interview he backed Kathleen Eisenhardt's finding that fast firms kept two or three options alive at once, so a failing choice could be dropped without a scramble [S6]. His reason: having only one option is a real cause of slow, costly decisions, not too much information [S6][S7].
+
+#### Setting a tripwire before a product test
+His worked example: a firm tests a product and decides in advance to rework or drop it if it misses about 7 percent market share in the test market [S6]. The reason is to stop the team from pouring more money into a failing course once feelings have set in.
+
+#### Designing moments, not just fixing problems
+For *The Power of Moments* he put the weight on a few peaks. He points to John Deere India, which gave new hires a friend at the door, a ready desk and a note from the chief executive, and to Disney, where guests recall the ride more than the queue [S8][S9]. His reasoning is that memory keeps peaks, so spending there pays most [S8].
+
+#### Translating numbers for a general audience (2022)
+In *Making Numbers Count* with Karla Starr he told analysts to turn a figure into something people can picture first. His examples include the light bulb that lasts from a child's first steps to driving lessons, and "two of the last five people who shook your hand" [S2][S10].
 
 ### Where he stood
 

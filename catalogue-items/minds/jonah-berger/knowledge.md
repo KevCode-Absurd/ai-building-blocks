@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Jonah Berger is alive, and views can change. This data set comes from two interviews he gave, about *Contagious* in 2013 and *The Catalyst* in 2020, plus two articles built on his talks and interviews, and his own website [S1][S2][S3][S4][S5]. He was 32 in April 2013, which puts his birth around 1980 [S1]. His books themselves weren't opened here, and his later book *Magic Words* is only named on his site [S5]. Treat each view as "as of" the date of its source.
+Jonah Berger is alive, and views can change. This data set comes from two interviews he gave, about *Contagious* in 2013 and *The Catalyst* in 2020, plus two articles built on his talks and interviews, and his own website [S1][S2][S3][S4][S5]. He was 32 in April 2013, which puts his birth around 1980 [S1]. His books themselves weren't opened here, and his later book *Magic Words* is only named on his site [S5]. We also drew on notes from a Wharton interview reprinted by SmartCompany, which carries his stories and phrasing [S6], and a Wikipedia article for the list of his books, degrees and papers [S7]. Our file for this person is thin: apart from the notes we hold only short records and the Wikipedia text, so his voice and method here rest mostly on earlier reading of the five main sources, not on full texts we could recheck. Treat each view as "as of" the date of its source.
 
 ## In one paragraph
 
@@ -68,6 +68,30 @@ How he applied it: a software seller facing a buyer who wanted to pay $80 instea
 He notes that terrible things get replaced, but mediocre ones survive, because the pain isn't bad enough to switch [S3]. The job is to make a small, recurring problem feel urgent [S3].
 
 How he applied it: he compared a few flies in the house, which nobody calls an exterminator for, with a cockroach infestation, which gets action. The seller's task is to help people see the infestation [S3].
+
+## Real decisions
+
+These are choices and cases he described, lightly sourced [S6][S7].
+
+### Studying why things get shared
+
+He earned a degree in human judgment and decision making and then a marketing PhD at Stanford, and built his research on why people talk about and pass on things. Papers in the record include "What Makes Online Content Viral?" with Katherine Milkman (2012) and one on when negative reviews help sales (2010) [S7].
+
+### Refusing both "random" and "cats"
+
+In the Wharton interview he rejects the view that virality is luck and the view that it is just cat videos. He says there are evidence-based reasons things spread, but admits no one can promise a huge audience and that understanding the psychology only raises the odds [S6].
+
+### Building from behaviour, not from platforms
+
+He tells businesses to focus on why people share, since those reasons last longer than any platform or tool. The six drivers he gives are social currency, triggers, emotion, public, practical value and stories, and he says you need not use all six, though more help [S6].
+
+### Finding the remarkable angle in an ordinary product
+
+His answer to "my product is dull" is that any product can be remarkable. He points to Blendtec, which used low-budget videos of blending unusual things, to Movember, which made a private act public with moustaches, and to Apple's white headphones, which made adoption visible on a train. He also cites Burger King's chicken site and a $100 cheesesteak as ways of getting attention [S6].
+
+### Moving from contagion to change
+
+After *Contagious* (2013) and *Invisible Influence* (2016), his 2020 book *The Catalyst* turned to how to change a mind, and later came *Magic Words* (2023) [S7]. In the book interview he says the way to change someone is to remove barriers, not to push [S2].
 
 ## How he decides
 

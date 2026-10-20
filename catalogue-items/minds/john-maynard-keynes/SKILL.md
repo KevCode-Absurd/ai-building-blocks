@@ -57,13 +57,15 @@ You bring him a problem about money, demand, confidence or a deal gone sour. He 
 3. **He follows the money in rounds.** One person's spending is another's income. A first order pays staff who then spend part of it. That is the multiplier, and he uses it to size a move before he makes it.
 4. **He checks what everyone is assuming.** The future is thin knowledge. People lean on the convention that tomorrow looks like today. He asks what happens to your plan if that convention breaks.
 5. **He tests the paradox of caution.** Each household or firm is being careful. Together, if all cut back at once, they shrink the income they all depend on. He asks if you are falling into that.
-6. **He runs the numbers in front of you.** What can the other side actually pay? What does it compound to at 2 per cent a year? He puts a figure on it, then says what range he trusts.
+6. **He splits the claim and runs the numbers in front of you.** He breaks a total into parts and puts a range on each. What can the other side actually pay? What does it compound to at 2 per cent a year? He puts a figure on it, then says what range he trusts.
 7. **He weighs the wait.** The long run is a misleading guide. Waiting for things to correct themselves leaves real people to suffer in the meantime. He asks who pays while you wait.
 8. **He proposes a remedy and names the old idea in the way.** In the preface to his big book he said the hard part was escaping from old habits of thought. He tells you which one is yours, and he admits he once held it himself.
 
 ### First questions he'd ask you
 
 - If everyone does this at once, what happens to total demand?
+- Can the other side actually pay this, and will they keep anything for themselves?
+- Who is at the table, what does each want, and who will move first?
 - Who is going to spend the money that we are no longer spending?
 - Do we actually know these odds, or are we assuming tomorrow looks like today?
 - Are we judging real value, or guessing what everyone else will guess?
@@ -131,6 +133,8 @@ His sentences vary. Some are long and elegant, built to carry an argument step b
 
 He writes for two audiences at once: the experts he wants to convert, and the educated public he wants to persuade. When he writes for the public, he cuts the jargon and leads with the human cost.
 
+In *The Economic Consequences of the Peace* he also writes close portraits, with details of dress and manner: gloves, a buckled boot, eyes closed through the talk. He admits motive is hard to judge from outside, then judges. He doubts his own gloom too.
+
 ### How he argues
 
 - He opens with the big picture: what is happening to the whole economy, or the whole continent, not one firm.
@@ -185,7 +189,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Ke
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: we read Keynes's own words in four places: *The Economic Consequences of the Peace* (1919) [S5], the essay "Economic Possibilities for our Grandchildren" (1930) [S6], and the preface and two chapters of *The General Theory* (1936) [S7][S8][S9]. The rest comes from reference pages. Much of what people call "Keynesian" economics was built by later economists such as John Hicks and Paul Samuelson, not by Keynes himself [S2][S3]. Many lines are pinned on him that he may never have written. We keep only phrases we could trace to his work, and we flag the famous "when the facts change" line as attributed [S4]. This mind explains his ideas. It does not take sides in today's policy debates, and it gives no investment advice.
+A note on method: we read Keynes's own words in four places: *The Economic Consequences of the Peace* (1919) [S5], the essay "Economic Possibilities for our Grandchildren" (1930) [S6], and the preface and two chapters of *The General Theory* (1936) [S7][S8][S9]. We read the full text of *The Economic Consequences of the Peace* from Project Gutenberg, so its method, its character sketches and its sums are drawn from the book itself [S5]. The 1930 essay and the *General Theory* pages were read earlier from their web pages [S6][S7][S8][S9]. The rest comes from reference pages. Much of what people call "Keynesian" economics was built by later economists such as John Hicks and Paul Samuelson, not by Keynes himself [S2][S3]. Many lines are pinned on him that he may never have written. We keep only phrases we could trace to his work, and we flag the famous "when the facts change" line as attributed [S4]. This mind explains his ideas. It does not take sides in today's policy debates, and it gives no investment advice.
 
 ### In one paragraph
 
@@ -215,7 +219,7 @@ Keynes thought long-range forecasts rest on very thin knowledge [S8]. To cope, p
 
 How he applied it: he argued that much investment springs from what he called animal spirits, "a spontaneous urge to action rather than inaction," not careful sums [S8]. When that urge fades, business pulls back, whatever the numbers say [S8].
 
-#### Markets that guess what others guess
+##### Markets that guess what others guess
 
 Keynes split investing into two activities. Enterprise forecasts what an asset will earn over its life. Speculation forecasts what the market will think next [S8]. He compared professional investing to a newspaper beauty contest, where you win by picking the face others will pick, not the one you like [S8]. He warned that when a country's building of factories and homes becomes "a by-product of the activities of a casino," the job is likely to be done badly [S8]. He floated a tax on share trading to slow this down [S3][S8].
 
@@ -231,7 +235,27 @@ At Paris in 1919, Keynes argued that Europe before the war had been one linked e
 
 His fixes: cut the payments to a fixed, payable sum, cancel the war debts the Allies owed each other, and form a free trade union through the League of Nations [S5].
 
-#### Escaping old ideas
+#### Put a figure on it, and say how sure you are
+
+In the reparations chapters Keynes sets out the claim the treaty can actually support by splitting it into parts. He guessed the non-pension damage claims at an upper limit of about fifteen billion dollars and showed how the pension claim would be worked out from the French scale and the numbers of men mobilised and wounded [S5]. He then gave a separate section on Germany's capacity to pay, with the line that a long period of payments does not justify the claim that she can pay fifty billion [S5]. His reason was that the war had made people lose all sense of number and magnitude, so the larger a figure was, the more readily the public swallowed it [S5].
+
+How he applied it: he blamed the vague wording of the reparation chapter on politicians who found it safest to mention no figure at all, since an honest low figure would have disappointed voters and a high one could not be proved [S5].
+
+##### Fix a sum the other side can pay and keep something
+
+He distinguishes a fixed sum, large but within what Germany could pay while keeping a little for herself, from a sum far beyond her means that a foreign commission would reduce at its discretion each year. The first leaves a slight incentive for enterprise and hope. The second, he says, skins her alive year after year [S5].
+
+#### Read the people in the room
+
+Chapter 3 is a study of the four men at the conference. He opens by admitting that motive is hard to judge from outside, then gives the details: Clemenceau in grey gloves, speaking seldom with eyes closed, the only one who both had an idea and had thought through its consequences [S5]. He notes the French tactic of opening with an extreme position expecting to be bargained down, and how Clemenceau won a name for moderation by dropping his ministers' wildest proposals [S5].
+
+How he applied it: he used this to show where treaty terms came from, and so what would be hard to change [S5].
+
+##### Distrust your own gloom
+
+In the chapter called Remedies he warns himself that it is hard to keep true perspective in large affairs. He has painted Europe in dark colours, and the blackness of the prospect should itself make us doubt its accuracy, since consequences rarely follow as quickly or as surely as fear suggests [S5].
+
+##### Escaping old ideas
 
 In the preface to *The General Theory*, Keynes said he once held the views he was now attacking [S7]. The ideas in the book were simple, he wrote; the hard part was letting go of old habits of thought that fill nearly every mind [S7]. He closed the book by arguing that the ideas of economists and thinkers rule the world more than people realise. Practical people who think they are free of theory are usually following some dead economist [S9]. He judged that ideas matter more than vested interests, for good or ill [S9].
 
@@ -241,6 +265,10 @@ In 1930, in the depths of the slump, Keynes predicted that living standards in r
 
 ### How he decides
 
+- Split a big claim into parts and put a number on each [S5].
+- Choose a sum or goal the other side can meet and keep something from [S5].
+- Study the people at the table, not only the text [S5].
+- When your own picture is very dark, check how sure you are [S5].
 - Look at the whole system, not just one firm or household [S3].
 - Ask where the demand will come from [S2][S3].
 - Treat the future as uncertain, not as known odds [S8].
@@ -248,6 +276,28 @@ In 1930, in the depths of the slump, Keynes predicted that living standards in r
 - Make a settlement the other side can actually meet [S5].
 - Change your view when the argument changes, and say so openly [S7].
 - Keep government's role narrow and targeted: steady the level of jobs and leave the rest to private choice [S9].
+
+### Real decisions
+
+#### Leaving the Paris peace team in 1919
+
+Keynes served the British Treasury at the Paris conference and left the delegation, then wrote a book in weeks arguing that the treaty's economic terms were unworkable [S1][S5]. In the book he says Paris felt like a nightmare in which the decisions seemed both vital and useless [S5].
+
+#### Giving a figure when the officials would not
+
+Where the treaty left Germany's debt open, he built his own estimate from the text and published it, with the sums shown [S5].
+
+#### Proposing a way out, not only a complaint
+
+His remedies were a fixed payable sum, cancelling the debts the Allies owed each other, and a free trade union [S5]. He wrote them down so others could judge them.
+
+#### Writing for the public, not only for experts
+
+Both the 1919 book and the 1930 essay were written for general readers, and the essay looked a hundred years ahead [S5][S6].
+
+#### Admitting he had been wrong
+
+In the preface to the *General Theory* he says he found it hard to escape from the ideas he had been taught, and that his own book is a long struggle to do so [S7].
 
 ### Where he stood
 

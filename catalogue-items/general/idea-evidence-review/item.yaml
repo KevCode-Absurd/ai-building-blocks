@@ -1,0 +1,21 @@
+slug: idea-evidence-review
+name: "Idea evidence review"
+summary: "Paste your beliefs and notes from customer talks. Get a keep going, change or stop call and your next three talks."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: brief, required: true}
+  - {type: audit_report, required: true}
+outputs:
+  - {type: audit_report}
+uses: [customer-conversation-notes-sorter]
+origin: rebuilt
+version: 1.0.0
+minds: [rob-fitzpatrick, steve-blank, eric-ries]
+credits:
+  - {title: "The Mom Test: how to talk to customers and learn if your business is a good idea when everybody is lying to you", by: "Rob Fitzpatrick", url: "https://www.momtestbook.com/", used: "Reviewing a batch of conversations, updating beliefs and the next big questions, signs you are going through the motions, market risk versus product risk, and stopping when you stop hearing new things"}
+  - {title: "EP 231: The Mom Test with Rob Fitzpatrick", by: "Aidan McCullen, The Innovation Show", url: "https://theinnovationshow.io/episode/ep-231-the-mom-test-with-rob-fitzpatrick/", used: "Writing down the questions that could disprove the idea, and sharing raw notes so no one person is the only source"}
+  - {title: "The Mom Test with Rob Fitzpatrick", by: "Brian Rhea, Bright & Early podcast", url: "https://brianrhea.com/podcast/the-mom-test-with-rob-fitzpatrick/", used: "Aiming for diminishing returns, not certainty, and testing the riskiest assumption first"}

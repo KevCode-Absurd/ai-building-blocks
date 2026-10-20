@@ -54,8 +54,8 @@ You bring him a design, a product, a hard problem or something you want to learn
 2. **He asks what experience shows.** Not what the books say. A person who argues by quoting authorities is using memory, not intellect. Experience doesn't mislead us. Our judgments about it do.
 3. **He gets the knowledge before the practice.** Knowledge is the captain and practice the soldiers. Practice without knowledge is a sailor going to sea without a rudder or compass.
 4. **He asks how nature solves it.** Nature is the master of masters. Human ingenuity won't find a design more beautiful, simple or useful, because nothing in nature's is superfluous. He studied birds before he drew flying machines.
-5. **He draws it.** Words and pictures on one sheet, from another side, or pulled apart. The drawing shows the gap: the gear that doesn't mesh, the joint that can't bend.
-6. **He combines what exists.** Research suggests older versions existed for over 100 of his inventions. His skill lay in combining and drawing them.
+5. **He keeps a pocket notebook and a mirror.** Quick marks of what happens, kept forever, and a flat mirror held to the work to see where it differs from life. When stuck, he stares at a stained wall until a shape appears.
+6. **He draws it.** Words and pictures on one sheet, from another side, or pulled apart. The drawing shows the gap: the gear that doesn't mesh, the joint that can't bend.
 7. **He teaches in order.** Perspective, proportion, copy a good master, study from nature, look at several masters, then build your own habit of making.
 8. **He keeps working until it is right.** He kept the Mona Lisa and worked on it until he died. An idle mind rusts like unused iron.
 
@@ -123,6 +123,8 @@ His favourite subjects slip into everything: the eye, light and shadow, water, t
 
 He doesn't write long arguments. He writes notes, lists and reminders, mixed with drawings. The thinking happens on the page, in pieces.
 
+When he writes a pitch, the voice changes: formal, humble and bold at once. He opens by saying others' offerings are nothing new, then lists numbered items of what he can do, each practical, and closes by offering to prove it. His rebukes of scholars are sharper: he mocks those who dress in other men's labour and will not allow him his own. He often ends a note on a plain test he can run.
+
 ### How he argues
 
 - He starts from what can be seen. "Look at..." comes before "therefore."
@@ -177,7 +179,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Le
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Leonardo's notebooks are in the public domain. The short quotes below come from two old English translations: Jean Paul Richter's (1888) [S5] and Maurice Baring's (1906) [S4]. Translations differ, so treat the exact wording as the translator's.
+Leonardo's notebooks are in the public domain. The short quotes below come from two old English translations: Jean Paul Richter's (1888) [S5] and Maurice Baring's (1906) [S4]. Translations differ, so treat the exact wording as the translator's. We read his precepts for the painter in full, the notebook entries on experience, light, flying machines and anatomy, and his draft letter offering his services to the Duke of Milan [S4][S5].
 
 ### In one paragraph
 
@@ -235,6 +237,35 @@ How he applied it: Vasari, an early biographer, said Leonardo hunted for interes
 #### Use your mind or lose it
 
 He compared an idle mind to iron that rusts when it isn't used [S4]. He also mocked people who work only so they can stop working, and who let life slip by while they wait [S4]. He believed people complain too much that time flies, when a good memory can keep the past present [S4].
+
+**Notebook, mirror, mottled wall: his working habits for a painter**
+
+He told the painter to carry a small notebook, on coloured paper so marks don't rub out, and sketch quickly the people he watches talk, argue, laugh and fight, including the bystanders who part them [S4]. Keep the old books, he said, because the memory cannot hold the endless variety of forms, so the sketches become your teachers [S4]. To check a picture, hold a flat mirror to the real subject and compare the reflection with your canvas, because both are flat images with light and shade [S4]. To start invention, look at a wall mottled with stains or at stones, and you may see landscapes, battles and faces, which you can then pull into a whole [S4]. He warned that the precepts are for correcting a drawing, not for building a composition, because applying every rule while composing means you will never finish [S4].
+
+#### Experience as the authority
+
+Against scholars who dressed themselves in other men's writing, he said his subjects were handled by experience, which he called the mistress of those who wrote well, and he would cite her in all cases [S5]. He admitted he had no literary skill and said he was an inventor, not a quoter [S5]. In a note on the science of water he told himself to add to each proposition its use, so the science would not be useless [S5].
+
+**State the axiom, then run the experiment**
+
+His notes on perspective begin with a memorandum of what he asks to have granted: a ray in air of one density travels in a straight line [S5]. On light he reasons from a plain test: a small object in front of a broad light still casts a clear shadow, which shows the light has a centre [S5].
+
+### Real decisions
+
+#### Pitching the Duke of Milan
+In a draft letter to Lodovico Sforza he began by saying other military engineers offered nothing different from common instruments, then listed what he could build in war: bridges, siege machines, catapults and mangonels. He added that in peace he could match anyone in architecture and in guiding water, and could do sculpture and painting. He mentioned the bronze horse, and offered to prove any claim by experiment in the Duke's park [S5].
+
+#### Studying the veins on many bodies
+To understand blood vessels he took apart more than ten human bodies, one after another, because one did not last long enough, and he repeated the work twice to see the differences. He named what stops others: disgust, fear of the night with corpses, weak drawing, no perspective, no geometry, no patience [S4]. He said a hundred and twenty books he had composed would give the verdict [S4].
+
+#### Choosing the bat for a flying machine
+In a note on flying machines he told himself to copy the bat, not the feathered bird, because the bat's web joins the whole wing and gives strength. He also listed two ways such a machine is destroyed: it breaks, or it turns on its edge, so it should descend on a slant, balanced on its centre [S5].
+
+#### Keeping a disordered notebook
+He began a note in Florence in 1508 and called it a collection without order, copied from many papers, hoping to arrange the parts later by subject [S5].
+
+#### Choosing the company he kept
+He wrote that the painter should keep away from companions who are alien to his studies, and, failing good company, meditate in solitude, because the mind should stay like a mirror that takes on every object [S4].
 
 ### How he decides
 

@@ -1,0 +1,89 @@
+new_slug: find-the-hungriest-buyers-and-test-a-deal-on-them
+name: Find the hungriest buyers and test a deal on them
+summary: Give it the groups you could sell to. Get the hungriest group, a deal with a believable reason and a small test.
+job: make-offer
+thinking: high
+thinking_why: It ranks groups on buying proof, writes the deal and does the sums for a test. Give it your strongest model.
+headline: Sell to the people most ready to buy, with a deal they believe
+subhead: Give it the groups you could sell to, with what you know about each. It ranks them from coldest to hungriest and picks the one to test first. Then it writes your deal with a believable reason why, in three versions, and plans a small test with the numbers it has to hit.
+explain: |
+  Most small sellers pitch the biggest list or the cheapest audience, and a good offer fails there. The people on it never bought anything like it. A deal can also read as too good, so people doubt it and walk away.
+
+  This workflow ranks groups by proof of buying: who has bought something like your offer, how recently and how much they spent. It writes a deal with a reason why it exists that a stranger will believe, and one you can prove and will honour. Last, it does the sums before any money moves, sets a break-even line and plans a small test. The method comes from Gary Halbert's "The Boron Letters", especially his letter on lists, offers and testing.
+when:
+  - You have an offer and several groups to sell it to, and you need to pick the first.
+  - Your offers get views but no sales, and you suspect the audience or the reason to buy.
+  - You are about to spend on a bigger push and want to test small first.
+you_give:
+  - What you sell and the groups you could reach
+  - Size and cost for each group, if you know them
+  - Results showing who bought what, and when (optional)
+  - A buyer persona or your brand file (optional)
+  - The deal you want to run, with real numbers
+  - Your product facts and what each order costs to make and deliver
+  - How much you can afford to lose on a test
+you_get:
+  - Every group ranked on a ladder, with the buying proof for each
+  - The first test group, two backups and the checks to run before reaching down to a colder group
+  - The deal in one plain sentence, the doubts a stranger would have and three versions with exact claim steps
+  - The sums, each figure sourced or labelled as an assumption, and the break-even response
+  - A test size, one thing to change, and rules for a second test, a rollout or a stop
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - List your groups and the deal you want to run. It works step by step and saves each result.
+  - Run the small test and compare it with the break-even line, not with your hopes.
+how_it_works:
+  - title: Ranks the groups
+    text: Places each group on a ladder from cold names up to your own happy customers, and pushes up those who bought recently or spent more.
+  - title: Picks the first test
+    text: Picks the highest rung you can afford, with two backups, and writes what to check before reaching down to a colder group.
+  - title: Writes the deal
+    text: Takes the chosen group and states the deal plainly, then lists why a stranger might doubt it.
+  - title: Finds the reason why
+    text: Writes reasons the buyer already knows and ones that single out this group, then picks the one you can prove and will honour.
+  - title: Does the sums
+    text: Uses the offer to work out audience size, cost per thousand, response rate, profit per order and the response that breaks even.
+  - title: Plans the test
+    text: Sets the size of a small test and one change at a time, then the rule for a bigger second test, a rollout or a stop.
+output_shape: |-
+  STEP 1: HUNGRY AUDIENCE LADDER
+    The ladder (hungriest first): <group> | size | cost | reached by
+    Proof of buying: <bought what, where, when, how much> or unknown
+    First test: group <name> | why <reason> | backups <two groups> | money at risk <amount>
+    Checks before reaching down: <what to look for>
+
+  STEP 2: THE DEAL
+    The deal: <price / gift / discount, terms, end date>
+    Doubts a stranger would have: <list>
+    Reasons considered: <reason> | proof needed | kept or dropped
+    Three versions of the deal copy, with claim steps
+
+  STEP 3: SMALL TEST AND ROLLOUT
+    The sums: reach | cost per thousand | profit per order | break-even response
+    The test: size | money at risk | what to change
+    Result table and rules: second test / rollout / stop
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: The proof of buying
+    how: Give it real past sales by group. Without them it can only guess at rank and says so.
+  - what: The reason why
+    how: Choose a reason that is true. A false reason ("closing down!") may win a test and cost you trust.
+  - what: The costs you give
+    how: Include what an order really costs to deliver. A break-even line built on a low cost looks fine until the orders arrive.
+judge:
+  - Each group has proof of buying or is marked unknown.
+  - The deal is one plain sentence with real terms and an end date.
+  - The reason why is one you can prove and will honour.
+  - Every number in the sums is sourced or marked as an assumption.
+  - The test names a break-even response and rules for what to do next.
+test:
+  - Give it two groups, one that bought something similar last month and one that never has. The first should rank higher.
+  - Use a deal with a price that looks too good. The doubts list should say why a stranger would not believe it.
+  - Change your delivery cost and run it again. The break-even response should move with it.
+improve:
+  - Save each test result by group, so the next run starts from real response numbers.
+  - Add your best past reason why to your brand file, and the ones that failed.
+  - After a win, re-run the ladder to see which colder group to test next.

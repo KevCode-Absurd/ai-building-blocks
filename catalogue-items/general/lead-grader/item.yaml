@@ -1,0 +1,25 @@
+slug: lead-grader
+name: Lead grader
+summary: Paste your prospects. Get each graded A, B or C by how soon they need to act, with a follow-up.
+category: general
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: shortlist
+    required: true
+outputs:
+  - type: shortlist
+origin: rebuilt
+version: 1.0.0
+minds:
+  - barbara-corcoran
+credits:
+  - title: "The Tim Ferriss Show #725: Barbara Corcoran"
+    by: Tim Ferriss
+    used: Grading prospects by how soon they need to move, and spending effort on the soonest
+  - title: Barbara Corcoran
+    by: Wikipedia
+    url: https://en.wikipedia.org/wiki/Barbara_Corcoran
+    used: Background on her approach to sales

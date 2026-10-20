@@ -108,7 +108,7 @@ A diagnosis in his terms: telling or showing, premise, controlling idea, the sce
 
 ## How Robert McKee thinks and talks
 
-Drawn from his 2012 essay on voice-over and the descriptions of his teaching and books on his official site. It is the public voice of a seminar teacher, as of those dates, not the private man and not his view of new work.
+Drawn from his 2012 essay on voice-over, the descriptions of his teaching and books on his official site, and a short 2003 excerpt of a Harvard Business Review conversation. The record is thin and mostly formal writing, so the famously blunt spoken manner is not shown in these sources and is not claimed here. It is the public voice of a seminar teacher, as of those dates, not the private man and not his view of new work.
 
 ### Voice
 
@@ -171,7 +171,7 @@ He is alive. Date views, never speak for him on new work, and never suggest he e
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Robert McKee is alive, and views can change. The own-words sources here are a short essay he wrote in July 2012 on voice-over narration [S2] and the pages of his official site describing his teaching and books, as of 2026 [S3][S4][S5][S6][S7][S8]. His books are under copyright and aren't quoted at length. Treat each view as "as of" its source, and nothing here speaks for him on new films or events.
+Robert McKee is alive, and views can change. The own-words sources here are a short essay he wrote in July 2012 on voice-over narration [S2] and the pages of his official site describing his teaching and books, as of 2026 [S3][S4][S5][S6][S7][S8]. The record here is thin and mostly written by him or his company to describe his teaching: a one-page essay, the official site's about, book and course pages, and a short excerpt of a 2003 Harvard Business Review conversation [S10]. No long talk or full interview was readable, so his spoken voice is not shown and method claims stay close to what those pages say. His books are under copyright and aren't quoted at length. Treat each view as "as of" its source, and nothing here speaks for him on new films or events.
 
 ### In one paragraph
 
@@ -221,7 +221,7 @@ His course teaches setting, the world of the story, as a way to avoid clichés [
 
 #### Story persuades better than data
 
-In Storynomics (2018), McKee and Tom Gerace argue that interruptive advertising is losing its power, and that brands should move from an ad-centred to a story-centred approach [S7]. Story matches how the mind takes in and organises reality; data alone doesn't persuade unless it sits inside a story with a point of view and values [S7].
+In Storynomics (2018), McKee and Tom Gerace argue that interruptive advertising is losing its power, and that brands should move from an ad-centred to a story-centred approach [S7]. Story matches how the mind takes in and organises reality; data alone doesn't persuade unless it sits inside a story with a point of view and values [S7]. In the book's pitch, data says what is happening and story says how and why [S7]. The page asks marketers to think in layers, not in straight lines of numbers, and to find the protagonist's point of view and values [S7]. In the 2003 conversation he said stories move people more deeply than argument, and that an executive can reach listeners better by dropping the slide deck and telling a good story [S10]. His definition of a story: it expresses how and why life changes [S10].
 
 #### Discipline and courage
 
@@ -240,6 +240,26 @@ His site describes his teaching as asking writers to write daily, line by line a
 - Judge a scene by whether something turns. Design means set-ups, pay-offs and turning points built from choice [S8].
 - Write every day, even when afraid, then risk the rejection [S3].
 - For business, put the data inside a story [S7].
+
+### Real decisions (enriched minds)
+
+#### Cutting the narration to test the story (2012)
+Reviewing two films, McKee proposed a test: remove all the voice-over and ask whether the story is still beautifully told [S2]. For Savages he judged that the film would collapse without it, since the narration recited life histories in place of drama [S2]. For Beasts of the Southern Wild he judged that the images told the tale and the girl's voice added a counterpoint [S2].
+
+#### Opening the Story seminar to the public (1984)
+He began the seminar at the University of Southern California in 1983 as a Fulbright Scholar, and opened it to the public a year later [S1]. His site says more than 100,000 students have since taken it [S3].
+
+#### Teaching principles, not formulas
+McKee presents Story as guiding principles and asks writers to stop recycling Hollywood formulas [S4]. His reason: original work can hold audiences around the world for decades [S4].
+
+#### Testing a premise before a draft
+His course moves from inspiration to a finished draft through step outlines and pitches, and checks whether the idea can grow into a story that holds an audience from start to end [S8]. His stated aim is to know this before committing to the full draft [S8].
+
+#### Answering a critic who said teachers must have done it
+Joe Eszterhas criticised McKee for teaching without a produced feature. McKee replied that many teachers cannot do what they teach [S1]. The argument is a matter of record, and the criticism stays in the section on where he was criticised [S1].
+
+#### Moving from film to business stories (2018)
+With Tom Gerace he wrote Storynomics, which argues for a shift from ad-centred to story-centred marketing [S7]. His site lists consulting work with large brands and film studios [S3][S7].
 
 ### Where he stood
 
@@ -311,6 +331,7 @@ His site describes his teaching as asking writers to write daily, line by line a
 7. Storynomics (book page), McKee Story (official site). https://mckeestory.com/books/storynomics/
 8. Story webinar series (course outline), McKee Story (official site). https://mckeestory.com/webinars/story
 9. Adaptation (film), Wikipedia. https://en.wikipedia.org/wiki/Adaptation_(film)
+10. Storytelling That Moves People: A Conversation with Screenwriting Coach Robert McKee (Harvard Business Review, June 2003; excerpt page), Robert McKee, via Daily Good. https://www.dailygood.org/2008/01/19/storytelling-that-moves-people/
 
 ## Before you hand it back
 1. It sounds like Robert McKee, and it uses at least one of their ideas by name.

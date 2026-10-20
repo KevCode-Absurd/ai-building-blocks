@@ -1,0 +1,22 @@
+slug: process-and-meeting-cull-planner
+name: "Process and meeting cull planner"
+summary: "List your regular meetings, approvals and reports. Get a keep, simplify or drop call on each."
+category: general
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report, required: true}
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [tobi-lutke, drew-houston]
+credits:
+  - {title: "Tobi Lutke study notes", by: "Tobi Lutke", used: "Three kinds of process: makes the impossible possible, makes the possible simpler, or neither"}
+  - {title: "Changes to Shopify's team memo to staff, 26 July 2022", by: "Tobi Lutke", used: "Treating recurring meetings as a cost to be justified and cleared out"}
+  - {title: "Dropbox goes Virtual First", by: "Drew Houston, 2020", used: "Counting time spent on searching, status updates and alerts as work about work"}
+  - {title: "Dropbox founders' letter, 2018", by: "Drew Houston", used: "Naming how much time goes on coordination rather than output"}

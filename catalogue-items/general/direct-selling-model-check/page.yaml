@@ -1,0 +1,131 @@
+new_slug: direct-selling-model-check
+name: "Direct selling model check"
+summary: "List your channels and margins. Get a sell-direct verdict, what to build to order and a score out of 100."
+job: plan-strategy
+thinking: high
+thinking_why: "It weighs what each middleman adds, then does cash timing arithmetic, where a wrong figure flips the advice."
+
+headline: "Direct selling model check"
+subhead: List how you sell today, what each channel costs and your margins. It checks what every middleman adds, whether you could build to order, how soon you are paid compared with when you pay, and which customer group to serve. You get a plan and a score out of 100.
+
+explain: |
+  Selling through shops, agents or platforms can be worth it, or each layer can take a cut and add nothing. Many businesses never check. They also hold stock they paid for months before a customer pays, and treat all customers alike when some bring much better margins.
+
+  This skill asks whether your product is turning into a commodity where price and delivery decide. It maps what each middleman adds and what it costs, tests whether you can make to order and hold little stock, and works out your payment timing in days. It splits customers into groups, picks the group with better margins, chooses one new channel to be early on, and sets a date to question the model itself. The score counts the checks you pass.
+
+when:
+  - A large part of your price goes to shops, agents or platforms.
+  - You hold stock for weeks before it sells and cash is tight.
+  - You want to test selling direct to a group of customers.
+
+you_give:
+  - Your sales channels with what each costs and the margin you keep
+  - "Stock held and payment timing: when you pay suppliers and when customers pay you"
+  - Your customer groups and what you know about them
+  - The question you want answered
+you_get:
+  - What each middleman adds, against what it costs
+  - Whether to sell direct, and for which customers
+  - What to build to order, and your payment timing in days
+  - A plan with a review date, and a score out of 100
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your channels, margins, stock days and payment timing. Add your customer groups.
+  - Read the middleman table first, then the cash timing.
+  - Run the small direct test it proposes before you change the main channel.
+
+how_it_works:
+  - title: Tests for commodity
+    text: Asks whether price and delivery now decide the sale.
+  - title: Maps the middlemen
+    text: Lists what each channel adds and what it costs.
+  - title: Checks build to order
+    text: Checks whether you can make to order and hold little stock.
+  - title: Counts payment days
+    text: Works out how soon you are paid against when you pay suppliers.
+  - title: Splits customers
+    text: Splits customers into groups and picks the one with better margins.
+  - title: Picks the new channel
+    text: Chooses one new channel to be early on.
+  - title: Sets a review date
+    text: Sets a date to question the model itself.
+  - title: Scores the model
+    text: Counts how many of six checks the model passes.
+
+output_shape: |
+  COMMODITY TEST
+  <price and delivery decide? yes, partly, no> | <evidence>
+
+  WHAT EACH MIDDLEMAN ADDS
+  <channel> | cost: <> | adds: <> | keep, change or cut
+
+  BUILD TO ORDER
+  <product> | can be made to order? <> | stock days now: <> | possible: <>
+
+  CASH TIMING
+  Paid by customer on day <n> | supplier paid on day <n> | gap: <days>
+
+  CUSTOMER GROUPS
+  <group> | margin: <> | needs: <> | fit
+
+  NEW CHANNEL TO BE EARLY ON
+  <channel> | small test: <>
+
+  REVIEW DATE
+  <date> | question to ask the model
+
+  SCORE
+  <n> out of 100: <six checks, pass or fail>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Costs of each channel
+    how: Give the percent or amount each channel takes. Without it the cost column is unknown.
+  - what: Payment days
+    how: Give real days for customers and suppliers. The gap is the main number in the cash check.
+  - what: Customer groups
+    how: Name groups by how they buy, such as home buyers, small firms and large firms.
+  - what: Your limits
+    how: Say if you cannot make to order or must sell through partners. The plan respects it.
+
+judge:
+  - Each middleman has a cost and a value.
+  - Payment timing is shown in days.
+  - Customer groups are separated.
+  - The model has a review date.
+  - The score shows each check.
+
+test:
+  - Check the cash gap against your bank statements for one month.
+  - Ask one channel partner what they think they add. Compare with the table.
+  - Run a small direct test for four weeks before changing the main channel.
+  - Run the skill twice. The cut and keep calls should match.
+
+improve:
+  - Add your real channel list and costs once, and reuse them.
+  - Add legal or contract limits on selling direct.
+  - Add your supplier lead times, so build-to-order claims are checked.
+  - Pair it with "Strategy trade-off planner" to choose what to give up.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Holds channel costs and cash timing for the sums."}
+    - {name: "Any good chat AI", why: "Reasons through the table from your figures."}
+  inputs:
+    - "Sales and margin by channel for the last year"
+    - "Supplier terms and customer payment terms"
+    - "Customer group sizes"
+
+terms:
+  - term: Build to order
+    meaning: Making the product after the customer orders, so you hold little finished stock.
+  - term: Cash gap
+    meaning: The days between paying suppliers and being paid by customers. Negative means you are paid first.
+  - term: Middleman
+    meaning: Any shop, agent or platform between you and the customer.

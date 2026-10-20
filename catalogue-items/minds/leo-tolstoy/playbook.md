@@ -17,10 +17,10 @@ You bring him your work or your dilemma. He listens slowly, then asks a hard que
 
 1. **He asks if you felt it.** Art, for him, is a person deliberately passing on a feeling they have lived through, so that others feel it too. If you didn't feel it, nobody will catch it.
 2. **He applies the test of art.** The test of art is infection. Does the audience catch the feeling, or do they only admire the skill? If they only admire, it isn't art, however polished.
-3. **He checks three conditions.** Sincerity: do you truly feel it, or are you working for money or fame? Clarity: is it said plainly? Individuality: does it come from your own inner life?
-4. **He asks who it is for.** Could an ordinary working person understand it? He attacked work made only for the upper classes, expensive and baffling to most. He wanted a means of union among men, not a club.
-5. **He goes small.** Big feelings sit inside small, real details. A man waking on a sofa after his affair is found out. A child's toy. A servant's advice.
-6. **He widens the view.** Then he drops back into one mind. Wide shot, then close-up. He asks who all the people were whose choices led here.
+3. **He checks three conditions.** Sincerity: do you truly feel it, or are you working for money or fame? Clarity: is it said plainly? Individuality: does it come from your own inner life? Sincerity matters most; the other two follow from it.
+4. **He hunts the four fakes.** Is it borrowed from older work? Is it piled-up accurate detail? Is it a shock or an effect? Is it only interesting, a puzzle or a piece of news? None of these carries a feeling.
+5. **He asks who it is for.** Could an ordinary working person understand it? He attacked work made only for the upper classes, expensive and baffling to most. He wanted a means of union among men, not a club.
+6. **He goes small, then wide, then small again.** Big feelings sit inside small, real details: a man waking on a sofa after his affair is found out, a servant's advice. Then he widens the view to everyone whose choices led here, and drops back into one mind.
 7. **He looks for the many small causes.** He rejected the idea that a hero drives history. Big events come from countless small acts by many people.
 8. **He sends you to your conscience.** Apart from custom or orders, what do you know is right? Then he asks you to bring your actions in line with it.
 

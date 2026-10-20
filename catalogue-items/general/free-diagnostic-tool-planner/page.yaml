@@ -1,0 +1,122 @@
+new_slug: free-diagnostic-tool-planner
+name: "Free diagnostic tool planner"
+summary: "Describe your business and buyer. Get a free checker that shows the problem you fix, with a score and a sign-up step."
+job: make-offer
+thinking: medium
+thinking_why: "It designs scoring that has to be fair and explainable, but the steps are fixed."
+
+headline: "Free diagnostic tool planner"
+subhead: Tell it what you sell and who buys it. It finds a problem your buyer may not know they have and designs a short free checker for it. You get the inputs, the score logic, what each result says and where the email ask goes.
+
+explain: |
+  A sales team can only talk to so many people. A free tool that tells a visitor how they are doing can reach thousands, and it does your first sales job for you: it shows a person a problem they did not know they had, with a number that makes it real.
+
+  This skill picks the problem, keeps the inputs to five or fewer, and designs the score, ideally shown against others so it means something. It writes what each score band says and what to do next, puts the email ask after the score so value comes first, and ties the result to your service as the way to fix it. It does not build the tool. It hands you the design a builder or a no-code tool can follow.
+
+when:
+  - You want a reason for strangers to give you their email other than a newsletter.
+  - Buyers do not know they have the problem you fix.
+  - You already know what separates a good result from a bad one in your field.
+
+you_give:
+  - What you sell, who buys it and the problem you fix
+  - What a good and a bad result look like in your field
+  - Your brand file (optional)
+  - Any data you have on how buyers compare, to base the score on (optional)
+you_get:
+  - The problem the tool will show, in one line
+  - Three to five inputs a visitor can enter
+  - The score logic and what each score band says
+  - Where the email ask goes, and how the result leads to your service
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your business, your buyer and the problem you solve.
+  - Say what you can measure in a visitor's answers, and what good looks like.
+  - Hand the design to whoever builds it, or to a no-code tool.
+  - Test it on five people before it goes live.
+
+how_it_works:
+  - title: Finds the hidden problem
+    text: Names a problem your buyer may not know they have and that you can really fix.
+  - title: Limits the inputs
+    text: Lists what a visitor could enter and cuts it to five or fewer.
+  - title: Chooses the score
+    text: Sets a score, shown against others where you have data, and states how it is worked out.
+  - title: Writes the bands
+    text: Says what each score range means and what to do next.
+  - title: Places the sign-up
+    text: Puts the email ask after the score, so value comes first.
+  - title: Ties it to your service
+    text: Links the result to your service as the way to fix what the score found.
+  - title: Checks the design
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE PROBLEM
+  <the problem the tool shows, and who has it>
+
+  INPUTS (<n>)
+  1. <question> | Type: <choice or number> | Used for: <score part>
+
+  THE SCORE
+  <how it is worked out> | Shown as: <number, percentile or band>
+
+  WHAT EACH RESULT SAYS
+  <band> | <meaning> | Do next: <step>
+
+  THE SIGN-UP
+  <where it sits, what is asked, what the visitor gets>
+
+  HOW IT LEADS TO YOUR SERVICE
+  <link between result and service>
+
+  MISSING
+  <data or facts the score would need>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Comparison data
+    how: If you have data on how many others score what, it shows a percentile. If not, it shows a band and says the comparison is not real yet.
+  - what: Number of inputs
+    how: Fewer inputs get more finishes. Tell it how long you will let the tool be.
+  - what: What good looks like
+    how: Give your rules for good and bad. The score logic follows them.
+  - what: Where you capture email
+    how: Say if you want it before or after the result. The default is after.
+
+judge:
+  - The tool shows a problem you can really fix.
+  - The score logic is written down and fair.
+  - There are five inputs or fewer.
+  - The sign-up ask comes after value is shown.
+  - Every result band has a next step.
+
+test:
+  - Fill in the tool yourself as a good case and a bad case and check the scores make sense.
+  - Ask five buyers to try it and note where they stop.
+  - Check that a high score still has a reason to talk to you, or says so honestly.
+  - Run the skill twice and compare the inputs it picks.
+
+improve:
+  - Add the facts you can measure from your own customers to step 2.
+  - Add the claims your field may not make about scores or results to the checks.
+  - Update the bands once real scores come in.
+  - Pair it with "Information-led lead offer planner" if you also want an information offer.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Designing inputs and score bands is text work any strong chat AI handles."}
+    - {name: "A form or quiz builder", why: "A no-code form tool can run the design without custom code."}
+  inputs:
+    - "Data on how your past customers would have scored"
+    - "Your brand file, so the wording matches your voice"
+    - "The three questions you ask in a first sales call"
+
+terms:
+  - term: Percentile
+    meaning: A score shown against others, such as "better than 70 out of 100 similar businesses".
+  - term: Score band
+    meaning: A range of scores that share one meaning, such as low, middle or high.

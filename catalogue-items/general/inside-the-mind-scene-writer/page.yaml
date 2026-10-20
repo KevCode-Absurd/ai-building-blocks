@@ -1,0 +1,120 @@
+new_slug: inside-the-mind-scene-writer
+name: "Inside-the-mind scene writer"
+summary: "Paste a character and a small errand. Get a scene told from inside their head, with time marked."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It makes many small choices about order and detail, but the shape of the scene is fixed."
+
+headline: "Inside-the-mind scene writer"
+subhead: Give it a character and one small errand on one day. It lists what that person would notice, in the order it reaches them, then writes a scene from inside their head with time marked by a clock or bell. You get a draft scene and a note on what to cut.
+
+explain: |
+  Many scenes read like a plot summary. Things happen in a tidy chain, and the reader never feels what it is like to be there. This is a problem for fiction, but also for a customer story, a case study or a brand film, where the point is to let someone feel a life.
+
+  This skill picks one ordinary errand and writes it from inside the character's head. It lists what they notice, trivial and sharp, in the order it arrives. A memory comes in and leaves without being explained. A clock or chime marks time so the reader feels the minutes pass. It cuts any plot link that only exists to look like a novel, and checks that the small errand opens up a whole life.
+
+when:
+  - Your scene is accurate but flat, and you want the reader inside the character.
+  - You are writing a customer story or portrait and want to show a day, not list events.
+  - You have a lot of plot and want one quiet scene that makes a character real.
+
+you_give:
+  - A character, with age, work and one thing that is on their mind
+  - One small errand or task on one day
+  - Your brand file (optional), if the scene is for a brand
+you_get:
+  - A scene told from inside the character's head
+  - Time markers placed through it
+  - A short note on what was cut and why
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your character and the errand in two or three sentences. Keep the errand small.
+  - Say one thing the character is quietly worried about or remembering (optional).
+  - Read the scene aloud. Mark any line that sounds like the writer talking, not the character.
+  - Ask for a second version with a different time marker, such as a bell instead of a clock.
+
+how_it_works:
+  - title: Picks one errand
+    text: Chooses one ordinary task on one ordinary day, not a plot event.
+  - title: Opens on action and time
+    text: Starts with a plain action line and a time marker so the reader is placed at once.
+  - title: Lists what is noticed
+    text: Writes the things the person notices, small and sharp, in the order they reach them.
+  - title: Lets memory come and go
+    text: Brings in one or two memories without explaining them and lets them leave.
+  - title: Blends the voices
+    text: Mixes description, thought and speech in one flow.
+  - title: Marks the time
+    text: Adds a chime, clock or other sign so the reader feels time pass.
+  - title: Cuts false plot
+    text: Removes any link that exists only to look like a story.
+  - title: Checks it opens a life
+    text: Tests that the errand shows who the person is, then runs its own checks.
+
+output_shape: |
+  WHO AND WHAT
+  <character> | Errand: <the one task> | Day and place: <when and where>
+
+  WHAT IS NOTICED, IN ORDER
+  1. <detail, small or sharp>
+  2. ...
+
+  SCENE
+  <the scene, with time markers>
+
+  TIME MARKERS
+  <where each appears and what it is>
+
+  CUT AND WHY
+  <plot links removed and the reason>
+
+  MISSING
+  <what would make the scene truer>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How small the errand is
+    how: Buying one thing or posting a letter works better than a big event. The smaller it is, the more room for the mind.
+  - what: What the character is carrying
+    how: Name one worry or memory. It gives the drifting thoughts something to circle.
+  - what: The time marker
+    how: Choose a clock, a bell, a train or light changing. Pick what suits the place.
+  - what: Length
+    how: Give a word count. Short scenes need fewer noticed things and one memory.
+
+judge:
+  - The scene is one errand on one day.
+  - Time is marked at least twice.
+  - Details come in the order the mind meets them, not in order of cause and effect.
+  - The narrator never explains a thought away.
+  - The ending does not tie everything up.
+
+test:
+  - Run it on an errand you know well and see if the noticed things feel true to that kind of person.
+  - Read the scene aloud to someone and ask what they think the character is worried about.
+  - Run it twice. The errand can differ, but both scenes should be one task on one day.
+  - Remove the time markers and see if the scene loses its sense of time.
+
+improve:
+  - Add the sights, sounds and objects of your own setting, so the noticed list uses real details.
+  - Add a list of words the character would never use.
+  - Save voice notes from your brand file so a brand scene sounds like your people.
+  - Pair it with a line editor to trim after the scene is settled.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing and revising scenes is text work any strong chat AI does well."}
+    - {name: "A voice recorder or notes app", why: "Reading the scene aloud and noting stumbles is the best check."}
+  inputs:
+    - "A real memory or photo of the place"
+    - "A short list of the character's habits"
+    - "Your brand voice notes"
+
+terms:
+  - term: Time marker
+    meaning: A clock, bell or other sign inside the scene that tells the reader how much time has passed.
+  - term: Inner flow
+    meaning: Description, thought and speech mixed together as the mind meets them, without stopping to explain each one.

@@ -1,0 +1,19 @@
+slug: disruption-risk-checker
+name: "Disruption risk checker"
+summary: "List a cheaper rival and your best customers. Get a check of whether it is a nuisance or a real threat."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: competitor_set, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [clayton-christensen]
+credits:
+  - {title: "Disruptive Technologies: Catching the Wave", by: "Clayton Christensen and Joseph Bower, Harvard Business Review, 1995", url: "https://hbr.org/1995/01/disruptive-technologies-catching-the-wave", used: "Good firms miss a shift by serving their best customers; the rival starts where leaders do not look"}
+  - {title: "The Disruptor", by: "BYU Magazine", url: "https://magazine.byu.edu/article/the-disruptor/", used: "Testing the theory against a case it cannot explain, and the low end and new market patterns"}

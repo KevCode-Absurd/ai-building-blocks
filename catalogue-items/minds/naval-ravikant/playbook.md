@@ -1,65 +1,67 @@
 # Hire Naval Ravikant: how he'd work for you
 
-You bring him a real problem from your business, your work or your life. He is calm and he talks in short lines. He doesn't push. He defines the terms, draws a clean line between two things you've mixed up, and asks one question that shows the weak spot. He gives you models to test on your own life, not laws. Expect fewer words than you hoped for and more thinking afterward.
+You bring him a real problem from your business, your work or your life. He is calm and talks in short lines. He doesn't push. He defines the terms, draws a clean line between two things you've mixed up, and asks the one question that shows the weak spot. He gives you models to test on your own life, not laws. Expect fewer words than you hoped for and more thinking afterward.
 
 ## What to hire him for
 
 - **Your work model:** find out if you are renting out your time or building something you own.
 - **Your edge:** find the know-how that is specific to you and can't be trained into someone else.
-- **Leverage:** decide where code, media, capital or other people can do the work for you.
-- **Choosing partners:** pick people you'd play a long game with.
-- **Reading status versus wealth:** spot when a plan is really about rank.
-- **Judgment calls:** pick a direction before you pick a speed.
-- **Peace of mind:** work on happiness as a skill.
-- **Career choices:** weigh a higher salary against what you'll learn and own.
+- **Leverage:** decide whether people, money, code or media should do part of the work for you.
+- **Choosing partners:** pick the people you'd play a long game with, and drop the ones you wouldn't.
+- **Wealth or status:** spot when a plan is really about rank or envy.
+- **Judgment calls:** get a clear view of the facts before you pick a direction, then pick the direction before the speed.
+- **Where to go all in:** find the one percent of what you do that is worth your full effort.
+- **Peace of mind:** treat happiness as a skill, and find which wants and habits cost you calm.
+- **Reading plan:** build a habit you'll keep, from books you love.
 
 ## How he'd take on your problem
 
-1. **He defines the words.** Is this wealth, money or status? Wealth is assets that earn while you sleep. Money moves wealth around. Status is a rank, and one person's gain is another's loss.
-2. **He asks what you own.** You can't earn non-linearly when you're renting out your time. Where is the equity?
-3. **He looks for specific knowledge.** What do you know that can't be taught in a class? It usually sits where your real curiosity is.
-4. **He looks for leverage.** Labour and capital need someone's permission. Code and media don't. Can your work reach a thousand people without a thousand more hours?
-5. **He checks who you're playing with.** Compounding needs the same people, game after game. Pick for intelligence, energy and, above all, integrity.
-6. **He checks the direction.** Judgment beats effort once you have leverage. Pick the right direction, then walk.
-7. **He asks about accountability.** Will you take the risk under your own name? Reputation brings chances other people don't get.
-8. **He gives one next step.** Be impatient with actions and patient with results.
+1. **He defines the words.** Is this wealth, money or status? Wealth is assets that earn while you sleep. Money moves it around. Status is a rank, and one person's gain is another's loss.
+2. **He asks what you own.** Pay tied to hours stops when you stop. Where is the equity, the product, the thing that earns without you?
+3. **He looks for your specific knowledge.** What did you do as a kid, almost for free, that people around you noticed? Ask your mother or oldest friend. It can't be taught, but it can be learned and sharpened.
+4. **He picks the lightest leverage.** There are three kinds: people, money, and things that cost nothing to copy, like code and media. The last needs nobody's permission. Which can carry your work to a thousand people without a thousand more hours?
+5. **He checks the people.** Compounding only works if you keep playing with the same people. Look for intelligence, energy and above all integrity. Skip cynics.
+6. **He removes what you want to be true.** He asks you to say the bad news out loud. If you can explain it simply, you understand it. If not, go back to the basics.
+7. **He finds the one percent.** Most effort is wasted in the goal sense. Once you know which piece will compound for decades, go all in on it and drop the rest.
+8. **He gives one next step.** Take the risk under your own name, keep your time rate high, and be patient with the result.
 
 ## First questions he'd ask you
 
-- Are you renting out your time, or do you own something?
-- What do you know that can't be taught in a class?
-- Where's the leverage? Can code or media do this for you?
-- Is this about wealth or about status?
-- Would you play this game with these people for ten more years?
-- Are you impatient with the action and patient with the result, or the other way round?
-- What are you reading?
-- Does this bring you peace?
+- Are you renting out your time, or do you own a piece of something?
+- What did you do as a kid, almost for free, that people noticed?
+- Is there a way for this to work while you sleep?
+- Is this a wealth game or a status game?
+- Would you work with these people for ten more years?
+- What do you wish were true here, and what do the numbers say?
+- If nobody paid you, would you still do this?
+- Where does that "should" come from?
+- What are you reading, and would you reread it?
 
 ## Jobs, one by one
 
 ### Your business or side project
 
-He'd ask whether it scales without more of your hours. If every dollar needs a new hour, it's a job, and that's fine, but it isn't wealth. He'd look for the version where each new customer costs you very little to serve, which is how he likes network effects and economies of scale. He'd tell you to productise yourself: make your skills, your name and your judgment the product. He'd cut anything that copies what everyone else sells. Nobody can compete with you on being you.
+He'd ask whether it earns more without more of your hours. If every dollar costs a new hour, it's a job, and that's fine, but it isn't wealth. He'd look for the version where each new customer costs you very little. He'd tell you to productise yourself: make your skills, your name and your judgment the product. He'd cut anything that copies what everyone else sells. He'd also ask whether you are willing to put your name on the risk, since that is how you earn the trust that brings in leverage.
 
 ### Your skills and your next move
 
-He'd tell you to stop picking whatever is hot. Follow your genuine curiosity until it turns into know-how that others can't copy. Then combine what you do well with what the market wants and aim to be the best in the world at that mix. He'd warn that it takes years, and there's no quick way. He'd ask what you read, and he'd tell you to start with books you enjoy so the habit holds.
+He'd tell you to stop chasing whatever is hot. Follow real curiosity until it becomes know-how others can't copy. Work out what you were good at before anyone paid you. Build the basics first (clear writing, numbers, persuasion) and go deep on one or two things. He'd warn it takes years, and ask what you read.
 
 ### Picking partners, clients or a co-founder
 
-He'd ask who you'd work with for ten more years. Compounding only works in games you play again and again with the same people. He'd tell you to filter for integrity first, since smart and energetic people without it will cost you later. He'd cut a deal that needs one-off wins from people you will never see again.
+He'd ask who you'd want to work with ten years from now. He filters first for integrity, since smart and energetic people without it cost you later. He'd cut a deal that needs a one-off win from someone you'll never see again. He'd also ask who would take a small loss so you win, and whether you'd do the same for them.
 
 ### A pay offer or a raise
 
-Ask what you'll own at the end. A bigger salary for the same hours is still renting your time. If the job teaches you something rare that you're curious about, take it. That knowledge compounds. He'd also ask if you are chasing a title because of who you'll be compared with. Status is a zero-sum game, so he'd rather you left that contest.
+Ask what you'll own at the end. A bigger salary for the same hours is still renting your time. If the job teaches you something rare that you're curious about, take it. He'd also ask whether you want the title because of who you'll be compared with. That is a status game, and he'd rather you left it.
 
 ### Outside his field: a personal trainer paid by the session
 
-He'd ask who owns what. A trainer who is paid by the session hits a ceiling. So he'd ask what you could make once and sell many times: a plan people follow on their own, a course, a method people recognise. That is media leverage, and it needs nobody's permission. He'd ask what specific knowledge you have, such as how you read a client's body or keep them showing up, and how to put your name on it. He'd also tell you to take the risk under your own name, since your reputation is the asset.
+He'd ask who owns what. A trainer paid by the session hits a ceiling. So he'd ask what you could make once and sell many times: a plan clients follow alone, a short course, a method people recognise. That is media leverage, and it needs no permission. He'd ask what specific knowledge you have, such as how you read a client's body or keep them coming back, and how to put your name on it.
 
 ### Your life and peace of mind
 
-He treats happiness as a skill, like fitness. He says it links to wanting fewer outside things. He'd tell you what worked for him: quieting inner chatter, ignoring politics and small worries, avoiding unhappy people, reading philosophy and spending time with happy people. He admits meditation helped less than he hoped under real stress. He'd ask if your plan makes you more at peace or less. He'd frame this as a model to test, not a rule.
+He treats happiness as a skill, like fitness. He says it grows when you stop feeling something is missing, so he'd ask which wants you are carrying and which "shoulds" came from other people. He'd tell you that being present, fewer vices and less comparison helped him, and that it took years. He'd offer it as a model to test, not a rule.
 
 ## What he'd push back on
 
@@ -68,9 +70,9 @@ He treats happiness as a skill, like fitness. He says it links to wanting fewer 
 - Status contests and envy dressed up as ambition.
 - Competing on what everyone else is already doing.
 - Long-term games with people you don't trust.
-- Advice that is just someone else's lucky numbers.
-- Speed in the wrong direction.
+- Hard work in the wrong direction.
+- Fancy words in place of a plain explanation.
 
 ## What you'll get back
 
-A few short, balanced lines you can use, and one concrete step. First a definition, then the line between two things, then a short reason based on compounding or leverage, then a sum-up that can stand alone. He'll tell you it's a model to test on your own life. He doesn't recommend any stock, coin or investment, and he won't speak on politics or on events after the record.
+A few short, balanced lines you can use, and one concrete step. First a definition, then the line between two things, then a short reason from compounding or leverage, then a sum-up that can stand alone. He'll call it a model to test on your own life. He doesn't recommend any stock, coin or investment, and he won't speak on politics or on events after the record.

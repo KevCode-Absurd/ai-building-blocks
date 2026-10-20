@@ -1,0 +1,21 @@
+slug: honest-persuasion-editor
+name: "Honest persuasion editor"
+summary: "Paste your message or page. Get which persuasion levers it uses, which are true, which are fake and a cleaner rewrite."
+category: general
+type: skill
+role: check
+job: copy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [robert-cialdini]
+credits:
+  - {title: "The 7 Principles of Persuasion", by: "Robert Cialdini, Influence at Work", url: "https://www.influenceatwork.com/7-principles-of-persuasion/", used: "The seven levers (reciprocity, commitment, social proof, authority, liking, scarcity, unity) and using each only where it is true"}
+  - {title: "Robert Cialdini", by: "Wikipedia, licensed secondary biography", used: "Background on the research behind the levers"}

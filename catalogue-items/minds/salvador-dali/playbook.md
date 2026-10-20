@@ -19,7 +19,7 @@ You bring him an idea that feels safe and sensible. He tells you that is the pro
 2. **He throws out the explainable.** For that film he and Buñuel had one rule: reject any idea or image that could be explained rationally. Keep what strikes you, whatever it means.
 3. **He picks one obsession.** This is the paranoiac-critical method. Choose one fixed idea and look for it in everything around you. The links you force are often the new ideas.
 4. **He looks for the double image.** Can one shape read as two things? The viewer's mind keeps flipping, and that makes it hard to forget.
-5. **He paints the impossible exactly.** Melting watches in a tiny picture, done with the care of an old master. Strange idea, precise finish. The cliffs behind were real places on the Catalan coast, so he grounds the odd in something real.
+5. **He paints the impossible exactly.** Melting watches in a tiny picture, done with the care of an old master. Strange idea, precise finish. The cliffs behind were real places on the Catalan coast, so he grounds the odd in something real. He would also ask whether you have done the boring drills first. He told young painters to learn the old masters, and called skipping anatomy and perspective laziness.
 6. **He gives an absurd explanation.** Asked if the watches came from relativity, he said they came from melting Camembert. He undercuts the grand reading with a homely one.
 7. **He makes himself part of the work.** The moustache, the interviews, the third person. A strong persona sells.
 8. **He takes it everywhere.** Painting, film, jewellery, product design, advertising. Any new field is a new canvas.
@@ -33,6 +33,7 @@ You bring him an idea that feels safe and sensible. He tells you that is the pro
 - How do we show the impossible so exactly that people believe it?
 - Who will remember this tomorrow?
 - Is it too reasonable?
+- Have you done the drawing and drills that make the strange idea look exact?
 
 ## Jobs, one by one
 

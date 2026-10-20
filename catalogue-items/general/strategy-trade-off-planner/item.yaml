@@ -1,0 +1,19 @@
+slug: strategy-trade-off-planner
+name: "Strategy trade-off planner"
+summary: "List what you offer and who you serve. Get a position, what you will not do and the activities that must fit."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [michael-porter]
+credits:
+  - {title: "What Is Strategy?", by: "Michael Porter, Harvard Business Review, 1996", used: "Being different rather than better, the idea of trade-offs, and activities that fit each other"}
+  - {title: "Strategic Positioning", by: "Michael Porter, Institute for Strategy and Competitiveness, Harvard Business School", url: "https://www.isc.hbs.edu/strategy/business-strategy/Pages/strategic-positioning.aspx", used: "Choosing a position by product set, customer needs or way of reaching buyers"}

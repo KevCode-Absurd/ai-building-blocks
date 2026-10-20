@@ -1,0 +1,17 @@
+slug: design-principles-checker
+name: "Design principles checker"
+summary: "Paste a spec, API or tool design. Get a check against simplicity, modularity, tolerance, decentralisation, independent invention and least power."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [tim-berners-lee]
+credits:
+  - {title: "Principles of Design (Design Issues)", by: "Tim Berners-Lee", url: "https://www.w3.org/DesignIssues/Principles.html", used: "The six checks of simplicity, modularity, tolerance, decentralisation, independent invention and least power, and counting the burden of extra features"}

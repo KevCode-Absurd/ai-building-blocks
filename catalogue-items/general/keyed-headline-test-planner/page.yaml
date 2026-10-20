@@ -1,0 +1,127 @@
+new_slug: keyed-headline-test-planner
+name: "Keyed headline test planner"
+summary: "Paste your offer and headline options. Get headlines sorted by appeal, a keyed small test and a rule for picking the winner."
+job: plan-ad-tests
+thinking: medium
+thinking_why: "It sorts and picks from your list, then writes a fixed test design."
+
+headline: "Keyed headline test planner"
+subhead: "Give it your offer and a list of headline options. It sorts each headline by what pulls the reader in, picks two or three to test, and plans a small test where every version has its own key. You get a shortlist, a test plan and a rule for picking the winner."
+
+explain: |
+  Choosing a headline by taste is a guess. The one your team likes may be the one that sells least, and you only find out after you have spent the money.
+
+  This skill sorts your headlines into three kinds: those that speak to the reader's own gain, those that carry news, and those that rely on curiosity. Curiosity headlines must be tied to a clear promise. It picks two or three different appeals, changes only the headline in each version, and gives each version its own code or reply path so every response can be traced. You run a small test first, and the winner is set by a rule written before you start.
+
+when:
+  - "You have several headline ideas and no fair way to choose."
+  - "You are about to put money behind an ad and want a small test first."
+  - "Your last test changed three things at once and told you nothing."
+
+you_give:
+  - "Your offer: what it is, the price or terms, who it is for"
+  - "Your headline options, or the hooks from an earlier step"
+  - "Where the test will run and what a response is"
+  - "Your budget for the small test (optional)"
+you_get:
+  - "Each headline tagged by appeal"
+  - "A shortlist of two or three headlines to test"
+  - "A keyed test plan where only the headline changes"
+  - "A winning rule set before the test, and a place to record why"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your offer and your headline options. If you have fewer than ten, ask it to add more."
+  - "Say where the test will run and what counts as a response."
+  - "Create the keys it lists, such as codes or separate links."
+  - "Run the small test, record the counts, and apply the winning rule."
+
+how_it_works:
+  - title: "Builds the list"
+    text: "Writes many headlines for one offer if your list is short."
+  - title: "Sorts by appeal"
+    text: "Tags each as self-interest, news or curiosity."
+  - title: "Ties curiosity to a promise"
+    text: "Rewrites curiosity lines so they point to a clear reward."
+  - title: "Picks the appeals"
+    text: "Chooses two or three different appeals, changing one thing at a time."
+  - title: "Keys each version"
+    text: "Gives each version its own code or reply path."
+  - title: "Sizes a small test"
+    text: "Plans a small run before the larger spend."
+  - title: "Sets the winner rule"
+    text: "Decides the winner on responses per cost and says what to record."
+
+output_shape: |
+  HEADLINES BY APPEAL
+  Self-interest: <list>
+  News: <list>
+  Curiosity: <list> | Promise it points to: <promise>
+
+  SHORTLIST
+  1. <headline> | Appeal: <appeal> | Why: <reason>
+
+  TEST PLAN
+  What changes: the headline only
+  What stays: <offer, body, picture, price>
+  Keys: <version> = <code or link>
+  Where it runs: <place>
+  Size: <budget, number of responses to wait for>
+
+  WINNING RULE (set before the test)
+  <responses per cost, minimum count, tie rule>
+
+  RECORD
+  <what to write down after>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "What counts as a response"
+    how: "Pick one: a call, an order, a sign-up. Mixed responses make the winner rule unclear."
+  - what: "Test budget"
+    how: "Give a number. It will say how many responses to wait for before you decide."
+  - what: "Your list size"
+    how: "Ten or more headlines gives the sort more to work with."
+  - what: "Where it runs"
+    how: "Name the channel. Keys differ for a flyer, an email and an online ad."
+
+judge:
+  - "Every headline is tagged by appeal."
+  - "Each test version changes only the headline."
+  - "Every version has its own key."
+  - "The winning rule is set before the test."
+  - "Claims in headlines are believable."
+
+test:
+  - "Run it on headlines you already tested. Check that its sort matches what won."
+  - "Check that no two versions differ in anything but the headline."
+  - "Run it twice. The shortlist should share most of its headlines."
+  - "Run the small test and see if the winner holds when you repeat it with a new batch."
+
+improve:
+  - "Add the appeals that work in your field to step 4, such as safety, status or saving time."
+  - "Add the keys your tools use, such as link codes or phone numbers."
+  - "Save each result to a record so the next test starts from it."
+  - "Pair it with a headline promise check before you test."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting headlines and writing a test plan is text work any strong chat AI does with this skill."}
+    - {name: "A link shortener or form tool", why: "Gives each version its own trackable link or code."}
+  inputs:
+    - "Past response counts for similar ads"
+    - "The cost of the place where the test will run"
+    - "Your offer's price and terms"
+
+terms:
+  - term: "Keyed"
+    meaning: "Marked with its own code, link or number so each response can be traced to the version that drew it."
+  - term: "Appeal"
+    meaning: "The reason a headline gives the reader to care: their own gain, news or curiosity."
+  - term: "Winning rule"
+    meaning: "The decision you write before the test, so the result cannot be bent afterwards."

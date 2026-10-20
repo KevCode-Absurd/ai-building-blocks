@@ -1,0 +1,125 @@
+new_slug: hard-feedback-message-writer
+name: "Hard feedback message writer"
+summary: "Paste what went wrong and who needs to hear it. Get a message that changes the behaviour without making an enemy."
+job: lead-people
+thinking: medium
+thinking_why: "It needs judgement about tone and which praise is true, but the message shape is fixed."
+
+headline: "Hard feedback message writer"
+subhead: Give it what went wrong, who needs to hear it and what you want to change. It writes a short message with true praise, the exact behaviour to change and a way for the person to save face. You get a draft ready to send or say.
+
+explain: |
+  Most hard feedback fails in one of two ways. It is so soft that the person never hears it, or it names the person's faults and they defend themselves instead of changing. Either way the behaviour stays the same and the relationship gets worse.
+
+  This skill keeps the message on one behaviour and the result you want. It opens with praise that is true and specific, joins it to the change with the word "and", and states the problem plainly, in an example or an indirect way if the person is sensitive. If you share the blame, it puts your own mistake first. When you have real doubts about a plan, it turns them into numbered questions on cost, certainty, value and risk. It leaves the person a way to fix it without losing face.
+
+when:
+  - Someone keeps missing a standard and you have put off saying so.
+  - You must correct a senior person, a peer or someone who is easily hurt.
+  - You have doubts about someone's plan and want them to see the gaps themselves.
+
+you_give:
+  - What went wrong, with one or two real examples
+  - Who needs to hear it and how they usually react
+  - The result you want (the behaviour you would like to see)
+  - Notes on what they do well (optional)
+you_get:
+  - A draft message you can send or say
+  - The one behaviour it asks to change, in plain words
+  - A list of the true praise it used and where that came from
+  - A note on how you could save face for them
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what happened with one example, the person and the result you want.
+  - Add anything you honestly value in the person. If you have nothing, say so.
+  - Read the draft aloud. Change any line you would not say.
+  - Send or say it soon after the event, in the setting you chose.
+
+how_it_works:
+  - title: Names the behaviour
+    text: Writes what happened and the result you want, without any comment on the person's character.
+  - title: Finds true praise
+    text: Picks something honest and specific from your notes. It asks if none exists.
+  - title: Joins with and
+    text: Links the praise to the change with the word "and", so the praise is not taken back.
+  - title: Points to the mistake
+    text: Names the problem through an example or an indirect remark when that suits the person.
+  - title: Owns your part
+    text: Opens with your own mistake first, if it is true and fits.
+  - title: States what is not satisfactory
+    text: Says plainly what you are not satisfied with and what you need.
+  - title: Turns doubts into questions
+    text: Puts doubts about a plan as numbered questions on cost, certainty, value and risk.
+  - title: Checks the message
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE BEHAVIOUR AND THE RESULT
+  Behaviour: <what happened>   Result wanted: <what you want>
+
+  THE DRAFT MESSAGE
+  <opening praise, linked with "and" to the change, the plain statement, the way out>
+
+  QUESTIONS (only if you doubt a plan)
+  1. Cost: <question>
+  2. Certainty: <question>
+  3. Value: <question>
+  4. Risk: <question>
+
+  WHAT YOU OWN
+  <your part, or none>
+
+  HOW THEY CAN SAVE FACE
+  <the option left open to them>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: The example
+    how: Give a specific, recent example. A real moment lets the message point to the behaviour without blaming.
+  - what: How they react
+    how: Say if they get defensive, go quiet or take it hard. The tone of the message changes with that.
+  - what: Where it will be said
+    how: Say if it is an email, a call or in person. A short note is not written the same way as a spoken talk.
+  - what: Your part
+    how: Tell it what you did or failed to explain. It will use that as the opening if it is true.
+
+judge:
+  - The praise is true and names a specific thing.
+  - The word "but" does not flip the praise into a complaint.
+  - The message names the behaviour, never the person's character.
+  - It contains no order and no blame.
+  - The person can save face and fix it.
+  - You could say every line out loud.
+
+test:
+  - Run it on a message you sent before that went badly. Compare the draft with what you wrote.
+  - Give the draft to a colleague and ask what they think you want. It should be the exact behaviour.
+  - Run it twice. The praise should be the same true point each time.
+  - After you send it, note what the person did within a week.
+
+improve:
+  - Add a list of things you truly value in each person you manage, so praise is ready.
+  - Add your own words for the behaviour, so the message sounds like you.
+  - Save each message and the result in a file, so you can see what works with whom.
+  - Pair it with a conversation planner when the talk will be in person.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting a message in a set tone is text work any strong chat AI does well."}
+    - {name: "Your email or chat app", why: "Read the draft in the same place it will be seen, so the length and tone fit."}
+  inputs:
+    - "Two or three recent examples of the behaviour"
+    - "Notes from earlier talks with this person"
+    - "The standard or goal the behaviour should meet"
+
+terms:
+  - term: Save face
+    meaning: To leave someone a way to fix a problem without feeling shamed or beaten.
+  - term: Indirect
+    meaning: Pointing at a mistake through an example or a question, not an accusation.

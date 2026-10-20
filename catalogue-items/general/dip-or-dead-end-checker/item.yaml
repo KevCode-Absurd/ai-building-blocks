@@ -1,0 +1,19 @@
+slug: dip-or-dead-end-checker
+name: "Dip or dead end checker"
+summary: "Paste a project you are tempted to quit. Get a call: push through, change course or stop, with the reason."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [seth-godin]
+credits:
+  - {title: "The Dip: A Little Book That Teaches You When to Quit (and When to Stick)", by: "Seth Godin", url: "https://en.wikipedia.org/wiki/Seth_Godin", used: "Telling a dip that ends from a dead end that does not, and quitting early on the wrong things so you can push on the right one"}
+  - {title: "Seth Godin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Seth_Godin", used: "Background on the author and his books, read as secondary context"}

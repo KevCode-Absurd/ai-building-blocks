@@ -1,0 +1,25 @@
+slug: find-your-best-customers-and-rebuild-how-they-buy
+name: "Find your best customers and rebuild how they buy"
+summary: "Paste your customer list with what each paid. Get your best customers and the steps every new lead should follow."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+  - {type: shortlist}
+uses: [best-customer-finder, buying-path-rebuilder]
+steps:
+  - {uses: best-customer-finder, note: "Your top 20 percent and what they share"}
+  - {uses: buying-path-rebuilder, note: "The steps every new lead should follow. Reads the persona from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [alex-hormozi]
+credits:
+  - {title: "$100M Offers, The Lost Chapter: Your First Avatar", by: "Alex Hormozi", used: "The order of the steps: best customer finder, buying path rebuilder"}
+generated_from: intake/hormozi-100m-offers/skeleton.yaml

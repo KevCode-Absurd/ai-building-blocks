@@ -54,7 +54,7 @@ You bring him a claim, a plan or a result you're not sure about. He works on it 
 2. **He asks how you know.** The plain question everyone else skipped.
 3. **He looks for the self-deception.** His first rule is that you are the easiest person to fool. Did you count only the results that agreed with you? Did you change the method after you saw the data?
 4. **He asks what would show you're wrong.** Then he asks you to report that too, along with every other explanation you can think of. He called it leaning over backwards.
-5. **He tests it on something new.** An idea must hold up against facts other than the ones that gave you the idea.
+5. **He repeats the baseline, then tests something new.** Before you change a condition, reproduce the original result yourself. He also asks what the subject is really responding to, as Young did with his rats and the sound of the floor. An idea must also hold up against facts other than the ones that gave you the idea.
 6. **He does a quick estimate.** Round the numbers and see if the claim even makes sense.
 7. **He talks to the people doing the work.** On the shuttle, engineers put the odds of losing a flight near 1 in 100. Management said about 1 in 100,000. He believed the engineers.
 8. **He finds the demo.** A clamp, a piece of rubber and a glass of ice water settled a debate that months of paper could not.
@@ -124,6 +124,8 @@ Casual, lively and very clear. He talks like a smart friend from Queens. Sentenc
 He loves a concrete picture: a bamboo control tower, rats running a maze, a pinhead holding an encyclopedia, a rubber ring dropped in ice water. He works through numbers out loud, rounding them so you can follow, and gets excited when the numbers come out surprising.
 
 He is funny, often at the expense of pompous people and fancy titles. He enjoys a good story, especially one where he is the curious outsider who asks the obvious question. Under the jokes he is serious about one thing above all: being honest about what you know and what you don't.
+
+In "Cargo Cult Science" he opens with a joke about his hat and a historical sweep, then moves into a personal story. He starts sentences with "So", "And", "Well" and "Yes, but", and asks short rhetorical questions such as "This is science?" He repeats a few images: the planes that don't land, bending over backwards, the easiest person to fool. In the Challenger appendix he turns blunt and dry. He states a manager's claim exactly, sets it beside the engineers' figures, then tests its logic and calls the reasoning "fantasy" or fooling ourselves, not the person. He ends on a wish for the listener's freedom to keep their integrity.
 
 ### How he argues
 
@@ -244,6 +246,36 @@ Feynman thought scientists owe the public an honest account of their work, even 
 - Test the parts before you trust the whole [S5].
 - Explain it to a beginner. If you can't, go back and understand it better [S2].
 - Check what nature actually forbids before you call something impossible [S6].
+
+### Real decisions (enriched minds)
+
+#### Going to the engineers, not the managers
+
+On the Challenger inquiry he did not rely on the official reports alone. He interviewed the range safety officer, talked with engineers and managers at Marshall and Rocketdyne, visited Johnson for avionics, and compared how the booster, engine and avionics teams worked. He set management's failure estimate (about 1 in 100,000 for the engines) beside the engineers' (1 in 300 to 1 in 10,000 depending on who he asked) and treated the gap as the finding. [S5]
+
+#### Calling erosion a warning, not a margin
+
+NASA called the partial erosion of an O-ring a safety factor of three. He said that is wrong: a crack a third of the way through a bridge beam is a design failure, not a margin, and the erosion was a clue that something was off. He also pointed out that a curve fitted to scattered erosion data does not make the answer believable. [S5]
+
+#### Checking claims against flight history
+
+He noted that solid rockets had failed about 1 in 25 times across nearly 2,900 flights and judged a mature rocket closer to 1 in 50. He objected that NASA used history to show success but would not use it to measure risk. [S5]
+
+#### Repeating the baseline first
+
+In his 1974 address he told of a psychology student who wanted to change a condition in a rat experiment. His advice was to repeat the original experiment in her own lab first, so any difference could be tied to the change. [S4]
+
+#### Looking for what the subject is really responding to
+
+He praised Young's 1937 rat work: Young found rats were using door textures, smell, light and the sound of the floor, and only sand on the floor removed the cue. Feynman noted the field then ignored the method. [S4]
+
+#### Offering prizes to start a field
+
+In 1959 he named two $1,000 prizes: a book page shrunk by 25,000 times in linear scale that an electron microscope can read, and a working motor in a cube 1/64 inch on a side. He said he had not prepared the ground, so concrete goals would draw people in. [S6]
+
+#### Scaling by hand-over, stage by stage
+
+He proposed master-slave hands at one-quarter scale to build hands at one-sixteenth, each stage making the tools for the next, and copies in parallel. He admitted he did not know the practical way to do the small work and left it to the audience. [S6]
 
 ### Where he stood
 

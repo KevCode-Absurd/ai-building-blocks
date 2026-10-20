@@ -1,0 +1,125 @@
+new_slug: brand-reach-audit
+name: "Brand reach audit"
+summary: "Paste your sales and what you know of your buyers. Get where you are hard to think of or hard to buy."
+job: plan-strategy
+thinking: medium
+thinking_why: "It counts and sorts what you give it, then makes a judgement call on the three biggest gaps."
+
+headline: "Brand reach audit"
+subhead: Give it your sales numbers and what you know about the people who buy your category. It finds where buyers fail to think of you or fail to find you, and hands back the three biggest gaps and one fix aimed at winning more buyers.
+
+explain: |
+  Most plans to grow lean on the people who already buy from you: more loyalty, more upsells. But in most categories the bulk of buyers are light ones who buy only now and then, and the largest source of new sales is more of them, not more from the few.
+
+  This skill counts everyone who buys your category, how many buy from you and how often. It lists the moments when people buy and what brings a brand to mind in each. It then checks the two ways you can lose a sale: the buyer does not think of you, or cannot easily find and buy you. It also lists your recognisable cues, such as colours, names and sounds, and ends with one fix aimed at reaching more buyers.
+
+when:
+  - Your plan to grow is mostly about keeping the customers you have.
+  - You spend on marketing but cannot say who it is meant to reach.
+  - Sales are flat and you suspect people simply do not think of you when they need what you sell.
+
+you_give:
+  - Your brand file with what you sell, who buys and how (required)
+  - Sales data, with buyers, orders and how often each buys (optional)
+  - Notes on your buyers or a buyer profile (optional)
+you_get:
+  - A count of buyers by how often they buy, light buyers included
+  - The buying moments and what brings a brand to mind in each
+  - A check of where you are hard to think of and hard to buy
+  - The three biggest gaps and one fix that reaches new buyers
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brand file, then a sales summary with the number of buyers, orders and repeat rate.
+  - Add what you know about when and why people buy in your category, even if it is rough.
+  - Read the three gaps first. Check anything marked MISSING by asking ten recent buyers.
+  - Pick the fix and run it as a small test with a number to hit and a date.
+
+how_it_works:
+  - title: Everyone who buys
+    text: Lists the buyers of your category, including light and occasional ones, not only your own customers.
+  - title: Count your share
+    text: Counts how many buy your brand and how often, and what share are one-time buyers.
+  - title: Buying moments
+    text: Lists the situations when people buy and what brings a brand to mind in each one.
+  - title: Where to find you
+    text: Lists where people can find and buy you, and where you are missing.
+  - title: Recognisable cues
+    text: Lists the colours, shapes, sounds and names buyers could link to you.
+  - title: Three biggest gaps
+    text: Marks the three largest gaps in being thought of or being easy to buy.
+  - title: One fix for reach
+    text: Chooses one fix aimed at more buyers, not more loyalty from the few.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  BUYER COUNT
+  Category buyers: <number or MISSING> | Your buyers: <number> | One-time: <share> | Light (1 to 2 a year): <share>
+
+  BUYING MOMENTS
+  1. <moment> | What brings a brand to mind: <cue> | Do you appear: <yes/no/unknown>
+
+  EASY TO FIND AND BUY
+  <where buyers can reach you> | Missing: <where they cannot>
+
+  YOUR CUES
+  <colours, shapes, sounds, names> | Used the same way each time: <yes/no>
+
+  THREE BIGGEST GAPS
+  1. <gap> | Evidence: <fact>
+
+  THE FIX
+  <one fix that reaches new buyers> | Test: <measure, target, date>
+
+  MISSING
+  <what would sharpen the audit>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Sales detail
+    how: Give buyers per order count (one, two, three or more) if you have it. It shows how much of your sales comes from light buyers.
+  - what: Your category
+    how: Define it the way a buyer would, such as "a quick lunch", not the way your industry does.
+  - what: The buying moments
+    how: Name real situations such as "friend's birthday on Friday" rather than broad types of people.
+  - what: Your cues
+    how: List what stays the same in all your material. If it changes each time, say so.
+
+judge:
+  - Light buyers are counted, not left out.
+  - Buying moments are listed, not only awareness.
+  - Both being thought of and being easy to find are checked.
+  - Cues are named, and each is marked used or not used the same way every time.
+  - The chosen fix reaches new buyers.
+
+test:
+  - Run it on a business you know well and check whether the gaps match what you already suspect.
+  - Ask five people who bought recently what made them think of you. Compare with the moments it listed.
+  - Run it twice with the same sales numbers. The three gaps should stay close.
+  - Run the fix as a small test and compare the new-buyer count before and after.
+
+improve:
+  - Add your category's usual buying moments to step 3 so it starts from a fuller list.
+  - Save your list of cues to your brand file and check ads against it.
+  - Add the places you sell and the hours you are open, so the find-and-buy check has the facts.
+  - Pair it with "Growth lever audit" to size each gain.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Counting, sorting and ranking gaps from pasted numbers works well in any strong chat AI."}
+    - {name: "Your store or sales dashboard", why: "An export of orders per customer gives the audit real counts instead of guesses."}
+  inputs:
+    - "Orders per customer for the last 12 months"
+    - "A short list of recent buyers' answers to why they bought now"
+    - "A list of every place your product can be bought"
+
+terms:
+  - term: Light buyer
+    meaning: Someone who buys your category rarely, such as once or twice a year.
+  - term: Buying moment
+    meaning: A situation that makes someone buy, such as a birthday, a breakdown or a new job.
+  - term: Cue
+    meaning: A colour, shape, sound or name that makes a buyer recognise you at once.

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Poe's works are in the public domain, so we quote short lines. His tales are often told by unhinged narrators, and their views are theirs, not his. His own views on craft come from his essays and reviews, where he speaks directly. Some scholars doubt that he really wrote "The Raven" the way his essay claims, so read that essay as his ideal method.
+A note on method: Poe's works are in the public domain, so we quote short lines. This set rests on three of his own texts: the full 1846 essay "The Philosophy of Composition" [S2], his 1842 review of Hawthorne's tales [S3] and "The Tell-Tale Heart" [S4]. Wikipedia pages supply the life and the record [S1][S5]. His tales are often told by unhinged narrators, and their views are theirs, not his. His views on craft come from the essay and the review, where he speaks directly. In the essay he is explaining his own poem after the fact, and some scholars doubt he really wrote it that way, so read it as his ideal method.
 
 ## In one paragraph
 
@@ -67,6 +67,29 @@ His method for a short piece has a firm order. He picks the single effect first.
 
 Then he checks each part against the design. If the first sentence does not help bring about the effect, he counts that as a failure at the first step [S3]. He sets a length that a reader can take in one sitting, since for that hour the reader's soul is at the writer's control [S3]. When he sets a mystery, he lets the detective give the answer first and explain the path after [S5].
 
+## Real decisions
+
+### He fixed the length before anything else
+Planning "The Raven," his first step was extent. He reasoned that a work too long for one sitting loses the unity of impression, because daily affairs break in [S2]. He then judged that a long poem is only a string of short ones and that Paradise Lost is half prose for that reason [S2]. He settled on about a hundred lines and ended with 108 [S2].
+
+### He chose beauty and sadness as the ground
+He named beauty as the poem's province and said its highest note is sadness, so the tone was set as melancholy before any image was picked [S2]. He allowed truth and passion into a poem only as helpers, like discords in music [S2].
+
+### He improved the refrain instead of dropping it
+Everyone used the refrain, so he judged it was proven, but he thought it primitive because it only repeated. His fix: keep the sound fixed and change what it means each time [S2]. That forced it to be one short word, and he tested for the most sonorous vowel and consonant before he found "Nevermore" [S2].
+
+### He solved the "who says it" problem with a bird
+A person who says one word again and again looks foolish, so he wanted a creature that speaks without reasoning. A parrot came first, and he swapped it for a raven because it fit the tone [S2].
+
+### He wrote the climax first
+He asked for the most sorrowful question the lover could put, wrote that stanza first, and then ranked the earlier questions from ordinary to desperate [S2]. He also said that if a later stanza came out stronger, he would have weakened it so it could not steal the climax [S2].
+
+### He praised Hawthorne for starting from the effect
+In 1842 he praised Hawthorne's short tales for starting from one chosen effect, and warned that extreme brevity slides into mere epigram and excess length is worse [S3]. He held that if the first sentence does not serve the effect, the writer has failed at step one [S3].
+
+### He let a narrator convict himself
+In "The Tell-Tale Heart" he made the narrator open with a defence of his sanity and prove the opposite through his own telling. The voice gets shorter, more repeated and more frantic as the pressure rises [S4].
+
 ## Where he stood
 
 **What is a poem for?** Beauty, which he saw as a lifting of the soul. Truth and passion can appear, but they should serve beauty [S2].
@@ -126,6 +149,6 @@ All from works in the public domain.
 
 - "I prefer commencing with the consideration of an effect." ("The Philosophy of Composition," 1846) [S2]
 - "Melancholy is thus the most legitimate of all the poetical tones." ("The Philosophy of Composition") [S2]
-- "During the hour of perusal the soul of the reader is at the writer's control." (Hawthorne review, 1842) [S3]
+- "the soul of the reader is at the writer's control" (Hawthorne review, 1842) [S3]
 - "Thus a long poem is a paradox." (Hawthorne review, 1842) [S3]
 - "TRUE! nervous, very, very dreadfully nervous I had been, and am" ("The Tell-Tale Heart," 1843; punctuation simplified) [S4]

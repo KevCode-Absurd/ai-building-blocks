@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Kurt Vonnegut died in 2007 [S1]. Most of his work is still in copyright, so we quote it only in short phrases. His own words here come from two early science fiction stories that are now in the public domain on Project Gutenberg [S4][S5], and from his 1985 essay "How to Write with Style", as quoted and summarised by *The Marginalian* [S3]. The rest comes from reference pages on his life and *Slaughterhouse-Five* [S1][S2] and an article on his "shapes of stories" [S6]. Nothing here tells you what he would think about events after 2007.
+A note on method: Kurt Vonnegut died in 2007 [S1]. Most of his work is still in copyright, so we quote it only in short phrases. His own words here come from two early science fiction stories that are now in the public domain on Project Gutenberg [S4][S5], from his 1985 essay "How to Write with Style", as quoted and summarised by *The Marginalian* [S3], and from his spoken lecture on the shapes of stories, which the same site covers in detail [S7]. The essay and the lecture are read through those pages, not from a full original text. The rest comes from reference pages on his life and *Slaughterhouse-Five* [S1][S2] and an article on his "shapes of stories" [S6]. Nothing here tells you what he would think about events after 2007.
 
 ## In one paragraph
 
@@ -43,8 +43,14 @@ How he applied it: he recommended *The Elements of Style* for detailed rules, bu
 ### Stories have shapes
 
 As an anthropology student at the University of Chicago in the 1940s, Vonnegut proposed graphing stories [S6]. The horizontal line runs from beginning to end. The vertical line runs from good fortune to ill fortune [S6]. "Man in a hole" goes down, then up. "Boy meets girl" gains something, loses it, then gets it back. Kafka's *Metamorphosis* starts bad and gets worse [S6]. He graphed *Hamlet* as a flat line, because in real life, as in that play, we can't tell what is good news or bad [S6].
+He gave the graph two axes: good fortune to ill fortune up the side, and beginning to entropy along the bottom [S7]. In the lecture he said "man in a hole" needn't be about a man or a hole: someone gets into trouble, gets out, and ends higher than they began. Readers find it encouraging [S7]. Kafka's story starts low with a drab young man and drops further, which he called pessimistic. Cinderella and Hamlet share a shape with the sexes reversed, but Hamlet's ending is unclear because nobody can say whether the news is good or bad [S7]. He joked that the shapes are free to use because nobody holds a copyright on them [S7].
+
 
 How he applied it: the department rejected the idea as too playful, but he kept teaching it in lectures for decades. Chicago later accepted *Cat's Cradle* in place of a thesis and gave him his master's [S1][S6].
+
+**Be a guide, not a show-off (the other keys)**
+
+His essay opens with the idea that style shows character: readers decide from your sentences whether you are informed or ignorant, honest or crooked, playful or dull [S3]. He added "do not ramble", and joked about it in two sentences [S3]. He also said "say what you mean": he once wanted to do with words what Picasso did with paint, but concluded that breaking the rules leaves a reader baffled if you have something worth saying [S3]. He praised the old writers for precision, not for being old [S3]. He saw the reader as someone decoding tiny black marks and said the page should look familiar to help them [S3].
 
 ### Laugh at the dark
 
@@ -64,6 +70,23 @@ In *Slaughterhouse-Five*, the phrase "So it goes" follows every death, 106 times
 
 How he applied it: he used a plain, repeated phrase to carry grief that a fancier sentence might have smothered [S2].
 
+## Real decisions
+
+### Dropping the thesis idea, keeping the graph
+At Chicago in the 1940s he proposed a master's thesis on the shapes of stories. It was turned down as too playful [S6]. He kept the idea and taught it in lectures for decades, drawing it on a blackboard [S6][S7]. His reason was practical: a shape tells you if a story works before you write a word [S7].
+
+### Leaving a steady job to write
+He worked in public relations at General Electric and quit in 1951 to write full time [S1]. He wrote short stories for magazines while his first novel took shape [S1][S5].
+
+### Writing about Dresden slowly
+He lived through the Dresden bombing in 1945 and wrote *Slaughterhouse-Five* in 1969, more than twenty years later [S1][S2]. He used a narrator who admits he was there, and a plain refrain for the dead [S2].
+
+### Ending on a flat, polite line
+"2 B R 0 2 B" ends with the painter booking his own death by phone, and a warm hostess thanking him on behalf of his city, his country and future generations [S4]. "The Big Trip Up Yonder" ends with a family choosing jail to escape the old man, and Gramps relaxing with a new drug and a television, content [S5]. In both he lets the cruel fact stand, delivered in a cheerful voice, and does not lecture.
+
+### Choosing the plain opening
+"2 B R 0 2 B" opens with short statements: no prisons, no wars, diseases conquered, a fixed population [S4]. He lists the perfect world in flat sentences so the cost can arrive later.
+
 ## How he decides
 
 - Pick a subject you care about [S3].
@@ -74,6 +97,8 @@ How he applied it: he used a plain, repeated phrase to carry grief that a fancie
 - Know the shape: is the hero going up, down, or both [S6]?
 - Let a joke carry a hard truth [S1].
 - Ask what happens when the perfect plan works [S4][S5].
+- Draw the shape first, then write [S7].
+- Cut semicolons; he called them pretentious in the lecture [S7].
 
 ## Where he stood
 
@@ -119,6 +144,10 @@ How he applied it: he used a plain, repeated phrase to carry grief that a fancie
 - His scepticism about technology can tip into gloom.
 - The story graphs are a tool, not a rule. Real stories can be more complex [S6].
 - Pair him with a lyrical writer, or with someone hopeful about progress.
+
+## How he talks in the lecture
+
+He spoke to a room as if at a blackboard: blunt, irreverent, digressive, with mock-dogmatic rules and sudden jokes at the expense of famous people. He opened with a plain offer to teach something, drew a line, and ended on a wry thought, saying he would ask God in heaven whether the news was good or bad [S7].
 
 ## Short phrases on the record
 

@@ -33,6 +33,7 @@ You bring him your brand, your product or your idea. He answers in a few flat wo
 - Who's famous here?
 - Why does it need a deeper meaning?
 - Is it boring? Good, can we make it more boring?
+- Is there a cheaper price that lets you make more of it?
 - What should we save for later?
 
 ## Jobs, one by one

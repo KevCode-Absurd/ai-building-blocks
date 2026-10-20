@@ -1,0 +1,21 @@
+slug: prediction-and-bet-planner
+name: "Prediction and bet planner"
+summary: "Paste a belief you hold. Get what it predicts, what would prove it wrong, a small bet and a date to check."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+  - {type: lessons_register, required: false}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-hawking]
+credits:
+  - {title: "Does God Play Dice?, lecture 1999", by: "Stephen Hawking", url: "https://www.hawking.org.uk/in-words/lectures/does-god-play-dice", used: "Putting a big question in its simplest form and asking what a view predicts that can be checked"}
+  - {title: "Into a Black Hole, lecture 2008", by: "Stephen Hawking", url: "https://www.hawking.org.uk/in-words/lectures/into-a-black-hole", used: "Setting out rival explanations and saying which you prefer and why"}
+  - {title: "Thorne-Hawking-Preskill bet", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Thorne%E2%80%93Hawking%E2%80%93Preskill_bet", used: "How a stake and a date make a belief honest, and conceding in public when you lose"}
+  - {title: "Hawking says he lost $100 bet over Higgs discovery", by: "Phys.org", used: "Paying up when the result goes against you and treating surprises as useful"}

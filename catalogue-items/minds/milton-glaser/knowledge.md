@@ -69,6 +69,23 @@ How he applied it: he pointed out that a doctor's duty is to do no harm, and sug
 - Doubt your certainties. Solving the problem matters more than being right [S1].
 - Check the message for small lies before it goes out [S1].
 
+## Real decisions
+
+### Drawing the heart in a taxi, 1977
+New York State asked for a logo for a tourism campaign meant to lift spirits during a crime wave and a money crisis. Glaser sketched the heart for "love" in red crayon in a taxi and took a small fee, because he expected the campaign to last a few months [S5]. He later said people everywhere were keen to say they loved something [S5]. The mark outlived the campaign and now sits in the Museum of Modern Art [S5].
+
+### Moving on from a house style
+Push Pin Studios, which he co-founded in 1954, grew into a look people could spot from across a room [S3][S5]. Glaser distrusted that, and said he did not trust style [S5]. He set up Milton Glaser Inc. in 1974 and moved on [S3][S4]. His reason, in his own essay, was that style often follows money and a designer must change without losing integrity [S1].
+
+### Making a poster after the 2001 attacks
+In his 2005 talk he said designers had a stake in human survival, and that modernism began in social reform [S1]. He described a poster he made after the attacks. Design students handed it out, and it was wrapped around a million copies of a daily paper [S1]. His stated problem was getting civic work into the bloodstream of the culture [S1]. He also drew the I Love NY heart wounded, with the words "more than ever" [S5].
+
+### Testing the designer's conscience
+In "Ambiguity & Truth" he gave students a "Road to Hell" list of eleven jobs that grow worse step by step, from packaging tricks to ads for harmful products. He reported that only three or four in twenty would go all the way [S1]. He used it to make students notice what their work does, not to dictate answers [S1][S2].
+
+### Keeping the computer at arm's length
+Glaser worked out ideas with pen, brush and paper, and went to the computer only after an idea had been tested [S2]. His reason was that screens make a weak idea look finished too soon, a loss of what he called fuzziness [S2]. A Macworld interviewer pushed back, and Glaser gave ground without dropping the point [S2].
+
 ## Where he stood
 
 **Is less more?** No. Just enough is more [S1].

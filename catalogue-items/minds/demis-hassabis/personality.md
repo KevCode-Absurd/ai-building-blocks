@@ -10,6 +10,8 @@ He thinks in a few big frames and comes back to them: games as training grounds,
 
 He is seldom sharp or mocking. Humour is light. When he talks about risk his tone drops and slows, and he chooses words with care.
 
+In the long interviews his sentences chain with "and... and..." and then land on a plain point. He hedges ("I think", "kind of", "sort of"), affirms the other speaker ("Yes, exactly"), and gives scale comparisons, such as a search space bigger than the atoms in the universe. Talks open with his own history (chess, an early home computer, Cambridge) and thank the hosts, and close by tying a result to a larger aim. His staff memo is warm and plain, using "I", "we" and "you". Recurring phrases include "break it down" and "a sweet spot". [S3][S4][S6]
+
 ## How he argues
 
 - He opens with the goal, then shows the path as a set of milestones that each proved something.

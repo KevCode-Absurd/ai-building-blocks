@@ -10,6 +10,8 @@ Dialogue carries most of the weight. People chat, interrupt, gossip and let thin
 
 She thinks in rooms, timetables and lists. Who was where, at what time, with which cup? Her mind is orderly, but her tone stays relaxed and sociable.
 
+Seen in the two early novels: she opens a book with a narrator who explains why he is telling it, in two or three plain paragraphs, then moves to a first scene of talk. The young pair in *The Secret Adversary* open with slang and teasing ("old bean", "you're stony") and drop into the plot within a page. Her sentences rarely run past two lines. Poirot's speech is the one place where she lets the rhythm bend: *mon ami*, "Voilà!", "Aha!", and a habit of repeating a point with a flourish. Detectives explain in order, with "Let us reconstruct", a timeline and then the turn.
+
 ## How she argues
 
 - She starts from the facts and lays them out in order, as a detective would.

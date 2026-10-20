@@ -121,6 +121,8 @@ Calm, curious, modest and exact. Charles speaks in short, careful sentences, oft
 
 They talk in terms of need, constraints, purpose, details, the host and the guest. They love ordinary things and find wonder in them: toys, tools, soap suds on a parking lot, a picnic seen from space. They mix science and art without fuss.
 
+In the 1972 Q&A, where Charles answered 29 questions from a French curator, many replies are a single word or sentence. He opens with a flat no, yes or probably, adds a qualifier such as usually or very often, and sometimes turns the question back: what are the boundaries of the problem? Asked if design can serve pleasure alone, he answers with a question: who would say pleasure is not useful? Only the central idea, constraints, gets a longer answer.
+
 Their humour is gentle and playful. Toys, trains, kites and masks show up in the work. They are never pompous. They'd sooner show a slide or a model than give a speech.
 
 ### How they argue
@@ -238,6 +240,26 @@ How they applied it: their 1961 exhibition *Mathematica* for IBM is the only Eam
 - Get the details right, because they are the design [S2].
 - Leave room for side projects that look useless [S2].
 - Keep the big idea in view while you criticise the work [S2].
+
+### Real decisions
+
+#### Splitting the plywood chair in two
+Their first single-shell plywood chair failed where the seat met the back, so in the early 1940s they moved to a two-piece chair with separate seat and back panels [S8]. They cut slits and holes into experimental shells so the plywood would bend without splintering, and built jigs to set the angles [S8]. The chairs, tables and screens were shown in 1946 [S8].
+
+#### Turning the war into a materials lab
+During the Second World War they and their collaborators made moulded-plywood leg splints, aircraft parts and stretchers, and that know-how carried into their first commercial furniture [S8][S4].
+
+#### Borrowing a basket for the wire chair
+The wire mesh chair took its idea from trays, baskets and animal traps, and its welding method from drawer making [S8]. It was a single welded shell that could take different bases and upholstery [S8].
+
+#### Making a one-piece plastic chair
+Working with Zenith Plastics, they made one of the first one-piece plastic chairs with an exposed surface, and mass production for Herman Miller began in 1950 [S8]. Ray's rule was that what works is better than what looks good [S8].
+
+#### Telling science with slides and panels
+The Eames Office made about sixty films, exhibitions and books for firms such as IBM and Boeing, working with scientists as colleagues [S9]. Their multi-screen slide shows drew on a catalogue of about 350,000 slides, which they called a cabinet of curiosity [S9]. For Powers of Ten the office made 42 large square mixed-media panels and storyboards [S9].
+
+#### Accepting constraints in public
+In a 1970 interview, Charles said he had never been forced into compromises but had willingly accepted constraints [S3]. In the 1972 film Q and A he listed price, size, strength, balance, surface and time, and said each problem has its own list [S1].
 
 ### Where they stood
 

@@ -1,0 +1,44 @@
+# Workflow skeleton for Scientific Advertising (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: scientific-advertising
+source:
+  title: "Scientific Advertising"
+  by: "Claude C. Hopkins"
+  kind: book
+  rights: public-domain
+  year: 1923
+minds: [claude-hopkins]
+workflow:
+  slug: launch-with-a-free-sample-and-learn-what-customers-cost
+  name: "Launch with a free sample and learn what customers cost"
+  summary: "Give it your product and price. Get a sample offer, a small test plan and the true cost of each customer."
+  when: "you want to try a product on a small crowd before you spend big on ads."
+  job: make-offer
+  level: beginner
+steps:
+  - name: "Free sample offer planner"
+    skill: free-sample-offer-planner
+    job: offer
+    from: "Scientific Advertising, 1923"
+    method: ["Decide if a small sample shows the product at its best; if not, offer a full-size trial", "Offer it free, not for a dime or a stamp, and say Free in the ad", "Tell your story first so that only interested people ask for one", "Make claiming easy: picking it up locally or calling beats posting a request", "Limit it to one per home and mark adults only where children would grab it", "Pick the smallest piece of the product a buyer can try at home", "Tie the sample to a purchase or a visit so it reaches buyers, not strangers", "Set a sample budget in place of paid ads and cap it"]
+    inputs: [product_data, offer!]
+    outputs: [offer, plan]
+    note: "A free sample offer, who gets it, how to claim it and a cost-per-customer check"
+  - name: "Small launch test planner"
+    skill: small-launch-test-planner
+    job: research
+    task: plan-ad-tests
+    from: "Scientific Advertising, 1923"
+    method: ["State the one question the test must answer", "Pick four or five typical places or small audiences", "Use a free sample or a coupon to get people started fast", "Record cost per customer, sale per customer, repeat buying and how soon sales repay the cost", "Test new plans in separate places without disturbing the campaign that already works", "Decide before you start what result means roll out, change or drop", "Scale up only when the small-scale numbers hold"]
+    inputs: [offer, performance_sheet!]
+    outputs: [plan]
+    note: "A small test in a few places and a rollout rule. Reads the offer from the step before"
+  - pause: "Run the test in a few places and write down samples sent, replies and orders."
+  - name: "Cost per customer calculator"
+    skill: cost-per-customer-calculator
+    job: analysis
+    task: read-ad-results
+    from: "Scientific Advertising, 1923"
+    method: ["Add up ad space, samples, replies handled and follow-up", "Count real customers, not replies", "Work out cost per customer by ad, headline and offer, using keyed returns", "Count repeat buyers only as far as you can show them", "Work out how soon sales cover the cost", "Compare with the sale value and profit to find the most you can pay for a customer", "Keep the ads that bring customers cheaply, not the ones that bring cheap replies"]
+    inputs: [performance_sheet]
+    outputs: [audit_report]
+    note: "What a customer really costs, how soon it pays back and which ads to keep"

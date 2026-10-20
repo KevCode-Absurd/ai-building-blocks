@@ -1,0 +1,127 @@
+new_slug: second-business-picker
+name: "Second business picker"
+summary: "List your strengths and new market ideas. Get each sorted as reinvention, coaction or diversification, with a pick."
+job: plan-strategy
+thinking: high
+thinking_why: "It judges how far each idea really carries over from what you own, and the answers are shades of grey."
+
+headline: "Second business picker"
+subhead: Give it what you already own, such as skills, customers and know-how, and the new markets you are considering. It sorts each idea by how much carries over, drops ideas with no link to your strengths and picks one, naming the power you could build there.
+
+explain: |
+  Many businesses add a second line to grow and find that their strengths do not travel. A new market asks for new skills, new customers and new habits, and the first business offers little help. The cost shows up late.
+
+  This skill sorts each idea into one of three types. Reinvention is the same need served in a new way. Coaction is a new need that your existing strength can serve. Diversification is an unrelated move, which it drops unless there is real carry-over. For each remaining idea it asks whether your strength fits the new method or is being forced onto it, names the power you could build in the new market and the stage it is in, and ranks the ideas with the evidence still needed.
+
+when:
+  - You have a strong first business and want to add another without losing the first.
+  - You have several new market ideas and cannot say which one your strengths support.
+  - A new technology threatens your market and you are deciding whether to move into it.
+
+you_give:
+  - What you already own, such as skills, customers, know-how and assets (required)
+  - The new market ideas you are weighing (required, in the same message)
+  - Your brand file, for what you sell and to whom (optional)
+  - What the new markets look like today (optional)
+you_get:
+  - Each idea sorted as reinvention, coaction or diversification
+  - A carry-over statement for every idea you keep
+  - The power you could build in each market and the stage
+  - A ranked pick and the evidence you still need
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your capabilities and customers, then the ideas, one line each.
+  - Say which customers and skills you could not easily carry over.
+  - Read the ranking, then the evidence list. Collect the evidence before you spend money.
+  - Re-run it when an idea changes or a new one comes up.
+
+how_it_works:
+  - title: List what you own
+    text: Lists the capabilities and customers you already own.
+  - title: Sort each idea
+    text: Sorts each idea as same need new approach, new need existing strength, or unrelated.
+  - title: Drop pure diversification
+    text: Drops unrelated ideas unless there is a real carry-over.
+  - title: Check the fit
+    text: Asks whether your strength fits the new method or is being forced onto it.
+  - title: Name the power
+    text: Names the power you could build in the new market and the stage it is in.
+  - title: Rank the ideas
+    text: Ranks the ideas and picks one.
+  - title: List the evidence
+    text: Lists the evidence you still need before you commit.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHAT YOU OWN
+  Skills: <list> | Customers: <list> | Know-how and assets: <list>
+
+  EACH IDEA, SORTED
+  1. <idea> | Type: <reinvention / coaction / diversification> | Carry-over: <what carries> or DROPPED: <why>
+
+  FIT CHECK
+  <idea> | Strength fits the new method: <yes/no/partly> | Reason: <fact>
+
+  POWER TO BUILD
+  <idea> | Power: <name> | Stage: <origination / take-off / stability>
+
+  RANKING AND PICK
+  1. <idea> | Why: <reason>
+  Pick: <idea>
+
+  EVIDENCE STILL NEEDED
+  <list>
+
+  MISSING
+  <what would sharpen the pick>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your customers
+    how: Describe them by job or need, not by size alone. What carries over is often the relationship.
+  - what: Idea detail
+    how: Say what the new product is and who buys it. A one-word idea cannot be sorted.
+  - what: New technology
+    how: Say if a new method is changing your market. It decides whether your old strength fits.
+  - what: What you cannot do
+    how: List what the new market would need that you lack. It shows where carry-over stops.
+
+judge:
+  - Every idea is sorted into a type.
+  - Unrelated ideas have a stated carry-over or are dropped.
+  - Each pick names a power to build.
+  - Evidence still needed is listed.
+  - Facts not in your input are marked MISSING.
+
+test:
+  - Run it on a move you made in the past and see if it would have sorted it as you now see it.
+  - Add a deliberately unrelated idea and check that it gets dropped.
+  - Run it twice. The top pick should stay.
+  - Ask a customer whether they would buy the pick from you, and compare with the carry-over claim.
+
+improve:
+  - Add your own list of strengths, with proof for each, so the carry-over test is firm.
+  - Add rules for what you will not do, such as avoiding a new fixed-cost base.
+  - Save the ranking in your brand file and update it each year.
+  - Pair it with "Business power tester" to test the power you plan to build.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting ideas by a few fixed questions is reasoning work any strong chat AI does well."}
+    - {name: "A spreadsheet of your customers", why: "Showing who you serve today makes the carry-over claims concrete."}
+  inputs:
+    - "Customer lists with what each buys and why"
+    - "A short account of how each new market works today"
+    - "Your skills with proof, such as past projects"
+
+terms:
+  - term: Reinvention
+    meaning: Serving the same need in a new way.
+  - term: Coaction
+    meaning: Using a strength you already have to serve a new need.
+  - term: Diversification
+    meaning: Moving into an unrelated business where little carries over.

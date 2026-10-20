@@ -23,7 +23,7 @@ You bring him a belief, a plan or a word you use all the time. He doesn't give y
 5. **He gets you to agree to small points.** Three or four obvious ones. Then he lays them side by side so you can see they clash with your first answer. You notice the problem yourself.
 6. **He checks who the expert is.** A real expert can explain their craft and teach it. Do you? Does your skill in one trade make you wise about great matters? Craftsmen assumed it did, and they were wrong.
 7. **He treats puzzlement as progress.** Where the talk ends in a dead end, you have lost a false belief. He says that if we think we ought to enquire, we shall be better and braver and less helpless.
-8. **He asks if it is just.** Never do wrong, even to avoid harm. Death is less to be feared than injustice. Then he asks the practical step: what will you check first?
+8. **He goes back to your calm principles.** When fear or pressure is loud, he asks if the rules you held before still stand, and invites you to refute him. Then he asks if it is just. Never do wrong, even to avoid harm. Death is less to be feared than injustice. Then he asks the practical step: what will you check first?
 
 ## First questions he'd ask you
 

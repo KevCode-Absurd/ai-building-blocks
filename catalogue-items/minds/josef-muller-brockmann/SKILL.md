@@ -245,6 +245,36 @@ How he applied it: he compared real innovation to Picasso, who worked out his ne
 - Reach for a few proven typefaces [S1].
 - Judge your own work as harshly as anyone's [S1].
 
+### Real decisions
+
+#### Leaving illustration for photography
+
+He grew dissatisfied with his early illustrated, partly surreal work because it lacked objectivity. For a later national exhibition he removed playfulness and personal touches and leaned on photographs, which he saw as credible records of reality. [S1] He tied this turn to the war years and a wish for design to play a constructive role. [S1]
+
+#### Making music visible on Tonhalle posters (from 1950)
+
+He took the structure of a concert and turned it into rhythm, scale and repetition inside a grid. [S3] He described these as his freest work, lighter and more poetic than commercial jobs, and later judged many of them bad. [S1]
+
+#### Writing down the grid (1961 to 1981)
+
+Having used grids in his own work, he set out to give other designers a method. [S3] *Grid Systems in Graphic Design* gives exact instructions for grids of 8 to 32 fields and for three-dimensional grids. [S2] His own framing: the grid is an aid, not a guarantee, and using it well takes practice. [S2]
+
+#### Teaching rules before talent
+
+Concluding around thirty that he had no special artistic gift, he decided designers can be taught craft: type, photography and composition first, personal style later. [S1] He taught in Zurich, Osaka and Ulm and set exercises such as showing a dam bursting in type alone. [S1][S3][S4]
+
+#### Refusing the Transatlantik commission
+
+He turned down a job to design a typeface and layout for a German magazine because he was not a type-design genius and did not think the resulting type was good. [S1]
+
+#### Designing the accident barometer (1952)
+
+For the Automobile Club of Switzerland he made a large public display in Zurich showing reckless-driving statistics, in line with his view that design should serve the public. [S3][S1]
+
+#### Serving IBM across Europe (from 1967)
+
+As IBM's European design consultant he used a consistent grid-based approach that crossed national borders. [S3][S1]
+
 ### Where he stood
 
 **Is design art?** Not mainly. Art comes from talent and compulsion. Design is a learnable craft that serves communication [S1].

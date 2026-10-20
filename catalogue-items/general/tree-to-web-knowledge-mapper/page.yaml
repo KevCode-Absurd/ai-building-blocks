@@ -1,0 +1,123 @@
+new_slug: tree-to-web-knowledge-mapper
+name: "Tree to web knowledge mapper"
+summary: "Describe how your team stores what it knows. Get a map of things and links, and a plan to link them."
+job: plan-strategy
+thinking: medium
+thinking_why: "It maps your things and links and plans a rollout. The structure is fixed, but it has to judge what belongs in more than one place."
+
+headline: "Tree to web knowledge mapper"
+subhead: "Describe the folders, tools and people that hold what your team knows. It lists the things people need, draws the links between them with a named type for each, and finds items that do not fit one folder. You get a map and a plan to link what you already have."
+
+explain: |
+  Teams lose what they know when people leave or move on. The usual fix is a tidier folder tree. But a tree gives every item one home, and real information belongs in several places at once: a design note is part of a project, depends on a tool, and was written by a person who has since left.
+
+  This skill works from a web instead. It lists the things people need to find, then the links between them, and gives each link a name such as "depends on" or "written by". It finds the items a tree forces into one place. It plans views of your existing tools before replacing any, keeps private notes apart from shared ones, and starts plain so it is useful on day one.
+
+when:
+  - People keep asking "who knows about this?" or "where is that written down?"
+  - Your folders and wikis grew by accident and nobody trusts them.
+  - Someone key is leaving and you want their knowledge to stay findable.
+
+you_give:
+  - "How your team stores what it knows now: folders, wikis, chat, tools, people"
+  - What knowledge gets lost, and when it happened last
+  - The kinds of things people need to look up (optional)
+  - Tools you cannot change (optional)
+you_get:
+  - A list of things (people, documents, modules, tools) and what each is
+  - A map of links with a named type for each relation
+  - A list of items a folder tree would force into a single home
+  - A plan that links your existing systems first, and keeps private and shared notes apart
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe where knowledge lives today, and one time something important was lost.
+  - Name the tools you must keep, such as a shared drive or a ticket system.
+  - Read the map and the single-home list, and correct any link that is wrong.
+  - Start with the first view in the plan, using data you already have.
+
+how_it_works:
+  - title: Names the loss
+    text: Writes down what knowledge gets lost, and when, so the map has a purpose.
+  - title: Lists the things
+    text: Lists people, documents, modules and tools that people need to find.
+  - title: Draws the links
+    text: Writes circles for things and arrows for relations, with a named type on each arrow.
+  - title: Finds forced homes
+    text: Finds items that a folder tree would put in one place though they belong in several.
+  - title: Plans read-only views
+    text: Plans views of the systems you already have before anything is replaced.
+  - title: Layers private on shared
+    text: Allows private notes on top of shared information.
+  - title: Starts plain
+    text: Begins with something useful today and leaves fancy interfaces for later.
+
+output_shape: |
+  WHAT GETS LOST
+  <knowledge> | when: <last time> | cost: <what it caused>
+
+  THINGS
+  <type>: <name> | holds: <what it is> | lives in: <system>
+
+  LINKS
+  <thing A> --<relation type>--> <thing B>
+  (relation types: <list used>)
+
+  ITEMS THAT BELONG IN MORE THAN ONE PLACE
+  <item> | would sit in: <folder 1>, <folder 2> | tree forces: <single home>
+
+  THE PLAN
+  1. View over <existing system>: read-only, shows <links> | by <date>
+  2. ...
+  Private layer: <how notes stay personal>
+  Shared layer: <what is public to the team>
+
+  MISSING
+  <facts needed to finish the map>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: A real loss
+    how: Describe one time something was lost. It tells the skill which links matter most.
+  - what: Your existing tools
+    how: List them and say which cannot be dropped. The plan links them rather than replacing them.
+  - what: Who does the linking
+    how: Say how many hours a week your team can spend. The plan will start smaller if the time is short.
+  - what: Naming of relations
+    how: Use the verbs your team already says, such as "owns", "replaces" or "needs".
+
+judge:
+  - Every relation has a named type.
+  - No item is forced into a single home when it belongs to several.
+  - Existing systems are linked, not replaced.
+  - The plan is useful on day one with existing data.
+  - Private and shared layers are kept separate.
+
+test:
+  - Pick three questions people ask often, such as "who built this?" Check the map can answer each by following links.
+  - Ask a new starter to find something using only the map.
+  - Run it twice. The types of things and links should stay close.
+  - Do the first view for one project and check people use it in a week.
+
+improve:
+  - Add your own relation names so links read the way your team talks.
+  - Add the list of systems with their owners so the plan names who to ask for access.
+  - Keep a list of questions people could not answer, and test the map against it each quarter.
+  - Pair it with "Weekly time audit planner" to protect time for the linking work.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing things and naming relations from a description is text work."}
+    - {name: "A note tool with links between pages", why: "Pages that link to each other let you build the web without special software."}
+  inputs:
+    - "A list of your folders and tools with owners"
+    - "A list of people and what each knows"
+    - "Recent questions people could not answer"
+
+terms:
+  - term: Relation type
+    meaning: The name on a link between two things, such as "depends on" or "is part of".
+  - term: Read-only view
+    meaning: A page that shows what an existing tool holds without changing or replacing it.

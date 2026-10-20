@@ -1,0 +1,32 @@
+# Workflow skeleton for How do you get feedback? The four steps to solicit Radical Candor (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: radical-candor-feedback
+source:
+  title: "How do you get feedback? The four steps to solicit Radical Candor"
+  by: "Kim Scott"
+  kind: blog
+  rights: ideas-only
+minds: [kim-scott]
+workflow:
+  slug: ask-for-feedback-then-give-it
+  name: "Ask for feedback, then give it"
+  summary: "Say who you manage. Get a go-to question to ask for feedback and a plan for the next conversation you lead."
+  when: "you want honest feedback from your team before you give yours."
+  job: lead-people
+  level: beginner
+steps:
+  - name: "Feedback request script writer"
+    skill: feedback-request-script-writer
+    job: ops
+    from: "How do you get feedback? The four steps to solicit Radical Candor"
+    method: ["Write a go-to question that sounds like you and needs a specific answer", "Plan to count to six in silence after you ask", "Plan a second, more specific question tied to a recent project", "Prepare to repeat back what you hear before you respond", "Choose how you will reward the candour by fixing the issue or explaining why not", "If you disagree, find the part you agree with first"]
+    inputs: [question]
+    outputs: [copy_draft]
+    note: "Your go-to question and how to handle silence"
+  - name: "Feedback conversation planner"
+    skill: feedback-conversation-planner
+    job: ops
+    from: "How do you get feedback? The four steps to solicit Radical Candor"
+    method: ["Place the situation on the care and challenge chart and say which box you are in", "Start with one specific, sincere piece of praise", "Describe the behaviour and its effect in plain words, not the person's character", "Make it humble, helpful, immediate, in person and about the behaviour", "Ask what they think and listen without defending", "Agree a follow-up date"]
+    inputs: [question, copy_draft!]
+    outputs: [plan]
+    note: "The conversation: what to praise, what to say and how to say it. Reads the copy draft from the step before"

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-John Carlton is alive, and views can change. This data set comes from his own blog, The RANT, which he has written since 2004, from a 2003 interview he gave AWAI, and from a 2012 write-up of a radio interview [S1][S2][S6]. Treat each view as "as of" the post it comes from, from 2007 to 2025. His views on AI are as of 2025 [S3][S8]. His birth year isn't stated directly. In 2003 he said he had turned 50 about a year and a half before, which points to about 1951 [S1]. His blog also sells his courses and earns commissions, so read the career claims as his own account [S3].
+John Carlton is alive, and views can change. This data set comes from his own blog, The RANT, which he has written since 2004, from a 2003 interview he gave AWAI, a 2012 write-up of a radio interview, and a 2023 special report of eleven business blunders [S1][S2][S6][S10]. Treat each view as "as of" the post it comes from, from 2007 to 2025. His views on AI are as of 2025 [S3][S8]. His birth year isn't stated directly. In 2003 he said he had turned 50 about a year and a half before, which points to about 1951 [S1]. His blog also sells his courses and earns commissions, so read the career claims as his own account [S3].
 
 ## In one paragraph
 
@@ -34,9 +34,7 @@ Carlton says he out-read the agency writers around him. He used a speed-reading 
 
 How he applied it: working for Halbert, he toured post offices to see how bulk mail was handled, watched printing from paste-up to finished piece, and ran projects from the first client meeting to the royalty check [S4].
 
-### Research like an insider
-
-He doesn't stop at the owner. He talks to front-line staff, salespeople, product developers and customer service reps, because owners often miss the real reasons people buy [S2]. A freelancer has to become an expert on each new market fast [S2].
+**Research like an insider.** He doesn't stop at the owner. He talks to front-line staff, salespeople, product developers and customer service reps, because owners often miss the real reasons people buy [S2]. A freelancer has to become an expert on each new market fast [S2].
 
 How he applied it: he said writer's block is just not being prepared. He "stocks the desk" with facts first, takes a walk or a rest, then writes a rough draft [S2].
 
@@ -64,6 +62,22 @@ As of 2025, Carlton argued that every new medium follows the same cycle. Experts
 
 How he applied it: his advice to new freelancers was to be your own first client, narrow your niche, and sell yourself as someone who understands the whole business, not "just a copywriter" [S8].
 
+### Money-first rules from the 2023 report
+
+**Operation MoneySuck: do only what brings in money.** In his 2023 report, blunder number one is failing to keep things simple. Smart owners start with a clean idea and then pile on membership sites, deep content and schemes that need staff and cash, and "very little of it works" [S10]. His fix has two steps. Hire a part-time assistant to handle every task that does not earn, from the printer to the phone. Then find the bloat in the business, check the numbers, and cut it [S10]. Every other idea goes on a list in a drawer until the money-making work is running [S10].
+How he applied it: a client with a failing business had a membership site that ate 90 percent of his attention and was unprofitable. Carlton had him commit to three months, hire help and swap the site for emails with value and one offer in the P.S., sold as a simple good-better-best set of three products. By Carlton's account, sales quadrupled and the list doubled [S10].
+
+**Email often, never be boring.** He aims for three to seven emails a week, with real value in the body and an offer in the P.S., so the two do not trip over each other [S10]. He argues that a seldom-emailed list forgets you, and that owners who fear being a pest are blocking sales [S10]. The cure for boring is to tell stories about what keeps readers up at night, and to be the one thing they read that day that gets their blood going [S10]. He expects about a dozen unsubscribes a day per email and is happy to see them, since they clean the list [S10].
+How he applied it: his own subject lines are playful and odd, such as a quiz on being an introvert and a numbered "pro hint" series [S10].
+
+**Direct response, with the next step spelled out.** Image advertising suits companies with billion-dollar budgets. Everyone else should put a call to action in every contact, whether an email, a banner, a radio spot, a speech or a face-to-face talk [S10]. He says never assume the prospect will "figure out" the next step, and be explicit: click here, call this number, clip this coupon [S10]. On a website, he notes, you are for a few seconds equal to your biggest rival, because the visitor is looking at you alone [S10].
+
+**The back end is where the profit is.** Most entrepreneurs pour everything into the first sale, which costs money to win. The back-end offer to an existing buyer costs nothing to find, so it is nearly pure profit and should be ready before the first sale closes [S10].
+
+**Refunds, competitors, networks and goals.** He told owners to expect refunds. As he puts it, the old rule is about one refund per ten sales, so up to 20 percent returned in an average campaign is normal, and about 15 percent signals a healthy push. Refund gracefully and ask why, as the answer shapes the next campaign [S10]. He urges owners to watch competitors by subscribing and buying to see how they upsell, to test their site on a phone, to build a network by giving help before asking for it, and to check on staff by ordering as a customer under a hidden email and asking for a refund to see how support treats you [S10]. His last point is goals: set deadlines, know why you want it, decide what kind of millionaire you plan to be, and get regular reality checks from people who will tell you the truth [S10].
+
+**Plan the burnout break.** He says burnout arrives without warning. Signs include no sleep, an endless to-do list, no weekends and booze as the off switch. His answer is a planned break: save money, look after your health, set a goal and an exit date [S10]. He did this himself at 45. He stopped working with Gary Halbert, with plenty of notice,, stayed in touch with his network and played in a rock band for two years before returning to work [S10].
+
 ## How he decides
 
 - Would I mail this if the business depended on it? [S1][S2]
@@ -74,6 +88,31 @@ How he applied it: his advice to new freelancers was to be your own first client
 - Prepare first, then write a rough draft fast [S2].
 - If money can solve a problem, pay it and get back to work that earns [S7].
 - Get paid up front and put terms in writing [S5].
+- Do only the work that brings in money; hand the rest to a helper [S10].
+- Put a clear call to action in every contact [S10].
+- Have the second offer ready before the first sale closes [S10].
+
+## Real decisions
+
+### Cutting a client's business back to what earns
+
+A client came to him with falling sales, a small staff, missed payrolls and a membership site that took most of his time. Carlton's call was a three-month focus period: hire an assistant, check the numbers, drop the site and sell a simple three-level product series by email. His stated reason was that the owner was blocking buyers from simple ways to buy [S10]. His account of the result is that sales quadrupled and the list doubled [S10].
+
+### Telling a timid emailer to mail more
+
+A mastermind member had a big list and flat sales. He emailed once a week because he feared looking like a pest. Carlton reminded him why he was in business, and told him his list loved him and bought whenever he offered. His reasoning was that a list forgets those who never write [S10].
+
+### Selling the Rodale book plainly
+
+Rodale's top writers could not sell a book on sex by mail. On Halbert's advice, Carlton wrote a bold headline, a subhead promising better sex and respect, and seven benefit bullets on page one. By his account it beat the control and mailed for five years to about 30 million names [S1].
+
+### Choosing Halbert over a safer path
+
+He took the road to work for Gary Halbert instead of a safer corporate career, saying he was little moved by money [S4].
+
+### Leaving for a planned break
+
+At 45, with notice and savings in place, he left his work with Halbert and the advertising world for two years to play in a band. He kept his network warm, so when he came back people wanted to hire him [S10].
 
 ## Where he stood
 
@@ -100,7 +139,7 @@ How he applied it: his advice to new freelancers was to be your own first client
 
 ## Where he was wrong or criticised
 
-- **Pushing hard.** In a 2012 interview he said 7% to 15% of sales coming back as refunds shows you are pushing hard enough [S2]. Many businesses would see that rate as a sign the copy over-promised.
+- **Pushing hard.** In a 2012 interview he said 7% to 15% of sales coming back as refunds shows you are pushing hard enough [S2]. In 2023 he said up to 20% is normal and about 15% healthy [S10]. Many businesses would see that rate as a sign the copy over-promised.
 - **Harsh on clients.** His 2007 rule "all clients suck" treats the client as an opponent [S9]. He framed it as a warning with exceptions, but it can sour a partnership.
 - **Self-reported record.** His results, like the 30 million names, come from his own interviews, and his blog sells his courses with affiliate links [S1][S3]. No outside audit appears in our sources.
 - **Tone.** His writing is blunt and profane by design [S7]. That suits some readers and turns others off.

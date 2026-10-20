@@ -1,0 +1,129 @@
+new_slug: launch-teaser-to-preview-planner
+name: "Launch teaser to preview planner"
+summary: "Paste what you are launching and when. Get a teaser, preview and launch plan with a sign-up page and free sample."
+job: plan-strategy
+thinking: medium
+thinking_why: "It sets stages from a date and specifies a page and a sample. The structure is fixed and the judgement is in what to show when."
+
+headline: "Launch teaser to preview planner"
+subhead: "Tell it what you are launching and the date. It works back from the date to plan hints and a sign-up page, an early look for insiders, a public preview, a promo site, a free sample and a teaching piece. You get a dated plan and the launch message for your list."
+
+explain: |
+  Most launches start loud on day one to an empty room. A better launch builds an audience first. People who have seen hints, signed up for news, tried a free sample and learned something useful turn up on launch day already interested.
+
+  This skill works back from your date. Months out it plans vague hints and a page that collects email addresses. It picks a few insiders for an early look. Weeks out it plans a preview that shows features and the ideas behind them, with a few early-access passes. It specifies the promo site, adds a free sample and one teaching piece people will share, and plans the launch message for the list you collected. It plans only what your launch scope really has.
+
+when:
+  - You have a launch date and no audience waiting for it.
+  - You want to show the product in stages instead of one big reveal.
+  - You need a sign-up page and a free sample plan for your product or service.
+
+you_give:
+  - What you are launching and the launch date
+  - What is in the smaller launch, so no stage promises a cut feature
+  - Your brand file or voice notes (optional)
+  - The people you could show first, such as customers, peers or press (optional)
+you_get:
+  - A dated plan from months out to launch day
+  - A list of insiders and an early-look offer
+  - A promo site spec with a sign-up above the fold
+  - A free sample, one teaching piece and the launch message
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Tell it what you are launching, the date and what is in scope.
+  - Add your brand file if you have one, so the voice fits.
+  - Check each stage date against your calendar.
+  - Start with the sign-up page. Everything else uses the list it builds.
+
+how_it_works:
+  - title: Works back from the date
+    text: Sets the launch date and places each stage before it.
+  - title: Plans the hints
+    text: Months out, plans vague hints and a page that collects email addresses.
+  - title: Picks the insiders
+    text: Chooses a handful of people and offers them an early look.
+  - title: Plans the preview
+    text: Weeks out, plans a preview of features and the ideas behind them, plus a few early-access passes.
+  - title: Specifies the promo site
+    text: "Lists the sections: overview, tour, screens, manifesto, case studies, praise, pricing and sign-up."
+  - title: Adds a sample and a lesson
+    text: Adds a free sample and one teaching piece people will share.
+  - title: Plans the launch message
+    text: Drafts the plan for the message to the collected list.
+
+output_shape: |
+  THE LAUNCH
+  <what> | Date: <date> | In scope: <list>
+
+  TIMELINE
+  <months out> | Hints and sign-up page: <what, date>
+  <weeks out> | Insider early look: <who, what, date>
+  <weeks out> | Preview: <what shown, passes, date>
+  <launch week> | Launch message: <what, date>
+
+  SIGN-UP PAGE
+  Above the fold: <headline, one line of promise, email box>
+
+  PROMO SITE
+  Overview | Tour | Screens | Manifesto | Case studies | Praise | Pricing | Sign-up
+  <what each holds, drawn from the real product>
+
+  FREE SAMPLE
+  <what people get> | Shows the real product: <yes/no>
+
+  TEACHING PIECE
+  <topic> | Why people will share it: <reason>
+
+  LAUNCH MESSAGE PLAN
+  <audience> | <what it says> | <call to action> | Date: <date>
+
+  MISSING
+  <facts that would change the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The real launch scope
+    how: Paste the smaller scope so no stage shows a feature that was cut.
+  - what: Who the insiders are
+    how: Name real people or groups. A plan with no names is only a wish.
+  - what: Your time
+    how: Say how many hours a week you have. The plan will drop stages that do not fit.
+  - what: Your voice
+    how: Attach your brand file so hints and messages sound like you.
+
+judge:
+  - Every stage has a date.
+  - The email list is built before launch.
+  - The free sample shows the real product.
+  - The promo site has a sign-up above the fold.
+  - No stage needs a feature that was cut.
+
+test:
+  - Check each date against a calendar. Move any that fall on a holiday or crunch week.
+  - Show the sign-up page spec to three people and ask what they think you are launching.
+  - Run it twice. The stage order and dates should stay close.
+  - Run the first two stages and count sign-ups against the target you set.
+
+improve:
+  - Add your past launches and what worked, so stage timing follows your audience.
+  - Add your list of insiders with notes on how each prefers to be contacted.
+  - Add your brand rules so hints never promise what you cannot deliver.
+  - Pair it with "Launch scope cutter" to keep the smaller scope in view.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning stages and drafting page specs and messages is text work."}
+    - {name: "An email list tool", why: "Collects sign-ups and sends the launch message to the list."}
+  inputs:
+    - "Your smaller launch scope"
+    - "A list of insiders with contact notes"
+    - "Your brand file or voice notes"
+
+terms:
+  - term: Insider
+    meaning: A person you invite to see the product early, because their view or reach matters to you.
+  - term: Free sample
+    meaning: A small, real part of the product that people can use without paying.

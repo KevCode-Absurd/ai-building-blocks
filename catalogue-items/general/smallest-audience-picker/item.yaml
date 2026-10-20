@@ -1,0 +1,22 @@
+slug: smallest-audience-picker
+name: "Smallest audience picker"
+summary: "Paste who you serve now and who you could serve. Get the smallest group worth serving and what would delight them."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: persona}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [seth-godin]
+credits:
+  - {title: "About Seth", by: "Seth Godin", url: "https://seths.blog/about/", used: "Background on his work on serving a specific group"}
+  - {title: "Seth Godin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Seth_Godin", used: "Background on his books and the smallest viable audience idea"}
+  - {title: "Blog posts on the smallest viable audience, 2017 and 2022", by: "Seth Godin", url: "https://seths.blog/", used: "Pick the smallest group that can sustain the work, say who it is not for, delight them, and grow by word of mouth"}

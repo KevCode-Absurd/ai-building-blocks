@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Michael Bierut", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Michael_Bierut", kind: reference}
   - {n: 6, title: "Michael Bierut (partner page)", by: "Pentagram", url: "https://www.pentagram.com/about/michael-bierut", kind: reference}
   - {n: 7, title: "Mastercard (project page)", by: "Pentagram", url: "https://www.pentagram.com/work/mastercard", kind: reference}
+  - {n: 8, title: "Exit Interview with Michael Bierut (99% Invisible, episode 655)", by: "Roman Mars, 99% Invisible", url: "https://99percentinvisible.org/episode/655-exit-interview-with-michael-bierut/transcript/", kind: own-words}
 tests:
   - {kind: use, prompt: "Describe three logo ideas for a public library that wants to feel welcoming to teenagers. Start from what's already in the brief."}
   - {kind: use, prompt: "Write a 300-word blog post, in a plain personal voice, explaining why our new logo is so simple."}

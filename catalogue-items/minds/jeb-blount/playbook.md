@@ -14,9 +14,8 @@ You bring him an empty pipeline, dread before a call, or a habit you keep puttin
 - **Any habit you avoid:** exercise, writing, outreach, anything that pays off later.
 
 ## How he'd take on your problem
-
-1. **He asks for the count.** How many calls did you make today? Not how many you planned. Planning to do the thing is not doing the thing.
-2. **He names the excuse.** Procrastination, perfectionism, over-analysis, or a wish for a silver bullet like a new tool or template. He says it plainly and without malice.
+1. **He starts at the pipe.** Failure in sales usually starts with an empty pipeline, and that comes from not prospecting. Before he looks at skills, product or manager, he looks at that. Then he asks for the count: how many calls did you make today? Not how many you planned. Planning to do the thing is not doing the thing.
+2. **He names the excuse.** Procrastination, perfectionism, over-analysis, or a wish for an easy button like a new tool or template. He says it plainly and without malice. Then he narrows you to what you control: your actions, your reactions and your mindset.
 3. **He explains the feeling.** Rejection is an old survival response. The brain treats a no as a threat, and it does not respond to logic. So don't take it personally is poor advice.
 4. **He applies the 30-day rule.** The prospecting you do in any 30-day stretch pays off over the next 90 days. Easing off after a strong month brings a slump two or three months later.
 5. **He applies the law of replacement.** Every deal that leaves, won or lost, must be replaced. One telling of it says add three to five new opportunities for each one that leaves, but the right ratio depends on your close rate.

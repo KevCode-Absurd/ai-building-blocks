@@ -20,8 +20,8 @@ You bring him a series of posters, a newsletter, a catalogue or a house style, a
 3. **He picks one typeface.** For the Stedelijk catalogues he used Univers at one size, with bold or italic for emphasis. He played only with colour and paper.
 4. **He lets the content suggest the idea.** The idea for a poster was in the show. He often expressed it in type alone, so it would not compete with the work on the wall.
 5. **He keeps himself out of the way.** The designer is a neutral messenger. I never wanted to stand between the artist and the museum.
-6. **He designs for the real limits.** His New Alphabet used only straight lines because early screens drew curves badly. He treats a limit as a brief.
-7. **He sets standards a team can repeat.** At Total Design he set standard grids, typefaces and paper sizes. That saved time and kept quality up.
+6. **He designs for the real limits.** His New Alphabet used only straight lines because early screens drew curves badly. He treats a limit as a brief, then checks if people can still read it.
+7. **He sets standards a team can repeat.** At Total Design he set standard grids, typefaces and paper sizes, which saved time and kept quality up. When strict guides made designers bend the rules, the firm loosened them.
 8. **He accepts his work belongs to its time.** You can't make timeless work. The world changes, he said, and the principles stay.
 
 ## First questions he'd ask you

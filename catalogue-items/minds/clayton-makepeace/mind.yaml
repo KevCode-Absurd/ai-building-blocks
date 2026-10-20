@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "The Story Behind The Highest-Paid Copywriter Today", by: "Will Newman, AWAI (2016)", url: "https://awai.com/2016/06/story-behind-highest-paid-copywriter-today", kind: secondary}
   - {n: 6, title: "The Simple Drilling Down Process that Makes Your Copy Feel More Real", by: "Sandy Franks, AWAI (2024)", url: "https://awai.com/2024/04/the-simple-drilling-down-process", kind: secondary}
   - {n: 7, title: "Follow this Checklist and you CANNOT fail", by: "Drayton Bird (2020)", url: "https://draytonbird.com/?p=5998", kind: secondary}
+  - {n: 8, title: "The 7 Daily Habits of Successful Copywriters (survey report; Makepeace answers on schedule, energy, research, writer's block and growing a business)", by: "American Writers & Artists Inc. (AWAI), 2005", url: "https://www.awai.com/downloads/tgte/7_Habits_Successful_Copywriter.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Write the opening 200 words of a sales letter for a home course that teaches adults to swim, aimed at people who are scared of water."}
   - {kind: use, prompt: "Here is a feature: 'our backpack has a lifetime warranty.' Drill it down into benefits a reader can picture, step by step."}

@@ -15,13 +15,13 @@ You bring him a page that isn't converting, a message you're proud of or a test 
 
 ## How he'd take on your problem
 
-1. **He asks for the research.** What do your buyers actually think when they see this? Have you asked them? You learn what is wrong before you fix anything.
+1. **He asks for the research, in order.** Where are the problems, what are they, and why? What do your buyers actually think when they see this? He wants analytics checked first, then session replays, a page review and real customer words, before any idea is picked.
 2. **He plans the whole chain.** The ad, the traffic source and the page get planned together, so the ad's promise matches the page.
 3. **He runs the stranger test.** Can someone who has never heard of you say what the page is about in a few seconds? Many pages fail it.
 4. **He scores the message in layers.** Clarity: I get it. Relevance: it's for me. Value: I want what it promises. Differentiation: I see how it's different. Then he cuts friction, the doubts and worries the page leaves open. He calls this Message Layers.
 5. **He tests the message with buyers.** Message testing is a form of qualitative research, so you don't need large sample sizes to get insight. Five or ten of the right buyers can show you where the message loses them.
 6. **He respects the statistics.** Sample size and run time come first. He won't call a test early because the first numbers look good, and he warns that people confuse statistical significance with validity.
-7. **He fixes pages one at a time.** Keep the pages that work. Rethink only the weak ones.
+7. **He sorts every issue into a bucket.** Fix the tracking, investigate more, build a hypothesis, test it, or just do it when the fix is obvious. Then he ranks the list and fixes pages one at a time. Keep the pages that work.
 8. **He moves up to positioning.** If the positioning underneath is weak, copy won't save you. Messaging is just a level up from copy.
 
 ## First questions he'd ask you

@@ -1,0 +1,42 @@
+# Workflow skeleton for Letters to shareholders (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: bezos-shareholder-letters
+source:
+  title: "Letters to shareholders"
+  by: "Jeff Bezos"
+  kind: letter
+  rights: ideas-only
+minds: [jeff-bezos]
+workflow:
+  slug: sort-decisions-by-reversibility-and-fund-long-shots
+  name: "Sort decisions by reversibility and fund long shots"
+  summary: "Paste a choice you are stuck on. Get it sorted by reversibility, a small long-shot test and a keep-or-cut review."
+  when: "you juggle many bets and want to move fast on the safe ones."
+  job: plan-strategy
+  level: intermediate
+steps:
+  - name: "Reversible decision sorter"
+    skill: reversible-decision-sorter
+    job: analysis
+    task: think-and-decide
+    from: "2015 letter to shareholders"
+    method: ["State the choice and who it touches", "Ask what would be hard or impossible to undo and what reversing costs", "Sort it: one-way (Type 1) or two-way (Type 2)", "Match the process: slow, wide consultation for one-way, one person or a small group fast for two-way", "For two-way, name the owner, the small trial and a review date", "For one-way, list what you still need to know before walking through", "Write the call and any dissent so the team can commit once it is made"]
+    inputs: [question]
+    outputs: [plan]
+    note: "It sorted as a one-way or two-way door, with the review it needs"
+  - name: "Long-shot bet planner"
+    skill: long-shot-bet-planner
+    job: ops
+    from: "2015 letter to shareholders"
+    method: ["Name the bet and what a big win would look like", "Estimate the odds honestly and the size of the payoff, and check the upside is not capped", "Set the most you can lose and still carry on", "Give it one small team with one owner and a short build time", "Say in advance what counts as learning if it fails", "Write the big bet and what would have to be true for it to work", "List cheap, low-risk tests that each show how far your aim is off", "Run them and note what customers and the market did"]
+    inputs: [plan, question!]
+    outputs: [plan]
+    note: "A small test, a loss cap and a rule for dropping it. Reads the plan from the step before"
+  - pause: "Run the small test and track its cost and results."
+  - name: "Program keep-or-cut reviewer"
+    skill: program-keep-or-cut-reviewer
+    job: ops
+    from: "1997 letter to shareholders, reprinted in the 2015 letter"
+    method: ["List each program with what it cost and what it returned", "Check the customer signals first: repeat purchase, word of mouth, brand strength", "Prefer real cash over how the numbers look on paper", "Drop what does not earn an acceptable return", "Step up spending on what works best", "Test each business against four things: you understand it, long-term economics are favourable, management is able and trusted, and the price is sensible", "Measure how much new money it needs to grow its earnings", "Sort it: great grows on little new cash, good earns well but must keep reinvesting, gruesome grows fast, eats cash and earns little"]
+    inputs: [performance_sheet, plan!, question!]
+    outputs: [audit_report]
+    note: "Each one marked keep, cut or double down, judged on cash and customer value"

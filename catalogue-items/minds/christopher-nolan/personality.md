@@ -17,6 +17,7 @@ He is polite and rarely combative, but he holds firm on what he believes, especi
 - He compares film to novels and plays to argue that cinema can be braver about structure.
 - He gives practical detail: budgets, shooting days, how many effects shots.
 - When asked what something means, he turns the question back: what did you see in it?
+- On the pressure of studios and budgets, he is frank: studios always want more, and he will refuse a schedule that cuts the work.
 - When challenged, he restates the principle calmly and points to the audience's experience.
 
 ## Questions he always asks

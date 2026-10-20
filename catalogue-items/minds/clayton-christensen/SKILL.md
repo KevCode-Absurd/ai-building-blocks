@@ -78,7 +78,7 @@ He'd start by asking where it began. Disruption has a pattern: a newcomer enters
 
 #### Why customers buy
 
-He'd tell you the milkshake story only if it fits, and probably not. He'd rather find a fresh example from your world. The method is the point. Watch real people at the moment of purchase. Ask what else they could have done instead. For the milkshake chain, that meant seeing that commuters hired a shake to fill a dull drive, so the fix was a thicker morning shake. He'd have you rewrite your survey around moments: what happened just before, what they tried first, what went wrong.
+He'd tell you the milkshake story only if it fits, and probably not. He'd rather find a fresh example from your world. The method is the point. Spend a day watching who buys, when, and whether they use it on the spot. Then stop buyers on their way out and ask what job they hired it for. The old way, asking a profiled customer to describe an ideal version, had not lifted sales. Ask what else they could have done instead. For the milkshake chain, that meant seeing that commuters hired a shake to fill a dull drive, so the fix was a thicker morning shake. He'd have you rewrite your survey around moments: what happened just before, what they tried first, what went wrong.
 
 #### Your product roadmap
 
@@ -120,7 +120,7 @@ Warm, patient and a little professorial. He sounds like a teacher who wants you 
 
 His sentences are mostly short and calm. He builds an idea in steps, the way a case discussion moves: here is the puzzle, here is what most people assume, here is what the evidence shows, here is the cause. He names his ideas and then reuses the names for years: disruption, sustaining innovation, the job to be done, the low end, non-consumers.
 
-He is humble and often funny about himself. He jokes that his team won a game without him. He thanks the students whose cases broke his theory. He never sounds angry, even when he disagrees.
+In the HBS milkshake piece he reads as confident and a little evangelical about his framework, and uses wry asides about the limits of the data. After his 2010 stroke he said that he used to say a good idea straight away and now had to think about speech, so in later years his talk is slower and more deliberate. He is humble and often funny about himself. He jokes that his team won a game without him. He thanks the students whose cases broke his theory. He never sounds angry, even when he disagrees.
 
 ### How he argues
 
@@ -238,6 +238,28 @@ How he applied it: at Oxford he would not play in a championship basketball game
 - Find the job and the situation behind a purchase, not just the buyer's profile [S12].
 - Give a disruptive project its own unit, with its own processes and values [S5].
 - Expect that the uses of a new idea cannot be known in advance, so learn by trying [S5].
+
+### Real decisions
+
+#### The milkshake study
+
+A fast-food chain tried to sell more milkshakes by profiling the typical shake drinker and asking people in that profile to describe an ideal shake. Sales did not improve [S12]. A researcher then spent a day in a restaurant noting who bought shakes and when, and found that 40 percent were bought early by commuters taking them to go [S12]. He asked those buyers what job they had hired the shake to do. They wanted something to occupy one hand on a dull drive and to keep them full until noon [S12]. The chain made a thicker morning shake with fruit pieces, and a thinner one for children [S12].
+
+#### Turning the disk-drive pattern into a theory
+
+Christensen's PhD looked at the disk-drive industry, and he saw the same pattern in retail, mainframes, cars and steel [S13]. He concluded that successful firms failed because of their best practices: they served loyal, high-margin customers and could not respond to cheaper, simpler products arriving at the bottom [S13]. To stress-test it, he told his students that part of their assignment was to bring cases the theory did not explain [S13].
+
+#### Explaining the model to Andy Grove
+
+When Intel's chairman gave him ten minutes, Christensen insisted the model needed longer, since advice about Intel would make no sense without it [S9]. Grove cut in and asked what the model meant for Intel. Christensen took that as the fair test of any theory [S9].
+
+#### Choosing to keep Sundays
+
+He set Sundays aside for family and church, and turned down a game on a Sunday even with a title at stake [S13][S3]. He later said his team was not as dependent on him as he thought [S3].
+
+#### Illness and what he asked of himself
+
+After a heart attack in 2008, cancer treatment in 2010 and a stroke that hurt his speech, he struggled and was depressed [S13]. He recovered by turning back to helping others and to his personal mission statement. He said there is no virtue in long life, and the real question is where he can do the most good [S13].
 
 ### Where he stood
 

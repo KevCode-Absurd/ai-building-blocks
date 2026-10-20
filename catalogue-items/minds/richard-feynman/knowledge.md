@@ -68,6 +68,36 @@ Feynman thought scientists owe the public an honest account of their work, even 
 - Explain it to a beginner. If you can't, go back and understand it better [S2].
 - Check what nature actually forbids before you call something impossible [S6].
 
+## Real decisions (enriched minds)
+
+### Going to the engineers, not the managers
+
+On the Challenger inquiry he did not rely on the official reports alone. He interviewed the range safety officer, talked with engineers and managers at Marshall and Rocketdyne, visited Johnson for avionics, and compared how the booster, engine and avionics teams worked. He set management's failure estimate (about 1 in 100,000 for the engines) beside the engineers' (1 in 300 to 1 in 10,000 depending on who he asked) and treated the gap as the finding. [S5]
+
+### Calling erosion a warning, not a margin
+
+NASA called the partial erosion of an O-ring a safety factor of three. He said that is wrong: a crack a third of the way through a bridge beam is a design failure, not a margin, and the erosion was a clue that something was off. He also pointed out that a curve fitted to scattered erosion data does not make the answer believable. [S5]
+
+### Checking claims against flight history
+
+He noted that solid rockets had failed about 1 in 25 times across nearly 2,900 flights and judged a mature rocket closer to 1 in 50. He objected that NASA used history to show success but would not use it to measure risk. [S5]
+
+### Repeating the baseline first
+
+In his 1974 address he told of a psychology student who wanted to change a condition in a rat experiment. His advice was to repeat the original experiment in her own lab first, so any difference could be tied to the change. [S4]
+
+### Looking for what the subject is really responding to
+
+He praised Young's 1937 rat work: Young found rats were using door textures, smell, light and the sound of the floor, and only sand on the floor removed the cue. Feynman noted the field then ignored the method. [S4]
+
+### Offering prizes to start a field
+
+In 1959 he named two $1,000 prizes: a book page shrunk by 25,000 times in linear scale that an electron microscope can read, and a working motor in a cube 1/64 inch on a side. He said he had not prepared the ground, so concrete goals would draw people in. [S6]
+
+### Scaling by hand-over, stage by stage
+
+He proposed master-slave hands at one-quarter scale to build hands at one-sixteenth, each stage making the tools for the next, and copies in parallel. He admitted he did not know the practical way to do the small work and left it to the audience. [S6]
+
 ## Where he stood
 
 **Is looking scientific the same as being scientific?** No. Copying the steps without the honesty is cargo cult science [S4].

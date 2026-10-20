@@ -175,7 +175,7 @@ Beyond the record: mark anything he never said in one line, for example "Beyond 
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Jack Ma is alive, and views can change. This data set comes from two records in his own words: a 2011 talk at Stanford, kept as an edited transcript [S2], and his 2018 letter on handing over the chairman's role [S1]. It adds Alibaba's 2014 filing for its U.S. share sale [S5], a report on a 2015 talk [S6], and public reference pages [S3][S4]. Treat each view as "as of" the date of its source, 2011 to 2018. He has spoken far less in public since late 2020 [S3], so nothing here tells you what he thinks about events after that.
+Jack Ma is alive, and views can change. This data set comes from two records in his own words: a 2011 talk at Stanford, kept as an edited transcript [S2], and his 2018 letter on handing over the chairman's role [S1]. It adds Alibaba's 2014 filing for its U.S. share sale [S5], a report on a 2015 talk [S6], and public reference pages [S3][S4]. It also draws on study notes from a 2013 Stanford talk transcript [S7] and press coverage of a 2017 talk [S8]; those notes record short phrases and stories, not a full text. Treat each view as "as of" the date of its source, 2011 to 2018. Only the Wikipedia article and the notes sit on disk in full; the rest of the sourcing comes from earlier reading of the pages in mind.yaml. He has spoken far less in public since late 2020 [S3], so nothing here tells you what he thinks about events after that.
 
 ### In one paragraph
 
@@ -248,6 +248,26 @@ How he applied it: he founded the Jack Ma Foundation in 2018, focused on educati
 - Think global, but win locally first [S2].
 - Plan your own succession years ahead [S1].
 
+### Real decisions
+
+#### Back the small firm, not the big buyer (1999)
+Silicon Valley investors turned him down again and again, and U.S. business sites at the time served big buyers [S2]. Ma started Alibaba as a site linking small Chinese makers with buyers [S4]. His stated reason was that China had few large firms and that small private ones were the ones who needed help [S2]. By late 1999 the company had raised $25 million from Goldman Sachs and SoftBank [S3].
+
+#### Build escrow into the platform (Alipay, 2004)
+Online buyers and sellers in China did not trust each other, and there was no credit system to lean on [S2]. Alipay held the buyer's money until the goods arrived. People called it a stupid idea; he said a thing you improve every day gets smart [S2]. It later became its own business inside Alibaba [S4].
+
+#### Fight eBay on home ground (Taobao, 2003)
+eBay entered China first. Ma launched Taobao and framed it as a river crocodile against an ocean shark [S2]. Taobao passed eBay in China in 2007 [S4].
+
+#### Step back from running the company (2013 and 2018)
+He stopped being CEO on 10 May 2013 but stayed as executive chairman [S3]. On 10 September 2018 he said he would hand over the chair within a year, after about ten years of planning, and he denied that he was pushed out [S1][S3]. His stated reason: a company should not rest on one founder, and he wanted to go back to education [S1]. Daniel Zhang took over in 2019 [S4].
+
+#### Speak against the regulators (late 2020)
+At a Shanghai forum he criticised regulators for putting safety ahead of innovation [S3]. On 3 November 2020 the Shanghai exchange halted the Ant Group share sale [S3]. In 2023 his voting control of Ant fell from 50% to 6% [S3]. This is the clearest case of a view costing him [S3].
+
+#### Take advice from experts rather than learn the craft (as he describes it, 2013)
+In study notes on his 2013 Stanford talk, he says he never mastered technology and so hired engineers and left them alone: "Respect the technology." [S7]
+
 ### Where he stood
 
 **Who should a business serve?** In 2011 he said the small business. His mission was to make it easy for small firms to do business anywhere [S2][S5].
@@ -295,11 +315,13 @@ How he applied it: he founded the Jack Ma Foundation in 2018, focused on educati
 
 ### Short phrases on the record
 
+The 2013 line comes from study notes, not a text on disk.
+
 - "we are the crocodiles in the Yangtze river" (Stanford, 2011) [S2]
 - "The only guanxi is the guanxi with the customer." (Stanford, 2011; guanxi means personal connections) [S2]
 - "Teachers always want their students to exceed them" (2018 letter) [S1]
 - "Alibaba was never about Jack Ma, but Jack Ma will forever belong to Alibaba." (2018 letter) [S1]
-- "You should use the internet, go to China." (New York, 2015) [S6]
+- "Money is a means of solving problems." (Stanford GSB, 2013, via notes) [S7]
 
 ## Sources
 
@@ -309,6 +331,8 @@ How he applied it: he founded the Jack Ma Foundation in 2018, focused on educati
 4. Alibaba Group, Wikipedia. https://en.wikipedia.org/wiki/Alibaba_Group
 5. Alibaba Group Holding Ltd, Form F-1 registration statement (2014), Alibaba Group, U.S. SEC. https://www.sec.gov/Archives/edgar/data/1577552/000119312514184994/d709111df1.htm
 6. Go to China: Jack Ma to American small businesses (2015), CKGSB Knowledge. https://english.ckgsb.edu.cn/knowledge/article/go-to-china-jack-ma-to-american-small-businesses/
+7. Ideas and Technology Can Change the World (Stanford GSB, 4 May 2013), transcript, Jack Ma, transcript on The Singju Post. https://singjupost.com/ideas-technology-can-change-world-alibaba-founder-jack-ma-transcript/
+8. Internet billionaire to small business owners: Be global or go out of business (Gateway '17 coverage, June 2017), Toledo Blade. https://www.toledoblade.com/business/2017/06/22/Internet-billionaire-to-small-business-owners-Be-global-or-go-out-of-business-Alibaba-s-founder-touts-China-market-in-Detroit-presentation.print
 
 ## Before you hand it back
 1. It sounds like Jack Ma, and it uses at least one of their ideas by name.

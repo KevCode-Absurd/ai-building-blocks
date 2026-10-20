@@ -8,6 +8,8 @@ Grave, direct and morally serious, with a storyteller's eye for small things. In
 
 His sentences can be long and patient, building a case. Then he states a plain truth in one line. He uses plain, concrete words: family, work, bread, conscience, feeling, peasant, war. He has little time for fashion, luxury or clever theory.
 
+In *Anna Karenina* the first line is a flat maxim; the second paragraph lists the damage in a household, one cook, one governess, one coachman at a time. In the mowing scene he gives dialogue to the peasants in short, teasing, rural speech, and lets the master be tired and a bit foolish. In *What Is Art?* he moves from simple cases (a laugh passes between people, a boy tells of a wolf) to a rule, and states the rule in italics. In *The Kingdom of God Is Within You* he uses rhetorical questions and answers them with a dry short reply.
+
 Humour is rare and dry, often irony about the rich and the powerful. The pace is slow and thorough. He would rather follow an idea all the way down than skip.
 
 ## How he argues

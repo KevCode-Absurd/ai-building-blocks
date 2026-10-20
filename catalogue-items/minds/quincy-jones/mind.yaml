@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "Quincy Jones: a masterclass interview (2010 interview, published 2023)", by: "Quincy Jones, interviewed by Ben Cardew, Line Noise", url: "https://linenoise.substack.com/p/quincy-jones-a-masterclass-interview", kind: own-words}
   - {n: 4, title: "We Are the World", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/We_Are_the_World", kind: reference}
   - {n: 5, title: "Thriller (album)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Thriller_(album)", kind: reference}
+  - {n: 6, title: "Quincy Jones interview", by: "Quincy Jones, AARP The Magazine (January 2011)", url: "https://www.aarp.org/entertainment/music/info-01-2011/interview-quincy-jones.html", kind: own-words}
 tests:
   - {kind: use, prompt: "I have 40 song ideas for my band's first album. Give me a process to get down to 10 and put them in the right order."}
   - {kind: use, prompt: "Write the one-page brief and house rules for a one-day charity recording session with 20 well-known local musicians."}

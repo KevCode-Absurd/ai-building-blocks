@@ -1,0 +1,20 @@
+slug: first-customer-group-picker
+name: "First customer group picker"
+summary: "Describe your idea and who might want it. Get who-and-where groups and the one to talk to first."
+category: general
+type: skill
+role: compress
+job: research
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: rebuilt
+version: 1.0.0
+minds: [rob-fitzpatrick, steve-blank, eric-ries]
+credits:
+  - {title: "The Mom Test: how to talk to customers and learn if your business is a good idea when everybody is lying to you", by: "Rob Fitzpatrick", url: "https://www.momtestbook.com/", used: "Customer slicing, who-where pairs, and the three tests for a starting group (profitable, easy to reach, rewarding to serve)"}
+  - {title: "EP 231: The Mom Test with Rob Fitzpatrick", by: "Aidan McCullen, The Innovation Show", url: "https://theinnovationshow.io/episode/ep-231-the-mom-test-with-rob-fitzpatrick/", used: "Looking for people who already pay for a makeshift fix as a sign of real demand"}

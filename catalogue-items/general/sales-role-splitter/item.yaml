@@ -1,0 +1,19 @@
+slug: sales-role-splitter
+name: "Sales role splitter"
+summary: "List who does which sales job. Get which job to split out first, who owns it and what to track."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [aaron-ross]
+credits:
+  - {title: "An Argument for Specialized Sales Teams (our summary of a David Skok interview)", by: "David Skok", used: "Splitting lead generation from closing, the handoff and the cost of lost context"}
+  - {title: "From Impossible to Inevitable, chapter 1 (publisher sample)", by: "Aaron Ross and Jason Lemkin", used: "Giving the first split to a dedicated lead generator and measuring qualified pipeline"}

@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Rebuilt 2026-10-20 from the 2019 recipe, the MenuGen post and the micrograd README and source [S3][S8][S12][S13].
+
 Andrej Karpathy is alive, and his views can change. Everything below comes from his own blog posts (2015 to 2025), his personal site, a code README and Wikipedia. Treat each view as "as of" the post it comes from. Nothing here tells you what he thinks about events after his December 2025 review.
 
 A note on method: Karpathy writes mostly on his blogs, on GitHub and on X, and teaches in long videos. We read his blog posts and pages, not his videos or social posts. His well-known 2017 essay "Software 2.0" blocked us when we tried to open it, so we use his own 2025 restatement of the idea instead [S10]. His work is in copyright, so this is our summary, with a few short quotes.
@@ -66,6 +68,8 @@ His 2016 PhD guide says a researcher's job is more than writing papers. Build to
 
 How he applied it: he designed CS231n at Stanford, which grew from 150 students in 2015 to 750 in 2017 [S1][S2]. He has released many open tools, from ConvNetJS for training networks in the browser to arxiv-sanity for sorting research papers [S2].
 
+**Teach a mechanism with a tiny engine you can read.** The micrograd README describes an engine for working out gradients that is about 100 lines, with a small network library of about 50 lines on top, working only on single numbers [S12]. Its source gives each value a data field, a gradient field and a record of which values made it, and each add or multiply attaches its own small backward step [S13]. The README says this is enough to train a whole network on a simple task, and it uses PyTorch only in the tests, as a reference to check the gradients [S12]. How he applied it: a later pure-Python version trains a full GPT-like model in one file, and he says everything else is just efficiency [S12].
+
 ## How he decides
 
 - Look at the raw data and the exact inputs to the model before trusting any number [S3].
@@ -77,6 +81,29 @@ How he applied it: he designed CS231n at Stanford, which grew from 150 students 
 - Ask whether a task can be checked automatically before betting AI will do it well [S10].
 - Pick problems that are important, fertile and easy to explain [S5].
 - Hold big claims about AI loosely, and say how unsure you are [S9].
+
+## Real decisions
+
+### Writing the autograd engine in about 100 lines
+He chose to work on single numbers so every add and multiply could be seen, giving up speed for something a learner can trace. The README calls it potentially useful for education [S12][S13].
+
+### Testing against a reference
+He wrote the tests to compare the engine's gradients with PyTorch's, so the small version was checked against a trusted one [S12].
+
+### Spending hours on the data before any model code
+His 2019 recipe starts with scanning thousands of examples by hand to find duplicates, bad labels and imbalance [S3].
+
+### Starting with dumb baselines and overfitting one batch
+He fixes the seed, checks the starting loss, trains an input-independent baseline and overfits a tiny batch before adding anything [S3].
+
+### Turning off default learning-rate decay
+He distrusts default decay because it can quietly drive the rate to zero, so he leaves it off and tunes it last [S3].
+
+### Leaving a model to train over winter break
+He tells the story of a model left running over a break that came back state of the art, as an argument for patience [S3].
+
+### Building MenuGen with no hand-written code (2025)
+He built an app that turns a photo of a menu into pictures of dishes, writing no code himself. The hard part was deployment, accounts and payments, and he caught that payments were matched by email and switched to unique user IDs. He asked services to be friendlier to AI helpers and said such apps are not ready for critical use [S8].
 
 ## Where he stood
 

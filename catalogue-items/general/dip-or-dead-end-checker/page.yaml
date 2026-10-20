@@ -1,0 +1,125 @@
+new_slug: dip-or-dead-end-checker
+name: "Dip or dead end checker"
+summary: "Paste a project you are tempted to quit. Get a call: push through, change course or stop, with the reason."
+job: think-and-decide
+thinking: high
+thinking_why: "The call rests on separating evidence from fear, and a wrong call costs months. It needs careful weighing."
+
+headline: "Dip or dead end checker"
+subhead: "Tell it about a project you want to quit and how long it has run. It separates evidence from fear, tests whether effort has been paying off, and calls it: push through, change course or stop. You get the reason, a date and one hard step."
+
+explain: |
+  Every project hits a low point where the work gets harder and the results slow down. Sometimes that is a dip: a stretch that ends if you keep going, and that scares off most of your rivals. Sometimes it is a dead end, where more effort changes nothing. From inside, the two feel the same, so people quit good projects and cling to bad ones.
+
+  This skill asks for the facts of the project, checks whether past effort has made the results better, and tests whether pushing through would put you among the best at something worth being best at. It marks which of your reasons are evidence and which are fear or a wish to compromise. Then it gives one call, a date, and a way out with no guilt if the answer is to stop.
+
+when:
+  - You have worked on something for months and every week feels harder.
+  - You are tempted to quit but cannot tell if it is wisdom or fear.
+  - You are keeping a project alive only because you have already put so much in.
+
+you_give:
+  - The project and what you want from it
+  - How long it has run and what has got harder
+  - Your numbers or signs of progress over time (optional)
+  - What a win would look like (optional)
+you_get:
+  - "A clear call: push through, change course or stop"
+  - Your reasons split into evidence and fear
+  - A date to check again, and one hard step if you push on
+  - A plan to quit without guilt, if the call is to stop
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the project, how long it has run and what has got harder. Include real numbers if you have them.
+  - Say what "best" would mean in this field and who the best are.
+  - Read the call, then the evidence list, before you decide.
+  - Put the check date in your calendar.
+
+how_it_works:
+  - title: Gets the facts
+    text: Writes down the project, its age and what got harder, with dates.
+  - title: Tests the effort
+    text: Asks whether more effort has made the results better so far.
+  - title: Tests the prize
+    text: Asks whether pushing through would make you the best at something worth being best at, in a way you can test.
+  - title: Splits evidence from fear
+    text: Marks each reason as evidence, fear or a wish to compromise.
+  - title: Makes the call
+    text: Decides if it is a dip that ends or a dead end that does not.
+  - title: Plans the exit or the push
+    text: For a dead end it sets the quit date and way out. For a dip it sets the one hard step and a check date.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE PROJECT
+  <what it is, how long it has run, what got harder>
+
+  THE CALL
+  <push through / change course / stop>
+  Reason: <one sentence tied to the evidence>
+
+  EVIDENCE
+  For pushing on: <facts>
+  For stopping: <facts>
+
+  WHAT IS FEAR OR COMPROMISE
+  <reason> -> <why it is not evidence>
+
+  BEST AT WHAT
+  <the thing, the field, and the test of whether you could lead it>
+
+  NEXT STEP
+  If push: <the one hard step> by <date>, check again on <date>
+  If stop: <quit date> | <how to end it well> | <what to do with the time>
+
+  MISSING
+  <facts that would change the call>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Numbers over time
+    how: Give figures from the start, the middle and now. A trend is much stronger evidence than a feeling.
+  - what: The field you compete in
+    how: Name who the best are and what they do. "Best" is only testable against a list.
+  - what: Your time and money limits
+    how: Say how much longer you can keep going. A dip you cannot afford to cross is a reason to change course.
+  - what: What you would do instead
+    how: Name the alternative. Quitting is easier to judge when you know what the time buys.
+
+judge:
+  - The call is one of push, change or stop, not "it depends".
+  - Evidence and fear are listed apart, with a reason for each fear.
+  - A check date is set.
+  - If the call is stop, there is a plan for how to quit.
+  - "\"Best at something\" is stated in a way you could test."
+
+test:
+  - Run it on a project you already quit. See if its call matches what you learned later.
+  - Run it twice on the same project. The call should not flip.
+  - Give it two projects at once and see whether it ranks them in a way you agree with.
+  - Take the call and act on the hard step. Check on the date it set.
+
+improve:
+  - Add the usual length of the dip in your field, so the skill knows what is normal.
+  - Add your own warning signs of a dead end, such as costs growing while results stay flat.
+  - Keep a list of projects you quit and why, and paste it in as a lessons file.
+  - Pair it with "Fear-setting planner" when the real block is a step you are avoiding.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing a list of reasons and facts is text work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "A simple sheet of results by month shows the trend the skill needs."}
+  inputs:
+    - "Monthly results since the start, even rough"
+    - "A list of the best people or firms in your field"
+    - "What the project costs you each month in money and hours"
+
+terms:
+  - term: Dip
+    meaning: A hard stretch that ends if you keep going, after which results improve.
+  - term: Dead end
+    meaning: A stretch that never gets better, however hard you push.

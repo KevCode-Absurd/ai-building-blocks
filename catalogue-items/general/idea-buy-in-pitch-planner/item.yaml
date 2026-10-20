@@ -1,0 +1,21 @@
+slug: idea-buy-in-pitch-planner
+name: "Idea buy-in pitch planner"
+summary: "Paste your idea and the people who must say yes. Get a story, a vision picture and a plan through four stages."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: question, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+  - {type: script}
+origin: rebuilt
+version: 1.0.0
+minds: [marty-neumeier, grace-hopper]
+credits:
+  - {title: "The Four Stages of Buy-In", by: "Marty Neumeier", url: "https://www.martyneumeier.com/the-four-stages-of-buy-in", used: "The stages an idea passes through, expecting resistance, the story and the vision picture"}
+  - {title: "Oral History of Captain Grace Hopper", by: "Interview with Grace Hopper, 1980", used: "Winning an idea through allies and the listener's needs when a new idea meets doubt"}

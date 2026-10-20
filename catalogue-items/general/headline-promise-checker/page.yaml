@@ -1,0 +1,125 @@
+new_slug: headline-promise-checker
+name: "Headline promise checker"
+summary: "Paste your headline and offer. Get whether it picks the right reader and promises a clear reward, with stronger versions."
+job: check-ads
+thinking: low
+thinking_why: "It applies a short fixed test to one line at a time."
+
+headline: "Headline promise checker"
+subhead: "Give it your headline and your offer. It checks whether the line picks out the right reader and promises a reward worth reading for. You get a score out of 100, what is weak and stronger versions to test."
+
+explain: |
+  A headline has two jobs. It has to pick out the people who care, and it has to give them a reason to read on. Most weak headlines do one of those or neither: they could sit on any product, or they say who they are for and nothing else.
+
+  This skill names the reader your headline should pick out, then checks the reward. It sorts the reward into a gain or a loss avoided, adds speed, ease or cost where your offer supports it, and runs a so-what test on the line alone. If the line teases, it checks the tease is tied to your product. Weak lines are rewritten and each change is listed.
+
+when:
+  - "Your headline sounds fine but nobody replies."
+  - "You have a slogan where a promise should be."
+  - "You want to compare a gain version with a loss version of the same promise."
+
+you_give:
+  - "Your headline, or the ad it belongs to"
+  - "Your offer facts: price, speed, terms, proof"
+  - "Who the reader is (optional)"
+  - "More than one headline to compare (optional)"
+you_get:
+  - "Whether the line picks out the right reader"
+  - "Whether the reward is clear in the line alone"
+  - "A score out of 100, with how it was worked out"
+  - "Stronger versions, each tied to your offer facts"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the headline alone, with no body copy."
+  - "Paste your offer facts, or say they are missing."
+  - "Test the gain and loss versions it writes."
+  - "Run it again on your top pick."
+
+how_it_works:
+  - title: "Names the reader"
+    text: "Writes who the headline should pick out."
+  - title: "Checks the reward"
+    text: "Asks if the line promises a reward worth reading for."
+  - title: "Sorts the reward"
+    text: "Marks it as a gain or a loss avoided."
+  - title: "Adds speed and ease"
+    text: "Adds how soon, how simply or how cheaply, where true."
+  - title: "Runs the so-what test"
+    text: "Reads the line alone and asks what a stranger would gain."
+  - title: "Ties the tease"
+    text: "Checks any curiosity points to the product."
+  - title: "Rewrites weak lines"
+    text: "Writes stronger versions and lists the changes."
+
+output_shape: |
+  SCORE: <n>/100 (reader 30, reward 30, specifics 20, tease tied 10, facts 10)
+
+  READER THE LINE SHOULD PICK OUT
+  <reader and situation>
+  Does it pick them out: <yes, partly or no>
+
+  REWARD
+  <reward> | Gain or loss avoided: <which>
+  So-what test: <pass or fail, and why>
+
+  SPEED, EASE OR COST
+  <what the offer supports, or MISSING>
+
+  TEASE TIED TO PRODUCT
+  <yes, no or not used>
+
+  STRONGER VERSIONS
+  1. <line> | Changed: <what> | Supported by: <offer fact>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "The offer facts"
+    how: "Add speed, price and terms. Without them it cannot add specifics and will say so."
+  - what: "Reader detail"
+    how: "Name the situation, not only a label. A parent with a sleepless baby beats parents."
+  - what: "Several headlines"
+    how: "Paste them together. It ranks them on the same test."
+  - what: "Gain or loss"
+    how: "Say if your field is a worry or a wish. It writes both sides either way."
+
+judge:
+  - "The reader is named."
+  - "The reward is clear in the headline alone."
+  - "Specifics are used where true."
+  - "Curiosity is tied to the product."
+  - "Every added claim is supported by the offer facts."
+
+test:
+  - "Run it on three headlines from past ads and see if the weakest scores lowest."
+  - "Show a friend only the stronger version and ask what it offers."
+  - "Run it twice on one headline. The score should stay within a few points."
+  - "Test the gain and loss versions against each other with a small keyed test."
+
+improve:
+  - "Add words your buyers use, so stronger versions sound like them."
+  - "Add a rule banning claims your field may not make."
+  - "Save your best headline's reader and reward to your brand file."
+  - "Pair it with a keyed test planner to choose between the versions."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Judging and rewriting one short line is work any strong chat AI does well with this skill."}
+    - {name: "An ad platform preview", why: "Shows how the line fits in the real placement."}
+  inputs:
+    - "Customer words about the problem"
+    - "The offer's price and terms"
+    - "A list of headlines from past ads and what they drew"
+
+terms:
+  - term: "So-what test"
+    meaning: "Reading the line alone and asking what a stranger would gain by reading on."
+  - term: "Reward"
+    meaning: "What the reader gets for reading: a gain, or a problem they avoid."
+  - term: "Tease"
+    meaning: "A line that holds back part of the answer to draw you in."

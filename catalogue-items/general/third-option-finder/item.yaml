@@ -1,0 +1,18 @@
+slug: third-option-finder
+name: "Third option finder"
+summary: "Paste the two plans people are stuck on. Get a third option that beats both, and a small test of it."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-covey]
+credits:
+  - {title: "A 3rd Alternative: A Super Solution for the Super Committee", by: "Stephen R. Covey (HuffPost)", url: "https://www.huffpost.com/", used: "Telling a third alternative from a compromise, and the open questions that lead to one"}
+  - {title: "Happy Holidays? Dealing with Difficult Family Relationships: The 3rd Alternative", by: "Stephen R. Covey (HuffPost)", url: "https://www.huffpost.com/entry/happy-holidays-dealing-wi_b_1144429", used: "Setting positions aside and asking if there is something better than anyone has thought of"}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Stephen Covey died in 2012 [S1]. His main ideas come from his books, above all *The 7 Habits of Highly Effective People* (1989), which we know here through reference pages that summarise it [S2][S3][S5]. His own words come from three short columns he wrote for HuffPost late in life, on schools, a budget fight in Washington and family conflict [S6][S7][S8]. He was a practising member of The Church of Jesus Christ of Latter-day Saints, and some critics read his "universal" principles as religious ones [S1][S3]. We note that where it matters. Nothing here tells you what he would think about events after 2012.
+A note on method: Stephen Covey died in 2012 [S1]. His main ideas come from his books, above all *The 7 Habits of Highly Effective People* (1989), which we know here through reference pages that summarise it [S2][S3][S5]. His own words come from three short columns he wrote for HuffPost late in life, on a budget fight in Washington, schools and family conflict [S6][S7][S8]. FranklinCovey's own page sets out the seven habits as the firm now teaches them [S5]. We have no interview or long talk of his, so his voice rests on those columns, and the results he reports in them are his own claims, not outside studies. He was a practising member of The Church of Jesus Christ of Latter-day Saints, and some critics read his "universal" principles as religious ones [S1][S3]. We note that where it matters. Nothing here tells you what he would think about events after 2012.
 
 ## In one paragraph
 
@@ -74,6 +74,28 @@ How he applied it: his later book *The 8th Habit* (2004) argued that being effec
 - Refuse the false choice between two options. Look for a third [S6].
 - Work on yourself before you try to fix others [S3][S7].
 - Treat trust as a balance you build with kept promises [S2].
+- Don't argue until the other person feels understood. Don't prepare a reply while they talk, and don't defend yourself [S8].
+- Ask open "what if" questions together before you pick a plan [S6].
+
+## Real decisions
+
+### Telling a President that accountability alone is not enough
+In the school column he says he told President George W. Bush that a hard focus on accountability could produce better test-takers instead of fuller people. His reason was that the root of the problem is each child's capacity to lead their own life, not the score. [S7]
+
+### Taking his habits into a school near closing
+He describes A.B. Combs Elementary in Raleigh, a struggling magnet school facing closure. Staff adopted the seven habits as a leadership theme, wove them into every subject and gave every child a leadership role, including children with special needs. He reports big gains in test passes, enrolment and discipline, and a later spread to more than 200 schools. The figures are his own account. [S7]
+
+### Telling a Congress committee to widen the mandate
+In 2011 the Super Committee faced a $1.2 trillion target and automatic cuts if it failed. Covey did not pick a side on tax or benefits. He said the deadlock came from different worldviews, and urged the members to put every option on the table, look for a solution better than any of them had imagined and act in good faith. He gave no policy detail. [S6]
+
+### Advising brothers to listen before they bargain
+In the family column, one brother lent $20,000, then refused more when it was spent. The business failed and they stopped speaking for years. The lender finally invited his brother to talk by the fire, listened without answering back and saw how deeply he had hurt him. Only then did he ask for a third way. They brought in an investor and the business grew. [S8]
+
+### Leaving the university to teach the work in business
+In 1984 he left Brigham Young University to found the Covey Leadership Center, to take his principle-centred approach to organisations. [S3]
+
+### Merging with a planner company
+His centre joined Franklin Quest in 1997 to form FranklinCovey. The record shows a hard result: the stock fell from about $20 to under $1 by early 2003, and the company later closed its stores and sold its paper planner business. [S3][S4]
 
 ## Where he stood
 

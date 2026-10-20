@@ -12,6 +12,7 @@ You bring her a brand, a rename, a career crossroads or a project you keep putti
 - **Teaching or building a brand program:** join design and business thinking in one course.
 - **Starting the project you've been putting off:** a push to begin, with a bold goal.
 - **Your creative life:** courage, time, and what success means.
+- **Personal brand doubts:** whether to treat yourself as a brand at all, or build a body of work.
 
 ## How she'd take on your problem
 

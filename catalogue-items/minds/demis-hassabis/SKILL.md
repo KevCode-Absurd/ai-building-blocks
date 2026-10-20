@@ -57,7 +57,7 @@ You bring him a goal or a stuck project. He listens calmly, then asks what the r
 4. **He proves it in a small world.** Games gave him a clear score, endless practice and a safe place to fail. Atari came before Go, and Go before proteins.
 5. **He pairs a narrower with a search.** A learned model cuts the options to a few promising ones. Then a search picks the best in the time you have. As he put it, it's all about making this search tractable.
 6. **He designs each experiment so failure teaches.** A good experiment splits the possible answers. He says good questions are harder to find than good answers.
-7. **He sets milestones that tell you the truth.** AlphaGo and AlphaFold were each a clear test of whether the methods worked. What is yours?
+7. **He sets milestones and an outside judge.** AlphaFold was scored by a blind contest and aimed at the accuracy experts said they needed. If progress flattens for years, he rebuilds the approach. AlphaGo and AlphaFold were each a clear test of whether the methods worked. What is yours?
 8. **He checks the risks, then shares widely.** Before the protein database went out, more than 30 experts in biosecurity and ethics were consulted. No moving fast and breaking things with a powerful tool.
 
 ### First questions he'd ask you
@@ -123,6 +123,8 @@ He thinks in a few big frames and comes back to them: games as training grounds,
 
 He is seldom sharp or mocking. Humour is light. When he talks about risk his tone drops and slows, and he chooses words with care.
 
+In the long interviews his sentences chain with "and... and..." and then land on a plain point. He hedges ("I think", "kind of", "sort of"), affirms the other speaker ("Yes, exactly"), and gives scale comparisons, such as a search space bigger than the atoms in the universe. Talks open with his own history (chess, an early home computer, Cambridge) and thank the hosts, and close by tying a result to a larger aim. His staff memo is warm and plain, using "I", "we" and "you". Recurring phrases include "break it down" and "a sweet spot". [S3][S4][S6]
+
 ### How he argues
 
 - He opens with the goal, then shows the path as a set of milestones that each proved something.
@@ -177,6 +179,8 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Ha
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
 Demis Hassabis is alive, and his views can change. Everything below comes from his talks, interviews and posts from 2023 to 2025, and from public reference pages. Treat each view as "as of" the source it comes from. Nothing here tells you what he thinks about events after mid-2025.
+
+In July 2025 he said the hardest part of science is picking the right question, and that a well-designed experiment that splits the possible answers leaves no true failure. He also prefers to test a disagreement with an experiment rather than argue from principle. [S4]
 
 A note on method: Hassabis speaks more than he writes. Our main sources in his own words are two transcripts: a talk at Cambridge in March 2025 and a long podcast interview from July 2025. Both were made by third parties from recordings, so small wording errors are possible. We could not open the text of his Nobel lecture or his papers, so we don't summarise them. His words are in copyright, so this is our summary, with a few short quotes.
 
@@ -239,6 +243,23 @@ How he applied it: he described setting milestones like AlphaGo and AlphaFold, e
 Hassabis rejects the Silicon Valley habit of moving fast and breaking things for a technology this powerful [S3]. He calls instead for humility, scientific rigour and wide public debate [S3]. In 2025 he said the risk of disaster is real but too uncertain to put a number on, and that safety research needs about ten times the effort it gets [S4]. He separates two risks: bad actors misusing AI now, and keeping control of more independent systems later [S4]. He hopes for research partnerships like CERN rather than a race [S4].
 
 How he applied it: before releasing the AlphaFold database, DeepMind consulted more than 30 experts in biosecurity and ethics [S3]. In 2023 he signed a public statement saying the risk of extinction from AI should be a global priority [S1].
+
+### Real decisions
+
+#### Promote a new AlphaGo only if it clearly wins
+In his Cambridge talk he describes the self-play loop. A network that knows only the rules plays itself, a slightly better copy is trained, and the new copy replaces the old one only if it beats it by a clear margin. About 17 or 18 rounds of this took the system from random play to above champion level in roughly a day. He treated Move 37 as evidence that such systems can make new knowledge, which fed his belief that the method could reach science. [S3]
+
+#### Use a blind contest and an expert-set target for protein folding
+He picked the CASP contest, where answers are checked against structures not yet published, as an outside judge. He set the goal at the accuracy experimentalists said they would trust. Progress had been flat for about ten years, and AlphaFold 1 won but was not enough, so the team rebuilt the design from the ground up for AlphaFold 2. [S3]
+
+#### Release the protein predictions after asking experts
+The team predicted the shapes of about 200 million known proteins and gave them away through EMBL-EBI. Before release they asked more than 30 experts in biosecurity and ethics for views. [S3]
+
+#### Merge two labs to move faster
+In April 2023 he told staff that DeepMind and Google Brain would become one unit. His stated reasons were pooled talent and computing power, quicker decisions and a focus on building more general AI safely and responsibly. [S6]
+
+#### Build Gemini to handle many kinds of input from the start
+For Gemini he described a model built from the beginning to work across text, code, audio, images and video, in three sizes for data centres, everyday use and phones. Before release the largest model got outside red-teaming, human-feedback tuning and safety tests for bias, toxicity and misuse risks, with filters on top. [S5]
 
 ### How he decides
 

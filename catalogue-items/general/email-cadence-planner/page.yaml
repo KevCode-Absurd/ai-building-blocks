@@ -1,0 +1,125 @@
+new_slug: email-cadence-planner
+name: "Email cadence planner"
+summary: "Paste your list size, send history and offers. Get a weekly email plan, a story for each, the offer in the P.S."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It must fit a pace to what the owner can keep and judge what each email should teach."
+
+headline: "Email cadence planner"
+subhead: Give it your list size, how often you email now, what sells, and your offers. It sets a pace you can keep, gives each email one story or tip, puts the offer in the P.S., and writes subject lines. You get a weekly plan with a way to track it.
+
+explain: |
+  Many owners email rarely and only when they have something to sell. Readers forget them, and each email has to carry a whole pitch. A steady pace, with each email useful on its own, keeps your name in the inbox and makes the offer feel like a bonus.
+
+  This skill notes your list size, your current pace and what sells when you send. It raises the pace to a rate you can keep, gives each email one story or tactic the reader can use today, and puts the offer in the P.S. rather than the body. It writes subject lines that make a busy reader curious, plans for people to leave, and sets what to track per send.
+
+when:
+  - You email your list once a month or only when you have a sale.
+  - Your emails are all offer, and open and reply rates are falling.
+  - You want a weekly plan you can keep without running out of ideas.
+
+you_give:
+  - Your list size and how often you email now
+  - What sells when you send, and your current offers
+  - A persona or buyer description (optional)
+  - Your brand file or past emails (optional)
+you_get:
+  - A pace you can keep and a weekly plan
+  - A story or tactic for each email, with the offer in the P.S.
+  - Subject lines for each email
+  - What to track per send and what to expect from unsubscribes
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your list size, your current pace and your offers. Add past emails if you have them.
+  - Say how many emails per week you can really write and send.
+  - Write the first two from the plan and send them.
+  - Check opens, replies, sales and unsubscribes after each send.
+
+how_it_works:
+  - title: Notes the starting point
+    text: Records list size, current pace and what sells when you send.
+  - title: Sets a pace you can keep
+    text: Raises the pace to a rate the owner can sustain, in a range you choose.
+  - title: Gives each email one point
+    text: Assigns one story or tactic the reader can use today to each email.
+  - title: Puts the offer in the P.S.
+    text: Places the offer in the P.S., not in the main body.
+  - title: Writes subject lines
+    text: Writes subject lines that make a busy reader curious.
+  - title: Plans for unsubscribes
+    text: Lets uninterested people leave and tracks unsubscribes calmly.
+  - title: Sets the tracking
+    text: Tracks sales and replies per send and says what to adjust.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  STARTING POINT
+  <list size, current pace, what sells>
+
+  THE PACE
+  <emails per week> because <what you can keep>
+
+  WEEKLY PLAN
+  Email <n> | Day: <day>
+    Subject: <line>
+    Point: <story or tactic the reader can use today>
+    P.S. offer: <offer line>
+  ...
+
+  UNSUBSCRIBES
+  <what to expect and how to read it>
+
+  WHAT TO TRACK
+  <per send: opens, replies, sales, unsubscribes> and what to change
+
+  MISSING
+  <facts needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your real capacity
+    how: Say how many emails you can write each week. The plan stays at that pace.
+  - what: Stories you have
+    how: List stories from your work or customers. Each email draws on one, so none are invented.
+  - what: Offers
+    how: List every offer with its price and end date. The P.S. uses only these.
+  - what: Past emails
+    how: Paste two or three. It matches your voice and avoids repeating topics.
+
+judge:
+  - Each email has a point that stands apart from the offer.
+  - The offer sits in the P.S.
+  - Subject lines are not generic.
+  - The pace is one the owner can keep.
+  - No sales figure is promised.
+
+test:
+  - Send the first two emails and check replies, not only opens.
+  - Compare the P.S. offer with your old all-offer emails over four sends.
+  - Run it twice. The pace and the structure should stay close.
+  - Have a friend read the subject lines and say which ones they would open.
+
+improve:
+  - Add your customer questions, so each email answers a real one.
+  - Add stories from your own work, so the plan does not rely on invented ones.
+  - Save subject lines that worked to your brand file.
+  - Pair it with "Product how-to guide writer" for email content that teaches.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning a schedule and drafting subject lines is text work any strong chat AI does well with this skill."}
+    - {name: "Your email platform's reports", why: "Opens, replies, clicks and unsubscribes per send are in the platform, and the plan needs them."}
+  inputs:
+    - "Your last ten emails with their results"
+    - "Customer questions and stories"
+    - "A list of offers with end dates"
+
+terms:
+  - term: Cadence
+    meaning: How often you send, and on which days.
+  - term: P.S.
+    meaning: The short note after your signature, where the offer goes in this plan.

@@ -1,0 +1,127 @@
+new_slug: launch-readiness-seam-checker
+name: "Launch readiness seam checker"
+summary: "Describe a launch, migration or release. Get a readiness score, the joins between parts and a run-through plan."
+job: build-software
+thinking: high
+thinking_why: "It must trace what passes between many parts and find gaps, which needs careful reasoning."
+
+headline: "Launch readiness seam checker"
+subhead: Describe a launch, migration, event or release that must work the first time. It lists every part, checks each join between them, tests priorities and overload plans, and hands back a readiness score out of 100 with a run-through plan.
+
+explain: |
+  Most launch failures are not inside a part. They happen at the joins, where one part hands data, timing or priority to another. A system, a team, a supplier and a plan each work on their own and still fail together. Fixing the parts does not fix the joins.
+
+  This skill lists every part, including people, hardware and plans, and marks each place two parts meet and what crosses. It checks that every job has its own priority, that the overload plan says what is dropped and what is kept, that every change has a reason and an approver, and that one person reads the final package by eye. It then scores readiness out of 100 and plans a full run-through with a real person in the loop.
+
+when:
+  - You are about to launch something that cannot be undone easily.
+  - You are moving to a new system, supplier or process.
+  - Several teams own parts of the same release and no one owns the joins.
+
+you_give:
+  - What is launching, the date and what success looks like
+  - The parts, teams and suppliers involved, as far as you know them
+  - Change records, plans or earlier problems (optional)
+you_get:
+  - A list of parts and every join between them, with what crosses each
+  - A readiness score out of 100 and how it was worked out
+  - The priority and overload plan, and gaps in change control
+  - A run-through plan and who reads the final package
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the launch and list the parts and teams. Add what you worry about most.
+  - Fill in any joins it marks as missing before you trust the score.
+  - Fix the weakest join first, then ask it to score again.
+  - Run the full run-through it plans with a real person before launch.
+
+how_it_works:
+  - title: Lists every part
+    text: Includes systems, hardware, people, suppliers and plans.
+  - title: Marks the joins
+    text: Marks each place two parts meet and what passes between them, such as data, timing or priority.
+  - title: Sets priorities
+    text: Gives every job its own priority so order is never left to chance.
+  - title: Plans for overload
+    text: Decides what is dropped and what must never be dropped when everything is too much.
+  - title: Controls change
+    text: Requires a written reason and an approval for every change.
+  - title: Names the reader
+    text: Names one person to read the final package by eye for join errors.
+  - title: Plans the run-through
+    text: Plans a full start-to-finish run with a person in the loop, and scores readiness.
+
+output_shape: |
+  THE LAUNCH
+  <what, when, what success means>
+
+  PARTS
+  <part> | owner: <name or MISSING>
+
+  JOINS
+  <part A> to <part B> | passes: <data / timing / priority> | checked: <yes / no / MISSING>
+
+  PRIORITIES
+  <job> | priority: <rank> | ties: <none or list>
+
+  WHEN IT IS OVERLOADED
+  Dropped first: <list>  Never dropped: <list>
+
+  CHANGE CONTROL
+  <change> | reason: <text> | approved by: <name or MISSING>
+
+  FINAL READER
+  <person and what they read>
+
+  READINESS SCORE: <n>/100
+  How it was worked out: <six checks, each full, half or none, shown>
+
+  RUN-THROUGH PLAN
+  <steps from start to finish, who is in the loop>
+
+  MISSING / CHECKS MISSED
+  <lists>
+
+tweaks:
+  - what: Completeness of the parts list
+    how: Include people, suppliers and rules, not only systems. Missing parts mean missing joins.
+  - what: What passes at each join
+    how: Say what moves between parts. Without it the join is marked as unchecked.
+  - what: Your busiest moment
+    how: Describe peak load. The overload plan is built around it.
+  - what: Change history
+    how: Paste the change log. Changes with no reason or approver are flagged.
+
+judge:
+  - Every join is listed with what crosses it.
+  - Every job has one priority and none tie.
+  - The overload plan names what is dropped and what is kept.
+  - Every change has a reason and an approver.
+  - A full run-through is planned with a real person.
+
+test:
+  - Run it on a past launch that failed. See if it points to the join that broke.
+  - Leave out one team and see if it flags the missing joins.
+  - Run it twice on the same input. The score should differ by only a few points.
+  - Do the run-through it plans on a small version and count the problems found.
+
+improve:
+  - Add your usual parts, such as payment, email and stock, to step 1 so none are forgotten.
+  - Add your change approval rule to step 5.
+  - Add the questions you ask at every launch review to the join checks.
+  - Pair it with "Error warning and recovery designer" for what happens when a join fails.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Tracing joins and writing a plan from a description is text work any strong chat AI does."}
+    - {name: "A whiteboard or diagram tool", why: "Drawing the parts and arrows makes missing joins easy to see."}
+  inputs:
+    - "A diagram of how the parts connect"
+    - "The change log for the launch"
+    - "Notes from a past launch that went wrong"
+
+terms:
+  - term: Seam
+    meaning: A join between two parts where data, timing or priority passes from one to the other.
+  - term: Run-through
+    meaning: A full practice of the launch from start to finish, with a real person in the loop.

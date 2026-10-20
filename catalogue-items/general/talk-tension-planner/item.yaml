@@ -1,0 +1,19 @@
+slug: talk-tension-planner
+name: "Talk tension planner"
+summary: "Paste your talk or pitch outline. Get it reordered so the room knows the stakes early, with one saved twist."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [alfred-hitchcock]
+credits:
+  - {title: "Alfred Hitchcock and Francois Truffaut explain surprise versus suspense", by: "Alfred Hitchcock and Francois Truffaut, interview", used: "Telling the audience the stakes early so they watch with worry, rather than surprising them with a jolt"}
+  - {title: "Alfred Hitchcock: my own methods", by: "Alfred Hitchcock, Sight and Sound, 1937", used: "Cutting what the audience does not need and letting pictures carry what words would only explain"}

@@ -1,0 +1,123 @@
+new_slug: product-market-fit-checker
+name: "Product-market fit checker"
+summary: "Describe your product, market and early customers. Get a fit score out of 100 and the one thing to change first."
+job: test-an-idea
+thinking: high
+thinking_why: "It weighs market, pull and evidence against each other and has to pick one lever with no single right answer."
+
+headline: "Product-market fit checker"
+subhead: Give it your product, the market you sell into and what your first customers did. It judges the market before the product, looks for signs that customers pull instead of you pushing, and gives a fit score out of 100 with the one thing to change first.
+
+explain: |
+  Founders often work on the product when the problem is the market, or credit their own effort for sales the market was handing them. Product-market fit means a product that a real market wants, so the check starts with the market, not with the team or the features.
+
+  This skill sizes the market and its growth, then looks for pull: orders arriving faster than you can fill them, customers telling others, a sales cycle that is short. It asks whether the team is being credited for something the market caused. If fit is missing, it picks one lever, and it writes the next test and the result that would change its verdict.
+
+when:
+  - Sales are slow and you can't tell if the product, the pitch or the market is the problem.
+  - You have some early customers and want to know if that means you have fit.
+  - You are about to hire or spend on growth and want to know if the base is solid.
+
+you_give:
+  - What you sell, who buys it and roughly how many such buyers exist
+  - What early customers did, such as orders, repeat buys and referrals
+  - Customer reviews or messages (optional)
+  - Sales or usage numbers (optional)
+you_get:
+  - A verdict on fit and a score out of 100, with how it was worked out
+  - Each claim about fit tied to a number or a customer example
+  - The one lever to change first, and why not the other three
+  - The next test and the result that would change the verdict
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your product, your market and your early customers. Give numbers where you have them.
+  - Paste reviews or sales figures if you have them. Mark anything you are guessing.
+  - Read the verdict and the lever. Run the test it names before you change the plan.
+
+how_it_works:
+  - title: Sizes the market
+    text: Counts the possible customers and how fast that number is growing, and marks any guess as MISSING.
+  - title: Looks for pull
+    text: Checks for orders ahead of capacity, word of mouth and quick sales, against slow deals and stalled signups.
+  - title: Separates market from team
+    text: Asks whether the results come from the market pulling or from the team pushing hard.
+  - title: Scores the fit
+    text: Gives a score out of 100 from market, pull and evidence, and shows the working.
+  - title: Picks one lever
+    text: "If fit is missing, chooses one of four moves: change the people, rewrite the product, move market, or raise money."
+  - title: Writes the next test
+    text: Names the next test and the result that would change the verdict.
+
+output_shape: |
+  VERDICT
+  <fit / not yet / no fit>, score <n>/100
+
+  HOW THE SCORE WAS WORKED OUT
+  Market (30): <n> | <number or example>
+  Pull (30): <n> | <number or example>
+  Evidence quality (20): <n> | <note>
+  Team versus market (20): <n> | <note>
+
+  WHAT THE EVIDENCE SAYS
+  <claim> | <number or customer example>
+
+  THE LEVER
+  <people / product / market / money> because <reason>
+  Not the others because <reason>
+
+  NEXT TEST
+  <test> | Changes my verdict if: <result>
+
+  MISSING
+  <facts that would sharpen the verdict>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Market size figure
+    how: Give a count of possible buyers and a growth rate. A guess marked as a guess works, a blank leaves that part unscored.
+  - what: Customer behaviour, not opinion
+    how: Report what customers did, such as reorders and referrals, not what they said they liked.
+  - what: Time window
+    how: Say how long you have been selling. Two weeks of sales and two years of sales read very differently.
+  - what: Reviews
+    how: Paste raw reviews. It reads the reasons people bought and who they told.
+
+judge:
+  - The market is judged before the team and the product.
+  - Each claim of fit has a number or a customer example next to it.
+  - Only one lever is named, with a reason the other three are not the pick.
+  - The score shows its working and says what it measures.
+  - A result that would change the verdict is written down.
+
+test:
+  - Run it on a product you know has fit and one you know does not. The scores should be far apart.
+  - Give it the same facts twice. The verdict and lever should stay the same.
+  - Remove the market size and see that it asks for it and marks the part as MISSING.
+  - Run the test it recommends, then bring the result back and check the verdict moves.
+
+improve:
+  - Edit the score weights if your business sells on repeat orders or on one-off sales.
+  - Add the signs of pull that are normal in your field, such as waiting lists or demo requests.
+  - Save each verdict with its date so you can see if the score moves after changes.
+  - Pair it with "Startup idea tester" before you have any customers.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing market, pull and evidence is reasoning over text that any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Holds the sales and reorder numbers the verdict leans on."}
+  inputs:
+    - "A count of repeat buyers over time"
+    - "Where new customers heard about you"
+    - "Notes on lost deals and why they were lost"
+    - "A rival's growth or press coverage"
+
+terms:
+  - term: Product-market fit
+    meaning: A product that a real market wants enough to buy without heavy pushing.
+  - term: Pull
+    meaning: Customers arriving and buying on their own, faster than you expected or can serve.
+  - term: Lever
+    meaning: One of the four moves you can make when fit is missing, which are people, product, market or money.

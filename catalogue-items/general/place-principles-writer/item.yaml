@@ -1,0 +1,18 @@
+slug: place-principles-writer
+name: "Place principles writer"
+summary: "Describe your space or service. Get a statement of who it serves and what it must never be."
+category: general
+type: skill
+role: make
+job: design
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: design_direction, required: true}
+minds: [hayao-miyazaki]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "Statement of intent for the Ghibli Museum, Mitaka", by: "Hayao Miyazaki", used: "Who the place is for, what it should feel like, what it must not be, how visitors move, and a ten-year plan for the surroundings"}

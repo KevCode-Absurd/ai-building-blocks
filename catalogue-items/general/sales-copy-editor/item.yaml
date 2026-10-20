@@ -18,6 +18,7 @@ uses: [anti-ai-slop-copy-editor, sales-copy-readiness-checker, clear-before-clev
 origin: rebuilt
 source_ids: [CES-022, CES-024]
 version: 2.1.0
+minds: [jakob-nielsen, claude-hopkins, david-ogilvy, joseph-sugarman, victor-schwab]
 credits:
   - {title: "How Users Read on the Web", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/how-users-read-on-the-web/", used: "Most readers scan and distrust promotional language; concise, scannable, objective text tests better (the skim and doubt reads)"}
   - {title: "F-Shaped Pattern of Reading on the Web", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/", used: "Put the point first in each block; subheads that say something"}

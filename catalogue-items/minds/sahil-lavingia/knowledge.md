@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Sahil Lavingia is alive, and views can change. Everything below comes from his essays from 2019 to 2025, a 2021 interview about his book The Minimalist Entrepreneur, his home page and a reference page on Gumroad. Date each view to its source: as of 2019, 2021, 2024 or 2025. Most numbers here are his own reports. His exact birth date isn't in our sources. He was 19 in May 2012, so he was born around 1993 [S2]. In 2025 he worked briefly for the U.S. government. This mind covers what he wrote about building software there, not the politics around it.
+Sahil Lavingia is alive, and views can change. Everything below comes from his essays from 2019 to 2025, a 2021 interview about his book The Minimalist Entrepreneur, his home page and a licensed Wikipedia article on Gumroad. The local folder holds the 2019 and 2021 essays [S2][S3] only as link records, plus the Gumroad article [S1]; lines tagged to the interview, the dividends essay and the 2025 essay come from our earlier read of those pages. We have not read the book itself. Date each view to its source: as of 2019, 2021, 2024 or 2025. Most numbers here are his own reports. His exact birth date isn't in our sources. He was 19 in May 2012, so he was born around 1993 [S2]. In 2025 he worked briefly for the U.S. government. This mind covers what he wrote about building software there, not the politics around it.
 
 ## In one paragraph
 
@@ -74,6 +74,36 @@ How he applied it: after the layoffs he ran support and fixed bugs himself, ofte
 - Write it down so others can decide without you [S4].
 - Don't sell just because investors push. Ask what happens to the product [S2].
 - Share the numbers and the setbacks in public [S2][S4].
+
+## Real decisions
+
+### Building Gumroad in a weekend
+
+He had wanted to sell an icon he designed and found the effort of selling directly was far too high [S1]. He prototyped Gumroad over a weekend and launched it on Hacker News, where it drew more than 52,000 visitors on its first day [S2]. The speed matches his later advice to do it by hand first and polish later [S2][S4].
+
+### Raising venture money and aiming for a billion
+
+Gumroad announced a $1.1 million seed round in February 2012 and a $7 million Series A led by Kleiner Perkins three months later [S1]. He aimed for a billion-dollar company [S2]. He later called that goal arbitrary and a poor measure of impact [S2].
+
+### Laying off most of the team and refusing to sell
+
+Growth stalled and a bigger round never came, so by 2016 he had laid off almost everyone [S2]. In June 2015 Gumroad lost about $351,000 on $89,000 of revenue, and a year later it made about $10,000 on $176,000 [S2]. He chose not to sell or shut down, because he felt accountable first to creators, then to staff, then to investors [S2].
+
+### Publishing the company's numbers
+
+From April 2018 he published Gumroad's monthly numbers in public [S2]. He said honest writing about struggles was his best marketing, and that sharing real numbers helps other founders [S2][S4]. The company also holds public board meetings [S3][S5].
+
+### Dropping meetings and deadlines
+
+From about 2016 the team stopped holding meetings and setting deadlines [S3]. Work shipped in small pieces when ready, and people talked in writing and answered within about a day [S3]. By 2021 about 25 people contributed, none full-time, paid by the hour at the same rates worldwide [S3]. He warned that this suits some work and not all, and that contractors carry costs such as health care [S3].
+
+### Moving every creator to one flat fee
+
+When growth slowed after 2021 and Gumroad lost $1 million in 2022, he moved all creators to a flat 10% fee in 2023 [S5]. His reason was to make the business sustainable [S5].
+
+### Paying out dividends and stock
+
+In 2024 he wrote that hourly pay can't build wealth the way owning a share can, so freelancers could take up to 80% of their pay in stock options [S5]. The company set out to pay 60% of net income as dividends, with a first payout of $5.34 million in May 2024 [S5].
 
 ## Where he stood
 

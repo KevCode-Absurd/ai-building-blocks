@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "The Inescapable Logic of Ad Fraud (2021)", by: "Bob Hoffman", url: "https://adcontrarian.blogspot.com/2021/01/the-inescapable-logic-of-ad-fraud.html", kind: own-words}
   - {n: 4, title: "How Adtech Helped To Radicalize The US (2021)", by: "Bob Hoffman", url: "https://adcontrarian.blogspot.com/2021/09/how-adtech-helped-to-radicalize-us.html", kind: own-words}
   - {n: 5, title: "Bob Hoffman's website (biography)", by: "Type A Group", url: "https://www.bobhoffmanswebsite.com/", kind: reference}
+  - {n: 6, title: "Inside the Black Box: How Marketers Waste Billions on Online Advertising (2024)", by: "Bob Hoffman, Type A Group", url: "https://d11n7da8rpqbjy.cloudfront.net/inboundmedia/31065526_1737728579396Inside_The_Black_Box_-_Bob_Hoffman.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short, blunt blog post on why a small business shouldn't panic about missing the latest social media platform."}
   - {kind: use, prompt: "A vendor says their AI tool will 'personalise every ad for every customer and triple our ROI.' Write five sharp questions to ask them."}

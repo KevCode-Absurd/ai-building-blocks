@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Jerry Seinfeld on The Howard Stern Show, 30 August 2010 (show rundown)", by: "Jerry Seinfeld, The Howard Stern Show", url: "https://www.howardstern.com/show/2010/08/30/jerry-seinfeld-patches-things-up-rundowngallerymodel-3555/", kind: own-words}
   - {n: 6, title: "Jerry Seinfeld talks comedy for 90 minutes with Howard Stern (2013)", by: "The Comic's Comic", url: "https://thecomicscomic.com/2013/06/27/jerry-seinfeld-talks-comedy-for-90-minutes-with-howard-stern/", kind: secondary}
   - {n: 7, title: "Jerry Before Seinfeld", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jerry_Before_Seinfeld", kind: reference}
+  - {n: 8, title: "The Tim Ferriss Show #485: Jerry Seinfeld (transcript, 2020)", by: "Tim Ferriss, with Jerry Seinfeld", url: "https://tim.blog/2020/12/09/jerry-seinfeld-transcript/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a 60-second clean stand-up bit about self-checkout machines at the supermarket."}
   - {kind: use, prompt: "Cut this 400-word welcome email for new gym members down to the lines that actually earn their place, and make the opening line funny."}

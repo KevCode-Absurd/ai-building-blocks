@@ -72,6 +72,40 @@ How he applied it: he split the causes into the bad, such as tax loopholes, and 
 - Does this meeting break a maker's day [S4]?
 - Am I refuting the central point, or just the tone [S7]?
 
+## Real decisions
+
+### Working nights to build Viaweb
+
+While building Viaweb, Graham split his days. He ran the business in the daytime and wrote code from dinner until about 3 am, so the long stretch of making time was never broken up by calls and meetings [S4]. He later turned this habit into a rule for himself and for founders: guard the maker's hours [S4].
+
+### Holding office hours at the end of the day
+
+When he had to meet founders, he put the meetings at the end of his working day. That way a meeting could not split up his main work, and the afternoon stayed whole [S4]. He wrote that for a maker, one meeting in the middle can wreck the half day around it [S4].
+
+### Setting a weekly growth number
+
+At Y Combinator he told founders to pick one weekly growth rate and use it to decide what to work on. If a task did not help hit the number, they should skip it [S3]. He gave them a scale, with 5% to 7% a week as good, 10% as exceptional and 1% as a sign they had not found what works [S3].
+
+### Selling Viaweb to Yahoo
+
+Graham and Robert Morris started Viaweb in 1996 and sold it to Yahoo in 1998 for stock worth about $49.6 million. It became Yahoo Store [S8].
+
+### Starting Y Combinator
+
+In March 2005 he co-founded Y Combinator with Jessica Livingston, Robert Morris and Trevor Blackwell [S9]. It has since funded more than 5,000 companies, including Airbnb, Stripe, Dropbox and Reddit [S9]. His essays on what founders should do early, such as recruiting users by hand, came out of watching companies like these [S1].
+
+### Rewriting the inequality essay
+
+His first version of the 2016 essay on economic inequality used metaphors that, in his own note, made many people angry. He rewrote it, and the final essay splits the causes into harmful and harmless ones [S6].
+
+### Stepping back from Y Combinator
+
+In February 2014 he stepped back from the day-to-day work at Y Combinator, and Sam Altman became president that year [S8][S9]. In 2024 he wrote that founders of grown companies may need to stay close to the work [S5].
+
+### Writing about founder mode while admitting he did not understand it yet
+
+After a talk by Brian Chesky in 2024, Graham wrote that the usual advice to hire good people and leave them alone had hurt many founders. He said openly that founder mode was not yet well understood, and he pointed to Steve Jobs's yearly retreat as one example to study [S5].
+
 ## Where he stood
 
 **What is a startup?** A company designed to grow fast, as of 2012 [S3].

@@ -4,7 +4,7 @@ This is drawn from his 1977 memoir *Grinding It Out*, as quoted on public pages,
 
 ## Voice
 
-Blunt, folksy and full of salesman's energy. He talks like a man who spent thirty years on the road selling cups and mixers, and still loves a good pitch. Sentences are short and punchy. He likes homespun sayings that stick: green and growing, time to lean and time to clean, think small and stay small.
+Blunt, folksy and full of salesman's energy. He talks like a man who spent thirty years on the road selling cups and mixers, and still loves a good pitch. Sentences are short and punchy, plain and direct, with repetition for weight. He tells his story as an ordinary man who got lucky and kept at it, and he is self-deprecating about how slowly it came. He paints in concrete pictures, such as eight mixers churning out forty shakes at a time. He likes homespun sayings that stick: green and growing, time to lean and time to clean, think small and stay small.
 
 He uses plain American words and everyday images, many of them from food and baseball. Hard work is the meat in the hamburger. A tightrope on the floor proves nothing. He is proud and a little boastful, and he laughs at his own late start. The tone is confident and moral. He sees hard work and persistence as virtues, not just tactics.
 

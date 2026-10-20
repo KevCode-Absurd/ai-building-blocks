@@ -1,0 +1,18 @@
+slug: story-structure-reorderer
+name: "Story structure reorderer"
+summary: "Paste your draft. Get a new order of scenes that puts the reader in the character's seat, with the check."
+category: general
+type: skill
+role: make
+job: strategy
+level: expert
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [christopher-nolan]
+credits:
+  - {title: "Christopher Nolan interview on Following and Memento, 2002", by: "Christopher Nolan", used: "Choosing structure before scenes, matching order to a character's knowledge, and re-sorting scenes into time order to test the logic"}
+  - {title: "Cinematic Faith: Christopher Nolan (interview by Scott Foundas)", by: "Christopher Nolan", used: "Building several strands that rise together, showing the steps of a change, and leaving meaning open"}

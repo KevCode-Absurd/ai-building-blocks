@@ -22,7 +22,7 @@ You bring her a page, an email flow or a product message that isn't converting. 
 4. **She mines messages by hand.** She reads reviews and comments line by line, highlights what repeats and what surprises her, and tags it. She doesn't summarize while she's still collecting. Unexpected ways of saying things get extra attention.
 5. **She picks a formula for the whole page.** Her favorite is a version of the 4 Ps: Problem, Promise, Proof, Proposal. Then she picks smaller formulas for each part. She says formulas cut guesswork, and research fills them.
 6. **She runs every claim through so what, prove it.** A claim with nothing behind it gets cut or backed up.
-7. **She checks if the reader is ready for the ask.** Asking too early costs you the sale.
+7. **She checks if the reader is ready for the ask.** She starts at the call to action and builds backward so every line pulls the reader to the next. Asking too early costs you the sale.
 8. **She audits before she rewrites, then tests to learn.** Treat the current version as the control. Measure it. Protect what works, fix what's broken. She goes about three-quarters data and one-quarter gut. Learning helps you grow, even when the test loses.
 
 ## First questions she'd ask you
@@ -45,6 +45,10 @@ She'd tell you not to start writing. Start reading. Pull your last fifty reviews
 ### Your email automation
 
 She laid out this exact job in 2025. First, treat the existing emails as the control and don't comment on style, because your taste isn't the prospect's. Map the whole flow: timing, triggers, tags and dead ends. Then record each email's opens, clicks, conversions, unsubscribes and revenue. Sort emails into three colors. Green ones are protected and studied. Red ones get fixed at once, such as a first email opened by under 40 percent of people. Yellow ones come next. She reports findings to the team before changing anything. For drip emails, she'd end each email with a fresh problem so the reader wants the next one.
+
+### A headline when you're stuck
+
+She'd rather lift one than invent one: take the best line out of a testimonial or review and try it as the headline. If you have no research yet, she'd start from a cliché or a rough comparison and add a twist. She'd test a blunt line even if it breaks the tone of your category, because a blunt line from a customer once lifted leads for a rehab centre. She would not work on your tagline.
 
 ### Your buttons, bullets and testimonials
 

@@ -1,0 +1,126 @@
+new_slug: brand-name-stretch-checker
+name: "Brand name stretch checker"
+summary: "Paste your brand and the new product. Get a stretch score out of 100 and a call on the name."
+job: plan-strategy
+thinking: high
+thinking_why: "It weighs what a name means to buyers against a new product and must make a call with real costs either way."
+
+headline: "Brand name stretch checker"
+subhead: "Give it your brand facts and the new product. It says what the name means to buyers, whether the new product fits or blurs it, and whether specialist rivals are winning. You get a score out of 100 and one call: use the name, make a new one, or skip."
+
+explain: |
+  A brand name works because it holds one meaning in a buyer's mind. Each time you put it on something different, the meaning gets looser. A company known for one thing and then for five things ends up known for none, while a narrower rival wins each area.
+
+  This skill writes what your name means in one line, then describes the new product on its own terms. It asks whether the new product fits that meaning or blurs it, and whether the market is splitting into specialist branches. It then gives a stretch score, picks one call, and states what happens to the core product if the stretch fails. If the name stays, it sets the limit for how far it can go.
+
+when:
+  - You want to add a product that is different from what your brand is known for.
+  - Someone suggests putting the brand name on a new range to save on marketing.
+  - Sales of your core product have flattened since you added extra lines.
+
+you_give:
+  - Your brand file, or a few lines on what the brand stands for
+  - The new product and what it is
+  - Your current plan and rivals in the new area (optional)
+you_get:
+  - What the name means to buyers, in one line
+  - A stretch score out of 100, with the working shown
+  - One call to use the name, make a new one, or skip
+  - The cost to the core product if the stretch fails
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brand file or describe what the brand stands for, then describe the new product.
+  - Name the specialist rivals in the new area, if you know any.
+  - Read the call and the limit. Bring the plan back if you choose to stretch.
+
+how_it_works:
+  - title: Names the meaning
+    text: Says in one word or line what the brand name means in the buyer's mind.
+  - title: Describes the new product
+    text: Describes what the new product would mean if it stood alone.
+  - title: Tests the fit
+    text: Asks if the new product fits the name's meaning or blurs it.
+  - title: Checks for specialists
+    text: Checks if the market is splitting into narrower specialist branches.
+  - title: Plans a new name if needed
+    text: If the new branch needs its own meaning, plans a new name.
+  - title: Sets a limit if staying
+    text: If it stays under the old name, sets the limit so the name does not mean less.
+  - title: States the cost
+    text: States what happens to the core product if the stretch fails.
+
+output_shape: |
+  WHAT THE NAME MEANS NOW
+  <one word or line>
+
+  THE NEW PRODUCT ON ITS OWN
+  <what it would mean by itself>
+
+  STRETCH SCORE <n>/100 (what it measures: how safely the name can cover this product)
+  Fit with current meaning (50): <n> | <note>
+  Market splitting into specialists (25): <n> | <note>
+  Cost to the core if it fails (25): <n> | <note>
+
+  RIVAL SPECIALISTS IN THE NEW AREA
+  <names> | What they stand for: <one word>
+
+  THE CALL
+  <use the name / make a new name / skip>
+
+  IF USING THE NAME: THE LIMIT
+  <how far the name may go and how it stays clear>
+  IF A NEW NAME: WHAT IT MUST MEAN
+  <the new meaning in one line>
+
+  IF THE STRETCH FAILS
+  <what happens to the core product>
+
+  MISSING
+  <facts that would sharpen the call>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How you describe the brand
+    how: Use the word customers use for you, not the word you use. Check reviews if unsure.
+  - what: Rivals in the new area
+    how: Name specialists. Without them the score on market splitting is marked as missing.
+  - what: Size of the core
+    how: Say how much of your business the core product is. It sets the cost of a failed stretch.
+  - what: How different the product is
+    how: Say what is the same and different, such as buyer, use and price.
+
+judge:
+  - The name's current meaning is one line.
+  - A new name is chosen when the meanings clash.
+  - Rival specialists in the new area are named.
+  - The cost to the core is stated.
+  - The call is one of three clear options.
+
+test:
+  - Run it on a stretch that you know failed. The score should be low.
+  - Run it on a stretch that worked. Check it explains why the meaning held.
+  - Run it twice. The call should be the same.
+  - Ask three customers what your name means. Compare with the one line.
+
+improve:
+  - Add your customers' own words for the brand to step 1.
+  - Add the specialist rivals you know about, so step 4 starts from real names.
+  - Save each call with its date, then check later how it turned out.
+  - Pair it with "Positioning statement writer" to set the new meaning.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Weighing a name's meaning against a new product is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Customer reviews that mention what the brand is known for"
+    - "Sales share of the core product"
+    - "A list of rivals in the new area"
+
+terms:
+  - term: Stretching a name
+    meaning: Putting a brand name on products that are different from what it is known for.
+  - term: Specialist
+    meaning: A rival that focuses on one narrow thing and so has a clear meaning in buyers' minds.

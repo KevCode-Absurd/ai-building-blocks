@@ -1,0 +1,76 @@
+new_slug: find-your-specific-knowledge-and-build-something-you-own
+name: Find your specific knowledge and build something you own
+summary: Tell it what you do well. Get your specific knowledge, a plan to earn without trading hours and a partner check.
+job: think-and-decide
+thinking: high
+thinking_why: It has to judge your own history and a real person with care. Give it your strongest model.
+headline: Find your specific knowledge and build something you own with it
+subhead: Tell it what came easily to you and what people ask you for. It names the knowledge only you have and gives a cheap way to test it. Then it marks which of your income stops when you stop and plans something you own, and checks any partner you would build it with.
+explain: |
+  Many people get paid for their hours and nothing else. They do good work, but when they stop, the money stops. They also pick partners on a good first meeting, then find out years later that the person cuts corners. And they often do not know what they know that others do not, because to them it feels ordinary.
+
+  The steps take these in order. First it finds your specific knowledge, the things you know or do that cannot be taught in a class, and gives you a small public test for each. Then it splits your income into pay tied to hours and pay that is not, and turns one skill into something you own, such as a plan, course or tool. Last, if you will build it with someone, it checks their intelligence, energy and integrity. The order comes from The Almanack of Naval Ravikant by Naval Ravikant and Eric Jorgenson.
+when:
+  - You trade hours for pay and want to build something that earns while you are not working.
+  - You are good at something but cannot say why people pay you for it and not someone else.
+  - You are about to go into business with a person, client or hire for the long term and want a clear read before you commit.
+you_give:
+  - What came easily to you as a child or teenager, and what others noticed
+  - What people ask you for now, what you are curious about, and what feels like play to you
+  - How you earn today, with clients, roles, products, hours and rates
+  - Your goal or income target (optional)
+  - A sales or income sheet (optional)
+  - A person you would work with, what you have seen them do, and how long you would work together (optional)
+  - A few weeks to run the small public test it gives you (optional)
+you_get:
+  - Your specific knowledge, each item traced to something you said, with one or two picks and the basics you still need
+  - A cheap test and a date for each pick
+  - Each income line marked as tied to your hours or not, one route to build something you own, your hourly rate and a list of work to stop doing
+  - A first step for this week and a review date
+  - For a partner, scores for intelligence, energy and integrity with the evidence, and a keep, test first or walk away call
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Answer its questions about your past and your work. It starts with your specific knowledge.
+  - Run the small test it gives for each pick. Give it a few weeks before you decide anything.
+  - If you have a person in mind, describe what you have seen them do. It checks them last.
+how_it_works:
+  - title: Find your knowledge
+    text: Lists what you did easily and what people ask you for, marks what cannot be taught, picks one or two, and gives a cheap test for each.
+  - title: Plan the move off hours
+    text: Takes your picks from the step before, marks which income stops when you stop, and plans a product from one skill with a first step.
+  - title: Check the partner
+    text: Takes the plan from the step before and scores any partner on intelligence, energy and integrity, with a call on whether to repeat the game.
+output_shape: |-
+  STEP 1: YOUR SPECIFIC KNOWLEDGE
+    Candidates, each traced to what you said | trainable or specific | one or two picks with the basics to learn | a cheap test and a date for each
+
+  STEP 2: HOURS TO ASSETS
+    Each income line, tied to hours or not | one route to build something you own | product idea | hourly rate | stop or buy-back list | first step and review date
+
+  STEP 3: PARTNER CHECK
+    Intelligence, energy and integrity, each with evidence | habits that repeat | history test | keep, test first or walk away, with what would change it
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How far back you go
+    how: Childhood and teenage habits show what you did without being told. The more detail you give, the more of your list is traced to something real.
+  - what: Your real income numbers
+    how: Rates and hours make the stop and buy-back list specific. Without them it can only say which lines depend on your time.
+  - what: How well you know the partner
+    how: Dated examples of what the person did, such as who paid a small cost quietly, beat a first impression. Say so if you have only met them once.
+judge:
+  - Every item on the knowledge list traces back to something you said, not a guess.
+  - Each pick has a small test you could start this month.
+  - The plan names which income stops when you stop work, with your own numbers.
+  - The partner scores cite what you have seen, and integrity is weighed first.
+  - It says what it could not tell from what you gave it.
+test:
+  - Give it a short, honest history. Check that each item on the list can be traced to something you wrote.
+  - Run step 2 on an income that is all hourly. It should say so plainly, not invent a passive income line.
+  - Describe a person you know well, good or bad, and see if the call matches what you already know.
+improve:
+  - Save your specific knowledge picks and the test results into your brand file, so later plans start from what you learned.
+  - Add your real hourly rate and the work you plan to stop doing, and review them on the date it sets.
+  - Reuse the partner check before any new client, hire or deal that will last more than a few months.

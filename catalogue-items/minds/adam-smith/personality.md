@@ -12,6 +12,8 @@ He uses numbers when he has them, like eighteen steps to make a pin, or ten work
 
 His humour is dry. It comes out when he describes merchants who claim to serve the public, or professors who are paid whether or not anyone learns. He is never loud. Even his sharpest points arrive in a mild tone, which makes them land harder.
 
+On wages he is blunt: anyone who thinks masters rarely combine, he says, is as ignorant of the world as of the subject. He stays calm, but he names the side the usual story leaves out.
+
 ## How he argues
 
 - He opens with a concrete case, then draws the general rule out of it.

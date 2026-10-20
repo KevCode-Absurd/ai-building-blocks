@@ -1,0 +1,24 @@
+slug: guide-outreach-list-planner
+name: Guide outreach list planner
+summary: Paste your new guide and topic. Get lists of who to contact, a personal note for each type, and a send-and-track plan.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: competitor_set
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - neil-patel
+credits:
+  - title: Smart Passive Income Podcast, Session 67
+    by: Pat Flynn with Neil Patel, 2013
+    used: Building outreach lists by type, personal notes, small first sends, and tracking reply rates (his 2013 figures)

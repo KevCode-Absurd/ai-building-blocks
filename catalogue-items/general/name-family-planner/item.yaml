@@ -1,0 +1,19 @@
+slug: name-family-planner
+name: "Name family planner"
+summary: "Describe your world, brand or product range. Get names that share one root, each with a meaning and a short history."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: brand_brain, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [jrr-tolkien]
+credits:
+  - {title: "Letter to Milton Waldman, 1951", by: "J. R. R. Tolkien", used: "Names grow out of one language with its own sounds, which gives a whole world a single feel"}
+  - {title: "Letter to W. H. Auden, 7 June 1955", by: "J. R. R. Tolkien", used: "Names carry a meaning and a history, and some are only glimpsed, with the history left unsaid"}

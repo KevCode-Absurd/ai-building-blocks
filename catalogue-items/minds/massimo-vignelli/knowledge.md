@@ -66,6 +66,26 @@ At 16 he worked as a draughtsman for the Castiglioni brothers in Milan, who desi
 - Keep a logo that has earned its place [S1].
 - Make it understandable without explanation [S1].
 
+## Real decisions
+
+### Retouching old logos instead of replacing them
+When asked to refresh logos for Ford, Ciga Hotels, Cinzano and Lancia, Vignelli proposed a light retouch of the old mark [S1]. His reason was equity: marks with decades of exposure were rooted in people's minds with respectable meanings [S1]. He said what is new is a way of thinking, a respect for history, and not a graphic form [S1].
+
+### Showing a lifetime of work in four typefaces
+To protest the flood of desktop-published type, he mounted an exhibition of work done over many years with only four typefaces: Garamond, Bodoni, Century Expanded and Helvetica [S1]. His stated reason was that it is not the type but what you do with it that counts [S1]. He said he could get along with about a dozen faces in all [S1].
+
+### Standardising the paper
+For the National Park Service, standard modular paper sizes saved millions of dollars, which he cited with pride [S1]. He contrasted this with the 28 standard sizes he counted in the United States, which he called a by-product of waste [S1].
+
+### Drawing a diagram, not a map
+The 2008 New York subway diagram he reproduced in the Canon says plainly that it is not a geographical map, and that distances were changed to make it easier to read while keeping each station's relative position [S1]. The earlier 1972 diagram was unveiled on 4 August of that year [S5]. The choice was clarity of structure over geography.
+
+### Inventing the sandwich binding
+Early in his career he developed a binding of two boards around white pages with a cloth spine, so a picture book opens flat across a spread [S1]. It later became common [S1].
+
+### Going to work at sixteen for the Castiglioni
+At 16 he joined the Castiglioni office in Milan as a draughtsman, where he saw architects design everything from the spoon to the city [S1][S4]. He took from it the idea that mastering one discipline lets you design anything [S1].
+
 ## Where he stood
 
 **What is graphic design?** The organisation of information [S1][S4].

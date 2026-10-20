@@ -18,6 +18,7 @@ origin: rebuilt
 source_ids: [CES-086]
 old_name: image ad copy writer
 version: 2.0.0
+minds: [john-caples, eugene-schwartz]
 credits:
   - {title: "Tested Advertising Methods", by: "John Caples", url: "https://openlibrary.org/search?q=tested+advertising+methods+caples", used: "self-interest, news and curiosity as headline appeals"}
   - {title: "Breakthrough Advertising", by: "Eugene M. Schwartz", url: "https://openlibrary.org/search?q=breakthrough+advertising+schwartz", used: "stages of awareness, folded into New, Warm and Ready"}

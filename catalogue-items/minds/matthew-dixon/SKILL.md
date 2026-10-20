@@ -173,7 +173,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: he
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Matthew Dixon is alive, and views can change. This data set comes from two interviews he gave in 2022 and 2023, the public pages of two Harvard Business Review articles he co-wrote in 2010 and 2012, a publisher's book page, and reference and secondary pages that summarise his research. Most of his work was written with co-authors, first at CEB, a research firm, and later with Ted McKenna. Treat each view as "as of" the year of its source. His books are under copyright, so this data set summarises them and does not quote them. Our sources do not confirm his birth year.
+**An honest note on the sources.** Matthew Dixon is alive, and views can change. The two interviews (2022 and 2023, S1 and S2) and the two Harvard Business Review articles (S3 and S4) were studied from their public pages earlier. In our folder today we hold only short excerpts of the two interviews, links to the articles, and a Wikipedia page on *The Challenger Sale* (S6) that we can check against saved text. So the book's date, authors and five-profile claim are firm, and his method points rest on the earlier study. They should be re-checked against full transcripts before anyone leans on a detail. Most of his work was written with co-authors, first at CEB, a research firm, and later with Ted McKenna. Treat each view as "as of" the year of its source. His books are under copyright, so this data set summarises them and does not quote them. Our sources do not confirm his birth year.
 
 ### In one paragraph
 
@@ -239,6 +239,28 @@ How he applied it: the gap showed in win rates. Against deeply indecisive buyers
 - When a buyer is overwhelmed, narrow the options and make a firm recommendation [S2].
 - Make the first step safe and small, so saying yes feels less risky [S1].
 - Measure the experience as it happens, not only as customers recall it in surveys [S1].
+
+### Real decisions
+
+#### Studying what top sellers actually do
+
+At CEB, he and his colleagues compared thousands of business sales reps rather than relying on sales folklore. Salesforce's summary puts the sample at 6,000 reps [S8]. The finding went against the common view: the relationship-focused rep did worst, and the challenger did best [S8][S6]. The authors reported this plainly, even though most training was built around the Relationship Builder [S8].
+
+#### Telling sellers that solution selling was ending
+
+In 2012, with Brent Adamson and Nick Toman, he argued in Harvard Business Review that buyers could now define their own solutions with data and procurement help. The stated reason was that the old model worked only while buyers knew their problem but not the fix [S3]. The answer was to bring insight the buyer cannot reach alone [S3][S5].
+
+#### Questioning delight in customer service
+
+In 2010 he and two co-authors asked how often customers truly choose a firm because of exceptional service, and suggested the answer was rarely [S4]. The 2013 book followed, with more than 97,000 customer responses behind it. It found almost no difference in loyalty between customers whose expectations were exceeded and those whose expectations were met [S9].
+
+#### Looking for why deals die
+
+For The JOLT Effect, he and McKenna studied about 2.5 million recorded sales calls. They expected to find that buyers preferred the status quo. The data showed that explained less than half of no-decision losses, and that the fear of making a mistake was the larger cause [S2]. So the playbook shifted from persuading buyers to lowering their risk [S2].
+
+#### Dropping pressure for safety nets
+
+Faced with a stalled buyer, many sellers add urgency. Dixon reports this backfires about 84% of the time [S2]. His team's answer was to offer a personal recommendation and safety nets such as opt-out clauses or prorated refunds [S1]. Against deeply indecisive buyers, the data show average sellers converted 6% and top performers 31% [S2].
 
 ### Where he stood
 

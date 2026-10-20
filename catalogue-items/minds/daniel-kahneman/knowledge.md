@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Kahneman's books are still in copyright, so this is our summary of his ideas, with a few short sourced quotes. He was a psychologist, and this mind offers general ideas about judgement. It gives no medical, mental health or therapy advice.
+This version rests on pages of his own talks that we opened in full: the 2011 Edge Master Class [S3], his Edge lecture on adversarial collaboration [S4], his open letter on priming as reported in Scientific American [S5], and the summary page of his 2011 Harvard Business Review article, where the full text is behind a paywall [S7]. His books are not in our files, so the book-level ideas below come from the reference pages. Kahneman's books are still in copyright, so this is our summary of his ideas, with a few short sourced quotes. He was a psychologist, and this mind offers general ideas about judgement. It gives no medical, mental health or therapy advice.
 
 One honesty note up front. Some studies he cited in *Thinking, Fast and Slow*, mainly in the chapter on priming, have not held up when others tried to repeat them. He said so himself in 2017 [S2][S6]. We flag those parts below and leave the shaky findings out of the advice.
 
@@ -24,7 +24,7 @@ System 1 builds the best story it can from what is in front of it and ignores wh
 
 How he applied it: he warned that a coherent story with little evidence can feel more convincing than a messy story with a lot [S3].
 
-### Heuristics and biases
+#### Heuristics and biases
 
 With Tversky he showed that people swap a hard question for an easier one and answer that instead [S2]. Their 1974 paper "Judgment Under Uncertainty" set out several of these shortcuts, including anchoring [S1].
 
@@ -63,12 +63,33 @@ In *Noise*, written with Olivier Sibony and Cass Sunstein, he defined noise as u
 
 How he applied it: the book recommends a "noise audit" and "decision hygiene," such as breaking a judgement into separate parts and collecting views independently before a group talks [S8].
 
+#### The systems are a useful fiction
+
+At the Edge Master Class he says he first called the two modes Type 1 and Type 2, then went back to System 1 and System 2 because the language is more useful. He admits he does not believe there are systems in the brain [S3]. System 2 is who we think we are, but System 1 does most of the work [S3]. He pictures System 2 as an editor who mostly endorses what System 1 sends to the printer [S3].
+
+How he applied it: his method was to study errors, since the errors tell you what the mind is doing, and he and Tversky were their own best subjects [S3]. He adds that the work was read as showing that people are generally wrong, which he later tried to correct, since most of what we do is fine [S3].
+
+### Don't look at the person, look at the environment
+
+With Gary Klein he concluded that to tell good intuitions from bad you should not look inside or at the person, but at the setting. Did it offer regular practice with quick feedback [S3][S4]? Confidence is no guide, because expert intuition and substitution feel exactly the same from the inside [S3]. Long-range political forecasting and stock markets do not give that kind of feedback [S3]. Their joint paper took six or seven years and was called "A Failure to Disagree" [S4].
+
+#### Coherence is not evidence
+
+System 1 is a machine for jumping to conclusions. It builds the best story from what it has and ignores what is missing, and confidence tracks how well the story hangs together, not how good the evidence is [S3]. He shows this with small puzzles: Linda, where "feminist bank teller" beats the probability, and a cab problem where base rates are ignored unless a stereotype invites their use [S3]. He also shows that asking "how many of 100" cuts errors that percentages produce [S3].
+
+#### Debate by joint experiment
+
+Adversarial collaboration is his name for settling a dispute by doing the research together, in place of critique, reply and rejoinder [S4]. The steps he describes: agree in advance that a test is fair; accept the first study may be inconclusive; let each side propose follow-ups; use a neutral mediator who records each side's predictions (Barbara Mellers in his case with Ralph Hertwig); use neutral labs for data; and pre-register [S4]. He expects few minds to change. The rule he credits to Mellers is not to change minds but to open them a little wider [S4]. With two former friends who had attacked a paper of his, he offered a joint piece in which they first listed points of agreement and then set out their differences [S4].
+
 ### Adversarial collaboration
 
 Kahneman disliked what he called "angry science": critique, reply and rejoinder, where each side attacks the weakest form of the other's view and nobody concedes [S4]. In 2001 he proposed an alternative. Rivals agree on a fair test in advance, run it together, often with a neutral referee, and write up what they agree on first [S4]. He stopped replying to hostile papers [S4].
 
 ## How he decides
 
+- Judge an intuition by the setting that produced it, not by the confidence of the person [S3].
+- Settle a dispute by agreeing in advance what test would count, with a neutral recorder [S4].
+- Build the check into the process, because awareness alone does little [S7].
 - Treat your own confidence as a feeling, not as evidence [S3].
 - Ask what information is missing from the story you've built [S3].
 - Trust expert gut calls only where the setting is regular and feedback is fast [S3].
@@ -78,6 +99,28 @@ Kahneman disliked what he called "angry science": critique, reply and rejoinder,
 - Get independent views before a group discussion [S8].
 - Before you argue with a rival, agree on what result would settle it [S4].
 - Assume you will explain away surprising results after the fact, and guard against it [S4].
+
+## Real decisions
+
+### Proposing a daisy chain for priming research
+
+In 2012 he emailed priming researchers asking labs to replicate each other's results in a daisy chain: each lab repeats a neighbour's effect with the original researcher supervising, records every detail, commits to publish whatever comes out and shares the data [S5]. His stated worry was for graduate students whose field had become the poster child for doubts. The idea was largely rejected, though he saw the later movement as a good result [S4][S5].
+
+### Retracting a book chapter's confidence in priming
+
+He said in comments that he had pulled back from the priming chapter of his book after the replication problems, though he told readers his underlying theory had not changed [S4][S6].
+
+### Choosing a mediator and writing predictions down
+
+With Hertwig, the protocol named a mediator to keep records of the predictions each side had committed to, since disputes often turned on what each side had really predicted [S4].
+
+### Refusing to answer hostile papers
+
+He says he chose not to reply to hostile papers or review manuscripts that angered him, because angry science was draining [S4].
+
+### Asking for a check before the big bet
+
+In the Harvard Business Review piece with Lovallo and Sibony he argued that knowing about biases has done little for decisions, so firms should build a check into the decision process. Their examples of bias: confirmation, anchoring and loss aversion [S7].
 
 ## Where he stood
 

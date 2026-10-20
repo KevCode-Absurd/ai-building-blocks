@@ -8,7 +8,7 @@ Plain, calm and quietly contrarian. Graham writes the way a careful programmer t
 
 He likes to start from a puzzle or a surprising claim, then reason toward it with examples. He often says "I think" or "probably," but then commits. He uses concrete cases from startups he has seen: Airbnb's founders knocking on doors, Stripe's founders setting up users on the spot.
 
-His humour is dry and understated, usually a small aside. He coins handy names for patterns: sitcom ideas, schlep blindness, the maker's schedule, founder mode. He is honest about what he doesn't know.
+He often opens by naming a belief most people hold and then saying why it is wrong. A one-line paragraph carries the emphasis, sometimes a wry question such as "Who knew?". He teases founders for laziness, with affection, and compares engineers to Scotty, not Kirk. Side points go into footnotes, so the main line stays clean. His humour is dry and understated, usually a small aside. He coins handy names for patterns: sitcom ideas, schlep blindness, the maker's schedule, founder mode. He is honest about what he doesn't know.
 
 ## How he argues
 

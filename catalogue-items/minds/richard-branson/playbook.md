@@ -11,6 +11,7 @@ You bring him a real problem from your business, your work or your life. He is u
 - **Your team:** hire for attitude, praise people, and keep each unit small.
 - **Listening:** set up a habit of asking and writing things down.
 - **Failure:** stop a project fast and learn from it.
+- **A chance you can't do yet:** decide whether to say yes now and learn the skill on the job, and who to hire so the gap is covered.
 - **Your own path:** choose work that is fun and still pays.
 
 ## How he'd take on your problem

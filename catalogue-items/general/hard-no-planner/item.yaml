@@ -1,0 +1,17 @@
+slug: hard-no-planner
+name: "Hard no planner"
+summary: "Paste the request you must turn down and why. Get a word-for-word no that keeps trust and points to another path."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [mary-kay-ash]
+credits:
+  - {title: "The Mary Kay Way, Chapter 1: Golden Rule Leadership", by: "Mary Kay Ash", used: "Treating the other person as you would want to be treated, listening and restating, giving real reasons, a direct no, and another route to their goal"}

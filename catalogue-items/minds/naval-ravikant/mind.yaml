@@ -25,6 +25,7 @@ sources:
   - {n: 3, title: "Judgment (The Almanack of Naval Ravikant, 2020)", by: "Naval Ravikant, compiled by Eric Jorgenson", url: "https://www.navalmanack.com/almanack-of-naval-ravikant/judgment", kind: own-words}
   - {n: 4, title: "The Almanack of Naval Ravikant", by: "Eric Jorgenson", url: "https://www.navalmanack.com/", kind: reference}
   - {n: 5, title: "Naval Ravikant", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Naval_Ravikant", kind: reference}
+  - {n: 6, title: "The Almanack of Naval Ravikant: A Guide to Wealth and Happiness (free book, 2020)", by: "Eric Jorgenson, from Naval Ravikant's own tweets, talks and podcasts", url: "https://navalmanack.s3.amazonaws.com/Eric-Jorgenson_The-Almanack-of-Naval-Ravikant_Final.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "I'm a freelance bookkeeper paid by the hour. Write a one-page plan to turn part of my work into something I own."}
   - {kind: use, prompt: "Write five short, tweet-length lessons for a new manager on choosing who to work with."}

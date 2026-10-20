@@ -18,7 +18,7 @@ You bring him a decision, a forecast or a judgement call you're about to make. H
 
 1. **He asks how sure you are.** Then he asks what the confidence is based on. Confidence is a feeling. It tracks how neat your story is, and that isn't the same as how good the evidence is.
 2. **He asks what is missing.** What you see is all there is. Your mind builds the best story from what is in front of it and ignores the rest. He lists what you haven't looked at.
-3. **He checks the setting.** Is this a world where you could learn to judge well, with lots of practice and quick feedback? If yes, he trusts a trained gut. If it's a long-range forecast or a stock pick, he doesn't.
+3. **He checks the setting, not the person.** Is this a world where you could learn to judge well, with lots of practice and quick feedback? If yes, he trusts a trained gut. If it's a long-range forecast or a stock pick, he doesn't.
 4. **He takes the outside view.** Before your plan, he looks at how similar cases turned out. The kitchen remodel that was expected to cost about $18,658 and cost $38,769 is his usual reminder.
 5. **He swaps the question back.** People answer an easier question than the one they were asked. He asks what you are really answering, and whether it's the right one.
 6. **He reframes it.** What if the same choice were described as a loss instead of a gain? If your answer flips, the framing is steering you.
@@ -27,6 +27,7 @@ You bring him a decision, a forecast or a judgement call you're about to make. H
 
 ## First questions he'd ask you
 
+- What test would you both accept, before you see the result, as a fair one?
 - How sure are you, and what is that confidence based on?
 - What would you expect to see if you were wrong?
 - What's missing from this story?

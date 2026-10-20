@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Gandhi was a political and religious leader, so this data set sticks to his leadership and ideas as the record shows them. It says nothing about today's politics in India or anywhere else, and it doesn't take sides on religion. His own words come from his autobiography and other writings on mkgandhi.org, the site run by the Bombay Sarvodaya Mandal and the Gandhi Research Foundation. Many lines credited to Gandhi online can't be traced to him, so we only quote phrases we read in his texts, and only briefly. His record has real faults as well as achievements, and the criticism section covers them.
+A note on method: Gandhi was a political and religious leader, so this data set sticks to his leadership and ideas as the record shows them. It says nothing about today's politics in India or anywhere else, and it doesn't take sides on religion. His own words now rest mainly on the full text of his autobiography in its 1927 edition [S7][S2][S3], on *Hind Swaraj* and a 1940 article [S4][S5], and on his 1920 essay on non-violence and the sword [S8], which we know through study notes. Wikipedia pages give context only [S1][S6]. Many lines credited to Gandhi online can't be traced to him, so we only quote phrases we read in his texts, and only briefly. His record has real faults as well as achievements, and the criticism section covers them.
 
 ## In one paragraph
 
@@ -71,8 +71,42 @@ How he applied it: he treated his conclusions as right only for now, and he chan
 - Pick a cause that every person can feel [S6].
 - Tell the other side what you'll do, and when [S6].
 - Train your people before you put them in danger [S6].
+- Hear the other side's case before you act, and put your own part first [S7].
+- Set the conditions in writing, and have people pledge to them, before a strike or stand [S7].
+- Do not widen a local cause into a national one [S7].
+- Admit a mistake in public the moment you see it, and fix the method [S7].
 - Prefer brave non-violence; if not that, courage over cowardice [S1][S5].
 - Stay open to being wrong [S3].
+
+## Real decisions
+
+### Champaran, 1917: see both sides, then refuse to leave
+
+A peasant leader pressed Gandhi to look at the plight of tenants forced to grow indigo for planters [S7]. Before he began, he met the planters' association and the local Commissioner, to hear the planters' side. He was told he was an outsider and ordered to leave the district [S7]. He wrote on the police notice that he would not go until his inquiry was finished, and he was summoned to trial [S7]. He told his co-workers he might be jailed early, and chose to be arrested in a town where it would count [S7]. The case against him was withdrawn, and he called it the country's first direct lesson in civil disobedience [S7].
+
+### Champaran: keep the cause small and the money clean
+
+Gandhi refused to take money from the tenants and refused an offer of Rs 15,000 from Bombay friends, because either would be misread and could give the inquiry an all-India political colour [S7]. He asked editors not to send reporters, and sent them reports himself, since wild stories could bring the planters' anger down on the frightened tenants [S7]. He also did not call in leaders from other provinces [S7]. His stated reason: a cause kept non-political was helped, and one pushed into politics was damaged [S7]. By his count the work cost about three thousand rupees [S7].
+
+### Ahmedabad mill strike, 1918: conditions first, then the pledge
+
+The mill-hands' case was strong, but the mill-owners were friends of his and refused arbitration [S7]. Before advising a strike, Gandhi explained four conditions to the workers: no violence, no harassing those who kept working, no living on charity, and staying firm while earning bread by other honest work [S7]. The workers took a pledge at a mass meeting [S7]. They met daily under a tree and marched with a banner that told them to keep the pledge [S7].
+
+### The three-day fast
+
+After about two weeks the strikers began to waver and to grow hostile to blacklegs [S7]. Gandhi said he would not eat until they rallied or the strike ended [S7]. He later admitted the fast was flawed: it pressed on mill-owners he was supposed to leave free, though it was aimed at his own side's lapse [S7]. He tried to put the owners at ease and told them they need not give way [S7]. He also found paid work for strikers carrying sand for the ashram weaving shed [S7]. The strike ended after 21 days, with arbitration [S7].
+
+### Kheda, 1918: end the fight when people are worn out
+
+In the Kheda crop failure, the government seized cattle and standing crops for tax [S7]. Gandhi advised people to harvest an onion crop he thought wrongly attached, and a small group went to jail for it [S7]. With peasants exhausted, he looked for a face-saving end that a satyagrahi could accept, and took a deal in which only well-off farmers had to pay [S7].
+
+### The "Himalayan miscalculation", 1919
+
+Gandhi called for mass civil disobedience in a rush, then saw at Nadiad that crowds were not ready and violence had broken out [S7]. He confessed the error at a public meeting and took the ridicule [S7]. His lesson: a person must first obey the laws willingly before they can judge which to break, so he raised a corps of trained volunteers and issued leaflets to teach the method [S7]. Recruits dwindled, and he accepted the training would be slow [S7].
+
+### Naming the method
+
+In South Africa, Indians called their struggle "passive resistance", and Gandhi found that the phrase suggested weakness and could hide hatred [S7]. He ran a prize in *Indian Opinion* for a better name, took a co-worker's entry and reworded it into satyagraha, "firmness in truth" [S7].
 
 ## Where he stood
 
@@ -81,6 +115,8 @@ How he applied it: he treated his conclusions as right only for now, and he chan
 **Is non-violence weakness?** No. It takes more courage than fighting, and it must be trained [S5]. Cowardice is worse than violence [S1].
 
 **Should India be divided by religion?** He opposed partition and separate electorates by religion or caste, which he believed would divide people for good [S1].
+
+**Is nonviolence the same as weakness?** In 1920 he wrote that it is far better than violence and that forgiveness takes strength [S8]. He also wrote that if the only choice were cowardice or violence, he would pick violence [S8].
 
 **What is the point of politics?** Self-rule, built on truth and self-discipline, in the person as well as the nation [S1][S3].
 

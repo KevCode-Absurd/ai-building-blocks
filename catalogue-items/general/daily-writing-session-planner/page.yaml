@@ -1,0 +1,129 @@
+new_slug: daily-writing-session-planner
+name: "Daily writing session planner"
+summary: "Say what you write and when you can sit down. Get a daily session with a fixed end and a rewrite pass."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It builds a schedule from simple rules and your own hours. No deep judging is needed."
+
+headline: "Daily writing session planner"
+subhead: "Tell it what you write, how many days a week you can sit down and how long. It builds a daily session with one place, one start time, a fixed end, a rewrite pass on a later day and a simple hours log."
+
+explain: |
+  Most writing plans fail for the same reasons. The time is vague, the session has no end, and every draft gets judged while it is still being made. So the work feels heavy and gets skipped.
+
+  This skill fixes those three things. It picks one place and one start time, with nothing else allowed during the session. It sets an end time, so stopping on time is the reward. It splits each piece into two passes: a loose first draft of about half a page, then a rewrite on a later day, line by line, tuned for how it sounds when read aloud. It also sets up an idea file, a small notebook and a log of hours, so you can see your progress.
+
+when:
+- "You want to write every day and keep missing days."
+- "You have a pile of ideas and no routine that turns them into pages."
+- "You write in bursts, burn out, and want a steadier pace."
+
+you_give:
+- "What you write (essays, scripts, a book, posts) and who it is for"
+- "The days you can sit down and how long each session can be"
+- "Where you usually write and what distracts you (optional)"
+- "Pieces you have already started (optional)"
+you_get:
+- "A session plan: place, start time, end time and the one rule for the hour"
+- "A two-pass routine: draft day and rewrite day"
+- "An idea file layout and a pocket notebook habit"
+- "A way to test pieces on real people and a simple hours log"
+
+how_to_use:
+- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+- "Say what you write and who it is for."
+- "List the days and hours you can really protect, even if it is only 30 minutes."
+- "Run the plan for two weeks without changing it."
+- "Bring back your hours log and the pieces you tested, and ask it to adjust the plan."
+
+how_it_works:
+  - title: "Fix the place and start"
+    text: "Pick one seat, one tool (pad, laptop or notebook) and one start time."
+  - title: "Set the end time"
+    text: "Choose a finish time from the minutes they gave you, then say that stopping on time is the reward."
+  - title: "Build the idea file"
+    text: "Set up two places for raw material: a running idea file (one line per idea, a short note under each) and a small notebook for random observations."
+  - title: "Plan the first draft"
+    text: "Describe a small first draft: about half a page on one observation or one point, written with no judging."
+  - title: "Plan the rewrite day"
+    text: "Schedule the rewrite for the day after, or later."
+  - title: "Set the long-form rule"
+    text: "If the piece is long, write the full piece, not a pitch or an outline, and write the first version on paper."
+  - title: "Add testing and reading"
+    text: "Name one way to test finished pieces on real people, such as reading to a friend or posting a short version, and what reaction to watch for."
+  - title: "Add the hours log"
+    text: "Give a simple log: date, minutes sat, pages or lines drafted, lines rewritten."
+  - title: "Check it"
+    text: "Go through \"Check before you hand it back\" one line at a time and fix any check that fails, if you can."
+
+output_shape: |
+  SESSION
+  Place: <where> | Start: <time> | End: <time> | Rule: <one rule>
+
+  DRAFT DAY
+  <what to write, how long, what counts as done>
+
+  REWRITE DAY
+  <when, how to go line by line, reason for each line kept>
+
+  IDEA FILE AND NOTEBOOK
+  <how each works, the one rule for each>
+
+  LONG PIECES
+  <pages per night and the sum for a year>
+
+  TEST AND READING
+  <how to test on people, up to 3 sources>
+
+  HOURS LOG
+  <columns and the weekly total>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Session length"
+    how: "Pick the length you can keep on your worst day. A short session you finish beats a long one you skip."
+  - what: "Time of day"
+    how: "Say when you have the most energy. It places the session there instead of in leftover time."
+  - what: "Kind of writing"
+    how: "Say if you write short pieces or one long work. Long works get the nightly page rule."
+  - what: "Who you test on"
+    how: "Name real people. The test step then uses them instead of a vague audience."
+
+judge:
+- "The end time is written down, not just the start."
+- "Draft day and rewrite day are not the same day."
+- "Every day and hour in the plan is one you gave it."
+- "The rewrite step says what to do with each line and why."
+- "The log fits on a card and takes a minute to fill in."
+
+test:
+- "Follow the plan for one week. Note which day you skipped and why, then ask the skill to fix that day."
+- "Run it twice with the same inputs. The session rules should stay the same even if the wording changes."
+- "Rewrite one old piece using the rewrite day steps. Compare it with your first version."
+- "Read the rewrite aloud to one person and note where they lose the thread."
+
+improve:
+- "Add your own start ritual (a drink, a playlist) to step 1 so the plan fits you."
+- "Add the words you overuse to the rewrite step, so they get cut every time."
+- "Save your hours log in your files and paste it in every month for a review."
+- "Pair it with \"Story shape mapper\" once a draft is long enough to map."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning a schedule from your hours is plain text work."}
+    - {name: "A paper pad", why: "The first draft and the hours log both work better away from a screen."}
+  inputs:
+    - "Last month's calendar, so the plan fits real free time"
+    - "A list of pieces you have started"
+    - "The names of two people who will read your finished work"
+
+terms:
+  - term: "Idea file"
+    meaning: "One running list where you add every idea as a line, so nothing is lost and nothing is judged."
+  - term: "Tonnage"
+    meaning: "The total hours you have put in, counted so you can see them build up."

@@ -1,0 +1,121 @@
+new_slug: error-warning-and-recovery-designer
+name: "Error warning and recovery designer"
+summary: "Describe a system and its operators. Get what the alarm says, what the person decides and how it recovers."
+job: build-software
+thinking: high
+thinking_why: "It must work through failure cases and the decisions people face under pressure, which needs careful reasoning."
+
+headline: "Error warning and recovery designer"
+subhead: Describe a system or process and the people who run it, with any findings from a readiness check. It lists mistakes people say cannot happen, plans how each is detected, writes the alarm and the go or no-go decision, and designs a safe restart.
+
+explain: |
+  Plans often stop at "this mistake will not happen". Under pressure, with tired people and little time, it does. When it does, the system either carries on in a bad state or stops everything, and the person has no clear choice.
+
+  This skill lists the mistakes people say cannot happen and treats each as likely. It decides how the system detects each one while running, then designs a safe restart point so key jobs keep going. It writes the alarm to interrupt normal work and name the decision, go or no-go. It makes sure the operator and the control room see the same message, adds a plain warning where the system refuses to block, and sets up a review by kind of error that changes the method that let it in.
+
+when:
+  - You run something where a mistake costs a lot and people work under pressure.
+  - Your alerts are noisy and nobody knows what to do when one fires.
+  - A readiness check found joins that could fail and you need to plan for them.
+
+you_give:
+  - The system or process, and who operates it
+  - Findings from a readiness check or a past incident (optional)
+  - The mistakes people say cannot happen (optional)
+you_get:
+  - A list of can't-happen mistakes with how each is detected and what the system does
+  - A safe restart point and the jobs kept running
+  - The alarm text, with the decision it asks for
+  - A plan to review errors by kind
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the system, who operates it and what they see. Paste the readiness findings if you have them.
+  - Add every "that can never happen" you have heard from the team.
+  - Read the alarm texts out loud to someone who runs the system and fix the words they trip on.
+  - Test the restart point on a small scale before you rely on it.
+
+how_it_works:
+  - title: Lists the impossible
+    text: Writes every mistake people say cannot happen and treats each as likely under pressure.
+  - title: Plans detection
+    text: Decides how the system notices each error while it is running.
+  - title: Designs the restart
+    text: Defines a safe point to return to and the key jobs that keep going.
+  - title: Writes the alarm
+    text: Makes it interrupt normal work and name the decision, go or no-go.
+  - title: Matches the messages
+    text: Makes sure the operator and the control room see the same thing.
+  - title: Warns where blocking is refused
+    text: Adds a plain warning in the documents where the system will not block a risky action.
+  - title: Reviews by kind
+    text: Sorts each error afterwards by kind and changes the method that let it in.
+
+output_shape: |
+  THE SYSTEM AND WHO RUNS IT
+  <what, operators, control room>
+
+  MISTAKES SAID TO BE IMPOSSIBLE
+  <mistake> | detected by: <how> | system does: <response>
+
+  SAFE RESTART
+  Restart point: <what it saves>  Keeps running: <key jobs>  Dropped: <jobs>
+
+  ALARMS
+  <trigger> | text: "<alarm text>" | decision: GO / NO-GO | who decides: <name>
+
+  SAME MESSAGE FOR EVERYONE
+  <operator sees> | <control room sees> | match: yes / no
+
+  WARNINGS WHERE BLOCKING IS REFUSED
+  <action> | warning text in the documents
+
+  AFTER AN ERROR
+  <kind of error> | method change: <what is changed so the kind cannot come back>
+
+  MISSING / CHECKS MISSED
+  <lists>
+
+tweaks:
+  - what: The readiness findings
+    how: Paste them. The joins they flag become the first mistakes on the list.
+  - what: The operators' tools
+    how: Say what screen, phone or channel the alarm appears on. The text is written to fit it.
+  - what: What must never stop
+    how: Name the key jobs. The safe restart is designed to keep them.
+  - what: Past incidents
+    how: Add them. They sort into kinds for the review.
+
+judge:
+  - Each can't-happen mistake has a detection and a response.
+  - A safe restart point is defined.
+  - The alarm names a clear choice.
+  - Operators and the control room see the same message.
+  - The post-incident review changes the method, not just the code.
+
+test:
+  - Run it on a past incident. See if the mistake that caused it is on the list with a response.
+  - Read the alarms to an operator. They should say what to do within a few seconds.
+  - Try the safe restart on a small scale and check that key jobs continue.
+  - Run it twice. The list of mistakes should repeat.
+
+improve:
+  - Add your own alarm style rules, such as length and wording, to step 4.
+  - Add your common operator mistakes, such as wrong time zone or wrong account, to step 1.
+  - Keep the review table and add each new incident to its kind.
+  - Pair it with "Launch readiness seam checker" before each launch.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing failures and writing alarm text is text work any strong chat AI does."}
+    - {name: "Your alert or paging tool", why: "The alarms it writes still have to be set up where your people will see them."}
+  inputs:
+    - "A readiness report with the joins and gaps"
+    - "Incident notes from the last year"
+    - "A description of what operators see on screen"
+
+terms:
+  - term: Safe restart point
+    meaning: A saved state the system can return to after an error, so key jobs can carry on.
+  - term: Go or no-go
+    meaning: A clear choice the person must make, to continue or to stop.

@@ -1,0 +1,18 @@
+slug: capability-pitch-letter-writer
+name: "Capability pitch letter writer"
+summary: "Paste what you can do and who you are writing to. Get a numbered offer letter ending in a proof to run."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [leonardo-da-vinci]
+credits:
+  - {title: "The Notebooks of Leonardo da Vinci, draft letter to Lodovico il Moro", by: "Leonardo da Vinci, translated by Jean Paul Richter", url: "https://www.gutenberg.org/ebooks/5000", used: "A numbered list of concrete abilities, led by the reader's main need, with an offer to prove each by trial"}

@@ -1,0 +1,126 @@
+new_slug: investment-or-speculation-sorter
+name: "Investment or speculation sorter"
+summary: "Paste a purchase you are weighing and why. Get it sorted as investment or speculation, with the questions a careful buyer asks."
+job: money-and-investing
+thinking: high
+thinking_why: "It must separate what is known from what is hoped, state a value range with its assumptions and avoid giving advice. That needs careful reasoning."
+
+headline: "Investment or speculation sorter"
+subhead: "Tell it what you are thinking of buying and why. It tests whether careful study could promise safety of your money and an adequate return, shows a rough value as a range, and compares it with the price. You get a label, the questions a careful buyer asks and what is missing."
+
+explain: |
+  Many purchases are called investments because the person hopes the price will rise. Hope is not a test. A careful buyer asks what they own, what it is worth apart from the price, and how much room they leave for being wrong. Without that, the purchase is speculation, which is not banned but should be called by its name.
+
+  This skill applies one test: after careful study, does the purchase promise safety of principal and an adequate return? If not, it labels it speculation. It describes what you own in the thing, builds a rough value from earnings, dividends, assets and prospects, and shows how unsure that value is. It treats the price as an offer, checks your margin for error and asks what kind of buyer you are. It never says buy or sell. This is not financial advice.
+
+when:
+  - Someone told you an asset is a sure thing and you want to test the claim.
+  - You are about to buy something because its price has been rising.
+  - You want a clear label and a list of questions before you put money in.
+
+you_give:
+  - What you are thinking of buying and the price
+  - Why you think it is a good idea
+  - "What facts you have: earnings, income, assets, costs (optional)"
+  - How much you can afford to lose and your time to follow it (optional)
+you_get:
+  - "A label: investment or speculation, with the reasons"
+  - What you would own in the thing, in plain words
+  - A rough value as a range, with its assumptions, set against the price
+  - The questions a careful buyer asks, with what you know and what you do not
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you would buy, the price and your reason.
+  - Paste any figures you have, such as yearly profit, rent or what it owns.
+  - Read the label and the missing-facts list before you decide anything.
+  - Take the questions to a licensed adviser if the amount is large.
+
+how_it_works:
+  - title: Applies the test
+    text: Asks whether careful study promises safety of principal and an adequate return, else marks it speculation.
+  - title: Describes what you own
+    text: Says what you would hold in the thing, as part of a real business or asset.
+  - title: Builds a rough value
+    text: Uses earnings, dividends, assets and prospects, and shows how unsure the result is.
+  - title: Compares with the price
+    text: Treats the quoted price as an offer, not as proof of value.
+  - title: Leaves room for error
+    text: Asks how much room you have if you are wrong.
+  - title: Names the buyer
+    text: Says if you are defensive or enterprising, and whether you have the time and temper.
+  - title: Sums up what is known
+    text: Restates in one line what you do and do not know.
+
+output_shape: |
+  THE PURCHASE
+  <what> | Price: <price> | Your reason: <reason>
+
+  LABEL
+  <investment / speculation> | Why: <test result>
+
+  WHAT YOU WOULD OWN
+  <share of a business / an asset / a claim> | It earns or yields: <figures or MISSING>
+
+  ROUGH VALUE
+  Low: <value> | High: <value> | Assumptions: <list> | How unsure: <low/medium/high>
+  Price vs range: <below / inside / above>
+
+  ROOM FOR ERROR
+  <how wrong you could be and still be fine>
+
+  WHICH BUYER ARE YOU
+  <defensive / enterprising> | Time and temper: <check>
+
+  IN ONE LINE
+  Known: <facts> | Not known: <facts>
+
+  MISSING
+  <facts that would change the label>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Real figures
+    how: Give earnings, rent, costs and debt. A value range without figures is only a guess.
+  - what: How much you can lose
+    how: Say the amount you could lose without harm. It sets the room for error.
+  - what: Your time
+    how: Say how often you can follow it. An enterprising approach needs time.
+  - what: The holding period
+    how: Say how long you could hold. A purchase you may need to sell soon is closer to speculation.
+
+judge:
+  - It never says buy or sell and never names a price to pay.
+  - The value estimate is shown as a range with its assumptions.
+  - Speculation is labelled as such, not banned.
+  - Missing facts are listed as missing.
+  - The label follows from the stated test.
+
+test:
+  - Run it on an asset you know well, such as a rental flat you own, and check the label seems fair.
+  - Run it on a hyped item and see whether it separates price rises from value.
+  - Run it twice. The label should not change.
+  - Show the missing-facts list to someone who knows the asset and see if they can fill the gaps.
+
+improve:
+  - Add your own risk limit, such as the most you will put in one thing.
+  - Add the usual figures for your market, such as typical rent yields, to anchor the range.
+  - Keep a log of past purchases and how they turned out, and paste it in as a record.
+  - Pair it with "Room for error plan checker" before a large commitment.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Applying a fixed test and listing questions is text work. It cannot supply facts it does not have."}
+    - {name: "A licensed financial adviser", why: "Needed for any large or personal decision. This skill is not advice."}
+  inputs:
+    - "Recent accounts or income statements for what you would buy"
+    - "Recent comparable sales or rents"
+    - "Your own debts and the cash you cannot touch"
+
+terms:
+  - term: Speculation
+    meaning: A purchase that does not meet the test of safety for your money and an adequate return after careful study.
+  - term: Margin of safety
+    meaning: The gap between what you think something is worth and what you pay, which protects you if you are wrong.

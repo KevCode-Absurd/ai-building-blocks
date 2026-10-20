@@ -1,0 +1,17 @@
+slug: feedback-request-script-writer
+name: "Feedback request script writer"
+summary: "Say who you manage and what you want to learn. Get your go-to question and how to handle silence."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [kim-scott]
+credits:
+  - {title: "How do you get feedback? The four steps to solicit Radical Candor", by: "Kim Scott, Radical Candor", url: "https://www.radicalcandor.com/", used: "A go-to question, waiting out the silence, a second specific question, repeating back what you hear, and rewarding candour"}

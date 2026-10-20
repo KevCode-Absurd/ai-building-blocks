@@ -1,0 +1,17 @@
+slug: ad-reading-flow-checker
+name: "Ad reading-flow checker"
+summary: "Paste or describe a print ad layout. Get notes on where the eye goes first, what to move and what to cut."
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: static_ads, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [david-ogilvy]
+credits:
+  - {title: "Quotations of David Ogilvy", by: "David Ogilvy, 2023 collection", used: "Putting the picture above the headline, checking the headline at real size, matching the look of the surrounding page, cutting clutter at the bottom and keeping the brand easy to see"}

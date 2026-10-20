@@ -1,0 +1,129 @@
+new_slug: pricing-decision-planner
+name: "Pricing decision planner"
+summary: "Paste your product, its costs and what rivals charge. Get three test prices, the number to watch and the one you pick."
+job: make-offer
+thinking: high
+thinking_why: "It estimates sales and total profit at several prices from thin data, so a bad guess changes the answer."
+
+headline: "Pricing decision planner"
+subhead: Give it your product, its costs and what rivals charge. It judges the value to the buyer, sets three prices that could each work, and estimates sales and total profit at each. You get a comparison, the price with the highest total profit, an owner for the decision and a review date.
+
+explain: |
+  Many prices are set by adding a margin to cost or by copying a rival. Both skip the question that matters: what is this worth to the buyer, and at which price does the business earn the most in total, not per item.
+
+  This skill judges the true value to the buyer, not the cost alone. It does not copy rivals. It sets three prices that could each work, estimates sales at each and works out the total profit. It picks the price with the highest total profit and checks the buyer would still be happy at it. It names one leader to own the choice, and sets a date to review sales and margin.
+
+when:
+  - You are launching something and have no idea what to charge.
+  - Your price came from cost plus a margin, or from a rival, and you are unsure it is right.
+  - You are thinking of a price rise or cut.
+
+you_give:
+  - Your product, your costs per unit and your fixed costs
+  - What rivals charge (optional)
+  - What buyers say about value, price and alternatives (optional)
+  - Your sales so far at today's price (optional)
+you_get:
+  - A statement of the value to the buyer
+  - Three prices that could each work, with sales and total profit estimated at each
+  - The price with the highest total profit and a buyer check
+  - A named owner and a review date
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts and costs, and any sales at today's price.
+  - Paste what rivals charge and what buyers say, in their words.
+  - Pick the price it recommends only after checking the guesses with real buyers.
+  - Put the review date in your calendar.
+
+how_it_works:
+  - title: Judges the buyer's value
+    text: Writes what the product is worth to the buyer from their side, not from your cost.
+  - title: Sets three prices
+    text: Chooses three prices that could each work, without copying a rival.
+  - title: Estimates sales at each
+    text: Estimates sales at each price and marks every guess.
+  - title: Works out total profit
+    text: Multiplies the margin by the sales to find the total profit at each price.
+  - title: Finds the best
+    text: Picks the price with the highest total profit.
+  - title: Checks the buyer
+    text: Checks that the buyer would still be glad to buy at that price.
+  - title: Names the owner
+    text: Names the leader who owns the choice.
+  - title: Sets the review
+    text: Sets a date to review sales and margin.
+  - title: Checks the plan
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  VALUE TO THE BUYER
+  <what they gain, in their terms, with evidence or MISSING>
+
+  COSTS
+  Per unit: <figure> | Fixed: <figure>
+
+  THREE PRICES
+  Price | Sales estimate (guess or data) | Margin per unit | Total profit
+  <price A> | <n> | <figure> | <figure>
+  <price B> | ...
+  <price C> | ...
+
+  THE PICK
+  <price> because <highest total profit> | Buyer check: <their words or MISSING>
+
+  THE NUMBER TO WATCH
+  <sales and margin figure to track>
+
+  OWNER AND REVIEW
+  Owner: <name> | Review: <date>
+
+  MISSING
+  <figures not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Costs
+    how: Give per-unit and fixed costs. Without them total profit cannot be worked out, and it will say so.
+  - what: Sales estimates
+    how: Give any sales you have at one price. It uses them to size the others, and marks the guess.
+  - what: Buyer words
+    how: Paste what buyers say about value. The buyer check relies on it.
+  - what: How wide the three prices are
+    how: Say how far you are willing to move. It sets the three within that range.
+
+judge:
+  - Three prices are compared on total profit.
+  - Costs are in the sheet, not assumed.
+  - The buyer view is stated in the buyer's words.
+  - One person owns the decision.
+  - A review date is set.
+
+test:
+  - Recompute the total profit for each price by hand.
+  - Show the three prices to a few buyers and ask which feels fair.
+  - Check that the price with the highest profit is not far outside what rivals charge without a reason.
+  - Run it twice and compare the pick.
+
+improve:
+  - Add your real sales at each price you have used to the input.
+  - Add price rules you must keep, such as a floor or a price ending.
+  - Save each review result to your notes.
+  - Pair it with "Value proposition builder" to write the reason for the price.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Comparing three prices and the arithmetic of total profit is work any strong chat AI handles."}
+    - {name: "A spreadsheet", why: "Lets you change a sales guess and see total profit move."}
+  inputs:
+    - "Sales at today's price for several months"
+    - "Buyer interviews about value"
+    - "Rival prices with what they include"
+
+terms:
+  - term: Total profit
+    meaning: The margin on one item times the number sold, not the margin per item alone.
+  - term: Buyer check
+    meaning: A test that the buyer is still glad to pay the price.

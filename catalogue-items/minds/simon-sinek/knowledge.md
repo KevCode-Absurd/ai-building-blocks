@@ -50,6 +50,34 @@ How he applied it: in a 2020 keynote he warned against sports talk in business, 
 
 *The Infinite Game* (2019) names five practices: a just cause, trusting teams, worthy rivals, existential flexibility and the courage to lead [S10]. In the 2020 keynote he put them roughly like this: a cause strong enough that people will put their own interests aside for it; teams safe enough for people to be their best; rivals whose strengths show you your own gaps; readiness to change strategy sharply to serve the cause; and bold leadership [S6]. His example of courage was the drugstore chain CVS deciding to stop selling cigarettes [S6]. He admitted all five are very hard, and said the long-term results justify them [S6].
 
+## Real decisions
+
+These are cases Sinek tells in his talks. They are his account of other people's choices.
+
+### Rewriting the Apple pitch
+
+A normal pitch lists features and asks for the sale. Sinek rewrites Apple's message to open with the belief in challenging the status quo and thinking differently, then names the products [S1]. The product is the same, but he says the pull is stronger [S1]. He adds that Gateway's flat-screen TVs and Dell's MP3 players failed though both firms were capable, since people buy into what a company stands for [S1].
+
+### TiVo: features that scared people
+
+TiVo had a better product, funding and good market conditions, and still never made money [S1]. He says it listed features, which made skeptics feel scared and not curious, and suggests framing the product around the kind of person who values control [S1].
+
+### The Wrights and Langley
+
+Langley had a $50,000 War Department grant, ties to Harvard and the Smithsonian, and press [S1]. The Wrights had bicycle-shop money, no degrees and little press, but a belief that flight would change the world, and they flew on 17 December 1903 [S1]. Langley quit soon after, which Sinek reads as proof he was chasing fame [S1].
+
+### Barry-Wehmiller's furlough
+
+After losing 30 percent of its orders in 2008, Bob Chapman refused layoffs and asked everyone, including himself, to take four unpaid weeks [S2]. Shared suffering saved $20 million, and staff began trading furlough time to help colleagues [S2].
+
+### Next Jump's lifetime employment
+
+Next Jump, led by Charlie Kim, offers lifetime employment and coaches weak performers instead of firing them, the way a parent would respond to a child's bad grade [S2].
+
+### CVS drops cigarettes
+
+In his 2020 keynote he cites CVS dropping cigarette sales as a case of courage to lead: a bold move in service of a cause [S6].
+
 ## How he decides
 
 - Ask why before what or how [S3].

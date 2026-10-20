@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Dickens's novels are in the public domain, so we quote a few short lines. What his characters say belongs to them. His own views come from his journalism, campaigns and public life as reported by reference sources, and from the shape of the stories themselves.
+A note on method: Dickens's novels are in the public domain, so we quote a few short lines. What his characters say belongs to them. This version leans on his own pages: the full text of *A Christmas Carol* [S2], the opening chapters of *Great Expectations* [S3] and his early *Sketches by Boz* [S7], with *A Tale of Two Cities* [S4] and *Oliver Twist* [S6] for their openings and subject. Reference pages [S1][S5] supply the serial publishing facts, his campaigns and his public readings. We have no letters or speeches in his own words, so his views on reform are read from his stories and from those reference pages.
 
 ## In one paragraph
 
@@ -50,6 +50,9 @@ How he applied it outside fiction: for about ten years he helped run Urania Cott
 
 Many poor readers paid a halfpenny to hear each new part read aloud [S1]. Dickens later took his work to the stage himself. His first tour of public readings, in 1858 and 1859, ran to 129 appearances in 49 towns [S1]. A second American tour in 1867 and 1868 gave 76 readings [S1]. His prose has the rhythm of something meant to be heard: repetition, lists, and sentences that build to a punch.
 
+### See life as a pantomime
+In an early essay he says he loves pantomime because it mirrors life: the rich old gentleman who slips, and the crowd who pounce on him, are what audiences enjoy because they recognise it [S7]. He wrote his own comedy the same way, by staging ordinary human behaviour and letting the audience see itself [S7].
+
 ### Walk the streets and watch
 
 He walked at least a dozen miles a day around London and the country, and wrote that he would explode and perish if he could not walk fast and far [S1]. His years as a court and parliamentary reporter trained him to catch how people really talk [S1]. The lesson: the details that make a scene come alive are gathered on foot, not invented at a desk.
@@ -63,6 +66,26 @@ He walked at least a dozen miles a day around London and the country, and wrote 
 - Give each character one trait or way of speaking that sticks [S1][S2].
 - Mix comedy and pathos, often in the same chapter [S1].
 - Read it aloud. If it doesn't work in a room, rewrite it [S1].
+
+## Real decisions
+
+### Telling the reader Marley is dead before anything else
+He opens the *Carol* by insisting, at some length and with jokes, that Marley is as dead as a door-nail [S2]. His reason, stated in the narration: unless we are sure he is dead, nothing wonderful can come of the story. He compares it to *Hamlet*, where the ghost matters only because the father is known to be dead [S2]. He fixes the fact first, then plays with it.
+
+### Aiming the *Carol* at a mood, not a sermon
+His preface says he wanted to raise a ghost of an idea that would leave readers pleased with themselves, each other and the season [S2]. He chose a gentle, ghostly frame over a pamphlet on poverty. The message still lands: Marley's ghost says the common good should have been his business [S2].
+
+### Ending the change on action
+Scrooge wakes in Stave V and finds the bed, the room and the time all his own, "to make amends in" [S2]. The story ends with him acting, not with a vow. The reader sees the change cost him money, time and pride [S2].
+
+### Letting a child tell it
+In *Great Expectations* he gives the story to Pip as an adult looking back. Pip explains how he came to be named, reads his dead parents from their tombstones, and meets the convict in a graveyard in the first chapter [S3]. The comedy and the fear sit side by side, and the boy's honest, slightly wrong guesses make us trust him [S3].
+
+### Starting from types he had watched
+His first book was made of sketches of people and places he had seen: the parish and its beadle, the bashful young gentleman, the couple who coddle themselves [S7]. In "Our Parish" he first sets out the misery the poor law causes, then turns the beadle into a comic figure, so the laugh and the anger work together [S7]. This is the habit he kept: watch, name the type, then give it one trait.
+
+### Changing a character after a reader objected
+After a real woman objected to a *David Copperfield* character who seemed to mock her, he gave the character better traits in later parts [S1]. Serial form let him listen and adjust while the book was still coming out [S1][S5].
 
 ## Where he stood
 

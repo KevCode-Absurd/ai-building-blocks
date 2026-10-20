@@ -1,0 +1,22 @@
+slug: after-sale-offer-planner
+name: "After-sale offer planner"
+summary: "Paste your product and customer list. Get follow-on offers to try, each with a small test."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: offer}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [joseph-sugarman]
+credits:
+  - {title: "How legendary copywriter Joe Sugarman gets his creativity in gear", by: "Mixergy interview", used: "Adding a second offer that fits the first purchase and testing one change at a time"}
+  - {title: "Triggers, toll-free triumphs and tales from a marketing legend", by: "Inspired Insider interview", used: "Keeping a log of tests, including the failures"}
+  - {title: "Joseph Sugarman study notes", by: "Joseph Sugarman (as summarised in the mind file)", used: "Making an add-on easy to say yes to at the moment of buying"}

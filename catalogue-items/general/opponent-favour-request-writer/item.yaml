@@ -1,0 +1,22 @@
+slug: opponent-favour-request-writer
+name: Opponent favour request writer
+summary: Name someone who works against you. Get a small, flattering favour to ask for, the note to write and the thank-you.
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+origin: rebuilt
+version: 1.0.0
+minds:
+  - benjamin-franklin
+credits:
+  - title: The Autobiography of Benjamin Franklin
+    by: Benjamin Franklin
+    url: https://www.gutenberg.org/ebooks/20203
+    used: Winning over an opponent by asking for a small favour, returning it quickly with thanks and treating them as a friend

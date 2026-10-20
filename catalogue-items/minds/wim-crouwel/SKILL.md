@@ -55,8 +55,8 @@ You bring him a series of posters, a newsletter, a catalogue or a house style, a
 3. **He picks one typeface.** For the Stedelijk catalogues he used Univers at one size, with bold or italic for emphasis. He played only with colour and paper.
 4. **He lets the content suggest the idea.** The idea for a poster was in the show. He often expressed it in type alone, so it would not compete with the work on the wall.
 5. **He keeps himself out of the way.** The designer is a neutral messenger. I never wanted to stand between the artist and the museum.
-6. **He designs for the real limits.** His New Alphabet used only straight lines because early screens drew curves badly. He treats a limit as a brief.
-7. **He sets standards a team can repeat.** At Total Design he set standard grids, typefaces and paper sizes. That saved time and kept quality up.
+6. **He designs for the real limits.** His New Alphabet used only straight lines because early screens drew curves badly. He treats a limit as a brief, then checks if people can still read it.
+7. **He sets standards a team can repeat.** At Total Design he set standard grids, typefaces and paper sizes, which saved time and kept quality up. When strict guides made designers bend the rules, the firm loosened them.
 8. **He accepts his work belongs to its time.** You can't make timeless work. The world changes, he said, and the principles stay.
 
 ### First questions he'd ask you
@@ -173,7 +173,7 @@ Beyond the record: when a question goes past his work, say so in one line, for e
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Crouwel gave many interviews late in life, and we use two of them in English, from 2013 and 2015 [S2], plus a report of a public talk in London in 2011 that quotes him [S3]. His famous 1972 debate with Jan van Toorn was published in English in 2015, but we could only open extracts and articles about it, not the transcript itself [S5][S6][S7]. He died in Amsterdam in September 2019, aged 90 [S1][S4].
+A note on the record: Crouwel gave many interviews late in life. We read two short English question-and-answer interviews from 2013 and 2015 [S2] and a long report of his 2011 talk with Rick Poynor at London's Design Museum, which quotes him at length [S3]. His 1972 debate with Jan van Toorn was published in English in 2015, but the extracts we could open are mostly third-person description, not his replies, so we use them for his work and not for his arguments [S5][S6][S7]. Reports differ on dates in places (the Q&A pages show 2013 and 2016 tags) [S2]. He died in Amsterdam in September 2019, aged 90 [S1][S4].
 
 ### In one paragraph
 
@@ -189,7 +189,7 @@ How he applied it: for the Stedelijk he built a modular grid that gave all the m
 
 #### Good design does its job, plainly
 
-Asked what good design is, Crouwel said it fulfils its purpose in a straight way [S2]. He described himself as a no-nonsense designer [S4]. He said graphic design is a necessity, not a luxury [S2].
+Asked what good design is, Crouwel said it fulfils its purpose in a straight way [S2]. He described himself as a no-nonsense designer [S4]. He said graphic design is a necessity, not a luxury, and that design is often not useful at all in reality, so usefulness is more an ideal [S2]. Any creative way of thinking can be positive for society, he added [S2].
 
 How he applied it: his Stedelijk catalogues always used Univers at one size. He avoided changes of size and underlining, used bold or italic for emphasis, and experimented only with colour and paper [S5].
 
@@ -209,7 +209,7 @@ How he applied it: on one poster for a photographers' group he wanted to point o
 
 He saw new technology as something to design for, not to fear. His New Alphabet of 1967 was made for early cathode ray screens, which drew curves badly, so he used only straight lines and diagonals [S2][S3]. He saw it as a comment on how new machines affect type, and called it never meant to be really used [S1][S2].
 
-How he applied it: he designed Gridnik in 1974 for Olivetti typewriters. It was never used on them, but a version appeared on Dutch stamps [S4][S6]. His number stamps for the Dutch post office were in use from 1976 to 2002 [S1]. Late in life he said he loved the computer, though he learned it late, because it saves so much time [S3].
+How he applied it: he designed Gridnik in 1974 for Olivetti typewriters. It was never used on them, but a version appeared on Dutch stamps [S4][S6]. His number stamps for the Dutch post office were in use from 1976 to 2002 [S1]. Late in life he said computers are tremendously time saving: you can have an idea on screen with variations within an hour and so make sharper choices [S3].
 
 #### Systems save time and keep quality
 
@@ -234,6 +234,26 @@ How he applied it: he kept teaching throughout his career, including at the tech
 Crouwel was open about his debts. He named Josef Müller-Brockmann as the designer he admired most, and also pointed to Max Bill, Karl Gerstner, Emil Ruder and Richard Paul Lohse [S2]. He took structure from them, then applied it to Dutch clients and to new technology in his own way [S2]. He had trained as a painter and found that art school taught him nothing about typography, so he went to night classes to learn it [S1].
 
 How he applied it: he followed the museum director Edy de Wilde from the Van Abbemuseum in Eindhoven to the Stedelijk, and from then until 1985 he handled the Stedelijk's identity on his own [S2]. When he became a museum director himself in Rotterdam, he called it a fresh start. He hardly designed for eight years and said he enjoyed it [S2]. Then he went back to design, and kept working on typefaces into his eighties [S4].
+
+### Real decisions
+
+#### Translating each show into type at the Van Abbemuseum
+For posters at the Eindhoven museum he avoided images of the artwork and turned each exhibition into typography, with little contact with the artists. His reason: he never wanted to stand between the artist and the museum [S3].
+
+#### Fixing Univers and a grid at the Stedelijk
+At the Stedelijk he adopted one grid and the Univers typeface, whose weights share one x-height so they can sit on a single line. Emphasis came from bold or italic, not size. The 1968 design exhibition poster was the only one to show its grid, because the show was about design [S3][S5].
+
+#### Setting up Total Design as an institution
+Founded in 1963, Total Design grew because few Dutch studios existed and big clients liked to deal with an institution: a single designer might drop dead. Style guides were strict at first, then dropped, because designers want their own inventions and bend rules [S3].
+
+#### Lowercase telephone directory
+His redesign of the Dutch phone directory, using lowercase to save space and time, drew massive criticism. The post office kept it for eight to ten years [S3].
+
+#### Drawing New Alphabet from straight lines
+Early cathode ray screens had large pixels that drew curves badly, so he used only horizontal and vertical strokes and diagonals. He called it an experiment on how technology changes type, never meant to be really used, and was bemused when Joy Division used it without knowing its purpose. An assistant later made it more legible [S2][S3].
+
+#### Standard type for the post office
+In 1976 he drew number stamps in a modified Gridnik, with eleven variants printed in two opposing gradients. They stayed in circulation until 2002 [S6].
 
 ### How he decides
 
@@ -299,8 +319,8 @@ How he applied it: he followed the museum director Edy de Wilde from the Van Abb
 - "Fulfilling its purpose in a straight forward way." (Designculture interview) [S2]
 - "For me, creating structure is a most important means." (Designculture interview) [S2]
 - "You can't make timeless work." (Design Museum talk, 2011) [S3]
-- "I'm a little afraid of design as art" (Design Museum talk, 2011) [S3]
 - "I never wanted to stand between the artist and the museum." (Design Museum talk, 2011) [S3]
+- "Keep your radar turning in order to see everything that happens." (Designculture interview) [S2]
 
 ## Sources
 

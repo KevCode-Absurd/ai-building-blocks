@@ -1,0 +1,131 @@
+new_slug: plain-page-type-checker
+name: "Plain page type checker"
+summary: "Paste your page text and where it is read. Get type and spacing fixes, a readability check and a score."
+job: design-work
+thinking: medium
+thinking_why: "It checks many separate details and gives a reason for each fix, but the checks are fixed."
+
+headline: "Plain page type checker"
+subhead: Give it your page text, where and by whom it is read, and the type and layout if you have them. It states the message, checks type, size, line length, spacing, contrast and grid for a tired reader, names who is left out, and returns fixes with reasons and a score out of 100.
+
+explain: |
+  A page can have good words and still be hard to read: type too small, lines too long, headings that look like body text, grey on white. The fixes are known, but advice that says "use more white space" teaches nothing, so the same fault comes back on the next page.
+
+  This skill starts with the message in one plain sentence. It asks what the typeface says about that message and who it is for. It checks size, line length, spacing and contrast for a tired reader in poor light, and how paragraphs and headings are ordered and held by a grid. It names who the page leaves out and how to include them. Every fix comes with its reason, and a small exercise lets you practise it.
+
+when:
+  - You have a page, handout, slide or screen and want to know why it is tiring to read.
+  - You are choosing type and spacing and want reasons, not rules of thumb.
+  - You want to check that your page works for readers with poor eyesight or little time.
+
+you_give:
+  - The page text, or a screenshot or PDF
+  - Where and by whom it is read, such as phones in a queue or print in a clinic
+  - Your fonts, sizes and colours if known (optional)
+you_get:
+  - The message in one sentence
+  - A check of type, size, line length, spacing, contrast and grid, each with a verdict
+  - Who the page leaves out and how to include them
+  - Fixes, each with a reason, and a small practice exercise
+  - A score out of 100, with how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Attach the page, or paste the text and list the fonts, sizes and colours.
+  - Say where it is read, on what device and by whom.
+  - Fix the highest-impact problems first, then run it again.
+  - Do the practice exercise on your next page.
+
+how_it_works:
+  - title: Writes the message
+    text: States what the page says in one plain sentence before any fix.
+  - title: Asks what the type says
+    text: Asks what the typeface says about the message and who it is for.
+  - title: Checks for tired readers
+    text: Checks size, line length, spacing and contrast for a reader who is tired and in poor light.
+  - title: Checks order and grid
+    text: Checks how paragraphs and headings are ordered and whether a grid holds them.
+  - title: Names who is left out
+    text: Names readers the page fails and how to include them.
+  - title: Gives reasons
+    text: Gives the reason for every fix, so you can make the next choice yourself.
+  - title: Offers an exercise
+    text: Offers a short exercise to practise the fix, then scores and checks.
+
+output_shape: |
+  MESSAGE
+  <one sentence>
+
+  WHAT THE TYPE SAYS
+  <typeface> says <x>; the message needs <y> | Fit: <good / poor>
+
+  CHECKS
+  Size | <value> | <verdict> | Reason: <why>
+  Line length | ...
+  Spacing | ...
+  Contrast | ...
+  Order and grid | ...
+
+  WHO IS LEFT OUT
+  <reader> | How to include them: <fix>
+
+  FIXES, BIGGEST FIRST
+  1. <fix> | Reason: <why>
+
+  PRACTICE
+  <small exercise>
+
+  SCORE
+  <score> out of 100. Worked out as: <how>
+
+  MISSING
+  <what could not be checked>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Where it is read
+    how: Say phone, print, screen or sign, and the light. Size and contrast depend on it.
+  - what: Who reads it
+    how: Name their age, tiredness, language and eyesight. It sets the tests for who is left out.
+  - what: Attach the real page
+    how: Sizes and contrast are hard to judge from text alone. A screenshot or PDF is checked directly.
+  - what: What you cannot change
+    how: List brand fonts or colours that are fixed. Fixes then work inside them.
+
+judge:
+  - The message is stated before any fix.
+  - Each fix has a reason.
+  - Contrast and size are checked.
+  - Who is left out is named.
+  - A beginner could follow the steps.
+
+test:
+  - Run it on a page you know is hard to read and see if it finds the faults you already feel.
+  - Make its top three fixes and ask someone to read the page for a minute. Ask what they remember.
+  - Run it twice. The top fixes should match.
+  - Check one contrast verdict with a free colour contrast tool.
+
+improve:
+  - Add your brand fonts and colours as fixed, so fixes stay within them.
+  - Add the minimum size and contrast your readers need.
+  - Add a house grid so the grid check uses your columns.
+  - Pair it with the "Layout default breaker" if the page needs a bigger rethink.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It can judge size, spacing and contrast from a screenshot or PDF."}
+    - {name: "A colour contrast checker", why: "A free tool gives an exact contrast ratio to confirm the verdict."}
+  inputs:
+    - "A screenshot or PDF of the page"
+    - "Font names, sizes and colour values"
+    - "A note on who reads it and where"
+
+terms:
+  - term: Line length
+    meaning: The number of characters in a line of text. Very long lines are tiring to follow.
+  - term: Contrast
+    meaning: How different the text colour is from the background. Low contrast is hard to read.
+  - term: Grid
+    meaning: An invisible set of columns and margins that keeps parts of a page lined up.

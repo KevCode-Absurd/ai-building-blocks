@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Rand wrote many essays and four books on design. Several essays are kept on paulrand.design, an archive site devoted to his work, and this data set reads four of them, from 1955 to 1992 [S1][S2][S3][S4], plus the site's page of his quotes [S5] and a reference page on his life [S6]. His writing is still under copyright, so quotes stay short.
+A note on method: Rand wrote many essays and four books on design. Several essays are kept on paulrand.design, an archive site devoted to his work, and this data set reads four of them, from 1955 to 1992 [S1][S2][S3][S4], plus the site's page of his quotes [S5], a reference page on his life [S6] and a 1994 interview [S7]. His writing is still under copyright, so quotes stay short.
 
 ## In one paragraph
 
@@ -27,6 +27,14 @@ How he applied it: his IBM logo of 1956 was later redrawn with stripes in 1972 [
 A new logo, Rand argued, only starts to work once people have lived with it and judged the product behind it [S1]. So first reactions are a poor guide. He noted that an IBM executive once compared the striped logo to a chain gang, and that the Westinghouse mark was mocked as a pawnbroker's sign [S1]. His point was that early complaints fade once people know the company behind the mark.
 
 How he applied it: when ABC thought about updating its logo, a market survey showed it was already widely recognised, and it was kept [S1]. He saw clients' likes and dislikes, ego and nostalgia as bad reasons to change or reject a mark [S1].
+
+### Seven tests for a mark
+
+In 1991 Rand listed what makes a logo work: distinctive, visible, usable, memorable, universal, durable and timeless [S1]. It should read in one colour and at tiny sizes [S1]. He said subject matter matters less than people think, and that first reactions are unreliable: executives compared the IBM stripes to a chain gang and the Westinghouse mark to a pawnbroker's sign [S1]. When ABC's leaders planned a redraw, a survey showing strong audience recognition stopped it [S1]. He accepted a redesign when a mark was ugly or out of date, and mocked changes made to feed an ego or follow a trend [S1].
+
+### Creativity is work, and you can't teach it
+
+In 1994 he called creativity your personality at work, about 95 percent perseverance and 5 percent inspiration, and said it is not limited to the arts [S7]. He held that you can't teach creativity, only show students how more creative people work, and he tried to set problems better than the gimmicky, notoriety-seeking ones many students chose [S7]. He said everything made by the human hand is art, so the useful question is how good it is, not what genre [S7]. He said he had grown simpler over time and disliked his first book [S7].
 
 ### Play within rules
 
@@ -62,6 +70,9 @@ How he applied it: he resigned from Yale in 1992 in protest at the appointment o
 - Use contrast and repetition to make a layout work [S4].
 - Let form come out of the idea [S3].
 - Ignore fads and personal taste [S1][S3].
+- Judge quality, not genre or taste, which he likened to preferring brunettes or redheads [S7].
+- Give the work time and effort; most of creativity is perseverance [S7].
+- Run the seven tests: distinctive, visible, usable, memorable, universal, durable, timeless [S1].
 
 ## Where he stood
 
@@ -91,6 +102,7 @@ How he applied it: he resigned from Yale in 1992 in protest at the appointment o
 - **Hostile to new ideas.** Critics called his late writing reactionary and closed to new thinking about design. Mark Favermann described him as an angry old man, while Steven Heller defended him [S6].
 - **The Yale walkout.** His 1992 resignation over a postmodern hire was seen by some as a refusal to let design education change [S6].
 - **Mixing taste and judgment.** In "Confusion and Chaos" he dismissed a whole generation's work as fashion [S3]. Some of that work, such as digital and expressive type, later became mainstream.
+- **Short with questions.** In the 1994 interview he waved off questions he found weak, calling one topic terrible, and pushed the interviewer to sharpen her questions [S7].
 - **Not every client agreed.** Ford turned down his modernised logo in the 1960s [S6].
 - **Enron.** He designed Enron's logo [S6]. The company later collapsed in scandal, a reminder of his own point that a logo is only as good as what stands behind it [S1].
 
@@ -101,6 +113,23 @@ How he applied it: he resigned from Yale in 1992 in protest at the appointment o
 - He says little about digital screens, motion or tiny icons. Test his ideas at small sizes and in apps.
 - He tends to wave away client taste and feedback. Some of it is useful.
 - He is strong on the single mark. Pair him with a systems thinker for a full identity.
+
+## Real decisions
+
+### Sticking with the IBM stripes
+When executives mocked the IBM stripes as a chain gang, Rand kept to his view that first reactions mislead [S1]. His reason was that a mark earns meaning over time from the company behind it [S1]. The stripes lasted [S6].
+
+### Keeping the ABC mark
+ABC's leaders considered a redraw. A market survey found strong recognition among viewers, and the plan was dropped [S1]. Rand used the case to show that recognition matters more than a manager's wish for change [S1].
+
+### Resigning from Yale
+In 1992, after a postmodern designer joined the Yale faculty, he resigned and persuaded Armin Hofmann to do the same [S3][S6]. His stated concern was a school drifting from design, history and craft [S3].
+
+### Declining to be called the inventor of graphic design
+Asked in 1994 whether he created graphic design, he joked that he was not old enough and that it began with the Egyptians [S7].
+
+### Setting students real problems
+He avoided open "express yourself" assignments and set problems with limits, because open freedom bred bored students and arbitrary work [S2][S7].
 
 ## Short phrases on the record
 

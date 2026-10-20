@@ -1,0 +1,27 @@
+slug: find-what-you-really-sell-and-prove-every-claim
+name: "Find what you really sell and prove every claim"
+summary: "Give it your product and buyer. Get angles worth testing, a checked offer and every claim matched to proof."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: offer, required: true}
+  - {type: copy_draft, required: true}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: audit_report}
+uses: [what-you-really-sell-finder, offer-checklist-reviewer, claim-and-proof-matcher]
+steps:
+  - {uses: what-you-really-sell-finder, note: "A long list of what you are really selling, and the best three as test angles"}
+  - {uses: offer-checklist-reviewer, note: "A review against a tested offer checklist, and the three changes worth testing first. Reads the angle library from the step before"}
+  - {uses: claim-and-proof-matcher, note: "Every claim paired with proof, the claims that outrun it, and fixes. Reads the offer from the step before"}
+origin: rebuilt
+version: 1.0.0
+minds: [gary-bencivenga]
+credits:
+  - {title: "Gary Bencivenga's Marketing Bullets Collection", by: "Gary Bencivenga", used: "The order of the steps: what you really sell finder, offer checklist reviewer, claim and proof matcher"}
+generated_from: intake/bencivenga-marketing-bullets/skeleton.yaml

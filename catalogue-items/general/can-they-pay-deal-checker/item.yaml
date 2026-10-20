@@ -1,0 +1,18 @@
+slug: can-they-pay-deal-checker
+name: "Can-they-pay deal checker"
+summary: "Paste your terms and what you know of their means. Get a range they can pay and a sum they can meet."
+category: general
+type: skill
+role: check
+job: analysis
+level: expert
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [john-maynard-keynes]
+credits:
+  - {title: "The Economic Consequences of the Peace, chapters 3, 5 and 7", by: "John Maynard Keynes", url: "https://www.gutenberg.org/ebooks/15776", used: "Splitting a demand into parts, estimating what the other side can pay, comparing the ask with that range and proposing one fixed sum"}

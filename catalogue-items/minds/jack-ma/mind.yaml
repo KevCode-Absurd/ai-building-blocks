@@ -28,6 +28,8 @@ sources:
   - {n: 4, title: "Alibaba Group", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Alibaba_Group", kind: reference}
   - {n: 5, title: "Alibaba Group Holding Ltd, Form F-1 registration statement (2014)", by: "Alibaba Group, U.S. SEC", url: "https://www.sec.gov/Archives/edgar/data/1577552/000119312514184994/d709111df1.htm", kind: reference}
   - {n: 6, title: "Go to China: Jack Ma to American small businesses (2015)", by: "CKGSB Knowledge", url: "https://english.ckgsb.edu.cn/knowledge/article/go-to-china-jack-ma-to-american-small-businesses/", kind: secondary}
+  - {n: 7, title: "Ideas and Technology Can Change the World (Stanford GSB, 4 May 2013), transcript", by: "Jack Ma, transcript on The Singju Post", url: "https://singjupost.com/ideas-technology-can-change-world-alibaba-founder-jack-ma-transcript/", kind: own-words}
+  - {n: 8, title: "Internet billionaire to small business owners: Be global or go out of business (Gateway '17 coverage, June 2017)", by: "Toledo Blade", url: "https://www.toledoblade.com/business/2017/06/22/Internet-billionaire-to-small-business-owners-Be-global-or-go-out-of-business-Alibaba-s-founder-touts-China-market-in-Detroit-presentation.print", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a one-page plan for a two-person shop that wants to sell online to customers in another country for the first time."}
   - {kind: use, prompt: "Write a short talk for a founder's last day, handing the company to the next leader."}

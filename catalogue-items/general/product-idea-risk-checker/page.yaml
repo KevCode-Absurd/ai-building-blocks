@@ -1,0 +1,124 @@
+new_slug: product-idea-risk-checker
+name: "Product idea risk checker"
+summary: "Paste your product idea and what you know. Get the four risks scored out of 100 and the cheapest first test."
+job: test-an-idea
+thinking: medium
+thinking_why: "It rates evidence against four fixed questions and picks the riskiest, which needs judgment but follows set steps."
+
+headline: "Product idea risk checker"
+subhead: "Give it a product or feature idea and what you know about it. It asks four questions: will people want it, can they use it, can you build it, and can the business live with it. You get each risk scored out of 100, an owner for each, and the cheapest test to run first."
+
+explain: |
+  Most product ideas fail for one of four reasons. Nobody wants it (value), people can't work it out (usability), you can't build it with what you have (feasibility), or something outside the product vetoes it, such as cost, law or the brand (viability). Teams often check only one, usually whether it can be built.
+
+  This skill writes the problem in plain words, then asks for the evidence on each risk and marks what is unknown. It names one owner per risk, scores how well the evidence covers each, and finds the riskiest. It writes the cheapest test for that risk, cheaper than building, and the result that would change your plan.
+
+when:
+  - You have an idea and are about to spend weeks or money building it.
+  - Someone has asked for a feature and you need to decide if it is worth doing.
+  - A launch went badly and you want to see which risk you skipped.
+
+you_give:
+  - The idea, the problem it solves and for whom
+  - What you already know, such as customer words, tests, costs and limits
+  - Customer reviews or messages (optional)
+  - Your brand file, for rules on claims and fit (optional)
+you_get:
+  - Each of the four risks with the evidence, or marked unknown
+  - A score out of 100 for how well the evidence covers the risks
+  - A named owner for each risk
+  - The cheapest test for the riskiest one, and the result that would change your plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the idea in plain words and who it is for. Add what you know about each of the four risks.
+  - Say who on your team would own each risk. Leave blank if you are alone.
+  - Run the test it names before you build. Bring back the result.
+
+how_it_works:
+  - title: States the problem
+    text: Writes the problem and the customer in plain words, without naming the solution.
+  - title: Checks value
+    text: Looks for evidence that people will want it and use it, such as past behaviour or money spent.
+  - title: Checks usability
+    text: Asks whether people can work it out without help and what shows that.
+  - title: Checks feasibility
+    text: Asks whether builders can deliver it with the time, skills and tools you have.
+  - title: Checks viability
+    text: Looks for anything that could veto it in sales, law, cost or brand.
+  - title: Names the owners
+    text: Gives one owner per risk, with a gap shown if nobody fits.
+  - title: Picks the cheapest test
+    text: Chooses the riskiest area and writes a test cheaper than building, with the result that would change the plan.
+
+output_shape: |
+  THE PROBLEM
+  <problem> for <customer>, as they have it today
+
+  THE FOUR RISKS
+  Value: <evidence or unknown> | Owner: <name/role> | Score <n>/25
+  Usability: <evidence or unknown> | Owner: <name/role> | Score <n>/25
+  Feasibility: <evidence or unknown> | Owner: <name/role> | Score <n>/25
+  Viability: <evidence or unknown> | Owner: <name/role> | Score <n>/25
+
+  EVIDENCE SCORE
+  <n>/100. Each risk scores 25 for how strong the evidence is. It measures evidence, not the quality of the idea.
+
+  THE RISKIEST
+  <risk> because <reason>
+
+  THE CHEAPEST TEST
+  <test> | Cost: <time and money> | Cheaper than building because <reason>
+  Changes the plan if: <result>
+
+  MISSING
+  <facts that would sharpen the ratings>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How you describe the problem
+    how: Describe it as the customer has it today. A problem stated as your product gets rated as an opinion.
+  - what: Evidence you already have
+    how: Share customer words, past tests, costs and rules. Unknown risks are named, not guessed.
+  - what: Who is on the team
+    how: Say who does what. It assigns owners to real people, or shows the gap.
+  - what: Test budget
+    how: Give a time and money limit. The test it picks fits inside it.
+
+judge:
+  - Each of the four risks has evidence or is marked unknown.
+  - Each risk has a named owner or a named gap.
+  - The test costs less than building the thing.
+  - The plan says what result would change the decision.
+  - No risk is rated safe on opinion alone.
+
+test:
+  - Run it on an idea that failed. See if the risk you skipped scores lowest.
+  - Run it on an idea you are sure of. If every risk comes back strong, check the evidence is real.
+  - Give it the same idea twice. The riskiest risk should match.
+  - Run the test it names and see if you could read the result without arguing.
+
+improve:
+  - Add the viability limits of your business (legal, cost, brand rules) to step 5.
+  - Add the kinds of test you can run cheaply, such as a one-page mock or a call.
+  - Save each idea's ratings and result so you can compare later.
+  - Pair it with "Feature roadmap to outcomes rewriter" to turn your list into problems.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rating evidence and writing a test is text work that any strong chat AI does with this skill."}
+    - {name: "A prototype or mock page", why: "Lets you run the cheap test it recommends with real people."}
+  inputs:
+    - "Customer reviews or call notes that mention the problem"
+    - "Cost estimates from the people who would build it"
+    - "Rules or limits from legal, sales or your brand file"
+
+terms:
+  - term: Value risk
+    meaning: Whether people will want it and choose it over what they do now.
+  - term: Viability risk
+    meaning: Whether the idea works for the business, in cost, law, sales and brand.
+  - term: Feasibility risk
+    meaning: Whether you can build it with the time, skills and tools you have.

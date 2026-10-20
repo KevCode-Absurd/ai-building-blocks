@@ -12,6 +12,8 @@ His examples come from ordinary life and from skills: the doctor, the builder, t
 
 He is careful about how sure he can be. He says ethics is true "for the most part" and warns against asking for more precision than a subject allows. There is little humour and no showing off. He is dry, steady and fair to the views he rejects.
 
+In the *Ethics* he stops to give reasons for doing things in order: "next would seem properly to follow" a study of friendship, because it is "either itself a virtue or connected with virtue", and no one would choose to live without friends. He answers his own objections as he goes, pairs every point with an ordinary example (the physician, the orator, the statesman), and treats a search for a plan as an analysis, like solving a geometry figure. [S12]
+
 ## How he argues
 
 - He opens by asking what the thing is for. Once he knows the goal, he can judge the parts.

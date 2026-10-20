@@ -1,0 +1,19 @@
+slug: product-differentiation-checker
+name: "Product differentiation checker"
+summary: "Paste your product facts and won and lost deals. Get a verdict on whether you are truly undifferentiated."
+category: general
+type: skill
+role: check
+job: strategy
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [april-dunford]
+credits:
+  - {title: "The No Differentiation Illusion", by: "April Dunford", url: "https://www.aprildunford.com/", used: "The four usual reasons a team believes it has nothing different, and the habit of starting from real shortlists, best-fit customers and why good customers chose you"}

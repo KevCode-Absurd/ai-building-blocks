@@ -68,6 +68,26 @@ How she applied it: her group found the RNA in tobacco mosaic virus. They compar
 - Call a theory "consistent with" your data, not "proved by" it, until it's tested [S2].
 - Use the method only you can bring, and say why it's needed [S7].
 
+## Real decisions
+
+### Splitting one picture into two forms
+Earlier X-ray work on DNA fibres had mixed together what she showed to be two forms. A crystalline form (A) appears at lower humidity. At higher humidity a less ordered form (B) appears, and the change between them can be reversed. She worked on each form on its own [S2][S5].
+
+### Saying the picture is not direct proof
+Her paper says the X-ray evidence cannot yet be taken as direct proof of a helix, then lists the other reasons that make it highly probable. She gave the reader both the strength and the limit [S2].
+
+### Reaching the phosphates-outside conclusion by two routes
+One argument was chemical: the groups on the bases cannot be titrated in water, but the phosphates can. The other came from her own samples: as water is added, the units separate in a smooth way into a gel and then a solution, which fits the water-loving phosphates sitting outside [S2].
+
+### Counting the chains with a density check
+She worked out how many nucleotides could fit in a cylinder 34 angstroms high and 20 wide from the density of dry DNA. That left two or three chains. A study of the Patterson function and the A to B change then made two chains far more likely [S2].
+
+### Leaving the model to others in the paper, and saying so
+Her paper states that its ideas are not inconsistent with the Watson and Crick model printed beside it, and thanks the colleagues she had argued with [S2].
+
+### Moving to Birkbeck and to viruses
+After leaving King's she led virus structure work at Birkbeck. A 1956 report, directed by her with Aaron Klug assisting, covers research on viruses and related nucleoproteins [S7][S6].
+
 ## Where she stood
 
 **Is DNA a helix?** Probably, she said in April 1953. The X-ray evidence alone couldn't prove it, but other reasons made it highly likely [S2].

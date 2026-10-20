@@ -1,0 +1,23 @@
+slug: page-grid-and-type-planner
+name: "Page grid and type planner"
+summary: "Paste your content and page type. Get a grid, a short type list and a white-space plan."
+category: general
+type: skill
+role: make
+job: design
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: copy_draft, required: false}
+  - {type: brand_brain, required: false}
+  - {type: design_direction, required: false}
+outputs:
+  - {type: page_layout_spec, required: true}
+  - {type: design_direction, required: true}
+minds: [massimo-vignelli, josef-muller-brockmann, wim-crouwel]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "The Vignelli Canon", by: "Massimo Vignelli", used: "Asking what the piece means and who reads it first, then few typefaces, few sizes, margins and big-against-small type"}
+  - {title: "Wim Crouwel, two interviews", by: "Wim Crouwel, 2013 and 2015", used: "Choosing one grid and one typeface family, and setting everything on the grid"}
+  - {title: "Rick Poynor in conversation with Wim Crouwel", by: "Rick Poynor, Design Museum", used: "Planning a series so the pieces share a system, with changes only for a reason"}

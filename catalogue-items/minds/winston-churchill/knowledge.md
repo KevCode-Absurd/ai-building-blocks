@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Read on 2026-10-20: the June 1940 speeches (S4, S5) as pages, and the 1902 text of *The River War* (S7) in the chapter on the desert railway. The Munich and May 1940 pages gave only short records, so claims about them lean on the speech summaries and reference pages.
+
 A note on method: Churchill was a political leader, so this data set sticks to his leadership and ideas as the record shows them, mostly from his speeches in the House of Commons (Hansard) and from reference pages. It says nothing about today's politics. Many lines credited to Churchill online were never said by him, so we only use phrases from speeches we read. His words are still under copyright, so quotes are short. His record on empire and race is debated, and the criticism section covers it.
 
 ## In one paragraph
@@ -16,11 +18,21 @@ In a crisis, Churchill started with the bad news. In his first speech as prime m
 
 How he applied it: the hard truth came first, then the facts, then the resolve. The Dunkirk speech moves from loss, to what went right (the Navy, the merchant seamen, the air force), to how Britain would defend itself, and only then to the pledge to fight on [S4].
 
+**Supply comes before the battle.**
+
+In *The River War* (1902) he wrote that readers watch the fighting but forget the long line of supply behind it. Victory, he said, is the bright flower and transport the stem. His verdict on the Sudan campaign was that the enemy was beaten on the railway, because the campaign was mainly a matter of moving men and goods [S7]. The chapter on the desert railway walks through who was available, what ground the line had to cross, and how an unskilled work battalion of 800 men was used to build it [S7].
+
+How he applied it: in 1940 he gave the House numbers for ships, men and guns, not only spirit, so the plan could be judged on what could be carried out [S4][S5].
+
 ### Name one aim
 
 On 13 May 1940 he asked the questions the House was asking. What is our policy? To wage war by sea, land and air. What is our aim? He answered in one word: victory [S3]. He said victory was needed however hard the road, because without it nothing Britain stood for would survive [S3].
 
 How he applied it: the speech was short, and the House backed the new government by 381 votes to none [S3].
+
+**Cast up the balance sheet, then ask for vigilance.**
+
+On 18 June 1940 he set out the facts in numbers: about 350,000 of the 400,000 men sent to France were home, and over a million and a quarter were under arms in Britain. He argued a large invasion would need hundreds of ships the Navy could meet, and he named the sources of strength he was counting on: the service chiefs' advice, the Dominions and supplies from America. He admitted the position had worsened, and asked for vigilance, not panic [S5]. He framed the choice as a "new dark age" against "sunlit uplands" before closing on the "finest hour" line [S5].
 
 ### Don't fight over the past
 
@@ -74,6 +86,26 @@ How he applied it: he lived through demotion, defeat in elections and a decade i
 - Make the case in private, then in public [S1].
 - Act early on a threat you can see coming [S1][S2].
 - After a failure, take the blame, go and serve, come back [S1].
+
+## Real decisions (enriched minds)
+
+### Warning about Germany in the 1930s
+He kept raising the alarm when it cost him office. In the Munich debate of October 1938 he judged the deal a defeat and said so in the Commons [S2]. His reason was that early warning is worth more than comfort.
+
+### Keeping Chamberlain in his War Cabinet (1940)
+On becoming prime minister he kept the man whose policy he had attacked [S1][S3]. He asked for unity before the score from the past.
+
+### Telling the Commons the truth about Dunkirk (4 June 1940)
+He called the fall of the northern armies a colossal military disaster and warned that wars are not won by evacuations. He gave the numbers: more than 335,000 men taken off, over 30,000 casualties and nearly 1,000 guns lost [S4].
+
+### Refusing an inquest (18 June 1940)
+After naming the French command's delay, he said blaming the past would cost the future. He listed his strengths in figures and asked for vigilance, not panic [S5].
+
+### Fighting on rather than seeking terms
+When his Foreign Secretary raised peace terms, he won over the wider cabinet in private over three days and then spoke to the public [S1].
+
+### Writing about supply, not just battle (1899 to 1902)
+In *The River War* he spent a chapter on the railway, saying the campaign was won by transport [S7].
 
 ## Where he stood
 

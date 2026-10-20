@@ -1,0 +1,20 @@
+slug: weekly-time-audit-planner
+name: "Weekly time audit planner"
+summary: "Paste last week's calendar. Get a count of what you chose and what was taken, and one hour won back."
+category: general
+type: skill
+role: make
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [seneca]
+credits:
+  - {title: "On the Shortness of Life", by: "Seneca (Basore translation, public domain)", url: "https://en.wikisource.org/wiki/On_the_Shortness_of_Life", used: "Counting your days the way you count money, and asking how much went to others, to habit and to nothing"}
+  - {title: "Moral Letters to Lucilius, Letter 1", by: "Seneca (Gummere translation, public domain)", url: "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius", used: "Sorting lost time into taken, stolen and slipped away, and keeping an honest account of it"}

@@ -76,6 +76,29 @@ How he applied it: he said the Edgar Thomson mills were his ideal of good relati
 - Act fast when the chance appears [S1].
 - Give surplus wealth away while you are alive to direct it [S2].
 
+## Real decisions
+
+### Leaving the railways to master iron
+In the early 1870s Carnegie had money in several western railway ventures with his Pennsylvania Railroad friends, and offers kept coming his way from finance and banking. He drifted out of all of it and put the surplus into his Pittsburgh iron and bridge works, choosing the opposite of the adage. His reason was that a man seldom reaches the top of money-making by being in many concerns, and that he could manage his own capital better than any board. The works grew into the base of the steel business. [S1]
+
+### Hiring a chemist and buying the ores others scorned
+He put a young clerk in charge of the Lucy Furnace and hired a German chemist, instead of trusting a manager who read the furnace by feel. The analyses showed that some famous ores were poor and that unloved ones, such as Pilot Knob, were rich if fluxed properly. The firm bought heavily of the despised ore, and the proprietors thanked them. He also had a young man buy a friend's discarded roll-scale for fifty cents a ton, as a joke at the friend's expense that turned out to be good business. [S1]
+
+### Standing clear in the crash of 1873
+When his railway friends Scott and Thomson fell into trouble, the Pittsburgh banks wondered whether he was tied to their debts. He caught the night train, told the bankers he owned his Texas Pacific share outright and that his name stood on none of the paper, and offered to pledge everything for the firm. He said his credit became unassailable and money was offered to him more freely in later squeezes. His own account is that he had risked far less than people supposed, because big companies stood behind his larger moves. [S1]
+
+### Making partners of clerks
+William Borntraeger began as a clerk who built a cost statement by night, unasked, and rose to superintendent and then partner. William Abbott and Mr. Curry of the Lucy Furnaces followed. Carnegie's stated reason was that nothing builds a business like promoting those who give exceptional service. Borntraeger's income late in life was about $50,000 a year, and Carnegie said every cent was earned. [S1]
+
+### Facing down the round-robin
+Furnace workers at his steel-rail works demanded a raise by four o'clock on a Monday, though their pay scale ran for months more. Carnegie took the night train, met all three works committees courteously, and asked each chairman whether an agreement stood. When the furnace chairman said he had signed without reading it, Carnegie told him to keep it and read the next one more carefully. He then gave the committee its answer before the deadline: they could leave, and the furnaces would stand idle before the firm yielded to a threat. The men went back to work. [S1]
+
+### Offering to split the gain at Homestead
+The firm spent several million dollars rebuilding Homestead, and the new machinery made about 60% more steel. It offered the tonnage men a new scale that shared the gain, so their earnings would rise about 30% and the firm would keep the rest to repay its outlay. Carnegie calls the offer generous. The dispute that followed became the strike of July 1892, which happened while he was in Scotland. He says his partners asked him not to return. Other sources say he backed Frick's aim of breaking the union, so read his account with care. [S1][S5]
+
+### Selling in 1901 and turning to giving
+After his essay was published he resolved to stop piling up wealth and take on the harder task of giving it away well. When J.P. Morgan's offer came through his partners in March 1901, he agreed to sell. He asked for nothing in common stock, because he distrusted inflated mill sales to the public, and took bonds instead. He wrote that he had enough, and that distributing it would keep him busier than before. [S1][S3]
+
 ## Where he stood
 
 **Should a business spread its risk?** No. He wanted all good eggs in one basket, watched closely [S1].

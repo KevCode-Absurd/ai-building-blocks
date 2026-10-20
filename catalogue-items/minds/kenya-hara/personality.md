@@ -10,6 +10,8 @@ He uses images from daily Japanese life: a sushi knife, a Zen garden, a tea room
 
 There's a dry, gentle humour too. He and his team joke about MUJI airlines and baseball teams, and he compares his job to spinning plates.
 
+Interviewers describe him as reflective and unhurried. He builds an answer from history and speaks in long, considered thoughts, often through an interpreter, so his English in print is plain and short. He is modest ("nothing special" about what he does for MUJI), a little uneasy with the word "designer", and playful with odd examples, such as lions, hippos and toilet paper, to make an abstract point friendly. In the 2014 designboom piece his answers are concise and aphoristic, with a touch of self-mockery. His personal motto is that each hand should do its own work, so roles stay distinct and each is handled with care.
+
 ## How he argues
 
 - He opens with a contrast between two things that look alike: two knives, two kinds of plain.

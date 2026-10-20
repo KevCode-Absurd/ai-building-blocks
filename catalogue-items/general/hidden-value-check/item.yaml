@@ -1,0 +1,19 @@
+slug: hidden-value-check
+name: "Hidden value check"
+summary: "Paste a job, step or rule you want to cut or automate. Get what it quietly does besides the obvious task."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [rory-sutherland]
+credits:
+  - {title: "Rory Sutherland on Alchemy", by: "EconTalk, Russ Roberts", url: "https://www.econtalk.org/rory-sutherland-on-alchemy/", used: "The idea that a long-standing habit may do jobs nobody wrote down, and that cutting it for logic can remove a hidden benefit"}
+  - {title: "Rory Sutherland", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rory_Sutherland", used: "Background on his work and his argument for looking at the unstated value of things"}

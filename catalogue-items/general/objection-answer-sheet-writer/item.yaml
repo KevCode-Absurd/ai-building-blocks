@@ -1,0 +1,22 @@
+slug: objection-answer-sheet-writer
+name: "Objection answer sheet writer"
+summary: "List the doubts buyers raise. Get an answer sheet that agrees where true, restates each doubt as a yes-question and brings proof."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: angle_library, required: false}
+  - {type: objection_map, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: objection_map}
+origin: rebuilt
+version: 1.0.0
+minds: [elmer-wheeler, david-ogilvy, leo-tolstoy]
+credits:
+  - {title: "Tested Direct Selling", by: "Elmer Wheeler", used: "Three kinds of doubt, restating a doubt as a question the buyer answers yes to, agreeing with what is true and bringing proof that fits"}
+  - {title: "The Unpublished David Ogilvy (publisher sample, with the 1935 Aga cooker sales manual)", by: "David Ogilvy", used: "Answering each objection directly with facts and a demonstration"}
+  - {title: "The Kingdom of God Is Within You", by: "Leo Tolstoy", url: "https://www.gutenberg.org/ebooks/43409", used: "Gathering every objection first and answering in a plain order: history, then doubts, then conclusion"}

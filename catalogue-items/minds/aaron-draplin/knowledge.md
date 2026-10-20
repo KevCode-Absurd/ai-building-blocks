@@ -38,7 +38,7 @@ How he applied it: for the Recovery Act logo in 2009 he worked through research,
 
 Draplin said good design means making what suits the problem and the client, not work that just looks like his [S7]. A big, loud client and a small, quiet one need different colours and type [S7]. He admitted he didn't invent thick lines or logo design. He named Saul Bass and Paul Rand as part of a long line, and said the basic principles work in 1966 and in 2016 alike [S7].
 
-How he applied it: his process starts with calls or a visit to the shop, where he asks the client a lot of questions about goals and problems [S5]. Then he sketches, makes notes and lists, builds the best ideas in Illustrator and presents them, looping with feedback until something strong comes out [S5]. When briefs are muddled, he shows many options and stays open, because that is where the good surprises come from [S5]. His studio's logo process page lists eight stages: listening, soft strategy, sketching, iterating, presentation, refinement, final marks and hand-off [S9].
+How he applied it: his process starts with calls or a visit to the shop, where he asks the client a lot of questions about goals and problems [S5]. Then he sketches, makes notes and lists, builds the best ideas in Illustrator and presents them, looping with feedback until something strong comes out [S5]. When briefs are muddled, he shows many options and stays open, because that is where the good surprises come from [S5]. His studio's logo process page lists eight stages (titles only; the full study was marked "coming soon" when we read it): listening, soft strategy, sketching, iterating, presentation, refinement, final marks and hand-off [S9].
 
 ### It's in the details
 
@@ -75,6 +75,36 @@ How he applied it: his first rule for new designers in 2016 was practical. Set a
 - Weigh a big client against the meetings it brings [S1].
 - Do it right now, so it doesn't cost you later [S1].
 - Pay off debt and set money aside for tax [S1][S5].
+
+## Real decisions
+
+### Answering the Recovery Act call (2009)
+
+The Mode Project phoned him on a Wednesday about an emblem for the stimulus law, and he started that night. [S4] A junking trip to Spokane was already planned, so he worked on the road and in the back seat of the car. [S4] He chose to give red and blue equal weight to keep the tone bipartisan, and he tried period typefaces to suit the weight of the law. [S4] He calls it one of the biggest honours of his life. [S4]
+
+### Dropping the star for a T (TIGER logo)
+
+For a companion mark, an early star motif was cut in favour of a plain letter T. [S4] His rule is that when a mark gets simpler it usually gets better. [S4][S7]
+
+### Going out on his own (2004)
+
+After a magazine job and a Portland design office, he began freelancing in fall 2004 from a basement. [S2][S5] He has stayed small since, and he explains that large agencies bring more meetings, more people weighing in and more pressure. [S5]
+
+### Not hiring staff
+
+He was urged to hire, but training someone to redo work he could do himself frustrated him, and peace of mind mattered more to him than status. [S5]
+
+### Making Field Notes with Coudal
+
+Instead of living only on client work, he helped make a notebook brand and keep a share of the profit. [S3] He credits his partner with teaching him that bigger is not always better. [S3]
+
+### Saying no to some jobs
+
+He says he turns down work that makes him uncomfortable, and names tattoo requests and logos for cannabis or vaping brands as examples. [S5]
+
+### Setting aside tax money
+
+His standing advice to new freelancers is to put roughly 35 percent of every payment aside for taxes before spending anything. [S5]
 
 ## Where he stood
 

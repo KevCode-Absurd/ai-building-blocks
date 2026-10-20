@@ -1,0 +1,29 @@
+slug: shareable-content-checker
+name: Shareable content checker
+summary: Paste your post, video or product idea. Get a score on six reasons people share and the one change most worth testing.
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - type: copy_draft
+    required: true
+  - type: brief
+    required: false
+  - type: persona
+    required: false
+outputs:
+  - type: audit_report
+origin: rebuilt
+version: 1.0.0
+minds:
+  - jonah-berger
+credits:
+  - title: "Contagious: Why Things Catch On"
+    by: Jonah Berger
+    url: https://jonahberger.com/books/contagious/
+    used: "The six reasons people pass things on: status, triggers, emotion, visibility, practical value and stories"
+  - title: The Science Behind Crafting Contagious Content
+    by: Jonah Berger, 2014
+    used: How the six reasons apply to content and what makes an ordinary product worth talking about

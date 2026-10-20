@@ -1,0 +1,78 @@
+new_slug: ask-for-feedback-then-give-it
+name: Ask for feedback, then give it
+summary: Say who you manage. Get a go-to question to ask for feedback and a plan for the next conversation you lead.
+job: lead-people
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Get honest feedback from your team, then give yours in a way that lands
+subhead: Tell it who you manage and what you want to learn. It writes a go-to question in your voice and a plan for the silence after you ask. Then it plans the next hard conversation you need to lead, from the praise you open with to the follow-up date.
+explain: |
+  Most leaders ask "Any feedback for me?" and hear "No, it's all good." Then they give their own feedback before they have earned the right to, and it comes out too soft or too harsh. Neither way helps the person.
+
+  This workflow starts with you. It writes a question that needs a specific answer, plans a pause of about six seconds after you ask, and prepares how you will respond to what you hear. Then it plans the conversation where you give feedback. The order comes from Kim Scott's article on how to ask for feedback and get Radical Candor. Her method is to ask first, listen, and reward what you hear before you give any of your own.
+when:
+  - You want honest feedback from your team, but all you hear is "everything is fine."
+  - You have a conversation you keep putting off with someone whose work is slipping.
+  - You are new to leading people and want a set way to ask for feedback and give it.
+you_give:
+  - Who you manage, and how they relate to you
+  - What you want to learn about how you lead, such as how you run meetings
+  - A recent project you worked on together (optional)
+  - The person who needs your feedback, what you saw them do and the effect it had
+  - A line or two that sounds like how you talk (optional)
+you_get:
+  - A go-to question in your voice, and a second one tied to a recent project
+  - A plan for the silence, and the lines to repeat back, reward honesty and handle disagreement
+  - A read on where your relationship with the person sits now, and what to change
+  - A conversation plan with praise to open with, what to say about the behaviour, questions to ask and a follow-up date
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Say who you manage, what you want to learn and who you need to give feedback to. It works step by step and saves each result.
+  - Ask your question at the end of a regular one-to-one and count to six in silence. Then have the planned conversation.
+how_it_works:
+  - title: Writes your questions
+    text: Writes a go-to question in your voice and a second one tied to a recent project, so people have something specific to answer.
+  - title: Plans the silence and reply
+    text: Plans the six-second pause, a line to repeat back what you heard and a way to reward the honesty by fixing the issue or saying why you will not.
+  - title: Places the conversation
+    text: Takes the same relationship and shows where it sits on the care and challenge chart, so you know what to change.
+  - title: Plans what to say
+    text: Builds the next conversation from your first step, with specific praise, the behaviour and its effect, questions to ask and a follow-up date.
+output_shape: |-
+  STEP 1: FEEDBACK REQUEST SCRIPT
+    Go-to question: <in your voice>
+    The silence: <how long to wait and what to do>
+    Second question: <tied to a recent project>
+    Repeat back | Reward the honesty | If you disagree: <lines to use>
+
+  STEP 2: FEEDBACK CONVERSATION PLAN
+    Where you are: care <low/high>, challenge <low/high>, box <name>
+    Open with: <specific, sincere praise>
+    Say: behaviour <what happened>, effect <what it caused>
+    Ask and listen: <questions>
+    Follow-up date: <date>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How you really speak
+    how: Paste a message you wrote. A question that sounds like you gets a real answer. A stiff one gets a polite one.
+  - what: What you saw them do
+    how: Give the plain facts, such as "you missed the last two handoffs." A guess about their attitude gives the plan nothing to work with.
+  - what: The project you name in the second question
+    how: Pick something you both worked on recently. The more specific it is, the harder it is to answer "it was fine."
+judge:
+  - The go-to question can't be answered with yes or no.
+  - The praise names a real thing the person did, not a general "good job."
+  - The feedback describes what they did and what it caused, not what kind of person they are.
+  - The plan includes a follow-up date.
+  - Nothing about the person or the situation is invented.
+test:
+  - Use a question you already ask, such as "Any feedback for me?" The workflow should replace it with one that needs a specific answer.
+  - Give it a case where your first draft would hurt the person. The plan should change the wording to describe behaviour and effect.
+  - Run it twice on the same case. The questions can differ, but both plans should open with praise and end with a date.
+improve:
+  - Save your go-to question and the lines you liked in your brand file, so you use the same wording next time.
+  - After the talk, bring back what you heard and ask for a plan to act on it.
+  - Add two or three names of people you manage, so later runs start from what you already know.

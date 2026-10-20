@@ -1,0 +1,126 @@
+new_slug: vanity-metric-fixer
+name: "Vanity metric fixer"
+summary: "Paste the numbers you report. Get which are vanity, and per-customer numbers that show cause."
+job: think-and-decide
+thinking: medium
+thinking_why: "It judges which numbers mislead and rebuilds them, but the steps are fixed."
+
+headline: "Vanity metric fixer"
+subhead: "Paste the numbers you report each week. It marks the ones that only go up, replaces them with per-customer or per-group rates, splits by group and release and checks the data behind them. You get a short plan with one main number."
+
+explain: |
+  Total users, page views and downloads rise as long as you spend money or time, so they feel like progress. They do not tell you if the product got better, or if the people you got are still there next month.
+
+  This skill lists every number you report and tests each with one question: would it go up even if we did nothing useful? It swaps vanity numbers for rates per customer or per group, splits results by when people joined and which release they saw, and ties each move to a cause. It ends with one goal, one main number and a check on where the data comes from.
+
+when:
+  - "Your report shows steady growth but sales feel flat."
+  - "You ran a change and cannot tell if it worked."
+  - "You report to a board or team and want fewer, better numbers."
+
+you_give:
+  - "The numbers you report, with definitions and dates"
+  - "Your goal (optional)"
+  - "Dates of releases, price changes or campaigns (optional)"
+you_get:
+  - "A table showing which numbers are vanity"
+  - "Replacement rates with formulas"
+  - "Results split by group and release"
+  - "One goal, one main number and a data check"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your weekly numbers with a short definition of each."
+  - "Add the dates of changes you made."
+  - "Replace the weekly report with the new set for four weeks and compare."
+
+how_it_works:
+  - title: "Lists numbers"
+    text: "Each with its definition and period."
+  - title: "Marks vanity"
+    text: "Would it rise even if we did nothing useful?"
+  - title: "Swaps for rates"
+    text: "Per customer or per group, with a formula."
+  - title: "Splits groups"
+    text: "By join date and by release."
+  - title: "Ties to causes"
+    text: "And notes what else changed."
+  - title: "Sets the goal"
+    text: "One line, with a date."
+  - title: "Picks the number"
+    text: "Three at most; one main."
+  - title: "Checks the data"
+    text: "Who collects it, what is missing."
+
+output_shape: |
+  NUMBERS
+  <name> | definition <x> | vanity? yes/no because <test>
+
+  REPLACEMENTS
+  <vanity number> -> <rate> = <formula> | data <x>
+
+  SPLITS
+  By join date: <x>  By release: <x>
+
+  CAUSES
+  <rate>: possible cause <x>; also changed <y>
+
+  GOAL
+  Raise <rate> from <x> to <y> by <date>
+
+  HEADLINE NUMBERS
+  Main: <x>  Others: <y>, <z>
+
+  DATA CHECK
+  <source, frequency, gaps, how to verify>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "Definitions"
+    how: "Give a one-line meaning for each number. Unclear ones get flagged."
+  - what: "Dates of changes"
+    how: "The more exact, the cleaner the split by release."
+  - what: "Group data"
+    how: "If you can export by sign-up month, say so."
+  - what: "Your goal"
+    how: "A goal written as a rate gives a better main number."
+
+judge:
+  - "Every total has a rate beside it."
+  - "Each number links to something you can change."
+  - "Results are split by group."
+  - "You have three headline numbers or fewer."
+  - "The goal has a date."
+
+test:
+  - "Run it on last quarter's report. See if it finds the numbers you already doubted."
+  - "Run it twice. The vanity list should stay the same."
+  - "Calculate one replacement rate by hand and compare."
+  - "Ask a colleague to say what decision each remaining number supports."
+
+improve:
+  - "Add your own list of vanity numbers in step 2."
+  - "Add your data tools and how to export by group."
+  - "Keep a log of goals, dates and outcomes."
+  - "Pair it with a root cause finder when a rate drops."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading a sheet and writing formulas is text work."}
+    - {name: "A spreadsheet or analytics tool", why: "Builds the per-group tables and charts from your export."}
+  inputs:
+    - "An export by sign-up month"
+    - "Release and campaign dates"
+    - "Your goal for the year"
+    - "Definitions for each number"
+
+terms:
+  - term: "Vanity number"
+    meaning: "A number that rises with time or spend and does not show if the work helped."
+  - term: "Cohort"
+    meaning: "A group of customers who share something, such as the month they joined."

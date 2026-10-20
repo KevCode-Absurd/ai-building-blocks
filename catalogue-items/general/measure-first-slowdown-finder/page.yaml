@@ -1,0 +1,122 @@
+new_slug: measure-first-slowdown-finder
+name: "Measure first slowdown finder"
+summary: "Describe what feels slow. Get a measurement plan, the worst-case view and a ranked list of what to fix."
+job: build-software
+thinking: medium
+thinking_why: "It ranks findings and checks numbers, but the steps are fixed."
+
+headline: "Measure first slowdown finder"
+subhead: Describe what feels slow, in a program, a page, a report or a work process, and paste any timings you have. It plans what to time, looks at the worst case, compares each stage with its best possible, and hands back a ranked list of what to fix first.
+
+explain: |
+  People fix what they think is slow, and they are often wrong. The stage that feels slow may take a small share of the total, and the real cost sits somewhere nobody looked. Averages also hide the worst runs, which are the ones people remember.
+
+  This skill starts by writing the slow moment in one sentence, then plans a timing of each stage with a real tool. It looks at the worst run, not the average, and compares each stage with the best it could be. It finds work that is skipped sometimes and done other times, ranks costs from biggest down, and names how each fix will be re-measured. Ideas the numbers kill are written off in a list.
+
+when:
+  - Something feels slow and everyone has a different guess about why.
+  - A report, page or process is fine on average but terrible some of the time.
+  - You have spent a week on a fix and cannot tell if it helped.
+
+you_give:
+  - What feels slow, when it happens and how long it takes
+  - Timings, logs or a performance sheet, if you have them (optional)
+  - What you have already tried (optional)
+you_get:
+  - The slow moment in one sentence
+  - A plan for what to time, and with what
+  - A worst-case view next to the average
+  - A ranked list of what to fix, biggest cost first, and a list of dropped ideas
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the slow moment and paste any timings you have, even rough ones.
+  - List the fixes you already thought of. They will be tested against the numbers.
+  - Collect the timings it asks for, then send them back.
+  - Fix the top item, measure again and bring the new numbers back.
+
+how_it_works:
+  - title: Names the slow moment
+    text: Writes one sentence naming what is slow, when, and how slow.
+  - title: Plans the timing
+    text: Lists the stages and the tool or clock to time each one with, not a guess.
+  - title: Looks at the worst run
+    text: Pulls out the slowest runs and sets them beside the average.
+  - title: Compares to the best
+    text: Estimates the best each stage could do and the gap.
+  - title: Finds skipped work
+    text: Looks for work done only some of the time, which causes uneven results.
+  - title: Ranks the fixes
+    text: Orders fixes by cost saved, and names how each will be re-measured.
+  - title: Drops what numbers kill
+    text: Lists ideas the numbers rule out, each with the number that ruled it out.
+
+output_shape: |
+  THE SLOW MOMENT
+  <one sentence: what, when, how long>
+
+  WHAT TO TIME
+  <stage> | how: <tool or clock> | MISSING if not yet measured
+
+  THE NUMBERS
+  <stage> | average: <n> | worst: <n> | best possible: <n> | gap: <n>
+
+  UNEVEN WORK
+  <work done only sometimes, and when>
+
+  FIX FIRST (biggest cost first)
+  1. <fix> | saves about: <number> | re-measure by: <how>
+  2. ...
+
+  DROPPED IDEAS
+  <idea> | killed by: <number>
+
+  MISSING
+  <measurements still needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Real timings
+    how: Paste actual times for each stage. With none, the plan is only a measurement plan and is marked that way.
+  - what: How many runs
+    how: Give the slowest runs too, not only the average. They set the worst case.
+  - what: The goal
+    how: State how fast it needs to be. The gap to best possible is judged against it.
+  - what: Ideas already tried
+    how: List them with results so they are not suggested again.
+
+judge:
+  - Every claim about cost has a number beside it, or is marked as not measured.
+  - The worst case is shown beside the average.
+  - The ranked list puts the biggest cost first.
+  - Each fix says how it will be re-measured.
+  - Dropped ideas each have the number that killed them.
+
+test:
+  - Run it on a slowdown you already solved. See if it ranks the real cause first.
+  - Give it only a guess and no numbers. It should return a measurement plan, not a fix list.
+  - Run it twice on the same timings. The ranking should match.
+  - After a fix, re-measure as it says and check that the saved time matches its estimate.
+
+improve:
+  - Add the timing tools you use to step 2, so the plan names them.
+  - Add your target speed, so the gap is judged against it every time.
+  - Keep a running list of dropped ideas so the same ones are not argued twice.
+  - Pair it with "Weak part design-out planner" when the biggest cost is a stage you could remove.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ranking costs and planning measurements is text work any strong chat AI does."}
+    - {name: "A profiler or a stopwatch", why: "A real timing tool or clock gives the numbers every claim in the report depends on."}
+  inputs:
+    - "Timings for each stage, with the slowest runs"
+    - "A log or export from the tool you use"
+    - "The target speed you need"
+
+terms:
+  - term: Worst case
+    meaning: The slowest runs, which people notice most, as opposed to the average.
+  - term: Profiler
+    meaning: A tool that shows how much time each part of a program takes.

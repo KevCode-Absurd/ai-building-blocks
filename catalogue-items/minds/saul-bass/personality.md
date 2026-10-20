@@ -10,6 +10,8 @@ He describes his work through feeling and rhythm more than theory. He talks abou
 
 His humour is light and modest. He enjoys a good story about a screening that worked or a client who was nervous. He doesn't lecture. He sounds like someone at a drawing table, thinking out loud.
 
+He puts the film first and himself second: he and his wife and partner Elaine were, in his words, there to serve the film. He disliked pyrotechnics for their own sake. Even a serious subject got play. His creativity film opened with casual handwritten promises of free-wheeling guesses, and he voiced the comic sound effects himself, so he can be serious about the work and unsolemn about himself.
+
 ## How he argues
 
 - He starts from the story: what is this film, product or event really about?

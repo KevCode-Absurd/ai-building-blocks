@@ -1,0 +1,104 @@
+new_slug: prove-your-new-ad-ai-setup-beats-the-old-one
+name: Prove your new ad AI setup beats the old one
+summary: Give it a story ad test plan. Get handoff cards that keep facts whole, then a blind old-versus-new score.
+job: set-up-ai
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+headline: Prove a changed AI setup makes better ads before you switch
+subhead: Give it a story ad test plan. It writes a handoff card for each AI step so no fact loses its limits, then, after you run old and new side by side, scores both sets blind and tells you if the new setup is better, worse or just cheaper.
+explain: |-
+  When you change a prompt, a skill or the background you give an AI, the new ads often look better and are not. Facts can lose their limits on the way between steps, and one lucky run proves nothing.
+
+  This workflow plans the chain first. Every claim becomes a card that travels word for word, and every step gets a card saying what it needs and must never lose. You run the old chain and the new chain on the same briefs. Then it checks every ad pass or fail and judges them in pairs, twice, with the order swapped.
+when:
+  - You changed how AI makes your ads and want proof before you switch.
+  - Your AI steps drop a fact or invent one.
+  - You pay for AI by use and want to know the cost per usable ad.
+you_give:
+  - Customer reviews, copied as written
+  - Your product facts
+  - The old setup and its saved outputs
+  - The new setup run on the same briefs
+  - Your persona and landing page (optional)
+you_get:
+  - A story ad test plan with the lead problem and four stories
+  - A handoff card for each AI step and a card for each claim
+  - Run rules for saving, retrying and resuming
+  - A blind old-versus-new score out of 100, with failures and cost per usable ad
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. It works step by step and saves each result.
+how_it_works:
+  - title: Plans the story ad test
+    text: Uses the story ad test planner to sort customer words into problems and plan four stories on the lead problem.
+  - title: Plans the handoffs
+    text: Uses the handoff planner to lock claims as whole cards and write what each step needs and must never lose.
+  - title: Waits for both runs
+    text: You run the old chain and the new chain on the same briefs and save every image ad.
+  - title: Scores old against new
+    text: Uses the old versus new scorer to freeze the before set, build matched pairs and judge blind, twice, with the order swapped.
+output_shape: |-
+  TEST PLAN
+    Lead problem | Narrator | Four stories | Where the click goes
+
+  HANDOFF CARDS
+    Claim cards: <ID> <full wording and limits>
+    Per step: Needs | May use | Returns | Never lose
+    Run rules: save | resume | retry | budget
+
+  [you run old and new and save every ad]
+
+  SCORE
+    Pass rates: old <x%> new <y%> | Blind picks: <wins> of <pairs>, twice
+    Cost per usable ad | Decision: <better / worse / just cheaper> | Score: <0 to 100>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |-
+    [the handoff pack] Follow HANDOFF.md.
+
+    Reviews: 6 Sprout reviews. Product facts: powder, 6g prebiotic fiber. Practice data.
+    Old and new image ads (after the run step): 8 pairs.
+  output: |-
+    STEP 1: TEST PLAN
+    Lead problem: "I keep quitting powders." Narrator: the buyer. Four stories, each on a different force.
+
+    STEP 2: HANDOFF CARDS
+    Claim C1: "80% of surveyed users take it daily (brand survey, 3,000+)." Travels word for word.
+    Step 2 (writer) needs: C1, the buyer's words. Never lose: the survey conditions.
+    Run rule: retry once on a named, fixable failure; failed work stays failed.
+
+    [old and new chains run on 8 briefs]
+
+    STEP 4: SCORE
+    Pass rates: old 5 of 8 (62%), new 7 of 8 (88%).
+    Blind picks (order swapped): new won 6 of 8 both times.
+    Cost per usable ad: old $2.40, new $1.90.
+    Decision: new is better. 6 of 8 is not enough to rule out luck on its own, so run 8 more pairs.
+    Score: 74 of 100
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-03. MISSING: usage records for the old run.
+tweaks:
+  - what: Fixed settings
+    how: List the model and budget that cannot change. The handoff step keeps them.
+  - what: Number of pairs
+    how: Run more pairs for a closer call. The scorer says how many wins it takes before a result is more than luck.
+  - what: What counts as a pass
+    how: Add your own must-pass checks, such as a banned word list. The scorer runs them on every ad first.
+judge:
+  - Each claim card keeps its limits word for word.
+  - Old and new pairs share the same brief, product, offer and settings.
+  - The scorer runs pass or fail checks before anyone judges taste.
+  - The decision says how many wins it took and how many are luck.
+test:
+  - Pick one claim in an ad and trace it back to its card. The wording should match.
+  - Swap the order of one pair and see if the pick holds.
+  - Check the cost per usable ad against your own usage records.
+improve:
+  - Save the claim cards in your brand file so every future chain uses them.
+  - Re-run the score after each change to your prompts.
+  - Keep the before set of every version, so you can go back.

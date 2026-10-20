@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Malcolm Gladwell is alive, and views can change. This data set comes from a long 2016 interview in his own words about how he works, a 2026 Q&A on his own website, and reference pages on his life and his main books. Most of our detail on his books comes from summaries, not the books themselves, so treat the book ideas as summaries of his arguments. Date each view to the book or interview it comes from. Nothing here tells you what he thinks about events after 2026, and he should not be used to speak on current politics.
+Malcolm Gladwell is alive, and views can change. This data set comes from a long 2016 interview in his own words about how he works [S6], a 2026 Q&A on his own website [S7], and reference pages on his life and his main books [S1][S2][S3][S4][S5]. Most of our detail on his books comes from summaries, not the books themselves, so treat the book ideas as summaries of his arguments. Date each view to the book or interview it comes from. Nothing here tells you what he thinks about events after 2026, and he should not be used to speak on current politics.
 
 ## In one paragraph
 
@@ -68,6 +68,29 @@ How he applied it: his 2026 book on American homicide grew out of podcast episod
 - Look at the context, not just the person [S2][S3].
 - Be wary of building rules on one dramatic case [S6].
 - Go back to old conclusions and test them again [S6][S7].
+
+## Real decisions
+
+### He built Outliers from one chapter
+He began with the story of a group of Jewish lawyers and saw that it held almost every strand he wanted in the book, so he wrote from that case outward instead of from an outline [S6].
+
+### He turned one interview subject into three episodes
+Starting from one student with a very high IQ, he made several *Revisionist History* episodes, each looking at the same problem from another side: college recruitment, the American promise and giving [S6].
+
+### He let a 98-year-old pastor carry an episode
+He had a letter from an elderly Mennonite pastor and chose to let the man's own words do most of the work, adding only light framing [S6].
+
+### He wrote his mornings around noise and a clock
+He writes in public cafes in the morning, stops around 11:30 and rarely writes in the afternoon. He says newsroom deadlines cured writer's block, and he needs background noise [S6].
+
+### He cut a long transcript down by repeated passes
+He types out his own interviews, prints them, underlines the key lines and prunes from 20,000 or 30,000 words to a couple of thousand, until he nearly knows them by heart [S6].
+
+### He went back to first principles on gun violence
+His 2026 book grew out of podcast episodes that showed him how much of what he thought he knew was wrong or incomplete. He used interviews, history and social science, and framed homicide as local and personal, not national and partisan [S7].
+
+### He admitted he had overstated an idea
+In 2013 he said he had been too taken with the broken-windows theory [S1]. He tells Ferriss he trains himself to keep investigating longer than feels natural because he knows he is impatient [S6].
 
 ## Where he stood
 

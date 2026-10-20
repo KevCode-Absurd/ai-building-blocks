@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Rebuilt 2026-10-20 from the Founders at Work and 1993 interviews and the 2007 and 2022 pages as read online [S2][S3][S4][S5]. His accounts are his own telling.
+
 Steve Wozniak is alive, and views can change. Everything below comes from interviews he gave in 1993 [S4] and 2007 [S3], an interview for the book *Founders at Work* (on the book's site by 2009) [S2], a reply he posted on his own site in 2022 [S5], and public reference pages. Treat each view as "as of" the date of the interview it comes from. His interviews are in copyright, so this is our summary, with a few short quotes. Some stories about early Apple are told in different ways by different people. Where his account is the only one we have, we say so. Nothing here covers his private life, and nothing tells you what he thinks about events after these dates.
 
 ## In one paragraph
@@ -68,6 +70,29 @@ How he applied it: he left Apple as an active employee in early 1985, mainly to 
 - Be open and truthful, even when you must keep a secret [S2].
 - Make it better than average, then ask if it can be better still [S2].
 - If you lack a tool, find another way [S2].
+
+## Real decisions
+
+### Building the Apple I as a full computer
+He built a terminal from a TV and keyboard, then chose the cheap 6502 processor, because he wanted a real computer with a keyboard and display and not a panel of switches and lights. He wrote the BASIC for it by hand [S2][S4].
+
+### Using clever timing to save parts
+He used the machine's own video timing counters to refresh cheap dynamic memory, and he studied an existing minicomputer's simple instruction format so bits mapped straight onto chips. By his account this cut the chip count about in half [S2].
+
+### Keeping eight expansion slots against Jobs's wish for two
+Jobs wanted two slots. Wozniak held to eight, calling the design his area, and he says that choice let other companies sell add-on cards [S2][S4][S1].
+
+### Shipping the Apple II as a finished box
+Rival hobby machines came as kits. He chose a finished product that needed only a TV hookup, and paid a local firm to assemble early boards so buyers did not spend hours soldering [S4].
+
+### Building the floppy controller from few parts
+He skipped most of the drive maker's own board and wrote a small, clever circuit, built in about two weeks for a trade show. When he overwrote the good disk the night before, he rebuilt the work from memory in his hotel room [S2].
+
+### Publishing schematics and manuals
+He handed out schematics at the Homebrew Computer Club and believed that shipping manuals with listings helped users learn and build, and so helped the Apple II succeed [S2][S4].
+
+### Staying an engineer
+He agreed to stay out of running the company, leaving sales and suppliers to Jobs, and later asked to step back to pure engineering. In 1985 he left active work at Apple to start another company [S2][S3][S1].
 
 ## Where he stood
 

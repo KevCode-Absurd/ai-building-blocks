@@ -1,0 +1,17 @@
+slug: startup-idea-tester
+name: "Startup idea tester"
+summary: "Paste your idea. Get a score out of 100 for real problem, who needs it badly and the cheapest check."
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [paul-graham]
+credits:
+  - {title: "How to Get Startup Ideas", by: "Paul Graham", url: "https://paulgraham.com/startupideas.html", used: "Starting from a problem you have, spotting made-up ideas, small groups who need it badly, tedious or unglamorous work, and fast-changing fields"}

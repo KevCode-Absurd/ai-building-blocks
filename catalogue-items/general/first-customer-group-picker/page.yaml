@@ -1,0 +1,126 @@
+new_slug: first-customer-group-picker
+name: "First customer group picker"
+summary: "Describe your idea and who might want it. Get who-and-where groups and the one to talk to first."
+job: test-an-idea
+thinking: medium
+thinking_why: "It weighs several groups against each other, but each step is a short list."
+
+headline: "First customer group picker"
+subhead: Tell it your idea and the broad group you think wants it. It slices that group until each piece is someone you can find and talk to this week, then picks the one to start with. You get a ranked short list of who-and-where pairs and a plan for the first week.
+
+explain: |
+  "Small businesses" or "students" is too broad to talk to. Twenty conversations turn into twenty different customers, so the answers point twenty ways and you can't tell what is true. Founders then stall, because nothing proves them right or wrong.
+
+  This skill uses customer slicing. It asks who in the group wants this most and why, who else shares that reason, and what they already do about it. Then it finds where each slice can be reached. A group nobody can find gets sliced again. The survivors are who-and-where pairs, scored on whether they are likely to pay, easy to reach and pleasant for you to spend time with. You leave with one group to start with and a first week.
+
+when:
+  - Your market feels huge and you don't know who to talk to first.
+  - Your last few customer conversations all gave different answers.
+  - You have an idea but no names, places or contacts yet.
+
+you_give:
+  - Your idea in a sentence or two, and the broad group you think wants it
+  - What you already know about the problem and who has it (optional)
+  - Where you can reach people today, such as groups, events, clients or friends of friends (optional)
+  - Any people you have already talked to and what they did about the problem (optional)
+you_get:
+  - A list of narrower groups, each with why they want it and what they already do about it
+  - A who-and-where pair for every group you could actually reach
+  - The one group to start with, a backup, and why, scored on pay, reach and fit for you
+  - A plan for your first week of conversations
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your idea and the broad group in two or three lines. Say who you can reach today.
+  - Answer its few questions about what people in the group already do about the problem.
+  - Pick the group it recommends or swap it for your backup, then use the first-week plan.
+  - After five or so conversations, come back with what you learned and slice again if answers still differ.
+
+how_it_works:
+  - title: Checks the ask
+    text: If you ask whether your idea is good or name "everyone" as the customer, it says why that won't help and asks the narrower question.
+  - title: Slices the group
+    text: Asks who wants it most, why, and who else has the same reason, and repeats on any slice that is still broad.
+  - title: Finds what they already do
+    text: Lists what each slice does today to cope with the problem, since that shows how serious it is.
+  - title: Finds where they are
+    text: Matches each slice to places, events, lists or habits where you can reach them. Slices nobody can reach are cut again.
+  - title: Looks for missed sides
+    text: Flags buyers, users, partners and budget holders who could have different needs.
+  - title: Scores and picks
+    text: Rates each who-and-where pair on likely to pay, easy to reach and rewarding for you, then picks one and a backup.
+  - title: Plans week one
+    text: Names the first place to go, the first people to approach and how many talks to run before you review.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  STARTING POINT
+  <idea and the broad group, in one line>
+
+  SLICES
+  <n>. <group> | Why they want it: <reason>
+     Already doing: <what they do now>
+     Where to find them: <place, event, list or habit>
+     Pay / Reach / Fit: <high, medium or low for each, with a reason>
+
+  START WITH
+  <group> because <reason>. Backup: <group>.
+
+  OTHER SIDES TO REMEMBER
+  <buyers, users, partners to talk to later>
+
+  WEEK ONE
+  <where to go, who to approach, how many talks, what to learn>
+
+  MISSING
+  <what would sharpen the pick>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How narrow you let it go
+    how: Say "slice until I could name three people". A tighter group gives cleaner answers. You can widen later.
+  - what: Where you can reach people today
+    how: List events, clients, groups and friends of friends. The skill favours groups you can reach this week.
+  - what: What people already do
+    how: Real workarounds, such as a spreadsheet, an agency or a paid tool, show a problem worth solving. Add any you have seen.
+  - what: How much you enjoy the group
+    how: Say who you like spending time with. The skill uses it as one of the three tests.
+
+judge:
+  - Each group can be described as a who and a where, with no group of "everyone".
+  - Each group has a reason they want it, not just a label.
+  - The group to start with is one you could contact this week.
+  - Groups it could not place were sliced again or dropped.
+  - Other sides, such as buyers or partners, are named.
+
+test:
+  - Run it on an idea where you already know the best first customer. See if that group comes out on top.
+  - Run it twice. The top pick should be the same or close, with the same reasons.
+  - Go to the place it names and see if you can find three people in an hour.
+  - After five conversations with the group, check if the answers agree more than your last batch did.
+
+improve:
+  - Add the places you can already reach to the "What you need" list in the skill file, so it favours them every time.
+  - Add your own three tests, such as "must be able to pay without a boss's approval", to step 7.
+  - Save the group you pick and why to your notes, and update it after each round of talks.
+  - Follow it with "Customer interview question writer" for the questions to ask that group.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Slicing and scoring are text work that any strong chat AI does well with this skill."}
+    - {name: "LinkedIn search", why: "Shows quickly whether a slice has enough findable people in one place."}
+  inputs:
+    - "A list of past customers or sign-ups, so it can see who wants this most"
+    - "Notes from people you already spoke to, so slices rest on what they did"
+    - "A list of events, groups or forums where your buyers meet"
+
+terms:
+  - term: Customer slicing
+    meaning: Splitting a broad group into smaller groups until each one is a type of person you can find.
+  - term: Who-and-where pair
+    meaning: A specific type of person together with a place or habit that lets you reach them.
+  - term: Workaround
+    meaning: A makeshift fix someone already uses for the problem, such as a spreadsheet or a paid helper.

@@ -1,0 +1,20 @@
+slug: read-aloud-speech-shaper
+name: "Read-aloud speech shaper"
+summary: "Paste your notes and the room. Get a speech or poem shaped to be heard, with a refrain."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: false}
+  - {type: question, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: script}
+origin: rebuilt
+version: 1.0.0
+minds: [maya-angelou]
+credits:
+  - {title: "Maya Angelou interview, 22 January 1997", by: "Maya Angelou", used: "Writing everything down first, reading aloud to find where the breath catches, and cutting to what lasts"}
+  - {title: "On the Pulse of Morning", by: "Maya Angelou, 1993", used: "A refrain that returns and changes, speaking to every group in the room, and ending on a simple human gesture"}

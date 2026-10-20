@@ -1,0 +1,129 @@
+new_slug: loyalty-claim-checker
+name: "Loyalty claim checker"
+summary: "Paste a loyalty plan or claim with its numbers. Get the sums tested against what it costs and who it reaches."
+job: think-and-decide
+thinking: high
+thinking_why: "It checks arithmetic and weighs evidence, and a slip changes the verdict."
+
+headline: "Loyalty claim checker"
+subhead: "Paste a loyalty plan or claim with its numbers. It traces the promised gain, adds the costs, checks whether heavy buyers have room to buy more and compares the same money spent on reaching more buyers. You get a plain verdict."
+
+explain: |
+  Loyalty plans often count sales that would have happened anyway and leave out the cost of rewards. Heavy buyers usually buy most of what they need from you already, so there is little to win from them.
+  
+  This skill writes down the claim and the gain, then traces where the gain comes from in the sums. It adds the costs, checks how much room your heaviest buyers have, and asks what evidence supports the claim. Then it spends the same money on reaching more buyers, using your figures, and shows the two side by side. You get a plain verdict and a list of the data you still need.
+
+when:
+  - "A vendor pitched you a loyalty scheme or a points app."
+  - "Your team wants to focus on retention instead of new buyers."
+  - "You need to defend or kill a plan with numbers."
+
+you_give:
+  - "The claim or plan, with its cost and promised gain"
+  - "Your numbers: buyers, repeat rate, spend, cost of reach (optional)"
+  - "Where the claim came from (optional)"
+you_get:
+  - "A table of where the gain comes from"
+  - "The costs and the room-to-buy check"
+  - "A side-by-side with reaching more buyers"
+  - "A plain verdict and the data to ask for"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the claim as it was made, with its figures."
+  - "Add your numbers for buyers, spend and cost per new buyer."
+  - "Read the side-by-side and challenge any assumption."
+  - "Ask for the data it lists before you commit."
+
+how_it_works:
+  - title: "Write the claim and the gain"
+    text: "Writes the claim and the gain it promises."
+  - title: "Trace where the gain comes from"
+    text: "Finds where the gain comes from in the arithmetic."
+  - title: "Add the costs"
+    text: "Lists the cost of raising loyalty or share of wallet."
+  - title: "Check room to buy more"
+    text: "Checks if heavy buyers have room to buy more."
+  - title: "Check the evidence"
+    text: "Checks where evidence from other categories or years supports it."
+  - title: "Compare with reaching more buyers"
+    text: "Compares with the same money spent on reaching more buyers."
+  - title: "Give a verdict and the data to ask for"
+    text: "Gives a plain verdict and the data to ask for."
+  - title: "Checks its own work"
+    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+
+output_shape: |
+  CLAIM
+  <sentence> | Gain promised: <number>
+  
+  WHERE THE GAIN COMES FROM
+  <part> | Sum | Assumption without a figure
+  
+  COSTS
+  <item>: <amount>
+  Net: <gain minus cost>
+  
+  ROOM TO BUY MORE
+  <heavy buyers' share, light buyers' share, verdict>
+  
+  EVIDENCE
+  <source> | independent / seller / other type of business | shows <...> | does not show <...>
+  
+  SIDE BY SIDE
+  Loyalty: <result> | Reach: <result> | Same money, same period
+  
+  VERDICT
+  <go / test small / do not do> because <reason>
+  
+  DATA TO ASK FOR
+  <item> from <who>
+  
+  MISSING
+  <gaps>
+  
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Your numbers"
+    how: "Real repeat rate and cost of reach change the verdict most."
+  - what: "The time frame"
+    how: "Use the same window for both plans."
+  - what: "The category"
+    how: "Say how often people buy. Rare purchases leave little room for loyalty."
+  - what: "Evidence"
+    how: "Paste the case study itself, not a summary."
+
+judge:
+  - "The gain is split into parts with sums."
+  - "Costs include rewards given to people who would have bought anyway."
+  - "The same money and period are used for both plans."
+  - "The verdict is one plain sentence."
+  - "Every number comes from you."
+
+test:
+  - "Run it on a scheme you already ran and compare with your actual results."
+  - "Change one assumption and see if the verdict flips."
+  - "Ask a finance-minded colleague to check the sums."
+
+improve:
+  - "Add your cost per new buyer to the skill so it is always used."
+  - "Add a list of your past schemes and results."
+  - "Save each verdict to compare with outcomes."
+  - "Pair it with \"Claim skepticism kit\" for vendor claims."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and weighing written facts is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Keeping the sums in cells lets you change one assumption and see the result."}
+  inputs:
+    - "A sales export for the last year"
+    - "Your cost per new buyer"
+    - "The vendor's proposal"
+
+terms:
+  - term: "Share of wallet"
+    meaning: "The portion of a buyer's spending in a category that goes to you."
+  - term: "Light buyer"
+    meaning: "Someone who buys in your category rarely."

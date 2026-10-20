@@ -1,0 +1,122 @@
+new_slug: pros-and-cons-decision-planner
+name: "Pros and cons decision planner"
+summary: "Describe a choice you cannot settle. Get a two-column list built over days, matched pairs struck out, and a call after sleep."
+job: think-and-decide
+thinking: low
+thinking_why: "It follows a fixed routine and weighs reasons you supply."
+
+headline: "Pros and cons decision planner"
+subhead: "Describe a choice you cannot settle and the reasons you have so far. It sets the two columns, a schedule for adding reasons, strikes out matched pairs, waits a day and writes the decision with what would change it."
+
+explain: |
+  Choices drag on when you keep thinking of new reasons and cannot compare them. The loudest reason of the moment wins, and you doubt it the next day.
+  
+  This skill gives the choice a page with two columns and a few days to fill it. Reasons are added as they come, each with a rough weight. A pro and a con of about the same weight are struck out together, and the process repeats until one side has nothing left to cancel. After one more day it checks that a single large reason is not carrying the decision, then writes the choice and the fact that would change your mind.
+
+when:
+  - "You are weighing a job offer, a move or a big purchase."
+  - "You have gone round the same options for weeks."
+  - "Two people disagree and need a fair way to compare reasons."
+
+you_give:
+  - "The choice and the options"
+  - "Your reasons so far (optional)"
+  - "Costs and risks of each option (optional)"
+you_get:
+  - "A two-column page with weighted reasons"
+  - "A list of struck-out pairs and why"
+  - "A decision date and a change-my-mind trigger"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Write the choice and the deadline."
+  - "Paste the reasons you have and give each a weight."
+  - "Come back each day on the schedule and add what you thought of."
+  - "Make the call after the last day's sleep."
+
+how_it_works:
+  - title: "Write the choice and the page"
+    text: "Writes the choice at the top of a page with Pro and Con columns."
+  - title: "Set the schedule"
+    text: "Plans for reasons to be added over three or four days, not all at once."
+  - title: "Add the reasons so far"
+    text: "Records reasons with a rough weight."
+  - title: "Strike out matched pairs"
+    text: "Strikes out a pro and a con that weigh about the same."
+  - title: "Keep going until one side is left"
+    text: "Keeps going until one side has nothing left to cancel."
+  - title: "Wait a day, then check"
+    text: "Waits one more day and checks for one big reason fooling you."
+  - title: "Decide and write the trigger"
+    text: "Decides and writes what would change your mind."
+  - title: "Checks its own work"
+    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+
+output_shape: |
+  CHOICE
+  <question, options, decide by date>
+  
+  SCHEDULE
+  Day 1: <prompt>  Day 2: <prompt>  Day 3: <prompt>
+  
+  PAGE
+  Pro: <reason> (small / medium / large)
+  Con: <reason> (small / medium / large)
+  
+  STRUCK OUT
+  <pro> with <con>: because <weight match>
+  
+  LEFT
+  <remaining reasons and side>
+  
+  ONE-BIG-REASON CHECK
+  <result>
+  
+  DECISION
+  <sentence> | Date | Would change my mind: <fact>
+  
+  MISSING
+  <gaps>
+  
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The deadline"
+    how: "A real date sets the schedule."
+  - what: "Weights"
+    how: "Be honest about large and small. Pairs depend on them."
+  - what: "Who else is affected"
+    how: "Name them. It adds reasons you might miss."
+  - what: "Options"
+    how: "For three or more options, add a pair of columns for each."
+
+judge:
+  - "Reasons came on more than one day."
+  - "Each strike-out has a reason."
+  - "The remaining side is clear."
+  - "A trigger for changing your mind is named."
+  - "The decision date is set."
+
+test:
+  - "Run it on a past decision and see if the call matches what you chose."
+  - "Ask a friend to read the page and find a missing reason."
+  - "Run it twice and see if the left-over side stays the same."
+
+improve:
+  - "Add your own prompt questions for each day."
+  - "Add a column for who is affected."
+  - "Keep the page to review the decision a year later."
+  - "Pair it with \"Claim skepticism kit\" to test any big claim in a reason."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and weighing written facts is text work any strong chat AI does well with this skill."}
+    - {name: "Paper and a pen", why: "A single sheet kept in sight makes it easy to add reasons as they come."}
+  inputs:
+    - "Quotes or offers in writing"
+    - "Numbers for each option"
+    - "Opinions from people affected"
+
+terms:
+

@@ -1,0 +1,130 @@
+new_slug: weekly-big-task-sorter
+name: "Weekly big task sorter"
+summary: "Paste your task list. Get the few big tasks that matter, the small ones to batch or drop, and a week plan."
+job: plan-strategy
+thinking: medium
+thinking_why: "It ranks tasks by consequence and fits them to your hours. The method is fixed, with some judgement on what is big."
+
+headline: "Weekly big task sorter"
+subhead: "Paste everything on your plate. It sorts each task into big work that pays off or small work that only feels good, finds the one task that makes the others easier, and batches or drops the small ones. You get exactly three priorities for the week and tomorrow's list."
+
+explain: |
+  A long task list feels like work, and ticking off small items feels like progress. But a week of small wins can leave the one task that matters untouched, often the one you have put off longest.
+
+  This skill lists everything on your plate and sorts it by what it pays back. It looks for the one task that would make several others easier or unneeded, and tests your most delayed task to see if it is the big one. It batches, hands off or drops the small tasks. Then it picks exactly three priorities for the week, fits them to your real hours, and writes tomorrow's list tonight.
+
+when:
+  - Your list has forty items and you cannot tell which three count.
+  - You finish each day busy and the main project has not moved.
+  - You are starting a week and want a plan that fits the hours you really have.
+
+you_give:
+  - Every open task, in any order
+  - The hours you really have this week, after fixed commitments
+  - Your main goal this month or quarter
+  - Who else depends on each task (optional)
+you_get:
+  - Each task sorted as big work or small work
+  - The one task that makes the others easier, and the task you have put off longest
+  - Small tasks batched, handed off or dropped
+  - Three priorities for the week with protected time, and tomorrow's list
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste every task you can think of, and your hours for the week.
+  - Say what you most need to have done by the end of the month.
+  - Read the three priorities. Cut anything that does not fit your hours.
+  - Run it again each Sunday evening, and tonight for tomorrow.
+
+how_it_works:
+  - title: Lists everything
+    text: Puts every open task and anything on your plate in one list.
+  - title: Sorts big from small
+    text: Marks each as big work that pays off or small work that only feels good.
+  - title: Finds the lever
+    text: Finds the task that would make the others easier or unneeded.
+  - title: Tests the delayed task
+    text: Checks if the task you have put off longest is the big one.
+  - title: Batches or drops
+    text: Groups the small tasks into batches, hands them off or drops them.
+  - title: Fits the hours
+    text: Checks the plan against the hours you really have.
+  - title: Picks three priorities
+    text: Chooses exactly three for the week and writes tomorrow's list.
+
+output_shape: |
+  EVERYTHING ON THE PLATE
+  <n>. <task> | effort: <hours> | pays back: <what>
+
+  BIG OR SMALL
+  Big: <tasks> | Small: <tasks>
+
+  THE MAIN TASK
+  <task> | Makes easier or unneeded: <tasks> | Why now: <reason>
+
+  PUT OFF LONGEST
+  <task> | Big? <yes/no, why>
+
+  THE SMALL ONES
+  Batch: <group> on <day, time>
+  Hand off: <task> to <person>
+  Drop: <task> | why: <reason>
+
+  THREE PRIORITIES THIS WEEK
+  1. <priority> | protected time: <day, hours>
+  2. ...
+  3. ...
+  Hours needed: <x> | Hours you have: <y>
+
+  TOMORROW
+  1. <task> | start: <time>
+
+  MISSING
+  <facts that would change the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Honest hours
+    how: Give the hours you have after meetings and fixed duties. A plan built on 40 hours when you have 22 will fail.
+  - what: The month's main goal
+    how: Name it plainly. It decides which tasks count as big.
+  - what: What is blocked by what
+    how: Say which tasks wait for others. The main task is often the one that blocks the most.
+  - what: Tasks you dread
+    how: List them honestly. The one you avoid longest is often the big one.
+
+judge:
+  - One task is named as the main one.
+  - Every small task is batched, handed off or dropped.
+  - The big task has protected time.
+  - The plan fits the hours you have.
+  - There are exactly three priorities.
+
+test:
+  - Run it on last week's list. Check whether the task you actually put off was the one it called big.
+  - Add up the hours for the three priorities and compare with your real free hours.
+  - Follow the plan for one week and count how many of the three you finished.
+  - Run it twice on the same list. The main task should stay the same.
+
+improve:
+  - Add your standing duties so the hours you have are right each time.
+  - Add what counts as big for your job, such as a deal closed or a feature shipped.
+  - Keep a list of tasks you drop and check it monthly for ones that returned.
+  - Pair it with "Not-to-do list builder" to stop the small tasks coming back.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and ranking a task list is text work."}
+    - {name: "Your calendar app", why: "Protected time only counts once it is a block in your calendar."}
+  inputs:
+    - "Your calendar for the week"
+    - "Your goals for the month"
+    - "A list of people who can take small tasks"
+
+terms:
+  - term: Big work
+    meaning: A task whose result pays back far more than the time it takes, or that makes other tasks easier.
+  - term: Batch
+    meaning: A group of small tasks done in one sitting at a set time.

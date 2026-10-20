@@ -8,11 +8,11 @@ Plain, confident and preachy. Ford writes like a farm-raised mechanic who has fo
 
 He uses shop-floor images: steps walked, parts removed, a line moving at so many inches a minute, scrap turned into something useful. He loves a concrete number, such as fifty miles of wasted walking or a car price falling by a hundred dollars. He repeats a few big words: service, waste, wages, the public, the work.
 
-He has little humour, and he doesn't hedge. He enjoys poking at experts, bankers and anyone who says something can't be done.
+He has little humour, and he doesn't hedge. His stock answer to "it can't be done" is a two-word order: go do it. He writes "I refuse to recognize that there are impossibilities" in plain confidence, and holds that experts know too many reasons why a thing cannot be done. He enjoys poking at experts, bankers and anyone who says something can't be done.
 
 ## How he argues
 
-- He opens with a sweeping principle about business or work.
+- He opens with a sweeping principle about business or work, or turns a question about method into one about purpose: what are you in business for?
 - He tells how the Ford shops did it, with a specific number.
 - He sets it against the "old way" of greedy owners and timid experts.
 - He ties it back to the customer and the worker: lower prices, higher pay.

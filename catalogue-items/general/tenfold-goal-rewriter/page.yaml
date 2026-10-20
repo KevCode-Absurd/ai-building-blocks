@@ -1,0 +1,124 @@
+new_slug: tenfold-goal-rewriter
+name: "Tenfold goal rewriter"
+summary: "Paste a goal that aims for 10 percent more. Get a tenfold version, what must change and a small first test."
+job: plan-strategy
+thinking: medium
+thinking_why: "It must reason about what breaks at ten times the size, but the structure is fixed."
+
+headline: "Tenfold goal rewriter"
+subhead: Paste a goal that asks for a little more than last year. It multiplies the number by ten, finds what stops working at that size, lists the assumptions you would have to drop, and plans a small first test with a stop rule.
+
+explain: |
+  A goal of 10 percent more asks you to do the same things a bit harder. It usually works and it never changes anything. A goal ten times bigger cannot be reached the same way, so it forces you to ask what the whole job is and how else it could be done.
+
+  This skill writes your goal with its number, multiplies by ten and lists what stops working at that size. It names the assumptions you would have to drop, picks one odd idea and sizes a small test for it. It sets a fixed slice of time or money for side bets while the core stays funded, names what to close so effort is not thin, and writes what result would prove the bet wrong, and when you will look.
+
+when:
+  - Your goal for next year is last year plus a few percent.
+  - Growth has gone flat and every idea is a small tweak.
+  - You want to try something odd without risking the core.
+
+you_give:
+  - Your current goal, with its number
+  - What you do now to reach it
+  - How much time or money you could set aside for a test (optional)
+you_get:
+  - The goal at ten times the size
+  - What stops working at that size
+  - At least three assumptions to drop
+  - A small first test with a date and a stop rule
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your goal with its number and describe how you reach it today.
+  - Say what slice of time or money is safe to risk.
+  - Run the first test it gives. Come back when the date arrives and say what happened.
+
+how_it_works:
+  - title: Writes the goal
+    text: States the current goal and its number exactly as given.
+  - title: Multiplies by ten
+    text: Rewrites the goal at ten times the size and names what stops working.
+  - title: Lists assumptions
+    text: Lists the things you believe now that would have to be false to reach it.
+  - title: Picks an odd idea
+    text: Chooses one idea that sounds strange and sizes a small first test.
+  - title: Sets aside a slice
+    text: Fixes a share of time or money for side bets while the core stays funded.
+  - title: Names what to close
+    text: Names one thing to stop so effort is not spread thin.
+  - title: Writes the stop rule
+    text: States what result would prove the bet wrong and the date you will check.
+
+output_shape: |
+  CURRENT GOAL
+  <goal with its number>
+
+  TENFOLD GOAL
+  <goal at ten times> | <what stops working at that size>
+
+  ASSUMPTIONS TO DROP
+  1. <assumption> | <what would be true if dropped>
+  2. ...
+  3. ...
+
+  THE FIRST TEST
+  <idea> | size: <time or money> | start: <date> | check: <date>
+
+  PROTECTED CORE AND SIDE-BET SLICE
+  Core keeps <share>. Side bets get <share>.
+
+  WHAT TO CLOSE
+  <thing to stop> | <why>
+
+  STOP RULE
+  <result that would prove the bet wrong> | <date to check>
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: The number in your goal
+    how: Give the real number. Without it the tenfold goal is only a phrase.
+  - what: How much you can risk
+    how: Say what you could lose without harm. It sizes the test and the side-bet slice.
+  - what: What you do now
+    how: Describe the steps in your current method. The assumptions come from them.
+  - what: Time frame
+    how: Tenfold in one year and tenfold in five need different ideas. Say which.
+
+judge:
+  - The new goal is ten times the old number.
+  - At least three assumptions are named.
+  - The first test is small and has a date.
+  - A stop rule is written down.
+  - The core is protected, and something is named to close.
+
+test:
+  - Show the tenfold goal to someone who knows your field and ask what breaks first. Compare it with the list.
+  - Run the first test. See whether it fits the time and money you gave.
+  - Run the skill twice. The assumptions should overlap by at least two.
+  - At the check date, compare the result with the stop rule, not with hope.
+
+improve:
+  - Add your field's real limits to the input, such as supply or rules, so the tenfold goal stays honest.
+  - Change the multiplier if ten times makes no sense in your work, but keep it far from a small step.
+  - Keep a short list of past odd ideas and how they ended, and paste it each run.
+  - Pair it with "Work-backwards plan checker" to plan the first test.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reasoning about what breaks at a larger scale is text work any strong chat AI can do."}
+  inputs:
+    - "Your last year of results for the goal"
+    - "A list of current projects, so it can name what to close"
+    - "Your hard limits, such as budget or staff"
+
+terms:
+  - term: Tenfold goal
+    meaning: A goal ten times the current number, set so that small tweaks cannot reach it.
+  - term: Side bet
+    meaning: A small test of an odd idea, funded from a fixed slice so the main work is safe.

@@ -1,0 +1,17 @@
+slug: ai-model-training-debugger
+name: "AI model training debugger"
+summary: "Describe your model, data and what goes wrong. Get a step-by-step check order that finds silent bugs before you tune anything."
+category: general
+type: skill
+role: check
+job: analysis
+level: expert
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [andrej-karpathy]
+credits:
+  - {title: "A Recipe for Training Neural Networks", by: "Andrej Karpathy", url: "https://karpathy.github.io/2019/04/25/recipe/", used: "The order of work: look at the data by hand, build a small hard-to-break baseline, check the starting loss, overfit one batch, then grow and regularise"}

@@ -1,0 +1,120 @@
+new_slug: world-detail-consistency-checker
+name: "World detail consistency checker"
+summary: "Paste your world notes and drafts. Get every clash between details, a fix for each and a score."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It compares many passages against a list of facts, then judges which detail should win in each clash."
+
+headline: "World detail consistency checker"
+subhead: Give it your notes on places, people and rules, plus the new passages or pictures you want checked. It lists every clash with both passages quoted, says which fact should win, and returns a log of fixed facts and a consistency score out of 100.
+
+explain: |
+  Readers notice when a house is wood in chapter two and stone in chapter nine. The same goes for a game map, a brand story or a training course: one wrong detail makes people doubt the rest. Writers miss these clashes because they know what they meant, so the page reads right to them.
+
+  This skill first pulls out every fixed fact about places, people and rules. It then compares each new passage or picture brief against that list and flags each clash with both passages quoted. For each one it says whether the old fact or the new one should stand, and whether the story's own rules could turn the clash into part of the world. You get a log of fixed facts so later pages match.
+
+when:
+  - You are adding a chapter, level, scene or illustration to a world you already described.
+  - A picture or sketch came back and you want to know if it matches your text.
+  - Several people write in the same world and details have started to drift.
+
+you_give:
+  - Your world notes or earlier text, with the facts about places, people and rules
+  - The new passage, scene or picture brief to check
+  - A short brief on what the world is for (optional)
+you_get:
+  - A list of clashes, each quoting both passages
+  - A verdict on which fact wins and why, or a world rule that explains the clash
+  - A log of fixed facts to reuse
+  - A consistency score out of 100, with how it was worked out
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your world notes or earlier chapters first, then the new material to check.
+  - If you have a picture, attach it, and say what it is meant to show.
+  - Read the clash list top to bottom and decide each one yourself. The skill suggests, you choose.
+  - Keep the fact log beside your draft and give it to anyone else who writes in the world.
+
+how_it_works:
+  - title: Lists the fixed facts
+    text: Pulls every stated fact about places, people and rules from your notes and earlier text, with where each one appears.
+  - title: Compares the new material
+    text: Checks each new passage or picture brief against that list, one fact at a time.
+  - title: Flags the clashes
+    text: Quotes both passages for each clash, such as a wooden house drawn in stone.
+  - title: Picks which fact stands
+    text: Weighs the old fact against the new one by how much else depends on each.
+  - title: Looks for a world rule
+    text: If the world has a rule that explains the clash, it offers that as an alternative to a redraw.
+  - title: Logs the decision
+    text: Writes every settled fact into a log, so later pages match.
+  - title: Scores and checks
+    text: Gives a score out of 100, runs its own checks and names any it missed.
+
+output_shape: |
+  FIXED FACTS FOUND
+  <n>. <fact> | Source: <where it appears>
+
+  CLASHES
+  <n>. <short name> | Weight: <rule / place or person / minor detail>
+     Earlier: "<passage or note>"
+     New: "<passage or picture brief>"
+     Winner: <old / new> because <reason>
+     Fix: <the change>
+     World rule that could explain it: <rule, or none fits>
+
+  FACT LOG
+  <fact> | Status: <fixed / changed, and why> | Source: <where>
+
+  SCORE
+  <score> out of 100. Worked out as: <how>
+
+  MISSING
+  <what would let you check more>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How much earlier text you paste
+    how: The more of the existing world you include, the more clashes it can catch. Facts it never saw cannot be checked.
+  - what: Rules of your world
+    how: Say what the story allows, such as a spell that changes a building. That lets it offer a world rule instead of a redraw.
+  - what: Pictures
+    how: Attach them. It checks what is drawn against the text, not only your description of it.
+  - what: Which details matter most
+    how: Name the facts a reader would never forgive you for getting wrong. It weighs those clashes higher.
+
+judge:
+  - Each clash quotes the earlier passage and the new one, not a summary.
+  - Each fix names which fact wins and gives a reason.
+  - A world rule is offered only where one genuinely fits.
+  - The fact log lists each fact once, with a source.
+  - The score says how it was worked out.
+
+test:
+  - Hide one deliberate error in a new passage, such as a changed eye colour, and see if it is caught.
+  - Run it on notes that you know are consistent. It should report few or no clashes.
+  - Run it twice on the same material. The clash list should be the same even if the wording changes.
+  - Check one fix against your own judgement on which fact should stand.
+
+improve:
+  - Add the categories of fact that matter in your world, such as travel times, prices or who knows what.
+  - Save the fact log as a file and paste it at the top of every future check.
+  - Add your style rules, so wording clashes are flagged along with fact clashes.
+  - Pair it with an editor pass once every clash is settled.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Comparing text against a fact list is text work any strong chat AI does well."}
+    - {name: "A spreadsheet or notes app", why: "Easy place to keep the fact log so it stays current."}
+  inputs:
+    - "A map, timeline or family tree"
+    - "Pictures or sketches to check against the text"
+    - "A list of your world's rules"
+
+terms:
+  - term: Fact log
+    meaning: A running list of settled facts about your world, with the reason each was chosen.
+  - term: World rule
+    meaning: A rule inside the story, such as a spell that can change a building, that can explain a detail that would otherwise clash.

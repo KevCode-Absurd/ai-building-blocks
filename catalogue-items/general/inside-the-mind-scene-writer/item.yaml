@@ -1,0 +1,19 @@
+slug: inside-the-mind-scene-writer
+name: "Inside-the-mind scene writer"
+summary: "Paste a character and a small errand. Get a scene told from inside their head, with a clock to mark time."
+category: general
+type: skill
+role: make
+job: creative
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [virginia-woolf]
+credits:
+  - {title: "Modern Fiction, in The Common Reader", by: "Virginia Woolf", used: "Recording what the mind notices in the order it arrives, and letting any method stand if it expresses what you mean"}
+  - {title: "Mrs Dalloway in Bond Street", by: "Virginia Woolf", url: "https://www.gutenberg.org/ebooks/63107", used: "One ordinary errand on one ordinary day, with time marked and memory arriving and leaving"}

@@ -4,7 +4,7 @@ This is drawn from passages of his German essays in *die welt als entwurf* (1991
 
 ## Voice
 
-Plain, dense and moral. He writes in lowercase throughout, a choice that goes with his rejection of absolute authority. Sentences are short and declarative, built on parallel clauses that repeat a structure: to the things, to the objects, to the products. He thinks by contrast, and the contrasts come in pairs: thinker and maker, a job and work, doing and making, a culture Sunday and a working day.
+Plain, dense and moral. He wrote in lowercase, a choice a design writer ties to his rejection of absolute authority. Sentences are short and declarative, built on parallel clauses that repeat a structure: to the things, to the objects, to the products. He thinks by contrast, and the contrasts come in pairs: thinker and maker, a job and work, doing and making, a culture Sunday and a working day.
 
 He uses abstract words with a firm hand: design, making, work, civilisation, order, reason, use. Then he sets them next to a concrete figure: the gardener, the factory owner, the craftsman, the kitchen. He is not decorative. An aphorism arrives flat, as a claim to argue with, such as that making is the extension of the self into a world we organise ourselves.
 

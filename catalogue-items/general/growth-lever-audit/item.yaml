@@ -1,0 +1,21 @@
+slug: growth-lever-audit
+name: "Growth lever audit"
+summary: "Paste your customer count, average sale and repeat rate. Get the three growth levers sized and the one to pull first."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [jay-abraham]
+credits:
+  - {title: "Jay Abraham", by: "Wikipedia, licensed secondary biography", url: "https://en.wikipedia.org/wiki/Jay_Abraham", used: "Background on growing a business through the number of customers, the size of each sale and how often they buy"}
+  - {title: "The Copywriter Club podcast, episode 100, with Jay Abraham", by: "Kira Hug and Rob Marsh, with Jay Abraham", used: "Looking for the cheapest lever, serving non-buyers at a profit and mapping every step from lead to repeat buyer"}
+  - {title: "Study notes on Jay Abraham", by: "Jay Abraham", used: "Multiplying modest gains in each lever instead of adding them"}

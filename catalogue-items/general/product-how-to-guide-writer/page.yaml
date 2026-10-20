@@ -1,0 +1,122 @@
+new_slug: product-how-to-guide-writer
+name: "Product how-to guide writer"
+summary: "Paste your product facts and buyer problems. Get a short guide of numbered routines that teaches first and sells inside the steps."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It must turn facts into steps a reader can follow and keep every promise inside what the product delivers."
+
+headline: "Product how-to guide writer"
+subhead: Give it your product facts and the problems your buyers share. It writes a short guide with one chapter per problem, numbered routines with times and amounts, what not to do, and what result to expect. You get a guide that is useful even if the reader never buys.
+
+explain: |
+  A buyer who has learned something from you trusts you more than one who has been told you are good. A guide that fixes a real problem keeps its place on the shelf, and the product sits inside the routine instead of being pushed at the reader.
+
+  This skill opens with a problem most buyers share and says it can be fixed. It splits the guide by problem and season, one short chapter each. Each fix is a numbered routine with times and amounts the reader could follow tonight, a short list of things not to do, and the result to expect and by when. It lists the tools needed with prices, shows the price beside something familiar, and closes in a calm human voice.
+
+when:
+  - You want a booklet, email series or web page that teaches and sells at once.
+  - Your buyers keep asking how to use or care for what they bought.
+  - Your product does one job well but sits in a larger routine buyers don't know.
+
+you_give:
+  - Your product facts, including price and what it does
+  - The problems your buyers share, or a persona (optional)
+you_get:
+  - A short guide with a chapter for each problem or season
+  - Numbered routines with times, amounts and things not to do
+  - The result to expect and by when, with honest limits
+  - A tools list with prices and a closing note
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts. List the two to four problems buyers bring.
+  - Say which claims you may not make, such as health claims.
+  - Try one routine yourself or with a customer before you publish.
+  - Use the guide as a booklet, web page or email series.
+
+how_it_works:
+  - title: Opens with the shared problem
+    text: Names a problem most buyers share and says it can be fixed.
+  - title: Splits by problem
+    text: Gives each problem and season its own short chapter.
+  - title: Writes numbered routines
+    text: Writes each fix as steps with times and amounts the reader can follow tonight.
+  - title: Adds what not to do
+    text: Puts a short list of mistakes beside each routine.
+  - title: States the result
+    text: Says what to expect and by when, including that some trouble may return.
+  - title: Lists the tools
+    text: Lists what the reader needs, with prices, so the product sits inside a whole routine.
+  - title: Sets the price in context
+    text: Shows the price beside something familiar and closes with a calm note.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  OPENING
+  <the shared problem and the promise it can be fixed>
+
+  CHAPTER <n>: <problem or season>
+  Routine:
+  1. <step with time and amount>
+  ...
+  Do not: <short list>
+  Expect: <result and by when, and what may come back>
+
+  WHAT YOU NEED
+  <tool | price | why>
+
+  THE PRICE IN CONTEXT
+  <price beside something familiar>
+
+  CLOSING NOTE
+  <calm, human>
+
+  MISSING
+  <facts needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Number of problems
+    how: Two to four is enough. More makes the guide thin.
+  - what: Facts about use
+    how: Add times, amounts and care steps from your own use notes so routines are exact.
+  - what: Claims you may not make
+    how: List them, especially health or safety claims, and the guide will stay inside them.
+  - what: Format
+    how: Say if it is a booklet, web page or email series so it fits the length.
+
+judge:
+  - Every promise is one the product can deliver and the facts support.
+  - Each routine has numbered steps, a time and an expected result.
+  - No health claims go beyond approved facts.
+  - A reader could follow it without buying anything first.
+  - The price is shown in context, not hidden.
+
+test:
+  - Follow one routine yourself and see whether the steps work as written.
+  - Give a chapter to a customer and ask what they would do differently.
+  - Run it twice. The routines should stay close even if the wording changes.
+  - Ask a support person to check the do-not lists.
+
+improve:
+  - Add your support questions, so chapters answer what buyers actually ask.
+  - Add exact care and use times from your product testing.
+  - Save the approved claims list to your brand file.
+  - Pair it with "Claim and proof matcher" before you publish.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Turning facts into steps and a clear layout is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Your support questions and returns reasons"
+    - "Care or use instructions from the maker"
+    - "A list of claims you may and may not make"
+
+terms:
+  - term: Routine
+    meaning: A short set of numbered steps a reader repeats on a schedule.
+  - term: Do-not list
+    meaning: A short list of common mistakes placed beside a routine.

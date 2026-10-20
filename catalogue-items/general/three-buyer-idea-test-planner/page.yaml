@@ -1,0 +1,127 @@
+new_slug: three-buyer-idea-test-planner
+name: "Three-buyer idea test planner"
+summary: "Paste your business idea. Get the one-minute math and a weekend plan to ask ten people to pay."
+job: test-an-idea
+thinking: low
+thinking_why: "The steps are fixed arithmetic and a script, so a quick pass is enough."
+
+headline: "Three-buyer idea test planner"
+subhead: Give it your business idea, a price and a profit goal. It does the one-minute math to show how many buyers you need, picks ten people you can reach, and writes a direct ask for money. You get a 48-hour plan with a rule for go or change.
+
+explain: |
+  Asking people "would you buy this?" gets polite yes answers that cost them nothing. The only proof that someone wants your idea is that they pay, or put down money, before it exists. A short test with real asks tells you more in a weekend than months of building.
+
+  This skill states the idea, the buyer and one price, then divides your profit goal by the profit per sale to find how many buyers you need. If that number looks out of reach, it suggests changing the price, adding a subscription or selling to businesses. It lists ten reachable people, writes a payment ask, splits the asks over two days and sets the go and change rules before you start.
+
+when:
+  - You have an idea and want to know in a weekend if anyone will pay.
+  - You are tempted to build first and find buyers later.
+  - You keep asking friends what they think and getting only encouragement.
+
+you_give:
+  - Your idea in a sentence, and who it is for
+  - A price you could charge and what you earn on each sale
+  - A profit goal for the first year
+you_get:
+  - The one-minute math, with the number of buyers needed
+  - A list of ten people you can reach within 48 hours
+  - A direct ask for payment, and a plan for day two and day three
+  - Go and change rules, written before the test
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the idea, the buyer, a price and your profit goal.
+  - Give it names of people you could reach this week, or places where such buyers gather.
+  - Send the asks as written. Count payments, not kind words.
+  - Bring back the count and let it apply the rule.
+
+how_it_works:
+  - title: States idea, buyer, price
+    text: Writes the idea, the buyer and one price in plain words.
+  - title: Runs the math
+    text: Divides your profit goal by profit per sale to get the number of buyers needed.
+  - title: Fixes an impossible number
+    text: If the count looks out of reach, suggests a higher price, a subscription or selling to businesses.
+  - title: Lists ten people
+    text: Names ten people or groups you can reach in 48 hours.
+  - title: Writes the ask
+    text: Writes a direct request for money, never a would-you-buy question.
+  - title: Schedules the asks
+    text: Plans five asks for day two and five for day three.
+  - title: Sets the rule
+    text: Writes the go and change rules before the test, and an ask for a referral from every no.
+
+output_shape: |
+  THE IDEA
+  Idea: <one line>  Buyer: <who>  Price: <amount>
+
+  THE ONE-MINUTE MATH
+  Profit goal <amount> / profit per sale <amount> = <n> buyers needed
+  <if the count looks out of reach: change to price / subscription / business buyer>
+
+  TEN PEOPLE YOU CAN REACH IN 48 HOURS
+  1. <person or group> | How: <channel>
+  ...
+
+  THE ASK
+  <direct message asking for payment>
+
+  THE WEEKEND
+  Day 2: <5 asks, times>
+  Day 3: <5 asks, times>
+
+  THE RULE (written before the test)
+  3 or more paid: go | 1 to 2: <step> | 0: change <offer / price / buyer>
+
+  EVERY NO
+  <line asking for a referral or a smaller deal>
+
+  MISSING
+  <facts that would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Profit per sale
+    how: Give the profit, not the price. Revenue minus cost on one sale changes the buyer count a lot.
+  - what: Who you can really reach
+    how: Name real people or places. A list of people you know beats a plan to find strangers.
+  - what: Price
+    how: Pick a price you would be glad to get. A price too low hides a weak offer.
+  - what: What you can deliver in a week
+    how: Say what you could do by hand for a first buyer. The ask offers only that.
+
+judge:
+  - The ask is for payment, not opinion.
+  - The math is shown, with the numbers it used.
+  - Ten named people or groups can be reached within 48 hours.
+  - The go and change rules are written before the test.
+  - Nothing is built before the asks go out.
+
+test:
+  - Run it on an idea you already know sells. The math and the ask should look sensible.
+  - Send the ask to two real people and see how they respond to the wording.
+  - Run it twice with the same facts. The buyer count and rule should match.
+  - After the weekend, check that the rule was easy to apply to what happened.
+
+improve:
+  - Add the places your kind of buyer gathers to the ten-person step.
+  - Add your usual price range so the math starts from a real figure.
+  - Save the ask that got payments and reuse its wording.
+  - Pair it with "Customer interview question writer" to learn from the people who said no.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The math and the message writing are text work that any strong chat AI does with this skill."}
+    - {name: "A payment link or invoice tool", why: "Lets a buyer pay in a click when you ask."}
+  inputs:
+    - "Names or groups of people who have the problem"
+    - "Your cost per sale, so the profit figure is real"
+    - "A short description of what a first buyer would get"
+
+terms:
+  - term: One-minute math
+    meaning: Profit goal divided by profit per sale, which tells you how many buyers you need.
+  - term: Pre-sell
+    meaning: Asking for payment before the product is finished.

@@ -1,0 +1,22 @@
+slug: almost-buyer-follow-up-writer
+name: "Almost-buyer follow-up writer"
+summary: "Paste your offer and what leads did before they stopped. Get a follow-up email series with a new reason each time."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: email_flow}
+origin: rebuilt
+version: 1.0.0
+minds: [dan-kennedy, robert-collier]
+credits:
+  - {title: "Ten Marketing Rules To Live (or Die) By, Part 1", by: "Dan Kennedy", used: "Giving a reason to respond now and following up again and again with a clear next step"}
+  - {title: "The 10 Rules of Direct Response Marketing", by: "Dan Kennedy", used: "Always making an offer, telling people exactly what to do and tracking each message to a result"}
+  - {title: "Dan Kennedy study notes", by: "Dan Kennedy (author blog and interviews, as summarised in the mind file)", used: "The almost-persuaded as the costliest group, and a fixed schedule of follow-up"}
+  - {title: "The Robert Collier Letter Book", by: "Robert Collier", used: "Writing each message to the reader's own thoughts and the reason they held back"}

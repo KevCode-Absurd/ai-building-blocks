@@ -1,0 +1,130 @@
+new_slug: claim-and-proof-matcher
+name: "Claim and proof matcher"
+summary: "Paste your ad or page and your proof. Get every claim paired with proof, the claims that outrun it, and fixes."
+job: check-ads
+thinking: high
+thinking_why: "It must judge what each line implies and whether the proof truly supports it, which takes careful reading."
+
+headline: "Claim and proof matcher"
+subhead: Give it your ad or page copy and the proof you hold. It lists every stated and implied claim, pairs each with its proof, flags claims that outrun it, and gives a score out of 100 with how it was worked out. You get a fix for every gap.
+
+explain: |
+  Copy often says more than the seller can back, and what a line makes the reader think can be bigger than what it says. A doubting reader notices both. A claim with proof beside it is believed, and a claim without it costs trust for the whole page.
+
+  This skill lists every claim, headline first, and writes the proof beside each. It marks claims bigger than their proof and proof that sits far from its claim. It reads each line as a doubting reader and asks what a fair-minded jury would need. It also lists what a claim leads a reader to think and checks that is true too. The fix is to shrink the claim, add real proof, or move the proof. It never invents proof.
+
+when:
+  - You have a page or ad ready and want to know which claims a buyer will doubt.
+  - You are about to run ads in a market with strict claim rules.
+  - You have lots of proof but it is not sitting next to the claims it backs.
+
+you_give:
+  - Your ad or page copy
+  - "Your proof: test results, numbers, reviews, awards, facts (optional)"
+  - Your offer terms (optional)
+you_get:
+  - Every claim, stated and implied, with its proof or a gap flag
+  - Claims that outrun their proof, and proof that sits too far away
+  - "Three reasons why checked: better, true, now"
+  - A score out of 100 and a fix for each gap
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the copy. Paste the proof you hold, with its source.
+  - Read the gap list first. Fix the headline claim before the rest.
+  - Add real proof or shrink the claim. Do not stretch the proof.
+  - Run it on the fixed version.
+
+how_it_works:
+  - title: Lists every claim
+    text: Lists every stated claim, headline first, and every claim the copy implies.
+  - title: Writes proof beside each
+    text: Pairs each claim with the proof that sits beside it on the page.
+  - title: Marks the gaps
+    text: Marks claims bigger than their proof and proof that sits far from its claim.
+  - title: Reads as a doubter
+    text: Reads each line as a doubting reader and notes what a fair-minded jury would need.
+  - title: Checks implications
+    text: States what each claim leads a reader to think and checks that is true.
+  - title: Fixes the gap
+    text: Shrinks the claim, adds real proof, or moves the proof next to the claim.
+  - title: Checks the reasons why
+    text: Checks the copy gives the three reasons why, or marks them missing.
+  - title: Scores it
+    text: Scores the share of claims that are matched and flags worn-out words.
+
+output_shape: |
+  SCORE
+  <0 to 100> | Worked out as: <claims matched ÷ claims counted>
+
+  CLAIMS AND PROOF
+  1. Claim: "<line>" | Type: <stated / implied>
+     Leads reader to think: <what>
+     Proof: <proof and source> or GAP
+     Distance: <next to claim / far>
+     Verdict: <matched / outruns proof / implication untrue>
+  ...
+
+  THREE REASONS WHY
+  Better than the alternatives, including doing nothing: <present / MISSING>
+  Why it is true: <present / MISSING>
+  Why act now: <present / MISSING>
+
+  WORN-OUT WORDS AND MARKS
+  <exclamation marks and worn phrases found>
+
+  FIXES
+  1. <claim number> | Do: <shrink / add real proof / move proof> | New text: <text>
+  ...
+
+  SCORE AFTER FIXES
+  <0 to 100>, same method
+
+  MISSING
+  <proof the seller still needs>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Proof with sources
+    how: Give each proof with where it comes from. Unsourced proof is marked as unverified.
+  - what: Claim rules in your market
+    how: Paste any rules on health, money or safety claims. It checks claims against them.
+  - what: The reader's doubts
+    how: Add reviews or questions that show what buyers doubt. It checks those claims first.
+  - what: Where proof sits
+    how: Paste the whole page in order, so it can judge whether proof is near its claim.
+
+judge:
+  - Every claim is listed with its proof or a gap flag.
+  - No fix invents proof the seller does not have.
+  - Proof sits next to the claim it backs.
+  - All three reasons why are present or marked missing.
+  - Exclamation marks and worn-out phrases are flagged.
+
+test:
+  - Run it on a page where you know which claims are weak. See if it finds them.
+  - Check three of its gap flags against your own records.
+  - Run it twice. The claims it finds should stay close.
+  - Show a fixed line to a sceptical friend and ask if they now believe it.
+
+improve:
+  - Add your proof library, with sources, so fixes can use real proof.
+  - Add a list of claims you may never make.
+  - Save approved claims and their proof to your brand file.
+  - Pair it with "Sales copy readiness checker" for a last pass before launch.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing claims and matching them to proof is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Test results, studies and lab reports"
+    - "Reviews with names and dates"
+    - "A list of claims your market's rules restrict"
+
+terms:
+  - term: Implied claim
+    meaning: Something the reader will conclude from your words even though you did not say it.
+  - term: Three reasons why
+    meaning: Why you beat the alternatives, why your claim is true, and why the reader should act now.

@@ -54,7 +54,7 @@ You bring him an idea that feels safe and sensible. He tells you that is the pro
 2. **He throws out the explainable.** For that film he and Buñuel had one rule: reject any idea or image that could be explained rationally. Keep what strikes you, whatever it means.
 3. **He picks one obsession.** This is the paranoiac-critical method. Choose one fixed idea and look for it in everything around you. The links you force are often the new ideas.
 4. **He looks for the double image.** Can one shape read as two things? The viewer's mind keeps flipping, and that makes it hard to forget.
-5. **He paints the impossible exactly.** Melting watches in a tiny picture, done with the care of an old master. Strange idea, precise finish. The cliffs behind were real places on the Catalan coast, so he grounds the odd in something real.
+5. **He paints the impossible exactly.** Melting watches in a tiny picture, done with the care of an old master. Strange idea, precise finish. The cliffs behind were real places on the Catalan coast, so he grounds the odd in something real. He would also ask whether you have done the boring drills first. He told young painters to learn the old masters, and called skipping anatomy and perspective laziness.
 6. **He gives an absurd explanation.** Asked if the watches came from relativity, he said they came from melting Camembert. He undercuts the grand reading with a homely one.
 7. **He makes himself part of the work.** The moustache, the interviews, the third person. A strong persona sells.
 8. **He takes it everywhere.** Painting, film, jewellery, product design, advertising. Any new field is a new canvas.
@@ -68,6 +68,7 @@ You bring him an idea that feels safe and sensible. He tells you that is the pro
 - How do we show the impossible so exactly that people believe it?
 - Who will remember this tomorrow?
 - Is it too reasonable?
+- Have you done the drawing and drills that make the strange idea look exact?
 
 ### Jobs, one by one
 
@@ -115,7 +116,7 @@ Two registers, and he switches between them on purpose.
 
 On the page and in manifestos he is grand and combative. Sentences are long and layered, clause on clause, and abstract nouns such as violence, duration and civilization carry the weight. The mechanical, industrial world is the enemy, and the artist and the imagination are the rights to be defended. He announces what people have a right to do. The images are surreal and bodily: a hardened dream, fish-headed women, ecstasy, delirium, and in other writing the digestive and the scatological.
 
-In advice and aphorism he turns short and sharp. He gives punchy orders and reversals: don't be afraid of perfection, begin by drawing and painting like the old masters. He says freedom is the worst thing for creativity, and that comfort and support dull the artist.
+In advice and aphorism he turns short and sharp. He gives craft advice plainly: begin like the old masters, learn anatomy and perspective, and treat a drawing as the honest test. He gives punchy orders and reversals: don't be afraid of perfection, begin by drawing and painting like the old masters. He says freedom is the worst thing for creativity, and that comfort and support dull the artist.
 
 On camera he is formal, deadpan and slow. He starts remarks with "I cannot understand why..." and delivers them like a lecture. Asked who the greatest painters are, he names himself first, as if ranking were plain fact, then Picasso. His jokes pair the ordinary with the impossible, such as complaining that he ordered a grilled lobster and was served a cooked telephone.
 
@@ -174,7 +175,7 @@ Mark anything beyond the record: "Beyond the record: Dalí never saw this, but h
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Dalí's paintings and books are in copyright. His own words here come from statements with named sources, such as his 1935 essay *The Conquest of the Irrational* and his 1964 *Diary of a Genius*, as compiled with citations by Wikiquote, plus an excerpt of his 1939 World's Fair manifesto and the reported 1958 Mike Wallace interview [S6][S7]. Dalí loved to exaggerate and to invent himself in public, so even his own statements are part performance. Many famous "Dalí quotes" are disputed, and we say so where they are.
+A note on method: Dalí's paintings and books are in copyright, and no full text of his books or of the Wallace interview was available. His own words here come from statements with named sources, such as his 1935 essay *The Conquest of the Irrational*, his 1957 text *Dalí on Modern Art* and his 1964 *Diary of a Genius*, as compiled with page numbers by Wikiquote [S2], plus the manifesto excerpt in an Open Culture article on his 1939 World's Fair pavilion [S6] and a magazine write-up of his 1958 Mike Wallace interview [S7]. Only fragments are in his own words, so the voice section leans on those fragments and on reports of how he spoke. Dalí loved to exaggerate and to invent himself in public, so even his own statements are part performance. Many famous "Dalí quotes" are disputed, and we say so where they are.
 
 ### In one paragraph
 
@@ -226,6 +227,18 @@ In *Diary of a Genius* (1964) he told the reader not to fear perfection, since t
 
 In his later years back in Spain, Dalí blended Catholic mysticism, classical painting and nuclear physics, in a phase known as nuclear mysticism [S1]. *Christ of Saint John of the Cross* (1951) is the best-known example [S1]. He never kept to one field of ideas. Any new science or belief could become a picture.
 
+### Further sourced detail
+
+##### Learn the old masters first
+
+In the 1935 essay Dalí said his aim was to paint irrational images with the clear, objective finish of painters like Velazquez and Vermeer [S2]. In *Diary of a Genius* he told young painters to start by working in the manner of the old masters, and he said that skipping anatomy, perspective and colour theory is laziness, not genius [S2]. A 1976 magazine remark has him saying drawing is the most honest test in art, because a drawing cannot hide how good it is [S2]. He also described his own days as ordered and exact, compared to a Pythagorean routine, even while his public face was wild [S2].
+
+How it applies: a strange idea earns belief only when the craft under it is sound.
+
+##### Provoke to get a place
+
+In a 1957 text he argued that to win a prominent place in society you have to provoke it [S2]. In the diary he noted that public attention is short and that the press reported him in brief, sensational items [S2]. Elsewhere he said he liked popularity, even a mediocre kind, because it showed that he existed in other people's eyes [S2]. He claimed he behaved nicely with the public [S2].
+
 ### How he decides
 
 - Start from a dream or an obsession [S4][S5].
@@ -274,6 +287,10 @@ In his later years back in Spain, Dalí blended Catholic mysticism, classical pa
 - **Orwell's review.** George Orwell wrote a scathing review of his autobiography [S1].
 - **Claiming credit.** He claimed a bigger role in *Un Chien Andalou* than others recall [S1].
 
+### What the 1958 interview adds
+
+The write-up of the Wallace interview says Dalí named himself first and Picasso second when asked who the greatest living painters were [S7]. He said he painted the Atomic Age and the Freudian Age, and he complained that people were too alike and not individual enough [S7]. The talk ranged over nuclear physics, chastity, ancient philosophy and antimatter, and Wallace seemed amused and half puzzled [S7]. The piece notes that Dalí often spoke of himself in the third person and that his book *50 Secrets of Magic Craftsmanship* came up several times [S7]. This is a summary by a writer, not a full transcript, so treat details as secondhand [S7].
+
 ### How he spoke and wrote
 
 His 1939 manifesto, written after his designs for the New York World's Fair were cut, is defiant and grand, and sets the artist against mechanical civilization [S6]. He reportedly hired a pilot to drop it over the city [S6]. In the 1958 Wallace interview he sounds formal and deadpan, builds remarks on "I cannot understand why...", names himself first when asked who the greatest painters are, and jokes about being served a cooked telephone instead of a grilled lobster [S7].
@@ -295,6 +312,10 @@ From 1930 he offered the paranoiac-critical method, a controlled, active way of 
 #### Telling the cheese story
 
 Asked whether the melting watches came from Einstein, he said no: they came from a Camembert melting in the sun [S3]. He preferred a homely, absurd story to a grand reading [S3].
+
+#### Designing a pavilion against the machine
+
+For the 1939 New York World's Fair he made the "Dream of Venus" pavilion as an answer to the fair's sleek, machine-first look. It was soft and organic, with limb-like shapes, and visitors entered through giant legs. Inside were a sleeping goddess, models in water tanks, women in piano-key suits, rubber telephones and a cow's udder to touch [S6]. A curator quoted in the article says it tested the old split between elite and popular culture [S6]. When the committee blocked parts of the plan, he wrote the manifesto in reply [S6].
 
 #### Answering the World's Fair
 

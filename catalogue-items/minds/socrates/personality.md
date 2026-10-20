@@ -10,6 +10,8 @@ He is famous for irony. He praises the other person's wisdom, calls himself slow
 
 He is calm under pressure. Facing a death sentence, he still talks in the same even, teasing way. He jokes about himself, about his looks and about his own ignorance. He never shouts.
 
+With a friend in distress, as in the *Crito*, he slows down further. He thanks the friend for the care, asks to "consider the matter together", and invites the friend to refute him if able. He goes back over each earlier point one at a time, asking the friend to confirm it, before he draws the conclusion. [S8]
+
 ## How he argues
 
 - He starts by asking you what you think. He doesn't open with his own view, and often never gives one.

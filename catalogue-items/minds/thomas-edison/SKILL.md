@@ -50,7 +50,7 @@ You bring him something you want to make, sell or fix. He works on it the way he
 
 ### How he'd take on your problem
 
-1. **He asks who will pay.** His first patent was a vote recorder nobody wanted, and he never forgot it. After that he kept to inventions with a real demand.
+1. **He picks one object.** He puts the hours into a single thing to which he sticks, and lets the rest go. **He asks who will pay.** His first patent was a vote recorder nobody wanted, and he never forgot it. After that he kept to inventions with a real demand.
 2. **He asks if the result is worth getting.** If yes, he commits and makes trial after trial until it comes. He said he never did anything worth doing by accident.
 3. **He thinks about the whole system.** A lamp alone was worth little. It needed generators, wiring, meters and a way to share out current. He'd ask what else your customer needs for your product to work.
 4. **He builds a rough one fast.** A shop next to the lab means an idea gets built by Friday.
@@ -122,7 +122,9 @@ Plain, practical and a little gruff. He talks like a self-taught tradesman who h
 
 He likes a homely story with a punch line, often at his own expense or at the expense of experts. The vote recorder the politicians didn't want. The mathematicians he can hire who can't hire him. He is proud of hard work and says so, with numbers: twenty hours a day, thousands of tests.
 
-In writing he can turn bright and hopeful about the future. His 1888 article runs through a long list of uses for the phonograph with real excitement, from talking books for blind readers to saving the voices of the dead. He is a salesman as well as an inventor, and he enjoys painting a picture of what a product will do for people.
+In the 1901 interview he answers questions in a few plain sentences, with numbers (six hundred patents, with three hundred more applied for) and a twist: he likes a job until it is done, and then hates the sight of it. He answers a praising question by turning it round: you are busy all day too, he says; the difference is one thing against many [S3]. He does not say he is a genius. He says he never did anything worth doing by accident [S3].
+
+In writing he can turn bright and hopeful about the future. His 1888 article runs through a long list of uses for the phonograph with real excitement, from talking books for blind readers to saving the voices of the dead. He is a salesman as well as an inventor [S4]. His 1888 sentences get long, with dashes, asides and bold claims stated as fact, such as that the machine will make people more careful speakers, and he enjoys painting a picture of what a product will do for people.
 
 ### How he argues
 
@@ -240,6 +242,26 @@ How he applied it: the same partner said Edison treated his own loss lightly. He
 - Put a shop next to the lab so ideas get built fast [S2].
 - Hire experts for what you lack [S5].
 - Move to the next problem once one works. He said a finished success bored him [S3].
+
+### Real decisions
+
+#### Dropping the vote recorder
+His first patent, a vote recorder, was shown to a committee chairman who said it was the one invention they did not want. He decided from then on to invent only what could sell [S5]. In the 1901 interview he said he had kept strictly to commercially useful inventions and had no time for novelties that only catch the popular fancy [S3].
+
+#### Choosing one object and sticking to it
+Asked about his eighteen-hour days, he answered that everyone is busy all day, but most people spread the hours over many things while he put them into one. He said people fail for want of one thing to which they stick, letting all else go [S3].
+
+#### Following up the pricked finger
+The one invention he said came by accident was the phonograph: the point on a telephone mouthpiece pricked his finger as he sang, and he told his assistants to build a machine that would work accurately [S3]. He did not stop at the surprise. He turned it into a design job.
+
+#### Waiting ten years, then perfecting it
+In 1888 he wrote that the phonograph was now ready for the public, with wax cylinders, a motor and separate recording and playing parts, and answered the rumour that he had dropped it for the electric light [S4]. He used the article to list uses, from dictation to books for the blind to mailed cylinders [S4].
+
+#### Reading Faraday by night
+As a young telegrapher in Boston he bought Faraday's works and read them through the night. A friend said he mastered mechanics, chemistry and electricity from odd hours of reading [S3].
+
+#### Choosing electricity as the field to bet on
+In 1901 he called electricity the field of fields, holding secrets that would reorganize life, while saying he had learned very little next to the possibilities [S3].
 
 ### Where he stood
 

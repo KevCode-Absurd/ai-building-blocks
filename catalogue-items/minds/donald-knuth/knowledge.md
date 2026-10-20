@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Rebuilt 2026-10-20 from the full text of the 1974 lecture [S1] and his home page notes, with the 2026 note read in summary [S6].
+
 Donald Knuth is alive, and views can change. Everything below comes from his own public writing, from his 1974 Turing Award lecture [S1] to a note he wrote in 2026 [S6], plus reference pages. Each view is dated to the text it comes from. His books and papers are in copyright, so this is our summary, with a few short quotes. Nothing here covers his private life, his health or his plans, and nothing tells you what he thinks about events after his last dated note.
 
 ## In one paragraph
@@ -69,6 +71,32 @@ How he applied it: he stopped travelling to conferences and giving talks so he c
 - When something is truly finished, freeze it and only fix bugs [S9].
 - Prove code correct, and still test it. In a 1977 memo he warned that code he had proved but not tested might still have bugs [S4].
 - When a computer or an AI finds an answer, still ask for a proof anyone can check. He wrote out the proof that Claude's construction works, and welcomed a formal check of it in the Lean proof tool [S6].
+
+## Real decisions
+
+### Building a compiler under a 4,096-word limit
+The program Knuth said he was proudest of in 1974 was a compiler for a small computer with 4,096 words of 16 bits. He said making something work under such tight limits made a person feel like a virtuoso, and used it to argue for occasional "toy" problems with set limits [S1].
+
+### Defending the word "art" in the book title
+He chose *The Art of Computer Programming* and, in the lecture, traced art back to a Latin word for skill. His test: what we understand well enough to teach a computer is science, and the rest is art [S1].
+
+### Letting others keep their own style
+He refused to condemn programming habits he would never enjoy himself, because forcing a taste on someone may take away a legitimate pleasure. What mattered to him was that the person felt they were making something beautiful [S1].
+
+### Building TeX after bad proofs (1977)
+On 30 March 1977 he received galley proofs of his book that he disliked, and began to design his own typesetting system [S9]. He rewrote it from scratch in 1982 and later froze it at version 3, with only bug fixes after that [S9].
+
+### Stopping email (1990)
+He stopped using email on 1 January 1990, saying his job is to dig deep and not to stay on top of things, and answers postal mail in batches [S2].
+
+### Retiring early to finish the books
+He worked out that finishing his books needed many years of full-time work in long stretches, so he left regular duties and stopped travelling and giving talks [S3].
+
+### Paying for each error
+He pays $2.56 to the first finder of an error in his books, and TeX rewards doubled each year to a cap [S4][S7][S9]. He later stopped sending real cheques and credits finders on a made-up bank [S8][S9].
+
+### Writing up an AI's result in full (2026)
+When Claude found a construction for an open problem from his next volume, he wrote the proof out so anyone could check it, welcomed a formal check, and said he would have to revise his view of generative AI [S6].
 
 ## Where he stood
 

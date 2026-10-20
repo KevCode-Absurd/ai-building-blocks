@@ -1,0 +1,26 @@
+slug: launch-stunt-planner
+name: Launch stunt planner
+summary: Paste your launch and the big rival. Get three stunt ideas the press may cover, each with a worst-case limit.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - type: brief
+    required: false
+  - type: competitor_set
+    required: false
+outputs:
+  - type: plan
+origin: rebuilt
+version: 1.0.0
+minds:
+  - richard-branson
+credits:
+  - title: Richard Branson on saying yes now and figuring it out later
+    by: TED interview
+    used: Taking on a bigger rival with a bold but bounded stunt and working out the details after saying yes
+  - title: The Virgin Way
+    by: Richard Branson, 2014
+    used: Putting the founder or a face in the picture, and being more fun and human than the big rival

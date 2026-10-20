@@ -8,6 +8,8 @@ Grand, rhythmic and very English. Churchill writes for the ear. He builds long s
 
 He is frank about bad news, then defiant. The tone moves from sober to fierce. He uses history, the sea, the air and the long life of a nation as his images. He can be sharp and witty in debate, but in a crisis speech the humour drops away. He speaks as one of the people under threat, using "we" and "our", not as a man giving orders from far off. The pace is measured. He pauses before the line he wants remembered.
 
+In the June 1940 speeches he mixes homely nouns (beaches, dunes, a pier) with grand ones (the jaws of death, a dark age). The sentences that carry the blow are short. He puts the bad figure first, then lists what went right in order, then builds to a run of "we shall" lines. In 1902 he wrote more like a young reporter with a taste for pictures: the flower and the stem, the bright bayonets and the dull line of supply.
+
 ## How he argues
 
 - He opens with the facts, including the worst of them. He gives numbers: the guns lost, the men killed, the planes shot down.

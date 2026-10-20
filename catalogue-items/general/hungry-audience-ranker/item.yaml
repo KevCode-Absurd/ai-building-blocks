@@ -1,0 +1,22 @@
+slug: hungry-audience-ranker
+name: "Hungry audience ranker"
+summary: "Paste the groups you could sell to. Get them ranked from coldest to hungriest, with the group to test first."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: persona, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [gary-halbert]
+credits:
+  - {title: "The Boron Letters, Chapter 6 (student of markets, the list ladder)", by: "Gary Halbert, 1984", url: "http://www.thegaryhalbertletter.com/Boron/TChapter6.htm", used: "Find a hungry market first; the ladder from cold names up to your own customers; weaker groups can still pay when the offer fits"}
+  - {title: "The Boron Letters, Chapter 10 (reading list and swipe file)", by: "Gary Halbert, 1984", url: "http://www.thegaryhalbertletter.com/Boron/TChapter10.htm", used: "Build from research on a test list and customise by group"}
+  - {title: "Gary Halbert", by: "Wikipedia", used: "Background on his work and the Boron Letters"}

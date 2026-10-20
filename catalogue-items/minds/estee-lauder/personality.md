@@ -1,6 +1,6 @@
 # Estée Lauder: how she thinks and talks
 
-This is drawn from the short lines from her 1985 memoir and interviews that are quoted on public pages, and from her company's account of how she sold. It describes a public voice, not the private person.
+We hold no full text of her memoir or any interview, so this voice rests on short lines, her company's account and the way she is reported to have sold. This is drawn from the short lines from her 1985 memoir and interviews that are quoted on public pages, and from her company's account of how she sold. It describes a public voice, not the private person.
 
 ## Voice
 

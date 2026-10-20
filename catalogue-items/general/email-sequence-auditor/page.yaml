@@ -1,0 +1,125 @@
+new_slug: email-sequence-auditor
+name: "Email sequence auditor"
+summary: "Paste your email flow and its numbers. Get a green, yellow and red list of what to protect and fix."
+job: audit-landing-page
+thinking: medium
+thinking_why: "It reads numbers per email and sorts them by fixed rules."
+
+headline: "Email sequence auditor"
+subhead: "Give it your email flow and the numbers for each email. It maps the flow, records opens, clicks, conversions, unsubscribes and revenue, and sorts every email into green, yellow or red. You get a score out of 100 and a list of what to protect, fix now and look at next."
+
+explain: |
+  When a flow underperforms, the usual move is to rewrite it. That throws away the emails that work, and the rewrite is based on taste, not numbers. You end up changing things you have never measured.
+
+  This skill treats the current emails as the control and changes nothing yet. It maps the whole flow: triggers, timing, tags and dead ends. It records each email's numbers and sorts them. Green emails are protected and studied. Red emails are fixed first. Yellow emails come next. It leaves out style opinions and fixes only what the numbers show. Findings go to your team before any rewrite.
+
+when:
+  - "Your welcome or follow-up flow underperforms and you plan to rewrite it."
+  - "You inherited a flow and do not know which emails matter."
+  - "Revenue from email is flat and you do not know where it leaks."
+
+you_give:
+  - "Your email flow: each email with trigger and timing"
+  - "Opens, clicks, conversions, unsubscribes and revenue per email"
+  - "Segments and tags the flow uses (optional)"
+  - "The goal of the flow (optional)"
+you_get:
+  - "A map of the flow with dead ends marked"
+  - "Each email as green, yellow or red, with its numbers"
+  - "A score out of 100, with how it was worked out"
+  - "One proposed fix and one test for each red email"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the flow in order, with timing between emails."
+  - "Paste the numbers for each email for the same period."
+  - "Say what the flow should achieve."
+  - "Share the audit with your team before anyone rewrites an email."
+
+how_it_works:
+  - title: "Keeps the control"
+    text: "Treats the current emails as the control and changes nothing yet."
+  - title: "Maps the flow"
+    text: "Maps triggers, timing, tags and dead ends."
+  - title: "Records the numbers"
+    text: "Records opens, clicks, conversions, unsubscribes and revenue for each email."
+  - title: "Sorts by colour"
+    text: "Sorts emails into green, yellow and red."
+  - title: "Leaves out taste"
+    text: "Fixes only problems the numbers show."
+  - title: "Reports first"
+    text: "Reports findings before any rewrite."
+
+output_shape: |
+  SCORE: <n>/100 (flow map 20, numbers recorded 20, healthy emails 40, no dead ends 20)
+
+  FLOW MAP
+  <trigger> -> <email 1> (day 0) -> <email 2> (day 2) ... 
+  Dead ends: <list>
+
+  NUMBERS
+  <email> | Open | Click | Conversion | Unsubscribe | Revenue
+
+  GREEN (protect and study)
+  <email> | <why>
+
+  RED (fix now)
+  <email> | <number that failed> | Fix: <one fix> | Test: <one test>
+
+  YELLOW (next)
+  <email> | <why>
+
+  FOR THE TEAM
+  <findings and decisions needed before any rewrite>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Numbers for every email"
+    how: "Give all columns for each email. Gaps stay yellow, never green."
+  - what: "Your red line"
+    how: "Tell it your own thresholds, for example a first-email open rate it must beat."
+  - what: "Volume per email"
+    how: "Add how many people received each. Small groups make the colours less certain."
+  - what: "Flow goal"
+    how: "Name the one action the flow is for. It decides which numbers matter."
+
+judge:
+  - "Every finding points to a number, not a taste."
+  - "Nothing is rewritten before the control is measured."
+  - "Missing data is listed, not guessed."
+  - "Each red email has one proposed fix and one test."
+  - "Green emails are named as ones to protect."
+
+test:
+  - "Run it on a flow where you know the best email. Check it is green."
+  - "Check that no finding is about style, such as tone or word choice, unless a number backs it."
+  - "Run it twice. The colours should match."
+  - "Fix one red email, wait for the numbers and re-run the audit."
+
+improve:
+  - "Add your own cut-offs for opens, clicks and unsubscribes by email type."
+  - "Add the tags and segments your flows use, so dead ends are spotted."
+  - "Save the green emails to a folder as your reference copy."
+  - "Pair it with a rewrite step that works only on the red emails."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting emails by their numbers is work any strong chat AI does with this skill."}
+    - {name: "Your email platform's flow report", why: "Gives per-email opens, clicks, conversions and revenue."}
+  inputs:
+    - "Send counts per email"
+    - "Flow settings: triggers, delays and tags"
+    - "The goal and the list size"
+
+terms:
+  - term: "Control"
+    meaning: "The current version, kept as it is so changes can be compared against it."
+  - term: "Dead end"
+    meaning: "A point where people stop receiving emails without a reason."
+  - term: "Flow"
+    meaning: "A set of emails sent in order after something a person does."

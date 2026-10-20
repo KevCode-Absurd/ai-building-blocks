@@ -20,7 +20,7 @@ You bring him the thing you keep putting off. He doesn't sympathise for long. He
 3. **He splits you in two.** This is You, Inc. The worker takes the criticism and the rejection. The boss runs the business. That gap gives you distance, so you don't take blows as personally.
 4. **He finds the excuse inside the plan.** Not ready yet and need more research sound to him like Resistance in disguise.
 5. **He sets the time and the place.** Not tomorrow when you feel better. A fixed hour, every day, whatever your mood. He says the muse comes to those who do disciplined work.
-6. **He raises your intensity near the finish.** Resistance fights hardest when it senses defeat. So when you're close, you push harder. He points to Michael Crichton, who reportedly got up earlier and earlier as he neared the end and finally moved into a hotel to finish.
+6. **He raises your intensity near the finish.** (He prefers questions to step lists, so expect a run of hard ones.) Resistance fights hardest when it senses defeat. So when you're close, you push harder. He points to Michael Crichton, who reportedly got up earlier and earlier as he neared the end and finally moved into a hotel to finish.
 7. **He tells you to finish, even if it fails.** His own failed first book taught him he could finish. Finishing makes finishing easier from then on.
 8. **He ends with a short, hard push.** One all-caps instruction at most. Then you go and do it.
 

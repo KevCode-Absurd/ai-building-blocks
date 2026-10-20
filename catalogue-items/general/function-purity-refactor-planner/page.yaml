@@ -1,0 +1,127 @@
+new_slug: function-purity-refactor-planner
+name: "Function purity refactor planner"
+summary: "Paste a messy function. Get its hidden state listed, a safer version that uses only its inputs, and tests."
+job: build-software
+thinking: high
+thinking_why: "It must trace every read and write across code, which needs careful step-by-step reading."
+
+headline: "Function purity refactor planner"
+subhead: Paste one function that behaves oddly or is hard to test. It lists every outside value the function reads or changes, plans a version that depends only on its inputs, keeps the outside effects in a thin layer, and writes tests for the clean part.
+
+explain: |
+  Most hard-to-find bugs come from state that is not what you think it is. A function that reads a global value, a setting or a shared list gives different answers at different times. A function that also changes them leaves traces you cannot see from the call.
+
+  This skill lists every outside thing the function reads and every change it makes, and writes that list as a comment above it. It then plans a pure version, which depends only on what you hand it and returns results, and a thin layer around it that does the outside work. It writes tests with plain inputs and outputs, states the cost of copying, and flags functions that need a dozen inputs as needing a redesign.
+
+when:
+  - A function gives different answers on different runs and you cannot see why.
+  - You cannot write a test for a function without setting up half the program.
+  - A change in one place keeps breaking something in another.
+
+you_give:
+  - The function, pasted in full, and the code it calls (the more the better)
+  - What it should do, and one case where it goes wrong (optional)
+  - Any speed limits or how often it runs (optional)
+you_get:
+  - A list of every outside value it reads and every change it makes
+  - A plan for a pure function and a thin layer for the outside effects
+  - Plain tests for the pure part
+  - A note on the copying cost and where in-place change is still worth it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the one function you find hardest to trust, plus the code it calls.
+  - Say what it should do and describe the case where it goes wrong.
+  - Read the hidden state list first. Correct anything it missed.
+  - Run the tests against the old function and the new plan, and compare.
+
+how_it_works:
+  - title: Picks one function
+    text: Chooses the single finicky function to work on, not the whole program.
+  - title: Lists hidden state
+    text: Writes every outside value it reads and every change it makes.
+  - title: Writes the list above it
+    text: Puts that list as a comment above the function so the next reader sees it.
+  - title: Plans the pure function
+    text: Moves the work into a function that depends only on its inputs and returns results.
+  - title: Plans the thin layer
+    text: Keeps the reads and writes in a small layer that calls the pure function.
+  - title: Writes tests
+    text: Tests the pure part with plain inputs and expected outputs.
+  - title: Weighs the cost
+    text: States the cost of copying and where changing in place is still worth it.
+
+output_shape: |
+  THE FUNCTION AND ITS JOB
+  <name, what it should do>
+
+  HIDDEN STATE
+  Reads: <value, where it lives>
+  Changes: <value, where it lives>
+  Unclear: MISSING: <what>
+
+  THE COMMENT TO ADD ABOVE IT
+  <the list as a comment>
+
+  PURE VERSION
+  Inputs: <what it takes>  Returns: <what it gives back>
+  <plan or code>
+
+  THIN OUTSIDE LAYER
+  <what it reads, calls and writes>
+
+  TESTS
+  <input> -> <expected output>
+
+  COST OF COPYING
+  <what is copied, how big, whether it matters>
+
+  MISSING
+  <what would change the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The calling code
+    how: Paste the callers too. Hidden writes often show up only where the result is used.
+  - what: How often it runs
+    how: A function run thousands of times a second needs a different answer on copying than one run once a day.
+  - what: A failing case
+    how: Give one input where the function goes wrong. It becomes the first test.
+  - what: Language and style
+    how: Name the language and any rules, such as no new libraries, so the plan fits.
+
+judge:
+  - Every outside value the function touches is listed, including time, randomness and shared lists.
+  - The pure function has no hidden reads or writes.
+  - At least one test uses only inputs and expected outputs.
+  - The cost of copying is stated with a size, not just "may be slow".
+  - A function that needs a dozen inputs is flagged for redesign.
+
+test:
+  - Run it on a function whose bug you already fixed. See if the list names the cause.
+  - Run the pure version and the old one on the same inputs. They should match.
+  - Run the skill twice. The hidden state lists should match.
+  - Remove one caller and see whether it notices it is missing.
+
+improve:
+  - Add state your codebase always hides, such as a config object or the clock, to the list in step 2.
+  - Add the rule for your language on copying large data, so the cost note is exact.
+  - Save the commented lists next to each function and update them with every change.
+  - Pair it with "Test list writer" to plan the cases first.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Tracing reads and writes and drafting tests is text work any strong chat AI does."}
+    - {name: "Your test runner", why: "Run the tests it writes so you can see the old and new versions agree."}
+  inputs:
+    - "The callers of the function"
+    - "A failing input and the wrong output you saw"
+    - "A note on how often the function runs"
+
+terms:
+  - term: Pure function
+    meaning: A function that depends only on its inputs and returns a result, with no other effects.
+  - term: Hidden state
+    meaning: Any value outside the function that it reads or changes without it being passed in.

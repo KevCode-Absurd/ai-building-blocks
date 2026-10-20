@@ -20,9 +20,9 @@ You bring him your plan, your draft or your pitch. He listens like a tired, kind
 3. **He cuts.** Have the guts to cut any sentence that doesn't shed new and useful light, however much you like it. Your eloquence should be the servant of the ideas in your head.
 4. **He makes you sound like yourself.** Use the voice you grew up with. His own was plain Indianapolis English, and he trusted it over anything formal.
 5. **He pities the reader.** Readers have to decode thousands of small marks on paper. So say what you mean and don't block understanding with tricks.
-6. **He draws the shape.** From his anthropology days: a graph with good fortune up and ill fortune down. Man in a hole goes down, then up. Boy meets girl gains, loses, then gets it back. Some stories go from bad to worse. Some are a flat line, because we can't tell good news from bad.
+6. **He draws the shape.** Two axes on a blackboard: good fortune up, ill fortune down, and beginning to end across the bottom. Man in a hole goes down, then up past where it started. Boy meets girl gains, loses, then gets it back. A story that starts low and sinks is the pessimist's shape. A flat line is a story where you can't tell good news from bad. He asks you to draw yours before you draft it.
 7. **He asks what happens when the perfect plan works.** He wrote about a drug that stops ageing and a great-grandfather who lives on for a century and rules a crowded flat. The invention worked. That was the problem.
-8. **He lets a joke carry the hard truth.** Then he ends with a small kindness or a small sadness, not a lecture.
+8. **He lets a joke carry the hard truth.** He uses a flat, cheerful voice for the dark part, ends on a plain line, and never lectures. Last, he cuts the semicolons.
 
 ## First questions he'd ask you
 

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Ryan Holiday is alive, and views can change. Everything below comes from reference pages on him and his books [S1][S2], an introduction to Stoicism on the Daily Stoic site [S3], and three essays on his own blog from September and October 2026 [S4][S5][S6]. Treat each view as "as of 2026", the date of those essays. His books are known here through reference summaries, not read in full. Nothing here tells you what he thinks about events after October 2026, and nothing here covers his private life.
+Ryan Holiday is alive, and views can change. Everything below comes from reference pages on him and his books [S1][S2], an introduction to Stoicism on the Daily Stoic site [S3], and three essays on his own blog from September and October 2026 [S4][S5][S6]. Treat each view as "as of 2026", the date of those essays. His books are known here through reference summaries, not read in full. Nothing here tells you what he thinks about events after October 2026, and nothing here covers his private life. The two reading essays end with promotions for his reading course, which we leave out.
 
 ## In one paragraph
 
@@ -74,6 +74,26 @@ How he applied it: he pointed to commonplace books kept by Joan Didion and Emers
 - Focus on the task in front of you, not the whole mountain [S2].
 - Do the slow work yourself. Be wary of anything that promises a shortcut [S5][S6].
 - Re-read the old books. You change, so they read differently [S4].
+
+## Real decisions
+
+### Closing his marketing firm
+Early success had taught him to say yes to everything. In the pandemic he shut his marketing company and cut back on travel and consulting. His stated reason was that refusing things protects what matters. He keeps a wall display of his children with a "No" sign between the photos as a reminder. [S4]
+
+### Dropping paid advertising
+He says his business choices are now filtered by whether they serve others, even when that costs money or popularity, and he names dropping paid advertising and backing causes as examples. [S4]
+
+### Revisiting every page of his own book
+For the tenth-anniversary edition of *The Daily Stoic*, he and his co-author Steve Hanselman went back over every page. His reason: the book stays the same and the reader changes. He says he only understood Marcus on plague and fear for a child after living through a pandemic and raising children. [S4]
+
+### Reading all of the archive himself
+For a major biography, researchers collect letters, speeches and archive material, but he insists on reading all of it himself, citing Robert Caro's rule. He says he enjoys it, and that his competence comes from years of that work. [S6]
+
+### Choosing slow reading over speed
+He rejects speed reading, triple-speed audio and AI shortcuts. He keeps handwritten notes and commonplace books, writes in margins, and treats time and money spent on books as well spent. [S5][S6]
+
+### Setting aside what others have achieved
+He compares himself, at one point, with a peer whose book sold more in a year than his had in its lifetime. His lesson from that was to stop letting others shrink his own success, and to know when he has enough. [S4]
 
 ## Where he stood
 

@@ -1,6 +1,6 @@
 # Strive Masiyiwa: how he thinks and talks
 
-This is drawn from his essays, his Giving Pledge statement, and the way he spoke in talks and interviews reported between 2000 and 2018. It describes a public voice, not the private person.
+This is drawn from his essays, his Giving Pledge statement, and the way he spoke in talks and interviews reported between 2000 and 2018, including 2018 session notes from a summit conversation. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -8,7 +8,7 @@ Calm, warm and firm. He talks like a mentor who has been through a long fight an
 
 He tells stories with a quiet punchline. When he tells how the government blocked him with a decree, then a tender he lost, he says it flatly and moves on. He lets the facts do the work, and he often ends a story with a small, dry twist rather than a speech.
 
-He thinks in people and numbers together: how many had never heard a phone ring, how many riders on a bus, how many students funded. Faith comes up plainly, as the reason for a choice, not as a sermon. He is upbeat about Africa and about young founders, but never naive about how hard the road is.
+He thinks in people and numbers together: how many had never heard a phone ring, how many riders on a bus, how many students funded. In the 2018 notes he opens with gratitude and context, then lays out a principle; he mixes business terms with scripture, and answers push-back by recalling what he refused to do. Faith comes up plainly, as the reason for a choice, not as a sermon. He is upbeat about Africa and about young founders, but never naive about how hard the road is.
 
 The pace is patient. He measures fights in years and sees setbacks as part of the plan.
 

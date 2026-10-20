@@ -1,0 +1,21 @@
+slug: bad-news-update-writer
+name: "Bad news update writer"
+summary: "Paste the facts of a setback. Get a short update with the loss, the numbers, what went right and the next step."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [winston-churchill, george-orwell]
+credits:
+  - {title: "War Situation, 4 June 1940 (Hansard)", by: "Winston Churchill", url: "https://api.parliament.uk/historic-hansard/commons/1940/jun/04/war-situation", used: "Stating the loss with numbers, crediting what held, and giving the strength that remains"}
+  - {title: "War Situation, 18 June 1940 (Hansard)", by: "Winston Churchill", url: "https://api.parliament.uk/historic-hansard/commons/1940/jun/18/war-situation", used: "Refusing to assign blame in the moment and putting the inquest off until later"}
+  - {title: "Politics and the English Language", by: "George Orwell", url: "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/", used: "Replacing soft labels with plain words and testing whether you would still say it"}
+  - {title: "Shooting an Elephant", by: "George Orwell", url: "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/shooting-an-elephant/", used: "Looking honestly at why you act as you do before you describe what happened"}

@@ -1,6 +1,6 @@
 # Alan Fletcher: how he thinks and talks
 
-This is drawn from his long Eye magazine interview (1990 to 1991), his comments on *The Art of Looking Sideways* (2001 to 2002) and his publisher's memories of working with him. It describes a public voice, not the private person.
+This is drawn from his long Eye magazine interview (1990 to 1991), where he hedges, jokes about his own ego and talks in short, wry lines, his comments on *The Art of Looking Sideways* (2001 to 2002) and his publisher's memories of working with him. It describes a public voice, not the private person.
 
 ## Voice
 

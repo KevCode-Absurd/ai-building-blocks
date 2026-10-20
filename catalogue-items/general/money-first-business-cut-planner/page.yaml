@@ -1,0 +1,124 @@
+new_slug: money-first-business-cut-planner
+name: "Money-first business cut planner"
+summary: "List what you do each week and what each part earns. Get what to keep, hand off, drop or park."
+job: plan-strategy
+thinking: low
+thinking_why: "It sorts your list by what earns and applies fixed rules, with few judgement calls."
+
+headline: "Money-first business cut planner"
+subhead: List your tasks, products and side projects, and what each one earns. It marks what makes money and what does not, hands off the rest, cuts side projects with no numbers, parks good ideas for three months and gives you a simple three-price offer with a 90-day plan.
+
+explain: |
+  Owners often spend most of their week on work that does not earn. Side projects started with hope, tasks only you do out of habit, a long menu of offers: none of it shows up in the bank. Because every item feels useful, nothing gets cut.
+
+  This skill starts with money. It lists every task, product and side project and what each one earns, then marks each as money-making or not. Non-earning tasks go to an assistant or contractor. Side projects get checked against real numbers, and the ones that do not pay are cut. Good ideas go on a parking list you do not touch for three months. The offer is cut to good, better and best at three prices. You commit for 90 days with a measure for sales and list size.
+
+when:
+  - You work long hours and cannot say which of your tasks pay.
+  - You have side projects eating your time with nothing to show for them.
+  - You are about to launch something new and want to clear space first.
+
+you_give:
+  - A list of your tasks, products and side projects (required)
+  - What each one earns, or your best guess marked as a guess (required)
+  - Your performance numbers, such as sales, hours and costs (optional)
+  - Your current plan or offers (optional)
+you_get:
+  - Each item marked as earning or not
+  - A keep, hand off, drop or park decision for every item
+  - A parking list with a review date three months out
+  - A good, better, best offer at three prices and a 90-day plan with a start date and measures
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List everything you do in a normal week and every product and side project, with what each earns.
+  - Say what you hate doing and what only you can do.
+  - Read the decisions. Argue with any drop, but bring a number.
+  - Put the start date in your calendar and record your two measures on day one.
+
+how_it_works:
+  - title: List and price it all
+    text: Lists every task, product and side project and what each earns.
+  - title: Mark earners
+    text: Marks each item as money-making or not.
+  - title: Hand off the rest
+    text: Moves every non-earning task to an assistant or contractor.
+  - title: Check side projects
+    text: Checks the real numbers on each side project and cuts those that do not pay.
+  - title: Park good ideas
+    text: Puts good ideas on a list that stays untouched for three months.
+  - title: Trim the offer
+    text: Cuts the offer to a simple good, better and best set at three prices.
+  - title: Commit for 90 days
+    text: Commits to the plan for 90 days with a measure for sales and list size.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHAT YOU DO AND WHAT IT EARNS
+  <item> | Earns: <amount or UNKNOWN> | Earning: <yes/no/unknown>
+
+  DECISIONS
+  <item> | Keep / Hand off to <who> / Drop / Park | Reason: <number or fact>
+
+  SIDE PROJECTS
+  <project> | Cost: <amount> | Earned: <amount> | Decision: <keep/cut>
+
+  PARKING LIST
+  <idea> | Review on: <date three months out>
+
+  THE OFFER
+  Good: <what, price> | Better: <what, price> | Best: <what, price>
+
+  THE 90-DAY PLAN
+  Start: <date> | Sales measure: <number now -> target> | List-size measure: <number now -> target> | Review: <date>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: What each item earns
+    how: Use actual figures. If you guess, say so, and the item is marked unknown until you check.
+  - what: What only you can do
+    how: Name those tasks. They stay with you; everything else is a candidate to hand off.
+  - what: Budget for help
+    how: Say how much you can spend on an assistant. It decides how much can be handed off.
+  - what: Your current prices
+    how: Paste them. The three-price offer keeps your real costs in view.
+
+judge:
+  - Every task is marked as earning or not.
+  - No project is kept without a number behind it.
+  - Parked ideas are listed, not lost.
+  - The plan has a start date and a measure.
+  - Results are not promised.
+
+test:
+  - Check the earning column against your last month of bank records.
+  - Hand off one task for two weeks and see what happens to your earnings.
+  - Run it twice. The drop and park decisions should be the same.
+  - Review the parking list after three months and see which ideas you still want.
+
+improve:
+  - Add your own cutoff, such as dropping any project earning under a set amount.
+  - Add the tasks that only you can do, so they are never handed off by mistake.
+  - Save the parking list in your notes with the review date.
+  - Pair it with "Values-to-week planner" to protect the time you free up.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a list by a few fixed rules is work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Easy place to keep the earnings column and the parking list."}
+  inputs:
+    - "Your bank or sales records for the last three months"
+    - "A time log for one normal week"
+    - "Costs for each side project, including your own hours"
+
+terms:
+  - term: Hand off
+    meaning: Give a task to an assistant, contractor or tool so you no longer do it.
+  - term: Parking list
+    meaning: A list of good ideas you do not act on for a set time, so they stop pulling at your attention.

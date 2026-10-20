@@ -12,6 +12,8 @@ He reaches for concrete things from farms, gardens and the seashore: pigeons, do
 
 His humour is gentle and turned on himself. He admits his slowness, his weak maths, his trouble writing clearly. He can be moving at the end of an argument, when the facts give way to wonder at the whole of life.
 
+Looking back on his own life in the autobiography he is plain and a little amazed at himself: he is surprised at his industry when he counts the books he abstracted, and he can name the very spot on a road where an answer came to him. He says what he lacked (quick wit, a memory for dates, a head for long mathematics) without fuss. He credits others readily, and calls Wallace's essay clearer than his own extract.
+
 ## How he argues
 
 - He opens with something the reader already accepts, such as how breeders change their animals.

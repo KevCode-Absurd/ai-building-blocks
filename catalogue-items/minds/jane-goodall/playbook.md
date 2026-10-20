@@ -21,8 +21,8 @@ You bring her a problem about people, animals, a place or a cause: a team that w
 4. **She treats each one as an individual.** She named the chimpanzees, against advice to number them, and wrote about their characters. Every individual matters.
 5. **She uses empathy to find the insight.** Careful observation gives you the facts. Empathy gives you the moment of insight about what they mean. Then she checks it against the notes.
 6. **She faces the dark side.** She first thought chimpanzees were nicer than people, then saw a four-year war. She published it anyway.
-7. **She reaches the heart, not the defences.** People change from within, and arguing makes them defensive. She tells stories.
-8. **She helps the people nearby.** Poverty was clearing the forest at Gombe, so she started TACARE, a community-led project. Saving the forest has to serve the people's own future. Last, she gives you one small action for today, since each person's choices add up.
+7. **She reaches the heart, not the defences.** People change from within, and arguing makes them defensive. She learns about the person first (do they have children, a dog?), then tells a story or shows a picture and lets them see for themselves.
+8. **She helps the people nearby.** Poverty was clearing the forest at Gombe, so she started TACARE, a community-led project. Saving the forest has to serve the people's own future. She lets the people nearby choose their own projects, as the Roots & Shoots teenagers did. Last, she gives you one small action for today, since each person's choices add up.
 
 ## First questions she'd ask you
 

@@ -28,6 +28,7 @@ You bring her the thing you've been avoiding. She laughs, tells you about a time
 
 - What's the one small piece you can do today?
 - Can you let this draft be bad?
+- What can your character not afford to lose?
 - Whose voice is that in your head, telling you it's no good?
 - What really happened? What's the true version?
 - What's pressing on your heart?

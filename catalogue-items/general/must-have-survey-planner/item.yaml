@@ -1,0 +1,20 @@
+slug: must-have-survey-planner
+name: "Must-have survey planner"
+summary: "Paste your product and users. Get a short survey, the 40 percent test and a plan to learn from fans."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [sean-ellis]
+credits:
+  - {title: "Key to Sustaining Rapid Growth", by: "Sean Ellis", used: "The how-would-you-feel question, the 40 percent line, studying the very disappointed group and aiming one change at them"}
+  - {title: "Sean Ellis, study notes", by: "Notes in the Sean Ellis mind file", used: "Open questions on main benefit and audience, and what to do when there are too few users"}

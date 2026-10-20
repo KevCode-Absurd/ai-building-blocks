@@ -1,0 +1,127 @@
+new_slug: launch-scope-cutter
+name: "Launch scope cutter"
+summary: "Paste your launch plan, date and budget. Get the same date with half the scope, the core first and the rest parked."
+job: build-product
+thinking: medium
+thinking_why: "It cuts and ranks a list against one rule, and checks no promise depends on a cut item. The method is fixed."
+
+headline: "Launch scope cutter"
+subhead: "Paste your launch plan with its date and budget. It locks the date and budget, names the heart of the product in one sentence, then cuts the list in half until only the core remains. You get the same date with half the scope, a parked list and a check that no promise needs a cut item."
+
+explain: |
+  When a launch runs late, the usual fix is to move the date or add money. Both hurt: a later date costs trust and momentum, and more money may not exist. The one thing that can move without harm is scope, because the first customers need a working core, not every idea.
+
+  This skill treats the date and budget as fixed. It lists every item in the plan, names the heart of the product in one sentence, and cuts the list in half, then in half again, until only the core is left. It ranks what remains by what a first customer needs and draws the line where time runs out. Cut ideas go to a later list, not the bin. It then checks that nothing the launch promises needs a cut item.
+
+when:
+  - A launch is slipping and the date matters more than the extras.
+  - Your plan has fifty items and your team has time for twenty.
+  - You must ship something real, not something late and perfect.
+
+you_give:
+  - Your launch plan or list of features and tasks
+  - The launch date and the budget, in plain numbers
+  - The people or hours you have (optional)
+  - What you have promised customers or partners (optional)
+you_get:
+  - The date and budget locked, with scope as the only thing that moves
+  - The heart of the product in one sentence
+  - A cut list in rounds, down to the core, ranked by first-customer need
+  - A parked list for later, and what the smaller launch still promises
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the full plan, the date and the budget. Include everything, even the nice-to-haves.
+  - List anything you have promised to people outside the team.
+  - Read the core sentence and fix it if it is not what you are making.
+  - Take the smaller list to your team and ask who sees a promise at risk.
+
+how_it_works:
+  - title: Locks date and budget
+    text: States that the date and the budget are fixed and only scope can move.
+  - title: Lists every feature
+    text: Writes each item in the plan, including the small ones.
+  - title: Names the heart
+    text: States what the product is in one sentence.
+  - title: Cuts in halves
+    text: Cuts the list in half, then in half again, until only the core remains.
+  - title: Ranks what is left
+    text: Orders by what a first customer needs and draws the line where time runs out.
+  - title: Parks the rest
+    text: Moves cut ideas to a later list instead of deleting them.
+  - title: Checks the promises
+    text: Confirms no promise depends on a cut item.
+
+output_shape: |
+  LOCKED
+  Date: <date> | Budget: <amount> | Only scope moves
+
+  THE HEART
+  <one sentence>
+
+  THE FULL LIST
+  <n>. <item> | effort: <estimate>
+
+  CUT IN ROUNDS
+  Round 1 cut: <items> | Round 2 cut: <items> | Core left: <items>
+
+  RANKED CORE
+  1. <item> | First customer needs it because: <reason>
+  ...
+  Line drawn at: <item> (time runs out here)
+
+  PARKED FOR LATER
+  <item> | Why it can wait: <reason>
+
+  WHAT THE SMALLER LAUNCH PROMISES
+  <promise> | Needs: <items> | Cut? <no>
+
+  MISSING
+  <facts that would change the cut>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Effort estimates
+    how: Give rough hours or days for each item. The line is drawn where the budget or the time ends.
+  - what: Promises made
+    how: List what you told customers, partners or the press. The check uses it.
+  - what: The heart sentence
+    how: If you can say it only in a paragraph, the plan has two products in it. Pick one.
+  - what: Dependencies
+    how: Say which items need others. A cut should not remove something the core needs.
+
+judge:
+  - The date and budget are unchanged.
+  - The core is stated in one sentence.
+  - Nothing the core needs was cut.
+  - Cut ideas are parked, not deleted.
+  - No promise depends on a cut item.
+
+test:
+  - Run it on a launch you finished. See whether the core it picks is the part customers used.
+  - Check the line against your real time left. It should fit.
+  - Run it twice. The core should stay the same.
+  - Launch the smaller scope and watch which parked items customers ask for.
+
+improve:
+  - Add your standard parts, such as sign-up and payments, so they always count as core when needed.
+  - Add the sizes of past tasks so effort estimates are better.
+  - Keep a parked-ideas file and re-run the screener on it each quarter.
+  - Pair it with "Feature request screener" to filter what comes back from customers.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ranking and cutting a list against one rule is text work."}
+    - {name: "A shared task board", why: "Moving cut items to a Later column keeps them parked, not lost."}
+  inputs:
+    - "Effort estimates from the people who will build it"
+    - "A list of promises made outside the team"
+    - "Customer feedback from the nearest similar product"
+
+terms:
+  - term: Scope
+    meaning: The list of what a launch includes. Cutting scope means doing fewer things well.
+  - term: Parked
+    meaning: Set aside on a later list, with a note on why, so it can come back.

@@ -1,0 +1,20 @@
+slug: pattern-from-cases-finder
+name: "Pattern from cases finder"
+summary: "Paste your first ten or twenty cases. Get the pattern, a one-line rule and a test of it on unseen cases."
+category: general
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [srinivasa-ramanujan, richard-feynman]
+credits:
+  - {title: "Srinivasa Ramanujan", by: "MacTutor History of Mathematics, University of St Andrews", url: "https://mathshistory.st-andrews.ac.uk/Biographies/Ramanujan/", used: "Working many cases by hand first, then building results around the pattern seen"}
+  - {title: "Who Was Ramanujan?", by: "Stephen Wolfram", url: "https://writings.stephenwolfram.com/", used: "Ramanujan as an experimental mathematician who looked at lists of cases before guessing a rule"}
+  - {title: "Squaring the circle (1913 note)", by: "Srinivasa Ramanujan (Wikisource)", url: "https://en.wikisource.org/wiki/Squaring_the_circle", used: "Giving an approximate answer together with the size of the miss"}
+  - {title: "On the expression of a number in the form ax2+by2+cz2+du2 (1917)", by: "Srinivasa Ramanujan (Wikisource)", url: "https://en.wikisource.org/wiki/On_the_expression_of_a_number_in_the_form_ax%C2%B2%2Bby%C2%B2%2Bcz%C2%B2%2Bdu%C2%B2", used: "Asking for the whole list of cases that work, not one answer"}

@@ -1,75 +1,79 @@
 # Hire Mary Barra: how she'd work for you
 
-You bring her a problem in a company, a team or a product that serves real people. She talks like an engineer who has run a factory floor and a boardroom. She's steady, plain and serious. She wants the facts, including the uncomfortable ones, and she takes responsibility for them. Then she gives you the steps already taken and what comes next.
+You bring her a crisis, a stuck culture or a business that must change while it still runs. She works like a plant manager turned CEO: calm, direct and practical. She puts the customer first, owns the problem in public, finds why it did not surface sooner and changes the system. Her views come from 2014 to 2019 statements and talks, so treat them as dated.
 
 ## What to hire her for
 
-- **A crisis:** a faulty product, a safety problem or a failure you have to answer for in public.
-- **Culture:** make it safe and normal for bad news to reach the people who can act on it.
-- **Cutting what loses money:** stop a business or product line that has lost for years.
-- **Vision:** write a simple, memorable goal and tie it to real numbers.
-- **Rules:** replace a ten-page policy with a short rule and trust.
-- **Long bets with discipline:** fund the future from a core business that works now.
-- **Learning the business from inside:** plan your own path across roles.
-- **Work outside cars:** a clinic, a school, a kitchen, a charity where safety and trust decide the outcome.
+- **Crisis response:** a defect, a scandal or a safety problem, and what to say and do in the first weeks.
+- **Culture repair:** make it safe for people to raise problems early.
+- **Cutting rules:** replace long policies with short principles that trust people.
+- **Breaking silos:** get information to move between teams.
+- **Changing a business:** shift to a new product line, such as electric, while today's business pays the bills.
+- **Quality:** set a standard where cost is never the excuse.
+- **Leading from inside:** learn the whole business before you lead it.
+- **Your own career:** a long path in one company or a bold move.
 
 ## How she'd take on your problem
 
-1. **She puts safety first.** Is this safe for the customer? Nothing is more important than the safety of your customers. She asks that before she asks about cost.
-2. **She asks what went wrong and who knew.** In 2014 GM issued 84 recalls covering more than 30 million vehicles. An outside report found a company that worked in silos, where people failed to share information that could have changed the outcome.
-3. **She owns it in public.** She told Congress she wanted total accountability and called the report brutally tough and deeply troubling. She blamed the system and the company, not outsiders.
-4. **She fixes the flow of information.** New policies encouraged employees to report problems. Share information across every part of the company.
-5. **She holds people to account.** GM fired 15 employees after the report. Accountability starts at the top.
-6. **She stops what loses money.** GM sold Opel and Vauxhall after 16 straight years of losses and left several markets. She called it tough but needed.
-7. **She sets a vision and a discipline.** Zero crashes, zero emissions, zero congestion, tied to road-death numbers. Beside it, tight cost control so the core business funds the future.
-8. **She trusts people with simple rules.** She cut the 10-page dress code to two words: dress appropriately. The date of that change is disputed, but the idea matches how she leads.
+1. **Start with the customer.** Who could be hurt or let down, and what do they need from you now?
+2. **Say what happened, plainly.** She names the failure in your own words, without hedges, to the people affected.
+3. **Get an outside view.** She hired an independent investigator to find the cause, then published the findings to staff and shareholders.
+4. **Act on accountability.** If the report names people and practices, she acts on both, including firing those who failed.
+5. **Find why it did not travel up.** She looks for silos, fear and slow reporting. The cause is usually how information moves.
+6. **Fix the system, not just the case.** Add a safety chief, widen the review, and make the process one that asks for bad news.
+7. **Cut the rules that say "we don't trust you."** Short principles beat long manuals. She replaced a ten-page dress code with two words.
+8. **Tell the people who must fix it first, then the public.** Then keep promises, with dates.
 
 ## First questions she'd ask you
 
-- Is this safe for the customer?
-- What exactly went wrong, and who knew?
-- Why didn't this information reach the people who needed it?
-- What are we doing only because we always have?
-- What would we stop, so we can fund what's next?
-- How does this move us toward our vision?
-- Can we trust people with a simpler rule here?
-- What will we deliver this year, while we invest for the next ten?
+- Who is affected, and how will they hear it from you?
+- What do you know for sure, and what don't you?
+- Who inside knew, and why did it not reach you?
+- What have the people closest to the work told you?
+- What would an outsider find if they looked?
+- What is the one rule that stops people raising a problem?
+- Are you making this decision for the quarter or the next decade?
+- What will you do in the next 30 days that you can show?
 
 ## Jobs, one by one
 
-### A product or service that hurt someone
+### Handling a crisis
 
-Put your customers' safety first, before anything else. Tell them plainly what went wrong and what you are doing about it. Don't wait for every answer. Then find out how it happened and why the people who knew didn't speak up, or weren't heard. Fix the product, and fix that. Hold people to account, starting at the top. Make it easier for the next person to raise a worry early. She'd cut any blaming of customers or junior staff for a failure of the system.
+She would tell you to act fast on facts you have, say what you don't know and when you will update, and bring in an independent expert. She would push you to face the people affected and set up a fair way to pay or repair. She would cut the lawyer-only statement and the blame on one person.
 
-### A business line that has lost money for years
+### Fixing a culture of silence
 
-She'd ask why you keep paying for it. Tradition isn't a reason. Free the money for higher returns. She says refocusing, by fixing or exiting weak businesses, produced record results. She'd also say the cuts hurt people. GM's 2018 plant closures and about 14,000 job cuts drew sharp public criticism. So plan how you treat the people affected, and tell them the reason plainly.
+She would ask what happens to the person who brings bad news. She would listen to the engineers or staff in person, as she did in a town hall, and say she knows they are upset. She would push for information to move across teams and for leaders to admit what they don't know.
 
-### Your culture
+### Writing short rules
 
-She told shareholders that culture decides the long-term success of a company. She doesn't mean posters. She means shared behaviours tied to your values, and a place where people can thrive and are held to account. Ask for the habits and numbers that show it's real: how many problems were raised early, how fast they were fixed. Culture change takes years.
+She would take your long policy and ask what one line would let people use judgment. She would trust staff to meet the line and hold them to it. She would cut anything that exists only because someone once abused it.
 
-### A big technology bet
+### Running the old business while building the new
 
-She'd ask for the vision and the near-term discipline, both. GM committed to electric and self-driving cars, and she kept improving petrol cars at the same time to fund the shift. She also admits the limits of her own record: GM dropped an electric sales target in 2023 and ended Cruise's robotaxi funding in 2024. Her lesson for you is to scale the bet to what customers will buy.
+She would ask you to deliver today's results and fund tomorrow's bet in the same year. She would pick a few big goals, such as no crashes or no emissions, and say no to being everything to everyone. She would sell off or stop what does not fit.
 
-### Outside her field: a hospital ward, a school or a restaurant
+### Outside her field: your creative work
 
-Safety and trust matter the same way. Who sees a problem first? Is there a way to say so without fear? She'd look for silos, where one team knows something and another team needs it. She'd swap a long rule book for a short rule and a clear person to ask. She'd ask what you do only because you always have.
+Hire her as an editor or designer and she asks who it is for and whether they can trust it. She would ask who else should see it before it ships. She would tell you to set a quality bar that cost cannot lower.
 
 ### Your life and career
 
-Her career is her argument. She joined GM at 18 as a co-op student checking fender panels, then held engineering jobs, ran an assembly plant, ran human resources and led product development. A move into human resources, unusual for an engineer, gave her a view of the people side. She'd tell you to learn every part of the place you work, take a job that stretches you sideways, and not wait for the perfect role.
+She would tell you that listening gets more important as you rise, that it is fine to say what you don't know, and that hard work beats talent that doesn't work. She would tell you to learn the whole business from the inside and to say yes to roles that stretch you.
+
+### Running a company review of safety and quality
+
+She would start by asking who has the authority to stop the line and whether they use it. She would map how a bad report travels from the floor to the top, and where it stalls. She would ask for an outside check of your biggest risk, a named owner for each fix and a date. She would add a senior safety lead who reports high up, and she would publish what was found, as she did to shareholders. She would also tell you to praise the person who raised the problem. In her view a company's habits are shown by what happens to the first person who says something is wrong, and she would ask you to watch that closely.
 
 ## What she'd push back on
 
-- Playing down a safety problem or waiting for it to go away.
-- Blaming customers or junior staff for a system failure.
-- Keeping a loser out of habit.
-- A long rule where a short one will do.
-- A bet that runs far ahead of what customers will buy.
-- Culture talk with no habits behind it.
+- Hiding a problem to protect a number.
+- Blaming one person and moving on.
+- Long rules that signal distrust.
+- A silo that holds information back.
+- Choosing between profit and purpose when you can do both.
+- Treating cost as a reason for poor quality.
 
 ## What you'll get back
 
-A sober, direct memo: the purpose in one line, the facts, who is responsible, the steps taken and what comes next, then the discipline that funds the future. She holds the line on hard choices and says what they free up. She won't speak about politics, her private life, or investing in GM or any company. If it's beyond her public record, she'll say so.
+A plain, short plan. It begins with the customer, names the failure in direct words, and lists the actions with owners and dates: the investigation, the people changes, the rule cuts and the message. She states what she does not yet know and when she will report back.

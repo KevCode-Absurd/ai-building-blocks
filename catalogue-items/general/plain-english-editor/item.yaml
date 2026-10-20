@@ -1,0 +1,23 @@
+slug: plain-english-editor
+name: "Plain English editor"
+summary: "Paste a draft. Get it back in plain words, with each cut explained and a check that you would still say it."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: feedback_notes}
+origin: rebuilt
+version: 1.0.0
+minds: [george-orwell, stephen-king, william-zinsser, kurt-vonnegut]
+credits:
+  - {title: "Politics and the English Language", by: "George Orwell", url: "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/", used: "Spotting stale images, padded phrases, show-off words and empty words, and asking what you are trying to say"}
+  - {title: "Stephen King on writing, fear and adverbs", by: "Stephen King (The Marginalian)", used: "Cutting adverbs and dressed-up speech tags that repeat what the scene already shows"}
+  - {title: "Writing English as a Second Language", by: "William Zinsser", used: "Hunting clutter, choosing short words, and naming who does what in each sentence"}
+  - {title: "No Proverbs, Please", by: "The American Scholar", url: "https://theamericanscholar.org/no-proverbs-please/", used: "Cutting stock phrases and sayings"}
+  - {title: "How to Write with Style (1980)", by: "Kurt Vonnegut", used: "Choosing a subject you care about and cutting any sentence that adds no new light"}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Ellen Lupton is alive, and views can change. This data set comes from interviews in her own words (2007, 2010 and 2020), the abstract of a 1994 essay she wrote with J. Abbott Miller, a 2019 report of one of her talks, her publisher's page for the 2024 edition of Thinking with Type, and reference pages. Treat each view as "as of" the year of its source. Several longer interviews were blocked or behind paywalls, so this picture leans on shorter pieces. Nothing here tells you what she thinks about events after 2024.
+Ellen Lupton is alive, and views can change. This data set rests on her own answers in a 2007 interview with the journal InfoDesign, which we read in full [S2], a 2020 Creative Review profile whose excerpt covers her family, her influences and her stance on type [S3] and a 2010 Print Q and A with her partner Abbott Miller, where only a few answers are hers alone [S4]. It also uses the abstract of a 1994 essay she wrote with Miller [S7], a report of a 2019 talk [S5], her publisher's page for the 2024 edition of Thinking with Type [S6] and a reference page [S1]. Treat each view as "as of" the year of its source. Several longer interviews were blocked or behind paywalls, so this picture leans on shorter pieces. Nothing here tells you what she thinks about events after 2024.
 
 ## In one paragraph
 
@@ -12,7 +12,7 @@ Lupton is an American graphic designer, curator, writer and teacher, born in Phi
 
 ### Design serves the message
 
-Lupton calls herself a designer who is in love with content [S2]. She uses type, layout and installations to draw attention to a text or a work of art [S2]. In 2007 she turned a famous line around and said that for her the message is the message, and design is a tool for sharpening it [S2]. She admires designers who focus on form and has spent much of her career showing their work. Her own practice, though, frames and stages content [S2].
+Lupton calls herself a designer who is in love with content [S2]. She uses type, layout and installations to draw attention to a text or a work of art [S2]. Her parents taught English, and she and her twin sister, a literature scholar, grew up with books and theory [S3]. In 2007 she turned a famous line around and said that for her the message is the message, and design is a tool for sharpening it [S2]. She admires designers who focus on form and has spent much of her career showing their work. Her own practice, though, frames and stages content [S2].
 
 How she applied it: she described her roles as curator, teacher and author as one job, using design to deliver information [S2].
 
@@ -24,7 +24,7 @@ How she applied it: in a 1994 essay with J. Abbott Miller, she traced how "decon
 
 ### Practical skill and big ideas belong together
 
-Lupton says typography has a rich history of ideas and is also a practical, living art [S2]. She wrote Thinking with Type because she saw the need for one book that joined how-to knowledge with critical thinking [S2]. The book covers typefaces and families, kerning, tracking, grids and layout, and how letters, words and paragraphs should be spaced and shaped [S6].
+Lupton says typography has a rich history of ideas and is also a practical, living art [S2]. She wrote Thinking with Type because she saw the need for one book that joined how-to knowledge with critical thinking [S2]. In 2007 she described the book as more critical than most typography books [S2]. The book covers typefaces and families, kerning, tracking, grids and layout, and how letters, words and paragraphs should be spaced and shaped [S6].
 
 How she applied it: the 2024 edition mixes short essays, diagrams and exercises with examples old and new, and adds tips on readability, legibility and accessibility, plus variable fonts [S6].
 
@@ -57,6 +57,29 @@ How she applied it: she used the exhibition as her main example of design that i
 Lupton was always drawn to writing about and explaining design [S2]. By 2010 she said her career had moved toward writing and research, though she still designed her own books and exhibition projects [S4]. She and Abbott Miller, her partner and longtime collaborator, set up Design Writing Research after they graduated in 1985 to handle their joint work [S4].
 
 How she applied it: she has written or co-written more than 20 books [S3], and in 2007 she said she paid more attention to blogs and everyday journalism than to most academic research [S2].
+
+## Real decisions
+
+### Choosing to frame content, not show off form
+She says she loves designers who focus on form and has spent her career studying their work, but her own use of design is to frame and stage content, whether a text in a book or a work of art in a museum [S2].
+
+### Writing Thinking with Type
+She saw a need for a book that joined practical knowledge with intellectual inquiry, so she wrote it (2004). Readers responded well, and it became a reference in design courses, including in Brazil [S2].
+
+### Teaching design to everyone
+She wrote D.I.Y.: Design It Yourself with her graduate students and D.I.Y. Kids with her sister. Her reason: design lets people make and publish content at a local scale, and democratic society gains when more people have access to media [S2].
+
+### Reading blogs over academic research
+In 2007 she said she did not pay attention to much academic research and preferred blogs and everyday journalism [S2].
+
+### Starting Design Writing Research with Miller
+After they graduated in 1985 she and Abbott Miller set up Design Writing Research for their joint freelance work. Over time her own career moved toward writing and research, while she kept designing her own books and curatorial projects [S4].
+
+### Treating a material-led book as design too
+She was writing Designing with Materials with the product designer Inna Alesina, a book about inventing structures by watching how materials behave and experimenting with them, with a strong ecological slant [S2].
+
+### Arguing that deconstruction is a real link
+With Miller she argued in 1994 that the link between design and deconstruction was central to Derrida's own work and not an arbitrary fashion [S7].
 
 ## How she decides
 
@@ -119,7 +142,7 @@ How she applied it: she has written or co-written more than 20 books [S3], and i
 
 ## Short phrases on the record
 
-- "the medium is not the message; the message is the message" (2007) [S2]
+- "the message is the message" (on her view of design, 2007) [S2]
 - "Design is a liberating tool." (2007) [S2]
 - "Typography is not a neutral container for content." (2020) [S3]
 - "Storytelling makes a path through space and time." (talk slide, 2019) [S5]

@@ -1,0 +1,20 @@
+slug: visual-system-rules-writer
+name: "Visual system rules writer"
+summary: "Describe your brand or event. Get the feeling first, then firm rules for colour, type and grid."
+category: general
+type: skill
+role: make
+job: design
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: design_direction, required: true}
+  - {type: brand_guide, required: true}
+minds: [otl-aicher]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "Many players on the Olympic stage", by: "Eye 101, quoting the 1975 Icograda lecture by Otl Aicher", used: "Starting from the feeling, a small set of tools, and rules short enough to remember"}
+  - {title: "Faster, higher, stronger", by: "Quoting the Munich 1972 planning texts by Otl Aicher", used: "Colour chosen for what it means where it is seen, signs drawn on one grid, and a named person who checks the work"}

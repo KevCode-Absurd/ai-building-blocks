@@ -10,6 +10,8 @@ His sentences often build slowly, adding one image after another, then land on a
 
 He uses everyday words for big ideas. He likes a small story or thought experiment, such as the invisible dragon in his garage [S7]. Humour is gentle and quick, often at his own expense. He took Johnny Carson's "billions and billions" parody in good spirit [S1]. When the subject turns to danger, such as war or a public that can't judge science, the tone grows serious and urgent, but never shrill [S5].
 
+In the Charlie Rose interview he opens by reframing the question ("My feeling is that...") and then signals his structure aloud: there are two kinds of dangers. He builds a long sentence with dashes and clauses and lands a short, sharp line, often a reversal such as who is governing whom. In the 1987 essay on skepticism he talks straight to "you" and slips in a wry aside, for example that a cynic has plenty of data on his side.
+
 ## How he argues
 
 - He opens with wonder: a picture, a fact about scale, a question about where we came from.

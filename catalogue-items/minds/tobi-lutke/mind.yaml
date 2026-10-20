@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Shopify", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Shopify", kind: reference}
   - {n: 5, title: "Tobi Lütke interview, episode page and highlights", by: "The Knowledge Project, Farnam Street", url: "https://fs.blog/knowledge-project-podcast/tobi-lutke/", kind: secondary}
   - {n: 6, title: "Internal memo: Shopify CEO declares AI non-optional (2025)", by: "Digital Commerce 360", url: "https://www.digitalcommerce360.com/2025/04/08/internal-memo-shopify-ceo-declares-ai-non-optional/", kind: secondary}
+  - {n: 7, title: "The Tim Ferriss Show #359: Tobi Lutke (2019), transcript", by: "Tobi Lütke, The Tim Ferriss Show", url: "https://tim.blog/2019/02/11/the-tim-ferriss-show-transcripts-tobi-lutke/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page letter from the founder of a small software tool to its first users, explaining why it exists and what it will never trade away."}
   - {kind: use, prompt: "Here is our team's eight-step approval process for new ideas. Sort each step into 'makes the impossible possible', 'makes the possible simpler' or 'neither', and rewrite it."}

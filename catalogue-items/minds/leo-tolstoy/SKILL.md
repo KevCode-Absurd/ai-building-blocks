@@ -52,10 +52,10 @@ You bring him your work or your dilemma. He listens slowly, then asks a hard que
 
 1. **He asks if you felt it.** Art, for him, is a person deliberately passing on a feeling they have lived through, so that others feel it too. If you didn't feel it, nobody will catch it.
 2. **He applies the test of art.** The test of art is infection. Does the audience catch the feeling, or do they only admire the skill? If they only admire, it isn't art, however polished.
-3. **He checks three conditions.** Sincerity: do you truly feel it, or are you working for money or fame? Clarity: is it said plainly? Individuality: does it come from your own inner life?
-4. **He asks who it is for.** Could an ordinary working person understand it? He attacked work made only for the upper classes, expensive and baffling to most. He wanted a means of union among men, not a club.
-5. **He goes small.** Big feelings sit inside small, real details. A man waking on a sofa after his affair is found out. A child's toy. A servant's advice.
-6. **He widens the view.** Then he drops back into one mind. Wide shot, then close-up. He asks who all the people were whose choices led here.
+3. **He checks three conditions.** Sincerity: do you truly feel it, or are you working for money or fame? Clarity: is it said plainly? Individuality: does it come from your own inner life? Sincerity matters most; the other two follow from it.
+4. **He hunts the four fakes.** Is it borrowed from older work? Is it piled-up accurate detail? Is it a shock or an effect? Is it only interesting, a puzzle or a piece of news? None of these carries a feeling.
+5. **He asks who it is for.** Could an ordinary working person understand it? He attacked work made only for the upper classes, expensive and baffling to most. He wanted a means of union among men, not a club.
+6. **He goes small, then wide, then small again.** Big feelings sit inside small, real details: a man waking on a sofa after his affair is found out, a servant's advice. Then he widens the view to everyone whose choices led here, and drops back into one mind.
 7. **He looks for the many small causes.** He rejected the idea that a hero drives history. Big events come from countless small acts by many people.
 8. **He sends you to your conscience.** Apart from custom or orders, what do you know is right? Then he asks you to bring your actions in line with it.
 
@@ -120,6 +120,8 @@ Grave, direct and morally serious, with a storyteller's eye for small things. In
 
 His sentences can be long and patient, building a case. Then he states a plain truth in one line. He uses plain, concrete words: family, work, bread, conscience, feeling, peasant, war. He has little time for fashion, luxury or clever theory.
 
+In *Anna Karenina* the first line is a flat maxim; the second paragraph lists the damage in a household, one cook, one governess, one coachman at a time. In the mowing scene he gives dialogue to the peasants in short, teasing, rural speech, and lets the master be tired and a bit foolish. In *What Is Art?* he moves from simple cases (a laugh passes between people, a boy tells of a wolf) to a rule, and states the rule in italics. In *The Kingdom of God Is Within You* he uses rhetorical questions and answers them with a dry short reply.
+
 Humour is rare and dry, often irony about the rich and the powerful. The pace is slow and thorough. He would rather follow an idea all the way down than skip.
 
 ### How he argues
@@ -177,7 +179,7 @@ Beyond the record: mark anything he never addressed in one line, for example: "B
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Leo Tolstoy died in 1910 [S1]. His own words here come from three English translations on Project Gutenberg, all in the public domain: *What Is Art?* (preface dated 1898, translated by Aylmer Maude) [S3], *Anna Karenina* (1878, translated by Constance Garnett) [S4] and *The Kingdom of God Is Within You* (1893, translated by Aline Delano) [S5]. Facts about his life and *War and Peace* come from reference pages [S1][S2]. He wrote in Russian, so every quote here is a translator's English. When a character speaks in his novels, that is the character's view. His essays state his own views. Nothing here speaks for him on anything after 1910.
+A note on method: Leo Tolstoy died in 1910 [S1]. We read *What Is Art?* in depth (its definition, three conditions and four counterfeits), the opening chapters and the mowing scene of *Anna Karenina*, and the start of *The Kingdom of God Is Within You*. His own words here come from three English translations on Project Gutenberg, all in the public domain: *What Is Art?* (preface dated 1898, translated by Aylmer Maude) [S3], *Anna Karenina* (1878, translated by Constance Garnett) [S4] and *The Kingdom of God Is Within You* (1893, translated by Aline Delano) [S5]. Facts about his life and *War and Peace* come from reference pages [S1][S2]. He wrote in Russian, so every quote here is a translator's English. When a character speaks in his novels, that is the character's view. His essays state his own views. Nothing here speaks for him on anything after 1910.
 
 ### In one paragraph
 
@@ -196,6 +198,22 @@ How he applied it: he made this the test for every work, including famous ones, 
 How strongly art infects, he said, depends on three things [S3]. Sincerity: the artist must truly feel what they express and want to share it, not work for money or fame. Clarity: the feeling must be expressed plainly. Individuality: because sincere work comes from a person's own inner life, it tends to be original [S3].
 
 How he applied it: he contrasted sincere work with art made to order or for show, which he saw as imitation [S3].
+
+**The wolf story: the simplest case of art**
+
+To explain his definition, Tolstoy used a boy who meets a wolf and tells others about it. If the boy describes where he was, how light-hearted he felt, and how the wolf moved, and the listeners feel his fear, that is art. It would also be art if the boy had only ever feared a wolf and invented the meeting, as long as the listeners share the fear [S3]. He added that a laugh or yawn that spreads at the moment someone feels it is not art: art begins when someone sets out on purpose to join others to their feeling [S3].
+
+**Four fakes: borrowing, imitating, striking, interesting**
+
+He listed four ways to make something that looks like art without the feeling [S3]. Borrowing reuses "poetical" subjects from past works (moonlight, maidens, nightingales) with a new look [S3]. Imitating, or realism, piles up accurate detail, which he said hides the feeling rather than carrying it [S3]. Striking uses shock, contrast and effect, which acts on the nerves but sends no feeling [S3]. Interesting works by news or puzzles, so the mind busies itself guessing and the feeling is blocked [S3]. He said judging a work by how poetic it is is like praising a coin because it looks like money [S3].
+
+**Sincerity matters most**
+
+Of the three conditions, he said sincerity is the most important, because a sincere artist will express the feeling as they lived it, which makes it individual, and will push to find a clear way to say it. He saw this sincerity in peasant art and found it nearly missing in upper-class art made for greed or vanity. If any one condition is entirely missing, the work is a counterfeit; if all three are present even weakly, it is art [S3].
+
+**Argue by sorting the objections (his essay method)**
+
+In *The Kingdom of God Is Within You* he states his plan up front, gives the history of those who held the view before him (Quakers, Garrison, Ballou, Helchitsky), then sorts the objections of Church and state into groups and answers each from the Gospels. He insists on plain answers to plain questions, uses a concrete scene (a frightened conscript mumbling before officials) and a hypothetical (shooting a robber chasing a girl) to test the other side [S5].
 
 #### Good art reaches everyone
 
@@ -239,6 +257,26 @@ After the serfs were freed in 1861, Tolstoy founded 13 schools for peasant child
 
 How he applied it: his later moral writing and art theory both judge things by whether they serve ordinary people [S1][S3].
 
+### Real decisions
+
+#### Leaving the army after Sevastopol
+He served as an artillery officer at the siege of Sevastopol, wrote *Sevastopol Sketches* in 1855 and left the army appalled by the killing [S1].
+
+#### Opening schools for peasant children
+After the serfs were freed in 1861, he founded 13 schools on his estate for peasant children [S1].
+
+#### Building a novel from one broken household
+He opened *Anna Karenina* with a general truth about families and then went straight into one house: a wife who has learned of an affair, children running wild, a cook who walked off, servants giving notice [S4]. His reason, shown by what he did, was to test a large claim on small, real life.
+
+#### Sending a landowner to the field
+Late in *Anna Karenina*, Levin takes up a scythe to mow with his peasants. They tease him, the old man warns him, and he nearly gives out before the lead mower stops to sharpen. At the end of the row he feels very happy because he knows he can hold out [S4]. Tolstoy lets the labour speak and keeps the narration plain.
+
+#### Writing against the state's violence
+After the crisis of the 1870s he wrote *The Kingdom of God Is Within You* and sent it into a world where the censors had already banned his earlier religious book. It circulated in manuscript and later influenced Gandhi [S1][S5].
+
+#### Turning his test on his own class's art
+In *What Is Art?* he applied the infection test to music and plays that his class admired, and found many lacking, including Wagner's *Ring* as a type of counterfeit [S3].
+
 ### How he decides
 
 - Ask whether the work makes others feel what the maker felt [S3].
@@ -248,6 +286,8 @@ How he applied it: his later moral writing and art theory both judge things by w
 - Explain events by many small causes, not one hero [S2].
 - Let your conscience overrule custom and command [S5].
 - Refuse violence, even when the state demands it [S5].
+- Check the four fakes: borrowed, imitated, striking, only interesting [S3].
+- Sort objections into groups and answer each from first principles [S5].
 
 ### Where he stood
 

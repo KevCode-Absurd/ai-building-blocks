@@ -1,0 +1,131 @@
+new_slug: slippery-slide-copy-checker
+name: "Slippery slide copy checker"
+summary: "Paste your ad or page copy. Get each line marked for whether it pulls the reader to the next one."
+job: check-ads
+thinking: medium
+thinking_why: "It judges each break in the copy for pull, which needs reading as a reader would."
+
+headline: "Slippery slide copy checker"
+subhead: Give it your ad or page copy. It splits it into headline, subheads, captions and sentences, marks where a reader could stop, and gives a score out of 100 with how it was worked out. You get fixes for the weakest breaks and a rewrite of them.
+
+explain: |
+  Copy is read one line at a time, and a reader leaves the moment a line gives no reason to read the next. The headline gets the first line read, each line gets the next read, and the ask comes last, once the reader has the reasons.
+
+  This skill splits your copy into its parts and states the job of each: get the reader to the next part. It marks where a reader could stop, adds curiosity at each break, and checks that the opening is true and pulls the reader in even if it isn't about the product. It checks any story is real and the claim is honest, including any weakness that matters. It rewrites the weakest breaks and rereads from the top.
+
+when:
+  - Your page or ad gets views but readers drop off before the offer.
+  - You've written a long page and don't know where it loses people.
+  - You have a rough draft and want the weakest breaks found fast.
+
+you_give:
+  - Your ad or page copy, in order
+  - A persona or description of the reader (optional)
+you_get:
+  - A score out of 100 and how it was worked out
+  - The copy split into parts, each marked pull or stop
+  - Fixes for each weak break, with rewritten lines
+  - A check on the opening, any story and the honest drawback
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your copy in full, in the order a reader sees it.
+  - Mark which story, if any, is true, so it can check the rest.
+  - Replace each weak break with the rewrite or your own.
+  - Reread the new version from the top.
+
+how_it_works:
+  - title: Splits the copy
+    text: Splits it into headline, subheads, captions and sentences.
+  - title: States each part's job
+    text: Names the job of each part as getting the reader to the next part.
+  - title: Marks the stop points
+    text: Marks the places where a reader could stop or leave.
+  - title: Adds curiosity
+    text: Adds an open question or a promise of what comes next at each break.
+  - title: Checks the opening
+    text: Checks the opening is true and pulls the reader in, even if it isn't about the product.
+  - title: Checks story and claim
+    text: Checks any story is real and the product claim is honest.
+  - title: Rewrites weak breaks
+    text: Rewrites the weakest breaks.
+  - title: Rereads from the top
+    text: Rereads the new version from the top and scores it again.
+
+output_shape: |
+  SCORE
+  <0 to 100> | Worked out as: <parts with a pull ÷ parts counted>
+
+  THE SLIDE, PART BY PART
+  1. <part type>: "<text>"
+     Job: gets the reader to <next part>
+     Pull: <strong / weak / stop> | Why: <note>
+  ...
+
+  WHERE A READER COULD STOP
+  <list with part numbers>
+
+  OPENING CHECK
+  <true? pulls the reader in?>
+
+  STORY AND CLAIM CHECK
+  Story real: <yes / not known / none>
+  Weakness that matters stated: <yes / no / none found>
+  Ask comes after the reasons: <yes / no>
+
+  REWRITES
+  <part number> | Old: <text> | New: <text>
+  ...
+
+  SCORE AFTER FIXES
+  <0 to 100>, same method
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The reader
+    how: Describe who reads it. Pull depends on what the reader cares about.
+  - what: Which story is true
+    how: Mark the true stories. The check cannot know on its own.
+  - what: Length
+    how: Say how long the page may be. It cuts parts that do not pull.
+  - what: Where the reader came from
+    how: Say what the reader knew before the page. The opening is judged against it.
+
+judge:
+  - Every part has a stated job.
+  - Each break has a pull to the next line.
+  - No story is invented.
+  - Any weakness of the product that matters is stated, not hidden.
+  - The ask comes after the reader has the reasons.
+
+test:
+  - Run it on a page that holds readers well and see which breaks it marks strong.
+  - Compare its stop points with where your analytics show people leave.
+  - Run it twice. The weak breaks should stay close.
+  - Use the rewrites on half your traffic and compare time on page and drop-off.
+
+improve:
+  - Add your analytics scroll data so stop points are checked against real drop-off.
+  - Add your true stories, so rewrites use them instead of invented ones.
+  - Add your voice notes, so rewrites sound like you.
+  - Pair it with "Claim and proof matcher" after the rewrite.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading copy line by line and rewriting weak breaks is text work any strong chat AI does well with this skill."}
+    - {name: "Your page analytics", why: "Scroll depth and exit data show where readers really leave, which this check should match."}
+  inputs:
+    - "Scroll depth or heatmap data"
+    - "True stories about how you found or made the product"
+    - "Notes on your voice"
+
+terms:
+  - term: Break
+    meaning: The point between one part of the copy and the next, where a reader decides whether to go on.
+  - term: Pull
+    meaning: A reason in a line to read the next one, such as an open question or a promise.

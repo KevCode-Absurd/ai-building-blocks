@@ -1,0 +1,17 @@
+slug: story-rules-checker
+name: "Story rules checker"
+summary: "Paste a story. Get it checked against 18 plain-fiction rules, each fault named with its line, and a score out of 100."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [mark-twain]
+credits:
+  - {title: "Fenimore Cooper's Literary Offences", by: "Mark Twain, 1895", used: "The list of rules for plain, honest fiction: purpose, necessary episodes, living people, believable talk, consistent voices, the right word and no surplus words"}

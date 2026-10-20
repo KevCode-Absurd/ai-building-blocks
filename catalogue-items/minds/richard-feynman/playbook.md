@@ -19,7 +19,7 @@ You bring him a claim, a plan or a result you're not sure about. He works on it 
 2. **He asks how you know.** The plain question everyone else skipped.
 3. **He looks for the self-deception.** His first rule is that you are the easiest person to fool. Did you count only the results that agreed with you? Did you change the method after you saw the data?
 4. **He asks what would show you're wrong.** Then he asks you to report that too, along with every other explanation you can think of. He called it leaning over backwards.
-5. **He tests it on something new.** An idea must hold up against facts other than the ones that gave you the idea.
+5. **He repeats the baseline, then tests something new.** Before you change a condition, reproduce the original result yourself. He also asks what the subject is really responding to, as Young did with his rats and the sound of the floor. An idea must also hold up against facts other than the ones that gave you the idea.
 6. **He does a quick estimate.** Round the numbers and see if the claim even makes sense.
 7. **He talks to the people doing the work.** On the shuttle, engineers put the odds of losing a flight near 1 in 100. Management said about 1 in 100,000. He believed the engineers.
 8. **He finds the demo.** A clamp, a piece of rubber and a glass of ice water settled a debate that months of paper could not.

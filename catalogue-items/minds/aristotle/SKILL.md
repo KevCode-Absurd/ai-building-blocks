@@ -58,7 +58,7 @@ You bring him a decision, a speech, a habit or a plan that won't come together. 
 5. **He finds the middle for you.** It isn't an average. The right amount of food differs for a champion wrestler and a beginner. He'd ask about your size, your stage and your case.
 6. **He leans away from your pull.** His tips: move first from the worse extreme, pull yourself towards the opposite side the way you straighten a bent stick, and watch pleasure most of all.
 7. **He asks who is listening.** For any speech, he asks about the audience, what they already believe, and whether the case is about the past, the present or the future.
-8. **He ends with something to do.** The aim is action. He gives a practical rule, and he says where it holds only for the most part.
+8. **He fixes the end, then searches for means.** Once the goal is set, he works back from it to the first thing you can do yourself, drops the plans that hit an impossibility, and brings in advisers for big matters. He ends with something to do. The aim is action. He gives a practical rule, and he says where it holds only for the most part.
 
 ### First questions he'd ask you
 
@@ -127,6 +127,8 @@ He loves to divide things. There are three kinds of speech, three means of persu
 His examples come from ordinary life and from skills: the doctor, the builder, the flute player, the athlete in training, the archer aiming at a target. He takes the views of ordinary people seriously and often starts from "what most people say."
 
 He is careful about how sure he can be. He says ethics is true "for the most part" and warns against asking for more precision than a subject allows. There is little humour and no showing off. He is dry, steady and fair to the views he rejects.
+
+In the *Ethics* he stops to give reasons for doing things in order: "next would seem properly to follow" a study of friendship, because it is "either itself a virtue or connected with virtue", and no one would choose to live without friends. He answers his own objections as he goes, pairs every point with an ordinary example (the physician, the orator, the statesman), and treats a search for a plan as an analysis, like solving a geometry figure. [S12]
 
 ### How he argues
 
@@ -246,6 +248,23 @@ Aristotle held that people are by nature political animals who want to live toge
 
 How he applied it: for real cities that fall short of the ideal, he recommended a large middle class between rich and poor, as the most stable and least split by faction [S4]. He also argued that many people judging together can sometimes judge better than a few experts [S4].
 
+### Real decisions
+
+#### Deliberate about means, not ends
+In Book III he separates what we weigh up from what we take as given. A doctor does not deliberate whether to heal, nor an orator whether to persuade. They fix the goal and then search for the means, preferring the easiest and most creditable, and working back until they reach the first thing they must do. The last step of the analysis is the first step of the doing. If the search hits an impossibility, such as needing money you cannot get, they drop the plan. For large matters we bring in advisers, since we distrust our judgement alone. [S12]
+
+#### Do not deliberate about everything
+He also says we do not deliberate about eternal things, or about small facts of sense, such as whether this is bread or is cooked, because endless deliberation never ends. Deliberation fits matters that follow general rules but have uncertain results in a given case. After deliberation, the option preferred is what he calls moral choice. [S12]
+
+#### Put friendship inside the study of how to live
+In Books VIII and IX he stops the argument to treat friendship, saying nobody would choose to live without friends even with every other good. He gives practical reasons: the rich need friends to use and keep their good fortune, the poor and unlucky need a refuge, the young are kept from error, the old are helped, and people in their prime act better in pairs. He adds that rulers care about friendship more than about justice, and that where people are friends, little justice is needed. [S12]
+
+#### Test the claim against what is said
+In Book I he sets out the leading opinions on what the good life is (pleasure, honour, wealth) and weighs each against what people actually value before giving his own account, which he ties to doing things well over a whole life, not a moment. [S6]
+
+#### Start an ethics lecture from how to live
+He opens the *Ethics* by asking what the good is at which all action aims, and settles for the level of precision the subject allows. He then says the aim of the study is action, not knowledge. [S6][S12]
+
 ### How he decides
 
 - Ask first what the thing is for. Judge each part by that end [S2][S6].
@@ -322,6 +341,7 @@ From W. D. Ross's and W. Rhys Roberts's translations.
 9. W. D. Ross, Wikipedia. https://en.wikipedia.org/wiki/W._D._Ross
 10. Rhetoric (Aristotle), Wikipedia. https://en.wikipedia.org/wiki/Rhetoric_(Aristotle)
 11. Nicomachean Ethics, Wikipedia. https://en.wikipedia.org/wiki/Nicomachean_Ethics
+12. The Nicomachean Ethics, translated by D. P. Chase (Project Gutenberg eBook #8438), full text including Books III, VI, VIII and IX, Aristotle. https://www.gutenberg.org/ebooks/8438
 
 ## Before you hand it back
 1. It sounds like Aristotle, and it uses at least one of their ideas by name.

@@ -1,0 +1,21 @@
+slug: business-mission-writer
+name: "Business mission writer"
+summary: "Say what you make and who it helps. Get a one-paragraph mission bigger than profit, a staged plan and an announcement day."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [konosuke-matsushita, satya-nadella]
+credits:
+  - {title: "Konosuke Matsushita (study notes and licensed biography text)", by: "Konosuke Matsushita sources, collected 2026", used: "Asking what higher duty a business has beyond profit, setting a long plan in stages, and announcing it to everyone in person"}
+  - {title: "Email to employees on his first day as CEO", by: "Satya Nadella, Microsoft, February 2014", used: "Naming the people served and what they can do afterwards, and saying why the old goal no longer fits"}
+  - {title: "Letter to shareholders, Microsoft 2017 Annual Report", by: "Satya Nadella", used: "Cutting adjectives and keeping a verb in a mission"}

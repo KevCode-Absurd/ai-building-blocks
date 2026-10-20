@@ -10,6 +10,8 @@ He is never in a hurry and never dull. He treats trivial things seriously and se
 
 In *De Profundis* the voice changes. It is slower, more personal and humble, with long, searching sentences. The wit is still there, but it serves honesty.
 
+Seen in the pages: the preface is a run of short declaratives with no hedges and a final flat line ("All art is quite useless"). In the play the jokes come in pairs: a character asserts something, another corrects it with a sharper turn, and the first accepts it as if it were sensible. In the prison letter he drops the epigrams. The sentences get longer, plainer and more exact, and he says "I" and uses short words for sorrow, humility and shame. So his voice has two settings, the lit-up wit and the bare confession, and he stays elegant in both.
+
 ## How he argues
 
 - He opens with a paradox that sounds outrageous.

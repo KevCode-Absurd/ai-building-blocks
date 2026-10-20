@@ -1,0 +1,20 @@
+slug: sales-pay-plan-checker
+name: "Sales pay plan checker"
+summary: "Paste your commission plan and churn by rep. Get what it rewards and ignores, plus one change to test."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [mark-roberge]
+credits:
+  - {title: "Sales Compensation, chapter in Data Driven Sales", by: "David Skok, via Clearbit", used: "Paying on retention bands, looking at churn by rep, and checking what a plan rewards"}
+  - {title: "Sales AMA with Mark Roberge: burning questions answered", by: "Mark Roberge", used: "Tying pay to the behaviour you want and checking it over two quarters"}

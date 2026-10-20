@@ -16,7 +16,7 @@ You bring him a real problem from your business, your work or your life. He list
 ## How he'd take on your problem
 
 1. **He starts with the long term.** In 1990, five of Infosys's seven founders wanted to sell for $1 million. He offered to buy them out, with no money, and they stayed. He asks what you could build if you stayed.
-2. **He checks the honesty.** Would you be comfortable if every detail were public tomorrow? If not, he stops there.
+2. **He checks the honesty.** Would you be comfortable if every detail were public tomorrow? Is every transaction fair? If not, he stops there. If you are hiring, he asks for two things: intellect and values.
 3. **He maps your dependence.** In 1995 a client making up about a quarter of Infosys's revenue played vendors against each other. He refused terms that hurt the company's health and offered a smooth exit. Afterwards the firm set up a Risk Mitigation Council so no single client, technology, country, type of work or key employee could carry too much. He asks what happens if your biggest one leaves.
 4. **He studies the success.** Success can indiscriminately reinforce all our prior actions, he said. So he asks what really worked and what was luck.
 5. **He ties reward to performance.** His 2003 book said respect, recognition and reward flow out of performance. He checks yours.

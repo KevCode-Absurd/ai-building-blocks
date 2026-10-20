@@ -1,0 +1,124 @@
+new_slug: buyer-instinct-brief-writer
+name: "Buyer instinct brief writer"
+summary: "Paste your product facts and buyer words. Get a brief naming the drive behind buying and the feeling the ad must leave."
+job: understand-customers
+thinking: high
+thinking_why: "It infers a hidden motive from buyer words, which takes judgement and evidence."
+
+headline: "Buyer instinct brief writer"
+subhead: Give it your product facts and, if you have them, buyer reviews or a persona. It finds what buyers say they want, names the drive underneath, and writes a one-page brief with the feeling the ad must leave. You get a brief a writer can start from.
+
+explain: |
+  A list of product facts is not a message. Buyers rarely say the real reason they buy, and ads that repeat the facts leave them cold. A good brief says why people buy and what they should feel when the ad ends.
+
+  This skill treats the facts as a springboard. It reads the buyer's own words for what they say they want, names the drive under it, such as being admired, staying safe or getting even, and notes where their language hides the motive. It writes the feeling the ad must leave in one line and picks one fresh angle, with the worn ones marked to avoid.
+
+when:
+  - You have a pile of facts and reviews but no single message.
+  - Your ads list features and nobody reacts.
+  - You are about to brief a writer or an AI and want the brief to name the real reason people buy.
+
+you_give:
+  - Your product facts
+  - Customer reviews or buyer quotes (optional)
+  - A persona or description of the buyer (optional)
+you_get:
+  - The stated want and the drive underneath it, with buyer words as evidence
+  - The feeling the ad must leave, in one line
+  - What the reader should take away
+  - One fresh angle chosen and the stale ones to avoid
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts. Add reviews and a persona if you have them.
+  - Check the drive it names against what you hear from customers.
+  - Hand the brief to your writer, or paste it into "Ad headline writer".
+  - If the drive feels wrong, add more buyer quotes and run it again.
+
+how_it_works:
+  - title: Lists the facts
+    text: Writes the product facts as a springboard, not as the message.
+  - title: Reads buyer words
+    text: Pulls what buyers say they want, quoting their own words.
+  - title: Names the drive
+    text: Names the motive underneath, such as being admired, staying safe or getting even.
+  - title: Finds hidden motives
+    text: Notes where buyer language covers the real reason.
+  - title: Writes the feeling
+    text: States in one line what the ad must leave the reader feeling.
+  - title: Writes the takeaway
+    text: States what the reader should take out, not what we want to put in.
+  - title: Chooses a fresh angle
+    text: Picks one new way to say it and marks the old ways to avoid.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  FACTS (springboard)
+  <the facts that matter, short>
+
+  WHAT BUYERS SAY THEY WANT
+  <want> | Their words: "<short quote>"
+
+  THE DRIVE UNDERNEATH
+  <drive> because <evidence from buyer words>
+  Where language hides it: <examples>
+
+  THE FEELING THE AD MUST LEAVE
+  <one line>
+
+  WHAT THE READER TAKES AWAY
+  <one line>
+
+  FRESH ANGLE
+  <the angle>
+  AVOID: <stale angles>
+
+  MISSING
+  <what would sharpen the brief>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Amount of buyer words
+    how: More reviews, calls and support messages give a more confident drive. With none, it marks the drive as a guess.
+  - what: Buyer type
+    how: If you have several kinds of buyer, name the one this brief is for.
+  - what: Ad format
+    how: Say if the brief is for video, print or email so the feeling line fits.
+  - what: Worn angles
+    how: List the angles you or your rivals already use, so it can mark them to avoid.
+
+judge:
+  - The drive is backed by buyer words, not a guess.
+  - The facts are used but not made the whole message.
+  - The feeling is stated in one line.
+  - A fresh angle is chosen and the stale ones are named.
+  - The brief says what the reader gets out, not what we put in.
+
+test:
+  - Run it on a product whose buyers you know well. See if the drive matches what you hear from them.
+  - Give the brief to a writer who does not know the product and see if the first draft fits.
+  - Run it twice. The drive should stay close even if the wording changes.
+  - Write one ad from the brief and one from the facts alone, and compare.
+
+improve:
+  - Add interview notes or support tickets, so the drive rests on more words.
+  - Add the drives you have already used, so it picks a different one.
+  - Save the brief to your brand file as the buyer brief.
+  - Pair it with "Customer buying reasons finder" if you want more evidence first.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading buyer words and drafting a brief is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Reviews and support messages in buyers' own words"
+    - "Notes from customer interviews"
+    - "A persona or buyer description"
+
+terms:
+  - term: Drive
+    meaning: The deeper reason someone buys, such as wanting to be admired or to feel safe.
+  - term: Springboard
+    meaning: Facts used as a place to start from, not as the message itself.

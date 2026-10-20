@@ -1,0 +1,122 @@
+new_slug: incentive-checker
+name: "Incentive checker"
+summary: "Describe a team, plan or deal. Get who is rewarded for what, where it pulls the wrong way, and a fix."
+job: think-and-decide
+thinking: medium
+thinking_why: "It follows fixed steps but must reason about how each reward changes behaviour."
+
+headline: "Incentive checker"
+subhead: Give it a team, a plan or a deal and how each person is paid or rewarded. It lists what each reward really encourages, shows where that pulls away from what you want, and proposes a fix that cannot easily be gamed. You get an audit with a fixed reward for each mismatch.
+
+explain: |
+  People do what they are rewarded for, not what you meant. Pay a support team by tickets closed and tickets close fast, whether or not the problem is fixed. Pay a seller on revenue and discounts spread. The plan looks fine on paper while the rewards quietly pull the other way.
+
+  This skill lists everyone involved and how each is paid or rewarded, then says what each reward really encourages. It finds where that differs from your goal, and looks for a small change in the reward that fixes it. It checks the fix for loopholes and checks that pay is fair first, so money is not the issue. It also splits the work into routine tasks and thinking tasks, because the same reward does not suit both.
+
+when:
+  - A team hits its numbers but the real result is poor.
+  - You are about to sign a deal, a commission plan or a contract.
+  - You are setting up a new role or pay plan and want to catch problems early.
+
+you_give:
+  - The team, plan or deal in plain words, and the goal it should serve
+  - How each person or party is paid or rewarded
+  - The plan from an earlier step (optional)
+you_get:
+  - A table of people, rewards and the behaviour each really encourages
+  - Each mismatch with a concrete example
+  - A fix that pays for the outcome you want, with a loophole check
+  - A note on pay fairness and on which work is routine and which is thinking
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the plan, the goal and who is involved.
+  - Say how each person is paid, including bonuses, targets and praise.
+  - Read each mismatch and say if the example is how it would really play out.
+  - Try the proposed fix on paper with a few tricky cases before you roll it out.
+
+how_it_works:
+  - title: Lists who gets what
+    text: Names each person or party and how they are paid or rewarded.
+  - title: Reads what it encourages
+    text: Says what behaviour each reward pushes toward, in plain terms.
+  - title: Finds the mismatches
+    text: Compares that behaviour with your goal and shows each gap with an example.
+  - title: Designs the fix
+    text: Looks for a small change, such as paying for the result rather than the time spent.
+  - title: Tests for loopholes
+    text: Checks how the new reward could be gamed and adjusts.
+  - title: Checks pay first
+    text: Confirms pay is fair enough that money is not what people think about.
+  - title: Splits the work
+    text: Separates routine tasks from thinking tasks, since they respond to different rewards.
+
+output_shape: |
+  GOAL
+  <what the plan should achieve>
+
+  WHO IS REWARDED FOR WHAT
+  Person or party | How they are paid or rewarded | What this really encourages
+
+  WHERE IT PULLS THE WRONG WAY
+  <n>. <mismatch> | Example: <how it would play out>
+
+  THE FIX
+  <change to the reward> | Pays for: <the outcome> | How it could be gamed: <risk and guard>
+
+  WHO DECIDES AND WHO PAYS
+  <does the decider bear the result?>
+
+  PAY AND WORK TYPE
+  Pay fair enough to take money off the table? <yes/no, why>
+  Routine tasks: <list>  Thinking tasks: <list>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How you describe the rewards
+    how: Include informal ones such as praise, status and a boss's mood. They matter as much as pay.
+  - what: Your goal
+    how: State the outcome you want, not the activity. "Fewer repeat tickets" gives a better check than "good service".
+  - what: Who decides
+    how: Say who makes the call and what they stand to lose if it goes wrong.
+  - what: Past behaviour
+    how: Add what people have actually done. It tests whether the reading of the reward is right.
+
+judge:
+  - Every person has a stated reward.
+  - At least one mismatch is shown with an example.
+  - The fix pays for the outcome you want, not an activity.
+  - The person who decides also bears the result, or the gap is flagged.
+  - Pay fairness is checked before anything else is proposed.
+
+test:
+  - Run it on a plan that went wrong. See whether it finds the pull that caused the problem.
+  - Run it on a plan that works well. It should find few mismatches and say so.
+  - Try the fix with three tricky cases and see if someone could still game it.
+  - Ask the people affected if the reading of their reward is right.
+
+improve:
+  - Add the common rewards in your field, such as commissions, retainers or volume bonuses, to step 1.
+  - Add a list of gaming moves you have seen, to sharpen the loophole check.
+  - Save the finished audit with the plan, and review it after the first period.
+  - Pair it with "Failure-first plan check" to test the whole plan.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It reasons about people, rewards and plans in text, which any strong chat AI handles with this skill."}
+    - {name: "A spreadsheet", why: "Easier to try a new pay rule on past numbers and see what it would have paid."}
+  inputs:
+    - "The pay plan, contract or commission sheet itself"
+    - "Last period's results by person"
+    - "The goal in one line, with how you measure it"
+
+terms:
+  - term: Gaming
+    meaning: Hitting the reward measure in a way that misses what the measure was meant to show.
+  - term: Routine task
+    meaning: Work with clear steps and one right way to do it, as opposed to work that needs thinking and new ideas.

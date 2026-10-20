@@ -1,0 +1,19 @@
+slug: sales-call-question-planner
+name: "Sales call question planner"
+summary: "Paste what you know about the buyer. Get the order of questions that finds their problem, its cost and the fix's value."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [neil-rackham]
+credits:
+  - {title: "Neil Rackham explains the origins of the SPIN acronym", by: "Neil Rackham, interview", used: "The four question types (situation, problem, implication, need-payoff), keeping background questions few, and letting the buyer state the value"}
+  - {title: "SPIN Selling", by: "Neil Rackham", used: "The idea that the order of questions can change with the buyer, and that questions work better than pitching in large sales"}

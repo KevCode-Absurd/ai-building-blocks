@@ -1,0 +1,20 @@
+slug: stranger-first-message-writer
+name: "Stranger first-message writer"
+summary: "Paste what you offer and who you want to reach. Get a first message a stranger can read in seconds."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: offer, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [aaron-ross]
+credits:
+  - {title: "From Impossible to Inevitable, chapter 1 (publisher sample)", by: "Aaron Ross and Jason Lemkin", used: "Writing for a busy stranger, the referral ask, the single hook and cutting to a few seconds"}
+  - {title: "An Argument for Specialized Sales Teams (our summary of a David Skok interview)", by: "David Skok", used: "Why a cold message works best when one person owns it and keeps it short"}

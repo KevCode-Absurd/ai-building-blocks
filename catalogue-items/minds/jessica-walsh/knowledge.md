@@ -69,6 +69,23 @@ How she applied it: Ladies, Wine & Design began as a gathering in her apartment 
 - Play to your strengths and hire experts for the rest [S3].
 - Make it beautiful and make it work [S3].
 
+## Real decisions
+
+### Making a dating experiment with rules
+For *40 Days of Dating*, Walsh and a partner followed six rules, including a daily drawing and a daily questionnaire about their feelings [S4]. Her stated view is that personal projects work best when they start from a real frustration, not a hunt for something viral [S4]. The rules were the point: she says more constraints make a better project [S4].
+
+### Insisting the photo shoot be equal
+For the studio's partner photo, Sagmeister first planned a shot with Walsh clothed. She insisted that equality in the studio should show in the shoot [S8]. It shows she treats how the work is presented as part of the message [S8].
+
+### Splitting the work with her partner
+At Sagmeister & Walsh she ran client work and he focused on self-initiated projects, and each helped on the other's [S8]. Big projects began with a whole-studio brainstorm, and every person got their voice heard [S8]. The partners then picked the strongest concept and made it in the smartest, most beautiful way [S8].
+
+### Hiring experts instead of doing it all
+She can do her own accounting, photography and type design, but chose to focus on her strengths and work with specialists [S3]. Her reason is that experienced people cost more yet work faster and better, which saves expensive rework [S3].
+
+### Time-boxing failure
+She tells designers to fail freely while exploring and to leave failure behind once they start making the real thing. Poor work handed to a paying client is, in her view, a responsibility problem and not something to celebrate [S3].
+
 ## Where she stood
 
 **Should a brand try to please everyone?** No. As of 2024, she said bland brands earn neither hate nor love [S7].

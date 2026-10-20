@@ -19,6 +19,7 @@ origin: rebuilt
 source_ids: [CES-095]
 old_name: product page image check
 version: 2.0.0
+minds: [jakob-nielsen]
 credits:
   - {title: "Image link [image_link]", by: "Google Merchant Center Help", url: "https://support.google.com/merchants/answer/6324350", used: "Main-image rules (75 to 90 percent fill, no promo text, borders or watermarks) and keeping the AI label in AI-made files"}
   - {title: "Product Image Requirements and Best Practices", by: "Amazon Seller Forums (Amazon staff post)", url: "https://sellercentral.amazon.com/seller-forums/discussions/t/13af96ea-6b07-4bf9-8dbe-a13292c2e3b1", used: "Marketplace main-image rules (pure white, 85 percent fill, no props not in the box)"}

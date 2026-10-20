@@ -15,6 +15,7 @@ uses: [ad-script-read-aloud-editor]
 origin: rebuilt
 source_ids: [CES-022]
 version: 2.0.0
+minds: [jakob-nielsen, george-orwell]
 credits:
   - {title: "Wikipedia:Signs of AI writing", by: "Wikipedia editors", url: "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing", used: "Most of the 16 signs, the families they sit in, and the list of things that don't prove AI on their own"}
   - {title: "How Users Read on the Web", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/how-users-read-on-the-web/", used: "Promotional language makes readers filter for the facts (sign 2)"}

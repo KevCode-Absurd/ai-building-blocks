@@ -1,0 +1,21 @@
+slug: direct-selling-model-check
+name: "Direct selling model check"
+summary: "List your channels and margins. Get a sell-direct verdict, what to build to order and a score out of 100."
+category: general
+type: skill
+role: check
+job: strategy
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [michael-dell, sam-walton]
+credits:
+  - {title: "Dell Computer Corporation annual report, fiscal 1998 (letter)", by: "Michael Dell, Dell Computer", used: "Cutting out middlemen that add cost, building to order, and getting paid before suppliers are paid (source record only)"}
+  - {title: "Michael Dell interview", by: "Michael Dell, July 2008", used: "Questioning your own model on a schedule (source record only)"}
+  - {title: "Entrepreneur profile of Michael Dell (study notes)", by: "Michael Dell sources, collected 2026", used: "Splitting customers into groups and choosing the group with better margins"}

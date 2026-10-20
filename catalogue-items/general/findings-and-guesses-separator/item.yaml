@@ -1,0 +1,24 @@
+slug: findings-and-guesses-separator
+name: "Findings and guesses separator"
+summary: "Paste a report or analysis. Get every line sorted into proven, likely or guess, plus the open questions left over."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [isaac-newton, rosalind-franklin, charles-darwin, carl-sagan]
+credits:
+  - {title: "Opticks", by: "Isaac Newton", used: "Defining terms first, building claims from experiments, and keeping guesses apart as open questions"}
+  - {title: "Molecular Configuration in Sodium Thymonucleate (Nature, 1953)", by: "Rosalind Franklin and Raymond Gosling", used: "Reporting what the data shows on its own terms and checking a claim through more than one route"}
+  - {title: "What Rosalind Franklin truly contributed to the discovery of DNA (Nature, 2023)", by: "Nature", used: "Context on how Franklin's careful data work and view of what the evidence allowed shaped the claim"}
+  - {title: "The Autobiography of Charles Darwin", by: "Charles Darwin", used: "Noting facts against a favoured idea, and asking for the fewest causes that explain a fact"}
+  - {title: "Science is more than a body of knowledge (Charlie Rose interview excerpt)", by: "Carl Sagan", used: "Using the best data you can get, and being plain about how sure a claim is"}

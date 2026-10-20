@@ -1,0 +1,26 @@
+slug: turn-customer-quotes-into-image-ads-that-quote-them
+name: "Turn customer quotes into image ads that quote them"
+summary: "Give it your reviews. Get quote image ads, a review card ad, an ad rules check and the ad types still missing."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: false}
+  - {type: product_photos, required: false}
+  - {type: script, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: brief}
+uses: [customer-buying-reasons-finder, image-ad-maker-from-customer-quotes, complaint-review-image-ad-maker, meta-ads-compliance-checker, image-ad-gap-finder]
+steps:
+  - {uses: customer-buying-reasons-finder, note: "Rank the reasons in your reviews with the exact phrases, so the quote ads use real ones."}
+  - {uses: image-ad-maker-from-customer-quotes, note: "Build the quote ads from the ranked reasons and their exact phrases."}
+  - {uses: complaint-review-image-ad-maker, note: "Add one plain review card whose small grumble works as a reason to buy, in copy that matches the quote ads."}
+  - {uses: meta-ads-compliance-checker, note: "Check the quote ads and the feed text against Facebook and Instagram ad rules."}
+  - {uses: image-ad-gap-finder, note: "Code the ads from this run, find the types the set leaves out and brief the next three."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-turn-customer-quotes-into-image-ads-that-quote-them/skeleton.yaml

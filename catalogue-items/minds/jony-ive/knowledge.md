@@ -44,7 +44,7 @@ How he applied it: the iPhone X removed the home button so the screen could fill
 
 When a design team is stuck, Ive said in 2017, looking at how problems were solved in the past gives them faith that a solution exists [S3][S5]. He added that faith is no substitute for engineering skill [S3].
 
-How he applied it: he framed the iPhone X as the completion of a chapter that started with the first iPhone, and he compared its price debate to the one in 2007 [S3].
+How he applied it: in 2016 he used the simple metal needle as an example of a craft tool that once overturned how people thought, and said it humbles him [S2]. He framed the iPhone X as the completion of a chapter that started with the first iPhone, and he compared its price debate to the one in 2007 [S3].
 
 ### Small, close teams
 
@@ -62,6 +62,26 @@ How he applied it: when he left Apple in 2019, he praised his colleagues and sai
 - When stuck, study how others solved it before [S3].
 - A beautiful thing that works badly has failed [S5].
 - Keep the team small and close [S1].
+
+## Real decisions
+
+### Taking the home button off the iPhone
+By 2017 the iPhone had a familiar home button that people trusted. Ive's team removed it so the screen could fill the front, which meant new ways to unlock, call Siri and pay [S3]. His reason was that these were extraordinarily complex problems that had to be solved, and he called the change the completion of a chapter [S3]. Some users disliked it, and the phone launched at $999, a price he put down to the processing packed into a small device [S3].
+
+### Leaving the Power Mac G4 Cube clear of clutter
+The Design Museum gives the Power Mac G4 Cube as an effort to strip away visual and audio clutter [S1]. The point was ease and simplicity of use, which he named as the defining quality of Apple's products [S1]. The record here does not say how the product sold, so this mind makes no claim about it.
+
+### Redesigning iOS away from leather and paper
+For iOS 7 in 2013 he led a move away from software that imitated real objects toward a flatter, simpler look, and described the aim as simplicity that is more than the absence of clutter [S7]. Reviews were mixed. The Nielsen Norman Group said flat design hides calls to action, and some users reported motion sickness from new effects, yet the update was adopted very fast [S7].
+
+### Caring about the cable
+Ive told the Design Museum that Apple's care ran beyond the obvious stuff, to places people overlook such as cables and power adaptors [S1]. He held that one object speaks for the values of the company that made it [S5]. The result is a habit of reviewing the parts nobody asked about.
+
+### Leaving Apple to start his own firm
+In June 2019 Apple announced that Ive would form an independent design company with Apple as a client [S4]. He founded LoveFrom with Marc Newson, and the Apple contract ended in July 2022 [S6].
+
+### Answering the "hand versus machine" question
+At a museum fashion preview in 2016 he was among people who prize handmade work. He said he did not think handmade is automatically more valuable, held that technology and craft are stronger together, and credited his craftsman father for his own view that you learn a material only by working it by hand [S2].
 
 ## Where he stood
 
@@ -96,7 +116,7 @@ How he applied it: when he left Apple in 2019, he praised his colleagues and sai
 - **Taking things away.** Removing familiar parts, like the home button and the headphone jack, upset some users. Ive acknowledged the criticism and defended the choice [S3].
 - **Too costly, too modern.** Early in his career, the bathroom maker Ideal Standard turned down one of his Tangerine designs as too expensive and too modern [S6].
 - **New work, mixed reaction.** The Ferrari Luce electric car, designed with LoveFrom and shown in 2026, drew criticism from some Ferrari fans while other reviewers praised it [S6].
-- **Price.** His high-care approach led to costly products. The iPhone X launched at $999 in 2017 [S3].
+- **Price.** His high-care approach led to costly products. The iPhone X launched at $999 in 2017 [S3]. He called the price a financial consequence of putting so much processing into a small device [S3].
 
 ## Blind spots to watch
 

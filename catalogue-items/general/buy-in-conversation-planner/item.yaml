@@ -1,0 +1,19 @@
+slug: buy-in-conversation-planner
+name: "Buy-in conversation planner"
+summary: "Paste who you need to win over and what you want. Get a plan that starts from what they want."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+  - {type: objection_map}
+origin: rebuilt
+version: 1.0.0
+minds: [dale-carnegie]
+credits:
+  - {title: "How to Win Friends and Influence People, parts one to three", by: "Dale Carnegie", used: "Starting from the other person's want, getting a first small yes, letting them talk, making the idea feel theirs, and admitting mistakes fast"}

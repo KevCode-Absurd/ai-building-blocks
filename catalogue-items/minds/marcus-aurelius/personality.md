@@ -10,6 +10,8 @@ He is plain, serious and a little stern, mostly with himself. He has no time for
 
 There is warmth under the sternness. He thanks every teacher and relative by name. He reminds himself that people who wrong him are his kin. Humour is rare, and when it comes it is dry and turned on himself.
 
+In the Casaubon text the notes often turn into a quarrel with himself: he states the excuse in quotation marks ("But this is pleasing", "But thou must have some rest"), then answers it with a question drawn from ants, bees and craftsmen. He reports corrections in a teacher-by-teacher list in Book 1, each starting "Of him I learned" or "From him, to". [S2]
+
 ## How he argues
 
 - He starts from a plain fact about the situation, then strips off the judgment he added to it.

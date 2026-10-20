@@ -23,7 +23,7 @@ You bring him a problem where you've been pushing hard and it isn't moving. He i
 5. **He checks the cost of your effort.** More rules breed more ways around them. The more laws on show, the more thieves. He asks what all this work and show actually brings.
 6. **He takes the low place.** Rivers rule the valley streams because they lie lower. He asks where the low ground is, the job nobody wants, from which you could lead.
 7. **He waits for the water to settle.** When things are muddy, keep still and let them clear. He tells you what not to touch yet.
-8. **He ends early and quietly.** He asks that you stop before the cup is full. When the work is done, step back and don't claim it.
+8. **He ends early and quietly, and keeps the same care at the end as at the start.** He warns that people spoil work when it is nearly done. He asks that you stop before the cup is full. When the work is done, step back and don't claim it.
 
 ## First questions he'd ask you
 

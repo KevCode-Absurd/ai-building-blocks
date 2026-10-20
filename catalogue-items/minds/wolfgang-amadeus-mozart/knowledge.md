@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Mozart's letters are in the public domain. The quotes below come from two old English translations: Lady Wallace's (1866), covering 1769 to 1780 [S2], and Henry Krehbiel's (1905), arranged by subject from across his life [S3]. Translations differ, so treat exact wording as the translator's. Many famous "Mozart quotes," including a letter about whole works arriving in his head complete, come from later writers and are not used here.
+Mozart's letters are in the public domain and are his own words, in English translation. Two sources carry the weight: Lady Wallace's 1866 translation of his early letters, 1769 to 1780 [S2], and Krehbiel's 1905 translation of Kerst's collection, which arranges numbered passages by subject across his whole life [S3]. Wikipedia pages supply dates and context only [S1][S4][S5]. The quotes below come from these two old English translations: Lady Wallace's (1866), covering 1769 to 1780 [S2], and Henry Krehbiel's (1905), arranged by subject from across his life [S3]. Translations differ, so treat exact wording as the translator's. Many famous "Mozart quotes," including a letter about whole works arriving in his head complete, come from later writers and are not used here.
 
 ## In one paragraph
 
@@ -34,7 +34,7 @@ How he applied it: his later works add fugal passages from the Baroque to the cl
 
 ### Short and good
 
-Writing from Paris in September 1778 about what audiences would accept, Mozart said it is better to be short and good [S2]. He told Padre Martini in 1776 that a full Mass in Salzburg could last no more than three-quarters of an hour, and that this demanded its own kind of study [S2].
+Writing from Paris in September 1778 about what audiences would accept, Mozart said it is better to be short and good [S2]. In the same letter he planned to shorten violin concertos for German taste, which runs to long things [S3]. He told Padre Martini in 1776 that a full Mass in Salzburg could last no more than three-quarters of an hour, and that this demanded its own kind of study [S2].
 
 ### Work hard so the work looks easy
 
@@ -55,6 +55,29 @@ How he applied it: in Vienna he earned from concerts, pupils, opera commissions 
 - Learn every style on offer, then choose [S1][S2].
 - Prefer short and good to long and dull [S2].
 - Leave a post that holds back your talent, if you can earn without it [S1][S2].
+
+## Real decisions (enriched minds)
+
+### Leaving the Archbishop of Salzburg (1781)
+Mozart had told his father in 1778 that the Archbishop could never pay him enough for the slavery of Salzburg [S3]. In May 1781 in Vienna he wrote that being rid of a prince who never pays him was happiness, and that he would rather work from morning to night than live on such bounty [S3]. He was dismissed and stayed in Vienna as a freelancer [S1]. His stated reason was that he could not turn back a hair's breadth from the step [S3].
+
+### Pricing his lessons (1781)
+He wrote to his father that he could take more pupils by lowering his fee, but that as soon as one does that one loses credit [S3]. He set a price of six ducats for twelve lessons and made it clear he gave them as a favour [S3]. His reason: he would rather have three pupils who pay well than six who pay badly [S3].
+
+### Refusing to write more popular music for a publisher
+A Leipzig publisher told him to write in a more popular style or he would neither print nor pay for his work [S3]. Mozart answered that then he would earn nothing and go hungry, and did not care [S3]. Earlier, when his father urged him to think of the unmusical public too, he kept his own standard [S3].
+
+### Choosing words that serve the music (1780 to 1781)
+In Munich in 1780 he objected to asides in arias, since words repeated in an aria make an aside sound unnatural [S3]. In October 1781 he wrote that the plot should be well carried out and the words written simply for the sake of the music, not for a rhyme [S3]. His reason was that rhymes for their own sake do harm on the stage [S3].
+
+### Setting Osmin's rage so it still pleases (1781)
+For Osmin's aria in the Abduction from the Seraglio he wrote that a man in a violent rage oversteps all order and forgets himself, so the music must do the same [S3]. He still chose a related key, not a foreign one, because music must not offend the ear [S3]. He pointed to Belmont's aria as a favourite, where the violins suggest a beating heart [S3].
+
+### Trying to write one aria without sounding like Bach
+He set an aria that J. C. Bach had set so beautifully, only to see if he could make one that was not at all like Bach's [S3]. He said the exercise came because he knew Bach's music so well [S3]. He did similar study with the fugues of Handel and J. S. Bach after visits to Baron van Swieten, and wrote one at his wife's urging [S3].
+
+### Writing Don Giovanni for Prague (1787)
+After Figaro was an enthusiastic success in Prague, Mozart was asked to write an opera for the city [S3]. A report by Nissen quotes him saying it was not written for the Viennese but for the people of Prague and most of all for himself and his friends [S3]. He often said the Bohemians understood him [S3].
 
 ## Where he stood
 

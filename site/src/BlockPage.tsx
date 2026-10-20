@@ -16,6 +16,7 @@ import Install from "./Install";
 import { Before, Next, WhatYouGet } from "./Needs";
 import { Gauge } from "./Gauge";
 import PixelFace from "./PixelFace";
+import { HelpedBy, MindSkills, WorkflowList, flowsUsing } from "./MindPack";
 import { useSeen, useTyped } from "./lib/typing";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
@@ -156,16 +157,22 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
   };
 
   const has = (x?: unknown[]) => !!x && x.length > 0;
+  // The workflows this skill is a step in, or for a mind, the workflows from their work.
+  const inFlows = b.type === "mind" ? (b.flows ?? []).map((f) => c.bySlug[f]).filter(Boolean) : isFlow ? [] : flowsUsing(c, b.slug);
   const toc: [string, string, boolean][] = [
     ["get", "What you'll get", !!p?.output_shape],
     ["what", kindOf(b) === "mind" ? "Who they are" : "What it does", !!p?.explain],
     ["hire", `Hire ${b.name.split(" (")[0]}`, has(p?.hire?.jobs)],
+    ["skills", `Skills from ${b.name.split(" (")[0]}'s work`, b.type === "mind"],
+    ["flows", "Workflows from their work", b.type === "mind" && inFlows.length > 0],
     ["ideas", "Their big ideas", has(p?.ideas)],
     ["seats", "On a council", has(p?.seats)],
     ["io", "What you give it, what you get", true],
     ["before", "Before you start", !!p?.plan && (has(p.plan.needed) || has(p.plan.helps))],
     ["steps", "The steps", isFlow],
     ["install", "Add it to your AI", !isFlow],
+    ["helped", "Who can help with this", has(b.minds)],
+    ["flows", "Part of these workflows", b.type !== "mind" && inFlows.length > 0],
     ["make", renders === "video" ? "Make the video" : "Make the picture", !!renders],
     ["use", "How to use it", has(p?.how_to_use)],
     ["most", "What changes the result most", has(p?.tweaks)],
@@ -271,6 +278,18 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </Section>
           )}
 
+          {b.type === "mind" && (
+            <Section id="skills" title={`Skills from ${b.name.split(" (")[0]}'s work`} lead={`Each skill does one job, and you can use it alone. Pick the ones you want and download them with ${b.name.split(" (")[0]} as one pack, so each job is done the way ${b.name.split(" (")[0]} would do it.`}>
+              <MindSkills c={c} mind={b} toast={toast} />
+            </Section>
+          )}
+
+          {b.type === "mind" && inFlows.length > 0 && (
+            <Section id="flows" title="Workflows from their work" lead="Whole jobs built from their method. Each runs several skills in order, and each skill's result feeds the next.">
+              <WorkflowList c={c} flows={inFlows} testid="in-workflows" />
+            </Section>
+          )}
+
           {has(p?.ideas) && (
             <Section id="ideas" title="Their big ideas" lead={`What it draws on when it answers. Each comes from ${b.name.split(" (")[0]}'s own work, with sources at the end of the skill file.`}>
               <ul className="ideas" data-testid="mind-ideas">{p!.ideas!.map((x, i) => <li key={i}><b>{x.title}</b>{x.text && <p>{x.text}</p>}</li>)}</ul>
@@ -328,6 +347,18 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           {!isFlow && (
             <Section id="install" title="Add it to your AI once, then start it by name" lead="It takes about two minutes, once. Pick the AI you use.">
               <Install b={b} skill={skill} toast={toast} />
+            </Section>
+          )}
+
+          {has(b.minds) && (
+            <Section id="helped" title="Who can help with this" lead="This skill comes from these people's work. In the builder, put one on the step to have it done their way, or download them together from their page.">
+              <HelpedBy c={c} b={b} />
+            </Section>
+          )}
+
+          {b.type !== "mind" && inFlows.length > 0 && (
+            <Section id="flows" title="Part of these workflows" lead="This skill is a step in these workflows. Each one runs several skills in order, so the whole job gets done in one run.">
+              <WorkflowList c={c} flows={inFlows} testid="in-workflows" />
             </Section>
           )}
 

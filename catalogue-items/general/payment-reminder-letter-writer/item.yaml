@@ -1,0 +1,19 @@
+slug: payment-reminder-letter-writer
+name: "Payment reminder letter writer"
+summary: "Paste the invoice facts and your history with the customer. Get a reminder that starts where they are and keeps their goodwill."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [robert-collier]
+credits:
+  - {title: "The Letter Book", by: "Robert Collier, 1931", used: "Joining the reader's own thoughts first, deciding the feeling you want them to have at the end, and writing a collection reminder that keeps the customer"}
+  - {title: "Robert Collier", by: "Wikipedia, licensed secondary biography", used: "Background on his work as a letter writer"}

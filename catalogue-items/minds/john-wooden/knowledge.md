@@ -58,6 +58,32 @@ Wooden saw himself as a teacher first [S1]. He quoted a verse in his talk saying
 
 How he applied it: he took pride that his former players became lawyers, doctors, dentists and teachers [S1].
 
+## Real decisions
+
+### Writing his own definition of success, 1934
+
+As a young English teacher in South Bend, Wooden was frustrated that parents wanted only A's and B's and that alumni judged coaches almost only by wins and margins [S1]. He found the dictionary idea of success, built on possessions, power and prestige, too narrow, and wrote his own: peace of mind from knowing you made the effort to do your best [S1]. He says the base of it came from his father, who told him not to measure himself against others and not to fret over what he could not control [S1].
+
+### Setting four team rules
+
+He asked players to be on time, to be neat and clean, to use no profanity, and never to criticise a teammate, since the coach was the one paid to criticise [S1]. A curse word cost a player the day or a spell on the bench [S1]. He first required jackets, shirts and ties, then relaxed that after seeing the chancellor dress casually, and kept only neat and clean [S1][S6].
+
+### Bill Walton and the team bus
+
+When Walton turned up untidy, Wooden sent him home to clean up and the bus left without him [S1]. It shows the rule applied to a star, with no speech about it [S1].
+
+### Letting a bearded centre go
+
+A star centre arrived with a beard and argued for his right to keep it. Wooden answered with a light, good-humoured remark and let it go, and the player shaved soon after [S6]. He did not turn a small disagreement into a fight [S6].
+
+### Starting the season with socks
+
+At the first practice of each season he showed players how to put on a sweat sock, because a poor fit could cause blisters [S6]. A motto on the wall read "Be quick but don't hurry" [S6].
+
+### Weighing NBA offers with his family
+
+When professional teams tried to hire him, he talked it over with his family and let them help decide [S6]. He also held that athletes who refused drug testing should not play [S6].
+
 ## How he decides
 
 - Judge effort and preparation, which you control, over the score [S1].

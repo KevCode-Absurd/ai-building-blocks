@@ -1,0 +1,127 @@
+new_slug: trial-log-planner
+name: "Trial log planner"
+summary: "Paste what you want to get working. Get many cheap trials, a log for each and what each failure ruled out."
+job: test-an-idea
+thinking: medium
+thinking_why: "It must list options and design a log, with some judgment on which trials are cheap and informative."
+
+headline: "Trial log planner"
+subhead: "Give it something you want to get working, such as an ad that converts or a process that runs smoothly. It lists every option to try, plans the roughest version first, and sets up a log where each failed trial records what it ruled out. You get a trial plan and a log."
+
+explain: |
+  When something does not work, people tend to try two or three things, give up and decide it can't be done. Real progress often takes dozens of cheap trials, each written down, so that every failure removes one option and the list of what is left gets shorter.
+
+  This skill starts by checking that someone will pay for the result and that it is worth getting. It lists every material, method or option you could try, builds the roughest version fast, and plans many trials in turn. It sets up a log with date, time, what was tried and the sketch or numbers seen. Each failure states what it ruled out. If you use a tool to measure, it is checked on a known case first.
+
+when:
+  - Something you built doesn't work and you aren't sure what to try next.
+  - You've tried a few fixes, they failed, and you want to know if it's worth carrying on.
+  - You want a record of what you tried so nobody repeats it.
+
+you_give:
+  - The result you want to get working, and who would pay for it
+  - What you have tried so far (optional)
+  - Numbers or results from earlier trials (optional)
+you_get:
+  - A check that the result is worth getting
+  - A list of every option to try, and the roughest first version
+  - A trial log with a row for each trial
+  - A "what it ruled out" line for each failed trial, and what else the whole system needs
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the result you want and who would pay for it.
+  - List what you have already tried, even failures.
+  - Run the trials in the order it gives and fill in the log as you go.
+  - Bring the log back to see what is ruled out and what is left.
+
+how_it_works:
+  - title: Picks one result
+    text: Names the one result worth getting and checks someone will pay for it.
+  - title: Lists every option
+    text: Lists each material, method or setting that you could try.
+  - title: Builds the rough version
+    text: Plans the roughest working version to build fast.
+  - title: Runs trial after trial
+    text: Sets up many trials in turn, each written down.
+  - title: Logs what each ruled out
+    text: For each failure, writes which option it removed from the list.
+  - title: Checks the measuring tool
+    text: Tests your measuring tool on a known case before relying on it.
+  - title: Records every observation
+    text: Records date, time, position and a sketch or number for each trial, and treats a first reading as provisional.
+  - title: Plans for the whole system
+    text: Notes what else the result needs to work in practice.
+
+output_shape: |
+  THE RESULT WORTH GETTING
+  <result> | Who would pay: <name or group> | Why: <reason>
+
+  EVERYTHING WE COULD TRY
+  1. <option>
+  2. <option>
+  ...
+
+  THE ROUGHEST VERSION
+  <what to build first and how fast>
+
+  CHECK THE TOOL FIRST
+  <tool> checked against <known case> | Reads true: <yes/no>
+
+  TRIAL LOG
+  # | Date, time | What was tried | What was seen (number, sketch) | Worked? | Ruled out | First reading?
+  1 | <fill in> | <option> | <fill in> | <fill in> | <fill in> | <provisional>
+  ...
+
+  WHAT ELSE THE WHOLE SYSTEM NEEDS
+  <list>
+
+  MISSING
+  <facts that would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Who would pay
+    how: Name a person or group. A named buyer stops you working on something nobody wants.
+  - what: Options already tried
+    how: List them with results. They go into the log as trials one to n.
+  - what: Cost of a trial
+    how: Say what a trial costs in time and money. Cheaper trials come first.
+  - what: Your measuring tool
+    how: Name it. The skill plans a check on a known case before you use it.
+
+judge:
+  - Someone is named who would pay for the result.
+  - Every trial has a written result.
+  - Failed trials say what they ruled out.
+  - The plan names what else the whole system needs.
+  - The tool was checked before use.
+
+test:
+  - Run it on a problem you already solved. See if the winning option is on the list.
+  - Check that you can fill each log row in under a minute.
+  - Run it twice. The list of options should overlap a lot.
+  - After ten trials, check that the list of what is left has gotten shorter.
+
+improve:
+  - Add the options that always matter in your field to step 2.
+  - Add a measure that you trust for the result column.
+  - Save the finished log as a lessons record for the next project.
+  - Pair it with "One-change experiment planner" when a single trial needs a clean design.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing options and designing a log is text work that any strong chat AI does with this skill."}
+    - {name: "A spreadsheet", why: "Holds the trial log with one row per trial."}
+  inputs:
+    - "A list of what you've already tried"
+    - "Numbers from the last version that worked best"
+    - "The name of the person or group who would pay"
+
+terms:
+  - term: Trial
+    meaning: One cheap attempt at getting the result, run and written down on its own.
+  - term: Ruled out
+    meaning: An option that a failed trial showed does not work, so you can drop it.

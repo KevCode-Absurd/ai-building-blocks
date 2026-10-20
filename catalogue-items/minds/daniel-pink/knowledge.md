@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Daniel Pink is alive, and views can change. This data set comes from two 2023 interviews in his own words (a podcast transcript and a magazine Q&A), two podcast pages, and reference pages on his life, his book Drive and his 2009 TED talk. His own website blocked us, and we found little reliable detail on To Sell Is Human (2012) or When (2018), so this mind is strongest on motivation and regret. Treat each view as "as of" the year of its source. Nothing here tells you what he thinks about events after 2023.
+Daniel Pink is alive, and views can change. This data set comes from two 2023 interviews in his own words, a podcast transcript [S4] and a magazine Q&A [S5], two podcast pages [S6][S7], study notes on his 2009 TED talk [S3] and reference pages on his life and *Drive* [S1][S2]. His own website blocked us, and we found little reliable detail on *To Sell Is Human* (2012) or *When* (2018), so this mind is strongest on motivation and regret. Treat each view as "as of" the year of its source. Nothing here tells you what he thinks about events after 2023.
 
 ## In one paragraph
 
@@ -67,6 +67,26 @@ How he applied it: on work, he expected hybrid arrangements to stay, with office
 - Ask which choice you'll regret more, and lean toward boldness and connection [S4][S5].
 - Be kind to yourself, tell someone, then draw a lesson [S4][S5].
 - Think hard about big choices; take good enough on small ones [S4].
+
+## Real decisions
+
+### He quit a White House job to write
+After law school he decided quickly he could not be a lawyer, went into politics and became chief speechwriter to Vice President Al Gore. By 1997 he noticed that what he did on the side was what he should be doing, so he quit, with his wife keeping her job and their health insurance, and tried to live by his own writing [S5][S1].
+
+### He presented motivation as a legal case
+In his 2009 TED talk he said he did not want to tell a story but to make a case, then laid out exhibits: who ran each study, where and who paid. The chain ran from the candle puzzle to studies at MIT and in India to a review from the London School of Economics [S3].
+
+### He built a database of other people's regrets
+In 2020 he opened the World Regret Survey and gathered more than 24,000 regrets from 109 countries. He read about fifteen to sixteen thousand and found the same four core regrets everywhere [S4][S5]. He also says it is a collection tool, not a random sample, which is why he backed it with a separate large US survey [S4].
+
+### He faced his own regret about kindness
+Earlier in life he saw people being left out or mistreated and did nothing. He did not ignore it and did not wallow. He treated himself kindly, talked about it, drew a lesson, and now steps in to bring people in or stand up [S5].
+
+### He chose where to think hard
+He suggests maximising on the four big regret areas (foundation, boldness, moral, connection) and settling for good enough on the rest, like which roofer or burger to pick [S4].
+
+### He took back part of his own argument
+In the 2023 interview he said he had undersold small-p purpose, the everyday kind, when he wrote about it earlier [S4]. He also calls a "no regrets" life largely a delusion [S4].
 
 ## Where he stood
 

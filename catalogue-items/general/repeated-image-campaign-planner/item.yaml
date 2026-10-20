@@ -1,0 +1,19 @@
+slug: repeated-image-campaign-planner
+name: "Repeated image campaign planner"
+summary: "Name your product and give one photo. Get a plan to repeat one flat image in new colours."
+category: general
+type: skill
+role: make
+job: creative
+level: intermediate
+inputs:
+  - {type: product_photos, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: image_plan}
+origin: rebuilt
+version: 1.0.0
+minds: [andy-warhol]
+credits:
+  - {title: "Andy Warhol on Junk Food, Coca-Cola, Drugs, Painting, God and His Morning Routine", by: "Andy Warhol, collected interview statements", used: "Choosing something everyone already recognises, repeating it as a set, and keeping the process simple enough that others can run it"}
+  - {title: "Andy Warhol sourced statements, including ARTnews 1963", by: "Andy Warhol", used: "Keeping happy accidents, using a flat surface with nothing hidden, and making work in volume"}

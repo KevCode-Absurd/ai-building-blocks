@@ -175,7 +175,7 @@ Beyond the record: when a question goes past his work, say so in one line, for e
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Ohno wrote two books in Japanese, *Toyota Production System* (1978) and *Gemba Keiei*, known in English as *Workplace Management* (1982) [S1]. Both are under copyright, so we work from short quoted lines, translated excerpts and summaries on public pages, and from a long interview he gave in July 1984 [S3][S9]. His English words reach us through translators, so exact wording varies from one version to the next [S5]. Some stories about him, such as where the supermarket idea came from, are told more than one way [S6]. Where sources differ, we say so.
+A note on method: the local source folder holds only a short record of the 1984 interview excerpt [S3], a short record of the *Gemba Keiei* chapter 19 summary [S4] and a Wikipedia article [S1]; the rest of the detail below comes from the other public pages listed in mind.yaml. Ohno wrote two books in Japanese, *Toyota Production System* (1978) and *Gemba Keiei*, known in English as *Workplace Management* (1982) [S1]. Both are under copyright, so we work from short quoted lines, translated excerpts and summaries on public pages, and from a long interview he gave in July 1984 [S3][S9]. His English words reach us through translators, so exact wording varies from one version to the next [S5]. Some stories about him, such as where the supermarket idea came from, are told more than one way [S6]. Where sources differ, we say so.
 
 ### In one paragraph
 
@@ -242,6 +242,26 @@ How he applied it: he brought suppliers in last. He warned strongly against push
 - Prefer idle people to needless output [S3].
 - Prove it in-house before you ask others to change [S4].
 - Raise output through thinking before you spend money [S5].
+
+### Real decisions
+
+#### Starting pull in one machining shop
+In the late 1940s Ohno began pull production in a single machining workshop, then spread it shop by shop and, much later, to suppliers [S6]. His reason was simple: normal thinking was to push parts forward, and the fix was to turn it around [S4]. He said there was nothing hard about it technically [S4].
+
+#### Running kanban end to end at Motomachi
+Kanban took years to spread, and changeovers had to drop from hours to minutes, which workers thought impossible [S4]. Ohno said he was frightened and that some feared he would ruin the company, so it was called the Ohno System until the early 1960s [S4]. In 1962, when all departments came under him, the Motomachi plant ran it from start to finish [S4].
+
+#### Keeping suppliers for last
+He warned strongly against pushing kanban onto suppliers before it worked inside your own plant, and gave a case where doing so caused trouble [S4]. The order was: your own shop first, partners after.
+
+#### Accepting low machine use to get flow
+Flow lines meant buying more machines and running each one less of the time. Ohno accepted that. Toyota chose not to worry about machine use and avoided adding people instead [S3]. He said idle people should rest rather than make things nobody needs [S3].
+
+#### Refusing buffer stock on main assembly lines
+Ohno resisted buffer stock on the main lines because extra stock hides problems [S6][S7]. Critics say this left little room for shocks, and Toyota added buffers after his death [S6].
+
+#### Telling a visitor what Toyota was really doing
+Asked in the mid-1980s what Toyota was working on, he answered that they were watching the time line from a customer's order to collecting the cash, and cutting it by removing waste [S5]. He framed the whole system as one clock to shorten, not a list of tools.
 
 ### Where he stood
 

@@ -1,0 +1,128 @@
+new_slug: offer-checklist-reviewer
+name: "Offer checklist reviewer"
+summary: "Paste your offer, price and guarantee. Get a review against a tested offer checklist, and the three changes worth testing first."
+job: make-offer
+thinking: medium
+thinking_why: "It judges an offer against fixed checks, then ranks changes by likely value and cost to test."
+
+headline: "Offer checklist reviewer"
+subhead: Give it your offer, price, guarantee and angle library. It reviews the offer against a checklist, scores it out of 100 with how it was worked out, and picks the three changes worth split-testing first. You get a reviewed offer and a test plan.
+
+explain: |
+  An offer is a promise plus the terms around it, and weak terms waste a strong ad. A buyer on the fence decides on the price, the risk and the reason to act now, not only on the headline.
+
+  This skill writes the offer in one line and checks it sells one thing. It asks whether the offer is strong enough that only a fool would refuse, and whether any special deal has a believable reason. It looks for a deluxe version, tests how the discount is framed, and checks the guarantee length and wording. It checks repeat options, early-bird bonuses worded in days, and any limit or price rise you will really keep. It ranks the changes and picks three to split-test.
+
+when:
+  - Your offer is a plain price and a button and you think it could do more.
+  - You run ads and want to test the offer, not only the headline.
+  - You offer a deal, a bonus or a guarantee and aren't sure it is worded well.
+
+you_give:
+  - Your offer, price and guarantee
+  - Your angle library, or the reasons people buy
+  - Your product facts, including costs and limits (optional)
+you_get:
+  - The offer in one line
+  - A checklist review with a score out of 100 and how it was worked out
+  - A revised offer
+  - The three changes to test first, each with a test and a measure
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your offer with the price, the guarantee and any deadline or limit.
+  - "Say what you can really offer: bonus, deluxe option, longer guarantee, repeat plan."
+  - Pick the changes you can run in the next two weeks.
+  - Split-test each change against your current offer.
+
+how_it_works:
+  - title: Writes the offer in one line
+    text: Writes the offer in one line and checks it sells one thing.
+  - title: Tests the strength
+    text: Asks whether it is strong enough that only a fool would refuse.
+  - title: Checks the reason
+    text: Checks there is a believable reason for any special deal.
+  - title: Adds a deluxe choice
+    text: Adds a deluxe version so the choice is A or B, not yes or no.
+  - title: Tests the framing
+    text: Compares discount framing, such as buy one get one against percent off.
+  - title: Reviews the guarantee
+    text: Lengthens the guarantee and says it plainly.
+  - title: Checks extras and limits
+    text: Checks repeat options, early-bird bonuses worded in days, and any limit you will truly keep.
+  - title: Ranks the changes
+    text: Ranks the changes and picks three to split-test.
+
+output_shape: |
+  THE OFFER IN ONE LINE
+  <line> | Sells one thing? <yes / no>
+
+  SCORE
+  <0 to 100> | Worked out as: <checks passed ÷ checks counted>
+
+  CHECKLIST
+  Strong enough to refuse only as a fool: <pass / fail> | <note>
+  Believable reason for the deal: <pass / fail / no deal>
+  Deluxe version (A or B): <present / absent>
+  Discount framing: <current> vs <alternative>
+  Guarantee length and wording: <note>
+  Repeat or continuity option: <present / absent>
+  Bonus worded in days: <present / absent>
+  Limits and price rises you will keep: <present / absent / not kept>
+
+  REVISED OFFER
+  <text>
+
+  THREE CHANGES TO TEST FIRST
+  1. <change> | Test: <A vs B> | Measure: <metric> | Why first: <reason>
+  2. ...
+  3. ...
+
+  MISSING
+  <terms needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: What you can really give
+    how: List the bonus, longer guarantee or deluxe version you can afford. It only proposes those.
+  - what: Costs and margin
+    how: Give unit cost and margin so a discount or guarantee is not proposed that sinks the sale.
+  - what: Past offers
+    how: Paste what you've tried, so the changes aren't repeats.
+  - what: Deadlines
+    how: Say which limits you really enforce. It treats any other as not kept.
+
+judge:
+  - The offer sells one thing per ad.
+  - Every limit or deadline is one the seller will keep.
+  - The guarantee is stated in plain words.
+  - Each change has a test and a measure.
+  - No result is promised from the changes.
+
+test:
+  - Run it on an offer you know performed. See which checks it passes.
+  - Check that every proposed change fits your costs.
+  - Run it twice. The top three changes should overlap.
+  - Split-test the first change against your current offer.
+
+improve:
+  - Add your costs and margins, so the changes stay profitable.
+  - Add past offer tests with results.
+  - Save the winning offer terms to your brand file.
+  - Pair it with "Claim and proof matcher" to check the page that carries the offer.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reviewing terms and ranking changes is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Unit costs and margins"
+    - "Past offers with results"
+    - "Refund and return data"
+
+terms:
+  - term: Deluxe version
+    meaning: A higher-priced option that makes the choice A or B instead of yes or no.
+  - term: Continuity option
+    meaning: A plan where the buyer gets the product again on a schedule.

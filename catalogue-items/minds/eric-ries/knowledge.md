@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Source check, 20 October 2026: the local source folder for this person holds mostly source records (a title, a link and a short excerpt) plus a reference biography, not full transcripts. The own-words claims below come from pages read when the mind was first built, and each is tagged to the source in mind.yaml. Where only a record or a reference page backs a claim, treat it as context, not as their own words.
+
 Eric Ries is alive, and views can change. Everything below comes from his blog Startup Lessons Learned (posts from 2008 and 2009), the principles page of The Lean Startup site, and two reference pages. Date each view to its source, mostly as of 2008 to 2011. A new book, Incorruptible, is listed for 2026, but its contents are not in our sources [S1]. Nothing here tells you what he thinks about later events.
 
 ## In one paragraph
@@ -67,6 +69,32 @@ How he applied it: he credited earlier work openly: lean manufacturing, lean sof
 - After a problem, ask why five times and fix each level [S4].
 - Size the fix to the cost of the problem [S4].
 - Then pivot or persevere [S7].
+
+## Real decisions
+
+### Shipping IMVU's first version early
+
+At There.com, his previous company, the product took nearly five years to launch [S5]. At IMVU in 2004 he chose the opposite: the first version went out in about six months [S5]. It was embarrassing, and he counted that as part of getting the model right [S5]. His stated reason was that customers teach you more than guessing does [S5].
+
+### Putting a safety net under fast releases
+
+IMVU built layers of defence over time: test copies of the live site, automated tests, checks on every code change, gradual releases that reverse bad changes on their own, and alerts when numbers look wrong [S4]. This let the team ship dozens of times a day, even with a lot of old untested code [S4]. He chose to make failure cheap and fast to undo, not to try to prevent every error [S4].
+
+### Tracing an outage to a training gap
+
+A site outage at IMVU was traced back through a code loop and a skipped test to a new engineer who had not been trained [S4]. He did not blame the engineer. The fixes ran from restoring service to changing how new hires are taught [S4]. He wrote the five whys up in plain English and shared them with everyone, and said the exact number five matters less than the habit [S4].
+
+### Splitting the numbers by customer group
+
+He told of a company that had two bad quarters after raising money, with only gross revenue tracked [S6]. When the data was split, one customer group was leaving while a more promising group grew [S6]. His advice was to roll out changes to one group at a time, as controlled trials, so the evidence is clear [S6]. The lesson he drew was that vanity numbers let every team claim credit and dodge blame [S6].
+
+### Giving the method a name and a lineage
+
+In September 2008 he named the approach "lean startup" in a blog post and tied it to Toyota's lean thinking, agile software and Steve Blank's customer development [S3]. He credited earlier work openly instead of claiming the method as new [S2][S3]. He moved from IMVU's technology chief to full time writing and teaching [S1].
+
+### Stopping a feature nobody wanted
+
+He described a team that spent two weeks building a feature nobody wanted, when a simple ad test could have told them sooner [S5]. His rule from this is to test the riskiest guess with the smallest thing that can teach you [S5]. He also warned that an MVP takes judgment and added work, since you must talk to customers and read the data [S5].
 
 ## Where he stood
 

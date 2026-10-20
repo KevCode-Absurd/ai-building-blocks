@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Beethoven's letters and notebooks are in the public domain. The quotes below come from two old English translations: Lady Wallace's (1866) [S2] and Henry Krehbiel's (1905), which gathers his sayings by subject and flags doubtful ones [S3]. Many "Beethoven quotes" come from Bettina von Arnim or Anton Schindler, whose reports are doubtful or second-hand; this file treats them with care [S1][S3].
+Beethoven's letters and notebooks are in the public domain and are his own words in English translation. Most of this file rests on Krehbiel's 1905 translation of Kerst's collection, which prints numbered sayings from letters, sketchbooks and conversation books with notes on who recorded them [S3], and on Lady Wallace's 1866 translation of the letters [S2]. Wikipedia pages supply dates and context only [S1][S4][S5]. The quotes below come from two old English translations: Lady Wallace's (1866) [S2] and Henry Krehbiel's (1905), which gathers his sayings by subject and flags doubtful ones [S3]. Many "Beethoven quotes" come from Bettina von Arnim or Anton Schindler, whose reports are doubtful or second-hand; this file treats them with care [S1][S3].
 
 ## In one paragraph
 
@@ -65,7 +65,32 @@ How he applied it: from 1818 his hearing was so poor that visitors wrote to him 
 - Break the form when the idea is bigger than it [S1][S5].
 - Study the old masters, again and again [S1][S3].
 - Name your price when your work is wanted [S2].
+- Do not write for the galleries; do not flatter [S3].
+- Do not fix a text to improve the music if words and music already fit [S3].
 - Keep working through whatever fate sends [S2][S3].
+
+## Real decisions (enriched minds)
+
+### Refusing to write for the galleries (1820)
+When a baron said Fidelio would one day win over the upper tiers, Beethoven answered that he did not write for the galleries [S3]. He never agreed to make concessions to the taste of the masses, according to the compiler's note [S3]. In an earlier remark he said true art is selfish and perverse and will not submit to the mould of flattery [S3].
+
+### Titling the Pastoral Symphony as feeling, not painting (1808)
+His sketches for the Pastoral Symphony say the hearer should find the situations, and that it is more sentiment than tone painting [S3]. When he gave the work to the publisher he added a short explanation: more expression of feeling than painting [S3]. His reason: anyone who has known country life can imagine what the composer is after without many captions [S3].
+
+### Refusing a publisher's change to the words (1811)
+The publisher Hartel wanted changes to the text of The Mount of Olives. Beethoven wrote back that an unfit word can spoil music, and that when words and music are one, they should be glad and not try to improve a commonplace text [S3]. His stated reason was that the words do not make the music [S3].
+
+### Dropping the metronome as a rule
+Reported in his later years, he said that anyone with sound feeling needs no metronome and anyone without it will not be helped, since he will run away with the orchestra anyway [S3]. This is a reported remark, and the compiler notes he had sent different metronome marks to different publishers [S3].
+
+### Naming his price and writing it down (1800 to 1801)
+Offering a sonata to Hofmeister in January 1801, he named 20 ducats [S3]. He told his friend Wegeler that publishers no longer haggled: he named the price and they paid [S2]. He also admitted he was a bad man of business and accountant [S2].
+
+### Dismissing the "Moonlight" label
+He said people kept talking about the C-sharp minor sonata and that on his word he had written better ones, naming the F-sharp major sonata, Op. 78 [S3]. The compiler's note says the Moonlight title came from the critic Rellstab, not from Beethoven [S3].
+
+### Writing symphonies he could afford to write (1822)
+In 1822 he wrote to the publisher Peters that if his income brought in so little he would write nothing but grand symphonies, church music and perhaps quartets [S3]. His income had fallen from 4,000 to 800 florins because of the currency crash, says the note [S3]. He still took on the big works in his head, including two symphonies and an oratorio, and said it would take a long time [S3].
 
 ## Where he stood
 

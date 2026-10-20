@@ -47,7 +47,7 @@ One good idea done once, he'd say, is a good start. Ask for a series. Choose the
 
 ### Working with printers, makers and suppliers
 
-He wrote to his publisher in specific, firm words. Don't add that eyelid. I dislike the noses the carvers usually cut. He even sent drawn examples. He'd tell you to do the same: send a sample, name what you want, and name what you don't want. Don't trust a maker to guess. Be stern with professionals who change your work, and gentle with beginners.
+He wrote to his publisher in specific, firm words. Don't add that eyelid. I dislike the noses the carvers usually cut. He even sent drawn examples. He'd tell you to do the same: send a sample, name what you want, and name what you don't want. Don't trust a maker to guess. He asked a printer for light ink as thin as clam soup and mid-tone as thick as bean soup, and gave the reason: the blocks cannot print soft gradations past about two hundred copies. Give the maker a picture they can taste, plus the reason. Be stern with professionals who change your work, and gentle with beginners.
 
 ### Teaching your craft
 

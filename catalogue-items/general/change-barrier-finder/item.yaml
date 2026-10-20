@@ -1,0 +1,19 @@
+slug: change-barrier-finder
+name: "Change barrier finder"
+summary: "Describe the change you want from a person or group. Get the barriers and a plan that removes them instead of pushing."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [jonah-berger]
+credits:
+  - {title: "The Catalyst book interview with Jonah Berger", by: "Jonah Berger, 2020", url: "https://jonahberger.com/", used: "Looking for what blocks change and removing it instead of pushing"}
+  - {title: "Pull, Don't Push: How Catalysts Overcome Barriers and Drive Progress", by: "Jonah Berger, 2023", used: "Checking reactance, endowment, distance, uncertainty and the need for corroborating evidence"}

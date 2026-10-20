@@ -1,0 +1,135 @@
+new_slug: identity-system-planner
+name: "Identity system planner"
+summary: "Paste your client facts and where the brand appears. Get a three-phase plan and hand-off guide."
+job: design-work
+thinking: medium
+thinking_why: "It plans in phases with judgement on what is fixed and what moves."
+
+headline: "Identity system planner"
+subhead: "Give it your client facts and every place the brand will appear. It plans experiments, then refinement, then a hand-off. You get a three-phase plan with the fixed core, the parts that move and one named decision-maker."
+
+explain: |
+  An identity that works in one place often fails in another. A logo that looks fine on a sign can fall apart on a website, a bag and a social post. Teams also hand over a set of files and walk away, and the client team then runs the identity wrongly because no one taught them.
+
+  This skill studies the client's history, audience and what is not working. It plans three phases: experiments with typefaces, colours and motifs; refinement, which separates pieces that look too alike and fixes ones that look wrong; and a hand-off that teaches the client team to run the system. It sets a fixed core and what may change each season, and names one person to lead decisions.
+
+when:
+  - "You are building or renewing a brand that will appear in many places."
+  - "You want an identity that can change with the seasons and still be recognised."
+  - "You need a plan for handing the brand to a team that did not make it."
+
+you_give:
+  - "The client facts: history, audience, what is not working"
+  - "Every place the brand will appear"
+  - "A design direction already chosen (optional)"
+  - "Who will run it day to day (optional)"
+you_get:
+  - "A fixed core and what may change each season"
+  - "Three phases: experiments, refinement and hand-off"
+  - "A test for every place the brand appears"
+  - "A named decision-maker and a hand-off guide outline"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the client facts and list every place the brand will appear."
+  - "Say who will run it after launch."
+  - "Run the experiments in phase one on real pieces, not blank pages."
+  - "Look at the whole set side by side in phase two."
+  - "Teach the client team with the hand-off guide and name the decision-maker."
+
+how_it_works:
+  - title: "Studies the client"
+    text: "History, audience and what is not working."
+  - title: "Runs experiments"
+    text: "Typefaces, colours and motifs, to see if they read as one identity."
+  - title: "Refines"
+    text: "Separates pieces that look too alike and fixes ones that look wrong."
+  - title: "Sets the core"
+    text: "A fixed core and what may change each season."
+  - title: "Plans for strangeness"
+    text: "Expects it to look odd at launch and plans to wait."
+  - title: "Plans the hand-off"
+    text: "Teaches the client team to run the system."
+  - title: "Names a leader"
+    text: "One person who leads decisions."
+  - title: "Checks the set"
+    text: "Runs its own checks and names any missed."
+
+output_shape: |
+  CLIENT STUDY
+  History: <facts> | Audience: <who> | Not working: <what>
+
+  PHASE 1: EXPERIMENTS
+  <typeface, colour and motif trials, on which pieces>
+
+  PHASE 2: REFINEMENT
+  Too alike: <pieces to separate> | Looks wrong: <pieces to fix>
+
+  FIXED CORE
+  <what never changes>
+
+  WHAT MAY CHANGE EACH SEASON
+  <parts that move, by how much>
+
+  TESTED ON
+  <each place the brand appears, with result>
+
+  LAUNCH AND WAIT
+  <what will look strange, how long to wait before judging>
+
+  PHASE 3: HAND-OFF
+  <guide outline, training, who attends>
+
+  DECISION-MAKER
+  <name or role>
+
+  MISSING
+  <facts that would change a phase>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Places it appears"
+    how: "List every one. The test covers only what you list."
+  - what: "What is not working"
+    how: "Be blunt about what fails now. It sets what the experiments must fix."
+  - what: "Seasons"
+    how: "Say if the brand needs to change through the year. The moving parts follow."
+  - what: "Who runs it"
+    how: "Name the people. The hand-off is written for them."
+
+judge:
+  - "It names the fixed core and the parts that move."
+  - "It is tested on every place the brand will appear."
+  - "One decision-maker is named."
+  - "It is odd enough to remember and simple enough to reuse."
+  - "It includes a hand-off guide."
+
+test:
+  - "Mock up three real pieces and check they look like one identity."
+  - "Ask someone on the client team to describe the fixed core back to you."
+  - "Check the plan covers every place on your list."
+  - "Run it twice. The core should stay close."
+
+improve:
+  - "Add your usual list of places to \"What you need\" so none are missed."
+  - "Add the client's past identity changes, so phases account for them."
+  - "Save the hand-off guide in your brand file."
+  - "Pair it with \"Brand mark system planner\" for the mark itself."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning phases and writing a guide outline is text work any strong chat AI does."}
+    - {name: "A shared design file", why: "Figma or similar lets the client team use the fixed core and the moving parts."}
+  inputs:
+    - "Photos of every place the brand will appear"
+    - "The current identity files"
+    - "Past brand changes and how they went"
+    - "Names of those who will run the brand"
+
+terms:
+  - term: "Fixed core"
+    meaning: "The part of the identity that never changes, such as the mark and main colours."
+  - term: "Hand-off"
+    meaning: "Teaching the client team to run the identity themselves."

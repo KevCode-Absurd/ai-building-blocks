@@ -1,0 +1,126 @@
+new_slug: one-change-experiment-planner
+name: "One-change experiment planner"
+summary: "Describe what you want to test. Get a plan that changes one thing at a time and says what each result means."
+job: test-an-idea
+thinking: medium
+thinking_why: "It weighs which factor to test and what each result means, but the steps are fixed."
+
+headline: "One-change experiment planner"
+subhead: Give it the thing you want to learn, such as why sales dipped or whether a new page works. It turns the question into plain terms, picks the one change to test, lists what stays fixed, and says what each result means. You get a test plan.
+
+explain: |
+  Most tests teach nothing because several things changed at once. A new headline, a new price and a new photo go live together, sales rise, and nobody knows which one did it. A vague question makes it worse: "Is the new page better?" has no answer until you say better at what.
+
+  This skill fixes the words first, then lists everything that could affect the result. It picks one thing to change and holds the rest still. It adds a second check that isolates the effect further, writes the no-effect result before you run anything, and says what each outcome would tell you and what to do next.
+
+when:
+  - You changed three things at once and can't say which one worked.
+  - Someone asks "does this work?" and you can't say what working means.
+  - You are about to run a test and want a plan you can follow without second-guessing it.
+
+you_give:
+  - What you want to learn, in a sentence or two
+  - What you can change and what you can measure
+  - A draft plan you already have (optional)
+you_get:
+  - The question rewritten in plain terms, with each term defined
+  - The one change to test and the list of things held fixed
+  - A second check, the no-effect result and what each outcome means
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you want to learn, even if it is vague. Add what you can change and measure.
+  - Answer its questions about what else might affect the result.
+  - Write the no-effect result into your notes before you start the test.
+  - Run one change at a time. Bring back the numbers and ask it what they mean.
+
+how_it_works:
+  - title: Fixes the words
+    text: Writes your question in plain terms and defines each one so everyone means the same thing.
+  - title: Lists what could matter
+    text: Writes every factor that could move the result, from price to timing to who sees it.
+  - title: Picks one change
+    text: Chooses the single factor to test and lists everything else as held fixed.
+  - title: Adds a second check
+    text: Plans a follow-up that isolates the effect further, such as testing the same change on a different group.
+  - title: Names the no-effect result
+    text: States, before any test, what number or outcome would mean the change did nothing.
+  - title: Maps each result
+    text: Writes what each possible result tells you and the named next step for both outcomes.
+  - title: Checks the plan
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  QUESTION
+  Asked as: <the original question>
+  In plain terms: <the question with each term defined>
+
+  WHAT COULD AFFECT THE RESULT
+  <factor 1>
+  <factor 2>
+  ...
+
+  THE ONE CHANGE
+  Change: <the single thing>
+  Held fixed: <list>
+  Measure: <the number, how and when it is read>
+
+  SECOND CHECK
+  <a follow-up that isolates the effect further>
+
+  NO-EFFECT RESULT
+  <what you would see if the change did nothing>
+
+  WHAT EACH RESULT MEANS
+  If <result>: <what it tells you> | Next: <named step>
+  If <result>: <what it tells you> | Next: <named step>
+
+  MISSING
+  <facts that would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How exact the question is
+    how: "Name the number you care about, such as orders per 100 visits. A named number makes the plan far tighter."
+  - what: What you can really control
+    how: List the dials you can turn. It will not plan a change you cannot make.
+  - what: Time and traffic you have
+    how: Say how long the test can run and how many people see it. It sets a fair length and warns if the sample is too small.
+  - what: A draft plan
+    how: Paste it untouched. It points to where two changes are tangled together.
+
+judge:
+  - Exactly one thing changes between the versions being compared.
+  - Every other factor you listed is held fixed or marked as a risk.
+  - The no-effect result is written as a number or an outcome you can see.
+  - Each possible result leads to a named next step.
+  - Terms in the question are defined, not left as "better" or "good".
+
+test:
+  - Run it on a test you ran before that mixed several changes. See if it finds the tangle.
+  - Give it a question where you already know the cause. It should plan a test that would have shown it.
+  - Run it twice on the same question. The chosen change should stay close even if the wording differs.
+  - Run the plan, then check that you could read the result without arguing about it.
+
+improve:
+  - Add the factors that always matter in your work (season, channel, price) to step 2.
+  - Add your usual sample size or test length so it sets a default.
+  - Keep a log of past tests and what they showed, and paste it in next time.
+  - Pair it with "Trial log planner" when you need many cheap tests, not one clean one.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing factors and mapping results is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Keeps the held-fixed list and the results side by side for each run."}
+  inputs:
+    - "Numbers from before the test, so you know the normal range"
+    - "A list of changes already made in the last month"
+    - "The names of who sees each version"
+
+terms:
+  - term: Held fixed
+    meaning: Something you keep the same in every version, so it cannot explain the difference.
+  - term: No-effect result
+    meaning: What you would see if your change did nothing at all.

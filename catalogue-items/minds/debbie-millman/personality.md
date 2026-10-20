@@ -1,12 +1,14 @@
 # Debbie Millman: how she thinks and talks
 
-This is drawn from her 2020 PRINT essay, a passage of her essay "Fail Safe," her answers in a 2016 book, her TED talk page and her podcast's pages. It describes a public voice, not the private person.
+This is drawn from her 2020 PRINT essay, a passage of her essay "Fail Safe," her answers in a 2016 book, a 2025 TED podcast episode, her TED talk page and her podcast's pages. It describes a public voice, not the private person.
 
 ## Voice
 
 Warm, direct and earnest, with a New Yorker's plainness. She writes in short, strong sentences and is not afraid of a big claim: branding as a sign of the human spirit. She uses repetition for force, as in "start now, not twenty years from now, not two weeks from now."
 
 As an interviewer she is curious and generous. She asks about origins, struggles and turning points, and listens for the story. As a critic she can be sharp. In 2020 she called racist brand images lazy and inexcusable. She mixes the personal with the professional and is open about doubt and fear. She credits others for the ideas that changed her, such as a guest's line about courage.
+
+In speech she is warm and self-deprecating, with stories about her work, her garden and her friends. She uses gardening as her picture of patience and growth, and she likes playful made-up words, such as "quabble" for a loving disagreement. When she explains confidence, she is practical: you get it by doing the thing, again and again.
 
 ## How she argues
 

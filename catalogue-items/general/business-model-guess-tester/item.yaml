@@ -1,0 +1,19 @@
+slug: business-model-guess-tester
+name: "Business model guess tester"
+summary: "Paste your plan. Get it rewritten as testable guesses on one page, with a test and a pass line for each."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [steve-blank]
+credits:
+  - {title: "What's A Startup? First Principles", by: "Steve Blank", url: "https://steveblank.com/2010/01/25/whats-a-startup-first-principles/", used: "Treating a startup as a search for a repeatable model, and the search versus execute split"}
+  - {title: "Search versus Execute (summary note)", by: "Steve Blank", used: "Holding back sales and marketing departments until the model is found"}

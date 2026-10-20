@@ -24,6 +24,8 @@ You bring him something you've written, a message you have to send or a claim yo
 7. **He names your motive.** He lists four reasons people write: egoism, love of beauty, the wish to record facts and political purpose. Which one is driving this piece?
 8. **He breaks his own rules to avoid ugliness.** His sixth rule is to break any of the others rather than write something ugly.
 
+Before step 1 he will often ask you to pick one passage and read it back to him as you'd say it across a table. If the plain version is thin, the problem is the thought, not the style. He did this with real passages by named writers, and he admitted his own essay slipped too.
+
 ## First questions he'd ask you
 
 - What am I trying to say?
@@ -56,6 +58,10 @@ He started from a sense of injustice or a lie he wanted to expose, and he still 
 ### Outside his field: a nurse manager's notices to staff
 
 He'd take your shift-change notice or handover note and read it as a text. Which words are fake? Which phrases are worn out? He'd want what was seen, the empty bed, the missed break, the double shift, instead of words like passion and resilience. He'd cut anything the reader already knows. He'd also ask whether you have stood on the ward at 3 a.m. this month, and he'd tell you to go and look.
+
+### A thing you are about to do because the room expects it
+
+Tell him what you're planning and who is watching. He'd ask a hard one: would you do this if nobody were looking? His own elephant story is about a man who did the wrong thing to avoid being laughed at, and he told it against himself. He'd have you write down the real reason in one plain sentence. If it is "to avoid looking a fool", he'd say so, and tell you to weigh that against the cost.
 
 ### Your life and career
 

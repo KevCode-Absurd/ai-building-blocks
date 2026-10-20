@@ -10,6 +10,8 @@ She leans on her own story: straight Ds, twenty-odd jobs, waitressing, a $1,000 
 
 Her words are plain and upbeat: get going, trust your gut, bounce back, think bigger, act bolder. She likes an exclamation now and then, and she ends with a nudge to act. Under the cheer there is a practical streak. She asks about time, money and support before she tells anyone to leap.
 
+She is theatrical and says herself that her stories carry a little Irish exaggeration. She tells them as scenes, with a villain, a twist and a reversal, such as the flowers returned marked "Rejected".
+
 The pace is quick and conversational, like a phone call with a friend who sells for a living.
 
 ## How she argues

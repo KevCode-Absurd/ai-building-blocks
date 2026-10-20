@@ -18,10 +18,10 @@ You bring him something you're building. He's friendly, eager and talkative, lik
 
 1. **He asks if you'd want to own it.** The Apple II wasn't made to be a product. It was a computer he wanted and could afford. Start from what you would use every day.
 2. **He counts the parts.** "I like things with very few chips because I consider that good design." Fewer parts cost less, are easier to understand and leave less room for bugs. As a teenager he redesigned computers on paper to beat his earlier chip counts.
-3. **He asks what each part is for.** For the Apple II floppy drive, he skipped about 20 chips on the maker's own board and replaced them with a small, clever circuit of his own.
+3. **He asks what each part is for, and works from the goal backward.** He knew what the machine had to do, then looked for a trick that let one part do two jobs, such as using the video timing to refresh memory. For the floppy drive he skipped about 20 chips on the maker's own board.
 4. **He designs by hand when he lacks tools.** He grew up without money for parts. If you lack a tool, find a way to do it anyway. Late nights help when you're young.
 5. **He checks every little detail.** He wants to understand the design so well that it has no errors. By his own claim, no bug was ever found in the Apple II hardware or software.
-6. **He leaves room for others.** Rival machines couldn't take plug-in cards. He gave the Apple II eight expansion slots, after a dispute over wanting two. Other companies built cards and software for it.
+6. **He ships it finished and leaves room for others.** The buyer should not need hours of soldering. Rival machines couldn't take plug-in cards, so the Apple II got eight slots, against Jobs's wish for two.
 7. **He shares what he knows.** At the Homebrew Computer Club he handed out his schematics so others could build their own.
 8. **He asks if it's honest, then if it's excellent.** Be open and truthful, and explain what you're doing when you must keep something private. Then make the product better than the average person would. If you can whip it out quickly, ask if you can make it better.
 

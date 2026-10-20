@@ -1,0 +1,129 @@
+new_slug: real-feeling-checker
+name: "Real feeling checker"
+summary: "Paste a story or ad. Get a score out of 100, the fakes it uses and a fix."
+job: design-work
+thinking: high
+thinking_why: "It judges sincerity and spots fakes in text, and each call needs a quote as evidence."
+
+headline: "Real feeling checker"
+subhead: "Give it a story, ad, talk or design brief and the feeling it should pass on. It tests whether the feeling comes through, checks four fakes and rates sincerity, clarity and individuality. You get a score out of 100, where it fails and a simpler version."
+
+explain: |
+  Polished work can still feel empty. The writing is smooth, the design is sharp, and nobody feels anything. The usual causes are copied looks, a pile of accurate detail, a shock added for effect, or a puzzle that is interesting but carries no feeling. The maker also may not have felt it at all and is working to a deadline.
+
+  This skill names the one feeling the piece should pass on, then tests it. It asks if the maker lived the feeling, checks each of four fakes with a quote from the piece, and rates three conditions: individual, clear and sincere. It marks where the feeling is lost and suggests the plainest way to say it.
+
+when:
+  - "A piece is well made but leaves people cold, and you cannot say why."
+  - "You are about to publish a founder story, brand film or speech and want to know if it rings true."
+  - "A design brief has lots of effects and no clear feeling."
+
+you_give:
+  - "The story, ad, talk or design brief to check"
+  - "The feeling you meant to pass on, if you know it (optional)"
+  - "Who it is for (optional)"
+  - "What the maker lived through that led to it (optional)"
+you_get:
+  - "The feeling named in one word"
+  - "A score out of 100 with its working"
+  - "Each of four fakes marked yes or no, with a quote"
+  - "Where the feeling is lost, and a simpler rewrite of one passage"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the piece. Say the feeling you meant, if you can."
+  - "Tell it, in a line or two, what the maker actually went through. It judges sincerity first."
+  - "Read each flagged quote aloud and decide if you agree."
+  - "Rewrite the flagged passages in the plainest way, using its suggestion as a model."
+  - "Run it again and check the score rose."
+
+how_it_works:
+  - title: "Names the feeling"
+    text: "One word for what the piece should pass on."
+  - title: "Asks if it was lived"
+    text: "Judges whether the maker felt it or is working for money or show."
+  - title: "Tests four fakes"
+    text: "Borrowed look, piled-up detail, shock or effect, and puzzle or news value."
+  - title: "Scores three conditions"
+    text: "Individual, clear and sincere."
+  - title: "Marks the loss"
+    text: "Points to where the feeling is lost."
+  - title: "Finds the plain way"
+    text: "Suggests the simplest way to say it."
+  - title: "Rewrites one passage"
+    text: "Shows it as a plain, simple case."
+  - title: "Checks the set"
+    text: "Runs its own checks and names any missed."
+
+output_shape: |
+  FEELING
+  <one word>
+
+  SINCERITY FIRST
+  <did the maker live it, yes / unclear / no> because <reason>
+
+  FAKES
+  Borrowed look: <yes or no> | quote: "<short quote>"
+  Piled-up detail: <yes or no> | quote: ...
+  Shock or effect: <yes or no> | quote: ...
+  Puzzle or news value: <yes or no> | quote: ...
+
+  SCORE
+  <n> out of 100 = sincere <n>/40 + clear <n>/20 + individual <n>/20 + fakes absent <n>/20
+
+  WHERE THE FEELING IS LOST
+  <place> because <reason>
+
+  THE PLAINEST WAY
+  <rewritten passage>
+
+  MISSING
+  <what would change a call>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The feeling"
+    how: "Name one feeling, such as relief or pride. A piece meant to pass on three at once is hard to check."
+  - what: "What the maker lived"
+    how: "Even two lines on the real experience behind it helps the sincerity call."
+  - what: "Who it is for"
+    how: "Say if it is for everyone or insiders. A piece that only experts can follow fails a clarity test."
+  - what: "Which piece"
+    how: "Give one piece at a time. A long set blurs the quotes."
+
+judge:
+  - "The feeling is named in one word."
+  - "Each fake is marked yes or no with a quote from the piece."
+  - "Sincerity is judged first."
+  - "The fix makes the piece simpler, not fancier."
+  - "The score shows its working."
+
+test:
+  - "Run it on a piece you know is sincere and one you wrote to order. See if the scores differ."
+  - "Give the flagged passage to someone and ask what they feel. Compare with the named feeling."
+  - "Run it twice. The named feeling should stay the same."
+  - "Rewrite a flagged passage, run it again and check the score moved."
+
+improve:
+  - "Add your brand's true stories to \"What you need\" so it can judge sincerity against facts."
+  - "Add words your brand avoids to the fake test for borrowed looks."
+  - "Keep a list of passages that passed, as models for your team."
+  - "Pair it with \"Design brief rules writer\" to turn the fix into a brief."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading a text and judging it against fixed tests suits any strong chat AI."}
+    - {name: "A person who was there", why: "Only someone who lived it can say if the piece is true to it."}
+  inputs:
+    - "The maker's own notes on what happened"
+    - "The audience description"
+    - "Earlier versions of the piece"
+    - "Comments from people who read it"
+
+terms:
+  - term: "Fake"
+    meaning: "Something that looks like feeling but carries none, such as copying an older look."
+  - term: "Sincere"
+    meaning: "Made by someone who really felt it, not for money or show."

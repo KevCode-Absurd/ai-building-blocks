@@ -1,0 +1,129 @@
+new_slug: peer-feedback-session-planner
+name: "Peer feedback session planner"
+summary: "Paste the stuck project and who could review it. Get a session plan with rules so notes stay honest."
+job: lead-people
+thinking: medium
+thinking_why: "It chooses who to invite and sets rules from judgement, but the session shape is fixed."
+
+headline: "Peer feedback session planner"
+subhead: Describe a project that is stuck and the people who could review it. It picks reviewers who have faced the same problem, sets rules that keep notes honest, and plans the session and the follow-up. You get a plan the owner can run.
+
+explain: |
+  When a project goes wrong, people tell the boss what they think the boss wants to hear. Reviewers who have power over the owner hold back, and a polished draft hides the real problem. The work stays stuck while everyone is polite.
+
+  This skill sets up a review where the notes can be honest. It chooses peers who have met the same kind of problem, not bosses or rivals. It asks the owner to share rough work, keeps the most senior people quiet for the first part, and sets one rule: notes say what is not working, not how to fix it. The owner keeps every decision. It also adds a check on whether the team still believes the problems can be solved, and a follow-up date.
+
+when:
+  - A project has stalled and the team keeps showing only polished updates.
+  - You want a review where people say what they really think without fear.
+  - You manage a creative or complex team and need a repeatable way to get notes.
+
+you_give:
+  - The stuck project and what stage it is at
+  - The people who could review, with their role and what they have done before
+  - A rough draft or description of the work (optional)
+  - Your time limit and where the session will happen
+you_get:
+  - A list of reviewers chosen, with anyone left out and the reason for each
+  - The session plan, with rules, timings and who speaks when
+  - A form for notes that records problems, not fixes
+  - A follow-up date and the question to ask then
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the project, where it is stuck and who the owner is.
+  - List possible reviewers with their role and any power they have over the owner.
+  - Give the owner the plan and the rules before the session.
+  - Bring the notes back to the skill after the session to plan the follow-up.
+
+how_it_works:
+  - title: Picks the peers
+    text: Chooses reviewers who have faced the same kind of problem and have no power over the owner.
+  - title: Asks for rough work
+    text: Sets the owner to share what exists now, not a polished version.
+  - title: Keeps seniors quiet
+    text: Plans the first 10 to 15 minutes without the most senior people speaking.
+  - title: Sets the note rule
+    text: Notes say what does not work, about the work and not the person, with no fixes.
+  - title: Protects the owner
+    text: States that the owner decides what to change.
+  - title: Checks belief
+    text: Asks whether the team still believes the problems can be solved.
+  - title: Plans follow-up
+    text: Sets a date a few weeks out to ask what changed.
+
+output_shape: |
+  THE PROJECT
+  <project, stage, owner, where it is stuck>
+
+  REVIEWERS
+  <name or role> | Why: <same problem faced> | Power over owner: <none or note>
+
+  LEFT OUT
+  <name or role> | Why: <boss, rival or other>
+
+  SESSION PLAN
+  Length: <minutes>   Where: <place>
+  <time> | <what happens> | <who speaks>
+
+  RULES
+  1. <rule>
+
+  NOTE FORM
+  Problem: <what does not work>   Where: <place in the work>
+
+  OWNER'S DECISION
+  <what the owner will change, left blank>
+
+  FOLLOW-UP
+  Date: <date>   Ask: <question>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Who is on the list
+    how: Give each person's role and how much power they have over the owner. The skill uses this to leave people out.
+  - what: How rough the work is
+    how: Say what the owner is willing to show. The plan starts from the real state of the work.
+  - what: Time available
+    how: Give the minutes you have. The plan fits the rules into that time.
+  - what: Past reviews
+    how: Describe what went wrong before, such as bosses talking first. The rules are made to prevent that.
+
+judge:
+  - Every reviewer is a peer with no power over the owner.
+  - The senior voices wait.
+  - The notes describe problems, not fixes.
+  - The owner keeps the decision.
+  - A follow-up date and question are set.
+
+test:
+  - Use it for a small project first. Ask the owner whether the notes felt honest.
+  - Compare the notes with the ones you got in your last review. Count how many named a real problem.
+  - Run it twice for the same project with different peers and see what the notes have in common.
+  - At the follow-up, check what the owner changed and why.
+
+improve:
+  - Add the names of peers in your area who have solved similar problems.
+  - Add a rule that suits your team, such as notes written first and read aloud.
+  - Keep a list of what each review changed, so you can show it works.
+  - Pair it with a conversation planner when a note needs a private talk.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Turning a project and a list of people into a plan is text work any strong chat AI does well."}
+    - {name: "A shared document", why: "Reviewers write problem notes in one place the owner can read afterwards."}
+  inputs:
+    - "A rough draft or the current state of the work"
+    - "A list of who has power over whom"
+    - "Notes from the last review"
+
+terms:
+  - term: Peer
+    meaning: Someone at your level who does similar work and has no say over your pay or job.
+  - term: Note
+    meaning: A short statement of what does not work in the piece of work, without saying how to fix it.

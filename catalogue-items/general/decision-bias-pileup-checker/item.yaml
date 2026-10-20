@@ -1,0 +1,18 @@
+slug: decision-bias-pileup-checker
+name: "Decision bias pile-up checker"
+summary: "Describe a decision you are about to make. Get the pressures bending your judgment, and a calmer version of the choice."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, daniel-kahneman]
+credits:
+  - {title: "The Psychology of Human Misjudgment (revised 2005)", by: "Charles T. Munger", used: "The list of mind tricks (incentives, reciprocation, consistency, social proof, fear of loss) and the idea that several of them pushing one way can overwhelm judgment"}
+  - {title: "The Marvels and the Flaws of Intuitive Thinking (Edge Master Class)", by: "Daniel Kahneman", used: "The tests for when to trust a gut call: whether the field gives regular practice and fast feedback, and whether confidence comes from a neat story or a record"}

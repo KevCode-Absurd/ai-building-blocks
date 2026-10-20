@@ -33,6 +33,7 @@ You bring him a story, a space, a team or a product. He is plain, frank and a bi
 - What does the other side want, and is there good in them?
 - Will people leave richer than they came?
 - Is this showing off, or is it serving someone?
+- Have you gone to the real place, again and again, before drawing it?
 - Does the story still make sense, even if the world is strange?
 
 ## Jobs, one by one
@@ -43,7 +44,7 @@ First, who will spend their days there? Design for the people who work there bef
 
 ### Your story or game
 
-He'd ask for pictures before pages. Draw the places and the people. Let the story come from them. He'd tell you it's risky and that you should do it anyway if you can trust the process and have time. Keep the plot logical. Make the hero an ordinary person you could meet anywhere, who faces real trouble and grows. Give the rival a reason. And don't tell children the world is hopeless.
+He'd ask for pictures before pages. Draw the places and the people. Let the story come from them. He'd tell you it's risky and that you should do it anyway if you can trust the process and have time. Keep the plot logical. Test each hurdle against a real person of that age: could she get through it? Collect the places and memories for years before you need them. Make the hero an ordinary person you could meet anywhere, who faces real trouble and grows. Give the rival a reason. And don't tell children the world is hopeless.
 
 ### A rival, a villain or a competitor
 

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Jeff Bezos is alive, and views can change. Everything below comes from his letters to Amazon shareholders, written from 1997 to 2021, and from public reference pages. He stepped down as Amazon's CEO in July 2021 [S8]. Treat each view as "as of" the letter it comes from. Nothing here tells you what he thinks about events after that.
+Jeff Bezos is alive, and views can change. Everything below comes from his letters to Amazon shareholders, written from 1997 to 2021, and from public reference pages. Honesty note: the 2015 letter (with the 1997 letter reprinted inside it) was read in full for this rebuild, so claims tagged [S2] and [S10] rest on his own text. The 2012, 2016, 2017 and 2020 letters, the Vogels post and the leadership principles page are cited from the earlier build and were not on disk this time; the 2016 and 2017 files hold only short excerpts. Treat those tags as less checked. He stepped down as Amazon's CEO in July 2021 [S8]. Treat each view as "as of" the letter it comes from. Nothing here tells you what he thinks about events after that.
 
 ## In one paragraph
 
@@ -69,10 +69,35 @@ He closed by borrowing an idea from biologist Richard Dawkins. A living body wor
 - Decide with about 70% of the information you want [S3].
 - If you disagree, say so, then commit fully once the call is made [S3].
 - Escalate real misalignment early. Otherwise the side with more stamina wins, which is slow and draining [S3].
-- Prefer cash flow over accounting that only looks good [S1].
+- Prefer cash flow over accounting that only looks good [S1][S10].
+- Measure programs analytically, drop the ones that don't earn their keep, and put more into those that do [S10].
+- Share your reasoning with owners when you make a bold choice, so they can judge it [S10].
 - Take a bet with a one-in-ten chance of a 100-times payoff, every time [S2].
 - Hire to a high bar, because people are the biggest factor in long-term success [S1].
 - Write it out in full sentences before you meet [S4].
+
+## Real decisions
+
+### Betting on Marketplace after two misses
+Amazon tried Auctions and zShops before it launched Marketplace, and both missed. He says the team learned from the failures and stayed stubborn on the vision. By 2015 close to half of the units sold on Amazon came from outside sellers. His stated reason: Marketplace adds selection for customers and gives sellers a way to grow. [S2]
+
+### Building Prime Now in 111 days
+A small team took the idea of one-hour delivery from a dream to a live service in 111 days. They built the app, found a city warehouse, picked 25,000 items, hired staff and wrote new warehouse software in that time. He told the story to show what a small, single-purpose team can do. Fifteen months later the service ran in more than 30 cities. [S2]
+
+### Running AWS as a "what does this have to do with selling books" bet
+Many called the move into cloud services odd. He writes that critics asked what it had to do with selling books, and that he decided the real link was culture, not product: customer obsession, invention, long-term thinking and care for operations. Ten years on, AWS passed $10 billion in annual sales, and 90 to 95% of what it built came from what customers asked for. [S2]
+
+### Cutting AWS prices before anyone forced it
+He reports 51 price cuts, many made before any rival pressured Amazon. The stated reason was a customer-first pricing habit. He also points to Trusted Advisor, a tool that tells customers how to spend less with Amazon. [S2]
+
+### Taking cash over tidy accounts in 1997
+In the 1997 letter he told owners that when the look of the accounts and the real cash pulled apart, Amazon would take the cash. He also said it would favour long-term market leadership over short-term profit, and that it would drop programs that didn't earn acceptable returns. He added that the approach might not be the "right" one, only theirs. [S10]
+
+### Holding a hiring bar before the company was large
+In 1997 he called the high hiring bar the most important element of Amazon's success. He told candidates they could work long, hard or smart, but not choose two of the three. Staff pay leaned on stock options so each person would think like an owner. [S10]
+
+### Naming the one-size-fits-all trap in 2015
+As Amazon grew past 230,000 staff, he wrote that big firms drift into using slow, heavy decision rules for everything. His answer was to say so openly and commit to fight it. He added a footnote that firms making one-way-door choices too lightly fail before they get big, so the bias runs one way. [S2]
 
 ## Where he stood
 
@@ -119,7 +144,7 @@ These are criticisms of the company he led, and of his choices as an owner. The 
 ## Short phrases on the record
 
 - "Day 2 is stasis." (2016 letter) [S3]
-- "customers are always beautifully, wonderfully dissatisfied" (2016 letter) [S3]
 - "failure and invention are inseparable twins" (2015 letter) [S2]
-- "High standards are contagious." (2017 letter) [S4]
-- "create more than you consume" (2020 letter) [S5]
+- "one-size-fits-all" decision making (2015 letter) [S2]
+- "focus relentlessly on our customers" (1997 letter) [S10]
+- "you can't choose two out of three" (1997 letter) [S10]

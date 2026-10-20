@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "10 effectiveness tips from adam&eve DDB London's guru, Les Binet (2016)", by: "Communicate Online", url: "https://communicateonline.me/news/10-effectiveness-tips-from-adameve-ddb-londons-guru-les-binet/", kind: secondary}
   - {n: 5, title: "Les Binet leaves Adam & Eve/DDB (2025)", by: "Daily Research News Online", url: "https://www.mrweb.com/drno/printable/pn37887.htm", kind: reference}
   - {n: 6, title: "Les Binet (speaker biography)", by: "The Conference Board", url: "https://www.conference-board.org/bio/les-binet", kind: reference}
+  - {n: 7, title: "The long and the short of it: 10 key principles of success (summary presentation)", by: "Les Binet and Peter Field, IPA", url: "https://ipa.co.uk/media/14463/long_and_short_of_it_presentation_final_030424.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Draft a one-page marketing budget plan for a regional coffee chain with a fixed budget, split between brand building and sales activation, with reasons."}
   - {kind: use, prompt: "Explain to my finance director, in plain words, why our clicks report may be overstating what our ads achieve."}

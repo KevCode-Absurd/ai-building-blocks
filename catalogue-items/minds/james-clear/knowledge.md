@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-James Clear is alive, and views can change. This data set comes mostly from his own articles and pages on jamesclear.com, which he has written since 2012, plus Wikipedia pages on him and on Atomic Habits. Most of his articles show no date, so we date his main ideas to the period around Atomic Habits (2018). Sales figures differ between sources and change over time, so treat them as "as of" the page they come from. Nothing here tells you what he thinks about events after 2026.
+James Clear is alive, and views can change. This data set comes mostly from his own articles and pages on jamesclear.com, which he has written since 2012 [S3][S4][S5][S6][S7][S8][S9], plus Wikipedia pages on him and on *Atomic Habits* [S1][S2]. We opened the essays on goals and systems, identity, the two-minute rule and the *Atomic Habits* summary in full, and used earlier study notes for the rest. Most of his articles show no date, so we date his main ideas to the period around *Atomic Habits* (2018). Sales figures differ between sources and change over time, so treat them as "as of" the page they come from. Nothing here tells you what he thinks about events after 2026.
 
 ## In one paragraph
 
@@ -69,6 +69,26 @@ How he applied it: by his own count, his site has over 250 articles, and his wee
 - Do more of what works, and cut small losses [S6].
 - Measure against what you really did last week [S6].
 - Show up first; optimise later [S8].
+
+## Real decisions
+
+### He gave up goals as the main tool
+He set goals for grades, lifts and business profit and says some were met and many missed. He also caught himself putting off happiness: he would relax only after gaining muscle or winning press [S4]. His conclusion was that goals set direction and systems make progress. He still kept goals, for planning [S4].
+
+### He used a cycling team as the proof
+He cited a British cycling team that won through many small improvements, not through a new target, since rival teams wanted the same win [S4][S6]. He also cited a coach who focused on daily practice, not the championship [S4].
+
+### He chose identity as the place to start
+He describes change as three layers: outcomes, processes and identity. Most people start with outcomes. He starts with the type of person you want to be and then proves it with small wins, like walking fifty steps after work, one paragraph a week, or a call to one friend each Saturday [S5].
+
+### He shrank the first step under two minutes
+He ranks versions of a goal from easy to hard, from a marathon down to putting on running shoes, and picks the easiest as the gateway habit [S8]. A reader who began with five minutes at the gym later stayed longer and lost over a hundred pounds [S8]. His line: standardise before you optimise [S8].
+
+### He wrote the four laws and flipped each one
+For a good habit: make the cue obvious, the craving attractive, the response easy and the reward satisfying. For a bad habit, invert each [S9]. He wanted rules short enough to remember and use at the moment of choice [S9].
+
+### He conceded the other side
+He says plainly that none of this means goals are useless, and he answers the strongest objection before the reader raises it [S4].
 
 ## Where he stood
 

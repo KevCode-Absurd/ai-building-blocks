@@ -1,0 +1,121 @@
+new_slug: raw-cost-breakdown-finder
+name: "Raw cost breakdown finder"
+summary: "Name something you buy or sell. Get its price broken into raw parts and costs, and the biggest gaps to go after."
+job: plan-strategy
+thinking: high
+thinking_why: "It builds a cost model from scratch, judges which gaps are real and ranks moves with uncertain numbers."
+
+headline: "Raw cost breakdown finder"
+subhead: Name something you buy or sell, and the price you pay or charge. It lists what the thing is made of or how it is made, prices each raw part from open sources, compares the sum with the price and finds the biggest gaps. You get a cost table and ranked moves.
+
+explain: |
+  Prices are often set by habit: what the last supplier charged, what a rival charges, what the quote said. The total can sit far above what the raw inputs cost. The gap may be fair (labour, scale, risk, margin) or it may be an old habit nobody has questioned.
+
+  This skill starts from what the thing is physically made of, or the steps that make it. It prices each raw input from open sources, adds them up and compares the result with the price. It marks where the gap is largest and asks why it exists: scale, habit, margin or a real limit. It then suggests two moves to close the biggest gap: make it yourself, buy elsewhere or redesign. Every number carries a source or is marked as an estimate.
+
+when:
+  - A supplier quote or a monthly bill keeps rising and you do not know if it is fair.
+  - You are pricing a new product and want to know how much of your price is real cost.
+  - You are choosing between buying, making or redesigning something you use a lot.
+
+you_give:
+  - The thing you buy or sell, and the price you pay or charge (required)
+  - Product facts such as size, materials, volume (optional)
+  - Your quantity per month or year (optional)
+  - Any supplier quote or invoice (optional)
+you_get:
+  - A table of raw inputs or steps with a cost and source for each
+  - The raw cost total and the gap to the price paid, as a number
+  - The biggest gaps with a reason for each, from scale, habit, margin or a real limit
+  - Two ranked moves to close the biggest gap
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name the thing, the price and how much you buy or sell. Paste any quote you have.
+  - If your AI can search, ask it to use open sources for raw prices. If not, add prices you know.
+  - Check every line marked as an estimate with a real quote before you act.
+  - Pick one move and test it on a small order.
+
+how_it_works:
+  - title: Name the price
+    text: Writes down the thing, the unit and the price paid or charged.
+  - title: List the parts
+    text: Lists what it is physically made of or the steps that make it.
+  - title: Price each input
+    text: Prices every raw input from open sources and marks estimates.
+  - title: Add it up
+    text: Sums the raw cost and compares it with the price as a number.
+  - title: Find the gap
+    text: Marks where the difference is largest.
+  - title: Ask why
+    text: For each large gap, decides whether it comes from scale, habit, margin or a real limit.
+  - title: Two moves
+    text: Suggests two moves to close the biggest gap, from making it yourself, buying elsewhere or redesigning.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE THING
+  <item> | Unit: <unit> | Price: <amount>
+
+  RAW BREAKDOWN
+  <input or step> | Quantity: <q> | Cost: <amount> | Source: <source or ESTIMATE>
+
+  TOTALS
+  Raw cost: <amount> | Price: <amount> | Gap: <amount and percent>
+
+  WHERE THE GAP IS
+  1. <part of the price> | Why: <scale / habit / margin / real limit> | Evidence: <fact>
+
+  TWO MOVES
+  1. <move> | Saves about: <amount> | Effort: <low / medium / high> | Risk: <risk>
+
+  MISSING
+  <what would sharpen the numbers>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Unit and volume
+    how: Give the unit and how many you use. A gap per unit means more at 10,000 a year than at 10.
+  - what: What counts as raw
+    how: Say how far down to go. Flour and eggs, or wheat and hens. Stop where you could not act.
+  - what: Open sources
+    how: Name where prices should come from, such as a commodity index or a supplier list.
+  - what: Real limits
+    how: Tell it about rules, safety standards or contracts that cannot change, so they are kept out of the "habit" gap.
+
+judge:
+  - Every cost line has a source or is marked as an estimate.
+  - The gap is shown as a number, not a feeling.
+  - Real limits are separated from habit.
+  - The moves are ranked by size of gap and ease.
+  - Costs not in your input are marked MISSING, not guessed.
+
+test:
+  - Run it on something where you already know the true cost. Check that the totals are close.
+  - Replace each estimate with a real quote and see which line changes the answer most.
+  - Run it twice. The biggest gap should stay the same.
+  - Ask your supplier about the biggest line. Their answer tells you if it is habit or a real limit.
+
+improve:
+  - Add your usual cost buckets, such as freight and packaging, so none is forgotten.
+  - Save the raw price sources you trust in your notes so the skill uses them first.
+  - Add a rule for how much risk you will take on a switch.
+  - Pair it with "Staged product ladder planner" if a move needs several steps.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Building and checking a cost table is text and number work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Easier to change quantities and prices and see the gap move."}
+  inputs:
+    - "A supplier quote with a line-by-line breakdown"
+    - "Your last three invoices for the item"
+    - "A bill of materials or a list of steps"
+
+terms:
+  - term: Raw input
+    meaning: A basic material or step the thing is made from, priced as close to the source as you can.
+  - term: Gap
+    meaning: The difference between the raw cost and the price paid.

@@ -17,12 +17,12 @@ You bring him a name, a headline or a design that feels crowded. He looks for th
 
 1. **He asks if the letters can say it alone.** Type can hold both the message and the picture in one image. He tries that before he adds a picture.
 2. **He asks what the word means.** Then he asks whether its shape could act that out, by stacking, leaning, sinking or running off the page.
-3. **He sketches many times.** Fast pen sketches on layers of tracing paper, long before a computer. He argues with drawings, not theory.
+3. **He sketches on tissue.** Fast pen sketches that set where each element sits, then a fresh sheet laid over to refine it, with notes on typeface, size and weight. He argues with drawings, not theory.
 4. **He fits the typeface to the idea.** Down to small details, such as flat tops and bottoms so stacked lines can butt together. He admits it is splitting hairs, and says that is what good design is about.
 5. **He cuts the second idea.** Two solutions in one design cancel each other out. A prop that isn't needed comes out.
-6. **He adjusts spacing by hand.** Letter heights and gaps, by eye, until the word looks like one shape.
+6. **He adjusts spacing by hand.** He considers the tracking of every line, cuts into the letters with a blade to change gaps and the height of ascenders and descenders, and will change a word if that makes the shape fit.
 7. **He weighs impact against legibility.** He knows researchers dislike distorted type. If the excitement of a fresh image earns back what it costs in easy reading, he keeps it. If it doesn't, he pulls back.
-8. **He judges it like a stranger would.** He looks at his own past work as harshly as anyone's, and asks what he'd take out if he had to do it all over again.
+8. **He judges it like a stranger would.** He looks at his own past work as harshly as anyone's. He tests it against three things: one clear idea, no second emphasis fighting the first, and a typeface that suits the shape and the era of the subject. Then he asks what he'd take out if he had to do it all over again.
 
 ## First questions he'd ask you
 
@@ -46,7 +46,7 @@ He'd go for the bold, plain move. His 1964 cover of Fact had no pictures, just o
 
 ### Your own old work
 
-This is a job he did on himself. In 1978 he redrew a set of his 1966 posters and wrote down what was wrong with each. In one, two solutions fought, so he cut one. In another, a prop wasn't needed, so he removed it. He turned a letter on its side in a third and said it overplayed an idea that already worked. He'd have you do the same: pull out the old piece, list the faults in plain words, fix each one, and keep the before and after side by side. He'd tell you to be blunt. Nobody else will be as hard on it as you should be.
+This is a job he did on himself. In 1978 he redrew eight of his 1966 posters and wrote down what was wrong with each. On the poster about excess, two solutions fought, so he cut the straw. On the poet poster, the quill was a prop the word didn't need. On the old age poster, he said too much was too little, and took out the rocking chair. On the "mouth" poster, he said he had overemphasised an already emphatic idea. He also noted that his first picks had been limited by the competition he entered. He'd have you do the same: pull out the old piece, list the faults in plain words, fix each one, and keep the before and after side by side. He'd tell you to be blunt. Nobody else will be as hard on it as you should be.
 
 ### Impact or easy reading
 

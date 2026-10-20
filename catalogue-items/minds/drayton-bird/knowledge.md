@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Drayton Bird is alive as far as our sources show, and views can change. He was born in August 1936, according to the UK company register [S10]. This data set comes from his blog posts (2011 to 2020), interviews he gave in 2011, around 2018 and 2024, his firm's own pages, and short biographies [S1][S2][S3][S4][S7][S8]. The podcast transcript has gaps, so read its wording as close to his, not exact [S1]. His best-known book, *Commonsense Direct Marketing*, isn't quoted here; we rely on a review of it [S11]. Treat each view as "as of" the date of its source.
+Drayton Bird is alive as far as our sources show, and views can change. He was born in August 1936, according to the UK company register [S10]. This data set comes from his blog posts (2011 to 2020), interviews he gave in 2011, around 2018 and 2024, his firm's own pages, and short biographies [S1][S2][S3][S4][S7][S8]. The podcast page transcript has gaps, so read its wording as close to his, not exact [S1]. We also read a machine transcript of the full audio of that interview, which is unchecked and may mishear names and numbers, so we use it only for the gist of his method and stories [S12]. His best-known book, *Commonsense Direct Marketing*, isn't quoted here; we rely on a review of it [S11]. Treat each view as "as of" the date of its source.
 
 ## In one paragraph
 
@@ -65,6 +65,34 @@ How he applied it: his 2011 checklist for choosing an agency ends with a paid te
 Bird values checklists. The review of his book singles out a chapter of them for checking packages and campaigns [S11]. In 2020 he praised Clayton Makepeace's 64-point checklist and said following it would make failure very hard. He added that it takes skill, diligence and effort that few writers have [S6].
 
 How he applied it: he treats a checklist as a way to catch what talent misses. You still need to know the trade to use it [S6].
+
+## Real decisions
+
+These come from stories he told in a 2019 interview. They are his telling, not checked history.
+
+### The swimming pool offer
+
+Bird tells of his work for a swimming pool seller who listed health, sunshine and home value as reasons to buy. Bird asked a different question: why do people swim? Because they like to swim. He then asked whether a slightly longer, narrower pool would cost more. It would not, so the offer became four extra feet of pool [S12]. The lesson he draws is that a copywriter who wants to be extra good has to think about the business, not only the words [S12].
+
+### Making the brief the gate
+
+He repeats a line from an Ogilvy colleague in Australia: the three reasons creative work fails are the brief, the brief and the brief [S12]. His agency would not help a client who did not fill in the briefing template, which asks what you did before, whether it worked, who buys, who doesn't, why and when [S12].
+
+### Treating the internet as old direct marketing
+
+He says the customer you want is like the customer you have, and people pass things to friends who resemble them. That is why member-get-member schemes work, and why he sees the internet as the same process, sped up [S12].
+
+### Judging a client's TV spot
+
+Asked about a client's long, handsome TV spot, he said it ran too long and the agency seemed more interested in awards than sales. His fix was a shorter cut, or the format he says tests best on television, a presenter talking to camera, in a health setting dressed like a doctor, because people trust doctors. He pointed to a long US spot with a clumsy presenter that he bet made money because it felt sincere [S12].
+
+### Keeping clients in mind between jobs
+
+From watching Ogilvy, he learned to keep a client in mind between jobs, and to send a note when a trip turned up something that fits their business [S12]. From an older partner he took the rule never to part from someone in business on terms that stop you working with them again [S12].
+
+### Hiring odd, broad people
+
+He looks for broad, odd, interesting people. He tells of an art director who started his own mail order business to understand what he was supposed to do, and later won top creative director in Asia three years running. He assumes anyone who can do creative work can write a bit of copy and set a layout [S12]. The layouts that work, he says, are the classic ones: a big square picture, headline under it, a caption, narrow columns, a dropped first letter and cross-heads [S12].
 
 ## How he decides
 

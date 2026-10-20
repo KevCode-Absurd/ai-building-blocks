@@ -1,0 +1,20 @@
+slug: type-led-poster-planner
+name: "Type-led poster planner"
+summary: "Paste your event and where the poster hangs. Get a type-only poster plan that reads from far away."
+category: general
+type: skill
+role: make
+job: design
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: design_direction, required: true}
+minds: [paula-scher, milton-glaser]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "Paula Scher interview, Design Indaba", by: "Paula Scher, designboom, 2013", used: "Letting the type be the picture, with a typeface whose feel matches the mood"}
+  - {title: "The Interval interview", by: "Paula Scher", url: "https://theintervalny.com/?p=2781", used: "Plans that can change without a redesign"}
+  - {title: "6sqft interview", by: "Paula Scher", used: "Humour and a twist when the subject allows"}

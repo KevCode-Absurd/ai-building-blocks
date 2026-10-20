@@ -26,6 +26,7 @@ sources:
   - {n: 4, title: "Oprah Winfrey", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Oprah_Winfrey", kind: reference}
   - {n: 5, title: "Oprah's Book Club", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Oprah%27s_Book_Club", kind: reference}
   - {n: 6, title: "The Oprah Winfrey Show", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Oprah_Winfrey_Show", kind: reference}
+  - {n: 7, title: "Oprah Winfrey's 2008 Stanford commencement address, transcript", by: "Oprah Winfrey, The Singju Post", url: "https://singjupost.com/oprah-winfreys-2008-stanford-commencement-address-transcript/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write five interview questions for a local podcast guest who runs a food bank, so she feels truly heard."}
   - {kind: use, prompt: "Write a two-minute opening for a community event that makes everyone in the room feel welcome."}

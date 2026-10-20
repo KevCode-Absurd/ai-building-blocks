@@ -1,0 +1,117 @@
+new_slug: scene-turn-checker
+name: "Scene turn checker"
+summary: "Paste a scene list or outline. Get each scene marked for what changes and which choice changes it, with weak scenes flagged."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It judges every scene against the same few questions, which takes steady attention."
+
+headline: "Scene turn checker"
+subhead: "Paste a scene list or outline. It marks what changes in each scene and which character choice causes it, checks that choices cost something and that set-ups pay off, flags scenes where nothing turns and proposes cuts, merges or a sharper turn."
+
+explain: |
+  A scene list can look full and still be dead. Scenes happen, people talk, and the situation at the end is the same as at the start. The reader feels the story is walking in place.
+
+  This skill goes through the list scene by scene. For each it writes what changes, in one line, and the choice a character makes that causes the change. It checks that the choice costs the character something, since a choice with no price shows nothing about who they are. It checks that every set-up has a pay-off later, and every pay-off has a set-up. Scenes where nothing turns are flagged, and each gets a fix: cut it, merge it or sharpen the turn. It gives a score for the share of scenes that pass.
+
+when:
+- "Your outline is long and you suspect some scenes do nothing."
+- "Your story feels slow in the middle."
+- "You are cutting a script to length and need to know which scenes to lose."
+
+you_give:
+- "Your scene list or outline, in order"
+- "The main character and what they want (optional)"
+- "Any scenes you must keep (optional)"
+you_get:
+- "A table of scenes with the change and the choice behind it"
+- "Flags on scenes where nothing turns or the choice costs nothing"
+- "A set-up and pay-off list"
+- "A fix for each flagged scene and a score"
+
+how_to_use:
+- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+- "Paste the scene list with one line per scene."
+- "Say who the main character is and what they want."
+- "Go through the flags and decide which fixes to take."
+- "Run it again on the new list."
+
+how_it_works:
+  - title: "List the scenes"
+    text: "Number every scene in order with a short label from the input."
+  - title: "Write what changes"
+    text: "For each scene write one line on what is different at the end compared with the start: a fact learned, a relationship shifted, a stake raised, a plan changed."
+  - title: "Name the choice"
+    text: "For each scene that changes, name the character choice that caused it."
+  - title: "Mark scenes where nothing turns"
+    text: "List every scene with no change or no choice behind it."
+  - title: "Check the cost"
+    text: "For each choice, write what it costs the character: a loss, a risk or a harder next step."
+  - title: "Check set-ups and pay-offs"
+    text: "List every set-up (an object, a promise, a fear, a line) and find where it pays off."
+  - title: "Fix and score"
+    text: "For each flagged scene, propose one fix: cut it, merge it with a named scene, or sharpen the turn by naming the choice and its cost."
+  - title: "Check it"
+    text: "Go through \"Check before you hand it back\" one line at a time and fix any check that fails, if you can."
+
+output_shape: |
+  SCENES
+  1. <label> | change: <> | choice: <> | cost: <> | PASS or FLAG
+
+  FLAGGED SCENES
+  <scene> | what it does now | fix: cut / merge with <n> / sharpen: <choice and cost>
+
+  SET-UPS AND PAY-OFFS
+  <set-up> -> <pay-off> | Gaps: <>
+
+  SCORE
+  <passed> of <total> scenes = <score> / 100
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Main character's want"
+    how: "Say what they want. Choices are judged against it."
+  - what: "Scene detail"
+    how: "One line per scene is the minimum. More detail gives sharper checks."
+  - what: "Must-keep scenes"
+    how: "Mark them so the fix is to sharpen, not to cut."
+  - what: "Format"
+    how: "Say if it is a film, a novel or a talk. Talks have fewer scenes."
+
+judge:
+- "Each change is something you can point to in the scene."
+- "Each flagged scene really does feel slow to you."
+- "Costs come from your outline, not from guesses."
+- "Every fix says what to do and to which scene."
+- "The score shows the counts."
+
+test:
+- "Run it on a scene list from a film you know well."
+- "Add a scene where nothing happens and check that it gets flagged."
+- "Apply two fixes and run again. The score should rise."
+- "Run it twice. The flagged scenes should mostly match."
+
+improve:
+- "Add your own scene types, such as dream or flashback, with special rules."
+- "Add a limit on how many scenes can be cut."
+- "Keep the set-up list as a file for later drafts."
+- "Pair it with \"Story premise tester\" before this and \"Voice-over stripping test\" after the script."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Going through a list scene by scene is text work."}
+    - {name: "Index cards or a spreadsheet", why: "One row per scene makes reordering easy."}
+  inputs:
+    - "The result of Story premise tester"
+    - "Notes on what the main character wants"
+    - "A list of set-ups you plan to pay off"
+
+terms:
+  - term: "Turn"
+    meaning: "A change in the situation caused by a character's choice."
+  - term: "Set-up and pay-off"
+    meaning: "Something planted early and used later."

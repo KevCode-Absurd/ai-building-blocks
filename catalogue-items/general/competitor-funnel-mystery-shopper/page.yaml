@@ -1,0 +1,128 @@
+new_slug: competitor-funnel-mystery-shopper
+name: "Competitor funnel mystery shopper"
+summary: "Paste your competitor list. Get a plan to subscribe, buy and note how each one follows up, upsells and handles a no."
+job: study-competitors
+thinking: low
+thinking_why: "It sets a fixed routine and fills a report from what you captured."
+
+headline: "Competitor funnel mystery shopper"
+subhead: "Give it your competitor list. It plans a safe mystery shop: subscribe, buy a low-priced item, count upsells, say no and check each site on a phone. You get a capture sheet and a report of what to copy, avoid and beat."
+
+explain: |
+  A rival's front page tells you little. What counts is what happens next: how often they email, what they offer after you buy, how hard they push and how they treat you when you say no. You cannot learn that from outside, and it is easy to guess wrong.
+
+  This skill plans a mystery shop. You subscribe, buy a low-priced item and go through each step, while it gives you a sheet to log emails, upsells and the back end. It adds a no-thanks test and a phone check of each site. When you bring the captures back, it writes a report per rival, tied to what you saw, with a short list of what to copy, avoid and beat.
+
+when:
+  - "A new rival has appeared and you do not know how it sells."
+  - "Your own follow-up emails or upsells are weak and you want to see what rivals do."
+  - "You are planning your funnel and want facts, not guesses."
+
+you_give:
+  - "Your competitor list with websites"
+  - "Your captures: screenshots, emails and page text with dates (optional)"
+  - "A budget for a low-priced item per rival (optional)"
+you_get:
+  - "A shopping routine and safe rules"
+  - "A dated capture sheet to fill in"
+  - "A report per rival with a timeline of their funnel"
+  - "A list of what to copy, avoid and beat, tied to what you saw"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "List your rivals and their websites."
+  - "Set up a fresh email and a folder as the plan says."
+  - "Shop each rival, logging every step as you go."
+  - "Paste your captures back and ask for the report."
+
+how_it_works:
+  - title: "Lists the rivals"
+    text: "Names the main rivals and any new free entrant."
+  - title: "Prepares the shop"
+    text: "Sets up a clean email, a log and safe rules."
+  - title: "Logs the emails"
+    text: "Records every email for at least two weeks."
+  - title: "Records the purchase"
+    text: "Captures each step from product page to follow-up emails."
+  - title: "Counts the upsells"
+    text: "Describes the back end from what was seen."
+  - title: "Tests the no"
+    text: "Declines each offer and records what happens."
+  - title: "Checks the phone view"
+    text: "Tests each site on a phone."
+  - title: "Writes the report"
+    text: "Gives a timeline and a copy, avoid, beat list for each rival."
+
+output_shape: |
+  RIVALS
+  <name>, <site>, <price level>, <sign-up offer>
+
+  RULES
+  <safe shopping rules>
+
+  CAPTURE SHEET (per rival)
+  Emails: <date/time | subject | offer | link>; per week <n>
+  Purchase steps: <step | date | screenshot>
+  Upsells before / after: <count | prices>
+  Back end at 3 / 7 / 30 days: <what was offered>
+  No-thanks: <what happened>; unsubscribe steps <n>
+  Phone: <readable? buy link in 10 seconds? form fits?>
+
+  REPORT (per rival)
+  Timeline: <dated steps>
+  Copy: <item, evidence>
+  Avoid: <item, evidence>
+  Beat: <item, evidence>
+
+  MISSING
+  <steps not yet captured>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "How many rivals"
+    how: "Three to five is enough for a first pass. More rivals mean more weeks of emails."
+  - what: "How long you watch"
+    how: "Two weeks of emails is the minimum. A month shows the back end."
+  - what: "What you buy"
+    how: "Choose the cheapest item. The shop is about the steps, not the product."
+  - what: "Your own funnel"
+    how: "Paste yours and the report compares each step side by side."
+
+judge:
+  - "Every point in the report has a date and a captured item."
+  - "The back end section lists offers you actually saw."
+  - "The no-thanks path was tried for each rival."
+  - "The phone check has screenshots."
+  - "No step asks you to break a site's terms."
+
+test:
+  - "Run one rival end to end and see if the capture sheet has everything you need."
+  - "Check a claim in the report against your own screenshots."
+  - "Compare the report to what a customer of that rival tells you."
+  - "Repeat after a month and note what changed."
+
+improve:
+  - "Add your own funnel steps to the sheet so every rival is compared against them."
+  - "Add the offers you want to track, such as a discount after you leave a cart."
+  - "Add rules for your industry, such as age checks."
+  - "Pair it with a competitor ad skill for what they say in ads."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Turning dated captures into a timeline and a report is text work any strong chat AI does well with this skill."}
+    - {name: "A phone and a spare email address", why: "Let you see the funnel as a new customer would."}
+  inputs:
+    - "Screenshots of each step, with dates"
+    - "The text of every email you received"
+    - "Your own funnel for comparison"
+    - "Notes from a customer who bought from the rival"
+
+terms:
+  - term: "Funnel"
+    meaning: "The steps a person goes through from first visit to buying and what follows."
+  - term: "Back end"
+    meaning: "The offers a buyer gets after the first purchase."
+  - term: "Upsell"
+    meaning: "An extra offer made at or after a purchase."

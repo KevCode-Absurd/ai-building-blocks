@@ -1,0 +1,114 @@
+new_slug: rival-matchup-scorer
+name: Rival matchup scorer
+summary: Describe you and a rival. Get a side-by-side on the five factors, with where to fight and where to avoid.
+job: study-competitors
+thinking: medium
+thinking_why: It weighs evidence on both sides and ranks options, but the factors are fixed.
+headline: Rival matchup scorer
+subhead: Give it a description of you, a rival and the contest you are in. It scores both sides on the same five factors, ranks your options and prices a long fight. You get a side-by-side with a score for each side, where to fight and where to stay out.
+explain: |
+  Most rival comparisons list features and prices. That tells you who looks bigger. It does not tell you who is likely to win a contest for the same customers, because it ignores who the people trust, who is ready, and who can last longer.
+
+  This skill compares both sides on five factors from an old book on strategy: how far the people behind each leader are united, timing, the ground you compete on, the quality of each leader, and each side's method and discipline. Each side gets a 1 to 5 score per factor, with the evidence beside it, so the total out of 25 is never a bare number. It then ranks your options from cheapest to costliest and prices what a long contest would take.
+when:
+  - You are about to go up against a bigger rival and need to know where you can win.
+  - You are choosing between fighting a rival on price, avoiding them, or going after a gap they ignore.
+  - A rival just launched something and you have to decide whether to respond.
+you_give:
+  - "A description of you: product or service, customers, team, money and time"
+  - A description of the rival in the same terms
+  - The contest in one line, such as a market, a tender or a customer group
+  - A competitor set from your research (optional)
+you_get:
+  - Both sides scored 1 to 5 on five factors, with the evidence for each
+  - Your options ranked from cheapest to costliest, with the best one marked
+  - Where the rival is thin or unready, and where to stay out
+  - The cost and length of a long contest, and a position to hold first
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe you, the rival and the contest in plain facts. Add what you know from customers and sales calls.
+  - Say what you do not know about the rival. It marks those points as guesses.
+  - Read the ranked options first, then the thin spots.
+  - Pick one position to hold, and one opening to wait for.
+how_it_works:
+  - title: Sets the contest
+    text: Names the two sides and the exact thing they compete for.
+  - title: Scores five factors
+    text: Rates each side 1 to 5 on trust behind the leader, timing, ground, leadership and discipline, with the evidence.
+  - title: Asks seven questions
+    text: Who has the better leader, training, fair rewards and clearer orders. Each gets an answer or a guess flag.
+  - title: Ranks the options
+    text: Orders break their plan, cut their allies, beat them head on, or avoid, by cost.
+  - title: Finds the thin spots
+    text: Lists where the rival is stretched, slow or unready, and where it is strong.
+  - title: Prices a long fight
+    text: Estimates the time, money and people a drawn-out contest would take from you.
+  - title: Picks a position
+    text: Chooses ground you can defend first, and the opening to wait for.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  THE CONTEST
+  <you, the rival, and what you compete for>
+
+  SCORES (1 to 5 per factor, total out of 25)
+  <factor> | You <n> | Rival <n> | Evidence: <fact or GUESS>
+  ...
+  Total: You <n>/25, Rival <n>/25
+
+  THE SEVEN QUESTIONS
+  <question>: <answer, or GUESS>
+
+  OPTIONS, CHEAPEST FIRST
+  1. <break their plan> 2. <cut their allies> 3. <beat them head on> 4. <avoid>
+  Best: <option and why>
+
+  WHERE THEY ARE THIN
+  <point>: <what makes it thin>
+
+  COST OF A LONG CONTEST
+  <time, money, people>
+
+  HOLD FIRST, THEN WAIT FOR
+  <position> | <opening>
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: How specific the contest is
+    how: Name the exact customers or deals at stake. A contest called 'the market' gives a vague result.
+  - what: What you know first-hand
+    how: Say which facts come from your own customers or sales calls. Those are scored as evidence. The rest are marked as guesses.
+  - what: Your limits
+    how: State your money and time. The cost of a long contest is only useful against what you can afford.
+  - what: The rival's recent moves
+    how: Give dates for launches, hires or price changes. Timing scores depend on them.
+judge:
+  - Both sides are scored on the same five factors, with evidence beside each score.
+  - Anything not known is marked as a guess, not scored as fact.
+  - The totals are explained by the factor scores above them.
+  - The cost and length of a long contest are written out.
+  - At least one cheaper path than a head-on fight is named.
+test:
+  - Run it on a contest whose result you already know. Check the higher total went to the side that won.
+  - Run it twice with the same facts. The ranking of options should match.
+  - Change one fact about the rival, such as a new hire, and see which score moves.
+  - Show the thin spots to someone who knows the rival and ask which they agree with.
+improve:
+  - Add the factors your field cares about, such as regulation or distribution, to the ground step.
+  - Save each scored matchup to your files, so you can compare after the contest ends.
+  - Add a line to step 6 with your usual cost per month of a long fight.
+  - Pair it with Go or no-go launch checker before you act on the result.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Comparing two sides against fixed factors is text work any strong chat AI does well with this skill.
+  inputs:
+    - A competitor set from your own research, so facts about the rival are not guesses
+    - Notes from lost and won deals, so the trust and leader scores rest on evidence
+    - Your cash and time limits, so the cost step is real
+terms:
+  - term: Ground
+    meaning: The place you compete on, such as a channel, a region or a customer group.
+  - term: Thin spot
+    meaning: A place where the rival is stretched, slow or not looking.

@@ -1,0 +1,18 @@
+slug: product-uses-lister
+name: "Product uses lister"
+summary: "Paste what your product does. Get a long list of uses, ranked by who would pay, with the first one to prove."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [thomas-edison]
+credits:
+  - {title: "The Perfected Phonograph", by: "Thomas A. Edison, North American Review, 1888", used: "Listing many possible uses of one invention, grouped by who would use them"}
+  - {title: "A Talk with Edison, in How They Succeeded", by: "Orison Swett Marden, 1901", url: "https://www.gutenberg.org/", used: "Tying an invention to a want that people already have, and working out what else a use needs"}

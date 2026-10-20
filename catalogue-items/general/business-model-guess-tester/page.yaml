@@ -1,0 +1,125 @@
+new_slug: business-model-guess-tester
+name: "Business model guess tester"
+summary: "Paste your plan. Get it rewritten as testable guesses on one page, with a test and a pass line for each."
+job: test-an-idea
+thinking: medium
+thinking_why: "It sorts fact from guess and ranks risk, but the layout is fixed."
+
+headline: "Business model guess tester"
+subhead: "Paste your business plan. It decides if you are still searching or ready to run, lays the plan out on one page and rewrites each part as a guess. You get a test and a pass line for each guess, and a change log."
+
+explain: |
+  A plan written as a story hides what you do not know. Revenue is a hope, a channel is a guess and the customer is an assumption, yet all of them sit on the page as facts. Then money goes to sales and marketing before anyone has shown the model works.
+
+  This skill puts the plan on one page with five boxes: customers, value, channels, revenue and costs. It rewrites each as a guess that could be proved wrong, ranks the guesses by risk and pairs each with a cheap test and a pass line. It says whether you are still searching and keeps a log, so you can see what changed.
+
+when:
+  - "You have a plan and want to know what is real and what is hope."
+  - "You are about to hire sales or marketing staff."
+  - "A test failed and you are not sure what to change."
+
+you_give:
+  - "Your plan or brief"
+  - "What is proven, such as paid customers (optional)"
+  - "The parts you doubt (optional)"
+you_get:
+  - "A one-page model in five boxes"
+  - "Each box as a guess, marked fact or guess"
+  - "Tests and pass lines, ranked by risk"
+  - "A change log to keep"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your plan and what you know to be true."
+  - "Agree the pass lines before you run any test."
+  - "Update the change log after each test."
+
+how_it_works:
+  - title: "Makes the call"
+    text: "Searching or executing, with two facts."
+  - title: "Lays out the page"
+    text: "Customers, value, channels, revenue, costs."
+  - title: "Writes guesses"
+    text: "Each box as a sentence that could be wrong."
+  - title: "Ranks by risk"
+    text: "Cost if wrong times how little you know."
+  - title: "Pairs tests"
+    text: "A cheap test and a pass line for each."
+  - title: "Holds back spend"
+    text: "Sales and marketing departments wait."
+  - title: "Starts the log"
+    text: "What changed after each test."
+
+output_shape: |
+  CALL
+  <searching/executing> because <fact 1>, <fact 2>
+
+  MODEL v1
+  Customers: <x>
+  Value: <x>
+  Channels: <x>
+  Revenue: <x>
+  Costs: <x>
+
+  GUESSES
+  <box>: <sentence> | fact/guess | evidence <x> | risk <n>
+
+  TESTS
+  <top guess>: test <x> | pass <n> | cost <x> | days <n>
+
+  HOLD BACK
+  <spend> until <condition>
+
+  CHANGE LOG
+  date | guess | result | change
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "What is proven"
+    how: "List paid customers and real costs. They turn guesses into facts."
+  - what: "Your budget"
+    how: "Say how much a test may cost."
+  - what: "Your stage"
+    how: "Tell it how long you have been running. It affects the call."
+  - what: "Your doubts"
+    how: "Name the box you worry about. It often is the riskiest."
+
+judge:
+  - "Every box is a sentence that could be proved wrong."
+  - "Facts have evidence; the rest are guesses."
+  - "Each guess has a test and a pass line."
+  - "The call on searching or executing is clear."
+  - "The change log is ready to fill."
+
+test:
+  - "Run it on a business you know. See if it marks the right things as guesses."
+  - "Run it twice. The top three guesses should stay."
+  - "Run one test and check the log is updated."
+  - "Ask an advisor to challenge a \"fact\"."
+
+improve:
+  - "Add your own boxes, such as partners or regulation, in step 2."
+  - "Add your standard costs to step 2."
+  - "Keep the change log under version control."
+  - "Pair it with a customer discovery interview planner for the talks."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Laying out and ranking a plan is text work."}
+    - {name: "A one-page canvas or spreadsheet", why: "Holds the five boxes where the whole team can see them."}
+  inputs:
+    - "Invoices or sales records"
+    - "Your price list"
+    - "Cost of one customer won"
+    - "Notes from past tests"
+
+terms:
+  - term: "Searching"
+    meaning: "Looking for a business model that works, before you can repeat it."
+  - term: "Pass line"
+    meaning: "The number that counts as success, set before the test."

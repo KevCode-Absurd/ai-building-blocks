@@ -1,0 +1,122 @@
+new_slug: process-and-meeting-cull-planner
+name: "Process and meeting cull planner"
+summary: "List your regular meetings, approvals and reports. Get a keep, simplify or drop call on each."
+job: lead-people
+thinking: medium
+thinking_why: "It judges each item and has to weigh what breaks if it goes."
+
+headline: "Process and meeting cull planner"
+subhead: "List your regular meetings, approvals and reports. It sorts each as possible, simpler or neither, marks the neither ones to drop and tests the rest by what a month without them would cost. You get a keep, shrink or drop call on each."
+
+explain: |
+  Every team collects meetings and approvals. Each began with a reason, and few were ever removed. The calendar fills, and the work moves to the gaps.
+  
+  This skill puts each item through three questions. Does it make something possible? Does it make it simpler? Or neither? The neither ones go. Simplifiers are tested by what would break in a month without them. What stays gets an owner and a test of what it must produce. It also separates real output from work about work, such as status reports, and sets a review date so the list does not grow back.
+
+when:
+  - "Your week is mostly meetings and you cannot say what they produce."
+  - "A new manager wants to clear out old habits."
+  - "People spend more time reporting on work than doing it."
+
+you_give:
+  - "Your recurring meetings, approvals and reports, with length and attendees"
+  - "Who owns each"
+  - "Your goals this quarter (optional)"
+you_get:
+  - "A call on each item: drop, shrink or keep"
+  - "A reason and an owner for everything that stays"
+  - "A review date and a cut, merge or move list"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Open your calendar and list every recurring item for the last month."
+  - "Add reports and approvals that do not appear on it."
+  - "Paste the list and ask for the calls."
+  - "Tell the people affected before you drop anything, and review in a month."
+
+how_it_works:
+  - title: "List everything with an owner"
+    text: "Lists every recurring meeting, approval and report with its owner."
+  - title: "Sort into three kinds"
+    text: "Sorts each into three kinds: makes something possible, makes it simpler, or neither."
+  - title: "Mark the neither ones to drop"
+    text: "Marks the neither ones to drop."
+  - title: "Test the simplifiers"
+    text: "Checks what each simplifier would cost if removed for a month."
+  - title: "Write what stays"
+    text: "Writes what stays, who owns it and how it is judged."
+  - title: "Find where time goes"
+    text: "Lists where time goes on searching, status updates and alerts."
+  - title: "Mark output versus work about work"
+    text: "Marks real output against work about work and picks what to cut, merge or move."
+  - title: "Checks its own work"
+    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+
+output_shape: |
+  ITEMS
+  <name> | Owner | Often | Length | People | Kind: possible / simpler / neither | Call: drop / shrink / keep | Output or work about work
+  
+  DROP
+  <item> -> replaced by <...>, tell <who>
+  
+  SHRINK OR TRIAL REMOVAL
+  <item>: <change>, watch for <sign>
+  
+  KEEP
+  <item>: owner <...>, must produce <...>
+  
+  WHERE TIME GOES
+  <searching, status, alerts: hours per week>
+  
+  CUT, MERGE OR MOVE
+  <list>
+  
+  REVIEW DATE
+  <date>
+  
+  MISSING
+  <gaps>
+  
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Attendees and length"
+    how: "Give them for each meeting. The cost of a meeting comes from both."
+  - what: "Your goals"
+    how: "Share them so it can tell what supports them."
+  - what: "Legal or safety duties"
+    how: "Name any item you must keep so it is never on the drop list."
+  - what: "Size of the cut"
+    how: "Say if you want to cut a few or half."
+
+judge:
+  - "Every item has an owner and a kind."
+  - "No item stays only because it always has."
+  - "The drop list is longer than the keep list, or the report says why not."
+  - "Each keep has a thing it must produce."
+  - "There is a review date."
+
+test:
+  - "Drop the top two items for a month and see if anyone noticed."
+  - "Ask each owner what their item produces and compare with the report."
+  - "Run it twice. The drop list should stay close."
+
+improve:
+  - "Add your own always-keep items so they never show up as drops."
+  - "Add the hours figure you track."
+  - "Rerun every quarter and compare."
+  - "Pair it with \"Team culture memo writer\" so decisions need less approval."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a list into keep, simplify or drop is text work any strong chat AI does well with this skill."}
+    - {name: "Your calendar app", why: "Export last month's recurring events so the list is complete."}
+  inputs:
+    - "A calendar export"
+    - "Time sheets or notes on where time goes"
+    - "Required legal or safety meetings"
+
+terms:
+  - term: "Work about work"
+    meaning: "Time spent reporting, searching or coordinating instead of making something."

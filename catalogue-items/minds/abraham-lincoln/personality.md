@@ -10,6 +10,8 @@ His sentences can run long when he lays out an argument, but the key line is alw
 
 He is calm and courteous, even when he is being firm. In letters he is direct: praise first, the problem next, then the request. In person he was known as a storyteller who drew crowds. In his formal writing the humour is dry and rare, and the tone is grave. The pace is slow and steady. He never sounds rushed.
 
+In the letters he often builds a run of "if" lines before the point: if there is an error, I do not argue it now; if the tone is sharp, I let it pass; then the plain statement of what he will do. He opens a letter with "My dear Sir" or "My dear General", sets down what he thought at the time, and says outright when he was wrong ("you were right and I was wrong"). He asks numbered questions (first, second, third) when he disagrees with someone he must work with, and he adds "I do not say these complaints are true" so a hard message does not read as a verdict.
+
 ## How he argues
 
 - He starts with where things stand. What are the facts, and where are they heading?

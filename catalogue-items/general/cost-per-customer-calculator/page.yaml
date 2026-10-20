@@ -1,0 +1,129 @@
+new_slug: cost-per-customer-calculator
+name: "Cost per customer calculator"
+summary: "Paste ad costs, samples and orders. Get what a customer really costs, how soon it pays back and which ads to keep."
+job: read-ad-results
+thinking: medium
+thinking_why: "It does sums and applies fixed rules, but you must check which costs are included."
+
+headline: "Cost per customer calculator"
+subhead: "Give it your ad costs, samples, replies and orders. It adds up every cost, counts real customers, and works out cost per customer by ad, headline and offer. You get the true cost, payback time, a data score out of 100 and which ads to keep."
+
+explain: |
+  Cost per reply looks neat and misleads. An ad can bring cheap replies from people who never buy, and a dear ad can bring fewer replies who all do. If you leave out samples, handling or follow-up, the cost looks lower than it is.
+
+  This skill adds up ad space, samples, reply handling and follow-up. It counts customers, not replies, and works out the cost per customer by ad, headline and offer from keyed returns. It counts repeat buyers only as far as you can show them, works out how soon sales cover the cost, and finds the most you can pay for a customer. It keeps the ads that bring customers cheaply, not those that bring cheap replies.
+
+when:
+  - "You judge ads by cost per click or reply."
+  - "You give out samples or trials and do not count them as a cost."
+  - "You are deciding which ads or offers to repeat."
+
+you_give:
+  - "Costs: ad space or spend, samples, handling, follow-up"
+  - "Replies and orders for each ad, headline or offer"
+  - "Sale value and profit per order"
+  - "Repeat orders you can show (optional)"
+you_get:
+  - "The full cost per customer by ad, headline and offer"
+  - "How soon sales cover the cost"
+  - "The most you can pay for a customer"
+  - "A data score out of 100 and which ads to keep"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste costs and results by ad, with the key for each."
+  - "Add your price and profit per sale."
+  - "Read the table, then the ads to keep and drop."
+  - "Update the numbers when new orders arrive."
+
+how_it_works:
+  - title: "Adds the costs"
+    text: "Adds ad space, samples, replies handled and follow-up."
+  - title: "Counts customers"
+    text: "Counts real customers, not replies."
+  - title: "Works out cost per customer"
+    text: "Works it out by ad, headline and offer using keyed returns."
+  - title: "Counts repeat buyers"
+    text: "Counts repeat buyers only as far as you can show them."
+  - title: "Works out payback"
+    text: "Works out how soon sales cover the cost."
+  - title: "Finds the ceiling"
+    text: "Compares sale value and profit to find the most you can pay."
+  - title: "Picks the ads"
+    text: "Keeps the ads that bring customers cheaply."
+
+output_shape: |
+  DATA SCORE: <n>/100 (100 means every cost counted and every ad keyed)
+
+  TABLE
+  <ad or offer> | Total cost | Replies | Customers | Cost per reply | Cost per customer
+
+  COSTS INCLUDED
+  Ad space: <amt> | Samples: <amt> | Handling: <amt> | Follow-up: <amt>
+
+  REPEAT BUYERS
+  <number shown> | Not counted: <what could not be shown>
+
+  PAYBACK
+  <days or orders to cover the cost>
+
+  MOST YOU CAN PAY FOR A CUSTOMER
+  <amount> = <profit on sale + repeat profit shown>
+
+  KEEP
+  <ads> | Why
+
+  DROP OR FIX
+  <ads> | Why
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Include every cost"
+    how: "Add samples, postage, staff time and follow-up. Leaving them out is the main way cost looks too low."
+  - what: "Keys on every ad"
+    how: "Give the key for each. Unkeyed ads cannot be compared and lower the data score."
+  - what: "Profit per sale"
+    how: "Give profit, not only price. The ceiling uses profit."
+  - what: "Repeat orders"
+    how: "Add only those you can tie to a first order."
+
+judge:
+  - "Customers are counted, not replies."
+  - "All costs are included, samples too."
+  - "Payback time is stated."
+  - "Missing data is listed, not guessed."
+  - "The ads to keep are the ones with the lowest cost per customer."
+
+test:
+  - "Do one ad's sum by hand and check it matches the table."
+  - "Run it on a case where the cheapest reply is not the cheapest customer."
+  - "Remove a cost line and see the cost per customer rise."
+  - "Check that the ads to keep are still good after the next month's orders."
+
+improve:
+  - "Add your own cost lines, such as packaging or commission."
+  - "Add how long you wait for repeat orders before counting them."
+  - "Keep the table in one sheet that you update monthly."
+  - "Pair it with a small test planner so new ideas are judged the same way."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Adding costs and ranking ads is work any strong chat AI does with this skill, given clean numbers."}
+    - {name: "A spreadsheet", why: "Holds the table and lets you check each sum."}
+  inputs:
+    - "Order data with the key for each"
+    - "Receipts for samples and postage"
+    - "Profit per sale and repeat orders"
+
+terms:
+  - term: "Keyed returns"
+    meaning: "Replies or orders marked with a code that shows which ad drew them."
+  - term: "Payback time"
+    meaning: "How long it takes for sales to cover what you spent to win the customer."
+  - term: "Cost per customer"
+    meaning: "All costs on an ad divided by the buyers it brought."

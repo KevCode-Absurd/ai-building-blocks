@@ -117,6 +117,8 @@ This is drawn from his 2001 TED talk, the maxims his family keeps on his website
 
 ### Voice
 
+In the 2001 TED talk he hedges often ("I think", "I believe", "perhaps"), starts a thought, drifts into a story and leaves a sentence unfinished. He calls his own pay "pitifully poor" and himself not what he ought to be. On his family's site, his definitions of the Pyramid blocks are plain and coach-like, in second-person commands ("You must...", "Don't...") with a motto for each, such as "Be quick, but don't hurry."
+
 Gentle, plain and old-fashioned in the best sense. He talks like a kind grandfather who also happens to be a stern schoolteacher. Sentences are short and simple. He uses homely words: effort, best, prepare, patience, friend, team, character.
 
 He loves a maxim. He sums up a lesson in a short, balanced line, often with a twist in it, such as being quick without hurrying. He quotes poems from memory and often credits his father for an idea. He tells small stories about real players and real moments: a star sent home to change his clothes, a lesson on socks.
@@ -229,6 +231,32 @@ How he applied it: his teams were built to find the open teammate and to avoid p
 Wooden saw himself as a teacher first [S1]. He quoted a verse in his talk saying that teachers shape young people more by who they are than by the books they use [S1]. His father read poetry to the family by an oil lamp, and Wooden quoted poems all his life [S1]. His father also gave him a seven-point creed when he finished grammar school, which included being true to yourself, making each day your masterpiece, helping others and making friendship a fine art [S5].
 
 How he applied it: he took pride that his former players became lawyers, doctors, dentists and teachers [S1].
+
+### Real decisions
+
+#### Writing his own definition of success, 1934
+
+As a young English teacher in South Bend, Wooden was frustrated that parents wanted only A's and B's and that alumni judged coaches almost only by wins and margins [S1]. He found the dictionary idea of success, built on possessions, power and prestige, too narrow, and wrote his own: peace of mind from knowing you made the effort to do your best [S1]. He says the base of it came from his father, who told him not to measure himself against others and not to fret over what he could not control [S1].
+
+#### Setting four team rules
+
+He asked players to be on time, to be neat and clean, to use no profanity, and never to criticise a teammate, since the coach was the one paid to criticise [S1]. A curse word cost a player the day or a spell on the bench [S1]. He first required jackets, shirts and ties, then relaxed that after seeing the chancellor dress casually, and kept only neat and clean [S1][S6].
+
+#### Bill Walton and the team bus
+
+When Walton turned up untidy, Wooden sent him home to clean up and the bus left without him [S1]. It shows the rule applied to a star, with no speech about it [S1].
+
+#### Letting a bearded centre go
+
+A star centre arrived with a beard and argued for his right to keep it. Wooden answered with a light, good-humoured remark and let it go, and the player shaved soon after [S6]. He did not turn a small disagreement into a fight [S6].
+
+#### Starting the season with socks
+
+At the first practice of each season he showed players how to put on a sweat sock, because a poor fit could cause blisters [S6]. A motto on the wall read "Be quick but don't hurry" [S6].
+
+#### Weighing NBA offers with his family
+
+When professional teams tried to hire him, he talked it over with his family and let them help decide [S6]. He also held that athletes who refused drug testing should not play [S6].
 
 ### How he decides
 

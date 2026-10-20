@@ -1,0 +1,130 @@
+new_slug: story-structure-reorderer
+name: "Story structure reorderer"
+summary: "Paste your draft. Get a new order of scenes that puts the reader in the character's seat, with the check."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "It has to hold the true timeline and a new order in mind at once and keep them consistent."
+
+headline: "Story structure reorderer"
+subhead: "Paste your draft and say what you want the reader to feel. It lists your scenes, finds the true order and tests new orders from one character's seat. You get the new order, the logic check and a plain summary."
+
+explain: |
+  Many drafts have the right scenes in the wrong order. The writer tells the story as it happened, so the reader learns everything at once or too early, and the ending has less to do. Changing the order changes what the reader knows at each point, so it changes how they feel.
+
+  This skill breaks the draft into scenes and writes the true time order. It picks whose seat the reader sits in and arranges scenes to match what that person knows. It splits the story into two or three strands that rise together. Then it runs a logic check: put the new order back into time order and confirm every cause comes before its effect. It ends by checking that the plot is clear and the meaning stays open.
+
+when:
+  - "Your story or talk has good scenes but the middle drags or the ending lands flat."
+  - "You want the reader to share a character's confusion or discovery."
+  - "Your case study tells everything in date order and loses people."
+
+you_give:
+  - "Your draft, story, talk or outline"
+  - "What you want the reader to feel or understand (optional)"
+  - "Scenes that cannot move (optional)"
+  - "Length or form (optional)"
+you_get:
+  - "A numbered list of scenes with a line on each"
+  - "The true order and a proposed new order, each with a reason"
+  - "A logic check with every break listed"
+  - "A plain line saying what happens, and what is left open"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the whole draft, in the order it is now."
+  - "Say who the reader should feel closest to."
+  - "Say any scenes that cannot move."
+  - "Read the new order aloud once, then read the true order. Compare what you feel."
+
+how_it_works:
+  - title: "Lists the scenes"
+    text: "One line each, in the original order."
+  - title: "Writes the true order"
+    text: "Earliest first, with gaps marked."
+  - title: "Chooses a seat"
+    text: "Whose view the reader takes, and what they do not know."
+  - title: "Reorders to match"
+    text: "Each scene sits where the reader learns it."
+  - title: "Splits into strands"
+    text: "Two or three threads that rise and meet."
+  - title: "Runs the logic check"
+    text: "Puts the new order back in time order and lists every break."
+  - title: "Shows each change in steps"
+    text: "No jump without earned steps."
+  - title: "Checks the whole"
+    text: "Plot clear, meaning open, then names any check it missed."
+
+output_shape: |
+  SCENES (original order)
+  <n>. <what happens> | <who> | <what is learned>
+
+  TRUE ORDER
+  <scene numbers, earliest first>
+
+  THE SEAT
+  <person>, does not know: <x>, finds out in scene <n>
+
+  NEW ORDER
+  <position>. scene <n> - <why here>
+
+  STRANDS
+  <strand> rises through <scenes>; meets <strand> at <scene>
+
+  LOGIC CHECK
+  <breaks, or none>
+
+  STEPS OF EACH CHANGE
+  <change>: scenes <n, n, n>
+
+  PLOT IN ONE LINE / LEFT OPEN
+  <line> / <question>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The seat"
+    how: "Name the person. The order depends on what they know and when."
+  - what: "Scenes that cannot move"
+    how: "Mark them. The skill works around them."
+  - what: "How much to reorder"
+    how: "Say \"small changes only\" to move two or three scenes, or \"free\" for a full reorder."
+  - what: "Dates"
+    how: "Give dates or times for each scene. The true order is only as good as these."
+
+judge:
+  - "A first-time reader can say what happens."
+  - "The order matches what the chosen person knows at each point."
+  - "Each strand grows and they meet."
+  - "Putting the new order back in true order shows no effect before its cause."
+  - "Every change has its steps."
+
+test:
+  - "Give the new order, without the reasons, to a friend and ask what happens."
+  - "Read the true order and the new order back to back and note which one you feel more."
+  - "Check the logic list for breaks by hand."
+  - "Run it twice and see that the seat chosen is the same."
+
+improve:
+  - "Add the forms you write in, such as case study or short film, so the strands fit them."
+  - "Add scenes you always want first or last."
+  - "Keep a list of orders that worked, with the seat each used."
+  - "Pair it with \"Single-effect draft checker\" to test the reordered draft."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and checking scene lists is text work any strong chat AI does well with this skill."}
+    - {name: "Index cards or a spreadsheet", why: "One scene per card makes it easy to try the new order by hand."}
+  inputs:
+    - "A one-line list of what each scene shows"
+    - "Dates or times for each scene"
+    - "The ending you want, if it is fixed"
+
+terms:
+  - term: "Strand"
+    meaning: "One thread of the story, such as a person or timeline."
+  - term: "Logic check"
+    meaning: "Putting the new order back in time order to see if causes still come before effects."

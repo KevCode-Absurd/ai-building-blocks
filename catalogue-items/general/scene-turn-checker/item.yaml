@@ -1,0 +1,20 @@
+slug: scene-turn-checker
+name: "Scene turn checker"
+summary: "Paste a scene list or outline. Get each scene marked for what changes and which choice changes it, with weak scenes flagged."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [robert-mckee]
+credits:
+  - {title: "Story webinar series, course outline", by: "Robert McKee", url: "https://mckeestory.com/webinars/story", used: "Every scene turns something, and the turn comes from a choice"}
+  - {title: "Character", by: "Robert McKee", url: "https://mckeestory.com/books/character", used: "Pressure reveals true character, so a choice must cost the character something"}

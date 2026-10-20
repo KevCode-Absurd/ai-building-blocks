@@ -1,0 +1,22 @@
+slug: design-brief-rules-writer
+name: "Design brief rules writer"
+summary: "Describe the design job. Get a brief with tight limits that leave room to play."
+category: general
+type: skill
+role: make
+job: design
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: brief, required: true}
+minds: [paul-rand, milton-glaser, charles-and-ray-eames]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "Design and the Play Instinct", by: "Paul Rand, 1965", used: "Limits as the thing that makes play possible, and one idea the work must carry"}
+  - {title: "Ideas About Ideas", by: "Paul Rand, 1955", used: "An idea that can be taken in at a glance"}
+  - {title: "Milton Glaser, interviews and essays", by: "Milton Glaser", url: "https://www.miltonglaser.com/milton/c:interviews/", used: "Naming the audience, the client and what the audience should do or see differently"}
+  - {title: "Design Q and A with Charles and Ray Eames", by: "Charles and Ray Eames, 1972", used: "Stating the need a design must meet, and gathering things that catch the eye"}
+  - {title: "Eames exhibit pages", by: "Library of Congress", url: "https://www.loc.gov/exhibits/eames/", used: "How constraints shaped furniture and science work"}

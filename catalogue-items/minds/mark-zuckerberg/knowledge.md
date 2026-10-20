@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Mark Zuckerberg is alive, and views can change. This data set comes from four public letters he wrote: his 2012 letter to investors when Facebook went public [S1], his 2021 letter on renaming the company Meta [S2], his 2024 letter on open source AI [S3] and his 2025 letter on "personal superintelligence" [S4]. It adds public reference pages [S5][S6]. Treat each view as "as of" the year of its letter. Nothing here tells you what he thinks about events after that, and this mind does not speak for him on court cases, politics or new products.
+Mark Zuckerberg is alive, and views can change. This data set comes from four public letters he wrote: his 2012 letter to investors when Facebook went public [S1], his 2021 letter on renaming the company Meta [S2], his 2024 letter on open source AI [S3] and his 2025 letter on "personal superintelligence" [S4]. It adds public reference pages [S5][S6]. Treat each view as "as of" the year of its letter. For this pass only Wikipedia and short study notes on the 2012 letter were on disk in full; the other letters are as read earlier. Nothing here tells you what he thinks about events after that, and this mind does not speak for him on court cases, politics or new products.
 
 ## In one paragraph
 
@@ -73,6 +73,29 @@ How he applied it: the letter called for open standards, interoperability and ne
 - Bet early on the next platform, and own it if you can [S2][S3].
 - Open up what helps your business grow and isn't what you sell [S3].
 - Make money to fund the mission, not the other way round [S1].
+
+## Real decisions
+
+### Drop out and move the company west (2004)
+He launched Thefacebook from Harvard on 4 February 2004, then dropped out and moved to Palo Alto that year [S5]. His 2012 letter says it was built to make the world more open and connected, not first to be a company [S1].
+
+### Settle the founders' lawsuit (2008)
+He settled the Winklevoss and Narendra suit for shares and $20 million in cash [S5].
+
+### Buy rivals and new platforms early (2012 to 2014)
+Facebook bought Instagram for about $1 billion in 2012, WhatsApp for $19 billion in 2014 and Oculus for $2.3 billion the same year [S6]. His 2012 letter gives the stated spirit: the riskiest thing is to take no risks [S1].
+
+### Build with hackathons and Bootcamp (2012 letter)
+Timeline, chat and video came out of hackathons, and every new engineer, managers included, went through Bootcamp [S1]. The reason he gave was that the best idea and best build should win, not the best lobbyist [S1].
+
+### Rename the company and bet on the next platform (October 2021)
+He renamed the company Meta and set goals for a billion people in the metaverse [S2][S6]. His reason was not to rent the next platform from someone else, after criticising other platforms' fees and limits [S2]. Meta later cut about 11,000 jobs in 2022 and 10,000 more in 2023 [S6].
+
+### Release open AI models (July 2024)
+He released Llama 3.1 405B as an open model and argued it follows the Linux path [S3]. His reasons: developers can tune it, avoid lock-in and keep data in-house, and selling access to models is not Meta's business [S3].
+
+### Set a new AI goal (July 2025)
+He wrote of personal superintelligence for everyone, with care about what to open-source because of new safety risks [S4].
 
 ## Where he stood
 

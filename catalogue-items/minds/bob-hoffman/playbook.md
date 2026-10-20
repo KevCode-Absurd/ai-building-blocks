@@ -39,6 +39,10 @@ You bring him a claim, a metric or a shiny new channel your boss wants to bet on
 
 ## Jobs, one by one
 
+### Your online media buy
+
+He'd ask who gave you the numbers and how they know. He'd tell you to buy direct from quality publishers, stay out of open networks and programmatic, distrust agency and fraud-checker reports and seals of approval, and ask "How do you know this?" of every line. If the spend is large, he'd say hire a trusted consultant. He'd ask whether you want the real answer, because he says many people on your side of the table do not.
+
 ### Your marketing metrics
 
 You show him a dashboard with clicks, views and a conversion rate to two decimals. He'd ask who measured it and who checks the measurer. If the tool is sold by the company whose ads it is grading, he'd smile and ask for another source. He'd ask what happened to actual sales in the same weeks. He'd tell you not to trust anyone grading their own homework, and to keep a plain record of what you did and what moved.

@@ -1,0 +1,122 @@
+new_slug: failure-first-plan-check
+name: "Failure-first plan check"
+summary: "Paste a plan. Get a list of the ways it could fail, and the changes that avoid them."
+job: plan-strategy
+thinking: high
+thinking_why: "It must find failure modes specific to this plan and judge which threaten survival, which takes careful reasoning."
+
+headline: "Failure-first plan check"
+subhead: Paste a plan with its goal. It works backward from what would guarantee failure, checks the plan against the usual ways projects like it fail, and ranks survival risks first. You get a list of failure modes, a change in the plan for each, and a set of attacks to run.
+
+explain: |
+  Most plans are checked by asking what could go right. A plan is stronger when you ask what would make it fail, because the answers are usually specific and fixable: running out of cash, relying on one customer, launching into a market that does not care.
+
+  This skill states the goal in one line and asks what would guarantee failure. It lists the standard ways of failing in this kind of work and checks your plan against each. It puts anything that threatens survival at the top, such as debt or a single big dependency. It then states the bet your plan makes and who pushes it, and sets up one or two people to attack the plan on purpose, from the angle of market, timing, team and the road not taken.
+
+when:
+  - You have a plan written and want to find holes before you commit money or time.
+  - A team is excited about a plan and nobody is arguing against it.
+  - You are choosing between two paths and want to see what the other one would look like.
+
+you_give:
+  - The plan, in as much detail as you have
+  - The goal it serves, and the deadline
+  - What the plan depends on (money, people, one big customer or tool) (optional)
+you_get:
+  - The goal in one line
+  - A list of failure modes specific to your plan, survival risks first
+  - A change to the plan for each failure
+  - The bet stated, and a set of attacks for the people you pick to argue against it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the plan and the goal. Add what it depends on.
+  - Read the survival risks first and fix those before anything else.
+  - Pick one or two people to argue against the plan, and give them the attack list.
+  - Update the plan with the changes, then paste it back to re-check.
+
+how_it_works:
+  - title: States the goal
+    text: Reduces the goal to one line so every risk can be measured against it.
+  - title: Asks what guarantees failure
+    text: Works backward from the outcome you want to avoid.
+  - title: Lists the usual failures
+    text: Writes the standard ways projects of this kind fail.
+  - title: Checks the plan
+    text: Tests the plan against each failure and marks where it is exposed.
+  - title: Flags survival risks
+    text: Marks anything that could end you, such as debt or one big dependency, and puts it first.
+  - title: States the bet
+    text: Says what the plan is wagering on and who is pushing for it.
+  - title: Sets up the attacks
+    text: Names one or two people to argue against it and lists attacks on market, timing, team and the other path.
+
+output_shape: |
+  GOAL
+  <one line>
+
+  WHAT WOULD GUARANTEE FAILURE
+  <list>
+
+  SURVIVAL RISKS
+  <n>. <risk> | Where it shows in the plan: <part> | Change: <what to do>
+
+  OTHER WAYS IT FAILS
+  <n>. <failure mode> | Exposed? <yes/no/partly> | Change: <what to do>
+
+  THE BET
+  <what the plan wagers on> | Pushed by: <who>
+
+  ATTACKS TO RUN
+  Market: <attack>  Timing: <attack>  Team: <attack>  The other path: <what it would look like>
+  Attackers: <names or roles>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How much detail the plan has
+    how: A plan with numbers and dates gets sharper failure modes than a general idea.
+  - what: Your field
+    how: Name it. The standard failures differ for a restaurant, a software tool and a consulting firm.
+  - what: What you depend on
+    how: Name every single point of dependence, such as one supplier, one platform or one person.
+  - what: Who attacks
+    how: Choose someone who does not report to the person pushing the plan.
+
+judge:
+  - Each failure mode is specific to this plan, not a generic warning.
+  - Survival risks come first in the list.
+  - Every failure has a change in the plan.
+  - No improvement idea appears before the failure list is done.
+  - At least one attack is about the market, not the team.
+
+test:
+  - Run it on a past plan that failed. See whether it names the real cause.
+  - Run it on a plan that worked. It should still find some exposure and not praise it.
+  - Give the attack list to a friend and ask which attack hurt most.
+  - Run it again after changes. The survival list should shrink.
+
+improve:
+  - Add the common failures you have seen in your field to step 3.
+  - Add your own limits, such as maximum debt or maximum share from one customer.
+  - Save the failure list as a checklist for the next plan.
+  - Pair it with "Ruin risk stress tester" for plans where one bad outcome could end everything.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing and testing failure modes is text reasoning that any strong chat AI handles with this skill."}
+    - {name: "A spreadsheet", why: "Handy for putting numbers on dependencies, cash and runway."}
+  inputs:
+    - "Cash on hand, monthly costs and any debt"
+    - "A list of your top customers and what share each brings"
+    - "Notes on how similar plans fared in your field"
+
+terms:
+  - term: Failure mode
+    meaning: One specific way a plan can go wrong.
+  - term: Survival risk
+    meaning: A risk that could end the project or business, not only make it worse.

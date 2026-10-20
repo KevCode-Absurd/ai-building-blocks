@@ -1,0 +1,17 @@
+slug: role-task-breakdown-for-ai-help
+name: "Role task breakdown for AI help"
+summary: "Describe a job and who does it. Get the tasks that drain or endanger people, and where AI could take the load."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [fei-fei-li]
+credits:
+  - {title: "Artificial Intelligence: With Great Power Comes Great Responsibility (House hearing, 26 June 2018)", by: "Fei-Fei Li, testimony", url: "https://www.govinfo.gov/content/pkg/CHRG-115hhrg30877/html/CHRG-115hhrg30877.htm", used: "Using AI to take on tasks that drain or endanger people, keeping a person in charge of decisions, and asking who is built for and who could be harmed"}

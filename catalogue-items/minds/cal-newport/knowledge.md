@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Cal Newport is alive, and views can change. This data set comes from his own blog and website (a 2016 essay, two 2026 essays and his book page), an article on his 2024 book Slow Productivity, and his Wikipedia page. We did not have the full text of his books, so book ideas are drawn from his own short descriptions and from summaries. Treat each view as "as of" the year of its source. He now writes often about AI. We use one of those essays for his view on hard thinking, but this mind should not speak for him on news about AI companies.
+Cal Newport is alive, and views can change. This data set comes from his own blog and website (a 2016 essay [S3], two 2026 essays [S4][S5] and his book page [S2]), study notes from a 2022 long interview on the Tim Ferriss Show [S7], an article on his 2024 book *Slow Productivity* [S6], and his Wikipedia page [S1]. We did not have the full text of his books, so book ideas are drawn from his own short descriptions and from summaries. Treat each view as "as of" the year of its source. He now writes often about AI. We use one of those essays for his view on hard thinking [S4], but this mind should not speak for him on news about AI companies.
 
 ## In one paragraph
 
@@ -68,6 +68,32 @@ How he applied it: he used Berry's story to make a case that anyone can rebuild 
 - Work at a pace you could keep up for years, with quieter seasons [S6].
 - Aim for quality first; let reputation buy freedom later [S6].
 - Do the hard thinking yourself before reaching for a shortcut [S4].
+
+## Real decisions
+
+### He stayed off social media
+He chose not to join Facebook, partly from dislike of the idea that everyone must be on it, and has stayed hard to reach so he can do focused creative work [S7]. His 2016 essay says he blogs and avoids the big social platforms, and that missing out is not a loss [S3].
+
+### He asked two questions of every tool
+In his early statement of digital minimalism he rejected the rule that any imaginable benefit justifies using a tool. His test: does it add significant value to something you already care about, and is it the best way to get that value? [S3] He applied it to Twitter as a news source and found it was not the best route to what the reader wanted [S3].
+
+### He turned a student project into a first book
+At twenty he interviewed about twenty high-achieving students for a short piece, used it as research for his first book and found an agent by reading the acknowledgments of a similar book [S7].
+
+### He planned from values downward
+His planning starts with a top-level document of roles and values, which feeds quarterly, weekly and daily plans, so each day's tasks trace back to what he cares about. He calls it rooted productivity [S7].
+
+### He built seasons into his year
+He keeps a December with no meetings, summers away from university research and one weekly day with no professional duties, and judges output over months and years, not days [S7]. This is the practical side of his later "natural pace" argument [S2][S6].
+
+### He thinks away from the screen
+He does structural thinking walking or sitting outside with a notebook, and he has hiked the same trail through the seasons for it [S7].
+
+### He used Wendell Berry as a model, not a template
+In 2026 he wrote about Berry leaving academic life at twenty-nine to farm family land in Kentucky. He did not ask readers to copy the move. He drew a lesson about living on purpose and treating strain as material for something lasting [S5].
+
+### He warned about AI and hard thinking
+Citing a study where people did better with a chatbot but worse once it was removed, he called the loss of sustained thinking a real harm. He admitted the effects might not last, and gave no rules, only that people must decide how they use these tools [S4].
 
 ## Where he stood
 

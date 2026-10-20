@@ -1,0 +1,125 @@
+new_slug: one-goal-marketing-plan-builder
+name: "One-goal marketing plan builder"
+summary: "Paste your goal and tactics you could try. Get one numbered goal, scored tactics and a test calendar."
+job: plan-strategy
+thinking: low
+thinking_why: "The work is sums, scoring and a calendar from fixed rules, so a fast model is enough."
+
+headline: "One-goal marketing plan builder"
+subhead: Give it the result you want and the tactics you are thinking of. It turns the goal into a number and a date, works back to the sales or sign-ups needed, scores each tactic and gives you a calendar of tests with stop dates.
+
+explain: |
+  Most marketing plans fail because they have ten goals, a long list of things to try and no way to tell which one worked. People stay busy and learn little.
+
+  This skill pins your plan to one goal with a number and a date. It works backwards to how many sales or sign-ups you need, then scores each tactic from 1 to 5 for impact and for ease. It picks the top few, gives each a time limit, and sets a split of about 80% of effort on what already works and 20% on tests. It adds a daily and weekly review, and a rule for stopping what fails. It also checks that people want what you sell before you spend on marketing.
+
+when:
+  - You have many marketing ideas and no clear order.
+  - You are about to spend on ads or content without a target.
+  - You want a plan you can review in ten minutes each week.
+
+you_give:
+  - "The result you want, even if rough, and by when"
+  - "Your price, profit per sale and any current sales or sign-up numbers"
+  - "Tactics you could try, as a list"
+  - "Any proof that people want what you sell (optional)"
+
+you_get:
+  - "One goal written with a number and a date"
+  - "The sales or sign-ups needed to reach it"
+  - "A sheet of tactics each scored for impact and ease"
+  - "A test calendar with stop dates and a review rhythm"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your goal, your price and profit per sale, and what you have today."
+  - "Paste your tactic ideas. Add rough costs and time for each if you know them."
+  - "Read the score sheet and change any score you disagree with, then ask it to redo the top picks."
+  - "Put the calendar in your diary and run the weekly review."
+
+how_it_works:
+  - title: Writes one goal
+    text: Turns your wish into a single goal with a number and a date.
+  - title: Works back to sales
+    text: Divides the goal by profit per sale to find how many sales or sign-ups you need.
+  - title: Lists tactics
+    text: Puts every idea in one sheet, with the cost and effort of each.
+  - title: Scores each tactic
+    text: Gives each tactic a score from 1 to 5 for impact and for ease, with a reason.
+  - title: Picks and time-boxes
+    text: Takes the top few and sets a time limit and a stop rule for each.
+  - title: Splits the effort
+    text: Puts about 80% of effort on what works and 20% on new tests.
+  - title: Sets the review
+    text: Adds a short daily and weekly review and a rule for stopping what fails.
+
+output_shape: |
+  THE GOAL
+  <number> <thing> by <date>
+
+  THE MATH
+  Profit per sale: <amount>
+  Sales or sign-ups needed: <number>
+  Per week: <number>
+
+  DEMAND CHECK
+  <proof people want it, or MISSING>
+
+  TACTIC SHEET
+  <tactic> | impact 1 to 5 | ease 1 to 5 | cost | reason
+
+  THE PLAN
+  <tactic> | start | stop date | stop rule | effort share
+
+  TEST CALENDAR
+  <week by week list of tests and the day each is judged>
+
+  REVIEW RHYTHM
+  Daily: <what to look at>  Weekly: <what to decide>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Profit per sale
+    how: Give the real number after costs. The whole plan rests on it.
+  - what: Your time and money limits
+    how: Say how many hours and how much money a week you can put in. Tactics that do not fit are cut.
+  - what: How many tactics you keep
+    how: Three is a good start. More means each gets too little time to judge.
+  - what: Your current best channel
+    how: Name what already brings customers. It gets the 80% share.
+
+judge:
+  - The goal has a number and a date.
+  - Every tactic has two scores and a reason.
+  - Every test has a stop date.
+  - The effort split is shown.
+  - Nothing is marketed before demand is checked.
+
+test:
+  - "Run it with a goal from last quarter. See whether the tactic scores match what actually worked."
+  - "Change one profit number and check that the sales needed change in the right direction."
+  - "Try the plan for two weeks and note which stop dates you used."
+
+improve:
+  - "Add your own scoring notes, such as what counts as high impact in your field."
+  - "Add channels you cannot use, so they never get picked."
+  - "Save each finished test and its result to a log, so the next plan starts smarter."
+  - "Pair it with a customer interview skill to check demand first."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sums, scoring and calendars are text work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Keeps the score sheet and lets you re-sort when you change a score."}
+  inputs:
+    - "Last quarter's sales and sign-ups"
+    - "Costs for each channel you have tried"
+    - "Notes from customer conversations"
+
+terms:
+  - term: Impact and ease
+    meaning: Impact is how much a tactic could move the goal. Ease is how simple and cheap it is to try.

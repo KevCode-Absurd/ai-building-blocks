@@ -1,0 +1,127 @@
+new_slug: wordmark-sketch-planner
+name: "Wordmark sketch planner"
+summary: "Paste a name and its meaning. Get five letter-shape ideas that act it out, with a pick."
+job: design-work
+thinking: medium
+thinking_why: "It generates and judges shape ideas, which needs taste, but the steps are fixed."
+
+headline: "Wordmark sketch planner"
+subhead: "Give it a name and what it should mean. It looks for ways the letters themselves can act out the meaning, with no picture. You get at least five sketch ideas, a pick with its cost in readability and spacing notes."
+
+explain: |
+  Most name marks add a symbol next to the name because that is the habit. The symbol then carries the idea, and the name becomes plain text. Letters can often do both jobs, if you ask how they might act out the meaning: lean, stack, sink, crowd together or run off the edge.
+
+  This skill starts from the meaning of the name and lists shape moves, then writes several sketch ideas, each one short enough to draw in a minute. It matches a typeface to each idea, tightens spacing until the name reads as one shape, and says plainly how much each idea costs in ease of reading. It then picks one and cuts the rest.
+
+when:
+  - "You have a name and a blank page where the logo should go."
+  - "Your current mark is a symbol plus plain text and nothing connects them."
+  - "You want a mark that works with no icon, for tiny sizes or print."
+
+you_give:
+  - "The name, spelled exactly as it should appear"
+  - "What the name means and what it should make people feel"
+  - "Where the mark will be used (optional)"
+  - "Your brand file, for tone and colour limits (optional)"
+you_get:
+  - "At least five different shape ideas, each a sketch you can draw"
+  - "A typeface type and spacing note for each"
+  - "A pick, with what it costs in ease of reading"
+  - "A small-size check and an image plan for the sketches"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Type the name and one line on what it means."
+  - "Say what feeling it should give someone who sees it for a second."
+  - "Paste any limits, such as one colour or a name that must stay lower case."
+  - "Draw the pick and two others on paper. Show them to a stranger and ask what the name means."
+  - "Take the pick to a designer or a type tool."
+
+how_it_works:
+  - title: "Reads the meaning"
+    text: "Writes what the name means and what feeling it should give."
+  - title: "Tests letters alone"
+    text: "Asks if the letters can carry the idea with no picture."
+  - title: "Lists shape moves"
+    text: "Stacking, leaning, sinking, crowding or running off the edge."
+  - title: "Sketches many versions"
+    text: "Five or more ideas, each a fresh take on the last."
+  - title: "Matches the typeface"
+    text: "Describes the shape of letters that fit each idea."
+  - title: "Tightens the name"
+    text: "Sets spacing and line breaks until it reads as one shape."
+  - title: "Weighs the cost"
+    text: "Says what each idea gives up in ease of reading."
+  - title: "Picks one"
+    text: "Chooses a winner and cuts the others."
+
+output_shape: |
+  NAME AND MEANING
+  <name> | meaning: <one line> | feeling: <one word>
+
+  SKETCH IDEAS
+  1. <shape move>: <what to draw>
+     Typeface: <letter shape described>
+     Spacing: <tracking and line breaks>
+     Cost in reading: <what is lost>
+  2. ...
+
+  THE PICK
+  <idea number> because <reason>. Works with no picture: <yes or no, why>.
+
+  SMALL SIZE
+  <does it still read at thumbnail size>
+
+  IMAGE PLAN
+  <what to sketch first, on paper>
+
+  MISSING
+  <facts that would change the pick>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The meaning"
+    how: "One clear meaning gives sharper ideas than a list. Pick the main one."
+  - what: "The feeling"
+    how: "A single word such as \"tense\", \"gentle\" or \"fast\" steers the shape moves."
+  - what: "Limits"
+    how: "Say if the name must stay lower case, one colour or in one line."
+  - what: "How many ideas"
+    how: "Ask for more than five if you want a wider spread. It never goes under five."
+
+judge:
+  - "At least five ideas are really different, not small variations."
+  - "The pick makes sense with no picture next to it."
+  - "The loss in ease of reading is stated."
+  - "The name still reads at small size."
+  - "Spacing is described for every line."
+
+test:
+  - "Draw the pick and show it to someone for two seconds. Ask what the name means."
+  - "Run it on a name you already know the logo of and see whether it finds a similar idea."
+  - "Shrink a quick sketch to thumbnail size and check it reads."
+  - "Run it twice. The pick can differ, but the ideas should not repeat."
+
+improve:
+  - "Add your brand limits (colours, case, languages) to \"What you need\"."
+  - "Add examples of marks you like to the brief, so the typeface notes fit your taste."
+  - "Save the rejected ideas in your brand file for later campaigns."
+  - "Pair it with \"Logo strength tester\" to score the finished candidates."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing sketch ideas and spacing notes from a name is text work any strong chat AI does well."}
+    - {name: "Pencil and tracing paper", why: "The skill expects fast sketches laid over each other, which paper does best."}
+  inputs:
+    - "A list of marks you like and why"
+    - "Where the mark will appear and at what smallest size"
+    - "Names of competitors, so shapes do not copy them"
+    - "A line on tone, such as playful or serious"
+
+terms:
+  - term: "Wordmark"
+    meaning: "A logo made from the name's letters alone."
+  - term: "Tracking"
+    meaning: "The space between all the letters in a line."

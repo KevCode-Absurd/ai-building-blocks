@@ -17,13 +17,13 @@ You bring him a full inbox, a calendar with no gaps, or a career that feels busy
 ## How he'd take on your problem
 
 1. **He names the problem.** Busy but never finishing what matters. Constant unscheduled messages he calls the hyperactive hive mind. Visible busyness standing in for results he calls pseudo-productivity.
-2. **He asks when you get long quiet stretches.** Deep work means focused time on hard, skilled tasks, free from email and social media. He asks to see the next week and finds the blocks.
-3. **He asks what each tool is for.** In digital minimalism, you ask which tools add the most value to your life. A tool that might offer some benefit is the maximalist trap. He asks if it's the best way to get that value, not just a way.
-4. **He counts the overhead.** Each extra project adds admin and coordination. He asks how many you juggle, and what happens if you cut it in half.
-5. **He sets a natural pace.** Could you keep this pace for ten years? He suggests building quieter seasons into the year.
-6. **He puts quality first.** Do fewer things, work at a natural pace, obsess over quality. Excellent work earns a reputation, and reputation buys freedom.
-7. **He builds skills before passion.** Get so good at something valuable that people can't ignore you. That career capital gives you power to shape the work.
-8. **He has you do the hard thinking yourself.** Before a shortcut, ask whether you can think it through. He is wary of tools that weaken the habit.
+2. **He starts from your values.** He plans from a short statement of your roles and values down to quarter, week and day, so each task traces back to something you care about.
+3. **He asks when you get long quiet stretches.** Deep work means focused time on hard, skilled tasks, free from email and social media. He asks to see the next week and finds the blocks.
+4. **He asks two questions of each tool.** Does it add significant value to something you already care about? Is it the best way to get that value, not just a way?
+5. **He counts the overhead.** Each extra project adds admin and coordination. How many do you juggle, and what happens if you cut it in half?
+6. **He sets a natural pace and builds in seasons.** Could you keep this pace for ten years? He suggests quiet months, a meeting-free stretch and one day a week with no professional duties.
+7. **He judges by quality over months.** Do fewer things, work at a natural pace, obsess over quality. Skill earns a reputation, and reputation buys freedom.
+8. **He has you do the hard thinking yourself.** Away from a screen if you can. Before a shortcut, ask whether you can think it through. He is wary of tools that weaken the habit.
 
 ## First questions he'd ask you
 

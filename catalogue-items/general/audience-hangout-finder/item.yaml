@@ -1,0 +1,19 @@
+slug: audience-hangout-finder
+name: "Audience hangout finder"
+summary: "Describe your buyer group. Get a map of the sites, shows, accounts and communities they use, and where to show up first."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [rand-fishkin]
+credits:
+  - {title: "Rand Fishkin on audience intelligence", by: "B2B Marketing Tech Talks (Stratabeat), 2021", url: "https://stratabeat.com/sparktoro-rand-fishkin-interview/", used: "Find what an audience reads, watches and follows, and play early on topics before they become searches"}
+  - {title: "The Zero-Click Internet: what it means for your marketing strategy", by: "Rand Fishkin, Duct Tape Marketing", url: "https://ducttapemarketing.com/zero-click-internet-marketing-strategy/", used: "Reach people where they already are, since many searches and posts keep people on the platform; measure lift, not every click"}

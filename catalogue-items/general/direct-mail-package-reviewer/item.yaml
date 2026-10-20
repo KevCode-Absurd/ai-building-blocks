@@ -1,0 +1,18 @@
+slug: direct-mail-package-reviewer
+name: "Direct mail package reviewer"
+summary: "Paste your mailing, envelope line and letter. Get a review of the envelope, offer, copy and look, with fixes."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [bill-jayme]
+credits:
+  - {title: "20 Opinionated Answers to 20 Questions Nobody Asked", by: "Bill Jayme, as reproduced by Drayton Bird", used: "Judging the outer envelope as the reason to open, writing to the reader as an equal, stating savings in money, matching prizes to the product, and reading the copy aloud to a harsh listener"}

@@ -26,6 +26,7 @@ sources:
   - {n: 4, title: "Richard Branson", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Richard_Branson", kind: reference}
   - {n: 5, title: "Virgin Group", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Virgin_Group", kind: reference}
   - {n: 6, title: "Virgin Galactic", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Virgin_Galactic", kind: reference}
+  - {n: 7, title: "Richard Branson on saying yes now and figuring it out later (TED interview, transcript)", by: "Richard Branson, TED", url: "https://www.ted.com/pages/richard-branson-on-saying-yes-now-and-figuring-it-out-later-transcript", kind: own-words}
 tests:
   - {kind: use, prompt: "Plan a launch stunt for a new local bike-repair shop that would get the town talking, on a budget of $500."}
   - {kind: use, prompt: "Write a short, fun welcome note from the founder to new staff at a 20-person company."}

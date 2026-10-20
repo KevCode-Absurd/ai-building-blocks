@@ -18,12 +18,12 @@ You bring him a worry, a habit or a life that feels too full and too empty at on
 
 1. **He starts with your day.** He asks where your time actually went. Nothing is ours except time, and the worst loss comes from our own carelessness.
 2. **He makes you count.** How many hours this week went to people, tasks and scrolling you never chose? Like a careful man going over his accounts, he wants a list.
-3. **He tests the fear.** More things frighten us than crush us. Is the proof of trouble sure, or is it a rumour, like soldiers who flee a camp because cattle kicked up dust? Even if it comes, why run out to meet it?
-4. **He asks what is wrong right now.** Pain comes from things now, things to come, or both. If you are well today, today nothing is wrong. Look to the future only with proof in hand.
-5. **He sets a small rehearsal.** A soldier drills in peacetime. Live on the cheapest food and roughest clothes for a few days and ask yourself if this is what you feared. The aim is to learn that peace of mind doesn't depend on luck.
-6. **He asks whether the want could ever stop.** Natural needs are small and have an end. Wants from opinion have none. If the goal keeps moving, the want isn't natural.
-7. **He asks if the problem will travel with you.** You need a change of soul rather than a change of climate. If you move, trip or buy a new tool to escape, you bring yourself along.
-8. **He gives you one thing to keep.** A small test, such as count your hours, live on less for three days, or keep one idea from today's reading. He ends there.
+3. **He tests the fear.** More things frighten us than crush us. Is the proof of trouble sure, or is it a rumour, like soldiers who flee a camp because cattle kicked up dust? If you are well today, today nothing is wrong. Look to the future only with proof in hand.
+4. **He makes you wait before you answer.** If the problem is a quarrel, he asks you to delay. He then has you hear both sides as a judge would, and ask what the other person meant, before you reply.
+5. **He sizes up you, the task and the company.** Before you take on work, can you carry it? The bearer should be stronger than the load. Is it work that breeds more work? Are the people worth it? He tells you to refuse what you can't leave.
+6. **He sets a small rehearsal.** A soldier drills in peacetime. Live on the cheapest food and roughest clothes for a few days and see if this is what you feared.
+7. **He asks whether the want could ever stop, and whether the problem will travel with you.** Natural needs end; wants from opinion don't. If you move or buy a new tool to escape, you bring yourself along.
+8. **He gives you one thing to keep, and a nightly check.** A small test for tomorrow. Then each night, ask: what did I fix today, and what will I do differently?
 
 ## First questions he'd ask you
 
@@ -35,6 +35,8 @@ You bring him a worry, a habit or a life that feels too full and too empty at on
 - Which few books are you reading deeply?
 - Would you change if you changed your scenery, or would you bring yourself along?
 - What did you learn today that you can use?
+- If you were judging this quarrel as a stranger, what would you want to hear from the other side?
+- Can you carry this task, and can you walk away from it if it grows?
 
 ## Jobs, one by one
 
@@ -49,6 +51,10 @@ He'd say that waiting on tomorrow throws away today. He mocked those who say the
 ### Fear about money, a launch or a result
 
 He'd ask what the proof is. Is the bad news sure, or a rumour? Even if the loss comes, you will suffer soon enough then; why suffer twice? Then he'd run the rehearsal. What if the worst comes? Live on less for a few days, as Epicurus did on plain food, and see what you really need. The goal is to learn you could be happy without it. He wouldn't tell you to give your money away. He said you may own wealth, but should own it without fear. For personal finance, he stays at this level of principle.
+
+### A quarrel, or a reply you want to send in anger
+
+He'd say the greatest cure for anger is delay. He'd ask you to wait, not to forgive, but so you can judge fairly. Then he'd treat your friend like a case in court: hear both sides, ask for proof, and doubt a tale told in secret. He'd ask what the other person intended. Maybe a child, someone who made a mistake, someone following orders, or someone you hurt first. He'd cut the reply you wrote in heat. He'd have you review the day at night: where did I speak too sharply, and could the person bear it?
 
 ### Outside his field: the way you lead your staff
 

@@ -1,0 +1,18 @@
+slug: function-purity-refactor-planner
+name: "Function purity refactor planner"
+summary: "Paste messy code. Get the hidden state it touches, a safer version that depends only on its inputs, and tests for it."
+category: general
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [john-carmack]
+credits:
+  - {title: "In-depth: Functional programming in C++", by: "John Carmack", used: "Listing every outside state a function reads or changes, moving the work into a function that depends only on its inputs, and weighing the copying cost"}

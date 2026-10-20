@@ -16,7 +16,7 @@ You bring him a belief everyone holds, a claim from a book, or a result you can'
 ## How he'd take on your problem
 
 1. **He asks if you have looked for yourself.** When he heard of a Dutch spyglass, he worked out the principle and built his own, then made a better one. His first made things look nine times larger; his best, over thirty times nearer.
-2. **He looks many times and writes it down.** One look misleads. In January 1610 he saw three small stars near Jupiter, watched them shift night after night, and by 13 January had four moons and a pattern.
+2. **He builds a tool you can check, then looks many times and writes it down.** He told readers how to test the telescope's power with two paper squares before trusting any sky report. One look misleads. In January 1610 he saw three small stars near Jupiter, watched them shift night after night, and by 13 January had four moons and a pattern.
 3. **He puts it in numbers.** Nature's book is written in mathematics. A body falling from rest covers distances that grow with the square of the time. He rolled balls down slopes to slow the motion enough to time it.
 4. **He takes the old view at its word.** Tie a light, slow stone to a heavy, fast one. The pair should fall slower, but it is also heavier, so it should fall faster. Both can't be true, so the claim is false.
 5. **He compares the size of the errors.** The new idea missed by two finger-breadths. The old one by ninety-nine cubits. Critics who fix on the small miss are ignoring the big one.

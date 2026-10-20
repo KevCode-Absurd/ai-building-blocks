@@ -1,0 +1,21 @@
+slug: best-customer-finder
+name: "Best customer finder"
+summary: "Paste customers with what each paid and how long they stayed. Get your top 20 percent and what they share."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: persona}
+  - {type: shortlist}
+origin: rebuilt
+version: 1.0.0
+minds: [alex-hormozi]
+credits:
+  - {title: "$100M Offers, The Lost Chapter: Your First Avatar", by: "Alex Hormozi", used: "Sorting customers by what they paid, how long they stayed and how well they fit, keeping the top group and finding the few traits all of them share"}
+  - {title: "Acquisition.com Offer Creation Course outline", by: "Acquisition.com", used: "Checking where the best customers first heard of you and what they said they wanted"}

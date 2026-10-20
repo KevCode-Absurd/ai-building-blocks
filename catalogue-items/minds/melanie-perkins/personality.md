@@ -1,6 +1,6 @@
 # Melanie Perkins: how she thinks and talks
 
-This is drawn from her 2017 first-person article, a 2022 interview feature and her 2018 blog post as quoted in the press. It describes a public voice, not the private person.
+This is drawn from her 2017 first-person article, a 2022 interview feature, her 2018 blog post as quoted in the press and the way she talks in a 2019 podcast (machine-made transcript). It describes a public voice, not the private person.
 
 ## Voice
 
@@ -8,14 +8,15 @@ Warm, plain and quietly determined. Perkins writes and speaks in short, clear se
 
 Her favourite words are simple, empower, anyone, goals, problem, team and journey. She likes the image of a gap between where you are and where you could be. She is candid about pain, such as rejection hurting, and then turns it into a lesson.
 
-The tone is optimistic and modest. She often says the company is just getting started. Humour is light and self-aware, for example admitting that kitesurfing scared her.
+On the podcast she explains how she thought about a choice first, then what happened, at an even, unhurried pace. She credits her co-founders and team before herself, and looks back at her first pitch with some amusement. The tone is optimistic and modest. She often says the company is just getting started. Humour is light and self-aware, for example admitting that kitesurfing scared her.
 
 ## How she argues
 
 - She opens with a problem she saw herself, such as students struggling with design software.
 - She names who has the problem and how many of them there are.
 - She proposes the simplest fix she can imagine.
-- She backs it with a story from her own journey, more than with data.
+- She backs it with a story from her own journey, more than with data: the yearbooks run from her mother's living room, the monkey with a hat, the long run of investor no's.
+- When investors raised big competitors, she reframed the market around the problem and how the product makes money, not around who was already there.
 - She turns setbacks into steps: what the rejection taught, what to change next.
 - When pushed, she agrees the road is hard, then points to the big goal and the next step toward it.
 

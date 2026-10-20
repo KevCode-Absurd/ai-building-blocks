@@ -1,0 +1,128 @@
+new_slug: fair-disagreement-test-planner
+name: "Fair disagreement test planner"
+summary: "Describe a dispute where each side thinks it is right. Get a test both accept in advance and written predictions."
+job: think-and-decide
+thinking: medium
+thinking_why: "It follows fixed steps but must write each side fairly and design a test that could embarrass both."
+
+headline: "Fair disagreement test planner"
+subhead: Describe a dispute where both sides think the evidence backs them. It restates each claim in words the other accepts, finds what you already agree on, and designs one test that could embarrass either side. You get written predictions, a neutral recorder and a follow-up plan.
+
+explain: |
+  When two people disagree, each reads the same facts and sees support for their own view. Arguing further rarely helps. What helps is agreeing before any result comes in on what would count as evidence, and writing down what each side expects to see.
+
+  This skill restates each side's claim in terms the other side would sign. It lists the points both already accept, which shrinks the dispute. It designs one test that could prove either side wrong, has each side write a prediction and what result would change their mind, and names a neutral person to run it. It also plans for the test settling nothing, and writes a review for afterward.
+
+when:
+  - Two people on your team disagree on what is working, such as an ad, a hire or a price.
+  - A partner or client holds a view you think is wrong, and talking has stalled.
+  - You are about to test something and want the result to count.
+
+you_give:
+  - The dispute, and the claim each side makes
+  - What each side points to as evidence
+  - What can be measured, tried or compared within your time and budget (optional)
+you_get:
+  - Each side's claim, in words the other accepts
+  - A list of points both already agree on
+  - One test that could embarrass each side, and the predictions to write down
+  - A neutral recorder, a follow-up if it settles nothing, and a review plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the dispute from each side, as fairly as you can. Ask the other person to read it.
+  - Check each restated claim with the person who holds it. Fix any wording they reject.
+  - Both sides fill in the prediction card before the test runs. Hand the card to the neutral person.
+  - Run the test, then use the review page to record results and what is still open.
+
+how_it_works:
+  - title: Restates both claims
+    text: Writes each side's claim so the other side agrees it is fair.
+  - title: Finds common ground
+    text: Lists the points both already accept, so the dispute is as small as it can be.
+  - title: Designs the test
+    text: Builds one test that could embarrass each side if the facts went against it.
+  - title: Takes predictions
+    text: Each side writes what result it expects and what result would change its view.
+  - title: Names a neutral recorder
+    text: Picks a person who stores the predictions and runs the data.
+  - title: Plans for no answer
+    text: Accepts that the first test may settle nothing and plans a follow-up.
+  - title: Reviews together
+    text: Writes the review page for results and what is still open.
+
+output_shape: |
+  THE DISPUTE
+  <one line>
+
+  CLAIMS, IN EACH SIDE'S TERMS
+  Side A: <claim>  Side B: <claim>
+
+  WHAT YOU BOTH ALREADY AGREE ON
+  <list>
+
+  THE TEST
+  <what to do, how long, what is measured>
+  Could embarrass A if: <result>  Could embarrass B if: <result>
+
+  PREDICTION CARD
+  Side A expects: <result>  Would change view if: <result>
+  Side B expects: <result>  Would change view if: <result>
+
+  RECORDER
+  <name or role> | Keeps the card and runs the numbers
+
+  IF IT SETTLES NOTHING
+  <follow-up test>
+
+  REVIEW PAGE
+  Results: <blank>  Who was right: <blank>  Still open: <blank>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How fairly you describe each side
+    how: Describe the side you disagree with in its best form. The test is only fair if both claims are.
+  - what: What can be measured
+    how: Say what data, trial or comparison you can really get. The test fits within it.
+  - what: Time available
+    how: A shorter window means a smaller test and a bigger chance of a follow-up.
+  - what: Who is neutral
+    how: Suggest a name. The skill checks that this person has no stake.
+
+judge:
+  - Both sides' claims are written in their own terms.
+  - Each side's predicted result is on record before the test.
+  - A neutral recorder is named.
+  - A follow-up is planned for an unclear result.
+  - The test could actually go against each side.
+
+test:
+  - Run it on an old dispute where you now know who was right. See whether the test would have shown it.
+  - Show each restated claim to the person who holds it and see if they accept the wording.
+  - Check that the test can fail for each side. If only one side can lose, redesign it.
+  - Run it twice on the same dispute and compare the tests.
+
+improve:
+  - Add typical tests in your field, such as a split test, a blind review or a small pilot.
+  - Add a rule for who can be a recorder in your team.
+  - Keep the prediction cards in a folder to see how often each person is right over time.
+  - Pair it with "Findings and guesses separator" when the results come back.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Restating claims and designing a test is text work any strong chat AI handles with this skill."}
+    - {name: "A shared document", why: "Both sides can sign the prediction card where the neutral person can see it."}
+  inputs:
+    - "Data both sides trust, such as past results or reports"
+    - "A short written case from each side"
+
+terms:
+  - term: Prediction card
+    meaning: A page where each side writes what result it expects and what would change its view, before the test.
+  - term: Neutral recorder
+    meaning: A person with no stake in the outcome who keeps the predictions and runs the numbers.

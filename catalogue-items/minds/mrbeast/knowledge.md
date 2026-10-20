@@ -70,6 +70,26 @@ How he applied it: in June 2017 he gave the $10,000 fee from his first brand dea
 - After a flop, read the data without emotion, fix one thing and move on [S1].
 - Hire for obsession and the will to learn, then train hard [S1][S3].
 
+## Real decisions
+
+### He kept going for years before a hit
+His channel ran for about five years before the counting video took off in January 2017 [S4]. That video took 40 hours to film [S4]. He now says he studies a flop calmly, looks at where viewers left and at the thumbnail, and moves on [S1].
+
+### He gave away his first brand deal
+In June 2017 he gave the $10,000 fee from his first brand deal to a homeless person [S4]. Giving then became part of the show, through Team Trees in 2019 and Beast Philanthropy in 2020 [S4][S9].
+
+### He rebuilt a hit show on a real set
+His November 2021 video "$456,000 Squid Game in Real Life!" rebuilt the games from a hit TV series with a large cash prize [S4]. It used a known story, a clear stake and money the viewer could see.
+
+### He trained a CEO to decide as he would
+He told Lex Fridman he spent about two years talking with his CEO for hours a day, so the CEO's calls would match his own [S1]. That left him free to step back, though he still approved every idea before filming [S1].
+
+### He put safety before the stunt
+He said safety experts and long testing come before big stunts, such as the Antarctica trip and the buried-alive video [S1].
+
+### He took the format to television
+In March 2024 he announced Beast Games with Amazon MGM Studios and a $5 million prize [S6]. It premiered in December 2024 and became Prime Video's most-watched unscripted series, with about 50 million viewers in 25 days [S6].
+
 ## Where he stood
 
 **What matters most on YouTube?** The click and the watch time. Titles and thumbnails earn the click, and holding attention earns the reach [S3]. As of 2023 he said one great video is worth more than many average ones [S1].

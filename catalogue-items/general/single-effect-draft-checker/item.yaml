@@ -1,0 +1,19 @@
+slug: single-effect-draft-checker
+name: "Single-effect draft checker"
+summary: "Paste your draft and the feeling you meant. Get each line checked against it, where attention slips and what to cut."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [edgar-allan-poe]
+credits:
+  - {title: "The Philosophy of Composition (with The Raven)", by: "Edgar Allan Poe", url: "https://www.poetryfoundation.org/articles/69390/the-philosophy-of-composition", used: "Judging every part of a piece against one effect, length for one sitting, and weakening what competes with the climax"}
+  - {title: "Review of Twice-Told Tales (Graham's Magazine, May 1842)", by: "Edgar Allan Poe", used: "The first sentence must serve the effect, and nothing should pull away from it"}

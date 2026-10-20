@@ -1,0 +1,129 @@
+new_slug: stranger-first-message-writer
+name: "Stranger first-message writer"
+summary: "Paste what you offer and who you want to reach. Get a first message a stranger can read in seconds."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "The steps are fixed and the output is a short message."
+
+headline: "Stranger first-message writer"
+subhead: "Give it your plan, what you offer and who you want to reach. It picks one idea and one easy reply, adds one honest hook and cuts until a stranger can read it in seconds. You get a main message and two shorter versions."
+
+explain: |
+  Strangers do not read long cold messages. They scan, and a message that asks for a call, a meeting and a decision gets deleted. Many writers also hide the one idea inside a list of features.
+
+  This skill starts with the stranger and their time. It picks one idea in plain words and one easy reply, and prefers asking who handles the problem over pitching. It adds one hook you can back up, cuts the draft below sixty words, writes two shorter versions and adds a polite way out. It also reminds you to check local rules on email and calls.
+
+when:
+  - "You are writing a cold email, message or call opening for the first time."
+  - "Your first messages get no replies."
+  - "You have a long pitch and need to cut it to the one idea."
+
+you_give:
+  - "Your plan: who you want to reach and why"
+  - "What you offer and what it solves"
+  - "The person, role or company (optional)"
+you_get:
+  - "A main message under sixty words"
+  - "A 30-word email and a 15-second call opening"
+  - "The hook and the proof behind it"
+  - "A polite exit and rules to check"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your plan and your offer, and add the person if you know them."
+  - "Read each version aloud. If you stumble, ask it to simplify."
+  - "Check local rules, then send to a small test group first."
+
+how_it_works:
+  - title: "Names the stranger"
+    text: "Their role, their time and what they care about."
+  - title: "Picks one idea"
+    text: "One short sentence anyone could follow."
+  - title: "Picks one reply"
+    text: "The easiest next step for them."
+  - title: "Asks who handles it"
+    text: "A referral ask before a pitch."
+  - title: "Adds one hook"
+    text: "Contrast, surprise or one concrete detail."
+  - title: "Cuts to seconds"
+    text: "A main message and two shorter versions."
+  - title: "Adds the exit"
+    text: "A polite way out and rules to check."
+
+output_shape: |
+  STRANGER
+  <role> | time <seconds> | cares about <x>
+
+  ONE IDEA
+  <sentence>
+  ONE REPLY
+  <easy next step>
+
+  MAIN MESSAGE (under 60 words)
+  <text>
+
+  SHORT EMAIL (30 words)
+  <text>
+
+  CALL OPENING (15 seconds)
+  <text>
+
+  HOOK AND PROOF
+  <hook> | proof: <what you can show>
+
+  EXIT LINE
+  <text>
+
+  RULES TO CHECK
+  <list>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "The stranger's role"
+    how: "Name the job title. A message to a founder differs from one to an assistant."
+  - what: "Your proof"
+    how: "Give one real result or detail. The hook rests on it."
+  - what: "The channel"
+    how: "Say email, chat or call. Each has a different time limit."
+  - what: "Your tone"
+    how: "Say if you are formal or relaxed. It adjusts the wording."
+
+judge:
+  - "You can read it aloud in under ten seconds."
+  - "It asks for one thing."
+  - "Every claim can be backed up."
+  - "A stranger would know every word."
+  - "It gives them an easy way to say no."
+
+test:
+  - "Send the short version to five people you do not know. Count replies."
+  - "Ask a friend to read it for five seconds and say what it wants."
+  - "Run it twice. The one idea should stay the same."
+  - "Compare it with your current message side by side."
+
+improve:
+  - "Add your common industry words to a \"no jargon\" list in step 6."
+  - "Add your region's email and call rules to step 7."
+  - "Save the replies you get and the hook that worked."
+  - "Pair it with a niche readiness checker so the stranger is well chosen."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Cutting and rewording a short message is simple text work."}
+    - {name: "A mail merge or CRM tool", why: "Helps you send the same message to a small test group and track replies."}
+  inputs:
+    - "The niche sentence from your sales plan"
+    - "Two past messages that worked"
+    - "A named contact or company"
+    - "Your proof (a number, a case or a detail)"
+
+terms:
+  - term: "Cold message"
+    meaning: "A first message to someone who does not know you."
+  - term: "Hook"
+    meaning: "The first line or detail that makes someone keep reading."

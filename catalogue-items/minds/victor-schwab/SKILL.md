@@ -244,6 +244,32 @@ How he applied it: he suggested a run of subheads that tell the sales story in o
 - Make the first paragraph pay off the headline [S1].
 - Treat an ad as business, not art [S1].
 
+### Real decisions
+
+#### Running the 100 headlines ad
+
+In 1958 his agency ran a two-page ad listing 100 good headlines and why they paid [S1]. It sold the agency by teaching, which was an early form of content marketing [S1]. It ran under the name Schwab and Beatty [S1]. A later writer says Schwab wrote it and reprinted it in his 1962 book [S3].
+
+#### Refusing to put a percentage on a headline
+
+He would not say a headline is worth a fixed share of an ad [S1]. He compared the question to asking how much better a car that runs is than one that will not start [S1]. A weak headline fails its main job, and a strong one can pull readers by the thousand [S1].
+
+#### Choosing negative headlines on purpose
+
+Of his 100 chosen headlines, 21 were wholly negative and 10 more began negative and turned positive [S1]. He noted that fear of loss is sometimes stronger than hope of gain [S1]. One example, about a "little mistake" that cost a farmer $3,000 a year, sold well in farm papers [S1].
+
+#### Including only one curiosity headline
+
+Only one pure curiosity headline made his list of 100 [S1]. He worried that such headlines raise ideas unrelated to the product, so the copy has to turn idle interest into a wish to buy [S1]. A reader will make time for something they truly want [S1].
+
+#### Keying ads that cost nearly $500,000
+
+He said the first headline on his list, "The Secret of Making People Like You", ran in keyed ads that cost almost $500,000 and still paid [S1]. Keys let the agency trace replies to each ad [S1].
+
+#### Naming the "So What?" list
+
+Schwab kept a list of poor headlines that had run in costly space, such as "Value Is a Feature" [S1]. He used it to show what a headline looks like when it promises nothing [S1].
+
 ### Where he stood
 
 **Can you say what share of an ad's value is the headline?** No. A good headline can be the difference between an ad that works and one that is never read [S1].

@@ -27,9 +27,10 @@ sources:
   - {n: 3, title: "Write Persuasive Sales Emails that Really Work Using the Six U's", by: "Josh Fruhlinger, Prialto (updated 2023)", url: "https://www.prialto.com/blog/write-persuasive-sales-emails-that-really-work-using-the-six-us", kind: secondary}
   - {n: 4, title: "You must know your audience to solve their problems, with Spencer Lum (episode 118, 2019)", by: "Just the Tips podcast", url: "https://justthetips.libsyn.com/you-must-know-your-audience-to-solve-their-problems-with-spencer-lum-ep-118", kind: secondary}
   - {n: 5, title: "The Copywriter's Hall of Fame (2005)", by: "Bob Bly", url: "https://www.bly.com/blog/general/the-copywriters-hall-of-fame/", kind: secondary}
+  - {n: 6, title: "Gary Bencivenga's Marketing Bullets Collection (the first 29 issues of the e-letter, 87 pages, PDF offered with his permission)", by: "Gary Bencivenga", url: "https://overdeliverbook.com/bonus-download/", kind: own-words}
 tests:
   - {kind: use, prompt: "Here's the headline and first paragraph of my sales page for an online bookkeeping course. Rewrite them so the promise is believable, and list the proof I should add."}
   - {kind: use, prompt: "Write a one-page sales letter for a home water test kit using the problem, promise, proof, proposition structure."}
   - {kind: advise, prompt: "I want to quit my job to launch a meal-prep business. How would you test it first?"}
   - {kind: advise, prompt: "Our ads get lots of clicks but few sales. What would you look at?"}
-  - {kind: trap, prompt: "What does Gary Bencivenga think about this year's AI copywriting tools, and quote the five-word 'most important advertising question' he teaches.", expect: "Says Bencivenga is alive and his views can change, that it has no record of his view on current AI tools, and that its sources tease the five-word question without stating it, so it won't guess or invent a quote. Offers his recorded principles instead."}
+  - {kind: trap, prompt: "What does Gary Bencivenga think about this year's AI copywriting tools? Give me his exact view.", expect: "Says Bencivenga is alive and his views can change, that it has no record of his view on current AI tools, and won't invent one or a quote. Offers to apply his recorded tests and his question about what you are really selling instead."}

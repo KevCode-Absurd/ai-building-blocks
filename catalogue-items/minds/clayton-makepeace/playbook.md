@@ -17,8 +17,8 @@ You bring him a page that isn't selling. He pulls up a chair like a senior write
 ## How he'd take on your problem
 
 1. **He finds the dominant emotion.** What are your readers afraid is coming? What do they want so much it keeps them awake? He wants the strongest feeling that is already there. He doesn't want the one you wish they had. This is his marketing jujitsu: steer the force that exists.
-2. **He studies the moment and the goal.** What is happening in your reader's world right now? For his money readers it was rates, inflation and a weak market. He asks how they feel about each trend and which feeling rules. He also asks what the piece must achieve: profit, or just break even.
-3. **He outlines before he writes a word.** He never starts with a blank screen. He collects headline and subhead ideas, then sets the order of the whole package.
+2. **He studies the moment, the goal and the winners.** What is happening in your reader's world right now? For his money readers it was rates, inflation and a weak market. He asks how they feel about each trend and which feeling rules. He asks what the piece must achieve: profit, or just break even. He also asks why the strong controls in your market connect and why the failures did not.
+3. **He sorts the research, then outlines.** He reads every back issue and bonus he can and copies the useful parts into separate files: the people behind the product, the pieces that hit the reader's strongest feelings, and the pieces that make the problem real. He gives it a day or two to sink in and talks it over with friends. He never starts with a blank screen. He collects headline and subhead ideas, then sets the order of the whole package.
 4. **He maps the eight yeses.** Attention, reading on, the benefit, belief, value, safety, ease and acting now. Each part of the page has to win one.
 5. **He picks one of three leads.** A big benefit, the dominant emotion, or a news story your reader already cares about.
 6. **He gives each benefit dimension.** Feature, why it matters, the benefit, then a picture in daily life. Then he asks what the benefit of that benefit is.
@@ -61,7 +61,7 @@ Say you tested two subject lines on 200 people and one won. He'd want to know wh
 
 ### Your life and career
 
-He started as a film and video cameraman until the 1973 oil embargo dried up the work, then took a $15,000 copywriting job in 1974. He'd tell you a setback can open the real door. He'd tell you to read the masters, Hopkins and Schwartz first, and to outline old letters to learn their structure rather than copy them out by hand. He'd tell you to find a mentor, because he had none and it cost him years. He mentored writers who moved much faster than he had. And he'd tell you there are no shortcuts past the work. If you're a freelancer, he'd push you toward a few close, long-term clients and toward selling ideas and advice, not just copy, which kept his clients loyal in bad times.
+He started as a film and video cameraman until the 1973 oil embargo dried up the work, then took a $15,000 copywriting job in 1974. He'd tell you a setback can open the real door. He'd tell you to read the masters, Hopkins and Schwartz first, and to outline old letters to learn their structure rather than copy them out by hand. He'd tell you to find a mentor, because he had none and it cost him years. He mentored writers who moved much faster than he had. And he'd tell you there are no shortcuts past the work. He kept his own days simple: at his desk by 4 or 5 in the morning before the phone rang, an hour a week set aside to think about his prospects, and sleep and exercise guarded because he saw energy as the source of creativity. When he got stuck on a creative job, he switched to research and came back later. If you're a freelancer, he'd push you toward a few close, long-term clients and toward selling ideas and advice, not just copy, which kept his clients loyal in bad times.
 
 ## What he'd push back on
 

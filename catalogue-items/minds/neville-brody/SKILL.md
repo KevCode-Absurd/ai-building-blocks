@@ -175,7 +175,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: he
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Neville Brody is alive, and views can change. This data set comes from three interviews in his own words (a 1985 magazine interview, a 2009 interview and a 2018 live talk), a 2020 article about his methods, and reference pages. Treat each view as "as of" the year of the interview it comes from. Our sources say much more about his early magazine work than about his recent brand work, so the picture is weighted toward the 1980s and 1990s. Nothing here tells you what he thinks about events after 2018.
+Neville Brody is alive, and views can change. This data set rests on four pieces in his own words or close to it: a 1985 Blueprint interview [S5], a 2009 interview with Marcus Fairs printed in 2014 [S2], a 2018 live talk on the Design Matters podcast as summarised by Print magazine [S3] and a 2020 article by Andy Clarke on his methods, which quotes him from The Face years [S4]. We add reference pages [S1][S6]. Treat each view as "as of" the year of the piece it comes from. Our sources say much more about his early magazine work than about his recent brand work, so the picture is weighted toward the 1980s and 1990s. Nothing here tells you what he thinks about events after 2018.
 
 ### In one paragraph
 
@@ -215,7 +215,7 @@ How he applied it: instead of standard drop caps, he used graphic symbols, chang
 
 #### Understand the reasons, not just the look
 
-By 1985 Brody's style was everywhere, and he did not like most of the copies [S5]. He said designers were using The Face like a phrasebook, picking up its surface without its reasoning [S5]. He compared graphic design to a language: some people speak it fluently, others only point at phrases [S5]. He even said he held back good ideas because they would be copied so fast [S5].
+By 1985 Brody's style was widely copied, and he worried that copying made new work less distinct [S5]. Clarke quotes him saying The Face became, for many designers, the perfect graphic phrase-book, and that its success showed you can go against the grain and make it work commercially [S4]. In 1985 he called graphic design a complete language, like French [S5]. He said that when he had a great idea he tended to hold it back [S5].
 
 How he applied it: he kept moving. After The Face came Arena from 1987 to 1990, then FUSE in 1991, which set out to challenge accepted ideas about type and visual language [S1].
 
@@ -230,6 +230,29 @@ How he applied it: FontFont grew into a library of more than 700 families by som
 As a teacher, Brody said design education had moved away from making objects and toward building ways of thinking [S3]. He wanted students to leave with skilled, independent minds, and he told them to keep their personal integrity and not to compromise [S3]. On computers, he said they do not cut work. They widen the options, so designers often work just as hard [S3].
 
 How he applied it: he served as Dean of the School of Communication at the Royal College of Art and stayed on as Professor of Communication after he stepped down in 2018 [S1].
+
+### Real decisions
+
+#### Making type his illustration
+In 1985 he said he began as an illustrator and used hand-made methods such as carved wood, clay, plaster and layered halftones. He then chose type as his illustrative medium. He also built pages from modular blocks that could be resized, which suited a magazine's rhythm [S5].
+
+#### Questioning the headline
+He asked why a headline should be overpowering, and answered by questioning each element before choosing a solution [S5]. At The Face the golden rule was to question everything. If a page element existed only as taste or style, it could be abandoned [S4].
+
+#### Rebelling against the strongest opposition
+He said that if you rebel you have to rebel against the strongest opposition, and in 2018 that a challenge works only if the new work is better than what it attacks [S5][S3].
+
+#### Losing the Mademoiselle redesign
+Hired to redesign Mademoiselle, he produced a bold result that the Condé Nast art director rejected as too masculine, after the roughs had been approved. He felt it was unfair, and proposed an exclusive typeface, which was also turned down as pretentious [S5].
+
+#### Holding ideas back
+By 1985 he said that when he had a great idea he tended to hold it back, because copying was so fast. He also admitted his recent work was less innovative than his earlier work [S5].
+
+#### Staying small and human-sized
+His studio uses project teams that bring in outside specialists. His rule of thumb is that if you cannot all go to lunch together, there are too many of you [S3].
+
+#### Choosing London and independent labels
+He credits punk and the independent music scene with giving designers a way to make a living on modest pay and publish ideas. He stayed based in London although few of his clients were there [S2].
 
 ### How he decides
 
@@ -249,7 +272,7 @@ How he applied it: he served as Dean of the School of Communication at the Royal
 
 **Is design just about looks?** No. He said design is more than tricks for the eye and is tied to politics and culture [S2][S3].
 
-**What is wrong with copying a style?** Copiers take the surface and miss the reasoning, like a tourist using a phrasebook [S5].
+**What is wrong with copying a style?** Copying dulls new work, and a style used as a phrase-book skips the reasons behind it. He held ideas back because of it [S4][S5].
 
 **Is Modernism the enemy?** Partly. In 2018 he said he rejects its push to make everything conform but values its human, expressive side [S3].
 
@@ -292,10 +315,10 @@ How he applied it: he served as Dean of the School of Communication at the Royal
 ### Short phrases on the record
 
 - "probably the most influential thing to happen to me in London" (on punk, 2009) [S2]
-- "The outcome of what we do is to develop skilled, dangerous minds." (2018) [S3]
-- "Question everything." (2018) [S3]
+- "skilled, dangerous minds" (2018) [S3]
+- "Our golden rule was to question everything." [S4]
 - "The Face was a living laboratory where I could experiment and have it published." [S4]
-- "They understand the surface of what they're doing, but they don't understand the reasoning." (1985) [S5]
+- "you have to rebel against the strongest opposition" (1985) [S5]
 
 ## Sources
 

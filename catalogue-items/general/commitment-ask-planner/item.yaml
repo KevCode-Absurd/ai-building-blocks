@@ -1,0 +1,20 @@
+slug: commitment-ask-planner
+name: "Commitment ask planner"
+summary: "Say where you are and what people said. Get the next step to ask for and which leads are real."
+category: general
+type: skill
+role: make
+job: research
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: plan}
+uses: [customer-conversation-notes-sorter]
+origin: rebuilt
+version: 1.0.0
+minds: [rob-fitzpatrick, steve-blank, eric-ries]
+credits:
+  - {title: "The Mom Test: how to talk to customers and learn if your business is a good idea when everybody is lying to you", by: "Rob Fitzpatrick", url: "https://www.momtestbook.com/", used: "Commitment and advancement, the three currencies (time, reputation, money), zombie leads, the good meeting and bad meeting examples, and putting people to a decision"}
+  - {title: "The Mom Test with Rob Fitzpatrick", by: "Brian Rhea, Bright & Early podcast", url: "https://brianrhea.com/podcast/the-mom-test-with-rob-fitzpatrick/", used: "Pitching only after understanding, asking for a real commitment, and checking what a promised introduction costs the giver"}

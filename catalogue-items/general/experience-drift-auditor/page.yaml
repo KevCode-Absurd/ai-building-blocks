@@ -1,0 +1,127 @@
+new_slug: experience-drift-auditor
+name: "Experience drift auditor"
+summary: "List the changes you made while growing. Get which ones watered down what customers loved, and a reset plan."
+job: plan-strategy
+thinking: medium
+thinking_why: "It links each loss to a decision and ranks fixes, but the steps are fixed and the facts come from you."
+
+headline: "Experience drift auditor"
+subhead: List the changes you made as you grew and what customers used to love. It ties each lost detail to the decision that removed it, adds up changes that were fine alone but hurt together, and hands back the three details to restore first and a plan to reset your team.
+
+explain: |
+  Businesses rarely lose what made them special in one move. They lose it in small steps, each reasonable on its own: a cheaper part, a faster routine, a shorter training, one less touch. Each saved time or money. Together they leave an experience that feels like everyone else's, and the loss is often blamed on a rival.
+
+  This skill lists the small details customers notice, then lists every growth decision made for speed, cost or return and the detail each one removed. It adds up the effect of decisions that were fine alone and worse together, names the damage as your own doing, and picks the three details to restore first. It then plans a staff reset around the core and sets a measure of how customers feel, not only sales.
+
+when:
+  - Sales are fine but reviews say you have lost something you used to have.
+  - You have grown fast and your first customers say it is not the same.
+  - You are about to cut a cost or a step and want to know what it might remove.
+
+you_give:
+  - A list of the changes you made as you grew (required)
+  - What customers used to love about the first version (required, in the same message)
+  - Reviews, comments or survey answers (optional)
+  - Your team's current routine (optional)
+you_get:
+  - A list of the details customers notice
+  - Each decision matched to the detail it removed
+  - The combined effect of changes that were fine alone
+  - Three details to restore first, a staff reset plan and a feeling measure
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List what customers loved at the start, then the changes you made, with reasons and dates.
+  - Paste recent reviews or complaints, if you have them.
+  - Read the list of lost details first, then the restore list.
+  - Start the reset with the three details and measure how customers feel after eight weeks.
+
+how_it_works:
+  - title: List the details
+    text: Lists the small things customers notice, such as sight, smell, sound and contact with staff.
+  - title: Match decisions to losses
+    text: Lists each growth decision made for speed, cost or return and the detail each one removed.
+  - title: Add up the effects
+    text: Adds up decisions that were reasonable alone but worse together.
+  - title: Own the damage
+    text: Names the damage as your own doing, not a rival's.
+  - title: Pick three details
+    text: Picks the three details to restore first.
+  - title: Plan the reset
+    text: Plans a staff reset around getting back to the core.
+  - title: Measure the feeling
+    text: Sets a measure of how customers feel, not only sales.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WHAT CUSTOMERS NOTICE
+  <detail> | Sense or contact: <sight / smell / sound / touch / staff> | Source: <review, memory or MISSING>
+
+  DECISIONS AND WHAT THEY REMOVED
+  <decision, date, reason> | Detail lost: <detail> | Looked reasonable because: <reason>
+
+  COMBINED EFFECT
+  <decisions that together did more harm> | Effect: <what customers now get>
+
+  THE DAMAGE
+  <plain statement of what was lost and that it was our own doing>
+
+  RESTORE FIRST
+  1. <detail> | How: <action> | Cost: <amount or MISSING>
+
+  STAFF RESET
+  <what the team stops, starts and practises, in what order>
+
+  HOW WE WILL MEASURE
+  <feeling measure, how often, target> | Also tracked: <sales or visits>
+
+  MISSING
+  <what would sharpen the audit>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The first version
+    how: Describe what customers loved at the start, in their words. It is the standard the audit compares with.
+  - what: The reasons for each change
+    how: Give the reason. A change made for cost reads differently from one made for speed.
+  - what: Dates
+    how: Add dates for each change. The order shows how small steps added up.
+  - what: Staff view
+    how: Add what your team says they stopped doing and why. It often shows the hidden cost of a change.
+
+judge:
+  - Each lost detail is tied to a specific decision.
+  - Nothing is blamed on a named person.
+  - The reset starts with the details the customer notices.
+  - The measure covers feeling, not only revenue.
+  - Facts not in your input are marked MISSING.
+
+test:
+  - Run it on a change you regret and see if it finds the detail you lost.
+  - Ask five regular customers which of the three details they would notice back.
+  - Run it twice. The restore list should stay close.
+  - After the reset, compare the feeling measure with the baseline.
+
+improve:
+  - Add your own list of sensory details, such as the smell or sound of a first visit.
+  - Add a rule that any new cost cut is checked against this list.
+  - Save the details you restore to your brand file as standards.
+  - Pair it with "Customer value and spend limit calculator" to price the reset.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Matching decisions to losses and ranking fixes is reasoning work any strong chat AI does well."}
+    - {name: "A short customer survey tool", why: "A simple question about how a visit felt gives you the feeling measure."}
+  inputs:
+    - "Reviews from your first year, side by side with recent ones"
+    - "A list of every process change with its date and reason"
+    - "Photos or notes from a visit on a normal day"
+
+terms:
+  - term: Experience drift
+    meaning: A slow loss of what customers loved, caused by many small changes that each looked reasonable.
+  - term: Reset
+    meaning: A planned return to the core details, with staff trained to deliver them again.

@@ -1,0 +1,18 @@
+slug: customer-success-plan-writer
+name: "Customer success plan writer"
+summary: "Paste why customers cancel. Get a plan for getting buyers to a result, with onboarding, teaching and a community step."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [dharmesh-shah]
+credits:
+  - {title: "Secret to SaaS success: recognize that you're not selling software", by: "Dharmesh Shah, OnStartups, 2017", url: "https://www.onstartups.com/secret-to-saas-success-recognize-that-youre-not-selling-software", used: "The vendor wins only if the customer gets a result, and the three places to invest: onboarding, teaching and community"}

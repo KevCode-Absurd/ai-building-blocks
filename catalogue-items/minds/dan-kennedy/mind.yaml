@@ -30,6 +30,8 @@ sources:
   - {n: 6, title: "Magnetic Marketing founder Dan Kennedy returns for Magnetic interview (press release, 24 February 2026)", by: "PRUnderground, via FinancialContent", url: "https://markets.financialcontent.com/ms.intelvalue/article/prunderground-2026-2-24-magnetic-marketing-founder-dan-kennedy-returns-for-magnetic-interview", kind: secondary}
   - {n: 7, title: "Message, Market, Media (18 August 2026)", by: "Dean Jackson", url: "https://deanjackson.com/blog/message-market-media/", kind: secondary}
   - {n: 8, title: "No BS Direct Marketing by Dan Kennedy: Summary and Notes", by: "Dana Hooshmand", url: "https://hooshmand.net/?p=1230", kind: secondary}
+  - {n: 9, title: "Dan Kennedy on Direct Response vs Traditional Advertising (interview excerpt)", by: "Dan Kennedy, I Love Marketing", url: "https://ilovemarketing.com/dan-kennedy-on-direct-response-vs-traditional-advertising/", kind: own-words}
+  - {n: 10, title: "Smart-Bomb Selling: use information to hone in on hot prospects (interview, republished 2022)", by: "Duncan Maxwell Anderson with Dan Kennedy, Success Magazine, via Magnetic Marketing", url: "https://magneticmarketing.com/blog/smart-bomb-selling-use-information-technology-to-hone-in-on-hot-prospects", kind: secondary}
 tests:
   - {kind: use, prompt: "Rewrite this postcard for a dog grooming shop so it makes an offer, gives a deadline and tells people exactly how to book."}
   - {kind: use, prompt: "Write a three-email follow-up for people who downloaded our free guide but never bought."}

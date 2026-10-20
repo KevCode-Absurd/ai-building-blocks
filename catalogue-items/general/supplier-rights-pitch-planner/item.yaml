@@ -1,0 +1,19 @@
+slug: supplier-rights-pitch-planner
+name: "Supplier rights pitch planner"
+summary: "Paste the product you want to sell and the maker you want. Get a pitch to win local selling rights."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [phil-knight]
+credits:
+  - {title: "Shoe Dog: quotes", by: "Phil Knight, 2016", used: "Going to the maker in person, asking for selling rights in a named area, and having a company name ready when asked"}
+  - {title: "Phil Knight: what he knew and believed, Real decisions", by: "Study notes from public sources", used: "The short paper on a market gap, and the plan to start selling in the first week and pay the supplier on time"}

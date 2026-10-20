@@ -1,0 +1,126 @@
+new_slug: mistake-to-principle-writer
+name: "Mistake-to-principle writer"
+summary: "Describe a mistake and what happened. Get the root cause and a written rule you can check next time."
+job: think-and-decide
+thinking: medium
+thinking_why: "It traces cause back to a choice or habit, which needs care, but the steps are fixed."
+
+headline: "Mistake-to-principle writer"
+subhead: "Describe a mistake, the goal it got in the way of and what happened. It names the problem, traces the root cause to a choice or habit, writes a rule with its situation, and tests it against two past cases."
+
+explain: |
+  Most people learn from a mistake once, in the moment, then forget. The same error returns because the lesson was a feeling, not a rule. And the lesson is often about the outcome ("that went badly") and not the choice that led to it.
+
+  This skill puts the mistake against the goal it blocked, lists the problems without softening them, and traces back to a root cause: what in your own choices, habits or traits made it likely. It writes the lesson as a rule with the situation it applies to, tests the rule against two past cases and names the person whose criticism of it would count most. It sets a date to check the rule against the next result. It blames no named person.
+
+when:
+  - "A launch, hire or campaign went wrong and you want to avoid repeating it."
+  - "The same kind of mistake has happened twice."
+  - "You want a team habit of writing down what was learned."
+
+you_give:
+  - "What happened, in plain order"
+  - "The goal it got in the way of"
+  - "Two or three past cases that look similar (optional)"
+  - "Who knows the area best (optional)"
+you_get:
+  - "A list of the problems without softening"
+  - "A root cause about a choice or habit"
+  - "A rule with the situation it applies to"
+  - "Two past cases tested, a critic named and a check date"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Write what happened and what you were trying to do. Be plain."
+  - "Add any older cases that feel the same."
+  - "Read the root cause. If it only blames bad luck, ask for another pass."
+  - "Save the rule in your lessons file and check it on the date given."
+
+how_it_works:
+  - title: "State the goal"
+    text: "States the goal the mistake got in the way of."
+  - title: "List the problems plainly"
+    text: "Lists what went wrong without softening."
+  - title: "Trace to the root cause"
+    text: "Traces the biggest problem back to a choice or habit."
+  - title: "Write the rule"
+    text: "Writes the lesson as a rule with its situation."
+  - title: "Test against two past cases"
+    text: "Tests the rule against two past cases."
+  - title: "Name the best critic"
+    text: "Names the most credible critic and their likely objection."
+  - title: "Set a check date"
+    text: "Sets a date to check the rule and files it."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  GOAL
+  <goal and measure>
+
+  WHAT WENT WRONG
+  - <problem> | <known / guessed>
+
+  ROOT CAUSE
+  <choice or habit, with the chain of whys>
+
+  THE RULE
+  When <situation>, do <action>, because <reason>.
+
+  TESTED AGAINST
+  1. <past case> | The rule would have: <effect>
+  2. <past case> | The rule would have: <effect>
+  Changes made: <note or none>
+
+  BEST CRITIC
+  <kind of person> | Likely objection: <objection> | Answer: <answer>
+
+  CHECK ON: <date or event> | Look at: <what>
+
+  MISSING
+  <facts that would sharpen the rule>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The goal"
+    how: "State it with a measure. A rule built on a vague goal comes out vague."
+  - what: "Past cases"
+    how: "The more similar cases you paste, the better step 5 works."
+  - what: "How much you want to blame circumstances"
+    how: "Say it. The skill still looks for a choice you controlled."
+  - what: "The size of the mistake"
+    how: "For a small error it keeps the chain short. For a costly one it goes deeper."
+
+judge:
+  - "The root cause is about a choice or habit, not only a bad outcome."
+  - "The rule names the situation it applies to."
+  - "At least two past cases are checked against it."
+  - "It leaves out blame of named people."
+  - "A check date is set."
+
+test:
+  - "Run it on a mistake from a year ago. See if the rule would have prevented it."
+  - "Hand the rule to a colleague. Ask if they could tell when it applies."
+  - "Check the rule on the date it set and note what you found."
+
+improve:
+  - "Add your recurring mistakes to the notes, so the root cause step finds patterns."
+  - "Add a lessons register file to your brand file or notes and paste it in each time."
+  - "Add who the best critics are in your field."
+  - "Pair it with Estimate gap auditor when the mistake came from a forecast."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Structuring decisions and writing plans is text work any strong chat AI does well with this skill."}
+    - {name: "A notes app or document", why: "Gives you one place to keep rules and the dates to check them."}
+  inputs:
+    - "A short timeline of what happened"
+    - "Numbers on the cost of the mistake"
+    - "An older lessons file"
+    - "Notes from the people involved"
+
+terms:
+  - {term: "Root cause", meaning: "The choice or habit behind a problem, not the event that showed it."}
+  - {term: "Lessons register", meaning: "A running list of rules you have written, each with a check date."}

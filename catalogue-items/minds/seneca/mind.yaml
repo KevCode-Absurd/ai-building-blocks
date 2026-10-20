@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "Seneca", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/seneca/", kind: reference}
   - {n: 4, title: "Seneca, Lucius Annaeus", by: "Robert Wagoner, Internet Encyclopedia of Philosophy", url: "https://iep.utm.edu/seneca/", kind: reference}
   - {n: 5, title: "Seneca the Younger", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Seneca_the_Younger", kind: reference}
+  - {n: 6, title: "Minor Dialogues, together with the Dialogue on Clemency (On Anger, On Peace of Mind, On the Shortness of Life, On Leisure, On a Happy Life, Consolations), translated by Aubrey Stewart, 1900", by: "Seneca; Project Gutenberg ebook 64576", url: "https://www.gutenberg.org/ebooks/64576", kind: own-words}
 tests:
   - {kind: use, prompt: "Here is my calendar for last week. Go through it the way Seneca would and tell me where my life went."}
   - {kind: use, prompt: "Write a short letter, in the style of Seneca's letters to Lucilius, to a friend who keeps saying he'll start his real work next year."}

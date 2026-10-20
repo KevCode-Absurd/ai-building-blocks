@@ -1,0 +1,128 @@
+new_slug: customer-job-interview-planner
+name: "Customer job interview planner"
+summary: "Describe what you sell and when people buy it. Get a plan to learn the job buyers hired it for."
+job: understand-customers
+thinking: high
+thinking_why: "It judges what to observe and ask so that answers describe a situation, and a wrong frame hides the real job."
+
+headline: "Customer job interview planner"
+subhead: Describe what you sell and when people buy it. It plans a day watching the place of purchase, questions for buyers on their way out and interviews with people who switched to you in the last year. You get an observation log, interview questions and what each answer should show.
+
+explain: |
+  Asking buyers what an ideal version of your product would be, or profiling them by age and job, tells you little about why they bought. Two buyers of the same kind may buy for different reasons, and two very different buyers may buy for the same one. What matters is the situation: the job they hired the product to do.
+
+  This skill plans how to find that job. It plans a day at the place of purchase to log who buys, when and whether they use the product on the spot. It picks the busiest slot and the odd one out, plans quick questions for buyers on their way out, and plans interviews with people who switched to you in the last six to twelve months. The questions cover the old way, what made them change and what changed after. It asks what else they could have bought, and why it lost.
+
+when:
+  - Your buyer profiles do not explain who buys or why.
+  - You want ideas for a product or message and do not know what job it does.
+  - You have lost buyers to something you did not see as a rival.
+
+you_give:
+  - What you sell and when or where people buy it
+  - Your question, such as why people buy or switch
+  - Product facts (optional)
+  - Reviews or notes, word for word (optional)
+you_get:
+  - A plan for a day of observation, with a log sheet
+  - Quick questions for buyers on their way out
+  - An interview plan for people who switched in the last year
+  - What each answer should show, and the checks to run
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you sell and when and where people buy.
+  - State what you want to learn, for example why people choose you.
+  - Run the observation day and the interviews it plans.
+  - Bring the notes back and ask it to write the jobs as situations.
+
+how_it_works:
+  - title: Sets the frame
+    text: Explains why a profile or an "ideal version" question does not lift sales.
+  - title: Plans the observation day
+    text: Plans a day at the place of purchase to log who buys, when and whether they use it there.
+  - title: Picks the slots
+    text: Picks the busiest slot and the odd one out to watch closely.
+  - title: Plans the exit questions
+    text: Plans questions for buyers on their way out about the job, and what else they could have bought.
+  - title: Picks who to interview
+    text: Picks people who switched to you in the last six to twelve months, not long-time fans.
+  - title: Plans the switch questions
+    text: Plans questions about the old way, what made them change and what changed after.
+  - title: Plans several voices
+    text: Plans interviews with several people at each customer and listening without selling.
+  - title: Checks the plan
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  FRAME
+  <what you want to learn> | Why profiles will not answer it: <one line>
+
+  OBSERVATION DAY
+  Where: <place> | When: <hours> | Log: <who, time, what bought, used on the spot?>
+  Busiest slot: <slot> | Odd one out: <slot or buyer type>
+
+  EXIT QUESTIONS
+  1. <question> | Shows: <what the answer tells>
+
+  WHO TO INTERVIEW
+  <who> | Switched to you: <months ago> | How many: <n>
+
+  SWITCH INTERVIEW QUESTIONS
+  Old way: <questions>
+  What made them change: <questions>
+  What changed after: <questions>
+  What else they could have bought: <questions>
+
+  WRITE THE JOB AS
+  When <situation>, I want to <progress>, so I can <outcome>.
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Where people buy
+    how: Online, in a shop or on a call changes the observation day. Say which, and it adapts what you log.
+  - what: How recent the switch
+    how: The more recent, the clearer the memory. It picks the last six to twelve months.
+  - what: Your question
+    how: A narrow question gives sharper interviews. "Why do people choose us over a rival" works better than "what do buyers want".
+  - what: People per customer
+    how: Say if a buying decision involves several people. It plans an interview for each.
+
+judge:
+  - The job is written as a situation, not a buyer profile.
+  - At least one rival product or habit that was passed over is named.
+  - Each change follows from something seen or heard.
+  - Demographics are kept out of the reason for buying.
+  - Every person interviewed switched within about a year.
+
+test:
+  - Run five exit questions on a quiet day and see if answers are about a situation.
+  - Check that a switch interview gets an old way, a trigger and a change.
+  - Write a job from your notes and ask a buyer if it sounds like their story.
+  - Run the skill twice and compare who it would interview.
+
+improve:
+  - Add the places and times you can observe to step 2.
+  - Add words your buyers use for the problem, so questions sound like them.
+  - Save each job statement and the notes behind it to your brand file.
+  - Pair it with "Customer interview question writer" for the wording of each question.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning questions and shaping notes into jobs is text work any strong chat AI handles."}
+    - {name: "A notebook or voice recorder", why: "Captures buyers' own words, which you need to write the job."}
+  inputs:
+    - "A list of customers who bought in the last year with dates"
+    - "Reviews that mention a switch"
+    - "Names of the products or habits your buyers used before"
+
+terms:
+  - term: Job to be done
+    meaning: The progress a buyer wants to make in a situation, which is why they hire a product.
+  - term: Switch interview
+    meaning: A talk with someone who recently changed to your product, about what led up to it.

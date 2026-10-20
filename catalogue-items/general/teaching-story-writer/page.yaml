@@ -1,0 +1,122 @@
+new_slug: teaching-story-writer
+name: "Teaching story writer"
+summary: "Give it a lesson you want to teach. Get a short funny story that carries it, with a turn to the reader."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It follows a short fixed pattern. The writing is light and the rules are simple."
+
+headline: "Teaching story writer"
+subhead: "Give it one lesson you want people to remember. It writes a short, funny story from everyday life that carries the lesson, steps out once to speak to the reader, and closes on the consequence. You get a one-minute story."
+
+explain: |
+  A lesson stated as a rule slides off the listener. A lesson inside a small story with a mistake in it stays. People remember the shopkeeper who made the error long after they forget the principle.
+
+  This skill starts by stating your lesson in one plain sentence. It then picks a small everyday scene, often with a household animal or a shopkeeper, where someone makes the mistake your lesson warns against. It tells the story in plain, quick lines with one funny or surprising turn. Then it steps out and speaks to the reader as a friend about what it means. It may add a pair of things that look alike but are not, to sharpen the point, then returns to the story and closes on what followed.
+
+when:
+- "You need to teach a habit or idea to a team, class or customers and rules are not working."
+- "You want a short story for a talk, email or lesson that people will repeat."
+- "You want a funny way to explain a mistake without blaming anyone."
+
+you_give:
+- "The lesson you want to teach, in a sentence or two"
+- "Who will hear it, and where (optional)"
+- "A scene or setting you prefer (optional)"
+- "Tone limits, for example no jokes about customers (optional)"
+you_get:
+- "A story of about one minute"
+- "One funny or surprising turn"
+- "A short aside that speaks to the reader"
+- "A closing line on the consequence, not a moral"
+
+how_to_use:
+- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+- "State the lesson in a sentence."
+- "Say who the story is for."
+- "Read the story aloud and time it."
+- "Ask for a second version with a different setting if the first does not fit."
+
+how_it_works:
+  - title: "State the lesson"
+    text: "Write the lesson in one plain sentence that begins with a verb or names a mistake, for example what to do or what to stop doing."
+  - title: "Pick a small scene"
+    text: "Choose an everyday setting with low stakes: a market stall, a kitchen, a pet, a shop counter."
+  - title: "Tell it quickly"
+    text: "Write the story in plain, short lines in under 150 words."
+  - title: "Step out to the reader"
+    text: "After the turn, speak to the reader directly in two or three lines, as a friend would."
+  - title: "Add look-alike pairs"
+    text: "If the lesson is easy to mix up with something else, add one or two pairs of things that look alike and are not, such as a tool and a toy, or help and a favour."
+  - title: "Return and close"
+    text: "Go back to the character and close on what happened because of the mistake."
+  - title: "Check it"
+    text: "Go through \"Check before you hand it back\" one line at a time and fix any check that fails, if you can."
+
+output_shape: |
+  LESSON
+  <one sentence>
+
+  STORY
+  <under 150 words, one funny or surprising turn>
+
+  TO THE READER
+  <2 to 3 lines>
+
+  LOOK-ALIKE PAIRS (if used)
+  <pair> vs <pair>
+
+  CLOSE
+  <the consequence>
+
+  ANOTHER SETTING
+  <one line seed>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Setting"
+    how: "Name a scene your audience knows well. The story lands faster."
+  - what: "Tone"
+    how: "Say how funny to be. Gentle works for teams."
+  - what: "Length"
+    how: "Say if you have 30 seconds or 3 minutes."
+  - what: "The mistake"
+    how: "Describe the mistake you see most often."
+
+judge:
+- "You can tell it aloud in a minute."
+- "The lesson appears only after the story."
+- "There is one clear laugh or surprise."
+- "The aside speaks to the reader, not about them."
+- "The ending is a consequence, not a moral."
+
+test:
+- "Tell it to two people and ask them to say the lesson back."
+- "Check no one feels mocked."
+- "Try the second setting and see which sticks."
+- "Check it again a week later: do they remember it?"
+
+improve:
+- "Add stock characters from your workplace to step 2."
+- "Add a list of mistakes your team makes often."
+- "Save stories that worked in a file."
+- "Pair it with \"Case-first story builder\" when you need a true case instead of a made-up one."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Short story writing from a pattern is well within its range."}
+    - {name: "Reading aloud with a timer", why: "It shows quickly if the story runs long."}
+  inputs:
+    - "The mistake you see most often"
+    - "Who is in the room"
+    - "A setting your listeners know well"
+
+terms:
+  - term: "Aside"
+    meaning: "A short moment where the storyteller steps out of the tale to speak to the listener."
+  - term: "Look-alike pair"
+    meaning: "Two things that seem the same but differ in a way that matters."

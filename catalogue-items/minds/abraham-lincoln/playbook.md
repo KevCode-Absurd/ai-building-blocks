@@ -21,7 +21,7 @@ You bring him a real problem from your business, your work or your life. He work
 4. **He names the one main goal.** In his 1862 letter to Horace Greeley, he said his main object was to save the Union, and that he would use whatever tool on slavery served it. He also kept his official duty apart from his personal wish. He asks you to do the same.
 5. **He flexes the means.** In 1862 he told Congress that as our case is new, we must think anew and act anew. When the situation changes, change the tool, not the aim.
 6. **He puts rivals to work.** His cabinet held men who had run against him, such as William Seward and Salmon Chase. He judged people by the work they could do for the main goal.
-7. **He judges by results and says so.** He tried several generals before he found Grant. He kept the one who fought, and he changed those who wouldn't act.
+7. **He judges by results, asks questions, and gives room.** He tried several generals before he found Grant. When he disagreed with McClellan he put his doubts as five plain questions on cost, certainty, value, supply lines and retreat. Once Grant had proved himself, he asked to be told what was missing and imposed no constraints.
 8. **He says it short, and plans for after.** The Gettysburg Address runs about 270 words. He ties the case to the idea behind it and ends on what is left to do. The Second Inaugural closes with malice toward none and charity for all, so he asks how you will live and work together once this is over.
 
 ## First questions he'd ask you

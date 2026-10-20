@@ -1,0 +1,124 @@
+new_slug: brief-reframer
+name: "Brief reframer"
+summary: "Paste your brief or goal. Get it rewritten three ways, with a cheaper change in how it feels to try first."
+job: plan-strategy
+thinking: high
+thinking_why: "It has to question the brief itself and find options that are not obvious, which takes open reasoning."
+
+headline: "Brief reframer"
+subhead: Paste a brief, a goal or a problem you have been asked to solve. It asks what the job is for, rewrites the question three different ways and names a cheap change in how people see or feel the thing, to try before any costly fix.
+
+explain: |
+  A brief can hide its own answer. "Make the app faster" or "write a key message that says we are trusted" may already settle the thing that most needs asking. Teams then spend months on the wrong problem, or fix the product when changing how it feels would have been cheaper.
+
+  This skill keeps your brief word for word, asks why the job exists and what the person really wants from the change, and lists what could change how it is seen or felt, not only the thing itself. It marks any line in the brief that is a ready-made answer, writes two or three new versions of the question, and gives each a cheap test to try first. It finds the issue under the brief that the team cannot quite solve.
+
+when:
+  - You have a brief and a feeling it asks the wrong question.
+  - The obvious fix is costly and you want a cheaper thing to try first.
+  - A team is stuck on a problem that keeps coming back.
+
+you_give:
+  - "The brief, goal or problem as it was written"
+  - "Why the work was asked for, if you know"
+  - "What has been tried already (optional)"
+  - "Your brand file (optional)"
+
+you_get:
+  - "Your brief quoted exactly, with ready-made answers marked"
+  - "Two or three new versions of the question, each asking something different"
+  - "A cheap change in perception to try first for each version"
+  - "The unresolved issue under the brief, and a way to judge the tests"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the brief exactly as it was written. Do not tidy it."
+  - "Say who asked for it and what they hope will change."
+  - "Pick one or two of the new versions and run the cheap tests."
+  - "Bring back what you learned and ask it to sharpen the next round."
+
+how_it_works:
+  - title: Quotes the brief
+    text: Writes the brief exactly as given, so nothing is lost in a rewrite.
+  - title: Asks why the job exists
+    text: Finds what the person really wants from the change before any design work.
+  - title: Lists what could change
+    text: Looks at how the thing is seen or felt, not only the thing itself.
+  - title: Marks ready-made answers
+    text: Flags lines that already say what to do, such as a fixed key message.
+  - title: Writes new versions
+    text: Gives two or three different questions the brief could ask instead.
+  - title: Adds cheap tests
+    text: Names a low-cost change in perception to try first for each version.
+  - title: Finds the real issue
+    text: Names the unresolved problem the team cannot quite solve.
+
+output_shape: |
+  THE BRIEF AS WRITTEN
+  "<exact text>"
+
+  WHY THE JOB EXISTS
+  <what the person really wants from the change>
+
+  READY-MADE ANSWERS IN THE BRIEF
+  <line> | <what it already decides>
+
+  NEW VERSIONS OF THE QUESTION
+  1. <question> | cheap test: <change in how it is seen or felt> | how to judge it
+  2. ...
+  3. ... (one odd idea, marked as odd)
+
+  THE ISSUE UNDER THE BRIEF
+  <the thing the team cannot quite solve>
+
+  START HERE
+  <the cheapest test, why first>
+
+  MISSING
+  <what you would need to know>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: What is fixed
+    how: Say what cannot change, such as law, price or a deadline. New versions stay inside those lines.
+  - what: What has been tried
+    how: List past attempts and results so the new versions do not repeat them.
+  - what: Who judges
+    how: Name who decides the test result and what they look at.
+  - what: The odd idea
+    how: Say how odd you are willing to go. The idea stays marked as odd.
+
+judge:
+  - The original brief is quoted.
+  - Each new version asks a different question.
+  - A cheap perception change is named for each.
+  - One odd idea is included and marked as odd.
+  - A way to judge the test is given.
+
+test:
+  - "Run it on a brief you know turned out to be the wrong question. See if it spots it."
+  - "Try the cheapest test on a small group and note what changed."
+  - "Run it twice. The new versions should differ in kind, not in wording."
+
+improve:
+  - "Add your own list of cheap changes, such as wording, order, packaging or the first thing people see."
+  - "Add the briefs your field often gets, with the usual hidden answer."
+  - "Save the results of each test to a log, so the next brief starts with them."
+  - "Pair it with a plan builder to schedule the tests."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It questions wording and writes options in plain text."}
+    - {name: "A small group of real users", why: "They give the fastest read on a change in how something feels."}
+  inputs:
+    - "Results from the last time you tried to fix this"
+    - "Customer words about the problem"
+    - "Your brand file, so ideas fit how you already speak"
+
+terms:
+  - term: Ready-made answer
+    meaning: A line in a brief that already decides what to do, so the real question never gets asked.
+  - term: Change in perception
+    meaning: A change in how something looks, sounds or feels to people, with the thing itself left alone.

@@ -6,7 +6,7 @@ This is drawn from his Harvard Business Review articles (1996 to 2011) and the w
 
 Clear, firm and orderly. He writes like an economist who wants managers to use the tools on Monday morning. He defines a term, then sticks to it. He likes short declarative lines that sound like rules: strategy is about being different, trade-offs are essential, fit drives advantage.
 
-He thinks in structures. Five forces. Three sources of position. The activities in a value chain. He builds a frame, fills it with an example, then draws the lesson. His examples are real companies with real numbers: Southwest's 15-minute turnaround, Maytag's falling return on sales, IKEA set against traditional furniture shops.
+His letter on his institute's site is brief, warm and in the first person: short sentences, credit to colleagues, and an open admission that building theory that guides practice is hard work. He thinks in structures. Five forces. Three sources of position. The activities in a value chain. He builds a frame, fills it with an example, then draws the lesson. His examples are real companies with real numbers: Southwest's 15-minute turnaround, Maytag's falling return on sales, IKEA set against traditional furniture shops.
 
 He is serious, with little humour on the page. He is confident, and he says plainly when he thinks managers have it wrong. He can admit a bias, as when he has said that as a business school professor he tends to look to business for answers.
 

@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Rebuilt 2026-10-20 from the Git README text, plus the 1992 history note, the 2012 email and the 2018 email as read on their archive pages [S2][S4][S5][S6]. Quotes are kept short.
+
 Linus Torvalds is alive, and views can change. This data set comes from his own public posts to mailing lists and Usenet (1991 to 2018), the README he wrote for the first version of Git (2005), his 2016 TED interview, the Linux kernel's own process documents, and reference pages. Treat each view as "as of" the year of its source. The kernel documents describe the project he leads, but they were not all written by him, so we use them for how the project works, not as his words. Nothing here covers his private life, and nothing here tells you what he thinks about events after these dates.
 
 ## In one paragraph
@@ -68,6 +70,29 @@ How he applied it: when he was criticised for running the kernel on BitKeeper, a
 - Is the function short and easy to read? If it nests too deep, rewrite it [S9].
 - Is a tool slowing the work? Pick a better one, or build it [S1][S7].
 - Fix the problem in front of you before planning ten years out [S10].
+
+## Real decisions
+
+### Writing a kernel for the machine he had (1991)
+He wanted a free system he could understand and control after porting tools like gcc and bash to Minix. He aimed it at the 386 because that was the hardware he owned, and he used its segmentation and paging even though the code was not portable [S2]. He framed it as a hobby for hackers, not a finished product [S2].
+
+### Adding paging because people could not compile the kernel
+Early users with 2MB machines could not build the kernel, so he added paging in a later release [S2]. The lesson is that he changed course on what real users could not do, not on theory.
+
+### Moving the licence
+The first Linux licence barred charging money for the system. Later releases moved toward the GNU General Public License, partly under pressure from contributors [S2][S1].
+
+### Keeping the monolithic design in 1992
+When Tanenbaum called Linux obsolete, Torvalds granted that microkernels were nicer in theory and kept his design because it was free, worked and did things Minix could not [S3].
+
+### Refusing a deadline on compatibility (2012)
+A developer asked whether an old tunable could go after two years. Torvalds answered that there is no deadline: the rule is not to break user space, and if users report breakage the kernel is fixed. He told the proposer to make the stub useful instead of leaving a dummy [S4].
+
+### Writing Git in a tiny, blunt form (2005)
+After the kernel lost free use of its tool, he wrote a content tracker built on a few object types named by hash, and said in the README that trust was outside the tool's scope: sign one note naming the top changeset and the history beneath it is covered [S6][S7]. He later handed day-to-day running to Junio Hamano [S1].
+
+### Apologising and stepping back (2018)
+In the 4.19-rc4 email he wrote that his flippant attacks on people had been unprofessional, that he misreads emotions, and that he would take time off to get help. He asked Greg Kroah-Hartman to finish the release and said it was not burnout [S5].
 
 ## Where he stood
 

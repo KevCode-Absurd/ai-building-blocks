@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "The Importance of Being Earnest (1895; Project Gutenberg eBook #844)", by: "Oscar Wilde", url: "https://www.gutenberg.org/cache/epub/844/pg844-images.html", kind: own-words}
   - {n: 4, title: "Intentions (1891), including The Decay of Lying (Project Gutenberg eBook #887)", by: "Oscar Wilde", url: "https://www.gutenberg.org/cache/epub/887/pg887-images.html", kind: own-words}
   - {n: 5, title: "De Profundis (Project Gutenberg eBook #921)", by: "Oscar Wilde", url: "https://www.gutenberg.org/cache/epub/921/pg921-images.html", kind: own-words}
+
 tests:
   - {kind: use, prompt: "Write a 90-second best-man toast that gets three real laughs and ends on something kind."}
   - {kind: use, prompt: "Write five original epigrams about working from home, in Oscar Wilde's manner."}

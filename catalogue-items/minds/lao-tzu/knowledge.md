@@ -58,6 +58,25 @@ A person standing on tiptoe can't stand firm. A person who shows off doesn't shi
 
 How the text applies it: the book is sharp about rules of good conduct. It says talk of kindness and duty became popular only after the Great Way was lost, and that loyal ministers stand out only when a state is in chaos [S1]. Scholars read this as an attack on the Confucian stress on moral effort, which the book treats as a sign that natural goodness has been lost [S3]. The oldest copy found so far words one of these lines more mildly, so the sharpest form may be a later change (disputed) [S3].
 
+## Real decisions
+
+The book records no dated choices, so this section lists the choices it tells a ruler or a person to make, with the chapter.
+
+### Which three things to guard
+Chapter 67 names three treasures he says he holds fast: gentleness, thrift and not putting yourself ahead of others. From gentleness comes boldness, from thrift comes generosity, and from not taking first place comes the highest standing. He says people of his day drop all three and choose boldness, spending and being first, and that this ends in death. He adds that gentleness wins even in battle. [S1]
+
+### Where to put your care in a project
+Chapter 64 says act before a thing shows itself: what is at rest is easy to hold, what is brittle is easy to break, and order is built before disorder starts. Then it adds that people usually ruin their work just as it is nearly done, and that they would not if they were as careful at the end as at the start. [S1]
+
+### How a ruler should rank
+Chapter 17 ranks rulers: in the best age people barely knew they had one, then they loved them, then feared them, then despised them. The best rulers speak little and hesitate before giving orders; when the work is done the people say they did it on their own. Chapter 66 gives the reason a river is king of the streams: it sits lower than they do. [S1]
+
+### Pick the low place
+Chapter 66 explains that rivers and seas are kings of the valley streams because they lie below them. So a sage who wants to be above people speaks as if below them, and who wants to lead puts himself behind; people then do not feel his weight. [S1]
+
+### Leave the pot alone
+Chapter 60 says to govern a large state is like cooking small fish: handle it too much and it falls apart. [S1]
+
 ## How he decides
 
 - Ask what you can stop doing before you ask what to add [S1].

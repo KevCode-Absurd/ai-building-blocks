@@ -1,0 +1,127 @@
+new_slug: ai-fit-problem-checker
+name: "AI-fit problem checker"
+summary: "Describe a problem. Get a verdict on whether AI suits it, using three tests, and the data or simulator you would need."
+job: test-an-idea
+thinking: medium
+thinking_why: "It applies three fixed tests, but each answer needs judgement on the problem."
+
+headline: "AI-fit problem checker"
+subhead: "Describe a problem and the goal behind it. It runs three tests on it: a huge space of answers, learnable structure and a clear score. It also checks your data and names an outside test. You get a verdict and the first small proof."
+
+explain: |
+  People reach for AI on problems it cannot help, and miss problems where it could. A chat model is not the right tool for every task, and a model with no data or no way to score answers cannot learn anything.
+
+  This skill asks three questions: are there too many possible answers to try one by one, is there structure a model could learn, and is there a clear score to aim at. It then checks the data you have, or a simulator that could make more, and names an outside test to judge the result. You get a verdict and the smallest proof to try first.
+
+when:
+  - "A team wants to use AI on a problem and nobody has checked if it fits."
+  - "You have a hard problem and wonder if a model could help."
+  - "You need to explain to a boss why a project should or should not use AI."
+
+you_give:
+  - "The problem and the goal it serves"
+  - "Data, past attempts or tools you have (optional)"
+  - "How you would know it worked (optional)"
+you_get:
+  - "Yes, no or unsure for each of three tests, with reasons"
+  - "A data or simulator plan"
+  - "An outside test that is not your own opinion"
+  - "A verdict and the first small proof"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the problem and what you want from it."
+  - "Answer its questions about data and scoring."
+  - "Run the first small proof before any bigger spend."
+
+how_it_works:
+  - title: "States the problem"
+    text: "One sentence for the problem and one for the goal."
+  - title: "Tests the space"
+    text: "Are there too many answers to try one by one?"
+  - title: "Tests the structure"
+    text: "Do good answers share patterns a model could learn?"
+  - title: "Finds the score"
+    text: "A number that says how good an answer is."
+  - title: "Checks the data"
+    text: "What exists, what is missing, whether a simulator helps."
+  - title: "Names an outside test"
+    text: "A judge your team did not build."
+  - title: "Gives the verdict"
+    text: "Good fit, maybe or poor fit, plus the first proof."
+
+output_shape: |
+  PROBLEM AND GOAL
+  <problem>; serves <goal>
+
+  TEST 1: HUGE SPACE
+  <yes/no/unsure>: <estimate and reason>
+  TEST 2: STRUCTURE
+  <yes/no/unsure>: <reason with example>
+  TEST 3: CLEAR SCORE
+  <yes/no/unsure>: <score> leaves out <x>
+
+  DATA
+  Have: <list>  Missing: <list>  Simulator idea: <line or none>
+
+  OUTSIDE TEST
+  <test> because <reason>
+
+  VERDICT
+  <good fit/maybe/poor fit>
+
+  FIRST SMALL PROOF
+  <data, score, pass line, time>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "The goal"
+    how: "A sharp goal makes the score clearer. State what success looks like."
+  - what: "Your data"
+    how: "Describe its size and how it was gathered. It changes test 2 and the data plan."
+  - what: "Your current method"
+    how: "Say how it is done now. A simple rule may already do well."
+  - what: "Cost of a wrong answer"
+    how: "High stakes need a stricter outside test."
+
+judge:
+  - "Each test has an answer and a reason."
+  - "The score can be measured."
+  - "The outside test is not your own opinion."
+  - "The verdict follows from the tests."
+  - "The first proof is small enough to run in weeks."
+
+test:
+  - "Run it on a problem where you know AI worked, and one where it did not. See if the verdicts match."
+  - "Run it twice. The verdict should stay the same."
+  - "Ask an expert in the field to read the three answers and say what is off."
+  - "Run the first small proof and compare the result with the verdict."
+
+improve:
+  - "Add the data rules of your field (privacy, consent) to step 5."
+  - "Add your past AI projects as examples of good and poor fit."
+  - "Keep the verdicts in a log with the later results."
+  - "Pair it with an MVP experiment planner to test the first proof."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reasoning over a problem description is text work."}
+    - {name: "Google Colab or a notebook", why: "Lets you run the first small proof on your data."}
+  inputs:
+    - "A sample of your data"
+    - "Your current method and its results"
+    - "Past attempts that failed"
+    - "The cost of a wrong answer"
+
+terms:
+  - term: "Search space"
+    meaning: "All the possible answers to a problem."
+  - term: "Benchmark"
+    meaning: "A fixed test used to compare results fairly."
+  - term: "Simulator"
+    meaning: "A program that makes realistic practice data when real data is scarce."

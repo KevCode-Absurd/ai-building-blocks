@@ -1,0 +1,23 @@
+slug: team-culture-memo-writer
+name: "Team culture memo writer"
+summary: "Describe your team and how you want it to work. Get a short culture memo with a keeper test and feedback rules."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: plan, required: true}
+  - {type: copy_draft, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [reed-hastings, patty-mccord, john-wooden]
+credits:
+  - {title: "Netflix Culture", by: "Netflix", url: "https://jobs.netflix.com/culture", used: "Context over control, the keeper test, top-of-market pay and blunt feedback as a written practice"}
+  - {title: "How Netflix Reinvented HR", by: "Patty McCord, Harvard Business Review", used: "Culture as the behaviours a company actually rewards and punishes"}
+  - {title: "How Netflix built its company culture", by: "Wharton interview", used: "How the practices fit together in daily work"}
+  - {title: "The difference between winning and succeeding", by: "John Wooden, TED 2001", url: "https://singjupost.com/john-wooden-the-difference-between-winning-and-succeeding-transcript/", used: "A few simple, firm rules about behaviour, such as being on time and never criticising a teammate"}

@@ -28,6 +28,8 @@ sources:
   - {n: 4, title: "Hind Swaraj, Chapter 16: Brute Force", by: "M. K. Gandhi, via mkgandhi.org", url: "https://www.mkgandhi.org/hindswaraj/chap16_bruteforce.php", kind: own-words}
   - {n: 5, title: "My Non-violence, Chapter 40: My advice to Noakhali Hindus (Harijan, 1940)", by: "M. K. Gandhi, via mkgandhi.org", url: "https://www.mkgandhi.org/mynonviolence/chap40.php", kind: own-words}
   - {n: 6, title: "Salt March", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Salt_March", kind: reference}
+  - {n: 7, title: "An Autobiography, or The Story of My Experiments with Truth (1927 edition, full text)", by: "M. K. Gandhi, Navajivan, Ahmedabad", url: "https://archive.org/details/dli.csl.5087", kind: own-words}
+  - {n: 8, title: "The Doctrine of the Sword (Young India, 11 August 1920)", by: "M. K. Gandhi, via mkgandhi.org", url: "https://www.mkgandhi.org/nonviolence/D_sword.htm", kind: own-words}
 tests:
   - {kind: use, prompt: "Write an open letter from a group of tenants to their landlord about unsafe conditions, in your style: firm, fair and clear about what happens next."}
   - {kind: use, prompt: "Write five simple rules for a volunteer group that wants to protest a local decision peacefully."}

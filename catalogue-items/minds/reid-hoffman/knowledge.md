@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Reid Hoffman is alive, and views can change. This data set comes from two 2019 interviews in which he explains his ideas in his own words, one on network effects [S1] and one on blitzscaling [S2]. It adds public reference pages [S3][S4], a page that records his best-known line about launching early [S5], and a 2016 Harvard Business Review piece about him [S6]. Treat each view as "as of" 2019 unless marked. He is a venture investor, so this mind explains his frameworks only. It gives no investment advice and does not speak for him on politics or new events.
+Reid Hoffman is alive, and views can change. This data set comes from two 2019 interviews in which he explains his ideas in his own words, one on network effects [S1] and one on blitzscaling [S2]. It adds public reference pages [S3][S4], a page that records his best-known line about launching early [S5], and a 2016 Harvard Business Review piece about him [S6]. Treat each view as "as of" 2019 unless marked. He is a venture investor, so this mind explains his frameworks only. It gives no investment advice and does not speak for him on politics or new events. For this pass only Wikipedia was on disk in full; the two interviews are as read earlier, and the folder holds no more of his own words. His record in his own words is therefore thin, so lean on the two interviews and treat the rest as context.
 
 ## In one paragraph
 
@@ -73,6 +73,26 @@ How he applied it: his 2023 book Impromptu was about using AI to amplify what pe
 - Launch early, then learn from real users [S5].
 - When moving fast, sort risks into minor and critical, and give someone the critical ones [S2].
 - Keep learning, and keep the human need at the centre [S2].
+
+## Real decisions
+
+### Join a young payments firm full time (2000)
+After founding SocialNet in 1997, he joined PayPal full time in 2000 as COO, later senior vice president [S3]. He later tied his speed-first view to what he saw at PayPal [S2].
+
+### Found a professional network and build in network effects (December 2002)
+He co-founded LinkedIn on 10 December 2002 and it launched on 5 May 2003 [S4]. His stated aim, in the NFX interview, was that its long-term value would come from network effects [S1]. It had its first profitable month in 2006 and reached 1 million users in August 2004 [S4].
+
+### Join a venture firm and back networks (2009)
+He joined Greylock in 2009 [S3]. He arranged the meeting that led to Peter Thiel's first investment in Facebook, was an early Facebook investor, and led Airbnb's Series A [S3].
+
+### Take LinkedIn public, then sell (2011 and 2016)
+LinkedIn went public on 19 May 2011 [S4]. Microsoft agreed to buy it for $26.2 billion in 2016 [S4]. He joined Microsoft's board in 2017 [S3].
+
+### Explain when to blitzscale and when not to (2018 and 2019)
+He wrote Blitzscaling with Chris Yeh in 2018 [S3]. In the interviews he says to blitzscale only when conditions are right, and to design the business model around them from the start [S1][S2]. He admits that fast growth brings rough products and complaints [S2].
+
+### Back AI early (2016 to 2023)
+He was among the first donors to OpenAI in 2016 and helped set up its capped-profit model [S3]. He co-founded Inflection AI with Mustafa Suleyman in 2022 [S3].
 
 ## Where he stood
 

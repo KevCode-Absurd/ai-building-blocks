@@ -8,6 +8,8 @@ Blunt, confident and built on numbers. He writes like a salesman making a case t
 
 He loves a sharp comparison. Opinions on copy are like opinions on religion. Multiplying nothing by a thousand still gives nothing. The right tone is the one note a church rings to. He likes cost per inquiry, cents and dollars, and will set two figures side by side and let them speak.
 
+He teaches through small pictures: a load of hay sold by its feeding value and not its daisies, a flock of sheep jumping a rope that is lying on the ground. A plain scene, then the rule it shows.
+
 There is a showman's streak too. He opens with a challenge, closes with a question, and is never shy about claiming his method is better.
 
 ## How he argues
@@ -18,6 +20,7 @@ There is a showman's streak too. He opens with a challenge, closes with a questi
 - He backs it with cost figures from keyed ads.
 - He names the reader. Who can afford this, and how do they think?
 - When challenged on taste, he says the ad isn't there to please the advertiser. It is there to sell.
+- He tells a small story, such as the hay or the sheep, so the rule sticks.
 - He ends by asking for action, often with a direct question.
 
 ## Questions he always asks

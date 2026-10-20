@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Source check, 20 October 2026: the local source folder for this person holds mostly source records (a title, a link and a short excerpt) plus a reference biography, not full transcripts. The own-words claims below come from pages read when the mind was first built, and each is tagged to the source in mind.yaml. Where only a record or a reference page backs a claim, treat it as context, not as their own words.
+
 A note on method: Milton Hershey wrote very little. He preferred the phone and the telegram, and he signed few documents [S4]. What survives in his own hand are mostly letters to an uncle begging for loans, from 1880 to 1882 [S4][S5]. There is one known recording of his voice, made late in life [S10]. Most of his reported words come to us second-hand, through newspapers and the Hershey Community Archives. So this data set reads his ideas mainly from what he did: the products he made, the town and school he built, and the fortune he gave away. Where a line is reported rather than written by him, we say so. Some famous "Hershey quotes" are not his at all [S12].
 
 ## In one paragraph
@@ -69,6 +71,36 @@ How he applied it: the first four boys arrived in 1910 at the Homestead, his own
 - Choose loyal, capable staff, and back them [S2].
 - Be bold when the big chance comes [S2].
 - Give quietly [S2][S6].
+
+## Real decisions
+
+### Going back to caramels after two failures
+
+After his Philadelphia shop went bankrupt in 1882 and a New York try failed by 1886, he did not leave candy [S2][S3]. He went back to Lancaster with one product he knew well, fresh-milk caramels, and built the Lancaster Caramel Company [S2]. The Archives sum up the lessons as supply and demand, credit, cash flow and the value of a short product line [S3][S5]. By the early 1890s the firm employed more than 1,300 people [S1][S2].
+
+### Buying chocolate machines at the Chicago fair
+
+At the 1893 World's Columbian Exposition he bought German chocolate-making machines [S2]. He started the Hershey Chocolate Company in 1894 as a side business of his caramel firm, so the old business paid the bills [S2]. He spent years testing milk chocolate at the family farm from 1898 before committing [S2].
+
+### Selling the caramel company to bet on milk chocolate
+
+In 1900 he launched Hershey's Milk Chocolate and sold the caramel company for $1 million [S1][S2]. The popular story that he called caramels a fad first appears in print in 1967 and is probably not accurate [S12]. What the record shows is a staged bet: test on the side, then sell the sure thing once the new product works [S2].
+
+### Building a factory for volume, with a town around it
+
+He broke ground on a new factory in 1903 and finished it in 1905, built for mass production [S2]. Around it he designed a tree-lined town with a bank, hotel, schools, parks and a trolley, after studying other industrial towns such as Pullman [S2][S10]. Cheaper cocoa beans, hotter roasting and volume were how he brought milk chocolate within reach of ordinary families [S10].
+
+### Skipping media ads
+
+The company generally avoided newspaper, magazine and radio ads, and spent on store displays and trade promotion [S8]. It put postcards in standard bars showing the factory, the dairy farms and the town, and let the town be the story [S8]. His reason is not recorded in his own words, but the record shows a steady choice to spend on the product and its story.
+
+### Keeping people working in the Depression
+
+In the Great Depression he started a building campaign that kept more than 600 people working [S9]. It produced the Community Building in 1932, Hotel Hershey in 1933, the Sports Arena in 1936 and the Stadium in 1939 [S2][S9]. He chose to spend on lasting things that gave people wages, not to cut deeper.
+
+### Giving the fortune to the orphan school
+
+On 13 November 1918, after Catherine's death, he gave the school's trust his stock in the chocolate company, then valued at about $60 million [S2][S7]. Reported words from the Archives say he made the orphan boys of the United States his heirs [S7]. He kept it quiet, and it was not made public until 1923 [S2][S6].
 
 ## Where he stood
 

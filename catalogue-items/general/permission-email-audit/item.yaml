@@ -1,0 +1,20 @@
+slug: permission-email-audit
+name: "Permission email audit"
+summary: "Paste your email list source and last ten messages. Get which contacts gave real permission and which messages earn it."
+category: general
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: email_flow, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report, required: true}
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [seth-godin]
+credits:
+  - {title: "Permission Marketing (post, 31 January 2008)", by: "Seth Godin", used: "The idea that permission is the right to send messages people expect and want, and the test of whether they would miss them if they stopped"}

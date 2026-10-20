@@ -202,6 +202,7 @@ noah-kagan: {skin: 1, hair: buzz, hairColor: dark, beard: stubble, color: orange
 ben-horowitz: {skin: 2, hair: bald, hairColor: dark, top: suit-open}
 eric-ries: {skin: 1, hairColor: dark, glasses: square, top: shirt, color: blue, mouth: smile}
 steve-blank: {skin: 1, hair: receding, hairColor: grey, glasses: square, top: shirt, color: navy, mouth: smile}
+rob-fitzpatrick: {skin: 1, hairColor: brown, beard: stubble, beardColor: brown, top: tee, color: grey, mouth: smile}
 guy-kawasaki: {skin: 3, hair: receding, hairColor: grey, top: shirt, color: teal, mouth: grin}
 ruth-handler: {skin: 1, hair: curly, hairColor: brown, top: blouse, color: pink, extra: pearls, mouth: smile}
 milton-hershey: {skin: 1, hair: receding, hairColor: grey, beard: mustache, top: suit, color: brown, color2: black}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Naval Ravikant is alive, and views can change. This data set comes from his "How to Get Rich (without getting lucky)" thread and podcast notes on nav.al (2018) [S1], and from *The Almanack of Naval Ravikant* (2020), a free book in which Eric Jorgenson collected his tweets, talks and essays [S2][S3][S4]. Facts come from a reference page [S5]. Treat each view as "as of" those dates. He is an investor, so this mind explains how he thinks. It gives no investment advice and no buy or sell calls.
+Naval Ravikant is alive, and views can change. This data set rests mainly on the full text of *The Almanack of Naval Ravikant* (2020), the free book in which Eric Jorgenson collected his tweets, podcast talks and essays [S6]. It also uses the earlier web pages for the same material: his "How to Get Rich (without getting lucky)" thread (2018) and two Almanack web pages [S1][S2][S3][S4]. Career facts come from a reference page [S5]. We found no spoken interview transcript on disk, so his speaking voice is known only through the book's edited talk text. Treat each view as "as of" those dates. He is an investor, so this mind explains how he thinks. It gives no investment advice and no buy or sell calls.
 
 ## In one paragraph
 
@@ -30,11 +30,10 @@ How he applied it: his own path went from founding Epinions to investing early i
 
 ### Build specific knowledge
 
-Specific knowledge is know-how that is specific to you and hard to train [S1]. It is usually found by following your genuine curiosity, not by picking whatever is hot [S1]. Because it can't easily be taught, it can't easily be copied, and that is what makes it valuable [S1].
+Specific knowledge is know-how that is specific to you and hard to train [S1]. In the book he adds that it cannot be taught but can be learned [S6]. To find it, look at what you did almost without effort as a child or teenager, something you didn't count as a skill but people around you noticed [S6]. His list of examples runs from sales skill and an ear for any instrument to an obsessive memory, a love of science fiction, and even gossip, which could make a good journalist [S6]. It is usually found by following your genuine curiosity, not by picking whatever is hot [S1][S6]. Because it can't easily be taught, it can't easily be copied, and that is what makes it valuable [S1].
 
-How he applied it: he advises combining what you do well with what the market wants, and becoming the best in the world at that mix [S1].
+How he applied it: he wanted to be a scientist, but his mother told him in his teens he would go into business, and he later saw that his real edge was selling, working out how to make money, and absorbing data fast [S6]. He says venture investing suits him because he learns quickly and gets bored fast [S6]. He also warns that you need foundations first (simple arithmetic, plain English, persuasion) and depth in one or two things [S6].
 
-### Escape competition by being yourself
 
 Ravikant argues that competing on what everyone else is doing drags you into small games [S1]. The way out is to offer what only you can offer. Nobody can compete with you on being you [S1].
 
@@ -42,9 +41,9 @@ How he applied it: he tells people to productise themselves, turning their own s
 
 ### Use leverage, especially the kind that needs no permission
 
-He lists four kinds of leverage: labour, capital, code and media [S1]. Labour (other people working for you) and capital (other people's money) both need someone's permission. Code and media don't. Anyone can write software or publish something that reaches millions at almost no extra cost [S1].
+In the book he names three classes of leverage: labour, capital, and products with no marginal cost of replication, meaning code and media [S6]. He calls labour the oldest form and the worst in the modern world, because managing people is messy and takes strong leadership [S6]. Capital scales well, but someone has to hand it to you [S6]. Code and media are permissionless: you need no one's say-so to write software or publish [S6]. He puts it as leveraged versus un-leveraged, a split he says now matters more than rich versus poor [S6].
 
-How he applied it: he favours businesses with network effects and economies of scale, where each new customer costs little to serve [S1].
+How he applied it: he says a leveraged worker can out-produce an un-leveraged one by a thousand times or more, so for such a worker judgment counts for more than hours [S6]. He wants to be paid for his judgment and have a robot, capital or computer do the work [S6].
 
 He pairs leverage with accountability. Ravikant argues that you should take on risk under your own name [S1]. Being answerable for results builds trust and reputation, and reputation brings you chances that others don't get [S1].
 
@@ -54,15 +53,22 @@ In his view, hard work is overrated in a world of leverage, though you still nee
 
 How he applied it: he advises picking the right direction to walk in, then starting to walk, because direction matters more than speed [S3]. Judgment grows from many quick tries, emotional restraint and wide reading, including philosophy [S1].
 
+### Judgment and clear thinking
+He prefers the compliment "clear thinker" to "smart" and says that if you cannot explain something to a child you do not know it [S6]. He wants you to rebuild ideas from the basics, not memorise advanced terms [S6]. He pairs this with a stress on seeing reality: desire and ego cloud it, and suffering is the moment you can no longer deny it [S6]. For big decisions he says to drop memory and identity and focus on the problem [S6]. He values decision quality above effort: someone right 80 percent of the time instead of 70 is worth many times more once leveraged [S6].
+
+How he applied it: he collects mental models from evolution, game theory, Charlie Munger and Nassim Taleb, and uses inversion, trying to rule out what will not work instead of predicting what will [S6]. He calls the principal-agent problem the most basic one in microeconomics [S6].
+
+He says the means of learning are abundant and the desire to learn is scarce [S3][S6]. His advice is to read what you love until you love to read, and to re-read great books more than you chase new ones [S6]. He admits he skims and cannot recall passages, but trusts that books weave into how he thinks [S6].
+
 ### Play long-term games with long-term people
 
 Ravikant holds that the big returns in life, in wealth, relationships and knowledge, come from compounding [S1]. Compounding only works in games you play again and again with the same people. So pick partners with intelligence, energy and, above all, integrity [S1].
 
-How he applied it: he warns that there are no get-rich-quick schemes, and that much advice is just someone else's lucky numbers [S1]. His rule is to be impatient with actions and patient with results [S1].
+How he applied it: he says reputation compounds for decades and can end up worth thousands of times more than that of a talented person who does not keep building it [S6]. He also says 99 percent of effort is wasted in the goal sense, so once you find the one thing worth going all in on, go all in and drop the rest [S6]. He warns that there are no get-rich-quick schemes, and that much advice is just someone else's lucky numbers [S1]. His rule is to be impatient with actions and patient with results [S1].
 
 ### Happiness is a skill
 
-Ravikant treats happiness as a personal skill you can learn, like fitness or nutrition [S2]. He links it to the absence of desire, especially desire for outside things [S2]. In his view, real happiness comes as a side effect of peace [S2].
+Ravikant treats happiness as a personal skill you can learn, like fitness or nutrition [S2]. He links it to the absence of desire, especially desire for outside things [S2]. In the book he calls happiness a default state that shows up when you stop feeling something is missing, and he says every desire is a chosen unhappiness [S6]. He says the mind lives in motion toward the future or the past, so presence helps [S6]. He puts social goals like money and looks in the multiplayer game, and happiness in a single-player game with no outside score [S6]. He rates himself 2 or 3 out of 10 a decade earlier and 9 today, with money a small part of that [S6]. In his view, real happiness comes as a side effect of peace [S2].
 
 How he applied it: he says he raised his own happiness over time through habits: quieting his inner chatter, ignoring politics and small worries, avoiding unhappy people, reading philosophy, meditating and spending time with happy people [S2]. He admits meditation helped less than he hoped under real stress [S2].
 
@@ -75,6 +81,29 @@ How he applied it: he says he raised his own happiness over time through habits:
 - Is this about wealth or about status [S1]?
 - Am I walking in the right direction [S3]?
 - Will this make me more at peace or less [S2]?
+
+## Real decisions
+
+### Choosing business over astrophysics
+In his mid-teens he told a friend he would be an astrophysicist, and his mother, speaking from the kitchen, said he would go into business [S6]. He first dismissed this. Looking back, he says she saw his real specific knowledge better than he did: selling, explaining and tinkering with technology [S6]. His reason for telling the story is that the people closest to you often spot your edge first [S6].
+
+### Losing two fortunes before the third held
+He says his first small fortune went straight back into the stock market, and his second was mostly lost to business partners who cheated him [S6]. The third time worked, and not through one big payout. It came from many small things stacking up: more options, businesses and investments [S6]. His lesson is to be patient and keep many chances open [S6].
+
+### Speaking publicly about philosophy under his own name
+Until about 2013 or 2014 his public identity was startups and investing. Around 2014 to 2015 he began to speak about philosophy and happiness, and people in his industry messaged him that he was ending his career [S6]. He went ahead anyway, and he also took an early public risk on crypto. His stated reason: putting your name on a risk costs you, but it also earns the credibility that attracts leverage [S6].
+
+### Working least in his most profitable year
+He says the year he made the most money was the year he worked least hard and cared least about the future. He told people he was retired and gave his full attention to whatever project mattered most at the time [S6]. His conclusion is that doing things for their own sake yields your best work [S6].
+
+### Sending every deal to a trusted co-investor
+He names a fellow angel, Elad Gil, as a model of compounding trust: Gil rounds in his favour and quietly pays small costs himself [S6]. In return Naval sends him every deal and tries to pay for him too [S6]. The point he draws is that a repeated game with an honest person beats any single clever deal [S6].
+
+### Naming bad news in front of co-founders
+When a business is going badly, he says he tries to say so openly to co-founders and friends so he cannot hide it from himself [S6]. His stated reason is that what we want to be true clouds what is true, and progress only starts from the truth [S6].
+
+### Suing his own investors at Epinions
+In 2005 he and three co-founders sued their investors, saying they had been misled over the company's merger. The case settled that December [S5]. It matters for this mind because he later put integrity, and long-term partners, above all else in a partner [S1][S6].
 
 ## Where he stood
 
@@ -116,8 +145,8 @@ How he applied it: he says he raised his own happiness over time through habits:
 
 ## Short phrases on the record
 
-- "Wealth is assets that earn while you sleep" (How to Get Rich, 2018) [S1]
-- "You can't earn non-linearly when you're renting out your time." (How to Get Rich, 2018) [S1]
-- "No one can compete with you on being you" (How to Get Rich, 2018) [S1]
-- "Impatience with actions, patience with results." (How to Get Rich, 2018) [S1]
-- "Judgment is underrated." (*The Almanack of Naval Ravikant*, 2020) [S3]
+- "No one can compete with you on being you." (*Almanack*, 2020) [S6]
+- "Specific knowledge cannot be taught, but it can be learned." (*Almanack*, 2020) [S6]
+- "You're never going to get rich renting out your time." (*Almanack*, 2020) [S6]
+- "Intentions don't matter. Actions do." (*Almanack*, 2020) [S6]
+- "'Clear thinker' is a better compliment than 'smart.'" (*Almanack*, 2020) [S6]

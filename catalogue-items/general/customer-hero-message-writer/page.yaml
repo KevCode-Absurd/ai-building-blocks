@@ -1,0 +1,130 @@
+new_slug: customer-hero-message-writer
+name: "Customer-hero message writer"
+summary: "Paste your offer and buyer. Get a one-line message, a short page script and a first step, with the customer as hero."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It follows a fixed order but must choose the customer's real want and problem from your material."
+
+headline: "Customer-hero message writer"
+subhead: "Paste your offer and what you know about your buyer. It names their goal and problem, casts you as the guide and gives a plan. You get a one-line message, a short page script and a first step to take."
+
+explain: |
+  Most websites and pitches spend their first lines on the business. The visitor wants to know three things quickly: what do you do for me, what will I have to do, and what happens if I don't. If they cannot tell in a few seconds, they leave.
+
+  This skill puts the customer in the lead. It names the one thing they want and their problem on three levels: the practical issue, how it feels, and why it should not be this way. It casts you as the guide with one proof, gives a plan of three or four steps, and writes a direct call to action and a lighter one. It states what is at stake once, then compresses the message into one line a stranger could repeat.
+
+when:
+  - "Your homepage or pitch opens with \"we are\" and visitors do not act."
+  - "You can say what you do but not in one line."
+  - "You are launching and need a short message for a page, email or intro."
+
+you_give:
+  - "What you offer, in a few lines"
+  - "Your buyer: who they are and what bothers them (optional)"
+  - "Customer words, word for word (optional)"
+  - "Your brand file (optional)"
+you_get:
+  - "The customer's goal and problem on three levels"
+  - "A plan of three or four steps and two calls to action"
+  - "A one-line message, with two alternatives"
+  - "A short page script in order"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe what you offer and who it is for."
+  - "Paste a few real customer words if you have them."
+  - "Say what you would like a visitor to do first."
+  - "Show the one-liner to a stranger and ask what you do."
+
+how_it_works:
+  - title: "Names the want"
+    text: "One goal in the customer's words."
+  - title: "Names the problem"
+    text: "Practical, felt and \"this is not right\"."
+  - title: "Casts you as guide"
+    text: "Shows you understand and can help, with one proof."
+  - title: "Gives a plan"
+    text: "Three or four steps to work with you."
+  - title: "Writes two calls"
+    text: "One direct and one lighter."
+  - title: "States the stakes"
+    text: "Once, and the better life after."
+  - title: "Compresses to a line"
+    text: "Problem, answer and result in one sentence."
+  - title: "Writes the script"
+    text: "Puts it in page order, then names any check it missed."
+
+output_shape: |
+  THEY WANT
+  <one goal>
+
+  THE PROBLEM
+  Practical: <x>  Felt: <y>  Not right because: <z>
+
+  GUIDE
+  Understands: <line>  Able: <line with proof>
+
+  PLAN
+  1. <verb> 2. <verb> 3. <verb>
+
+  CALLS TO ACTION
+  Direct: <verb>  Lighter: <free step or MISSING>
+
+  STAKES / RESULT
+  <one or two sentences each>
+
+  ONE LINE
+  <the message> (also: <alt 1>, <alt 2>)
+
+  PAGE SCRIPT
+  <headline, problem, guide, plan, calls, stakes, result>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Customer words"
+    how: "Real quotes sharpen the problem. Without them it marks the problem as a guess."
+  - what: "Your proof"
+    how: "Give a number, a result or a method you can back. Without proof, the guide line says MISSING."
+  - what: "The first step"
+    how: "Say what you want visitors to do first. It becomes the direct call."
+  - what: "The lighter step"
+    how: "Name a free thing you offer. If you have none, it says so."
+
+judge:
+  - "The first lines are about the customer, not you."
+  - "There is one goal, one problem and one plan."
+  - "The call to action is a clear verb."
+  - "The stakes appear once, with a way out."
+  - "A stranger can say your one-liner back."
+
+test:
+  - "Show the one-liner to three strangers and ask what you do."
+  - "Put the page script next to your current page and see which tells you more in ten seconds."
+  - "Check the proof lines against your records."
+  - "Run it twice and check the goal and problem stay close."
+
+improve:
+  - "Add a line to your brand file with the one-liner and the plan."
+  - "Add the free step you offer, so the lighter call always has one."
+  - "Add the words your customers use for the problem."
+  - "Pair it with \"Why-first message writer\" if the message also needs a belief."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Fitting your facts into a fixed order is text work any strong chat AI does well with this skill."}
+    - {name: "Your website editor", why: "Putting the script in place shows whether the order works on the page."}
+  inputs:
+    - "Ten customer reviews or messages"
+    - "Your three best-known results with numbers"
+    - "Your current homepage text"
+
+terms:
+  - term: "Guide"
+    meaning: "The role of the business in the message: the one who helps, not the hero."
+  - term: "Stakes"
+    meaning: "What the customer risks if they do nothing, said once."

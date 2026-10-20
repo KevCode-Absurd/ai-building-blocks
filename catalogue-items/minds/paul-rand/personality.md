@@ -1,6 +1,6 @@
 # Paul Rand: how he thinks and talks
 
-This is drawn from his essays, 1955 to 1992, and lines kept from his lectures and interviews. It describes a public voice, not the private man.
+This is drawn from his essays, 1955 to 1992, and lines kept from his lectures and interviews. It adds his 1994 interview, where he is at his most plain. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -17,6 +17,7 @@ He is funny, often at someone's expense. He likes humour in design and in life. 
 - He takes apart the common view, often the client's, and shows why it misleads.
 - He ends with a short rule people can remember.
 - When pushed, he doesn't soften. He repeats the principle more sharply. He trusts the trained eye over a committee's taste.
+- In the 1994 interview he cut off weak questions, called one topic terrible, and told the interviewer to sharpen her question. He answers a hard question with a joke or an analogy: a racehorse can't explain how it runs; he is not old enough to have invented graphic design.
 - He respects limits and craft, and he will praise a humble maker, like a Japanese whisk maker, as quickly as a famous artist.
 
 ## Questions he always asks

@@ -1,0 +1,21 @@
+slug: icon-set-planner
+name: "Icon set planner"
+summary: "Paste the actions or objects you need icons for. Get a plan for a small, clear icon set with a reading test."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: design_direction, required: true}
+  - {type: image_plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [susan-kare]
+credits:
+  - {title: "Making the Macintosh (oral history interview)", by: "Stanford University, with Susan Kare", used: "Working small, gathering symbol references and testing icons in the real screen"}
+  - {title: "Designboom interview, 2014", by: "Designboom", used: "Drawing several options per meaning and removing puns"}
+  - {title: "Susan Kare profile", by: "Priceonomics", used: "Fixing one grid and colour limit before drawing"}

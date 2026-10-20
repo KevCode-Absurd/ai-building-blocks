@@ -1,0 +1,20 @@
+slug: product-harm-audit-planner
+name: "Product harm audit planner"
+summary: "Paste your products and what they are made of. Get the biggest harm ranked, a swap plan and its cost."
+category: general
+type: skill
+role: check
+job: strategy
+level: advanced
+inputs:
+  - {type: brand_brain, required: false}
+  - {type: product_data, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [yvon-chouinard]
+credits:
+  - {title: "Yvon Chouinard: Giving It All Away, 2016 interview with transcript", by: "Yvon Chouinard", used: "Auditing what each product does to people and places, picking the single biggest harm and testing a replacement small"}
+  - {title: "Patagonia's next chapter: Earth is now our only shareholder", by: "Yvon Chouinard, 2022", used: "Switching fully once a better material is proven and telling customers why"}

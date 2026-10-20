@@ -238,6 +238,23 @@ How he applied it: his work reached everyday objects most people touched: fridge
 - Never assume today's success will last [S1].
 - Adapt the product to how local buyers see quality and value [S2].
 
+### Real decisions
+
+#### Bringing sales and advertising in on day one
+By 1955 his firm had moved from being called in late, to teaming designers with engineers, to a "Task Force" that put sales and advertising people in at the start of a job [S1]. He said it worked as well for a lipstick or a fan as for a 60,000-ton ship [S1]. His reason was plain: everyone pulled in the same direction [S1].
+
+#### Building a market analysis division
+Cold figures alone confused clients, so his firm formed a team of statisticians who were also designers and merchandisers [S1]. They kept a sharp eye on competitors and sometimes gave a harsh appraisal of the client [S1]. For a large biscuit maker the work led to new products, new packaging and labels for nearly three hundred lines, and the company's best years [S1].
+
+#### Running a second team in parallel
+His partners set up a second unit, free of technical and management limits, which they called design-in-depth [S1]. It often found possibilities the first team could not see [S1].
+
+#### Pitching Renault in 1973
+In a letter to Renault's U.S. office, he praised the R5 as showing real design sensibility and deserving its success in Europe, then offered to adapt it for American buyers [S2]. He began by honouring the product, then said where buyers differed [S2].
+
+#### Designing for the Studebaker
+After the 1953 Studebaker he joked that cars had come to look like "jukeboxes on wheels" [S7]. He had questioned dressing up a fine machine as flashy goods, and said form should express mechanical quality [S7].
+
 ### Where he stood
 
 **Should design come before or after engineering?** Alongside it, from the start [S1].

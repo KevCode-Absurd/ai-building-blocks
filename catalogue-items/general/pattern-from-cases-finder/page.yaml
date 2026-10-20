@@ -1,0 +1,123 @@
+new_slug: pattern-from-cases-finder
+name: "Pattern from cases finder"
+summary: "Paste your first ten or twenty cases. Get the pattern, a one-line rule and a test of it on unseen cases."
+job: think-and-decide
+thinking: high
+thinking_why: "Finding a rule that fits the data and then testing it on cases held back needs careful, checkable reasoning."
+
+headline: "Pattern from cases finder"
+subhead: "Paste ten or twenty cases in a row, such as orders, sign-ups or test results. It writes them out, looks at the differences, guesses a rule and tests it on cases you held back. You get the rule in one line, its error, and what is still doubtful."
+
+explain: |
+  When you have a list of cases and a hunch about what drives them, it is tempting to jump to a story. A story fits what you have seen and fails on the next case. A rule you can test is worth more: it says what should happen next, and whether it did.
+
+  This skill writes the cases out one per line, then looks at the differences between them, and the differences of those. It guesses a rule and writes it as one line. It tests the rule on cases you kept back, states how far off it is where it is only close, and asks for the whole list of cases that fit, not just one answer. Every result is sorted into known, new or doubtful, and the doubtful ones go to a checker.
+
+when:
+  - You have a list of results and want to know if there is a rule behind them.
+  - You think you have spotted a pattern but have not tested it on new data.
+  - You need a forecast rule that is simple enough to explain and check.
+
+you_give:
+  - Your cases in order, one per line, with the value you care about
+  - Ten or twenty cases at least, and a few more you are willing to hold back
+  - What each case column means (optional)
+  - The pattern you think you see (optional)
+you_get:
+  - The cases rewritten line by line, with the differences between them
+  - A rule in one line, and the cases it fits
+  - A test on cases kept back, with the size of the error
+  - "A sorted list: known, new and doubtful, ready to pass to a checker"
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your cases in order. Tell it which ones to keep back, or let it hold back the last few.
+  - If it asks what a column means, answer in a few words.
+  - Read the rule and the error before you trust it.
+  - Send the doubtful list to a person or a tool that can check it.
+
+how_it_works:
+  - title: Writes out the cases
+    text: Puts each case on its own line in order, so nothing is hidden in a summary.
+  - title: Takes differences
+    text: Looks at the step from one case to the next, then the steps between the steps.
+  - title: Guesses the rule
+    text: States a rule in one line and shows how it makes each known case.
+  - title: Tests on unseen cases
+    text: Uses cases held back to see if the rule predicts them.
+  - title: States the error
+    text: Where the rule is only close, it says by how much.
+  - title: Asks for the whole list
+    text: Looks for every case that fits, not only the first, so no pattern is missed.
+  - title: Sorts the findings
+    text: Puts each result under known, new or doubtful.
+
+output_shape: |
+  THE CASES
+  <n>. <value> | step from last: <diff> | step of steps: <diff2>
+
+  THE RULE
+  <one line>
+  Fits: <n of n> known cases
+
+  THE TEST
+  Held back: <cases>
+  Predicted: <values> | Actual: <values> | Error: <size>
+
+  THE WHOLE LIST
+  <every case or range that fits the rule>
+
+  SORTED
+  Known: <results already established>
+  New: <results the rule shows>
+  Doubtful: <results to check> | Who or what checks: <person or tool>
+
+  MISSING
+  <data that would change the rule>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Cases in order
+    how: Order matters. Give them by date or by size, and say which.
+  - what: How many you hold back
+    how: Keep back at least three. A rule tested on cases it was built from proves little.
+  - what: Noise
+    how: Say if some cases are known to be unusual, such as a holiday week. The rule should note them, not bend to them.
+  - what: How close is close enough
+    how: Say what size of error you can live with. It decides whether a close rule counts.
+
+judge:
+  - The rule fits every case you gave it.
+  - It was tested on cases kept back.
+  - The error is stated, not hidden.
+  - Anything unproven is marked doubtful.
+  - The rule is one line a colleague could apply.
+
+test:
+  - Run it on a series where you know the rule, such as every third value, and check that it finds it.
+  - Hide the last three cases, then look at the answer the rule gives. Compare with the real ones.
+  - Add one odd case and see if the rule flags it instead of bending.
+  - Run it twice on the same data. The rule should not change.
+
+improve:
+  - Add the rules that already hold in your field so the skill can mark them as known.
+  - Add a list of events that distort your data, such as sales or outages.
+  - Keep a log of past rules and how they held up, and paste it in.
+  - Pair it with a person who checks claims, or "Definition tester" for the words you use.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Differences and simple rules are small calculations a chat AI can do and show."}
+    - {name: "A spreadsheet", why: "Lets you check the arithmetic and plot the cases yourself."}
+  inputs:
+    - "More cases, in order, from the same source"
+    - "Notes on odd weeks or one-off events"
+    - "A description of what each column means"
+
+terms:
+  - term: Difference
+    meaning: The change from one case to the next in the list.
+  - term: Held back
+    meaning: Cases you do not show the rule while it is being built, so they can test it afterwards.

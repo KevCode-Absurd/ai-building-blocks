@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "On the Pulse of Morning (1993)", by: "Maya Angelou, via poets.org", url: "https://poets.org/poem/pulse-morning", kind: own-words}
   - {n: 6, title: "Still I Rise (1978)", by: "Maya Angelou, via poets.org", url: "https://poets.org/poem/still-i-rise", kind: own-words}
   - {n: 7, title: "Maya Angelou", by: "Academy of American Poets (poets.org)", url: "https://poets.org/poet/maya-angelou", kind: reference}
+  - {n: 8, title: "Maya Angelou on facing evil (Bill Moyers documentary and later episode)", by: "Maya Angelou, Bill Moyers", url: "https://billmoyers.com/episode/maya-angelou-on-facing-evil/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a two-minute speech for my grandmother's 90th birthday that makes the room laugh and then cry a little."}
   - {kind: use, prompt: "Write a short poem, meant to be read aloud, for a friend starting over after a divorce. Give it a refrain."}

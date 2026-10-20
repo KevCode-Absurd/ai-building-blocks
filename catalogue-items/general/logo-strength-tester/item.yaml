@@ -1,0 +1,22 @@
+slug: logo-strength-tester
+name: "Logo strength tester"
+summary: "Paste your logo ideas. Get each scored out of 100 on seven tests, with a keep or drop call."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: design_direction, required: true}
+  - {type: brand_brain, required: false}
+  - {type: brief, required: false}
+outputs:
+  - {type: audit_report, required: true}
+minds: [paul-rand, massimo-vignelli, milton-glaser]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "Logos, Flags, and Escutcheons", by: "Paul Rand, 1991", used: "A logo identifies rather than explains; seven qualities a mark should have; judge it after years of use"}
+  - {title: "Interview in The Journal of Technology Studies", by: "Paul Rand, 1994", used: "A logo does not need to picture what the business sells"}
+  - {title: "The Vignelli Canon", by: "Massimo Vignelli", used: "The value built up in a mark that has been in public use, and changing it only for a real fault"}
+  - {title: "Milton Glaser, interviews and essays", by: "Milton Glaser", url: "https://www.miltonglaser.com/milton/c:interviews/", used: "Asking who wants the change and why"}

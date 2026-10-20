@@ -70,6 +70,23 @@ How he applied it: he criticised advertising that leaned on stock formulas over 
 - Keep the message simple and spoken plainly [S10].
 - Stay consistent for years [S3].
 
+## Real decisions
+
+### He wrote the idea down in 1972
+With Al Ries he co-wrote "The Positioning Era Cometh" in Advertising Age in April and May 1972 [S4]. The series held up Avis as the model challenger, which placed itself against Hertz as number two [S2].
+
+### He helped Papa John's find its angle
+He told small businesses to find an angle against the big players. Papa John's linked its pizza to a better sauce supplier, a story the giants could not claim, and Trout helped create its line "better ingredients, better pizza" [S3][S1].
+
+### He argued for separate names
+He contrasted United Technologies, which kept separate names like Otis and Carrier, with GE's one name on everything [S3][S6]. He said Wall Street's push for growth often dilutes brands [S6].
+
+### He saw Kodak needing a new brand
+He treated Kodak's trouble with digital as a case where a new brand was needed [S3].
+
+### He trained diplomats
+In 2002 he worked with the U.S. State Department to train diplomats on presenting America abroad [S1].
+
 ## Where he stood
 
 **Is creativity enough?** No. In a crowded market, strategy matters more than creativity alone [S2][S4].

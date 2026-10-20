@@ -1,0 +1,21 @@
+slug: slippery-slide-copy-checker
+name: "Slippery slide copy checker"
+summary: "Paste your ad or page copy. Get each line marked for whether it pulls the reader to the next one."
+category: general
+type: skill
+role: check
+job: copy
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [joseph-sugarman]
+credits:
+  - {title: "How legendary copywriter Joe Sugarman gets his creativity", by: "Joseph Sugarman, Mixergy interview", used: "Each part of the copy exists to get the reader to the next, with curiosity at each break"}
+  - {title: "Triggers, toll-free triumphs and tales from a marketing legend", by: "Joseph Sugarman, Inspired Insider interview", used: "Opening with a true story, stating the drawback honestly, and writing a rough draft fast before editing"}
+  - {title: "Joseph Sugarman", by: "Wikipedia article", url: "https://en.wikipedia.org/wiki/Joseph_Sugarman", used: "Background on his copy and selling approach"}

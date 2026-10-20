@@ -20,6 +20,7 @@ origin: rebuilt
 source_ids: [CES-113]
 old_name: 3D how-it-works ad script
 version: 2.1.0
+minds: [charles-and-ray-eames]
 credits:
   - {title: "Powers of Ten (film)", by: "Wikipedia, on Charles and Ray Eames (1977)", url: "https://en.wikipedia.org/wiki/Powers_of_Ten_(film)", used: "Starting at human size, one move down through scale, then back out"}
   - {title: "Mayer's 12 Principles of Multimedia Learning", by: "Dartmouth, summarising Richard E. Mayer, Multimedia Learning", url: "https://services.dartmouth.edu/TDClient/1806/Portal/KB/PrintArticle?ID=171655", used: "Colour-coded parts as signals, one line per picture, short on-screen words"}

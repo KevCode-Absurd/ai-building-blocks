@@ -1,0 +1,112 @@
+new_slug: paid-work-case-writer
+name: Paid-work case writer
+summary: Describe work people expect free. Get a short case for charging, a fair price model and a reply to 'it spreads anyway'.
+job: sell-and-negotiate
+thinking: medium
+thinking_why: It weighs a fair price against how the work spreads and must keep the tone fair.
+headline: Paid-work case writer
+subhead: Give it the work people expect for free. It sets out what it costs to make, who benefits without paying, and the case for charging in terms of who can keep making it. You get a short note, a price model with a reason and a reply to pushback.
+explain: |
+  Some work gets shared and copied so freely that people stop thinking of it as work. The maker pays the time and money to make it, and the people who benefit pay nothing. In time the maker stops, or cuts the quality.
+
+  This skill states what the work costs in time and money, names who benefits without paying and makes the case in terms of who can afford to keep making it. It compares what the maker earns per hour with what the work cost. It chooses a price model, per copy, fixed licence or bundle, and tests it against what free sharing does for reach. It writes a short note in plain words, states the fair counter-case, and plans for pushback.
+when:
+  - People use your work for free and you want to start charging.
+  - You are setting a price and need the reasons written down.
+  - Someone says 'it spreads anyway' and you need a fair reply.
+you_give:
+  - The work and who uses it
+  - What it costs to make, in time and money, with numbers you can show
+  - How it spreads now (optional)
+  - Your offer and any price you have in mind (optional)
+you_get:
+  - The costs set out as numbers you can show
+  - A case for charging, in terms of who can afford to keep making it
+  - A price model with a reason
+  - A short public note and replies to pushback
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List the time and money the work took, with real numbers.
+  - Say how it spreads now and who benefits without paying.
+  - Choose a price model from the options and the reason.
+  - Read the note aloud. Cut anything that accuses people without cause.
+how_it_works:
+  - title: Counts the cost
+    text: Sets out the time and money the work takes to make.
+  - title: Names who benefits
+    text: Says who gets the value and does not pay.
+  - title: Makes the case
+    text: Frames it as who can afford to keep making it, with the pay-per-hour comparison.
+  - title: Chooses a model
+    text: Per copy, fixed licence or bundle, with a reason.
+  - title: Tests it against reach
+    text: Weighs the price against what free sharing does, and states the fair counter-case.
+  - title: Writes the note
+    text: A short public note in plain words.
+  - title: Plans for pushback
+    text: Replies to the people who object.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  THE WORK
+  <what it is, who uses it>
+
+  WHAT IT COSTS TO MAKE
+  Time: <hours> | Money: <amount> | Source: <how the figure can be shown>
+
+  WHO BENEFITS WITHOUT PAYING
+  <group> | How: <...>
+
+  THE CASE
+  <who can afford to keep making it> | Pay per hour of work: <figure> vs <what it cost>
+
+  PRICE MODEL
+  Options: per copy / fixed licence / bundle | Pick: <one> | Why: <...>
+
+  THE COUNTER-CASE, FAIRLY
+  <what free sharing does for reach and trust>
+
+  THE NOTE
+  <short public note in plain words>
+
+  IF THEY PUSH BACK
+  <objection> -> <reply>
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: The cost figures
+    how: Give real hours and money. A claim you cannot show weakens the case.
+  - what: How it spreads
+    how: Say whether the free sharing helps you, such as by building a name. The counter-case rests on it.
+  - what: Who your readers are
+    how: A note to students reads differently from one to companies. Say who.
+  - what: The price you have in mind
+    how: Give it, and the model tests it. Otherwise it suggests a range.
+judge:
+  - The cost claims are numbers you can show, not guesses.
+  - The counter-argument about reach is stated fairly.
+  - The tone does not accuse readers of theft without cause.
+  - A price model is chosen with a reason.
+  - The case rests on who can keep making the work.
+test:
+  - Check each cost figure against your own records.
+  - Show the note to someone who uses the work free. Is it fair?
+  - Run it twice. The pick of price model should stay close.
+  - Compare the case with how your closest peers price.
+improve:
+  - Add the names of your price tiers to the model step.
+  - Add the lines you never write, such as threats, to the note step.
+  - Save the objections you hear and the replies to your files.
+  - Pair it with a skill that writes the price page.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Setting out a case and a fair reply is text work any strong chat AI does well with this skill.
+  inputs:
+    - Records of hours and money spent
+    - Counts of how the work is used
+    - Prices of close peers
+terms:
+  - term: Licence
+    meaning: A fixed payment that lets a person or company use the work for a stated time or scope.

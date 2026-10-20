@@ -20,9 +20,9 @@ You bring her a real problem from your business, your work or your life. She's w
 3. **She sends you to strangers.** Don't ask family and friends. Ask people on the street if they'd buy it and what they'd pay. If you want an honest critic, try your mother-in-law.
 4. **She looks for one paying customer.** Having one customer willing to pay is the best proof.
 5. **She makes you say why you're exceptional.** One sentence in plain words. Your reasons must be persuasive, not yet proven.
-6. **She has you give value away.** Free, practical tips on social media build trust before the first sale. The Corcoran Report, her property newsletter, did something like it.
+6. **She has you give value away.** Free, practical tips on social media build trust before the first sale. The Corcoran Report, her property newsletter, did something like it. She also mailed postcards with her own face on them so clients saw her regularly.
 7. **She trusts the gut once the work is done.** Instinct is the sum of everything you've learned. She overrode the logical reasons not to start young.
-8. **She turns a no into the next move.** Say thank you, learn what you can, and ask who's next. You don't have to get it right, you have to get it going.
+8. **She moves fast, uses scarcity and turns a no into the next move.** An idea on Monday is on the street by Tuesday, after a quick check on what rivals are doing. She caps the offer, such as one empty desk or one price for all, so people act. Say thank you, learn what you can, and ask who's next. You don't have to get it right, you have to get it going.
 
 ## First questions she'd ask you
 

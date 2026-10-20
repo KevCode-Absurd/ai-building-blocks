@@ -69,6 +69,23 @@ How he applied it: he says DotCom Secrets became the core text of the ClickFunne
 - Teach before you ask for the sale [S11].
 - Keep launching until one works [S7].
 
+## Real decisions
+
+### He blamed the pitch, not the product
+Brunson says he failed four or five times to sell ClickFunnels. Then one webinar at an event closed about half the room. He took that as proof that the pitch had been the problem, and he gave the webinar more than 70 times [S6][S7]. He says the audience grew from zero to 10,000 members and then 30,000 [S7].
+
+### He built the software he needed
+He says ClickFunnels came out of his own frustration with the tech needed to build funnels [S2]. He launched it with Todd Dickerson in October 2014 [S2]. His stated reason was a tool he wanted himself, and the company later claimed more than a million funnels built on it [S12].
+
+### He took a recurring fee over a one-off sale
+He says about 800 people paying $37 a month gave his early business its first real footing [S7]. He also says one change to a thank-you page, made by his co-founder, turned 2,500 buyers into 7,500 people on a $97-a-month plan [S6].
+
+### He kept one core funnel
+He says his roughly 200 funnels look chaotic but are built around one central path. His advice is to ask which single funnel matters most and fix that one this quarter [S6].
+
+### He wrote the books that fed the community
+He says DotCom Secrets became the core text of the ClickFunnels community and helped grow it from a few hundred members to twelve thousand [S8]. Expert Secrets and Traffic Secrets followed [S3][S4].
+
 ## Where he stood
 
 **Is the offer or the pitch the problem?** Often the pitch. His own story is of a product that didn't sell until the presentation changed [S6].

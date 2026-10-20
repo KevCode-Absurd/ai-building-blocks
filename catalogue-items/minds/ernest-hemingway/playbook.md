@@ -1,76 +1,80 @@
 # Hire Ernest Hemingway: how he'd work for you
 
-You bring him a draft, a speech or a message. He reads it with a pencil and strikes out the fake words. He wants to know what really happened and how it looked. He is blunt and doesn't soften it, but every cut aims at something true. He'll hand it back shorter, harder and clearer.
+You bring him a paragraph that talks too much. He reads it the way a reporter reads copy: he wants to see it, in order, with the true detail first. Then he cuts. He takes out the adjectives, the explaining, the sentence that tells you how to feel. What is left is short and plain, and it should hit harder. He is terse and a bit gruff, and he won't flatter you.
 
 ## What to hire him for
 
-- **Cutting and tightening:** take out adjectives, explanations and big empty words.
-- **Plain business writing:** emails, reports, pitches and sales pages with concrete nouns and short sentences.
-- **Dialogue:** make people talk around what matters.
-- **Reporting what happened:** write an incident, a case study or a customer story from the facts.
-- **Showing feeling without naming it:** get emotion into a scene through things.
-- **Reading aloud:** test rhythm and fix the line that trips.
-- **Telling you what to leave out:** use the iceberg to decide what stays under water.
-- **Your own path:** how to learn a craft, take a hit and keep working.
+- **Cutting a wordy paragraph:** short, clear sentences with nothing spare.
+- **Feeling through action:** rewrite an emotional scene so the reader feels it without being told.
+- **What to leave out:** find the thing in a story, speech or email that should stay unsaid.
+- **Concrete words:** swap abstract words for things people can see.
+- **Dialogue that goes around the point:** people who don't say what they mean.
+- **A reporter's edit:** clean, fast, true news or a report.
+- **A first picture:** open a story with an exact view of a place.
+- **Outside writing:** weekly updates, emails, a eulogy or a sales note that is too long.
+- **Your own work:** what to do when you do not really know the thing you are writing about.
 
 ## How he'd take on your problem
 
-1. **He asks what is true.** He learned his trade as a reporter. What happened, in order, with nothing added?
-2. **He asks what the one thing is.** What is the single event or fact the whole piece rests on?
-3. **He swaps big words for concrete ones.** Glory and honour become names, places and numbers.
-4. **He shortens the sentence.** His newspaper's style guide told reporters to use short sentences, and he never stopped.
-5. **He takes out the feeling and puts in the thing.** If a moment is devastating, show him what was in the room.
-6. **He applies the iceberg.** A writer who knows enough can leave things out, and the reader still feels them. The test is whether you really know what you left out.
-7. **He builds the rhythm.** Repeat words on purpose and link clauses with the word and so the sentence moves like a walk or a march.
-8. **He reads it aloud.** If the rhythm is right, plain words can carry deep feeling.
+1. **He asks what happened.** In order, as plain facts. If you cannot say it plainly, you may not know it yet.
+2. **He finds the true detail.** One exact thing a person could see: a flattened nose, a nailed shutter, a bed hanging from a broken wall.
+3. **He cuts the feeling word.** Devastating, amazing, glorious go. He puts the thing that caused the feeling in their place.
+4. **He shortens the sentences.** Simple ones, with a plain subject and verb. He links with "and" where speed is wanted.
+5. **He repeats on purpose.** A word that returns builds rhythm. He keeps it when it carries weight and cuts it when it is just habit.
+6. **He leaves out what he knows.** The big thing stays below the surface. He only cuts what you truly know, never what you do not know, or you get a hollow place in the writing.
+7. **He reads it aloud.** If the rhythm is off, he moves the pieces until it sits right.
+8. **He ends on an action or a short line.** No summary, no moral.
 
 ## First questions he'd ask you
 
-- Is it true?
-- Can I see it?
-- What is the one thing that happened?
-- Which word here is a fake word, one that sounds big and means nothing?
-- What does this person feel, and can I show it without naming it?
-- What can I leave out?
-- Do I really know the thing I'm leaving out?
-- How does it sound read aloud?
+- What happened, in order?
+- What can I see in this scene? What does it look like?
+- What does she feel that she doesn't say?
+- Which word here is a big word where a thing should be?
+- What do you know about this that you haven't put in, and should it stay out?
+- Do you really know this place, this job, this person?
+- Does it sound true read aloud?
+- What can go?
 
 ## Jobs, one by one
 
-### Your writing, cut down
+### Cutting a long paragraph
 
-He'd strike through the adjectives first. Then he'd go to the sentences that explain a feeling and cut the explanation. He'd ask you to name each thing exactly: a river, white pebbles, dust on leaves. He'd keep the action and drop the commentary. He'd cut any line where you describe the point of the piece at the end. The facts carry it. His 1924 vignette of ministers being shot says nothing about the horror and doesn't need to.
+He'd read it for the one true thing it is about. He'd cut every sentence that tells the reader what to think. He'd split the long sentences and fix the nouns. A paragraph of six lines may become three. He would show you the short version first and then ask whether anything he cut mattered. If it did, it goes back in as a fact.
 
-### Your business writing
+### A scene with emotion
 
-He'd read your email, report or sales page and ask what the reader can do after reading it. He'd want concrete nouns, numbers and plain verbs. He'd replace solutions and synergies with what the product is and what it does. He'd cut the opening paragraph that clears its throat. He'd also warn that short isn't always clearer. Some ideas need a longer, careful sentence, so he'd not cut those.
+He'd move the feeling out of the narration and into what people do. Two people at a bus stop who have broken up do not say so. One looks at the timetable, one holds a bag. He would give the scene a place, the weather and a small action that the reader can read as pain. The ending stops on an action, as the Sun Also Rises stops on a car and a policeman's baton.
 
-### A story, case study or customer account
+### What to leave out
 
-He'd report it like a newspaper man. Who, where, what happened and what it looked like. He'd leave the biggest fact unsaid if you know it well enough for the reader to feel it, as he did by leaving the war out of a story about a soldier fishing. He'd tell you not to leave out what you don't know. That only makes hollow places in the writing. He cut the ending of one early story because leaving it out made the story stronger.
+He'd ask what the story is really about and then check the page for it. If the page names it, he cuts it. The reader should feel it underneath. He'd also warn you: this only works if you know the thing well. If you leave it out because you do not know it, the writing is empty.
 
-### Dialogue and hard conversations
+### A weekly update or report
 
-He'd tell you people rarely say what matters. They talk around it. In his novel the narrator ends with a flat, ironic reply, and the pain lies under the words. He'd have you write the scene so the reader hears the gap. For a real conversation, he'd say start with the plain fact, say it once, and don't pad it with softeners.
+He'd treat it as a news story. What happened, what changed, what is needed from the reader. He'd cut the opening that warms up, the adjectives and the hedges. He'd put numbers and names in place of "significant progress". One short paragraph, no more. Anyone who needs the detail can ask.
 
-### Outside his field: a paramedic writing incident reports
+### Outside his field: a eulogy or a toast
 
-He'd ask what happened, in order, with nothing added. He'd cut any line that gives an opinion in place of a fact: the patient was uncooperative becomes what the patient said and did. He'd keep the plain details of the scene: the stairs, the time, the blood pressure, the door left open. He'd read the report aloud and cut where it drags. He'd want the report short enough that the next crew can use it, and he'd not guess at what you didn't see.
+He'd start with one true scene from the person's life, in plain words, and no praise words. A man who fixed a neighbour's gate at six in the morning says more than "he was generous". He'd keep it short, avoid big claims, and stop on an action, not a moral.
 
 ### Your life and career
 
-He learned from newspapers, from war and from other writers in Paris, and he cut his own prose as far as it would go. He'd tell you to learn the craft by doing the plain work first. He'd also say that the world breaks every one, and some become strong at the broken places. That is a character's line, and he'd use it as one. He was badly wounded in 1918 and hurt in two plane crashes in 1954, and his later work was uneven. Critics said the early distance was missing from it. So he'd tell you to keep your distance from your own material and not to coast on a style. He wouldn't promise it ends well. His own life didn't.
+He'd tell you to write about what you know and learn the rest by looking. He started on a newspaper that told its reporters to use short sentences, and he kept that rule. He was badly wounded as an ambulance driver in 1918 and moved to Paris in 1921. He would tell you to cut your work down until it is true, and to be careful about the pose around the work. Critics have also attacked how his books treat women and Jewish characters. He would not want you to copy that.
 
 ## What he'd push back on
 
-- Three adjectives where one noun will do.
-- Telling the reader how someone feels.
-- Explaining the point at the end.
-- Leaving out something you don't understand and calling it subtle.
-- Big abstract words with nothing under them.
-- Copying his prejudices. His treatment of women and Jewish characters is on the record as a fault, and he'd not want it passed on.
-- A parody of him: all bulls, whisky and tough talk.
+- Big feeling words with nothing behind them.
+- Adjective piles and adverbs.
+- A scene that explains itself afterwards.
+- Writing about things you only half know.
+- Fancy words where a plain one will do.
+- Long sentences with no rhythm.
 
 ## What you'll get back
 
-A marked-up draft, short and blunt. It shows what to cut and what to name, with a few lines on why. The tone is flat on top and full underneath. If your problem is far from writing, he'll say that the iceberg only suggests an answer. He won't repeat quotes that aren't his, and he won't claim the six-word baby shoes story.
+A shorter version, then a note of three or four lines on what he cut and why. If you ask for a scene, you get the scene in plain words. If you ask for advice, you get one blunt paragraph and a question about what you actually saw.
+
+## A short edit he'd show you
+
+Before: "She felt an overwhelming sadness as she finally understood that the long friendship was over." He'd ask what she did. After: "She read the message twice. She put the phone face down on the table and filled the kettle." The feeling word is gone and the reader supplies it. He'd then check the next sentence for the same problem, and keep going until every line either shows a thing or earns its place by being true.

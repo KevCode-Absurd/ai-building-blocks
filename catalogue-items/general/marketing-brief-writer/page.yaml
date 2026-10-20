@@ -1,0 +1,126 @@
+new_slug: marketing-brief-writer
+name: "Marketing brief writer"
+summary: "Paste what you know about your product and buyers. Get a one-page brief: what to say, to whom and what next."
+job: plan-strategy
+thinking: medium
+thinking_why: "It must separate real buying reasons from the maker's claims and decide the one thing to say."
+
+headline: "Marketing brief writer"
+subhead: Give it what you know about your product, your buyers and what you have tried. It asks the questions a good brief answers, finds the one thing to say, checks whether the offer itself could be better, and hands back a one-page brief with how results will be counted.
+
+explain: |
+  Most weak marketing starts with a weak brief, or none. People ask for a clever campaign before they have said who it is for, what they want them to do or how they will tell if it worked. Then they judge the result by taste.
+
+  This skill writes the brief first. It records what has been tried and whether it worked, who buys and who does not, and the real reasons people buy, apart from the reasons the maker gives. It states the one thing to say in a single sentence before anyone writes a word. It also asks whether a small change to the product or offer would add more than new words, and ends with the action the reader should take and how you will count it.
+
+when:
+  - You are about to hire a writer, designer or agency and need to tell them what you want.
+  - You have written something and cannot say in one sentence what it is meant to get across.
+  - Your last campaign did not work and you do not know why.
+
+you_give:
+  - What you sell and any facts you have on it (required, as text)
+  - Your brand file or notes on voice and claims (optional)
+  - Customer words from reviews or calls (optional)
+  - Your offer, price and terms (optional)
+  - What you have tried before and the results (optional)
+you_get:
+  - A one-page brief with goal, audience, the one thing to say, offer and action
+  - A list of why people really buy, in their words where you have them
+  - A check on whether the offer needs a small change before new words
+  - How the result will be counted
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what you know about the product, the buyers and past attempts. Rough notes are fine.
+  - Answer the questions it asks, or say you do not know.
+  - Read the one-sentence message first. If you cannot agree with it, say why and ask for a new one.
+  - Give the brief to whoever writes or makes the work.
+
+how_it_works:
+  - title: What was tried
+    text: Records past attempts, what each did and whether it worked.
+  - title: Buyers and non-buyers
+    text: Lists who buys, who does not, why they buy and when.
+  - title: Why people really buy
+    text: Separates the real reasons from the reasons the maker gives.
+  - title: The one thing to say
+    text: States the single message in one sentence before any thought of being creative.
+  - title: Test the offer
+    text: Checks whether a small change to the product or offer would add more value than new words.
+  - title: Action and count
+    text: Ends with the action the reader should take and how it will be counted.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  GOAL
+  <what the work must achieve, in one line, with a number if you have one>
+
+  WHAT HAS BEEN TRIED
+  <attempt> | Result: <result or unknown>
+
+  WHO BUYS AND WHO DOES NOT
+  Buyers: <who, when, why> | Non-buyers: <who, why not>
+
+  WHY THEY REALLY BUY
+  <reason in their words> | Source: <review, call or MISSING>
+
+  THE ONE THING TO SAY
+  <one sentence>
+
+  THE OFFER CHECK
+  <small change worth trying first, or none found>
+
+  THE ACTION AND THE COUNT
+  Action: <what the reader does> | Counted by: <measure and date>
+
+  MISSING
+  <what would sharpen the brief>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Past results
+    how: Give numbers when you have them, even rough ones. "It brought in about 20 leads" is better than "it did OK".
+  - what: Customer words
+    how: Paste real quotes. The brief uses them to separate real reasons from your own.
+  - what: The action
+    how: Name one action, such as "book a call". Two actions split the result.
+  - what: Who is not buying
+    how: Describe people who looked and left. Their reasons often point to the offer.
+
+judge:
+  - Every question about past results, buyers and non-buyers is answered or marked unknown.
+  - The message fits in one sentence.
+  - The brief names how results will be counted.
+  - The offer is checked, not just the wording.
+  - Reasons to buy come from customers, not only from you.
+
+test:
+  - Read the one-sentence message to a stranger and ask what they think you sell.
+  - Give the brief to a writer who does not know your business and see what questions they ask.
+  - Run it twice with the same notes. The one-sentence message should stay close.
+  - Compare the brief with your last campaign and see what it would have changed.
+
+improve:
+  - Add questions your trade always asks, such as licences or delivery areas.
+  - Keep a short list of past campaigns and results in your brand file so the first question is already answered.
+  - Add your limits, such as claims you may not make, to the check step.
+  - Pair it with "Product differentiation checker" if you cannot find the one thing to say.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Turning notes into a one-page brief is text work any strong chat AI handles well."}
+    - {name: "Your email or order export", why: "Real numbers on past results make the first section solid instead of a guess."}
+  inputs:
+    - "Reviews or support tickets from the last six months"
+    - "Results of any past emails, ads or mailings"
+    - "A list of the people who asked about you but did not buy"
+
+terms:
+  - term: Brief
+    meaning: A short document that tells whoever makes the work what to say, to whom and what to get from it.
+  - term: Offer
+    meaning: What the buyer gets, for what price and on what terms.

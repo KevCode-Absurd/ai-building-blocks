@@ -1,0 +1,127 @@
+new_slug: small-working-example-explainer
+name: "Small working example explainer"
+summary: "Name a mechanism you need to teach. Get the smallest example that shows it, with traced values and predictions to check."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "It must pick the smallest example that still shows the mechanism, and compute it correctly."
+
+headline: "Small working example explainer"
+subhead: "Name what you need to teach and who is learning. It cuts the idea to the smallest case that still works, traces every value and adds predictions to check by hand. You get a worked example, checked and with limits stated."
+
+explain: |
+  Explanations lose people when the example has too many parts. A learner cannot tell which number matters, so they memorise the steps and cannot use them on a new case. A good example is small enough that nothing is hidden.
+
+  This skill asks what the learner must be able to do and what they already know. It cuts the mechanism down to one or two values, names every in-between result, and writes the trace so it can be followed with a pencil. It then adds predictions the learner makes before reading the answer. It runs the same numbers through a trusted source, or a second route, to check the example is right, and ends by saying what the small version leaves out.
+
+when:
+  - "You are writing a lesson, guide or onboarding note and the real example is too big."
+  - "A team member keeps asking how a formula or process works and slides are not helping."
+  - "You need to explain a calculation, rule or system to a customer in one page."
+
+you_give:
+  - "The mechanism to teach, in a sentence"
+  - "Who is learning and what they know (optional)"
+  - "A trusted reference to check against (optional)"
+  - "Your current explanation (optional)"
+you_get:
+  - "The smallest example that still shows the mechanism"
+  - "A trace of every step with named values"
+  - "Two to four predictions with answers"
+  - "A note of what the small version leaves out"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say what you want the learner to be able to do at the end."
+  - "Tell it what the learner already knows."
+  - "Paste a trusted formula, tool or page if you have one for it to check against."
+  - "Try the predictions yourself before you read the answers."
+
+how_it_works:
+  - title: "Asks what must be understood"
+    text: "The learner's end goal and starting point."
+  - title: "Cuts to single values"
+    text: "Keeps the rule and drops the bulk."
+  - title: "Writes the example"
+    text: "Names every input and in-between result."
+  - title: "Writes the trace"
+    text: "Step by step, short enough to follow with a pencil."
+  - title: "Adds predictions"
+    text: "Questions to answer before reading on."
+  - title: "Checks against a reference"
+    text: "Runs the same numbers through a trusted source."
+  - title: "States the limits"
+    text: "Says what the small version leaves out."
+  - title: "Checks the whole"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  GOAL
+  <what the learner can do at the end>
+  <what they already know>
+
+  THE EXAMPLE
+  Inputs: <name = value>
+  Rule: <formula or rule>
+
+  TRACE
+  <step> | <what happens> | <name> = <value>
+
+  PREDICT FIRST
+  1. <question>
+  Answers: <with working>
+
+  CHECKED AGAINST
+  <reference> -> <same result or difference>
+
+  LEFT OUT
+  <two or three things the small version hides>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "What the learner knows"
+    how: "A line about their background sets the size of the steps. Beginners get smaller ones."
+  - what: "The reference"
+    how: "Name a tool or formula. The check is only as strong as the reference you give."
+  - what: "How much to keep"
+    how: "Say whether to keep rounding or edge cases. Default is to leave them out and name them."
+  - what: "Form"
+    how: "Say if you need a table, code or plain text. The trace follows the form."
+
+judge:
+  - "Every number and in-between result has a name."
+  - "You can answer one prediction before reading on."
+  - "The result matches the trusted source."
+  - "The note on limits is specific."
+  - "It reads in one sitting."
+
+test:
+  - "Give it a mechanism you already understand and check whether the small example matches how you would teach it."
+  - "Check the arithmetic yourself, or in a spreadsheet."
+  - "Show it to someone who does not know the topic and ask them to say it back."
+  - "Change one input and check the trace still works."
+
+improve:
+  - "Add the tools you trust as a reference list in step 6."
+  - "Add the level of maths your learners are comfortable with."
+  - "Save the best small examples as a library for your team."
+  - "Pair it with \"Plain English editor\" for the text around the example."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Working out and tracing a small example is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet or calculator", why: "Checking the numbers independently is the quickest test of the trace."}
+  inputs:
+    - "A page from the textbook or tool docs you trust"
+    - "The questions learners ask most often"
+    - "An example from real work that is too big"
+
+terms:
+  - term: "Trace"
+    meaning: "A step-by-step list of what happens and what each value is."
+  - term: "Trusted reference"
+    meaning: "A formula, tool or source you already know gives the right answer."

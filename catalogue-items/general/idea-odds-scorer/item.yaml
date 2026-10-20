@@ -1,0 +1,17 @@
+slug: idea-odds-scorer
+name: "Idea odds scorer"
+summary: "List your ideas. Get each scored on upside, passion and odds, with the best next small step."
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: shortlist, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [dharmesh-shah]
+credits:
+  - {title: "Simple frameworks for success (OnStartups talk and transcript)", by: "Dharmesh Shah", used: "Scoring ideas on profit, passion and odds, multiplying them, and weighing long shots by expected value"}

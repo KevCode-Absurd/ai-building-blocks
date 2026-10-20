@@ -1,0 +1,128 @@
+new_slug: online-media-buy-auditor
+name: "Online media buy auditor"
+summary: "Paste your online ad plan and reports. Get a list of where the money may leak and what to ask each supplier."
+job: read-ad-results
+thinking: high
+thinking_why: "It must weigh evidence quality and conflicts of interest, and it must not claim fraud without proof."
+
+headline: "Online media buy auditor"
+subhead: "Give it your online ad plan and the reports your suppliers send. It checks who made each number, where spend goes and who gains if the figures look good. You get a score out of 100, the places money may leak and what to ask each supplier."
+
+explain: |
+  Online ad reports are mostly written by the people who sell the ads. A report can show clicks, views and low costs while some of the ads ran on sites nobody visits, were never seen, or were clicked by software. You pay the bill either way.
+
+  This skill splits your spend into direct buys from publishers and programmatic or open-network buys. It counts how many sites carry your ads, asks of each report who made it and how they know, and flags figures that come from the supplier being judged. It lists weak points and who is paid on volume. It marks every claim as a fact, an estimate or a range and calls nothing fraud without evidence, only risk.
+
+when:
+  - "You spend on online ads and your reports come from the seller or your agency."
+  - "Your results look good but sales do not follow."
+  - "You are about to renew or raise a budget and want questions to put to the supplier."
+
+you_give:
+  - "Your online ad plan or media list, with spend by supplier"
+  - "The reports you receive, and who sends each one"
+  - "How your agency or supplier is paid (optional)"
+  - "Sales or orders for the same period (optional)"
+you_get:
+  - "Spend split into direct and programmatic or open-network"
+  - "Each figure tied to who reported it"
+  - "A score out of 100, with how it was worked out"
+  - "A list of risks, questions for each supplier and one outside check to run"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your spend by supplier and the reports you get."
+  - "Say who sends each report and how that person is paid."
+  - "Send each supplier the questions it lists."
+  - "Run the one outside check on a single campaign and bring the result back."
+
+how_it_works:
+  - title: "Splits the spend"
+    text: "Separates direct publisher buys from programmatic or open-network buys."
+  - title: "Counts sites and sources"
+    text: "Counts how many sites carry the ads and who reports each number."
+  - title: "Asks who made it"
+    text: "Asks of each report: who made it and how do they know."
+  - title: "Flags self-reports"
+    text: "Flags figures that come from the supplier or agency being judged."
+  - title: "Checks weak points"
+    text: "Looks for made-for-ads sites, hidden fees, unseen ads and fake clicks."
+  - title: "Checks incentives"
+    text: "Checks who is paid on volume and who gains if numbers look good."
+  - title: "Proposes a fix"
+    text: "Proposes moving spend to direct buys and an outside check on one campaign."
+
+output_shape: |
+  SCORE: <n>/100 (100 means every figure is independent and well sourced)
+
+  SPEND SPLIT
+  Direct: <amount and share>
+  Programmatic or open network: <amount and share>
+
+  WHO REPORTED WHAT
+  <figure> | Source: <who made it> | Independent: <yes or no> | How they know: <answer or MISSING>
+
+  WEAK POINTS
+  <risk> | Status: fact, estimate, range or unknown | Evidence: <what you saw>
+
+  WHO GAINS IF THE NUMBERS LOOK GOOD
+  <party and why>
+
+  QUESTIONS FOR EACH SUPPLIER
+  <supplier>: <questions>
+
+  PROPOSAL
+  Move: <spend and where>
+  Outside check: <one campaign and what to compare>
+
+  DATA MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Who made each report"
+    how: "Label every report as supplier, agency, platform or your own. It scores independence from that."
+  - what: "Spend by supplier"
+    how: "Give amounts. Shares drive the size of each risk."
+  - what: "Your own sales data"
+    how: "Add orders for the same dates. It lets the check compare reported results with real ones."
+  - what: "Pay terms"
+    how: "Say how your agency is paid. A fee on spend creates a reason to spend more."
+
+judge:
+  - "Every figure is tied to who reported it."
+  - "Claims about waste are marked as range, estimate or fact."
+  - "Nothing is called fraud without evidence, only risk."
+  - "The report lists what data is missing."
+  - "The questions to suppliers are specific and answerable."
+
+test:
+  - "Run it on a plan you already distrust. Check it points to the same weak spots."
+  - "Check that every risk it lists says if it is a fact, an estimate or unknown."
+  - "Send two of the supplier questions and see if the answers are clear."
+  - "Run it again after you move some spend and compare the independence score."
+
+improve:
+  - "Add your suppliers' names so the questions are written for them."
+  - "Add the checks your industry uses, such as third-party verification."
+  - "Keep the answers suppliers give in one file, so changes show up over time."
+  - "Pair it with a cost per customer check so spend is judged by customers, not clicks."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading reports and writing supplier questions is text work any strong chat AI does with this skill."}
+    - {name: "Your own site analytics", why: "Shows visits and orders from a source other than the ad seller."}
+  inputs:
+    - "Site analytics for the same dates"
+    - "The contract or fee terms for your agency"
+    - "A list of sites your ads ran on, if the supplier shares one"
+
+terms:
+  - term: "Programmatic buying"
+    meaning: "Ads bought by software through exchanges, often across thousands of sites."
+  - term: "Made-for-ads site"
+    meaning: "A site built mainly to show ads, with little real audience."
+  - term: "Direct buy"
+    meaning: "Buying ad space straight from a publisher."

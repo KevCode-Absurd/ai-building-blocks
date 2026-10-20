@@ -1,0 +1,120 @@
+new_slug: honest-persuasion-editor
+name: "Honest persuasion editor"
+summary: "Paste your message or page. Get which persuasion levers it uses, which are true, which are fake and a cleaner rewrite."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It must judge whether each claim is true from the facts it is given, then rewrite."
+
+headline: "Honest persuasion editor"
+subhead: Paste a message, page or pitch. It marks each line by the persuasion lever it uses, checks that each lever is true, removes the fake ones and adds one or two true ones. You get an audit of what you used and a cleaner rewrite.
+
+explain: |
+  Persuasion works when it is true. A fake "only three left", a made-up crowd or a borrowed title may win a sale today and cost you trust tomorrow. Many pages use these levers without knowing, so the fake ones sit beside the real ones.
+
+  This skill names seven levers: giving first, small commitments, what people like them do, credible expertise, liking and common ground, real scarcity and shared group. It marks each line by lever, tests it against the facts you gave (numbers sourced, expertise real, scarcity real) and removes any lever that works only if false. It then adds one or two true, strong levers and rewrites in your voice, noting which lever each change uses.
+
+when:
+  - You wrote a sales page, email or pitch and worry it sounds pushy.
+  - You inherited copy full of "limited time" and "thousands trust us" and cannot say what is true.
+  - You want persuasion that holds up if someone checks.
+
+you_give:
+  - The message or page text
+  - The facts you can prove, such as numbers, credentials, dates and stock
+  - Customer reviews or your brand file (optional)
+you_get:
+  - A list of levers used, line by line, marked true, unproven or fake
+  - Fake levers removed, and each one listed
+  - One or two true levers added, each sourced
+  - A rewrite in your voice, with a note on what changed
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your text and then list the facts you can prove, with sources.
+  - Say which claims you are sure about and which you are not.
+  - Read the list of removed levers first. Check that each really was fake.
+  - Use the rewrite, and keep your proof where you can show it.
+
+how_it_works:
+  - title: Marks the levers
+    text: Labels each line with the lever it uses, or none.
+  - title: Tests each one
+    text: Checks every lever against the facts you gave, such as sourced numbers, real expertise and real scarcity.
+  - title: Removes the fake ones
+    text: Cuts or fixes any lever that works only if it is false.
+  - title: Adds true levers
+    text: Adds one or two strong, true levers, such as a real gift, a small public commitment or shown expertise.
+  - title: Rewrites in your voice
+    text: Keeps the rest of the voice and notes which lever each change uses.
+  - title: Limits stacking
+    text: Keeps at most two levers on any one page.
+  - title: Lists what was removed
+    text: Names every fake lever it removed and why.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  LEVER MAP
+  1. Line: <quote> | Lever: <name> | Status: <true, unproven, fake> | Because: <fact or lack of one>
+
+  REMOVED
+  - <line> | Lever: <name> | Why it was fake
+
+  ADDED
+  - <lever> | Line: <new line> | Source: <fact>
+
+  REWRITE
+  <full text>
+
+  WHAT EACH CHANGE USES
+  - <change> -> <lever>
+
+  MISSING
+  <proof needed to keep a claim>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your proof
+    how: Paste figures, credentials and dates with sources. A lever without proof is marked unproven.
+  - what: Strictness
+    how: Say whether unproven claims should be cut or kept with a note. The default is to cut them.
+  - what: Which levers you want
+    how: Name one or two you prefer, such as shared group. New levers are chosen from those.
+  - what: Voice
+    how: Paste a sample of your writing so the rewrite sounds like you.
+
+judge:
+  - No claim of scarcity, popularity or expertise is made up.
+  - Each added lever is true and sourced.
+  - At most two levers are stacked on one page.
+  - The tone stays respectful and not pushy.
+  - Every fake lever it removed is listed.
+
+test:
+  - Pick three claims it marked true and check each one yourself.
+  - Pick three it marked fake and see if you agree.
+  - Run it twice. The lever map should stay close.
+  - Show the rewrite to a customer and ask whether anything feels pushy.
+
+improve:
+  - Add a list of your proof, with sources and dates, and paste it in each time.
+  - Add your brand file so the voice and claims match.
+  - Add rules from your industry on what you may say about scarcity or results.
+  - Pair it with "Hardest objections answer writer" to meet the doubts the levers do not.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Marking and rewriting copy is text work any strong chat AI does well with this skill."}
+    - {name: "Your sales or review data", why: "It holds the real numbers a lever needs to be true."}
+  inputs:
+    - "Customer reviews and quotes with permission"
+    - "Credentials, awards and dates with sources"
+    - "Real stock or booking numbers if you mention scarcity"
+
+terms:
+  - term: Lever
+    meaning: A known reason people say yes, such as giving first, social proof or authority.
+  - term: Scarcity
+    meaning: Real limits on supply or time, which make an offer more valuable. It must be true.

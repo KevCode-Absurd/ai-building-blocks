@@ -1,0 +1,18 @@
+slug: marketing-scorecard-builder
+name: "Marketing scorecard builder"
+summary: "Paste the numbers you track now. Get a balanced scorecard with short-term and long-term measures and what each tells you."
+category: general
+type: skill
+role: make
+job: analysis
+level: advanced
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [les-binet]
+credits:
+  - {title: "The long and the short of it: 10 key principles of success (summary presentation)", by: "Les Binet and Peter Field, IPA", used: "Short-term and long-term measures, and not judging long-term effects on short-term windows"}

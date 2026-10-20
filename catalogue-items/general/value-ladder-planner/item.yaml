@@ -1,0 +1,22 @@
+slug: value-ladder-planner
+name: "Value ladder planner"
+summary: "Paste your product, prices and what buyers do next. Get a ladder from a free first step to a top tier."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: persona, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+  - {type: offer}
+origin: rebuilt
+version: 1.0.0
+minds: [russell-brunson, alex-hormozi]
+credits:
+  - {title: "Russell Brunson", by: "Wikipedia", used: "Background on the value ladder idea of rising offers from a free or cheap first step"}
+  - {title: "My Story", by: "Russell Brunson (source record)", used: "Moving a buyer up through offers of rising price and result"}
+  - {title: "Russell Brunson study notes", by: "Russell Brunson (as summarised in the mind file)", used: "Picking one core path and a recurring rung"}

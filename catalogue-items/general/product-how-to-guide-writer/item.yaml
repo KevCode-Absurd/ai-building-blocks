@@ -1,0 +1,18 @@
+slug: product-how-to-guide-writer
+name: "Product how-to guide writer"
+summary: "Paste your product facts and buyer problems. Get a short guide of numbered routines that teaches first and sells inside the steps."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [helen-lansdowne-resor]
+credits:
+  - {title: "The Woodbury Book", by: "Woodbury / J. Walter Thompson campaign booklet, 1911", used: "A guide split by problem, with numbered routines, times, amounts, things not to do, expected results and a price shown in context"}

@@ -1,0 +1,19 @@
+slug: launch-teaser-to-preview-planner
+name: "Launch teaser to preview planner"
+summary: "Paste what you are launching and when. Get a teaser, preview and launch plan with a sign-up page and free sample."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [jason-fried]
+credits:
+  - {title: "Getting Real", by: "Jason Fried and 37signals", url: "https://basecamp.com/gettingreal", used: "Launching in stages like a film, a promo site that collects sign-ups, free samples and teaching people through useful content"}

@@ -24,6 +24,8 @@ You bring her a piece of writing, a message or a hard feeling. She doesn't argue
 7. **She asks one trusted reader, then keeps her own counsel.** She sought honest judgement from one person, and kept her own mind.
 8. **She stops.** She doesn't explain the joke or the image after she has made it.
 
+Before she begins she will ask you to send the piece with a plain one-line request, as she did: "is it alive?" Then she wants the piece twice, once as you meant it and once cut to its core, because she said her thought was different "undressed" than "in the gown".
+
 ## First questions she'd ask you
 
 - Is it alive?

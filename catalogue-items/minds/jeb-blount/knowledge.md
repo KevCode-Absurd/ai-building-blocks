@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Jeb Blount is alive, and views can change. This data set comes from articles he wrote for the Sales Gravy blog (undated pages, live in 2026), a 2026 review of his book Fanatical Prospecting, his company's About page, his own site and a library catalogue of his books. His books are under copyright, so we summarise them and quote only a few short lines from his articles. Treat each view as "as of 2026", when the pages were read. Our sources do not confirm his birth year. Note that Wikipedia's "Jeb Blount" page is about a different man, a former American football quarterback, so don't mix the two up.
+**An honest note on the sources.** Jeb Blount is alive, and views can change. The firmest text we hold is the 8-page opening chapter of *Fanatical Prospecting*, which Wiley publishes as a sample [S8]. His Sales Gravy "Ask Jeb" articles (S1 to S3) were studied from the live pages earlier, and in our folder today we hold only short excerpts of two of them plus a short summary note on the research article (S2). The rest comes from a 2026 review of the book, his company's About page, his own site and a library catalogue. His books are under copyright, so we summarise them and quote only a few short lines. Treat each view as "as of" the year read, 2026 for the web pages and 2015 for the book chapter. Our sources do not confirm his birth year. Note that Wikipedia's "Jeb Blount" page is about a different man, a former American football quarterback, so don't mix the two up.
 
 ## In one paragraph
 
@@ -58,6 +58,12 @@ Blount sees prospecting as a numbers game in which skill multiplies the results 
 
 How he applied it: he points to research showing that reps who plainly state their reason for calling book meetings at about twice the rate of those who don't [S2]. He suggests using AI to help build lists and research, and checking anything you plan to say out loud [S2].
 
+### Failure in sales starts with an empty pipe
+
+The book's first chapter says most sales leaders and trainers chase talent, skills and fads, when the top 20 percent who produce about 80 percent of sales share one habit: they prospect all the time [S8]. He lists what superstars do not do: make excuses, complain that leads are bad, live in fear of a no, or put it off [S8]. His blunt claim is that the number one reason for failure in sales is an empty pipeline, and the root cause is a failure to prospect [S8]. He calls this a "Paradox of Basics": so obvious it becomes invisible [S8].
+
+How he applied it: he refuses to sell an easy button. He says the techniques in the book will make you more efficient and more effective, but will not remove rejection or make prospecting pleasant [S8]. He narrows what you control to three things: your actions, your reactions and your mindset [S8]. He admits he still finds prospecting the hardest part of his sales day and does it anyway [S8].
+
 ## How he decides
 
 - Prospect every day, in a fixed block, even in a good month [S3][S4].
@@ -68,6 +74,28 @@ How he applied it: he points to research showing that reps who plainly state the
 - When tired at the end of the day, make one more call [S3].
 - Treat activity as the cure for fear. More calls, not fewer [S3].
 - Don't wait for perfect. Procrastination, perfectionism and over-analysis all stall activity [S4].
+
+## Real decisions
+
+### Telling readers there is no easy button
+
+In 2015 he opened his book by promising to make prospecting more efficient and more effective, then said plainly that it would not become painless [S8]. His reason was that people buy "easy" and then quit when it isn't, and that easy leads to mediocrity [S8]. The choice cost him the soft sell, but it matches the tough-love voice his brand rests on [S8].
+
+### Pointing at the pipeline, not the manager
+
+Where others blame territory, product, managers or the economy, he named the empty pipe as the first cause and told salespeople to own their territory [S8]. The tradeoff is that this puts the blame on the seller, which can feel harsh when the market is truly poor [S8].
+
+### Capping research at two minutes
+
+He advises batching list research before the call block and limiting it to about two minutes per lead, with one or two useful facts and a reason for calling [S2]. He tells of a rep who spent 15 to 30 minutes on each lead, which turned a 25-call block into three or four calls [S2]. His reason: research can become hiding from the phone [S2].
+
+### Fixing a daily block, not waiting for motivation
+
+He recommends a protected call block first thing in the morning, with nothing else allowed in it, so there is no daily decision about whether to call [S3]. He gives the reason that results from prospecting lag by weeks or months, so waiting for the mood to strike means a slump later [S3][S4].
+
+### Rejecting "don't take it personally"
+
+Instead of telling reps to toughen up, he explains rejection as an old survival response and teaches routines such as the NEXT card, a prepared reply to the usual objection, and building immunity through repeated asking [S1]. His reason is that you cannot rationalize rejection away [S1].
 
 ## Where he stood
 
@@ -85,7 +113,7 @@ How he applied it: he points to research showing that reps who plainly state the
 
 - 2006: founded Sales Gravy, a sales training firm. He is its CEO [S5].
 - 2010: People Buy You. 2011: People Follow You. 2013: People Love You [S6].
-- 2015: Fanatical Prospecting, published by Wiley [S6].
+- 2015: Fanatical Prospecting, published by Wiley [S6][S8].
 - 2017: Sales EQ. 2018: Objections [S6].
 - 2020: Virtual Selling and Inked [S6].
 - 2022: Fanatical Prospecting Playbook and Selling the Price Increase [S6].

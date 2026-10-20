@@ -1,0 +1,123 @@
+new_slug: product-harm-audit-planner
+name: "Product harm audit planner"
+summary: "Paste your products and what they are made of. Get the biggest harm ranked, a swap plan and its cost."
+job: plan-strategy
+thinking: high
+thinking_why: "It weighs harms across materials and supply chains with thin evidence and must state its limits."
+
+headline: "Product harm audit planner"
+subhead: Paste your products, what they are made of and what each earns. It lists the harm each one does to people and places, ranks the biggest, plans a small test of a swap, prices the switch in money and sales and sets a date to audit again.
+
+explain: |
+  Most product reviews check what a product does for the buyer. Few check what it does to the people who make it or the place it comes from. When they do, they usually fix the easy thing and leave the biggest harm, because the biggest harm sits in the best seller.
+
+  This skill lists each product with its share of income and audits what it takes from or does to people and places, with the evidence for each. It picks the single biggest harm, even if it is your top seller, then plans a test of a replacement in a small run. It states the cost of switching in money and sales before you commit, then plans the full switch, how to tell customers why and when to audit again.
+
+when:
+  - You want to cut the harm your products do but do not know where to start.
+  - A supplier, material or process is under pressure from customers or rules.
+  - You need a plan to change a best seller without losing the business.
+
+you_give:
+  - "Your products with the share of income each earns"
+  - "What each is made of, where and how, as far as you know"
+  - "Your brand values and promises (optional)"
+  - "Any known replacement material or process (optional)"
+
+you_get:
+  - "An audit of every product's effect on people and places, each harm with its evidence"
+  - "The single biggest harm named and ranked above the rest"
+  - "A small test plan for a swap"
+  - "The cost of switching in money and sales, and a date for the next audit"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your products with income shares and what each is made of."
+  - "Add what you know about where and how they are made."
+  - "Check the harms it lists and add evidence it is missing."
+  - "Run the small test, bring back the result and ask it to price the full switch."
+
+how_it_works:
+  - title: Lists income shares
+    text: Puts every product next to the share of income it brings in.
+  - title: Audits harm
+    text: Writes what each product takes from or does to people and places, with evidence.
+  - title: Picks the biggest
+    text: Names the single biggest harm, even if it sits in a top seller.
+  - title: Plans a small test
+    text: Finds or designs a replacement and tests it in a small run first.
+  - title: Prices the switch
+    text: States cost in money and in sales before you commit.
+  - title: Plans the full switch
+    text: Sets the switch, how to tell customers why and a re-audit date.
+
+output_shape: |
+  PRODUCTS AND INCOME
+  <product> | share of income | made of | made where
+
+  HARM AUDIT
+  <product> | harm to people | harm to places | evidence | confidence
+
+  THE BIGGEST HARM
+  <harm> | product | why it ranks first | what is unknown
+
+  SMALL TEST OF A SWAP
+  <replacement> | what to test | size of the run | pass line | date
+
+  COST OF SWITCHING
+  Money: <amount or range> | Sales at risk: <share or range> | what the figures rest on
+
+  FULL SWITCH AND MESSAGE
+  <steps and dates> | what to tell customers and why
+
+  RE-AUDIT
+  <date> and what will be checked again
+
+  MISSING
+  <evidence you do not have>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Evidence for each harm
+    how: Add audit reports, supplier visits or certifications. Harms without evidence are marked low confidence.
+  - what: Supply chain detail
+    how: Say where materials come from and who makes the product. Harm often sits several steps back.
+  - what: Your limits
+    how: State what you cannot change this year, such as a contract. The plan works around it.
+  - what: Replacement options
+    how: Name any you have heard of. It tests those first.
+
+judge:
+  - Every product is in the list with its income share.
+  - Each harm names its evidence or says it has none.
+  - Switch cost is stated in numbers.
+  - A re-audit date is set.
+  - The biggest harm is chosen on harm, not on ease.
+
+test:
+  - "Run it on a product whose supply chain you know. Check that it finds the harm you already know about."
+  - "Remove one piece of evidence and see that confidence drops."
+  - "Check that the cost range is built from the figures you gave."
+
+improve:
+  - "Add the standards and certifications your field uses."
+  - "Add harms specific to your materials, such as water use or chemicals."
+  - "Keep the audit as a yearly document."
+  - "Pair it with a message writer for the customer note."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It organises evidence and drafts the plan in plain text."}
+    - {name: "A supplier audit or certification report", why: "Gives it real evidence instead of guesses."}
+  inputs:
+    - "Supplier lists with locations"
+    - "Material data sheets"
+    - "Customer questions or complaints about how things are made"
+
+terms:
+  - term: Harm audit
+    meaning: A written check of what a product takes from or does to people and places.
+  - term: Small run
+    meaning: A test batch large enough to learn from and small enough to afford if it fails.

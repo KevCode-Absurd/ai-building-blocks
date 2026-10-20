@@ -1,0 +1,127 @@
+new_slug: repeated-image-campaign-planner
+name: "Repeated image campaign planner"
+summary: "Name your product and give one photo. Get a plan to repeat one flat image in new colours."
+job: make-image-ads
+thinking: low
+thinking_why: "The plan follows a fixed pattern, with one source image and a set of colour changes."
+
+headline: "Repeated image campaign planner"
+subhead: Give it your product and one plain photo. It picks the one thing your buyers know on sight, plans a set built from that single image with only the colour changed, writes steps others can follow, and sets a price for the volume you will make.
+
+explain: |
+  Many campaigns spend weeks on a new look for every image. A set built from one flat image repeated in new colours is fast to make, easy to recognise and easy for a team to extend. It suits a product, a service mark, a poster series or a run of social posts.
+
+  This skill picks the one thing your buyers already recognise on sight. It uses a plain photo as the only source, repeats it as a set and changes only the colour. It writes the steps so someone else can make the next one, keeps happy accidents that help, and sets a price that fits the number you will make. The surface stays flat, with no hidden meaning to explain. You get an image plan, ready for a tool that makes pictures.
+
+when:
+  - You need a run of images fast and want them to look like one family.
+  - You have one strong product photo and want to use it more than once.
+  - You want a method that a helper or freelancer can repeat without you.
+
+you_give:
+  - What you sell, and the one thing buyers know it by
+  - One plain photo of it
+  - Your brand file (optional), for colours and tone
+you_get:
+  - A plan for a set built from one source image
+  - A colour list for the set
+  - Written steps for making each one
+  - A price for the volume you plan to make
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name your product and attach one plain photo of it.
+  - Say how many pieces you plan to make and where they will be seen.
+  - Look at the set on a phone-sized screen. It should read at a glance.
+  - Give the written steps to someone else and see if they can make the next piece.
+
+how_it_works:
+  - title: Finds the known thing
+    text: Picks what your buyers already recognise on sight.
+  - title: Fixes one source
+    text: Uses one plain photo as the single source for the whole set.
+  - title: Plans the repeats
+    text: Lays out the set with only the colour changing between pieces.
+  - title: Writes the process
+    text: Turns the method into steps another person can run.
+  - title: Keeps happy accidents
+    text: Notes where slips or odd results can stay, and where they should go.
+  - title: Sets the price
+    text: Sets a price that fits the volume you plan to make.
+  - title: Keeps it flat
+    text: Checks the surface is plain, with no hidden meaning to explain.
+  - title: Checks the plan
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE KNOWN THING
+  <what buyers recognise and why>
+
+  SOURCE IMAGE
+  <the one photo and what it must show>
+
+  THE SET
+  <n> pieces | Colours: <list>
+  Piece 1: <colour and use> ...
+
+  STEPS FOR THE NEXT ONE
+  1. <step> ...
+
+  HAPPY ACCIDENTS
+  <what may stay, what must go>
+
+  PRICE FOR THE VOLUME
+  <price and how it was set>
+
+  SMALL-SCREEN CHECK
+  <what reads at a glance>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: The one photo
+    how: Pick a plain, centred, well-lit photo. Busy photos do not repeat well.
+  - what: Number of pieces
+    how: Say how many you plan to make. It changes the price and the number of colours.
+  - what: Colour limits
+    how: Name brand colours, or colours to avoid. The set then stays on-brand.
+  - what: Where it is seen
+    how: Say if it is shown on a phone, a poster or a shelf. It sets the size at which it must read.
+
+judge:
+  - The set uses only one source image.
+  - A new person could make the next piece from the written steps.
+  - A price is set for the volume.
+  - It still reads at a glance on a small screen.
+  - Only colour changes between pieces.
+
+test:
+  - Give the steps to a helper and see if the piece they make matches the set.
+  - View all pieces at thumbnail size. Each should still be known at once.
+  - Change the number of pieces and see if the price follows a clear rule.
+  - Check that every piece uses the same photo and not a lookalike.
+
+improve:
+  - Add your brand colours as the default colour list.
+  - Add a rule for what counts as a happy accident in your work and what counts as an error.
+  - Save the steps as a one-page guide for helpers.
+  - Pair it with an image prompt writer once the plan is settled.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning the set and steps is text work any strong chat AI does well."}
+    - {name: "ChatGPT, Gemini or an image editor", why: "These make or recolour the pictures once the plan is ready."}
+  inputs:
+    - "Your brand colour list"
+    - "A photo from a different angle, in case the first is weak"
+    - "Your cost per piece"
+
+terms:
+  - term: Source image
+    meaning: The single photo every piece in the set is made from.
+  - term: Happy accident
+    meaning: An unplanned slip or odd result that helps the piece and is kept on purpose.

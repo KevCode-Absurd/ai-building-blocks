@@ -1,0 +1,19 @@
+slug: shortlist-and-running-order-planner
+name: "Shortlist and running-order planner"
+summary: "Paste a long list of ideas, songs, headlines or slides. Get a cut shortlist and an order that reads as one flow."
+category: general
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - {type: shortlist, required: true}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [quincy-jones]
+credits:
+  - {title: "Quincy Jones: a masterclass interview", by: "Line Noise, 2010, published 2023", url: "https://linenoise.substack.com/p/quincy-jones-a-masterclass-interview", used: "Gathering far more candidates than slots, testing whether the core idea stands alone, and ordering a set by contrast"}
+  - {title: "Quincy Jones interview", by: "AARP The Magazine, January 2011", used: "Replacing the weakest finalist with the strongest unused candidate and leaving a decision overnight"}

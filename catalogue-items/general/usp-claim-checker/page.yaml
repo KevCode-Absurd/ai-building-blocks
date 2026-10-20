@@ -1,0 +1,130 @@
+new_slug: usp-claim-checker
+name: "USP claim checker"
+summary: "Paste your ad or headline and product facts. Get a pass or fail on offer, uniqueness and pull, with fixes."
+job: check-ads
+thinking: medium
+thinking_why: "It applies three fixed tests, but it must judge the claim against rivals and facts."
+
+headline: "USP claim checker"
+subhead: "Give it your ad or headline and your product facts. It states your claim as one sentence, then passes or fails it on three tests: a real offer, a claim rivals do not make, and enough pull. You get a score out of 100, fixes, and one claim to keep."
+
+explain: |
+  Many ads say several things at once, or praise the product without promising anything. Buyers read them and learn nothing they can use to choose you over someone else.
+
+  This skill finds the one claim in your ad and writes it as: buy this, get this specific benefit. It tests whether that is a real offer to the buyer, whether rivals say it too, and whether it is strong enough to interest many people, not a few. It checks that the product really delivers the benefit and names a demonstration that would prove it. It ends with one claim to keep and repeat.
+
+when:
+  - "Your ad says three or four things and you are not sure which one sells."
+  - "You have a slogan that sounds good but promises nothing you can name."
+  - "Your rivals all seem to say the same thing."
+
+you_give:
+  - "Your ad, headline or slogan"
+  - "Your product facts: what it does, how it is made, what has been tested"
+  - "What rivals say in their ads (optional)"
+  - "Any proof you hold, such as test results or reviews (optional)"
+you_get:
+  - "Your claim in one sentence"
+  - "A pass or fail on each of the three tests, with a reason"
+  - "A score out of 100, with how it was worked out"
+  - "Fixes, one claim to keep and a demonstration to prove it"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your ad and product facts."
+  - "Paste two or three rival ads or pages if you can, so it checks them for the same claim."
+  - "Fix any failed test in the order it lists."
+  - "Run the check again on the new line."
+
+how_it_works:
+  - title: "States the claim"
+    text: "Writes the claim as: buy this, get this specific benefit."
+  - title: "Tests the offer"
+    text: "Checks it is a real proposition, not praise or a clever line."
+  - title: "Tests uniqueness"
+    text: "Checks that rivals do not make the claim, or that none of them talks about it."
+  - title: "Tests the pull"
+    text: "Checks it is strong enough to move many people, not a few."
+  - title: "Looks for a first claim"
+    text: "If the feature is shared but unclaimed, rewrites it so you say it first."
+  - title: "Checks the proof"
+    text: "Checks the product really delivers it and names a demonstration."
+  - title: "Picks one claim"
+    text: "Recommends one claim to keep and repeat."
+
+output_shape: |
+  CLAIM
+  Buy <product>, get <specific benefit>.
+
+  SCORE: <n>/100 (offer 30, rival check 30, pull 20, proof 20)
+
+  OFFER: pass or fail
+  <reason>
+
+  RIVAL CHECK: pass, fail or unknown
+  <who says it, or what you looked at>
+
+  PULL: pass or fail
+  <who it moves and who it does not>
+
+  PROOF
+  Product delivers it: <yes, no or unknown, with the fact>
+  Demonstration: <what to show>
+
+  FIXES
+  1. <fix>
+
+  CLAIM TO KEEP AND REPEAT
+  <one sentence>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: "Rival ads"
+    how: "Paste at least two. Without them the rival check is marked unknown and costs points."
+  - what: "Product facts"
+    how: "Include test results and dates. A claim the product cannot deliver fails at once."
+  - what: "The buyer"
+    how: "Say who must be moved. Pull is judged against that group."
+  - what: "One ad or many"
+    how: "Paste your three best ads. It will show if they make the same claim."
+
+judge:
+  - "The claim names one benefit, not three."
+  - "The benefit is specific and checkable."
+  - "A rival check is shown, not assumed."
+  - "The product facts support it."
+  - "A proof or demonstration is named."
+
+test:
+  - "Run it on a famous slogan you know. Check it finds a claim or says there is none."
+  - "Run it on your own ad and then on a plain rewrite. The rewrite should score higher if it is more specific."
+  - "Run it twice. The sentence it writes for your claim should stay close."
+  - "Ask a customer to say what your ad promises. Compare it with the claim the skill found."
+
+improve:
+  - "Add your top three rivals and their usual claims to the skill so the rival check starts from real data."
+  - "Add a rule for claims that need legal care in your field."
+  - "Save the claim you keep to your brand file."
+  - "Pair it with a headline writer once the claim is chosen."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Testing a claim against facts is text work any strong chat AI does with this skill."}
+    - {name: "The Meta Ad Library", why: "Shows what your rivals are actually saying in live ads."}
+  inputs:
+    - "Screenshots of rival ads or pages"
+    - "Lab or test results for the product"
+    - "Customer reviews that mention the benefit"
+
+terms:
+  - term: "USP"
+    meaning: "Unique selling proposition: one specific benefit that a buyer gets and rivals do not claim."
+  - term: "Proposition"
+    meaning: "A promise to the buyer: buy this and you get this."
+  - term: "Demonstration"
+    meaning: "A short thing you can show that proves the claim is true."

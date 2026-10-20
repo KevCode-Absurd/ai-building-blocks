@@ -1,0 +1,125 @@
+new_slug: idea-buy-in-pitch-planner
+name: "Idea buy-in pitch planner"
+summary: "Paste your idea and the people who must say yes. Get a story, a vision picture and a plan through four stages."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It needs a good read of each person's needs, but the structure is fixed."
+
+headline: "Idea buy-in pitch planner"
+subhead: Give it your idea and the people who can say yes or no. It plans how each will react at each of four stages, writes a short story and a vision picture, and sets the order in which you approach allies and doubters.
+
+explain: |
+  A new idea rarely gets a clean yes. People first call it nonsense, then odd, then true but unimportant, and finally say they always knew. If you expect a yes on the first pitch, the first no feels like failure and you give up too early. If you pitch your own excitement, listeners hear someone else's need.
+
+  This skill names who will react at each of four stages and treats strong resistance as a sign the idea has weight, not a reason to stop. It writes a short story that carries the idea and a vision picture of life after the change, not a target number. It picks rough measures, lists every person who can say yes or no, writes why each needs the idea with you left out, and finds the allies to line up first.
+
+when:
+  - You have an idea that needs approval from people who do not yet see it.
+  - Your last pitch got a polite no and you do not know what to change.
+  - You are about to pitch to several people with different worries.
+
+you_give:
+  - Your idea, in a few lines
+  - The people who can say yes or no, and what you know about each
+  - What you want them to do next
+  - Buyer or user persona (optional)
+you_get:
+  - A plan through four stages, with an answer ready for each
+  - A story that fits in under two minutes
+  - A vision picture of life after the change
+  - A pitch line for each person, ordered with allies first
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the idea and list the people. Say what you know about their worries.
+  - Read the plan for the first stage and the ally order.
+  - Tell the story aloud to a friend before you pitch.
+
+how_it_works:
+  - title: Names the stages
+    text: Names who will react at each of the four stages and what to expect.
+  - title: Expects dismissal
+    text: Treats strong resistance as a signal, not a stop.
+  - title: Writes the story
+    text: Writes a short story that carries the idea.
+  - title: Draws the vision
+    text: Describes life after the change, not a numeric plan.
+  - title: Picks rough measures
+    text: Picks measures that reduce uncertainty.
+  - title: Lists decision makers
+    text: Lists each person who can say yes or no.
+  - title: Writes each pitch
+    text: Writes why each person needs the idea, leaving yourself out.
+  - title: Orders the allies
+    text: Finds allies who already want it and lines them up first.
+
+output_shape: |
+  THE IDEA
+  <one line> | the ask: <what you want them to do>
+
+  THE FOUR STAGES
+  Stage <n>: <what people say> | who: <names> | our answer: <>
+
+  STORY (under two minutes)
+  <story>
+
+  VISION PICTURE
+  <what life looks like after the change>
+
+  ROUGH MEASURES
+  <measure> | what it tells us
+
+  PEOPLE
+  <person> | role: <yes or no> | why they need it: <> | pitch line: <>
+
+  ORDER
+  1. <ally> 2. <ally> 3. <doubter> ...
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Who you list
+    how: Include everyone who can block, not only the top person. Quiet blockers sink ideas.
+  - what: What you know about them
+    how: Add their worries, goals and past comments. Pitches get specific.
+  - what: The ask
+    how: Make it one clear action, such as a pilot or a budget line.
+  - what: Time to pitch
+    how: Say if you have two minutes or twenty. The story length matches.
+
+judge:
+  - The vision is a picture, not a target number.
+  - Each stage has a planned answer.
+  - A named sponsor and what they gain are included.
+  - The story fits in under two minutes.
+  - Each pitch is about the listener's need, not the builder's.
+
+test:
+  - Tell the story aloud and time it.
+  - Pitch it to one ally first and ask what they would ask.
+  - Ask a doubter which stage they are in.
+  - Run the skill again after the first no and see how the answers change.
+
+improve:
+  - Add the objections you hear most often to the stage answers.
+  - Keep a log of past pitches and what moved people.
+  - Add your sponsor's own words about the problem.
+  - Pair it with "Onliness statement writer" before it, so the idea has a sharp line.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning stages and drafting a short story is text work any strong chat AI does well."}
+  inputs:
+    - "A short brief on the idea"
+    - "Notes on each decision maker"
+    - "Examples of past ideas that were accepted or refused"
+
+terms:
+  - term: Vision picture
+    meaning: A short description of what life is like once the idea is real.
+  - term: Ally
+    meaning: A person who already wants the change and can help you reach the others.

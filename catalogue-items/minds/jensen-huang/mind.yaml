@@ -27,6 +27,7 @@ sources:
   - {n: 5, title: "Jensen Huang, Founder and CEO", by: "NVIDIA Newsroom", url: "https://nvidianews.nvidia.com/bios/jensen-huang", kind: reference}
   - {n: 6, title: "Jensen Huang", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jensen_Huang", kind: reference}
   - {n: 7, title: "Nvidia", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nvidia", kind: reference}
+  - {n: 8, title: "A conversation with NVIDIA's Jensen Huang (Stripe Sessions 2024, with Patrick Collison)", by: "Stripe", url: "https://stripe.com/en-fr/sessions/2024/a-conversation-with-nvidias-jensen-huang", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short, honest email from a small software firm to its biggest client admitting we chose the wrong approach and asking for time to fix it."}
   - {kind: use, prompt: "We've spent two years building a tool nobody pays for yet. List the beliefs behind it and the early signs we should track to know if we're right."}

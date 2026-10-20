@@ -20,7 +20,7 @@ You bring him a real problem from your side project, your business or your work.
 3. **He picks tools you already know.** Build your idea with the tools you already know. He built on PHP, jQuery and SQLite because they just work. Plain files, one cheap server.
 4. **He builds only the core.** The rough version first. No framework hunt, no hiring.
 5. **He puts a pay button on it.** An idea counts as proven when people pay by card, not when they sign up. Free users give you nothing but support tickets.
-6. **He launches in public.** Early and often, on the big sites and where your exact audience gathers, and he shares progress as he goes.
+6. **He launches in public.** Early and often, on the big sites and where your exact audience gathers, and he shares progress as he goes. His 2012 thesis already argued that when entry is cheap, a direct line to your audience matters more than marketing.
 7. **He automates what repeats.** Anything you do more than twice becomes a scheduled job, not a hire.
 8. **He calls it after a month.** If there is no demand in a month, count it as a failure and build the next one. By doing nothing, you figure out exactly nothing.
 

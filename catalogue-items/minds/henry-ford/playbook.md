@@ -21,12 +21,13 @@ You bring him a product, a process or a pay problem. He asks who it serves and w
 4. **He counts the steps.** Save ten steps a day for each of twelve thousand workers and you save fifty miles of walking.
 5. **He moves the work to the worker.** Plan the order, deliver the work to the worker and break the job into steps. The moving line began on one part, a flywheel magneto, before it went to the whole car.
 6. **He hunts scrap.** Scrap discs became radiator caps. A bolt was redesigned to use a third of the steel.
-7. **He cuts the price, not the wage.** In a slump he cut prices and took the loss on stock instead of holding prices up.
-8. **He tests the expert.** He never hired an expert in full bloom, since experts know too many reasons why it can't be done. Try it, time it, measure it.
+7. **He names the price first.** He set the price he wanted, then pushed the shop to meet it, since a low price forces every cost to be questioned. In a slump he cut prices, not wages.
+8. **He tests the expert.** He never hired an expert in full bloom, since experts know too many reasons why it can't be done. He gave hard jobs to people who had never been told they were impossible. Try it, time it, measure it.
 
 ## First questions he'd ask you
 
-- What is this for, and who does it serve?
+- What are you in business for, and where are you going?
+- Who does it serve?
 - Which parts could we take out?
 - How many steps does the worker walk? Can the work come to him instead?
 - What does it cost to make, and can we halve it?
@@ -48,6 +49,10 @@ Walk the floor with a stopwatch. Where does the worker walk, wait or look for pa
 ### Setting pay and prices together
 
 He argued that wages are a share of what the business produces, and that cutting wages to balance the books is poor management. Make the work produce more, then pay more. The $5 day began in January 1914. In 1926 he moved to a five-day week at full pay, because the people who consume the bulk of goods are the people who make them. But judge plans by how people are treated, not only by what they are paid. His company also spied on workers' private lives and used force against union organisers.
+
+### A small business that thinks it is too small for this
+
+He was asked how his rules would work for a 25-man shop or a store taking $100,000 a year. His answer: size is a stage, not a limit. Ask what you are in business for, then let the methods follow. He would ask if you serve the mass of people or the 10 per cent who want special orders. The special-order trade is honest but stays small, and a larger maker may undercut you if you are not as good as anyone in the trade. Make your steps fewer, your price lower and your quality steady.
 
 ### Outside his field: your writing, your design or your hiring
 

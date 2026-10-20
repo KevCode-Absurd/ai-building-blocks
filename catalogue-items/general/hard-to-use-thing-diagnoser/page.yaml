@@ -1,0 +1,123 @@
+new_slug: hard-to-use-thing-diagnoser
+name: "Hard-to-use thing diagnoser"
+summary: "Describe a thing people get wrong, or paste support complaints. Get what misleads them and the smallest fix."
+job: design-work
+thinking: medium
+thinking_why: "It traces mistakes to their root cause and chooses the smallest effective fix, which needs judgement."
+
+headline: "Hard-to-use thing diagnoser"
+subhead: Describe something people keep getting wrong, or paste support complaints and attach photos. It writes what people wanted and what they did, blames the design before the person, finds missing or misleading clues and returns the root cause and the smallest fix.
+
+explain: |
+  When people misuse a door, a form, a screen or a process, the usual answer is a sign or a manual. That treats the person as the problem. Most of the time the design gave the wrong clue, or no clue, or gave no sign that the action worked.
+
+  This skill starts with what the person wanted to do and what they did instead. It blames the design first. It lists the clues the thing gives, called signifiers, and marks which are missing or misleading. It checks whether feedback shows what just happened, then asks "why" repeatedly until it reaches the root cause. It picks the smallest fix that adds a clear clue, and plans a test with someone who has not seen the thing.
+
+when:
+  - Customers keep making the same mistake with your product, form or process.
+  - Support tickets repeat and a label or manual has not helped.
+  - You see people hesitate or push the wrong part and want to know why.
+
+you_give:
+  - What people try to do and what they do instead, or support complaints
+  - Photos or screenshots of the thing (optional)
+  - Reviews or messages in people's own words (optional)
+you_get:
+  - The wanted action and the actual action for each mistake
+  - A list of clues present, missing or misleading
+  - The root cause, not only the symptom
+  - The smallest fixes in order, and a test with a new person
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste complaints or describe what you saw people do. Attach photos or screenshots.
+  - Say how often it happens and what it costs, if you know.
+  - Read the root cause first. Check it against what you have seen people do.
+  - Make the smallest fix and test it with someone who has never used the thing.
+
+how_it_works:
+  - title: Writes want and action
+    text: For each mistake, writes what the person wanted to do and what they did instead.
+  - title: Blames the design first
+    text: Treats the mistake as a sign of what the design told them, not as their fault.
+  - title: Lists the clues
+    text: Marks which clues, called signifiers, are present, missing or misleading.
+  - title: Checks feedback
+    text: Checks whether the thing shows what just happened after each action.
+  - title: Asks why, repeatedly
+    text: Asks why up to five times to reach the root cause.
+  - title: Picks the smallest fix
+    text: Chooses the smallest change that adds a clear clue.
+  - title: Plans a new-person test
+    text: Writes a test with someone who has not seen the thing.
+
+output_shape: |
+  WHAT PEOPLE WANT AND DO
+  <n>. Wanted: <action> | Did: <action> | How often: <if known>
+
+  CLUES
+  <clue> | Present / Missing / Misleading | Effect
+
+  FEEDBACK
+  <what shows that an action worked, or does not>
+
+  ROOT CAUSE
+  Why 1: <> Why 2: <> ... Root: <cause>
+
+  FIXES, SMALLEST FIRST
+  1. <fix> | Adds the clue: <which> | Effort: <low/medium/high>
+
+  TEST WITH A NEW PERSON
+  <who, task, what counts as a pass>
+
+  MISSING
+  <what would confirm the cause>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Real complaints
+    how: Paste them as written. Exact words show what people thought the thing would do.
+  - what: Photos or screenshots
+    how: Attach them. Clues are often visual and a description may leave them out.
+  - what: How many people make the mistake
+    how: Give a count or a rough rate. It changes which fix comes first.
+  - what: What you cannot change
+    how: List fixed parts such as a legal label. Fixes then work around them.
+
+judge:
+  - The fix adds or corrects a clue, not just a label or manual.
+  - The root cause is stated, not only the symptom.
+  - The smallest change is listed first.
+  - A test with a new person is named.
+  - The person is not blamed.
+
+test:
+  - Run it on a known problem where you already know the cause and see if it reaches the same one.
+  - Make the smallest fix and watch three new people try. Count how many still err.
+  - Run it twice and compare root causes. They should match in kind.
+  - Check that no fix is only an added instruction.
+
+improve:
+  - Add a list of mistakes you have already fixed, so it does not suggest them again.
+  - Add your audience's habits, such as devices or reading speed.
+  - Keep a log of causes found, so you can spot repeat design patterns.
+  - Pair it with the "Plain words interface rewriter" if the cause is wording.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It can see the clues in a photo or screenshot and not only your description."}
+    - {name: "A phone camera", why: "Filming one new person trying the thing shows more than any survey."}
+  inputs:
+    - "Support tickets or reviews in customers' words"
+    - "A recording of someone using it"
+    - "A count of how often the mistake happens"
+
+terms:
+  - term: Signifier
+    meaning: A clue that shows where to act or what to do, such as a handle's shape or a button's label.
+  - term: Feedback
+    meaning: Something the thing shows or does after your action so you know it worked.
+  - term: Root cause
+    meaning: The deepest reason a mistake happens, found by asking why again and again.

@@ -1,0 +1,125 @@
+new_slug: mvp-experiment-planner
+name: "MVP experiment planner"
+summary: "Paste your product idea. Get the riskiest guess, the smallest test and a pivot or persevere rule."
+job: test-an-idea
+thinking: medium
+thinking_why: "It ranks guesses and designs a test, but the steps are fixed."
+
+headline: "MVP experiment planner"
+subhead: "Paste your product or service idea. It lists the guesses the idea needs, picks the riskiest, designs the smallest test and sets the pass numbers before you run it. You get an experiment plan with a pivot or persevere rule."
+
+explain: |
+  Most early plans test whatever is easy: a logo, a landing page, a prototype. The guess that sinks the idea, such as whether anyone will pay, is often left until last.
+
+  This skill lists the guesses your idea depends on and ranks them by how bad it would be to be wrong and how little you know. It designs the smallest test for the top one, sets pass and fail numbers before you start and plans the run with one customer group at a time. It ends with a rule for what to do if the test passes, fails or lands in between.
+
+when:
+  - "You have an idea and are about to build a first version."
+  - "A test came back unclear and you do not know what to do."
+  - "You need a plan to show a team or investor that you tested the right thing."
+
+you_give:
+  - "Your idea: what, for whom, why"
+  - "A guess list or plan (optional)"
+  - "Your time and money limits (optional)"
+you_get:
+  - "A ranked list of guesses"
+  - "The riskiest guess and the smallest test for it"
+  - "Pass, fail and middle numbers set in advance"
+  - "A pivot or persevere rule"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the idea and add your guess list if you have one."
+  - "Agree the pass numbers before you start the test."
+  - "Run the test, then bring back the numbers to apply the rule."
+
+how_it_works:
+  - title: "Writes the guesses"
+    text: "Each belief as a testable sentence."
+  - title: "Picks the riskiest"
+    text: "Scored by cost of being wrong and how little you know."
+  - title: "Designs the test"
+    text: "The cheapest way to learn about it."
+  - title: "Sets pass numbers"
+    text: "Pass, fail and middle, before the run."
+  - title: "Plans the run"
+    text: "One customer group at a time."
+  - title: "Plans the reading"
+    text: "Behaviour, not praise, split by group."
+  - title: "Writes the rule"
+    text: "What to do on a pass, a fail or a middle result."
+
+output_shape: |
+  GUESSES
+  1. We believe that <x> | cost if wrong <1-3> | unknown <1-3> | risk <n>
+
+  RISKIEST
+  <guess>
+
+  TEST
+  Customer sees/does: <x>
+  Behind the scenes: <x>
+
+  NUMBERS (set before the run)
+  Pass: <n>  Fail: <n>  Middle: <range>  Sample: <n>  Time: <days>
+
+  RUN PLAN
+  <group> | reached by <channel> | <dates> | owner <name>
+
+  READING THE RESULTS
+  <counts, notes, split by group>
+
+  RULE
+  Pass: <next guess>  Fail: <two changes, pick one>  Middle: <action>  Stop after <n> tests
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "Your guess list"
+    how: "If you have done a model check, paste it. The guesses will be sharper."
+  - what: "What a pass looks like"
+    how: "Name a behaviour, such as paid, signed up or replied."
+  - what: "Your reach"
+    how: "Say who you can reach in a week. It limits the test."
+  - what: "Your risk"
+    how: "Say what you would hate to be wrong about. It often points to the riskiest guess."
+
+judge:
+  - "The riskiest guess is stated as a testable sentence."
+  - "The pass number is a behaviour."
+  - "The numbers are set before the test."
+  - "The test costs far less than building the product."
+  - "The rule covers pass, fail and middle."
+
+test:
+  - "Run it on a past idea that failed. See if it names the guess that sank it."
+  - "Run it twice. The riskiest guess should stay the same."
+  - "Ask a customer to react to the test as written."
+  - "After the run, check that you did not change the pass number."
+
+improve:
+  - "Add your channels and costs to step 5."
+  - "Add past test results as examples."
+  - "Log each test, its numbers and the decision."
+  - "Pair it with a vanity metric fixer to read the results."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ranking guesses and writing a plan is text work."}
+    - {name: "A landing page tool such as Carrd or Webflow", why: "Builds a one-page offer for the test in an afternoon."}
+  inputs:
+    - "A guess list from a model test"
+    - "A short list of people you can reach this week"
+    - "Your price idea"
+    - "Past customer notes"
+
+terms:
+  - term: "Minimum viable product"
+    meaning: "The smallest version of a product that can teach you about a guess."
+  - term: "Pivot"
+    meaning: "A change in one big part of the plan after a test, such as the customer or the price."

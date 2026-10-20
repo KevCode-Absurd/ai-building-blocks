@@ -1,0 +1,130 @@
+new_slug: mood-colour-palette-planner
+name: "Mood colour palette planner"
+summary: "Name the feeling a space, page or brand should give. Get a small palette where every colour has a job."
+job: design-work
+thinking: low
+thinking_why: "The steps are fixed and the output is a short palette."
+
+headline: "Mood colour palette planner"
+subhead: "Tell it the feeling a space, page or brand should give. It names the feeling, gives every colour one job, picks a background and cuts colours that fight. You get a palette of five colours or fewer."
+
+explain: |
+  A palette picked for looking nice together often says nothing. A calm brand with a nervous orange, or a warm room with a cold wall, gives mixed signals that people feel without knowing why.
+
+  This skill starts with one feeling and draws the subject plainly. It then writes each colour with a single job, pushes the main colour past real life to carry the feeling, picks a background that lifts it and removes colours that pull away. It ends with a three-second test you can run with a friend.
+
+when:
+  - "You are choosing colours for a room, site, deck or product and cannot say why."
+  - "Your current palette looks fine but does not feel like the brand."
+  - "You must repaint or redesign and want one clear rule for every colour."
+
+you_give:
+  - "What it is for and where people will see it"
+  - "The feeling it should give (or let the skill propose three)"
+  - "Colours you cannot change (optional)"
+you_get:
+  - "A palette of five colours or fewer, each with a one-line job"
+  - "The main colour pushed to carry the feeling"
+  - "A cut list of colours that fight"
+  - "A three-second test"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say what the palette is for and the feeling you want."
+  - "List any colours you cannot change."
+  - "Apply the palette to a mock-up and run the three-second test."
+
+how_it_works:
+  - title: "Names the feeling"
+    text: "One word and what the viewer should sense."
+  - title: "Draws it plainly"
+    text: "The real subject in true colours, as a baseline."
+  - title: "Gives colours jobs"
+    text: "Each colour: main, background, accent, text or border."
+  - title: "Pushes the main colour"
+    text: "Past real life, to carry the feeling."
+  - title: "Picks the background"
+    text: "One colour that lifts the subject, with readable text."
+  - title: "Cuts what fights"
+    text: "Shadows and matching extras that pull away."
+  - title: "Chooses the frame"
+    text: "A trim colour that fills what is missing."
+  - title: "Tests at a glance"
+    text: "Three seconds, one word, colour-blind check."
+
+output_shape: |
+  FEELING
+  <word>: <what the viewer should sense>
+
+  PLAIN BASELINE
+  <real colours of the subject>
+
+  PALETTE
+  <name> <hex>: <one-line job>
+  (five or fewer)
+
+  THE PUSH
+  Plain: <colour>  Pushed: <colour>  Adds: <what>
+
+  BACKGROUND
+  <colour>: <why>; text <colour> is readable
+
+  CUT
+  - <colour>: <why it fought>
+
+  FRAME
+  <colour> at <where>
+
+  GLANCE TEST
+  <steps>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "The feeling"
+    how: "One word works best. Two feelings gives a muddy palette."
+  - what: "Fixed colours"
+    how: "Name them early. The palette is built around what cannot move."
+  - what: "Where it is seen"
+    how: "Daylight, a phone screen and print change how colours look. Say which."
+  - what: "How bold"
+    how: "Say if the setting is quiet (a clinic) or loud (a festival)."
+
+judge:
+  - "You can say the feeling in a word."
+  - "Every colour has one job."
+  - "The palette has five colours or fewer."
+  - "Text on the background is easy to read."
+  - "The glance test could be run by a friend."
+
+test:
+  - "Run it on a palette you already use. See if it finds colours with no job."
+  - "Apply the result to a mock-up. Show it for three seconds to two people."
+  - "Run it twice with the same feeling. The main colour should land in the same family."
+  - "Check the main pair with a colour-blind simulator."
+
+improve:
+  - "Add your brand colours as fixed items in the input."
+  - "Add your accessibility rule for text contrast in step 5."
+  - "Save the final palette and jobs in your brand file."
+  - "Pair it with an icon set planner so icons use the same palette."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Choosing and explaining colour jobs is text work."}
+    - {name: "Coolors or Adobe Color", why: "Free colour tools for building and exporting the palette."}
+  inputs:
+    - "A photo of the room, page or product"
+    - "Your brand file"
+    - "Two examples of palettes you like"
+    - "The device or lighting where it will be seen"
+
+terms:
+  - term: "Palette"
+    meaning: "The small set of colours used together."
+  - term: "Contrast"
+    meaning: "How different two colours are in lightness, which sets how easy text is to read."

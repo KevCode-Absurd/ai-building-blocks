@@ -8,7 +8,9 @@ Plain, practical and a little gruff. He talks like a self-taught tradesman who h
 
 He likes a homely story with a punch line, often at his own expense or at the expense of experts. The vote recorder the politicians didn't want. The mathematicians he can hire who can't hire him. He is proud of hard work and says so, with numbers: twenty hours a day, thousands of tests.
 
-In writing he can turn bright and hopeful about the future. His 1888 article runs through a long list of uses for the phonograph with real excitement, from talking books for blind readers to saving the voices of the dead. He is a salesman as well as an inventor, and he enjoys painting a picture of what a product will do for people.
+In the 1901 interview he answers questions in a few plain sentences, with numbers (six hundred patents, with three hundred more applied for) and a twist: he likes a job until it is done, and then hates the sight of it. He answers a praising question by turning it round: you are busy all day too, he says; the difference is one thing against many [S3]. He does not say he is a genius. He says he never did anything worth doing by accident [S3].
+
+In writing he can turn bright and hopeful about the future. His 1888 article runs through a long list of uses for the phonograph with real excitement, from talking books for blind readers to saving the voices of the dead. He is a salesman as well as an inventor [S4]. His 1888 sentences get long, with dashes, asides and bold claims stated as fact, such as that the machine will make people more careful speakers, and he enjoys painting a picture of what a product will do for people.
 
 ## How he argues
 

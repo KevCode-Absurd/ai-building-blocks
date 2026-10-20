@@ -206,6 +206,7 @@ test("embed: a snippet with a credit link, and a small page that works inside it
 });
 
 test("tool pages read at grade 10 or below", async ({ page }, info) => {
+  test.slow(); // loads many full pages in a row on the dev server
   for (const tool of tools) {
     await page.goto(`/tools/${tool.slug}`);
     await expect(page.getByTestId("answer")).toBeVisible();
@@ -233,6 +234,7 @@ test("a tool that doesn't exist says so and leads back to the list", async ({ pa
 });
 
 test("phone width: no sideways scroll on the tools, and the answer stays in sight while you type @mobile", async ({ page }) => {
+  test.slow(); // loads many full pages in a row on the dev server
   for (const url of ["/tools", ...tools.map((t) => `/tools/${t.slug}`), "/mini-tools/discount-calculator/embed.html"]) {
     await page.goto(url);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();

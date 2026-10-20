@@ -33,6 +33,8 @@ sources:
   - {n: 8, title: "Prodal tři miliony knih za 24 hodin (He sold three million books in 24 hours)", by: "David Zlomek, CzechCrunch (18 August 2025)", url: "https://cc.cz/prodal-tri-miliony-knih-za-24-hodin-z-majitele-fitka-se-stal-podnikatelsky-guru-jehoz-metody-ted-frci/", kind: secondary}
   - {n: 9, title: "Alex Hormozi review", by: "MarksInsights (23 February 2026)", url: "https://marksinsights.com/alex-hormozi-review/", kind: secondary}
   - {n: 10, title: "Making Money is a Game (Here's the Cheat Code), The Game ep. 921 (episode summary, 10 July 2025)", by: "Podcast Insider", url: "https://podcast-insider.on-forge.com/blog/the-game-with-alex-hormozi/making-money-is-a-game-heres-the-cheat-code-ep-921", kind: secondary}
+  - {n: 11, title: "$100M Offers, The Lost Chapter: Your First Avatar (official sample, 2021)", by: "Alex Hormozi / Acquisition.com", url: "https://acquisition.com/hubfs/The_Lost_Chapter-Your_First_Avatar.pdf", kind: own-words}
+  - {n: 12, title: "Acquisition.com Offer Creation Course (training outline)", by: "Acquisition.com", url: "https://www.acquisition.com/training", kind: reference}
 tests:
   - {kind: use, prompt: "I sell a $300 one-off website check-up for small businesses. Turn it into an offer with a name, bonuses and a guarantee."}
   - {kind: use, prompt: "Write three short posts I can share for free that lead people to book a call for my tutoring service."}

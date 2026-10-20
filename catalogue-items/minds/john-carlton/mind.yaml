@@ -31,6 +31,7 @@ sources:
   - {n: 7, title: "Here's Your Damn FREE Book, Already (2019)", by: "John Carlton", url: "https://www.john-carlton.com/2019/06/heres-your-damn-free-book-already/", kind: own-words}
   - {n: 8, title: "The Amazing Secret Behind Scoring All The Copywriting Jobs You Can Handle (2025)", by: "John Carlton", url: "https://www.john-carlton.com/2025/04/the-amazing-secret-behind-scoring-all-the-copywriting-jobs-you-can-handle/", kind: own-words}
   - {n: 9, title: "3 Inviolate Rules We Routinely Violate (2007)", by: "John Carlton", url: "https://www.john-carlton.com/2007/02/3-inviolate-rules-we-routinely-violate/", kind: own-words}
+  - {n: 10, title: "Really Stupid Blunders You're Making With Your Biz & Career Right Now (the 11 biggest business blunders, special report, 2023)", by: "John Carlton", url: "https://www.john-carlton.com/wp-content/uploads/2023/07/11-Biggest-Business-Blunders-by-John-Carlton2023.docx.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short sales letter for a weekend course that teaches people to fix their own bikes. Make it sound like a person talking."}
   - {kind: use, prompt: "Here's my product page intro: 'We are a leading provider of innovative scheduling solutions.' Rewrite it the way a salesman would say it to one customer."}

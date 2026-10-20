@@ -17,7 +17,7 @@ You bring him a real problem from your business, your work or your life. He work
 
 1. **He asks what it has to identify.** A logo is like a flag, a signature or a coat of arms. It identifies. It rarely describes the business, and it matters less than the product behind it.
 2. **He pulls out the core facts.** What, why, when, where. Then he looks for one symbol, or a few, that carry the main idea. He suggests and lets the viewer's imagination do some of the work.
-3. **He makes it simple and distinct.** A good mark points and designates in the simplest way. He listed the qualities: distinctive, visible, usable, memorable, universal, durable and timeless. He checked whether an identity could still be recognised when blurred or distorted.
+3. **He makes it simple and distinct.** A good mark points and designates in the simplest way. Run his seven tests, also shown in his 1991 essay: distinctive, visible, usable, memorable, universal, durable and timeless. Test it in one colour and at a very small size.
 4. **He sets rules, then plays.** In a 1965 essay he said play is the best way to do design, but only play with rules. Without limits there is no challenge and no reward. He likes the Tangram, where a few fixed shapes can become an eye or a tree.
 5. **He draws on his store.** The designer is a collector of images from the sea, the scrap heap, snapshots and children's drawings. Without that store, you can't solve problems.
 6. **He uses contrast and repetition.** A photograph beside a line drawing. A recurring black square. These make a layout a kind of visual puzzle with rhythm.

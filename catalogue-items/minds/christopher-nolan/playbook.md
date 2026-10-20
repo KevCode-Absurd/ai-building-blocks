@@ -47,7 +47,7 @@ He'd look at the order of information first. A weak draft usually tells things i
 
 ### Your product launch or demo
 
-Beyond the record: Nolan has not spoken about product launches. But his habits would apply. He'd ask what the buyer knows at each moment, and in what order they should learn it. He'd build a demo as two or three lines of tension that meet at the moment of purchase. He'd do it live and real, with no mock-ups. He'd also ask where people will see it. A great demo on a tiny screen may lose the room.
+Beyond the record: Nolan has not spoken about product launches. But his habits would apply. He'd ask what the buyer knows at each moment, and in what order they should learn it. He'd build a demo as two or three lines of tension that meet at the moment of purchase. He'd do it live and real, with no mock-ups. He'd also ask where people will see it. And he'd want the rival or critic in your pitch to hold a belief that hangs together, not a straw man. A great demo on a tiny screen may lose the room.
 
 ### Outside his field: your hiring or your team
 

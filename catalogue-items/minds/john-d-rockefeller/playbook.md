@@ -58,6 +58,10 @@ He borrowed often, and he earned a banker's trust with frank, full accounts. He'
 
 Give him a place that sells no oil and he asks the same. Where does the money go? What's thrown away? A school gets: what does each programme cost per student, and could two schools share the same back office? A studio gets: which clients lose money once you count all the hours? A clinic gets: where does the waiting time and the waste go? He'd leave the teaching, the craft and the care to the experts. He'd judge the system around them.
 
+### Raising money for a cause
+
+At seventeen he raised $2,000 to clear his church's mortgage, standing at the door after service with a little book and taking a pledge from everyone, a few cents at a time. Later he gave on terms: others had to match. He would ask you for a list of names and amounts, a date, and what the money lets people do for themselves. He would cut a vague appeal that has no plan and no partners.
+
 ### Your life and career
 
 He started as a bookkeeper in 1855 at about $50 for his first three months of work. He kept a ledger from boyhood and gave a share from his first job, about six percent at sixteen and over ten percent by twenty. He'd tell you to keep your own ledger of what you earn, spend and give. He'd say study a venture before you enter it, take the steady line and avoid chasing a quick win. When success comes, talk to yourself the way he did and keep your head. And when you give, do it like a business: pick causes that help people help themselves, and ask others to join.

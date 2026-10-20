@@ -1,0 +1,122 @@
+new_slug: sound-off-commercial-checker
+name: "Sound-off commercial checker"
+summary: "Paste a video ad script or storyboard. Get a pass or fail on whether it still sells with the sound off."
+job: check-ads
+thinking: low
+thinking_why: "The checks are fixed and each one can be answered by reading the shots."
+
+headline: "Sound-off commercial checker"
+subhead: Give it a video ad script or storyboard. It reads the shots with the sound off, checks the claim, the opening and the brand show on screen, and gives a pass or fail with a score out of 100. You get a new shot for every spoken line with no picture.
+
+explain: |
+  Many people watch video with the sound off, and many ads lean on a voice-over that never gets heard. If the main claim is only spoken, a silent viewer scrolls past it.
+
+  This skill reads your shots with the spoken lines removed and writes what a viewer would learn. It checks that the main claim is shown on screen, that the opening is a striking picture of the problem or product, that the product and brand are clear, and that it sells before it entertains while feeling human and friendly. Each spoken line with no matching picture is flagged, and you get a shot to replace it.
+
+when:
+  - You have a video script or storyboard and want to know if it works in a muted feed.
+  - Your video ads lose people in the first seconds.
+  - You are about to shoot and want to fix the gaps on paper first.
+
+you_give:
+  - A video ad script or storyboard, with shots and spoken lines
+you_get:
+  - A pass or fail, and a score out of 100 with how it was worked out
+  - What a silent viewer would learn, shot by shot
+  - Each spoken line that has no picture
+  - A replacement shot for each
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the script or storyboard. Keep the shots and the spoken lines in separate columns or lines if you can.
+  - Read what a silent viewer would learn and compare it with your goal.
+  - Add the replacement shots to your script.
+  - Run it again on the fixed version.
+
+how_it_works:
+  - title: Strips the sound
+    text: Reads the shots with no spoken lines and notes what a viewer would learn.
+  - title: Checks the claim
+    text: Checks that the main claim is shown on screen, not only said.
+  - title: Checks the opening
+    text: Checks that the opening is a striking picture of the problem or product.
+  - title: Checks the brand
+    text: Checks that the product and brand are clear on screen.
+  - title: Checks the tone
+    text: Checks that it sells before it entertains and feels human and friendly.
+  - title: Flags spoken-only lines
+    text: Marks each spoken line with no matching picture and writes a shot for it.
+  - title: Scores it
+    text: Scores the checks passed and gives a pass or fail.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  RESULT
+  <PASS or FAIL> | Score: <0 to 100> | Worked out as: <checks passed of checks counted>
+
+  WHAT A SILENT VIEWER LEARNS
+  Shot 1: <what is seen and understood>
+  ...
+
+  CHECKS
+  Main claim shown on screen: <pass / fail>
+  Opening is a striking picture: <pass / fail>
+  Product and brand clear: <pass / fail>
+  Sells before it entertains, feels human: <pass / fail>
+
+  SPOKEN LINES WITH NO PICTURE
+  "<line>" | Replacement shot: <shot>
+  ...
+
+  SCORE AFTER FIXES
+  <0 to 100>, same method
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Storyboard or frames
+    how: Attach frames if you have them. The check is stronger with pictures than with text.
+  - what: Your main claim
+    how: State it in one line so the check knows what has to show.
+  - what: Platform
+    how: Say where it runs. Muted feeds need the first seconds to work alone.
+  - what: Pass mark
+    how: Say if you want a stricter bar than the default of every check passing.
+
+judge:
+  - The main claim is visible with the sound off.
+  - The first shot shows the problem or product.
+  - The brand appears on screen.
+  - Every flagged line has a replacement shot.
+  - The score names how it was worked out.
+
+test:
+  - Run it on a video you know works muted. It should pass.
+  - Run it on a voice-over-heavy ad and see that it flags the right lines.
+  - Mute your own video and watch it. Compare what you learn with the report.
+  - Run it twice. The pass or fail should not change.
+
+improve:
+  - Add your brand rules for on-screen text and logo placement.
+  - Add captions to your script, so the check knows what is written on screen.
+  - Save the replacement shots you used to your shot list.
+  - Pair it with "Video ad script line checker" for a line-by-line pass.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading shots and flagging gaps is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Storyboard frames or stills"
+    - "On-screen captions and text"
+    - "Your one-line main claim"
+
+terms:
+  - term: Storyboard
+    meaning: A set of drawings or stills that show a video shot by shot.
+  - term: Voice-over
+    meaning: Speech heard over the pictures with no one speaking on screen.

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Tony Hsieh died in November 2020, so his record is closed. This data set comes from two interviews in his own words, from 2010 and about 2019 [S1][S2], reports of a 2010 Stanford talk and of the 2015 change in how Zappos was run [S3][S4], a textbook case study on Zappos [S5] and reference pages [S6][S7]. His 2010 book, Delivering Happiness, was a long-running bestseller [S6], but we did not use it directly. Treat each view as "as of" the year of its source.
+Tony Hsieh died in November 2020, so his record is closed [S6]. His own words reach us through a 2010 Goodreads interview and a PBS NewsHour interview recorded around 2019 [S1][S2], plus a 2010 Marketplace interview whose full transcript we have study notes on [S8]. We could not re-open the first two in full in this pass, so lines tagged only to them come from the earlier read. Around those sit reports of a 2010 Stanford talk and of the 2015 change in how Zappos was run [S3][S4], a textbook case study [S5] and two reference pages [S6][S7]. His 2010 book, Delivering Happiness, was a long-running bestseller [S6], but we did not use it. The record is thin on his private method, so this mind is strongest on culture, hiring and service, and weakest on numbers. Treat each view as "as of" the year of its source.
 
 ## In one paragraph
 
@@ -63,11 +63,37 @@ How he applied it: he put money other firms spent on ads into service, phone sup
 - Ask whether a choice fits the core values, and act on the answer [S1].
 - Hire for culture as well as skills, and don't hire talent with ego [S1][S3].
 - Choose the best customer experience over efficiency [S3].
-- Give up short-term profit that would hurt the culture [S1].
+- Give up short-term profit that would hurt the culture, for example by keeping call centres and fulfilment in-house [S1][S8].
 - Spend on service and let customers spread the word [S1].
 - Let people who don't fit leave early, with money in hand [S3][S5].
 - Promote from within [S1].
 - Pick a way of doing things that others in the industry don't [S1].
+
+## Real decisions
+
+### Selling LinkExchange when work stopped being fun
+
+He had co-founded the ad network LinkExchange in 1996 and sold it to Microsoft in 1998 for $265 million [S6]. His stated reason was the culture: the early hires were friends, the company ran out of friends, and by about 100 people he dreaded going in [S2][S8]. He took the lesson to Zappos, where he built the culture on purpose from the start [S2].
+
+### Investing in a shoe site he first ignored
+
+In 1999 Nick Swinmurn pitched him the idea of selling shoes online, and Hsieh was at first so doubtful he almost deleted the voicemail [S6]. What changed his mind was a market figure: footwear was a $40 billion US market and 5% of it already sold through mail-order catalogues [S6]. He and Alfred Lin invested through Venture Frogs, and two months later Hsieh joined as CEO [S6].
+
+### Putting the money into service when ads were out of reach
+
+About four years in, the dot-com crash left Zappos unable to pay for marketing [S1]. He put the effort into service instead: free shipping, free returns for a year, and phone staff with no call time limits [S1][S5]. By 2010, 75% of daily sales came from repeat customers [S3].
+
+### Paying new hires to quit
+
+During training, Zappos offered new hires money to leave if the job wasn't right for them, starting at $400 and rising to about $2,000 to $3,000 [S3][S5]. Only about 1% to 3% took it [S3][S5]. His reason was that the people who stayed after a free exit were more committed [S3].
+
+### Selling to Amazon in 2009
+
+Amazon announced the purchase in July 2009, in a deal valued at about $1.2 billion [S6][S7]. The deal closed in November [S7]. Zappos kept running as its own company in Las Vegas afterwards [S6].
+
+### Moving to Holacracy
+
+In 2013 he moved Zappos to a system with no job titles and no traditional managers [S4][S6]. In March 2015 he offered severance to anyone who didn't want to work that way, and about 18% of staff, some 260 people, had gone by early 2016 [S4]. He said self-management is not for everyone [S4]. It is the clearest case where a change from the top cost him good people.
 
 ## Where he stood
 
@@ -78,6 +104,10 @@ How he applied it: he put money other firms spent on ads into service, phone sup
 **Profit or happiness?** Both, in the long run. He believed happy staff and customers lead to profit, and would give up short-term gains to protect culture [S1][S3].
 
 **What should graduates look for?** Work they'd enjoy for ten years even without pay [S1].
+
+**Is Zappos a shoe company?** No. He called it a service company that happens to sell shoes and clothing [S8]. He also saw himself as the person who sets the conditions in which others do well, not a towering leader [S8].
+
+**What counts as happiness?** Ongoing progress more than arriving somewhere [S8]. He praised a refrigeration repair firm that used Zappos-style culture work and reported happier staff and customers [S8].
 
 **Should companies have bosses?** By 2015 he wanted Zappos to run by self-management, and accepted that it wasn't for everyone [S4].
 

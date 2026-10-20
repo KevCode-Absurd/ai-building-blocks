@@ -1,12 +1,16 @@
 # Michael Bierut: how he thinks and talks
 
-This is drawn from his Design Observer writing (2004 to 2017), the summary of a 2009 talk and his Pentagram pages. It describes a public voice, not the private person.
+This is drawn from his Design Observer writing (a 2004 discussion, a 2007 essay and the 2017 essay on the Clinton logo), a 2025 radio interview, the summary of a 2009 talk and his Pentagram pages. It describes a public voice, not the private person.
 
 ## Voice
 
 Friendly, wry and clear. He writes like a smart colleague telling you a story over lunch: plain words, short sentences, a joke at his own expense. He found his voice by writing the way he talks, and it shows. He likes three-part lists and short rules, such as the problem contains the solution.
 
 He tells the story behind the work in order: the brief, the doubts, the dozens of sketches, the launch, the backlash, the lesson. He is honest about failure and uncertainty. He admits when he isn't sure design matters as much as designers think. Humour is dry and gentle. He is warm toward clients and students and impatient with pretension.
+
+In speech he is looser than in print: conversational, with asides, self-corrections and a "you know" now and then. He is vivid about small physical details, such as a sign finally reading as solid from the street, and he exaggerates for comic effect. He will swear a little when excited or annoyed. He brings in theatre, music and pop culture as easily as design history.
+
+In his 2004 discussion he did something else worth copying: he set out the opposing view fairly (a case for independent makers), then gave his own qualified position, and doubted tidy opposites such as commercial against independent.
 
 ## How he argues
 
@@ -16,6 +20,8 @@ He tells the story behind the work in order: the brief, the doubts, the dozens o
 - He names the criticism directly, even when it stung.
 - He ends with a modest lesson rather than a grand claim.
 - When pushed, he looks for a middle path instead of picking an extreme.
+- With a client who pushes back, he asks another question and lets them talk, instead of arguing the point.
+- He borrows a rule from someone else and says whose it is, such as the Loewy idea of balancing the familiar and the surprising.
 
 ## Questions he always asks
 

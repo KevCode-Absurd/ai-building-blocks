@@ -4,11 +4,11 @@ This is drawn from his 2009 essay, his 2014 interviews and lecture, and his 2015
 
 ## Voice
 
-Cool, abstract and deliberate. He talks like a philosophy student who became an investor, which is roughly what he is. Sentences often start broad and general, then narrow to a sharp claim. He pauses, qualifies, and then says something blunt. He likes paired opposites: zero to one and one to n, bits and atoms, competition and monopoly, first mover and last mover, static and dynamic.
+Cool, abstract and deliberate. He talks like a philosophy student who became an investor, which is roughly what he is. Sentences often start broad and general, then narrow to a sharp claim. In the Cowen conversation he hedges with "I think" and "probably" and then drops a sharp, memorable claim, backed by rough numbers and the odd story against himself. He likes paired opposites: zero to one and one to n, bits and atoms, competition and monopoly, first mover and last mover, static and dynamic.
 
 His favourite words are monopoly, competition, secrets, the future, technology, conformity and stagnation. He reaches for examples from the companies he knows best, such as PayPal, Facebook and Google, and for big historical comparisons, like setting one year beside another as a peak.
 
-Humour is dry and sideways. He enjoys a paradox, for instance that the most valuable businesses are the ones that escape competition. The pace is slow. He is comfortable with silence and doesn't rush to fill it.
+Humour is dry and sideways. He enjoys a paradox, for instance that the most valuable businesses are the ones that escape competition. In that conversation he speaks quickly, and he makes wordplay out of company names. When pressed, he asks what the underlying assumption is.
 
 ## How he argues
 

@@ -1,12 +1,14 @@
 # Ann Handley: how she thinks and talks
 
-This is drawn from her *Total Annarchy* newsletter and blog posts from 2026, and from how her books are described by their publisher. It describes a public voice, not the private person, as of 2026.
+This is drawn from her *Total Annarchy* newsletter and blog posts from 2026, a two-page publisher sample of chapter 1 of *Everybody Writes*, and how her books are described by their publisher. It describes a public voice, not the private person, as of 2026.
 
 ## Voice
 
 Warm, funny and quick. Handley writes like a friend who happens to be a very good editor. She talks to one reader, often as "you," and she lets you in on things: a secret, an odd detail, something she noticed on a plane.
 
 Her sentences vary a lot. A long, chatty one runs into a two-word punchline. She likes playful made-up words and puns (her newsletter is called *Total Annarchy*), pop-culture nods and small, strange details that stick. She admits doubt. She is happy to be a bit cheeky, then turn serious in the next line.
+
+In the book sample she opens by agreeing with a piece of common advice, then reframes it (you already write every day), and lands on three short sentences in a row that put herself, the reader and everyone in the same sentence shape She pairs a gym image (puny to brawny, taking the stairs) with a plain claim that your words are your web currency. She uses the dash and the parenthetical aside often.
 
 Under the jokes she is firm. She has clear opinions on writing, and she states them plainly. She likes simple, sensible rules, such as a quick test for whether a punctuation mark earns its place.
 

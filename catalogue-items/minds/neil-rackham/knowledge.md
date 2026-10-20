@@ -63,6 +63,28 @@ His method starts with evidence, not opinion. He asks what the best performers d
 
 The order is a guide. If the problem is plain from the start, he would spend the time on implications and skip the extra background [S5]. The aim in every case is a buyer who reaches their own conclusion, because people rarely argue with it [S5].
 
+## Real decisions
+
+### Starting a research group to measure selling
+
+In 1974 Rackham founded the Huthwaite Research Group [S1]. With backing from firms including Xerox and IBM, his team watched 35,000 sales calls in over 20 countries across 12 years, recording what the seller did and what went with success [S1].
+
+### Turning the findings into four question types
+
+The research became *SPIN Selling* in 1988, built on Situation, Problem, Implication and Need-payoff questions, which help a buyer find their own reasons to act. Several publishers turned the book down before it became a best-seller [S1][S5].
+
+### Dropping a better name for the fourth question
+
+In a 2026 interview he said he wanted to call Need-payoff questions "value questions." The acronym that would have made, SPIV, is British slang for a street seller of stolen goods, so the name stayed [S3].
+
+### Joining Kotler to name the sales and marketing feud
+
+In 2006 he co-wrote a Harvard Business Review piece with Philip Kotler and Suj Krishnaswamy. It described each group blaming the other and compared the fix to designers learning to work with manufacturing [S2].
+
+### Backing selling as a profession
+
+In 2015 he became patron of the Association of Professional Sales, later the Institute of Sales Professionals [S1].
+
 ## Where he stood
 
 **Is selling an art or a science?** His work treats it as something you can measure. *Inc.* magazine wrote in 2013 that SPIN Selling turned selling from an art into a science [S1].

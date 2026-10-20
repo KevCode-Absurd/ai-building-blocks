@@ -1,0 +1,145 @@
+new_slug: get-three-offer-image-ads-ready-to-launch
+name: "Get three offer image ads ready to launch"
+summary: "Give it your website and prices. Get new offers to try, three image ads built on one, and an ad rules check."
+job: make-image-ads
+thinking: high
+thinking_why: It runs several skills in a row. Give it your strongest model.
+
+headline: "Get three offer image ads that sell one deal clearly"
+subhead: Give it your website and your current prices and deals. It builds your brand file, finds offers worth trying, plans three image ads for the one you pick, in two sizes, and checks them against Facebook and Instagram ad rules.
+
+explain: |
+  An offer ad goes wrong when the deal is hard to read. Two prices fight each other, the terms are in small print, or the ad promises a saving the checkout does not give. A shopper decides in a second or two, so the deal has to be clear in that time.
+
+  This workflow starts from your real prices and terms. It flags clashes between the offers you run, builds new offers from stock and margin you already have, and picks three to try first. It then plans three ads on the one you choose. Each shows the same offer a different way, with its own layout for each size. A last check reads the ads against ad rules, so a bad claim is fixed before launch.
+
+when:
+  - You are running a sale or a bundle and want image ads that show it clearly.
+  - You have more than one offer live and suspect they confuse shoppers.
+  - You want new offers to test, each with ads ready to go.
+
+you_give:
+  - Your website, as a link or saved pages
+  - Your current prices, deals, bundles and what you have in stock
+  - Real product photos
+  - Your target countries, for the ad rules check (optional)
+you_get:
+  - A brand file with your offers, prices and claims word for word
+  - Clashes between your live offers, flagged
+  - New offers to try, three picked to go first
+  - Three offer image ads in two sizes, with one offer block
+  - An ad rules check with a rewrite for anything that fails
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Have your inputs ready. Your website link, your prices and deals as they stand, and your product photos.
+  - Answer the one check-in on the brand file, then pick the offer you want ads for.
+  - Make the pictures with your image tool, and fix anything the ad rules check marks "Fix first".
+
+how_it_works:
+  - title: Builds your brand file
+    text: Uses the brand file skill to read your site and tag every price, deal and claim with where it came from.
+  - title: Finds offers to try
+    text: Uses the offer finder skill to copy down what is live, flag clashes, turn your stock into new offers and pick three to try first.
+  - title: Plans three offer ads
+    text: Uses the offer image ad planner to split the offer into its parts, write one offer block and lay out each ad for its own size.
+  - title: Checks the ads against Meta rules
+    text: Uses the ad rules checker to rate each finding, give a verdict and rewrite the ads with the fixes in.
+
+output_shape: |
+  LIVE OFFERS: <each offer as written>   CLASHES: <pairs that fight>
+  TRY FIRST: <three offers, each with the buyer and the reason>
+
+  OFFER BLOCK: <what they get | price today | price after | if it does not suit | what to do>
+
+  AD <n>: <short name>   (square and 4:5)
+  Look: <how this ad shows the offer differently>
+  On the image: <words, counts>   Layout: <zones in reading order>
+  Backed by: <price table or terms line>   MISSING: <gap>
+
+  AD RULES CHECK
+  Verdict: <pass / fix first>   Findings: <rule, line, rating, fix>
+  Rewrite: <the ads with fixes in>
+
+  HAND-BACK SUMMARY
+  Files: <each step's file> | MISSING: <every line, in one list>
+
+example:
+  business: sprout
+  input: |
+    [the handoff pack] Follow HANDOFF.md.
+
+    Website: sprout.example (product, pricing and FAQ pages)
+    Prices and deals: first box $29.99 with text sign-up, then $49.99
+    every 4 weeks; a 3-box bundle at $129
+    Photos: 6 pack photos
+  output: |
+    LIVE OFFERS: "$29.99 first box"; "3 boxes for $129"
+    CLASHES: the bundle works out at $43 a box, which is below the $49.99
+    renewal price. Shoppers may wait for the bundle.
+    TRY FIRST: 1) first box at $29.99 with the renewal price stated;
+    2) bundle for repeat buyers; 3) a gift box.
+
+    OFFER BLOCK: 28 daily packs | $29.99 today | $49.99 every 4 weeks |
+    cancel before the second box | Start your first box
+
+    AD 1: The plain price
+    Look: price large, pack small, cream background
+    On the image: "$29.99 first box. $49.99 every 4 weeks." (7 words)
+    Layout: top 30% price line, middle pack, bottom 20% terms line
+    Backed by: price table; footer terms for the text sign-up.
+
+    AD RULES CHECK
+    Verdict: fix first
+    Findings: ad 2 says "save 40%" but the site shows 49% to 61%.
+    Fix: drop the percentage and show the dollar price.
+    (cut for length: ads 2 and 3 and the 4:5 layouts)
+
+    HAND-BACK SUMMARY
+    Files: outputs/step-01 to step-04. MISSING: answers to the brand
+    file check-in; target countries for the ad rules check.
+
+tweaks:
+  - what: Which offer to build ads on
+    how: Name the offer yourself and it skips the choice and plans the three ads on it.
+  - what: Sizes
+    how: Name every size you need, such as square, 4:5 and 9:16. Each is laid out for its own shape, not cropped.
+  - what: Three ways
+    how: Ask for a look that suits your brand, such as plain, bold or hand-made. Each ad gets its own look.
+  - what: Countries
+    how: Give your target countries and the rules check applies the rules that matter there.
+
+judge:
+  - Every price and term on an ad matches your price list, and the renewal price is stated.
+  - The three ads show the same offer in clearly different ways.
+  - No ad promises a saving that the checkout does not give.
+  - The clash list names real pairs of offers, not general warnings.
+  - The run ends with a summary that lists every file and every MISSING line in one place.
+
+test:
+  - Run it with two offers you know clash. The clash list should name them.
+  - Check every price and date on each ad against your checkout.
+  - Put the three ads side by side at phone size. A shopper should see three different ads for one deal.
+  - Check that the rules check quotes the exact line it flags.
+
+improve:
+  - Drop step 1 if your brand file is up to date, and start from step 2.
+  - Add a step after step 3 that turns the ads into image prompts for your image tool.
+  - Run the ads through a pre-launch check as well as the ad rules check.
+  - Pair it with a skill that reads your results, so the next set tests a new offer.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds your brand file, price list and four steps of work in one run."}
+    - {name: "Meta Ads Manager", why: "Its preview shows where the text above the image gets cut off."}
+  inputs:
+    - "Your price list, with renewal prices and any text sign-up terms"
+    - "Your stock levels, so new offers use stock you actually have"
+    - "Your checkout page, so the ads match what a buyer sees there"
+
+terms:
+  - term: Offer
+    meaning: What the buyer gets, what they pay now and later, and what happens if it does not suit them.
+  - term: Offer block
+    meaning: One short block of facts about the offer that every ad repeats exactly.

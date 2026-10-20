@@ -1,0 +1,130 @@
+new_slug: room-for-error-plan-checker
+name: "Room for error plan checker"
+summary: "Paste a budget or business plan. Get a survival score out of 100, where it breaks in a bad year, and fixes."
+job: money-and-investing
+thinking: high
+thinking_why: "It must imagine believable bad years, find the point where you cannot carry on and size a safety margin. That takes careful reasoning."
+
+headline: "Room for error plan checker"
+subhead: "Paste a household budget or a business plan. It lists what must go right, assumes the plan fails and names three ways it could, then finds the loss you could not carry on after. You get a score out of 100 for how well it survives, the breaks and fixes with numbers."
+
+explain: |
+  Most plans are built to show how well things go. Few are built to show whether you are still standing after a bad year. But in money, staying in the game matters more than the best case. A plan that wins nine years in ten and wipes you out in the tenth is not a good plan.
+
+  This skill reads your plan and lists what must go right. It then assumes the plan fails and writes three believable ways it could, including a bad year and a forced sale. It finds the ruin point, the loss you could not carry on after, checks borrowing that can be called in at a bad time, and sizes a safety margin in cash, time or fixed costs. It marks where you can be bold over the long run and where you must be careful in the short run. It scores how well the plan survives and gives no buy or sell calls.
+
+when:
+  - You are about to commit to a budget, a loan, a lease or a hire based on a good-year forecast.
+  - Your plan works on paper but has no room if sales drop or costs rise.
+  - You want to know the one rule that stops you making a panic move in a bad month.
+
+you_give:
+  - "The plan: income, costs, debts and key assumptions"
+  - Cash and savings you hold, and what you must pay each month
+  - Any borrowing and its terms, such as when it can be called in (optional)
+  - What a bad year looks like in your field (optional)
+you_get:
+  - A list of what must go right for the plan to work
+  - Three believable ways it fails, each with a number or a date
+  - The ruin point and a score out of 100 for how well the plan survives
+  - Fixes sized to the worst case, and one rule against a panic move
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your plan with real figures, including what you owe and when it falls due.
+  - Say what a bad year looks like for you, such as a lost client or a fall in sales.
+  - Read the three failures and the ruin point first.
+  - Put the safety margin and the panic rule in writing where you will see them.
+
+how_it_works:
+  - title: Lists what must go right
+    text: Writes every assumption the plan depends on.
+  - title: Assumes it fails
+    text: Writes three believable failures, including a bad year and a forced sale.
+  - title: Finds the ruin point
+    text: Names the loss you could not carry on after.
+  - title: Checks borrowing
+    text: Looks for debt or commitments that can be called in at a bad time.
+  - title: Adds a margin
+    text: Sizes a margin of safety in cash, time or fixed costs against the worst case named.
+  - title: Splits bold and careful
+    text: Marks where you can be bold in the long run and where you must be careful in the short run.
+  - title: Writes the panic rule
+    text: Gives one rule that stops a panic move.
+
+output_shape: |
+  WHAT MUST GO RIGHT
+  1. <assumption> | Source: <figure or MISSING>
+
+  THREE WAYS IT FAILS
+  1. <failure> | When: <date or month> | Size: <number> | Cash left: <number>
+  2. ...
+  3. ...
+
+  THE RUIN POINT
+  <the loss you could not carry on after> | Distance from today: <number or share>
+
+  BORROWING AND CALLS
+  <debt> | Can be called when: <terms> | Risk: <low/medium/high>
+
+  SURVIVAL SCORE
+  <score>/100 | Measures: <what the score covers> | Worked out: <how it was worked out>
+
+  SAFETY MARGIN
+  <cash, time or fixed cost change> | Sized to: <worst case named>
+
+  BOLD AND CAREFUL
+  Bold over years: <where> | Careful this year: <where>
+
+  PANIC RULE
+  <one rule>
+
+  MISSING
+  <facts that would change the score>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Real figures
+    how: Use actual cash, bills and debt terms. Round numbers hide the month you run out.
+  - what: A bad year in your field
+    how: Describe one from memory, such as a client lost or a slow season. It makes the failures real.
+  - what: Debt terms
+    how: Say when a loan can be called, and what covenants or conditions apply. This is where plans break.
+  - what: Fixed versus flexible costs
+    how: Mark which costs you can cut in a bad month. The margin depends on it.
+
+judge:
+  - Survival is tested before upside.
+  - Every bad-year case is named with a number or a date.
+  - The plan does not depend on borrowed money that can be called.
+  - The score says what it measures and how it was worked out.
+  - No buy or sell call is given.
+
+test:
+  - Run it on a plan that did fail in the past. Check it finds the real cause.
+  - Cut your income by a third in the plan and see if the ruin point matches the skill's.
+  - Run it twice. The three failures may differ, but the ruin point should be close.
+  - Apply one fix and run it again to see the score move.
+
+improve:
+  - Add your own sense of a bad year, with the real dips from your history.
+  - Add the debt rules that apply to you, such as a lender's covenants.
+  - Add a list of fixed costs that cannot be cut in a bad month.
+  - Pair it with "Investment or speculation sorter" before putting money into something new.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Stress-testing a plan in words and simple sums is text work."}
+    - {name: "A spreadsheet", why: "Lets you rerun the plan with a bad year and see cash by month."}
+  inputs:
+    - "Monthly cash balance for the past year"
+    - "Loan agreements with call or covenant terms"
+    - "A list of costs split into fixed and flexible"
+
+terms:
+  - term: Ruin point
+    meaning: The size of loss after which you could not carry on, such as running out of cash with bills due.
+  - term: Margin of safety
+    meaning: Extra cash, time or lower fixed costs that let you get through a bad stretch.

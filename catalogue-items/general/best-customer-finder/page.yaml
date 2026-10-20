@@ -1,0 +1,128 @@
+new_slug: best-customer-finder
+name: "Best customer finder"
+summary: "Paste customers with what each paid and how long they stayed. Get your top 20 percent and what they share."
+job: understand-customers
+thinking: medium
+thinking_why: "It ranks customers and finds shared traits, with judgement on what counts as shared, but the steps are fixed."
+
+headline: "Best customer finder"
+subhead: Give it a list of customers with what each paid, how long they stayed and anything you know about them. It keeps the top fifth and finds the few traits nearly all of them share. You get a profile in plain words, who does not fit and the channels they came through.
+
+explain: |
+  Most businesses picture an ideal customer from a guess or from a stereotype. Your list of real customers tells you more: some pay more, stay longer and are easier to serve. What they have in common is who you should look for.
+
+  This skill sorts customers by what they paid, how long they stayed and how much you like working with them. It keeps the top fifth and reads their answers on goals, what made them buy and where they first heard of you. It finds the fewest traits all of them share, usually three to five, and writes the profile in plain words. It names who does not fit, lists the channels the top group came through and says what the data cannot show yet.
+
+when:
+  - You want to know who to aim your marketing at, using your own customers.
+  - You treat all customers alike, though a few bring most of the money.
+  - You are about to write an ideal customer profile and want to base it on data.
+
+you_give:
+  - A customer list with what each paid and how long they stayed
+  - A note on how well each one is to work with (optional)
+  - Survey answers or reviews from customers, in their words (optional)
+  - Your brand file (optional)
+you_get:
+  - The top fifth of your customers
+  - The three to five traits they share, each checked against the group
+  - A plain profile and who does not fit
+  - The channels the top group came through, and what the data cannot show
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your customer list with amounts, time as a customer and how they first found you.
+  - Add reviews or answers about goals and why they bought, if you have them.
+  - Check each trait against the top group yourself.
+  - Use the profile to choose where to advertise and who to turn away.
+
+how_it_works:
+  - title: Sorts the customers
+    text: Ranks by what they paid, how long they stayed and how well they are to work with.
+  - title: Keeps the top fifth
+    text: Keeps the top fifth and sets the rest aside.
+  - title: Reads their answers
+    text: Reads what they said about goals, why they bought and where they first heard of you.
+  - title: Finds shared traits
+    text: Finds the fewest traits all of the top group share, usually three to five.
+  - title: Writes the profile
+    text: Writes the profile in plain words and names who does not fit.
+  - title: Lists the channels
+    text: Lists where the top group came from.
+  - title: States the limits
+    text: Says what the data cannot show.
+  - title: Checks the profile
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE DATA
+  Customers: <n> | Top group: <n> (<percent>) | Measures used: <paid, time, fit>
+
+  TOP GROUP
+  <name or id> | Paid: <figure> | Stayed: <figure> | Fit: <note>
+
+  WHAT THEY SHARE
+  1. <trait> | True of <x> of <n> in the top group
+  ...
+
+  PROFILE
+  <plain words>
+
+  WHO DOES NOT FIT
+  <description>
+
+  CHANNELS
+  <channel> | Top-group customers from it: <n>
+
+  WHAT THE DATA CANNOT SHOW
+  <limits, and whether this is a hunch or a finding>
+
+  MISSING
+  <data not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Number of customers
+    how: More is better. With under about 20 it says the result is a hunch, not a finding.
+  - what: How you measure best
+    how: Say if it is money, length of stay, or ease of work. It weights them the way you say.
+  - what: Survey answers
+    how: Their words about goals and reasons turn a pattern into a profile.
+  - what: Channels
+    how: Include how each customer first found you. Without it the channel list is marked MISSING.
+
+judge:
+  - The top group is about a fifth of the list, not half.
+  - Each shared trait is true of nearly all of the top group.
+  - No trait comes from a stereotype without data behind it.
+  - With fewer than about 20 customers it says this is a hunch.
+  - It separates what the data shows from what caused it.
+
+test:
+  - Count the top group yourself and check it is about a fifth.
+  - Pick a trait and check it against each customer in the top group.
+  - Check it against the rest of your customers. The trait should be less common there.
+  - Run it twice and compare the traits.
+
+improve:
+  - Add the fields you keep on customers, such as industry or size, so it can use them.
+  - Add traits you must not use, such as age or other protected factors.
+  - Update the profile each quarter as new customers come in.
+  - Pair it with "Buying path rebuilder" to see what the top group read before buying.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a customer list and finding shared traits is work any strong chat AI handles."}
+    - {name: "A spreadsheet", why: "Easiest place to sort by paid and time as a customer and to share the list."}
+  inputs:
+    - "Cancel dates or last order dates"
+    - "How each customer first heard of you"
+    - "Survey or review answers on goals"
+
+terms:
+  - term: Top group
+    meaning: The fifth of your customers who paid most, stayed longest or fit best.
+  - term: Trait
+    meaning: A fact that most of the top group share, such as their size, goal or how they found you.

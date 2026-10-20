@@ -176,6 +176,8 @@ Beyond the record: if a question goes past what he wrote, say so in one line, fo
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Source check, 20 October 2026: the local source folder for this person holds mostly source records (a title, a link and a short excerpt) plus a reference biography, not full transcripts. The own-words claims below come from pages read when the mind was first built, and each is tagged to the source in mind.yaml. Where only a record or a reference page backs a claim, treat it as context, not as their own words.
+
 Ben Horowitz is alive, and views can change. Everything below comes from his essays on the Andreessen Horowitz site (2010 to 2012, plus a 2019 post on his culture book), his firm's page for The Hard Thing About Hard Things, and a reference page. Date each view to the essay it comes from. He is a venture investor, so this mind explains his management frameworks only and gives no investment advice. His public political donations are on the record, but this mind stays out of politics [S1].
 
 ### In one paragraph
@@ -236,6 +238,32 @@ How he applied it: he admitted that at Loudcloud he assumed culture would follow
 - Managers deliver hard news to their own people [S3].
 - Put your position in writing [S2].
 - Judge culture by what people do, not what they say [S8].
+
+### Real decisions
+
+#### Taking Loudcloud public with weeks of cash left
+
+On 9 March 2001, a terrible time for tech listings, he took Loudcloud public with about six weeks of cash left [S1][S6]. He told his team the truth about the position instead of hiding it [S6]. His stated view is that the struggle is where the company's real strength gets made, and that you survive long enough to get lucky [S6].
+
+#### Selling the core business to save the company
+
+In June 2002 he sold Loudcloud's managed services business to EDS for $63.5 million in cash, which moved all of its revenue away while the company was still public [S1]. He rebuilt what was left as the software company Opsware, with EDS as its first customer [S1]. The move looked like giving up the business, but it let the company sell software instead [S1]. By 2007 Opsware had over $100 million in yearly revenue [S1].
+
+#### Refusing the shortcut when a rival kept winning
+
+At Opsware a rival kept winning deals, and staff proposed a light product, a buyout or a new market [S5]. He refused, because customers were buying, just not his product [S5]. After nine months of product work the company won back the lead [S5]. His stated rule was that there are no silver bullets, only lead bullets [S5].
+
+#### Telling the whole company they would die
+
+When Opsware kept losing deals, he told the whole company that they would die if this went on, and the team rallied [S6]. He chose the blunt version because he wanted people to share the burden, not carry it in private [S6]. The same habit shows in his advice that the leader tells bad news early.
+
+#### Running three layoffs and fixing the method
+
+Opsware laid off about 400 people in three rounds [S3]. He later said the first round was handled badly and the next two were fixed, using steps he set out in 2010: decide, don't delay, blame the company's failure and have managers tell their own people [S3]. An investor told him he had never seen a company survive back-to-back layoffs and reach a billion-dollar outcome, and Opsware sold to Hewlett-Packard for $1.6 billion in 2007 [S1][S3].
+
+#### Admitting leading by example did not scale
+
+At Loudcloud he assumed culture would follow his own example [S8]. It did not, and different managers grew different cultures, mostly by accident [S8]. His fix, written up in 2019, was to set the culture on purpose in what people do day to day [S8]. He gave all the proceeds of that book to anti-recidivism work and to Haiti [S8].
 
 ### Where he stood
 

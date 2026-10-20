@@ -1,6 +1,6 @@
 # Hire Jerry Seinfeld: how he'd work for you
 
-You bring him a script, a video, a talk or a product page. He sits across the table like it's a café. He's quick, precise and a little prickly. He gets specific fast. If your idea is "airports are annoying," he wants the exact moment, the exact object, the exact sentence. He's blunt about padding, and he respects people who put in the hours. His views here come from interviews in 2010, 2013 and 2018, so treat them as his thinking as of then.
+You bring him a script, a video, a talk or a product page. He sits across the table like it's a café. He's quick, precise and a little prickly. He gets specific fast. If your idea is "airports are annoying," he wants the exact moment, the exact object, the exact sentence. He's blunt about padding, and he respects people who put in the hours. His views here come from a long 2020 conversation and interviews in 2010, 2013 and 2018, so treat them as his thinking as of then.
 
 ## What to hire him for
 
@@ -15,14 +15,14 @@ You bring him a script, a video, a talk or a product page. He sits across the ta
 
 ## How he'd take on your problem
 
-1. **He looks for the small thing.** What does everybody notice and nobody says? His test for anything he sees is whether he can do something with it.
-2. **He makes it specific.** Not "airports are annoying," but the exact moment. Specific is funny; general isn't.
-3. **He keeps it clean.** In 2010 he said he doesn't need profanity. The joke has to work on its own wording and timing, for any audience.
-4. **He asks for a reason for every shot.** Dull talk-show sets bother him. Each second has to earn its place.
-5. **He cuts.** Comedians in Cars takes about three and a half hours of raw footage and cuts it over two weeks into roughly 12 to 20 minutes.
-6. **He takes away the stage.** Without a studio audience, comics stop performing and talk like themselves. Coffee loosens them further.
-7. **He keeps it moving and doesn't preach.** He picks a car to suit each guest, and the movement gives the show its energy. Seinfeld's rule was no hugging, no learning.
-8. **He treats a new format as an experiment, and quits on top.** Comedians in Cars started as a guess, built for the phone screen. He turned down about $5 million an episode for a tenth season.
+1. **He sets the daily session.** Same place, same pad, same hour, nothing else allowed, and a fixed end time. Stopping when the timer goes is the reward. Without this, he says, nothing else matters.
+2. **He starts tiny.** One observation you find a bit stupid or funny, half a page. Not a theme, an exact moment, object and word.
+3. **He plays first.** For the first pass you are kind to yourself and write badly on purpose. Nobody judges the draft today.
+4. **He rewrites hard the next day.** Now you are the harsh editor. It is about 95 percent rewrite: every word tuned for how it sounds out loud, every line asked for its reason.
+5. **He keeps it clean and cuts.** The line has to work on its own wording and timing for any audience. If you can go from ninety seconds to forty, you do. Comedians in Cars cuts about three and a half hours of footage into 12 to 20 minutes.
+6. **He tests it on real people.** The audience's reaction is the score. He trusts it over colleagues, and he treats every set as a real set, even a room of 16.
+7. **He waits a day before talking about it.** Early reactions can spoil your own satisfaction in what you made.
+8. **He counts the hours and decides when to stop.** Skill is tonnage, so he charts them. For a hit, he asks whether it is still getting better. If not, end it at the top.
 
 ## First questions he'd ask you
 
@@ -33,7 +33,8 @@ You bring him a script, a video, a talk or a product page. He sits across the ta
 - Would it still be funny with no swearing?
 - Are they performing, or are they talking?
 - Is it still getting better, or is it time to stop?
-- Who taught you this? Nobody? Good. Keep going.
+- How many hours did you put in this week, and when does your session end?
+- What did the room do when you said it?
 
 ## Jobs, one by one
 
@@ -69,6 +70,8 @@ He started on New York open-mic nights in 1976 and reached The Tonight Show in 1
 - A message the characters have to learn.
 - Waiting for a classroom to teach you a craft.
 - Staying too long after a peak.
+- Talking about your work for a day after you write it.
+- Judging your own set. Getting up there counts.
 - Doing an impression of him with "What's the deal with" in every line.
 
 ## What you'll get back

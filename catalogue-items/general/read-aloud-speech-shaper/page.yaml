@@ -1,0 +1,123 @@
+new_slug: read-aloud-speech-shaper
+name: "Read-aloud speech shaper"
+summary: "Paste your notes and the room. Get a speech or poem shaped to be heard, with a refrain."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It shapes sound, rhythm and structure by judgement, within a fixed set of steps."
+
+headline: "Read-aloud speech shaper"
+subhead: Give it your notes, who will be in the room and the moment. It names the fear, the person who needs to hear it and the line to carry home, then builds a refrain and cuts to what lasts. You get a speech or poem made to be heard.
+
+explain: |
+  Writing made for the page often fails when spoken. Long sentences run out of breath, ideas pile up and the room cannot hold onto any of it. A speech needs shapes the ear can follow.
+
+  This skill starts with who needs to hear what, and the one line to carry home. It keeps all your notes in the first draft, then reads the draft aloud to find where the breath catches. It picks the register the moment needs, builds a refrain that returns and changes a little each time, and cuts to what lasts. It checks that every group in the room is spoken to, and ends on a simple human gesture.
+
+when:
+  - You must speak at a funeral, graduation, memorial or community event.
+  - You have pages of notes and need three minutes the room will remember.
+  - You want to write a poem or short piece for an occasion.
+
+you_give:
+  - Your notes, in any order, or a first draft (optional)
+  - Who will be in the room and the moment, such as a funeral or a launch
+  - The line you hope people take home (optional)
+you_get:
+  - A speech or poem shaped for the ear
+  - A refrain that returns and changes
+  - Marks for where to breathe and where to slow
+  - A short note on what was cut
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your notes and describe the room and the moment.
+  - Say who you most want to reach, and what you fear saying badly.
+  - Read the result aloud twice. Mark any place that is hard to say and tell the skill.
+  - Practise with the breath marks, and keep the last line plain.
+
+how_it_works:
+  - title: Names the fear and the person
+    text: Writes the fear the speech must face, who needs to hear it and the one line to carry home.
+  - title: Keeps everything first
+    text: Collects every note into a full draft, without cutting.
+  - title: Reads aloud
+    text: Marks where the breath catches and a sentence is too long to say.
+  - title: Picks the register
+    text: Chooses the tone the moment needs, such as plain, warm or grave.
+  - title: Builds the refrain
+    text: Writes a short line that returns and changes a little each time.
+  - title: Cuts to what lasts
+    text: Removes lines that do not serve the line to carry home.
+  - title: Ends simply
+    text: Closes on a plain human gesture, such as thanks or an invitation.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE FEAR, THE LISTENER, THE LINE TO CARRY HOME
+  Fear: <what>  Listener: <who>  Line: <one sentence>
+
+  REGISTER
+  <tone and why>
+
+  SPEECH
+  <script with / for a breath and // for a longer pause>
+
+  THE REFRAIN
+  <line> | Returns at: <places> | Changes: <how>
+
+  WHO IS SPOKEN TO
+  - <group> | Where
+
+  CUT
+  - <line> | Why
+
+  MISSING
+  <facts that would sharpen the speech>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The moment
+    how: A funeral and a graduation need different registers. Say which.
+  - what: Length
+    how: Give the minutes. The cut is made to fit.
+  - what: Who is in the room
+    how: List the groups, such as family, colleagues and children. Each gets a line.
+  - what: Form
+    how: Say speech or poem. A poem uses shorter lines and more white space.
+
+judge:
+  - Every group in the room is spoken to or welcomed.
+  - The refrain changes a little each time it returns.
+  - No line asks for pity.
+  - The last line is plain.
+  - You can say every sentence in one breath.
+
+test:
+  - Read it aloud to an empty room. Mark every place you stumble.
+  - Read it to a friend with your eyes closed to them, and ask which line they remember.
+  - Run it twice. The refrain should stay close.
+  - Cut it by a quarter and see if the speech still holds.
+
+improve:
+  - Add words and phrases that are yours, and ask it to keep them.
+  - Add names that must be said and how they are pronounced.
+  - Keep a list of lines that worked, and paste it in.
+  - Pair it with "Lesson talk writer" if the occasion calls for stories and lessons.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reshaping notes into a read-aloud script is text work any strong chat AI does well with this skill."}
+    - {name: "A phone voice recorder", why: "To hear where your breath catches and where you rush."}
+  inputs:
+    - "Your notes in any order"
+    - "The names, dates and places that must appear"
+    - "A line from a poem or text that matters to the room"
+
+terms:
+  - term: Refrain
+    meaning: A short line that returns during the speech and changes a little each time.
+  - term: Register
+    meaning: The tone of voice the moment needs, such as plain, warm or grave.

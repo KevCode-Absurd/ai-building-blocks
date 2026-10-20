@@ -1,0 +1,117 @@
+new_slug: strategy-trade-off-planner
+name: "Strategy trade-off planner"
+summary: "List what you offer and who you serve. Get a position, what you will not do and the activities that must fit."
+job: plan-strategy
+thinking: high
+thinking_why: "It makes real trade-offs and tests whether activities fit together, where shallow answers look right but fail."
+
+headline: "Strategy trade-off planner"
+subhead: List what you offer, who you serve and what rivals do. It separates being better from being different, picks a position, writes what you will not do, checks that your activities support each other, and tests each new idea against the position.
+
+explain: |
+  Most businesses try to be better at the same things as their rivals. That is a race with no end, and anything good enough to win gets copied. A real position means you do some things and refuse others, so a rival cannot copy you without giving something up.
+
+  This skill separates what makes you better at the same tasks from what makes you different. It chooses a position: a narrow set of products, one group's needs, or a different way to reach buyers. It decides whether the position leads to a premium price or to lower cost. It writes the list of what you will not do, lists the activities that carry the position, and tests whether they fit together. New ideas are then tested against the position.
+
+when:
+  - You compete on the same things as everyone else and cannot say why you are different.
+  - Every new idea sounds good and the offer is getting blurry.
+  - A bigger rival copies what you do within months.
+
+you_give:
+  - What you offer, who you serve and how you reach them
+  - What your main rivals do (optional)
+  - The ideas you are considering adding
+you_get:
+  - A position in one sentence, with who it is for
+  - Whether it leads to a premium price or lower cost
+  - A list of what you will not do
+  - A fit check of the activities and a yes or no on each new idea
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe your offer, your buyers and how you do the work. Add rivals if you know them.
+  - List the new ideas you are considering.
+  - Read the not-do list first. If it has nothing you mind giving up, ask again.
+
+how_it_works:
+  - title: Splits better from different
+    text: Separates what makes you better at the same things from what makes you different.
+  - title: Picks a position
+    text: Chooses a narrow product set, one group's needs or a different way to reach buyers.
+  - title: Sets price or cost
+    text: Decides if the position leads to a premium price or lower cost.
+  - title: Writes the not-do list
+    text: Lists what you will not do, so rivals cannot copy you without giving something up.
+  - title: Maps the activities
+    text: Lists the activities that carry the position and checks each supports the others.
+  - title: Tests new ideas
+    text: Tests each new idea against the position and says no to those that blur it.
+
+output_shape: |
+  BETTER VERSUS DIFFERENT
+  Better at the same things: <list> | Different: <list>
+
+  POSITION
+  <one sentence> | for: <group> | via: <products, needs or access>
+
+  PRICE OR COST
+  <premium price or lower cost> | because: <>
+
+  WHAT WE WILL NOT DO
+  <list, each with what it gives up>
+
+  ACTIVITIES THAT CARRY THE POSITION
+  <activity> | supports: <other activities> | fit: <strong, weak>
+
+  NEW IDEAS TESTED
+  <idea> | fits the position? <yes or no> | reason
+
+  MISSING
+  <what was not given>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: How clearly you describe your work
+    how: List the main things you do each week. Activities come from this.
+  - what: Rivals
+    how: Add what rivals do. The position avoids the ground they hold.
+  - what: Ideas to test
+    how: List real ideas on the table. The yes and no calls become concrete.
+  - what: Your limits
+    how: Say what you would never give up. The not-do list respects it.
+
+judge:
+  - Does it name what you will not do?
+  - Do the activities fit each other?
+  - Is it a position, not a goal?
+  - Is it free of both-ways claims such as cheapest and best?
+  - Does each no say what the idea would blur?
+
+test:
+  - Show the position and not-do list to a customer. Ask if it matches how they see you.
+  - Ask a rival-minded friend how they would copy it. Check what they would have to give up.
+  - Check the next three ideas on your list against the position.
+  - Run it twice. The not-do list should be close.
+
+improve:
+  - Add your real rivals' positions once and reuse them.
+  - Add a yearly date to retest the position.
+  - Put the not-do list where decisions are made, such as the top of the roadmap.
+  - Pair it with "Five forces industry checker" to see which force the position defends against.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Choosing a position and testing ideas against it is text work any strong chat AI can do."}
+  inputs:
+    - "Your list of activities, from ordering to delivery"
+    - "A grid of rivals from Competitor white space mapper"
+    - "The five-force read for your industry"
+
+terms:
+  - term: Position
+    meaning: The particular set of buyers, needs or products you choose to serve, and the way you serve them.
+  - term: Trade-off
+    meaning: Something you give up by choosing something else, so you cannot do both well.

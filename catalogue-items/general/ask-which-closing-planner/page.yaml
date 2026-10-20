@@ -1,0 +1,127 @@
+new_slug: ask-which-closing-planner
+name: "Ask-which closing planner"
+summary: "Paste your offer and where buyers stall. Get closing questions that offer two ways to say yes."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It rewrites questions to a fixed pattern from a list of real choices."
+
+headline: "Ask-which closing planner"
+subhead: "Give it your offer and the point where buyers stall. It lists the real choices, turns every yes-or-no ask into a which-or-when question and orders them as small agreements. You also get a list of buying signals and a line for buyers on the fence."
+
+explain: |
+  "Do you want it?" invites a quick no. Buyers who like the offer still refuse, because refusing is the easiest answer to give.
+
+  This skill lists the real choices you can offer and rewrites each ask as a question with two ways to say yes. It orders the questions as small agreements and lists the signs a buyer is ready, so you stop explaining and ask. For a buyer on the fence it writes a pick with a reason. It checks that both choices are real and that nothing hides terms.
+
+when:
+  - "Buyers say they will think about it and vanish."
+  - "Your closing question is a yes-or-no."
+  - "You keep talking after the buyer is ready."
+
+you_give:
+  - "Your offer, price and options"
+  - "Where buyers stall (optional)"
+  - "Your current closing lines (optional)"
+you_get:
+  - "Closing questions with two honest ways to say yes"
+  - "The order to ask them in"
+  - "A list of buying signals and what to do on each"
+  - "A line for the buyer on the fence"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your offer and its options."
+  - "Say where buyers stall, or paste the objection map from the step before."
+  - "Pick the sequence that matches your setting: in person, phone or message."
+  - "Use it in the next real talk and tell the skill what happened."
+
+how_it_works:
+  - title: "Lists real choices"
+    text: "Everything you can honestly offer today."
+  - title: "Rewrites the ask"
+    text: "Turns yes-or-no into which-or-when."
+  - title: "Orders small agreements"
+    text: "Easiest first, each assuming the last."
+  - title: "Adds leading questions"
+    text: "A yes-expected question on points that are true."
+  - title: "Lists signals"
+    text: "Signs a buyer is ready, and what to do on each."
+  - title: "Writes the fence line"
+    text: "A pick, a reason and a question."
+  - title: "Plans more asks"
+    text: "Later asks and a calm way to take a no."
+  - title: "Checks the set"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  REAL CHOICES
+  <choice> | REAL
+
+  CLOSING QUESTIONS
+  Was: <yes-or-no ask>
+  Now: <which-or-when question>
+
+  ORDER OF SMALL AGREEMENTS
+  1. <question> -> 2. <question> -> ...
+
+  LEADING QUESTIONS
+  <question>
+
+  READY-TO-BUY SIGNALS
+  <signal> | Then: <stop and ask what>
+
+  FOR A BUYER ON THE FENCE
+  <pick, reason, question>
+
+  LATER ASKS
+  <ask 2, ask 3, how to take a no>
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "The choices you can give"
+    how: "More real options mean better questions. List variants and dates."
+  - what: "Your setting"
+    how: "In person, by phone and by message need different wording."
+  - what: "Where buyers stall"
+    how: "Name the point. The questions aim at it."
+  - what: "Your price rules"
+    how: "Say what you can and cannot change."
+
+judge:
+  - "No question can be answered by a bare no."
+  - "Both options are things you would deliver."
+  - "The buyer could say no and you would accept it."
+  - "Each signal has a clear next action."
+  - "There is no false deadline in it."
+
+test:
+  - "Role-play with a friend and see if they can still say a plain no easily. They should be able to, politely."
+  - "Run it twice. The order of agreements should stay close."
+  - "Compare how many talks end with a decision before and after, over a week."
+  - "Remove one choice and see if the questions still make sense."
+
+improve:
+  - "Add your usual options and dates to step 1 so it starts from them."
+  - "Add a rule for how many times you will ask in one talk."
+  - "Save the question that worked best in a notes file."
+  - "Pair it with \"Ten-second opener writer\" for the start of the talk."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting questions to a pattern is simple text work."}
+    - {name: "A notes app or index card", why: "Keep the sequence in view during the talk."}
+  inputs:
+    - "The objection map from the step before"
+    - "Your price list and delivery dates"
+    - "Examples of talks that ended in a no"
+
+terms:
+  - term: "Small agreement"
+    meaning: "An easy yes on a small point, such as colour, that leads toward the larger decision."
+  - term: "Ready-to-buy signal"
+    meaning: "A question or action that shows a buyer is close to deciding."

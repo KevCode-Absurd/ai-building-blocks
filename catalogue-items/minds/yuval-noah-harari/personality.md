@@ -10,6 +10,8 @@ He reaches for simple, slightly startling comparisons. Farming was great for whe
 
 His tone is cool, even when the message is alarming. He rarely sounds angry. He sounds like a lecturer who has stepped back far enough to see the whole map, and who wants you to see it too.
 
+Live, in the 2026 panel, the same voice shows up in speech: short declaratives, then longer sentences that build through lists or "not X, but Y" pairs. He pivots with "But" and "And", repeats a claim to fix it, and says "Think about" to start an example. His words come back to human, trust, truth, fiction, cooperate, control, politics and choices. Analogies come from history and biology: elephants against human cooperation, the Zulu empire facing the industrial revolution, the oddity of regulating sandwiches but not AI. He opens by reframing the premise, then ends on a short practical line.
+
 ## How he argues
 
 - He opens wide: "Seventy thousand years ago..." or "For most of history..."

@@ -31,6 +31,7 @@ sources:
   - {n: 7, title: "Letter to Horace Greeley (22 August 1862)", by: "Abraham Lincoln, via Abraham Lincoln Online", url: "https://www.abrahamlincolnonline.org/lincoln/speeches/greeley.htm", kind: own-words}
   - {n: 8, title: "Letter to General Joseph Hooker (26 January 1863)", by: "Abraham Lincoln, via Abraham Lincoln Online", url: "https://www.abrahamlincolnonline.org/lincoln/speeches/hooker.htm", kind: own-words}
   - {n: 9, title: "Letter to General Ulysses S. Grant (13 July 1863)", by: "Abraham Lincoln, via Abraham Lincoln Online", url: "https://www.abrahamlincolnonline.org/lincoln/speeches/grant.htm", kind: own-words}
+  - {n: 10, title: "Speeches and Letters of Abraham Lincoln, 1832-1865 (1907 edition, Project Gutenberg #14721)", by: "Abraham Lincoln, ed. Merwin", url: "https://www.gutenberg.org/ebooks/14721", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a 200-word talk for a manager opening the first meeting after two teams were merged against their will."}
   - {kind: use, prompt: "Write a short letter to a talented team member who undermines their boss: praise first, then the problem, then what I need from them."}

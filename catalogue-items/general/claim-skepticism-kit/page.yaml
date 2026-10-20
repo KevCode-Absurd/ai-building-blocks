@@ -1,0 +1,130 @@
+new_slug: claim-skepticism-kit
+name: "Claim skepticism kit"
+summary: "Paste a claim you were told. Get the questions to ask, the weak links, and what evidence would be enough."
+job: think-and-decide
+thinking: high
+thinking_why: "It must weigh evidence and keep its own bias in check."
+
+headline: "Claim skepticism kit"
+subhead: "Paste a claim you were told, with any figures that came with it. It asks who else confirmed it, compares other explanations, names what would prove it wrong and checks labels and profit measures. You get a report of weak links and the evidence that would be enough."
+
+explain: |
+  A claim that is repeated often feels true. Vendors, studies and viral numbers all come dressed in labels, case studies and profit measures that make the sums hard to see.
+  
+  This skill states the claim exactly, asks for independent confirmation and compares at least two other explanations. It tries to knock down your favourite, names the result that would prove the claim wrong and restates the claim with no labels. It checks a company's label against how it earns money and looks for invented profit measures. It then sets how much evidence a claim this surprising needs and points each red flag at a line in the source.
+
+when:
+  - "A vendor says their tool will double your results."
+  - "A study or number is going around and you want to know if it holds."
+  - "A founder's pitch uses a profit measure you do not recognise."
+
+you_give:
+  - "The claim as it was made, with its source"
+  - "Any figures or study that came with it (optional)"
+  - "The decision it affects (optional)"
+you_get:
+  - "A table of who has confirmed it, and how independent they are"
+  - "Other explanations, compared"
+  - "The result that would prove it wrong"
+  - "Red flags tied to lines in the source, and the evidence that would be enough"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the claim word for word with the source."
+  - "Add the numbers or deck that came with it."
+  - "Read the explanations and add any you can think of."
+  - "Ask the source for the evidence the report says is missing."
+
+how_it_works:
+  - title: "State the claim exactly"
+    text: "States the claim exactly as made."
+  - title: "Ask for independent confirmation"
+    text: "Asks for independent confirmation, not the claimant's own word."
+  - title: "Compare two or more explanations"
+    text: "Lists two or more explanations and compares them fairly."
+  - title: "Try to knock down your favourite"
+    text: "Tries to knock down your favourite explanation."
+  - title: "Name the proving-wrong result"
+    text: "Names the result that would prove the claim wrong, or flags none."
+  - title: "Restate it in plain words"
+    text: "Restates the claim in plain words with no labels."
+  - title: "Check the label and the profit measure"
+    text: "Checks the label against the economics and looks for made-up profit measures."
+  - title: "Set the evidence bar"
+    text: "Sets the evidence bar and points each flag to a line in the source."
+  - title: "Checks its own work"
+    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+
+output_shape: |
+  CLAIM
+  <as made> | Source | Gains if believed: <...>
+  
+  CONFIRMATION
+  <who> | independent / tied / none
+  
+  OTHER EXPLANATIONS
+  <explanation> | If true we would see <...>
+  
+  KNOCK-DOWN TEST
+  <my favourite> could be wrong because <3 reasons>
+  
+  WOULD PROVE IT WRONG
+  <result> or: no result could, so <...>
+  
+  PLAIN WORDS
+  <restated claim>
+  
+  LABEL AND PROFIT CHECK
+  <label> vs <economics> | Invented measure: <...> leaves out <...>
+  
+  EVIDENCE BAR
+  <how surprising> -> <what would be enough>
+  
+  RED FLAGS
+  <flag> -> <line or number>
+  
+  MISSING
+  <gaps>
+  
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The source"
+    how: "Paste the original, not a summary. Flags point to its lines."
+  - what: "The decision"
+    how: "Say what you might do on the claim. The bar for evidence rises with the stakes."
+  - what: "Your favourite explanation"
+    how: "Say what you suspect. It will try to break that."
+  - what: "Field"
+    how: "Name the field. Explanations differ for health, ads and finance."
+
+judge:
+  - "Independent confirmation is asked for."
+  - "Two or more explanations are compared fairly."
+  - "A result that would prove it wrong is named, or its absence is flagged."
+  - "The evidence asked for fits how surprising the claim is."
+  - "Each red flag has a source line."
+
+test:
+  - "Run it on a claim you know is false and see if it finds the weak link."
+  - "Run it on a claim you know is true and check it does not call it false."
+  - "Run it twice. The red flags should stay close."
+
+improve:
+  - "Add claims you often meet in your field to the explanations step."
+  - "Add your own evidence bar for your decisions."
+  - "Save the red flags that proved true."
+  - "Pair it with \"Loyalty claim checker\" for marketing plans."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and weighing written facts is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "The original article, deck or study"
+    - "Company financials if a profit measure is used"
+    - "Other sources on the same claim"
+
+terms:
+  - term: "Independent confirmation"
+    meaning: "A check by someone with no tie to the claimant and no gain if it is true."

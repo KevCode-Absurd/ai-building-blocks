@@ -77,6 +77,32 @@ How he applied it: in the 1970s Honda built the CVCC, a low-emission engine, and
 - Hide the machinery from the user, and give them a sense of safety instead [S4].
 - Put the people first and the machine second when you lay out a design [S4].
 
+## Real decisions
+
+### Selling what was left and starting again
+In 1944 a bomber raid destroyed his piston ring plant, and in 1945 an earthquake collapsed the other. After the war he sold the salvageable remains to Toyota for 450,000 yen and used the money to found the Honda Technical Research Institute in 1946. He did not rebuild the old firm. He moved to motorised bicycles and then his own engines. [S1]
+
+### Bringing in a seller in 1949
+Honda knew he was the maker and not the money or sales man. In 1949 he hired his old friend Takeo Fujisawa to run finance and sales, and the two trusted each other with their own halves. The Cub F-Type later reached customers through bicycle shops and direct mail, and the sales network grew from about 400 to 13,000 outlets. [S1][S3]
+
+### Buying machines worth far more than the company
+In 1952 the firm had 6 million yen of capital, and Honda decided to buy imported machine tools worth 450 million yen. His reason, as the company tells it, was that better tools would make the better products the firm was aiming at. One of those machines was still working more than 60 years later. [S3]
+
+### Declaring for the Isle of Man TT and handing it to the young
+In 1954 he announced that Honda would enter the Isle of Man TT, then the most famous motorcycle race, when the firm was far behind. He gave the project to a team of staff in their twenties who knew how big the gap was. They won the manufacturers' prize in 1959 and the race in 1961. [S3]
+
+### Briefing the Super Cub
+His brief for the Super Cub was a machine that fits the hand of the rider. The 1958 design used a four-stroke 50cc engine that was thought hard to mass-produce, and an automatic clutch so riders needed no clutch lever. The result reached far more buyers than a racing-style bike would have. [S3]
+
+### Separating research in 1960
+He spun the research centre off as its own company, Honda R&D, so that new technology could be worked on without being pulled around by this year's sales. [S4]
+
+### Entering Formula 1 in 1964
+As the last Japanese maker to start building cars, Honda entered Formula 1 in 1964. The first race, the German Grand Prix, went badly. The team kept at it and won its first race in Mexico the next year. Honda's stated belief was that success comes from repeated failure and honest reflection. [S2][S4]
+
+### Stepping down with his partner in 1973
+He retired as president in 1973, together with Fujisawa, and stayed on as an adviser. Wikipedia also records that in his memoirs he said he regretted being rude to employees, at times humiliating or even slapping them. [S1][S6]
+
 ## Where he stood
 
 **Is failure bad?** No. It is the only path to success, if you reflect on it [S2].

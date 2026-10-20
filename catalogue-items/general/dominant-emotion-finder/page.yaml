@@ -1,0 +1,129 @@
+new_slug: dominant-emotion-finder
+name: "Dominant emotion finder"
+summary: "Paste your product and what you know of your buyer. Get the strongest feeling to write to and where it comes from."
+job: understand-customers
+thinking: medium
+thinking_why: "It weighs evidence for each feeling and chooses one, but the steps are fixed."
+
+headline: "Dominant emotion finder"
+subhead: "Give it your angle library and any product facts or buyer notes. It lists what your buyer has lived through, writes the feeling behind each and ties the strongest to a real benefit. You get one named emotion, a theme and a reason the runner-up lost."
+
+explain: |
+  Copy that talks about the product gets skimmed. Copy that speaks to something the reader already feels, such as dread about a bill or a long wish to be done with a problem, gets read. The trouble is guessing the feeling. Writers pick the one they like, or the one that is easy to sell, and the copy rings false.
+
+  This skill works from the buyer outward. It lists what the buyer has lived through lately, writes the feeling behind each event with the proof for it, and learns from what has worked in the market. Then it checks which feeling your product can honestly answer. It scores each feeling for strength, names the strongest as the dominant emotion, and says why the next best lost.
+
+when:
+  - "You are about to write a sales page, email series or ad set and do not know which feeling to lead with."
+  - "Your copy lists benefits but does not seem to land."
+  - "You have lots of customer words and need to know which feeling runs through them."
+
+you_give:
+  - "An angle library or a research file with its sources"
+  - "Your product facts (optional)"
+  - "A buyer persona (optional)"
+  - "Reviews, emails or call notes with dates (optional)"
+you_get:
+  - "The dominant emotion, in one sentence, with the events and words behind it"
+  - "A feeling-by-feeling table with a strength score"
+  - "The proposed theme, the runner-up and why it lost"
+  - "A persona update and a ranked angle list"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say who the buyer is and what you sell in two lines."
+  - "Paste your angle library, plus any customer words with their dates."
+  - "Read the dominant emotion and check it against what you hear from real customers."
+  - "Ask the three questions it writes to a customer or a colleague before you lock the theme."
+
+how_it_works:
+  - title: "Starts with the buyer"
+    text: "Writes who is reading and their ordinary day before it looks at the product."
+  - title: "Lists lived events"
+    text: "Collects the trends and experiences the buyer has been through lately, each with a source."
+  - title: "Writes the feeling"
+    text: "Gives each event one feeling and marks the evidence as their words or inferred."
+  - title: "Learns from the market"
+    text: "Notes which feeling past winners spoke to, and why failures missed."
+  - title: "Checks the product fit"
+    text: "Links the product to the buyer's worst problem and deepest wish, using only facts you gave."
+  - title: "Names the emotion"
+    text: "Scores fear and desire from mild to intense and picks the strongest one the product can answer."
+  - title: "Hands the choice a pause"
+    text: "Marks the theme as proposed and writes questions to test it on a real person."
+
+output_shape: |
+  DOMINANT EMOTION
+  <Buyer> feels <emotion> about <thing>, because <event>.
+
+  LIVED EVENTS
+  <n>. <event> (<source, date>)
+     Feeling: <word>   Strength: <1 to 5>
+     Evidence: <their words / inferred>
+
+  PRODUCT LINK
+  <fact> -> <why it matters> -> <what changes for the buyer>
+
+  RUNNER-UP
+  <feeling> lost because <reason>
+
+  PROPOSED THEME
+  <one line>
+  Test it: <three questions and the answer that would change the pick>
+
+  PERSONA UPDATE
+  <feeling, trigger, words they use>
+
+  RANKED ANGLES
+  <angle, evidence, product link>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check, or none>
+
+tweaks:
+  - what: "Customer words"
+    how: "Real quotes with dates make the evidence strong. With none, every feeling is inferred and scores come out lower."
+  - what: "Recent events"
+    how: "Add what has changed for your buyer in the last year: prices, rules, a rival's failure. Fresh events find the feeling that is live now."
+  - what: "Past winners and failures"
+    how: "Paste copy or offers in your market that did well or badly. It learns which feeling worked there."
+  - what: "Product facts"
+    how: "The more exact the facts, the surer the product link. Without them it cannot confirm the theme."
+
+judge:
+  - "You can find the emotion in your customers' own words, not only in the AI's summary."
+  - "Every feeling points to a real event or trend with a source."
+  - "The product link uses only facts you supplied."
+  - "The runner-up has a clear reason for losing."
+  - "The theme reads as something a buyer would say about their own life."
+
+test:
+  - "Run it on a product where you already know what the buyer feels. See if it lands on the same feeling."
+  - "Run it twice. The dominant emotion should match even if the wording differs."
+  - "Read the emotion to three real customers and ask if it sounds like them."
+  - "Write one headline from the theme and one from your old angle, and test them against each other."
+
+improve:
+  - "Add the feelings your market has already shown it responds to, so scoring starts from facts."
+  - "Save the winning emotion and its evidence in your brand file so every later piece starts there."
+  - "Add a list of feelings your brand will not use, such as shame, and it will skip them."
+  - "Pair it with Copy research file builder before it, and Sales letter outline planner after it."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting events and feelings against evidence is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Keeping events, feelings and scores in columns makes the strongest one easy to see."}
+  inputs:
+    - "Fifteen to twenty reviews or emails with dates"
+    - "A note of what changed for your buyer this year"
+    - "Two or three past promotions with results"
+    - "Notes from a recent customer call"
+
+terms:
+  - term: "Dominant emotion"
+    meaning: "The strongest feeling your buyer already has about the problem, either fear of something coming or a strong wish."
+  - term: "Angle library"
+    meaning: "A ranked list of reasons to buy, each with the customer words and proof behind it."

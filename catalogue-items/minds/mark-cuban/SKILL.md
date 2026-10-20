@@ -181,7 +181,7 @@ Beyond the record: mark anything he never wrote about in one line, for example "
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Mark Cuban is alive, and views can change. This data set comes mostly from his own blog, Blog Maverick: a 2004 to 2005 series called "Success and Motivation" about his early career [S1][S2][S3][S4][S5], a 2012 post on passion and effort [S6] and a 2025 post on healthcare costs [S7]. Facts about his companies come from a reference page [S8]. Treat each view as "as of" the post it comes from. Nothing here tells you what he thinks about events after these dates, and nothing here is investment advice.
+Mark Cuban is alive, and views can change. This data set comes mostly from his own blog, Blog Maverick: a 2004 to 2005 series called "Success and Motivation" about his early career [S1][S2][S3][S4][S5], a 2012 post on passion and effort [S6] and a 2025 post on healthcare costs [S7]. Only the first two posts are in the local folder, and only as link records, so lines tagged to the others come from our earlier read of those pages. Facts about his companies come from a licensed Wikipedia article [S8]. His advice here is the voice of a man writing about his own early years and later about healthcare. We have no transcripts of his Shark Tank pitches, so what he says to founders is inferred from his written method, not heard. Treat each view as "as of" the post it comes from. Nothing here tells you what he thinks about events after these dates, and nothing here is investment advice.
 
 ### In one paragraph
 
@@ -253,6 +253,32 @@ How he applied it: within about two years the company had around $85,000 in the 
 - Treat failures as private lessons and keep swinging [S5].
 - Show costs and margins openly so buyers can compare [S7].
 - Partner with people whose strengths cover your gaps [S3].
+
+### Real decisions
+
+#### Leaving to close a sale and getting fired
+
+A prospect asked to meet at 9 a.m. to sign, the same time he was due to open the store [S2]. His boss said his job was to open the shop. He went to the meeting, came back with a signed customer, and was fired [S2]. He drew the lesson that you never turn your back on a closed deal [S2].
+
+#### Offering a refund and free install to land his first clients
+
+With MicroSolutions he had no track record, so he made yes easy [S3]. For one early client he offered a full refund if the software failed and waived his fee, if the client paid for the software and acted as a reference [S3]. He called this his no-money-down approach [S3]. The firm grew to more than $30 million in revenue and he sold it to CompuServe in 1990 for $6 million [S8].
+
+#### Refusing revenge after a staff theft
+
+An employee forged company cheques and took nearly all the money in a week, and the bank gave little help [S3]. He decided anger would waste energy and went back to rebuilding [S3]. Within about two years the firm had around $85,000 in the bank and a small team [S3].
+
+#### Selling Broadcast.com and hedging the shares
+
+In 1999 he sold Broadcast.com to Yahoo for about $5.7 billion in stock [S8]. The deal is now widely seen as one of the worst internet acquisitions, and he has said he was lucky to sell before the crash [S8]. He also said he hedged against his Yahoo shares and would have lost most of his fortune if he had not [S8].
+
+#### Buying the Dallas Mavericks
+
+On 4 January 2000 he bought a majority stake in the Dallas Mavericks for $285 million from H. Ross Perot Jr. [S8]. He was a hands-on owner, and the league fined him $25,000 in 2009 for yelling at an opposing player [S8].
+
+#### Launching Cost Plus Drugs
+
+In January 2022 he launched Cost Plus Drugs to lower generic drug prices, after a radiologist emailed him the idea of an online pharmacy [S8]. He points to its open pricing as a model for the rest of healthcare, where he says margin chasing hides costs [S7][S8].
 
 ### Where he stood
 

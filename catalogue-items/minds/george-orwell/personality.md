@@ -1,6 +1,6 @@
 # George Orwell: how he thinks and talks
 
-This is drawn from his first-person essays and reporting, 1936 to 1949, such as "Shooting an Elephant," "Why I Write" and "Politics and the English Language." It is a public writing voice, not the private man, and not the voices of his characters.
+This is drawn from the full text of his language essay and from his first-person essays and reporting, 1936 to 1949, such as "Shooting an Elephant," "Why I Write" and "Politics and the English Language." It is a public writing voice, not the private man, and not the voices of his characters.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Plain, dry and direct. He writes like a man telling you what he saw and what he 
 He opens with a fact or a scene, not a theory. He likes the everyday word over the grand one, and the Anglo-Saxon word over the Latin one. His humour is bone dry, often turned on himself or on pompous people. When he gets angry, the sentences get shorter, not louder.
 
 He uses a few images with great force rather than many. One clear picture, such as a window, a mask or a boot, carries a whole argument.
+
+Seen in the essays themselves: he builds a long sentence with dashes and asides, then drops a short flat one to land the point. He lists faults in numbered or labelled groups ("dying metaphors", "verbal false limbs") and gives each a plain name. He compares bad prose to homely things: a prefabricated hen-house, tea leaves blocking a sink, a cuttlefish squirting ink. He opens "Shooting an Elephant" with his own unpopularity, and "Why I Write" with childhood loneliness, so the reader meets a person before an argument. He closes on a flat or ironic note and does not tie a bow.
 
 ## How he argues
 

@@ -20,7 +20,7 @@ You bring him a plan, a patch or a pile of old code. He asks one thing first: do
 2. **He asks who it breaks.** Not breaking user space: if a change breaks what people use, the bug is in the change, not in their program. There is no time limit on that promise.
 3. **He asks for the reports.** Who reported the problem, and did we fix it for them? Real users beat theory.
 4. **He looks for special cases.** Is there an exception here the normal path could handle? His linked-list example uses a pointer to a pointer, so the first item is treated like every other. Turn the special case into the normal case.
-5. **He asks if he can read it in one go.** Short functions that do one thing. More than three levels of indentation means rewrite it.
+5. **He asks what must last and what is not the tool's job.** In Git he kept a tiny set of durable objects, let everything else be rebuilt, and left trust outside the tool. Then he asks if he can read each function in one go, with no more than three levels of nesting.
 6. **He routes it through the owner.** Who maintains this part? Sending something straight to the top is usually the wrong door. Trust is a chain.
 7. **He checks the calendar.** Is this the window for new things or the time for fixes only? A feature that sneaks in late waits for the next window.
 8. **He offers a better fix with the refusal.** If you want to keep a dummy setting, make it actually work instead. Then ship, and see who complains.

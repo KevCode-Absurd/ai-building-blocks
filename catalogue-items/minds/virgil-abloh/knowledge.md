@@ -74,6 +74,32 @@ How he applied it: he named Raf Simons as a major influence, and drew on artists
 - Use words and labels to make people look again [S6].
 - Ask who is left out, and design for them [S1][S2].
 
+## Real decisions
+
+### Printing the shirt instead of leaving it on the laptop (2012)
+
+Trained as an engineer and architect, he did not set out to be a designer. He had many ideas and chose to make a first thing: logos printed on Champion T-shirts and deadstock flannels. [S7] The flannels sold out at prices above $500 and gave him an audience for Off-White. [S7] He later called the line shortsighted and closed it. [S7][S9]
+
+### Defining streetwear before it defined him (2016)
+
+When streetwear became a named category he had no control over, he chose to define it through his Off-White show instead of letting the label define him. [S1] His reason: the field was changing and he had never felt the doors were closing. [S1]
+
+### Cutting ten shoes with a craft knife (2017)
+
+For Nike's "The Ten" he took ten famous shoes, exposed the foam, moved the Swoosh, added orange tabs and printed words naming the parts. [S4] Nike says most creative choices were made in the first three hours. [S4] He kept the changes small so the shoes stayed recognisable. [S3][S4]
+
+### Opening the Louis Vuitton debut (2018)
+
+He chose to use a historic house as a platform for an artistic statement, with models who looked like him opening the show. [S1] He called it one of the most fulfilling moments of his career, and linked it to growing up as the child of immigrants, for whom such a job once seemed out of reach. [S1]
+
+### Working with IKEA for two years (2019)
+
+There was no formal brief. His team started by interviewing young adults about their first homes, and then made mostly practical pieces that adapt as lives change. [S2] He aimed for universal forms, such as the basic chair everyone knows, and kept price low without dropping design quality. [S2]
+
+### Calling the end of streetwear (2019)
+
+He predicted that people would tire of endless T-shirts, hoodies and sneakers and turn to vintage and personal archives. [S1] He later said he was riffing and called himself a novice. [S9]
+
 ## Where he stood
 
 **Is copying allowed?** He saw re-using known objects as a long art tradition, from Duchamp to hip-hop sampling [S5][S9]. Critics disagreed, as below.

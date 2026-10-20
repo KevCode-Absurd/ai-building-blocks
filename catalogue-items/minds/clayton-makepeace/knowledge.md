@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Clayton Makepeace died on March 24, 2020 [S4]. He wrote sales letters for clients rather than books for the public, so most of what he said about his craft survives in interviews and in teaching pieces published by AWAI, a copywriting school where he spoke for more than 20 years [S4]. AWAI also sold his training, so its pages praise him, and the sales figures they give are not checked by anyone else [S5]. His birth year is not firmly on the record. A reprinted interview has him at 53 after 33 years of work that began in 1974, which points to about 1953 [S3]. This data set sticks to his methods, as he described them, and treats the big numbers as claims.
+A note on the record: Clayton Makepeace died on March 24, 2020 [S4]. He wrote sales letters for clients rather than books for the public, so most of what he said about his craft survives in interviews and in teaching pieces published by AWAI, a copywriting school where he spoke for more than 20 years [S4]. AWAI also sold his training, so its pages praise him, and the sales figures they give are not checked by anyone else [S5]. His birth year is not firmly on the record. A reprinted interview has him at 53 after 33 years of work that began in 1974, which points to about 1953 [S3]. A 2005 AWAI survey report adds his own answers, in his words, on how he planned his day, researched a project and got past a stuck draft [S8]. It is a multi-writer report, so only his answers count here. This data set sticks to his methods, as he described them, and treats the big numbers as claims.
 
 ## In one paragraph
 
@@ -58,6 +58,14 @@ He said beginners should read Claude Hopkins and Eugene Schwartz first, and coul
 
 How he applied it: he wished he had had a mentor, since early writers in his markets learned by trial and error [S1]. He mentored seven writers in the years before 2005. He said all earned six figures and two earned seven, far faster than the 20 years it took him [S1].
 
+### Research files, winners and a protected day
+
+**Research in separate files.** In the 2005 survey he describes his research for a health or financial newsletter. He reads each premium and as many back issues as he can, at least a year and sometimes five. As he reads, he types or pastes the articles that fit his chosen themes into separate documents: stories and facts about the editor, pieces that hit the reader's strongest emotions, and pieces that make the reader's problems real and show why others failed to solve them [S8]. For each existing bonus product he finds its value and writes a small ad for it, looking for proof elements (surprising tips he can give away) and "fascination fodder" that speaks to the reader's fears and wants [S8]. Before he picks a theme, he spends a day or two letting it all sink in, talking to friends and family about the job [S8].
+
+**Learn what already works, and the business around it.** He asks why strong controls connect and why failed packages did not [S8]. He tells new writers to learn the business side: how page size, print cost and mail mode affect response, how lists are chosen, how results are counted, and what the client wants (maximum response at break-even, or profit on every mailing) [S8]. He adds that boosting order size and cutting premium costs can matter almost as much as the response rate [S8]. And he says about 95 percent of the work goes into the guts of the copy, while the head, deck and lead-in, the other 5 percent, can lift response by 20, 30 or 40 percent [S8].
+
+**Protect the energy that makes the copy.** His own answer on creativity is that energy is creativity. He names a balanced low-calorie diet, supplements, four to six hours of aerobic exercise a week, eight hours' sleep, and no drinking during the work week or on Sundays [S8]. He is at his desk between 4 and 5 in the morning, before the phone rings, and stops around 3:30 [S8]. He sets aside about an hour a week to sit and think about his prospects away from the computer, and he talks over projects with friends because many ideas come from those talks [S8].
+
 ## How he decides
 
 - Start with the reader's real feelings, not the product [S1].
@@ -68,6 +76,30 @@ How he applied it: he wished he had had a mentor, since early writers in his mar
 - Ask the client what the piece must achieve, profit or just breaking even [S3].
 - Show the draft to someone outside the project and ask if they'd want to buy [S3].
 - Walk away from a client who is cheating people [S2].
+- When stuck on a creative job, swap to a detail job such as research, and back again [S8].
+- Ask what the client's goal is, and whether the 5 percent at the top could lift the rest [S8].
+
+## Real decisions
+
+### Leaving film for copy
+
+When the 1973 oil embargo dried up his work as a film and video cameraman in Los Angeles, he took a job writing copy at a small list-brokerage firm in 1974 for $15,000 a year [S1][S2]. He had no mentor and learned by trial and error, which he said stretched the road to seven figures to about 20 years [S1].
+
+### Going out on his own
+
+In 1979 he left staff work and went freelance, writing fundraising appeals and promotions for investment newsletters [S1]. The fundraising habit stayed with him for good: with no product to sell, the letter had to make the giver feel something [S1].
+
+### Resigning a client who cheated people
+
+Early in his career he found one client was defrauding customers. He resigned the account and wrote a scorching letter saying why. That client was later jailed for fraud [S2].
+
+### Telling the silver dollar as a story
+
+For the Morgan silver dollar promotion he told the coin's history as a story and kept the investment case in one small box, rather than leading with a table [S3].
+
+### Swapping tasks when stuck
+
+When he struggles with a creative job such as an outline, heads or copy from scratch, he moves to a detail job like research, and swaps back later [S8]. He puts most blocks down to too much information, too broad a core idea or too poor an understanding of the topic [S8]. His 2005 interview adds that he never starts from a blank screen [S1].
 
 ## Where he stood
 

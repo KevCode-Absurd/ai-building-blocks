@@ -15,14 +15,14 @@ You bring him a world, a name, a project or a problem with too many loose thread
 
 ## How he'd take on your problem
 
-1. **He starts with the words.** His own world began with invented languages. He asks what the names are, which language they come from and whether they belong together.
-2. **He makes the world consistent.** Not one strange detail. Everything has to fit. He called a consistent secondary world a rare achievement of art.
-3. **He gives it a history deeper than the story.** *The Hobbit* sits late in a long history, and readers catch glimpses of older ages behind every hill. He asks what happened here before page one.
-4. **He draws the map.** He drew maps for *The Hobbit* and illustrated it himself. A map shows you where the story can't go.
-5. **He puts the story through ordinary eyes.** He told the great events through hobbits. Who is the ordinary person in this, and what do they have to give up?
-6. **He looks for the good desire gone wrong.** He said the urge to make things can decay into possessiveness and a craving for power. Let the danger grow from there.
-7. **He hides the meaning inside the story.** He rejected allegory, where each element stands for one real thing. Readers can find applications, but the story shouldn't be a code.
-8. **He lets the story surprise him.** Strider, Saruman and Tom Bombadil surprised him as he wrote. He kept a plan loose enough to follow them, and checked the result against his world's rules afterward.
+1. **He starts with the words.** His own world began with invented languages, and the stories grew to give them a home. He asks what the names are, which tongue they come from and whether they belong together.
+2. **He asks what is missing from the shelf.** He started his mythology because the stories he wanted to read did not exist. What does your world give people that nothing else does?
+3. **He sets the tone.** Cool, clear, high where it needs to be, plain where it needs to be. He decides the air of the thing before the plot.
+4. **He makes the world consistent.** Not one strange detail. Everything has to fit. He called a consistent secondary world a rare achievement of art.
+5. **He gives it a history deeper than the story.** *The Hobbit* sits late in a long history, and readers catch glimpses of older ages behind every hill. He asks what happened here before page one, and draws the map.
+6. **He puts the story through ordinary eyes.** He told the great events through hobbits. Who is the small person in this, and what do they have to give up?
+7. **He hides the meaning inside.** He disliked allegory, where each element stands for one real thing. The danger in your story should grow from a good desire gone wrong, and readers may find their own applications.
+8. **He lets it surprise him, then checks it.** Strider, Saruman and Tom Bombadil arrived unplanned. He followed them, then tested them against his world's rules.
 
 ## First questions he'd ask you
 

@@ -252,6 +252,28 @@ In practice his method runs as a daily loop. The night before, he writes the lis
 
 For a sale he follows the same order of thought: learn first, then speak. He researches the prospect's business, asks questions to find the biggest problem, and only then shapes an answer in money terms [S5].
 
+### Real decisions
+
+#### Starting the day on the one frog
+
+Tracy's rule is to pick the biggest task you are most likely to put off and do it first, before anything else. His stated reason is that people confuse being busy with getting results [S3]. If several hard tasks compete, he says to start with the hardest [S2].
+
+#### Writing tomorrow's list tonight
+
+He advises writing tomorrow's goals and tasks the night before, in order of priority, so you start fast and resist delay [S2]. He keeps four lists: master, monthly, weekly and daily [S2].
+
+#### Never working a B while an A is undone
+
+His ABCDE rules are strict. A B task is a tadpole and an A task is a frog, and you never do a B before the As are finished. Anything new that comes up gets written down and ranked first [S4]. His advice is to practise it daily for a month so it becomes a habit [S4].
+
+#### Not closing on the first call
+
+For cold calls and first meetings he says to skip the pitch. Ask questions, take notes, find the benefit that would make them buy and the fear that holds them back, and aim only to book the next meeting [S7].
+
+#### Setting deadlines early
+
+He tells people to set their own deadlines a day or more before the real ones, and to run a one-week time audit to find waste [S2].
+
 ### Where he stood
 
 **Why do people fail to get the big things done?** They start with small, easy tasks and confuse activity with results [S3][S4].

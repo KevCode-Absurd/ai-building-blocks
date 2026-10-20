@@ -1,0 +1,19 @@
+slug: feedback-conversation-planner
+name: "Feedback conversation planner"
+summary: "Describe the person and the problem. Get the conversation: what to praise, what to say and how to say it."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [kim-scott]
+credits:
+  - {title: "How do you get feedback? The four steps to solicit Radical Candor", by: "Kim Scott, Radical Candor", url: "https://www.radicalcandor.com/", used: "The care and challenge chart, specific praise, feedback about behaviour that is humble, helpful, immediate and in person, and listening without defending"}
+  - {title: "Radical Candor: the surprising secret to being a good boss", by: "Kim Scott, First Round Review", used: "Describing behaviour and its effect in plain words and agreeing a follow-up"}

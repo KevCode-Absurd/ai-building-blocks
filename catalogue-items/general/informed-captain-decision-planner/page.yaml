@@ -1,0 +1,131 @@
+new_slug: informed-captain-decision-planner
+name: "Informed captain decision planner"
+summary: "Paste a big decision and who is involved. Get one named owner, a plan to gather dissent, and a review date."
+job: lead-people
+thinking: medium
+thinking_why: "It sets a process for a decision, which needs judgment about people but follows a clear structure."
+
+headline: "Informed captain decision planner"
+subhead: "Paste a big decision and who is involved. It names one owner, finds who knows most and who disagrees, asks each for the strongest case against, sets the decision date and the rule for what happens after the call."
+
+explain: |
+  Big decisions go wrong in two ways. Either nobody owns the call and it drifts, or one person decides without hearing the people who disagree. A vote makes it worse: it turns a question of fact into a popularity contest.
+
+  This skill names one informed captain, the person closest to the facts who will own the result. It finds who knows the work best and who is likely to disagree, asks each for the strongest case against, and sets the date the captain decides. It picks who attends: people who know the work, plus one senior person who joins as an equal. It sets the rule that every view is said out loud before anyone reads the room, and that after the call people disagree out loud and then commit.
+
+when:
+  - "A team is stuck on a choice and no one owns it."
+  - "A leader is about to decide alone and wants to hear the strongest objections first."
+  - "A decision keeps being reopened after the meeting."
+
+you_give:
+  - "The decision, in a sentence, and why it matters now"
+  - "Who is involved and what each knows (names or roles)"
+  - "Any deadline"
+  - "Who has already shown they disagree (optional)"
+you_get:
+  - "One named owner, with the reason"
+  - "A list of who knows most and who disagrees"
+  - "A request for the strongest case against, per person"
+  - "A decision date, an attendee list, ground rules and a review date"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the decision and list who is involved with what each knows."
+  - "Name anyone who has already pushed back."
+  - "Send the request for the strongest case against to each person before the meeting."
+  - "Hold the meeting by the ground rules and write down who stayed silent."
+
+how_it_works:
+  - title: "Name the captain"
+    text: "Names one informed person to own the call."
+  - title: "Map who knows and who disagrees"
+    text: "Lists who knows most and who disagrees."
+  - title: "Ask for the strongest case against"
+    text: "Asks each dissenter for the strongest case against."
+  - title: "Set the decision date"
+    text: "Sets the date the captain decides."
+  - title: "Pick who attends"
+    text: "Picks the people who know the work, plus one senior equal."
+  - title: "Set the speaking rule"
+    text: "Sets the rule that all views are said before reading the room."
+  - title: "Write the after-call rule"
+    text: "Sets the rule to disagree out loud, then commit, plus a review date."
+  - title: "Check it"
+    text: "Runs its own checks, fixes what it can and names any it missed."
+
+output_shape: |
+  THE DECISION
+  <one sentence> | Why now: <reason>
+
+  CAPTAIN
+  <name or role> | Why: <reason>
+
+  WHO KNOWS MOST
+  - <person> | Knows: <what>
+
+  WHO DISAGREES
+  - <person> | Likely view: <view> | Source: <inferred / told>
+
+  REQUEST FOR THE STRONGEST CASE AGAINST
+  To <person>: <message> | Reply by: <date>
+
+  DECISION DATE: <date>
+
+  ATTENDEES
+  <list> | Senior equal: <person>
+
+  GROUND RULES
+  - All views said aloud before reading the room
+  - Silent people are asked directly
+  - No vote
+
+  AFTER THE CALL
+  Disagree aloud, then commit. Review on: <date> | Look at: <what>
+
+  MISSING
+  <facts that would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Who is closest to the facts"
+    how: "Name them even if they are junior. The captain should be the best informed."
+  - what: "Known disagreements"
+    how: "List them. They get the first request for a case against."
+  - what: "The deadline"
+    how: "Give the real date. The plan works back from it."
+  - what: "The size of the decision"
+    how: "For a small decision it shrinks the meeting. For a large one it adds a second review."
+
+judge:
+  - "Exactly one person owns the call."
+  - "At least one dissenter is asked by name."
+  - "A decision date and a review date both exist."
+  - "The plan does not use a vote."
+  - "Everyone is expected to speak before the call."
+
+test:
+  - "Run it on a decision your team made last quarter and see who it would have named as owner."
+  - "Send one of its requests for a case against and see if it brings in new facts."
+  - "Check the review date against how the decision turned out."
+
+improve:
+  - "Add the roles in your team with what each knows, so step 2 is faster."
+  - "Add your usual decision sizes and who owns what."
+  - "Keep a log of decisions, captains and results."
+  - "Pair it with Bold bet downside checker when the decision is risky."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Structuring decisions and writing plans is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "A one-page description of the decision"
+    - "A short bio of each person involved"
+    - "Past decisions and how they turned out"
+    - "The deadline and what happens if it is missed"
+
+terms:
+  - {term: "Informed captain", meaning: "The one person closest to the facts who owns the decision and its result."}
+  - {term: "Strongest case against", meaning: "The best argument a disagreeing person can make, written down before the meeting."}

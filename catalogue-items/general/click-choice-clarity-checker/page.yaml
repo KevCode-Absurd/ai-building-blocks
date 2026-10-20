@@ -1,0 +1,126 @@
+new_slug: click-choice-clarity-checker
+name: "Click choice clarity checker"
+summary: "Paste your menu and labels. Get a score out of 100, each choice rated and rewritten."
+job: audit-landing-page
+thinking: medium
+thinking_why: "It rates each choice by judgement and rewrites labels, but the scale is fixed."
+
+headline: "Click choice clarity checker"
+subhead: "Give it a page and its menus, buttons and labels. It lists every choice a first-time visitor faces and rates how hard each is. You get a score out of 100, plain rewrites and where to add short help."
+
+explain: |
+  Visitors do not read a page, they scan it and click the first thing that looks right. Each choice that needs thought slows them down and some give up. The number of clicks matters less than whether each one is easy. Three easy clicks beat one click that makes people stop and wonder.
+
+  This skill lists every choice on the path to the goal and rates each as mindless or needing thought. It checks that each label gives a clear sense of where it leads, rewrites overlapping or vague labels in the visitor's words, and moves hard choices behind a simpler first choice. It adds help only where a choice stays hard.
+
+when:
+  - "Your menu has labels that overlap, like \"Services\", \"Solutions\" and \"Products\"."
+  - "Visitors reach the page but do not click the thing you want."
+  - "You are redesigning navigation and want a clear test for each label."
+
+you_give:
+  - "The page or its menu, buttons and labels (attach it; your AI can see pictures)"
+  - "What the visitor is trying to do"
+  - "A review of the page, from a reviewer skill"
+  - "The layout plan (optional)"
+you_get:
+  - "Every choice listed and rated: clear or needs thought"
+  - "A score out of 100 with the working"
+  - "A plain rewrite for each weak label"
+  - "Places to add short help, and where not to"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Attach the page or paste the menu and button labels."
+  - "Say what the first-time visitor is trying to do."
+  - "Add the review if you have it."
+  - "Swap in the rewrites and test them on someone who has not seen the page."
+  - "Run it again on the new labels to see the score change."
+
+how_it_works:
+  - title: "Lists every choice"
+    text: "Every link, button and option a first-time visitor faces on the path."
+  - title: "Rates each one"
+    text: "Marks it clear and unambiguous, or needing thought."
+  - title: "Checks the scent"
+    text: "Tests whether each label tells you where it leads."
+  - title: "Rewrites weak labels"
+    text: "Uses the visitor's words, and splits overlapping choices."
+  - title: "Simplifies hard choices"
+    text: "Moves a hard choice behind a simpler first one."
+  - title: "Adds help sparingly"
+    text: "Short, timely help, only where a choice stays hard."
+  - title: "Counts thought"
+    text: "Measures effort of choosing, not number of clicks."
+  - title: "Scores and checks"
+    text: "Shows the score working and names any check missed."
+
+output_shape: |
+  GOAL
+  <what the first-time visitor is trying to do>
+
+  CHOICES ON THE PATH
+  <n>. <screen> | <label or option> | Rating: <clear / needs thought>
+     Scent: <does it say where it leads, yes or no>
+     Overlaps with: <other label, or none>
+     Rewrite: <plain label in the visitor's words>
+
+  HARD CHOICES MOVED
+  <choice> now sits behind <simpler first choice>
+
+  HELP TO ADD
+  <where, how short, why it is needed>
+
+  SCORE
+  <n> out of 100 = 100 x <clear choices> / <all choices>. Score with the rewrites: <n>
+
+  MISSING
+  <what would change a rating>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The goal"
+    how: "Name one goal. Ratings change with it, because a choice is only hard relative to what the visitor wants."
+  - what: "Visitor words"
+    how: "Paste how visitors describe things, from search terms or support email. Rewrites then use their words."
+  - what: "Whole path"
+    how: "Give every screen on the path. A menu looks fine alone and fails in sequence."
+  - what: "Existing help"
+    how: "Show help text already on the page, so it can judge whether it is needed or in the way."
+
+judge:
+  - "Every label has a rating."
+  - "No two choices overlap in meaning."
+  - "Added help is short and sits at the point of need."
+  - "Rewrites use words visitors use, not ours."
+  - "The score shows how it was worked out."
+
+test:
+  - "Cover the page except for the labels. Ask someone where each would take them. Compare with the ratings."
+  - "Run it twice on the same page. The rated-hard list should match."
+  - "Swap in two rewrites and watch whether people choose faster."
+  - "Compare the score before and after on the same visitor goal."
+
+improve:
+  - "Add your visitor words (search terms, support phrases) to \"What you need\"."
+  - "Add your own naming rules, such as banned words, to step 4."
+  - "Save approved labels to your brand file so they stay consistent."
+  - "Pair it with \"Small usability test planner\" to test the hard choices with real people."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI that reads images", why: "It needs to look at screenshots of menus and buttons."}
+    - {name: "Your site search log", why: "The words people type are the best source of plain labels."}
+  inputs:
+    - "Search terms visitors use on your site"
+    - "Support questions that mention finding things"
+    - "A site map or menu tree"
+    - "Click data from your analytics tool"
+
+terms:
+  - term: "Scent"
+    meaning: "How well a label hints at what you will find if you click it."
+  - term: "Mindless choice"
+    meaning: "A choice where the right answer is obvious and takes no thought."

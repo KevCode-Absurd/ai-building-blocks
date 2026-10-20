@@ -1,0 +1,20 @@
+slug: customer-hero-message-writer
+name: "Customer-hero message writer"
+summary: "Paste your offer and buyer. Get a one-line message, a short page script and a first step, with the customer as hero."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: brand_brain, required: false}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [donald-miller]
+credits:
+  - {title: "How to Clarify Your Message with Donald Miller (interview)", by: "Donald Miller", used: "Naming the customer's want and three levels of problem, and compressing a message into one line"}
+  - {title: "Selling with Story: How to Make Your Customer the Hero", by: "Donald Miller", used: "Casting the brand as the guide, giving a plan, and pairing a direct call to action with a lighter one"}

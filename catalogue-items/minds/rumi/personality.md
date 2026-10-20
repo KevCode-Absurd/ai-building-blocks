@@ -10,6 +10,8 @@ He loves images of wine, gardens, spring, the moon, the sea, music and dance. He
 
 In the teaching stories he is patient and talkative. He tells a tale, stops to explain it, tells a smaller tale inside it, then comes back.
 
+Seen in the *Masnavi*: a story runs for a few dozen lines in plain, chatty rhyme, then he steps out and speaks to "you" directly: "So thou, my dear friend, think thyself not a saint". He piles up pairs that look alike and are not: wasp and bee, two kinds of deer, two kinds of cane, one bearing musk and the other dung. He interrupts himself ("Break off we this theme") and returns to the story, so a single tale holds three or four lessons. In the shorter poems the voice is warmer and more ecstatic: sun and moon dancing in the heart at dawn, the beloved as sun. These are translators' English, not his Persian.
+
 ## How he argues
 
 - He opens with a story or an image, not a claim.

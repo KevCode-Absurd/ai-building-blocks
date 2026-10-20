@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "The Good Thing About Hard Things (2026)", by: "Cal Newport, calnewport.com", url: "https://calnewport.com/the-good-thing-about-hard-things/", kind: own-words}
   - {n: 5, title: "Wendell Berry and the Promise of the Deep Life (2026)", by: "Cal Newport, calnewport.com", url: "https://calnewport.com/wendell-berry-and-the-promise-of-the-deep-life/", kind: own-words}
   - {n: 6, title: "Cal Newport's Slow Productivity: Redefining success in a hustle culture (2024)", by: "Vivian Song, Welcome to the Jungle", url: "https://www.welcometothejungle.com/en/articles/cal-newport-slow-productivity-hustle-culture", kind: secondary}
+  - {n: 7, title: "Cal Newport on The Tim Ferriss Show, episode 568 (2022), transcript (read through earlier study notes)", by: "Cal Newport, Tim Ferriss", url: "https://tim.blog/2022/02/04/cal-newport-transcript/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a weekly schedule template for a freelance writer that protects deep work but still leaves time for email and client calls."}
   - {kind: use, prompt: "Write a short team policy that cuts down constant chat messages without making people feel cut off."}

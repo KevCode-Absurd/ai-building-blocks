@@ -1,0 +1,114 @@
+new_slug: platform-native-content-planner
+name: Platform-native content planner
+summary: Paste your business and the platform. Get a month of content made for that place and a daily habit.
+job: grow-social
+thinking: medium
+thinking_why: It matches content to how a platform works, which needs judgement.
+headline: Platform-native content planner
+subhead: Give it your business, your buyer and one platform. It studies how people post there, lists what your audience already cares about, and plans a month of small pieces that join the conversation. You get the plan, a set of first lines and a posting rhythm you can keep.
+explain: |
+  Most businesses post the same thing everywhere: a sales message cut to size. It rarely works, because every platform has its own habits. Length, sound, pace and tone differ, and people there are not waiting for an ad.
+
+  This skill starts with one platform and describes how people post there. It lists what your audience already talks about, then plans many small pieces tied to those topics, with selling kept to a few. It sets a rhythm you can keep for a year, gets the first posts out before the plan is perfect, and ends with a monthly review that keeps what worked and changes what did not.
+when:
+  - You are starting on a new platform and do not want to copy your other channels.
+  - Your posts get little response and feel like ads.
+  - You post in bursts and need a rhythm you can keep.
+you_give:
+  - Your business and your brand file (what you do, who you serve, voice)
+  - The one platform you want to grow on
+  - A buyer description (optional)
+  - Your last month of results, if any (optional)
+you_get:
+  - A description of how people post on that platform
+  - A month of content ideas, each tied to something your audience cares about
+  - A set of first lines to start the pieces
+  - A posting rhythm, plus a monthly review rule
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brand file and name the one platform.
+  - Add your buyer and any past results.
+  - Post the first three pieces this week, before the plan feels complete.
+  - At the end of the month, bring your numbers and run it again.
+how_it_works:
+  - title: Picks the platform
+    text: Confirms one platform where attention is cheap for your buyer now.
+  - title: Studies native habits
+    text: Describes the formats, length, sound and tone people use there.
+  - title: Lists audience interests
+    text: Writes what your audience already cares about, such as music, food or news.
+  - title: Plans small pieces
+    text: Builds many short pieces that join those conversations, not pitches.
+  - title: Sets the rhythm
+    text: Chooses a posting rate you can keep for a year.
+  - title: Starts before it's ready
+    text: Lists the first posts to publish now and what numbers to note.
+  - title: Sets the review
+    text: A monthly rule to keep what worked and change what did not.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  PLATFORM
+  <the platform and why it is the one>
+
+  HOW PEOPLE POST THERE
+  Format: <...> | Length: <...> | Sound: <...> | Tone: <...>
+
+  WHAT YOUR AUDIENCE CARES ABOUT
+  <topic 1>, <topic 2>, ...
+
+  THE MONTH
+  Week <n>: <piece idea> | Format | Tied to: <topic> | First line: <hook>
+  ...
+  Sell pieces: <n of N>
+
+  RHYTHM
+  <posts per week, days, time you will spend>
+
+  FIRST THREE TO POST NOW
+  <1>, <2>, <3>
+
+  MONTHLY REVIEW
+  Note: <numbers to record> | Keep if: <...> | Change if: <...>
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: The one platform
+    how: Pick one. A plan for three platforms at once gives thin advice for each.
+  - what: Time you can spend
+    how: Say how many hours a week you have. The rhythm is sized to that.
+  - what: Your audience's interests
+    how: Name what they talk about outside your product. The best pieces start there.
+  - what: Last month's numbers
+    how: Paste views, replies and saves per piece. The review step uses them.
+judge:
+  - The pieces are made for the platform, not cut down from another.
+  - Each piece ties to something the audience cares about.
+  - The rhythm is one you can keep.
+  - The first posts are set before the plan is perfect.
+  - Selling appears in a few pieces, not most.
+test:
+  - Run it for a platform you already use. Check if the habits it lists match what you see in your own feed.
+  - Post the first three pieces and compare their numbers to your usual posts.
+  - Run it twice. The audience interests should stay close.
+  - At month end, run the review and see if it keeps the right pieces.
+improve:
+  - Add your platform rules, such as no faces on camera, to the habits step.
+  - Add the topics your audience brings up in comments to the interests list.
+  - Save the winning pieces and first lines to your brand file.
+  - Pair it with Give before ask sequence planner for the month you want to ask.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Planning and writing first lines is text work any strong chat AI does well with this skill.
+    - name: The platform's own analytics
+      why: It shows views, watch time and replies for the monthly review.
+  inputs:
+    - Your brand file, so the voice and facts are right
+    - A short buyer description with their words
+    - Last month's numbers per piece
+    - Three accounts in your field that do well on this platform
+terms:
+  - term: Native
+    meaning: Made in the style that people on that platform already post in.

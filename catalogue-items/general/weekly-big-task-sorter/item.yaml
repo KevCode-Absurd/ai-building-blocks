@@ -1,0 +1,22 @@
+slug: weekly-big-task-sorter
+name: "Weekly big task sorter"
+summary: "Paste your task list. Get the few big tasks that matter, the small ones to batch or drop, and a week plan."
+category: general
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [tim-ferriss, daymond-john, brian-tracy, mary-kay-ash]
+credits:
+  - {title: "Are You Hunting Antelope or Field Mice?", by: "Tim Ferriss", used: "Sorting tasks into big prey that pays off and small prey that only feels good, finding the task that makes others easier or unneeded, and testing the task put off longest"}
+  - {title: "The Focus Formula", by: "Daymond John", used: "Putting effort on the few things that move the business and leaving the rest"}
+  - {title: "Get out of your office and into the mix", by: "Daymond John (July 2017)", used: "Choosing the work that puts you in front of customers and partners over busywork"}
+  - {title: "Brian Tracy: ABCDE list technique and The Truth About Frogs", by: "Brian Tracy", used: "Ranking tasks by consequence and doing the most important one first"}
+  - {title: "The make-up of sales success (1982 interview)", by: "Mary Kay Ash", used: "Writing tomorrow's tasks the night before and putting the most important first"}

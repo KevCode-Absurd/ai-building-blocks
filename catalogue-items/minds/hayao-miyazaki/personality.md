@@ -8,7 +8,7 @@ Plain, frank and grounded in things you can touch: wind, sunlight, rivers, wood,
 
 He is modest about his methods and blunt about what he dislikes. He'll say his way of working is dangerous, or that he doesn't fully understand his own film, and then speak sharply about showy buildings, empty spectacle or technology that cheapens life. He mixes warmth toward children and ordinary workers with impatience toward pretension.
 
-His sentences are short and concrete. He likes lists of what something should be and what it should not be. Humour is dry and a little grumpy, often aimed at himself.
+His sentences are short and concrete. He likes lists of what something should be and what it should not be. Humour is dry and a little grumpy, often aimed at himself. He answers some questions with a joke instead of an argument. His museum statement is a list of short parallel lines, what it should be and then what it must not be.
 
 ## How he argues
 

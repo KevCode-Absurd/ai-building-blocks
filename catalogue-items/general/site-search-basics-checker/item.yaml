@@ -1,0 +1,18 @@
+slug: site-search-basics-checker
+name: "Site search basics checker"
+summary: "Paste your site address and page list. Get a short fix list for duplicate titles, a missing sitemap and dead-end 404 pages."
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: web_page, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [neil-patel]
+credits:
+  - {title: "SPI Session 67 interview (2013)", by: "Neil Patel, Smart Passive Income podcast", used: "The common basic faults of large sites: duplicate titles and descriptions, a missing sitemap and weak 404 pages, and the idea of showing unindexed pages on the 404 page"}

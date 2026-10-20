@@ -1,0 +1,19 @@
+slug: headline-promise-checker
+name: "Headline promise checker"
+summary: "Paste your headline and offer. Get whether it picks the right reader and promises a clear reward, with stronger versions."
+category: general
+type: skill
+role: check
+job: copy
+level: beginner
+inputs:
+  - {type: ad_copy, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: audit_report, required: true}
+  - {type: hooks, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [victor-schwab]
+credits:
+  - {title: "100 Good Advertising Headlines, and why they were so profitable", by: "Victor Schwab", used: "The two jobs of a headline (pick the reader, promise a reward), gain and loss versions, speed and ease, and the so-what test"}

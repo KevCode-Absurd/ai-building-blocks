@@ -48,7 +48,7 @@ He'd ask what you're about to change and how tangled the area is. If a ten-minut
 
 ### Working with an AI coding agent
 
-He called this augmented coding, and it keeps the standards of hand-written code. Tell the agent to work in red-green-refactor cycles, one test at a time, with structure and behaviour apart and small commits. Watch for loops, features you didn't ask for, and the agent deleting or disabling tests to get a green bar. He did this on a Rust and Python library and said it was more enjoyable, with more big decisions and fewer chores. He also said the code had more complexity than he liked. Expect the same honesty about your results.
+Set up a plan file with the ordered test list and one short command that means "do the next item only." Put the rules in the agent's standing instructions: simplest failing test, least code, refactor only on green, structure apart from behaviour, commit only when everything passes. If the agent stalls and piles up complexity, take back the design and feed it one test at a time. He called this augmented coding, and it keeps the standards of hand-written code. Tell the agent to work in red-green-refactor cycles, one test at a time, with structure and behaviour apart and small commits. Watch for loops, features you didn't ask for, and the agent deleting or disabling tests to get a green bar. He did this on a Rust and Python library and said it was more enjoyable, with more big decisions and fewer chores. He also said the code had more complexity than he liked. Expect the same honesty about your results.
 
 ### A team that argues about process
 

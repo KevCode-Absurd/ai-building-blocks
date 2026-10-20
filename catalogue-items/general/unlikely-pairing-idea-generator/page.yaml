@@ -1,0 +1,122 @@
+new_slug: unlikely-pairing-idea-generator
+name: "Unlikely pairing idea generator"
+summary: "Name two fields or styles. Get ten odd pairings, one limiting rule and a shortlist that passes a not-safe check."
+job: design-work
+thinking: medium
+thinking_why: "It makes many options, drops weak ones and judges which are still safe, but the steps are fixed."
+
+headline: "Unlikely pairing idea generator"
+subhead: Give it who the work is for and two to four fields, styles or tones you admire. It writes at least ten odd pairings, sets one hard limit, lets one accident in, and returns a short list that has passed a not-safe check, with what each pairing borrows.
+
+explain: |
+  Safe ideas come from asking what everyone else does. Fresh ones often come from crossing two things that do not usually meet, such as a legal firm and a comic strip, or a bakery and a field recording. Most pairings fail, so you need many.
+
+  This skill starts with who the work is for, and drops any answer that is only the crowd. It takes the styles you admire and writes at least ten what-if pairings, keeping the failures in view. It sets one hard limit, such as one colour family or one voice. It lets one accident in by moving a strong idea to a new order or format. It asks of each survivor whether it feels safe and pushes it further if so. You get a short list that holds together.
+
+when:
+  - You are stuck with ideas that look like everyone else's.
+  - You are naming, branding, designing or writing and want a new angle.
+  - You want options to choose from, not a single answer.
+
+you_give:
+  - Who the work is for
+  - Two to four fields, styles or tones you admire
+  - A limit you already know applies (optional)
+you_get:
+  - Ten or more pairings, failures included
+  - One limiting rule and how it applies
+  - A shortlist where each pairing says what it borrows from each field
+  - A not-safe verdict on each
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say who the work is for in a sentence, and what you are making.
+  - List two to four things you admire, even if they seem unrelated.
+  - Read all ten pairings, including the bad ones, before you choose.
+  - Pick the ones that make you slightly nervous and test them on someone in your audience.
+
+how_it_works:
+  - title: Names the real audience
+    text: States who the work is for and drops any answer that is only the crowd.
+  - title: Lists your sources
+    text: Notes the two to four styles, fields or tones you admire.
+  - title: Writes the pairings
+    text: Crosses them in odd ways to make at least ten what-ifs, and keeps the failures.
+  - title: Sets one limit
+    text: Fixes one hard limit, such as one colour family or one voice.
+  - title: Lets an accident in
+    text: Moves one strong idea to a new order or format and sees what changes.
+  - title: Runs the not-safe check
+    text: Asks of each survivor whether it feels safe, and pushes it further if it does.
+  - title: Shortlists
+    text: Picks the few that hold together and says what each borrows from each field.
+
+output_shape: |
+  AUDIENCE
+  <who it is for> | Dropped: <any crowd-pleasing answers>
+
+  SOURCES
+  <two to four fields, styles or tones>
+
+  PAIRINGS
+  1. <A + B>: <what-if> | Verdict: <holds / fails, and why>
+  ... (ten or more)
+
+  THE LIMIT
+  <rule> | How it applies: <how>
+
+  THE ACCIDENT
+  <the idea moved to a new order or format, and the result>
+
+  SHORTLIST
+  <n>. <pairing> | Borrows from A: <x> | Borrows from B: <y> | Not-safe check: <result>
+
+  MISSING
+  <what would sharpen the list>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: Choice of sources
+    how: Pick things you like for different reasons. Close cousins give safe pairings.
+  - what: The limit
+    how: Choose a hard one, such as five words or two colours. Tight limits push ideas further.
+  - what: The audience
+    how: Name specific people, not a market. It stops ideas from being bent toward the crowd.
+  - what: Number of pairings
+    how: Ask for twenty. The first ten are usually the obvious ones.
+
+judge:
+  - Ten or more pairings were written, with failures kept.
+  - One limiting rule was set and applied.
+  - No pairing was chosen to please an imagined crowd.
+  - Each survivor passes a not-safe check.
+  - The shortlist says what each pairing borrows from each field.
+
+test:
+  - Run it on a project you already finished and see if any pairing is better than what you made.
+  - Show the shortlist to two people in your audience and note which one they react to.
+  - Run it twice with different limits and compare the lists.
+  - Remove the limit and see how much blander the list becomes.
+
+improve:
+  - Add a list of your own sources, so the pairings draw on what you really know.
+  - Add the limits that suit your craft, such as sizes, lengths or palettes.
+  - Add a note on what counts as safe in your field.
+  - Pair it with a brief writer once you choose a pairing.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Making and ranking options is text work any strong chat AI does well."}
+    - {name: "Index cards or a whiteboard", why: "Moving pairings around by hand helps you see which ones fit."}
+  inputs:
+    - "Examples of work you admire"
+    - "A list of what your audience already sees every day"
+    - "A hard limit such as size or budget"
+
+terms:
+  - term: Pairing
+    meaning: A combination of two fields, styles or tones that do not normally meet.
+  - term: Not-safe check
+    meaning: A test that asks whether an idea feels comfortable, and pushes it further out if it does.

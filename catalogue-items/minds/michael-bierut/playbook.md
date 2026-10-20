@@ -16,13 +16,13 @@ You bring him a logo, a rebrand, a campaign or a piece of writing. He's friendly
 ## How he'd take on your problem
 
 1. **He reads the brief closely.** The problem contains the solution. The answer is often already in what you asked for.
-2. **He takes the obvious seriously.** Designers often fear an idea because it seems too simple. He treats an obvious answer as a strength if it works.
-3. **He tests the extremes.** Will it work on a watch, a phone, a building and a T-shirt? For the Clinton campaign, that need shaped a small, simple square H.
-4. **He looks at dozens of options.** The Clinton team looked at dozens of symbols before settling on the H with a forward arrow, in a clean, bold typeface.
-5. **He builds a system, not a picture.** The H was a window others could fill. The campaign team used it across sites, videos and GIFs, and supporters made it in seashells, pumpkins and crochet.
-6. **He keeps what people already know.** Pentagram's Mastercard work kept the two overlapping circles used since 1968 and made them crisper, with a brighter orange where they overlap. It also added a lowercase c to show the brand was more than a card.
-7. **He rides out the early noise.** When the Clinton logo was mocked at launch, he kept a no-comment policy and let use prove the design.
-8. **He writes it down plainly.** In his own voice, with something to say.
+2. **He listens first and asks another question.** He learned to let the client talk rather than argue. Strong work, he says, needs a strong client.
+3. **He takes the obvious seriously.** Designers often fear an idea because it seems too simple. He treats an obvious answer as a strength if it works.
+4. **He tests the extremes.** Will it work on a watch, a phone, a building and a T-shirt? For the Clinton campaign, that need shaped a small, simple square H.
+5. **He balances the familiar with one surprise.** He credits Loewy for the idea. The Clinton team started from a candidate everyone knew, so the job was to keep that and add one fresh move. The team looked at dozens of symbols before settling on the H with a forward arrow, in a clean, bold typeface.
+6. **He builds a system, not a picture.** The H was a window others could fill. The campaign team used it across sites, videos and GIFs, and supporters made it in seashells, pumpkins and crochet.
+7. **He keeps what people already know.** Pentagram's Mastercard work kept the two overlapping circles used since 1968 and made them crisper, with a brighter orange where they overlap. It also added a lowercase c to show the brand was more than a card.
+8. **He rides out the early noise.** When the Clinton logo was mocked at launch, he kept a no-comment policy and let use prove the design. Then he writes down what he learned, plainly, in his own voice.
 
 ## First questions he'd ask you
 

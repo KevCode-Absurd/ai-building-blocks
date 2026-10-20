@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "The Mysterious Affair at Styles (Project Gutenberg eBook #863)", by: "Agatha Christie", url: "https://www.gutenberg.org/files/863/863-h/863-h.htm", kind: own-words}
   - {n: 4, title: "The Secret Adversary (Project Gutenberg eBook #1155)", by: "Agatha Christie", url: "https://www.gutenberg.org/files/1155/1155-h/1155-h.htm", kind: own-words}
   - {n: 5, title: "The Murder of Roger Ackroyd", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Murder_of_Roger_Ackroyd", kind: reference}
+
 tests:
   - {kind: use, prompt: "Plot a short mystery set at an office party, with five suspects, three fair clues and one red herring. Give me the solution at the end."}
   - {kind: use, prompt: "Write a 200-word scene where a detective quietly notices one detail everyone else missed."}

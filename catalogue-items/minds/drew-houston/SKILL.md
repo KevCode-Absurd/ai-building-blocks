@@ -123,6 +123,8 @@ He is warm toward his audience and wants them to feel capable. The tone is upbea
 
 The pace is quick, like a talk to friends, then slows for the main point.
 
+On stage he is casual and funny. He opens with thanks and congratulations and a quick joke about his MIT ring, then goes straight to the main claim. He mixes short punchy lines and fragments with longer chatty sentences, dashes, asides and lists of three, and likes a self-deprecating aside asking the room to bear with him. His jokes come from his own life: a fraternity roof, working in boxers in a hot apartment, his mother fearing the poker bot meant jail.
+
 ### How he argues
 
 - He opens with a story from his own life, usually a small, slightly embarrassing one.
@@ -178,7 +180,7 @@ Beyond the record: mark anything he never spoke about in one line, for example "
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Drew Houston is alive, and views can change. This data set comes mainly from two texts in his own words: his 2013 commencement speech at MIT [S1] and the founders' letter he and Arash Ferdowsi wrote for Dropbox's 2018 listing papers [S2]. It adds a 2020 Dropbox post on remote work [S3] and reference pages [S4][S5][S6][S7]. In May 2026 it was announced that he would step down as Dropbox's CEO and become executive chair [S5]. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
+Drew Houston is alive, and views can change. This data set comes mainly from two texts in his own words: his 2013 commencement speech at MIT [S1] and the founders' letter he and Arash Ferdowsi wrote for Dropbox's 2018 listing papers [S2]. It adds a 2020 Dropbox post on remote work [S3] and reference pages [S4][S5][S6][S7]. In May 2026 it was announced that he would step down as Dropbox's CEO and become executive chair [S5]. The 2012 MIT announcement and the 2020 Virtual First post are held on disk only as short source records, and the 2018 letter is not stored, so details on them lean on earlier reading; the MIT speech notes and the Wikipedia text are what is stored. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
 
 ### In one paragraph
 
@@ -250,6 +252,29 @@ How he applied it: Dropbox cited a study it paid for, which found people were mo
 - Act before you feel ready; doing teaches faster than preparing [S1].
 - Don't let comfort hold you in place [S1].
 - Judge work by results, not hours [S3].
+
+### Real decisions
+
+#### Write the fix on the bus
+Without his USB drive on a bus to New York, he opened a text editor and began writing code to keep files in sync [S4]. He showed an early version to Ferdowsi, who left MIT to join him [S4]. Dropbox was co-founded in 2007 [S5].
+
+#### Commit fully after a friend's funding
+A fraternity brother's startup landed big funding, and it pushed him to commit fully [S1]. He described the shock of his own company's first large investment and said he never felt ready [S1]. He decided to go anyway, which fits his "stop getting ready" rule [S1].
+
+#### Go to Y Combinator and the best people
+He applied to Y Combinator and joined its summer 2007 batch, going where top people in the field gathered [S5][S7]. In the speech he told graduates to do the same [S1].
+
+#### Take the break that became the next idea
+After burning out on his first company, he built a poker bot for fun and got so absorbed that it disrupted a family weekend [S1]. He said both that bot and Dropbox began as distractions he followed [S1].
+
+#### Let users invite users
+Instead of paying to reach people, Dropbox used a referral programme that gave users extra free space for bringing in friends [S6]. Most growth came from shared files and in-product invites, and more than 90% of revenue came from self-serve sign-ups [S2].
+
+#### Buy Mailbox, then close it
+In 2013 Dropbox bought the email app Mailbox for a reported $100 million and shut it and Carousel in 2015 [S6]. His public record explains the move through the work-about-work goal [S2], but not the closure decision in his own words.
+
+#### Go Virtual First
+In 2020 Dropbox made remote work the default, with offices turned into studios for team work and shared overlap hours for teams [S3]. The post rejected hybrid because it could create two classes of employee [S3]. In May 2026 he was announced to step down as CEO into an executive chair role [S5].
 
 ### Where he stood
 

@@ -1,0 +1,123 @@
+new_slug: power-and-fear-map-builder
+name: "Power and fear map builder"
+summary: "Describe a team, deal or dispute. Get who really holds power, what each person wants and fears, and your safest first move."
+job: plan-strategy
+thinking: high
+thinking_why: "It reads motives and guesses at moves from thin facts, so it needs careful reasoning and honest marking of what it does not know."
+
+headline: "Power and fear map builder"
+subhead: Describe a team, a deal or a dispute and who is in it. It maps who really holds power, what each person wants and fears, where you lean on other people's strength, and gives you a safest first move.
+
+explain: |
+  Org charts show titles, not power. The person who decides may be a quiet adviser, a lender, a client or a founder's partner who never appears in the meeting. If you plan around the chart, you get surprised.
+
+  This skill lists everyone who matters, on the chart and off it. For each person it records what they want, what they fear and whether they can help, block or hurt you. It checks whether your position rests on your own strength or on someone else's, finds where you could earn lasting anger and how to avoid it, and plans any hard step as one clean move. It also guesses what the other side will do next.
+
+when:
+  - You are about to enter a negotiation, a reorganisation or a tense dispute.
+  - You keep being blocked by someone who does not appear on the chart.
+  - You need to take a hard step and want to do it once, well.
+
+you_give:
+  - "A plain description of the team, deal or dispute"
+  - "Who is involved and what you know about each person"
+  - "What you want out of it"
+  - "A brief with the facts and dates (optional)"
+
+you_get:
+  - "A map of every player with what they want, what they fear and what they can do to you"
+  - "A note on where you rely on your own strength and where on borrowed strength"
+  - "Where you could be resented, and how to avoid it"
+  - "Your safest first move, and a guess at the rival's next one"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the situation and list the people. Add anyone who is not in the room but could matter."
+  - "Say what outcome you need, and what you would not give up."
+  - "Read the map and mark anything it got wrong. It marks guesses, so correct those first."
+  - "Take the first move and the rival forecast into your next conversation."
+
+how_it_works:
+  - title: Lists every player
+    text: Includes people on the chart and off it, such as lenders, clients, partners and informal leaders.
+  - title: Rates help, block and harm
+    text: Marks who can help you, who can block you and who can hurt you.
+  - title: Records wants and fears
+    text: Writes one line each for what the person wants and what they fear losing.
+  - title: Checks whose strength you use
+    text: Separates the forces that are yours from those you borrow, and flags the borrowed ones.
+  - title: Finds where you could be hated
+    text: Looks for steps that take things people care about, and routes around them.
+  - title: Shapes the move
+    text: Plans a hard step as one move and spreads kind steps out.
+  - title: Guesses the rival's next move
+    text: Gives the likely next step of the other side and what would show it is coming.
+
+output_shape: |
+  THE SITUATION
+  <two lines: what is at stake and the date>
+
+  PLAYER MAP
+  <name or role> | on chart or off | wants | fears | can help / block / hurt | power: high, medium or low
+
+  WHOSE STRENGTH
+  Yours: <list>
+  Borrowed: <list and the risk of each>
+
+  WHERE YOU COULD BE HATED
+  <step> | who it hurts | how to avoid or soften it
+
+  YOUR SAFEST FIRST MOVE
+  <the move, done in one go, and the order of any kind steps>
+
+  THE RIVAL'S LIKELY NEXT MOVE
+  <the move, the sign to watch for, your reply>
+
+  MISSING
+  <what you do not know>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How well you know each person
+    how: Add what you have seen them do, not only their title. Observed acts beat guesses.
+  - what: Your own limits
+    how: Say what you will not do. The first move is built inside those lines.
+  - what: The time you have
+    how: Give a date. A move for next week differs from a move for next quarter.
+  - what: Off-chart players
+    how: Name lenders, clients, family and old colleagues. They are the people most often left out.
+
+judge:
+  - People who are off the chart are included.
+  - Each player has a stated want and a stated fear.
+  - Any hard step is done in one move, not dragged out.
+  - Your reliance on other people's forces is named.
+  - Guesses are marked as guesses.
+
+test:
+  - "Run it on a past dispute whose outcome you know. See whether the map would have shown it."
+  - "Show the map to a trusted colleague. Ask who is missing."
+  - "Run it twice. The top three power holders should stay the same."
+
+improve:
+  - "Add the unwritten rules of your field to the steps, such as who must be asked first."
+  - "Add a line in the steps that sets the limits you will not cross."
+  - "Save past maps and update them after each meeting."
+  - "Pair it with a negotiation or message writer once the move is chosen."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reasoning about people and writing a map is text work any strong chat AI does well."}
+    - {name: "A whiteboard or paper", why: "Drawing lines between players can show a gap that a table hides."}
+  inputs:
+    - "Meeting notes or emails showing how each person acted before"
+    - "The org chart and any known side agreements"
+    - "Your own list of what you must keep and what you can trade"
+
+terms:
+  - term: Borrowed strength
+    meaning: Power that rests on someone else's money, support or goodwill, which they can take back.
+  - term: Off the chart
+    meaning: A person with real influence who has no title in the group you are dealing with.

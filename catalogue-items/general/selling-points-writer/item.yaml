@@ -18,6 +18,7 @@ origin: rebuilt
 source_ids: [CES-022]
 old_name: selling points list writer
 version: 2.0.0
+minds: [claude-hopkins, jakob-nielsen]
 credits:
   - {title: "Laddering theory, method, analysis, and interpretation", by: "Thomas J. Reynolds and Jonathan Gutman, Journal of Advertising Research (1988)", url: "https://pcp-net.org/encyclopaedia/marketing.html", used: "Buyers link a product's attributes to what they get from them, the basis of the fact, effect and payoff rungs"}
   - {title: "Scientific Advertising", by: "Claude C. Hopkins", url: "https://www.holloway.com/g/scientific-advertising", used: "An exact fact is believed where a general claim is discounted"}

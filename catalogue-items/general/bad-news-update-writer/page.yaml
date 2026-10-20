@@ -1,0 +1,128 @@
+new_slug: bad-news-update-writer
+name: "Bad news update writer"
+summary: "Paste the facts of a setback. Get a short update with the loss, the numbers, what went right and the next step."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It has to keep the update honest and plain while deciding what order the facts go in."
+
+headline: "Bad news update writer"
+subhead: "Paste the facts of a setback and who must hear it. It puts the loss first, gives the numbers, credits what held and states what is left. You get a short update, plus a list of soft phrases swapped for plain ones."
+
+explain: |
+  When bad news arrives wrapped in soft words, people read the wrapping and distrust the rest. They want to know what was lost, how big it is and what happens next. A first line of thanks or hope makes them wait for the real news.
+
+  This skill leads with the loss in one plain sentence. It gives every number it was given, bad and good, and credits what held. It leaves blame for later and says when it will be looked at. It states what you still have in figures, then lists every soft label in your draft and puts the plain word beside it. Finally it asks whether you would say the update to the person it hurts most. It ends on actions.
+
+when:
+  - "A project, launch or quarter has missed, and you must tell people today."
+  - "You must tell customers about a delay, outage, recall or price rise."
+  - "Your draft sounds like a press release and you want it to sound like a person."
+
+you_give:
+  - "The facts of the setback: what, when, the numbers"
+  - "Who the update is for and how they are affected"
+  - "What you are doing next"
+  - "A draft update (optional)"
+you_get:
+  - "A short update that opens with the loss"
+  - "The numbers, bad and good, with gaps marked"
+  - "A list of soft labels swapped for plain words"
+  - "A close that names actions, who and by when"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste the facts as you know them, with numbers, dates and what you plan to do."
+  - "Say who will read it and what it costs them."
+  - "Paste your own draft if you have one so it can be fixed."
+  - "Check every number against your source before you send."
+
+how_it_works:
+  - title: "Leads with the loss"
+    text: "One plain sentence with the number or date."
+  - title: "Gives the numbers"
+    text: "Bad and good, only from the facts, with gaps marked."
+  - title: "Credits what held"
+    text: "Names what worked and who made it work."
+  - title: "Leaves blame for later"
+    text: "Says the cause will be looked at, and when."
+  - title: "States what remains"
+    text: "The strength you still have, in figures."
+  - title: "Swaps soft labels"
+    text: "Finds each softening phrase and puts the plain word beside it."
+  - title: "Tests it face to face"
+    text: "Asks if you would say every line to the person it hurts most."
+  - title: "Ends on actions"
+    text: "What, who and by when. Then it names any check it missed."
+
+output_shape: |
+  UPDATE
+  <loss in one plain sentence>
+
+  THE NUMBERS
+  Lost: <figures>
+  Not lost: <figures>
+
+  WHAT HELD
+  <what worked, who made it work>
+
+  CAUSE
+  <one sentence: will be looked at, by whom, when>
+
+  WHAT WE STILL HAVE
+  <figures>
+
+  NEXT
+  <action, who, by when>
+
+  SOFT WORDS REPLACED
+  <label> -> <plain word>
+
+  MISSING
+  <numbers not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The numbers"
+    how: "Give exact figures. Without them the update says \"MISSING\" rather than guess."
+  - what: "Who reads it"
+    how: "Say who is hurt most. Sentences are checked against them."
+  - what: "Your draft"
+    how: "Paste it so the soft labels can be found and replaced."
+  - what: "Next steps"
+    how: "Give real dates. Vague next steps stay vague in the update."
+
+judge:
+  - "The first sentence says what was lost."
+  - "Every number is one you gave it."
+  - "No person or team is blamed."
+  - "The close lists actions with owners and dates."
+  - "You would say each line to the person it hurts most."
+
+test:
+  - "Run it on an old bad-news message you sent and compare the first lines."
+  - "Read it aloud to someone not on the project and ask what they think was lost."
+  - "Check each number against the source and note any it invented, which should be none."
+  - "Run it twice and check the plain words match."
+
+improve:
+  - "Add the soft labels your company overuses to step 7."
+  - "Add a rule for how many hours until you will share more facts."
+  - "Keep past updates and their results in your brand file as examples of tone."
+  - "Pair it with \"Hostile-room speech planner\" when you must also speak to an angry group."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting and ordering facts is text work any strong chat AI does well with this skill."}
+    - {name: "Your own data source", why: "Check each number against the sheet or report it came from before sending."}
+  inputs:
+    - "The report or sheet the numbers came from"
+    - "A past update that landed well"
+    - "A list of questions the group will ask"
+
+terms:
+  - term: "Soft label"
+    meaning: "A mild phrase used in place of the plain word, such as \"challenges\" for \"losses\"."
+  - term: "Inquest"
+    meaning: "A review of who or what caused the problem, held later."

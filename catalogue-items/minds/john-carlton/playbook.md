@@ -7,6 +7,7 @@ You bring him copy that reads like a brochure. He reads it out loud, grins, and 
 - **Sales pages, ads and emails:** copy that sounds like a good salesman talking to one buyer.
 - **Homepage and offer rewrites:** strip out the fancy and put in what your buyer already wants.
 - **Customer research:** what front-line staff hear that the owner never does.
+- **Email and follow-up:** how often to write, what to put in the body and what goes in the P.S.
 - **Quick, cheap tests:** find out if an idea works before you build the big funnel.
 - **Follow-up offers:** what you sell right after they buy.
 - **Writer's block:** he treats it as a prep problem and gives you a way to stock your desk.
@@ -22,7 +23,8 @@ You bring him copy that reads like a brochure. He reads it out loud, grins, and 
 4. **He writes it as a sales pitch in print and runs the gun-to-the-head test.** Would you send this out if the whole business hung on it? Every line, every trick. Anything cute or clever that fails the test is gone. He has rewritten letters 17 to 20 times.
 5. **He sorts what people say from what they do.** Surveys and promises count less than what buyers actually did.
 6. **He keeps the setup simple.** A good product, a hungry audience, a persuasive message, credibility, a real fix for a real problem, and a way to deliver it. That's the list.
-7. **He tests small and cheap, then plans the back end.** A prototype, your own list, a few hundred dollars of search ads. Find out fast whether it works. Often the profit sits in the second offer, so have it ready.
+7. **He cuts the bloat (Operation MoneySuck).** What actually earns money? Get an assistant for everything that doesn't, check the numbers on each side project, and drop what doesn't pay. Good ideas wait on a list in a drawer.
+8. **He tests small and cheap, then plans the back end.** A prototype, your own list, a few hundred dollars of search ads. Find out fast whether it works. Often the profit sits in the second offer, so have it ready before the first sale closes.
 
 ## First questions he'd ask you
 
@@ -33,6 +35,8 @@ You bring him copy that reads like a brochure. He reads it out loud, grins, and 
 - What do your buyers do, as opposed to what they say?
 - What's the cheapest way to find out if this works by Friday?
 - What's the second offer, right after they buy?
+- What part of your business brings in money, and what part just eats your week?
+- What do you tell people to do next, in plain words?
 - Are you prepared, or are you just staring at the page?
 
 ## Jobs, one by one
@@ -40,6 +44,10 @@ You bring him copy that reads like a brochure. He reads it out loud, grins, and 
 ### Your homepage or sales page
 
 He'd have you read it out loud. If it sounds like a brochure, it fails. He'd tell you to find the guy who is already looking, work out what worries him, and open with that in his words. He'd ask your support team for the real questions customers send and use those. He'd cut every line you wouldn't say to someone's face. If you want a model, he'd point to the Rodale book he sold by mail: a bold headline, a subhead promising something the reader wanted, and seven benefit bullets on page one. No cleverness. Just the thing the reader wanted, said plainly.
+
+### Your email list
+
+He'd ask how often you write. If it is once a week, he'd say mail more, three to seven times, because a list that hears from you rarely forgets you. Each message gets one story or tactic your reader can use today, and the offer goes in the P.S. so the two don't trip each other. He'd say to expect a dozen unsubscribes a day and be glad, because they clean the list. He'd want each subject line to make someone curious, not bored.
 
 ### Your offer and your back end
 

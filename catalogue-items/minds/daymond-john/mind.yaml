@@ -29,6 +29,8 @@ sources:
   - {n: 5, title: "Social Commerce 3.0: Turning Your Followers Into Loyal Customers (undated, read 2026)", by: "Daymond John, daymondjohn.com", url: "https://daymondjohn.com/blogs/journal/social-commerce-3-0-turning-your-followers-into-loyal-customers", kind: own-words}
   - {n: 6, title: "Daymond John", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Daymond_John", kind: reference}
   - {n: 7, title: "FUBU", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/FUBU", kind: reference}
+
+  - {n: 8, title: "Business advice from Daymond John (Shark Tank investor interview, 2019 Summit)", by: "Daymond John, U.S. Chamber of Commerce", url: "https://uschamber.com/co/start/strategy/business-advice-daymond-john-shark-tank", kind: own-words}
 tests:
   - {kind: use, prompt: "I have $500 to launch a T-shirt brand. Make a 30-day plan that uses trades, favours and free channels before spending money."}
   - {kind: use, prompt: "Write a short live-stream script for a small candle maker selling to their 2,000 Instagram followers."}

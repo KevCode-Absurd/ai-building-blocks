@@ -1,0 +1,107 @@
+new_slug: turn-your-plan-into-guesses-and-test-them-with-customers
+name: "Turn your plan into guesses and test them with customers"
+summary: "Give it your business plan. Get testable guesses, an interview plan and the smallest test of the riskiest guess."
+job: test-an-idea
+thinking: high
+thinking_why: "It turns a plan into guesses and then plans real conversations. Give it your strongest model."
+
+headline: "Find out which parts of your plan are guesses, and test them with customers"
+subhead: "Give it your business plan. It rewrites the plan as guesses on one page, puts them in order of risk and gives each a cheap test and a pass line. It plans who to talk to and what to ask. After your conversations it plans the smallest test of the riskiest guess."
+
+explain: |
+  A business plan reads like a set of facts, but most of it is guesses about who the customers are, what they will pay and how they will hear of you. Teams spend months building to the plan and learn too late that a guess was wrong.
+
+  This workflow turns each part of the plan into a guess you can test. It orders them by risk and pairs each with a cheap test and a pass line. Then it plans the conversations to have with customers, with questions about what people do now and not about your product. You go and have the talks. Back in the workflow, it uses what you heard to plan the smallest test of the riskiest guess and a rule for whether to change direction. The method comes from Steve Blank's Customer Development Manifesto.
+
+when:
+  - You have a business plan on paper and haven't yet tested any of it on real customers.
+  - You are about to hire sales or marketing staff before you know who buys and why.
+  - You have talked to a few people but never wrote down what you were trying to learn.
+
+you_give:
+  - Your business plan or a short brief on the idea
+  - Who you think the customers are and how you plan to reach them
+  - Notes from your customer talks, for the last step
+  - A week or two for the talks
+
+you_get:
+  - A one-page version of the plan with every box turned into a guess, ordered by risk, each with a cheap test and a pass line
+  - A conversation plan with which guess each talk tests, who to talk to, and questions about what people do now
+  - The riskiest guess, the smallest test to try next and a rule for changing direction or keeping going
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give it your plan or brief. It runs steps 1 and 2 and stops.
+  - Talk to customers about each guess, and write notes straight after each talk.
+  - Bring the notes back and say "carry on from step 3".
+
+how_it_works:
+  - title: Turn the plan into guesses
+    text: "Lays the plan out on one page: customers, value, channels, revenue and costs. Turns each box into a guess, orders by risk and adds a test and a pass line."
+  - title: Plan the customer talks
+    text: "Takes the guesses from step 1 and lists who to talk to for each. Writes questions about what people do now, and a way to record what they say."
+  - title: Test the riskiest guess
+    text: "After your talks, picks the riskiest guess that is left. Designs the smallest test, sets the pass numbers and a rule to change direction or carry on."
+
+output_shape: |-
+  STEP 1: GUESSES ON ONE PAGE
+    Stage: <still searching / ready to execute>
+    Guess: <box: customers / value / channels / revenue / costs> | <the guess> | risk <high / medium / low>
+    Test: <cheap test> | Pass line: <...>
+
+  STEP 2: CUSTOMER TALK PLAN
+    Guess tested: <...> | Who to talk to: <...>
+    Questions: <about what they do now, not your product>
+    Record: <what they did, what they said>
+
+  (you have the talks)
+
+  STEP 3: SMALLEST TEST
+    Riskiest guess left: <...>
+    Test: <smallest product or ad test>
+    Pass line: <numbers, set before running>
+    Rule: <change direction / keep going>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: How much of the plan you give it
+    how: Give the whole plan, including pricing and how you will reach people. Boxes you leave out can't be turned into guesses.
+  - what: Who does the first talks
+    how: Do them yourself. What you hear first-hand shapes the plan more than any report.
+  - what: Your notes
+    how: Write what people did and said in their own words, straight after each talk. Notes that say only "liked it" can't be used.
+
+judge:
+  - Every box in the plan is a guess that could be shown wrong.
+  - The guesses are in order of risk, and the riskiest is the one that would sink the plan.
+  - Questions are about what people do now, not what they think of your idea.
+  - Each test has a pass line set before it runs.
+  - Nothing a customer said is invented, and gaps in your notes are listed.
+
+test:
+  - Give it a plan you already know has one weak assumption. That assumption should rank near the top.
+  - Paste three questions about your product. Check that the plan rewrites them around what people do.
+  - Run step 1 twice on the same plan. The top two guesses should agree.
+
+improve:
+  - After each test, log what changed in the plan and why.
+  - Add the guesses that held to your brand file, so later work can rely on them.
+  - Keep sales and marketing spend small until the guesses about customers, price and channel have passed.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Holds the plan, the guesses and your notes across the pause."}
+    - {name: "A notes app or voice memo", why: "Lets you capture what people said straight after each talk."}
+  inputs:
+    - "A list of people who might talk to you"
+    - "Any numbers you already have on price or demand"
+    - "Your pricing idea and why"
+
+terms:
+  - term: One-page model
+    meaning: A single sheet with boxes for customers, value, channels, revenue and costs, used to see the whole plan at once.
+  - term: Pass line
+    meaning: The result you set in advance that counts as a guess holding up.

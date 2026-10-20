@@ -1,0 +1,124 @@
+new_slug: publicity-first-launch-planner
+name: "Publicity-first launch planner"
+summary: "Paste your new product and its category. Get a launch that starts with press coverage, then ads once people believe it."
+job: plan-strategy
+thinking: medium
+thinking_why: "It chooses a category claim and a news angle, which needs judgment, then follows a fixed order."
+
+headline: "Publicity-first launch planner"
+subhead: "Give it your new product, your brand facts and your plan so far. It checks whether you are first in your category, picks the one idea to own, finds a news angle a reporter would care about, and plans press before ads. You get a launch plan with a point at which ads begin."
+
+explain: |
+  New products launched with ads alone often fall flat. People see ads as the seller talking about itself, so they don't believe them. Stories about you from others, such as press, reviews and talks, carry more weight, and ads work better once people already believe you.
+
+  This skill states your category and whether you lead it. If you don't, it defines a narrower category you can lead. It picks the one word or idea to own, finds the news angle, and plans press and third-party stories before any ad. It makes the look of the product different from the rest, then sets the point of trust at which ads begin and how much to spend.
+
+when:
+  - You are launching something new and have a small ad budget.
+  - Your last launch had ads but no one seemed to believe or notice it.
+  - You are in a crowded category and need a way to stand out.
+
+you_give:
+  - The product, the category it sits in and your plan so far
+  - Your brand facts, such as voice, claims you can make and look
+  - Product facts, such as price, benefits and proof
+you_get:
+  - A category claim you can defend, or a narrower category to lead
+  - The one word or idea to own
+  - A news angle that stands without your product name
+  - A launch order with press first and ads at a set point of trust
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the product and its category. Paste your brand file and product facts.
+  - Say what you can truthfully claim as first or best at something.
+  - Follow the order it sets. Start ads only at the point of trust it names.
+
+how_it_works:
+  - title: States the category
+    text: States the category and whether you are first in it.
+  - title: Narrows if not first
+    text: If you are not first, defines a narrower category you can lead.
+  - title: Picks one idea
+    text: Picks the one word or idea you want to own.
+  - title: Finds the news angle
+    text: Finds the angle a reporter would care about, without the product name.
+  - title: Plans press first
+    text: Plans press and third-party stories before any ad.
+  - title: Makes it look different
+    text: Makes the look of the product or brand unlike the rest.
+  - title: Sets the ad point
+    text: Sets the point of trust at which ads start and how much to spend.
+
+output_shape: |
+  THE CATEGORY
+  Category: <name> | First in it: <yes/no, evidence>
+  If not first, the narrower category to lead: <name>
+
+  THE ONE IDEA TO OWN
+  <one word or idea>
+
+  THE NEWS ANGLE
+  <angle that stands without the product name> | Why a reporter cares: <reason>
+
+  PRESS AND THIRD-PARTY PLAN (before any ad)
+  Who: <outlets, writers, reviewers, groups> | Pitch: <line> | By: <date>
+
+  THE LOOK
+  How it differs from rivals: <list>
+
+  THE POINT OF TRUST
+  Start ads when: <signs, such as coverage count or search interest>
+  Ad spend: <amount or share> | Goes first to: <what>
+
+  CLAIM CHECK
+  <what in the category claim was checked and how>
+
+  MISSING
+  <facts that would sharpen the launch>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your category
+    how: Name it the way buyers do. A made-up name makes the claim of being first harder to check.
+  - what: Proof you have
+    how: Share tests, awards or firsts. A news angle needs something a reporter can check.
+  - what: Budget
+    how: State what you can spend on press and on ads. It sets the point of trust and spend.
+  - what: Rivals' look
+    how: Describe how rivals look. The plan makes yours different.
+
+judge:
+  - One word or idea is chosen to own.
+  - The news angle stands without the product name.
+  - Ads wait until the trust point.
+  - The look is different from rivals.
+  - The category claim is checked for truth.
+
+test:
+  - Show the news angle to a reporter or friend and ask if they would read it.
+  - Check the category claim by searching for an earlier rival.
+  - Run it twice. The idea to own should stay close.
+  - Look at the look next to your rivals and see if you can tell it apart at a glance.
+
+improve:
+  - Add the outlets and groups you can reach to the press plan.
+  - Add your own signs of trust, such as number of reviews, for the ad start point.
+  - Save the angle and results of each pitch for the next launch.
+  - Pair it with "Positioning statement writer" to set the idea to own.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Choosing a category claim and writing pitch lines is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "A list of outlets and writers who cover your category"
+    - "Proof you can show, such as tests or firsts"
+    - "Photos of rivals' products or packaging"
+
+terms:
+  - term: Category
+    meaning: The kind of product a buyer puts yours in when they think of what to buy.
+  - term: Point of trust
+    meaning: The moment when enough people believe in you that ads will work.

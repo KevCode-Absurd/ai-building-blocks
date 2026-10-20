@@ -1,6 +1,6 @@
 # Hire Otl Aicher: how he'd work for you
 
-You bring him a brand, a venue or a team that needs to look and work as one thing. He starts with purpose, not decoration. He's serious, plain and principled, and he speaks like a teacher who builds systems. He sets out what to avoid as firmly as what to do. Then he gives you a few firm rules and leaves room for play. He can lecture, so bring a thick skin.
+You bring him a brand, a venue or a team that needs to look and work as one thing. He starts with purpose, not decoration. He's serious, plain and principled, and he speaks like a teacher who builds systems. He sets out what to avoid as firmly as what to do. Then he gives you a few firm rules and leaves room for play. He can lecture, and in his Munich years he was demanding enough to threaten to quit more than once, so bring a thick skin.
 
 ## What to hire him for
 

@@ -1,0 +1,116 @@
+new_slug: structure-and-behaviour-change-splitter
+name: "Structure and behaviour change splitter"
+summary: "Paste a messy change. Get tidy-up steps and new-behaviour steps, each small enough to review alone."
+job: build-software
+thinking: medium
+thinking_why: "It labels and sorts edits against fixed rules, which takes care but not deep reasoning."
+
+headline: "Structure and behaviour change splitter"
+subhead: Paste a change that mixes tidying with new features, such as a diff, a plan or a list of edits. It labels each edit, groups the tidy-ups into small steps that change nothing visible, puts new behaviour in its own steps, and says when to test.
+
+explain: |
+  A change that moves things around and adds a feature at the same time is hard to review and hard to undo. If something breaks, you cannot tell which kind of edit did it. Reviewers see a large mess, and they either approve it blind or send it back.
+
+  This skill labels every edit as structure, which changes how things are arranged, or behaviour, which changes what they do. It checks how easy each edit is to undo, groups structure edits into small steps that leave behaviour alone and puts behaviour edits in their own steps. It then says which tidy-ups make the new behaviour easier, which can wait, and when to run tests between steps.
+
+when:
+  - You have a large diff or edit list and no one wants to review it.
+  - You want to tidy something up and add a feature in the same piece of work.
+  - An AI helper made many changes at once and you need to take them in safely.
+
+you_give:
+  - The change, as a diff, a list of edits or a plan
+  - The goal of the change, in a sentence
+  - The tests or checks you have today (optional)
+you_get:
+  - Every edit labelled as structure or behaviour, with how easy it is to undo
+  - A set of small tidy-up steps and a set of behaviour steps
+  - Which tidy-ups help the behaviour change, and which are optional
+  - The order, with when to run tests
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the change as it is, with the plan from the step before if you have one.
+  - Say what the change is meant to achieve in one sentence.
+  - Do the steps in the order given and run the tests it names after each one.
+  - Send each step for review on its own.
+
+how_it_works:
+  - title: Labels each edit
+    text: Marks every edit as structure (arrangement) or behaviour (what it does).
+  - title: Checks how easy to undo
+    text: Rates each edit as easy, harder or hard to reverse.
+  - title: Groups the tidy-ups
+    text: Collects structure edits into small steps that leave behaviour alone.
+  - title: Isolates behaviour
+    text: Puts behaviour edits in steps of their own.
+  - title: Links and ranks
+    text: Says which tidy-ups make the behaviour change easier, and which can wait or be skipped.
+  - title: Orders and tests
+    text: Gives the order of steps and when to run tests between them.
+
+output_shape: |
+  THE GOAL
+  <one sentence>
+
+  EDITS, LABELLED
+  <edit> | structure / behaviour | undo: easy / harder / hard
+
+  STEPS IN ORDER
+  Step 1 (structure): <edits> | test before and after: <yes>
+  Step 2 (behaviour): <edits> | test after: <yes>
+  ...
+
+  WHICH TIDY-UPS HELP
+  Needed for the behaviour change: <steps>
+  Can wait or skip: <steps>, because <reason>
+
+  MISSING
+  <unclear edits or missing tests>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The goal of the change
+    how: A clear goal decides which tidy-ups count as helping.
+  - what: Your tests
+    how: Say what checks you already have. Steps with no check get flagged.
+  - what: The plan from the step before
+    how: Paste it and the steps stay within it.
+  - what: Who reviews
+    how: Say how much one person can review in one go and the steps are cut to that.
+
+judge:
+  - No step mixes structure and behaviour.
+  - Each step can be checked on its own.
+  - Tests are run before and after each structure step.
+  - A tidy-up with no feature waiting behind it is flagged as optional.
+  - Hard-to-undo edits are named and placed with care.
+
+test:
+  - Run it on a past change that went badly. See if it would have split the part that broke.
+  - Follow the steps on a small change and see that each one passes its test alone.
+  - Run it twice. The labels should match.
+  - Give one step to a reviewer and see if they can approve it in one sitting.
+
+improve:
+  - Add the types of structure edit you do most, such as renaming or moving files, to the labels in step 1.
+  - Add your team's rule for how big a reviewable step is.
+  - Keep the step list with the pull request or change record.
+  - Pair it with "Test list writer" to plan the cases for the behaviour steps.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Labelling edits and ordering steps is text work any strong chat AI does."}
+    - {name: "Your version control tool", why: "Each step maps to one save point you can review and undo."}
+  inputs:
+    - "The full diff or edit list"
+    - "The test results before the change"
+    - "The goal of the change in one sentence"
+
+terms:
+  - term: Structure change
+    meaning: An edit that rearranges things (rename, move, split) without changing what the thing does.
+  - term: Behaviour change
+    meaning: An edit that changes what the thing does for someone using it.

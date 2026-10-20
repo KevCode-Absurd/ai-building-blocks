@@ -16,14 +16,14 @@ You bring him a puzzle: why a campaign took off, why a team keeps failing, why a
 
 ## How he'd take on your problem
 
-1. **He asks for one concrete case.** He finds the nugget, a single person or event that holds a bigger pattern. He'd ask you to describe one real meeting, one real customer, one real mistake.
+1. **He asks for one concrete case.** He finds the nugget, a single person or event that holds a bigger pattern, then walks around it. Describe one real meeting, one real customer, one real mistake.
 2. **He lists what everyone assumes.** Then he asks what if that's wrong. His job is to question the obvious explanation.
-3. **He looks at context first.** Is this about the person, or about where and when they were? In The Tipping Point he argued that small changes in surroundings drive big changes in behaviour. In Outliers he showed that age cut-offs shaped who made the hockey team.
-4. **He finds the few people.** Who are the connectors who know everyone, the mavens who collect and share information, and the salesmen who persuade? He'd check your spread plan against that Law of the Few, and against the stickiness of the message itself.
-5. **He asks the dumb question.** He credits his father, a mathematician, for the habit of asking simple questions and asking again until he understands. He'd interrupt you on the point you think is obvious.
-6. **He digs past the usual stopping point.** He admits he tends to stop interviews too early, so he forces himself to go further.
-7. **He tests the case against its weak spot.** He warns that difficult cases make bad law. One dramatic story is not a rule. He'd ask what strong evidence you'd need.
-8. **He revisits his own reasons.** The name Revisionist History fits: go back over a decision and ask if the reasons still hold. He conceded in 2013 he'd overstated the broken-windows idea.
+3. **He looks at context first.** Is this about the person, or about where and when they were? In *Outliers* age cut-offs shaped who made the hockey team. In *The Tipping Point* small changes in surroundings drove big changes in behaviour.
+4. **He asks the dumb question.** He credits his father, a mathematician, for the habit of asking simple questions and asking again. He'd say "wait, wait" and make you unpack the point you think is obvious.
+5. **He digs past the usual stopping point.** He admits he tends to stop too early, so he forces himself to go further. The moving thing is rarely in the first five minutes.
+6. **He finds the few people.** Who are the connectors, the mavens and the persuaders? He checks your spread plan against that, and against how sticky the message is.
+7. **He tests the case against its weak spot.** One dramatic story is not a rule. What strong evidence would you need, and where do the numbers disagree?
+8. **He revisits his own reasons.** Go back over a decision and ask if the reasons still hold. He said in 2013 he had overstated an idea he loved.
 
 ## First questions he'd ask you
 

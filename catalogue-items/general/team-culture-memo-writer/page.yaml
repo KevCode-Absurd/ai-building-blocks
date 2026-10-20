@@ -1,0 +1,127 @@
+new_slug: team-culture-memo-writer
+name: "Team culture memo writer"
+summary: "Describe your team and how you want it to work. Get a short culture memo with a keeper test and feedback rules."
+job: lead-people
+thinking: medium
+thinking_why: "It weighs which rules to drop and which behaviours matter most."
+
+headline: "Team culture memo writer"
+subhead: "Describe your team, its work and what has gone wrong. It names the results, who you want in each seat, what people decide alone, a keeper test, a feedback rule and a few behaviours. You get a one-page culture memo."
+
+explain: |
+  Most culture statements list values that nobody can act on, while real habits form from what gets rewarded. Teams then add rules to patch each problem, and trust drops.
+  
+  This skill starts from results, not slogans. It sets which decisions people make alone and gives the context to make them, so a rule can be dropped. It adds a keeper test (would you fight to keep this person), a feedback rule that goes to the person and a short list of behaviours. It also lists what you reward and punish in practice, so the gap shows up before the memo does.
+
+when:
+  - "Your team has grown and people are guessing how things work."
+  - "You keep adding rules after each mistake."
+  - "You are about to hire and want new people to know what they are joining."
+
+you_give:
+  - "Your team size and what it delivers"
+  - "What has gone wrong lately"
+  - "Your brand file for voice (optional)"
+  - "A draft memo or rule list (optional)"
+you_get:
+  - "A one-page culture memo"
+  - "A table of decisions marked alone, tell or ask"
+  - "A behaviour list and a keeper test"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the team and its work in a paragraph."
+  - "Say what went wrong in the last quarter."
+  - "List who got praised and who got a warning, in plain terms."
+  - "Read the memo aloud to one trusted person and ask which line they would not follow."
+
+how_it_works:
+  - title: "Name the few results"
+    text: "Names the few results the team must deliver."
+  - title: "Write who you want in each seat"
+    text: "Writes who you want in every seat and what top-of-market pay means."
+  - title: "Set who decides what"
+    text: "Sets what people decide alone and what they must ask about, so context replaces control."
+  - title: "Write the keeper test"
+    text: "Writes the keeper test and what follows from a no."
+  - title: "Write the feedback rule"
+    text: "Writes how blunt feedback goes to the person, not about them."
+  - title: "List what you reward and punish"
+    text: "Lists what the company really rewards and punishes."
+  - title: "Pick the few behaviours"
+    text: "Picks the handful of behaviours that matter most."
+  - title: "Assemble the memo"
+    text: "Assembles a one-page memo, including who it is not for."
+  - title: "Checks its own work"
+    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+
+output_shape: |
+  RESULTS
+  <3 or 4 results with numbers or dates>
+  
+  SEATS AND PAY
+  <role>: <problem solved>, <what great looks like>
+  Pay stance: <top-of-market meaning>
+  
+  DECISIONS
+  <decision> | alone / tell first / ask first | context given
+  
+  KEEPER TEST
+  <test and what follows>
+  
+  FEEDBACK
+  <rule>
+  
+  BEHAVIOURS
+  <3 to 6 things a person can do>
+  
+  NOT FOR
+  <who this team is not for>
+  
+  MISSING
+  <gaps>
+  
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "What you reward"
+    how: "Be honest about who was promoted. The memo uses it to find gaps."
+  - what: "Decision list"
+    how: "Add the real decisions your people make each week."
+  - what: "Pay stance"
+    how: "Say what you can afford. It will not promise what you cannot pay."
+  - what: "Length"
+    how: "Ask for half a page for a small team."
+
+judge:
+  - "Every behaviour is something a person can do."
+  - "Each ask-first decision has the context to drop it."
+  - "The feedback rule says who speaks to whom."
+  - "The memo says who it is not for."
+  - "No line could sit on any other company's wall."
+
+test:
+  - "Show it to two team members and ask each to explain one rule back."
+  - "Compare the behaviours with last year's promotions."
+  - "Run it twice. The results and behaviours should stay close."
+
+improve:
+  - "Add behaviours from your own near-misses to step 7."
+  - "Save the memo to your brand file and link it from your hiring posts."
+  - "Review it after a quarter and drop one rule."
+  - "Pair it with \"Culture-fit hiring planner\" for hiring."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting plain rules into checkable form is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Last year's promotion and exit list"
+    - "A recent mistake and what followed"
+    - "Your hiring plan"
+
+terms:
+  - term: "Keeper test"
+    meaning: "A question for each person: would you fight to keep them if they said they were leaving?"
+  - term: "Context over control"
+    meaning: "Give people the goal and limits so they decide, instead of asking for approval."

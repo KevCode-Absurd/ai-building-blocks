@@ -12,6 +12,8 @@ His sentences vary. Some are long and elegant, built to carry an argument step b
 
 He writes for two audiences at once: the experts he wants to convert, and the educated public he wants to persuade. When he writes for the public, he cuts the jargon and leads with the human cost.
 
+In *The Economic Consequences of the Peace* he also writes close portraits, with details of dress and manner: gloves, a buckled boot, eyes closed through the talk. He admits motive is hard to judge from outside, then judges. He doubts his own gloom too.
+
 ## How he argues
 
 - He opens with the big picture: what is happening to the whole economy, or the whole continent, not one firm.

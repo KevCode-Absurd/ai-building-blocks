@@ -17,6 +17,7 @@ origin: rebuilt
 source_ids: [CES-039]
 old_name: image ad type gap finder
 version: 2.0.0
+minds: [robert-cialdini]
 credits:
   - {title: "Influence: The Psychology of Persuasion", by: "Robert B. Cialdini", url: "https://www.porchlightbooks.com/products/influence-robert-b-cialdini-9780061241895", used: "social proof, authority and scarcity behind the believe and why-now types"}
   - {title: "About the Learning Phase", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/112167992830700", used: "about 50 results a week per ad set, so three new ads at a time"}

@@ -1,0 +1,22 @@
+slug: root-cause-finder
+name: "Root cause finder"
+summary: "Paste a problem that keeps coming back. Get a chain of whys checked against facts, the fixable cause and a prevention check."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [taiichi-ohno, eric-ries]
+credits:
+  - {title: "Study notes on Five whys", by: "Course notes compiled for this library", used: "The chain of whys and the checks against facts"}
+  - {title: "Excerpts from An Interview with Taiichi Ohno, 1984", by: "Taiichi Ohno", used: "Going to the place and asking why until a cause you can fix appears"}
+  - {title: "Five Whys", by: "Eric Ries", url: "https://www.startuplessonslearned.com/2008/11/five-whys.html", used: "Using the chain on software and business problems, with a small fix at each level and no blame"}
+  - {title: "Taiichi Ohno", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Taiichi_Ohno", used: "Background on the origin of the method at Toyota"}

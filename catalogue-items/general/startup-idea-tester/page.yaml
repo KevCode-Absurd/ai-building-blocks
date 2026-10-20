@@ -1,0 +1,119 @@
+new_slug: startup-idea-tester
+name: "Startup idea tester"
+summary: "Paste your idea. Get a score out of 100 for real problem, who needs it badly and the cheapest check."
+job: test-an-idea
+thinking: medium
+thinking_why: "It weighs several signs against each other and has to tell a real need from a plausible-sounding one."
+
+headline: "Startup idea tester"
+subhead: Give it a business or product idea in a few sentences. It checks if the idea solves a problem someone has today, whether you know the problem first-hand, and which small group needs it badly. You get a score out of 100 and the cheapest way to check demand this week.
+
+explain: |
+  Many ideas sound reasonable and have no one waiting for them. They are made up: they fit a pattern of what a business should look like, but nobody is asking for them. Friends who say "I might use that" are being kind, and kindness is not demand.
+
+  This skill writes the problem as someone has it today, without naming your product. It checks whether you have the problem or know someone who does, and looks for the small group who need it badly rather than the big group who like it a bit. It also looks at whether the work is dull or hard, which may mean few rivals, and whether it sits in a field that is changing fast. It ends with a check you can do this week.
+
+when:
+  - You have an idea and want an honest first read before you spend time on it.
+  - Your idea came from "this seems like a good business" and not from a problem you felt.
+  - You are choosing between two or three ideas.
+
+you_give:
+  - Your idea in a few sentences
+  - Who you think needs it, and why you picked this idea
+  - Anything you have already tried or heard (optional)
+you_get:
+  - The problem written as someone has it today
+  - A score out of 100, with the working shown
+  - The small group who need it badly, or a note that none was found
+  - The cheapest check for demand that you can do this week
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the idea and say why you picked it. Be honest if it came from a list of trends.
+  - Say if you or someone you know has the problem.
+  - Do the check it gives you this week. Bring back what happened.
+
+how_it_works:
+  - title: Writes the problem
+    text: States the problem in one line as someone has it today, without naming your product.
+  - title: Checks your link to it
+    text: Asks if you have the problem yourself or know someone who does.
+  - title: Spots made-up ideas
+    text: Asks if the idea only sounds plausible and nobody is asking for it.
+  - title: Finds who needs it badly
+    text: Looks for a small group in urgent need, not a large group that mildly likes it.
+  - title: Checks for dull or hard work
+    text: Looks for tedious or unglamorous work, which can mean few rivals.
+  - title: Checks the field
+    text: Asks if the idea sits at the edge of something changing fast.
+  - title: Names the cheap check
+    text: Gives the cheapest way to see demand this week, beyond friends saying they might use it.
+
+output_shape: |
+  THE PROBLEM
+  <problem as someone has it today, without the product>
+
+  SCORE <n>/100 (what it measures: how well the evidence supports real demand)
+  Real problem someone has now (25): <n> | <note>
+  Your link to it (15): <n> | <note>
+  Small group who need it badly (25): <n> | <note>
+  Not a made-up idea (15): <n> | <note>
+  Dull or changing-field edge (10): <n> | <note>
+  A check you can do this week (10): <n> | <note>
+
+  WHO NEEDS IT BADLY
+  <group> because <reason>
+
+  THE CHEAPEST CHECK THIS WEEK
+  <action> | Counts as demand: <result> | Does not count: <friends saying they might use it>
+
+  MISSING
+  <facts that would sharpen the score>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Why you picked the idea
+    how: Say if it came from a problem you felt or from a list of trends. This changes the score for your link.
+  - what: Who you can reach
+    how: Name the small groups you know. It checks them first.
+  - what: What exists today
+    how: Say what people use now. A workaround is a sign of need.
+  - what: Time you can give
+    how: State how many hours this week you have. The check is sized to fit.
+
+judge:
+  - The problem is stated without naming the product.
+  - Friends saying they might use it is not counted as demand.
+  - A small group who need it badly is named, or the gap is stated.
+  - The score shows its working and says what it measures.
+  - The check can be done this week.
+
+test:
+  - Run it on an idea that is a real problem you have. Check the score is high for that part.
+  - Run it on an idea you made up from a trend list. Check it is flagged.
+  - Run it twice. The score should be within a few points.
+  - Do the check it gives you and see if the result was easy to read.
+
+improve:
+  - Add fields you know that are changing fast to step 6.
+  - Add the groups you can reach, so it picks from real ones.
+  - Save each idea's score and what the check showed.
+  - Pair it with "Three-buyer idea test planner" once the score is good.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Judging an idea against fixed signs is text work that any strong chat AI does with this skill."}
+    - {name: "A notebook", why: "For writing down every problem you have yourself, which feeds the first step."}
+  inputs:
+    - "A list of problems you have felt in the last month"
+    - "Names of people who share the problem"
+    - "What people use today to solve it"
+
+terms:
+  - term: Made-up idea
+    meaning: An idea that sounds like a plausible business but that nobody is actually asking for.
+  - term: Demand
+    meaning: People trying to get the thing, paying for it or using a poor substitute, not just saying they might.

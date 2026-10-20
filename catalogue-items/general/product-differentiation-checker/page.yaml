@@ -1,0 +1,130 @@
+new_slug: product-differentiation-checker
+name: "Product differentiation checker"
+summary: "Paste your product facts and won and lost deals. Get a verdict on whether you are truly undifferentiated."
+job: plan-strategy
+thinking: high
+thinking_why: "It weighs conflicting evidence from many people and decides whether the product or the story is the problem."
+
+headline: "Product differentiation checker"
+subhead: Give it your product facts, your won and lost deals and who you compete with. It tests whether you truly have nothing different or are just describing it badly, and hands back a plain verdict with the evidence and the next move.
+
+explain: |
+  Many teams say "we are the same as everyone else". Often that is not true. The belief usually comes from a short list of causes: the research on customers is thin, people know only part of the product, the team is fixed on the deals it lost, or the target group is drawn so wide that nothing stands out.
+
+  This skill lists only the rivals that really appear when a buyer compares options. For each one it writes what you do that they do not, in terms of value to a named type of customer. Then it tests the four causes one at a time, studies why good-fit customers chose you, and ends with a verdict. If no group is big enough to serve, it says the product or offer must change, not the words.
+
+when:
+  - Your team says "we have no real difference" and you suspect that is not the full story.
+  - Sales keeps losing to the same rival and the pitch sounds like theirs.
+  - You are about to rewrite your website or deck and want to know if the problem is the words or the product.
+
+you_give:
+  - Facts about your product or service and what it does (required)
+  - Notes on deals you won and lost, with the reason if you know it (optional)
+  - Customer words from reviews, calls or surveys (optional)
+  - Who buyers compare you with (optional)
+you_get:
+  - A short list of the real alternatives, with doing nothing counted
+  - For each, what you do that they do not, tied to a customer type and why it matters
+  - A test of the four usual causes of missing your difference
+  - A verdict, the evidence behind it and the next three steps
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your product facts, then your last ten or so won and lost deals, with the reason for each if you have it.
+  - Add the rivals buyers named and a few customer quotes, if you have them.
+  - Read the verdict first, then the evidence. Check the facts marked MISSING with someone who talks to customers.
+  - Run it again after you gather the missing facts.
+
+how_it_works:
+  - title: Real shortlists only
+    text: Lists the alternatives that appear when buyers compare options, including doing nothing, and drops rivals nobody names.
+  - title: Differences with a buyer
+    text: For each alternative, writes what you do that they do not, as value to one named customer type.
+  - title: Four causes test
+    text: Checks for thin customer research, partial product knowledge, fixation on lost deals and a segment drawn too wide.
+  - title: Why good fits chose you
+    text: Studies the deals and customers that fit you best and writes down the reason they picked you.
+  - title: One combined view
+    text: Merges what product, sales, marketing, support and leadership each know into one pass.
+  - title: Name the best accounts
+    text: Names the accounts that most value your mix of strengths.
+  - title: Verdict
+    text: Says plainly whether you are undifferentiated, badly described or in need of a new product or offer.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  VERDICT
+  <one of: differentiated but badly described / differentiated for a narrow group / truly undifferentiated> and why in two lines
+
+  REAL ALTERNATIVES
+  1. <alternative, with the evidence it appears on shortlists>
+
+  WHAT YOU DO THAT THEY DO NOT
+  <alternative> | Difference: <fact> | Value to <customer type>: <why it matters>
+
+  FOUR CAUSES TEST
+  Thin customer research: <finding>
+  Partial product knowledge: <finding>
+  Fixation on lost deals: <finding>
+  Segment too broad: <finding>
+
+  WHY GOOD FITS CHOSE YOU
+  <reasons, with the deals or quotes behind them>
+
+  BEST-FIT ACCOUNTS
+  <who values your combination most>
+
+  NEXT STEPS
+  1. <step> | Evidence still needed: <item>
+
+  MISSING
+  <what would sharpen the verdict>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Won and lost deals
+    how: Give both. If you give only lost deals, the verdict leans toward "nothing different" and it will say so.
+  - what: The customer type
+    how: Name a specific type of buyer. "Clinics with three to ten staff" gives a sharper difference than "small businesses".
+  - what: Who you compare against
+    how: Use the rivals your buyers named, not the ones your team fears.
+  - what: Voices from other teams
+    how: Add a line each from product, sales, support and leadership. They often see different strengths.
+
+judge:
+  - Every alternative has evidence that it shows up in buyer comparisons.
+  - Every claimed difference names a customer type and why it matters to them.
+  - Lost deals are not treated as the whole picture.
+  - The verdict is plain and says when the product or offer must change.
+  - Facts that are not in your input are marked MISSING, not guessed.
+
+test:
+  - Run it on a product where you already know the real difference. See if it finds it.
+  - Give it only lost deals, then lost and won deals. The verdict should change and say why.
+  - Run it twice on the same input. The verdict should stay the same.
+  - Show the result to your best salesperson and ask what it got wrong.
+
+improve:
+  - Add your deal-loss categories to the steps, so it sorts lost deals your way.
+  - Save the real alternatives list and the best-fit accounts to your brand file.
+  - Add a rule for what counts as a shortlist in your market.
+  - Pair it with "Marketing brief writer" once you have a verdict.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The work is reading evidence and weighing it, which any strong chat AI handles well with this skill."}
+    - {name: "Your CRM export", why: "Won and lost deal notes in one list give the check more to work with than memory."}
+  inputs:
+    - "Call notes or recordings with customers who chose you"
+    - "A list of the rivals named in the last 20 deals"
+    - "Reviews that say why people switched to you"
+
+terms:
+  - term: Alternative
+    meaning: Anything a buyer could use instead of you, including a rival, a do-it-yourself fix or doing nothing.
+  - term: Best-fit customer
+    meaning: A buyer who gets the most value from what you do best.

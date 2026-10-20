@@ -30,6 +30,7 @@ sources:
   - {n: 6, title: "The Wealth of Nations, Book I, Chapter 10 (wages and profit in different jobs)", by: "Adam Smith (1776), Wikisource", url: "https://en.wikisource.org/wiki/The_Wealth_of_Nations/Book_I/Chapter_10", kind: own-words}
   - {n: 7, title: "The Wealth of Nations, Book V, Chapter 1 (the expenses of the sovereign)", by: "Adam Smith (1776), Wikisource", url: "https://en.wikisource.org/wiki/The_Wealth_of_Nations/Book_V/Chapter_1", kind: own-words}
   - {n: 8, title: "The Theory of Moral Sentiments (Project Gutenberg eBook #67363, from the Dublin printing of 1777)", by: "Adam Smith (1759)", url: "https://www.gutenberg.org/cache/epub/67363/pg67363.txt", kind: own-words}
+  - {n: 9, title: "The Wealth of Nations, Book I, chapters 7, 8 and 10 (natural and market price, wages, why jobs pay differently), from the full Gutenberg text (eBook #3300)", by: "Adam Smith (1776)", url: "https://www.gutenberg.org/ebooks/3300", kind: own-words}
 tests:
   - {kind: use, prompt: "Our office wants to pay staff a bonus for every support ticket they close. Walk through what this will make people do, good and bad."}
   - {kind: use, prompt: "Explain to a teenager why a town with one road and no shop has no full-time plumber, but a big city has dozens."}

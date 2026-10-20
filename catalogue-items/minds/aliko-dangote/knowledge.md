@@ -69,6 +69,29 @@ How he applied it: the refinery was built through the group's own engineering an
 - Get out of a line when the market turns hard against it [S2][S3].
 - Watch government policy more closely than any other risk [S2].
 
+## Real decisions
+
+### Start with a small loan and trade
+He began with a loan of $3,000 from his uncle and traded food goods such as sugar, salt and rice [S4]. He says his trading instinct goes back to selling boiled sweets to classmates at eight [S4]. Trading gave him cash, customers and knowledge of what Nigeria imported, which later pointed to what he should make [S4][S7].
+
+### Move from importing cement to making it
+Having imported cement, he returned to Nigeria in 1998 to start making it, in a market where French rival Lafarge was a known importer [S4]. When the state sold Benue Cement in 2000 he used it to expand, and Obajana grew into the largest plant in Sub-Saharan Africa [S4][S6]. The Wikipedia page also records the claim that he gained from political ties, which he rejected [S4].
+
+### Borrow only when he had to
+For about two decades he funded growth from the businesses' own cash and first borrowed for growth in 2000 [S3]. When long-term money was not on offer he stitched together short local notes and used sugar profits to fill gaps, which he called creative [S3].
+
+### Keep building through a cost overrun
+One cement plant planned at about $480 million cost $1.2 billion. He pushed on, and it paid off its loan within 18 months of opening, he told Harvard [S3]. His reason was that his team believed they would finish it [S3].
+
+### Build the port, pipeline and power himself
+For the refinery, Nigeria's ports could not take the heavy equipment, so his group built a port, and a 1,100 km subsea pipeline carries crude to it [S2][S5]. The same logic shows in his cement plants with their own power and water [S1][S3].
+
+### Leave flour and textiles
+He left businesses that stopped working. Textiles collapsed under Chinese and Indian competition at a cost of 6,400 jobs, and in 2026 he said foreign exchange problems drove him out of flour [S2][S3]. He moved money and attention to cement, then fertilizer and fuel [S6][S1].
+
+### Buy foreign crude when local supply stalled
+When crude supply to the refinery stalled in 2023, it bought cargoes from abroad, including the United States, and later sourced about 44% of its crude from outside Nigeria [S2][S5].
+
 ## Where he stood
 
 **Should Africa export raw materials or process them?** Process them. He wants crude refined and cocoa turned into products at home [S1][S2].

@@ -1,0 +1,128 @@
+new_slug: mystery-plot-planner
+name: "Mystery plot planner"
+summary: "Tell it the crime or puzzle. Get a clue map where every clue is in plain sight and the reveal is fair."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "It must keep many facts consistent across scenes so the solution is fair."
+
+headline: "Mystery plot planner"
+subhead: "Tell it your crime or puzzle. It fixes the solution first, then plans where each clue shows up and what it seems to mean. You get a clue map, a timeline, a viewpoint plan and the final explanation."
+
+explain: |
+  Many mysteries fail in the same two ways. The solution is a surprise the reader could not have reached, or it is so well hinted that it is obvious. Both come from planning forward from the first scene rather than back from the answer.
+
+  This skill fixes the solution first: who, how, why and when. It picks a closed setting and a small cast, lists real clues and planted ones, and sets each clue in a scene where it can be seen but not noticed. It chooses a trusted viewpoint that misreads the facts, and builds a timeline of what each person did and felt. It tests the least likely answer, cuts any person who adds no clue, and writes the final explanation last, step by step.
+
+when:
+  - "You are plotting a mystery, thriller or short story and the twist keeps falling flat."
+  - "You are building a murder-mystery party, escape room or puzzle hunt that must be fair."
+  - "You need a reveal at the end of a presentation or campaign that people feel they could have seen coming."
+
+you_give:
+  - "The crime or puzzle"
+  - "Setting and cast, if you have them (optional)"
+  - "Length and form (optional)"
+  - "Your draft clues or ideas (optional)"
+you_get:
+  - "The solution, fixed in four lines"
+  - "A clue map: real and planted clues, scene by scene"
+  - "A timeline of what each person did and felt"
+  - "The final explanation, in order, with the clue behind each step"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the crime or puzzle and the form you are writing in."
+  - "Say whether you already know the answer. If not, say you want options."
+  - "List any characters or places you want to keep."
+  - "Read the clue map as a solver would, scene by scene, and mark anything you would have caught."
+
+how_it_works:
+  - title: "Fixes the solution"
+    text: "Who, how, why and when, before any scene."
+  - title: "Picks setting and cast"
+    text: "A closed place and a small group, each with a want and a secret."
+  - title: "Lists the clues"
+    text: "Marks each as real or planted and says what it seems to mean."
+  - title: "Places the clues"
+    text: "One scene per clue, hidden in plain sight."
+  - title: "Chooses a viewpoint"
+    text: "A trusted person who sees the facts and misreads some."
+  - title: "Builds a timeline"
+    text: "What each person did and felt, hour by hour."
+  - title: "Tests the cast"
+    text: "Cuts anyone who adds no clue, then writes the final explanation last."
+  - title: "Checks the plan"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  SOLUTION
+  Who: <person>  How: <method>  Why: <reason>  When: <time>
+
+  SETTING AND CAST
+  <place>
+  <person>: wants <x>, hides <y>
+
+  CLUE MAP
+  <n>. <clue> | REAL or PLANTED | looks like: <x> | really: <y> | scene: <n>
+
+  VIEWPOINT
+  <who>, misreads: <what>, corrected: <when>
+
+  TIMELINE
+  <person>: <time> did <x>, felt <y>
+
+  THE EXPLANATION
+  <step> <- clue <n>, scene <n>
+
+  CUT
+  <people removed, and why>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "How much you already know"
+    how: "If you have the culprit, say so. If not, say you want three options to choose from."
+  - what: "The size of the cast"
+    how: "Give a limit. The skill cuts anyone who adds no clue."
+  - what: "The form"
+    how: "A short story needs fewer clues than a novel. A game needs clues that can be held and shown."
+  - what: "The twist you want"
+    how: "Name a surprise you like, such as the trusted friend. It tests whether the clues can support it."
+
+judge:
+  - "Every fact in the final explanation was shown in an earlier scene."
+  - "You can point to which clues are real and which are planted."
+  - "A second read makes the answer feel like the only fit."
+  - "Each person on the cast adds a clue or a misdirection."
+  - "The timeline has nobody in two places at once."
+
+test:
+  - "Give the clue map, without the solution, to a friend and see if they can solve it."
+  - "Ask the friend which clues they noticed and compare with your REAL list."
+  - "Check the timeline for people in two places by marking each hour."
+  - "Run it twice with the same puzzle and check the solution is the same."
+
+improve:
+  - "Add your favourite twist types so it can test them."
+  - "Add your setting rules, such as no phones, so clues fit your world."
+  - "Keep past maps and what readers guessed in a notes file."
+  - "Pair it with \"Show-don't-tell scene rewriter\" to write the clue scenes plainly."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Keeping many linked facts straight is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "A table of scenes down the side and clues across keeps the map checkable."}
+  inputs:
+    - "A rough list of characters and who they are"
+    - "The place and time period"
+    - "Two or three mysteries you admire and what you like in them"
+
+terms:
+  - term: "Planted clue"
+    meaning: "A fact that looks like it points to the answer but points away."
+  - term: "Real clue"
+    meaning: "A fact that really leads to the answer and is shown before the reveal."

@@ -1,0 +1,21 @@
+slug: growth-idea-ranker
+name: "Growth idea ranker"
+summary: "Paste your list of growth ideas. Get each scored for impact, confidence and ease, with the first three to test."
+category: general
+type: skill
+role: compress
+job: ops
+level: beginner
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+  - {type: lessons_register, required: false}
+outputs:
+  - {type: plan}
+  - {type: shortlist}
+origin: rebuilt
+version: 1.0.0
+minds: [sean-ellis]
+credits:
+  - {title: "Find a Growth Hacker for Your Startup", by: "Sean Ellis", used: "Collecting ideas from across the team, scoring each for impact, confidence and ease, and running the quickest tests first"}
+  - {title: "Sean Ellis, study notes", by: "Notes in the Sean Ellis mind file", used: "Averaging the three scores, one test per idea and re-scoring after results"}

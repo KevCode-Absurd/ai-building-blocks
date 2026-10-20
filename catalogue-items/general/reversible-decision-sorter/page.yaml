@@ -1,0 +1,124 @@
+new_slug: reversible-decision-sorter
+name: "Reversible decision sorter"
+summary: "Paste a choice you're stuck on. Get it sorted as a one-way or two-way door, with the review it needs."
+job: think-and-decide
+thinking: medium
+thinking_why: "It asks for a judgment on what can be undone, but the sorting steps are fixed."
+
+headline: "Reversible decision sorter"
+subhead: Paste a choice you are stuck on. It asks what would be hard to undo and what reversing costs, then sorts the choice as a one-way or two-way door. You get the right amount of review for it, plus an owner, a trial and a date, or a list of what you still need to know.
+
+explain: |
+  Teams often treat every choice as if it were final. Small, reversible calls then wait for committees, and speed drops. The opposite also happens: a choice that cannot be undone gets a quick yes because the last few went fast.
+
+  This skill starts with the choice and who it touches. It asks what would be hard or impossible to undo and what reversing would cost. It sorts the choice into one of two kinds: a one-way door that is hard to reverse, or a two-way door you can walk back through. For two-way choices it names an owner, a small trial and a review date. For one-way choices it lists what you still need to know. It ends with the call and any dissent written down so the team can commit.
+
+when:
+  - A team is stuck debating a choice that could be tried and undone.
+  - You are about to sign or commit to something and want to check it can't be undone.
+  - You want to decide who should decide, and how many people to ask.
+
+you_give:
+  - The choice, in a sentence, and who it touches
+  - What you already know about the cost of changing your mind
+  - Who disagrees and why (optional)
+you_get:
+  - The choice sorted as one-way or two-way, with the reason
+  - The reversal cost, stated and not assumed
+  - The review that fits, either wide and slow or small and fast
+  - An owner, a trial and a review date, or a list of missing information
+  - A written call with any dissent
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the choice and who it affects. Say what it would take to undo it.
+  - Read the sort. If you disagree about what can be undone, say why and run it again.
+  - For a two-way choice, name the owner and run the trial. For a one-way choice, answer the open questions first.
+  - Share the written call with the team.
+
+how_it_works:
+  - title: States the choice
+    text: Writes the choice in one line and lists who it touches.
+  - title: Tests reversibility
+    text: Asks what would be hard or impossible to undo and what reversing costs.
+  - title: Sorts the door
+    text: Marks the choice as one-way or two-way, with the reason.
+  - title: Matches the process
+    text: Slow and wide for one-way, a single owner or small group moving fast for two-way.
+  - title: Sets up two-way choices
+    text: Names the owner, the small trial and a review date.
+  - title: Prepares one-way choices
+    text: Lists what you still need to know before going through.
+  - title: Writes the call
+    text: Records the decision and any dissent so the team can commit.
+
+output_shape: |
+  THE CHOICE
+  <one line> | Touches: <people or teams>
+
+  WHAT WOULD BE HARD TO UNDO
+  <list> | Cost of reversing: <time, money, trust>
+
+  THE DOOR
+  One-way / two-way | Reason: <line>
+
+  THE REVIEW IT NEEDS
+  <who is asked, how long it takes>
+
+  IF TWO-WAY
+  Owner: <name>  Small trial: <what>  Review date: <date>
+
+  IF ONE-WAY
+  Still need to know: <list>
+
+  THE CALL
+  <decision> | Dissent on record: <who and why>
+
+  MISSING
+  <what is unknown>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: The cost of reversing
+    how: Give real figures for days, money and lost trust. A guess here changes the sort.
+  - what: Who the choice touches
+    how: List customers and partners too. A choice that looks internal may not be.
+  - what: Time left
+    how: Give the deadline. It shapes the trial and the review date.
+  - what: Past similar choices
+    how: Say what happened before. It shows whether people overrate how hard it is to undo.
+
+judge:
+  - The choice has a door type with a reason.
+  - Reversal cost is stated, not assumed.
+  - The review weight matches the door, not the habit.
+  - A review date or a missing-information list is attached.
+  - No one-way choice is labelled easy to undo just to go faster.
+
+test:
+  - Run it on three past choices. See if it sorts them as you would now.
+  - Take a choice that people argued over for weeks and see if it was really two-way.
+  - Run the small trial it sets and check the review date held.
+  - Ask someone who disagreed whether their view appears in the written call.
+
+improve:
+  - Add the kinds of choices your team often faces, with a usual sort for each.
+  - Add your own reversal costs, such as notice periods and contract terms.
+  - Keep a list of two-way choices that got stuck, to see how often it happens.
+  - Pair it with "Decision options and tripwire planner" for choices that are one-way.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a choice and writing the process is text work any strong chat AI handles with this skill."}
+    - {name: "A shared document", why: "The written call and dissent stay where the whole team can see them."}
+  inputs:
+    - "Contract terms, notice periods or cancellation costs"
+    - "Notes from earlier discussion of the choice"
+
+terms:
+  - term: One-way door
+    meaning: A choice that is hard or impossible to undo, so it needs slow and wide review.
+  - term: Two-way door
+    meaning: A choice you can reverse at a modest cost, so it can be made fast by one owner or a small group.

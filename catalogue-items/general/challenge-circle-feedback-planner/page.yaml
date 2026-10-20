@@ -1,0 +1,120 @@
+new_slug: challenge-circle-feedback-planner
+name: "Challenge circle feedback planner"
+summary: "Paste your draft or plan. Get who to ask for early support, who to ask for attack, and the questions to send."
+job: think-and-decide
+thinking: medium
+thinking_why: "It judges the stage and weighs how much each source knows."
+
+headline: "Challenge circle feedback planner"
+subhead: "Paste your draft or plan and the people you could ask. It picks early or finished, splits them into a support circle and a challenge circle, checks what each knows and writes the questions to send."
+
+explain: |
+  Feedback goes wrong in two ways. You ask critics too early, and a fragile idea dies. Or you ask friends too late, and the holes stay hidden. Either way, you rarely decide beforehand what you will change.
+  
+  This skill starts with the stage of the work. It sorts your people into a support circle and a challenge circle, and checks each one for relevant knowledge and a field that is predictable enough for experience to help. It writes separate questions for each group, adds a flaw of your own to open with, and sets what you will change for each answer.
+
+when:
+  - "You finished a draft and do not know who to show."
+  - "You have only asked people who agree with you."
+  - "You got feedback and did not use it."
+
+you_give:
+  - "Your draft or plan, and its stage"
+  - "People you could ask, with what each knows"
+  - "What you suspect is weak (optional)"
+you_get:
+  - "An early or finished call"
+  - "Two lists of people with a source check"
+  - "Questions for each circle and a change plan"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your draft and say how far along it is."
+  - "List five to ten people with a line on what each knows."
+  - "Send the questions with your own flaw first."
+  - "Decide your response before the answers arrive."
+
+how_it_works:
+  - title: "Name the stage"
+    text: "Decides if the work is early or finished."
+  - title: "List people for each circle"
+    text: "Lists people for each circle by what they know."
+  - title: "Check each source"
+    text: "Checks each source for relevant expertise and a predictable field."
+  - title: "Write questions for supporters"
+    text: "Writes questions for supporters that ask what is promising."
+  - title: "Write questions for challengers"
+    text: "Writes questions for challengers that ask for the strongest case against it."
+  - title: "Share your flaw first"
+    text: "Models the habit: shares your own flaw first."
+  - title: "Decide your response in advance"
+    text: "Plans what you will change if they agree and if they do not."
+  - title: "Checks its own work"
+    text: "Goes through its checks one by one, fixes what it can and names any it still missed."
+
+output_shape: |
+  STAGE
+  <early / finished> | Sign: <...>
+  
+  PEOPLE
+  <name> | Knows: <...> | Circle: support / challenge | Source check: use / care / set aside
+  
+  SUPPORT QUESTIONS
+  <3 questions>
+  
+  CHALLENGE QUESTIONS
+  <3 questions plus one on what is missing>
+  
+  MY FLAW
+  <opening line>
+  
+  IF THEY AGREE / IF THEY DO NOT
+  <question>: change <...> / do <...> | Decide by <date>
+  
+  MISSING
+  <gaps>
+  
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The stage"
+    how: "If unsure, say so. It plans two rounds."
+  - what: "The people"
+    how: "Give what each knows about this kind of work, not how well you like them."
+  - what: "Number of people"
+    how: "Four to six is enough. More becomes noise."
+  - what: "Your flaw"
+    how: "A real doubt gets more honest answers than a modest one."
+
+judge:
+  - "The stage is clear."
+  - "Every challenger knows this kind of work."
+  - "One question asks for the case against."
+  - "Each answer has a planned change."
+  - "Your own flaw is in the message."
+
+test:
+  - "Send the questions to two people and see whether the answers can be used."
+  - "Compare early feedback with feedback from the challenge circle."
+  - "Check whether you followed the change plan."
+
+improve:
+  - "Add your field's usual critics to the challenge list."
+  - "Add a standing challenger you ask every time."
+  - "Log which feedback changed the work."
+  - "Pair it with \"Pros and cons decision planner\" for choices."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting a list into keep, simplify or drop is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Notes on each person's experience"
+    - "Past feedback you ignored"
+    - "A decision date"
+
+terms:
+  - term: "Challenge circle"
+    meaning: "A small group you ask to find the holes in finished work."
+  - term: "Support circle"
+    meaning: "A small group you ask what is promising in early work."

@@ -1,0 +1,34 @@
+# Workflow skeleton for Know Your Customers' Jobs to Be Done (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: know-your-customers-jobs-to-be-done
+source:
+  title: "Know Your Customers' Jobs to Be Done"
+  by: "Clayton Christensen and others"
+  kind: paper
+  rights: ideas-only
+  year: 2016
+minds: [clayton-christensen]
+workflow:
+  slug: find-the-job-customers-hire-your-product-for
+  name: "Find the job customers hire your product for"
+  summary: "Describe what you sell and when people buy it. Get an interview plan and the ranked reasons they bought."
+  when: "you want to know what progress customers are really buying."
+  job: understand-customers
+  level: intermediate
+steps:
+  - name: "Customer job interview planner"
+    skill: customer-job-interview-planner
+    job: research
+    from: "Clay Christensen's Milkshake Marketing"
+    method: ["Note why the old way of profiling a buyer and asking for an ideal version did not lift sales", "Spend a day at the place of purchase and log who buys, when, and whether they use it on the spot", "Pick the busiest buying slot and the odd one out", "Stop buyers on their way out and ask what job they hired the product to do", "Ask what else they could have bought for that job and why it lost", "Pick customers who switched to you in the last 6 to 12 months, not long-time fans", "Plan questions about the old way, what made them change and what changed after", "Interview several people at each customer and listen without selling"]
+    inputs: [question, product_data!, voc_reviews!]
+    outputs: [plan]
+    note: "A plan to learn the job buyers hired it for"
+  - pause: "Do the interviews and keep each customer's own words."
+  - name: "Customer buying reasons finder"
+    skill: customer-buying-reasons-finder
+    job: research
+    from: "skill: customer-buying-reasons-finder"
+    method: ["Mark up phrases, do not summarise", "Tag each phrase by force", "Count separate people", "Rank the reasons"]
+    inputs: [voc_reviews, brand_brain!]
+    outputs: [angle_library]
+    note: "Ranks the reasons in the answers with the exact phrases customers used."

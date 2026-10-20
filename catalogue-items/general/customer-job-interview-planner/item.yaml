@@ -1,0 +1,22 @@
+slug: customer-job-interview-planner
+name: "Customer job interview planner"
+summary: "Describe what you sell and when people buy it. Get a plan to learn the job buyers hired it for."
+category: general
+type: skill
+role: make
+job: research
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [clayton-christensen, jill-konrath]
+credits:
+  - {title: "Clay Christensen's Milkshake Marketing", by: "Harvard Business School Working Knowledge", url: "https://library.hbs.edu/working-knowledge/clay-christensens-milkshake-marketing", used: "Watching a place of purchase for a day, asking buyers on their way out what job they hired the product for, and what else they could have bought"}
+  - {title: "Know Your Customers' Jobs to Be Done", by: "Clayton Christensen and others, Harvard Business Review (2016)", used: "Describing demand as a situation with a job to be done, not a buyer profile"}
+  - {title: "3 Key Components of Value Propositions", by: "Jill Konrath (excerpt)", used: "Asking about the old way, what made a buyer change and what changed after"}
+  - {title: "Jill Konrath study notes", by: "Jill Konrath (as summarised in the mind file; to be re-checked)", used: "Interviewing several people at each customer and choosing people who switched recently"}

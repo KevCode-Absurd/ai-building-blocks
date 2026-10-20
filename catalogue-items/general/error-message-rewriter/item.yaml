@@ -1,0 +1,17 @@
+slug: error-message-rewriter
+name: "Error message rewriter"
+summary: "Paste your error messages. Get each rewritten with what went wrong and what to do next."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: copy_draft, required: true}
+minds: [jakob-nielsen]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "10 Usability Heuristics for User Interface Design", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/ten-usability-heuristics/", used: "Error messages in plain language that name the problem and offer a way out, and preventing the error where possible"}

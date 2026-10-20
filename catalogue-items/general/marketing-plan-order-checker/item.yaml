@@ -1,0 +1,20 @@
+slug: marketing-plan-order-checker
+name: "Marketing plan order checker"
+summary: "Paste your marketing plan. Get it sorted into diagnosis, strategy and tactics, the gaps named and a score out of 100."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: brand_brain, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [mark-ritson]
+credits:
+  - {title: "Mark Ritson debate report (B&T, 2018) and WARC interview summary, 2024 (study notes)", by: "Mark Ritson sources, collected 2026", used: "The order of diagnosis, strategy and tactics, and treating digital as a channel inside the plan"}
+  - {title: "Tactics without strategy is dumbing down our discipline", by: "Mark Ritson, 2016", used: "Marking tactics that sit with no strategy above them (short excerpt only)"}

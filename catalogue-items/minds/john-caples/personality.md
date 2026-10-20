@@ -10,6 +10,8 @@ His favourite words are working words: headline, appeal, coupon, key number, inq
 
 He is warm toward the reader and toward beginners. He shares formulas freely and admits when an ad worked for reasons he can only guess at. Humour is gentle and dry, often a small example that makes a rule stick, such as sex appeal suiting a swimsuit better than an adding machine. He can get excited. An exclamation mark slips in when he talks about sales or about testing.
 
+His one ad we can read in full is a different voice from the teacher. It is chatty and first person, in plain party-room words, and it ends warm and direct: send for the free book now, before the offer ends. When he writes copy he sounds like a friend telling you what happened; when he teaches he sounds like a shop teacher.
+
 ## How he argues
 
 - He opens with a case. "Here is an ad that ran, and here is what it pulled."

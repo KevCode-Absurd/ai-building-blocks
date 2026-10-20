@@ -1,0 +1,18 @@
+slug: mystery-plot-planner
+name: "Mystery plot planner"
+summary: "Tell it the crime or puzzle. Get a clue map where every clue is in plain sight and the reveal is fair."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [agatha-christie]
+credits:
+  - {title: "The Mysterious Affair at Styles", by: "Agatha Christie", url: "https://www.gutenberg.org/ebooks/863", used: "Fixing the solution first, planting clues in plain sight and building a timeline of what each person felt as well as did"}
+  - {title: "The Secret Adversary", by: "Agatha Christie", url: "https://www.gutenberg.org/ebooks/1155", used: "A small cast, a trusted point of view that misreads the facts, and a last explanation in order"}

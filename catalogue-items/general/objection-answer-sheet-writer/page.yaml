@@ -1,0 +1,125 @@
+new_slug: objection-answer-sheet-writer
+name: "Objection answer sheet writer"
+summary: "List the doubts buyers raise. Get an answer sheet that agrees where true, restates each doubt as a yes-question and brings proof."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It sorts each doubt and matches fitting proof, but the order is fixed."
+
+headline: "Objection answer sheet writer"
+subhead: "Give it the doubts buyers raise. It sorts each one by kind, restates it as a yes-question, agrees with what is true and attaches proof you can show. You get an answer sheet ready to use in a talk or on a page."
+
+explain: |
+  A buyer with a doubt rarely says it clearly, and a seller who argues loses the sale and the buyer. Most answers sound like defending the product.
+
+  This skill collects every doubt and sorts it into one of three kinds: they do not believe the claim, they see no use for it, or they think a cheaper option is as good. It restates each as a question the buyer answers yes to, agrees with the true part, and then gives a fact backed by proof you can show. Where you have no proof, it says so. An objection map here means a list of doubts, each paired with its answer.
+
+when:
+  - "Buyers keep raising the same doubts and you answer differently each time."
+  - "You are writing a page or a script and want the answers ready."
+  - "You lose deals to a doubt you never planned for."
+
+you_give:
+  - "The doubts buyers raise, or reviews and messages to find them in"
+  - "Product facts and proof you have (optional)"
+  - "Your ranked reasons to buy (optional)"
+you_get:
+  - "Each doubt sorted by kind"
+  - "A yes-question, an honest agreement and a fact for each doubt"
+  - "Proof you can show, and where it comes from"
+  - "A list of doubts that still lack proof"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your doubts, reviews or messages where buyers hesitated."
+  - "Add any proof you have: numbers, photos, quotes."
+  - "Read each answer out loud and cut anything that sounds like arguing."
+  - "Gather new doubts after a week and run it again."
+
+how_it_works:
+  - title: "Collects every doubt"
+    text: "Gathers them in the buyer's words, including the awkward ones."
+  - title: "Sorts by kind"
+    text: "Not believed, no use for me, or cheaper is as good."
+  - title: "Restates as a question"
+    text: "A yes-question that does not skip the doubt."
+  - title: "Agrees with what is true"
+    text: "Opens with the fair part, including past weaknesses."
+  - title: "Brings proof"
+    text: "A demonstration, number or testimonial you can show."
+  - title: "Offers a test"
+    text: "Invites the buyer to measure, show or try."
+  - title: "Orders the sheet"
+    text: "History, doubts, then conclusion, with a plan line on top."
+  - title: "Checks the sheet"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  PLAN
+  <one line on the order of the sheet>
+
+  NOT BELIEVED
+  Doubt: <buyer's words> | Seen: <how often>
+  Yes-question: <restated>
+  Agree: <the true part>
+  Fact: <fact>
+  Proof: <demo, number or quote> | From: <source>
+  Test to offer: <invitation>
+
+  NO USE FOR ME
+  <same layout>
+
+  CHEAPER IS AS GOOD
+  <same layout>
+
+  DOUBTS STILL NEEDING PROOF
+  <list>
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "Real buyer words"
+    how: "Reviews and messages give truer doubts than your guesses."
+  - what: "Proof you hold"
+    how: "Real numbers and quotes raise the sheet more than any wording."
+  - what: "Your past weaknesses"
+    how: "Name them. Agreeing early earns trust."
+  - what: "The setting"
+    how: "A talk, a page and an email need different lengths."
+
+judge:
+  - "Every doubt appears, even the awkward ones."
+  - "Each answer starts by agreeing with something true."
+  - "You can show every piece of proof today."
+  - "Nothing reads like arguing."
+  - "Doubts without proof are listed, not hidden."
+
+test:
+  - "Give it the five doubts you hear most. Check that you would say each answer out loud."
+  - "Show a friend one answer and ask whether they would still doubt."
+  - "Run it twice. The kinds should stay the same."
+  - "Use the sheet in real talks for a week and note which doubts still stop buyers."
+
+improve:
+  - "Add your most common doubts as a starting list."
+  - "Add a rule for what proof you accept, such as only your own records."
+  - "Save each new doubt in a notes file."
+  - "Pair it with \"Ask-which closing planner\" for the end of the talk."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting and rewording doubts is text work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Track how often each doubt comes up."}
+  inputs:
+    - "Customer reviews and messages"
+    - "Test results or photos you can show"
+    - "Notes from lost deals"
+
+terms:
+  - term: "Objection"
+    meaning: "A doubt or reason a buyer gives for not buying yet."
+  - term: "Objection map"
+    meaning: "A list of doubts, each paired with its answer and proof."

@@ -1,0 +1,126 @@
+new_slug: root-cause-finder
+name: "Root cause finder"
+summary: "Paste a problem that keeps coming back. Get a chain of whys checked against facts, the fixable cause and a prevention check."
+job: think-and-decide
+thinking: high
+thinking_why: "It reasons through chains of cause, checks each against evidence and must not guess."
+
+headline: "Root cause finder"
+subhead: "Paste a problem that keeps coming back and any records you have. It asks why down a chain, accepts only answers backed by something seen, tries a second branch and stops at a cause your team can change. You get the cause, a fix and a prevention check."
+
+explain: |
+  When a problem comes back, the usual fix patches the surface. A late order is blamed on a person, a bug on a rushed release, and the same thing happens next month.
+
+  This skill asks why several times in a row, and each answer must come with evidence: a log line, a photo, a person who was there. If there is none, the answer is marked unconfirmed. It tries a second branch in case there is more than one cause and keeps the chain about the process, not the person. It ends with a fix that removes the cause and a check to prove the problem stays away.
+
+when:
+  - "The same problem returns after you fixed it."
+  - "A failure needs a report that goes past \"someone made a mistake\"."
+  - "You must decide where to spend effort after an incident."
+
+you_give:
+  - "The problem: what happened, where and when"
+  - "Logs, tickets, photos or notes (optional)"
+  - "What was tried before (optional)"
+you_get:
+  - "A chain of whys with evidence at each level"
+  - "A second branch"
+  - "The root cause your team can change"
+  - "A fix and a prevention check"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the problem with the place and date, and paste any records."
+  - "Check each answer against the real record. Fix any that are wrong."
+  - "Run the prevention check after the fix."
+
+how_it_works:
+  - title: "States the problem"
+    text: "What was seen, with place and date."
+  - title: "Looks at the record"
+    text: "Real logs and places, not summaries."
+  - title: "Asks why"
+    text: "Each answer with evidence."
+  - title: "Goes down"
+    text: "Until a cause the team can change."
+  - title: "Tries a second branch"
+    text: "In case there is another cause."
+  - title: "Keeps it about process"
+    text: "Not about blame."
+  - title: "Writes fix and check"
+    text: "Removes the cause and proves it."
+
+output_shape: |
+  PROBLEM
+  On <date>, at <place>, <what was seen>.
+
+  RECORDS
+  <record>: shows <x>; missing <y>
+
+  CHAIN A
+  Why 1: <answer> | evidence <x>
+  Why 2: <answer> | evidence <x>
+  ...
+  Root cause: <cause the team can change>
+
+  CHAIN B
+  <same shape, or "no second cause: check <x>">
+
+  FIX
+  <removes the cause by...>
+  PREVENTION CHECK
+  Look at <x> every <time>; success means <y>
+
+  IS FIVE WHYS ENOUGH?
+  <note>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <lines or none>
+
+tweaks:
+  - what: "Records"
+    how: "Logs and photos make answers firm. Without them, answers stay unconfirmed."
+  - what: "The place"
+    how: "Say where it happened. It points to the real record to look at."
+  - what: "Who was there"
+    how: "Name roles. The skill will plan who to ask."
+  - what: "What was tried"
+    how: "State past fixes. It will see why they did not hold."
+
+judge:
+  - "Every answer has evidence or is marked unconfirmed."
+  - "The last cause is something your team can change."
+  - "A second branch was tried."
+  - "No answer ends on blaming a person."
+  - "The fix and prevention check fit the root cause."
+
+test:
+  - "Run it on a problem you already solved. See if it reaches your cause."
+  - "Run it twice. The root cause should be the same."
+  - "Check three answers against the real record."
+  - "After the fix, run the prevention check and note the result."
+
+improve:
+  - "Add your incident log fields to step 2."
+  - "Add a list of causes common in your work (training, tools, handoffs)."
+  - "Keep the chains and fixes for later patterns."
+  - "Pair it with a process waste finder when the cause is in the process."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Building and checking a chain from records is text work."}
+    - {name: "Your ticket or incident system", why: "Holds the records the chain needs as evidence."}
+  inputs:
+    - "Logs or tickets"
+    - "Photos of the place"
+    - "Notes from the people there"
+    - "Past fixes"
+
+terms:
+  - term: "Root cause"
+    meaning: "The deepest cause your team can change to stop the problem returning."
+  - term: "Five whys"
+    meaning: "Asking \"why\" about five times in a row, each time about the last answer."

@@ -1,0 +1,20 @@
+slug: offer-checklist-reviewer
+name: "Offer checklist reviewer"
+summary: "Paste your offer, price and guarantee. Get a review against a tested offer checklist, and the three changes worth testing first."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: angle_library, required: true}
+  - {type: offer, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: offer}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [gary-bencivenga]
+credits:
+  - {title: "Gary Bencivenga's Marketing Bullets", by: "Gary Bencivenga", used: "The offer checklist: one thing per ad, a believable reason for a deal, a deluxe version, discount framing, a longer guarantee, repeat options, honest limits, and testing the offer as hard as the headline"}

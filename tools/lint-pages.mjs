@@ -5,7 +5,7 @@ import path from "node:path";
 import YAML from "../site/node_modules/yaml/dist/index.js";
 
 const REQUIRED = ["new_slug", "name", "summary", "job", "headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "example", "tweaks", "judge", "test", "improve"];
-const JOBS = ["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "check-ads", "read-ad-results", "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file", "study-competitors", "make-offer", "grow-social", "set-up-ai", "think-with-minds"];
+const JOBS = ["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "check-ads", "read-ad-results", "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file", "study-competitors", "make-offer", "grow-social", "set-up-ai", "think-with-minds", "test-an-idea", "plan-strategy", "build-product", "build-software", "sell-and-negotiate", "lead-people", "speak-and-persuade", "write-and-tell-stories", "design-work", "think-and-decide", "money-and-investing"];
 const BANNED = ["delve", "foster", "leverage", "utilize", "facilitate", "empower", "streamline", "robust", "cutting-edge", "game changer", "game-changer", "unlock", "supercharge", "harness", "elevate", "seamless", "effortless", "transformative", "revolutionize", "paradigm", "synergy", "holistic", "journey", "ecosystem", "best-in-class", "world-class", "next-level", "morrow", "ledgerly", "hale studio"];
 const words = (s) => String(s ?? "").trim().split(/\s+/).filter(Boolean).length;
 
@@ -23,7 +23,10 @@ for (const { slug, file } of pages) {
   const raw = fs.readFileSync(file, "utf8");
   let p;
   try { p = YAML.parse(raw); } catch (e) { report.push({ slug, file, issues: [`bad YAML: ${e.message.split(String.fromCharCode(10))[0]}`] }); continue; }
-  for (const f of REQUIRED) if (p[f] == null || (Array.isArray(p[f]) && !p[f].length)) issues.push(`missing ${f}`);
+  // Skills built from a mind's sources (item.yaml has minds:) have no worked example yet (docs/SOURCE-SKILLS-PRD.md).
+  const itemFile = file.endsWith("page.yaml") ? file.replace(/page\.yaml$/, "item.yaml") : `catalogue-items/orchestrators/${slug}/item.yaml`;
+  const fromMinds = fs.existsSync(itemFile) && /^minds:/m.test(fs.readFileSync(itemFile, "utf8"));
+  for (const f of REQUIRED) if ((f !== "example" || !fromMinds) && (p[f] == null || (Array.isArray(p[f]) && !p[f].length))) issues.push(`missing ${f}`);
   for (const f of ["when", "you_give", "you_get", "how_to_use", "judge", "test", "improve"]) if (Array.isArray(p[f]) && p[f].some((x) => typeof x !== "string")) issues.push(`${f} has an item that is not plain text (quote lines containing ": ")`);
   if (p.job && !JOBS.includes(p.job)) issues.push(`unknown job "${p.job}"`);
   if (p.example && p.example.business !== "sprout") issues.push(`example uses "${p.example.business}", not sprout`);

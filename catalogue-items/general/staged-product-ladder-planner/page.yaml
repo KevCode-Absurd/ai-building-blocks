@@ -1,0 +1,123 @@
+new_slug: staged-product-ladder-planner
+name: "Staged product ladder planner"
+summary: "Describe your end goal and your first product. Get a step-by-step plan where each sale funds the next, cheaper product."
+job: plan-strategy
+thinking: high
+thinking_why: "It has to check that the money works at every step, and one wrong number breaks the whole plan."
+
+headline: "Staged product ladder planner"
+subhead: Give it your end goal and the first product you could build with what you have. It plans each step so the sales from one fund the next, cheaper one, until you reach the broad product. You get a plan in plain words with prices, funding and limits.
+
+explain: |
+  Big goals fail when the first move needs money you do not have. The common way around it is to start small and costly: a first product built in small numbers, sold to early buyers who pay more. The cash from it pays for the next product, which costs less and reaches more people, and so on.
+
+  This skill writes that ladder. It states the end goal in one line, picks a first product you can build with money you can afford to lose, and sets a price so early buyers fund the next step. It defines each next product and what the one before paid for. It checks that no step depends on a hope with no plan behind it, and it writes the plan in public language so buyers can see how the moves fit.
+
+when:
+  - You have a large goal but only money for something small.
+  - You are deciding how to price a first product so it helps pay for the next.
+  - You want a public plan that explains to early buyers why you start where you do.
+
+you_give:
+  - Your end goal, in a sentence or two (required)
+  - Your first product idea and what you can spend on it (required, in the same message)
+  - Facts about costs and prices (optional)
+  - The most money you can afford to lose (optional)
+you_get:
+  - The end goal in one line
+  - A ladder of products, each with a price, a cost and what it pays for
+  - A funding check for every step, with the risk limit
+  - A short public version of the plan
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Write your end goal, your first product and the most you can lose.
+  - Add any cost and price numbers you have. Say which are guesses.
+  - Read the funding check first. Fix any step it says depends on a hope.
+  - Publish the short plan when the numbers hold.
+
+how_it_works:
+  - title: End goal in one line
+    text: States where the ladder ends, in one plain line.
+  - title: Pick the first product
+    text: Chooses a first product small and costly enough to build with what you have.
+  - title: Set the first price
+    text: Sets a price so early buyers fund the next step.
+  - title: Define the next product
+    text: Defines the next, cheaper product and what the first one pays for.
+  - title: Repeat the ladder
+    text: Repeats until the broad, low-price product is reached.
+  - title: Limit the risk
+    text: Puts money at risk only up to what you can afford to lose.
+  - title: Plain public plan
+    text: Writes the plan in words buyers can follow.
+  - title: Check it
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  END GOAL
+  <one line>
+
+  THE LADDER
+  Step 1: <product> | Price: <amount> | Cost to build: <amount> | Buyers needed: <number> | Pays for: <step 2>
+  Step 2: <product> | ...
+  Step <n>: <broad product> | Price: <amount>
+
+  FUNDING CHECK
+  <step> | Funded by: <source> | Gap: <amount or none> | Depends on a hope: <yes/no>
+
+  RISK LIMIT
+  Most you can lose on step 1: <amount> | If it fails: <what you stop doing>
+
+  THE PLAN IN PUBLIC WORDS
+  <short version for buyers>
+
+  MISSING
+  <what would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: What you can afford to lose
+    how: Give a number. The first step is sized to fit under it.
+  - what: Your end price
+    how: Say what the broad product should cost. The ladder works backward from it.
+  - what: Buyer numbers
+    how: Give how many early buyers you can reach. If you do not know, it marks the step MISSING.
+  - what: Time per step
+    how: Say how long each build takes. Cash timing can break a step that looks fine on paper.
+
+judge:
+  - Each step says what pays for the next.
+  - The first step can be built with money you can lose.
+  - The end goal is in one line.
+  - No step depends on a hope with no plan behind it.
+  - Numbers you did not give are marked MISSING or ESTIMATE.
+
+test:
+  - Check each step's sums by hand. The sales at the stated price should cover the next build.
+  - Cut the number of early buyers in half and see which step breaks.
+  - Run it twice. The order of the ladder should stay the same.
+  - Show the public plan to a possible buyer and ask if they understand why you start with the dearer product.
+
+improve:
+  - Add your costs for tools, labour and stock to the funding check so it uses your real numbers.
+  - Add a rule on how much cash you keep in reserve.
+  - Save the end goal and ladder in your brand file so future products fit it.
+  - Pair it with "Raw cost breakdown finder" to find the real cost of each step.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Laying out a ladder and checking the sums is text and number work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Lets you change prices and buyer numbers and watch which step breaks."}
+  inputs:
+    - "Your costs for the first build, line by line"
+    - "A count of early buyers you could reach, such as a waiting list"
+    - "A price you think the broad product must hit"
+
+terms:
+  - term: Ladder
+    meaning: A row of products, each one cheaper and wider in reach than the one before.
+  - term: Risk limit
+    meaning: The most money you could lose on the first step without hurting the rest of your life or business.

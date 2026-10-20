@@ -1,0 +1,24 @@
+slug: brand-mark-system-planner
+name: "Brand mark system planner"
+summary: "Paste your brief and brand file. Get a mark plan that starts from the brief and tests small."
+category: general
+type: skill
+role: make
+job: design
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+  - {type: reference_set, required: false}
+outputs:
+  - {type: design_direction, required: true}
+  - {type: plan, required: true}
+minds: [michael-bierut, paul-rand, aaron-draplin]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "I'm With Her", by: "Michael Bierut, 2017", used: "Reading the brief for the answer already in it, and a mark simple enough that others can fill it in"}
+  - {title: "What is Design For? A Discussion", by: "Michael Bierut, 2004", used: "Starting with the brief and the listening call or visit"}
+  - {title: "Logo Process", by: "Aaron Draplin", url: "https://draplin.com/process", used: "Paper sketches first, many ideas listed before software"}
+  - {title: "Aaron Draplin on hard work, keeping things small and fun, and his honest design process", by: "Creative Boom", used: "Keeping the work small and the process honest"}
+  - {title: "Ethos", by: "Aaron Draplin", used: "Plain, practical working habits for small design jobs"}

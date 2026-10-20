@@ -1,0 +1,133 @@
+new_slug: crisis-response-planner
+name: "Crisis response planner"
+summary: "Describe the defect, complaint or failure. Get a first-30-days plan: who to tell, who investigates, what to fix and what to promise."
+job: lead-people
+thinking: high
+thinking_why: "People could be hurt, so it needs careful checks on what is known and what is not."
+
+headline: "Crisis response planner"
+subhead: Describe a defect, a serious complaint or a failure that has come to light. It puts the people affected first, sorts what is known from what is not, and sets who to tell, who investigates, what to fix and what to promise. You get a plan for the first 30 days.
+
+explain: |
+  When something goes wrong, the pull is to wait for every fact, let the lawyers write the message and find one person to blame. People who are harmed then hear nothing for weeks, staff find out from the news and the real cause stays hidden.
+
+  This skill starts with the customer or the person at risk and says what is known and what is not. It tells the people who must fix the problem before the public, names an independent person to investigate and commits to share the findings. It acts on accountability for both people and practices, and finds why the problem did not reach the top sooner. It sets fair help for those affected, widens the review to similar problems and puts dates on every update.
+
+when:
+  - A defect, safety issue or serious complaint has just come to your attention.
+  - You are not sure who should hear first, and what to say before you know everything.
+  - You found the problem was known lower down for a long time and want to fix why.
+
+you_give:
+  - What went wrong, who is affected and what you know so far
+  - Who inside knew and when, if you know
+  - Your size, key roles and any legal limits on what you can say
+  - Any promises already made (optional)
+you_get:
+  - A first message that puts the customer first and states what is not yet known
+  - A plan for who to tell and in what order
+  - An investigation set-up with an outside check, and fixes with owners and dates
+  - A way to help the people affected and a way to protect those who raised the issue
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the problem, who is affected and what you know. Say what you do not know.
+  - Add any legal limits or promises already made.
+  - Check each date with the people who must meet it before you share the plan.
+  - Have a lawyer or adviser read anything that goes to the public.
+
+how_it_works:
+  - title: Puts people first
+    text: Names who could be hurt and what they need from you now.
+  - title: Sorts known from unknown
+    text: Lists what is confirmed, what is not and when you will know more.
+  - title: Orders who hears
+    text: Tells the people who must fix it before the public.
+  - title: Brings in an outsider
+    text: Names an independent investigator and a promise to share what they find.
+  - title: Acts on accountability
+    text: Covers the people and the practices that the findings name.
+  - title: Fixes the flow
+    text: Finds why the problem did not travel up and changes how information moves.
+  - title: Helps those affected
+    text: Sets up fair help run by an independent expert.
+  - title: Widens and dates
+    text: Reviews for similar problems and sets dates for updates.
+
+output_shape: |
+  WHO IS AFFECTED
+  <group> | What they need now: <need>
+
+  KNOWN AND NOT YET KNOWN
+  Known: <facts>   Not known: <gaps>   Update by: <date>
+
+  FIRST MESSAGE
+  <customer first, plain, states what is not known>
+
+  WHO HEARS AND WHEN
+  <order> | <audience> | <how> | <date>
+
+  INVESTIGATION
+  Outside check: <who or the kind of person>   Share findings with: <whom>
+
+  FIXES
+  <fix> | Owner: <role> | Date: <date>
+
+  WHY IT DID NOT TRAVEL UP
+  <cause and the change to how information moves>
+
+  HELP FOR THOSE AFFECTED
+  <what is offered, run by whom>
+
+  THE PEOPLE WHO RAISED IT
+  <how they are protected and thanked>
+
+  MISSING
+  <what was not provided>
+
+  CHECKS MISSED
+  <one line per check missed, or none>
+
+tweaks:
+  - what: What is known
+    how: Separate facts from guesses. The first message uses only facts.
+  - what: Who knew
+    how: Say who inside raised the issue and when. The plan protects them and traces the delay.
+  - what: Legal limits
+    how: State anything that limits what you can say. The skill works inside it and flags questions for your adviser.
+  - what: Your size
+    how: A small team has no safety department. The plan names who in your team holds each job.
+
+judge:
+  - The customer comes first in the opening message.
+  - An outside check is named.
+  - Each fix has an owner and a date.
+  - It says what is not yet known.
+  - There is a plan for the people who raised the issue.
+
+test:
+  - Run it on a past incident from your field and compare the plan with what happened.
+  - Ask a colleague to read the first message and say who it is for. They should say the people affected.
+  - Run it twice. The order of who hears should stay the same.
+  - Check every date with the owner before you send the plan out.
+
+improve:
+  - Add your own contacts for outside experts, so the investigation line names real people.
+  - Add rules your industry sets for notice and reporting.
+  - Keep each incident and its fixes in one file the skill reads next time.
+  - Pair it with a message writer for each audience.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting facts and writing a plan is text work any strong chat AI does well."}
+    - {name: "A lawyer or adviser", why: "Anything sent to the public or the people affected should be read by someone who knows your legal duties."}
+  inputs:
+    - "A timeline of when the problem was first known"
+    - "Names and roles of those who raised it"
+    - "Rules on notice or reporting that apply to you"
+
+terms:
+  - term: Independent investigator
+    meaning: A person outside the company who looks into what happened and is free to say what they find.
+  - term: Silo
+    meaning: A team that keeps information to itself so other teams do not see it.

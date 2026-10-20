@@ -1,0 +1,20 @@
+slug: what-you-really-sell-finder
+name: "What you really sell finder"
+summary: "Paste your product and buyer. Get a long list of what you are really selling, and the best three as test angles."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: persona, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: angle_library}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [gary-bencivenga]
+credits:
+  - {title: "Gary Bencivenga's Marketing Bullets", by: "Gary Bencivenga", used: "Asking what you are really selling and listing many answers, pushing from the thing to the result, and testing the strongest as separate angles"}

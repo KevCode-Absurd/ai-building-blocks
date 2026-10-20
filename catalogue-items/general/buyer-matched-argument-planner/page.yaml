@@ -1,0 +1,128 @@
+new_slug: buyer-matched-argument-planner
+name: "Buyer-matched argument planner"
+summary: "List your selling points and the buyer types you meet. Get which argument leads for each and what to ask first."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It matches arguments to buyer types, which needs judgement, but the structure is fixed."
+
+headline: "Buyer-matched argument planner"
+subhead: "Give it your product facts and the kinds of buyers you meet. It lists every true selling argument and picks which one leads for each buyer type, with the reason. You also get a first question for each type and a list of what to look up before a call."
+
+explain: |
+  A pitch that suits one buyer bores the next. Sellers who lead with what they like best, not with what the buyer cares about, lose people early.
+
+  This skill lists every true argument you have, then matches a lead argument to each type of buyer and says why. It writes what to look up before a call, an honest reason for the visit and a first question that gets the buyer talking. Every argument has to be a fact you can show, and ones you cannot back are set aside. The result is an angle library, which is a ranked list of reasons to buy.
+
+when:
+  - "You give the same pitch to every buyer."
+  - "You meet very different buyers, such as owners, users and finance."
+  - "You are about to start calling and want a first question per buyer type."
+
+you_give:
+  - "Your product or service facts"
+  - "The buyer types you meet (optional)"
+  - "Where you can research a buyer before a call (optional)"
+you_get:
+  - "Every true argument, with proof marked"
+  - "A lead argument and backup for each buyer type"
+  - "A first question for each type"
+  - "A research list and an honest reason for the visit"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your product facts."
+  - "Describe two to four buyer types, even loosely."
+  - "Look up one real buyer using the research list before your next call."
+  - "Tell the skill which argument worked and ask it to re-rank."
+
+how_it_works:
+  - title: "Lists every argument"
+    text: "One line each, as a fact."
+  - title: "Defines buyer types"
+    text: "What each pays for, worries about and decides on."
+  - title: "Plans research"
+    text: "What to look up before a call."
+  - title: "Writes the honest reason"
+    text: "A brief true reason for the visit."
+  - title: "Matches the lead"
+    text: "One lead and one backup per type, with why."
+  - title: "Writes a first question"
+    text: "An open question that gets them talking."
+  - title: "Sets a stop rule"
+    text: "How to read the buyer and leave well."
+  - title: "Compiles the library"
+    text: "Ranks arguments and lists unproven ones."
+
+output_shape: |
+  ARGUMENTS
+  1. <fact> | Proof: <what> or UNPROVEN
+
+  BUYER TYPES
+  <type> | Pays for: <x> | Worries about: <y>
+
+  RESEARCH BEFORE A CALL
+  <what to look up and record>
+
+  HONEST REASON YOU CAME
+  <one or two sentences>
+
+  LEAD ARGUMENT BY BUYER TYPE
+  <type>: Lead: <argument> | Backup: <argument> | Why: <reason>
+  First question: <question>
+  Listen for: <signal> | Change the lead if: <signal>
+
+  STOP RULE
+  <how to tell, how to leave>
+
+  UNPROVEN ARGUMENTS
+  <argument> | Proof needed: <what>
+
+  MISSING
+  <what would help>
+
+  CHECKS MISSED
+  <one line each, or none>
+
+tweaks:
+  - what: "Buyer types"
+    how: "Real types you meet give a better match than general ones."
+  - what: "Proof you hold"
+    how: "More proven arguments means more choices to lead with."
+  - what: "Research sources"
+    how: "Say where you can look up a buyer so the list is practical."
+  - what: "Your setting"
+    how: "A call, a visit and an email each need a different first question."
+
+judge:
+  - "Every argument is a fact, not an adjective."
+  - "No two buyer types lead with the same argument without a reason."
+  - "The first questions are about the buyer."
+  - "You could say the reason for the visit to their face."
+  - "Unproven arguments are marked, not led with."
+
+test:
+  - "Use it on two buyers who are very different. Compare their lead arguments."
+  - "Run it twice. The lead per type should stay close."
+  - "Try each lead on three real buyers and note who responds."
+  - "Cut the arguments you cannot back and see if the pitch holds."
+
+improve:
+  - "Add your best-known buyer types as a starting list."
+  - "Add the places you can research a buyer."
+  - "Save the arguments that worked in a notes file."
+  - "Pair it with \"Ten-second opener writer\" to turn the lead into a first line."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Matching arguments to buyer types is text work a strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Track which lead works for which type."}
+  inputs:
+    - "Notes from past talks"
+    - "Customer reviews that show what buyers value"
+    - "Product sheets and price lists"
+
+terms:
+  - term: "Angle library"
+    meaning: "A ranked list of reasons to buy, each with the facts behind it."
+  - term: "Lead argument"
+    meaning: "The reason you open with for a given buyer."

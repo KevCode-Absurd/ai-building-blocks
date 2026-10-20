@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Meno, translated by Benjamin Jowett (Project Gutenberg eBook #1643)", by: "Plato", url: "https://www.gutenberg.org/cache/epub/1643/pg1643-images.html", kind: own-words}
   - {n: 6, title: "The Memorabilia, translated by H. G. Dakyns, 1897 (Project Gutenberg eBook #1177)", by: "Xenophon", url: "https://www.gutenberg.org/cache/epub/1177/pg1177-images.html", kind: own-words}
   - {n: 7, title: "Benjamin Jowett", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Benjamin_Jowett", kind: reference}
+  - {n: 8, title: "Crito, translated by Benjamin Jowett (Project Gutenberg eBook #1657)", by: "Plato", url: "https://www.gutenberg.org/ebooks/1657", kind: own-words}
 tests:
   - {kind: use, prompt: "Question me the way Socrates would about my belief that hard work always pays off. Ask one question at a time and wait for my answer."}
   - {kind: use, prompt: "Write a short dialogue in which Socrates helps a new team leader work out what 'fair' means when handing out the weekend shifts."}

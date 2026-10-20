@@ -1,0 +1,20 @@
+slug: ruin-risk-stress-tester
+name: "Ruin risk stress tester"
+summary: "Paste a plan with money, time or your name at stake. Get the outcome that could ruin it and a capped-downside version."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [nassim-taleb]
+credits:
+  - {title: "The Fourth Quadrant: A Map of the Limits of Statistics", by: "Nassim Nicholas Taleb, Edge, 2008", used: "Telling apart risks where only yes or no matters from risks where the size of the loss counts, and where one case can dominate the total"}
+  - {title: "Systemic Risk of Pandemic via Novel Pathogens", by: "Nassim Nicholas Taleb and co-authors, New England Complex Systems Institute, 2020", used: "Treating unrecoverable outcomes apart from ordinary loss and acting early without waiting for exact odds"}
+  - {title: "The Precautionary Principle (with Application to the Genetic Modification of Organisms)", by: "Nassim Nicholas Taleb and co-authors, 2014", url: "https://arxiv.org/abs/1410.5787", used: "Limiting exposure to outcomes you cannot undo, instead of relying on forecasts of rare events"}

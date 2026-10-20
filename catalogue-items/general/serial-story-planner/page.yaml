@@ -1,0 +1,125 @@
+new_slug: serial-story-planner
+name: "Serial story planner"
+summary: "Tell it your story or content idea. Get a plan in parts, each with a job and a hook."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It has to fix a whole shape and then make each part do its own job."
+
+headline: "Serial story planner"
+subhead: "Tell it your story or series idea and how many parts you have. It fixes the ending and the turns, then gives every part a job and a hook. You get a part-by-part plan with a point to listen and adjust."
+
+explain: |
+  A story in parts fails when each part is only a step toward the next. Readers drop out in the middle because nothing in the part they are reading is worth finishing. Others lose the thread because the shape was never decided.
+
+  This skill fixes the ending and three or four turns before anything else. It splits the story into parts and gives each a single job and a size. Part one opens with a plain fact, a person and a place. Each part ends on a question or a shock that costs the main person something. The change of heart is spread across steps. The plan also marks a point to read aloud to real people and says how to change the next parts based on what they say.
+
+when:
+  - "You are planning a newsletter story, podcast season or video series that runs over weeks."
+  - "You are writing a serial or long piece and lose track of where it is going."
+  - "You want a customer story told in parts that people come back to read."
+
+you_give:
+  - "Your story or content idea and the audience"
+  - "Number of parts and size of each (optional)"
+  - "The ending, if you know it (optional)"
+  - "Your brand file (optional)"
+you_get:
+  - "The ending and the main turns"
+  - "A table of parts: job, size, beats and closing hook"
+  - "The change of the main person in steps"
+  - "A point to listen to readers and what to ask"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the story or series and who it is for."
+  - "Say how many parts you want and how long each should be."
+  - "Say the ending if you know it."
+  - "Share the planned part at the listening point and use the answers to adjust the rest."
+
+how_it_works:
+  - title: "Fixes the ending and turns"
+    text: "The shape of the whole, before any part."
+  - title: "Splits into parts"
+    text: "One job and one size for each."
+  - title: "Plans part one"
+    text: "A plain fact, then a person and a place."
+  - title: "Ends each part on a cost"
+    text: "A question or shock that costs the main person something."
+  - title: "Spreads the change"
+    text: "Steps, each with a moment, a cost and what it shows."
+  - title: "Plants and pays off"
+    text: "Early details that return changed."
+  - title: "Plans the listening point"
+    text: "When to share it aloud and what to ask."
+  - title: "Checks the whole"
+    text: "No two parts alike, then names any check it missed."
+
+output_shape: |
+  ENDING
+  <last scene in two sentences>
+  TURNS
+  1. <turn> 2. <turn> 3. <turn>
+
+  PARTS
+  Part <n> | job: <x> | size: <y>
+    beats: <list>
+    closes on: <question or shock> | costs: <what>
+
+  THE CHANGE, IN STEPS
+  <step> | <moment> | <cost> | <what it shows>
+
+  PLANTS AND PAYOFFS
+  <detail> in part <n> returns in part <n>
+
+  LISTENING POINT
+  After part <n>. Ask: <two questions>. If <answer>, change <part>.
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Number and size of parts"
+    how: "Give real limits, such as six emails of 300 words. The plan fits them."
+  - what: "The ending"
+    how: "If you know it, say so. If you do not, ask for two options."
+  - what: "Your audience"
+    how: "Say how often they read and where. Cadence changes how the hooks work."
+  - what: "The main person"
+    how: "Give one trait or habit. It becomes the detail that sticks."
+
+judge:
+  - "Each part has its own job that is not the same as another."
+  - "Each part but the last closes on a question or shock with a cost."
+  - "The ending was fixed before part one."
+  - "A reader of any single part gets something whole."
+  - "The change of the main person is shown in steps."
+
+test:
+  - "Read only part one's plan and see if you would want part two."
+  - "Check the closing hooks in a row. They should not repeat the same trick."
+  - "Show the plan to one reader and ask what they expect to happen."
+  - "Run it twice and check that the ending and turns stay close."
+
+improve:
+  - "Add the length and cadence your channel uses."
+  - "Add the tone words for your voice from your brand file."
+  - "Keep notes on what readers said at each listening point."
+  - "Pair it with \"Ending-first story planner\" when you want one strong effect from a single piece."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Planning parts and hooks is text work any strong chat AI does well with this skill."}
+    - {name: "A calendar", why: "Putting each part on a date shows whether the listening point leaves time to adjust."}
+  inputs:
+    - "A one-page summary of your story"
+    - "Your audience size and how they find you"
+    - "Past series you ran and what readers did"
+
+terms:
+  - term: "Hook"
+    meaning: "The closing line or beat of a part that makes people want the next."
+  - term: "Listening point"
+    meaning: "A planned moment to share the work with real readers and adjust the next parts."

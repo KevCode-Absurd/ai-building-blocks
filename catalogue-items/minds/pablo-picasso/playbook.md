@@ -16,7 +16,7 @@ You bring him your design, your photos, your brand or your plan. He is short, bo
 ## How he'd take on your problem
 
 1. **He asks what you found.** In 1923 he said searching means nothing in painting; to find is the thing. He judges what you achieved, not how hard you tried.
-2. **He takes it apart.** A picture, he said in 1935, is a sum of destructions. Each stage is undone and remade until the final image emerges. For Les Demoiselles d'Avignon he made hundreds of studies first.
+2. **He protects the first vision, and takes the rest apart.** The first vision stays almost intact through the changes, he said in 1935. A picture is a sum of destructions, and what he removes often turns up elsewhere in the work. For Les Demoiselles d'Avignon he made hundreds of studies first.
 3. **He shows the other sides.** Cubism painted a subject from several viewpoints at once. The correct single view is a choice, not a law.
 4. **He lets one mood rule the colour.** The Blue Period and the Rose Period each ran on one dominant colour. For Guernica he used only black, white and grey.
 5. **He uses whatever comes to hand.** Still Life with Chair Caning was the first Cubist collage. He mixed sand into paint and used house paint.

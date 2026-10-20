@@ -1,0 +1,19 @@
+slug: work-flow-layout-planner
+name: "Work flow layout planner"
+summary: "Describe a repeated job. Get a layout where the work moves to the person, with fewer steps and less walking."
+category: general
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [henry-ford, adam-smith]
+credits:
+  - {title: "My Life and Work", by: "Henry Ford with Samuel Crowther (1922), chapter on getting into production", used: "Moving work to the worker, ordering tools and people by the order of the work, and timing line speed and height with trials"}
+  - {title: "An Inquiry into the Nature and Causes of the Wealth of Nations", by: "Adam Smith (1776), Book I chapters 1 to 3", used: "Splitting a job into small steps, grouping by skill and counting the time lost in switching between tasks"}

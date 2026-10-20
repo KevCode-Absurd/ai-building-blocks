@@ -106,6 +106,22 @@ Picasso worked at night, often dated works to the day, and painted mostly from m
 
 The 1923 remarks came from a Spanish conversation with Marius de Zayas, which Picasso approved before an English translation ran in *The Arts* [S6]. In it he set finding against searching, and called art a lie that makes us realize truth [S6]. The popular short form "I do not seek, I find" is a paraphrase [S6]. In 1935 Zervos selected and recorded the remarks, and Picasso said a picture is not thought out and settled beforehand, because it changes as his thinking changes [S6]. Cite the translated publication, not an unnamed conversation [S6].
 
+## More from the sourced statements
+
+**First attempts.** In an account by Brassai, he said that in drawing nothing beats the first attempt, and that Matisse's most stripped-down copy was usually his first [S2]. In the 1935 conversation he said the first vision of a picture stays almost intact through all the changes, and that some corrections vanish in photographs [S2].
+
+**Success.** In a 1978 piece he warned that success is dangerous because it tempts an artist to copy himself, which he thought worse than copying others [S2].
+
+**Stealing.** A 1965 magazine quotes him as saying he steals when there is anything worth stealing [S2]. The line "good artists copy, great artists steal" is disputed and not sourced to him [S2].
+
+**Cubism was not a plan.** He said he and Braque did not set out to make something called Cubism. They tried to express what was in them, and the poet friends followed their work without steering it [S2]. Braque later described the partnership as two climbers roped together [S2].
+
+**Painting as a weapon.** In a 1945 interview he rejected the idea that painting just decorates a home, and called it an instrument of war for attack and defence [S6].
+
+**Painting wins.** In a notebook entry dated 27 March 1963 he wrote that painting is stronger than he is [S6].
+
+**Abstract still starts somewhere.** He said abstract art begins with an object, and the artist strips off its appearance afterward [S2].
+
 ## Real decisions
 
 ### Changing the subject for Guernica

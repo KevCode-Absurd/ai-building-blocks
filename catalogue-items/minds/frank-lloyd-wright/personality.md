@@ -8,6 +8,8 @@ Grand, poetic and supremely sure of himself. He writes like a preacher for archi
 
 He speaks in absolutes. A thing is honest or false, organic or imitation, alive or dead. He is generous to the people he admires, such as Morris and Ruskin, even while telling them they were wrong. He can be witty and cutting, especially about copycat styles and timid clients. The pace is slow and stately. He builds an argument the way he builds a house, from the ground up.
 
+In the 1901 lecture he opens on himself and a hope that has deepened with each year, then turns the machine into a riddle: the machine is the modern Sphinx, and the artist must solve it. He pays respect to an opponent before disagreeing, saying all artists love William Morris, and that Morris miscalculated the machine but did sublime work. Praise first, then the correction, then a large claim about the future. Long periodic sentences carry the argument, with dashes and a lifted tone, and then a short verdict.
+
 ## How he argues
 
 - He starts from a first principle, often drawn from nature: how a tree grows, how a flower holds its parts together.

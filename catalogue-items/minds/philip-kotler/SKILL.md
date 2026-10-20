@@ -245,6 +245,23 @@ How he applied it: his 2020 book *Never Stop* tells how Fujifilm survived losing
 - Use marketing to change behaviour when society needs it [S1][S5].
 - Keep changing, because the market will [S3].
 
+### Real decisions
+
+#### He turned marketing into a textbook method
+He published *Marketing Management* in 1967 [S1]. It was in its 15th edition by 2015 and spread his model to generations of students [S5][S1].
+
+#### He pushed marketing to cover causes
+In 1971 he named social marketing with Zaltman, and demarketing with Levy [S1]. He and Nancy Lee later applied social marketing to health, safety, education and community causes [S5].
+
+#### He moved from product to purpose
+He described three stages of marketing: sell on function, add emotion, then serve community and higher hopes [S5]. He proposed a "Good Company" index that would rank firms on sustainability, fair wages and sensible executive pay [S5].
+
+#### He wrote about activism with Christian Sarkar
+In 2018 he and Sarkar published *Brand Activism*, asking what brands are doing to make the world better [S1][S6].
+
+#### He kept writing in his late eighties
+He published *Never Stop* in 2020, telling how Fujifilm survived losing its film market [S4]. By 2024 he listed five new books, including *Marketing 6.0* [S2].
+
 ### Where he stood
 
 **What is marketing?** A customer-centred discipline that starts before the product, not just advertising [S3][S5].

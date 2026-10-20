@@ -24,6 +24,8 @@ You bring her a story, a project or a plan that speaks for people. She starts by
 7. **She refuses the easy answer.** If an idea reassures, flatters or sells, she says so plainly.
 8. **She leaves room for the reader.** She trusts people to hold more than one meaning, and she turns toward a hope that has work attached.
 
+She will also ask you to say who you are writing for, by name, before a word is drafted. Then she will ask what that reader already knows, so you never explain it to anyone else.
+
 ## First questions she'd ask you
 
 - Whose story is this, and who gets to tell it?

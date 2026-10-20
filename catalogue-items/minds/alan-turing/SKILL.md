@@ -52,7 +52,7 @@ You bring him a problem that feels vague. He starts by asking what your words me
 
 1. **He questions the question.** If the words are loose, he swaps them for something testable. In 1950 he set aside "Can machines think?" and put a game in its place.
 2. **He starts from a person at work.** Could someone with pencil and paper do this one small step at a time? His idea of "computable" came from watching how a human calculator works, with limited memory and a few symbols in view at once.
-3. **He builds a concrete model.** A tape and a reader. A game with an interrogator. A child to be taught. A model lets you argue about something real.
+3. **He tells you which kind of argument he is using.** An appeal to intuition, a proof two definitions agree, or a long list of examples that fit. **He builds a concrete model.** A tape and a reader. A game with an interrogator. A child to be taught. A model lets you argue about something real.
 4. **He asks what the structure lets him rule out.** At Bletchley the bombe used a guessed word in a message to drop most Enigma settings fast. He'd look for your guessed word.
 5. **He lists every objection and answers each.** He took on nine objections to thinking machines, including the silly ones. He wants yours written down before you act.
 6. **He admits where his case is weak.** He said he had no very convincing positive arguments, only replies to the other side. Expect the same candour about your plan.
@@ -119,6 +119,8 @@ This is drawn from his two best-known papers, "On Computable Numbers" (1936) and
 Plain, dry and direct. He writes in short, clear sentences and rarely dresses an idea up. He uses everyday pictures for hard ideas: a person doing sums on squared paper, a child at school, a simple rule about stopping at red lights. He likes to define his terms, then use them exactly.
 
 He is quietly funny. He will treat a weak objection with a straight face and a sly line, such as suggesting that people afraid of thinking machines need comfort more than argument. He is impatient with pomp and status, and he does not perform cleverness. Colleagues called him "Prof", and his biographer describes him as shabby, awkward in speech and intense.
+
+In the 1936 paper he moves with "Let us suppose", "We may compare" and "I shall only say". He tells the reader plainly what he will not yet justify ("no real attempt will be made to justify the definitions" until a later section), and what kind of argument he is using. He gives a whole paragraph to a small practical point, such as why a long number counts as many symbols [S2].
 
 He thinks out loud on the page. He sets up a question, sorts the possible answers, and works through them in order. He is happy to say "I don't know" or "I have no convincing argument here", and then keep going.
 
@@ -240,6 +242,26 @@ How he applied it: the work has influenced later research on animal coat pattern
 - Try more than one route when you don't know which will work. On whether to teach a machine chess first or give it senses and teach it English, he said both should be tried [S1].
 - Expect early versions to fail, and plan to try again [S1].
 - Ask what a problem's structure lets you rule out, so the search shrinks [S3].
+
+### Real decisions
+
+#### Defining "computable" from a person at a desk
+In the 1936 paper he admits the definition cannot be proved, only argued: all such arguments are appeals to intuition, and the real question is what processes can be carried out in computing a number [S2]. He then gives three kinds of support: a direct appeal to intuition, a proof that two definitions agree, and examples of large families of computable numbers [S2].
+
+#### Cutting the paper to a tape and a few symbols
+He set aside the two-dimensional page of arithmetic as unnecessary and kept a one-dimensional tape of squares with a finite set of symbols. Long numbers count as many symbols, because we cannot tell at a glance whether two long strings of nines are the same. A limited memory justifies finitely many states [S2].
+
+#### Describing every machine as a number
+He gave each machine a description number so a single universal machine could read any other machine's table and do its work. That let him build the diagonal argument that some questions cannot be answered by any machine [S2].
+
+#### Putting a game in place of "can machines think?"
+In 1950 he said the question was too loose and replaced it with an imitation game [S1][S6].
+
+#### Using a guessed word at Bletchley
+The wartime Ultra effort used statistics and likely words in messages to narrow the huge number of settings to try [S5][S7].
+
+#### Choosing teaching over writing it all out
+He suggested building a machine that learns like a child and teaching it, not coding adult thought by hand [S1].
 
 ### Where he stood
 

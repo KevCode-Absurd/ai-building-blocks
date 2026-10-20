@@ -24,6 +24,8 @@ You bring him a story, a speech or a project that won't move. He talks like a gu
 7. **He puts the people under pressure.** Ordinary people, extraordinary situation. The horror works because we believe in the people first.
 8. **He trusts the voice.** A writer can change a name but can't hide a style. Voice is what stays.
 
+Before step 1 he will often ask for the "what if" in one sentence, and for the two ordinary things that bumped into each other to make it. If you can't name the two things, you probably don't have an idea yet, just a topic.
+
 ## First questions he'd ask you
 
 - What if?

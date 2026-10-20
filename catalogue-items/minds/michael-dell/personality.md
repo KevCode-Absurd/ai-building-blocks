@@ -1,6 +1,6 @@
 # Michael Dell: how he thinks and talks
 
-This is drawn from his 1998 annual report letter, a 2007 staff memo as reported, and the way he spoke in a long 2008 interview about his life and company. It describes a public voice, not the private person.
+This is drawn from his 1998 annual report letter, a 2007 staff memo as reported, and the way he spoke in a long 2008 interview about his life and company, and a 1999 profile with his quoted words. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -11,6 +11,8 @@ He comes across as curious more than flashy. He liked to take things apart as a 
 In formal writing, like the 1998 letter, the tone is measured and corporate but still clear, built on figures and customer examples. In conversation he is relaxed and a little dry, with the odd boast slipped in as a fact, such as having no trouble selling his first machines.
 
 The pace is brisk. He gets to the point and moves on.
+
+In the 1999 profile he rallies the team with a joke that his daughter's first words were a call to beat IBM, sets stretch goals with calm energy instead of volume, and frames choices as simple logic: commodity means price, price means cost, cost means no middleman. He stresses that you need no pedigree, only a framework and a dream.
 
 ## How he argues
 

@@ -27,6 +27,7 @@ sources:
   - {n: 3, title: "Joseph Campbell and the Power of Myth, Ep. 1: The Hero's Adventure (1988, transcript)", by: "Bill Moyers, BillMoyers.com", url: "https://billmoyers.com/content/ep-1-joseph-campbell-and-the-power-of-myth-the-hero%E2%80%99s-adventure-audio/", kind: own-words}
   - {n: 4, title: "Joseph Campbell and the Power of Myth, Ep. 2: The Message of the Myth (1988, transcript)", by: "Bill Moyers, BillMoyers.com", url: "https://billmoyers.com/content/ep-2-joseph-campbell-and-the-power-of-myth-the-message-of-the-myth/", kind: own-words}
   - {n: 5, title: "Joseph Campbell and the Power of Myth, Ep. 4: Sacrifice and Bliss (1988, transcript)", by: "Bill Moyers, BillMoyers.com", url: "https://billmoyers.com/content/ep-4-joseph-campbell-and-the-power-of-myth-sacrifice-and-bliss/", kind: own-words}
+  - {n: 6, title: "How to find your bliss: Joseph Campbell on what it takes to have a fulfilling life", by: "Maria Popova, The Marginalian (2015, with passages from The Power of Myth)", url: "https://www.themarginalian.org/2015/04/09/find-your-bliss-joseph-campbell-power-of-myth/", kind: secondary}
 tests:
   - {kind: use, prompt: "Outline a short film about a nurse who quits her job to open a bakery, using the stages of the hero's journey, but keep it from feeling like a formula."}
   - {kind: use, prompt: "Retell the story of how my small charity started as a myth with a call, a threshold, trials and a return. Here are the facts: [founder lost her job, saw kids going hungry, started a lunch club in a church hall]."}

@@ -1,0 +1,131 @@
+new_slug: workflow-builder-from-a-long-source
+name: "Workflow builder from a long source"
+summary: "Paste a long article, transcript or book notes. Get the method as a workflow, with a skill for every step."
+job: set-up-ai
+thinking: high
+thinking_why: "It has to find the method inside a long source and keep its order. Use your strongest model."
+
+headline: "Turn a long article, video or book into a workflow you can run"
+subhead: Paste the full text of a detailed post, a video or talk transcript, or your notes from a book. It maps the steps the source teaches into a skeleton, checks the order with you, writes one skill for each step, then writes the workflow that runs them in order.
+
+explain: |
+  A good long source teaches a job in parts, and the order is often the method. Turn it into loose tips and you lose that. You end up with ten good ideas and no way to run them.
+
+  This skill works in three passes. First it maps the source into a skeleton: each step it teaches, where it comes from, what it reads and what it makes. It shows you the skeleton and waits, so you can fix the order before anything is written. Then it writes one skill per step, in your own words, reusing any skill you already have for a step. Last, it writes the workflow that runs them in order, each step taking the one before's result, with pauses where you have to do something in the real world.
+
+when:
+  - You read or watched something that teaches a method, and you want to run it again without rereading it.
+  - You have a long transcript from a talk or a course and want the steps as skills your AI can follow.
+  - You want to see how a method breaks into parts before you decide which parts to use.
+
+you_give:
+  - The full text of the source, with its title, who made it and a link
+  - A few lines on your work, or your brand file (optional)
+  - The skills you already have, so it can reuse them (optional)
+you_get:
+  - The skeleton, each step with where it came from, what it reads and what it makes
+  - One skill file per step, ready to add to your AI
+  - A workflow file that runs them in order, with any pauses marked
+  - What the source left vague, marked MISSING
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the source in full. A summary loses steps, so use the whole text where you can.
+  - Read the skeleton it shows you. Add, drop or reorder steps, then say go ahead.
+  - Save each file it gives you in its own folder, then add the folders to your AI as skills.
+  - Run the workflow on a real job, and fix any step that didn't work the way the source meant.
+
+how_it_works:
+  - title: Reads it all first
+    text: Reads the whole source before writing anything, and notes the job it teaches.
+  - title: Maps the skeleton
+    text: Finds the steps in the source's order, each with where it came from, what it reads and what it makes.
+  - title: Checks with you
+    text: Shows the skeleton and waits, so you can fix the order before any skill is written.
+  - title: Writes a skill per step
+    text: Each step becomes its own skill in your own words, or reuses one you already have.
+  - title: Wires the workflow
+    text: Writes the workflow that runs the skills in order, with pauses for real-world steps.
+  - title: Checks the set
+    text: Checks the order, the wiring, the credit and that nothing copies the source, and names any check it missed.
+
+output_shape: |
+  SKELETON
+  <n>. <step name>  (from <chapter / heading / timestamp>)
+     Reads: <input>   Makes: <output>
+  <pause: what you do in the real world>
+
+  FILES
+  <skill-name>/SKILL.md   (new / reuses <your skill>)
+  <workflow-name>/SKILL.md
+
+  MISSING
+  <what the source left vague>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Source: "How we run a tasting day", a talk transcript from a kids'
+    snack brand founder, 20 minutes. She covers picking a store with
+    the right foot traffic, booking the slot with the store manager,
+    training the person at the table, the three lines they say, how
+    they count tastes and sales, and the follow-up email to the
+    manager. Link and full transcript pasted below.
+  output: |
+    SKELETON
+    1. Pick the store  (from 2:10)
+       Reads: brief   Makes: shortlist
+    2. Book the slot with the manager  (from 5:30)
+       Reads: shortlist   Makes: copy_draft
+    3. Brief the person at the table  (from 8:45)
+       Reads: brief, copy_draft   Makes: plan
+    pause: run the tasting day and count tastes and sales
+    4. Review the day and write the follow-up  (from 15:20)
+       Reads: performance_sheet   Makes: audit_report
+
+    Is this the method? Add, drop or reorder steps before I write the
+    skills.
+
+tweaks:
+  - what: How full the source is
+    how: The full text gives the steps and their order. A summary drops the small steps that make it work, and it'll mark them MISSING.
+  - what: The skills you already have
+    how: List them. A step that matches one is reused, so you don't end up with two skills doing the same job.
+  - what: The skeleton
+    how: This is where your judgement counts most. Reorder or merge steps here, before any skill is written.
+
+judge:
+  - The steps follow the source's order, and each names where it came from.
+  - Each step after the first reads what an earlier step made.
+  - No skill is named after a person, and none copies the source's wording.
+  - Real-world steps are pauses, not skills.
+  - The source is credited in every file.
+
+test:
+  - Give it a source you know well. Check the skeleton matches the method as you remember it, in the same order.
+  - Give it only a summary of the same source. It should find fewer steps and mark what's missing, not invent them.
+  - Run the workflow it makes on one real job and note any step that needed fixing.
+
+improve:
+  - Keep a list of your skills in your about-me note, so every run can reuse them.
+  - Save each skeleton with its source, so you can rebuild the skills when the source is updated.
+  - Run a new source on the same job through it and merge the steps into your existing workflow.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds a long transcript and several skill files in one run without losing the order."}
+    - {name: "YouTube transcripts", why: "The transcript under a video gives the full text, with timestamps for where each step came from."}
+  inputs:
+    - "The full text of the source, not a summary"
+    - "A list of the skills you already use"
+
+terms:
+  - term: Skeleton
+    meaning: The steps a source teaches, in order, each with what it reads and what it makes, before any skill is written.
+  - term: Pause
+    meaning: A step you do in the real world, like running a test, between two skills.

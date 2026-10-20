@@ -1,0 +1,21 @@
+slug: anger-pause-and-repair-planner
+name: "Anger pause and repair planner"
+summary: "Describe a fight or hurt at work or home. Get a pause routine and a calm first message."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: copy_draft, required: true}
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [thich-nhat-hanh, seneca]
+credits:
+  - {title: "Suffering Can Teach Us, dharma talk", by: "Thich Nhat Hanh, Plum Village, 2013", used: "Stopping and breathing first, looking at what the other person may be suffering"}
+  - {title: "The Five Mindfulness Trainings", by: "Thich Nhat Hanh", used: "Speaking and listening with care, and not acting from anger"}
+  - {title: "On Anger, book 3", by: "Seneca, in the Minor Dialogues", used: "Waiting before you act, doubting your first view and checking what you were told"}

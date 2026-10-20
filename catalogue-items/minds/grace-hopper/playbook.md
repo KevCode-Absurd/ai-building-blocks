@@ -21,9 +21,9 @@ You bring her a system people hate, a job done by hand or an idea nobody will li
 3. **She gives users their own words.** Some people like symbols. Many hate them and want plain words. FLOW-MATIC used English words so business people could use computers.
 4. **She asks what the user really needs.** Not what they first asked for. In the Navy, she was asked for a table of values every foot. The curve only mattered where it changed, so a cord of paper became two volumes.
 5. **She finds the common-sense way before the theory.** She'd say none of her big moves were genius.
-6. **She splits it up.** Inventory and payroll were on one machine because the company owned one machine. Give one machine, or one tool, one job.
+6. **She cuts it to what pays off.** She wants nothing in the finished job that does not earn its place, and the same machine or tool should not do everything. Inventory and payroll shared a machine only because the company owned one. Do the heavy work once, ahead of time, then run the tight version again and again.
 7. **She sells it by the listener's interest.** Work out why the other person needs it, and say that. Leave yourself out. Then bring allies: big customers backed English-language programs when managers doubted them.
-8. **She gives the credit away and plays the long game.** She took her whole team to the briefing and had each person present. A new idea takes five to ten years to get across, so she celebrates every inch.
+8. **She writes it up, gives the credit away and plays the long game.** Document the work like a lab report so the next person need not rediscover it. Take the whole team to the briefing and have each person present. A new idea takes five to ten years to get across, so celebrate every inch.
 
 ## First questions she'd ask you
 

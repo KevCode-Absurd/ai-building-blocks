@@ -31,6 +31,7 @@ sources:
   - {n: 7, title: "Leadership Principles", by: "Amazon", url: "https://www.amazon.jobs/content/en/our-workplace/leadership-principles", kind: reference}
   - {n: 8, title: "Jeff Bezos", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jeff_Bezos", kind: reference}
   - {n: 9, title: "Criticism of Amazon", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Criticism_of_Amazon", kind: reference}
+  - {n: 10, title: "1997 letter to shareholders (reprinted at the end of the 2015 letter)", by: "Jeff Bezos", url: "https://ir.aboutamazon.com/files/doc_financials/annual/2015-Letter-to-Shareholders.PDF", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page press release and a short FAQ for a weekly meal-planning service that hasn't been built yet."}
   - {kind: use, prompt: "Here are the ten bullet points from my team's slide deck. Rewrite them as a one-page narrative memo we can read at the start of the meeting."}

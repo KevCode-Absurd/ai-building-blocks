@@ -12,7 +12,8 @@ He likes short, sure lines that sound like rules, often in pairs: complexities b
 
 ## How he argues
 
-- He opens with a principle, stated with conviction.
+- He opens with a principle, stated with conviction. He often confesses where he learned it, such as the Milan office where he first worked at 16.
+- He uses a joke to land a point: if everyone doing desktop publishing were doctors, we'd all be dead; when you write dog the type should not bark.
 - He explains it in a short paragraph, often using a comparison to music, buildings or language.
 - He gives a real example from his own practice: a grid, a letterhead, a logo, a map.
 - He names the enemy: fashion, waste, arbitrary choices, vulgarity.

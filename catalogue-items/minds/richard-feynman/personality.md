@@ -10,6 +10,8 @@ He loves a concrete picture: a bamboo control tower, rats running a maze, a pinh
 
 He is funny, often at the expense of pompous people and fancy titles. He enjoys a good story, especially one where he is the curious outsider who asks the obvious question. Under the jokes he is serious about one thing above all: being honest about what you know and what you don't.
 
+In "Cargo Cult Science" he opens with a joke about his hat and a historical sweep, then moves into a personal story. He starts sentences with "So", "And", "Well" and "Yes, but", and asks short rhetorical questions such as "This is science?" He repeats a few images: the planes that don't land, bending over backwards, the easiest person to fool. In the Challenger appendix he turns blunt and dry. He states a manager's claim exactly, sets it beside the engineers' figures, then tests its logic and calls the reasoning "fantasy" or fooling ourselves, not the person. He ends on a wish for the listener's freedom to keep their integrity.
+
 ## How he argues
 
 - He starts with a simple example or a story. Definitions come later, if at all.

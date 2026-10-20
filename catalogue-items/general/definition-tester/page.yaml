@@ -1,0 +1,126 @@
+new_slug: definition-tester
+name: "Definition tester"
+summary: "Paste a claim that uses a big word like fair or loyal. Get tested definitions and the counter-cases that break them."
+job: think-and-decide
+thinking: high
+thinking_why: "It has to invent counter-cases that really break a definition, then repair it. That takes careful reasoning."
+
+headline: "Definition tester"
+subhead: "Give it a claim built on a big word such as fair, loyal or quality. It writes a definition in plain words, hunts for cases that break it, revises it and tests again. You get a definition that holds, the cases that failed, and what stays unclear."
+
+explain: |
+  Teams argue for hours about whether a pay scheme is "fair" or a customer is "loyal", and never notice that each person means something different. The argument cannot end because the word has no test. A claim that rests on an untested word is a claim nobody can check.
+
+  This skill picks the key word, asks for the one feature all your examples share, and writes a first definition. It then looks for a clear counter-case, a real or made-up case that fits the words but plainly is not the thing, or the reverse. It revises and tests again, checks for circles where the definition uses the word itself, and says who or what would decide a disputed case, step by step.
+
+when:
+  - A decision or policy rests on a word like fair, risk, loyal or quality, and people disagree on it.
+  - You are about to write a rule, metric or contract term and need it to be clear.
+  - A claim sounds right, but you cannot say what would prove it wrong.
+
+you_give:
+  - The claim or sentence that uses the big word
+  - Two or three examples you are sure fit, and one or two you are sure do not (optional)
+  - Where people disagree about it (optional)
+  - Customer or staff comments that use the word (optional)
+you_get:
+  - The key word and a tested definition in plain words
+  - The counter-cases tried, and which ones broke which version
+  - A real case where people disagree, and who or what would decide it
+  - The claim rewritten with the tested wording, and what is still unknown
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the claim as it stands. Add examples you are sure of.
+  - When it offers a counter-case, say whether it breaks the definition. Your reaction is the test.
+  - Use the final wording in your policy, metric or message.
+  - Hand the "who decides" step to the person it names.
+
+how_it_works:
+  - title: Picks the word
+    text: Finds the one word the claim leans on most and says why.
+  - title: Finds the shared feature
+    text: Looks for the one feature all your examples share, not a list of them.
+  - title: Writes a first definition
+    text: States it in plain words that someone outside the room could follow.
+  - title: Hunts counter-cases
+    text: Builds cases that fit the words but not the meaning, or the reverse, and checks each.
+  - title: Revises and retests
+    text: Repairs the definition after each break and runs it again.
+  - title: Names the disputed case
+    text: Finds a real case where people disagree and says who or what would decide it.
+  - title: Checks for circles
+    text: Makes sure the definition does not lean on the word it defines.
+
+output_shape: |
+  THE CLAIM
+  <claim> | Key word: <word> | Why this word: <reason>
+
+  FIRST DEFINITION
+  <definition> | Shared feature: <feature>
+
+  COUNTER-CASES
+  1. <case> | Breaks it: <yes/no> | Why: <reason>
+  2. ...
+
+  REVISED DEFINITION
+  <definition after repairs> | Tested against: <cases>
+
+  A CASE PEOPLE DISPUTE
+  <case> | Who or what decides: <person or test> | Steps: <1, 2, 3>
+
+  CIRCLE CHECK
+  <ok / found a circle in X and fixed by Y>
+
+  THE CLAIM, REWRITTEN
+  <claim with tested wording>
+
+  STILL UNKNOWN
+  <what remains unclear>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Sure examples
+    how: Give cases you are certain fit and cases you are certain do not. They anchor the definition.
+  - what: The setting
+    how: Say where the definition will be used, such as a contract, a survey or a team rule. The test changes.
+  - what: Who disagrees
+    how: Name the groups. The disputed case is sharper when it comes from a real split.
+  - what: How exact it must be
+    how: A legal term needs more counter-cases than a team value. Say which you need.
+
+judge:
+  - The key word has a written definition.
+  - At least two counter-cases were tried and the result of each is shown.
+  - The final claim uses the tested wording.
+  - What remains unknown is stated plainly.
+  - Someone who was not in the room could apply the definition.
+
+test:
+  - Run it on a word you already define well, such as "invoice", and check it does not invent trouble.
+  - Give the final definition to two people and ask each to sort five cases. They should agree.
+  - Run it twice. The counter-cases may differ, but the final definition should be close.
+  - Try to break the final definition yourself with a case it missed.
+
+improve:
+  - Add the words your team argues about most, with the cases that caused each fight.
+  - Add your field's standard definitions so it can compare against them.
+  - Save each tested definition in a glossary file and paste it in next time.
+  - Pair it with "Customer buying reasons finder" when the word came from customer comments.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Building and testing definitions against cases is reasoning in text."}
+    - {name: "A shared glossary page", why: "Tested definitions are only useful if the team can find them."}
+  inputs:
+    - "Real cases that caused disagreement"
+    - "The policy or contract line that uses the word"
+    - "Customer or staff quotes that use the word"
+
+terms:
+  - term: Counter-case
+    meaning: A case that fits your words but plainly is not the thing, or is the thing but does not fit your words.
+  - term: Circle
+    meaning: A definition that uses the word it is meant to define, so it explains nothing.

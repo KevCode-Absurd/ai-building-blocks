@@ -1,0 +1,124 @@
+new_slug: talk-tension-planner
+name: "Talk tension planner"
+summary: "Paste your talk or pitch outline. Get it reordered so the room knows the stakes early, with one saved twist."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It reorders an outline by what the audience cares about and judges each slide, but the rules are few."
+
+headline: "Talk tension planner"
+subhead: Give it your talk or pitch outline and who is in the room. It finds the news the audience will care about most, moves it to the start, adds a visible clock, swaps explaining slides for pictures and saves one real twist. You get a reordered plan.
+
+explain: |
+  Many talks build slowly to their best point. The room sits through background with no reason to care, then hears the news at the end. By then half of them stopped listening.
+
+  This skill reverses that. It finds the fact the room will care about most and puts it in the first minute in plain words, so the audience knows what is at stake and watches with interest. It adds one clock, such as a date, a number or a deadline, so there is a reason to hurry. It marks slides that only explain and swaps each for one picture. It keeps a surprise for the end only if you have a real one, and cuts details that make people puzzle over what does not matter.
+
+when:
+  - You have a pitch or talk where your strongest point arrives in the last third.
+  - Your slides explain a lot and the room looks bored by slide five.
+  - You want people to follow a talk with no briefing before it.
+
+you_give:
+  - Your talk or pitch outline, slide by slide or in bullets
+  - Who is in the room and what they care about
+  - The one thing you want them to do after (optional)
+you_get:
+  - The stakes line for the first minute
+  - A reordered outline with a clock added
+  - A list of slides to swap for a picture or cut
+  - A note on whether you have a real twist for the end
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your outline and say who will be in the room.
+  - Say what you want them to do or decide.
+  - Read the first-minute line out loud and change any word you would not say.
+  - Rehearse the new order once and time it.
+
+how_it_works:
+  - title: Finds the news
+    text: Picks the fact or result the room will care about most, from the outline and the audience.
+  - title: Moves it first
+    text: Writes it in plain words for the first minute, before the background.
+  - title: Adds a clock
+    text: Finds a date, number or deadline that shows why the matter is urgent, using only real facts.
+  - title: Marks explaining slides
+    text: Flags slides that only explain, and suggests one picture in each place.
+  - title: Saves one twist
+    text: Keeps a real turn for the end, or says plainly that there is none.
+  - title: Cuts the puzzles
+    text: Removes details that make people stop and work something out that does not matter.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE NEWS THE ROOM CARES ABOUT
+  <one sentence>
+
+  FIRST MINUTE
+  <the stakes in plain words>
+
+  CLOCK
+  <date, number or deadline> | Source: <where it comes from>
+
+  NEW ORDER
+  1. <slide or beat> | Why here
+
+  SWAP FOR A PICTURE
+  - <slide> -> <one picture idea>
+
+  CUT
+  - <item> | Why
+
+  THE TWIST
+  <the real turn at the end, or "none">
+
+  MISSING
+  <facts that would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Who is in the room
+    how: Different people care about different news. Name the role, so the first minute fits them.
+  - what: The one action you want
+    how: State it. The twist and the news are chosen to lead toward it.
+  - what: Real deadlines
+    how: Give true dates and numbers. The clock never invents one.
+  - what: Time limit
+    how: Say how long you have. It changes how much is cut.
+
+judge:
+  - The room knows what is at stake in the first minute.
+  - There is one clear clock, and it is true.
+  - The surprise at the end is a real turn, not a cheap jolt.
+  - A first-time listener could follow it with no briefing.
+  - Each swapped slide has a clear picture idea.
+
+test:
+  - Give the first-minute line to a friend and ask what they think the talk is about.
+  - Run the talk to someone who knows nothing about the topic and ask them what they would do.
+  - Run it twice on the same outline. The news and the clock should stay close.
+  - Time the new order and compare it to your old one.
+
+improve:
+  - Add the three questions your audience always asks to the pasted facts.
+  - Add your slide template limits so the picture ideas fit.
+  - Keep a list of true numbers and dates you can use as a clock.
+  - Pair it with "Pitch deck 10/20/30 checker" for a last check of length and text size.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reordering an outline is text work any strong chat AI does well with this skill."}
+    - {name: "Slide software", why: "To rebuild the deck in the new order with one picture per swapped slide."}
+  inputs:
+    - "The full slide text or a script"
+    - "Your audience's top three worries"
+    - "True dates, deadlines or numbers that apply"
+
+terms:
+  - term: Stakes
+    meaning: What the audience gains or loses depending on what happens next.
+  - term: Clock
+    meaning: A date, number or deadline that shows why the matter is urgent.

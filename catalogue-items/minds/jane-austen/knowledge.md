@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Austen wrote no essays on her craft, but her surviving letters include frank comments on her own books and detailed advice to her niece Anna, who was writing a novel [S4]. Many of her letters were destroyed after her death, and the selection used here is a 19th-century edition [S4]. We read her methods from three novels [S1][S2][S3] and from those letters, and take facts about her life from reference pages [S5][S6]. When a line is spoken by a character, it is the character's view, not hers. All her works are in the public domain, so we quote a few short lines.
+A note on method: Austen wrote no essays on her craft, but her surviving letters include frank comments on her own books and detailed advice to her niece Anna, who was writing a novel [S4]. Many of her letters were destroyed after her death, and the selection used here is a 19th-century edition [S4]. We read her methods from three novels [S1][S2][S3] and from those letters, and take facts about her life from reference pages [S5][S6]. When a line is spoken by a character, it is the character's view, not hers. All her works are in the public domain, so we quote a few short lines. In this pass we checked the letters to Anna and to her sister against the full Gutenberg text, and re-read the openings and key scenes of Pride and Prejudice and Emma. Northanger Abbey is cited from its public-domain text and was not re-read.
 
 ## In one paragraph
 
@@ -65,6 +65,29 @@ In 1813 she wrote to her sister that *Pride and Prejudice* was "rather too light
 - Avoid stock phrases and stock heroes [S4].
 - Move between narration and a character's thoughts freely [S6].
 
+## Real decisions
+
+### Reading Anna's draft chapter by chapter
+In 1814 her niece Anna sent chapters of a novel. Austen answered in detail over several letters. She praised the scenes where people talk in character, said a prudent mother would not send a girl walking in mud after rain, and noted that the heroine seemed to change her character between two scenes. She also said she would condemn a scene as prosy and nothing to the purpose [S4].
+
+### Refusing one stock phrase
+She asked Anna not to let a character plunge into a "vortex of dissipation". She did not mind the event, only the wording, which she called thorough novel slang [S4].
+
+### Judging her own book too bright
+Writing to her sister in 1813, she said Pride and Prejudice was rather too light and bright and sparkling and wanted shade. She joked that it might use a long chapter on something unconnected, such as an essay on writing, to set off its playfulness. She was still vain enough and well satisfied enough [S4].
+
+### Opening Emma with praise and a warning
+Emma begins with the heroine handsome, clever and rich, with little to vex her. The next sentences name the danger: she has too much her own way and thinks too well of herself. The reader is told the fault before Emma can see it [S2].
+
+### Letting Elizabeth turn in her own thoughts
+After reading Darcy's letter, Elizabeth's view of him shifts, and the narration follows her mind without quote marks: how differently everything now appears. It ends with her admitting she did not know herself until then. The reckoning comes through free indirect speech, not through a speech by someone else [S1][S6].
+
+### Making Emma face Box Hill
+On a picnic, Emma mocks the talkative Miss Bates in front of everyone. Mr Knightley later asks how she could be so unfeeling, and she is sorry. Austen lets the heroine do real harm and gives the correction to a person she respects [S2].
+
+### Selling Pride and Prejudice outright
+She sold the copyright of Pride and Prejudice for £110 [S5]. By contrast, Sense and Sensibility had been published at her own risk, earning about £140 [S5].
+
 ## Where she stood (themes the novels return to)
 
 These are readings of the works, not her stated opinions.
@@ -111,7 +134,7 @@ These are readings of the works, not her stated opinions.
 All from works in the public domain.
 
 - "It is a truth universally acknowledged" (*Pride and Prejudice*, opening) [S1]
-- "Three or four families in a country village is the very thing to work on" (letter to Anna, 1814) [S4]
+- "Three or four families in a country village is the very thing" (letter to Anna, 1814) [S4]
 - "rather too light and bright and sparkling" (on *Pride and Prejudice*, letter, 1813) [S4]
 - "pictures of perfection, as you know, make me sick and wicked" (letter) [S4]
 - "Oh! it is only a novel!" (*Northanger Abbey*) [S3]

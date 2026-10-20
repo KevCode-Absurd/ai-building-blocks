@@ -12,6 +12,8 @@ His images are few and memorable: the fox and the lion, fortune as a flooding ri
 
 He has a dry, dark humour. He mocks people who trust fortune, flatterers, and those who trust promises. He can sound cold, but he is warm about his city and its liberty, and proud of his years of service.
 
+He also apologises for his boldness at the start of a hard chapter. In chapter 15 he admits he may seem presumptuous for treating a subject others have written on, then states his method plainly: he will follow what is real. In the *Discourses* he sets out a view against the common one and says he will argue it, not impose it. In both books the objection is raised and answered in the same breath.
+
 ## How he argues
 
 - He starts with a question that has two answers and picks one. "Is it better to be loved or feared?"

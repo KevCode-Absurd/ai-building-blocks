@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Daymond John is alive, and views can change. This data set comes from five pieces in his own words: a 2017 magazine column, a 2020 book excerpt [S1][S2], and three signed posts on his own website that carry no date and were read in 2026 [S3][S4][S5]. Facts about his life and FUBU come from reference pages [S6][S7]. He has written several books, including The Power of Broke (2016) and Rise and Grind (2018) [S6], which we did not use directly. Some of his website posts promote partner products; we use only the ideas. Treat each view as "as of" its source.
+Daymond John is alive, and views can change. A 2019 interview with the U.S. Chamber of Commerce adds his advice on pitching and starting out [S8]. This data set comes from five pieces in his own words: a 2017 magazine column, a 2020 book excerpt [S1][S2], and three signed posts on his own website that carry no date and were read in 2026 [S3][S4][S5]. Only the first two are in the local folder, and only as link records, so the lines tagged to the others come from our earlier read. The decisions below, and most facts about FUBU and Shark Tank, come from licensed Wikipedia articles [S6][S7], which means they are an outsider's account. We have no full transcript of him speaking, so the voice is drawn from his short written pieces. He has written several books, including The Power of Broke (2016) and Rise and Grind (2018) [S6], which we did not use directly. Some of his website posts promote partner products; we use only the ideas. Treat each view as "as of" its source.
 
 ## In one paragraph
 
@@ -63,9 +63,39 @@ How he applied it: after a Las Vegas trade show brought in $300,000 in orders, F
 - Read who holds the power in a deal, and shift it [S1].
 - Put people close together so they decide faster [S2].
 
+## Real decisions
+
+### Selling $10 hats from the corner
+
+He noticed ski hats selling for $20 and sewed about 90 of his own with a neighbour, then sold them for $10 each [S6]. They made $800 in a day in 1992 [S6]. He kept a full-time job at Red Lobster while building the label between shifts [S6]. This is the power of broke in action: no capital, so he started with what he could make [S1][S6].
+
+### Lending clothes to rappers instead of buying ads
+
+FUBU loaned about ten hockey jerseys to rappers for their music videos and got product placements in about 30 videos [S6]. The placements made a small label look large and visible, and shops began asking for it [S6]. In 1993 he also got an old neighbourhood friend, LL Cool J, to wear a FUBU shirt in a promotion [S6].
+
+### Taking a second mortgage after the Magic show
+
+In 1994 the founders took $300,000 in retail orders at the Magic trade show in Las Vegas and had no money to make them [S6][S7]. John and his mother took out a second mortgage on the house [S6]. He later said he would not recommend this strategy, since he risked losing the house [S6].
+
+### Placing a newspaper advert to find a manufacturer
+
+After 26 or 27 banks turned them down, his mother spent the last of their money on an advert in The New York Times [S6]. It led to a deal with Samsung Textiles, which let FUBU fill its orders [S6][S7].
+
+### Mentoring a teenager instead of investing
+
+On Shark Tank he chose not to invest in 15-year-old Moziah Bridges, owner of Mo's Bows, and offered to mentor him instead [S6]. The company later signed a seven-figure licensing deal with the NBA [S6]. In a 2019 interview he said the Sharks invest in people more than anything else [S8].
+
+### Moving his team out of private offices
+
+By 2017 he had argued that closed doors made things get lost in translation [S2]. He moved his staff to an open floor with himself in the middle, then to a co-working space he opened [S2]. He said deals and decisions then moved faster [S2].
+
 ## Where he stood
 
 **Do you need money to make money?** No. He lists this as a limiting belief and points to FUBU's start [S3].
+
+**What do the Sharks look for?** People more than numbers. Numbers matter, but he wants the founder to convince him, ideally with a story that makes him feel the train is leaving the station [S8]. He also looks for an unsolved problem and says the best founders are almost always doing it for somebody else [S8].
+
+**When should you leave your job?** Build a cash cushion first, which the page puts at six months to a year of costs, and find a local small-business owner as a mentor [S8].
 
 **Is working harder the answer?** Not by itself. Focus on fewer, better hours [S4].
 

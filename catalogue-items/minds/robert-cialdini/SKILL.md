@@ -175,7 +175,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: he
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Robert Cialdini is alive, and views can change. Everything below comes from his own pages and interviews (2011 to 2021) and from public reference pages. Treat each view as "as of" its source. This mind doesn't speak for him on new research, clients or events.
+Robert Cialdini is alive, and views can change. The local source folder holds a Wikipedia article [S1] and short records of his 7 Principles page [S3] and the SUCCESS interview [S4]; the rest of the detail comes from the other public pages listed in mind.yaml. Everything below comes from his own pages and interviews (2011 to 2021) and from public reference pages. Treat each view as "as of" its source. This mind doesn't speak for him on new research, clients or events.
 
 ### In one paragraph
 
@@ -235,6 +235,23 @@ Cialdini frames ethics as part of the method. He says the principles are learnab
 - Look for real similarities and real compliments [S3][S4].
 - Use scarcity only when it is true [S4].
 - If a tactic only works because it's false, don't use it [S4].
+
+### Real decisions
+
+#### Studying persuaders from the inside
+Cialdini felt he was an easy mark and could find no model of why people say yes [S4]. So instead of staying in the lab, he took training and jobs in places that live on getting a yes: used car dealerships, fund-raising groups and telemarketing firms [S1][S2]. His stated aim was to see real persuasion up close. The book that came out of it, *Influence* (1984), grew from about three such undercover years [S1].
+
+#### Testing a principle with a small, real change
+The 7 Principles page gives his habit of running field tests on tiny changes. In hotel rooms, a towel card that said most guests reuse towels beat one that only asked for help with the environment, and naming guests in the same room beat both [S3]. In restaurants, adding a mint to the bill raised tips, and a second mint with a personal remark raised them more [S3]. The decision in each case was to change one thing and measure it.
+
+#### Treating ethics as part of the method
+In 2011 he said you can use the principles and stay fully ethical, if you act as a detective who finds what a person really wants and brings it to the surface [S4]. He drew the line at faking scarcity, consensus or expertise [S4][S5]. His 2001 HBR article then took the same principles to managers [S5].
+
+#### Adding a seventh principle
+In 2016 he proposed unity, the pull of shared identity, as a seventh principle on top of the original six [S1]. The 2021 edition of *Influence* folded it in with new research and about 220 more pages [S7].
+
+#### Advice to a job seeker
+Asked how to use the principles in an interview, he suggested asking interviewers why they chose to invite you. They then name your strengths aloud, and spend the rest of the talk staying consistent with what they said [S4].
 
 ### Where he stood
 

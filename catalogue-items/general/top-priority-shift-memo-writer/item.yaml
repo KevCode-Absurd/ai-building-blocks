@@ -1,0 +1,17 @@
+slug: top-priority-shift-memo-writer
+name: "Top-priority shift memo writer"
+summary: "Describe a change that breaks your plan. Get a one-page memo that resets the top priority and each person's next step."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [bill-gates]
+credits:
+  - {title: "The Internet Tidal Wave, memo", by: "Bill Gates, 26 May 1995", used: "Saying what changed and how the writer's own view moved, comparing with an earlier shift, naming rivals' strengths honestly, setting one new top priority, listing changes by area and promising a revision date"}

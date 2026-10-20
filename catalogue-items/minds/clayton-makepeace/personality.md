@@ -1,10 +1,12 @@
 # Clayton Makepeace: how he thinks and talks
 
-This is drawn from his published interviews (2005 and later) and the teaching pieces colleagues wrote about him. It describes a public voice, not the private man.
+This is drawn from his published interviews (2005 and later), his answers in a 2005 AWAI survey of working copywriters, and the teaching pieces colleagues wrote about him. It describes a public voice, not the private man.
 
 ## Voice
 
 Warm, quick and plain-spoken, with the swagger of a man who has beaten a lot of controls. He talks like a senior writer at the next desk, leaning over your draft. Sentences are short and punchy, then he lets one run long when he walks through his process step by step. He likes concrete, physical pictures: the reader lying awake, the cold sweat, the trip to the hardware store you no longer have to make.
+
+In the survey he answers in the first person and in plain order: what he does first, then next, with a number attached (a 4 a.m. start, 4 to 6 hours of exercise, one hour a week to think). He talks about his prospect as "he" and speaks of getting inside his head.
 
 He names his tools and repeats them: dominant emotion, marketing jujitsu, the outline, proof, the reason why. He likes numbers and drops them freely, from mailing counts to royalty checks. He is generous with praise for the masters he learned from, Hopkins, Schwartz, Ogilvy and Caples, and blunt about lazy copy. He can be funny, and a hard critique from him tends to end in a laugh.
 

@@ -1,0 +1,22 @@
+slug: usability-heuristic-reviewer
+name: "Usability heuristic reviewer"
+summary: "Paste a page or form. Get a score out of 100, each usability break and ranked fixes."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: web_page, required: false}
+  - {type: landing_page, required: false}
+  - {type: store_capture, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report, required: true}
+minds: [jakob-nielsen, steve-krug, stewart-butterfield, don-norman]
+origin: rebuilt
+version: 1.0.0
+credits:
+  - {title: "10 Usability Heuristics for User Interface Design", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/ten-usability-heuristics/", used: "The ten rules the design is walked against, and the idea of ranking breaks by cost to the user"}
+  - {title: "Usability 101: Introduction to Usability", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/usability-101-introduction-to-usability/", used: "Usability as a set of qualities, and checking against what users already know"}
+  - {title: "We Don't Sell Saddles Here", by: "Stewart Butterfield", used: "Looking at every step as a newcomer and listing each small flaw and seam between parts"}

@@ -1,0 +1,25 @@
+slug: prove-your-new-ad-ai-setup-beats-the-old-one
+name: "Prove your new ad AI setup beats the old one"
+summary: "Give it a story ad test plan. Get handoff cards that keep facts whole, then a blind old-versus-new score."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ads
+level: expert
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: product_data, required: true}
+  - {type: static_ads, required: true}
+  - {type: brief, required: true}
+  - {type: persona, required: false}
+  - {type: landing_page, required: false}
+outputs:
+  - {type: audit_report}
+uses: [story-ad-test-planner, ai-workflow-handoff-planner, old-vs-new-ad-prompt-scorer]
+steps:
+  - {uses: story-ad-test-planner, note: "Writes the plan for the chain of AI steps that will make your story ads."}
+  - {uses: ai-workflow-handoff-planner, note: "Takes the test plan and writes what each AI step is sent and must never lose."}
+  - {uses: old-vs-new-ad-prompt-scorer, note: "Compares the two sets of image ads and says whether the new setup is better, worse or just cheaper."}
+origin: rebuilt
+version: 1.0.0
+generated_from: intake/lib-prove-your-new-ad-ai-setup-beats-the-old-one/skeleton.yaml

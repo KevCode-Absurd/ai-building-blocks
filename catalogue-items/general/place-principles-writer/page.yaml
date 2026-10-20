@@ -1,0 +1,131 @@
+new_slug: place-principles-writer
+name: "Place principles writer"
+summary: "Describe your space or service. Get a statement of who it serves and what it must never be."
+job: design-work
+thinking: medium
+thinking_why: "It turns loose wishes into firm rules, and each rule needs a judgement call."
+
+headline: "Place principles writer"
+subhead: "Give it the space or service you plan and who it is for. It sets out the feeling, the things it must never be and rules for each part of the place. You get a short statement you can sign."
+
+explain: |
+  Plans for a shop, clinic, school, office or app often start with a list of features. A list says what to build. It does not say who the place is for, or what would spoil it. Teams then drift toward whatever looks impressive, and the people with the least power in the place get forgotten.
+
+  This skill writes a statement of intent in short lines. It starts with who the place serves, including the smallest and least served. It then states the feeling, the must-not list, rules for each part of the place, how people move through it and a long-term plan. It ends in the first person so one person owns it.
+
+when:
+  - "You are about to design or rebuild a space, a service or a product and the team has no shared aim."
+  - "A project keeps drifting toward looking impressive instead of serving people."
+  - "You need a short statement that new staff and suppliers can follow."
+
+you_give:
+  - "What the place or service is, and where it will be"
+  - "Who will use it, and who works there"
+  - "Two or three things you already know you want or dislike (optional)"
+  - "Your plan for the first year and for later years (optional)"
+you_get:
+  - "Who it is for, with the least served named"
+  - "The feeling it should have, and a must-not list"
+  - "Rules for the building or screens, staff, displays, shop and grounds"
+  - "A renewal plan, a long-term plan and a first-person sign-off"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the place or service in a few lines and say who it is for."
+  - "Name the people most likely to be forgotten, such as small children, older people or people with disabilities."
+  - "Paste anything you already know you want or hate."
+  - "Read the statement aloud to your team. Change any line nobody can act on."
+  - "Sign it and pin it where decisions are made."
+
+how_it_works:
+  - title: "Names who it is for"
+    text: "Lists every kind of user, with the smallest and least served first."
+  - title: "States the feeling"
+    text: "Writes short lines on what the place should feel like, each with a reason."
+  - title: "Lists what it must not be"
+    text: "Names the failures to avoid, such as grand, showy or putting things above people."
+  - title: "Sets rules by part"
+    text: "Gives a rule for the space, staff, displays, shop or store and surroundings."
+  - title: "Plans movement"
+    text: "Says how visitors move, and where they are free to explore."
+  - title: "Plans for years"
+    text: "Adds a renewal plan and a longer plan for the surroundings."
+  - title: "Signs it"
+    text: "Rewrites it in the first person for one named owner."
+  - title: "Checks the set"
+    text: "Runs its own checks and names any it missed."
+
+output_shape: |
+  FOR WHOM
+  <each user group, least served first, with what they need>
+
+  IT SHOULD FEEL
+  <short line> because <reason>
+
+  IT MUST NOT BE
+  <failure to avoid> because <who it would harm>
+
+  RULES BY PART
+  Building or screens: <rule>
+  Staff: <rule>
+  Displays or content: <rule>
+  Shop or store: <rule>
+  Grounds or surroundings: <rule>
+
+  HOW PEOPLE MOVE
+  <how visitors find their way, and where they may roam>
+
+  OVER THE YEARS
+  <renewal plan, longer plan>
+
+  SIGNED
+  I, <owner>, will hold this place to these lines.
+
+  MISSING
+  <facts that would sharpen a rule>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Who it is for"
+    how: "Name groups, not \"everyone\". A rule for \"children under six\" is firmer than one for \"families\"."
+  - what: "What you dislike"
+    how: "Say what you have seen go wrong elsewhere. It feeds the must-not list."
+  - what: "The time frame"
+    how: "Give a first-year date and a long-term horizon so the plan has a real length."
+  - what: "The owner"
+    how: "Say who will sign. The final lines are written in that person's voice."
+
+judge:
+  - "Every principle names a person it serves."
+  - "The must-not list has real items, not filler."
+  - "Staff and the least-served visitors have their own lines."
+  - "The plan reaches past opening day."
+  - "A stranger could say what the place is for after reading it."
+
+test:
+  - "Run it on a place you know well and see whether it names the group you usually forget."
+  - "Give the statement to someone on your team and ask them to settle a real design choice with it."
+  - "Run it twice. The must-not list should stay close even if the wording moves."
+  - "Check each rule: could someone tell if it was broken?"
+
+improve:
+  - "Add your place's real limits (budget, rules, site) to \"What you need\", so rules stay possible."
+  - "Add the words your team uses for the feeling, so the statement sounds like you."
+  - "Save the signed statement to your brand file and re-read it each year."
+  - "Pair it with \"Design brief rules writer\" to turn the statement into a brief for a designer."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Writing short firm rules from a plain description is text work any strong chat AI does well with this skill."}
+    - {name: "A printed copy on the wall", why: "The statement only works if it sits where decisions are made."}
+  inputs:
+    - "A photo or plan of the space"
+    - "Notes from staff about what annoys them now"
+    - "Comments from your least-served users"
+    - "The budget and the opening date"
+
+terms:
+  - term: "Statement of intent"
+    meaning: "A short signed list of what a place is for and what it must never become."

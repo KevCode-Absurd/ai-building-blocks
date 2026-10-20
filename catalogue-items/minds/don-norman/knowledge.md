@@ -22,6 +22,9 @@ Norman borrowed "affordance" from the psychologist James J. Gibson, who used it 
 
 How he applied it: a flat plate on a door signals push, while a bar signals pull [S7]. He also pointed to social signifiers, like an empty train platform that tells you the train has left, or a path worn across a field [S1].
 
+### Social signifiers and reading clues
+In 2008 he widened the idea beyond single objects. A signifier is any perceivable cue that can be read for meaning, placed on purpose or by accident [S1]. His examples: an empty or crowded platform tells you whether you missed the train, a flag shows the wind, a worn path across a field shows where people want to walk, a bookmark and a scrollbar show how much is left [S1]. He called signifiers "of mixed reliability" and noted that e-readers lack such cues unless the designer adds them [S1]. His stance was that people are detectives searching for clues, so a designer should leave good ones [S1].
+
 ### Mapping, constraints and feedback
 
 Good design makes the link between controls and their effects obvious [S7]. That is mapping. Constraints limit what people can do, so wrong actions become hard or impossible [S7]. Feedback tells people, fully and continuously, what happened after they acted [S7]. He also asks designers to make things visible: people should be able to see the state of a device and their options [S7].
@@ -39,6 +42,9 @@ How to use it: explain the design in one sentence a user would say. If the sente
 Norman described action in seven stages. Four are about doing: forming a goal, forming an intention, choosing an action and carrying it out. Three are about checking: seeing the state of the system, making sense of it and judging the result [S7]. Between them lie two gulfs. The gulf of execution is the gap between what you want to do and what the system lets you do. The gulf of evaluation is the effort needed to tell whether it worked [S7].
 
 How he applied it: he used the old video recorder, where a simple wish to record a show took many confusing steps, as an example of a wide gulf of execution [S7].
+
+### Teaching by reading, discussion and group reports
+Norman taught an early version of his sustainability course at the University of California, San Diego, in winter 2021 to about thirty students over ten weeks [S2]. There were no lectures. Students read a section, answered up to four questions on a form within five minutes, discussed the answers, and then the group assigned to that section led the second session; the last weeks went to group reports on extra resources [S2]. He wrote that he mostly listened and smiled, and that the students' work was outstanding [S2].
 
 ### Emotional design
 
@@ -63,6 +69,26 @@ How he applied it: he asked how designers could build a water and sewer system w
 - Make it pleasant as well as usable [S8].
 - Design with the people affected [S2].
 - Measure what people value, such as quality of life [S2].
+
+## Real decisions
+
+### Moving to Apple in 1993
+Norman, a professor of cognitive science, joined Apple in 1993 as an Apple Fellow and later vice president of the Advanced Technology Group [S6]. His title, User Experience Architect, was an early use of the phrase in a job title [S6]. He used the job to take his ideas about usable design into a company that shipped products.
+
+### Dropping "affordance" for "signifier"
+His 1988 book had spread the word affordance, which he said was widely used and misused [S1]. In 2008 he wrote that designers need signifiers, the perceivable part of an affordance, and that signifiers are of mixed reliability [S1]. He did not apologise at length; he clarified and offered a better tool.
+
+### Revising the book in 2013
+He retitled the 1988 book The Design of Everyday Things and revised it in 2013 [S7]. The core claim stayed: confusing things are usually badly designed [S7].
+
+### Widening human-centred to humanity-centred
+In his recent work he argued that design should serve societies and the planet, not only the user in front of you, and that communities should co-design with designers [S2][S3]. The reason in the course material is that the world's biggest problems are tangled systems with root causes [S3].
+
+### Teaching with no lectures
+In winter 2021 he taught his sustainability course at UC San Diego as reading, quick quizzes, discussion and group reports with no lectures [S2]. He wrote that he mostly listened and smiled, and that the students' work was outstanding [S2].
+
+### Taking an unpopular view of academic research
+He argued that design research in universities has had little effect on innovation, and that technologists drive breakthroughs [S6]. Critics contest this [S6].
 
 ## Where he stood
 

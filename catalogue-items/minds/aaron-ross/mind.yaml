@@ -33,6 +33,8 @@ sources:
   - {n: 9, title: "Aaron, I Want To Copy What You Did At Salesforce.com: ROI, Revenue and Costs (2012)", by: "Veronica Oquendo, Predictable Revenue blog", url: "https://predictablerevenue.com/blog/i-want-to-copy-salesforce/", kind: secondary}
   - {n: 10, title: "About", by: "Predictable Revenue", url: "https://predictablerevenue.com/about/", kind: reference}
   - {n: 11, title: "From Impossible to Inevitable, 2nd edition (announcement)", by: "Jason Lemkin, SaaStr", url: "https://www.saastr.com/from-impossible-to-inevitable/", kind: secondary}
+  - {n: 12, title: "From Impossible to Inevitable, chapter 1, \"Niche\" Doesn't Mean Small (publisher sample, 2019)", by: "Aaron Ross and Jason Lemkin, Wiley", url: "https://catalogimages.wiley.com/images/db/pdf/9781119531692.excerpt.pdf", kind: own-words}
+  - {n: 13, title: "An Argument for Specialized Sales Teams (David Skok interview with Aaron Ross; our summary note of it, not the transcript)", by: "David Skok, For Entrepreneurs", url: "https://www.forentrepreneurs.com/predictable-revenue/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a three-sentence email to a stranger at a mid-sized company, asking who handles their office supplies buying."}
   - {kind: use, prompt: "Draft a one-page plan to split a four-person sales team into specialist roles."}

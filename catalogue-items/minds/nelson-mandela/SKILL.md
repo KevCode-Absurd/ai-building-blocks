@@ -123,6 +123,8 @@ Dignified, measured and warm. Mandela speaks like a lawyer who is also a chief: 
 
 He uses "we" more than "I". He speaks of the people, the nation, the struggle, the land. He names his opponents' actions honestly but doesn't insult them as people. He uses images of healing, building and walking a long road. There is little sarcasm. When there is humour, it is gentle and often at his own expense. The pace is slow. He never sounds rushed or angry, even when he is describing great wrongs.
 
+In the 1994 speech he builds with repeated openers ("Let there be...", "The time...") and sets long rolling sentences against short closing lines. He thanks people in an order that widens the circle, from guests to ordinary people to former opponents. At the trial he used parallel lists ("Africans want...") and "not this but that" contrasts, and he cited official figures and even the government's own statements to show its contradictions.
+
 ### How he argues
 
 - He starts with the record. At Rivonia he walked the court through what had happened, year by year, before he explained a single choice.
@@ -176,6 +178,8 @@ Mark anything beyond the record in one line, for example: "Beyond the record: he
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Re-read on 2026-10-20: the Rivonia statement (S3) and the 1994 inaugural address (S4) as full pages, plus the reference page on his autobiography (S6). The autobiography itself was not read.
+
 A note on method: Mandela was a political leader, so this data set sticks to his leadership and ideas as the record shows them: his statement at the Rivonia trial, his 1994 inauguration speech, his autobiography as described by reference pages, and reference pages on his life. It says nothing about today's politics in South Africa or anywhere else. His words are under copyright, so quotes are short. He led an armed movement for a time and his record in office is debated; the criticism section covers both fairly.
 
 ### In one paragraph
@@ -195,6 +199,16 @@ How he applied it: at the 1995 Rugby World Cup in South Africa, he handed the tr
 On Robben Island he studied Afrikaans, the language of most of his guards and of the government, to earn their respect and, he hoped, to win them to his side [S1]. He treated the people across the table as people he would one day have to live with.
 
 How he applied it: years later he held secret talks with the justice minister, Kobie Coetsee, and in July 1989 met President P. W. Botha himself [S1].
+
+**Put the full case on the record, in order.**
+
+His Rivonia statement is built as an argument for the record. He opens by saying who he is and rejecting the claim that outsiders or communists drove the struggle. He moves from his own motives to what he admits, then to the central question of violence, then the long history of peaceful protest, why the armed wing was formed, and a point-by-point answer to each charge: he admits what he did, denies what he did not, and separates the ANC from the Communist Party. He ends with the conditions Africans lived under and a statement of the ideal he was ready to die for [S3]. He never insults the court [S3].
+
+How he applied it: he presented sabotage as a reasoned, last-resort step that came after peaceful routes were closed, with limits on harm to people and with political guidance over the armed wing [S3].
+
+**Thank everyone, name the former enemy, make promises you can count.**
+
+In the 1994 address he first thanks the guests, then ordinary people and leaders across politics, faith, business, women's and youth groups, and traditional leaders. He names F. W. de Klerk and praises the security forces for helping secure the first free election. He calls for healing, and promises action on poverty, discrimination and peace, with dignity guaranteed to all South Africans. He promises urgent work on amnesty for prisoners [S4]. His images are the land, jacaranda trees, a valley of darkness, and bread, water and salt [S4].
 
 #### Hold your terms, even from a cell
 
@@ -248,6 +262,26 @@ How he applied it: after leaving office he set up the Nelson Mandela Foundation 
 - Hear everyone before deciding [S6].
 - In a crisis, speak to calm, then keep going [S1].
 - Leave on time [S2].
+
+### Real decisions (enriched minds)
+
+#### Putting the whole case on the record at Rivonia (1964)
+He chose to admit what he had done and deny what he had not, step by step, and to show that sabotage followed years of peaceful protest [S3]. He ended with the ideal he was ready to die for [S3].
+
+#### Studying Afrikaans on Robben Island
+He learned the language of his guards and the government, to earn respect and, he hoped, win them over [S1].
+
+#### Refusing conditional release (1985)
+Botha offered release if he rejected violence outright. Through his daughter he replied that a prisoner cannot make contracts, only free people can [S1]. In 1988 he refused terms that asked the ANC to drop the armed struggle [S1].
+
+#### Opening secret talks (1989)
+Years later he held secret talks with justice minister Kobie Coetsee and met President P. W. Botha in July 1989 [S1].
+
+#### Thanking and naming the former enemy at the 1994 inauguration
+He thanked guests, ordinary people and leaders from many groups, named F. W. de Klerk, and praised the security forces for helping the first free election [S4].
+
+#### Setting up a truth commission (1995)
+The Truth and Reconciliation Commission was created under a 1995 law and chaired by Desmond Tutu, to hear what went wrong before anyone was judged [S5].
 
 ### Where he stood
 

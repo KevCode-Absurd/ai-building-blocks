@@ -1,0 +1,127 @@
+new_slug: pitch-revision-log
+name: "Pitch revision log"
+summary: "Paste your pitch and each no you heard. Get the doubts ranked, a revised pitch and the next advice questions to ask."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It sorts doubts and rewrites a pitch from them, with a fixed method."
+
+headline: "Pitch revision log"
+subhead: Give it your pitch and what each listener said when they said no. It writes down the exact doubt behind every no, sorts them into fix now and fix later, and rewrites the pitch with the problem and the size of the market first. You get a revised pitch and a lessons log.
+
+explain: |
+  After a few rejections, most people either keep pitching the same way or change everything. Both waste the lessons. A "no" holds a reason, but it is usually a vague "not for us", and you can lose the real doubt if you do not write it down while it is fresh.
+
+  This skill turns each no into a record. It asks for the exact doubt: is it the problem, the market, the team or the place. It sorts doubts into ones you can fix now and ones that need time. It rewrites the pitch so the problem and market size come first, keeps the slides that survived with a note on why, and reframes big competitors around the problem and how you earn. It ends with one advice question for the next meeting.
+
+when:
+  - You have pitched five or more times and heard a mix of reasons.
+  - Your pitch changes every week and you cannot tell if it is getting better.
+  - You are about to ask for money or support again and want the doubts handled first.
+
+you_give:
+  - Your current pitch as text
+  - Each no you heard, with who said it and what they said
+  - Notes from the meetings (optional)
+you_get:
+  - A log of each doubt, sorted into problem, market, team or place
+  - A fix-now list and a fix-later list
+  - A revised pitch with the problem and market size first
+  - One advice question for the next meeting
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your pitch and then each meeting, with the words used if you remember them.
+  - Mark any doubt you heard more than once.
+  - Use the revised pitch in your next meeting and start by asking for advice.
+  - Paste in the next result and run it again.
+
+how_it_works:
+  - title: Logs each no
+    text: Writes the exact doubt behind every no, in the listener's words, not yours.
+  - title: Sorts the doubts
+    text: Marks each as problem, market, team or place.
+  - title: Ranks fix now and fix later
+    text: Separates doubts you can answer today from ones that need time or proof.
+  - title: Rewrites the opening
+    text: Puts the problem and the size of the market in the first minute.
+  - title: Keeps what survived
+    text: Keeps slides that held up, with a note on why, and flags slides to cut.
+  - title: Reframes rivals
+    text: Describes big competitors in terms of the problem and how you earn, not their size.
+  - title: Plans the next ask
+    text: Writes one advice question for the start of the next meeting.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  DOUBT LOG
+  1. Who: <person or firm> | Said: <no, in their words>
+     Real doubt: <problem, market, team or place> | Heard before: <n times>
+
+  FIX NOW
+  - <doubt> | Change: <what in the pitch>
+
+  FIX LATER
+  - <doubt> | Needs: <proof or time>
+
+  REVISED PITCH
+  <problem and market size first, then the rest>
+
+  SLIDES KEPT AND CUT
+  - <slide> | Kept because: <reason> / Cut because: <reason>
+
+  RIVALS, REFRAMED
+  <rival> -> <problem and how you earn>
+
+  NEXT MEETING
+  Open with this advice question: <question>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The listener's own words
+    how: Paste what they said as closely as you can. A paraphrase hides the real doubt.
+  - what: Number of meetings
+    how: More meetings show which doubts repeat. A doubt heard three times ranks higher.
+  - what: Your proof
+    how: Give real figures on the market and on traction. The pitch uses only those.
+  - what: Who you meet next
+    how: Name them. The advice question is written for that person.
+
+judge:
+  - Each doubt is tied to a change or a reason to keep the slide.
+  - The problem and market size are in the first minute.
+  - No claim is added that you cannot back up.
+  - The next meeting has one advice question.
+  - Repeated doubts rank above one-off ones.
+
+test:
+  - Read the revised opening to someone who has never heard the pitch and ask what the problem is.
+  - Check each market figure against its source.
+  - Run it twice. The ranked doubts should stay close.
+  - Use the new pitch in the next meeting and log the result with the same method.
+
+improve:
+  - Add your own groups for doubts, such as price or timing, to step 2.
+  - Keep one log for all meetings, and paste the whole log in each time.
+  - Add the proof you gain after each fix, so the next version can use it.
+  - Pair it with "Hardest objections answer writer" for the doubts that will not go away.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting doubts and rewriting a pitch is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "To keep the doubt log across many meetings."}
+  inputs:
+    - "Notes taken straight after each meeting"
+    - "Market size figures with their sources"
+    - "Your current slides as text"
+
+terms:
+  - term: Doubt log
+    meaning: A list of the exact reasons people gave for saying no, kept across meetings.
+  - term: Advice question
+    meaning: A question that asks the listener for advice, such as what they would change, instead of asking for money.

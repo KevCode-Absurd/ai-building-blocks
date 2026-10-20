@@ -1,0 +1,19 @@
+slug: raw-cost-breakdown-finder
+name: "Raw cost breakdown finder"
+summary: "Name something you buy or sell. Get its price broken into raw parts and costs, and the biggest gaps to go after."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: product_data, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [elon-musk]
+credits:
+  - {title: "First Principles: Elon Musk on the Power of Thinking for Yourself", by: "James Clear", used: "Pricing a thing from its raw materials and comparing the total with the price charged"}
+  - {title: "SpaceX", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/SpaceX", used: "The example of costing a product from its raw inputs, then asking why the market price is so much higher"}

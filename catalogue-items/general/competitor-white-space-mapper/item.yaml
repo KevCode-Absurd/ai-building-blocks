@@ -1,0 +1,20 @@
+slug: competitor-white-space-mapper
+name: "Competitor white space mapper"
+summary: "Paste your rivals and what buyers value. Get a grid that shows where nobody is strong and where to stop fighting."
+category: general
+type: skill
+role: source
+job: research
+level: intermediate
+inputs:
+  - {type: competitor_set, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [marty-neumeier]
+credits:
+  - {title: "Your radio station needs to zag: an interview with author Marty Neumeier", by: "Marty Neumeier, 2007 (Mark Ramsey Media)", url: "https://markramseymedia.com", used: "Rating rivals as customers see them, grid of features, and finding the gap nobody serves"}
+  - {title: "The Brand Gap (slide presentation)", by: "Marty Neumeier, 2003", used: "Finding a position by looking for what is different, and testing a gap small and cheaply"}

@@ -1,0 +1,108 @@
+new_slug: launch-stunt-planner
+name: Launch stunt planner
+summary: Paste your launch and the big rival. Get three stunt ideas the press may cover, each with a worst-case limit.
+job: grow-social
+thinking: medium
+thinking_why: It judges what a reporter would cover and sets safe limits.
+headline: Launch stunt planner
+subhead: Give it your launch and the big rival. It finds what the rival does badly and what you do better, then turns it into three stunt ideas a reporter could write in one line. You get a headline for each, a worst case, a money cap and a review plan.
+explain: |
+  A small business cannot outspend a big rival on ads. It can do something the big one will not: a bold, human move that gives a reporter a story. Stunts also go wrong. They cost more than planned, miss permits or put people at risk.
+
+  This skill starts with the rival: what it does badly and what you do that is more fun, more human or better value. It turns that into a story a reporter could write in one line, and picks stunts where a founder or a face is in the picture. Each has a worst case and a money cap, so you can say yes with your eyes open. It then plans to review the stunt the same week.
+when:
+  - You are launching against a big, comfortable rival.
+  - You have a small budget and need attention.
+  - You want a bold idea but fear it could go wrong.
+you_give:
+  - "Your launch: what, when and where"
+  - The big rival and what it does badly
+  - Your budget and your limits (optional)
+  - A brief (optional)
+you_get:
+  - Three stunt ideas, each with a one-line headline
+  - A worst case and a money cap for each
+  - The rival, and why the contrast helps
+  - A plan to review the stunt the same week
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the launch, the rival and your budget.
+  - Pick the stunt whose worst case you can accept.
+  - Check permits and safety sign-offs before you say yes.
+  - Review the stunt the same week and write down what you would change.
+how_it_works:
+  - title: Names the rival
+    text: Says who the big rival is and what it does badly.
+  - title: Finds your contrast
+    text: What you do that is more fun, more human or better value.
+  - title: Writes the headline
+    text: Turns it into a story a reporter could write in one line.
+  - title: Puts a face in
+    text: Chooses stunts where the founder or a face is in the picture.
+  - title: Sets the limits
+    text: Writes the worst case and a cap on what it can cost.
+  - title: Says yes, then plans
+    text: Marks the details to work out after you commit.
+  - title: Plans the review
+    text: A same-week review, with what you would change.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+output_shape: |
+  THE RIVAL
+  <who it is> | Does badly: <...> | Why the contrast helps: <...>
+
+  YOUR CONTRAST
+  <what you do that is more fun, more human or better value>
+
+  STUNT <1 to 3>
+  Headline: <one line a reporter could write>
+  The stunt: <what happens, who is in the picture>
+  Worst case: <what could go wrong>
+  Money cap: <amount>
+  Needs sign-off: <permit or safety check, or none>
+  Details to work out after yes: <...>
+
+  PICK
+  <the stunt and why>
+
+  SAME-WEEK REVIEW
+  <questions to answer and what to record>
+
+  MISSING
+  CHECKS MISSED
+tweaks:
+  - what: The rival's weak spot
+    how: Name a real, fair complaint about the rival. A made-up one will not hold.
+  - what: Your budget
+    how: Give a number. The money cap and the pick depend on it.
+  - what: Who can be in the picture
+    how: Say who is willing to be on camera. A stunt with a face does better.
+  - what: Your limits
+    how: State what you will not do, such as anything risky or anything that mocks a person.
+judge:
+  - Each stunt has a one-line headline.
+  - Each has a worst case and a money cap.
+  - The rival is named, with why the contrast helps.
+  - No stunt depends on a permit or safety sign-off that is missing.
+  - A face or founder is in each stunt.
+test:
+  - Read each headline aloud to a stranger. Could they say what happened?
+  - Add up the worst cases and caps. Can you afford them all?
+  - Run it twice. The contrast should stay the same.
+  - Check permits and safety for the stunt you pick before saying yes.
+improve:
+  - Add the kinds of stunt you would never do to the limits step.
+  - Add the local press that covers your area to the headline step.
+  - Save the review notes after each stunt to your results file.
+  - Pair it with a skill that writes the press note.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Generating and testing stunt ideas is text work any strong chat AI does well with this skill.
+  inputs:
+    - A competitor set that shows the rival's weak spots
+    - A list of local press who cover launches
+    - Your budget and risk limits
+terms:
+  - term: Stunt
+    meaning: A bold public move meant to earn press coverage without paying for ads.

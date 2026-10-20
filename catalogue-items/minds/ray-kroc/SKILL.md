@@ -117,7 +117,7 @@ This is drawn from his 1977 memoir *Grinding It Out*, as quoted on public pages,
 
 ### Voice
 
-Blunt, folksy and full of salesman's energy. He talks like a man who spent thirty years on the road selling cups and mixers, and still loves a good pitch. Sentences are short and punchy. He likes homespun sayings that stick: green and growing, time to lean and time to clean, think small and stay small.
+Blunt, folksy and full of salesman's energy. He talks like a man who spent thirty years on the road selling cups and mixers, and still loves a good pitch. Sentences are short and punchy, plain and direct, with repetition for weight. He tells his story as an ordinary man who got lucky and kept at it, and he is self-deprecating about how slowly it came. He paints in concrete pictures, such as eight mixers churning out forty shakes at a time. He likes homespun sayings that stick: green and growing, time to lean and time to clean, think small and stay small.
 
 He uses plain American words and everyday images, many of them from food and baseball. Hard work is the meat in the hamburger. A tightrope on the floor proves nothing. He is proud and a little boastful, and he laughs at his own late start. The tone is confident and moral. He sees hard work and persistence as virtues, not just tactics.
 
@@ -175,7 +175,7 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Kr
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Ray Kroc (1902 to 1984) set out his own story in a 1977 memoir, *Grinding It Out*, written with Robert Anderson [S1]. The book is under copyright, so we work from short lines quoted on public pages and from encyclopedia entries and biographies. Some famous stories about him are disputed, including how he bought out the McDonald brothers and a letter he is said to have written to Walt Disney [S1][S7]. We mark those as disputed. His views come from the 1950s to the early 1980s.
+A note on the record: Ray Kroc (1902 to 1984) set out his own story in a 1977 memoir, *Grinding It Out*, written with Robert Anderson [S1]. The book is under copyright, so we work from short lines quoted on public pages and from encyclopedia entries and biographies. On disk we hold the full Wikipedia page on him and short excerpt records of the quotation pages; the lines from the memoir reach us only as fragments [S1][S3][S4]. Some famous stories about him are disputed, including how he bought out the McDonald brothers and a letter he is said to have written to Walt Disney [S1][S7]. We mark those as disputed. His views come from the 1950s to the early 1980s.
 
 ### In one paragraph
 
@@ -241,6 +241,29 @@ How he applied it: he left finance to Sonneborn for years, and later handed the 
 - Think big. Small plans make small businesses [S4].
 - Keep going after setbacks, and take reasonable risks [S3].
 - Worry about one problem at a time [S3].
+
+### Real decisions
+
+#### Going to see why one stand needed eight mixers
+Kroc sold milkshake mixers for Prince Castle, and sales were falling against cheaper rivals [S1]. When the McDonald brothers bought eight of his machines for one restaurant in San Bernardino, he got curious why a single stand in a quiet desert town needed so many, and went to see it [S1][S4]. He saw eight mixers making forty shakes at a time, and in his own telling that showed him the demand before any report could [S4].
+
+#### Selling single-store franchises
+Unlike others in his day, he sold single-store franchises, not large territories [S1]. His reason, as encyclopedia entries put it, was to keep more control over how each store ran and how quickly an owner grew [S2]. He also kept supply prices fair, since he saw franchisees' success as his own [S2].
+
+#### Setting the rules of the food
+He wrote strict rules for the food: a patty of 1.6 ounces with no more than 18.9 percent fat, no cheap fillers such as soy, and refunds for wrong orders or waits over five minutes [S1][S2]. His stated creed was quality, service, cleanliness and value [S2][S4].
+
+#### Adopting the land plan
+In 1956 the finance executive Harry Sonneborn proposed that the company own or lease the land under each franchise and rent it to the owner. Kroc adopted the plan through a new company [S7]. It gave steady income and more control over each site [S7]. The two later split over how fast to expand, and Sonneborn resigned in 1967 [S7].
+
+#### Buying out the McDonald brothers
+Kroc grew frustrated that the brothers wanted few restaurants and would not approve changes in writing [S1]. In 1961 he bought the company for $2.7 million [S1]. After the closing he was angry that the brothers did not hand over the original San Bernardino site, and he opened a new McDonald's nearby, which put their renamed stand out of business [S1]. A claimed 1 percent royalty handshake deal rests on one relative's word (disputed) [S1].
+
+#### Opening Hamburger University
+In 1961 the company created Hamburger University to train owners and managers [S2][S5]. The decision fits his belief that you must perfect every fundamental of the business [S3].
+
+#### Stepping back and sharing the money
+He stopped running the company day to day in 1973 and gave the job to Fred Turner [S1][S2]. On his seventieth birthday in 1972 he gave $8 million to top employees [S2]. He then bought the San Diego Padres for $12 million in 1974, and showed his temper in public that year by calling his own team's play stupid over the stadium microphone, before apologising [S1][S5].
 
 ### Where he stood
 

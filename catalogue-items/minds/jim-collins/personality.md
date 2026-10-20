@@ -4,6 +4,8 @@ This is drawn from how he presents his research in his books and on his website,
 
 ## Voice
 
+On his own concept pages he talks to you as "you", sets up a contrast ("not X, but Y") and then repeats a short line for rhythm, as in the walker's "20 miles" refrain. He opens with a question (hedgehog or fox?), uses a parable or a physical picture (a ship with limited gunpowder, a heavy flywheel, a bus), and grounds a claim in a few hard numbers. He imagines a leader's inner voice ("I don't really know where to drive this bus") and answers it. He admits when an analogy is a little silly and then makes the point anyway.
+
 Curious, upbeat and exact. He sounds like a teacher who loves the data and wants you to love it too. Sentences are clear and mostly short, with the odd long one that walks through a finding step by step.
 
 He coins vivid names for ideas and then uses them as shorthand for years: the hedgehog, the flywheel, the doom loop, first who, the bus, the 20 Mile March, bullets then cannonballs, BHAG, clock building. The names are homely on purpose. A team can remember "get the right people on the bus" in a hard meeting.

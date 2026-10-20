@@ -1,0 +1,20 @@
+slug: local-production-opportunity-scanner
+name: "Local production opportunity scanner"
+summary: "List what your market buys from outside. Get the best thing to make locally, what to build around it and a buffer."
+category: general
+type: skill
+role: check
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan, required: true}
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [aliko-dangote, strive-masiyiwa]
+credits:
+  - {title: "The path to profits in Africa (report of his 2015 Harvard lecture)", by: "Aliko Dangote, via Harvard Gazette", used: "Starting from what a market imports, building the missing power and roads yourself, and sizing a plant to change the market"}
+  - {title: "We will open Africa: a conversation with Aliko Dangote", by: "IFC Trendlines", used: "Funding growth from profits and watching policy risk"}

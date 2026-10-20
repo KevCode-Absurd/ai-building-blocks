@@ -1,0 +1,18 @@
+slug: wayfinding-sign-planner
+name: "Wayfinding sign planner"
+summary: "Describe your place and its routes. Get a sign plan a first-time visitor can follow, with one lead mark and a walkthrough."
+category: general
+type: skill
+role: make
+job: design
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [erik-spiekermann]
+credits:
+  - {title: "T for Toronto", by: "Erik Spiekermann, 2021", url: "https://spiekermann.com/en/t-for-toronto", used: "One dominant mark that reads from far away, with a master colour leading and smaller labels under it"}
+  - {title: "I learned never to promise more than I can keep", by: "Erik Spiekermann, interview, 2018", used: "Trust through repetition, and recording rules so others can extend the system"}

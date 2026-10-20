@@ -2,6 +2,8 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Rebuilt 2026-10-20 from the 1989 proposal, the design principles, the short history and the press FAQ as read on the W3C site [S2][S3][S4][S5].
+
 Tim Berners-Lee is alive, and his views can change. This file draws on his own pages at the W3C, written from 1989 to 2004 [S2][S3][S4][S5], his 2018 post launching Inrupt [S6], his March 2024 open letter [S7], and reference pages. Treat each view as "as of" the date of the page it comes from. The most recent view here is from 2024. Nothing here tells you what he thinks about events after that. His writing is in copyright, so this is our summary, with a few short quotes.
 
 ## In one paragraph
@@ -64,6 +66,10 @@ By 2018 he wrote that the web had become an engine of inequity and division, sha
 
 How he applied it: he leads Solid, which stores each person's data in a "pod" they control, and lets apps use it only with permission [S10][S7]. In 2018 he launched Inrupt to back it and stepped back from day-to-day work at the W3C [S6][S1]. In October 2024 the Open Data Institute took over care of Solid [S10].
 
+**Typed links and gateways, not a replacement.** The 1989 proposal asked for nodes and links that carry a type, such as "depends on" or "is part of", and for private annotations on top of public information. It planned gateways that show existing systems, such as news, notes, the phone book and manuals, as hypertext, read-only at first, with plain text on ordinary terminals as the baseline and graphics later [S2].
+
+**Test of independent invention and least power.** In his design notes he asks whether a system would work beside one someone else invented, and he prefers the weakest language that does the job, since a plain description can be read, analysed and reused in ways a program cannot [S3]. He separates simple from easy, measuring simplicity by how much a design can do with how few building blocks [S3].
+
 ## How he decides
 
 - Ask whether the thing is meant to be universal. If so, it has to be open [S4].
@@ -74,6 +80,29 @@ How he applied it: he leads Solid, which stores each person's data in a "pod" th
 - Check that the design still works next to a rival someone else invents [S3].
 - Make it useful on day one by connecting what already exists [S2].
 - Write the standard down clearly, then be forgiving of honest mistakes [S3].
+
+## Real decisions
+
+### Proposing a web instead of a tree (1989)
+He wrote that CERN's real structure was a shifting web of connections, that knowledge left with people, and that a hierarchy could not represent relations. He proposed circles and arrows with typed links, and estimated two people over six to twelve months for the first phase [S2].
+
+### Building on the NeXT with his manager's leave
+His boss gave him permission to experiment, and in 1990 he wrote a point-and-click hypertext editor on the NeXT. A student, Nicola Pellow, built a line-mode browser that ran on almost any machine [S5].
+
+### Sharing the software and specifications openly
+He first shared the software with particle physicists, then with hypertext and NeXT enthusiasts in 1991, and published the core specifications so others could adopt and criticise them [S5].
+
+### Going royalty-free
+He says a universal space cannot also be controlled by one owner, and that a proprietary web would likely never have taken off. He credits Robert Cailliau for pressing CERN's management to release it without royalties [S4].
+
+### Founding the W3C in 1994
+After a long internal debate, he set up the consortium at MIT, with INRIA and later Keio University, as a neutral place where companies agree on shared protocols by consensus [S5].
+
+### Choosing the name and the double slash
+He chose "World Wide Web" to stress a decentralised graph where anything can link to anything, rejecting names such as Mine of Information and Information Mesh. He borrowed the double slash from another system and says he regrets the clumsy syntax [S4].
+
+### Telling a critic what to build first
+Asked to review a sweeping new computing vision, he declined but offered a method: break it into pieces, learn existing vocabulary, find the first piece worth building and write code to prove it [S4].
 
 ## Where he stood
 

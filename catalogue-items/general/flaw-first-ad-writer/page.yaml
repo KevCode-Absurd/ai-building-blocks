@@ -1,0 +1,127 @@
+new_slug: flaw-first-ad-writer
+name: "Flaw-first ad writer"
+summary: "Paste your product and its real weaknesses. Get an ad that states the flaw first and makes it a reason to buy."
+job: write-ad-copy
+thinking: medium
+thinking_why: "It must judge which weakness buyers already see and whether the product really backs the turn."
+
+headline: "Flaw-first ad writer"
+subhead: Give it your product facts and your brief. It lists the true weaknesses, picks the one buyers already notice, and writes ad copy and hooks that say it plainly and show what it proves. You get lines you can test.
+
+explain: |
+  Every product has a weakness buyers can see or guess. Most ads hide it, and readers sense the hiding. An ad that names the flaw first sounds like someone telling the truth, so the rest of it is easier to believe.
+
+  This skill lists your real weaknesses, chooses the one a buyer already worries about, and asks what it shows about the product, such as care, size, effort or honesty. It writes the flat claim, then a version that names the flaw. It checks that the product backs the line in real use and that nothing hides in the small print.
+
+when:
+  - Your ads sound like every rival's and nobody remembers them.
+  - You have a known weakness, such as a small size, a high price or a slow process, and you tend to hide it.
+  - Reviews keep mentioning the same drawback and you want to answer it in the ad.
+
+you_give:
+  - A brief with the buyer and the one point to make
+  - Your product facts, including what it does badly
+  - Customer reviews or buyer words (optional)
+  - Rival ads or claims (optional)
+you_get:
+  - A list of true weaknesses, with the one chosen and why
+  - Ad copy that states the flaw first and turns it
+  - Hooks built on the same turn
+  - A note on what in the product backs each line
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your brief and product facts. Add reviews and rival ads if you have them.
+  - Say which weaknesses you already know about. Do not hide the awkward ones.
+  - Read the chosen weakness and check it is one buyers truly notice.
+  - Test the best two lines against your current ad.
+
+how_it_works:
+  - title: Lists true weaknesses
+    text: Pulls every real weakness from your facts and reviews, and never invents one.
+  - title: Picks the one buyers see
+    text: Chooses the weakness a buyer already sees or fears, using their own words where it can.
+  - title: Asks what it shows
+    text: Works out what the weakness says about the product, such as care, size, effort or honesty.
+  - title: Writes flat, then plain
+    text: Writes the flat claim first, then a version that names the flaw plainly.
+  - title: Checks it holds in use
+    text: Tests that the product backs the line in real use, not just on the page.
+  - title: Matches picture and words
+    text: Makes sure the visual idea and the words make one point.
+  - title: Cuts empty twists
+    text: Removes any twist that has no link to the product.
+  - title: Checks the set
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  TRUE WEAKNESSES
+  1. <weakness> | Source: <fact or review>
+  ...
+
+  THE ONE WE USE
+  <weakness> because <why buyers see it>
+  What it shows: <care, size, effort, honesty or other>
+
+  FLAT CLAIM
+  <the plain version>
+
+  FLAW-FIRST ADS
+  1. <headline> / <body line>
+     Backed by: <product fact>
+  ...
+
+  HOOKS
+  <5 short lines using the same turn>
+
+  PICTURE NOTE
+  <what the visual should show so it matches the words>
+
+  MISSING
+  <facts needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How many weaknesses you share
+    how: List every known drawback, including the awkward ones. It picks the one buyers already notice.
+  - what: Buyer words
+    how: Paste reviews. Lines that echo the buyer's own complaint feel true.
+  - what: Rival ads
+    how: Add them so it can avoid a turn a rival could also claim.
+  - what: How blunt you want it
+    how: Say how much of the flaw you are willing to state in a headline. Plain is the default.
+
+judge:
+  - The flaw is real and stated plainly, not hinted at.
+  - The turn is true and the product delivers it.
+  - A rival could not say the same line.
+  - Any twist grows out of the product, not out of a gimmick.
+  - Nothing in the small print contradicts the line.
+
+test:
+  - Run it on a product whose weakness you know. See if it picks the one customers mention most.
+  - Show the lines to three buyers and ask which one they believe most.
+  - Run it twice. The chosen weakness should stay close even if the wording changes.
+  - Split-test the best line against your usual ad with the same picture.
+
+improve:
+  - Add a list of claims you may never make, so it keeps lines inside them.
+  - Add the weakness phrases your customers use, so ads echo their words.
+  - Save the line that won to your brand file as a proven turn.
+  - Pair it with "Claim and proof matcher" before you publish.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting weaknesses and rewriting lines is text work any strong chat AI does well with this skill."}
+  inputs:
+    - "Customer reviews that name the drawback"
+    - "Return and refund reasons"
+    - "Rival ads, to avoid a turn they could copy"
+
+terms:
+  - term: Flat claim
+    meaning: The plain, true statement of what the product offers, before any clever wording.
+  - term: Turn
+    meaning: The move that shows what a weakness says about the product, so it reads as a reason to buy.

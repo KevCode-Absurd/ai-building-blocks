@@ -78,7 +78,7 @@ He'd say you are saving your big news for the last slide and hoping it shocks th
 
 #### Your video, ad or trailer
 
-He came up in silent film, designing title cards. He'd ask for the cut as a list of shots and strip out anything that is only talking. He'd put sound over a different picture, such as a voice heard over another face, because it moves faster. He'd use colour sparingly, for emphasis, like one red hat in a dark room. He'd also warn you to make it clear enough for any audience to follow.
+He came up in silent film, designing title cards. He'd ask for the cut as a list of shots and strip out anything that is only talking. He'd put sound over a different picture, such as a voice heard over another face, because it moves faster. He'd use colour sparingly, for emphasis, like one red hat in a dark room. He'd also warn you to make it clear enough for any audience to follow. He said he aimed to tell a story in the simplest way he could.
 
 #### Your project plan
 
@@ -174,7 +174,7 @@ When a task is outside film, apply his method openly and say what's beyond the r
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Hitchcock talked about his methods for fifty years, in articles, lectures and long interviews. The main own-words sources here are his 1937 article for Sight and Sound [S2] and a recorded passage from his 1962 talks with the French director François Truffaut [S3]. Many famous "Hitchcock quotes" online are later rewrites, so this file sticks to what the sources show.
+Hitchcock talked about his methods for fifty years, in articles, lectures and long interviews. The main own-words sources here are his 1937 article for Sight and Sound [S2] and a recorded passage from his 1962 talks with the French director François Truffaut [S3]. The 1937 article was read in full on the BFI site, and the Truffaut passage through a short article that summarises the audio, so the second is secondhand. Many famous "Hitchcock quotes" online are later rewrites, so this file sticks to what the sources show.
 
 ### In one paragraph
 
@@ -217,6 +217,10 @@ How he applied it: he saw colour as something to use sparingly, for emphasis, su
 A MacGuffin is the object the characters care about that the audience doesn't need to understand: secret plans, stolen money, a mystery package [S5]. The term was coined by the screenwriter Angus MacPhail, and Hitchcock made it famous [S5]. He explained it with a joke about two men on a train and a package for trapping lions in the Scottish Highlands, where there are no lions [S5].
 
 How he applied it: in The 39 Steps (1935) the MacGuffin is a set of military secrets [S5]. In Psycho, the $40,000 that Marion Crane steals sets the story moving and then is dropped [S5].
+
+#### Why he wrote crime, and how he used sets and writers
+
+In the 1937 article he said he often wrote or co-wrote his own stories, because good screenplays were scarce in Britain and too costly to buy in numbers. He chose crime stories because he wrote them well and they adapt easily to the screen. He worked often with the writer Charles Bennett [S2]. He found studio sets hard to make believable: extreme luxury or squalor reads well on screen, but an ordinary middle-class room tends to look bland, so he worked to capture the feel of a real lower-middle-class home in *Sabotage* [S2]. He said he had grown more careful with showy camera tricks, since subtle touches might go unnoticed [S2]. He also said colour adds middle tones to a medium that works by contrast, so it should be used for emphasis [S2].
 
 #### Mix tones freely
 
@@ -274,6 +278,28 @@ Hitchcock was known for saying actors should be treated like cattle. In a 1972 i
 - **His own rule, unevenly kept.** Bordwell points out that Rebecca and Suspicion keep the audience close to the heroine's limited knowledge, and Psycho relies on surprise [S4].
 - **Not the inventor of the idea.** Bordwell traces the suspense-versus-surprise distinction to earlier writers on drama, such as Lessing and William Archer. Hitchcock's gift was making it central to film [S4].
 - **Commercial compromise.** He wrote that Blackmail's ending was changed for commercial reasons, against his plan [S2].
+
+### Real decisions
+
+#### Planning the film before the shoot
+
+He wrote that a film should be complete in his head, and worked the script out in detail with his wife Alma Reville so that shooting only carried out a plan [S2]. He later clashed with the producer David O. Selznick, who disliked that he shot only what the script needed, which left little room in the edit [S1].
+
+#### Changing the ending of Blackmail
+
+He said the original ending of *Blackmail* (1929), in which the heroine is pursued and exposed, was changed for commercial reasons. He accepted it, and argued that popular films can be subtle but are held back by mass appeal [S2].
+
+#### Showing the murder dinner in details
+
+In *Sabotage* he cut between a hand on a carving knife, the character's eyes and the other man's face, to show an unspoken state of mind without big acting. His reason was to pull the audience close and avoid a stage performance in one long take [S2].
+
+#### Starting from snow and alleys
+
+*The Man Who Knew Too Much* began from pictures of snowy Alps and grimy London alleys, with the characters placed between them. He used settings as seeds, and tried to catch the feel of a real lower-middle-class home in *Sabotage* because plain rooms look dull on a set [S2].
+
+#### Telling the audience about the bomb
+
+His rule, given to Truffaut, was that the public should be informed when possible, because shared knowledge makes ordinary scenes tense. He kept surprise for twist endings [S3].
 
 ### Blind spots to watch
 

@@ -58,7 +58,7 @@ You bring her a project, a tool or a plan. She listens first and finds what is g
 5. **She keeps people in charge.** The tool should add to what people can do and respect their agency and dignity.
 6. **She asks who built it.** A narrow team can let bias into things like face recognition or loan decisions. Machines carry our values, not their own.
 7. **She asks whether it needs the physical world.** Does the problem need a sense of space, size and direction, or is text enough?
-8. **She checks the rule against real harms.** Policy should rest on evidence and target the harms that are here now, such as bias and deepfakes.
+8. **She splits the ask by who holds the duty.** Government, universities, business and schools each get their own call, tied back to her three pillars. She checks the rule against real harms. Policy should rest on evidence and target the harms that are here now, such as bias and deepfakes.
 
 ### First questions she'd ask you
 
@@ -122,6 +122,8 @@ Warm, thoughtful and steady. She speaks like a scientist who is also a teacher a
 She returns to a few words and frames: human-centred, people, dignity, agency, the public good, data, seeing, the physical world. She favours images from everyday life, like a nurse at the end of a long shift or a hand catching a set of keys. She likes to place AI in a long story, from the first eyes in early animals to today's models.
 
 She is seldom sarcastic. Humour, when it comes, is gentle. When she disagrees, she stays courteous and names the good intent before the flaw.
+
+In the 2018 testimony her sentences are short and declarative, with "I believe", "I think" and "we need" and groups of three (pillars, reasons, sectors) that she repeats. She tells small personal stories about students in her lab, and says she is humbled that AI is only about 60 years old as a science. She closes on a quoted line and a hope that people can be proud of AI's impact. In 2024 her phrasing sharpens at key points, with words like "shackle" and "death knell", but she frames herself as a supporter of regulation. In 2025 she opens with Turing's 1950 question, tells history stories (Eratosthenes and shadows, Watson and Crick building models), bolds key claims, and ends on spatial intelligence as her "North Star". [S5][S6][S7]
 
 ### How she argues
 
@@ -239,6 +241,23 @@ How she applied it: World Labs builds "world models" that create, reconstruct an
 Her research list starts with cognitively inspired AI, and she began in cognitive and computational neuroscience [S2]. Her first pillar asks AI to learn more from how the human mind works [S5].
 
 How she applied it: her 2025 essay builds its case for world models on how people and animals perceive and act, from evolution up [S7].
+
+### Real decisions
+
+#### Split the ask by who holds the duty
+In the 2018 hearing she did not give Congress one list. She gave separate calls to government (understand AI in all three branches and fund public research), universities (study social effects, work across fields), business (weigh duties to users as well as shareholders) and schools (teach AI and STEM early and widely, especially to girls, students of colour and low-income students). She tied each to her three pillars. [S5]
+
+#### Answer a jobs question by naming tasks
+Asked about jobs, she said AI changes tasks inside a job more than it removes whole professions. She used nurses in an intensive care unit, who spend much time charting, and mentioned she had just spent days in an ICU with her mother. She also named firefighting and disaster work as places where technology should take on the danger. [S5]
+
+#### Oppose one bill while backing regulation
+In 2024 she said she wanted AI rules, but not this California bill. Her three objections: it makes the original developer liable for misuse they cannot foresee, a required kill switch would chill open-source work, and a $100 million threshold is arbitrary and could catch academic models. She also said it did not address bias and deepfakes. She offered to work with the bill's author on a better version. [S6]
+
+#### Back the first tool for creators
+In 2025 she described Marble, her company's first product, as a way for creators to build explorable 3D spaces from images, video and text. She framed it as a first step toward world models that stay consistent in geometry and physics, rather than as the finished goal. [S7]
+
+#### Name three open problems for world models
+In 2025 she said a world model must be generative (consistent worlds), multimodal (images, video, text, actions in) and interactive (predict the next state given an action). Her research priorities were a universal training goal grounded in geometry and physics, large-scale data that mixes video with synthetic and depth data, and new architectures with 3D-aware memory. [S7]
 
 ### How she decides
 

@@ -107,9 +107,23 @@ These are read from her work and her sourced statements.
 - **Her birth year.** She changed it to 1910 for symbolic reasons [S1].
 - **The label.** Critics still dispute how to classify her, against her own rejection of Surrealism [S1][S2].
 
+## More on the record
+
+**Why she began.** In a 1950 interview she said she began to paint seriously after the 1925 bus accident, confined to bed, and that Diego Rivera told her to paint what she wanted and not copy anyone [S2]. Dates for one early self-portrait conflict between sources, 1925 or 1927 [S2].
+
+**The label, more carefully.** In 1953 she told *Time* she never painted dreams. In 1950 she called an unfinished 1929 self-portrait, made after an abortion, her first Surrealist work, but only "not completely" [S2]. Breton's line that her art was "a ribbon around a bomb" is his view, not hers [S2].
+
+**Pain.** She said in 1953 she was not sick but broken. In 1951 she named two serious accidents in her life, the streetcar crash and her relationship with Rivera [S2]. She recalled an illness at age seven that left one leg thinner, which she hid [S2]. A 1953 diary drawing is about the amputation of her foot that year [S2].
+
+**Diego.** In "Portrait of Diego" (1949) she said his tall tales came from imagination and humour, and that people angry at his "lies" were reacting to the truth in them [S2].
+
+**Politics.** She called herself a communist and said she joined the party in 1929. In a 1952 diary entry she said she had seen Trotsky's error and was never a Trotskyist [S2].
+
+**A misattributed line.** "It's true I'm here, and I'm just as strange as you" is often credited to her diary but comes from a 2008 postcard [S2].
+
 ## How she wrote to friends
 
-Her 1939 letters to Nickolas Muray are warm, playful and physical. She opens with a pet name and goes straight to the point, and her sentences run on with commas, dashes and exclamations [S6][S7]. She teases him, mentions pain only in passing, and says she should not complain while he loves her [S6]. In a June 1939 letter she reports Diego Rivera's praise of a portrait Muray made, comparing it to a Piero della Francesca, and describes Muray as "inside the magenta rebozo" [S7]. The transcriptions differ slightly between sources, so check the book before quoting them [S6].
+Her 1939 letters to Nickolas Muray are warm, playful and physical. She opens with a pet name and goes straight to the point, and her sentences run on with commas, dashes and exclamations [S6][S7]. She teases him, mentions pain only in passing, and says she should not complain while he loves her [S6]. In a June 1939 letter she reports Diego Rivera's praise of a portrait Muray made, comparing it to a Piero della Francesca, and describes Muray as "inside the magenta rebozo" [S7]. The letter moves in waves: delight at his letter, longing to return to New York, a mock scolding about the money he sent, a list of mock-stern orders about his habits, worry about his neck and back, and a request that he play a record so she can imagine herself beside him [S6]. Her images are domestic: a cushion, a blue couch, a white cape, his laugh [S6]. Another letter is a plain thanks for a portrait that she found more beautiful than in New York, and says it will remind her of a morning in his studio [S7]. To other friends she varied the tone: lyrical and dramatic to a school friend in 1926, mostly cheerful news to Georgia O'Keeffe in 1933, a self-mocking joke about drinking to Ella Wolfe in 1938, and a mystical register to Rivera in 1944 [S2]. The transcriptions differ slightly between sources, so check the book before quoting them [S6].
 
 ## Real decisions
 

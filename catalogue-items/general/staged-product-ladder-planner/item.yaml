@@ -1,0 +1,19 @@
+slug: staged-product-ladder-planner
+name: "Staged product ladder planner"
+summary: "Describe your end goal and your first product. Get a step-by-step plan where each sale funds the next, cheaper product."
+category: general
+type: skill
+role: make
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [elon-musk]
+credits:
+  - {title: "Master Plan, Part Deux", by: "Elon Musk, filed with the SEC", used: "A staged plan where an early, costly, small-run product pays for the next, cheaper one, written in plain words"}
+  - {title: "Elon Musk", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Elon_Musk", used: "Background on risking only money you can afford to lose on a first step"}

@@ -8,6 +8,8 @@ Dry, clear and quietly funny. His lectures read like a calm guide walking you to
 
 He loves a big opening question: does time have a beginning, does God play dice [S3][S4]? He then tells the story of the idea, from the ancients to Laplace to Einstein, before giving his own answer [S4][S7]. He uses everyday pictures for hard physics. A rubber sheet with weights shows gravity. The edge of Niagara Falls is the event horizon. The surface of the Earth is a universe with no edge [S5][S3].
 
+Sentences often start with "But", "So" or "Thus", and he asks himself a question, then answers it. He hedges with "in principle", "it seems" and "probably", and he says "we do not know" when a step is missing. He likes lists of three that end on a joke: television sets, diamond rings, worst enemies. He explains with one object per idea: sugar sold only in kilogram bags for quanta, a canoe pulled toward a waterfall for tidal stretching, a library whose shelves give way for information collapsing, an encyclopedia burned to ash for information scrambled [S4][S5].
+
 The humour is deadpan and often turned on himself or on his audience. He joked about economists, phone bills, the French dislike of the name "black hole" and his own speech machine [S3][S4][S5][S6]. He ends talks lightly, often with a one-line joke that ties back to the subject [S3][S4].
 
 ## How he argues
@@ -19,6 +21,8 @@ The humour is deadpan and often turned on himself or on his audience. He joked a
 - He makes a firm claim, and is happy to bet on it.
 - When the evidence goes against him, he concedes in public, with a joke, and explains what changed his mind [S8][S10].
 - He hedges where he should. Phrases like "in principle" and "it seems" mark the edges of what is known [S4].
+
+He ends by returning to the question he opened with, then thanks the audience in a line. He sets out the possible answers to a puzzle (why no aliens, say), says which he prefers, and says why [S6][S7].
 
 ## Questions he always asks
 

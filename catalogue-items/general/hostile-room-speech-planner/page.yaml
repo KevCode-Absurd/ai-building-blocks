@@ -1,0 +1,124 @@
+new_slug: hostile-room-speech-planner
+name: "Hostile-room speech planner"
+summary: "Say who is in the room and what they believe. Get a speech that agrees first, then turns them step by step."
+job: speak-and-persuade
+thinking: high
+thinking_why: "It has to model an audience that disagrees and order the evidence so each step is earned."
+
+headline: "Hostile-room speech planner"
+subhead: "Tell it who is in the room, what they believe and what you want them to do. It plans a speech that agrees first and turns them one step at a time. You get the speech, the held-back fact and a single next step."
+
+explain: |
+  Telling a room that disagrees with you that they are wrong makes them defend their view harder. Telling them all the facts at once lets them dismiss the lot. A speech that moves a hostile crowd does it in a set order.
+
+  This skill states the room's belief fairly, opens with a request for a hearing and honest agreement, and repeats the phrase they trust while testing it with facts. It holds back your strongest fact until the room asks, then shows the evidence in steps, and adds one real object that makes it personal. It ends on a single action. It also reads each line aloud for the ear. Everything must be true and sourced.
+
+when:
+  - "You must present a plan to people who have already said they oppose it."
+  - "A decision has upset a group and you must speak to them next week."
+  - "You are asking a client, board or crowd to change course on something they care about."
+
+you_give:
+  - "Who is in the room and what they believe"
+  - "What you want them to do"
+  - "The facts you can back, with sources"
+  - "A profile of the room, such as past quotes or votes (optional)"
+  - "The setting and time you have (optional)"
+you_get:
+  - "The room's belief written fairly"
+  - "A speech planned from agreement to action"
+  - "The strongest fact marked, with the line that draws it out"
+  - "One object and one next step"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the room: who they are and what they hold true."
+  - "Say what you want them to do after the speech."
+  - "Paste your facts with their sources. Leave nothing out that you could not defend."
+  - "Practise the speech aloud and fix each line that sounds written."
+
+how_it_works:
+  - title: "States their view"
+    text: "Writes the room's belief the way they would say it."
+  - title: "Finds honest agreement"
+    text: "Lists what you can truly agree with."
+  - title: "Opens with a hearing"
+    text: "Asks for attention and agrees, without announcing a pitch."
+  - title: "Tests a trusted phrase"
+    text: "Repeats it with a fact each time, if the facts support it."
+  - title: "Holds back the key fact"
+    text: "Waits until the room asks."
+  - title: "Shows evidence and an object"
+    text: "Small facts to large, then one real thing that makes it personal."
+  - title: "Gives one step"
+    text: "One action the room can take that day."
+  - title: "Reads it aloud"
+    text: "Fixes lines that sound written, then names any check it missed."
+
+output_shape: |
+  THE ROOM BELIEVES
+  <their view, fairly stated>
+
+  WE AGREE ON
+  <two or three true points>
+
+  SPEECH
+  Opening: <ask for a hearing, agree>
+  Turn: <trusted phrase + fact, repeated>
+  Held back: <the strongest fact, and the line that draws it out>
+  Evidence: <facts from small to large, each with source>
+  Object: <the real thing to show>
+  Close: <one action, who does it>
+
+  CHANGED FOR THE EAR
+  <lines rewritten, and why>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "How well you know the room"
+    how: "Paste their own words. The more it hears how they talk, the fairer their belief reads."
+  - what: "What you want"
+    how: "One action works better than three. Say it as a verb."
+  - what: "Your evidence"
+    how: "Give sources. A fact with no source is held back or dropped."
+  - what: "Time"
+    how: "Say how long you have. It trims the evidence to fit, never the opening or the close."
+
+judge:
+  - "The room would nod at the statement of their view."
+  - "The opening asks for a hearing and does not pitch."
+  - "The strongest fact is not in the first half."
+  - "Every fact has a source you can name."
+  - "The close asks for one action, not a feeling."
+
+test:
+  - "Show the room's belief paragraph to someone who holds that view. Ask if it is fair."
+  - "Read the speech to a friend who plays the room, and note where they interrupt."
+  - "Check each fact against its source before you rely on it."
+  - "Run it twice and see that the held-back fact stays the same."
+
+improve:
+  - "Add the questions the room is most likely to ask, so the held-back fact lands on cue."
+  - "Add names and phrases to avoid in this room."
+  - "Keep a list of objects that worked for you in past talks."
+  - "Pair it with \"Plain English editor\" for the final read-through."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ordering a speech and rewriting it for the ear is text work any strong chat AI does well with this skill."}
+    - {name: "A friend or colleague", why: "Someone to play the room is the best test of where it lands."}
+  inputs:
+    - "Quotes or messages from people in the room"
+    - "Past minutes or votes that show their view"
+    - "The source documents behind each fact"
+
+terms:
+  - term: "Held-back fact"
+    meaning: "Your strongest evidence, kept until the room asks for it."
+  - term: "Trusted phrase"
+    meaning: "The word or label the room uses for the person or idea behind their view."

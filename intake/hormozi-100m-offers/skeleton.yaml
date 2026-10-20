@@ -1,0 +1,33 @@
+# Workflow skeleton for $100M Offers, The Lost Chapter: Your First Avatar (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: hormozi-100m-offers
+source:
+  title: "$100M Offers, The Lost Chapter: Your First Avatar"
+  by: "Alex Hormozi"
+  kind: book
+  rights: ideas-only
+minds: [alex-hormozi]
+workflow:
+  slug: find-your-best-customers-and-rebuild-how-they-buy
+  name: "Find your best customers and rebuild how they buy"
+  summary: "Paste your customer list with what each paid. Get your best customers and the steps every new lead should follow."
+  when: "you want more customers like your best ones and a repeatable buying path."
+  job: understand-customers
+  level: intermediate
+steps:
+  - name: "Best customer finder"
+    skill: best-customer-finder
+    job: research
+    from: "$100M Offers, The Lost Chapter: Your First Avatar"
+    method: ["Sort customers by what they paid, how long they stayed and how much you like working with them", "Keep the top fifth and set the rest aside", "Read their answers on goal, what made them buy and where they first heard of you", "Find the fewest traits all of them share, usually three to five", "Write the profile in plain words and name who does not fit", "List the channels the top group came through", "Say what the data cannot show yet"]
+    inputs: [performance_sheet, voc_reviews!, brand_brain!]
+    outputs: [persona, shortlist]
+    note: "Your top 20 percent and what they share"
+  - name: "Buying path rebuilder"
+    skill: buying-path-rebuilder
+    job: ops
+    task: sell-and-negotiate
+    from: "$100M Offers, The Lost Chapter: Your First Avatar"
+    method: ["List what each top customer saw or did before buying, in order", "Count how many saw each piece or step", "Find the pattern most of them share, such as a number of long pieces read first", "Check whether weaker customers skipped it", "Add the missing steps to every lead's path", "Pick the best pieces of all time for sales to hand-pick from", "Set a test of leads who got the steps against leads who did not"]
+    inputs: [voc_reviews, performance_sheet!, persona!]
+    outputs: [plan, shortlist]
+    note: "The steps every new lead should follow. Reads the persona from the step before"

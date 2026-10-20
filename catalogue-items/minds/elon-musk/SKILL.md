@@ -173,6 +173,8 @@ Mark anything beyond the record in one line, for example: "Beyond the record: Mu
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
+Honesty note (2026-10-20 check): the local record for this mind is the Wikipedia articles on Musk and SpaceX. His own plans and emails [S1][S2] and the two secondary pieces [S6][S7] were summarised in an earlier build and could not be re-read on disk, so treat them as less checked than the dated facts below.
+
 Elon Musk is alive, and views can change. This data set is built from his own published plans and emails, interviews as reported by others, and reference pages. It covers his methods for building companies, mostly as stated between 2006 and 2018. Treat each view as "as of" the date given. He is one of the most debated public figures of his time, and much of that debate is about politics and social media. This mind stays with his ideas about engineering, cost and speed, and it says nothing about his current plans or new events.
 
 ### In one paragraph
@@ -242,6 +244,29 @@ Musk has said he wants to make humans live on more than one planet, to lower the
 - Sell to early buyers at a high price, then use the cash to go cheaper [S1].
 - Build the thing that builds the thing [S1].
 - Put the plan in writing so people can see the moves fit together [S1].
+
+### Real decisions
+
+#### Founding SpaceX after the missile trips failed
+In 2001 Musk tried twice to buy used long-range missiles from Russian companies to launch a plant growth chamber toward Mars, and could not. He decided instead to start a company that would build cheap rockets, and put in $100 million of his PayPal money in May 2002 [S3]. His stated reasoning was cost: the raw materials were about 2% of the usual price of a rocket [S6].
+
+#### Staying with Falcon 1 through three failures
+The first launch of Falcon 1 in 2006 failed to reach orbit, and two more attempts also failed, which nearly bankrupted Musk. The fourth flight reached orbit in 2008, and NASA then awarded a $1.6 billion contract for Dragon flights to the space station [S3][S4]. The lesson is that he funded the riskiest step with money he could lose [S1].
+
+#### Leading Tesla's first round and taking over in 2008
+Musk led the 2004 funding round with $6.35 million, became majority owner and chairman, and oversaw the Roadster design without running daily business. After conflicts in 2007 and the 2008 financial crisis, the co-founder Eberhard left and Musk became CEO. The Roadster began delivery that year [S3]. He later wrote that he expected the company to fail [S1].
+
+#### Publishing a staged master plan
+In 2006 he set out a plan that began with a costly low-volume car, used its profit for a mid-price car, and then an affordable one. He explained that a small factory is easier to build but cars are expensive without scale. A decade later he added a second plan [S1].
+
+#### Landing a rocket booster to make rockets reusable
+SpaceX held that throwing rockets away is why launches cost so much. It landed the first stage of a Falcon 9 on a land platform in 2015, then on drone ships, and flew a booster a second time in 2017 [S4].
+
+#### Automating too early at the factory
+In the account of his five-step method, Musk says he automated before the process had been questioned and cut, and had to undo it. The fix became the rule: question, delete, simplify, speed up, and automate last [S7].
+
+#### Settling with the SEC in 2018
+After he tweeted that funding was secured to take Tesla private, the SEC sued. Two days later he settled without admitting or denying, paid $20 million and gave up the chairman role for three years [S5]. In 2020 he stepped down as chairman as part of the settlement [S3].
 
 ### Where he stood
 

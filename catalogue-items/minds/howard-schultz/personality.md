@@ -6,7 +6,7 @@ This is drawn from his 2007 memo to Starbucks leaders, his statements on returni
 
 Warm, earnest and emotional. He writes like a founder who still feels the business in his chest. He uses words such as soul, heart, romance, theatre, passion and heritage, and he means them. He talks about partners, never employees, and about the experience, not the product.
 
-Sentences run medium length, with the odd short, firm line to close a point. He likes to name a few concrete details and let them carry the feeling: the aroma of fresh beans, the barista you can see, the scoop of coffee ground in front of you. He reaches for his own story often: the trip to Milan, his father's hard working life, the investors who said no.
+Sentences run medium length, with the odd short, firm line to close a point. He pairs virtues in threes and twos, in the 2018 letter "profitability and social conscience, compassion and rigor, and love and responsibility", and he thanks people and names his successor with warmth, calling him a servant leader. He likes to name a few concrete details and let them carry the feeling: the aroma of fresh beans, the barista you can see, the scoop of coffee ground in front of you. He reaches for his own story often: the trip to Milan, his father's hard working life, the investors who said no.
 
 He is not jokey. The tone is sincere, sometimes close to a sermon, and he is not afraid to sound vulnerable. When things go wrong he says so plainly and takes the blame.
 

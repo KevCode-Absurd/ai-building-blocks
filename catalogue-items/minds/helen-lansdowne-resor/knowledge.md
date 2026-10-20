@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Helen Lansdowne Resor died in 1964 [S1]. She left very little in her own name. We found no essays, speeches or interview transcripts by her in public sources. Her own words, as far as the record goes, are the ads she is credited with writing [S6][S8]. The ads and the 1911 *Woodbury Book* were unsigned, as ads were then, so we can't be sure she wrote every line [S7]. Most of what follows comes from reference pages and later accounts of her campaigns [S1][S3][S4]. Some "firsts" claimed for her are not well sourced, and we mark them. Her ads from 1911 to the 1920s are in the public domain, so we quote a few short lines.
+A note on method: Helen Lansdowne Resor died in 1964 [S1]. She left very little in her own name. We found no essays, speeches or interview transcripts by her in public sources. Her own words, as far as the record goes, are the ads she is credited with writing [S6][S8]. The ads and the 1911 *Woodbury Book* were unsigned, as ads were then, so we can't be sure she wrote every line [S7]. I read the full scanned text of the 1911 *Woodbury Book* itself, so the booklet's structure and wording are firsthand, while who wrote it is not [S7]. Most of what follows about her comes from reference pages and later accounts of her campaigns [S1][S3][S4]. Some "firsts" claimed for her are not well sourced, and we mark them. Her ads from 1911 to the 1920s are in the public domain, so we quote a few short lines.
 
 ## In one paragraph
 
@@ -40,6 +40,14 @@ Her campaigns gave people something useful to keep. The 1911 *Woodbury Book* was
 
 How she applied it: Woodbury ads grew into "treatments" for problems like blackheads and oily skin, with exact steps using hot and cold water [S4]. The reader learned a method, and the method needed the soap.
 
+### How the 1911 booklet is built to sell
+
+Read start to finish, *The Woodbury Book* follows a pattern that later ads copy. It opens with a plain case that most people have a poor skin and that this is a solvable problem. It teaches in chapters by problem and season: the skin, soap, tools, blemishes, hair, spring and summer, fall and winter, the bath, the baby, hints, and a closing "personal talk" on sleep and not worrying [S7]. Each remedy is a numbered routine. For blackheads it gives seven steps, from a hot wash and steaming to a long cold rinse and a night massage with cream, says to repeat it every evening, and says what to expect: a marked change in ten days to two weeks, with a few blackheads still returning [S7]. It also lists the tools a reader needs with their prices, from 25 cents up, so the soap sits inside a whole routine [S7].
+
+How it applied the price: it states that the soap costs 25 cents a cake, then sets that against what a mother pays for one of her child's dresses, and it points to Army and Navy buyers as proof that people pay for it [S7]. It also offers five graded ways to use the soap, from a quick wash to leaving lather on overnight, so a reader can start mild and step up [S7].
+
+Caution: the booklet is a company text with 1911 medical claims, some of which would not be allowed now, and nothing in it is signed [S7]. Take the shape (teach, number the steps, say what result to expect and when, show the price in context), not the claims.
+
 ### Write in the style of the page around it
 
 Her ads often looked and read like the stories in the magazines that carried them [S1]. Her favourite outlets were the Curtis magazines, the *Ladies' Home Journal* and *The Saturday Evening Post* [S3]. Readers came to those magazines for stories and advice, so an ad that read like one got read too [S1][S3].
@@ -66,6 +74,7 @@ How she applied it: the couple split the work. Stanley handled research and runn
 - Add feeling, even a little daring, and back it with practical advice [S5][S9].
 - Promise only what the product can deliver [S9].
 - Give the reader something useful to keep, like a guide or a routine [S4][S7].
+- Number the steps, say how long until the reader sees a change, and show the price next to something familiar [S7].
 - Make the ad fit the page it runs on [S1][S3].
 - Trust your own feel for the reader, then check it against real buyers [S3][S9].
 

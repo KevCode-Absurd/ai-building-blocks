@@ -1,0 +1,127 @@
+new_slug: why-first-message-writer
+name: "Why-first message writer"
+summary: "Give your product or cause and who you want to reach. Get a short message: belief first, then how, then what."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It has to judge whether a stated purpose is a real belief or just a money goal."
+
+headline: "Why-first message writer"
+subhead: "Give it your product or cause, who you want to reach, and any facts you hold. It finds the belief behind the work and rebuilds your pitch to open with it. You get a baseline, a belief-first message and a note on what changed."
+
+explain: |
+  A pitch that opens with the product asks a stranger to do the work of finding out why it matters. They rarely do. Many people decide in the first line whether they feel the same way you do, and the product only counts after that.
+
+  This skill writes your usual pitch first, so you can see the gap. Then it looks for the belief behind the work, in your facts, and rejects anything that is really about money. It lists what you do that proves the belief, picks the people who already share it, and rewrites from belief to method to product. Features that would scare a doubtful reader are recast around what that person values. It adds one true story if you have it, then compares both versions.
+
+when:
+  - "Your about page or pitch lists what you do and people still ask \"so why you?\"."
+  - "You are starting a cause, club or business and need a first message that people want to repeat."
+  - "You have good facts but your intro opens with the product and loses people in the first line."
+
+you_give:
+  - "Your product, service or cause, in a few lines"
+  - "Who you want to reach"
+  - "Your brand file (optional)"
+  - "A buyer or audience profile (optional)"
+  - "A true story that shows the belief (optional)"
+you_get:
+  - "Your usual pitch as a baseline"
+  - "The belief, how you live it and who it is for"
+  - "A short message that goes belief, how, then what"
+  - "Which version to use, and which features were recast"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Say what you make or do and why you started, in three or four lines."
+  - "Say who you most want to reach, and what they care about."
+  - "Paste any true story, such as a customer who said something that stuck."
+  - "Read both versions aloud to someone, then ask them to say back what you believe."
+
+how_it_works:
+  - title: "Writes the baseline"
+    text: "Your pitch the usual way, product first, so the new version has something to beat."
+  - title: "Finds the belief"
+    text: "A purpose that holds without money in it. If none is in the facts, it asks rather than invents one."
+  - title: "Names how you live it"
+    text: "Two or three things you really do that show the belief at work."
+  - title: "Picks who shares it"
+    text: "Describes the people who care most by what they value."
+  - title: "Rewrites inside out"
+    text: "Belief first, then how, then the product as proof."
+  - title: "Tests each feature"
+    text: "Recasts or cuts anything that would push a doubtful reader away."
+  - title: "Adds a true story"
+    text: "One real moment that shows the belief, or a marked gap."
+  - title: "Compares and checks"
+    text: "Reads both versions, picks the one people could repeat, and names any check it missed."
+
+output_shape: |
+  BASELINE
+  <your usual pitch, product first>
+
+  THE BELIEF
+  We believe <belief>
+  How we live it: <two or three real things>
+  For: <who shares it>
+
+  THE MESSAGE
+  <four to six sentences: belief, how, what>
+
+  STORY
+  <two or three true sentences, or MISSING: story>
+
+  CHANGED
+  <each feature cut or recast, and why>
+
+  USE THIS ONE
+  <baseline or new, and why>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Why you started"
+    how: "Say it in plain words, even if it sounds small. The belief is usually hiding in the reason you began."
+  - what: "Who you want first"
+    how: "Name the people who already agree with you. The message is tuned for them, not for everyone."
+  - what: "Your real story"
+    how: "A true moment beats a claim. Give it the people, the place and what changed."
+  - what: "Claims you may make"
+    how: "List what you can prove. Features that cannot be backed are cut, not softened."
+
+judge:
+  - "The first line says what you believe, not what you sell."
+  - "Nothing in the belief is about profit or being the best."
+  - "You can name who the message is for."
+  - "The story is real and you can point to where it came from."
+  - "Someone can repeat the belief after one read."
+
+test:
+  - "Run it on your current pitch. Check whether the baseline matches what you really say today."
+  - "Read the new message to three people and ask each to say back what you believe. Compare their words."
+  - "Run it twice. The belief should stay close even if the wording changes."
+  - "Put both versions on a page or in a message and see which gets more replies."
+
+improve:
+  - "Add words your best customers use about why they chose you, so the belief sounds like them."
+  - "Add a list of things you refuse to do, so the how is easy to prove."
+  - "Save the belief line to your brand file and reuse it in every message."
+  - "Pair it with \"Customer-hero message writer\" when you need a page that puts the customer first."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Rewriting a pitch in a new order is text work any strong chat AI does well with this skill."}
+    - {name: "A voice recorder", why: "Say your why out loud first and paste the transcript; it is often plainer than what you write."}
+  inputs:
+    - "Three customer comments that say why they picked you"
+    - "Your about page or last pitch deck text"
+    - "A short note on what you would never do, even for money"
+
+terms:
+  - term: "Baseline"
+    meaning: "Your pitch in its usual order, kept so you can see what the new version changes."
+  - term: "Why"
+    meaning: "The purpose, cause or belief behind the work, not the profit."

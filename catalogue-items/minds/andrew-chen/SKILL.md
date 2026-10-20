@@ -238,6 +238,32 @@ How he applied it: his advice was to limit how much is new at once, make the val
 - In a marketplace, start with the supply side's economics [S6].
 - Start smaller and more specific than feels comfortable [S7].
 
+### Real decisions
+
+#### Using the Airbnb Craigslist tool as the case
+
+In his 2012 essay, Chen took apart Airbnb's tool that let hosts post listings to Craigslist [S1]. Craigslist had no public way to connect, and a classic marketer would never have thought of it [S1]. It took someone who thought like an engineer to spot a busy channel with little competition [S1]. His point was that distribution now runs through code [S1].
+
+#### Naming the clickthrough law
+
+Chen gave the decay of banner ads a name: the first banner ad in 1994 had a click rate of 78 percent, and Facebook's average banner in 2011 had 0.05 percent [S2]. He listed three forces: novelty fades, rivals copy, and scale reaches less eager people [S2]. He told teams to rotate ads, try new places and find the next untapped channel [S2].
+
+#### Starting with the funnel
+
+In his next feature essay, a sample funnel runs from 1,000 visitors to about 200 sign-ups and about 20 daily users after 30 days [S4]. He used it to show that new features aimed at engaged users reach a small group [S4]. So he told teams to fix the landing page and first visit [S4].
+
+#### Cutting paid marketing to a share of growth
+
+Chen warned that early paid ads look profitable until costs climb and payback stretches past a year [S5]. He pointed to Dropbox, which found paid search unprofitable and grew through sharing and a referral program [S5]. He suggested keeping paid spend to about 30 to 40 percent of new users at the top of the funnel [S5].
+
+#### Starting from the worker's side
+
+In about 2018 he explained why many "Uber for X" startups failed [S6]. Recruiting workers was costly, and demand in spikes left workers idle [S6]. So he told founders to start from the worker's point of view [S6].
+
+#### Starting with an atomic network
+
+The Cold Start Problem says to start with the smallest group that makes the product useful [S7]. Slack began with single teams, Tinder with college groups and Uber with set times and places in San Francisco [S7]. Google+ launched to everyone and stalled [S7].
+
 ### Where he stood
 
 **Can a new feature save weak retention?** Rarely. Most features reach too few users to move the numbers [S4].

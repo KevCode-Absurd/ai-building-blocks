@@ -1,0 +1,110 @@
+new_slug: decision-checklist-runner
+name: Decision checklist runner
+summary: Paste your checklist and a decision. Get each item answered with evidence, a pass, fail or unknown, and a clear call.
+job: think-and-decide
+thinking: medium
+thinking_why: It answers each item from evidence and applies fixed rules, with some judgment on what counts as a pass.
+headline: Decision checklist runner
+subhead: Paste your checklist and the decision in front of you. It answers every item in order with a fact, marks each pass, fail or unknown, applies your stop rules, looks for several fails with one cause, and writes the call with what would prove it wrong.
+explain: |-
+  A checklist only helps if it is run in full, in order, on paper. People skip items that feel obvious or uncomfortable, and those are often the ones that matter. When they feel sure, they skip the list entirely.
+
+  This skill runs your list for you. It writes an answer with evidence for each item, treats unknowns as fails until found, and stops at the first failed stop item. It counts fails, looks for a common cause, and records the call in a form you can judge later. It also notes which items were unclear.
+when:
+  - You are about to decide and feel very sure.
+  - A decision has a deadline and you are tempted to skip checks.
+  - You want a written record of why you chose, to judge later.
+you_give:
+  - Your checklist, or the output of "Decision checklist builder"
+  - The decision, with what is at stake and when it is due
+  - The facts you have on it
+you_get:
+  - Each item answered with evidence, marked pass, fail or unknown
+  - Which stop items failed, if any
+  - "The call: go, wait or no, with a reason"
+  - A record of what you expect and what would show you wrong
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your checklist, then describe the decision and the facts you have.
+  - Answer any unknowns it asks about, or leave them marked as fails.
+  - Save the record. After the result, bring it to "Checklist upkeep planner".
+how_it_works:
+  - title: Restate the decision
+    text: Writes what is being decided, the stakes, the date and whether it can be undone.
+  - title: Run the list in order
+    text: Answers each item with a fact, not a feeling.
+  - title: Treat unknowns as fails
+    text: Counts unknowns as fails and says how to find them.
+  - title: Apply the stop rule
+    text: Stops the run if a stop item fails.
+  - title: Count and look for one cause
+    text: Counts fails and checks whether they share a cause.
+  - title: Write the call
+    text: Gives go, wait or no with the reason.
+  - title: Record it for later
+    text: Records what you expect and what would show you wrong.
+  - title: Note list problems
+    text: Flags items that were vague, unused or missing.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  THE DECISION
+  <one line> | at stake | due | reversible?
+
+  RUN
+  STOP 1. <item> | answer + fact | PASS, FAIL or UNKNOWN
+  1. <item> | answer + fact | PASS, FAIL or UNKNOWN
+  ...
+
+  TOTALS
+  Fails: <n> | Unknowns: <n> | shared cause: <what>
+
+  THE CALL
+  go, wait or no | reason | what would change it
+
+  RECORD
+  <date> | expect: <what by when> | wrong if: <facts> | main reason: <words>
+
+  LIST PROBLEMS
+  <vague, unused or missing items>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: The facts you bring
+    how: More facts means fewer unknowns. Bring numbers, quotes and names, not summaries.
+  - what: How honest your answers are
+    how: If you are the one pushing the decision, ask a colleague to supply the facts for the reward and alternative items.
+  - what: Time
+    how: Say when the decision is due. A hurried run is flagged, and the call is more likely to be wait.
+judge:
+  - Every pass has a fact you could show someone.
+  - Unknowns are marked as fails.
+  - The call follows the rules on the list.
+  - The record would let you judge the call in a year.
+test:
+  - Run it on a decision you regret. See which items would have failed.
+  - Leave out a key fact on purpose. It should mark the item UNKNOWN and not guess.
+  - Run it twice. The calls should be the same.
+improve:
+  - Run every big decision through it and keep the records in one folder.
+  - Share the records with a trusted friend who reviews them with you.
+  - Take the list problems to Checklist upkeep planner.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps the log, the checklist and your records in one place you can come back to.
+  inputs:
+    - The output of Decision checklist builder
+    - Reports, quotes or emails about the decision
+    - The person who recommended it, and how they are paid
+terms:
+  - term: Unknown
+    meaning: An item you cannot answer from a fact yet; it counts as a fail until you can.
+  - term: Record
+    meaning: A short note of the call, what you expect and what would prove you wrong.

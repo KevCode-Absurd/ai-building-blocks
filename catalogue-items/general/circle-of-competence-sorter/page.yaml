@@ -1,0 +1,129 @@
+new_slug: circle-of-competence-sorter
+name: "Circle of competence sorter"
+summary: "Describe a business or bet. Get it sorted as yes, no or too tough, with your real edge written down."
+job: money-and-investing
+thinking: medium
+thinking_why: "It judges your honest answers against fixed rules for each basket. The rules are clear, but it must spot where an answer is a guess."
+
+headline: "Circle of competence sorter"
+subhead: "Describe a business, stock, deal or field you are weighing. It asks five plain questions you answer without notes, marks each as known, guessed or blank, writes down your real edge, and sorts the thing as yes, no or too tough. It is a method of analysis, not personal financial advice."
+
+explain: |
+  Most money is lost in games where someone across the table knows more than you do. The cure is to know where your own knowledge ends, and to stay inside it. That sounds easy. It is hard because everything you half-understand feels familiar.
+
+  This skill makes you prove it. You answer five questions about how the thing earns, what it costs, why customers might leave and how a rival could hurt it. Each answer is marked as a fact, a guess or a blank. It then asks what you see better than the next person, finds the first question you cannot answer, and sorts the thing into one of three baskets. It never says to buy or sell any named security.
+
+when:
+  - You like the look of a business or a deal but could not explain how it makes money without notes.
+  - A friend, a headline or a salesperson has pushed you toward something outside your field.
+  - You want to decide what to study next to widen what you can judge.
+
+you_give:
+  - The business, bet or field and what it sells
+  - Your background in it, such as years worked or things you use daily (optional)
+  - A report on its edge or risks (optional)
+you_get:
+  - Five answers marked as known, guessed or blank
+  - Your real edge written down, or "no edge"
+  - A sort into yes, no or too tough, with the reason
+  - The first question you cannot answer, and a plan to widen the circle if it is worth it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the business or bet and say what you have done in the field.
+  - Answer the five questions without looking anything up. Say "blank" when you do not know.
+  - Read the basket and the first question you could not answer.
+  - Take a yes to the "Business power tester" or a too-tough to your reading list.
+
+how_it_works:
+  - title: One plain sentence
+    text: If you cannot say what it sells, to whom and how it earns, it stops and sorts the thing as too tough.
+  - title: The no-notes test
+    text: Five questions on money in, biggest costs, why customers leave, how a rival could hurt it and what could change in ten years.
+  - title: Fact or guess
+    text: Each answer is marked know, guess or blank, so a vague feeling cannot pass as knowledge.
+  - title: Writes down your edge
+    text: Years in the field, daily use or a long record count. Liking the product does not.
+  - title: Finds the boundary
+    text: Writes the next questions a sharp stranger would ask, and marks where your answers run out.
+  - title: Sorts into three baskets
+    text: Yes needs four known answers and an edge. No means a poor business. Too tough means gaps or no edge.
+  - title: Prices the widening
+    text: Lists what to learn, how long it takes, and says pass if the cost beats the likely gain.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE BUSINESS
+  <one plain sentence>
+
+  THE FIVE ANSWERS
+  1. Money in: <answer> [KNOW / GUESS / BLANK]
+  2. Biggest costs: ...
+  3. Why customers leave: ...
+  4. How a rival could hurt it: ...
+  5. Ten-year change: ...
+
+  YOUR EDGE
+  <what you see better, or "no edge">
+
+  THE BASKET
+  <YES / NO / TOO TOUGH> because <reason>
+
+  THE FIRST QUESTION YOU CANNOT ANSWER
+  <question>
+
+  TO WIDEN THE CIRCLE
+  <what to learn, how long, or "pass">
+
+  MISSING
+  <what would change the sort>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your background
+    how: Be exact. "Eleven years running kitchens" is an edge for a restaurant supplier. "I eat out a lot" is not.
+  - what: How strict to be
+    how: Say if this is a small trial or a large share of what you own. The bar for yes goes up with the stakes.
+  - what: The field
+    how: Name how fast it changes. A field that rewrites itself every few years makes old knowledge go stale.
+  - what: A report
+    how: Paste a report on the business's edge so the sort can use it.
+
+judge:
+  - The business fits one plain sentence.
+  - Every answer marked know has a fact or a record behind it.
+  - The edge is something you did or saw, not something you like.
+  - The basket follows the rule it states.
+  - The first unanswerable question is specific.
+
+test:
+  - Run it on a business you work in. It should come out yes with a clear edge.
+  - Run it on a fast-changing field you only read about. It should come out too tough.
+  - Give it a business you love as a customer. See that it separates liking from edge.
+  - Run it twice on the same facts. The basket should not change.
+
+improve:
+  - Add your field's two or three questions that always separate experts from fans.
+  - Keep a list of your too-tough passes, and note later what you missed or avoided.
+  - Re-sort each year, since an edge can grow or go stale.
+  - Pair a yes with the "Business power tester" and the "Who-keeps-the-gain tester".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting honest answers against fixed rules is text work any strong chat AI does well."}
+    - {name: "A notebook", why: "Writing your five answers by hand, without a search tab open, makes the test honest."}
+  inputs:
+    - "A report from the Business power tester, so the sort can use what is known about the edge"
+    - "A short note on your own work history"
+    - "Annual reports or product pages you have already read, to check your answers against"
+
+terms:
+  - term: Circle of competence
+    meaning: The set of things you understand well enough to judge better than most people.
+  - term: Too tough
+    meaning: A basket for things you cannot judge. Leaving them alone is a complete answer.
+  - term: Edge
+    meaning: Something you see better than the next person looking at the same thing.

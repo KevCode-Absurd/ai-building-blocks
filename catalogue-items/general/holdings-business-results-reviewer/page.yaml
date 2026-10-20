@@ -1,0 +1,124 @@
+new_slug: holdings-business-results-reviewer
+name: "Holdings business results reviewer"
+summary: "List your holdings and what you know of each. Get every one sorted keeper, watch or weak by business results."
+job: money-and-investing
+thinking: high
+thinking_why: "It reads several years of figures for several businesses and has to ignore price. Mixed-up figures change the labels, so give it your strongest model."
+
+headline: "Holdings business results reviewer"
+subhead: "List what you own and why you bought it, with whatever business figures you have. It leaves price out, checks whether each reason still holds on earnings and returns, sorts every holding as keeper, watch, weak or not understood, and shows where the business and the price disagree. It is a method of analysis, not personal financial advice."
+
+explain: |
+  Most people review what they own by looking at the price. Up is good, down is bad. But a price is a mood that changes by the minute, and the thing you own is a business with results you can read.
+
+  This skill reviews each holding by those results. It checks whether the reason you bought it still holds, then sorts it as keeper, watch, weak or not understood, with the figure that backs each label. Price and your own gain or loss are kept out until the end, where they are used only to show where results and price disagree. Broad funds are set apart, since they own everything. It gives no buy or sell calls and never judges from a price chart.
+
+when:
+  - You own several shares or stakes and want to review them by the business, not the price.
+  - A holding fell and you cannot tell if the business is worse or only the price.
+  - You suspect you hold things you cannot explain.
+
+you_give:
+  - Your holdings, with share of the total, date bought and why
+  - Several years of earnings, returns, debt and margin for each business (optional)
+  - How long you can leave the money (optional)
+you_get:
+  - A table of results with price left out
+  - A label for each holding, with the figure behind it
+  - A cross-check of profit kept against value gained
+  - A list of holdings where results and price disagree
+  - How much of your money sits in things you do not understand
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List your holdings with the reason you bought each, in one line.
+  - Add the yearly figures you have. Annual report summaries are enough.
+  - Read the labels, then the disagreements. They show where to look next.
+  - Take the result to "Twenty-punch bet ranker" to rank and size what you hold.
+
+how_it_works:
+  - title: Lists the holdings
+    text: Name, size, date and reason, with broad funds set in their own group.
+  - title: Gathers the results
+    text: Four or five years of earnings, return on equity, debt and margin for each business.
+  - title: Hides the price
+    text: Leaves price, gain and loss out of the results table until the end.
+  - title: Checks your reason
+    text: Asks whether the reason you bought it still holds, with the figure that shows it.
+  - title: Sorts each one
+    text: Keeper, watch, weak or not understood, by stated rules.
+  - title: Cross-checks the kept profit
+    text: Compares profit kept with the rise in market value over five years.
+  - title: Shows the disagreements
+    text: Ranks by results and by price and marks where the ranks differ.
+  - title: Counts what you understand
+    text: Shows how much of your money is in holdings you cannot explain.
+
+output_shape: |
+  HOLDINGS
+  <name> | share of total | bought | reason | single business / fund
+
+  RESULTS (no price)
+  <name> | earnings by year | return on equity | debt to equity | margin | MISSING
+
+  THE LABELS
+  <name>: <KEEPER / WATCH / WEAK / NOT UNDERSTOOD> - reason still holds: <YES/WEAKER/NO> - <figure>
+
+  ONE-DOLLAR CROSS-CHECK
+  <name>: kept <n>, value rose <n>
+
+  WHERE RESULTS AND PRICE DISAGREE
+  <name>: results rank <n>, price rank <n> - look into <...>
+
+  WHAT YOU UNDERSTAND
+  Keeper <n> | Watch <n> | Weak <n> | Not understood <n> (<share of money>)
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The reason you bought
+    how: One honest line each. "A friend said so" is a fine answer. It will mark the reason as weak.
+  - what: Funds
+    how: Say which holdings are broad funds. They are set apart and not reviewed as businesses.
+  - what: Years of figures
+    how: Give four or five. Fewer than three and most labels will be unknown.
+
+judge:
+  - Funds are kept apart from single businesses.
+  - The results table shows no price and no gain or loss.
+  - Every label has an evidence line.
+  - A holding with no figures is not understood, not guessed.
+  - Nothing says to buy or sell a named security.
+
+test:
+  - Give it a holding whose price doubled while earnings fell. It should be marked weak or watch and listed under disagreements.
+  - Give it one whose price fell and earnings rose. It should be listed under disagreements, not marked weak.
+  - Give it a holding with no figures. It should be marked not understood.
+  - Run it twice on the same list. The labels should match.
+
+improve:
+  - Redo it once a year, on the same date, with the new annual figures.
+  - Keep the reason you bought each holding in a notes file, so you can check it honestly later.
+  - Add a rival's figures for each business to make the labels sharper.
+  - Pair it with "Sit-still rule writer" so the labels turn into holding rules.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Keeps the results table for each holding in one place and makes it easy to add a year."}
+    - {name: "Any good chat AI", why: "Reading pasted figures and sorting by stated rules is work a strong chat AI does well with this skill."}
+  inputs:
+    - "Annual report summaries for each company you hold"
+    - "Your own note on why you bought each one"
+    - "Your broker statement, to get sizes and dates"
+
+terms:
+  - term: Holding
+    meaning: A share or stake in a business that you own.
+  - term: Return on equity
+    meaning: Operating profit after tax divided by the money owners have in the business.
+  - term: Broad fund
+    meaning: A fund that owns many companies, such as an index fund, so there is no single business to judge.

@@ -1,0 +1,123 @@
+new_slug: lender-safety-verdict-writer
+name: "Lender safety verdict writer"
+summary: "Paste your coverage and cushion results. Get a meets-the-bar, speculative or reject call, with reasons and what would change it."
+job: money-and-investing
+thinking: high
+thinking_why: "It weighs several tests, resists a persuasive story and has to say what would change its mind. That needs careful reasoning."
+
+headline: "Get a clear safe, speculative or reject call on a loan, with the reasons"
+subhead: "Give it the results from your earnings and cushion tests and the terms of the debt. It runs the rules that rule weak debt out: size, record, honest accounts, a near due date, a high rate, a pledge, rate risk and the price. You get one call, ranked reasons and what would change it."
+
+explain: |
+  Safe debt is chosen by saying no. A good loan turned down costs a delay. A bad one costs your money. Yet the usual sales points for weak debt are a high rate, a near due date and a pledge of property, and each of them sounds like safety.
+
+  This skill holds the line on all three. It starts from refusal, runs the checks that can end the matter, and sets out the call in three levels: meets the bar, speculative at these terms, or reject. It also looks for a bet hidden in the price, such as paying more than you would get back if the debt were repaid early. It is a method, not financial advice, and never says buy or sell.
+
+when:
+  - You have run the safety tests and want one call you can defend.
+  - A borrower is offering a high rate, a short term or collateral to make up for thin numbers.
+  - You want to write down why you said yes or no before you commit.
+
+you_give:
+  - The results from "Average earnings coverage tester" and "Equity cushion ratio tester"
+  - The terms, including amount, rate, due date, early repayment terms, security and your price
+  - What you know about the borrower's age, size, record and owners (optional)
+you_get:
+  - The results in three lines
+  - A yes or no on each exclusion check
+  - Notes on the due date, rate, pledge, rate risk and price
+  - One call with ranked reasons and what would change it
+  - A date to test again
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the two test results and the terms of the debt.
+  - Add anything you know about the borrower's past.
+  - Read the ranked reasons, then the facts that would change the call.
+  - Put the borrower question to them in writing.
+
+how_it_works:
+  - title: Starts from refusal
+    text: Asks for a reason to say yes, and declines if a doubt remains.
+  - title: Runs the exclusion checks
+    text: Size, record, the whole borrower and the honesty of the accounts.
+  - title: Holds the bar
+    text: Does not relax it for a near due date, a high rate or a pledge.
+  - title: Checks rate risk
+    text: Looks at what rising rates do to long low-rate debt and to refinancing.
+  - title: Checks the price
+    text: Finds any bet hidden in paying more than the repayment price.
+  - title: Writes the call
+    text: Meets the bar, speculative at these terms, or reject, with ranked reasons.
+
+output_shape: |
+  THE RESULTS
+  Label: <investment / speculation> | Earnings cover: <x> vs bar <x> | Cushion: <x> vs bar <x>
+
+  EXCLUSION CHECKS
+  Size: <ok / fail> | Record: <ok / fail> | Whole borrower: <ok / fail> | Accounts: <ok / fail>
+
+  TERMS
+  Due date: <note> | Rate: <note> | Pledge: <note> | Rate risk: <note> | Price vs repayment: <note>
+
+  CALL
+  <MEETS THE BAR / SPECULATIVE AT THESE TERMS / REJECT>
+
+  WHY, RANKED
+  1. <biggest reason>
+  2. <next>
+
+  WHAT WOULD CHANGE IT
+  <facts and numbers> | Question for the borrower: <question>
+
+  TEST AGAIN
+  <date and triggers>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your own limits
+    how: Give the most you would lend to one borrower. A speculative call is then sized to a loss you can bear.
+  - what: Early repayment terms
+    how: Paste the call or early repayment clause. It decides whether a premium is a bet.
+  - what: The borrower's history
+    how: Add past defaults, new owners or a recent rescue. Record can end the matter.
+  - what: Your view on rates
+    how: Say if you expect rates to rise, fall or stay. It changes the advice on long low-rate debt.
+
+judge:
+  - The call is one of the three and follows from the tests and checks.
+  - No bar is relaxed for a near date, a high rate or a pledge.
+  - A hidden bet in the price is named.
+  - What would change the call is stated with facts.
+  - It never says buy or sell and invents no figure.
+
+test:
+  - Run it on a loan with a high rate and thin cover and check it holds the bar.
+  - Run it on a strong borrower with unsecured debt and check it does not need a pledge.
+  - Give it a note priced above its repayment price and see that the premium is flagged.
+  - Run it twice. The call should not change.
+
+improve:
+  - Add your own exclusion rules, such as a minimum borrower age.
+  - Keep a log of past calls and what happened, and paste it in as a record.
+  - Pair it with "Average earnings coverage tester" and "Equity cushion ratio tester".
+  - Add "Room for error plan checker" for your own side, to see what happens to you if the loan is lost.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Applying fixed rules and writing a reasoned call is text work."}
+    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
+  inputs:
+    - "Results from the two earlier tests"
+    - "The loan or bond terms, including early repayment"
+
+terms:
+  - term: Call price
+    meaning: The amount a borrower may pay to repay a bond early. If you pay more than that, you lose the difference when it is repaid.
+  - term: Refinancing
+    meaning: Borrowing again to repay an old debt when it falls due.

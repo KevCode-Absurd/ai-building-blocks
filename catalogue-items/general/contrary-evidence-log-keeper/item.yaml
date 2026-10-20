@@ -12,6 +12,6 @@ outputs:
   - {type: lessons_register}
 origin: rebuilt
 version: 1.0.0
-minds: [charles-darwin]
+minds: [charles-darwin, charlie-munger]
 credits:
   - {title: "The Autobiography of Charles Darwin", by: "Charles Darwin", used: "The habit of writing down facts that cut against a favourite idea at once, because they fade from memory faster than the welcome ones"}

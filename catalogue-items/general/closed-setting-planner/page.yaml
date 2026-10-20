@@ -1,0 +1,110 @@
+new_slug: closed-setting-planner
+name: "Closed setting planner"
+summary: "Tell it who is stuck and where. Get a sealed world with every exit shut for a reason."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It builds a plan from fixed steps, but it has to test each exit for a reason a reader will accept."
+
+headline: "A small, sealed world where the reader believes your character cannot leave"
+subhead: Tell it who is stuck and where. It lists every way out and every object within reach, shuts each exit for a reason a reader will accept, and picks the ordinary things the reader will learn to watch.
+
+explain: |
+  Stories about being trapped fall apart when the reader thinks of a way out that the character does not. "Why doesn't she just call someone?" ends the dread on page ten.
+
+  This skill builds the closed world first. It maps the place, lists every exit and every tool within reach, and gives each exit a reason it is shut. A reason can be a lock, an injury, a promise, a storm or a fear. It then picks a handful of everyday objects and sounds, such as a kettle, a hallway board that creaks or a clock, so the reader has something to watch in every scene. It also writes down what the trapped person knows that the other person does not. That gap is where the first plan comes from.
+
+when:
+  - Your story keeps one person in one place, and early readers say "why doesn't she just leave?"
+  - You have the idea but not the room, and the setting feels like a stage set.
+  - You want the dread to come from small things, not from big events.
+
+you_give:
+  - Who is stuck, who or what holds them, and the place, in a few sentences
+  - Any rules of your story that fix what can happen (optional)
+you_get:
+  - The one place, drawn in words, with a short list of what is within reach
+  - Every way out, each with the reason it is shut and what would open it
+  - Five or six ordinary objects and sounds the reader will watch
+  - What the trapped person knows that the other does not
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe who is trapped, who holds them and where, even if the idea is rough.
+  - Answer its questions about injuries, weather, phones and neighbours.
+  - Take the list of exits to your outline. Next, use "Volatile antagonist mood mapper".
+
+how_it_works:
+  - title: Fixes the place
+    text: Writes the one place in plain terms, with its rooms, doors, windows and distances to the nearest help.
+  - title: Lists every way out
+    text: Names every door, window, phone, person and vehicle, so none is left for the reader to spot first.
+  - title: Shuts each exit
+    text: Gives each a reason a reader accepts, and says what it would take to open it.
+  - title: Picks the watch list
+    text: Chooses everyday objects and sounds that can carry dread later, such as a latch, a kettle or a timer.
+  - title: Names the knowledge gap
+    text: Writes what the trapped person knows that the other does not.
+  - title: Checks itself
+    text: Tests the exits for the "why doesn't she just" question and names any check it missed.
+
+output_shape: |
+  THE PLACE
+  <where, in a short paragraph, with distances to help>
+
+  WITHIN REACH
+  <objects, tools, people and routines, one per line>
+
+  EXITS
+  <exit | why it is shut | what would open it>
+
+  THE WATCH LIST
+  <5 or 6 ordinary objects or sounds | what each can mean later>
+
+  WHAT ONLY THEY KNOW
+  <what the trapped person knows that the other does not>
+
+  MISSING
+  <facts still needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The place
+    how: Be exact. A farmhouse in a snowed-in valley gives more than "somewhere remote".
+  - what: How hurt the character is
+    how: Say what they can and cannot do. Injury shuts exits faster than any lock.
+  - what: The year
+    how: Give the period. Phones, doors and neighbours change the exits.
+  - what: Length
+    how: For a short story, pick three exits. For a novel, use all of them.
+
+judge:
+  - Every exit has a reason it is shut that a stranger would accept.
+  - Phones, neighbours and vehicles are each dealt with.
+  - The watch list has things you can put in a scene without explaining.
+  - The knowledge gap is something the trapped person can act on.
+
+test:
+  - Give the plan to a friend and ask them to find a way out in two minutes. If they do, add a reason.
+  - Run it twice on the same idea. The exits should stay the same even if the reasons change.
+  - Read the watch list. Each item should be an object you could describe in one line.
+
+improve:
+  - Add the real distances and times from a place you know, so the world feels measured.
+  - Add one exit that opens later, and plan what it costs.
+  - Keep the watch list on a card beside your draft.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing exits and testing reasons is text work any strong chat AI does well with this skill."}
+    - {name: "A paper floor plan", why: "Drawing the rooms by hand shows gaps a list hides."}
+  inputs:
+    - "A rough idea of who holds the character and why"
+    - "Notes on the period and what people carried in it"
+
+terms:
+  - term: Closed setting
+    meaning: A small place the character cannot leave for most of the story.
+  - term: Watch list
+    meaning: The few ordinary objects and sounds the reader learns to keep an eye on.

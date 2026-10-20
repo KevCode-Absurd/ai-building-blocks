@@ -1,0 +1,113 @@
+new_slug: volatile-antagonist-mood-mapper
+name: "Volatile antagonist mood mapper"
+summary: "Paste your setting plan and the person in power. Get a mood scale with warning signs, triggers and costs."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It builds a scale from set steps, but it needs judgement to make each mood believable and each sign small."
+
+headline: "A villain whose moods make every calm scene feel dangerous"
+subhead: Paste your setting plan and describe the person who holds the power. It builds a mood scale from calm to dangerous, with a warning sign the trapped person can spot, a trigger and a cost for each mood.
+
+explain: |
+  A villain who is always cruel becomes predictable, and a reader stops being afraid. A villain who swings between kind and dangerous keeps the reader on edge, because no scene is safe, not even the warm ones.
+
+  This skill builds a mood scale for the person who holds the power. Each mood gets a small sign the trapped person can read, such as a changed walk, a hummed tune that stops or a cup set down too gently. Each gets a thing the person does and what it costs the other. It adds the small trigger that tips one mood into the next. It also gives the person a sincere reason for what they do. A villain who believes they are right is harder to read and harder to escape.
+
+when:
+  - Your antagonist is scary in big scenes but dull in quiet ones.
+  - Your trapped character has nothing to react to between big events.
+  - You want warm scenes that still carry a threat.
+
+you_give:
+  - A setting plan from "Closed setting planner", or a short description of the place
+  - Who holds the power, what they want and how they talk
+  - Any history that explains them (optional)
+you_get:
+  - Three or four moods in order, from calm to dangerous
+  - A warning sign for each mood that the trapped person can notice
+  - What the person does in each mood, and what it costs the other
+  - The small triggers that flip one mood to the next
+  - The person's sincere reason, in their own words
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your setting plan and describe the person who holds the power.
+  - Say how they speak, what they love and what they cannot stand.
+  - Use the mood scale to decide the mood each scene starts in. Next, use "Rising cost ladder builder".
+
+how_it_works:
+  - title: Sets the scale
+    text: Names three or four moods in order and says what each looks like from outside.
+  - title: Finds the signs
+    text: Writes a small sign for each mood, one the trapped person could learn to read.
+  - title: Prices each mood
+    text: Writes what the person does in each mood and what the other pays for it.
+  - title: Finds the triggers
+    text: Names small, ordinary things that flip one mood to the next, including a few the reader sees before the character does.
+  - title: Writes the sincere reason
+    text: Gives the person a reason they believe, so they are never cruel for its own sake.
+  - title: Checks itself
+    text: Tests the scale for surprise, fairness and flat moods, and names any check it missed.
+
+output_shape: |
+  THE PERSON
+  <who they are, what they want, how they talk>
+
+  THE SCALE
+  Mood 1: <name> | Sign: <...> | They do: <...> | It costs: <...>
+  Mood 2: ...
+  Mood 3: ...
+  Mood 4: ...
+
+  TRIGGERS
+  <small thing | flips mood n to mood n+1 | does the reader see it first: yes or no>
+
+  THEIR REASON
+  <in their words, a reason they believe>
+
+  WHAT THE TRAPPED PERSON LEARNS TO READ
+  <the three signs, in the order they are learned>
+
+  MISSING
+  <facts still needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Number of moods
+    how: Use three for a short story and four for a novel.
+  - what: How kind the calm mood is
+    how: The kinder it is, the worse the next flip feels. Say how kind you want it.
+  - what: Speech
+    how: Paste a few lines of their dialogue. It will give signs that fit their voice.
+
+judge:
+  - Every mood has a sign small enough to miss the first time.
+  - The calm mood is warm enough that the reader relaxes.
+  - At least two triggers are ordinary things.
+  - The person's reason makes sense from inside their head.
+
+test:
+  - Read two scenes with the same events but different starting moods. They should feel different.
+  - Give the scale to a friend and ask them to predict the next mood. They should be right half the time.
+  - Check that the signs would work in a film, with no narration.
+
+improve:
+  - Add a mood that nobody has seen yet, and plan when it appears.
+  - Write one scene where a sign is misread.
+  - Add the history behind each trigger.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Building and testing the scale is text work any strong chat AI does well with this skill."}
+    - {name: "A notebook", why: "Keep the signs on a card beside your draft so each scene starts in the right mood."}
+  inputs:
+    - "A setting plan from Closed setting planner"
+    - "A sample of the person's dialogue"
+
+terms:
+  - term: Mood scale
+    meaning: A short list of the moods a person moves through, from calm to dangerous.
+  - term: Sign
+    meaning: A small change in behaviour that tells the trapped person the mood has shifted.

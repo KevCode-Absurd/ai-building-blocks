@@ -21,7 +21,7 @@ seats:
   - {seat: "The moat", asks: "What stops a well-funded rival from taking this from us, and is that getting stronger or weaker?"}
   - {seat: "Integrity check", asks: "Do we trust the people on the other side of this deal, and would we be happy to read about it in the paper?"}
 pairs_with: [charlie-munger, benjamin-graham, bill-gates, jeff-bezos, sam-walton]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "1987 letter to Berkshire Hathaway shareholders", by: "Warren Buffett", url: "https://www.berkshirehathaway.com/letters/1987.html", kind: own-words}
   - {n: 2, title: "1989 letter to Berkshire Hathaway shareholders", by: "Warren Buffett", url: "https://www.berkshirehathaway.com/letters/1989.html", kind: own-words}
@@ -38,6 +38,7 @@ sources:
   - {n: 13, title: "Lecture at the University of Florida School of Business, October 15, 1998 (transcript, bilingual reprint)", by: "Warren Buffett, reprinted by SVCAF", url: "https://svcaf.org/files/buffett-uf-lecture-1998.pdf", kind: own-words}
   - {n: 14, title: "Thanksgiving letter to shareholders, in Berkshire news release of November 10, 2025", by: "Warren Buffett", url: "https://www.berkshirehathaway.com/news/nov1025.pdf", kind: own-words}
   - {n: 15, title: "Salomon Brothers", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Salomon_Brothers", kind: reference}
+  - {n: 16, title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a one-page year-end letter from the owner of a small cleaning company to her two silent partners, including one mistake she made."}
   - {kind: use, prompt: "Here's a short description of a local bakery that's for sale. Tell me whether it has a moat, and what would make it wider."}

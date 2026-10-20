@@ -1,0 +1,26 @@
+slug: price-against-value-checker
+name: Price against value checker
+summary: Paste what you would get and what it costs. Get a value range, a walk-away price and the best alternative to beat.
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+  - warren-buffett
+  - benjamin-graham
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: Judging value apart from price, the rule that a better business at a fair price beats a fair one at a bargain, the use of the best alternative as the cost of any choice, and the habit of leaving a margin of safety
+  - title: A Lesson on Elementary Worldly Wisdom (talk at USC)
+    by: Charles T. Munger
+    used: The point that a long-held business tends to earn close to what the business itself earns, and the warning on big commissions and long prospectuses

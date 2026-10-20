@@ -34,6 +34,7 @@ sources:
   - {n: 10, title: "Special Situations (1946 article, as compiled in Common Sense Investing)", by: "Benjamin Graham", url: "https://www.rbcpa.com/wp-content/uploads/2017/01/Common_Sense_Investing_The_Papers_of_Benjamin_Graham_1974.pdf", kind: own-words}
   - {n: 11, title: "Valuation of Common Stocks (1957 seminar article, as compiled in Common Sense Investing)", by: "Benjamin Graham", url: "https://www.rbcpa.com/wp-content/uploads/2017/01/Common_Sense_Investing_The_Papers_of_Benjamin_Graham_1974.pdf", kind: own-words}
   - {n: 12, title: "Papers of 1974 to 1976 on portfolios, efficient markets and common stock groups (as compiled in Common Sense Investing)", by: "Benjamin Graham", url: "https://www.rbcpa.com/wp-content/uploads/2017/01/Common_Sense_Investing_The_Papers_of_Benjamin_Graham_1974.pdf", kind: own-words}
+  - {n: 13, title: "Security Analysis: Principles and Technique, second edition (1940)", by: "Benjamin Graham and David L. Dodd", kind: own-words}
 tests:
   - {kind: use, prompt: "Explain margin of safety to my teenage kid using a lemonade stand."}
   - {kind: use, prompt: "Write five plain rules a beginner could follow so they act like a defensive investor, not a speculator."}

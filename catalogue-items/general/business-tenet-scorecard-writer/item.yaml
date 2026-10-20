@@ -1,0 +1,17 @@
+slug: business-tenet-scorecard-writer
+name: "Business tenet scorecard writer"
+summary: "Paste your findings on a business. Get ten tests marked pass, fail or unknown, and whether a price check is worthwhile."
+category: general
+type: skill
+role: compress
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [warren-buffett]
+credits:
+  - {title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The grouping of an owner's questions into business, management, financial and value tests, the idea that the last two matter most and the others should not freeze you, and the warning that no test catches outright fraud"}

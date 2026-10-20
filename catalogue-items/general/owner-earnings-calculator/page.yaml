@@ -1,0 +1,125 @@
+new_slug: owner-earnings-calculator
+name: "Owner earnings calculator"
+summary: "Paste a company's profit, depreciation and spending. Get the cash an owner could take out each year, as a range."
+job: money-and-investing
+thinking: medium
+thinking_why: "The sum is fixed, but it needs judgment about what spending keeps the business level. Use a strong model."
+
+headline: "Owner earnings calculator"
+subhead: "Paste several years of a company's profit, depreciation, capital spending and working capital. It removes one-off items, splits the spending into keeping level and growing, and gives the cash an owner could really take out each year, as a low, middle and high figure. It is a method of analysis, not personal financial advice."
+
+explain: |
+  Profit is an opinion built from accounting rules. Plain cash flow is worse, because it adds back depreciation and forgets that the machines, shops or systems have to be replaced. A business can show growing profit and still hand its owners almost nothing.
+
+  This skill works out owner earnings: profit, plus non-cash charges, minus the spending needed to stay where you are, minus the extra money tied up as sales grow. Because nobody knows next year's spending, it gives a range, with the three ways it estimated the spending to stay level. It also shows the trend and flags businesses that keep eating cash. It gives no buy or sell calls and marks every missing figure.
+
+when:
+  - You are about to value a business and the profit figure may hide how much cash it eats.
+  - A company shows rising profit but the owners never seem to get any money.
+  - You want one cash figure to feed into a value calculation.
+
+you_give:
+  - Four or five years of profit after tax, depreciation, capital spending and working capital lines
+  - Earlier findings on the business (optional)
+  - A line on what the business does (optional)
+you_get:
+  - A year-by-year table with one-off items removed
+  - Low, middle and high owner earnings
+  - How much of reported profit survives as owner earnings
+  - The yearly growth and how steady it is
+  - A note where the method does not fit
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the figures from the company's accounts, or attach the spreadsheet.
+  - Say what you know about one-off items, such as a building sale.
+  - Read the three figures and the ratio to profit before you use any of them.
+  - Take the working figure and the range to "Business value range calculator".
+
+how_it_works:
+  - title: Lines up the years
+    text: Puts profit, non-cash charges, capital spending and working capital side by side and marks every gap.
+  - title: Removes one-offs
+    text: Takes out sale gains, write-downs and refunds so a single odd year does not set the answer.
+  - title: Splits the spending
+    text: Estimates what it costs to stay level three ways, low, middle and high.
+  - title: Counts the cash tied up
+    text: Adds the yearly rise in receivables and stock, less payables, as money the owner cannot take.
+  - title: Does the sum for each year
+    text: Profit plus non-cash charges, minus staying-level spending, minus extra working capital.
+  - title: Compares with profit
+    text: Shows how much of reported profit is really free cash.
+  - title: Shows the trend
+    text: Works out the yearly growth and says how steady it is.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  FIGURES BY YEAR
+  <year> | profit | non-cash | capital spending | working capital | MISSING
+
+  CLEANED PROFIT
+  <what was removed and why>
+
+  OWNER EARNINGS
+  Low <n> | Middle <n> | High <n>  (spending to stay level: <n> / <n> / <n>)
+  Plain cash flow for comparison: <n>
+
+  SHARE OF PROFIT
+  <owner earnings / profit, and what that says>
+
+  TREND
+  <yearly growth, how steady>
+
+  WHERE IT DOES NOT FIT
+  <or none>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Which spending counts as staying level
+    how: If you know, say so ("the new warehouse was growth"). It replaces the three estimates for that item.
+  - what: The years you include
+    how: Give four or five. Add a note if one year was unusual, such as a closure or a boom.
+  - what: What the business does
+    how: A shop, a factory and a software firm need very different amounts of spending. One line helps it judge.
+
+judge:
+  - Every number comes from your figures or is marked missing.
+  - One-off items are named and removed.
+  - The answer is a range with a working figure.
+  - Plain cash flow is shown next to owner earnings.
+  - Nothing says to buy or sell a named security.
+
+test:
+  - Give it a year with a big building sale. The sale should be removed and named.
+  - Give it a business with heavy equipment and low depreciation. The low case should sit well below the middle case.
+  - Leave out the capital spending line. It should stop and ask for it, not guess.
+  - Run it twice on the same figures. The ranges should be close.
+
+improve:
+  - Keep your cleaned figures in a sheet so next year's run only adds one row.
+  - Add the notes from the annual report that explain big spending.
+  - Run it on a rival and compare the share of profit that survives.
+  - Pair it with "Return on equity and margin checker" for the full set of money tests.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Lets you keep the year-by-year table and rerun the sum when a new year arrives."}
+    - {name: "Any good chat AI", why: "Reading pasted statements and doing a short fixed sum is work any strong chat AI does well with this skill."}
+  inputs:
+    - "The cash flow statement and balance sheet for four or five years"
+    - "Notes on one-off items, such as a building sale or a lawsuit payout"
+    - "A list of big spending projects and whether each was growth or upkeep"
+
+terms:
+  - term: Owner earnings
+    meaning: The cash left each year if you owned the whole business and kept it as strong as it is today.
+  - term: Working capital
+    meaning: The money tied up in what customers owe you and what you hold in stock, less what you owe suppliers.
+  - term: Depreciation
+    meaning: An accounting charge that spreads the cost of equipment over its life. It is not cash leaving this year.

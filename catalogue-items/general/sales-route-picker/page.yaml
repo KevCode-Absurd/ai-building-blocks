@@ -1,0 +1,120 @@
+new_slug: sales-route-picker
+name: "Sales route picker"
+summary: "Paste your product, price and buyer. Get customer value, cost to win and the one route to use."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It needs a few sums and a choice between routes, which takes some careful reasoning."
+
+headline: "Pick the one way to reach customers that pays for itself"
+subhead: "Tell it what you sell, the price and who buys. It works out what a customer is worth and what one costs to win, matches your deal size to a sales route, flags the gap where no route pays, and picks one route."
+
+explain: |
+  A product with no route to buyers is a hobby. The usual mistake is to try a little of everything: a salesperson, some ads, and a hope it spreads. The numbers rarely support more than one route.
+
+  This skill works out what a customer is worth and what one costs to win, using sums you can check. It matches your deal size to a route and tells you when your price falls in a gap where no route pays.
+
+when:
+  - "You have a product and no clear way to reach buyers."
+  - "You are spending on several channels and can't tell which works."
+  - "Your price sits between what a salesperson and an ad can handle."
+
+you_give:
+  - "What you sell, the price and the buyer"
+  - "Your sales and ad spend (optional)"
+  - "How long customers stay or how often they buy (optional)"
+you_get:
+  - "Customer value and cost to win, as sums"
+  - "A pass or fail on the rule"
+  - "The route that fits your deal size"
+  - "One route picked, and why the others lose"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your product, price and buyer. Add your spend and how many customers it brought, if you have them."
+  - "Give your best guess for customer stay and mark it. It shows a low and high case."
+  - "Stop the routes it tells you to stop, and take the chosen route to the next step to plan it."
+
+how_it_works:
+  - title: "Works out customer value"
+    text: "Price, margin and how long they stay."
+  - title: "Works out cost to win"
+    text: "All sales and marketing spend per new customer."
+  - title: "Tests the rule"
+    text: "Value must beat cost, with a safe margin."
+  - title: "Matches deal size to route"
+    text: "Large deals, a team, ads or sharing between users."
+  - title: "Flags the dead zone"
+    text: "A price between routes, with ways out."
+  - title: "Picks one route"
+    text: "And says why the others lose."
+
+output_shape: |
+  CUSTOMER VALUE
+  <sum> = <amount> | Guesses: <>
+
+  COST TO WIN
+  <sum> = <amount> | Guesses: <>
+
+  RATIO
+  Cost to win / customer value = <x> | <pass / fail>
+
+  ROUTE BY DEAL SIZE
+  <route> because <deal size>
+
+  DEAD ZONE?
+  <yes / no> | Ways out: <>
+
+  SHARING CHECK
+  New users per user = <x> | Time between users: <>
+
+  THE ONE ROUTE
+  <route> | Why others lose: <list>
+
+  STOP DOING
+  <list>
+
+  MISSING
+  <facts that would firm up the sums>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Your real costs"
+    how: "Paste what you spend by month and how many customers it brought. It uses them in the sums."
+  - what: "Customer stay"
+    how: "Give your best figure for months or purchases. It reruns the sums."
+  - what: "Your routes"
+    how: "List the routes you use now. It tells you which to keep."
+
+judge:
+  - "Both sums are shown, with guesses marked."
+  - "One route is picked."
+  - "Every other route has a reason it loses."
+  - "The dead zone is flagged when it applies."
+
+test:
+  - "Run it on a $1,000 a year tool for small shops. It should call the dead zone."
+  - "Run it on a product where cost to win is above customer value. It should fail the rule."
+  - "Run it twice on the same input. The route should stay the same."
+
+improve:
+  - "Add real customer stay data in place of a guess."
+  - "Add the cost of the people who sell, not only the ad spend."
+  - "Pair it with \"Sales route plan builder\" to plan the route."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A few sums and a choice between routes is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Sales and marketing spend by month"
+    - "Customer stay or repeat purchase data"
+    - "Your price list and margin"
+
+terms:
+  - term: "Customer value"
+    meaning: "The profit you earn from an average customer over the whole time they buy."
+  - term: "Cost to win"
+    meaning: "All sales and marketing spend divided by the number of new customers it brought."
+  - term: "Dead zone"
+    meaning: "A price too low for a salesperson and too high for ads to move."

@@ -1,0 +1,116 @@
+new_slug: surprise-cause-ranker
+name: Surprise cause ranker
+summary: Describe a result that surprised you. Get ranked likely causes, how to test each, and what the facts rule out.
+job: think-and-decide
+thinking: high
+thinking_why: It reasons by elimination and by pattern, and must keep guesses separate from facts.
+headline: Surprise cause ranker
+subhead: Describe a result that surprised you, good or bad, with the numbers you have. It rules out what the facts cannot support, then tests four patterns that explain extreme results. You get four to six likely causes ranked, a cheap test for each, and a list of what stays unexplained.
+explain: |-
+  When something does far better or worse than expected, the usual explanation is a story that fits. A better method is to guess the cause, then check it from both ends: what must be true if this is the cause, and what the facts rule out.
+
+  This skill first rules things out with facts. It then checks four patterns that explain most extreme results: one or two things pushed to an extreme, many factors adding up past a tipping point, steady excellence on many fronts kept in line by good systems, and a big wave that the thing rode. It ranks the causes and gives the cheapest test that separates the top two.
+when:
+  - A store, product or person is doing far better than the rest and you want to know why.
+  - Something failed and the stories you hear do not add up.
+  - You want to copy a success and need to know what actually drives it.
+you_give:
+  - The surprising result and the numbers you have
+  - What is normal for comparison
+  - What you already believe about the cause (optional)
+you_get:
+  - The facts that rule out some causes
+  - Four to six likely causes, each with what else must be true
+  - A rank and a cheap test for each
+  - What remains unexplained
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the result with numbers, and what is normal for comparison.
+  - Add what you already believe. It will test your belief like any other.
+  - Run the first test it suggests before you act on any cause.
+how_it_works:
+  - title: State the surprise
+    text: Writes what happened against what is normal, with numbers.
+  - title: Rule out by fact
+    text: Crosses off causes that the facts cannot support.
+  - title: Test one or two things pushed far
+    text: Checks the pattern of one or two variables at an extreme.
+  - title: Test many factors adding up
+    text: Checks the pattern of several factors adding past a tipping point.
+  - title: Test excellence on many fronts
+    text: Checks the pattern of steady excellence kept in line by systems.
+  - title: Test a big wave
+    text: Checks the pattern of riding a market or technology wave.
+  - title: Check the people and the mind tricks
+    text: Checks rewards and customer psychology behind odd behaviour.
+  - title: List and rank the causes
+    text: Lists four to six causes with what else must be true.
+  - title: Pick the first test
+    text: Chooses the one check that separates the top two causes.
+  - title: Name what is unexplained
+    text: States what the causes do not account for.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  THE SURPRISE
+  <result> | normal | real?
+
+  RULED OUT
+  <cause> | the fact that rules it out
+
+  PATTERNS
+  One or two things pushed far: <yes, no or maybe> | prediction
+  Many factors adding up: ...
+  Excellence on many fronts: ...
+  Big wave: ...
+  People and mind tricks: ...
+
+  RANKED CAUSES
+  1. <cause> | high, medium or low | what else must be true | cheap check
+
+  FIRST TEST
+  <check> | if X then <cause>, if Y then <cause>
+
+  UNEXPLAINED
+  <what> | the fact needed
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: The comparison you give
+    how: "A fair comparison is everything. Compare like with like: same market, same period."
+  - what: What you believe
+    how: State your belief. It is ranked beside the others and tested the same way.
+  - what: The numbers
+    how: Even rough numbers rule out causes. Add dates, prices, counts and shares.
+judge:
+  - Each elimination rests on a fact you can see.
+  - The causes are different from each other, not one story in four wordings.
+  - The first test is something you could run this month.
+  - The ranking surprised you at least a little.
+test:
+  - Use a success you understand well. See if it names the real cause.
+  - Give it a result that was pure luck. It should say so as a cause and rank it.
+  - Run it twice. The top two causes should match.
+improve:
+  - Add your field's usual causes under each pattern.
+  - Keep a list of results you explained and check the ranks later.
+  - Follow it with the Many-field model checklist runner.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - "Numbers: sales, shares, prices, dates"
+    - Notes from people who were there
+    - A rival that rode the same conditions
+terms:
+  - term: Rule out by fact
+    meaning: Cross off a cause because a known fact cannot be true if it is the cause.
+  - term: Big wave
+    meaning: A large shift, such as a new technology, that lifts everything riding it.

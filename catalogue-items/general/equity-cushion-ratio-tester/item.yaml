@@ -1,0 +1,18 @@
+slug: equity-cushion-ratio-tester
+name: "Equity cushion ratio tester"
+summary: "Paste a borrower's debts and its owners' stake value. Get the cushion behind your claim and whether it clears the bar."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: source_text, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "The stock-value ratio as a second test of a debt claim; bars by type of business; reading a pass on one test and a fail on the other; why book values of property say little; the few cases where pledged assets do count, such as movable equipment and ordinary rented property"}

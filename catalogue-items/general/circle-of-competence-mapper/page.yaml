@@ -1,0 +1,108 @@
+new_slug: circle-of-competence-mapper
+name: Circle of competence mapper
+summary: "Describe a topic or decision. Get what you know, half know and don't, and a verdict: in, learn first or pass."
+job: think-and-decide
+thinking: medium
+thinking_why: It tests your claims honestly against what you can show, which needs care but follows fixed steps.
+headline: Circle of competence mapper
+subhead: "Describe a topic or decision you are about to act on. It breaks the topic into the parts you must understand, tests how well you know each one against evidence, finds the edge of what you know, and puts the whole thing in one of three baskets: in, learn first or pass."
+explain: |-
+  Most people are sure they understand more than they do. The edge of your knowledge is hard to see from inside, so a decision that looks easy can sit just outside it. A real area of competence has a known boundary. If you cannot say where yours ends, it is probably smaller than you think.
+
+  This skill splits a decision into the parts you must understand and asks for evidence for each. It marks each part known, partly known or not known, shows where the edge is, and checks whether others have an advantage you lack. It gives a verdict and the rule that goes with it.
+when:
+  - You are about to commit to something in a field you only partly know.
+  - Someone with a good story is asking you to join something you cannot explain.
+  - You want to choose which areas to build skill in over the next few years.
+you_give:
+  - The topic or decision
+  - What you have done, studied or read about it
+  - Who else is involved and what they know (optional)
+you_get:
+  - The parts you must understand to judge it
+  - Your level in each part, with the evidence
+  - The edge of what you know
+  - "A verdict: in, learn first or pass, with the rule for it"
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the topic or decision and what you honestly know about it.
+  - Back each claim with something you have done, not something you feel.
+  - Take the verdict and the edge to "Real knowledge tester" if the answer is learn first.
+how_it_works:
+  - title: Name the topic
+    text: States what you are about to do and in which field.
+  - title: Split into parts
+    text: Lists the five to eight parts you must understand.
+  - title: Test each part
+    text: Rates each part known, partly known or not known, with evidence.
+  - title: Name the source
+    text: Says where each piece of knowledge came from.
+  - title: Find the edge
+    text: Marks the nearest part the person cannot answer.
+  - title: Check the aptitude
+    text: Checks whether others in this field hold an advantage you lack.
+  - title: Pick the basket
+    text: Gives a verdict with the rule that goes with it.
+  - title: Say how the circle grows
+    text: Names a narrow area worth building skill in over time.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  THE DECISION
+  <one line> | field | cost of a bad outcome
+
+  PARTS
+  <part> | KNOWN, PARTLY or NOT | source: did, studied, read or heard | evidence
+
+  THE EDGE
+  <part> | the first question you cannot answer
+
+  APTITUDE
+  <who holds the edge, you or them>
+
+  BASKET
+  IN, LEARN FIRST or PASS | rule | reason
+
+  GROW THE CIRCLE
+  <narrow area> | first step
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: What you tell it you have done
+    how: Say what you actually did, with years or numbers. Reading a lot is real but counts less than doing.
+  - what: The cost of a bad outcome
+    how: A larger cost raises the bar. A cheap, reversible decision can be taken with a smaller circle.
+  - what: The parts of the field
+    how: Add the parts you know matter. The rating is only as good as the list.
+judge:
+  - Each rating has a source you can name.
+  - The edge is a real question you could not answer.
+  - You would be willing to show the ratings to an expert.
+  - The basket does not feel flattering.
+test:
+  - Run it on a field you know well. It should find a surprising edge or confirm you are IN.
+  - Run it on a field you have only read about. It should not give IN.
+  - Run it twice. The basket should be the same.
+improve:
+  - Redo it each year for your main fields and see how the edge has moved.
+  - Keep a list of the baskets for past decisions and what happened.
+  - Ask an expert in the field to rate you on the same parts and compare.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - Your CV or notes on what you have done in the field
+    - Articles or reports you have actually read
+    - A short account from someone who works in the field
+terms:
+  - term: Circle of competence
+    meaning: The area where you really know enough to judge well, including where its edge is.
+  - term: Basket
+    meaning: "One of three outcomes: in, learn first or pass."

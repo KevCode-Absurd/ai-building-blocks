@@ -1,0 +1,17 @@
+slug: price-versus-value-gap-judge
+name: "Price versus value gap judge"
+summary: "Paste your value range, asset floor and the price. Get whether there is a real margin of safety and what removes it."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham, warren-buffett]
+credits:
+  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Needing only a rough range of value; judging the price against its edges; the three roots of market mistakes; the hazard of slow adjustment between price and value; judging by groups of cases; the market as a voting machine and not a weighing machine"}

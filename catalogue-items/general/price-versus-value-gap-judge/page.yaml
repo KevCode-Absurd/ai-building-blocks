@@ -1,0 +1,133 @@
+new_slug: price-versus-value-gap-judge
+name: "Price versus value gap judge"
+summary: "Paste your value range, asset floor and the price. Get whether there is a real margin of safety and what removes it."
+job: money-and-investing
+thinking: high
+thinking_why: "It combines two estimates into a range, tests the price against it and has to judge whether a low price is a mistake or a fair reading. That needs careful reasoning."
+
+headline: "Find out if the gap between price and value is wide enough to protect you"
+subhead: "Give it your earnings value range, your asset floor and the price. It builds one honest range of value, places the price against its edges, asks why the market might be wrong and whether the cause is real, and names what could close the gap. You get a verdict and what would change it."
+
+explain: |
+  You will never know a company's exact value. You do not need to. You need to know whether the price is clearly under the value, clearly over it, or lost in the fog between. A price inside the range means the answer depends on one estimate being right. That is a bet, not a margin of safety.
+
+  This skill joins your two value views into one range and states how wide it is. It places the price against the edges, measures the margin against that width and asks why the market might be wrong. Prices are low because of exaggeration, oversimplification or neglect, and also because a business is getting worse. It tests which one fits. It names the events that could close the gap, warns that closing can be slow and asks how a group of similar cases would do. It is a method, not financial advice.
+
+when:
+  - You have a value estimate and a price and want a verdict you can defend.
+  - A price looks cheap and you want to know whether the cause is neglect or decline.
+  - You want to write down your reasons before you commit money.
+
+you_give:
+  - The value range from "Earnings value range builder"
+  - The asset floor from "Asset floor estimator"
+  - The price
+  - A first label from "Investment or speculation sorter" (optional)
+you_get:
+  - One range of approximate value with its width
+  - Where the price falls against it
+  - The margin compared with the uncertainty
+  - A likely cause of the gap, tested against decline
+  - What could close the gap, how slowly, and the downside
+  - A verdict with ranked reasons and what would change it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the value range, the asset floor and the price.
+  - Say if any borrowing is involved.
+  - Read the placement of the price and the cause of the gap first.
+  - Write down what would change your mind before you decide anything.
+
+how_it_works:
+  - title: Builds one range
+    text: Joins the earnings range and the asset floor, and states how wide it is.
+  - title: Places the price
+    text: Above the range, inside it or below the low end.
+  - title: Measures the margin
+    text: Compares the gap with the width of the range.
+  - title: Asks why the market may be wrong
+    text: Exaggeration, oversimplification or neglect, and tests it against real decline.
+  - title: Names what closes the gap
+    text: Better earnings, a buyer or a wind-up, and warns it can be slow.
+  - title: Prices the downside
+    text: Shows the loss if the low case or the sale value is the right guide.
+  - title: Judges the group
+    text: Asks how ten similar cases would do.
+
+output_shape: |
+  NUMBERS
+  Earnings value: <low> / <middle> / <high> | Sale values: <typical> / <harsh> | Burn: <years> | Price: <amount>
+
+  RANGE OF VALUE
+  Low end: <amount> because <reason> | High end: <amount> | Width: <percent of middle>
+
+  PRICE PLACED
+  <above / inside / below the low end>
+
+  MARGIN
+  <percent> vs width <percent> | Real margin: <yes / no>
+
+  WHY THE GAP
+  Root: <exaggeration / oversimplification / neglect / real decline> | Evidence: <facts>
+
+  WHAT COULD CLOSE IT
+  <event> | How slowly: <note>
+
+  DOWNSIDE
+  If the low case holds: <percent of price> | If sale values hold: <percent of price>
+
+  GROUP VIEW
+  <one line>
+
+  VERDICT
+  <MARGIN OF SAFETY PRESENT / NO CLEAR MARGIN / PRICE ABOVE VALUE>
+  Reasons, ranked: <list> | What would change it: <facts>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your risk limit
+    how: Give the most you could lose without harm. The downside is shown against it.
+  - what: Who could act
+    how: Name a possible buyer, a large owner or a new manager. It changes how the low end is set.
+  - what: Borrowing
+    how: Say if you would borrow. It changes the timing advice.
+  - what: A comparison group
+    how: Paste two or three similar cases you have judged. The group view then uses real examples.
+
+judge:
+  - The range has a low and a high end and its width is stated.
+  - The price is placed against the edges.
+  - The margin is compared with the uncertainty.
+  - A cause for the gap is named and tested against decline.
+  - It never says buy or sell and invents no figure.
+
+test:
+  - Give it a price inside the range and check it says there is no clear margin.
+  - Give it a price under the low end and a fast burn and see that the verdict is cautious.
+  - Give it a price above the high end and see that it says what you must believe.
+  - Run it twice. The verdict should not change.
+
+improve:
+  - Add your own rule for how wide a range you will accept.
+  - Keep a log of verdicts and what happened to the price and the business.
+  - Pair it with "Earnings value range builder" and "Asset floor estimator".
+  - Run it on ten cases in one go and look at the group result.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Combining two estimates and writing a reasoned verdict is text work."}
+    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
+  inputs:
+    - "The value range and the asset floor from the earlier steps"
+    - "The latest price"
+
+terms:
+  - term: Margin of safety
+    meaning: The gap between what you think something is worth and what you pay. It protects you if your estimate is wrong.
+  - term: Burn
+    meaning: How fast current losses use up a company's cash and assets.

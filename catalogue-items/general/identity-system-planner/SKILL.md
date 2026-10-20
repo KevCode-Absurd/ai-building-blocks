@@ -58,7 +58,7 @@ The client study. The three phases. The fixed core and moving parts. The test on
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Design it** with the [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction.
 - **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
-- **Tell it as a story** with the [Scene turn checker](https://useaiblocks.com/skills/scene-turn-checker). It takes the plan.
+- **Tell it as a story** with the [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

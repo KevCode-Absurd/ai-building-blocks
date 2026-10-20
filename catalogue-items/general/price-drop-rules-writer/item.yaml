@@ -1,0 +1,19 @@
+slug: price-drop-rules-writer
+name: "Price drop rules writer"
+summary: "Paste your holdings plan. Get a one-page set of rules for when prices fall or jump, written before it happens."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: audit_report, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [warren-buffett, charlie-munger]
+credits:
+  - {title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The temperament test of whether you could watch holdings fall by half without panic, Mr. Market as a partner whose mood you may ignore, looking at prices less often, and the common mind traps of loss pain, overreaction to recent news, overconfidence and mental accounts"}

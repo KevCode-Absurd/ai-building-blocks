@@ -946,3 +946,30 @@ a.mind-name:hover { text-decoration: underline; text-underline-offset: 3px; }
 .intake-form textarea { resize: vertical; min-height: 220px; line-height: 1.5; }
 .intake-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 @media (max-width: 640px) { .intake-row { grid-template-columns: 1fr; } }
+
+/* Role labels on the minds (MindLabel.tsx): small pixel badges, the first one solid. */
+.labels { display: flex; flex-wrap: wrap; gap: 5px; margin: 2px 0; }
+.lb { display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 7px 0 6px; border: 1px solid var(--line-2); border-radius: 4px; font: 500 11.5px/1 var(--mono); letter-spacing: -0.01em; color: var(--text-2); background: var(--panel); white-space: nowrap; }
+.lb-icon { flex: none; fill: currentColor; }
+.lb-main { background: var(--text); color: var(--bg); border-color: var(--text); }
+.labels-md { gap: 8px; margin: 18px 0 0; justify-content: inherit; }
+.labels-md .lb { height: 28px; padding: 0 10px 0 8px; font-size: 13px; gap: 7px; }
+.labels-md .lb-main { box-shadow: 3px 3px 0 var(--line-2); }
+.mind:hover .lb-main, .helped-by a:hover .lb-main { box-shadow: 2px 2px 0 var(--line-2); }
+.helped-by .labels { margin: 3px 0; }
+.label-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 14px 0 0; }
+.label-filter-h { font: 400 12px var(--mono); color: var(--faint); margin-right: 4px; }
+.lchip { display: inline-flex; align-items: center; gap: 7px; height: 32px; padding: 0 11px 0 9px; border: 1px solid var(--line-2); border-radius: 6px; background: var(--panel); color: var(--text-2); font: 500 13px var(--sans); transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s; }
+.lchip .lb-icon { fill: currentColor; }
+.lchip .count { font: 500 11px var(--mono); color: var(--faint); }
+.lchip:hover:not(:disabled):not([aria-pressed="true"]) { border-color: var(--text); color: var(--text); transform: translate(-1px, -1px); box-shadow: 2px 2px 0 var(--text); }
+.lchip[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); box-shadow: 3px 3px 0 var(--line-2); }
+.lchip[aria-pressed="true"] .count { color: color-mix(in srgb, var(--bg) 65%, transparent); }
+.lchip:disabled { opacity: 0.35; cursor: default; }
+@media (max-width: 640px) {
+  .label-filter { flex-wrap: nowrap; overflow-x: auto; margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter)); padding: 0 var(--gutter) 6px; scrollbar-width: none; }
+  .lchip { flex: none; }
+}
+@media (prefers-reduced-motion: reduce) { .lchip { transition: none; } .lchip:hover:not(:disabled) { transform: none; } }
+/* Long grids skip drawing the cards that are off screen. */
+.mind-grid > .mind { content-visibility: auto; contain-intrinsic-size: auto 180px; }

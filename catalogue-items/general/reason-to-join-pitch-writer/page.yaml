@@ -1,0 +1,124 @@
+new_slug: reason-to-join-pitch-writer
+name: "Reason-to-join pitch writer"
+summary: "Paste your company and the role. Get a pitch to the people you need that rests on mission and team, not perks."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It is a writing task with clear rules, which most chat AIs do well."
+
+headline: "Get a pitch that makes the right person pick you over a bigger firm"
+subhead: "Tell it about your company, the role and what the person could do instead. It deletes the claims every firm makes, writes the mission and the people only you have, and drafts a message, a spoken pitch and a job post opening."
+
+explain: |
+  Strong people can work anywhere. If you say you have smart colleagues, valuable stock and big problems, you sound like every other firm. The reasons that work are specific: a mission only you are doing and a team they want to be on.
+
+  This skill finds the claims every company makes and takes them out. It then writes your mission and your people in plain, checkable terms, with a short test that sends the wrong person away. It gives you three drafts to use at once.
+
+when:
+  - "You are hiring and the best people say no or go quiet."
+  - "Your job post could be for any company."
+  - "You are about to pitch investors or the press and want the same story throughout."
+
+you_give:
+  - "Your company and what it is doing"
+  - "The role or person you need"
+  - "What the person could do instead (optional)"
+you_get:
+  - "The claims to cut"
+  - "A mission sentence only you can say"
+  - "A people answer with names and facts"
+  - "A message, a spoken pitch and a job post opening"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your company description and the role. Say what the best candidate could do instead."
+  - "Add the real names, roles and history of the people they would work with."
+  - "Use the short message with one candidate this week and see how they reply."
+
+how_it_works:
+  - title: "Describes the hire"
+    text: "The role, the person and their best alternative."
+  - title: "Cuts the common claims"
+    text: "Stock, smart people, big problems and perks."
+  - title: "Writes the mission"
+    text: "What only you are doing, and why it matters to them."
+  - title: "Writes the people answer"
+    text: "Names, history and the one thing each person owns."
+  - title: "Adds a fit test"
+    text: "A line that sends the wrong person away."
+  - title: "Drafts three pieces"
+    text: "A message, a spoken pitch and a job post opening."
+
+output_shape: |
+  THE HIRE AND THE ALTERNATIVE
+  <role> | Alternative: <firm and what it offers>
+
+  CLAIMS CUT
+  <list>
+
+  MISSION
+  <one sentence>
+
+  PEOPLE
+  <names, history, each person's one thing>
+
+  PAY
+  <honest line>
+
+  FIT TEST
+  <line>
+
+  MESSAGE TO A CANDIDATE
+  <text>
+
+  SPOKEN PITCH, NINETY SECONDS
+  <text>
+
+  JOB POST OPENING
+  <paragraph>
+
+  FOR INVESTORS AND PRESS
+  <notes>
+
+  MISSING
+  <facts that would sharpen the pitch>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The alternative"
+    how: "Name the larger firm or role they might pick. The pitch answers it directly."
+  - what: "Your people"
+    how: "Give real names, roles and how long you have worked together."
+  - what: "Your pay"
+    how: "Say what you can offer in pay and ownership. It writes the pay line honestly."
+
+judge:
+  - "No common claim is left without a fact only true of you."
+  - "A rival could not say the mission sentence."
+  - "The people answer uses names and facts."
+  - "The pay line is straight and perks are not used to sell."
+
+test:
+  - "Run it on a pitch that lists perks. It should cut them."
+  - "Run it on a mission any firm could say. It should ask for what only you do."
+  - "Run it twice on the same input. The mission sentence should stay close."
+
+improve:
+  - "Add what past hires said made them join."
+  - "Add the story of how the team met."
+  - "Pair it with \"Rival-free pitch rewriter\" for the main company pitch."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Cutting generic claims and drafting a short pitch is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "What past hires said about why they joined"
+    - "Short notes on each team member"
+    - "Your pay and ownership terms"
+
+terms:
+  - term: "Mission"
+    meaning: "The work you are doing that no one else will get done, in a sentence."
+  - term: "Fit test"
+    meaning: "A line that tells the wrong person the work is not for them."

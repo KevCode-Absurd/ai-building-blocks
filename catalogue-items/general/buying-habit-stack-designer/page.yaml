@@ -1,0 +1,129 @@
+new_slug: buying-habit-stack-designer
+name: "Buying habit stack designer"
+summary: "Describe what you sell and the buying you want repeated. Get the rewards, ties, reach and proof that make it a habit."
+job: plan-strategy
+thinking: high
+thinking_why: "It must judge which forces are real for your product and how they feed each other. That calls for careful, joined-up reasoning."
+
+headline: "Buying habit stack designer"
+subhead: "Describe your product and the buying you want repeated. It names the action and its cue, lists the real rewards, five true ties the brand can earn, where rivals could form a habit, and where use can be made visible. It then links the forces into a chain and runs an honesty check."
+
+explain: |
+  Some products are bought without a fresh decision each time. That habit is worth more than any single ad, because it repeats. Habits come from a short list of forces, and the best results come when many work together so each helps the next.
+
+  This skill designs the stack. It names the one action to repeat and what triggers it, checks the rewards are real, lists true ties the brand can earn, finds the places a rival could become the habit because you are absent, and picks places where use can be seen. It links the forces into a chain and counts them. It then checks for false claims and for success you have not earned.
+
+when:
+  - You want customers to buy again without comparing every time.
+  - Your plan has an ad idea but no reason people would repeat the purchase.
+  - You are choosing where to spend to make a product feel like the obvious choice.
+
+you_give:
+  - "Your plan, with what you sell, to whom, at what price and where"
+  - The action you want repeated (optional)
+  - What you know about when and where buyers buy now (optional)
+you_get:
+  - The response and its cue
+  - A rewards table marked strong, weak or none
+  - Five true ties and how each is made
+  - A reach map, a visibility plan and a chain showing how the forces feed each other
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your plan and say the one action you want repeated.
+  - Add what you know about when and where buyers reach for this now.
+  - Read the rewards table first. Fix the product if few are strong.
+  - Take the plan to the "Failure-first plan check".
+
+how_it_works:
+  - title: Names the response and the cue
+    text: One action to repeat and what triggers it, such as a time, a place or a feeling.
+  - title: Checks the rewards
+    text: Usefulness, sensory pleasure, lift or calm, and fit for the moment, each marked strong, weak or none.
+  - title: Lists true ties
+    text: Five pleasant links the brand can earn honestly, and how each is made.
+  - title: Maps your reach
+    text: Finds where a rival could become the habit because you are not there.
+  - title: Plans what others can see
+    text: Picks places where use can be visible, and removes any fake proof.
+  - title: Links the forces into a chain
+    text: Shows how each force helps the next, and counts the links.
+  - title: Runs an honesty and envy check
+    text: Removes false beliefs and hidden costs, and asks how to deserve the success.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  RESPONSE AND CUE
+  <action>, triggered by <cue>
+
+  REWARDS
+  Usefulness: <what> [STRONG/WEAK/NONE]
+  Sensory: ...  Lift or calm: ...  Fit for the moment: ...
+
+  FIVE TRUE TIES
+  1. <tie>: made by <how>
+
+  REACH MAP
+  <place> | covered <yes/part/no> | rival could form a habit if <gap>
+
+  WHAT OTHERS CAN SEE
+  <places and what shows>
+
+  THE CHAIN
+  <force> -> <force> -> <force> ... (<n> links)
+
+  HONESTY AND FAIRNESS
+  <removed items; how success will be deserved>
+
+  MISSING
+  <what would firm up the design>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The cue
+    how: Name a real trigger buyers already have, such as a mid-afternoon dip.
+  - what: The places
+    how: List every place a buyer might reach for something in that moment. The gaps show where a rival can win.
+  - what: The ties
+    how: Offer only ties you can back up. They must fit the product.
+  - what: Your budget
+    how: Say how much you can spend. It changes which places you can cover first.
+
+judge:
+  - The response is one action with a cue.
+  - Every reward is real.
+  - No tie or proof depends on a false claim.
+  - The reach map names a gap.
+  - At least four forces are linked.
+
+test:
+  - Give it a product with strong sensory pleasure. The rewards table should show it.
+  - Give it a product with no reward beyond price. It should tell you to fix the product first.
+  - Give it a plan that depends on fake reviews. They should be removed.
+  - Run it twice. The cue and the chain should hold.
+
+improve:
+  - Add buyer research on when and where they reach for products like yours.
+  - Re-check the chain every quarter, since gaps in reach change.
+  - Add a line for how each force will be measured.
+  - Pair it with the "Incentive checker" if you depend on partners for reach.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Linking forces and checking claims is text work any strong chat AI does well."}
+    - {name: "A map or list of selling places", why: "Helps you fill in the reach map with real places."}
+  inputs:
+    - "The plan from the Target size back-solver"
+    - "Customer research on when and where they buy"
+    - "A list of your rivals and where they sell"
+
+terms:
+  - term: Cue
+    meaning: The time, place, feeling or sight that sets off the habit.
+  - term: Tie
+    meaning: A pleasant link between the brand and something people like, earned honestly.
+  - term: Stack
+    meaning: Many forces used together so that each one helps the next.

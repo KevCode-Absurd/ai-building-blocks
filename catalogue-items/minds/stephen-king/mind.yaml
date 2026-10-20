@@ -31,6 +31,7 @@ sources:
   - {n: 7, title: "The Art of Fiction No. 189 (Paris Review, Fall 2006)", by: "Stephen King, interviewed by Nathaniel Rich and Christopher Lehmann-Haupt", url: "https://www.theparisreview.org/interviews/5653/the-art-of-fiction-no-189-stephen-king", kind: own-words}
   - {n: 8, title: "Stephen King's Rage and Gun Violence", by: "Washington Independent Review of Books", url: "https://www.washingtonindependentreviewofbooks.com/features/stephen-kinge28099s-rage-and-gun-violence", kind: secondary}
   - {n: 9, title: "National Book Awards Honor Stephen King (2003)", by: "NPR", url: "https://www.npr.org/2003/11/20/1513987/national-book-awards-honor-stephen-king", kind: secondary}
+  - {n: 10, title: "Misery (1987, novel)", by: "Stephen King", kind: own-words}
 
 tests:
   - {kind: use, prompt: "Write the first 200 words of a story that starts from: what if the town's only grocery store never closed, not even at night?"}

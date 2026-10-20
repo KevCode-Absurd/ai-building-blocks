@@ -1,0 +1,18 @@
+slug: steady-track-record-checker
+name: "Steady track record checker"
+summary: "Paste a business and its yearly results. Get whether its past is a fair guide, with any change of course flagged."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [warren-buffett]
+credits:
+  - {title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The test that a business has sold much the same things for years, why a steady record is a fair guide only while nothing major changes, and the habit of avoiding turnarounds and firms changing direction"}

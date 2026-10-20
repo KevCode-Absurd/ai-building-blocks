@@ -1,0 +1,18 @@
+slug: earnings-value-range-builder
+name: "Earnings value range builder"
+summary: "Paste normal earnings and the share price. Get a low, middle and high value and how much of the price is hope."
+category: general
+type: skill
+role: make
+job: analysis
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: source_text, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Valuing shares as a multiple of normal earnings; a hard ceiling on the multiple for an investment buy; the floor on earnings yield; adjusting for debt and preferred shares ahead; splitting a price into an investment part and a speculative part"}

@@ -1,0 +1,19 @@
+slug: sales-route-picker
+name: "Sales route picker"
+summary: "Paste your product, price and buyer. Get customer value, cost to win and the one route to use."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: offer, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "The rule that a customer's lifetime profit must beat the cost of winning one, matching deal size to a sales route (a few large deals, a team selling, ads, or sharing between users), the dead zone in the middle, and why one route usually beats all others"}

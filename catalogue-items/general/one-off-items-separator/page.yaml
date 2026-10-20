@@ -1,0 +1,118 @@
+new_slug: one-off-items-separator
+name: "One-off items separator"
+summary: "Paste several years of a company's income statements. Get each year's profit rebuilt without gains and losses that will not repeat."
+job: money-and-investing
+thinking: high
+thinking_why: "It reads many lines across years, pairs items that are booked in different places and must not invent a missing amount. That needs careful reasoning."
+
+headline: "Strip the one-time gains and losses out of a company's profit, year by year"
+subhead: "Paste several years of income statements and the notes. It lists each sale, refund, write-off and investment gain, pairs gains with the losses booked elsewhere and rebuilds each year's ordinary earnings. You get a table with an ordinary average and an all-in average."
+
+explain: |
+  A profit figure can include a building sold, a tax refund or a gain on shares. Valuing the company on that year's profit means valuing a year that will not come again. The reverse also happens: a big write-off makes a normal business look weak.
+
+  This skill reads the lines between sales and profit, and anything charged straight to equity. It writes each one-off in a table with the year, the amount and where it sat. It pairs items of the same kind, because a gain in income and a loss in equity can cancel out. Then it rebuilds each year's ordinary earnings. It also keeps a second, all-in average, since over many years the losses do belong to the business. It is a method, not financial advice.
+
+when:
+  - A company's latest profit looks too good, or too poor, to be typical.
+  - You are reading several years of results and want to compare like with like.
+  - You are looking at a business to buy and its seller shows one strong year.
+
+you_give:
+  - Five or more years of income statements, with notes
+  - The changes-in-equity statement or retained earnings note (optional)
+  - A tax rate to estimate after-tax amounts (optional)
+you_get:
+  - A table of one-off items by year, with where each one sat
+  - Gains and losses of the same kind paired, with their net
+  - Ordinary earnings for each year with every adjustment shown
+  - An ordinary average and an all-in average
+  - A list of items to question
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the income statements and their notes for five or more years.
+  - Add the equity statement if you have it. Some losses never reach the profit line.
+  - Read the pairs table before the ordinary earnings.
+  - Take the open questions to "Earnings padding detector".
+
+how_it_works:
+  - title: Reads line by line
+    text: Looks at every item from sales to profit, and anything booked straight to equity.
+  - title: Marks one-offs
+    text: Spots asset sales, investment gains, refunds, write-downs, closures and settlements.
+  - title: Pairs items
+    text: Sets gains and losses of the same kind side by side and shows the net.
+  - title: Rebuilds each year
+    text: Takes out one-off gains and adds back one-off losses, after tax.
+  - title: Keeps a long-run figure
+    text: Shows an all-in average, because over many years losses are part of the result.
+  - title: Treats trading firms differently
+    text: Keeps investment results in for funds, banks and insurers, but never as one year's earning power.
+
+output_shape: |
+  ONE-OFF ITEMS
+  <year> | <item> | <amount, after tax> | <inside profit / below / straight to equity> | <gain / cost>
+
+  PAIRS
+  <year> | <gain> vs <loss> | Net: <amount>
+
+  ORDINARY EARNINGS BY YEAR
+  <year> | Reported: <amount> | Less gains: <amount> | Plus costs: <amount> | Ordinary: <amount>
+  Ordinary average: <amount> | All-in average: <amount> | Years used: <n>
+
+  TRADING BUSINESS NOTE
+  <if it applies>
+
+  QUESTIONS FOR THE NEXT STEP
+  <item> | Why it is unclear
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Tax rate
+    how: Give the real rate for the company. Without it the skill uses a stated estimate and flags it.
+  - what: More years
+    how: Give ten if you have them. A one-off that appears often is not a one-off.
+  - what: Your view of an item
+    how: Say if you think a cost recurs. The skill keeps it in and marks the choice.
+  - what: Business type
+    how: Say if the company deals in securities. It changes how gains are treated.
+
+judge:
+  - Every year was read line by line and each adjustment shows its tax assumption.
+  - Gains and losses of the same kind are paired.
+  - The all-in average includes the one-offs.
+  - Items that recur are left in and flagged.
+  - It never says buy or sell and invents no figure.
+
+test:
+  - Run it on a company you know that sold a property in one year and check the gain is removed.
+  - Give it a year with a gain in profit and a matching loss in equity and see that they are paired.
+  - Give it a fund's results and see that gains are not stripped out as one-offs.
+  - Run it twice. The ordinary average should not change.
+
+improve:
+  - Add your own list of items you always question, from past reads.
+  - Keep a record of which items turned out to recur.
+  - Pair it with "Earnings padding detector" and "Normal earnings estimator".
+  - Paste the notes to the accounts too. Many one-offs are explained only there.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading statements and building a table is text work. It cannot fetch the filings for you."}
+    - {name: "A spreadsheet", why: "Handy for checking the adjustments by year."}
+    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
+  inputs:
+    - "Annual reports or filings for five to ten years, with the notes"
+    - "The equity statement for the same years"
+
+terms:
+  - term: Ordinary earnings
+    meaning: What the business earned from its normal work in a year, with one-off gains and losses taken out.
+  - term: One-off item
+    meaning: A gain or cost that arose from a single event, such as selling a building, and is not expected to repeat.

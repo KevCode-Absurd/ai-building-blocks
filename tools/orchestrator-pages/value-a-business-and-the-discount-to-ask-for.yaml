@@ -1,0 +1,115 @@
+new_slug: value-a-business-and-the-discount-to-ask-for
+name: "Value a business and the discount to ask for"
+summary: "Give it a business, its figures and a price. Get a value range, a bad-year test and a discount verdict."
+job: money-and-investing
+thinking: high
+thinking_why: "It chains sums that feed each other, and one wrong figure early changes every value after it. Give it your strongest model."
+
+headline: "Work out what a business is worth, and how big a discount makes the price safe"
+subhead: Give it a business, its accounts and the price on offer. It checks you are valuing a business, works out owner earnings, builds a floor value and three growth cases, tests a bad year, and sets the price against the range. A method of analysis, not personal financial advice.
+
+explain: |
+  A price tells you what someone will pay today. It does not tell you what the business is worth. The gap between the two is where you either have room for error or you do not.
+
+  This workflow builds the value first and the price check second. It starts by asking whether you are valuing a business or betting on a price move. It then turns the accounts into owner earnings, the cash an owner could really take out. From those it builds a floor value that assumes no growth, plus low, middle and high growth cases, each saying what has to be true. A bad-year test follows: how big a loss can one year bring before the business stops earning, and does it survive? Last, the price goes against the range and the result is a verdict on whether the discount is big enough, too small, or the business is too hard to value. The method follows Robert Hagstrom's account of how Warren Buffett values a business, and Benjamin Graham's margin of safety. The sums are estimates. It gives no buy or sell calls.
+
+when:
+  - You have a price for a business or a share of one and want to know what it is worth next to it.
+  - A business passed your tests and now needs a value.
+  - You want to see what growth a price asks you to believe.
+
+you_give:
+  - The business in a few lines, and the price or stake value you are weighing
+  - Four or five years of profit, depreciation, capital spending and working capital
+  - The yield on a long-term government bond today (optional)
+you_get:
+  - A label of investment or speculation, with the questions a careful buyer asks
+  - Owner earnings as a low, middle and high figure
+  - A no-growth floor value and three growth values, each with what it needs to be true
+  - A rate check showing how much the answer leans on the rate
+  - A bad-year break-even test with a survival check
+  - A verdict on the discount, with what would make the estimate wrong
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the business and the price, then paste or attach the figures.
+  - Give today's long-term bond yield if you have it. Read the floor first, then the three cases.
+  - Check the bad-year test against what has happened in the field before you trust the verdict.
+
+how_it_works:
+  - title: Sorts investment from speculation
+    text: Asks whether careful study promises safety and a fair return at this price, without needing a price rise.
+  - title: Works out owner earnings
+    text: Profit plus non-cash charges, minus the spending to stay level and extra working capital, as a range.
+  - title: Builds the value range
+    text: A floor that assumes no growth, then low, middle and high cases with a fast stage and a slow stage.
+  - title: Tests a bad year
+    text: Finds how big a loss one year can bring before profit reaches zero, and whether the business survives.
+  - title: Judges the gap
+    text: Sets the price against each value and says whether the discount is wide enough for how rough the range is.
+
+output_shape: |
+  STEP 1: INVESTMENT OR SPECULATION
+    <label and the questions that decided it>
+
+  STEP 2: OWNER EARNINGS
+    <low / middle / high, share of profit, trend>
+
+  STEP 3: THE VALUE RANGE
+    Rate <...> | Floor <...> | Low <...> | Middle <...> | High <...>
+    What each needs to be true; middle case at a higher rate <...>
+
+  STEP 4: A BAD YEAR
+    <worst likely event, break-even point, survival: holds / thin / fails>
+
+  STEP 5: THE PRICE AGAINST THE VALUE
+    <discount to each value, verdict: enough room / too little / too hard to value>
+    What would make the estimate wrong: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: The rate
+    how: Give today's long-term bond yield. Low rates are rounded up to 10% for the working figure.
+  - what: How long fast growth lasts
+    how: Five to ten years. A shorter stage is more cautious.
+  - what: The worst event
+    how: Tell it what people fear about the business. The bad-year test is built around it.
+
+judge:
+  - Every figure comes from the accounts or is marked missing.
+  - The floor value appears next to the growth cases.
+  - Fast growth does not exceed the record without a reason.
+  - The bad-year test shows its sum and checks survival.
+  - Nothing says to buy or sell a named security.
+
+test:
+  - Give it owner earnings that swing between a large loss and a large gain. It should say the business is too hard to value.
+  - Give it a price far above the high case. The verdict should say too little room.
+  - Give it no price. It should give the range and say the price check cannot be done.
+  - Run it twice on the same inputs. The values should match.
+
+improve:
+  - Redo the run each year with new accounts and keep the table, so you can see how the range moves.
+  - Add a rival's figures to compare floors and discounts.
+  - Add the worst years in the field's history as test events.
+  - Pair it with "Find out if a business is worth owning long term" so only businesses that pass get valued.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds the chain of sums, each feeding the next, in one run."}
+    - {name: "A spreadsheet", why: "Lets you check the year-by-year sums and change the rate or growth with a click."}
+  inputs:
+    - "Five years of the company's accounts"
+    - "Today's long-term government bond yield"
+    - "The price or the stake value you are weighing"
+
+terms:
+  - term: Owner earnings
+    meaning: The cash left each year if you owned the whole business and kept it as strong as it is today.
+  - term: Margin of safety
+    meaning: The gap between what a business is worth and the price paid, which leaves room for being wrong.
+  - term: Floor value
+    meaning: What the business is worth if its owner earnings never grow.

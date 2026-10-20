@@ -1,0 +1,115 @@
+new_slug: market-boundary-checker
+name: "Market boundary checker"
+summary: "Paste what you sell and who buys. Get your true market share and an own, reach or sliver verdict."
+job: test-an-idea
+thinking: medium
+thinking_why: "It needs careful sums across several versions of the market, but the steps are fixed."
+
+headline: "Know your real share of the market a buyer compares you in"
+subhead: "Tell it what you sell and who buys. It describes your market narrowly and widely, works out your share of each, finds the one a buyer really uses to compare you, and says whether you own it, can reach it or hold a sliver."
+
+explain: |
+  Most business plans measure the market in the way that flatters them. One plan says there is no competition because it stacked five qualifiers. Another says it needs only a small piece of a market worth billions. Both can be wrong about the market a buyer actually sees.
+
+  This skill puts the same business on a ladder of four markets, from narrowest to widest, and works out your share of each. Then it asks what a buyer picks when they say no to you. That set is the market that counts.
+
+when:
+  - "You say you have no competitors and want to test it."
+  - "Your plan says you need a small share of a very large market."
+  - "You are choosing between two ways to describe your market and can't tell which is honest."
+
+you_give:
+  - "What you sell and who buys it"
+  - "Your customer or sales numbers, if you have them (optional)"
+  - "What buyers pick when they say no (optional)"
+you_get:
+  - "The claim you make, broken into its parts"
+  - "Your share at four sizes of market"
+  - "The market a buyer compares you in"
+  - "A call: own, reach, sliver or fiction, and what to change"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste what you sell, who buys, and your numbers. Mark any figure you are guessing."
+  - "Add what buyers do when they say no, from lost deals, reviews or calls."
+  - "Use the share it finds, not the one in your slide, in your next pitch or plan."
+
+how_it_works:
+  - title: "Reads your claim"
+    text: "Pulls out each word you use to narrow the market."
+  - title: "Tests the narrow version"
+    text: "Counts buyers for each qualifier and for all together."
+  - title: "Tests the wide version"
+    text: "Adds up what else a buyer could spend the money on."
+  - title: "Builds the share ladder"
+    text: "Divides your numbers by four sizes of market."
+  - title: "Finds the market that counts"
+    text: "Uses what buyers pick when they say no to you."
+  - title: "Gives the call"
+    text: "Own, reach, sliver or fiction, with what to change."
+
+output_shape: |
+  YOUR CLAIM
+  <sentence> | Qualifiers: <list>
+
+  NARROW MARKET
+  <buyers matching all qualifiers> | Reachable buyers I can name: <number or MISSING>
+
+  SHARE LADDER
+  Narrowest: <number> / <total> = <share>
+  Buyer's choice set: <number> / <total> = <share>
+  Category: <share>
+  All spend: <share>
+
+  THE MARKET THAT COUNTS
+  <set> | Source: <lost deals, reviews, guess>
+
+  THE CALL
+  <own / reach / sliver / fiction> because <reason>
+
+  WHAT TO CHANGE
+  <one move>
+
+  MISSING
+  <facts that would firm up the sums>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Your numbers"
+    how: "Give real counts and say where each came from. It uses them in every rung."
+  - what: "Lost deals"
+    how: "List the last few buyers who said no and what they chose. This is the best evidence for the market that counts."
+  - what: "Your cut-offs"
+    how: "Say what share you would call a win. It uses your line in place of the default."
+
+judge:
+  - "Each share is a sum with a number and a source."
+  - "The narrow market has reachable buyers named, or is marked not real."
+  - "The market used for the call is the one buyers choose from."
+  - "The call comes with one concrete change."
+
+test:
+  - "Run it on a plan that says it has no competitors. It should find the buyers' real alternatives."
+  - "Run it on a plan that cites 1% of a huge market. It should call it a sliver unless there is a route."
+  - "Run it twice on the same input. The call should stay the same."
+
+improve:
+  - "Add your last ten lost deals, so the compared market comes from evidence."
+  - "Add real counts from industry lists, not estimates."
+  - "Pair it with \"First market picker\" when the call is sliver or fiction."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sums over a few lists of buyers and a verdict are text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Counts of buyers from an industry list"
+    - "Notes on why recent buyers said no"
+    - "Your sales or user numbers"
+
+terms:
+  - term: "Market share"
+    meaning: "Your customers or sales divided by all the customers or sales in a defined group."
+  - term: "Qualifier"
+    meaning: "A word that narrows a market, such as a place, a price band or a type of buyer."

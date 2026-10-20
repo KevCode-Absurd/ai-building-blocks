@@ -1,0 +1,53 @@
+# Workflow skeleton for Security Analysis, Parts IV to VII (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: security-analysis-stock-value
+source:
+  title: "Security Analysis: Principles and Technique (second edition)"
+  by: "Benjamin Graham and David L. Dodd"
+  kind: book
+  rights: ideas-only
+  year: 1940
+minds: [benjamin-graham]
+workflow:
+  slug: value-a-stock-with-a-margin-of-safety
+  name: "Value a stock with a margin of safety"
+  summary: "Paste a company's results, its balance sheet and the share price. Get an earnings value, an asset floor and the gap."
+  when: "you are thinking of buying shares or a small business and want to know what it is worth next to the price, with room for being wrong."
+  job: money-and-investing
+  level: advanced
+steps:
+  - name: Sort it as investment or speculation
+    skill: investment-or-speculation-sorter
+    job: analysis
+    task: money-and-investing
+    from: "Chapters I and IV, the limits of analysis and investment against speculation"
+    method: ["Ask whether careful study promises safety of principal and a satisfactory return at this price", "Say that most of the work gives a range, not a number", "Label anything that fails as speculation"]
+    inputs: [question]
+    outputs: [audit_report]
+    note: "A first label and a reminder of how rough the value will be."
+  - name: Value it from earning power
+    skill: earnings-value-range-builder
+    job: analysis
+    task: money-and-investing
+    from: "Chapters XXXVII, XXXIX and XL, multipliers, ceilings and capital structure"
+    method: ["Start from normal earnings over five to ten years, not the latest year", "Pick a multiple by the business, and never above a hard ceiling for an investment buy", "Reject any price whose average earnings are under about a twentieth of it", "Adjust for debt and preferred shares ahead of the shares", "Split the price into an investment part and a speculative part"]
+    inputs: [audit_report, source_text!]
+    outputs: [audit_report]
+    note: "A low, middle and high value from earnings, and how much of the price is hope."
+  - name: Find the asset floor
+    skill: asset-floor-estimator
+    job: analysis
+    task: money-and-investing
+    from: "Chapters XLII, XLIII and XLV, book value, net current assets and liquidating value"
+    method: ["Add up tangible assets and take off every liability at face value, preferred claims at their real size", "Mark down each asset class to what it would fetch in a sale", "Compare the result with the price, and check the cash and the debts that come due soon", "If the price is under the sale value, ask if the business should be sold or wound up"]
+    inputs: [audit_report, source_text]
+    outputs: [audit_report]
+    note: "What the company would fetch if it stopped, set beside the earnings value."
+  - name: Judge the gap between price and value
+    skill: price-versus-value-gap-judge
+    job: analysis
+    task: money-and-investing
+    from: "Chapters I, L and LI, the gap and what can close it"
+    method: ["Set the price against the earnings range and the asset floor", "Ask if the gap is wide enough to cover how wide the range is", "Name what could close the gap and how long it may take", "Treat a group of similar cases as the test, not one story"]
+    inputs: [audit_report]
+    outputs: [audit_report]
+    note: "A plain verdict on whether there is a real margin of safety, and the risks that could remove it."

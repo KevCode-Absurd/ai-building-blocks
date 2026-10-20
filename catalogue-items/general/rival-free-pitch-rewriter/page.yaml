@@ -1,0 +1,116 @@
+new_slug: rival-free-pitch-rewriter
+name: "Rival-free pitch rewriter"
+summary: "Paste your pitch. Get it rewritten around what only you do, with no rival, no cheaper and no fight in it."
+job: plan-strategy
+thinking: low
+thinking_why: "It is a rewrite against clear tests, which most chat AIs do well."
+
+headline: "Get a pitch that says what only you do, with no rival in it"
+subhead: "Paste your pitch. It finds every comparison, every \"cheaper\" and every fight in your words, asks what you really do that no one else does, and gives you a one-line, three-sentence and thirty-second version a stranger could repeat."
+
+explain: |
+  When you describe yourself by a rival, you tell the listener you are a copy. When you say you are cheaper, you invite a price fight. When you say you will disrupt an old firm, you make your story about them.
+
+  This skill finds those frames in your pitch and asks what each one hides. It then rebuilds the pitch around a fact only you can claim. If there is none yet, it says so plainly instead of dressing up a gap.
+
+when:
+  - "Your pitch starts with \"like [big name], but\"."
+  - "Your best line is that you cost less."
+  - "People repeat your pitch wrongly because it depends on a comparison."
+
+you_give:
+  - "Your pitch or plan, even rough"
+  - "Who it is for (optional)"
+  - "Numbers or customer words that back it (optional)"
+you_get:
+  - "Every rival frame marked"
+  - "The one thing only you do, in plain words"
+  - "A one-line, three-sentence and thirty-second pitch"
+  - "Results of three tests"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your pitch as it is, rival names and all. Add the first group of buyers if you have one."
+  - "Answer its question about what you do that no one else does. If you don't know, tell it so."
+  - "Say the thirty-second version out loud to someone who does not know your market, and see if they repeat it."
+
+how_it_works:
+  - title: "Marks rival frames"
+    text: "Comparisons, price words, rival names and fight words."
+  - title: "Finds what they hide"
+    text: "Asks what each frame stands in for."
+  - title: "Finds your own fact"
+    text: "Completes \"No one else ___\" with something checkable."
+  - title: "Names group and result"
+    text: "Who it is for and what they can do after."
+  - title: "Writes three versions"
+    text: "One line, three sentences, thirty seconds."
+  - title: "Runs three tests"
+    text: "Stranger, delete and fight."
+
+output_shape: |
+  RIVAL FRAMES FOUND
+  <line> | Type: <comparison / price / name / fight> | What it hides: <>
+
+  THE THING ONLY YOU DO
+  We make <> so that <> can <>.
+  No one else <>. | Evidence: <>
+
+  PITCH, ONE LINE
+  <under 15 words>
+
+  PITCH, THREE SENTENCES
+  <what it is. who it is for. what changes.>
+
+  PITCH, THIRTY SECONDS
+  <spoken version>
+
+  TESTS
+  Stranger: <pass/fail> | Delete: <pass/fail> | Fight: <pass/fail>
+
+  PRIVATE NOTE FOR SALES CALLS
+  <the comparison a buyer will make and your answer>
+
+  MISSING
+  <facts that would sharpen the pitch>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Your edge"
+    how: "Say what you think you do better or differently, even if you are unsure. It tests it."
+  - what: "Your buyer's words"
+    how: "Paste how customers describe you. It uses their words in place of yours."
+  - what: "Your channel"
+    how: "Say where the pitch will be heard. It adjusts the length and form."
+
+judge:
+  - "No rival name, \"cheaper\" or fight word is left."
+  - "\"No one else\" is a checkable fact."
+  - "The one-line version is short and plain."
+  - "A private note holds the honest comparison."
+
+test:
+  - "Run it on \"the Uber of dog walking\". It should flag the frame and ask what you do differently."
+  - "Run it on a pitch with no edge. It should say so, not invent one."
+  - "Run it twice on the same input. The edge it finds should stay close."
+
+improve:
+  - "Add customer words so the pitch uses how buyers speak."
+  - "Add proof such as numbers or results."
+  - "Pair it with \"Ten-times-better checker\" if no edge is found."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Finding frames and rewriting a short pitch is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Your current pitch deck or site copy"
+    - "Customer words about why they bought"
+    - "Proof such as numbers or results"
+
+terms:
+  - term: "Rival frame"
+    meaning: "A way of describing yourself by comparison to another firm."
+  - term: "Disrupt"
+    meaning: "To win by attacking an older firm's market. A pitch that stresses it focuses on the old firm, not on what you make."

@@ -1,0 +1,18 @@
+slug: who-keeps-the-gain-tester
+name: "Who-keeps-the-gain tester"
+summary: "Describe a business and a way it could improve. Get who keeps the gain, and whether rivals fight it away."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, warren-buffett]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)", by: "Charles T. Munger, edited by Peter D. Kaufman", used: "The second step of the analysis: how much of an improvement stays with the owners and how much flows to customers, why some industries compete rationally and others destroy profit, and whether technology helps or kills a business"}

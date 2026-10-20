@@ -1,0 +1,50 @@
+# Workflow skeleton for the checklist method in Poor Charlie's Almanack (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: munger-models-personal-checklist
+source:
+  title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+  by: "Charlie Munger"
+  kind: book
+  rights: ideas-only
+minds: [charlie-munger]
+workflow:
+  slug: build-a-checklist-for-a-decision-you-keep-making
+  name: "Build a checklist for a decision you keep making"
+  summary: "Name a decision you repeat. Get your mistakes logged, a one-page checklist, a run on a live case, and upkeep."
+  when: "you keep making the same kind of decision and want a written list that catches your usual mistakes."
+  job: think-and-decide
+  level: intermediate
+steps:
+  - name: "Log your mistakes and other people's"
+    skill: decision-mistake-collector
+    job: research
+    from: "Talk One; Chapter 2; Talk Eleven"
+    method: ["Collect past cases of your own and of other people in the same field", "Judge each by how it was decided, not only by how it ended", "Name the cause of each real mistake from a plain list", "Count which causes repeat", "Write the question that would have caught each one"]
+    inputs: [question]
+    outputs: [lessons_register]
+    note: "A log of mistakes by cause, the repeat offenders and the questions that would have caught them"
+  - name: "Build the checklist"
+    skill: decision-checklist-builder
+    job: ops
+    from: "Talk Five and its revisit, on checklists in flying; Talk Three"
+    method: ["Put the facts that end the matter first", "Turn each repeat mistake into a yes/no question with a pass line", "Add only the thinking lenses that fit this decision, such as reversing the problem, rewards and alternatives", "Cut to twelve items or fewer and order them cheap to costly", "Write the rules of use", "Test it on two past cases"]
+    inputs: [lessons_register, question!]
+    outputs: [plan]
+    note: "A one-page checklist with pass lines, tested on two of your past mistakes. Reads the log from the step before"
+  - pause: "Print the list and use it on the next real decision. Or bring a decision you face today."
+  - name: "Run it on a live decision"
+    skill: decision-checklist-runner
+    job: analysis
+    from: "Talk Five; Talk Eleven"
+    method: ["Go down the list in order and answer each item with a fact", "Count an unknown as a fail until it is found", "Stop if a stop item fails", "If two or more items fail, wait a day and run it again", "Record the call and what would show it wrong"]
+    inputs: [plan, question]
+    outputs: [audit_report]
+    note: "Each item answered with evidence, a call, and a record to judge later"
+  - pause: "Wait until the result is known, then bring what happened."
+  - name: "Keep the checklist sharp"
+    skill: checklist-upkeep-planner
+    job: ops
+    from: "Talk Five, on regular practice in a flight simulator; Chapter 2"
+    method: ["Set the record beside the result", "Judge the process and the outcome separately", "Link each cause to a checklist item and add, sharpen or cut", "Write short practice cases so the habit does not fade", "Set review dates"]
+    inputs: [audit_report, plan!]
+    outputs: [plan]
+    note: "The call judged by its process, the edited list, a version log and practice cases"

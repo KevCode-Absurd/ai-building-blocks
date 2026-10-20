@@ -1,0 +1,18 @@
+slug: earnings-padding-detector
+name: "Earnings padding detector"
+summary: "Paste a company's statements and one-off table. Get accounting choices that lift profit, their size, and a clean, adjusted or avoid call."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: source_text, required: false}
+  - {type: audit_report, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "The levers that shape reported profit: items sent to income or to equity, reserves and write-downs, costs parked as deferred charges, depreciation cuts, subsidiary income and stock dividends, per-share effects of capital changes; and the rule that an unsound management is avoided, not adjusted for"}

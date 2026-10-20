@@ -1,0 +1,129 @@
+new_slug: steady-track-record-checker
+name: "Steady track record checker"
+summary: "Paste a business and its yearly results. Get whether its past is a fair guide, with any change of course flagged."
+job: money-and-investing
+thinking: medium
+thinking_why: "It compares years of results and judges what counts as a change. The steps are fixed, but the judgment needs care."
+
+headline: "Steady track record checker"
+subhead: "Paste what a business sells and its sales and profit for several years. It compares the first year with the last, measures how much results swing, flags changes of direction and turnarounds, and calls the record steady, mixed, changing or too young. It is a method of analysis, not personal financial advice."
+
+explain: |
+  A track record only helps if the business behind it stayed the same. A company that sold the same thing to the same buyers for ten years gives you something to lean on. One that kept changing course gives you a history of several different businesses.
+
+  This skill checks which one you have. It compares what was sold in the first and last years, puts the swings in yearly profit into numbers, and counts each change of course: a new line of business, a big restructuring, a new strategy, a turnaround. It separates bad years caused by the whole industry from bad years caused by the company's own choices. Then it calls the record steady, mixed, changing or too young. It gives no buy or sell calls and marks every gap.
+
+when:
+  - You are studying a business to own for years and want to know if its history is a fair guide.
+  - A company has a good record but a new boss or a new plan.
+  - You are comparing two businesses and one has changed course more than the other.
+
+you_give:
+  - What the business sells, to whom, and how the money comes in
+  - Sales and operating profit for as many years as you have
+  - News about big deals, new bosses or restructurings (optional)
+  - The stake or decision you are weighing (optional)
+you_get:
+  - A first-year and last-year comparison of what was sold
+  - The spread of results in numbers
+  - Each change of course, with its year
+  - Each bad year marked as the industry's or the company's own
+  - A call of steady, mixed, changing or too young, and what would change it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the description and the yearly figures. Annual report summaries work well.
+  - List any big deals, new bosses or plans you know of, with the year.
+  - Read the call, then check the flags it found against the company's own reports.
+  - Take the result to "Owner-minded management checker" or your own decision.
+
+how_it_works:
+  - title: Sets the window
+    text: Writes the years covered and says if there are too few to judge.
+  - title: Compares first and last
+    text: Marks each product, buyer and money source as same, changed or added.
+  - title: Measures the spread
+    text: Finds the average, best and worst year and the gap, so swings are numbers.
+  - title: Flags changes of course
+    text: Counts new lines of business, big restructurings, new strategies and turnarounds.
+  - title: Separates cycle from change
+    text: Checks whether rivals had the same bad year or only this business did.
+  - title: Looks ahead ten years
+    text: Names what could make the past stop working, with a sign to watch.
+  - title: Calls the record
+    text: Steady, mixed, changing or too young, by a stated rule.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WINDOW
+  <years covered>
+
+  FIRST VS LAST
+  Sold: <first> -> <last> | Buyers: <...> | Money: <...> | Core: same / changed
+
+  SPREAD
+  <year> | sales | operating profit | margin
+  Average <n> | best <n> | worst <n> | gap <percent of average>
+
+  FLAGS
+  <year>: <what changed>
+
+  BAD YEARS
+  <year>: cycle / change, because <...>
+
+  TEN YEARS OUT
+  <risk> | sign to watch: <...>
+
+  CALL
+  <steady / mixed / changing / too young>, because <...>. Would change if <...>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The years you include
+    how: Ten is best. If the business was very different earlier, say from which year the current business starts.
+  - what: Your own cut-offs
+    how: Tell it if you want a tighter or looser rule for steady, such as results within a tenth of the average.
+  - what: Industry facts
+    how: Add what rivals did in the bad years. It uses that to tell cycle from change.
+
+judge:
+  - The first-and-last comparison names real products and buyers.
+  - The spread is shown as numbers.
+  - Every change of course has a year.
+  - Every bad year is marked as cycle or change.
+  - Nothing says to buy or sell a named security.
+
+test:
+  - Give it a business that added a second line of business three years ago. The core should be marked changed or the flag counted.
+  - Give it a steady shop with one weak recession year. The recession year should be called a cycle, not a flag.
+  - Give it only three years of figures. It should say too young.
+  - Run it twice on the same data. The call should match.
+
+improve:
+  - Add the years of restructuring from the annual reports so none are missed.
+  - Keep a short list of the bad years of the industry to compare against.
+  - Re-run it every two years and watch whether a "mixed" call moves.
+  - Pair it with "Business power tester" to see if a steady record rests on a lasting edge.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Comparing years of results and judging what counts as a change is text work any strong chat AI does well with this skill."}
+    - {name: "A spreadsheet", why: "Keeps ten years of results in one place so the spread is easy to recheck."}
+  inputs:
+    - "Ten years of sales and operating profit"
+    - "The company's annual report letters, which describe changes of course"
+    - "Results of two or three rivals over the same years"
+
+terms:
+  - term: Operating profit
+    meaning: What the business earns from its main work, before interest and tax and before one-off gains or losses.
+  - term: Turnaround
+    meaning: A plan to fix a business that is doing badly. They are hard to pull off, so they are a reason for care.
+  - term: Core business
+    meaning: The products or services that earn most of the profit.

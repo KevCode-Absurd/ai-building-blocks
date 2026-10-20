@@ -1,0 +1,17 @@
+slug: fair-escape-checker
+name: "Fair escape checker"
+summary: "Paste your plan and how your character escapes. Get each escape tested for fairness, with fixes for cheats."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, agatha-christie]
+credits:
+  - {title: "Misery", by: "Stephen King", used: "A fairness rule for cliffhangers, voiced by characters in the novel: an escape need not be likely, but it must use what the story has already shown. Also the story game in which a speaker has ten seconds to free the hero and the group judges if it was fair"}

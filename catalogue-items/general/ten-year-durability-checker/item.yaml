@@ -1,0 +1,18 @@
+slug: ten-year-durability-checker
+name: "Ten-year durability checker"
+summary: "Paste your business and its edge. Get how much value sits past year five and what could end the edge."
+category: general
+type: skill
+role: check
+job: strategy
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel, hamilton-helmer]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "Valuing a business by its future cash flows, why early growth numbers can hide a weak business, the four traits of a lasting position, and asking what would stop a rival or a change in the world from wiping you out"}

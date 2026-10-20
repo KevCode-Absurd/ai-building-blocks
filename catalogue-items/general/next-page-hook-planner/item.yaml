@@ -1,0 +1,17 @@
+slug: next-page-hook-planner
+name: "Next-page hook planner"
+summary: "Tell it your scene. Get the one question readers must want answered, where to stop, and a fair answer."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, alfred-hitchcock]
+credits:
+  - {title: "Misery", by: "Stephen King", used: "The pull a reader feels to find out what happens next, voiced by the novel's writer-character as a need to know a specific answer, and the old serial habit of stopping a chapter on the worst moment and answering it fairly next time"}

@@ -1,0 +1,18 @@
+slug: lifetime-punch-card-bet-ranker
+name: "Twenty-punch bet ranker"
+summary: "List your bet ideas. Get the top one to three ranked and sized, and a written no for the rest."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, warren-buffett]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)", by: "Charles T. Munger, edited by Peter D. Kaufman", used: "The twenty-punch ticket thought experiment, loading up on the few ideas you truly understand, measuring each choice against your alternatives, and the claim that most of the gains come from a handful of insights"}

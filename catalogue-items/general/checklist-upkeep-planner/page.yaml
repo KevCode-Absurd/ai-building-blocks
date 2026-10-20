@@ -1,0 +1,109 @@
+new_slug: checklist-upkeep-planner
+name: Checklist upkeep planner
+summary: Paste what happened after a decision. Get it judged by the process, not the result, plus checklist changes and practice cases.
+job: think-and-decide
+thinking: medium
+thinking_why: It compares a record with an outcome and edits a list, which needs care but follows a fixed method.
+headline: Checklist upkeep planner
+subhead: Paste the record of a past decision and what happened. It judges the call by its process and its outcome separately, finds which checklist items fired or were missing, edits the list, and writes practice cases so the checklist stays sharp between big decisions.
+explain: |-
+  A checklist that never changes goes stale. A good result can hide a sloppy process, and a bad result can follow a good one. If you only learn from outcomes, you learn the wrong lessons.
+
+  This skill pulls up the record you made before the decision and sets it beside what happened. It sorts the call into good, lucky, unlucky or mistaken, links each cause to a checklist item, and adds, sharpens or cuts items. It also writes short practice cases, like a flight simulator, so you keep using the list on rare problems.
+when:
+  - A decision has played out and you want to learn the right lesson.
+  - Your checklist has not changed in a year.
+  - You want to keep your skills sharp on decisions that come up rarely.
+you_give:
+  - The record from "Decision checklist runner"
+  - What happened, with dates and numbers
+  - Your current checklist (optional)
+you_get:
+  - The call judged on process and outcome separately
+  - Which items fired, which were missing, and what to add or cut
+  - A version log of the changes
+  - Three practice cases and a review schedule
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the saved record and say what happened.
+  - Paste your checklist if you have it, so it can edit the list directly.
+  - Run one practice case each month and put the review dates in your calendar.
+how_it_works:
+  - title: Set record beside result
+    text: Compares what you expected with what happened.
+  - title: Judge process and outcome
+    text: Sorts the call into four boxes.
+  - title: Link causes to items
+    text: Ties what drove the result to the checklist.
+  - title: Update the list
+    text: Adds, sharpens or cuts items, keeping twelve or fewer.
+  - title: Keep a version log
+    text: Records each change with a date and a reason.
+  - title: Write practice cases
+    text: Writes three short cases to run the list on between real decisions.
+  - title: Set the review dates
+    text: Schedules the next reviews.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  EXPECTED AND ACTUAL
+  Expected: <result> | Actual: <result> | wrong-if facts that came true: <list>
+
+  THE CALL
+  Process: <good, weak> | Outcome: <good, bad> | Box: <good call, lucky, unlucky or mistaken>
+
+  CAUSES
+  <cause> | item <n> | covered, weak or missing
+
+  CHANGES (version <n>)
+  <add, sharpen or cut> | item | reason
+
+  VERSION LOG
+  <date> | change | case
+
+  PRACTICE CASES
+  1. <case> | should catch: <what>
+
+  REVIEW DATES
+  <dates>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: How fast you report back
+    how: Send the result while you still remember the process. The record helps, but fresh memory fills the gaps.
+  - what: Your history of runs
+    how: Say which items have never helped. Without this it cannot cut anything.
+  - what: Practice case sources
+    how: Say where you want cases drawn from, such as your field's news or your own past work.
+judge:
+  - The box matches what a fair observer would pick.
+  - Each new item can be answered from a fact.
+  - The list is no longer than before, or you can say what was cut.
+  - A practice case would have caught a real mistake of yours.
+test:
+  - Give it a win by luck. It should say lucky and still find the weak item.
+  - Give it a loss with a sound process. It should say unlucky and change little.
+  - Run it twice on the same record. The box and the changes should match.
+improve:
+  - Run it after every big result and keep the version log.
+  - Review the whole list with a friend each year.
+  - Share the practice cases with your team.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps the log, the checklist and your records in one place you can come back to.
+  inputs:
+    - The saved record from Decision checklist runner
+    - The numbers for what happened
+    - Your list of past versions
+terms:
+  - term: Lucky win
+    meaning: A good result that came from a weak process, so it is not repeatable.
+  - term: Practice case
+    meaning: A short case you run through the checklist to keep the habit sharp.

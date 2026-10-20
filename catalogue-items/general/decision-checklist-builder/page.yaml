@@ -1,0 +1,107 @@
+new_slug: decision-checklist-builder
+name: Decision checklist builder
+summary: Paste your mistake log. Get a one-page checklist of up to twelve questions, each with a pass or fail line.
+job: think-and-decide
+thinking: high
+thinking_why: It must turn past mistakes into short, testable questions and cut a long list down to what matters.
+headline: Decision checklist builder
+subhead: Paste your log of past mistakes and name the decision it is for. It turns the repeat causes into yes/no questions with a pass line, adds a few lenses that fit this kind of decision, cuts the list to twelve or fewer, orders it, and tests it on two past cases.
+explain: |-
+  A pilot does not rely on memory before take-off. A checklist catches the error you make when you are sure, busy or excited. It works only if it is short, specific to the decision and used every time.
+
+  This skill builds that kind of list from your own mistakes. Each item is a question with a pass line and a place to find the answer. Stop items go first because they end the matter. It then tests the list on two cases from your log, to see if it would have caught them.
+when:
+  - You make the same kind of decision often and want a fixed way to check it.
+  - You have a mistake log and want it to change what you do.
+  - A team keeps making the same decision error and you want a shared list.
+you_give:
+  - Your mistake log, or the output of "Decision mistake collector"
+  - The decision the list is for, and who will use it
+  - Any rules you already follow (optional)
+you_get:
+  - A one-page checklist of twelve or fewer yes/no questions
+  - A pass line and a place to find the answer for each
+  - Stop items first, then cheap checks, then costly ones
+  - A test of the list against two past cases
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your mistake log and say which decision the list is for.
+  - Read the test results. If a past mistake slips through, ask for an item to catch it.
+  - Print the list or keep it where you decide, then use it with "Decision checklist runner".
+how_it_works:
+  - title: Set the trigger
+    text: Defines when the list is used and by whom.
+  - title: Write the stop items
+    text: Writes the facts that mean no, whatever else is true.
+  - title: Turn repeats into questions
+    text: Turns each repeat cause into a yes/no question with a pass line.
+  - title: Add fitting lenses
+    text: Adds only the lenses that suit this kind of decision.
+  - title: Cut to twelve
+    text: Merges duplicates and drops weak items.
+  - title: Put it in order
+    text: Orders the list from stop items to costly checks to the feelings check.
+  - title: Add the rules of use
+    text: Writes how the list must be used each time.
+  - title: Test on two past cases
+    text: Runs the list on two logged cases and counts what it catches.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  TRIGGER
+  <when it fires> | who runs it
+
+  RULES OF USE
+  <five rules>
+
+  THE CHECKLIST
+  STOP 1. <question> | pass: <line> | find it: <where>
+  ...
+  1. <question> | pass | find it
+  ...
+  Last. <feelings check>
+
+  TEST ON PAST CASES
+  <case> | caught by item <n> or MISSED | change made
+  Catch rate: <x of 2>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: How narrow the decision is
+    how: A list for one kind of decision works better than one for all decisions. Name the narrowest type.
+  - what: The stop items
+    how: Say what would end the matter for you. These items save the most time and money.
+  - what: How many past cases you test on
+    how: Test on the costliest mistakes. If the list misses those, it is not ready.
+judge:
+  - You can answer every item with a fact in under five minutes.
+  - The list fits on one page.
+  - It would have flagged at least two of your real past mistakes.
+  - A stop item would have saved you real money or time.
+test:
+  - Run it on a decision you made last month. See which items you could not have answered.
+  - Ask someone else to use it. Note which items they find unclear.
+  - "Check it against the log: every repeat offender should have an item."
+improve:
+  - Add one item after every miss, and cut one that never helps.
+  - Share the list with the people who advise you, so they know the questions you will ask.
+  - Keep a separate list for each decision type.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps the log, the checklist and your records in one place you can come back to.
+  inputs:
+    - The output of Decision mistake collector
+    - Policies or rules you already apply
+    - Checklists from your field, such as hiring or contract reviews
+terms:
+  - term: Stop item
+    meaning: A fact that ends the matter with a no, whatever else is true.
+  - term: Pass line
+    meaning: The answer that counts as good for one checklist item.

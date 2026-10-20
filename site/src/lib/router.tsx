@@ -35,12 +35,18 @@ export function setSearch(params: Record<string, string>) {
   history.replaceState(history.state, "", u.pathname + u.search + u.hash);
 }
 
+// Set once by the app: starts loading what a link's page needs as soon as a pointer or finger is on it,
+// so the page is often ready by the time the click lands.
+let prefetch: ((to: string) => void) | null = null;
+export const setPrefetch = (fn: (to: string) => void) => { prefetch = fn; };
+
 export function Link({ to, onClick, ...rest }: AnchorHTMLAttributes<HTMLAnchorElement> & { to: string }) {
+  const warm = () => prefetch?.(to);
   const go = (e: MouseEvent<HTMLAnchorElement>) => {
     onClick?.(e);
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     navigate(to);
   };
-  return <a href={to} onClick={go} {...rest} />;
+  return <a href={to} onClick={go} onPointerEnter={warm} onFocus={warm} onTouchStart={warm} {...rest} />;
 }

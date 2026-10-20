@@ -1,0 +1,122 @@
+new_slug: normal-earnings-estimator
+name: "Normal earnings estimator"
+summary: "Paste cleaned earnings and how far the record can be trusted. Get low, normal and high earnings for an ordinary year."
+job: money-and-investing
+thinking: high
+thinking_why: "It chooses a window, applies rules about when the latest year can stand alone and builds a range from judgment. That needs careful reasoning."
+
+headline: "Work out what a company earns in an ordinary year, as a range you can defend"
+subhead: "Paste cleaned earnings for five to ten years and the reliability rating. It restates per share, averages with loss years in and at zero, refuses to lean on the latest year without three tests and caps the result at what a normal year has shown. You get low, normal and high earnings per share."
+
+explain: |
+  Value that follows last year's profit swings with the economy. Value that follows a normal year's profit follows the business. The hard part is deciding which years count and what to do with the bad ones and the best one.
+
+  This skill averages five to ten years and shows loss years both ways. It uses the latest year alone only when it was not a boom year, earnings have risen for some years and the industry supports growth. It does not project a trend. A rising line may earn a higher multiple later, but it does not add earnings that have not been earned. It returns a low, normal and high figure with a reason for each. It is a method, not financial advice.
+
+when:
+  - You need one earnings figure to value a business and have several years of results.
+  - The latest year is far from the earlier ones and you cannot decide how to treat it.
+  - You want a range, not a single number.
+
+you_give:
+  - Cleaned and restated earnings by year, five to ten years
+  - The reliability rating from "Earnings record reliability checker"
+  - Share counts by year (optional)
+you_get:
+  - The window and share count used
+  - Averages with loss years in and at zero
+  - A statement of whether the latest year was used alone, and why
+  - Low, normal and high earnings per share and in total, each with a reason
+  - A note on how sure the range is
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the cleaned earnings and the rating from the earlier step.
+  - Add the share count for each year if you have it.
+  - Read why it did or did not use the latest year.
+  - Take the range to "Earnings value range builder".
+
+how_it_works:
+  - title: Checks the rating
+    text: Stops if the record is rated not a guide, and says value must come from assets.
+  - title: Restates per share
+    text: Puts every year on today's share count.
+  - title: Chooses the window
+    text: Uses five to ten years, usually seven, and shows the others.
+  - title: Averages two ways
+    text: Shows loss years at real value and set to zero.
+  - title: Tests the latest year
+    text: Uses it alone only if three conditions hold.
+  - title: Caps the figure
+    text: Holds it at what a normal year has already produced.
+  - title: Builds the range
+    text: Low, normal and high, each with a reason.
+
+output_shape: |
+  BASIS
+  Window: <years> | Share count: <n and source> | Rating from the earlier step: <rating>
+
+  AVERAGES
+  Loss years real: <amount> | Loss years at zero: <amount> | Five-year: <amount> | Ten-year: <amount>
+
+  LATEST YEAR
+  Used alone: <yes / no> | Not a boom: <yes / no> | Rising for years: <yes / no> | Industry supports growth: <yes / no>
+
+  NORMAL EARNINGS PER SHARE
+  LOW: <amount> because <reason>
+  NORMAL: <amount> because <reason>
+  HIGH: <amount> because <reason>
+  In total: <low> / <normal> / <high>
+
+  HOW SURE
+  <narrow / wide> | Why: <reason>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Window length
+    how: Say how many years you want. Seven is the usual choice.
+  - what: Boom years
+    how: Name years you think were unusually good for business. The skill then keeps them out of the high case.
+  - what: Share count
+    how: Give today's count and any splits. Per-share figures depend on it.
+  - what: Industry view
+    how: Say what you know about the industry's outlook. It decides whether the latest year can stand alone.
+
+judge:
+  - The rating is applied first, and a not a guide record gets no figure.
+  - Both averages are shown.
+  - The latest year is used alone only when all three conditions are met.
+  - No trend is projected past what a normal year has shown.
+  - It never says buy or sell and invents no figure.
+
+test:
+  - Give it a record with one loss year and check both averages appear.
+  - Give it a record with a record-high last year and see that it is not used alone.
+  - Give it a not a guide record and see that it stops.
+  - Run it twice. The range should not change.
+
+improve:
+  - Add your own rule for which years count as boom years.
+  - Keep a record of ranges and what the company later earned.
+  - Pair it with "Earnings record reliability checker" and "Earnings value range builder".
+  - Run it on three similar companies and compare the ranges.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Choosing a window and building a range is text work."}
+    - {name: "A spreadsheet", why: "Handy for averages and the worst and best three-year runs."}
+    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
+  inputs:
+    - "Cleaned earnings by year"
+    - "Share counts and any splits"
+
+terms:
+  - term: Normal earnings
+    meaning: What a business earns in an ordinary year of trade, not a boom and not a slump.
+  - term: Earnings per share
+    meaning: A company's profit divided by the number of shares, so you can compare it with the share price.

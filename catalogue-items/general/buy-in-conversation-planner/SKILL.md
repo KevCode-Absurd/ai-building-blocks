@@ -58,7 +58,7 @@ The person and the request. What they want and why they would want it, marked KN
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Sell it** with the [Ten-second opener writer](https://useaiblocks.com/skills/ten-second-opener-writer). It takes the buying reasons.
+- **Sell it** with the [Reason-to-join pitch writer](https://useaiblocks.com/skills/reason-to-join-pitch-writer). It takes the plan.
 - **Make image ads** with the [Image ad maker from customer quotes](https://useaiblocks.com/skills/image-ad-maker-from-customer-quotes). It takes the buying reasons.
 - **Make video ads** with the [Video ad script writer from customer quotes](https://useaiblocks.com/skills/video-ad-script-writer-from-customer-quotes). It takes the buying reasons.
 - **Understand your buyers** with the [Dominant emotion finder](https://useaiblocks.com/skills/dominant-emotion-finder). It takes the buying reasons.

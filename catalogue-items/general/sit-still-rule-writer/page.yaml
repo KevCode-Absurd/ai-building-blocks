@@ -1,0 +1,129 @@
+new_slug: sit-still-rule-writer
+name: "Sit-still rule writer"
+summary: "Paste your picks. Get one page of holding rules: what must stay true, review dates and the only reasons to act."
+job: money-and-investing
+thinking: low
+thinking_why: "It turns your picks into a fixed template of facts, dates and rules. The sums are simple."
+
+headline: "Sit-still rule writer"
+subhead: "Paste your picks and why you chose them. It writes the facts that must stay true for each one, fixed review dates, what acting costs you in fees, tax and noise, the only three reasons to change course and a line to read when the urge hits. It is a method of analysis, not personal financial advice."
+
+explain: |
+  After the hard work of choosing a few good bets, the biggest risk is you. Checking every day, reacting to headlines, paying fees and tax, and selling something good in a bad month all eat the result.
+
+  This skill writes the rules that keep you still. It lists two to four facts per pick that you can check, sets a few review dates, and adds up what acting costs: for example, a 1% fee on a 7% return takes about a sixth of the end result over 20 years. It limits reasons to act to three and names the reasons that do not count. It adds a cooling line, a one-week wait and a rule for spare cash. It gives no buy or sell calls on any named security.
+
+when:
+  - You have made your picks and feel the pull to tinker with them.
+  - You check prices often and change your mind with each move.
+  - You pay fees or tax on moves that did not help.
+
+you_give:
+  - Your picks, sizes and why you chose them
+  - A report on what could go wrong (optional)
+  - Your fees, tax rate and how often you check or trade (optional)
+you_get:
+  - Two to four checkable facts for each pick
+  - Fixed review dates and a holds, weaker or broken marking
+  - A cost-of-acting line with numbers
+  - Three reasons to act, the reasons that do not count, and a cooling line
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your picks and the reason you chose each.
+  - Add your fees and how often you check or trade.
+  - Print the one-page result and put it where you look at your picks.
+  - On each review date, mark each fact and act only on the three reasons.
+
+how_it_works:
+  - title: Lists what must stay true
+    text: Two to four facts per pick that you can check, such as the return it earns or who runs it.
+  - title: Sets fixed review dates
+    text: A few dates a year. Each fact is marked holds, weaker or broken. No price checks in between.
+  - title: Counts the cost of acting
+    text: Fees, tax and noise, added into one line so the price of fiddling is visible.
+  - title: Limits reasons to act
+    text: A fact broke, a clearly better use appeared, or a planned need for the money.
+  - title: Names the reasons that don't count
+    text: A price move, a pundit, a crowd or boredom.
+  - title: Writes a cooling line
+    text: A short note for the urge, plus a one-week wait for any move off the dates.
+  - title: Plans the spare cash
+    text: Says where new money goes while you wait, including holding it.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  FACTS THAT MUST STAY TRUE
+  <pick>: 1) ... 2) ... 3) ...
+
+  REVIEW DATES
+  <dates>. Mark each fact HOLDS / WEAKER / BROKEN. No price checks between.
+
+  THE COST OF ACTING
+  Fees: <sum>  Tax: <sum>  Noise: <count>
+  Acting costs me about <X> a year.
+
+  THE ONLY REASONS TO ACT
+  1. A fact is broken and cannot recover.
+  2. A clearly better use I understand as well.
+  3. A planned need for the money.
+  Not reasons: <list>
+
+  THE COOLING LINE
+  <line>  One-week wait: <rule>
+
+  SPARE CASH
+  <rule>
+
+  MISSING
+  <what would firm up the sums>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Review frequency
+    how: Twice a year suits most people. More often invites tinkering.
+  - what: Your fees and tax
+    how: Give real figures. Check local rules, since they differ by place and change.
+  - what: Your cooling line
+    how: Write it in your own voice. It works better than a rule you did not write.
+  - what: Sizes
+    how: Include sizes. Large picks deserve tighter facts to watch.
+
+judge:
+  - Each pick has two to four checkable facts.
+  - Review dates are fixed.
+  - The cost of acting has numbers.
+  - Only three reasons to act are allowed.
+  - The cooling line and the wait exist.
+
+test:
+  - Give it a pick with no clear reason. It should ask for one.
+  - Give it a pick whose price fell with no change in facts. The rules should say hold.
+  - Give it a pick whose main fact broke. The rules should say act.
+  - Run it twice. The facts and rules should match.
+
+improve:
+  - Keep a log of review dates and what you marked each time.
+  - Add facts specific to your field that go stale.
+  - Record each urge to act and what happened after you waited.
+  - Pair it with the "Room for error plan checker" so a bad year does not break the rules.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Turning picks into a fixed template and doing simple cost sums is text work any strong chat AI does well."}
+    - {name: "A calendar", why: "Put the review dates in as repeating events so you look on those days and no others."}
+  inputs:
+    - "The plan from the Twenty-punch bet ranker"
+    - "A report from the Room for error plan checker"
+    - "Your fees and tax rate"
+
+terms:
+  - term: Review date
+    meaning: A fixed day to check the facts behind a pick, and the only day you change course.
+  - term: Cost of acting
+    meaning: What fees, tax and noise take from the result when you change things often.
+  - term: Cooling line
+    meaning: A short note you write in advance and read when you feel the urge to act.

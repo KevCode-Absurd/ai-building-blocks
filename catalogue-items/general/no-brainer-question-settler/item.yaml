@@ -1,0 +1,21 @@
+slug: no-brainer-question-settler
+name: No-brainer question settler
+summary: Describe a hard problem. Get the obvious big questions settled first, a rough sum for your target, and a smaller problem left.
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: question, required: true}
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: The habit of settling the big obvious questions first so the problem shrinks, and checking a target with plain arithmetic before building a plan on it

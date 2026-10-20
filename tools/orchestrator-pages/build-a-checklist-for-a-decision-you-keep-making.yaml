@@ -1,0 +1,89 @@
+new_slug: build-a-checklist-for-a-decision-you-keep-making
+name: Build a checklist for a decision you keep making
+summary: Name a decision you repeat. Get your mistakes logged, a one-page checklist, a run on a live case, and upkeep.
+job: think-and-decide
+thinking: high
+thinking_why: It has to judge how past decisions were made and turn them into short testable questions. Give it your strongest model.
+headline: Stop repeating the same decision mistake with a one-page checklist
+subhead: Name a kind of decision you make again and again. It logs your past mistakes and other people's by cause, turns the repeats into twelve questions or fewer, runs a live decision through them, and after the result it edits the list and writes practice cases.
+explain: |
+  Pilots do not trust memory before take-off. They use a checklist, because the errors that crash planes come when a skilled person is sure, busy or excited. Charlie Munger said the same tool belongs in any field where you decide under pressure, and that it works best when you also run problems forward and backward.
+
+  This workflow builds that tool from your own record. It sorts your past cases by how they were decided, not only by how they ended, and names the causes that repeat. It turns them into a short list with pass lines. You then run it on a live decision, and later you bring back the result. It judges the call by its process, edits the list and writes practice cases so the habit stays sharp.
+when:
+  - You make the same kind of decision often, such as hiring, pricing or taking on clients.
+  - You keep paying for the same mistake in a different form.
+  - A team needs a shared list so that its decisions do not depend on who is in the room.
+you_give:
+  - The kind of decision you keep making
+  - Three or more past cases of yours, with what you chose and what happened
+  - Cases from other people in the same field (optional)
+  - Later, a live decision to run, and the result once it is known
+you_get:
+  - A log of mistakes sorted by cause, with the repeat offenders
+  - A one-page checklist of twelve questions or fewer, each with a pass line, tested on your past cases
+  - A live decision answered item by item, with a call and a record
+  - An edited list, a version log and practice cases
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Give the first two steps your honest past cases, including the ones you would rather forget. Then print the checklist.
+  - Use the list on your next real decision. When the result is known, bring the saved record back for the last step.
+how_it_works:
+  - title: Logs the mistakes
+    text: Sorts past cases into good call, bad luck, lucky win or mistake, names the cause of each mistake and counts the repeats.
+  - title: Builds the list
+    text: Writes stop items first, turns repeat causes into yes/no questions with pass lines, and cuts to twelve items or fewer.
+  - title: Tests it on the past
+    text: Runs the list on two logged mistakes to check it would have caught them, and fixes it if it did not.
+  - title: Runs it live
+    text: Answers every item with a fact, counts unknowns as fails, applies the stop rule and records the call.
+  - title: Judges by process
+    text: After the result, compares the record with what happened and sorts the call by how it was made, not only by how it ended.
+  - title: Keeps it sharp
+    text: Adds, sharpens or cuts items, keeps a version log and writes practice cases and review dates.
+output_shape: |-
+  STEP 1: MISTAKE LOG
+    Decision type | sort of every case | log: <case> | cause | catching question
+    Repeat offenders: <cause> | count
+
+  STEP 2: THE CHECKLIST
+    Trigger | rules of use
+    STOP 1..n | items 1..12: <question> | pass line | where to find it
+    Test on two past cases: caught or missed
+
+  (Pause: use the list on a real decision.)
+
+  STEP 3: THE LIVE RUN
+    <item> | answer + fact | PASS, FAIL or UNKNOWN
+    Fails and unknowns | call | record: expect, wrong if
+
+  (Pause: wait for the result.)
+
+  STEP 4: UPKEEP
+    Process and outcome | causes covered, weak or missing | new version of the list
+    Version log | practice cases | review dates
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How narrow the decision is
+    how: A list for "hiring a first sales person" beats a list for "people decisions". Name the narrowest kind you repeat.
+  - what: How many past cases you give
+    how: Six cases show patterns that three do not. Add cases from others in your field to fill gaps.
+  - what: What you knew at the time
+    how: Write what you knew then, not what you know now. Hindsight hides the real cause.
+judge:
+  - Every case is sorted by process and outcome, and bad luck is kept out of the log.
+  - Each checklist item can be answered from a fact in under five minutes.
+  - The list fits on one page and would have caught at least two of your real mistakes.
+  - Unknowns in the live run are counted as fails, and the record says what would show the call wrong.
+  - Every change to the list has a date and a reason.
+test:
+  - Run the first two steps on a decision type where you know your mistakes. The repeat causes should match your own view.
+  - Leave out a key fact in the live run. The item should come back unknown, not guessed.
+  - Give the last step a win that came from luck. It should call it lucky and still look for the weak item.
+improve:
+  - Run every big decision through the list and keep the records in one folder.
+  - Share the list with the people who advise you, so they know the questions you will ask.
+  - Make a separate list for each decision type, and review each one every quarter.

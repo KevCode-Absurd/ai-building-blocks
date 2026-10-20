@@ -1,0 +1,128 @@
+new_slug: find-out-if-a-business-is-worth-owning-long-term
+name: "Find out if a business is worth owning long term"
+summary: "Give it a business and its figures. Get a pass, fail or too-hard call on ten tests, and what to check next."
+job: money-and-investing
+thinking: high
+thinking_why: "It runs seven skills, reads accounts and has to tell a gap from a pass. Give it your strongest model."
+
+headline: "Find out if a business is worth owning, before you look at its price"
+subhead: Give it a business and its accounts. It tests the edge, whether you understand it, how steady the record is, how managers use cash, the returns and margins, and the real cash an owner could take out. You get ten tests marked pass, fail or unknown, and a verdict. A method of analysis, not personal financial advice.
+
+explain: |
+  Most people start with the price. The better order is to ask first whether the business is worth owning at any sensible price. If you cannot explain how it makes money, if its record keeps changing, or if you cannot estimate its cash, no price will make it a good choice.
+
+  This workflow runs the questions in the order they cut things down. First the lasting edge and whether the business sits inside what you understand. Then whether the record is steady, and whether the people in charge treat spare cash and the truth like owners would. Then the money tests: return on equity, margins, whether the profit kept added value, and the cash an owner could really take out. It ends on one page of ten tests, each marked pass, fail or unknown, and a verdict: too hard, not worth a price check, dig more, or worth a price check. The method is the one Robert Hagstrom drew from Warren Buffett's habits in The Warren Buffett Way. The ten tests are Hagstrom's grouping, not a list Buffett wrote. It gives no buy or sell calls, and no test catches outright fraud.
+
+when:
+  - You are weighing a business to buy or to own a share of, and want a plain call before you spend time on its price.
+  - You like a business and want to know if your liking holds up against ten tests.
+  - You are comparing two businesses and want them on the same page.
+
+you_give:
+  - The business, in a few lines, and what you know of its rivals (optional)
+  - Four or five years of its accounts, with profit, equity, debt, sales, spending and working capital
+  - Notes on its managers, such as past letters to owners (optional)
+you_get:
+  - A test of whether the edge is real and lasting
+  - A call on whether the business is inside what you understand
+  - A check that the record is steady, with changes of course flagged
+  - A view of how the managers use cash and tell the truth
+  - Return on equity, margins and the one-dollar test, each marked pass or fail
+  - Owner earnings as a range
+  - One page with ten tests, red flags and a reading list, and a verdict
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the business, then paste or attach its accounts for the last four or five years.
+  - Read the unknowns on the last page first. They show what to read or ask next.
+  - If the verdict is worth a price check, carry on with "Value a business and the discount to ask for".
+
+how_it_works:
+  - title: Tests for a lasting edge
+    text: Asks whether the product is needed or wanted, has no close substitute and can raise prices, and how long the edge lasts.
+  - title: Checks it is inside what you understand
+    text: Asks you to explain how it makes money, and sorts it as yes, no or too tough.
+  - title: Checks the record is steady
+    text: Compares first and last years, measures the swings and flags any change of course or turnaround.
+  - title: Checks the people running it
+    text: Follows what managers did with spare cash and how they talk about their mistakes.
+  - title: Checks returns and margins
+    text: Return on equity on operating profit, debt stripped out, margins against rivals, and the one-dollar test.
+  - title: Works out owner earnings
+    text: Profit plus non-cash charges, minus the spending needed to stay level, as a low, middle and high figure.
+  - title: Scores the tests
+    text: Ten tests as pass, fail or unknown, a verdict from a stated ladder, red flags and a reading list.
+
+output_shape: |
+  STEP 1: LASTING EDGE
+    <what customers get, the barrier, how long it lasts>
+
+  STEP 2: INSIDE WHAT YOU UNDERSTAND
+    <yes / no / too tough, and your real edge>
+
+  STEP 3: STEADY RECORD
+    <steady / mixed / changing / too young, with flags>
+
+  STEP 4: THE PEOPLE RUNNING IT
+    <able / honest / owner-minded, each with evidence>
+
+  STEP 5: RETURNS AND MARGINS
+    <return on equity, return on total capital, margins, one-dollar test: pass / fail / unknown>
+
+  STEP 6: OWNER EARNINGS
+    <low / middle / high, share of profit, trend>
+
+  STEP 7: THE TEN TESTS
+    <1 to 10, each pass / fail / unknown with evidence>
+    VERDICT: <too hard / not worth a price check / dig more / worth a price check>
+    RED FLAGS: <list>   READ OR ASK NEXT: <list>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Which years you give
+    how: Four or five years of accounts. If the business changed a lot earlier, start from the year it became the business it is now.
+  - what: The rivals
+    how: Name two or three that sell the same thing. The edge test and the return comparison need them.
+  - what: The ladder
+    how: The default cut-offs for the verdict are a working rule. Tell it if you want a stricter or looser one.
+
+judge:
+  - Every number comes from the accounts you gave, or is marked missing.
+  - A gap is shown as unknown, never as a pass.
+  - Each step used the result of the step before.
+  - The verdict follows the stated ladder.
+  - Nothing says to buy or sell a named security.
+
+test:
+  - Give it a business you know well that has been through a turnaround. The record step should flag it and the verdict should not be worth a price check.
+  - Leave out the capital spending. The owner earnings step should stop and ask for it, and the scorecard should show test 8 unknown.
+  - Give it a famous company and no accounts. It should ask for the figures and not score from memory.
+  - Run it twice on the same inputs. The tests should land in the same places.
+
+improve:
+  - Keep one set of results per business, with the date, and redo the run when a new year of accounts arrives.
+  - Add notes from talking to customers, suppliers or former staff, so the edge and the managers tests have first-hand evidence.
+  - Run the same steps on a rival and compare the scorecards.
+  - Move the ladder's cut-offs once you see where your own judgment differs.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds seven steps of work and several years of accounts in one run."}
+    - {name: "A spreadsheet", why: "Keeps the cleaned figures for each year so a new year only adds one row."}
+  inputs:
+    - "The last five annual reports, which hold the accounts and the letters to owners"
+    - "The same figures for two or three rivals"
+    - "Notes from talking to customers, suppliers or former staff"
+
+terms:
+  - term: Owner earnings
+    meaning: The cash left each year if you owned the whole business and kept it as strong as it is today.
+  - term: Return on equity
+    meaning: Operating profit after tax divided by the money owners have in the business.
+  - term: One-dollar test
+    meaning: Did each dollar of profit the business kept add at least a dollar to its value?
+  - term: Must-pass test
+    meaning: A test that, if it fails, makes a valuation pointless. Here, understanding the business, a lasting edge and estimable cash.

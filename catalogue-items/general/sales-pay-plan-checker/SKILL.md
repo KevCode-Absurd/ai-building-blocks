@@ -51,6 +51,13 @@ How to start:
 
 What the plan pays for and ignores. Reps by churn with earnings. The gap. One change to test and what it would have paid. The number that shows it worked, and when. Guesses. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Sell it** with the [Sales route plan builder](https://useaiblocks.com/skills/sales-route-plan-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Check before you hand it back
 
 - It states what the plan rewards and what it ignores.

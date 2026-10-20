@@ -1,0 +1,128 @@
+new_slug: mispriced-bet-tester
+name: "Mispriced bet tester"
+summary: "List your bets. Get which have the odds truly in your favour after the price, and which are only favourites."
+job: money-and-investing
+thinking: high
+thinking_why: "It turns prices into odds, runs sums at three estimates and checks you are not fooling yourself about your edge. That takes careful judgement."
+
+headline: "Mispriced bet tester"
+subhead: "List the bets you are weighing and what each costs and pays. It turns the price into the odds the crowd gives, asks for your low, middle and high estimate, and runs the payoff sum at all three. You get each bet called near cinch, fair bet or no bet. It is a method of analysis, not personal financial advice."
+
+explain: |
+  A favourite at the track wins most often and is still a poor bet, because the crowd has already priced it. Businesses, deals and plans work the same way. Being likely to win is not enough. The odds must be better than the price says.
+
+  This skill tests that for each bet. It reads the price as a chance, asks you for a range for your own view, and multiplies chance by payoff at the low, middle and high estimate. It asks what gives you an edge over the crowd, and calls anything without one no bet. It expects very few near cinches and tells you if you are calling too many. It gives no buy or sell calls on any named security.
+
+when:
+  - You have several ideas and no clear way to tell which is worth backing.
+  - A bet feels very likely but you cannot say why the price is wrong.
+  - You keep acting on small edges and want a stricter bar.
+
+you_give:
+  - The bets you are weighing, with cost and payoff
+  - The price or odds, if there are any (optional)
+  - Why you think you know better (optional)
+you_get:
+  - What the price says about the crowd's chance
+  - Your range, with the facts behind it
+  - The payoff sum at low, middle and high
+  - Each bet called near cinch, fair bet or no bet, with what would change it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - List each bet with what goes in, what it pays and what you lose if it fails.
+  - Give the price if you have one. If not, say what the crowd seems to believe.
+  - Give a low, middle and high chance for your own view.
+  - Read the calls, then move your near cinches to the "Twenty-punch bet ranker".
+
+how_it_works:
+  - title: One line per bet
+    text: What goes in, what comes out if right and what you lose if wrong, with guesses marked.
+  - title: Reads the price as a chance
+    text: A bet that pays 1.25 for 1 is priced at about 80%. That is what the crowd believes.
+  - title: Asks for a range
+    text: A low, middle and high estimate with the facts behind each, so you see what you do not know.
+  - title: Runs the payoff sum
+    text: Chance times payoff at three estimates, so a very likely bet that is worth nothing shows up.
+  - title: Names your edge
+    text: Knowledge from work, patience or calm. No edge means no bet.
+  - title: Calls each bet
+    text: Near cinch, fair bet or no bet, and warns if too many are called near cinch.
+  - title: Names what would change the call
+    text: One fact for each bet that would move it up or down.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  BETS
+  1. <in> / <payoff if right> / <loss if wrong>
+
+  WHAT THE PRICE SAYS
+  <the crowd's chance>
+
+  YOUR RANGE
+  Low <%> because <fact>  Middle <%>  High <%> because <fact>
+
+  THE PAYOFF SUM
+  Low: <n>  Middle: <n>  High: <n>
+
+  YOUR EDGE
+  <edge or "no edge">
+
+  THE CALL
+  <NEAR CINCH / FAIR BET / NO BET>
+
+  WOULD CHANGE IF
+  <fact>
+
+  MISSING
+  <what would sharpen the sums>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The price
+    how: Give a number if you can, such as what a seller asks or what the crowd pays. The sum depends on it.
+  - what: Your range
+    how: Widen it if you are unsure. A narrow range with no basis fools you.
+  - what: The loss
+    how: State what you lose if you are wrong, in money, time or both.
+  - what: The bar
+    how: Say how large an edge you want before you call a near cinch. The default is a quarter on the payoff sum.
+
+judge:
+  - Every bet has a sum at three estimates.
+  - The price is turned into a chance.
+  - Every bet that is not no bet has a named edge.
+  - Few bets are called near cinch.
+  - Each loss is stated.
+
+test:
+  - Give it a likely winner at a short price. It should come out as no bet or a fair bet at best.
+  - Give it a bet where your low estimate still beats the price with an edge from your work. It should be a near cinch.
+  - Give it ten bets. Fewer than three should be near cinch.
+  - Run it twice. The calls should hold.
+
+improve:
+  - Keep a log of your calls and what happened. Adjust your bar from the record.
+  - Add the typical errors you make in your field to the edge step.
+  - Add a line for what you could do instead with the same money or time.
+  - Pair it with the "Circle of competence sorter" so your edge is tested first.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Turning prices into odds and running the sums is text work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Lets you rerun the payoff sum with your own figures."}
+  inputs:
+    - "A report from the Circle of competence sorter"
+    - "The price or odds for each bet"
+    - "A log of your past bets and how they ended"
+
+terms:
+  - term: Near cinch
+    meaning: A bet where even your low estimate beats the price by a clear margin, and you have a named edge.
+  - term: Payoff sum
+    meaning: The chance of winning times what you get, compared with what you risk.
+  - term: Edge
+    meaning: A reason your estimate is better than the crowd's, such as knowledge, patience or calm.

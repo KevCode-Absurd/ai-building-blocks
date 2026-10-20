@@ -1,0 +1,109 @@
+new_slug: yes-no-too-hard-call-writer
+name: Yes, no or too-hard call writer
+summary: Paste your four filter results. Get a yes, no or too-hard call, how big to go, and what would change it.
+job: think-and-decide
+thinking: high
+thinking_why: It must weigh four results together, compare with past options and size the commitment with care.
+headline: Yes, no or too-hard call writer
+subhead: Paste the results of the four filters and your walk-away price. It applies the three-basket rule, compares the choice with the best chances you have seen lately, sets how big a commitment fits, writes what would change the call and states how you will judge it later.
+explain: |-
+  After careful checks, people often act anyway because the choice is close, someone is pushing or they are tired of waiting. The three-basket rule helps: a choice is a yes, a no or too hard, and "too hard" is a fine answer. Most choices should land in no or too hard.
+
+  This skill takes the four filter results and applies the rule. It then compares the choice with the best chances you have seen in the last year, because a good choice that is only average is not worth acting on. If it is a clear yes, it says how big a commitment fits. It ends with what would change the call and how to judge the process later.
+when:
+  - You have run the filters and need to decide.
+  - A choice is close and you feel pushed to act.
+  - You want a rule for how much to commit when something is clearly good.
+you_give:
+  - The results of the four filters (understand it, quality, people, price)
+  - The walk-away price and the best alternative
+  - Your best chances from the last year (optional)
+you_get:
+  - "A call: yes, no or too hard, with the rule that gave it"
+  - How the choice compares with your best recent chances
+  - How big a commitment fits
+  - What would change the call, and how you will judge the process
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the four filter results and the plan with the walk-away price.
+  - List the best chances you saw in the last year, to compare.
+  - Save the call and its review date.
+how_it_works:
+  - title: Gather the four results
+    text: Lists the understand, quality, people and price results side by side.
+  - title: Apply the basket rule
+    text: Applies the yes, no or too-hard rule.
+  - title: Compare with the best chances
+    text: Compares the choice with the best recent chances.
+  - title: Size the commitment
+    text: Sets how big a commitment fits.
+  - title: Run the before-you-commit list
+    text: Checks timing, funding, exit and better uses.
+  - title: Say what would change the call
+    text: Lists observable facts that would flip the call.
+  - title: Plan the review
+    text: Sets how the process will be judged later.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  FOUR FILTERS
+  Understand: <basket> | Quality: <grade> | People: <verdict> | Price: <asked vs walk-away>
+
+  THE CALL
+  YES, NO or TOO HARD | rule used
+
+  VERSUS YOUR BEST CHANCES
+  <rank> of <n> | note
+
+  SIZE
+  <share of what is set aside> | limit: what you can lose
+
+  BEFORE YOU COMMIT
+  timing | funding | exit | better use | approvals
+
+  WHAT WOULD CHANGE IT
+  1. ... 2. ...
+
+  REVIEW
+  <date> | reasons in your words | expect
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: The chances you compare with
+    how: A list of real recent chances makes the comparison honest. With none, the call is weaker.
+  - what: What you can afford to lose
+    how: State it as a number. The size rule never goes past it.
+  - what: How strict you want to be
+    how: Say if you tend to act too fast. It will lean towards too hard.
+judge:
+  - The call follows from the four results.
+  - You would be willing to wait if it said too hard.
+  - The size would not ruin you if wrong.
+  - What would change the call is something you can see.
+test:
+  - Give it four passes and an average chance. It should not say yes.
+  - Give it one unknown filter. It should say too hard.
+  - Run it twice. The call should be the same.
+improve:
+  - Keep your list of best chances up to date.
+  - Save every call and compare with how it turned out.
+  - Use the review step as input for the Checklist upkeep planner.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - Outputs of the four filters
+    - A note on money you can afford to lose
+    - Your list of recent chances
+terms:
+  - term: Too hard
+    meaning: "A fine answer: it means you cannot judge this well, so you pass."
+  - term: Standout
+    meaning: A choice clearly better than almost anything you have seen lately.

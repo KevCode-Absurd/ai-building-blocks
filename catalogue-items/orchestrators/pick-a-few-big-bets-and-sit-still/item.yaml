@@ -1,0 +1,25 @@
+slug: pick-a-few-big-bets-and-sit-still
+name: "Pick a few big bets and sit still"
+summary: "List your bets. Get which have the odds in your favour, how big each should be and rules for holding."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [mispriced-bet-tester, lifetime-punch-card-bet-ranker, incentive-checker, room-for-error-plan-checker, sit-still-rule-writer]
+steps:
+  - {uses: mispriced-bet-tester, note: "For each idea, whether the odds really favour you or the price already says it"}
+  - {uses: lifetime-punch-card-bet-ranker, note: "A short ranked list with sizes. Reads the odds test from the step before"}
+  - {uses: incentive-checker, note: "Who gains from steering you, and where it pulls the wrong way. Reads the sized plan"}
+  - {uses: room-for-error-plan-checker, note: "Whether the concentrated plan survives a bad year. Reads the sized plan"}
+  - {uses: sit-still-rule-writer, note: "A one-page holding rule set. Reads the sized plan and the risk checks"}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, warren-buffett]
+credits:
+  - {title: "Poor Charlie's Almanack", by: "Charles T. Munger, ed. Peter D. Kaufman", used: "The order of the steps: mispriced bet tester, twenty-punch bet ranker, incentive checker, room for error plan checker, sit-still rule writer"}
+generated_from: intake/munger-invest-few-big-bets/skeleton.yaml

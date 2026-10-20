@@ -1,0 +1,67 @@
+# Workflow skeleton for the four-filter method in Poor Charlie's Almanack (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: munger-models-four-filters
+source:
+  title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+  by: "Charlie Munger"
+  kind: book
+  rights: ideas-only
+minds: [charlie-munger, warren-buffett]
+workflow:
+  slug: put-a-deal-hire-or-purchase-through-four-filters
+  name: "Put a deal, hire or purchase through four filters"
+  summary: "Describe a deal, hire or purchase. Get it tested on knowledge, staying power, people and price, then a clear call."
+  when: "you are about to commit to a deal, hire or purchase and want to test it before you do."
+  job: plan-strategy
+  level: intermediate
+steps:
+  - name: "Do you understand it?"
+    skill: circle-of-competence-mapper
+    job: analysis
+    from: "Chapter 2, the three baskets; Talk Two"
+    method: ["Split the topic into the parts you must understand", "Rate each part by what you have done, not what you feel", "Name the edge of what you know", "Put it in one of three baskets: in, learn first or pass"]
+    inputs: [question]
+    outputs: [audit_report]
+    note: "What you know, half know and don't, and a verdict. The first filter"
+  - name: "Will it last?"
+    skill: staying-power-checker
+    job: strategy
+    from: "Chapter 2, on lasting advantage; Talks Two and Three"
+    method: ["Name what protects it and give a fact for each", "Estimate how long a rival would need to copy it", "Check whether the protection is widening or narrowing", "Name what could replace it", "Ask who keeps any gain from new technology", "Grade it strong, fair or weak"]
+    inputs: [audit_report, question!]
+    outputs: [audit_report]
+    note: "What protects it for ten years, what could break it, and a grade. The second filter. Reads the first result"
+  - name: "Can you trust the people?"
+    skill: people-trust-checker
+    job: analysis
+    from: "Chapter 2, on able, trustworthy and owner-minded people; Talk Ten"
+    method: ["Test their record in a similar job with facts from outside", "Look at how they behaved when honesty cost them", "Check whether they did what they said", "Check whether they carry risk like an owner", "Ask people they did not choose as references"]
+    inputs: [audit_report]
+    outputs: [audit_report]
+    note: "How able, honest, reliable and owner-minded they are, and what to verify. The third filter"
+  - name: "Is the price right?"
+    skill: price-against-value-checker
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 2, price and value; Talk Two"
+    method: ["Estimate what you would get in an ordinary, bad and good case", "Set a walk-away price with room for error", "Compare with your best alternative use of the same money", "Count fees and sales commissions", "Check timing, funding and the way out"]
+    inputs: [audit_report]
+    outputs: [plan]
+    note: "A value range, a walk-away price and the alternative to beat. The fourth filter. Not personal financial advice"
+  - name: "Turn it upside down"
+    skill: failure-first-plan-check
+    job: strategy
+    task: plan-strategy
+    from: "Talk One; Talk Ten"
+    method: ["State the goal in one line", "Ask what would guarantee failure", "Check the plan against the standard ways of failing", "Mark anything that could end it"]
+    inputs: [plan]
+    outputs: [plan]
+    note: "The ways it could fail, with changes. Reads the price plan from the step before"
+  - name: "Make the call"
+    skill: yes-no-too-hard-call-writer
+    job: strategy
+    task: think-and-decide
+    from: "Chapter 2, yes, no and too tough; Talk Two"
+    method: ["Put the four results side by side", "Apply the rule: any no or unknown means no or too hard", "Compare with the best chances you saw in the last year", "Size the commitment to the clarity, within what you can lose", "Write what would change the call"]
+    inputs: [audit_report, plan]
+    outputs: [plan]
+    note: "A yes, no or too-hard call, the size of the commitment and what would change it"

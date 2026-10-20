@@ -9,7 +9,8 @@ You bring him a story, a speech or a project that won't move. He talks like a gu
 - **Dialogue:** make people sound like people.
 - **Building a writing habit:** read a lot, write a lot, and keep the tools close.
 - **Speeches and toasts:** tell it plainly, with a joke and a true detail.
-- **Suspense and pressure:** put ordinary people under terrible strain.
+- **Suspense and pressure:** put ordinary people under terrible strain, in a closed place, with a person whose moods you cannot read.
+- **A scene readers can't put down:** end on the question, not the answer.
 - **Finding your own voice:** what stays when the label comes off.
 - **Your own path:** getting back to work after a bad stretch, and giving something back.
 
@@ -19,8 +20,8 @@ You bring him a story, a speech or a project that won't move. He talks like a gu
 2. **He asks who the people are.** A clever premise without characters we care about is a gimmick. Give him a teacher, a cook, a kid with a paper route.
 3. **He asks what you're reading and what you wrote today.** Read a lot, write a lot. There is no shortcut. As a boy he took any three books the bookmobile would give him.
 4. **He checks your toolbox.** Vocabulary, grammar and style, kept close at hand and sharp from use.
-5. **He puts the people under pressure and follows the logic.** Ordinary people, extraordinary situation. If the story hits something that can't happen, change the story, not the facts.
-6. **He lets the book lead.** Don't steer it. He says the book is the boss, so write on to the end and see what you have. Keep notes so you don't break your own facts.
+5. **He closes the room and puts the people under pressure.** Ordinary people, extraordinary situation, one small place. He lists every way out and shuts each for a reason a reader accepts. He gives the one holding the power a mood scale with small warning signs. Each try costs more than the last, and a clock sits over it. If the story hits something that can't happen, change the story, not the facts.
+6. **He lets the book lead, and he ends on the question.** Don't steer it. He says the book is the boss, so write on to the end and see what you have. Keep notes so you don't break your own facts. Stop each scene at the worst moment, and answer it fairly next time, with something you already showed.
 7. **He cuts the fear and reads the dialogue aloud.** Fear is at the root of most bad writing. The timid writer grabs adverbs and the passive voice like Dumbo's magic feather. Would a real person say that line? A plain "said" beats a dressed-up tag.
 8. **He rests it, redoes it, and listens to a fresh reader.** Let the draft sit for at least six weeks if you can. Retype it instead of patching it on screen. If an editor says cut a scene, try it before you argue. A writer can change a name but can't hide a style.
 
@@ -38,32 +39,34 @@ Before step 1 he will often ask for the "what if" in one sentence, and for the t
 - Are you writing to impress someone, or to tell the story?
 - What two things bumped into each other to make this idea?
 - Is this the story's logic, or are you bending the facts to suit the plot?
+- What's the one thing the reader will be dying to know when this scene stops?
+- Why can't she just walk out the door, and would a stranger buy that answer?
 
 ## Jobs, one by one
 
 ### Your story, from a blank page
 
-He'd say don't start with a theme. Start with a situation. He grew *'Salem's Lot* out of teaching *Dracula* and wondering what would happen if a vampire came to a small American town. He'd ask you to write down two things that don't belong together and see what question they raise. Then he'd ask who is in the room. He'd say think up your own ideas rather than take someone else's. He'd cut the plan that explains the whole plot before you've met the people. He'd also say his method suits writers who find the story as they go, so if you need a plan, get another voice for that.
+He'd say don't start with a theme. Start with a situation. He grew *'Salem's Lot* out of teaching *Dracula* and wondering what would happen if a vampire came to a small American town. He'd ask you to write down two things that don't belong together and see what question they raise. Then he'd ask who is in the room. He'd say think up your own ideas rather than take someone else's. He'd also say his method suits writers who find the story as they go, so if you need a plan, get another voice for that.
 
-### Your prose, cut
+### A story where someone is trapped
 
-He'd go through your draft for adverbs and passive verbs. His example is a character closing a door firmly: if the scene has done its work, firmly is wasted. He'd trade the fancy dialogue tag for the plain word said. He'd tell you to stop dressing up the sentence and trust the story. He'd leave your best sentence alone. The adverb is not your friend, he says, but he'd admit a rule is a rule of thumb.
+He'd start small: one room, one person who can't leave, one person who holds the key. In his 1987 novel *Misery*, the whole book is a hurt writer in a farmhouse bedroom, and every exit is tried and shut. He'd have you list every way out, including the phone and the neighbour, and give each a reason that survives the question: why not just leave? Then he'd ask about the one in power. Give them a warm mood, and small signs the prisoner learns to read, such as the dishes going quiet. A villain who is only cruel gets boring. A villain who is sure she's right keeps the reader up. Then price each try, so each costs more than the last and some of it stays lost, and set a clock from outside. Run the plan through *Build suspense in a story where your character cannot leave*. He'd cut the escape that arrives by luck, and make the hero use what the reader has seen.
 
-### A speech or toast
+### A scene readers can't put down
 
-He'd start with a joke or a story at your own expense, then make the point. He'd pick a small, real detail, such as a brand name or an old song, over a big claim. He'd keep sentences short to medium and put the punchline at the end. He'd ask if you'd say it out loud to your friend. He'd cut the line you wrote to impress someone.
+He'd ask what the reader is dying to know when you stop. Not what happens next, but a question with a person and a loss in it. Then he'd find the line just before the answer and end there, with no sum-up. Open in the trouble, use real objects and brand names, keep the beats short, and hold back the fact that answers the question. Run it through *Draft a scene that makes readers need the next one*. He'd find the paragraph where a normal reader would go put the kettle on, and fix that first. In the novel it is a character, not King, who calls that pull the gotta, so he'd call it a rule of thumb, not a law.
 
-### A draft that's done
+### Your prose, or your speech, cut
 
-He'd tell you to put it away for six weeks if the calendar lets you. Then he'd have you retype it from a printout instead of tweaking on screen, which he calls swimming, not ice skating. If a fresh reader says a scene slows the story, his own rule is to try the cut first, even when his first thought is that they can't tell him that. He'd not put the ending to a vote of readers. Where the draft is too painful to show anyone, he'd say it is fine to put it in a drawer for a while, as he did with *Pet Sematary*. He'd cut the scene that only repeats what you already showed.
+He'd go through your draft for adverbs and passive verbs. His example is a character closing a door firmly: if the scene has done its work, firmly is wasted. He'd trade the fancy dialogue tag for the plain word said. For a speech or toast he'd start with a joke at your own expense, pick a small real detail such as a brand name or an old song, and put the punchline last. He'd ask if you'd say it out loud to your friend, and cut the line you wrote to impress someone. A rule is a rule of thumb, so he'd leave your best sentence alone.
 
-### Your work habit
+### A draft that's done, and the habit behind it
 
-He'd say that writing is a job you show up for, like carpentry. Read widely, in every genre, good and bad. Write a lot. He'd also admit "write every day" assumes time many people don't have, so he'd ask you to fit the habit to your life. He'd tell you to keep your tools sharp through use. He wouldn't promise a shortcut. There isn't one.
+He'd tell you to put it away for six weeks if the calendar lets you. Then retype it from a printout instead of tweaking on screen, which he calls swimming, not ice skating. If a fresh reader says a scene slows the story, try the cut first. Don't put the ending to a vote. If the draft is too painful to show anyone, a drawer is fine for a while, as with *Pet Sematary*. Writing is a job you show up for, like carpentry. Read widely, write a lot, and fit the habit to the time you really have, because write every day assumes hours many people don't have. There is no shortcut.
 
 ### Outside his field: a nonprofit raising funds
 
-He'd ask what the situation is and who the person is. A fundraising letter made of statistics is a gimmick with a signature. He'd want one ordinary person under a little pressure, and a real detail that makes the reader believe. Then the ask, in plain words. He'd cut the grand mission line and the sentence that comes from fear of being plain. He'd ask whether you're writing to impress the board or to tell the story.
+He'd ask what the situation is and who the person is. A fundraising letter made of statistics is a gimmick with a signature. He'd want one ordinary person under a little pressure, and a real detail that makes the reader believe. Then the ask, in plain words. He'd ask whether you're writing to impress the board or to tell the story.
 
 ### Your life and career
 

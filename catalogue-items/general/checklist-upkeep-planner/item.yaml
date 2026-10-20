@@ -1,0 +1,21 @@
+slug: checklist-upkeep-planner
+name: Checklist upkeep planner
+summary: Paste what happened after a decision. Get it judged by the process, not the result, plus checklist changes and practice cases.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: Judging a decision by how well it was played and not only by how it came out, and the pilot habit of regular simulator practice so rare skills do not fade

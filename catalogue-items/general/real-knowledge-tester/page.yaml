@@ -1,0 +1,110 @@
+new_slug: real-knowledge-tester
+name: Real knowledge tester
+summary: Name a topic and your claim. Get the hardest follow-up questions, which you can answer, and where you only sound right.
+job: think-and-decide
+thinking: high
+thinking_why: It must write hard questions and tell real knowledge from fluent talk, including your own.
+headline: Real knowledge tester
+subhead: Name a topic and say what you believe about it. It writes the six hardest follow-up questions an expert would ask, has you answer each from what you know, marks each answer as real, partial or only talk, and turns the gaps into questions to learn or ask.
+explain: |-
+  It is easy to know the words and not the subject. Someone who has memorised the talk can pass until the first hard question from the floor. There are two kinds of knowing: the kind from paying your dues, and the kind that sounds right.
+
+  This skill tests which kind you have. It writes six questions from the edges of the topic: exceptions, numbers, what changed, what the other side says, how it fails and how you know. You answer each without looking things up. It marks the answers and turns every gap into a question to learn or ask an adviser.
+when:
+  - You are about to give advice or make a bet on something you have mostly read about.
+  - You can explain a topic smoothly and wonder if you really understand it.
+  - Someone is selling you a topic you cannot test.
+you_give:
+  - The topic and your claim or plan about it
+  - The circle result (optional)
+  - Your own answers when asked
+you_get:
+  - Six hard questions an expert would ask
+  - Each answer marked real, partial or only talk
+  - A score and a verdict on the claim
+  - The gaps turned into questions to learn or ask
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - State your topic and claim. Answer each question from memory, with no lookups.
+  - Be honest where you are guessing. Guessing is useful to know.
+  - Take the gap questions to a book, a trial or an adviser you have checked.
+how_it_works:
+  - title: State the claim
+    text: Writes the topic and what you believe about it.
+  - title: Write six hard questions
+    text: Writes six questions an expert would ask from the edges.
+  - title: Collect your answers
+    text: Asks for an answer to each without lookups.
+  - title: Mark each answer
+    text: Marks each answer real, partial or only talk.
+  - title: Say where the knowledge came from
+    text: Notes the source behind each real answer.
+  - title: Score the claim
+    text: Gives a score and a verdict.
+  - title: Flag over-confidence
+    text: Points out where confidence ran ahead of evidence.
+  - title: Turn gaps into questions
+    text: Turns each gap into a question to learn or ask.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  CLAIM
+  <topic> | claim | what you plan to do
+
+  QUESTIONS AND ANSWERS
+  1. exception: <question> | answer | REAL, PARTIAL or TALK | source: did, studied, read or heard
+  2. number: ...
+  3. what changed: ...
+  4. best opponent: ...
+  5. how it fails: ...
+  6. how you know: ...
+
+  SCORE
+  <n> real | verdict
+
+  OVER-CONFIDENCE
+  <claims>
+
+  GAP QUESTIONS (by effect)
+  1. ... 2. ...
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: How honestly you answer
+    how: Guess out loud and mark it as a guess. A flagged guess is more useful than a smooth answer.
+  - what: The edge you point to
+    how: Name the part you think you know least. The questions then probe there first.
+  - what: The decision you will make
+    how: Say what you plan to do. It decides how hard the questions should push.
+judge:
+  - Each question is one an expert would actually ask.
+  - Your REAL answers each have a specific example or number.
+  - The verdict matches how you felt about the first hard question.
+  - The gap questions could be looked up this week.
+test:
+  - Use a topic you know well. You should score five or six.
+  - Use a topic you only read about. Expect some talk marks.
+  - Run it twice with the same answers. The marks should match.
+improve:
+  - Redo it after you have learned the gaps.
+  - Ask an expert in the field to answer the same six questions and compare.
+  - Keep the questions as an interview guide for advisers.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - The output of Circle of competence mapper
+    - Your notes on the topic
+    - A knowledgeable friend to check the questions
+terms:
+  - term: Real knowledge
+    meaning: Knowing a field well enough to answer the next hard question from the floor.
+  - term: Only talk
+    meaning: Smooth, correct-sounding words with no example, number or event behind them.

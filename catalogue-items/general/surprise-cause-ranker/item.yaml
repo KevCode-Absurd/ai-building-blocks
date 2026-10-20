@@ -1,0 +1,20 @@
+slug: surprise-cause-ranker
+name: Surprise cause ranker
+summary: Describe a result that surprised you. Get ranked likely causes, how to test each, and what the facts rule out.
+category: general
+type: skill
+role: make
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: Working out why an extreme result happened by running forward and backward, the four patterns that explain extreme success (one or two things pushed to an extreme, many factors adding up, excellence on many fronts, a big wave), and the habit of ruling out causes by fact

@@ -1,0 +1,90 @@
+new_slug: pick-a-few-big-bets-and-sit-still
+name: Pick a few big bets and sit still
+summary: List your bets. Get which have the odds in your favour, how big each should be and rules for holding.
+job: money-and-investing
+thinking: high
+thinking_why: It turns prices into odds, sizes bets against a survival limit and runs sums on your figures. Give it your strongest model.
+headline: Back the few bets that deserve it, then write the rules for leaving them alone
+subhead: List the bets you are weighing. It tests which ones have the odds in your favour after the price, ranks them as if you had a lifetime card of twenty punches, checks who profits from steering you and whether you survive a bad year. You get rules for holding. It is a method of analysis, not personal financial advice.
+explain: |
+  A likely winner is not a good bet once the price has counted its chance. Winners at the track bet rarely, and heavily, only when the odds are off. The same is true for money, time and effort. Most people spread thinly across many ideas, pay fees and tax for little, and sell the good ones in a bad month.
+
+  This workflow does five things in order. It tests each bet for odds in your favour after the price, using a low, middle and high estimate. It ranks the ideas as if you only had twenty big choices for life, keeps one to three and writes a reason for every no. It checks who is paid to steer you. It tests whether the concentrated plan survives a bad year. Last, it writes the rules for holding: facts to watch, fixed review dates, the cost of acting and the only reasons to change course. The ideas come from Charlie Munger's talks in Poor Charlie's Almanack. It gives no buy or sell calls on any named security.
+when:
+  - You have more ideas than you can back and no clear way to choose.
+  - You tend to spread thin, check often and change your mind with every move.
+  - Someone is selling you an idea with a big commission and a thick pack of paper.
+you_give:
+  - The bets you are weighing, with what goes in, what each pays and what you lose if it fails
+  - The price or odds for each one, if there are any
+  - Your range for how likely each is, and why you think so
+  - The pot, what must stay safe, your fees and tax rate (optional)
+you_get:
+  - Each bet called near cinch, fair bet or no bet, from the payoff sum at three estimates
+  - One to three picks ranked and sized, with a written no for the rest
+  - Who is paid to steer you and where it pulls the wrong way
+  - Whether the plan survives a bad year, with a score and fixes
+  - "A one-page rule set with facts to watch, review dates, the cost of acting and the only reasons to act"
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - List your bets, with what each costs and pays. Give a low, middle and high chance for each.
+  - It works step by step and saves each result. Print the last page and put it where you look at your picks.
+how_it_works:
+  - title: Tests the odds after the price
+    text: Turns each price into the chance the crowd gives, runs chance times payoff at three estimates and calls each bet near cinch, fair bet or no bet.
+  - title: Ranks on a twenty-punch card
+    text: Scores understanding, edge and survivability, compares each with your next best use, keeps one to three and sizes them.
+  - title: Checks who profits from steering you
+    text: Lists who is selling, how each is paid and where it pulls the wrong way, with a warning for big commissions.
+  - title: Checks you survive a bad year
+    text: Finds the point of ruin on the sized plan and fixes the size until you can stay in.
+  - title: Writes the rules for sitting still
+    text: Lists the facts that must stay true, fixed review dates, the cost of acting and the three reasons to change course.
+output_shape: |-
+  STEP 1: MISPRICED BET TESTER
+    Bet | price says <%> | your range <low/mid/high> | payoff sum | edge | call <NEAR CINCH / FAIR BET / NO BET>
+
+  STEP 2: TWENTY-PUNCH BET RANKER
+    Scored list: <idea> | understanding | edge | survives
+    Picks: <idea> | beats <alternative> | size | must not risk <what>
+    No list: <idea>: <reason>
+
+  STEP 3: INCENTIVE CHECKER
+    Who is paid for what: <person> | reward | what it encourages | where it pulls the wrong way
+
+  STEP 4: ROOM FOR ERROR PLAN CHECKER
+    Ruin point: <what> | Bad-year test: <result> | Score: <n>/100 | Fixes: <list>
+
+  STEP 5: SIT-STILL RULE WRITER
+    Facts that must stay true: <pick>: <facts> | Review dates: <dates>
+    Cost of acting: <sum> | Reasons to act: <three> | Cooling line: <line>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your range for each bet
+    how: Give a low, middle and high chance. A narrow range with no basis fools you.
+  - what: The loss
+    how: State what you lose if each bet fails. Sizing depends on it.
+  - what: The pot and what must stay safe
+    how: Give a rough figure and list what you must pay in the next two years.
+  - what: Your fees and tax
+    how: Give real figures. Tax rules differ by place and change, so check locally.
+judge:
+  - Every bet has a payoff sum at three estimates.
+  - One to three picks hold most of the weight, and each beats a named alternative.
+  - Every no has a reason.
+  - The bad-year test is run on the sized plan, not on the first list.
+  - The rules name the only reasons to act and the reasons that do not count.
+  - Nothing says to buy or sell a named security.
+test:
+  - Give it ten ideas of mixed quality. At most three should survive step 2.
+  - Give it a likely winner at a short price. It should not come out as a near cinch.
+  - Give it an exciting idea with a risk of ruin. Its size should be capped.
+  - Run it twice. The top pick and the rules should hold.
+improve:
+  - Keep a log of your calls and what happened, and adjust your bar from the record.
+  - Review the no list each year and retest ideas you have since learned more about.
+  - Put the review dates in your calendar as repeating events.
+  - Run the "Circle of competence sorter" on each pick before you start, so your edge is tested first.

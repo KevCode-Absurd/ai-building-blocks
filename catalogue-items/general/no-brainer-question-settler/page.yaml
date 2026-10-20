@@ -1,0 +1,108 @@
+new_slug: no-brainer-question-settler
+name: No-brainer question settler
+summary: Describe a hard problem. Get the obvious big questions settled first, a rough sum for your target, and a smaller problem left.
+job: think-and-decide
+thinking: medium
+thinking_why: It has to tell which questions are truly obvious and do simple sums, but the steps are fixed.
+headline: No-brainer question settler
+subhead: Describe the problem or goal and what a good result looks like. It separates the big questions that have an obvious answer from the ones that do not, settles the obvious ones with a reason, runs a rough sum on your target, and hands back a smaller question to work on.
+explain: |-
+  A hard problem usually looks hard because many questions are tangled together. Some of them have answers that almost anyone sensible would give. If you settle those first, what is left is smaller and clearer.
+
+  This skill lists the big questions, settles the obvious ones with a written reason, and works the target backward with simple arithmetic. If the sums say a path cannot reach the goal, that path is crossed off. You get the settled answers, the sums, and a sharper question for the next step.
+when:
+  - A problem feels too big and you do not know where to start.
+  - You have a target (revenue, users, savings) and have not checked what it would take.
+  - Several people argue about details while a basic question is still open.
+you_give:
+  - The problem or goal, with the result you want and a date
+  - What you already know or have decided (optional)
+  - "Numbers you have: prices, costs, audience size, hours (optional)"
+you_get:
+  - The big questions, split into settled and still open
+  - A rough sum showing what your target needs
+  - The paths the sums rule out
+  - A smaller question to carry into the next step
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the problem, the result you want and any numbers you have.
+  - Read the settled list first. Argue with any answer you think is not obvious.
+  - Take the smaller question into the next step, such as the many-field model checklist.
+how_it_works:
+  - title: Write the target
+    text: Puts the goal in one line with a number and a date.
+  - title: List the big questions
+    text: Lists the five to eight questions the whole problem rests on.
+  - title: Sort by how obvious
+    text: Splits them into questions with an obvious answer and ones that are truly open.
+  - title: Settle the obvious ones
+    text: Writes each settled answer with its reason.
+  - title: Run the sum
+    text: Works the target backward into units, price and share with plain arithmetic.
+  - title: Cross off dead paths
+    text: Removes the paths the sums rule out.
+  - title: Restate the problem
+    text: Writes the smaller question that is left to solve.
+  - title: Mark the soft spots
+    text: Flags settled answers that rest on a guess.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  TARGET
+  <result, number, date>
+
+  SETTLED
+  <question> | answer | reason | how sure | what would reverse it
+
+  THE SUM
+  <target> / <price> = <volume> | each factor: given or assumed | verdict: easy, hard, unrealistic
+
+  PATHS CROSSED OFF
+  <path> | the number that rules it out
+
+  WHAT IS LEFT
+  Given <settled answers>, the open question is: <1 to 3 questions>
+
+  SOFT SPOTS
+  <answer resting on a guess> | check
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: The target number
+    how: Give a real number and date. A vague goal makes the sum vague, and the check on the path is then weak.
+  - what: How strict you are about "obvious"
+    how: Tell it to be stricter if you have been wrong before. It will move more questions to the open list.
+  - what: Numbers you can add
+    how: Prices, costs and audience size turn a guess in the sum into a given and make the verdict firmer.
+judge:
+  - Each settled answer has a reason you can check in a minute.
+  - The sum can be redone by hand from the factors shown.
+  - The open list is short and sorted by what could change the result.
+  - Nothing is settled that needs a fact you never gave.
+test:
+  - Use a goal you once set and missed. See if the sum would have shown the gap in advance.
+  - Give it a goal with a clearly impossible number. It should cross off the path and say why.
+  - Run it twice on the same input. The settled list should match, even if the words differ.
+improve:
+  - Keep a list of the obvious answers in your field and paste it in so they are settled the same way each time.
+  - Add your usual prices and costs so the sum starts from real numbers.
+  - Run it again after a month on the open questions only.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - Last year's sales, costs or hours for the sum
+    - A list of decisions already made
+    - Notes from a past attempt at the same goal
+terms:
+  - term: Back-of-envelope sum
+    meaning: A rough calculation done in round numbers to see if a target is even possible.
+  - term: Settled question
+    meaning: A big question with an answer almost anyone sensible would give once they have the facts.

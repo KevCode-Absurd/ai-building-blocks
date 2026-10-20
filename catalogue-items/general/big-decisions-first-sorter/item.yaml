@@ -1,0 +1,17 @@
+slug: big-decisions-first-sorter
+name: "Big decisions first sorter"
+summary: "List the open questions on a plan. Get the big ones your goal already settles, and the hard ones left."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)", by: "Charles T. Munger, edited by Peter D. Kaufman", used: "The first helpful notion in the Practical Thought About Practical Thought talk: simplify a problem by settling the big obvious questions first, so the harder ones shrink"}

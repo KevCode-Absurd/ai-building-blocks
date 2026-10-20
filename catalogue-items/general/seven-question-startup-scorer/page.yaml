@@ -1,0 +1,111 @@
+new_slug: seven-question-startup-scorer
+name: "Seven-question startup scorer"
+summary: "Paste your plan and earlier checks. Get a score on seven make-or-break questions and the one to fix first."
+job: test-an-idea
+thinking: high
+thinking_why: "It weighs seven questions against facts and has to catch a fatal gap, which takes careful reasoning."
+
+headline: "Score your plan on the seven questions that decide if it works"
+subhead: "Give it your idea and any earlier checks. It scores engineering, timing, monopoly, people, distribution, durability and secret against clear pass lines, marks what you have not proved, and tells you which weak spot to fix first."
+
+explain: |
+  Most failed plans were not weak everywhere. They were strong on the product and silent on one thing, such as how to reach buyers, or why now. One missing answer is enough to sink them.
+
+  This skill asks the seven questions in turn and gives each a score from a fixed rule. It will not let a strong score on one hide a fatal gap on another. It ends with a go, fix or stop call and the one task that matters most.
+
+when:
+  - "You have an idea and need one clear call on whether to go ahead."
+  - "You are strong on the product but unsure about the rest of the plan."
+  - "You have run other checks and want them pulled into one score."
+
+you_give:
+  - "Your idea or plan"
+  - "Earlier checks, if you have them"
+  - "Who is on the team and how long they have worked together (optional)"
+you_get:
+  - "A score on each of seven questions"
+  - "What is missing for each"
+  - "A go, fix or stop call"
+  - "The weakest question and the first task to fix it"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your plan and any earlier checks. Say who is on the team and whether they work full time."
+  - "Answer its questions for any gap. A fact you do not have is marked missing, not guessed."
+  - "Do the first fix it names before you spend more on the idea, then run the score again."
+
+how_it_works:
+  - title: "Gathers the facts"
+    text: "Pulls what the plan and checks say, and lists gaps."
+  - title: "Scores engineering and monopoly"
+    text: "Checks the size of your edge and the size of your first market."
+  - title: "Scores timing and secret"
+    text: "Looks for a named change and a belief few share."
+  - title: "Scores people and distribution"
+    text: "Checks the team and the way you reach customers."
+  - title: "Scores durability"
+    text: "Checks whether your position holds in ten years."
+  - title: "Makes the call"
+    text: "Go, fix or stop, with the first task."
+
+output_shape: |
+  ENGINEERING | Score: <0-2> | Fact: <> | Missing: <>
+  TIMING | Score: <0-2> | Fact: <> | Missing: <>
+  MONOPOLY | Score: <0-2> | Fact: <> | Missing: <>
+  PEOPLE | Score: <0-2> | Fact: <> | Missing: <>
+  DISTRIBUTION | Score: <0-2> | Fact: <> | Missing: <>
+  DURABILITY | Score: <0-2> | Fact: <> | Missing: <>
+  SECRET | Score: <0-2> | Fact: <> | Missing: <>
+
+  TOTAL
+  <n> / 14
+
+  THE CALL
+  <go / fix / stop> because <reason>
+
+  FIRST FIX
+  <weakest question> | Task this week: <one task>
+
+  MISSING
+  <facts that would change a score>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Earlier checks"
+    how: "Paste the output of a market, ten-times or durability check. It uses their findings in place of asking again."
+  - what: "Your team"
+    how: "Give each person's role, hours and how long you have worked together."
+  - what: "Your cut-offs"
+    how: "Say what total you would call a go. It uses your line."
+
+judge:
+  - "Every score is tied to a fact or says MISSING."
+  - "A question with no facts scores 0."
+  - "The first fix is a task for this week."
+  - "A weak monopoly or distribution score blocks a go."
+
+test:
+  - "Run it on a plan with a strong product and no sales route. It should not give a go."
+  - "Run it on a plan whose timing is \"the market is big\". It should score timing 0."
+  - "Run it twice on the same input. The total should stay within one point."
+
+improve:
+  - "Run the market, ten-times and durability checks first, so the scores rest on evidence."
+  - "Add team history, such as years worked together and who is full time."
+  - "Re-run after the first fix and compare the totals."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Scoring against fixed rules and flagging gaps is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Earlier check results"
+    - "Team history and hours"
+    - "Your sales route and its numbers"
+
+terms:
+  - term: "Timing"
+    meaning: "Why this is the right moment to start: a change that made it possible or wanted."
+  - term: "Distribution"
+    meaning: "Everything it takes to get the product in front of buyers and sold."

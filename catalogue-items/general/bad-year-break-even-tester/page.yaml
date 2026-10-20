@@ -1,0 +1,126 @@
+new_slug: bad-year-break-even-tester
+name: "Bad-year break-even tester"
+summary: "Paste a business and its worst risks. Get how big a loss one year can bring before it stops earning."
+job: money-and-investing
+thinking: high
+thinking_why: "It chooses the right sum for the kind of business, runs it and judges survival. Mixed-up figures give a false comfort, so use your strongest model."
+
+headline: "Bad-year break-even tester"
+subhead: "Paste a business and the thing you worry about. It lists the events that could hurt it, rates how likely each is from evidence, then works out in plain sums how big a loss one year could bring before the business stops earning, and whether it would survive that year. It is a method of analysis, not personal financial advice."
+
+explain: |
+  When people are afraid of a business, they ask whether something bad will happen. A better question is how bad it would have to be before the business hurt you. Often the answer is far beyond anything likely, and sometimes it is far closer than anyone admits.
+
+  This skill puts the worry into a sum. For a business with money at risk, such as loans or customer debts, it finds the share that could go bad, and the share lost on each, before the year's profit is gone. For a business with fixed costs, it finds how far sales can fall. Then it checks that the business could pay its bills in that year, and names the risks no one can price. It gives no buy or sell calls.
+
+when:
+  - Everyone is worried about a business and you want to size the worry.
+  - You think a business is safe and want to test that against a bad year.
+  - You are comparing two businesses and want to know which can take a harder year.
+
+you_give:
+  - What the business does and its yearly profit before tax
+  - What it has at risk, such as loans, customer debts, stock or property
+  - Fixed and variable costs, cash and debts due this year (optional)
+  - The worry you want to test (optional)
+you_get:
+  - A list of events with how likely each is and why
+  - A break-even sum for the worst likely event
+  - A survival check against cash and debts
+  - A list of risks that cannot be priced
+  - A call of holds, thin or fails, and the fact to watch
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the business, its yearly profit and what it has at risk.
+  - Say the worry in a sentence, or leave it and let the skill list the events.
+  - Check that the likelihood marks match what you know has happened in the field.
+  - Take the call to "Price versus value gap judge" or your own decision.
+
+how_it_works:
+  - title: Fixes the cushion
+    text: Writes the normal yearly profit after the usual losses for that kind of business.
+  - title: Lists the events
+    text: Names three to five specific ways a year could go wrong, in the business's own terms.
+  - title: Rates the odds
+    text: Uses what has happened to this business and its rivals, not a feeling.
+  - title: Does the break-even sum
+    text: Finds the loss share, or the sales fall, at which the year's profit reaches zero.
+  - title: Compares sum and event
+    text: Asks whether the worst likely event gets near that point.
+  - title: Checks survival
+    text: Sets cash and undrawn credit against debts due and fixed costs in a zero-profit year.
+  - title: Names the unpriceable
+    text: Lists what cannot be ruled out and how big the hit would be.
+  - title: Calls it
+    text: Holds, thin or fails, with the one fact to watch.
+
+output_shape: |
+  EARNINGS BASE
+  <pre-tax profit after usual losses>
+
+  EVENTS
+  <event> | LIKELY / POSSIBLE / UNLIKELY / UNKNOWN | evidence: <...>
+
+  BREAK-EVEN SUM (worst likely event)
+  <figures> = <break-even point>
+  Event sized at <...>: <below / near / beyond>
+
+  SURVIVAL
+  Cash + credit <n> vs debts due + fixed costs <n>: <SURVIVES / TIGHT / FAILS>
+
+  CANNOT BE RULED OUT
+  <event> | hit = <% of a year's profit> | <can you live with it>
+
+  CALL
+  <holds / thin / fails>. Watch: <fact>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The worry
+    how: Say it plainly, such as "if building prices fall by a third". It becomes the event the sum is built around.
+  - what: What is at risk
+    how: Give the real amounts. A break-even share needs the total at risk, not a vague guess.
+  - what: How bad "bad" is
+    how: Tell it the worst year you can recall in the field and it will use it as the test event.
+
+judge:
+  - The earnings base is after usual losses and shows its figure.
+  - Every event has a likelihood and a reason.
+  - The break-even sum shows the numbers used.
+  - Survival is checked against cash and debts due.
+  - Nothing says to buy or sell a named security.
+
+test:
+  - Give it a lender with 3% of profit headroom and a worry about 10% bad loans. The sum should show the break-even share and compare it.
+  - Give it a shop with high fixed costs. It should use the sales-fall sum.
+  - Leave out profit. It should stop and ask for it.
+  - Give it a business with large debts due next month. The survival check should be tight or fail, even if the sum looks fine.
+
+improve:
+  - Add the worst years of the field in the past twenty years to your notes and use them as the test events.
+  - Re-run it when debts or cash change.
+  - Run the same events against a rival and compare how much room each has.
+  - Pair it with "Business value range calculator" so the low case reflects a real bad year.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Lets you change the loss share or sales fall and see the year's profit move."}
+    - {name: "Any good chat AI", why: "Choosing the right sum and doing it step by step is work a strong chat AI does well with this skill."}
+  inputs:
+    - "The company's income statement and balance sheet"
+    - "A list of the worst years in its field and what happened to rivals"
+    - "Notes on loans, customer debts or contracts that carry the most risk"
+
+terms:
+  - term: Break-even
+    meaning: The point where the year's profit is exactly zero, with neither gain nor loss.
+  - term: Contribution margin
+    meaning: The share of each sale left after the costs that rise and fall with sales.
+  - term: Amount at risk
+    meaning: The total of loans, customer debts, stock or property that a bad event could cut in value.

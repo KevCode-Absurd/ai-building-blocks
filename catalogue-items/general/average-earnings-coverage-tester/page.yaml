@@ -1,0 +1,129 @@
+new_slug: average-earnings-coverage-tester
+name: "Average earnings coverage tester"
+summary: "Paste a borrower's debts and earnings. Get cover against all charges, in a bad year too, and a pass or fail."
+job: money-and-investing
+thinking: high
+thinking_why: "It does sums across several years, picks a bar by how steady the business is and must not guess a missing year. That needs careful reasoning."
+
+headline: "Find out if a borrower earns enough to pay everything it owes, even in a bad year"
+subhead: "Paste the borrower's debts and several years of earnings. It totals every fixed charge, averages earnings over about seven years, sets the cover against a bar that fits the business and flags a weak trend, a loss year or a cheap rate that cannot last. You get a pass, borderline or fail."
+
+explain: |
+  A lender gets a fixed payment and none of the upside. The only question that matters is whether the borrower can keep paying when business is poor. A single good year says very little. A pledge of property says little too, because pledged assets lose value just when they are needed.
+
+  This skill lists every claim on the borrower, adds up all the yearly charges and divides average earnings by that total. It shows the average with loss years left in and with loss years set to zero. The bar goes up as the business gets less steady, and goes up again for a preferred share. It also redoes the sum at the rate the borrower would pay to refinance. It is a method of analysis, not financial advice, and it never says buy or sell.
+
+when:
+  - You are about to lend to a business and want a test beyond "they seem solid".
+  - You are looking at a bond, note or preferred share and want to see how well earnings cover everything the company owes.
+  - A borrower asks you to accept a high rate in return for thin cover.
+
+you_give:
+  - The claim you are testing, with rank, amount, rate, due date and price
+  - Seven or more years of earnings, or income statements
+  - The borrower's other debts and lease payments
+  - A first label from "Investment or speculation sorter" (optional)
+you_get:
+  - A table of every fixed claim and the total yearly charge
+  - Average cover on two bases, with the bar and why it was chosen
+  - Notes on the trend, worst year, latest year and refinancing rate
+  - How far earnings can fall before cover reaches 1.0
+  - A pass, borderline or fail with the facts that would change it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the claim and the borrower's statements. Add every other debt and lease you know of.
+  - Say whether your earnings figures are before or after income tax.
+  - Read the borderline and fail reasons first. Ask what would change the call.
+  - Take the result to "Equity cushion ratio tester" for a second test.
+
+how_it_works:
+  - title: Tests the whole borrower
+    text: Looks at its ability to pay everything, not at the property pledged to you.
+  - title: Totals all charges
+    text: Adds bank debt, bonds, notes, leases and any preferred dividend, and refuses the figure that flatters a junior claim.
+  - title: Averages over seven years
+    text: Shows the average with loss years in and with them set to zero.
+  - title: Sets the bar
+    text: Raises it for less steady businesses and again for preferred shares.
+  - title: Reads the shape
+    text: Looks at the trend, the worst year and the latest year.
+  - title: Redoes the sum at a new rate
+    text: Checks cover at the rate the borrower would pay to refinance.
+  - title: Shows the fall it can take
+    text: Says how far earnings can drop before charges eat them all.
+
+output_shape: |
+  THE CLAIM
+  <borrower> | <rank> | <amount> | <rate> | <due> | Price: <price>
+
+  ALL FIXED CLAIMS
+  <claim> | <rank> | <amount> | <yearly charge>
+  TOTAL CHARGES: <amount>
+
+  EARNINGS BY YEAR
+  <year>: <earnings> (basis: before or after tax)
+  Average, real values: <amount> | Average, loss years at zero: <amount>
+
+  COVER
+  Straight: <x times> | Loss years at zero: <x times> | Bar: <x times> because <business steadiness>
+  Refinancing rate: <rate> gives <x times>
+  Earnings can fall: <percent> before cover reaches 1.0
+
+  SHAPE
+  Trend: <up / flat / down> | Worst year: <figure> | Latest year: <figure>
+
+  CALL
+  <PASS / BORDERLINE / FAIL> | Why: <reason> | What would change it: <facts>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Before or after tax
+    how: Say which one your earnings figures are. After tax is the stricter test.
+  - what: Your own bar
+    how: Give a bar if you have one, such as a lender's rule. It replaces the starting bar and the reason is shown.
+  - what: Lease payments
+    how: Add all required lease or rent payments. They are paid like interest and belong in the charges.
+  - what: A longer window
+    how: Give ten years if the last seven include a deep slump. A longer record shows more.
+
+judge:
+  - Every fixed claim is in the table and the total uses all of them.
+  - Cover is shown on two bases and the bar has a stated reason.
+  - It never says buy or sell and never names a price to pay.
+  - Gaps are marked as missing, and no year of earnings is invented.
+  - A pass that depends on a low rate is flagged.
+
+test:
+  - Run it on a small business loan you know well and check the cover matches your own sum.
+  - Give it a borrower with one loss year and see that both averages appear.
+  - Give it a preferred share and check the bar rises and the dividend is added to the charges.
+  - Run it twice on the same facts. The call should not change.
+
+improve:
+  - Add your own bars by type of business, from loans you have made.
+  - Keep a log of past calls and what happened, and paste it in as a record.
+  - Pair it with "Equity cushion ratio tester" and "Lender safety verdict writer".
+  - Add a step that checks the borrower's accounts for padded earnings with "Earnings padding detector".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The sums and the judgment are text work. It cannot fetch statements for you."}
+    - {name: "A spreadsheet", why: "Handy for checking the seven-year average and the totals."}
+    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
+  inputs:
+    - "Seven to ten years of the borrower's income statements"
+    - "The loan or bond terms, and a list of all other debts and leases"
+
+terms:
+  - term: Coverage
+    meaning: How many times average earnings cover the yearly charges on all the borrower's debts. A cover of 2 means earnings are twice what must be paid.
+  - term: Fixed charges
+    meaning: Payments the borrower must make whether or not it earns a profit, such as interest and required lease payments.
+  - term: Preferred share
+    meaning: A share that is paid its dividend before ordinary shares but after all debts, and whose dividend can be skipped.

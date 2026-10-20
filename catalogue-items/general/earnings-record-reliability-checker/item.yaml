@@ -1,0 +1,18 @@
+slug: earnings-record-reliability-checker
+name: "Earnings record reliability checker"
+summary: "Paste cleaned earnings by year and a note on the business. Get whether the record can guide the future, and how much."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: source_text, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "The difference between a steady average and an average of unrelated figures; numbers backed by the nature of the business; reasons to reject the record such as temporary profits, peak output and a changed industry position; deficits as a question of survival; trend as a clue, not a forecast"}

@@ -1,0 +1,19 @@
+slug: business-value-range-calculator
+name: "Business value range calculator"
+summary: "Paste a business's owner earnings. Get a no-growth floor value and low, middle and high growth values, with what each assumes."
+category: general
+type: skill
+role: make
+job: analysis
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [warren-buffett]
+credits:
+  - {title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "Valuing a business as the owner earnings it will give over its life discounted to today, using a safe long-term rate rounded up when rates are low, a two-stage fast and slow growth sum, a no-growth floor, several growth cases, and passing when cash cannot be estimated with confidence"}
+  - {title: "The Theory of Investment Value", by: "John Burr Williams", used: "The idea that a business is worth the cash it will pay out over its life, discounted back to today (as described in Hagstrom's book)"}

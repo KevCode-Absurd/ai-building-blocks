@@ -1,0 +1,22 @@
+slug: staying-power-checker
+name: Staying power checker
+summary: Describe what you may buy, join or back. Get what protects it for ten years, what could break it, and a grade.
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+  - warren-buffett
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: The idea of a protective barrier around a business that is kept wide, the long-run force of competitive destruction, the test of whether a technology gain stays with the owner or flows to buyers, and the sign of untapped pricing power

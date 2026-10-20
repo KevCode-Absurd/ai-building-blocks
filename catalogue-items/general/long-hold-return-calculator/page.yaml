@@ -1,0 +1,130 @@
+new_slug: long-hold-return-calculator
+name: "Long-hold return calculator"
+summary: "Paste what you know about a business and its price. Get the long-run sums and a keep, wait or pass call."
+job: money-and-investing
+thinking: high
+thinking_why: "It runs several sums, keeps the cases straight and weighs them against your real alternative. Errors in the arithmetic would change the call."
+
+headline: "Long-hold return calculator"
+subhead: "Paste your findings on a business and any figures you have. It shows how the business's own return caps what an owner earns, how much the entry price moves it, and what tax timing costs. You get a keep, wait or pass call against your next best choice. It is a method of analysis, not personal financial advice."
+
+explain: |
+  Over many years, an owner's return stays close to what the business earns on the money put into it. A weak business bought at a bargain price is still a weak hold. A strong one bought a bit dear is still a strong one. And paying tax every year instead of once at the end can quietly take a large slice.
+
+  This skill runs those sums with your figures. It writes a low, middle and high case for the business return, shows what a long hold does at each, adds the effect of paying 30% under or over your estimate of worth, and compares tax paid yearly with tax paid once. It then sets a real alternative as the bar and calls it keep, wait or pass. It never says to buy or sell a named security and marks missing figures.
+
+when:
+  - You have studied a business and want to know what a long hold could actually earn.
+  - You are torn between a great business at a fair price and a poor one at a bargain price.
+  - You want to see what trading often costs against holding.
+
+you_give:
+  - Your findings on the business
+  - The return it earns on the money put in, and for how many years
+  - Your estimate of its worth and the price you would pay (optional)
+  - Your tax rate, holding years and next best choice (optional)
+you_get:
+  - A low, middle and high case for the business return
+  - The cap sum, the price grid and the tax sum with your figures
+  - Your real alternative set as the bar
+  - A keep, wait or pass call and the figures that would change it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your findings and the figures you have. Say plainly which figures you are unsure about.
+  - Add your tax rate and how long you would hold.
+  - Name the best other use of the same money that you know well.
+  - Read the call, then check which figures it leans on.
+
+how_it_works:
+  - title: Three cases for the business
+    text: Low, middle and high return on the money put in, from at least five years of record.
+  - title: The cap sum
+    text: Shows a long hold at a weak return and a strong one so you see the gap the business creates.
+  - title: The price grid
+    text: Weak and cheap, weak and dear, strong and cheap, strong and dear, each with the yearly effect.
+  - title: The tax sum
+    text: Compares paying tax yearly with paying once at the end, using your rate and years.
+  - title: Sets a real alternative
+    text: Uses your actual next best use of the money, not a formula for cost of capital.
+  - title: Calls keep, wait or pass
+    text: Keep needs the middle case to beat the bar with room. Wait names the entry price that would work.
+  - title: Marks what is missing
+    text: Any figure it had to guess is marked and listed, and the call waits if it matters.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  BUSINESS RETURN
+  Low: <%>  Middle: <%>  High: <%>  Record: <years>
+
+  THE CAP SUM
+  <years> at <low>: 1 becomes <n>
+  <years> at <high>: 1 becomes <n>
+
+  THE PRICE GRID
+  Weak and cheap: <%>/yr   Weak and dear: <%>/yr
+  Strong and cheap: <%>/yr   Strong and dear: <%>/yr
+
+  THE TAX SUM
+  Tax once at the end: <%>/yr   Tax each year: <%>/yr
+  Note: check local rules.
+
+  THE ALTERNATIVE
+  <choice> returning <%>, bar = <%>
+
+  THE CALL
+  <KEEP / WAIT / PASS>: <two-line reason>
+  Changes if: <figures>
+
+  MISSING
+  <figures that were guessed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Years of record
+    how: Give at least five years of the business's return. One year can mislead.
+  - what: Your estimate of worth
+    how: State how you reached it. The price grid depends on it.
+  - what: Your tax rate and rules
+    how: Give your rate and say if gains are taxed when sold or each year. The tax sum changes.
+  - what: The alternative
+    how: Name a real choice you know, such as repaying a loan, instead of a rate.
+
+judge:
+  - Each sum shows its numbers.
+  - The low case is run and the call is tested against it.
+  - The alternative is a real choice.
+  - Tax inputs come from you or are marked missing.
+  - The call says what would change it.
+
+test:
+  - Give it a business with a 5% return and a 15% return. The cap sums should show a large gap.
+  - Give it a cheap weak business. The grid should show price does not rescue it.
+  - Leave out the business return. It should refuse to give a call.
+  - Run it twice with the same figures. The sums should match.
+
+improve:
+  - Add your local tax rules to the tax step.
+  - Keep a record of your estimates and compare them with later results.
+  - Add the cost of your time as part of the alternative if the choice needs it.
+  - Pair it with the "Who-keeps-the-gain tester" so the business return is believable.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Lets you rerun the compounding with your own years and rates and check every line."}
+    - {name: "Any good chat AI", why: "It can lay out the cases and weigh them, but check the arithmetic against a calculator."}
+  inputs:
+    - "A report from the Who-keeps-the-gain tester"
+    - "Five or more years of the business's return on invested money"
+    - "Your tax rate and holding years"
+
+terms:
+  - term: Return on capital
+    meaning: Profit in a year divided by the money invested in the business to earn it.
+  - term: Entry price
+    meaning: What you pay for your share compared with your own estimate of what it is worth.
+  - term: Next best choice
+    meaning: The best other use of the same money that you understand well, used as the bar to clear.

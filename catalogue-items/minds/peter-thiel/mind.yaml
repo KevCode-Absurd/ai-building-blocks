@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Peter Thiel on Zero to One (interview by Adam Grant, October 2014)", by: "Knowledge at Wharton", url: "https://knowledge.wharton.upenn.edu/?p=14439", kind: own-words}
   - {n: 6, title: "How Peter Thiel teaches Stanford students to create billion-dollar monopolies, in 3 quotes (October 2014)", by: "Gregory Ferenstein, VentureBeat", url: "https://venturebeat.com/business/how-peter-thiel-teaches-stanford-students-to-create-billion-dollar-monopolies-in-3-quotes", kind: secondary}
   - {n: 7, title: "The Optimistic Thought Experiment (Policy Review, February and March 2008)", by: "Peter Thiel, Hoover Institution", url: "https://www.hoover.org/research/optimistic-thought-experiment", kind: own-words}
+  - {n: 8, title: "Zero to One: Notes on Startups, or How to Build the Future (2014)", by: "Peter Thiel with Blake Masters", kind: own-words}
 tests:
   - {kind: use, prompt: "Here is my startup idea: a meal kit for people with food allergies. Write me the one contrarian truth it rests on, and the small market it should own first."}
   - {kind: use, prompt: "Rewrite this one-line pitch so it says what we own instead of who we compete with: 'We're like Canva, but cheaper.'"}

@@ -1,0 +1,126 @@
+new_slug: business-value-range-calculator
+name: "Business value range calculator"
+summary: "Paste a business's owner earnings. Get a no-growth floor value and low, middle and high growth values, with what each assumes."
+job: money-and-investing
+thinking: high
+thinking_why: "It runs a multi-year sum for several cases, and a slip in the arithmetic or the rate changes the answer a lot. Give it your strongest model."
+
+headline: "Business value range calculator"
+subhead: "Paste a business's yearly owner earnings. It picks a safe rate, works out a floor value that assumes no growth, then builds low, middle and high growth cases with a fast stage and a slow stage, and says what each one needs to be true. It is a method of analysis, not personal financial advice."
+
+explain: |
+  A business is worth the cash an owner can take out of it over its life, brought back to today's money. The idea is simple. The work is in being honest that nobody knows the future cash.
+
+  So this skill does not give one number. It first asks whether the cash can be estimated at all, and if not, says the business is too hard to value. Otherwise it uses a safe long-term rate, rounded up when rates are low, and works out a floor that assumes no growth. Then it builds three growth cases, each with a fast stage and a slow stage, and writes down what has to be true for each. A second run at a higher rate shows how much the answer leans on the rate. It gives no buy or sell calls.
+
+when:
+  - You know a business's owner earnings and want to know what it is worth to an owner.
+  - You have been given a price and want to see what growth it asks you to believe.
+  - You want to see how much of a value is the business as it is and how much is hope.
+
+you_give:
+  - Low, middle and high owner earnings, with the growth history if you have it
+  - The long-term bond yield today (optional)
+  - A price or stake value to place on the table (optional)
+you_get:
+  - A call on whether the cash can be estimated
+  - The rate used and why
+  - A no-growth floor value
+  - Low, middle and high values with the growth each assumes
+  - A rate sensitivity row and where a given price falls
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the owner earnings from the calculator, or your own figures.
+  - Give the long-term bond yield today and any price you want placed.
+  - Read the floor first, then the three cases, then the cases' conditions.
+  - Take the table to "Bad-year break-even tester" and "Price versus value gap judge".
+
+how_it_works:
+  - title: Checks the cash can be estimated
+    text: Stops with "too hard to value" if the cash swings wildly or cannot be explained.
+  - title: Chooses a safe rate
+    text: Uses the long-term bond yield, rounded up to 10% when rates are low.
+  - title: Works out the floor
+    text: Owner earnings divided by the rate, which is the value if the business never grows.
+  - title: Sets three growth cases
+    text: A fast rate for 5 to 10 years, then a slow rate, kept below the discount rate and near the past.
+  - title: Discounts to today
+    text: Adds up each year's cash and the value at the end of the fast stage, each brought back to today.
+  - title: Says what each case needs
+    text: Writes the growth, the cash and the thing that would break each case.
+  - title: Tests the rate
+    text: Runs the middle case at a rate two points higher.
+  - title: Places the price
+    text: Shows which case a given price sits at and what growth it asks you to believe.
+
+output_shape: |
+  CAN THE CASH BE ESTIMATED?
+  <yes / TOO HARD TO VALUE>, because <...>
+
+  RATE
+  <rate>, from <source>
+
+  FLOOR (no growth)
+  <owner earnings> / <rate> = <value>
+
+  CASES
+  Low:    fast <g>% for <N> years, then <g>% -> <value> | needs: <...> | breaks if: <...>
+  Middle: fast <g>% for <N> years, then <g>% -> <value> | needs: <...> | breaks if: <...>
+  High:   fast <g>% for <N> years, then <g>% -> <value> | needs: <...> | breaks if: <...>
+
+  RATE CHECK
+  Middle case at <rate + 2>%: <value>
+
+  WHERE THE PRICE FALLS
+  <price> sits near the <case> and asks you to believe <growth>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Years of fast growth
+    how: Give a number from 5 to 10. A shorter stage is more cautious.
+  - what: The slow rate
+    how: Keep it near long-run growth of the economy. It must stay under the discount rate.
+  - what: The rate
+    how: Say if you want a higher one. It will show the floor and cases at yours, with the default beside.
+
+judge:
+  - The rate and its source are stated.
+  - The floor appears next to the cases.
+  - Every slow growth rate is below the discount rate.
+  - Fast rates do not exceed the record without a reason.
+  - Nothing says to buy or sell a named security.
+
+test:
+  - Give it owner earnings that swing between a large loss and a large gain. It should say too hard to value.
+  - Give it a slow rate above the discount rate. It should refuse and ask for a lower one.
+  - Give it a price. It should say which case it sits near, not whether it is cheap.
+  - Run it twice on the same inputs. The values should match.
+
+improve:
+  - Keep the table with its date and update it each year when new owner earnings arrive.
+  - Add a fourth case for a bad stretch where earnings fall for two years.
+  - Compare the floor with the asset value of the business to see where the cushion is.
+  - Pair it with "Bad-year break-even tester" before you trust the low case.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Lets you check the year-by-year sums and change the rate or the growth with a click."}
+    - {name: "Any good chat AI", why: "Doing a fixed multi-step sum from stated inputs is work a strong chat AI does well with this skill."}
+  inputs:
+    - "Owner earnings from the Owner earnings calculator"
+    - "The yield on a long-term government bond today"
+    - "The business's growth in owner earnings over the last five to ten years"
+
+terms:
+  - term: Discount rate
+    meaning: The yearly return used to bring future cash back to today. A higher rate gives a lower value today.
+  - term: Floor value
+    meaning: What the business is worth if its owner earnings never grow.
+  - term: Two-stage growth
+    meaning: A faster growth rate for some years, then a slow rate for ever after.

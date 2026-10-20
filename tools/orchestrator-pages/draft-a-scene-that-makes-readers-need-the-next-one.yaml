@@ -1,0 +1,112 @@
+new_slug: draft-a-scene-that-makes-readers-need-the-next-one
+name: Draft a scene that makes readers need the next one
+summary: Tell it what happens in the scene. Get a hook plan, a fair way out, a drafted scene and a find-the-lull check.
+job: write-and-tell-stories
+thinking: high
+thinking_why: It plans, drafts and judges a scene in four steps, and the drafting needs close control of rhythm and detail. Give it your strongest model.
+
+headline: A scene that ends where readers cannot stop, with an answer that is fair
+subhead: Tell it what happens in the scene and to whom. It picks the one question readers must want answered, tests the way out for fairness, drafts the scene in plain concrete prose, then finds the paragraph where a reader would put it down.
+
+explain: |
+  Readers turn pages for a specific answer, not for events. A scene can be well written and still let them stop, because the question is vague, the ending explains too much or one paragraph forgets what is at stake.
+
+  This workflow starts with the question. It picks the person at risk, the thing they could lose and the line to stop on, then plans the next scene's answer. It tests that answer for fairness, since readers forgive a hard turn but not a cheat. It then drafts the scene in short beats with real objects and sounds, holding the answer back until after the stop line. Last, it reads the draft as a reader would, marks every paragraph for how hard it pulls, and fixes the weakest one. The method comes from the craft shown in Stephen King's novel Misery.
+
+when:
+  - Your chapters end where the action ends, and readers stop for the night.
+  - You have the right scene but it reads flat.
+  - You want a cliffhanger whose answer will hold up.
+
+you_give:
+  - What happens in the scene, and to whom
+  - What the reader already knows and what comes next (optional)
+  - A page of your own writing, so the draft matches your voice (optional)
+  - Point of view and tense (optional)
+
+you_get:
+  - The one open question, who it is about, what they could lose and the line to stop on
+  - A fairness verdict on the planned answer, with the details to plant earlier
+  - A drafted scene of 400 to 900 words in plain, concrete prose
+  - Each paragraph marked for pull, the lowest one fixed, and a verdict of strong, patchy or flat
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the scene. It works step by step and saves each result.
+  - Paste a page of your own writing if you want the draft in your voice.
+  - Edit the draft, then run the last step again on your edit.
+
+how_it_works:
+  - title: Plan the hook
+    text: Picks the one open question, the person and the stakes, the line to stop on and the plan for the answer.
+  - title: Check the way out is fair
+    text: Tests the planned answer for a plant, an effort and a cost, and lists what to show earlier.
+  - title: Draft the scene
+    text: Writes the scene in short beats with real objects, holds back the answer and stops on the planned line.
+  - title: Find where readers would put it down
+    text: Marks every paragraph for pull, finds the lowest one, tests the opening and the last line, and fixes the lull.
+
+output_shape: |-
+  STEP 1: HOOK PLAN
+    The question | Who and what is at stake | Stop on | The answer, next scene | Plant earlier
+
+  STEP 2: FAIRNESS CHECK
+    Escape | Verdict (fair, weak, cheat) | Planted at | Fix
+    Things to plant early
+
+  STEP 3: THE SCENE
+    <draft, 400 to 900 words>
+    Held back | Planted
+
+  STEP 4: PULL CHECK
+    Paragraph | Raised, pressed, delayed or forgotten
+    Lowest pull and its fix | Opening | Last line
+    Verdict: strong, patchy or flat
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Scene or chapter
+    how: Say which. A chapter can hold several small questions inside one big one.
+  - what: Your voice
+    how: Paste a page of your own writing before step 3, so the draft matches your sentence length and words.
+  - what: Genre
+    how: Say what you write. The pace and the kind of question change between a thriller and a romance.
+
+judge:
+  - The question is one sentence with a person in it.
+  - The stop line comes before the answer, and the answer is not in the scene.
+  - Every escape in the plan names the scene that planted its means.
+  - The draft opens with a person under pressure and one concrete detail.
+  - The lowest-pull paragraph is named, with a fix.
+
+test:
+  - Read only the stop line to a friend and ask what they think happens next. They should want to check.
+  - Run step 4 on a scene you love from a book. It should score strong.
+  - Run step 1 twice on the same scene. The question should stay close.
+
+improve:
+  - Keep a file of your stop lines and note which ones readers mention.
+  - Add the scene before, so step 4 can tell if the question was already answered.
+  - Re-run step 4 after every edit until nothing is marked forgotten.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Keeps the plan, the draft and the pull check in one thread."}
+    - {name: "A printed copy and a pen", why: "Reading on paper shows where the scene drags."}
+  inputs:
+    - "A page of your own writing, for voice"
+    - "A summary of what the reader has seen so far"
+    - "The scene that comes next"
+
+terms:
+  - term: Open question
+    meaning: The thing the reader wants answered, which drives them to turn the page.
+  - term: Stop line
+    meaning: The line where the scene ends, just before the answer.
+  - term: Plant
+    meaning: A detail shown early so a later event feels fair.
+  - term: Pull
+    meaning: How strongly a paragraph makes the reader want the next one.

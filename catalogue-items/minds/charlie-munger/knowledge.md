@@ -1,125 +1,100 @@
 # Charlie Munger: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Honesty note (2026-10-21, second pass): the 1994 USC talk [S2], the 2007 USC Law address [S3] and the revised human-misjudgment essay [S1] were read in full. The second pass added his 2003 Herb Kay lecture on economics at UC Santa Barbara, read in full as a transcript with questions [S6], the 1986 Harvard School speech on a life of misery [S7], and excerpts of his 1996 talk "Practical Thought about Practical Thought" as presented by Farnam Street [S8][S9]. Notes on a 2000 Wesco meeting [S10] are partly paraphrase by the note taker, so treat them with care. Dated career facts still come from Wikipedia [S4]; the 1989 Berkshire letter [S5] was reopened but not used for new claims.
+Honesty note (2026-10-21, third pass): the 1994 USC talk [S2], the 2007 USC Law address [S3], the revised human-misjudgment essay [S1], his 2003 Herb Kay lecture [S6] and the 1986 Harvard School speech [S7] were read in full, plus excerpts of the 1996 talk "Practical Thought about Practical Thought" [S8][S9]. The third pass reads the book *Poor Charlie's Almanack* [S11] (this copy is the expanded edition with the 2007 talk): his eleven talks, which are his own words and which he revised in 2006, the editor's overview of his method, and Whitney Tilson's notes from Berkshire and Wesco meetings. The overview and the meeting notes are by other people, so claims from them say so. Notes on a 2000 Wesco meeting [S10] are partly paraphrase. Dated career facts come from Wikipedia [S4]; the 1989 Berkshire letter [S5] was not used for new claims.
 
-A note on method: Munger died on 28 November 2023, aged 99 [S4]. His views come mainly from three talks he gave and later revised: "A Lesson on Elementary Worldly Wisdom" (USC Business School, 1994) [S2], "The Psychology of Human Misjudgment" (revised by him in 2005 for *Poor Charlie's Almanack*) [S1], and his 2007 USC Law School commencement speech [S3]. Facts about his life come from reference pages. He was an investor, so this mind explains how he thought. It never gives buy or sell calls or personal investment advice.
+Munger died on 28 November 2023, aged 99 [S4]. He was an investor, so this mind explains how he thought. It never gives buy or sell calls or personal investment advice.
 
 ## In one paragraph
 
-Munger was a lawyer turned investor who spent 45 years as Warren Buffett's partner and vice chairman at Berkshire Hathaway [S4]. Buffett called him the architect of the company's modern thinking [S4]. His big idea was "worldly wisdom": learn the main models from many fields, such as maths, psychology, engineering and economics, and hang your facts on that frame [S2]. He spent much of his life listing the ways human judgment goes wrong, especially through incentives, and how several biases can pile up into disaster [S1]. He liked to solve problems backwards, by asking what would cause failure and then avoiding it [S3]. In life he preached learning without end, reliability, and avoiding envy, resentment and self-pity [S3]. He thought good businesses are ethical businesses [S4].
+Munger was a lawyer turned investor who spent 45 years as Warren Buffett's partner and vice chairman at Berkshire Hathaway [S4]. His big idea was worldly wisdom: learn the main models from many fields and hang your facts on that frame [S2]. He ran problems through those models as a checklist, forwards and backwards, and wrote down the common ways human judgment fails, above all through incentives [S1][S11]. He settled the obvious questions first, said no to most things, and backed the rare clear chance heavily [S2][S11]. In life he preached lifelong learning, reliability and a refusal to feel envy, resentment or self-pity [S3]. He thought good businesses are ethical businesses [S4].
 
 ## Core ideas
 
 ### A latticework of mental models
 
-Munger argued that facts on their own are useless unless they hang on a frame of models in your head [S2]. You need models from many fields, because a person with one or two will bend reality to fit them [S2]. He thought about 80 to 90 models cover most of what a wise person needs, and a handful do most of the work [S2].
+Munger said facts are useless unless they hang on a frame of theory, and that one or two models make you bend reality to fit them [S2]. He thought 80 to 90 models carry most of the load, and that a handful carry the heaviest part: compound interest and odds from maths, accounting with its limits, backups, breaking points and critical mass from engineering and physics, evolution and niches from biology, and the psychology of misjudgment [S2]. Economics supplies more: size can cut costs through volume, wide fame and the pull of copying, but it also breeds layers and turf, so big firms slow down and nimbler ones run circles around them [S2]. For a business in a mess he liked the sick-business surgery: find what is still sound, cut away everything else, and liquidate only if that fails, as GEICO showed [S2]. Fast technology brings competitive destruction, and a firm that catches a new wave can ride it for a long time while one that falls off is stranded [S2]. Learn the models well enough to use daily, not to repeat for an exam and forget [S11]. He ranked the disciplines by how basic they are, used the most basic explanation that works, and named where each idea came from, like a tidy filing system [S6][S11]. His answer to bad teaching was the Little Red Hen: do it yourself [S11].
 
-How he applied it: in his 1994 talk he named the core ones: compound interest and basic probability from maths; accounting, with its limits; backup systems, breaking points and critical mass from engineering; and the psychology of misjudgment [S2].
+### Use the tools as a checklist, like a pilot
+
+A full kit is not enough; you must go down it in order or you miss answers [S6]. In 1998 he said the best model of good teaching is pilot training: wide knowledge raised to practised fluency, forward and backward thinking, most training on what matters most, mandatory checklists, and regular simulator practice so rare skills do not fade [S11]. He thought business papers could serve as the simulator, by practising linking events to several causes [S11]. The editor sums up four checklists he used: the two tracks of reasons and mind tricks, a list of factors to weigh in a decision, the five simple notions, and the 25 tendencies [S11]. His working form for explaining a surprise: run the checklist both ways, and ask whether extreme success comes from one or two variables pushed to the limit, from many factors adding up past a tipping point, from steady excellence on many fronts, or from riding a big wave [S6]. He solved a new giant furniture store this way: it must be low-priced, huge and therefore wide in choice, and no one had built it before because it costs a fortune [S6]. For a slot machine that won 25% more than its twins, he ran down his list of tendencies and landed on near misses [S6]. He judged professors who missed obvious causes in a famous obedience experiment as people who skipped their checklist [S11]. In a test, a student who answered that two old ladies should sell the shoe factory, because of agency costs, beat everyone who used the newest business ideas [S11].
 
 ### Invert, and avoid failure
 
-Munger said many problems are easier solved backwards [S3]. Instead of asking how to succeed, ask what would surely make you fail, then don't do it [S3]. He said this works in life as well as in algebra [S3].
+Many problems are easier solved backwards [S3]. Ask what would surely cause failure, then avoid it; the rustic who wanted to know where he would die so he could never go there was his model [S7][S11]. His 1986 speech did this for a happy life: he listed the sure ways to misery [S7]. He advised thinking forwards and backwards together, as a bridge declarer does, asking how to take the tricks and what could cause too many losers [S11]. He also advised hunting for evidence against your best-loved ideas, as Darwin did [S7]. The editor notes that he scored himself, like a bridge expert, on how well he played the hand and not only on whether he won it, since poor outcomes can be luck while sloppy preparation is always controllable [S11].
 
-How he applied it: in his 2007 speech he listed the sure routes to a miserable life, such as envy, resentment, revenge, self-pity, sloth and unreliability, so his listeners could avoid them [S3].
+### Five simple notions, shown on a hard problem
+
+In 1996 he gave five notions: settle the big obvious questions first; use numbers; think in reverse; use elementary ideas from all the basic subjects and never rely wholly on others; and look for effects that come only from combinations of factors [S8][S11]. He then solved an invented problem: turn two million dollars into a company worth two trillion by selling a drink [S11]. He began with sums (about eight billion people, a fraction of their daily water improved, about four cents a serving) and then used psychology: reward and association build habits, copying others spreads them, and a name must be protected [S11]. He ended by inverting: avoid an aftertaste that stops drinking, avoid losing half the name, avoid envy by deserving the success, and never change a loved flavour suddenly [S11]. He later called his own talk a teaching failure: too much, in the wrong order [S11].
 
 ### Get the incentives right
 
-Munger put incentives at the top of his list of psychological forces [S1]. People respond to rewards more strongly than they expect, even people who think they understand this [S1]. Incentives can also lead decent people to justify bad behaviour [S1].
+Incentives sit at the top of his list of forces [S1]. People respond to rewards more strongly than they expect, and decent people can rationalise bad behaviour [S1]. FedEx could not get night sorting done fast until it paid per shift and not per hour; Xerox salesmen pushed an older, worse machine because it paid more [S1][S2]. Professionals suffer from reward-bent judgment and from a habit of seeing every problem as theirs to fix, so his advice was to be wary of any adviser who gains from the advice [S1][S11]. He wanted systems that are hard to cheat, and said that once slop spreads it is hard to stop [S11].
 
-How he applied it: he told the story of FedEx, which couldn't get its night shift to move packages fast enough until it paid workers per shift instead of per hour. Then the work got done quickly and well [S1]. He also described Xerox salesmen pushing an older, worse machine because it paid them better commission [S1]. His advice was to be wary of any adviser who gains from the advice they give [S1].
+### The psychology of misjudgment and the pile-up
 
-### The psychology of human misjudgment
-
-Munger listed 25 tendencies that usually help us but sometimes fool us [S1]. Among them: liking and disliking, which make us blind to the faults of friends and the merits of enemies; doubt-avoidance, the urge to settle uncertainty fast; inconsistency-avoidance, the refusal to change a view once held; envy; social proof; contrast; authority; and over-reaction to loss [S1]. He said academic psychology often missed these practical patterns [S1].
-
-How he applied it: he admired Charles Darwin's habit of hunting for evidence against his own ideas, as a cure for clinging to old conclusions [S1]. He recommended checklists and seeking disconfirming evidence to cut errors [S3].
-
-When several of these tendencies push the same way at once, the result can be extreme and irrational, which he called the Lollapalooza effect [S1][S4]. A crowd, a strong authority, a reward and fear of loss together can lead normal people to do very foolish things. He searched all his life for models that explain such non-linear results [S6].
-
-### Use the tools checklist-style
-
-A full kit of models is not enough. Munger said you must run through the tools in your head as a checklist, because you will miss answers if you hope the right tool pops up on its own [S6]. He gave a working form: ask whether extreme success comes from pushing one or two variables to an extreme (Costco, a giant furniture store), from stacking many factors so results turn non-linear, from excellence across many factors (Toyota), or from riding a big wave [S6]. He ran the check forwards and backwards, like his physicist son working out that an 85-year-old national champion must play checkers, not tennis or chess [S6]. For a start he advised settling the big "no-brainer" questions first to simplify the problem [S8].
-
-The warning behind it: to a man with only a hammer, every problem looks like a nail, so experts trained in one field see everything through it [S2]. He also warned that knowing more than an expert outside their field can give offence, so use it with care [S3].
+He used two tracks on a problem: first the factors that really govern the interests involved, judged rationally, then the quiet influences on the brain that often misfire [S2][S11]. He listed 25 tendencies that usually help but sometimes fool us, such as liking, doubt-avoidance, consistency, envy, social proof, contrast, authority and loss reaction [S1]. When several push the same way, results can be extreme and foolish, which he called the Lollapalooza effect [S1][S4]. He went through the obedience experiment as an example: at least six tendencies together, not the three taught [S11]. He also warned against heavy ideology, which locks the mind into a pattern; he asked to be able to state the case against his own view better than its supporters [S3][S11].
 
 ### Count carefully, and think past the first effect
 
-Complex systems spit out numbers on some factors, so people overweight those and leave out important things they cannot measure [S6]. He liked the biologist Thomas Hunt Morgan, who banned the calculators from his department so people would pick up big nuggets of gold by hand and not waste time "placer mining" [S6]. Munger said he had avoided that mistake all his life [S6]. He also distrusted formal projections; his motto from Keynes was to be roughly right, not precisely wrong [S6].
+Complex systems give numbers on some factors, so people overweight those and leave out harder-to-measure factors [S6]. He distrusted formal projections and false precision, and preferred being roughly right to precisely wrong [S6]. Economists and managers stop at the first effect; Medicare costs were missed by over tenfold because rewards changed behaviour [S6]. A textile owner who buys looms that repay themselves in three years still earns about 4% if the gain flows to the buyers [S2][S6]. He taught price and volume with a question few could answer: when does a higher price raise sales [S6]. His four answers: price as a sign of quality or status, extra revenue spent to make the product or selling better, and the dark one, extra revenue spent as a bribe to a buyer's purchasing agent [S6][S11].
 
-The same habit applies to effects: economists and managers stop at the first effect and leave out the consequences of the consequences [S6]. Forecasters who priced the first Medicare law by extending past costs missed the real cost by more than tenfold, because the new incentives changed behaviour [S6]. A textile owner who buys looms that pay for themselves still earns 4% on capital if the gain goes to the cloth buyers [S6]. And workers' compensation systems that are easy to game teach people to cheat [S6].
+### Know your circle, say no, bet rarely and big
 
-### Price, volume, virtue and vice
+He kept three baskets: yes, no and too tough, and put most things in the last two [S11]. The overview says a real circle has an edge you can name, and that the test is whether you could answer the next hard question; he told the story of the speaker who knew the lecture, and of the real expert [S3][S11]. He said to find where you have an edge and play there, as a plumbing contractor in a small town can master a narrow field [S2]. He and Buffett looked for one-foot fences with big rewards, not seven-foot fences [S11]. Markets are mostly efficient but not perfectly, and winners bet rarely, like the harness-race bettor with a living [S2]. He suggested a lifetime card with 20 punches [S2], and said most Berkshire wealth came from about ten insights [S2]. He added that you cannot live without many mistakes, so a key skill is handling them; people go broke by pouring more into a failing thing because of consistency and fear of loss, and sometimes you must quit holding a much-loved hand [S11]. He and Buffett worked to change their prior conclusions, because without that disaster often comes [S11].
 
-He tested business students with one question: name cases where raising the price raises the volume sold. Only about one in fifty could give even one [S6]. His example was a friend at Beckman Instruments who raised a product's price by about 20% after buyers took the low price as a sign of poor quality, and volume rose [S6]. His darker version: raise the price, then use the extra money to bribe the other side's purchasing agent, which is how high fund commissions bought sales [S6].
+### Be a learning machine, and be reliable
 
-He said economists dislike talking about virtue and vice because they do not fit in columns of numbers, yet systems that are hard to cheat (double-entry bookkeeping, the cash register) improve both honesty and output [S6]. His pay idea: directors who own significant stock and are paid nothing would damp the urge to reward each other, as the unpaid English lay magistrates have done for centuries [S6]. He also held that some systems should be unfair to the individual to be fairer to all, such as ending a Navy captain's career when a ship runs aground even if it was not his fault [S6].
-
-### Be a survivor, and avoid the surest routes to misery
-
-In his 1986 Harvard School speech he took Johnny Carson's list for a guaranteed miserable life (chemicals, envy, resentment) and added four of his own: be unreliable, learn only from your own experience, stay down after a setback, and ignore objectivity [S7]. He said unreliability cancels all other virtues and used a dyslexic but dependable college roommate who became a chief executive as the counter-case [S7]. He praised Darwin's habit of looking for evidence against his own ideas, and Einstein's "curiosity, concentration, perseverance and self-criticism" [S7][S6].
-
-In 2007 he told law graduates that the safest way to get what you want is to deserve it, and called gaining wisdom a moral duty. He pointed to Buffett as a learning machine who got better with age, and said the best civilisation is a web of trust that people have earned, with little need for rules [S3].
-
-### Bet rarely, and bet big
-
-Munger compared the stock market to betting at a racetrack. It is mostly efficient, but not perfectly, and the winners are the people who bet rarely and heavily when the odds are clearly in their favour [S2]. He suggested imagining a punch card with just 20 holes for all your lifetime investments, which would force you to wait for your best ideas [S2]. He said most of Berkshire's wealth came from about ten insights [S2].
-
-How he applied it: he favoured concentrated holdings in companies he knew well [S4]. His partnership is reported to have returned 19.8% a year from 1962 to 1975, against 5.0% for the Dow [S4].
-
-Buffett's 1989 letter, speaking for "Charlie and I," says the pair learned that a wonderful business at a fair price beats a fair business at a bargain price, because time helps the first and hurts the second, and that they had learned to avoid hard problems instead of solving them [S5].
+In 1986 he added four ways to misery to Carson's list: be unreliable, learn only from your own experience, stay down after setbacks, and ignore objectivity [S7]. Unreliability cancels other virtues [S7]. In 2007 he said wisdom is a moral duty, that learning machines win over time, and that you should aim for a web of deserved trust [S3]. He knew no wise person who did not read all the time, and noted Buffett spends about half his waking time reading [S3][S11]. The overview adds that the pair aimed to be consistently not stupid instead of very intelligent [S11]. In the meeting notes he said the large gap between what is legal and what is right should be kept wide, and that honesty is a policy as well as a moral [S11].
 
 ## How he decides
 
+- Settle the big obvious questions first and do the arithmetic [S8][S11].
 - Ask what would make this fail, then avoid that [S3].
-- Look at the incentives first [S1].
-- Check the question against several models from different fields [S2].
-- Stay inside your circle of competence, and know where its edge is [S2].
+- Run the case through models from several fields, as a checklist [S6][S11].
+- Look at the incentives first, then at the quiet pulls on your own mind [S1].
+- Follow the consequences of the consequences [S6].
+- Stay inside your circle, know its edge, and put the rest in the too-tough basket [S2][S11].
 - Wait for the rare, obvious bet, then make it big [S2].
-- Hunt for evidence that you're wrong [S1][S3].
-- Use a checklist [S3].
-- Deal only with people you trust [S3][S5].
-- Say you are not entitled to an opinion until you can state the case against it better than its supporters [S3].
-- Avoid sloth and unreliability above all; they sink every other virtue [S3].
-- When you must persuade, appeal to interest, not only to reason [S3].
-- Give the practice to those with the most aptitude to learn, as a coach plays his best players [S3].
-- Tell real knowledge from talk that only sounds right (his Planck and chauffeur story) [S3].
-- Be a learning machine and go to bed a little wiser each night [S3].
+- Hunt for evidence that you are wrong, and change your mind when shown [S3][S11].
+- Judge a call by how well it was made, not only by how it ended [S11].
+- To persuade, appeal to the other person's interest; Captain Cook got sailors to eat sauerkraut by serving it to officers first [S11].
+- Deal only with people you trust, and avoid heavy ideology [S3][S11].
 
 ## Real decisions
 
+### Leaving the law for independence
+
+Munger supported eight children and left law practice, mostly out by 1962 and fully out by 1965, shortly before big money came into law [S11]. He said he preferred making the decisions and gambling his own money, and wanted the independence of a capitalist [S11]. His partnership then returned about 19.8% a year from 1962 to 1975 against 5.0% for the Dow [S4].
+
 ### Ignoring efficient-market theory
 
-As a teenager Munger went to the Omaha racetrack, where the house took 17%, and saw that some bettors lost far less than 17% and others far more, so the betting system was not perfectly efficient [S6]. He concluded the stock market could not be perfectly efficient either, and said Berkshire's record was achieved without attention to hard-form efficient-market theory or the capital asset pricing model [S6]. He added that a Nobel-winning economist explained Berkshire first by "six sigmas of luck" and later by "six sigmas of skill", which he took as proof of Franklin's rule that you persuade by appeal to interest, not reason [S6].
+As a teenager he saw that some bettors at the Omaha racetrack lost far less than the 17% house take, so betting was not perfectly efficient [S6]. He reasoned that stocks were not either, and said Berkshire's record came without attention to that theory [S6]. A consultant trained in the theory told the Washington Post not to buy back its stock when it sold at a fifth of obvious value; Buffett had the board buy back over half, which enriched owners by over a billion dollars [S6][S11].
+
+### Buying the Washington Post at a fifth of its value
+
+He and Buffett bought at about 20% of the value to a private owner, in a two-paper city heading to one winner, with managers of integrity [S11]. He called it a dream, and said the stake rose about fifty times [S11]. He told students not to count on one that good in a lifetime [S11].
+
+### Backing pricing power at See's and Coca-Cola
+
+They raised See's Candy prices a little faster than others might, and invested in Coca-Cola, with untapped pricing power and strong management [S2]. His model was a business where any manager could lift returns by raising prices and has not done so, the ultimate no-brainer [S2]. He added that one finds only a few of these and needs nerve to act [S2].
+
+### Putting up a for-sale-or-rent sign
+
+A Berkshire-owned savings and loan held a loan on a failing hotel in a rough area near a racetrack [S6]. Instead of paying for a thick consultant report, Berkshire put up a sign, and a man who bused retired people to nearby attractions offered to fix and buy the hotel [S6]. His lesson: two known ideas, a planned system and the right specialist, can combine to solve a problem [S6].
 
 ### Not reading the projections
 
-Munger said he did not let people make formal projections for him and did not read investment bankers' projections [S6]. He and Buffett once bought a company whose seller had paid $2 million for a thick banker's study, and they turned it over as if it were a diseased carcass [S6]. His reason was that false precision in a complex system misleads, and that putting a foolish projection on a desk is an effective sales technique [S6].
-
-### Letting a "for sale or rent" sign find the buyer for a failing hotel
-
-A Berkshire savings and loan company held a loan on a hotel opposite Hollywood Park racetrack, in a neighbourhood so rough that nobody came, and it was foreclosed more than once [S6]. Instead of paying consultants for a report "10 inches thick", Berkshire put up a "for sale or rent" sign [S6]. A man who flew retired people in from Florida and bused them to Disneyland offered to fix the hotel and buy it on credit if the car park could become a putting green, and the loan was repaid [S6]. Munger drew the lesson that two known ideas, a planned system and finding the right specialist, can combine to solve a problem [S6].
+He did not let people make formal projections for him. He and Buffett once bought a company whose seller had paid two million dollars for a thick banker's study, and turned it over as a diseased carcass [S6]. His reason was that false precision misleads in a complex system [S6].
 
 ### Refusing to sell what he would not buy
 
-Munger described how fund sellers raised commissions to bribe brokers into putting clients in high-cost products, which he said sold at least a trillion dollars of funds [S6]. He said it was legal, but he had pretty completely avoided it, because he did not think it necessary to spend a life selling what you would never buy [S6]. He warned students that following his notions could leave them unemployable by all but a few [S6].
+He described how fund sellers raised commissions to bribe brokers, which sold at least a trillion dollars of funds [S6]. It was legal, but he avoided it, since you need not spend a life selling what you would never buy [S6].
 
-### Skipping the "placer mining"
+### Owning up to USAir, and winding down derivatives
 
-Following Thomas Hunt Morgan's rule, Munger tried to find the big nuggets in plain sight and not spend scarce effort on fine statistics [S6]. His reason was that people who count only what is easy to count leave out hard-to-measure factors that may matter more [S6]. He said that in his eightieth year he had not had to do any of that placer mining, and that he kept "ragging" a problem, putting it aside after a failure and coming back to it [S6].
-
-### Betting rarely and loading up
-
-Munger likened a stock market to the pari-mutuel system at a racetrack, where odds shift with the bets, and said the bettors who beat it all share one trait: they bet very seldom [S2]. His rule was to expect only a few mispriced chances in a lifetime and, when you find one, load up [S2]. In notes from the 2000 Wesco meeting, the note taker records him describing focus investing as about ten positions, not hundreds [S10].
-
-### Backing pricing power at See's Candy and Coca-Cola
-
-He and Buffett raised the prices of See's Candy a little faster than others might have, and invested in Coca-Cola, which had untapped pricing power and strong management [S2]. His model was a business where any manager could lift returns enormously just by raising prices and has not done so, which he called the ultimate no-brainer [S2]. He cited Disney's price rises at its parks as the same pattern [S2]. He added that you will find only a few of these in a lifetime and you need the nerve to act [S2].
-
-### Cutting away the folly at GEICO
-
-He described GEICO as a magnificent business sunk in a mess of its own making, because success had made it think it knew everything [S2]. His model was the surgery used by fixers of sick businesses: find what is still sound, cut away everything else, and liquidate only if that fails [S2]. He said the money Berkshire passively made there came from a wonderful business plus folly that new people were ready to cut out [S2].
+Berkshire bought USAir preferred stock, in effect a loan with an equity bonus, and Munger said the bet was that the airline would stay well enough to pay it [S11]. The airline came close to failure, and he called it a mistake although Berkshire was later repaid [S11]. He and Buffett also ran off Gen Re's derivatives book at a loss when they could not sell it, according to Tilson's notes [S11].
 
 ## Where he stood
 
@@ -127,37 +102,35 @@ He described GEICO as a magnificent business sunk in a mess of its own making, b
 
 **What drives people?** Incentives most of all, and envy more than greed [S1].
 
-**How should you invest?** Few, big, well-understood bets after long waiting [S2].
+**How should you decide?** Invert, run a checklist, say no, wait for the clear chance [S2][S11].
 
-**Are markets efficient?** Mostly, but not perfectly. That gap is where the patient investor wins [S2].
+**Are markets efficient?** Mostly, but not perfectly [S2].
 
-**What ruins a life?** Envy, resentment, revenge, self-pity, sloth and unreliability [S3].
+**What ruins a life?** Envy, resentment, self-pity, sloth and unreliability [S3][S7].
 
-**Is ethics good business?** Yes. He held that good businesses are ethical businesses [S4].
+**Is ethics good business?** Yes [S4][S11].
 
 ## His work and record
 
-- Born 1 January 1924 in Omaha, Nebraska [S4].
-- Studied at the University of Michigan and served in the Army Air Forces in World War II [S4].
-- JD from Harvard Law School, 1948 [S4].
-- Co-founded the law firm Munger, Tolles & Olson [S4].
-- Ran the investment partnership Wheeler, Munger & Company, 1962 to 1975 [S4].
-- Vice chairman of Berkshire Hathaway from 1978 until his death [S4].
-- Chairman of Wesco Financial from 1984 to 2011, and of the Daily Journal Corporation. Director of Costco [S4].
-- Gave "A Lesson on Elementary Worldly Wisdom" at USC in 1994 [S2] and the USC Law commencement speech in 2007 [S3].
-- Died 28 November 2023 in Santa Barbara, California [S4].
+- Born 1 January 1924 in Omaha [S4]. JD from Harvard Law School, 1948 [S4].
+- Co-founded Munger, Tolles & Olson, and ran Wheeler, Munger & Company from 1962 to 1975 [S4].
+- Vice chairman of Berkshire Hathaway from 1978 until his death; chairman of Wesco from 1984 to 2011 [S4].
+- Gave the 1994 USC talk [S2] and the 2007 USC Law address [S3]; the Almanack collects eleven talks [S11].
+- Died 28 November 2023 in Santa Barbara [S4].
 
 ## Where he was wrong or criticised
 
-- **Munger Hall.** His design for a giant student dormitory at UC Santa Barbara, with mostly windowless bedrooms, drew wide criticism. An architect on the review committee resigned in protest, and the university dropped the plan in 2023 [S4].
-- **Blunt dismissals.** He attacked cryptocurrencies and compared Robinhood's trading model to gambling. Supporters of those things found him dismissive [S4].
+- **Munger Hall.** His giant student dormitory design with mostly windowless rooms drew wide criticism; the university dropped it in 2023 [S4].
+- **Blunt dismissals.** He attacked cryptocurrencies and compared Robinhood to gambling; supporters found him dismissive [S4].
+- **Teaching.** He said his 1996 talk failed to get through to almost anyone, and blamed his own choices [S11].
 
 ## Blind spots to watch
 
-- His approach rewards long patience and spare capital. Many people can't wait years for a perfect bet.
-- His dislike of new things, such as crypto or new trading apps, was strong. Make sure "I don't understand it" doesn't become "it's worthless."
+- His approach rewards patience and spare capital. Many people cannot wait years for a perfect bet.
+- His dislike of new things was strong. Make sure "I do not understand it" does not become "it is worthless."
 - He trusted his own design judgment outside his field, as Munger Hall showed [S4]. His own man-with-a-hammer warning applies to him too.
-- He gives a tough, dry verdict. Pair him with a voice that encourages people.
+- His checklists were built from long experience of one world, investing and business; a person must build their own.
+- He gives a dry, tough verdict. Pair him with a voice that encourages.
 - This mind explains frameworks. For any real money decision, check with a professional.
 
 ## Short phrases on the record

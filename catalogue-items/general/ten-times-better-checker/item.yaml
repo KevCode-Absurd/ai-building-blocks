@@ -1,0 +1,18 @@
+slug: ten-times-better-checker
+name: "Ten-times-better checker"
+summary: "Paste your product and what buyers use today. Get a measured gap to the closest substitute and a ten-times verdict."
+category: general
+type: skill
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "The rule that a product needs about ten times the value of its closest substitute on something buyers care about, the four lasting advantages that widen the gap, and why small gains vanish once a buyer counts the cost of switching"}

@@ -1,0 +1,107 @@
+new_slug: rising-cost-ladder-builder
+name: "Rising cost ladder builder"
+summary: "Paste your story plan. Get attempts that each cost more than the last, and a clock over all of it."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It orders and prices attempts by fixed rules, but pricing each one in something that stays lost takes judgement."
+
+headline: "A story where each try costs more than the last, and time is running out"
+subhead: Paste your story plan. It lists what your trapped character can try, prices each attempt in something that stays lost, orders them from cheap to costly and sets a clock the character cannot move.
+
+explain: |
+  Suspense sags when a character tries three things and each costs the same. It also sags when the cost resets, so a loss in chapter four is forgotten in chapter five.
+
+  This skill builds a ladder. Each rung is an attempt to ease or end the trap. Each costs more than the one before, and each leaves something permanently lost. That can be a trust, a tool, a plan, a friend or a belief. It places a first small win early so the reader has hope, then makes the next attempt cost twice as much. At least once it lets the reader see the price before the character does. It then sets a clock, a date, a visit or a supply running out, that the character cannot move.
+
+when:
+  - Your middle chapters feel like the same scene repeated.
+  - Your character escapes trouble and nothing is lost.
+  - Your story has no deadline, so scenes can be moved around without harm.
+
+you_give:
+  - Your story plan, or the output of the earlier steps
+  - What the character wants most, and what they would hate to lose
+  - How long the story should run (optional)
+you_get:
+  - A ladder of five to eight attempts, ordered by cost
+  - For each rung, what it tries, what it costs and what stays lost
+  - Which rungs the reader sees coming
+  - A clock, with the date it lands and who or what sets it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your plan and say what your character would hate to lose.
+  - Pick the clock from the choices it offers, or write your own.
+  - Use the ladder as your chapter order. Next, use "Fair escape checker".
+
+how_it_works:
+  - title: Lists the attempts
+    text: Writes everything the character can try, from a small test to a desperate act.
+  - title: Prices each one
+    text: Gives each attempt a cost in something that stays lost, never in something that comes back.
+  - title: Orders the ladder
+    text: Puts them in order of cost, with a small win first and the heaviest cost last.
+  - title: Plants the warning
+    text: Marks at least one rung where the reader sees the price before the character does.
+  - title: Sets the clock
+    text: Adds a deadline the character cannot move, with a visible countdown.
+  - title: Checks itself
+    text: Tests that costs rise, that they stick and that the clock matters, then names any check it missed.
+
+output_shape: |
+  WHAT THEY WOULD HATE TO LOSE
+  <three things, in order>
+
+  THE LADDER
+  1. <attempt> | Cost: <...> | Stays lost: <...> | Reader sees it coming: yes or no
+  2. ...
+
+  THE CLOCK
+  <what, when, who sets it, how the reader sees it counting down>
+
+  HOW THE COST RISES
+  <one line on how rung 1 compares with the last rung>
+
+  MISSING
+  <facts still needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Length of the ladder
+    how: Use five rungs for a short story and up to eight for a novel.
+  - what: The first win
+    how: Say how big it should be. A small win gives hope and sets the price for the next.
+  - what: The clock
+    how: Give a real time (a funeral, a harvest, a trial, a stock run) and the ladder will use it.
+
+judge:
+  - Each rung costs more than the one before.
+  - Every cost leaves something lost that is felt in later scenes.
+  - At least one cost is seen by the reader before the character.
+  - The clock cannot be moved by the character.
+
+test:
+  - Swap two rungs. The story should get worse. If it does not, the costs are not rising.
+  - Read the costs aloud. Each should make you wince a little more than the last.
+  - Check chapter eight for a mention of what was lost in chapter three.
+
+improve:
+  - Add a rung where the character pays for someone else.
+  - Add a rung that looks cheap and turns out costly.
+  - Let the clock shorten once, without warning.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ordering and pricing attempts is text work any strong chat AI does well with this skill."}
+    - {name: "Index cards", why: "One rung per card lets you reorder the ladder on a table."}
+  inputs:
+    - "A setting plan from Closed setting planner"
+    - "A mood scale from Volatile antagonist mood mapper"
+
+terms:
+  - term: Ladder
+    meaning: A set of attempts in order, each costing more than the one before.
+  - term: Clock
+    meaning: A deadline in the story that the character cannot move.

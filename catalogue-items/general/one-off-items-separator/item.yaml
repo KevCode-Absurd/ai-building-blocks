@@ -1,0 +1,17 @@
+slug: one-off-items-separator
+name: "One-off items separator"
+summary: "Paste several years of a company's income statements. Get each year's profit rebuilt without gains and losses that will not repeat."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Separating one-off gains and losses from ordinary results; pairing a gain in income with the loss charged elsewhere; keeping the one-offs in the long record; special treatment of funds, banks and insurers whose business is trading securities"}

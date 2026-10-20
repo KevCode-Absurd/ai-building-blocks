@@ -22,7 +22,8 @@ export type Block = {
   level: "beginner" | "intermediate" | "advanced" | "expert";
   /** How much thinking it needs, so people can pick a cheaper model when that's enough (docs/MINDS-PRD.md §1). */
   thinking: Thinking;
-  thinkingWhy: string;
+  /** Only on blocks without a page file; the rest carry it in their page (Page.thinkingWhy). */
+  thinkingWhy?: string;
   /** For a mind: the council seats we suggest (catalogue-items/minds/<slug>/mind.yaml). */
   seats?: string[];
   /** For a mind: its broad area, any others, its years, and whether the person is alive. */
@@ -31,6 +32,8 @@ export type Block = {
   years?: string;
   living?: boolean;
   face?: Face;
+  /** For a mind: role labels from catalogue-items/minds/_labels.yaml, most defining first. */
+  labels?: string[];
   /** For a skill: the minds whose work it comes from, strongest first (item.yaml `minds`, docs/SOURCE-SKILLS-PRD.md). */
   minds?: string[];
   /** For a mind: the skills from their work, worked out from the skills' `minds` lists. */
@@ -86,11 +89,13 @@ export type Page = {
   pairs?: string[];
   /** What it needs first, the steps before it and the paths after it (tools/lib/needs.mjs). */
   plan?: Plan;
+  /** Why the block needs the thinking level it has (moved here from blocks.json to keep the library small). */
+  thinkingWhy?: string;
   /** Markdown already turned into HTML by the index build. */
   html: { explain: string; skill: string };
 };
-export type RosterMind = { slug: string; name: string; area: string; seat: string; living: boolean; built: boolean; face?: Face };
-export type Catalogue = { built: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[] }; blocks: Block[]; bySlug: Record<string, Block> };
+export type RosterMind = { slug: string; name: string; area: string; seat: string; living: boolean; built: boolean; face?: Face; labels?: string[] };
+export type Catalogue = { built: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[]; labels?: Record<string, string> }; blocks: Block[]; bySlug: Record<string, Block> };
 
 export const ROLES: { id: Role; name: string; does: string }[] = [
   { id: "source", name: "Source", does: "Brings information in" },
@@ -117,7 +122,13 @@ let catalogue: Promise<Catalogue> | null = null;
 export function loadCatalogue(): Promise<Catalogue> {
   catalogue ??= fetch("/data/blocks.json")
     .then((r) => r.json())
-    .then((d) => { migrateSlugs(d.renamed ?? {}); return { ...d, bySlug: Object.fromEntries(d.blocks.map((b: Block) => [b.slug, b])) }; });
+    .then((d) => {
+      migrateSlugs(d.renamed ?? {});
+      // A mind's face is sent once, on the roster, and copied onto its block here.
+      const faces = new Map<string, Face | undefined>((d.minds?.roster ?? []).map((m: RosterMind) => [m.slug, m.face]));
+      for (const b of d.blocks as Block[]) if (b.type === "mind" && !b.face) b.face = faces.get(b.slug);
+      return { ...d, bySlug: Object.fromEntries(d.blocks.map((b: Block) => [b.slug, b])) };
+    });
   return catalogue;
 }
 export function useCatalogue() {

@@ -1,0 +1,127 @@
+new_slug: business-tenet-scorecard-writer
+name: "Business tenet scorecard writer"
+summary: "Paste your findings on a business. Get ten tests marked pass, fail or unknown, and whether a price check is worthwhile."
+job: money-and-investing
+thinking: medium
+thinking_why: "It sorts findings into ten tests and applies a fixed ladder. The reading is careful, but the rules are set."
+
+headline: "Business tenet scorecard writer"
+subhead: "Paste what you found about a business: its edge, its record, its managers, its returns and owner earnings. It marks ten tests pass, fail or unknown with the evidence, applies a stated ladder, and says whether the business is too hard, not worth a price check, needs more digging or deserves a look at its price."
+
+explain: |
+  After weeks of digging it is easy to hold ten findings in your head and still not know where you stand. A strong return can hide a doubtful manager. A famous name can hide the fact that you never worked out its cash.
+
+  This skill puts it all on one page. Each of ten tests gets a pass, fail or unknown with its evidence, and a gap is never counted as a pass. Three tests are must-pass: that you understand the business, that its edge lasts and that you can estimate its cash. A short ladder then gives the verdict. It also pulls out red flags and orders what to read or ask next. The verdict is about the business, not the price, and it gives no buy or sell calls.
+
+when:
+  - You have gathered several findings on a business and need one clear page.
+  - You are deciding whether a business deserves the work of a full valuation.
+  - You are comparing two businesses on the same ten tests.
+
+you_give:
+  - Your findings on the business, as they are
+  - The stake or decision you are weighing (optional)
+you_get:
+  - A list of which findings you have and which are missing
+  - Ten tests marked pass, fail or unknown, each with evidence
+  - A verdict from a stated ladder
+  - Red flags found
+  - A reading and asking list, ordered by what would move the verdict most
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the reports from the earlier steps, or your own notes.
+  - Tell it if you want different cut-offs on the ladder.
+  - Read the unknowns first. They are where the verdict could still change.
+  - If the verdict is worth a price check, take the findings to "Value a business and the discount to ask for".
+
+how_it_works:
+  - title: Lists what it was given
+    text: Marks each kind of finding as found or missing, and warns when most are missing.
+  - title: Fills the ten tests
+    text: Pass, fail or unknown for each, with one line of evidence and where it came from.
+  - title: Applies the must-pass tests
+    text: Understanding the business, a lasting edge and estimable cash must all pass, or the business is too hard.
+  - title: Counts the rest
+    text: Counts fails and unknowns among the other seven tests.
+  - title: Gives the verdict
+    text: Too hard, not worth a price check, dig more, or worth a price check.
+  - title: Lists red flags
+    text: Weak accounting, hard footnotes, bold forecasts and deals made to keep up.
+  - title: Orders the reading list
+    text: Names the document or person for each unknown, in order of impact.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  FINDINGS
+  Edge: <found / MISSING> | Understanding: <...> | Record: <...> | Managers: <...> | Returns: <...> | Owner earnings: <...>
+
+  THE TEN TESTS
+  1 Simple: <PASS / FAIL / UNKNOWN> - <evidence>
+  ... through 10
+
+  MUST-PASS
+  Tests 1, 3, 8: <result>
+
+  VERDICT
+  <too hard / not worth a price check / dig more / worth a price check>, because <count>
+
+  RED FLAGS
+  <list, or none found>
+
+  READ OR ASK NEXT
+  1 <unknown> -> <document or person>
+
+  NEXT STEP
+  <what the verdict allows>
+
+  MISSING
+  <list>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Which tests must pass
+    how: Tell it if you want a different set. The default is understanding, a lasting edge and estimable cash.
+  - what: The ladder
+    how: Change the number of fails or unknowns that move the verdict, and it will use yours.
+  - what: Comparing two businesses
+    how: Run it twice with the same instructions and put the two pages side by side.
+
+judge:
+  - All ten tests are on the page with a mark and evidence.
+  - No gap is shown as a pass.
+  - The verdict follows the ladder.
+  - The reading list matches the unknowns.
+  - Nothing says to buy or sell a named security.
+
+test:
+  - Give it findings with no work on cash at all. Test 8 should be unknown and the verdict too hard.
+  - Give it all passes but a failed edge. The verdict should be too hard, whatever else passes.
+  - Give it a famous company and no findings. It should refuse to score from general knowledge.
+  - Run it twice on the same findings. The verdict should match.
+
+improve:
+  - Keep one scorecard per business you study, with the date, and redo it when something changes.
+  - Add your own red flags to step 6 as you meet them.
+  - Rank several scorecards side by side to pick where to spend your time.
+  - Move the cut-offs after a few runs, once you see where your own judgment differs.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting findings into ten tests and applying a short ladder is work any strong chat AI does well with this skill."}
+    - {name: "A notes app", why: "Keeps one scorecard per business so you can compare them over time."}
+  inputs:
+    - "Reports from the business power tester, circle of competence sorter and steady track record checker"
+    - "Reports from the owner-minded management checker, the return on equity checker and the owner earnings calculator"
+    - "Notes from talking to customers, suppliers or former staff"
+
+terms:
+  - term: Must-pass test
+    meaning: A test that, if it fails, makes a valuation pointless, because you could not trust the number.
+  - term: Red flag
+    meaning: A sign in a company's reports that suggests poor honesty or poor controls, such as costs left out of profit.
+  - term: Price check
+    meaning: The next step of working out what the business is worth and comparing that with its price.

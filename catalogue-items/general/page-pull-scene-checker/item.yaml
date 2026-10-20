@@ -1,0 +1,19 @@
+slug: page-pull-scene-checker
+name: "Page-pull scene checker"
+summary: "Paste your scene. Get the paragraph where a reader would put it down, the fix, and a verdict on its pull."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: feedback_notes}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, alfred-hitchcock]
+credits:
+  - {title: "Misery", by: "Stephen King", used: "The need-to-know pull a story builds in a reader, described by the novel's writer-character as a specific question the reader must have answered, and the habit of testing a draft by asking where a reader would stop"}

@@ -1,0 +1,120 @@
+new_slug: earnings-padding-detector
+name: "Earnings padding detector"
+summary: "Paste a company's statements and one-off table. Get accounting choices that lift profit, their size, and a clean, adjusted or avoid call."
+job: money-and-investing
+thinking: high
+thinking_why: "It must link write-downs, cash flow, depreciation and share counts across years and judge a pattern without accusing anyone. That needs careful reasoning."
+
+headline: "Find the accounting choices that make a company's profit look better than it is"
+subhead: "Paste several years of statements, their notes and your one-off table. It checks write-downs that feed later profit, parked costs, thin depreciation, flattering income from subsidiaries and per-share effects. You get each effect sized, restated earnings and a clean, adjusted or avoid call."
+
+explain: |
+  Profit is partly a result and partly a set of choices. A big write-down this year makes next year look better. A cost spread over five years does not hit this year. A lower depreciation charge lifts profit with no change in the business. Most of these choices are small and honest. A few add up to a picture that was arranged.
+
+  This skill runs six checks and puts a size on each finding as a share of reported profit. It restates earnings and reads the findings as a pattern. If the pattern shows a management shaping its figures, it says avoid, because a number cannot be put on dishonesty. It is a method, not financial advice, and never says buy or sell.
+
+when:
+  - A company's profit rises while its cash does not.
+  - A big write-down was followed by a very good year.
+  - You are about to rely on a profit figure to value a business.
+
+you_give:
+  - The table and ordinary earnings from "One-off items separator", or several years of income statements
+  - Balance sheets, cash flow statements and notes for the same years (optional)
+you_get:
+  - Each finding with year, amount, direction and share of reported profit
+  - Reported and restated earnings by year
+  - A read of the pattern
+  - A clean, adjusted or avoid call
+  - Questions to put to the company
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the one-off table, then the balance sheets, cash flow and notes if you have them.
+  - Say what you are using the profit figure for.
+  - Read the call and the pattern before the individual findings.
+  - Take the restated earnings to "Earnings record reliability checker".
+
+how_it_works:
+  - title: Names the four levers
+    text: Income versus equity, reserves, share count and idle funds.
+  - title: Follows write-downs
+    text: Checks if a past write-down came back as later profit.
+  - title: Finds parked costs
+    text: Compares deferred costs and profit with cash from operations.
+  - title: Tests depreciation
+    text: Compares the charge with what the business must spend to stand still.
+  - title: Rebuilds subsidiary income
+    text: Counts profit by ownership share, not by dividends.
+  - title: Fixes the per-share figure
+    text: Restates every year on today's share count.
+  - title: Reads the pattern
+    text: Calls it avoid when the findings show shaping.
+
+output_shape: |
+  FINDINGS
+  <check> | <year> | <amount> | <flatters / depresses> | <percent of reported profit>
+
+  EARNINGS
+  <year> | Reported: <amount> | Restated: <amount>
+
+  PATTERN
+  <noise / adjusted / shaping> | Why: <reason>
+
+  CALL
+  <CLEAN / ADJUSTED / AVOID>
+
+  QUESTIONS FOR THE COMPANY
+  <question>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Cash flow
+    how: Paste the cash flow statement. Profit against cash from operations is the fastest warning.
+  - what: Replacement spending
+    how: Say what you think it costs each year to keep the business running. It sets the depreciation check.
+  - what: Share counts
+    how: Give the share count for each year, or the splits and buybacks. The per-share check depends on them.
+  - what: Notes to the accounts
+    how: Paste them. Changes of method are described there.
+
+judge:
+  - Each of the six checks is run or marked missing.
+  - Every finding has a year, a size and a direction.
+  - Findings are read as a pattern.
+  - An avoid call puts no number on dishonesty.
+  - It never says buy or sell and invents no figure.
+
+test:
+  - Run it on a company that wrote off stock and then had a strong year and check it finds the link.
+  - Give it a company whose depreciation fell while assets aged and see that it is raised.
+  - Give it a clean set of accounts and see that it says clean and does not invent faults.
+  - Run it twice. The call should not change.
+
+improve:
+  - Add the checks you most often need for your industry.
+  - Keep a list of calls and what happened.
+  - Pair it with "One-off items separator" and "Normal earnings estimator".
+  - Ask it for the three questions you would put to the company's finance chief.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading statements and linking years is text work. It cannot fetch filings."}
+    - {name: "A spreadsheet", why: "Handy for the restated earnings and share counts."}
+    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
+  inputs:
+    - "Annual reports for five to ten years, with notes"
+    - "Cash flow statements for the same years"
+
+terms:
+  - term: Write-down
+    meaning: A cut in the recorded value of stock, debts owed to the company or other assets, taken as a cost.
+  - term: Deferred cost
+    meaning: A cost recorded as an asset and charged to profit over later years instead of at once.
+  - term: Depreciation
+    meaning: The yearly charge that spreads the cost of equipment and buildings over their useful life.

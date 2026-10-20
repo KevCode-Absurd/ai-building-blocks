@@ -4,6 +4,7 @@ import { type CSSProperties, useEffect, useMemo, useState } from "react";
 import { type Catalogue, type RosterMind, pathOf } from "./lib/data";
 import { Link } from "./lib/router";
 import PixelFace from "./PixelFace";
+import { LabelBadges, LabelIcon } from "./MindLabel";
 
 const MAX = 7;
 const COUNCIL = "advisory-council";
@@ -12,10 +13,12 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
   const roster = c.minds?.roster ?? [];
   const areas = c.minds?.areas ?? {};
   const [area, setArea] = useState("");
+  const [label, setLabel] = useState("");
+  const labels = c.minds?.labels ?? {};
   const [seated, setSeated] = useState<string[]>([]);
   useEffect(() => { document.title = "Minds · AI Blocks"; return () => { document.title = "AI Blocks · Making humanity AI native"; }; }, []);
   const built = roster.filter((m) => m.built).length;
-  const shown = useMemo(() => roster.filter((m) => !area || m.area === area), [roster, area]);
+  const shown = useMemo(() => roster.filter((m) => (!area || m.area === area) && (!label || m.labels?.includes(label))), [roster, area, label]);
   const toggle = (slug: string) => setSeated((s) => (s.includes(slug) ? s.filter((x) => x !== slug) : s.length >= MAX ? s : [...s, slug]));
   const open = () => {
     const names = seated.map((s) => c.bySlug[s]?.name.split(" (")[0] ?? s);
@@ -38,6 +41,18 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
           {Object.entries(areas).map(([id, name]) => {
             const n = roster.filter((m) => m.area === id).length;
             return <button key={id} className="chip" aria-pressed={area === id} onClick={() => setArea(area === id ? "" : id)} data-testid={`minds-area-${id}`}>{name}<span className="count">{n}</span></button>;
+          })}
+        </div>
+
+        <div className="label-filter" role="group" aria-label="Pick what they did" data-testid="label-filter">
+          <span className="label-filter-h">What they did</span>
+          {Object.entries(labels).map(([id, name]) => {
+            const n = roster.filter((m) => m.labels?.includes(id) && (!area || m.area === area)).length;
+            return (
+              <button key={id} className="lchip" aria-pressed={label === id} disabled={!n && label !== id} onClick={() => setLabel(label === id ? "" : id)} data-testid={`minds-label-${id}`}>
+                <LabelIcon id={id} size={13} />{name}<span className="count">{n}</span>
+              </button>
+            );
           })}
         </div>
 
@@ -67,6 +82,7 @@ function MindCard({ m, c, on, full, onToggle }: { m: RosterMind; c: Catalogue; o
         <span className="mind-meta"><span className="mind-area">{c.minds?.areas[m.area] ?? m.area}</span>{b?.years && <span className="mind-years">{b.years}</span>}</span>
       </div>
       {b ? <Link to={pathOf(b)} className="mind-name">{m.name}</Link> : <span className="mind-name">{m.name}</span>}
+      <LabelBadges c={c} labels={m.labels} size="sm" />
       <span className="mind-seat">Seat: {m.seat}</span>
       {m.built
         ? <button className="btn btn-ghost btn-sm mind-seat-btn" aria-pressed={on} disabled={!on && full} onClick={() => onToggle(m.slug)} data-testid="seat-mind">{on ? "Seated" : "Seat on council"}</button>

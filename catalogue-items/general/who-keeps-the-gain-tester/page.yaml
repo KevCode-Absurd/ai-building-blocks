@@ -1,0 +1,130 @@
+new_slug: who-keeps-the-gain-tester
+name: "Who-keeps-the-gain tester"
+summary: "Describe a business and a way it could improve. Get who keeps the gain, and whether rivals fight it away."
+job: money-and-investing
+thinking: medium
+thinking_why: "It runs a fixed two-line sum on each change and sorts the industry. The judgement is in reading how rivals really behave."
+
+headline: "Who-keeps-the-gain tester"
+subhead: "Describe a business, its industry and a way it could improve. It runs the sum most people skip: if every rival gets the same gain, who ends up with it? You get the sum for each change, how rivals behave, the industry sort and a one-line verdict. It is a method of analysis, not personal financial advice."
+
+explain: |
+  A better machine, a cheaper supplier or a fast-growing market all sound good for the owner. In some industries they are. In others every rival gets the same gain, the price drops to match, and the customer ends up with all of it.
+
+  This skill asks what stays home. For each possible change it writes two lines: what the owner keeps if only this business gets it, and what the owner keeps if every rival does too. It checks how rivals really behave, sorts the industry as commodity, brand-led or protected, and says which way technology cuts. It gives no buy or sell calls on any named security.
+
+when:
+  - You like a business because it is growing or has a new efficiency, and want to know if that will reach the owners.
+  - You are comparing two industries and one seems to earn more for no clear reason.
+  - Someone is selling you a story about new technology helping a business.
+
+you_give:
+  - The business and its industry
+  - The change you want tested, if any
+  - Recent price and margin facts, if you have them (optional)
+  - A report on the business's edge (optional)
+you_get:
+  - A pass-through sum for each change, with both lines
+  - How rivals behave, with an example
+  - The industry sorted as commodity, brand-led or protected
+  - A one-line verdict on whether gains tend to stick
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name the business, its main rivals and one change you are testing.
+  - Paste any margin or price history you have. If not, it will use marked example numbers.
+  - Read the verdict and the two lines for each change.
+  - Take a "gains stick" result to the "Long-hold return calculator".
+
+how_it_works:
+  - title: Lists what could help
+    text: Three changes most likely to improve results for the whole industry, plus any you name.
+  - title: Runs the two-line sum
+    text: What the owner keeps if only this business gets the gain, and if all rivals do.
+  - title: Reads rival behaviour
+    text: Calm or fights for share, backed by an example from past price moves.
+  - title: Sorts the industry
+    text: Commodity, brand-led or protected by a licence, a patent or a lone position.
+  - title: Asks which way technology cuts
+    text: Whether it helps the owner or only the customer and every rival.
+  - title: Names the opposite pull
+    text: Size can slow decisions, and niche rivals can beat a large player in one corner.
+  - title: Gives a one-line verdict
+    text: Gains stick, leak to customers or are contested, with the reason.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  CHANGES TESTED
+  1. <change>
+     Only this business gets it: owner keeps <figure>
+     All rivals get it: owner keeps <figure>
+     More likely: <which, why>
+  2. ...
+
+  HOW RIVALS BEHAVE
+  <calm or fights for share>, because <example>
+
+  INDUSTRY SORT
+  <commodity / brand-led / protected> because <reason>
+
+  WHICH WAY TECHNOLOGY CUTS
+  <helps the owner / helps everyone else>
+
+  THE OPPOSITE PULL
+  <force or none>
+
+  VERDICT
+  <gains stick / leak / contested>: <reason>
+
+  MISSING
+  <what would sharpen the sums>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The change
+    how: Name one specific change, such as a new machine or a supplier price cut, so the sum has real numbers.
+  - what: Your margin figures
+    how: Paste price and cost per unit if you have them. Without them the sum uses marked examples.
+  - what: The bad year
+    how: Say how rivals behaved when demand last fell. It shows more than a good year.
+  - what: Your view of the industry
+    how: State whether you think buyers can switch easily. It changes the sort.
+
+judge:
+  - Every change has both lines of the sum.
+  - Rival behaviour rests on something that happened.
+  - The industry sort gives a reason.
+  - The technology line says who gains.
+  - The verdict follows from the sums.
+
+test:
+  - Run it on an industry you know is a commodity. The verdict should say gains leak.
+  - Run it on a business with a strong trusted name. Gains should tend to stick, with a note on how long the name holds.
+  - Give it a change that only one firm can get. The two lines should differ a lot.
+  - Run it twice. The sort should stay the same.
+
+improve:
+  - Add the last two bad years of your industry to the rival-behaviour step.
+  - Keep a list of industries you have sorted, and check later whether the sort held.
+  - Pair it with the "Business power tester" to see if the wall holds.
+  - Add the one force your industry always loses profit to, such as a rival that cuts price.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The sums are simple and the sorting is text work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Lets you rerun the two-line sum with your own price and cost figures."}
+  inputs:
+    - "A report from the Business power tester"
+    - "Several years of price and margin figures for the industry"
+    - "A note on how rivals acted in the last downturn"
+
+terms:
+  - term: Pass-through
+    meaning: The share of a cost saving or gain that ends up in lower prices, so the buyer keeps it.
+  - term: Commodity
+    meaning: A product buyers see as the same from anyone, so they switch for a small price gap.
+  - term: Franchise
+    meaning: A position that keeps rivals out, such as a licence, a patent or a lone site.

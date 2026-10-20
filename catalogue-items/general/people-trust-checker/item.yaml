@@ -1,0 +1,21 @@
+slug: people-trust-checker
+name: People trust checker
+summary: Name the people behind a deal or hire. Get how able, honest and owner-minded they are, and what to verify.
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: Judging the people who run something as able, trustworthy and owner-minded, the rule that being unreliable cancels other virtues, the habit of dealing only with people you can trust, and checking how pay bends behaviour

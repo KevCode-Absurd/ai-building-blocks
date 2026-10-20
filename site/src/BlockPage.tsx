@@ -17,6 +17,7 @@ import { Before, Next, WhatYouGet } from "./Needs";
 import { Gauge } from "./Gauge";
 import PixelFace from "./PixelFace";
 import { HelpedBy, MindSkills, WorkflowList, flowsUsing } from "./MindPack";
+import { LabelBadges } from "./MindLabel";
 import { useSeen, useTyped } from "./lib/typing";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
@@ -197,6 +198,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
         <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
         <h1 className="bp-h1">{p?.headline || b.name}</h1>
         <p className="bp-sub">{p?.subhead || b.summary}</p>
+        {b.type === "mind" && <LabelBadges c={c} labels={b.labels} />}
         {format && (
           <p className="bp-format" data-testid="format-note">
             <span className={`fmt fmt-${format}`}>{format === "image" ? "Image ad" : "Video ad"}</span>
@@ -222,7 +224,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           )}
         </div>
         <BusinessNote />
-        <Gauge level={b.thinking} why={b.thinkingWhy} />
+        <Gauge level={b.thinking} why={p?.thinkingWhy ?? b.thinkingWhy ?? ""} />
         <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span>{b.tested?.result === "pass" && <span data-testid="tested" title="Run on a real business's files and graded by a second AI against this page's checks">Tested</span>}</p>
       </header>
 

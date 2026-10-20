@@ -1,0 +1,18 @@
+slug: market-expansion-sequencer
+name: "Market expansion sequencer"
+summary: "Paste your first market and product. Get the next markets in order, nearest first, with the sign to move on."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: shortlist, required: true}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "Growing from a small market into related and slightly broader ones in order, the hidden obstacle that can stop a move, the advice to avoid picking fights with larger firms, and making the order part of the story you tell"}

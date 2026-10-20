@@ -1,0 +1,116 @@
+new_slug: build-suspense-in-a-story-where-your-character-cannot-leave
+name: Build suspense in a story where your character cannot leave
+summary: Tell it who is stuck and who holds them. Get a sealed setting, mood map, cost ladder and fair-escape check.
+job: write-and-tell-stories
+thinking: high
+thinking_why: It builds a story plan across five skills and judges whether each part is fair to a reader. Give it your strongest model.
+
+headline: A trapped-character story where the dread keeps rising and the escapes feel earned
+subhead: Tell it who is stuck, who holds them and where. It seals the setting, gives the person in power a mood scale, builds a ladder of attempts that each cost more than the last, then checks every escape and every scene.
+
+explain: |
+  Stories about being trapped fail in four ways. The reader finds a way out the character missed. The captor is the same in every scene. The tries all cost the same. The escape arrives by luck.
+
+  This workflow fixes them in order. It first seals the place so every exit is shut for a reason a reader accepts. It then gives the person in power a mood scale, with a small warning sign for each mood, so even a calm scene carries a threat. It builds a ladder where each attempt costs more than the one before and leaves something lost, with a clock over it all. It then tests every escape for fairness, and last checks that every scene turns. The method comes from the craft shown in Stephen King's novel Misery.
+
+when:
+  - You are writing a story about someone trapped, watched or cornered, in a house, a job, a family or a town.
+  - Your middle chapters repeat, or the dread drops once the setup is done.
+  - Readers say your villain is scary only in the big scenes, or that the ending was too easy.
+
+you_give:
+  - Who is stuck, who or what holds them, and where, in a few sentences
+  - How the person in power talks and what they want
+  - What your character would hate to lose
+  - Your scene list, for the last step
+
+you_get:
+  - A sealed setting with every exit shut for a reason, and a watch list of ordinary objects
+  - A mood scale for the person in power, with a warning sign, a trigger and a cost for each mood
+  - A ladder of attempts that rise in cost, with a clock the character cannot move
+  - A fairness verdict on every escape, with fixes built from what is already on the page
+  - Each scene marked for what changes in it
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe who is trapped, who holds them and where. It works step by step and saves each result.
+  - Answer its questions about the person in power and what your character would hate to lose.
+  - Paste your scene list when it asks, for the last check.
+
+how_it_works:
+  - title: Seal the setting
+    text: Lists every way out, gives each a reason it is shut, and picks the ordinary objects the reader will watch.
+  - title: Map the mood swings
+    text: Builds a scale from calm to dangerous for the person in power, with a small sign the trapped person can read in each mood.
+  - title: Build the cost ladder and the clock
+    text: Orders the attempts so each costs more than the last and leaves something lost, and sets a deadline the character cannot move.
+  - title: Check every escape is fair
+    text: Tests each way out for a plant, an effort and a cost, and fixes luck and rescues from outside.
+  - title: Check every scene turns
+    text: Goes through the scene list and marks what changes in each scene and which choice changes it.
+
+output_shape: |-
+  STEP 1: SEALED SETTING
+    The place | Within reach | Exits and why they are shut | Watch list | What only they know
+
+  STEP 2: MOOD SCALE
+    Mood | Sign | What they do | What it costs
+    Triggers | Their sincere reason
+
+  STEP 3: COST LADDER AND CLOCK
+    Attempt | Cost | Stays lost | Reader sees it coming
+    The clock: <what, when, who sets it>
+
+  STEP 4: FAIR ESCAPES
+    Escape | Verdict (fair, weak, cheat) | Planted at | Fix
+
+  STEP 5: SCENE CHECK
+    Scene | What changes | The choice that changes it | Flagged or not
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Short story or novel
+    how: Say which. A short story gets three moods and five rungs. A novel gets four moods and up to eight.
+  - what: Who holds the power
+    how: It can be a person, a family, a job or a town. Say which, and how they speak.
+  - what: Your period
+    how: Give the year. Phones and neighbours change which exits can be shut.
+
+judge:
+  - Every exit, including phones and people, is shut for a reason that survives "why not just?".
+  - The calm mood is warm enough that a reader relaxes, and every mood has a sign.
+  - Each rung of the ladder costs more than the one before, and its loss shows up later.
+  - Each escape names the scene that planted its means.
+  - Flagged scenes come with a fix.
+
+test:
+  - Show the exits list to a friend and ask for a way out in two minutes. Add a reason for any they find.
+  - Swap two rungs of the ladder. The story should get worse. If not, the costs are not rising.
+  - Run step 4 on an ending you know is too easy. It should flag it.
+
+improve:
+  - Keep the watch list on a card and check that each object comes back in the draft.
+  - Re-run step 4 after you write, on the real pages.
+  - Add a scene where a sign is misread, and see what it costs.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Keeps the setting, the mood scale and the ladder in view across five steps."}
+    - {name: "Index cards", why: "One rung or scene per card lets you reorder the plan on a table."}
+  inputs:
+    - "A sample of the villain's dialogue"
+    - "A list of what the character values most"
+    - "The year and place of the story"
+
+terms:
+  - term: Watch list
+    meaning: The few ordinary objects and sounds the reader learns to keep an eye on.
+  - term: Mood scale
+    meaning: A short list of the moods a person moves through, from calm to dangerous, each with a warning sign.
+  - term: Ladder
+    meaning: A set of attempts in order, each costing more than the one before.
+  - term: Plant
+    meaning: A detail shown early so a later event feels fair.

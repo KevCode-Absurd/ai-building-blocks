@@ -15,6 +15,6 @@ outputs:
   - {type: plan, required: true}
 origin: rebuilt
 version: 1.0.0
-minds: [aaron-ross]
+minds: [aaron-ross, peter-thiel]
 credits:
   - {title: "From Impossible to Inevitable, chapter 1 (publisher sample)", by: "Aaron Ross and Jason Lemkin", used: "Counting customers who found you cold, the warning signs of a blurred focus, the one-sentence niche and the doubling target"}

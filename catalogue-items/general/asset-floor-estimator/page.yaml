@@ -1,0 +1,121 @@
+new_slug: asset-floor-estimator
+name: "Asset floor estimator"
+summary: "Paste a balance sheet and share price. Get book value, net current assets, sale value and a cash strength rating."
+job: money-and-investing
+thinking: high
+thinking_why: "It marks assets down by class, deducts every claim and checks how fast losses could use up the cushion. That needs careful reasoning."
+
+headline: "See what a business would fetch if it stopped, and whether it can pay its bills"
+subhead: "Paste the balance sheet and the share price. It works out tangible book value, net current assets and a sale value after marking down stock, debts owed to the company and fixed assets, in a typical and a harsh case. You get the floor against the price and a cash strength rating."
+
+explain: |
+  A balance sheet lists what a company owns at cost, not what it would fetch. Stock may sell at two thirds of its book value, customer debts at four fifths and a factory at a fraction. Liabilities, though, are always owed in full.
+
+  This skill deducts every liability and every claim ahead of the shares, marks each type of asset down with stated rates, and shows a typical and a harsh sale value per share. It compares both with the price. If the price is under the sale value, either the price is too low or the business should be wound up. It also checks how fast losses could use up the cushion, and runs the working capital and acid tests. It is a method, not financial advice.
+
+when:
+  - You want a second view of a company's value that does not depend on its profits.
+  - A share price looks very low next to what the business owns.
+  - You want to know if a company could pay its short-term bills in a bad year.
+
+you_give:
+  - The latest balance sheet, and the one before it if you have it
+  - The earnings range from the earlier steps
+  - The share count and price, or the asking price of a private business
+  - Preferred share terms, leases and debt due dates (optional)
+you_get:
+  - Tangible book value, net current assets and cash assets per share
+  - Typical and harsh sale values with the markdowns shown
+  - A comparison with the price
+  - How many years of current losses the cushion could absorb
+  - A cash strength rating of strong, adequate or weak
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the balance sheet with the notes on debts and preferred shares.
+  - Add the share count, the price and the earnings range.
+  - Read the comparison with the price and the burn before the figures.
+  - Take the result to "Price versus value gap judge".
+
+how_it_works:
+  - title: Counts the claims
+    text: Deducts all liabilities and preferred claims at their full size.
+  - title: Computes three figures
+    text: Tangible book value, net current assets and cash assets per share.
+  - title: Marks assets down
+    text: Applies sale rates to cash, receivables, stock and fixed assets in a typical and a harsh case.
+  - title: Compares with the price
+    text: Notes whether the price is under any of the figures.
+  - title: Checks the burn
+    text: Divides the cushion by current yearly losses.
+  - title: Runs cash tests
+    text: Current ratio, acid test and short-term debt.
+
+output_shape: |
+  PER SHARE
+  Tangible book value: <amount> | Net current assets: <amount> | Cash assets: <amount>
+
+  SALE VALUES
+  Typical: <amount> | Harsh: <amount>
+  Marks: cash <percent>, receivables <percent>, stock <percent>, fixed <percent>
+
+  AGAINST THE PRICE
+  Price: <amount> | Under cash assets: <yes / no> | Under net current assets: <yes / no> | Under sale values: <yes / no>
+
+  BURN
+  Yearly loss: <amount> | Years the cushion lasts: <n>
+
+  CASH TESTS
+  Current ratio: <x> | Acid test: <x> | Short-term debt: <note> | Rating: <STRONG / ADEQUATE / WEAK>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Your own markdowns
+    how: Give sale rates you trust for the kind of asset the business holds. They replace the starting rates.
+  - what: Preferred shares
+    how: Paste their terms. They must count at what they are really owed.
+  - what: Seasonal pattern
+    how: Say if the business borrows each year for stock. A weak ratio at the peak may be normal.
+  - what: Asset detail
+    how: Split fixed assets into resalable ones, such as vehicles, and special ones, such as a custom plant.
+
+judge:
+  - Every liability is deducted at face value in each case.
+  - Two sale-value cases are shown with their marks.
+  - Intangibles are left out and preferred shares counted at their real claim.
+  - The price is compared with all the figures.
+  - It never says buy or sell and invents no figure.
+
+test:
+  - Run it on a company with a lot of stock and check the markdown is applied.
+  - Give it a preferred share with a small stated value and see that the real claim is used.
+  - Give it a company losing money and see that the burn is worked out.
+  - Run it twice. The figures should not change.
+
+improve:
+  - Add your own markdown rates by industry, from sales you have seen.
+  - Keep a record of sale values against what companies later fetched.
+  - Pair it with "Earnings value range builder" and "Price versus value gap judge".
+  - Compare three similar companies side by side.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading a balance sheet and applying markdowns is text work."}
+    - {name: "A spreadsheet", why: "Handy for the asset classes and per-share figures."}
+    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
+  inputs:
+    - "The latest and previous balance sheets"
+    - "Notes on debts, leases and preferred shares"
+
+terms:
+  - term: Net current assets
+    meaning: Cash, debts owed to the company and stock, less everything the company owes. It is a rough floor for what the business is worth.
+  - term: Acid test
+    meaning: Current assets without stock, compared with what is owed within a year. A ratio of 1 or more means short-term bills can be paid without selling stock.
+  - term: Liquidating value
+    meaning: What owners could get if the business sold its assets and paid its debts.

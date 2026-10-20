@@ -1,0 +1,116 @@
+new_slug: price-against-value-checker
+name: Price against value checker
+summary: Paste what you would get and what it costs. Get a value range, a walk-away price and the best alternative to beat.
+job: money-and-investing
+thinking: high
+thinking_why: It builds a value range from thin facts and compares it with alternatives, which needs careful reasoning.
+headline: Price against value checker
+subhead: Paste what the choice would give you over the years and what it costs. It builds a low, middle and high value, sets a walk-away price with room for error, compares it with your best alternative use of the same money or time, and adds the fees and friction that eat the gain.
+explain: |-
+  Price is what you pay and value is what you get, and they are rarely the same. A cheap price on a weak thing can lose to a fair price on a strong one, because time works for the strong one and against the weak one. The cost of any choice is also the best thing you gave up for it.
+
+  This skill estimates what the choice is worth in three cases, picks a price you will not go above, and compares the result with your next best option. It adds the fees, taxes and switching costs that quietly reduce the return. It is a method of analysis and is not personal financial advice.
+when:
+  - You are about to buy a business, equipment, a contract or a stake and must set a price.
+  - A seller says it is a bargain and you cannot tell.
+  - You want to compare a new opportunity with what you already have.
+you_give:
+  - "What you would get over time: income, savings or benefits, by year"
+  - The price and terms being asked
+  - Your next best alternative for the same money or time (optional)
+you_get:
+  - A low, middle and high value with the sums shown
+  - A walk-away price with a margin of safety
+  - The best alternative and whether this beats it
+  - A short before-you-commit list
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what you would get, the price and any fees. Name your best alternative.
+  - Check each assumption it writes down and correct any you know are wrong.
+  - Use the walk-away price as a limit before you talk to the seller. This is not financial advice.
+how_it_works:
+  - title: List what you get
+    text: Lists the yearly benefit in three cases.
+  - title: Turn it into a value
+    text: Reduces the three cases to a value today.
+  - title: Set the range
+    text: Gives a low, middle and high value.
+  - title: Set the walk-away price
+    text: Sets a price with room for error.
+  - title: Check the long run
+    text: Tests whether quality outweighs a bargain over time.
+  - title: Name the best alternative
+    text: Compares with the next best use of the same money or time.
+  - title: Count the friction
+    text: Adds fees, taxes, switching costs and sales commissions.
+  - title: Write the before-you-commit list
+    text: Lists timing, funding, exits and alternatives.
+  - title: Write the plan
+    text: Writes the value range, walk-away price, alternative and next action.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  WHAT YOU GET
+  Bad: <by year> | Ordinary: <by year> | Good: <by year>
+
+  VALUE
+  rate used: <x> | bad: <v> | ordinary: <v> | good: <v> | sum shown
+
+  WALK-AWAY PRICE
+  <price> | rule | price asked: <p> | gap
+
+  QUALITY OVER TIME
+  <sum comparing two returns>
+
+  BEST ALTERNATIVE
+  <alternative> | return | this beats it, equals it or loses
+
+  FRICTION
+  <fee> | per year | over the holding period
+
+  BEFORE YOU COMMIT
+  timing | funding | exit | better use | approvals
+
+  VERDICT AND NEXT ACTION
+  <text> | Not personal financial advice.
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: The rate you choose
+    how: Use the return of your best alternative. A higher rate gives a lower value and a stricter walk-away price.
+  - what: How many years you count
+    how: Use a stretch you can defend, not the best-case story. Long forecasts hide the weak part.
+  - what: The share you use for room for error
+    how: Tell it how much of the middle value you will pay at most, such as two-thirds. A stricter share leaves more room.
+judge:
+  - The sums can be redone by hand.
+  - The walk-away price follows from a stated rule.
+  - The alternative is real and you would actually take it.
+  - The fees are counted over the full period.
+test:
+  - Run it on a past purchase and see what the walk-away price would have been.
+  - Give it only a good-case forecast. It should flag the wide range.
+  - Run it twice. The range should match.
+improve:
+  - Keep a record of walk-away prices and what you paid.
+  - Add your own typical fees to step seven.
+  - Share the sums with someone who will challenge your rate.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - Past results for the thing being priced, by year
+    - A written offer with all fees and terms
+    - The return on your best alternative
+terms:
+  - term: Margin of safety
+    meaning: Paying well below your low estimate of value, so errors do not hurt you.
+  - term: Best alternative
+    meaning: The next best use of the same money or time, which is the real cost of any choice.

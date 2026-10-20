@@ -1,0 +1,131 @@
+new_slug: owner-minded-management-checker
+name: "Owner-minded management checker"
+summary: "Describe the people running a business. Get how able, honest and owner-minded they look, from what they did with cash and pay."
+job: money-and-investing
+thinking: medium
+thinking_why: "It reads a record of choices and rates each quality on evidence. The ratings need care, but the steps are fixed."
+
+headline: "Owner-minded management checker"
+subhead: "Paste what you know about the people running a business: deals, payouts, pay and letters to owners. It follows the cash, compares pay with results, counts the mistakes they name, then rates ability, honesty and owner-mindedness, each with an evidence line. It is a method of analysis, not personal financial advice."
+
+explain: |
+  When you own part of a business, other people spend your money every day. A great product can be wasted by managers who chase size, pay themselves well when owners get little, or never admit a mistake.
+
+  This skill judges managers by what they did. It logs each use of spare cash and marks it good, poor or unknown. It compares pay with what owners got, looks for growth that served the manager more than the owner, and counts the failures they named plainly. It then rates three qualities, able, honest and owner-minded, each with the fact that backs it. It treats management as second to the quality of the business. It gives no buy or sell calls.
+
+when:
+  - You are about to back a business and want to know if the people running it will treat your money well.
+  - A business looks strong but the managers keep doing large deals.
+  - You hire or promote a leader who will run money that is not their own.
+
+you_give:
+  - Findings on the business, such as a report on its edge
+  - What managers did with cash over several years (optional)
+  - Pay tables and letters to owners (optional)
+  - The stake or decision you are weighing (optional)
+you_get:
+  - A cash log marked good, poor or unknown
+  - A comparison of pay with owner results
+  - Ratings for able, honest and owner-minded, each with its evidence
+  - A call, and the one fact that would change it
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste what you have on the business and on how managers used cash.
+  - Add the last few letters or reports they wrote to owners.
+  - Read the three ratings and check each evidence line yourself.
+  - Take the call back to your main decision, with the business findings first.
+
+how_it_works:
+  - title: Puts the business first
+    text: A good business with ordinary managers beats an ordinary business with a star, so management is weighed second.
+  - title: Follows the cash
+    text: Logs each use of spare money with amount and year, and marks it good, poor or unknown.
+  - title: Compares pay and results
+    text: Looks for pay that rises when owner results fall, or rewards size alone.
+  - title: Spots growth for its own sake
+    text: Flags deals that raised the manager's standing but not the owners' return.
+  - title: Counts named mistakes
+    text: Reads past letters for failures named in plain words, with amounts.
+  - title: Rates three qualities
+    text: Able, honest and owner-minded, each high, mixed, low or missing, with an evidence line.
+  - title: Makes the call
+    text: Weighs honesty and owner-mindedness most and names the fact that would change the call.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  WEIGHT
+  <how much management matters here and why>
+
+  CASH LOG
+  <year> | <choice> | <amount> | GOOD / POOR / UNKNOWN
+
+  PAY AGAINST RESULTS
+  <comparison and one line on how pay ties to owner return>
+
+  GROWTH FOR ITS OWN SAKE
+  <deals or none>
+
+  MISTAKE TALK
+  <count of named failures and what changed>
+
+  RATINGS
+  Able: <rating> because <fact>
+  Honest: <rating> because <fact>
+  Owner-minded: <rating> because <fact>
+
+  THE CALL
+  <strong support / no change / reason to be careful>; changes if: <fact>
+
+  MISSING
+  <what would firm up the ratings>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How far back
+    how: Give at least five years of choices. One year shows luck.
+  - what: The letters
+    how: Paste the last three letters or reports to owners so the mistake count has material.
+  - what: Your relation to the money
+    how: Say whether you are an owner, a lender or a manager. It changes what matters most.
+  - what: Business findings
+    how: Include any report on the edge or the industry, so management is judged second.
+
+judge:
+  - The cash log has amounts and years.
+  - Pay is compared with owner results.
+  - Each rating has an evidence line, or says missing.
+  - Management is weighed after the business.
+  - The call names the fact that would change it.
+
+test:
+  - Run it on managers with a clear record of large poor deals. The cash log should show it.
+  - Run it with only a speech and no record. Ratings should come back missing.
+  - Give it a letter full of wins and no failures. The mistake count should lose a point.
+  - Run it twice. The ratings should hold.
+
+improve:
+  - Add the specific kinds of deals that go wrong in your field.
+  - Keep a file of managers' promises, and check later whether they were kept.
+  - Add a line on who owns shares that they bought with their own money.
+  - Pair it with the "Incentive checker" for deeper study of how pay steers choices.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Reading a record of choices and rating them against fixed rules is text work any strong chat AI does well."}
+    - {name: "A spreadsheet", why: "Lets you tabulate years of deals and payouts to see a pattern."}
+  inputs:
+    - "A report from the Business power tester"
+    - "Several years of letters to owners"
+    - "The pay table and a list of major deals"
+
+terms:
+  - term: Owner-minded
+    meaning: Treats the money as their own, holds a real stake bought with their own funds and shares the owners' losses.
+  - term: Spare cash
+    meaning: Money the business earns beyond what it needs to run, which managers must decide how to use.
+  - term: Growth for its own sake
+    meaning: Making the business bigger without raising what owners earn on each unit of money put in.

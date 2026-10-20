@@ -1,0 +1,18 @@
+slug: rival-free-pitch-rewriter
+name: "Rival-free pitch rewriter"
+summary: "Paste your pitch. Get it rewritten around what only you do, with no rival, no cheaper and no fight in it."
+category: general
+type: skill
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: copy_draft, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "Why describing yourself by a rival or as a disruptor shapes you into a copy, the habit of watching rivals more than the customer, and building a pitch around what you make instead"}

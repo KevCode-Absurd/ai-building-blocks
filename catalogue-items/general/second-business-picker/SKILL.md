@@ -59,6 +59,7 @@ What you own. Each idea sorted, with its carry-over or the reason it was dropped
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Plan your strategy** with the [Market expansion sequencer](https://useaiblocks.com/skills/market-expansion-sequencer). It takes the shortlist.
 - **Decide what to do** with the [Shortlist and running-order planner](https://useaiblocks.com/skills/shortlist-and-running-order-planner). It takes the shortlist.
 - **Test the idea with real people** with the [Customer conversation request writer](https://useaiblocks.com/skills/customer-conversation-request-writer). It takes the shortlist.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.

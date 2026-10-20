@@ -1,0 +1,112 @@
+new_slug: ten-times-better-checker
+name: "Ten-times-better checker"
+summary: "Paste your product and what buyers use today. Get a measured gap to the closest substitute and a ten-times verdict."
+job: test-an-idea
+thinking: medium
+thinking_why: "It needs a measured comparison and a sum for switching cost, but the order is fixed."
+
+headline: "Find out if your product is ten times better where it counts"
+subhead: "Tell it what you built and what buyers use today. It picks the one thing the buyer cares about, measures both, takes off the cost of switching and says whether the gap is big enough to win."
+
+explain: |
+  A product that is 20% better in a test is often no better to the buyer. Setup, retraining and risk eat the gain. Buyers also hear big claims all day and discount them.
+
+  This skill measures your product against the closest substitute on the one thing the buyer values most. It subtracts the cost of switching and checks the gap over a month, a quarter and a year. Then it looks for what could make the gap harder to close.
+
+when:
+  - "You think your product is better and want to know if it is enough."
+  - "Your pitch is about being slightly cheaper or faster."
+  - "You are deciding which buyer to start with."
+
+you_give:
+  - "What your product does and for whom"
+  - "What buyers use today"
+  - "Any numbers on time, cost or errors (optional)"
+you_get:
+  - "The closest substitute"
+  - "The one measure that matters and both numbers"
+  - "The gap after switching cost"
+  - "A verdict and what to do next"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your product and what buyers use today. Mark any number you are guessing."
+  - "Add real figures from tests or customers if you have them. Say if a number came from a demo."
+  - "If the verdict is marginal, take the narrower buyer it suggests to your next conversation."
+
+how_it_works:
+  - title: "Names the substitute"
+    text: "Finds what the buyer does without you."
+  - title: "Picks the measure"
+    text: "Chooses the one thing the buyer values most, in their unit."
+  - title: "Measures both"
+    text: "Writes both numbers with a source for each."
+  - title: "Nets out switching"
+    text: "Subtracts setup, retraining and risk over a month, quarter and year."
+  - title: "Gives the verdict"
+    text: "Ten times, close, marginal or new."
+  - title: "Looks for a wider gap"
+    text: "Checks technology, network, scale and brand."
+
+output_shape: |
+  THE SUBSTITUTE
+  <what buyers do today>
+
+  THE MEASURE
+  <unit> | Substitute: <number, source> | Yours: <number, source>
+
+  NET GAP
+  Month 1: <x> | Quarter: <x> | Year: <x>
+
+  VERDICT
+  <ten times / close / marginal / new> because <reason>
+
+  WHAT COULD WIDEN IT
+  Technology: <> | Network: <> | Scale: <> | Brand: <>
+
+  WHAT TO DO
+  <one move>
+
+  MISSING
+  <numbers that would firm this up>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "The measure"
+    how: "Say what the buyer pays for or complains about most. It uses that instead of guessing."
+  - what: "Your numbers"
+    how: "Give real figures from use, and say if they came from a demo."
+  - what: "Switching cost"
+    how: "Tell it the real setup time and who in the buyer's firm has to change habits."
+
+judge:
+  - "The measure is in the buyer's unit."
+  - "Both numbers have a source or say MISSING."
+  - "Switching cost is taken off before the verdict."
+  - "A marginal verdict gets a narrower buyer or a product change."
+
+test:
+  - "Run it on a product that is 15% better. It should call it marginal."
+  - "Run it on something with no substitute. It should say new and ask about demand."
+  - "Run it twice on the same input. The verdict should stay the same."
+
+improve:
+  - "Add what buyers have said when they compared you with the old way."
+  - "Add real use data in place of lab figures."
+  - "Pair it with \"Ten-year durability checker\" once the gap holds."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A comparison with a short sum is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Real use numbers from customers"
+    - "What buyers say about the old way"
+    - "Setup time for a new buyer"
+
+terms:
+  - term: "Substitute"
+    meaning: "What a buyer would use or do if your product did not exist."
+  - term: "Switching cost"
+    meaning: "The time, money and risk a buyer spends to change from the old way to yours."

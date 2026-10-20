@@ -1,0 +1,113 @@
+new_slug: people-trust-checker
+name: People trust checker
+summary: Name the people behind a deal or hire. Get how able, honest and owner-minded they are, and what to verify.
+job: think-and-decide
+thinking: high
+thinking_why: It weighs character and reward evidence and has to avoid being swayed by a good pitch.
+headline: People trust checker
+subhead: Name the people who will run, sell or deliver what you are considering, and what you know about them. It tests how able they are, how honest when it cost them, how reliable and how much they act like owners. It ends with questions to ask others and a trust verdict.
+explain: |-
+  A good story from a person you cannot trust is a bad deal. The people behind something decide whether the plan is carried out, whether bad news reaches you and whether your interests count. Pitches show ability. They rarely show honesty, reliability or how someone behaves when it costs them.
+
+  This skill separates four things: can they do it, will they be straight with you when it hurts, will they do what they said, and do they carry the risk like owners. It looks at pay and past conduct, asks for evidence from people they did not choose as references, and says where one failure rules the person out whatever else is true.
+when:
+  - You are about to hire, partner with or hand money to someone you only know from a pitch.
+  - A manager or adviser is very persuasive and you want to test the person.
+  - You inherit a team and want to know who to rely on.
+you_give:
+  - The people involved and their roles
+  - What you know of their record and how they are paid
+  - The result of the circle and staying power checks (optional)
+you_get:
+  - A rating on ability, honesty, reliability and owner mindset
+  - The pay structure and what it bends
+  - Questions to ask people they did not choose
+  - "A verdict: trust, trust with checks or do not trust"
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - "List the people and paste what you know: bios, claims, how they are paid."
+  - "Note the sources: which facts you checked and which you were told."
+  - Ask the questions it writes of people they did not name as references.
+how_it_works:
+  - title: Name who counts
+    text: Names the people who control the result.
+  - title: Test ability
+    text: Checks their record in a similar job.
+  - title: Test honesty
+    text: Looks at conduct when it cost them.
+  - title: Test reliability
+    text: Checks whether they did what they said.
+  - title: Test owner mindset
+    text: Checks whether they carry the risk and use resources like owners.
+  - title: Review the pay
+    text: Checks what their pay encourages.
+  - title: Weigh people against the case
+    text: Weighs the people against the quality of the case.
+  - title: Write the checking questions
+    text: Writes questions for people they did not pick as references.
+  - title: Give the verdict
+    text: Gives trust, trust with checks, or do not trust.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  WHO COUNTS
+  <person> | role | years | facts: TOLD or CHECKED
+
+  BY PERSON
+  Ability: PROVEN, PARTLY or UNPROVEN | facts
+  Honesty: CLEAN, MIXED or CONCERNING | facts
+  Reliability: RELIABLE or NOT | promises kept
+  Owner mindset: OWNER-MINDED, MIXED or NOT | facts
+
+  PAY
+  <paid how> | what it bends | where it differs from your interest
+
+  PEOPLE AGAINST CASE
+  <weighing>
+
+  CHECK WITH OTHERS
+  Questions 1 to 5 | documents 1 to 3
+
+  VERDICT
+  trust, trust with checks or do not trust | deciding fact
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: Sources you can name
+    how: Say which facts you checked yourself. Checked facts count for far more than told ones.
+  - what: How the person is paid
+    how: Give the actual pay plan. A pay plan shows where their interest points better than any speech.
+  - what: The size of the deal
+    how: A larger deal raises the bar for CHECKED facts.
+judge:
+  - Every rating has a fact you can trace.
+  - The verdict would stand up if the person read it.
+  - The checking questions are ones you could actually ask.
+  - At least one question is about a time honesty cost them something.
+test:
+  - Run it on a person you know well and check the ratings against your own view.
+  - Give it only a glossy pitch. It should rate most tests unknown.
+  - Run it twice. The verdict should match.
+improve:
+  - Write down the answers from the checking questions and add them next time.
+  - Use it on a team you inherit, one person at a time.
+  - Keep a list of people who passed and how they did.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - Bios, filings, press or reviews about the people
+    - Pay plans or terms of the deal
+    - Names of people who have dealt with them
+terms:
+  - term: Told and checked
+    meaning: A fact is told if it came from the person, and checked if it came from a source you can verify.
+  - term: Owner mindset
+    meaning: Acting as someone who bears the risk and keeps the result over the long run would.

@@ -1,0 +1,20 @@
+slug: second-order-effects-tracer
+name: Second-order effects tracer
+summary: Paste a change you plan to make. Get what it causes, what that causes, and how much of the gain you keep.
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: Following the consequences of the consequences, the warning that a forecast from past numbers fails when new rewards change behaviour, and the test of how much of a cost saving stays with the owner

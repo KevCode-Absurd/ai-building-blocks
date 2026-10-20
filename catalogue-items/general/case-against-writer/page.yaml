@@ -1,0 +1,115 @@
+new_slug: case-against-writer
+name: Case-against writer
+summary: Paste your plan or opinion. Get the best case against it, in the other side's words, and what would change your mind.
+job: think-and-decide
+thinking: high
+thinking_why: It has to argue well for a view you may not hold and judge honestly where your own case is weak.
+headline: Case-against writer
+subhead: "Paste your plan or opinion and your main reasons. It writes the strongest case against you, in the words a smart opponent would use, then tests whether you can answer each point. It ends with what would change your mind and a call: go, change or wait."
+explain: |-
+  People defend what they have already decided. They collect support and brush off the rest. A simple cure is to refuse to hold a view until you can state the best case against it better than its own supporters can.
+
+  This skill builds that case. It picks the opponent who knows most and has something to lose, writes their three best arguments, adds the facts that back them, and asks if you can answer. It names which of your assumptions is hit, and sets a test for changing your mind. It also helps you word your case in terms of the other person's interest.
+when:
+  - You are sure about a plan and want to know if you have earned that.
+  - You must defend a decision to people who disagree.
+  - You catch yourself only reading things that agree with you.
+you_give:
+  - Your plan or opinion
+  - Your main reasons for it
+  - Who disagrees with you, if you know (optional)
+you_get:
+  - The best three arguments against you, in the opponent's words
+  - The facts behind each, and which you can answer
+  - The assumption of yours that is hit hardest
+  - "What would change your mind, and a call: go, change or wait"
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your plan and your reasons exactly as you would say them.
+  - Answer each argument yourself before you read its reply.
+  - Write down the mind-changing test and the date you will check it.
+how_it_works:
+  - title: State your position
+    text: Writes your view and your main reasons in your words.
+  - title: Pick the best opponent
+    text: Chooses the smartest person who disagrees and has something to lose.
+  - title: Write their three arguments
+    text: Writes the three strongest objections as the opponent would.
+  - title: Add the backing facts
+    text: Adds the facts that would make each argument hard to wave away.
+  - title: Test your answers
+    text: Checks whether you can answer each argument with facts.
+  - title: Find the hit assumption
+    text: Names the best-loved assumption under attack.
+  - title: Set the mind-changing test
+    text: Writes what evidence would change the person's mind.
+  - title: Make the call
+    text: Gives go, change or wait.
+  - title: Word it for the other side
+    text: Rewrites your case in terms of what the other person gains or avoids.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  YOUR POSITION
+  <one line> | reasons: <reason> (fact, guess or value)
+
+  THE OPPONENT
+  <who> | what they lose if you are right
+
+  THE CASE AGAINST
+  1. <argument> | backing facts | your answer: answered, value or open
+  2. ...
+  3. ...
+
+  ASSUMPTION HIT
+  <assumption> | held how long
+
+  WHAT WOULD CHANGE YOUR MIND
+  <test with numbers or dates>
+
+  THE CALL
+  go, change or wait | reason | what would move it
+
+  FOR THE OTHER SIDE
+  <two sentences on their interest>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: Your reasons
+    how: Write them as you would say them out loud. Clean-up hides the weak ones and the check then misses them.
+  - what: The opponent you name
+    how: A named, informed opponent gives sharper arguments than a general one. Add what they have said.
+  - what: How much you have at stake
+    how: Say what it costs if you are wrong. A larger cost raises the bar for ANSWERED.
+judge:
+  - You would not be embarrassed to hear the arguments from a real expert.
+  - Each OPEN point is something you really cannot answer yet.
+  - The mind-changing test could be observed in the real world.
+  - The call matches the answers.
+test:
+  - Use a plan you have already defended in public. See if it finds the argument you dreaded.
+  - Give it a view you hold for reasons of loyalty. It should mark the reasons as values.
+  - Run it twice. The strongest argument should be the same both times.
+improve:
+  - Keep the mind-changing tests and check them on the date you set.
+  - Add the objections people in your field raise most often.
+  - Ask a real person to argue the opponent's side and compare.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - Past criticism of the plan from colleagues or customers
+    - Data you have not yet shown anyone
+    - A list of what the plan assumes
+terms:
+  - term: Mind-changing test
+    meaning: A fact you could observe that would make you drop or change the plan.
+  - term: Value point
+    meaning: An argument that comes down to what you care about, not to a fact that can settle it.

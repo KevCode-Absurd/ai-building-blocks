@@ -1,0 +1,26 @@
+slug: judge-if-a-business-is-great-enough-to-hold
+name: "Judge if a business is great enough to hold"
+summary: "Describe a business. Get its edge tested, who keeps the gain, and a keep, wait or pass call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: plan}
+uses: [business-power-tester, circle-of-competence-sorter, who-keeps-the-gain-tester, owner-minded-management-checker, long-hold-return-calculator]
+steps:
+  - {uses: business-power-tester, note: "The edge and the wall around it"}
+  - {uses: circle-of-competence-sorter, note: "A sort of the business into yes, no or too tough, with your real edge written down. Reads the edge test from the step before"}
+  - {uses: who-keeps-the-gain-tester, note: "Whether improvements stay with the owners or pass to buyers, and whether rivals fight each other. Reads the edge test from the step before"}
+  - {uses: owner-minded-management-checker, note: "Whether those running it are able, honest and act like owners. Reads the earlier findings"}
+  - {uses: long-hold-return-calculator, note: "The long sums and the final keep, wait or pass call. Reads all the findings so far"}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, warren-buffett]
+credits:
+  - {title: "Poor Charlie's Almanack", by: "Charles T. Munger, ed. Peter D. Kaufman", used: "The order of the steps: business power tester, circle of competence sorter, who-keeps-the-gain tester, owner-minded management checker, long-hold return calculator"}
+generated_from: intake/munger-invest-great-business/skeleton.yaml

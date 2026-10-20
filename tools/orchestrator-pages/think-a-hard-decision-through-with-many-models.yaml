@@ -1,0 +1,94 @@
+new_slug: think-a-hard-decision-through-with-many-models
+name: Think a hard decision through with models from many fields
+summary: Describe a hard decision. Get the obvious questions settled, many fields checked, pressures and rewards tested, and the case against it.
+job: think-and-decide
+thinking: high
+thinking_why: It runs seven skills in a row and has to keep the findings of each one in mind. Give it your strongest model.
+headline: Look at a hard decision from many sides before you make it
+subhead: Describe the decision and what a good result looks like. It settles the obvious questions first, runs the case through ideas from several fields, checks the pressures on you and who is rewarded for what, follows the consequences, turns the plan upside down and argues the other side.
+explain: |
+  A hard decision is usually seen through one lens, the one you or your adviser know best. That is how smart people miss a cost, a reaction or a plain fact outside their own field. The fix Charlie Munger taught is to carry the main ideas from several fields and run each problem through them in a fixed order, so no field is skipped because it did not come to mind.
+
+  This workflow does that in seven steps. It settles the big obvious questions and does the sums on your target. It then checks the case through maths, engineering, biology, psychology and economics. Next come the quiet pressures on your own judgment, who is rewarded for what, and what happens after the first effect. It ends by asking what would guarantee failure and by writing the best case against you.
+when:
+  - You face a costly or hard-to-undo decision and only one kind of expert has looked at it.
+  - A choice feels close and you want to know what you are missing before you commit.
+  - You are very sure about a plan and want to test it before you spend money on it.
+you_give:
+  - The decision, the result you want and the date you must decide by
+  - Your reasons for it, in your own words
+  - The numbers you have, such as money, volumes and time (optional)
+  - Who is involved and how each is paid (optional)
+you_get:
+  - The obvious questions settled, with the sums for your target and a smaller question left
+  - An answer from each field, with where they agree and clash
+  - The pressures bending your judgment, and who is rewarded for what
+  - The effects of the effects, the ways the plan could fail, and the best case against it
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe the decision and give your reasons before you read any of its findings.
+  - Read the last step first. If a key argument is still open, wait before you act.
+how_it_works:
+  - title: Settles the obvious first
+    text: Lists the big questions, settles the ones with an obvious answer, runs a rough sum on your target and leaves a smaller question.
+  - title: Checks many fields
+    text: Runs the case through maths, accounting, engineering, physics, biology, psychology and economics, and finds where they agree or clash.
+  - title: Finds the pressures on you
+    text: Writes your clear reasons first, then looks for rewards, past promises, the crowd and fear of loss, and cools the strongest.
+  - title: Checks the rewards
+    text: Lists how each person is paid, what that encourages and a fix that cannot easily be gamed.
+  - title: Follows the consequences
+    text: Traces what the change causes, how people react and how much of any gain you keep.
+  - title: Turns it upside down
+    text: Asks what would guarantee failure and checks the plan against the usual ways it fails.
+  - title: Argues the other side
+    text: Writes the best case against the plan, marks what you cannot answer and makes a go, change or wait call.
+output_shape: |-
+  STEP 1: OBVIOUS QUESTIONS FIRST
+    Settled: <question> | answer | reason | what would reverse it
+    The sum: <target> -> <what it needs> | paths crossed off
+    What is left: <1 to 3 open questions>
+
+  STEP 2: MODELS FROM MANY FIELDS
+    <field> | what it says | for, against or neutral
+    Stacks: <fields that agree> | Clashes: <trade-offs>
+
+  STEP 3: PRESSURES ON YOUR JUDGMENT
+    Clear case, pressures, pile-up and a calmer choice
+
+  STEP 4: WHO IS REWARDED FOR WHAT
+    <person> | reward | what it encourages | fix
+
+  STEP 5: CONSEQUENCES OF THE CONSEQUENCES
+    <change> -> <reaction> -> <effect> | share of the gain you keep | revised plan
+
+  STEP 6: TURNED UPSIDE DOWN
+    What would guarantee failure | survival risks | changes
+
+  STEP 7: THE CASE AGAINST
+    Three arguments | answered, value or open | what would change your mind | go, change or wait
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your reasons, in your own words
+    how: Write them before you read anything else it says. Vague reasons make it hard to tell clear thought from pressure.
+  - what: The numbers you give
+    how: Real figures turn the sums and the flow-through test from guesses into checks. Give prices, volumes and costs if you have them.
+  - what: Who attacks the plan
+    how: Name the smartest person who disagrees. The case against you gets sharper when it is built on a real opponent.
+judge:
+  - The obvious questions come with reasons, and none depends on a fact you never gave.
+  - Every field has an answer tied to your case, even if the answer is "nothing useful".
+  - The pressures and rewards are tied to facts in your situation, not general warnings.
+  - The case against you is one an informed opponent would make, and open points are marked open.
+  - The final call follows from what was answered and what was not.
+test:
+  - Use a decision you made and regret. See whether a step names the cause you missed.
+  - Give it a decision where your own pay depends on the answer. The rewards step should flag it.
+  - Run it twice on the same input. The settled questions and the final call should match, even if the wording differs.
+improve:
+  - Save each run and the outcome, then compare, so you learn which step finds the most for you.
+  - Add the usual failures of your field to the upside-down step.
+  - Turn the questions that keep catching you into a personal checklist with "Build a checklist for a decision you keep making".

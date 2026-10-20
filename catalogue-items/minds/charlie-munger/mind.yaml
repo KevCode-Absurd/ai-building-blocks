@@ -15,6 +15,8 @@ use_cases:
   - "Decide whether to wait for a better chance or act now"
   - "Plan your own learning across many subjects, not just your job"
   - "Challenge an adviser whose advice also pays them"
+  - "Check whether you know enough about a field before you act on it"
+  - "Build a checklist for a decision you keep making"
 seats:
   - {seat: "Devil's advocate (invert it)", asks: "What would make this fail for sure, and are we already doing any of it?"}
   - {seat: "Incentives", asks: "Who gets paid if we say yes, and how does that bend what they're telling us?"}
@@ -32,6 +34,7 @@ sources:
   - {n: 8, title: "Five Simple Notions that Solve Problems (excerpts of the 1996 talk Practical Thought about Practical Thought)", by: "Charlie Munger, via Farnam Street", url: "https://fs.blog/charlie-munger-notions/", kind: own-words}
   - {n: 9, title: "Practical Thought about Practical Thought: Turning $2 Million Into $2 Trillion (excerpt)", by: "Charlie Munger, via Farnam Street", url: "https://fs.blog/turning-2-million-into-2-trillion/", kind: own-words}
   - {n: 10, title: "Charlie Munger Speaks (notes on the May 2000 Wesco meeting, partly paraphrased)", by: "Whitney Tilson, The Motley Fool", url: "https://www.fool.com/boringport/2000/boringport000515.htm", kind: secondary}
+  - {n: 11, title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005; expanded edition with the 2007 talk)", by: "Peter D. Kaufman (editor), with eleven talks by Charlie Munger", kind: own-words}
 tests:
   - {kind: use, prompt: "We're opening a second café next spring. Invert the plan: list the surest ways it could fail."}
   - {kind: use, prompt: "Our sales team is paid on revenue and keeps selling our least profitable product. Explain what's going on and what to change."}

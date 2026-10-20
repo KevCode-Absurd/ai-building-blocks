@@ -1,0 +1,25 @@
+slug: pick-your-first-small-market-and-the-ones-after
+name: "Pick your first small market and the ones after"
+summary: "Give it your product. Get one small first market, the order to grow and a pitch with no rival."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+uses: [first-market-picker, market-boundary-checker, market-expansion-sequencer, rival-free-pitch-rewriter]
+steps:
+  - {uses: first-market-picker, note: "A short list of candidate first markets, with one picked and the reason."}
+  - {uses: market-boundary-checker, note: "Tests that your small market is one real buyers see, and that you could hold most of it."}
+  - {uses: market-expansion-sequencer, note: "The next markets in order, nearest first, and when to move to each."}
+  - {uses: rival-free-pitch-rewriter, note: "The pitch rewritten around the thing only you do, for the first market."}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel, reid-hoffman]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "The order of the steps: pick the first market, check the market is real, not drawn to flatter you, order the markets after it, write the pitch without a rival in it"}
+generated_from: intake/zero-to-one-first-market/skeleton.yaml

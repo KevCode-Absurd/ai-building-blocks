@@ -1,0 +1,22 @@
+slug: yes-no-too-hard-call-writer
+name: Yes, no or too-hard call writer
+summary: Paste your four filter results. Get a yes, no or too-hard call, how big to go, and what would change it.
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: plan, required: true}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+  - warren-buffett
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: Sorting choices into yes, no and too hard, waiting for the rare very good chance and then going big, and the last check before acting on a close call

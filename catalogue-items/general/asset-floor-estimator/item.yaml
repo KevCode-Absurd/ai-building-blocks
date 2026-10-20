@@ -1,0 +1,18 @@
+slug: asset-floor-estimator
+name: "Asset floor estimator"
+summary: "Paste a balance sheet and share price. Get book value, net current assets, sale value and a cash strength rating."
+category: general
+type: skill
+role: make
+job: analysis
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: source_text, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Book value and net current assets per share; counting preferred claims at their real size; rough sale values by asset class; the principle that a price persistently under sale value means the price is too low or the business should be wound up; working capital and acid tests"}

@@ -1,0 +1,108 @@
+new_slug: first-market-picker
+name: "First market picker"
+summary: "Paste your product and who could use it. Get a ranked short list of small first markets and the one to own."
+job: plan-strategy
+thinking: low
+thinking_why: "It lists groups and scores them against fixed tests, which most chat AIs do well."
+
+headline: "Pick the small group of buyers you can win first"
+subhead: "Tell it what you sell and who might use it. It scores each group on size, closeness, need, rivals and reach, cuts the broad ones, and gives you a ranked short list with the one to own first."
+
+explain: |
+  Trying to sell to everyone means reaching no one. A small group that sits together and needs your product weekly is easier to win, and winning it gives you proof for the next group.
+
+  This skill lists the groups that could use your product and scores each on five tests. It drops groups that are too big, too scattered or already served, and ranks the rest. It then tells you what to count to be sure.
+
+when:
+  - "Your product could serve many kinds of buyers and you can't pick."
+  - "Your plan says \"small businesses\" or \"everyone\"."
+  - "You need a group you can reach in the next few weeks."
+
+you_give:
+  - "What your product does"
+  - "Groups of buyers you think could use it (optional)"
+  - "Places and people you can reach now (optional)"
+you_get:
+  - "A scored list of groups"
+  - "A ranked short list with reasons"
+  - "The one group to own first"
+  - "What to count to confirm it"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your product and any groups you already have in mind. Say where you can reach people."
+  - "Count the numbers it asks for before you act on the pick. Treat the pick as a guess until you do."
+  - "Take the pick to your next conversation with buyers, and name the group when you speak."
+
+how_it_works:
+  - title: "Lists the groups"
+    text: "Cuts by who the buyers are, not by industry."
+  - title: "Scores five tests"
+    text: "Small, close, in need, lightly served and reachable."
+  - title: "Cuts the wrong groups"
+    text: "Drops those that are too big, too scattered or out of reach."
+  - title: "Ranks the rest"
+    text: "One line of reasoning per group."
+  - title: "Shrinks the pick"
+    text: "Offers a smaller slice if the top group is large."
+  - title: "Names what to count"
+    text: "Lists the numbers that would confirm the pick."
+
+output_shape: |
+  RANKED SHORT LIST
+  1. <group> | Small <0-2> Close <0-2> Need <0-2> Served <0-2> Reach <0-2> | <reason>
+  2. <group> | ...
+  3. <group> | ...
+
+  THE PICK
+  <group or slice>
+
+  WHY YOU COULD OWN IT
+  <two sentences>
+
+  WHAT TO COUNT
+  <numbers> | MISSING: <what you don't have>
+
+  NEXT GROUP ALONG
+  <group>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Groups you know"
+    how: "List groups from real customers or leads. It scores those first."
+  - what: "Where you can reach people"
+    how: "Name lists, communities and events you use. Reach scores come from these."
+  - what: "Size"
+    how: "Tell it how many buyers you could handle in the first year. It sets the right size for the pick."
+
+judge:
+  - "Each group is described by who they are."
+  - "The pick scores well on need and reach."
+  - "No pick depends on a small share of a large market."
+  - "The list of numbers to count is specific."
+
+test:
+  - "Run it on a product with the group \"all small businesses\". It should cut that group."
+  - "Run it with a small, reachable group and a large scattered one. The small one should win."
+  - "Run it twice on the same input. The pick should stay close."
+
+improve:
+  - "Add real lists of buyers, so counts come from data."
+  - "Add notes from past sales, so need scores come from evidence."
+  - "Pair it with \"Market boundary checker\" to test the pick."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Listing and scoring groups against fixed tests is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Lists of buyers you can reach"
+    - "Notes on who bought or asked for your product"
+    - "A map of where your buyers gather"
+
+terms:
+  - term: "First market"
+    meaning: "The small group of buyers you aim to win before anyone else."
+  - term: "Lightly served"
+    meaning: "A group that has no strong supplier today."

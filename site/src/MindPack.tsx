@@ -6,6 +6,7 @@ import { type Block, type Catalogue, pathOf } from "./lib/data";
 import { buildMindPack, download } from "./lib/handoff";
 import { Link } from "./lib/router";
 import PixelFace from "./PixelFace";
+import { LabelBadges } from "./MindLabel";
 
 export function MindSkills({ c, mind, toast }: { c: Catalogue; mind: Block; toast: (m: string) => void }) {
   const skills = (mind.skills ?? []).map((s) => c.bySlug[s]).filter(Boolean);
@@ -65,7 +66,7 @@ export function HelpedBy({ c, b }: { c: Catalogue; b: Block }) {
         <li key={m.slug}>
           <Link to={pathOf(m)} data-slug={m.slug}>
             <PixelFace face={m.face} area={m.area} slug={m.slug} size={40} />
-            <span><b>{m.name}</b><small>{m.seats?.[0] ?? ""}</small></span>
+            <span><b>{m.name}</b><LabelBadges c={c} labels={m.labels} max={2} size="sm" /><small>{m.seats?.[0] ?? ""}</small></span>
           </Link>
         </li>
       ))}

@@ -17,6 +17,7 @@ origin: rebuilt
 version: 1.0.0
 minds:
   - reid-hoffman
+  - peter-thiel
 credits:
   - title: Reid Hoffman on network effects, interview with James Currier
     by: NFX

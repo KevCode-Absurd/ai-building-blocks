@@ -1,0 +1,18 @@
+slug: bad-year-break-even-tester
+name: "Bad-year break-even tester"
+summary: "Paste a business and its worst risks. Get how big a loss one year can bring before it stops earning."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [warren-buffett]
+credits:
+  - {title: "The Warren Buffett Way, Second Edition (2005)", by: "Robert G. Hagstrom", used: "The habit of naming the events that could hurt a business, rating how likely each is, and working out in plain sums how large a loss the business could absorb in one year and still break even"}

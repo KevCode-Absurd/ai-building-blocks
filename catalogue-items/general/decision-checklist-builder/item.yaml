@@ -1,0 +1,21 @@
+slug: decision-checklist-builder
+name: Decision checklist builder
+summary: Paste your mistake log. Get a one-page checklist of up to twelve questions, each with a pass or fail line.
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: lessons_register, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: The case for a written checklist, the pilot-style rules of use, the idea of running forward and backward, and the lenses of reward, alternatives, consequences and disconfirming evidence

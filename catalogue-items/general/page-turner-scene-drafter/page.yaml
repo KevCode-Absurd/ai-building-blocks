@@ -1,0 +1,108 @@
+new_slug: page-turner-scene-drafter
+name: "Page-turner scene drafter"
+summary: "Paste your hook plan. Get a drafted scene in plain, concrete prose that ends on the line you planned."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "Writing a scene that holds attention needs close control of rhythm, detail and what to hold back."
+
+headline: "A scene in plain, concrete prose that stops where readers cannot"
+subhead: Paste your hook plan, and the fair-escape notes if you have them. It drafts the scene in short beats with real objects and sounds, holds back the answer, and stops on the line you planned.
+
+explain: |
+  A scene can have the right question and still read flat. The usual causes are general words, long set-up before the trouble and an ending that explains instead of stopping.
+
+  This skill drafts from your plan. It opens in the middle of the trouble with one concrete detail, uses names of real things (a brand of soup, a make of car, a song on the radio) in place of general words, and keeps the beats short. It slips the character's thoughts in as asides and puts the worst thing late. It holds back the one fact that answers the question. It then stops on the line you planned. It writes a draft you can edit, not a finished chapter.
+
+when:
+  - You have a plan for a scene and need a first draft that does not drift.
+  - Your drafts explain the feeling instead of showing the object.
+  - Your scenes have the right ending but a slow start.
+
+you_give:
+  - A hook plan from "Next-page hook planner"
+  - Fair-escape notes from "Fair escape checker" (optional)
+  - A few lines of your own writing, so it can match your voice (optional)
+  - The point of view and the tense you want (optional)
+you_get:
+  - A drafted scene of 400 to 900 words
+  - The stop line at the end, as planned
+  - A short note on what it held back and where it planted details
+  - A list of the facts it had to mark as missing
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the plan. Paste a sample of your own prose if you want it to match your voice.
+  - Say the point of view and the tense.
+  - Edit the draft, then run "Page-pull scene checker" on it.
+
+how_it_works:
+  - title: Opens in the trouble
+    text: Starts mid-scene with one concrete detail and the person already under pressure.
+  - title: Uses real things
+    text: Replaces general words with exact objects, brands, sounds and weather, where the story gives them.
+  - title: Keeps beats short
+    text: Moves in short beats, with one longer passage where the pressure drops.
+  - title: Holds back the answer
+    text: Keeps the one fact that answers the question out of the scene until after the stop line.
+  - title: Plants details
+    text: Slips in the details the plan says the answer needs, as colour.
+  - title: Stops on the line
+    text: Ends on the planned stop line, with no summary after it.
+  - title: Checks itself
+    text: Checks the draft against the plan and names any check it missed.
+
+output_shape: |
+  SCENE
+  <the draft, 400 to 900 words>
+
+  HELD BACK
+  <the fact that answers the question>
+
+  PLANTED
+  <detail | where in the draft>
+
+  MISSING
+  <facts invented or needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Point of view
+    how: Say first or third, close or distant. The default is close third.
+  - what: Length
+    how: Give a word count. The default is about 600 words.
+  - what: Your voice
+    how: Paste a page of your own writing. It matches your sentence length and your words.
+  - what: Era and place
+    how: Give the year and place so the objects are real for then and there.
+
+judge:
+  - The first sentence has a person under pressure and one concrete detail.
+  - Most nouns are specific, not general.
+  - The answer to the question is not in the scene.
+  - The last line is the planned stop line.
+
+test:
+  - Read the draft aloud. Mark every place you lose your breath or your interest.
+  - Cut the first paragraph. If the scene is better, the open was too slow.
+  - Check that you could not say the answer from the scene alone.
+
+improve:
+  - Add a list of your favourite sentence shapes, such as short, short, long.
+  - Add real objects from your own life, so the details have weight.
+  - Keep a file of stop lines from your favourite books, and compare.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Drafting from a plan is text work any strong chat AI does well with this skill."}
+    - {name: "A printed copy and a pen", why: "Reading a scene on paper shows where it drags."}
+  inputs:
+    - "A hook plan from Next-page hook planner"
+    - "A page of your own writing, for voice"
+
+terms:
+  - term: Beat
+    meaning: A short unit of action or thought, often one or two sentences.
+  - term: Held back
+    meaning: The fact that answers the reader's question, kept out of the scene on purpose.

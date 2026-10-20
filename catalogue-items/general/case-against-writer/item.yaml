@@ -1,0 +1,22 @@
+slug: case-against-writer
+name: Case-against writer
+summary: Paste your plan or opinion. Get the best case against it, in the other side's words, and what would change your mind.
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+  - charles-darwin
+  - benjamin-franklin
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: The rule that you should be able to state the case against your own view better than its supporters, the habit of giving first place to evidence that cuts against your favourite idea, and the advice to persuade by appeal to the other person's interest

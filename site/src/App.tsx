@@ -1,9 +1,9 @@
 import { spaceKey, spaces } from "./lib/space";
 import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, Drawer, Logo, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
-import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
+import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, loadPage, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
-import { Link, navigate, setSearch, useLocation } from "./lib/router";
+import { Link, navigate, setPrefetch, setSearch, useLocation } from "./lib/router";
 import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
 import { TailorDrawer, openTailor, useTailorOpener } from "./Tailor";
 import { hasBusiness, useBusiness } from "./lib/business";
@@ -65,6 +65,14 @@ function useHashLanding() {
 
 function useIdlePrefetch() {
   useEffect(() => {
+    // A link to a block warms its page file; the code for every page is already loading below.
+    setPrefetch((to) => {
+      const m = /^\/(skills|prompts|workflows|minds)\/([a-z0-9-]+)/.exec(to);
+      if (m) void loadPage(m[2]);
+    });
+    // On data saver or a slow phone line, pages load when they're opened instead.
+    const net = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
+    if (net?.saveData || /(^|-)2g$/.test(net?.effectiveType ?? "")) return;
     const idle = window.requestIdleCallback ?? ((f: () => void) => window.setTimeout(f, 1200));
     const stop = window.cancelIdleCallback ?? window.clearTimeout;
     const id = idle(() => Object.values(PAGES).forEach((load) => load().catch(() => {})), { timeout: 4000 });

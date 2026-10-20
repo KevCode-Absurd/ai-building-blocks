@@ -14,7 +14,7 @@ outputs:
   - {type: audit_report}
 origin: rebuilt
 version: 1.0.0
-minds: [mark-roberge]
+minds: [mark-roberge, charlie-munger]
 credits:
   - {title: "Sales Compensation, chapter in Data Driven Sales", by: "David Skok, via Clearbit", used: "Paying on retention bands, looking at churn by rep, and checking what a plan rewards"}
   - {title: "Sales AMA with Mark Roberge: burning questions answered", by: "Mark Roberge", used: "Tying pay to the behaviour you want and checking it over two quarters"}

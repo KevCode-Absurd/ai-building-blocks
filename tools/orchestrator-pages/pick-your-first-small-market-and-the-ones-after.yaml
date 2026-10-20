@@ -1,0 +1,104 @@
+new_slug: pick-your-first-small-market-and-the-ones-after
+name: "Pick your first small market and the ones after"
+summary: "Give it your product. Get one small first market, the order to grow and a pitch with no rival."
+job: plan-strategy
+thinking: medium
+thinking_why: "It runs four skills that each need some judgement but follow fixed tests. A strong model keeps the steps consistent."
+
+headline: "Pick the small group you can win first, then plan the markets after it"
+subhead: Give it your product and who might use it. It scores the groups, picks a small one you can reach this month, and checks that it is a market buyers really see. Then it orders the markets that come next and rewrites your pitch so it says what you do, not who you compete with.
+
+explain: |
+  A plan that starts with everyone reaches no one. A small group that sits together, needs your product often and has no strong supplier is far easier to win. Winning it gives you proof, a base and a reason for the next group to say yes.
+
+  This workflow picks that first group, then tests that it is real: a market buyers would compare you in, not one drawn to flatter you. It then lists the markets next door, scores how near each is, checks each move for what could stop it, and writes the order with a sign that tells you when to move. The last step rewrites your pitch so it rests on what only you do, with no rival and no fight with an old firm in it.
+
+when:
+  - Your product could serve many kinds of buyers and you can't pick where to start.
+  - You are winning a small group and need to know where to go next.
+  - Your pitch starts with "like [big name], but" and you want one that stands alone.
+
+you_give:
+  - What your product does and the problem it solves
+  - Groups of buyers you think could use it (optional)
+  - Places and people you can reach now (optional)
+you_get:
+  - A ranked short list of small first markets, and the one to own
+  - A check that the market is real and how much of it you could hold
+  - The next markets in order, nearest first, with a sign to move on
+  - Your pitch rewritten around what only you do
+
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Describe your product and where you can reach people. Count the numbers it asks for before you act on the pick.
+  - Use the pitch with one real buyer in the first market and see if they repeat it.
+
+how_it_works:
+  - title: Picks the first market
+    text: Scores each group on size, closeness, need, rivals and reach, cuts the broad ones, and picks one to own.
+  - title: Checks the market is real
+    text: Works out your share at four sizes of market and finds the one buyers compare you in.
+  - title: Orders the markets after it
+    text: Lists neighbouring markets, scores how near each is, checks for obstacles and fights, and writes the order with a sign to move.
+  - title: Rewrites the pitch
+    text: Removes comparisons, "cheaper" and fight words, and rebuilds the pitch on what only you do.
+
+output_shape: |
+  STEP 1: FIRST MARKET
+    Ranked list: <group, scores, reason> | Pick: <group> | What to count: <>
+
+  STEP 2: IS IT REAL
+    Share ladder: <> | The market buyers compare you in: <> | Call: <own / reach / sliver / fiction>
+
+  STEP 3: THE ORDER
+    1. <market> | Why next: <> | Sign to move on: <number>
+    2. <market> | ...
+
+  STEP 4: THE PITCH
+    One line: <under 15 words> | Three sentences: <> | Thirty seconds: <>
+    Tests: stranger <> | delete <> | fight <>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+
+tweaks:
+  - what: Groups you know
+    how: List groups from real customers or leads. Step 1 scores those first.
+  - what: Where you can reach people
+    how: Name lists, communities and events you use. Reach scores come from these.
+  - what: Your pace
+    how: Say how many new markets you can take on per year. Step 3 sets the dates from it.
+
+judge:
+  - The first market is small enough to name its members and reachable this month.
+  - The market checked is the one buyers compare you in.
+  - The order follows how near each market is.
+  - The pitch has no rival, "cheaper" or fight word left in it.
+  - Nothing is invented to fill a gap.
+
+test:
+  - Give it "all small businesses" as the group. Step 1 should cut it.
+  - Give it a pitch built on "the Uber of" something. Step 4 should find the hidden edge or say there is none.
+  - Run it twice on the same input. The first market should be close each time.
+
+improve:
+  - Save your pick and the sign to move in your brand file, so you can track it.
+  - Re-run step 3 each time you own a market and the sign is met.
+  - Pair it with "Test if your idea can own its market" to test the pick in depth.
+
+works_best_with:
+  tools:
+    - {name: "Claude", why: "Holds the group scores, the share sums and the plan in one run."}
+  inputs:
+    - "Lists of buyers you can reach"
+    - "Your share of the first market"
+    - "Customer words about why they bought"
+
+terms:
+  - term: First market
+    meaning: The small group of buyers you aim to win before anyone else.
+  - term: Sign to move
+    meaning: A number that shows you own the market you are in and can start the next.
+  - term: Rival frame
+    meaning: A way of describing yourself by comparison to another firm.

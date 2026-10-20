@@ -1,0 +1,123 @@
+new_slug: lifetime-punch-card-bet-ranker
+name: "Twenty-punch bet ranker"
+summary: "List your bet ideas. Get the top one to three ranked and sized, and a written no for the rest."
+job: money-and-investing
+thinking: medium
+thinking_why: "It scores and ranks against fixed rules, then sizes with a survival limit. The scoring needs judgement, but the method is set."
+
+headline: "Twenty-punch bet ranker"
+subhead: "List your bet ideas and what you know about each. It imagines a card with only twenty punches for life, scores each idea on understanding, edge and survivability, and compares it with your next best use. You get one to three sized picks and a written no for the rest. Method of analysis, not personal financial advice."
+
+explain: |
+  Most people spread across many bets because each looks fine alone. The result is a lot of effort for a thin edge. If you only had twenty big choices for life, you would check each one hard and put real weight on the few you truly understand.
+
+  This skill ranks your ideas that way. It scores each on understanding, edge and survivability, caps the size of any idea that could ruin you, and compares every pick with the best alternative for the same money, time or effort. It keeps one to three picks, gives them sizes and writes a reason for every no. It gives no buy or sell calls on any named security.
+
+when:
+  - You have a long list of ideas and a thin spread of effort or money across them.
+  - You keep adding new bets and never back one properly.
+  - You need a reason to say no to a good-looking idea.
+
+you_give:
+  - A report on the odds for each bet, or a list with notes
+  - The pot of money, time or effort you can commit (optional)
+  - Your best alternatives for the same resource (optional)
+you_get:
+  - A scored list on understanding, edge and survivability
+  - One to three picks in order, each with the alternative it beats
+  - Sizes with a survival limit and what each pick must not risk
+  - A written no for every other idea
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your odds report or your list of ideas with what you know about each.
+  - Say how big the pot is and what must stay safe.
+  - Name what you would do with the pot if you backed none of the ideas.
+  - Take the picks to the "Room for error plan checker".
+
+how_it_works:
+  - title: Sets the card
+    text: Twenty punches for a lifetime of money choices, or five for a year of work effort.
+  - title: Lists every idea
+    text: One line each, with untested ones marked.
+  - title: Scores on three things
+    text: Understanding, edge and survivability, each 1 to 5. Low survivability caps the size.
+  - title: Compares with the next best use
+    text: A pick must beat a named alternative, not only doing nothing.
+  - title: Ranks and cuts
+    text: Keeps one to three and gives the rest a written no.
+  - title: Sizes the picks
+    text: Sets each share so that losing it all still leaves you able to carry on.
+  - title: Writes the no list
+    text: One reason for every idea cut, and what to learn to retest it.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  THE CARD
+  <number of punches and what counts as one>
+
+  SCORED LIST
+  <idea> | Understanding <1-5> | Edge <1-5> | Survives <1-5>
+
+  THE PICKS
+  1. <idea>: beats <alternative>; size <share>; must not risk <what>
+  2. ...
+
+  THE NO LIST
+  <idea>: no, because <reason>
+
+  WORTH RE-TESTING
+  <idea>: learn <what>
+
+  MISSING
+  <what would firm up the sizes>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The number of punches
+    how: Pick a number that fits your horizon. Fewer punches force harder choices.
+  - what: The pot
+    how: Say what must stay safe. It sets the survival limit on each pick.
+  - what: Your alternatives
+    how: Name a real alternative for each large pick, such as paying off a loan.
+  - what: Idea notes
+    how: Add the best fact you know about each idea. Scores rest on facts.
+
+judge:
+  - One to three picks hold most of the weight.
+  - Each pick beats a named alternative.
+  - No low-survivability idea is large.
+  - Each no has a reason.
+  - Sizes add up to the pot.
+
+test:
+  - Give it ten ideas of mixed quality. At most three should survive.
+  - Give it an exciting idea with a risk of ruin. Its size should be capped.
+  - Give it ideas the odds report called no bet. They should land on the no list.
+  - Run it twice. The top pick should stay the same.
+
+improve:
+  - Keep your card and write each pick in it with a date and reason.
+  - Review the no list each year and retest ideas you have learned more about.
+  - Add a line for how much time a pick takes to watch.
+  - Pair it with the "Sit-still rule writer" so the picks are held well.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Scoring and ranking against fixed rules is text work any strong chat AI does well."}
+    - {name: "A notebook", why: "A paper card with twenty boxes makes each commitment feel real."}
+  inputs:
+    - "A report from the Mispriced bet tester"
+    - "Your net worth or the size of the pot, in a rough figure"
+    - "A list of what you must pay in the next two years"
+
+terms:
+  - term: Punch
+    meaning: One big commitment, counted against a fixed limit for a lifetime or a year.
+  - term: Survivability
+    meaning: Whether you can carry on if the bet loses everything.
+  - term: Next best use
+    meaning: The best other thing you could do with the same money, time or effort.

@@ -1,0 +1,18 @@
+slug: sit-still-rule-writer
+name: "Sit-still rule writer"
+summary: "Paste your picks. Get one page of holding rules: what must stay true, review dates and the only reasons to act."
+category: general
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, warren-buffett]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)", by: "Charles T. Munger, edited by Peter D. Kaufman", used: "Holding a few well-chosen positions and doing little, the cost of fees, taxes and constant advice, and judging any move against the alternatives"}

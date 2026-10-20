@@ -1,0 +1,18 @@
+slug: circle-of-competence-sorter
+name: "Circle of competence sorter"
+summary: "Describe a business or bet. Get it sorted as yes, no or too tough, with your real edge written down."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: false}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, warren-buffett]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)", by: "Charles T. Munger, edited by Peter D. Kaufman", used: "The three baskets (yes, no, too tough), the rule that you must know where your own edge ends, and the point that an edge can be built slowly by work in one field"}

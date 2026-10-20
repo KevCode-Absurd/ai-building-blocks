@@ -46,6 +46,13 @@ How to start:
 
 The score with its five parts. Slide count, timing, text size, opening, aim and niche results. Fixes in order, each tied to a slide. `MISSING:` lines. Last, CHECKS MISSED: one line per check missed, or "none".
 
+<!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
+## After this
+When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
+- **Sell it** with the [Sales route plan builder](https://useaiblocks.com/skills/sales-route-plan-builder). It takes the audit report.
+If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
+<!-- /next -->
+
 ## Check before you hand it back
 
 - Slide count and timing are reported with numbers.

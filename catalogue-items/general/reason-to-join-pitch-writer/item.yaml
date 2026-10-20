@@ -1,0 +1,18 @@
+slug: reason-to-join-pitch-writer
+name: "Reason-to-join pitch writer"
+summary: "Paste your company and the role. Get a pitch to the people you need that rests on mission and team, not perks."
+category: general
+type: skill
+role: make
+job: copy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: copy_draft, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "Answering why the twentieth hire should join you over a larger company, using a unique mission and the team instead of pay and perks, and the point that you also sell your company to hires, investors and the press"}

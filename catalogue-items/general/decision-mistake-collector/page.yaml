@@ -1,0 +1,105 @@
+new_slug: decision-mistake-collector
+name: Decision mistake collector
+summary: Name a decision you keep making. Get your past mistakes and others' logged by cause, and the repeat offenders.
+job: think-and-decide
+thinking: medium
+thinking_why: It sorts cases by how they were decided and labels causes, which takes judgment but follows fixed steps.
+headline: Decision mistake collector
+subhead: Name a kind of decision you make again and again, such as hiring, pricing or taking on a client. Give it a few past cases of yours and a few from others. It judges how each was decided, names the cause of each real mistake, and shows which causes repeat.
+explain: |-
+  A checklist is only as good as the mistakes it is built from. Most people remember outcomes, not how they decided. A good call can end badly and a sloppy call can end well, so the result alone teaches the wrong thing.
+
+  This skill sorts each case by process and outcome, keeps only the cases where the process was weak, and names the cause with plain labels such as rushed, reward-bent advice or sticking with an old choice. It adds cases from other people, which cost you nothing. You get a log that shows which causes repeat, and for each case the one question that would have caught it.
+when:
+  - You keep repeating the same kind of mistake.
+  - You are about to build a checklist and need to know what goes on it.
+  - A bad result has you asking whether you decided badly or were unlucky.
+you_give:
+  - The kind of decision you keep making
+  - Three to six past cases of your own, with what you chose and what happened
+  - Three cases from others in the same field (optional)
+you_get:
+  - "Each case sorted: bad process, bad luck, lucky win or good call"
+  - A cause named for each real mistake
+  - The causes that repeat, with a count
+  - For each case, the question that would have caught it
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Name the decision and paste your past cases as you remember them, bad and good.
+  - Add two or three failures you know from others in your field, or ask it to suggest where to look.
+  - Take the log to "Decision checklist builder".
+how_it_works:
+  - title: Name the decision
+    text: Defines the kind of decision, how often it comes, and what good looks like.
+  - title: Collect your cases
+    text: Lists your own past cases with what you knew then.
+  - title: Add cases from others
+    text: Adds failures from other people in the same field.
+  - title: Judge process, not result
+    text: Sorts each case into four boxes by how it was decided.
+  - title: Name the cause
+    text: Gives each real mistake a plain cause label.
+  - title: Count the repeats
+    text: Counts which causes show up more than once.
+  - title: Write the catching question
+    text: Writes the one question that would have caught each mistake.
+  - title: Pick the top few
+    text: Chooses the repeat causes and the single costliest case.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  DECISION TYPE
+  <one line> | how often | what is at stake
+
+  SORT
+  Case 1: <good call, bad luck, lucky or mistake> | reason
+
+  THE LOG (lucky and mistake cases)
+  <case> | what happened | ignored or skipped | cause | cost | catching question
+
+  REPEAT OFFENDERS
+  <cause> | count | cases
+
+  TOP FOUR FOR THE CHECKLIST
+  <three causes + costliest case> | why
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: How many cases you give
+    how: Six cases show patterns that three do not. If you can, add the ones you would rather forget.
+  - what: What you knew at the time
+    how: Say what you knew then, not what you know now. Hindsight hides the real cause.
+  - what: Cases from others
+    how: Add failures from your own field. They are the cheapest source of checklist items.
+judge:
+  - Each case sits in the box a fair observer would pick.
+  - Each cause is tied to something that happened, not a general label.
+  - You can answer each catching question with a fact.
+  - The repeat causes match what you already half knew about yourself.
+test:
+  - Give it one case that went well by luck. It should log it as lucky, not as a good call.
+  - Give it a case that went badly through no fault of yours. It should call it bad luck and leave it out.
+  - Run it twice on the same cases. The causes should match.
+improve:
+  - Add each new decision to the log within a week of the result.
+  - Keep a separate log for each decision type.
+  - Re-run it after twelve months to see if the repeat causes have changed.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps the log, the checklist and your records in one place you can come back to.
+  inputs:
+    - Your notes or messages from the time of each decision
+    - A list of failures in your field you have read about
+    - "Numbers: what each decision cost or earned"
+terms:
+  - term: Process
+    meaning: "How you reached the decision: what you checked, who you asked, how long you took."
+  - term: Repeat offender
+    meaning: A cause of error that shows up in two or more of your cases.

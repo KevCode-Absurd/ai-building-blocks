@@ -1,0 +1,19 @@
+slug: seven-question-startup-scorer
+name: "Seven-question startup scorer"
+summary: "Paste your plan and earlier checks. Get a score on seven make-or-break questions and the one to fix first."
+category: general
+type: skill
+role: check
+job: strategy
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: plan, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "The seven questions every business must answer (engineering, timing, monopoly, people, distribution, durability and secret), the point that one weak answer can sink a plan, and the cleantech failures used to show it"}

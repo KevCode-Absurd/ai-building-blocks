@@ -1,0 +1,130 @@
+new_slug: target-size-back-solver
+name: "Target size back-solver"
+summary: "Name the size you want a business to reach. Get the buyers, volume, share and profit that must be true."
+job: plan-strategy
+thinking: high
+thinking_why: "It works a chain of sums backward, marks every figure as checked or guessed and runs stress tests. A slip in the arithmetic changes the answer."
+
+headline: "Target size back-solver"
+subhead: "Give it your plan and the size you want to reach. It turns the target into yearly earnings and splits it into buyers, purchases, share and profit per sale. Each figure is marked checked, estimated or guess. It tests the profit against rising prices, halves each part, and shows which one the plan leans on."
+
+explain: |
+  A target such as "worth a billion" means little until you break it into parts. Working backward to the number of buyers, how often they buy, how much of the market you hold and how much you keep per sale shows quickly whether the target is sane and where it is fragile.
+
+  This skill does that sum in plain arithmetic. It marks each figure as checked, estimated or a guess, converts distant-year profit into today's money, and asks what happens if each part is half as large. It then names the part the plan leans on most. It is a planning tool, not a valuation of any company and not investment advice.
+
+when:
+  - You have a big target for a business and no sense of what it would take.
+  - A pitch says a huge market means a huge result and you want to test it.
+  - You want to find which assumption in your plan is carrying the most weight.
+
+you_give:
+  - Your plan and the big choices you have made
+  - The size you want and the year (optional)
+  - Market and price facts you can check (optional)
+you_get:
+  - The target turned into yearly earnings
+  - A four-part sum with each figure marked checked, estimated or guess
+  - A test for rising prices and one for richer buyers
+  - A half test for each part and the figure the plan leans on
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your plan, or the plan from the "Big decisions first sorter".
+  - State the target and the year, or let it suggest a range.
+  - Add any market sizes, purchase counts and prices you can source.
+  - Read the part the plan leans on, then go find real facts for that part.
+
+how_it_works:
+  - title: Sets yearly earnings
+    text: Turns a value or a sales target into earnings you can break apart, marking any multiple as a guess.
+  - title: Splits into four parts
+    text: Buyers times purchases per buyer times share times profit per purchase.
+  - title: Marks each figure
+    text: Checked with a source, estimated from reasoning, or a guess.
+  - title: Tests for rising prices
+    text: Converts distant-year profit into today's money so it can be compared.
+  - title: Tests for richer buyers
+    text: Notes whether spending on this will probably grow, with a reason, and does not count it as certain.
+  - title: Runs the half test
+    text: Halves each part in turn and shows how much earnings fall.
+  - title: States what must be true
+    text: Four to six plain sentences, plus the fact that would show the plan is out of reach.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  TARGET
+  <value or sales> -> <earnings a year in year N>
+
+  THE SUM
+  Buyers <n> [CHECKED/ESTIMATED/GUESS]
+  x Purchases a year <n> [..]
+  x Share <%> [..]
+  x Profit per purchase <n> [..]
+  = <earnings>
+
+  MONEY OVER TIME
+  <profit per purchase in today's money>
+
+  RICHER BUYERS
+  <note and reason>
+
+  THE HALF TEST
+  Buyers halved: <earnings>  Purchases halved: <earnings>  ...
+  The plan leans most on: <part>
+
+  WHAT MUST BE TRUE
+  <four to six plain sentences>  Out of reach if: <fact>
+
+  MISSING
+  <what to look up>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The multiple
+    how: If you give a value target, say what multiple of earnings you would defend and why.
+  - what: The years
+    how: State the number of years. Rising prices matter more over long periods.
+  - what: The market
+    how: Name the exact group of buyers. "Everyone" gives a weak sum; "households with a pet dog in one country" does not.
+  - what: Sources
+    how: Give a source for every checked figure so it can be marked as such.
+
+judge:
+  - The target is turned into yearly earnings.
+  - Each figure has a mark.
+  - Money is in one kind throughout, or the change is shown.
+  - The half test is run for every part.
+  - The part the plan leans on is named.
+
+test:
+  - Give it a modest target with real market data. Most figures should be checked.
+  - Give it a huge target with no data. Most figures should be guesses, and the half test should show fragility.
+  - Give it a profit per sale that rises over time. It should flag it.
+  - Run it twice. The sum should match.
+
+improve:
+  - Add your market's checkable facts so the first pass is already firm.
+  - Re-run it every quarter as guesses become checked figures.
+  - Add a fifth part if your business has a sharp extra driver, such as repeat orders.
+  - Pair it with the "Failure-first plan check" to test the part the plan leans on.
+
+works_best_with:
+  tools:
+    - {name: "A spreadsheet", why: "Lets you change one figure and watch the half test and the earnings update."}
+    - {name: "Any good chat AI", why: "It lays out the sum and the marks, but check the arithmetic on a calculator."}
+  inputs:
+    - "The plan from the Big decisions first sorter"
+    - "Market size and purchase data from a public source"
+    - "Your early sales numbers, if the business already runs"
+
+terms:
+  - term: Back-solve
+    meaning: Start from the result you want and work backward to what would have to be true.
+  - term: Half test
+    meaning: Cut one figure in half and see how far earnings fall.
+  - term: Today's money
+    meaning: A future amount shown at the buying power of money now, so that it can be compared fairly.

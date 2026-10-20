@@ -1,0 +1,24 @@
+slug: mental-model-checklist-runner
+name: Many-field model checklist runner
+summary: Paste a plan or problem. Get it checked through maths, engineering, biology, psychology and economics, one field at a time.
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: Running a problem through the main ideas of several fields as a checklist, looking for forces that point the same way, and treating a single-tool habit as a danger
+  - title: A Lesson on Elementary Worldly Wisdom (talks at USC and Stanford)
+    by: Charles T. Munger
+    used: "The list of core models: odds and compounding, accounting limits, backups and breakpoints, scale, competitive destruction, opportunity cost, and the two-track check of reasons and mind tricks"

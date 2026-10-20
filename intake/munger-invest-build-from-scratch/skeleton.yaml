@@ -1,0 +1,60 @@
+# Workflow skeleton from Poor Charlie's Almanack (docs/INTAKE.md). Our words; the source stays in mind-sources/ (local only).
+id: munger-invest-build-from-scratch
+source:
+  title: "Poor Charlie's Almanack"
+  by: "Charles T. Munger, ed. Peter D. Kaufman"
+  kind: book
+  rights: ideas-only
+minds: [charlie-munger]
+workflow:
+  slug: work-out-what-a-new-business-needs-to-get-huge
+  name: "Work out what a new business needs to get huge"
+  summary: "Name a business and a target size. Get the big choices, the sums behind the size and what to avoid."
+  when: "you are shaping a business from scratch and want its plan tested against a big target, working from the end back."
+  job: plan-strategy
+  level: advanced
+steps:
+  - name: "Big decisions first sorter"
+    skill: big-decisions-first-sorter
+    job: strategy
+    task: plan-strategy
+    from: "Talk Four, Practical Thought About Practical Thought: the first helpful notion and the no-brainer calls"
+    method: ["List every open question", "Pick out the ones whose answer is obvious once you look at the target", "Settle those first and write the reason in one line", "Note what each settled choice rules out", "Leave the hard questions for later with the choices now fixed"]
+    inputs: [question]
+    outputs: [plan]
+    note: "The few big choices that are already decided by the goal"
+  - name: "Target size back-solver"
+    skill: target-size-back-solver
+    job: analysis
+    task: plan-strategy
+    from: "Talk Four, the numbers behind the huge target"
+    method: ["Write the value you want and the earnings that would justify it", "Break earnings into buyers times servings times share times profit per serving", "Pick each figure from something you can check, and mark guesses", "Test the profit figure against money losing value and buyers getting richer", "Ask what happens if each figure is half as big", "Write which figure the whole plan leans on"]
+    inputs: [plan, question!]
+    outputs: [plan]
+    note: "The sum that links the goal to buyers, volume, share and profit. Reads the big choices"
+  - name: "Buying habit stack designer"
+    skill: buying-habit-stack-designer
+    job: strategy
+    task: plan-strategy
+    from: "Talk Four, conditioning, rewards, association and social proof"
+    method: ["Name the response you want repeated and the cue that triggers it", "List every real reward the customer gets from it", "List the pleasant things the brand can be tied to", "Make the product available everywhere so no rival habit forms", "Use what others see to bring in new buyers", "Stack many of these at once, since big effects come from combined forces"]
+    inputs: [plan]
+    outputs: [plan]
+    note: "How the product becomes a repeat habit, using many forces at once. Reads the sized plan"
+  - name: "Incentive checker"
+    skill: incentive-checker
+    job: analysis
+    from: "Talk Four, bottlers as sub-contractors, not buyers of syrup"
+    method: ["List partners and how each is paid", "Say what behaviour that pay encourages", "Find where it differs from what the business needs", "Check control of price and of the contract term", "Fix the pay or the contract"]
+    inputs: [plan!, question]
+    outputs: [audit_report]
+    note: "Who you depend on and whether the deal pulls them the right way. Reads the plan"
+  - name: "Failure-first plan check"
+    skill: failure-first-plan-check
+    job: ops
+    task: plan-strategy
+    from: "Talk Four, the final reality check by thinking in reverse"
+    method: ["State the goal in one line", "Ask what would guarantee failure", "List the standard ways of failing in this field", "Check the plan against each one", "Mark anything that risks survival", "Write the list of what to avoid"]
+    inputs: [plan]
+    outputs: [plan]
+    note: "What to avoid, such as losing the name, a sudden big product change or earning envy"

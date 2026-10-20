@@ -120,6 +120,10 @@ How to sound like them without caricature: what to keep, what to overdo less. On
 - **Plain English, grade 10 or below, no em dashes, no AI tells** (see `brand/COPYWRITING.md`).
 - **General use cases:** "a small business", "a team", "a writer", not one industry.
 
+## Role labels (`_labels.yaml`)
+
+Every mind wears 1 to 3 role labels, such as Investor, Founder, Designer or Copywriter, most defining first. The list of labels and each person's labels live in `_labels.yaml`. The site shows them as pixel badges on every mind (icons in `site/src/MindLabel.tsx`) and lets you filter /minds by them. Pick labels for what the person is known for doing, the way someone looking for help would search. A new mind needs a line here, or the index build reports it.
+
 ## Avatars (`_avatars.yaml`)
 
 Every mind on the roster, built or not, gets a small pixel portrait: a 16 by 16 face drawn by the site from a few traits in `_avatars.yaml` (renderer: `site/src/lib/face.ts`). One line per person, keyed by slug. Pick the traits from how the person is best known in public photos: the look people picture, not a likeness. Draw what's iconic (Jobs's black turtleneck and round glasses, Einstein's wild white hair, Shakespeare's ruff, Bezos bald with a grin). Never anything mocking.

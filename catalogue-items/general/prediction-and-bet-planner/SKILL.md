@@ -50,11 +50,11 @@ The belief. The predictions. The losing result. The bet with stake and date. The
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
-- **Test the idea with real people** with the [MVP experiment planner](https://useaiblocks.com/skills/mvp-experiment-planner). It takes the plan.
+- **Test the idea with real people** with the [Market boundary checker](https://useaiblocks.com/skills/market-boundary-checker). It takes the plan.
 - **Make image ads** with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker). It takes the lessons.
-- **Plan your strategy** with the [Failure-first plan check](https://useaiblocks.com/skills/failure-first-plan-check). It takes the plan.
-- **Decide what to do** with the [Not-to-do list builder](https://useaiblocks.com/skills/not-to-do-list-builder). It takes the plan.
-- **Check the money** with the [Room for error plan checker](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the plan.
+- **Plan your strategy** with the [Buying habit stack designer](https://useaiblocks.com/skills/buying-habit-stack-designer). It takes the plan.
+- **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
+- **Check the money** with the [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

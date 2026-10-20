@@ -1,0 +1,103 @@
+new_slug: copy-or-skip-lesson-writer
+name: Copy-or-skip lesson writer
+summary: Paste why something worked. Get what carries over to your case, what was luck, and a small test of each idea.
+job: think-and-decide
+thinking: medium
+thinking_why: It compares two situations and sorts ideas by how well they carry over, following a fixed method.
+headline: Copy-or-skip lesson writer
+subhead: Paste the checked causes of a success and describe your own case. It sorts each cause into copy, adapt, skip or luck for your situation, finds the hidden parts a visible feature depends on, and writes a small test for each idea you keep, with a number that counts as a pass.
+explain: |-
+  Copying a success usually means copying what you can see. But a visible feature often depends on a hidden system, such as how people are paid or picked, and on conditions you may not share, such as a wave that has passed. Copy the feature without the system, and it fails.
+
+  This skill takes the causes you found and asks, for each, whether it needs conditions you lack, which hidden parts it needs, and whether it was luck. It sorts each as copy, adapt, skip or luck, writes the smallest test for those worth trying, and orders them by cost.
+when:
+  - You have worked out why something succeeded and want to use it.
+  - A rival's success is tempting you to copy their moves.
+  - You want to try several ideas without betting on all of them.
+you_give:
+  - The checks and causes from the step before, or your own list
+  - A description of your situation
+  - Money, time and people you can spend (optional)
+you_get:
+  - Each cause sorted as copy, adapt, skip or luck
+  - The hidden parts each idea needs
+  - A smallest test for each idea, with a pass number
+  - An order to run the tests, and what to stop copying
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the causes and checks, then describe your own situation.
+  - Say what you can spend on tests in a month.
+  - Run the first test and write down the result against the pass number.
+how_it_works:
+  - title: Set the two cases side by side
+    text: Writes the causes and your situation in two short lists.
+  - title: Check the conditions
+    text: Checks whether the conditions behind each cause apply to you.
+  - title: Find the hidden parts
+    text: Finds the unseen systems each visible feature depends on.
+  - title: Sort each cause
+    text: Sorts each cause as copy, adapt, skip or luck.
+  - title: Write a test for each idea
+    text: Writes the smallest test with a pass number.
+  - title: Order the tests
+    text: Orders the tests by cost and chance.
+  - title: Name what to stop copying
+    text: Lists the features not worth copying.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  TWO CASES
+  Success: <causes> | You: <situation>
+
+  CAUSES SORTED
+  <cause> | conditions: PRESENT, ABSENT or UNKNOWN | hidden parts | COPY, ADAPT, SKIP or LUCK | reason
+
+  TESTS
+  1. <idea> | do | for how long | cost | pass if | fail if
+
+  ORDER
+  First test this month: <test>
+
+  STOP COPYING
+  <feature> | why
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: How you describe your situation
+    how: "Use the same terms as the success: size, price, market, team. The comparison needs them."
+  - what: What you can spend
+    how: Say how many tests you can measure in a month. Too many tests teach nothing.
+  - what: What the hidden parts are
+    how: Add anything you know about how the example was run. That decides copy against skip.
+judge:
+  - Each sort has a reason tied to a condition.
+  - The hidden parts are things you could build or buy.
+  - Each test could be run and scored this month.
+  - At least one visible feature is on the stop list.
+test:
+  - Give it a success that rode a wave. It should mark the wave cause as skip or luck.
+  - Give it a pay-system cause. It should ask about the hidden parts.
+  - Run it twice. The sorts should match.
+improve:
+  - Keep a log of tests with their pass numbers and results.
+  - Add the conditions that matter in your field to step two.
+  - Share the stop-copying list with your team.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - The ranked causes and checks from the earlier steps
+    - "Your numbers: size, budget, headcount"
+    - Anything you know about how the example was run
+terms:
+  - term: Hidden part
+    meaning: The unseen system, such as pay or selection rules, that makes a visible feature work.
+  - term: Pass number
+    meaning: The result that tells you a test worked, set before the test is run.

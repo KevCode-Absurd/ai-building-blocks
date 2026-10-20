@@ -1,0 +1,48 @@
+# Workflow skeleton for staying inside your circle in Poor Charlie's Almanack (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+id: munger-models-circle-of-competence
+source:
+  title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+  by: "Charlie Munger"
+  kind: book
+  rights: ideas-only
+minds: [charlie-munger, warren-buffett]
+workflow:
+  slug: check-you-know-enough-before-you-act
+  name: "Check you know enough before you act"
+  summary: "Describe what you are about to do. Get what you know tested with hard questions, and a learn, borrow or pass plan."
+  when: "you are about to act in a field you only partly know and want to find the edge of your knowledge first."
+  job: think-and-decide
+  level: beginner
+steps:
+  - name: "Map your circle"
+    skill: circle-of-competence-mapper
+    job: analysis
+    from: "Chapter 2, identifying your circle; Talk Two"
+    method: ["Split the topic into the parts you must understand", "Rate each part by what you have done", "Name the edge", "Check whether others hold the aptitude advantage", "Choose a basket"]
+    inputs: [question]
+    outputs: [audit_report]
+    note: "What you know, half know and don't, with the edge named"
+  - name: "Test whether you really know it"
+    skill: real-knowledge-tester
+    job: analysis
+    from: "Talk Ten, on real and borrowed knowledge; Talk One, on self-criticism"
+    method: ["Write the hardest follow-up questions an expert would ask", "Answer from memory with a real example or number", "Mark each answer real, partial or only talk", "Turn the gaps into questions"]
+    inputs: [audit_report, question!]
+    outputs: [audit_report, question]
+    note: "Which answers are real and which only sound right, and the gaps as questions. Reads the circle from the step before"
+  - name: "Check any adviser you would lean on"
+    skill: advice-skin-in-the-game-checker
+    job: analysis
+    from: "Talks Four and Five, on adviser bias and the man with a hammer"
+    method: ["Ask what the adviser gains if you say yes", "Ask what the adviser loses if they are wrong", "Look for tools they push because they sell them", "Decide how far to trust the advice"]
+    inputs: [question]
+    outputs: [audit_report]
+    note: "Who pays if the advice is wrong, who gains, and how far to trust it. Reads the gap questions from the step before"
+  - name: "Choose to learn, borrow, start small or pass"
+    skill: learn-borrow-or-pass-planner
+    job: strategy
+    from: "Talk Two, on a circle that grows slowly; Talk Five, on fluency"
+    method: ["Size the decision and its deadline", "Check whether others hold the edge", "Estimate how long learning would take", "Pick learn, borrow, start small or pass", "List the few big ideas to learn first", "Write the first week"]
+    inputs: [audit_report, question!]
+    outputs: [plan]
+    note: "The path, the first-week plan and a date to test yourself again"

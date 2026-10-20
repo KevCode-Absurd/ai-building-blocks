@@ -809,6 +809,26 @@ test("minds: every person on the roster has a black and white pixel face, and se
   await expect(page.locator("svg.bp-face")).toBeVisible();
 });
 
+test("minds: every person wears role labels, and picking one shows only the people who did it", async ({ page }) => {
+  await page.goto("/minds");
+  const cards = page.getByTestId("mind-card");
+  await expect(cards.first()).toBeVisible();
+  const all = await cards.count();
+  expect(all).toBeGreaterThan(300);
+  await expect(page.getByTestId("mind-labels")).toHaveCount(all);
+  const buffett = page.locator('[data-testid="mind-card"][data-slug="warren-buffett"]');
+  await expect(buffett.locator(".lb-main")).toHaveText("Investor");
+  await page.getByTestId("minds-label-investor").click();
+  await expect(page.getByTestId("minds-label-investor")).toHaveAttribute("aria-pressed", "true");
+  const n = await cards.count();
+  expect(n).toBeGreaterThan(5);
+  expect(n).toBeLessThan(all);
+  const shown = await cards.evaluateAll((els) => els.map((e) => [...e.querySelectorAll("[data-label]")].map((l) => l.getAttribute("data-label"))));
+  for (const l of shown) expect(l).toContain("investor");
+  await page.goto("/minds/warren-buffett");
+  await expect(page.getByTestId("block-page").getByTestId("mind-labels").first()).toContainText("Investor");
+});
+
 test("minds in a workflow: a mind on a step, an overseer and a split team all reach the pack", async ({ page }, info) => {
   const builder = await planGoal(page, "a landing page for my best ad");
   const n = await builder.getByTestId("flow-node").count();

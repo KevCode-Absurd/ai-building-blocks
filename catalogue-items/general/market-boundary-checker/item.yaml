@@ -1,0 +1,19 @@
+slug: market-boundary-checker
+name: "Market boundary checker"
+summary: "Paste what you sell and who buys. Get your true market share and an own, reach or sliver verdict."
+category: general
+type: skill
+role: check
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+  - {type: shortlist, required: false}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "How founders describe their market to look alone or small, the share of each version of the market, picking the market a buyer really compares you in, and the warning against claiming a sliver of a huge market"}

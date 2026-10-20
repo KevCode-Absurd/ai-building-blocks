@@ -1,0 +1,54 @@
+# Workflow skeleton for The Warren Buffett Way (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+# Method analysis only. Not personal financial advice.
+id: buffett-way-focus-portfolio
+source:
+  title: "The Warren Buffett Way (Second Edition)"
+  by: "Robert G. Hagstrom"
+  kind: book
+  rights: ideas-only
+  year: 2005
+minds: [warren-buffett, charlie-munger]
+workflow:
+  slug: review-your-investments-by-business-results-not-price
+  name: "Review your investments by business results, not price"
+  summary: "Give it your holdings. Get each judged on business results, a short ranked list with sizes and rules for sitting still."
+  when: "you hold a handful of investments and want to judge them by business results, hold fewer, trade less and stay calm when prices fall."
+  job: money-and-investing
+  level: advanced
+steps:
+  - name: Judge each holding by its business results
+    skill: holdings-business-results-reviewer
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 10, find outstanding companies, and Chapter 7"
+    method: ["For each holding, list what the business earned and the return on its money over several years", "Check whether profits kept in the business added at least as much value", "Mark each as keeper, watch or weak by results, never by price", "Say which you do not understand well enough"]
+    inputs: [question, performance_sheet!]
+    outputs: [audit_report]
+    note: "Sorts every holding by business results with the price kept out of it."
+  - name: Rank them and cut the list
+    skill: lifetime-punch-card-bet-ranker
+    job: strategy
+    task: money-and-investing
+    from: "Chapter 10, less is more, big bets on high-probability events and the decision to buy"
+    method: ["Rank holdings by how well you understand them and how clear the edge is", "Use your best current holding as the bar every other idea must beat", "Keep a short list sized by how sure you are", "Say no to the rest, with a reason"]
+    inputs: [audit_report, question!]
+    outputs: [plan]
+    note: "Turns the results review into a short ranked list with sizes, using your best holding as the bar."
+  - name: Write the rules for sitting still
+    skill: sit-still-rule-writer
+    job: ops
+    task: money-and-investing
+    from: "Chapter 10, the decision to sell and the cost of turnover and tax"
+    method: ["Write the facts that must stay true for each holding", "Cross out weak reasons to act, such as a price drop or a headline", "Work out the cost of trading and tax on moving", "Keep only the reasons that survive: a broken fact or a clearly better use"]
+    inputs: [plan, audit_report!]
+    outputs: [plan]
+    note: "A one-page holding rule set with the cost of acting and the only reasons to change a holding."
+  - name: Write your rules for price drops
+    skill: price-drop-rules-writer
+    job: ops
+    task: money-and-investing
+    from: "Chapters 10 and 11, volatility, Mr. Market and the psychology of money"
+    method: ["Ask if you could watch half your holdings' value vanish and stay calm", "Write what you will do and not do when prices fall or rise", "Set how often you will look at prices", "Name the mind traps that apply to you: loss pain, short-term focus, mental accounts"]
+    inputs: [plan, audit_report!, question!]
+    outputs: [plan]
+    note: "Fixes your rules before the next drop, so you do not decide in the middle of one."

@@ -1,0 +1,115 @@
+new_slug: ten-year-durability-checker
+name: "Ten-year durability checker"
+summary: "Paste your business and its edge. Get how much value sits past year five and what could end the edge."
+job: test-an-idea
+thinking: high
+thinking_why: "It must reason about rivals, outside change and ten years of value, which takes careful judgement."
+
+headline: "Find out if your edge will still be there in ten years"
+subhead: "Tell it about your business and what makes buyers pick you. It shows how much of your value lies past year five, tests how fast others could copy you and names the changes that could end your edge."
+
+explain: |
+  A business can grow fast and still be weak, if a rival can match it in a year. Another can be slow now and strong for decades. Weekly numbers do not tell them apart.
+
+  This skill shows how much of your value sits in the later years. It asks who could copy you and how long it would take. It then checks four traits that make a position harder to copy as you grow, and names the changes in the world that could end it.
+
+when:
+  - "Your growth is good but you can't say why a rival would not catch up."
+  - "You are about to put years or money into one position."
+  - "A buyer or backer asks how you stay ahead."
+
+you_give:
+  - "Your business and why buyers pick you"
+  - "Your profit and growth by year, if known"
+  - "Who could copy you, and what you depend on (optional)"
+you_get:
+  - "Where the value sits, with sums"
+  - "Copiers and how long they would need"
+  - "Which traits make you harder to copy"
+  - "What could end your edge, and a call"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your business and what makes buyers pick you. Add your yearly numbers if you have them."
+  - "List the rivals and suppliers you worry about, even if you think they are small."
+  - "Take the first-sign list from the answer and add those signs to what you watch."
+
+how_it_works:
+  - title: "Writes the ten-year position"
+    text: "Says in one line what you hope to hold."
+  - title: "Finds where the value sits"
+    text: "Discounts ten years of profit and reports the share past year five."
+  - title: "Lists the copiers"
+    text: "Gives months and cost for each to match you."
+  - title: "Checks four traits"
+    text: "Technology, network, scale and brand, each with a reason."
+  - title: "Names the threats"
+    text: "Cheaper makers, new methods, rules and big buyers, with a first sign for each."
+  - title: "Gives the call"
+    text: "Lasting, fading or unknown."
+
+output_shape: |
+  THE TEN-YEAR POSITION
+  <one sentence>
+
+  WHERE THE VALUE SITS
+  Flat case: <x%> past year 5 | Growth case: <x%> | Discount used: 10%
+
+  COPIERS
+  <who> | Months to match: <n> | Cost: <amount>
+
+  WHAT GETS HARDER TO COPY
+  Technology: <yes/no, why> | Network: <> | Scale: <> | Brand: <>
+
+  WHAT COULD END THE EDGE
+  <change> | Likelihood: <> | First sign: <>
+
+  THE CALL
+  <lasting / fading / unknown> because <reason>
+  Would change if: <one fact>
+
+  MISSING
+  <facts that would firm this up>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Your yearly numbers"
+    how: "Give real profit or cash for past years and your growth plan. It replaces its two example cases."
+  - what: "Your discount rate"
+    how: "Tell it if you use a rate other than 10%. It reruns the sums."
+  - what: "Your dependencies"
+    how: "List suppliers, platforms and rules you rely on. They become threats to check."
+
+judge:
+  - "The value sums are shown."
+  - "Each copier has a time and a cost."
+  - "Each trait comes with a reason."
+  - "At least one outside change is named with a first sign."
+
+test:
+  - "Run it on a business with a flat profit. It should show about 38% past year five at a 10% discount."
+  - "Run it on a thin edge a rival can copy in months. It should call it fading."
+  - "Run it twice on the same input. The call should stay the same."
+
+improve:
+  - "Add real yearly numbers in place of the example cases."
+  - "Add the list of signs you watch each week, so it can check them against the threats."
+  - "Pair it with \"Business power tester\" for a deeper look at a single advantage."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Discounting a few numbers and reasoning about rivals is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Yearly profit or cash for the last few years"
+    - "A list of rivals and suppliers"
+    - "The signs you track each week"
+
+terms:
+  - term: "Discounting"
+    meaning: "Counting money far in the future for less than money today."
+  - term: "Network effect"
+    meaning: "A product that gets better for each user as more people use it."
+  - term: "Economies of scale"
+    meaning: "A cost per unit that falls as you make or sell more."

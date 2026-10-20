@@ -1,0 +1,53 @@
+# Workflow skeleton for Zero to One (docs/INTAKE.md). Our words; the book stays in mind-sources/peter-thiel (local only).
+id: zero-to-one-first-market
+source:
+  title: "Zero to One: Notes on Startups, or How to Build the Future"
+  by: "Peter Thiel with Blake Masters"
+  kind: book
+  rights: ideas-only
+  year: 2014
+minds: [peter-thiel, reid-hoffman]
+workflow:
+  slug: pick-your-first-small-market-and-the-ones-after
+  name: "Pick your first small market and the ones after"
+  summary: "Give it your product. Get one small first market, the order to grow and a pitch with no rival."
+  when: "you sell to a broad group and need one small market to win first, then a clear order for growing."
+  job: plan-strategy
+  level: intermediate
+steps:
+  - name: Pick the first market
+    skill: first-market-picker
+    job: strategy
+    task: plan-strategy
+    from: "Chapter 5, start small and monopolize"
+    method: ["List the groups that could use your product", "Test each for being small, close together, in real need and lightly served", "Cut any group where you would need a sliver of a large market", "Pick one and say why you could own it"]
+    inputs: [question, persona!]
+    outputs: [shortlist]
+    note: "A short list of candidate first markets, with one picked and the reason."
+  - name: Check the market is real, not drawn to flatter you
+    skill: market-boundary-checker
+    job: research
+    task: test-an-idea
+    from: "Chapter 3, lies people tell"
+    method: ["Describe the picked market as an overlap and as a union", "Work out your share of each", "Find the one a buyer would use to compare you", "Drop or widen a market that exists only on your slide"]
+    inputs: [question, shortlist!]
+    outputs: [audit_report]
+    note: "Tests that your small market is one real buyers see, and that you could hold most of it."
+  - name: Order the markets after it
+    skill: market-expansion-sequencer
+    job: strategy
+    task: plan-strategy
+    from: "Chapter 5, scaling up and don't disrupt"
+    method: ["List the markets next to the first, by how close the buyer and product are", "Choose each next step to be the closest one", "Check each for a hidden obstacle that would stop the move", "Write the order as a plan with the sign that you own each one"]
+    inputs: [shortlist, audit_report!]
+    outputs: [plan]
+    note: "The next markets in order, nearest first, and when to move to each."
+  - name: Write the pitch without a rival in it
+    skill: rival-free-pitch-rewriter
+    job: copy
+    task: plan-strategy
+    from: "Chapter 4, the ideology of competition, and chapter 5, don't disrupt"
+    method: ["Find every place you describe yourself by a rival or by the word cheaper", "Say what you do that no one else does, in plain words", "Swap fights with an old industry for the thing you make", "Check a stranger could repeat the pitch without naming a competitor"]
+    inputs: [plan, question!]
+    outputs: [copy_draft]
+    note: "The pitch rewritten around the thing only you do, for the first market."

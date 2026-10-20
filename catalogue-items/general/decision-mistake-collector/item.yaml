@@ -1,0 +1,20 @@
+slug: decision-mistake-collector
+name: Decision mistake collector
+summary: Name a decision you keep making. Get your past mistakes and others' logged by cause, and the repeat offenders.
+category: general
+type: skill
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: lessons_register, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: Learning from other people's mistakes as well as your own, judging a decision by how well it was made and not only by how it turned out, and listing the common causes of error so they can be named

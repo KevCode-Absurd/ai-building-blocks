@@ -1,0 +1,84 @@
+new_slug: value-a-stock-with-a-margin-of-safety
+name: Value a stock with a margin of safety
+summary: Paste a company's results, its balance sheet and the share price. Get an earnings value, an asset floor and the gap.
+job: money-and-investing
+thinking: high
+thinking_why: It runs four skills in a row and every one builds a range from rough facts. Give it your strongest model.
+headline: Find out what a stock is worth next to its price, with room for being wrong
+subhead: Give it normal earnings, the balance sheet and the share price. It labels the purchase, values the shares from earning power under a hard ceiling, finds what the business would fetch if it stopped, and judges whether the gap between price and value is wide enough to protect you.
+explain: |
+  Nobody can say what a company is exactly worth. You do not need to. You need to know if the price is well under a sensible range, well over it, or in the fog between. In the fog, the purchase depends on one estimate being right, and that is a bet.
+
+  This workflow follows the method in the 1940 edition of Security Analysis by Benjamin Graham and David Dodd. It values the shares from normal earnings with a ceiling on the multiple, builds a floor from the balance sheet with stated markdowns, and then sets the price against both. It asks why the price might be wrong and whether the cause is neglect or real decline. It is a method of analysis, not financial advice. It never says buy or sell and names no price to pay.
+when:
+  - You are thinking of buying shares or a small business and want to compare price with value.
+  - A share price looks cheap, or very high, and you want to know how much rests on hope.
+  - You want to write down your reasons before you commit money.
+you_give:
+  - The purchase and the price, in a sentence or two
+  - Normal earnings per share as a range (the result of "Find a company's real earning power and its tricks")
+  - The latest balance sheet with the notes
+  - The share count, and the bond yield today (optional)
+you_get:
+  - A first label of investment or speculation
+  - A low, middle and high value from earnings, and how much of the price is hope
+  - An asset floor of book value, net current assets and sale values, with a cash strength rating
+  - A verdict of margin of safety present, no clear margin, or price above value
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the earnings range, the balance sheet and the price. It works step by step and saves each result.
+  - Read the verdict first, then the range and the floor behind it.
+how_it_works:
+  - title: Labels the purchase
+    text: Asks whether careful study promises safety of your money and a fair return at this price, and warns that the value is a range.
+  - title: Values it from earnings
+    text: Picks a multiple for the business, never above 20, and splits the price into the part earnings support and the part that is hope.
+  - title: Finds the asset floor
+    text: Deducts every claim, marks each asset down to what it would fetch and compares the result with the price.
+  - title: Judges the gap
+    text: Sets the price against both views, tests why the market might be wrong and names what could close the gap and how slowly.
+output_shape: |-
+  STEP 1: LABEL
+    Investment or speculation: <label> | Why: <test result>
+
+  STEP 2: VALUE FROM EARNINGS
+    LOW <value> | MIDDLE <value> | HIGH <value> per share | Multiple: <x> because <reason>
+    Investment part of price: <amount> | Speculative part: <amount>
+
+  STEP 3: ASSET FLOOR
+    Book value | Net current assets | Typical sale value | Harsh sale value | Cash strength: <rating>
+
+  STEP 4: THE GAP
+    Range of value: <low> to <high> | Price placed: <above / inside / below>
+    Verdict: <MARGIN OF SAFETY PRESENT / NO CLEAR MARGIN / PRICE ABOVE VALUE>
+    Why, ranked: <list> | What would change it: <facts>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: A low or peak price
+    how: Say which price you have. Value is judged against the price you can actually pay.
+  - what: Debt and preferred shares
+    how: List them with rates. Heavy debt lowers the multiple a step and thins the floor.
+  - what: Who could act
+    how: Name a possible buyer or a large owner. It changes what the low end of the range can be.
+judge:
+  - Each step used the result of the step before.
+  - Value is shown as a range, never a single number.
+  - The multiple has a reason and does not pass 20.
+  - The verdict is compared with the width of the range.
+  - No step invented a figure, and nothing was named as a security to buy or sell.
+test:
+  - Give it a price inside the range and check that the verdict is no clear margin.
+  - Give it a company with a lot of stock and check that the markdown is applied.
+  - Run it twice on the same input. The verdict should not change.
+improve:
+  - Save your own multiples by type of business, from cases you have judged.
+  - Run it on ten similar cases and look at the group result, not one story.
+  - Keep a log of verdicts and what happened to the price and the business.
+terms:
+  - term: Margin of safety
+    meaning: The gap between what you think something is worth and what you pay. It protects you if your estimate is wrong.
+  - term: Net current assets
+    meaning: Cash, debts owed to the company and stock, less everything the company owes.

@@ -1,0 +1,18 @@
+slug: owner-minded-management-checker
+name: "Owner-minded management checker"
+summary: "Describe the people running a business. Get how able, honest and owner-minded they look, from what they did with cash and pay."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, warren-buffett]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)", by: "Charles T. Munger, edited by Peter D. Kaufman", used: "Judging managers as able, trustworthy and owner-oriented from how they deploy cash and pay themselves, and weighing the quality of the business above the brilliance of the manager"}

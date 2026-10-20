@@ -1,0 +1,116 @@
+new_slug: second-order-effects-tracer
+name: Second-order effects tracer
+summary: Paste a change you plan to make. Get what it causes, what that causes, and how much of the gain you keep.
+job: think-and-decide
+thinking: high
+thinking_why: It must follow chains of cause and effect and judge how people will react to new rewards.
+headline: Second-order effects tracer
+subhead: Paste a change you plan to make, such as a new price, rule, pay plan or tool. It lists the direct effects, then how each person will react given what they are paid for, then the effects of those reactions. It also works out how much of any gain stays with you.
+explain: |-
+  Most plans stop at the first effect. A discount brings more orders, a new rule gets more reports, a faster machine cuts cost. But people react, and their reactions have effects too. Rewards change behaviour, rivals copy, and savings in a crowded market often pass to the buyer.
+
+  This skill traces three levels. It asks who reacts, what they will do, and what that does in turn. It also tests whether a gain stays with you or flows away, and how the new rule could be gamed. You get a plan that already allows for the reactions.
+when:
+  - You are about to change a price, pay plan, rule or process.
+  - A forecast is built by extending last year's numbers.
+  - A saving or improvement looks too good, and you want to know who really keeps it.
+you_give:
+  - The change you plan, and what you expect it to do
+  - "Who is affected: customers, staff, rivals, suppliers"
+  - The numbers behind your forecast (optional)
+you_get:
+  - The direct effects, then the reactions, then the effects of those
+  - A list of how people could game the new rule
+  - How much of any gain you keep, and how much flows away
+  - A revised plan that allows for the reactions
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the change and who it touches. Paste your forecast if you have one.
+  - For each reaction it lists, say whether you have seen it happen before.
+  - Use the revised plan, and set a date to check the reactions it predicted.
+how_it_works:
+  - title: State the change
+    text: Writes the change and the result expected from it.
+  - title: List first effects
+    text: Lists the direct, obvious effects with size.
+  - title: List who reacts
+    text: Names each group that will respond and what each is rewarded for.
+  - title: Trace the second effects
+    text: Writes what each reaction causes.
+  - title: Trace the third effects
+    text: Follows the chain one more step out, then stops.
+  - title: Test the flow-through
+    text: Works out how much of any gain you keep.
+  - title: Look for gaming
+    text: Lists how people could twist the new rule or reward.
+  - title: Compare with the first forecast
+    text: Sets the naive forecast beside the traced one.
+  - title: Revise the plan
+    text: Rewrites the plan with the reactions allowed for.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  THE CHANGE
+  <change> | expected result
+
+  FIRST EFFECTS
+  <effect> | size
+
+  WHO REACTS
+  <group> | rewarded for | likely move
+
+  SECOND AND THIRD EFFECTS
+  <reaction> -> <effect> -> <effect> | likely, possible or guess
+
+  FLOW-THROUGH
+  <gain> | share you keep (range) | the sum
+
+  HOW IT COULD BE GAMED
+  1. <way> | how to spot it | fix
+
+  FORECASTS
+  First: <number> | Traced: <number> | main cause of the gap
+
+  REVISED PLAN
+  <changes>
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: How each group is paid
+    how: The reactions are only as good as your account of what each group is rewarded for. Add pay plans and targets.
+  - what: Whether rivals can copy
+    how: Say how easily a rival can match the change. That sets how much of the gain flows away.
+  - what: How far out to trace
+    how: Ask for two levels if the situation is fast-moving. Three is the most it will go before guessing.
+judge:
+  - Each reaction is tied to a reward the group has.
+  - The flow-through share is a range and you can redo the sum.
+  - You learned at least one effect you had not thought of.
+  - The gaming list names ways a real person in your setting could use.
+test:
+  - Run it on a change you made last year. See whether it names the reaction that surprised you.
+  - Give it a pay plan that rewards volume. It should find the cheap way to inflate volume.
+  - Run it twice. The main reactions should match, even if the wording differs.
+improve:
+  - Keep a log of the reactions you predicted and what happened, to learn which groups surprise you.
+  - Add your own history of price and rule changes as a guide for each group.
+  - Pair it with the Incentive checker for any pay plan it flags.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - Pay plans and targets for each affected group
+    - A list of what rivals did the last time you changed a price
+    - Your forecast and how you built it
+terms:
+  - term: Second-order effect
+    meaning: What happens because people react to the first effect of a change.
+  - term: Flow-through
+    meaning: The share of a saving or gain that you keep, as opposed to passing it to buyers or rivals.

@@ -1,0 +1,17 @@
+slug: rising-cost-ladder-builder
+name: "Rising cost ladder builder"
+summary: "Paste your story plan. Get attempts that each cost more than the last, and a clock over all of it."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, alfred-hitchcock]
+credits:
+  - {title: "Misery", by: "Stephen King", used: "Each attempt to ease or end the captivity costs more than the one before and leaves something permanently lost, with a deadline that closes in from outside"}

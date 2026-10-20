@@ -1,0 +1,27 @@
+slug: think-a-hard-decision-through-with-many-models
+name: "Think a hard decision through with models from many fields"
+summary: "Describe a hard decision. Get the obvious questions settled, many fields checked, pressures and rewards tested, and the case against it."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: [no-brainer-question-settler, mental-model-checklist-runner, decision-bias-pileup-checker, incentive-checker, second-order-effects-tracer, failure-first-plan-check, case-against-writer]
+steps:
+  - {uses: no-brainer-question-settler, note: "The settled questions, a sum for your target and a smaller question to work on"}
+  - {uses: mental-model-checklist-runner, note: "An answer from each field, where they agree and clash, and the facts still missing. Reads the plan from the step before"}
+  - {uses: decision-bias-pileup-checker, note: "The pressures at work and a calmer version of the choice. Reads the sharper question from step one"}
+  - {uses: incentive-checker, note: "Who is rewarded for what, where it pulls the wrong way, and a fix. Reads the plan from the step before"}
+  - {uses: second-order-effects-tracer, note: "The effects of the effects, who keeps the gain, and a plan that allows for the reactions"}
+  - {uses: failure-first-plan-check, note: "The ways it could fail, survival risks first, and the changes that avoid them"}
+  - {uses: case-against-writer, note: "The best case against the plan, what is still open, and a go, change or wait call"}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger", by: "Charlie Munger", used: "The order of the steps: settle the obvious questions first, run it through models from many fields, find the pressures bending your judgment, check who is rewarded for what, follow the consequences of the consequences, turn it upside down, argue the other side before you decide"}
+generated_from: intake/munger-models-hard-decision/skeleton.yaml

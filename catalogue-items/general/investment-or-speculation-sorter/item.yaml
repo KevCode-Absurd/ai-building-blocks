@@ -12,7 +12,7 @@ outputs:
   - {type: audit_report}
 origin: rebuilt
 version: 1.0.0
-minds: [benjamin-graham]
+minds: [benjamin-graham, warren-buffett]
 credits:
   - {title: "A Conversation with Ben Graham", by: "Benjamin Graham, Financial Analysts Journal (1976)", used: "The test for an investment, valuing a business apart from its price and how much room to leave for being wrong"}
   - {title: "The Mysteries of the Stock Market (1955 Senate testimony)", by: "Benjamin Graham", used: "Why the quoted price is only an offer and not proof of value"}

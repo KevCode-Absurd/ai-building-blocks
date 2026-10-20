@@ -1,0 +1,106 @@
+new_slug: fair-escape-checker
+name: "Fair escape checker"
+summary: "Paste your plan and how your character escapes. Get each escape tested for fairness, with fixes for cheats."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "It has to judge whether an escape is fair to a reader and rebuild the cheats from what is already on the page."
+
+headline: "Escapes your readers accept, because the way out was on the page all along"
+subhead: Paste your plan, with the trouble and how your character gets out. It tests each escape for fairness, flags luck and rescues from nowhere, and rewrites them using things you have already shown.
+
+explain: |
+  Readers will believe a lot, but not a cheat. A stranger arrives with a key. A storm breaks the lock. The hero remembers a skill nobody mentioned. Each of these ends the tension and makes the earlier pages feel like a waste.
+
+  This skill tests every escape against a plain rule: it does not need to be likely, but it must be possible, and what it uses must have been shown to the reader earlier. For each escape, it finds the earlier page that planted the means. It checks that the character does something to earn it, and that it costs something. Where an escape fails, it offers a fix that uses an object, a skill or a habit already in the story.
+
+when:
+  - A reader said "that was too easy" about your ending.
+  - Your character is saved by luck, a new person or a fact that appears just in time.
+  - You are planning a cliffhanger and want to know the answer will hold.
+
+you_give:
+  - Your plan, with each trouble and how the character gets out
+  - The list of objects, skills and people already on the page (optional)
+you_get:
+  - Each escape marked fair, weak or cheat, with the reason
+  - For each fair one, the page that planted its means
+  - For each weak or cheat one, a fix built from what is already in the story
+  - A list of things to plant early
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your plan, or list each trouble and each way out, one per line.
+  - Add anything you already show early in the story, such as skills, objects and habits.
+  - Plant the things it lists in your first draft.
+
+how_it_works:
+  - title: Lists the escapes
+    text: Pulls out every way the character gets out of trouble.
+  - title: Finds the plant
+    text: For each, looks for the earlier page that shows the means to do it.
+  - title: Flags luck and outsiders
+    text: Marks any escape that comes from chance, a stranger or a fact that appears late.
+  - title: Checks effort and cost
+    text: Asks what the character does to earn it, and what it costs.
+  - title: Rewrites the cheats
+    text: Proposes a fix from objects, skills and habits already in the story.
+  - title: Checks itself
+    text: Reads the report against its own rules and names any check it missed.
+
+output_shape: |
+  ESCAPES
+  <n>. <trouble> -> <way out> | Verdict: fair, weak or cheat
+     Planted at: <page or scene, or MISSING>
+     Earned by: <what the character does>
+     Costs: <what it costs>
+     Fix: <if weak or cheat, a version using what is already there>
+
+  THINGS TO PLANT EARLY
+  <object, skill or habit | where to show it | which escape it serves>
+
+  SUMMARY
+  <how many fair, weak and cheat; the worst one>
+
+  MISSING
+  <facts still needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: What counts as already shown
+    how: List the objects, skills and habits on the page so far. Otherwise the skill assumes only what you wrote in the plan.
+  - what: Genre
+    how: Say if it is a thriller, a fairy tale or a comedy. The bar for luck changes.
+  - what: Strictness
+    how: Ask for the strict test if you want every escape to need a plant.
+
+judge:
+  - Every fair escape names the page that planted its means.
+  - Luck and outsiders are flagged unless they are the story's point.
+  - Every fix uses something already in the story.
+  - The report says what the character did to earn each escape.
+
+test:
+  - Run it on an ending you know is weak. It should flag it.
+  - Run it on a good ending from a book you love. Most escapes should pass.
+  - Give it the same plan twice. The verdicts should match.
+
+improve:
+  - Add a list of the skills your character has shown.
+  - Add the title of a story you love, so you can compare how it plants its means.
+  - Run it again after you draft, on the real pages.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Matching each escape to its plant is text work any strong chat AI does well with this skill."}
+    - {name: "A highlighter and a printout", why: "Marking plants and pay-offs on paper shows gaps fast."}
+  inputs:
+    - "A cost ladder from Rising cost ladder builder"
+    - "A hook plan from Next-page hook planner"
+
+terms:
+  - term: Plant
+    meaning: A detail shown early so a later event feels fair.
+  - term: Cheat
+    meaning: An escape that arrives by luck, by a new person or by a fact the reader was never given.

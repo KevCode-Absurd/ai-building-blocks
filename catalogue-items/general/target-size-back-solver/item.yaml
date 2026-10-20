@@ -1,0 +1,18 @@
+slug: target-size-back-solver
+name: "Target size back-solver"
+summary: "Name the size you want a business to reach. Get the buyers, volume, share and profit that must be true."
+category: general
+type: skill
+role: check
+job: analysis
+level: advanced
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)", by: "Charles T. Munger, edited by Peter D. Kaufman", used: "Numerical fluency and thinking in reverse: working back from a huge target to the buyers, servings, market share and profit per serving it needs, then testing the profit figure against inflation and richer buyers"}

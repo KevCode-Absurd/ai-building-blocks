@@ -1,0 +1,107 @@
+new_slug: market-expansion-sequencer
+name: "Market expansion sequencer"
+summary: "Paste your first market and product. Get the next markets in order, nearest first, with the sign to move on."
+job: plan-strategy
+thinking: medium
+thinking_why: "It must order markets and spot hidden obstacles, which needs some judgement."
+
+headline: "Get the order of markets to grow into, nearest first"
+subhead: "Give it your first market and product. It lists the markets next door, scores how near each is, checks each move for a hidden obstacle and a fight with a larger firm, and writes the order with the sign that tells you when to move."
+
+explain: |
+  Owning a small market is the start of a plan, not the end. The next question is where to go, and in what order. Jumping to the biggest prize usually fails, because the new buyers are different and the larger firms are already there.
+
+  This skill lists the nearest markets, scores them on how close the buyer, product and route are, and checks each for what could stop the move. It writes the steps in order with a sign for each that tells you the one before is yours.
+
+when:
+  - "You are winning a small market and don't know where to go next."
+  - "Your plan jumps from a small start to a very large market."
+  - "You want to explain your growth path to a team or backer."
+
+you_give:
+  - "Your first market and product"
+  - "How much of the first market you hold (optional)"
+  - "The big aim you hope to reach (optional)"
+you_get:
+  - "Neighbouring markets scored for nearness"
+  - "Obstacle and fight check for each move"
+  - "A plan in order with dates"
+  - "A sign to move at each step"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your first market and product. Add the share you hold and your long-term aim if you have them."
+  - "Check each obstacle it lists against what you know of those buyers. Correct any it got wrong."
+  - "Put the first step in your calendar and set the sign it gives you as a number you track."
+
+how_it_works:
+  - title: "Finds the neighbours"
+    text: "Same product to new buyers, same buyers to new products, new places."
+  - title: "Scores nearness"
+    text: "Buyer, product and route, one point each."
+  - title: "Checks the obstacle"
+    text: "What is different about each group."
+  - title: "Checks for a fight"
+    text: "Marks moves that need you to take on a larger firm."
+  - title: "Writes the order"
+    text: "Steps with dates and reasons."
+  - title: "Sets the sign to move"
+    text: "A number that shows you own the step you are on."
+
+output_shape: |
+  STARTING POINT
+  <first market> | Share: <x or MISSING> | Aim: <>
+
+  NEIGHBOURS
+  <market> | Nearness <0-3> | Obstacle: <> | Way round: <> | Quiet or fight: <>
+
+  THE ORDER
+  1. <market> | Why next: <> | Start: <date> | Sign to move on: <number>
+  2. <market> | ...
+
+  ONE-LINE STORY
+  <first market> -> <aim>
+
+  MISSING
+  <facts that would sharpen the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Your reach"
+    how: "Say which routes you already use. Nearness scores for route come from these."
+  - what: "Your pace"
+    how: "Tell it how many markets you can take on per year. It sets the dates."
+  - what: "Limits"
+    how: "List rules, partners or firms you must not clash with. It marks moves that need them."
+
+judge:
+  - "The order follows nearness."
+  - "Every step has an obstacle and a sign to move."
+  - "Risky moves are marked."
+  - "The first step can start within three months."
+
+test:
+  - "Run it with a plan that jumps to the biggest market. It should reorder by nearness."
+  - "Run it on a move that attacks a larger firm. It should mark it as a fight."
+  - "Run it twice on the same input. The order should stay close."
+
+improve:
+  - "Add real data on how buyers in the next group differ from the first."
+  - "Add your share numbers so the signs to move are measurable."
+  - "Pair it with \"Rival-free pitch rewriter\" for each new step."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Ordering and checking a short list of moves is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Your share of the first market"
+    - "Notes on buyers in nearby groups"
+    - "A list of larger firms in each"
+
+terms:
+  - term: "Adjacent market"
+    meaning: "A group of buyers or a product close to the one you already serve."
+  - term: "Sign to move"
+    meaning: "A number that shows you own your current market and can start the next."

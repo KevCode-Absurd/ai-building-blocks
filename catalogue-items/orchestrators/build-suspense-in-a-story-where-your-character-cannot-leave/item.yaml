@@ -1,0 +1,26 @@
+slug: build-suspense-in-a-story-where-your-character-cannot-leave
+name: "Build suspense in a story where your character cannot leave"
+summary: "Tell it who is stuck and who holds them. Get a sealed setting, mood map, cost ladder and fair-escape check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+uses: [closed-setting-planner, volatile-antagonist-mood-mapper, rising-cost-ladder-builder, fair-escape-checker, scene-turn-checker]
+steps:
+  - {uses: closed-setting-planner, note: "A small closed world where every exit is shut for a reason a reader accepts."}
+  - {uses: volatile-antagonist-mood-mapper, note: "The person who holds the power gets a mood scale, so every calm scene carries a threat."}
+  - {uses: rising-cost-ladder-builder, note: "Every try gets more expensive, and a deadline sits over all of it."}
+  - {uses: fair-escape-checker, note: "Every escape uses something the reader has already seen."}
+  - {uses: scene-turn-checker, note: "Reads the plan and marks any scene where nothing turns."}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, alfred-hitchcock]
+credits:
+  - {title: "Misery", by: "Stephen King", used: "The order of the steps: seal the setting, map the mood swings, build the cost ladder and the clock, check every escape is fair, check every scene turns"}
+generated_from: intake/misery-craft-trapped-suspense/skeleton.yaml

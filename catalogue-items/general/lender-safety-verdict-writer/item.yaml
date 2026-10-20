@@ -1,0 +1,17 @@
+slug: lender-safety-verdict-writer
+name: "Lender safety verdict writer"
+summary: "Paste your coverage and cushion results. Get a meets-the-bar, speculative or reject call, with reasons and what would change it."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: audit_report, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [benjamin-graham]
+credits:
+  - {title: "Security Analysis: Principles and Technique (second edition)", by: "Benjamin Graham and David L. Dodd", used: "Selecting debt by exclusion rather than persuasion; no relaxed bar for a near due date, a high rate or a pledge; size and track record rules; what a rise in rates does to long low-rate debt; paying above the repayment price as a bet"}

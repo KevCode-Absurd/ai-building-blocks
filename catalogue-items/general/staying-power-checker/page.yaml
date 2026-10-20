@@ -1,0 +1,119 @@
+new_slug: staying-power-checker
+name: Staying power checker
+summary: Describe what you may buy, join or back. Get what protects it for ten years, what could break it, and a grade.
+job: plan-strategy
+thinking: high
+thinking_why: It must judge what protects something over a decade, which needs reasoning across several fields.
+headline: Staying power checker
+subhead: Describe a business, product, job path or supplier you are considering, and what you have learned so far. It names what protects it, tests how hard that would be to copy, checks whether it is widening or narrowing, and looks at what could make it obsolete. You get a grade and the reasons.
+explain: |-
+  Many things look good this year and are gone in ten. What lasts has something that protects it: a cost advantage from size, a name people trust, a right others cannot get, a habit customers keep, or a narrow niche that rivals ignore. The question is whether that protection is wide and getting wider, or thin and shrinking.
+
+  This skill names the protection, tests how long a smart rival with money would need to copy it, and looks for the slow forces that wear things away. It also checks if a new technology would help the owner or just pass savings on to customers. You get a grade of strong, fair or weak.
+when:
+  - You are choosing a business, supplier, job path or product line that you must live with for years.
+  - A thing is doing well now and you want to know if it will last.
+  - A new technology could change the field and you cannot tell who benefits.
+you_give:
+  - What you are considering, in a few lines
+  - The result of "Circle of competence mapper" (optional)
+  - "Numbers on its history: prices, share, customers, margins (optional)"
+you_get:
+  - The source of protection, with evidence
+  - How long a rival would need to copy it
+  - Whether it is widening or narrowing
+  - "The main threat, a technology test, and a grade: strong, fair or weak"
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe what you are considering and what you know of its history.
+  - Give any numbers on price, share or customers over the last three to five years.
+  - If the grade is weak, ask for the one thing that would have to change.
+how_it_works:
+  - title: State the horizon
+    text: Writes what is being judged and the years that matter.
+  - title: Name the protection
+    text: Names what protects it, with evidence.
+  - title: Test how easy it is to copy
+    text: Estimates what a smart rival would need to match it.
+  - title: Check the trend
+    text: Checks whether the protection is widening or narrowing.
+  - title: Look for what could replace it
+    text: Names what could make it obsolete.
+  - title: Run the technology test
+    text: Checks whether a gain from new technology stays with the owner.
+  - title: Look for pricing power
+    text: Checks whether prices could rise without losing buyers.
+  - title: Watch for bloat
+    text: Checks for the slow damage that size brings.
+  - title: Grade it
+    text: Gives strong, fair or weak with the reasons.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  HORIZON
+  <what> | <years>
+
+  PROTECTION
+  <type> | fact | or: commodity
+
+  TO COPY
+  <money and years> | reasoning
+
+  TREND
+  widening or narrowing | facts
+
+  THREAT
+  <what could replace it> | who has come close
+
+  TECHNOLOGY TEST
+  <who keeps the gain>
+
+  PRICING POWER
+  <yes, no or unknown> | fact
+
+  BLOAT
+  <signs>
+
+  GRADE
+  strong, fair or weak | deciding fact | call
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: The years you care about
+    how: A five-year view and a twenty-year view can grade the same thing differently. Say which you need.
+  - what: The history you give
+    how: Prices, share and customers over several years let it judge the trend and pricing power.
+  - what: What you think the protection is
+    how: Say it and ask to be argued with. It will test your idea against facts.
+judge:
+  - Each protection is backed by a fact you could check.
+  - The copy estimate is believable to an insider.
+  - The threat is a real one, not a general worry.
+  - The grade matches how you would feel owning the exposure for ten years.
+test:
+  - Run it on something you know is a commodity. It should say so and grade weak.
+  - Run it on a long-lasting firm you know. It should find the protection.
+  - Run it twice. The grade should match.
+improve:
+  - Redo it each year for things you hold, to see if the protection is widening.
+  - Add your own field's threats to step five.
+  - Compare grades with how things actually went.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - Five years of prices, share or customers
+    - Reports from people who work in the field
+    - The output of Circle of competence mapper
+terms:
+  - term: Protection
+    meaning: What makes it hard for others to take away what the thing earns, such as scale, trust or a right.
+  - term: Competitive destruction
+    meaning: New rivals or methods that wear down even strong things over time.

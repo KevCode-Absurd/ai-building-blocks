@@ -1,0 +1,117 @@
+new_slug: sales-route-plan-builder
+name: "Sales route plan builder"
+summary: "Paste your chosen sales route. Get a ninety-day plan with who sells, who to start with and the number to watch."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It must turn a chosen route into a workable plan with sums, which takes some care."
+
+headline: "Get a ninety-day plan for the one way you will reach customers"
+subhead: "Give it the route you picked. It works out how many deals you need, who sells, which small buyers to start with, how early customers become proof for larger ones, and the one number to watch for ninety days."
+
+explain: |
+  A route on its own is only an idea. The plan is who sells, to whom, how many deals are needed and what tells you it works. Each route has its own moves. Large deals depend on a senior person and patience. A sales team depends on a set process. Ads depend on a cost ceiling. Sharing depends on how fast the invite spreads.
+
+  This skill takes your route and writes the plan for it. It starts with the smallest buyers who need the product most, and uses each early customer as proof for the next, larger one.
+
+when:
+  - "You picked a sales route and need to start."
+  - "You have a revenue goal and don't know how many deals it needs."
+  - "Your last plan tried several routes and none worked."
+
+you_give:
+  - "The route you chose and its numbers"
+  - "Your goal and date (optional)"
+  - "Who can sell and how many hours (optional)"
+you_get:
+  - "Your goal in number of deals"
+  - "Who sells and who to start with"
+  - "How early customers become proof"
+  - "A ninety-day plan with one number to watch"
+
+how_to_use:
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Paste your route check or describe the route and the average deal. Add your goal and your team."
+  - "Name any buyers you already know. It uses them as the first five."
+  - "Put the ninety days in your calendar and look at the weekly number every week."
+
+how_it_works:
+  - title: "Confirms the route"
+    text: "Large deals, a team, ads or sharing between users."
+  - title: "Turns the goal into deals"
+    text: "Revenue divided by the average deal."
+  - title: "Picks who sells"
+    text: "The right person for the route."
+  - title: "Picks the first buyers"
+    text: "Small, named and in sharp need."
+  - title: "Builds the proof ladder"
+    text: "Each customer lets you say something to the next."
+  - title: "Sets the number and stop rule"
+    text: "One number a week, and a ninety-day test."
+
+output_shape: |
+  ROUTE AND GOAL
+  <route> | Goal: <deals> by <date> | Average deal: <amount>
+
+  WHO SELLS
+  <person or team> | Hours: <>
+
+  FIRST FIVE BUYERS
+  1. <buyer> | Contact: <how, when>
+
+  PROOF LADDER
+  <customer> lets me say <> -> next buyer: <>
+
+  ROUTE MOVES
+  <moves for this route>
+
+  NUMBER TO WATCH
+  <number> | Keep going if <> | Change the route if <>
+
+  NINETY DAYS
+  Days 1-30: <task, owner, number>
+  Days 31-60: <>
+  Days 61-90: <>
+
+  MISSING
+  <facts that would firm up the plan>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: "Your goal"
+    how: "Give a revenue or customer goal and a date. It turns it into deals."
+  - what: "Your team"
+    how: "Name who can sell and how many hours each. The plan fits them."
+  - what: "Buyers you know"
+    how: "List real names. They become the first five."
+
+judge:
+  - "The goal is in deals or customers."
+  - "The first buyers are small and named."
+  - "One number is set with a stop rule."
+  - "Only one route is planned."
+
+test:
+  - "Run it on a large-deal route with a small team. It should have the founder lead."
+  - "Run it on a plan that targets the biggest buyer first. It should move that buyer later."
+  - "Run it twice on the same input. The plan should stay close."
+
+improve:
+  - "Add your real closing rates so the deal count is firm."
+  - "Add a list of buyers you can contact now."
+  - "Pair it with \"Reason-to-join pitch writer\" when the plan needs hires."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Turning a chosen route into a plan with a few sums is text work that any strong chat AI does with this skill."}
+  inputs:
+    - "Your closing rate and deal size"
+    - "A list of buyers you can contact"
+    - "Notes on what early customers said"
+
+terms:
+  - term: "Proof ladder"
+    meaning: "A series of customers where each one's result is used to win the next, larger one."
+  - term: "Closing rate"
+    meaning: "The share of sales conversations that end in a signed deal."

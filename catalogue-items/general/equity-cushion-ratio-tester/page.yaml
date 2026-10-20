@@ -1,0 +1,120 @@
+new_slug: equity-cushion-ratio-tester
+name: "Equity cushion ratio tester"
+summary: "Paste a borrower's debts and its owners' stake value. Get the cushion behind your claim and whether it clears the bar."
+job: money-and-investing
+thinking: high
+thinking_why: "It values a cushion from thin facts, reads two tests against each other and must say what it cannot know. That needs careful reasoning."
+
+headline: "See how much the business is worth beyond what it owes before you lend"
+subhead: "Give it the borrower's total debt and what its owners' stake is worth, from a share price or a fair private price. It works out the cushion behind your claim, sets it against a bar for the type of business and reads it next to the earnings test. You get a pass or fail and the weak spot."
+
+explain: |
+  A strong earnings record can mislead. A few good years, a short window or a flattering account can make a weak borrower look safe. A second test is harder to fake: is the business worth far more than it owes? If the owners' stake is worth several times the debt, a lot has to go wrong before your claim is hurt.
+
+  This skill divides the value of everything that ranks behind your claim by all the debt in front of and level with it. It uses a recent low price, not a peak. It sets the result against a bar that is lower for steady businesses and higher for ordinary ones. It then reads the cushion and the earnings test together, and says how little weight to give to book values of property. It is a method, not financial advice.
+
+when:
+  - You have checked earnings cover and want a second, independent test.
+  - A borrower offers its property as security and you want to know how much that is worth.
+  - The earnings look good but the business has little equity behind its debt.
+
+you_give:
+  - The result from "Average earnings coverage tester", or the claim and total debt
+  - What the owners' stake is worth, from a share price and count or a fair private price
+  - Details of any pledged assets (optional)
+you_get:
+  - Total debt and what it contains
+  - The cushion and how it was valued
+  - The ratio, the bar and the reason for it
+  - A reading of the cushion and earnings tests together
+  - How much the pledged assets count, and the weak spot
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the earnings cover result and the borrower's debts.
+  - Give a low recent share price, or say how you would value a private stake.
+  - Read the line about the two tests together before the verdict.
+  - Take the result to "Lender safety verdict writer".
+
+how_it_works:
+  - title: Totals the debt
+    text: Adds every claim level with or ahead of yours, plus your own.
+  - title: Values the cushion
+    text: Uses a recent low price or a fair private price for everything that ranks behind.
+  - title: Sets the bar
+    text: Picks a lower bar for steady businesses and a higher one for ordinary ones.
+  - title: Reads both tests
+    text: Explains what it means when earnings pass and the cushion fails, or the other way round.
+  - title: Doubts book values
+    text: Gives little weight to cost or appraised value of plant and property.
+  - title: Names the exceptions
+    text: Credits movable equipment, marked securities and ordinary rented property.
+
+output_shape: |
+  THE CLAIM AND ALL DEBT
+  TOTAL DEBT: <amount> made of <list>
+
+  THE CUSHION
+  Value of everything behind your claim: <amount> | Method: <price x shares / fair private price> | Price used: <low or peak>
+
+  RATIO
+  <cushion / total debt> | Bar: <x> for <type of business> because <reason>
+
+  TWO TESTS TOGETHER
+  Earnings: <pass / fail> | Cushion: <pass / fail> | Reading: <what it means>
+
+  PLEDGED ASSETS
+  <what> | Counts for: <much / little / nothing> because <reason>
+
+  WEAK SPOT
+  The ratio falls under the bar if <condition>
+
+  MISSING
+  <facts not given>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The price you use
+    how: Give a low from the last slump. A peak price flatters the cushion and the skill will mark it.
+  - what: Private business value
+    how: Say what multiple of normal earnings an outside buyer would pay and why.
+  - what: Pledged assets
+    how: Describe them and say who valued them. A valuation paid for by the borrower counts for little.
+  - what: Your own bar
+    how: Give your lender's bar if you have one. It replaces the starting bar and the reason is shown.
+
+judge:
+  - Total debt includes everything level with or ahead of the claim.
+  - The cushion uses a low price, or says the low price is missing.
+  - The bar has a reason, and both tests are read together.
+  - Book values of property are not used as proof of safety.
+  - It never says buy or sell and invents no figure.
+
+test:
+  - Run it on a small business you know and check the debt total against the accounts.
+  - Give it a strong earnings result and a thin cushion and see that it calls the case weaker.
+  - Give it a peak price and see that it asks for a low one.
+  - Run it twice. The reading should not change.
+
+improve:
+  - Add your own bars by type of business, from loans you have made.
+  - Keep a log of past cushions and what happened.
+  - Pair it with "Average earnings coverage tester" and "Lender safety verdict writer".
+  - Add a step to check the borrower's accounts with "Earnings padding detector".
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "The sums and the reading are text work. It cannot look up prices."}
+    - {name: "A spreadsheet", why: "Handy for the debt total and the ratio."}
+    - {name: "A licensed financial adviser", why: "Needed for a large or personal decision. This skill is a method, not advice."}
+  inputs:
+    - "The borrower's latest balance sheet and list of debts"
+    - "A recent low share price and share count, if it is listed"
+
+terms:
+  - term: Cushion
+    meaning: The value of everything that ranks behind your claim, mainly the owners' stake. It takes the first losses.
+  - term: Stock-value ratio
+    meaning: The value of the owners' shares divided by the debt. A ratio of 1 means the shares are worth as much as the debt.

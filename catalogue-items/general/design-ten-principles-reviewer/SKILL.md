@@ -60,6 +60,7 @@ Purpose, user and intended message. The parts list with jobs. Ten principle scor
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Design it** with the [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner). It takes the audit report.
+- **Tell it as a story** with the [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter). It takes the audit report.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

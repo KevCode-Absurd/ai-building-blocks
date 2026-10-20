@@ -1,0 +1,114 @@
+new_slug: page-pull-scene-checker
+name: "Page-pull scene checker"
+summary: "Paste your scene. Get the paragraph where a reader would put it down, the fix, and a verdict on its pull."
+job: write-and-tell-stories
+thinking: high
+thinking_why: "It reads a draft the way a reader would and judges pull paragraph by paragraph, which takes close reading."
+
+headline: "Find the paragraph where your reader would put the book down"
+subhead: Paste your scene, and your hook plan if you have one. It marks the open question in every paragraph, finds the lowest-pull paragraph, checks the last line and gives a fix for the lull.
+
+explain: |
+  A writer reads their own scene knowing the answer, so every line feels tense. A reader does not know, and will leave at the first paragraph that does not move the question.
+
+  This skill reads the scene as that reader. It states the open question in one sentence. Then it goes paragraph by paragraph and marks whether the question is raised, pressed, delayed or forgotten. It finds the lowest-pull paragraph, the place where a reader would stop for the night. It also checks that the last line leaves the question open and that the opening has pressure. For each weak spot it gives a fix: a cut, a sharper detail, a new complication or a moved line. It then gives a verdict on the pull.
+
+when:
+  - Test readers say your scene is "fine" but nobody asks what happens next.
+  - You cannot tell which part of your chapter drags.
+  - You have drafted from a plan and want to check the pull before you polish.
+
+you_give:
+  - Your scene
+  - Your hook plan from "Next-page hook planner" (optional)
+you_get:
+  - The open question, as the skill reads it
+  - Each paragraph marked raised, pressed, delayed or forgotten
+  - The lowest-pull paragraph, and a fix
+  - A check of the opening and the last line
+  - A verdict of strong, patchy or flat
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste your scene as it is, with paragraph breaks.
+  - Paste the plan if you have one. If not, it will work out the question itself.
+  - Fix the lowest-pull paragraph, then run it again.
+
+how_it_works:
+  - title: States the question
+    text: Writes the one question a reader will want answered, from the plan or from the scene itself.
+  - title: Marks every paragraph
+    text: Marks each as raised, pressed, delayed or forgotten, with a short reason.
+  - title: Finds the lull
+    text: Picks the lowest-pull paragraph, where a reader would stop.
+  - title: Tests the ends
+    text: Checks the opening for pressure and the last line for an open question.
+  - title: Fixes the lull
+    text: Gives a cut, a sharper detail, a complication or a moved line.
+  - title: Gives a verdict
+    text: Rates the pull as strong, patchy or flat and says what moved it.
+  - title: Checks itself
+    text: Names any check it missed.
+
+output_shape: |
+  THE QUESTION
+  <one sentence, from the plan or worked out>
+
+  PARAGRAPH BY PARAGRAPH
+  <n> | <first words> | raised, pressed, delayed or forgotten | <reason>
+
+  LOWEST PULL
+  Paragraph <n>: <why a reader would stop> | Fix: <cut, sharpen, complicate or move>
+
+  OPENING
+  <pressure in the first two lines: yes or no, with a fix>
+
+  LAST LINE
+  <does it leave the question open: yes or no, with a fix>
+
+  VERDICT
+  <strong, patchy or flat> | <what would move it up one level>
+
+  NOTES FOR THE REWRITE
+  <three changes, in order>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: Strictness
+    how: Say if you want a hard read, which marks any paragraph that does not press the question.
+  - what: Audience
+    how: Say who reads the book. A reader of long novels forgives a slow paragraph that a reader of thrillers does not.
+  - what: Which paragraph
+    how: Point to the one you worry about and it will start there.
+
+judge:
+  - The question matches the one you meant.
+  - The lowest-pull paragraph is one you also doubted.
+  - Each fix names a change you can make in a minute.
+  - The verdict says what would move it up.
+
+test:
+  - Run it on a scene you love from a book. It should score strong.
+  - Run it on your own scene before and after the fix. The verdict should rise.
+  - Ask a friend where they got bored. It should match the lowest-pull paragraph.
+
+improve:
+  - Add the scenes before and after, so it can check the question was not already answered.
+  - Add the genre, so the pace matches.
+  - Keep your lowest-pull paragraphs in a file and look for patterns.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Marking paragraphs and judging pull is text work any strong chat AI does well with this skill."}
+    - {name: "A friend with a pencil", why: "Ask them to mark the line where they would stop reading, and compare."}
+  inputs:
+    - "A hook plan from Next-page hook planner"
+    - "The scene before, so it knows what the reader already has"
+
+terms:
+  - term: Pull
+    meaning: How strongly a paragraph makes the reader want the next one.
+  - term: Lull
+    meaning: A stretch of the scene where the open question is forgotten.

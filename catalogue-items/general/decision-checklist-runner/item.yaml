@@ -1,0 +1,21 @@
+slug: decision-checklist-runner
+name: Decision checklist runner
+summary: Paste your checklist and a decision. Get each item answered with evidence, a pass, fail or unknown, and a clear call.
+category: general
+type: skill
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: Going down a written checklist item by item instead of trusting memory, and the habit of keeping a record of the call so it can be judged later by how it was made

@@ -1,0 +1,121 @@
+new_slug: big-decisions-first-sorter
+name: "Big decisions first sorter"
+summary: "List the open questions on a plan. Get the big ones your goal already settles, and the hard ones left."
+job: plan-strategy
+thinking: medium
+thinking_why: "It tests each question against your goal and decides which are forced. The rule is clear, but spotting a forced choice takes judgement."
+
+headline: "Big decisions first sorter"
+subhead: "Tell it your goal and the questions you have not settled. It tests each question against the goal, settles the ones the goal already forces, gives a one-line reason for each and notes what each choice rules out. You get a shorter list of the hard questions, in the order to work on them."
+
+explain: |
+  A big plan feels impossible because every question seems open at once. Most are not. When the goal is clear, a few large choices follow almost without thought, and each one answers many smaller questions.
+
+  This skill finds those choices. It lists every open question, tests whether the goal forces an answer, and settles those first with a one-line reason. It writes what each choice rules out and which smaller questions it removes, then sorts what is left. If a choice answers no other question, it is not a big one. You end with a smaller problem and the first hard question to work on.
+
+when:
+  - You are planning a business, product or project and do not know where to begin.
+  - Your list of open questions keeps growing and none of them gets answered.
+  - You want to avoid wasting weeks on details that the goal already decides.
+
+you_give:
+  - Your goal, with a size or date if you have one
+  - The questions you have not settled (optional)
+  - Limits you cannot change, such as money, time or rules (optional)
+you_get:
+  - The goal in one sharp line
+  - Three to six settled choices, each with its reason and what it rules out
+  - A shorter ordered list of the hard questions
+  - The first question to work on
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - State your goal in a line, with a size or a date.
+  - Paste every open question you can think of, even small ones.
+  - Read the settled choices and cross out any whose reason is weak.
+  - Take the plan to the "Target size back-solver".
+
+how_it_works:
+  - title: Sharpens the goal
+    text: One line with a size or date, or a flag if it is too vague to test against.
+  - title: Lists every open question
+    text: Fifteen to thirty on one page, unranked.
+  - title: Tests for forced answers
+    text: A choice is forced when any other answer would make the goal impossible or silly.
+  - title: Settles with a reason
+    text: Each settled choice gets a one-line reason that depends on the goal.
+  - title: Writes what each choice rules out
+    text: Lists closed options and the smaller questions answered. Choices that answer nothing are dropped.
+  - title: Re-sorts the rest
+    text: Marks which questions are now forced, which matter less and which are still open.
+  - title: Hands the hard ones forward
+    text: An ordered list with the first to work on and what you need to find out.
+  - title: Checks itself
+    text: Runs its own checks and names any it missed.
+
+output_shape: |
+  GOAL
+  <one line with a size or date>
+
+  SETTLED CHOICES
+  1. <choice>, because <reason from the goal>
+     Rules out: <options>  Answers: <smaller questions>
+
+  STILL OPEN, IN ORDER
+  1. <question>: to find out, <what>
+  2. ...
+
+  UNKNOWN
+  <question>: would be settled by <fact>
+
+  MISSING
+  <what would settle more>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: The goal
+    how: Give a number. "Worth a lot" gives nothing to test against; "a million buyers in five years" does.
+  - what: Your list of questions
+    how: Include small ones too. Small questions often turn out to be settled by a big choice.
+  - what: Fixed limits
+    how: Say what cannot change. A fixed limit often forces a choice.
+  - what: How many to settle
+    how: Aim for three to six. More means some are not really forced.
+
+judge:
+  - The goal has a size or a date.
+  - Each settled choice has a reason from the goal.
+  - Each settled choice closes real options.
+  - The open list is shorter than at the start.
+  - The first hard question is named.
+
+test:
+  - Give it a plan with a clear, large goal. It should settle three to six choices that clearly follow.
+  - Give it a vague goal. It should ask you to sharpen it.
+  - Give it a choice that is a matter of taste. It should leave it open.
+  - Run it twice. The settled list should hold.
+
+improve:
+  - Add the settled choices from your past successful plans as examples.
+  - Review the settled list after a month and cross out any that turned out not to be forced.
+  - Add the fixed limits in your field, such as rules or costs.
+  - Pair it with the "Failure-first plan check" to test the settled choices.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Sorting questions against a stated goal is text work any strong chat AI does well."}
+    - {name: "A whiteboard or index cards", why: "Writing each open question on a card lets you move settled ones aside."}
+  inputs:
+    - "A written goal with a number"
+    - "A list of limits you cannot change"
+    - "Notes on what similar businesses chose"
+
+terms:
+  - term: Forced choice
+    meaning: A choice where any other answer would make the goal impossible or silly.
+  - term: Rules out
+    meaning: The options a settled choice closes, and the smaller questions it answers.
+  - term: Open question
+    meaning: A question the goal does not decide, which needs more work or information.

@@ -1,0 +1,18 @@
+slug: first-market-picker
+name: "First market picker"
+summary: "Paste your product and who could use it. Get a ranked short list of small first markets and the one to own."
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: shortlist, required: true}
+origin: rebuilt
+version: 1.0.0
+minds: [peter-thiel, reid-hoffman]
+credits:
+  - {title: "Zero to One: Notes on Startups, or How to Build the Future", by: "Peter Thiel with Blake Masters", used: "Starting with a market so small you can own it, the traits of a good first target (small, close together, in real need, lightly served), the red flag of a small share of a big market, and why a thin or scattered group fails"}

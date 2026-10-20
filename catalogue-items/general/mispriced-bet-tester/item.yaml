@@ -1,0 +1,17 @@
+slug: mispriced-bet-tester
+name: "Mispriced bet tester"
+summary: "List your bets. Get which have the odds truly in your favour after the price, and which are only favourites."
+category: general
+type: skill
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, warren-buffett]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)", by: "Charles T. Munger, edited by Peter D. Kaufman", used: "The race-track lesson that a likely winner is not a good bet once the price is set, that winners bet rarely and heavily when the odds are off, and the idea of looking for the occasional mispriced bet"}

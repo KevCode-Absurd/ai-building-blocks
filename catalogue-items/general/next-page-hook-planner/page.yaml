@@ -1,0 +1,113 @@
+new_slug: next-page-hook-planner
+name: "Next-page hook planner"
+summary: "Tell it your scene. Get the one question readers must want answered, where to stop, and a fair answer."
+job: write-and-tell-stories
+thinking: medium
+thinking_why: "It picks one question and one stopping line from your scene, which takes judgement, but the steps are fixed."
+
+headline: "A scene plan that ends with readers saying they have to know what happens"
+subhead: Tell it what happens in your scene and who it happens to. It picks the one question readers must want answered, finds the line where the scene should stop, and plans the next scene's fair answer.
+
+explain: |
+  Readers keep turning pages when they want a specific answer, not just when things are happening. "Will she live?" pulls harder than "what will happen?" because it names a person, a loss and a time.
+
+  This skill finds that question in your scene. It makes sure the question is about someone the reader cares about and that something real is at stake. The answer must not be due yet. It picks the line to stop on, which is the peak of trouble just before the answer. It then plans the next scene's answer and lists what to plant earlier so the answer is fair. The result is a short plan you can write from.
+
+when:
+  - Your chapters end where the action ends, and readers stop for the night.
+  - You know what happens but not where to cut the scene.
+  - You have a cliffhanger but are not sure the answer will hold up.
+
+you_give:
+  - What happens in the scene, and to whom
+  - What the reader already knows (optional)
+  - What comes next in the story (optional)
+you_get:
+  - The one question readers must want answered, in a plain sentence
+  - Who it is about and what they stand to lose
+  - The exact line to stop on, and why
+  - The plan for the answer in the next scene
+  - What to plant earlier so the answer is fair
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Describe the scene in a few sentences, with the person at its centre.
+  - Say what the reader knows so far and what happens in the next scene.
+  - Take the plan to "Fair escape checker", then write the scene with "Page-turner scene drafter".
+
+how_it_works:
+  - title: Finds the question
+    text: Reads your scene and writes the one question readers will want answered, as a yes or no or a who or when.
+  - title: Names the stakes
+    text: Says who the question is about and what they lose if the answer is bad.
+  - title: Picks the stop
+    text: Finds the line at the peak of trouble, just before the answer.
+  - title: Plans the answer
+    text: Writes how the next scene answers it, at a cost, using what is already in the story.
+  - title: Lists the plants
+    text: Names what to show earlier so the answer is fair.
+  - title: Checks itself
+    text: Tests that the question is one, that it is about a person, and names any check it missed.
+
+output_shape: |
+  THE QUESTION
+  <one sentence>
+
+  WHO AND WHAT IS AT STAKE
+  <person | what they lose>
+
+  WHY READERS CARE
+  <what the reader already knows about them>
+
+  STOP ON
+  <the line or beat | why this one>
+
+  THE ANSWER, NEXT SCENE
+  <how it is answered | what it costs | what new question it opens>
+
+  PLANT EARLIER
+  <detail | where to show it>
+
+  MISSING
+  <facts still needed>
+
+  CHECKS MISSED
+  <one line per check still missed, or none>
+
+tweaks:
+  - what: How soon to answer
+    how: Say if the answer comes in the next scene or three chapters later.
+  - what: Scene or chapter
+    how: Tell it which. A chapter can hold several small questions inside one big one.
+  - what: Genre
+    how: Say what you write. A romance asks different questions from a thriller.
+
+judge:
+  - The question is one sentence and has a yes or no or a who or when in it.
+  - It is about a person the reader already cares about.
+  - The stop line comes before the answer.
+  - The planned answer costs something and opens a new question.
+
+test:
+  - Read only the stop line to a friend. Ask what they think happens next. They should have a guess and want to check it.
+  - Cover the last paragraph of a chapter you love. See if the plan would have found its stop.
+  - Run it twice on the same scene. The question should stay close.
+
+improve:
+  - Add a list of the questions your story has opened so far, so it avoids repeating one.
+  - Add the typical reader of your book, so the stakes match their worries.
+  - Keep a log of stop lines and see which ones readers mention.
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Finding the question and the stop line is text work any strong chat AI does well with this skill."}
+    - {name: "A scene list on index cards", why: "Seeing the questions side by side shows if two chapters ask the same one."}
+  inputs:
+    - "A rising cost ladder, so the stakes match the story"
+    - "A summary of what the reader has seen so far"
+
+terms:
+  - term: Open question
+    meaning: The thing the reader wants answered, which drives them to turn the page.
+  - term: Stop line
+    meaning: The line where the scene ends, just before the answer.

@@ -1,0 +1,18 @@
+slug: page-turner-scene-drafter
+name: "Page-turner scene drafter"
+summary: "Paste your hook plan. Get a drafted scene in plain, concrete prose that ends on the line you planned."
+category: general
+type: skill
+role: make
+job: creative
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+  - {type: audit_report, required: false}
+outputs:
+  - {type: copy_draft}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, ernest-hemingway]
+credits:
+  - {title: "Misery", by: "Stephen King", used: "A plain, conversational narration that leans on brand names, sounds and small objects, short beats, a thought slipped in as an aside, and chapters that stop on the worst moment"}

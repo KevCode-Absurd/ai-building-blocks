@@ -1,0 +1,62 @@
+# Workflow skeleton for The Warren Buffett Way (docs/INTAKE.md). Our words; the book stays in mind-sources/ (local only).
+# Method analysis only. Not personal financial advice.
+id: buffett-way-value-and-margin
+source:
+  title: "The Warren Buffett Way (Second Edition)"
+  by: "Robert G. Hagstrom"
+  kind: book
+  rights: ideas-only
+  year: 2005
+minds: [warren-buffett, benjamin-graham]
+workflow:
+  slug: value-a-business-and-the-discount-to-ask-for
+  name: "Value a business and the discount to ask for"
+  summary: "Give it a business, its figures and a price. Get a value range, a bad-year test and a discount verdict."
+  when: "you have a price for a business or a share of one and want to know what it is worth and how much room for error the price leaves."
+  job: money-and-investing
+  level: advanced
+steps:
+  - name: Sort investment from speculation
+    skill: investment-or-speculation-sorter
+    job: analysis
+    from: "Chapter 2, the education of the investor, and Chapter 8 opening"
+    method: ["Ask if the thing was studied thoroughly", "Ask if the money is safe under reasonable conditions", "Ask if the return is satisfactory without needing a rising price", "Sort it as investment or speculation"]
+    inputs: [question]
+    outputs: [audit_report]
+    note: "Checks you are valuing a business and not guessing at a price move."
+  - name: Work out owner earnings
+    skill: owner-earnings-calculator
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 7, owner earnings"
+    method: ["Start with profit after tax", "Add back depreciation and other non-cash charges", "Subtract the money needed each year to stay where it is", "Subtract extra working capital needs and give a range"]
+    inputs: [performance_sheet, audit_report!]
+    outputs: [audit_report]
+    note: "The yearly cash an owner could really take out, as a range."
+  - name: Build the value range
+    skill: business-value-range-calculator
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 8, calculating what the business is worth"
+    method: ["Pick a steady, safe rate of return, and round it up when rates are low", "Write low, middle and high growth cases for owner earnings, with how long the fast growth lasts", "Discount each case back to today, with a fast stage and a slow stage", "Show the no-growth floor value and what each case needs to be true"]
+    inputs: [audit_report, question!]
+    outputs: [audit_report]
+    note: "Turns owner earnings into a floor value and three growth cases."
+  - name: Test a bad year
+    skill: bad-year-break-even-tester
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 8, the Wells Fargo risk walk-through"
+    method: ["List the events that could hurt earnings and rate how likely each is", "For the worst likely one, work out how big a loss the business could take and still break even", "Check that its debts and cash let it survive that year", "Say which events you cannot rule out and what each would cost"]
+    inputs: [audit_report, performance_sheet!]
+    outputs: [audit_report]
+    note: "Asks how bad a year the business can take before it stops earning, in plain sums."
+  - name: Judge the gap between price and value
+    skill: price-versus-value-gap-judge
+    job: analysis
+    task: money-and-investing
+    from: "Chapter 8, buying at attractive prices and the margin of safety"
+    method: ["Set the price against each value case and show the discount", "Ask if the discount is wide enough to cover how rough the range is", "Name what would make the value estimate wrong", "Say if the price leaves enough room, too little, or the business is too hard to value"]
+    inputs: [audit_report]
+    outputs: [audit_report]
+    note: "Sets the price against the value range and says if the discount is big enough."

@@ -1,0 +1,18 @@
+slug: long-hold-return-calculator
+name: "Long-hold return calculator"
+summary: "Paste what you know about a business and its price. Get the long-run sums and a keep, wait or pass call."
+category: general
+type: skill
+role: make
+job: analysis
+level: advanced
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [charlie-munger, warren-buffett]
+credits:
+  - {title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)", by: "Charles T. Munger, edited by Peter D. Kaufman", used: "The point that over long holds an owner's return follows the return the business earns on its capital, the after-tax gap between paying tax every year and paying once at the end, and judging every choice against your next best alternative"}

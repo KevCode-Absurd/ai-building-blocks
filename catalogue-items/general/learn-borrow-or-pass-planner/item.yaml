@@ -1,0 +1,21 @@
+slug: learn-borrow-or-pass-planner
+name: Learn, borrow or pass planner
+summary: Paste where your knowledge ends. Get a choice to learn, borrow help, start small or pass, with a first-week plan.
+category: general
+type: skill
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: audit_report, required: true}
+  - {type: question, required: false}
+outputs:
+  - {type: plan, required: true}
+origin: rebuilt
+version: 1.0.0
+minds:
+  - charlie-munger
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger"
+    by: Peter D. Kaufman (editor), with talks by Charles T. Munger
+    used: Staying out of fields where others have the advantage, widening your area of skill slowly in a narrow field, the big ideas that carry most of the load, the warning about professionals who see every problem as their tool, and learning to fluency by regular use

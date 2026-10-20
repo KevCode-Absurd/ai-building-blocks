@@ -1,0 +1,114 @@
+new_slug: learn-borrow-or-pass-planner
+name: Learn, borrow or pass planner
+summary: Paste where your knowledge ends. Get a choice to learn, borrow help, start small or pass, with a first-week plan.
+job: think-and-decide
+thinking: medium
+thinking_why: It picks between four paths using fixed rules and writes a plan, with some judgment on cost and risk.
+headline: Learn, borrow or pass planner
+subhead: "Paste the edge of your knowledge and the decision you face. It picks the best path: learn it first, borrow competence from someone you can trust, start small and reversible, or pass. You get the reasons, the first-week plan and a date to check whether you now know enough."
+explain: |-
+  When a decision sits past the edge of what you know, there are four honest moves: learn it, borrow someone else's skill, try it cheaply, or stay out. People often pick a fifth, which is to hope.
+
+  This skill decides between the four using three questions: how big and how reversible is the decision, how long would learning take, and who else could you rely on without being bent by their pay or their habit of seeing every problem their way. It then writes a short plan for the first week, including the few big ideas to learn to the point of daily use.
+when:
+  - You have found the edge of your knowledge and still have to decide.
+  - You are thinking about hiring an expert and want to do it safely.
+  - You want to widen your skills without wasting years.
+you_give:
+  - The circle result or knowledge test, with the gaps
+  - The decision, its size and its deadline
+  - Time and money you can spend on learning (optional)
+you_get:
+  - "A choice: learn, borrow, start small or pass, with reasons"
+  - The few big ideas to learn first, if learning
+  - The checks for any helper you borrow
+  - A first-week plan and a date to test yourself again
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Paste the gaps and describe the decision and its deadline.
+  - Say how much time and money you can spend on learning.
+  - Do the first-week plan and book the test date.
+how_it_works:
+  - title: Size the decision
+    text: Notes how big, how soon and how reversible it is.
+  - title: Check the aptitude
+    text: Checks whether this is a field where others hold the edge.
+  - title: Estimate learning time
+    text: Estimates what it takes to learn the missing pieces.
+  - title: Check any helper
+    text: Checks the safety of borrowing someone else's skill.
+  - title: Choose the path
+    text: Picks learn, borrow, start small or pass.
+  - title: List the big ideas
+    text: Names the few core ideas to learn to daily use.
+  - title: Write the first week
+    text: Writes a plan for the first seven days.
+  - title: Set the retest
+    text: Sets a date to test again.
+  - title: Checks its own work
+    text: Runs its own checks and names any it missed.
+output_shape: |-
+  DECISION
+  <one line> | cost if wrong | deadline | reversible?
+
+  APTITUDE
+  <who holds the edge>
+
+  LEARNING TIME
+  <gap> | hours or weeks | fits the deadline?
+
+  HELPER CHECKS
+  <who> | paid how | bias | safeguards
+
+  PATH
+  LEARN, BORROW, START SMALL or PASS | reason
+
+  BIG IDEAS
+  1. <idea> | use it on <task>
+
+  FIRST WEEK
+  Day 1: ... Day 7: ...
+
+  RETEST
+  <date> | target score
+
+  MISSING
+  <gaps>
+
+  CHECKS MISSED
+  <one line each, or none>
+tweaks:
+  - what: The deadline
+    how: A tight deadline moves the answer from learn to borrow, start small or pass.
+  - what: Whether you can undo it
+    how: Say how easily the decision can be reversed. A reversible one can be made at the edge of your knowledge.
+  - what: The helper you have in mind
+    how: Describe how they are paid. The check on bias depends on it.
+judge:
+  - The path fits the deadline and the size of the decision.
+  - A borrowed helper would pass the skin-in-the-game test.
+  - Day one is a task you can start today.
+  - The retest has a number you can score.
+test:
+  - Give it a tight deadline and a big decision. It should not say learn.
+  - Give it a cheap reversible choice. It should say start small.
+  - Run it twice. The path should match.
+improve:
+  - Redo the plan each month until you retest well.
+  - Keep a list of helpers you have checked and how they did.
+  - Share the big ideas with a friend and quiz each other.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: This is text reasoning that any strong chat AI handles with the skill.
+    - name: A notes app or document
+      why: Keeps your answers and the result in one place you can come back to.
+  inputs:
+    - The output of Real knowledge tester
+    - Advice you have been given and who gave it
+    - Your calendar for the next month
+terms:
+  - term: Start small
+    meaning: Making the decision at a size you can undo, so that doing it teaches you.
+  - term: Big ideas
+    meaning: The few core ideas of a field that carry most of the load.

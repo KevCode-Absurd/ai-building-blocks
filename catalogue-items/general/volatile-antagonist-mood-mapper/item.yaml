@@ -1,0 +1,17 @@
+slug: volatile-antagonist-mood-mapper
+name: "Volatile antagonist mood mapper"
+summary: "Paste your setting plan and the person in power. Get a mood scale with warning signs, triggers and costs."
+category: general
+type: skill
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: plan, required: true}
+outputs:
+  - {type: plan}
+origin: rebuilt
+version: 1.0.0
+minds: [stephen-king, alfred-hitchcock]
+credits:
+  - {title: "Misery", by: "Stephen King", used: "A captor whose mood swings set the stakes of every scene, whom the prisoner learns to read by small signs, and who is sincerely sure she is right"}

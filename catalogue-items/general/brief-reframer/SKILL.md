@@ -63,7 +63,7 @@ When you've handed it back, suggest what they could do next in one short questio
 - **Design it** with the [Logo strength tester](https://useaiblocks.com/skills/logo-strength-tester). It takes the design direction and buyer brief.
 - **Write the landing page** with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder). It takes the design direction.
 - **Test the idea with real people** with the [Business model guess tester](https://useaiblocks.com/skills/business-model-guess-tester). It takes the buyer brief.
-- **Decide what to do** with the [Not-to-do list builder](https://useaiblocks.com/skills/not-to-do-list-builder). It takes the plan.
+- **Decide what to do** with the [Case-against writer](https://useaiblocks.com/skills/case-against-writer). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->
 

@@ -58,9 +58,9 @@ The buyer count. The buying moments. The find-and-buy findings. Your cues. The t
 ## After this
 When you've handed it back, suggest what they could do next in one short question. It's a suggestion: if they're done, that's fine. Offer these, and say they can type their own:
 - **Plan your strategy** with the [Go or no-go launch checker](https://useaiblocks.com/skills/go-or-no-go-launch-checker). It takes the audit report and plan.
-- **Decide what to do** with the [Not-to-do list builder](https://useaiblocks.com/skills/not-to-do-list-builder). It takes the plan.
-- **Check the money** with the [Room for error plan checker](https://useaiblocks.com/skills/room-for-error-plan-checker). It takes the plan.
-- **Test the idea with real people** with the [Idea evidence review](https://useaiblocks.com/skills/idea-evidence-review). It takes the audit report.
+- **Decide what to do** with the [Yes, no or too-hard call writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer). It takes the audit report and plan.
+- **Check the money** with the [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer). It takes the plan and audit report.
+- **Test the idea with real people** with the [Seven-question startup scorer](https://useaiblocks.com/skills/seven-question-startup-scorer). It takes the audit report and plan.
 - **Shape the product** with the [Feature request screener](https://useaiblocks.com/skills/feature-request-screener). It takes the plan.
 If they pick one and that skill is added here, carry straight on with what you just made. If not, give the link and say what to bring.
 <!-- /next -->

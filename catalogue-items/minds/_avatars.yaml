@@ -309,3 +309,4 @@ kurt-vonnegut: {skin: 1, hair: curly, hairColor: grey, beard: mustache, top: jac
 virginia-woolf: {skin: 1, hair: bun, hairColor: brown, top: blouse, color: cream}
 leo-tolstoy: {skin: 1, hair: receding, hairColor: grey, beard: longbeard, beardColor: white, top: robe, color: cream}
 ursula-k-le-guin: {skin: 1, hair: bob, hairColor: white, top: sweater, color: teal, extra: earrings, mouth: smile}
+aswath-damodaran: {skin: 3, hair: short, hairColor: grey, glasses: square, top: shirt, color: blue, mouth: smile}

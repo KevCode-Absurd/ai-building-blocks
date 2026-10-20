@@ -1,32 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 6 met. Invented facts: 2.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-This is a careful, honest plan: two on-brand labels, the offer sensibly left to the captions, and gaps clearly marked MISSING. The first label's placement is unverified and could repeat a caption, so the owner must check it before use.
-
-## Fix
-
-In step 2, don't place a name label in a scene that has no frame or no confirmed caption text; ask for frames or the caption wording first, or anchor only to frame-checked scenes.
+A disciplined, honest plan: two tiny labels taken straight from the allowed copy, placed on frame-checked wall space inside the safe area, with every unverifiable placement marked unchecked and every gap listed. The owner can hand this to an editor as-is and knows exactly which frames and script lines to supply to tighten it.
 
 ## Judge list
 
-- Met: 1. Every word on screen is a phrase from approved script or allowed copy, unchanged.
-  Overlay texts are "Sprout" and "sprout.example", both in the allowed copy.
-- Not met: 2. Nothing covers product, face or hand, and no overlay repeats a caption.
-  Label 1 "no frame"; run admits "Drop it if the scene 1 or 2 caption already says 'Sprout'". Unverified.
-- Met: 3. Few overlays, at most one per 6-8 s, never two at once.
-  "2 overlays against a ceiling of 3 for 22.9 s"; 3.3-4.8 and 20.6-22.9 never overlap.
-- Met: 4. Each stays up long enough to read.
-  Label 1 is 1.5 s for one word; label 2 is 2.3 s for 14 characters, within the rate limit.
-- Met: 5. Muted at phone size: what it is, why it matters, what to do next.
-  Name label, scene 5 caption carries the fact, site address in the final scene; offer is in the captions.
-- Met: 6. Nothing in top 14% or bottom 35%.
-  Both labels placed at "y 16–24%", inside the safe area.
-
-## Invented
-
-- number: Contrast is about 8.1:1 ... about 5.7:1 (Contrast ratios are computed from the given brand colours, not invented.)
-- number: 42 characters ... needs about 2.8 s (Worked out from the allowed copy and the 15 characters per second rule.)
+- Met: Every word on screen is a phrase from the approved script or allowed copy, unchanged
+  Only two overlays: "Sprout" and "sprout.example", both listed verbatim in the input's allowed copy.
+- Met: Nothing covers the product, a face or a hand, and no overlay repeats a caption
+  "on the plain kitchen wall beside the pouch, never across it"; label 2 in scene 8, "the one scene that has no caption".
+- Met: Few overlays, about one every 6 to 8 seconds at most, never two at once
+  "Count: 2 in 22.9 seconds (ceiling 3)"; 8.8-10.8 s and 20.6-22.9 s do not overlap.
+- Met: Each one stays up long enough to read
+  "Sprout" 2.0 s; "sprout.example" (14 characters) 2.3 s, under 15 characters a second and over 1.5 s.
+- Met: Muted at phone size: what it is, why it matters, what to do next
+  Name label at 8.8 s, burned-in caption "21 vitamins and minerals and 6 grams of fiber", site label at the end; honestly noted "not played".
+- Met: Nothing in the top 14% or bottom 35% of a vertical video
+  "about 16-30% down from the top and 6-40% in from the left" for both labels.
 
 ## What went in
 
@@ -52,50 +43,42 @@ sunflower yellow #FFCC2E for badges.
 ## What came out
 
 ```text
-MISSING: full approved script for scenes 1–4 and 6–7. Only scene 5's line was given, so I can't confirm whether "Sprout", the tear step or the site is already spoken and captioned.
-MISSING: attached frames. Only text descriptions of f4, f5 and f9 were given, so every placement below is unchecked. Please attach screenshots, at minimum around 3.2–5.1 s and 20.4–22.9 s.
-MISSING: format. I've treated this as **clean** because it's a customer talking to camera, so it uses labels only, kept clear of her mouth.
-MISSING: never-say list, and the product name as printed on the pouch.
+OVERLAYS
+1 label | "Sprout" | 8.8-10.8 s |
+  Upper-left, about 16-30% down from the top and 6-40% in from the left, on the plain kitchen wall beside the pouch, never across it. Unchecked.
+  Anchored to: scene 5, the pouch held to the lens, early in "21 vitamins and minerals and 6 grams of fiber, in one pack."
+  Reason: names the product beside the pack the first time a frame-checked shot shows it, so a muted viewer knows what it is.
+2 label | "sprout.example" | 20.6-22.9 s |
+  Upper-left, about 16-30% down from the top and 6-45% in from the left, on the empty wall above the pouch. Same position as label 1. Unchecked.
+  Anchored to: scene 8, the pouch on the counter, no speech.
+  Reason: gives a muted viewer the next step in the one scene that has no caption.
 
-**Overlay plan**
+LEFT OUT ON PURPOSE
+Scene 1, opening 0.0-3.2 s: it has a caption, so the first 1.5 s stay clear. Her face is the picture.
+Scene 2, first clear view of the pack 3.2-4.6 s: this is where the name belongs. No frame was described near it, and its caption is unknown. The name moved to scene 5. To place it here I'd need the frame at about 2.6 or 5.1 s and the scene 2 line.
+Scene 3, tearing the top 4.6-6.6 s: this would be the missable step. Its spoken line isn't known, and step words must come from the approved script. The tear also reads clearly in the picture. To place it I'd need the scene 3 line and the frame at about 5.1 s.
+Scene 4, gummies into her palm 6.6-8.5 s: the picture does the work, and the caption is unknown.
+Scene 5 proof, "21 vitamins and minerals" or "6 grams of fiber": the burned-in caption already says it word for word, so a badge would repeat it.
+Scene 6, her 12.5-13.6 s: no frame was described, the caption is unknown, and there's no job left for it.
+Scene 7, price and terms 13.6-20.4 s: the caption covers the spoken terms. The approved wording is also too long for an overlay.
+Count: 2 in 22.9 seconds (ceiling 3)
 
-| # | kind | exact text | start–end (s) | position (9:16) | anchored to | reason |
-|---|---|---|---|---|---|---|
-| 1 | label | Sprout | 3.3–4.8 | upper-left, about x 8–40%, y 16–24%, beside the pack and never across it | Scene 2, the pack is first held up (runs 0.2 s into scene 3) | Answers "what is it?" for a muted viewer. Drop it if the scene 1 or 2 caption already says "Sprout", or if the printed pack name reads clearly at phone size. |
-| 2 | label | sprout.example | 20.6–22.9 | upper-left, about x 8–40%, y 16–24%, on the empty wall | Scene 8, pouch on the counter, no speech | Answers "what do I do now?" in a silent, uncaptioned scene. Same position as label 1. |
+STYLE  Format: clean (a person talking with a short demo, the default since no format was given), so labels only. Font: Work Sans bold.
+Label 1: warm cream #FFF7DF text on a forest green #00582D tab, about 8.1:1 contrast, with a soft shadow.
+Label 2: forest green #00582D text on a sunflower yellow #FFCC2E tab, about 5.7:1 contrast, with a thin green outline.
+Both pass 4.5:1 for small text. Neither covers the pouch printing or the logo. Overlays go on a separate file; the clean version stays untouched.
 
-**Left out on purpose**
-- **Proof badge, "21 vitamins and minerals":** the scene 5 caption already says it, and a badge would repeat the caption.
-- **Offer badge in the final scene:** it is spoken and captioned in scene 7. The phrase that keeps its condition, "First order is $29.99 with the text sign-up", runs 42 characters and needs about 2.8 s. Scene 8 is 2.5 s. Showing $29.99 without the $49.99 renewal would also leave the term out, so the offer stays in the captions only.
-- **Tear step (scene 3):** the picture shows it, and I have no approved wording for this scene. I won't write "tear the top" without it.
-- **Underline:** nothing holds still on screen in the scenes that needed help.
-- **Scene 1 (0.0–3.2), scene 4 (palm and gummies, f4), scenes 6–7:** her face, her hands and the captions carry these. They stay clear on purpose.
+NOTES
+Placement judged on: the written notes for f5 (10.1 s) and f9 (22.4 s). No frame images were attached, so every placement is unchecked. f4 (7.6 s) was considered and not used.
+Between samples: 8.8-10.1 s, since the pouch is held to the lens and may move or fill the upper-left. 20.6-22.4 s, since the frame at about 19.9 s wasn't described. A person must check both by eye.
+Times come from scene lengths, not measured speech.
+No mismatch found in the frame notes. The script for scenes 1-4, 6 and 7 wasn't seen, so a mismatch there can't be ruled out.
+MISSING: the frame images themselves. Descriptions of frames at about 0.1, 2.6, 5.1, 12.6, 15.1, 17.6 and 19.9 s. The approved script lines for scenes 1-4, 6 and 7. Whether scene 7's caption already says sprout.example (if it does, label 2 repeats it and should go). The product name and plain description as printed on the pack. The guarantee wording, if there is one. The never-say list. The format.
 
-**Count**
-2 overlays against a ceiling of 3 for 22.9 s (one per 6–8 s). The first 1.5 s are clear. No two overlays appear at once.
+CHECKS MISSED  
+Nothing covers the product, a face or a hand: couldn't be confirmed, because placements were judged on written notes and not on frames.
+Nothing repeats a caption: label 2 can't be confirmed until scene 7's caption is known.
+The three questions answered when played muted at phone size: not played. "Why should I care" relies on the scene 5 caption.
 
-**Style and contrast**
-- Work Sans Bold in forest green #00582D on a warm cream #FFF7DF label tag, with a soft shadow.
-- Contrast is about 8.1:1, which passes even as small text.
-- Sunflower #FFCC2E with green text would be about 5.7:1, but it isn't used because a clean format uses no badges.
-- Neither label touches the pouch's printing or logo.
-- The Work Sans font file needs to be supplied to whoever builds the overlay.
-
-**Frames each placement was judged on**
-- Label 1: no frame. 3.3–4.8 falls between frames, and none in that range was described. I'm guessing her face is not upper-left while she holds the pack up. Please check this.
-- Label 2: f9 (22.4 s). The pouch is centred and the upper-left wall is empty. 20.6–22.4 is before that frame, so check that the pouch has already settled there.
-
-**Timing**
-All times come from the scene lengths given, not from measured speech.
-
-**Footage vs script**
-- f9 at 22.4 s doesn't match the stated 2.5 s spacing (f4 7.6, f5 10.1 would put f9 at 20.1). Please confirm the frame times.
-- The script says "pack" and the scene notes say "pouch". Confirm these are the same product.
-- Confirm the burned-in captions sit within the bottom 35%, so they don't crowd the label zone.
-
-**Video**
-The footage, voice, sound and 22.9 s length are unchanged. The overlay version is a separate file, and the clean version is kept.
-
-SCORE 83/100 (5 of 6 checks)
-- Missed, "nothing covers product, face or hand, or repeats a caption": not verified. Label 1 sits between frames with no image to check against, and it may repeat a caption if "Sprout" is spoken in scene 1 or 2. The scene 1–2 script and screenshots are needed to confirm.
+Next, would you like to check it before it goes live with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker), or make captions in your brand font with the [Video caption maker in your brand font](https://useaiblocks.com/skills/video-caption-maker-in-your-brand-font)? You can also name your own next step.
 ```

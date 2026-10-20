@@ -23,8 +23,8 @@ credits:
   - {title: "Breakthrough Advertising (1966)", by: "Eugene M. Schwartz", url: "https://openlibrary.org/works/OL2625224W", used: "Matching each type to how much the buyer knows"}
   - {title: "My Life in Advertising and Scientific Advertising", by: "Claude C. Hopkins", url: "https://openlibrary.org/works/OL2702313W", used: "The Making of type: telling the steps rivals take for granted"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

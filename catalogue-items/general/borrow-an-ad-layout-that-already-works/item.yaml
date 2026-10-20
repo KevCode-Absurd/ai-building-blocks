@@ -31,7 +31,7 @@ credits:
   - {title: "About text overlays and the safe zone for ads in Stories and Reels", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/980593475366490", used: "keeping words out of the covered bands in 9:16"}
   - {title: "Advertising FAQ's: A Guide for Small Business", by: "Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/advertising-faqs-guide-small-business", used: "claims need objective proof, comparisons must be true and endorsements honest, so the spot test and the line labels"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

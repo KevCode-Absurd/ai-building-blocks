@@ -21,7 +21,7 @@ credits:
   - {title: "Confessions of an Advertising Man", by: "David Ogilvy", url: "https://en.wikipedia.org/wiki/Confessions_of_an_Advertising_Man", used: "Lines that only make sense after more reading lose the many who read the headline alone"}
   - {title: "Plain Language Is for Everyone, Even Experts", by: "Hoa Loranger, Nielsen Norman Group", url: "https://www.nngroup.com/articles/plain-language-experts/", used: "Plain, short writing serves every reader, experts included"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

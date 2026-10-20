@@ -21,8 +21,8 @@ credits:
   - {title: "Scientific Advertising", by: "Claude C. Hopkins", url: "https://www.holloway.com/g/scientific-advertising", used: "Specific claims are believed where superlatives are discounted; tell the full, exact fact"}
   - {title: "Effects of perceptual fluency on judgments of truth", by: "Rolf Reber and Norbert Schwarz, Consciousness and Cognition (1999)", url: "https://doi.org/10.1006/ccog.1999.0386", used: "Statements that are easier to read are more often judged true, so the fact goes in plain words"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

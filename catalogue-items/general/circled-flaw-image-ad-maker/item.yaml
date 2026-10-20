@@ -24,8 +24,8 @@ credits:
   - {title: "The Stopping Power of Advertising: Measures and Effects of Visual Complexity", by: "Rik Pieters, Michel Wedel and Rajeev Batra, Journal of Marketing", url: "https://doi.org/10.1509/jmkg.74.5.048", used: "Keeping the frame uncluttered around one point"}
   - {title: "Banner Blindness Revisited: Users Dodge Ads on Mobile and Desktop", by: "Kara Pernice, Nielsen Norman Group", url: "https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/", used: "Why a neat, designed mark reads as an ad"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-sonnet-5-5
-  result: fail
+  result: pass

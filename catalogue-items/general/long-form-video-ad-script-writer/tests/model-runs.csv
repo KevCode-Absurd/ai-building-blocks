@@ -1,2 +1,3 @@
 date,business,model,effort,judge,verdict,criteria_met,criteria,invented,usd
 2026-10-19,sprout,claude-opus-5-5,medium,claude-fable-5-1,fail,6,6,1,0.4680
+2026-10-20,sprout,claude-opus-5-5,medium,claude-fable-5-1,pass,6,6,0,0.4305

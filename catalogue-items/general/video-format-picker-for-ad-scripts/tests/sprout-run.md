@@ -1,31 +1,25 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 3.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 1.
 
-The analysis is sound and tied to the script, correctly picking the problem as the carrying part and warning that the renewal terms must stay visible. But it deviates from the required output shape and misapplies the scoring rule, so it isn't a clean result.
-
-## Fix
-
-In step 3 and the hand-back shape, require ranking to follow the script's musts only with the format's real score plus a stated tie-break, and require the exact shape headings (Part that carries it, Why, Properties, Best formats, Blend, Make it with, Length). Also forbid listing a surface (Mixed) with a 100 score when it adds nothing.
+The run reads the script well, finds one must (order), scores and ranks formats with sums shown, and names matching skills. It flags missing buyer and budget info and invents no Sprout facts.
 
 ## Judge list
 
-- Met: Every "must" quotes a line from your script.
-  Order and Time musts quote "A Sprout pack takes one tear." and "Greens powder takes a scoop, water and a shaker."
-- Met: The carrying part comes from what the script spends its lines on, not the product page.
-  "The problem... Lines 1–2 spend the most time on the powder routine"
-- Met: Each ranked format has a reason tied to the script, not "it's popular".
-  Animated: "Holds order and time... pack opening onto line 4"; carousel tied to three-step contrast.
-- Met: The length check says where extra length would come from, not just "make it longer".
-  "the problem: more of the routine, such as clumps... an objection... proof"
-- Met: It doesn't treat an AI-generated presenter as a real customer.
-  "An AI presenter could act out the scoop-and-wash hassle, but would only be acting it, never vouching."
+- Met: Every must quotes a line from the script
+  Only must: Order controlled, quotes "Then the shaker needs washing." and "A Sprout pack takes one tear."
+- Met: Carrying part comes from script's lines, not product page
+  Problem chosen from "Then the shaker needs washing." / "One tear. That's the routine."
+- Met: Each ranked format has a reason tied to the script
+  Carousel: "card 1 scoop + shaker + washing, card 2 one tear"; reasons reference script beats.
+- Met: Length check says where extra length would come from
+  "Add length only to the problem (more of the powder routine...) and to proof"
+- Met: Doesn't treat AI presenter as real customer
+  Face rated "no"; no presenter vouching suggested.
 
 ## Invented
 
-- number: The opening and problem (lines 1–2) take about 6 s, the tear about 2 s, line 4 on screen about 5 s, line 5 about 2 s, and the offer card about 4–5 s. (Timing breakdown is an estimate presented as fact; plausible planning guess, not from inputs.)
-- other: clumps, a rushed morning, or the shaker left in a bag (Suggested ideas for extra length; marked as examples, acceptable.)
-- other: Card 1 is scoop + water + shaker, card 2 is washing, card 3 is one tear, card 4 is the facts and offer. (Suggestion, not a fact; fine.)
+- other: clumps and rinsing; taste, or keeping the habit going (Suggestions for added length, framed as options, not Sprout facts.)
 
 ## What went in
 
@@ -46,38 +40,29 @@ Limits: no presenter booked.
 ## What came out
 
 ```text
-Carrying part: The problem (ending a daily hassle the buyer already knows). Lines 1–2 spend the most time on the powder routine, "Greens powder takes a scoop, water and a shaker." / "Then the shaker needs washing.", and lines 3 and 5 pay it off: "A Sprout pack takes one tear." / "One tear. That's the routine."
+Part that carries it: problem (ending a daily hassle the buyer already knows: scoop, shake, wash)
+  Why: "Then the shaker needs washing." / "One tear. That's the routine."
 
-Needs:
-- A believed face: no. Nothing is vouched for or lived on camera. It is a narrated comparison: "Greens powder takes a scoop, water and a shaker."
-- Showing the unseen: helps. "Inside: sixty-plus ingredients, 21 vitamins and minerals, 6 grams of fiber" gains from opening the pack visually, but the argument stands without it.
-- Controlled order: must. "A Sprout pack takes one tear." only works after "Then the shaker needs washing." The contrast is a set-up and a payoff.
-- Sound: helps. "One tear. That's the routine." is written with spoken rhythm, but it survives muted if every line is on screen.
-- Time: must. "Greens powder takes a scoop, water and a shaker." / "Then the shaker needs washing." is a sequence of steps. The hassle has to be seen taking seconds before "one tear" lands as short.
-- Sounds like a person: no. "Greens powder takes a scoop, water and a shaker." is a brand-voice statement, not a person speaking.
+Properties
+Face people believe: no because "Greens powder takes a scoop, water and a shaker." is narrated comparison; no line has anyone living or vouching for a result
+Shows what a camera can't: no because "A Sprout pack takes one tear." shows only visible actions; "sixty-plus ingredients, 21 vitamins and minerals, 6 grams of fiber" are facts to read, not a hidden process
+Order controlled: must because "Greens powder takes a scoop, water and a shaker." / "Then the shaker needs washing." has to come before "A Sprout pack takes one tear." or the contrast never pays off
+Sound can be assumed: helps because "One tear. That's the routine." has spoken rhythm, but every line is short enough to run on screen muted
+Holds attention long enough: helps because "Then the shaker needs washing." needs a moment for the hassle to land, but at 20 s it is two quick beats, not a long scene
+Reads as a person: no because "Greens powder takes a scoop, water and a shaker." is a narrator's setup and doesn't need to pass as a person talking
 
-Surfaces (2 musts: controlled order, time. Video surfaces are read as holding time; stills are not):
-1. Animated, drawn or handmade: 2 of 2 = 100. Holds order and time. Also holds the "helps" of showing the unseen (the pack opening onto line 4) and attention. Narration supplies the sound. It needs no presenter, which fits "no presenter booked."
-2. One person on camera: 2 of 2 = 100. Holds order and time, plus the "help" of sound. It ranks below animated on helps (it can't show the unseen) and on limits (no presenter booked). An AI presenter could act out the scoop-and-wash hassle, but would only be acting it, never vouching.
-3. Mixed (person, then animation, then person): 2 of 2 = 100. It adds nothing the script needs. It costs two kinds of footage and still needs a presenter.
-4. Carousel: 1 of 2 = 50. Partial order is enough for the three-step contrast (scoop and shake / wash / tear). It can't hold time.
-5. Long-text image ad styled as a post: 0 of 2 = 0. It can't hold order or time.
-6. Designed image ad: 0 of 2 = 0. It can't hold order or time.
+Best formats
+1 Animated, drawn or handmade: fit 100/100 (1 of 1), holds the before/after order and attention, carries the narration (sound helps), and needs no presenter
+2 Carousel: fit 100/100 (1 of 1), card 1 scoop + shaker + washing, card 2 one tear, card 3 ingredients and offer; partial order is enough for a two-step contrast. It ties with #1 and ranks lower because it loses the narrated rhythm (sound helps)
+3 One person on camera: fit 100/100 (1 of 1), holds order and voice. It ties with #1 and #2 and ranks last because of the limit "no presenter booked," and the script needs no face anyway
+4 Designed image ad: fit 0/100 (0 of 1), one glance can't hold the scoop → wash → tear order
+Blend: not needed; no part needs a second surface
 
-No blend is needed, because one part carries the whole script.
+Make it with: video: `paper-craft-video-ad-script-writer`, then `paper-craft-video-clip-prompt-writer` (Order controlled: a playful paper world steps through scoop, shaker and washing, then the single tear). Still: `carousel-ad-writer` (Order controlled: one card per step of the contrast)
 
-Make it with:
-- Video, ranked #1 surface, answering controlled order and time: `paper-craft-video-ad-script-writer`, then `paper-craft-video-clip-prompt-writer`. This is the problem told playfully: a cut-paper scoop, water, shaker and sink, then one clean tear. The buyer already knows this hassle, so "told gently or playfully" fits better than the "buyer doesn't see it yet" styles.
-- Alternative in the same surface, also for order and time: `clay-town-video-ad-script-writer`, then `clay-town-video-clip-prompt-writer`.
-- Fallback still, answering order only (scores 50): `carousel-ad-writer`. Card 1 is scoop + water + shaker, card 2 is washing, card 3 is one tear, card 4 is the facts and offer.
-- Offer card: show "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." in full and readable. The renewal terms must not be cut in any version.
+Length: fits. 20 s is the given length and holds a two-beat problem plus a one-tear payoff, which works as opening and proof at once. Add length only to the problem (more of the powder routine, such as clumps and rinsing) and to proof (taste, or keeping the habit going on a subscription). Keep the opening, line 4 and the offer frame ("$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks.") the same size. A longer cut is its own script, not this one stretched.
 
-Length: Fits at 20 s, and 20 s is the best length here.
-- The opening and problem (lines 1–2) take about 6 s, the tear about 2 s, line 4 on screen about 5 s, line 5 about 2 s, and the offer card about 4–5 s.
-- 15 s works only if the tear is played as the demo, so opening and proof happen at once, and line 4 is trimmed.
-- At 30 s or more, extra length would come from:
-  - the problem: more of the routine, such as clumps, a rushed morning, or the shaker left in a bag
-  - an objection, such as taste or sugar per serving, which needs real product facts the script doesn't give
-  - proof
-- A longer version should be written as its own script, not stretched from this one.
+MISSING: buyer awareness and reason to buy; budget and tools. The ranking was judged from the script's lines alone.
+
+Next: set up AI to run this with the [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner), or write the ad copy with the [Story image ad writer](https://useaiblocks.com/skills/story-image-ad-writer)? You can also name your own next step.
 ```

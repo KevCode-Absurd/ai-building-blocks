@@ -29,8 +29,8 @@ credits:
   - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "4:5 Feed shape and the 27-character headline"}
   - {title: "Privacy Violations and Personal Attributes", by: "Meta Transparency Center", url: "https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/", used: "No line or picture saying the reader has a condition"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

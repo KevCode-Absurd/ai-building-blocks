@@ -1,33 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 3 of 5 met. Invented facts: 1.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The word placement, carousel structure, flags and overlay plan are solid and the owner could run with cards 1, 2, 3 and 5 almost as is. But card 4's picture puts powder inside a gummy pack, which would produce a wrong, misleading image and undercuts the ad's whole idea.
-
-## Fix
-
-In step 5 (or 'If something is missing'), add: 'Never show what is inside the product or how it is consumed unless the brand file or product photos confirm it; if unconfirmed, show the pack opened but contents unseen and write MISSING.'
+A careful, usable carousel plan: every locked word is placed in order, the turn lands on a swipe, and the prompts stay faithful to the brand file without inventing anything. It honestly flags what it could not see or verify (photos, frames, offer currency, the 21 vs 20+ count) and leaves decisions to the owner.
 
 ## Judge list
 
-- Met: Cards and post text in order match the original word for word
-  Cards 1–5 carry lines 1–5 verbatim; offer split by sentence on card 5; word check 48 of 48 is correct.
-- Met: The reveal has its own card, so it lands on a swipe
-  Card 3 "A Sprout pack takes one tear." is the turn, alone on its card after two powder-hassle cards.
-- Met: Each card headline 7 words or fewer or flagged, at most 3 other things to read
-  "Card 1 headline is 9 words and card 4 headline is 11 words. Both are locked and left whole." Card 5 carries 2 extra lines.
-- Not met: No new claim, number or offer anywhere, including prompts
-  Card 4 prompt: "angled so the green powder inside is visible" — Sprout packs hold gummies, not powder.
-- Not met: The product matches its photos, with the real pack laid on
-  Overlay step is present, but card 4 shows "powder visible" inside the pack; the run itself scored this check missed.
-
-## Invented
-
-- claim: The torn daily pack held open, top edge torn, powder visible / green powder inside is visible at the opening (Sprout's pack contains green gummy bears; the ad's whole point is powder vs gummies, so this depicts the wrong product.)
-
-## Safety
-
-- Card 4 image would show green powder inside a Sprout pack, misleading buyers about what the product is (gummies) and contradicting the ad's own powder-vs-pack contrast.
+- Met: Read the cards and the post text in order. They match the original word for word.
+  Cards 1–5 carry the five lines verbatim; card 5 adds the offer unchanged; "The remake has 48, all on the cards, in order and unchanged."
+- Met: The reveal has its own card, so it lands on a swipe.
+  "The turn gets its own card (card 3), so it lands on the swipe from card 2."
+- Met: Each card has a headline of 7 words or fewer or is flagged, with at most 3 other things to read.
+  Cards 1 (9) and 4 (11) flagged "Headline over 7 words, kept whole"; card 5 has headline plus a two-line offer only.
+- Met: No new claim, number or offer appears anywhere, including in the prompts.
+  Prompts end "No text"; pouch details ("28 Daily Packs", no white burst for Low Sugar) come from brand.md; CTA left as a platform setting.
+- Met: The product matches your photos, with your real pack laid on.
+  Photos unseen, so correctly marked: "This step is still to do: the images aren't made and I haven't seen the photos."
 
 ## What went in
 
@@ -47,136 +35,139 @@ Product: glossy deep green stand-up pouch, big yellow wordmark,
 yellow bear face top right. Photos: pouch front, daily pack in a
 hand. The daily pack tears straight across its top edge only.
 Colors: deep forest #002C17, warm cream #FFF7DF. Font: Work Sans.
+Brand file: attached (brand.md).
+
+[attached: sprout/brand.md]
 ```
 
 ## What came out
 
 ```text
-No image tool is connected here, so this plan gives you prompts and placements, not finished pictures. Section 7 explains how to make them.
+I can't make pictures in this chat, so you get the prompts, and the end of this plan says how to turn them into images.
+The pouch-front and pack-in-hand photos are named but not attached, so I haven't seen them. The product's look comes from your message and brand.md, and the pack overlay is still to do.
 
 ## 1. Laid out
-No frames, timings or picture descriptions came with the script. Shot framing, locations and timings could not be checked. The order below follows the script.
 
-| # | Words (spoken) | Job |
-|---|---|---|
-| 1 | "Greens powder takes a scoop, water and a shaker." | Opening / problem |
-| 2 | "Then the shaker needs washing." | Problem |
-| 3 | "A Sprout pack takes one tear." | Turn (reveal) |
-| 4 | "Inside: sixty-plus ingredients, 21 vitamins and minerals, 6 grams of fiber." | Proof |
-| 5 | "One tear. That's the routine." | Payoff |
-| — | On screen: "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." | Offer (fine print, one item). It is placed last because its first appearance is unknown. |
+No frames were attached, so the original pictures are unknown (MISSING). The parts below come from the script.
+
+| # | Time | Words (spoken / on screen) | Job |
+|---|---|---|---|
+| 1 | MISSING | "Greens powder takes a scoop, water and a shaker." | Opening / problem (the old way) |
+| 2 | MISSING | "Then the shaker needs washing." | Problem, made worse |
+| 3 | MISSING | "A Sprout pack takes one tear." | Turn |
+| 4 | MISSING | "Inside: sixty-plus ingredients, 21 vitamins and minerals, 6 grams of fiber." | Proof |
+| 5 | MISSING | "One tear. That's the routine." | Payoff / close |
+| On screen | first appears: MISSING | "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." | Offer |
 
 ## 2. The beat that sells
-The ad sells on **order**: a three-step routine plus washing up, then "one tear." The contrast is a turn.
 
-- **Carousel risk:** low. The turn works if line 3 lands on its own swipe, and it does (card 3).
-- **Sound:** the narration moves onto the cards as on-screen lines. Nothing is lost.
-- **Risk to watch:** Sprout does not appear until card 3. Cards 1–2 must read instantly as "the greens-powder hassle" or people stop swiping.
+**The beat:** the step count flips on line 3. The powder routine takes a scoop, water, a shaker and then washing up. Sprout takes one tear. The beat rests on **order (a turn)** and on **sound** (narration).
+
+- **Carousel fit:** good. The turn gets its own card (card 3), so it lands on the swipe from card 2. The narration moves onto the cards as on-image lines.
+- **Risk:** the turn only lands for people who swipe. Cards 1 and 2 show the rival routine and no Sprout product. Anyone who sees only card 1 gets the problem without the product (see Checks missed).
+- **Risk:** the original has no spoken call to action. None is added on the image. A Meta CTA button (e.g. "Shop Now") is a platform setting for the owner to choose.
 
 ## 3. Layout
-**Size:** 4:5, 1080 x 1350. There are 5 cards with one shared look: a solid #002C17 headline band, cream #FFF7DF Work Sans SemiBold, and the same kitchen counter in every card.
 
-| Card | Zone map (top → bottom) |
+**Size:** 4:5, 1080 x 1350, Instagram feed. Five cards share one size and one look:
+- solid deep forest #002C17 headline band;
+- warm cream #FFF7DF type in Work Sans Bold;
+- bright, sunny photo below the band.
+
+| Card | Zone map (top to bottom, % of height) |
 |---|---|
-| 1 | 0–30% forest band, headline (3 lines, ~64 px) · 30–100% picture |
-| 2 | 0–22% forest band, headline (2 lines, ~64 px) · 22–100% picture |
-| 3 | 0–22% forest band, headline (2 lines, ~64 px) · 22–100% picture |
-| 4 | 0–34% forest band, headline (4 lines, ~56 px) · 34–100% picture |
-| 5 | 0–20% forest band, headline (~64 px) · 20–74% picture · 74–100% cream patch, offer in forest text (2 lines, 34 px) |
+| 1 | 0–26% solid #002C17 band with headline, two lines, cream, 72 px · 26–100% photo, busiest detail kept in 40–90% |
+| 2 | 0–20% #002C17 band with headline, one line, 80 px · 20–100% photo |
+| 3 | 0–20% #002C17 band with headline, one line, 80 px · 20–100% photo, torn edge of the pack at about 45–55% |
+| 4 | 0–32% #002C17 band with headline, three lines, 64 px · 32–100% photo, palm of gummies at about 50–85% |
+| 5 | 0–18% #002C17 band with headline, 80 px · 18–80% photo on cream gradient, pouch centred · 80–100% solid #002C17 offer panel with two lines, cream, Work Sans Medium, 34 px |
 
 ## 4. Card table
-| Card | Line | Words | Flag | Picture shows |
-|---|---|---|---|---|
-| 1 | "Greens powder takes a scoop, water and a shaker." | 9 | **Headline over 7.** Locked, left whole. | Unbranded tub, scoop mid-lift, glass of water, empty shaker |
-| 2 | "Then the shaker needs washing." | 5 | — | Green-streaked shaker under a running tap, hand with sponge |
-| 3 | "A Sprout pack takes one tear." | 6 | — | Hand tearing a Sprout daily pack straight across its top edge, frozen mid-tear |
-| 4 | "Inside: sixty-plus ingredients, 21 vitamins and minerals, 6 grams of fiber." | 11 | **Headline over 7.** Locked, left whole. **Claims:** "sixty-plus ingredients", "21 vitamins and minerals" and "6 grams of fiber" are unchecked because there is no claims list on file. | The torn daily pack held open, top edge torn, powder visible |
-| 5 | "One tear. That's the routine." + "$29.99 first order with text sign-up." + "Renews at $49.99 every 4 weeks." | 5 + 6 + 6 | **Offer:** this is an earlier script, not a live ad, so the terms may have ended or changed. Left as written for you to decide. | Sprout stand-up pouch upright, torn daily pack in front, clear counter, no shaker |
 
-- Card 5 carries 2 other things to read, within the limit of 3.
-- No action or button line exists in the original, so none was added. Instagram's platform CTA button sits outside the image.
+| Card | Line (locked) | Words | Flag | Picture |
+|---|---|---|---|---|
+| 1 | "Greens powder takes a scoop, water and a shaker." | 9 | Headline over 7 words, kept whole | Kitchen counter. A scoop of green powder is held over an open shaker, next to an unbranded tub and a glass of water. |
+| 2 | "Then the shaker needs washing." | 5 | none | The same kitchen. A shaker with green residue sits under a running tap in the sink. |
+| 3 | "A Sprout pack takes one tear." | 6 | none | A hand tears a Sprout daily pack straight across its top edge. |
+| 4 | "Inside: sixty-plus ingredients, 21 vitamins and minerals, 6 grams of fiber." | 11 | Headline over 7 words, kept whole. The brand's own site also says "20+" and "over 20" vitamins and minerals, so check the count is consistent. | Small opaque deep-green gummy bears pour from the torn top of the pack into an open palm. |
+| 5 | "One tear. That's the routine." + offer "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." | 5 + 12 | Offer flags, see Notes | The Sprout pouch front, closed, on a cream gradient. A torn daily pack and a few gummies sit in front of it. |
 
 ## 5. Image prompts
-Every prompt is written for 4:5, 1080 x 1350, with **no text**.
+
+All prompts are 4:5, 1080 x 1350. Use the product photos as references when you generate.
 
 **Card 1**
-- **Scene and action:** a bright home kitchen counter, light oak, plain cream wall, morning. An unbranded white tub of green powder sits with its lid off. An adult hand lifts a heaped plastic scoop of green powder over the tub, frozen mid-lift. Beside it stand a tall glass of water and an empty, clear, unbranded plastic shaker bottle.
-- **Light and framing:** soft window light from the left, natural colour. Three-quarter view at counter height. Keep the top 30% of the frame plain, empty wall.
-- **Hard limits:** no logos, no labels, no text.
+> Bright, sunny home kitchen counter, morning light from a window, candy-bright colours, never clinical. Caught in one frame: an adult's hand holds a plastic scoop heaped with fine green powder over an open clear shaker bottle, a few specks of powder in the air. Beside it: a plain, unbranded tub of greens powder with its lid off and a glass of water. No logos or brand marks on any item. Eye-level, medium close-up. Keep the top quarter of the frame as plain, uncluttered wall for words added later. No text.
 
 **Card 2**
-- **Scene and action:** the same kitchen, at the sink. An adult hand holds the clear plastic shaker bottle, smeared inside with green residue, under a running tap. The other hand holds a yellow sponge, frozen mid-scrub, with water splashing.
-- **Light and framing:** soft window light, matching card 1. Medium close-up. Keep the top 22% of the frame plain wall.
-- **Hard limits:** no logos, no labels, no text.
+> The same bright kitchen. Caught in one frame: a clear shaker bottle with green powder residue streaked inside sits under a running kitchen tap in a sink, water splashing in, a sponge beside it. No logos or brand marks. Slightly high angle, close-up. Keep the top fifth of the frame calm and plain for words added later. No text.
 
 **Card 3**
-- **Product reference:** use the attached "daily pack in a hand" photo as the reference. Keep the pack's exact shape, size and colours.
-- **Scene and action:** an adult hand holds the Sprout daily pack over the same oak counter. The other hand tears it straight across the top edge only, frozen mid-tear, with the torn strip half off.
-- **Light and framing:** soft window light. Close-up, with the pack centred in the lower two thirds. Keep the top 22% plain cream wall.
-- **Hard limits:** leave the label area clean for a real-pack overlay. No text.
+> Bright, sunny home setting, soft daylight, warm cream tones in the background. Caught in one frame: an adult's two hands tear a small flat Sprout single-serve daily pack straight across its top edge, mid-tear, the strip just separating. Match the daily pack exactly to the attached pack-in-hand photo. Tear across the top edge only, never the side, bottom or a corner. Close-up, pack centred. Keep the top fifth of the frame plain for words added later. No text.
 
 **Card 4**
-- **Product reference:** same daily-pack reference as card 3.
-- **Scene and action:** the pack's top edge is torn straight across and held open between finger and thumb, angled so the green powder inside is visible at the opening. It sits over the same counter.
-- **Light and framing:** soft window light. Macro close-up, with the pack in the lower 60%. Keep the top 34% plain cream wall.
-- **Hard limits:** clean label area, no text.
+> Bright, sunny home setting, soft daylight. Caught in one frame: small opaque, soft matte, deep-green gummy bears, each about thumbnail height, pour out of the torn top edge of a small flat Sprout daily pack into an open adult palm. A few bears are mid-air, a small handful already in the palm. Match the pack to the attached pack-in-hand photo. Close-up, palm in the lower half. Keep the top third of the frame plain for words added later. No text.
 
 **Card 5**
-- **Product reference:** use the attached "pouch front" photo as the reference. The pouch is a glossy deep green stand-up pouch, with its shape, colours and yellow bear face top right kept exactly. The torn daily pack is from its own photo.
-- **Scene and action:** the pouch stands upright on the same clear oak counter, with the torn daily pack lying in front of it. There is no shaker, tub or scoop.
-- **Light and framing:** soft window light. Straight-on, centred. Keep the top 20% plain wall and the bottom 26% plain counter.
-- **Hard limits:** clean label area, no text.
+> Product shot on a soft two-colour gradient of warm cream (#FFF7DF) into pale sunny yellow. Centre: a glossy deep green stand-up foil pouch, closed at its resealable top and never torn. It has a big yellow wordmark, a yellow bear face top right and "28 Daily Packs" at the bottom, with no white burst (Low Sugar), matched exactly to the attached pouch-front photo. In front: one small flat daily pack, torn straight across its top, with a few small opaque deep-green matte gummy bears scattered beside it. Bright, candy-like light, gentle shadow. Keep the top sixth and bottom fifth of the frame plain for words added later. No text.
 
 ## 6. Post words
-- **Post text:** empty. **Flag:** there is no post text on file.
-- **Moved lines:** none. Every line sits on a card.
+
+- **Primary text:** empty. No post text is on file (flagged). No lines were moved here, because every line sits on a card.
+- **Carousel card headline fields:** empty. The original has no lines for them.
 
 ## 7. Edit step
+
 **Real pack overlay**
-- After each image is made, cut out the real daily pack (cards 3–5) and the real pouch front (card 5) from their photos.
-- Lay each one over the generated version so the wordmark, bear face and every label word are exact.
-- Cards 1–2 carry no Sprout product. Check that the tub and shaker show no real brand.
+- Cards 3, 4 and 5: cut the real daily pack and the real pouch out of their photos. Lay each over the generated one, matching angle and scale, so every label word is right.
+- The pouch reads "28 Daily Packs". The daily pack's label is MISSING.
+- This step is still to do: the images aren't made and I haven't seen the photos.
 
-**Words**
-- Headlines go in Work Sans SemiBold, cream #FFF7DF, on the solid #002C17 band. On card 4 the type is no smaller than 56 px.
-- The offer on card 5 goes in Work Sans at 34 px, forest on a cream patch.
-- Keep 80 px side margins.
+**Where the words go**
+- Each headline goes in its #002C17 band, cream #FFF7DF, Work Sans Bold, left-aligned with 64 px margins:
+  - card 1: two lines at 72 px;
+  - cards 2, 3 and 5: one line at 80 px;
+  - card 4: three lines at 64 px.
+- The card 5 offer goes in the bottom #002C17 panel, Work Sans Medium, 34 px, as two lines:
+  - "$29.99 first order with text sign-up."
+  - "Renews at $49.99 every 4 weeks."
+- All type is 34 px or more.
 
-**Contrast**
-- Cream on forest is about 14.4:1, which passes 4.5:1.
-- Forest on cream is the same ratio and passes.
-- Keep all words on the solid patches, never on the photo.
-
-**To make the pictures**
-- **ChatGPT or Gemini:** paste each prompt with its reference photo into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make them too.
-- **Higgsfield:** paste each prompt into its image tool, or connect Higgsfield to Claude so Claude makes them there.
-- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send each prompt to that image API and save the files. Keys come from platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI or Google bills each picture.
+**Contrast check**
+- Cream #FFF7DF on deep forest #002C17 is about 14.3:1, which passes 4.5:1.
+- No words sit on the photos.
 
 ## 8. Notes
-**Word count**
 
-| | Spoken | On-screen offer | Total |
-|---|---|---|---|
-| Original | 36 | 12 | 48 |
-| Remake (cards) | 36 | 12 | 48 |
-| Remake (post text) | — | — | 0 |
+**Word count:** the original has 48 words (lines 9 + 5 + 6 + 11 + 5, offer 12). The remake has 48, all on the cards, in order and unchanged.
 
-**Flags**
-- Card 1 headline is 9 words and card 4 headline is 11 words. Both are locked and left whole.
-- Card 4's three figures need checking against the claims list.
-- The offer comes from an unaired script and its terms may not be current.
-- Post text is empty.
+**Number style:** line 4 keeps the script's spelling, "sixty-plus" and "6 grams". The brand writes "60+" and "6g". Switching is the owner's choice.
+
+**Flags:**
+- Card 1 and card 4 headlines are over 7 words. They are kept whole.
+- Line 4 count: the site says 21 vitamins and minerals in one place and "20+" or "over 20" elsewhere. Make sure the landing page matches 21.
+- The offer comes from an earlier script, not a live ad. $29.99 first order and $49.99 renewal match prices seen on the site in late Sept to mid Oct 2026. Several other discounts are live at the same time (52%, 55%, 58%, 61% off). Confirm the offer is current before launch. The words are left as they are.
+- The site's small print says the $29.99 price assumes the SMS discount "reserved for new customers only". The card says "with text sign-up" but not "new customers only". Nothing is added; the owner decides.
+- The powder comparison uses a generic, unbranded tub and shaker. No rival brand is shown, and powder never appears in Sprout's pack.
+- No narrator or person appears. Hands are generic adults, and there are no children.
+- The pouch is shown as Low Sugar, with no white burst, to match the $29.99 Low Sugar price. Confirm.
 
 **MISSING:**
-- `MISSING:` original frames or screenshots, with timings. The framing and props were rebuilt from the script alone.
-- `MISSING:` when the offer first appears on screen. It is placed on the last card.
-- `MISSING:` the claims list and rules, needed to check line 4.
-- `MISSING:` the live offer terms, needed to confirm "$29.99 first order with text sign-up" and "Renews at $49.99 every 4 weeks."
-- `MISSING:` the label text, word for word, for the pouch and the daily pack.
-- `MISSING:` the product photos themselves. The pouch front and daily pack were described, not attached, so shape and colour could not be read.
-- `MISSING:` how the daily pack is used after tearing (into water, a bottle, or something else). Card 5 shows no use beyond the tear rather than inventing one.
+- MISSING: original frames, timings and on-screen picture for each part. Pictures are built from the lines and the brand file.
+- MISSING: when the offer first appears on screen. It is placed on the last card.
+- MISSING: post text for the primary text field.
+- MISSING: the daily pack's look and label text word for word (colour, print). Prompts point to the pack-in-hand photo.
+- MISSING: the pouch's full label text, word for word, beyond the wordmark, the bear face and "28 Daily Packs", including any Low Sugar marking.
 
-## 9. Score
-**Score: 80/100 (4 of 5 checks)**
-- **Missed: the product matches its photos with the real pack laid on.** The pouch and daily-pack photos and the label text are not on file, so the match can't be confirmed yet.
+## 9. Checks missed
+
+- Glance test, cards 1 and 2: no Sprout product appears, so a stranger can't name the product from the image alone. It relies on the Instagram account name. The owner can place the pouch, soft-focus, at the edge of these cards, though that softens the turn.
+- Product matches its photos with the real pack laid on: not done yet. The images aren't made and the photos weren't seen.
+
+**To make the pictures:**
+- **ChatGPT or Gemini:** paste each prompt into a chat with the two product photos attached, and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits.
+- **Higgsfield:** paste the prompts into its image tool, or connect Higgsfield to Claude.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, the prompts can be sent to that image API and the files saved. OpenAI or Google bills each picture.
+
+Next, do you want to check it before it goes live with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker)? Other options are [Article headline image ads](https://useaiblocks.com/skills/article-headline-image-ad-maker), the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer) for the empty post text, or the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). You can also type your own.
 ```

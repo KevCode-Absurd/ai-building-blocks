@@ -1,29 +1,25 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 4 of 5 met. Invented facts: 1.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 1.
 
-The brief is clean: it uses the story's own five messages, makes no product mention and keeps the screen generic. It fails because the Follow check is missed, so the story's first line doesn't pick up the hanging message.
-
-## Fix
-
-In the step 'Find what they noticed' or 'End it open', add a rule: if the story's first line repeats the chat, give a replacement opening for the copy (e.g. start at 'I didn't answer.') in FLAGS and count it as passed only once offered.
+The run turns the story's own chat into a clean five-message screenshot brief with no invented facts. It flags the assumed time stamp, offers a fitting replacement story opening, and lists what's missing.
 
 ## Judge list
 
 - Met: The others notice the problem. Nobody sells or cheers.
-  Sam: "it's been open since january" / "so are you keeping it or what"; no product named.
+  Sam: "it's been open since january"; "so are you keeping it or what". No product named, no cheering.
 - Met: Two to six messages, readable on a phone, three senders at most.
   Five messages, two senders (Sam and narrator), each under 12 words.
-- Not met: Thread ends with narrator on the spot, and the story's first line picks it up.
-  Ends on Sam's question, but output itself admits the story opens by restating the chat, not picking it up.
+- Met: Thread ends with the narrator on the spot, and the story's first line picks it up.
+  Ends on Sam's question; offers replacement opening "I didn't answer." in Flags.
 - Met: Every message is from the story, or flagged as written for the image.
-  "No 'words written for the image' flags. All five messages are the story's own words."
-- Met: Names made up, screen like no real app, no face as contact photo.
-  "blank grey circle and no photo"; "No ticks, icons, wallpaper, logos, banners or app styling."
+  "Words written for the image: none. All five messages are the story's own words."
+- Met: Every name is made up, screen looks like no real app, no face as contact photo.
+  Blank grey circle, no ticks/wallpaper/icons. Sam is a made-up name; run asks to confirm.
 
 ## Invented
 
-- other: 7:42 pm (Time stamp made up, but it is a screen detail the brief requires, not a fact.)
+- other: Tue 7:42 PM (Time stamp not in the story, but marked [inferred] and flagged as assumed.)
 
 ## What went in
 
@@ -48,22 +44,22 @@ Buyer: the quitter who wants to stick, 28 to 45.
 ## What came out
 
 ```text
-I can't draw the picture here because no image tool is connected, so this is the brief and a ready-to-paste prompt.
+I can't make images in this chat, so you'll get a ready-to-paste prompt and how to turn it into the picture.
 
 **1. Scene**
-A text from someone's partner asking whether the green tub that's been open since January is still theirs, with no reply.
+A text from someone's partner asking if they're ever going to deal with the green powder tub that's been open since January.
 
 **2. Thread**
-One-to-one. Sam is the only person in the story who noticed. Group-chat fit doesn't apply.
+One-to-one. One person, Sam, noticed a habit only a partner would see. Family-in-story and group-chat fit don't apply.
 
 **3. Who and when**
-- **Sam:** the narrator's partner. Shown as "Sam" with a blank grey circle and no photo.
-- **Narrator:** "me", with bubbles on the right and no name shown.
+- **Sam:** the narrator's partner, shown as "Sam" with a blank grey circle.
+- **Me:** the narrator, on the right with no name shown.
 - **Group name:** none.
-- **Time on screen:** "7:42 pm"
+- **Time on screen:** "Tue 7:42 PM" `[inferred]`. The story only says March, from the kitchen.
 
 **4. What they noticed**
-The green-powder tub has sat open in the cupboard since January, barely used. This comes from the story's quoted chat: "it's been open since january."
+The tub has been open since January and is barely used. This comes straight from the story's quoted chat: "it's been open since january."
 
 **5. Messages**
 1. Sam (left): "is the green tub in the cupboard still yours"
@@ -72,29 +68,42 @@ The green-powder tub has sat open in the cupboard since January, barely used. Th
 4. Me (right): "i drank it twice. it was gritty"
 5. Sam (left): "so are you keeping it or what"
 
-The thread ends on Sam's question with no reply, which matches "I didn't answer."
+It ends there, with Sam's question unanswered.
 
 **6. Blank version**
-Same screen, same top bar ("Sam", blank circle, "7:42 pm"). Five empty bubbles in the same order and sides (left, right, left, right, left), each sized for roughly 5 to 8 words. Leave empty space below the last left bubble.
+- Same square screen: top bar with "Sam" and a blank grey circle, and the time stamp above the thread.
+- Five empty bubbles in the same order: left, right, left, right, left.
+- Each bubble is sized for one short line, with nothing after the last left bubble.
 
 **7. Line under the image**
-Opened in January. Still full.
+"Technically, still mine." (24 characters)
 
 **8. Flags**
-- No "words written for the image" flags. All five messages are the story's own words.
-- Confirm "Sam" is a made-up name and not the reviewer's real partner. If it's real, swap it (e.g. "Jo") in both the image and the story.
-- Run it as the narrator's own chat. Never present it as a customer's real screenshot.
+- **Words written for the image:** none. All five messages are the story's own words.
+- **Story opening:** the approved story opens by retelling the same chat ("In March my partner Sam texted me from the kitchen:" followed by the five lines), so the copy repeats the picture. Replacement opening that picks up from Sam's last message: **"I didn't answer."** Then run straight on: "I'd tried a few green powders over the years…" and the rest of the story unchanged.
+- **Names:** the narrator is a real customer. Confirm "Sam" is a made-up name, or swap it in both the story and the screen. Present this as a recreated chat, never as the customer's real screenshot.
+- **Time stamp:** "Tue 7:42 PM" is assumed. Change it if you like.
 
 **9. Image prompt**
-Plain smartphone screenshot of a one-to-one text conversation, square 1:1, slightly cropped at the edges, unpolished. Generic messaging screen with a white background. The plain top bar has a blank grey circle and the name "Sam", with a small time stamp "7:42 pm" above the thread. Light grey bubbles on the left, pale blue-grey bubbles on the right, plain sans-serif text, all lower case as written. No ticks, icons, wallpaper, logos, banners or app styling. Messages in order: left "is the green tub in the cupboard still yours", right "technically, yes. it's mine", left "it's been open since january", right "i drank it twice. it was gritty", left "so are you keeping it or what". Empty space below the last bubble, no reply.
+Square 1:1 phone screenshot of a plain, generic text chat, slightly cropped at the edges, unpolished. Top bar shows only the name "Sam" beside a blank grey circle, no photo. Small grey time stamp "Tue 7:42 PM" above the messages. Light grey bubbles on the left, soft neutral beige bubbles on the right, plain white background. No wallpaper, icons, read ticks, banners, logos or real app styling. Left: "is the green tub in the cupboard still yours". Right: "technically, yes. it's mine". Left: "it's been open since january". Right: "i drank it twice. it was gritty". Left: "so are you keeping it or what". Nothing after the last message. Plain system font, lower case exactly as written.
 
 **10. How to make it**
-- **Best option:** type the five messages into plain bubbles in any design tool and export a 1:1 PNG, so every word is exact.
-- **ChatGPT (GPT Image) or Gemini (Nano Banana):** paste the prompt into a chat and ask for the picture. Free plans have tight daily limits. Codex on a paid ChatGPT plan can also make it.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** with `OPENAI_API_KEY` (platform.openai.com/api-keys) or `GEMINI_API_KEY` (aistudio.google.com/apikey) saved, I can send the prompt to that API and save the file. Each picture is billed by OpenAI or Google.
-- **If an image tool makes it:** check every message letter by letter.
+Best is a design tool such as Figma. Type the five messages into plain bubbles and export a square image. If you use an image tool instead, check every message letter by letter.
 
-**11. Score: 83/100** (5 of 6 checks passed: 5/6 × 100 = 83)
-- **Follow (missed):** the approved story opens by restating the same chat ("In March my partner Sam texted me…") instead of picking up the hanging question. Opening the copy at "I didn't answer." would fix this. I haven't changed it because the text is approved.
+**11. Checks missed**
+Names: "Sam" comes from a real customer's story and isn't confirmed as made up. Confirm it or swap it before this runs.
+
+---
+
+**To finish the picture:**
+- **ChatGPT or Gemini:** paste the image prompt and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that API and save the file. Each picture is billed. Keys are at platform.openai.com/api-keys or aistudio.google.com/apikey.
+
+**Gaps to fill later:**
+- `MISSING:` brand brain (approved on-image words, voice). The [Website brand brain builder](https://useaiblocks.com/skills/website-brand-brain-builder) makes it.
+- `MISSING:` how the buyer texts, beyond the lower case shown in the story.
+- `MISSING:` the real time stamp, if you want one.
+
+Want to check it before it goes live with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker)? It takes the image prompt. Or tell me what you'd like next.
 ```

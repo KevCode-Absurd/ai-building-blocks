@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A solid, usable review: every risky line in the stitched script is caught, the fixes stick to the allowed claim, the survey figure, the real price terms and review 8, and both scores are shown with their sums. Minor weaknesses are that full lines aren't reproduced in each block (only fragments), the current word count (50) is a few words high, and the cancel-terms doubt is left MISSING rather than answered.
+A sharp, trustworthy review: it catches every risky line in the draft ("Fix", the misrepresented study, the unsupported 1M+, the conflicting discount) and rewrites each using only the facts given, with MISSING flagged for cancellation terms, urgency and gifts. The score math is shown and checkable; the only slip is that per-line beat labels are implied through check codes rather than stated, and the post-fix word count runs a little high as an estimate.
 
 ## Judge list
 
 - Met: Every problem quotes a real line from your script.
-  Quoted fragments ("Fix", "The first smart gummy", "Fills the gaps", "1M+", "4 FREE gifts", "Shop now!") all appear in the script; full lines not reproduced.
+  All six lines quoted verbatim, e.g. "Clinically backed formula for energy, immunity, and daily wellness." matches the script.
 - Met: Every check code it cites is in the reference, and the reason matches it.
-  "Truth 3 | 'Fix' is a cure-type claim", "Offer 1 | Sprout is named in line 2, well before the offer" – codes exist, reasons match.
+  "Truth 2: The discount appears as 52%, 55% and 61% in different places" matches the two-ways-stated rule; Opening 3, Proof 3, Offer 3, Doubt 3, Guarantee 3 all exist and fit.
 - Met: Truth problems come first.
-  First row is "Truth 3"; every line block leads with its Truth problem before Fit/Opening/Offer checks.
+  Every row leads with a Truth code ("Truth 3 (also Opening 3)", "Truth 1 (also Offer 1...)"), so Truth issues head the list.
 - Met: Every fix uses only your facts. Nothing from the reference's examples appears as a fact.
-  "$29.99 your first order with text sign-up, then $49.99 every four weeks"; "67% of surveyed users..."; no reference examples used.
+  Fixes use only input facts: "60-plus ingredients, including 6 grams of prebiotic fiber", "67% of surveyed users", "$29.99 with a text sign-up, then $49.99 every 4 weeks".
 - Met: Missing beats are named, as well as weak lines.
-  "Problem: absent", "Doubt: absent", Guarantee discussed under Guarantee 3.
+  "Missing beats: Problem (now line 2 fix), Doubt (now line 4 fix), Guarantee: not counted... (Guarantee 3)".
 
 ## What went in
 
@@ -46,59 +46,47 @@ Voice: playful, cheeky. Bought: reordered (subscription).
 ## What came out
 
 ```text
-**1 (Opening)** | Truth 3 | "Fix" is a cure-type claim. The only allowed claim is "Supports digestion and gut health." | Cut "fix" (see the fix below).
-**1 (Opening)** | Opening 1, Opening 2, Fit 1 | "Hot Girl Tummy" doesn't pick out the gut-fix seeker who has already tried other fixes. It gives no reason to stay in her own words. | "Fiber powders, probiotics, and your tummy's still not chill?"
-
-**2 (Promise)** | Truth 1 | "The first smart gummy" doesn't trace to any fact given. | Drop "first" and "smart."
-**2 (Promise)** | Promise 1, Promise 2, Fit 1 | "Fills the gaps" is a vague nutrient-gap pitch, not one promise in the buyer's words. It speaks to a multivitamin buyer, not a gut-fix seeker. | "This gummy supports digestion and gut health."
-**2 (Promise)** | Offer 1 | Sprout is named in line 2, well before the offer. | Move the name to the offer line.
-
-**3 (How it works)** | Truth 3 | "Revive whole body vitality" goes beyond the allowed claim. | Cut it.
-**3 (How it works)** | How it works 1, Fit 2 | The line gives a feature with no meaning and no reason it works. It leads with the count of 60+, not the fiber this buyer cares about. A market that is tired of gut claims needs the mechanism. | "Six grams of prebiotic fiber, plus 21 vitamins and minerals." Then add MISSING: approved line on why the prebiotic fiber supports digestion.
-
-**4 (Proof)** | Truth 1, Truth 3 | The study covered only blood vitamin C and folate over 12 weeks. It doesn't back energy, immunity or "daily wellness." | Cut the line and use the survey instead: "67% of surveyed users experienced better, more regular digestion."
-**4 (Proof)** | Fit 1 | Energy and immunity are off-target for a gut-fix seeker. | Covered by the fix above.
-
-**5 (Proof)** | Truth 1 | "1M+" doesn't trace to any fact given. | Cut it, or MISSING: source for the 1M+ figure.
-**5 (Proof)** | Proof 3 | A bare count is the weakest kind of proof. | The survey result in line 4 replaces it.
-
-**6 (Offer / CTA)** | Truth 2 | The discount is stated three ways: 52% and 55% on the site, 61% in ads. It can't be used until one figure is agreed. | Frame the price by the real figure instead: "Sprout: $29.99 your first order with text sign-up, then $49.99 every four weeks."
-**6 (Offer / CTA)** | Truth 1 | "4 FREE gifts" isn't in the facts. | Cut it, or MISSING: what the gifts are and confirmation that they're offered.
-**6 (Offer / CTA)** | Offer 2, Offer 3 | "Up to" % framing is used instead of real numbers. The SMS sign-up condition and the $49.99 renewal aren't said aloud. | Covered by the price line above.
-**6 (Offer / CTA)** | CTA 1, CTA 2, CTA 3 | "Shop now!" doesn't say what happens next. It gives no true reason for now and doesn't make starting feel easy. | "Tap Shop Now to start." Then add MISSING: a true reason for now, or leave urgency out.
+| Line | Check | What's wrong | Fix |
+|---|---|---|---|
+| 1 "Fix the Hot Girl Tummy." | Truth 3 (also Opening 3) | "Fix" is a watched word. Your allowed claim is "supports digestion and gut health." Line 2 then jumps to "fills the gaps," so the opening doesn't run on. | "Hot Girl Tummy acting up?" (This keeps your cheeky phrase and says nothing about what the viewer has.) |
+| 2 "Sprout is the first smart gummy that fills the gaps." | Truth 1 (also Offer 1, Promise 1, Promise 2) | No fact supports "first." The product is named in line 2. "Fills the gaps" is vague and not about digestion. There's no Problem beat. | "You've tried the fiber powders and the probiotics. Try a gummy that supports digestion and gut health." (This adds the Problem and the Promise and moves the name to the offer.) |
+| 3 "60+ potent ingredients to revive whole body vitality." | Truth 3 (also How it works 1) | "Revive whole body vitality" is outside your allowed claims. Nothing supports "potent." It lists a feature but doesn't say what it does. | "Each pack: 60-plus ingredients, including 6 grams of prebiotic fiber." |
+| 4 "Clinically backed formula for energy, immunity, and daily wellness." | Truth 1 / Truth 3 | The 12-week study measured only blood vitamin C and folate. "Clinically backed for energy and immunity" misleads, and immunity isn't an allowed claim. | Cut it. Put the Doubt beat here: "Worried it'll upset your stomach more? One reviewer: 'The prebiotics do their job, but not aggressively.'" (review 8) |
+| 5 "Trusted by 1M+." | Truth 1 (also Proof 3) | "1M+" isn't in your facts. A bare count is weak proof. | "67% of surveyed users experienced better, more regular digestion." |
+| 6 "Get up to 61% OFF + 4 FREE gifts. Shop now!" | Truth 2 | The discount appears as 52%, 55% and 61% in different places, so no single figure can be used yet. | Drop the percentage and use the real price: "Your first Sprout order is $29.99 with a text sign-up, then $49.99 every 4 weeks. Tap to start." |
+| 6 (same line) | Truth 1 (also Offer 2, Offer 3, CTA 1, Doubt 3) | "4 FREE gifts" isn't in your facts. The SMS condition and the $49.99 renewal aren't said aloud. "Shop now" doesn't say what happens next. For a reordered product, "can I stop?" goes unanswered. | Use the same fix as above, without the gifts. To answer "can I stop?", add `MISSING: cancellation terms`. If you have a true reason to act now, add it (`MISSING: reason for now`); otherwise leave urgency out (CTA 3). |
 
 **Missing beats**
-- **Problem:** absent. Fix: "Still scooping, still searching." This rests on her having tried fiber powders and probiotics.
-- **Doubt:** absent. The loudest doubt is "Will this upset my stomach more?" Fix: "Upset stomach? One reviewer: 'The prebiotics do their job, but not aggressively.'" Cite review 8 on screen.
-  - Doubt 3 (reordered) also needs "can I stop" answered: MISSING: cancel terms.
-- **Guarantee:** absent. It is not counted as missing because Guarantee 3 allows leaving it out at 30 seconds. No terms were given anyway.
+- Problem (now line 2 fix)
+- Doubt (now line 4 fix)
+- Guarantee: not counted. At 30 seconds it can be left out (Guarantee 3), and no guarantee terms were given.
 
-**Words against budget**
+**Bought: reordered.** The checks applied were Doubt 3 ("will I keep it up / can I stop"), CTA 2 (the work is starting) and Offer 2 (first-order price against the renewal price).
+
+**Word count** (30 s, voice-over, pace 3.0)
 - Budget: (30 − 2) × 3.0 = 84 words.
-- Current script: 50 words, under budget.
-- Fixed script: 71 words, leaving 13 for the two MISSING lines (why it works, cancel terms).
-- Reordered vs kept is given (reordered), so single versions of Fit 3, Doubt 3 and CTA 2 are applied.
+- Draft: about 50 spoken words, under budget.
+- After fixes: about 83 spoken words with prices read out. That fits, but only just. If you add a cancellation line, cut the "One reviewer:" lead-in or shorten line 2.
 
-**MISSING**
-- Approved line on why the prebiotic fiber supports digestion
-- Cancel terms ("can I stop")
-- A true reason for now
-- Source for "1M+", if it is kept
-- What the "4 free gifts" are, if they are kept
-- One agreed discount figure (52%, 55% or 61%), if % framing is kept
-- Shot list and overlay plan; Delivery 3 and Delivery 4 can't be judged without them. Show the product before the name (How it works 4).
+**MISSING facts**
+- MISSING: cancellation terms (Doubt 3, line 6)
+- MISSING: a true reason to act now (CTA 1)
+- MISSING: one agreed discount figure (52%, 55% or 61%), only needed if a percentage comes back
+- MISSING: source for "1M+"
+- MISSING: what the "4 free gifts" are and their terms
+- MISSING: support for "first smart gummy"
+- MISSING: the study result, who ran it and the sample size, before any study claim returns
+- MISSING: survey size and who ran it, for an on-screen footnote on the 67% line
+- MISSING: guarantee terms, if any
+- MISSING: evidence that buyers say "Hot Girl Tummy" (Fit 4). Until you have it, the opening phrase is a guess. It's kept because your voice allows it.
+- MISSING: overlay text, end card and shot list. Picture (Delivery 3) and Silent (Delivery 4) couldn't be checked.
 
-**Score now: 0**
-- Truth problems: 7 × 15 = 105 (lines 1, 2, 3, 4, 5, and 6 × 2)
-- Non-Truth-only weak lines: 0. Every weak line also carries a Truth problem and is charged once at the Truth rate.
-- Missing beats: 2 × 5 = 10 (Problem, Doubt)
-- Over budget: 0
-- 100 − 105 − 10 = −15, so the score stops at 0.
+**Score**
+- Now: 100 − (7 Truth problems × 15 = 105) − (2 missing beats × 5 = 10) = −15, so **0**.
+  - The seven Truth problems are L1, L2, L3, L4, L5, L6 discount and L6 gifts.
+  - Lines with a Truth problem aren't charged the extra 5.
+- After fixes: 100 − (line 6 still carries MISSING cancellation terms and reason for now: 1 weak line × 5) = **95**.
+  - 0 Truth problems, 0 missing beats, 83 of 84 words used.
 
-**Score after fixes: 85**
-- Truth problems: 0
-- Weak lines still open because of MISSING: 2 × 5 = 10 (line 3: why it works; line 6: reason for now)
-- Missing beats: 1 × 5 = 5 (Doubt is not complete without cancel terms)
-- Over budget: 0
-- 100 − 10 − 5 = 85
+Want to plan what to test next with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer)? It takes this audit report. Or type your own next step.
 ```

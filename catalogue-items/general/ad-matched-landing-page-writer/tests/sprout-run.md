@@ -1,27 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 6 met. Invented facts: 0.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-A careful, usable page: the headline picks up the ad, every number traces to the facts, reviews are quoted verbatim with the IBS and bowel stories framed as one buyer's experience, and no rating or claim is made up. The only gap is shipping cost, which the owner never supplied, so the cost block carries a MISSING line instead of the fee and the page cannot fully state the total before the last button.
-
-## Fix
-
-In 'What you need', make shipping cost (or the free-shipping rule for each purchase option) a required input and add to 'If something is missing': if shipping cost is not given, ask for it before writing, since the cost block cannot be completed without it.
+A disciplined page that carries the ad's habit promise, uses only supplied prices and real review quotes, and marks every gap (shipping cost, cancel steps, guarantee conditions, rating) as MISSING rather than guessing. The owner can hand this to a builder almost as-is; the only soft spot is the rhetorical "That is why 95%..." linking convenience to the survey number, which the survey itself did not test.
 
 ## Judge list
 
-- Met: Headline carries the ad's main words, and the first offer is the one the ad named
-  "Make greens the one step you never skip." Ad named no offer; page uses main offer "Subscribe: $49.99 every 4 weeks."
-- Met: Each body heading states an answer to a real doubt from customer words
-  "It's a handful of fruit gummies, not a gritty shake" answers taste doubt (R6, R12, R18, R19); all five headings map to review-sourced doubts.
-- Not met: Renewal price, shipping, delivery time and returns terms all appear before the last button
-  Renewal, 3-5 days, first-order guarantee present; "MISSING: shipping cost for subscription and one-time orders" so shipping cost absent, correctly flagged.
-- Met: Every price, number and timeframe on the page appears in the facts
-  $49.99, $66.65, $29.99, 28 packs, 4 weeks, 24 hours, 3-5 days, 95% all supplied; "Save 25%" is arithmetic on given prices.
-- Met: No rating, review count, badge or deadline that wasn't supplied
-  "MISSING: one verified rating. Ratings on file disagree ... so no rating line is used." No counts, badges or deadlines.
-- Met: Buttons say the same thing all the way down
-  "Start my first pouch" in first screen, sticky button and closing.
+- Met: The headline carries the ad's main words, and the first offer is the one the ad named.
+  "One step you'll never skip: your daily greens, in one pack of gummies." Ad named no offer; page leads with subscribe $49.99 / first box $29.99.
+- Met: Each body heading states an answer to a real doubt from your customer words.
+  "Buyers say it tastes like a treat. A few say it takes a few days." answers R12/R18; "Pause or cancel any time" answers R17/R20.
+- Met: The renewal price, shipping, delivery time and returns terms all appear before the last button. Any your facts don't give shows there as MISSING, never a guess.
+  Cost block: "Then: $49.99, charged every 4 weeks", "MISSING: the one-time shipping cost", "Arrives in 3-5 days", "first order only".
+- Met: Every price, number and timeframe on the page appears in your facts.
+  $29.99, $49.99, $66.65, 28 packs, 3-5 days, 95% all from input; 25% and 55% savings are arithmetic on given prices.
+- Met: No rating, review count, badge or deadline appears that you didn't supply.
+  "MISSING: a rating to show. The ratings on file disagree... so none is used." No counts, badges or deadlines.
+- Met: Buttons say the same thing all the way down the page.
+  "Start my first pouch" on first screen, sticky button and closing.
 
 ## What went in
 
@@ -32,8 +28,8 @@ daily packs; tear one open, eat the handful inside. 60+ ingredients,
 base. Subscribe: $49.99 every 4 weeks. First box $29.99 only with the
 text sign-up discount. One-time $66.65. "Pause Or Cancel Any Time."
 30-day money-back guarantee, first order only. Ships within 24 hours,
-arrives in 3-5 days on average. Shipping cost on one-time orders: not
-stated. Survey (say "of surveyed users"): 95% take it at least 4-6x a
+arrives in 3-5 days on average. Free shipping on the first order.
+One-time orders say "No Free Shipping"; that cost is not stated. Survey (say "of surveyed users"): 95% take it at least 4-6x a
 week. Ratings on file disagree (4.8, 4.75, 4.74, 4.0). Sugar-Free uses
 sugar alcohols.
 
@@ -49,153 +45,218 @@ Bought again (subscription).
 ## What came out
 
 ```text
+# Sprout Original (Adults) landing page: "One Step I Never Skip"
+
 ## Page brief
 
-- **Buyer:** Has quit greens powders and pill stacks and wants one daily habit that lasts.
-- **Reason to buy:** One small step a day: tear a pack, eat a handful. No shaker and no row of bottles.
-- **Offer:** The ad named no offer, so this page uses the main offer: Subscribe, $49.99 every 4 weeks.
+- **Buyer:** An adult who has quit greens powders and pill stacks and wants one daily habit that lasts.
+- **Reason to buy:** A daily pack of greens gummies that is easy enough to keep taking.
+- **Offer:** The ad named none, so the page leads with the main offer.
+  - Subscribe: $49.99 every 4 weeks.
+  - First box $29.99 with the text sign-up discount.
+  - One-time $66.65 is shown beside it.
+- **Variant:** Original (Adults), Low Sugar, pouch of 28 daily packs.
 - **Ad's opening line:** "One Step I Never Skip"
-- **Product and variant:** Sprout Original (Adults), Low Sugar, pouch of 28 daily packs.
-- **Note:** Only the ad's headline was supplied, not its image or video frames. The picture match below has not been checked against the real ad.
+- **How it's bought:** Used up and bought again (subscription).
+- **Not on this page:** Kids (R15, R16, R17) and Sugar-Free are separate buyers and variants, so each gets its own page.
+- **Picture:** The ad image wasn't supplied, so the picture match was not checked against the real ad.
 
-## First screen (phone)
+## First screen
 
-- **Headline:** Make greens the one step you never skip.
-- **What it is:** Greens gummies in daily packs. Tear one open and eat the handful inside.
-- **Picture:** The Sprout Original (Adults) Low Sugar pouch with one torn daily pack and the gummy handful beside it. Match the pack and variant shown in the ad. (Not checked against the real ad.)
-- **Buy area:**
-  - Variant: Original (Adults), Low Sugar, 28 daily packs.
-  - **Subscribe: $49.99 every 4 weeks.** Save 25% against one-time.
-  - One-time: $66.65.
-- **Proof:** 95% of surveyed users take it at least 4 to 6 times a week.
-- **Button:** Start my first pouch
-- **Risk line:** 30-day money-back guarantee on your first order. Pause Or Cancel Any Time.
-- **Sticky button:** "Start my first pouch" follows the shopper once the buy area scrolls away.
+**Headline:** One step you'll never skip: your daily greens, in one pack of gummies.
 
-**Gallery order:**
-1. The pouch and one daily pack (what it is).
-2. The torn pack with the handful of gummies (what's inside).
-3. Eating it on the go, with no shaker or glass in sight (in use).
-4. One pack next to a phone or car keys (size).
-5. The label panel showing 60+ ingredients, 21 vitamins and minerals and 6 g prebiotic fiber.
+**What it is:** Greens gummies in daily packs. Tear one open and eat the handful inside. No powder, no shaker, no pill stack.
+
+**Picture note:**
+- Show the Sprout Original (Adults) Low Sugar pouch, with one daily pack torn open and the gummies in hand.
+- Match the pack and variant the ad showed. MISSING: the ad image, to confirm.
+- **Gallery order:**
+  1. The pouch and one daily pack.
+  2. The back of the pack (60+ ingredients, 21 vitamins and minerals, 6 g prebiotic fiber).
+  3. A pack being opened on the go.
+  4. The pouch next to a phone or coffee cup, for size.
+
+**Buy area (in the first phone screen, under the gallery):**
+- ◉ **Subscribe: $49.99 every 4 weeks.** 25% less than one-time. First box $29.99 with the text sign-up discount.
+- ○ **One-time: $66.65.** No free shipping.
+- Pouch of 28 daily packs. Low Sugar.
+
+**Proof:** 95% of surveyed users take it at least 4-6x a week.
+
+**Button:** Start my first pouch
+
+**Risk line:** 30-day money-back guarantee on your first order. Pause or cancel any time.
+
+**Near the buy area, not inside it:** Free shipping on your first order. Ships within 24 hours. Arrives in 3-5 days on average.
+
+**Sticky button when the buy area scrolls away:** Start my first pouch
 
 ## Doubt list
 
-Each source is counted once.
+Doubts are listed most common first. Each source is counted once per doubt.
 
-| # | Doubt (buyer's phrasing) | Sources | Answered in |
+| # | Doubt, in the buyer's words | Sources | Answered in |
 |---|---|---|---|
-| 1 | "Will it help my digestion and regularity?" | R7, R8, R9, R10, R11 (5) | Section 1 |
-| 2 | "Will it taste okay, or will I choke it down?" | R6, R12, R18, R19 (4) | Section 2 |
-| 3 | "Is it easier than my powder or my pile of gummies and pills?" | R3, R4, R5, R15 (4) | Section 3 |
-| 4 | "Will I actually stick to it this time?" | R1, R2 (2) | First screen, Section 4 |
-| 5 | "Is the subscription a trap? Can I cancel?" | R17, R20 (2) | Section 5, Cost block |
-| 6 | "Will it give me energy?" | R13, R14 (2) | Q&A |
-| 7 | "Is it worth the price?" | "They are expensive" (1) | Cost block, Q&A |
-| 8 | "Will the sugar-free one upset my stomach?" | "The sugar free [Sprout] worked too well." (1) | Q&A |
-| 9 | "Will my kids eat it?" | R16 (1) | Not answered here. The Kids product is a different buyer and page (see Left empty). |
+| 1 | "Will it help my digestion?" | R7, R8, R9, R10, R11, R14, fragment "worked too well" (Sugar-Free) | Section 1; Q&A (sugar alcohols) |
+| 2 | "Will I like the taste?" | R6, R12, R14, R16, R18, R19 | Section 2 |
+| 3 | "Will I actually stick to it?" | R1, R2, R5, R6, R15, plus the survey | First screen; Section 3 |
+| 4 | "Is it better than the powder I quit?" | R3, R4, R6 | Section 4 |
+| 5 | "Can it replace my pile of gummies and pills?" | R5 | Section 4 |
+| 6 | "Is it worth the money?" | R3, fragment "They are expensive" | Section 5; Cost block |
+| 7 | "Can I actually cancel the subscription?" | R17, R20 | Section 6; Q&A |
+| 8 | "Will I feel more energy?" | R13, R14 | Q&A |
 
-R11 and R14 also raise GLP-1 medication. The page makes no claim about it, by design.
+**Not used on the page:** R11 and R14 tie the gummies to a GLP-1 medication. A customer may say that, but the brand should not repeat it as its own claim, so neither quote appears.
 
 ## Body sections
 
-**1. Every pack carries 6 g of prebiotic fiber**
+### 1. Every pack carries 6 g of prebiotic fiber
 
-That fiber comes alongside 60+ ingredients and 21 vitamins and minerals, all in one daily pack.
+Each daily pack has 6 g of prebiotic fiber, along with 21 vitamins and minerals and 60+ ingredients, on a vegan pectin base.
 
-One buyer with chronic IBS put it this way: "The prebiotics do their job, but not aggressively, and I feel like my overall digestion has improved." (brand site)
+Here is what some buyers wrote. These are their stories, not a promise of yours:
 
-Another wrote: "My bowel movements are normal for the 1st time in 15 years!" (brand site) That is one person's story, not a promise.
+> "My bowel movements are normal for the 1st time in 15 years!"
 
-**2. It's a handful of fruit gummies, not a gritty shake**
+> "The prebiotics do their job, but not aggressively, and I feel like my overall digestion has improved."
 
-"[Sprout] literally tastes like fruit snacks I ate as a kid." (brand site)
+> "Feel lighter, less bloated and overall good."
 
-Not everyone loves the first pack. One retailer reviewer said: "I thought the first pack I tried tasted terrible, but after the third day they started tasting better." (retailer)
+### 2. Buyers say it tastes like a treat. A few say it takes a few days.
 
-The gummies are vegan, made on a pectin base.
+> "[Sprout] literally tastes like fruit snacks I ate as a kid."
 
-**3. No shaker, no scoop, no row of bottles: tear, eat, done**
+That is not everyone's first bite:
 
-The whole routine is one pack: tear it open and eat the handful inside. Nothing to mix and nothing to wash.
+> "I thought the first pack I tried tasted terrible, but after the third day they started tasting better"
 
-"I also stopped buying separate probiotic gummies, b12 gummies, and multivitamin gummies. I just take these now and it's easier for me to manage." (brand site)
+If it isn't for you, your first order is covered by the 30-day money-back guarantee.
 
-"So easy to grab and eat on my way to the billion things I have to do as a mom." (brand site)
+MISSING: the flavour name of Original Low Sugar.
 
-**4. Built to be the one you keep taking**
+### 3. One pack a day, with nothing to mix and nothing to wash
 
-95% of surveyed users take it at least 4 to 6 times a week.
+Tear the pack open and eat the handful inside. There is no shaker bottle, no scoop and no sink full of dishes. That is why 95% of surveyed users take it at least 4-6x a week.
 
-"I've tried a few green powders over the years. The issue has never been nutritive content. It's always been an issue of consistency like many things. [Sprout] has been the one thing I've been able to stick to." (brand site)
+> "The issue has never been nutritive content. It's always been an issue of consistency like many things. [Sprout] has been the one thing I've been able to stick to."
 
-"It's wild I WANT to take [Sprout] and don't forget." (brand site)
+> "It's wild I WANT to take [Sprout] and don't forget."
 
-**5. Pause Or Cancel Any Time, and your first order has a 30-day money-back guarantee**
+### 4. 60+ ingredients and 21 vitamins and minerals, in one pack instead of a shelf
 
-A pouch holds 28 daily packs, and the subscription ships every 4 weeks, so a new pouch arrives as the last one runs out.
+You get your greens, prebiotic fiber, vitamins and minerals in one daily step.
 
-If it isn't for you, the store's terms read: "Pause Or Cancel Any Time." Your first order is covered by a 30-day money-back guarantee.
+> "I've been choking on [a big-name greens powder] for the last few years"
 
-## Cost block (directly above the last button)
+> "I also stopped buying separate probiotic gummies, b12 gummies, and multivitamin gummies. I just take these now and it's easier for me to manage."
 
-- **Subscribe:** $49.99 every 4 weeks, charged every 4 weeks until you pause or cancel.
-- **Text sign-up discount:** Your first box is $29.99 only if you sign up by text. After that, $49.99 every 4 weeks.
-- **One-time:** $66.65. Subscribing saves 25%.
-- **What you get:** 1 pouch of 28 daily packs.
-- **Shipping:** Ships within 24 hours and arrives in 3 to 5 days on average. MISSING: shipping cost for subscription and one-time orders, and any free-shipping minimum.
-- **Guarantee:** 30-day money-back guarantee, first order only. MISSING: how to claim it and any conditions, such as opened packs.
-- **Cancel:** Pause Or Cancel Any Time. MISSING: the steps to pause or cancel, in the store's words.
+### 5. Subscribing costs 25% less than buying once
 
-**Fold-out panels:** Ingredients, How to use, Shipping and returns. The price, renewal price and guarantee line stay outside the panels.
+- Subscribe: $49.99 every 4 weeks.
+- One-time: $66.65.
+- Your first box is $29.99 with the text sign-up discount. That is 55% less than one-time.
+
+A pouch holds 28 daily packs, which is four weeks at one a day. It ships every 4 weeks, so the next pouch arrives as you finish the last.
+
+> "I was taking [a big-name greens powder] but even with their monthly subscription discount it was still $94 a month and the drink was definitely gritty/chalky."
+
+### 6. Pause or cancel any time
+
+You are not locked in. Pause or cancel whenever you like.
+
+MISSING: the exact steps to pause or cancel, in the store's own words. These should sit right here.
+
+> "I hate subscriptions because I feel like they are a trap so I canceled it before the gummies even arrived. We quickly decided to resubscribe because we love [Sprout] so much!"
+
+### Fold-out panels near the buy area
+
+- **Ingredients:**
+  - 60+ ingredients, 21 vitamins and minerals, 6 g prebiotic fiber per pack.
+  - Vegan, pectin base.
+  - MISSING: the full ingredient list and sugar per pack for Low Sugar.
+- **How to use:** Tear one daily pack open and eat the handful inside, once a day. MISSING: any timing or with-food guidance.
+- **Shipping and returns:** Repeat the cost block below.
+
+The price, renewal price and guarantee line stay outside the panels.
+
+## Cost block (above the last button)
+
+**Subscribe:**
+- First box: $29.99 with the text sign-up discount. MISSING: the first-box price without the text sign-up.
+- Then: $49.99, charged every 4 weeks.
+- Each box: one pouch of 28 daily packs.
+
+**One-time:**
+- $66.65 for one pouch of 28 daily packs.
+- No free shipping. MISSING: the one-time shipping cost.
+
+**Shipping:**
+- Free on your first order.
+- MISSING: the shipping cost on subscription renewals.
+- MISSING: whether a free-shipping minimum exists.
+
+**Delivery:** Ships within 24 hours. Arrives in 3-5 days on average.
+
+**Guarantee:**
+- 30-day money-back guarantee, first order only.
+- MISSING: when the 30 days start, whether opened pouches qualify, how to claim, and who pays any return postage.
+
+**Pause or cancel:** Any time. MISSING: how.
 
 ## Comparison
 
-Not included. There are no supplied facts on the buyer's current powder or pill stack to hold against Sprout's.
+Left out. No facts are held for the powder or pill-stack side, only customer opinions, which are quoted in Section 4 instead.
 
 ## Questions and answers
 
-**Will it give me energy?**
-We don't make that claim. Some customers describe it, for example: "clean feeling energy and mental focus ... without the sugar crash" (brand site).
+**"I tried the sugar-free one and it 'worked too well.' Will this one do that?"**
+This page is for Original Low Sugar. The Sugar-Free version uses sugar alcohols. MISSING: whether Low Sugar contains sugar alcohols.
 
-**Is it worth the price?**
-Subscribe is $49.99 every 4 weeks for 28 daily packs, 25% less than the $66.65 one-time price. With the text sign-up discount, your first box is $29.99.
+**"Will I feel more energy?"**
+We don't promise that. One buyer wrote:
 
-**I've heard the sugar-free one can upset your stomach. Is this that one?**
-No. This page is the Low Sugar version. The Sugar-Free version uses sugar alcohols, which some people find hard on the stomach.
+> "clean feeling energy and mental focus ... without the sugar crash"
 
-**How long does one pouch last?**
-A pouch holds 28 daily packs, one a day, and the subscription ships every 4 weeks.
+**"I've tried to cancel subscriptions before and couldn't. How do I cancel this one?"**
+Pause or cancel any time. MISSING: the step-by-step way to cancel.
 
-**Is it vegan?**
-Yes. The gummies are vegan, on a pectin base.
+**"What if I don't like it?"**
+Your first order comes with a 30-day money-back guarantee. MISSING: how to claim.
 
-**What if it's not for me?**
-Your first order has a 30-day money-back guarantee, and you can Pause Or Cancel Any Time.
+**"How long does a pouch last?"**
+28 daily packs, so four weeks at one a day. The subscription ships every 4 weeks.
+
+**"Is it vegan?"**
+Yes. It is made on a pectin base.
+
+**"Is there a bigger pack?"**
+MISSING: whether an 84-pack is sold, and its price. R14 mentions "Original Low Sugar 84 packs".
 
 ## Closing
 
-- **Line:** One pack a day. The one step you never skip.
-- **Button:** Start my first pouch
-- **Risk line:** 30-day money-back guarantee on your first order. Pause Or Cancel Any Time.
+**Line:** Make greens the one step you never skip.
+
+**Button:** Start my first pouch
+
+**Risk line:** 30-day money-back guarantee on your first order. Pause or cancel any time.
 
 ## Left empty
 
-- MISSING: the ad's image or video frames, for the picture match.
-- MISSING: shipping cost for subscription and one-time orders, and any free-shipping minimum.
-- MISSING: how to claim the guarantee and its conditions.
-- MISSING: the steps to pause or cancel.
-- MISSING: one verified rating. Ratings on file disagree (4.8, 4.75, 4.74, 4.0), so no rating line is used.
-- MISSING: the full ingredient list for the Ingredients panel.
-- MISSING: sugar per pack for Low Sugar.
-- MISSING: flavour name of Original Low Sugar.
-- MISSING: price per day. Not given in the facts, so not shown.
-- MISSING: Kids product facts. That doubt belongs on its own page.
-- MISSING: an approved brand position on GLP-1 questions. None is made here.
+- MISSING: the ad image or frames, to match the picture, pack and variant.
+- MISSING: the Original Low Sugar flavour name.
+- MISSING: the full ingredient list and sugar per pack.
+- MISSING: whether Low Sugar contains sugar alcohols.
+- MISSING: how-to-use timing or guidance.
+- MISSING: the first-box price without the text sign-up discount.
+- MISSING: the one-time shipping cost.
+- MISSING: the subscription renewal shipping cost, and any free-shipping minimum.
+- MISSING: the guarantee conditions (start date, opened packs, how to claim, return postage).
+- MISSING: how to pause or cancel, in the store's own words.
+- MISSING: the survey's size and date.
+- MISSING: whether an 84-pack exists, and its price.
+- MISSING: a rating to show. The ratings on file disagree (4.8, 4.75, 4.74, 4.0), so none is used.
 
-## Score
+## Checks missed
 
-6 / 7 checks passed = **86 / 100**
-
-- Missed: "The renewal price, shipping and returns terms are all stated before the last button." The shipping cost is not in the supplied facts for either order type, so it is flagged as MISSING rather than guessed.
+none
 ```

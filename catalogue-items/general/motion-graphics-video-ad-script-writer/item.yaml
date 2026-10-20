@@ -26,7 +26,7 @@ credits:
   - {title: "English (USA) Timed Text Style Guide", by: "Netflix Partner Help Center", url: "https://partnerhelp.netflixstudios.com/hc/en-us/articles/217350977-English-USA-Timed-Text-Style-Guide", used: "Reading speed in characters a second, used to set hold times"}
   - {title: "Prompting videos with coding agents", by: "Remotion", url: "https://www.remotion.dev/docs/ai/claude-code", used: "Building the ad in code with Claude Code so text and figures stay exact"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

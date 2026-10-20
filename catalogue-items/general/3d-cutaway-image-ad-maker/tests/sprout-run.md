@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A clean, honest plan that stays inside the approved "supports digestion and gut health" claim, states the offer terms correctly and flags everything the brand must confirm. The owner gets a paste-ready prompt, measured layout and feed copy with no invented numbers or stray health promises.
+A tight, honest plan: the chain stops at the approved "supports" claim, every part has one colour and shape, the contrast figures are correct, and the offer terms (SMS discount, $49.99 renewal) are stated plainly. The owner gets a paste-ready prompt plus clear instructions to place the real pouch photo and get the plan reviewed before any image is made.
 
 ## Judge list
 
 - Met: All three tests are answered, and every link is marked sourced or common knowledge.
-  Tests table Hidden/True/Teaches all Pass with reasons; links 1-4 each marked "Sourced" or "Common knowledge", unsupported items cut.
+  "Hidden: pass", "True: pass", "Teaches: pass"; links 1 and 4 "Sourced", links 2 and 3 "Common knowledge".
 - Met: One link is frozen, never the whole chain as numbered steps.
-  "Frozen link: Link 3. This is the moment gut bacteria meet the prebiotic fiber and start feeding on it."
+  "Frozen link: link 3. Yellow fiber strands meet gut bacteria in the large intestine"
 - Met: Each part keeps one name, colour and shape, and no picture shows more than the approved claim.
-  Parts key: fiber = sunflower bead-chain strands; bacteria = white capsules; rest neutral. "Nothing is repaired or cleared... no gas bubbles, no swelling."
+  Parts key table: fiber = sunflower strands, bacteria = kelly green capsules; "No bloating going away. No before and after. No belly or body."
 - Met: The headline is 7 words or fewer, with at most 3 other things to read, each at 30 px or more and 4.5:1 contrast.
-  Headline 5 words at 76 px; two labels at 34 px, fact line at 32 px; contrasts 15.3:1 and 10.1:1 (verified against #002C17).
+  "Supports digestion and gut health" (5 words), 84 px; two labels 34 px, source line 30 px; contrasts 15.3:1 and 10.1:1 (correct for those hexes).
 - Met: The prompt asks for no text, people, anatomy or clinic.
-  "No people, no body, no anatomy, no medical equipment, no lab... No text, letters, numbers, labels or logos anywhere in the image."
+  "no anatomical detail, no organs ... No people, no hands, no bodies, no clinic ... No text, letters, numbers, labels or logos"
 
 ## What went in
 
@@ -40,129 +40,142 @@ Photos: [pouch front]
 ## What came out
 
 ```text
-I can't draw the picture in this chat because no image tool is connected. This is the plan and the prompt, and the end explains how to make the picture.
+I can't make images in this chat, so you get the prompt and plan below. Finishing steps are at the end.
 
 ## 1. Tests
 
-| Test | Result | Reason |
-|---|---|---|
-| Hidden | **Pass** | Fiber meeting gut bacteria happens at microbe scale inside the body. No camera can show it, and a pouch photo can't answer "does it do anything?" |
-| True | **Pass** | Each kept link rests on the label, the approved claim or textbook nutrition: inulin is a fiber people don't digest, and gut bacteria feed on prebiotic fiber. The chain stops at the approved claim. |
-| Teaches | **Pass** | With the name covered, a stranger still learns that prebiotic fiber is food for gut bacteria. |
+- **Hidden: pass.** Fiber meeting gut bacteria inside the large intestine can't be photographed at normal size.
+- **True: pass, with a short chain.** Each link rests on the label, the approved claim or the textbook meaning of "prebiotic fiber". The chain stops at the approved claim.
+- **Teaches: pass.** With the brand name covered, a stranger still learns one true thing: prebiotic fiber is food for the bacteria in your gut.
 
 ## 2. Chain
 
-1. **You eat 1 pack, and it holds 6 g of prebiotic fiber (a fiber blend, inulin listed).** *Sourced:* brand file, product page, science page and ingredients panel.
-2. **The fiber passes through without being digested and reaches the gut.** *Common knowledge:* inulin is a textbook non-digestible fiber. *Brand to confirm:* the other fibers in the branded blend.
-3. **Gut bacteria there feed on the fiber.** *Common knowledge:* this is what "prebiotic" means.
-4. **So you get: "Supports digestion and gut health."** *Sourced:* the approved claim in the brand file.
+1. **One pack holds 6 g of prebiotic fiber, from a branded fiber blend with inulin listed.** *Sourced: label and ingredients panel (brand file).*
+2. **The fiber passes the stomach and small intestine largely undigested.** *Common knowledge: this is the textbook definition of a prebiotic fiber such as inulin.*
+3. **In the large intestine, gut bacteria feed on the fiber.** *Common knowledge: the same textbook definition.*
+4. **So it supports digestion and gut health.** *Sourced: the brand's approved claim. Note that the brand's 2025 study measured blood vitamin C and folate only. It did not test gut outcomes, so this link must stay at "supports" and never say "clinically".*
 
-Cut, because support ends here: less bloating, "regular", "fix", anything about how fast it works, and the 61% statistic.
+**Cut:** what the bacteria make next (short-chain fatty acids), less bloating and regularity. None of these are on file for this product.
 
-**Frozen link: Link 3.** This is the moment gut bacteria meet the prebiotic fiber and start feeding on it.
+**Frozen link: link 3.** Yellow fiber strands meet gut bacteria in the large intestine, and the bacteria are clustered on the strands, feeding.
 
 ## 3. Parts key and honesty notes
 
-**Parts key** (use the same parts in any Sprout 3D video):
+**Parts key** (this is the master key; use the same names, colours and shapes in any 3D video):
 
 | Part (buyer's name) | Colour | Shape |
 |---|---|---|
-| Prebiotic fiber | Sunflower #FFCC2E | Long, soft, bead-chain strands. The ends loosen into tiny beads where bacteria feed. |
-| Gut bacteria | White #FFFFFF, matte | Small rounded capsules, a few clustered on each strand |
-| Everything else (the gut wall as a plain model shape, haze) | Neutral: deep forest #002C17, falling off to near-black green | A smooth curved tunnel wall with no anatomy detail |
+| Prebiotic fiber | Sunflower #FFCC2E | Long, soft, gently curling strands, like chains of small rounded beads |
+| Gut bacteria | Kelly green #007E40 (brand file), with a soft rim light | Small smooth rounded capsules, bean-like, matte |
+| Gut wall (neutral, not a key part) | Muted deep green-grey, close to #002C17 | Soft, rounded folds; a plain model tube surface with no anatomy |
 
 **Honesty notes:**
-- **Verb:** "supports" only. Never fix, relieve, cure, treat or prevent.
-- **What the picture shows:**
-  - The feeding carries on in the frame. Nothing is repaired or cleared, and nothing "before and after" appears.
-  - There are no gas bubbles, no swelling and no damaged tissue.
-- **Body:** the claim names the gut, so the gut appears only as a plain smooth tunnel wall. No see-through body, no organs, no villi and no person.
-- **Numbers:** only "6 g", which comes from the label.
-  - The 61% statistic is left out because its footnote reads only "Source".
-  - The survey figure (67% of surveyed users) is also left out. It is brand-reported and no report is on file.
-- **Claim rules:** this is a supplement with a health claim. **The brand must read and approve this plan before any image is made.**
+- **Verb:** "supports" only. Never fix, treat, relieve or cure.
+- **What the picture can't show:**
+  - No bloating going away.
+  - No before and after.
+  - No belly or body.
+  - No see-through torso.
+  - No clinic or lab coat.
+- **Gut wall:** it appears only as a plain model surface, because the claim names gut health and nothing more specific.
+- **Bacteria:** they are shown calmly feeding. There is no "bad bacteria" fight scene.
+- **Numbers:** the only number on the image is "6 g", from the label.
+- **Left out:** "61% of Americans experience weekly digestive issues" has no real source, so it is not used anywhere.
+- **Brand review:** this is a supplement, a category with claim rules. Sprout's team should read this plan before any image is made.
 
 ## 4. Layout
 
-- **Size:** 4:5, 1080 x 1350. If you need 1:1, recompose it: move the pouch to the bottom-left corner, put the scene at 22–82% height and drop the fact line into the headline band. Don't stretch the 4:5 version.
-- **View:** cutaway, as if you were 10 micrometres tall, floating inside a smooth gut-shaped tunnel and looking along it.
+- **Size:** 4:5, 1080 x 1350. For a 1:1 version, recompose with the meeting point centred and the headline band at 0–16%. Don't stretch the 4:5.
+- **View:** cutaway into a plain model gut tube, as if you were 0.05 mm tall (the size of a speck of dust), looking along the soft folds of the wall.
 
-**Zone map (percent of width x height):**
+**Zone map (percent of height):**
 
-| Zone | Area | What's there |
-|---|---|---|
-| Headline band | 0–100% x 0–20% | Flat #002C17, calm, no detail |
-| Scene | 0–100% x 20–80% | Cutaway tunnel, haze |
-| Meeting point | 30–70% x 35–62% | Bacteria clustered on fiber strands, sharpest and brightest, where the eye lands first |
-| Label: fiber | Callout to a strand, text at 6–40% x 26–31% | Thin white line |
-| Label: bacteria | Callout to a cluster, text at 58–94% x 66–71% | Thin white line |
-| Bottom band | 0–100% x 80–100% | Flat #002C17 |
-| Fact line | 6–62% x 86–91% | Text |
-| Pouch photo | 72–94% x 79–97% | Real front photo, placed in a design tool |
+| Zone | Contents |
+|---|---|
+| 0–18% | Calm headline band, flat deep forest #002C17 that fades into the scene |
+| 18–75% | The scene. The meeting point is centred at 50% width and 45% height, filling about 45% of the frame width. Yellow strands sweep in from the upper left, and green bacteria are clustered on them. |
+| Callouts | "Prebiotic fiber" label at about 30% height on the left. "Gut bacteria" label at about 58% height on the right. Both use thin white lines. |
+| 75–88% | Quiet haze for the source line, left-aligned at 6% margin |
+| 82–97% | Real pouch photo at the bottom right, about 20% of frame width, placed in a design tool |
+| Everything else | Soft dark haze, out of focus |
 
 ## 5. Words on the image
 
-All words are set in a design tool, never in the image prompt. Every word sits on flat #002C17 or on a #002C17 plate at 90% or more.
+All words are set in a design tool, not in the image prompt. Contrast is measured against #002C17. Labels sit on a #002C17 pill at 90% opacity, so their contrast holds over the scene.
 
-| Words | Role | Type | Colour | Contrast on #002C17 |
-|---|---|---|---|---|
-| "Supports digestion and gut health." | Headline (5 words) | Work Sans Bold, 76 px, centred | White #FFFFFF | 15.3:1 |
-| "Prebiotic fiber" | Label 1 | Work Sans Medium, 34 px | Sunflower #FFCC2E | 10.1:1 |
-| "Gut bacteria" | Label 2 | Work Sans Medium, 34 px | White #FFFFFF | 15.3:1 |
-| "Each pack: 6 g prebiotic fiber" | Fact line | Work Sans Medium, 32 px | White #FFFFFF | 15.3:1 |
+| Words | Size and type | Colour | Contrast |
+|---|---|---|---|
+| Headline: **"Supports digestion and gut health"** (5 words) | 84 px, Work Sans bold | White #FFFFFF, with "gut health" in sunflower #FFCC2E | 15.3:1 (white), 10.1:1 (sunflower) |
+| Label: **"Prebiotic fiber"** | 34 px, Work Sans medium | Sunflower #FFCC2E | 10.1:1 |
+| Label: **"Gut bacteria"** | 34 px, Work Sans medium | White #FFFFFF | 15.3:1 |
+| Source line: **"6 g prebiotic fiber in every pack"** | 30 px, Work Sans medium | White #FFFFFF | 15.3:1 |
 
-That is 1 headline and 3 other things to read. There is no button on the image, and nothing is under 30 px.
+That is the headline plus 3 other things to read. There is no button on the image; the offer lives in the feed copy.
 
 ## 6. Image prompt
 
-```
-A clean 3D scientific illustration, vertical 4:5 composition (1080 x 1350). Cutaway view as if 10 micrometres tall, floating inside a smooth, simplified tunnel shape with soft curved walls in deep forest green (#002C17) fading to near-black green at the edges; the wall is a plain model shape with no anatomical detail, no organs, no tissue texture. In the centre, slightly above the middle, long soft bead-chain strands in warm sunflower yellow (#FFCC2E) drift through the space; small rounded matte white capsule-shaped microbes cluster along the strands, and where they touch, the strand ends gently loosen into tiny yellow beads, as if being fed on. This meeting point is the sharpest, brightest area of the frame. A little soft haze and a few out-of-focus strands and microbes in the background give a sense of scale. Soft, even studio light with a gentle glow on the yellow strands, calm and friendly mood, not clinical. Keep the top 20% and bottom 20% of the frame as calm, flat, dark deep green with no objects. Only two accent colours: sunflower yellow and white; everything else neutral dark green. No people, no body, no anatomy, no medical equipment, no lab, no bubbles, no gas, no damage. No text, letters, numbers, labels or logos anywhere in the image.
-```
+> Clean 3D scientific illustration, vertical 4:5 composition. A cutaway view inside a smooth, plain model tube representing the large intestine, seen as if the viewer were 0.05 millimetres tall, looking along soft rounded folds of the tube wall. The wall is a muted deep green-grey (close to #002C17), matte and simplified, with no anatomical detail, no organs and no body visible.
+>
+> In the centre of the frame, slightly above the middle, long soft gently curling strands made of chains of small rounded beads, coloured warm sunflower yellow (#FFCC2E), sweep in from the upper left and drift through the space. Clustered along the strands are small smooth rounded bean-shaped capsules in kelly green (#007E40) with a soft rim light. These are gut bacteria, calmly gathered on and around the yellow strands as if feeding.
+>
+> The yellow strands and green capsules are the only saturated colours in the image; everything else is dark, quiet and slightly out of focus. Soft directional light from the upper left and a light atmospheric haze give a sense of tiny scale. The deep, dark background fades to flat deep forest green (#002C17) across the top 18 percent and the bottom 20 percent of the frame, leaving clean, calm space.
+>
+> Gentle, friendly, optimistic mood. No people, no hands, no bodies, no clinic, no lab equipment, no illness or damage. No text, letters, numbers, labels or logos anywhere in the image.
 
 ## 7. Feed copy
 
-- **First line (73 characters):** "Does a gummy actually do anything? Each pack has 6 g of prebiotic fiber."
+- **First line:** Does a gummy do anything? Each pack has 6 g of prebiotic fiber your gut bacteria feed on.
 - **Primary text:**
-  > Does a gummy actually do anything? Each pack has 6 g of prebiotic fiber.
+  > Does a gummy do anything? Each pack has 6 g of prebiotic fiber your gut bacteria feed on.
   >
-  > Prebiotic fiber is food for the bacteria in your gut. That's why Sprout supports digestion and gut health, plus 21 vitamins & minerals and 60+ ingredients in one small pack. No powder, no shaker, no pills. Rip. Tip. Enjoy.
+  > Prebiotic fiber passes through your stomach and becomes food for the bacteria living in your gut. That's how Sprout supports digestion and gut health. Also in that 1 pack: 60+ ingredients and 21 vitamins & minerals.
   >
-  > New here? Your first 28-pack pouch (Low Sugar) is $29.99 with our text sign-up discount, for new customers only. After that it renews at $49.99 every 4 weeks. The 30-day money-back guarantee covers your first order.
-- **Headline (24 characters):** "Your first pouch: $29.99"
-- **Button:** Shop now
+  > No chalky powder. No shaker. Rip. Tip. Enjoy.
+  >
+  > First order $29.99 (Low Sugar, 28 packs) with the text sign-up discount for new customers. Then $49.99 every 4 weeks until you cancel.
+- **Headline (under the image):** 6 g prebiotic fiber a day (25 characters)
+- **Button:** Get Offer
 
 ## 8. Notes
 
-**Inferred links for the brand to confirm:**
-- Link 2: that the whole branded fiber blend, not just the inulin, is non-digestible prebiotic fiber.
-- **MISSING:** what the branded fiber blend is made of.
-- **MISSING:** whether the product page uses the words "gut bacteria". Match the label to the page's own wording if it differs.
+**For the brand to confirm:**
+- Links 2 and 3 rest on the textbook meaning of "prebiotic". Please confirm that the whole 6 g branded blend is prebiotic, and not only the inulin in it.
+- The bacteria colour, kelly green #007E40, comes from the brand file, not from the palette you gave me. If you want only your 3 colours, bacteria could go white. In that case the "Gut bacteria" label needs a different treatment.
+- Add the FDA line ("These statements have not been evaluated by the Food and Drug Administration…") to the ad. The site carries it, but the brand's ads currently don't.
 
 **Claims left out:**
-- "61% of Americans experience weekly digestive issues": the only source given is a footnote reading "Source".
-- "Fix the Hot Girl Tummy": "fix" breaks the "supports" rule.
-- The survey figures ("67% of surveyed users ... better, more regular digestion"): these are brand-reported with no report on file. They could be added to the text with the "of surveyed users" wording if the brand supplies the survey.
-- "4.8 stars", "works", and the 30/60/90-day timeline.
-- Any promise that cancelling is easy.
+- "61% of Americans experience weekly digestive issues": its only source is the word "Source".
+- "Fix the Hot Girl Tummy": "fix" breaks the brand's own "supports" rule.
+- The survey figures (e.g. "67% of surveyed users experienced better, more regular digestion"): not in your brief, and the image's word limit is used up. They could go in a later primary text, with "of surveyed users".
+- Anything like "clinically" tied to gut health: the study measured vitamins only.
 
-**Other notes:**
-- The $29.99 price is the Low Sugar 28-pack. Sugar-Free costs more and upsets some stomachs, so pointing gut-sensitive buyers to Low Sugar fits this audience.
-- The brand's ads don't carry the FDA line. The brand should decide whether this ad needs it.
-- **MISSING:** the real pouch photo files. "[pouch front]" arrived as text only, so I couldn't check the label, colours or angle. Send a sharp front photo, and a side photo too, before the image is made. Place the pouch as a photo; never model it.
-- **MISSING:** brand approval of this plan. It's needed before any image is made.
+**On the offer:**
+- The $29.99 price is the Low Sugar version. That also suits this buyer, because Sugar-Free upsets some stomachs.
+- Don't promise an easy cancel beyond the site's own words.
 
-## 9. Score
+**Missing:**
+- MISSING: real product photos. "[pouch front]" arrived as a placeholder, not an image. I couldn't check the label, colours or wordmark. Place the real front photo, label sharp, in Canva or Figma. Never generate the pouch.
+- MISSING: a side photo of the pouch.
+- MISSING: grams of sugar per pack. Not needed in this ad, but this buyer asks about it.
 
-**Score: 100/100 (5 of 5 checks)**
+## 9. CHECKS MISSED
 
-## How to make the picture
+none
 
-- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+---
+
+**To finish it:**
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. Or paste this whole skill there, so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits, and Codex on a paid ChatGPT plan can make it too.
 - **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** save an OpenAI or Google key as `OPENAI_API_KEY` or `GEMINI_API_KEY`, and I can send the prompt to that image API and save the file.
-  - OpenAI keys: platform.openai.com/api-keys
-  - Google keys: aistudio.google.com/apikey
-  - OpenAI or Google bills each picture.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that image API and save the file. Each picture is billed by OpenAI or Google.
 
-After that, set the words, labels and the real pouch photo in a design tool, using the zone map above.
+After the picture is made, set the words and the pouch photo in Canva or Figma. Then re-measure label contrast on the finished image.
+
+What next? You could:
+- Check it before it goes live with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker).
+- Make more image ads with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker).
+- Sharpen the first line with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer).
+- Build the matching page with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer).
+
+Or type your own.
 ```

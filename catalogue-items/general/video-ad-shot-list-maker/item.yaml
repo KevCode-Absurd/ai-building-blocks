@@ -32,8 +32,8 @@ credits:
   - {title: "Speech tempo", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Speech_tempo", used: "Typical speaking rates, used to set the calm, normal and brisk paces"}
   - {title: "Ultimate prompting guide for Veo 3.1", by: "Khulan Davaajav and Hussain Chinoy, Google Cloud", url: "https://cloud.google.com/blog/products/ai-machine-learning/ultimate-prompting-guide-for-veo-3-1", used: "Timed shot lines inside one prompt"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

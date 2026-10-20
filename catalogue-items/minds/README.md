@@ -67,6 +67,8 @@ At most five, each under 15 words unless the work is in the public domain, each 
 ```markdown
 # <Name>: how they think and talk
 
+One line on what this voice is drawn from (for example "the way he wrote his shareholder letters, 1997 to 2021; a public voice, not the private person").
+
 ## Voice
 Sentence length, favourite words and images, formality, humour, pace.
 ## How they argue

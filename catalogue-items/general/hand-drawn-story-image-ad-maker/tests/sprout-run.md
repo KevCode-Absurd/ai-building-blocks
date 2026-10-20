@@ -1,25 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
 
-The brief is well-made: one repeated desk frame, a faceless figure, stomach never shown, and an open last panel. But it does not follow the output shape, so the owner gets a differently labelled layout.
-
-## Fix
-
-In "What you hand back", require the exact output-shape layout: plain labelled lines (SCENE, THE FRAME ... SCORE) with the SCORE line written as "<passed> / 6 checks x 100 = <score>", and the LINE UNDER IMAGE line giving the line type and character count.
+The run gives a clear three-panel wordless brief that repeats one frame, ends unresolved, keeps the stomach and product out, and flags the missing brand brain. The image prompt is ready to paste and nothing is invented.
 
 ## Judge list
 
 - Met: Every panel shows the same place from the same angle.
-  "The desk, clock and angle are identical in every panel."
+  "An office desk seen from the side at seated height. A wall clock reads 3:00 in every panel"
 - Met: The panels follow your story's order, and the last one stays unresolved.
-  Push at 3:00, then powder and pills (habit), last: "Nothing has changed for her."
+  Push, habit, then "open end... Nothing has changed for the figure." Matches the story's push then habit.
 - Met: There are no words, captions or speech bubbles in the drawing.
-  "Words on the image: None." and prompt says "No words, no labels."
+  WORDS ON IMAGE none; prompt says "no words, lettering or logos".
 - Met: No panel shows the product, a cure, a body diagram or a doctor.
-  Only generic powder tub and pill bottle, which are the tried habits, not Sprout.
+  "Sprout gummies are left out of every panel." Tubs are unlabeled; no doctor or diagram.
 - Met: It looks like a page from someone's notebook, not polished art.
-  "lined notebook page... blue ballpoint, uneven ink, a few scribbled-out lines."
+  "Phone photo of a page from a lined office notebook... blue ballpoint, uneven ink"
 
 ## What went in
 
@@ -38,37 +34,30 @@ Body limits: never show the stomach.
 ## What came out
 
 ```text
-No image tool is connected here, so this is a written brief; how to turn it into a picture is at the end.
+I can't make pictures in this chat, so this is the brief and image prompt. How to finish it is at the end.
 
-1. **Scene:** A ballpoint notebook sketch of the same woman at the same desk, three times, chair pushed back at 3pm, with more abandoned tubs piling up.
+```
+SCENE             A ballpoint sketch in an office notebook: three panels of the same person at the same desk at 3pm, chair pushed back, while the tubs on the desk pile up.
+THE FRAME         An office desk seen from the side at seated height. A wall clock reads 3:00 in every panel and a window sits behind the desk.
+PANELS            3
+                  1 (push): chair pushed back from the desk, figure leaning back and staring at the ceiling, nothing on the desk but a keyboard and a mug.
+                  2 (habit): same posture, one plain unlabelled tub and a shaker bottle now on the desk corner.
+                  3 (open end): same posture, three plain tubs and a pill bottle in a row, the shaker still there. Nothing has changed for the figure.
+FIGURE            A simple made-up adult with dot eyes, short dark hair in a low bun, a plain cardigan over a shirt and dark trousers. Arms rest on the chair arms, never on the body.
+DRAWN WITH        Blue ballpoint on lined notebook paper, the kind on any office desk.
+WORDS ON IMAGE    none
+LINE UNDER IMAGE  Every day at 3pm, the same. (plain caption, 27 characters)
+FLAGS             The stomach is never shown, and no hand rests on the belly or middle. The problem shows only through the pushed-back chair, the stare and the growing pile of tubs.
+                  The tubs carry no labels, so no rival brand appears. Sprout gummies are left out of every panel.
+                  MISSING: brand brain (any body limits beyond the stomach, and the words allowed near the image).
+                  MISSING: narrator details (an office worker is [inferred] from the story).
+IMAGE PROMPT      Phone photo of a page from a lined office notebook lying on a wooden table, edge of the table visible. Three hand-drawn panels across the page in blue ballpoint, uneven ink, no words, lettering or logos. Each panel repeats the same frame: a side view of an office desk, a wall clock reading 3:00, a window. A simple adult figure with dot eyes, hair in a low bun, plain cardigan, sits with the chair pushed back from the desk, leaning back, staring at the ceiling. Panel one: empty desk. Panel two: one unlabeled tub and a shaker bottle on the desk. Panel three: three unlabeled tubs and a pill bottle, figure unchanged. Square 1:1.
+CHECKS MISSED     none
+```
 
-2. **The frame:** An office desk seen from the side and slightly behind, with a wall clock in the top corner and the chair in the middle of the panel. The desk, clock and angle are identical in every panel.
-
-3. **Panels:** 3
-   - **Push:** The clock reads 3:00. The figure has pushed her chair back from the desk and sits still, staring ahead. A cup of tea sits untouched and the desk is otherwise bare.
-   - **Habit:** Same clock, same 3:00, same chair pushed back. A plain lidded tub of powder with a scoop now sits on the desk.
-   - **Habit / open end:** Same clock, same 3:00, same chair pushed back. The powder tub is shoved to the back and a small plain pill bottle has joined it. Nothing has changed for her.
-
-4. **Figure:** A simple made-up adult with dot eyes, short hair and a striped cardigan, the same in every panel. She sits upright with her hands on the armrests. Her posture shows only stillness and waiting. No hand goes to the belly.
-
-5. **Drawn with:** Blue ballpoint on a lined office notebook page.
-
-6. **Words on the image:** None.
-
-7. **Line under the image:** Every day, 3pm, same chair
-
-8. **Flags:**
-   - The limit is never show the stomach. Keep hands on the armrests, not the belly. Don't have her hunched over or clutching her middle. The clothes must not draw attention to the waist.
-   - The tub and bottle must stay plain, with no labels or lettering, so they don't read as named brands.
-   - The narrator is an example only. The figure is a made-up adult, not a likeness of the customer.
-
-9. **Image prompt:**
-   > Phone photo of a lined notebook page lying on a wooden office desk, a keyboard edge visible. On the page, three panels hand-drawn in blue ballpoint, uneven ink, a few scribbled-out lines. Every panel repeats the same side view of a desk with a wall clock reading 3:00 in the corner. A simple adult with dot eyes, short hair and a striped cardigan sits with her chair pushed back from the desk, hands on the armrests, staring ahead, tea untouched. Panel 1: desk bare. Panel 2: a plain lidded powder tub and scoop on the desk. Panel 3: the tub pushed aside, a small plain pill bottle added. No words, no labels. Square 1:1.
-
-10. **Score:** 100. All 6 checks passed (6/6 × 100 = 100).
-
-**To finish it:**
-- **ChatGPT or Gemini:** Paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can also make it.
-- **Higgsfield:** Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** If you have `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that image API and save the file. Get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI or Google bills each picture.
+How to finish it:
+- **ChatGPT (GPT Image) or Gemini (Nano Banana):** paste the image prompt into a chat and ask for the picture. Free plans have tight daily limits.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, the prompt can be sent to that image API and the file saved. Each picture is billed.
+- **Pen and paper:** the most real-looking option is to draw it yourself or pay an illustrator, then shoot it on a table with your phone. Agree in writing that you may use it in ads.
 ```

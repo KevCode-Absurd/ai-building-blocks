@@ -22,8 +22,8 @@ credits:
   - {title: "About negative keywords", by: "Google Ads Help", url: "https://support.google.com/google-ads/answer/2453972", used: "Negative match types, and that negatives don't cover close variants"}
   - {title: "Google adds search terms visibility to Performance Max campaigns", by: "Search Engine Land", url: "https://searchengineland.com/google-adds-search-terms-visibility-to-performance-max-campaigns-453489", used: "Performance Max search terms and campaign-level negatives"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

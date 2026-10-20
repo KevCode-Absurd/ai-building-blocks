@@ -1,25 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
 
-The brief is a usable, well-composed kitchen scene with clear roles, clutter and no product. But it breaks the output shape, scores itself down for an invented missing-research problem, and miscounts the roles.
-
-## Fix
-
-In the output step, require the exact labelled-line shape (SCENE, ROOM AND HOUR, ... SCORE) and state that the story ad itself counts as the lived-in evidence for check 1. Also say the 'one more trace' must be listed separately and never as an extra object inside a role.
+The brief follows the layout and uses the story's objects: cold coffee, bitten toast, lunchbox lid and cereal bowls. It keeps the product and people out, and flags the one inferred object.
 
 ## Judge list
 
 - Met: Nobody is in the frame, and nothing suggests harm or an emergency.
-  "No people, no text, no logos"; scene is just-left kitchen, no harm suggested.
+  "nobody in frame"; prompt ends "No text, logos, packaging, clocks or people." Chair pushed back "in a hurry" is mild, not an emergency.
 - Met: You can name the trace, the clock and the gap without being told.
-  Cold coffee mug (trace), lunchbox lid plus morning sun (clock), pushed-back chair (gap) are clear.
+  Trace: cold coffee; clock: lunchbox lid; gap: pushed-back chair. Each is labelled with one object.
 - Met: It looks lived in, with clutter that has nothing to do with the story.
-  "phone charger cable, a hair tie, an opened letter" in the prompt.
+  "phone charger cable trailing off the counter, a hair tie on the table, a folded school letter"
 - Met: Nothing says whose home it is.
-  Plain lunchbox lid, no brands; flags say it should not hint at whose children live there.
+  No names, logos or personal items; "Family kitchen" is generic. Text banned in image.
 - Met: There's no product and no second, happier photo.
-  No Sprout pack in the prompt; single scene only.
+  No Sprout pack in prompt or scene; only a single photo brief.
 
 ## What went in
 
@@ -41,38 +37,27 @@ Brand look: bright, sunny, real homes. Never clinical.
 ## What came out
 
 ```text
-I can't draw the picture here because no image tool is connected, so this is the brief and a ready-to-paste prompt.
+I can't draw pictures here, so this hands back the prompt for you to run in an image tool.
 
-1. **Scene:** A sunny kitchen just after the school run. At one place on the table there's a full mug and a slice of toast with one bite out of it, and the chair is pushed back.
+```
+SCENE              An empty, sunny family kitchen just after the school run. A full mug of coffee and a bitten slice of toast sit at a chair pushed back from the table.
+ROOM AND HOUR      Family kitchen, about 8:15 on a school-day morning. Bright low sun slants through the window across the table, with soft shadows.
+THE TRACE          A full mug of coffee gone cold, with no steam, at her place at the table
+EXTRA TRACE        A slice of toast on a plate with one bite taken out of it
+THE CLOCK          A plastic lunchbox lid left on the counter after the school run
+THE GAP            The chair at her place pushed back at an angle, as if she got up in a hurry
+CAMERA             In the kitchen doorway at adult eye level, the view she'd get walking back in after the school run.
+ORDINARY CLUTTER   Two cereal bowls in the sink, a phone charger cable trailing off the counter, a hair tie on the table, a folded school letter
+WORDS ON THE IMAGE None.
+LINE UNDER IMAGE   Breakfast, most school days (27)
+FLAGS              Cold coffee, bitten toast, lunchbox lid and the two cereal bowls come from the approved story ad (built on review 15), not from separate buyer research. The pushed-back chair is [inferred].
+IMAGE PROMPT       Square 1:1 phone photo of a real, lived-in family kitchen around 8:15 on a school morning, nobody in frame. Bright low morning sun streams through the window across a wooden table. At one place sits a full mug of coffee, no steam, beside a plate with a slice of toast with one bite taken. That place's chair is pushed back at an angle. A plastic lunchbox lid lies on the counter. Two cereal bowls in the sink, a phone charger cable, a hair tie and a folded school letter nearby. Shot from the doorway at adult eye level, slight tilt, light grain in the shadows, everyday mess, unretouched. No text, logos, packaging, clocks or people.
+CHECKS MISSED      none
+```
 
-2. **Room and hour:** The kitchen at about 8:15 on a school morning. Bright, low morning sun comes through the window and falls across the table and counter. It's warm and sunny, never clinical.
+Gaps you can fill in later:
+- MISSING: buyer research beyond review 15. A few more parents describing skipped breakfasts would back up the scene.
+- MISSING: brand brain. It isn't needed while the product stays out of the picture.
 
-3. **The three roles:**
-   - **Trace:** A full mug of coffee gone cold. The one extra trace is a slice of toast with a single bite taken, on a plate beside it.
-   - **Clock:** A plain plastic lunchbox lid left on the counter after the school run, with low morning sun backing it up.
-   - **Gap:** Her chair pushed back from the table and angled out, as if she stood up mid-bite.
-
-4. **Camera:** In the hallway doorway at adult standing eye level, slightly tilted. This is where she would stand coming back in and seeing the breakfast she didn't eat.
-
-5. **Ordinary clutter:** Two cereal bowls in the sink, a phone charger cable on the counter, a hair tie by the fruit bowl and an opened letter.
-
-6. **Words on the image:** None.
-
-7. **Line under the image:** "Breakfast, most school days"
-
-8. **Flags:**
-   - The cold mug, bitten toast, lunchbox lid and two cereal bowls all come from the story ad's opening, not from buyer research.
-   - The pushed-back chair is invented for the gap role. It is not in the story or the research.
-   - Keep the lunchbox lid plain, with no character prints or brand. It should not hint at whose children live there.
-
-9. **Image prompt:**
-   > Phone photo of an ordinary family kitchen at 8:15 on a school morning, just after everyone has left. Shot from the hallway doorway at adult standing eye level, slightly tilted, 1:1 square. Bright low morning sun through the window across the counter. On the table at one place: a full mug of coffee gone cold, a slice of toast with one bite taken, and the chair pushed back from the table, angled out. A plain plastic lunchbox lid left on the counter. Two cereal bowls in the sink, a phone charger cable, a hair tie, an opened letter. Everyday mess, real home, natural light, faint grain in the shadows. No people, no text, no logos, no brands, not styled.
-
-10. **Score: 80/100 (4 of 5 checks)**
-    - Missed: buyer research showing that busy parents skip or abandon breakfast on school mornings. The review quote shows rushed mornings, not this exact moment. `MISSING: buyer research (e.g. review 15 in full or similar reviews) confirming the cold-coffee, half-eaten-breakfast morning.`
-
-**To make the picture:**
-- **ChatGPT or Gemini:** Paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** If you have `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that image API and save the file. You can get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI or Google bills each picture.
+To make the picture, paste the image prompt into ChatGPT (GPT Image) or Gemini (Nano Banana) and ask for the image. You can also use Higgsfield's image tool.
 ```

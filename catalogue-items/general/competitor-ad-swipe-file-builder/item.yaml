@@ -23,8 +23,8 @@ credits:
   - {title: "Ad Library", by: "Meta Help Center", url: "https://www.facebook.com/help/259468828226154", used: "what the public library shows and keeps, and that ordinary ads show no spend"}
   - {title: "About the Learning Phase", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/112167992830700", used: "7-day learning windows, behind the 30-day line for new ads"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-sonnet-5-5
-  result: fail
+  result: pass

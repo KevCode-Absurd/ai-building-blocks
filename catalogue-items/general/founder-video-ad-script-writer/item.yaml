@@ -24,8 +24,8 @@ credits:
   - {title: "FTC's Endorsement Guides: What People Are Asking", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking", used: "Endorsements must reflect real experience; experts speak within their expertise"}
   - {title: "Creators: 150 WPM Timing and Formatting for Voice Over Script Writing", by: "VoiceBros Team", url: "https://voicebros.com/en/blog/voice-over-script-writing", used: "Word counts per length from a talking pace"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

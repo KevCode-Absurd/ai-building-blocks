@@ -26,7 +26,7 @@ credits:
   - {title: "Levels of Awareness", by: "Josh Kaufman, The Personal MBA", url: "https://personalmba.com/levels-of-awareness/", used: "The buyer stages that decide fit"}
   - {title: "Creators: 150 WPM Timing and Formatting for Voice Over Script Writing", by: "VoiceBros Team", url: "https://voicebros.com/en/blog/voice-over-script-writing", used: "Words per clip from a talking pace"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

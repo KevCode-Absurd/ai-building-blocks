@@ -1,23 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-A careful, usable plan: it keeps every brand colour, font, price and term, moves the SMS condition and first-order guarantee limit next to the button, and flags the page's risky claims and discount conflicts instead of fixing them silently. The contrast ratios all check out against the supplied hexes, and every unknown (photos, display font name, ad promise, third-column label) is marked MISSING rather than guessed.
+A careful, build-ready plan that keeps every price and term, surfaces the renewal, SMS and first-order-only guarantee limits where buyers will see them, and computes contrast ratios that check out against the supplied hex values. It correctly declines to review without screenshots, marks every missing photo and fact, and hands the risky health claims and discount conflicts back to the owner as decisions rather than fixing them silently.
 
 ## Judge list
 
-- Met: Every colour and font in the plan is one you supplied
-  Colours table lists only the six brand hexes; type is Work Sans Bold/Medium, DM Mono, and "[brand display font]" marked MISSING. White appears only as default text on kelly/plum.
-- Met: The three directions differ in layout and what the pictures do, not only in colour
-  A "tear-and-pour photo... plan box immediately beneath"; B "half-used tub and shaker beside one Sprout pouch"; C "Macro crop... 60+ / 21 / 6 g".
-- Met: No offer, claim, review or badge appears that isn't in your facts
-  Build brief: "Add no offers, claims, ratings, reviews, badges or images not listed"; all prices, stats and badges match product-page.md.
-- Met: Delivery, returns and subscription terms stay visible on phones
-  "MUST STAY VISIBLE ON PHONE: $29.99 first box; renews at $49.99 each 4 weeks; SMS-discount condition; guarantee is first order only; one-time price $66.65."
-- Met: Each review finding names a section and a screen size
-  No built page; copy flags table has Section and Screen size columns, e.g. "1 | All | 'Promotes mental clarity + energy'...".
-- Met: Anything it couldn't check is listed as not checked
-  "Unchecked items: Contrast of text over the gallery photos and gradients... Display font loading... Real cart, subscription and SMS-discount behaviour..."
+- Met: Every colour and font in the plan is one you supplied.
+  Only #002C17, #00582D, #007E40, #FFF7DF, #FFCC2E, #581E5A; Work Sans bold/medium, DM Mono, display font marked "MISSING: the display font's name and file."
+- Met: The three directions differ in layout and what the pictures do, not only in colour.
+  A product demo ("they prove the format"), B magazine story ("full-width spreads"), C spec-sheet ("they inspect. Macro texture").
+- Met: No offer, claim, review or badge appears that isn't in your facts.
+  All prices ($29.99, $49.99, $70.38/$52.79/$32.79, $73.32/$54.99), survey stats, testing counts and badge text match brand.md and product-page.md.
+- Met: Delivery, returns and subscription terms stay visible on phones.
+  "Directly under it at 16 px, before the button: 'Renews at $49.99 each 4 weeks.'" plus sticky bar "Never the price on its own."
+- Met: Each review finding names a section and a screen size.
+  No findings made: "Not run, because no screenshots were supplied." Nothing violates the rule.
+- Met: Anything it couldn't check, such as contrast over a photo, is listed as not checked.
+  "Unchecked: Contrast over photos and gradients. Whether fonts load. Real tap sizes..."
 
 ## What went in
 
@@ -41,235 +41,240 @@ No screenshots yet.
 ## What came out
 
 ```text
-# Sprout Original product page: design plan (redesign, powder-quitter buyer)
-
-`MISSING: the ad's promise and creative that sends traffic here.` The plan keeps the powder-quitter story in the first screen. Swap the hero image and tag to match the real ad once it's known.
-`MISSING: product photos.` Every image below is a labelled slot, not a generated stand-in.
-`MISSING: name and file of the chunky display font.`
-`MISSING: Low Sugar vs. Sugar-Free panel content` and `the number in the "don't meet daily nutrient intake" stat`.
-
----
+# Sprout Original: design plan (redesign, copy and offer kept as-is)
 
 ## Design system
 
-**Colours (brand values only, contrast worked from the hex codes)**
+**Colours.** These are the brand's own values. No tints and no new colours.
 
-| Colour | Job | Contrast notes |
+| Colour | Job | Pairs (calculated, recheck in WebAIM) |
 |---|---|---|
-| Cream #FFF7DF | Hero and buy-box background, light sections | Deep forest text on cream is 14.3:1 |
-| Deep forest #002C17 | Headings, body text on light backgrounds, dark proof sections | Yellow on deep forest is 10.1:1 |
-| Forest green #00582D | Secondary headings, selected-plan border, icon strokes | 8.1:1 on cream; white on it is 8.6:1 |
-| Kelly green #007E40 | Buttons and selected states only | White text is 5.2:1. Edge against cream is 4.8:1. Never put deep-forest text on kelly (3.0:1). |
-| Sunflower #FFCC2E | Stars, the "MOST POPULAR" badge, numeric highlights on dark sections | Only 1.4:1 on cream. On cream, stars need the numeric rating beside them in deep forest, and the badge needs deep-forest text inside it. |
-| Plum #581E5A | Announcement bar only | White on plum is 12.0:1; yellow on plum is 8.0:1 |
+| Deep forest #002C17 | Headings, body text on cream, dark proof bands | On cream: about 14.3:1 |
+| Forest green #00582D | Secondary text, strike-through price, dividers, comparison table | On cream: about 8.1:1. White on it: about 8.6:1 |
+| Kelly green #007E40 | Buttons and selected-state fills only | White text on it: about 5.2:1. Edge on cream: about 4.8:1. **On deep forest only about 3.0:1**, so add a 2 px cream border there. Never put it on forest green (about 1.7:1). |
+| Cream #FFF7DF | Hero and buying-section background. Text on dark bands. | |
+| Sunflower yellow #FFCC2E | Stars and badges only | Deep forest text on it: about 10.1:1. **Yellow on cream is about 1.4:1, which fails.** Stars on cream need a deep forest outline or a deep forest chip behind them. |
+| Plum #581E5A | Top announcement bar only | Cream text on it: about 11.2:1 |
 
 **Font roles**
-- Display font: big statement lines and the stat numbers (60+, 21, 6 g, 95%). Never used for body text or terms.
-- Work Sans Bold: H1, H2 and button labels.
-- Work Sans Medium: body text, plan rows and terms.
-- DM Mono uppercase: small tags, source labels, badges. Tags are at least 12 px and never carry essential terms.
+- **Display:** the brand's chunky display font. Use it for one big statement line per section at most.
+- **Headings:** Work Sans bold.
+- **Body:** Work Sans medium, 16 px minimum, line height about 1.5.
+- **Buttons:** Work Sans bold, 18 px.
+- **Tags and badges:** DM Mono, uppercase, 12 to 13 px. Labels only, never for terms.
+- MISSING: the display font's name and file.
 
-**Main visual move: "the torn-top pour"**
-- Every key image shows a daily pack torn straight across the top edge, with deep-green bears pouring into a palm.
-- The setting is a soft 2-colour gradient built from cream with a forest or yellow tint.
-- In the hero, the pour visually leads down to the plan box.
-- The big pouch is only ever shown closed or open at its resealable top.
+**Main visual move: "the torn-top pour."** One image idea anchors the page and comes back at key moments. A daily pack is torn straight across its top edge, and small deep-green bears pour into an open palm, shown at true thumbnail height.
+- The big pouch is only ever shown closed, or open at its resealable top.
 
 **Layout rules**
-1. Phone uses one column. Desktop uses 12 columns, with the buy box in the right 5 columns. The buy box stays sticky until the end of section 2.
-2. Light (cream) and dark (deep forest) sections alternate. There are never two dark sections in a row.
-3. Every number in the display font carries a DM Mono source label directly under it, for example "OF SURVEYED USERS · 3,000+ CUSTOMERS".
-4. Cards are used only for items that really are alike: flavour tiles and review cards. Arguments get full-width sections.
-5. Price, renewal, discount condition and guarantee limit always sit together, both in the buy box and in the phone sticky bar.
+1. Cream is for buying and choosing. Deep forest bands are for proof and argument. Never place two dark bands back to back.
+2. Phones get one column. Desktop goes to two columns only in the hero and plan box (image 7/12, plan 5/12) and in the comparison section.
+3. Any price on screen carries its terms in the same block at 16 px. This includes the sticky bar and the birthday band.
+4. Yellow appears only as stars or badges, always with deep forest text or an outline.
+5. Use an 8 px spacing scale. Section padding is 48 px on phones and 96 px on desktop.
 
-**Line length:** 45–75 characters on desktop, with a max text width of about 65ch. Short lines on phones are fine.
-
-**Body text:** 16 px on phone, 18 px on desktop, line height 1.5. Terms are 16 px and never shrunk below body size.
+**Line length.** Long text is capped at 65 characters (aim for 45 to 75). FAQ and ingredient text use the same cap.
 
 **Motion**
-- Only state changes animate: plan selection, accordions and the sticky bar appearing. Each is a 150–200 ms fade or slide.
-- No scroll entrance effects.
-- The announcement bar rotation pauses on hover and focus, and has a visible pause button.
-- With `prefers-reduced-motion`, the bar shows one static message and all transitions are off.
+- No entrance animations on sections. A single 150 ms colour change on button and option state is the only motion.
+- The rotating announcement bar is motion that never stops. It needs a visible pause control, must pause on hover and focus, and must stop rotating under reduced motion, showing one message as static text.
+- Respect `prefers-reduced-motion` everywhere.
 
 **Accessibility aims**
-- WCAG 2.2 AA contrast: 4.5:1 for normal text, 3:1 for large text and controls.
-- Tap targets of at least 44 px on the plan rows, selectors, Start Now, accordions and the pop-up close button.
-- A visible focus ring in forest green, 2 px with an offset.
-- Logical DOM order: the buy box comes in the DOM right after the title and rating, even on desktop.
-- Works at 200% zoom with no horizontal scroll at 320 px.
-- Every gallery image has alt text naming the variant (Original, Low Sugar or Sugar-Free).
+- Meet WCAG 2.2 AA contrast for every pair in the table above.
+- Tap targets are 44 px or more on all plan options, flavour tiles, sugar and adults toggles, accordions, Start Now and the pop-up close button.
+- The plan, flavour, sugar and quantity choices are real radio groups.
+- When a choice changes the price, announce it through an `aria-live="polite"` region.
+- Focus rings are 3 px: deep forest on cream, cream on dark bands.
+- No sideways scroll at 320 px wide. Content works at 200% zoom.
 
 ---
 
 ## Three directions
 
-| | **A. "Rip. Tip. Done." (product demonstration)** | **B. "Shelf to sachet" (magazine story)** | **C. "What's in the pack" (close look and how it's made)** |
-|---|---|---|---|
-| **First screen** | Gallery led by a tear-and-pour photo with title, rating and plan box immediately beneath. Existing Why Sprout line as a DM Mono tag: "NO MORE GAGGING ON PILLS, SLOSHING CHALKY POWDERS…" | Full-width cream spread: a half-used tub and shaker (no brand marks) beside one Sprout pouch. Title and rating overlap the image edge; buy box follows. | Macro crop of deep-green bears pouring from a torn pack. The 3 numbers sit beside it: 60+ / 21 / 6 g. Buy box below. |
-| **What images do** | Show the ritual: tear, pour, eat, with no mixing. The images prove the format, not satisfaction. | Contrast the old routine with the new one, told as a before/after life scene with everyday adults at home. | Show the object and its making: gummy texture, pack size in a palm, the label link, testing panel imagery. |
-| **Argument rhythm** | Show → buy → why it replaces the powder → people who switched → cost → tested → FAQ. Short, fast, buy-first. | Problem (the shelf) → the switch → readers' stories → buy → proof. Longer, story-led, buy box repeated mid-page. | Inside → tested → studied → buy → stick-with-it survey → reviews. Detail-led, for doubters of "a gummy can't hold enough." |
-| **Phone** | Sticky bottom bar after the plan box scrolls away. Gallery is 1:1. | Spread crops to a vertical 4:5 with the tub left and pouch right. Sticky bar from section 2. | Numbers stack under the macro image. The buy box arrives later, so the sticky bar appears from the first screen. |
-| **Desktop** | Gallery in 7 columns, sticky buy box in 5. | Edge-to-edge spreads; buy box sits as a full-width band mid-page. | Two-column detail rows with image and fact, alternating sides. |
-| **Fits the buyer because** | Answers "will I actually stick with this?" by showing how little effort it takes. | Mirrors the review line "the one thing I've been able to stick to." | Answers the "can a gummy replace my powder" doubt. |
+**A. "The Swap" (product demonstration).** This is the default and is briefed below.
+- **First screen:** cream hero. The pouch sits on its soft 2-colour gradient with the torn-top pour in front of it. Below or beside it come the title, subline, rating (which jumps to reviews), four bullets, then straight into the plan box.
+- **What the images do:** they prove the format. Pack, pour and palm show what it is and how big it is. The second image is the old way next to the pack: a generic powder tub and shaker, with no brand marks.
+- **Argument rhythm:** show it → choose and buy → "easier than your powder" → people who switched → will I keep taking it → what's inside → tested → price → FAQ.
+- **Phone:** the plan box starts directly under the bullets. A sticky bottom bar appears once the plan box scrolls away.
+- **Desktop:** two columns, with the gallery on the left (sticky while you scroll the plan box) and the plan box on the right.
+
+**B. "Twenty-eight mornings" (story told like a magazine).**
+- **First screen:** a deep forest band. The page's existing line "No more gagging on pills, sloshing chalky powders, or cleaning messy counters." is set in the display font over a lifestyle photo of an adult pouring a pack into a hand on the way out the door. Text sits on a solid block, never on the photo.
+- A compact price strip with Start Now sits under that, and the full plan box comes after the first spread.
+- **What the images do:** they carry the routine as full-width spreads (kitchen counter, bag, desk). No outcome or timeline imagery.
+- **Argument rhythm:** narrative and long scroll. The quitter's problem → the routine → the survey habit numbers as the turning point → proof → buy.
+- **Phone:** full-bleed images with text blocks below them, not overlaid. A sticky buy bar runs throughout.
+- **Desktop:** alternating image and text spreads, with the plan box as a centred "chapter" two-thirds of the way down.
+
+**C. "What's in one pack" (close look at detail and how it's made).**
+- **First screen:** a macro of the bears in a palm with the open daily pack for scale. Big numbers sit beside it: 60+ / 21 / 6 g. A "View Nutrition Label" button gets as much weight as the plan.
+- **What the images do:** they inspect. Macro texture, the anatomy of the pack's torn top, the label itself, and the testing numbers set as type.
+- **Argument rhythm:** spec-sheet. Each block answers the quitter's doubt "a gummy can't hold enough to replace my powder" with a number from the page.
+- **Phone:** a stacked number grid, with the label in a full-screen viewer.
+- **Desktop:** a three-column number band, with the label shown inline beside the ingredients.
+- **Conflict to settle first:** this direction depends on the count conflict ("21" vs "over 20") being settled.
 
 ---
 
-## Section plan (direction A order)
+## Section plan (direction A)
 
-Copy is unchanged; existing blocks are reordered.
-
-| # | Section | Buyer question | Phone layout → desktop | Image |
+| # | Section (existing content) | Buyer question | Phone layout → desktop | Image |
 |---|---|---|---|---|
-| 0 | Announcement bar (plum) | "Is there a deal?" | One line with pause button and 4 rotating messages. Same on desktop, centred. | None |
-| 1 | Gallery + title + rating + bullets | "Is this the thing from the ad?" | 1:1 gallery with swipe and dots, then title, under-title, rating, 4 bullets. "Clinically tested for nutrient absorption" links to section 6. Desktop: gallery in 7 columns, the rest in 5. | Slots: (1) torn-top pour into a palm, (2) Original pouch front, Low Sugar, (3) Sugar-Free pouch with white burst, (4) pack beside a hand for scale, (5) "View Nutrition Label" image |
-| 2 | Buy box | "What do I pay, now and later, and what's the catch?" | Selectors stacked: flavour tiles, sugar level, adults 1/2. Plan rows are full-width 56 px radios. Start Now is full width. Terms sit directly under the button (see build brief). Desktop: sticky in the right 5 columns. | Flavour tile thumbnails (slots) |
-| 2a | Phone sticky bar | Same as 2 | Bottom bar showing the plan price, "Renews at $49.99 each 4 weeks", and Start Now (48 px). It appears once section 2 leaves view. Desktop: not used, because the buy box is sticky. | None |
-| 3 | Why Sprout? (accordion content shown open) | "Why switch from my powder?" | Four short blocks stacked: Comprehensive, Delicious, Portable, No Mess. Desktop: 2×2 grid, which is fine because these are 4 parallel reasons. | Slot: tub, shaker and pill bottles (no marks) versus one torn pack |
-| 4 | Join 1,000,000+ (Vs Powders reviews first) | "Did other powder quitters stick with it?" | Horizontal-scroll review cards with the Vs Powders theme first, then Taste, Value, Convenience. Desktop: 3-card row with arrows. | `MISSING: review text and photos.` Use the existing cards only. |
-| 5 | Snackable, Packable, Tested (survey) | "Do people keep taking it?" | Dark section: 95% / 80% / 67% / 52% stacked in the display font, each with "OF SURVEYED USERS" plus "Survey of 3,000+ customers after 3 months". Desktop: 4 across. | None |
-| 6 | Science & Certifications + Quality You Can Trust | "Is it real and is it clean?" | Study block: 2025, 12 weeks, 120 adults, vitamin C +40.1%, folate +20.5%. Then the test counts 70 / 4 / 16 / 9 and "Tested by [lab] in SEP 2026". Then NSF, GMP and FDA-registered facilities. Desktop: 2 columns. | Slot: lab or lot-testing photo only if the brand has one. No certificate imagery unless real. |
-| 7 | Us vs. Them | "Is it actually cheaper?" | 3-column cost table that scrolls inside its own box at 320 px. Desktop: full table. | `MISSING: third column label.` |
-| 8 | Birthday price cut | "Will this price last?" | Dark band with the display-font line. Desktop: centred. | Slot: pouch with a yellow badge |
-| 9 | Athlete quote | "Who else uses it?" | Quote, name, photo, with the paid-spokesperson note at body size directly under the name. | Slot: athlete photo (brand-supplied only) |
-| 10 | Modern Living Leaves Our Bodies Deficient | "Do I even need this?" | Stats stacked with source links. Hold the first stat until its number is supplied. | None |
-| 11 | Find Your Flavor | "Other flavours or kids?" | 2×2 tiles, the same on desktop in a row of 4. | Pouch slots. Tie-ins use the flavour description only, with no characters or marks. |
-| 12 | Accordions: Ingredients & Allergies, Low Sugar vs. Sugar-Free, Directions, Benefits | "What's in it? Which sugar level?" | 44 px+ accordion rows, closed by default. Desktop: same, max width 65ch. | None |
-| 13 | FAQ (Any last questions?) | "Limited flavour, delivery, returns?" | Accordions. The returns answer opens with the existing first-order wording. | None |
-| 14 | Real Customer Reviews widget | "What do all reviewers say?" | Widget as is, labelled "4.75 stars, 109,639 reviews" with its source. | None |
-| 15 | Footer | – | FDA line and the SMS small print, both kept. | None |
+| 0 | Announcement bar (4 rotating lines) | What's the deal right now? | One line, plum, cream text, pause button. Desktop: same, centred. | None |
+| 1 | Hero: title, subline, rating, 4 bullets | What is this, and is it the thing from the ad? | Image first (4:5), then title, rating link, bullets. Desktop: image left 7/12, text and plan right 5/12. | MISSING: pouch on gradient plus the torn-top pour into a palm. Leave a labelled slot. |
+| 2 | Plan box: flavour, sugar, adults, Subscribe & Save / One Time, Start Now, terms | What do I pay now, what later, and what am I agreeing to? | Stacked radio cards at full width, then the button, then terms. Desktop: right column, sticky gallery on the left. | Flavour tiles show colour and shape only, no tie-in characters or marks |
+| 3 | "Why Sprout?" (taken out of its accordion) | Is this easier than my powder? | Four short blocks (Comprehensive, Delicious, Portable, No Mess) in one column. Desktop: 2×2 next to the image. | MISSING: generic tub and shaker vs the daily pack |
+| 4 | Review cards, Vs Powders theme first (moved up from "Join 1,000,000+") | Did people like me switch and stick? | Swipe row of 3 cards. Desktop: 3 across. | None. Reviews are text, not product photos. |
+| 5 | Snackable, Packable, Tested (survey) | Will I actually keep taking it? | Three stacked stat lines with "Survey of 3,000+ customers after 3 months" right beside them. Desktop: 3 across. | None |
+| 6 | Ingredients & Allergies, plus View Nutrition Label | Can a gummy hold enough? | Short summary, then the accordion holding the full list. Desktop: label image beside it. | MISSING: label image |
+| 7 | Science & Certifications plus Quality You Can Trust | Is it tested? | Study summary, then a 4-number testing grid, then the lab line. Desktop: two columns. | None, or a photo of the facility if one exists. No stand-in certificates. |
+| 8 | Us vs. Them | Is it worth the price? | 3-row table. Desktop: 3 columns. Held: third column label MISSING, figures need a recheck. | None |
+| 9 | Birthday price cut | Is $29.99 real? | Deep forest band with display line, then the SMS term, then a button back to the plan box. Desktop: one band. | None |
+| 10 | Athlete quote | Who else stands behind it? | Quote, then name, then the paid-spokesperson note directly under it at 16 px. | MISSING: athlete photo |
+| 11 | Find Your Flavor | Which version is mine? | 2×2 tiles (items that really are alike). Desktop: 4 across. | Pouch shots. Tie-in shown by flavour description only. |
+| 12 | Modern Living Leaves Our Bodies Deficient | Why do I need it at all? | Held until the missing number and real sources are supplied. | None |
+| 13 | FAQ | What happens with flavours, delivery, returns? | Accordions, 44 px rows. Desktop: 65-character column. | None |
+| 14 | Real Customer Reviews widget | What do most buyers say? | As now, styled to the system | None |
+| 15 | Footer | Fine print | FDA line, SMS term | None |
 
-**Copy flags for the owner.** The design places these but doesn't fix them; changing them is a copy or scope decision.
-
-| Section | Screen size | Flag |
-|---|---|---|
-| 1 | All | "Promotes mental clarity + energy", "Supports immunity + stress relief" and "revive whole body vitality" aren't backed by the study. The study proof link goes only beside the absorption bullet. |
-| 0, 2 and pop-up | All | The discount figures 52%, "up to 55%" and 55% conflict on one visit. |
-| 1 | All | The header rating "4.8/5.0 (100,000)" differs from the widget's 4.75 from 109,639. |
-| 7 | All | The $1.26 vs $3.60 price comparison is dated and needs a recheck. |
+**Plan box details**
+- **Price block:**
+  - ~~$66.65~~ $29.99 · $1.07/day.
+  - Directly under it at 16 px, before the button: "Renews at $49.99 each 4 weeks. Cancel anytime."
+  - Then the footer sentence, verbatim: "Offer assumes customer has received and uses promotional SMS discount reserved for new customers only."
+- **Guarantee:** "30-Day Money-Back Guarantee" stays in the plan box. The FAQ sentence "This policy applies only to your initial purchase." sits beside it, verbatim.
+- **One Time Purchase card:**
+  - Same size and weight as the subscribe card.
+  - "No Free Shipping. No First Order Discount." set in plain forest green text, with no red or cross icons.
+- **Tie-in flavour selected:**
+  - Show the existing FAQ line under the selector: "After you try [it] once, your subscription automatically reverts to your original Sprout flavor."
+  - Prices update to $70.38 / $52.79 / $32.79 (Low Sugar), $77.05 / $57.79 (Sugar-Free).
+- **Sugar-Free selected:** prices update to $73.32 one-time and $54.99 subscription. First-order price MISSING.
+- **Badge:** "MOST POPULAR: GET UP TO 55% OFF" in deep forest on yellow.
+- **Sticky bar (phone):** Start Now with the current price and "Renews at $49.99 each 4 weeks." Never the price on its own.
 
 ---
 
-## Build brief (direction A)
+## Build brief (direction A, "The Swap")
 
 ```
-PAGE JOB: Product page for Sprout Original (Adults) gummies, 28 daily packs.
-Buyer: adults who quit greens powders and pill stacks and want one habit that
-lasts. Show the tear-and-pour ritual first, then a clear buying decision with
-all real terms beside the button. Use only the copy, prices and terms below.
-Add no offers, claims, ratings, reviews, badges or images not listed.
+PAGE JOB: Main product page, Sprout Original (Adults), sprout.example/products/sprout.
+Buyer: adults who quit greens powders/pills. Show the real format, make the
+buying decision and its terms clear, back it with existing proof. Add no copy,
+claims, offers or proof. Use page copy verbatim.
 
-DESIGN SYSTEM
-Colours: cream #FFF7DF (hero, buy box, light sections); deep forest #002C17
-(headings, body text, dark sections); forest #00582D (secondary headings,
-selected-plan border, focus ring); kelly #007E40 (buttons and selected states,
-white text only); sunflower #FFCC2E (stars, badges; deep-forest text inside;
-never as text on cream); plum #581E5A (announcement bar, white text).
-Type: [brand display font] for big lines and stat numbers; Work Sans Bold for
-H1/H2/buttons; Work Sans Medium for body 16px phone / 18px desktop, line
-height 1.5; DM Mono uppercase 12px+ for tags and source labels. Max text
-width 65ch.
-Motion: 150–200ms fades on plan select and accordions only. Announcement
-rotation has a pause button; static under prefers-reduced-motion. No scroll
-animations.
-Accessibility: AA contrast; 44px tap targets on plan rows, selectors, buttons,
-accordions, pop-up close; visible focus; no horizontal scroll at 320px; works
-at 200% zoom.
+SYSTEM
+Colours: #002C17 headings/body/dark bands · #00582D secondary text, strike
+price, dividers · #007E40 buttons + selected states (2px #FFF7DF border on
+#002C17) · #FFF7DF backgrounds + text on dark · #FFCC2E stars/badges only,
+never on cream without #002C17 outline · #581E5A announcement bar only.
+Type: display font [MISSING name] for 1 big line per section max; Work Sans
+bold headings + buttons (18px); Work Sans medium body 16px/1.5; DM Mono
+uppercase 12-13px tags only. Long text max 65ch. 8px spacing; sections
+48px phone / 96px desktop. No section entrance animations. Respect
+prefers-reduced-motion. Announcement bar rotation: pause control, pauses on
+hover/focus, static under reduced motion.
+Tap targets ≥44px on all choices, accordions, buttons, pop-up close. Choices
+are radio groups. Price changes announced aria-live polite. Focus ring 3px.
+No sideways scroll at 320px. Works at 200% zoom.
 
-SECTIONS IN ORDER (phone layout)
-0 Announcement bar, plum, one line, rotating: "VIP program is live! Save up to
-  $80, get limited flavors, and VIP access" / "NEW! [tie-in flavour]. Grab it
-  before it's gone." / "Limited Time Sale. Save 52% + free shipping on your
-  first order" / "FREE SHIPPING + 30-DAY GUARANTEE".
-1 Gallery 1:1 swipe. Then H1 "Sprout Superfood Gummies"; "60+ potent
-  ingredients to revive whole body vitality in great tasting gummies."; rating
-  "4.8/5.0 (100,000), 1M+ Customers" (yellow stars + number in deep forest);
-  bullets: Promotes mental clarity + energy / Supports immunity + stress relief
-  / Supports digestion and gut health / Clinically tested for nutrient
-  absorption (links to section 6). "View Nutrition Label" link.
-2 Buy box. Flavour tiles: Original "Where fresh strawberries meets clean
-  greens." / "Brand New" [tie-in flavour]. Sugar level: Low Sugar / Sugar-Free.
-  "How many Adults? Buy More. Save More." 1 / 2. Badge "MOST POPULAR: GET UP
-  TO 55% OFF". Plan rows (full width radios):
-  - Subscribe & Save (default): 28 packs each 4 weeks. ~~$66.65~~ $29.99.
-    $1.07/day. Free Shipping Today. Pause Or Cancel Any Time. 30-Day
-    Money-Back Guarantee.
-  - One Time Purchase: 28 packs delivered once. $66.65. $2.38/day. No Free
-    Shipping. No First Order Discount.
-  Button "Start Now", full width, kelly. Directly under, at 16px, in this
-  order: "DISCOUNT AUTO-APPLIED." / "Renews at $49.99 each 4 weeks. Cancel
-  anytime." / "Offer assumes customer has received and uses promotional SMS
-  discount reserved for new customers only." / "30-day guarantee on your first
-  order. This policy applies only to your initial purchase." / "Less than 1%
-  of customers use our Money-Back Guarantee. Clinically and 3rd party tested.
-  HSA/FSA eligible with [third-party service]."
-2a Phone sticky bar once section 2 scrolls away: selected price + "Renews at
-  $49.99 each 4 weeks" + "Start Now". Desktop: buy box sticky instead.
-3 Why Sprout? shown open: Comprehensive / Delicious / Portable / No Mess, No
-  Stress (existing text). Image: tub + shaker + pill bottles, no brand marks,
-  beside one torn pack.
-4 "Join 1,000,000+ Others Filling Nutrition Gaps": existing review cards,
-  Vs Powders theme first, then Taste, Value, Convenience. Horizontal scroll.
-5 Dark section "Snackable, Packable, Tested": 95% take it at least 4–6x a week
-  (80% daily); 67% better, more regular digestion; 52% feel more energized.
-  Label each "OF SURVEYED USERS · SURVEY OF 3,000+ CUSTOMERS AFTER 3 MONTHS".
-6 Study: 2025, 12 weeks, randomized, double-blind, placebo-controlled, 120
-  healthy adults 23–59; blood vitamin C +40.1% (2.7x placebo), folate +20.5%
-  (2.9x placebo). "Quality You Can Trust": tested for 70 pesticides, 4 heavy
-  metals, 16 contaminants, 9 microbial contaminants. "Tested by [outside lab]
-  in SEP 2026." NSF, GMP and FDA-registered facilities.
-7 "Us vs. Them. Not overhyped or overpriced." Sprout $1.26 / greens powders
-  $3.60 / [third column ~$35, label missing]. Table scrolls in its own box.
-8 Dark band: "Same Sprout. New Lower Price. Subs Now Start at $29.99." + "It's
-  our birthday, and we're lowering prices. Not just for a week but
-  indefinitely. Happy Birthday to us!"
-9 Athlete quote with the paid-spokesperson note at body size under his name.
-10 "Modern Living Leaves Our Bodies Deficient" with source links (hold first
-  stat until its number is supplied).
-11 "Find Your Flavor" 2x2 tiles: Original Adults, tie-in Adults, Original
-  Kids, tie-in Kids. Flavour description only; no characters, no partner marks.
-12 Accordions: Ingredients & Allergies; Low Sugar vs. Sugar-Free; Directions;
-  Benefits (existing text).
-13 FAQ accordions (existing questions and answers, unchanged).
-14 Reviews widget: "4.75 stars, 109,639 reviews".
-15 Footer: FDA line; SMS offer small print.
-Pop-up "Sign Up for 55% Off": appears after the buy box is seen, never over
-  the button on phone, close button labelled "Close" with a 44px target.
+IMAGE RULES: Daily pack torn straight across the top edge only. Gummies pour
+from the torn top into a palm. Big pouch closed or open at resealable top,
+never torn. No cartoon tie-in characters or partner marks. Bears at true
+thumbnail size. No text over photos or gradients. Use labelled empty slots
+where real photos are missing. No generated product photos.
 
-IMAGES: real brand photos only, in labelled slots until supplied. Daily pack
-torn straight across the top edge only. Gummies pour from the torn top into a
-palm. Big pouch never torn; only open at the resealable top. Bright, sunny,
-soft 2-colour gradient from cream. Alt text names the variant.
-
-MUST STAY VISIBLE ON PHONE: $29.99 first box; renews at $49.99 each 4 weeks;
-SMS-discount condition; guarantee is first order only; one-time price $66.65.
+SECTIONS (phone layout → desktop)
+0 Announcement bar: plum, 4 existing lines, one at a time, pause button.
+1 Hero: image (4:5) → title "Sprout Superfood Gummies" → subline → rating
+  "4.8/5.0 (100,000), 1M+ Customers" linking to #reviews → 4 bullets.
+  Desktop: image 7/12 sticky left, content 5/12 right.
+2 Plan box (same column): flavour tiles (Original / Brand New tie-in,
+  description only) → Low Sugar / Sugar-Free → How many Adults 1/2 →
+  Subscribe & Save card [badge "MOST POPULAR: GET UP TO 55% OFF"]:
+  "28 packs each 4 weeks. ~~$66.65~~ $29.99. $1.07/day. Free Shipping Today.
+  Pause Or Cancel Any Time. 30-Day Money-Back Guarantee." + "This policy
+  applies only to your initial purchase." → One Time card, equal weight:
+  "28 packs delivered once. $66.65. $2.38/day. No Free Shipping. No First
+  Order Discount." → under price, before button, 16px: "Renews at $49.99
+  each 4 weeks. Cancel anytime." + "Offer assumes customer has received and
+  uses promotional SMS discount reserved for new customers only." → Start
+  Now → "DISCOUNT AUTO-APPLIED", "Less than 1% of customers use our
+  Money-Back Guarantee", "Clinically and 3rd party tested", "HSA/FSA
+  eligible with [third-party service]".
+  Price updates: Sugar-Free $73.32 / $54.99. Tie-in Low Sugar $70.38 /
+  $52.79 / $32.79; Sugar-Free $77.05 / $57.79. Tie-in selected: show "After
+  you try [it] once, your subscription automatically reverts to your
+  original Sprout flavor."
+  Phone sticky bar after plan box scrolls away: Start Now + live price +
+  renewal line.
+3 Why Sprout? (no accordion): 4 blocks, 1 col → 2×2. Image slot: generic
+  powder tub + shaker vs daily pack.
+4 Review cards, Vs Powders theme first: swipe row → 3 across.
+5 Survey: 95% / 67% / 52% with "Survey of 3,000+ customers after 3 months"
+  beside them. Stacked → 3 across.
+6 Ingredients & Allergies accordion + View Nutrition Label. Label image
+  beside on desktop.
+7 Science & Certifications + testing grid (70 pesticides, 4 heavy metals,
+  16 contaminants, 9 microbial) + "Tested by [lab] in SEP 2026."
+8 Us vs. Them: HOLD until third column label and figures confirmed.
+9 Birthday band (#002C17): existing lines + SMS sentence + button to plan.
+10 Athlete quote + paid-spokesperson note directly beneath, 16px.
+11 Find Your Flavor: 4 tiles, 2×2 → 4 across.
+12 Modern Living stats: HOLD until the missing number + sources supplied.
+13 FAQ accordions, existing text.
+14 #reviews widget: "4.75 stars, 109,639 reviews".
+15 Footer: FDA line + SMS offer sentence.
+Pop-up "Sign Up for 55% Off": keep current trigger; labelled close button
+≥44px; focus trapped while open, returned on close; Esc closes.
 ```
 
 ---
 
 ## Review
 
-Not applicable: no built page or screenshots were supplied.
+Not run, because no screenshots were supplied. The visual and technical passes need phone, desktop and in-between widths of the built page.
 
-Unchecked items:
-- Contrast of text over the gallery photos and gradients (needs a visual check once photos exist).
-- Display font loading.
-- Real cart, subscription and SMS-discount behaviour (needs a test inside the store).
-- Announcement bar and pop-up timing.
+Issues already visible in the page text are handled in the plan above where design can fix them. Owner decisions are listed below.
+
+Unchecked:
+- Contrast over photos and gradients.
+- Whether fonts load.
+- Real tap sizes.
+- Pop-up timing and behaviour.
+- Cart and checkout behaviour inside the store (a local preview can't test it).
 - Analytics.
-- Phone first-screen fill, because no screenshots exist.
+
+## Decisions only the brand can make (design can't fix these without changing copy or offer)
+
+- **Discount numbers.** Four live figures (52%, "up to 55%", 55%, and the 61% ad) plus 49% and 58% elsewhere. Which one matches the ad sending this traffic?
+- **"DISCOUNT AUTO-APPLIED" vs the SMS condition.** The two contradict. Both are kept verbatim side by side for now.
+- **Header rating.** "4.8/5.0 (100,000)" vs the widget's 4.75 from 109,639 on the same page.
+- **Bullets.** "Promotes mental clarity + energy", "Supports immunity + stress relief" and the subline "revive whole body vitality" sit above the fold. The study measured 2 vitamins in the blood. Design gives them no extra weight, but the wording is the brand's call.
+- **Price comparison.** "$1.26" per serving in Us vs. Them doesn't match the plan box's $1.07/day and $49.99 renewal.
+- **Sugar-Free warning.** No note about sugar alcohols was seen on the page. The gut-sensitive buyer is a core buyer.
+
+## Gaps (MISSING)
+
+- MISSING: real product photos (pouch on gradient, torn-top pour, palm for scale, label, athlete, generic old-way props).
+- MISSING: the display font's name and file.
+- MISSING: which ad drives traffic, and its promise.
+- MISSING: review card text for the Vs Powders theme.
+- MISSING: Sugar-Free first-order price, and prices for 2 adults.
+- MISSING: the Low Sugar vs. Sugar-Free panel content.
+- MISSING: the third column label in Us vs. Them.
+- MISSING: the "don't meet daily nutrient intake" number and real source links.
+- MISSING: the pop-up's current trigger.
+- MISSING: share of visitors on phones.
+
+## Checks missed
+
+- **Essential terms visible on phones:** met in the plan, but unconfirmed on a built page because there are no screenshots.
+- **Findings name section and screen size:** no review was run, so there are no findings yet.
 
 ---
 
-## Score
-
-**Plan: 6 / 6 × 100 = 100**
-- All colours and fonts come from the brand: passed. The display font is the brand's own, but its name is missing.
-- Three directions differ in layout and in what the images do: passed.
-- No new offer, claim or proof was created: passed. Existing wording is only moved, and the conflicts are flagged for the owner.
-- Essential terms stay visible on phones: passed, through the buy box and sticky bar.
-- Flags name their section and screen size: passed.
-- Unchecked items are listed: passed.
-
-**Built page:** not scored, because no page was supplied.
+Next step: want to write the page with the [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder) using direction A? Or tell me what you'd rather do.
 ```

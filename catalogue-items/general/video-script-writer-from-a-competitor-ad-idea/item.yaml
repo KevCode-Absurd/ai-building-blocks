@@ -25,8 +25,8 @@ credits:
   - {title: "Two-sided advertising: A meta-analysis", by: "Martin Eisend", url: "https://doi.org/10.1016/j.ijresmar.2005.11.001", used: "admitting a limit can make an ad more believable, behind the worked example"}
   - {title: "What is the Meta Ad Library and how do I search it?", by: "Meta Help Center", url: "https://www.facebook.com/help/259468828226154", used: "where to collect a reference ad by hand when none was given"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

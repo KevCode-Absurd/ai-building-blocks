@@ -21,8 +21,8 @@ credits:
   - {title: "How do you write a good creator brief?", by: "Influentials", url: "https://www.influentials.com/knowledge/for-brands/how-to-write-a-good-creator-brief", used: "Deliverable specs, dos and don'ts, talking points over word-for-word scripts, and no copyrighted music"}
   - {title: "Disclosures 101 for Social Media Influencers", by: "US Federal Trade Commission", url: "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers", used: "Never ask a creator to describe an experience they didn't have"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

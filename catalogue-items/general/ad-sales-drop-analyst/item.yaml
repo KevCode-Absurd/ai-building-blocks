@@ -20,7 +20,7 @@ version: 2.0.0
 credits:
   - {title: "About the learning phase", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/112167992830700", used: "About 50 results a week to leave learning, and big edits restart it"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

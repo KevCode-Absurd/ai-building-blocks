@@ -22,8 +22,8 @@ credits:
   - {title: "Design Tokens Community Group", by: "W3C Design Tokens Community Group", url: "https://www.designtokens.org/", used: "The design tokens format for the JSON block"}
   - {title: "@page", by: "MDN Web Docs", url: "https://developer.mozilla.org/en-US/docs/Web/CSS/@page", used: "Page size, margins and page breaks for printing"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

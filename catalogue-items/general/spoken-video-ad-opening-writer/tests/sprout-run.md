@@ -1,23 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-The three openings are tight, on-budget, make genuinely different moves and say nothing the brand can't back, with the mirror opening matching the ad's dials so the cut will feel seamless. The owner only has Stage 0 so far because the skill itself asks for a yes here, and a couple of MISSING lines (brand voice, line 4 source) were overcautious since the brand file covers them.
+Three genuinely different, correctly sized openings that respect the no-personal-story rule, keep the pouch in frame and name the ad line each pays off, then stop at the first approval as the skill requires. It correctly flagged the unattached photos, card and screenshot as MISSING rather than describing them, though "There is no study" should have been phrased as "no study was given" since Sprout does have one.
 
 ## Judge list
 
 - Met: The three openings make three different moves, each within its word budget.
-  Mirror 10, Gap 11, Flip 10 words against an 11-word budget; counts check out when recounted.
+  Mirror 10/11, Gap 11/11, Flip 11/11; word counts check out, e.g. "You're not bad at habits. The scoop is the hard part."
 - Met: None starts with a greeting, "so" or your brand name, and each flows into your ad's first line.
-  "Still scooping green powder every morning? There's one daily pack." runs into "You bought the big tub of greens powder. Again."
-- Met: The run stopped for your yes on the line-up, the presenter, the sheet and the storyboard.
-  "Reply "yes" to lock these words... Next is Stage 1" - stopped at the first gate as the skill requires; later gates not yet reached.
+  "Scoop, shake, skip by Thursday. Or one pack a day." leads into "You bought the big tub of greens powder. Again."
+- Met: The run stopped for your yes on the line-up, the presenter, the sheet and the storyboard, unless you asked for every stage in one go.
+  "Approval 1 of 3: confirm the reused presenter and the line-up." The user did not ask for every stage at once.
 - Met: The presenter never says "I tried it", "this worked for me" or a personal story.
-  All three lines address "you"; "He makes no 'I tried it' claim and states no result."
+  All lines in "you" or observer voice; "The presenter speaks as 'you' or as an observer, and makes no 'I' claims."
 - Met: Every fact is your brand's, word for word.
-  Lines carry no numbers or claims; "one daily pack" matches the brand's format; proof move withheld because line 4 already says it.
+  Only facts used are the input's: "60+ ingredients, 21 vitamins and minerals, 6 g fiber" and review 1; lines themselves state no new facts.
 - Met: The product is in frame from the first frame.
-  "Sprout pouch standing on the counter, label to lens" in all three openings.
+  "Sprout pouch standing on the counter, label to lens, from frame 1" for all three openings.
 
 ## What went in
 
@@ -43,36 +43,48 @@ Real deadline: none.
 ## What came out
 
 ```text
-I write the prompts only. I can't make pictures or video unless a video tool is connected to this chat.
+No video tool is connected in this chat, so I'll write the prompts and no pictures or clips will be made here.
 
-**Join to the ad not checked by eye.** The first frame came as a description, not a screenshot. Please send a screenshot of the ad's first frame. I need it to confirm where the counter, the tub and the light sit, and whether the counter area where the pouch stands is visible in the ad's shot.
+`MISSING: screenshot of the ad's first frame.` I only had a description, so the join to the ad couldn't be checked by eye.
 
-## Stage 0: Line-up (for your yes)
+## 1. Line-up
 
-Clip length is 6 s, so each line has a budget of 11 words.
+Clip length is 6 seconds by default, so each line can be at most 11 words.
 
-| # | Move | Line | Words | Energy / distance | Product | Touch | Paid off by |
-|---|---|---|---|---|---|---|---|
-| A | Mirror | "Still scooping green powder every morning? There's one daily pack." | 10 | Level / close, arm's length **(matches ad's first frame on both dials)** | Sprout pouch standing on the counter, label to lens. He holds the half-used tub, as in the ad. | Tap on the pouch on "pack" | Line 1: "You bought the big tub of greens powder. Again." |
-| B | Gap | "Can one small pack replace your tub? Stay for the count." | 11 | Lively / propped, mid shot | Pouch on the counter, label to lens. Tub in his hand. | Turns the pouch label-forward on the counter on "pack" | Line 4: "Sprout is 60+ ingredients, 21 vitamins and minerals and 6 g of fiber in one daily pack." |
-| C | Flip | "You're not bad at supplements. Powder's hard. A pack isn't." | 10 | Calm / close, arm's length | Pouch on the counter, label to lens. Tub in his hand. | Nudges the pouch forward on "pack" | Line 6: Review 1, "[Sprout] has been the one thing I've been able to stick to." |
+| # | Move | Line | Words | Energy | Distance | Product | Touch | Paid off by |
+|---|---|---|---|---|---|---|---|---|
+| A | Mirror | "Scoop, shake, skip by Thursday. Or one pack a day." | 10 | Level | Close, arm's length | Sprout pouch standing on the counter, label to lens, from frame 1. Half-used tub in his free hand throughout. | On "pack": two fingers of the tub hand tap the pouch top. | Line 1: "You bought the big tub of greens powder. Again." |
+| B | Gap | "How much can one small daily pack hold? Stay for it." | 11 | Calm | Propped, mid shot | Pouch on the counter, label to lens, from frame 1. Tub held in one hand throughout. | On "pack": the free hand turns the pouch a quarter turn so the label squares to the lens, then lets go. | Line 4: "Sprout is 60+ ingredients, 21 vitamins and minerals and 6 g of fiber in one daily pack." |
+| C | Flip | "You're not bad at habits. The scoop is the hard part." | 11 | Lively | Close, arm's length | Pouch on the counter, label to lens, from frame 1. Tub in his free hand throughout. | The line has no product word, so the touch lands on "hard part": he nudges the pouch forward with the tub hand's fingers. | Line 6: "[Sprout] has been the one thing I've been able to stick to." |
 
-**Read-aloud check:** each line runs into "You bought the big tub of greens powder. Again." with no greeting, no "so" and no brand name in the first three words. No word crosses the cut.
+**How the dials line up with the ad's first frame:**
+- **A** matches the first frame on both dials: arm's length and level. This is the seamless join.
+- **B** changes both dials.
+- **C** changes energy only.
 
-**Speaker:** the made-up adult presenter speaks to "you" only. He makes no "I tried it" claim and states no result. No forbidden words are used (fix, energy, immunity, weight loss).
+**How each opening ends:** all three finish with the tub in his hand and the pouch on the counter. So nothing jumps in what's in hand at the cut. His hands only nudge the pouch, and he never opens it.
 
-**Handling choice:** your photos would support the pack in hand. I've kept the pack on the counter and the tub in his hand in all three openings, so his hands match the ad's first frame at the cut. Nothing is opened or eaten.
+**Read aloud into the ad's first line:** all three flow straight into "You bought the big tub of greens powder. Again." None opens with a greeting, "so", or the brand name in its first three words. No word runs across the cut. The presenter speaks as "you" or as an observer, and makes no "I" claims.
 
 **Moves not used:**
-- **Promise:** there is no visible result, so a promise preview isn't supported.
-- **Proof:** the only sourced numbers (60+ / 21 / 6 g) are already said in line 4. Using them here would spend the ad's payoff early.
+- **Promise:** there is no visible result to preview.
+- **Proof:** the only sourced numbers (60+ ingredients, 21 vitamins and minerals, 6 g fiber) are already in line 4. The one review is already line 6. There is no study.
+- **Timing:** there is no real deadline.
 
-**MISSING:**
-- First-frame screenshot (see the note at the top).
-- Full ad script. I only have lines 1, 4 and 6.
-- Brand voice notes. The lines are written plain until I have them.
-- Source for the line 4 numbers. I'm treating them as the brand's approved claim, word for word.
-- Buyer's own words beyond the doubt line.
+**Approve:** a yes locks these three lines word for word.
 
-**Reply "yes" to lock these words, or edit any line.** Next is Stage 1, where I confirm the reused presenter card unchanged (approval 1 of 3).
+## 2. Avatar card (reused)
+
+You're reusing the ad's approved presenter (man, early 30s), copied unchanged so the join doesn't jump.
+
+`MISSING: the avatar card and sheet text didn't come through in this chat.` Paste them and I'll copy them in word for word. No new reference prompts are needed, because his picked picture from the ad is the pick.
+
+**Approval 1 of 3:** confirm the reused presenter and the line-up. Then I'll build the sheet additions (calm and lively expressions, the pouch on the counter), the product sheet, the room and the lock lines.
+
+**Gaps to fill:**
+- `MISSING: product photos`: the pouch front, pack in hand and gummies in palm weren't readable here. Until real photos arrive, the product slot stays marked, and I won't make a product sheet or clip prompt.
+- `MISSING: pouch label text, word for word.`
+- `MISSING: full ad script` (only lines 1, 4 and 6 are known).
+- `MISSING: brand brain` (voice, the exact words allowed on screen, colours).
+- `MISSING: clip length confirmation`: 6 seconds is assumed; 8 seconds would allow up to 16 words.
 ```

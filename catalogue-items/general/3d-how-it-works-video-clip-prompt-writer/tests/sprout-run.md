@@ -1,28 +1,27 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 4.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 3.
 
-This is a careful stage 0 and 1 handover. It tests the chain, marks each link's support, flags regulator issues, uses MISSING lines for absent photos and label facts, and stops for approval. The only numbers added are design choices and sums of the given 29 s, not Sprout facts.
+The run did stage 0 and stage 1 correctly, stopped for approval, and kept to the script's parts key. It marked unreadable photos, label lines, voice rights and claim sources as MISSING instead of guessing.
 
 ## Judge list
 
-- Met: Stopped for OK after avatar cards, sheets and storyboard
-  Ended with "Stop: approval 1." and held back stage 2; it correctly went no further than stage 1.
+- Met: Stopped for OK after avatar cards, sheets, storyboard (or marked approve)
+  "Stop. Please approve these cards before I move to stage 2" – stopped after stage 1 as the skill requires; no later stages run.
 - Met: Every link marked sourced or common knowledge, never assumed
-  Table marks links as "Common knowledge" or "Brand claim" and flags "Needs the label line" and "needs a brand source".
-- Met: Parts key keeps same name, colour and shape in every prompt
-  Parts key table gives blue spheres, yellow strands, cream tube. No later prompts exist yet, and nothing contradicts it.
-- Met: Product first appears at its own link in the storyboard
-  "It appears first in link 3, named there"; the opening table is stated to be Sprout-free. No storyboard yet.
-- Met: Voice is brand-recorded and a person approved the read
-  "the brand's own recorded narrator"; "a person approves the full read before any picture is paid for."
+  Common knowledge for "food for gut bacteria"; "6 g" needs label line; "supports digestion" flagged as brand claim needing source. Not assumed.
+- Met: Parts key keeps same name, colour, shape in every prompt
+  Only one stage run; key stated once: yellow strands, soft blue spheres, cream tube, matching the input.
+- Met: Storyboard: product first appears at its own link
+  No storyboard yet, but states "It is never shown at breakfast" and appears first at link 3.
+- Met: Voice is brand-recorded/licensed and a person approved the read
+  "The brand's own recorded narrator"; rights flagged MISSING, approval of read left for stage 5.
 
 ## Invented
 
-- number: Smallest part. About a tenth the width of the tube's inner space. (Size ratio is a design choice, not a Sprout fact, but it is presented as a spec; minor.)
-- number: Each strand is about 6 to 10 spheres long (Design scale choice, not a fact about Sprout.)
-- number: age about 30 to 40 (Design choice for the stylised person, not a fact.)
-- number: surface 4 s, dive 4 s, four links × 4 s, surface again 5 s, for 29 s total (Arithmetic on the given 29 s and the skill's timing guidance; it sums to 29.)
+- other: Stylised 3D adult woman, aged 30 to 40... knit top, trousers (Design choice for a character card, which the skill asks for; not a fact.)
+- number: about 2.5 words a second (Pacing suggestion; arithmetic-ish production guidance, not a Sprout fact.)
+- number: Each strand about 4 bacteria long, a fifth thick; clusters of 5 to 12; 30 bacteria across (Design scale for the visual, not a claim.)
 
 ## What went in
 
@@ -46,77 +45,71 @@ Voice: the brand's own recorded narrator.
 ## What came out
 
 ```text
-I write the prompts only. No picture or video tool is connected to this chat, so no images or clips will be made here.
+I write the prompts only. No video tool is connected here, so no pictures or clips will come from this chat.
 
-## Stage 0: Script in (locked script, three tests)
+## Stage 0: Script in (locked script, tested)
 
-**Chain as written**
-
-| Link | Line | Support |
-|---|---|---|
-| 1 | Bacteria wait in the gut | Common knowledge |
-| 2 | No fiber when the powder stays shut | Common knowledge (no intake, no food for them) |
-| 3 | "Sprout brings six grams of prebiotic fiber, food for them." | Brand claim. **Needs the label line showing 6 g per serving.** |
-| 4 | "They feed, and that supports digestion and gut health." | Feeding is common knowledge. **"Supports digestion and gut health" needs a brand source.** |
-
-**Tests**
-- **Hidden: pass.** Gut bacteria feeding on fiber can't be filmed at normal size.
-- **True: conditional pass.** It holds only if links 3 and 4 get their sources. If "supports digestion and gut health" can't be backed, cut link 4 back to "They feed on it." and drop the outcome.
-- **Teaches: pass.** A viewer could sketch it in four boxes: bacteria wait, no food, fiber arrives, they feed. Only one line names the brand.
+| Test | Result |
+|---|---|
+| **Hidden** | Pass. Fiber meeting gut bacteria can't be filmed at normal size. |
+| **True** | Passes only once the sources are in. "Prebiotic fiber is food for gut bacteria" is common knowledge. "6 g" needs the label line. "Supports digestion and gut health" is a brand claim and needs its source. |
+| **Teaches** | Pass. The four boxes are: bacteria wait, no fiber, fiber arrives, they feed. Links 1, 2 and 4 teach without the brand name. |
 
 **Honesty notes**
-- The verbs are soft and true ("brings", "supports"). On screen, the fiber only arrives and gets fed on. Nothing heals, glows, swells or "fixes".
-- **Regulated field.** This is food or a supplement making a gut claim, so the brand must read the script before any picture is made.
-    - In the EU and UK, "prebiotic" and gut-health wording are not authorised claims for most fibers.
-    - In the US, "supports digestion" is a structure/function claim and may need the standard disclaimer on screen.
-    - Confirm the market.
-- **Body.** Show no see-through torso and no stomach on the woman. The dive must leave her before it shrinks. One way: follow the spoon or glass down, then dissolve into the plain cream tube. Inside, show only the cream tube, with no organs or anatomy.
-- **Product timing.** The product (pouch, daily pack, name) and the yellow fiber strands must not appear before link 3. The breakfast table in the opening must be Sprout-free. In link 2, the pack stays shut and off-shot, or it is not shown at all.
-- **Timing:** surface 4 s, dive 4 s, four links × 4 s, surface again 5 s, for 29 s total.
+- "Supports" is a soft, true verb. It is fine as long as the picture shows only the bacteria feeding: no glowing gut, no tube changing shape, no relief.
+- **Regulator flag:** this is a food supplement making a gut-health claim. In some markets, the word "prebiotic" and "supports digestion" are restricted health claims. The brand must read the script before any picture is made.
+- **Body:** the gut stays a plain cream tube. Nothing see-through, no organs, no woman's body in the dive. The dive enters the tube directly, not through her.
+- **Product placement:** the Sprout pouch must not appear in the breakfast opening. It appears first at link 3.
+- **Closing match:** the script closes "at the door" but opens "at breakfast". To match the moments, set the door in the same kitchen, with the same light and the same woman, on the same morning. Please confirm.
+- **Timing:** 4 + 4 + 16 (4 links × 4 s) + 5 = 29 s. This works.
 
-**MISSING**
-- `MISSING: real photo files`. The pouch and pack are named in brackets but no images are attached, so the product sheet can't be checked against the real pack. Also needed: side, top and out-of-pack photos of the pouch and the daily pack.
-- `MISSING: every label line, typed exactly` (serving size, the "6 g prebiotic fiber" line, ingredients).
-- `MISSING: what the fiber is` (e.g. inulin, chicory root, acacia) and the source for each step of how it works.
-- `MISSING: brand file`. This covers approved claims with sources, banned claims, what buyers assume, brand colours and font, the market and regulator, and how "Sprout" and "prebiotic" are said.
-- `MISSING: current offer and terms` for the closing on-screen text.
+## Stage 1: Avatar cards (approval 1)
 
-## Stage 1: Avatar cards (parts key, product, person) and voice
+### Parts key (the fiber is the avatar)
 
-**Parts key**
+**Fiber, from Sprout (lead part)**
+- Colour and shape: thin yellow strands, soft and slightly curling, like loose thread.
+- How it moves: drifts in slowly and settles among the bacteria. It never "attacks" or "cleans".
+- Size: each strand is about 4 bacteria long and about a fifth of a bacterium thick.
 
-| Part (buyer's name) | Colour | Shape | How it moves | Size against the others |
-|---|---|---|---|---|
-| **Gut bacteria** | Soft blue, one shade, matte | Small soft spheres, slightly squashy, no faces, no eyes, no limbs | Drift slowly in loose groups. Wait in place in link 1, then gather and nestle along the strands in link 4. | Smallest part. About a tenth the width of the tube's inner space. |
-| **Prebiotic fiber** (the avatar, carries the ad) | Yellow, one shade, gently lit, never glowing | Thin, smooth, loosely curled strands | Drift in from above in link 3 and settle softly among the spheres. No sparkle, no burst, no "power" effect. | Each strand is about 6 to 10 spheres long and thinner than one sphere. |
-| **The gut** | Plain cream | A simple smooth tube, soft walls, no folds, veins or anatomy | Still. At most a slow, faint breathing curve of the wall. | The setting. It frames everything and fills the edges of the frame. |
+**Bacteria (the gut's own residents)**
+- Colour and shape: small, soft blue spheres, matte, slightly squashy.
+- How they move: before the fiber, they sit still with a faint idle wobble. With the fiber, they gather on the strands, and the strands slowly shorten as they feed.
+- Size: the reference unit. They show in clusters of 5 to 12.
 
-Everything else stays neutral: soft warm-grey haze, soft light, no letters, numbers or logos inside the small world.
+**The gut (the setting part)**
+- Colour and shape: a plain cream tube with a smooth matte inner wall. No folds, veins, villi or anatomy.
+- How it moves: it does not move. It holds still as the stage.
+- Size: the tube's diameter fills the frame, about 30 bacteria across.
 
-**Product card: Sprout**
-- **What it is:** the pouch and a single daily pack, modelled only from the real photos.
-    - Shape, colours and every label line come from those photos and are typed exactly.
-    - No invented details.
-    - Pending: `MISSING: real photo files and label lines`.
-- **Where it appears:**
-    - It appears first in link 3, named there, beside or above the falling yellow strands. It is shown at human size as a short cut-in of the pack, or as the narrator line alone, to be decided at the storyboard.
-    - It returns in the closing shot, where the daily pack is torn open at the door and the real label is readable.
-- **Use:** the daily pack is used the brand's way. `MISSING: how it's used` (stirred into water, a drink or breakfast?).
+Everything else stays neutral: soft white light, faint cream haze for scale, no other colours.
 
-**Person card: the woman (human size only)**
-- **Look:**
-    - A stylised 3D adult, age about 30 to 40.
-    - Fully clothed: knit top at breakfast, the same top with a coat added at the door.
-    - Calm, relaxed face. Warm, unbranded kitchen and hallway.
-- **Role:** silent, appearing only in the opening and closing surface shots. She is never a real person, an expert, a patient, or anyone in clinic or illness framing.
-- **Matching:** her pose and energy at the door match breakfast and are only a touch easier. There is no before-and-after body.
+### Product card: Sprout
+- **Model:** the Sprout pouch and a single daily pack, modelled from the two photos.
+- **Status:** `MISSING:` the photos didn't come through as images I can read. The pouch's colours, shape and label lines can't be checked against the real pack yet.
+- **Where it appears:** at link 3, where it is named, and in the closing hand at the door. It is never shown at breakfast.
+- **What it does on screen:** it releases the yellow strands, and nothing more.
 
-**Narrator voice**
-- **Voice:** the brand's own recorded narrator, calm and warm. Off screen throughout, with no lip-sync.
-- **Spellings by sound for the voice script:**
-    - "prebiotic" as *pree-by-OT-ik*
-    - "Sprout" as *SPROWT* (confirm with the brand)
-- **Approval:** a person approves the full read before any picture is paid for.
+### Person card (human size only)
+- Stylised 3D adult woman, aged 30 to 40, with a soft, simple look. She is not a real person, an expert or a patient.
+- Fully clothed in everyday morning clothes (knit top, trousers), with a calm expression.
+- She is silent: no lip movement, never speaks.
+- She appears in the opening breakfast shot and the closing door shot only.
 
-**Stop: approval 1.** Please approve the parts key, the product card, the woman and the voice, or send changes. Please also send the missing photos, label lines, fiber type and claim sources. I'll write the reference render prompts (stage 2) once these are approved.
+### Voice
+- The brand's own recorded narrator: calm and warm, unhurried, about 2.5 words a second.
+- Off screen throughout.
+- `MISSING:` confirmation the brand holds the rights to this voice for ads, and how "Sprout" and "prebiotic" are said (I assume "PREE-bye-OT-ick").
+
+**Stop. Please approve these cards before I move to stage 2 (reference renders).**
+
+### Gaps to fill later
+- `MISSING:` readable product photos (front, side, top, out of the pack).
+- `MISSING:` every label line, typed exactly, including the 6 g fiber line and the fiber's name.
+- `MISSING:` source for "supports digestion and gut health", and the regulator markets the ad will run in.
+- `MISSING:` brand colours and font, for captions and for "prebiotic" in the brand colour.
+- `MISSING:` banned claims and what buyers assume.
+- `MISSING:` current offer and price, for the closing on-screen text.
+- `MISSING:` pronunciation of hard words, and confirmation of the voice rights.
+- `MISSING:` your video tool's clip lengths, and whether it takes a first and last frame.
 ```

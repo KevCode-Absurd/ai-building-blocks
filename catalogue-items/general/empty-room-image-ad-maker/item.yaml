@@ -24,8 +24,8 @@ credits:
   - {title: "Ogilvy on Advertising", by: "David Ogilvy", url: "https://openlibrary.org/works/OL3346506W", used: "Story appeal: a picture that makes people ask what happened"}
   - {title: "Understanding Comics", by: "Scott McCloud", url: "https://openlibrary.org/works/OL276032W", used: "Closure: readers fill in what the frame leaves out"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-sonnet-5-5
-  result: fail
+  result: pass

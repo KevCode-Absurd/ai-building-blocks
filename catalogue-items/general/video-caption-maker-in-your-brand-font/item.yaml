@@ -23,8 +23,8 @@ credits:
   - {title: "Understanding Success Criterion 1.2.2: Captions (Prerecorded)", by: "W3C Web Accessibility Initiative", url: "https://w3c.github.io/wcag/understanding/captions-prerecorded.html", used: "Open captions count as captions; add cues for sounds that carry meaning"}
   - {title: "Understanding Success Criterion 1.4.3: Contrast (Minimum)", by: "W3C Web Accessibility Initiative", url: "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html", used: "The 4.5 to 1 contrast floor for text that must be read"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-sonnet-5-5
-  result: fail
+  result: pass

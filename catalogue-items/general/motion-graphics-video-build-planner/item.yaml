@@ -26,7 +26,7 @@ credits:
   - {title: "Meta Ads Safe Zones: A Guide to the 2026 Unified Creative Updates", by: "Dovile Miseviciute, Billo", url: "https://billo.app/blog/meta-ads-safe-zones", used: "The safe area of a 9:16 canvas"}
   - {title: "Storyboard", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Storyboard", used: "One frame per shot with framing, camera, movement, dialogue and timing, approved before production"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

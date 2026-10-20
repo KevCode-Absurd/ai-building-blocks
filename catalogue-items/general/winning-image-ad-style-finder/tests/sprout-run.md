@@ -1,30 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 2.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The numbers are all correct, the style analysis is honest about what could not be read without images, and the three ad plans use only approved claims with clear single changes. But it skipped the WORKING FROM block (so the product price is never stated) and the STOP 1 section, asserted "ad fatigue" as a cause with no record, and miscounted one headline.
-
-## Fix
-
-In step 1 and the output shape, state that the WORKING FROM block and STOP 1 line are mandatory in every hand-back even when corrections are pending; in step 2 add "when merging windows of one ad, report the numbers only and write 'not recorded' for the cause of any change."
+The ranking and every cost-per-purchase figure are correct, P1's two windows are joined properly, and the style traits are honestly limited to what the headline text can show, with images, dress and reasons all marked MISSING or not recorded. The three new ads each change one thing, follow the brand's pack rules, use only real buyer quotes from the file it was sent, and leave out the conflicting discounts, so the owner gets a usable, safe plan with a clear list of what to confirm before making anything.
 
 ## Judge list
 
 - Met: The ranking matches your file, and ads under about 20 sales are left out.
-  "R1 Runner ... 10 ... Not measured (under 20 purchases). Not ranked." All cost-per-purchase figures recompute correctly from the CSV.
+  "T1 $21.21 top ... P2 $50.00 bottom ... Not measured: R1 Runner (10 purchases, $100.00)"; every cost per purchase checks against the CSV.
 - Met: Every kept trait shows its count among winners and losers.
-  "Headline 5 words or fewer | 3/3 (5, 5, 4) | 0/3 (11, 12, 6) | Kept" (one bottom count is 10, not 11, but the rule still holds).
+  "Headline 5 words or fewer   top 3 of 3   bottom 0 of 3   kept" and the same for each kept trait.
 - Met: Any reason for a win comes from your records, or is written "not recorded".
-  Win table: "T1 ... not recorded", "H1 ... not recorded", "K1 ... not recorded"; but ranking notes assert "That drop is ad fatigue" without a record.
+  "Why each won: T1 not recorded. H1 not recorded. K1 not recorded."
 - Met: The do-not-carry list includes the winners' words, offers and people.
-  "Headlines: 'Fix the Hot Girl Tummy'... Numbers and offers: 61% off, 1M+, 4 free gifts... People and product: T1's UGC creator"
+  "Do not carry: 'Fix the Hot Girl Tummy' ... the T1 UGC creator and any lookalike ... 61% off, 4 free gifts"
 - Met: Each new ad changes exactly one thing, and you can say what it is in a few words.
-  "Type: In use → Old way new way", "Audience: New → Warm", "Product: Sprout Kids → Sprout Original (Adults)"
-
-## Invented
-
-- claim: That drop is ad fatigue. It is not a style difference (No record names a cause for P1's second-window decline; the skill says never guess a reason.)
-- number: 0/3 (11, 12, 6) (P1's headline is 10 words, not 11; minor miscount, does not change the trait verdict.)
+  "Changed Type: The moment → Old way new way"; "Changed Argument"; "Changed Audience: New → Warm"
 
 ## What went in
 
@@ -46,98 +37,69 @@ How many new ads: 3
 ## What came out
 
 ```text
-## 1. Ranking (cost per purchase, lower is better)
+```
+WORKING FROM
+  Product  Sprout Original (Adults), Low Sugar, 28 packs: $66.65 one-time, $49.99 subscription every 4 weeks, "starts at" $29.99 first order only with the SMS sign-up discount (brand.md, prices seen late Sept to mid Oct 2026)
+  Ads      sprout/ad-results.csv, 10 rows = 9 ads (P1 split into two 21-day windows), 14 to 42 days live each. Calendar dates not given. Practice numbers.
+  Judged   Cost per purchase (spend ÷ purchases). Read point: about 20 purchases.
+  Flags    Every top-group ad is a video and every bottom-group ad is an image (see STYLE). No ad images attached, so no visual trait could be read. Small print: any "starts at $29.99" needs the SMS-discount line, and ads carry no FDA line (the site footer does). Stock level unknown.
 
-| Rank | Ad | Format | Spend | Purchases | Cost per purchase | Group |
-|---|---|---|---|---|---|---|
-| 1 | T1 Hot girl tummy | video 28s UGC | $4,200 | 198 | **$21.21** | Top |
-| 2 | H1 One step never skip | video 20s | $1,300 | 44 | **$29.55** | Top |
-| 3 | K1 Fiber kids | video 15s | $2,200 | 63 | **$34.92** | Top |
-| 4= | F1 Fiber question | carousel | $1,800 | 46 | $39.13 | Middle |
-| 4= | W1 Muscle weight loss | image | $900 | 23 | $39.13 | Middle |
-| 6 | P1 Too expensive (both windows) | image | $6,000 | 151 | $39.74 | Bottom |
-| 7 | S1 Trusted by 1M | image | $1,600 | 38 | $42.11 | Bottom |
-| 8 | P2 Dont pay full price | image | $2,500 | 50 | $50.00 | Bottom |
-| n/a | R1 Runner | image | $1,000 | 10 | ($100.00) | **Not measured** (under 20 purchases). Not ranked. |
+RANKING (cost per purchase. Account usual: $33.44 = $20,500 ÷ 613 purchases across measured ads)
+  T1 Hot girl tummy          $21.21   top
+  H1 One step never skip     $29.55   top
+  K1 Fiber kids              $34.92   top
+  F1 Fiber question          $39.13   middle
+  W1 Muscle weight loss      $39.13   middle
+  P1 Too expensive           days 1-21: $26.79 (112 purchases)   days 22-42: $76.92 (39 purchases)   bottom (placed on both windows joined, $6,000 ÷ 151). Cause of the change between windows: not recorded.
+  S1 Trusted by 1M           $42.11   bottom
+  P2 Dont pay full price     $50.00   bottom
+  Not measured: R1 Runner (10 purchases, $100.00, under the read point)
 
-- **P1 is one ad, so it is ranked once.** Days 1 to 21 cost $26.79 per purchase. Days 22 to 42 cost $76.92. Click rate fell from 1.50% to 0.92%. That drop is ad fatigue. It is not a style difference, so the two windows are not treated as separate ads.
-- **Measured ads: 8.** That clears the six needed for a contrast. Top third and bottom third are 3 each.
-- **Noise caution.** Only T1 has a large sample. Ranks 3 to 7 sit within about 20% of each other, on 23 to 151 purchases each. Chance alone can produce gaps of that size.
+STYLE  (top 3 vs bottom 3)
+  Headline 5 words or fewer                      top 3 of 3   bottom 0 of 3   kept
+  No price or discount in headline               top 3 of 3   bottom 0 of 3   kept
+  No digits or % in headline                     top 3 of 3   bottom 0 of 3   kept (same evidence as the price trait)
+  Type from the "Is it for me?" row [inferred from opening line]   top 3 of 3 (The moment)   bottom 0 of 3 (all The offer)   kept
+  Audience New [inferred from opening line]      top 3 of 3   bottom 0 of 3 (Warm/Ready)   kept
+  Opens as a statement                           top 3 of 3   bottom 2 of 3   dropped (brand habit)
+  Speaker "you"                                  top 1 of 3   bottom 1 of 3   dropped
+  Speaker "I"                                    top 1 of 3   bottom 0 of 3   dropped (fails the top rule)
+  Format video (not one of the five traits)      top 3 of 3   bottom 0 of 3   noted, cannot carry into an image ad
+  Dress, skeleton, brand cues, product shown     top ? of 3   bottom ? of 3   MISSING (no images; top group is all video)
+  Why each won: T1 not recorded. H1 not recorded. K1 not recorded. The video-vs-image split may explain the gap as much as any kept trait. Not recorded which.
+  Do not carry: "Fix the Hot Girl Tummy" (a risky "fix" claim), "One Step I Never Skip", "Fiber Kids Won't Fight", the T1 UGC creator and any lookalike, the Kids product and kids claims (K1), 61% off, 4 free gifts, "Trusted by 1M+", the "too expensive" quote, every discount figure
+  Never used by winners: types Product alone, Look inside, Old way new way, In use, Their words, Checked fact, The offer, The occasion. Audiences Warm, Ready. Arguments: powder-quitter, taste ("Tastes like a treat"), no water or mixing on the go, third-party testing, absorption study, methylfolate.
 
-## 2. Style
+NEW ADS
+  1 Code Old way new way · MISSING: dress · New
+      For      The quitter who wants to stick: has abandoned a greens powder tub and shaker
+      Argues   The habit sticks when there's no tub or shaker to give up on.
+      Kept     Headline ≤5 words, no price/digits in headline, "Is it for me?" row, New audience, habit argument (as H1)
+      Changed  Type: The moment → Old way new way
+      Headline "Quit The Shaker, Not Greens" (5)
+      Product shown  An unbranded half-used powder tub and shaker on one side. On the other, a daily pack torn straight across the top, gummies pouring into a palm. Photo: MISSING clean product photo.
+      Rests on Format "No water, no mixing, no shaker" (brand.md, What it is). Buyer quote "Sprout has been the one thing I've been able to stick to." (brand.md, Who buys it 1; reviews file not received). Brand line "No more gagging on pills, sloshing chalky powders, or cleaning messy counters." (brand.md, voice)
 
-**Evidence limits.** No ad images were attached, and all 3 top ads are videos. The five traits were read from the CSV only: format and opening line. The code was inferred from the opening line.
+  2 Code The moment · MISSING: dress · New
+      For      The busy parent buying Adults for herself
+      Argues   Your greens fit the rush: tear, tip, eat, no water or mixing.
+      Kept     Headline ≤5 words, no price/digits in headline, The moment type, New audience
+      Changed  Argument: habit/gut/fiber → on-the-go in the morning rush
+      Headline "Greens Before The School Run" (5)
+      Product shown  A daily pack torn straight across the top, gummies pouring into a palm. A new fictional adult or no person, never a lookalike of the T1 creator. Photo: MISSING clean product photo.
+      Rests on Format facts (brand.md, What it is). Brand line "Rip. Tip. Enjoy." (brand.md, voice). Buyer quote "So easy to grab and eat on my way to the billion things I have to do as a mom." (brand.md, Who buys it 3)
 
-| Trait | Top (3) | Bottom (3) | Verdict |
-|---|---|---|---|
-| Format: video | 3/3 | 0/3 | **Passes the rule, but can't carry.** The brief asks for image ads. This is the biggest confound in the set. The best image ad (W1) cost $39.13. |
-| Type family "Is it for me?" (The moment / In use), not The offer | 3/3 | 0/3 (all The offer) | **Kept** (inferred from the words) |
-| Audience New, not Ready | 3/3 | 0/3 | **Kept** (inferred from the words) |
-| Headline 5 words or fewer | 3/3 (5, 5, 4) | 0/3 (11, 12, 6) | **Kept** |
-| No number in the headline | 3/3 | 0/3 (61%, 1M+) | **Kept** |
-| No price or discount in the headline | 3/3 | 0/3 | **Kept** (overlaps with "no number") |
-| Opens with a statement | 3/3 | 2/3 | **Dropped.** Brand habit. |
-| Speaker (I / you / none) | mixed | mixed | **Dropped.** No pattern. |
-| Dress | T1 Lo-fi (UGC); H1, K1 unknown | unknown | **Evidence missing** |
-| Skeleton | unknown | unknown | **Evidence missing** |
-| Brand cues (colour, type, logo position) | unknown | unknown | **Evidence missing** |
-| Product shown (view, share of frame) | unknown | unknown | **Evidence missing** |
+  3 Code The moment · MISSING: dress · Warm
+      For      Shoppers who already know Sprout (shelf, past ads) but doubt they'd keep taking it
+      Argues   This is the supplement people actually keep taking.
+      Kept     Headline ≤5 words, no price/digits in headline, The moment type, habit argument (as H1)
+      Changed  Audience: New → Warm
+      Headline "The Supplement You'll Actually Finish" (5)
+      Product shown  The adult pouch shut and standing (never torn), one daily pack beside it torn straight across the top. Photo: MISSING clean product photo.
+      Rests on Body copy only, never in the headline: "95% of users take [Sprout] at least 4-6x per week with 80% taking daily", stated as "of surveyed users" (brand-reported survey of 3,000+ customers, brand.md, Claims). Buyer quote "Sprout has been the one thing I've been able to stick to." (brand.md, Who buys it 1)
 
-**Why each ad won or lost.** The argument, audience and inferred code for each ad:
-
-| Ad | Argument | Audience (persona) | Code (inferred) | Why it won or lost |
-|---|---|---|---|---|
-| T1 | Gut discomfort, said in slang | Gut-fix seeker | The moment · Lo-fi · New | not recorded |
-| H1 | The habit that sticks | Quitter who wants to stick | In use · ? · New | not recorded |
-| K1 | Fiber without a fight | Busy parent, Kids product (inferred) | The moment · ? · New | not recorded |
-| P1 | Price objection answered by a discount | Price doubter | The offer · ? · Ready | not recorded. The fatigue is in the data, but no note gives the reason. |
-| S1 | Social proof plus a discount | Price doubter | The offer · ? · Ready | not recorded |
-| P2 | Don't pay full price | Price doubter | The offer · ? · Ready | not recorded. It had the highest click rate (2.45%) but the weakest conversion. |
-
-**Do not carry** (each was true of that ad at that time):
-- **Headlines:** "Fix the Hot Girl Tummy" (also a risky "fix" claim), "One Step I Never Skip", "Fiber Kids Won't Fight".
-- **Numbers and offers:** 61% off, 1M+, 4 free gifts.
-- **People and product:** T1's UGC creator and the Kids product from K1.
-
-**Cells the top group never used:**
-- **Types:** Product alone, Look inside, Old way new way, Their words, Checked fact, The occasion.
-- **Audiences:** Warm, Ready.
-- **Arguments:** quitting powders, taste, the absorption study, limited flavours.
-
-## 3. New ads: Sprout Original (Adults), image, 3
-
-All three keep every kept trait:
-- an "Is it for me?" type, not The offer;
-- an audience that is not Ready;
-- a headline of 5 words or fewer, with no number and no price.
-
-None carries an offer. Dress is left open because the winners' dress is unknown.
-
-**Product shown is the same for all three:**
-- The daily pack is torn straight across its top edge, with green bears pouring into a palm.
-- The 28-pack pouch sits beside it, shut at its resealable top.
-- The clean photo of this view is MISSING.
-
-| # | Code | For | Argues | Kept | Changed (the one thing) | Headline draft | Rests on |
-|---|---|---|---|---|---|---|---|
-| A | Old way new way · ? · New | Quitter who wants to stick | A pack you rip and eat is a habit you keep, unlike the shaker and the pill shelf. | H1's argument (habit) and audience (New) | **Type:** In use → Old way new way. The old way is a generic tub and shaker with no marks. | "Ditched the shaker. Kept this." | Format facts: no water, no mixing, no shaker (brand file, product). Survey: "95% of users take [Sprout] at least 4-6x per week", of surveyed users (brand-reported, 3,000+) |
-| B | The moment · ? · **Warm** | Gut-fix seeker who already knows Sprout | One pack a day supports digestion, in a form they will actually take. | T1's type (The moment) and argument (gut) | **Audience:** New → Warm. The claim is kept to "supports". If the copy names a variant, it should point to Low Sugar. | "Gut support you'll actually take." | "Supports digestion and gut health"; 6 g prebiotic fiber per pack (brand file). Survey: "67% ... experienced better, more regular digestion", of surveyed users |
-| C | The moment · ? · New | Busy parent, for themselves | Fiber you don't have to force down, because it tastes like strawberry. | K1's type, argument (fiber without a fight) and audience | **Product:** Sprout Kids → Sprout Original (Adults) | "Fiber that tastes like strawberry." | 6 g prebiotic fiber; Original flavour is "Fresh & Sweet", strawberry and sweet greens (product page) |
-
-## 4. MISSING
-
-- MISSING: ad images or video frames for all 8 measured ads. Dress, skeleton, brand cues and product shown can't be read. The code was inferred from the words alone.
-- MISSING: a clean product photo of Sprout Original (Adults) by view. Per the skill, this run is **words only, nothing made**.
-- MISSING: the 20 reviews. They were listed as pasted but are not in the message. No new ad uses a buyer quote.
-- MISSING: which product each ad sold. K1 is assumed to be Kids, and T1 and H1 are assumed to be Adults.
-- MISSING: stock level for Original (Adults).
-- MISSING: required small print. The $29.99 price needs the SMS footer line, and the FDA line is not in the ads. Which line every ad must carry needs the owner's call before anything is made.
-- MISSING: owner corrections at Stop 1 (style) and Stop 2 (new ads). These are not yet applied.
-- MISSING: an image-format winner. Every top ad is a video, so there is no image ad with the kept style to compare against.
-
-## 5. Score
-
-**80 / 100**: 4 of 5 checks passed.
-
-- **Missed:** "Each new ad changes exactly one position." The brief requires image ads, and every winner is a video. Each new ad therefore also changes format, so its result can't be pinned to the one planned change. The fix is to run each plan as a short video as well, or to accept format as a second variable.
+MISSING  The ad images (no dress, skeleton, brand cues or product shown could be read, and all 3 top ads are video). Calendar dates for each ad. Reviews: "all 20" were mentioned, but only brand.md and ad-results.csv came through, so quotes come from brand.md. Clean product photos by view (pack front, torn pack, gummies in hand). Stock level. Which discount is current (52/55/58/61% and $29.99 conflict), so no offer is used. The SMS-discount small print and FDA line, if any ad adds a price. Why any ad won.
+CHECKS MISSED  Kept traits rest on opening-line text only, and type/audience are inferred, not read from images. Top group is all video, bottom all image, so the style may not transfer to image ads. Dress cannot be filled in any new-ad code.
+STOP 1   Before anything is made, confirm or correct: (a) type and audience codes inferred from opening lines; (b) whether the video-vs-image split, not the word traits, drove the win; (c) the dress, skeleton and brand cues of T1, H1, K1 from their frames; (d) which offer is current, if one is to go in body copy; (e) clean product photos. All 3 new ads are drafts (approve).
+```
 ```

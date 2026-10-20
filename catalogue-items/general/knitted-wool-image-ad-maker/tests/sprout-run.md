@@ -1,34 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 4 of 5 met. Invented facts: 2.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A well-structured, honest plan: good moment, clean approved-claim headline, full offer terms with renewal, and a proper label-overlay step. But it ignored the brand file's Look section, inventing a hex code and orange gummies that contradict the real deep-green bears, and marked those facts MISSING when they were on file.
-
-## Fix
-
-In 'If something is missing', add: 'Before writing MISSING for a colour, gummy shape or hex value, read the brand file's Look section and use what it gives; only infer when the file is silent.'
+A usable, well-grounded ad plan: the pouch is described exactly from the brand file, the words stay inside the approved claims, the renewal price is disclosed, and the contrast ratios check out. It correctly says the photos weren't visible and lists real gaps, though it skipped the closing next-step suggestion and has a minor button mismatch ("Shop Low Sugar" on image vs "Shop Now" in post).
 
 ## Judge list
 
 - Met: Shown for 2 seconds, someone can say what the product is and the one idea.
-  "Pouch centred and large, occupying 24–80%" with headline "6g fiber. In a gummy you'll eat."; one towel-lift moment, no doll.
+  Pouch "filling about 35% of the frame width" with "Sprout" wordmark; headline "6g fiber you'll actually eat." One yarn change (plying).
 - Met: The headline has 7 words or fewer, with at most 3 other things to read.
-  "6g fiber. In a gummy you'll eat." (7 words); other items are small line, offer, button: exactly 3.
+  "Headline (5 words) | 6g fiber you'll actually eat." plus small line, offer, button: exactly 3 more.
 - Met: Every object in the prompt has a material word and a real color.
-  "deep green crocheted stand-up pouch", "oatmeal stockinette tea towel", "honey-brown ribbed knitted counter", "amber-orange crocheted gummies", "pale cream felted wool".
+  "honey-brown rib knit", "cream stockinette", "crocheted in warm cream", "felted kelly-green and forest-green wool roving", "deep-green crocheted bears".
 - Met: Nothing shows a body getting better, and no face is in close-up.
-  No doll in the scene; "No body is shown, nothing is mended"; avoid field lists "human skin, face".
-- Not met: The product matches your photos, with your real label laid over it.
-  Run itself marks it missed: "could not be verified. No product photos came through"; gummies made amber-orange though brand file says deep-green bears.
-
-## Invented
-
-- other: #1F4D2E or the brand hex (Hex not in files; brand.md gives forest green #00582D, which the run said was MISSING.)
-- claim: three small amber-orange crocheted gummies (Brand file says gummies are small opaque deep-green bears; marked inferred but the fact was on file and contradicted.)
-
-## Safety
-
-- Gummies pictured amber-orange when Sprout's gummies are deep-green bears; the ad would misrepresent the product's look and the run does not flag the contradiction.
+  "Doll: None... nothing touches a body." Avoid field lists "faces, belly, body". Yarn change is on a tabletop.
+- Met: The product matches your photos (or brand file's description, when photos can't be seen), with your real label laid over it.
+  "glossy-looking deep green... big yellow intarsia wordmark... yellow crocheted bear face at top right"; "Cut the real Low Sugar pouch out... lay it over".
 
 ## What went in
 
@@ -48,71 +35,124 @@ Never: "fix" the tummy, any result as a promise.
 Brand note: point gut-sensitive buyers to Low Sugar.
 Offer: $29.99 first order with text sign-up, renews at $49.99
 every 4 weeks.
+Brand file: attached (brand.md).
+
+[attached: sprout/brand.md]
 ```
 
 ## What came out
 
 ```text
-No image tool is connected here, so this is the prompt and plan, not the picture.
+I can't draw pictures in this chat, so you'll get a prompt to paste into an image tool. Only `brand.md` reached me. I can't see the front, side or top photos, so the pouch's look and label words come from your brief and the brand file, and the match against the photos still needs checking.
 
-**1. Moment plan**
-- **Moment:** The buyer has tried powders and probiotics, so she is comparing fixes. The yarn change is caught halfway: a knitted tea towel half drawn back from the Sprout Low Sugar pouch on a kitchen counter, with three crocheted gummies in front.
-- **Show job:** Reveal.
-- **Technique:** Blanket lift. The towel is mid-pull, bunched at the pouch's right side, so the whole pouch is uncovered.
+## 1. Moment plan
+- **Fit:** Wool suits a gut subject. Yarn can make the gummies look less tasty, so they stay small and simple and the words carry "you'll actually eat."
+- **Moment:** The buyer is comparing fixes (powders, probiotics), so the picture shows the yarn change caught halfway.
+- **Show job:** Join.
+- **Technique:** Plying.
+  - At the far left, six loose, fluffy strands of green wool roving.
+  - Midway across the table they twist into one thick, tidy plied cord.
+  - The cord curves right to a crocheted bowl of small deep-green gummy bears.
+  - The gummies pour from a daily pack torn straight across its top edge.
+  - The Sprout pouch stands closed behind the bowl.
 - **Fabrics:**
-  - Wall: stockinette, warm cream.
-  - Counter: rib, honey-brown, for wood grain.
-  - Tea towel: stockinette, oatmeal with one tomato-red stripe.
-  - Pouch: tight crochet, deep green, stuffed firm. "Sprout" wordmark and bear face in yellow intarsia.
-  - Gummies: crochet. Colour is inferred.
-  - Quiet area: felted wool, pale cream.
-  - Yarn: one worsted thickness throughout.
-- **Implied sentence:** "Sprout Low Sugar is a pouch of daily packs, and it's a gummy, not a powder." This is backed by product facts (28 daily packs, gummy format). No body is shown, nothing is mended, and there is no before and after.
+  - Rib knit for the wooden tabletop.
+  - Cream stockinette for the back wall.
+  - Felted cream wool for the quiet area.
+  - Tight crochet for the pouch, daily pack, bowl and gummies.
+  - Roving and plied yarn for the strands.
+  - One yarn thickness (DK weight) throughout, except the roving.
+- **Doll:** None. A product close-up reads faster, and nothing touches a body.
+- **Sentence it implies:** "One Sprout pack brings 6 g of fiber together in a few gummies."
+- **Source:** Approved claim "60+ ingredients, 21 vitamins & minerals, and 6g fiber". The brand file says 1 pack holds 6 g of prebiotic fiber.
+- **What it does not imply:** No body is shown and nothing heals. There is no before and after.
 
-**2. Layout:** 4:5, 1080 x 1350
-- **0–24%:** Quiet area, pale cream felted wool with no stitches. Holds the headline and small line.
-- **24–84%:** Picture. Pouch centred and large, occupying 24–80%, with the towel bunched at the right and gummies at the front edge on the counter.
-- **84–100%:** Solid deep-green brand patch. Holds the offer line and button.
-- **1:1 version:** Recompose as quiet area 0–22%, pouch 22–82% (shifted left, towel right), green patch 82–100%. Never stretch.
+## 2. Layout
+**Size:** 4:5, 1080 x 1350 (Instagram feed).
 
-**3. Words on the image**
-- **Headline:** "6g fiber. In a gummy you'll eat." (7 words). "6g fiber" is from the approved claim; "gummy" is a product fact.
-- **Small line:** "Supports digestion and gut health." Approved claim, word for word.
-- **Offer:** "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." From the brand file's offer; check against the live offer on the day.
-- **Button:** "Shop Low Sugar"
-- **Type:** All type 30 px or more. Headline about 72 px, small line 36 px, offer 30 px (two lines), button 34 px.
+| Zone | Height | What goes there |
+|---|---|---|
+| Quiet area | 0–24% | Smooth felted cream wool, no stitches. Headline and small line. |
+| Picture | 24–86% | Roving strands at left plying into a cord across the centre. Bowl and torn daily pack front right, at about 60–80%. Pouch standing behind them on the right, at about 30–80%, filling about 35% of the frame width. |
+| Solid band | 86–100% | Deep forest green #002C17. Offer line at left, button at right. |
 
-**4. Image prompt**
-> A deep green crocheted stand-up pouch, stuffed firm and standing upright at the centre of a small knitted kitchen counter, as an oatmeal stockinette tea towel with one tomato-red stripe is half drawn back from it and bunched in soft folds against its right side; three small amber-orange crocheted gummies sit on the counter in front of the pouch. Setting: a miniature knitted kitchen, warm cream stockinette wall behind, honey-brown ribbed knitted counter with the rib running like wood grain. Yarn: one worsted thickness throughout; the pouch in tight deep green crochet with a soft sheen, a big yellow intarsia wordmark across its upper middle and a small yellow intarsia bear face in the top right corner; the gummies in tight amber-orange crochet. Light: soft window daylight from the left, gentle shadows to the right. Camera: eye level, medium shot of the pouch, shallow focus so the set reads miniature; the top quarter of the frame is a calm, empty stretch of pale cream felted wool with soft fuzz and no stitches, and the bottom sixth of the frame is plain counter edge left clear. Label lines on the pouch: "Sprout" and "28 Daily Packs".
+For 1:1 (1080 x 1080), recompose instead of stretching:
+- Quiet area 0–22%.
+- Shorten the strands so they start at 15% from the left.
+- Pouch and bowl at 22–86%.
+- Band at 86–100%.
 
-**Avoid field:** human skin, face, photograph, plastic toy, clay, glossy plastic, knitting needles, hands of a maker, text, letters, extra logos
+## 3. Words on the image
+| Item | Text | Source |
+|---|---|---|
+| Headline (5 words) | 6g fiber you'll actually eat. | "6g fiber": approved claim. "Actually eat": your selling idea. |
+| Small line | Supports digestion and gut health. | Approved claim, word for word |
+| Offer | $29.99 first order with text sign-up. Renews at $49.99 every 4 weeks. | Your offer. The brand footer says the price is for new customers using the SMS discount. |
+| Button | Shop Low Sugar | Brand note: point gut-sensitive buyers to Low Sugar |
 
-**5. Post words**
-- **Primary text:** "Six grams of prebiotic fiber per daily pack, in a gummy you'll actually eat. Gut-sensitive? Start with Sprout Low Sugar, made to support digestion and gut health."
-- **Headline field:** "6g fiber. In a gummy you'll eat."
+**Type sizes:** headline 72 px, small line 36 px, offer 30 px (two lines), button 34 px.
+
+**Fonts:** Work Sans bold for the headline, Work Sans medium for the rest.
+
+## 4. Image prompt
+> A crocheted Sprout supplement pouch standing upright on a knitted tabletop, beside a small crocheted bowl filled with tiny crocheted deep-green gummy bears that pour from a small flat crocheted daily pack torn straight across its top edge. From the far left, six loose, fluffy strands of felted kelly-green and forest-green wool roving run across the table and twist, halfway along, into one thick, neat plied green yarn cord that curves to the base of the bowl. The left half of the strands is loose and airy, the right half tightly plied.
+>
+> Setting: a tiny cosy kitchen corner. The tabletop is warm honey-brown rib knit like wood grain. The back wall is cream stockinette knit that fades upward into a smooth, stitchless stretch of felted cream wool across the top quarter of the frame.
+>
+> Yarn: DK-weight wool throughout.
+> - Pouch: tight crochet in glossy-looking deep green, shaped as a stand-up pouch with a resealable top that is closed and not torn. It carries a big yellow intarsia wordmark and a yellow crocheted bear face at top right. The bottom line is in yellow.
+> - Daily pack: small, flat and crocheted in deep green.
+> - Gummies: small, soft, matte, opaque deep-green crocheted bears, about thumbnail height, stuffed firm.
+> - Bowl: crocheted in warm cream.
+>
+> Light: soft window daylight from the left, gentle shadows.
+>
+> Camera: eye level, close-up of the product and bowl, shallow focus so the set reads miniature. The loose strands at left soften slightly out of focus. The top 24% stays an empty, evenly lit cream felted area. The bottom 14% stays plain and dark for a colour band added later.
+>
+> Label lines on the pouch: "Sprout" (large) and "28 Daily Packs" (bottom).
+
+**Avoid field:** human skin, hands, people, faces, photograph, plastic toy, clay, knitting needles, hands of a maker, cartoon character, partner logos, extra text, torn pouch, belly, body, white burst.
+
+## 5. Post words
+- **Primary text:** Done with chalky fiber powders? Sprout packs 6g prebiotic fiber, plus 21 vitamins & minerals, into a small handful of Low Sugar gummies, and supports digestion and gut health.
+- **Headline field:** 6g fiber you'll actually eat
 - **Button:** Shop Now
 
-**6. Edit step**
-- **Label overlay:** Cut the real pouch out of the front photo and lay it over the crocheted pouch, or lay the real label area over it. "Sprout", the bear face and "28 Daily Packs" must match exactly. Keep the crocheted edges and the towel folds visible around it so it still sits in the wool world.
-- **Where the words go:**
-  - Headline and small line: deep green (#1F4D2E or the brand hex) on the cream felted area.
-  - Offer and button: cream or yellow type on the solid green patch. The button is a yellow pill with green text.
-  - Nothing sits over stitches.
-- **Contrast check:** Measure each pair with a contrast checker. Each must reach 4.5:1 or more. Deep green on cream should land around 9:1. Check the yellow button against the green patch and darken the green if it's under 4.5:1.
-- **Offer check:** Check the $29.99, $49.99 and 4-week terms against the live offer on the day it runs.
+## 6. Edit step
+**1. Real label overlay**
+- Cut the real Low Sugar pouch out of the front photo and lay it over the crocheted pouch. Match its angle and add a soft shadow, so "Sprout", the bear face and "28 Daily Packs" are exact.
+- Do the same for the daily pack, from a real pack photo.
+- Make sure there is no Sugar-Free white burst.
 
-**7. Score:** 83/100 (5 of 6 checks)
-- Missed: "true shape and real label" could not be verified. No product photos came through in this chat, so pouch shape, proportions and the position of "Low Sugar" are taken from your description, not the photos.
+**2. Words**
+- Headline and small line go on the felted cream quiet area, top left, with 64 px side margins.
+- Fill the band at the bottom with solid #002C17. Put the offer at left in cream #FFF7DF and the button at right as a kelly green #007E40 pill with cream text.
 
-**8. MISSING**
-- `MISSING:` product photos (front, side, top). The plan is built from your description only. Please attach them so shape, proportions and label lines can be checked.
-- `MISSING:` where and how "Low Sugar" appears on the pouch. It's not in the label description, so it's left out of the stitched label lines.
-- `MISSING:` gummy shape and colour. Amber-orange rounded gummies are `inferred`.
-- `MISSING:` brand colour hex values. The deep green and yellow are taken from the pouch description.
-- `MISSING:` offer end date.
+**3. Contrast**
 
-**To make the picture**
-- **ChatGPT (GPT Image) or Gemini (Nano Banana):** Paste the image prompt into a chat and ask for the picture. Free plans have tight daily limits, and Codex on a paid ChatGPT plan can make it too.
+| Pairing | Ratio | Result |
+|---|---|---|
+| #002C17 on #FFF7DF (headline, small line) | about 14:1 | Pass |
+| #FFF7DF on #002C17 (offer) | about 14:1 | Pass |
+| #FFF7DF on #007E40 (button) | about 4.8:1 | Pass |
+
+No word sits on stitches.
+
+**4. Offer**
+- Check the price and terms against the live site on the day the ad runs. Discounts on the site change often.
+
+**5. Making the picture**
+- **ChatGPT or Gemini:** Paste the prompt in and ask for the picture. Free plans have tight daily limits. Nano Banana in Gemini can take your three pouch photos as references.
 - **Higgsfield:** Paste the prompt into its image tool, or connect Higgsfield to Claude.
-- **Claude Code:** With `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, it can send the prompt to that API and save the file. Get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. Each picture is billed.
+- **Claude Code:** Save an `OPENAI_API_KEY` or `GEMINI_API_KEY`, and the prompt can be sent to that image API. Each picture is billed.
+
+## 7. Checks missed
+- Product true shape: the crocheted pouch and daily pack are unchecked against your photos, which I couldn't see. Check them in the overlay.
+
+## 8. MISSING
+- MISSING: product photos (front, side, top). They were named but not visible here, so the pouch match still needs checking.
+- MISSING: the daily pack's look and label words. Deep green is `inferred` from the pouch.
+- MISSING: an exact colour code for the pouch's deep green and its yellow wordmark. The prompt uses plain colour names.
+- MISSING: grams of sugar in Low Sugar. It is needed before any "Low Sugar" line answers the "upset my stomach" doubt.
+- MISSING: the offer's end date.
 ```

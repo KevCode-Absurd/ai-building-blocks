@@ -1,25 +1,25 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 7 of 7 met. Invented facts: 0.
 
-A careful, usable script: one glazing turn that honestly shows listed greens adding up to one pack, the exact approved claim, a correctly conditioned offer with renewal price, and sensible rejections (no 'whole shelf' equivalence, no energy glow, no competitor dig). The only soft spots are art-direction guesses on wordmark placement and pouch scale, both already flagged as MISSING with the real label laid over in editing.
+A usable, careful script that sticks to the given facts, keeps the offer terms honest (text sign-up, renewal price) and avoids every banned claim while painting only listed greens. Small paint-plan wobble: the pouch is already deep green in shot 2 before the turn glazes it to forest green, which the video block may need to reconcile.
 
 ## Judge list
 
 - Met: The show plan's implied sentence is something your claims let you say.
-  "Many of these listed ingredients go into one Sprout pack." Source: approved "60+ ingredients… in 1 pack" plus the given greens list.
+  "Many plant ingredients, including these greens, are in this one pack." sourced to the approved 60+ ingredients claim and the given list.
 - Met: There is one turn, and its technique fits the job.
-  "Show job: Build. Technique: Glazing" — one marked turn (shot 3, 8–11 s), greens overlapping into the pouch silhouette.
+  "Show job: Build. Technique: Glazing"; line 3 marked TURN, "One glaze per named green is laid across the pouch outline".
 - Met: Every painted ingredient is on your list, and nothing shows a body changing.
-  Painted only "Kale, spinach, broccoli, wheatgrass, spirulina, chlorella" (all in input); rejects "Any figure brightening, or an 'energy' glow".
-- Met: No shot mixes two opposite colors, so nothing turns brown.
-  "Beet, acai, goji, pomegranate... reds and purples are opposites of the greens and would go brown" — rejected; palette is greens plus yellow.
+  Kale, spinach, broccoli, wheatgrass, spirulina, chlorella all in input; "A glow or bright wash over a figure" rejected.
+- Met: No shot mixes two opposite colors.
+  "Beet, acai, goji, pomegranate ... red or purple next to green mixes to mud" rejected; "No reds or purples anywhere."
 - Met: The product has the crispest edges and only real label words.
-  "wet-on-dry, with the crispest edges on the sheet"; painted words only "Sprout" and "28 Daily Packs", both given.
-- Met: The narration fits the length at a calm pace, with 5 words or fewer over the turn.
-  43 words counted correctly for 30 s (budget ~65); turn narration "(none)", 0 words.
+  "These are the crispest edges on the sheet"; painted words "Only 'Sprout' and '28 Daily Packs'", both in input.
+- Met: Narration fits the length at a calm pace, with 5 words or fewer over the turn.
+  57 words verified by count = ~26s; turn line "Kale. Spinach. Spirulina. Chlorella." (4 words) over 3 seconds.
 - Met: The cast note makes one choice and gives a reason you agree with.
-  "Hands only. The ad is about what goes into one pack, and the product needs handling: tearing the daily pack..."
+  "Hands only. The one action that sells the daily habit is tearing the pack and tipping out the bears".
 
 ## What went in
 
@@ -48,77 +48,91 @@ every 4 weeks.
 ```text
 ## 1. Show plan
 
-- **Selling idea:** Sixty-plus ingredients, including a long list of greens, add up to one small daily pack.
-- **Fit:** Good. "Many parts adding up" can't be filmed plainly. A shelf of produce beside a pouch reads as a size comparison, not as contents.
-- **Show job:** **Build**.
-- **Technique:** **Glazing** on cold-press paper. Six loosely painted greens sit on a shelf line. Transparent forest-green layers are swept over the dry paint toward the centre. Each overlap reads darker, and the darkest overlap at the centre forms the pouch's silhouette.
-- **What changes:** Many separate greens become one deep-green pouch shape.
-- **Implied sentence:** "Many of these listed ingredients go into one Sprout pack."
-- **Source:** Approved claim "60+ ingredients… in 1 pack" plus the ingredient list (kale, spinach, spirulina, chlorella, wheatgrass, broccoli).
-- **Paper:** Cold-press.
-- **Texture:** None. Glazing stays clean.
+- **Fit:** Watercolour suits this. The idea is about what's inside the pack and many parts adding up, and a camera can't film that. It can't show how the gummies really feel or taste, so the bears stay simple.
+- **Selling idea:** A whole shelf of greens goes into one small Sprout pack.
+- **Show job:** Build.
+- **Technique:** Glazing on cold-press paper. Each listed green is laid as one see-through glaze, wet-on-dry, over the pouch shape. Each overlap reads darker until the layers settle into the pouch's forest green.
+  - The "Sprout" wordmark and bear face are left as bare paper under every glaze. Yellow goes in last.
+  - Transparent paint can't put yellow over green, so this order is needed.
+- **What changes:** Separate greens from the painted shelf stack into one pouch.
+- **Sentence it implies:** "Many plant ingredients, including these greens, are in this one pack."
+- **Source:** The approved claim "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack, plus the ingredient list you gave (kale, spinach, spirulina, chlorella).
+- **Paper:** Cold-press with a warm cream tint near #FFF7DF. Bare paper is the light.
+- **Texture:** None. No granulation, salt or dry brush, because grainy marks would echo the buyer's "gritty/chalky" complaint.
 - **Palette:**
   - Forest green #00582D
-  - Sap or yellow-green
-  - Blue-green (spirulina and chlorella)
-  - Sunflower yellow #FFCC2E, on the product only
-  - Warm cream #FFF7DF, used as the paper tone, never painted as white
-- **Light:** Bare paper is the brightest light. It is left for the pouch's gloss streak and the bears' highlights.
+  - Sap green
+  - Blue-green (spirulina, chlorella)
+  - Yellow-green (wheatgrass)
+  - Sunflower yellow #FFCC2E (wordmark and bear face only)
+  - No reds or purples anywhere.
+- **Product check:** No product photo was given. The pouch, label and bears are painted from your description only and couldn't be checked against the real product.
 
-## 2. Script
+## 2. Script (about 30 seconds)
 
-Clips are 8 s, because the tool length is unknown. Clip 3 is trimmed to 6 s in the edit. Every sentence sits inside one clip. Cuts between all shots.
+| # | Time | Clip | Narration | Picture | What moves | Colours |
+|---|---|---|---|---|---|---|
+| 1 | 0:00–0:03 | 1 | "You've tried the greens powders." | A settled painted shelf on cream paper. It holds loose kale leaves, a spinach bunch, a broccoli floret, wheatgrass blades and blue-green spirulina in plain, unlabelled jars. | A small wet edge feathers out along one kale leaf. | Sap green, forest green, blue-green, cream paper |
+| 2 | 0:03–0:08 | 1 | "Sprout puts a whole shelf of greens into one small pack." | The Sprout pouch is already on the sheet, right of the shelf, painted wet-on-dry. The shape is a crisp stand-up pouch, glossy deep green, with the "Sprout" wordmark and bear face left as bare paper. | Nothing else moves. The pouch sits dry and still. | Forest green #00582D, cream paper |
+| **3 TURN** | 0:08–0:11 | 2 | "Kale. Spinach. Spirulina. Chlorella." (4 words) | **Build.** One glaze per named green is laid across the pouch outline, each with a hard dry edge. | Each overlap darkens until the stack becomes the pouch's forest green. The shelf behind pales as each green leaves it. | Sap green, blue-green, yellow-green into forest green |
+| 4 | 0:11–0:16 | 2 | "Sixty-plus ingredients. Twenty-one vitamins and minerals. Six grams of fiber." | The pouch is settled and dry. Yellow goes into the reserved wordmark "Sprout" and the bear face top right, and "28 Daily Packs" sits at the bottom. These are the crispest edges on the sheet. Edit overlay: "60+ ingredients, 21 vitamins & minerals, 6g fiber, in 1 pack" | The last yellow wash dries flat. | Forest green, sunflower yellow #FFCC2E, cream |
+| 5 | 0:16–0:20 | 3 | "All in one daily pack." | Loosely painted hands tear a daily pack straight across the top. | The tear runs across, left to right. | MISSING: daily pack colours |
+| 6 | 0:20–0:24 | 3 | "As small green gummy bears. No scoop. No shaker." | A few small, opaque, deep-green gummy bears tip onto cream paper beside the pouch. They are flat, smooth shapes with no texture marks. | The bears settle into place. | Forest green, deeper green, cream |
+| 7 | 0:24–0:30 | 4 | "First order, twenty-nine ninety-nine with text sign-up. Then forty-nine ninety-nine every four weeks." | The settled, dry painting shows the pouch, a few bears and a pale shelf behind. Edit overlay: "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." MISSING: end date. | Nothing moves. The paint is dry. | Full palette, settled |
 
-| Clip | Shot / time | Narration | Picture | What moves | Colours |
-|---|---|---|---|---|---|
-| 1 | 1 · 0–3 s | "Gave up on greens powders?" (5) | Warm-cream paper. A hand pushes a plain shaker bottle to the edge of a loosely washed counter. The shaker is clean, with no grit texture. | A small wet edge on the counter wash creeps outward. The shaker slides out of frame. | Forest green, pale yellow-green, cream paper |
-| 1 | 2 · 3–8 s | "Kale, spinach, broccoli, wheatgrass, spirulina, chlorella." (6) | A long shelf line painted wet-on-dry. Kale, spinach, broccoli and wheatgrass sprigs sit on it, plus two small bowls of blue-green spirulina and chlorella. | Each item gets a last brush-touch as it's named, left to right. | Sap green, forest green, blue-green, yellow-green |
-| 2 | **3 · 8–11 s · THE TURN** | *(none)* | **Glazing:** transparent forest-green layers sweep from both ends of the dry shelf toward the centre. | Each overlap darkens. The deepest overlap gathers at centre into a pouch silhouette. | Forest green over the greens. No new hues. |
-| 2 | 4 · 11–16 s | "Sixty-plus ingredients. Twenty-one vitamins and minerals." (6) | Cut to the finished pouch at centre, at its true shape, wet-on-dry, with the crispest edges on the sheet. The glazed shelf sits faint behind it. Label details:<br>• **"Sprout"** wordmark in sunflower yellow, top right of centre<br>• **Yellow bear face**, top right<br>• **"28 Daily Packs"** at the bottom<br>• Glossy bare-paper streak down one side<br>The yellow marks are already-reserved paper glazed yellow. They are finished before the shot and not revealed on camera. | Only the faint shelf wash behind keeps drying, so its edge lightens slightly. | Forest green, sunflower yellow, cream paper |
-| 3 | 5 · 16–19.5 s | "Six grams of fiber, in one pack." (7) | Hands only. They tear a daily pack straight across the top, never down the side. Small opaque deep-green gummy bears tip onto cream paper. | The bears land. Their crisp darkest-value shapes each have a bare-paper highlight. | Forest green (darkest value), cream paper |
-| 3 | 6 · 19.5–22 s | "Small gummies. Nothing to stir." (5) | One hand picks up a single bear. | The hand lifts the bear. | Forest green, cream paper |
-| 4 | 7 · 22–30 s | "Twenty-nine ninety-nine first order with text sign-up. Renews at forty-nine ninety-nine every four weeks." (14) | A settled, dry painting: the pouch, the torn daily pack and a few bears, with the faint shelf behind. Nothing wet. | Nothing in the paint. On-screen text fades in: **"$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks."** | Forest green, sunflower yellow, cream paper |
-
-- **Words:** 43 total, against a budget of about 65 for 30 s, which keeps the pace calm.
-- **Words over the turn:** 0.
-- **Runtime:** 30 s.
-- **Clip split:** 1 (0–8), 2 (8–16), 3 (16–22), 4 (22–30).
-- **Painted words:** Only "Sprout" and "28 Daily Packs". The full real label is laid over in editing from the photo.
-- **Offer text:** Added in editing and checked against the live offer that day.
+- **Word count:** 57 words. That's about 26 seconds at a calm 2.2 words a second, which fits 30 seconds with pauses.
+- **Clip split:** The clips are 8 seconds (assumed), and each sentence sits inside one clip.
+  - Clip 1, 0–8s: lines 1–2
+  - Clip 2, 8–16s: lines 3–4
+  - Clip 3, 16–24s: lines 5–6
+  - Clip 4, 24–30s: line 7
+- **Painted words:** Only "Sprout" and "28 Daily Packs". The full label goes on in editing from the real photo.
 
 ## 3. Claims painted
 
 **Kept:**
-- **Six greens gathering into one pouch:** "These listed greens are among what's in one pack." Source: the ingredient list and "60+ ingredients… in 1 pack."
-- **Narrated "60+ ingredients, 21 vitamins & minerals, 6g fiber, in one pack":** Source: the approved claim, word for word.
-- **Torn daily pack with gummy bears:** "It's gummy bears in daily packs." Source: product facts.
-- **"Nothing to stir":** "No mixing needed." Source: product facts (gummy format).
-- **Shaker pushed aside:** "You may have set powders aside." Source: the buyer brief. This is not a claim about Sprout.
+
+| Change | What a viewer takes from it | Source |
+|---|---|---|
+| Greens glazed into the pouch (turn) | Kale, spinach, spirulina and chlorella are in the pack. | Ingredient list |
+| Shelf stacking into one pouch | Many plant ingredients are in one pack. | Approved "60+ ingredients… in 1 pack" |
+| Wheatgrass and broccoli on the shelf | These are in the mix. | Ingredient list |
+| Bears tipped from the daily pack | The product is gummy bears, 28 daily packs. | Product facts |
+| "No scoop. No shaker." | It isn't a powder you mix. | Product form (gummies) |
+
+The shelf uses unlabelled jars and loose greens with no counted heaps. It shows variety only, not amounts or vegetable servings.
 
 **Rejected:**
-- **Beet, acai, goji, pomegranate:** They are on the list, but their reds and purples are opposites of the greens and would go brown.
-- **Gritty or chalky residue in the shaker:** By contrast it implies "Sprout isn't gritty or chalky," which is not an approved claim. The shaker stays clean.
-- **"A whole shelf of greens" as narration, or the shelf shrinking 1:1 into the pack:** It implies the pack equals eating that produce, which is not approved.
-- **"Low Sugar":** It is not among the given label lines or approved claims. It is not painted or said.
-- **Any figure brightening, or an "energy" glow:** It is a banned results claim. It is not painted.
+
+- **Beet, acai, goji, pomegranate:** These are on the list, but red or purple next to green mixes to mud. Leaving them out also avoids a red and green mix in any shot.
+- **Gritty powder turning into a smooth gummy:** This is a before-and-after. Its implied sentence, "Sprout isn't gritty or chalky," has no approved claim behind it.
+- **Granulation or dry-brush texture anywhere:** It reads as grit.
+- **A glow or bright wash over a figure:** It would imply energy, wellness or immunity results, which are banned.
+- **"Organic" in paint or narration:** It's unclear whether it covers every ingredient.
+- **"Low Sugar" painted on the pouch:** It wasn't given as a front label line, and no sugar figure was given.
+- **The word "fix":** Not used anywhere.
 
 ## 4. Cast note
 
-**Hands only.** The ad is about what goes into one pack, and the product needs handling: tearing the daily pack straight across the top and picking up a bear. A full figure would add nothing to a contents story. It could also read as a person showing a result, such as energy, which is banned.
+**Hands only.** The one action that sells the daily habit is tearing the pack and tipping out the bears, and that needs hands. A full figure would pull the ad away from what's inside the pack. A figure's face could also suggest how they feel or that the product worked, which the banned claims rule out.
 
 ## 5. Missing
 
-- MISSING: product photo. The pouch's shape, colours and label couldn't be checked against the real product.
-- MISSING: pouch and daily-pack size, needed to paint "small" at true scale.
-- MISSING: full ingredient list. Only the listed greens are painted.
-- MISSING: confirmation that "in 1 pack" means one daily pack. The script assumes it does.
-- MISSING: offer end date and cancellation terms for the renewing subscription.
-- MISSING: narrator voice. A calm, warm narrator is assumed (`inferred`).
-- MISSING: buyer moment. The shaker set aside is drawn from "gave up greens powders" (`inferred`).
+- MISSING: Front product photo. The pouch, label and bears are painted from your description only.
+- MISSING: Pouch size.
+- MISSING: How the daily pack looks (colours, print, size). Line 5 can't be painted true without it.
+- MISSING: How many bears are in one daily pack.
+- MISSING: Whether "Low Sugar" is one of the biggest front label lines.
+- MISSING: The full ingredient list. You gave "includes," so only the named greens are painted.
+- MISSING: Whether "organic" applies to all ingredients.
+- MISSING: The offer's end date for the on-screen text.
+- MISSING: The narrator's voice and anything the brand never shows.
+- MISSING: The clip length your video tool makes. 8 seconds was assumed.
+- MISSING: An approved taste or texture claim, if you want to answer "gritty/chalky" directly.
+- Buyer moment: none given. The script uses "after giving up on greens powders" from the brief (inferred).
 
-## 6. Score
+## 6. Checks missed
 
-**86 / 100** (6 of 7 checks passed: 6 ÷ 7 × 100 = 85.7, rounded to 86)
-
-- **Missed: product true colours and shape.** These are painted from the description only. They can't be confirmed without a product photo.
+CHECKS MISSED:
+- Product true colours and label: checked against your description only, not a photo. Line 5's daily pack can't be painted true until a photo arrives.
 ```

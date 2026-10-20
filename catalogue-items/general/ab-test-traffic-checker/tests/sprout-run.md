@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-All per-ad and group sums check out against the input, the sizing uses the skill's stated 20% default, and the dates, margin and daily-visit gaps are flagged as MISSING rather than guessed. The owner gets a clear answer: judge by revenue per visitor and renewals, the 61%-off traffic is the weak half at $0.63 per click, and a four-week test can't finish so fix the discount mismatch and compare before/after.
+Every sum checks out against the input numbers, gaps are marked MISSING rather than guessed, and the owner gets a clear answer: judge by revenue per visitor per ad group, fix the discount mismatch rather than test it, and a 20% test won't finish in four weeks. The best-case 570/day ceiling is clearly flagged as a ceiling, and the readiness score is honestly capped at 'at most 53'.
 
 ## Judge list
 
 - Met: Revenue per visitor is shown, or it says exactly why it can't be worked out.
-  "revenue per visitor (RPV) = revenue / clicks" ... "$24,668 / 23,941 = $1.03"; RPV shown for every ad group.
+  "24,668/23,941 = $1.03" in the All row, plus per-ad and grouped revenue per visitor columns.
 - Met: The sample-size sum is written out, with the lift it uses named.
-  "Lift used: 20% relative, the default for a small store... 16 × 0.0260 × 0.974 / (0.0260 × 0.20)² ... ≈ 14,973 visitors per version"
+  "Lift used: 20% relative (rule of thumb)... = 16 × 0.02602 × 0.97398 / (0.02602 × 0.20)² ... ≈ 14,973 visitors per version"
 - Met: Every figure is marked "your data" or "rule of thumb". Nothing comes from an industry average.
-  Table prefaced "*(your data)*"; sizing marked "*(rule of thumb, applied to your data)*"; bound marked "Best-case bound from your data". No industry average used.
+  Table header "all figures your data"; sizing marked "rule of thumb"; p marked "your data". No external benchmark used.
 - Met: The verdict says how many weeks a test would take, or what's missing to say.
-  "`MISSING: daily visits`" plus "needs at least 29,946 / 570 ≈ 53 days, which rounds up to 8 weeks or more"
+  "Days needed: MISSING: daily visits... 29,946/570 = 53 days, which rounds up to 8 weeks" as a best-case ceiling.
 - Met: Nothing is called "significant" before the planned sample is reached.
-  The word "significant" never appears; "Before and after is a comparison, not proof."
+  "this is not proof" repeated; no use of "significant" anywhere.
 
 ## What went in
 
@@ -43,56 +43,90 @@ number should we judge the page by?
 ## What came out
 
 ```text
-**Window**: `MISSING: start and end dates`. Each ad ran 14 to 42 days, so the full window was at least 42 days. *(your data)*
+**Window**
+MISSING: exact dates. Each ad ran 14 to 42 days (your data). The full window is at least 42 days, because the longest ad alone ran 42 days.
 
-**Numbers table**: visits are ad clicks, not store sessions. `MISSING: margin`, so there is no profit per visitor.
+**Numbers table** (visits = ad link clicks, not store sessions; all figures **your data**)
 
-Sums used: conversion rate = purchases / clicks; average order value (AOV) = revenue / purchases; revenue per visitor (RPV) = revenue / clicks. *(your data)*
-
-| Group | Clicks | Orders | Conv. rate | AOV | RPV |
+| Group | Visits | Orders | Conv. rate | Avg order value | Revenue / visitor |
 |---|---|---|---|---|---|
-| T1 Tummy (pain) | 4,950 | 198 | 4.00% | $42.10 | $1.68 |
-| H1 Habit | 1,300 | 44 | 3.38% | $45.80 | $1.55 |
+| T1 Hot girl tummy | 4,950 | 198 | 198/4,950 = 4.00% | 8,336/198 = $42.10 | 8,336/4,950 = $1.68 |
+| P1 Too expensive (61%) | 5,530 | 151 | 2.73% | $34.20 | $0.93 |
+| P2 Dont pay full (61%) | 5,569 | 50 | 0.90% | $31.10 | $0.28 |
+| S1 Trusted by 1M (61%) | 1,600 | 38 | 2.38% | $33.00 | $0.78 |
+| H1 One step habit | 1,300 | 44 | 3.38% | $45.80 | $1.55 |
 | K1 Fiber kids | 2,030 | 63 | 3.10% | $48.60 | $1.51 |
 | F1 Fiber question | 1,524 | 46 | 3.02% | $40.39 | $1.22 |
 | W1 Muscle weight loss | 900 | 23 | 2.56% | $44.52 | $1.14 |
-| P1 Too expensive (61%) | 5,530 | 151 | 2.73% | $34.20 | $0.93 |
-| S1 Trusted by 1M (61%) | 1,600 | 38 | 2.38% | $33.00 | $0.78 |
 | R1 Runner | 538 | 10 | 1.86% | $40.00 | $0.74 |
-| P2 Don't pay full (61%) | 5,569 | 50 | 0.90% | $31.10 | $0.28 |
-| **61%-off ads (P1+P2+S1)** | 12,699 | 239 | 1.88% | $33.36 | **$0.63** |
-| **All other ads** | 11,242 | 384 | 3.42% | $43.48 | **$1.49** |
-| **Total** | 23,941 | 623 | 2.60% | $39.60 | **$1.03** |
+| **"61% off" ads (P1+P2+S1)** | 12,699 | 239 | 239/12,699 = 1.88% | 7,973/239 = $33.36 | 7,973/12,699 = $0.63 |
+| **Other ads** | 11,242 | 384 | 384/11,242 = 3.42% | 16,695/384 = $43.48 | 16,695/11,242 = $1.49 |
+| **All** | 23,941 | 623 | 623/23,941 = 2.60% | 24,668/623 = $39.60 | 24,668/23,941 = $1.03 |
 
-Total sums: 623 / 23,941 = 2.60%; $24,668 / 623 = $39.60; $24,668 / 23,941 = $1.03.
+Profit per visitor: MISSING: margin.
 
 **Read**
-- **Which number to use**: judge the page by revenue per visitor, then by how many first orders renew at $49.99. Do not judge it by conversion rate. A cheaper first box can win first orders and lose on renewals.
-- **The 61%-off ads are 53% of clicks and the weakest group.** They earn $0.63 per visitor against $1.49 for the rest. Both their conversion rate and their order value are lower. P2 is the worst at $0.28.
-- **The ad-to-page discount mismatch is a likely cause, but not proven.** These ads also reach a different, price-led audience. The weak numbers fit the mismatch, but they don't isolate it.
-- **The traffic mix sets the overall rate.** Moving spend toward or away from the 61% ads would change the total 2.60% without any change to the page.
-- **Order value is unexplained.** AOV of $39.60 is above the $29.99 first box. `MISSING:` whether revenue counts tax, full-price orders or multiple units. Use net sales plus shipping paid.
-- **Clicks overstate visits.** Some people leave before the page loads, so true per-visit rates are higher. `MISSING: analytics sessions for the page`.
+- The "61% off" ads bring 53% of clicks (12,699/23,941) but only 38% of orders (239/623).
+- Those ads earn $0.63 per visitor against $1.49 for the other ads. Their visitors buy less often (1.88% vs 3.42%) and spend less per order ($33.36 vs $43.48).
+- One possible cause is the page showing 52% and 55% after the ad promised 61%. Different hooks and audiences could also explain the whole gap, so this is not proof.
+- The site-wide $1.03 per visitor depends on this ad mix. Moving spend between ads shifts it without any page change.
+- Still unknown:
+  - store sessions (ad clicks overcount visits)
+  - whether revenue includes tax
+  - refunds
+  - renewal rate at $49.99
+  - dates
+
+**Which number to judge the page by**
+- **Revenue per visitor on the first order, shown per ad group.** A plan box change can push people between plan sizes. That moves order value as well as conversion rate, so conversion rate alone can mislead.
+- **Then the renewal rate at $49.99.** A box that wins first orders at $29.99 but loses renewals hasn't won. Hold the call for at least one renewal cycle (add-on rule).
 
 **Test sizing**
-- **Lift used**: 20% relative, the default for a small store. *(rule of thumb)* No one named a lift worth acting on.
-- **Sum**: 16 × 0.0260 × 0.974 / (0.0260 × 0.20)² = 0.4055 / 0.00002708 ≈ **14,973 visitors per version**. *(rule of thumb, applied to your data)*
-- **Total for two versions**: **29,946 visitors**.
-- **This is the floor.** Judging on RPV needs more visitors, because order sizes vary. Judging on renewals also needs at least one renewal cycle to pass.
-- **Days at current traffic**: `MISSING: daily visits`.
-- **Best-case bound from your data**: the window was at least 42 days, so traffic was at most 23,941 / 42 ≈ 570 clicks a day. At that rate the test needs at least 29,946 / 570 ≈ 53 days, which rounds up to **8 weeks or more**.
-- **What four weeks could detect**: at that best-case rate, four weeks only gives enough visitors to spot a lift of about 27% or more.
+- Lift used: 20% relative (**rule of thumb**). No one named the smallest lift worth acting on.
+- p = 2.60% (**your data**, all ads).
+- Formula: 16 × p × (1 − p) / (p × lift)²
+  - = 16 × 0.02602 × 0.97398 / (0.02602 × 0.20)²
+  - = 0.4055 / 0.00002708
+  - ≈ **14,973 visitors per version**
+  - × 2 versions = **29,946 total** (**rule of thumb**)
+- Days needed: MISSING: daily visits.
+  - The best possible case is 23,941 clicks / 42 days = 570 a day, since the window is at least 42 days.
+  - At that rate the test takes 29,946/570 = 53 days, which rounds up to **8 weeks**.
+  - Real traffic is likely lower.
+- This is the floor. Judging on revenue per visitor needs more visitors, because order sizes vary.
+- Bolder options:
+  - 30% lift: 0.4055/(0.02602×0.30)² ≈ 6,655 per version, 13,310 total. That is at least 23 days, about 4 weeks, but only at the best-case rate.
+  - 40% lift: about 3,743 per version, 7,486 total.
 
-**Verdict**: **Ship and watch.** The test can't finish in about four weeks even at best-case traffic.
+**Verdict**
+**Ship and watch.** A 20% test can't finish in four weeks even at the best-case traffic.
+- A bolder change sized at 30% or more could fit, but only if the real daily visits turn out close to 570.
+- The 61% vs 52%/55% mismatch is a fix, not an experiment. Make the ads and the plan box show the same discount, then watch.
+- If you do test later:
+  - Fix the sample first and don't stop early.
+  - Keep a 50/50 split with close visitor counts.
+  - Send no sitewide sale or text blast to only one version.
 
-Making the page's discount match the ads is an obvious fix, and arguably a required one. It isn't something to test. Testing a page that contradicts the ad's claim isn't a fair test. If you still want a test later, test a bolder change aimed at a lift of 27% or more.
-
-**Test readiness score**: `MISSING: daily visits`.
-
-For reference only: 28 × 570 = 15,960, and 15,960 / 29,946 × 100 ≈ 53. That is an upper bound, not a score.
+**Test readiness score**
+MISSING: daily visits.
+Ceiling at best-case traffic: 570 × 28 = 15,961 / 29,946 × 100 = 53.3, so **at most 53**.
 
 **Next three actions**
-1. **Export page sessions and exact dates from your analytics tool.** This replaces the 570-a-day ceiling with a real daily figure for the 29,946-visitor test. It also puts actual visits in place of clicks.
-2. **Make the plan box and the ads show the same discount, then compare before and after.** Compare RPV for the 61%-off group (now $0.63) and the other ads (now $1.49) separately. Name the click mix in both periods (now 53% / 47%). Before and after is a comparison, not proof.
-3. **Track renewals at $49.99 by ad group for at least one cycle, and add margin.** Do this before calling any change a win. A first-order gain on $29.99 boxes counts only if renewals hold. With margin you can also report profit per visitor alongside RPV.
+1. **Match the discount.** Make the "61% off" claim and the plan box show the same number. Then track the 61% ads' $0.63 revenue per visitor against the other ads' $1.49 for 4 weeks, naming each period's click mix (currently 53% discount ads). This is not proof.
+2. **Get real traffic numbers.** Export store sessions and exact ad dates for this page. That replaces the 570-a-day ceiling with real daily visits and turns the score from "at most 53" into an actual score.
+3. **Get renewal and money facts.**
+   - Pull the renewal rate at $49.99 and the margin. Then judge on profit per visitor, not the $1.03 first-order revenue per visitor.
+   - Check whether the $24,668 includes tax or excludes refunds.
+
+**Gaps to fill later**
+- MISSING: dates
+- MISSING: daily visits
+- MISSING: store sessions
+- MISSING: margin
+- MISSING: renewal and cancel rates
+- MISSING: tax, shipping and refund treatment in revenue
+- MISSING: device split
+- MISSING: new vs returning split
+
+Want to plan the next ad test with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer)? Bring this report. Or tell me what you'd rather do next.
 ```

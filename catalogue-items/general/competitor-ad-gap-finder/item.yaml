@@ -31,8 +31,8 @@ credits:
   - {title: "Building Distinctive Brand Assets", by: "Jenni Romaniuk", url: "https://marketingscience.info/building-distinctive-brand-assets/", used: "the cover-the-logo check on each card"}
   - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "238 words a minute, so the 7-word headline in each brief"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

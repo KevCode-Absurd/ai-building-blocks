@@ -120,7 +120,7 @@ for (const r of roster.minds) {
   const page = {
     headline: m.name,
     subhead: m.summary,
-    explain: `${m.known_for}\n\nThis is an AI playing ${first} from their public work: ${m.sources.length} public sources, listed below, written into a data set of what they knew and believed and a profile of how they think and talk. It isn't ${first}, and ${first} hasn't endorsed it.${m.living ? ` ${first} is alive, so views can change; it was last checked on ${String(m.last_checked).slice(0, 10)}.` : ""}`,
+    explain: `${m.known_for}\n\nThis is an AI playing ${first} from public work: ${m.sources.length} public sources, listed below, written into a data set of what they knew and believed and a profile of how they think and talk. It isn't ${first}, and ${first} hasn't endorsed it.${m.living ? ` ${first} is alive, so views can change; it was last checked on ${String(m.last_checked).slice(0, 10)}.` : ""}`,
     when: m.use_cases,
     you_give: ["Your task or question", "Your facts, numbers or draft (optional; it asks once if they matter)", "A role for them, such as \"my investor\" (optional)"],
     you_get: [`The answer or the work, in ${first}'s voice, using their ideas by name`, "Anything that goes beyond their public record, marked", "One suggested next step"],

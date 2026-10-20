@@ -1,23 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-A clean, usable 25-second script: the tub pile-up is a real sketch escalation, the product lands once with an approved claim, and the offer terms on screen are complete including the renewal price and first-order-only guarantee. Word count (52 vs 55) and timing math check out, nothing is invented, and gaps like the offer end date are flagged rather than guessed.
+A tight, usable 25-second script: the tub-count game is funny, stays in one cupboard, lands Sprout once with one approved claim and the exact supplied offer terms on screen, and the 52-word count checks out. The owner only needs to add the offer end date and confirm site wording; one small nit is the claims list lacks an explicit "Not used" line for the ingredient-count claim.
 
 ## Judge list
 
 - Met: The question is about the viewer's habit, not the product, and the last rung answers it.
-  "How many quit greens tubs fit one cupboard?" answered by rung 4: "Tub thirty. Now the cupboard quits."
+  "How many half-used tubs can one cupboard hold?" answered by "Tub twenty. The cupboard door gives up."
 - Met: Each rung goes one step further on the same thing, and nothing else changes.
-  TUB 1 → 4 → 11 → 30, "Match cut, same spot" on every rung, same cupboard throughout.
-- Met: Any number or time tied to a result points to a claim actually held.
-  Count labels marked free; only result claim is "Sixty-plus ingredients in one pack", cited to the approved claim.
-- Met: The skeleton never speaks and its bones never change.
-  "Its jaw stays still: no chewing is shown and nothing passes inside the body." Feelings in eyes and pose only.
+  TUB 1 → 4 → 9 → 20, "Match cut, same camera, same spot", one cupboard, pile grows, shelf bows, door gives up.
+- Met: Any number or time tied to a result points to a claim you actually hold.
+  "TUB 1, TUB 4, TUB 9, TUB 20: free. These are counts with no result attached." Only claim: "Supports digestion and gut health" (approved). No time labels.
+- Met: The skeleton never speaks and its bones never change. Only its situation does.
+  "Nobody" speaks; "Its jaw stays still"; feelings shown via eyes and pose; a lid lands on the skull but bones unchanged.
 - Met: The product shows up once, after the peak, and the ad never stops to sell midway.
-  Turn at 16.5 s: "Or you rip a Sprout pack. Tip. Enjoy." Pouch is only soft-focus set dressing before that.
-- Met: The cast note says how the skeleton looks and the reason fits the brand.
-  "default lanky cartoon skeleton... signature item is a sage-green knit beanie"; reason: recurring character for a buyer who quits things.
+  Pouch soft-focus in opening shot, "never mentioned until the turn"; turn at 17s: "Or you rip, tip, enjoy. Sprout daily greens gummies."
+- Met: The cast note says how the skeleton looks, and the reason fits the brand.
+  "lanky, adult, warm ivory matte bones... signature item is a leafy-green terry headband"; reason: buyer quits routines, series character fits.
 
 ## What went in
 
@@ -46,63 +46,64 @@ Voice: playful, cheeky, short lines. "Rip. Tip. Enjoy."
 ## What came out
 
 ```text
-**Game:** The more greens powders you quit, the more half-used tubs pile up in one cupboard.
-- **Way it runs:** `without it`
-- **What grows:** a pile of tubs
-- **Label:** count (`TUB 1` → `TUB 30`)
-- **Why:** The buyer already knows the problem: they keep quitting powders. A pile of tubs makes that quitting visible, and it fits the store rule for "replaces single-use things." A count label carries no result, so it needs no time points, and the brand has none.
+**Game:** The more greens powders you start and quit, the more half-used tubs and shakers pile up in one kitchen cupboard.
+**Runs:** `without it` · **What grows:** a pile (tubs and shakers, in one cupboard) · **Label:** count (`TUB 1` → `TUB 20`)
+**Why:** This buyer already knows the problem. A pile of quit tubs is their own history, made funny and pushed until the cupboard gives up. Count labels carry no promise, so the script needs no time points.
 
-**Question:** "How many quit greens tubs fit one cupboard?" (8 words)
+**Question:** How many half-used tubs can one cupboard hold?
+
+**Opening shot (0–4s, under the question):** A cartoon kitchen. One open wall cupboard at eye level. On its shelf is one tub of greens powder and one shaker, and nothing else. The skeleton stands at the counter facing it. Behind the skeleton, on the counter, a Sprout pouch stands upright and soft-focus. It is never mentioned until the turn. There are no words, signs or clocks in the frame.
 
 | # | label | narration | picture (wind-up, change, reaction) | seconds |
 |---|---|---|---|---|
-| Q | none | "How many quit greens tubs fit one cupboard?" | A bright, warm kitchen. One tall cupboard stands open with one tub on the middle shelf and a shaker beside it. The Sprout pouch sits closed on the counter behind, soft-focus. The skeleton stands at the cupboard, shaker in hand, and its eyes squint up at the shelf. | 0–3.5 |
-| 1 | TUB 1 | "Tub one. Gritty. Chalky. You quit." | **Wind-up:** it lifts the shaker toward its face and pauses. **Change:** it lowers the shaker and pushes the one tub back onto the shelf. **Reaction:** its eyes narrow at the shaker, then its shoulders drop. | 3.5–6.5 |
-| 2 | TUB 4 | "Tub four. Each one nearly full." | Match cut, same spot. **Wind-up:** it reaches up and pauses. **Change:** four tubs now stand in a neat row. **Reaction:** its eyes flick along the row, then its head tilts. | 6.5–9.5 |
-| 3 | TUB 11 | "Tub eleven. Door shuts by hip." | Match cut, same spot. **Wind-up:** it braces sideways at the door. **Change:** eleven tubs are stacked to the top edge, and the door is bumped shut with its hip. **Reaction:** its eyes widen at the bulging door, then it takes one slow step back. | 9.5–12.5 |
-| 4 (peak) | TUB 30 | "Tub thirty. Now the cupboard quits." | Match cut, same spot. **Wind-up:** it eases the door open a crack and freezes. **Change:** both doors fly open, and thirty tubs tumble out in a soft, bouncy cascade, piling to its knees. **Reaction:** its eyes pop wide above the pile, then its arms flop to its sides. Held one beat longer. | 12.5–16.5 |
+| 1 | TUB 1 | "Tub one. Gritty. Chalky. You quit." | **Wind-up:** the skeleton lifts the shaker, peers in, pauses. **Change:** it sets the shaker back beside the one tub, lid askew, half full. **Reaction:** its eyes narrow at the shaker, then its shoulders slump as it nudges both to the back of the shelf. | 4–7 (3s) |
+| 2 | TUB 4 | "Tub four. Four shakers, none washed." | *Match cut, same camera, same spot.* **Wind-up:** the skeleton reaches up with a tub in hand and pauses. **Change:** the shelf now holds four half-used tubs and four shakers. **Reaction:** its eyes dart along the row, then hands go to its hips and it leans back. | 7–10 (3s) |
+| 3 | TUB 9 | "Tub nine. The shelf starts to bow." | *Match cut.* **Wind-up:** the skeleton raises one finger to push in one more tub, then holds. **Change:** nine tubs, with shakers stacked on top, and the shelf curves down in the middle. **Reaction:** its eyes widen at the bend, then its knees dip and its arms go out as if to catch it. | 10–13 (3s) |
+| 4 | TUB 20 | "Tub twenty. The cupboard door gives up." | *Match cut.* **Wind-up:** the skeleton lifts one last tub toward the shelf and freezes mid-reach. **Change:** twenty tubs. The door swings wide and tubs and shakers tumble onto the counter around it, soft and bouncy, nothing breaking. **Reaction:** its eyes go huge, then its whole pose locks with arms up as a tub lid lands on top of its skull. *Hold one extra second.* | 13–17 (4s) |
 
-**Turn and close (16.5–25 s)**
-- **Turn (16.5–20):** "Or you rip a Sprout pack. Tip. Enjoy."
-  - The skeleton swings round from the pile to the counter, in the same place.
-  - The pouch opens only at its resealable top, and one daily pack comes out.
-  - The pack is torn straight across its top edge, and the gummies pour from the top into its palm.
-  - Its eyes crinkle happily and its pose lifts. Its jaw stays still: no chewing is shown and nothing passes inside the body.
-- **Close (20–25):** "Sixty-plus ingredients in one pack. First order, twenty-nine ninety-nine with text sign-up."
-  - Last shot: the pouch and the full palm, with the tub pile soft in the background.
-- **On-screen offer (added in edit; wording must match the site):** "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks. 30-day money back, first order only. Ends [MISSING]."
+**Turn (17–21s):** "Or you rip, tip, enjoy. Sprout daily greens gummies."
+**Picture:** The skeleton swings round to the pouch behind it. It opens the pouch at its resealable top and draws out one daily pack. It tears the pack straight across its top edge and tips the gummies from the top into its palm.
+
+**Close (21–25s):** "Supports digestion and gut health. First order, twenty-nine ninety-nine."
+**Picture:** The skeleton lifts its palm toward its mouth, cut on the move, and its eyes crinkle happy. Its jaw stays still. End on the pouch and one torn pack on a clear counter, with the tub pile soft-focus behind.
+**On screen (added in edit):** $29.99 first order with text sign-up. Renews at $49.99 every 4 weeks. 30-day money back, first order only. Offer ends: MISSING. Wording must match the site exactly: MISSING.
 
 **Timing map**
 
-| segment | seconds | words |
+| beat | seconds | words |
 |---|---|---|
-| Question | 0–3.5 | 8 |
-| Rung 1 | 3.5–6.5 | 6 |
-| Rung 2 | 6.5–9.5 | 6 |
-| Rung 3 | 9.5–12.5 | 6 |
-| Rung 4 (peak, +1 s) | 12.5–16.5 | 6 |
-| Turn | 16.5–20 | 8 |
-| Close | 20–25 | 12 |
-| **Total** | **25** | **52 vs target 55 (−5%, within 10%)** |
+| Question | 0–4 | 8 |
+| Rung 1 | 4–7 | 6 |
+| Rung 2 | 7–10 | 6 |
+| Rung 3 | 10–13 | 7 |
+| Rung 4 (peak, held) | 13–17 | 7 |
+| Turn | 17–21 | 9 |
+| Close | 21–25 | 9 |
+| **Total** | **25** | **52** (target 55, range 49.5–60.5 ✓) |
+
+Each rung runs at about 2.3 words a second with almost no room left. Give the label beat by trimming the reaction tail, not by slowing the read.
 
 **Cast note**
-- **Carrier:** the default lanky cartoon skeleton, with warm ivory matte bones and big round white eyes with dark pupils. Its signature item is a sage-green knit beanie, worn in every ad.
-- **Reaction figures:** none.
-- **Why:** This buyer quits things, so a recurring character they come to know helps the brand stick across a series. A kitchen cupboard needs no explaining, so an outfit for the place adds nothing. With no onlookers, the pile is the only thing that moves.
+- The skeleton is the default design: lanky, adult, warm ivory matte bones, big round white eyes with dark pupils, no clothes. Its **signature item** is a leafy-green terry headband, worn in every ad.
+- Why: this buyer quits routines, so a series that keeps coming back with the same "trying again" character fits them. The headband says "starting a routine" without dressing the kitchen up. The kitchen needs no explaining, so it doesn't need "dressed for the place".
+- There are no reaction figures. The climb stays one skeleton and one cupboard.
 
 **Claims list**
-- TUB 1 / TUB 4 / TUB 11 / TUB 30: free (count labels, no result attached)
-- "Gritty. Chalky.": free (buyer review words about the old way, named by kind, no rival)
-- "Each one nearly full", "Door shuts by hip", "Now the cupboard quits": free (plainly silly exaggeration about things and rooms)
-- "Rip. Tip. Enjoy.": free (brand voice and how it's used)
-- "Sixty-plus ingredients in one pack": approved claim (from "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack)
-- Offer and guarantee: from the brief; must match the site word for word
-- Not used anywhere: fix, treats, energy, immunity, weight loss, any time point
+- `TUB 1`, `TUB 4`, `TUB 9`, `TUB 20`: free. These are counts with no result attached.
+- "Gritty. Chalky.": free. This describes the old way by its kind, taken from the buyer's review lines, with no rival named.
+- Shelf bowing and the door giving up: free. Plainly silly exaggeration about things, not health.
+- "Rip, tip, enjoy": free. This is the brand voice line and shows how the product is used.
+- "Supports digestion and gut health.": approved claim. This is the only claim carried.
+- "First order, twenty-nine ninety-nine" and the on-screen terms: from the supplied offer.
+- None of the banned claims appear (fix, treats, energy or immunity results, weight loss). There are no time labels.
 
-MISSING: offer end date for the on-screen terms
-MISSING: where each review line came from (source for "gritty/chalky" and "not having to clean a shaker bottle")
-MISSING: site's exact offer wording (on-screen terms taken from the brief)
-MISSING: number of gummies per pack (for the palm pour shot)
+MISSING: offer end date for the on-screen terms.
+MISSING: offer and guarantee wording exactly as it appears on the site.
+MISSING: where the two review lines came from (source for each).
+MISSING: brand brain and buyer brief. Voice and facts were taken from your message only.
+MISSING: skeleton design. The default design is used, with a headband chosen here (`inferred`).
 
-**Score: 100/100** (7 of 7 checks passed; 7 ÷ 7 × 100 = 100). No checks missed.
+CHECKS MISSED: none
+
+Want to check it before it goes live with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker)? You could also tighten the read with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor), or turn it into stills with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). You can also just tell me what you'd like next.
 ```

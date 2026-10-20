@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A tight, honest brief built entirely from the seven pasted reviews, with every quote verifiable and gaps flagged rather than guessed. The owner gets a clear single instruction (spend words on price proof) and a usable word bank, though the brand file's richer evidence was not drawn on.
+A tight, honest brief: every quote is real, the gaps are marked rather than filled, and the one force to work on (price fear) is a sensible call backed by the evidence. Headings are renamed and the body runs a few words over 250, but a copywriter could pick this up and use it straight away.
 
 ## Judge list
 
 - Met: Every quote appears word for word in the evidence
-  "the drink was definitely gritty/chalky" (review 3) and "It's always been an issue of consistency like many things." (review 1) both match exactly.
+  "it was still $94 a month and the drink was definitely gritty/chalky" and "the one thing I've been able to stick to" both match reviews 3 and 1 exactly.
 - Met: Exactly one force to work on, with a reason
-  "Force to work on: Fear (price). Push and pull are already loud, so the ad spends its words on cost"
-- Met: Forces with no evidence are marked as gaps, not filled with guesses
-  "Doubt that it will work and fear of being locked in are MISSING." Habit backed by review 4; awareness marked "assumed".
-- Met: The job line describes a moment, not an age group or job title
-  "When I've been choking on gritty/chalky greens powder for years" is a situation, no demographic label.
-- Met: The market stage names the evidence it rests on
-  "4, inferred, since no competitor claims were supplied. Nutrition is assumed: 'The issue has never been nutritive content.'"
+  "Force to work on: Fear of price. The push is already felt, so spend the words on cost against the '$94 a month' powder"
+- Met: Forces with no evidence marked as gaps, not guessed
+  "Habit: MISSING" and "MISSING: whether gummies work as well as powder, and the subscription lock-in."
+- Met: Job line describes a moment, not an age group or job title
+  "When I've been 'choking on' a 'gritty/chalky' greens powder 'for the last few years'" is a situation, no demographic label.
+- Met: Market stage names the evidence it rests on
+  "Stage 4 (inferred, thin evidence). The nutrition promise is assumed, since 'The issue has never been nutritive content.'"
 
 ## What went in
 
@@ -47,28 +47,29 @@ Where it runs: a Facebook ad
 ## What came out
 
 ```text
-**Job line:** "When I've been choking on gritty/chalky greens powder for years, I want greens I can stick to and don't forget, so I can stop having to clean a shaker bottle and keep it easier for me to manage. What stops me: they are expensive."
+**Job line:** When I've been "choking on" a "gritty/chalky" greens powder "for the last few years," I want greens I'll "stick to," so I can stop worrying about "consistency." What stops me: "They are expensive."
 
-**Awareness:** Solution aware (assumed for non-buyers). Buyers came from powders: "I've tried a few green powders over the years." No non-buyer evidence.
+**Awareness:** Solution aware. Buyers came from powders: "I've tried a few green powders over the years," "I was taking [a big-name greens powder]."
 
-**Market stage:** 4, inferred, since no competitor claims were supplied. Nutrition is assumed: "The issue has never been nutritive content." Copy needs a better how: the gummy format.
+**Market stage:** Stage 4 (inferred, thin evidence). The nutrition promise is assumed, since "The issue has never been nutritive content." The win is a better how: a format people keep taking.
 
 **Forces**
-- **Push:** "the drink was definitely gritty/chalky" / "It's always been an issue of consistency like many things."
-- **Pull:** "the one thing I've been able to stick to" / "not having to clean a shaker bottle or extra dishes"
-- **Fear:** "They are expensive". Doubt that it will work and fear of being locked in are `MISSING`.
-- **Habit:** "I've been choking on [a big-name greens powder] for the last few years"
+- **Push:** "It's always been an issue of consistency"; "it was still $94 a month and the drink was definitely gritty/chalky."
+- **Pull:** "the one thing I've been able to stick to"; "not having to clean a shaker bottle or extra dishes."
+- **Fear:** "They are expensive." `MISSING`: whether gummies work as well as powder, and the subscription lock-in.
+- **Habit:** `MISSING`
 
-**Force to work on:** Fear (price). Push and pull are already loud, so the ad spends its words on cost: $49.99 against "$94 a month," with a $29.99 first box.
+**Force to work on:** Fear of price. The push is already felt, so spend the words on cost against the "$94 a month" powder and the gummies it replaces ("separate probiotic gummies, b12 gummies, and multivitamin gummies"). Lead with the $29.99 first box.
 
-**Word bank:** "stick to" · "I WANT to take" · "don't forget" · "gritty/chalky" · "choking on" · "clean a shaker bottle" · "easier for me to manage" · "$94 a month"
+**Word bank:** "stick to" · "gritty/chalky" · "choking on" · "I WANT to take" · "don't forget" · "shaker bottle or extra dishes" · "easier for me to manage" · "consistency"
 
 **Gaps**
-- What happened the day you started looking beyond your powder?
-- Did you doubt a gummy could replace a powder?
-- Did the subscription worry you before ordering?
-- Non-buyers: what are you using for greens now?
+- What kept you on your old powder even when you disliked it?
+- Did you doubt gummies could do what a powder does?
+- Did the every-4-weeks subscription make you hesitate?
+- What happened right before you started looking for something else?
 
----
-**Score:** 4/4 checks passed = 100/100. No checks missed.
+**CHECKS MISSED:** none
+
+Next, do you want to write the Facebook ad with the [Fact-based ad copy writer](https://useaiblocks.com/prompts/fact-based-ad-copy-writer), make image ads with the [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker), or pick a video script with the [Video ad script type picker](https://useaiblocks.com/skills/video-ad-script-type-picker)? You can also type your own.
 ```

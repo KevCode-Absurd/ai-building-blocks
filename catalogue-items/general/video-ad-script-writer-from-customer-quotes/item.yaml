@@ -39,8 +39,8 @@ credits:
   - {title: "Towards an integrated understanding of speaking rate in conversation (2006)", by: "Jiahong Yuan, Mark Liberman and Christopher Cieri", url: "https://www.isca-archive.org/interspeech_2006/yuan06_interspeech.html", used: "Older speakers talk more slowly"}
   - {title: "About text overlays and the safe zone for ads in Stories and Reels", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/980593475366490", used: "Keeping text clear of the app's buttons and labels"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

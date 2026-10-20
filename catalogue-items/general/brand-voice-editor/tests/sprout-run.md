@@ -1,25 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The edits themselves are good: three well-chosen, minimal fixes that swap lab-coat wording for the customers' own words while leaving every number, price and claim intact. It left out the NOT FLAGGED section, so the owner can't see which lines were deliberately kept and why.
-
-## Fix
-
-In 'What you hand back', add a required item: 'Not flagged: list the lines you left alone and the reason (fact, number, price, term)', and add 'The NOT FLAGGED section is present' to 'Check before you hand it back'.
+A clean, restrained edit: it fixed only the three genuinely stiff lines using the customer's own words and left prices, numbers and claims alone. The owner can use the corrected script as is, with two sensible MISSING notes pointing to a claims check for lines 2 and 5.
 
 ## Judge list
 
-- Met: Every flagged phrase is quoted exactly as it appears in your ad.
-  "maintain a consistent supplementation regimen", "unpleasant powdered beverages", "Our formulation is designed to support digestive wellness." all match the script verbatim.
-- Met: Each issue names a rule from your voice notes or a customer quote, not general taste.
-  "the 'lab-coat tone' the voice rules out. Customers say 'the one thing I've been able to stick to.'"
-- Met: Numbers, prices, the guarantee and approved claims are word for word the same. Check line by line.
-  Lines 2, 3, 6, 7 untouched; line 5 stays at "support" and names the approved claim's word "digestion".
-- Met: Most good scripts get zero to four fixes. If it rewrote nearly every line, it went too far.
-  Three fixes on a seven-line script (lines 1, 4, 5).
-- Met: Read the fixed lines aloud. They should sound more like your customers, not more clever.
-  "Struggling to stick to your supplements?" and "gritty, chalky powdered drinks" use the customers' own words, no added tricks.
+- Met: Every flagged phrase is quoted exactly as it appears in the ad.
+  "maintain a consistent supplementation regimen", "unpleasant powdered beverages", "Our formulation is designed to" all match the script word for word.
+- Met: Each issue names a rule from the voice notes or a customer quote, not general taste.
+  Line 1 cites "No lab-coat tone" and "the one thing I've been able to stick to"; Line 4 cites "gritty/chalky" and "chalky powders".
+- Met: Numbers, prices, the guarantee and approved claims are word for word the same.
+  Lines 3 and 7 left untouched; Line 5 keeps "support digestive wellness"; Line 2 claim left unchanged with MISSING note.
+- Met: Zero to four fixes; did not rewrite nearly every line.
+  Three issues on a seven-line script; four lines left alone in NOT FLAGGED.
+- Met: Fixed lines sound more like customers, not more clever.
+  "Struggling to stick to your supplements?" and "gritty, chalky powder drinks" use the pasted customer words directly.
 
 ## What went in
 
@@ -50,25 +46,37 @@ Script:
 ## What came out
 
 ```text
-**Verdict:** `needs_fixes`
+VERDICT: needs_fixes
 
-**Summary:** The brand line and the offer lines sound like Sprout, but three lines use the stiff, lab-coat wording the voice rules out instead of the casual way these buyers talk.
+SUMMARY
+The brand lines sound like the cheeky friend, but three lines use a lab-coat tone and stiff words that this buyer doesn't use.
 
-**Issues:**
+ISSUES
+Line 1
+  Phrase:    "maintain a consistent supplementation regimen"
+  Why:       Wrong word. This is clinical jargon, and the voice notes say "No lab-coat tone." Customers say they "stick to" things: "[Sprout] has been the one thing I've been able to stick to."
+  Corrected: Struggling to stick to your supplements?
 
-1. **Line 1.** Phrase: "maintain a consistent supplementation regimen"
-   - **Why:** This is clinical jargon, the "lab-coat tone" the voice rules out. Customers say "the one thing I've been able to stick to."
-   - **Corrected:** "Struggling to stick to your supplements?"
+Line 4
+  Phrase:    "unpleasant powdered beverages"
+  Why:       Wrong word. It talks past the buyer, who says "the drink was definitely gritty/chalky." "Beverages" is stiff for a casual internet voice, and the brand's own line says "chalky powders."
+  Corrected: Say goodbye to gritty, chalky powder drinks.
 
-2. **Line 4.** Phrase: "unpleasant powdered beverages"
-   - **Why:** This is stiff marketing talk. Customers say "the drink was definitely gritty/chalky," and the brand line says "sloshing chalky powders."
-   - **Corrected:** "Say goodbye to gritty, chalky powdered drinks."
+Line 5
+  Phrase:    "Our formulation is designed to"
+  Why:       Wrong tone. "Formulation" and "designed to" are lab-coat corporate wording, which breaks "No lab-coat tone" and the casual funny-friend voice. The claim wording after it is left exactly as written.
+  Corrected: It's made to support digestive wellness.
 
-3. **Line 5.** Phrase: "Our formulation is designed to support digestive wellness."
-   - **Why:** "Formulation" is lab-coat wording, and "digestive wellness" is wellness-marketing talk. Both clash with the casual "funny friend" voice. The fix uses the approved claim's own word, "digestion." It keeps "made to support," which is no stronger than "designed to support."
-   - **Corrected:** "It's made to support digestion."
+NOT FLAGGED
+Line 2: This line states a fact and a claim ("clinically tested for nutrient absorption"), so the clinical wording is allowed and the claim is not mine to change. MISSING: the status of this claim. It is not on the approved claims list you gave me.
+Line 3: Numbers and ingredient counts, left unchanged.
+Line 6: The brand's own line, "Rip. Tip. Enjoy."
+Line 7: Prices and renewal terms, left unchanged.
+Line 5 (claim part): "support digestive wellness" is kept as written. MISSING: confirmation that it matches the approved claim "Supports digestion and gut health." A claims check should decide this, not a voice edit.
 
-**Voice score:**
-- **Now:** 4 lines with no issue / 7 lines checked × 100 = 57
-- **After fixes:** 7 lines with no issue / 7 lines checked × 100 = 100
+VOICE SCORE
+Now: 4 / 7 x 100 = 57
+After the fixes: 7 / 7 x 100 = 100
+
+Next, do you want to plan what to test with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer)? Or tell me what you'd rather do.
 ```

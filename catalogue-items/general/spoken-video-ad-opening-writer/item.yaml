@@ -30,7 +30,7 @@ credits:
   - {title: "Creative best practices for performance ads", by: "TikTok Ads Help Center", url: "https://ads.tiktok.com/help/article/creative-best-practices", used: "Main point in the first 3 seconds; 3 to 5 creatives that differ a lot per test"}
   - {title: "The Science of the Hook: How to Supercharge Your Reels Performance", by: "Meta for Business", url: "https://www.facebook.com/business/news/the-science-of-the-hook-how-to-supercharge-your-reels-performance", used: "Hook types that became the promise and gap moves; test hooks on the same Reel"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

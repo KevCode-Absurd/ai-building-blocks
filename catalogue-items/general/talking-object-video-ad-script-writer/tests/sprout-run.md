@@ -1,27 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 6 of 6 met. Invented facts: 0.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-The script is funny, on-brand and fact-safe, with the shaker as a good has-been narrator and a clean cut to the pouch. But it departs from the required output shape, and the 100/100 score is overstated given the shape deviation.
-
-## Fix
-
-In the "What you hand back" step, require the exact output-shape block (NARRATOR/MOOD/CLIP/FACTS/CAST NOTE/SCORE lines) instead of free-form headings and tables, and add "follows the output shape" to the self-check list.
+A tight, on-brand 24-second script: the shaker from review 6 is the has-been, the lines are funny without guilt, and the only fact spoken is one the brief gave. The offer text carries the text-sign-up condition and the renewal price, so nothing misleads; the owner only needs to confirm the end date and supply a product photo.
 
 ## Judge list
 
-- Met: The object never says "you". It talks about she/he/they.
-  Lines use "She's quit me", "She just tears one open"; no "you" in any spoken line.
-- Met: It says nothing it couldn't have seen. No result inside a body, no how-it-works, no number from nowhere.
-  "No water. No rinse. No me." and the clumps and ring are visible; no numbers or body results spoken.
-- Met: Product has real label, no face, arrives by a cut at the turn.
-  "A hard cut opens on the Sprout pouch already standing upright... glossy deep green with the yellow wordmark... no face."
-- Met: One talking object, one mood, flaw mild enough to like.
-  Only the shaker talks; mood "Sheepish"; flaw is chalky clumps, owned with a rueful grin.
-- Met: The last line is one a stranger could repeat.
-  "Turns out I was the routine she quit."
-- Met: The offer appears as on-screen text only.
-  "On-screen offer (text over the last shot only, never spoken)"; no spoken price in lines.
+- Met: The object never says "you"; it talks about she/he/they
+  "Every morning she pours, she shakes, she winces a little. Then she scrubs me." All four lines use she/me, no "you".
+- Met: Says nothing it couldn't have seen; no body result, no how-it-works, no number from nowhere
+  Only fact stated: "No water, no mixing, no shaker" (in brief). "Not claimed: anything inside the pack or the body."
+- Met: Product has real label, no face, arrives by a cut at the turn
+  "hard cut that opens on the Sprout pouch already standing upright... real yellow wordmark facing camera and no face."
+- Met: One talking object, one mood, a flaw mild enough to like
+  One frosted shaker, "MOOD Sheepish", flaw is "chalky crust stuck on the wire whisk ball"; jokes at itself only.
+- Met: The last line is one a stranger could repeat
+  "Turns out the problem was never her. It was me." An admission, not a question.
+- Met: The offer appears as on-screen text only
+  "On-screen text over this last shot, never spoken: '$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks.'"
 
 ## What went in
 
@@ -48,87 +44,37 @@ every 4 weeks.
 ## What came out
 
 ```text
-## Narrator: the empty shaker bottle (has-been)
+```
+NARRATOR  Frosted shaker bottle (has-been)
+True: review 6 names the shaker; the brief puts it in the drying rack by the sink every morning.  Readable: one tall cylinder with a flip cap; two eyes sit in the frosted body just under the cap ring, and the mouth follows the top measuring line.
+At stake: being left in the rack for good, replaced by a pouch.  Fair: a generic frosted-clear shaker with no logo and no rival's colours; clear plastic next to a glossy deep green pouch, so the two can't be mixed up.
+State: frosted plastic, a gritty green-grey ring dried inside the base, chalky crust stuck on the wire whisk ball.
 
-**Why not the other narrators:** A culprit needs a result that can be seen, and Sprout's can't. A witness would have to invent a room object, while the reviews name the shaker themselves (review 6). The shaker is the old way, and the buyer still keeps it.
+MOOD  Sheepish. As the has-been, it owns its part in her quitting. The brand's cheeky voice lets it roast itself, and the buyer gets no guilt.
 
-**The four tests**
-- **True:** The shaker is in the drying rack at the sink every morning, which is the buyer's moment exactly.
-- **Readable:** It is one tall cylinder with a lid band. Two eyes sit just under the grey lid, and the mouth runs along a moulded ridge below them.
-- **At stake:** It has been quit, unwashed and kept out of guilt. Its flaw is mild: it made the drink chalky.
-- **Fair:** It is generic frosted-clear plastic with a plain grey screw lid. It has no rival's shape or colours and is no body part, mirror or screen. It can't be mistaken for a glossy green pouch.
+CLIP 1 (the gripe, 8s, 19 words)
+1 "Every morning she pours, she shakes, she winces a little. Then she scrubs me. Honestly? I'd quit me too."
+  Face close in the drying rack, soft morning window light at the sink: brows already pinched together, eyes sliding sideways toward the tap. One movement: it sags a little lower in the rack. Mouth moves with the words.
 
-**Material and state:** Frosted clear plastic with a grey screw lid and a flip spout. Inside, a dried khaki-green ring sits halfway up and a few chalky clumps are stuck in the base. The wire whisk ball rests at the bottom.
+CLIP 2 (the inside detail, 8s, 18 words)
+2 "She keeps coming back to me. Then she leaves. My whisk ball's still chalky from the last goodbye."
+  Damage very close: the crusted whisk ball and the dried green-grey ring inside the base. Cut to the whole shaker in its spot in the rack: eyes drop to look down into itself, then brows lift in an embarrassed wince. One movement: a small slow tilt forward. Mouth moves with the words.
 
-**Mood:** Sheepish. It owns up to the clumps and grins about it, which keeps the cheek and lands no guilt on the buyer.
+CLIP 3 (THE TURN + landing line, 8s, 20 words)
+3 "Then that showed up. No water, no mixing, no shaker."
+  TURN: hard cut that opens on the Sprout pouch already standing upright on the counter beside the rack at true size. It is the glossy deep green pouch with its real yellow wordmark facing camera and no face. One daily pack lies beside it, torn straight across the top. Cut to the shaker's face close: eyes slide right to the pouch, then brows rise. One movement: it leans slightly toward the pouch. Mouth moves with the words. Pack size and the real look are MISSING, so nothing is checked against a photo.
+4 "Turns out the problem was never her. It was me."
+  Whole shaker in the rack with the pouch beside it: eyes lower, then a small sheepish half-smile. One movement: it settles back into the rack. Mouth moves with the words.
+  On-screen text over this last shot, never spoken: "$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks." Offer end date: MISSING.
 
----
+FACTS THE OBJECT STATES
+"No water, no mixing, no shaker"   Brief, product facts ("Also true"). This line is not in the approved-claims line.
+Not claimed: anything inside the pack or the body. That covers the 60+ ingredients, vitamins, fiber, taste, energy and health results. The shaker sits in a rack and can't have seen any of these, so the approved claim is left out of its mouth.
 
-### Setting for every shot
-The setting is a stainless kitchen sink with a wire drying rack. Cool morning light comes from a window on the left. The shaker is described identically in every shot: frosted clear plastic, grey lid, khaki-green ring halfway up, clumps in the base. No people appear in frame, and there are no words in the picture.
+CAST NOTE  The narrator is a has-been: a frosted plastic shaker with a dried gritty ring and a chalky whisk ball, sitting in the drying rack. Its eyes sit under the cap ring and its mouth on the top measuring line. It is sheepish, with a cheeky self-roast. Voice: mid-30s, a little hoarse, quick dry pace, general American accent [inferred]. It suits this buyer because she has quit greens powder over and over and named the shaker clean-up herself. The bottle takes the blame so she never has to.
 
-### Clip 1: the gripe (0–8s)
-**Lines:** "She's quit me more times than I can count. And honestly? I get it. Every comeback ends right here."
-**Picture:**
-- **Face close:** The shaker is upside down in the rack. Brows tilt up in the middle and eyes slide down and away. It sags a little lower into the wire. Mouth moves with the words.
-- **Whole object in its spot:** A lone shaker sits in an otherwise empty rack by the sink. Eyes roll up toward the lid. It gives a small slow shrug, its lid band dipping. Mouth moves with the words.
+CHECKS MISSED  True scale of the pouch beside the shaker isn't confirmed, because the pack size and a product photo are MISSING. The stated fact comes from the brief's product facts, not the approved-claims line, so confirm it is approved to say. The offer end date is MISSING.
+```
 
-**Words / seconds:** 21 words / 8s
-
-### Clip 2: the inside detail (8–16s)
-**Lines:** "The chalky clumps? Mine. This ring? Also mine. She doesn't wash me anymore. She keeps me out of guilt."
-**Picture:**
-- **Damage, very close:** The dried khaki-green ring and the clumps in the base, through frosted plastic. There is no face in this shot.
-- **Face close:** One brow lifts and the mouth pulls sideways in a guilty half-grin. It turns slightly toward camera. Mouth moves with the words.
-- **Whole object:** Brows drop and eyes go half-lidded. It leans back against the rack's wire. Mouth moves with the words.
-
-**Words / seconds:** 19 words / 8s
-
-### Clip 3: ▶ THE TURN, then the landing (16–24s)
-**▶ TURN:** A hard cut opens on the Sprout pouch already standing upright on the draining board beside the rack. It is shown at true scale, glossy deep green with the yellow wordmark facing camera, and it has no face. One daily pack, torn straight across the top, lies in front of it.
-
-**Lines:** "She just tears one open. No water. No rinse. No me. Turns out I was the routine she quit."
-**Picture:**
-- **What it's looking at:** The pouch and the torn pack, with the shaker's edge soft in the foreground.
-- **Face close:** Eyes slide right to the pouch and brows lift in slow realisation. It tips slightly toward it. Mouth moves with the words.
-- **Shelf shot, last shot:** The shaker and the pouch stand side by side at true scale, with the label readable. The shaker gives a small, rueful smile with eyes on the pouch and stays still. Mouth moves with the words.
-
-**Words / seconds:** 19 words / 8s
-
-**On-screen offer (text over the last shot only, never spoken):**
-"$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks."
-
-**Total:** 59 words / 24s
-
----
-
-### Cast note
-- **Narrator and look:** The has-been shaker bottle, made of frosted clear plastic with a grey screw lid. It carries a dried khaki-green ring and chalky clumps inside. Its eyes sit just under the lid band and its mouth runs along the moulded ridge below.
-- **Mood and voice:** Sheepish. The voice is a warm, slightly rueful adult in their thirties with a neutral American accent. Pace is quick and cheeky through the admissions and slows on the landing line.
-- **Why this object:** This buyer has quit greens powders again and again. The shaker is the thing they still keep and feel a bit silly about, and reviewers name it themselves. Letting it own the chalky clumps makes the joke land on the object and leaves the buyer blameless.
-- **Use:** The clips skill turns this into the character card. For a still, use `talking-object-image-ad-maker`.
-
----
-
-### Facts the object states
-
-| Statement | Source |
-|---|---|
-| "The chalky clumps" | Buyer's words, review 3: "the drink was definitely gritty/chalky" |
-| "She doesn't wash me anymore" / "No rinse" | Buyer's words, review 6: "not having to clean a shaker bottle" |
-| "She just tears one open" | Product facts: daily packs, "each torn straight across the top" |
-| "No water" / "No me" | Brief, also true: "no water, no mixing, no shaker." This is not on the approved-claims list, so it is phrased as what the shaker saw, not as a claim. |
-
-**What it doesn't claim:** The shaker states none of the approved claims ("60+ ingredients, 21 vitamins & minerals, and 6g fiber"). It says nothing about health effects, how the product works, price or buying.
-
-**Missing inputs:**
-- `MISSING: product photo`. The pouch and pack were described, not checked against the real product.
-- `MISSING: how a daily pack is taken once torn open`. The script only shows it being torn.
-- `MISSING: pouch and daily pack real size`, needed for the true-scale shelf shot.
-- `MISSING: offer end date`. Check the on-screen text against the live offer before release.
-
----
-
-### Score: 100/100
-6 of 6 checks passed = 100.
+What next? You could **check it before it goes live** with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), **make the video** with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor), or **make image ads** with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner). You can also type your own next step.
 ```

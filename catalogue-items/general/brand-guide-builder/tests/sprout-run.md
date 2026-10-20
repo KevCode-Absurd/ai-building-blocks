@@ -1,32 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 2.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-This is a near-finished, genuinely usable guide: the brand's real colours and fonts, correctly computed contrast pairs, real brand lines, an accurate claims page and honest gap lists, and the tokens file is paste-ready. It fails only on two small slips where the run supplied its own reasoning as if it were the brand's (why plum gets the banner, and a Kids 'never show' rule not on file), which a designer would take as Sprout's rules.
-
-## Fix
-
-In step 2 add: "Each reason must point to the line in the brand file it comes from; any rationale or rule the file does not state is written as 'the guide's reading, not on file' or dropped."
+A thorough, on-brand guide: every colour, font, voice line, rule and claim traces back to brand.md, the contrast maths is correct, and gaps (display font name, forest green's job, sachet look, sizes) are marked MISSING or 'guide's reading' rather than guessed. The owner can hand it to a freelance designer today; the only soft spots are the unverified print preview and the small yellow-on-kelly sample cell rendered below large-text size.
 
 ## Judge list
 
 - Met: The guide uses your colours and fonts, not a generic grey and blue.
   ":root{ --forest:#00582D; --deep:#002C17; --cream:#FFF7DF; --kelly:#007E40; --sun:#FFCC2E; --plum:#581E5A; }" with Work Sans and DM Mono throughout.
 - Met: Page 2 alone is enough to make one on-brand post.
-  Page 2 has chips with hex and job, allowed pairs, fonts, "Playful. Cheeky. Casual. Plain-spoken. Never preachy.", copy rule, picture rule, products, gaps.
+  Quick sheet has chips with hex and job, allowed pairs, fonts, "Playful. Cheeky. Casual. Short. Plain.", copy rule, picture rule, products, brand world.
 - Met: Every text colour shown on a background passes its contrast level, and failing pairs are named.
-  All 15 ratios recompute correctly (e.g. kelly/cream 4.83, kelly/deep 2.96); every text pair used in the HTML is an "Any size" pair; fails named.
+  Ratios (14.3, 11.2, 10.2, 8.1, 8.0, 5.7, 4.8, 3.4) all check out; "Never for text: yellow / cream 1.4:1 · kelly / deep forest 3.0:1 (2.96)..." named.
 - Met: Voice examples are real lines from your copy, not invented ones.
-  "We made daily nutrition, like, ridiculously easy." "Rip. Tip. Enjoy." "Savings, exclusive flavors, and a minor sense of superiority." all in brand.md.
+  "Rip. Tip. Enjoy.", "Tastes like a treat, works like a supplement.", "Sachet is a fancy word for our gummy pack." all in brand.md.
 - Met: It prints one topic per page with nothing cut off.
-  Fixed 210x297mm pages with break-after:page; estimated content on densest pages 2 and 6 fits ~264mm; run itself flagged it as unverified.
+  "@page{size:A4;margin:0}", ".page{width:210mm;height:297mm;...break-after:page}"; page content estimates fit; run flags print preview unconfirmed under CHECKS MISSED.
 - Met: Every blank in your brand file appears under "Not yet captured".
-  Lists logo, display font name, Kids pink hex, sugar grams, Kids renewal, 84-pack subs, Sugar-Free first price, electrolyte facts, rating source.
-
-## Invented
-
-- claim: Plum is the odd one out, which is why it gets the top banner. (Brand file gives plum's job but no reason; the causal rationale is the run's taste, which step 2 forbids.)
-- other: Anything that makes it look like candy without saying it's a supplement (Presented as a Kids "Never show or say" brand rule; no such rule is on file, only a parent's doubt "Is this just candy?".)
+  Lists display font, forest green job, sugar grams, uncaptured subscription prices, electrolyte pack facts, price-doubter share, discount figure, rating source, logo rules.
 
 ## What went in
 
@@ -45,15 +36,17 @@ designer making social posts.
 ## What came out
 
 ```text
-## sprout/brand-guide.html
+# brand-guide.html
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Sprout · Brand guide · October 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Work+Sans:wght@500;700&display=swap" rel="stylesheet">
+<title>Sprout · Brand guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Work+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --forest:#00582D; --deep:#002C17; --cream:#FFF7DF;
@@ -62,585 +55,648 @@ designer making social posts.
 @page{size:A4;margin:0}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{background:var(--deep);font-family:'Work Sans',sans-serif;font-weight:500;color:var(--deep);font-size:9.5pt;line-height:1.38;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-.page{width:210mm;height:297mm;margin:10mm auto;padding:14mm 15mm 19mm;background:var(--cream);position:relative;overflow:hidden;break-after:page;page-break-after:always}
+body{font-family:'Work Sans',sans-serif;font-weight:500;color:var(--deep);background:var(--deep);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;margin:0 auto 8mm;background:var(--cream);padding:15mm 15mm 22mm;
+  position:relative;overflow:hidden;break-after:page;page-break-after:always}
 .page:last-child{break-after:auto;page-break-after:auto}
 @media print{body{background:none}.page{margin:0}}
-h1,h2,h3{font-family:'Work Sans',sans-serif;font-weight:700;color:var(--deep);margin:0}
-h2{font-size:22pt;line-height:1.1;margin-bottom:3mm}
-h3{font-size:11pt;margin:3.5mm 0 1.5mm}
-p{margin:0 0 2mm}
-.tag{font-family:'DM Mono',monospace;font-size:7.5pt;text-transform:uppercase;letter-spacing:.07em;color:var(--forest)}
-.reason{font-size:10pt;border-left:2.5mm solid var(--kelly);padding:1mm 0 1mm 4mm;margin:0 0 4mm}
-.foot{position:absolute;left:15mm;right:15mm;bottom:8mm;display:flex;justify-content:space-between;border-top:.4mm solid var(--forest);padding-top:2mm;font-family:'DM Mono',monospace;font-size:7pt;text-transform:uppercase;letter-spacing:.07em;color:var(--forest)}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
-.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm}
-.box{border:.4mm solid var(--forest);padding:3mm;border-radius:2mm}
-.dark{background:var(--deep);color:var(--cream)}
-.dark h2,.dark h3{color:var(--cream)}
-.dark .tag{color:var(--sun)}
+.foot{position:absolute;left:15mm;right:15mm;bottom:9mm;display:flex;justify-content:space-between;
+  font-family:'DM Mono',monospace;font-size:7.5pt;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--forest);border-top:.4mm solid var(--forest);padding-top:2mm}
+.tag{font-family:'DM Mono',monospace;font-size:7.5pt;text-transform:uppercase;letter-spacing:.1em;color:var(--forest);margin:0 0 1.5mm}
+h1{font-weight:800;font-size:28pt;line-height:1.05;margin:0 0 4mm;color:var(--deep)}
+h2{font-weight:700;font-size:12pt;margin:5mm 0 2mm;color:var(--deep)}
+h3{font-weight:700;font-size:10pt;margin:3mm 0 1mm;color:var(--deep)}
+p,li,td,th{font-size:9pt;line-height:1.38}
 ul{margin:0;padding-left:4.5mm}
 li{margin-bottom:.8mm}
-table{border-collapse:collapse;width:100%;font-size:8.5pt}
-th,td{text-align:left;padding:1.2mm 1.5mm;border-bottom:.3mm solid var(--forest);vertical-align:top}
-th{font-family:'DM Mono',monospace;font-weight:500;font-size:7pt;text-transform:uppercase;letter-spacing:.06em;color:var(--forest)}
-.chip{display:inline-block;width:5mm;height:5mm;border-radius:1mm;vertical-align:middle;margin-right:1.5mm;border:.3mm solid var(--deep)}
-.dont{border:.5mm solid var(--plum);border-radius:2mm;overflow:hidden}
-.dont .lab{background:var(--plum);color:var(--cream);font-family:'DM Mono',monospace;font-size:7.5pt;text-transform:uppercase;letter-spacing:.07em;padding:1.2mm 3mm}
-.dont ul{padding:2.5mm 3mm 2mm 7.5mm;color:var(--plum)}
-.do{border:.5mm solid var(--kelly);border-radius:2mm;overflow:hidden}
-.do .lab{background:var(--kelly);color:var(--cream);font-family:'DM Mono',monospace;font-size:7.5pt;text-transform:uppercase;letter-spacing:.07em;padding:1.2mm 3mm}
-.do ul,.do p{padding:2.5mm 3mm 2mm 7.5mm}
-.nof{font-family:'DM Mono',monospace;font-size:8pt;text-transform:uppercase;color:var(--plum);letter-spacing:.05em}
-.pair{border-radius:1.5mm;padding:1.5mm 2mm;font-size:8pt;font-weight:700;line-height:1.2}
-.pair small{display:block;font-family:'DM Mono',monospace;font-weight:400;font-size:6.5pt;letter-spacing:.04em}
-.frame{border:.5mm dashed var(--plum);border-radius:2mm;height:30mm;display:flex;align-items:center;justify-content:center;text-align:center;padding:2mm;font-family:'DM Mono',monospace;font-size:7pt;text-transform:uppercase;color:var(--plum);letter-spacing:.05em}
-.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:2.5mm;margin-bottom:3mm}
-ol{margin:0;padding-left:5mm}
+.why{background:var(--deep);color:var(--cream);padding:3.5mm 5mm;border-radius:3mm;margin:0 0 4mm;font-size:9.5pt;line-height:1.45}
+.why b{color:var(--sun)}
+.reading{font-family:'DM Mono',monospace;font-size:7pt;text-transform:uppercase;letter-spacing:.06em}
+.missing{font-family:'DM Mono',monospace;font-size:7.5pt;background:var(--sun);color:var(--deep);padding:.3mm 1.5mm;border-radius:1mm;white-space:nowrap}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-family:'DM Mono',monospace;font-size:7pt;text-transform:uppercase;letter-spacing:.06em;color:var(--forest);border-bottom:.4mm solid var(--forest);padding:1.2mm 1.5mm}
+td{border-bottom:.2mm solid var(--forest);padding:1.2mm 1.5mm;vertical-align:top}
+.do{border-left:1.5mm solid var(--forest);padding:1.5mm 3mm;margin-bottom:2mm}
+.dont{border-left:1.5mm solid var(--plum);padding:1.5mm 3mm;margin-bottom:2mm;color:var(--plum)}
+.do .lbl,.dont .lbl{font-family:'DM Mono',monospace;font-size:7pt;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:.5mm}
+.frame{border:.5mm dashed var(--forest);border-radius:2mm;height:30mm;display:flex;align-items:center;justify-content:center;text-align:center;padding:2mm;
+  font-family:'DM Mono',monospace;font-size:7pt;text-transform:uppercase;letter-spacing:.06em;color:var(--forest)}
+/* chips */
+.chip{display:flex;align-items:center;gap:3mm;margin-bottom:1.6mm}
+.chip i{display:block;width:11mm;height:8mm;border-radius:1.5mm;flex:none;border:.2mm solid var(--deep)}
+.chip span{font-size:8pt;line-height:1.25}
+.pair{display:inline-flex;align-items:center;justify-content:center;width:18mm;height:10mm;border-radius:1.5mm;font-weight:700;font-size:11pt;margin:0 1mm 1mm 0}
+.pairlbl{font-size:7.5pt}
+/* swatches */
+.sw{border-radius:3mm;height:46mm;padding:4mm;display:flex;flex-direction:column;justify-content:flex-end;border:.2mm solid var(--deep)}
+.sw .n{font-weight:700;font-size:12pt}
+.sw .h{font-family:'DM Mono',monospace;font-size:9pt}
+.sw .j{font-size:8.5pt;margin-top:1mm}
+.bgflow div{padding:2.5mm 4mm;font-size:8.5pt}
+.cell{display:inline-block;padding:.6mm 2.5mm;border-radius:1mm;font-weight:700}
+.bigline{font-weight:800;line-height:1.05}
 </style>
 </head>
 <body>
 
-<!-- 1 COVER -->
-<section class="page" style="padding:0">
-  <div style="background:var(--plum);color:var(--sun);font-family:'DM Mono',monospace;font-size:8pt;text-transform:uppercase;letter-spacing:.1em;padding:4mm 15mm">Brand guide · for social posts</div>
-  <div style="padding:40mm 15mm 0">
-    <div class="tag">Daily greens gummies</div>
-    <h1 style="font-size:64pt;line-height:1;margin:2mm 0 4mm">Sprout</h1>
-    <div style="font-size:24pt;font-weight:700;color:var(--forest);margin-bottom:10mm">Brand guide</div>
-    <p style="font-size:13pt;max-width:150mm">Daily greens gummies in single-serve packs. Tear one open and eat the small handful of green gummy bears inside. No water, no mixing, no shaker.</p>
-    <p class="tag" style="margin-top:8mm">October 2026 · built from the brand file last updated 2026-10-18</p>
+<!-- 1. COVER -->
+<section class="page" style="background:var(--deep);color:var(--cream)">
+  <p class="tag" style="color:var(--sun)">Brand guide · for a freelance designer making social posts</p>
+  <div style="margin-top:70mm">
+    <div class="bigline" style="font-size:72pt;color:var(--sun)">Sprout</div>
+    <div style="font-weight:700;font-size:26pt;margin-top:3mm">Brand guide</div>
+    <p style="font-size:13pt;max-width:140mm;margin-top:8mm;color:var(--cream)">Sprout sells daily greens gummies in single-serve packs. One pouch holds 28 small daily packs. You tear one open and eat the small handful of green gummy bears inside.</p>
   </div>
-  <div class="dark" style="position:absolute;left:0;right:0;bottom:0;padding:12mm 15mm">
-    <p style="font-size:12pt;font-weight:700;color:var(--sun);margin-bottom:2mm">Page 2 is the whole job.</p>
-    <p style="font-size:10pt">Read it alone and you can make an on-brand post. Everything after it explains why.</p>
-    <p class="tag" style="margin-top:4mm">To print: open in a browser, print to PDF, margins set to none.</p>
+  <div style="position:absolute;left:15mm;right:15mm;bottom:15mm;display:flex;justify-content:space-between" class="tag">
+    <span style="color:var(--sun)">2026-10-18</span>
+    <span style="color:var(--cream)">Read page 2 first. The rest explains why.</span>
   </div>
 </section>
 
-<!-- 2 QUICK SHEET -->
+<!-- 2. QUICK SHEET -->
 <section class="page">
-  <div class="tag">Page 2 · Quick sheet</div>
-  <h2>Everything on one page</h2>
-
-  <div class="grid3" style="grid-template-columns:repeat(6,1fr);gap:2mm;margin-bottom:3mm">
-    <div class="pair" style="background:#00582D;color:#FFF7DF">Forest green<small>#00582D · main brand green</small></div>
-    <div class="pair" style="background:#002C17;color:#FFF7DF">Deep forest<small>#002C17 · headings, dark sections</small></div>
-    <div class="pair" style="background:#FFF7DF;color:#002C17;border:.3mm solid #002C17">Warm cream<small>#FFF7DF · hero background</small></div>
-    <div class="pair" style="background:#007E40;color:#FFF7DF">Kelly green<small>#007E40 · buttons</small></div>
-    <div class="pair" style="background:#FFCC2E;color:#002C17">Sunflower<small>#FFCC2E · stars, badges</small></div>
-    <div class="pair" style="background:#581E5A;color:#FFF7DF">Plum<small>#581E5A · top banner</small></div>
-  </div>
-
-  <div class="grid2" style="gap:4mm">
-    <div>
-      <h3 style="margin-top:0">Text on background: allowed</h3>
-      <p style="font-size:8pt">Any text size: cream on deep forest, forest, plum or kelly. Deep forest, forest, plum or kelly on cream. Sunflower on deep forest, forest or plum. Deep forest, forest or plum on sunflower.<br>
-      <b>Large only</b> (24 px, or 19 px bold): sunflower on kelly, kelly on sunflower.<br>
-      <b style="color:var(--plum)">Never for text:</b> sunflower with cream, any green on another green, plum on any green.</p>
-
-      <h3>Fonts</h3>
-      <p style="font-size:8pt"><b>Work Sans Bold</b> speaks: headings.<br>
-      <span style="font-weight:500">Work Sans Medium</span> explains: body copy.<br>
-      <span style="font-family:'DM Mono';text-transform:uppercase;font-size:7.5pt">DM Mono</span> labels: small uppercase tags.<br>
-      A chunky display font shouts the big statement lines. Its name is not on file, so use Work Sans Bold until it's confirmed.</p>
-
-      <h3>Voice in five words</h3>
-      <p style="font-size:10pt;font-weight:700;color:var(--forest)">Playful. Cheeky. Casual. Plain-spoken. Never preachy.</p>
-
-      <h3>Copy rule</h3>
-      <p style="font-size:8pt">Short lines, numbers up front, the gross thing said plainly. Health benefits only ever <b>"support"</b> (never fix or cure). Every survey number says <b>"of surveyed users"</b> and every rating names its source.</p>
-
-      <h3>Picture rule</h3>
-      <p style="font-size:8pt">Bright, sunny, candy-like. Everyday adults in casual clothes pour gummies into a hand. The daily pack is torn <b>straight across the top</b>. Never clinical, never muted, never a partner brand's characters or marks.</p>
-    </div>
-    <div>
-      <h3 style="margin-top:0">Products</h3>
-      <p style="font-size:8pt"><b>Sprout Original (Adults):</b> glossy deep-green stand-up pouch with a big yellow wordmark and a yellow bear face top right. Inside are flat daily packs of small, matte, deep-green gummy bears. <span style="color:var(--plum)">Never show a pack torn at the side, bottom or a corner, or the big pouch torn.</span></p>
-      <p style="font-size:8pt"><b>Sprout Kids:</b> sunflower-yellow pouch with a green wordmark, a pink "KIDS" and "For ages 2 to 13". Each pack holds 6 gummies. <span style="color:var(--plum)">Never show cartoon tie-in characters or partner marks. Never make claims about children's brains.</span></p>
-      <h3>Brand world</h3>
-      <p style="font-size:8pt">At home or outdoors, in bright sunny light, with everyday adults in casual clothes. Product shots sit on a soft two-colour gradient.</p>
-
-      <h3>Not yet captured</h3>
-      <ul style="font-size:7.3pt;line-height:1.3">
-        <li><b>Logo:</b> what clear space, smallest size and misuses apply to the wordmark and bear face?</li>
-        <li><b>Display font:</b> what is the chunky display font called?</li>
-        <li><b>Forest green's job:</b> what is #00582D used for: pouch, text or backgrounds?</li>
-        <li><b>Other colours:</b> what are the hex values for the Kids pink and the Sugar-Free white burst?</li>
-        <li><b>Type sizes:</b> does the brand have its own size scale for posts?</li>
-        <li><b>Photos:</b> which approved photos can designers use (pack front, out of pack, in hand, in use, close-up)?</li>
-        <li><b>Kids gummies and limited-flavour pouches:</b> what colour and shape are they?</li>
-        <li><b>What changes:</b> may any visible result be shown?</li>
-        <li><b>Motion and sound:</b> what pace, camera, sound and words on screen do videos use?</li>
-        <li><b>World detail:</b> which surfaces belong in shots, and who appears in Kids shots?</li>
-        <li><b>Offer:</b> which single discount is live for posts this month?</li>
-        <li><b>Prices:</b> what does the Kids subscription renew at, what do 84-pack subscriptions cost, and is there a Sugar-Free first-order price?</li>
-        <li><b>Sugar:</b> how many grams of sugar are in each pack?</li>
-        <li><b>Disclaimer:</b> must social posts carry the FDA line?</li>
-        <li><b>Rating:</b> which star rating and source may posts quote?</li>
-        <li><b>Electrolyte pack:</b> what are its facts?</li>
-        <li><b>Site styles:</b> what are the buttons, corners and spacing? (Only needed for web work.)</li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot"><span>Sprout · Brand guide</span><span>October 2026 · 2</span></div>
-</section>
-
-<!-- 3 COLOUR -->
-<section class="page">
-  <div class="tag">Page 3 · Colour</div>
-  <h2>Colour</h2>
-  <p class="reason">Sprout is a greens product that refuses to look like one. The greens carry the product: the pouch, the gummies and the buttons. Warm cream and sunflower make it sunny and candy-like, never clinical or muted. Plum is the odd one out, which is why it gets the top banner.</p>
-
-  <div class="grid3" style="margin-bottom:4mm">
-    <div style="background:#00582D;color:#FFF7DF;border-radius:2mm;padding:4mm;height:34mm"><b style="font-size:12pt">Forest green</b><br><span style="font-family:'DM Mono'">#00582D</span><br><span style="font-size:8pt">Main brand green. Its exact job is not stated in the file.</span></div>
-    <div style="background:#002C17;color:#FFF7DF;border-radius:2mm;padding:4mm;height:34mm"><b style="font-size:12pt">Deep forest green</b><br><span style="font-family:'DM Mono'">#002C17</span><br><span style="font-size:8pt">Headings and dark sections.</span></div>
-    <div style="background:#FFF7DF;color:#002C17;border:.4mm solid #002C17;border-radius:2mm;padding:4mm;height:34mm"><b style="font-size:12pt">Warm cream</b><br><span style="font-family:'DM Mono'">#FFF7DF</span><br><span style="font-size:8pt">Hero background.</span></div>
-    <div style="background:#007E40;color:#FFF7DF;border-radius:2mm;padding:4mm;height:34mm"><b style="font-size:12pt">Kelly green</b><br><span style="font-family:'DM Mono'">#007E40</span><br><span style="font-size:8pt">Buttons.</span></div>
-    <div style="background:#FFCC2E;color:#002C17;border-radius:2mm;padding:4mm;height:34mm"><b style="font-size:12pt">Sunflower yellow</b><br><span style="font-family:'DM Mono'">#FFCC2E</span><br><span style="font-size:8pt">Stars and badges.</span></div>
-    <div style="background:#581E5A;color:#FFF7DF;border-radius:2mm;padding:4mm;height:34mm"><b style="font-size:12pt">Plum purple</b><br><span style="font-family:'DM Mono'">#581E5A</span><br><span style="font-size:8pt">Top banner.</span></div>
-  </div>
-
+  <p class="tag">Page 2 · Quick sheet</p>
+  <h1>Everything on one page</h1>
   <div class="grid2">
     <div>
-      <h3 style="margin-top:0">Contrast: text on background</h3>
-      <table>
-        <tr><th>Text</th><th>Background</th><th>Ratio</th><th>Use</th></tr>
-        <tr><td>Deep forest</td><td>Cream</td><td>14.3</td><td>Any size</td></tr>
-        <tr><td>Cream</td><td>Deep forest</td><td>14.3</td><td>Any size</td></tr>
-        <tr><td>Plum ↔ cream</td><td>either way</td><td>11.2</td><td>Any size</td></tr>
-        <tr><td>Sunflower ↔ deep forest</td><td>either way</td><td>10.1</td><td>Any size</td></tr>
-        <tr><td>Forest ↔ cream</td><td>either way</td><td>8.1</td><td>Any size</td></tr>
-        <tr><td>Sunflower ↔ plum</td><td>either way</td><td>8.0</td><td>Any size</td></tr>
-        <tr><td>Sunflower ↔ forest</td><td>either way</td><td>5.7</td><td>Any size</td></tr>
-        <tr><td>Kelly ↔ cream</td><td>either way</td><td>4.8</td><td>Any size (buttons)</td></tr>
-        <tr><td>Sunflower ↔ kelly</td><td>either way</td><td>3.4</td><td>Large only</td></tr>
-        <tr style="color:var(--plum)"><td>Kelly ↔ deep forest</td><td>either way</td><td>3.0 (2.96)</td><td><b>Never for text</b></td></tr>
-        <tr style="color:var(--plum)"><td>Plum ↔ kelly</td><td>either way</td><td>2.3</td><td><b>Never for text</b></td></tr>
-        <tr style="color:var(--plum)"><td>Forest ↔ deep forest</td><td>either way</td><td>1.8</td><td><b>Never for text</b></td></tr>
-        <tr style="color:var(--plum)"><td>Kelly ↔ forest</td><td>either way</td><td>1.7</td><td><b>Never for text</b></td></tr>
-        <tr style="color:var(--plum)"><td>Sunflower ↔ cream</td><td>either way</td><td>1.4</td><td><b>Never for text</b></td></tr>
-        <tr style="color:var(--plum)"><td>Plum ↔ forest / deep</td><td>either way</td><td>1.4 / 1.3</td><td><b>Never for text</b></td></tr>
-      </table>
-      <p style="font-size:7.5pt;margin-top:1.5mm">Thresholds: 4.5 to 1 for normal text, 3 to 1 for large text (24 px, or 19 px bold).</p>
-    </div>
-    <div>
-      <h3 style="margin-top:0">How backgrounds follow each other</h3>
-      <p style="font-size:8pt">This order comes from the site. Use it for tall posts and for carousels slide by slide.</p>
-      <div style="border-radius:2mm;overflow:hidden;border:.4mm solid var(--deep)">
-        <div style="background:#581E5A;color:#FFCC2E;padding:2mm 3mm;font-family:'DM Mono';font-size:7pt;text-transform:uppercase">1 · Plum banner: sunflower or cream text</div>
-        <div style="background:#FFF7DF;color:#002C17;padding:4mm 3mm;font-size:8pt"><b>2 · Cream hero:</b> deep forest headings.<br><span style="display:inline-block;margin-top:1.5mm;background:#007E40;color:#FFF7DF;padding:1mm 3mm;border-radius:1mm;font-weight:700">Kelly button, cream text</span></div>
-        <div style="background:#002C17;color:#FFF7DF;padding:4mm 3mm;font-size:8pt"><b>3 · Deep forest section:</b> cream text, <span style="color:#FFCC2E">sunflower stars and badges</span></div>
+      <h3>Colours and their jobs</h3>
+      <div class="chip"><i style="background:#00582D"></i><span><b>Forest green #00582D</b>, main green. Job <span class="missing">MISSING</span></span></div>
+      <div class="chip"><i style="background:#002C17"></i><span><b>Deep forest green #002C17</b>, headings, dark sections</span></div>
+      <div class="chip"><i style="background:#FFF7DF"></i><span><b>Warm cream #FFF7DF</b>, hero background</span></div>
+      <div class="chip"><i style="background:#007E40"></i><span><b>Kelly green #007E40</b>, buttons</span></div>
+      <div class="chip"><i style="background:#FFCC2E"></i><span><b>Sunflower yellow #FFCC2E</b>, stars, badges</span></div>
+      <div class="chip"><i style="background:#581E5A"></i><span><b>Plum purple #581E5A</b>, top banner</span></div>
+
+      <h3>Text on background: allowed</h3>
+      <div>
+        <span class="pair" style="background:var(--cream);color:var(--deep);border:.2mm solid var(--deep)">Aa</span>
+        <span class="pair" style="background:var(--deep);color:var(--cream)">Aa</span>
+        <span class="pair" style="background:var(--deep);color:var(--sun)">Aa</span>
+        <span class="pair" style="background:var(--plum);color:var(--cream)">Aa</span>
+        <span class="pair" style="background:var(--plum);color:var(--sun)">Aa</span>
+        <span class="pair" style="background:var(--forest);color:var(--cream)">Aa</span>
+        <span class="pair" style="background:var(--forest);color:var(--sun)">Aa</span>
+        <span class="pair" style="background:var(--sun);color:var(--deep)">Aa</span>
+        <span class="pair" style="background:var(--cream);color:var(--kelly);border:.2mm solid var(--deep)">Aa</span>
+        <span class="pair" style="background:var(--kelly);color:var(--cream)">Aa</span>
       </div>
-      <p style="font-size:8pt;margin-top:3mm">Don't stack two greens as text and background. If two green blocks sit side by side, separate them with cream or sunflower.</p>
+      <p class="pairlbl">Any of these at any size. <b>Large text only</b> (24 px, or 19 px bold): yellow on kelly, kelly on yellow (3.4:1). <b style="color:var(--plum)">Never for text:</b> yellow on cream; kelly, forest, deep forest and plum on each other.</p>
+
+      <h3>Fonts and their jobs</h3>
+      <p style="margin:0"><b style="font-weight:700">Work Sans Bold</b>: headings<br>
+      Work Sans Medium: body<br>
+      <span style="font-family:'DM Mono';text-transform:uppercase;font-size:8pt">DM Mono</span>: small uppercase tags<br>
+      Chunky friendly display font: big statement lines. Name <span class="missing">MISSING</span></p>
+    </div>
+    <div>
+      <h3>The voice in five words</h3>
+      <p style="font-weight:800;font-size:15pt;margin:0;line-height:1.15">Playful. Cheeky. Casual. Short. Plain.</p>
+      <h3>One copy rule</h3>
+      <p style="margin:0">Numbers up front, short lines, and every health claim stays at "supports". Never "fix".</p>
+      <h3>One picture rule</h3>
+      <p style="margin:0">Bright, sunny, candy-like: a single pouch on a soft two-colour gradient with gummies scattered in front. Never clinical, never muted.</p>
+      <h3>Each product in two lines</h3>
+      <p style="margin:0 0 1.5mm"><b>Adults Original:</b> glossy deep-green stand-up pouch, big yellow wordmark, yellow bear face top right; small matte deep-green bears.<br><span style="color:var(--plum)">Never: a daily pack torn anywhere but straight across its top edge.</span></p>
+      <p style="margin:0 0 1.5mm"><b>Kids:</b> sunflower-yellow pouch, green wordmark, pink "KIDS", "For ages 2 to 13"; 6 gummies a pack.<br><span style="color:var(--plum)">Never: the big pouch shown torn. It opens only at its resealable top.</span></p>
+      <p style="margin:0 0 1.5mm"><b>Limited flavours:</b> gummies change shape and colour (red lemon slices, stars).<br><span style="color:var(--plum)">Never: tie-in characters or any partner brand's marks.</span></p>
+      <h3>The brand world in one line</h3>
+      <p style="margin:0">At home or outdoors, in bright sunny light, with everyday adults in casual clothes.</p>
     </div>
   </div>
-  <div class="foot"><span>Sprout · Brand guide</span><span>October 2026 · 3</span></div>
+
+  <h3 style="margin-top:4mm">Not yet captured (and the question that fills each gap)</h3>
+  <ul style="columns:2;column-gap:6mm;font-size:7.5pt">
+    <li style="font-size:7.5pt">Display font: what is its name, and where is it licensed?</li>
+    <li style="font-size:7.5pt">Forest green #00582D: what is its job?</li>
+    <li style="font-size:7.5pt">Button text: what colour sits on kelly-green buttons? (Cream passes at 4.8:1.)</li>
+    <li style="font-size:7.5pt">Type sizes: what sizes do headlines and body use?</li>
+    <li style="font-size:7.5pt">Logo: clear space, smallest size, uses to avoid?</li>
+    <li style="font-size:7.5pt">Photos: can you share the brand's own shots (pack front, out of pack, in hand, in use, close-up) per product?</li>
+    <li style="font-size:7.5pt">Daily pack (sachet): what colour, print and finish?</li>
+    <li style="font-size:7.5pt">Kids gummies: what colour and shape?</li>
+    <li style="font-size:7.5pt">Limited-flavour pouch: how does it differ from Original?</li>
+    <li style="font-size:7.5pt">What visibly changes on camera, if anything?</li>
+    <li style="font-size:7.5pt">Motion and sound: what pace, camera, sound and words on screen?</li>
+    <li style="font-size:7.5pt">Brand world: which surfaces and props?</li>
+    <li style="font-size:7.5pt">Do social posts need the FDA line? (The site has it; ads don't.)</li>
+    <li style="font-size:7.5pt">Sugar: how many grams per pack?</li>
+    <li style="font-size:7.5pt">Prices: Kids subscription ($22.49 vs "renews at $74.98"), 84-pack subscriptions, Sugar-Free first order, Kids limited subscription?</li>
+    <li style="font-size:7.5pt">Discount: which one figure should posts quote (49%, 52%, 55%, 58% or 61%)?</li>
+    <li style="font-size:7.5pt">Rating: which figure and source should posts quote?</li>
+    <li style="font-size:7.5pt">Electrolyte variety pack: what are its facts?</li>
+    <li style="font-size:7.5pt">Price-doubter buyers: what share of buyers are they?</li>
+  </ul>
+  <div class="foot"><span>Sprout · Brand guide</span><span>2026-10-18 · 2</span></div>
 </section>
 
-<!-- 4 TYPE -->
+<!-- 3. COLOUR -->
 <section class="page">
-  <div class="tag">Page 4 · Type</div>
-  <h2>Type</h2>
-  <p class="reason">Work Sans Bold speaks in headlines, short and loud. Work Sans Medium explains in a friendly voice with no lab coat. DM Mono stamps small uppercase labels. A chunky, friendly display font carries the big statement lines, but its name isn't on file, so use Work Sans Bold until it's confirmed.</p>
-
-  <div class="box" style="margin-bottom:3mm">
-    <div class="tag">Statement · display font (name not on file) · stand-in: Work Sans Bold</div>
-    <div style="font-weight:700;font-size:26pt;line-height:1.05;color:var(--deep)">Tastes like a treat, works like a supplement.</div>
-  </div>
-  <div class="grid2" style="margin-bottom:3mm">
-    <div class="box">
-      <div class="tag">Heading · Work Sans Bold 700</div>
-      <div style="font-weight:700;font-size:16pt;line-height:1.15">We made daily nutrition, like, ridiculously easy.</div>
-    </div>
-    <div class="box">
-      <div class="tag">Body · Work Sans Medium 500</div>
-      <div style="font-size:10.5pt">No more gagging on pills, sloshing chalky powders, or cleaning messy counters.</div>
-      <div class="tag" style="margin-top:2mm">Tag · DM Mono, uppercase</div>
-      <div style="font-family:'DM Mono';text-transform:uppercase;font-size:8.5pt;letter-spacing:.07em">28 Daily Packs</div>
-    </div>
+  <p class="tag">Page 3 · Colour</p>
+  <h1>Colour</h1>
+  <div class="why">The file gives each colour a job, not a meaning: <b>deep forest green</b> carries headings and dark sections, <b>warm cream</b> is the hero background, <b>kelly green</b> is for buttons, <b>sunflower yellow</b> for stars and badges, <b>plum</b> for the top banner. Together they make pictures that are "bright, sunny, candy-like ... never clinical, never muted." <span class="reading">What each colour stands for: not on file.</span></div>
+  <div class="grid3">
+    <div class="sw" style="background:#00582D;color:var(--cream)"><span class="n">Forest green</span><span class="h">#00582D</span><span class="j">Job: <span class="missing">MISSING</span></span></div>
+    <div class="sw" style="background:#002C17;color:var(--cream)"><span class="n">Deep forest green</span><span class="h">#002C17</span><span class="j">Headings, dark sections</span></div>
+    <div class="sw" style="background:#FFF7DF;color:var(--deep)"><span class="n">Warm cream</span><span class="h">#FFF7DF</span><span class="j">Hero background</span></div>
+    <div class="sw" style="background:#007E40;color:var(--cream)"><span class="n">Kelly green</span><span class="h">#007E40</span><span class="j">Buttons</span></div>
+    <div class="sw" style="background:#FFCC2E;color:var(--deep)"><span class="n">Sunflower yellow</span><span class="h">#FFCC2E</span><span class="j">Stars, badges</span></div>
+    <div class="sw" style="background:#581E5A;color:var(--cream)"><span class="n">Plum purple</span><span class="h">#581E5A</span><span class="j">Top banner</span></div>
   </div>
 
-  <h3>Size scale for social posts</h3>
-  <p style="font-size:8pt">The brand file has no size scale, so this guide sets a working scale for a 1080 px wide post. Confirm it with the brand.</p>
-  <table style="margin-bottom:3mm">
-    <tr><th>Role</th><th>Font</th><th>Post size</th><th>Sample</th></tr>
-    <tr><td>Statement</td><td>Display (Work Sans 700 for now)</td><td>96 px</td><td style="font-weight:700;font-size:16pt">Rip. Tip. Enjoy.</td></tr>
-    <tr><td>Headline</td><td>Work Sans 700</td><td>64 px</td><td style="font-weight:700;font-size:12pt">One Step I Never Skip</td></tr>
-    <tr><td>Subhead</td><td>Work Sans 700</td><td>40 px</td><td style="font-weight:700;font-size:10pt">60+ ingredients, 21 vitamins &amp; minerals, and 6g fiber</td></tr>
-    <tr><td>Body</td><td>Work Sans 500</td><td>28 px</td><td style="font-size:8.5pt">Sachet is a fancy word for our gummy pack.</td></tr>
-    <tr><td>Tag</td><td>DM Mono, uppercase</td><td>20 px</td><td style="font-family:'DM Mono';text-transform:uppercase;font-size:7pt;letter-spacing:.07em">Methylfolate, not folic acid</td></tr>
+  <h2>Contrast: text on background</h2>
+  <div class="grid2">
+    <table>
+      <tr><th>Text on background</th><th>Ratio</th><th>Use</th></tr>
+      <tr><td><span class="cell" style="background:var(--cream);color:var(--deep)">Deep forest on cream</span></td><td>14.3:1</td><td>Any size</td></tr>
+      <tr><td><span class="cell" style="background:var(--deep);color:var(--cream)">Cream on deep forest</span></td><td>14.3:1</td><td>Any size</td></tr>
+      <tr><td><span class="cell" style="background:var(--plum);color:var(--cream)">Cream on plum</span></td><td>11.2:1</td><td>Any size (and plum on cream)</td></tr>
+      <tr><td><span class="cell" style="background:var(--deep);color:var(--sun)">Yellow on deep forest</span></td><td>10.2:1</td><td>Any size (and deep forest on yellow)</td></tr>
+      <tr><td><span class="cell" style="background:var(--forest);color:var(--cream)">Cream on forest</span></td><td>8.1:1</td><td>Any size (and forest on cream)</td></tr>
+      <tr><td><span class="cell" style="background:var(--plum);color:var(--sun)">Yellow on plum</span></td><td>8.0:1</td><td>Any size (and plum on yellow)</td></tr>
+    </table>
+    <table>
+      <tr><th>Text on background</th><th>Ratio</th><th>Use</th></tr>
+      <tr><td><span class="cell" style="background:var(--forest);color:var(--sun)">Yellow on forest</span></td><td>5.7:1</td><td>Any size (and forest on yellow)</td></tr>
+      <tr><td><span class="cell" style="background:var(--kelly);color:var(--cream)">Cream on kelly</span></td><td>4.8:1</td><td>Any size (and kelly on cream)</td></tr>
+      <tr><td><span class="cell" style="background:var(--kelly);color:var(--sun);font-size:11pt">Yellow on kelly</span></td><td>3.4:1</td><td>Large text only (and kelly on yellow)</td></tr>
+      <tr><td colspan="3" style="color:var(--plum)"><b>Never for text:</b> yellow / cream 1.4:1 · kelly / deep forest 3.0:1 (2.96) · kelly / plum 2.3:1 · kelly / forest 1.7:1 · forest / deep forest 1.8:1 · forest / plum 1.4:1 · plum / deep forest 1.3:1. Either way round.</td></tr>
+    </table>
+  </div>
+
+  <h2>How backgrounds follow each other down a page</h2>
+  <div class="grid2">
+    <div class="bgflow" style="border:.2mm solid var(--deep);border-radius:2mm;overflow:hidden">
+      <div style="background:var(--plum);color:var(--cream)">1 · Plum top banner (on file)</div>
+      <div style="background:var(--cream);color:var(--deep);padding:6mm 4mm">2 · Cream hero (on file)</div>
+      <div style="background:var(--deep);color:var(--cream);padding:4mm 4mm">3 · Deep forest dark section (on file)</div>
+    </div>
+    <p style="margin:0">The site's order: the plum banner sits on top, the cream hero follows, and deep forest marks the dark sections. Yellow appears as stars and badges, and kelly green as the button.<br><br><span class="reading">The guide's reading, not on file:</span> for a social post, keep cream as the open ground and deep forest as the heavy block. Yellow is an accent, never a text colour on cream.</p>
+  </div>
+  <div class="foot"><span>Sprout · Brand guide</span><span>2026-10-18 · 3</span></div>
+</section>
+
+<!-- 4. TYPE -->
+<section class="page">
+  <p class="tag">Page 4 · Type</p>
+  <h1>Type</h1>
+  <div class="why"><b>Work Sans Bold</b> speaks in headings, <b>Work Sans Medium</b> explains in body copy, <b>DM Mono</b> labels in small uppercase tags, and a <b>chunky friendly display font</b> carries the big statement lines. Headlines follow the voice rule: "No guilt, no lab-coat tone in headlines."</div>
+
+  <p class="tag">Display: big statement lines · font name <span class="missing">MISSING</span> · shown here in Work Sans 800 as a stand-in</p>
+  <div class="bigline" style="font-size:44pt;margin-bottom:5mm">Rip. Tip. Enjoy.</div>
+
+  <p class="tag">Work Sans Bold · headings</p>
+  <div style="font-weight:700;font-size:22pt;line-height:1.15;margin-bottom:5mm">Tastes like a treat, works like a supplement.</div>
+
+  <p class="tag">Work Sans Medium · body</p>
+  <p style="font-size:11pt;max-width:150mm;margin:0 0 5mm">No more gagging on pills, sloshing chalky powders, or cleaning messy counters. We made daily nutrition, like, ridiculously easy.</p>
+
+  <p class="tag">DM Mono · small uppercase tags</p>
+  <p style="font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.1em;font-size:10pt;margin:0 0 5mm">28 Daily Packs · Most popular</p>
+
+  <h2>Size scale for a 1080 px-wide social post <span class="reading">· the guide's reading, not on file</span></h2>
+  <table>
+    <tr><th>Role</th><th>Font</th><th>Size</th><th>Line height</th></tr>
+    <tr><td>Display statement</td><td>Display font (<span class="missing">MISSING</span>)</td><td>96 px</td><td>1.0</td></tr>
+    <tr><td>Heading 1</td><td>Work Sans Bold</td><td>64 px</td><td>1.05</td></tr>
+    <tr><td>Heading 2</td><td>Work Sans Bold</td><td>44 px</td><td>1.1</td></tr>
+    <tr><td>Body</td><td>Work Sans Medium</td><td>30 px</td><td>1.35</td></tr>
+    <tr><td>Small print</td><td>Work Sans Medium</td><td>24 px</td><td>1.35</td></tr>
+    <tr><td>Tag</td><td>DM Mono, uppercase</td><td>20 px</td><td>1.2</td></tr>
   </table>
-  <p style="font-size:7.5pt">Anything at 28 px or smaller on a post counts as normal text for contrast, so only "any size" pairs from page 3 may be used.</p>
 
+  <h2>Type on light and on dark</h2>
   <div class="grid2">
-    <div style="background:#FFF7DF;border:.4mm solid #002C17;border-radius:2mm;padding:4mm">
-      <div class="tag">On light · cream</div>
-      <div style="font-weight:700;font-size:14pt;color:#002C17">Rip. Tip. Enjoy.</div>
-      <div style="color:#00582D;font-size:9pt">No water, no mixing, no shaker.</div>
+    <div style="background:var(--cream);border:.2mm solid var(--deep);border-radius:3mm;padding:5mm">
+      <p class="tag" style="color:var(--forest)">Cream ground</p>
+      <div style="font-weight:700;font-size:16pt;color:var(--deep);line-height:1.15">60+ ingredients, 21 vitamins &amp; minerals, and 6g fiber</div>
+      <p style="color:var(--deep);margin:2mm 0 0">Deep forest headings, deep forest body, forest-green tags.</p>
     </div>
-    <div style="background:#002C17;border-radius:2mm;padding:4mm">
-      <div class="tag" style="color:#FFCC2E">On dark · deep forest</div>
-      <div style="font-weight:700;font-size:14pt;color:#FFF7DF">Rip. Tip. Enjoy.</div>
-      <div style="color:#FFCC2E;font-size:9pt">No water, no mixing, no shaker.</div>
+    <div style="background:var(--deep);border-radius:3mm;padding:5mm">
+      <p class="tag" style="color:var(--sun)">Deep forest ground</p>
+      <div style="font-weight:700;font-size:16pt;color:var(--sun);line-height:1.15">Savings, exclusive flavors, and a minor sense of superiority.</div>
+      <p style="color:var(--cream);margin:2mm 0 0">Yellow or cream headings, cream body.</p>
     </div>
   </div>
-  <div class="foot"><span>Sprout · Brand guide</span><span>October 2026 · 4</span></div>
+  <div class="foot"><span>Sprout · Brand guide</span><span>2026-10-18 · 4</span></div>
 </section>
 
-<!-- 5 VOICE -->
+<!-- 5. VOICE (1 of 2) -->
 <section class="page">
-  <div class="tag">Page 5 · Voice</div>
-  <h2>Voice</h2>
-  <p class="reason">Sprout sounds like a funny friend who is into wellness but refuses to be preachy. The whole brand rests on one idea: people quit supplements because they're unpleasant. So the voice has to be the opposite of chalky, with short lines, numbers up front and no guilt.</p>
+  <p class="tag">Page 5 · Voice (1 of 2)</p>
+  <h1>Voice</h1>
+  <div class="why">Sprout talks like "a funny friend who is into wellness but refuses to be preachy." It is a playful, cheeky, casual internet voice: short lines, three-beat rhythms, numbers up front, and the gross thing said plainly ("better poops"). It names the enemy by how it feels: chalky powders, pills you gag on, a cobbled-together shelf.</div>
 
-  <table style="margin-bottom:3mm">
-    <tr><th style="width:30%">This, not that</th><th>Real line</th></tr>
-    <tr><td><b>Playful</b>, not lab-coat</td><td>"We made daily nutrition, like, ridiculously easy."</td></tr>
-    <tr><td><b>Short, three beats</b>, not long-winded</td><td>"Rip. Tip. Enjoy."</td></tr>
-    <tr><td><b>Names the enemy by feel</b>, not by name</td><td>"No more gagging on pills, sloshing chalky powders, or cleaning messy counters."</td></tr>
-    <tr><td><b>Says the gross thing plainly</b>, not coyly</td><td>"better poops"</td></tr>
-    <tr><td><b>Cheeky</b>, not guilt-tripping</td><td>"Savings, exclusive flavors, and a minor sense of superiority."</td></tr>
+  <h2>Traits: this, not that</h2>
+  <table>
+    <tr><th>This</th><th>Not that</th><th>Real line</th></tr>
+    <tr><td><b>Playful friend</b></td><td>Preachy, guilt</td><td>"We made daily nutrition, like, ridiculously easy."</td></tr>
+    <tr><td><b>Short, three beats</b></td><td>Long explaining</td><td>"Rip. Tip. Enjoy."</td></tr>
+    <tr><td><b>Names the enemy by feel</b></td><td>Vague "other supplements"</td><td>"No more gagging on pills, sloshing chalky powders, or cleaning messy counters."</td></tr>
+    <tr><td><b>Cheeky about itself</b></td><td>Self-serious</td><td>"Savings, exclusive flavors, and a minor sense of superiority."</td></tr>
+    <tr><td><b>Plain words</b></td><td>Lab coat</td><td>"Sachet is a fancy word for our gummy pack."</td></tr>
   </table>
 
-  <h3>Tone by situation</h3>
-  <table style="margin-bottom:3mm">
-    <tr><td style="width:30%"><b>Habit and taste</b></td><td>Lead with "the one thing I stuck with". Customers say it often, but ads rarely use it. Sample line: "Sprout has been the one thing I've been able to stick to." (customer review)</td></tr>
-    <tr><td><b>Gut and digestion</b></td><td>Be plain and a bit funny, but it only ever "supports digestion and gut health". Don't write "fix the tummy". For gut-sensitive readers, point to Low Sugar.</td></tr>
-    <tr><td><b>Kids and parents</b></td><td>Picky-eater pain, ingredient hooks ("Methylfolate, Not Folic Acid") and poop humour are on file. Claims about children get extra care.</td></tr>
-    <tr><td><b>Price and offers</b></td><td>Pick one offer per post and state its condition (first order, SMS sign-up). Never stack the competing percentages.</td></tr>
-    <tr><td><b>Science</b></td><td>Name the study and give its two numbers. Keep the facts friendly, with no lab-coat tone in headlines.</td></tr>
+  <h2>Tone by situation</h2>
+  <table>
+    <tr><th>Situation</th><th>How it sounds</th></tr>
+    <tr><td>Headlines</td><td>Numbers up front, no guilt, no lab-coat tone. "Tastes like a treat, works like a supplement."</td></tr>
+    <tr><td>Gut and digestion</td><td>Say it plainly ("better poops"), but the claim stays "supports digestion and gut health".</td></tr>
+    <tr><td>Survey numbers</td><td>Always with "of surveyed users" (brand survey of 3,000+ customers).</td></tr>
+    <tr><td>Star ratings</td><td>Always name the source and the number. The sources disagree.</td></tr>
+    <tr><td>Kids posts</td><td>Claims about children get extra scrutiny. Keep to the approved list; no "bright minds", no "brain health".</td></tr>
+    <tr><td>Gut-sensitive buyers</td><td>Point them to Low Sugar. Sugar-Free upsets some stomachs.</td></tr>
+    <tr><td>Prices and offers</td><td>Quote the offer with its condition. $29.99 applies only with the new-customer SMS discount. The guarantee is first order only. Which single discount to quote: <span class="missing">MISSING</span></td></tr>
+    <tr><td>Subscriptions, cancelling</td><td>Don't promise an easy cancel beyond the site's own words.</td></tr>
+    <tr><td>GLP-1 mentions</td><td>Drug-adjacent. Needs care.</td></tr>
   </table>
 
+  <h2>Words</h2>
   <div class="grid2">
-    <div class="do"><div class="lab">Words to use</div>
-      <ul><li>supports</li><li>daily pack · sachet · a small handful</li><li>60+ ingredients · 21 vitamins &amp; minerals · 6g fiber</li><li>of surveyed users</li><li>Low Sugar · Sugar-Free</li><li>chalky powders · pills you gag on</li></ul></div>
-    <div class="dont"><div class="lab">Words to avoid</div>
-      <ul><li>fix, cure, treat, revive</li><li>"works" as a blanket promise</li><li>weight loss, muscle, hormone, metabolism</li><li>"per gummy" doses (they're per pack)</li><li>"20+" or "over 20" (say 21)</li><li>competitor names · "easy cancel"</li></ul></div>
+    <div class="do"><span class="lbl">Use</span>"supports" · "daily pack" / "per pack" · "of surveyed users" · "Low Sugar", "Sugar-Free" · "methylfolate" · "pectin", "vegan" · "better poops" · the flavour description, not the partner's name</div>
+    <div class="dont"><span class="lbl">Avoid</span>"fix" · "works" as a broad claim · "per gummy" for daily values · "revive" · "weight loss", "muscle" · "radiant skin", "metabolism", "hormone health" · "bright minds" · "35,000+ studies" · "4.8 stars from 100,000 reviews" with no source</div>
   </div>
-  <div class="foot"><span>Sprout · Brand guide</span><span>October 2026 · 5</span></div>
+  <p class="reading">Use / avoid lists are drawn from the claims file. A brand-made word list: not on file.</p>
+  <div class="foot"><span>Sprout · Brand guide</span><span>2026-10-18 · 5</span></div>
 </section>
 
-<!-- 6 CLAIMS -->
+<!-- 6. VOICE (2 of 2): CLAIMS -->
 <section class="page">
-  <div class="tag">Page 6 · Voice: claims</div>
-  <h2>What may and may not be said</h2>
-  <p class="reason">The brand's own rule is "supports". Its study measured two vitamins in the blood, and that's all it proves. Anything wider than the label or that study is a promise the brand can't back, so the cheeky voice stops at the claim line.</p>
+  <p class="tag">Page 6 · Voice (2 of 2)</p>
+  <h1>Claims: may say, may not say</h1>
+  <div class="why">The brand's own rule is <b>"supports"</b>. These claims are on the label or backed by the brand's own study (2025, 12 weeks, randomized, double-blind, placebo-controlled, 120 healthy adults aged 23 to 59), which measured two vitamins in the blood. Nothing more.</div>
 
-  <div class="grid2">
-    <div class="do"><div class="lab">May say</div>
-      <ul style="font-size:8.5pt">
-        <li>"60+ ingredients, 21 vitamins &amp; minerals, and 6g fiber" in 1 pack</li>
-        <li>"Clinically tested for nutrient absorption": 2025, 12-week, randomized, double-blind, placebo-controlled study of 120 healthy adults. Blood vitamin C +40.1%, folate +20.5%.</li>
-        <li>"Supports digestion and gut health"</li>
-        <li>Third-party tested for 70 pesticides, 4 heavy metals, 16 contaminants and 9 microbial contaminants</li>
-        <li>Vegan, pectin base, free from gluten, dairy, nuts, synthetic dyes and synthetic sweeteners</li>
-        <li>Methylfolate, not folic acid</li>
-        <li>"95% of surveyed users take Sprout at least 4-6x per week with 80% taking daily"</li>
-        <li>"67% of surveyed users experienced better, more regular digestion"</li>
-        <li>"52% of surveyed users feel more energized" (brand survey of 3,000+ customers)</li>
-        <li>30-day money-back guarantee, <b>first order only</b></li>
-        <li>$29.99 first order, only with the condition stated: it needs the SMS sign-up discount for new customers</li>
-      </ul></div>
-    <div class="dont"><div class="lab">May not say</div>
-      <ul style="font-size:8.5pt">
-        <li>"Fix the Hot Girl Tummy" or any "fix" for bloating</li>
-        <li>Weight loss or "support muscle while you lose weight"</li>
-        <li>Hair growth (hair nutrients stay at "supports")</li>
-        <li>"revive whole body vitality"</li>
-        <li>"Clinically backed for energy, immunity and daily wellness"</li>
-        <li>"The results are in. Sprout works." / "actually f*&amp;$%#g work"</li>
-        <li>"backed by 35,000+ studies"</li>
-        <li>"Each gummy delivers 100%…" (it's per pack)</li>
-        <li>Timelines: "radiant skin", "better metabolism", "hormone health", "peak health"</li>
-        <li>"fast and efficient bioavailability"</li>
-        <li>GLP-1 lines, unless the brand signs them off</li>
-        <li>Kids: "bright minds", "supports brain health"</li>
-        <li>"Most fiber supplements contain only 5g"</li>
-        <li>"4.8 stars from 100,000 reviews" without a named source. Sources differ: 4.75 from 109,639 on the site widget, 4.74 from 118,002 on the reviews page, 4.0 from 2,411 on a public site.</li>
-        <li>"Less than 1% use our guarantee" · "$1.26 vs $3.60" (dated)</li>
-        <li>Any promise that cancelling is easy</li>
-      </ul></div>
+  <h2>May say</h2>
+  <div class="do"><span class="lbl">On the label or backed</span>
+    <ul>
+      <li>"60+ ingredients, 21 vitamins &amp; minerals, and 6g fiber" in 1 pack</li>
+      <li>"Clinically tested for nutrient absorption", with the study named and both numbers: vitamin C +40.1%, folate +20.5%</li>
+      <li>"Supports digestion and gut health"</li>
+      <li>Third-party tested for 70 pesticides, 4 heavy metals, 16 contaminants, 9 microbial contaminants</li>
+      <li>Vegan, pectin base; free from gluten, dairy, nuts, synthetic dyes and synthetic sweeteners</li>
+      <li>Methylfolate, not folic acid</li>
+      <li>"95% of users take [Sprout] at least 4-6x per week with 80% taking daily", "67% ... experienced better, more regular digestion", "52% feel more energized", always "of surveyed users"</li>
+    </ul>
   </div>
-  <div class="foot"><span>Sprout · Brand guide</span><span>October 2026 · 6</span></div>
+
+  <h2>May not say (as written)</h2>
+  <table>
+    <tr><th>Claim</th><th>Why not</th></tr>
+    <tr><td>"Fix the Hot Girl Tummy"</td><td>"Fix" sounds like treating bloating. The rule is "supports".</td></tr>
+    <tr><td>"Perfect Supplement for Weight Loss Support" / "Support Muscle While You Lose Weight"</td><td>No evidence on file.</td></tr>
+    <tr><td>"Nutrition for Healthy Hair"</td><td>Must stay at "supports"; no growth promises.</td></tr>
+    <tr><td>"60+ potent ingredients to revive whole body vitality"</td><td>Vague, no support.</td></tr>
+    <tr><td>"Clinically backed formula for energy, immunity, and daily wellness"</td><td>The study did not test energy or immunity.</td></tr>
+    <tr><td>"The results are in. [Sprout] works." / "these gummies actually f*&amp;$%#g work"</td><td>Over-broad; the study shows absorption only.</td></tr>
+    <tr><td>"backed by 35,000+ studies"</td><td>Studies on ingredients, not the product.</td></tr>
+    <tr><td>"Each gummy delivers 100% of your daily needs"</td><td>Wrong unit: it's per pack.</td></tr>
+    <tr><td>30/60/90-day "radiant skin", "better metabolism", "hormone health", "peak health"</td><td>No support; reads like a promise of results.</td></tr>
+    <tr><td>"Gummies begin breaking down almost immediately ..."</td><td>No support given.</td></tr>
+    <tr><td>"help fill the gaps while eating less on a GLP-1"</td><td>Drug-adjacent. Needs care.</td></tr>
+    <tr><td>Kids: "build strong bodies and bright minds", "Supports brain health"</td><td>Child claims get extra scrutiny.</td></tr>
+    <tr><td>"Most fiber-focused supplements contain only 5g of fiber"</td><td>No source.</td></tr>
+    <tr><td>"4.8 stars from 100,000 reviews"</td><td>Widget 4.75 / 109,639; reviews page 4.74 / 118,002; public site 4.0 / 2,411. Name the source.</td></tr>
+    <tr><td>"Less than 1% ... use our Money-Back Guarantee"</td><td>Brand-reported, unverified.</td></tr>
+    <tr><td>"$1.26" a serving vs "$3.60" for powders</td><td>Dated. Recheck before use.</td></tr>
+  </table>
+  <div class="foot"><span>Sprout · Brand guide</span><span>2026-10-18 · 6</span></div>
 </section>
 
-<!-- 7 PICTURES -->
+<!-- 7. PICTURES -->
 <section class="page">
-  <div class="tag">Page 7 · Pictures</div>
-  <h2>Pictures</h2>
-  <p class="reason">The pictures do the voice's job: they make a supplement look like something you'd want to eat. That means bright, sunny and candy-like, with real people in real clothes and never a lab. No brand photos are on file yet, so this page has words only. Use only photos the brand supplies, never generated ones.</p>
-
-  <div class="grid2" style="margin-bottom:4mm">
-    <div class="box"><h3 style="margin-top:0">Style</h3><p>Bright, sunny, candy-like. In product shots a single pouch sits on a soft two-colour gradient, with gummies scattered in front.</p></div>
-    <div class="box"><h3 style="margin-top:0">People</h3><p>Everyday adults in casual clothes, at home or outdoors, pouring gummies into a hand.</p></div>
-    <div class="box"><h3 style="margin-top:0">Light and mood</h3><p>Sunny and warm. Never clinical, never muted.</p></div>
-    <div class="box"><h3 style="margin-top:0">Pack handling</h3><p>The daily pack is torn straight across its top edge, and gummies pour from that torn top into a palm or bowl. The big pouch opens only at its resealable top.</p></div>
-  </div>
-
-  <div class="grid2">
-    <div class="do"><div class="lab">Do</div><ul>
-      <li>Use bright gradients drawn from the palette</li>
-      <li>Show gummies scattered in front of the pouch</li>
-      <li>Show a hand catching the gummies</li>
-      <li>Shoot casual, real-life settings</li>
-      <li>Describe limited flavours by taste only, e.g. "banana berry"</li></ul></div>
-    <div class="dont"><div class="lab">Don't</div><ul>
-      <li>Tear the pack at the side, bottom or a corner</li>
-      <li>Show the big pouch torn</li>
-      <li>Show cartoon tie-in characters or partner brands' marks</li>
-      <li>Use clinical, lab-coat or muted grey looks</li>
-      <li>Use generated pictures of the product or people</li></ul></div>
-  </div>
-  <div class="foot"><span>Sprout · Brand guide</span><span>October 2026 · 7</span></div>
-</section>
-
-<!-- 8 PRODUCT: ADULTS -->
-<section class="page">
-  <div class="tag">Page 8 · Product on camera</div>
-  <h2>Sprout Original (Adults)</h2>
-  <p class="reason">This is the main product. Its whole pitch is that it's easy ("Rip. Tip. Enjoy."), so every shot should look effortless and every tear should be right.</p>
-
-  <div class="strip">
-    <div class="frame">Pack front<br>photo not on file</div>
-    <div class="frame">Out of the pack<br>photo not on file</div>
-    <div class="frame">In a hand<br>photo not on file</div>
-    <div class="frame">In use<br>photo not on file</div>
-    <div class="frame">Close-up<br>photo not on file</div>
-  </div>
-
+  <p class="tag">Page 7 · Pictures</p>
+  <h1>Pictures</h1>
+  <div class="why">The whole brand rests on one idea: make a supplement people <b>want</b> to eat. Its photos look the part: "bright, sunny, candy-like ... never clinical, never muted."</div>
   <div class="grid2">
     <div>
-      <h3 style="margin-top:0">How it looks</h3>
-      <p>Small, opaque, deep-green gummy bears with a soft matte finish, about thumbnail height. One pack holds a small handful, about 20 g. Flavour: Original, "Fresh &amp; Sweet" (strawberry and sweet greens). Limited flavours change shape and colour, for example raspberry-red lemon slices or stars. Limited-flavour pouch looks: <span class="nof">not on file yet</span></p>
+      <h3>Style</h3><p style="margin:0">A single pouch on a soft two-colour gradient, with gummies scattered in front.</p>
+      <h3>People</h3><p style="margin:0">Everyday adults in casual clothes, at home or outdoors, pouring gummies into a hand.</p>
+      <h3>Light and mood</h3><p style="margin:0">Bright and sunny. Candy-like, never clinical, never muted.</p>
+      <h3>The gummies</h3><p style="margin:0">Small opaque deep-green bears, soft matte, about thumbnail height. Limited flavours change shape and colour (red lemon slices, stars).</p>
+    </div>
+    <div>
+      <div class="frame" style="height:58mm">Brand photo: pouch on a two-colour gradient, gummies in front · not on file yet</div>
+      <div class="frame" style="height:58mm;margin-top:4mm">Brand photo: adult at home or outdoors pouring gummies into a hand · not on file yet</div>
+    </div>
+  </div>
+  <h2>Do and don't</h2>
+  <div class="grid2">
+    <div>
+      <div class="do"><span class="lbl">Do</span>Tear the daily pack straight across its top edge.</div>
+      <div class="do"><span class="lbl">Do</span>Pour the gummies out of the torn top into a palm or a bowl.</div>
+      <div class="do"><span class="lbl">Do</span>Show the big pouch opened only at its resealable top.</div>
+      <div class="do"><span class="lbl">Do</span>Keep it bright, sunny and candy-like.</div>
+    </div>
+    <div>
+      <div class="dont"><span class="lbl">Don't</span>Tear the daily pack at the side, the bottom or a corner.</div>
+      <div class="dont"><span class="lbl">Don't</span>Show the big pouch torn.</div>
+      <div class="dont"><span class="lbl">Don't</span>Show cartoon tie-in characters or any partner brand's marks. Use the flavour description only.</div>
+      <div class="dont"><span class="lbl">Don't</span>Go clinical or muted.</div>
+      <div class="dont"><span class="lbl">Don't · rule of this guide</span>Use generated pictures of the product or people. Only the brand's own photos.</div>
+    </div>
+  </div>
+  <div class="foot"><span>Sprout · Brand guide</span><span>2026-10-18 · 7</span></div>
+</section>
+
+<!-- 8. PRODUCT: ADULTS ORIGINAL -->
+<section class="page">
+  <p class="tag">Page 8 · Product on camera (1 of 3)</p>
+  <h1>Sprout Original (Adults)</h1>
+  <div class="why">The main product. Flavour Original, "Fresh &amp; Sweet": strawberry and sweet greens. Comes as <b>Low Sugar</b> or <b>Sugar-Free</b>. The two pouches look alike; <b>the Sugar-Free pouch adds a white burst</b>.</div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:3mm">
+    <div class="frame">Pack front · not on file yet</div>
+    <div class="frame">Out of the pack · not on file yet</div>
+    <div class="frame">In a hand · not on file yet</div>
+    <div class="frame">In use · not on file yet</div>
+    <div class="frame">Close-up · not on file yet</div>
+  </div>
+  <div class="grid2" style="margin-top:3mm">
+    <div>
+      <h3>How it looks</h3>
+      <p style="margin:0">Small opaque deep-green bears, soft matte, about thumbnail height. One pack is "a small handful", about 20 g.</p>
       <h3>The pack</h3>
-      <p><b>Big pouch:</b> a glossy deep-green stand-up foil pouch with a big yellow wordmark, a yellow bear face top right and "28 Daily Packs" at the bottom. The Sugar-Free pouch adds a white burst. It opens only at its resealable top.<br>
-      <b>Daily pack:</b> a small flat sachet. There are 28 in a pouch, and the 84-pack size is 3 pouches.</p>
-      <h3>How it's used</h3>
-      <ol><li>Take one daily pack out of the pouch through its resealable top.</li>
-        <li>Rip the pack straight across its top edge.</li>
-        <li>Tip the gummies into a palm or bowl.</li>
-        <li>Eat them. No water, no mixing, no shaker.</li></ol>
+      <p style="margin:0"><b>Big pouch:</b> glossy deep-green stand-up foil pouch, big yellow wordmark, a yellow bear face top right, "28 Daily Packs" at the bottom. Resealable top. Sugar-Free adds a white burst. The 84-pack size is 3 pouches.<br>
+      <b>Daily pack:</b> a small flat sachet, 28 per pouch. Colour, print and finish: <span class="missing">not on file yet</span></p>
+      <h3>How it's used ("Rip. Tip. Enjoy.")</h3>
+      <ol style="margin:0;padding-left:5mm">
+        <li>Take one daily pack out of the pouch's resealable top.</li>
+        <li>Tear it straight across its top edge.</li>
+        <li>Pour the gummies from the torn top into a palm or a bowl.</li>
+        <li>Eat them. No water, no mixing, no shaker.</li>
+      </ol>
     </div>
     <div>
-      <h3 style="margin-top:0">What visibly changes</h3>
-      <p class="nof">not on file yet</p>
-      <h3>How it moves and sounds</h3>
-      <p class="nof">not on file yet</p>
-      <h3>Telling it apart from Kids</h3>
-      <p>Adults: green pouch, yellow wordmark, bear face, a small handful per pack. Kids: yellow pouch, green wordmark, pink "KIDS", 6 gummies per pack.</p>
-      <div class="dont" style="margin-top:3mm"><div class="lab">Never show</div><ul>
-        <li>A daily pack torn at the side, bottom or a corner</li>
-        <li>The big pouch torn</li>
-        <li>Cartoon tie-in characters or a partner brand's marks on limited flavours</li>
-        <li>A clinical or muted setting</li></ul></div>
+      <h3>What visibly changes</h3><p style="margin:0">not on file yet</p>
+      <h3>How it moves and sounds</h3><p style="margin:0">not on file yet</p>
+      <h3>What never to show</h3>
+      <div class="dont"><span class="lbl">Don't</span>The daily pack torn at the side, the bottom or a corner.</div>
+      <div class="dont"><span class="lbl">Don't</span>The big pouch torn.</div>
+      <div class="dont"><span class="lbl">Don't</span>"Per gummy" daily values on screen. It's per pack.</div>
+      <h3>Tell them apart</h3>
+      <p style="margin:0">Low Sugar: plain deep-green pouch. Sugar-Free: same pouch plus a white burst. Kids: a yellow pouch (next page).</p>
     </div>
   </div>
-  <div class="foot"><span>Sprout · Brand guide</span><span>October 2026 · 8</span></div>
+  <div class="foot"><span>Sprout · Brand guide</span><span>2026-10-18 · 8</span></div>
 </section>
 
-<!-- 9 PRODUCT: KIDS -->
+<!-- 9. PRODUCT: KIDS -->
 <section class="page">
-  <div class="tag">Page 9 · Product on camera</div>
-  <h2>Sprout Kids</h2>
-  <p class="reason">This one is for the busy parent with picky eaters at home. The pack has to read as the kids' version at a glance. Because claims about children get extra scrutiny, the copy stays factual even when the jokes don't.</p>
-
-  <div class="strip">
-    <div class="frame">Pack front<br>photo not on file</div>
-    <div class="frame">Out of the pack<br>photo not on file</div>
-    <div class="frame">In a hand<br>photo not on file</div>
-    <div class="frame">In use<br>photo not on file</div>
-    <div class="frame">Close-up<br>photo not on file</div>
+  <p class="tag">Page 9 · Product on camera (2 of 3)</p>
+  <h1>Sprout Kids</h1>
+  <div class="why">For ages 2 to 13. Flavour Strawberry Burst. Parents buy it for picky eaters; their worry is "Is this just candy?" Claims about children get extra scrutiny.</div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:3mm">
+    <div class="frame">Pack front · not on file yet</div>
+    <div class="frame">Out of the pack · not on file yet</div>
+    <div class="frame">In a hand · not on file yet</div>
+    <div class="frame">In use · not on file yet</div>
+    <div class="frame">Close-up · not on file yet</div>
   </div>
-
-  <div class="grid2">
+  <div class="grid2" style="margin-top:3mm">
     <div>
-      <h3 style="margin-top:0">How it looks</h3>
-      <p>Each pack holds 6 gummies (15 g). Flavour: Strawberry Burst. Gummy colour and shape: <span class="nof">not on file yet</span></p>
+      <h3>How it looks</h3>
+      <p style="margin:0">One pack is 15 g, 6 gummies. Gummy colour and shape: <span class="missing">not on file yet</span></p>
       <h3>The pack</h3>
-      <p>A sunflower-yellow pouch with a green wordmark, a pink "KIDS" and "For ages 2 to 13". It holds 28 daily packs, and the 84-pack size is 3 pouches. Pink hex: <span class="nof">not on file yet</span></p>
+      <p style="margin:0"><b>Big pouch:</b> sunflower yellow, green wordmark, pink "KIDS", "For ages 2 to 13". Resealable top. Pouch shape and finish not stated; the adult pouch is a glossy stand-up foil pouch. The 84-pack size exists (packing not stated).<br>
+      <b>Daily pack:</b> colour, print and finish <span class="missing">not on file yet</span></p>
       <h3>How it's used</h3>
-      <ol><li>Take one daily pack out of the pouch through its resealable top.</li>
-        <li>Rip the pack straight across its top edge.</li>
-        <li>Tip the 6 gummies into a palm or bowl.</li>
-        <li>Eat them. No water, no mixing.</li></ol>
+      <ol style="margin:0;padding-left:5mm">
+        <li>Take one daily pack out of the pouch's resealable top.</li>
+        <li>Tear it straight across its top edge.</li>
+        <li>Pour the 6 gummies into a palm or a bowl.</li>
+        <li>Eat them.</li>
+      </ol>
     </div>
     <div>
-      <h3 style="margin-top:0">What visibly changes</h3>
-      <p class="nof">not on file yet</p>
-      <h3>How it moves and sounds</h3>
-      <p class="nof">not on file yet</p>
-      <h3>Telling it apart from Adults</h3>
-      <p>The pouch colours swap: Kids is yellow with a green wordmark, Adults is green with a yellow wordmark. Only Kids has the pink "KIDS" and the ages line, and a Kids pack holds 6 gummies instead of a small handful.</p>
-      <div class="dont" style="margin-top:3mm"><div class="lab">Never show or say</div><ul>
-        <li>A daily pack torn at the side, bottom or a corner</li>
-        <li>The pouch torn</li>
-        <li>Cartoon tie-in characters or a partner brand's marks</li>
-        <li>"Bright minds" or "supports brain health"</li>
-        <li>Anything that makes it look like candy without saying it's a supplement</li></ul></div>
+      <h3>What visibly changes</h3><p style="margin:0">not on file yet</p>
+      <h3>How it moves and sounds</h3><p style="margin:0">not on file yet</p>
+      <h3>What never to show or say</h3>
+      <div class="dont"><span class="lbl">Don't</span>The daily pack torn anywhere but straight across the top; the big pouch torn.</div>
+      <div class="dont"><span class="lbl">Don't</span>"build strong bodies and bright minds", "Supports brain health".</div>
+      <h3>Tell them apart</h3>
+      <p style="margin:0">Kids is the <b>yellow</b> pouch with a green wordmark and pink "KIDS". Adults is the <b>deep-green</b> pouch with a yellow wordmark.</p>
     </div>
   </div>
-  <div class="foot"><span>Sprout · Brand guide</span><span>October 2026 · 9</span></div>
+  <div class="foot"><span>Sprout · Brand guide</span><span>2026-10-18 · 9</span></div>
 </section>
 
-<!-- 10 WORLD AND MOTION -->
+<!-- 10. PRODUCT: LIMITED FLAVOURS -->
 <section class="page">
-  <div class="tag">Page 10 · World and motion</div>
-  <h2>World and motion</h2>
-  <p class="reason">Sprout lives in ordinary, sunny, busy lives. It's grabbed on the way out the door, not taken in a clinic. No brand photos or video notes are on file, so the lists stand alone and the gaps are marked.</p>
-
-  <div class="grid2">
+  <p class="tag">Page 10 · Product on camera (3 of 3)</p>
+  <h1>Limited flavours (Adults and Kids)</h1>
+  <div class="why">A new flavour every 4 to 8 weeks gives a fresh reason to buy. Subscribers get it for 1 month, then switch back to Original automatically. Several are tie-ins: <b>describe the flavour, never show the partner</b>.</div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:3mm">
+    <div class="frame">Pack front · not on file yet</div>
+    <div class="frame">Out of the pack · not on file yet</div>
+    <div class="frame">In a hand · not on file yet</div>
+    <div class="frame">In use · not on file yet</div>
+    <div class="frame">Close-up · not on file yet</div>
+  </div>
+  <div class="grid2" style="margin-top:3mm">
     <div>
-      <h3 style="margin-top:0">World</h3>
+      <h3>How they look</h3>
       <table>
-        <tr><th style="width:32%">Places</th><td>At home or outdoors</td></tr>
-        <tr><th>Surfaces</th><td>Product shots: a soft two-colour gradient. Lifestyle surfaces: <span class="nof">not on file yet</span></td></tr>
-        <tr><th>Light</th><td>Bright and sunny</td></tr>
-        <tr><th>People</th><td>Everyday adults in casual clothes. People in Kids shots: <span class="nof">not on file yet</span></td></tr>
-        <tr><th>Never in frame</th><td>Cartoon tie-in characters, partner brands' marks, clinical settings, muted looks</td></tr>
+        <tr><th>Flavour, as you may describe it</th><th>Gummy</th></tr>
+        <tr><td>Raspberry Lemonade</td><td>Lemon-slice shaped, raspberry red</td></tr>
+        <tr><td>Cherry, lemon lime, blue raspberry</td><td>Star-shaped</td></tr>
+        <tr><td>Raspberry and blueberry</td><td>not on file yet</td></tr>
+        <tr><td>Banana berry</td><td>not on file yet</td></tr>
+        <tr><td>Strawberry vanilla</td><td>not on file yet</td></tr>
+      </table>
+      <h3>The pack</h3>
+      <p style="margin:0">Limited-flavour pouch look: <span class="missing">not on file yet</span></p>
+      <h3>How it's used</h3>
+      <p style="margin:0">As Original: tear the daily pack straight across its top, pour into a palm or bowl, eat.</p>
+    </div>
+    <div>
+      <h3>What visibly changes</h3><p style="margin:0">The gummy's shape and colour versus Original. Anything else: not on file yet.</p>
+      <h3>How it moves and sounds</h3><p style="margin:0">not on file yet</p>
+      <h3>What never to show</h3>
+      <div class="dont"><span class="lbl">Don't</span>Cartoon tie-in characters or any partner brand's marks or names. Use the flavour description only.</div>
+      <div class="dont"><span class="lbl">Don't</span>The daily pack torn anywhere but straight across the top; the big pouch torn.</div>
+      <h3>Tell them apart</h3>
+      <p style="margin:0">Original bears are deep green. Limited gummies change shape and colour (red lemon slices, stars).</p>
+    </div>
+  </div>
+  <div class="foot"><span>Sprout · Brand guide</span><span>2026-10-18 · 10</span></div>
+</section>
+
+<!-- 11. WORLD AND MOTION -->
+<section class="page">
+  <p class="tag">Page 11 · World and motion</p>
+  <h1>World and motion</h1>
+  <div class="why">Sprout's world is the everyday: "Everyday adults in casual clothes, at home or outdoors." Sunny, candy-bright, and far from the "old way" it replaces: a half-used tub of powder and a shaker, a shelf of separate pill bottles.</div>
+  <div class="grid2">
+    <div>
+      <h2>World</h2>
+      <table>
+        <tr><td><b>Places</b></td><td>At home or outdoors. In the studio: a soft two-colour gradient.</td></tr>
+        <tr><td><b>Surfaces</b></td><td>not on file yet</td></tr>
+        <tr><td><b>Light</b></td><td>Bright, sunny</td></tr>
+        <tr><td><b>People</b></td><td>Everyday adults in casual clothes, pouring gummies into a hand</td></tr>
+        <tr><td><b>Never in frame</b></td><td style="color:var(--plum)">Anything clinical or muted; tie-in characters; partner brands' marks; a torn big pouch</td></tr>
+      </table>
+      <div class="grid2" style="margin-top:4mm;gap:3mm">
+        <div class="frame" style="height:42mm">Brand photo: at home · not on file yet</div>
+        <div class="frame" style="height:42mm">Brand photo: outdoors · not on file yet</div>
+      </div>
+    </div>
+    <div>
+      <h2>Motion and sound</h2>
+      <table>
+        <tr><td><b>Pace</b></td><td>not on file yet</td></tr>
+        <tr><td><b>Camera</b></td><td>not on file yet</td></tr>
+        <tr><td><b>Sound</b></td><td>not on file yet</td></tr>
+        <tr><td><b>Words on screen</b></td><td>not on file yet. Copy on screen follows the voice pages: short lines, numbers up front, "supports", not "fix".</td></tr>
       </table>
     </div>
-    <div>
-      <h3 style="margin-top:0">Motion and sound</h3>
-      <table>
-        <tr><th style="width:32%">Pace</th><td class="nof">not on file yet</td></tr>
-        <tr><th>Camera</th><td class="nof">not on file yet</td></tr>
-        <tr><th>Sound</th><td class="nof">not on file yet</td></tr>
-        <tr><th>Words on screen</th><td class="nof">not on file yet</td></tr>
-      </table>
-      <p style="font-size:8pt;margin-top:3mm">Until these are filled, any on-screen words follow the copy rule on page 2 and the claims on page 6.</p>
-    </div>
   </div>
-  <div class="foot"><span>Sprout · Brand guide</span><span>October 2026 · 10</span></div>
+  <div class="foot"><span>Sprout · Brand guide</span><span>2026-10-18 · 11</span></div>
 </section>
 
 </body>
 </html>
 ```
 
-## sprout/brand-tokens.md
+# brand-tokens.md
 
 ````markdown
 # Sprout: brand tokens
-October 2026 · from the brand file dated 2026-10-18 · for social posts
+
+From the Sprout brand file, last updated 2026-10-18. Values are the brand's own unless marked "guide's reading".
 
 ## Colours
+
 | Name | Hex | Job |
 |---|---|---|
-| Forest green | #00582D | Main brand green (job not stated in the file) |
+| Forest green | #00582D | MISSING: job not on file |
 | Deep forest green | #002C17 | Headings, dark sections |
 | Warm cream | #FFF7DF | Hero background |
 | Kelly green | #007E40 | Buttons |
 | Sunflower yellow | #FFCC2E | Stars, badges |
 | Plum purple | #581E5A | Top banner |
 
-Not on file: the Kids pink ("KIDS" on the pouch) and the Sugar-Free white burst.
+## Contrast pairs (text on background, either way round)
 
-## Contrast pairs (text on background)
-Thresholds: 4.5:1 for normal text, 3:1 for large text (24 px, or 19 px bold).
+Normal text needs at least 4.5:1. Large text (24 px, or 19 px bold) needs at least 3:1.
 
-**Any size**
-- Deep forest ↔ cream: 14.3
-- Plum ↔ cream: 11.2
-- Sunflower ↔ deep forest: 10.1
-- Forest ↔ cream: 8.1
-- Sunflower ↔ plum: 8.0
-- Sunflower ↔ forest: 5.7
-- Kelly ↔ cream: 4.8 (button: cream text on kelly)
-
-**Large only**
-- Sunflower ↔ kelly: 3.4
-
-**Never for text**
-- Kelly ↔ deep forest: 2.96
-- Plum ↔ kelly: 2.3
-- Forest ↔ deep forest: 1.8
-- Kelly ↔ forest: 1.7
-- Sunflower ↔ cream: 1.4
-- Plum ↔ forest: 1.4
-- Plum ↔ deep forest: 1.3
+| Pair | Ratio | Use |
+|---|---|---|
+| Deep forest / cream | 14.3:1 | Any size |
+| Plum / cream | 11.2:1 | Any size |
+| Yellow / deep forest | 10.2:1 | Any size |
+| Forest / cream | 8.1:1 | Any size |
+| Yellow / plum | 8.0:1 | Any size |
+| Yellow / forest | 5.7:1 | Any size |
+| Kelly / cream | 4.8:1 | Any size (cream text on kelly buttons) |
+| Yellow / kelly | 3.4:1 | Large text only |
+| Yellow / cream | 1.4:1 | Never for text |
+| Kelly / deep forest | 2.96:1 | Never for text |
+| Kelly / plum | 2.3:1 | Never for text |
+| Kelly / forest | 1.7:1 | Never for text |
+| Forest / deep forest | 1.8:1 | Never for text |
+| Forest / plum | 1.4:1 | Never for text |
+| Plum / deep forest | 1.3:1 | Never for text |
 
 ## CSS variables
+
 ```css
-:root{
-  --sprout-forest:#00582D;   /* main brand green */
-  --sprout-deep:#002C17;     /* headings, dark sections */
-  --sprout-cream:#FFF7DF;    /* hero background */
-  --sprout-kelly:#007E40;    /* buttons */
-  --sprout-sun:#FFCC2E;      /* stars, badges */
-  --sprout-plum:#581E5A;     /* top banner */
+:root {
+  --sprout-forest: #00582D;  /* job MISSING */
+  --sprout-deep:   #002C17;  /* headings, dark sections */
+  --sprout-cream:  #FFF7DF;  /* hero background */
+  --sprout-kelly:  #007E40;  /* buttons */
+  --sprout-sun:    #FFCC2E;  /* stars, badges */
+  --sprout-plum:   #581E5A;  /* top banner */
 
-  --font-head:'Work Sans',sans-serif;   /* 700 */
-  --font-body:'Work Sans',sans-serif;   /* 500 */
-  --font-tag:'DM Mono',monospace;       /* uppercase */
-  --font-display:'Work Sans',sans-serif;/* stand-in: display font name not on file */
+  --font-heading: 'Work Sans', sans-serif; /* weight 700 */
+  --font-body:    'Work Sans', sans-serif; /* weight 500 */
+  --font-tag:     'DM Mono', monospace;    /* small uppercase tags */
+  /* --font-display: MISSING (chunky friendly display font, name not on file) */
 
-  /* working scale for a 1080 px post, set by this guide, not the brand */
-  --size-statement:96px;
-  --size-headline:64px;
-  --size-subhead:40px;
-  --size-body:28px;
-  --size-tag:20px;
+  /* Size scale for a 1080 px-wide social post: guide's reading, not on file */
+  --size-display: 96px;
+  --size-h1: 64px;
+  --size-h2: 44px;
+  --size-body: 30px;
+  --size-small: 24px;
+  --size-tag: 20px;
 }
 ```
 
-## Fonts
+## Font import
+
 ```html
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Work+Sans:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Work+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 ```
-| Role | Font | Size (1080 px post) |
-|---|---|---|
-| Statement | Chunky display font (name not on file). Use Work Sans 700 until confirmed. | 96 px |
-| Headline | Work Sans 700 | 64 px |
-| Subhead | Work Sans 700 | 40 px |
-| Body | Work Sans 500 | 28 px |
-| Tag | DM Mono, uppercase | 20 px |
+
+Display font: MISSING. Until it's named, the guide uses Work Sans 800 as a stand-in.
+
+## Size scale (guide's reading, not on file)
+
+| Role | Font | Size | Line height |
+|---|---|---|---|
+| Display statement | Display font (MISSING) | 96 px | 1.0 |
+| Heading 1 | Work Sans Bold | 64 px | 1.05 |
+| Heading 2 | Work Sans Bold | 44 px | 1.1 |
+| Body | Work Sans Medium | 30 px | 1.35 |
+| Small print | Work Sans Medium | 24 px | 1.35 |
+| Tag | DM Mono, uppercase | 20 px | 1.2 |
 
 ## Voice rule
-Playful, cheeky, casual, plain-spoken, never preachy: a funny friend into wellness. Use short lines, three-beat rhythms and numbers up front, and say the gross thing plainly ("better poops"). Name the enemy by feel: chalky powders, pills you gag on. Benefits only "support"; never fix, cure or promise results. Survey numbers say "of surveyed users", ratings name their source, and each post carries one offer with its condition stated. Real lines: "Rip. Tip. Enjoy." · "We made daily nutrition, like, ridiculously easy." · "Tastes like a treat, works like a supplement."
+
+Playful, cheeky, casual: a funny friend into wellness who refuses to be preachy. Use short lines, three-beat rhythms ("Rip. Tip. Enjoy."), numbers up front, and say the gross thing plainly ("better poops"). Name the enemy by feel: chalky powders, pills you gag on. No guilt and no lab-coat tone in headlines. Health claims stay at "supports", never "fix". Survey numbers always carry "of surveyed users". Ratings always name their source. Daily values are per pack, not per gummy. Never name tie-in partners; use the flavour description.
 
 ## Picture rule
-Bright, sunny and candy-like, never clinical or muted. Everyday adults in casual clothes, at home or outdoors, pour small, matte, deep-green gummy bears into a hand. The flat daily pack is torn straight across its top edge, never at the side, bottom or a corner. The big stand-up pouch (glossy deep green with a yellow wordmark for Adults, sunflower yellow with a green wordmark and pink "KIDS" for Kids) opens only at its resealable top and is never shown torn. In product shots a single pouch sits on a soft two-colour gradient with gummies scattered in front. No cartoon tie-in characters, no partner brands' marks, no generated pictures.
 
-## JSON (W3C design tokens)
+Bright, sunny, candy-like: a single pouch on a soft two-colour gradient with gummies scattered in front, or everyday adults in casual clothes at home or outdoors pouring gummies into a hand. Never clinical, never muted. The daily pack is torn straight across its top edge, never the side, bottom or a corner. Gummies pour out of the torn top into a palm or bowl. The big pouch opens only at its resealable top and is never shown torn. No cartoon tie-in characters and no partner brands' marks. Use the brand's own photos only, never generated ones.
+
+## Design tokens (W3C format)
+
 ```json
 {
   "color": {
-    "forest-green": { "$value": "#00582D", "$type": "color", "$description": "Main brand green (job not stated in the file)" },
-    "deep-forest-green": { "$value": "#002C17", "$type": "color", "$description": "Headings, dark sections" },
-    "warm-cream": { "$value": "#FFF7DF", "$type": "color", "$description": "Hero background" },
-    "kelly-green": { "$value": "#007E40", "$type": "color", "$description": "Buttons" },
-    "sunflower-yellow": { "$value": "#FFCC2E", "$type": "color", "$description": "Stars, badges" },
-    "plum-purple": { "$value": "#581E5A", "$type": "color", "$description": "Top banner" }
+    "forest": { "$type": "color", "$value": "#00582D", "$description": "Forest green. Job MISSING." },
+    "deep":   { "$type": "color", "$value": "#002C17", "$description": "Deep forest green. Headings, dark sections." },
+    "cream":  { "$type": "color", "$value": "#FFF7DF", "$description": "Warm cream. Hero background." },
+    "kelly":  { "$type": "color", "$value": "#007E40", "$description": "Kelly green. Buttons." },
+    "sun":    { "$type": "color", "$value": "#FFCC2E", "$description": "Sunflower yellow. Stars, badges." },
+    "plum":   { "$type": "color", "$value": "#581E5A", "$description": "Plum purple. Top banner." }
   },
   "font": {
-    "heading": { "$value": ["Work Sans", "sans-serif"], "$type": "fontFamily" },
-    "body": { "$value": ["Work Sans", "sans-serif"], "$type": "fontFamily" },
-    "tag": { "$value": ["DM Mono", "monospace"], "$type": "fontFamily" },
-    "display": { "$value": ["Work Sans", "sans-serif"], "$type": "fontFamily", "$description": "Stand-in; brand display font name not on file" }
+    "heading": { "$type": "fontFamily", "$value": ["Work Sans", "sans-serif"], "$description": "Headings, bold." },
+    "body":    { "$type": "fontFamily", "$value": ["Work Sans", "sans-serif"], "$description": "Body, medium." },
+    "tag":     { "$type": "fontFamily", "$value": ["DM Mono", "monospace"], "$description": "Small uppercase tags." }
   },
   "fontWeight": {
-    "heading": { "$value": 700, "$type": "fontWeight" },
-    "body": { "$value": 500, "$type": "fontWeight" }
+    "heading": { "$type": "fontWeight", "$value": 700 },
+    "body":    { "$type": "fontWeight", "$value": 500 }
   },
   "size": {
-    "$description": "Working scale for a 1080 px post, set by this guide, not the brand",
-    "statement": { "$value": "96px", "$type": "dimension" },
-    "headline": { "$value": "64px", "$type": "dimension" },
-    "subhead": { "$value": "40px", "$type": "dimension" },
-    "body": { "$value": "28px", "$type": "dimension" },
-    "tag": { "$value": "20px", "$type": "dimension" }
+    "$description": "Guide's reading for a 1080 px-wide social post, not on file.",
+    "display": { "$type": "dimension", "$value": "96px" },
+    "h1":      { "$type": "dimension", "$value": "64px" },
+    "h2":      { "$type": "dimension", "$value": "44px" },
+    "body":    { "$type": "dimension", "$value": "30px" },
+    "small":   { "$type": "dimension", "$value": "24px" },
+    "tag":     { "$type": "dimension", "$value": "20px" }
   }
 }
 ```
 ````
 
-Both files are saved next to the brand file. Open the HTML in a browser and print to PDF with margins set to none.
-
 **Note**
-Logo and Web parts pages are left out: no logo rules or site styles are on file. The guide has no brand photos either, so photo slots print as labelled empty frames.
-Never for text: sunflower with cream (1.4), kelly with deep forest (2.96), any green on another green (1.7 to 1.8), plum on any green (1.3 to 2.3). Sunflower with kelly (3.4) is for large text only.
 
-**Score: 88 / 100** (7 of 8 checks passed: 7 / 8 × 100 = 87.5, rounded to 88)
-- Missed: "Prints one topic per page, nothing cut off" is not verified. Pages are fixed at A4 with clipped overflow but haven't been test-printed in a browser, so check pages 2 and 6, which are the densest.
+- **Pages left out:** Logo (no clear space, smallest size or misuse rules on file) and Web parts (no site styles, and this guide is for social posts). Voice runs over two pages so the claims fit, and the add-on adds three product pages and a world page, for 11 pages in all.
+- **Pairs that fail for text:** yellow on cream (1.4:1), and kelly, forest, deep forest and plum on each other (all under 3:1). Yellow on kelly is large text only (3.4:1).
+- **To print:** save both files next to the brand file, open the HTML in Chrome and print to PDF on A4 with margins set to none.
+
+**CHECKS MISSED**
+
+- Fonts are not all the brand's own: the display font is unnamed, so Work Sans 800 stands in, marked MISSING.
+- The forest green #00582D swatch has no job on file, so it shows MISSING instead of a job.
+- Each product page shows the pack shape and pouch finish, but the daily sachet's colour, print and finish and the limited-flavour pouch look are not on file. Someone could not yet draw those correctly.
+- One topic per page has not been confirmed in a real print preview. The pages are sized to fit A4, but that should be checked in Chrome before sending.
 ```

@@ -26,7 +26,7 @@ credits:
   - {title: "Forces Friday: Pull and Anxiety", by: "Bob Moesta and Chris Spiek, JTBD Radio", url: "https://jobstobedone.org/radio/pull-and-anxiety/", used: "The safety-net ad: easing the worry about trying"}
   - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "4:5 for the Feed"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

@@ -22,8 +22,8 @@ credits:
   - {title: "The Adweek Copywriting Handbook", by: "Joseph Sugarman", url: "https://www.wiley-vch.de/en/areas-interest/finance-economics-law/the-adweek-copywriting-handbook-978-0-470-05124-5", used: "A short first sentence and copy that keeps the reader sliding to the next line"}
   - {title: "Trade Regulation Rule on the Use of Consumer Reviews and Testimonials, 16 CFR Part 465", by: "US Federal Trade Commission", url: "https://www.govinfo.gov/content/pkg/FR-2024-08-22/pdf/2024-18519.pdf", used: "Quotes must be real buyers' words, never written for them"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

@@ -1,25 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 4 of 5 met. Invented facts: 0.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The list is honest and well-sourced: every number checks out, the risky bullets are cut, the renewal price is stated plainly, and the gaps are flagged clearly. But the lead bullet is still a bare ingredient count, which the run admits and scores against itself, so the owner gets three usable bullets and one to rewrite.
-
-## Fix
-
-In step 5 add: a point that cannot climb past the fact rung must still say what that fact means for this buyer (or be merged into the point it proves); never hand back a point that only lists contents.
+Four clean, sourced bullets that keep the absorption claim to the two measured vitamins, state the guarantee's first-order limit, and refuse to fake a price comparison. The owner gets a usable list plus an honest gap list, though the worth-it question is left for them to fill and the $1.79/day differs slightly from the page's own $1.78.
 
 ## Judge list
 
 - Met: Every number and claim traces to a fact you gave it. Check two.
-  "blood vitamin C rose 40.1% and folate rose 20.5%" and "renews at $49.99 for 28 packs, which is under $1.79 a day" ($49.99/28 = $1.785).
-- Not met: No point is a bare feature. Each says what the buyer gets or what it does.
-  "A small handful of gummies still carries 21 vitamins and minerals plus 6 g of prebiotic fiber" states contents only; the run itself admits it "stays at the fact rung".
+  "80% of the 3,000+ customers surveyed after 3 months" and "blood vitamin C rose 40.1% and folate rose 20.5%" both match the input and product page.
+- Met: No point is a bare feature. Each says what the buyer gets or what it does.
+  "with no water, no mixing and no shaker to wash"; point 1 ties contents to the absorption result.
 - Met: Each point answers a question your buyers really ask.
-  Points 1-2 answer "a gummy can't hold enough", point 3 the habit want, point 4 "they are expensive".
+  Point 1 answers "A gummy can't hold enough"; points 2 to 3 answer the want for "one habit that lasts"; 4 is risk.
 - Met: No two points make the same argument.
-  Point 2 is labelled "proof for point 1" (allowed); points 3 and 4 argue habit and price separately.
+  Point 3 is tagged "Proof for point 2" (routine vs. people sticking with it), which the skill allows.
 - Met: Gaps sit in "needs evidence" or "unanswered", not in the points.
-  "MISSING: evidence for payoff on point 1, 'enough to replace your powder'"; "UNANSWERED: Is it worth it compared with my powder?"
+  "MISSING: evidence for 'Promotes mental clarity + energy' (no source). Cut from the bullets."
 
 ## What went in
 
@@ -49,26 +45,38 @@ Competitors all say: "science-first", long ingredient lists
 ## What came out
 
 ```text
-1. A small handful of gummies still carries 21 vitamins and minerals plus 6 g of prebiotic fiber in every pack. *(Will it work? · Rung: fact · Source: product page, "60+ ingredients, 21 vitamins & minerals, 6 g prebiotic fiber per pack, in a small handful of gummies")*
-2. It's clinically tested for nutrient absorption: in a 2025 study of 120 adults over 12 weeks, blood vitamin C rose 40.1% and folate rose 20.5%. *(Will it work? This is proof for point 1 · Rung: effect, for vitamin C and folate only · Source: science page, 2025 study, approved line "Clinically tested for nutrient absorption")*
-3. It's a greens habit people keep: you tear open a pack and eat it, with no water, mixing or shaker, and 80% of 3,000+ surveyed customers take it every day. *(Why this one? · Rung: payoff · Source: product page directions, "no water, no mixing, no shaker"; product page customer survey, 80% daily)*
-4. After the first box, your subscription renews at $49.99 for 28 packs, which is under $1.79 a day. *(Is it worth it? · Rung: fact · Source: product page, "Renews at $49.99 each 4 weeks", 28 packs per pouch)*
+```
+POINTS
+1. One daily pack holds 21 vitamins and minerals plus 6 g of prebiotic fiber, and in a 12-week study of 120 adults, blood vitamin C rose 40.1% and folate rose 20.5%.
+   (Will it work? | effect, absorption shown for vitamin C and folate only |
+   product page: 60+ ingredients, 21 vitamins & minerals, 6 g prebiotic fiber per pack; science page: 2025 study, 12 weeks, 120 adults, vitamin C +40.1%, folate +20.5%; approved line "Clinically tested for nutrient absorption")
+2. You tear open one pack a day and eat the gummies straight from it, with no water, no mixing and no shaker to wash.
+   (Is it easy? | effect |
+   product page: 1 pack a day, torn across the top, eaten from the pack, no water, no mixing, no shaker)
+3. It's a habit people keep: 80% of the 3,000+ customers surveyed after 3 months take it every day.
+   (Is it easy? Proof for point 2 | effect |
+   product page: survey of 3,000+ customers after 3 months, 80% daily)
+4. If it's not for you, your first order is covered by a 30-day money-back guarantee.
+   (What if it's not for me? | fact |
+   FAQ: "a simple 30-day guarantee on your first order ... This policy applies only to your initial purchase.")
+(first question first, risk last)
 
-**Needs evidence**
-- MISSING: evidence for payoff on point 1, "enough to replace your powder." The buyer's main doubt calls for a side-by-side of amounts per serving against a typical greens powder. There is no % Daily Value or amount per nutrient.
-- MISSING: evidence for effect on point 1. Confirm the count on the label: the page says "21 vitamins" in one place and "over 20" in the ingredients panel. The 6 g of prebiotic fiber does not appear in the captured page text either.
-- MISSING: evidence for effect beyond point 2. The study measured only vitamin C and folate in the blood. It does not say whether there was a control group, who sponsored it, or which recipe was tested (Low Sugar or Sugar-Free).
-- MISSING: evidence for "Promotes mental clarity + energy." There is no source. The survey's "52% feel more energized" is self-reported. Cut this bullet.
-- MISSING: evidence for "Supports immunity + stress relief." There is no source. Cut this bullet.
-- MISSING: evidence for payoff on point 4, "cheaper than my powder." The Us vs. Them figure of $3.60 per serving for greens powders has no source. Its Sprout figure of $1.26 per serving matches neither $1.07/day (first box) nor $1.78/day (renewal).
-- MISSING: evidence for "replaces handfuls of health products" (Why Sprout? accordion).
-- Point 3 rests on a brand-run, self-reported survey. Say so wherever it is cited.
-- Not used, but this buyer will meet it: the $1.07/day price applies only after the SMS sign-up and only to the first box. Do not lead with it.
+NEEDS EVIDENCE
+MISSING: evidence for "Promotes mental clarity + energy" (no source). Cut from the bullets.
+MISSING: evidence for "Supports immunity + stress relief" (no source). Cut from the bullets.
+MISSING: evidence that the absorption result covers more than vitamin C and folate. The study measured only those 2, so no wider absorption payoff is written.
+MISSING: evidence that one pack matches or replaces a greens powder serving (no side-by-side amounts). This is the payoff the buyer's first doubt asks for.
+MISSING: a source for the "Us vs. Them" cost per serving (Sprout $1.26, greens powders $3.60). The $1.26 also doesn't match the page's $1.07 or $1.78 a day, so it isn't used.
+MISSING: one confirmed vitamin and mineral count. The facts say 21, the ingredients panel says "over 20".
+MISSING: evidence for the payoff "a habit that lasts" beyond the 3-month survey point.
+MISSING: evidence that the Sugar-Free option is easy on the stomach (sugar-alcohol panel not captured, [inferred]).
 
-**Unanswered**
-- UNANSWERED: Is it worth it compared with my powder? The facts give Sprout's price per day but no sourced price for a powder.
-- UNANSWERED: What if it's not for me? The buyer didn't raise it and the four bullets ran out. If it is added, word it as the store does: "a simple 30-day guarantee on your first order ... This policy applies only to your initial purchase."
+UNANSWERED
+"A gummy can't hold enough to replace my powder." The facts give Sprout's contents but no comparison with a powder, so they can't answer it head-on.
+"They are expensive." The renewal price is $49.99 for 28 packs, about $1.79 a day. The $29.99 first box needs the promotional text sign-up. With no sourced powder price, no honest "cheaper than your powder" point can be written, so no worth-it bullet was used.
+What happens after the first order if I want my money back? The guarantee covers the first order only.
 
-**Score: 2 / 3 = 67**
-- Missed: "No point is a bare feature." Point 1 stays at the fact rung because nothing supplied shows what 21 nutrients and 6 g of fiber do against a powder. It cannot climb further without invented evidence.
+CHECKS MISSED
+none
+```
 ```

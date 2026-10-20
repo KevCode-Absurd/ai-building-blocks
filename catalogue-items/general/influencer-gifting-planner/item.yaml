@@ -25,8 +25,8 @@ credits:
   - {title: "Partnership Ads API", by: "Meta for Developers", url: "https://developers.facebook.com/docs/marketing-api/ad-creative/partnership-ads", used: "Partnership ads run from the creator's handle and need the creator's permission"}
   - {title: "How to create Spark Ads for Smart+ Campaigns in TikTok Ads Manager", by: "TikTok Ads Help Center", url: "https://ads.tiktok.com/help/article/how-to-create-spark-ads-for-smart-campaigns-on-tiktok-ads-manager", used: "Creators authorise one video for ads with a code they make in the app"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

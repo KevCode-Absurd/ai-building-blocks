@@ -24,7 +24,7 @@ credits:
   - {title: "Clay animation", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Clay_animation", used: "Clay changing shape on camera as its main strength, and one set kept the same from shot to shot"}
   - {title: "Health Products Compliance Guidance", by: "US Federal Trade Commission staff", url: "https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance", used: "A picture carries a claim, so the change on the set needs support like any line"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

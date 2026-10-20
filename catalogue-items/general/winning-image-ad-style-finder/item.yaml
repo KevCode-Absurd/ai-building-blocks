@@ -24,8 +24,8 @@ version: 2.0.0
 credits:
   - {title: "Building Distinctive Brand Assets", by: "Jenni Romaniuk", url: "https://marketingscience.info/building-distinctive-brand-assets/", used: "brand cues (colours, type, shapes, logo spot) as one of the five traits"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

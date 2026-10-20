@@ -24,8 +24,8 @@ credits:
   - {title: "Chekhov's Gun: How To Setup and Payoff in Screenwriting", by: "Sam Kench, StudioBinder", url: "https://www.studiobinder.com/blog/chekhovs-gun/", used: "Plant early, pay off late, keep the plant quiet, misleading details that stay fair"}
   - {title: "The ABCDs of effective video ads", by: "Google", url: "https://business.google.com/us/resources/articles/abcds-of-effective-video-ads/", used: "Brand on screen early, worked into the story; drop viewers in from the start"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

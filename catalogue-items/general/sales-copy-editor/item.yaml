@@ -28,7 +28,7 @@ credits:
   - {title: "The Elements of Style", by: "William Strunk Jr.", url: "https://en.wikipedia.org/wiki/The_Elements_of_Style", used: "Omit needless words; active voice; positive form"}
   - {title: "Flesch-Kincaid readability tests", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests", used: "Reading grade measured before and after"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

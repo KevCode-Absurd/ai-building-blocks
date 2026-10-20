@@ -26,8 +26,8 @@ credits:
   - {title: "The Science of the Hook: How to Supercharge Your Reels Performance", by: "Meta for Business", url: "https://www.facebook.com/business/news/the-science-of-the-hook-how-to-supercharge-your-reels-performance", used: "Value promise, statement of intent and question hooks, folded into the gain and gap moves"}
   - {title: "The psychology of curiosity: A review and reinterpretation", by: "George Loewenstein (Psychological Bulletin, 1994)", url: "https://doi.org/10.1037/0033-2909.116.1.75", used: "Curiosity as an information gap, so every gap hook must be closed by the ad"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

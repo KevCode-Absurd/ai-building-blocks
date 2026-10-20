@@ -1,23 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-A clean, usable edit plan that teaches one thing, drops the corner-tear clip, keeps the warning with its step and flags every number and the likely misheard 'sip' for a human check. Timings are honest estimates and nothing is invented; the owner only needs to confirm word timings, the clips themselves and who the speaker is.
+A careful, usable edit plan that keeps the tear warning intact, excludes the corner-tear clip, and flags every number and the suspicious 'sip' for confirmation without pretending to have seen the footage. The owner gets a cut list, captions, safe-area numbers and a clear list of what to check before publishing.
 
 ## Judge list
 
 - Met: The post lands one idea, and the opening line makes sense on its own.
-  "People keep asking how to open these." with "The pouch must be on screen when 'these' is said"; purpose is one sentence on tearing across the top.
+  PURPOSE is one sentence on opening the pouch and pack; OPENING LINE "People keep asking how to open these." with 'these' required on screen.
 - Met: Every name, number and step in the captions is either confirmed or listed to check against the recording.
-  CHECK BEFORE CAPTIONING lists "28" daily packs, "straight across the top", "Not the side.", "small handful", "one pack for the day" with times.
+  Section 4 lists 0:12 "28", 0:16 "Not", 0:22 "tip", 0:29 "one pack for the day", each with a time.
 - Met: No extra shot suggests a different product, a result or a fact the footage doesn't show.
-  Extra shots are clip 2 (pouch opened at reseal) and clip 3 (pack torn across top, gummies in palm), each over the matching line.
+  All extra shots come from clips 2 and 3 over the matching lines; palm shot is marked SHOT TO FILM.
 - Met: Use and care steps keep their conditions, and nothing shows the product used the wrong way.
-  "Not the side." kept right after its step; "Clip 4 ... torn at the corner ... Never use it, including as a 'wrong way' demo."
+  "Leave 'You tear one straight across the top. Not the side.' as one continuous take"; "Don't use clip 4 anywhere."
 - Met: Captions stay clear of the app's buttons and stay up long enough to read.
-  "Keep all text between y 269 and y 1248 px, and between x 65 and x 1015 px"; every caption 1 to 7 s, ~12 chars/s.
-- Met: There's no invented testimonial, milestone or offer, and no 'buy now' ending unless you asked for one.
-  Ending: "Save this for your first pack" ... "There is no offer or sales line."
+  "below y = 269, above y = 1248, and at least 65 px from each side"; each caption 1–7 s, under 20 chars/s.
+- Met: There's no invented testimonial, milestone or offer, and no "buy now" ending unless you asked for one.
+  "There's no sales ending, because none was asked for." Ending text is "Save this for your next pack".
 
 ## What went in
 
@@ -50,115 +50,144 @@ the side, bottom or a corner. The big pouch is never shown torn.
 ```text
 ## 1. PURPOSE and OPENING LINE
 
-**Purpose:** A viewer learns to open a daily pack the right way: tear it straight across the top, never the side, bottom or a corner.
+**PURPOSE:** After watching, a viewer knows to open the big pouch at its resealable top and tear one daily pack straight across its top edge, not the side.
 
-**Opening line:** "People keep asking how to open these." (clip 1, about 0:01.5–0:05). Cut "Okay so, um" before it. The pouch must be on screen when "these" is said, so clip 2 starts under that word.
-
-*Footage note:* I only had descriptions of the clips. I could not check for burned-in text, watermarks, music, sharpness, how the product and label look, or exact word timings. All in and out times below are estimates from line start times and need confirming on the real clips.
+**OPENING LINE:** "People keep asking how to open these." (clip 1, from about 0:02)
+- Cut "Okay so, um," before it.
+- "These" must be visible as it's said, so the pouch or a pack needs to be in frame or in hand. `MISSING:` whether it is in clip 1. If it isn't, cover this line with the first 3 s of clip 2.
 
 ## 2. CUT LIST
 
-Output length is about 32.5 s. Every shot uses room tone at the joins, and there is no music.
+All source times are approximate, worked out from the transcript's line starts. Set exact in and out points on the waveform. Captions are drafted from the auto transcript, so confirm section 4 first, then re-time after every cut.
 
-| # | Out time | Source / in–out (s) | On screen | Caption and timing | Sound |
+| # | Source | In–Out (s) | On screen | Caption (post time) | Sound |
 |---|---|---|---|---|---|
-| 1 | 00.0–02.5 | Clip 1, 1.5–4.0 | Speaker at the counter | 00.0–03.5 "People keep asking / how to open these." | Clip 1 voice |
-| 2 | 02.5–14.5 | Picture: clip 2, 0.0–12.0. Audio: clip 1, 4.0–16.0 | Pouch opened at its resealable top, then one daily pack taken out (about clip 2, 8.0–12.0, under "28 daily packs") | 03.5–06.5 "So this is the big pouch," · 06.5–10.5 "it opens at the top, / it reseals." · 10.5–14.5 "Inside are / 28 daily packs." | Clip 1 voice. Drop clip 2 audio, or keep it low |
-| 3 | 14.5–18.5 | Picture: clip 3, 0.0–4.0. Audio: clip 1, 16.0–20.0 | Close-up of the pack torn straight across the top | 14.5–18.0 "You tear one / straight across the top." | Clip 1 voice |
-| 4 | 18.5–20.5 | Clip 1, 20.0–22.0 | Speaker on camera for the warning | 18.0–20.5 "Not the side." (stands alone) | Clip 1 voice |
-| 5 | 20.5–24.5 | Picture: clip 3, 4.0–8.0. Audio: clip 1, 22.0–26.0 | Gummies tipped into the palm | 20.5–24.5 "Then you just tip the gummies / into your hand." | Clip 1 voice. Cut the audio before "Rip, sip, enjoy" (about 0:26) |
-| 6 | 24.5–30.5 | Clip 1, 29.0–35.0 | Speaker on camera | 24.5–27.0 "That's a small handful," · 27.0–30.5 "that's your one pack / for the day." | Clip 1 voice. Cut before "Over 20…" (0:35) |
-| 7 | 30.5–32.5 | Freeze on the last frame of clip 3 (gummies in palm) | End text: "Save this for your first pack" | On-screen text only, not a caption of speech | Room tone |
+| 1 | Clip 1 | 2.0–5.0 | Speaker at counter, pouch in view (see above) | "People keep asking / how to open these." (0.0–3.0) | Voice |
+| 2 | Clip 1 audio + clip 2 picture | 5.0–12.0 (clip 2: 0.0–7.0) | Hands open the pouch at its resealable top, cut in on "opens at the top" | "So this is the big pouch," (3.0–5.3) / "it opens at the top," (5.3–7.8) / "it reseals." (7.8–10.0) | Voice |
+| 3 | Clip 1 audio + clip 2 picture | 12.0–16.0 (clip 2: 7.0–11.0) | Hand takes out one daily pack | "Inside are 28 daily packs." (10.0–14.0) | Voice |
+| 4 | Clip 1 audio + clip 3 picture | 16.0–22.0 (clip 3: 0.0–4.0, then clip 1) | Straight tear across the top in close-up, landing on "straight across the top". Cut back to the speaker for "Not the side." | "You tear one straight / across the top." (14.0–17.8) / "Not the side." (17.8–20.0) | Voice, plus the real tear sound from clip 3 kept low |
+| 5 | Clip 1 audio + clip 3 picture | 22.0–26.0 (clip 3: 4.0–8.0) | Gummies tipped into palm | "Then you just tip the gummies / into your hand." (20.0–24.0) | Voice |
+| 6 | Clip 1 | 29.0–35.0 | Speaker, ideally showing the palm with the gummies (`MISSING:` whether this is in frame) | "That's a small handful," (24.0–26.5) / "that's your one pack for the day." (26.5–30.0) | Voice |
 
-**Caption rules applied:**
-- Every caption runs between 1 and 7 seconds, at about 12 characters a second or less.
-- "Not the side." stays whole, and "28" stays with "daily packs".
-- Re-time all captions once the real word timings are confirmed.
+**Running length:** about 30 s.
 
-**Safe area at 1080 x 1920:**
-- Keep all text between y 269 and y 1248 px, and between x 65 and x 1015 px.
-- On speaker shots, place text in the safe area away from the mouth.
-- On close-ups, keep text above or beside the hands and the pack label.
-- Confirm each placement frame by frame.
+**Trims:**
+- 0:00–0:02 warm-up.
+- 0:26–0:29 "Rip, sip, enjoy" (see sections 4 and 8).
+- Everything from 0:35 to the end of clip 1.
+
+**Pauses and warnings:**
+- Trim pauses only between lines.
+- Leave "You tear one straight across the top. Not the side." as one continuous take.
+- Keep the voice at its real speed.
+
+**Caption rules:**
+- One or two lines, broken at natural pauses.
+- Keep "28 daily packs" together on one line, and keep "Not the side" whole.
+- Each caption stays up between 1 and 7 s, at no more than about 20 characters a second. All of the drafts above fit this.
+
+**Caption placement (1080 x 1920):**
+- Stay inside the safe area: below y = 269, above y = 1248, and at least 65 px from each side.
+- On speaker shots, place captions clear of the mouth.
+- On clips 2 and 3, place captions in the upper part of the safe band, off the hands, the tear line and the pack label.
+
+**Sound:**
+- Voice only. No music, because no owned or business-licensed track was given.
+- Don't use a trending sound.
 
 ## 3. EXTRA SHOTS
 
 | Shot | Line it covers | Source |
 |---|---|---|
-| Pouch opened at its resealable top | "…how to open these. So this is the big pouch, it opens at the top, it reseals." | Clip 2, 0.0–8.0 |
-| One daily pack taken out | "Inside are 28 daily packs." | Clip 2, 8.0–12.0 |
-| Pack torn straight across the top | "You tear one straight across the top." | Clip 3, 0.0–4.0 |
-| Gummies tipped into the palm | "Then you just tip the gummies into your hand." | Clip 3, 4.0–8.0 |
+| Pouch opened at its resealable top | "it opens at the top, it reseals." | Clip 2, 0.0–7.0 |
+| One daily pack taken out | "Inside are 28 daily packs." | Clip 2, 7.0–11.0 |
+| Pack torn straight across the top | "You tear one straight across the top." | Clip 3, 0.0–4.0 (hold at least 2 s on the tear) |
+| Gummies tipped into palm | "Then you just tip the gummies into your hand." | Clip 3, 4.0–8.0 |
+| Palm holding one pack's gummies (optional, only if clip 1 doesn't show it) | "That's a small handful…" | SHOT TO FILM: one pack's gummies resting in an open palm, with the pack torn straight across the top in view |
 
-**Rule check:** Confirm that clip 2 shows the pouch opened only at its reseal and never torn. If any frame shows a tear, SHOT TO FILM: the pouch opened at its resealable top.
+**Don't use clip 4 anywhere.** It shows a corner tear, which breaks the rules, and that includes as a "wrong way" example.
+
+**Brand rule checks for clips 2 and 3.** These were checked against the rules from your descriptions only. Watch every frame for:
+- Clip 2: the pouch is never shown torn.
+- Clip 3: the tear is straight across the top edge throughout.
 
 ## 4. CHECK BEFORE CAPTIONING
 
-| Time | Word or line | What to confirm |
-|---|---|---|
-| 0:00 | "Okay so, um" | Exact end time of the warm-up, for the cut point. |
-| 0:00 | "these" | The pouch or pack is in view at this word, through the clip 2 cutaway. |
-| 0:05 | "big pouch" | The product name as the brand writes it. MISSING: brand file. |
-| 0:05 | "opens at the top, it reseals" | Matches the pouch design. |
-| 0:12 | "28" daily packs | Confirm against the label. There was no brand file to compare with. |
-| 0:16 | "one", "straight across the top" | Exact words. |
-| 0:19 approx. | "Not the side." | Exact words and timing. The speech names only the side. The brand rule also forbids the bottom and a corner, so the post caption covers those. |
-| 0:22 | "tip the gummies into your hand" | Exact words. |
-| 0:26 approx. | "Rip, sip, enjoy" | Probably misheard: "sip" doesn't fit gummies taken without water. Cut either way, because "rip" doesn't say where to tear. |
-| 0:29 | "small handful", "one pack for the day" | Confirm against the label's serving directions. This is dosing, so it must be exact. |
-| 0:35 | "Over 20 vitamins and minerals", "no water, no shaker" | Not used here. Check against the label before any later post. |
+Confirm each of these against the audio, and against the label where it applies.
+
+- **0:05 "it opens at the top, it reseals":** confirm the exact words.
+- **0:12 "28":** confirm it's 28 as spoken, and that the pouch really holds 28 daily packs (`MISSING:` label). If the label differs, cut the line or re-record it.
+- **0:12 "daily packs":** confirm the product term as the brand writes it.
+- **0:16 "straight across the top. Not the side":** confirm "Not" is there. A dropped "not" reverses the instruction.
+- **0:22 "tip":** confirm it's "tip".
+- **0:22 "Rip, sip, enjoy":** "sip" is unlikely for gummies. Confirm what was actually said. It's cut by default.
+- **0:29 "one pack for the day":** confirm this matches the label's daily use (`MISSING:` label).
+- **0:35 "Over 20 vitamins and minerals":** this line isn't used here. Confirm it before using it anywhere.
 
 ## 5. COVER AND POST CAPTION
 
 **Cover:**
-- Frame: clip 3, the pack torn straight across the top.
-- Text: "How to open your daily pack", placed inside the safe area and clear of the label.
+- Frame: from clip 3, at the moment of the straight tear across the top, with the pack and hands sharp.
+- Text: "How to open your daily pack". Place it inside the safe area and off the tear line and label.
 
-**Post caption:** "People keep asking how to open these. Tear your daily pack straight across the top — never the side, bottom or a corner — then tip the gummies into your hand. Save this for your first pack."
+**Post caption:** "How to open your daily pack: open the pouch at its resealable top, then tear one pack straight across the top. Never the side, bottom or a corner. Save this for your next pack."
+
+`MISSING:` the product name as the brand writes it. Add it to the cover and post caption once you have it.
 
 ## 6. ENDING and DISCLOSURE
 
-**Ending:** On-screen text "Save this for your first pack" over a freeze of the gummies in the palm. There is no offer or sales line.
+**Ending:**
+- The spoken ending is "…that's your one pack for the day."
+- Over the last 2 s, add the on-screen text "Save this for your next pack", inside the safe area.
+- There's no sales ending, because none was asked for.
 
-**Disclosure:** None appears in the footage. If the speaker is a paid or gifted creator rather than the brand, add the platform's paid-partnership label. MISSING: who the speaker is.
+**Disclosure:** none needed if this is the brand's own post with its own team. `MISSING:` confirm the speaker isn't a paid or gifted creator. If they are, add the platform's paid-partnership label.
 
 ## 7. EXPORT
 
-- **Shape and size:** 9:16 at 1080 x 1920 or higher. All clips are vertical, so there is no crop and no black bars.
-- **Length:** about 32.5 s.
-- **Files:** export from copies of the source clips.
-  - Clean master with no captions or end text. Note it still carries any words burned into the source clips; not checked.
-  - Captioned copy with captions and end text.
-- **Platform checks:** no other app's watermark, no black bars, sound on, sharp on a phone, and more than a slide of text.
-- **Final review:** watch on a phone with sound, then muted. Check the first frame, every join (especially 02.5, 14.5, 18.5, 20.5 and 24.5) and the last second.
+**Format:**
+- Shape and size: 9:16, 1080 x 1920 or higher.
+- Length: about 30 s.
 
-## 8. SAVE FOR ANOTHER POST, NOT USED, MISSING
+**Files:** export from copies of the clips.
+- A clean master with no captions.
+- A captioned copy.
+- If any clip has burned-in text, the clean master will still show it. `MISSING:` whether any clip has burned-in text, which can't be checked from the descriptions.
 
-**SAVE FOR ANOTHER POST**
-- Clip 1, 0:35–0:42: "Over 20 vitamins and minerals, no water, no shaker." A "what's in it / why no water" post, after the label check.
+**Platform checks:**
+- No other app's watermark.
+- No black bars. All clips are vertical, so keep them uncropped.
+- Sound on.
+- Sharp on a phone, especially the tear close-up.
+- More than a slide of text.
 
-**NOT USED**
-- Clip 4 (all 0:07): the pack torn at the corner, which breaks the brand rule. Never use it, including as a "wrong way" demo.
-- Clip 1, 0:00–0:01.5: "Okay so, um" (warm-up).
-- Clip 1, 0:26–0:29: "Rip, sip, enjoy."
+**Final watch:**
+- Watch on a phone with sound, then muted.
+- Check the first frame, every join (especially the 4 → back to speaker cut on "Not the side") and the last second.
+- Confirm every caption still matches the speech after the final trims.
 
-**MISSING**
-- The actual clips or key frames, to check burned-in text, watermarks, label, sharpness and the pouch never shown torn.
-- Word-level timings.
-- Brand file: product names, fonts, colours, label facts and serving size.
-- Target platforms.
-- Whether the speaker is paid or gifted.
+## 8. SAVE FOR ANOTHER POST, NOT USED and MISSING
 
-## 9. SCORE
+**SAVE FOR ANOTHER POST:**
+- Clip 1, 0:35–0:42: "Over 20 vitamins and minerals, no water, no shaker." This is a product-benefit post, not about opening. Confirm it against the label first.
+- Clip 1, 0:22–0:29: "Rip, sip, enjoy". Keep it only if it's a real, approved brand line. Confirm the words first.
 
-**6 / 6 checks passed → 6 ÷ 6 × 100 = 100**
+**NOT USED:**
+- Clip 1, 0:00–0:02 warm-up ("Okay so, um,").
+- Clip 4 in full. It breaks the rule against corner tears. Remove it from the project bin.
 
-1. One idea, opening that makes sense alone: passed. The pouch is on screen at "these".
-2. Captions match the kept speech: passed, pending the transcript confirmation in section 4.
-3. No extra shot shows a different product, a result or an unbacked fact: passed.
-4. Warnings kept and no rule breaks: passed. "Not the side" stays with its step, and clip 4 is dropped.
-5. No invented testimonial, milestone or offer, and no sales ending: passed.
-6. Captions in the safe area and on screen long enough: passed.
+**MISSING:**
+- Key frames or the clips themselves. Without them I couldn't check burned-in text, the label or how the product looks, or confirm that clips 2 and 3 follow the rules.
+- Clip 1 content after 0:35: the transcript stops there.
+- Whether the pouch or pack, and later the palm, are in frame in clip 1.
+- The product name, fonts, colours and voice from a brand file.
+- Label facts for "28" and "one pack for the day".
+- Target platforms and caption style.
+- Disclosure status of the speaker.
 
-No checks missed. The score covers the plan only. Footage-dependent items in section 8 remain to verify.
+## 9. CHECKS MISSED
+
+- **Captions match kept speech:** drafted from an unconfirmed auto transcript. They can't pass until section 4 is confirmed and the captions are re-timed on the waveform.
+- **No shot breaks the brand's rules:** clips 2 and 3 were checked only from your descriptions. Watch every frame for a torn pouch or a pack tear that isn't straight across the top.
+- **Captions stay up long enough to read:** the timings are estimated from line starts. Check them again after the final cuts.
 ```

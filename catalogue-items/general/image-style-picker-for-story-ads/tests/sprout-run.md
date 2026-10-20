@@ -1,32 +1,27 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 6 of 6 met. Invented facts: 2.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 6 of 6 met. Invented facts: 1.
 
-The brief is strong: it picks a clear moment, sensibly rejects the unsourced 61% stat caption, and gives a usable prompt with a different-trace runner-up. But it misstates its own score and invents a missing-skill excuse, so the scoring can't be trusted.
-
-## Fix
-
-In step 9, require the score to count the family checks, the "Check before you hand it back" items and the chosen skill's checks, and forbid a MISSING for a fallback skill. Say problem-moment's checks are the family checks plus the house rules when no file is supplied.
+A strong, usable brief. It picks the 3pm desk moment, explains why the 61% caption was dropped, and gives a clean prompt, a different-trace runner-up and honest flags on weak spots. It stays within the files and the rules (no logo or product, no health claim, no child).
 
 ## Judge list
 
 - Met: Picture builds on a moment quoted from the story, not the product
-  Push quote: "Every day at 3pm I'd push my chair back from my desk and wait for my stomach to settle."
+  PUSH quotes "Every day at 3pm I'd push my chair back from my desk"; product left out.
 - Met: Someone with the problem would know what it's about with no caption
-  Woman rolled back from desk, hand low on stomach, "3:04 PM" on screen; reads as gut moment.
+  Hand on stomach, pushed-back chair, half-eaten lunch carry the gut meaning; the run flags a tiredness risk.
 - Met: Someone without it would scroll past, and nothing says what the reader has
-  Rejected the stat caption because it "tells the reader what they have"; brief has no condition wording.
+  "Words on the image: none"; no stat or caption naming a condition.
 - Met: Story's first line answers what the picture makes people wonder
-  Wonder: "Why has she stopped working and pushed back from her desk"; opening line picks it up.
+  Wonder line picked up by the story's opening 3pm line; the story begins on the same moment.
 - Met: Runner-up shows a different kind of evidence
-  Runner-up tried-before-products, "trace: on a thing" vs chosen "only a moment".
-- Met: Any swap from the requested skill is explained
-  "Changed from fact-caption-image-ad-maker because:" with five reasons given.
+  Runner-up is tried-before-products (on a thing) vs. the moment skill.
+- Met: Any swap from the skill asked for is explained
+  "Changed from fact-caption-image-ad-maker because" lists three reasons.
 
 ## Invented
 
-- other: 3:04 PM (Clock text on image, flagged as written for the image to stand for 3pm; acceptable.)
-- other: A woman of about 40 (Made-up adult within buyer range; allowed by house rules.)
+- other: 3:04 pm. Chair pushed back. (Caption time is invented, but it is an illustrative caption on a made-up image, not a Sprout fact.)
 
 ## What went in
 
@@ -51,75 +46,76 @@ Brand rule: "supports", never "fix".
 ## What came out
 
 ```text
-I can't draw the picture here because no image tool is connected to this chat. I'll write the brief and prompt, and the steps to make it are at the end.
+I can't draw pictures in this chat, so you'll get the image prompt to run elsewhere.
 
-**1. Push**
-"Every day at 3pm I'd push my chair back from my desk and wait for my stomach to settle." This is the first line of the approved story ad.
+```
+PUSH
+"Every day at 3pm I'd push my chair back from my desk and wait for my stomach to settle." (story ad, line 1, narrated by the customer)
 
-**2. Trace and skill**
-- **Where the evidence lives:** only a moment. It is the 3pm pause at the desk.
-- **Why not a place:** the desk itself isn't changed by the problem. An empty chair rolled back reads as "stepped out," not "waiting for my stomach."
-- **Why not a thing:** the powders and probiotics are in the story, but they aren't in the push line.
-- **Skill:** `problem-moment-image-ad-maker`
+TRACE AND SKILL
+Only a moment (3pm at the desk, the pause before getting back to work) -> problem-moment-image-ad-maker. Changed from fact-caption-image-ad-maker because:
+(1) the 61% stat's footnote on the product page only says "Source", so it isn't a sourced fact on file;
+(2) those words aren't in the story, and the story opens on the 3pm desk moment, not a statistic, so Follow fails;
+(3) the push leaves no trace in the room itself, so the place skill doesn't fit either. The moment is the evidence.
 
-**Changed from `fact-caption-image-ad-maker` because:**
-- **No real source.** The 61% stat's only source on the product page is a footnote link that just says "Source." That is not a sourced fact on file.
-- **Not the story's words.** The stat isn't in the approved story, so the picture would carry words the story never says.
-- **Same number as the discount.** "61%" is also the discount in the ad that sends people to the page, alongside 52% and 55% on the page itself. A 61% on the picture and a different % at the offer would read as one more mismatched number.
-- **It labels the reader.** A stat about "Americans with digestive issues" tells the reader what they have, which the sort rule forbids.
-- **Far from the push.** It is the furthest option from the push quote's words: 3pm, chair, desk, stomach.
+RUNNER-UP
+tried-before-products-image-ad-maker (on a thing): a half-used tub of generic fiber powder and a probiotic bottle with a few capsules left, pushed to the back of a kitchen shelf. It comes from "I'd tried fiber powders. I'd tried probiotics. Nothing stuck."
 
-**3. Runner-up**
-`tried-before-products-image-ad-maker` (trace: on a thing). It would show a half-used tub of generic fiber powder and a nearly full bottle of generic probiotic capsules at the back of a kitchen cupboard. They would be unbranded, with no rival's shape or label. The source is "I'd tried fiber powders. I'd tried probiotics. Nothing stuck."
+THE BRIEF
+Note: the problem-moment skill file isn't in this chat. This brief is built from its line in step 2 ("the moment itself") plus "People and fixes", and that skill's own checks weren't run.
 
-**4. The brief**
-`MISSING: problem-moment-image-ad-maker's own gate, hand-back order and checks (the skill file wasn't provided).` The brief below follows the house rules only. Run the skill's gate on it before you make the picture.
+Moment: Mid-afternoon on a workday. A woman has rolled her desk chair back about a foot from her desk and stopped working. She sits a little forward and still, waiting for her stomach to settle. It is a quiet pause, not pain.
 
-- **The moment:** a weekday afternoon at a work desk, a home desk or an office. A woman of about 40 has rolled her desk chair back from the desk and is sitting still, leaning back, waiting.
-- **The person:** a made-up adult who looks like the buyer: 25 to 55, a woman, everyday clothes such as a soft knit top and work trousers.
-  - She is shown from the shoulders down, or from the side and slightly behind. Her face is out of frame or turned away.
-  - One hand rests flat and low on her stomach. The other hand is on the armrest.
-  - Her posture is still and patient. No grimace, no doubling over, no theatrical pain.
-- **The setting:** the desk is mid-work.
-  - A laptop is open with a generic spreadsheet. A small time in the screen corner reads **3:04 PM**. This text is written for the image and stands for the story's "3pm."
-  - Normal clutter: a phone face down, a pen, two sticky notes with no legible words, a half-drunk glass of water, a closed lunch container.
-- **Framing and light:** square 1:1, shot on a phone from a colleague's or a selfie-at-arm's-length angle, slightly off level. Plain afternoon window light with no retouching.
-- **Left out:**
-  - Product, logo, brand colour, price, button and badge.
-  - Pills, powders or any supplement.
-  - Children, before-and-after, and any real app interface.
-- **Words on the image:** only "3:04 PM," written for the image to match "Every day at 3pm."
-- **Image prompt:**
-  > Square 1:1 candid phone photo, everyday afternoon window light, slightly off-level framing, no retouching. A woman around 40 sits at a work desk in an ordinary home office. She has rolled her swivel chair back about half a metre from the desk and leans back, still, waiting. Her face is out of frame (show shoulders down, side-and-slightly-behind angle). One hand rests flat and low on her stomach over a soft grey knit top; the other rests on the chair armrest. Hands at true size with natural skin texture, fine lines and contact shadows. On the desk: an open laptop showing a plain generic spreadsheet, with a small clock in the screen's corner reading "3:04 PM"; a phone face down; a pen; two yellow sticky notes with no readable writing; a half-drunk glass of water; a closed plastic lunch container. Ordinary mess, nothing styled. No logos, no brand names, no text other than "3:04 PM", no pills, no supplements, no products, no children, no dramatic expression, no studio lighting, no plastic skin, no over-sharpening.
-- **Fixes:** change one thing at a time and keep everything else.
-  - If the hand on the stomach reads as period pain or pregnancy, move the hand to rest at the waistband instead.
-  - If the screen looks like a real app, make it a blank grey grid.
-  - After two tries, change the idea, never the facts.
+Who: A made-up woman, about 40. Seen from behind and to one side, so we get her shoulders, the side of her face turned down and away, and one hand resting flat and loosely low on her stomach over her shirt. Her other forearm rests on her thigh. She is not acting hurt. She is not a customer and is never called one.
 
-**5. What it makes people wonder**
-"Why has she stopped working and pushed back from her desk at 3 in the afternoon?"
+Where: An ordinary home-office corner or a shared-office desk. It has a laptop showing a generic blurred spreadsheet, a mug, a phone face-down, and a lunch container pushed to one side with half the food left. There is a cardigan over the chair back and a few loose papers. This is the normal mess of a working day.
 
-The story's opening picks it up within the first 125 characters: "Every day at 3pm I'd push my chair back from my desk and wait for my stomach to settle."
+Light: Flat afternoon daylight from a side window. It is slightly uneven, with no studio look.
 
-**6. Line under the picture**
-"3pm, chair pushed back." This is a plain caption with a time, 22 characters.
+Framing: Square 1:1. It looks like a coworker or a housemate snapped it from a few steps behind, at chest height on a phone, slightly off-level. The chair's pushed-back gap is clearly visible between the desk edge and her knees.
 
-**7. Test**
-Run the same story with the 3pm desk moment against the runner-up (the tried-and-dropped powder and capsules). Judge first on the share of readers who reach the plan box on the page, then on sales.
+Words on the image: none. The time goes in the line under the picture.
 
-**8. Score: 75/100** (3 of 4 checks passed = 75)
+Product: left out (not asked for).
 
-The chosen skill's own checks couldn't be counted because the skill file is missing. One check still fails:
+Never show: any logo, brand colour, price or badge; any fiber or probiotic product; a child; a real app or screen; a grimace or doubled-over pose; anything that says what the reader has.
 
-- **Stop, sort and follow: follow fails on the page side.** The picture and the first line match. But the product page opens on discount banners and "revive whole body vitality," and digestion is only the third bullet. Nothing on the page picks up the 3pm desk moment.
-  - **Fix:** send the click to a page or section that opens on the afternoon gut moment and "supports digestion and gut health," with the gut reviews near the button.
+Skin and hands: Her cheek and the back of her hand show a little real texture at phone distance, with fine lines, slightly uneven tone and natural pores. There is no plastic shine and no over-sharpening. Her hand rests with natural weight on the fabric, at true size, with a soft contact shadow.
 
----
+Fixes: Change one thing at a time (waxy skin, a staged pose, blown-out window light, a readable or branded screen) and keep the rest. After two tries, change the idea, not the facts.
 
-**To make the picture:**
-- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** save an `OPENAI_API_KEY` (from platform.openai.com/api-keys) or a `GEMINI_API_KEY` (from aistudio.google.com/apikey). I can then send the prompt to that image API and save the file. OpenAI or Google bills each picture.
+Stop: It is unexpected in a feed because it shows someone not working at a work desk, with a visible gap. It is relevant because the gut-fix seeker knows that pause.
+Sort: People with afternoon stomach trouble read the hand, the untouched lunch and the pushed-back chair with no caption. Others see a tired coworker and scroll on.
+Follow: The story's first line describes exactly this picture. The landing page does not start on this moment (see CHECKS MISSED).
 
-No product photos are needed, because this brief leaves the product out.
+Image prompt:
+"Candid smartphone photo, square 1:1, taken from a few steps behind and to the side at chest height, slightly off-level. A woman of about 40 sits in an office desk chair that has been rolled back about a foot from her desk, leaving a clear gap between the desk edge and her knees. She leans slightly forward, still and quiet, head turned down and away from the camera. One hand rests flat and loosely low on her stomach over a plain shirt, and the other forearm rests on her thigh. Her expression is calm, waiting, not in pain. On the desk: an open laptop with a blurred generic spreadsheet, a ceramic mug, a phone face-down, loose papers, and a lunch container pushed aside with half the food uneaten. A cardigan hangs over the chair back. Flat mid-afternoon daylight from a side window, slightly uneven, ordinary indoor colour. Natural skin texture on her cheek and the back of her hand: fine lines, uneven tone, visible pores, no retouching, no plastic shine. Her hand rests with real weight and a soft contact shadow on the fabric. Everyday clutter, nothing styled. No text, no logos, no brand names, no readable screens, no products, no other people."
+
+WHAT IT MAKES PEOPLE WONDER
+Why has she stopped and rolled back from her desk in the middle of the afternoon? / picked up by: "Every day at 3pm I'd push my chair back from my desk and wait for my stomach to settle."
+
+LINE UNDER THE PICTURE
+3:04 pm. Chair pushed back. (plain caption, 27 characters)
+
+TEST
+The same story with the 3pm desk moment against the shelf of dropped fiber powder and probiotics. Judge first on how many readers reach the plan box on the page, then on sales.
+
+CHECKS MISSED
+- Follow: the product page opens on the announcement bar, "Sprout Superfood Gummies" and "60+ potent ingredients", not on the afternoon gut moment. Digestion is only the third bullet, so the click doesn't land on the same moment.
+- Sort: a still woman at a desk could read as tiredness. Only the hand on her stomach and the half-eaten lunch carry the gut meaning, so watch for this in the test.
+- problem-moment-image-ad-maker's own gate and checks were not run (its file isn't in this chat).
+```
+
+**To finish the picture:**
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude.
+- **Claude Code:** save an `OPENAI_API_KEY` or `GEMINI_API_KEY` and the prompt can be sent to that API, which bills each picture.
+
+**Gaps to fill later:**
+- MISSING: a named source for the 61% stat, if you want the caption idea back.
+- MISSING: the brand brain's photo style and allowed on-image words.
+- MISSING: the buyer's own words about the afternoon moment.
+- MISSING: a source on file for "6 g prebiotic fiber". It isn't on the product page as captured.
+
+Want to check it before it goes live with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker)? Bring the image prompt. Or type your own next step.
 ```

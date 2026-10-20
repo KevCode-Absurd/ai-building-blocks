@@ -24,7 +24,7 @@ credits:
   - {title: "Do Your Ads Talk Too Fast to Your Audio Audience? (Journal of Advertising Research, 2020)", by: "Emma Rodero", url: "https://thearf.org/access-knowledge-2/publications/journal-of-advertising-research/do-your-ads-talk-too-fast-to-your-audio-audience-how-speech-rates-of-audio-commercials-influence-cognitive-and-physiological-outcomes/", used: "The pace check and cutting ideas rather than speeding up"}
   - {title: "About text overlays and the safe zone for ads in Stories and Reels", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/980593475366490", used: "The silent check: text clear of the app's buttons"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

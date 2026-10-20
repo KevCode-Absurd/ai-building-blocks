@@ -1,27 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 6 met. Invented facts: 0.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-The script is usable, with a clear turn, a fair plant and payoff, and the product handled the way the brand rules say. But several shots carry more than one event, so it isn't production-ready as written, and the self-score of 100/100 overstates it.
-
-## Fix
-
-In step 7 and the pre-handback check "Every shot has one event", require splitting any shot where the action has a second beat (eats then looks, lifts then reveals) into separate shots, and re-check before scoring.
+A tight, makeable 20-second script that uses the brand's own headline, follows Sprout's product-handling rules (straight top tear, palm pour, pouch opened only at the top) and keeps all claims to the approved line. It is honest about gaps, warns off the discount mess and the probiotics error, and gives the clips skill everything it needs.
 
 ## Judge list
 
 - Met: The turn line has "but" and "therefore", and the product is in the "therefore".
-  "but she doesn't know what day it is either, therefore she skips the question and hands him a torn-open Sprout daily pack"
+  "but when he asks Mia what day it is she gives him no date, therefore she hands him a Sprout daily pack"
 - Met: Something shown early returns at the end with a new meaning.
-  Powder tub and shaker planted in shot 1; shaker crust revealed in shot 7 and tied to the old way.
+  Shot 1 tub with jammed spoon; shot 9 "slides the powder tub and spoon back across the counter, out of the sunlight".
 - Met: Every spoken line has a label (Character A, Character B, Narrator).
-  All four lines are labelled, e.g. "Character B: "Couldn't tell you.""
+  All four lines labelled: Character B: "What day is it?", Character A: "Doesn't matter." / "It's a Sprout day." / "Rip. Tip. Enjoy."
 - Met: No character says the product worked for them.
-  Lines are only questions and shrugs; the notes say "Neither character reports a result".
-- Not met: Each shot has one event and at most one camera move.
-  Shot 6 has two events (eats the handful, eyes drift to the shaker); shot 7 has two (lifts and tilts the shaker, then a push-in). Shot 4 also has hand-out and A taking it.
+  Only lines are the question, "Doesn't matter.", "It's a Sprout day." and the brand line; notes say nothing suggests memory or energy help.
+- Met: Each shot has one event and at most one camera move.
+  Ten shots, each one action (scrape, ask, pull, hold out, tear, tip, chew, answer, slide, hold); only shot 2 has a move (push-in).
 - Met: The shot lengths add up to the total you asked for.
-  "3.0 + 2.5 + 2.5 + 2.0 + 2.5 + 2.5 + 2.5 + 2.5 = 20.0s"
+  Clip 1: 2.5+2.5+2+3 = 10s; Clip 2: 1.5+1.5+1.5+2+1.5+2 = 10s; total 20s as asked.
 
 ## What went in
 
@@ -43,57 +39,131 @@ no music.
 ## What came out
 
 ```text
-**Turn line:** He's shuffling round the kitchen at dawn and has lost track of the week, **but** she doesn't know what day it is either, **therefore** she skips the question and hands him a torn-open Sprout daily pack, the one step that doesn't need a calendar. Meanwhile the shaker by his elbow shows how long it's been since anyone made a powder.
+```
+TURN  It's a slow weekday morning and Sam is scraping a hard green
+      clump out of the bottom of his old powder tub, but when he asks
+      Mia what day it is she gives him no date, therefore she hands
+      him a Sprout daily pack and he rips, tips and eats, and the
+      tub goes to the back of the counter.
+PLANT  Shot 1: a half-used tub of greens powder, a spoon jammed in a
+       clump, and an empty shaker beside it, shown without comment.
+PAYOFF  "It's a Sprout day" turns the tub into what it really was:
+        the habit that kept stalling. Sam slides it out of the light
+        and the pouch stays front and centre.
 
-**Plant:** In the opening shot his hand rests on a half-used tub of greens powder, with a shaker beside it. Nobody mentions either one.
+CAST
+Character A: Mia, early 30s, woman. Oversized cream knit cardigan
+  over a forest-green tee. Accessory: small gold hoop earrings.
+  Stands at the camera-right end of the counter.
+Character B: Sam, mid 30s, man. Heather-grey hoodie, sleeves pushed
+  to the elbow. Accessory: tortoiseshell glasses pushed up on his
+  head. Stands at the camera-left end of the counter, by the window.
+SET (master): small home kitchen in the morning. Pale oak counter
+  runs across the frame, warm cream walls. Sunlight comes through
+  the window camera-left. On the counter, camera-left: the half-used
+  powder tub with spoon and the empty shaker. Centre-right: the
+  glossy deep-green Sprout pouch with the big yellow "Sprout"
+  wordmark and "28 Daily Packs", opened only at its resealable top.
+  Colours: cream, oak and forest green. Bright and sunny, never
+  clinical.
 
-**Payoff:** After eating his gummies, he tilts the shaker to the light, finds dried green crust inside and asks when they last used it. Her "Couldn't tell you" turns his opening question about the day into a joke about the old way.
+Shot | length | event | cast and camera | move | line | sound
+--- CLIP 1 (0:00 to 0:10) ---
+1    | 2.5s | A spoon scrapes hard at a dried green clump in the
+       bottom of the half-used powder tub | Sam's hands only. Close,
+       counter height, slightly high angle into the tub. Empty
+       shaker sharp at frame edge, pouch soft in the background |
+       static |
+       none | spoon scraping plastic, faint kitchen room tone
+2    | 2.5s | Sam asks the question, spoon still in hand | Sam.
+       Medium single, eye level, from the camera-right side of the
+       counter. Eyeline off camera-right to Mia. Sam sharp, pouch
+       soft behind him on the counter | slow push-in, ends on a
+       medium close-up |
+       Character B: "What day is it?" | room tone, spoon set down
+       with a tap at the end of the line
+3    | 2s | Mia's fingers pull one daily pack out of the open top of
+       the pouch | Mia's hand. Close insert, counter height, pouch
+       label square to camera, wordmark and "28 Daily Packs"
+       sharp | static |
+       none | soft foil crinkle
+4    | 3s | Mia holds the pack out toward Sam | Over Sam's shoulder
+       (grey hoodie in soft foreground, camera-left) onto Mia,
+       medium, eye level. Eyeline to Sam. Mia and the pack sharp.
+       Line ends by 9.5s | static |
+       Character A: "Doesn't matter." | room tone
+--- JOIN: deliberate cut ---
+--- CLIP 2 (0:10 to 0:20) ---
+5    | 1.5s | Sam tears the daily pack straight across its top
+       edge | Sam's hands. Close, counter height, side-on so the
+       straight tear across the top reads clearly | static |
+       none | crisp foil rip
+6    | 1.5s | Small deep-green gummy bears tip from the torn top into
+       Sam's palm | Sam's hand and the pack. Close, slightly high
+       angle, palm sharp, bears about thumbnail height next to his
+       fingers | static |
+       none | soft patter of gummies in the palm
+7    | 1.5s | Sam chews | Sam. Medium close-up, eye level. Eyeline
+       drifts camera-left down to the powder tub, off screen. Sam's
+       face sharp | static |
+       none | quiet chewing, room tone
+8    | 2s | Mia answers, half a smile | Mia. Medium close-up single,
+       eye level, matching the angle of shot 2 in reverse (same
+       window light from camera-left). Eyeline to Sam | static |
+       Character A: "It's a Sprout day." | room tone
+9    | 1.5s | Sam's hand slides the powder tub and spoon back across
+       the counter, out of the sunlight | Sam's hand and the tub.
+       Close, counter height. Tub moves from sharp into shadow at
+       the back | static, the tub exits the light |
+       none | plastic tub dragging on wood
+10   | 2s | The Sprout pouch holds front and centre, label to camera,
+       with the torn daily pack beside it and the tub soft and
+       shadowed behind | Product only. Close, counter height,
+       straight on, pouch sharp, same colour and size as the product
+       page | static hold |
+       Character A (off screen): "Rip. Tip. Enjoy." | room tone,
+       one last foil crinkle
 
-**Cast** (described once, repeated in the same words):
-- **Character A:** man, mid-30s, stubble, rumpled grey crewneck sweatshirt, navy sweatpants, white hand towel over his left shoulder.
-- **Character B:** woman, mid-30s, dark hair up in a tortoiseshell claw clip, mustard-yellow knit cardigan over a white tee.
+NOTES
+- Inferred: There is no buyer brief, so the scene is aimed at "the
+  quitter who wants to stick" from brand.md (has quit greens powders,
+  wants one habit that lasts). The kitchen, names, ages and clothes
+  are invented for the film. Mia is the "I" from the headline. "What
+  day is it" plays as a lazy morning, not confusion. Nothing suggests
+  the gummies help memory, focus or energy.
+- MISSING: product photos from several sides; the exact printed words
+  on the pouch beyond "Sprout" and "28 Daily Packs"; the design and
+  colour of the single daily pack (sachet); the pack's size next to a
+  hand; a confirmed current offer (the site and ads show 49%, 52%,
+  55%, 58% and 61% at once, and $29.99 needs the SMS sign-up).
+- Clips: 2 Kling clips of 10s each. Clip 1 is shots 1 to 4 and must
+  end on Mia's held-out pack, with her line finished by 9.5s. Clip 2
+  is shots 5 to 10. The join is a deliberate cut, from her offer to
+  his tear. Each shot is a separate cut inside its clip. Keep the
+  same set, light direction and clothes wording in both clips.
+- Text in editing: captions for all 4 spoken lines: "What day is
+  it?" / "Doesn't matter." / "It's a Sprout day." / "Rip. Tip.
+  Enjoy." End card over shot 10: "60+ ingredients, 21 vitamins &
+  minerals, and 6g fiber" (approved, per 1 pack). Do not say
+  "probiotics" (the product has prebiotic fiber only). No offer text
+  until the current offer is confirmed. If one is added, use today's
+  terms only and state the conditions (first order, SMS discount,
+  subscription renewal price). No review quotes or star ratings
+  unless the source is named. No lettering inside the scene.
 
-**Space (master):** small kitchen with cream-painted cabinets. A pale wood table sits frame-left under a window, and soft morning daylight comes from frame-left. The counter is frame-right, with the powder tub (lid ajar, green dust on the rim) and a clear shaker on it. The Sprout pouch stands upright and closed beside B's white mug on the table. A faces left toward B, and B faces right toward A.
+CAST NOTE  Mia (Character A) carries the ad. She is the "I" of the
+  live headline "He Asked What Day It Was. I Handed Him a Gummy." Her
+  calm, unbothered hand-off suits a quitter who is tired of the
+  powder chore and doesn't want a lecture. Mia's voice: General
+  American, warm mid pitch, unhurried, dry and a little teasing,
+  lines landed lightly. Sam's voice: General American, low and
+  slightly gravelly morning voice, slow pace, one line only. Never
+  change: Mia's cream knit cardigan over a forest-green tee and gold
+  hoops; Sam's heather-grey hoodie with pushed-up sleeves and the
+  tortoiseshell glasses on his head; the counter layout (tub
+  camera-left, pouch centre-right); sunlight from camera-left. Never
+  show either of them as a customer, founder or expert.
 
-| Shot | length | event | cast and camera | move | line (speaker label) | sound |
-|---|---|---|---|---|---|---|
-| **CLIP 1 (0:00–0:10)** | | | | | | |
-| 1 | 0:00–0:03 (3.0s) | A leans his forehead on an open upper cabinet door, eyes shut, his hand on the lid of the half-used powder tub | A only. Medium close, eye height, slight low angle from frame-left. A's face is sharp. Tub and shaker sit soft in the lower frame | none | Character A: "What day is it?" | fridge hum, cabinet hinge creak as he leans |
-| 2 | 0:03–0:05.5 (2.5s) | B looks up from her mug, blank | Wide master, chest height. B at the table frame-left, A at the counter frame-right. Pouch upright beside B's mug. B's eyeline goes right to A. Deep focus | none | Character B: "Honestly? No idea." | room tone, mug set down on wood |
-| 3 | 0:05.5–0:08 (2.5s) | B's hands tear a daily pack straight across the top edge | B's hands only. Close insert, high angle over the table. The pack and its torn top edge are sharp | none | (none) | crisp foil rip |
-| 4 | 0:08–0:10 (2.0s) | B's hand enters frame-left and holds out the open pack. A takes it | A single. Medium, eye height. The pack is sharp as it changes hands, then focus pulls to his face | none | Character B: "Here." | foil crinkle |
-| **JOIN: deliberate cut** | | | | | | |
-| **CLIP 2 (0:10–0:20)** | | | | | | |
-| 5 | 0:10–0:12.5 (2.5s) | A tips the small deep-green gummy bears from the torn top into his palm | A's hands only. Close insert, slight high angle. Gummies sharp, towel edge soft at frame top | none | (none) | soft patter of gummies into palm |
-| 6 | 0:12.5–0:15 (2.5s) | A eats the handful. His eyes drift down to the shaker by his elbow | A single. Medium close, eye height. A sharp, shaker soft in the lower frame-right | none | (none) | chewing, fridge hum |
-| 7 | 0:15–0:17.5 (2.5s) | A lifts the shaker and tilts it toward the window. A dried green crust ring shows inside | Close on the shaker and A's hand, eye height, backlit by the window frame-left. The crust is sharp | slow push in, ends on the crust ring | Character A: "When did we last use this?" | plastic shaker knocks the counter lightly |
-| 8 | 0:17.5–0:20 (2.5s) | B shrugs and sips. The pouch stands label to camera beside her mug | Over A's right shoulder (towel in soft foreground) toward B at the table. The pouch is sharp and fully readable for 2s, with B just behind it | none | Character B: "Couldn't tell you." | mug sip, room tone |
-
-Total: 3.0 + 2.5 + 2.5 + 2.0 + 2.5 + 2.5 + 2.5 + 2.5 = **20.0s**
-
-**Notes**
-- **Inferred:** the couple, the kitchen, the morning and the fogged "what day" mood are all made up to fit the brand's headline. The buyer is the "quitter who wants to stick" from the brand file. That pick comes from the review themes "I finally stuck with a supplement" and "quit powders" and from the brand's own note that this lane is open. It is not from a brief. Neither character reports a result, and nothing on screen claims an effect beyond eating the pack.
-- **Product handling:** the daily pack is torn only straight across its top edge, and the gummies are tipped from that torn top into the palm. The big pouch stays closed and upright and is never torn. No partner or tie-in marks appear.
-- **MISSING: daily pack (sachet) artwork and colour.** Only the big pouch is described.
-- **MISSING: photos of the pouch and pack from several sides, and the exact pack wording** beyond the "Sprout" wordmark and "28 Daily Packs".
-- **MISSING: pack size next to a hand.** The brand file only says "small flat sachet", about 20g, with gummies about thumbnail height.
-- **Clip split:** two 10s clips with a hard cut at 0:10, between B handing over the pack and the tip insert. Inside each clip, shots join by cuts. If the tool can't cut inside one generation, render each shot on its own and trim to these lengths.
-- **No music,** as asked. The room sound carries the beats: the rip, the patter and the shaker knock.
-- **Text to add in editing.** Nothing is lettered inside the scene.
-  - Captions for all four lines, each with its speaker.
-  - End-card super over shot 8's last second: "60+ ingredients, 21 vitamins & minerals, and 6g fiber" and "Rip. Tip. Enjoy."
-  - Standard FDA line: confirm whether legal wants it on ads. The site carries it and the ads don't.
-- **Offer text:** none added. The live terms conflict (52%, 55%, 49%, 58% on site and 61% in ads), and $29.99 depends on the SMS discount. **MISSING: one confirmed current offer.** Don't use "61% off" or "money-back guarantee" without the "first order only" wording.
-
-**Cast note (for the short film clips skill)**
-- **Who carries the ad:** Character A carries it. He is the powder quitter, and his question and the crusty shaker are the turn. B is the calm hand that makes it easy. This suits a buyer whose doubt is "I never stick with anything."
-- **Voices:**
-  - A: American, low-mid pitch, slow and gravelly with morning voice, and a rising, genuinely lost question.
-  - B: American, mid pitch, dry and unhurried, deadpan with no laugh.
-- **Never change:**
-  - A: grey crewneck, navy sweatpants, towel on the left shoulder, stubble.
-  - B: mustard cardigan over a white tee, tortoiseshell claw clip.
-  - The space: window light from frame-left, A on the right, B on the left.
-
-**Score: 100/100** (9 of 9 checks passed: 9 ÷ 9 × 100 = 100). No checks missed.
+CHECKS MISSED  none
+```
 ```

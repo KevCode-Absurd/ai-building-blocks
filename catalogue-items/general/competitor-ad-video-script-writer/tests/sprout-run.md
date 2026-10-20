@@ -1,23 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-A clean, shootable 25-second script that keeps the reference's skeleton while using only the gummy, survey and offer facts supplied, with the first-person lines properly flagged as actor portrayal. The one gap (survey date and source) is marked MISSING, and the subscription-renewal risk is called out in ASSUMED rather than glossed over.
+A clean, honest remake: the six-row skeleton and timings are kept, every line is new, and only the facts the owner supplied are used, with the survey qualifier and the first-order-only guarantee limit kept on screen. The owner gets a shootable script plus clear gaps to fill (a real customer, a time figure, whether the $29.99 order renews) before it goes live.
 
 ## Judge list
 
 - Met: Same number of rows, same order, same timings as the reference
-  Six rows at 0–3, 3–7, 7–10, 10–16, 16–21, 21–25 s; DISTANCE CHECK: "rows 6/6 · time 25s/25s"
+  Six rows at 0–3, 3–7, 7–10, 10–16, 16–21, 21–25 s, matching the reference exactly.
 - Met: Each spoken line within two words of its row's budget
-  Ref 8/8/4/11/5/7 words vs yours 9/9/5/12/5/7, all within one word.
-- Met: No five-word run from the reference appears
-  "Every morning I choked down a gritty greens drink" vs "Every Sunday I spent two hours"; longest shared run is single words.
+  Ref/yours: 8/9, 8/9, 4/4, 11/10, 5/7, 7/9. All within two.
+- Met: No five-word run from the reference
+  Longest shared run is 'Then I stopped' (3 words); 'Every … I' and 'The … The …' patterns don't reach five.
 - Met: None of the reference's numbers, claims, offer terms or slogans appear
-  No "two hours", "four thousand", "4.8", "first week free" or "cancel in the app" anywhere in the script.
+  No 'two hours', 'four thousand', '4.8', 'first week free' or 'cancel in the app'; all figures are Sprout's.
 - Met: Every changed row in the frame map says why
-  Row 5: "Changed the proof type from a review rating to survey adherence, because that is the only proof provided."
-- Met: First-person speaker is a real customer, or flagged (actor note / third person)
-  Row 1 lower third "Actor portrayal"; ASSUMED: "Rows 1–3 are flagged... Otherwise keep the 'Actor portrayal' label or switch to third person"
+  Row 1: 'no real time figure'; row 4: 'no Sprout equivalent'; row 6: subscription vs first order. Rows 3 and 5 are terse but follow from row 1.
+- Met: First-person speaker is a real customer, or flagged
+  '[MISSING: a real Sprout customer … agreed to say rows 1–3]' plus 'Actor portrayal' label or third-person rewrite offered.
 
 ## What went in
 
@@ -44,42 +44,42 @@ having to clean a shaker bottle".
 ## What came out
 
 ```text
-Move: A first-person confession of a tiresome daily habit flips on a quiet "I quit" beat, so the product reads as the end of a chore and not a better way to do it.
+Move: She owns up to a daily chore, then quits it, so the product's pitch is that it removes the chore entirely.
 
-**FRAME MAP**
+FRAME MAP
+Row | Time | Words/sec | Job | Move | Yours: kept / changed (why) / [MISSING]
+1 | 0–3 s | 8 words / 3 s = 2.7 | Opening | Confession of a ritual with its cost dropped early ("two hours") | Kept: first-person confession, recurring ritual. Changed: the weekly planning becomes the daily greens shake (buyer quote: "the drink was definitely gritty/chalky"). The early number is dropped because there is no real time figure. Swap: "every morning" carries the cost through frequency. See PLACEHOLDERS.
+2 | 3–7 s | 8 / 4 = 2.0 | Problem | List of three fragments over three quick cuts, with the sting last | Kept: three fragments, three cuts, sting last. The sting is the shaker to clean (buyer quote: "not having to clean a shaker bottle").
+3 | 7–10 s | 4 / 3 = 1.3 (≈1.5 s spoken, ≈1.5 s silence) [inferred] | Turn | "I stopped doing it", then a beat of silence | Kept: quitting line, silence. Changed: "planning" becomes "mixing".
+4 | 10–16 s | 11 / 6 = 1.8 | Demo (product first shows) | The product does the job with no effort, in a product close-up | Kept: product first appears in row 4, close-up. Changed: the reference's "uses what's already in your fridge" angle has no Sprout equivalent. Swap: same "no effort" move on a true fact (one pack a day, torn straight across the top).
+5 | 16–21 s | 5 / 5 = 1.0 | Proof | Two short numbers on a text card | Kept: two-number text card. Changed: review count and rating become the survey figure, with its qualifier on screen.
+6 | 21–25 s | 7 / 4 = 1.8 | Offer | Easy way in plus easy way out | Kept: entry plus exit. Changed: the reference is a subscription app (free week, cancel in app). Sprout is a first order with a money-back guarantee. Translated as entry = $29.99 first order by text, exit = 30-day money-back, first order only.
 
-| Row | Time | Words/sec | Job | Move | Yours: kept / changed (why) / [MISSING] |
-|---|---|---|---|---|---|
-| 1 | 0–3 s | 2.7 (8 w) | Opening / problem | Confession of a routine with a specific cost ("two hours") | Kept the confession. Changed the cost: there is no time figure in the facts, so the specific cost is the buyer's own complaint ("gritty/chalky"). |
-| 2 | 3–7 s | 2.0 (8 w) | Problem | List of three fragments over three quick cuts, with the last item as the sting | Kept the three fragments and cuts. The sting is now the shaker to wash, from buyer words. |
-| 3 | 7–10 s | 1.3 (4 w) | Turn | Short "I quit" line, then a beat of silence | Kept the line and the silence. New wording so the reference's key line isn't echoed. |
-| 4 | 10–16 s | 1.8 (11 w) | Demo; product first shows | Close-up of the product in hand while one line explains how it works | Kept the close-up and the single line. Changed the hook from "uses what you already have" to "one pack, nothing to wash", which calls back to row 2. |
-| 5 | 16–21 s | 1.0 (5 w) | Proof | Two numbers dropped on a text card | Kept the two-number card. Changed the proof type from a review rating to survey adherence, because that is the only proof provided. Card carries the "of surveyed users" qualifier. |
-| 6 | 21–25 s | 1.8 (7 w) | Offer | Low-risk entry plus an easy way out | Kept low risk plus an exit. Translated "free week / cancel in app" (subscription) into "$29.99 first order / 30-day money-back". The guarantee is the exit. |
+SCRIPT
+Row | Time | Spoken line | On-screen text | Visual note
+1 | 0–3 s | "Every morning I shook up a gritty greens drink." (9 words) | "Every morning: a gritty greens drink" + small "Actor portrayal" if not a real customer | Person to camera, mid-shot, seated at a kitchen counter in morning light. Sprout's own set and palette, not a copy of the reference's kitchen-table look.
+2 | 3–7 s | "The scoop. The chalky sip. The shaker to scrub." (9 words) | "Scoop. Sip. Scrub." | Three quick cuts: (a) powder scoop tipping into a shaker, (b) a sip and a small wince, (c) scrubbing residue out of the shaker at the sink.
+3 | 7–10 s | "Then I stopped mixing." (4 words, then silence) | "Then I stopped mixing." | She sets the shaker in the sink and lets go. Hold on her face in silence for about 1.5 s.
+4 | 10–16 s | "One pack a day. Tear it straight across the top." (10 words) | "1 pack a day. Tear across the top. No shaker." | Close-up of hands tearing a Sprout pack straight across the top. Cut to the empty counter where the shaker used to sit. First appearance of the product.
+5 | 16–21 s | "Over three thousand surveyed. Eighty percent, daily." (7 words) | "80% take it daily*". Footnote: "*Survey of 3,000+ Sprout customers; % of surveyed users taking daily." | Plain text card in Sprout's brand colours and type, numbers large.
+6 | 21–25 s | "First order twenty-nine ninety-nine by text. Thirty-day money back." (9 words) | "$29.99 first order when you sign up by text" / "30-day money-back guarantee, first order only" / Sprout logo | End card with the pack beside the text.
 
-**SCRIPT**
+PLACEHOLDERS:
+- [MISSING: a real Sprout customer who used a shaker greens drink every morning and has agreed to say rows 1–3]. Without this, the rows need an on-screen "Actor portrayal" label or a rewrite in third person ("Every morning she shook up…"). The third-person version weakens the confession move.
+- [MISSING: a real figure for time or effort spent mixing and cleaning, from your survey]. It would restore the reference's early number in row 1, e.g. "minutes a day". Do not use a figure without a source.
+- [MISSING: whether the first order converts to a repeat order or subscription]. If it does, row 6 must state that on screen.
 
-| Row | Time | Spoken line | On-screen text | Visual note |
-|---|---|---|---|---|
-| 1 | 0–3 s | "Every morning I choked down a gritty greens drink." (9 w) | "Every morning: a gritty greens drink" + lower third "Actor portrayal" (unless a consented customer) | One person to camera, medium close-up, seated at a kitchen counter in morning light. Holds an unbranded glass of murky green drink. No competitor packaging. |
-| 2 | 3–7 s | "The mixing. The chalky sip. The shaker to wash." (9 w) | "Mix. Sip. Scrub." | Three quick cuts, about 1.3 s each: (a) shaking an unbranded shaker bottle; (b) a wincing sip; (c) scrubbing the shaker at the sink. |
-| 3 | 7–10 s | "So I ditched the shaker." (5 w), then about 1.5 s of silence | "So I ditched the shaker." | Back to camera. They set the shaker on a cupboard shelf and close the door. Hold on their face in silence. |
-| 4 | 10–16 s | "One pack a day, torn straight across the top. Nothing to wash." (12 w) | "1 pack a day · tear across the top · nothing to wash" | First product shot. Close-up of hands tearing one Sprout pack straight across the top and tipping the gummies into a palm. The empty counter shows no shaker. |
-| 5 | 16–21 s | "3,000-plus surveyed. 80% taking daily." (5 w) | Card: "80% of surveyed users taking Sprout daily" / footnote: "Survey of 3,000+ Sprout customers. [MISSING: survey date and who ran it]" | Full-screen text card in Sprout's own type and colours. |
-| 6 | 21–25 s | "$29.99 by text. First order, 30-day money-back." (7 w) | End card: "Sprout · $29.99 first order with text sign-up · 30-day money-back guarantee, first order only" | End card with the Sprout pack and the text-to-join prompt. |
+ASSUMED:
+- Shots are built from your written description, not pictures. Framing, cut pace and the reference's set could not be checked for rows 1–6. If the reference's look is more distinctive than described, row 1's set may need to move further from it.
+- Row timings follow your stated spans. The speech and silence split inside row 3 is inferred. If her line runs longer, the silence shortens and the turn loses force.
+- The speaker's "before" is a powder greens drink in a shaker. This is drawn from the two buyer quotes. If most Sprout buyers didn't come from powders, rows 1–3 speak to a minority.
+- Row 2's "chalky sip" describes the speaker's own old drink, not a named competitor. Naming or showing another brand's tub would turn it into a comparison claim.
+- No brand voice was given. The tone mirrors the reference (plain, dry, first person).
+- No health or taste claims were made because none were provided. Row 4 states only the pack and tear facts.
 
-**PLACEHOLDERS:**
-- Row 5 footnote: [MISSING: survey date and who ran it]. Fill it with the survey date, who ran it and how users were selected, so the 80% figure can be sourced on screen.
+DISTANCE CHECK: rows 6/6 · time 25s/25s · longest shared run 3 words ("Then I stopped") · borrowed claims, figures, names: none
 
-**ASSUMED:**
-- **Pictures not checked.** No reference pictures were provided, and the reference is described, not shown. The framing, the three cuts, the phone close-up and the card styles for all 6 rows come from the text. If the real shots differ (for example, row 2 isn't three cuts), the visuals need re-matching.
-- **What the buyer quotes refer to.** "Gritty/chalky" and "cleaning a shaker bottle" are assumed to describe a powdered greens drink buyers used before Sprout. If they describe something else, rows 1–2 lose their factual basis.
-- **"Nothing to wash."** This assumes the pack format needs no utensils or mixing. If it does, row 4 needs a different callback.
-- **Who speaks the first-person lines.** Rows 1–3 are flagged. They are true only if spoken by a real customer who has agreed to say them. Otherwise keep the "Actor portrayal" label or switch to third person ("She choked down…"), which weakens the confession.
-- **Offer type.** This assumes $29.99 is a one-off first-order price. If it starts a subscription, the renewal terms must go on the end card, and row 6's exit should mention cancelling.
-- **Meaning of the 80% figure.** This assumes "80% taking daily" means self-reported adherence among surveyed users and is not an efficacy result. Nothing in the script implies a health outcome.
+CHECKS MISSED: none. Check 6 passes only as flagged: rows 1–3 need a consenting real customer, or the "Actor portrayal" label must stay on screen.
 
-**DISTANCE CHECK:** rows 6/6 · time 25s/25s · longest shared run 1 word ("Every", "The", "I", "First") · borrowed claims, figures, names: none
-
-**SCORE:** 6/6 checks = 100 out of 100 · missed: none
+Next, would you like to check this script before it goes live with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), tighten it for reading aloud with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor), or turn it into image ads with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner)? You can also type your own next step.
 ```

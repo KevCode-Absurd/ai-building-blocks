@@ -1,23 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-The sheet is tightly grounded: every quote traces to a numbered review, the lead problem matches the brand's own open lane, and claim limits correctly keep the gut story and GLP-1 lines out. The owner gets a buildable four-row test with the real gaps (article page, consent, rival count) flagged rather than papered over.
+A careful, usable setup sheet that sticks to the brand file and the 20 reviews, picks the open 'couldn't stick with it' lane with correct counts and exact quotes, and fences off every risky claim. Its only blemish is restating the brand-file buyer doubt as a question in quote marks, though it is clearly marked MISSING and sourced to the brand file.
 
 ## Judge list
 
 - Met: The fit names real things buyers tried, with review numbers.
-  "Greens powders, used for years and quit: 1, 3, 4"; "separate supplements: 5"; "shaker-bottle routine: 6"
+  "Greens powder, dropped for consistency: ... (1)", "$94 a month ... gritty/chalky" (3), "choking on" (4), separate gummies (5), shaker (6), kids' greens (16).
 - Met: The counts in the problems table match the review numbers listed.
-  "1, 2, 3, 4, 5, 6 | 6", "7, 8, 9, 10, 11 | 5", "12, 18, 19 | 3"; all six rows add up, 21 reviews each used once.
+  Rows 1,2,3,4,5,6,12 = 7; 7,8,9,10,11,14 = 6; 15,16,17 = 3; pairs = 2 each; 24 placements across 21 lines, as stated.
 - Met: Push, habit, doubt and pull are exact quotes with numbers, or say MISSING.
-  Push 4 and 3, Doubt 17/21/18, Pull 1/2/5/6 all match reviews.md; "MISSING: a customer line voicing 'a gummy can't hold enough...'"
+  "It's always been an issue of consistency like many things." (1); "I hate subscriptions because I feel like they are a trap" (17); gummy-capacity doubt marked MISSING.
 - Met: The narrator is a real cleared person or the brand. Nobody is invented.
-  "The brand, summing up what customers tell it. Nobody is cleared to speak"; quotes are unnamed, "one customer wrote".
+  "The brand, summing up what customers tell it. Nobody is cleared to speak, so there is no customer voice, no first name and no founder voice."
 - Met: The four test rows differ on all three columns.
-  Forces Push/Habit/Pull/Doubt; traces tub/bottles/torn pack/phone email; openers scene/count/quote/date.
+  Rows 1-4: Push/tub/scene; Habit/shelf/count; Pull/pack-and-keys/quote; Doubt/day-1-2-3 packs/date. Row 5 clearly optional.
 - Met: The sheet ends with every MISSING line in one list.
-  MISSING list carries both body lines ("an article-style page", "a customer line voicing...") plus six more, then "SCORE 100/100 (6 of 6 checks)".
+  Section 11 lists article page, market notes, gummy doubt, star ratings, consent, budget, results, sugar grams; then "CHECKS MISSED none".
 
 ## What went in
 
@@ -42,195 +42,193 @@ Market notes: none. Page: none yet.
 ## What came out
 
 ```text
-## FIT
+# Story ad setup sheet: Sprout daily greens gummies
 
-**Suits.** Buyers describe a routine they kept trying and dropping, and what they dropped it for:
+## 1. FIT
 
-- **Greens powders, used for years and quit:**
-  - 1: "I've tried a few green powders over the years."
-  - 3: "I was taking [a big-name greens powder] but even with their monthly subscription discount it was still $94 a month and the drink was definitely gritty/chalky."
-  - 4: "I've been choking on [a big-name greens powder] for the last few years"
-- **A shelf of separate supplements, dropped:**
-  - 5: "I also stopped buying separate probiotic gummies, b12 gummies, and multivitamin gummies."
-- **The shaker-bottle routine, left behind:**
-  - 6: "not having to clean a shaker bottle or extra dishes for greens stuff in powder form"
+**Suits.** Sprout is a used-up product, and buyers describe a routine that kept slipping and the products they dropped:
 
-This is a used-up product with a clear history of slipping routines and half-finished tubs.
+- **Greens powder, dropped for consistency:** "I've tried a few green powders over the years… It's always been an issue of consistency" (1).
+- **Greens powder, dropped for price and texture:** "$94 a month and the drink was definitely gritty/chalky" (3).
+- **Greens powder, put up with for years:** "I've been choking on [a big-name greens powder] for the last few years" (4).
+- **A stack of separate gummies, dropped:** "I also stopped buying separate probiotic gummies, b12 gummies, and multivitamin gummies" (5).
+- **Shaker and dishes, dropped:** "not having to clean a shaker bottle or extra dishes for greens stuff in powder form" (6).
+- **Kids' greens, tried and dropped:** "I have tried all of the 'green' options for the kids" (16).
 
-## PROBLEMS
+## 2. PROBLEMS
 
-Customer words are numbered 1 to 20 as in reviews.md. "They are expensive" (retailer) is added as **21**. Each review is counted once.
+Customer words are numbered 1–20 as in reviews.md. "They are expensive" (retailer) is numbered **21**. Reviews 3, 14 and 17 describe two problems each, so each appears in two rows. There are 21 lines and 24 placements.
 
 | Problem | Reviews | Count | Strength |
 |---|---|---|---|
-| Couldn't stick with powders, pills and supplement stacks | 1, 2, 3, 4, 5, 6 | 6 | Strong (years of trying, "choking", "$94 a month", relief at finally sticking) |
-| Gut and regularity | 7, 8, 9, 10, 11 | 5 | Strong ("15 years", "chronic IBS", relief) |
-| Taste | 12, 18, 19 | 3 | Medium (praise and complaints) |
-| Energy and feeling better | 13, 14 | 2 | Medium |
-| Feeding the family, no time | 15, 16, 17 | 3 | Medium |
-| Price and subscription | 20, 21 | 2 | Medium |
+| Couldn't stick with a supplement routine (gritty powder, gagging, a stack of bottles, shaker clean-up) | 1, 2, 3, 4, 5, 6, 12 | 7 | Strong: years of trying (1, 4), relief (2) |
+| Irregularity, bloating, gut trouble | 7, 8, 9, 10, 11, 14 | 6 | Strong: "15 years" (7), chronic IBS (8) |
+| Kids won't eat greens, busy family life | 15, 16, 17 | 3 | Medium |
+| Low energy | 13, 14 | 2 | Medium |
+| Subscription feels like a trap, can't cancel | 17, 20 | 2 | Strong: "tried multiple times" (20) |
+| Price | 3, 21 | 2 | Medium |
+| Taste off at first | 18, 19 | 2 | Mild |
 
-**Lead: couldn't stick with a supplement routine (reviews 1 to 6).**
-- It is the most common problem and is said strongly.
-- It fits the brand's "fine to repeat" claims cleanly.
-- The brand file calls it the open lane: only 2 of the brand's 40 newest ads use the habit idea.
+**Lead: couldn't stick with a supplement routine.** It is the most common problem (7 lines) and it is strongly felt. It needs no body claims, and it fits the largest buyer group, the quitter (about 40%). The brand file also calls it the open lane: only 2 of Sprout's 40 newest ads use the habit idea.
 
-**Backup: gut and regularity (reviews 7 to 11).**
-- It is just as strongly felt, but its best lines read as a cure.
-  - 7: "normal for the 1st time in 15 years!"
-  - 9: "the solution to my problems"
-- The brand may only say "supports digestion and gut health". This story is harder to tell inside that limit, so it goes second.
+**Backup: gut trouble.** It has 6 lines and is strongly felt. It can be told at "supports digestion and gut health" level with the survey line. It cannot use "fix", and it cannot use the GLP-1 lines (11, 14). Review 7 may only be told as one buyer's story.
 
-## WHY THEY SWITCH
+## 3. WHY THEY SWITCH (lead: couldn't stick)
 
-**Push** (the moment the old way stopped being bearable):
-- 4: "I've been choking on [a big-name greens powder] for the last few years"
-- 3: "it was still $94 a month and the drink was definitely gritty/chalky."
+**Push** (the old way stopped being bearable):
+- "It's always been an issue of consistency like many things." (1)
+- "even with their monthly subscription discount it was still $94 a month and the drink was definitely gritty/chalky." (3)
+- "I've been choking on [a big-name greens powder] for the last few years" (4)
 
 **Habit** (what they kept doing, and why it made sense):
-- 1: "The issue has never been nutritive content. It's always been an issue of consistency like many things." The nutrition was right, so they kept buying.
-- 5: "separate probiotic gummies, b12 gummies, and multivitamin gummies". They kept stacking one product per need.
+- They believed the powder was good for them: "The issue has never been nutritive content." (1)
+- They kept going for years anyway: "for the last few years" (4)
+- They kept buying a stack because each bottle covered one need: "separate probiotic gummies, b12 gummies, and multivitamin gummies" (5)
 
 **Doubt** (what made them wary of something new):
-- 17: "I hate subscriptions because I feel like they are a trap so I canceled it before the gummies even arrived."
-- 21: "They are expensive"
-- 18: "I thought the first pack I tried tasted terrible, but after the third day they started tasting better"
-- MISSING: a customer line voicing "a gummy can't hold enough to replace my powder". This doubt exists only in the brand's buyer profile, not in any review.
+- Price: "They are expensive" (21)
+- Subscriptions: "I hate subscriptions because I feel like they are a trap" (17)
+- First taste: "I thought the first pack I tried tasted terrible" (18)
+- `MISSING:` "Can a gummy hold enough to replace my powder?" This doubt appears only in the brand file's buyer notes, not in any numbered customer line.
 
-**Pull** (what is different now, matched to a claim the brand may make):
+**Pull** (what is different now), matched to claims the brand may make:
 
-| Customer line | Brand claim it matches |
+| What customers say | Matching claim the brand may make |
 |---|---|
-| 1: "[Sprout] has been the one thing I've been able to stick to." | "95% of users take [Sprout] at least 4-6x per week with 80% taking daily", with "of surveyed users" |
-| 2: "It's wild I WANT to take [Sprout] and don't forget." | Same survey claim |
-| 5: "I just take these now and it's easier for me to manage." | "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack |
-| 6: "The convenience and taste are huge! ... Plus not having to clean a shaker bottle or extra dishes" | Format facts: no water, no mixing, no shaker |
+| "[Sprout] has been the one thing I've been able to stick to." (1) | "95% of users take [Sprout] at least 4-6x per week with 80% taking daily" (of surveyed users, 3,000+ surveyed) |
+| "It's wild I WANT to take [Sprout] and don't forget." (2) | Same survey line |
+| "I just take these now and it's easier for me to manage." (5) | "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack |
+| "not having to clean a shaker bottle or extra dishes" (6) | Format fact: tear a pack, eat, no water |
+| "[Sprout] literally tastes like fruit snacks I ate as a kid." (12) | Taste as a customer's own words only |
+| "after the third day they started tasting better" (18) | Answers the taste doubt honestly |
 
 **Traces you could photograph:**
-- A half-used tub of green powder with a dried, clumped scoop inside. No brand marks.
-- A shaker bottle with a green ring, left in the sink.
-- A counter line of separate bottles: probiotic gummies, B12 gummies, multivitamin gummies (review 5). Generic, no marks.
+- A half-used tub of greens powder with a clumped scoop, pushed to the back of a cupboard. The tub must be unbranded.
+- A shaker bottle with dried green residue, left in the sink.
+- A shelf of separate bottles (probiotic, B12, multivitamin).
 - Green powder dust on a kitchen counter.
-- A phone showing a generic "your subscription renews" email.
-- A Sprout daily pack torn straight across the top, gummies pouring into a palm, in an ordinary out-the-door spot.
+- A daily pack torn straight across its top edge, next to keys, a laptop bag or a car cup holder.
+- A row of torn, empty packs: a streak, day by day.
 
-## CLAIM LIMITS
+## 4. CLAIM LIMITS
 
-**May say:**
-- "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack. Use 21, never "20+".
-- The survey lines, always with "of surveyed users", noted as a brand-reported survey of 3,000+ customers:
-  - "95% of users take [Sprout] at least 4-6x per week with 80% taking daily"
-  - "52% feel more energized" (only if energy comes up)
-- Format facts: tear a pack, eat the gummies, no water, mixing or shaker.
-- Vegan, pectin base, free from gluten, dairy, nuts, synthetic dyes and sweeteners. Methylfolate, not folic acid.
+**The story may say:**
+- 60+ ingredients, 21 vitamins & minerals and 6 g fiber in 1 pack.
+- The survey numbers, always with "of surveyed users".
+- Clinically tested for nutrient absorption, with the 2025 study named and its two results stated: vitamin C +40.1%, folate +20.5%.
 - Third-party tested for 70 pesticides, 4 heavy metals, 16 contaminants and 9 microbial contaminants.
-- "Clinically tested for nutrient absorption", only with the study named and its 2 numbers (vitamin C +40.1%, folate +20.5%).
-- Public review lines, word for word, as "one customer wrote".
+- Vegan, pectin base, free from gluten, dairy, nuts, synthetic dyes and synthetic sweeteners.
+- Methylfolate, not folic acid.
+- No water, no shaker, no mixing.
+- Customer quotes, word for word.
 
-**May not say:**
-- That one pack equals or replaces a greens powder serving. There is no evidence on file.
-- The rival's name, or "$94 a month" as the brand's own price claim. It may appear only inside review 3, and only after a person checks it.
-- The dated "$1.26 vs $3.60" comparison.
-- "works", "clinically backed for energy, immunity", "revive whole body vitality", the 30/60/90-day results, or "backed by 35,000+ studies".
-- "4.8 stars from 100,000 reviews" without naming the source and its true count.
-- Anything about cancelling beyond the site's own words, or any promise of an easy cancel.
-- Any GLP-1 line. Reviews 11 and 14 are not used.
-- A bare "$29.99" without the SMS-discount condition and the $49.99 renewal.
+**The story may not say:**
+- That a pack "replaces" or equals a powder, or any nutrient comparison with a rival.
+- The "$1.26 vs $3.60" serving comparison.
+- "backed by 35,000+ studies", "[Sprout] works", or anything about energy or immunity.
+- "100% … per gummy".
+- "Fix", or any weight, hair, skin, metabolism or hormone claim.
+- GLP-1, including reviews 11 and 14.
+- "4.8 stars" without naming the source.
+- "Less than 1% use our guarantee".
+- Any promise of an easy cancel.
+- Any rival's name, marks or packaging.
 
-## AIM
+**Price and offer:**
+- Use one discount figure, and the click page must use the same one.
+- $29.99 applies only with the SMS new-customer discount. It renews at $49.99 every 4 weeks.
+- The 30-day money-back guarantee covers the first order only.
+- Use "21" vitamins and minerals consistently. The site also says "20+".
 
-**Moment-first, assumed.** No market notes were given, so the rival count is unknown.
+## 5. AIM
 
-- The moment is the half-used tub, or the shaker nobody wants to wash. Anyone who quit a routine has lived it, so it reaches the largest buyer group (about 40%) and part of the parent group.
-- Risk: the big-name powder brand now sells gummies too, and could tell the same story. Check the ad library before committing.
+**Moment-first, assumed.** No market notes were given, so I don't know whether rivals already tell this story.
 
-## NARRATOR
+- **Why moment-first:** the slipping routine and the abandoned tub are lived by quitters of every age and job. The quitter group is the widest buyer group, and the brand's own account barely uses this angle.
+- **What to check first:** before final copy, search the Meta Ad Library for "greens powder" and "stick to" (active, US). If rivals run the same moment, switch to person-first, for example the office worker aged 28 to 45.
 
-**The brand**, summing up what customers tell it. Nobody is cleared to speak:
-- No customer has agreed to ad use.
-- There is no founder story on file.
-- There is no expert.
+## 6. NARRATOR
 
-No named or first-person "customer" voice appears anywhere.
+**The brand, summing up what customers tell it.** Nobody is cleared to speak, so there is no customer voice, no first name and no founder voice.
 
-**Reviews that may be quoted word for word, unnamed, as "one customer wrote":**
-- 1: "I've tried a few green powders over the years. The issue has never been nutritive content. It's always been an issue of consistency like many things. [Sprout] has been the one thing I've been able to stick to." (brand site)
-- 2: "It's wild I WANT to take [Sprout] and don't forget." (brand site)
-- 3: "I was taking [a big-name greens powder] but even with their monthly subscription discount it was still $94 a month and the drink was definitely gritty/chalky." (brand site; competitor name must not run)
-- 4: "I've been choking on [a big-name greens powder] for the last few years" (brand site; competitor name must not run)
-- 5: "I also stopped buying separate probiotic gummies, b12 gummies, and multivitamin gummies. I just take these now and it's easier for me to manage." (brand site)
-- 6: "10/10 would recommend. The convenience and taste are huge! Like mixed berries! Plus not having to clean a shaker bottle or extra dishes for greens stuff in powder form, is absolutely excellent!" (brand site)
-- 17: "I hate subscriptions because I feel like they are a trap so I canceled it before the gummies even arrived. We quickly decided to resubscribe because we love [Sprout] so much! A bonus is my kids love them too!" (brand site)
+**May be quoted word for word, as "one customer wrote", unnamed:**
+- (1) "[Sprout] has been the one thing I've been able to stick to." (brand site)
+- (2) "It's wild I WANT to take [Sprout] and don't forget." (brand site)
+- (3) Only the part "the drink was definitely gritty/chalky." (brand site) The rest names a rival.
+- (4) Not usable as written, because it names the rival. Use only if a person approves a trimmed quote such as "I've been choking on [it] for the last few years".
+- (5) "I also stopped buying separate probiotic gummies, b12 gummies, and multivitamin gummies. I just take these now and it's easier for me to manage." (brand site)
+- (6) "not having to clean a shaker bottle or extra dishes for greens stuff in powder form, is absolutely excellent!" (brand site)
+- (12) "[Sprout] literally tastes like fruit snacks I ate as a kid." (brand site)
+- (18) "I thought the first pack I tried tasted terrible, but after the third day they started tasting better" (retailer)
 
-## CLICK GOES TO
+Never quote reviews 11 or 14. Never present a brand-site pick as typical of all buyers.
 
-MISSING: an article-style page. It must be built before the ad runs. Use a "Learn more" button to it, never a link straight to the product page.
+## 7. CLICK GOES TO
 
-**Its first screen must show:**
-- The same moment as the ad: the half-used tub, or the shaker in the sink.
-- A brand-voice headline about finally sticking with it.
-- No price and no product grid.
+`MISSING: an article-style page.` It must be built before any ad runs. The ad uses "Learn more" to reach this page, and the page links on to the product page. Never send strangers straight from the ad to the product page.
 
-**Further down:**
-- The format: tear a pack, eat the gummies.
-- The allowed claims.
-- One offer, with its real terms: $29.99 first order with the SMS discount, then $49.99 every 4 weeks.
-- Only then a link to the product page.
+**The first screen must show:**
+- The same moment as the ad: the abandoned tub or the slipping routine.
+- A headline on sticking with it, in the brand's playful voice, with the brand as author.
+- Then the daily pack, torn across the top edge, gummies poured into a palm.
 
-## TEST PLAN
+**Further down, in plain view:**
+- The same single discount figure as the ad.
+- The $29.99 SMS condition and the $49.99 renewal.
+- That the guarantee covers the first order only.
+- The FDA footer line.
 
-All four rows test the lead problem. No budget was given, so there is no fifth row.
+## 8. TEST PLAN
 
 | Row | Opening force | Trace in the picture | Opener |
 |---|---|---|---|
-| 1 | Push (review 4) | Half-used tub with a dried, clumped scoop | The scene in the picture |
-| 2 | Habit (review 5) | Counter line of separate probiotic, B12 and multivitamin bottles | A count: the three bottles named in review 5 |
-| 3 | Pull (reviews 1, 2) | Daily pack torn straight across the top, gummies pouring into a palm by the front door | A real quote: review 2, "It's wild I WANT to take [Sprout] and don't forget." |
-| 4 | Doubt (review 17) | Phone showing a generic "your subscription renews" email | A date: day 28, when the 28-pack pouch runs out and the next one ships every 4 weeks |
+| 1 | Push | Half-used powder tub with clumped scoop at the back of a cupboard | The scene in the picture |
+| 2 | Habit | Shelf of three separate bottles (probiotic, B12, multivitamin) | A count: three bottles, one shelf (from 5) |
+| 3 | Pull | One daily pack, torn across the top, beside keys and a laptop bag on the way out | A real quote: (1) "the one thing I've been able to stick to" |
+| 4 | Doubt (first taste) | Three torn, empty packs in a row on a counter, marked day 1, 2, 3 | A date: "Day 3", answered by quote (18) |
+| 5 (only if budget allows) | Push | Shaker bottle with dried green residue in the sink | A real quote: (6) |
 
-## READING RESULTS
+`MISSING:` budget. Row 5 is optional until the budget is known.
+
+## 9. READING RESULTS
 
 - Compare each story only with your other ads for new customers, never with ads shown to past visitors.
-- Give every row the same budget and the same number of days before you judge.
-- Judge first on how many people reach the article page and read to the offer, then on sales.
-- The bar is your own last month of new-customer ads. None is on file, so run this first set to set one and judge the rows against each other.
-- Retire a row that sends fewer readers than your usual new-customer ads and sells nothing. If every row fails, move to the backup problem (gut and regularity).
+- Give every row the same budget and the same days before you judge.
+- Judge first on how many people reach the page and read to the offer, then on sales.
+- Retire any row that sends fewer readers than your usual new-customer ads and sells nothing. If every row on the lead problem fails, move to the backup (gut trouble).
 - Build on a winner: keep its opening force and trace, and change the opener.
+- The bar is your own last month of new-customer ads, not another store's figures. If there is no history, judge the rows against each other.
 
-## A PERSON CHECKS
+## 10. A PERSON CHECKS
 
-- **Claims:** a claims or legal review of every line against the "fine to repeat" list.
-  - "of surveyed users" appears on every survey number.
-  - The count is "21", never "20+".
-  - Nothing suggests a gummy replaces a powder.
-- **Review quotes:**
-  - Permission to quote public reviews in ads when no customer has agreed in writing.
-  - How to quote reviews 3 and 4 without naming the competitor, and whether "$94 a month" may run at all.
-  - That the brand-site reviews were hand-picked by the brand, and must not be presented as typical.
-- **Offer:**
-  - The $29.99 SMS-discount condition and the $49.99 renewal are shown wherever a price appears.
-  - One discount figure is used, not the live mix of 49% to 61%.
-  - Row 4's subscription wording uses only the site's own words, with no easy-cancel promise. Cancelling is the loudest public complaint.
-- **Pictures:**
-  - The daily pack is torn straight across the top only.
-  - The big pouch is never torn.
-  - No competitor, partner or cartoon tie-in marks on tubs, bottles or packs.
-- **Product and page:**
-  - Whether the FDA line is needed on the ad and the article page.
-  - Reviews 11 and 14 (GLP-1) are kept out entirely.
+1. **Claims:** every claim is from the "fine to repeat" list, at "supports" level. Survey lines carry "of surveyed users", and nothing from the risky list appears.
+2. **Quotes:** each is word for word against the source. No rival name appears, and trimmed quotes (3, 4) are approved.
+3. **Review use rights:** check that quoting public brand-site and retailer reviews in ads is allowed under each site's terms.
+4. **Photos:**
+   - The powder tub, shaker and bottles carry no rival brand or marks.
+   - Daily packs are torn across the top edge only.
+   - The big pouch is shown opened only at its resealable top, never torn.
+   - No tie-in characters or partner marks appear.
+5. **Offer:**
+   - One discount figure, matching across ad, article and product page.
+   - The $29.99 SMS condition and the $49.99 renewal are disclosed.
+   - The guarantee is stated as first order only.
+   - No easy-cancel promise is made.
+6. **Counts and ratings:** "21" vitamins and minerals is used consistently, and any star rating names its source.
+7. **Article page:** it exists, opens on the same moment, and carries the FDA line.
 
-## MISSING
+## 11. MISSING
 
-- MISSING: an article-style page
-- MISSING: a rival count for the habit story (Meta Ad Library, active US ads, main phrase in quotes)
-- MISSING: a customer line voicing "a gummy can't hold enough to replace my powder"
-- MISSING: evidence that one pack compares to a greens powder serving
-- MISSING: written consent from any customer for ad use
-- MISSING: star ratings for most reviews
-- MISSING: last month of new-customer ad results to use as the bar
-- MISSING: test budget (decides whether a fifth row runs)
+- `MISSING: an article-style page.` It must be built before the ad runs.
+- `MISSING:` market notes, a rough count of rival ads telling the same story. The aim is assumed until this exists.
+- `MISSING:` the doubt "a gummy can't hold enough to replace my powder" in customer words. It is in the brand file only.
+- `MISSING:` star ratings for most reviews.
+- `MISSING:` written consent from any customer, a founder story on record, or an expert.
+- `MISSING:` budget, which decides whether row 5 runs.
+- `MISSING:` last month's results for new-customer ads, to set the bar.
+- `MISSING:` grams of sugar per pack. Not captured, and needed if the taste or kids doubt is told.
 
-## SCORE
+## 12. CHECKS MISSED
 
-SCORE 100/100 (6 of 6 checks)
+none
 ```

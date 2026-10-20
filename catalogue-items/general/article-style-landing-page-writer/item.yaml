@@ -28,7 +28,7 @@ credits:
   - {title: "Information Scent", by: "Raluca Budiu, Nielsen Norman Group", url: "https://www.nngroup.com/articles/information-scent/", used: "The first screen must keep the promise of the link that brought the reader"}
   - {title: "eCommerce CRO masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "Early ideas on article-style pages, rebuilt in our own words"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

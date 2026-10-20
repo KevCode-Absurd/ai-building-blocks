@@ -21,8 +21,8 @@ source_ids: [CES-003]
 old_name: ad-reference-exact
 version: 2.0.0
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

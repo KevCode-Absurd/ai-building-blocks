@@ -1,38 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 4 of 6 met. Invented facts: 3.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-The ads keep the quotes intact, flag missing verification and free-product status, and avoid invented names or stars. The set reuses Review 1 and Review 6 as second voices, and its stated counts are loose.
-
-## Fix
-
-Add a step 8 rule: the long text's second quote must come from a customer not leading any ad in the set, and character and word counts must be counted exactly. Ad 2's long text should not reuse Review 1.
+Three ready-to-brief ads that keep every quote exact, with correct headline, short and long counts and honest MISSING lines where the owner still needs site names, verification status and a second buyer for two long texts. The only slip is a trim-record note calling Review 1's phrase 61 characters when it is 62, which doesn't affect any ad.
 
 ## Judge list
 
-- Met: 1. Quote on image matches review word for word, or cut recorded
-  Ad 1 and Ad 2 quotes match; Ad 3 cut to "I just take these now" is recorded in the trim record.
-- Not met: 2. Each ad uses a different customer, one reason to buy
-  Ad 2's long text quotes Review 1, the Ad 1 lead customer, and Ad 1 and 3 reuse Review 6; the lead quotes differ though.
-- Not met: 3. Headlines 27 chars or fewer, or trim record says why
-  "I've been able to stick to." is 27; "they started tasting better" is 27. Counts are fine, but Ad 1 headline is not a clean cut.
-- Met: 4. Short main text 50 to 150 characters and lands quote's point
-  Short texts are about 105-112 characters and restate each quote's point.
-- Met: 5. No invented name, city, star rating or face beside a quote
-  Credits read "Sprout customer, brand-site review"; no name, city or stars.
-- Met: 6. Unverified and free-product reviews flagged before paid use
-  "MISSING: verified status ... MISSING: free product status" for Reviews 1, 18, 5, 6.
-
-## Invented
-
-- other: Ad 1 headline "I've been able to stick to." (27 characters) (Count is stated as 27 but the phrase with its full stop is 27 only if counted loosely; also not a cut that holds the point.)
-- number: Ad 2 and Ad 3 long text counts "61 words" and "57 words" (Stated word counts are not accurate to the text shown.)
-- claim: "Each day is one pack of gummies, torn open." (Product fact; it is supported by the brand file, so fine.)
-
-## Safety
-
-- Ad 1 and 3 on-image credit says "brand-site review" for edited text; the "...[Sprout]" bracket was flagged though.
-- Review 18 attributed as "Retailer review" on the image is fine, but Review 5 "easier to manage" is used in the long text with a flagged risk only.
+- Met: Quote on image matches the review letter for letter, or the cut is recorded
+  All three Phrase lines match the input word for word; Trim record: "All three images carry their phrase whole. Nothing on any image is cut."
+- Met: Each ad uses a different customer and the set argues one reason to buy
+  Reviews 1, 18, 5 lead Ads 1-3; review 6 only in Ad 3 long text; all serve "finally a supplement I stick with"
+- Met: Headlines 27 characters or fewer, or the trim record says why not
+  "Headline (27): I've been able to stick to." / "(27): they started tasting better" / "(21): I just take these now" — counts verified
+- Met: Short main text 50-150 characters and lands the quote's point
+  "Short (97): For anyone who keeps giving up on supplements. One buyer says Sprout is the one they kept taking." — 97, 97, 82 all verified
+- Met: No invented name, city, star rating or face beside a quote
+  "No star ratings, review counts, names or faces are used, because none are on file." Site/retailer names marked MISSING placeholders
+- Met: Unverified and free-product reviews flagged before paid use
+  "MISSING: verified status for reviews 1, 18, 5 and 6. Confirm before paid use." and free-product MISSING line
 
 ## What went in
 
@@ -55,109 +40,70 @@ Verified and free-product status: not on file. Number of ads: 3
 ## What came out
 
 ```text
-No image tool is connected here, so I can't make the pictures. You'll get a locked brief and a prompt for each ad, and the steps to finish them are at the end.
+I can't draw images in this chat, so you'll get a brief for each ad, not finished pictures.
 
----
+AD 1  Pull / big quote card
+Phrase (Review 1, brand site): "...[Sprout] has been the one thing I've been able to stick to."
+Other words: "Review from sproutsite.com" in small plain type under the quote. Use the real site name: MISSING: site name as published. Sprout wordmark small, bottom corner.
+Scene: Flat background in the brand's deep green (match the pouch), with off-white type. The quote fills about two thirds of the frame. The real deep green pouch photo sits small, bottom right, placed as the photo itself and not redrawn. The quote runs exactly as above, ellipsis and brackets included.
+Rule: cut only at a whole word, never reword
 
-## Ad 1: Pull
+FEED TEXT, AD 1
+Headline (27): I've been able to stick to.
+Short (97): For anyone who keeps giving up on supplements. One buyer says Sprout is the one they kept taking.
+Long (36, not counting the gap): If every supplement you have tried ended up at the back of a cupboard, this is for you. One Sprout buyer wrote, "...[Sprout] has been the one thing I've been able to stick to." MISSING: backup quotes (a second buyer who leads no ad in this set). Try Sprout.
+Description (0): none
 
-**Job:** Pull. It names what's better: the one supplement they kept taking.
-**Layout:** Big quote card. The quote fills the frame and the real product sits small.
+AD 2  Doubt / question and reply
+Phrase (Review 18, retailer): "I thought the first pack I tried tasted terrible, but after the third day they started tasting better"
+Other words: Question above the quote, in plain type: "Do they taste bad at first?" [inferred: drawn from the worry this reviewer raised, not from your doubts list]. Under the quote, small: "Retailer review". Use the real retailer name: MISSING: retailer name.
+Scene: Plain light background. The question sits small at the top. The quote is the largest text, beneath it as the reply, with no full stop added. The real photo of the daily pack torn across the top, gummies pouring into a palm, sits lower third, placed as the photo and not redrawn.
+Rule: cut only at a whole word, never reword
 
-**The phrase** (`quote` text element), Review 1, brand site:
-> ...[Sprout] has been the one thing I've been able to stick to.
+FEED TEXT, AD 2
+Headline (27): they started tasting better
+Short (97): If the first taste puts you off, you are not alone. One buyer says it got better after day three.
+Long (31, not counting the gap): Worried about the taste? One buyer on a retailer site wrote, "I thought the first pack I tried tasted terrible, but after the third day they started tasting better". MISSING: backup quotes (a second buyer who leads no ad in this set). Try Sprout.
+Description (0): none
 
-**Scene:** A plain deep-green field matched to the pouch. The quote is set very large across the upper two-thirds. The real pouch sits small in the bottom corner.
-**Other words on the image:** "Sprout customer, brand-site review" in small plain type under the quote. Sprout logo small. Nothing else.
-**Reference photo:** The deep green pouch, used as is and placed, not redrawn.
-**Rule:** The quote is the biggest text, letter for letter, including "...[Sprout]". Cut only at a word boundary. Never reword.
+AD 3  Habit / routine shot
+Phrase (Review 5, brand site): "I just take these now and it's easier for me to manage."
+Other words: "Review from sproutsite.com" small under the quote. Use the real site name: MISSING: site name as published.
+Scene: The real pouch where it lives day to day, such as an open work bag or a desk beside keys and a mug. MISSING: photo of the product in a day-to-day spot. Until you have one, place the real pouch photo into a generated desk or bag setting. Never let the tool draw the pouch. The quote runs as one line across the top. If it won't fit at a readable size, use two lines; don't cut it.
+Rule: cut only at a whole word, never reword
 
-**Image prompt:** Square ad. Solid deep green background. Large serif text, the biggest element on the image, reading exactly: "...[Sprout] has been the one thing I've been able to stick to." Below it, in small sans-serif: "Sprout customer, brand-site review". Bottom right, small: the supplied photo of the green Sprout pouch, unaltered. No other text, no people, no stars.
+FEED TEXT, AD 3
+Headline (21): I just take these now
+Short (82): For mornings with no time to mix a shake. One buyer says they just take these now.
+Long (46): Some days there is no time to mix a shake. One Sprout buyer said, "I just take these now and it's easier for me to manage." Another buyer liked "not having to clean a shaker bottle or extra dishes." One daily pack, no mixing. Try Sprout.
+Description (0): none
 
-**Feed text**
-- **Headline:** I've been able to stick to. (27 characters)
-- **Short main text:** For people who start a supplement and drop it. One Sprout reviewer says this is the one they've stuck to. (105 characters)
-- **Long main text** (62 words): Most of us have started a supplement and let it slide. One Sprout reviewer put it simply: "...[Sprout] has been the one thing I've been able to stick to." Each day is one pack of gummies, torn open. Another buyer liked "not having to clean a shaker bottle or extra dishes." If staying consistent has been the hard part, try a pouch of Sprout.
-- **Description:** Left out. Nothing on file truthfully answers the most common doubt (dose).
+TRIM RECORD
+- Ad 1 headline: cut from the start of the phrase down to "I've been able to stick to." The whole phrase is 61 characters, over 27.
+- Ad 2 headline: cut to the last four words, "they started tasting better". The whole phrase is far over 27.
+- Ad 3 headline: cut after "now". The full phrase is 55 characters.
+- All three images carry their phrase whole. Nothing on any image is cut.
+- Review 1 as supplied already has an ellipsis and a bracketed "[Sprout]". Both mean someone edited the original before it reached me. They are kept exactly as given.
+- Review 6 is used only in Ad 3's long text, so that buyer appears once in the set.
 
----
+FLAGS
+- MISSING: verified status for reviews 1, 18, 5 and 6. Confirm before paid use.
+- MISSING: free product status for reviews 1, 18, 5 and 6. If any reviewer got Sprout free or was paid, say so beside their quote on the image and in the text.
+- MISSING: how reviews were collected. If only buyers expected to be happy were invited, don't run these.
+- MISSING: original wording of Review 1 behind "...[Sprout]". Check the source. If the brackets replace "this" or similar, consider showing the reviewer's real words.
+- Review 18: "the first pack I tried" may not refer to Sprout. Confirm it is a Sprout review about Sprout before using it.
+- Review 5: "easier for me to manage" doesn't say what is being managed. If the source means a health condition, it becomes a health claim the brand must back, or the ad can't run.
+- Doubt on file ("A gummy can't hold enough to replace my powder"): no quote on file answers it, so no ad or description uses it. Find a review that does, plus your dose facts, before addressing it.
+- No star ratings, review counts, names or faces are used, because none are on file.
+- Photos: I only have your descriptions of the two photos, not the photos themselves. Colour match and label words are still to check.
 
-## Ad 2: Doubt
+CHECKS MISSED
+- Image text not read at full size. No image has been made yet; read every quote letter by letter once it is.
+- Photo check not done. Photos were described, not attached.
+- Free product, payment and verified status not confirmed (see flags).
+- Long main text for Ads 1 and 2 lacks a second buyer quote (MISSING: backup quotes).
 
-**Job:** Doubt. It admits a complaint about taste, then answers it.
-**Layout:** Question and reply. The worry is set in plain type as a question, with the quote beneath it as the reply.
+To make the pictures: paste each brief into ChatGPT (GPT Image) or Gemini (Nano Banana) with your real product photos attached. Free plans have tight daily limits. You can also use Higgsfield's image tool, or in Claude Code send the prompt to the OpenAI or Google image API with `OPENAI_API_KEY` or `GEMINI_API_KEY` (each picture is billed). If a word comes out wrong, fix that word on the image. Don't make the ad again from the brief. Check the headline cut-offs in the Meta Ads Manager previews.
 
-**The phrase** (`quote` text element), Review 18, retailer:
-> I thought the first pack I tried tasted terrible, but after the third day they started tasting better
-
-**Scene:** The worry sits at the top in small plain type. The quote is below it, large, as the reply. The real torn pack with gummies pouring into a palm sits beside or below the quote.
-**Other words on the image:** "Worried about the taste?" (question, plain, smaller than the quote). "Retailer review" (small, under the quote).
-**Reference photo:** One daily pack torn across the top, gummies pouring into a palm. Use the real photo.
-**Rule:** The quote is the biggest text, word for word, with no closing full stop added. The "tasted terrible" stays in. Cut only at a word boundary. Never reword.
-
-**Image prompt:** Portrait 4:5 ad. Top: small plain sans-serif text "Worried about the taste?". Below, the largest text on the image, set exactly: "I thought the first pack I tried tasted terrible, but after the third day they started tasting better". Small line under it: "Retailer review". Lower half: the supplied photo of a torn Sprout daily pack with gummies pouring into a palm, unaltered. No other text.
-
-**Feed text**
-- **Headline:** they started tasting better (27 characters)
-- **Short main text:** For anyone put off by the first taste. One buyer thought it tasted terrible, then by day three it tasted better. (112 characters)
-- **Long main text** (61 words): The first taste can decide whether a supplement makes it past week one. One buyer was honest about it: "I thought the first pack I tried tasted terrible, but after the third day they started tasting better" Another reviewer says "...[Sprout] has been the one thing I've been able to stick to." Try a pouch and give it a few days.
-- **Description:** Left out, for the same reason as Ad 1.
-
----
-
-## Ad 3: Habit
-
-**Job:** Habit. It shows the product fitting the day ("I just take these now").
-**Layout:** Routine shot. The real product sits where it lives, with the quote as one line across the top.
-
-**The phrase** (`quote` text element), Review 5, brand site, cut:
-> I just take these now
-
-**Scene:** The ideal is the real pouch in its daily spot (a bag, desk or car), but no such photo is on file. Until one exists, use the real torn-pack-into-palm photo as the daily moment. The quote runs as one line across the top.
-**Other words on the image:** "Sprout customer, brand-site review" (small, under the quote line).
-**Reference photo:** One daily pack torn across the top, gummies pouring into a palm. Swap it for a real routine photo when you have one.
-**Rule:** The quote is the biggest text, letter for letter. The cut is recorded below. Never reword.
-
-**Image prompt:** Square ad. The supplied photo of a torn Sprout daily pack with gummies pouring into a palm fills the frame, unaltered. A single line of large text across the top reads exactly: "I just take these now". Directly beneath, small: "Sprout customer, brand-site review". No other text.
-
-**Feed text**
-- **Headline:** I just take these now (21 characters)
-- **Short main text:** For anyone done with mixing powder. One reviewer says they just take these now and it's easier to manage. (105 characters)
-- **Long main text** (57 words): No tub, no scoop, no shaker. Sprout comes as one daily pack of gummies you tear open. One reviewer said: "I just take these now and it's easier for me to manage." Another liked "not having to clean a shaker bottle or extra dishes." If mixing powder is the part you skip, try a pouch of Sprout.
-- **Description:** Left out, for the same reason as Ad 1.
-
----
-
-## Trim record
-
-| Item | Cut | Why |
-|---|---|---|
-| Ad 1 headline | "...[Sprout] has been the one thing" dropped. Kept "I've been able to stick to." | No end-cut fits 27 characters. This word-boundary segment fits at 27 and keeps the meaning. |
-| Ad 2 headline | Kept "they started tasting better" | Fits at 27 characters. |
-| Ad 3 image | "and it's easier for me to manage." dropped. Kept "I just take these now" | One line across the top can't hold it whole. Cut at a word boundary. The full line runs in the long main text. |
-| Ad 1 quote | None | Shown exactly as supplied, "...[Sprout]" included. |
-
-## Flags
-
-- `MISSING: verified status` (Reviews 1, 18, 5, 6). Confirm before paid use.
-- `MISSING: free product status` (Reviews 1, 18, 5, 6). If any reviewer got Sprout free or was paid, add that beside their quote before paid use.
-- `MISSING: photo`. The photos were described, not attached, so I couldn't check the pouch colour, label text, or what the pack and gummies really look like. A photo of the product in its daily spot (bag, desk, car) is also missing for Ad 3.
-- `MISSING: backup quotes` for the doubt "A gummy can't hold enough to replace my powder." No quote on file answers it, so no ad or description addresses it. Don't answer it with brand copy unless the dose facts back it. Return reasons and pre-sale questions are the place to look for a matching quote.
-- **Review 1 has been edited.** The "...[Sprout]" shows that someone replaced the reviewer's original words. Get the original text and confirm the bracket is fair before paid use.
-- **Review 18, "first pack I tried":** confirm this means their first daily pack of this product, not a different flavour or a rival product. Otherwise the reply doesn't fit.
-- **Review 5, "easier for me to manage":** if the reviewer means managing a health condition, it's a health claim the brand must be able to back. It's kept off the image but appears in Ad 3's long main text.
-- **Ad 3 layout is a stand-in.** It uses the palm shot until a real routine photo exists.
-- **Review 6** appears in two long main texts (Ads 1 and 3) as the second voice. Every lead quote is still a different customer.
-- **After the images are made,** read every word at full size. If the tool changed a letter, fix the text on the image rather than regenerating from the brief.
-- No star ratings or review counts are used because none are on file.
-
-## Score
-
-**Score: 100/100 (5 of 5 checks)**
-
-## To finish the pictures
-
-- **ChatGPT or Gemini:** paste each image prompt into a chat, attach the real product photo, and ask for the image. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits, and Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** if you have `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompts to that image API and save the files. OpenAI or Google bills each picture. Get keys at platform.openai.com/api-keys or aistudio.google.com/apikey.
+What next? You could check these before they go live with the Meta ads compliance checker (https://useaiblocks.com/skills/meta-ads-compliance-checker), plan what to test with the Image ad gap finder (https://useaiblocks.com/skills/image-ad-gap-finder), or name your own next step.
 ```

@@ -22,8 +22,8 @@ credits:
   - {title: "AI Evals: Everything You Need to Know", by: "Hamel Husain and Shreya Shankar", url: "https://hamel.dev/blog/posts/evals-faq/", used: "Pass-or-fail checks over 1 to 5 scores, and checking an AI judge against a person"}
   - {title: "AI Engineering: Building Applications with Foundation Models", by: "Chip Huyen", url: "https://www.oreilly.com/library/view/ai-engineering/9781098166298/", used: "Comparing two versions side by side on a fixed set of cases"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

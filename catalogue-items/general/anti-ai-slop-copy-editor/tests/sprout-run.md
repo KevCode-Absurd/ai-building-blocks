@@ -1,35 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 2 of 5 met. Invented facts: 3.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The scan finds the right signs and keeps the brand line, but the fixes add claims (replacement, easier) and turn a negation run into a triple. The output also drifts from the required layout and its score arithmetic is muddled.
-
-## Fix
-
-In Steps 2 and the checks, add: a fix may only reword or delete, never state a new claim (such as 'replace' or 'easier'), and must not convert one sign into another such as a triple; also require the exact output shape with numbered Sign/Fix lines.
+A careful, accurate scan: the word count, hit count, per-100 rate and before score (13) are all correct, every quote is exact, and all fixes are safe cuts that add nothing. The owner gets a clean, short rewrite plus a clear list of gaps to fill, though the heavy cutting leaves the email thin.
 
 ## Judge list
 
 - Met: Every hit is quoted exactly as it appears in your copy.
-  Hits 1-6 quote lines verbatim, e.g. "No powders. No pills. No shaker." and "Level up your daily routine."
-- Not met: No fix adds a fact, claim or number that wasn't in the copy.
-  "The gummies replace powders, pills and a shaker" and "so getting your greens is easier" assert replacement and ease, which the copy never states.
-- Not met: The rewrite keeps your meaning and order.
-  Original order was lines 2,3,5,7,8,9; rewrite moves things and "Take one pack a day" replaces line 7 with new instruction.
-- Not met: A fixed sign hasn't turned into another, such as a negation run becoming a triple.
-  "replace powders, pills and a shaker" is a reflex triple; the negation run became a triple.
+  "Whether you're a busy parent or a gym regular, your nutrition matters." and the other four match the input word for word.
+- Met: No fix adds a fact, claim or number that wasn't in the copy.
+  All five fixes are cuts; the rewrite only adds "It's" to line 8.
+- Met: The rewrite keeps your meaning and order.
+  Rewrite keeps lines 2, 7, 8, 9 in order; cuts are justified under the rule 'another line already says it'.
+- Met: A fixed sign hasn't turned into another, such as a negation run becoming a triple.
+  Every fix is a deletion, so no new shapes appear; "AFTER: 0 per 100 words".
 - Met: Read the rewrite aloud. It should sound plainer, not cleverer.
-  Rewrite reads plain and short, though a bit of a claim is added.
-
-## Invented
-
-- claim: The gummies replace powders, pills and a shaker (Copy only said "No powders. No pills. No shaker."; replacement is a new claim.)
-- claim: so getting your greens is easier (Ease claim not stated in copy, turned from "Less hassle".)
-- other: Take one pack a day. (Serving instruction is in brand files but not in the copy; fix rule says only copy facts.)
-
-## Safety
-
-- Rewrite says "It's clinically tested for nutrient absorption" without naming the study, and "replace powders, pills" implies a replacement claim beyond approved wording.
+  "Sprout packs 60+ ingredients... It's clinically tested for nutrient absorption. Rip. Tip. Enjoy." is plainer than the original.
 
 ## What went in
 
@@ -54,28 +40,44 @@ works like a supplement."
 ## What came out
 
 ```text
-Hits: 6 in 65 words (9.2 per 100)
-1. "Whether you're a busy parent or a gym regular, your nutrition matters." | sign 9, stock opener | Cut. Open on line 2, the first line with facts.
-2. "No powders. No pills. No shaker." | sign 6, negation run | "The gummies replace powders, pills and a shaker"
-3. "Does it actually work? Absolutely." | sign 8, self-answered question | Cut. Line 8 already gives the answer as a fact.
-4. "Less hassle. More greens." | sign 5, contrast pivot | Joined to fix 2: "so getting your greens is easier."
-5. "It's about more than vitamins." | sign 1, importance inflation | MISSING: what else it is about. Cut.
-6. "Level up your daily routine." | sign 10, familiar word cluster ("level up") | "Take one pack a day."
+HITS: 5 in 65 words (7.7 per 100)
+1. "Whether you're a busy parent or a gym regular, your nutrition matters."
+   Sign: 9, stock opener
+   Fix:  Cut the line. The email then opens on line 2, which is the fact.
+2. "No powders. No pills. No shaker."
+   Sign: 6, negation run
+   Fix:  Cut. Line 2 already says once what the buyer gets: "one small daily pack of gummies."
+3. "Does it actually work? Absolutely."
+   Sign: 8, self-answered question
+   Fix:  Cut. Line 8 already gives the copy's only evidence. MISSING: what result "work" refers to.
+4. "Less hassle. More greens."
+   Sign: 5, contrast pivot
+   Fix:  Cut. The copy names no greens and gives no reason for "less hassle." MISSING: which greens are in it, and what hassle it removes.
+5. "It's about more than vitamins."
+   Sign: 1, importance inflation
+   Fix:  Cut. Line 2 already says it: 60+ ingredients and 6 g of fiber alongside the vitamins.
 
-Not flagged:
-- Line 2, "60+ ingredients, 21 vitamins and minerals, and 6 g of fiber": a list of three different real facts.
-- Line 8, "Clinically tested for nutrient absorption.": a specific claim, not a vague "studies show". It stays. MISSING: the trial or testing body, if the email needs to back the claim.
-- Line 9, "Rip. Tip. Enjoy.": the brand's own published line, and a person would still say it.
+NOT FLAGGED
+- "60+ ingredients, 21 vitamins and minerals, and 6 g of fiber" is a list of three different real facts.
+- "Level up your daily routine." "Level up" is the only cluster word in the copy, and one alone is just a word. It stays.
+- "Clinically tested for nutrient absorption." This is a specific product claim, not "studies show." It stays. MISSING: who ran the test, so it can be named or checked.
+- "Rip. Tip. Enjoy." This is the brand's own published line, and it reads as a person would say it.
 
-Rhythm: fail.
-- Lines 6–8 are three sentences in a row at 5 words each ("It's about more than vitamins." / "Level up your daily routine." / "Clinically tested for nutrient absorption.").
-- There are fragment runs that aren't labels: "No powders. No pills. No shaker." and "Less hassle. More greens."
-- In the rewrite, line 8 becomes a full sentence ("It's clinically tested…") to break the run. This adds no fact.
+RHYTHM: fail. There is a fragment run in "No powders. No pills. No shaker." and another in "Less hassle. More greens." Lines 6–8 are also three sentences in a row at 5 words each. In the rewrite, line 8 becomes a full sentence. "Rip. Tip. Enjoy." still makes a fragment run, but it is kept as the brand's line.
 
-Rewritten copy:
-Sprout packs 60+ ingredients, 21 vitamins and minerals, and 6 g of fiber into one small daily pack of gummies. The gummies replace powders, pills and a shaker, so getting your greens is easier. Take one pack a day. It's clinically tested for nutrient absorption. Rip. Tip. Enjoy.
+REWRITTEN COPY
+Sprout packs 60+ ingredients, 21 vitamins and minerals, and 6 g of fiber into one small daily pack of gummies.
+Level up your daily routine.
+It's clinically tested for nutrient absorption.
+Rip. Tip. Enjoy.
 
-After: 0 per 100 words (0 hits in 48 words; rhythm pass)
+AFTER: 0 per 100 words
 
-Score: before 100 - (9.2 x 10) - 10 rhythm = -2, stops at 0; after 100 - (0 x 10) = 100
+SCORE
+Before: 100 - (7.7 x 10) - 10 = 13
+After: 100 - (0 x 10) - 10 = 90 (the rhythm still fails on the kept brand line "Rip. Tip. Enjoy.")
+
+Gaps to fill later: who ran the clinical test, what "work" means, which greens are in it.
+
+Want to plan what to test next with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer)? Bring this audit report. Or type your own next step.
 ```

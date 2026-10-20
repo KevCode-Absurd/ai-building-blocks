@@ -17,8 +17,8 @@ source_ids: [CES-131]
 old_name: script-surfaces
 version: 2.1.0
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-sonnet-5-5
-  result: fail
+  result: pass

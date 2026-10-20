@@ -24,7 +24,7 @@ credits:
   - {title: "Web Content Accessibility Guidelines (WCAG) 2.2", by: "W3C", url: "https://www.w3.org/TR/WCAG22/", used: "Contrast, reflow at 320 px and tap-size checks in the technical review"}
   - {title: "Understanding Success Criterion 2.5.8: Target Size (Minimum)", by: "W3C", url: "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html", used: "The 24 px floor for tap targets"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

@@ -1,41 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 4 of 5 met. Invented facts: 8.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The story is well built and reads smoothly, with the product arriving after the turn and the real quote used correctly. But it invents specific details (forty minutes, two nights, chalky chews, the son's reaction) and self-scores 100 without flagging them.
-
-## Fix
-
-In the 'Read for false notes' and check step, add: no invented durations, dates, counts or product outcomes unless supplied; keep drops to what the buyer brief states, and list any invented scene detail under Assumed.
+A clean, usable 345-word parent story that holds the product back until the turn, uses only the supplied facts and quote, and flags its illustrative details and the unanswered sugar doubt honestly. The owner can run it almost as-is, with the sugar question left for a later fact fill.
 
 ## Judge list
 
-- Met: Product doesn't appear before the turn or before the reader knows the problem
-  Sprout Kids first named in the paragraph after "But look at what kept happening." (the turn).
-- Met: Each drop has a different cost, and every paragraph adds an event, cost or detail
-  Drops cost time/effort, money/hope, partner's patience; each paragraph adds an event or detail.
-- Not met: No figure, quote, study or deadline not supplied; quotes word for word
-  "forty minutes of cooking", "ten past six", "Last Tuesday", "worked for two nights" are invented; "chalky chews" also invented.
-- Met: Reader is never blamed; fixes fail, not the person
-  "He wasn't refusing food. He was refusing the fight." Fixes fail, not the parent.
-- Met: Reads aloud without fragments or rows of one-line paragraphs
-  Paragraphs are 2-3 full sentences; only the CTA paragraph is a single sentence.
-
-## Invented
-
-- number: forty minutes of cooking went in the bin (Specific duration not in any input.)
-- number: It worked for two nights. By the third he was bargaining down to one bite (Invented timeline and details of the bite deal.)
-- claim: the powders and the chalky chews (Review only says 'all of the green options'; specific types invented.)
-- other: Last Tuesday you caught yourself eating his peas (Invented date and event presented as the reader's experience.)
-- other: It's ten past six ... broccoli ... your partner (Scene details not supplied; partly the assumed opening scene, but the 'partner' drop is stated as fact.)
-- claim: He ate them standing at the counter, then asked if there were more. (Invented result/behaviour of using the product.)
-- claim: the pack sits next to the cereal, and he reaches for it before you remember (Invented outcome presented as typical experience.)
-- quote: One parent put it plainly: "They think it's a treat." (Quote is real but the attribution to 'one parent' is fine; the review says this about kids, ok. Minor.)
-
-## Safety
-
-- Invented outcome (son eats them and asks for more, reaches for them daily) reads as a promised result for a child product without flagging it as illustrative.
-- Doubt "Is the sugar okay for kids?" is left unanswered with no sugar facts, and the story implies low risk via 'free from synthetic dyes' and 'small enough risk'.
+- Met: The product doesn't appear before the turn, or before the reader knows the problem.
+  Turn in paragraph 6 ("It was about the plate."); first mention "you came across Sprout Kids" is paragraph 7, ~63% in.
+- Met: Each drop has a different cost, and every paragraph adds an event, a cost or a detail.
+  "money in the bin" / "stood over the pan longer" / "negotiations got longer, and the table got louder"; no paragraph is only feeling.
+- Met: There's no figure, quote, study or deadline you didn't supply. Any quote in quotation marks is word for word.
+  "ages 2 to 13", "Six strawberry gummies", "$24.99", and "They think it's a treat." all match the input exactly.
+- Met: The reader is never blamed. The fixes fail, not the person.
+  "Every fix still put something green on a plate... The fight was never about the food."
+- Met: It reads aloud without fragments or rows of one-line paragraphs.
+  Paragraphs are 2 to 4 full sentences; e.g. "Then one evening you heard yourself ask... and you watched the smallest face at the table close up."
 
 ## What went in
 
@@ -56,30 +36,28 @@ Length: 300 to 350 words
 ## What came out
 
 ```text
-It's ten past six and the broccoli is still on the plate. You've moved it to the edge twice, and your son has pushed it back to the middle, and nobody has said a word.
+One evening you're at the sink, scraping a little pile of green off a plate and into the bin. It's the same pile you put there before dinner, and nobody at the table touched it.
 
-So you tried hiding it. You blended spinach into the pasta sauce, but he found one green fleck and pushed the bowl away, and forty minutes of cooking went in the bin.
+So you tried the green options for the kids. You bought the packets that promised nobody would notice, and they noticed at the first bite, so that was money in the bin too.
 
-Then you bought all of the 'green' options for the kids, the powders and the chalky chews, and after one try they sat in the cupboard. That was money, and the small hope you'd felt in the shop.
+Then you tried hiding it. You blended spinach into pancakes and stood over the pan longer than you had, and they lifted an edge, saw the colour and pushed the plate away.
 
-So you made a deal: three bites, then pudding. It worked for two nights. By the third he was bargaining down to one bite, and your partner had heard the same argument too often.
+Next came the deals, one more bite and then pudding, and for a while it nearly worked. But every meal turned into a negotiation, and the negotiations got longer, and the table got louder.
 
-Last Tuesday you caught yourself eating his peas off his plate just so the meal could end. Nobody won. You only wanted the table to be quiet.
+Then one evening you heard yourself ask for just one more bite in a voice you didn't like, and you watched the smallest face at the table close up. You don't want dinner to feel like that for them.
 
-But look at what kept happening. Every fix asked him to eat something he could see was green. He wasn't refusing food. He was refusing the fight.
+Scraping that plate again, you notice something. Every fix still put something green on a plate, right in front of them, to be argued over. The fight was never about the food. It was about the plate.
 
-A week later an ad turned up in your feed, a greens gummy for kids, and your first thought was, is this just candy? You read the label on Sprout Kids before you ordered. It's free from synthetic dyes, and one box felt like a small enough risk.
+Not long after, you came across Sprout Kids, a greens gummy for ages 2 to 13, and your first thought was the obvious one. Is this just candy? You read that it's free from synthetic dyes, and that was enough to try one box.
 
-The next morning you tore the yellow pack open across the top and tipped six strawberry gummies into his hand. He ate them standing at the counter, then asked if there were more.
+The first time, the yellow pack sat on the counter, and you tore it open across the top. Six strawberry gummies tipped into a small hand, and that was it, one pack a day, with nothing green on a plate to push away. One parent put it this way: "They think it's a treat."
 
-Now the pack sits next to the cereal, and he reaches for it before you remember. One parent put it plainly: "They think it's a treat."
+These days there's still the odd pea to scrape into the bin, but you do it without a speech. If your table sounds like this, the first Kids box is from $24.99, and it's worth a look.
 
-Tonight the broccoli is on the plate at ten past six, and you leave it there. He tries a piece or he doesn't, and you ask about his day.
+Shape: drops: the green options (money), hiding it in food (time and effort), the bite-for-pudding deals (hope, then patience); low point: hearing your own voice ask for one more bite and watching the smallest face close up; product first appears at about 63% of words.
+Cause used: none, stayed with what the person notices (every fix still put green on a plate to argue over).
+Assumed: illustrative details not in the brief: the sink and bin scene, the packets that "promised nobody would notice", spinach pancakes, pudding deals, peas, and scraping without a speech. These are examples of the reviewed "green options" and the parent's own change, not product results. The story raises the doubt "Is this just candy?" and answers it only with the dye-free fact. MISSING: sugar content, so "Is the sugar okay for kids?" is left unanswered on purpose. MISSING: what's in the gummy beyond "greens".
+CHECKS MISSED: none
 
-If dinner is a standoff at your house, the first Kids box is from $24.99, so try it this week.
-
-Shape: Drops in order: hidden spinach (time and effort), all of the 'green' options (money and hope), the bite deal (the partner's patience). Low point: eating his peas so the meal could end. The product first appears at word 223 of 349 (about 64%).
-Cause used: MISSING: real cause. None, stayed with what the person notices (every fix asked him to eat something visibly green).
-Assumed: One child, a son. A dinner scene with broccoli, spinach and peas. Discovery through an ad. "They think it's a treat." comes from a real customer, credited to "one parent". The sugar doubt is left unanswered because no sugar facts were supplied.
-Score: 4/4 checks passed = 100/100. No checks missed.
+What next? You could check it with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), write first lines with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer), make image ads with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker), or build the page with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). Or tell me something else.
 ```

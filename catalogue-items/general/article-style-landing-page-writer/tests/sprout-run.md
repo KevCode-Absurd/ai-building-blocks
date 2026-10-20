@@ -1,23 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-A clean, usable page: the label, headline, button placement, prices, guarantee and delivery lines all track the supplied facts, and the two quotes are verbatim with sources. The owner should note $1.79/day rounds differently from the brand's own $1.78 figure and that the $29.99 renewal and cancel wording were held back as MISSING rather than filled in.
+A careful, usable page that keeps every price, guarantee and claim to the facts supplied, drops the two quotes that would have overclaimed, and flags its gaps honestly (including the missing pause/cancel wording that the reviews show matters). The owner needs to supply photos, variant pricing and cancel wording, and should confirm "every batch" is tested before publishing that subhead.
 
 ## Judge list
 
 - Met: The word "Advertisement" sits above the headline, and nothing looks like a newspaper.
-  "**Paid advertisement**" directly above the headline; no masthead, byline, dateline or publication name anywhere on the page.
+  "**Advertisement**" is the first line, before "Struggling to Get Enough Fiber? The Hard Part..."; no masthead, byline or dateline.
 - Met: The headline uses the ad's words and doesn't name your brand or product.
-  "Struggling to Get Enough Fiber? The Hard Part Usually Isn't the Fiber." reuses the ad line; Sprout not named until section 5.
+  "Struggling to Get Enough Fiber? The Hard Part Usually Isn't Knowing What to Take" reuses the ad line, no brand or product named.
 - Met: No button appears before section 5.
-  First "[Button: See the offer]" comes at the end of section 5, after the four tests.
+  First button is "[Button: Choose your pouch]" at the end of section 5; sections 1 to 4 carry none.
 - Met: Every price, guarantee line and claim matches your facts word for word.
-  "$29.99... only with the text-message sign-up discount", "$49.99 every 4 weeks", "$66.65", "30-day money-back guarantee, first order only" all match input; $1.79/day is arithmetic (brand shows $1.78).
+  "$49.99 every 4 weeks", "$66.65", "$29.99 with the text-message sign-up discount", "30-day money-back guarantee, first order only"; "every batch" tested is backed by the product page's lot testing.
 - Met: No quote, doctor, founder line or rating appears that you didn't supply.
-  Only reviews 10 and 18 used, word for word with "retailer site"; review 8 dropped for IBS; no rating shown.
+  Only quote is review 18 word for word "(retailer review)"; reviews 8 and 10 dropped with reasons; "no rating is on the page".
 - Met: Read only the subheads. They should tell the story.
-  "Most people quit because the routine is unpleasant" → "has to pass four tests" → "pass all four tests" → "Swap a habit you keep quitting".
+  "gut routines get dropped because they're unpleasant" → "four everyday tests" → "made to pass all four" → "Two ways to get your 28-day pouch" reads as an argument.
 
 ## What went in
 
@@ -50,249 +50,226 @@ Quotes: reviews 8, 10 and 18 from reviews.md.
 ## What came out
 
 ```text
-# Struggling to Get Enough Fiber? Article-style landing page
+**Advertisement**
 
-## MOVE 1: RECOGNISE
+## Recognise
 
-### Section 1. Headline and standfirst
+### 1. Headline and standfirst
 
-**Paid advertisement**
+**Struggling to Get Enough Fiber? The Hard Part Usually Isn't Knowing What to Take**
 
-# Struggling to Get Enough Fiber? The Hard Part Usually Isn't the Fiber.
+You probably already know what your gut needs. The hard part is still taking it on day 30. This page shows why daily gut routines fall apart, and what one has to have to last.
 
-Most people know they need more fiber. This page shows why the daily habit keeps falling apart, what a routine you'd actually keep would need, and one way to get 6 g of prebiotic fiber a day with nothing to mix.
+*[Image 1: hero. See image list.]*
 
-*[Image 1: product and pack from the ad]*
-*Caption: One pouch holds 28 daily packs, one for each day.*
+### 2. The moment
 
-### Section 2. The moment
+**Your gut feels off, and you can't quite say why**
 
-**Feeling off in your gut is easy to put up with and hard to ignore**
+You feel bloated by the afternoon. Some days things move, some days they don't.
 
-By the afternoon you feel bloated. Some weeks you're regular. Most weeks you're not.
+You know fiber matters. You've read that more than once.
 
-It's nothing dramatic. You just feel off.
+But between work, meals on the go and everything else, getting enough every single day just doesn't happen.
 
-You know fiber matters. You've read it a dozen times. Getting enough of it every single day is the part that never happens.
+## Understand
 
-## MOVE 2: UNDERSTAND
+### 3. Why it keeps happening
 
-### Section 3. Why it keeps happening
+**Most daily gut routines get dropped because they're unpleasant to take**
 
-**Most people quit because the routine is unpleasant, not because they stopped caring**
+People try chalky powders that need a shaker. They try pills big enough to make them gag. They end up with a shelf of separate bottles, one for each thing.
 
-People try chalky powders stirred into water, pills big enough to make you gag, or a shelf of separate bottles for fiber, probiotics and vitamins.
+On paper, none of these is the problem. The problem shows up on an ordinary weekday, when taking it feels like a chore.
 
-Each one asks you to do something you don't enjoy, every day. A few weeks in, the habit quietly ends.
+So you skip a day, then a week. And the routine stops.
 
-What's usually missing is simple. A daily habit lasts when it's something you want to do.
+### 4. What a fix would need
 
-### Section 4. What a fix would need
+**Anything that lasts has to pass four everyday tests**
 
-**A daily fiber habit you'll keep has to pass four tests**
+1. **You'd want to take it.** If it feels like a chore, it gets skipped.
+2. **Nothing to mix, measure or wash.** Every extra step is a reason to stop.
+3. **One thing a day, not several.** Fewer things to remember means fewer to forget.
+4. **A real amount of fiber.** It has to carry enough to matter, not a sprinkle.
 
-1. **You'd want to eat it.** If it feels like a chore, you'll stop.
-2. **There's nothing to mix, measure or wash.** Every extra step is a reason to skip a day.
-3. **It's one thing, not a shelf.** Fewer bottles mean fewer decisions.
-4. **It still brings real fiber.** It needs enough to count toward your day.
+## Believe
 
-## MOVE 3: BELIEVE
+### 5. The product against those tests
 
-### Section 5. The product against the tests
+**Sprout greens gummies were made to pass all four**
 
-**Sprout greens gummies pass all four tests, one pack at a time**
+**You'd want to take it.** Sprout is a small handful of gummies a day, made to be something you want to eat. Choose Low Sugar or Sugar-Free.
 
-**Test 1: you'd want to eat it.**
-Sprout is a small handful of gummies. It isn't a drink. Choose Low Sugar or Sugar-Free.
+**Nothing to mix, measure or wash.** Tear open one daily pack and eat the gummies. There's no scoop, no shaker and no glass to rinse.
 
-**Test 2: nothing to mix or wash.**
-Tear open one daily pack and eat the gummies. There's no glass, no shaker and nothing to rinse.
+**One thing a day.** Each pack holds 60+ ingredients, including 21 vitamins and minerals.
 
-**Test 3: one thing, not a shelf.**
-Each pack brings 21 vitamins and minerals and prebiotic fiber together, from 60+ ingredients.
+**A real amount of fiber.** Every pack has 6 g of prebiotic fiber.
 
-**Test 4: real fiber.**
-Each pack has 6 g of prebiotic fiber, made to support digestion and gut health.
+Sprout supports digestion and gut health, in a form that's easy to keep taking.
 
-*[Image 2: an open daily pack with the gummies beside it]*
-*Caption: One pack is one day: tear it open and eat the gummies.*
+*[Image 2: an open daily pack with gummies in hand.]*
 
-**[Button: See the offer]**
-30-day money-back guarantee, first order only.
-Ships within 24 hours, arrives in 3-5 days on average.
+**[Button: Choose your pouch]**
 
-*(On phones, the buy button stays in view from here to the end of the page.)*
+*Build note: on phones, keep the buy button in view from here to the end of the page, never above this point.*
 
-### Section 6. Proof you can show
+### 6. Proof you can show
 
-**Here's what's in every pack and what it's tested for**
+**Every pack is vegan, and every batch is third-party tested**
 
-**6 g prebiotic fiber per pack.** It supports digestion and gut health.
+**What's in each daily pack**
+- 6 g prebiotic fiber
+- 21 vitamins and minerals
+- 60+ ingredients in total
+- A vegan, pectin-based gummy
 
-> "Feel lighter, less bloated and overall good."
-> (Customer review, retailer site)
+MISSING: the named prebiotic fiber sources, and what each key ingredient does, in the brand's approved wording.
 
-**21 vitamins and minerals per pack**, drawn from 60+ ingredients.
+**What it's tested for**
 
-**Vegan, with a pectin base.** The gummies are set with pectin.
-
-**Third-party tested** for:
+Sprout is third-party tested for:
 - 70 pesticides
 - 4 heavy metals
 - 16 contaminants
 - 9 microbial contaminants
 
-*[Image 3: close-up of the gummies]*
-*Caption: The gummies are vegan and made on a pectin base.*
+MISSING: the name of the testing lab or standard, as the brand states it.
 
-### Section 7. Honest fit
+*[Image 3: close-up of the gummies or an ingredient.]*
 
-**Pick your variant and give the taste a few days**
+### 7. Honest fit
 
-**Low Sugar or Sugar-Free?** Sugar-Free is sweetened with sugar alcohols. If you avoid sugar alcohols, choose Low Sugar.
+**Who it suits, and what to expect**
 
-**Plant-based?** Every pack is vegan.
+**It suits you if** you want daily fiber and vitamins in one step, with nothing to mix. It also suits you if you eat vegan.
 
-**On taste, one buyer put it plainly:**
+**Choose your variant:**
+- **Low Sugar:** if you'd rather avoid sugar alcohols.
+- **Sugar-Free:** sweetened with sugar alcohols instead of sugar.
+
+**The first pack may not win you over.** One buyer wrote:
 
 > "I thought the first pack I tried tasted terrible, but after the third day they started tasting better"
-> (Customer review, retailer site)
+> (retailer review)
 
-## MOVE 4: DECIDE
+**It supports digestion and gut health.** It is a daily supplement, not a treatment.
 
-### Section 8. The offer
+MISSING: when a change might be noticed, as the brand states it.
+MISSING: who should not take it or should check with a doctor first (for example, pregnancy or medication), as the brand states it.
 
-**One pouch is 28 daily packs, which covers 28 days of fiber**
+## Decide
 
-*[Image 4: clean shot of the pouch]*
-*Caption: Each pouch holds 28 daily packs, enough for 4 weeks.*
+### 8. The offer
 
-**New here?** Your first order is **$29.99**, but only with the text-message sign-up discount. That's $20.00 less than the subscribe price.
+**Two ways to get your 28-day pouch**
+
+Each pouch holds 28 daily packs, one for each day, so it covers 4 weeks.
+
+*[Image 4: clean product shot of the pouch.]*
 
 **Subscribe: $49.99 every 4 weeks**
-28 daily packs, delivered every 4 weeks. That works out to about $1.79 a day.
-You save $16.66 on every pouch compared with buying once.
+That's $16.66 less per pouch than buying once, or about $1.79 a day.
+A new pouch arrives every 4 weeks at $49.99.
+First order: $29.99 with the text-message sign-up discount. MISSING: whether this discount applies to the subscription, the one-time purchase or both.
+MISSING: the store's own wording on how to pause and how to cancel.
 
-**[Button: Start my subscription]**
+**[Button: Subscribe and save $16.66]**
 30-day money-back guarantee, first order only.
-Ships within 24 hours, arrives in 3-5 days on average.
+Ships within 24 hours. Arrives in 3 to 5 days on average.
 
 **Buy once: $66.65**
-28 daily packs, delivered once. That works out to about $2.38 a day.
+One pouch, 28 daily packs, about $2.38 a day. No repeat order.
 
-**[Button: Buy once]**
+**[Button: Buy one pouch]**
 30-day money-back guarantee, first order only.
-Ships within 24 hours, arrives in 3-5 days on average.
+Ships within 24 hours. Arrives in 3 to 5 days on average.
 
-### Section 9. Questions left
+MISSING: delivery cost.
+MISSING: whether the price differs between Low Sugar and Sugar-Free, and the flavour options.
 
-**Your last questions, answered from the facts**
+### 9. Questions left
 
-**"How much fiber am I actually getting?"**
-Each daily pack has 6 g of prebiotic fiber.
+**Questions people ask before they start**
 
-**"Is this a lot of effort?"**
-No. You tear open one pack a day and eat the gummies. There's nothing to mix.
+**"What if I don't like them?"**
+Your first order comes with a 30-day money-back guarantee. It covers the first order only.
 
-**"What about sugar?"**
-There are two versions, Low Sugar and Sugar-Free. Sugar-Free uses sugar alcohols.
+**"Aren't they expensive?"**
+On subscription, a pouch is $49.99 for 28 days, about $1.79 a day. Buying once is $66.65, about $2.38 a day.
+
+**"Can I cancel or pause the subscription easily?"**
+MISSING: the store's pause and cancel steps, in its own words. Don't publish this answer until it's filled in.
+
+**"Low Sugar or Sugar-Free?"**
+Sugar-Free uses sugar alcohols. If you'd rather avoid them, choose Low Sugar.
+
+**"How long does a pouch last?"**
+28 days, with one pack a day.
+
+**"How fast will it get here?"**
+Orders ship within 24 hours and arrive in 3 to 5 days on average.
 
 **"Is it vegan?"**
-Yes. The gummies are vegan, with a pectin base.
+Yes. The gummies use a pectin base.
 
-**"How do I know what's in it?"**
-Sprout is third-party tested for 70 pesticides, 4 heavy metals, 16 contaminants and 9 microbial contaminants.
+### 10. The last word
 
-**"What if it's not for me?"**
-There's a 30-day money-back guarantee on your first order.
+**From a gut that feels off to a daily habit you'll keep**
 
-**"How long will it take to arrive?"**
-Orders ship within 24 hours and arrive in 3-5 days on average.
+One small handful a day. 6 g of prebiotic fiber, made to be something you want to eat.
 
-**"How long does one pouch last?"**
-One pouch is 28 daily packs, which covers 28 days.
-
-### Section 10. The last word
-
-**Swap a habit you keep quitting for one you'd want to keep**
-
-You can go from a fiber routine you drop every few weeks to one small pack a day that you actually want to open.
-
-**[Button: Start my subscription]**
-30-day money-back guarantee, first order only.
-Ships within 24 hours, arrives in 3-5 days on average.
+**[Button: Choose your pouch]**
+30-day money-back guarantee on your first order. Ships within 24 hours.
 
 ---
 
-## Subheads alone
+**Subheads alone**
+1. Struggling to Get Enough Fiber? The Hard Part Usually Isn't Knowing What to Take
+2. Your gut feels off, and you can't quite say why
+3. Most daily gut routines get dropped because they're unpleasant to take
+4. Anything that lasts has to pass four everyday tests
+5. Sprout greens gummies were made to pass all four
+6. Every pack is vegan, and every batch is third-party tested
+7. Who it suits, and what to expect
+8. Two ways to get your 28-day pouch
+9. Questions people ask before they start
+10. From a gut that feels off to a daily habit you'll keep
 
-1. Struggling to Get Enough Fiber? The Hard Part Usually Isn't the Fiber.
-2. Feeling off in your gut is easy to put up with and hard to ignore
-3. Most people quit because the routine is unpleasant, not because they stopped caring
-4. A daily fiber habit you'll keep has to pass four tests
-5. Sprout greens gummies pass all four tests, one pack at a time
-6. Here's what's in every pack and what it's tested for
-7. Pick your variant and give the taste a few days
-8. One pouch is 28 daily packs, which covers 28 days of fiber
-9. Your last questions, answered from the facts
-10. Swap a habit you keep quitting for one you'd want to keep
-
-## Page brief
-
+**Page brief**
 - **Ad's first line:** "Struggling to Get Enough Fiber?"
-- **Buyer:** someone looking for gut relief who feels off, bloated or irregular.
-- **Problem:** they don't get enough fiber day to day.
-- **Cause:** people quit supplements because they're unpleasant: chalky powders, pills that make you gag, a shelf of bottles.
-- **Tests:**
-  1. You'd want to eat it.
-  2. Nothing to mix or wash.
-  3. One thing, not a shelf.
-  4. Real fiber: 6 g per pack.
-- **Offer:**
-  - First order $29.99 with the text-message sign-up discount.
-  - Subscribe for $49.99 every 4 weeks.
-  - Buy once for $66.65.
-  - 30-day money-back guarantee, first order only.
-  - Ships within 24 hours, arrives in 3-5 days on average.
+- **Buyer:** someone looking for gut relief who deals with bloating and irregularity.
+- **Problem:** they know they need more fiber but don't get enough every day.
+- **Cause:** people quit supplements because they're unpleasant to take: chalky powders, pills that make you gag, a shelf of bottles.
+- **Tests:** they'd want to take it; nothing to mix, measure or wash; one thing a day; a real amount of fiber.
+- **Offer:** a 28-pack pouch at $49.99 every 4 weeks on subscription, or $66.65 to buy once. The first order is $29.99 with the text sign-up discount. The 30-day money-back guarantee covers the first order only. Orders ship within 24 hours and arrive in 3 to 5 days on average. No time limit is used, because the facts hold no dated offer.
 
-## Image list
-
-| Slot | Real product photo | Caption |
+**Image list**
+| Slot | Photo | Caption |
 |---|---|---|
-| 1. Hero (section 1) | Pouch and daily pack, the same product and variant the ad showed | One pouch holds 28 daily packs, one for each day. |
-| 2. How it's taken (section 5) | An open daily pack with the gummies beside it | One pack is one day: tear it open and eat the gummies. |
-| 3. Ingredient close-up (section 6) | Close-up of the gummies | The gummies are vegan and made on a pectin base. |
-| 4. Offer (section 8) | Clean shot of the pouch | Each pouch holds 28 daily packs, enough for 4 weeks. |
+| 1. Hero, first screen | The pouch in the same variant and flavour the ad showed. MISSING: the ad image and the variant it showed. MISSING: the photo file. | 28 daily packs in one pouch. |
+| 2. Section 5 | An open daily pack with the gummies in a hand. MISSING: the photo file. | One pack is a small handful of gummies. |
+| 3. Section 6 | Close-up of the gummies or a key ingredient. MISSING: the photo file. | 6 g of prebiotic fiber in every pack. |
+| 4. Section 8, beside the offer | Clean shot of the pouch on a plain background. MISSING: the photo file. | Ships within 24 hours. |
 
-## MISSING list
+**MISSING list**
+- The ad image, plus the variant and flavour it showed, so the hero image can match it.
+- Real product photo files for all four image slots.
+- Named prebiotic fiber sources, and what each key ingredient does, in approved wording.
+- The name of the testing lab or standard.
+- When a change might be noticed, as the brand states it.
+- Who should not take it or should check with a doctor first.
+- Subscription pause and cancel wording. Section 9 can't run without it, because the reviews show cancelling is a real worry.
+- Which purchase option the $29.99 text sign-up price applies to.
+- Delivery cost.
+- Whether the price differs by variant, and the flavour options.
+- A rating the business can show. The brand's 4.8 from 100,000 and the review site's 4.0 from 2,411 conflict and weren't in your facts, so no rating is on the page.
+- Review 8 was left out. It ties improved digestion to chronic IBS, a result the brand can't claim. Trimming it to hide that context would misrepresent it.
+- Review 10 was left out. "Less bloated" goes beyond the approved "supports digestion and gut health." "Feel lighter" is too close to the banned weight loss claim. Reinstate it only if a bloating claim gets approved.
+- With 8 and 10 out, sections 5 and 6 run on facts alone. Review 1 in reviews.md, about finally sticking with a greens product, would back section 5 if you approve it.
+- Brand voice lines. No brand brain was supplied, so the copy follows the ad's tone.
 
-- **Ad image:** I need the image itself, not a description. Without it I can't confirm which variant and pack the ad showed, so slot 1 can't be matched to the ad yet.
-- **Subscription pause and cancel wording:** the store's own words for how to pause and how to cancel. This is left off the page, and "cancel any time" is not used. Review 20 says "I have tried multiple times to cancel my subscription," so readers will look for this.
-- **Renewal price after the $29.99 first order:** whether it renews at $49.99.
-- **Scope of the $29.99 first order:** whether it applies to the subscription only or to one-time orders too.
-- **Delivery cost.**
-- **Lab name:** which lab or standard does the third-party testing.
-- **Full ingredient list:** what each ingredient does, beyond the totals (60+ ingredients, 21 vitamins and minerals, 6 g prebiotic fiber).
-- **Flavours:** which flavours are available.
-- **When a change might be noticed:** the store's own wording. This is left off the page.
-- **Who it doesn't suit:** the store's own wording. Only the sugar-alcohol variant note is used.
-- **Rating:** no rating was supplied in the facts, so none is shown. The brand claims 4.8 from 100,000 reviews, and a public review site shows 4.0 from 2,411. Both would need confirming before either is used.
-- **Review 8:** left out. It ties the result to chronic IBS, which is a condition claim the business couldn't make itself.
-- **Customer photos:** none supplied with permission.
-
-## Score
-
-9 / 9 checks passed = **100 / 100**
-
-- ✅ The ad label sits above the headline, in the first screen.
-- ✅ The headline reuses the ad's key words and leaves out the brand and product names.
-- ✅ No button appears before section 5.
-- ✅ The kinds of fix people try appear once, in section 3.
-- ✅ No author, narrator, expert or reviewer appears who isn't real and supplied.
-- ✅ Every quote is word for word with a source, beside the claim it backs.
-- ✅ Every rating, badge, press mention, price, date and study on the page came from the facts.
-- ✅ The subheads alone tell the story.
-- ✅ No long dashes.
-
-No checks missed.
+**CHECKS MISSED**
+none
 ```

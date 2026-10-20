@@ -24,7 +24,7 @@ credits:
   - {title: "16 CFR 255.2 Consumer endorsements", by: "Federal Trade Commission (via Cornell Legal Information Institute)", url: "https://www.law.cornell.edu/cfr/text/16/255.2", used: "an actor playing a customer must be disclosed, so the first-person check"}
   - {title: "Capturing Attention in Feed: The Science Behind Effective Video Creative", by: "Facebook IQ (Meta)", url: "https://www.facebook.com/business/news/insights/capturing-attention-feed-video-creative", used: "feed video is mostly watched silent, so captions carry each row's point"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

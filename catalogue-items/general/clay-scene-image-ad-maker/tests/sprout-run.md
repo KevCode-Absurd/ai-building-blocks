@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A usable, tightly scoped plan: the tub-to-pack split set reads as a routine metaphor, every claim on the image is the approved line word for word, the offer terms are spelled out in the primary text, and all unverifiable product details are marked MISSING with image generation held back. Minor nits only: the first line is 74 characters not 76, and the pouch stays front-to-camera despite label lines being missing, though the run blocks any image until photos arrive.
+A clean, usable plan: the squashed powder tower reads at a glance, the only on-image claim is the approved one word for word, and the offer terms are stated correctly in the feed copy. It correctly treated the pouch photo as absent, flagged every unknown (label lines, pack and gummy look, cancel terms) as MISSING rather than guessing, and honoured the brand's tear-across-the-top rule.
 
 ## Judge list
 
 - Met: You can say in one sentence what the object is and what changed it.
-  "The big tub-and-scoop routine became one torn pack, and Sprout did it." Object is the greens tub flattening into one daily pack.
+  "What changed is the steps. What changed it is the pouch." Tower of tub, scoop, shaker becomes one torn pack.
 - Met: There's one moment, one changing object and one character at most.
-  "a split set ... It is one moment, side by side"; one tub as the changing object; "Character (right side only)" and "No person" on the left.
+  "There is no character on the before side, so only one character appears." Split set, one tower, "One moment only."
 - Met: The picture shows nothing beyond your approved claims.
-  "The flattening tub is a metaphor for fewer steps only. The picture shows no body, no health change and no promise that the habit lasts."
+  "No body, symptom or health change is shown or claimed." Set shows only the routine and the approved line.
 - Met: The headline is 7 words or fewer, with at most 3 other things to read, each at 30 px or more and 4.5:1 contrast.
-  "Skip the scoop. Tear one pack." (6 words, 72 px, 9.6:1 / 14.3:1); small line 32 px 14.3:1; offer chip 34 px 10.2:1. Two other items.
+  "No tub. No scoop. No shaker." 88 px, ~14.3:1; one small line at 32 px, ~8.1:1 (contrast figures check out).
 - Met: The product keeps its real label, and nothing is sculpted as letters.
-  "the real pouch photo, lit from the same key light ... every label word are exactly as printed"; "No clay letters"; daily pack "turned edge-on until its artwork is given".
+  "the real pouch photo, composited and lit to match"; "No clay letters"; prompt forbids text except the printed label.
 
 ## What went in
 
@@ -40,142 +40,134 @@ Photos: [pouch front]
 ## What came out
 
 ```text
-I can't draw the picture in this chat; I'll write the prompt, and the last section explains how to turn it into an image.
+I can't make images here (no image tool is connected), so you'll get the prompt to paste, plus how to finish it at the end.
 
 ## 1. Fit, changing object, frame
 
-**Fit:** Clay works here. The problem is small and everyday: a tub sits half used because the routine is fiddly. Nothing depends on a real person's face or testimony.
+**Fit:** Good. Quitting greens powder is a small everyday problem, and the proof rests on the routine, not on a person you have to believe.
 
-**Changing object:** the greens tub. It flattens into one daily pack, which is a plain metaphor for fewer steps.
-- **Before:** a tall, slumped clay tub with its lid knocked askew. The scoop is stuck upright in a dried clump. A dusty ring marks the halfway line, and the tub is pushed to the back of the counter.
-- **Changing:** the tub squashes down to half height and its sides bulge out. The scoop and lid sink into it.
-- **After:** the tub has flattened into one slim daily pack, torn straight across the top, with gummies tipped into an open clay palm.
+**Changing object:** the morning routine as one clay tower.
+- **Before:** a tall, leaning tower of a powder tub, a scoop stuck on its rim and a shaker on top. The shaker has a green crust and there's a crumb spill at the base. The tub is visibly half full, shown by a dull fill line pressed into the clay.
+- **Changing:** the tower squashes down, shoulders bulging, and the three pieces press into one mass. (This state is only in the plan. The still shows before and after.)
+- **After:** the mass is flattened into one slim daily pack, torn straight across the top, tipping into an open palm.
 
-**Glance test:** "The big tub-and-scoop routine became one torn pack, and Sprout did it." It reads without the headline.
+**Glance test:** A stranger sees a tall, grey, wobbling pile of three things on the left and one small pack in a hand on the right, with the pouch beside it. What changed is the steps. What changed it is the pouch.
 
-**Frame:** a split set. The buyer has already quit powders and is comparing fixes. The left side is greyed and cool and shows the before: the tub, scoop and shaker, abandoned, with no one there. The right side is in brand colours and shows the after: the person, the torn pack and the pouch. It is one moment, side by side.
+**Frame:** a split set. Your buyer has already quit powders, so they know the problem and are comparing fixes.
+- **Left:** the before, greyed and cool.
+- **Right:** the after, in brand colours.
+- One moment only.
 
-## 2. Set, character, product
+## 2. Set
 
-**Finish:** handled. It's an everyday good, so the clay shows some soft thumbprints and slightly uneven edges.
+**Finish:** handled. Soft thumbprints on every surface and slightly rounded edges.
 
 **Pieces (4):**
-1. A kitchen counter slab.
-2. A low backsplash of clay tiles.
-3. A coffee mug.
-4. A ring of keys, as the cue that it's the morning before work.
-
-There are no words on any piece. A shallow clay ridge on the counter marks the split at the centre.
+1. An office kitchenette counter slab running across both halves.
+2. The tower (left).
+3. A plain mug with no logo (left, behind the tower).
+4. The pouch (right).
 
 **Stand-ins:**
-- Greens powder: finely sifted dry clay crumbs.
-- Shaker body: clear acrylic.
-- Water left in the shaker: clear gel with clumps of grey-green clay sludge.
-- Gummies: small clay drops with a gloss varnish (colour to confirm, see Notes).
+- Water in the shaker: clear gel.
+- Spilled powder: fine sifted crumbs of grey-green clay.
+- Mug steam: one thin wisp of cotton wool.
+- Gummies: see MISSING.
 
 **Palettes:**
-- Before (left): grey-green #8A948C, slate #6B7378, cool grey backdrop #C9CDCF.
-- After (right): cream backdrop #FFF7DF, forest #00582D, deep forest #002C17, sunflower #FFCC2E accents.
+- **Before:** greyed and cool. Slate blue-grey, dull sage and putty.
+- **After:** brand colours. Forest green #00582D counter edge, cream #FFF7DF backdrop, sunflower #FFCC2E accents, deep forest #002C17 shadows.
 
-**Character (right side only):** a clay adult about 6 heads tall, average slim build, warm tan clay. Hair is one swept dark-brown shoulder-length shape. Cream shirt with rolled sleeves and forest-green trousers, simple black bead eyes, one small mole on the left cheek. The pose is relaxed and upright: one palm open toward camera holding the gummies, the other hand holding the torn pack edge-on. A plain sunflower lanyard with a blank card says "off to work." There is no speech bubble.
+**Character (after side only):** A clay adult, 7 heads tall, average slim build, warm tan clay. Short dark brown hair as one swept shape. Cream button-down shirt and navy trousers. Black bead eyes, and one mark: a blank lanyard badge. Standing relaxed, shoulders down, looking at the open palm with a small closed-mouth smile. There is no character on the before side, so only one character appears.
 
-**Product:** the real pouch photo, lit from the same key light. It stands upright on the right-hand counter, front to camera, within the character's reach and between their waist and shoulder in height. It is left out of the before side. The single daily pack in hand is turned edge-on until its artwork is given.
+**Product:** the real pouch photo, composited and lit to match the set's key light (from the left).
+- It stands on the right half of the counter, front to camera, within reach of the character's hand.
+- It is left out of the before side.
+- No clay letters.
 
 ## 3. Layout
 
 **Size:** 4:5, 1080 x 1350.
 
-| Zone | x | y | Content |
+| Zone | x % | y % | Content |
 |---|---|---|---|
-| Headline band | 0–100% | 0–17% | Plain backdrop (left cool grey, right cream), headline centred |
-| Split seam | 50% | 17–86% | Clay ridge on counter |
-| Tub (largest object) | 10–44% | 26–80% | Before state |
-| Shaker | 30–46% | 58–82% | Before prop |
-| Character | 56–82% | 22–86% | After |
-| Palm + gummies (brightest point) | 54–68% | 50–60% | Sunflower rim light |
-| Pouch | 80–96% | 50–84% | Front to camera |
-| Bottom strip (design tool) | 0–100% | 86–100% | Solid deep forest #002C17 |
-| Small line | 5–68% | 88–98% | Two lines |
-| Offer chip | 72–95% | 89–97% | Sunflower chip |
+| Headline band | 0–100 | 0–19 | Plain cream backdrop, headline |
+| Split line | 50 | 21–85 | Soft seam where cool light meets warm light (no drawn line) |
+| Tower (largest thing) | 10–42 | 22–84 | Before tower on counter, mug behind at 30–40 x |
+| Character | 60–92 | 24–85 | After character, palm at 62–74 x, 50–60 y (brightest spot) |
+| Pouch | 52–64 | 60–84 | Real pouch, front to camera |
+| Counter | 0–100 | 78–86 | Slab across both halves |
+| Small line band | 0–100 | 87–100 | Forest green band, small line |
 
-## 4. Words on the image (set in Work Sans Bold in a design tool, never sculpted)
+## 4. Words on the image
 
-| Item | Words | Size | Colour | Contrast against background |
-|---|---|---|---|---|
-| Headline (6 words, two lines, centred) | "Skip the scoop. Tear one pack." | 72 px | Deep forest #002C17 | 9.6:1 on cool grey #C9CDCF (left), 14.3:1 on cream #FFF7DF (right) |
-| Small line (two lines) | "60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack" | 32 px | Cream #FFF7DF | 14.3:1 on deep forest #002C17 |
-| Offer chip | "$29.99 first order" | 34 px | Deep forest #002C17 | 10.2:1 on sunflower chip #FFCC2E |
+1. **Headline:** "No tub. No scoop. No shaker."
+   - Work Sans Bold, 88 px.
+   - Deep forest #002C17 on cream #FFF7DF.
+   - Contrast about 14.3:1.
+2. **Small line:** "60+ ingredients, 21 vitamins & minerals, and 6g fiber in 1 pack"
+   - Work Sans Bold, 32 px, two lines.
+   - Cream #FFF7DF on forest green #00582D.
+   - Contrast about 8.1:1.
 
-There are 2 things to read beside the headline, so the limit of 3 is met.
+That's the headline (6 words) plus one other thing to read. There's no button on the image, because the offer has renewal terms that belong in the text.
 
 ## 5. Image prompt
 
-> A photographed handmade stop-motion tabletop set, 4:5 vertical, made of matte modelling clay with a handled finish: soft visible thumbprints and slightly uneven edges.
+> Photograph of a handmade stop-motion claymation tabletop set, 4:5 vertical, matte modelling clay with a handled finish: soft visible thumbprints and slightly rounded edges on every surface. Shallow depth of field so it reads as a miniature. One soft key light from the left with a gentle fill from the right. Plain cream backdrop (#FFF7DF), smooth and empty across the top fifth of the frame.
 >
-> **The set:** a small kitchen counter the morning before work, with a low clay-tile backsplash. The set is split down the centre by a shallow clay ridge on the counter.
+> A clay office kitchenette counter runs across the whole frame near the bottom. The scene is a split set on the same counter. The left half is lit cool and greyed (slate blue-grey, dull sage, putty). The right half is lit warm in forest green #00582D, sunflower yellow #FFCC2E, cream and deep forest #002C17. The two halves meet in a soft seam of light, with no drawn line.
 >
-> **Left half, desaturated and cool** (grey-green, slate, cool grey backdrop):
-> - A tall slumped clay tub of greens powder pushed to the back, lid knocked askew, a clay scoop stuck upright in a dried clump.
-> - A dusty ring at the halfway mark and fine dry clay crumbs spilled around the base.
-> - Beside it, a shaker bottle of clear acrylic with clear gel inside and grey-green clay sludge clumped at the bottom.
-> - A cold clay coffee mug. No person.
+> LEFT HALF: the largest object in the frame is a tall, leaning clay tower. It is a cylindrical greens powder tub with a dull fill line pressed in at half height, a clay scoop stuck on its rim, and a clay shaker bottle balanced on top. The shaker holds clear gel for water and has a crusted green ring. Fine grey-green clay crumbs are spilled at the base. A plain clay mug sits behind it with one thin wisp of cotton wool steam. There is no character on this side.
 >
-> **Right half, warm, in forest green, deep forest, cream and sunflower yellow:**
-> - The same counter with a clay mug and a ring of clay keys.
-> - A clay adult about 6 heads tall, average slim build, warm tan clay, one swept dark-brown shoulder-length hair shape, cream shirt with rolled sleeves, forest-green trousers, simple black bead eyes, a small mole on the left cheek, and a plain sunflower-yellow lanyard with a blank card.
-> - They stand relaxed and upright. One open palm faces camera holding a few small glossy varnished clay gummies. The other hand holds a slim torn daily pack edge-on.
-> - On the counter within reach, the Sprout pouch from the attached photo stands upright, front to camera, between the figure's waist and shoulder in height. Its glossy deep green pouch, big yellow wordmark and every label word are exactly as printed in the photo, lit to match the set.
+> RIGHT HALF: one clay adult, 7 heads tall, average slim build, warm tan clay, short dark brown hair as one swept shape, cream button-down shirt, navy trousers, black bead eyes, and a blank lanyard badge. They stand relaxed with shoulders down and a small closed-mouth smile, looking at their open palm. Above the palm they hold one slim flat daily pack torn straight across the top, tipping toward the palm. The palm is the brightest spot in the frame. On the counter beside them, within reach and front to camera, stands the pouch from the attached product photo, reproduced exactly: glossy deep green, big yellow wordmark, "28 Daily Packs", with every label word as printed, lit from the left to match the set.
 >
-> **Lighting and camera:** one soft key light from the upper right with a gentle fill from the left. A warm sunflower rim light catches the gummies in the palm so they are the brightest point. Shallow depth of field so it reads as a miniature.
->
-> **Backdrop and framing:** a plain backdrop, cool grey on the left and cream on the right. Leave the top 17% as empty plain backdrop. Leave the bottom 14% as plain counter front.
->
-> **Exclusions:** no text, letters, numbers or logos anywhere except the pouch's own printed label. No arrows. No speech bubbles. No smooth plastic, no real liquid.
+> No text, letters, logos or numbers anywhere except the pouch's own printed label. No speech bubbles, no arrows.
 
 ## 6. Feed copy
 
-**First line (76 characters):** "The tub, the scoop, the shaker. Swap all three for one pack you tear open."
+**First line (63 characters):** Quit greens powder? Your daily greens now fit in one torn pack.
 
 **Primary text:**
-> The tub, the scoop, the shaker. Swap all three for one pack you tear open.
->
-> Sprout daily greens gummies come as 28 daily packs in one pouch. Tear one pack straight across the top and tip the gummies into your palm. No scoop, no shaker, nothing to rinse.
->
-> In 1 pack: 60+ ingredients, 21 vitamins & minerals, and 6g fiber.
->
-> Sign up by text and your first order is $29.99. After that it renews at $49.99 every 4 weeks.
 
-**Headline (24 characters):** "28 daily packs, no scoop"
+> Quit greens powder? Your daily greens now fit in one torn pack.
+>
+> Tear one pack straight across the top and tip the gummies into your palm. That's the whole routine. 1 pack: 60+ ingredients, 21 vitamins & minerals, and 6g fiber.
+>
+> Sprout daily greens gummies come in a pouch of 28 daily packs. Get your first order for $29.99 when you sign up for texts. Renews at $49.99 every 4 weeks. MISSING: how to cancel or skip.
 
-**Button:** Sign Up
+**Headline (22 characters):** Daily greens, no scoop
+
+**Button:** Get Offer
 
 ## 7. Notes
 
 **Claims used:**
-- "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack: from the approved claims, quoted word for word on the image and in the text.
-- Tear one pack straight across the top and tip the gummies into your palm: from your "how it's used" description.
-- "28 Daily Packs": from the pouch description you gave.
-- The flattening tub is a metaphor for fewer steps only. The picture shows no body, no health change and no promise that the habit lasts.
+- "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack: your approved claim, used word for word.
+- "No tub. No scoop. No shaker." and "tear one pack, tip the gummies into your palm": a description of the format and how it's used, from your product notes. This is not a health claim.
+- The squashing tower is plainly a metaphor for fewer steps. The real function (tearing a pack and tipping it into the palm) is shown as it really happens.
+- No body, symptom or health change is shown or claimed. Nothing promises the habit will last.
 
-**Missing information:**
-- MISSING: a readable pouch photo. Only the text "[pouch front]" came through, so I couldn't check its shape, colours or label. Please attach the actual front, side and top photos. Make no image until they're in.
-- MISSING: every label line on the pouch, typed out. I have only the wordmark and "28 Daily Packs."
-- MISSING: the single daily pack's artwork. Until it's given, the pack stays edge-on.
-- MISSING: the pouch's real size next to a person, to confirm it stands between the character's waist and shoulder.
-- MISSING: the real colour and shape of the gummies, to match the clay stand-in.
-- MISSING: the visible result from your product page, or a confirmation that there is "nothing visible." I've assumed nothing visible.
-- MISSING: the cancellation terms for the $49.99 renewal, to add to the primary text.
+**MISSING:**
+- MISSING: product photo. "[pouch front]" came through as a placeholder, not an image, so I couldn't check the pouch's shape, colours or label. Attach the real photo before making the image.
+- MISSING: every label line on the pouch front. Only the wordmark and "28 Daily Packs" were given. Until the full label is typed out, use the real photo for the pouch, never a recreated label.
+- MISSING: what a single daily pack looks like (colour, print, size). Until it's given, the pack in hand is a plain slim shape.
+- MISSING: what the gummies look like (colour, shape, how many per pack). Until it's given, they stay hidden by the fingers of the open palm.
+- MISSING: the pouch's real size next to a person. I placed it between the character's waist and shoulder.
+- MISSING: cancel or skip terms for the subscription.
 
-## 8. Score
+## 8. CHECKS MISSED
 
-**Score: 80/100 (4 of 5 checks)**
-- Missed: "the product's label is exactly as printed." This can't be verified until the real pouch photo and every label line are provided.
+- The product's label can't be confirmed exact as printed, because no readable pouch photo or full label text was given.
 
 ---
 
-**How to make the picture once the pouch photos are in:**
-- **ChatGPT (GPT Image) or Gemini (Nano Banana):** attach the pouch photo, paste the image prompt and ask for the picture. Free plans have tight daily limits. Codex on a paid ChatGPT plan can also make it.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude can make it there.
-- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, the prompt can be sent to that image API and the file saved. Get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI and Google bill each picture.
-- **Finishing:** set the words from section 4 in a design tool afterwards.
+**To make the picture:**
+- **ChatGPT (GPT Image) or Gemini (Nano Banana):** paste the prompt into a chat with the real pouch photo attached, or paste this whole skill there.
+- **Higgsfield:** use its image tool.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that image API.
+
+Set the headline and small line afterwards in Canva or Figma, in Work Sans Bold.
+
+**What next?** Check it with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), test more first lines with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer), make another image with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker), or write the page with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). Or type your own.
 ```

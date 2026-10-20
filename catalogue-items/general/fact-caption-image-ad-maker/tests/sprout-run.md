@@ -1,25 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 1.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A solid, accurate brief: the number and wording are exact, the strip looks like a phone caption, and it flags the 'against placebo' ambiguity and the missing study runner. The owner can use it after a person checks the fact against the report.
+A careful, usable brief: the fact is kept exactly as sourced, the source line is honest about being brand-run, and the picture is a plain captioned phone photo with no news-outlet look. The owner gets clear MISSING lines (the study paper, who ran and funded it) and sensible flags on the ad text's 'against placebo' wording; only small nits remain (the line under the image lacks its type/character-count tag, and the generic colourful gummies are a stand-in rather than Sprout's green bears, which it does flag).
 
 ## Judge list
 
 - Met: The number and the wording match the source exactly.
-  Caption: "Blood vitamin C up 40.1% (2.7x placebo)" matches the fact line exactly; source line matches the science page.
+  Caption: "Blood vitamin C up 40.1% (2.7x placebo)" matches the input fact word for word; "40.1% and 2.7x stay exactly as given."
 - Met: There's one fact, with a source line you can read.
-  One fact (vitamin C); source line "2025 study, 120 adults, 12 weeks, double-blind, placebo-controlled".
+  One caption, then "Sprout's 2025 study, 120 adults, 12 weeks, double-blind, placebo-controlled" at "small but readable" size.
 - Met: It looks like a captioned photo, not a news report or a TV graphic.
-  Plain black 60% band, white sans-serif, kitchen counter phone photo; no outlet, ticker or logo.
+  "black at 60% opacity... phone's system font... no outlet name, no ticker, no clock, no brand colour" over a messy kitchen counter.
 - Met: Nothing claims more than the source measured.
-  Caption only states vitamin C up; flags the story's 'against placebo' ambiguity and that it measured absorption.
+  "The image says blood vitamin C only, with no folate and no health outcome"; even flags 'absorption' gloss in the ad text.
 - Met: It's flagged for a person to check before it runs.
-  "a person checks it against its source before it runs."
-
-## Invented
-
-- number: 60% (Strip opacity design choice, not a fact claim.)
+  "A fact on the image: a person checks it against its source before it runs."
 
 ## What went in
 
@@ -44,61 +40,71 @@ double-blind, placebo-controlled, 120 healthy adults aged 23 to
 ## What came out
 
 ```text
-I can't draw the picture in this chat because no image tool is connected, so this is the written brief and prompt.
+I can't make images here, so you'll get the prompt to paste into an image tool. How to do that is at the end.
 
 **1. The fact and its source**
-"Blood vitamin C up 40.1% (2.7x placebo)." Source: Sprout science page, 2025 study, 12 weeks, randomized, double-blind, placebo-controlled, 120 healthy adults aged 23 to 59.
-MISSING: who ran and measured the study (Sprout, a contract lab or a university), and the full study report. The science page is the brand's summary, so get the report on file before this runs.
+- **As the source states it:** "Blood vitamin C up 40.1% (2.7x placebo)."
+- **Who:** Sprout's own study, as shown on the Sprout science page.
+- **How:** 12 weeks, randomized, double-blind, placebo-controlled, 120 healthy adults aged 23 to 59.
+- **Year:** 2025.
+- MISSING: the study itself (paper or report). The Sprout science page is the only source on file.
+- MISSING: who ran the study and who funded it.
 
 **2. Source check**
-- **Number: pass.** The caption uses 40.1% and 2.7x exactly. Folate (20.5%) is left out so there is one fact per strip.
-- **Verbs: pass.** The caption keeps the source's "up."
-- **What was measured: pass on the image, but check the story.** The source says vitamin C rose 40.1%, which is 2.7x the placebo rise. The story's line "went up 40.1%… against placebo" can read as a 40.1% gap over placebo. Confirm which one the report shows and align the story to it.
+- **Number: pass.** 40.1% and 2.7x stay exactly as given. They are not rounded.
+- **Verbs: pass.** "Up" is kept. Nothing says "boosts" or "proves".
+- **What was measured: pass on the image.** The image says blood vitamin C only, with no folate and no health outcome.
+  - Story flag: the ad text says "went up 40.1%… against placebo." That can read as "40.1% more than placebo." The source says the group rose 40.1%, which was 2.7x the placebo rise. Have a person confirm which one the study means and match the ad text to it.
+  - Story flag: "absorption" in the ad text is a gloss on "blood vitamin C". Confirm the study uses that word.
 - **Year: pass.** 2025 is within five years.
 
 **3. Scene**
-"Someone's messy kitchen counter in the morning, with coffee and a cut orange, and a caption about vitamin C."
+"Someone's hand holding a few gummy vitamins over a messy morning counter, with a caption saying vitamin C went up 40.1%."
 
 **4. Where and when**
-- **Place:** a home kitchen counter.
-- **Time:** a weekday, around 7:30 am.
-- **Light:** soft window daylight from the left, slightly uneven.
-- **Camera spot:** phone held at standing height, angled down about 45°.
-- **Strip space:** the bottom fifth is plain counter surface, kept clear for the strip.
+- **Place:** a home kitchen counter with a half-drunk mug of coffee, a phone face down, crumbs and a dish towel.
+- **Time:** a weekday morning, around 7:30.
+- **Light:** soft daylight from a window to the left, slightly cool, with no flash.
+- **Camera:** handheld phone at chest height, looking down at about 45° onto an open palm in the upper-middle of the frame. The lower third is calm counter surface.
 
 **5. Words on the image**
-Caption: Blood vitamin C up 40.1% (2.7x placebo)
-Source line: 2025 study, 120 adults, 12 weeks, double-blind, placebo-controlled
+- **Caption:** Blood vitamin C up 40.1% (2.7x placebo)
+- **Source line:** Sprout's 2025 study, 120 adults, 12 weeks, double-blind, placebo-controlled
 
 **6. The strip**
-- **Position:** a full-width band across the bottom fifth.
-- **Colour:** black at 60% opacity.
-- **Text:** white, in one plain sans-serif (Helvetica or Inter). The caption is at regular weight and the source line about half its size directly below. Both are left-aligned with modest padding.
-- **Style:** nothing else, like a phone editor's caption.
+- **Where:** a full-width band across the lower fifth of the frame.
+- **Colour:** black at 60% opacity, with white text.
+- **Typeface:** one plain sans serif, such as the phone's system font, Inter or Helvetica.
+- **Text sizes:** the caption is about 2× the size of the source line. The source line sits directly below it, small but readable.
+- **Left out:** no outlet name, no ticker, no clock, no brand colour.
 
 **7. Blank version**
-The same counter photo with no band and no text.
+The same photo with no strip and nothing else added. The lower fifth is plain counter.
 
 **8. Line under the image**
-I thought gummies were candy
+Candy with a label on?
 
 **9. Flags**
-- A fact is on the image, so a person checks it against its source before it runs.
-- The study is Sprout's own. The landing page must say so near the top, open on the same 40.1% figure, and show the full source.
-- The "against placebo" wording in the story needs to be resolved (see 2).
-- The story narrator is a customer who agreed and is used as an example only. No person is shown on the image.
+- A fact on the image: a person checks it against its source before it runs.
+- The study behind the claim isn't on file. Get it before this runs.
+- The gummies are generic and unbranded, not Sprout's real product. If you want the real product shown, ask, and it will go small and to one side.
+- The ad-text wording "against placebo" needs a person to match it to the study (see item 2).
 
 **10. Image prompt**
-Square 1:1 casual phone photo, taken from standing height angled down at a home kitchen counter on a weekday morning. Soft, slightly uneven window daylight from the left. On a worn wooden counter: a half-drunk mug of coffee, an orange cut in half on a scratched cutting board, a few crumbs, a folded dish towel, keys near the edge. Lived-in, a little cluttered, natural colours, light phone-camera grain, no retouching. No people, no packaging, no labels, no logos, no text. Keep the bottom fifth of the frame as calm, plain counter surface.
-Strip (only if the tool must add it): plain black band at 60% opacity across the bottom fifth, white sans-serif text "Blood vitamin C up 40.1% (2.7x placebo)", below it smaller "2025 study, 120 adults, 12 weeks, double-blind, placebo-controlled".
+Square 1:1 photo taken handheld on a smartphone, looking down at about 45 degrees onto a kitchen counter on a weekday morning. An adult's open palm, ordinary skin, no jewellery, holds four or five plain colourful gummy vitamins. There is no packaging, label or logo. Around it: a half-drunk mug of coffee, a phone face down, a crumpled dish towel and a few crumbs. Soft cool window light comes from the left, with slight grain, no flash and no retouching, and it looks casually snapped. The palm sits in the upper-middle of the frame, and the lower fifth is calm, empty counter surface. No text, no brand colours, no designed layout.
+*(Only if the tool must add the strip):* Add a full-width black band at 60% opacity across the lower fifth, with white plain sans-serif text reading exactly: "Blood vitamin C up 40.1% (2.7x placebo)". Below it, in smaller text: "Sprout's 2025 study, 120 adults, 12 weeks, double-blind, placebo-controlled".
 
-**11. Score: 83/100**
-5 of 6 checks passed, so 5/6 × 100 = 83.
-- **Missed, Follow:** the landing page repeating the fact with the full source isn't confirmed or on file.
+Best way to make it: generate the blank photo, then add the strip as real text in Canva or a phone editor so every digit is exact. If the image tool adds the strip, check "40.1%" and "2.7x" digit by digit.
 
-**To make it**
-Best: generate the blank photo, then add the strip in a phone editor or design tool so every character is exact. If an image tool adds the strip, check "40.1%" and "2.7x" digit by digit.
-- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
+**11. Checks missed**
+- The study itself isn't on file, only the brand's science page, so "No 'study finds' without that study on file" is only partly met.
+- Follow: I can't confirm the landing page opens on this fact with the full source near the top.
+- The ad text's "against placebo" wording may not match the source's "2.7x placebo." It needs a person to check.
+
+**How to finish it**
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. You can also paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
 - **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, the prompt can be sent to that image API and the file saved. Get keys at platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that image API and save the file. You can get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI or Google bills each picture.
+
+Want to check it before it goes live with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker), using the image prompt above? Or say what you'd like to do instead.
 ```

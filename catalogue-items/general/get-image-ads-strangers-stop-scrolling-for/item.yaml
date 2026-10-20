@@ -32,7 +32,7 @@ credits:
   - {title: "Understanding SC 1.4.3: Contrast (Minimum)", by: "W3C Web Accessibility Initiative", url: "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum", used: "4.5 to 1 and 3 to 1 contrast"}
   - {title: "About text overlays and the safe zone for ads in Stories and Reels", by: "Meta Business Help Center", url: "https://www.facebook.com/business/help/980593475366490", used: "keeping words out of the covered bands in 9:16"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

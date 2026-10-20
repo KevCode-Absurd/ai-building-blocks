@@ -21,7 +21,7 @@ credits:
   - {title: "Prompt caching", by: "Anthropic, Claude Docs", url: "https://platform.claude.com/docs/en/build-with-claude/prompt-caching", used: "Stable content first, changing content last"}
   - {title: "AI Engineering: Building Applications with Foundation Models", by: "Chip Huyen", url: "https://www.oreilly.com/library/view/ai-engineering/9781098166298/", used: "Fixed output shapes between steps, and logging every step"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

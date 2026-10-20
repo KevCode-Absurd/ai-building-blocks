@@ -27,7 +27,7 @@ credits:
   - {title: "Cross processing", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cross_processing", used: "What cross-processed film does to colour and contrast"}
   - {title: "Photos as Web Content", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/photos-as-web-content/", used: "Why scroll-stopping earns no weight on a product page: shoppers study informative images and skip decoration"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

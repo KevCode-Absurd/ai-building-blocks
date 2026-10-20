@@ -27,7 +27,7 @@ credits:
   - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "Reading speed behind the 7-word headline"}
   - {title: "Understanding Success Criterion 1.4.3: Contrast (Minimum)", by: "W3C Web Accessibility Initiative", url: "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html", used: "The 4.5:1 contrast floor for words on the image"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

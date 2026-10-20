@@ -1,21 +1,25 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 1.
 
-The brief is faithful to the approved story, using the three reminders and times word for word on a generic screen with a plain wallpaper. It adds nothing invented and flags the clock time and weekday as inferences, with clear build steps for the owner.
+The brief follows the story's three reminders exactly and keeps the screen generic, with no product, brand or claim on it. Gaps and inferences such as the clock time and weekday are clearly marked, and the build steps are usable.
 
 ## Judge list
 
-- Met: Each reminder set by the narrator for the narrator; none looks like it came from an app, bank, clinic, shop or courier
-  Reminders are verbatim from the story: "Kids vitamins. Before shoes." Cards labelled only "Reminder".
-- Met: No reminder is a sales message or names the product
-  "no reminder names Sprout Kids, and the screen shows no product or pack."
-- Met: Each reminder is something a person would really set
-  "Did anyone take the vitamins?" and the other two are plausible self-set school-morning nags.
-- Met: Four reminders or fewer, and every time and word is right
-  Three reminders at 7:45, 7:30, 7:15 match the story exactly; clock 7:48 is after the last.
-- Met: Screen copies no real phone's look; wallpaper is a plain colour
-  "generic lock screen... no app icons, real-phone styling or brand fonts"; "plain muted sage-grey, flat colour, no photo."
+- Met: Each reminder was set by the narrator, for the narrator; none looks like it came from a real app, bank, clinic, shop or courier.
+  Reminders lifted word for word from the story, e.g. "Did anyone take the vitamins?"
+- Met: No reminder is a sales message or names your product.
+  "Kids vitamins. Before shoes." names no brand and makes no sales pitch.
+- Met: Each reminder is something a person would really set.
+  "Vitamins. Still on the counter." is a plausible self-set nudge.
+- Met: Four reminders or fewer, and every time and word is right.
+  Three reminders at 7:45, 7:30, 7:15, matching the story exactly, newest first.
+- Met: The screen copies no real phone's look, and the wallpaper is a plain colour.
+  "plain muted slate grey, with no photo"; no real phone icons, fonts or layout.
+
+## Invented
+
+- number: 90% opacity (A design suggestion for the build, not a fact about Sprout.)
 
 ## What went in
 
@@ -38,64 +42,68 @@ school run.
 ## What came out
 
 ```text
-I can't draw the picture in this chat because no image tool is connected, so this is the brief and prompt to make it elsewhere.
+I can't draw in this chat, so I'm handing back the brief and prompt. Finishing steps are at the end.
 
 **1. Scene**
-A phone lock screen at 7:48 on a school morning with three unanswered vitamin reminders stacked up, each blunter than the last.
+A mum's phone lock screen at 7:52 on a school morning, with three vitamin reminders she ignored stacked on top of each other.
 
 **2. How they pile up**
-Getting sharper. The routine slips under school-run pressure, and the story's own reminders escalate from instruction ("Before shoes.") to nag ("Still on the counter.") to exasperation ("Did anyone take the vitamins?").
+Getting sharper. The story quotes three reminders that go from an instruction, to a nudge, to a tired question. That shows a routine slipping under school-run pressure, not one simply forgotten.
 
 **3. The screen**
-- **Screen:** a generic lock screen with three stacked notification cards, newest on top. Each card is labelled only "Reminder" with its time on the right. There are no app icons, real-phone styling or brand fonts.
-- **Wallpaper:** plain muted sage-grey, flat colour, no photo.
-- **Clock:** 7:48, large and centred. The date line underneath reads "Tuesday".
-- **Format:** square 1:1, cropped slightly at the bottom edge like a shared screenshot.
+- **Type:** a generic lock screen, with no real phone's icons, fonts or layout.
+- **Wallpaper:** plain muted slate grey, with no photo.
+- **Clock:** "7:52" in large type at the top, with "Tuesday" small underneath.
+- **Cards:** three white rounded notification cards stacked newest on top. Each is labelled only "Reminder" and has its time on the right.
+- **Crop:** off-centre, with the top and bottom edges cut like a shared screenshot.
 
 **4. Words on the image** (newest first, exactly)
-- Reminder · 7:45 — Did anyone take the vitamins?
-- Reminder · 7:30 — Vitamins. Still on the counter.
-- Reminder · 7:15 — Kids vitamins. Before shoes.
-- Clock: 7:48
+- 7:45: Did anyone take the vitamins?
+- 7:30: Vitamins. Still on the counter.
+- 7:15: Kids vitamins. Before shoes.
+- Clock: 7:52
 - Date line: Tuesday
 
 **5. Blank version**
-The same sage-grey lock screen with "7:48" and "Tuesday" and no reminder cards, cropped the same way.
+The same slate-grey lock screen, crop and clock. It shows "7:52" and "Tuesday" with no cards below.
 
 **6. Line under the image**
-Every school morning, 7:45.
+Three reminders. No vitamins.
 
 **7. Flags**
-- **Lifted:** all three reminders and their times, verbatim from the story ad.
-- **Written for the image:** the caption, the "Reminder" card labels, the sage-grey wallpaper colour.
+- **Lifted:** all three reminders and their times come word for word from the approved story.
+- **Written for the image:** the "Reminder" card labels, the date line and the caption.
 - **Inferred:**
-  - The clock is set to 7:48, three minutes after the last reminder, to show they were ignored.
-  - "Tuesday" was chosen to signal a school day. Any weekday works.
-- **Product:** no reminder names Sprout Kids, and the screen shows no product or pack.
+  - The clock time 7:52 `[inferred]`, seven minutes after the last reminder, so they read as ignored.
+  - "Tuesday" `[inferred]`, as any school weekday.
+  - The slate-grey wallpaper `[inferred]`.
+- **MISSING:** brand colours. The wallpaper must not match Sprout Kids' colours. Please check this, since no brand brain was given.
 
 **8. How to make it**
+Best is to build it in Canva or Figma:
+1. Make a 1080 × 1080 frame filled with flat slate grey (about #5E6670). Swap the colour if it's close to the brand's colours.
+2. Add "7:52" in large, thin, plain sans-serif type, centred near the top. Put "Tuesday" small below it.
+3. Add three white rounded rectangles at about 90% opacity, stacked with small gaps.
+   - Each card has "Reminder" in small grey type at the top left and its time at the top right.
+   - The reminder line sits below in regular black type.
+   - The order from top to bottom is 7:45, 7:30, 7:15.
+4. Type every word as real text, not generated, so no digit gets swapped. Use no icons, logos, battery or signal symbols, or brand fonts.
+5. Crop slightly off-centre, trimming a little from the top and bottom, then export as PNG.
 
-**Best: build it in a design tool** (Figma, Canva or similar), because image tools often garble digits.
-1. Make a 1080×1080 canvas filled with flat sage-grey (#A9B5A6 or similar).
-2. Near the top, set "7:48" in a large, thin, generic sans-serif in white, with "Tuesday" in small white text above or below it.
-3. Below that, stack three rounded, semi-transparent white cards with soft shadows, newest on top:
-   - 7:45: "Did anyone take the vitamins?"
-   - 7:30: "Vitamins. Still on the counter."
-   - 7:15: "Kids vitamins. Before shoes."
-4. On each card, put a small bold "Reminder" label at top left, the time in grey at top right, and the reminder text below it in regular weight. Leave out any icons.
-5. Crop the bottom edge slightly so the lowest card sits near the frame edge.
+Fallback image prompt (GPT Image). Check every word and digit afterwards:
+> Square 1:1 cropped screenshot of a generic smartphone lock screen, no real phone or app styling. Plain muted slate-grey wallpaper, no photo. Large clock at top reads "7:52", small line beneath reads "Tuesday". Below, three stacked white rounded notification cards, newest on top, each with a small label "Reminder" and a time on the right. Top card: "Did anyone take the vitamins?" with time "7:45". Middle card: "Vitamins. Still on the counter." with time "7:30". Bottom card: "Kids vitamins. Before shoes." with time "7:15". Simple sans-serif text. No icons, logos, products, people, buttons or brand colours. Slightly off-centre crop with top and bottom edges cut, like a shared screenshot.
 
-**Next best: an image tool.** Use this prompt:
+**9. Checks missed**
+- House rules: I can't confirm the wallpaper avoids the brand colours (MISSING: brand brain, `voice-and-look.md`).
 
-> Square 1:1 screenshot of a generic smartphone lock screen, cropped slightly like a shared screenshot. Flat plain sage-grey wallpaper, no photo. Large thin white clock reading "7:48", small text "Tuesday". Below, three stacked translucent white notification cards, newest on top, each with a small bold label "Reminder" and a time on the right. Top card, time "7:45": "Did anyone take the vitamins?" Middle card, time "7:30": "Vitamins. Still on the counter." Bottom card, time "7:15": "Kids vitamins. Before shoes." Generic sans-serif font, no app icons, no brand styling, no logos, no product, no people. Realistic, slightly imperfect phone screenshot.
+**Gaps to fill later**
+- MISSING: brand colours and look, so the wallpaper can be confirmed as off-brand.
+- MISSING: the brand brain's allowed on-image words. The story's lines were used as approved.
 
-After generating, check every digit and word against section 4 and regenerate or fix any that are wrong.
-
-**Where to finish it:**
-- **ChatGPT or Gemini:** paste the prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can also make it.
+**To finish it:**
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. You can also paste this whole skill there so it writes the prompt and makes the picture in one go. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits, and Codex on a paid ChatGPT plan can make it too.
 - **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that image API and save the file. You can get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI or Google bills each picture.
+- **Claude Code:** save an OpenAI or Google key as `OPENAI_API_KEY` or `GEMINI_API_KEY`, and I can send the prompt to that image API and save the file. Get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. Each picture is billed by the provider.
 
-**9. Score**
-Score: 100/100 (6 of 6 checks)
+Want to check it before it goes live with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker)? It takes the image prompt above. Or type your own next step.
 ```

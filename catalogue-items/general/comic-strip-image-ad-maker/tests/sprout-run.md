@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A usable, well-scoped plan: one clear habit claim in the brand's open lane, the offer and renewal stated honestly, no health claims, and photos flagged as placeholders so no image is made yet. One thing to check in production: the torn daily pack is drawn with the big pouch's green-and-bear look, which the brand file says should never appear torn, so confirm the daily sachet's actual look before drawing.
+A usable, well-structured strip plan that sticks to the one approved claim, the given offer terms and the buyer's own words, with sensible layout maths and a paste-ready prompt. The owner should fix the inferred gummy colour (real gummies are deep green, not yellow) and make sure the drawn torn item is the small daily pack, not the big pouch, before generating.
 
 ## Judge list
 
 - Met: Cover the words: you can still tell what was wrong and what changed
-  Panel 1: leaking shaker of "lumpy green sludge", "three stacked dirty shakers"; Panel 3: "tipping gummies... into an open palm", "The sink is empty".
-- Met: Only one claim anywhere, including any cutaway
-  Claim "greens without the scoop, shake and shaker"; "There is no cutaway"; the 60+ ingredients line is explicitly left out as "a second claim".
-- Met: Headline 7 words or fewer, at most 3 other items, 30 px+, 4.5:1+
-  "Greens without the shaker" (4 words), three others at 40/40/36 px, all cream on #002C17 or reverse, "~14.5:1".
-- Met: Drawn product has no letters; strip ends on the real photo
-  "a plain solid yellow band where the logo sits. No letters on it"; Cell 4 "real product photo of the daily pack in a hand... not drawn".
-- Met: No drawn person says it worked, no expert or child
-  "one adult office worker", "No other people", "No words, letters... speech balloons"; result shown only as an easier morning.
+  Panel 1 "cloudy shaker bottle with green clumps... powder spilled... one sweat drop"; panel 3 "counter is clean... shaker sits dry and capped", gummies in palm.
+- Met: Only one claim appears anywhere, including any cutaway
+  "The approved line... stays in the feed text only, so the image carries one claim"; "No cutaway: there's no source for how it works."
+- Met: Headline 7 words or fewer, at most 3 other things to read, each 30 px+ and 4.5:1
+  "Greens without the shaker." 72 px; caption 40 px; label 36 px; all #002C17/#FFF7DF, "Contrast about 14:1" (checks out).
+- Met: Drawn product has no letters, strip ends on the real product photo
+  "no letters or logo text"; "Panel 4 (bottom right): an empty bordered cream frame"; "Your real pouch-front photo... placed inside the same border in Canva."
+- Met: No drawn person says the product worked, none is an expert or a child
+  Hero is "an adult office worker in their 30s"; no dialogue or balloons; "No words, letters... or speech balloons anywhere".
 
 ## What went in
 
@@ -38,98 +38,136 @@ Photos: [pouch front] [daily pack in a hand]
 ## What came out
 
 ```text
-No image tool is connected in this chat, so I'll write the prompt but can't draw the picture.
+I can't draw in this chat, so you'll get the image prompt and the steps to make the picture at the end.
 
-## 1. Fit and claim
-- **Fit:** Yes. This is a short problem-and-fix story about a routine, and the gummies are drawable. The offer has long terms (text sign-up, then a renewal price), so it stays off the image and goes in the feed copy.
-- **Claim:** *Your daily greens without the scoop, shake and shaker to scrub: tear the pack, tip it into your palm.*
-- **Source:** How the product is used, from the brand brief ("one daily pack, torn straight across the top, gummies tipped into a palm"). The framing comes from the buyer's words "not having to clean a shaker bottle."
+**1. Fit and claim**
+- **Fit:** Yes. This is a short problem-and-fix routine story: powder and shaker become one pack. It doesn't rely on a real person, and nobody judges gummies by how they pour.
+- **Claim:** Your daily greens come in one tear-open pack, with no powder and no shaker to clean.
+  - Source: your product description (one daily pack, torn across the top, gummies tipped into a palm).
+  - The approved line "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack stays in the feed text only, so the image carries one claim.
+- **No cutaway:** there's no source for how it works.
 
-## 2. Hero, ink line, palette
-- **Hero line:** *One adult office worker in their thirties, short dark curly hair, soft grey cardigan over a cream shirt, round black glasses, simple dot eyes and a line mouth.*
-- **Ink line:** Bold even black outlines, flat fills, one soft shadow tone, no halftone, thin black panel borders, even white-cream gutters.
-- **Palette (drawn panels):** black ink, cream #FFF7DF, warm grey #B9B2A3 (inferred), pouch green (from photo, about #1E6B3A, inferred), pouch yellow (from photo, about #FFC72C, inferred). The green and yellow appear only on the product, so the pouch is always the most saturated thing in its panel. Deep forest #002C17 is used only for lettering and the headline band, both set in a design tool.
+**2. Hero, ink line and palette**
+- **Hero line:** an adult office worker in their 30s with a short black bob, round black glasses, a slate-blue cardigan and grey trousers.
+- **Ink line:**
+  - Bold, even black outlines and flat fills.
+  - One shadow tone, which is a 30% halftone dot of the base colour.
+  - Thin black panel borders and even cream gutters.
+- **Palette:**
+  - Black ink.
+  - Cream #FFF7DF for backgrounds.
+  - Slate blue #6E7F99 (inferred) for the hero and props.
+  - Deep forest #002C17 for the pouch, and as halftone sludge in panel 1.
+  - Pouch yellow #F5C400 (inferred) for the bear face, the gummies and a thin outline on the pouch.
+- **Standing out:** the yellow appears only on the product, so the product is the brightest thing in its panel.
 
-## 3. Panels
-- **Panel 1 (set and grow):** A morning kitchen counter. The hero is in work clothes with their bag on one shoulder and is shaking a clear shaker bottle full of lumpy green sludge. The lid has leaked, green powder dust has spilled from a plain unlabeled tub, and a sink behind them holds three stacked dirty shakers. The large thing is the clumpy shaker. Feeling symbol: one sweat drop.
-- **Panel 2 (turn):** The same counter. The shaker is pushed to the edge. The hero holds the Sprout daily pack up large in the foreground and tears it straight across the top. The pouch is glossy deep green with a yellow bear face at top right and a solid yellow band where the wordmark sits. It carries no letters. The large thing is the pouch. There is no cutaway, because no source for how it works was given. This panel is wordless.
-- **Panel 3 (land):** The same kitchen, changed. The hero has their coat on and stands by the door, tipping gummies from the torn pack into an open palm, relaxed and half-smiling. The sink is empty and one clean shaker sits upside down on the drying rack, unused. No result on the body is shown, only an easier morning. The large thing is the palm of gummies.
-- **Cell 4 (photo panel):** The real product photo of the daily pack in a hand, inside the same thin border, placed in a design tool. It is not drawn.
+**3. Panels**
+1. **Set and grow.** It's a morning office kitchen counter.
+   - The hero shakes a cloudy shaker bottle with green clumps stuck to its sides. Powder is spilled on the counter.
+   - The hero's mouth is pulled tight, with one sweat drop.
+   - There are no words in this panel.
+2. **Turn.** This is a close-up at the same counter.
+   - The hero's hands tear the deep green daily pack straight across the top. The pack is large and centred.
+   - The dirty shaker is pushed to the panel edge and cropped.
+   - The caption box sits top left.
+3. **Land.** This is the same counter, changed.
+   - The yellow gummies are tipped into the hero's open palm, and the hero holds a coffee mug in the other hand.
+   - The hero looks relaxed.
+   - The counter is clean, and the shaker sits dry and capped on a back shelf.
+   - There are no words in this panel. It shows only an easier routine, with no body result.
+4. **Photo panel.**
+   - Your real pouch-front photo, with the daily-pack-in-hand photo inset, is placed inside the same border in Canva.
+   - It carries one label.
 
-## 4. Layout
-- **Size:** 4:5, 1080 x 1350. It is a 2 x 2 grid read left to right, top to bottom, under a headline band. Outer margin is 32 px and gutters are 24 px throughout.
-- **Zone map:**
+**4. Layout**
+- **Size:** 4:5, 1080 x 1350.
+- **Grid:** 2 x 2, read left to right and top to bottom. The cells are equal and the gutters are even.
+- **Zone map (percent of width and height):**
 
-| Zone | x | y |
+| Zone | Width | Height |
 |---|---|---|
-| Headline band (deep forest #002C17) | 0–100% | 0–16% |
-| Panel 1 | 3.0–48.9% | 17.2–56.5% |
-| Panel 2 | 51.1–97.0% | 17.2–56.5% |
-| Panel 3 | 3.0–48.9% | 58.3–97.6% |
-| Cell 4, photo | 51.1–97.0% | 58.3–97.6% |
+| Headline band, cream | 0–100% | 0–17% |
+| Panel 1 | 4–49% | 18–57% |
+| Panel 2 | 51–96% | 18–57% |
+| Panel 2 caption box | 53–80% | 20–27% |
+| Panel 3 | 4–49% | 59–98% |
+| Cell 4, photo | 51–96% | 59–98% |
+| Cell 4 label box | 53–94% | 89–96% |
+| Gutters | 2% | 2% |
+| Outer margin | 4% at the sides | 2% at the bottom |
 
-- **Caption boxes:**
-  - Panel 1 caption: top 14% of panel 1, cream box with a thin black rule.
-  - Panel 3 caption: top 14% of panel 3, same style.
-  - Photo label: bottom 14% of cell 4, deep forest strip.
-- **1:1 (1080 x 1080), recomposed:** Drop the band. The grid fills the frame with the same margins and gutters. The headline replaces the photo label on the deep forest strip at the foot of cell 4, so the reading count stays the same. Re-crop the photo for the new cell; don't stretch it.
+**5. Words on the image** (all set in Work Sans Bold in Canva)
+- **Headline:** "Greens without the shaker."
+  - 72 px, deep forest #002C17 on cream #FFF7DF.
+  - Contrast about 14:1.
+- **Panel 2 caption:** "Tear. Tip. Done."
+  - 40 px, #002C17 on a cream #FFF7DF box with a thin black border.
+  - Contrast about 14:1.
+- **Cell 4 label:** "1 pack a day"
+  - 36 px, cream #FFF7DF on a deep forest #002C17 box.
+  - Contrast about 14:1.
 
-## 5. Words on the image (Work Sans Bold, set in a design tool)
-| Words | Where | Size | Colour | Contrast |
-|---|---|---|---|---|
-| "Greens without the shaker" (4 words) | Headline band | 64 px | Cream #FFF7DF on #002C17 | ~14.5:1 |
-| "Scoop. Shake. Choke. Scrub." | Panel 1 caption | 40 px | #002C17 on cream #FFF7DF | ~14.5:1 |
-| "Tear. Tip. Done." | Panel 3 caption | 40 px | #002C17 on cream #FFF7DF | ~14.5:1 |
-| "One pack a day" | Cell 4 label strip | 36 px | Cream #FFF7DF on #002C17 | ~14.5:1 |
+That's 4 words in the headline and 2 other things to read. There's no button on the image.
 
-That is the headline plus 3 other things to read. Panel 2 is wordless. The offer button lives in the feed, not on the image.
-
-## 6. Image prompt
+**6. Image prompt**
 ```
-Three flat ink comic panels in a 2x2 grid on a 4:5 canvas (1080x1350). Leave the top 16% of the canvas as a plain flat empty cream (#FFF7DF) band. Below it, four equal panels with thin black borders and even 24 px cream gutters, read left to right, top to bottom. The bottom-right panel is an EMPTY bordered frame filled with plain flat cream; draw nothing inside it.
+A 4:5 flat ink comic page, 1080x1350. Top 17% is a plain empty cream (#FFF7DF) band. Below it, a 2x2 grid of four equal panels with thin black borders and even cream gutters, read left to right, top to bottom. Style: bold even black outlines, flat colour fills, one shadow tone as halftone dots, limited palette of black, cream #FFF7DF, slate blue #6E7F99, deep forest green #002C17, and bright yellow #F5C400. Simple cartoon features, not realistic faces.
 
-Style: bold even black outlines, flat colour fills, one soft shadow tone, no halftone, no gradients. Palette: black, cream #FFF7DF, warm grey #B9B2A3, and only on the product a glossy deep green and a warm yellow taken from the attached pouch photo. Simple, friendly, uncluttered backgrounds.
+Hero (same in every panel): an adult office worker in their 30s with a short black bob, round black glasses, slate-blue cardigan, grey trousers.
 
-Hero (same in every panel): one adult office worker in their thirties, short dark curly hair, soft grey cardigan over a cream shirt, round black glasses, simple dot eyes and a line mouth. No other people.
+Panel 1 (top left): morning office kitchen counter. The hero shakes a cloudy plastic shaker bottle with green clumps stuck to the sides, green powder spilled on the counter, mouth pulled tight, one sweat drop. Muted colours only, no yellow.
 
-Panel 1 (top left): morning kitchen counter. The hero, bag on one shoulder, shakes a clear shaker bottle full of lumpy green sludge. The lid leaks and green powder dust spills from a plain unlabeled tub. Behind them, a sink holds three stacked dirty shaker bottles. One small sweat drop by the hero's head. The clumpy shaker is the largest object.
+Panel 2 (top right): close-up at the same counter. The hero's hands tear a glossy deep green daily pouch straight across the top; the pouch is large and centred, with a small yellow bear face top right and a thin yellow outline, drawn from the attached pouch photo with its exact shape and colours but no letters or logo text. The dirty shaker is cropped at the panel edge. Leave a plain cream rectangle empty in the top-left corner.
 
-Panel 2 (top right): same counter, shaker pushed to the edge. In the foreground, large, the hero tears a small daily pouch straight across the top. Draw the pouch from the attached photo: glossy deep green, a yellow bear face at top right, a plain solid yellow band where the logo sits. No letters on it. The pouch is the brightest, most saturated thing in the panel.
+Panel 3 (bottom left): the same counter, clean. Bright yellow gummies tipped into the hero's open palm, a coffee mug in the other hand, relaxed face. A dry capped shaker sits on a back shelf. The gummies and the torn green pack are the brightest things in the panel.
 
-Panel 3 (bottom left): same kitchen. The hero, coat on, stands by the door, relaxed with a small smile, tipping gummies from the torn green pouch into an open palm. The sink is empty. One clean shaker sits upside down on a drying rack. The palm with gummies is the largest object.
+Panel 4 (bottom right): an empty bordered cream frame, nothing drawn inside.
 
-No words, letters, numbers, logos, captions, speech balloons or sound effects anywhere in the image. Do not imitate any named artist or comic.
+No words, letters, numbers, logos or speech balloons anywhere in the image.
 ```
-Attach the pouch-front and daily-pack-in-hand photos with the prompt.
 
-## 7. Feed copy
-- **First line (80 characters):** Your daily greens, now a gummy you tip into your palm. No scoop, no shaker.
+**7. Feed copy**
+- **First line:** Gave up on greens powder? Your daily greens now come in one tear-open pack.
 - **Primary text:**
-  > Your daily greens, now a gummy you tip into your palm. No scoop, no shaker.
-  >
-  > If you've quit powders because of the clumps and the sink full of bottles, Sprout comes in one tear-open pack a day. Tear, tip, done.
-  >
-  > Get your first order for $29.99 when you sign up for texts. Your plan then renews at $49.99 every 4 weeks. [MISSING: cancellation terms]
-- **Headline (18 characters):** First order $29.99
-- **Button:** Shop now
 
-## 8. Notes
-- **Buyer words used:** "choking" became the panel 1 caption "Choke". "Not having to clean a shaker bottle" shaped the claim, headline and panel 3. The big-name competitor is never named or drawn, and the tub is unlabeled.
-- **Claims left out:** "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack. It's approved, but it's a second claim, so it belongs in a second ad. There are no comparisons to powders on nutrition, and no body results.
-- **Couldn't check:** The photos came through as placeholders, so I planned from your description. Pouch colours, the bear face placement and the gummies' colour and shape are inferred.
+  > Gave up on greens powder? Your daily greens now come in one tear-open pack.
+  >
+  > No scooping, no clumps, no shaker bottle to scrub before work. Tear the Sprout daily pack straight across the top, tip the gummies into your palm, done.
+  >
+  > Each pack: 60+ ingredients, 21 vitamins & minerals, and 6g fiber.
+  >
+  > Get your first order for $29.99 when you sign up for texts. Renews at $49.99 every 4 weeks. MISSING: how to cancel or skip.
+
+- **Headline:** One pack. No scooping. (22 characters)
+- **Button:** Shop Now
+
+**8. Notes**
+- **Buyer words used:** "not having to clean a shaker bottle" is turned into "no shaker bottle to scrub" and acted out in panels 1 and 3. "Choking on" sets the grimace in panel 1.
+  - Neither phrase is quoted, because they aren't marked as verified reviews.
+  - The competitor's name is left out.
+- **Claims left out:**
+  - Any health or energy result, because there's no visible result.
+  - Any comparison with powders on nutrition.
+  - Any cutaway.
+- **Photos:** I couldn't view the attached photos, so the drawn pack follows your description. Check the shape, the green and the bear-face position against the real pouch.
 - **MISSING:**
-  - The real product photos: pouch front and daily pack in a hand, label sharp. No image should be made until these are attached.
-  - Gummy colour and shape.
-  - Cancellation terms for the renewal.
-  - Whether any buyer phrase comes from a verified review. None is used as a quote until it's confirmed.
+  - Banned-claims list.
+  - Gummy colour (yellow is inferred).
+  - Exact pouch yellow hex (inferred).
+  - Gummies per pack.
+  - Cancel or skip terms for the renewal.
+  - What the text sign-up requires.
+  - Verified review phrases.
 
-## 9. Score
-**Score: 100/100 (5 of 5 checks)**
+**9. Checks missed**
+- The drawn pack hasn't been checked against the real photos, because I couldn't view them.
+- The finished picture hasn't been checked, because none has been made yet.
 
-## Finishing the picture
-- **ChatGPT or Gemini:** Paste the image prompt into a chat with both product photos attached and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** With `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that image API and save the file. Get keys at platform.openai.com/api-keys (OpenAI) or aistudio.google.com/apikey (Google). OpenAI or Google bills each picture.
+**To make the picture:**
+- **ChatGPT or Gemini:** paste the prompt with your pouch photo attached and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana, and free plans have daily limits. You can also paste this whole skill there.
+- **Higgsfield:** use its image tool, or connect it to Claude.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that API and save the file. Each picture is billed.
+- **Finishing in Canva:** set the three text pieces and drop your pouch photo into cell 4.
 
-After you have the panels, letter the words and place the real pack photo in cell 4 in a design tool.
+Next, do you want to check it with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), make a second ad with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker), test more first lines with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer), or write the page with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer)? You can also type your own.
 ```

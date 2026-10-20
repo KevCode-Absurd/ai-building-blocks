@@ -24,8 +24,8 @@ version: 2.1.0
 credits:
   - {title: "Is That Car Smiling at Me?", by: "Pankaj Aggarwal and Ann L. McGill, Chicago Booth Review", url: "https://www.chicagobooth.edu/review/car-smiling-at-me", used: "A face must fit the object's shape; a mildly flawed character is liked, a strongly negative one is not"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

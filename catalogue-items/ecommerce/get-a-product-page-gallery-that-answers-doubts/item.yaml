@@ -34,7 +34,7 @@ credits:
   - {title: "Product Page UX: All Products Need at Least One 'In Scale' Image (28% Get It Wrong)", by: "Christian Holst, Baymard Institute", url: "https://baymard.com/blog/in-scale-product-images", used: "Shoppers read the gallery before the text and misjudge size without a scale image"}
   - {title: "Image link [image_link]", by: "Google Merchant Center Help", url: "https://support.google.com/merchants/answer/6324350", used: "Shopping feed main-image rules and keeping the AI label in AI-made files"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

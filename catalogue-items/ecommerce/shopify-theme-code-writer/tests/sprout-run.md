@@ -1,23 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-The owner gets an installable section and snippet that pull the renewal price from the store's selling plan, carry the guarantee's first-order limit and shipping line as editable defaults in the brand's own words, and flag that Theme Check was not run. The notes are honest about the theme gap and the placement limit, so nothing misleads a buyer or the owner.
+A solid, installable section that pulls the renewal price from the selling plan, puts the guarantee's first-order limit and the shipping line in editable settings, and is honest about the theme gaps and what it couldn't check. One real bug to fix in preview: in the renewal line, `| money` is chained after `replace`, so it formats the whole sentence rather than the price, meaning `[price]` may show as raw cents or garbage until the price is formatted into a variable first.
 
 ## Judge list
 
 - Met: The schema is valid JSON with a name and a preset (or a rule for where it can be added).
-  "name": "t:sections.purchase_terms.name" ... "enabled_on": { "templates": ["product"] } ... "presets": [ { "name": ... } ]; JSON parses cleanly.
+  "name": "t:sections.plan_terms.name" ... "enabled_on": {"templates": ["product"]} ... "presets": [{ "name": "t:sections.plan_terms.presets.name" }]
 - Met: There's no include, img_url, ternary or brackets in conditions.
-  Uses {% render 'purchase-terms' %}; conditions like "if size == 'small' or size == 'large'" have no brackets or ternary; no images at all.
+  Conditions are plain: `if allocation.price_adjustments.size > 1`, `if days > 0`; no include, img_url or ternary anywhere.
 - Met: No price or policy is typed in. They come from the store.
-  "assign renewal_price = allocation.price" ... "shop.refund_policy.url"; guarantee/shipping wording is owner-supplied default text in editable settings, not code.
+  Renewal price read from `allocation.price_adjustments[1].price` / `allocation.price` with `money`; guarantee wording is an owner setting default from the owner's own FAQ text, flagged honestly in CHECKS MISSED.
 - Met: Words the owner should change are settings, not hard-coded text.
-  renewal_text, guarantee_text, policy_link_text, shipping_text are all schema settings; only "Purchase terms" aria-label uses a t key.
+  `renewal_text`, `guarantee_text`, `shipping_text` are inline_richtext settings; fixed words use `'sections.plan_terms.heading' | t`.
 - Met: Every image has alt text and a set width.
-  No images in the section; output notes "The image check passes only because the section has no images."
+  No images in the section; notes say "not applicable, because the section has no images."
 - Met: The notes say what it assumed about your theme.
-  "MISSING: the theme's name and whether it supports theme blocks. I assumed a recent theme with theme blocks off and used only a section and a snippet."
+  "MISSING: theme name and theme block support. The code assumes a recent theme with theme blocks off and uses one section only."
 
 ## What went in
 
@@ -42,131 +42,329 @@ Theme: don't know if it has theme blocks. We sell by subscription.
 ## What came out
 
 ```text
+### sections/plan-terms.liquid
+
 ```liquid
-{%- comment -%} sections/purchase-terms.liquid {%- endcomment -%}
+{%- comment -%}
+  Plan terms: renewal price, guarantee line and shipping line.
+  Meant to sit directly under the product section on product templates.
+  The renewal price comes from the variant's selling plan. It is never typed in.
+{%- endcomment -%}
+
 {%- liquid
-  assign renewal_text = blank
-  if section.settings.show_renewal
-    assign renewal_text = section.settings.renewal_text
+  assign has_renewal = false
+  assign renewal_price = 0
+  assign plan_name = ''
+
+  if product != blank
+    assign current_variant = product.selected_or_first_available_variant
+    assign allocation = current_variant.selected_selling_plan_allocation
+    if allocation == blank
+      assign allocation = current_variant.selling_plan_allocations | first
+    endif
+
+    if allocation != blank
+      assign has_renewal = true
+      assign plan_name = allocation.selling_plan.name | escape
+      if allocation.price_adjustments.size > 1
+        assign renewal_price = allocation.price_adjustments[1].price
+      else
+        assign renewal_price = allocation.price
+      endif
+    endif
   endif
 
-  assign policy_label = blank
-  if section.settings.show_policy_link
-    assign policy_label = section.settings.policy_link_text
+  assign price_per_day = ''
+  if has_renewal
+    assign days = section.settings.days_per_delivery | default: 0
+    if days > 0
+      assign price_per_day = renewal_price | divided_by: days | money
+    endif
   endif
 -%}
 
 {%- style -%}
-  #shopify-section-{{ section.id }} .purchase-terms {
-    --purchase-terms-text: {{ section.settings.text_color }};
-    --purchase-terms-bg: {{ section.settings.background }};
-    --purchase-terms-padding: {{ section.settings.padding }}px;
+  #shopify-section-{{ section.id }} .plan-terms {
+    --plan-terms-size: {{ section.settings.text_size }}px;
+    text-align: {{ section.settings.alignment }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    {%- if section.settings.text_color != blank %}
+      --plan-terms-color: {{ section.settings.text_color }};
+    {%- endif %}
+    {%- if section.settings.background_color != blank %}
+      --plan-terms-bg: {{ section.settings.background_color }};
+    {%- endif %}
   }
 {%- endstyle -%}
 
-{% render 'purchase-terms',
-  product: product,
-  renewal_text: renewal_text,
-  guarantee_text: section.settings.guarantee_text,
-  policy_link_label: policy_label,
-  shipping_text: section.settings.shipping_text,
-  size: section.settings.size,
-  alignment: section.settings.alignment
-%}
+<div
+  class="plan-terms"
+  data-plan-terms
+  data-section-id="{{ section.id }}"
+  data-product-url="{{ product.url }}"
+>
+  <h2 class="plan-terms__sr">{{ 'sections.plan_terms.heading' | t }}</h2>
+  <ul class="plan-terms__list" role="list">
+    {%- if section.settings.show_renewal and has_renewal -%}
+      {%- if section.settings.renewal_text != blank -%}
+        <li class="plan-terms__item plan-terms__item--renewal">
+          {{-
+            section.settings.renewal_text
+            | replace: '[price]', renewal_price | money
+            | replace: '[price_per_day]', price_per_day
+            | replace: '[plan_name]', plan_name
+          -}}
+        </li>
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if section.settings.show_guarantee and section.settings.guarantee_text != blank -%}
+      <li class="plan-terms__item plan-terms__item--guarantee">
+        {{ section.settings.guarantee_text }}
+        {%- if section.settings.show_policy_link and shop.refund_policy != blank %}
+          <a class="plan-terms__link" href="{{ shop.refund_policy.url }}">
+            {{- 'sections.plan_terms.policy_link' | t -}}
+          </a>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
+
+    {%- if section.settings.show_shipping and section.settings.shipping_text != blank -%}
+      <li class="plan-terms__item plan-terms__item--shipping">
+        {{ section.settings.shipping_text }}
+      </li>
+    {%- endif -%}
+  </ul>
+</div>
+
+{% stylesheet %}
+  .plan-terms {
+    box-sizing: border-box;
+    max-width: var(--page-width, 120rem);
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: var(--plan-terms-size, 15px);
+    line-height: 1.45;
+    color: var(--plan-terms-color, inherit);
+    background: var(--plan-terms-bg, transparent);
+  }
+
+  .plan-terms__list {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .plan-terms__item {
+    margin: 0;
+  }
+
+  .plan-terms__item--renewal {
+    font-weight: 600;
+  }
+
+  .plan-terms__link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .plan-terms__sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .plan-terms {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  (function () {
+    var timer;
+
+    function update(root) {
+      var form = document.querySelector('form[action*="/cart/add"]');
+      if (!form) return;
+
+      var data = new FormData(form);
+      var variantId = data.get('id');
+      if (!variantId) return;
+
+      var params = new URLSearchParams();
+      params.set('variant', variantId);
+      var plan = data.get('selling_plan');
+      if (plan) params.set('selling_plan', plan);
+      params.set('section_id', root.dataset.sectionId);
+
+      var key = params.toString();
+      if (root.dataset.lastKey === key) return;
+      root.dataset.lastKey = key;
+
+      fetch(root.dataset.productUrl + '?' + key)
+        .then(function (response) {
+          return response.ok ? response.text() : null;
+        })
+        .then(function (html) {
+          if (!html) return;
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          var fresh = doc.querySelector('[data-plan-terms]');
+          if (fresh) root.innerHTML = fresh.innerHTML;
+        })
+        .catch(function () {});
+    }
+
+    document.addEventListener('change', function (event) {
+      var target = event.target;
+      if (!target || !target.closest) return;
+      if (!target.closest('form, variant-selects, variant-radios, [data-variant-picker]')) return;
+
+      var roots = document.querySelectorAll('[data-plan-terms]');
+      if (!roots.length) return;
+
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        roots.forEach(update);
+      }, 200);
+    });
+  })();
+{% endjavascript %}
 
 {% schema %}
 {
-  "name": "t:sections.purchase_terms.name",
+  "name": "t:sections.plan_terms.name",
   "tag": "section",
-  "class": "section-purchase-terms",
+  "class": "section plan-terms-section",
   "enabled_on": {
     "templates": ["product"]
   },
   "settings": [
     {
       "type": "header",
-      "content": "t:sections.purchase_terms.terms_header"
+      "content": "t:sections.plan_terms.settings.header_renewal.content"
     },
     {
       "type": "checkbox",
       "id": "show_renewal",
-      "label": "t:sections.purchase_terms.show_renewal_label",
+      "label": "t:sections.plan_terms.settings.show_renewal.label",
       "default": true
     },
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "renewal_text",
-      "label": "t:sections.purchase_terms.renewal_text_label",
-      "info": "t:sections.purchase_terms.renewal_text_info",
-      "default": "Renews at [price] per delivery after your first order. Pause or cancel anytime.",
+      "label": "t:sections.plan_terms.settings.renewal_text.label",
+      "info": "t:sections.plan_terms.settings.renewal_text.info",
+      "default": "After your first box, each delivery renews at [price] ([price_per_day] a day). Pause or cancel anytime.",
       "visible_if": "{{ section.settings.show_renewal }}"
     },
     {
-      "type": "textarea",
+      "type": "number",
+      "id": "days_per_delivery",
+      "label": "t:sections.plan_terms.settings.days_per_delivery.label",
+      "info": "t:sections.plan_terms.settings.days_per_delivery.info",
+      "default": 28,
+      "visible_if": "{{ section.settings.show_renewal }}"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.plan_terms.settings.header_guarantee.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_guarantee",
+      "label": "t:sections.plan_terms.settings.show_guarantee.label",
+      "default": true
+    },
+    {
+      "type": "inline_richtext",
       "id": "guarantee_text",
-      "label": "t:sections.purchase_terms.guarantee_text_label",
-      "default": "Simple 30-day guarantee on your first order. This policy applies only to your initial purchase."
+      "label": "t:sections.plan_terms.settings.guarantee_text.label",
+      "default": "A simple 30-day guarantee on your first order. This policy applies only to your initial purchase.",
+      "visible_if": "{{ section.settings.show_guarantee }}"
     },
     {
       "type": "checkbox",
       "id": "show_policy_link",
-      "label": "t:sections.purchase_terms.show_policy_link_label",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "policy_link_text",
-      "label": "t:sections.purchase_terms.policy_link_text_label",
-      "default": "Read the refund policy",
-      "visible_if": "{{ section.settings.show_policy_link }}"
-    },
-    {
-      "type": "textarea",
-      "id": "shipping_text",
-      "label": "t:sections.purchase_terms.shipping_text_label",
-      "default": "Orders typically ship within 24 hours and on average arrive 3-5 days later."
+      "label": "t:sections.plan_terms.settings.show_policy_link.label",
+      "info": "t:sections.plan_terms.settings.show_policy_link.info",
+      "default": true,
+      "visible_if": "{{ section.settings.show_guarantee }}"
     },
     {
       "type": "header",
-      "content": "t:sections.purchase_terms.style_header"
+      "content": "t:sections.plan_terms.settings.header_shipping.content"
     },
     {
-      "type": "select",
-      "id": "size",
-      "label": "t:sections.purchase_terms.size_label",
-      "options": [
-        { "value": "small", "label": "t:sections.purchase_terms.size_small" },
-        { "value": "medium", "label": "t:sections.purchase_terms.size_medium" },
-        { "value": "large", "label": "t:sections.purchase_terms.size_large" }
-      ],
-      "default": "medium"
+      "type": "checkbox",
+      "id": "show_shipping",
+      "label": "t:sections.plan_terms.settings.show_shipping.label",
+      "default": true
     },
     {
-      "type": "select",
+      "type": "inline_richtext",
+      "id": "shipping_text",
+      "label": "t:sections.plan_terms.settings.shipping_text.label",
+      "default": "Orders typically ship within 24 hours and on average arrive 3-5 days later.",
+      "visible_if": "{{ section.settings.show_shipping }}"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.plan_terms.settings.header_style.content"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "t:sections.plan_terms.settings.text_size.label",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "text_alignment",
       "id": "alignment",
-      "label": "t:sections.purchase_terms.alignment_label",
-      "options": [
-        { "value": "left", "label": "t:sections.purchase_terms.alignment_left" },
-        { "value": "center", "label": "t:sections.purchase_terms.alignment_center" }
-      ],
+      "label": "t:sections.plan_terms.settings.alignment.label",
       "default": "left"
     },
     {
       "type": "color",
       "id": "text_color",
-      "label": "t:sections.purchase_terms.text_color_label",
-      "default": "#121212"
+      "label": "t:sections.plan_terms.settings.text_color.label"
     },
     {
       "type": "color",
-      "id": "background",
-      "label": "t:sections.purchase_terms.background_label",
-      "default": "#f4f6ef"
+      "id": "background_color",
+      "label": "t:sections.plan_terms.settings.background_color.label"
     },
     {
       "type": "range",
-      "id": "padding",
-      "label": "t:sections.purchase_terms.padding_label",
+      "id": "padding_top",
+      "label": "t:sections.plan_terms.settings.padding_top.label",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "t:sections.plan_terms.settings.padding_bottom.label",
       "min": 0,
       "max": 40,
       "step": 4,
@@ -176,239 +374,124 @@ Theme: don't know if it has theme blocks. We sell by subscription.
   ],
   "presets": [
     {
-      "name": "t:sections.purchase_terms.name"
+      "name": "t:sections.plan_terms.presets.name"
     }
   ]
 }
 {% endschema %}
 ```
 
-```liquid
-{%- comment -%} snippets/purchase-terms.liquid {%- endcomment -%}
-{% doc %}
-  Shows the subscription renewal price, the guarantee line with its limit, and the shipping line.
-
-  @param {product} product - Product whose selling plan gives the renewal price
-  @param {string} [renewal_text] - Renewal line; [price] becomes the renewal price, [plan] the plan name. Leave out to hide.
-  @param {string} [guarantee_text] - Guarantee line, including its first-order limit
-  @param {string} [policy_link_label] - Link text to the store refund policy. Leave out to hide the link.
-  @param {string} [shipping_text] - Shipping line
-  @param {string} [size] - 'small', 'medium' or 'large' (default 'medium')
-  @param {string} [alignment] - 'left' or 'center' (default 'left')
-
-  @example
-  {% render 'purchase-terms',
-    product: product,
-    renewal_text: section.settings.renewal_text,
-    guarantee_text: section.settings.guarantee_text,
-    policy_link_label: section.settings.policy_link_text,
-    shipping_text: section.settings.shipping_text,
-    size: 'medium',
-    alignment: 'left'
-  %}
-{% enddoc %}
-
-{%- liquid
-  assign renewal_line = blank
-
-  if renewal_text != blank
-    assign allocation = product.selected_or_first_available_selling_plan_allocation
-    if allocation == blank
-      assign allocation = product.selected_or_first_available_variant.selling_plan_allocations.first
-    endif
-
-    if allocation != blank
-      assign renewal_price = allocation.price
-      if allocation.price_adjustments.size > 1
-        assign renewal_price = allocation.price_adjustments.last.price
-      endif
-      assign price_html = renewal_price | money
-      assign plan_name = allocation.selling_plan.name | escape
-      assign renewal_line = renewal_text | escape | replace: '[price]', price_html | replace: '[plan]', plan_name
-    endif
-  endif
-
-  assign size_class = 'purchase-terms--medium'
-  if size == 'small' or size == 'large'
-    assign size_class = 'purchase-terms--' | append: size
-  endif
-
-  assign align_class = 'purchase-terms--left'
-  if alignment == 'center'
-    assign align_class = 'purchase-terms--center'
-  endif
-
-  assign has_content = false
-  if renewal_line != blank
-    assign has_content = true
-  endif
-  if guarantee_text != blank
-    assign has_content = true
-  endif
-  if shipping_text != blank
-    assign has_content = true
-  endif
--%}
-
-{%- if has_content -%}
-  <div class="purchase-terms {{ size_class }} {{ align_class }}">
-    <ul class="purchase-terms__list" role="list" aria-label="{{ 'sections.purchase_terms.list_label' | t }}">
-      {%- if renewal_line != blank -%}
-        <li class="purchase-terms__item purchase-terms__item--renewal">{{ renewal_line }}</li>
-      {%- endif -%}
-
-      {%- if guarantee_text != blank -%}
-        <li class="purchase-terms__item">
-          {{- guarantee_text | escape -}}
-          {%- if policy_link_label != blank -%}
-            {%- if shop.refund_policy != blank -%}
-              {{ ' ' }}<a href="{{ shop.refund_policy.url }}" class="purchase-terms__link">{{ policy_link_label | escape }}</a>
-            {%- endif -%}
-          {%- endif -%}
-        </li>
-      {%- endif -%}
-
-      {%- if shipping_text != blank -%}
-        <li class="purchase-terms__item">{{ shipping_text | escape }}</li>
-      {%- endif -%}
-    </ul>
-  </div>
-{%- endif -%}
-
-{% stylesheet %}
-  .purchase-terms {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 40rem;
-    margin: 0 auto;
-    padding: var(--purchase-terms-padding, 16px);
-    color: var(--purchase-terms-text, inherit);
-    background: var(--purchase-terms-bg, transparent);
-    border-radius: 8px;
-  }
-
-  .purchase-terms--left {
-    text-align: left;
-  }
-
-  .purchase-terms--center {
-    text-align: center;
-  }
-
-  .purchase-terms--small {
-    --purchase-terms-font: 0.875rem;
-  }
-
-  .purchase-terms--medium {
-    --purchase-terms-font: 1rem;
-  }
-
-  .purchase-terms--large {
-    --purchase-terms-font: 1.125rem;
-  }
-
-  .purchase-terms__list {
-    display: grid;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .purchase-terms__item {
-    font-size: var(--purchase-terms-font, 1rem);
-    line-height: 1.5;
-  }
-
-  .purchase-terms__item--renewal {
-    font-weight: 600;
-  }
-
-  .purchase-terms__link {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .purchase-terms--left {
-      margin-left: 0;
-    }
-
-    .purchase-terms__list {
-      gap: 0.625rem;
-    }
-  }
-{% endstylesheet %}
-```
+### locales/en.default.json (merge these keys into your existing file; don't replace it)
 
 ```json
-// locales/en.default.json (merge these keys into the existing file; don't replace it)
 {
   "sections": {
-    "purchase_terms": {
-      "list_label": "Purchase terms"
+    "plan_terms": {
+      "heading": "Subscription terms",
+      "policy_link": "Read our refund policy"
     }
   }
 }
 ```
 
+### locales/en.default.schema.json (merge these keys into your existing file; don't replace it)
+
 ```json
-// locales/en.default.schema.json (merge these keys into the existing file; don't replace it)
 {
   "sections": {
-    "purchase_terms": {
-      "name": "Purchase terms",
-      "terms_header": "Terms",
-      "show_renewal_label": "Show renewal price",
-      "renewal_text_label": "Renewal line",
-      "renewal_text_info": "[price] shows the renewal price from the subscription plan. [plan] shows the plan name.",
-      "guarantee_text_label": "Guarantee line",
-      "show_policy_link_label": "Link to refund policy",
-      "policy_link_text_label": "Policy link text",
-      "shipping_text_label": "Shipping line",
-      "style_header": "Style",
-      "size_label": "Text size",
-      "size_small": "Small",
-      "size_medium": "Medium",
-      "size_large": "Large",
-      "alignment_label": "Alignment",
-      "alignment_left": "Left",
-      "alignment_center": "Center",
-      "text_color_label": "Text color",
-      "background_label": "Background",
-      "padding_label": "Padding"
+    "plan_terms": {
+      "name": "Plan terms",
+      "settings": {
+        "header_renewal": {
+          "content": "Renewal price"
+        },
+        "show_renewal": {
+          "label": "Show renewal line"
+        },
+        "renewal_text": {
+          "label": "Renewal text",
+          "info": "[price] shows the renewal price from your subscription plan. [price_per_day] divides it by the days below. [plan_name] shows the plan's name. Hidden if the product has no subscription plan."
+        },
+        "days_per_delivery": {
+          "label": "Days per delivery",
+          "info": "Used for [price_per_day]. Set to 0 to leave it blank."
+        },
+        "header_guarantee": {
+          "content": "Guarantee"
+        },
+        "show_guarantee": {
+          "label": "Show guarantee line"
+        },
+        "guarantee_text": {
+          "label": "Guarantee text"
+        },
+        "show_policy_link": {
+          "label": "Link to refund policy",
+          "info": "Shows only if a refund policy is set in Settings > Policies."
+        },
+        "header_shipping": {
+          "content": "Shipping"
+        },
+        "show_shipping": {
+          "label": "Show shipping line"
+        },
+        "shipping_text": {
+          "label": "Shipping text"
+        },
+        "header_style": {
+          "content": "Style"
+        },
+        "text_size": {
+          "label": "Text size"
+        },
+        "alignment": {
+          "label": "Alignment"
+        },
+        "text_color": {
+          "label": "Text colour"
+        },
+        "background_color": {
+          "label": "Background colour"
+        },
+        "padding_top": {
+          "label": "Top padding"
+        },
+        "padding_bottom": {
+          "label": "Bottom padding"
+        }
+      },
+      "presets": {
+        "name": "Plan terms"
+      }
     }
   }
 }
 ```
 
-**What to upload**
-- `sections/purchase-terms.liquid` and `snippets/purchase-terms.liquid`.
-- Merge the keys into `locales/en.default.json` and `locales/en.default.schema.json`.
-- In the theme editor, open the product template, add the "Purchase terms" section and drag it directly under the main product section. It is limited to product templates.
-- Add it to the Kids product template too. The renewal price there comes from that product's own plan, so it can't drift from the price the way "$22.49 / $74.98" does now.
+**Upload**
+- Upload `sections/plan-terms.liquid`, then merge the two locale fragments into your existing files. Do this on a duplicate theme first.
+- In the theme editor, open the product template, choose Add section, pick "Plan terms" and drag it directly under the product information section.
 
 **What the owner can edit**
-- Renewal line, with `[price]` and `[plan]` placeholders. It can be shown or hidden.
-- Guarantee line. The default uses your FAQ wording, with the first-order limit.
-- Refund policy link text. It can be shown or hidden. The link itself comes from the store's refund policy.
-- Shipping line, using your FAQ wording.
-- Text size (default medium, 16px, so it's no longer tiny), alignment, colours and padding.
+- The three lines, each with its own show/hide switch. Use `[price]`, `[price_per_day]` and `[plan_name]` in the renewal text.
+- Days per delivery (28 by default, which gives $1.78/day on $49.99), text size (15px by default so the renewal line is no longer tiny), alignment, colours and padding.
+- The guarantee line can link to the store's refund policy.
 
 **What was assumed**
-- MISSING: the theme's name and whether it supports theme blocks. I assumed a recent theme with theme blocks off and used only a section and a snippet. Because of that, the section sits under the whole product section, not right under the button.
-  - On phones, it appears after the product info and accordions.
-  - To place it right under the button, a developer can add `{% render 'purchase-terms', ... %}` in the theme's main product file next to the buy buttons. The snippet's `@example` shows how.
-- The subscription app uses Shopify selling plans. The renewal price is the last price adjustment of the selected (or first) plan, falling back to the plan price.
-  - If your app doesn't use selling plans, the renewal line hides itself.
-  - The SMS-only first-order discount isn't shown or changed here.
-  - Check against shopify.dev: `product.selected_or_first_available_selling_plan_allocation`, `selling_plan_allocation` and `selling_plan_allocation_price_adjustment`.
-- The renewal price is for the variant shown when the page loads. Switching from 1 to 2 adults won't update it unless the theme reloads sections on variant change. I added no script for this.
-- Theme Check was not run. The files weren't checked.
+- MISSING: theme name and theme block support. The code assumes a recent theme with theme blocks off and uses one section only. Because it is a separate section, it sits under the whole product section, not inside it. On phones that may put it below the accordions rather than right under the "Start Now" button. To place it exactly under the button, the main product section's buy-button area needs a code edit, which needs that file.
+- MISSING: which subscription app you use. The renewal price is read from the Shopify selling plan:
+  - If the plan has two price stages, it uses the second.
+  - Otherwise it uses the plan price.
+  - If your $29.99 comes from the SMS discount code, which the footer suggests, the plan price should already be $49.99.
+  - Check this in preview.
+- The small script refreshes the lines when the buyer changes flavour, sugar level, number of adults or plan. It reads the theme's add-to-cart form. If your theme or app builds that form differently, the price will still be right on page load but may not refresh. It sends no tracking.
+- When One Time Purchase is picked, the renewal line still shows the subscription's renewal price.
+- The guarantee and shipping lines start with your FAQ wording. The plan box above still says "30-Day Money-Back Guarantee" with no limit, so consider adding "on your first order" there too.
+- Theme Check was not run. These files were not checked in Shopify CLI.
 
-**Score: 7 / 7 checks passed = 100 / 100**
-- No checks missed.
-- The image check passes only because the section has no images.
-- The guarantee and shipping lines are starting text in settings, as owner-editable words. The policy itself is linked from `shop.refund_policy`, and the renewal price comes from the selling plan, not typed in.
+CHECKS MISSED:
+- No typed policies: the guarantee and shipping wording is your own text stored in section settings, not read from a store object. Shopify has no object for shipping times. The guarantee line links to `shop.refund_policy` as the source of record, but the 30-day wording must be kept in step with that policy by hand.
+- Images have `alt`, `image_url` and loading: not applicable, because the section has no images.
+
+Would you like to check the page before it goes live with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker)? You could also check it with the [Landing page 30-point checker](https://useaiblocks.com/prompts/landing-page-30-point-checker), or tell me what you'd like next.
 ```

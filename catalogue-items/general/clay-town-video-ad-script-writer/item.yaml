@@ -26,8 +26,8 @@ credits:
   - {title: "Twelve basic principles of animation", by: "Wikipedia, summarising Frank Thomas and Ollie Johnston, The Illusion of Life (1981)", url: "https://en.wikipedia.org/wiki/Twelve_basic_principles_of_animation", used: "Staging one clear idea per shot, behind the one-mover rule and held poses"}
   - {title: "The Seven Habits Of Highly Effective Characters", by: "System1 Group", url: "https://system1group.com/blog/the-seven-habits-of-highly-effective-characters", used: "A recurring lead in a built world with a cast around them"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

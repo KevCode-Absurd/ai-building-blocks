@@ -28,8 +28,8 @@ credits:
   - {title: "Capturing Attention in Feed: The Science Behind Effective Video Creative", by: "Facebook IQ (Meta)", url: "https://www.facebook.com/business/news/insights/capturing-attention-feed-video-creative", used: "1.7 seconds per feed post on a phone"}
   - {title: "How many words do we read per minute? A review and meta-analysis of reading rate", by: "Marc Brysbaert", url: "https://doi.org/10.1016/j.jml.2019.104047", used: "238 words a minute, so the 7-word headline"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

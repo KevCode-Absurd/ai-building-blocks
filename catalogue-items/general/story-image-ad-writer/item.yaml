@@ -46,8 +46,8 @@ credits:
   - {title: "The role of transportation in the persuasiveness of public narratives", by: "Melanie C. Green and Timothy C. Brock, Journal of Personality and Social Psychology (2000)", url: "https://doi.org/10.1037/0022-3514.79.5.701", used: "Readers carried into a story are persuaded by it, so open on a moment and keep one voice to the end"}
   - {title: "The emotional arcs of stories are dominated by six basic shapes", by: "Andrew J. Reagan, Lewis Mitchell, Dilan Kiley, Christopher M. Danforth and Peter Sheridan Dodds", url: "https://arxiv.org/abs/1606.07772", used: "Basic rise and fall shapes behind the five story shapes"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

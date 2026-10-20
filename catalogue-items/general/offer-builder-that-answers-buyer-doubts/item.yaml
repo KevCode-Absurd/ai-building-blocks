@@ -25,7 +25,7 @@ credits:
   - {title: "Signaling Quality with a Money-Back Guarantee: The Role of Transaction Costs", by: "Sridhar Moorthy and Kannan Srinivasan, Marketing Science", url: "https://doi.org/10.1287/mksc.14.4.442", used: "Guarantees as a signal of quality for the certainty lever"}
   - {title: "50 Cart Abandonment Rate Statistics", by: "Baymard Institute", url: "https://baymard.com/lists/cart-abandonment-rate", used: "Extra costs and an unclear total drive checkout drop-off, so the full price is shown up front"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

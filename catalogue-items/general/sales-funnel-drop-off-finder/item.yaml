@@ -26,7 +26,7 @@ credits:
   - {title: "Cart Abandonment Rate Statistics", by: "Baymard Institute", url: "https://baymard.com/lists/cart-abandonment-rate", used: "What to look for at the cart and checkout steps"}
   - {title: "How Not To Run an A/B Test", by: "Evan Miller", url: "https://www.evanmiller.org/how-not-to-run-an-ab-test.html", used: "Only test what can reach its sample"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

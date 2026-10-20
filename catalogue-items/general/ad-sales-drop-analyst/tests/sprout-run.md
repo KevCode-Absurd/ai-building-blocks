@@ -1,23 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-Every number checks out against the export, the chain split is correctly computed and sums to the whole change, and the tracking check comes first with the pause question left to the owner with clear conditions. The owner gets a defensible answer: click rate is the weakest link, the 61% vs 52%/55% offer mismatch is flagged but not blamed for the drop without a change log, and no targets are guessed.
+Every number is recalculated correctly from the export, the chain split is sound and names click rate as the weak link, and the counting check comes first. The owner gets a clear, honest answer that a pause can't be decided without a target and a re-pull, with no invented facts and no promises.
 
 ## Judge list
 
-- Met: 1. Cost per sale recalculated correctly for one ad
-  "Cost per sale | $26.79 | $76.92" matches 3000/112 and 3000/39.
-- Met: 2. First finding is about tracking or sale values
-  "1. Counting and reporting delay: check this first." with revenue per sale $34.20 vs $34.21 as evidence values pass consistently.
-- Met: 3. Each finding lists at least two possible reasons
-  Finding 1: reporting delay or tracking change; Finding 2: (a)(b)(c); Finding 3: (a)-(d); Finding 4: (a)(b)(c); Finding 5 weighs renewal value and margin.
-- Met: 4. No 'pause now', nothing changed, no saving promised
-  "a person may approve pausing P1" only after target and re-pull; "Proposals only. Nothing has been changed."
-- Met: 5. Chain split shares add up to the whole change
-  24.3% + 46.3% + 29.4% = 100.0%; log contributions 0.256+0.489+0.310 = 1.055 = ln(2.872).
-- Met: 6. Missing data named with what it would have changed
-  Ten MISSING lines; "Without targets this review describes only"; "no frequency or placement data was supplied, so none of these is settled."
+- Met: Pick one ad and check its cost per sale yourself; it should match.
+  "Cost per sale (spend / purchases) $26.79 | $76.92": 3000/112 = 26.79 and 3000/39 = 76.92. Both match.
+- Met: The first finding is about tracking or sale values, or says tracking was checked and why it's fine.
+  "1. Counting is unverified, so check it before trusting the 39." with attribution window, browser/server events and UTM-tagged orders to check.
+- Met: Each finding lists at least two possible reasons, not one confident cause.
+  Findings 1–3 each give (a), (b), (c); finding 4 gives three reasons the data cannot settle a pause.
+- Met: Nothing says pause now, nothing changed, no saving promised.
+  "a person reduces or pauses P1 only if both of the following hold" and "Proposals only. Nothing has been changed." No savings claimed.
+- Met: The chain split's shares add up to the whole change in cost per sale.
+  "+0.256 / +0.489 / +0.310 ... Total 2.872, +1.055, 100%"; 24.3+46.3+29.4 = 100, ln(2.872)=1.055 checks.
+- Met: Missing data is named, and the skill says what it would have changed.
+  "Whether P1 is profitable in either window: no target, margin, refunds or renewal data"; "Frequency is MISSING, so this is unconfirmed."
 
 ## What went in
 
@@ -44,22 +44,22 @@ get so much worse, and should we pause it?
 
 ```text
 **Basis**
-- **Data:** two rows for one image ad, P1 "'Sprout is too expensive': here's 61% off to prove otherwise". Days 1–21 and days 22–42, USD. These are practice numbers.
-- **Context used:** the product page notes (read 30 Sept and 13 Oct 2026) and your notes on duplicate copies, the offer mismatch and the renewal price.
-- **Totals:** recalculated from the export. No rates were averaged.
-- MISSING: calendar dates of each window
-- MISSING: attribution window and how long sales take to report
-- MISSING: target cost per sale or target return, and margin
-- MISSING: value of renewals at $49.99 every 4 weeks, and refunds
-- MISSING: frequency, reach, placement split, learning status
-- MISSING: tracking details (browser vs server events, event IDs, deduplication, match score)
-- MISSING: store's own orders and revenue for the same dates
-- MISSING: change log for the ad, offer and page between the windows
-- MISSING: checkout step counts, phone page speed, stock
-- MISSING: total budget
-- **Without targets** this review describes only. It does not call either period good or bad against a target.
+- **Covers:** one image ad, P1 "'Sprout is too expensive': here's 61% off to prove otherwise". It spans two 21-day windows (days 1–21 and days 22–42) with the same $3,000 spend in each. Amounts are in USD. These are **practice numbers** (sprout/ad-results.csv).
+- **Context used:** sprout/product-page.md, plus your notes about the 15+ copies, the 61% vs 52%/55% gap and the $29.99 price needing the SMS sign-up.
+- **MISSING:**
+  - target cost per sale or target return, and margin
+  - calendar dates
+  - attribution window and reporting delay
+  - browser vs server purchase events, event IDs, deduplication and match score
+  - reach and frequency by window
+  - learning status
+  - change log for ad, page, offer and budget
+  - store orders and refunds for the same dates
+  - checkout step counts
+  - phone page speed
+  - which of the 15+ copies ran in which window
 
-**Recalculated table (USD, practice numbers)**
+**Recalculated table** (every figure is worked from its totals)
 
 | | Days 1–21 | Days 22–42 | Change |
 |---|---|---|---|
@@ -68,114 +68,125 @@ get so much worse, and should we pause it?
 | Link clicks | 3,750 | 1,780 | −52.5% |
 | Purchases | 112 | 39 | −65.2% |
 | Revenue (platform) | $3,830 | $1,334 | −65.2% |
-| Cost per 1,000 views | $12.00 | $15.50 | +29.2% |
-| Click rate | 1.50% | 0.92% | −38.7% |
-| Cost per click | $0.80 | $1.69 | +110.6% |
+| Cost per 1,000 views (3,000 / impr × 1,000) | $12.00 | $15.50 | +29.2% |
+| Click rate (clicks / impr) | 1.50% | 0.92% | −38.7% |
 | Buy rate (purchases / clicks) | 2.99% | 2.19% | −26.6% |
-| **Cost per sale** | **$26.79** | **$76.92** | **+187.2% (×2.87)** |
-| Revenue per sale | $34.20 | $34.21 | flat |
+| Cost per click | $0.80 | $1.69 | +110.7% |
+| **Cost per sale (spend / purchases)** | **$26.79** | **$76.92** | **×2.87 (+187%)** |
+| Revenue per sale | $34.20 | $34.21 | ≈0% |
 | Return (revenue / spend) | 1.28 | 0.44 | −65.2% |
 
 **Chain split**
 
-The change in cost per sale is ln(2.872) = 1.055.
+Cost per sale = cost per 1,000 / (1,000 × click rate × buy rate). The shares below come from the logs of each period-2 ÷ period-1 ratio.
 
-| Link | Change | Log contribution | Share |
+| Link | Ratio | ln (push on cost per sale) | Share |
 |---|---|---|---|
-| Cost per 1,000 views | ×1.292 | +0.256 | 24.3% |
-| Click rate (inverse) | ×0.613 | +0.489 | **46.3%** |
-| Buy rate (inverse) | ×0.734 | +0.310 | 29.4% |
-| **Total** | ×2.872 | **+1.055** | **100.0%** |
+| Dearer to be seen (cost per 1,000) | 1.292 | +0.256 | 24.3% |
+| Fewer clicks per view (1 / click-rate ratio) | 1 / 0.613 | +0.489 | **46.3%** |
+| Fewer buyers per click (1 / buy-rate ratio) | 1 / 0.734 | +0.310 | 29.4% |
+| **Total** | **2.872** | **+1.055** | **100%** |
 
-- **Order value:** revenue per sale did not move, so it explains none of the rise.
-- **Weakest link:** click rate. All three links worsened.
+The check holds: ln(76.92 / 26.79) = ln(2.872) = 1.055. Revenue per sale did not move, so smaller orders play no part.
 
 **Findings, ranked**
 
-1. **Counting and reporting delay: check this first.**
-   - **What we saw:** purchases fell 65% while clicks fell 53%. This is not the "steady clicks, fewer sales" pattern. Revenue per sale is identical at $34.20 and $34.21, which suggests purchase value and currency pass the same way in both windows.
-   - **What the data can't rule out:**
-     - If days 22–42 end near the export date, sales still inside the attribution window may not have reported yet. That would lower the buy rate and part of the 29.4% share.
-     - A tracking change between the windows. No event data was supplied to check this.
-   - **What to check:**
-     - The export date against the window's end date.
-     - Store orders for the same dates.
-     - Browser vs server purchase events and deduplication in both windows.
-     - The match score as the platform reports it.
-   - **Proposal:** re-pull days 22–42 once the attribution window has fully closed. Compare the result with store orders before any decision on P1.
-   - **Revisit:** when the window closes after day 42.
-
-2. **Fewer clicks per view (46.3% of the rise; −38.7%).**
+1. **Counting is unverified, so check it before trusting the 39.**
+   - **What I saw:** clicks fell 53% and purchases fell 65%. This is not the "steady clicks, fewer sales" pattern, so the drop in sales is partly real. However, days 22–42 is the most recent window, so it is the one most exposed to reporting delay.
    - **Possible reasons:**
-     - (a) Fatigue. One unchanged image has run for 42 days, so the same people may be seeing it repeatedly.
-     - (b) The 15+ near-identical copies of this headline compete for the same people, which wears it out faster.
-     - (c) A shift to a placement where people click less.
-   - **Evidence for:** clicks fell faster than impressions, which fits (a) and (b).
-   - **Evidence against:** no frequency or placement data was supplied, so none of these is settled.
+     - (a) Late-reported purchases are not yet counted.
+     - (b) A browser/server deduplication or event change happened mid-flight.
+     - (c) A genuine drop.
    - **What to check:**
-     - Frequency and reach by week.
-     - The placement split in both windows.
-     - The click rate by week across the 15+ copies.
-   - **Proposal:** if frequency rose across the windows, test one fresh opening line as a new ad rather than editing P1. Editing P1 is a big change and would restart learning. Make one change at a time.
-   - **Revisit:** after the new ad has a week of delivery.
+     - the attribution window and when the export was pulled
+     - browser vs server purchase counts by window
+     - store orders tagged to P1's UTMs for the same dates
+   - **Proposal:** re-pull days 22–42 once the delay period has passed. Do this before any pause decision.
+   - **Revisit:** at the re-pull.
 
-3. **Fewer buyers per click (29.4%; −26.6%).**
+2. **Click rate is the biggest link: 46% of the rise, 1.50% → 0.92%.**
+   - **What I saw:** click rate fell, and fewer impressions were bought for the same money. That fits an audience that has seen this message too often.
    - **Possible reasons:**
-     - (a) Mismatch between the ad's offer and the page. The ad says 61% off. The page shows 52% (announcement bar) and "up to 55%" (badge and pop-up). The $29.99 only applies after the text sign-up, which only the footer explains. The page also says "DISCOUNT AUTO-APPLIED".
-     - (b) Once the readiest buyers had converted, later clicks came from less ready people.
-     - (c) A page, offer or checkout change between the windows. The page was read on 30 Sept and 13 Oct, but the windows' dates are unknown.
-     - (d) Reporting delay (see finding 1).
-   - **Against (a) alone:** if the mismatch existed in both windows, it explains a weak buy rate, not a drop. It only explains the drop if something on the page changed.
+     - (a) **Fatigue.** The same people saw the same image repeatedly. Frequency is MISSING, so this is unconfirmed.
+     - (b) **Self-competition.** The 15+ copies of this headline, the most in the account, chase the same people. That would also raise cost per 1,000 (24% of the rise).
+     - (c) **Placement or audience shift** between windows.
+   - **Evidence against fatigue alone:** no frequency data, and no dates showing when the other copies launched.
    - **What to check:**
-     - The change log for page and offer edits between the windows.
-     - The checkout step counts in both windows.
-     - Whether the 61% matches the first buying option on the page.
-   - **Proposal:** if the page or offer changed between the windows, line up the ad's offer with the page's default plan box in a new ad. Do this only after finding 2's test, not at the same time.
-   - **Revisit:** after the change log is reviewed.
+     - frequency and reach by week for P1
+     - audience overlap and the launch dates of the 15+ copies
+     - the placement breakdown
+   - **Proposal:** if frequency rose and the copies overlap, a person consolidates the copies into fewer ads within the same total budget. This is one change, made once, so learning resets only once.
+   - **Revisit:** 7 days after any approved change, or after about 50 purchases on the consolidated ad set, whichever comes later.
 
-4. **Dearer to be seen (24.3%; +29.2%).**
-   - **Possible reasons:**
-     - (a) The 15+ copies bid against each other for the same audience.
-     - (b) A small or used-up audience.
-     - (c) More advertisers bidding in that season. The calendar dates are missing, so this can't be checked.
+3. **Buy rate fell 2.99% → 2.19%, which is 29% of the rise.**
+   - **What I saw:**
+     - The page offer does not match the ad: the ad says 61%, while the page shows 52%, "up to 55%" and a 55% pop-up.
+     - $29.99 needs an SMS sign-up and renews at $49.99.
+     - The guarantee covers the first order only.
+   - **Why this does not settle the drop:** this mismatch probably existed in both windows, so on its own it explains a low buy rate, not a falling one.
+   - **Possible reasons for the fall:**
+     - (a) A page or offer change mid-flight. The "birthday" price cut and the page reads on 30 Sept and 13 Oct suggest the page moves, but the change log is MISSING.
+     - (b) Later clicks come from less-ready people once the readiest have bought.
+     - (c) A checkout or SMS-step failure.
+   - **Account context (different dates and formats, rough only):** other "61% off" ads also convert weakly. P2 has a 2.45% click rate but only a 0.90% buy rate. S1 converts at 2.38%. This points to the 61% promise attracting clicks that the page does not honour.
    - **What to check:**
-     - Audience overlap among the copies.
-     - Reach over time.
-     - The cost per 1,000 views for other ads in the same weeks.
-   - **Proposal:** if overlap is high, a person can decide whether to combine the copies into fewer ad sets. That is a big edit and restarts learning. P1's 39 sales in 21 days, about 13 a week, is already below the ~50 a week Meta cites.
-   - **Revisit:** after one week of delivery following any merge.
+     - the change log for page, price and offer across days 1–42
+     - checkout step counts by window
+     - whether the SMS discount actually applies
+     - phone page speed
+   - **Proposal:** a person aligns the ad's number with the first price on the page (or the reverse), as a separate test. Do this only after finding 2 is resolved, so the cause stays readable.
+   - **Revisit:** 14 days after the change.
 
-5. **Should P1 be paused? This is the person's decision. Here is what to weigh.**
-   - **Platform return:** 1.28 in days 1–21 and 0.44 in days 22–42.
-   - **Why neither number settles it:**
-     - The revenue reflects a discounted first order. Renewals at $49.99 every 4 weeks are not included.
-     - Margin and refunds are missing.
-   - **Proposal:** set a target cost per sale that includes renewal value and margin. If the re-pulled days 22–42 (finding 1) still sit above that target, a person may approve pausing P1. Its $3,000 per 21 days could then move to another ad within the stated total, but that total is MISSING.
-   - **Revisit:** once the target and the re-pull are both in.
+4. **Should you pause it? There is not enough here to say.**
+   - **What I saw:** at $76.92 a sale and a 0.44 return on platform revenue, days 22–42 is P1's worst window. It is also worse than every ad in the export except R1 ($100.00). For reference: T1 $21.21, H1 $29.55, K1 $34.92, F1 and W1 $39.13, S1 $42.11, P2 $50.00. Those cover different windows and formats.
+   - **Why the data cannot settle it:**
+     - There is no target cost per sale and no margin.
+     - First-order revenue understates a subscription that renews at $49.99, and renewal rates are MISSING.
+     - The 39 may be under-counted (finding 1).
+   - **Proposal:** a person reduces or pauses P1 only if both of the following hold:
+     - the re-pulled cost per sale is still above your target cost per sale
+     - frequency confirms fatigue
+   - Any freed budget stays within the current total, for example moved to T1, the best cost per sale here at $21.21. That needs your approval.
+   - **Revisit:** at the re-pull and target-setting.
 
 **Not concluded**
-- Whether days 22–42 are final, given the possible reporting delay.
-- Which single cause drove the click rate drop. Frequency and placement data are absent.
-- Whether the 61% vs 52%/55% mismatch caused the buy rate drop or was present throughout.
-- Whether either period is profitable. Targets, margin, renewal value and refunds are missing.
-- Store-level results. Store orders and revenue were not supplied.
-- **Other ads:** comparisons don't hold because the dates, lengths and formats differ. For example, P2 is $50.00 a sale and S1 is $42.11 a sale, both over 30 days.
-- Why revenue per sale ($34.20) exceeds the $29.99 first box. It may be tax, shipping or 2-adult orders.
+- Whether P1 is profitable in either window: no target, margin, refunds or renewal data.
+- Whether fatigue or self-competition is the cause: frequency and overlap are MISSING.
+- Whether the page or offer changed mid-flight: no change log.
+- Why revenue per sale ($34.20) sits above the $29.99 first-order price. It could be one-time orders, 2-adult orders, tax or shipping, but the export does not say.
+- Store-side truth: platform revenue is shown here, and store revenue is MISSING.
 
 **Score**
 
-The target cost per sale is MISSING, so no period scores are given. This is the review score against the 6 checks.
+There is no target, so I cannot give a cost-per-sale score for either period. Scoring days 1–21 and days 22–42 requires target cost per sale ÷ actual cost per sale × 100 (MISSING: target).
+
+What follows is a **review-check score** of this analysis, not a performance score:
 
 | Check | Result |
 |---|---|
-| Rates recalculated, with currency, window and period stated | ✗ The attribution window is missing |
-| Counting checked before other reasons | ✓ Checked with the data available |
-| Chain split adds up | ✓ |
-| No promised outcomes | ✓ |
-| Nothing described as changed or paused | ✓ |
-| Practice numbers labelled | ✓ |
+| Rates recalculated, with currency, window and period stated | Fail: attribution window MISSING |
+| Counting checked first | Pass |
+| Chain split adds up | Pass |
+| No promised savings | Pass |
+| Nothing changed or paused | Pass |
+| Practice numbers labelled | Pass |
 
-5 passed of 6. 5 / 6 × 100 = **83 (review score, not a period score)**.
+Sum: 5 / 6 × 100 = **83**.
+
+**Gaps to fill later**
+- target cost per sale or return, and margin
+- attribution window and reporting delay
+- calendar dates
+- browser/server events and deduplication
+- reach and frequency
+- launch dates of the 15+ copies
+- change log
+- store orders and refunds
+- checkout step counts
+- phone page speed
+- renewal rate
 
 Proposals only. Nothing has been changed.
+
+Would you like to plan the consolidation and offer-match tests next with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer), bringing this report? You can also suggest your own next step.
 ```

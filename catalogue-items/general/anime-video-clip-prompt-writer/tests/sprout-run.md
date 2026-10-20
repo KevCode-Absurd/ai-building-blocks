@@ -1,29 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 1.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A careful, well-disciplined first turn: it flagged that the photos came as text, kept the script untouched, set facing, hand and handling rules, and built an original adult hero that will read in silhouette. The only slip is a wrong word count for the narration (11, not 9), which is minor but an error the owner would catch.
-
-## Fix
-
-In Stage 0, add: 'Quote the script lines only; do not state word counts or other derived figures unless you show the count line by line.'
+The run did exactly what the skill asks at this point: it read the script without changing it, showed its word and length arithmetic, admitted it could not see the photos, built a usable original adult avatar card and stopped for approval. The STAGE 4 heading is absent only because the storyboard stage has not been reached yet, and every gap (brand name, pack words, offer, brand file, photos) is marked MISSING rather than guessed.
 
 ## Judge list
 
-- Met: Stopped for your OK after the avatar card, the sheets and the storyboard
-  "**Stopped.** Please approve this card or tell me what to change." Sheets and storyboard not yet reached, correctly.
-- Met: Lock lines the same, word for word, in every prompt
-  No prompts written yet (stage 2+ not reached); nothing to contradict. Look line kept as given.
+- Met: Stopped for OK after avatar card, sheets and storyboard, or marked each (approve) when asked for all stages
+  "Stop: approval 1. Approve this avatar card or tell me what to change." User's "go ahead" answered the missing-inputs question, not a request for all stages.
+- Met: Lock lines the same word for word in every prompt
+  Not yet reached: run correctly halted at approval 1, before Stage 3 lock lines. Look line kept verbatim from input so far.
 - Met: Every shot card has two key poses, a hold, and a moves and holds line
-  Storyboard not reached this turn; stage 0 table correctly lists shots, lines, lengths without inventing shot cards.
+  Not yet reached: storyboard is Stage 4, after required stop. Stage 0 lists shots unchanged and a payoff pose.
 - Met: Hero faces the same way toward the product unless a turn is shown
-  "He faces **screen right** toward the product in every shot, unless a turn is shown on screen."
+  Card locks it: "He faces screen right toward the product unless a turn is shown on screen" and "The right hand holding the product in every shot".
 - Met: Dialogue matches the script exactly; no artist, studio, series or character named
-  "Same fight, every morning." / "Or skip the scoop." / "Rip. Tip. Enjoy." quoted exactly; no names used.
-
-## Invented
-
-- number: The narration is 9 words (The three lines total 11 words, not 9; a wrong derived count presented as fact.)
+  Quotes "Same fight, every morning." / "Or skip the scoop." / "Rip. Tip. Enjoy." verbatim; describes traits only, no names.
 
 ## What went in
 
@@ -48,83 +40,83 @@ Tool: 8-second clips, up to 3 reference images, takes an end frame.
 ## What came out
 
 ```text
-I can write every prompt here, but this chat has no video tool connected, so I can't make the pictures or clips myself.
+I can only write the prompts. I can't make pictures or video in this chat.
+
+Your photos came through as names only ([pouch front], [daily pack in a hand], [gummies in a palm]), so I can't see them. I'm taking the pouch's look from your description, and the product sheet's photo check is still to do.
 
 ## Stage 0: Script in
 
-**Shots, lines and lengths** (the script's words are unchanged; lengths and line placement are proposed)
+**Shots (as given, unchanged)**
+1. The hero glares at a towering tub of powder.
+2. A scoop of powder puffs into his face.
+3. He tears a daily pack across the top.
+4. Gummies tip into his palm.
+5. He heads out the door, pouch in hand.
 
-| Shot | Action | Narration (proposed placement) | Length (proposed) |
-|---|---|---|---|
-| 1 | Hero glares at a towering tub of powder | "Same fight, every morning." | 4 s |
-| 2 | A scoop of powder puffs into his face | (puff sound only) | 3 s |
-| 3 | He tears a daily pack across the top | "Or skip the scoop." | 4 s |
-| 4 | Gummies tip into his palm | "Rip. Tip. Enjoy." (runs over 4 into 5) | 4 s |
-| 5 | He heads out the door, pouch in hand (payoff) | | 5 s |
-| | | **Total** | **20 s** |
+**Narration (exact)**
+- "Same fight, every morning."
+- "Or skip the scoop."
+- "Rip. Tip. Enjoy."
 
-The narration is 9 words, which fits comfortably in 20 seconds. Please confirm which shot each line sits on.
+**Word counts, line by line**
+- Line 1: 4 words
+- Line 2: 4 words
+- Line 3: 3 words
 
-**Claims:** none in the narration. The only fact on screen is the printed "28 Daily Packs". I will not draw or add anything beyond that.
+**Lengths (proposed)**
+- Shots 1 to 5 run 4 s each: 4 + 4 + 4 + 4 + 4 = 20 s.
+- Each shot fits inside your 8-second clip limit.
 
-**Look line (proposed, kept as given):** thick even marker outline, flat colour with one shadow tone, full bright palette, flat graphic backgrounds.
+**Narration placement (proposed)**
+- Line 1 plays over shot 1.
+- Line 2 plays over the end of shot 2, after the puff.
+- "Rip." plays over shot 3, "Tip." over shot 4 and "Enjoy." over shot 5.
 
-**Payoff pose:** at the open door, the hero holds the pouch in his right hand at chest height, front to camera (yellow wordmark and bear face fully visible). Clear flat space sits at screen left for the offer line.
+**Claims in the script:** none beyond showing the product being opened and used. Nothing will be drawn beyond that.
 
-**Handling, locked:** the daily pack tears straight across the top only, then tips into the palm.
+**Handling:** the daily pack tears straight across the top only.
 
-**Missing**
-- `MISSING: real photos.` "[pouch front] [daily pack in a hand] [gummies in a palm]" came through as text, not images. Until the photos are attached, the product sheet can't be checked against the real pack. I need them before stage 3.
-- `MISSING: daily pack label words.` Until they're given, the daily pack faces sideways in every shot.
-- `MISSING: the exact letters of the pouch wordmark` (brand name), plus any other pouch text beyond "28 Daily Packs".
-- `MISSING: brand file, current offer for the end card, and the "never show" list.`
-- `MISSING: gummy colour and shape`, to be taken from the palm photo.
+**Look line (your proposal, kept):** thick, even marker outline; flat colour with one shadow tone; full bright palette; flat graphic-shape backgrounds.
 
-## Stage 1: Avatar card (approval 1)
+**Payoff pose:** at the open doorway, the hero turns three-quarters toward screen right. His right hand holds the pouch by its side edge at chest height, with the front (yellow wordmark and bear face) square to camera. Clear space sits to the pouch's left for the offer line.
 
-**Role:** Hero. Silent, carries every shot. A separate narrator speaks over him.
+## Stage 1: Avatar card
 
-**Age and look:** An adult man, early 30s. He reads as plainly adult, with:
-- adult proportions, about 7 heads tall
-- a squared jaw with a light stubble shadow
-- medium-sized, narrow eyes with heavy brows
-- a strong expressive brow line, built for the glare in shot 1
+**Role:** Hero. He is silent and carries every shot. The narrator is heard but never seen.
 
-**Silhouette:** A single tall upswept tuft of hair at the crown, leaning forward like a flame. He wears an oversized hoodie with a big hood bunched at the neck, and a black crossbody bag strap running from the left shoulder to the right hip. The tuft, hood bulk and strap diagonal read clearly when filled black at thumbnail size.
+**Age and look:** An original adult man, about 28 to 35. He has an average build, a slightly long face, heavy straight eyebrows built for a big glare, and warm brown skin.
 
-**Hair:** Short dark brown, cropped close at the sides. The crown tuft stays the same height and shape in every shot.
+**Silhouette:** One tall, forward-swept tuft of hair, like a wave crest. An oversized hoodie with the hood down. A messenger-bag strap runs from his left shoulder to his right hip.
 
-**Clothes (three colours):**
-- coral-red hoodie with white drawstrings
-- charcoal-grey tapered trousers
-- white trainers
+**Clothes (3 colours):**
+- Coral-red hoodie with white drawstrings
+- Navy joggers
+- White sneakers
 
-The coral sits away from the pouch's deep green and yellow, so the product stands out against him.
+The coral-red is chosen to stand apart from the deep green and yellow pouch.
 
 **Props:**
-- black crossbody bag (strap always left shoulder to right hip)
-- the powder tub and scoop are set props, not his
+- Mustard-yellow messenger bag (strap as above)
+- Towering powder tub with a scoop (shots 1 and 2 only)
+- Daily pack, gummies and pouch (shots 3 to 5)
 
-**Hands:** The product is always in his **right** hand.
-
-**Facing:** He faces **screen right** toward the product in every shot, unless a turn is shown on screen.
-
-**Voice:** None. He is silent and only reacts: glare, splutter, grin. The narrator is a designed voice, never cloned. Proposed: mid-low pitch, dry and deadpan, unhurried pace, neutral accent. Please confirm or replace.
+**Voice:**
+- Hero: none, he never speaks.
+- Narrator (proposed): an adult voice, mid-low pitch, dry and unhurried, with a neutral accent. It will be designed from this card and never cloned.
 
 **Must never change:**
-- tuft shape and height
-- coral hoodie with white drawstrings
-- strap direction
-- charcoal trousers and white trainers
-- right hand holds the product
-- adult face and proportions
-- no logos or text on his clothes
+- The hair tuft shape
+- The coral hoodie colour
+- The strap running left shoulder to right hip
+- The right hand holding the product in every shot
+- He faces screen right toward the product unless a turn is shown on screen
 
-**Never:**
-- a child or childlike proportions
-- a real person's face or voice
-- a known character
-- a copied costume
+**Gaps so far**
+- MISSING: product or brand name (the wordmark text)
+- MISSING: words printed on the daily pack. The daily pack faces sideways in every shot until these are given.
+- MISSING: current offer and terms for the end card
+- MISSING: brand file (approved claims, never-show list, exact colour codes)
+- MISSING: visible product photos. The photo check on the product sheet is still to do.
 
-**Stopped.** Please approve this card or tell me what to change. I'll write the stage 2 reference image prompts once it's approved, and I'll need the real photos and missing label words before stage 3.
+**Stop: approval 1.** Approve this avatar card or tell me what to change. I'll start the reference image prompts once you approve.
 ```

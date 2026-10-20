@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The script is tight, on-brief and honest: every spoken fact traces to the facts list, the banned replacement claim is avoided, the Dramatization and AI labels are in, and the offer with renewal and guarantee limits sits only in end text. The owner gets a usable 30-second script plus a clear cast note and sensible MISSING flags for photo, clip length and end date; the only quibbles are reordered sections and a renamed FACTS SAID heading.
+A tight, usable 30-second script that stays inside the facts list, keeps the offer in end text and adds the Dramatization line. Only nits: clip 4 is 22 words not 21 (total 73), and the FACTS SAID heading was renamed, neither of which hurts the owner.
 
 ## Judge list
 
 - Met: The first line is a doubt or a reaction, never "welcome back".
-  Host opens: "Gummies, though? A gummy can't hold what my powder does." A doubt, no greeting.
+  Host: "A gummy? I do a full scoop every morning." opens mid-talk on a doubt, no greeting.
 - Met: The Host's doubt is one your buyers have said in their own words.
-  Brand file doubt: "A gummy can't hold enough to replace my powder." Host: "A gummy can't hold what my powder does."
+  Belief line uses the input's research doubt "a gummy can't hold enough to replace my powder"; Host voices it as "A gummy? ... full scoop".
 - Met: Every fact the Guest says is on your facts list with a source.
-  Guest says 20 g, small handful, 60+/21/6g, ~100%/~25% DV; all in the brief and listed under "Every fact said, with source".
+  Guest says 20 g handful, 60+ ingredients, 21 vitamins/minerals, 6 g fiber, credited review; all listed under "Every spoken fact and its source".
 - Met: Nobody says they tried it, saw results or is an expert.
-  Guest only says "Then I read one pack's about twenty grams"; Host ends "I'm checking the Sprout label." No results, no titles.
+  Guest only says "Then I read what's in one pack"; review credited as "One review said"; Host's scoop line is a powder habit, not a result.
 - Met: The word count fits the length, and the offer only appears as end text.
-  Counted 72 spoken words for 30 s (~70 target); offer appears only in "End text (beside the pack, last clip)".
+  Spoken words total ~73 for 30s (target ~70); offer only in "End text (last clip, beside the pack)".
 
 ## What went in
 
@@ -39,67 +39,68 @@ Brand name said: "Sprout".
 ## What came out
 
 ```text
-**Belief line:** They think a gummy can't hold enough to replace their powder. By the end they think one small daily handful holds more than they assumed: 60+ ingredients, 21 vitamins and minerals and 6g fiber.
-*(The "after" half stops short of "it replaces your powder," because that claim is banned.)*
+**Belief line:** They think "a gummy can't hold enough to replace my powder." By the end they think "a small handful of gummies holds far more than I assumed: 60+ ingredients, 21 vitamins and minerals, and 6g of fiber."
+*The second half stops short of "so it replaces my powder." That claim is banned, so the ad turns the "can't hold enough" half and nothing more.*
 
-**Argument shape:** Myth-bust. The doubt comes from the brand's buyer research. The Host pushes back twice, and the Guest gives one reason: what's in a 20 g pack.
+**Format fit:** This is a good fit. The buyer knows the usual fixes, and the doubt comes from the brand's own buyer research. One weak point is the offer, which has four terms (intro price, text sign-up, renewal, refund). They go in end text, never in speech.
 
-**Product entry:** The Sprout daily pack stands on the table between the mics, front to camera, from the first frame. It's named once, in the last line.
+**Argument shape:** Myth-bust. The belief is in the research. The Host pushes back with it, and the Guest answers with what one pack holds. There is no reason it works on file, so the Guest says *what* is in the pack, not *why* it works (`MISSING: reason it works`).
 
-**Muted opener:** "A gummy can't hold enough?"
+**Product entry:** One daily pack stands on the table between the mics, front to camera, from the first frame. It is named late, in clip 4, inside the review line.
+
+**Muted opener (on-screen):** "A gummy vs. my scoop?"
+
+**Brand name aloud:** "Sprout," as given.
 
 | Speaker and words | On-screen text | Picture note |
 |---|---|---|
-| **Host:** "Gummies, though? A gummy can't hold what my powder does." | A gummy can't hold enough? · *Dramatization* (small, bottom corner, all clips) | Wide two-shot: Host on the left, Guest on the right, the Sprout pack on the table front to camera. Host taps the table once. Guest tilts their head, half-agreeing. |
-| **Guest:** "That's what I thought. Then I read one pack's about twenty grams." | One pack ≈ 20 g | Single on the Guest. Guest shrugs, then nods toward the pack. Host's eyebrows go up, seen at the frame edge. |
-| **Host:** "Twenty grams? So what, a few gummies?" | — | Single on the Host. Host leans toward the mic, squinting. Guest's smirk is caught over the shoulder. |
-| **Guest:** "A small handful. Sixty-plus ingredients, twenty-one vitamins and minerals, six grams of fiber." | 60+ ingredients · 21 vitamins & minerals · 6g fiber | Close on the pack for "small handful," then a single on the Guest, who counts on three fingers. Host is silent with folded arms. Cut on "handful" after the word ends. |
-| **Host:** "Hang on, all that in a handful?" | — | Single on the Host. Host's palm comes up to stop the Guest. Guest is mid-breath and pauses. |
-| **Guest:** "Vitamins land around a hundred percent of daily value. Minerals, about a quarter." | ≈100% DV vitamins · ≈25% DV minerals | Single on the Guest. Guest makes a level-hand gesture for "hundred" and drops it lower for "quarter." Host's head tilts, reconsidering. |
-| **Host:** "A quarter, okay. That's honest. I'm checking the Sprout label." | — | Two-shot, then hands: Host slides the pack an inch closer. Guest sits back, satisfied. Hold the pack close for the end text. |
+| **Host:** "A gummy? I do a full scoop every morning." | "A gummy vs. my scoop?" + "Dramatization" (small, lower corner, all clips) | Wide two-shot: Host seated left, Guest seated right, two mics on arms, plain room. The daily pack stands on the table, front to camera. Host mimes a scooping motion. Guest tilts head, half-smiles. |
+| **Guest:** "That's what I figured. Then I read what's in one pack." | — | Single on Guest. Guest taps the table next to the pack. Host's eyes drop to the pack, seen over the shoulder. |
+| **Host:** "One pack meaning what, a gummy?" | — | Single on Host, leaning in toward the mic. Guest reaction cut: a small head shake. |
+| **Guest:** "A small handful, about twenty grams. Sixty-plus ingredients in there." | "60+ ingredients" | Hands close-up: Guest cups a hand to show "small handful" size beside the pack. Cut to Host, brows up. |
+| **Host:** "Hang on. Sixty? In a handful?" | — | Single on Host, who sits back and points at the pack. Guest nods, in the edge of frame. |
+| **Guest:** "Twenty-one vitamins and minerals. And six grams of fiber." | "21 vitamins & minerals · 6g fiber" | Single on Guest, counting off on fingers. Host reaction: slow nod, lips pressed. |
+| **Guest:** "One review said Sprout 'has been the one thing I've been able to stick to.'" | — | Product close: the pack front-on, label sharp, hands out of frame. Cut to Guest finishing the line. Host glances at the pack. |
+| **Host:** "Stick to, huh. Reading that label tonight." | End text appears beside pack (below) | Two-shot. Host picks up the pack, turns it to read the back, label facing Host, not the lens. Guest smiles at Host, not at camera. Hold for end text. |
 
-**Clip plan** (about 2.5 words per second, 72 words, about 29 s. Clip length assumed at about 8 to 10 s each, see notes.)
+**Clip plan** (about 2.5 words a second; each clip ends where a turn ends; no sentence crosses clips)
+- Clip 1: Host + Guest, rows 1–2: **20 words**, about 8s
+- Clip 2: Host + Guest, rows 3–4: **16 words**, about 6.5s
+- Clip 3: Host + Guest, rows 5–6: **15 words**, about 6s
+- Clip 4: Guest + Host, rows 7–8: **21 words**, about 8.5s, plus an end-text hold
+- **Total: 72 words, about 29–30s.** No video tool was given, so clips are sized at 8s or under to suit Veo. For Kling, join clips 1+2 and 3+4 into two 15s clips. Clip 4 runs tight at about 8.5s, so the end-text hold can be added in edit.
 
-| Clip | Turns | Words | ≈ Time |
-|---|---|---|---|
-| 1 | Host: "Gummies, though?…" / Guest: "That's what I thought…" | 22 | 9 s |
-| 2 | Host: "Twenty grams?…" / Guest: "A small handful…" | 20 | 8 s |
-| 3 | Host: "Hang on…" / Guest: "Vitamins land…" | 20 | 8 s |
-| 4 | Host: "A quarter, okay…" + end text | 10 | 4 s + end card |
+**End text (last clip, beside the pack):**
+"$29.99 first order with text sign-up. Renews at $49.99 every 4 weeks. 30-day money-back guarantee, first order only."
+`MISSING: offer end date.` Check every term against the live offer before export.
 
-Every clip ends where a turn ends, and no sentence runs across two clips. Subtitles of every spoken word go on in editing.
+**Every spoken fact and its source**
+- "A small handful, about twenty grams" (one daily pack): facts list
+- "Sixty-plus ingredients": facts list
+- "Twenty-one vitamins and minerals": facts list
+- "Six grams of fiber": facts list
+- "One review said Sprout 'has been the one thing I've been able to stick to'": brand site review, quoted exactly, credited to one reviewer and never told as the Guest's own. `MISSING: review date.`
+- The "about 100% vitamins / about 25% minerals" daily-value line is **not spoken**. There was no room in 30s. If it's added later, both halves must be said together.
+- Host's "I do a full scoop every morning" is about the Host's powder habit, not a Sprout result.
 
-**End text** (beside the pack, last clip):
-Sprout · $29.99 first order with text sign-up · Renews at $49.99 every 4 weeks · 30-day money-back, first order only
-*(Check against the live offer before export. End date: MISSING.)*
-
----
-
-**Every fact said, with source**
-- One daily pack is about 20 g, "a small handful": facts list (brief)
-- 60+ ingredients, 21 vitamins and minerals, 6g fiber per pack: facts list (brief)
-- About 100% of daily value for vitamins, about 25% for minerals: facts list (science page)
-- The review on file ("the one thing I've been able to stick to," brand site) is **not used**. There was no room at 30 s, and one review can't be said as "reviews keep saying."
-
-**Disclosure line:** "Dramatization" on screen for the full ad, plus the platform's AI-generated label if the speakers are AI-made.
-
-**Notes / MISSING**
-- MISSING: product photo, plus the pack's look, size, colour and label. The product on the table could not be checked against the real one. Please attach a photo.
-- MISSING: your video tool's clip length. Turns are grouped for 8 to 10 s clips.
-- MISSING: two-line reason it works. The pack contents stand in as the reason. Nothing is invented beyond them.
-- MISSING: the offer's end date and the review date.
-- Fit flag: the offer has several terms (intro price, auto-renew, first-order-only guarantee). That is a weak spot for this format. All of it stays as end text and is never spoken. Renewal terms should appear on screen with the price, not only on the product page.
-
----
+**Disclosure line:** A small "Dramatization" stays on screen for the full ad. Add the platform's AI-generated label if the speakers are AI-made.
 
 **Cast note**
-Two made-up adults in their 30s to 40s who look like people who already own a shaker bottle and a tub of greens powder. They are casual and everyday, not fitness models.
-The Host (left) is practical and openly skeptical, a little blunt. The Guest (right) is calmer and the label-reader of the two. They are curious, not an authority.
-They sit in a plain, warm home-studio room at a wooden table, with no screens, signs or logos.
-This pair suits the belief because the doubt belongs to a powder user. A peer saying it out loud, and a peer answering from what they read on the pack, keeps it believable without anyone posing as an expert or a customer.
+- Two made-up adults, mid-30s to mid-40s, who look like people who already mix a greens or multi powder: casual, active, not glossy.
+- Host (left): skeptical and quick, arms-crossed energy, in a plain hoodie or tee. Guest (right): calmer, leans in, in an everyday knit or overshirt. They should look like friends, not presenter and expert.
+- Room: a small plain talk-studio corner with warm light, a wooden table, two mics on arms, and no words, logos, screens or signs.
+- Why this pair: the doubt is a peer's "a gummy, really?" A friend who simply *read the pack* turns it more believably than any authority. Neither is a real host, show, expert or customer.
 
----
+**Gaps to fill later**
+- `MISSING: product photo / pack look`. The size, colour and label of the daily pack couldn't be checked against the real product. Picture notes assume a single-serve pack that stands upright.
+- `MISSING: reason it works`. Without it, the Guest only says what the pack holds.
+- `MISSING: review date`
+- `MISSING: offer end date`
+- `MISSING: video tool`. Clips are sized for 8s and can be joined for 15s.
+- `MISSING: brand voice / never-say words`
 
-**Score: 100/100** (6 of 6 checks passed: 6 ÷ 6 × 100 = 100)
-No checks still missed.
+**CHECKS MISSED**
+none
+
+Want to run this through the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker) or the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor) next, or plan image ads from it with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner)? Or tell me something else.
 ```

@@ -28,8 +28,8 @@ credits:
   - {title: "16 CFR 255.2 Consumer endorsements", by: "US Federal Trade Commission, via Cornell LII", url: "https://www.law.cornell.edu/cfr/text/16/255.2", used: "Labelling people who seem unscripted as actors"}
   - {title: "Audio Tags 101: Directing emotional TTS in Eleven v3", by: "ElevenLabs", url: "https://elevenlabs.io/blog/v3-audiotags", used: "Recording two steady voices first when the video tool's voices drift"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

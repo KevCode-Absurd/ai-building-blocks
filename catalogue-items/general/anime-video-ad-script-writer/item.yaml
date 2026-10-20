@@ -24,7 +24,7 @@ credits:
   - {title: "Limited animation", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Limited_animation", used: "Moving only a few parts per shot, with holds"}
   - {title: "Manga iconography", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Manga_iconography", used: "Feelings drawn as shared symbols, such as the sweat drop"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

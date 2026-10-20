@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A careful, usable 30-second script that sticks to the label fact (6 g prebiotic fiber) and the approved "supports digestion and gut health" claim, cuts every risky line by name, and flags brand approval, the FDA line and the Low Sugar choice. The only weak spot is the Chain 3 narration ("fiber gut bacteria eat") which reads awkwardly aloud, though it fits its time.
+A tight, honest 30-second script that keeps to the approved "supports" claim, uses only the 6 g fiber figure from the label, and flags the fiber-blend mechanism for the brand to confirm before pictures are made. The owner gets a usable storyboard brief, a correctly conditioned offer card, and a clear list of what is still missing.
 
 ## Judge list
 
 - Met: Every link in the chain is marked sourced or common knowledge, never assumed.
-  "Sourced (label: 6 g prebiotic fiber, branded blend; ingredients panel: inulin)"; other links marked "Common knowledge (school biology...)".
+  Chain table marks each: "Common knowledge (biology textbook)", "Sourced (label / science page: 6 g prebiotic fiber...)", "approved claim".
 - Met: Your product's name first appears at its own link, not in the opening.
-  Opening: "A handful of green gummies. Does a gummy even do anything?"; first name at Chain 3: "Sprout's prebiotic fiber...".
+  Opening is "A handful of gummies. But does a gummy even do anything?"; Sprout first said at Chain 3: "Sprout's daily pack holds 6 grams..."
 - Met: Every part keeps the same name, colour and shape in every line.
-  "yellow fiber ribbons", "plum gut bacteria", "cream food beads", "plain grey gut tube" used consistently across all pictures.
+  Key fixes kelly-green ribbons, plum-purple beads, sunflower-yellow cubes, cream tube; every picture note repeats those exact colours and shapes.
 - Met: No picture shows a body part, damage or result your facts don't name.
-  "The body appears only as the plain gut tube... The tube stays exactly the same colour." No belly, no before/after.
+  "The gut is a plain cream tube. No real anatomy, no bloated belly, no before and after"; beads "don't grow, glow or multiply".
 - Met: Each line fits its seconds when you read it aloud at a calm pace.
-  Chain 4: 10 words in 4 s; Surface: 11 words in 5 s; Dive: 7 words in 3 s. All within ~2.5 words/s.
+  Word counts 10/4s, 10/4s, 10/4s, 11/5s, 12/5s, 11/5s, 7/3s; "71 words in 30 seconds, about 2.4 words a second".
 
 ## What went in
 
@@ -48,125 +48,129 @@ Settings: video, 30 seconds.
 
 | Test | Result | Reason |
 |---|---|---|
-| Hidden | **Pass** | Fiber moving through the gut and gut bacteria feeding on it happen inside the body and at microscopic size. No camera can film this, and the result is not something a viewer can watch happen. |
-| True | **Pass** | The 6 g prebiotic fiber is on the label. Every other link is school biology: gut bacteria live in the large intestine, most food is absorbed in the small intestine, and our own body can't break down fiber. The last line uses the approved claim "Supports digestion and gut health". |
-| Teaches | **Pass** | After one watch, a viewer could sketch where food goes, where fiber goes and who eats it. Take out the name "Sprout" and it still works as a short explainer about fiber and gut bacteria. |
+| Hidden | Pass | Fiber travelling through the gut and gut bacteria feeding on it can't be filmed. A filmed demo could only show someone eating gummies. |
+| True | Pass | Each link rests on the label (6 g prebiotic fiber, inulin listed), the approved claim ("Supports digestion and gut health") or school-level biology (most food is absorbed before the large intestine; fiber isn't digested by us; gut bacteria feed on it). |
+| Teaches | Pass | After one watch, a viewer could sketch the path: food absorbed early, fiber travels on, bacteria at the end feed on it. With the brand name removed, it is still a short lesson on fiber and gut bacteria. |
 
 ## 2. Chain
 
-**Chosen chain: prebiotic fiber reaches the gut bacteria** (tiny scale)
+**Kept: the fiber chain.** It runs in the gut, which is where the gut-fix seeker's problem lives.
 
 | # | Link | Role | Mark |
 |---|---|---|---|
-| 1 | Gut bacteria live in your large intestine and feed on what reaches them. | Setup | Common knowledge (school biology: gut bacteria in the large intestine) |
-| 2 | Most food is broken down and absorbed higher up, in the small intestine, before it gets there. | **Snag** | Common knowledge (school biology: most absorption happens in the small intestine) |
-| 3 | The pack contains 6 g of prebiotic fiber, with inulin on the ingredients list. Your body can't break this fiber down, so it travels down whole. | **Product acts** | Sourced (label: 6 g prebiotic fiber, branded blend; ingredients panel: inulin). The "can't break it down" part is common knowledge, since fiber is by definition not digested by our own body. |
-| 4 | The gut bacteria feed on it, which supports digestion and gut health. | Result | Common knowledge (bacteria break down fiber) plus the approved claim "Supports digestion and gut health" |
+| 1 | Your gut bacteria live far down, in your large intestine. | Setting | Common knowledge (biology textbook) |
+| 2 | Your body absorbs most food before it gets that far, so the bacteria only get what passes through. | **Snag** | Common knowledge (absorption happens mostly in the small intestine) |
+| 3 | A Sprout daily pack contains 6 g prebiotic fiber, including inulin. Your body doesn't digest fiber, so it travels on to them. | **Product acts** | Sourced (label / science page: 6 g prebiotic fiber, branded blend, inulin listed). "Passes undigested" is common knowledge for fiber. |
+| 4 | The gut bacteria feed on that fiber. That is how it supports digestion and gut health. | Result | Feeding: common knowledge. Verb and claim: approved claim, "Supports digestion and gut health". |
+
+The chain stops at link 4. Nothing after "supports" has support: no bloat relief, no regularity, no timeline.
 
 **Dropped chains**
-
-- **Nutrient absorption.** The gummy is eaten, the vitamins pass into the blood, and the 2025 study (120 adults) found blood vitamin C up 40.1% and folate up 20.5%. This chain is sourced and solid. It was dropped because its snag (getting vitamins into the blood) is not one the gut-fix seeker lives with. It suits the powder quitter or the price doubter better and could be its own film.
-- **"Gummies break down almost immediately, fast bioavailability."** Cut. It is unsupported (risky list, no source).
-- **"61% of Americans experience weekly digestive issues."** Cut as a snag. The footnote only says "Source", so it has no real source.
+- **Absorption chain** (gummy breaks down, vitamins C and folate enter the blood; 2025 study, 120 adults, +40.1% / +20.5%). It is sourced and answers "does it do anything?" well. But it is a second process, and its snag isn't one the gut-fix seeker lives with. It is the better base for a separate film aimed at the price doubter or the quitter.
+- **Habit chain** (people quit chalky powders, gummies get eaten). Not hidden, so it fails the "Hidden" test. A filmed demo suits it better.
 
 ## 3. Parts key and honesty notes
 
 **Parts key** (fixed for the whole film)
 
-| Part (spoken name) | Colour | Shape |
-|---|---|---|
-| **pack** (daily pack) | Real deep green, modelled from product photos | Small flat sachet, always torn straight across the top |
-| **gummies** | Opaque deep green #00582D, soft matte | Small bears, real shape |
-| **gut** | Warm translucent grey | One plain smooth tube: narrow upper section, wider lower section. Not anatomical. |
-| **food** | Cream #FFF7DF | Small round beads |
-| **prebiotic fiber** | Sunflower yellow #FFCC2E | Long soft ribbons |
-| **gut bacteria** | Plum #581E5A | Soft rounded capsules, calm and friendly, no faces |
+| Part | Name said / on screen | Colour | Shape |
+|---|---|---|---|
+| Sprout gummy | "gummy" | Deep forest green #00582D | Small soft matte bear, modelled from real product photos |
+| Prebiotic fiber | "prebiotic fiber", then "fiber". First use is explained in the same line: "food for them". | Kelly green #007E40 | Soft flat ribbons |
+| Gut bacteria | "gut bacteria" | Plum purple #581E5A | Soft round beads, slightly squishy |
+| Everyday food | "food" | Sunflower yellow #FFCC2E | Small rounded cubes |
+| The gut | "large intestine" | Warm cream #FFF7DF, deep forest #002C17 outline | Plain smooth tube, a simple model, not anatomical |
 
-- **"Prebiotic"** is explained in the same line the first time it is said: "fiber gut bacteria eat". After that, only "prebiotic fiber" is used.
-- These names match the product page wording ("prebiotic fiber", "pack", "digestion and gut health").
+**Honesty notes**
 
-**Honesty rules**
+**Verbs**
+- Use only "contains", "holds", "supports" (from the approved claim) and plain verbs for what fiber and bacteria do ("travels", "feed").
+- Never "fix", "relieve", "cure" or "heal". The brand's "Fix the Hot Girl Tummy" is not used.
 
-- **Verbs:** "feed", "travels", and the approved "supports". Never fix, relieve, treat or "flat tummy".
-- **Pictures are claims.**
-  - The gut tube never changes colour, never glows and never "heals".
-  - There is no bloated or flat belly, no hand on stomach and no before/after.
-  - The body appears only as the plain gut tube, because the claim names digestion and the gut.
-  - No clinic, no lab coat, no illness imagery.
-- **Numbers:** only "6 g", from the label. The study figures are left out because they belong to the other chain.
-- **Claim rules: FLAG.** This is a supplement making a gut claim. **The brand must read and approve this script before any picture is made.** The brand should also decide whether the ad carries the standard FDA line. The site footer has it; the ads currently don't.
-- **Product shown:** use the Low Sugar pouch (deep green, no white burst). Sugar-Free upsets some stomachs, and this buyer is gut-sensitive.
+**Pictures**
+- The gut is a plain cream tube. No real anatomy, no bloated belly, no before and after, no clinic.
+- Bacteria cluster and nibble the ribbons. They do not multiply in a burst, glow "healthy" or clear away anything.
+
+**Numbers**
+- Only "6 g", from the label.
+- The study is not quoted, because it belongs to the dropped chain.
+
+**Claim rules**
+- This is a dietary supplement making a gut claim. **The brand must read this script before any picture is made.**
+- The site carries the standard FDA line in its footer. Its ads don't. Add that line to the end card if the brand's review asks for it.
+
+**Offer**
+- On-screen text only, never spoken.
+- The $29.99 needs its condition stated: it requires the text-message sign-up, and the renewal price must sit next to it.
 
 ## 4. Script (30 seconds)
 
 | Part | Seconds | Narration | Picture | On-screen text |
 |---|---|---|---|---|
-| **Surface** | 0–5 | A handful of green gummies. Does a gummy even do anything? (11 words) | **Size:** human, sunny cream kitchen, morning. **In frame:** a stylised 3D adult woman in a casual jumper, calm, holding a daily pack with its print turned away from camera. **Movement:** she tears the pack straight across the top and green gummies pour into her palm. | Does it work? |
-| **Dive** | 5–8 | Now smaller than a grain of salt. (7 words) | **Size:** human down to microscopic in one continuous move. **In frame:** one green gummy. **Movement:** the camera follows that gummy as the kitchen falls away, and it drops into the top of the plain grey gut tube. The woman's body is never shown inside. | Smaller than salt |
-| **Chain 1** | 8–12 | Your gut bacteria live here, feeding on what arrives. (9 words) | **Size:** microscopic, wide lower section of the grey tube. **In frame:** plum gut bacteria. **Movement:** they drift slowly, waiting. | Gut bacteria |
-| **Chain 2 (snag)** | 12–16 | Most food is absorbed higher up, before it gets here. (10 words) | **Size:** microscopic, narrow upper section. **In frame:** cream food beads. **Movement:** the beads sink into the tube wall and vanish into it. Only a few drift on down. | Absorbed higher up |
-| **Chain 3 (product)** | 16–21 | Sprout's prebiotic fiber, fiber gut bacteria eat, travels down unbroken. (10 words) | **Size:** microscopic, upper section. **In frame:** the green gummy softens and releases yellow fiber ribbons. **Movement:** the ribbons glide past the wall whole, untouched, heading down. | Sprout / 6 g prebiotic fiber |
-| **Chain 4** | 21–25 | They feed on it, which supports digestion and gut health. (10 words) | **Size:** microscopic, lower section. **In frame:** yellow ribbons and plum gut bacteria. **Movement:** the bacteria gather on the ribbons and nibble, and the ribbons slowly shorten. The tube stays exactly the same colour. | Supports digestion |
-| **Surface again** | 25–30 | One pack a day. No shaker, no chalk. Just tear and eat. (12 words) | **Size:** human, same kitchen. **In frame:** the same woman, and the closed deep-green pouch on the counter with its resealable top shut. **Movement:** she tears the next pack straight across the top, eats, grabs her bag and heads out easy. | $29.99 first order / Via text sign-up / Renews $49.99/4 weeks |
+| Surface | 0–4 | "A handful of gummies. But does a gummy even do anything?" (10 words) | **Human size.** Sunny kitchen counter, cream background. A stylised, fully clothed adult woman, calm, morning light. She tears a daily pack straight across its top edge and pours green bears into her palm. The pack's printed face stays turned away from camera. **Moves:** gummies pouring. | Does it work? |
+| Dive | 4–8 | "Follow one down. Now smaller than a grain of salt." (10 words) | **One continuous move**, human size down to tiny. The camera rides one deep-green bear as the world grows huge around it, into the plain cream tube. The bear softens and comes apart into kelly-green ribbons, which drift out of frame ahead. **Moves:** camera shrinking along with the bear. | Smaller than salt |
+| Chain 1 | 8–12 | "Down here, in your large intestine, live your gut bacteria." (10 words) | **Tiny.** Inside the cream tube. Plum-purple beads rest along the wall, gently bobbing. Nothing else in frame. **Moves:** beads bobbing. | Gut bacteria |
+| Chain 2: snag | 12–17 | "Your body takes in most food before it gets this far." (11 words) | **Tiny**, pull back along the tube. Upstream, sunflower-yellow cubes sink into the cream wall one by one. Only a few reach the purple beads, which stay idle. **Moves:** yellow cubes sinking into the wall. | Mostly absorbed |
+| Chain 3: product | 17–22 | "Sprout's daily pack holds 6 grams of prebiotic fiber, food for them." (12 words) | **Tiny.** The kelly-green ribbons from the dive slide along the tube past the wall, untouched, while yellow cubes keep sinking around them. **Moves:** ribbons gliding through. | 6 g prebiotic fiber |
+| Chain 4 | 22–27 | "It arrives undigested. They feed on it. That supports gut health." (11 words) | **Tiny.** The ribbons reach the purple beads. The beads cluster on them and nibble, and the ribbons slowly shorten. The beads don't grow, glow or multiply. **Moves:** ribbons shortening. | Supports gut health |
+| Surface again | 27–30 | "No chalky shaker. Just rip, tip, enjoy." (7 words) | **Human size.** Same counter, same woman, same light. She tips the gummies into her mouth and heads for the door. The Sprout pouch now stands upright on the counter, front facing camera, glossy deep green. **Moves:** her heading out. | End card, in editing, over the last shot: "$29.99 first order" / "with text sign-up" / "Renews $49.99 every 4 weeks" |
 
-- **No words or logos are rendered inside the 3D world.** The "Sprout" wordmark is added in editing, first at Chain 3 (16 s), so the name first appears at the product's own link.
-- **The offer is on-screen text only, never spoken.**
+Total: 71 words in 30 seconds, about 2.4 words a second.
 
-**Sketch check** (the four boxes a viewer could draw)
+**Sketch check** (four boxes a viewer could draw)
 
-`[Gut bacteria live in your large intestine]` → `[Most food is absorbed higher up]` → `[Prebiotic fiber travels down unbroken]` → `[Bacteria feed on it]`
+**[Bacteria live at the end of your gut]** → **[Most food is absorbed before it gets there]** → **[Sprout's 6 g fiber travels on, undigested]** → **[Bacteria feed on it = supports gut health]**
 
 ## 5. Notes
 
 **Inferred links for the brand to confirm**
+- **Link 3:** that the branded fiber blend (inulin listed) is non-digestible and reaches the large intestine. This is common knowledge for prebiotic fiber in general, but the blend's makeup was not captured.
+- **Link 4:** that the brand's "Supports digestion and gut health" claim rests on this fiber. The film ties the claim to the fiber, so the substantiation must match.
 
-- That inulin is part of the 6 g branded prebiotic fiber blend. The file lists the blend and inulin separately.
-- That the whole blend passes the small intestine undigested and is fermented by gut bacteria in the large intestine.
-- **MISSING:** the fiber blend's name and spec sheet, or supplier data, to back link 3 beyond the word "prebiotic".
-- The gummy releasing fiber ribbons is a visual stylisation. Pectin is itself a fiber, but the picture is not literal.
-- Whether "which supports digestion and gut health" may be tied directly to the bacteria feeding, or should sit as a stand-alone claim line.
+**MISSING**
+- MISSING: the branded fiber blend's components, and the inulin amount.
+- MISSING: daily pack artwork. It is needed to model the pack in the surface shot.
+- MISSING: grams of sugar per pack. It is not used here, but buyers ask.
+- MISSING: which version (Low Sugar or Sugar-Free) the $29.99 offer covers. The file shows the $29.99 starting price for Low Sugar only. Keep the film on Low Sugar, since Sugar-Free upsets some stomachs.
 
-**Claims left out on purpose**
+**Claims left out**
+- "61% of Americans experience weekly digestive issues": the source is unnamed.
+- "Fix the Hot Girl Tummy": a treatment verb.
+- Study numbers: they belong to the dropped chain.
+- "67% of surveyed users ... better, more regular digestion": this is survey proof, not a process link. It could go on a static ad, with "of surveyed users" and the 3,000+ base.
+- Star ratings: the counts conflict between sources.
+- "Backed by 35,000+ studies".
+- The 30-day guarantee: it applies to the first order only and needs its condition if used.
+- Any cancel promise.
 
-- Study numbers (they belong to the other chain).
-- "61% of Americans…" (no real source).
-- "Fix the Hot Girl Tummy".
-- Bloating or regularity results and survey percentages ("67% … more regular digestion").
-- Star ratings.
-- 30/60/90-day timelines.
-- "Breaks down almost immediately".
-- Energy and immunity claims.
-- Any easy-cancel promise.
-
-**Offer**
-
-- The $29.99 price requires the text-message sign-up discount for new customers.
-- Keep "Renews $49.99/4 weeks" on screen, so it doesn't feed the "subscription trap" doubt.
+**Offer card**
+- The end card runs past the 1-to-3-word rule because the $29.99 can't appear without its condition and renewal price.
+- Add the site's small print if the brand's review asks for it: "Offer assumes customer has received and uses promotional SMS discount reserved for new customers only."
 
 ## 6. Cast note
 
 **What carries it**
-
-- The **yellow prebiotic fiber ribbon** is the avatar. It is the product's active part, and the film is its journey. No person is needed inside.
-- A **stylised 3D adult woman** (casual, calm, aged about 30 to 45) appears only in the two kitchen surface shots, because the everyday moment is a person tearing a pack.
+- The kelly-green fiber ribbon is the avatar. It is the product's active part and appears in every chain shot.
+- One stylised, fully clothed adult woman appears only in the two human-size kitchen shots. She shows the real use: tear straight across the top, pour into the palm. The gut-fix seeker is mostly women.
+- The gummy and pouch are modelled from real product photos. The big pouch is shown closed and never torn. No tie-in characters or partner marks.
 
 **Voice**
+- One warm, calm adult narrator, friendly and a little playful, like a funny friend explaining something cool.
+- Unhurried, present tense, talking to "you". Not a lab-coat or doctor tone.
 
-- One calm, warm narrator with a light wry edge, like a friend explaining over coffee.
-- Unhurried, present tense, talking to "you".
-- Not a lab-coat tone, and not modelled on any creator or channel.
+**What never changes**
+- Fiber: kelly-green ribbons, "fiber".
+- Gut bacteria: plum-purple beads, "gut bacteria".
+- Food: sunflower-yellow cubes, "food".
+- The gut: plain cream tube.
+- The gummy: deep-green matte bear.
+- The kitchen, the woman and the light are identical in the first and last shots.
 
-**Never changes**
+## 7. CHECKS MISSED
 
-- Fiber: yellow ribbons, "prebiotic fiber".
-- Gut bacteria: plum rounded capsules, "gut bacteria".
-- Food: cream beads, "food".
-- Gut: warm grey plain tube, "gut", with no colour shift ever.
-- Daily pack: real deep green, torn only straight across the top.
-- Pouch: shown only closed, at its resealable top.
-- The same woman and kitchen in both surface shots.
+none
 
-## 7. Score
+---
 
-**Score: 100/100 (6 of 6 checks)**
+Next step: check it before it goes live with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), time the lines with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor), or plan image ads from it with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner)? Or type your own.
 ```

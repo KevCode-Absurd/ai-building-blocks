@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A clean, usable plan: the Calm show job fits the comparing-fixes buyer, the headline is short, the crowd is blurred and explicitly not proof, and the offer is shown with its renewal term. Hex codes are clearly marked as stand-ins and every unknown (pack label, photos, end date) is a MISSING line; the only small gap is the prompt not stating the daily pack is torn straight across its top edge.
+A clean, usable clay-town ad plan that sticks to the approved claim and the honest offer terms, picks a sensible Calm moment for a buyer comparing fixes, and keeps the unknown daily-pack label turned away. It correctly admits it couldn't see the photos, marks every gap as MISSING, and gives the owner a complete prompt plus a clear edit step to finish it.
 
 ## Judge list
 
 - Met: Shown for 2 seconds, someone can say what the product is and the one idea.
-  Headline "Skip the shaker queue."; pouch "front facing camera, sharp"; lead tipping a pack while the queue rinses behind.
+  Headline "Skip the shaker sink queue." on a plain cream wall; pouch "lower right, front label to camera, in focus".
 - Met: The headline has 7 words or fewer, with at most 3 other things to read.
-  "Headline (4 words): 'Skip the shaker queue.'" plus exactly three more: small line, offer, button.
+  "Headline (5 words): Skip the shaker sink queue." plus Line 1 "Rip. Tip. Enjoy." and Line 2 (offer): two more.
 - Met: One lead stands out sharp; the crowd is soft and never used as proof.
-  "the lead and the pouch are sharp, and the sink queue is softly blurred"; "It sets the scene and proves nothing about popularity."
+  "the lead is sharp and the queue is softly blurred"; crowd only rinses shakers, no popularity claim; show job Calm.
 - Met: Every label word matches your real pack, and no other words appear on the set.
-  Label lines "Sprout" and "28 Daily Packs" as given; "a wall clock with a blank face"; daily pack with unknown words turned away.
+  Pouch carries only "Sprout" and "28 Daily Packs"; daily pack "printed side turned away"; avoid field lists text on walls, signs, clock numbers.
 - Met: The product matches your photos, with your real label laid over it.
-  "Cut the real Sprout pouch out of the front photo and lay it over the clay pouch"; flags photos not visible as MISSING.
+  "Cut the real pouch out of the front photo and lay it over the clay pouch"; says photos weren't visible and lists what is unchecked.
 
 ## What went in
 
@@ -38,123 +38,93 @@ every 4 weeks. Voice: playful, cheeky.
 ## What came out
 
 ```text
-I can't draw the picture here because no image tool is connected; this is the plan and the prompt.
+I can't draw pictures in this chat, so you'll get the full prompt, with how to turn it into a picture at the end.
 
 ## 1. Moment plan
-- **Shared hassle:** Every afternoon, everyone at the office kitchen sink queues to rinse chalky shaker bottles. (Place inferred from the brief.)
-- **Moment:** The buyer is comparing fixes, so the lead has stepped out of the queue. She leans on a desk in front and tips a torn daily pack while the sink queue carries on behind her.
-- **Show job:** Calm. The lead is at ease in front and the crowd keeps rinsing behind.
-- **Implied sentence:** "With a Sprout daily pack, you skip the shaker and the sink."
-- **Source:** Brand lines "No more gagging on pills, sloshing chalky powders, or cleaning messy counters." and "Rip. Tip. Enjoy." The picture shows only the rip and the tip, not what the pack goes into, because the brand doesn't say.
-- **The crowd:** It sets the scene and proves nothing about popularity.
+- **Shared hassle:** "Every afternoon, everyone at the office kitchen sink queues to rinse a chalky shaker bottle."
+- **Moment:** Your buyer already knows the problem and is comparing fixes, so the picture shows the lead stepping out of the queue.
+- **Show job:** Calm. The lead is at ease in front while the crowd carries on rinsing behind.
+- **Implied sentence:** "With Sprout you don't slosh powder in a shaker, so there's no shaker to rinse."
+- **Source:** Brand line "No more gagging on pills, sloshing chalky powders, or cleaning messy counters." The action comes from "Rip. Tip. Enjoy." The lead only holds a torn daily pack. The picture doesn't show where the pack is tipped, because the brand doesn't say.
 
 ## 2. Set card and cast
 **Set card**
-- **Scale:** Figures are about a hand tall. Shaker bottles, the sink and the Sprout pouch are a little oversized and chunky.
-- **Finish:** Handled, with soft thumbprints and gentle tool marks (playful voice, not silly).
-- **Stand-ins:**
-  - Tap water is clear gel.
-  - Splashes are clear gel droplets.
-  - Chalky powder is matte off-white clay crumbs smeared on the shakers and counter.
-  - The kitchen window is clear acrylic.
-  - Everything else is clay or felt. Clothes are real fabric where noted.
-- **Light and focus:** One soft warm key light from the upper left and a cool fill. Shallow focus: the lead and the pouch are sharp, and the sink queue is softly blurred.
-- **Camera:** Diorama view, a little above the lead's eye line. The lead sits in the front third, lower left.
-- **Quiet area:** The top 25% of the frame is a plain smooth pale-cream clay wall with no tiles, posters or clock.
+- **Scale:** Figures are about a hand tall. The props are a little oversized and chunky: shakers, the sink, the tap, a paper-towel roll.
+- **Finish:** Handled, with some thumbprints. A little rough on the shakers' chalky smears to suit the cheeky voice.
+- **Stand-ins:** Tap water is clear gel. Splashes are small clear-gel drops. Powder residue is matte grey-white clay smear. Paper towels are real paper.
+- **Everything else:** Clay, felt or real fabric.
+- **Light and focus:** One soft key light from upper left with a gentle fill. Shallow focus: the lead is sharp and the queue is softly blurred.
+- **Camera:** Diorama view, slightly above the lead's eye line, with the lead in the front-left third.
+- **Quiet area:** The top 25% of the frame is a plain, smooth, cream clay wall.
 
-**Lead (made-up adult)**
-- **Who:** A woman, 34, medium build.
-- **Clay skin:** Warm medium brown.
-- **Hair:** Short black curls sculpted in tight coils.
-- **Clothes:** Mustard knit cardigan in real wool fabric, over a white clay shirt, with navy felt trousers.
-- **Signature item:** A deep-green felt lanyard.
-- **Pose:** Relaxed, leaning back against a clay desk. She holds a torn-open daily pack up near her face, tipping it, with its front turned toward her.
-- **Mouth:** Sculpted closed in a small satisfied smile.
+**Lead** (inferred)
+- Made-up woman, about 34, medium build, warm medium-brown clay skin.
+- Short black curly hair in rolled clay coils.
+- Rust felt cardigan over a white clay shirt, navy real-fabric trousers.
+- **Signature item:** A green felt lanyard.
+- **Expression:** Relaxed half-smile with her mouth sculpted closed.
+- **Action:** She has just stepped sideways out of the queue. She holds a daily pack torn straight across the top, with its printed side turned away from the camera.
 
-**Crowd base figures (repeated with varied colours down the queue)**
-1. A tall man with pale peach clay skin, a short brown beard and a grey felt hoodie. He scrubs a shaker with a clay bottle brush.
-2. An older woman with deep brown clay skin, a grey bun and a navy felt blazer. She holds a shaker under the gel tap stream.
-3. A young man with olive clay skin, round black clay glasses and a blue felt shirt. He frowns at chalky clumps in his shaker.
-4. A woman with light freckled clay skin, a red ponytail and a green felt jumper. She waits in line holding two dirty shakers.
-
-All crowd mouths are sculpted closed or in a set grimace.
+**Crowd** (4 base figures in a line at the sink, each with a chalky shaker, mouths closed)
+1. Tall man with a grey clay hoodie, a ginger beard and a long face. He scrubs a shaker under the gel stream.
+2. Older woman with silver clay bob hair, round felt glasses and a teal blouse. She peers into her shaker, nose wrinkled.
+3. Stocky man with a shaved head, deep-brown clay skin and a striped real-fabric shirt. He taps his shaker on his palm.
+4. Young woman with a high blonde clay ponytail, freckles and a lilac felt jumper. She waits with her shaker and a scrunched paper towel.
 
 ## 3. Layout
-**Size:** 4:5, 1080 x 1350. For 1:1, recompose with the queue shortened to 3 figures and the bottom green patch at 18%; never stretch.
+**Size:** 4:5 (1080 x 1350). For 1:1, recompose: pull the camera back slightly, keep the headline strip to the top 22% and the offer strip to the bottom 13%. Never stretch.
 
-| Zone (top to bottom) | What sits there |
-|---|---|
-| 0–25% | Quiet area: pale-cream clay wall carrying the headline |
-| 25–78% | Picture: the sink queue across the back running out of frame right, and the lead in the front left third |
-| 55–78% (right side) | Product: the Sprout pouch standing on the desk beside the lead, front to camera |
-| 78–100% | Solid deep-green brand patch carrying the small line, the offer and the button |
+| Zone | Height | What's there |
+|---|---|---|
+| Quiet area | 0–25% | Cream clay wall with the headline |
+| Picture | 25–85% | The queue stretches from mid-right out of frame right. The lead is front-left, sharp. The Sprout pouch stands on the counter edge, lower right, front label to camera, in focus. |
+| Offer strip | 85–100% | Solid deep-green brand-colour patch with the offer line |
 
 ## 4. Words on the image
-- **Headline (4 words):** "Skip the shaker queue."
-  - Source: backed by "No more … sloshing chalky powders, or cleaning messy counters."
-- **Small line:** "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
-  - Source: approved claim, word for word.
-- **Offer:** "First order $29.99 with text sign-up. Renews at $49.99 every 4 weeks."
-  - Source: brand offer. Check it against the live offer on the day.
-- **Button:** "Rip. Tip. Enjoy. → Shop now"
-  - Source: brand line plus the action.
+- **Headline (5 words):** **Skip the shaker sink queue.**
+  - Source: the "No more … sloshing chalky powders … cleaning messy counters" brand line.
+- **Line 1:** "Rip. Tip. Enjoy."
+  - Source: brand line.
+- **Line 2 (offer):** "First order $29.99 with text sign-up. Renews at $49.99 every 4 weeks."
+  - Source: the offer as given. Check it against the live offer on the day the ad runs.
+- **Type sizes:**
+  - Headline: 72 px, deep green, on the cream wall.
+  - Line 1: 40 px, deep green, under the headline.
+  - Line 2: 30 px minimum, yellow or white, on the green strip.
 
 ## 5. Image prompt
-Stop-motion claymation diorama photographed on a miniature set, camera slightly above a figure's eye line, shallow depth of field.
+> Stop-motion claymation diorama photographed from slightly above eye level, shallow depth of field. In the front-left third, a hand-tall clay woman, about 34, medium build, warm medium-brown clay skin, short black curly hair made of rolled clay coils, rust felt cardigan over a white clay shirt, navy real-fabric trousers, green felt lanyard, relaxed closed-mouth half-smile, has just stepped sideways out of a queue. She holds a small daily pack torn straight across the top, its printed side turned away from the camera. Behind her, softly blurred, four varied clay office workers queue at a chunky grey clay office kitchen sink, each holding a chunky shaker bottle smeared with matte grey-white chalky residue. A tall man in a grey clay hoodie with a ginger beard scrubs a shaker under a tap stream of clear gel. An older woman with a silver bob and round felt glasses peers into her shaker, nose wrinkled. A stocky shaved-head man in a striped fabric shirt taps a shaker on his palm. A young woman with a blonde ponytail and lilac felt jumper waits holding a scrunched real paper towel. The queue continues out of frame to the right. On the counter edge, lower right, in focus: a glossy deep-green pouch with a big yellow wordmark "Sprout", a yellow bear face top right, and "28 Daily Packs" at the bottom, front to camera, true shape. Handled clay finish with visible thumbprints, oversized chunky props, small clear-gel water drops. One soft key light from upper left, gentle fill. Colours: deep green, warm yellow, cream, rust, soft grey. Top quarter of the frame is a plain smooth cream clay wall, empty.
 
-In the front left third, a hand-tall clay woman, 34, medium build, with warm medium-brown clay skin and short black curly hair in tight sculpted coils. She wears a mustard real-wool knit cardigan over a white clay shirt, navy felt trousers and a deep-green felt lanyard. She leans back against a chunky clay office desk, relaxed. She holds a small torn-open sachet up near her face, tipping it, the sachet's front turned toward her so only its plain back faces the camera. Her mouth is closed in a small satisfied smile.
-
-Behind her, softly blurred, a queue of clay office workers lines up at a chunky clay kitchen sink and runs out of frame to the right. They are varied base figures:
-- a tall pale-skinned bearded man in a grey felt hoodie scrubbing a shaker bottle with a bottle brush
-- an older deep-brown-skinned woman with a grey bun and navy felt blazer rinsing a shaker under a clear gel water stream
-- a young olive-skinned man in round glasses and a blue felt shirt frowning at chalky clumps in his shaker
-- a freckled red-ponytailed woman in a green felt jumper holding two dirty shakers
-
-All their mouths are closed. Chalky off-white clay smears cover the shakers and the counter.
-
-The place is an office kitchenette made of clay with a clear acrylic window, and a wall clock with a blank face.
-
-On the desk beside the lead stands an oversized glossy deep-green pouch with a printed paper label. It has a big yellow wordmark "Sprout", a yellow bear face in the top right, and "28 Daily Packs" along the bottom, front facing camera, sharp.
-
-Handled clay finish with soft thumbprints. One soft warm key light from the upper left and a cool fill.
-
-Colours: deep green, sunny yellow, pale cream, mustard, soft grey.
-
-The top quarter of the frame is a plain smooth pale-cream clay wall with nothing on it. The bottom fifth is left as plain floor for a solid colour patch.
-
-**Avoid field:** photograph, smooth 3D render, plastic, real human hands, text, letters, signs, posters, logos, speech bubbles, children
+**Avoid field:** photograph, smooth 3D render, plastic, real human hands, text on walls, signs, clock numbers, speech bubbles, children, logos
 
 ## 6. Post words
-- **Primary text:** "No more gagging on pills, sloshing chalky powders, or cleaning messy counters." Rip. Tip. Enjoy. Your first order is $29.99 with text sign-up, then $49.99 every 4 weeks.
-- **Headline field:** Skip the shaker queue
+- **Primary text:** "The 3pm shaker queue is now optional. Sprout packs 60+ ingredients, 21 vitamins & minerals, and 6g fiber. First order $29.99 with text sign-up, renews at $49.99 every 4 weeks."
+- **Headline field:** Rip. Tip. Enjoy.
 - **Button:** Shop Now
 
 ## 7. Edit step
-- **Real label overlay:** Cut the real Sprout pouch out of the front photo and lay it over the clay pouch at the same angle and light. Then check "Sprout", the bear face and "28 Daily Packs" against it.
-  - The daily pack stays back-to-camera with no overlay.
-- **Words placement:**
-  - The headline goes in the top cream quiet area in deep green, at 96 px or more.
-  - The small line, offer and button go on the bottom solid deep-green patch in yellow and cream, at 30 px or more.
-  - No words go over the crowd.
-- **Contrast check (estimated with stand-in hex values):**
-  - Deep green #0F4D2E on cream #F3EBDD is about 8:1.
-  - Yellow #FFD23F on deep green is about 6.7:1.
-  - Re-check both with the real brand hex codes.
-- **MISSING lines:**
-  - `MISSING:` the product photos aren't visible in this chat, so pouch shape, gloss and colours come from your description only and haven't been checked against the photos.
-  - `MISSING:` daily pack label words. That side is turned away.
-  - `MISSING:` daily pack colours and back design. A plain deep-green back is inferred.
-  - `MISSING:` what the pack is tipped into or how it's taken. Only the rip and tip are shown.
-  - `MISSING:` offer end date.
-  - `MISSING:` brand hex codes.
-  - `MISSING:` real review count with source. Optional; a crowd is never used in its place.
-  - `inferred:` the place (office kitchen sink) and the lead.
+- **Real pouch overlay:** Cut the real pouch out of the front photo and lay it over the clay pouch, matching angle and light, so "Sprout", the bear face and "28 Daily Packs" are exact. The daily pack stays turned away; don't add any label to it.
+- **Words:** Add all words in editing. The headline and Line 1 go on the cream wall, the offer goes on the green strip. Never put words over the crowd.
+- **Contrast check:** Measure each word colour against its background at 4.5:1 or more. Deep green on cream and yellow on deep green should pass, but confirm with the real hex codes.
+- **Final check:** Shrink it to phone size and run the 2-second glance test.
 
-## 8. Score
-Score: 100/100 (6 of 6 checks)
+**Gaps:**
+- MISSING: The photos weren't visible to me. I worked only from your written description, so pouch shape, proportions, gloss and the side and top views are unchecked.
+- MISSING: Daily pack label words. The printed side is turned away for that reason.
+- MISSING: Any other text on the pouch beyond the three lines given.
+- MISSING: Exact brand colour hex codes and fonts.
+- MISSING: How the pack is taken (what you tip it into). The picture shows only the torn pack in hand.
+- MISSING: Offer end date.
+- MISSING: A real review count with its source, if you want a proof line.
+- Lead inferred.
 
-**To make the picture:**
-- **ChatGPT or Gemini:** Paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** With `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, Claude can send the prompt to that image API and save the file. Get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. Each picture is billed.
+## 8. CHECKS MISSED
+- **Glance test:** Can't be confirmed until the picture is made and viewed at phone size.
+- **Contrast at 4.5:1:** Unverified until the real hex codes are known.
+
+---
+
+**To make the picture:** Paste the prompt into ChatGPT (GPT Image) or Gemini (Nano Banana) and attach your three pouch photos as references. You can also use Higgsfield's image tool, or in Claude Code, a saved `OPENAI_API_KEY` or `GEMINI_API_KEY`. Then do the edit step above.
+
+**Next?** You could check it before it goes live with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), or write the matching page with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer). Pick one or type your own.
 ```

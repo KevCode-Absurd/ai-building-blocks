@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The run did stages 0 and 1 cleanly: a correct 30-second panel list with named transitions, the reveal held longest, an ink line and a simple avatar card, then it stopped for approval as the skill requires. It invented nothing, flagged the unseen product photo, pack contents, label words, P6 caption and offer text as MISSING rather than guessing, and kept the tear direction to the brand's straight-across rule.
+A clean first checkpoint: the script is kept word for word, every panel has a transition, the reveal is longest, and the avatar card is simple and non-customer. It correctly said it could not see the photo and marked the photo, pack look, brand colours, offer and tool limits as MISSING instead of guessing, then stopped for approval as the skill requires.
 
 ## Judge list
 
-- Met: It stopped for your OK after the avatar card, the sheets and the storyboard.
-  "Stopping here. Please approve or edit the avatar card." Stopped at approval 1 as required; stages 3 and 4 not yet reached.
-- Met: Every panel has a named transition, and the reveal panel is the longest.
-  All P1 to P7 carry a transition; "P4 | moment to moment (the reveal) ... 5 (longest)" against 4 or 4.5 s elsewhere.
-- Met: The lock lines are the same, word for word, in every prompt.
-  Not yet applicable: no sheet, storyboard or clip prompts exist because the run correctly stopped before stage 3.
-- Met: No prompt asks the tool to draw words or numbers, and each clip has one kind of motion.
-  No image or clip prompts written yet; captions marked "for editing" and label words reserved "only on the photo panel".
-- Met: The last panel is your real product photo, set in editing.
-  "P7 | subject to subject: photo panel of the real pouch, set in editing"
+- Met: Stopped for approval after the avatar card (stages 1, 3 and 4), unless asked to run all in one go
+  "Checkpoint 1 of 3. Approve the panel list, ink line and avatar card... I'll write the reference image prompts (stage 2) once you approve."
+- Met: Every panel has a named transition, and the reveal panel is the longest
+  All 7 panels carry a transition; "P4 | moment to moment (the reveal)... 6 (5 s clip + 1 s hold)" is the longest.
+- Met: Lock lines the same word for word in every prompt
+  Only one hero line exists so far ("to be repeated word for word in every later prompt"); no prompts yet to contradict it, run stopped at stage 1.
+- Met: No prompt asks the tool to draw words or numbers; each clip has one kind of motion
+  No image or clip prompts written yet (correctly stopped); it already states label words "appear only on the P7 photo".
+- Met: The last panel is the real product photo, set in editing
+  "P7 ... A real photo of the Sprout pouch in the same border and gutter colour. The offer is text set in edit."
 
 ## What went in
 
@@ -39,70 +39,68 @@ Use: tear one daily pack straight across the top, tip into palm.
 ## What came out
 
 ```text
-I can't make pictures or video in this chat; I'll write every prompt, and at the end I'll explain how to turn them into clips.
+I write the prompts only. No video tool is connected here, so no pictures or clips will come out of this chat. At the end I'll explain how to make them.
 
-# 1. Panel list, ink line and avatar card (stages 0 and 1)
+I can't see a photo in this chat, so I'm working from your description of the pouch.
 
-## Script check
-- **Fit:** This works as a motion comic. It is a short problem-and-fix morning story built around one claim, and it doesn't depend on a real person's proof or on how the product pours or stretches.
-- **Script:** Locked and unchanged. All 7 panels fit 30 s.
-- **Product photo:** `MISSING: product photos.` I can only see your description of the pouch, not the photo itself. Until the real photos arrive, I can't check the product sheet against the actual pack. Please attach:
-  - pouch front
-  - pouch side
-  - pouch top
-  - one daily pack, sealed
-  - one daily pack torn open
-  - the contents tipped into a palm
-- **Contents:** `MISSING: what is inside a daily pack` (shape, colour, how many pieces). P4 and P5 can't be drawn until I know this. I won't guess.
-- **Label words:** `MISSING: all label words, word for word.` So far I have the wordmark "Sprout" and "28 Daily Packs". These words will appear only on the photo panel.
-- **P6 caption:** `MISSING: P6 caption`, or confirm the panel has none.
-- **P7 offer:** `MISSING: P7 offer text` from your current terms.
-- **Brand file:** Optional, but I'll need the typeface for captions and SFX lettering by the edit stage. Also send your "never show" list.
+---
 
-## Panel list
+## 1. Panel list, ink line and avatar card (stages 0 and 1)
 
-| # | Transition in | Narration (exact) | Caption (exact) | Seconds |
-|---|---|---|---|---|
-| P1 | scene to scene (opening): her kitchen, morning | "Every morning, the same chalky glass." | CHOKING ON POWDER AGAIN | 4 |
-| P2 | subject to subject: same kitchen, the eye moves to the shaker in the sink | "Then the shaker sits in the sink." | THE SHAKER WINS AGAIN | 4 |
-| P3 | subject to subject: the eye moves to the Sprout pouch on the counter | "So the whole lot went in one pack." | 60+ INGREDIENTS / 6G FIBER | 4.5 |
-| P4 | moment to moment (**the reveal**): she tears one daily pack straight across the top and tips it into her palm, slowed down | "One small handful a day." | RIP. TIP. ENJOY. | **5 (longest)** |
-| P5 | aspect to aspect (the only mood panel): same kitchen, empty dry sink, nothing on the rack | "Same kitchen. Nothing to rinse." | NO SHAKER TO WASH | 4 |
-| P6 | scene to scene: front door, she heads out | (none) | MISSING | 4 |
-| P7 | subject to subject: photo panel of the real pouch, set in editing | (none) | offer text: MISSING | 4.5 |
+### Fit check
+This script fits a motion comic. It is a short problem-and-fix story around one claim. It doesn't rest on proof from a real person, and the pouch is judged by how it looks, not how it pours or fits. One limit: the drawings can't *show* "60+ ingredients" or "21 vitamins & minerals". Those words stay in the caption and on the photo panel. P3 shows the pouch only, with no invented ingredients drawn around it.
 
-**Total: 30 s.** Each clip is 3 to 5 s, and the reveal is the longest clip. There is only one mood transition (P5), and the panels on either side of it are not mood panels.
+### Panel list (30 s, 9:16, hard cuts)
 
-**Claim guard:**
-- P3 shows the pouch and its caption only. There are no drawn ingredients, vitamins or fibre icons beyond what is stated.
-- P5 shows the routine getting easier, not a measured result.
+| # | Transition in | What's drawn (one large thing) | Narration (locked) | Caption (locked, lettered in edit) | Sec |
+|---|---|---|---|---|---|
+| P1 | scene to scene (opening) | The hero at a kitchen counter, grimacing over a cloudy glass, with a sweat drop. | "Every morning, the same chalky glass." | CHOKING ON POWDER AGAIN | 4 |
+| P2 | action to action | The same hero drops the powder-crusted shaker into a full sink, under a small storm cloud. | "Then the shaker sits in the sink." | THE SHAKER WINS AGAIN | 4 |
+| P3 | subject to subject | The eye moves to the Sprout pouch standing upright on the same counter. | "So the whole lot went in one pack." | 60+ INGREDIENTS / 6G FIBER | 4 |
+| P4 | moment to moment (**the reveal**) | Close on her hands: she tears one daily pack straight across the top and tips it toward her palm, slowed down. | "One small handful a day." | RIP. TIP. ENJOY. | **6** (5 s clip + 1 s hold in edit) |
+| P5 | subject to subject | The same kitchen with an empty, dry sink. The hero smiles, relaxed. | "Same kitchen. Nothing to rinse." | NO SHAKER TO WASH | 4 |
+| P6 | scene to scene | The hero steps out of her front door into morning light. | (none) | (none) | 3 |
+| P7 | subject to subject (photo panel) | A real photo of the Sprout pouch in the same border and gutter colour. The offer is text set in edit. | (none) | offer: `MISSING: current offer` | 5 |
 
-## Ink line
-- **Line:** clean black brush line, medium weight on figures and the product, thin on the background.
-- **Fills:** flat, with one cool shadow tone at 20% darker than each fill and no gradients.
-- **Halftone:** light halftone dots on backgrounds only, never on the hero's face or the product.
-- **Palette:** black plus four flat colours:
-  - warm cream (paper, walls, her top)
-  - dusty navy (blazer, shadows)
-  - muted ochre (earrings, wood, warm kitchen accents)
-  - Sprout deep green with Sprout yellow, used on the product only and always the most saturated thing in the frame
-- **Border and gutter:** thin black panel border, inset slightly from the 9:16 screen edge, with a warm cream gutter showing at all four edges.
-- **Style references:** none (no artist, publisher or title named).
+- **Panel count:** 6 drawn panels plus the photo panel.
+- **Mood transitions:** "aspect to aspect" is not used, so the story never stalls.
+- **Reveal length:** P4 is the longest panel at 6 s.
+- **Narration and captions:** every narration line is 10 words or fewer, and every caption is 6 words or fewer.
 
-## Avatar card (becomes the hero line)
-- **Who:** an adult woman in her mid-30s, the narrator of her own morning. She is not a customer, an expert or a child, and she claims no result.
-- **Face:** round and simple: dot eyes, a short line for each brow, a tiny hook nose, a small line mouth. Open and easy to read at phone size, with no realistic detail.
-- **Hair:** one shape, a dark high ponytail swinging to her right.
-- **Clothes:** two colours, a dusty navy blazer over a plain cream-white top.
-- **Accessory:** small hoop earrings in muted ochre.
-- **Voice, in plain words:** warm, dry and a little wry about mornings. She speaks unhurried, at a normal pace, with a slight smile in it. The voice is designed from this card and never cloned from a real person.
-- **Never changes:**
-  - round face and dot eyes
-  - ponytail swinging to her right
-  - navy blazer over a cream-white top
-  - hoop earrings
-  - no other jewellery, logos or text on her clothes
-  - she holds the daily pack in her right hand
+### Ink line
+- **Line:** clean, even black brush-pen outlines. The weight is medium for figures and heavier for the product's outline. Interior lines are thin.
+- **Fills:** flat colour only, with no gradients and no rendered texture.
+- **Shadow:** one flat shadow tone (a cool light grey), with hard edges.
+- **Halftone:** light halftone dots in backgrounds only. Never on the face or the product.
+- **Palette** `[inferred]`, black plus 4 flat colours:
+  - warm off-white for walls, paper and the white top
+  - dusty, desaturated navy for the blazer
+  - Sprout deep green, used on the product only
+  - Sprout yellow, used on the product and the tiny earrings only
+- **Border:** a thin black panel border inset from the screen edges, with a warm off-white gutter all around.
 
-**Stopping here. Please approve or edit the avatar card. Send the photos and the missing items above too, and I'll move on to the reference image prompts.**
+### Avatar card
+- **Who:** one adult woman, the hero and narrator. She is not presented as a customer, an expert or someone reporting a result.
+- **Face:** a round, simple, open face with dot eyes, short line brows, a small curved mouth and no nose detail beyond one short line. There are no lashes, blush or realistic shading.
+- **Hair:** one shape, a dark (black-ink) ponytail with a smooth flat fill and a single highlight gap.
+- **Clothes:** two colours only, a dusty navy blazer over a plain white top. There are no patterns or logos.
+- **Accessory:** small gold hoop earrings, drawn as yellow circles with a black outline.
+- **Body:** an average adult build in simple proportions, with simple four-finger-plus-thumb hands.
+- **Narrator voice:** a warm, dry, slightly wry adult woman's voice. She speaks unhurried and conversational, like telling a friend about her morning. The voice is designed, not cloned from anyone.
+- **Never changes:** the round face, the dot eyes, the ponytail shape, navy blazer over white top, the gold hoops, and adult age. No extra accessories, makeup detail or realistic face rendering.
+
+**Hero line (to be repeated word for word in every later prompt):**
+> One adult woman drawn in flat 2D ink: round simple face, dot eyes, short line brows, small curved mouth, smooth dark ponytail, dusty navy blazer over a plain white top, small gold hoop earrings, simple adult proportions.
+
+---
+
+**Missing (I'll keep going around these and never guess):**
+- `MISSING: product photo` (front, side, top, out of pack). I'll draw the product sheet from your description: a glossy deep green pouch with a big yellow wordmark and a yellow bear face at top right. It can't be checked against the real pack. The label words "Sprout" and "28 Daily Packs" will appear only on the P7 photo.
+- `MISSING: what's inside a daily pack` (shape, colour, size). Until then, P4 shows the tear and the tip with her hand closing over the contents. Nothing inside gets drawn.
+- `MISSING: daily pack look` (wrapper colour and shape) for P4.
+- `MISSING: exact brand colours, lettering typeface, "never show" list`. The palette above is marked `[inferred]`.
+- `MISSING: current offer` for P7.
+- `MISSING: tool limits`. I'm planning one 3 to 5 s clip per panel.
+
+**Checkpoint 1 of 3.** Approve the panel list, ink line and avatar card, or tell me what to change. I'll write the reference image prompts (stage 2) once you approve.
 ```

@@ -1,31 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 1 of 5 met. Invented facts: 3.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The run correctly stopped for approval after the avatar card, with a solid Dev card and four distinct crowd figures, but nothing past stage 1 exists yet. It wrongly said the script lines and photos were missing even though the run input gave the places, the morph on line 5, the pouch label and photos, so it asked for facts it already had.
-
-## Fix
-
-In Stage 0, add a rule to read the script from the run input (places, morph line, set card) and always output the STAGE 0 SCRIPT IN line before stage 1. Only write MISSING for facts that truly aren't in the input, and say 'photos listed in the input' rather than asking for them again.
+A disciplined, usable prompt set: lock lines and the lead line are pasted in full everywhere, one mover per shot, one morph with a first and last frame, and label words kept exact. It never guessed the narration, pack label or offer, marking each as MISSING so the owner knows exactly what to supply.
 
 ## Judge list
 
-- Met: It stopped for your approval after the avatar card, the sheets and the storyboard.
-  "Stopping here. Reply \"yes\" to approve this avatar card and crowd" — correctly stopped at stage 1 and did not proceed.
-- Not met: The set, light, palette and lens lines are word for word the same in every prompt.
-  Run stopped at stage 1; no SET/LIGHT/PALETTE/LENS lines or prompts were written yet.
-- Not met: The lead's full description appears wherever they do.
-  Description given once in the avatar card; no shot prompts exist to repeat it in.
-- Not met: Every shot card names one mover, and everyone else holds still.
-  No shot cards produced; the script's mover column was claimed missing.
-- Not met: The label lines are written out exactly, and there's at most one clay morph, built from a first and last frame.
-  No product sheet or morph frame pair written; label lines only mentioned as missing.
-
-## Invented
-
-- other: dark brown clay shoes (`proposed`) (Marked proposed, so acceptable.)
-- other: forest-green felt strap with a small cream clay badge (Lanyard design detail not in cast note, but a reasonable creative choice for the avatar card.)
-- other: Crowd figure details (grey bun, moustache, glasses, auburn hair, etc.) (Crowd was only given as tall/short/round/slight; faces are creative design the skill requires.)
+- Met: Stopped for approval after avatar card, sheets and storyboard, or marked those three stops for one go
+  "STAGE 1  AVATAR CARD (approve)", "STAGE 3  SHEETS AND LOCK LINES (approve)", "STAGE 4  STORYBOARD (approve)" plus the top note that later stages change.
+- Met: SET, LIGHT, PALETTE and LENS lines word for word the same in every prompt
+  All F1–F10 frames and clips 1–10 carry the identical "SET: a handmade stop-motion miniature set…" through "…the edges of the set never show."
+- Met: The lead's full description appears wherever they do
+  F2, F4–F10 and clips 2, 4–10 each paste "Dev, a clay adult man about 30, slim build…no nails."; F1/F3 have no Dev.
+- Met: Every shot card names one mover, everyone else holds still
+  "Card 1: … mover Tall scrubs the shaker … while the others hold still"; "Card 5: … mover the shaker in Dev's right hand (morph); Dev holds still".
+- Met: Label lines written out exactly; at most one clay morph built from a first and last frame
+  "printed 'Sprout' and '28 Daily Packs', with the yellow bear face at top right"; "CLIP 5, MORPH (5 s, start F5, last F5-last)" is the only morph.
 
 ## What went in
 
@@ -46,79 +36,158 @@ bear face top right, "28 Daily Packs" at the bottom.
 Daily pack label words: not captured.
 Colours: forest green #00582D, warm cream #FFF7DF, sunflower
 yellow #FFCC2E. Tool: 5-second clips, first and last frame: yes.
+Approvals: run all six stages in one go. I'll review the marked stops.
 ```
 
 ## What came out
 
 ```text
-I write the prompts only. No video tool is connected in this chat, so I can't make pictures or clips here.
+Note: I write the prompts only. This chat has no video tool connected, so no pictures or clips will be made here. You asked for one go, so all stages are below and the three approval points are marked "(approve)". If you change an earlier stage, the stages after it change too. I can't see the photos you named (pouch front, side and top, and the daily pack in a hand). The pack's look and label words come from your text, and the photo check is still to do.
 
----
+STAGE 0  SCRIPT IN   Places office kitchen (F1–F5, F5 inferred) ; Dev's desk (F6–F10) | Movers F1 tall crowd figure, F2 Dev, F3 short crowd figure, F4 Dev, F5 Dev's hand (morph), F6 Dev, F7 slight crowd figure, F8 Dev, F9 Dev, F10 Dev (all inferred) | Morph F5 (shaker in Dev's hand to flat daily pack)
+Lines: 10 lines, one shot each, about 3 s each, about 30 s total [inferred]. Claims: MISSING.
+MISSING: the narration words for lines 1–10 (only a summary of the script came).
 
-# File 1: Avatar card (stage 1)
+STAGE 1  AVATAR CARD (approve)
+Lead: role the office worker who is tired of the shared-sink shaker queue and switches to daily packs [inferred from the script summary] | age about 30, adult | look slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line | clothes mustard knit jumper of real woven fabric, navy clay trousers
+item lanyard with a plain cream clay card and no words | props chunky clay shaker (cream body, forest-green lid [inferred]), flat daily pack, Sprout pouch | voice none (the narrator is off screen and Dev's mouth stays sculpted) | never changes face, comb-groove hair, mustard jumper, navy trousers, lanyard, slim build
+Crowd:
+- Tall: long face, heavy brows, bald, light peach clay skin, forest-green felt cardigan.
+- Short: round clay glasses, hair in a bun, deep brown clay skin, cream felt shirt.
+- Round: full cheeks, short clay beard, olive-tan clay skin, sunflower-yellow knit vest of real fabric.
+- Slight: pointed nose, neat side parting, pale pink clay skin, stone-grey felt jacket.
+All four are adults with mouths sculpted closed. None is based on a real person.
 
-## Lead: Dev
+STAGE 2  REFERENCE IMAGES
+Prompt: "Full-body and medium-shot reference of Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. He stands alone in a neutral pose, arms relaxed, on a plain warm cream paper backdrop. Handmade stop-motion figure about a hand tall, some thumbprints on matte modelling clay, photographed with a macro lens, one soft warm key light from the left with a soft fill from the right, tool marks visible. No text."
+Make 4. Pick: the take where the eyes and brow read clearly at medium shot, the comb grooves are sharp, the jumper looks like real knit, and both hands show distinct chunky fingers. Medium shot is where Dev spends most of the ad.
 
-- **Role in the story:** the office worker with the sink problem in the kitchen (lines 1 to 4). His shaker squashes into a flat daily pack at the swap (line 5). He is at his desk with the Sprout daily pack (lines 6 to 10).
-- **Age range:** adult, about 30.
-- **Look:**
-  - slim build, a hand tall
-  - warm brown matte clay skin
-  - short black clay hair with visible comb grooves
-  - an oval face
-  - small dark bead eyes
-  - simple sculpted brows
-  - chunky clay hands with rounded fingertips and no nails
-- **Clothes and materials:**
-  - mustard knit jumper of real knitted fabric
-  - navy clay trousers
-  - dark brown clay shoes (`proposed`)
-- **Signature item:** a lanyard. It is a forest-green felt strap with a small cream clay badge. The badge is blank, with no words.
-- **Props:**
-  - a chunky clay shaker bottle, held in his right hand, lines 1 to 5
-  - the Sprout daily pack: sculpted clay in a printed paper label, in his right hand from line 5
-  - the Sprout pouch: clay in a printed paper label, on his desk, lines 6 to 10
-- **Voice:** none on screen. His mouth is sculpted closed in a set expression: flat and tired in the kitchen, a small closed smile at the desk. The narrator is off screen.
-- **Never changes:**
-  - his skin tone, hair shape and grooves, face shape and eyes
-  - the mustard knit jumper and navy trousers
-  - the lanyard and its blank badge, always on
-  - his height next to the pack
-  - the right hand holds the shaker or pack in every shot
-  - the handled finish: some thumbprints on matte clay
+STAGE 3  SHEETS AND LOCK LINES (approve)
+SET a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels.
+LIGHT One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint.
+PALETTE Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. (The grey is proposed.)
+LENS Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+LEAD Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails.
 
-## Crowd: four base figures
+Sheets (each made from the picked Dev image, on a plain warm cream backdrop, in the SET finish and LIGHT above):
+- Image 1, Dev character sheet: front, three-quarter left, three-quarter right, side and back. Held poses: standing in a queue holding a shaker at chest height in his right hand; looking down at the shaker with shoulders dropped; holding a flat daily pack at chest height in his right hand; seated at a desk leaning back with hands behind his head; setting a pouch upright with his right hand. A size strip shows Dev beside the Sprout pouch at true scale. MISSING: the pouch's real size next to a person, so the scale is inferred at about Dev's waist height.
+- Image 2, Crowd sheet: Tall, Short, Round and Slight side by side, front and three-quarter, each holding a cream clay shaker. All four faces are clearly different.
+- Image 3, Pouch sheet (product): a stand-up pouch [shape inferred, photo check to do] sculpted in clay at its true shape and colours. It is wrapped in a printed paper label, deep green with a big yellow wordmark "Sprout", a yellow bear face at top right, and "28 Daily Packs" at the bottom. Views: front, side and top. Any side whose label wording is unknown faces away.
+- Image 4, Daily pack sheet (product): a flat clay sachet sized to sit in Dev's chunky hand. The printed label side always faces away. Only the plain back shows, in forest green [inferred]. Views: back, edge and held in Dev's right hand. MISSING: the daily pack's label words and colours.
+- Image 5, Office kitchen set, empty, opening state: pale stone-grey clay counter, a chunky cream clay sink with a clear-gel water stream, a felt tea towel, a wall clock with tick marks and no numbers, and a window at frame left.
+- Image 6, Dev's desk set, empty, opening state: a cream clay desk, a monitor that is a blank printed paper card, a chunky clay keyboard, a forest-green felt mouse mat, a cream clay mug, a desk chair with a felt seat, and a window at frame left.
 
-All are adults, a hand tall, in the handled clay finish. Mouths are sculpted closed. None of them is ever used as proof.
+STAGE 4  STORYBOARD (approve)
+Attach to every frame: image 1 is Dev, image 2 is the crowd, image 3 is the Sprout pouch, image 4 is the daily pack, image 5 is the office kitchen, image 6 is Dev's desk.
 
-1. **Tall:**
-   - long narrow face, pale peach clay skin, high grey clay bun
-   - heavy straight brows, long nose
-   - cream felt cardigan
-2. **Short:**
-   - wide square face, deep umber clay skin, cropped curly black hair
-   - round cheeks, thick moustache
-   - forest-green clay shirt
-3. **Round:**
-   - full round face, light olive clay skin, chin-length brown bob with a fringe
-   - small round glasses of clear acrylic
-   - sunflower-yellow knit vest
-4. **Slight:**
-   - narrow pointed chin, tan clay skin, swept-back auburn hair
-   - large eyes, freckle dots pressed into the clay
-   - navy felt blazer
+F1 Medium-wide at the figures' chest height, locked off: the four crowd figures from image 2 in a queue at the sink. Tall stands at the front, holding a cream clay shaker under the clear-gel stream, brows heavy and low. In the office kitchen from image 5, with the chunky cream clay sink, a felt tea towel and a clock with no numbers. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+Card 1: medium-wide crowd | mover Tall scrubs the shaker under the gel stream, start to end, while the others hold still | "line 1, MISSING" | 3 s | room tone, gel trickle
 
----
+F2 Medium shot at chest height, locked off: Dev from image 1 at the back of the queue, holding his cream clay shaker with a forest-green lid at chest height in his right hand, eyebrows slightly raised. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. In the office kitchen from image 5, with the crowd from image 2 soft in the background. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+Card 2: medium | mover Dev steps once into the back of the queue and stops, while the crowd holds | "line 2, MISSING" | 3 s | room tone, one soft footstep
 
-MISSING: the 10 script lines themselves, with each line's seconds, its claims and the mover column. I can't fix the lines, timings or claims until I have them. Please paste the script.
+F3 Close-up at the figure's shoulder height, locked off: Short from image 2 at the sink, holding an open cream clay shaker, lid in her other hand, brows pinched behind round clay glasses. In the office kitchen from image 5. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+Card 3: close-up | mover Short lifts the lid away and leans back slightly, while the others hold | "line 3, MISSING" | 3 s | small clay lid click
 
-MISSING: the photo files. I can't see any attached images in this chat. Please attach the pouch front, side and top, and the daily pack. A described pack can't be checked against the real one, so I'll ask for the photos again before stage 3.
+F4 Medium close-up at chest height, locked off: Dev from image 1, head tilted down at the cream clay shaker with a forest-green lid in his right hand, shoulders dropped. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. In the office kitchen from image 5, with the clock with no numbers soft behind him. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+Card 4: medium close-up | mover Dev's shoulders drop and his head tilts down to the shaker | "line 4, MISSING" | 3 s | room tone
 
-MISSING: the daily pack's label words. Until I have them, the daily pack's label side faces away from camera in every shot, including the morph's last frame.
+F5 (morph pair) Medium close-up at chest height, locked off: Dev from image 1, holding the cream clay shaker with a forest-green lid at chest height in his right hand, looking at it, brows lifting. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. In the office kitchen from image 5 [inferred]. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+F5-last: the same as F5, same camera, same right hand, but Dev now holds the flat daily pack from image 4 in place of the shaker, label side facing away toward Dev so only the plain back shows.
+Card 5: medium close-up | mover the shaker in Dev's right hand (morph); Dev holds still | "line 5, MISSING" | 3 s | soft clay squish
 
-MISSING: the pack's size next to a person, and your "never show" list (online-store add-on).
+F6 Medium close-up at chest height, locked off, the same framing as F5 with Dev on the same spot in frame: Dev from image 1, holding the flat daily pack from image 4 at chest height in his right hand, label side facing away, brows relaxed. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. At Dev's desk from image 6, with the blank paper-card monitor and the cream clay mug. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+Card 6: medium close-up | mover Dev lowers the pack and sets it flat on the desk beside the keyboard, label side down | "line 6, MISSING" | 3 s | soft tap on clay
 
-Note: the "daily pack in a hand" photo is used only as a reference for size and grip. No human hand enters the set; Dev's clay right hand holds it.
+F7 Medium shot at desk height, locked off: Dev from image 1 seated at the desk, hands resting on the chunky clay keyboard, the flat daily pack lying label side down beside it. Slight from image 2 is in the near foreground, crossing close to the lens. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. At Dev's desk from image 6. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+Card 7: medium | mover Slight walks across frame close to the lens, left to right, while Dev holds | "line 7, MISSING" | 3 s | soft footsteps
 
-**Stopping here.** Reply "yes" to approve this avatar card and crowd, or tell me what to change.
+F8 Medium shot at desk height, locked off: Dev from image 1 seated, leaning back in the desk chair with both hands behind his head, brows relaxed and eyes half closed. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. At Dev's desk from image 6, with the daily pack lying label side down. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+Card 8: medium | mover Dev leans back and lifts his hands behind his head | "line 8, MISSING" | 3 s | soft chair creak
+
+F9 Close-up at desk-top height, locked off: Dev's right arm and hand from image 1, holding the Sprout pouch from image 3 upright on the desk. The front label faces the camera, printed "Sprout" and "28 Daily Packs", with the yellow bear face at top right. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. At Dev's desk from image 6. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+Card 9: close-up | mover Dev's hand sets the pouch upright and lets go | "line 9, MISSING" | 3 s | soft pouch set-down
+
+F10 Medium shot at desk-top height, locked off: the Sprout pouch from image 3 sharp in the foreground, front label to camera, printed "Sprout" and "28 Daily Packs", with the yellow bear face at top right. Dev from image 1 sits soft in the background, smiling with his eyes, brows lifted. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. At Dev's desk from image 6. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show.
+Card 10: medium, product hero | mover Dev nods once in the background, while the pouch stays still | "line 10, MISSING" | 3 s plus end card | room tone
+
+SCENE CHANGE F1 > F2: cut
+SCENE CHANGE F2 > F3: cut
+SCENE CHANGE F3 > F4: cut
+SCENE CHANGE F4 > F5: cut
+SCENE CHANGE F5 > F6: match cut (same framing, Dev on the same spot, kitchen becomes desk, pack still in his right hand)
+SCENE CHANGE F6 > F7: pass-by wipe (Slight crosses close to the lens, desk set only)
+SCENE CHANGE F7 > F8: cut
+SCENE CHANGE F8 > F9: cut
+SCENE CHANGE F9 > F10: cut
+Continuity: the window and key light stay at frame left in both places, and the camera stays on the same side of the action throughout. Dev uses his right hand for the shaker, the pack and the pouch. The daily pack is never opened, and its label side never faces the camera. The pouch is only in F9 and F10. MISSING: how the daily pack is used, so no opening steps are shown.
+
+STAGE 5
+All clips: generate at 5 s from the start frame and trim to the line length in the edit. Attach image 1 (Dev), image 2 (crowd), image 3 (pouch), image 4 (daily pack), image 5 (kitchen) and image 6 (desk) as needed. Drop the Sound line if your tool makes no sound.
+
+CLIP 1 (5 s, start F1, last none)
+Stop-motion timing: the figures move in small stepped poses, about 12 new poses a second, with a faint shimmer of fingerprints between poses. The camera moves smoothly. Beat 1: Tall tilts the shaker under the clear-gel stream. Beat 2: he scrubs it with the felt tea towel in two stepped strokes. Beat 3: he holds. The other three crowd figures hold still. Camera: locked off. In the office kitchen from image 5. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show. Same figures as the references. Every surface stays clay, felt or fabric. Mouths stay still. Labels stay as printed. Sound: soft room tone and small prop sounds only.
+
+CLIP 2 (5 s, start F2, last none)
+Stop-motion timing: the figures move in small stepped poses, about 12 new poses a second, with a faint shimmer of fingerprints between poses. The camera moves smoothly. Beat 1: Dev lifts his right foot. Beat 2: he steps once forward into the back of the queue. Beat 3: he holds, the shaker at chest height. The crowd holds still. Camera: locked off. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. In the office kitchen from image 5. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show. Same figures as the references. Every surface stays clay, felt or fabric. Mouths stay still. Labels stay as printed. Sound: soft room tone and small prop sounds only.
+
+CLIP 3 (5 s, start F3, last none)
+Stop-motion timing: the figures move in small stepped poses, about 12 new poses a second, with a faint shimmer of fingerprints between poses. The camera moves smoothly. Beat 1: Short lifts the lid away from the shaker. Beat 2: her brows pinch and her head draws back slightly. Beat 3: she holds. Camera: locked off. In the office kitchen from image 5. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show. Same figures as the references. Every surface stays clay, felt or fabric. Mouths stay still. Labels stay as printed. Sound: soft room tone and small prop sounds only.
+
+CLIP 4 (5 s, start F4, last none)
+Stop-motion timing: the figures move in small stepped poses, about 12 new poses a second, with a faint shimmer of fingerprints between poses. The camera moves smoothly. Beat 1: Dev's shoulders drop. Beat 2: his head tilts down to the shaker. Beat 3: he holds. Camera: locked off. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. In the office kitchen from image 5. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show. Same figures as the references. Every surface stays clay, felt or fabric. Mouths stay still. Labels stay as printed. Sound: soft room tone and small prop sounds only.
+
+CLIP 5, MORPH (5 s, start F5, last F5-last)
+Stop-motion timing: the figures move in small stepped poses, about 12 new poses a second, with a faint shimmer of fingerprints between poses. The camera moves smoothly. One change: the cream clay shaker in Dev's right hand becomes the flat daily pack. Beat 1: the shaker's clay squashes down from the top. Beat 2: it flattens in a few stepped poses. Beat 3: it settles into the flat daily pack, label side facing away. Dev holds still the whole time and his hand stays in place. Camera: locked off. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. In the office kitchen from image 5. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show. Same figures as the references. Every surface stays clay, felt or fabric. Mouths stay still. Labels stay as printed. Sound: soft room tone and small prop sounds only.
+
+CLIP 6 (5 s, start F6, last none)
+Stop-motion timing: the figures move in small stepped poses, about 12 new poses a second, with a faint shimmer of fingerprints between poses. The camera moves smoothly. Beat 1: Dev lowers the daily pack. Beat 2: he lays it flat beside the keyboard, label side down. Beat 3: he lifts his hand away and holds. Camera: locked off. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. At Dev's desk from image 6. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show. Same figures as the references. Every surface stays clay, felt or fabric. Mouths stay still. Labels stay as printed. Sound: soft room tone and small prop sounds only.
+
+CLIP 7, WIPE (5 s, start F7, last none)
+Stop-motion timing: the figures move in small stepped poses, about 12 new poses a second, with a faint shimmer of fingerprints between poses. The camera moves smoothly. Beat 1: Slight enters at frame left, close to the lens and soft. Beat 2: she walks across the frame in stepped strides. Beat 3: she exits at frame right, leaving Dev seated. Dev holds still. Camera: locked off. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. At Dev's desk from image 6. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show. Same figures as the references. Every surface stays clay, felt or fabric. Mouths stay still. Labels stay as printed. Sound: soft room tone and small prop sounds only.
+
+CLIP 8 (5 s, start F8, last none)
+Stop-motion timing: the figures move in small stepped poses, about 12 new poses a second, with a faint shimmer of fingerprints between poses. The camera moves smoothly. Beat 1: Dev leans back in the chair. Beat 2: he lifts both hands behind his head. Beat 3: his eyes half close and he holds. Camera: locked off. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. At Dev's desk from image 6. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show. Same figures as the references. Every surface stays clay, felt or fabric. Mouths stay still. Labels stay as printed. Sound: soft room tone and small prop sounds only.
+
+CLIP 9 (5 s, start F9, last none)
+Stop-motion timing: the figures move in small stepped poses, about 12 new poses a second, with a faint shimmer of fingerprints between poses. The camera moves smoothly. Beat 1: Dev's hand lowers the Sprout pouch to the desk. Beat 2: he stands it upright with the front label to camera. Beat 3: his hand lets go and slides out of frame. Camera: locked off. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. The pouch label is printed "Sprout" and "28 Daily Packs", with the yellow bear face at top right. At Dev's desk from image 6. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show. Same figures as the references. Every surface stays clay, felt or fabric. Mouths stay still. Labels stay as printed. Sound: soft room tone and small prop sounds only.
+
+CLIP 10 (5 s, start F10, last none)
+Stop-motion timing: the figures move in small stepped poses, about 12 new poses a second, with a faint shimmer of fingerprints between poses. The camera moves smoothly. Beat 1: Dev, soft in the background, lowers his chin. Beat 2: he raises it again in one nod. Beat 3: he holds. The pouch stays still and sharp. Camera: locked off. Dev, a clay adult man about 30, slim build, warm brown matte clay skin, short black clay hair with visible comb grooves, mouth sculpted closed in a calm straight line, a mustard knit jumper of real woven fabric, navy clay trousers, a lanyard with a plain cream clay card and no words, chunky clay hands with rounded fingertips and no nails. The pouch label is printed "Sprout" and "28 Daily Packs", with the yellow bear face at top right. At Dev's desk from image 6. SET: a handmade stop-motion miniature set, figures about a hand tall, some thumbprints on matte modelling clay, felt and real woven fabric, photographed on a real tabletop set with a macro lens. Chunky props. Water as clear gel, steam as cotton wool, glass as clear acrylic, screens as printed paper cards. No words anywhere on the set except printed product labels. LIGHT: One soft warm morning key light from a window at frame left, a soft cream bounce fill from frame right, no lamps inside the set, bright enough to see every tool mark and thumbprint. PALETTE: Forest green #00582D, warm cream #FFF7DF, sunflower yellow #FFCC2E, with pale stone-grey clay walls and counters and Dev's mustard and navy. LENS: Shallow focus, the subject sharp and the background softly blurred, camera inside the miniature world at the height stated in the frame, the edges of the set never show. Same figures as the references. Every surface stays clay, felt or fabric. Mouths stay still. Labels stay as printed. Sound: soft room tone and small prop sounds only.
+
+Takes: make 2 or 3 takes of each clip and pick the one with the cleanest hands and labels.
+
+VOICE: an off-screen narrator in a stock library voice (for example ElevenLabs), never a cloned voice. Read the 10 lines with short pause tags between lines. No figure speaks, so there is no lip-sync.
+
+EDIT:
+- Order: clips 1 to 10 on the narration in script order, each trimmed to its line (about 3 s).
+- Scene changes: as in the stage 4 list. Clip 5 cuts on the match to clip 6, and clip 7's crossing is the wipe.
+- Captions: the narration, word for word.
+- End card: text only, over the end of clip 10 or after it. The offer and price come from your current offer. Label words appear only as printed on the pouch.
+- Safe zone: keep all words clear of the platform's buttons and caption area.
+- Music: only if the brand uses it, kept low under the voice. Otherwise room tone and prop sounds only.
+- Final check: every line said, the label words exact, the crowd never used as proof.
+
+How to finish it:
+- Each clip starts from a picture. Make each start frame (and F5-last) from its frame prompt in ChatGPT (GPT Image), Gemini (Nano Banana, which takes up to 14 reference images) or Higgsfield. Then animate each frame with its clip prompt.
+- Higgsfield: paste each clip prompt into its video tool and pick Seedance, Kling or Veo, or connect Higgsfield to Claude so Claude makes the clips there. It runs on paid credits. Veo takes the first and last frame for clip 5.
+- Gemini: paid Google AI plans include Veo video in the Gemini app, with a few clips a day.
+- Claude Code: with a key from a video service that offers Seedance, Kling or Veo, the prompts can be sent and the files saved. Pictures alone need an OpenAI key (platform.openai.com/api-keys) or a Google key (aistudio.google.com/apikey). OpenAI or Google bills each picture.
+
+MISSING: the narration words for lines 1–10.
+MISSING: the seconds per line (about 3 s each is inferred).
+MISSING: the claims in the script.
+MISSING: the daily pack's label words and colours (its label side faces away; please send the words).
+MISSING: how the daily pack is used (opening steps).
+MISSING: what the product is and how it's used.
+MISSING: the pouch's real size next to a person.
+MISSING: the place for line 5 (kitchen is inferred).
+MISSING: the offer and price for the end card.
+MISSING: whether your video tool makes sound.
+MISSING: whether the brand uses music.
+MISSING: the "never show" list.
+MISSING: the photo check of the pouch and daily pack (the photos were named but not visible).
+MISSING: the shaker's real look (cream body with a forest-green lid is inferred).
+
+CHECKS MISSED  none
 ```

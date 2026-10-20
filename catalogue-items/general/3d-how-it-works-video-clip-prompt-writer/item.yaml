@@ -30,7 +30,7 @@ credits:
   - {title: "Model sheet", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Model_sheet", used: "The sheet that keeps a character the same: several angles, expressions and poses"}
   - {title: "Storyboard", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Storyboard", used: "One frame per shot with framing, camera, movement, dialogue and timing, approved before production"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-sonnet-5-5

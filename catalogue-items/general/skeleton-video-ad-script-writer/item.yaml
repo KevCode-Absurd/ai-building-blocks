@@ -27,7 +27,7 @@ credits:
   - {title: "YouTube video ad creative: the ABCDs", by: "Think with Google", url: "https://business.google.com/us/think/future-of-marketing/youtube-video-ad-creative/", used: "Win attention in the first five seconds"}
   - {title: "7 Top Creative Tips (TikTok in-feed ads)", by: "TikTok for Business", url: "https://ads.tiktok.com/business/library/7TopCreativeTips.pdf", used: "Short in-feed lengths, which set our 15, 25 and 35 second targets"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

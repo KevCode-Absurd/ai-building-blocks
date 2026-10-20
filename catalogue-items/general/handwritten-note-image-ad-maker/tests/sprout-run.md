@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
 
-This is a clear, usable brief: the note copies the approved story exactly, the paper and place suit an old note found in a drawer, and the hand-written route is easy to follow. It gives the owner an honest no-image-tool line and a complete fallback prompt.
+The run gives a clear, usable brief for a photographed handwritten envelope, with the four lines copied exactly from the approved story. It recommends writing it by hand, supplies a fallback image prompt, and marks the gaps instead of guessing.
 
 ## Judge list
 
 - Met: The note is the narrator's own, not from a doctor, expert or customer.
-  Past self, lifted from the approved story: "greens powder: gritty / pills: made me gag..."
+  Note lifted from the approved story: the narrator's own envelope list; 'Their past self. It's an old note found later.'
 - Met: No signature with a full name, and no claim about the product.
-  Four lines of quits only; no signature; prompt says "No logos, brands, products, people, hands".
+  Four lines of quits only; 'No other writing anywhere. No logos, brand names, products or people.'
 - Met: Every word is spelled exactly as given.
-  Words match the story: gritty, made me gag, forgot, stopped. Flags ask for a letter-by-letter check.
+  Four lines match the input exactly: 'greens powder: gritty' through 'probiotics: stopped'.
 - Met: It looks like real handwriting, not calligraphy or a font.
-  "ordinary adult's blue ballpoint, lowercase, legible and a little uneven"; best route is writing it by hand.
+  'ordinary adult's legible, slightly uneven handwriting... no handwriting font'; best route is writing it by hand.
 - Met: Short enough to read on a phone without zooming.
-  12 words on 4 lines; within the 5 to 20 word limit.
+  '12 words, 4 lines' (at most 5 lines, 5 to 20 words).
 
 ## What went in
 
@@ -39,56 +39,62 @@ Buyer: the quitter who wants to stick, 28 to 45.
 ## What came out
 
 ```text
-I can't draw the picture here because no image tool is connected to this chat. Below is the brief and a prompt you can use.
+I can't draw in this chat, so this is the brief and the image prompt, with how to finish it at the end.
 
-1. **Scene:** An old folded envelope in a messy kitchen drawer with a handwritten list of four supplements and why each one was dropped.
+**1. Scene**
+An old envelope in a messy kitchen drawer, with a short handwritten list of supplements someone gave up on.
 
-2. **Who it was for:** Their past self. It is an old note found later.
+**2. Who it was for**
+Their past self. It's an old note found later.
 
-3. **Paper and place:**
-   - **Paper:** The back of a used white envelope. It is creased into quarters from being folded, and the edges are a little yellowed.
-   - **Place:** It lies half-unfolded in a kitchen junk drawer among rubber bands, a takeaway menu, loose batteries and a dried-out pen.
-   - **Light:** Plain daylight from a nearby window. The drawer is shot from above at a slight angle, as if just pulled open.
-   - **Format:** Square 1:1.
+**3. Paper and place**
+- **Paper:** the back of a used white envelope, creased where it was folded in half, edges gone a little soft.
+- **Where it lies:** on top of the clutter in a half-open kitchen drawer, shot from above.
+- **Light:** ordinary daylight from a window, slightly cool, with a soft shadow from the drawer's front edge.
+- **Within reach:** rubber bands, two AA batteries, a takeaway menu, a spare key. A hand may hold one corner of the envelope at the frame edge.
+- **Format:** square 1:1. Unretouched phone photo. No product, no brand.
 
-4. **The hand:**
-   - Ordinary adult's blue ballpoint, lowercase, legible and a little uneven.
-   - The ink is slightly faded, as if written months ago.
-   - The tone is flat and matter-of-fact, like someone keeping score.
-   - No crossing-out, because the story has none.
+**4. The hand**
+- Blue ballpoint, a little faded with time.
+- An ordinary adult's handwriting: legible, slightly uneven, letters not all the same size, lines drifting a touch.
+- No crossing-out, because the story has none.
 
-5. **Words on the image** (12 words, 4 lines):
-   - greens powder: gritty
-   - pills: made me gag
-   - multivitamin gummies: forgot
-   - probiotics: stopped
+**5. Words on the image** (12 words, 4 lines)
+1. greens powder: gritty
+2. pills: made me gag
+3. multivitamin gummies: forgot
+4. probiotics: stopped
 
-6. **Blank version:** The same creased envelope in the same drawer with nothing written on it, and a blue ballpoint lying beside it.
+**6. Blank version**
+The same creased envelope back in the same drawer clutter, with nothing written on it and a blue ballpoint lying beside it.
 
-7. **Line under the image:** Found this clearing a drawer
+**7. Line under the image**
+Found this in a drawer. (23 characters)
 
-8. **Flags:**
-   - The words are lifted exactly from the approved story. None were written for the image.
-   - Check these letter by letter: "multivitamin", "probiotics", "gritty", "gag". Also check that each line has its colon and that the text is all lowercase.
+**8. Flags**
+- **Lifted or written:** the words are lifted exactly from the approved story, not written for the image.
+- **Check letter by letter:** "multivitamin", "probiotics", "gritty", "gag", and the colon after each item.
+- MISSING: brand brain (`voice-and-look.md` photo style). The drawer and light are set from the story alone, so swap them if the brand's photo style says otherwise.
+- MISSING: buyer's own words. The caption is a plain description, not the buyer's own line.
 
-9. **How to make it:**
-   - **Best: write it by hand.**
-     1. Take a used envelope, fold it in quarters, then open it.
-     2. Write the four lines on the back in blue ballpoint, in your ordinary hand.
-     3. Rub the edges lightly so it looks handled.
-     4. Drop it into a real junk drawer.
-     5. Take the photo on your phone by daylight, square crop, with no filter.
+**9. How to make it**
 
-     This takes about five minutes, and every letter will be right.
-   - **Next best: use an image tool with this prompt:**
+*Best: by hand.* Takes five minutes and gets every letter right.
+1. Turn over a used envelope and fold it in half once, then flatten it.
+2. Write the four lines in blue ballpoint at normal speed, without neatening.
+3. Lay it on the clutter in a real kitchen drawer.
+4. Shoot it from above on your phone in daylight, square, with no filter.
 
-     > Square 1:1 phone photo, from above at a slight angle, of the back of a used white envelope lying half-unfolded in a cluttered kitchen junk drawer among rubber bands, a takeaway menu, loose batteries and a dried-out pen. The envelope is creased from being folded in quarters, edges slightly yellowed. On it, four lowercase lines in an ordinary adult's blue ballpoint, slightly faded, legible, a little uneven, no crossing-out, spelled exactly: "greens powder: gritty / pills: made me gag / multivitamin gummies: forgot / probiotics: stopped". Plain window daylight, soft shadows, unretouched. No logos, brands, products, people, hands or any other text.
+*Fallback: image prompt.*
+> Phone photo, square 1:1, looking down into a half-open kitchen drawer in ordinary daylight. On top of everyday clutter (rubber bands, two AA batteries, a takeaway menu, a spare key) lies the back of a used white envelope, creased from being folded in half, edges slightly soft. Written on it in faded blue ballpoint, in an ordinary adult's legible, slightly uneven handwriting, exactly four lines: "greens powder: gritty / pills: made me gag / multivitamin gummies: forgot / probiotics: stopped". No other writing anywhere. No logos, brand names, products or people. Natural phone-camera grain, soft shadow from the drawer edge, unretouched, no handwriting font.
 
-   - **To finish it with an image tool:**
-     - **ChatGPT or Gemini:** Paste the prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-     - **Higgsfield:** Paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-     - **Claude Code:** If you have `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that image API and save the file. You can get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI or Google bills each picture.
-   - Whichever tool you use, check every word letter by letter before it runs.
+*To finish it:*
+- **ChatGPT or Gemini:** paste the prompt into a chat and ask for the picture, then check each letter. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits.
+- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send the prompt to that API and save the file. Each picture is billed by OpenAI or Google.
 
-10. **Score:** 100/100 (6 of 6 checks)
+**10. Checks missed**
+None.
+
+Want to check it before it goes live with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker)? It takes the image prompt. Or tell me what you'd rather do next.
 ```

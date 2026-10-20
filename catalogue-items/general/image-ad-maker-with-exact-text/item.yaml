@@ -27,8 +27,8 @@ credits:
   - {title: "Text in Images", by: "Ideogram", url: "https://docs.ideogram.ai/prompting/text-in-images", used: "text in reading order with its own place and style, short lines, long copy added in a design tool"}
   - {title: "Prompt Structure", by: "Ideogram", url: "https://docs.ideogram.ai/prompting/prompt-structure", used: "image type first, ratio and quality set in settings, not in words"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

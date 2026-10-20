@@ -22,7 +22,7 @@ credits:
   - {title: "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing", by: "Ron Kohavi, Diane Tang and Ya Xu", url: "https://experimentguide.com/", used: "Sizing before launch, checking the split stays even, and reading flat results"}
   - {title: "eCommerce CRO masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "The question of when a store has enough visitors to test"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

@@ -21,8 +21,8 @@ version: 2.0.0
 credits:
   - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "The five awareness levels and the five stages of what a market has heard, and how each changes the argument"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

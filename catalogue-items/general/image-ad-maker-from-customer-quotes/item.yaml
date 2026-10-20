@@ -27,8 +27,8 @@ credits:
   - {title: "Trade Regulation Rule on the Use of Consumer Reviews and Testimonials", by: "US Federal Trade Commission", url: "https://www.ftc.gov/system/files/ftc_gov/pdf/r311003consumerreviewstestimonialsfinalrulefrn.pdf", used: "No invented or misattributed reviews"}
   - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "27-character headline and 50 to 150 character main text"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

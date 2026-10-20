@@ -26,8 +26,8 @@ credits:
   - {title: "Manga iconography", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Manga_iconography", used: "Feelings drawn as shared symbols, such as the sweat drop"}
   - {title: "Motion comic", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Motion_comic", used: "Panels expanded into full shots with limited motion and narration, lettering kept out of the art"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

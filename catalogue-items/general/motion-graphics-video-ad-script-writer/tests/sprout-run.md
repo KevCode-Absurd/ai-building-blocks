@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A tight, buildable 20-second plan that uses only the approved counts, the study figures and the full offer terms, with holds and timing that add up correctly. It flags the missing photo, placebo figure and shipping/guarantee terms honestly rather than guessing, so the owner can hand it straight to the build step once those are supplied.
+A tight, buildable 20-second plan that uses only the approved numbers and offer terms, draws the chart honestly from the 2.7x ratio, and keeps the renewal price next to the first-order price. It correctly refuses to describe the unattached photo and lists real gaps (pack definition, sugar, placebo figure) as MISSING instead of guessing.
 
 ## Judge list
 
 - Met: Every number on screen is on the fact sheet, with a source.
-  Fact sheet F1–F10 covers 60+, 21, 6g, 40.1%, 2.7x, 2025/12 weeks/120 adults, $29.99, $49.99; placebo height F8 "never shown as a number".
+  Fact sheet lists 60+, 21, 6g, 2025/12 weeks/120 adults, +40.1%, 2.7x, $29.99/$49.99/4 weeks, each sourced to the brief's approved claims.
 - Met: Each chart starts at zero and its bars match their numbers.
-  "Two bars stand on one baseline from zero: Sprout (height 40.1) and placebo (height ≈14.85, scaled from F8)"; 40.1 ÷ 2.7 = 14.85.
-- Met: Each shot has one fact and one on-screen line of about 30 characters or fewer.
-  Longest main line "21 vitamins & minerals (22)"; shot 6's F5 is the required source line, shot 8's extra lines are mandated price terms.
+  "The Sprout bar is 600px tall and stands for +40.1%. The placebo bar is 600 ÷ 2.7 = 222px"; bars "grow from zero".
+- Met: Every shot has one fact and one on-screen line of about 30 characters or fewer.
+  Main lines run 8 to 22 characters, e.g. "21 vitamins & minerals (22)"; label and small lines are the allowed secondary type.
 - Met: The look card names your real colours and fonts, with one highlight colour.
-  "Cream #FFF7DF… Forest green #00582D… Highlight: Sunflower yellow #FFCC2E"; Work Sans Bold/Medium, DM Mono.
+  Cream #FFF7DF background, deep forest/forest/kelly green shapes, "Highlight: sunflower yellow #FFCC2E"; Work Sans Bold/Medium, DM Mono.
 - Met: The full price terms appear wherever the price does.
-  Shot 8: "$29.99" with "WITH TEXT SIGN-UP" / "RENEWS AT $49.99 EACH 4 WEEKS" / "CANCEL ANYTIME"; price appears nowhere else.
+  Shot 8: "First order $29.99 / with text sign-up / RENEWS AT $49.99 EACH 4 WEEKS. · CANCEL ANYTIME."
 
 ## What went in
 
@@ -41,83 +41,73 @@ Video, 20 seconds, tall.
 
 ```text
 ## 1. Fit
-A graphic ad fits this buyer: they already know Sprout from the shelf, and their doubt is a specific one ("just sweets"). Hard counts, a charted study and plain terms answer it better than a story would.
+Good fit. The buyer already knows Sprout from the shelf and doubts what's in it. Showing the contents and the study numbers answers that doubt directly.
 
 ## 2. Look card
-- **Frame:** Tall 9:16, 1080×1920. Outer margin 80 px. Keep these areas free of words: the top 250 px, the bottom 380 px (caption and buttons) and the right 120 px (app icons). All text sits in the central column above the pouch.
+- **Frame:** Tall, 1080×1920 (9:16). Side margins are 80px. The app covers three areas, so no words go in them: the top 250px, the bottom 420px and the right 140px (past x = 940). The pouch sits lower left, at about x 120–540 and y 860–1480. Headlines go in the upper band, at about y 280–760. The stack and the chart go in the right column, at about x 600–920 and y 860–1480.
 - **Colour jobs:**
-  - **Background:** Cream #FFF7DF across most of the frame.
-  - **Brand shapes:** Forest green #00582D for stack cards, the Sprout bar and the price panel. Kelly green #007E40 for secondary shapes and the placebo bar.
-  - **Type:** Deep forest #002C17 for all type.
-  - **Highlight:** Sunflower yellow #FFCC2E is kept for the one thing each shot is about. It appears as a chip or underline behind that word or number, never as yellow text on cream, which would be hard to read.
+  - Background: cream #FFF7DF across the full frame.
+  - Text and shapes: deep forest #002C17 for headlines and the chart baseline, forest green #00582D for labels and the small line.
+  - Second shape colour: kelly green #007E40, used for earlier stack items and the placebo bar.
+  - Highlight: sunflower yellow #FFCC2E, used only for the one thing each shot is about. It sits behind the number as a pill or forms the Sprout bar. Text on it is deep forest, never yellow text on cream.
 - **Type:**
-  - **Main line:** Work Sans Bold, about 96 px.
-  - **Label:** Work Sans Medium, about 44 px.
-  - **Small line:** DM Mono uppercase, about 26 px, for the study source and offer terms.
-- **Product:**
-  - The real photo of the Sprout pouch, cut out true to its shape. Keep the glossy deep-green finish, the reflections and the yellow wordmark exactly as printed.
-  - Add one soft shadow below it.
-  - Place it lower-left of centre, about 40% of frame height, and keep it in that spot from shot 1 to the end.
-  - Never redraw it as an icon or reset the wordmark in another font.
+  - Main line: Work Sans Bold, about 96px.
+  - Label: Work Sans Medium, about 44px.
+  - Small line for sources and terms: DM Mono, uppercase, about 28px.
+- **Product:** The real Sprout pouch photo, cut out to its exact outline. It keeps its gloss, its deep green and its yellow wordmark, with one soft shadow below. It is never redrawn or retyped. *(Cutout depends on the photo, see MISSING.)*
 - **Motion:**
-  - **In:** Rise 40 px and fade in, ease-out, 0.4 s.
-  - **Out:** Fade out and drop 20 px, ease-in, 0.3 s.
-  - **Numbers:** Snap into place with the same ease-out.
-  - **Bars:** Grow from the baseline over 0.5 s, ease-out.
+  - Way in, for the whole ad: rise 40px and fade in, ease out, 0.4s.
+  - Way out, for the whole ad: fade out and rise 20px, ease in, 0.3s.
+  - Numbers snap in with the same ease out.
+  - Bars grow from the baseline, ease out, 0.5s.
 
 ## 3. Fact sheet
-| # | Fact | Source |
-|---|---|---|
-| F1 | 60+ ingredients in 1 pack | Brand approved claim |
-| F2 | 21 vitamins & minerals in 1 pack | Brand approved claim |
-| F3 | 6g fiber in 1 pack | Brand approved claim |
-| F4 | "Clinically tested for nutrient absorption" | Brand approved claim, based on the 2025 study |
-| F5 | 2025 study, 12 weeks, 120 adults | Brand approved claim (study details) |
-| F6 | Vitamin C +40.1% | 2025 study, as approved |
-| F7 | 2.7x placebo | 2025 study, as approved |
-| F8 | Placebo bar height ≈ 14.9% | Derived from 40.1 ÷ 2.7. Used only to draw the bar; never shown as a number |
-| F9 | $29.99 first order, with text sign-up | Brand offer |
-| F10 | "Renews at $49.99 each 4 weeks. Cancel anytime." | Brand offer terms, always shown with F9 |
+| Fact | Source |
+|---|---|
+| 60+ ingredients in 1 pack | Brand-approved claim (your brief) |
+| 21 vitamins & minerals in 1 pack | Brand-approved claim |
+| 6g fiber in 1 pack | Brand-approved claim |
+| "Clinically tested for nutrient absorption" | Brand-approved claim |
+| Study: 2025, 12 weeks, 120 adults | Brand-approved claim, study details |
+| Vitamin C +40.1% | 2025 study, as approved |
+| 2.7x placebo | 2025 study, as approved |
+| First order $29.99 with text sign-up. Renews at $49.99 each 4 weeks. Cancel anytime. | Brand offer terms, kept together |
+
+**Chart scale:** The Sprout bar is 600px tall and stands for +40.1%. The placebo bar is 600 ÷ 2.7 = 222px. Its height comes from the sourced ratio. No placebo number is shown.
 
 ## 4. Shot table
 | # | Fact | Narration | Picture and move | On-screen text (characters) | Hold | Build note |
 |---|---|---|---|---|---|---|
-| 1 | Product: Sprout pouch | "Just sweets? Here's one Sprout pack." | The pouch arrives into its anchor spot and settles with its shadow. A yellow chip sits behind "sweets?" | Just sweets? (12) | 2.2 s | Editor or code: pouch cutout plus live text. Video model: cream background only, with pouch and text placed on top. |
-| 2 | F1 | "Over 60 ingredients," | The first stack card (forest green) slides in beside the pouch. "60+" counts up, then holds, on a yellow chip. | 60+ ingredients (15) | 1.8 s | Live text. Count-up is a code animation, not generated. |
-| 3 | F2 | "21 vitamins and minerals," | A second card joins under the first and "21" snaps in on the chip. The first card stays still and loses its chip. | 21 vitamins & minerals (22) | 2.1 s | Live text. Model: plain green card shapes only, with no text in them. |
-| 4 | F3 | "and 6 grams of fiber." | A third card joins and "6g" snaps in on the chip. The other two cards hold still. | 6g fiber (8) | 1.8 s | Live text. |
-| 5 | F4 | "Clinically tested for nutrient absorption." | The stack leaves together (the one exit move). The main line arrives with the label "nutrient absorption" below it in Work Sans Medium. A yellow underline sits under "Clinically". | Clinically tested (17) | 2.3 s | Live text. Don't paraphrase the claim in the narration. |
-| 6 | F5, F6 | "Over 12 weeks, vitamin C was up 40.1 percent—" | Two bars stand on one baseline from zero: Sprout (forest green, height 40.1) and placebo (kelly, height ≈14.85, scaled from F8). Both grow from zero. Only the Sprout bar gets the yellow "+40.1%" chip. The small line reads: "2025 STUDY · 12 WEEKS · 120 ADULTS · VS PLACEBO". | Vitamin C +40.1% (16) | 3.2 s | Build the bars in code from these values. Never use a model for the bars. The placebo bar carries a "PLACEBO" tag, with no number. |
-| 7 | F7 | "2.7 times placebo." | The bars hold still. A bracket joins the two bar tops and "2.7x" snaps in on the chip. The source line stays. | 2.7x placebo (12) | 1.8 s | Live text. The bracket is a code shape. |
-| 8 | F9, F10 | "Text to sign up: first order $29.99. Renews at $49.99 each 4 weeks. Cancel anytime." | The pouch sits with the offer panel. "$29.99" sits on a yellow chip. The small lines read: "WITH TEXT SIGN-UP" / "RENEWS AT $49.99 EACH 4 WEEKS" / "CANCEL ANYTIME". Nothing moves while the terms are read. | $29.99 first order (18); small lines 17 / 29 / 14 | 4.8 s | All text live. Add the logo as a file, not generated. Terms are set word for word as approved. |
+| 1 | One pack (the subject) | "Just sweets? Look inside one pack." | The pouch cutout arrives lower left and settles. The headline arrives above. | What's in one pack? (19) | 2.0s | Live text. The pouch is the real photo layer and stays on screen for the whole ad. |
+| 2 | 60+ ingredients | "Sixty-plus ingredients." | The first stack item arrives in the right column. "60+" sits big on a yellow pill. Pouch holds. | 60+ ingredients (15) | 1.6s | Live text. Pill shape in code. |
+| 3 | 21 vitamins & minerals | "Twenty-one vitamins and minerals." | The second item joins below. The yellow pill moves to "21". Item 1 turns to kelly green. | 21 vitamins & minerals (22) | 2.0s | Live text. Earlier item stays put. |
+| 4 | 6g fiber | "And six grams of fiber." | The third item joins below. The yellow pill moves to "6g". The others turn to kelly green. | 6g fiber (8) | 1.4s | Live text. |
+| 5 | Clinically tested | "Clinically tested for nutrient absorption." | The stack leaves (way out). The headline arrives with its label beneath. The source small line arrives at the bottom of the text band. Pouch holds. | Clinically tested (17) / label: for nutrient absorption (23) / small: 2025 STUDY, 12 WEEKS (20) · 120 ADULTS (10) | 2.4s | Live text. The small line stays through shot 7. |
+| 6 | Vitamin C +40.1% | "Vitamin C: up forty point one percent." | A deep forest baseline is drawn in the right column. The yellow Sprout bar grows from zero to 600px. "+40.1%" counts up above it and holds. | Vitamin C: +40.1% (17) | 2.2s | Bar height is set in code (600px). The count-up ends on 40.1 exactly. |
+| 7 | 2.7x placebo | "Two point seven times placebo." | The kelly green placebo bar grows from zero to 222px, left of the Sprout bar, on the same baseline. The Sprout bar holds. | 2.7x placebo (12) / bar labels: Placebo · Sprout | 2.0s | Bar height is 222px (600 ÷ 2.7). No placebo number. |
+| 8 | Offer and full terms | "First order: twenty-nine ninety-nine with text sign-up. Renews at forty-nine ninety-nine each four weeks. Cancel anytime." | The chart leaves. The price, label and terms arrive together under the headline. After that, nothing moves. The pouch holds as the close. | First order $29.99 (18) / label: with text sign-up (17) / small: RENEWS AT $49.99 EACH 4 WEEKS. (30) · CANCEL ANYTIME. (15) | 6.4s | Live text. The terms are word-for-word as approved and stay on screen the whole shot. |
 
-Total: 20.0 s. Each hold is at least the line's characters ÷ 15 + 0.5 s.
+**Total:** 20.0s.
 
 ## 5. Notes
-**Content choices**
-- **Ingredient stack:** No ingredient names were given, so the "what's inside" stack shows the three approved counts rather than named ingredients.
-- **Placebo bar:** The bar height is derived from the rounded "2.7x" (≈14.9%). It is drawn to scale but carries no number, because no placebo figure was supplied. Confirm the exact figure and redraw the bar if it differs.
-- **Study wording:** The narration keeps to "vitamin C was up 40.1 percent". It doesn't say what was measured, because the brief doesn't say.
-- **Frame:** The no-text zones are standard tall-feed areas, inferred because no platform was named. The colours and fonts come from the brand, so the look card is not marked "inferred".
-- **Pace:** Narration runs at about 3 words per second. It is brisk but clear, and the offer shot needs the full 4.8 s.
-
-**MISSING:**
-- **Product photo:** The photo file itself was described as "on file" but not attached. The cutout can't be planned, and the label can't be checked for sharpness, until it is supplied.
-- **Placebo figure:** The exact placebo % change from the 2025 study.
-- **What the 40.1% measures:** For example blood vitamin C level, and from what baseline.
-- **Study citation:** Who ran or funded it, and whether it was published, for the source line.
-- **One pack:** What "one pack" is, for example a day's serving and how many gummies.
-- **Renewal shipment:** What each 4-week renewal ships.
-- **Shipping and guarantee:** Shipping cost and the guarantee terms. The store add-on asks for both at the close.
-- **Text sign-up:** The sign-up keyword and number, if it should be shown or said.
+- **Inferred:** The layout positions and type sizes are my choices. The terms are set in uppercase DM Mono to match the brand's tag style, but the wording is unchanged.
+- **Placebo bar:** Its height comes from "2.7x placebo." The placebo figure itself isn't in the brief, so no number is shown on that bar.
+- **Terms line:** "RENEWS AT $49.99 EACH 4 WEEKS." carries two numbers. It is kept whole so the terms read exactly as approved.
+- **Left out:** "Steps of use" and the guarantee. Neither was supplied.
+- MISSING: the product photo itself. It's "on file" but not attached, so the cutout can't be planned or checked yet.
+- MISSING: what "1 pack" is (number of gummies or servings, and whether it's a daily pack). The narration says "one pack" only.
+- MISSING: what the +40.1% measured (for example, blood vitamin C levels against the starting point), and who ran or published the study.
+- MISSING: the placebo result as a number.
+- MISSING: sugar per pack. This is the buyer's main worry, and right now the ad answers it only indirectly, through the fiber and ingredient counts.
+- MISSING: shipping and guarantee terms, if they should appear in the close.
 
 ## 6. Cast note
-- **Product:** It needs one front-view cutout of the Sprout pouch with the label sharp. It is the same pouch this buyer has seen on the shelf, so recognising it does the reassuring before any number lands.
-- **Voice:** A warm, plain-spoken adult voice. Matter-of-fact, a little brisk, never salesy. Like a friend reading you the label.
-- **Never change:** The pouch's shape, gloss and yellow wordmark printing. Sunflower yellow's single job of marking the one thing each shot is about.
+- **The avatar:** The Sprout pouch is the avatar. It needs one front-view cutout with a legible wordmark. It's the pack this buyer has already seen on the shelf, so recognising it does the trust-building.
+- **Narrator:** Warm, plain-spoken and unhurried, like a friend reading the label to you. Confident, never salesy.
+- **Never changes:** the pouch's outline, its gloss and green, its yellow wordmark and printing, and yellow's single job as the highlight for each shot's one fact.
 
-## 7. Score
-**83 / 100** (5 of 6 checks passed: 5 ÷ 6 × 100 = 83)
+## 7. Checks missed
+- "The product is the real photo" is unconfirmed until the pouch photo is attached and the cutout is checked against it.
 
-- **Missed, "Every chart is drawn to scale from zero":** The placebo bar's height comes from the rounded 2.7x ratio, not a sourced placebo figure. It passes once the exact placebo % is supplied.
+Next, would you like to check it before it goes live with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), tighten the voiceover with the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor), or turn it into image ads with the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner)? Or tell me something else.
 ```

@@ -23,8 +23,8 @@ credits:
   - {title: "Scientific Advertising", by: "Claude C. Hopkins", url: "https://www.holloway.com/g/scientific-advertising", used: "An exact fact is believed where a general claim is discounted"}
   - {title: "How Users Read on the Web", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/how-users-read-on-the-web/", used: "Readers scan, so each point is one plain sentence and the list gets a skim test"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

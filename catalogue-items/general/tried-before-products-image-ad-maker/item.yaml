@@ -24,8 +24,8 @@ credits:
   - {title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?", by: "Susan Heckler and Terry Childers, Journal of Consumer Research", url: "https://doi.org/10.1086/209275", used: "The stop check: unexpected and relevant together"}
   - {title: "Facebook Ads Guide: image ad specs", by: "Meta", url: "https://www.facebook.com/business/ads-guide/update/image", used: "About 27 characters for the line under the picture"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

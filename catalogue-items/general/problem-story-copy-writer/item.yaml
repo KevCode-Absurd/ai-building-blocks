@@ -23,8 +23,8 @@ credits:
   - {title: "Imagine yourself in the product: Mental simulation, narrative transportation, and persuasion", by: "Jennifer Edson Escalas, Journal of Advertising (2004)", url: "https://doi.org/10.1080/00913367.2004.10639163", used: "Letting the reader picture using the product raises persuasion, so the rise is a first use they can picture"}
   - {title: "The emotional arcs of stories are dominated by six basic shapes", by: "Andrew J. Reagan, Lewis Mitchell, Dilan Kiley, Christopher M. Danforth and Peter Sheridan Dodds", url: "https://arxiv.org/abs/1606.07772", used: "The fall-then-rise shape as the base of the story"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

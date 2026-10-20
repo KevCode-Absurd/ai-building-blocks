@@ -1,35 +1,26 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 2.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 2.
 
-The script is clear, well-timed and honest about missing photos, with a strong one-pack-versus-many-steps argument. It is held back by a small-print renewal disclosure and by wrongly claiming a source was missing when Sprout's files give it.
-
-## Fix
-
-In step 6 and the offer-close rule, require the renewal price and sign-up condition to be shown at readable size alongside the offer, and in step 9 tell the writer to check the brand file for figure sources before marking MISSING.
+A tight 20-second script with a clear swap from four powder steps to one pack, sound-off friendly, with the offer terms shown at equal size. It marks gaps as MISSING and holds back the study chart until approved.
 
 ## Judge list
 
 - Met: You can say the point in one breath, and it has one "but".
-  "You quit greens powders and expect greens to mean a scoop... but the powder routine piles up steps... therefore Sprout... one pack"
+  "You want your daily greens and expect a scoop-shake-sip routine, but every step... therefore Sprout... one pack you tear, tip and eat."
 - Met: Each line's proof picture fits what the line claims.
-  Line 3 "row of four shrinks to one" for fewer steps; line 5 discs laid out flat for "contains".
+  Line 3 swap for "instead"; line 5 counters beside pouch for "made of"; line 4 shows no water, no mixing.
 - Met: Each picture is marked to land on a key word.
-  Key word column filled each line: shake, scrub, one, Tear, 21, $29.99; moves tied to the words.
+  Key word column filled each line, e.g. "routine", "Scrub", "one", "tip".
 - Met: Every number on screen has a source in the notes.
-  Notes cover 60+/21/6g as approved claim, and $29.99/$49.99 as offer terms; only the source document was flagged MISSING.
+  Notes: "60+... your approved claim"; "$29.99... your offer, as given." "4 steps → 1 pack" is a count of drawn objects.
 - Met: With the sound off, the pictures alone still make the argument.
-  Row of objects shrinks to one pouch, tear and tip, 21 discs, price end card; on-screen words support.
+  Old-step row becomes one pouch; torn top, gummies into palm, "No water. No mixing."
 
 ## Invented
 
-- number: 14.9% (Worked out as 40.1 ÷ 2.7 and shown only as a conditional longer-cut chart; arithmetic on given numbers.)
-- other: The pouch's top strip tears... gummies tip out... residue crumbs under lid (Crumbs are a paper prop for the chalky/gritty complaint, not a factual claim.)
-
-## Safety
-
-- Line 6 narration says "First order $29.99 with text sign-up" but the on-screen text puts the renewal price only in a small line; the shown on-screen disclosure is small while the offer is large, which could mislead on renewal price.
-- Notes self-score reports 'every figure has a source' as missed, though the brand files name the product page/science page as the source, so the MISSING flag is spurious.
+- other: a chalky crust on the rim; sponge on the shaker; glass with a chalky ring (Creative picture details, not factual claims; fine.)
+- number: placebo about 14.9% (derived from 40.1 ÷ 2.7) (Worked out from given figures, flagged as derived and held back pending approval.)
 
 ## What went in
 
@@ -53,53 +44,54 @@ Video, 20 seconds.
 
 ```text
 ## The point
-You quit greens powders and expect greens to mean a scoop, a shake and a gritty shaker to wash, **but** the powder routine piles up steps before and after every glass, **therefore** Sprout daily greens gummies come in one pack: tear, tip, done.
 
-## The paper kit
-- **Ground:** cream #FFF7DF paper, one sheet throughout.
-- **Cut:** scissor-cut edges on every piece, with visible paper thickness and soft short shadows.
-- **Old-way pieces:**
-  - The tub, scoop, water glass and shaker are cut from unbranded photos in black and white.
-  - Plain paper parts (residue crumbs, discs) are forest green #00582D.
-- **Product:** the Sprout pouch is always full colour, cut from the real pouch-front photo.
-- **Signal:** sunflower #FFCC2E ring, one per line, used only to point.
-- **Type:** set in editing only, nothing drawn on paper.
-  - Key words in Work Sans bold.
-  - Offer disclosure in Work Sans medium.
+You want your daily greens and expect a scoop-shake-sip routine, **but** every step (measuring, mixing a chalky drink, scrubbing a gritty shaker) is where the habit dies, **therefore** Sprout daily greens gummies come in one pack you tear, tip and eat.
 
-## The script
-Key words are in **bold**. Target length is 20 s at about 2.5 words a second.
+*Buyer moment and words ("gritty/chalky", "not having to clean a shaker bottle") come from your input. The ad never names a rival brand.*
 
-| Line | narration | key word | proof picture | signal | move | on-screen words | seconds |
+## The paper kit (fixed for the whole ad)
+
+- **Ground:** cream paper, #FFF7DF, with a faint fibre texture.
+- **Cut:** clean die-cut edges on every piece. The only torn edge is the pack's own torn top, taken from the product photo. Visible paper thickness (about 1mm) and soft, short drop shadows.
+- **Old-way pieces:** the tub, scoop, glass and shaker. Each is a black-and-white photo cutout, so they share one treatment. Until the photos exist, use flat cut paper in warm grey with no marks.
+- **Product:** always the full-colour cutout from the real pouch photo, label sharp.
+- **Signal:** sunflower #FFCC2E. The pointer is one paper ring with a short tab. It points only and is never decoration.
+- **Type:** set in editing, never printed on the paper. Work Sans Bold for key words, Work Sans Medium for offer terms. Text is forest green #00582D on cream, with no green in the paper pieces, so the yellow ring is the only accent.
+- **Hand:** a plain made-up paper palm, cut flat in a skin-neutral tan. It is not the photo hand, so no real person appears.
+
+## The script (20 seconds, about 50 words at 2.5 words per second)
+
+| Line | Narration | Key word | Proof picture | Signal | Move | On-screen words | Seconds |
 |---|---|---|---|---|---|---|---|
-| 1 | Greens powder means a scoop, a pour, a **shake**. | shake | The old routine as a row of objects (tub, scoop, glass of water, shaker), each landing on its verb | Ring on the shaker | Build-up: pieces land one by one, the shaker last on "shake" | Scoop. Pour. Shake. | 0–3.5 |
-| 2 | Then a gritty shaker to **scrub**. | scrub | The shaker lid lifts to show chalky green crumbs stuck underneath | Ring on the crumbs | Flap lifted: the lid swings up on "scrub" | Gritty. Chalky. | 3.5–6 |
-| 3 | Sprout is **one** daily pack. | one | The row of four shrinks to one: old pieces slide out and the Sprout pouch drops into the row's exact spot | Ring on the pouch | Swap: the row exits, the pouch lands on "one" | One pack | 6–8 |
-| 4 | **Tear** it open. No water, no shaker. | Tear | The pouch's top strip tears straight across, and gummies tip out onto the cream ground | Ring on the tear line | Flap lifted: the torn strip lifts on "Tear", then the gummies slide out | No water. No shaker. | 8–11 |
-| 5 | Inside: 60+ ingredients, **21** vitamins and minerals, 6 grams fiber. | 21 | Contents laid out flat beside the pouch: exactly 21 forest-green paper discs land in a row | Ring around the 21-disc row | Build-up: the discs land in quick succession, the row complete on "21" | 60+ · 21 · 6g fiber | 11–15 |
-| 6 | First order **$29.99** with text sign-up. | $29.99 | The Sprout pouch moves to centre, large and still, for the end card | Ring on the pouch (holds) | Slide: the pouch arrives centre, then holds 2 s silent | $29.99 first order · small line: "Text sign-up required. Renews at $49.99." | 15–20 |
+| 1 | Quit greens powder? Blame the **routine**. | routine | The half-used tub alone at centre, lid off, a chalky crust on the rim | Ring on the crusted rim | Slide: the tub slides in from left and stops on "routine" | Blame the routine | 0.0–2.5 |
+| 2 | Scoop. Shake. Chalky sip. **Scrub** the shaker. | Scrub (each step word lands its piece) | The old steps as a row of objects: scoop, shaker, glass with a chalky ring, sponge on the shaker | Ring on the shaker | Build-up: one piece lands per spoken step, the sponge last on "Scrub" | Scoop. Shake. Sip. Scrub. | 2.5–5.5 |
+| 3 | Sprout daily greens: **one** pack instead. | one | The row slides out and the Sprout pouch drops into the shaker's exact spot. The row of four becomes one. | Ring on the pouch | Swap: the old row slides off right and the pouch drops in on "one" | 4 steps → 1 pack | 5.5–8.0 |
+| 4 | Tear it, **tip** it. No water, no mixing. | tip | The pouch's torn top lifts and the gummies slide out onto the paper palm. No glass, no shaker in frame. | Ring on the gummies in the palm | Flap lifted: the torn top folds back on "tear" and the gummies drop on "tip" | No water. No mixing. | 8.0–11.0 |
+| 5 | **Sixty-plus** ingredients, **21** vitamins and minerals, **6 grams** fiber, per pack. | Sixty-plus / 21 / 6 grams | Three plain paper counters laid flat beside the pouch, one landing on each figure. The numbers are set as type, not drawn. | Ring on the pouch on "per pack" | Build-up: the counters land one by one, each on its figure | 60+ · 21 · 6g fiber | 11.0–15.0 |
+| 6 | First order **twenty-nine ninety-nine** with text sign-up, then forty-nine ninety-nine. | twenty-nine ninety-nine | The pouch cutout large and still at centre, gummies in the palm beside it | Ring on the price text | Slide: the pouch scales in to fill the frame, then holds still to the end | $29.99 first order · with text sign-up · renews at $49.99 (all the same size) | 15.0–20.0 |
 
-Narration is 43 words, about 17.5 s spoken, plus a 2.5 s still hold.
+*Line 6's on-screen text runs past 5 words because the offer's sign-up condition and renewal price must sit beside the price at the same size, never in small print.*
 
-## Notes on figures and sources
-- **"60+ ingredients, 21 vitamins & minerals, 6g fiber in 1 pack"** is a brand-approved claim. **MISSING: the source document** (Supplement Facts label panel or spec sheet on file). Line 5 lays out exactly 21 discs to match the "21" figure. No visual is drawn for 60+ or 6g, so no proportions need checking.
-- **$29.99 / $49.99** come from the brand's current offer terms. The renewal price and text sign-up stay on screen as a disclosure line, and the narration names the sign-up condition.
-- **"Clinically tested for nutrient absorption"** (2025, 12 weeks, 120 adults, vitamin C +40.1%, 2.7× placebo) is not used, because it doesn't fit in 20 s.
-  - If it's added in a longer cut, draw a two-bar chart: Sprout +40.1% vs placebo ≈ +14.9% (40.1 ÷ 2.7), at those real proportions.
-  - **MISSING: full study citation.**
-- **Step count (scoop, pour, shake, scrub)** is not a figure. It is taken from the buyer's words and the stated old way.
-- **MISSING: product photo.** The pouch and gummies were described, not attached, so the cutout couldn't be checked against the real product. Please attach the pouch-front photo with the label sharp.
-- **MISSING: old-way photos.** These are plain, unbranded photos of a powder tub, scoop and shaker to cut out for lines 1–3.
-- **Gummies-in-a-hand photo is not used.** A real person's hand breaks the person rule. The gummies tip onto the paper ground instead.
-- **No "how it works" was given,** so there is no diagram. The ad proves the steps and the swap.
+## Notes on every figure
+
+- **60+ ingredients, 21 vitamins & minerals, 6g fiber, per 1 pack:** your approved claim, as given. Shown as counters only, with no chart.
+- **$29.99 first order with text sign-up, renews at $49.99:** your offer, as given. The narration says the condition and the renewal price along with the price.
+- **Not used:** the 2025 study figures (12 weeks, 120 adults, vitamin C +40.1%, 2.7x placebo) and "Clinically tested for nutrient absorption". They are left out for length at 20 seconds, not for lack of a source. In a 30-second cut, a two-bar chart would work: placebo about 14.9% (derived from 40.1 ÷ 2.7) against Sprout 40.1%, with the bars drawn at a true 2.7:1 ratio. That chart should only run after you confirm the study figures themselves are approved for ads, not just the "clinically tested" line.
+- **Photo check:** I couldn't see the photos you named (gummies in a hand, pouch front). The pouch look, label words and gummy colour still need checking against the real photos before the cutout sheet is made.
 
 ## Cast note
-- **Carries the ad:** the Sprout pouch cutout is the avatar. The whole argument is one pack replacing a row of objects, so the product itself has to be the thing that lands, tears and holds.
-- **Narrator:** one off-screen adult voice, warm and dry, quick and conversational, a little relieved on "no shaker".
-- **Never changes:** the pouch's real photo and label, and the paper kit (cream ground, scissor-cut edges, black-and-white old-way photos, one sunflower ring).
 
-## Score
-**83 / 100.** 5 of 6 checks passed: 5 ÷ 6 × 100 = 83.
+The Sprout pouch cutout from its real photo carries the ad, so the product is the avatar. The proof is a swap and a step count of objects, and no person is needed. The only body part is a made-up flat paper palm. The narrator is one off-screen adult voice: warm, dry and quick, like a friend who also gave up on powders, never salesy. Never change the pouch's real photo, the cream die-cut paper kit, or the single sunflower ring.
 
-- **Missed: every figure has a source.** "60+ ingredients, 21 vitamins & minerals, 6g fiber" has no label panel or spec sheet named. Add it to the notes, or drop line 5's figures.
+**CHECKS MISSED:** none
+
+**MISSING:**
+- `MISSING:` old-way photos. You need plain, unbranded photos of a greens tub, scoop, shaker and glass to cut out. Grey paper stand-ins are used until then.
+- `MISSING:` the renewal period for $49.99 (monthly? per pack count?). Add it to the on-screen terms.
+- `MISSING:` how many packs come in an order.
+- `MISSING:` a guarantee, if you offer one.
+- `MISSING:` the photo check of pouch and gummies against the real product, still to do.
+- `MISSING:` confirmation that the study figures (+40.1%, 2.7x placebo) are approved for use as ad claims.
+
+Want to take this next to the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), the [Ad script read-aloud editor](https://useaiblocks.com/skills/ad-script-read-aloud-editor), or the [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner)? Or type your own next step.
 ```

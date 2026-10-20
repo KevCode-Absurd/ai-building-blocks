@@ -21,8 +21,8 @@ credits:
   - {title: "Breakthrough Advertising", by: "Eugene Schwartz", url: "https://en.wikipedia.org/wiki/Eugene_Schwartz", used: "Awareness levels to pick the starting lead; a market that has heard the promise needs a less direct opening"}
   - {title: "The Adweek Copywriting Handbook", by: "Joseph Sugarman", url: "https://en.wikipedia.org/wiki/Joseph_Sugarman", used: "The first sentence's job is to get the next one read"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
-  judge: claude-sonnet-5-5
-  result: fail
+  judge: claude-fable-5-1
+  result: pass

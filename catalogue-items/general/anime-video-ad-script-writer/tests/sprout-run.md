@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A clean, usable 20-second storyboard: the giant-tub joke is clear with sound off, the pouch is drawn to the brand's own description, and the offer text carries the SMS fine print and renewal price the site hides. Label gaps for the daily pack are marked MISSING instead of guessed, and the competitor review is correctly kept off screen.
+A tight, usable 20-second anime ad plan that sticks to the brand's own lines, draws the pouch and daily pack to the brand's rules, and handles the offer with the correct SMS and renewal fine print. Every gap (label photo, pack design, review source) is flagged MISSING rather than guessed, so the owner knows exactly what to supply next.
 
 ## Judge list
 
 - Met: The look, the hero and the exaggeration are named once at the top and never change.
-  "Look line (proposed): thick marker line · one shadow tone plus a hard highlight" … "Exaggeration: size." Hero sentence reused unchanged; cast note locks it.
+  "Look line (proposed): thick marker line · one shadow tone · full colour..." "Exaggeration: Size." Hero traits repeated unchanged in cast note.
 - Met: You could name the old way, the change and the product's part in it with the sound off.
-  "A man is dwarfed by a giant grey powder tub and shaker (the old way). He turns to a green Sprout pouch (the change)… tub shrinks"
+  "A giant dusty powder tub dwarfs a man (the old way). He pulls out a green pouch and the tub shrinks... He tears a small pack and eats gummies"
 - Met: Every shot has a start pose, an end pose and a hold.
-  All 7 shots carry "Key A > Key B · hold" with times, e.g. Shot 7 "hold 2 s", Shot 3 "hold 1 s".
+  All six shots: "Key A: ... > Key B: ... · hold 0.5s" (Shot 6 hold 1.2s).
 - Met: The product's label words match your pack or screen exactly.
-  "big yellow 'Sprout' wordmark, the yellow bear face top right and '28 Daily Packs' at the bottom"; daily pack kept edge-on and marked MISSING.
+  "big yellow wordmark, the yellow bear face top right and '28 Daily Packs' at the bottom"; exact lettering flagged MISSING.
 - Met: No artist, studio, series or competitor is named, and the hero never says "it worked for me".
-  "The tub is never a lookalike of any real greens powder… blank label"; hero is silent, narrator only; review with competitor name left out.
+  "It is never a named rival or a lookalike"; "The hero never speaks." Rival replaced with "[a greens powder]".
 
 ## What went in
 
@@ -40,108 +40,58 @@ Settings: video, 20 seconds, narrator only, light comedy,
 ## What came out
 
 ```text
-## Look, hero, exaggeration, poses
+## 1. Look, hero, exaggeration, poses
 
-**Look line (proposed):** thick marker line · one shadow tone plus a hard highlight, which gives the glossy pouch its shine · full colour in the brand palette (forest green #00582D, deep forest #002C17, warm cream #FFF7DF, kelly green #007E40, sunflower yellow #FFCC2E) · flat graphic shapes for backgrounds (a cream kitchen built from simple blocks, one counter line).
+**Look line (proposed):** thick marker line · one shadow tone · full colour from the brand palette (forest green #00582D, deep forest #002C17, warm cream #FFF7DF, kelly green #007E40, sunflower yellow #FFCC2E), with the old way in a dull grey-beige so it reads as the odd one out · flat graphic-shape backgrounds (a warm-cream kitchen built from simple blocks).
 
-**Hero sentence:** A tall man in his mid-thirties with a square face, solid-black short hair with a hard side part, a rolled-sleeve cream work shirt with a solid-black crossbody bag strap, olive chinos, and a short scar through his left eyebrow.
+**Hero sentence:** A tall man in his mid-thirties with a long rectangular face, a short side-parted hairline filled solid black, a cream button-up shirt with rolled sleeves and forest-green chinos, a solid black messenger-bag strap across his chest, and one mark: a yellow pencil tucked behind his left ear.
 
-**Exaggeration: size.** The old way is drawn as a giant. A plain grey tub of greens powder stands three times the hero's height, with a scoop like a shovel and a shaker the size of a fridge. The tub has a blank paper label: no words, no logo, no colours that echo any real brand. Once the daily pack is open, it shrinks back to a normal half-used tub.
+**Exaggeration: Size.** A plain, unlabelled grey-beige powder tub three times the hero's height, with a generic grey shaker bottle beside it about twice his height. It has no wordmark, no stripe and no shape that copies any real brand's tub. It shrinks back to normal counter size the moment the Sprout pouch arrives.
 
 **Three poses:**
-- **Problem pose:** The hero stands small at the counter on screen-left. He grips the shovel-sized scoop and leans into the towering tub, with the giant shaker beside it.
-- **Turn pose:** The hero has turned to face screen-right. He holds the Sprout pouch at chest height, front to camera, at true size, with the resealable top closed.
-- **Payoff pose:** The hero holds the pouch up at shoulder height in the left third of the frame, front to camera, with a few deep-green bears in his other palm. He faces camera. The tub behind him is normal-sized and half-used. The right half of the frame stays clear for the offer text.
+- **Problem pose:** The tub is on screen-left and towers over the counter. The hero stands small on screen-right, facing left, looking up at it, holding the giant shaker in both arms.
+- **Turn pose:** The hero has turned to face camera and holds the Sprout pouch up at chest height, front to camera. The tub is now normal-sized and small behind him.
+- **Payoff pose:** The hero faces camera, chewing, with one hand holding the pouch at shoulder height, front to camera and turned slightly to frame-left. Clear cream space sits on frame-right for the offer text.
 
-## Shot cards
+## 2. Shot cards
 
-**Shot 1 · 0–3 s · clip 1**
-- Key A > Key B · hold: Wide shot. The hero is small at the counter and the giant tub fills the frame-left > the hero's head is tipped fully back, staring up at the tub, mug in hand · hold 0.5 s
-- Moves / holds: Head tilt and eyes move. The tub, shaker and body hold.
-- Words (narrator): "Every morning, the same giant."
-- Sound: Low room tone, then a faint powder puff as dust drifts off the rim.
+**Shot 1 · 3s · clip 1 (0–8s)** | Key A: wide shot, the hero tiny at the counter on frame-right, facing left, the giant tub filling frame-left > Key B: same framing, his eyes tilted all the way up the tub, shoulders dropped · hold 0.5s | moves: eyes travel up, then shoulders sink / holds: tub, shaker, kitchen, his body and feet | words: none. On-screen review text added in editing: "I've been choking on [a greens powder] for the last few years." (customer review, source MISSING) | sound: none until a soft scrape as he grips the giant shaker at the end.
 
-**Shot 2 · 3–8 s · clip 1**
-- Key A > Key B · hold: Wind-up: the hero bends his knees and grips the shovel-scoop handle with both hands > he heaves a scoop into the giant shaker, settles, and stands lightly dusted in grey-green powder (problem pose) · hold 0.5 s
-- Moves / holds: Arms and torso move for the heave, then settle. The tub and shaker hold.
-- Words (narrator): "Scoop. Shake. Scrub the shaker." Then a silent beat.
-- Sound: Scoop thunk, a heavy powder whump into the shaker.
+**Shot 2 · 5s · clip 1** | Key A: medium shot, the hero hugging the giant shaker, knees bent as a wind-up > Key B: shaker set back down with a thud, a flat cloud of powder dust hanging over the counter, the hero blinking through it · hold 0.5s | moves: arms and shaker (wind-up, two big shakes, settle), then eyes blink / holds: tub, background, his feet | words (narrator): "No more gagging on pills, sloshing chalky powders, or cleaning messy counters." | sound: powder sloshing inside the shaker, then a heavy thud as it lands on the counter.
 
-**Shot 3 · 8–10 s · clip 2**
-- Key A > Key B · hold: The hero is mid-turn from the tub toward screen-right as dust settles > he lifts the Sprout pouch front to camera at chest height. It is a glossy deep-green pouch with the big yellow "Sprout" wordmark, the yellow bear face top right and "28 Daily Packs" at the bottom, resealable top closed (turn pose) · hold 1 s
-- Moves / holds: Head turn and one arm move. The pouch holds still. No effect line touches it.
-- Words (narrator): "Or… one daily pack."
-- Sound: Soft pouch rustle.
+**Shot 3 · 3s · clip 2 (8–16s)** | Key A: the hero facing left toward the tub, his right hand dipped into his messenger bag as a wind-up > Key B: the hero turned to face camera, pouch held up at chest height, front to camera. Behind him the tub is now normal counter size. · hold 0.5s | moves: hand lifts the pouch out of the bag, then his body turns to camera (shown), then the tub cuts to small / holds: pouch front once it is up, kitchen | words: none | sound: a bag flap rustle, then a small clunk as the shrunken tub sits on the counter. No shrink lines anywhere near the pouch.
 
-**Shot 4 · 10–12 s · clip 2**
-- Key A > Key B · hold: Close-up. The pouch sits closed on the counter behind, front visible. The hero's fingers pinch the daily pack at its top edge, with the pack shown edge-on > the top strip comes off in one straight tear across the top edge · hold 0.5 s
-- Moves / holds: Fingers move. The hand, pack and pouch hold.
-- Words (narrator): "Rip."
-- Sound: Crisp foil tear.
+**Shot 4 · 5s · clip 2** | Key A: close shot, the pouch front to camera with its resealable top closed > Key B: the top is open, and the hero's fingers have lifted out one daily pack, edge-on to camera (front design MISSING) · hold 0.5s | moves: one hand opens the resealable top, then the fingers lift one pack out / holds: the pouch body and its front label; nothing crosses it | words (narrator): "60+ ingredients, 21 vitamins & minerals, and 6g fiber" in 1 pack. | sound: a soft zip-seal unpeel, then a light papery slide.
 
-**Shot 5 · 12–14 s · clip 2**
-- Key A > Key B · hold: The torn pack is tilted over the hero's open palm > a small handful of small, matte, deep-green bears sits in the palm, each about thumbnail height · hold 0.5 s
-- Moves / holds: The wrist tips and the gummies fall. The palm holds.
-- Words (narrator): "Tip."
-- Sound: Soft patter of gummies landing in the palm.
+**Shot 5 · 2s · clip 3 (16–20s)** | Key A: tight shot, the daily pack held upright with its back or edge to camera, two fingers pinching its top corners > Key B: the pack is torn straight across its top edge, and small deep-green bears pour from the torn top into his open palm · hold 0.5s | moves: fingers tear across the top, then the wrist tips / holds: the palm and the rest of the hand | words (narrator): "Rip. Tip." | sound: a crisp tear, then a soft patter of gummies landing in his palm.
 
-**Shot 6 · 14–16 s · clip 3**
-- Key A > Key B · hold: Medium shot. The hero pops a few bears into his mouth while the giant tub towers behind > he is chewing, and the tub has shrunk back to a normal half-used tub on the counter · hold 0.5 s
-- Moves / holds: Mouth and one arm move, and the tub scales down. Body and background hold.
-- Words (narrator): "Enjoy."
-- Sound: A small rubbery "bwip" as the tub shrinks, then a light chew.
+**Shot 6 · 2s · clip 3** | Key A: medium shot, the hero facing camera, the palm of gummies at his mouth > Key B: the payoff pose (chewing, pouch held up front to camera, clear space at frame-right) · hold 1.2s | moves: hand to mouth, then the jaw chews and the other arm raises the pouch / holds: pouch front, his body, background | words (narrator): "Enjoy." On-screen offer text added in editing in the clear space: "Subs start at $29.99*". Fine print: "*First order only, with new-customer SMS discount. Renews at $49.99 every 4 weeks. 30-day money-back guarantee on first order only." | sound: a small chew, nothing else.
 
-**Shot 7 · 16–20 s · clip 3**
-- Key A > Key B · hold: The hero lifts the pouch from the counter > payoff pose: pouch at shoulder height in the left third, front to camera, bears in the other palm, hero facing camera, right half of the frame clear · hold 2 s
-- Moves / holds: One arm lifts, then eyes and a small smile. The pouch and the rest of the frame hold.
-- Words (narrator): "Sprout. Greens gummies, no shaker."
-- Sound: Pouch rustle, then quiet.
+Total: 20s. Clip 1 = Shots 1–2 (8s). Clip 2 = Shots 3–4 (8s). Clip 3 = Shots 5–6 (4s).
 
-Clips: clip 1 = shots 1–2 (8 s). Clip 2 = shots 3–5 (6 s). Clip 3 = shots 6–7 (6 s).
+## 3. Notes
 
-## Notes
+- **Fit:** This is a good fit for drawing. The sale rests on how big and tiresome the old routine feels, not on a face or a texture, and the size exaggeration does that job.
+- **Sound-off read:** A giant dusty powder tub dwarfs a man (the old way). He pulls out a green pouch and the tub shrinks to normal (the change). He tears a small pack and eats gummies (the product's part). The review caption and offer text carry the rest.
+- **Metaphor flagged:** The giant tub and its shrink are a metaphor for how big the powder routine feels. They are not a claim about the product's effects, and no body change is ever drawn.
+- **The old way:** It is a generic tub and shaker only. It is never a named rival or a lookalike of any real pack. The review's rival name is replaced with "[a greens powder]". Confirm that edit is acceptable for on-screen use.
+- **Product drawn:** The adult pouch is glossy deep-green foil, Original Low Sugar (no white Sugar-Free burst). It has the big yellow wordmark, the yellow bear face top right and "28 Daily Packs" at the bottom. It opens only at the resealable top and is never shown torn. Daily packs tear straight across the top edge only.
+- **Claims:** The narrator uses only "No more gagging on pills…", the 60+/21/6g line and "Rip. Tip. Enjoy." No energy, gut, weight or "works" claim appears. The hero never speaks.
+- **Offer:** The text is taken from site prices captured late Sept to mid Oct 2026. Recheck before launch. The site also shows several competing percentage-off claims, so none of them are used here.
+- MISSING: product photo with a sharp label.
+- MISSING: the exact wordmark lettering (drawn here as "Sprout").
+- MISSING: the daily pack front design and label words. The pack stays edge-on or back-to-camera until these are given.
+- MISSING: a photo of the daily pack being opened.
+- MISSING: the source of the "choking on" review.
+- MISSING: brand brain and buyer brief. This plan was built from the brand file and your notes only.
 
-**Sound-off read:** A man is dwarfed by a giant grey powder tub and shaker (the old way). He turns to a green Sprout pouch (the change), tears one small pack straight across the top and eats the gummies. The tub shrinks to normal behind him, which shows the product's part.
+## 4. Cast note
 
-**Metaphors, flagged as metaphors:** The giant tub, the shovel scoop, the fridge-sized shaker and the shrink back to size are all drawn metaphors. They stand for how big the powder routine feels. They are not a claim about the product. "The same giant" in shot 1 is the same metaphor. Nothing drawn shows a change in the hero's body, energy or health.
+- **Carrier and reason:** A narrator over a silent hero carries this ad. The powder quitter has heard every greens pitch, so a dry, friendly off-screen voice keeps the comedy light. It also stops the drawn hero from ever reading as a testimonial.
+- **Voice:** warm, quick and deadpan, like a funny friend who's into wellness. It is never salesy and never a lab-coat tone, and it gives "Rip. Tip. Enjoy." a small beat between words.
+- **Never changes:** the hero sentence word for word (solid-black hairline and bag strap, yellow pencil behind the left ear). The hero is always adult and never speaks. The narrator never speaks as the hero or says "it worked for me".
 
-**Rival tub:** The tub is never a lookalike of any real greens powder. Keep it grey, with a blank label and no wordmark, and keep its colour away from Sprout green.
+## 5. CHECKS MISSED
 
-**Brand line:** "Rip. Tip. Enjoy." is kept exact and in order across shots 4–6.
-
-**Editing text for shot 7, right half:**
-- "60+ ingredients, 21 vitamins & minerals, and 6g fiber"
-- The offer in current terms: "Subscriptions start at $29.99 for your first order."
-- The required fine print: "With new-customer SMS discount. Renews at $49.99 every 4 weeks."
-- Optional guarantee line: "30-day money-back guarantee on your first order."
-- Recheck all of this on launch day. The site's discount lines conflict (49% to 61%), so do not add a percentage.
-- Consider adding the standard FDA line, which the site carries but the ads don't.
-
-**Review:** Leave the buyer review out of the on-screen text. As written, it names a competitor, and its source isn't given.
-
-**MISSING:**
-- The daily pack's front design, colour and label words. Until they're given, the pack stays edge-on in shots 4–5.
-- The full pouch label lines in order. Confirm the Original Low Sugar pouch with no white Sugar-Free burst, and any "Low Sugar" wording.
-- A sharp product photo and a photo of the pack being opened.
-- The source for the review.
-
-## Cast note
-
-**Who carries it:** The off-screen narrator, over a silent hero.
-
-**Why:** The powder quitter is doubtful and tired of hard sells. A dry voice narrating his own morning lets the giant-tub joke land without a pitch. It also keeps the drawn hero from ever giving a testimonial.
-
-**Voice:** An adult voice, warm, dry and lightly amused, like a friend reading out your routine. Short beats with a pause before "Or…", and no announcer energy.
-
-**What never changes:**
-- The hero sentence, word for word.
-- The solid-black hair and bag strap.
-- The hero faces the tub on screen-left until the shown turn in shot 3, then faces screen-right toward the product.
-- The tub is always unbranded.
-- The pouch label is never covered, torn or crossed by an effect line.
-- The daily pack tears only straight across its top.
-
-## Score
-
-**100 / 100**: 7 of 7 checks passed (7 ÷ 7 × 100 = 100). No checks missed.
+none
 ```

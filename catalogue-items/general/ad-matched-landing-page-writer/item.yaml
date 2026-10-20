@@ -30,8 +30,8 @@ credits:
   - {title: "Guides Against Deceptive Pricing, 16 CFR Part 233", by: "US Federal Trade Commission", url: "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233", used: "When a crossed-out price is honest"}
   - {title: "eCommerce CRO masterclass", by: "Blue Sense Digital", url: "https://www.youtube.com/channel/UCtOnZyHshTvH1GoboRzHqjw", used: "The starting idea: the page finishes the job the ad started"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1
-  result: fail
+  result: pass

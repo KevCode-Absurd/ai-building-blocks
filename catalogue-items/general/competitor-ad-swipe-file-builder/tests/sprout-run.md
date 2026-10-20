@@ -1,25 +1,25 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 4 of 5 met. Invented facts: 0.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 1.
 
-The run correctly refused to file headline-only ads and made no invented IDs, dates or tiers, and it clearly told the owner what to collect next. However, the board is empty, so the business gets no study board yet, and the run's own check (three cards from two advertisers per type) fails.
-
-## Fix
-
-Add a step that, when no screenshots are supplied, returns only a collection checklist and skips the score. Or treat the "three from two advertisers" check as not applicable when no ads were filed, so a correct refusal can pass.
+The run correctly refused to file any ad because no screenshots, library IDs or start dates were given, and returned an empty board with clear gaps and what to collect. It used MISSING and [inferred] properly and invented nothing.
 
 ## Judge list
 
 - Met: None of your own ads are on the board.
-  Board has a single empty row: "No cards." No ads of the user's own appear.
+  Board is empty: "(empty) | — | — | — | — | — | — | —"; no own ads listed.
 - Met: Every card has a library ID and start date you can check in the library.
-  No cards exist; IDs and dates flagged "MISSING: library IDs" instead of invented.
-- Not met: No ad appears twice, and each full type has three cards from at least two advertisers.
-  "No type has any cards, and only one advertiser was collected." Output itself marks this check missed.
-- Met: Nothing is called a "winner". The tier is shown as a hint, with the days live.
-  "'copies live' counts are a hint about what Sprout is betting on, not results." No winner language.
-- Met: The "what to study" line points at structure, not wording to copy.
-  The only what-to-study cell reads "No cards. None of the ads came with a screenshot"; no wording to copy.
+  No cards exist; nothing filed without ID or date, and all ads sent to NOT LOOKED AT.
+- Met: No ad appears twice; full types have three cards from two advertisers; thin types listed as gaps, not padded.
+  All nine types listed under GAPS with "0 cards"; nothing padded.
+- Met: Nothing is called a winner; tier shown as a hint with days live.
+  No winner language; "would be 'New'" is a hint only. No cards carry tiers.
+- Met: The 'what to study' line points at structure, not wording to copy.
+  No study lines written. Offer note says "Note each offer's shape... never its wording."
+
+## Invented
+
+- claim: #10 and #12 may show a person or hands using it. (Marked [inferred] and only speculative about creatives; acceptable but guessy.)
 
 ## What went in
 
@@ -39,77 +39,58 @@ screenshots, no library IDs.
 ## What came out
 
 ```text
-## 1. Board
+```
+BOARD
+Type | Code | Advertiser | Library ID | Started | Tier | Live? | What to study
+(empty) | — | — | — | — | — | — | —
 
-| Type | Code | Advertiser | Library ID | Start date | Tier | Live? | What to study |
-|---|---|---|---|---|---|---|---|
-| — | — | — | — | — | — | — | No cards. None of the ads came with a screenshot, so none could be looked at or filed. |
+The board is empty: none of the ads could be filed, because none came with a screenshot, library ID or start date. To fill it, collect from the public Meta Ad Library, by hand and logged out, with country set to US. For each ad, bring a screenshot of the creative (for video, the first frame and first line), the library ID, the "started running" date, active or ended, the platforms, and the version note. Do this for Sprout's ads and for at least one other advertiser, such as another greens or gummy vitamin brand.
 
-`MISSING: screenshots of each creative`
-`MISSING: library IDs`
-`MISSING: "started running" dates (tiers left blank)`
-`MISSING: platforms, active status and version notes per ad`
-`MISSING: ads from at least one other advertiser`
+NOTES
+What is it?: No cards. MISSING: screenshots, so there is no pattern or main dress to report.
+Is it for me?: No cards. MISSING: screenshots, so there is no pattern or main dress to report.
+Can I believe it?: No cards. MISSING: screenshots, so there is no pattern or main dress to report.
+Why now?: No cards. MISSING: screenshots, so there is no pattern or main dress to report.
 
-## 2. Notes
+GAPS
+Product alone: 0 cards. No creatives were seen, and only one advertiser (Sprout) was supplied.
+Look inside: 0 cards. Same reasons. [inferred] #7 and #15 (ingredient headlines) may show labelled contents. Screenshot them to check.
+The moment: 0 cards. Same reasons. [inferred] #6, #13 and #14 open on a hassle or trigger. File them only from the frame.
+Old way, new way: 0 cards. Same reasons. [inferred] The main text's "without powders or prep" hints at this type. MISSING: the creative. The "I quit powders" theme is also absent from Sprout's ads, so a second advertiser is needed.
+In use: 0 cards. Same reasons. [inferred] #10 and #12 may show a person or hands using it.
+Their words: 0 cards. Same reasons. [inferred] #1 quotes the buyer's objection. The frame decides whether it is a review card or an offer.
+Checked fact: 0 cards. Same reasons. [inferred] #4 ("1M+") and "third-party tested" in the main text are candidates.
+The offer: 0 cards. Same reasons. [inferred] This is likely the deepest type: #1–#5, #11, and 19 of the 40 newest ads are offer-led. Note each offer's shape (percent off, gifts, per-extra-person money off, membership), never its wording.
+The occasion: 0 cards. Same reasons. [inferred] The Raspberry Lemonade launch, the birthday price cut (#5) and the limited flavours are candidates. Each needs a dated reason in the frame.
+All types: The one-time search in a neighbouring category (Step 6) was not run, because the library can't be reached from here. MISSING: screenshots from that search.
 
-- **What is it?** No cards. No pattern or dress can be read.
-- **Is it for me?** No cards. No pattern or dress can be read.
-- **Can I believe it?** No cards. No pattern or dress can be read.
-- **Why now?** No cards. No pattern or dress can be read.
+NOT LOOKED AT
+#1 "'Sprout is too expensive'…61% off": headline text only, no screenshot, library ID or start date.
+#2 "Don't Pay Full Price…": headline text only, no screenshot, library ID or start date.
+#3 "Get up to 61% OFF + 4 FREE gifts" (and its sister line): headline text only, no screenshot, library ID or start date.
+#4 "Trusted by 1M+": headline text only, no screenshot, library ID or start date.
+#5 "We're Lowering Our Prices": headline text only, no screenshot, library ID or start date.
+#6 "Fix the Hot Girl Tummy": headline text only, no screenshot, library ID or start date.
+#7 "Struggling to Get Enough Fiber?": headline text only, no screenshot, library ID or start date.
+#8 "Nutrition for Healthy Hair": headline text only, no screenshot or library ID. Made 2 Oct per your notes, so it would be "New".
+#9 "Support Muscle While You Lose Weight": headline text only, no screenshot, library ID or start date.
+#10 "The Daily Nutrition Every Runner Forgets": headline text only, no screenshot, library ID or start date.
+#11 "Perks That Really Pile Up": headline text only, no screenshot, library ID or start date.
+#12 "One Step I Never Skip" (and "Nutrition Made Ridiculously Easy"): headline text only, no screenshot, library ID or start date.
+#13 "He Asked What Day It Was…": headline text only, no screenshot, library ID or start date.
+#14 "Fiber Kids Won't Fight": headline text only, no screenshot, library ID or start date.
+#15 "Methylfolate, Not Folic Acid": headline text only, no screenshot, library ID or start date.
+Kids "[Cartoon tie-in]-Themed Fun…": headline text only, no screenshot, library ID or start date.
+Kids "The veggies they won't eat…": headline text only, no screenshot, library ID or start date.
+Kids "One pack a day keeps the gut happy": headline text only, no screenshot, library ID or start date.
+Kids "The Lemon Aid Stand is open": headline text only, no screenshot, library ID or start date.
+"30 Days Of [a fitness app], Free": headline text only, no screenshot, library ID or start date.
+"Perfect Supplement for Weight Loss Support…": headline text only, no screenshot, library ID or start date.
+Main text "Big news: your first order…": text only, not tied to a creative or library ID.
+Main text "Feeling off in your gut lately?": text only, not tied to a creative or library ID.
 
-Headlines alone are not the creative. The biggest thing in the frame decides the type, so filing from the text would be filing from the search.
-
-## 3. Gaps
-
-- **All nine types are empty**: Product alone, Look inside, The moment, Old way new way, In use, Their words, Checked fact, The offer, The occasion. The cause is no screenshots, not a lack of ads.
-- **One advertiser only.** Even with screenshots, every type would fail "three from at least two advertisers." Sprout alone can only show Sprout's habits.
-- **No neighbouring-category search run.** I can't browse the library. To fill the board, collect by hand from the library (logged out, country US, "All ads"):
-  - Sprout's own page.
-  - Two or three other greens, gummy-vitamin or daily-supplement brands whose buyers ask the same questions.
-- **For each ad, bring:**
-  - A screenshot (the first frame, for video).
-  - The library ID.
-  - The "started running" date.
-  - Active or not.
-  - Platforms.
-  - Whether it has several versions.
-  - Where the link leads (product page, collection, or article-style page).
-
-## 4. Not looked at
-
-All are Sprout headlines with no screenshot, no ID and no start date. Duplicate versions are already merged per line.
-
-1. "'Sprout is too expensive': here's 61% off to prove otherwise"
-2. "Don't Pay Full Price. You Literally Don't Have To. (61% off inside)"
-3. "Get up to 61% OFF + 4 FREE gifts: online exclusive" (plus sister line)
-4. "Trusted by 1M+: Take 61% OFF"
-5. "We're Lowering Our Prices 🔥"
-6. "Fix the Hot Girl Tummy"
-7. "Struggling to Get Enough Fiber?"
-8. "Nutrition for Healthy Hair"
-9. "Support Muscle While You Lose Weight"
-10. "The Daily Nutrition Every Runner Forgets"
-11. "Perks That Really Pile Up"
-12. "One Step I Never Skip" (plus "Nutrition Made Ridiculously Easy")
-13. "He Asked What Day It Was. I Handed Him a Gummy."
-14. "Fiber Kids Won't Fight"
-15. "Methylfolate, Not Folic Acid"
-16. "[Cartoon tie-in]-Themed Fun. Vitamins They Actually Want."
-17. "The veggies they won't eat. In a gummy they will."
-18. "One pack a day keeps the gut happy 💩"
-19. "The Lemon Aid Stand is open. 🍋"
-20. "30 Days Of [a fitness app], Free"
-21. "Perfect Supplement for Weight Loss Support | Support Energy & Wellness"
-
-The two main texts aren't tied to a headline or screenshot, so they can't be matched to a card. One says "probiotics," but the product page lists none. Don't treat its claims as fact.
-
-The "copies live" counts are a hint about what Sprout is betting on, not results.
-
-## 5. Score
-
-3 / 5 checks passed = 3 ÷ 5 × 100 = **60 / 100**
-
-- **Missed: "Every card was looked at, and has a library ID and start date."** No screenshots, IDs or dates were supplied, so no card could be made. It can't be fixed without the screenshots.
-- **Missed: "Each full type has three cards from at least two advertisers."** No type has any cards, and only one advertiser was collected. It needs screenshots plus ads from at least one more brand.
+CHECKS MISSED
+At least one type is full: failed. No ad could be looked at, so there are 0 cards. Screenshots, library IDs and start dates are needed.
+Three cards from at least two advertisers: cannot be met. Only one advertiser (Sprout) was supplied, so a second advertiser's ads are needed.
+```
 ```

@@ -1,21 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
 Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-A careful, honest edit: it put the renewal price and first-order condition beside the $29.99, backed the test claim with real numbers, and flagged the probiotics, 61% and $5-per-person lines for a claims check instead of quietly fixing them. Word counts and arithmetic check out, nothing is invented, and the owner gets a clear warning that the ad shouldn't run until those claims are cleared.
+A careful, honest edit: every locked claim survived, the renewal price and guarantee now sit beside the first price, and the false probiotics line, the 61% mismatch and the stacking question are all sent to a claims check rather than guessed. The owner gets a usable ad plus a clear warning that a discount-led message won't fix this buyer's price-jump fear.
 
 ## Judge list
 
 - Met: You can point to the one sentence that says what the buyer gets.
-  Promise: "$29.99 for your first order, that's less than $1.10/day for 60+ whole-food ingredients, 21 vitamins & minerals..."
+  Promise: "That's less than $1.10/day for 60+ whole-food ingredients, 21 vitamins & minerals, and gut-supporting probiotics in one daily gummy pack."
 - Met: No claim, number, price, guarantee wording, name or quote was reworded.
-  Every number and term survives; "$29.99 for your first order" became "Your first order is $29.99" (sentence split, price and term intact).
-- Met: Every new fact in a fix is in the facts, and every ledger row names a gain.
-  Added $49.99 every 4 weeks, text sign-up, 70 pesticides, 4 heavy metals, 24 hours, 30-day first-order guarantee: all in the input facts; each row ends with a gain.
+  Headline untouched; "$29.99 for your first order", "$1.10/day", "$20 off", "+$5 off", "Third-party tested" all kept; only conditions from the facts added.
+- Met: Every new fact in a fix is in the facts given, and every ledger row names a gain.
+  Added text sign-up, new customers only, $49.99 every 4 weeks, testing counts, 30-day first-order guarantee, ships within 24 hours; all in input facts; each row has a gain.
 - Met: Most lines were left as they were, with a reason.
-  Left as is: "$20 off your first order", the quoted objection, the emoji, "Online-exclusive offer", "+$5 off"; headline untouched.
+  "Left as is: Headline... '$20 off your first order'... 'less than $1.10/day'... 'Online-exclusive offer' is locked and sent to the claims check." Changes were additive, not rewrites.
 - Met: If it's an ad, the ask says what to do, what it costs and what happens if they don't like it.
-  "Shop Sprout. Orders usually ship within 24 hours, and your first order comes with a 30-day money-back guarantee"; price and renewal sit directly above.
+  "Shop Sprout: $29.99 ... (new customers only), then $49.99 every 4 weeks. Pause or cancel any time, and your first order has a 30-day money-back guarantee."
 
 ## What went in
 
@@ -47,53 +47,36 @@ price jump after the first order?"
 ## What came out
 
 ```text
-Locked: Headline quote "Sprout is too expensive"; "61% off"; "first order... a lot more affordable"; "$29.99 for your first order"; "less than $1.10/day"; "60+ whole-food ingredients"; "21 vitamins & minerals"; "gut-supporting probiotics"; "one daily gummy pack"; "$20 off your first order"; "+$5 off for every extra person"; "Third-party tested"; "Online-exclusive offer"; "Shop Sprout". The argument runs in this order: the objection, then the deal, then the price per day, then what's in the pack, then the bullets, then the ask.
-
-Specifics protected: $29.99, $1.10/day, 60+, 21, $20 off, +$5, third-party tested, the quoted objection. Added from the facts: $49.99 every 4 weeks, pause or cancel, 70 pesticides, 4 heavy metals, 24-hour shipping, 30-day first-order guarantee.
-
-Measures: 65 words, about grade 7 (estimated; the bullet fragments pull it down), longest sentence 25 words -> 112 words, about grade 6 (estimated), longest sentence 20 words. The added words are the missing terms.
-
-Promise: "$29.99 for your first order, that's less than $1.10/day for 60+ whole-food ingredients, 21 vitamins & minerals, and gut-supporting probiotics in one daily gummy pack." Three deals are stacked on it: 61% off, $20 off and $5 per person.
-
+```
+Locked: quoted words "Sprout is too expensive"; "61% off"; "$29.99 for your first order"; "less than $1.10/day"; "60+ whole-food ingredients"; "21 vitamins & minerals"; "gut-supporting probiotics"; "one daily gummy pack"; "$20 off your first order"; "+$5 off for every extra person"; "Third-party tested"; "Online-exclusive offer"; product name Sprout. Order of argument: price objection -> discount -> first order more affordable -> $29.99 and per-day cost -> what's in the pack -> offer bullets -> tested -> exclusive -> shop.
+Specifics protected: $29.99; less than $1.10/day; 60+ ingredients; 21 vitamins & minerals; one daily pack; $20 off; +$5 off; third-party tested; 💚 and ✅ layout.
+Measures: 65 words (headline 10, main text 55), about grade 8 (estimate, check in Hemingway), longest sentence 25 words -> 132 words (headline 10, main text 122), about grade 7.5 (estimate), longest sentence 20 words. The added words are the full terms and the ask that the checks require.
+Promise: "That's less than $1.10/day for 60+ whole-food ingredients, 21 vitamins & minerals, and gut-supporting probiotics in one daily gummy pack." (Sprout costs less than you think, per day.)
 Ledger:
-- Main text | ad / slide | "Big news: your first order of Sprout just got a lot more affordable." | "Your first order of Sprout just got a lot more affordable." | 2 fewer words. The first words before "See more" now speak to the price doubter, and an empty opener is removed.
-- Main text | slide | "$29.99 for your first order, that's less than $1.10/day for…" | "Your first order is $29.99. That's less than $1.10/day for…" (rest of the sentence unchanged) | The longest sentence drops from 25 to 20 words, a lower grade.
-- Main text, after the price | doubt | (none) | "This price is for new customers with the text sign-up discount. After that, it's $49.99 every 4 weeks, and you can pause or cancel any time." | Terms in full. The price condition and renewal now sit beside the first price, which answers the buyer's "will it jump?" doubt.
-- Bullet | doubt (prove it / swap it) | "✅ Third-party tested." | "✅ Third-party tested for 70 pesticides and 4 heavy metals" | A claim backed by a supplied fact that a rival can't copy as is.
-- Ask | ad / skim | "Shop Sprout." | "Shop Sprout. Orders usually ship within 24 hours, and your first order comes with a 30-day money-back guarantee." | The ask now names what happens next. The guarantee and who it covers appear where the buyer decides.
-
-Not fixed (over the limit): None over the limit. Two things were held back because of locked claims:
-- The headline's "to prove otherwise" is a stop, since a discount doesn't prove the price isn't too high. The headline is also the discount-only lead. Fixing either needs the basis of the 61%.
-- The ad stacks three deals. Which one stays is a claims decision first.
-
-Left as is:
-- "✅ $20 off your first order": this matches $49.99 less $29.99.
-- The quoted objection: it picks out the buyer by their situation.
-- The 💚 emoji: there was no gain from removing it.
-- "Online-exclusive offer" and "+$5 off for every extra person": these are locked and flagged below.
-
+- Main text, opening | slide | "Big news: your first order of Sprout just got a lot more affordable." | "Your first order of Sprout just got a lot more affordable." | 2 fewer words; a filler stop removed from the first words before "See more"
+- Main text, price | doubt | "$29.99 for your first order, that's less than $1.10/day for 60+ whole-food ingredients, 21 vitamins & minerals, and gut-supporting probiotics in one daily gummy pack." | "$29.99 for your first order with text sign-up, new customers only. That's less than $1.10/day for 60+ whole-food ingredients, 21 vitamins & minerals, and gut-supporting probiotics in one daily gummy pack." | first-price condition stated in full; a 25-word, two-idea sentence split into 11 + 20
+- Main text, after the price | doubt | (none) | "After that, it's $49.99 every 4 weeks, and you can pause or cancel any time." | renewal price and terms stated beside the first price; answers the buyer's main doubt ("Will the price jump?") where they decide
+- Main text, bullet | doubt | "✅ Third-party tested." | "✅ Third-party tested for 70 pesticides, 4 heavy metals, 16 contaminants and 9 microbial contaminants." | claim backed by a supplied fact; a rival can't run this line unchanged
+- Ask | ad | "Shop Sprout." | "Shop Sprout: $29.99 for your first order with text sign-up (new customers only), then $49.99 every 4 weeks. Pause or cancel any time, and your first order has a 30-day money-back guarantee. Orders usually ship within 24 hours." | the ask now names the action, the price with its condition and renewal, the guarantee and who it covers, and what happens next
+Not fixed (over the limit): none (5 changes made)
+Left as is: Headline: it holds locked claims, and the quote picks out this buyer by their situation. "$20 off your first order" matches $49.99 -> $29.99 and now supports the renewal line above it. "less than $1.10/day" is a price label and is true for a 28-pack first box. The "60+ ... 21 ..." list is a run of different facts. "Online-exclusive offer" is locked and sent to the claims check. 💚 and ✅ stay as brand layout.
 For a claims check:
-- "61% off": the site shows 52% and 55%, and $29.99 against the $66.65 one-time price is about 55%.
-- "gut-supporting probiotics": the ingredient list shows no probiotics. The facts do support "6 g prebiotic fiber".
-- "whole-food": the facts say "60+ ingredients" only.
-- "gummy": the facts say "pack" only.
+- "61% off": $29.99 against the $66.65 one-time price is about 55% off. The site shows 52% and 55%. The ads say 61%. Agree on one figure.
+- "gut-supporting probiotics": the ingredient list shows no probiotics. The facts list 6 g prebiotic fiber.
+- "whole-food": not in the facts.
 - "+$5 off for every extra person": the facts say "Buy 2, save $5".
-- "Online-exclusive offer": this is not in the facts.
-- "less than $1.10/day": this holds for the first box only, at about $1.07 a day if the box holds 28 packs. At $49.99 it is about $1.79 a day.
+- "Online-exclusive offer": not in the facts.
+- "gummy": the pack format is not in the facts.
+- "just got a lot more affordable": suggests a price change the facts don't state.
+MISSING: packs per 4-week box (needed to confirm $1.10/day and to state the per-day price at $49.99); whether the $20 off and +$5 offers stack with the $29.99 price; the image (the picture check couldn't run); button text
+Verdict: Mostly a weak reason to buy that no edit can fix. The ad answers "too expensive" with a first-order discount. The honest renewal ($49.99 every 4 weeks) is the jump this buyer fears. The wording edits make the terms clear, but the message is still a discount. A separate ad that leads with ongoing value (what's in each pack, the testing, pause or cancel any time) would answer this buyer better.
+Ask (ads only): "Shop Sprout: $29.99 for your first order with text sign-up (new customers only), then $49.99 every 4 weeks. Pause or cancel any time, and your first order has a 30-day money-back guarantee. Orders usually ship within 24 hours." | price in it: yes ($29.99 with its condition, then $49.99 every 4 weeks)
+CHECKS MISSED:
+- The headline still has a stop: 61% doesn't match the supplied prices (about 55%). It is locked and sent to the claims check.
+- Two praise words are unbacked: "whole-food" has no supporting fact, and "gut-supporting probiotics" goes against the facts. Both are locked and sent to the claims check.
+- The headline's whole message is a discount. It is locked, so it couldn't be changed.
+- Image words vs picture: couldn't run because no image was attached.
+```
 
-MISSING:
-- The ad image, so the picture check couldn't run.
-- What the 61% is measured against.
-- The packs per box.
-- A fact behind "whole-food".
-
-Verdict: Mostly a wording and missing-terms problem, and the reason to buy is sound: a daily pack at about a dollar a day. However, three of its supports (61%, probiotics, $5 per person) go against or beyond the facts. A claims check must clear them before this runs.
-
-Score: before 2/10 = 20, after 4/10 = 40 | Still failed:
-- (1) One clear promise: three deals are still stacked on one promise.
-- (2) Promise on a skim: the 61%, $29.99 and $20 off figures compete.
-- (4) No stop in the headline or first block: "to prove otherwise" stays in the headline.
-- (5) Every praise word backed by a fact: "whole-food" and "gut-supporting" are unbacked.
-- (8) Image words agree with the picture: not run, because there was no image.
-- (10) A discount is never the whole message: the headline is a discount alone.
+Want to plan what to test next with the [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer)? It takes this audit report. Or say what you'd like to do instead.
 ```

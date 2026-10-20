@@ -1,33 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 6 of 6 met. Invented facts: 3.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-The concept is strong and on-brief: a relevant, unexpected sink scene with the product present and no result claims. But it departs from the required output shape and misuses MISSING and scoring.
-
-## Fix
-
-In the Hand back/Output step, require the exact output-shape labels (ONE THOUGHT, MOMENT, TWIST, CHECK, HEADLINE, etc.) and say a MISSING line only for facts absent from the inputs and files, and the score only counts checks truly failed.
+A usable, on-brand concept: the crusted shaker next to a clean palm of gummies makes the washing-up point without words, and the headline, support line and colours all come from the input. One thing to verify when the photo is attached: the run assumes the daily pack carries a large "Sprout" wordmark (it flagged this as still to do), and the treatment says gummies "sit at rest" while the prompt says they "pour".
 
 ## Judge list
 
-- Met: 1. Cover the headline. The picture alone shows the problem.
-  Dirty shaker with gritty green ring in sink, dry hands pouring gummies above; the chore shows without words.
-- Met: 2. One sentence on why unexpected and why relevant.
-  "The gummies sit right where the washing-up happens" (unexpected); "exact moment in review 6" (relevant).
-- Met: 3. Product in ad, small, matching photo, not pasted in corner.
-  Pack in pouring hand and pouch upright on counter at sink edge, "logo readable at thumbnail size"; built from photos.
-- Met: 4. Picture shows problem or cause, never a result.
-  Shows dirty shaker and dry hands; no body change or before-and-after. Never list respected.
-- Met: 5. Headline names a moment or gain, not a reader condition.
-  "Greens with no shaker to wash" (job: Gain), 6 words.
-- Met: 6. Prompt mentions the problem before the product.
-  Prompt opens with the sink and used shaker with gritty ring before the Sprout pack.
-
-## Invented
-
-- number: 20 characters ("No water. No mixing." is actually 20 characters, so worked out and fine.)
-- number: top 30% (Layout choice for the frame, not a Sprout fact.)
-- other: MISSING: source for "6 g prebiotic fiber" (6 g is in the brand file; claiming it was unsourced is a wrong MISSING call, though harmless.)
+- Met: Cover the headline. The picture alone shows the problem.
+  "a used plastic shaker bottle... A dried, chalky green ring is crusted around the inside wall" beside a clean palm of gummies: mess reads without words.
+- Met: You can say in one sentence why the picture is unexpected and why it's relevant.
+  "side by side (with one exact detail: the dried green crust ring and gritty specks...)" and "Concludes: is the opposite of"; CHECK yes/yes.
+- Met: The product is in the ad, small and matching your real photo, not pasted in a corner.
+  "one Sprout daily pack torn straight across the top... held in the scene and lit by the same window light, never pasted on."
+- Met: The picture shows the problem or its cause, never a result like a changed body or a before-and-after.
+  Crusted shaker is the cause; "They are not shown 'working' and there is no result."
+- Met: The headline names a moment or a gain, not a condition the reader has.
+  "Greens with nothing to wash (job: gain)"
+- Met: The prompt mentions the problem before the product.
+  Prompt opens with the sink and crusted shaker; the daily pack appears only after "On the right".
 
 ## What went in
 
@@ -54,67 +44,39 @@ Offer: none.
 ## What came out
 
 ```text
-I can't draw the picture in this chat because no image tool is connected, so this gives you the plan and the prompt.
+I can't make images here (no image tool is connected), so this is the concept and prompt. I also can't see your two product photos; I worked from your descriptions and marked the photo check as still to do.
 
-## Concept card: Sprout, "no shaker"
+```
+ONE THOUGHT  "I get my greens and there's no shaker to wash." ("Plus not having to clean a shaker bottle or extra dishes for greens stuff in powder form, is absolutely excellent!", review 6; "the drink was definitely gritty/chalky.", review 3)
+MOMENT       Kitchen sink, a weekday at about 7am: a used shaker bottle with a dried green, chalky ring inside, its lid and a powder scoop beside it, waiting to be washed
+TWIST        side by side (with one exact detail: the dried green crust ring and gritty specks on the shaker wall)
+             Concludes: is the opposite of
+CHECK        Unexpected: yes  Relevant: yes
+HEADLINE     Greens with nothing to wash  (job: gain)
+SUPPORT      "No more sloshing chalky powders, or cleaning messy counters." (brand line, trimmed)
+LINE UNDER   Tear, eat, done. No shaker.
+LOOK         photo, because the point is "this mess is real". The crust has to read as true, and the brand's photos are bright and sunny.
 
-**One thought:** After one look, the buyer thinks: "Greens, and no shaker bottle to clean."
-- Quote, review 6: *"Plus not having to clean a shaker bottle or extra dishes for greens stuff in powder form, is absolutely excellent!"*
-- Quote, review 3: *"the drink was definitely gritty/chalky."* This drives the residue detail below.
+FRAME (4:5)
+Focal point / The split across the counter edge: the crusted shaker in the sink (left) against an open palm of gummies over a dry, clean counter (right)
+Words / Top fifth, on the plain sunlit pale wall above the sink. Headline in Work Sans bold, deep forest green #002C17. Support line smaller beneath it in the same green. One sunflower yellow #FFCC2E underline bar under the headline.
+Product / Lower right on the dry counter: one Sprout daily pack torn straight across the top, gummies pouring into an adult palm. The pack is held in the scene and lit by the same window light, never pasted on.
+Scale / The shaker stands about 20 cm tall beside the sink tap. The daily pack is palm-sized, and the gummies are the size of a fingertip.
+Colours / Scene in bright, warm morning light. Brand colours only in the words: #002C17 and #FFCC2E.
 
-**Moment:** A weekday morning at the kitchen sink, in sunlight. A used greens shaker bottle stands in the basin with half an inch of grey-green water. A dried, gritty green ring sits at the waterline, and clumped powder sticks to the wire whisk ball.
+PRODUCT TREATMENT
+Built from the photo of the torn daily pack with gummies pouring into a palm. It keeps the pack's shape, colours and large "Sprout" wordmark, and leaves out all small print. The adult pouch is left out, so the scene has one product and one focal point. The gummies sit at rest in the palm. They are not shown "working" and there is no result.
 
-**Twist:** Side by side, with one exact detail. The detail is the chalky green ring and clumps on the whisk ball, which no stock photo would bother with. Directly above the sink, a pair of dry hands holds a freshly torn Sprout daily pack and pours gummies into an open palm. The shaker waits below, unwashed.
-- **Conclusion:** *this is the opposite of that.* One way you scrub. The other way your hands stay dry.
-- I chose side by side over plain because a dirty shaker alone looks like a powder brand's own "before" shot. Putting the gummies over it is what makes the point.
+IMAGE PROMPT
+Bright, sunny photograph of a home kitchen on a weekday morning, warm window light, 4:5 vertical. On the left, in a white sink under the tap, stands a used plastic shaker bottle about 20 cm tall. A dried, chalky green ring is crusted around the inside wall, with gritty green specks stuck to the plastic. Its lid and a powder scoop lie beside it in the sink, dusted with green residue. On the right, on a dry, spotless light counter, an adult hand holds a small daily snack pack torn straight across the top, and gummies pour into the open palm. The pack must match the attached product photo exactly: same shape, same colours, same large "Sprout" wordmark, with no small print. No glass, no water, no spoon on the right side. The two halves sit side by side so the messy sink and the clean palm read as opposites. Only the hand and forearm show, with no face. The top fifth of the frame is a plain, pale sunlit wall left empty for text. In that area, in bold Work Sans, deep forest green #002C17: "Greens with nothing to wash". Beneath it, smaller, same green: "No more sloshing chalky powders, or cleaning messy counters." Add a short sunflower yellow #FFCC2E bar under the headline. Simple, uncluttered, one focal point, nothing else on the counter.
 
-**Two-by-two:**
-- **Unexpected? Yes.** The gummies sit right where the washing-up happens, and the hands are dry above wet dishes.
-- **Relevant? Yes.** This is the exact moment in review 6.
-- **Result:** keep.
+MISSING:  the two product photos themselves (attach them to the image tool so the pack is matched, not guessed); the platform each review came from
+Not used: "6 g prebiotic fiber" (true, but it pulls focus from the washing-up gain and isn't needed on the image); adult pouch on gradient (a second product would add a second focal point); "gagging on pills" part of the brand line (off the moment); merged and swapped-in twists (side by side already lands)
+CHECKS MISSED: none
+Still to do: product true to its photo. I couldn't see the photos, so check that the generated pack matches the real one in shape, colours and wordmark.
+```
 
-**Headline (job: Gain):** "Greens with no shaker to wash" (6 words)
+**To make the picture:** paste the image prompt into ChatGPT (GPT Image) or Gemini (Nano Banana) with your daily-pack photo attached. You can also paste this whole skill there so it writes and makes the picture in one go. Higgsfield's image tool works too. In Claude Code, with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, I can send it to that API and save the file; OpenAI or Google bills each picture. If the "Sprout" wordmark comes out garbled, don't remake the same image. Drop the support line and leave only the headline.
 
-**Support line (brand's own words, excerpted):** "No more sloshing chalky powders, or cleaning messy counters."
-
-**Line under the image:** "No water. No mixing." (20 characters)
-
-**Look:** Photo. The point is "this is real": the residue and the chore have to look true. It is bright and sunny with warm morning window light, never clinical, matching the brand's photos.
-
-**Frame (4:5 Feed):**
-- **Focal point:** the palm catching gummies, lower-middle of the frame. The shaker sits just below it in the sink.
-- **Quiet area for words:** the top 30%. This is a plain, sunlit pale wall or window frame above the sink, out of focus. The headline goes there in Work Sans Bold, forest green #002C17. The support line sits beneath it, smaller, in the same green. A sunflower yellow #FFCC2E underline goes under "no shaker".
-- **Product position:**
-  - The torn daily pack is in the pouring hand, with its front print toward camera.
-  - The adult pouch stands upright on the dry counter at the right edge of the sink. Its front faces camera, and its logo is readable at thumbnail size.
-- **Scale:** the shaker is a standard gym shaker, roughly the height of the tap spout. The hands are adult-sized. Gummy size and colour must match the product photo.
-
-**Product treatment:**
-- **Pouring hands and pack:** built from the photo of the daily pack torn straight across the top, with gummies pouring into a palm. Keep the straight tear, pack colours, logo and large print.
-- **Pouch:** built from the adult pouch photo, moved off its gradient into the kitchen. Keep its shape, colours and large print.
-- **Small print:** left out, never invented.
-- **Hands:** a made-up adult's, with no face shown. They are not presented as a customer.
-
-**Image prompt:**
-> Bright, sunny photograph, 4:5 vertical, of a kitchen sink on a weekday morning, warm sunlight from a window. In the sink basin stands a used plastic greens shaker bottle with a little grey-green water inside, a dried, gritty green ring at the waterline and clumps of green powder stuck to the wire whisk ball. Directly above the sink, a pair of dry adult hands (no face visible) holds a Sprout daily gummy pack torn straight across the top and pours gummies into an open palm, the hands, pack and gummies matching the attached product photo exactly in shape, colour and large print, small print left blank. On the dry counter at the right edge of the sink, the Sprout adult pouch stands upright facing camera, matching the attached pouch photo, logo clearly readable. The palm with gummies is the single sharp focal point; the shaker is just below it. Few objects, clean counter, nothing else in the sink. The top 30% of the frame is a plain, softly out-of-focus sunlit pale wall left empty for text. In that area, in bold Work Sans, deep forest green #002C17: "Greens with no shaker to wash", with a sunflower yellow #FFCC2E underline beneath "no shaker". Below it, smaller, same green: "No more sloshing chalky powders, or cleaning messy counters." No other text in the image.
-
-`MISSING: product photo` I worked from your descriptions, not the files. I couldn't check the pouch and pack print, colours, the tear shape, or gummy size and colour. Attach both photos to the image tool with the prompt.
-`MISSING: source for "6 g prebiotic fiber"`
-
-`Not used:`
-- 6 g prebiotic fiber: it had no source, and it isn't this ad's one thought.
-- The "gagging on pills" part of the brand line: it's off this moment.
-- A News headline: no new fact is on file.
-- The offer: there is none.
-
-**Score: 80/100 (4 of 5 checks)**
-- Missed: product true to its photo. This can't be confirmed until the actual photos are attached and the output is compared against them.
-
----
-
-**To make the picture:**
-- **ChatGPT or Gemini:** paste the prompt and attach both product photos. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits. Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt and the photos into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** with `OPENAI_API_KEY` (platform.openai.com/api-keys) or `GEMINI_API_KEY` (aistudio.google.com/apikey) saved, I can send the prompt and photos to that API and save the file. OpenAI or Google bills each picture.
-- **If a word comes out garbled:** shorten that line rather than remaking the same image.
+Next, would you like to check it with the [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker), make a second ad with the [Article headline image ad maker](https://useaiblocks.com/skills/article-headline-image-ad-maker), write the copy with the [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer), or write the page with the [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer)? You can also type your own.
 ```

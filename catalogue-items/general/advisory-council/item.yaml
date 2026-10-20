@@ -18,3 +18,9 @@ origin: own
 version: 1.0.0
 credits:
   - {title: "LLM Council", by: "Andrej Karpathy", url: "https://github.com/karpathy/llm-council", used: "Members rank each other's answers without knowing whose they are, then a chair writes the final answer"}
+tested:
+  on: 2026-10-20
+  business: sprout
+  model: claude-opus-5-5
+  judge: claude-fable-5-1
+  result: pass

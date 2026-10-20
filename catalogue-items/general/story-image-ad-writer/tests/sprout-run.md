@@ -1,31 +1,23 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 3 of 6 met. Invented facts: 1.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 6 of 6 met. Invented facts: 0.
 
-The run flagged a missing push, which is arguably what the skill demands, and it invented nothing. But it stopped at a direct-ad recommendation and left the owner with no story, picture, line or score, so it is not a usable deliverable.
-
-## Fix
-
-Step 1 should say that when no moment is found the output still fills every section of the shape, with MISSING in the fields it can't write. Alternatively, it should draft the story as 'you' from the quotes, since the review about 15 years of irregularity (#7) implies a long struggle.
+A careful, usable story ad: the push is honestly marked thin, the one quote is verbatim and attributed, the scene details are flagged as inferred, and the word and character counts are exact. The owner gets a clear picture brief, a story that stays inside the allowed claims, and a plain warning that the teaching page must be built before it runs.
 
 ## Judge list
 
-- Not met: Cover the product name. The picture and the first line should still make sense.
-  Story: not written. No picture or first line was produced, so it can't be judged.
-- Not met: The first 125 characters pick up what the picture makes people wonder.
-  "Story: not written." No opening exists.
-- Met: Every quoted phrase matches a review word for word.
-  Quotes #7-#10 reproduced exactly, e.g. "Feel lighter, less bloated and overall good."
-- Met: Nobody speaks in first person unless they're real and agreed.
-  No story written; flags state no first-person customer voice without permission.
-- Met: For a teaching page, no price, discount or product page link appears in the story.
-  No story written, so no price or discount appears.
-- Not met: The word count fits the length you asked for (short, 120 to 260).
-  Story: not written; no word count given.
-
-## Invented
-
-- other: unbuttoning after lunch, changing outfits, cancelling plans, or the morning routine that wasn't working (Offered as things to look for when collecting reviews, not as Sprout facts, so acceptable.)
+- Met: Cover the product name; picture and first line still make sense
+  "The fiber powder tub is two-thirds full." under a shelf of half-used tubs reads as a post without any brand name.
+- Met: First 125 characters pick up what the picture makes people wonder
+  Wonder: "Why does someone keep buying these and never finish one?" Opening: "Neither one ran out. They just stopped getting opened."
+- Met: Every quoted phrase matches a review word for word
+  "The prebiotics do their job, but not aggressively, and I feel like my overall digestion has improved." matches review 8 exactly; "15 years" matches review 7.
+- Met: Nobody speaks in first person unless real and agreed
+  "The brand, in third person... retelling one customer word for word"; the only first person is a real quoted customer, attributed.
+- Met: Teaching page: no price, discount or product page link in the story
+  Close: "we put together a plain guide to why fiber routines stall"; no price, discount or link anywhere.
+- Met: Word count fits the length asked (short, 120 to 260)
+  Claimed 195 words; manual count of the story gives 195.
 
 ## What went in
 
@@ -54,48 +46,38 @@ built yet. Length: short.
 ## What came out
 
 ```text
-I can't draw pictures in this chat because no image tool is connected, and this brief stops before the picture stage anyway.
+PUSH       pass, but thin. No single moment is described. It rests on how long the problem lasted, "My bowel movements are normal for the 1st time in 15 years!" (quote 7, MISSING: source), and on the buyer note that she has tried fiber powders and probiotics. So the push is built from the fixes she tried and dropped.
+NARRATOR   The brand, in third person, describing the frame and retelling one customer word for word. Nobody has agreed to narrate, so there is no first person and no "you" story about the reader's body.
+SHAPE      Down and back up: one fix after another, then a gentler one. It rests on quote 7 ("15 years", the long run of failed fixes), quote 8 ("do their job, but not aggressively", set against harsher fixes) and the buyer note on powders and probiotics tried.
 
-**1. Push: FAIL**
-`MISSING: a moment people struggle with`
+PICTURE
+Trace:     thing
+Skill:     tried-before-products-image-ad-maker
+Scene:     A pantry shelf holding two half-used fiber powder tubs (one open, with a dry scoop inside), a barely started probiotic bottle and a glass with cloudy residue. Labels are blank or turned away.
+Wonder:    Why does someone keep buying these and never finish one?
+Starter prompt: Candid phone photo, slightly overhead, of a kitchen pantry shelf in soft morning light. Two unbranded fiber powder tubs, one open with a dry scoop resting inside. A small probiotic bottle, nearly full, with its cap off beside it. A drinking glass with cloudy residue at the bottom. Labels blank or turned away. A real, slightly cluttered home, natural colours, no people, no text, no logo, no product.
 
-None of the four quotes describes the day, the place or the thing in hand when the old way stopped being bearable. They all describe results after switching:
-- #7 "My bowel movements are normal for the 1st time in 15 years!" (no source given) shows how long the struggle lasted, not a moment.
-- #8 "The prebiotics do their job, but not aggressively…" (brand site) is a result.
-- #9 "[Sprout] have been the solution to my problems with regularity." (retailer) is a result.
-- #10 "Feel lighter, less bloated and overall good." (retailer) is a result.
+STORY  (opener: describe the frame / short / 195 words)
+The fiber powder tub is two-thirds full. The probiotic bottle beside it is barely started. Neither one ran out. They just stopped getting opened.
 
-The line "Has tried fiber powders and probiotics" comes from the buyer description, not from customer words. A story can't rest on it.
+It usually starts the same way. Bloated by mid-afternoon, never quite regular, and a new tub bought to finally sort it out.
 
-**Recommendation:** run a direct product ad for now. Build it on the approved claim "Supports digestion and gut health," the survey line "67% of surveyed users experienced better, more regular digestion," and the format (a daily pack of greens gummies with 6 g of prebiotic fiber, in Low Sugar or Sugar-Free). Stopping here, as the skill requires.
+The powder made sense. Fiber is the advice everyone gives. But it meant scooping, stirring and drinking something gritty every single morning, and the mornings it got skipped added up. The probiotics were easy to take and hard to tell were doing anything.
 
-**To unlock the story ad, collect:**
-- Reviews, support emails or call notes that describe the bad moment, each with its source. Look for things like unbuttoning after lunch, changing outfits, cancelling plans, or the morning routine that wasn't working.
-- Quotes about the fiber powders and probiotics people tried before, and how each one failed: taste, texture, cost, or not sticking with it. These would support the "down and back up" shape.
+So the tubs moved to the back, and trying something new started to feel like buying the next one to sit beside them.
 
-**2. Narrator and shape:** not chosen. No push was found.
-- When it is chosen: nobody has given permission, so the brand would retell the story and quote reviews word for word.
-- If there are no quotes, the ad would be told as "you", with nothing in quotation marks.
+Sprout is a daily pack of greens gummies with 6 g of prebiotic fiber, in Low Sugar or Sugar-Free. There's nothing to mix. It supports digestion and gut health.
 
-**3. Picture:** not chosen. The picture has to come after the push.
+One customer wrote on our site: "The prebiotics do their job, but not aggressively, and I feel like my overall digestion has improved."
 
-**4. Story:** not written.
+67% of surveyed users experienced better, more regular digestion.
 
-**5. Line under the picture:** not written.
+If that shelf looks familiar, we put together a plain guide to why fiber routines stall, and what to look for next.
 
-**6. Other openings:** not written.
-
-**7. Page:** `MISSING: teaching page`. It isn't built yet, and it must exist before any story ad runs. Its first screen has to open on the same moment as the picture and say who the page is from.
-
-**8. Flags**
-- **#7 has no source.** Add one before using it anywhere. "Normal for the 1st time in 15 years" is one customer's result. It must stay quoted and never be presented as typical.
-- **#9 has been edited.** "[Sprout]" was inserted in brackets, so get the original wording.
-- **Missing quotes.** Quotes #1 to #6 weren't supplied. They may contain the missing moment, so please share them.
-- **Survey wording.** The survey line must always include "of surveyed users."
-- **Health claims.** No line can say the product fixes, treats or relieves IBS or bloating, or works within a set time. Bloating stays in a customer's own words only.
-- **Narrator permission.** No customer has given written permission, so there can be no first-person customer voice.
-
-**9. Tests:** not planned. There is no story ad yet.
-
-**10. Score:** not scored. No ad was written, so there is nothing to check yet.
+LINE UNDER THE PICTURE   Three tries, none finished (plain caption with a count, 26 characters)
+OTHER OPENINGS  1. It was the second fiber tub that year, and the first one wasn't empty. / Gummies in, scoop out (the swap, 21 characters)  2. "The prebiotics do their job, but not aggressively." That's how one customer put it. / but not aggressively (buyer's own line, 20 characters)
+PAGE      MISSING: the teaching page isn't built, and the ad must not run until it is. Its first screen must show the same shelf of half-used tubs and open on "The fiber powder tub is two-thirds full." It should teach why fiber routines stall before it sells, say plainly that it's from Sprout (not dressed as an article or a news outlet), and bring in the product, the survey line and the offer only near the end.
+FLAGS     Permissions: quote 8 is used word for word from the brand site. Confirm it may run in ads. Quote 7 is left out because it has no source; it can be used once the source is confirmed. Quote 9 is left out because "solution to my problems" sits too close to the banned "fix". Quote 10 is left out because "less bloated" goes beyond the allowed claims. Inferred: paragraphs 2 to 4 (scooping, gritty, skipped mornings, tubs moved to the back) are [inferred] from the buyer note, not quoted. Claims used: "Supports digestion and gut health" (verbatim); the survey line with "of surveyed users"; 6 g prebiotic fiber; Low Sugar or Sugar-Free. MISSING: survey size, date and method; brand photo style and colours; offer and guarantee (not needed for a teaching page). The words "fix", IBS and any timeline are avoided throughout. Picture: I can't make images here. Paste the starter prompt into ChatGPT (GPT Image), Gemini (Nano Banana) or Higgsfield's image tool. A real phone photo of a real shelf would beat a generated one.
+TESTS     1. The same story with two pictures: the half-used tubs shelf (thing) against an empty kitchen bench at 7 a.m. with a scoop left by the sink (place). Judge on how many readers reach the offer on the teaching page, then on sales, against other new-customer ads, not retargeting.  2. The winning picture with opening 1 (the date) against the original frame opener, judged the same way.
+CHECKS MISSED  none
 ```

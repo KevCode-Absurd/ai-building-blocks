@@ -29,7 +29,7 @@ credits:
   - {title: "The Differential Role of Characteristics of Music on High- and Low-Involvement Consumers' Processing of Ads", by: "Deborah J. MacInnis and C. Whan Park, Journal of Consumer Research, 1991", url: "https://ideas.repec.org/a/oup/jconrs/v18y1991i2p161-73.html", used: "Music that fits the message matters, for choosing the sound by fit"}
   - {title: "YouTube video ad creative: the ABCDs", by: "Think with Google", url: "https://business.google.com/us/think/future-of-marketing/youtube-video-ad-creative/", used: "Win attention and show the brand early, for singing from bar 1 and showing the pack within 5 seconds"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

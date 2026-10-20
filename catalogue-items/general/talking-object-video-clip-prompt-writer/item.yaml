@@ -29,7 +29,7 @@ credits:
   - {title: "Is That Car Smiling at Me?", by: "Pankaj Aggarwal and Ann L. McGill, Chicago Booth Review", url: "https://www.chicagobooth.edu/review/car-smiling-at-me", used: "Putting the face where the object's shape already suggests one"}
   - {title: "Audio Tags 101: Directing emotional TTS in Eleven v3", by: "ElevenLabs", url: "https://elevenlabs.io/blog/v3-audiotags", used: "Recording one voice with performance tags when the video tool's voice drifts"}
 tested:
-  on: 2026-10-19
+  on: 2026-10-20
   business: sprout
   model: claude-opus-5-5
   judge: claude-fable-5-1

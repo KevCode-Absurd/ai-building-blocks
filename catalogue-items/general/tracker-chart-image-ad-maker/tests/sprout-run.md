@@ -1,25 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 5 of 5 met. Invented facts: 0.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The brief is strong and sound: a true 4-of-31 reading, one cyan circle, generic app, no invented facts, and sensible flags. But it breaks the required output shape and the score line. The shape specifies 6 checks and the run reports 8 of 8, and it uses numbered bold headings in place of the specified labels.
-
-## Fix
-
-In the output step, require the exact labelled lines from the output shape and the score as "<passed> / 6 checks x 100". Make it say the six checks it scores against, since the checks list holds more than six items.
+A clean, usable brief: the gate is answered honestly, the only numbers in view are the story's own, and the one gap (which four days were ticked) is clearly marked as a placeholder with a real-screenshot fix. The owner can paste the prompt or, better, photograph the customer's actual app and draw the circle by hand.
 
 ## Judge list
 
 - Met: The reading is one your buyer takes themselves, not a clinic scan or a doctor's file.
-  "It's the narrator's own habit app on their own phone."
+  "the narrator keeps the habit app and reads its 'vitamins' row herself, on her phone."
 - Met: There's exactly one mark, on the part your story's first line explains.
-  "one rough circle... around the longest run of empty squares in the 'vitamins' row"
+  "circle, magenta ... one loose circle around the empty stretch of the 'vitamins' row" matches "4 ticks out of 31".
 - Met: Every number you can read comes from your story or research.
-  "4 ticks and 31 squares... source is the story"; day numerals match a 31-day March; no other numbers.
+  "March", 1–31 and 4 ticks sourced to the story; tick days "2, 3, 4 and 11 are [inferred] placeholders" and listed under CHECKS MISSED.
 - Met: It names no condition and shows no name, date of birth or clinic.
-  "no condition named, no clinic and no alarm colours."
+  "No condition, no clinic, no alarm colours" and prompt says "no other readable text or numbers".
 - Met: The app or sheet looks generic, with no real app's icon or colours.
-  "a generic, unbranded habit-tracker app in its March month view"
+  "a plain, generic habit-tracker app in month view ... No logo, no brand colours"
 
 ## What went in
 
@@ -40,64 +36,35 @@ Claims list: 21 vitamins and minerals, 6 g prebiotic fiber
 ## What came out
 
 ```text
-No image tool is connected to this chat, so this is a written brief and prompt only. The steps to make the picture are at the end.
+I can't make images in this chat, so I'll hand back the prompt and how to finish it.
 
-**1. Gate**
-- **Buyer takes the reading themselves?** Pass. It's the narrator's own habit app on their own phone.
-- **Brand can back what the story says about it?** Pass. "4 ticks out of 31" comes from the approved story. The survey claim "95% of surveyed users take Sprout at least 4-6x per week" (brand survey, 3,000+ customers) speaks to the same reading, which is sticking with a daily habit.
-- **Can it stay ordinary?** Pass. It shows missed vitamins in a normal month, with no condition named, no clinic and no alarm colours.
+```
+GATE              Yes: the narrator keeps the habit app and reads its "vitamins" row herself, on her phone.
+                  Yes: the only claim about the reading is the story's own "4 ticks out of 31" in March, the customer's figure. The picture claims nothing about Sprout changing it.
+                  Yes: an ordinary habit calendar with gaps. No condition, no clinic, no alarm colours.
+SCENE             Someone's habit app for March, where the "vitamins" row is almost all empty circles, and someone has circled the gap.
+WHERE AND WHEN    A kitchen counter on a weekday morning, in window light. A blurred mug and the corner of a cutting board sit at the frame edge. The camera is a second phone shooting over the shoulder at a slight tilt, with a thumb at the left edge holding the phone.
+THE READING       A generic habit-tracker month view on a phone, headed "March". The one part that tells the story is the long empty run in the "vitamins" row after the few ticks.
+THE MARK          circle, magenta (the colour least present against a white screen, grey ticks and warm wood; it isn't an alarm red), one loose circle around the empty stretch of the "vitamins" row
+NUMBERS IN VIEW   "March" and days 1–31: from the story ("In March", 31 days). 4 ticks: from the story ("4 ticks out of 31"). Which 4 days are ticked: MISSING. Days 2, 3, 4 and 11 are [inferred] placeholders. Nothing else is readable.
+LINE UNDER IMAGE  4 ticks out of 31 in March (the buyer's own line, 26 characters)
+FLAGS             This is a reading in the picture, so a person checks the claims behind it before it runs.
+                  Claim: "In March it had 4 ticks out of 31". Source: the narrating customer's own habit app. Confirm it with her real March screenshot, because the story is marked "example only".
+                  The picture and line don't use the survey claim. If the copy adds it, it must read "95% of surveyed users take Sprout at least 4-6x per week" (brand survey, 3,000+ customers).
+                  Nothing may say Sprout treats or fixes anything.
+IMAGE PROMPT      Casual phone photo of a smartphone held by a hand at the left edge, over a wooden kitchen counter, morning window light, soft glare and faint moire on the screen, slight tilt, unretouched. The screen shows a plain, generic habit-tracker app in month view, headed "March", days 1 to 31 in a grid. One row labelled "vitamins" is in sharp focus: simple grey check marks on only four days (2, 3, 4, 11), and the other 27 days are empty circles. The rows above and below are soft and out of focus. No logo, no brand colours, no other readable text or numbers. A mug and a cutting board are blurred at the frame edge. Square 1:1.
+MARK STEP         After the photo is made, open it in your phone's photo editor. Use the markup pen in magenta at medium width and draw one quick, slightly uneven circle around the empty days after the last tick in the "vitamins" row. Draw it once and don't redo it.
+                  Fallback prompt line: "one rough hand-drawn magenta marker circle around the empty days 12 to 31 in the vitamins row, uneven and imperfect"
+CHECKS MISSED     Every readable number sourced: which four days were ticked isn't in the story, so 2, 3, 4 and 11 are inferred. Replace them with the customer's real screenshot. Best is to photograph her actual app.
+```
 
-**2. Scene**
-Someone held up their phone to show a habit calendar where the "vitamins" row for March is almost all empty, and they circled the blank stretch.
+MISSING: the customer's real March screenshot showing which 4 days she ticked, and confirmation that the 4/31 figure is hers.
 
-**3. Where and when**
-- **Place:** a kitchen counter.
-- **Time:** a weekday morning in ordinary window daylight.
-- **Around the reading:** a mug, a few crumbs and the counter edge, all soft in the background.
-- **Camera:** another phone shooting from just above and slightly to one side, tilted a few degrees. There is glare across the screen and a thumb at the bottom edge.
+**To finish it:**
+- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits.
+- **Higgsfield:** paste the prompt into its image tool.
+- **Claude Code:** with `OPENAI_API_KEY` or `GEMINI_API_KEY` saved, the prompt can be sent to that image API and the file saved. Keys are at platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI or Google bills each picture.
+- **Best option:** photograph the customer's own app on a phone and draw the circle by hand. Every number will then be true.
 
-**4. The reading**
-- **What it is:** a generic, unbranded habit-tracker app in its March month view, on a smartphone held in a hand.
-- **The part that tells the story:** the "vitamins" row has 31 day squares and only 4 ticks. The long run of empty squares after the last tick carries the story.
-
-**5. The mark**
-- **Shape:** one rough circle (a loose oval) around the longest run of empty squares in the "vitamins" row.
-- **Colour:** cyan. It's the colour least present in a warm kitchen photo with a white screen and green ticks, and it avoids red, which would read as an alarm.
-
-**6. Numbers in view**
-- **4 ticks and 31 squares, countable:** source is the story ("In March it had 4 ticks out of 31").
-- **"March" label:** source is the story.
-- **Day numerals:** small and soft, matching a 31-day March.
-- **Anything else:** none readable. Other rows are out of focus or cropped, and there are no totals, streaks or percentages.
-
-**7. Line under the image**
-March: 4 ticks out of 31.
-
-**8. Flags**
-- **A reading in the picture: a person checks the claims behind it before it runs.**
-  - Claim: 4 of 31 days ticked in March.
-  - Source: the approved story. The narrator is marked "example only", so confirm this against a real customer's record, or build the chart yourself from these exact numbers.
-- **If the survey figure appears in any copy near this image,** it must read "95% of surveyed users take Sprout at least 4-6x per week" (brand survey, 3,000+ customers). It should never be presented as a general fact.
-- **Label claims** (21 vitamins and minerals, 6 g prebiotic fiber) come from the label. No copy may say Sprout treats, fixes or reverses anything.
-
-**9. Image prompt**
-Phone photo, square 1:1, of a hand holding a smartphone over a kitchen counter in ordinary morning daylight. The phone shows a generic, unbranded habit-tracker app in a March month view. One row labelled "vitamins" is in sharp focus: a strip of 31 small day squares, only 4 filled with a plain green tick, the other 27 empty and pale grey. Other habit rows are blurred or cut off by the frame. No totals, percentages, streak counts or other numbers on screen. Slight tilt, faint window glare and light moire on the glass, thumb at the bottom edge, a mug and crumbs soft in the background. Unretouched, no logo, no product, no face.
-
-**10. Mark step**
-1. Open the photo in your phone's built-in markup tool (iPhone Photos > Edit > Markup, or Google Photos > Edit > Markup).
-2. Pick the pen in cyan at medium width.
-3. Draw one loose oval around the longest empty run in the "vitamins" row, in one quick stroke. Let it be slightly uneven, and don't close it neatly.
-4. Save a copy.
-
-Fallback prompt line: *"Add one rough, hand-drawn cyan circle around the longest run of empty squares in the 'vitamins' row, like a quick finger scribble in a phone markup tool."*
-
-Better still, recreate the row in a real habit app with exactly 4 ticks in March, then photograph it. Every number will then be true.
-
-**11. Score**
-100 / 100 (8 of 8 checks passed: Stop, Sort, Follow, one mark, every number sourced, no personal or clinic details, no diagnosis or treatment claim, house rules hold).
-
-**To make the picture**
-- **ChatGPT or Gemini:** paste the image prompt into a chat and ask for the picture. ChatGPT uses GPT Image and Gemini uses Nano Banana. Free plans have tight daily limits, and Codex on a paid ChatGPT plan can make it too.
-- **Higgsfield:** paste the prompt into its image tool, or connect Higgsfield to Claude so Claude makes it there.
-- **Claude Code:** save an OpenAI or Google key as `OPENAI_API_KEY` or `GEMINI_API_KEY`, and the prompt can be sent to that image API and the file saved. You can get keys at platform.openai.com/api-keys or aistudio.google.com/apikey. OpenAI or Google bills each picture.
+Want to check it before it goes live with the [Pre-launch ad checker](https://useaiblocks.com/skills/pre-launch-ad-checker), using this image prompt? Or say what you'd like to do next.
 ```

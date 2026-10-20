@@ -1,34 +1,21 @@
-# Test run on Sprout, 2026-10-19
+# Test run on Sprout, 2026-10-20
 
-Result: **fail**. Ran on claude-opus-5-5 (effort medium), graded by claude-sonnet-5-5. Judge list: 2 of 5 met. Invented facts: 2.
+Result: **pass**. Ran on claude-opus-5-5 (effort medium), graded by claude-fable-5-1. Judge list: 5 of 5 met. Invented facts: 0.
 
-The ad is mostly built on supplied facts and handles missing items well, but several lines read as scripted rather than spoken. It also uses patterns the skill tells it to avoid, so the owner would need to edit before filming.
-
-## Fix
-
-Add to step 2 and the final check that the writer must rescan the finished script for fragment lists like "No water, no shaker" and self-answered questions, and rewrite them as joined sentences before scoring. The score line should be marked down when this fails rather than self-scored 100.
+A tight, natural 35-second script that answers the powder-quitter's doubt using only the supplied facts, keeps the guarantee's first-order condition on screen, and follows the brand's product-handling rules. The notes are unusually careful about what was held back and why, so the owner can trust it with little rework beyond adding the AI-presenter disclosure.
 
 ## Judge list
 
-- Not met: Read it aloud. Every line is a sentence a person would say.
-  "Greens, vitamins, minerals, fiber." is a clipped fragment list; "And it's wild, I actually want to take it, so I don't forget" garbles the customer quote.
-- Not met: No slogan at the end, no self-answering question, no "no this, no that" list.
-  "No water, no shaker." is a no-this-no-that list; "So greens gummies? I figured, cute, candy." is a self-answered question.
-- Met: Every customer, number and quote is one supplied; missing ones are placeholders.
-  Numbers 60+, 21, 6 g and the customer phrases all come from the brief; no invented figures.
-- Met: One idea and one next step.
-  "Try one pouch. Your first order comes with a money-back guarantee." is a single close.
-- Not met: A crew could film every shot note, and none shows a result you can't prove.
-  Line 3 shows "Presenter turns the pouch around" then a cut without the presenter; the shot is muddled. The line 5 pocket scene implies a habit result.
-
-## Invented
-
-- claim: But it's a whole pack a day, not one gummy. (Brief says a small handful per pack; this is arguably fine but implies the doubt is answered by contents.)
-- other: Presenter, early 30s, casual tee, home kitchen (Invented presenter description; acceptable as production direction, not a fact.)
-
-## Safety
-
-- The ad says "Try one pouch" and the guarantee but never says it is first order only in speech; the end card has it, fine. However, the claim that a pack answers "no way a gummy holds what my powder did" could imply the gummy replaces powder, which is unsupported.
+- Met: Read it aloud. Every line is a sentence a person would say.
+  "It was gritty and chalky, so I'd skip days, and then I'd forget the pills too." Joined, plain, spoken.
+- Met: No slogan at the end, no self-answered question, no "no this, no that" list.
+  Ends on "try a pouch, and your first order comes with a money-back guarantee"; no questions; line 5 shows the action instead of a no-list.
+- Met: Every customer, number and quote is one you supplied. Missing ones show as [placeholders].
+  "60+ ingredients, 21 vitamins & minerals, 6 g fiber" and the guarantee are from the input; sprout.example from brand.md; two MISSING lines.
+- Met: It has one idea and one next step.
+  One idea (the powder quitter who sticks with it); one step: "try a pouch".
+- Met: A crew could film every shot note, and none shows a result you can't prove.
+  "tears a daily pack straight across its top edge and pours small matte green gummy bears into their palm"; no before/after or habit-kept shot.
 
 ## What went in
 
@@ -56,48 +43,51 @@ show partner characters.
 ## What came out
 
 ```text
-**Thread:** An AI-made presenter, a regular person who has quit powders and pills before, talks to their phone at the kitchen counter about the cupboard of abandoned supplements. Sprout arrives at the moment they say their own doubt ("no way a gummy holds enough") and then turn the pouch over.
+THREAD
+A presenter who sounds like someone who has given up on greens powders and pills talks to their phone in their kitchen, and Sprout comes in at the moment they admit they doubted a gummy could hold enough.
 
----
+SCRIPT
+1. My greens powder always ended up half full at the back of the cupboard.
+   Show: The presenter, late 20s to 40s in a casual t-shirt, holds the phone at arm's length in a bright kitchen. Behind them on the counter sits a half-used, unbranded tub of green powder with a scoop stuck in it.
 
-**Ad: phone-camera video, AI-made presenter, about 36 seconds (97 spoken words)**
+2. It was gritty and chalky, so I'd skip days, and then I'd forget the pills too.
+   Show: Cut to a plastic shaker bottle in the sink with dried green streaks inside.
 
-| # | Spoken line | Shot note |
-|---|---|---|
-| 1 | I've quit so many supplements. The greens powder was gritty and chalky, and the pill bottles just sat on a shelf. It's always been an issue of consistency. | Presenter, early 30s, casual tee, home kitchen, phone held at arm's length. On "powder", cut to an open cupboard with an unbranded tub, scoop and shaker. On "pill bottles", cut to a row of plain, unlabelled bottles on a shelf. |
-| 2 | So greens gummies? I figured, cute, candy. No way a gummy holds what my powder did. | Back to the presenter, one eyebrow up, holding the green Sprout pouch by its top like it's a bag of sweets. |
-| 3 | But it's a whole pack a day, not one gummy. Greens, vitamins, minerals, fiber. | Presenter turns the pouch around. Cut to a close-up of the pouch with no presenter in frame. Text card from the label: **60+ ingredients · 21 vitamins & minerals · 6 g fiber per pack** |
-| 4 | You tear the top, pour a little handful, and eat it. No water, no shaker. | Close-up in a real hand: one daily pack torn straight across its top edge. Small deep-green bears pour out of the torn top into the palm. The presenter eats them. The big pouch stays closed at its resealable top in the background. |
-| 5 | And it's wild, I actually want to take it, so I don't forget. | Presenter grabs keys and tucks a daily pack in a pocket on the way out the door. Easy, no big reaction. |
-| 6 | Try one pouch. Your first order comes with a money-back guarantee. | Presenter back at the counter, speaking straight to the camera. End card: pouch on a cream background, **30-day money-back guarantee. First order only.** |
+3. When I first saw these, I figured a gummy couldn't hold enough to replace my powder.
+   Show: The presenter holds up a glossy deep-green Sprout Original pouch, closed, with the yellow wordmark facing the camera, and raises an eyebrow.
 
-On screen for the whole video: the platform's AI-generated label plus a small "AI-generated presenter" tag.
+4. Then I read the back, and one little pack has way more in it than I thought.
+   Show: Close on the back of the pouch in their hand. On-screen text: "1 pack: 60+ ingredients, 21 vitamins & minerals, 6 g fiber"
 
----
+5. You tear the top, tip a handful into your hand, and just eat them right there.
+   Show: The presenter tears a daily pack straight across its top edge and pours small matte green gummy bears into their palm. The big pouch stands closed on the counter.
 
-**Notes**
+6. It's kind of wild, but I actually want to take them, so I don't forget.
+   Show: The presenter eats the handful and gives a small shrug of a smile at the camera, with the empty torn pack in the other hand.
 
-- **Presenter rules.** The presenter speaks as a person like the buyer. Their lines are built only from the customer words in the brief ("issue of consistency", "gritty/chalky", "I WANT to take… and don't forget"). They never say a figure, a health result or a review score. The ingredient numbers and the guarantee terms appear only as label and end-card text, never in the presenter's mouth.
-- **The doubt is answered with contents only.** "A whole pack a day" plus the label figures shows what's in it. The ad doesn't claim the gummies equal, replace or outperform a powder, and makes no claim about results.
-- **Facts held back:**
-  - The absorption study, the survey numbers and the star ratings. An AI presenter can't cite them, and they would be a second idea.
-  - All discount figures.
-  - Limited flavours and kids.
-  - Sugar-Free versus Low Sugar.
-  - Any wording about cancelling. Cancelling is the loudest complaint, so the ad promises nothing past the guarantee.
-- **The old-way props stay unbranded.** No competitor tub or bottle is identifiable, and no partner characters appear.
-- **MISSING:** the exact AI-disclosure wording required by each platform.
-- **MISSING:** whether "try one pouch" should point to the one-time or the subscription first order. The guarantee applies to the first order either way.
-- **MISSING:** whether legal wants the FDA footer line on the end card. The ad makes no structure/function claim, but the brand's ads currently leave the line off.
+7. If you've given up on a powder too, try a pouch, and your first order comes with a money-back guarantee.
+   Show: The Sprout Original pouch upright on the counter in warm morning light. On-screen text: "30-day money-back guarantee, first order only. sprout.example"
 
----
+NOTES
+- Length: about 113 spoken words, roughly 35 to 38 seconds at a relaxed pace. This sits inside the 30 to 40 second brief.
+- AI presenter: the presenter speaks as someone like the buyer. They are not a real customer, the founder or an expert. The ad must carry whatever AI-made label the platform requires. MISSING: the exact disclosure wording or label to use.
+- No figures are spoken. The pack contents (line 4) and the guarantee window (line 7) appear only as on-screen brand text, because an AI presenter must never cite a figure.
+- The doubt is answered with what the pack contains. The ad does not claim Sprout matches or replaces any powder nose to nose, because there is no comparison on file.
+- Customer words are paraphrased, not quoted: "issue of consistency" in line 2, "gritty/chalky" in line 2, and "I WANT to take [Sprout] and don't forget" in line 6. Line 6 is one customer's feeling said in a persona's voice. It is not a promise that every buyer keeps the habit, and no shot shows a habit kept.
+- Guarantee condition is kept: first order only, 30 days, both on screen in line 7.
+- Facts held back on purpose:
+  - the study (it shows absorption, which this ad doesn't argue)
+  - survey percentages
+  - star ratings
+  - all prices and discounts
+  - Sugar-Free
+  - "Rip. Tip. Enjoy." and other brand slogans, which stay out of a person's mouth
+- "No water, no mixing, no shaker" is rewritten as the action in line 5 so it doesn't become a "no this, no that" list.
+- No partner characters or tie-in flavours appear. Only the Original adult pouch is shown.
+- The big pouch is shown closed, and the daily pack is torn across its top edge only.
+- No taste promise is made, because some buyers find the taste grows on them.
+- MISSING: grams of sugar per pack, in case a viewer asks in the comments.
 
-**Score:** 4 checks passed / 4 checks × 100 = **100**
-
-- Read-aloud test: pass.
-- No made-up customer, number, quote, study, award or deadline: pass.
-- One idea, one thread, one next step: pass.
-- Length within 30 to 40 seconds, and shot notes filmable without a result claim: pass.
-
-Checks missed: none.
+CHECKS MISSED
+none
 ```

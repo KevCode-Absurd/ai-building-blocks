@@ -19,7 +19,7 @@ seats:
   - {seat: "The editor's pencil", asks: "Which words here are doing no work, and why are they still in?"}
   - {seat: "Memoir coach", asks: "What small moment holds the whole story?"}
 pairs_with: [george-orwell, ernest-hemingway, anne-lamott, stephen-king, mark-twain]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "William Zinsser", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/William_Zinsser", kind: reference}
   - {n: 2, title: "On Writing Well", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/On_Writing_Well", kind: reference}
@@ -27,6 +27,15 @@ sources:
   - {n: 4, title: "How to Write a Memoir", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/how-to-write-a-memoir/", kind: own-words}
   - {n: 5, title: "The 300-Word Challenge", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/the-300-word-challenge-2/", kind: own-words}
   - {n: 6, title: "No Proverbs, Please", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/no-proverbs-please/", kind: own-words}
+  - {n: 7, title: "Visions and Revisions (2009)", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/visions-and-revisions/", kind: own-words}
+  - {n: 8, title: "Hold the Emotion! (2011)", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/hold-the-emotion/", kind: own-words}
+  - {n: 9, title: "The Right to Write (2011)", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/the-right-to-write/", kind: own-words}
+  - {n: 10, title: "Flunking Description (2012)", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/flunking-description-2/", kind: own-words}
+  - {n: 11, title: "Yes, But", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/yes-but-2/", kind: own-words}
+  - {n: 12, title: "Yale Alumni Magazine: William Zinsser (2009)", by: "William Zinsser, Yale Alumni Magazine", url: "http://archives.yalealumnimagazine.com/issues/2009_03/zinsser.html", kind: own-words}
+  - {n: 13, title: "E-Maledictions", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/e-maledictions-2/", kind: own-words}
+  - {n: 14, title: "Journeys with Joseph Mitchell (1993)", by: "William Zinsser, The American Scholar", url: "https://theamericanscholar.org/journeys-with-joseph-mitchell/", kind: own-words}
+  - {n: 15, title: "William Zinsser's 5 tips for becoming a better writer (2011)", by: "Mallary Tenore Tarpley, Poynter", url: "https://www.poynter.org/reporting-editing/2011/william-zinssers-5-tips-for-becoming-a-better-writer/", kind: secondary}
 tests:
   - {kind: use, prompt: "Edit this paragraph from our company newsletter. Cut the clutter and show me what you removed and why: 'At this point in time, we are pleased to announce the implementation of an enhanced customer feedback facilitation process.'"}
   - {kind: use, prompt: "Write a 300-word piece about a local park, with one person who looks after it at the centre."}

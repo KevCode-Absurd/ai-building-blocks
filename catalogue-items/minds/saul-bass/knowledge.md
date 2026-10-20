@@ -1,8 +1,8 @@
 # Saul Bass: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Bass spoke about his work in interviews and wrote a few articles, but little of his own writing is online. This data set uses his own statements as quoted by the Library of Congress [S1] and by the design historian Pat Kirkham [S2], a page of sourced quotes [S3], reference pages [S4][S5] and essays on his title sequences [S6][S7][S8][S9][S10]. Much of what we know about his thinking comes from reading the work itself, so we say when a point is an essayist's reading.
+A note on method: we could not open a full transcript of any Bass interview. The 1977 interview with Herbert Yager and his film *Bass on Titles* are only quoted in pieces by others [S12][S14]. Beyond the sources below, we added the text of his 1969 Bell System pitch film as quoted by a design site [S13], and critical essays that quote him [S11][S12]. Bass spoke about his work in interviews and wrote a few articles, but little of his own writing is online. This data set uses his own statements as quoted by the Library of Congress [S1] and by the design historian Pat Kirkham [S2], a page of sourced quotes [S3], reference pages [S4][S5] and essays on his title sequences [S6][S7][S8][S9][S10]. Much of what we know about his thinking comes from reading the work itself, so we say when a point is an essayist's reading.
 
 ## In one paragraph
 
@@ -56,6 +56,10 @@ How he applied it: from the mid-1960s to the late 1980s, the Basses largely left
 
 His firm's corporate marks were unusually long-lived. A 2011 analysis found they had lasted more than 34 years on average [S4]. The list includes the Bell System (1969), the AT&T globe, United Airlines (1974), Continental Airlines, Kleenex, Quaker Oats, Hanna-Barbera and Geffen Records [S4].
 
+### A metaphor, not a scene from the film
+
+Kemp quotes Bass describing his advertising as a metaphor for the film rather than an actual piece of it, and rejecting the "See! See! See!" way of selling a film in pieces [S11]. He said something could happen during the credits that could help the film [S11]. For *West Side Story* he wanted the credits to work as a decompression chamber before the story began [S11]. In a *Graphis* article he argued that film advertising failed to trust a grown-up audience [S12]. Kemp notes that Bass used abstract designs for cooler, more analytical directors such as Hitchcock and Wilder [S11].
+
 ## How he decides
 
 - Find the core of the story first [S4].
@@ -83,6 +87,18 @@ From the mid-1960s to the late 1980s the Basses largely left main titles to make
 
 ### Making a film about creativity and keeping it loose
 For Why Man Creates (1968), a sponsored film, Bass resisted the sponsor's chosen title and called it the creativity film [S1]. The sponsor found his first bookends too eye-popping and asked for a plainer version [S1]. He kept it playful, voicing comic sound effects himself, and said he wanted viewers to feel the agony, discipline, mess and failure of creative work [S1].
+
+### Asking "Why not make it move?"
+
+While making film symbols for Otto Preminger's *Carmen Jones* (1954) and *The Man with the Golden Arm*, Bass and Preminger asked each other why the symbols should not move [S12][S14]. Bass later described the idea as simpler than it sounds [S12]. It led to the animated flame behind the rose and to the first titles that worked as small films [S11][S12]. The habit to copy is asking what the same piece would do if it moved.
+
+### Fighting for animation on the Golden Arm
+
+On *The Man with the Golden Arm* (1955), Bass argued that the sequence fell flat without animation, and Preminger first opposed it [S11]. The compromise was a staccato, jerky movement [S11]. He said the jagged arm expressed the jarring, disjointed life of an addict [S12]. The titles were animated to Elmer Bernstein's existing jazz score, which was unusual then [S12].
+
+### Selling Bell a whole system in 1969
+
+For the 1969 Bell System redesign, his firm made a half-hour film to pitch AT&T executives [S13]. The pitch did more than show a logo. It treated the mark as one tile in a single national visual system, and its closing line said each impression adds to the whole [S13]. It argued the new look told customers and investors that Bell was alive and in the mainstream of today [S13]. AT&T later called it the largest corporate re-identity program in US history, covering 135,000 vehicles, 22,000 buildings and 1,250,000 phone booths [S13].
 
 ## Where he stood
 

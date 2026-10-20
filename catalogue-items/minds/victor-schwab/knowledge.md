@@ -1,18 +1,18 @@
 # Victor Schwab: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Schwab's main book, *How to Write a Good Advertisement*, is still in copyright and we could not open it. Our main own-words source is his long two-page ad "100 Good Advertising Headlines, and why they were so profitable", which his agency ran in 1958 [S1]. It ran under the agency's name, Schwab and Beatty. A later writer says it was Schwab's essay and that he reprinted it in his 1962 book [S3]. We also read a short excerpt from an early version of the book, reprinted in a 1945 magazine [S2]. The book existed in some form by the early 1940s [S6]. Facts about his life come from thin sources that don't always agree. We mark those points.
+A note on the record: Schwab's main book, *How to Write a Good Advertisement*, is still in copyright and we could not open it. Our main own-words source is his long two-page ad "100 Good Advertising Headlines, and why they were so profitable", which his agency ran in 1958 [S1]. It ran under the agency's name, Schwab and Beatty. A later writer says it was Schwab's essay and that he reprinted it in his 1962 book [S3]. We also read a short excerpt from an early version of the book, reprinted in a 1945 magazine [S2]. The book existed in some form by the early 1940s [S6]. Four more pages add facts on his career, his five-step formula, one of his best-known ads and the 1958 ad's design [S7][S8][S9][S10]. They are reference or secondhand pages, so they give his method as others summarise it. His other writing, including a series in a trade magazine and his split-run studies, was not online in a form we could read. Facts about his life come from thin sources that don't always agree. We mark those points.
 
 ## In one paragraph
 
-Victor Schwab was a mail-order copywriter who spent his career on ads that had to pay for themselves in replies [S1][S4]. He started as a secretary to Max Sackheim, a copy chief who went on to help found the Book-of-the-Month Club [S4][S5]. He became a copywriter, worked on ads for Dale Carnegie's *How to Win Friends and Influence People*, and with Robert Beatty built the agency Schwab and Beatty [S1][S4]. His agency's clients keyed every ad and kept records of what each one brought in [S1]. From those records he drew a simple view of headlines. A good headline picks out the readers who care about the subject and promises them a worthwhile reward for reading [S1]. The writer's job is to make the ad harder to pass up than to read [S1]. He then carried the same care into the first paragraph and the subheads, so the reader keeps going all the way to the order form [S1].
+Victor Schwab was a mail-order copywriter who spent his career on ads that had to pay for themselves in replies [S1][S4]. He started as a secretary to Max Sackheim, a copy chief who went on to help found the Book-of-the-Month Club [S4][S5][S7]. He became a copywriter, worked on ads for Dale Carnegie's *How to Win Friends and Influence People*, and with Robert Beatty built the agency Schwab and Beatty [S1][S4][S7]. His agency's clients keyed every ad and kept records of what each one brought in [S1][S10]. From those records he drew a simple view of headlines. A good headline picks out the readers who care about the subject and promises them a worthwhile reward for reading [S1]. The writer's job is to make the ad harder to pass up than to read [S1]. He then carried the same care into the first paragraph and the subheads, so the reader keeps going all the way to the order form [S1]. Others summarise his full method as five steps: get attention, show an advantage, prove it, persuade the reader to take the advantage, and ask for action [S7][S8].
 
 ## Core ideas
 
 ### Two jobs for every headline
 
-Schwab said good headlines do two things. They select, from all the readers of a paper or magazine, the ones who are interested (or can be made interested) in the subject. And they promise those readers a worthwhile reward for reading [S1]. Later writers still quote this as a first rule for headlines [S3].
+Schwab said good headlines do two things. They select, from all the readers of a paper or magazine, the ones who are interested (or can be made interested) in the subject. And they promise those readers a worthwhile reward for reading [S1]. Later writers still quote this as a first rule for headlines [S3][S10].
 
 How he applied it: his own 1958 headline essay opens by pointing out to you, the reader, that you must care about advertising and that the headline has promised the ad will be worth your time [S1].
 
@@ -20,7 +20,7 @@ How he applied it: his own 1958 headline essay opens by pointing out to you, the
 
 He argued that the headline gets people into the copy, and the copy can't get them into the headline [S1]. Some of the biggest flops, he wrote, had strong body copy that nobody read because it wasn't summed up in a good headline [S1]. So a copywriter's aim should be to make the ad harder to skip than to read, and the headline is the first and biggest step [S1].
 
-How he applied it: he refused to put a percentage on a headline's share of an ad's value. He compared it to asking how much better a car that runs is than one that won't start [S1].
+How he applied it: he refused to put a percentage on a headline's share of an ad's value. He compared it to asking how much better a car that runs is than one that won't start [S1][S10].
 
 ### The flagman by the track
 
@@ -58,9 +58,15 @@ He called subheads the rungs of a ladder that make it easier to keep going down 
 
 How he applied it: he suggested a run of subheads that tell the sales story in order, so even readers who only glance get the main points [S1].
 
+### The five steps of a good ad
+
+Summaries of his book give a five-step order for an ad: capture attention, present a benefit the reader wants, back the claim with proof, help the reader see why it matters to them, and say what to do next [S7][S8]. The book also covers credibility, layout, ad size, special offers and split-testing [S8]. We have only these summaries, not the book, so treat the wording as theirs [S7][S8].
+
+How he applied it: his 1958 ad follows this order for the agency itself. A headline, 100 proofs, a principle at each stage, and a closing box with the agency's record [S1][S10].
+
 ## How he decides
 
-- Judge a headline by its record: keyed replies or readership scores [S1].
+- Judge a headline by its record: keyed replies or readership scores [S1][S7].
 - Ask who the headline selects and what reward it promises [S1].
 - Try both a gain and a loss version [S1].
 - Add how fast, how easy or how cheap [S1].
@@ -71,29 +77,33 @@ How he applied it: he suggested a run of subheads that tell the sales story in o
 
 ## Real decisions
 
-### Running the 100 headlines ad
+### Becoming a copywriter from a secretary's desk
 
-In 1958 his agency ran a two-page ad listing 100 good headlines and why they paid [S1]. It sold the agency by teaching, which was an early form of content marketing [S1]. It ran under the name Schwab and Beatty [S1]. A later writer says Schwab wrote it and reprinted it in his 1962 book [S3].
+At about 19, Schwab was a night student at Columbia when he met Max Sackheim, copy chief at the mail-order agency Ruthrauff & Ryan. Sackheim hired him as a private secretary because he knew shorthand [S4][S7]. He was later promoted to copywriter [S7]. The path shows that he learned the craft next to a master of mail order, where every ad was counted.
 
-### Refusing to put a percentage on a headline
+### Buying into an agency (1926)
 
-He would not say a headline is worth a fixed share of an ad [S1]. He compared the question to asking how much better a car that runs is than one that will not start [S1]. A weak headline fails its main job, and a strong one can pull readers by the thousand [S1].
+A page on classic advertising says that in 1926 he and Robert Beatty bought out Sackheim and Scherman and renamed it Schwab and Beatty [S7]. Goodreads gives a different and garbled account of how the firm began (disputed) [S4]. By 1958 the agency said it had been in business about 30 years and that clients had spent over $77 million through it [S1][S10].
+
+### Keying every ad with coded coupons
+
+He is described as a pioneer who used coded coupon ads to split-test headlines, appeals, copy length, layouts and calls to action [S7][S10]. The coupons let him trace each reply to a specific ad and headline [S10]. His agency's clients kept records of what each one pulled, and he judged work by that count [S1].
+
+### Using a book title as the headline
+
+For Dale Carnegie's *How to Win Friends and Influence People*, Schwab used the book's own title as the ad headline, because a title that good needed no new one [S9]. His 1958 essay explains why: without the words "How to", the title would be a stale motto, but with them it is a promise [S1]. His mail-order copy for the book is credited with helping make it a best seller in the 1930s [S7].
+
+### Running 100 headlines as an ad (1958)
+
+In 1958 his agency ran a two-page ad of about 7,500 words listing 100 good headlines and why they paid [S1][S10]. It sold the agency by teaching, which was an early form of content marketing [S10]. It ran under the name Schwab and Beatty, closed with a soft-sell box on the agency's track record and had no direct call to action [S10]. A later writer says Schwab wrote it and reprinted it in his 1962 book [S3].
 
 ### Choosing negative headlines on purpose
 
-Of his 100 chosen headlines, 21 were wholly negative and 10 more began negative and turned positive [S1]. He noted that fear of loss is sometimes stronger than hope of gain [S1]. One example, about a "little mistake" that cost a farmer $3,000 a year, sold well in farm papers [S1].
+Of his 100 chosen headlines, 21 were wholly negative and 10 more began negative and turned positive [S1]. He noted that fear of loss is sometimes stronger than hope of gain [S1]. One example, about a "little mistake" that cost a farmer $3,000 a year, sold well in farm papers [S1]. He also admitted only one pure curiosity headline into the list, because the copy then has to drag the reader back to the product [S1].
 
-### Including only one curiosity headline
+### Refusing to put a percentage on a headline
 
-Only one pure curiosity headline made his list of 100 [S1]. He worried that such headlines raise ideas unrelated to the product, so the copy has to turn idle interest into a wish to buy [S1]. A reader will make time for something they truly want [S1].
-
-### Keying ads that cost nearly $500,000
-
-He said the first headline on his list, "The Secret of Making People Like You", ran in keyed ads that cost almost $500,000 and still paid [S1]. Keys let the agency trace replies to each ad [S1].
-
-### Naming the "So What?" list
-
-Schwab kept a list of poor headlines that had run in costly space, such as "Value Is a Feature" [S1]. He used it to show what a headline looks like when it promises nothing [S1].
+He would not say a headline is worth a fixed share of an ad [S1][S10]. He compared the question to asking how much better a car that runs is than one that will not start [S1]. A weak headline fails its main job, and a strong one can pull readers by the thousand [S1].
 
 ## Where he stood
 
@@ -109,14 +119,15 @@ Schwab kept a list of poor headlines that had run in costly space, such as "Valu
 
 ## His work and record
 
-- Born March 13, 1898, in Hoboken, New Jersey [S4].
-- As a night student at Columbia, met Max Sackheim of the mail-order agency Ruthrauff & Ryan, who hired him as a secretary [S4].
+- Born March 13, 1898, in Hoboken, New Jersey [S4][S7].
+- As a night student at Columbia, met Max Sackheim of the mail-order agency Ruthrauff & Ryan, who hired him as a secretary [S4][S7].
 - Sackheim helped found the Book-of-the-Month Club in 1926 [S5].
-- Became a copywriter and worked on mail-order ads for Dale Carnegie, Charles Atlas and Sherwin Cody's English course [S4].
-- With Robert Beatty, ran Schwab and Beatty in New York. A 1958 ad says it was founded about 30 years earlier and that clients had spent over $77 million through it [S1]. Goodreads gives 1926 and a garbled account of how it began (disputed) [S4].
-- *How to Write a Good Advertisement* was in print by the early 1940s [S2][S6]. A longer 1962 edition included the headline essay [S3].
+- Became a copywriter and worked on mail-order ads for Dale Carnegie, Charles Atlas and Sherwin Cody's English course [S4][S7].
+- With Robert Beatty, ran Schwab and Beatty in New York. A 1958 ad says it was founded about 30 years earlier and that clients had spent over $77 million through it [S1]. A classic-advertising page gives 1926; Goodreads gives a garbled account (disputed) [S4][S7].
+- *How to Write a Good Advertisement* was in print by the early 1940s [S2][S6]. A longer 1962 edition included the headline essay [S3]. One page says it began as a five-part series in a trade magazine in 1941, which we could not confirm [S7].
 - Published "100 Good Advertising Headlines" as a two-page ad in 1958 [S1][S3].
 - Wrote a series on split-run ads, "What 92 Split-Run Ads Tell Us", cited in later mail-order books [S6].
+- *Advertising Age* is reported to have called him the greatest mail-order copywriter of all time [S7].
 - Died March 22, 1980, according to a biographical dictionary of advertising [S6].
 
 ## Where he was wrong or criticised
@@ -124,7 +135,8 @@ Schwab kept a list of poor headlines that had run in costly space, such as "Valu
 - **Mail order isn't everything.** His proof came from keyed ads that sold by reply [S1]. It fits direct response well, and says less about ads meant to build a brand over years.
 - **Fear as a tool.** He counted 21 wholly negative headlines among his best [S1]. Loss and embarrassment appeals work, but they can tip into manipulation if the fear is out of proportion.
 - **Headline formulas age.** Phrases such as "Do You Make These Mistakes?" were copied for decades [S1][S3]. Formulas lose force when every rival uses them.
-- **Thin biography.** The record of his early career is patchy and partly contradictory [S4][S6]. Don't build claims on those details.
+- **No call to action.** His own 1958 ad ended with a track record box and no direct ask [S10]. A rule he teaches for others, to say what to do next, is missing from his most famous piece for himself.
+- **Thin biography.** The record of his early career is patchy and partly contradictory [S4][S6][S7]. Don't build claims on those details.
 
 ## Blind spots to watch
 

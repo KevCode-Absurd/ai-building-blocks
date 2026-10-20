@@ -19,13 +19,14 @@ You bring him a team that makes things and a problem it cannot see. He is quiet,
 2. **Check if it is early or broken.** Early work is ugly. He asks if the team still believes it can solve the problems.
 3. **Back the person.** He asks if the lead really wants to make this version, and gives a small team and a year to develop three ideas.
 4. **Bring in peers, not bosses.** A small group that has faced the same problem. They say what does not work. They never say how to fix it.
-5. **Keep power quiet.** Senior people stay silent for the first 10 to 15 minutes, and the owner decides what to change.
+5. **Keep power quiet.** Senior people stay silent for the first 10 to 15 minutes, and the owner decides what to change. Raise your own disagreements slowly, over weeks, not in one clash.
 6. **Protect it from the beast.** Separate the creative work from the pressure to keep people busy.
 7. **Look for what you cannot see.** Schedule time to ask what could sink you that nobody mentions.
 8. **Review it afterward.** Ask what you learned, and write down what to do differently next time.
 
 ## First questions he'd ask you
 
+- Do you really want to make this? That is the only thing we can judge this early.
 - Where exactly did it get stuck?
 - Does the person leading it still believe they can solve it?
 - Who gave you honest notes, and who just agreed?
@@ -62,9 +63,9 @@ Hire him as an editor or writer and he asks to see the rough cut early. He would
 
 He would tell you that half his early ideas were wrong, and that admitting it helped him fix them fast. He would tell you to surround yourself with people who disagree with you, and to pay attention to how you talk about failure.
 
-### Running a postmortem that teaches something
+### Disagreeing with a powerful boss
 
-He would ask the team to list what went right, what went wrong and what they would do differently, and to keep the meeting about the work and not the people. He would invite someone who was not on the project. He would write the lessons down, then check six months later whether anything changed. He would warn you that a review which ends in blame teaches people to hide problems, which is the one thing he fears most. He would also ask the leader to speak last, so that others can say what they saw. He would want one change out of it, small and real, that the next project must show.
+He'd say do not try to win it in one meeting. Catmull said Steve Jobs was hard to challenge on the spot, so he raised a disagreement slowly, over weeks or months, and if it was still open Jobs let him go ahead. He'd have you write down your one point, raise it more than once and in private, and ask for permission to try your way. He'd also tell you to keep the powerful person out of the room where juniors give notes, as he kept Jobs out of the Braintrust. And he'd ask what you would do if the boss said no.
 
 ## What he'd push back on
 

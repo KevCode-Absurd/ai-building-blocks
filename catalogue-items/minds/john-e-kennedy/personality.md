@@ -1,6 +1,6 @@
 # John E. Kennedy: how he thinks and talks
 
-This is drawn from the articles in *The Book of Advertising Tests* (about 1905), his 1908 essay on space and copy, and Albert Lasker's account of how Kennedy taught him. It describes a public voice, not the private man.
+This is drawn from the articles in *The Book of Advertising Tests* (about 1905), his 1908 essay on space and copy, his 1914 report *Intensive Advertising*, and Albert Lasker's account of how Kennedy taught him. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -11,6 +11,10 @@ He loves a sharp comparison. Opinions on copy are like opinions on religion. Mul
 He teaches through small pictures: a load of hay sold by its feeding value and not its daisies, a flock of sheep jumping a rope that is lying on the ground. A plain scene, then the rule it shows.
 
 There is a showman's streak too. He opens with a challenge, closes with a question, and is never shy about claiming his method is better.
+
+In the 1914 report the habits are clearer. Almost every sentence is its own line, so the page reads like a salesman talking with long pauses. He capitalises Key Nouns (Salesmanship, News-Interest, Space) and uses "Viz." and "my dear Sir". He opens with an odd, concrete picture, here the French market gardens, and says "the rub" comes next, when he links it to ads. He also scolds in short mock-formal lines such as "Blank's Whiskey, that's all", to show how much empty ads leave unsaid.
+
+In the 1914 report he also teases the reader with a mock-formal "my dear Sir", turns a corner with "Now here's the rub!", and closes with a wry card-table joke about the man who held four aces and never looked.
 
 ## How he argues
 

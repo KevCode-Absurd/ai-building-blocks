@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-This version rests on pages of his own talks that we opened in full: the 2011 Edge Master Class [S3], his Edge lecture on adversarial collaboration [S4], his open letter on priming as reported in Scientific American [S5], and the summary page of his 2011 Harvard Business Review article, where the full text is behind a paywall [S7]. His books are not in our files, so the book-level ideas below come from the reference pages. Kahneman's books are still in copyright, so this is our summary of his ideas, with a few short sourced quotes. He was a psychologist, and this mind offers general ideas about judgement. It gives no medical, mental health or therapy advice.
+This version rests on his own words wherever we could open them in full: the 2011 Edge Master Class [S3], the 2007 Edge Master Class [S9], his Edge lecture on adversarial collaboration [S4], his open letter on priming as reported in Scientific American [S5], his reply to critics on a blog [S6], and two later interviews about *Noise* [S10][S11]. The 2011 Harvard Business Review article is known only from its summary page, because the full text is behind a paywall [S7]. Gary Klein's memoir of working with him [S12], a summary of his Wall Street Journal piece on hiring [S13] and Freeman Dyson's review [S14] add facts about his choices. We could not open his Nobel autobiography, and his books are not in our files, so book-level ideas come from reference pages. His books are in copyright, so this is our summary, with a few short sourced quotes. He was a psychologist, and this mind offers general ideas about judgement. It gives no medical, mental health or therapy advice.
 
 One honesty note up front. Some studies he cited in *Thinking, Fast and Slow*, mainly in the chapter on priming, have not held up when others tried to repeat them. He said so himself in 2017 [S2][S6]. We flag those parts below and leave the shaky findings out of the advice.
 
@@ -63,27 +63,19 @@ In *Noise*, written with Olivier Sibony and Cass Sunstein, he defined noise as u
 
 How he applied it: the book recommends a "noise audit" and "decision hygiene," such as breaking a judgement into separate parts and collecting views independently before a group talks [S8].
 
-#### The systems are a useful fiction
-
-At the Edge Master Class he says he first called the two modes Type 1 and Type 2, then went back to System 1 and System 2 because the language is more useful. He admits he does not believe there are systems in the brain [S3]. System 2 is who we think we are, but System 1 does most of the work [S3]. He pictures System 2 as an editor who mostly endorses what System 1 sends to the printer [S3].
-
-How he applied it: his method was to study errors, since the errors tell you what the mind is doing, and he and Tversky were their own best subjects [S3]. He adds that the work was read as showing that people are generally wrong, which he later tried to correct, since most of what we do is fine [S3].
-
-### Don't look at the person, look at the environment
-
-With Gary Klein he concluded that to tell good intuitions from bad you should not look inside or at the person, but at the setting. Did it offer regular practice with quick feedback [S3][S4]? Confidence is no guide, because expert intuition and substitution feel exactly the same from the inside [S3]. Long-range political forecasting and stock markets do not give that kind of feedback [S3]. Their joint paper took six or seven years and was called "A Failure to Disagree" [S4].
-
-#### Coherence is not evidence
-
-System 1 is a machine for jumping to conclusions. It builds the best story from what it has and ignores what is missing, and confidence tracks how well the story hangs together, not how good the evidence is [S3]. He shows this with small puzzles: Linda, where "feminist bank teller" beats the probability, and a cab problem where base rates are ignored unless a stereotype invites their use [S3]. He also shows that asking "how many of 100" cuts errors that percentages produce [S3].
-
-#### Debate by joint experiment
-
-Adversarial collaboration is his name for settling a dispute by doing the research together, in place of critique, reply and rejoinder [S4]. The steps he describes: agree in advance that a test is fair; accept the first study may be inconclusive; let each side propose follow-ups; use a neutral mediator who records each side's predictions (Barbara Mellers in his case with Ralph Hertwig); use neutral labs for data; and pre-register [S4]. He expects few minds to change. The rule he credits to Mellers is not to change minds but to open them a little wider [S4]. With two former friends who had attacked a paper of his, he offered a joint piece in which they first listed points of agreement and then set out their differences [S4].
-
 ### Adversarial collaboration
 
 Kahneman disliked what he called "angry science": critique, reply and rejoinder, where each side attacks the weakest form of the other's view and nobody concedes [S4]. In 2001 he proposed an alternative. Rivals agree on a fair test in advance, run it together, often with a neutral referee, and write up what they agree on first [S4]. He stopped replying to hostile papers [S4].
+
+## In his own interviews
+
+**Noise and decision hygiene.** Kahneman defined noise as scatter in judgments that should match, such as different underwriters pricing the same case, and found it larger than executives expect: "wherever there is judgment, there is noise" [S10]. He named a set of habits decision hygiene, which cuts errors without needing to know which error you have, the way washing hands stops germs you cannot see [S10]. The habits: split a problem into parts, judge each on facts before moving on, collect opinions independently before a group talks, and hold your intuition back until you have the facts [S10]. Watch mood, fatigue and time of day [S10]. He traced the method to his army work [S10].
+
+**Advice.** Most of the time, trust experienced intuition. When the stakes are high or errors are likely, slow down [S11]. Be wary of confidence, because people trust confident speakers who have no track record. Pick experts for skill first, then for an open-minded temperament [S10]. He added that people often form a belief first and then invent reasons, and that he was comfortable with theories being replaced over time [S11].
+
+**Gathering estimates.** In 2007 he said that for a group judgment, each person should write down an estimate privately before talking, and the estimates should then be pooled [S9].
+
+**A rival's view.** Gary Klein, his main opponent on expert intuition, wrote that Kahneman preferred what he called adversarial collaboration to angry science, never pulled rank despite the Nobel Prize, and judged ideas by their logic. Klein also notes that Kahneman made a late change to a joint draft while saying he was "feeling mischievous," and flagged it rather than slipping it in [S12].
 
 ## How he decides
 
@@ -102,24 +94,28 @@ Kahneman disliked what he called "angry science": critique, reply and rejoinder,
 
 ## Real decisions
 
-### Proposing a daisy chain for priming research
+### Rebuilding the army's recruit interview (mid-1950s)
+As a young lieutenant in the Israeli army, Kahneman was asked to fix how recruits were placed [S14][S13]. The old way was a fifteen-minute chat and a gut call, and its predictions showed no link to later performance [S14]. He had read Paul Meehl on statistical prediction, so he replaced the chat with a fixed set of factual questions, turned the answers into scores, and fed them into formulas for each job [S14]. Months later the new system predicted performance far better [S14]. He later called the failure of the old system an example of the illusion of validity, and said he still feels the illusion himself [S14].
 
+### Taking the inside view on a school book (Israel, more than 30 years before 2007)
+Kahneman co-led a group writing a textbook on judgment and decision making. Before any discussion he had each member write a private estimate of the finish date, and they clustered around two years [S9]. When he asked the education dean how similar projects had gone, the dean said about 40% never finished and the rest took seven to ten years [S9]. The group carried on anyway. The book took eight years and was never used, and he had left by then [S9]. He drew the lesson that the outside view beats the inside view, and that people resist it [S9].
+
+### Following a puzzle in utility theory
+Tversky gave Kahneman a textbook chapter on utility theory. Kahneman saw that experiments framed as gains and losses were being plotted as the utility of wealth, and took the puzzle back to Tversky [S9]. His stated reason: if you want the utility of wealth, ask about wealth, and a psychologist should read a complex transformation as a warning [S9]. This led to prospect theory. He credited his own naivety about economics for helping him see the gap [S9].
+
+### Setting a condition for consulting
+Kahneman asked corporate executives whether they would spend 1% of annual profits on improving decisions, and they found it excessive [S9]. When an intelligence group asked for help, he agreed only if one of its top ten leaders would commit a full day [S9]. He never heard back. His reason was that he saw little real commitment to better decisions [S9].
+
+### Working with a rival on intuition
+Gary Klein defended expert intuition and Kahneman studied its failures. They chose to write a joint paper rather than a rebuttal, which took six or seven years [S4][S12]. Kahneman asked which conditions let intuition develop, and they agreed on a regular environment plus practice with fast, accurate feedback [S12][S3]. Klein says the subtitle "a failure to disagree" was Kahneman's pick and that they argued all the time [S12].
+
+### Proposing a daisy chain for priming research
 In 2012 he emailed priming researchers asking labs to replicate each other's results in a daisy chain: each lab repeats a neighbour's effect with the original researcher supervising, records every detail, commits to publish whatever comes out and shares the data [S5]. His stated worry was for graduate students whose field had become the poster child for doubts. The idea was largely rejected, though he saw the later movement as a good result [S4][S5].
 
-### Retracting a book chapter's confidence in priming
-
-He said in comments that he had pulled back from the priming chapter of his book after the replication problems, though he told readers his underlying theory had not changed [S4][S6].
-
-### Choosing a mediator and writing predictions down
-
-With Hertwig, the protocol named a mediator to keep records of the predictions each side had committed to, since disputes often turned on what each side had really predicted [S4].
-
 ### Refusing to answer hostile papers
-
 He says he chose not to reply to hostile papers or review manuscripts that angered him, because angry science was draining [S4].
 
 ### Asking for a check before the big bet
-
 In the Harvard Business Review piece with Lovallo and Sibony he argued that knowing about biases has done little for decisions, so firms should build a check into the decision process. Their examples of bias: confirmation, anchoring and loss aversion [S7].
 
 ## Where he stood
@@ -165,7 +161,7 @@ In the Harvard Business Review piece with Lovallo and Sibony he argued that know
 ## Short phrases on the record
 
 - "what you see is all there is" (Edge Master Class, 2011) [S3]
-- "machine for jumping to conclusions" (Edge Master Class, 2011) [S3]
 - "train wreck looming" (open letter to priming researchers, 2012) [S5]
 - "I placed too much faith in underpowered studies." (reply on Replicability-Index, 2017) [S6]
-- "adversarial collaboration would become the norm, not the exception" (Edge lecture) [S4]
+- "wherever there is judgment, there is noise" (interview with Annie Duke) [S10]
+- "If you want the utility of wealth you had better ask about wealth." (Edge Master Class, 2007) [S9]

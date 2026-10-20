@@ -20,7 +20,7 @@ seats:
   - {seat: "Candid notes", asks: "Are we pointing out the problem here, or trying to dictate the fix?"}
   - {seat: "Hidden problems", asks: "What is going wrong here that we, as leaders, can't see?"}
 pairs_with: [walt-disney, steve-jobs, hayao-miyazaki, kim-scott, robert-mckee]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Edwin Catmull", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Edwin_Catmull", kind: reference}
   - {n: 2, title: "The Interview: Ed Catmull, founder and president of Pixar (January 2026)", by: "Ed Catmull with Jason Aten, Creative Effort", url: "https://creativeeffort.substack.com/p/the-interview-ed-catmull-founder", kind: own-words}
@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Creativity, Inc.: executive summary (February 2023)", by: "Camille Alcera, The Investor's Podcast Network", url: "https://www.theinvestorspodcast.com/billionaire-book-club-executive-summary/creativity-inc-ed-catmull/", kind: secondary}
   - {n: 5, title: "High-Tech Employee Antitrust Litigation", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/High-Tech_Employee_Antitrust_Litigation", kind: reference}
   - {n: 6, title: "John Lasseter", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/John_Lasseter", kind: reference}
+  - {n: 7, title: "Toy Story 2 (production history, dated)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Toy_Story_2", kind: reference}
 tests:
   - {kind: use, prompt: "Write the ground rules for a monthly feedback session where five writers on a small content team review each other's drafts."}
   - {kind: use, prompt: "Here's a rough first pitch for a children's podcast. Give me notes the way a Pixar-style Braintrust would: name the problems, don't write the fix."}

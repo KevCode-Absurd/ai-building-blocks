@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Larry Page is alive, and views can change. This data set comes mainly from Google's founders' letters: the 2004 letter he wrote with Sergey Brin when Google went public [S1], his 2012 update as CEO [S2], his 2013 letter [S3] and his 2015 letter creating Alphabet [S4]. It adds public reference pages [S5][S6]. The record of what he decided comes from the Wikipedia biography, which sits at the level of facts and context, not his reasoning. The letters on disk for this rebuild are short excerpts, so quoted wording stays within the earlier reading of the letters. Treat each view as "as of" the year of its letter. He stepped down as Alphabet's CEO in December 2019 and has said little in public since [S5]. Nothing here tells you what he thinks about events after that.
+Larry Page is alive, and views can change. This data set rests on his own words: Google's founders' letters of 2004, 2012, 2013 and 2015 [S1][S2][S3][S4], his 2009 commencement speech at the University of Michigan [S7], his remarks and audience answers at Google I/O in 2013 [S8], a 2014 stage conversation with Charlie Rose [S9] and the 2004 Playboy interview he gave with Sergey Brin [S10]. The TED conversation comes from an unofficial transcript. The facts of his career come from Wikipedia [S5][S6], which gives context but not his reasons. Treat each view as "as of" the year it was said. He stepped down as Alphabet's CEO in December 2019 and has said little in public since [S5]. Nothing here tells you what he thinks about events after that.
 
 ## In one paragraph
 
@@ -58,6 +58,8 @@ His letters describe search moving from matching words to understanding things, 
 
 How he applied it: Google Now tried to surface useful information before you asked [S3]. Search results began to show weather, flights and hotels directly [S2].
 
+Other habits from his own talks: at Google I/O in 2013 he said technology should do the hard work so people can spend time on what matters to them, and that the industry had barely started [S8]. In 2014 he described a test he called additionality, meaning work that would not happen unless he did it, and said invention is not enough, since an inventor like Tesla also needs a way to get the work to people [S9]. His research habit was to talk to the craziest person in a field and to reason from first principles, such as asking how far a product's cost sits from its raw materials [S8]. In Michigan in 2009 he told graduates to find the leverage in the world so they could be more lazy, and that mega-ambitious dreams are often easier to advance because few people try them [S7]. He argued that most important things are not zero sum, that being negative is not how progress happens, and that old laws lag behind technology, so there should be safe places to run experiments [S8].
+
 ### Structure for many ambitions
 
 In 2015 Page created Alphabet as a parent company so each business could run on its own with a strong CEO [S4]. Google became slimmer and more focused, while bets such as Calico and the X lab sat beside it [S4]. He and Brin would support the CEOs and decide where capital went [S4].
@@ -76,31 +78,35 @@ How he applied it: Sundar Pichai became Google's CEO in 2015, and replaced Page 
 
 ## Real decisions
 
-These are choices from the record, mostly as told by the Wikipedia biography [S5]. His own letters give the reasons where they cover the same ground.
-
-### Trying to run engineers without managers (2001)
-
-In his first spell as CEO, Page tried to remove Google's project managers. Every engineer would report up through one VP of engineering to him. His stated reason was that he did not like people without technical knowledge supervising engineers [S5]. He also wrote down his management tenets as a reference for his team [S5].
+These are choices from the record. His own words give the reason where one exists. The rest come from the Wikipedia biography [S5], which gives facts but seldom his reasons.
 
 ### Stepping aside for a hired CEO (2001)
 
-Google's two big investors pressed Page to let a more experienced leader build a management team. He came round after talking with other technology CEOs, including Steve Jobs and Andy Grove of Intel. Eric Schmidt took the CEO job in August 2001 and Page became president of products [S5].
+Google's two big investors pressed Page to let a more experienced leader build a management team. He came round after talking with other technology CEOs, including Steve Jobs and Andy Grove of Intel, and Eric Schmidt took the CEO job in August 2001 while Page became president of products [S5]. The record shows he accepted the move rather than fight it, and then kept his say on products.
+
+### Saying no to selling, and no to the dot-com rush (2004 interview)
+
+In the Playboy interview he said Google would not sell because it was important and built for the long term: "We like being independent" [S10]. He said Google also passed on investing in more than 100 dot-com companies, which cost it short-term money but not long-term [S10]. The 2004 letter set up the two share classes to protect that independence [S1].
+
+### Keeping ads apart from results (2004)
+
+He argued that a portal showing its own content first is as much a conflict of interest as selling search rankings [S10]. Google kept paid ads visibly separate and did not take payment for rank [S1][S10]. His stated aim for search was to get users to the right answer fast and send them elsewhere [S10]. He also said the ad-supported route is simpler for a business: buy an ad, don't try to game the ranking [S10].
 
 ### Buying Android on a small cheque (2005)
 
-Page led the $50 million purchase of Android because he wanted Google to reach people on handheld computers anywhere. Schmidt was not told beforehand, but did not object given the size [S5]. By 2012 Android was being switched on over 850,000 times a day [S2]. He pushed later to protect it, announcing the $12.5 billion Motorola Mobility deal in August 2011 mainly to get patents against lawsuits [S5].
+Page led the $50 million purchase of Android because he wanted Google to reach people on handheld computers anywhere. Schmidt was not told beforehand but did not object given the size [S5]. At TED he looked back and said he had at first felt guilty about spending time on it and that this feeling was wrong, because Android was the future [S9]. By 2012 Android was being switched on over 850,000 times a day [S2].
+
+### Changing how a big company talks to itself (2004)
+
+Weekly Friday TGIF meetings worked when Google had about 50 people but broke down at around 1,000 staff across time zones [S10]. Weekly email summaries replaced them, and he admitted they were "not the same" [S10]. He said much of management was improvised and borrowed from other companies [S10]. It shows his habit of changing a process when size breaks it.
 
 ### Closing products and unifying the rest (2011 to 2013)
 
-On his return in 2011 Page cut products so the company would not spread thin. His 2012 letter counts more than 30 closed or merged; the biography says at least 70 were shut down by March 2013 [S2][S5]. The rest were redesigned under a project codenamed Kennedy, so they looked and worked as a set [S5].
+On his return in 2011 Page cut products so the company would not spread thin. His 2012 letter counts more than 30 closed or merged; the biography says at least 70 were shut down by March 2013 [S2][S5]. The rest were redesigned under a project codenamed Kennedy so they looked and worked as a set [S5].
 
-### Zero tolerance for fighting (2011)
+### Betting on real-world projects, then splitting them off (2013 to 2015)
 
-In the early days Page had used hard arguments with Brin as the model for senior staff. After his years away he decided that big goals needed a calm team, and he set a rule of zero tolerance for fighting. He also formed a group of senior vice presidents, the L-Team, who worked near him [S5].
-
-### Taking himself out of daily product decisions (2014 to 2015)
-
-In October 2014 he restructured so he no longer ran daily product choices, leaving the core to Sundar Pichai while he worked on later bets such as Google X, Calico and Nest [S5]. In August 2015 he made Alphabet, so unrelated companies could run on their own with strong CEOs [S4][S5]. His stated reason was management scale: run things independently that are not very related [S5].
+At I/O 2013 he explained that Google X works on atoms and not only bits, and named self-driving cars as a way to cut commuting, parking and accidents [S8]. In October 2014 he stopped running daily product choices and left the core to Sundar Pichai while he worked on later bets [S5]. In August 2015 he made Alphabet so unrelated companies could run on their own with strong CEOs [S4][S5].
 
 ## Where he stood
 
@@ -146,8 +152,8 @@ In October 2014 he restructured so he no longer ran daily product choices, leavi
 
 ## Short phrases on the record
 
-- "Google is not a conventional company." (2004 letter) [S1]
-- "Don't be evil." (2004 letter) [S1]
-- "work on something that is uncomfortably exciting" (2012 letter) [S2]
-- "incrementalism leads to irrelevance over time" (2013 letter) [S3]
-- "you need to be a bit uncomfortable to stay relevant" (2015 letter) [S4]
+- "healthy disregard for the impossible" (2009 speech) [S7]
+- "Always work hard on something uncomfortably exciting!" (2009 speech) [S7]
+- "Technology should do the hard work." (2013 I/O) [S8]
+- "Being negative is not how we make progress." (2013 I/O) [S8]
+- "Invention is not enough." (2014 TED Q&A) [S9]

@@ -20,7 +20,7 @@ seats:
   - {seat: "Fear-setting", asks: "What's the worst that could really happen, how would you repair it, and what does waiting cost?"}
   - {seat: "The interviewer", asks: "What does the best person at this do differently, step by step?"}
 pairs_with: [seneca, naval-ravikant, marcus-aurelius, noah-kagan, pieter-levels]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Tim Ferriss", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tim_Ferriss", kind: reference}
   - {n: 2, title: "The 4-Hour Workweek", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_4-Hour_Workweek", kind: reference}
@@ -30,6 +30,12 @@ sources:
   - {n: 6, title: "Why you should define your fears instead of your goals (TED2017 talk page)", by: "TED", url: "https://www.ted.com/talks/tim_ferriss_why_you_should_define_your_fears_instead_of_your_goals/transcript", kind: reference}
   - {n: 7, title: "The Not-To-Do List: 9 Habits to Stop Now (August 16, 2007)", by: "Tim Ferriss", url: "https://tim.blog/2007/08/16/the-not-to-do-list-9-habits-to-stop-now/", kind: own-words}
   - {n: 8, title: "Are You Hunting Antelope or Field Mice? (May 2, 2024)", by: "Tim Ferriss", url: "https://tim.blog/2024/05/02/are-you-hunting-antelope-or-field-mice/", kind: own-words}
+  - {n: 9, title: "Has AI Already Killed How-To Nonfiction? (June 12, 2026)", by: "Tim Ferriss", url: "https://tim.blog/2026/06/12/has-ai-already-killed-nonfiction/", kind: own-words}
+  - {n: 10, title: "11 Reasons Not to Become Famous, or A Few Lessons Learned Since 2007 (February 2, 2020)", by: "Tim Ferriss", url: "https://tim.blog/2020/02/02/reasons-to-not-become-famous/", kind: own-words}
+  - {n: 11, title: "How to Say No When It Matters Most, or Why I'm Taking a Long Startup Vacation (October 29, 2015)", by: "Tim Ferriss", url: "https://tim.blog/2015/10/29/startup-vacation-2/", kind: own-words}
+  - {n: 12, title: "How I Built a #1-Ranked Podcast With 60M+ Downloads (April 11, 2016)", by: "Tim Ferriss", url: "https://tim.blog/2016/04/11/tim-ferriss-podcast-business/", kind: own-words}
+  - {n: 13, title: "Testing the Impossible: 17 Questions That Changed My Life (December 7, 2016)", by: "Tim Ferriss", url: "https://tim.blog/2016/12/07/testing-the-impossible-17-questions-that-changed-my-life/", kind: own-words}
+  - {n: 14, title: "The Margin Manifesto: 11 Tenets for Reaching (or Doubling) Profitability in 3 Months (June 24, 2008)", by: "Tim Ferriss", url: "https://tim.blog/2008/06/24/the-margin-manifesto-11-tenets-for-reaching-or-doubling-profitability-in-3-months/", kind: own-words}
 tests:
   - {kind: use, prompt: "I'm thinking of leaving my job to freelance. Walk me through a fear-setting exercise on it, one step at a time."}
   - {kind: use, prompt: "Here is my to-do list for this week. Sort it into antelope and field mice, and write me a not-to-do list."}

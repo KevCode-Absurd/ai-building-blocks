@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Ellen Lupton is alive, and views can change. This data set rests on her own answers in a 2007 interview with the journal InfoDesign, which we read in full [S2], a 2020 Creative Review profile whose excerpt covers her family, her influences and her stance on type [S3] and a 2010 Print Q and A with her partner Abbott Miller, where only a few answers are hers alone [S4]. It also uses the abstract of a 1994 essay she wrote with Miller [S7], a report of a 2019 talk [S5], her publisher's page for the 2024 edition of Thinking with Type [S6] and a reference page [S1]. Treat each view as "as of" the year of its source. Several longer interviews were blocked or behind paywalls, so this picture leans on shorter pieces. Nothing here tells you what she thinks about events after 2024.
+Ellen Lupton is alive, and views can change. This data set rests on her own answers in a 2007 interview with the journal InfoDesign, which we read in full [S2], a 2024 interview about supporting design students, read in full [S8], a 2020 Creative Review profile whose excerpt covers her family, her influences and her stance on type [S3] and a 2010 Print Q and A with her partner Abbott Miller, where only a few answers are hers alone [S4]. It also uses the abstract of a 1994 essay she wrote with Miller [S7], a report of a 2019 talk [S5], her publisher's page for the 2024 edition of Thinking with Type [S6] and a reference page [S1]. Treat each view as "as of" the year of its source. Several longer interviews were blocked or behind paywalls, and her podcast and lecture pages have no transcript we could open, so this picture leans on shorter pieces. Nothing here tells you what she thinks about events after 2024.
 
 ## In one paragraph
 
@@ -58,28 +58,37 @@ Lupton was always drawn to writing about and explaining design [S2]. By 2010 she
 
 How she applied it: she has written or co-written more than 20 books [S3], and in 2007 she said she paid more attention to blogs and everyday journalism than to most academic research [S2].
 
+### Teaching is self-education and history
+
+In the 2024 interview she said designers have to teach themselves many skills, because a class cannot cover every tool a project needs [S8]. She does not accept that history is optional: not everyone agrees it matters, but people who want a master's in design are usually after the wider conversation about the field [S8]. She calls the object she writes and teaches about shifting and unstable, so her career has been one long, steady focus on something that keeps moving [S8].
+
+How she applied it: her theory class folds in user experience, service design and design thinking as part of the history of the field [S8].
+
 ## Real decisions
 
-### Choosing to frame content, not show off form
-She says she loves designers who focus on form and has spent her career studying their work, but her own use of design is to frame and stage content, whether a text in a book or a work of art in a museum [S2].
+### Choosing content over form
+In 2007 she said she loves designers who focus on form and has spent much of her career studying their work [S2]. For herself she chose another role: she uses typography, layout and installations to frame and stage content, whether it is a text in a book or a work of art in a museum [S2]. Her stated reason is that for her the medium is not the message, the message is the message, and design is a tool for sharpening it [S2]. This is why she calls herself an information designer [S2].
 
-### Writing Thinking with Type
-She saw a need for a book that joined practical knowledge with intellectual inquiry, so she wrote it (2004). Readers responded well, and it became a reference in design courses, including in Brazil [S2].
+### Becoming a curator straight out of school
+After Cooper Union in the early 1980s she became curator of a gallery and collection at the college, because she had always wanted to write about and interpret design [S2]. She later became a curator at Cooper-Hewitt, National Design Museum, where she held the post from 1993 by her own count in 2007 (another line of the same piece says 1992) [S2]. She sees curating, teaching and writing as one job: using design as a tool for delivering information [S2].
 
-### Teaching design to everyone
-She wrote D.I.Y.: Design It Yourself with her graduate students and D.I.Y. Kids with her sister. Her reason: design lets people make and publish content at a local scale, and democratic society gains when more people have access to media [S2].
+### Starting Design Writing Research with Abbott Miller (1985)
+Lupton and Abbott Miller met as freshmen at Cooper Union in 1981 [S4]. After they graduated in 1985 they set up Design Writing Research as a home for their joint freelance work, while each kept a day job [S4]. Both took an intellectual approach to design that was unusual then, drawing on literary theory, deconstruction and the modernism and postmodernism debates [S4]. Over time she said her own work became more about writing and research and less about design practice, though she still designs her own books and curatorial projects [S4].
 
-### Reading blogs over academic research
-In 2007 she said she did not pay attention to much academic research and preferred blogs and everyday journalism [S2].
+### Arguing that deconstruction was no passing fashion (1994)
+With Miller she wrote in 1994 that the link between graphic design and deconstruction was far from arbitrary, since it was central to Derrida's own work [S7]. She had taken up critical theory through her twin sister in college, and she says it taught her that typography is not a neutral container for content [S3]. She chose to write about it in plain terms. Her stated aim is for her writing to be transparent and inclusive [S3].
 
-### Starting Design Writing Research with Miller
-After they graduated in 1985 she and Abbott Miller set up Design Writing Research for their joint freelance work. Over time her own career moved toward writing and research, while she kept designing her own books and curatorial projects [S4].
+### Writing Thinking with Type (2004)
+She wrote it because she saw a need for a book that joined practical knowledge with intellectual inquiry [S2]. Typography, she said, has a rich intellectual tradition and is also a practical art that is still evolving [S2]. Readers responded well, and it became a reference in design courses, including in Brazil [S2]. She kept it alive in new editions, the latest in 2024 [S6].
 
-### Treating a material-led book as design too
-She was writing Designing with Materials with the product designer Inna Alesina, a book about inventing structures by watching how materials behave and experimenting with them, with a strong ecological slant [S2].
+### Turning design into a do-it-yourself craft (2006 to 2009)
+She wrote D.I.Y.: Design It Yourself (2006) with her graduate students and D.I.Y. Kids (2007) with her sister, and planned Indie Publishing (2008) and Design Your Life (2009) [S2]. Her reason: design is a liberating tool that lets people make and share content at a local scale, and a democratic society gains when more people have access to media [S2]. She also holds that the more people understand design, the more they respect it at the highest level, just as people who learn an instrument enjoy music for life [S2].
 
-### Arguing that deconstruction is a real link
-With Miller she argued in 1994 that the link between design and deconstruction was central to Derrida's own work and not an arbitrary fashion [S7].
+### Writing a materials book with a product designer
+She wrote Designing with Materials with the young product designer Inna Alesina, a book about inventing structures by watching how materials behave and experimenting with them [S2]. She gave it a strong ecological slant and tied it to current thinking on users, function and the environment [S2]. It shows her habit of working with a specialist when the subject is not her own.
+
+### Keeping history and theory in the course (2024)
+In 2024 she said she still teaches design theory and, for many years, taught graphic design history, and she insists history matters because someone has to ask who owns it and defines practice [S8]. She says the crisis in design is less about the digital than about globalisation and decolonisation [S8]. She tells students that grad school gives agency, so they should make work that prepares them for what comes next, and that much of learning new tools is self-education [S8]. She also argued that designers need permanent contracts, pay equity, visa support and affordable schooling [S8].
 
 ## How she decides
 
@@ -145,5 +154,5 @@ With Miller she argued in 1994 that the link between design and deconstruction w
 - "the message is the message" (on her view of design, 2007) [S2]
 - "Design is a liberating tool." (2007) [S2]
 - "Typography is not a neutral container for content." (2020) [S3]
-- "Storytelling makes a path through space and time." (talk slide, 2019) [S5]
+- "We are creators of our time." (2024) [S8]
 - "the link between graphic design and deconstruction is far from arbitrary" (1994) [S7]

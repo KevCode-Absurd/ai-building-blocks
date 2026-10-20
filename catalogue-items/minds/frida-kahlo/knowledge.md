@@ -1,8 +1,8 @@
 # Frida Kahlo: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Kahlo's paintings, letters and diary are in copyright. Her own words here come from statements with named sources, including a 1953 *Time* article, a 1945 Mexican magazine interview and her diary, as compiled with citations by Wikiquote, and from two letters to the photographer Nickolas Muray printed on web pages from Salomon Grimberg's book [S6][S7].
+A note on method: Kahlo's paintings, letters and diary are in copyright. Her own words here come from statements with named sources, including a 1953 *Time* article, a 1945 Mexican magazine interview and her diary, as compiled with citations by Wikiquote, and from letters to the photographer Nickolas Muray printed on web pages from Salomon Grimberg's book [S6][S7][S11], her teenage letters of 1925 to 1927 to Alejandro Gómez Arias [S10], her protest letter of 20 October 1948 to the president of Mexico [S8], and a page on the colour entries in her diary [S9]. These pages quote translations and excerpts, so the wording is a translator's and the selection is the editor's.
 
 ## In one paragraph
 
@@ -32,7 +32,7 @@ Yet she refused self-pity. In 1953 she told *Time* that she was not sick but bro
 
 Kahlo packs meaning into objects. In *The Two Fridas* (1939), two versions of herself sit hand in hand: one in a white European dress, one in a traditional Tehuana dress, their exposed hearts joined by a single blood vessel [S3]. The Mexican Frida holds a tiny portrait of Rivera; the European Frida holds surgical forceps, and blood drips onto her white skirt [S3]. Critics read it as her dual heritage, a German father and a Mexican mother, and as the pain of her divorce that year [S3].
 
-The lesson: one well-chosen object can say what a paragraph cannot.
+The lesson: one well-chosen object can say what a paragraph cannot. Her diary shows the same habit with colour: she picked up coloured pencils one at a time and wrote a short, odd meaning for each, such as green for good warm light, blue for electricity, purity and love, yellow for madness and fear but also the sun, and a note that nothing is truly black [S9].
 
 ### Draw on popular and sacred traditions
 
@@ -131,10 +131,6 @@ Her 1939 letters to Nickolas Muray are warm, playful and physical. She opens wit
 
 After the bus accident of 17 September 1925 she began painting during her recovery [S1]. In 1945 she said she painted self-portraits because she was so often alone and knew herself best [S2].
 
-### Marrying Diego Rivera
-
-She married Rivera on 21 August 1929 [S1]. The 1939 painting *The Two Fridas* is read by critics in part as the pain of their divorce that year [S3].
-
 ### Painting loss in a folk format
 
 After losing a pregnancy in Detroit in 1932, she painted *Henry Ford Hospital* in a small retablo format, on metal, with red threads tying her to objects [S1][S4]. She chose the plain devotional form over a grand one.
@@ -146,6 +142,22 @@ André Breton arranged her 1938 New York show and praised her work [S1]. She sti
 ### Teaching and showing up
 
 From 1943 she taught at La Esmeralda, and her students became known as "Los Fridos" [S1]. In April 1953 she attended her first Mexican solo show by ambulance and received guests from a four-poster bed [S1].
+
+### Writing to the president about Rivera's mural
+
+On 20 October 1948 she wrote to President Miguel Alemán after a mob scraped the words "God does not exist" from Rivera's mural in the new Hotel del Prado, and the hotel boarded it over [S8]. The head of the national fine arts institute had not acted [S8]. She skipped the greetings and wrote as an artist and a citizen, not as Rivera's wife, calling the cover-up a cowardly crime and reminding him of his own law to protect public art [S8]. Her stated reason was that art records a nation's history and that attacks on expression are first steps toward worse repression [S8].
+
+### Turning down money from a lover
+
+In February 1939, while waiting in Mexico to return to New York, she refused Nickolas Muray's $400 check. She said she had money left from Mexico and a ticket already, and asked him to hold the check until she came back [S6]. She kept her own money in her own hands while still thanking him [S6].
+
+### Letting go of the affair with grace
+
+Muray became engaged and then married in spring 1939. In letters she accepted it, wished him to be very happy, asked for her letters and a cushion back so she would not be a trouble in his life, and said the news felt like swallowing the whole world [S11]. In October 1939 her divorce from Rivera began [S11]. She kept the friendship [S11].
+
+### Holding on in the hospital
+
+In her letters after the 1925 crash she wrote that she would spend about three months in bed, a hard thing for a restless girl, and that suffering is worth it when love comes with it [S10]. When her parents fell ill too, she said despair would only make things worse, so she held on [S10]. She joked about herself as a cry-baby even then [S10].
 
 ## Blind spots to watch
 

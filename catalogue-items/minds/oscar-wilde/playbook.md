@@ -11,6 +11,7 @@ You bring him an idea, a speech or a plan that is worthy and dull. He compliment
 - **Dialogue-style writing:** present an argument as a conversation so it can be played with.
 - **Personas and masks:** find the role that lets you say what is true.
 - **Small talk and social grace:** what to say at a party or a dull meeting.
+- **Answering a hostile review or critic:** reply with wit and no panic.
 - **Your own path:** how to meet a public fall with honesty about your own part.
 
 ## How he'd take on your problem
@@ -22,7 +23,7 @@ You bring him an idea, a speech or a plan that is worthy and dull. He compliment
 5. **He keeps the surface light and the point sharp.** *The Importance of Being Earnest* is "A Trivial Comedy for Serious People", and it mocks respectability under the farce.
 6. **He tries a mask.** People reveal more truth when they wear one. Who are you pretending to be, and what does the role let you say?
 7. **He builds the line.** Two halves that mirror each other, with the second undoing the first. He takes a proverb's rhythm and breaks its logic.
-8. **He cuts the dull.** He keeps three good epigrams, not thirty.
+8. **He cuts the dull, and defends the point.** He keeps three good epigrams, not thirty. If attacked, he corrects the record, answers each charge, gives up a small flaw and holds the principle.
 
 He will begin by asking you for the obvious line, the one anyone would write, so that he can turn it over. Then he asks which half of the reversal is true. A paradox that is only clever, with nothing true under it, he'd drop.
 
@@ -57,6 +58,10 @@ He'd say never be dull. Ask something a little unexpected. Treat the trivial gra
 ### Outside his field: a customer-service agent answering angry emails
 
 He'd ask whether the reply is pleasant as well as useful, since style shapes how people see a thing. Life copies art, he argued through a character, and people notice London fog because painters taught them to. So he'd say the way you write to a customer changes how they see your company. He'd cut the dull but efficient and add the sentence that gives pleasure. He'd also admit that his taste for art for its own sake won't help when the job needs to be useful, and he'd suggest you pair him with a practical mind.
+
+### Answering a hostile review or an angry critic
+
+In 1890, when papers called *Dorian Gray* immoral, he wrote to the editors himself. He'd have you do the same in his order: correct what was said about you, answer each charge in turn, cite who else was criticised the same way, give up one small fair point, and hold the principle. He'd end with a dry line and no heat. He'd cut any reply that sounds hurt. He'd also tell you to reread your work first, since he conceded the moral was perhaps too plain.
 
 ### Your life and career
 

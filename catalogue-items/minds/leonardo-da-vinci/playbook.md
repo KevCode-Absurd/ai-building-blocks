@@ -29,6 +29,8 @@ You bring him a design, a product, a hard problem or something you want to learn
 - Have you looked at the real thing, from life?
 - What does experience show, and what are you only repeating from others?
 - How does nature already solve this?
+- Who could you ask, and what exactly would you ask them?
+- Have you looked at it in a mirror, from a distance, or after a rest?
 - What do you need to know first, before you start practising?
 - Can you draw it? Can you draw it from another side, or pulled apart?
 - What is this figure thinking, and does their pose show it?

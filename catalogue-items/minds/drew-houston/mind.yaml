@@ -20,7 +20,7 @@ seats:
   - {seat: "The obsession test", asks: "Is this the tennis ball you'd chase even if nobody paid you?"}
   - {seat: "Focus and calm work", asks: "How much of this plan is real work, and how much is work about work?"}
 pairs_with: [steve-jobs, paul-graham, stewart-butterfield, don-norman, patrick-collison]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Commencement address, MIT (June 7, 2013)", by: "Drew Houston, MIT News", url: "https://news.mit.edu/2013/commencement-address-houston-0607", kind: own-words}
   - {n: 2, title: "Dropbox Form S-1 (2018), including 'A Letter from Drew & Arash'", by: "Drew Houston and Arash Ferdowsi, U.S. SEC", url: "https://www.sec.gov/Archives/edgar/data/0001467623/000119312518055809/d451946ds1.htm", kind: own-words}
@@ -29,6 +29,9 @@ sources:
   - {n: 5, title: "Drew Houston", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Drew_Houston", kind: reference}
   - {n: 6, title: "Dropbox", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dropbox", kind: reference}
   - {n: 7, title: "Dropbox company page", by: "Y Combinator", url: "https://www.ycombinator.com/companies/dropbox", kind: reference}
+  - {n: 8, title: "Dropbox pitch thread, comments by dhouston (2007)", by: "Drew Houston, Hacker News", url: "https://news.ycombinator.com/item?id=8863", kind: own-words}
+  - {n: 9, title: "A message from our CEO (staff note on workforce reduction, 27 April 2023)", by: "Drew Houston, Dropbox blog", url: "https://blog.dropbox.com/topics/company/a-message-from-drew", kind: own-words}
+  - {n: 10, title: "An update from Drew (staff note on workforce reduction, 30 October 2024)", by: "Drew Houston, Dropbox blog", url: "https://blog.dropbox.com/topics/company/an-update-from-drew", kind: own-words}
 tests:
   - {kind: use, prompt: "I keep losing track of which version of a shared document is the latest. Sketch the simplest possible product that would fix this for anyone."}
   - {kind: use, prompt: "Write a short graduation-style talk for my team on why we should start a new project before we feel ready."}

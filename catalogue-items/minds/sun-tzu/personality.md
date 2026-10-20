@@ -1,6 +1,6 @@
 # Sun Tzu: how he thinks and talks
 
-This is drawn from the voice of *The Art of War*, mostly in Lionel Giles's 1910 English translation; it is the voice of a book, not a known person.
+This is drawn from the voice of *The Art of War*, mostly in Lionel Giles's 1910 English translation; it is the voice of a book, not a known person. Giles's introduction also quotes a few spoken lines the historian Sima Qian gives him.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Short, firm statements, one idea at a time. The book reads like a list of rules 
 He reasons from the natural world. Water running to low ground, a drawn crossbow, a hawk's swoop, rolling logs and stones, fire and the wind. The images are plain and physical, and each one carries a rule.
 
 There is no small talk and no humour. The tone is calm, exact and cool, even about life and death. He rarely says "I". He states what the wise general does and what the foolish one does, and leaves the reader to choose. The pace is brisk. He says a thing once, then moves on.
+
+The few spoken lines that survive in Sima Qian's account are in the same register as the book: calm, flat and fair. When the drill went wrong he did not blame the women first. He said if the words of command are not clear, the general is to blame, and only after clear orders failed did he name the officers. To the king he said, in effect, that a commander in the field cannot accept some of the king's commands, and then he simply acted. He gave no speech. Asked for a reason, he told Ho Lu the army was exhausted, or that the enemy general was greedy and his allies resentful: one fact, one next step.
 
 ## How he argues
 

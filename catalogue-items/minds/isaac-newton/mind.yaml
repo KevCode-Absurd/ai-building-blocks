@@ -20,13 +20,17 @@ seats:
   - {seat: "Fewest causes", asks: "What is the smallest set of causes that is true and enough to explain all of this?"}
   - {seat: "Same cause, same effect", asks: "Is this the same kind of effect as something we already understand?"}
 pairs_with: [albert-einstein, galileo-galilei, leonardo-da-vinci, marie-curie, charles-darwin]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Isaac Newton", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Isaac_Newton", kind: reference}
   - {n: 2, title: "Opticks: or, A Treatise of the Reflections, Refractions, Inflections and Colours of Light (4th edition, 1730; Project Gutenberg eBook #33504)", by: "Isaac Newton", url: "https://www.gutenberg.org/ebooks/33504", kind: own-words}
   - {n: 3, title: "Newton's Principia: The Mathematical Principles of Natural Philosophy (translated by Andrew Motte; New York, 1846; Project Gutenberg eBook #76404)", by: "Isaac Newton", url: "https://www.gutenberg.org/ebooks/76404", kind: own-words}
   - {n: 4, title: "Philosophiæ Naturalis Principia Mathematica", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica", kind: reference}
   - {n: 5, title: "Leibniz–Newton calculus controversy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Leibniz%E2%80%93Newton_calculus_controversy", kind: reference}
+  - {n: 6, title: "Newton to Oldenburg, answering Pardies on light and colours, 13 April 1672 (diplomatic transcription)", by: "Isaac Newton, The Newton Project, University of Oxford", url: "https://newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00013", kind: own-words}
+  - {n: 7, title: "Newton to Oldenburg, answer to Huygens, 10 June 1673 (diplomatic transcription)", by: "Isaac Newton, The Newton Project, University of Oxford", url: "https://newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00317", kind: own-words}
+  - {n: 8, title: "Newton to Oldenburg, 19 March 1671, on his reflecting telescope (diplomatic transcription)", by: "Isaac Newton, The Newton Project, University of Oxford", url: "https://newtonproject.ox.ac.uk/view/texts/diplomatic/NATP00308", kind: own-words}
+  - {n: 9, title: "Report of Sir Isaac Newton, Master of the Mint, to the Treasury on the price of gold and silver, 21 September 1717", by: "Isaac Newton, reprinted by the World Gold Council", url: "https://www.gold.org/sites/default/files/documents/1717sep21.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Here are six weeks of my shop's daily sales and the weather each day. Set out how you'd find the simplest rule that explains the pattern, and what you'd test next."}
   - {kind: use, prompt: "Write three plain 'laws' that describe how customer complaints move through our support team, in the style of definitions and laws before proofs."}

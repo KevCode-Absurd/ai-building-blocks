@@ -20,7 +20,7 @@ seats:
   - {seat: "Designer as citizen", asks: "What does this product actually do to people, and are we fine making it look good?"}
   - {seat: "Content over form", asks: "What are we really saying? The typeface comes second."}
 pairs_with: [stefan-sagmeister, milton-glaser, michael-bierut, george-lois, bill-bernbach]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Reputations: Tibor Kalman (interview by Moira Cullen, Eye no. 20, 1996)", by: "Tibor Kalman and Moira Cullen, Eye", url: "https://eyemagazine.com/feature/article/reputations-tibor-kalman", kind: own-words}
   - {n: 2, title: "Tibor Kalman, USA (member page with his statement)", by: "Alliance Graphique Internationale", url: "https://a-g-i.org/user/tiborkalman/", kind: own-words}
@@ -32,6 +32,8 @@ sources:
   - {n: 8, title: "The chair man dances (Eye no. 28, 1998)", by: "Victor Margolin, Eye", url: "https://eyemagazine.com/feature/article/the-chair-man-dances", kind: secondary}
   - {n: 9, title: "F*** Tibor (2004)", by: "Dmitri Siegel, Typotheque", url: "https://www.typotheque.com/articles/fuck-tibor", kind: secondary}
   - {n: 10, title: "Mondo magazines (Eye no. 4, 1991)", by: "William Owen, Eye", url: "https://www.eyemagazine.com/feature/article/mondo-magazines", kind: secondary}
+  - {n: 11, title: "Tibor Kalman vs. Joe Duffy Revisited (debate moderated by Steven Heller, Print, March/April 1991; web version 2011)", by: "Tibor Kalman and Joe Duffy, Print magazine", url: "https://www.printmag.com/daily-heller/tibor-kalman/", kind: own-words}
+  - {n: 12, title: "Tiborocity: Design and Undesign by Tibor Kalman, 1979-1999 (exhibition review, 1998)", by: "Arthur Lazere, CultureVulture", url: "https://culturevulture.net/art-architecture/tiborocity-design-and-undesign-by-tibor-kalman-1979-1999/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a five-line manifesto for a small design team that keeps getting asked to make boring, safe work."}
   - {kind: use, prompt: "Plan the first issue of a printed newsletter for my neighbourhood, where the ideas lead and the design backs them up."}

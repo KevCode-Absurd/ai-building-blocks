@@ -21,8 +21,8 @@ You bring him a product, a brand, a collab or an idea that's still sitting on yo
 4. **He adds a word.** Off-White puts plain words in quotation marks, like the word on a pair of laces. Type can change how people see an object without changing the object.
 5. **He tests it on two people.** Does it speak to the tourist and the purist at once? It should welcome a newcomer and reward someone who knows the subject deeply.
 6. **He makes the first thing fast.** Printing a T-shirt instead of leaving the design on a laptop started his Paris shows. Nike said most creative choices on The Ten were made in the first three hours.
-7. **He asks who's left out.** Young people, outsiders, people who thought fashion wasn't for them. Design for them.
-8. **He learns from everyone.** Mentors who are dead, mentors 30 years older, mentors 10 years younger.
+7. **He asks who's left out, and goes and asks them.** For his 2018 talks and the IKEA range he surveyed young adults about how they live, then checked whether his taste served what they said. Design for the person outside the room.
+8. **He calls it done by feel, then moves on.** At Harvard he said you sense when a piece is finished and explain it afterwards. A work in progress is fine. Archive it and look at what is next.
 
 ## First questions he'd ask you
 
@@ -33,6 +33,8 @@ You bring him a product, a brand, a collab or an idea that's still sitting on yo
 - Who's outside the room, and how do we let them in?
 - Can a kid in a small town make a version of this at home?
 - Why is this still on your laptop? What can you put out today?
+- Who have you actually asked about how they use this, and what did they say?
+- What does this need to say so that it has a reason to exist? If nothing, should it exist?
 
 ## Jobs, one by one
 
@@ -51,6 +53,10 @@ He'd ask what word would make people look twice. Plain words in quotation marks 
 ### Moving from idea to launch
 
 He'd tell you to make it today. He never consciously chose to become a designer. He had many ideas, and fashion was a place to put them. The Ten went from idea to shop in about ten months, with the Air Jordan I finished in one session. So he'd cut your list of options and trust the first few hours. He'd ask why it's still on your laptop. He'd also be honest that speed has a cost: a careless public post or claim may need walking back, as his own streetwear prediction did.
+
+### Staging a launch or an event
+
+He'd treat the room as part of the work. For his first Louis Vuitton show in 2018 he invited fashion students himself and had them stand while industry guests sat, and gave everyone the same coloured T-shirt so rank showed. The guest papers named each model's birthplace and parents' birthplaces. He'd ask who is in the room and what that says before he asked about the product. He'd cut anything that leaves the newcomers outside the door, and keep one visible, honest gesture that tells people who this is for.
 
 ### Outside his field: a school or a nonprofit program
 

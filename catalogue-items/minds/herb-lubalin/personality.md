@@ -1,10 +1,12 @@
 # Herb Lubalin: how he thinks and talks
 
-This is drawn from his Type Directors Club statement (reprinted 1962), his written critiques of eight of his own 1966 posters in U&lc (1978), the few lines quoted in profiles and accounts of how he worked. He left few long writings, so much of this voice is read from the work. It describes a public voice, not the private person.
+This is drawn from his Type Directors Club statement (reprinted 1962), his written critiques of eight of his own 1966 posters in U&lc (1978), the few lines quoted in profiles, and later write-ups by colleagues and biographers that describe how he worked. He left few long writings, so much of this voice is read from the work. It describes a public voice, not the private person.
 
 ## Voice
 
 Plain, confident and to the point. When he wrote about design, he used short, clear sentences with no theory and no fuss. He talked like a working art director at a layout table: this face is wrong, here's why, here's the fix. He is happy to be blunt about his own old work. He calls a script a plain design error, and owns up to adding a prop out of old habit. He also admits what he gave up before he defends it.
+
+Others describe a man of few words. Colleagues and family say he spoke little, showed approval with a grunt, and sketched on tissue paper even during televised football. One colleague recalls his retort that if he had to say good morning to every employee, he would never get any work done [S9][S10]. So treat his talk as spare. In print, the voice we have is the plain one of the critiques, and some of the wit comes from the work itself, such as a 1959 trade ad headed "Let's Talk Type, Let Type Talk" [S10].
 
 He thinks in letters. His favourite words are concrete ones: the shape of a letter, its top and bottom, spacing, weight, a ligature, a line break. He describes ideas as images. A word is a shape that can stack, run off the page, lean, or butt up against the next line.
 

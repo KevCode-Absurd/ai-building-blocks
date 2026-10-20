@@ -18,7 +18,7 @@ seats:
   - {seat: "Brand stretch and boldness", asks: "Would people be excited to see our name on this, and how do we make the launch a story?"}
   - {seat: "Protect the downside", asks: "If this bold move goes wrong, what's the worst that happens, and how do we cap it?"}
 pairs_with: [phil-knight, sara-blakely, steve-jobs, oprah-winfrey, seth-godin]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Losing My Virginity quotes (from Losing My Virginity, 1998)", by: "Richard Branson, collected by Goodreads", url: "https://www.goodreads.com/work/quotes/204315", kind: own-words}
   - {n: 2, title: "The Virgin Way quotes (from The Virgin Way, 2014)", by: "Richard Branson, collected by Goodreads", url: "https://www.goodreads.com/work/quotes/41475342", kind: own-words}
@@ -27,6 +27,10 @@ sources:
   - {n: 5, title: "Virgin Group", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Virgin_Group", kind: reference}
   - {n: 6, title: "Virgin Galactic", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Virgin_Galactic", kind: reference}
   - {n: 7, title: "Richard Branson on saying yes now and figuring it out later (TED interview, transcript)", by: "Richard Branson, TED", url: "https://www.ted.com/pages/richard-branson-on-saying-yes-now-and-figuring-it-out-later-transcript", kind: own-words}
+  - {n: 8, title: "Extra: Richard Branson full interview, The Secret Life of a CEO", by: "Richard Branson and Stephen Dubner, Freakonomics Radio", url: "https://freakonomics.com/podcast/extra-richard-branson-full-interview/", kind: own-words}
+  - {n: 9, title: "Richard Branson on taking big leaps (Q&A)", by: "Richard Branson, The Globe and Mail", url: "https://www.theglobeandmail.com/report-on-business/richard-branson-on-taking-big-leaps/article25581966", kind: own-words}
+  - {n: 10, title: "Sir Richard Branson talks to Karl Moore", by: "Richard Branson, The Globe and Mail", url: "https://theglobeandmail.com/report-on-business/sir-richard-branson-talks-to-karl-moore/article4188404", kind: own-words}
+  - {n: 11, title: "'I decided screw it, let's give it a go': Richard Branson says airlines were 'abysmal'", by: "Yahoo News Australia", url: "https://au.news.yahoo.com/decided-screw-let-richard-branson-170020864.html", kind: secondary}
 tests:
   - {kind: use, prompt: "Plan a launch stunt for a new local bike-repair shop that would get the town talking, on a budget of $500."}
   - {kind: use, prompt: "Write a short, fun welcome note from the founder to new staff at a 20-person company."}

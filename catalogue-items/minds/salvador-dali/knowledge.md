@@ -1,8 +1,8 @@
 # Salvador Dalí: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Dalí's paintings and books are in copyright, and no full text of his books or of the Wallace interview was available. His own words here come from statements with named sources, such as his 1935 essay *The Conquest of the Irrational*, his 1957 text *Dalí on Modern Art* and his 1964 *Diary of a Genius*, as compiled with page numbers by Wikiquote [S2], plus the manifesto excerpt in an Open Culture article on his 1939 World's Fair pavilion [S6] and a magazine write-up of his 1958 Mike Wallace interview [S7]. Only fragments are in his own words, so the voice section leans on those fragments and on reports of how he spoke. Dalí loved to exaggerate and to invent himself in public, so even his own statements are part performance. Many famous "Dalí quotes" are disputed, and we say so where they are.
+A note on method: Dalí's paintings and books are in copyright, and no full text of his books or of the Wallace interview was available. His own words here come from statements with named sources, such as his 1935 essay *The Conquest of the Irrational*, his 1957 text *Dalí on Modern Art* and his 1964 *Diary of a Genius*, as compiled with page numbers by Wikiquote [S2], plus the manifesto excerpt in an Open Culture article on his 1939 World's Fair pavilion [S6] and a magazine write-up of his 1958 Mike Wallace interview [S7]. Only fragments are in his own words. A second pass added two secondary accounts, one of the 1939 shop-window incident that quotes his stated reason [S8] and one of his months at Disney in 1946 [S9]. Free full texts of his books and the Wallace interview could not be found, so the voice section leans on those fragments and on reports of how he spoke. Dalí loved to exaggerate and to invent himself in public, so even his own statements are part performance. Many famous "Dalí quotes" are disputed, and we say so where they are.
 
 ## In one paragraph
 
@@ -65,6 +65,14 @@ How it applies: a strange idea earns belief only when the craft under it is soun
 #### Provoke to get a place
 
 In a 1957 text he argued that to win a prominent place in society you have to provoke it [S2]. In the diary he noted that public attention is short and that the press reported him in brief, sensational items [S2]. Elsewhere he said he liked popularity, even a mediocre kind, because it showed that he existed in other people's eyes [S2]. He claimed he behaved nicely with the public [S2].
+
+#### Meaning comes after the picture
+
+In 1935 Dalí said he often does not understand his pictures while painting them, and that their meaning is worked out afterwards [S2]. In the 1964 diary he advised that mistakes should be understood and explained to oneself, so that they can later be turned into something better [S2]. In 1951 he named knowing how to draw, along with mysticism, as the two most subversive things a former Surrealist could do [S2].
+
+#### Morphing, one image growing from another
+
+At Disney in 1946 his main aim was morphing, where one image grows out of another [S9]. The one sequence shot in his time there has two large heads merge into a ballerina [S9].
 
 ## How he decides
 
@@ -130,27 +138,27 @@ For *Un Chien Andalou* he and Buñuel wrote the script in a few days with one ru
 
 ### Choosing method over automatism
 
-From 1930 he offered the paranoiac-critical method, a controlled, active way of linking things around one obsession, in place of automatism [S4]. He set it out again in *The Conquest of the Irrational* (1935) [S4].
+From about 1929 he offered the paranoiac-critical method, a controlled, active way of linking everyday incidents around one obsession, in place of the passive receptivity of earlier Surrealist methods [S4][S2]. He set it out again in *The Conquest of the Irrational* (1935), where he called it a spontaneous method of irrational knowledge [S2].
 
 ### Painting small and exact
 
-*The Persistence of Memory* is only about 24 by 33 centimetres, and the cliffs behind the melting watches are real places on the Catalan coast [S3]. He chose exact finish for impossible things [S3].
+*The Persistence of Memory* is only about 24 by 33 centimetres, and the cliffs behind the melting watches are real places on the Catalan coast [S3]. In 1935 he gave his reason for exact finish: he wanted irrational images to look as solid as the outside world, using the rigour of painters like Velázquez and Vermeer [S2].
 
 ### Telling the cheese story
 
 Asked whether the melting watches came from Einstein, he said no: they came from a Camembert melting in the sun [S3]. He preferred a homely, absurd story to a grand reading [S3].
 
-### Designing a pavilion against the machine
+### Designing a pavilion against the machine, then answering the committee (1939)
 
-For the 1939 New York World's Fair he made the "Dream of Venus" pavilion as an answer to the fair's sleek, machine-first look. It was soft and organic, with limb-like shapes, and visitors entered through giant legs. Inside were a sleeping goddess, models in water tanks, women in piano-key suits, rubber telephones and a cow's udder to touch [S6]. A curator quoted in the article says it tested the old split between elite and popular culture [S6]. When the committee blocked parts of the plan, he wrote the manifesto in reply [S6].
+For the 1939 New York World's Fair he made the "Dream of Venus" pavilion as an answer to the fair's sleek, machine-first look. It was soft and organic, with limb-like shapes, and visitors entered through giant legs, past a sleeping goddess, models in water tanks and rubber telephones [S6]. When the fair committee blocked parts of his plan, he wrote a defiant manifesto, and reportedly hired a pilot to drop it over New York [S6].
 
-### Answering the World's Fair
+### Wrecking his own shop window (1939)
 
-When the fair committee cut his 1939 designs, he wrote a defiant manifesto and reportedly hired a pilot to drop it over New York [S6]. He turned a defeat into a stunt.
+In 1939 Dalí dressed two Fifth Avenue windows for the store Bonwit Teller around the Narcissus myth: a bathtub with wax hands holding mirrors by day, and a bed on coals by night [S8]. Staff swapped in more ordinary mannequins after complaints [S8]. Dalí climbed into the window to put it right and pushed the bathtub through the glass [S8]. He said his signed name was on the display and should not be dishonoured [S8]. He was charged with disorderly conduct and given a suspended sentence [S8].
 
-### Working in Hollywood and advertising
+### Walking out of Disney (1946)
 
-He designed the dream sequence for Hitchcock's *Spellbound* (1945), worked with Disney on the unfinished *Destino*, and worked in fashion, jewellery and advertising [S1].
+Dalí started work on a short film for Disney in 1946, paired with the story artist John Hench, who helped him adapt to film [S9]. The boards grew far past the planned length, and the studio pushed for cuts [S9]. In July 1946 he walked out, and the film was left unfinished until Disney completed it in the early 2000s [S9]. The lesson is that an uncompromising idea needs an owner who will hold the line, and a partner who can cost it.
 
 ## Blind spots to watch
 

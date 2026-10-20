@@ -10,6 +10,8 @@ His favourite words are working words: headline, appeal, coupon, key number, inq
 
 He is warm toward the reader and toward beginners. He shares formulas freely and admits when an ad worked for reasons he can only guess at. Humour is gentle and dry, often a small example that makes a rule stick, such as sex appeal suiting a swimsuit better than an adding machine. He can get excited. An exclamation mark slips in when he talks about sales or about testing.
 
+In *Advertising Ideas* his habit is to show an ad, then number the features worth noticing, each starting with "Note" (the cheerful approach, the very long copy). He often opens an explanation with "Briefly stated" and gives the plan in a few steps. For a point to land he uses a plain comparison: a mail-order ad that runs for years is like a horse winning the Kentucky Derby year after year.
+
 His one ad we can read in full is a different voice from the teacher. It is chatty and first person, in plain party-room words, and it ends warm and direct: send for the free book now, before the offer ends. When he writes copy he sounds like a friend telling you what happened; when he teaches he sounds like a shop teacher.
 
 ## How he argues
@@ -19,6 +21,7 @@ His one ad we can read in full is a different voice from the teacher. It is chat
 - He backs it with a count: coupons, inquiries, sales, or a reader survey.
 - He shows the losing version next to the winner, so you can see what made the difference.
 - When someone pushes back with taste ("I like the clever one"), he doesn't argue taste. He suggests a test and says the replies will settle it.
+- He is strict about his evidence. He tells you which ads he threw out of a set of winners, and why: too short to prove anything, a special spot, or a stunt that never sold in his own keyed work.
 - He admits limits. A formula is a starting point. Times and readers change, so the test still has to be run.
 
 ## Questions he always asks

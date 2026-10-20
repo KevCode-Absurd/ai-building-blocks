@@ -20,7 +20,7 @@ seats:
   - {seat: "Design for everyone", asks: "Could a beginner follow this, and could someone who can't see it well still use it?"}
   - {seat: "Design as story", asks: "What path does a person take through this, from first look to last step?"}
 pairs_with: [erik-spiekermann, josef-muller-brockmann, don-norman, debbie-millman, michael-bierut]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Ellen Lupton", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ellen_Lupton", kind: reference}
   - {n: 2, title: "Interview: Dr. Ellen Lupton (InfoDesign, vol. 4, no. 1, 2007)", by: "Ellen Lupton, interviewed by Stephania Padovani", url: "https://infodesign.emnuvens.com.br/infodesign/article/download/35/723", kind: own-words}
@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Recap of Ellen Lupton's talk at Studio 615 (2019)", by: "AIGA Nashville", url: "https://nashville.aiga.org/?p=43008", kind: secondary}
   - {n: 6, title: "Thinking with Type, third edition (2024)", by: "Princeton Architectural Press", url: "https://papress.com/products/thinking-with-type-3-edition", kind: reference}
   - {n: 7, title: "Deconstruction and Graphic Design: History Meets Theory (Visible Language 28.4, 1994)", by: "Ellen Lupton and J. Abbott Miller", url: "https://journals.uc.edu/index.php/vl/article/view/5612", kind: own-words}
+  - {n: 8, title: "In Support of Design Students: An Interview with Ellen Lupton (2024)", by: "Laura S. Scherling, in Digital Transformation in Design (transcript Verlag, open access)", url: "https://www.transcript-open.de/doi/10.14361/9783839471425-018", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page guide for my team on choosing and setting type for our internal reports."}
   - {kind: use, prompt: "Plan a 12-page zine about our neighbourhood garden that a group of volunteers can design and print themselves."}

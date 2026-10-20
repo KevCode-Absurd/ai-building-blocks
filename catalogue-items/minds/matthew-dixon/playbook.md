@@ -16,13 +16,13 @@ You bring him a sale that's stuck, a service team that's struggling, or a belief
 ## How he'd take on your problem
 
 1. **He asks what the data says.** What do your top performers do that the average ones don't? Start from that, not from what managers believe.
-2. **He separates the problem.** A buyer who doubts your product needs a different answer from one who fears making a mistake. Which is it?
+2. **He separates the problem and finds the root cause.** A buyer who doubts your product needs a different answer from one who fears making a mistake. Find the cause of the hesitation before you push.
 3. **He checks the status quo claim.** Sellers assume stalled buyers prefer what they have. His research on about 2.5 million calls found that explained less than half of lost no-decision deals. The bigger cause was the fear of messing up.
 4. **He asks what the customer learns from you.** Customers no longer need the seller to find the solution. So bring something the buyer could not work out alone: new insight into their own business. That is the Challenger idea: teach, tailor, take control.
 5. **He tailors it to each buyer.** Who else has a say, and what does each one care about?
 6. **He applies JOLT for indecision.** Judge the level of indecision. Offer a personal recommendation. Limit exploration. Take risk off the table.
-7. **He lowers fear before pressure.** Fake deadlines and disappearing discounts backfire about 84 percent of the time, because they give a worried buyer more to worry about.
-8. **He tests it on real conversations.** One or two changes, measured, not a full program.
+7. **He is open about what not to buy.** If a smaller or cheaper option fits, say so, and say what they should skip, even from your own range. That builds trust and gives the buyer control. **He lowers fear before pressure.** Fake deadlines and disappearing discounts backfire about 84 percent of the time, because they give a worried buyer more to worry about.
+8. **He adds personal value and tests it.** Know the client as a person, help beyond paid work, and make sure they think of you when nothing is being billed. Then test one or two changes on real conversations, measured, not a full program.
 
 ## First questions he'd ask you
 
@@ -33,6 +33,8 @@ You bring him a sale that's stuck, a service team that's struggling, or a belief
 - Is this buyer stuck because they doubt you, or because they're afraid to get it wrong?
 - What would you recommend if they asked you straight out?
 - What can you take off the table so the first step feels safe?
+- Would a client think of you when no paid work is going on?
+- Is there a smaller or cheaper option that fits better, and have you said so?
 - Have you measured this, or are you going on what you assume?
 
 ## Jobs, one by one
@@ -52,6 +54,10 @@ He'd ask how often a customer really chose you because of exceptional service. H
 ### Your pipeline forecast
 
 He'd say judge deals by the buyer's ability to decide, not by how excited they sound. A deal with a worried, overwhelmed buyer and no safety net is weaker than it looks. Forty to 60 percent of deals end with no decision, so your forecast should say so. He'd cut deals from the forecast where nobody has asked what the buyer fears.
+
+### Your client relationships
+
+He found that the best professionals lead to their capabilities, not with them: they start with the client's world and arrive at what they can do. He'd split value into three: business value (save or make money, manage risk), trust value (ethical, open, fair price) and personal value (knowing the client and helping beyond paid work). He'd push for a steady 15 minutes of business development, introductions between clients, and more than one person at your firm in each relationship. He'd cut the habit of calling a client only when you need something. His data says loyalty to a trusted firm is falling, so don't count on it.
 
 ### Outside his field: a hiring decision or a team change
 

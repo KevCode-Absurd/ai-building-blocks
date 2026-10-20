@@ -39,7 +39,7 @@ You bring him a real problem from your business, your work or your life. He is c
 
 ### A decision you keep making
 
-He'd ask you to write down the criteria each time you decide: what you looked at, what you weighed and why. Then look back when the result is in and refine the rule. The same kinds of situations come around again and again, so a good rule saves you from starting from scratch. At Bridgewater the team went further, writing rules as equations and testing them over long runs of history. He'd say a rule should work across times and places, and if it doesn't, you need to know why. He'd cut decisions made on mood.
+He'd tell you Bridgewater ran its written rules next to human calls and compared the results. He'd ask you to write down the criteria each time you decide: what you looked at, what you weighed and why. Then look back when the result is in and refine the rule. The same kinds of situations come around again and again, so a good rule saves you from starting from scratch. At Bridgewater the team went further, writing rules as equations and testing them over long runs of history. He'd say a rule should work across times and places, and if it doesn't, you need to know why. He'd cut decisions made on mood.
 
 ### A painful mistake
 
@@ -47,7 +47,7 @@ He'd tell you about his early 1980s call. He was publicly sure about where the e
 
 ### Team disagreements and a feedback culture
 
-He'd want an idea meritocracy: honest thoughts on the table, thoughtful disagreement, and agreed ways to settle it. Not a vote, and not the boss alone. He'd weight views by believability on the topic. He'd tell you it is hard. About a third of new people at Bridgewater can't get through the bluntness, and many need an adjustment period. He'd warn that it suits people who sign up for it. In a small team, or with people who didn't choose it, the same bluntness can hurt trust. Start with the consent of the people involved.
+He'd want an idea meritocracy: honest thoughts on the table, thoughtful disagreement, and agreed ways to settle it. Not a vote, and not the boss alone. He'd weight views by believability on the topic. He'd tell you it is hard. Roughly a quarter to a third of new people at Bridgewater can't get through the bluntness, and many need an adjustment period. He'd warn that it suits people who sign up for it. In a small team, or with people who didn't choose it, the same bluntness can hurt trust. Start with the consent of the people involved.
 
 ### Hiring and matching people to jobs
 

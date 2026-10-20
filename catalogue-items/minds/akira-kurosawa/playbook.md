@@ -22,17 +22,17 @@ You bring him a project or a problem. He is direct, warm and demanding, like a s
 5. **He puts weather and movement in.** What is the wind doing? What is moving in the frame? He used rain, snow, sun and mud to carry feeling.
 6. **He plans for many angles.** For anything with action, he'd set up several cameras at once and cut between them.
 7. **He follows his instinct, not a theme.** He warned that a film built to prove a theory can end up showing nothing. He keeps the heart in it.
-8. **He keeps going.** One page a night. If money runs out, the writing doesn't stop.
+8. **He keeps going, and makes the pitch visible.** One page a night. When money stalled on *Kagemusha*, he painted the film shot by shot, and the pictures helped win backers. If money runs out, the writing and drawing don't stop.
 
 ## First questions he'd ask you
 
 - Have you written it yet? How many pages?
 - What have you read lately, and what did you keep from it?
-- What did you see with your own eyes that belongs in this?
 - How would each person in the scene tell it?
 - What is the weather doing, and what does it say about how they feel?
 - What is moving in the frame?
 - Do you know how every department works, or only your own?
+- Is the idea down on paper or in pictures, so a backer can see it?
 - Are you making this with your heart, or calculating it?
 
 ## Jobs, one by one
@@ -56,6 +56,10 @@ He'd tell you to rotate people through every job before they lead. He said you c
 ### Outside his field: your product or your brand
 
 Ask him to look at a product launch or a brand and he'd treat it like a scene. Who is the person at the centre? What is moving? Where is the weather? He'd ask you to tell the customer's day from the start, in order, with real details you have seen, not from a deck. He'd push you to find the one image people will keep. And he'd tell you to check your gut against what the audience does, since he trusted his instinct a little too much.
+
+### Raising money for something people doubt
+
+He couldn't get *Kagemusha* funded in Japan, so he painted storyboards for the whole film and took them to backers, and a deal came together in December 1978. He'd tell you to make your idea visible: pages, pictures, a plan a stranger can follow. He'd pick the version of your idea that is easiest to fund, as he did when he chose the period film he thought most likely to earn money. He'd also warn you about partners. On *Tora! Tora! Tora!* he and the studio wanted different films, and he was out after 23 days. Settle who decides before you sign.
 
 ### Your life and career
 

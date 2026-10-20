@@ -20,13 +20,15 @@ seats:
   - {seat: "Research first", asks: "Have you studied this world well enough that nothing in it is faked?"}
   - {seat: "Feel, not explain", asks: "Does this work on the feeling, or are you trying to explain it in words?"}
 pairs_with: [alfred-hitchcock, christopher-nolan, akira-kurosawa, steve-jobs, leonardo-da-vinci]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
+thin_record: "Kubrick gave few interviews; only two long transcripts and a page of sourced fragments were reachable free online."
 sources:
   - {n: 1, title: "Stanley Kubrick", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Stanley_Kubrick", kind: reference}
   - {n: 2, title: "Stanley Kubrick interview with Playboy magazine, 1968 (transcript)", by: "Stanley Kubrick, via P.U.L.S.E World", url: "https://world.pulse.rs/stanley-kubrick-interview-with-playboy-magazine-1968/", kind: own-words}
   - {n: 3, title: "Stanley Kubrick interview by Joseph Gelmis (from The Film Director as Superstar, 1970)", by: "Stanley Kubrick, via Scraps from the Loft", url: "https://scrapsfromtheloft.com/movies/stanley-kubrick-interview-joseph-gelmis/", kind: own-words}
   - {n: 4, title: "The Stanley Kubrick Archive: A Filmmaker's Legacy (Screening the Past, issue 42, 2017)", by: "Richard Daniels, University of the Arts London", url: "https://www.screeningthepast.com/?p=14702", kind: secondary}
   - {n: 5, title: "2001: A Space Odyssey", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey", kind: reference}
+  - {n: 6, title: "Stanley Kubrick (sourced statements from Popular Photography 1960, East Village Eye 1968 and The Making of Kubrick's 2001, 1970)", by: "Stanley Kubrick, compiled by Wikiquote", url: "https://en.wikiquote.org/wiki/Stanley_Kubrick", kind: own-words}
 tests:
   - {kind: use, prompt: "I'm making a three-minute short film about a night-shift cleaner in an office tower. Plan the research I should do before writing a word."}
   - {kind: use, prompt: "Pick a piece of existing music for each of the three scenes in my wedding video (arrival, vows, last dance) and say why each choice changes how it feels."}

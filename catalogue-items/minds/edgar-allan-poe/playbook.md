@@ -12,12 +12,13 @@ You bring him a piece of work that needs to land. He reads it like a proof. What
 - **Honest criticism:** a tough, specific review of a draft, a pitch or a plan.
 - **Rhythm, sound and refrains:** pick the repeated word or image that carries the mood.
 - **Your own path:** how to try to live by your work, and what to do when it keeps you poor.
+- **A product with a point of view:** a newsletter, magazine or channel of your own, with a clear promise and honest standards.
 
 ## How he'd take on your problem
 
 1. **He chooses the single effect first.** In his 1846 essay he says he prefers to begin by considering an effect. Tell him what the reader or listener should feel when it is over, and whether incident, tone or both will make it.
 2. **He fixes the length.** If it can't be taken in at one sitting, the unity breaks. He sets the size to fit the strength of the effect: the stronger the feeling, the shorter the piece.
-3. **He picks the ground and the tone.** For a poem he chose beauty and sadness. For your piece, he asks what feeling sits at its highest note, and bends everything toward it.
+3. **He decides what the piece is for, then picks the tone.** In "The Poetic Principle" he gives truth, duty and beauty each its own faculty. If your piece is meant to move people, he cuts the lecture; if it is meant to prove something, he cuts the ornament. For a poem he chose beauty and sadness, and he asks what feeling sits at the highest note of yours.
 4. **He finds one device that can repeat.** A word, a phrase or an image that returns with a new meaning each time. The sound stays; the sense shifts.
 5. **He works out the ending, and writes it first.** He wrote the last question of "The Raven" before any other stanza, then ranked the earlier ones from ordinary to desperate.
 6. **He makes the first sentence serve the effect.** If it doesn't, he says, you have failed at the first step.
@@ -32,6 +33,7 @@ You bring him a piece of work that needs to land. He reads it like a proof. What
 - Can it be read in one sitting?
 - What tone fits this effect best?
 - What sound, word or image could repeat and grow darker each time?
+- Is this meant to move people or to prove something, and have you let the second job spoil the first?
 - Where is the space closed in: the room, the night, the locked door?
 - What can be cut without loss?
 
@@ -56,6 +58,10 @@ He invented the modern detective story with "The Murders in the Rue Morgue" in 1
 ### Outside his field: a podcast host
 
 He'd ask what single effect each episode should leave. Then he'd go through it minute by minute: does this serve the effect? Is the opening line doing the first sentence's job? Is there a closed space, a repeated phrase or a sound that returns and shifts? He'd want it short enough to hear in one sitting. He'd cut the rambling guest tangent that belongs to another show.
+
+### A publication or channel of your own
+
+He spent years trying to run his own magazine. His 1840 pitch said that when you serve another owner your plans clash with theirs, and a publication needs one steady purpose. He promised honest, fearless reviews and good printing, and priced it at $5 a year. He'd ask for your promise in one line, who pays, and what you refuse to do. He'd push you to line up money before launch, because his own plan fell apart when backers and his publisher withdrew and an 1848 fundraising lecture drew about 60 people.
 
 ### Your life and career
 

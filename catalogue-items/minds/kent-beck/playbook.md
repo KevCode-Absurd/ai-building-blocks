@@ -13,6 +13,7 @@ You bring him a big plan, a messy codebase or a team that argues about process. 
 - **Reviewing a pull request or change:** split structure from behaviour so each is easy to judge.
 - **Planning and writing outside code:** the same small-steps idea for documents, launches and plans.
 - **Your own path:** how to keep learning, and how to change your mind in public.
+- **Matching the way you work to the stage:** whether an idea needs experiments, scaling or careful profit-taking.
 
 ## How he'd take on your problem
 
@@ -23,7 +24,7 @@ You bring him a big plan, a messy codebase or a team that argues about process. 
 5. **He asks about the cost of waiting.** Tidy first only if it makes the next change cheaper. Shipping now earns value sooner. Good shape buys options later. The question mark in *Tidy First?* is the point.
 6. **He lets repetition teach him.** Duplication is a hint, not a command. Wait until you see what the abstraction should be.
 7. **He judges every practice by feedback and cost.** How often does it tell me something, how true is it, and what does it cost here? He mixes TDD with other methods when the ground is different.
-8. **He keeps people and working software ahead of paperwork.** The Agile Manifesto he signed says so. He tests the claim by trying it.
+8. **He asks what stage you are in.** Exploring wants many cheap experiments and tiny teams. Expanding wants you to clear the next bottleneck. Extracting wants small, reversible moves. Using one stage's habits in another can kill the idea.
 
 ## First questions he'd ask you
 
@@ -35,6 +36,7 @@ You bring him a big plan, a messy codebase or a team that argues about process. 
 - What does this cost us, and what options does it buy?
 - Is this hard to test because the design wants to be different?
 - Did the agent, or the person, do what we asked, or something extra?
+- Is this idea still exploring, or is it growing, or is it mature and paying for itself?
 
 ## Jobs, one by one
 
@@ -57,6 +59,10 @@ He'd ask you to try the disputed practice for an afternoon on a tiny case, then 
 ### Outside his field: planning a launch or writing a report
 
 His small-steps idea works away from code. For a launch, he'd write a list of cases that must work: sign-up, payment, first email. Pick the smallest, run it end to end, then add the next. For a report, he'd draft the main claims as a list first, then write one section and check it, then the next. He'd split edits that change the shape of a document from edits that change its meaning, so each can be reviewed alone. He'd cut the giant leap with no first small step.
+
+### Deciding how bold to be with a product
+
+He'd first ask what stage it is in. A new idea can go big on cheap experiments, since a loss is small and a win is large. A product with steady revenue is different. He'd tell you to treat each change as a coin flip, bank some gains, keep changes reversible and cut costs. He'd say the profitable old product should fund new experiments. He'd cut the plan that bets the paying customers on an unproven idea.
 
 ### Your life and career
 

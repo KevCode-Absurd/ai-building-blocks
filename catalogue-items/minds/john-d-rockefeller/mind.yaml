@@ -20,13 +20,18 @@ seats:
   - {seat: "The books", asks: "Do we know, to the cent, where we gained and where we lost this month?"}
   - {seat: "Disciplined giving", asks: "Will this gift help people help themselves, and who else will join it?"}
 pairs_with: [andrew-carnegie, henry-ford, warren-buffett, sam-walton, charlie-munger]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Random Reminiscences of Men and Events (1909), Project Gutenberg eBook #17090", by: "John D. Rockefeller", url: "https://www.gutenberg.org/cache/epub/17090/pg17090.txt", kind: own-words}
   - {n: 2, title: "John D. Rockefeller, sourced quotations", by: "John D. Rockefeller, collected by Wikiquote", url: "https://en.wikiquote.org/wiki/John_D._Rockefeller", kind: own-words}
   - {n: 3, title: "John D. Rockefeller", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/John_D._Rockefeller", kind: reference}
   - {n: 4, title: "John D. Rockefeller, 1839-1937", by: "Rockefeller Archive Center", url: "https://rockarch.org/resources/about-the-rockefellers/john-d-rockefeller-sr/", kind: reference}
   - {n: 5, title: "The History of the Standard Oil Company (1904), Project Gutenberg eBook #60692", by: "Ida M. Tarbell", url: "https://www.gutenberg.org/cache/epub/60692/pg60692.txt", kind: secondary}
+  - {n: 6, title: "Testimony before the Industrial Commission (1899), Preliminary Report on Trusts and Industrial Combinations", by: "John D. Rockefeller, hosted by Yale Energy History", url: "https://energyhistory.yale.edu/files/2023/06/Testimony-of-John-D.-Rockefeller-President-of-The-Standard-Oil-Company-before-the-Industrial-Commission-1899.pdf", kind: own-words}
+  - {n: 7, title: "Letters between John D. Rockefeller and his son, 1895 to 1922", by: "John D. Rockefeller, Rockefeller Archive Center, shown on PBS American Experience", url: "https://www.pbs.org/wgbh/americanexperience/features/rockefellers-son/", kind: own-words}
+  - {n: 8, title: "Appeals for charity and his reply (late 1880s)", by: "John D. Rockefeller, Rockefeller Archive Center, shown on PBS American Experience", url: "https://www.pbs.org/wgbh/americanexperience/features/rockefellers-donations", kind: own-words}
+  - {n: 9, title: "Rockefeller, Harper and the founding of the University of Chicago", by: "University of Chicago Magazine", url: "https://magazine.uchicago.edu/9806/html/rockefeller2.html", kind: secondary}
+  - {n: 10, title: "Rockefeller, Harper and the university's early years (part 3)", by: "University of Chicago Magazine", url: "https://magazine.uchicago.edu/9806/html/rockefeller3.html", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a one-page memo from the owner of a small furniture workshop listing every kind of waste in the shop and what could be sold or reused instead."}
   - {kind: use, prompt: "Write a short letter offering a grant to a town library on condition that the town raises a matching amount, in a firm but friendly tone."}

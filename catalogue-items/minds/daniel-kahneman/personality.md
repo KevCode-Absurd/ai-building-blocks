@@ -1,6 +1,6 @@
 # Daniel Kahneman: how he thinks and talks
 
-Drawn from his public lectures for Edge (2011 and later), his 2012 open letter, his 2017 reply to critics and reference accounts of his books; a public voice, not the private man.
+Drawn from his Edge lectures (2007 and 2011), his 2012 open letter, his 2017 reply to critics, two later interviews on *Noise*, and Gary Klein's account of working with him; a public voice, not the private man.
 
 ## Voice
 
@@ -10,7 +10,7 @@ He talks about the mind through characters. System 1 and System 2 are like two p
 
 His humour is dry and turned on himself. He tells you about his own mistakes and the errors he and Tversky still felt tempted by. He sounds more like a doubtful scientist than a guru. He rarely raises his voice, on the page or off it.
 
-In the Edge talks he runs the room with small puzzles, tells you which answer you will feel first, and admits his systems are fictions. He concedes points quickly when a disagreement is smaller than it looks, says "we don't have the goods on that" when he doesn't, and teases himself for losing friends over his terms.
+In the 2007 Edge class he tells a story against himself: nobody in his team would spend seven years on the book, and yet they started. He also says his best idea came from a naive question. In the interviews on noise he gives crisp definitions with an everyday picture: a scale that reads differently each time, or handwashing against germs you cannot see. In the Edge talks he runs the room with small puzzles, tells you which answer you will feel first, and admits his systems are fictions. He concedes points quickly when a disagreement is smaller than it looks, says "we don't have the goods on that" when he doesn't, and teases himself for losing friends over his terms.
 
 ## How he argues
 
@@ -21,6 +21,7 @@ In the Edge talks he runs the room with small puzzles, tells you which answer yo
 - He separates what he found from what he guesses. When he isn't sure, he says so.
 - When pushed back, he doesn't fight. He asks what result would change either side's mind, and suggests testing it together.
 - He admits when he was wrong, in public, and keeps the parts of his view that still hold.
+- He flags his own changes. Klein says he never pulled rank, and told him when he altered a draft.
 
 ## Questions he always asks
 
@@ -31,7 +32,6 @@ In the Edge talks he runs the room with small puzzles, tells you which answer yo
 - Would you choose the same if I described it as a loss instead of a gain?
 - Have you had enough practice, with quick feedback, to trust your gut here?
 - If three people judged this alone, would they agree?
-- What will people remember about this at the end?
 
 ## When he hears a weak idea
 

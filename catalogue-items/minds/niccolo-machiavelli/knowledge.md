@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: this version rests on the full text of the two main books, read in the public-domain translations, with the SEP and Wikipedia pages as context only [S1][S2][S3]. Rules about advisers, arms, fortresses and conspiracies come from chapters 15, 20, 23 and 7 of *The Prince* [S4] and from books 1 and 3 of the *Discourses* [S5]. We have no letters or talks of his in full, so his private voice rests only on what Marriott quotes. Machiavelli wrote in Italian. We read him in two old English translations now in the public domain: W. K. Marriott's *The Prince* and Ninian Hill Thomson's 1883 *Discourses on the First Decade of Titus Livius* [S4][S5]. He never published *The Prince* himself, and Marriott notes its text is still disputed [S4]. Readers have argued for centuries about what he meant. Some take *The Prince* as sincere advice. Others read it as satire, or as a warning that exposes how tyrants work [S1][S3]. The famous phrase "the end justifies the means" is not his. Attributing it to him is an error [S2]. His two main books also pull in different directions: one advises a single ruler, the other praises free republics, and scholars still debate which is the "real" Machiavelli [S1].
+A note on method: this version rests on the full text of the two main books, read in the public-domain translations [S4][S5], and on four shorter works of his that we opened later. They are his letter of 10 December 1513 to Francesco Vettori [S6], his short account of the Sinigaglia killings [S7], the opening of his *History of Florence* [S8] and the first two books of *The Art of War* [S9]. The SEP and Wikipedia pages give context only [S1][S2][S3]. Rules about advisers, arms, fortresses and conspiracies come from chapters 15, 20, 23 and 7 of *The Prince* [S4] and from books 1 and 3 of the *Discourses* [S5]. We have one personal letter in full [S6], and no speeches. The translator of the letter is not named on the page we used. Machiavelli wrote in Italian. We read him in old English translations now in the public domain, among them W. K. Marriott's *The Prince* and Ninian Hill Thomson's 1883 *Discourses on the First Decade of Titus Livius* [S4][S5]. He never published *The Prince* himself, and Marriott notes its text is still disputed [S4]. Readers have argued for centuries about what he meant. Some take *The Prince* as sincere advice. Others read it as satire, or as a warning that exposes how tyrants work [S1][S3]. The famous phrase "the end justifies the means" is not his. Attributing it to him is an error [S2]. His two main books also pull in different directions: one advises a single ruler, the other praises free republics, and scholars still debate which is the "real" Machiavelli [S1].
 
 ## In one paragraph
 
@@ -80,7 +80,7 @@ How he applied it: he describes how Cesare Borgia sent a harsh governor, Ramiro 
 
 He argued that hired soldiers are useless and dangerous: disloyal, undisciplined and unwilling to die for you [S4]. A state should rely on its own citizens under arms [S1][S4]. He put it bluntly: armed prophets have won, and unarmed ones have been destroyed [S4]. In the *Discourses* he adds that good soldiers, not money, are the real strength in war [S5].
 
-How he applied it: he organised Florence's citizen militia, which took Pisa in 1509 [S1][S2]. He used the preacher Savonarola as his example of an unarmed prophet who fell once people stopped believing in him [S4].
+How he applied it: he organised Florence's citizen militia, which took Pisa in 1509 [S1][S2]. In *The Art of War* he adds that a standing professional army forces a ruler to keep paying or keep fighting [S9]. He used the preacher Savonarola as his example of an unarmed prophet who fell once people stopped believing in him [S4].
 
 #### Conflict can keep a republic free
 
@@ -100,36 +100,43 @@ How he applied it: he read the sack of Rome by the Gauls as a shock that forced 
 - Take counsel only when you ask for it, from a few wise men, then decide alone [S4].
 - Arm the people you want loyal, and do not be hated [S4].
 - Try to guess the opponent's plan before you commit [S5].
-- Start from what people actually do, not what they say or should do [S4].
 - Plan for bad behaviour. A lawgiver must assume people will act badly when given the chance [S5].
 - Prepare in calm times for the storm [S4].
 - Ask if your method still suits the times [S4][S5].
 - Avoid being hated, above all else [S4].
 - Depend on your own people, not on hired help or allies [S4].
-- Get advice from a few wise people, let them speak freely when asked, then decide yourself [S4].
 - Guard against flatterers, the pest that fills every court [S4].
+- Weigh each option aloud with a trusted friend, then choose yourself [S6].
+- Rotate commanders each year, so no one builds a private following [S9].
+- When you cannot win in the open, ask what a feigned peace would let you do, and then what it costs your name [S7].
 
 ## Real decisions
 
-### Cesare Borgia sends in a harsh governor, then ends him
+The first four are Machiavelli's own choices, from his letter and his books. The rest are choices he records other men making, with the reasons he gives them.
 
-Borgia took the Romagna from weak masters who let it fall into robbery. He chose Ramiro d'Orco, swift and cruel, with full power, and peace came. Then he feared the man's power would make him odious, so he set up a court under a good president, and had d'Orco executed in public. His stated aim in the account: to show the people that any cruelty came from the minister's nature, and not from him [S4].
+### Built a citizen army in place of hired troops
+As a Florentine official he pushed for a militia of Florence's own men instead of paid captains [S1][S2]. In *The Art of War* he gives the reasoning through his speaker Fabrizio: mercenary captains turn to plunder and revolt in peace, and citizens should train in peace and fight from need or honour [S9]. He wanted soldiers drawn from the state's own subjects, drilled on holidays so their trades did not suffer, with commanders rotated each year so none built a local following [S9]. The militia took Pisa in 1509 [S2].
 
-### Agathocles takes Syracuse
+### Turned to the ancients when he lost office
+After the Medici returned and he was dismissed, jailed and tortured, Machiavelli lived on a farm near San Casciano [S1][S6]. His letter of December 1513 describes a day: wood-cutting, haggling, a card game at the inn, then a change out of muddy clothes into formal dress. In his study he talked with the ancient writers and asked them the reasons for their acts. He says those four hours drove out boredom, poverty and the fear of death [S6]. From that work came a short book on princedoms [S6].
 
-A potter's son who rose by the army, he called the senators and the richest citizens together and had them killed in one night [S4]. Machiavelli says this won him power but not glory.
+### Asked a friend whether to hand over the book
+In the same letter he told Vettori he planned to give the book to Giuliano de' Medici, in the hope the Medici would give him work, because his money was running low and he feared being despised for his poverty [S6]. He did not simply send it. He set out his reasons for each option and asked Vettori whether to hand it over in person or by post. He also asked for help with his fear of arrest [S6]. He took counsel from one trusted man and meant to decide himself, which is the rule of chapter 23 [S4][S6].
 
-### Rome chooses the commons as guardians
+### Wrote the history around civil strife
+Commissioned in 1520 and dedicated to the Medici pope Clement VII, the *History of Florence* was written between 1521 and 1525 [S1][S8]. He opens with a quick survey of the Middle Ages before turning to Florence in his second book [S8]. A thread in the first book is that civil strife can ruin a state more than foreign force, and that the Guelph and Ghibelline feud kept Italy divided long after the barbarians had gone [S8].
 
-Rome put the guard of liberty in the hands of the common people, Sparta and Venice in the nobles. Machiavelli sets out why each side could be argued [S5].
+### Cesare Borgia's trap at Sinigaglia
+Machiavelli writes up the duke's killing of rivals as a case study [S7]. The duke saw that the Vitelli and Orsini, allied against him, would block his plans. Open war looked less safe and less profitable, so he feigned peace, called the leaders to Sinigaglia, had them seized there and strangled that night [S7]. Machiavelli's tone is cool. He calls the duke a most perfect dissembler and gives no verdict on the killings [S7].
+
+### Borgia sends in a harsh governor, then ends him
+Borgia took the Romagna from weak masters who let it fall into robbery. He chose Ramiro d'Orco, swift and cruel, with full power, and peace came. He then feared the man's power would make him odious, so he set up a court under a good president and had d'Orco executed in public. His aim, as Machiavelli reports it, was to show the people that any cruelty came from the minister's nature, not from him [S4].
 
 ### Maximilian keeps his plans to himself
-
-The emperor told no one and was talked out of his plans by those around him when they leaked. Machiavelli uses him as the case of the wrong way to take counsel [S4].
+The emperor told no one his plans, and when they leaked in the doing, the people around him talked him out of them, so he undid by night what he did by day. Machiavelli uses him as the case of the wrong way to take counsel [S4].
 
 ### Fabius is slow when the times turn fast
-
-He praises Fabius for the delay that wore down Hannibal, then notes that the same man opposed attacking Africa when the time for that had come [S5].
+Machiavelli praises Fabius for the delay that wore down Hannibal, then notes that the same man opposed attacking Africa when the time for that had come. His point is that a method that fits one season fails in the next [S5].
 
 ## Where he stood
 
@@ -149,7 +156,7 @@ He praises Fabius for the delay that wore down Hannibal, then notes that the sam
 - Built a citizen militia, which took Pisa in 1509 [S2].
 - Lost office when the Medici returned in 1512 [S1][S2].
 - Jailed and tortured in early 1513, then released [S1][S2].
-- Wrote *The Prince* around the end of 1513 [S1][S3]. In a letter to his friend Francesco Vettori he described evenings spent reading the ancients, as if talking with them [S4].
+- Wrote *The Prince* around the end of 1513 [S1][S3]. In a letter to his friend Francesco Vettori he described evenings spent reading the ancients, as if talking with them [S4][S6].
 - Wrote the *Discourses on Livy* over about 1514 to 1519 [S1].
 - Wrote the comedy *The Mandrake* and other plays and verse [S1][S2].
 - Published *The Art of War* in 1521 [S1].

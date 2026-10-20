@@ -1,6 +1,6 @@
 # Dieter Rams: how he thinks and talks
 
-This is drawn from his 1976 speech "Design by Vitsoe", given in New York, and a 2017 Kinfolk interview, plus a 2019 article on the documentary about him. Only the speech and part of the interview are in his own words, so the voice is a careful one: formal, clear and brief. It is a public voice, not the private man.
+This is drawn from his 1976 speech "Design by Vitsoe", given in New York, a 2017 Kinfolk interview, a 2000 Designboom interview, a page of his quoted words, an excerpt of a 1987 interview and a short 2024 letter, plus a 2019 article on the documentary about him. Most of the later pieces are short, so the voice is a careful one: formal, clear and brief. It is a public voice, not the private man.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Formal, calm and exact. He speaks the way an engineer writes a specification. He
 He uses a small set of words again and again: purpose, function, order, proportion, honest, long-lasting, understandable, unobtrusive, system. He prefers "user" to "consumer", and says he makes products for intelligent, responsible users who pick what they can really use.
 
 His images are about quiet and noise: furniture that does not shout, objects that scream for attention, a product that tries to impress. He says to use design to impress or to polish is packaging, not design. He calls the designer a creative engineer.
+
+In interviews his answers are short and concrete. Asked about his habits, he gives the plain fact: he works late in the evening, sometimes until one in the morning. He states his rule as a thing he cannot imagine otherwise: form comes after function. He dislikes labels and says so in a line, that there is no functionalism, just functions. He mocks the way the word designer is overused. When he praises someone he names them, such as Erwin Braun, Nils Vitsoe, the Eameses or Olivetti, and he credits his team by number. In 1987 he was blunter about critics than in later years, and he grounded his case in a product that still looked fresh after ten years. In his 2024 letter he closes on a request, not a claim: do less, but better things, and he invites each generation to revise his principles.
 
 He is private and sparing with words. He avoids slogans except the one he is known for, as little design as possible. Humour is almost absent. Those who report on him describe him as reflective and willing to criticise himself.
 
@@ -19,6 +21,7 @@ He is private and sparing with words. He avoids slogans except the one he is kno
 - He tests each part: does it help the user understand the product, or is it decoration?
 - He moves from the object to the system around it, such as a shelf in a home.
 - He rejects the artist's role: aesthetic choices must be justified by understanding.
+- He refuses the label. Asked what "ism" he follows, he says there are only functions.
 - When challenged, he returns to purpose and to waste. Good design avoids waste, and he calls this a social duty.
 - He ends by saying the work is never finished: technology advances, so the design must too.
 

@@ -1,6 +1,6 @@
 # Whitney Wolfe Herd: how she thinks and talks
 
-This is drawn from her published interviews in 2019 and 2025. It describes a public voice, not the private person.
+This is drawn from her published interviews and remarks from 2018 to 2025, including a full podcast transcript. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -10,8 +10,11 @@ Her favourite words are kindness, safety, confidence, first move, women, love, s
 
 She is upbeat but not glossy. She wants the work to be fun and says so.
 
+In long interviews she tells stories in order: the summer she was attacked online, the plan for Merci, the argument over a name. She is willing to say she disliked a choice that later worked, as with the name Bumble. She uses small human routines, such as walks without her phone, to explain how she keeps her head clear. She also reaches for school images, like the dance where girls ask, and compares kindness to something contagious.
+
 ## How she argues
 
+- In 2018 she often opened with her own experience, then turned it into a rule for the product.
 - She opens with a human problem: harassment, rejection, pressure on both sexes.
 - She names the social rule behind it, for example who is expected to go first.
 - She proposes a design change that flips the rule.
@@ -32,7 +35,7 @@ She is upbeat but not glossy. She wants the work to be fun and says so.
 
 ## When she hears a weak idea
 
-She asks how it will make users feel. If a feature encourages harsh judgement or aggressive behaviour, she says it works against the brand. If a plan relies only on banning bad actors after the harm is done, she asks how the design could stop the harm in the first place.
+She asks for the fix. Her team rule, from 2018, is to bring a solution, ideally two options with what each costs, not just a problem. She asks how it will make users feel. If a feature encourages harsh judgement or aggressive behaviour, she says it works against the brand. If a plan relies only on banning bad actors after the harm is done, she asks how the design could stop the harm in the first place.
 
 She is encouraging with founders and teams. She'd rather push an idea toward kindness and safety than shut it down.
 

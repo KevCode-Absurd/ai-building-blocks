@@ -1,8 +1,8 @@
 # Robert Cialdini: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Robert Cialdini is alive, and views can change. The local source folder holds a Wikipedia article [S1] and short records of his 7 Principles page [S3] and the SUCCESS interview [S4]; the rest of the detail comes from the other public pages listed in mind.yaml. Everything below comes from his own pages and interviews (2011 to 2021) and from public reference pages. Treat each view as "as of" its source. This mind doesn't speak for him on new research, clients or events.
+Robert Cialdini is alive, and views can change. This version rests on his own words in six places: his 7 Principles page [S3], a 2011 SUCCESS interview [S4], a 2016 PBS NewsHour interview [S9], a 2018 Think:Act interview [S10], a 2021 Freakonomics Radio interview [S11] and a 2023 Stanford talk [S8], plus reference pages. The HBR pages [S5] are only the intros, and the Social Media Examiner page [S12] is a host's summary, so those carry less weight. Treat each view as "as of" its source. This mind doesn't speak for him on new research, clients or events.
 
 ## In one paragraph
 
@@ -10,7 +10,7 @@ Cialdini is a social psychologist and Regents' Professor Emeritus of psychology 
 
 ## Core ideas
 
-### Shortcuts make us easy to persuade
+**Shortcuts make us easy to persuade**
 
 The starting point of *Influence* is that nobody can think through every choice. We use rules of thumb instead, such as "if many people do it, it's probably fine." These shortcuts usually lead to good decisions, but they can be used against us [S2]. Cialdini studied the people who use them for a living. The book reports that he went undercover in jobs such as car sales and door-to-door selling to watch the methods first-hand [S2].
 
@@ -48,6 +48,22 @@ People want more of what they can have less of [S3]. When British Airways said i
 
 Unity is the seventh principle, added in 2016 [S1]. People are more influenced by those they see as part of their own group, such as family, a team or a shared identity [S1][S2]. It can create "us against them" thinking, or real mutual support [S2]. The 2021 edition of *Influence* added it along with new research and about 220 more pages [S7].
 
+### Pre-suasion: change what is on their mind
+
+In his later work the point is timing. You often don't need to change a mind, he says. You need to change what is on the person's mind at the moment they decide [S10]. He separates persuasion, which puts a motive (quality, price, popularity) into the message, from pre-suasion, which directs attention to that motive just before the message arrives [S8]. His reasoning: whatever we focus on, we treat as important [S9]. Evidence he gives: only 29% agreed to a survey when asked cold, but 77.3% agreed after first being asked if they consider themselves helpful [S10][S12]. A furniture site shown with clouds pulled visitors toward comfort, and one shown with coins pulled them toward price [S8][S9]. The two-step method on the show notes: name your strongest real benefit, then put an idea or image tied to it in front of people before you make the pitch [S12].
+
+**Unity, in his own telling**
+
+He says he missed unity at first because he treated shared identity as something that amplified the other six, not a principle in its own right. Rising tribalism in American life made him see it needed its own place [S11]. His example: a student collecting for a charity got about four and a half times as many gifts by adding that she was a student there too [S8].
+
+**Ask for advice, not opinion**
+
+A small wording rule from the Stanford talk: asking people for their advice instead of their opinion turns critics into partners and gets better feedback [S8].
+
+**Influence versus manipulation**
+
+His line: influence points to a principle that really exists in the situation, and manipulation makes one up or fakes it [S11]. He judges the persuader by intent. If the facts are true, the seller is an ally. If a lie is used to scare you, the seller is an enemy [S10]. Before you trust an authority, ask whether they truly know the field and whether they gain from your choice [S11].
+
 ### Ethics: be a detective of influence
 
 Cialdini frames ethics as part of the method. He says the principles are learnable by anyone because they rest on scientific findings, and that you can use them while staying fully ethical [S4]. The job is to detect what a person really wants and bring it to the surface, not to manipulate them [S4]. HBR's 2013 interview with him notes that he was drawn to the topic partly because he saw how easily influence slides into manipulation, and that *Influence* warned about these methods in the wrong hands [S5]. His 2001 HBR article then showed managers how to use the same principles well [S5].
@@ -65,20 +81,23 @@ Cialdini frames ethics as part of the method. He says the principles are learnab
 
 ## Real decisions
 
-### Studying persuaders from the inside
-Cialdini felt he was an easy mark and could find no model of why people say yes [S4]. So instead of staying in the lab, he took training and jobs in places that live on getting a yes: used car dealerships, fund-raising groups and telemarketing firms [S1][S2]. His stated aim was to see real persuasion up close. The book that came out of it, *Influence* (1984), grew from about three such undercover years [S1].
+### Going undercover as a trainee
+In the early 1980s Cialdini saw himself as an easy mark for salespeople and fundraisers. He asked organisations directly how they worked and got nowhere, so he took training roles under the name Rob Calder [S11]. He trained in encyclopedia and supplement selling, insurance and cars, portrait photography, advertising, fundraising, recruiting and more. His reasons: he wanted to help consumers and voters, and public money had paid for his research [S11]. The work ran about two and a half years, though he says he had what he needed after about six months [S11]. The same principles kept turning up across all the programmes [S11][S4].
 
-### Testing a principle with a small, real change
-The 7 Principles page gives his habit of running field tests on tiny changes. In hotel rooms, a towel card that said most guests reuse towels beat one that only asked for help with the environment, and naming guests in the same room beat both [S3]. In restaurants, adding a mint to the bill raised tips, and a second mint with a personal remark raised them more [S3]. The decision in each case was to change one thing and measure it.
+### Telling the trainers who he was
+Before publishing, he felt he owed the organisations a heads-up. He told the trainers he was a professor, promised them a copy before it came out, and asked to use what he had learned [S11]. He had not planned the next part. By casting himself as a student, he gave them the role of teacher, and he says teachers don't hoard what they know [S11]. Many agreed.
 
-### Treating ethics as part of the method
-In 2011 he said you can use the principles and stay fully ethical, if you act as a detective who finds what a person really wants and brings it to the surface [S4]. He drew the line at faking scarcity, consensus or expertise [S4][S5]. His 2001 HBR article then took the same principles to managers [S5].
+### Waiting for a big idea, not a sequel
+After Influence he did not want to write follow-ups that would only be bushes around its tree. He chose to wait until he had a seed for another tree [S10]. The seed came from studies on what people meet just before a message, and from a doorstep moment: a man collecting for an unfamiliar children's programme, with his young daughter hiding behind his leg, got more from Cialdini than such a request normally would [S10]. Pre-suasion followed in 2016, after about three years of work on his notes about top performers in sales, marketing, advertising, recruiting and fundraising [S12].
 
-### Adding a seventh principle
-In 2016 he proposed unity, the pull of shared identity, as a seventh principle on top of the original six [S1]. The 2021 edition of *Influence* folded it in with new research and about 220 more pages [S7].
+### Checking the claim after he got fooled
+Cialdini once walked into an electronics shop for something else and bought a TV after a last-one-in-stock line and a story of another buyer on the way. He says he was fooled, despite his own books [S10]. Then he did two things. He checked whether the claim was true, and when he found it was, he wrote a positive review of the salesman [S10]. His stated rule: reward honest persuaders and punish deceptive ones [S10].
 
-### Advice to a job seeker
-Asked how to use the principles in an interview, he suggested asking interviewers why they chose to invite you. They then name your strengths aloud, and spend the rest of the talk staying consistent with what they said [S4].
+### Making unity the seventh principle
+For the 2021 edition he decided unity deserved its own place. He had earlier seen it as an amplifier of the other six [S11]. Growing tribalism changed his view, and he decided the book could handle seven [S11]. The new edition added about 220 pages [S7]. He also said the "we" pull can override other influences [S11].
+
+### Staying with a book that sold slowly
+By the account on the Social Media Examiner page, Influence sold poorly at first, and the publisher pulled back its promotion money. Years later, as evidence-based decisions caught on in business, it became a bestseller, spread by university and MBA classes and by managers who bought copies for their teams [S12]. He had first written it for consumers and found its audience was business [S12].
 
 ## Where he stood
 

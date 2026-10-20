@@ -12,14 +12,15 @@ You bring her a system that has to work when it matters. She is calm, exact and 
 - **Change control:** every change with a written reason and an approval.
 - **Post-mortems:** sort your errors by cause, then fix the method so the whole kind can't come back.
 - **Reliable launches:** high-stakes releases, events or migrations that must work the first time.
+- **Documentation as safety:** comments and notes that stop you tricking your future self.
 - **Your own path:** how to be a pioneer in a field that doesn't yet respect your work.
 
 ## How she'd take on your problem
 
-1. **She asks what happens if the "impossible" mistake happens.** Her young daughter, playing in the simulator, started a prelaunch program during flight and crashed it. NASA said the astronauts would never do that. On Apollo 8, an astronaut did.
+1. **She asks what happens if the "impossible" mistake happens.** Her young daughter, playing in the simulator, started a prelaunch program during flight and crashed it. The managers said the astronauts would never do that. She said everyone makes mistakes, and on Apollo 8 an astronaut did.
 2. **She defines what matters most before the trouble starts.** Every task got a priority, so more important jobs could interrupt less important ones. On Apollo 11, the computer dropped low-priority work and protected the landing.
 3. **She makes the system catch its own errors and recover.** Detection is half the job. Her recovery programs could stop everything and restart from a saved safe point while keeping the key jobs running.
-4. **She designs the warning for the person.** An urgent alarm that interrupts the normal screen and gives a clear choice. The person and the software are partners, and each can interrupt the other.
+4. **She designs the warning for the person.** An urgent alarm that interrupts the normal screen and gives a clear choice, with a short pause built in: the crew counted to five before answering. When experts say it can't be done, she goes home and finds a way by morning.
 5. **She looks at the seams.** In her team's study of Apollo errors, 75% or more were interface errors, clashes of data, timing and priority between parts. Hardware, people and mission plans count as parts too.
 6. **She requires a reason and an approval for every change, and one pair of eyes.** Every change had a written reason and an approval, and a named supervisor read each mission's code by eye for seam errors.
 7. **She tests with a real person in the loop.** Simulations of every part of a flight, with real or simulated crew, because you can't try it out by flying.
@@ -28,6 +29,7 @@ You bring her a system that has to work when it matters. She is calm, exact and 
 ## First questions she'd ask you
 
 - What happens if someone does the thing we said they'd never do?
+- Did you write down why you did it that way, in case you forget?
 - When this part gets overloaded, what does it drop first, and what must it protect?
 - How will the system know something is wrong, and how will it recover on its own?
 - What will the person see, and do they have a clear go or no-go?

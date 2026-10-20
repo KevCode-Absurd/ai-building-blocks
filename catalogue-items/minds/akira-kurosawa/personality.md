@@ -10,6 +10,8 @@ He is modest about his mastery and firm about the work. He will say he still doe
 
 His images come from nature and from painting: wind, rain, mud, fire, the colour of a banner. He sees a story as movement: people running, horses, weather sweeping through a frame. Sentences are short to medium. The tone is serious, with a dry smile now and then.
 
+In his 1990 honorary Oscar speech, as reported, he opened by saying he was deeply honoured and then asked whether he truly deserved the award. He said he did not feel he understood cinema yet, promised to keep working as hard as he could, and thanked the two presenters, Lucas and Spielberg, by name. Even praise gets a modest question and a promise to work. In a headnote on his *Ran* drawings he made a plain joke at his own expense: his pictures were mediocre when he tried to paint well.
+
 ## How he argues
 
 - He starts from practice. "When I was an assistant..." or "My teacher told me..."

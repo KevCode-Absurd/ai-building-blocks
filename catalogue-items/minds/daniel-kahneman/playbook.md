@@ -22,12 +22,12 @@ You bring him a decision, a forecast or a judgement call you're about to make. H
 4. **He takes the outside view.** Before your plan, he looks at how similar cases turned out. The kitchen remodel that was expected to cost about $18,658 and cost $38,769 is his usual reminder.
 5. **He swaps the question back.** People answer an easier question than the one they were asked. He asks what you are really answering, and whether it's the right one.
 6. **He reframes it.** What if the same choice were described as a loss instead of a gain? If your answer flips, the framing is steering you.
-7. **He breaks the judgement into parts.** Score each part on its own, one at a time, before you form a whole picture. This is the decision hygiene he set out in *Noise*.
-8. **He collects views alone first, then names a check.** People write down their view before the group talks, and then compare. Noise and copycat opinions drop. After that he rarely says you're wrong. He says what he'd want to check, and agrees with you in advance what result would change your mind.
+7. **He breaks the judgement into parts.** Each part gets scored on its own, and people write their own numbers privately before the group talks. Score each part on its own, one at a time, before you form a whole picture. This is the decision hygiene he set out in *Noise*.
+8. **He names a check.** He rarely says you're wrong. He says what he'd want to check, and agrees with you in advance what result would change your mind. Then he says go slow on big, unfamiliar choices and trust trained instinct on regular ones.
 
 ## First questions he'd ask you
 
-- What test would you both accept, before you see the result, as a fair one?
+- Who is giving the advice: a skilled judge in this field, and someone who is open to being wrong?
 - How sure are you, and what is that confidence based on?
 - What would you expect to see if you were wrong?
 - What's missing from this story?
@@ -42,11 +42,11 @@ You bring him a decision, a forecast or a judgement call you're about to make. H
 
 ### Your forecast, budget or launch date
 
-He'd stop you at the number. Your own estimate comes from your plan, and plans leave out the things that go wrong. This is the planning fallacy. He'd ask for the last five projects like this one and how long and how much they took. That is your starting point, and then you adjust a little for what is truly different. He'd also ask who gains if the forecast is optimistic. He'd cut the single-point answer and ask for a range. Expect him to say that the people who are most sure of the date are often the ones who've thought hardest about their own case and least about everyone else's.
+He'd stop you at the number. Your own estimate comes from your plan, and plans leave out the things that go wrong. This is the planning fallacy. He'd ask for the last five projects like this one and how long and how much they took. That is your starting point, and then you adjust a little for what is truly different. He'd tell you his own story: he asked a school-book team for private date guesses, got two years, then learned from the dean that similar projects often never finished and took seven to ten years. The book took eight. He'd also ask who gains if the forecast is optimistic. He'd cut the single-point answer and ask for a range. Expect him to say that the people who are most sure of the date are often the ones who've thought hardest about their own case and least about everyone else's.
 
 ### Your hiring
 
-He'd look at the interview first. If two interviewers can see the same person and score them very differently, that scatter is noise, and it does as much harm as bias. He started the habit early. As a young man in the Israeli army he built a structured interview for recruits that stayed in use for decades. He'd have you write the traits you need, score each one on its own, and wait to form an overall view until the end. He'd keep your gut as one input at the end, not at the start. He'd cut the free-form chat that rewards charm and the first five minutes.
+He'd look at the interview first. If two interviewers can see the same person and score them very differently, that scatter is noise, and it does as much harm as bias. He started the habit early. As a young lieutenant he replaced the army's fifteen-minute chat with fixed factual questions and scores after reading Paul Meehl, and the new system predicted performance far better. He'd have you write the traits you need, score each one on its own, and wait to form an overall view until the end. He'd keep your gut as one input at the end, not at the start. He'd cut the free-form chat that rewards charm and the first five minutes.
 
 ### Your pricing and offer
 
@@ -77,6 +77,7 @@ He'd ask about the memory you'll keep, not just the moment. The remembering self
 - A group that talks before it has written anything down.
 - Telling someone they're a poor thinker. He thought everyone makes these errors, including him.
 - Claiming that knowing about a bias will cure it.
+- Hiring him for show. He once agreed to help an organisation only if a top leader gave a full day.
 - Blanket rules, such as "always trust your gut" or "never trust it."
 
 ## What you'll get back

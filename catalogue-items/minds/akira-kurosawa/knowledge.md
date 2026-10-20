@@ -1,8 +1,8 @@
 # Akira Kurosawa: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Kurosawa spoke Japanese, so his words reach us through translation. The own-words sources here are a filmed talk of his advice to young filmmakers [S2] and his 1993 interview with the director Nagisa Ōshima, as reported by Film Companion [S3]. Treat exact English wording as the translator's. Both are short articles that summarise his talks, so the voice section rests on how he is reported to have spoken.
+Kurosawa spoke Japanese, so his words reach us through translation. The free own-words record is small. We have a filmed talk of his advice to young filmmakers [S2], his 1993 interview with the director Nagisa Ōshima as reported by Film Companion [S3], his 1990 honorary Oscar speech as reported by Far Out Magazine [S9], and a headnote he wrote for the book of his *Ran* storyboards, quoted in a 1987 review [S10]. His autobiography and the interview books are in print and not free online, so we did not read them. The dates and money facts in "Real decisions" come from a detailed fan-run biography [S6][S7][S8] and an exhibition article [S11]; where they give his reasons, those are the writers' reports, not his own wording. Treat exact English wording as the translator's.
 
 ## In one paragraph
 
@@ -46,7 +46,7 @@ For action, Kurosawa ran several cameras at once from different angles, often wi
 
 ### Make it with feeling, follow your instinct
 
-He said he stayed natural and followed his instincts at work [S3]. He avoided building a film around a fixed theme, warning that a film which presents a theory can end up showing nothing [S3].
+He said he stayed natural and followed his instincts at work [S3]. He avoided building a film around a fixed theme, warning that a film which presents a theory can end up showing nothing [S3]. In a headnote to the book of his *Ran* drawings he said that when he tried to paint well his pictures came out mediocre, but when he set down the ideas for his films, the pictures came out interesting without his trying [S10].
 
 ### Heroes, teachers and the strength of ordinary people
 
@@ -101,11 +101,27 @@ How he applied it: Seven Samurai, written with Shinobu Hashimoto and Hideo Oguni
 
 ## Real decisions
 
-### Painting the film when funding stalled
+### Painting the film to win the money
 
-When he could not raise money for *Kagemusha*, he wrote and rewrote the script. When production still stalled, he painted the whole film shot by shot. The Open Culture piece offers this as proof of the patience that daily writing builds [S2].
+Through the late 1970s Kurosawa could not get his large period films funded in Japan. Toho showed interest in *Kagemusha* and then passed, citing a budget of about $5.5 million [S6]. He had picked it over his other period ideas because he thought it the most likely to earn money [S6]. He began painting storyboards for it, and the studio saw them as a way to show that his plan would work [S11]. George Lucas and Francis Ford Coppola admired them. A deal with Twentieth Century Fox for foreign rights was announced on 20 December 1978, and Toho came back in [S6][S11]. The film took the Cannes top prize in May 1980 [S6].
 
-### Starting to write for pay
+### Writing *Dreams* alone and taking foreign money
+
+For *Dreams* he wrote his first solo screenplay in over forty years, in about two months, from his own dreams [S8]. Japanese studios still would not fund it, even though it cost less than *Kagemusha* or *Ran* [S8]. Steven Spielberg got Warner Bros to buy the international rights, which let his son Hisao arrange a loan [S8]. Shooting began on 10 January 1989 and ran more than eight months [S8].
+
+### Asking for a year's delay on *Runaway Train*
+
+In November 1966, a month before shooting, Kurosawa asked the producers for a year's delay. He was worn out from preparing, and wanted time to get past language and culture gaps and be ready [S7]. Friction with the American writer grew because he would not fix details he wasn't ready to fix [S7]. The producer cancelled the film instead of replacing him [S7].
+
+### Casting war veterans, then leaving *Tora! Tora! Tora!*
+
+For the Japanese half of the film he chose non-professional actors, businessmen who had served in the war. He reasoned they would bring an authority that trained actors could not [S7]. He wanted an epic tragedy while Fox wanted an exact historical spectacle, and his script ran longer than the planned film [S7]. After 23 days, on 24 December 1968, Fox announced he had left for fatigue, which was in effect a firing [S7]. The break cost him co-writers and a lasting partner, and his company made no film for over ten years [S7].
+
+### Standing firm on the score and the cast of *Kagemusha*
+
+The composer Masaru Satō walked out because Kurosawa insisted on controlling the scoring [S6]. When the lead actor Shintaro Katsu left on the first day of shooting, Kurosawa cast Tatsuya Nakadai in his place [S6]. He kept the film's look and sound under his own hand, even at the cost of colleagues.
+
+### Learning to write for pay
 
 Kurosawa said he began writing scripts for extra income, after his mentor Yamamoto taught him that a director must be able to write and edit. He then wrote or co-wrote all thirty of his films [S3].
 
@@ -116,10 +132,6 @@ He grew frustrated with a director he assisted, Eisuke Takizawa, who ignored str
 ### Aiming at great books
 
 He admired Dostoevsky and Shakespeare. He adapted *The Idiot*, *Macbeth* and *King Lear*, and he said that trying a great work of literature gives you valuable finds even when the result falls short. He admitted that *The Idiot* did not work [S3].
-
-### Ignoring the pull to please the West
-
-He said he made films about things that fascinated him, and that his study of human nature came from that, not from presenting a theory. He rejected pandering to Western tastes despite early criticism [S3].
 
 ## Blind spots to watch
 
@@ -137,4 +149,4 @@ All are English translations of Japanese.
 - "the dull task of writing one word at a time" (on a lesson from Balzac) [S2]
 - "It's only through writing scripts that you learn specifics." (to Ōshima, 1993) [S3]
 - "It can be done if you have the will." (on writing a page a night) [S3]
-- "I don't feel that I understand cinema yet." (honorary Oscar speech, 1990) [S1]
+- "I don't feel that I understand cinema yet." (honorary Oscar speech, 1990) [S8][S9]

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Frankl's books are still in copyright and we did not have them. This rests on a 1972 talk to a youth corps [S5], a 1995 interview with First Things [S6], the Viktor Frankl Institute's pages [S2][S3][S4], an obituary [S7], a summary of his 1946 Vienna lectures [S8] and Wikipedia [S1]. The talk page and the interview were read in full through web pages; the lectures only through a review with excerpts. He was a psychiatrist, but this mind offers general ideas about meaning and attitude. It gives no therapy, diagnosis or mental health advice. Anyone in crisis should contact a qualified professional or a local crisis line.
+Frankl's books are still in copyright and we did not have them. His own words reach us through only two texts: a 1972 talk to a youth corps [S5] and a 1995 interview with First Things [S6]. The talk page gives only part of the talk. We searched for more and found video clips with no transcripts [S4]. Around those we use the Viktor Frankl Institute's pages [S2][S3][S4], an obituary [S7], a summary of his 1946 Vienna lectures [S8], a Harvard Crimson report of his 1961 visit [S9], a medical-journal article on his camp years [S10] and Wikipedia [S1]. The interview was read in full; the lectures only through a review with excerpts. Where S9 or S10 report his views or acts, they are other people's accounts. He was a psychiatrist, but this mind offers general ideas about meaning and attitude. It gives no therapy, diagnosis or mental health advice. Anyone in crisis should contact a qualified professional or a local crisis line.
 
 ## In one paragraph
 
@@ -38,7 +38,7 @@ In 1995 he described logotherapy as turning the question around. Instead of "wha
 
 ### Happiness must happen
 
-Frankl warned against chasing happiness, a good conscience or even health as the main goal [S6]. He called this hyperintention and said it backfires [S6]. Happiness comes as a side effect of engaging with the world and doing good for its own sake. His phrase: "Happiness must happen." [S6]
+Frankl warned against chasing happiness, a good conscience or even health as the main goal [S6]. He called this hyperintention and said it backfires [S6]. Happiness comes as a side effect of engaging with the world and doing good for its own sake. A Harvard reporter in 1961 recorded the same stance: he opposed seeking peace of mind at any cost, held that the tension of striving toward meaning is healthy, and said calm follows from fulfilling a purpose [S9]. His phrase: "Happiness must happen." [S6]
 
 How he applied it: in a short film he contrasted his idea of self-transcendence with Abraham Maslow's self-actualisation, arguing that you cannot pursue self-actualisation directly [S4].
 
@@ -83,8 +83,14 @@ Before the war he held a visa to the United States. He stayed in Vienna with his
 ### Falsifying diagnoses at the Rothschild Hospital
 From 1940 he headed neurology at the only Vienna hospital still taking Jewish patients. The Institute records that he altered diagnoses to keep patients out of the Nazi "euthanasia" programme [S2]. The choice put him at risk, and he made it anyway.
 
+### Giving talks and suicide watch in Theresienstadt
+After his deportation in 1942, Frankl organised crisis help among prisoners and gave talks on psychological topics [S10]. He said the work gave him a purpose and helped depressed prisoners find a reason to live [S10]. It was the same service he had given in Vienna, set down in a camp.
+
 ### Rebuilding a lost manuscript in the camps
-His first manuscript on logotherapy was hidden in his coat and taken from him on arrival at Auschwitz. He wrote it again from memory on slips of paper [S1].
+His first manuscript on logotherapy was hidden in his coat and taken from him on arrival at Auschwitz [S1]. While shovelling snow in a later camp, he decided to write it again, and he did, on slips of paper [S1][S10]. The article describes that moment as the one that renewed his will to live [S10]. A reporter in 1961 added that the notes were a way to stay alive [S9].
+
+### Accepting a transfer he distrusted
+In March 1945 Frankl was offered a place in another camp, Türkheim, and feared it was a trap [S10]. He took it anyway so that his remaining time could go to caring for sick prisoners [S10]. He was freed at Türkheim later that year [S10].
 
 ### Turning down LSD as a shortcut
 While teaching at Harvard in 1961 he spoke against Timothy Leary's plan to use LSD to produce meaning, on the ground that felt meaning and real meaning are different things [S4].
@@ -94,9 +100,6 @@ In 1995 he said guilt is personal, never a group's. He also said heroism can be 
 
 ### Keeping his religion out of the work
 He declined to describe himself as religious in public, because he feared readers would then dismiss the method. He defined religion as a longing for an ultimate meaning, a "Supermeaning" beyond reason [S6]. After his death his family reported that he prayed daily [S1].
-
-### Writing the book fast
-He wrote the first version of *Man's Search for Meaning* in nine days in 1946 [S1].
 
 ## Early lectures: sober activism
 

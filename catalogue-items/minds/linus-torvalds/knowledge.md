@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Rebuilt 2026-10-20 from the Git README text, plus the 1992 history note, the 2012 email and the 2018 email as read on their archive pages [S2][S4][S5][S6]. Quotes are kept short.
+Rebuilt from the Git README text, the 1992 history note, the 2012 emails, the 2018 email and his kernel management-style essay, all read on their archive pages [S2][S4][S5][S6][S13][S14]. Quotes are kept short.
 
 Linus Torvalds is alive, and views can change. This data set comes from his own public posts to mailing lists and Usenet (1991 to 2018), the README he wrote for the first version of Git (2005), his 2016 TED interview, the Linux kernel's own process documents, and reference pages. Treat each view as "as of" the year of its source. The kernel documents describe the project he leads, but they were not all written by him, so we use them for how the project works, not as his words. Nothing here covers his private life, and nothing here tells you what he thinks about events after these dates.
 
@@ -60,6 +60,10 @@ Torvalds holds that open source is the right way to build software, but he also 
 
 How he applied it: when he was criticised for running the kernel on BitKeeper, a closed tool, he kept using it while it was the best option. Once that broke down, he wrote Git as a free replacement [S1].
 
+### Decisions you can undo
+
+His kernel management essay says a technical lead should avoid big, painful choices and cut large ones into small, reversible steps. Say up front that a decision may be wrong. The worst thing to burn is trust, because it can't be taken back. He also says the best leads back the people who know more than they do, take public blame and correct the culprit in private [S13]. He tells his readers that painful truths go down easier as a joke, and the essay itself is written that way [S13].
+
 ## How he decides
 
 - Does it work? Show the running code before arguing about design [S11].
@@ -70,6 +74,8 @@ How he applied it: when he was criticised for running the kernel on BitKeeper, a
 - Is the function short and easy to read? If it nests too deep, rewrite it [S9].
 - Is a tool slowing the work? Pick a better one, or build it [S1][S7].
 - Fix the problem in front of you before planning ten years out [S10].
+- Can this decision be undone? If not, slow down. If so, decide and say it may be wrong [S13].
+- Does each patch do one thing, and does the kernel still build after every one? [S15]
 
 ## Real decisions
 
@@ -90,6 +96,10 @@ A developer asked whether an old tunable could go after two years. Torvalds answ
 
 ### Writing Git in a tiny, blunt form (2005)
 After the kernel lost free use of its tool, he wrote a content tracker built on a few object types named by hash, and said in the README that trust was outside the tool's scope: sign one note naming the top changeset and the history beneath it is covered [S6][S7]. He later handed day-to-day running to Junio Hamano [S1].
+
+### Taking a fix into his own hands (December 2012)
+
+A maintainer argued that a media change which broke PulseAudio was the program's fault. Torvalds replied that the kernel is at fault whenever a change breaks working programs, and that the error code the patch returned was wrong for that call anyway [S14]. He pointed to the extra remapping code as a sign of poor design, cited another report of the same break, and said he would apply the fix himself rather than trust the maintainer's handling [S14]. The email is hostile in tone. He tells the maintainer to change how he approaches kernel work [S14]. The rule he states is the same one as in the 2012 OOM email: don't blame the user program [S4][S14].
 
 ### Apologising and stepping back (2018)
 In the 4.19-rc4 email he wrote that his flippant attacks on people had been unprofessional, that he misreads emotions, and that he would take time off to get help. He asked Greg Kroah-Hartman to finish the release and said it was not burnout [S5].

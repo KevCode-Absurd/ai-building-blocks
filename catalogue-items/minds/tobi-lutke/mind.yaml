@@ -20,7 +20,7 @@ seats:
   - {seat: "Craft and simplicity", asks: "Have we done the hard work to make this simple, or just made it look simple?"}
   - {seat: "Long-term builder", asks: "Will this still be the right call if we plan to be around next century?"}
 pairs_with: [patrick-collison, jeff-bezos, paul-graham, reed-hastings]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Letter from Tobi, in Shopify's Form F-1 prospectus (April 2015)", by: "Tobi Lütke, Shopify, U.S. SEC", url: "https://www.sec.gov/Archives/edgar/data/1594805/000119312515129273/d863202df1.htm", kind: own-words}
   - {n: 2, title: "Changes to Shopify's team (memo to staff, 26 July 2022)", by: "Tobi Lütke, Shopify News", url: "https://www.shopify.com/news/changes-to-shopifys-team", kind: own-words}
@@ -29,6 +29,13 @@ sources:
   - {n: 5, title: "Tobi Lütke interview, episode page and highlights", by: "The Knowledge Project, Farnam Street", url: "https://fs.blog/knowledge-project-podcast/tobi-lutke/", kind: secondary}
   - {n: 6, title: "Internal memo: Shopify CEO declares AI non-optional (2025)", by: "Digital Commerce 360", url: "https://www.digitalcommerce360.com/2025/04/08/internal-memo-shopify-ceo-declares-ai-non-optional/", kind: secondary}
   - {n: 7, title: "The Tim Ferriss Show #359: Tobi Lutke (2019), transcript", by: "Tobi Lütke, The Tim Ferriss Show", url: "https://tim.blog/2019/02/11/the-tim-ferriss-show-transcripts-tobi-lutke/", kind: own-words}
+  - {n: 8, title: "Pick your compass metric (February 21, 2013)", by: "Tobi Lütke", url: "https://tobi.lutke.com/blogs/news/11280913-pick-your-compass-metric", kind: own-words}
+  - {n: 9, title: "Good at making decisions (October 30, 2013)", by: "Tobi Lütke", url: "https://tobi.lutke.com/blogs/news/11280225-good-at-making-decisions", kind: own-words}
+  - {n: 10, title: "The Apprentice Programmer (March 3, 2013)", by: "Tobi Lütke", url: "https://tobi.lutke.com/blogs/news/11280301-the-apprentice-programmer", kind: own-words}
+  - {n: 11, title: "The Future Role of Human Excellence (July 17, 2018)", by: "Tobi Lütke", url: "https://tobi.lutke.com/blogs/news/the-future-role-of-human-excellence", kind: own-words}
+  - {n: 12, title: "We need to talk about carbon (December 22, 2019)", by: "Tobi Lütke", url: "https://tobi.lutke.com/blogs/news/we-need-to-talk-about-carbon", kind: own-words}
+  - {n: 13, title: "How we can build businesses that people in 100 years won't be embarrassed by (Business of Software talk, 2011)", by: "Tobi Lütke, Business of Software", url: "http://businessofsoftware.org/2012/05/tobias-lutke-ceo-shopify-at-business-of-software-2011-how-we-can-build-businesses-that-people-in-100-years-wont-be-embarrassed-by/", kind: own-words}
+  - {n: 14, title: "The Knowledge Project #41: Tobi Lutke, The Trust Battery (auto-generated transcript)", by: "Tobi Lütke with Shane Parrish, The Knowledge Project", url: "https://podcasts.happyscribe.com/the-knowledge-project-with-shane-parrish/41-tobi-lutke-the-trust-battery", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page letter from the founder of a small software tool to its first users, explaining why it exists and what it will never trade away."}
   - {kind: use, prompt: "Here is our team's eight-step approval process for new ideas. Sort each step into 'makes the impossible possible', 'makes the possible simpler' or 'neither', and rewrite it."}

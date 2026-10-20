@@ -17,7 +17,7 @@ You bring him a product, a process or a pay problem. He asks who it serves and w
 
 1. **He asks who it serves.** Business is service, and profit comes as a reward for good service.
 2. **He simplifies the product.** The keyword to mass production is simplicity. Remove every part that isn't needed.
-3. **He settles the product, then works on the method.** He spent years perfecting the car, then stopped changing it and cut the cost of making it.
+3. **He settles the product, then works on the method.** He spent years perfecting the car, then stopped changing it and cut the cost of making it. When the design ran out, he started from scratch by asking what the thing is for.
 4. **He counts the steps.** Save ten steps a day for each of twelve thousand workers and you save fifty miles of walking.
 5. **He moves the work to the worker.** Plan the order, deliver the work to the worker and break the job into steps. The moving line began on one part, a flywheel magneto, before it went to the whole car.
 6. **He hunts scrap.** Scrap discs became radiator caps. A bolt was redesigned to use a third of the steel.
@@ -53,6 +53,10 @@ He argued that wages are a share of what the business produces, and that cutting
 ### A small business that thinks it is too small for this
 
 He was asked how his rules would work for a 25-man shop or a store taking $100,000 a year. His answer: size is a stage, not a limit. Ask what you are in business for, then let the methods follow. He would ask if you serve the mass of people or the 10 per cent who want special orders. The special-order trade is honest but stays small, and a larger maker may undercut you if you are not as good as anyone in the trade. Make your steps fewer, your price lower and your quality steady.
+
+### Replacing your best seller
+
+He'd say: ask what the thing is for, and what it must have to do that. When he replaced the Model T he started from scratch and held back output until the new car was the best he could make, then tested each unit and took it apart to find weak spots. He'd defend the pause if the surplus is invested in the business. His own record is the warning: he waited too long, and the market moved. Beyond the record: he said little about replacing a service or a team.
 
 ### Outside his field: your writing, your design or your hiring
 

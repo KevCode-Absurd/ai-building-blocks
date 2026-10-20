@@ -1,8 +1,8 @@
 # Neil Rackham: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Neil Rackham is alive, and views can change. Everything below comes from his Wikipedia page, a 2006 Harvard Business Review article he co-wrote, a 2026 interview, and pages from Huthwaite International, the firm he founded. Treat each view as "as of" its date. A note on gaps: his book *SPIN Selling* (1988) holds the detailed findings of his research, and we could not open its text. So this data set describes the method and the research in outline, and leaves out the book's specific numbers. Our sources don't give his birth year.
+Neil Rackham is alive, and views can change. This version rests on his own words in ten places: a 2006 Harvard Business Review article he co-wrote [S2] and, from 2026, the interview series he gave to Tony Hughes of Huthwaite International, the firm he founded [S3][S8] to [S15]. Those talks are about SPIN's origins, the research, the book deal, what he would change and why simple models win. The rest comes from Wikipedia and Huthwaite pages. His book *SPIN Selling* (1988) holds the detailed findings, and we could not open its text, so we leave out its specific numbers. Treat each view as "as of" its date. Our sources don't give his birth year.
 
 ## In one paragraph
 
@@ -34,6 +34,22 @@ Need-payoff questions help the buyer see the benefits of solving the problem [S5
 
 How he applied it: Rackham himself never liked the name. In a 2026 interview he said he wanted to call them "value questions," and called the term need-payoff ugly [S3]. He dropped the better name because SPIV, the acronym it would have made, was London slang for a street seller of stolen goods [S3].
 
+**Study what sellers do, then count it**
+
+His starting habit is measurement. He calls himself a measurement freak, and says he was drawn to any interaction that could be measured [S9]. He credits his time as a cricket scorer: the idea that you can watch something happen and codify it [S12]. His preferred way to turn loose ideas into numbers is to count how often each behaviour happens [S12].
+
+**Questions as a pattern, not a trick**
+
+His hypothesis was that the strongest sellers did not pitch. They explored the buyer's situation, so he looked for a pattern of questioning skills [S10]. Before settling on it, he asked if the pattern was only luck: easy accounts, or buyers who had already decided [S10].
+
+### Keep the model small
+
+He says a good model sits where validity meets simplicity, and that we need models because real life is too complex to handle [S13]. In a live call a seller has little attention to spare, so he thinks four behaviours are about the most a person can manage. He calls models with 16 or 28 behaviours unworkable [S13]. Results came from months of systematic coaching, not from the four behaviours alone, and he says there is no free lunch in sales training [S13][S15].
+
+**Big sale versus small sale: his own doubt**
+
+He now says the big-versus-small split he leaned on in the book was misleading. He had to stress it to get published, though he already suspected it was not the real issue [S14]. He thinks consultative selling, where the value is in the seller's advice and conduct, is what lasts, and that transactional selling has largely moved online [S14].
+
 ### Adviser, not persuader
 
 The method is meant to help buyers discover their own needs [S4]. His firm describes the goal as moving salespeople from persuaders to trusted consultants [S4]. It also says SPIN helps reduce objections, shapes stronger statements of benefit, and builds long-term, profitable customer relationships [S6].
@@ -46,7 +62,7 @@ His firm's writers warn against using SPIN mechanically [S5]. Sometimes you need
 
 In 2006 Rackham, Philip Kotler and Suj Krishnaswamy described the running war between the two groups [S2]. When sales disappoint, marketing blames the sales force. Sales says marketing sets prices too high and spends money that should go to more sellers or bigger commissions [S2]. Each side sees the other as out of touch or short-sighted, and each tends to undervalue the other's work [S2]. They compared the fix to how product designers learned to work with manufacturing instead of "throwing new designs over the wall" [S2].
 
-### Selling is changing
+**Selling is changing**
 
 His later books looked at how the job of selling changes: managing major sales (1991, with Richard Ruff), strategy for major accounts, partnering between companies (1996), and *Rethinking the Sales Force* (2000, with John DeVincentis) [S1]. From 2015 to 2020 he led a team at Sheffield using artificial intelligence and behaviour analysis to study how teams work together [S1].
 
@@ -65,25 +81,26 @@ The order is a guide. If the problem is plain from the start, he would spend the
 
 ## Real decisions
 
-### Starting a research group to measure selling
+### Taking on a field an academic "should not" study
+Rackham was a research fellow at Sheffield, studying team interactions and starting on negotiation. Someone challenged him to study sales, since selling is an interaction, and pointed to a claim that the top tenth of a sales force outsold the bottom tenth about three to one with no clear reason [S9]. He first thought an academic should not study sales, but the unexplained gap pulled him in. He also reasoned that companies would pay for sales research [S9].
 
-In 1974 Rackham founded the Huthwaite Research Group [S1]. With backing from firms including Xerox and IBM, his team watched 35,000 sales calls in over 20 countries across 12 years, recording what the seller did and what went with success [S1].
+### Pitching Xerox a sales model for Europe
+In the early 1970s he judged sales practice poor and saw American habits, such as many quick closes and advice to keep talking and avoid questions, being exported to Europe [S9]. Xerox had spare money, so he proposed a model built for Europe, arguing that existing methods reflected American buyers [S9]. That bought the funding and led to SPIN. The research then covered 13 countries and found no regional difference: successful sellers followed the same pattern everywhere [S9].
 
-### Turning the findings into four question types
+### Making the research and the coaching one process
+He ran the work as productivity projects with firms such as Xerox, IBM and Motorola. Groups of about 20 sales managers each picked three salespeople to coach for three months [S15]. The managers were first trained to code calls to research level, a 0.85 match with reference tapes, and each seller had a baseline call and five coached calls observed and coded [S15]. His reason: using trained managers as observers is how the team reached a very large sample. He says the gains came from the whole coaching and research process [S15].
 
-The research became *SPIN Selling* in 1988, built on Situation, Problem, Implication and Need-payoff questions, which help a buyer find their own reasons to act. Several publishers turned the book down before it became a best-seller [S1][S5].
+### Testing SPIN at the worst branch
+Xerox's Newcastle branch ranked last of 17 in the UK, and its manager had three months to improve or lose his job [S11]. Xerox's head of research offered the branch as a test, and Rackham's team agreed, nervously, and worked with it for six months. The branch rose from 17th to 3rd, then to first about six months later [S11]. He does not give the method all the credit: he also names the manager's desperation and a small upturn in the local economy [S11].
 
-### Dropping a better name for the fourth question
+### Finding a publisher for a book that broke the rules
+Prentice Hall sent his manuscript to an in-house expert who favoured hard-sell methods, and who warned that publishing it would make Rackham a laughing stock. Prentice Hall cancelled the contract [S8]. No other publisher would take it at first, and he approached eight. McGraw-Hill agreed after he offered to buy any copies still unsold after three months [S8]. It became their best-selling business book, and he sent Prentice Hall his royalty statements with a note saying it could have been theirs [S8].
 
-In a 2026 interview he said he wanted to call Need-payoff questions "value questions." The acronym that would have made, SPIV, is British slang for a street seller of stolen goods, so the name stayed [S3].
+### Capping the model at four behaviours
+He chose to keep SPIN to four question types. His reason is that a seller in a live conversation can hold only a few behaviours in mind, and adding more makes training less likely to work [S13]. He holds to this even though buyers often pay for more content [S13].
 
-### Joining Kotler to name the sales and marketing feud
-
-In 2006 he co-wrote a Harvard Business Review piece with Philip Kotler and Suj Krishnaswamy. It described each group blaming the other and compared the fix to designers learning to work with manufacturing [S2].
-
-### Backing selling as a profession
-
-In 2015 he became patron of the Association of Professional Sales, later the Institute of Sales Professionals [S1].
+### Dropping a better name
+In 2026 he said he wanted to call Need-payoff questions "value questions." The acronym that would have made, SPIV, is British slang for a street seller of stolen goods, so the name stayed [S3].
 
 ## Where he stood
 
@@ -138,6 +155,7 @@ We could not open a critical review of SPIN, so we don't invent one. Fair cautio
 
 ## Short phrases on the record
 
-- "Need-payoff questions what a horribly ugly thing there." (2026 interview, on the name) [S3]
 - "throwing new designs over the wall" (HBR, 2006, co-written) [S2]
 - "each group often undervalues the other's contributions" (HBR, 2006, co-written) [S2]
+- "I was a measurement freak." (interview, 2026) [S9]
+- "There's no free lunch in the sales training business" (interview, 2026) [S13]

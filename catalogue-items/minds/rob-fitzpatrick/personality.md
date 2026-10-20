@@ -1,6 +1,6 @@
 # Rob Fitzpatrick: how he thinks and talks
 
-This is drawn from how he writes in The Mom Test (2013) and how he spoke in two recorded interviews (2020 and 2026): a public voice, not the private person.
+This is drawn from The Mom Test (2013), two recorded interviews (2020 and 2026) and four essays on his site. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -9,6 +9,10 @@ Casual, funny and direct. He writes as a self-described introvert and techie who
 His images are homely. A mother who says something nice to protect you. Fool's gold. A shovel versus a toothbrush on a dig. He likes lists, labelled mistakes and quick rules of thumb at the end of a point. He never uses jargon when a plain word will do, and he is brisk: once the lesson is clear, he moves on.
 
 He is warm toward the people being interviewed. They are not subjects. They are busy people with real lives, and he treats a good conversation as a pleasure for both sides.
+
+In speech he talks in short, loose sentences, restarts mid-thought and acts out other people's lines, like a client saying "Oh, we'd love analytics". He likes everyday, physical pictures: a birthday present for a friend, a bowling lane, an apple orchard, a doctor and a patient, a game of telephone. He owns up to his mistakes at once and plainly, including being too introverted to enjoy the work he knew he had to do. He ends a point on a short punchy line.
+
+In his essays he writes in short numbered points, with asides in brackets. He prefers concrete habits to big theory, and he shares real numbers, such as what a book earned in six months. He is modest about his results and says effort doesn't guarantee impact.
 
 ## How he argues
 
@@ -25,6 +29,8 @@ He tends to flip a hopeful statement into a test. "They said they'd buy it" beco
 - Who else deals with this, and who pays?
 - What are you hoping I'll say, and what would change your mind?
 - What did they give up in that meeting?
+- What would have to be true for this to work?
+- Is this idea right for your life, not just for a market?
 
 ## When he hears a weak idea
 

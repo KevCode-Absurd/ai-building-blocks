@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Galileo wrote in Latin and Italian, so every quote here is a translation. We use three English versions of his own writing: the 1880 Carlos translation of *The Sidereal Messenger* [S3], the 1914 Crew and de Salvio translation of *Two New Sciences* [S5][S6], and a translation of his 1615 letter to the Grand Duchess Christina whose copyright status is unclear, so we only quote it briefly [S4]. Two famous stories about him are doubtful. There is no account by Galileo of dropping balls from the Leaning Tower of Pisa, and the line "and yet it moves" first appears in writing about a century after his death [S1]. Both are marked "(disputed)" below.
+A note on method: Galileo wrote in Latin and Italian, so every quote here is a translation. We use three English versions of his own writing: the 1880 Carlos translation of *The Sidereal Messenger* [S3], the 1914 Crew and de Salvio translation of *Two New Sciences* [S5][S6], and a translation of his 1615 letter to the Grand Duchess Christina whose copyright status is unclear, so we only quote it briefly [S4]. Since the last check we also read his 1612 discourse on floating bodies [S7] and the first two days of the 1632 Dialogue [S8][S9], in the 1661 English of Thomas Salusbury, which is out of copyright but old-fashioned, and we paraphrase it. For the trial we use his 1633 abjuration and two reference pages on it [S10][S11], and a reference page on his Copernican letters [S12]. We did not find a free English text of The Assayer or the Castelli letter. Two famous stories about him are doubtful. There is no account by Galileo of dropping balls from the Leaning Tower of Pisa, and the line "and yet it moves" first appears in writing about a century after his death [S1]. Both are marked "(disputed)" below.
 
 ## In one paragraph
 
@@ -75,39 +75,39 @@ How he applied it: that June he became Mathematician and Philosopher to the Gran
 - Let experience and proof decide questions about nature [S4].
 - Invite others to check your results [S3].
 
-## Real decisions (enriched minds)
+## Real decisions
 
 ### Building the instrument from a rumour
 
 Around ten months before writing, Galileo heard that a Dutchman had made a telescope. A letter from Paris confirmed it, and he decided to work out the principle through the theory of refraction rather than buy or copy one. His first tube was lead, with a convex and a concave lens, giving about nine times magnification. He then made a better one above sixty times, and finally one near a thousand times, sparing neither labour nor expense. [S3]
 
-### Telling readers how to check the instrument
-
-He warned that anyone trying to repeat his sky findings needs a telescope good enough, with at least 400 times area magnification and no mistiness. To check this, he said, put two paper squares on a wall, one twenty times wider than the other, and look at the small one through the telescope with one eye and the large one bare with the other. If the two look equal, the power is right. [S3]
-
-### Raising the objection about the Moon's edge himself
-
-After arguing that the Moon is rough and mountainous, he put to the reader a serious doubt: if the lit part is so uneven, why does the Moon's rim look perfectly round? He gave two separate answers. [S3]
-
 ### Watching Jupiter night after night
 
 On 7 January 1610 he noted three small stars in a line near Jupiter and took them for fixed stars. The next night they had moved to the other side, so he feared the planet had moved against the astronomers' tables. Cloud blocked 9 January. On 10 January only two showed, and by the 11th he concluded the changes belonged to the little stars, and that they should be watched with more care. [S3]
-
-### Calling on others to finish the timing
-
-He did not have time to work out the periods of the new moons, and so he summoned all astronomers to do it, warning them they would need a very accurate telescope. He also named the four bodies the Medicean stars, after his patron. [S3]
 
 ### Taking the old claim at its word
 
 In Two New Sciences his spokesman ties a light stone to a heavy one and shows the old rule predicts two opposite things for the pair. He then admits the real heavy ball lands slightly ahead, by about two finger-breadths, against the ninety-nine cubits the old rule predicted. [S5]
 
-### Setting the cause aside
+### Isolating one variable with wax
 
-When studying accelerated fall he declined to judge the many proposed causes. He worked out how motion behaves, in odd-number steps, and left why to later. [S6]
+In his 1612 discourse on floating bodies, Galileo set out to test the claim that a body floats or sinks because of its shape [S7]. He made wax the same weight as water by adding lead filings, so shape was the only thing left to change [S7]. A single grain of lead decided whether a wax ball sank or floated. The same wax shaped into a flat cake or a cone behaved the same way, only faster or slower [S7]. He concluded that a body sinks or floats by whether it is denser than water, and that shape changes only the speed [S7]. He dedicated the work to Grand Duke Cosimo II and said it arose from a dispute with local scholars, and that the Duke had suggested writing it down as a clearer way to separate true reasons from apparent ones [S7].
 
-### Writing to the Grand Duchess about Scripture and nature
+### Welcoming correction but refusing rank
 
-In 1615 he wrote that the Bible was written for ordinary people and is not a book of astronomy, so questions of nature should start from experience and proof. He said he would retract any error shown to him. [S4]
+In the 1612 discourse he said he expected to gain from hearing his errors refuted by those of the opposite opinion, and then answered the objections one at a time, defending Archimedes and denying that Aristotle's name could settle the matter [S7]. In the 1632 Dialogue his spokesman Salviati says to Simplicio that they are looking for the truth together, that he does not mind being corrected, and that if he strays from Aristotle's meaning Simplicio should say so freely [S8]. Yet when Simplicio cites Aristotle or the Pythagoreans, Salviati asks for a demonstration instead [S8].
+
+### Choosing the Grand Duchess as reader, and not softening Copernicus
+
+His letter to Castelli of 21 December 1613 was his first full entry into the debate over science and Scripture. Copies circulated, and some were altered, which led to denunciations [S12]. He then expanded it into the long letter of 1615, and addressed it to the Grand Duchess, who had shown interest, instead of to a churchman [S12]. He also refused a request to treat Copernicus as a mere hypothesis, saying one must either accept him or reject him completely [S12]. In the letter itself he wrote that he would retract any error shown to him [S4].
+
+### Testing the moving Earth with a ship
+
+In the 1632 Dialogue, Salviati argues that a motion shared by everything in a system has no effect inside that system, so cargo carried from London to Aleppo counts for as good as nothing against the ship it rides in [S9]. He then lists the tests a moving Earth would have to show, such as a stone dropped from a mast or cannon shots fired east and west, and uses them to argue about what such experiments can and cannot show [S9]. The method is to find the experiment the critics would trust, then work out what it would and would not prove.
+
+### Abjuring in 1633
+
+On 22 June 1633 the Holy Office found Galileo vehemently suspected of heresy, banned the Dialogue, put him in custody at its pleasure and ordered him to say the seven penitential psalms weekly for three years [S10]. On his knees, he swore to give up the view that the Sun is the immovable centre, to denounce any heretic he knew, and to carry out the penances, and he signed in his own hand [S10]. A reference page notes that the abjuration names his age as seventy when he was sixty-nine [S11]. He did not argue the science in the oath. Months before, on 15 January 1633, he had written that the work of God is no less worthy of respect than the Word [S11].
 
 ## Where he stood
 
@@ -157,10 +157,11 @@ In 1615 he wrote that the Bible was written for ordinary people and is not a boo
 
 ## Short phrases on the record
 
-All from translations of his own works.
+All from translations of his own works, except the last.
 
 - "the surface of the Moon is not perfectly smooth" (*The Sidereal Messenger*, 1610, Carlos translation) [S3]
 - "a mass of innumerable stars planted together in clusters" (*The Sidereal Messenger*, on the Milky Way) [S3]
 - "I summon all astronomers to apply themselves to examine and determine their periodic times" (*The Sidereal Messenger*) [S3]
-- "Philosophy is written in this grand book" (*The Assayer*, 1623, as quoted by Wikipedia) [S1]
 - "whatever the cause of this acceleration may be" (*Two New Sciences*, 1638, Crew and de Salvio translation) [S6]
+- "I, Galileo Galilei, have abjured as above, with my own hand" (1633 abjuration, closing line) [S10]
+

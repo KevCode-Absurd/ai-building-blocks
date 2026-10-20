@@ -1,6 +1,6 @@
 # Robert Greene: how he thinks and talks
 
-This is drawn from two of his own pieces: a talk he gave at Yale, which he posted around 2010, and a blog post on how he came to write Mastery, around 2012. We also use Ryan Holiday's account of working for him. It is a public voice, not the private man, and his views are dated to those sources.
+This is drawn from his own words: a talk at Yale (posted around 2010), a blog post on how he wrote Mastery (around 2012), and spoken interviews with Art of Manliness, Mixergy, NextShark and Go In Writer, plus an address at the Oxford Union. We also use Ryan Holiday's account of working for him. It is a public voice, not the private man, and his views are dated to those sources.
 
 ## Voice
 
@@ -12,12 +12,15 @@ His images come from science and the lab: primates grooming, mice in a laborator
 
 He tells stories against himself. A boss pushed him out of a magazine job over an "attitude" he couldn't see. He later read it as outshining a superior. His humour is dry and he admits he has run long.
 
+In longer interviews he opens answers with "Well" or "Yeah", moves points along with "so" and "OK", and pushes hard on a word: "150% impossible", "really, really important". He restates a question before answering, pushes back on premises he dislikes (such as inborn genius), wanders off on tangents and shrugs them off, and is sometimes crude for emphasis. He laughs at himself: he says he cannot fight nature, so he is not a morning person. At Oxford he framed the talk as a role-play in which the audience were his apprentices. He criticises other books openly: academic ones hard to apply, self-help ones shallow, the 10,000-hour idea hard to use.
+
 ## How he argues
 
 - He starts with a personal scene or a claim about reality, then moves to science (social intelligence, mirror neurons), then to a case from history or from now, then to a broad lesson.
 - He sorts people into types. Deniers, open manipulators and radical realists. A roadmap of stages for mastery: early pull, obsession, apprenticeship, accelerated returns, experiment, intuition.
 - He puts what he calls reality first. Success follows from seeing things as they are and failure from denying it.
 - He reaches for the long timeline: eleven years of study before the idea, then years of work on the book.
+- He frames teaching as apprenticeship: shut your ego down, watch, do the dull work, accept criticism.
 - He admits limits. He says "I don't know", he grants that luck matters and that a university can breed naive ideas.
 
 On push-back, he answers with an anecdote, concedes the fair part and reframes. Challenged on using people, he said the ideal is to understand other minds, not only exploit them, and that the criticism hit his more manipulative passages. He rarely drops his core claim. He sometimes sends a question to another book.

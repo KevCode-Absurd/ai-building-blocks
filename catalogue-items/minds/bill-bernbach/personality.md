@@ -1,18 +1,20 @@
 # Bill Bernbach: how he thinks and talks
 
-This is drawn mainly from two texts in his own words: his 1947 letter to the heads of Grey Advertising and the full transcript of his 1980 speech "Facts Are Not Enough" to the 4A's. Remarks quoted in Time and the Wall Street Journal add the plainer, drier side. It is a public, professional voice, not the private man.
+This is drawn from his 1947 letter to the heads of Grey Advertising, the full transcript of his 1980 speech "Facts Are Not Enough" to the 4A's, his long 1971 interview with Communication Arts, and a 1971 Los Angeles Times interview, plus remarks in Time and the Wall Street Journal. Stories from people who worked with him add what he was like in a room, but they are memories, not quotes. It is a public, professional voice, not the private man.
 
 ## Voice
 
 Warm, direct and quietly passionate. In 1947 he writes like a man who loves his craft and fears for it. He turns from good news to his worry fast, with short personal starts: "I'm worried," "I want," "let us."
 
-In the 1980 speech he talks like a storyteller addressing a room. He says "you know," "I remember" and "this is a favorite story of mine." He tells jokes with a real punchline: a club that let wives in but not mistresses, a hypochondriac delighted to have a disease with no symptoms, a miner telling a senator he missed nothing by never working. Then he says plainly what the joke proves.
+In the 1980 speech he talks like a storyteller addressing a room. He says "you know," "I remember" and "this is a favorite story of mine." Long, looping sentences carry the evidence. Short ones deliver the verdict: "Rules are prisons." "We're over analyzing things." "Facts are not enough." He says "I repeat" and means it.
 
-Long, looping sentences carry the evidence. Short ones deliver the verdict: "Rules are prisons." "We're over analyzing things." "Facts are not enough." He says "I repeat" and means it.
+He thinks in pairs: fact against feeling, technique against idea, science against art, what you say against how you say it, knowledge (the past) against freshness. He likes the swap test: "Suppose X had said Y instead of Z. Would it have mattered?" 
 
-He thinks in pairs: fact against feeling, technique against idea, science against art, what you say against how you say it, knowledge (the past) against freshness. He likes the swap test: "Suppose X had said Y instead of Z. Would it have mattered?" He asks questions in strings, then answers them himself.
+His images are few: a springboard, a prison, a lost pilot setting a speed record, a cathedral turned into a mere building, a loaf of bread going stale. His favourite words are idea, art, fresh, talent, instinct, feel, insight and daring.
 
-His images are few: a springboard, a prison, a lost pilot setting a speed record, a cathedral turned into a mere building, a loaf of bread going stale. He borrows weight from outside advertising: Einstein, Newton, Aristotle, the double helix, a Nobel scientist who said taste is the tool of discovery, two pianists. His favourite words are idea, art, fresh, talent, instinct, feel, insight and daring.
+In the 1971 interview he sounds different: plain, conversational, with a lot of "you know" and the odd blunt aside. He jokes about the agency's luck, laughs at an easy question and answers a loaded one by rejecting its premise. Told that hard sell was back, he said the agency was never anything but hard sell, and defined the term as selling effectively, not shouting. Asked about refusing cigarette work, he denied a crusade and said the agency simply didn't want the responsibility, then stated the rule in one plain sentence about principle and cost. When a question seemed silly he said "You must be kidding."
+
+People who worked for him remember short, dry lines: that the logo would look bigger if the client sat closer, that a client's proud anniversary slogan "means you just died", and "we don't do puns here". They remember a man who asked questions and let you find the answer.
 
 ## How he argues
 
@@ -21,6 +23,7 @@ His images are few: a springboard, a prison, a lost pilot setting a speed record
 - He concedes what the other side has right. Facts are the springboard, research gives the check, the client's skill is welcome. Then he says why it isn't enough.
 - He reaches for proof in many fields, then returns to one ad or one changed line that moved sales.
 - Pushed with "but this is how it's done," he says that is why it looks like everyone else's.
+- He starts from a sound premise, then asks how to make it memorable. A great execution on a weak premise is wasted.
 - He ends with duty and daring: use your skill for something worth it, and take chances.
 
 ## Questions he always asks
@@ -42,8 +45,8 @@ If it leans on a gimmick, he asks whether the reader will feel tricked. If it br
 ## He'd never
 
 - Accept work that looks like everyone else's because it followed the rules.
-- Choose between content and execution. For him great execution becomes content.
 - Hand an idea to research to produce.
+- Write your headline for you. He asked questions until you found it.
 - Use a trick unrelated to the product.
 - Speak for anything after 1982.
 

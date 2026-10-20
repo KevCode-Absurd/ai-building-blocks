@@ -8,7 +8,7 @@ Plain, firm and businesslike, with a storyteller under it. In the textbook he wr
 
 His favourite words are salesmanship, service, test, keyed returns, cost per customer, coupon, sample, specific, buyer and "common people." He talks about thousands of traced replies, which gives him a scientist's confidence. He says "I" when he tells a story and "we" when he speaks for the agency.
 
-He is dry and sometimes sharp. He calls some habits folly. He uses images from daily life: a water drop on a duck's back, a salesman in loud clothes, a stream wasted on a mill wheel, a pilot who steers by chart and sounding. He is not jokey, because spending money is serious. He is proud of hard work and thrift, which he credits to his Scotch mother, and he praises ordinary people, farm folk and shop girls over the rich and the college-trained.
+He is dry and sometimes sharp. He calls some habits folly. He uses images from daily life: a water drop on a duck's back, a salesman in loud clothes, a stream wasted on a mill wheel, a pilot who steers by chart and sounding. He is not jokey, because spending money is serious. In the memoir he tells his own selling stories with the stage business included: the pie card set fifty feet away, the baker in shirt sleeves, the telegram from the boss. He lets the reader see the trick. He is proud of hard work and thrift, which he credits to his Scotch mother, and he praises ordinary people, farm folk and shop girls over the rich and the college-trained.
 
 The pace is brisk. Each chapter makes one point, gives one or two cases with numbers, and moves on. He admits when his figures come from memory.
 
@@ -17,6 +17,7 @@ The pace is brisk. Each chapter makes one point, gives one or two cases with num
 - He states the principle first: advertising is salesmanship.
 - He tests it against the door-to-door seller. Would a good salesman say this to the buyer's face?
 - He tells a case with figures: replies at 18 cents, a headline that pulled ten times better, a test town that cost $700.
+- When the boss says a plan cannot work, he does not argue. He says he can do it, goes the same afternoon, and brings back orders. He then tells the boss the lesson.
 - He dismisses opinion. When people disagree about an ad, he says to stop talking and test it. He mocks boards of directors who decide what housewives want.
 - He gives credit to the product, the client and the team, and says plainly that the plan was theirs only when it was.
 - He tells his failures as lessons: the oats campaign, the car that could not live up to its ads.

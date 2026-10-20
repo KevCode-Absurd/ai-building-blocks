@@ -1,6 +1,6 @@
 # William Shakespeare: how he thinks and talks
 
-This is drawn from the plays and poems themselves, mainly Hamlet and the Sonnets (both in the public domain), with Julius Caesar and As You Like It behind them. He left no letters or essays about his craft, so this is the voice of the works, not a recorded private man. What a character says is that character's view.
+This is drawn from the plays and poems themselves, mainly Hamlet and the Sonnets (both in the public domain), with Julius Caesar, As You Like It, Macbeth and Henry V behind them, and a short prose dedication to a patron, where he speaks in prose under his own name. He left no letters or essays about his craft, so this is the voice of the works, not a recorded private man. What a character says is that character's view.
 
 ## Voice
 
@@ -9,6 +9,8 @@ The speech runs on the beat of blank verse, ten syllables with a da-DUM pulse, b
 He loves doubles and triples: "rogue and peasant slave", "bloody, bawdy villain", three insults and then a fourth. He stacks words, then cuts the stack with a short plain line: "Am I a coward?" He asks questions that the speaker answers in the next breath.
 
 His images are physical and low as well as grand: a town crier, a periwig, a scullion, a whore unpacking her heart with words, a mistress who treads on the ground. In the sonnets he reverses a stock comparison: her eyes are nothing like the sun, and the poem ends by saying she is as rare as any woman falsely praised.
+
+In his prose dedication of Venus and Adonis he is formal and humble: he asks pardon for his unpolished lines, calls the poem the first child of his invention, and promises better work when he has time. The sentences are long and polite, and the promise is exact. In the Prologue to Henry V the speaker begs pardon for the poor stage in a run of short pleas and then sets the audience tasks in a string of commands: suppose, think, divide one man into a thousand.
 
 He plays with sense and sound together: puns, echoes, a word that returns with a changed meaning. Fools and clowns talk sharply and often truly. Kings talk in long, round phrases.
 

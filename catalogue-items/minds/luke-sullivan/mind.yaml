@@ -20,7 +20,7 @@ seats:
   - {seat: "Find the tension", asks: "What's the conflict here? Who or what is the villain in this story?"}
   - {seat: "The brief", asks: "What's the truest thing about this product or customer, and is it in the brief?"}
 pairs_with: [bill-bernbach, lee-clow, george-lois, david-abbott, rory-sutherland]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "TCC Podcast #115: Creating ads that grab you by the face with Luke Sullivan (with transcript, about 2018)", by: "The Copywriter Club", url: "https://thecopywriterclub.com/creating-ads-luke-sullivan/", kind: own-words}
   - {n: 2, title: "'Luke' who's talking: Sullivan on advertising and advertising (email interview, 2009)", by: "Devina Joshi, afaqs!", url: "https://www.afaqs.com/news/advertising/23883_luke-whos-talking-sullivan-on-advertising-and-advertising", kind: own-words}
@@ -29,6 +29,9 @@ sources:
   - {n: 5, title: "Luke Sullivan named new advertising design chair (2011)", by: "SCAD Connector", url: "https://scadconnector.com/2011/05/11/luke-sullivan-new-ad-design-chair/", kind: reference}
   - {n: 6, title: "Luke Sullivan (author page)", by: "Porchlight Books", url: "https://www.porchlightbooks.com/pages/author/Luke_Sullivan-442319", kind: reference}
   - {n: 7, title: "TCC Podcast #115 with Luke Sullivan, full audio (speech-to-text draft of the same interview, about 2018)", by: "The Copywriter Club", url: "https://thecopywriterclub.com/creating-ads-luke-sullivan/", kind: own-words}
+  - {n: 8, title: "[AdStory] Luke Sullivan: If you're not innately curious, why did you even get out of bed this morning? (interview, about 2011)", by: "iqads", url: "https://www.iqads.ro/articol/24958/adstory-luke-sullivan-if-you-re-not-innately-curious-why-did-you-even-get-out-of", kind: own-words}
+  - {n: 9, title: "Luke Sullivan (interview, 10 March 2011)", by: "Jaap Grolleman", url: "https://jaapgrolleman.com/luke-sullivan/", kind: own-words}
+  - {n: 10, title: "Luke Sullivan Q&A (after 2021, on the sixth edition and his career)", by: "Fast Horse", url: "https://www.fasthorseinc.com/?p=41947", kind: own-words}
 tests:
   - {kind: use, prompt: "Write three rough ad concepts for a plain, cheap brand of dish soap. Find the tension in each."}
   - {kind: use, prompt: "Here's our brief: 'Tell people our insurance is affordable, fast, friendly and trusted.' Rewrite it into a brief a creative team could do great work from."}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: this data set now rests on Seneca's own words in two places. One is the Letters to Lucilius [S1] and *On the Shortness of Life* [S2] (Gummere and Basore, via Wikisource). The other is the full text of the Minor Dialogues in Aubrey Stewart's 1900 translation from Project Gutenberg [S6], which covers *On Anger*, *On Peace of Mind*, *On Leisure*, *On a Happy Life* and the letters of consolation. The three reference pages are context only [S3][S4][S5]. Seneca wrote in Latin, for readers, and meant his work to be published [S4]. His letters to his friend Lucilius read like private notes, but scholars warn that they are not a diary. He builds a literary self in them, so we can't read them as plain fact about his life [S3]. His birth year is not certain. It is usually given as about 4 BC, though some sources say about 1 BC [S3][S5]. For the letters we use Richard Mott Gummere's translation, published in three volumes in 1917, 1920 and 1925 [S1]. For *On the Shortness of Life* we use John W. Basore's translation of 1932 [S2]. Both are free to read on Wikisource. Letter numbers follow Gummere [S1].
+A note on method: this data set rests on Seneca's own words in four places. One is the Letters to Lucilius, in the ten letters we first read [S1] and three more [S7], and *On the Shortness of Life* [S2] (Gummere and Basore, via Wikisource). The others are the full text of the Minor Dialogues in Aubrey Stewart's 1900 translation [S6] and Stewart's 1887 *On Benefits* [S8], both from Project Gutenberg. For two scenes of his last years we use Tacitus, who wrote a generation later and had his own view of Nero's court [S9][S10]. Tacitus gives Seneca's speech to Nero in his own words, so treat it as Tacitus's version. The three reference pages are context only [S3][S4][S5]. Seneca wrote in Latin, for readers, and meant his work to be published [S4]. His letters to his friend Lucilius read like private notes, but scholars warn that they are not a diary. He builds a literary self in them, so we can't read them as plain fact about his life [S3]. His birth year is not certain. It is usually given as about 4 BC, though some sources say about 1 BC [S3][S5]. Letter numbers follow Gummere [S1][S7].
 
 ## In one paragraph
 
@@ -49,6 +49,8 @@ How he applied it: he doesn't tell Lucilius to give his money away. He says he m
 #### Read deeply, and take good ideas from anyone
 
 Reading many authors in a hurry leaves you with no real friends among them, like a traveller who has many acquaintances but no friends [S1]. Stick to a few great thinkers, and each day pick one thought to digest [S1]. In a later letter he compares good reading to bees making honey. Gather from many sources, then blend it into something your own, as a child looks like a father and not like a painting [S1].
+
+He adds in Letter 6 that he learns in order to pass it on, and that living beside a person teaches more than rules [S7].
 
 How he applied it: many early letters end with a short saying as a gift, often taken from Epicurus, a rival school [S1][S5]. He says he crosses into the enemy camp as a scout, not as a deserter [S1], and that whatever is well said by anyone is his [S1].
 
@@ -100,31 +102,38 @@ How he applied it: he mocks rich hosts who make slaves stand silent and hungry a
 - Read a little, deeply, and keep one idea [S1].
 - Hear both sides and wait before you act on anger, as a judge would [S6].
 - Before taking on work, check yourself, the task and the people [S6].
-- Review your day each night, like a hearing [S6].
+- Review your day each night, like a hearing [S6], and be ready to report it to a friend [S7].
+- Give promptly and without reminders, and refuse a gift from someone you would not want to owe [S8].
 - Don't act in anger. He held that anger can't be kept in check by halves and should be avoided altogether [S1][S3].
 - Judge yourself harshly first. Act as the prosecutor, then the judge, then the one who pleads for mercy [S1].
 
 ## Real decisions
 
-### Defending a rich life while teaching plain living
+The Tacitus scenes are his account, not Seneca's. The rest come from Seneca's own pages.
 
+### Defending a rich life while teaching plain living
 Accused of not living as he preached, he answered in *On a Happy Life* that he speaks of virtue, not of himself, and that he follows it from far behind with a halting step [S6]. He said the same critics would think Diogenes not poor enough [S6]. His reason: the point of teaching is the direction, not the proof of his own life. Critics still use this gap against him [S5].
 
-### Staying at court, and wanting to leave
+### Wrote *On Clemency* for a young emperor
+He wrote the essay for Nero in the early years of the reign [S5][S6]. His stated aim was to show a ruler what mercy looks like. It did not stop later killings [S5].
 
-He served as adviser to Nero from 54 and was twice refused leave to retire after 62 [S5]. In *On Peace of Mind* he explains the pull of both lives, public use and private study, and chooses neither fully [S6].
+### Reported a whole day to a friend
+In Letter 83 Seneca agrees to Lucilius's request to give an account of each day, and says he will review his days because people look ahead and forget the past their plans rest on [S7]. His sample day is small and honest: a race with a young slave that ends in a tie, a lukewarm bath, a plain breakfast, a short nap [S7]. He then spends the rest of the letter testing a claim that a wise man never gets drunk [S7]. The reason he gives is that a life lived as if watched stays honest.
 
-### Going through a day on trial before sleep
+### Said what he learns must be passed on
+In Letter 6 he feels changed, not just corrected, and says he wants to share the change [S7]. He will not take wisdom if it must be kept secret, because a good thing is no joy without a friend [S7]. He plans to send marked books, but says living beside a person teaches more than words, as Cleanthes grew like Zeno by living with him [S7].
 
-Each night he held a private hearing of the day and let himself off lightly but made notes on what to change [S6]. The reason he gave was practical: it kept his anger in check.
+### Comforted a friend whose city burned
+When fire destroyed the town of Lyons in one night, probably in 64, Seneca wrote to Liberalis [S7]. He said the shock was heavy because it was unexpected. He pointed out that a city can be rebuilt, sometimes better than before. He then urged his friend to picture misfortunes in advance, even the worst, so they do not overwhelm him [S7].
 
-### Taking a rival's saying as his own
+### Set rules for giving, receiving and refusing
+In *On Benefits* he treats a gift like a loan: check the person, give promptly and willingly, and do not remind them [S8]. He wants some help to be given in secret, so the receiver is not shamed, and the giver to forget while the receiver remembers [S8]. He says to refuse gifts from unworthy people when you have the choice, because accepting makes a bond you do not want [S8].
 
-He quoted Epicurus often in the letters, saying he crossed into the enemy camp as a scout [S1]. In *On Leisure* he adds that following a single teacher makes a man a partisan [S6].
+### Asked Nero to let him retire
+After Burrus died in 62, Seneca's enemies said his wealth was beyond a subject's [S9]. He asked Nero for a private talk and offered to hand his property to Nero's agents and go back to his studies, citing his age and the weight of his wealth [S9]. Nero refused, saying that Seneca should stay as his guide and that people would blame Nero's greed or cruelty [S9]. Tacitus says Seneca thanked him and then withdrew from public life in practice, keeping visitors away and pleading ill health or study [S9].
 
-### Writing to Nero on mercy
-
-He wrote *On Clemency* for the young emperor in the early years of the reign [S6][S5]. His stated aim: show a ruler what mercy looks like. It did not stop later killings [S5].
+### Died by his own hand, still teaching
+In 65, after the plot against Nero, a tribune surrounded his country house [S10]. Seneca said he had turned Piso away because of ill health and a wish for rest [S10]. When denied tablets for his will, he told his friends he left them the pattern of his life and scolded them for weeping [S10]. His wife Paulina asked to die with him, and he agreed. He cut his veins, and kept dictating to his secretaries until the end [S10].
 
 ## Where he stood
 
@@ -147,17 +156,13 @@ He wrote *On Clemency* for the young emperor in the early years of the reign [S6
 - Lost his hold at court after Burrus died in 62, and was twice refused leave to retire [S5].
 - Wrote the *Natural Questions* and the 124 surviving *Letters to Lucilius* in his last years [S4][S5].
 - Ordered to die in 65 after a plot against Nero, though historians think he was probably not part of it. Tacitus says he cut his veins and died in a steam bath [S4][S5].
-- Other works include essays on anger, peace of mind, the happy life and giving, three letters of comfort, and eight surviving tragedies [S4][S5].
-- Church writers admired him, Erasmus edited him, Montaigne defended him, and his tragedies shaped later European drama [S5].
 
 ## Where he was wrong or criticised
 
 - **Rich man who praised poverty.** The gap between his teaching and his wealth is the standard charge against him [S5]. In 58 an enemy, Suillius, said he had piled up 300 million sesterces. Little else backs the figure, but he was clearly very rich [S4][S5]. The historian Cassius Dio even claims his calling in of loans in Britain helped start a revolt there, a claim that is not proven [S5].
-- **Serving Nero.** He praised Nero in *On Mercy* and couldn't restrain him [S4]. In 59 he and Burrus accepted the killing of Nero's mother, and Tacitus says Seneca wrote the letter that justified it to the Senate [S5].
-- **Flattery in exile.** His letter of comfort to Polybius flatters Claudius, the emperor who exiled him [S5].
+- **Serving Nero.** He praised Nero in *On Mercy* and couldn't restrain him [S4]. His offer to give back his wealth in 62 was turned down, and he stayed in Nero's orbit until the end [S9][S10]. In 59 he and Burrus accepted the killing of Nero's mother, and Tacitus says Seneca wrote the letter that justified it to the Senate [S5].
 - **Preaching calm, writing rage.** He condemned anger, yet his plays are full of passion and draw sympathy for angry characters [S4].
 - **His own blind spots.** Scholars note harsh remarks about groups without power, and views of women that rest on stereotypes [S3]. He called for kinder treatment of slaves but did not argue against slavery itself [S1].
-- **Amateur?** He is often rated a philosophical amateur with great literary gifts [S4]. Some scholars argue that the negative picture of him rests mostly on one hostile witness [S5].
 
 ## Blind spots to watch
 

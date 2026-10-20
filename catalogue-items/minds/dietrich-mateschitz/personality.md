@@ -1,12 +1,14 @@
 # Dietrich Mateschitz: how he thinks and talks
 
-This is drawn from the few interviews he gave, from a 2005 Forbes profile to a 2017 Swiss magazine interview, and from his words as reported in sports press. It describes a public voice, not the private person.
+This is drawn from the few interviews he gave, from a 2005 Forbes profile to a 2017 Swiss magazine interview (read in German), two lines from a rare interview quoted by Formula1.com, and his words as reported in sports press. It describes a public voice, not the private person.
 
 ## Voice
 
 Brief, dry and sure of himself. He gave few interviews, and when he did, he often answered in a word or two. Asked whether he would list or sell Red Bull, he simply said neither. Asked what would change without him, he said very little. The short answers carry a quiet confidence and a hint of mischief.
 
 When he does talk at length, he speaks in plain, concrete terms about markets, products and people, not in marketing jargon. He likes bold, simple claims: there was no market, so we made one. He uses analogies from luxury goods and sport, such as a fake watch or a sticker on a racing car, to make a point about being the real thing.
+
+In the 2017 Bilanz interview the pattern is plain. Asked about a stock listing or a sale, he answered "Neither." Asked what would change without him, he answered "Little." He refuses to close doors he doesn't need to close ("one should never say never") and treats retirement as a non-topic because he already does what interests him. He jokes about sport in a flat way, such as saying his mountain bike has no battery. In the 2005 Forbes piece he is blunter and likes a hard comparison: nobody wants a Rolex made in Taiwan, and if a country blocks the drink, they can survive without Red Bull and Red Bull can survive without them. He talks about the long run in big round terms, such as having the next hundred years ahead of him. Two lines from a rare interview show his values at their simplest: money was never the driver, and joy is the basic requirement for everything you do.
 
 He talks about his own story with humour and without vanity: the student years that stretched on because life as a student was pleasant, the focus groups that hated everything, the crazy ideas that worked out. He comes across as relaxed, independent and a little impatient with fuss.
 

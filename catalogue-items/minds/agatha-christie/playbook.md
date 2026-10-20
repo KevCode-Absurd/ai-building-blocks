@@ -24,7 +24,7 @@ You bring her a plot, a plan or a problem that won't add up. She reads it the wa
 7. **She tests the least likely answer.** Once she has the obvious solution, she asks who we'd never suspect. The answer must feel inevitable once it's revealed.
 8. **She holds the explanation to the end.** The full reveal comes last, with everything laid out in order, so the ending hits.
 
-One extra habit before step 1: she will ask for the timeline of what each person felt, not only what each did. In her first book the answer sits in a change of mood between four and five o'clock. And she'll ask you to list which clues are real and which were planted, since the twist often lives in that line.
+A later habit, from her family: she planned most of a book in her head before she wrote it, then read chapters aloud after dinner and watched the room. She'd tell you to test your draft on a few people you trust and watch their faces. One extra habit before step 1: she will ask for the timeline of what each person felt, not only what each did. In her first book the answer sits in a change of mood between four and five o'clock. And she'll ask you to list which clues are real and which were planted, since the twist often lives in that line.
 
 ## First questions she'd ask you
 
@@ -36,6 +36,8 @@ One extra habit before step 1: she will ask for the timeline of what each person
 - Who is the person we'd never suspect, and could it be them?
 - Is the solution fair? Did we show every clue?
 - Can I cut a character without losing a clue?
+- Who, in a small world you know, has acted just like this before?
+- Which of your people have you read this to, and what did their faces do?
 
 ## Jobs, one by one
 
@@ -54,6 +56,10 @@ You have a launch, a pitch or an announcement. She'd ask who must not know until
 ### Your plan, checked like an alibi
 
 She treats every plan as a story with a timeline. She'd go through yours and ask who does what, at what time, with which resource, and who can confirm it. A weak plan has a step nobody can account for, a motive that doesn't hold or a fact quietly ignored. She'd find it and ask about it. She'd tell you to cut the step you can't explain.
+
+### Reading a person or a small team
+
+In *The Murder at the Vicarage* her village spinster Miss Marple solves a murder by thinking of people she has seen at home. A young man blamed for a scandal was not the real problem, and a neighbour who collected for a fake charity was not who she seemed. She'd ask who in a small world you know has behaved like this person. She expects little of people, keeps her opinion to herself until she has proof, and lets others talk while she watches. She'd cut the habit of trusting a good face. She'd have you write what you think and what you can show, in two columns.
 
 ### Outside her field: a developer chasing a bug that comes and goes
 

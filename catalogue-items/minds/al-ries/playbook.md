@@ -20,7 +20,7 @@ You bring him a real problem from your business, your work or your life. He's bl
 3. **He asks if you can be first.** It's better to be first than it is to be better. If you can't be first in the category, he tries to make a new one you can lead.
 4. **He positions against the leader.** Avis admitted it was number two to Hertz and made that a reason to choose it. 7-Up called itself the Un-Cola. A challenger goes around, under or over, and never straight at the leader.
 5. **He picks one word.** Volvo owns safety, and BMW owns driving. Saying too much is the biggest mistake in a world full of messages. What one word could you own?
-6. **He guards the name.** When a strong name is stretched over many products, it starts to mean less. New idea, new name.
+6. **He guards the name and the message.** When a strong name is stretched over many products, it starts to mean less. A new idea needs a new name, and a working message should be repeated, not tinkered with: ask why you are changing it.
 7. **He launches with publicity.** Advertising doesn't have the credibility to launch new brands. Get press coverage first. Ads come later, once people believe in you.
 8. **He checks the category.** Categories split like branches on a tree. Brands live or die along with the category, so if the category is dying, he would save the company and let the brand go.
 

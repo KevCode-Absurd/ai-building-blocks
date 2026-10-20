@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Marie Curie's words here come from two public-domain sources in English: her book Pierre Curie, with her Autobiographical Notes (1923, translated by Charlotte and Vernon Kellogg) [S2], and her 1921 address at Vassar College, The Discovery of Radium [S3]. Some popular "Curie quotes" don't appear in these sources and aren't used.
+Marie Curie's words here come from two public-domain sources in English: her book Pierre Curie, with her Autobiographical Notes (1923, translated by Charlotte and Vernon Kellogg) [S2], and her 1921 address at Vassar College, The Discovery of Radium [S3]. Since the last check we also read her 1903 doctoral thesis in its 1904 English edition [S6] and English translations of the two 1898 notes that announced polonium and radium, written with Pierre (and, for radium, Gustave Bémont) [S7][S8]. We could not reach her 1911 Nobel lecture. Some popular "Curie quotes" don't appear in these sources and aren't used.
 
 ## In one paragraph
 
@@ -15,6 +15,10 @@ Marie Curie was born Maria Skłodowska in Warsaw on 7 November 1867, studied at 
 Curie began in 1897 by measuring the strength of uranium rays with an electrometer built by Pierre and his brother Jacques [S1][S3][S4]. She found that the activity depended only on how much uranium was present, which suggested it came from the atom itself, not from chemistry [S1]. Then she found minerals more active than their uranium could explain, and concluded that an unknown, far more active element must be hidden in them [S1][S3].
 
 How she applied it: she used the radiation itself as a guide. As she separated the ore chemically, she kept the fractions that stayed most active, much as a chemist uses a spectroscope to track an element [S2][S3]. This became a new way of doing chemical analysis [S2].
+
+### Say what is settled and what is only provisional
+
+Her writing marks the difference. In the 1898 polonium note she and Pierre said they believed the material held a metal not yet known, then added that the existence of the new element needed confirmation, and admitted that the first spectrum check was not favourable to their idea [S8]. In the radium note they gave three separate reasons: the activity was far higher than barium's, the activity rose through repeated separation, and the spectroscopist Demarçay found a new line that grew with the activity [S7]. Even so they wrote that the difference in atomic weight was of the order of the experimental errors [S7]. In her thesis she says many of her conclusions are still provisional, and about her own opinion on polonium she writes that she is not sure it is correct [S6].
 
 ### Patience on a huge scale
 
@@ -66,7 +70,7 @@ As a student in Paris she lived in a cold garret, carried her own coal up six fl
 - Ask society to fund the work, plainly and without apology [S2][S3].
 - In a crisis, put your knowledge to practical use at once [S1][S2].
 
-## Real decisions (enriched minds)
+## Real decisions
 
 ### Choosing a new, unwritten question
 
@@ -74,27 +78,27 @@ When Becquerel's uranium rays appeared, she found the question very attractive b
 
 ### Measuring before theorising
 
-To go beyond Becquerel she used an electrometer balanced against a piezo-electric quartz, a method of Pierre and Jacques Curie, to measure how much the rays ionised air. Her tests showed the radiation could be measured precisely under set conditions, and that it is a property of the uranium atom, in proportion to the amount of uranium. She checked thorium and many minerals the same way. [S2]
+To go beyond Becquerel she used an electrometer balanced against a piezo-electric quartz, a method of Pierre and Jacques Curie, to measure how much the rays ionised air. Her tests showed the radiation could be measured precisely under set conditions, and that it is a property of the uranium atom, in proportion to the amount of uranium. She checked thorium and many minerals the same way. [S2][S6]
 
-### Trusting an anomaly
+### Trusting an anomaly, and announcing it with its doubts
 
-Some ores gave far more radiation than their uranium and thorium could explain. She first made sure it was not an error in the experiment, then proposed that the ores hold a small amount of a stronger, unknown element. Pierre dropped his own work to help test it. [S2]
+Some ores gave far more radiation than their uranium and thorium could explain. She first made sure it was not an error in the experiment, then proposed that the ores hold a small amount of a stronger, unknown element. Pierre dropped his own work to help test it. [S2][S6] In July 1898 she and Pierre reported a new substance, said they believed it held an unknown metal, and proposed the name polonium, after the country of one of the authors, if it were confirmed. They also admitted that the spectrum check was not in their favour [S8].
 
-### A new method: separate, measure, follow the activity
+### Making the radium claim with three separate arguments
 
-They separated pitchblende by ordinary chemical means and measured the radioactivity of every product, then followed the activity as it concentrated. This showed at least two new elements, which they announced as polonium in July 1898 and radium in December 1898. [S2]
+In the December 1898 note they argued for radium from three independent lines: far higher activity than barium, activity that kept rising as they separated more, and a new spectral line seen by Demarçay. They thanked Demarçay and others by name, said they had been stopped by lack of material, and noted that 100 kg of residue from Austria would let them resume. [S7]
 
 ### Scaling up with what they could afford
 
-They could not afford fresh pitchblende, so they secured several tons of waste residue from the Bohemian mine at a good price, using private money at first. She then took on the chemistry, working up to twenty kilograms at a time in a leaky shed, while Pierre studied the properties of radium. In 1902 she prepared a decigramme of pure radium chloride and fixed a first atomic weight. [S2]
+They could not afford fresh pitchblende, so they secured several tons of waste residue from the Bohemian mine at a good price, using private money at first. She then took on the chemistry, working up to twenty kilograms at a time in a leaky shed, while Pierre studied the properties of radium. In 1902 she prepared a decigramme of pure radium chloride and fixed a first atomic weight. When the work outgrew them, Pierre set up a first industrial trial in 1899, and her thesis credits Debierne with organising the factory treatment of the residue. [S2][S6]
 
 ### Taking no patent
 
 Pierre, with her agreement, refused any profit. They took no copyright, published every result and the exact process of preparation, and answered whatever others asked. She said it benefited the radium industry, which grew freely. A visitor recorded her saying radium belongs to all people. [S2]
 
-### Bringing in industry and helpers
+### Writing the thesis as a ledger of credit
 
-When the work outgrew their means, Pierre set up a first industrial trial in 1899 at a chemical works, with Debierne arranging the details, and they brought in helpers. A later factory by Armet de Lisle made radium for physicians. [S2]
+In her 1903 thesis she stated its aim as publishing her researches, and named who did what: Pierre put aside his own work to join her; Demarçay's spectral analysis was of the greatest value; Debierne organised the factory work; the Austrian government supplied the residue. She also separated the established chemistry from the unfinished physics, flagged some figures as rough estimates, and credited the work of Becquerel, Rutherford, Thomson and others separately from her own [S6].
 
 ## Where she stood
 
@@ -148,5 +152,6 @@ All from public-domain texts.
 - "It must be done for itself, for the beauty of science" (1921) [S3]
 - "We had no help, no money." (1921) [S3]
 - "keep for your ambition the determination to make a permanent contribution to science" (1921) [S3]
-- "in this miserable old shed that we passed the best and happiest years" (trans. Kellogg, 1923) [S2]
+- "I am not sure that this opinion is correct" (thesis, 1904 translation) [S6]
 - "always refused to draw from our discovery any material profit" (trans. Kellogg, 1923) [S2]
+

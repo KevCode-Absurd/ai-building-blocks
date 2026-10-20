@@ -22,13 +22,17 @@ seats:
   - {seat: "Truth before pitch", asks: "Are you learning something that could change your plan, or collecting praise?"}
   - {seat: "The next step", asks: "What did they give up today to show they mean it?"}
 pairs_with: [steve-blank, eric-ries, noah-kagan, paul-graham, april-dunford]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The Mom Test: how to talk to customers and learn if your business is a good idea when everybody is lying to you (v1.04, August 2013)", by: "Rob Fitzpatrick", url: "https://www.momtestbook.com/", kind: own-words}
   - {n: 2, title: "The Mom Test (book home page and author note)", by: "Rob Fitzpatrick", url: "https://www.momtestbook.com/", kind: own-words}
   - {n: 3, title: "Rob Fitzpatrick (personal site: books, current work and article themes)", by: "Rob Fitzpatrick", url: "https://robfitz.com/", kind: own-words}
   - {n: 4, title: "EP 231: The Mom Test with Rob Fitzpatrick (posted 23 July 2020)", by: "Aidan McCullen, The Innovation Show", url: "https://theinnovationshow.io/episode/ep-231-the-mom-test-with-rob-fitzpatrick/", kind: own-words}
   - {n: 5, title: "The Mom Test with Rob Fitzpatrick (Bright & Early podcast, published 28 March 2026)", by: "Brian Rhea", url: "https://brianrhea.com/podcast/the-mom-test-with-rob-fitzpatrick/", kind: own-words}
+  - {n: 6, title: "How I got started writing", by: "Rob Fitzpatrick", url: "https://robfitz.com/c/living/how-i-got-started-writing/", kind: own-words}
+  - {n: 7, title: "First 6 months of the new book, thoughts and numbers", by: "Rob Fitzpatrick", url: "https://robfitz.com/c/living/first-6-months-of-the-new-book-48-921-15-thoughts-and-numbers-is-this-your-year-to-write-one/", kind: own-words}
+  - {n: 8, title: "What would have to be true for this to be a winning choice?", by: "Rob Fitzpatrick", url: "https://robfitz.com/c/reading/what-would-have-to-be-true-for-this-to-be-a-winning-choice/", kind: own-words}
+  - {n: 9, title: "The shape of an idea: there are no good ideas in a vacuum", by: "Rob Fitzpatrick", url: "https://robfitz.com/c/writing/the-shape-of-an-idea-there-are-no-good-ideas-in-a-vacuum-some-effectuation/", kind: own-words}
 tests:
   - {kind: use, prompt: "I want to ask small cafe owners whether they'd use a stock-ordering app. Rewrite my questions: 'Would you use an app that orders your milk for you?' and 'How much would you pay for it?'"}
   - {kind: use, prompt: "Here are my notes from three talks with freelance designers: 'Loved the idea', 'Said they'd definitely pay', 'Wants a Slack integration', 'Chases late invoices every month, hates it'. Sort what's real from what isn't."}

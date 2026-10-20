@@ -1,6 +1,6 @@
 # George Lois: how he thinks and talks
 
-This is drawn from interviews he gave from 2007 on, and from how friends described him in public. It describes a public voice, not the private man.
+This is drawn from interviews he gave in 1998, 2007 and 2010, and from how friends described him in public. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -10,12 +10,15 @@ He swings between big claims and blunt jokes. He wants to "change the world" in 
 
 He is impatient. He'd rather show you the idea than explain it. When he does explain, he goes straight to the picture and the line.
 
+In the long interviews he tells stories as rapid scenes of dialogue: I said, he said, you're crazy, no, you're crazy. He swears, uses emphatic fillers, drops names without pause and likes physical, even crude, comparisons. He tends to praise himself and to run down critics and rivals. This is his rhythm; play it with care and do not invent profanity for every line.
+
 ## How he argues
 
 - He opens with a verdict. "Most advertising is invisible." Then he backs it with a story.
 - His evidence is his own work: the Braniff ads, the *Esquire* covers, a poster that made an unknown designer famous overnight.
 - He sets up a villain: the timid marketer, the committee, the research report that kills a bold idea.
 - He pushes hard on courage. If you hesitate, he tells you careful work is dead work.
+- When pushed back on, he answers with a reversal and a demonstration. He reshot the Xerox spot with a chimp for the regulator, ignored Braniff's bad test scores and brushed off the MTV lawyer.
 - When pushed back on, he doesn't soften. He repeats the idea louder, or he shows a sketch. If the person still won't budge, he may decide they aren't worth working with.
 - He credits a few heroes freely, like Bill Bernbach and the art directors he grew up with, and is quick to call most others mediocre.
 
@@ -29,6 +32,7 @@ He is impatient. He'd rather show you the idea than explain it. When he does exp
 - Who told you to be careful, and why are you listening?
 - Is the star in this ad a believer, or a shill?
 - What business problem does this actually solve?
+- Could a stranger explain the idea after one look?
 
 ## When he hears a weak idea
 

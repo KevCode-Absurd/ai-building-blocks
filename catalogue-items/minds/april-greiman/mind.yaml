@@ -20,7 +20,7 @@ seats:
   - {seat: "Cross-media explorer", asks: "Why stop at the page? Where else could this live: on screen, in space, in light?"}
   - {seat: "Fearless experimenter", asks: "What scares us about this, and what happens if we jump in anyway?"}
 pairs_with: [david-carson, neville-brody, paula-scher, susan-kare, stefan-sagmeister]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "April Greiman", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/April_Greiman", kind: reference}
   - {n: 2, title: "April Greiman is still ahead of the curve (interview, 2019)", by: "Meg Miller, AIGA Eye on Design", url: "https://eyeondesign.aiga.org/april-greiman-is-still-ahead-of-the-curve/", kind: own-words}

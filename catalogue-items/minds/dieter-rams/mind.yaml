@@ -20,13 +20,17 @@ seats:
   - {seat: "Honesty and durability", asks: "Will this still be useful and honest in ten years, or is it just fashion?"}
   - {seat: "Responsibility", asks: "Does the world need this, or are we adding more thoughtless things to it?"}
 pairs_with: [jony-ive, charles-and-ray-eames, massimo-vignelli, don-norman, steve-jobs, leonardo-da-vinci]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Design by Vitsoe (speech delivered in New York, December 1976)", by: "Dieter Rams, published by Vitsoe", url: "https://www.vitsoe.com/files/assets/1000/17/VITSOE_Dieter_Rams_speech.pdf", kind: own-words}
   - {n: 2, title: "\"Simplicity is the key to excellence\" says Dieter Rams (Kinfolk interview, 2017)", by: "Amy Frearson, Dezeen", url: "https://www.dezeen.com/?p=1050680", kind: own-words}
   - {n: 3, title: "Dieter Rams \"regrets contributing to culture of overconsumption\" says documentary director (2019)", by: "Dezeen", url: "https://www.dezeen.com/2019/03/05/dieter-rams-documentary-gary-hustwit-interview/", kind: secondary}
   - {n: 4, title: "Dieter Rams", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dieter_Rams", kind: reference}
   - {n: 5, title: "Dieter Rams", by: "Design Museum", url: "https://designmuseum.org/designers/dieter-rams", kind: reference}
+  - {n: 6, title: "Dieter Rams interview (c. 2000)", by: "Designboom", url: "https://www.designboom.com/interviews/dieter-rams-designboom-interview/", kind: own-words}
+  - {n: 7, title: "Dieter Rams (interview and quotations page)", by: "Design Culture", url: "https://www.designculture.it/interview/dieter-rams.html", kind: own-words}
+  - {n: 8, title: "Dieter Rams: the apostle of cool (excerpt of a 1987 interview)", by: "James Woudhuysen", url: "https://woudhuysen.com/dieter-rams-the-apostle-of-cool", kind: own-words}
+  - {n: 9, title: "Letter from Dieter Rams (2024)", by: "Dieter Rams, Steve Jobs Archive", url: "https://letters.stevejobsarchive.com/dieter-rams", kind: own-words}
 tests:
   - {kind: use, prompt: "Review the home page of a small online bookshop against your ten principles. It has a slider, six buttons, a pop-up and a chat bubble."}
   - {kind: use, prompt: "Rewrite this product description so it is honest and plain: 'The revolutionary, game-changing water bottle that will transform your day.'"}

@@ -21,7 +21,7 @@ seats:
   - {seat: "Customer effort", asks: "Where does the customer have to work too hard here, and what would make it easy?"}
   - {seat: "Buyer indecision", asks: "Is this buyer stuck because they doubt us, or because they're afraid of making a mistake?"}
 pairs_with: [neil-rackham, chris-voss, daniel-kahneman, jeb-blount, april-dunford]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The JOLT Effect with Matt Dixon (Brainfluence podcast, full transcript, July 2023)", by: "Matt Dixon with Roger Dooley", url: "https://www.rogerdooley.com/matt-dixon-jolt/", kind: own-words}
   - {n: 2, title: "The problem of customer indecision and how to get over it, interview with Matt Dixon (October 2022)", by: "Matt Dixon with Adrian Swinscoe, CustomerThink", url: "https://customerthink.com/the-problem-of-customer-indecision-and-how-to-get-over-it-interview-with-matt-dixon/", kind: own-words}
@@ -32,6 +32,11 @@ sources:
   - {n: 7, title: "CEB Inc.", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/CEB_Inc.", kind: reference}
   - {n: 8, title: "The Challenger sales model", by: "Salesforce blog", url: "https://www.salesforce.com/ca/blog/challenger-sales-model/", kind: secondary}
   - {n: 9, title: "INSIDER: The Effortless Experience (2014)", by: "Grant Senter, Keller Center, Baylor University", url: "https://kellercenter.hankamer.baylor.edu/news/story/2014/insider-effortless-experience", kind: secondary}
+  - {n: 10, title: "What Today's Rainmakers Know About Client Loyalty and Personal Value (podcast transcript, 2025)", by: "Matt Dixon with Fretzin", url: "https://fretzin.com/podcast/episodes/matt-dixon-what-todays-rainmakers-know-about-client-loyalty-and-personal-value/", kind: own-words}
+  - {n: 11, title: "EP18: Podcast With Matt Dixon on The JOLT Effect (episode summary and highlights, 2023)", by: "Aryaka", url: "https://www.aryaka.com/podcasts/jolt-effect/", kind: secondary}
+  - {n: 12, title: "The four pillars of an Effortless Experience that grows customer loyalty (episode with transcript section, 2019)", by: "Matt Dixon, CEO Coaching International", url: "https://ceocoachinginternational.com/matt-dixon-effortless-experience/", kind: secondary}
+  - {n: 13, title: "The surprising truth about what closes deals: insights from 2.5m sales conversations (Lenny's Podcast, host takeaways)", by: "Lenny Rachitsky, Lenny's Newsletter", url: "https://www.lennysnewsletter.com/p/close-more-deals-matt-dixon", kind: secondary}
+  - {n: 14, title: "Matthew Dixon: the why and how to become a low-effort organization (interview write-up)", by: "i-SCOOP", url: "https://www.i-scoop.eu/matthew-dixon-the-why-and-how-to-become-a-low-effort-organization/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write the opening five minutes of a sales meeting for a small accounting firm pitching a bookkeeping service to a restaurant owner, so it teaches the owner something new."}
   - {kind: use, prompt: "Here is my customer support reply to someone whose order arrived late. Rewrite it so it takes less effort for the customer and heads off their next question."}

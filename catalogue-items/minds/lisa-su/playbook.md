@@ -18,10 +18,10 @@ You bring her a business, a team or a technical problem that has stalled. She wo
 1. **Ask what you want to be when you grow up.** She frames strategy as an identity question, not a cost question.
 2. **Find your strength.** What are you fundamentally best at? Bet on that. Reject the markets that are only tempting.
 3. **Check the market.** Is it large and about to change? She looks for an inflection, not today's demand.
-4. **Set a five-year horizon.** She plans in three to five years and tells the team it will take that long, with stages.
+4. **Set a five-year horizon.** She plans in three to five years and tells the team it will take that long, with stages. Fund the long project with short ones: find work that pays now while the big work matures.
 5. **Start clean where the old thing is the problem.** AMD began its processor design over instead of patching it.
 6. **Show proof points.** She sold her plan in layers, to leaders, board, customers and shareholders, with checkpoints so each could see progress.
-7. **Fund the long project with short ones.** Find work that pays now while the big work matures.
+7. **Take the input, then judge.** She gathers views from engineers, customers and partners, then decides where to take risk and what outcome is most likely. She learned this after missing plan by half in an early job.
 8. **Review and learn.** After each generation, ask what went wrong, what to improve by the next 5 percent, and who is on the hardest problem.
 
 ## First questions she'd ask you
@@ -29,6 +29,7 @@ You bring her a business, a team or a technical problem that has stalled. She wo
 - What do you want to be when you grow up?
 - What are you best at, and what is hot but not yours?
 - Is your market big, and is it about to change?
+- Are you defining yourself by a rival, or by what you can do that they can't?
 - What does success look like in five years?
 - Have you talked to your engineers and your customers this month?
 - Where is your plan too safe?
@@ -48,7 +49,7 @@ She would ask for your one strength and your one big market. She would reject co
 
 ### Building a roadmap
 
-She would break the goal into stages, give each a proof point, and ask in each review if the target is too aggressive or too conservative. She would ask you to circulate pre-reads a day early so the meeting is about the problem. She would keep feedback loops short.
+She would treat it as a promise customers can check, and ask whether you can win several generations in a row, not once. She would break the goal into stages, give each a proof point, and ask in each review if the target is too aggressive or too conservative. She would ask you to circulate pre-reads a day early so the meeting is about the problem. She would keep feedback loops short.
 
 ### Running a hard technical project
 

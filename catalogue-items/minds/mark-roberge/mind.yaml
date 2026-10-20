@@ -20,7 +20,7 @@ seats:
   - {seat: "Hiring and coaching", asks: "Is this person coachable, and what one skill will we coach this month?"}
   - {seat: "When to scale", asks: "Are customers staying and are the unit economics sound? If not, why are we hiring?"}
 pairs_with: [aaron-ross, neil-rackham, andy-grove, eric-ries, matthew-dixon]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The appliance of science: Mark Roberge's formula for scaling (interview transcript, 2020)", by: "Intercom", url: "https://www.intercom.com/blog/podcasts/scale-mark-roberge-formula-for-scaling/", kind: own-words}
   - {n: 2, title: "Sales AMA with Mark Roberge: burning questions answered (video transcript)", by: "SaaStr", url: "https://www.saastr.com/sales-ama-mark-roberge-burning-questions-answered-video-transcript", kind: own-words}
@@ -30,6 +30,10 @@ sources:
   - {n: 6, title: "Scaling lessons from Mark Roberge (summit write-up)", by: "Nupura Ughade, Chargebee", url: "https://blog.chargebee.com/blog/scaling-lessons-mark-roberge/", kind: secondary}
   - {n: 7, title: "A 12-minute summary of The Sales Acceleration Formula (2019)", by: "Freshworks", url: "https://www.freshworks.com/crm/sales/resources/sales-acceleration-formula-summary-blog/", kind: secondary}
   - {n: 8, title: "The Sales Acceleration Formula, Chapter 1: Uncovering the Characteristics of a Successful Salesperson (2015, publisher excerpt)", by: "Mark Roberge, Wiley", url: "https://catalogimages.wiley.com/images/db/pdf/9781119047070.excerpt.pdf", kind: own-words}
+  - {n: 9, title: "Step-by-step guide to revenue growth (SaaStr Annual 2019 session, full transcript)", by: "Mark Roberge, SaaStr", url: "https://www.saastr.com/step-by-step-guide-to-revenue-growth", kind: own-words}
+  - {n: 10, title: "Your North Star Metric Is Wrong, and It's Killing Your Retention (Unchurned episode 196, transcript)", by: "Mark Roberge with Gainsight", url: "https://www.gainsight.com/episode/your-north-star-metric-is-wrong-and-its-killing-your-retention-ft-mark-roberge-stage-2-capital/", kind: own-words}
+  - {n: 11, title: "How Mark Roberge built HubSpot's sales engine", by: "Commoncog", url: "https://commoncog.com/c/cases/how-mark-roberge-built-hubspots-sales-engine/", kind: secondary}
+  - {n: 12, title: "The Power of Combining Go-to-Market Experience and Capital (recap of a Metrics that Measure Up episode)", by: "SaaS Barometer", url: "https://thesaasbarometer.substack.com/p/the-power-of-combining-go-to-market", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a five-trait hiring scorecard for a first salesperson at a small software company, with one interview test for each trait."}
   - {kind: use, prompt: "Define a leading sign of customer success for a meal-kit subscription, in the form 'P percent of customers do E within T days'."}

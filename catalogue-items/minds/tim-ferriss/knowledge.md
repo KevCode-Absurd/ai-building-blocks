@@ -2,9 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Source check, 20 October 2026: the local source folder for this person holds mostly source records (a title, a link and a short excerpt) plus a reference biography, not full transcripts. The own-words claims below come from pages read when the mind was first built, and each is tagged to the source in mind.yaml. Where only a record or a reference page backs a claim, treat it as context, not as their own words.
-
-Tim Ferriss is alive, and views can change. Everything below comes from his blog posts (2007, 2017 and 2024), his own bio page, his TED talk page and reference pages on him and two of his books. Date each view to its source. He has said he rethought parts of his early approach, so the 2007 views and the later ones don't always match [S1]. He is also an investor. This mind explains his frameworks for work and decisions, gives no investment picks, and stays away from health advice.
+Source note, 21 October 2026: this mind rests on eleven of his own blog posts and pages [S4, S5, S7 to S14], from 2007 to 2026, plus reference pages on him and his books [S1 to S3] and TED's page for his 2017 talk [S6]. Each claim is tagged to the post it comes from. Date each view to its source. He has said he rethought parts of his early approach, so the 2007 views and the later ones don't always match [S1]. He is also an investor. This mind explains his frameworks for work and decisions, gives no investment picks, and stays away from health advice.
 
 ## In one paragraph
 
@@ -22,31 +20,25 @@ How he applied it: he built the ideas while working 14-hour days at his suppleme
 
 In 2007 he argued that a not-to-do list can do more for your work than a to-do list, because what you avoid decides what you can get done [S7]. His list of nine habits to stop includes checking email first thing in the morning or last thing at night, taking meetings with no agenda or end time, checking email all day instead of in batches, and keeping a phone on you every hour of the week [S7].
 
+He added a deadline rule: work expands to fill the time you give it (Parkinson's Law), so set tighter hours and schedule time for people [S7].
+
 How he applied it: he suggested a 30-minute limit and a clear goal for any meeting, an auto-reply to stop false emergencies, and at least one day a week away from devices [S7].
 
 ### Use the 80/20 rule on people as well as tasks
 
 Ferriss applied the 80/20 rule, the idea that a small share of inputs drives most results [S2][S7]. One of his habits to stop is giving too much time to low-profit, high-maintenance customers. Run an 80/20 check, set clear rules, and send hard clients elsewhere [S7].
 
+In his 2008 margin tenets he adds that you should find the few customers, products or regions that make most of the profit, automate service for low-profit high-maintenance clients, and let go of high-maintenance ones even when they pay [S14].
+
 How he applied it: the not-to-do list also says the answer to feeling swamped is not more work. Pick the few tasks that matter most and accept small losses to protect them [S7].
-
-### Use deadlines to shrink the work
-
-He pointed to Parkinson's Law, the idea that work grows to fill the time you give it [S7]. Set tighter hours and the work fits them. He told readers to schedule time for people and life, and to avoid working weekends [S7].
-
-How he applied it: the ninth habit on his list warns against letting work fill a gap that friends and life outside work should fill [S7].
 
 ### Fear-setting
 
 Fear-setting means writing out your fears in detail instead of only setting goals [S5][S6]. In his 2017 version, you describe the worst realistic outcome, rate its lasting harm from 1 to 10, judge how likely it is, and list how you could repair the damage [S5]. Then you list the likely benefits of trying, and the cost of doing nothing over one, five and ten years [S5]. If you are waiting for the right time, he wrote, that is usually fear [S5]. The TED talk framed the goal as separating what you can control from what you can't [S6].
 
+His post leans on Seneca, who advised setting aside a few days to live on simple food and rough clothes and ask whether this is what you feared [S5]. In the 2017 version he adds seven questions: define the nightmare, plan the repair, map the upside, imagine being fired, name what you avoid, price the inaction, and ask what you are waiting for [S5].
+
 How he applied it: he wrote that when he was overworked and unhappy, he used the exercise on a long break from work. The worst case looked survivable, about a 3 or 4 out of 10. He took a one-way ticket to Europe, traveled for 15 months, and his business kept doing well [S5].
-
-### Borrow from the Stoics
-
-His fear-setting post leans on Seneca. It cites Seneca's advice to set aside a few days to live on simple food and rough clothes, and ask whether this is what you feared [S5]. The aim is to face fear on purpose, so it loses its hold [S5].
-
-How he applied it: the post points readers to a collection of Seneca's letters and to other Stoic reading [S5].
 
 ### Hunt antelope, not field mice
 
@@ -59,6 +51,18 @@ How he applied it: he turned it into prompts. Check your calendar for which kind
 His podcast is "focused on deconstructing world-class performers" [S4]. The idea is that you can learn the habits, tools and routines of the best people in a field and test them on yourself [S4]. It has passed one billion downloads [S1][S4].
 
 How he applied it: his books Tools of Titans (2016) and Tribe of Mentors (2017) collect lessons from those interviews [S1]. The 4-Hour Body (2010) applied the same testing habit to diet and fitness [S3].
+
+### Trust people with limits and subtract to solve
+
+He asks what happens if you can only subtract. In one test, removing about 70% of a homepage's clickable elements raised conversions by 21.1% [S13]. For service work, he let others decide up to set dollar limits and the load fell from 40 to 60 hours a week to under 2 [S13]. He also asks what the thing would look like if it were easy, and how to spend money to buy back time [S13].
+
+How he applied it: he asks whether you could go off-grid for 4 to 8 weeks, since that forces systems and rules that outlast the break [S13].
+
+### A smaller, committed audience beats a huge one
+
+By 2020 he wrote that fame does not fix internal problems and tends to magnify insecurity, while the risk grows with audience size [S10]. In 2026 he said he would rather write for 10,000 people who are changed than reach 10 million with short clips, and that clips with tens of millions of views did not lift full-episode downloads [S9]. His advice was to name your 1,000 true fans, delight them, and overdeliver [S9].
+
+How he applied it: he keeps writing long books and keeps podcast episodes as full conversations, not highlight reels [S9][S12].
 
 ### Not everything that matters can be measured
 
@@ -79,29 +83,29 @@ How he applied it: since 2015 he has funded research into psychedelic medicine a
 
 ## Real decisions
 
-### Cutting his own load at the supplement company
+### Write the fear down before leaving a business that paid $70,000 a month
+He was earning about $70,000 a month, working 15-hour days, and miserable, with a company so troubled that selling it was nearly impossible [S5]. He spent about six months talking himself out of a trip around the world [S5]. Then he wrote the worst realistic outcomes, rated each from 1 to 10 for lasting harm, and listed how he would repair them [S5]. The worst case scored a temporary 3 or 4, and the likely upside a lasting 9 or 10 [S5]. He bought a one-way ticket to Europe, stayed 15 months, and the business ran fine [S5].
 
-In the years after 2001 he ran his online supplement business on 14-hour days while still holding his sales job [S1][S2]. He did not push harder. He tested ways to run it with less of his own time: email once a day, small jobs handed to remote helpers, and tighter working hours [S2][S7]. The reason he gave was that work should leave room for life now, not at retirement [S2]. He sold the company in 2010, and the experience became the base of his first book [S1].
+### Let others decide up to a dollar limit
+To cut his customer-service load, he let staff settle problems on their own up to $100, then $500, then $1,000 [S13]. That dropped the work from 40 to 60 hours to under 2 a week [S13]. His reason was that people's capability rises when they are trusted [S13].
 
-### Writing out the fear before a 15-month break
+### Drop the customers who cost the most
+Using the 80/20 idea, he looked at which customers brought the profit and which took the most effort [S13][S14]. He moved low-profit, high-maintenance customers to automated service and let go of high-maintenance ones even when they paid, because they blocked growth [S14]. He tied this to a rule for the week: find the small share of customers, products or regions that make most of the money, and put effort there [S14].
 
-When he felt overworked and unhappy, he wrote down the worst case of leaving, rated it about 3 or 4 out of 10 for lasting harm, and listed how he would repair it [S5]. He then listed what waiting would cost him over the next years [S5]. He bought a one-way ticket to Europe and was away for 15 months, and his business kept doing well [S5]. His stated lesson was that the worst case was survivable and that doing nothing was the bigger risk [S5].
+### Take the loss on a house instead of recouping it the same way
+After buying a house that sat empty on an underwater mortgage, he sold it at a $150,000 loss rather than try to earn the money back the same way he lost it [S13]. He cites anchoring bias as the trap: clinging to the old path because the loss came from it [S13]. The money was earned elsewhere [S13].
 
-### Backing a shipping start-up, and its end
+### Start the podcast as a six-episode trial
+After a book of nearly 700 pages he wanted a light creative project, so he committed to six episodes and would quit if he hated it [S12]. He chose full, lightly edited conversations over highlight reels, batched recording on set days, and kept the gear simple [S12]. He took no sponsors until episodes passed 100,000 downloads, and says he could earn $2 million to $4 million a year by squeezing the show harder and chooses not to [S12]. By April 2016 it had about 150 episodes and 70 million downloads [S12].
 
-In 2013 he formed a syndicate of small investors to put money into Shyp, raising $250,000 and then more through his backers [S1]. Shyp shut down in 2018 and let all its staff go [S1]. By 2015 he had already stepped back from new investing, saying the work was stressful and his impact felt small over the long run [S1]. The lesson for a reader is that he treats a bet like this as a trial, not as proof of a method.
+### Stop investing in new start-ups for a while
+In October 2015 he announced a long "startup vacation": no new investments, advising or pitches, and unallocated money returned from his Stealth Fund [S11]. His reasons were 50 to 100 pitches a week, two email bankruptcies in six months, start-ups making up over 80% of his assets, a long recovery from Lyme disease, and saying "hell yeah" less often [S11]. He also judged that other investors would fill his place but his writing might be his alone [S11]. His rule was all or nothing, because he could not be "half pregnant" with investing [S11].
 
-### Publishing other people's books
+### Change how he lives with an audience
+By 2020 he said fame had not fixed his insecurity and had brought threats, about one death threat a month [S10]. He began using a pseudonym for travel, kept mail away from his home, did not name close friends in public, and sold a home after a stalker appeared [S10]. He also said he would rather have a smaller, committed audience of the "1,000 true fans" kind [S10].
 
-In November 2013 he began an audiobook publishing venture, with Rolf Potts's travel book as the first title [S1]. Later titles included books on Stoic thinking and daily routines [S1]. This fits his habit of using other people's best work and crediting it, which also shows in his Seneca references [S5].
-
-### Rethinking the optimiser's creed
-
-In a 2020 interview he went back over his earlier focus on lifestyle optimisation and said not everything meaningful can be measured [S1]. He pointed readers to Seneca's letters, which he called his favourite writing, and to two books on acceptance and awareness [S1]. This is a real change of view, so a mind built on him should not push the four-hour promise as settled [S1][S2].
-
-### Funding research instead of giving opinions
-
-From 2015 he organised crowd funding for research at Johns Hopkins, and in 2019 he gave over $2 million there and organised more in commitments [S1]. He said personal experience with depression and addiction in his circle drove his interest [S1]. This mind notes the decision only as a case of putting money behind a field he is not an expert in, and offers no health advice [S1].
+### Keep writing long books while book sales fall
+In June 2026 he laid out his own sales data: his five-book print sales fell 13% in 2024, 46% in 2025, and ran 57% below 2025 early in 2026 [S9]. He linked the fall to chatbots handing out step-by-step advice [S9]. He chose to keep writing long-form books, saying he would rather write for 10,000 people who are changed than reach millions with short clips [S9]. His advice for adapting was to name your 1,000 true fans, surprise and delight them, and overdeliver [S9].
 
 ## Where he stood
 
@@ -147,8 +151,8 @@ From 2015 he organised crowd funding for research at Johns Hopkins, and in 2019 
 
 ## Short phrases on the record
 
-- "Most people will choose unhappiness over uncertainty." (2017) [S5]
 - "inaction is the greatest risk of all." (2017) [S5]
 - "The answer to overwhelm is not spinning more plates" (2007) [S7]
-- "Work is not all of life." (2007) [S7]
-- "A lion can't live on field mice." (2024) [S8]
+- "Life favors the specific ask and punishes the vague wish." (2015) [S11]
+- "Once you get fancy, fancy gets broken." (2016) [S12]
+- "I'd rather write books for 10,000 people who are genuinely changed by them" (2026) [S9]

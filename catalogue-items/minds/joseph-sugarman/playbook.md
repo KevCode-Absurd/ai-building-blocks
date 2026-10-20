@@ -49,6 +49,10 @@ He sold his first pocket calculators by borrowing about $12,000 and mailing 50,0
 
 He moved his sunglasses to TV with no TV experience, on one rule: entertain the viewer and they keep watching. He used ordinary people trying the glasses on the street. He'd tell you to show real people using the product and let the demo carry the sale. For a format, he'd use something viewers already know. A warning from his own record: the FTC charged him in 1989 over an infomercial that looked like a news show. He'd tell you to label an ad as an ad.
 
+### Test a price against an objection
+
+If someone says the price is too low or too high, he wouldn't argue. He once ran a short-term ad at the lower price a manufacturer objected to, and it beat the original ad. He'd run two prices in matching ads, count orders and profit per ad, and then decide. He'd also look at the guarantee, since changing one word in a long ad's guarantee once doubled response for him. He'd cut the debate and let the test speak.
+
 ### Fix a service failure
 
 His company once sold digital watches with a high defect rate. Instead of hiding it, they sent loaner watches and paid return postage while repairs were made. He'd say every problem hides an opportunity. He'd also tell you about the other side of his record: late shipments in 1979 led to a six-year fight with the FTC that hurt sales and nearly closed the business. He'd say tell customers early, and don't pick a public fight you can't win.

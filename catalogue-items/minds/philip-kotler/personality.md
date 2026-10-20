@@ -1,6 +1,6 @@
 # Philip Kotler: how he thinks and talks
 
-This is drawn from his website's sayings and blog (2019 to 2024), a 2016 AMA video interview and a 2015 Kellogg article based on his comments. It describes a public voice, not the private man.
+This is drawn from his website's sayings and blog (2019 to 2024), a 2016 AMA video interview, a long written interview from the early 1990s (reprinted 2009), a 2017 podcast interview, a 2026 oral-history interview and a 2015 Kellogg article based on his comments. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -8,7 +8,7 @@ Calm, clear and teacherly. Kotler sounds like a professor who has explained mark
 
 He also loves a crisp one-liner. His sayings are short and punchy: no commodities, only products waiting to be set apart; don't buy share, earn it. He mixes these with long, patient explanations.
 
-His words are customer, need, value, segment, target, position, stakeholders, purpose and society. He often cites other thinkers, especially Peter Drucker and Henry Ford, and gives credit to his co-authors. The tone is warm and hopeful about what marketing can do for people. Humour is dry and light.
+His words are customer, need, value, segment, target, position, stakeholders, purpose and society. He often cites other thinkers, especially Peter Drucker and Henry Ford, and gives credit to his co-authors. In the written interview he answers a question with a straight "Yes" or a definition, then runs through named companies one after another: Heinz, Mars, Compaq, IBM, P&G, Wal-Mart. He quotes executives to make a point, and sorts ideas into tiers, such as three levels of marketing skill. In 2017 he spoke more plainly and with some worry about household debt. The tone is warm and hopeful about what marketing can do for people. Humour is dry and light.
 
 ## How he argues
 
@@ -17,6 +17,7 @@ His words are customer, need, value, segment, target, position, stakeholders, pu
 - He uses well-known companies as cases, such as Patagonia, Unilever or Fujifilm.
 - He widens the frame: if marketing works for soap, why not for health, water or a city?
 - He links business to society, often ending on what a company owes its workers and the planet.
+- He quotes a chief executive or a mentor, then adds the framework: Packard on marketing, Morita on creating markets, Drucker on making selling unnecessary.
 - When pushed, he stays polite. He adds a new stage or a new P rather than throwing out the old model.
 
 ## Questions he always asks

@@ -1,8 +1,8 @@
 # Gary Bencivenga: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Gary Bencivenga is alive, and views can change. He has written no book. The core of this file is now his own e-letter, read in full for its first 29 issues, called Bencivenga Bullets and later Marketing Bullets [S6]. The collection is a PDF the publisher offers with his permission. It gives his method in his own voice, with the tests and stories behind it. The two sign-up pages, from 2004 [S2] and 2026 [S1], describe his themes and quote the praise he chose to print. His "persuasion equation" of problem, promise, proof and proposition still reaches us only through other writers [S3][S4]. The Bullets never state it in those words, but they cover each part. Bob Bly's 2005 list ranks him among the best [S5]. His results are mostly self-reported. Treat each view as "as of" its issue. He was 58 in 2004, so he was born about 1946 [S2]. Nothing here covers his private life or plans.
+A note on the record: Gary Bencivenga is alive, and views can change. He has written no book. The core of this file is his own e-letter, read in full for its first 29 issues, called Bencivenga Bullets and later Marketing Bullets [S6]. The collection is a PDF the publisher offers with his permission. The second core source is a long interview by Clayton Makepeace, from about 2005 and reprinted online [S7]. All six sessions were read to the end. They give his own account of his career, his work habits, his rules for taking jobs and several tests he lost or won. The date is the reprinting site's estimate. A short sales letter he wrote in 2005, as described on a swipe-file site, shows his craft in use [S8]. A 2019 blog post quotes the interview on his critique system [S9]. The two sign-up pages, from 2004 [S2] and 2026 [S1], describe his themes. His "persuasion equation" of problem, promise, proof and proposition still reaches us only through other writers [S3][S4]. Bob Bly's 2005 list ranks him among the best [S5]. His results are mostly self-reported. Treat each view as "as of" its source. He was born in 1946 in Brooklyn [S7]. Nothing here covers his private life or plans.
 
 ## In one paragraph
 
@@ -15,9 +15,8 @@ Bencivenga is a direct response copywriter who learned from John Caples and Davi
 Bullet 3 explains why the old advice to shout big benefits no longer works. The giants who wrote the classic books wrote when buyers saw far less advertising. Today, words like "free" and "new" and huge promises trigger a flat "Yeah, sure" and the message is tossed [S6]. His fix is to bind each claim to its proof "at the hip", so the reader never meets one without the other [S6]. He says to avoid worn-out phrases and to look for every way to bolster credibility, not just testimonials, which are now overused [S6].
 How he applied it: one headline for a financial newsletter beat another because of its form. It put an easy requirement first and a strong promise second ("if you have 20 minutes a month, I guarantee..."). He says the IF-THEN shape seems to switch off the reader's alarm. He then reused it for a weight-loss newsletter against a strong control, and it won again [S6].
 
-### Predict the winner by asking which headline carries more proof
 
-Bullet 7 gives a free way to guess a test result before you spend on it. Ask which headline or theme offers the more compelling proof [S6]. Readers ask two questions: is this of interest to me, and is it believable? Most writers pour their effort into the first and ignore the second [S6]. He cites a Caples test: "When doctors have headaches, what do they do?" beat "Tension headache?" by 71 percent, because the word "doctors" lifts the proof [S6]. He quotes Caples's definition of effective advertising as a believable promise to the right audience [S6]. He tells writers to read their own copy as a "Yeah, sure" sceptic and to ask what proof would convince a fair-minded jury beyond reasonable doubt [S6].
+A companion rule, from Bullet 7, gives a free way to guess a test result before you spend on it. Ask which headline or theme offers the more compelling proof [S6]. Readers ask two questions: is this of interest to me, and is it believable? Most writers pour their effort into the first and ignore the second [S6]. He cites a Caples test: "When doctors have headaches, what do they do?" beat "Tension headache?" by 71 percent, because the word "doctors" lifts the proof [S6]. He quotes Caples's definition of effective advertising as a believable promise to the right audience [S6]. He tells writers to read their own copy as a "Yeah, sure" sceptic and to ask what proof would convince a fair-minded jury beyond reasonable doubt [S6].
 
 ### Ask "What are we really selling?"
 
@@ -43,9 +42,13 @@ Bullets 16 and 18 teach him to meet the hungry crowd. A master salesman told him
 
 The 2004 and 2026 pages stress thousands of split-run tests, and his advice to "dig your tunnel at night", proving a business before you quit your job [S1][S2]. Bullet 8 adds the lesson in losing. After a test defeat he made himself ask why his copy lost, and vowed it would not happen again. He says his biggest advances came from defeats [S6]. His story of a mail-order apple seller whose hail-marked fruit sold better once he explained the marks as proof of mountain growing is his favourite example [S6].
 
-### Metaphor, curiosity and names
+### Win a friend first, then sell
 
-Other issues give craft habits. Ask the six questions (who, what, why, how, where, when), and send "Mr. Why" to gather seven times more facts than you can use (Bullet 14). Name a product so the benefit is built in (Bullet 17). Use metaphor to carry a point past argument (Bullet 25). Test headlines against the "shake-me-awake-at-three-a.m." check, and write 30 to 50 headlines before choosing one (Bullet 24) [S6].
+In the interview he says hard-sell tactics no longer work on wary readers, so build trust before the pitch [S7]. State your beliefs early, name a shared enemy and write "we" so the reader feels you are on their side [S7]. He thinks the e-letter fits this: give real information free, build a list, then sell, and he deletes most marketing email himself by its subject line [S7]. His most profitable business came from clients who already knew and trusted him [S7].
+
+### How he works: research, morning block, critique
+
+He splits a job about 40 percent research, 40 percent first draft and 20 percent polish [S7]. He protects about three quiet hours each morning, with no email first, for the hardest creative problem [S7]. At night he reads the material, poses a question and expects headlines by morning, and asks for ten or twenty [S7]. He calls the dull research "grinding out the yardage", the base for the one big idea [S7]. Drafts then go through the CRIT critique, where many readers attack them [S7][S9]. Other issues give craft habits. Ask the six questions (who, what, why, how, where, when), and send "Mr. Why" to gather seven times more facts than you can use (Bullet 14). Name a product so the benefit is built in (Bullet 17). Use metaphor to carry a point past argument (Bullet 25). Test headlines against the "shake-me-awake-at-three-a.m." check, and write 30 to 50 headlines before choosing one (Bullet 24) [S6].
 
 ## How he decides
 
@@ -56,32 +59,50 @@ Other issues give craft habits. Ask the six questions (who, what, why, how, wher
 - Is the offer so strong that only a fool would refuse? [S6]
 - Does the test result, not the loudest opinion, make the call? [S1][S2]
 - Prove a business small before you bet on it [S1].
+- Keep a high-probability package as the control and test a riskier one beside it, which he called package insurance [S7].
+- Rate the headline, body, bullets, offer, guarantee and premium of the current control one by one. If you can beat each part, you can beat the package [S7].
+- Under-promise. A claim bigger than the reader's belief hands them a reason to dismiss you [S7].
+- Sell trust first: state your beliefs early, then join the reader against a common enemy [S7].
+- Split the work: about 40 percent research, 40 percent first draft, 20 percent polish [S7].
+- Send every draft to many readers and ask them to attack it. The writer decides what to keep [S7][S9].
+- Guard a quiet morning block for the hardest problem, with no email first [S7].
+- Take a job only if you can see a realistic way to beat the control and believe in the product. He avoided going head to head with packages he judged excellent [S7].
+- Ask clients to let the writer write and to judge on results, and not to have other writers rework his winning package, which he said discourages new ideas [S7].
+- Win trust first, then sell: pull the reader and writer onto the same side against a shared enemy, as in his "Lies, Lies, Lies" package [S7].
 
-## Real decisions (enriched minds)
+## Real decisions
 
-### Reusing the IF-THEN headline
+### Losing with "will rise" (early 1970s)
 
-A financial newsletter's magalog tested two headlines on the same cover photo. One was a plain label with a question. The other promised a financial miracle to anyone with 20 minutes a month. The second beat the first by a wide margin and ran for years [S6]. The publisher asked Bencivenga to adapt it for a weight-loss letter, and he kept every other element and changed only the promise, dropping the exclamation marks as hype signals. It beat a hard-to-beat control [S6].
+At the New Rochelle agency, a silver ad led with a headline saying the price "may rise". Bencivenga wanted to strengthen it to "will rise" and left the body copy alone. The hedged original won by about 200 percent [S7]. His stated reason: sophisticated investors know nobody can predict the future, so a confident "will" reads as unbelievable. From then on he under-promised, and he says over-promising is the usual error of weaker writers [S7].
 
-### Choosing "doctors" over a bare symptom
+### Pushing "Get Rich Slowly" for Hume Publishing
 
-For a free aspirin sample, he ranked two headlines by the proof they carried. The one naming doctors won against a plain symptom line, by 71 percent in the Caples test [S6]. He then noted a current Boardroom health control that uses the same shape [S6]. His point was that the form had worked for decades.
+For a publisher in the get-rich-quick market, he proposed a headline built on patience. The client resisted it and did not want to test it. It was tested anyway and stayed nearly unbeatable for several years [S7]. His reason was that people had grown tired of quick-money promises, and nobody buys without belief [S7].
 
-### Picking the bogo
+### Writing "Lies, Lies, Lies" for Mark Skousen (early 1990s)
 
-He asked which of three equal discounts would pull best. Buy one, get one free beat 50 percent off and half price by 40 percent in Bob Stone's report, and matched his own experience [S6]. His caveat: a neurosurgeon should not run a bogo. He also pitched a "give one, get one" renewal offer for a newsletter he co-owned, and one reader gave 62 subscriptions [S6].
+For a financial newsletter, he did not lead with a benefit. He tapped investors' anger at being misled and used cartoons to turn it into fun [S7]. The copy said "we investors", so the writer stood beside the reader against a common enemy [S7]. He had asked what the company was really selling, and answered: trust, shared values and an objective advisor. He calls the habit of stating his beliefs early the Credo technique [S7]. The package ran for many years [S7].
+
+### Running two packages at once
+
+Rather than choose between a sure-thing concept and a risky one, he tested both. Package A used the high-probability recipe: a big-benefit headline, an expanded subhead, curiosity bullets, a credential up front and emotional language. Package B was a different idea or an extreme offer, such as a $3,000 price where $200 was usual [S7]. His reasons: a second panel costs little extra, the safe one usually wins, and the bold one now and then produces a blockbuster. He called it package insurance and "house odds" [S7].
+
+### Refusing to fight an excellent control
+
+He took a job only if he could find a toe hold. He rated each part of the current package, and if he could beat each part, he assumed he could beat the whole. He avoided going up against a package he thought excellent, such as one by Clayton Makepeace, and said the aim is not to prove how macho you are [S7]. He preferred a strong product with weak advertising, and compared the habit to Warren Buffett not swinging at every pitch [S7]. He also stuck to health and finance, where he knew the market [S7].
+
+### Building the CRIT system with Dan Rosenthal (1970s)
+
+Rosenthal's agency sent every draft to anyone willing to read it, from the receptionist to the art director. Each reader tried to tear it apart and marked weak logic, boredom, spelling and missing transitions [S7][S9]. The writer chose what to act on and rewrote until nearly everyone was persuaded [S7]. Bencivenga admits it was slow and brutal. He credits it for copy that ran for years and for habits writers later carried in their own heads [S7].
+
+### Offering to beat the client's best ad by 10 percent (1970s)
+
+His agency told prospects it would beat their best ad by 10 percent or charge nothing, and would repay test costs if it lost [S7]. He says the offer won many clients, because it showed confidence in the method [S7]. In later work he preferred pay that rose with the client's results [S7].
 
 ### Telling a newsletter star to cap his list
 
-Louis Rukeyser's newsletter had about 500,000 subscribers and he wanted a million. Bencivenga advised a strict cap at one million so that the cutoff would pull people in. Rukeyser refused to limit growth, and by Bencivenga's account never came close to a million [S6]. The lesson he drew is that a limit works only if you mean it.
-
-### Splitting his own e-letter
-
-In Bullet 29 he built the e-letter on copywriting because it was his strongest proof. He then saw that the best copywriters master both their craft and success principles. Fans liked the mix, but he judged each topic needed its own depth, so he split it in two: Marketing Bullets for copy and a new Success Bullets for personal achievement [S6].
-
-### Making the guarantee longer
-
-He found that a longer money-back guarantee lowered refunds. A one-year full guarantee gave buyers more confidence and drew fewer returns than shorter terms, and five years did better still, because a disappointed buyer felt there was plenty of time and never got round to it [S6]. He told marketers to make the guarantee as strong as they can stand.
+Louis Rukeyser's newsletter had about 500,000 subscribers and he wanted a million. Bencivenga advised a firm cap so the cutoff would pull people in. Rukeyser would not limit growth and, by Bencivenga's account, never came close to a million [S6]. The lesson he drew: a limit works only if you mean it.
 
 ## Where he stood
 
@@ -104,7 +125,10 @@ He found that a longer money-back guarantee lowered refunds. A one-year full gua
 - Reports a win rate above 80 percent in head-to-head tests [S2].
 - Wrote for the Charles Givens and Richard Simmons newsletters, as he describes in the Bullets [S6].
 - Started Bencivenga Bullets in 2004, then Marketing Maxims [S1][S2].
+- Coined the name "magalog" after his version beat the first one, made for Personal Finance. He styled his own like a news magazine cover [S7].
+- Wrote a 2005 kurobuta ham letter for a food-and-wine newsletter, with a taste-led headline, a quoted expert and a firm Easter deadline [S8].
 - Named by Bob Bly in 2005 among the best [S5].
+- Says he stopped taking client work and, by about 2005, kept only a partnership in a food and wine newsletter [S7].
 
 ## Where he was wrong or criticised
 
@@ -126,5 +150,5 @@ He found that a longer money-back guarantee lowered refunds. A one-year full gua
 - "What are we really selling?" (Bullet 4, the question he calls most important) [S6]
 - "Never make your claim bigger than your proof." (Bullet 3, repeated in Bullet 7) [S6]
 - "Without belief, nobody buys." (Bullet 7) [S6]
-- "Yelling is not selling." (Bullet 7) [S6]
-- "dig your tunnel at night" (Marketing Maxims page, as of 2026) [S1]
+- "win a friend first and then try to sell later" (Makepeace interview, session 4) [S7]
+- "We're not in this to prove how macho we are." (Makepeace interview, session 4, on turning down jobs) [S7]

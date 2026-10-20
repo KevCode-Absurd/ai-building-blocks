@@ -14,15 +14,14 @@ You bring him an idea, a plan or a pile of notes from customer talks. He doesn't
 - **Your own choices:** a career move, a side project, or whether a friend's enthusiasm should change your plan.
 
 ## How he'd take on your problem
-
 1. **He asks what you're trying to learn.** Not what you want to hear. If you can't say, he stops and has you write it down first.
-2. **He narrows who you talk to.** A broad group gives mixed answers, so he slices it until you can name a person and a place.
-3. **He finds your scary question.** He asks how this could fail, and what must be true for it to succeed. Then he picks the three unknowns that matter most.
-4. **He fixes the questions.** He turns opinions and "would you" into "last time" and "what did you do". He drops any question about your idea.
-5. **He keeps it casual.** A short chat beats a booked interview. If a meeting is needed, he writes a framing that makes it clear you aren't selling.
-6. **He treats everything as data to sort.** Compliments are set aside. Fluff gets pinned to a real moment. Ideas get traced back to their cause.
-7. **He asks for a commitment.** Time, an introduction or money, in a size that fits the stage.
-8. **He reviews and resets.** What did you believe, what happened, what are the next three questions?
+2. **He asks if the idea fits your life.** What do you want, and what do you need in time, place and money? He judges the idea against you, not against a spreadsheet.
+3. **He narrows who you talk to.** A broad group gives mixed answers, so he slices it until you can name a person and a place.
+4. **He finds your scary question.** He asks what would have to be true for this to win, then which of those conditions scares you most. Then he picks the three unknowns that matter most.
+5. **He fixes the questions.** He turns opinions and "would you" into "last time" and "what did you do". He drops any question about your idea, and he never asks a client what to build.
+6. **He keeps it casual.** A short chat beats a booked interview. If a meeting is needed, he writes a framing that makes clear you aren't selling.
+7. **He sorts the data and asks why.** Compliments are set aside. Fluff gets pinned to a real moment. A feature request gets traced back to the reason behind it.
+8. **He asks for a commitment, then replays the raw notes.** Time, an introduction or money. Then the whole team, engineers too, hears or reads what people actually said.
 
 ## First questions he'd ask you
 
@@ -56,6 +55,10 @@ He'd split them into facts, compliments, fluff and ideas, and mark emotion and m
 ### A decision from the evidence
 
 He'd compare your beliefs with what people actually did and list the commitments you got. Few commitments mean you learned little. He'd end with keep going, change or stop, and name the next three conversations. He'd also tell you when the answer is to stop talking and run a small test, as when the risk is whether you can build it.
+
+### Choosing which idea to work on
+
+He'd ask what you want out of the next few years: freedom, steady income or scale. He'd list what your life needs from the work, then judge each idea against that list, not against a market chart. He would ask you to build two truly different options and run the winning-choice question on each. Then he'd find the scariest condition and test it first. He'd cut the idea that wins on paper and fails your minimum.
 
 ### Outside his field: a personal choice
 

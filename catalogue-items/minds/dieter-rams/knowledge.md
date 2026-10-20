@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Dieter Rams is alive, and his views can change. This data set rests on his own speech "Design by Vitsoe", given in New York in December 1976 [S1], an interview he gave to *Kinfolk* in 2017 as reported by Dezeen [S2], a 2019 interview with the director of a film about him [S3], and two reference pages [S4][S5]. Treat each view as "as of" its date. Nothing here tells you what he thinks about products or events since. His speech is still under copyright, so quotes stay short.
+Dieter Rams is alive, and his views can change. This data set rests on his own speech "Design by Vitsoe", given in New York in December 1976 [S1], an interview he gave to *Kinfolk* in 2017 as reported by Dezeen [S2], a 2000 interview with Designboom [S6], a page of his quoted words on the Italian site Design Culture [S7], an excerpt of a 1987 interview [S8], a short 2024 letter published by the Steve Jobs Archive [S9], a 2019 interview with the director of a film about him [S3], and two reference pages [S4][S5]. The 1987 piece is only an excerpt, so we use it lightly. Treat each view as "as of" its date. Nothing here tells you what he thinks about products or events since. His speech is still under copyright, so quotes stay short.
 
 ## In one paragraph
 
@@ -52,9 +52,17 @@ In 1976 he warned of a growing, possibly permanent shortage of raw materials, en
 
 How he applied it: in 2017, aged 84, he questioned whether people really need so many new things, doubted talk of "sustainable growth", and called for fewer, better products [S2].
 
-### Question the obvious
+### Function first, with no "ism"
 
-The Design Museum notes that he urged designers to question everything generally thought to be obvious [S5]. He prefers sketching by hand to digital tools [S5]. His career began with architecture and a carpentry apprenticeship, and he credits his carpenter grandfather's approach to craft [S5].
+In the 2000 Designboom interview he said form has to come after function and he cannot imagine it any other way [S6]. He counts psychological needs as part of function, so the job is to weigh looks against use [S6]. He turned down labels: there is no functionalism, just functions [S6]. The Design Culture page records his lines that design is first and foremost a thinking process, that products should be like tools, and that innovation is never an end in itself [S7]. It also records that decoration for its own sake is packaging, and that cutting cost is fine only as part of making good design available to all [S7].
+
+How he applied it: he mixed materials, such as wood with plastic or aluminium, when the job called for it, and named the Japanese idea of wabi sabi as a reference for calm and balance [S6]. The Design Museum adds that he urged designers to question everything generally thought to be obvious, and that he prefers sketching by hand to digital tools. His career began with architecture and a carpentry apprenticeship, and he credits his carpenter grandfather [S5].
+
+### Back a design with a company that understands it
+
+Rams said good design needs firms whose management truly understands and backs the design process, because that is the only way to make useful products and not ones driven by trends or profit [S7]. In 2000 he credited Erwin Braun and Nils Vitsoe, and called such owners rare in Germany [S6]. He pointed to Adriano Olivetti as the Italian example [S6].
+
+How he applied it: he tied his working life to a few owners he trusted, and stayed with them for decades [S1][S6].
 
 ## How he decides
 
@@ -69,29 +77,26 @@ The Design Museum notes that he urged designers to question everything generally
 
 ## Real decisions
 
-### A transparent lid on the SK 4
+### A plastic lid on the SK 4 (1956)
+In 1956 Rams worked with Hans Gugelot on the SK 4 record player. He suggested a plastic cover in place of the original metal one, which vibrated too much [S5]. The clear lid became the product's best-known feature, and in his 2000 interview the clear cover is named as the piece critics cite most and as a production standard [S5][S6]. A fix for a technical fault ended up as its look, which fits his view that form follows from solving the problem [S1].
 
-In 1956 Rams worked with Hans Gugelot on the SK 4 record player. He suggested a plastic cover in place of the original metal one, which vibrated too much [S5]. The lid became the product's best-known feature, so a fix for a technical fault ended up as its look. It fits his view that form follows from solving the problem [S1][S5].
+### One system for the home, not one product (1957 to 1960)
+In 1957 he began a storage system that became the 606 shelving, produced by Vitsoe since 1959 [S1][S5]. In 1960 he designed the 602 armchair for Vitsoe, the start of a long run of Vitsoe pieces [S7]. He said the shelving works because it fits any home and does not shout, living quietly beside furniture from any designer and era [S1]. He made it adaptable so it can change over time and not be thrown away [S1].
 
-### One system for the home, not one product
+### Fixing a design language at Braun (1963)
+As design director from 1962, he set Braun's system in 1963: uniform unit sizes, white or charcoal grey with aluminium covers, grey controls and a green on-off switch [S5]. His stated reason was that order makes a product useful by showing what it is for, and that products should be understood by everyone and fit together [S1][S5]. By 1968 he was director of design for almost all Braun products [S7].
 
-In 1957 he began a storage system that became the 606 shelving, produced by Vitsoe since 1959 [S1][S5]. He said it works because it fits any home and does not shout, living quietly beside furniture from any designer and era [S1]. He made it adaptable in design and manufacture so it can change over time and not be thrown away [S1].
+### Adding black to the range (1965)
+In 1965 he introduced black bases with the Studio 1000 hi-fi system, a shift that influenced consumer electronics for around thirty years [S5]. The choice shows his restraint: change one thing for a reason, not for fashion. In 1987 he was still defending the Braun look, pointing to a pocket calculator with coloured, convex buttons that looked fresh after a decade [S8].
 
-### Fixing a design language at Braun
+### Building a team and staying inside one company
+In the 1976 New York speech he said he had worked only for Braun and Vitsoe for about 20 years, and argued that a designer cannot do good design from outside, because the ideas must match the company's aims [S1]. In 1987 he credited his team of 16 for Braun's small square black alarm clocks that led the Japanese market, and said Braun's success came through design, not technology [S8]. In 2000 he said he was lucky to start and stop at the right moments, and named Erwin Braun and Nils Vitsoe as the rare charismatic owners who made it possible [S6]. He chose long relationships with a few firms over many clients.
 
-As design director from 1962, he codified Braun's system in 1963: uniform unit sizes, white or charcoal grey with aluminium covers, grey controls and a green on-off switch [S5]. He did this so products would be understood by everyone and fit together [S1][S5]. His stated reason was that order makes a product useful by showing what it is for [S1].
+### Refusing "isms"
+In his 2000 interview he said form has to come after function, and that he cannot picture it any other way [S6]. He also said function includes psychological needs, so a designer has to weigh looks against use, and he rejected the label functionalism: there is no functionalism, just functions [S6]. His reason, as we read it, is that a label turns a way of thinking into a style, the thing he warned against in 1976 [S1][S6].
 
-### Adding black to the range
-
-In 1965 he introduced black bases with the Studio 1000 hi-fi system, a shift that influenced consumer electronics for around thirty years [S5]. The choice shows the same restraint: change one thing for a reason, not for fashion.
-
-### Designing inside one company
-
-In his 1976 New York speech he said he had worked only for two companies, Braun and Vitsoe, for about 20 years [S1]. He argued that a designer cannot do good design from outside the company, because the ideas must match the company's aims, especially for a system [S1]. He chose long relationships over many clients.
-
-### Looking back with regret
-
-In a 2019 film, as reported by its director, Rams accepts that his work at Braun helped feed today's overconsumption and regrets not spreading his ideas on sustainability further [S3]. The same account says that if he started again, he would not choose design but landscape architecture or urban planning [S3]. This is second-hand, through the film director.
+### Looking back with regret, and asking for a fresh look at his own rules
+In a 2019 film, as reported by its director, Rams accepts that his work at Braun helped feed today's overconsumption and regrets not spreading his ideas on sustainability further [S3]. That account says that if he started again he would choose landscape architecture or urban planning [S3]. In a 2024 letter he said his ten principles are not set in stone, that each generation should review them, and that designers should see themselves as advocates for people's needs and for the planet [S9]. He repeated his old line that the days of thoughtless design for thoughtless consumption are over, and added that this has not yet come true [S9].
 
 ## Where he stood
 
@@ -139,5 +144,5 @@ In a 2019 film, as reported by its director, Rams accepts that his work at Braun
 - "Less, but better." (his summary of his principles) [S4]
 - "This is packaging." (on design used only to impress, 1976) [S1]
 - "Functionality must be at the centre of good design." (1976) [S1]
-- "The only plausible way forward is the less-but-better way" (2017) [S2]
-- "Simplicity is the key to excellence!" (2017) [S2]
+- "there is no functionalism, just functions." (Designboom, 2000) [S6]
+- "Do less, but better things." (2024 letter) [S9]

@@ -1,6 +1,6 @@
 # Leonardo da Vinci: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Leonardo's notebooks are in the public domain. The short quotes below come from two old English translations: Jean Paul Richter's (1888) [S5] and Maurice Baring's (1906) [S4]. Translations differ, so treat the exact wording as the translator's. We read his precepts for the painter in full, the notebook entries on experience, light, flying machines and anatomy, and his draft letter offering his services to the Duke of Milan [S4][S5].
 
@@ -76,19 +76,32 @@ His notes on perspective begin with a memorandum of what he asks to have granted
 ## Real decisions
 
 ### Pitching the Duke of Milan
-In a draft letter to Lodovico Sforza he began by saying other military engineers offered nothing different from common instruments, then listed what he could build in war: bridges, siege machines, catapults and mangonels. He added that in peace he could match anyone in architecture and in guiding water, and could do sculpture and painting. He mentioned the bronze horse, and offered to prove any claim by experiment in the Duke's park [S5].
+
+In a draft letter to Lodovico Sforza he began by saying other military engineers offered nothing different from common instruments, then listed what he could build in war: bridges, siege machines, catapults and mangonels. He added that in peace he could match anyone in architecture and in guiding water, and could do sculpture and painting. He mentioned the bronze horse, and offered to prove any claim by experiment in the Duke's park [S5]. The order is the point: he led with what the buyer needed most and put painting last.
 
 ### Studying the veins on many bodies
-To understand blood vessels he took apart more than ten human bodies, one after another, because one did not last long enough, and he repeated the work twice to see the differences. He named what stops others: disgust, fear of the night with corpses, weak drawing, no perspective, no geometry, no patience [S4]. He said a hundred and twenty books he had composed would give the verdict [S4].
+
+To understand blood vessels he took apart more than ten human bodies, one after another, because one did not last long enough, and he repeated the work twice to see the differences. He named what stops others: disgust, fear of the night with corpses, weak drawing, no perspective, no geometry, no patience [S4].
 
 ### Choosing the bat for a flying machine
+
 In a note on flying machines he told himself to copy the bat, not the feathered bird, because the bat's web joins the whole wing and gives strength. He also listed two ways such a machine is destroyed: it breaks, or it turns on its edge, so it should descend on a slant, balanced on its centre [S5].
 
-### Keeping a disordered notebook
-He began a note in Florence in 1508 and called it a collection without order, copied from many papers, hoping to arrange the parts later by subject [S5].
+### Carrying a small book, not trusting memory
 
-### Choosing the company he kept
-He wrote that the painter should keep away from companions who are alien to his studies, and, failing good company, meditate in solitude, because the mind should stay like a mirror that takes on every object [S4].
+He wrote that a master who boasts he can remember every form in nature is graced with ignorance, because the forms are infinite and memory is short [S5]. His remedy was a little book carried everywhere, in which the painter notes with slight strokes how people talk, quarrel, laugh and fight, and keeps the old ones when it is full [S5]. For faces he suggested listing nose and mouth types in the book, so that a glance at a stranger can be matched to a type [S5]. His surviving notebooks are pocket-sized, and the V&A's Forster notebooks mix geometry, hydraulics, anatomy and recipes in one volume [S6].
+
+### Checking a picture in a mirror, then stepping away
+
+On judging your own work he wrote that errors are easier to see in other people's work than in your own [S5]. His method was to look at the painting in a flat mirror, where it appears reversed and looks like some other painter's work [S5]. He added two more checks: leave the work for a rest and come back a better judge, and stand at a distance so the eye takes in the whole at a glance [S5].
+
+### Writing lists of people to ask
+
+One surviving Milan list reads like a to-do list for a mind: get the master of arithmetic to show how to square a figure, ask a friar for a book on weights, ask a builder how mortars are placed on bastions, and ask a merchant how people go on the ice in Flanders [S5]. Another list tells him to describe the tongue of the woodpecker and the jaw of the crocodile [S5]. The habit is to turn each question into a named person to ask or a named thing to look at.
+
+### Keeping a disordered notebook
+
+He began a note in Florence in 1508 and called it a collection without order, copied from many papers, hoping to arrange the parts later by subject [S5].
 
 ## How he decides
 

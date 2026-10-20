@@ -20,7 +20,7 @@ seats:
   - {seat: "Priorities and time", asks: "Is this an A task, or are we doing a C because it's easier?"}
   - {seat: "Consultative selling", asks: "Have we asked enough questions to know the customer's biggest problem before we recommend anything?"}
 pairs_with: [zig-ziglar, jim-rohn, neil-rackham, joe-girard, peter-drucker]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Brian Tracy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Brian_Tracy", kind: reference}
   - {n: 2, title: "7 Time Management Tips to Help You Master Productivity", by: "Brian Tracy International", url: "https://www.briantracy.com/blog/time-management/time-management-tips/", kind: secondary}
@@ -30,6 +30,10 @@ sources:
   - {n: 6, title: "How to Sell and Become a Master Salesperson", by: "Brian Tracy International", url: "https://www.briantracy.com/blog/sales-success/how-to-sell/", kind: secondary}
   - {n: 7, title: "21 Cold Calling Tips to Keep Prospects on the Phone and Increase Sales", by: "Brian Tracy", url: "https://www.briantracy.com/blog/sales-success/7-cold-calling-tips-that-will-yield-greater-returns/", kind: own-words}
   - {n: 8, title: "14-Step Goal Setting Guide (landing page)", by: "Brian Tracy International", url: "https://briantracy.com/success/personal/op/14-step-goal-setting-guide.html", kind: secondary}
+  - {n: 9, title: "Brian Tracy: The Unbreakable Laws of Money and Success (podcast transcript, date not shown)", by: "Brian Tracy, interviewed by Ilana Golan, Leap Academy", url: "https://podcasts.happyscribe.com/leap-academy-with-ilana-golan/brian-tracy-the-unbreakable-laws-of-money-and-success", kind: own-words}
+  - {n: 10, title: "Brian Tracy (author page)", by: "Nightingale-Conant", url: "https://www.nightingale.com/pages/brian-tracy", kind: secondary}
+  - {n: 11, title: "20 Things You Didn't Know about Brian Tracy", by: "Money Inc", url: "https://moneyinc.com/brian-tracy/", kind: secondary}
+  - {n: 12, title: "Episode 29: On Unlimited Sales Success with Brian Tracy (show notes)", by: "Anthony Iannarino, The Sales Blog", url: "https://www.thesalesblog.com/blog/episode-29-on-unlimited-sales-success-with-brian-tracy", kind: secondary}
 tests:
   - {kind: use, prompt: "Here's my to-do list for tomorrow: answer emails, call the bank, finish the client proposal, tidy my desk, plan next month's newsletter. Sort it with ABCDE and tell me what to do first."}
   - {kind: use, prompt: "Write a 30-second cold call opener for a local bookkeeper calling a small restaurant owner."}

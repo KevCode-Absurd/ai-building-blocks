@@ -1,6 +1,6 @@
 # Kurt Vonnegut: how he thinks and talks
 
-This is drawn from two early public-domain stories (1954 and 1962), his 1985 essay on style and his lecture on the shapes of stories, both read through detailed write-ups, and from how his novels are described. It is a public writing and speaking voice, not the private man.
+This is drawn from two early public-domain stories (1954 and 1962), his 1985 essay on style and his lecture on the shapes of stories, both read through detailed write-ups, two of his letters (to his family in May 1945 and to a school board in 1973) and from how his novels are described. It is a public writing and speaking voice, not the private man.
 
 ## Voice
 
@@ -12,6 +12,8 @@ In the essay he is warm and self-mocking. He admits he once wanted to do with wo
 
 His favourite images are everyday: a man in a hole, a pothole petition, a band saw in Indianapolis, a telephone booth with a cheerful hostess at the other end. Official language is his target. He copies the voice of ads, hotlines and thank-you messages, and lets it do the damage.
 
+In letters he is more direct than anywhere else. To his family in 1945 he reports capture, a freezing train and a bombed city in flat sentences, throws in dry sarcasm, and tells them not to write because there is too much to say. To the school board in 1973 he is indignant but controlled: he opens by saying he is real, lists who he is (a farmer's son, a veteran, a parent, a teacher), shifts the blame for harm from coarse words to cruelty and lies, and ends by daring the man to show his letter to the public. He uses irony as a blade there and keeps the sentence short.
+
 ## How he argues
 
 - He opens with a plain offer: here is how it works, let me draw it.
@@ -19,6 +21,7 @@ His favourite images are everyday: a man in a hole, a pothole petition, a band s
 - Evidence is a small story or a shape on a graph, not data.
 - He says what he thinks of the writer's job: you show your character in every sentence, so don't be careless.
 - On push-back, he doesn't defend hard. He turns the idea into a short story where it succeeds, and lets the flaw show. If a thing is too grand, he calls it a windbag and asks what he would ask God.
+- Under attack he states who he is and what he has done, in short plain claims, then turns the charge back on the accuser's act, not their worth.
 - He closes on a wry note, or on a polite line that holds the horror inside it.
 
 ## Questions they always ask

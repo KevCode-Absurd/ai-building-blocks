@@ -1,8 +1,8 @@
 # Kenya Hara: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Kenya Hara is alive, and views can change. Everything below comes from three question-and-answer interviews (2014 and 2017), his profiles on the Japan Design Committee and Hara Design Institute sites, two magazine pieces that quote his books, and a reference page. His main books, *Designing Design* (2007) and *White* (2009 in English), are not online, so we use them only through the summaries and short quotes in those sources. Treat each view as "as of" the year of its source, mostly 2009 to 2017. Nothing here tells you what he thinks about events after that. Some dates differ between sources, and we flag them.
+Kenya Hara is alive, and views can change. Everything below comes from three question-and-answer interviews (2014 and 2017), his profiles on the Japan Design Committee and Hara Design Institute sites, two magazine pieces that quote his books, and a reference page. His main books, *Designing Design* (2007) and *White* (2009 in English), are not online, so we use them only through the summaries and short quotes in those sources. In October 2026 it was widened with the project pages of his own studio, Hara Design Institute, which give his design choices and reasons for MUJI advertising, Tsutaya, JAPAN HOUSE, a sake bottle and more [S9] to [S17]. Those pages are the studio's own descriptions, with little first-person text. Treat each view as "as of" the year of its source, mostly 2009 to 2017. Nothing here tells you what he thinks about events after that. Some dates differ between sources, and we flag them.
 
 ## In one paragraph
 
@@ -62,7 +62,7 @@ How he applied it: his listed works include a 2003 MUJI advert called "Horizon" 
 
 The Hara Design Institute says he works to make the potential of industry and Japanese culture visible and widely shared [S5]. PRINT quotes a 2014 interview in which he said designers now help an industry see its hidden possibilities, not just make attractive forms [S7]. He argued that the goal is moving from making products to creating value, including cultural value [S7].
 
-How he applied it: he became chief creative director of Japan House, a project of Japan's foreign ministry to present Japanese culture abroad, and designed its logo in 2016 [S4]. In 2019 he launched the *HIGH RESOLUTION TOUR* website, which explores places in Japan through personal eyes [S4].
+How he applied it: his institute publishes unrealised propositions that look beyond client work, such as Peninsula Airlines [S12]. He became chief creative director of Japan House, a project of Japan's foreign ministry to present Japanese culture abroad, and designed its logo in 2016 [S4]. In 2019 he launched the *HIGH RESOLUTION TOUR* website, which explores places in Japan through personal eyes [S4].
 
 ## How he decides
 
@@ -71,6 +71,12 @@ How he applied it: he became chief creative director of Japan House, a project o
 - Bring form and use as close together as you can [S6].
 - Look for the potential already hidden in a place or industry [S5][S7].
 - Give the problem a name before you design [S3].
+- Pick one material move that carries the whole idea, such as torn paper on a mirror bottle [S11].
+- Make room for play next to function [S13].
+- Give each part of a complex its own logotype inside one shared visual language [S15].
+- Let materials carry the worldview, such as translucent green bottles and warm white shops for a skincare brand [S16].
+- Redraw a familiar mark with care and keep what people already know [S17].
+- Test big ideas as unrealised propositions, with costs and legal limits stated [S12].
 - Start each project by sharing the vision with the whole team [S5].
 - Commit so fully that you can't imagine dying before it's done [S3].
 
@@ -80,29 +86,33 @@ How he applied it: he became chief creative director of Japan House, a project o
 
 Tanaka, the earlier art director, handed over the role after seeing Hara's *RE-DESIGN* exhibition. [S1] Hara says the show showed him that design can change basic, ordinary products. [S1] He was drawn by the chance to help a brand that had succeeded at home spread across the world. [S2]
 
-### Choosing packaging over advertising
+### A mirror bottle with a torn paper label (Hakkin, 2000)
 
-At MUJI he put his effort into package design rather than advertising, which he called ordinary but hard to control. [S1] The brand carries no logo on its products. [S1][S6]
+The sake maker wanted a stainless steel bottle. [S11] Hara polished the steel to a mirror so the bottle takes on its surroundings, and in place of a normal label used a neck label of hand-torn washi from Tokushima. [S11] His stated reasons were a strong presence that comes from the setting, and one crafted, tactile detail that speaks for the brand. [S11]
+
+### Making MUJI advertising out of nature, not products (2003 on)
+
+His first MUJI corporate advert, "Horizon", ran in 2003, and the series that followed used themes such as a teahouse (2005), water (2009) and the colors of the earth (2015). [S14] Titles like "Want to Be Like Water" and "Like Water and Air" (2025) carry the same idea he gave Dezeen in 2017, that MUJI fills gaps like water. [S14][S1] A 2026 exhibition shows the set at full scale under the title "Nothing, yet everything". [S14]
+
+### Rewriting Tsutaya in kanji (2011)
+
+For the Daikanyama Tsutaya Shoten store, which aimed to win back the postwar baby boom generation, the studio replaced the Roman logo with the kanji 蔦屋書店 for being concise and easy to read. [S9] It then broke the logo into dots as the base of the system, made signs of thin stamped metal readable from both sides, and ran a first advert of a person reading with the line "Welcome back to books". [S9]
+
+### Making JAPAN HOUSE a single line (2016)
+
+For Japan's foreign ministry project to change how people see Japan, the studio condensed Japanese values into one open horizontal mark, 一, with the idea of a crucible of emptiness. [S10] The reason was that an open symbol can hold many readings. [S10] The first events used a flower artist and live music to introduce the venue. [S10]
+
+### Function and laughter in packaging (Takeo Paper Show, 2023)
+
+Planning the first Takeo Paper Show in five years, Hara and his institute set the theme "PACKAGING: Function and Laughter". [S13] One half asked thirteen creator groups for new containers and materials; the other half, curated by Makoto Umebara, looked at packaging that makes people want to pick it up. [S13] The companion book opens from either side, with one half on each. [S13]
+
+### Proposing a flying-boat airline (Peninsula Airlines, 2025)
+
+As a self-started proposition, the institute suggested using Japan's US-2 rescue flying boat for passengers to reach peninsulas that roads and rail serve badly. [S12] It argued that a trip from Tokyo to Oma could drop from about six hours to about two, and that access would raise the value of rural land. [S12] It lists the costs, the legal limit on military aircraft and fishing rights talks as challenges rather than hiding them. [S12]
 
 ### Growing MUJI in America like water (2017)
 
 For the US expansion he did not plan a loud launch. He said the brand fills the gaps it finds, so its presence can grow without a dramatic push. [S1] He is not concerned with which products sell best, because customers walk in with no item in mind. [S1]
-
-### Running thought games about MUJI everything
-
-To anticipate future needs, he and the team imagine MUJI as a hotel, a sports team, an airline or a travel company. [S1] The purpose is to keep the brand a question rather than a fixed answer. [S1]
-
-### Explaining emptiness to the world
-
-He decided to use emptiness, not simplicity, to explain MUJI to the West, and traced the idea to fifteenth-century Kyoto and the empty space of a Zen garden. [S2][S1] His stated reason: simplicity is a Western value, while emptiness invites people to bring their own meaning. [S2]
-
-### Committing to a project fully
-
-He says he judges his work by how fully he commits, treating each project as something he must see through. This habit, he says, sets his personal standard. [S3]
-
-### Turning to the roots of the word "mathematics"
-
-In 2014 he said his current interest was the word's origin, which he reads as a call to review and rethink what you already know. He says this idea is changing his work. [S3]
 
 ## Where he stood
 

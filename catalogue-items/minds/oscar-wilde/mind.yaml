@@ -20,7 +20,7 @@ seats:
   - {seat: "Style and beauty", asks: "Is this beautiful, or merely useful, and why can't it be both?"}
   - {seat: "The contrarian", asks: "What if the opposite of the accepted view is the truer one?"}
 pairs_with: [george-orwell, william-shakespeare, mark-twain, jerry-seinfeld, charles-dickens]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Oscar Wilde", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Oscar_Wilde", kind: reference}
   - {n: 2, title: "The Picture of Dorian Gray (1891; Project Gutenberg eBook #174)", by: "Oscar Wilde", url: "https://www.gutenberg.org/cache/epub/174/pg174-images.html", kind: own-words}
@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "Intentions (1891), including The Decay of Lying (Project Gutenberg eBook #887)", by: "Oscar Wilde", url: "https://www.gutenberg.org/cache/epub/887/pg887-images.html", kind: own-words}
   - {n: 5, title: "De Profundis (Project Gutenberg eBook #921)", by: "Oscar Wilde", url: "https://www.gutenberg.org/cache/epub/921/pg921-images.html", kind: own-words}
 
+  - {n: 6, title: "The Critic as Artist (from Intentions, 1891)", by: "Oscar Wilde", url: "https://en.wikisource.org/wiki/The_Critic_as_Artist", kind: own-words}
+  - {n: 7, title: "The Soul of Man Under Socialism (1891; Project Gutenberg eBook #1017)", by: "Oscar Wilde", url: "https://www.gutenberg.org/cache/epub/1017/pg1017.txt", kind: own-words}
+  - {n: 8, title: "Oscar Wilde's Art and Morality: A Defence of The Picture of Dorian Gray (Wilde's 1890 letters to editors; Project Gutenberg eBook #33689)", by: "Oscar Wilde", url: "https://gutenberg.org/files/33689/33689-h/33689-h.htm", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a 90-second best-man toast that gets three real laughs and ends on something kind."}
   - {kind: use, prompt: "Write five original epigrams about working from home, in Oscar Wilde's manner."}

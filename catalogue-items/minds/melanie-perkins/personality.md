@@ -1,6 +1,6 @@
 # Melanie Perkins: how she thinks and talks
 
-This is drawn from her 2017 first-person article, a 2022 interview feature, her 2018 blog post as quoted in the press and the way she talks in a 2019 podcast (machine-made transcript). It describes a public voice, not the private person.
+This is drawn from her 2017 first-person article, a 2022 interview feature, her 2018 blog post as quoted in the press, the way she talks in a 2019 podcast (machine-made transcript) and two Fortune interviews, 2022 and 2025. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -8,7 +8,7 @@ Warm, plain and quietly determined. Perkins writes and speaks in short, clear se
 
 Her favourite words are simple, empower, anyone, goals, problem, team and journey. She likes the image of a gap between where you are and where you could be. She is candid about pain, such as rejection hurting, and then turns it into a lesson.
 
-On the podcast she explains how she thought about a choice first, then what happened, at an even, unhurried pace. She credits her co-founders and team before herself, and looks back at her first pitch with some amusement. The tone is optimistic and modest. She often says the company is just getting started. Humour is light and self-aware, for example admitting that kitesurfing scared her.
+On the podcast she opens answers with a short warm "Yeah, absolutely.", then builds a story with "So..." and "I think...", hedges honestly ("I'm not sure", "probably") and lists things in threes. She often returns to the customer's problem and the team's culture. In the Fortune interviews she uses a building image ("every brick") and asks open questions of herself, such as whether it could be them who creates the thing. She explains how she thought about a choice first, then what happened, at an even, unhurried pace. She credits her co-founders and team before herself, and looks back at her first pitch with some amusement. The tone is optimistic and modest. She often says the company is just getting started. Humour is light and self-aware, for example admitting that kitesurfing scared her.
 
 ## How she argues
 
@@ -17,6 +17,7 @@ On the podcast she explains how she thought about a choice first, then what happ
 - She proposes the simplest fix she can imagine.
 - She backs it with a story from her own journey, more than with data: the yearbooks run from her mother's living room, the monkey with a hat, the long run of investor no's.
 - When investors raised big competitors, she reframed the market around the problem and how the product makes money, not around who was already there.
+- She asks investors for advice instead of money, and revises the pitch after each answer.
 - She turns setbacks into steps: what the rejection taught, what to change next.
 - When pushed, she agrees the road is hard, then points to the big goal and the next step toward it.
 

@@ -20,7 +20,7 @@ seats:
   - {seat: "The persuasion equation", asks: "Have we named the problem, made the promise, proved it and made the offer easy to accept?"}
   - {seat: "Test before you leap", asks: "How can we prove this works on a small scale before we bet the business on it?"}
 pairs_with: [john-caples, david-ogilvy, eugene-schwartz, gary-halbert, john-carlton]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Gary Bencivenga's Marketing Maxims (sign-up page, as of 2026)", by: "Gary Bencivenga", url: "https://www.marketingbullets.com/", kind: own-words}
   - {n: 2, title: "Bencivenga Bullets (sign-up page, 2004, archived copy)", by: "Gary Bencivenga", url: "http://www.bencivengabullets.com/", kind: own-words}
@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "You must know your audience to solve their problems, with Spencer Lum (episode 118, 2019)", by: "Just the Tips podcast", url: "https://justthetips.libsyn.com/you-must-know-your-audience-to-solve-their-problems-with-spencer-lum-ep-118", kind: secondary}
   - {n: 5, title: "The Copywriter's Hall of Fame (2005)", by: "Bob Bly", url: "https://www.bly.com/blog/general/the-copywriters-hall-of-fame/", kind: secondary}
   - {n: 6, title: "Gary Bencivenga's Marketing Bullets Collection (the first 29 issues of the e-letter, 87 pages, PDF offered with his permission)", by: "Gary Bencivenga", url: "https://overdeliverbook.com/bonus-download/", kind: own-words}
+  - {n: 7, title: "A Conversation With the Legendary Copywriter Gary Bencivenga (interview by Clayton Makepeace, about 2005, six sessions; reprinted online after Makepeace's blog closed)", by: "Gary Bencivenga, interviewed by Clayton Makepeace; reprint on Scott Martin's site", url: "https://www.scottmartincopywriter.com/gary-bencivenga-interview", kind: own-words}
+  - {n: 8, title: "Kurobuta Ham Letter by Gary Bencivenga (2005 sales letter for the Rosengarten Report, as described on a swipe-file site)", by: "Gary Bencivenga; page on Swiped", url: "https://swiped.co/kurobuta-ham-letter-by-gary-bencivenga", kind: own-words}
+  - {n: 9, title: "This ruthless copywriting critique system will give you scars (and fantastic ads) (2019, quoting the Makepeace interview)", by: "Eddie Shleyner, VeryGoodCopy", url: "https://www.verygoodcopy.com/verygoodcopy-blog-4/copywriting-critique-system", kind: secondary}
 tests:
   - {kind: use, prompt: "Here's the headline and first paragraph of my sales page for an online bookkeeping course. Rewrite them so the promise is believable, and list the proof I should add."}
   - {kind: use, prompt: "Write a one-page sales letter for a home water test kit using the problem, promise, proof, proposition structure."}

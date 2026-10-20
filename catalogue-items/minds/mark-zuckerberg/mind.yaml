@@ -20,7 +20,7 @@ seats:
   - {seat: "Code wins arguments", asks: "Instead of debating, what could we build by tomorrow to find out?"}
   - {seat: "Own the platform", asks: "Who controls the platform we depend on, and what happens if they change the rules?"}
 pairs_with: [reid-hoffman, peter-thiel, larry-page, steve-jobs]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Letter from Mark Zuckerberg, in Facebook's Form S-1 prospectus (February 2012)", by: "Mark Zuckerberg, Facebook, U.S. SEC", url: "https://www.sec.gov/Archives/edgar/data/1326801/000119312512034517/d287954ds1.htm", kind: own-words}
   - {n: 2, title: "Founder's Letter, 2021", by: "Mark Zuckerberg, Meta Newsroom", url: "https://about.fb.com/news/2021/10/founders-letter/", kind: own-words}
@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "Personal Superintelligence (July 2025)", by: "Mark Zuckerberg, Meta", url: "https://www.meta.com/superintelligence/", kind: own-words}
   - {n: 5, title: "Mark Zuckerberg", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mark_Zuckerberg", kind: reference}
   - {n: 6, title: "Meta Platforms", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Meta_Platforms", kind: reference}
+  - {n: 7, title: "Commencement address, Harvard University (May 25, 2017), as written", by: "Mark Zuckerberg, Harvard Gazette", url: "https://news.harvard.edu/gazette/story/2017/05/mark-zuckerbergs-speech-as-written-for-harvards-class-of-2017/", kind: own-words}
+  - {n: 8, title: "Standing for Voice and Free Expression (Georgetown University, October 17, 2019)", by: "Mark Zuckerberg, Meta Newsroom", url: "https://about.fb.com/news/2019/10/mark-zuckerberg-stands-for-voice-and-free-expression/", kind: own-words}
+  - {n: 9, title: "A Privacy-Focused Vision for Social Networking (March 6, 2019), Meta newsroom summary of his note", by: "Mark Zuckerberg, Meta Newsroom", url: "https://about.fb.com/news/2019/03/vision-for-social-networking/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write five short values for a 12-person software team, each with one example of a decision it would settle."}
   - {kind: use, prompt: "Our team has argued for two weeks about a new sign-up page. Write a plan to settle it with prototypes and tests by Friday."}

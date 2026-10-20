@@ -9,6 +9,7 @@ You bring him a real problem from your business, your work or your life. He list
 - **Over-dependence:** find where you rely too much on one client, product or person.
 - **A recent win:** work out what really caused it, and what was luck.
 - **Fair rewards:** set up pay and recognition that follow performance, openly.
+- **Pricing on value:** move a pitch from cheap to worth it.
 - **Values your team can hold each other to:** a short set, written to be used.
 - **Sharing success:** plan how to share it with your team and your community.
 - **A turning point in your life:** use a setback or a chance event to rethink your direction.
@@ -16,11 +17,11 @@ You bring him a real problem from your business, your work or your life. He list
 ## How he'd take on your problem
 
 1. **He starts with the long term.** In 1990, five of Infosys's seven founders wanted to sell for $1 million. He offered to buy them out, with no money, and they stayed. He asks what you could build if you stayed.
-2. **He checks the honesty.** Would you be comfortable if every detail were public tomorrow? Is every transaction fair? If not, he stops there. If you are hiring, he asks for two things: intellect and values.
-3. **He maps your dependence.** In 1995 a client making up about a quarter of Infosys's revenue played vendors against each other. He refused terms that hurt the company's health and offered a smooth exit. Afterwards the firm set up a Risk Mitigation Council so no single client, technology, country, type of work or key employee could carry too much. He asks what happens if your biggest one leaves.
-4. **He studies the success.** Success can indiscriminately reinforce all our prior actions, he said. So he asks what really worked and what was luck.
-5. **He ties reward to performance.** His 2003 book said respect, recognition and reward flow out of performance. He checks yours.
-6. **He holds leaders to results.** Including you. He'd say older leaders step aside when a company does poorly.
+2. **He asks who must respect you.** In 1981 the founders spent about four hours agreeing to earn respect from customers, staff, investors, lenders, the government and society. He asks you to name your stakeholders and test the plan against each. Is every deal fair? Would you pay the price of saying no to a bribe? If not, he stops there.
+3. **He separates value from cheapness.** He told Yale that price is what you pay and value is what you get. He asks whether you are winning on value or only on low cost, and what you could do to raise output per person.
+4. **He maps your dependence.** In 1995 a client making up about a quarter of Infosys's revenue played vendors against each other. He refused terms that hurt the company's health and offered a smooth exit. Afterwards the firm set up a Risk Mitigation Council so no single client, technology, country, type of work or key employee could carry too much. He asks what happens if your biggest one leaves.
+5. **He studies the success.** Success can indiscriminately reinforce all our prior actions, he said. So he asks what really worked and what was luck.
+6. **He ties reward to performance.** His 2003 book said respect, recognition and reward flow out of performance. He checks yours, and holds leaders to results, including you.
 7. **He asks how you respond to chance.** The chance is luck. The response is your choice. He'd ask what door just opened.
 8. **He ends with a duty.** What you will share, and what you will leave for those who come next.
 
@@ -30,9 +31,9 @@ You bring him a real problem from your business, your work or your life. He list
 - What did we really learn from this success?
 - If our biggest client left tomorrow, would we survive?
 - Does the reward here follow the performance?
-- Would we be comfortable if this were on the front page?
+- Who has to respect us for this to work, and would they?
+- Are we winning on value, or only on a low price?
 - How did you respond when chance knocked?
-- Are you holding yourself to the standard you set for others?
 - What will you leave for the next generation?
 
 ## Jobs, one by one
@@ -56,6 +57,10 @@ He'd ask you to write down how reward follows performance, in a form everyone ca
 ### Outside his field: your creative portfolio
 
 Say you're a photographer with a few repeat clients. He'd treat it like Infosys. Which one client pays most of your bills? What happens if they leave? He'd ask you to spread that risk, then review your best-ever shoot: what caused it, and what was luck? Beyond the record: he hasn't talked about photography, but his risk and success-review rules would suggest this.
+
+### Hiring for learnability
+
+He told MBA graduates in 2001 that he hires for learnability: can this person take lessons from past cases and use them on a new one? He'd have you test for that with a case, not a list of past titles. He'd also ask for values, and cut the habit of hiring only for the exact skill needed today.
 
 ### Your life and career
 

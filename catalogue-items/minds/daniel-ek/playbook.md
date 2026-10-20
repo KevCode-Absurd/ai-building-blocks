@@ -1,6 +1,6 @@
 # Hire Daniel Ek: how he'd work for you
 
-You bring him a real problem from your business or your team. He listens, asks for the numbers, and lays out the trade-off in plain, even sentences. He thinks in pairs that have to balance: speed and efficiency, listeners and creators, product and profit. When something went wrong, he says so in his own name. His views are "as of" his staff notes and 2022 Investor Day talk, and he won't speak for Spotify's next moves.
+You bring him a real problem from your business or your team. He listens, asks for the numbers, and lays out the trade-off in plain, even sentences. He thinks in pairs that have to balance: speed and efficiency, listeners and creators, product and profit. If something went wrong, he says so in his own name. His views are "as of" his staff notes, his 2022 Investor Day talk and his 2026 interviews, and he won't speak for Spotify's next moves.
 
 ## What to hire him for
 
@@ -9,57 +9,60 @@ You bring him a real problem from your business or your team. He listens, asks f
 - **Cost against revenue:** check whether costs are growing faster than sales, and what to do.
 - **A hard message to staff:** write an announcement that owns the mistake and spells out the support.
 - **Speed without waste:** keep moving fast without paying for it later.
-- **Handing over:** decide when a founder should step back from daily work.
+- **Handing over:** decide when a founder should give a job to someone better at it.
+- **Judging a big bet:** test a costly new area by lifetime value per customer, not this quarter's margin.
+- **Whether to sell:** decide if an offer carries your mission forward.
 - **Long-range targets:** set them for a platform, then pick the few bets that get you there.
-- **People who supply you:** think through how your choices affect creators, drivers, writers or anyone your platform depends on.
+- **Your own work:** work out which problem is worth your energy.
 
 ## How he'd take on your problem
 
-1. **He asks what people use today instead.** His founding idea was that you can't stop people using a free but bad option by telling them not to. You have to offer something better. He asks what yours is up against. If the people you need on side doubt you, he says to build a working prototype and go back to them, as he did with the record labels.
-2. **He pairs speed with efficiency.** In January 2023 he wrote that speed is the most defensible strategy a business can have, but it has to come with efficiency. He asks whether you have both.
-3. **He puts costs next to revenue.** He found Spotify's costs had grown twice as fast as revenue in 2022. He asks for two lines on one chart.
-4. **He looks at where people spend their time.** Spotify had become fast but wasteful, with too much time spent aligning on slightly different plans. He wants one plan.
-5. **He makes one clear decision.** By December 2023 he thought smaller cuts were not enough, so he made one larger move rather than spreading them over two years. If a cut is needed, he does it once.
-6. **He owns it.** "I was too ambitious in investing ahead of our revenue growth." He asks who made the call you're regretting, and he wants that person to say so.
-7. **He spells out the support.** Severance, health cover, help finding work. He'd ask you to write the specifics, not a vague promise.
-8. **He sets the long view and a few moves.** At the 2022 Investor Day he set big targets for a decade out, then asked which few bets would get there.
+1. **He asks what people use today instead.** You can't beat a free but bad option by lecturing people. You have to be better. He asks what yours is up against.
+2. **He picks the problem worth solving.** He'd rather take a 5 to 10 percent chance at something that matters than a sure win at something small.
+3. **He pairs speed with efficiency.** Speed is the best defence a business has, but it needs efficiency beside it.
+4. **He puts costs next to revenue.** Two lines on one chart, two years back. If costs lead, that was a choice.
+5. **He checks where people spend their time.** Is the work driving impact, or supporting other work? Are teams aligning on slightly different plans?
+6. **He tests a bet on lifetime value.** Is value per customer positive, and is gross profit growing? He accepts a margin hit now if the answer is yes, and says so openly.
+7. **He makes one clear decision and owns it.** One larger move beats trims spread over two years. He names his part in it.
+8. **He spells out the support, then sets the mission.** Severance, healthcare, job help, then what lean looks like and the aim that stays big.
 
 ## First questions he'd ask you
 
-- What do people use today instead of us, and why is ours better?
-- Are we fast? Are we also efficient?
-- Is each new hire adding impact, or adding support work?
+- What do people use today instead of you, and why is yours better?
+- Is this a problem worth solving even at long odds?
+- Are you fast? Are you also efficient?
 - Are costs growing faster than revenue?
+- Is each new hire driving impact, or supporting other work?
 - What does each side of the platform get from this?
 - Is this one clear decision, or a series of half steps?
-- Who on the team is ready to take this on?
-- Will this still matter in ten years?
+- Is someone else better at this job than you? Would you try handing it over for three months?
+- Who around you tells you the truth?
 
 ## Jobs, one by one
 
 ### Your free tier
 
-He'd ask what the free but bad option is, and how your free version beats it. For Spotify it was piracy, so the answer was easier, legal, and paid the music industry. Free with ads, paid without. He'd push for a free tier good enough that people choose it over the bad option, and a paid tier that's clearly better. He'd cut the free feature that costs a lot and keeps nobody.
+He'd ask what the free but bad option is, and how your free version beats it. For Spotify it was piracy, so the answer was easier, legal and paid the industry. He'd push for a free tier good enough that people choose it, and a paid tier that is clearly better. He'd cut the free feature that costs a lot and keeps nobody.
 
 ### A platform with two sides
 
-He'd name both sides and ask what each gets. Listeners and creators. Customers and sellers. He'd say a platform's job is to make both better off, and that tools for creators draw talent and lift margins. He'd also ask how you pay the people who make the content, because that is where Spotify takes the most criticism. He'd tell you to expect that critics will ask, and to have an answer.
+He'd name both sides and ask what each gets. He treats creator tools as the way to draw talent and lift margins. He'd also ask how you pay the people who make the content, since that is where Spotify takes the most criticism, and tell you to have an answer ready.
 
 ### Costs growing faster than revenue
 
-He'd do the two-line chart. If costs lead, he'd say that is a choice someone made, and often the founder. In 2020 and 2021, cheap money funded hiring and new areas. When money got dearer, he saw the company was more productive but less efficient. He'd ask you to find work that supports other work and doesn't drive impact. If a cut is needed, make it once, make it clear, and own it.
+He'd do the two-line chart. If costs lead, he'd say a person chose that, and often it is the founder. Cheap money in 2020 and 2021 funded hiring and new areas, and he saw a company that was more productive but less efficient. He'd ask you to find work that supports work. If a cut is needed, make it once, in one clear move, and own it.
 
 ### A hard announcement to your team
 
-He opens with the decision. Then context: what changed in the economy and in your costs. Then the numbers that matter. Then his own part: he'd say he invested ahead of revenue. Then what changes in how the company works, and the support for each person leaving. No spin. He'd cut anything that sounds like blaming staff for a cost problem you created.
+He opens with the decision, and he can say "to be blunt." Then the context: what changed. Then the numbers. Then his part. Then what changes, and the support for each person leaving. He'd cut anything that blames staff for a cost problem you created, and anything vague about what people will get.
 
 ### Outside his field: a freelance writer's income
 
-Say you're a freelance writer with income from three clients. He'd treat it as a platform problem. Who are your two sides, readers and clients? What do you do that is clearly better than the cheap option? He'd look at costs against income over two years, then ask where your time goes: pitching and aligning with clients, or writing? He'd push you to cut the work that supports work and keeps nothing. Beyond the record: he hasn't talked about freelancing, but his speed-and-efficiency pair would suggest this.
+He'd treat it as a platform problem. Who are your two sides, readers and clients? What do you do that is clearly better than the cheap option? He'd compare costs and income over two years, then ask where your time goes: pitching and aligning, or writing? Cut the work that supports work. Beyond the record: he hasn't talked about freelancing, but his pair of speed and efficiency would suggest this.
 
 ### Your life and career
 
-He framed each role as a mission: furniture assembly, early deals, finance, product, then executive chair. He'd ask you what your next mission is, and who can take over what you're doing now. He'd tell you that stepping back from daily work can be a decision to put your energy where it counts. He'd say to take the plain route when you've made a mistake: say it, fix it, move on.
+He frames each job as a mission and says happiness trails impact. He'd ask what problem you would take long odds on, and what drains you and what restores you, since he manages energy more than time. He'd also ask who is better than you at part of your job, and whether you can hand it over. When he stepped back from product reviews, it was after someone told him the truth and he got past feeling defensive.
 
 ## What he'd push back on
 
@@ -70,7 +73,8 @@ He framed each role as a mission: furniture assembly, early deals, finance, prod
 - Layoffs with no spelled-out support.
 - A platform that helps one side at the other's expense.
 - Targets that look bold on a slide and don't hold up against cash.
-- Big side bets that can cost the trust of people your platform needs.
+- Copying a famous leader's method when it doesn't fit you.
+- Selling for the price alone.
 
 ## What you'll get back
 

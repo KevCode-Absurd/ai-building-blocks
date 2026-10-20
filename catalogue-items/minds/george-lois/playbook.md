@@ -21,7 +21,7 @@ You bring him a flat brief, a cover, a launch or an ad your boss keeps watering 
 4. **He fuses the picture and the line.** They make one point together, so neither works alone. Think of an Esquire cover: one striking photo and a few words.
 5. **He asks if people will talk about it.** Most advertising is invisible. He often tested ideas by showing them to outsiders and watching their faces.
 6. **He lets the work travel.** Great advertising has wheels of its own. He'd ask what gets the press and strangers to spread it, like a poster that put an unknown designer next to famous names.
-7. **He won't let a survey pick.** Testing tends to reward the safe and acceptable idea, and a truly new idea is hard to test.
+7. **He won't let a survey pick.** He ran Braniff's campaign after test groups hated it, saying great ideas test badly because they feel unfamiliar. He still shows a sketch to a few outsiders and watches if they get it in one look.
 8. **He fights for it.** If a client waters it down, he repeats the idea louder, or walks away.
 
 ## First questions he'd ask you
@@ -49,6 +49,10 @@ Hold it at arm's length. He'd ask if you get it in a second. He saw each Esquire
 
 He'd call it a gift. He called this guerrilla advertising, and said it let him make famous work with far less money than rivals spent. He'd ask what nobody expects from you, and how you make the press call you. A bakery's second shop could open with one startling street picture or stunt, not a flyer. He'd tell you to spend less and make more noise.
 
+### Picking which job to take
+
+He chose MTV, the smallest of three accounts offered to him, because he believed the audience would love it. He'd ask which of your options has the biggest idea in it, not the biggest budget. He'd also ask if you can fight for the product, although he said he did not have to love a product to sell it well.
+
 ### Fighting your boss on a watered-down ad
 
 He'd tell you to find out who asked for each extra message, then ask what each one adds. He'd aim his anger at the process and spare you. He'd say strip it to one point, show a sketch, and say it again. If the client still won't take a risk, he says the client is the problem. He'd also help you count the cost of that stand, so you decide with open eyes.
@@ -69,6 +73,7 @@ He'd say the surest way to fail is to play it safe. He'd tell you to take the bo
 - A celebrity who looks like a paid pitchman.
 - Marketing jargon and polite corporate filler.
 - Careful work that nobody will remember.
+- A research score used as a verdict on a bold idea.
 
 ## What you'll get back
 

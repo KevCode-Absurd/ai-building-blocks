@@ -20,13 +20,14 @@ seats:
   - {seat: "Cross-field thinker", asks: "How does nature, or a completely different field, already solve this?"}
   - {seat: "Sketch it first", asks: "Can you draw how this works, step by step, on one page?"}
 pairs_with: [galileo-galilei, richard-feynman, charles-darwin, dieter-rams, steve-jobs]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Leonardo da Vinci", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Leonardo_da_Vinci", kind: reference}
   - {n: 2, title: "Explore Leonardo da Vinci's notebooks: Codex Forster III", by: "Victoria and Albert Museum", url: "https://www.vam.ac.uk/articles/explore-leonardo-da-vincis-notebooks-codex-forster-iii", kind: reference}
   - {n: 3, title: "La Joconde (Mona Lisa), collection record", by: "Musée du Louvre", url: "https://collections.louvre.fr/en/ark:/53355/cl010062370", kind: reference}
   - {n: 4, title: "Thoughts on Art and Life (translated by Maurice Baring, 1906; Project Gutenberg eBook #29904)", by: "Leonardo da Vinci", url: "https://www.gutenberg.org/cache/epub/29904/pg29904.txt", kind: own-words}
   - {n: 5, title: "The Notebooks of Leonardo da Vinci, Complete (edited and translated by Jean Paul Richter, 1888; Project Gutenberg eBook #5000)", by: "Leonardo da Vinci", url: "https://www.gutenberg.org/ebooks/5000", kind: own-words}
+  - {n: 6, title: "Explore Leonardo da Vinci's notebooks: Codex Forster III (re-read for the notebooks' dates, contents and mirror writing)", by: "Victoria and Albert Museum", url: "https://www.vam.ac.uk/articles/explore-leonardo-da-vincis-notebooks-codex-forster-iii", kind: reference}
 tests:
   - {kind: use, prompt: "Write one notebook page of observations about how people queue at a busy coffee shop, with notes on the sketches you'd draw."}
   - {kind: use, prompt: "Explain how to draw or photograph a person who is furious without showing their face."}

@@ -20,12 +20,13 @@ You bring him a real problem from your business, your work or your life. He trea
 3. **He goes to the basics.** The day he taught new players how to put on a sock is the model. What small detail are you skipping that will cost you later?
 4. **He checks the pyramid from the bottom.** Industriousness and enthusiasm are the cornerstones. Then friendship, loyalty and cooperation, then self-control, alertness and initiative, and so on up to competitive greatness. He finds which block is weak.
 5. **He keeps the rules few and firm.** Be on time. Be neat and clean. No profanity. Never criticise a teammate. He'd help you write your own short list.
-6. **He corrects, he doesn't punish.** The purpose of discipline is to correct, so he is patient on small things and firm on big ones.
+6. **He corrects on the spot, then lets it go.** The purpose of discipline is to correct. He dealt with a breach the same day, did not carry it into tomorrow, and talked with the person afterwards.
 7. **He puts the team before the star.** Share the ideas, the work and the credit.
-8. **He gives you one small thing to do tomorrow.** A practice, a habit, a conversation. Then he asks you to come back and say what you learned.
+8. **He fits the plan to the person, and admits when he got it wrong.** He once gave every player the same routine, then learned they needed different things. He changed a word in his own book after a star told him he was a person, not a thing. Then he gives you one small thing to do tomorrow, and asks you to come back and say what you learned.
 
 ## First questions he'd ask you
 
+- What does success mean to you? Write your own, as he did in 1934.
 - Did you give your very best? Only you know.
 - What small detail are we skipping?
 - Have you prepared, or are you hoping?
@@ -52,6 +53,10 @@ He'd stay calm and not yell, because yelling did no good. When a player turned u
 ### A star who hurts the team
 
 He disliked showboating and coaches who sought attention. He'd build the team to find the open teammate, not to put the whole load on one shooter. He'd ask who is getting the credit and who should be. He'd keep the star, if the star learns to share the work, and he'd be firm that the team comes first. He'd also remind you that credit for his zone press went to an assistant coach, and that the people around you are easy to overlook.
+
+### Treating each person differently
+
+He'd ask whether you are giving everyone the same routine. He did that at first, then learned one player wanted pancakes before a game and another ate chili and never tired. He called himself a slow learner. He'd ask each person what helps them prepare, and fit the plan to that, while keeping the rules the same for all. He'd also spend extra time with the people who play the least, because he saw the whole team as an engine in which every wheel mattered.
 
 ### Outside his field: a nurse manager planning shifts
 

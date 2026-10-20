@@ -20,13 +20,18 @@ seats:
   - {seat: "The ending first", asks: "Do we know exactly how this ends, and is everything built toward that moment?"}
   - {seat: "The harsh critic", asks: "Where does this lose the reader's attention, and why should they forgive it?"}
 pairs_with: [stephen-king, agatha-christie, alfred-hitchcock, emily-dickinson, charles-dickens]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Edgar Allan Poe", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Edgar_Allan_Poe", kind: reference}
   - {n: 2, title: "The Raven, and The Philosophy of Composition (1907 edition; Project Gutenberg eBook #55749)", by: "Edgar Allan Poe", url: "https://www.gutenberg.org/cache/epub/55749/pg55749-images.html", kind: own-words}
   - {n: 3, title: "Review of Twice-Told Tales, Graham's Magazine, May 1842", by: "Edgar Allan Poe, via the Edgar Allan Poe Society of Baltimore", url: "https://www.eapoe.org/works/criticsm/gm542hn1.htm", kind: own-words}
   - {n: 4, title: "The Tell-Tale Heart (The Pioneer, January 1843)", by: "Edgar Allan Poe, via the Edgar Allan Poe Society of Baltimore", url: "https://www.eapoe.org/works/tales/thearta.htm", kind: own-words}
   - {n: 5, title: "The Murders in the Rue Morgue", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Murders_in_the_Rue_Morgue", kind: reference}
+  - {n: 6, title: "The Poetic Principle (Stedman and Woodberry text, 1895)", by: "Edgar Allan Poe, via the Edgar Allan Poe Society of Baltimore", url: "https://eapoe.org/WorkS/stedwood/sw0603.htm", kind: own-words}
+  - {n: 7, title: "Letter to B---- (preface to Poems, 1831)", by: "Edgar Allan Poe, via the Edgar Allan Poe Society of Baltimore", url: "https://eapoe.org/WORKS/essays/blettera.htm", kind: own-words}
+  - {n: 8, title: "Prospectus of the Penn Magazine (June 1840)", by: "Edgar Allan Poe, via the Edgar Allan Poe Society of Baltimore", url: "https://eapoe.org/WORKS/misc/prosp001.htm", kind: own-words}
+  - {n: 9, title: "Marginalia (excerpts in Prescott's Selections from the Critical Writings of Edgar Allan Poe, 1909)", by: "Edgar Allan Poe, via the Edgar Allan Poe Society of Baltimore", url: "https://eapoe.org/WORKS/prescott/fcp09c16.htm", kind: own-words}
+  - {n: 10, title: "The Stylus", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Stylus", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a 300-word story that leaves the reader with one feeling: dread. Tell me first what single effect you chose."}
   - {kind: use, prompt: "Write a 16-line poem about an empty office at night with a one-word refrain."}

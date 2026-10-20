@@ -36,6 +36,8 @@ A note before you start. This is general thinking from her public work. It is no
 - What would a strong back and a soft front look like in this conversation?
 - Who has earned the right to hear this story?
 - What's the brave thing, not the comfortable thing?
+- Can you name a case where this works without anyone being vulnerable?
+- What did you learn from the last fall, before you start again?
 
 ## Jobs, one by one
 
@@ -64,6 +66,8 @@ She'd ask what your players are afraid of showing. Perfectionism and comparison 
 She'd tell you that shame survives because we don't talk about it. So tell one trusted person the whole story. She would separate the mistake from your worth. She'd point out that the people who live from a sense of worth haven't had easier lives, with fewer divorces or bankruptcies. They just relate differently to the hard parts. She'd also say hope is learned through struggle and through people you can trust, so find them.
 
 ### Your life and career
+
+She'd tell her own record of falls: turned down at first by the university she wanted, turned down by publishers, then published on her own. Her point is that the plan will not go your way, and what counts is how many times you get back up and begin again. She'd ask what you would say in an interview about what you did after a reset. On growth, she chose to be slower and closer, and split her time between leading and unscheduled research. She'd ask what pace keeps you near the work you care about.
 
 She'd ask you to make two lists. What do you want to move toward, and what do you want to move away from? Her research put perfectionism, judgement and treating productivity as self-worth on the second list. She'd ask whether you are trying to fit in or to belong, and whether you would stand alone in your values if you had to. And she'd tell you to pick the brave choice, not the comfortable one, and to do it with people who have earned your story.
 

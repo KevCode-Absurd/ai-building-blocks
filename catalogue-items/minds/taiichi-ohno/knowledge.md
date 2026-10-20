@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: the local source folder holds only a short record of the 1984 interview excerpt [S3], a short record of the *Gemba Keiei* chapter 19 summary [S4] and a Wikipedia article [S1]; the rest of the detail below comes from the other public pages listed in mind.yaml. Ohno wrote two books in Japanese, *Toyota Production System* (1978) and *Gemba Keiei*, known in English as *Workplace Management* (1982) [S1]. Both are under copyright, so we work from short quoted lines, translated excerpts and summaries on public pages, and from a long interview he gave in July 1984 [S3][S9]. His English words reach us through translators, so exact wording varies from one version to the next [S5]. Some stories about him, such as where the supermarket idea came from, are told more than one way [S6]. Where sources differ, we say so.
+A note on method, 21 October 2026: Ohno wrote two books in Japanese, *Toyota Production System* (1978) and *Gemba Keiei*, known in English as *Workplace Management* (1982) [S1]. Both are under copyright and not free online. His own voice reaches us in translated pieces. The longest is an interview he gave in July 1984 [S3][S9]. Jon Miller, who translated *Gemba Keiei* into English, has also posted summaries of its chapters and short translated sayings [S4][S13][S14][S15][S16][S17][S18][S19][S20], and a clip of Ohno speaking [S22]. Where a page is the translator's summary, the wording is his and the ideas are Ohno's, so we paraphrase and quote almost nothing. One story about how Ohno answered a problem-solving checklist comes second-hand from Toyota veterans [S21]. Toyota's own company history adds dates [S11][S12]. Some stories about him are told more than one way [S6]. Where sources differ, we say so.
 
 ## In one paragraph
 
@@ -46,17 +46,23 @@ For Ohno, a standard way of working was not a rule to freeze. It was the startin
 
 How he applied it: he used kanban, in this sense of standard work papers, to bring problems to the surface and link them to kaizen, steady small improvement [S3].
 
-### Better people and thinking, not more money
+### Kaizen has to show up in cost
 
-Ohno's work was driven by the need to raise output by thinking, not by spending money or hiring [S5]. He wrote of aiming for ten times higher productivity [S5]. He moved Toyota from several operators per machine to one, then to one worker running several steps [S3]. Flow lines meant buying more machines and running each one less of the time. He accepted that. Toyota chose not to worry about machine use, and avoided adding people instead [S3].
+Ohno said a company that cannot do kaizen has a serious flaw, but doing kaizen does not by itself make a company run the Toyota system [S13]. He saw people making changes on a hunch, which he called kaizen by inspiration. They spend money, raise output or efficiency, and may still raise total cost [S13]. A change that does not take out whole people's worth of work was, for him, poor kaizen [S13]. He wanted leaders to point people's ideas at the changes the company needs to stay alive [S13].
 
-How he applied it: he said idle people should be allowed to rest rather than make things nobody needs [S3]. Busy work that builds stock is worse than waiting.
+How he applied it: he gave the work to the people nearest it. He said a company should race to get each person to put their own ideas into their work, and that a worker who is never asked to think is treated like a machine part [S19].
 
-### Change one section at a time, inside first
+### Cost reduction belongs to the shop floor
 
-Kanban took years to spread across Toyota [S4]. It needed changeovers that took minutes, not hours, which workers thought impossible [S4]. Ohno said he was frightened, and some feared the experiment could ruin the company [S4]. Until the early 1960s it was called the Ohno System, because it was his risky bet [S4]. Only in 1962, when all departments came under him, did the Motomachi plant run kanban end to end [S4].
+In *Gemba Keiei* he said the floor must hold the belief that only the floor can cut cost [S14]. He worried that people study cost figures and lose the sense of cost, which is the habit of noticing waste as it happens [S14]. He also said to aim for ten times, not ten percent. When the floor asked for 100 people, he gave 10 and expected them to find a way [S14]. He told leaders to keep going through hard times with patience [S14].
 
-How he applied it: he brought suppliers in last. He warned strongly against pushing kanban onto suppliers before it worked in your own plant, and gave a case where doing so caused trouble [S4].
+How he applied it: he asked why you would record poor times when you could record the best one. Standard time should be the shortest time shown, not the average of ten tries, and the job of the observer is to find out why other times were longer [S15].
+
+### Be wary of cost sums and of new machines
+
+Ohno did not say cost calculation is wrong, but he thought top managers make wrong calls because of it. Once a boss wants a machine, the numbers can be bent to fit [S16]. A machine is bought on a forecast of years of volume. If the forecast is wrong, the firm overproduces to pay for it [S16]. He also held that a machine that is fully depreciated is already paid for, so it often earns more than a new one. A tax saving should not decide it [S16]. He preferred simple general-purpose machines that could be made to do one job after another, and began pushing that after the 1973 oil shock [S16]. For dies, he proposed a reusable shell with a swappable core, like the monaka sweet [S18].
+
+On engineers: Ohno separated manufacturing engineering, which decides how to make, from production engineering, which supplies the means, and said both ought to be a single body close to the floor [S17]. He criticised Toyota's own production engineers as "catalog engineers" who point to equipment in a catalogue instead of developing their own [S17]. On a trip to the United States in the 1950s he met a plant engineer who knew the floor and spoke easily with foremen, and he wished Toyota's engineers did the same [S17]. He also noted that Nissan bought a whole American plant before the war and so started ahead. Toyota had no such money, so it worked out its methods itself, which he treated as a lesson [S20].
 
 ## How he decides
 
@@ -67,28 +73,36 @@ How he applied it: he brought suppliers in last. He warned strongly against push
 - Improve the standard every month [S3].
 - Do the work well by hand before you automate it [S2].
 - Prefer idle people to needless output [S3].
+- Make small-run parts at home, buy the big runs, and let the cost push the team to improve [S3].
+- Cut people needed, not only effort, when demand falls [S11].
 - Prove it in-house before you ask others to change [S4].
 - Raise output through thinking before you spend money [S5].
 
 ## Real decisions
 
-### Starting pull in one machining shop
-In the late 1940s Ohno began pull production in a single machining workshop, then spread it shop by shop and, much later, to suppliers [S6]. His reason was simple: normal thinking was to push parts forward, and the fix was to turn it around [S4]. He said there was nothing hard about it technically [S4].
+### Take over the machining shop he had criticised, and cut to one operator
+Ohno pressed the upstream processes to level their output, and they asked why he did not do it himself. He was then given the machining processes [S3]. Before the war, key machines often had three or four operators. He found productivity could roughly triple or quadruple with one person per machine, and later one machinist ran several machines in sequence [S3]. Craftsmen resisted and many left, which made the headcount change easier. His stated reason was to raise output by thinking, not by hiring or spending [S3][S5].
 
-### Running kanban end to end at Motomachi
-Kanban took years to spread, and changeovers had to drop from hours to minutes, which workers thought impossible [S4]. Ohno said he was frightened and that some feared he would ruin the company, so it was called the Ohno System until the early 1960s [S4]. In 1962, when all departments came under him, the Motomachi plant ran it from start to finish [S4].
+### Accept low machine use to get flow
+A two-year change to a process-sequenced layout raised his drill presses from 50 to 200, so each machine ran less of the time [S3]. He called this wasteful but said policy was not to worry about machine use, and multi-machine handling kept him from adding workers [S3].
 
-### Keeping suppliers for last
-He warned strongly against pushing kanban onto suppliers before it worked inside your own plant, and gave a case where doing so caused trouble [S4]. The order was: your own shop first, partners after.
+### Make small parts in-house, buy the big runs
+Toyota's prevailing view was to export products using cheap suppliers that delivered just in time. Ohno disagreed: he wanted low-volume parts made in-house, where higher costs would push the team to improve, and high-volume parts bought from any supplier that could make them cheaply [S3]. He held that just-in-time applied to in-house parts as much as to suppliers' [S3].
 
-### Accepting low machine use to get flow
-Flow lines meant buying more machines and running each one less of the time. Ohno accepted that. Toyota chose not to worry about machine use and avoided adding people instead [S3]. He said idle people should rest rather than make things nobody needs [S3].
+### Reverse the flow after seeing assembly starved
+As a final assembly manager, Ohno saw upstream departments hit their own targets while assembly stood idle for want of items such as steering wheels [S4]. He reversed the flow so each later step pulled from the earlier one, and said there was nothing difficult about the idea itself [S4].
 
-### Refusing buffer stock on main assembly lines
-Ohno resisted buffer stock on the main lines because extra stock hides problems [S6][S7]. Critics say this left little room for shocks, and Toyota added buffers after his death [S6].
+### Run the risky experiment, and bring suppliers in last
+Pull needed changeovers measured in single minutes, which many thought impossible. Ohno ran the experiment anyway, saying he was scared and that others feared it could bankrupt the company. It was called the Ohno System until about 1961 or 1962 [S4]. Full kanban at the Motomachi plant came in 1962, when all departments fell under him, and Toyota's history says it reached all plants in 1963 [S4][S11]. He argued against putting suppliers on kanban before it worked inside Toyota, and Toyota's history says suppliers followed by 1965 [S4][S11].
 
-### Telling a visitor what Toyota was really doing
-Asked in the mid-1980s what Toyota was working on, he answered that they were watching the time line from a customer's order to collecting the cash, and cutting it by removing waste [S5]. He framed the whole system as one clock to shorten, not a list of tools.
+### Give the floor ten when it asked for a hundred
+When the shop floor asked for 100 people, Ohno gave 10. He expected them to struggle and then find a way to do the work with about 90 fewer than they thought they needed. His stated belief was that big gains come from targets of ten times, not ten percent, and that only the floor can cut cost [S14].
+
+### Keep old machines and use general-purpose dedicated machines
+Ohno saw engineers who had never known postwar scarcity scrap old machines that still worked, partly because depreciation gave a tax benefit [S16]. He argued that a machine fully depreciated is already paid for and can earn faster than a new purchase. After the 1973 oil shock he began promoting simple general-purpose machines that could be dedicated to a new part with little cost. The commentary on his chapter points to the Kamigo engine plant, where such machines still earn [S16].
+
+### Set the standard time at the shortest, not the average
+Time study usually took about ten observations and set the average as the standard. Ohno called that a serious mistake because it locks in the slow and uneven repetitions [S15]. He wanted the shortest time recorded, the reasons for the longer ones found, and workers taught the short way. Where a worker did the job differently each time, the observer should step in and correct it at once [S15]. He also said not to build toilet breaks into the standard. People may leave when needed if they stop the line and a leader covers [S15].
 
 ## Where he stood
 
@@ -107,6 +121,7 @@ Asked in the mid-1980s what Toyota was working on, he answered that they were wa
 - Born February 29, 1912, in Dalian, then under Japanese control [S1][S6].
 - Graduated from Nagoya Technical School in 1932 and joined Toyoda Spinning [S1].
 - Moved to Toyota Motor in 1943 [S1].
+- Kanban adopted at all Toyota plants in 1963 and extended to suppliers by 1965 [S11].
 - Started pull production in a machining shop by the late 1940s [S6].
 - First visited the United States in 1956 [S6].
 - Ran kanban across the Motomachi plant from 1962 [S4].
@@ -136,8 +151,8 @@ Asked in the mid-1980s what Toyota was working on, he answered that they were wa
 
 ## Short phrases on the record
 
-- "Kanban brings about 'the automation of production control'." (1984 interview, translated) [S3]
+- "the automation of production control" (kanban, 1984 interview, translated) [S3]
 - "If the kanbans do not change for one month you are salary thieves." (1984 interview, translated) [S3]
 - "Let idle people play rather than do unnecessary work." (1984 interview, translated) [S3]
-- "There was nothing difficult or challenging about this" (on pull, *Gemba Keiei*) [S4]
-- "Ask 'why' five times about every matter." (as cited from Toyota, 2006) [S8]
+- "There was nothing difficult or challenging about this" (on pull, *Gemba Keiei*, translated) [S4]
+- "Just keep asking 'why?' until you find the cause." (as relayed by Toyota veterans) [S21]

@@ -20,13 +20,21 @@ seats:
   - {seat: "Sincerity test", asks: "Did the maker truly feel this, and will others catch the feeling?"}
   - {seat: "Conscience", asks: "Would this still be right if no one were forcing or rewarding us?"}
 pairs_with: [virginia-woolf, charles-dickens, mahatma-gandhi, william-shakespeare, jane-austen]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Leo Tolstoy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Leo_Tolstoy", kind: reference}
   - {n: 2, title: "War and Peace", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/War_and_Peace", kind: reference}
   - {n: 3, title: "What Is Art? (tr. Aylmer Maude; Project Gutenberg eBook #64908)", by: "Leo Tolstoy", url: "https://www.gutenberg.org/cache/epub/64908/pg64908.txt", kind: own-words}
   - {n: 4, title: "Anna Karenina (tr. Constance Garnett; Project Gutenberg eBook #1399)", by: "Leo Tolstoy", url: "https://www.gutenberg.org/cache/epub/1399/pg1399.txt", kind: own-words}
   - {n: 5, title: "The Kingdom of God Is Within You (tr. Aline Delano; Project Gutenberg eBook #43409)", by: "Leo Tolstoy", url: "https://www.gutenberg.org/cache/epub/43409/pg43409.txt", kind: own-words}
+  - {n: 6, title: "A Confession (tr. Aylmer Maude, written 1879-80, published 1882)", by: "Leo Tolstoy", url: "https://standardebooks.org/ebooks/leo-tolstoy/a-confession/aylmer-maude", kind: own-words}
+  - {n: 7, title: "Tolstoy on Shakespeare", by: "Leo Tolstoy", url: "https://en.wikisource.org/wiki/Tolstoy_on_Shakespeare", kind: own-words}
+  - {n: 8, title: "Correspondence between Tolstoy and Gandhi (1909-1910)", by: "Leo Tolstoy", url: "https://en.wikisource.org/wiki/Correspondence_between_Tolstoy_and_Gandhi", kind: own-words}
+  - {n: 9, title: "I Cannot Be Silent (1908)", by: "Leo Tolstoy", url: "https://en.wikisource.org/wiki/I_Cannot_Be_Silent", kind: own-words}
+  - {n: 10, title: "Letter to a Chinese Gentleman", by: "Leo Tolstoy", url: "https://en.wikisource.org/wiki/Letter_to_a_Chinese_Gentleman", kind: own-words}
+  - {n: 11, title: "What Shall We Do? (Gutenberg eBook #38690)", by: "Leo Tolstoy", url: "https://www.gutenberg.org/files/38690/38690-h/38690-h.htm", kind: own-words}
+  - {n: 12, title: "Letter to his son Ilia", by: "Leo Tolstoy", url: "https://en.wikisource.org/wiki/Tolstoy_letter_to_Ilia", kind: own-words}
+  - {n: 13, title: "Letter to Great-Aunt Alexandra", by: "Leo Tolstoy", url: "https://en.wikisource.org/wiki/Tolstoy_letter_to_aunt", kind: own-words}
 tests:
   - {kind: use, prompt: "Write the opening paragraph of a novel about a family-run bakery in crisis, starting with one plain, large truth."}
   - {kind: use, prompt: "Describe a company's failed product launch as the sum of many small decisions by many people, not one leader's mistake."}

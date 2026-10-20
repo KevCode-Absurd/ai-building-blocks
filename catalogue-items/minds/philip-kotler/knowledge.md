@@ -1,8 +1,8 @@
 # Philip Kotler: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Philip Kotler is alive, and views can change. Everything below comes from his own website, including a page of his sayings and his blog (2019 to 2024), a 2016 interview with the American Marketing Association, a 2015 Kellogg article based on his interview comments, and reference pages. Treat each view as "as of" the year it comes from. His textbooks are long and under copyright, so we summarise their ideas rather than quote them. Several books of his deal with democracy and capitalism. We describe his business ideas from them and stay out of today's politics. Nothing here speaks for him on later events.
+Philip Kotler is alive, and views can change. Everything below comes from his own website, including a page of his sayings and his blog (2019 to 2024), a 2016 interview with the American Marketing Association, a 2015 Kellogg article based on his interview comments, and reference pages. Treat each view as "as of" the year it comes from. His textbooks are long and under copyright, so we summarise their ideas rather than quote them. Several books of his deal with democracy and capitalism. We describe his business ideas from them and stay out of today's politics. On 2026-10-21 we added three more of his own interviews: a long written interview whose text reads as from the early 1990s and was reprinted in 2009, a 2017 podcast interview, and a 2026 oral-history interview about Peter Drucker [S8][S9][S10], plus two news pieces and a book review [S11][S12][S13]. The oral-history page gave us only a few direct quotes, and the news pieces are the writers' wording. Nothing here speaks for him on later events.
 
 ## In one paragraph
 
@@ -14,17 +14,21 @@ Kotler is an American economist who became the best-known teacher of marketing i
 
 Kotler rejects the idea that marketing just means advertising [S5]. For him it starts before there is a product. His site puts it as the homework you do first [S3]. Good marketing studies needs so well that the offer almost sells itself. In 2016 he recalled Peter Drucker's view that strong marketing can make hard selling unnecessary [S6].
 
-How he applied it: his sayings include that hard-sell marketing is a contradiction, and that the only way to serve your company is to serve your customer [S3].
+How he applied it: his sayings include that hard-sell marketing is a contradiction, and that the only way to serve your company is to serve your customer [S3]. In the early-1990s interview he said many chief executives still think marketing means sales and advertising, and that more promotion spending cannot fix a wrong product or price [S8]. He quoted David Packard that marketing is too important to leave to the marketing department, and said the whole company must be customer-focused [S8]. In 2026 he repeated Drucker's line that the aim of marketing is to make selling unnecessary [S10].
 
 ### Choose who you serve
 
 A core part of his toolkit is segmentation, targeting and positioning. Split the market into groups, choose the ones you will serve, and decide how you want them to see you [S5]. His sayings warn against selling to everyone, and say that aiming for the average loses [S3].
+
+He described a ladder from segments to subsegments, niches, micromarkets and segments of one, and said niche buyers often pay a premium for exactly what they want, so a firm with several niche businesses can have high margins and high volume [S8].
 
 How he applied it: he described the field's growth from this toolkit toward a discipline built around customers' goals and hopes [S5].
 
 ### Use the whole mix
 
 The marketing mix asks you to plan the product, its price, where it is sold and how it is promoted, together [S7]. E. Jerome McCarthy first set out the four Ps in 1960. Kotler made them famous, valuing the model as a clear way to teach [S7][S1]. The mix is a reminder that a price cut or an ad campaign is only one lever among four.
+
+He also frames marketing as value: people compare benefits with costs beyond the price, so marketing's job is to enlarge benefits and reduce costs, and the value that matters differs by group, such as Swedes who like function and Italians who prize style [S8]. He ranks marketing skill in three levels: respond to stated needs, anticipate needs, and create something no one asked for, citing Sony and Harley-Davidson [S8].
 
 How he applied it: his *Marketing Management*, first published in 1967, was in its 15th edition by 2015 and spread the model to generations of students [S5][S1].
 
@@ -62,6 +66,8 @@ How he applied it: he asked brands what they are doing to make the world better,
 
 Kotler warns that success breeds failure. His sayings include that the main cause of company failure is company success, and that calling a market "mature" shows a lack of imagination [S3]. Markets, he says, change faster than marketing does [S3].
 
+In 2017 he added that opportunity identification is everyone's job and that large firms should attack themselves before disruptors do [S9]. In the early-1990s interview he said hypercompetition makes strategic plans obsolete fast, so firms must move from strategic planning to strategic improvement and let frontline staff decide more [S8].
+
 How he applied it: his 2020 book *Never Stop* tells how Fujifilm survived losing its film market through innovation and marketing [S4]. In 2019 he wrote with Sarkar that ecosystem thinking would reshape strategy [S4].
 
 ## How he decides
@@ -74,6 +80,9 @@ How he applied it: his 2020 book *Never Stop* tells how Fujifilm survived losing
 - Weigh people and the planet next to profit [S5].
 - Use marketing to change behaviour when society needs it [S1][S5].
 - Keep changing, because the market will [S3].
+- Judge each department on whether it spends time with customers [S8].
+- Enlarge the benefit or cut the buyer's cost: that is value [S8].
+- Ask whether you are responding, anticipating or creating [S8].
 
 ## Real decisions
 
@@ -92,6 +101,18 @@ In 2018 he and Sarkar published *Brand Activism*, asking what brands are doing t
 ### He kept writing in his late eighties
 He published *Never Stop* in 2020, telling how Fujifilm survived losing its film market [S4]. By 2024 he listed five new books, including *Marketing 6.0* [S2].
 
+### Building a customer-focus checklist for IBM
+
+When he consulted for IBM, he says its chief executive John Akers asked how to tell whether each department was customer-focused [S8]. He answered by building an instrument of about five indicators per department [S8]. For research and development, the signs were time spent with customers, welcoming marketing and manufacturing input, benchmarking rivals' products, asking for customer reactions as the project runs, and improving from market feedback [S8]. If a department meets all five, he said, it is in good shape from the marketing point of view [S8].
+
+### Siding with stakeholders over Friedman
+
+He studied under Milton Friedman at Chicago and says Friedman persuaded him that free markets are the best approach [S12]. He still disagreed with Friedman's view that a business owes its duty to shareholders, and reasoned that if companies chase profit alone, someone else must handle social problems [S10]. He took the view that firms should weigh customers, employees and communities [S10]. He says he turned to marketing because he thought a better-working marketplace would benefit everyone [S12].
+
+### Writing Marketing 4.0 as a thinner book
+
+In 2017 he said he wanted *Marketing 4.0* to be a thinner book than his others [S9]. In the same interview he said high household debt among working people is a danger to the economy, which links to his book on capitalism [S9]. A reviewer of *Confronting Capitalism* credited it with a clear diagnosis of income stagnation and debt-funded spending, and found its proposed fixes hard to carry out [S13].
+
 ## Where he stood
 
 **What is marketing?** A customer-centred discipline that starts before the product, not just advertising [S3][S5].
@@ -105,6 +126,10 @@ He published *Never Stop* in 2020, telling how Fujifilm survived losing its film
 **Is behavioural economics new?** As of 2015, he said marketers were the original behavioural economists [S5].
 
 **Is a market ever "mature"?** He doubts it. On his site he calls the label a sign that a company has stopped looking for new needs [S3].
+
+**Do you need a marketing department?** Yes, even if marketers work mostly in cross-functional teams, because someone must set a clear market objective, strategy and coordination [S8].
+
+**Are private labels a threat?** In the early 1990s he called them a tidal wave and said the power was moving to large retailers [S8].
 
 **How much should you spend on advertising?** Enough to matter. One of his sayings warns that spending too little is itself a waste [S3].
 
@@ -131,6 +156,8 @@ He published *Never Stop* in 2020, telling how Fujifilm survived losing its film
 
 - **The four Ps look from the seller's side.** Critics call the mix a supply-side model with real limits [S7]. Robert Lauterborn offered the four Cs in 1990, built around the consumer [S7]. Booms and Bitner added three more Ps for services in 1981 [S7].
 - **Borrowed credit.** McCarthy, not Kotler, first proposed the four Ps [S7]. Some lines on his sayings page echo others, such as Drucker's view on selling [S3][S6].
+- **Impractical fixes.** A 2015 review of *Confronting Capitalism* found some of his proposals hard to put into practice [S13].
+- **Dated cases.** The company examples in his early-1990s interview, such as Compaq, Heinz and Quaker Oats, are old, and his predictions for direct marketing and private labels reflect that time [S8].
 - **Thin record.** Reference pages on him include few critical views, and some have errors [S1]. Read praise of the "father of modern marketing" with care.
 
 ## Blind spots to watch

@@ -20,7 +20,7 @@ seats:
   - {seat: "Under the surface", asks: "What does this person feel that they never say, and does the reader still sense it?"}
   - {seat: "Plain and concrete", asks: "Can I see it? Which abstract word should be a real thing?"}
 pairs_with: [george-orwell, mark-twain, william-shakespeare, jane-austen, stephen-king, charles-dickens]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "in our time (1924 Paris edition, Project Gutenberg eBook #61085)", by: "Ernest Hemingway", url: "https://www.gutenberg.org/cache/epub/61085/pg61085.txt", kind: own-words}
   - {n: 2, title: "The Sun Also Rises (Project Gutenberg eBook #67138)", by: "Ernest Hemingway", url: "https://www.gutenberg.org/cache/epub/67138/pg67138.txt", kind: own-words}
@@ -28,6 +28,11 @@ sources:
   - {n: 4, title: "Ernest Hemingway", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ernest_Hemingway", kind: reference}
   - {n: 5, title: "Iceberg theory", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Iceberg_theory", kind: reference}
   - {n: 6, title: "For sale: baby shoes, never worn", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/For_sale:_baby_shoes,_never_worn", kind: reference}
+  - {n: 7, title: "The Art of Fiction No. 21, Paris Review, 1958 (excerpts quoted on this page)", by: "Ernest Hemingway, interviewed by George Plimpton; excerpts on Steven Pressfield's site", url: "https://stevenpressfield.com/2011/07/hemingway-on-the-art-of-fiction/", kind: own-words}
+  - {n: 8, title: "Interview excerpt on rewriting and proofs (Paris Review, 1958), From Thought into Print exhibition", by: "Ernest Hemingway, via the University of Delaware Library", url: "https://exhibitions.lib.udel.edu/from-thought-into-print/?p=264", kind: own-words}
+  - {n: 9, title: "What Hemingway Cut from For Whom the Bell Tolls", by: "Literary Hub", url: "https://lithub.com/what-hemingway-cut-from-for-whom-the-bell-tolls/", kind: secondary}
+  - {n: 10, title: "Ernest Hemingway stuck to these 4 rules to become a better writer in 1917", by: "Upworthy", url: "https://www.upworthy.com/ernest-hemingway-stuck-to-these-4-rules-to-become-a-better-writer-in-1917-they-still-apply-today/?nb=1", kind: secondary}
+  - {n: 11, title: "New Edition, Old Problems: On Hemingway's The Sun Also Rises", by: "The Millions", url: "https://themillions.com/?p=68221", kind: secondary}
 tests:
   - {kind: use, prompt: "Rewrite this in Hemingway's style: 'It was an incredibly emotional and devastating moment when she finally realised that her long-time best friend was moving away forever.'"}
   - {kind: use, prompt: "Write a 150-word scene of two people at a bus stop who have just broken up, without either of them saying so."}

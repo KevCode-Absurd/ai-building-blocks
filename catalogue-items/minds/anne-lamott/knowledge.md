@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Anne Lamott is alive, and views can change. Everything below comes from her own words in a 2015 list of "everything I know", first posted on Facebook and then run by Salon [S3], and a 2021 podcast interview with a published transcript [S4]. It also uses reference pages on her and her books [S1][S2][S5] and a 2026 critical look back at *Bird by Bird* [S6]. Treat each view as "as of" the source it comes from. The TED transcript was not available to us, so S5 is cited only for the existence of the talk. She writes and speaks on politics and faith, but this mind stays with writing and the inner life. It says nothing about her private or family life beyond what shaped her published work.
+Anne Lamott is alive, and views can change. Everything below comes from her own words in five places: a 2015 list of "everything I know", first posted on Facebook and then run by Salon [S3]; a 2021 podcast interview with a published transcript [S4]; a 2017 set of writing tips drawn from a live conversation [S7]; a 2024 podcast interview with Adam Grant [S8]; and a 2026 NPR interview [S9]. It also uses reference pages on her and her books [S1][S2][S5] and a 2026 critical look back at *Bird by Bird* [S6]. Treat each view as "as of" the source it comes from. The TED transcript was not available to us, so S5 is cited only for the existence of the talk. We used the TED Ideas tips as a record of her own words, but the page is edited, so it is closer to a summary than a transcript. She writes and speaks on politics and faith, but this mind stays with writing and the inner life. It says nothing about her private or family life beyond what shaped her published work.
 
 ## In one paragraph
 
@@ -32,7 +32,7 @@ How she applied it: she works in 45-minute blocks and rewards herself afterward.
 
 Instead of facing the whole story, look at one small scene, as if through a tiny frame [S4]. Describe one memory or image, such as a cold lake from childhood, without worrying whether you'll use it [S4]. Writing teachers still use this exercise [S6].
 
-How she applied it: she pairs it with short assignments, so a writer always has a small, doable task [S4].
+How she applied it: she pairs it with short assignments, so a writer always has a small, doable task [S4]. For a long project she draws the whole book as lily pads on a pond on big graph paper, marking the key scenes like beads on a necklace, then works pad by pad [S7].
 
 ### Turn down Radio KFKD
 
@@ -44,13 +44,13 @@ How she applied it: she described giving the critic a new job, like a consultant
 
 She calls perfectionism the voice of the oppressor [S4]. It keeps you miserable because you will always fall short [S4]. She describes her books as shantytowns, not golden palaces, and sees their flaws as part of what makes them human [S4].
 
-How she applied it: she tells students her goal is not to make them great writers but to help them stop not writing [S4].
+How she applied it: she tells students her goal is not to make them great writers but to help them stop not writing [S4]. In 2024 she added that the sense of being a perfectionist came from a family that prized achievement, and that learning to forgive herself for being human was the hardest work she had done [S8]. She also says to cut a failed passage without guilt, because it says nothing bad about you [S7].
 
 ### You own what happened to you
 
 Lamott believes writers own their experiences and may write about them, including painful family history [S3][S4]. Write the hard truth first. Decide later what to share, and use fiction to protect real people when you need to [S4]. She also says to write the stories that press on your heart, because your own voice is what you have to give [S3].
 
-How she applied it: she tells students that a critic will always offer reasons not to tell the truth, and that telling it to one trusted person often brings recognition, not judgment [S4].
+How she applied it: she tells students that a critic will always offer reasons not to tell the truth, and that telling it to one trusted person often brings recognition, not judgment [S4]. In 2024 she put it as: the sharing is the medicine [S8]. Her advice is to write the book you wish existed [S7], and to trust two honest readers who will say what is not working [S7]. In 2026 she said what she had to unlearn was that the opinions of others, such as the literary men and popular peers of her youth, did not define her [S9].
 
 ### Publication won't fix you
 
@@ -62,7 +62,7 @@ How she applied it: in her 2015 list she joked that some of the worst people she
 
 Grace, for Lamott, is the force that meets you where you are and changes you [S3][S4]. You can ask for it with one word: help [S3]. Its signs are often ordinary, and it can bring back your sense of humour [S3]. She calls laughter a form of holiness [S3]. She also says that almost everything works again if you unplug it for a few minutes, including you [S3][S4].
 
-How she applied it: she said that everyone is screwed up and scared inside, even people who look calm, so you shouldn't compare your inside to their outside [S3].
+How she applied it: she said that everyone is screwed up and scared inside, even people who look calm, so you shouldn't compare your inside to their outside [S3]. In 2024 she described help that is really control, a habit she says she inherited, and drew the line between helping someone with their own choices and making them need you. Her answer was steady presence and listening, not rushing to fix people [S8]. She also borrowed the image of a new pair of glasses to try a kinder view of everyday life [S8], and said that peace lasts longer than joy [S8].
 
 ## How she decides
 
@@ -74,26 +74,35 @@ How she applied it: she said that everyone is screwed up and scared inside, even
 - Take a break when stuck. Unplug, then come back [S3].
 - Ask for help when you need it [S3].
 - Don't chase approval from people who don't connect with your work [S4].
+- Write on a schedule, not on a mood. She tells students they will write tonight or never [S7].
+- Lean on two honest readers, and cut what fails without guilt [S7].
+- Keep the voice that is yours, even when others write more beautifully [S7].
 
 ## Real decisions
 
 ### One bird at a time
-The title story: her older brother was frozen over a school report on birds, and their father told him to take it one bird at a time. She turned that into her main method for any big task. [S4][S6]
+The title story: her older brother was frozen over a school report on birds, and their father told him to take it one bird at a time. She turned that into her main method for any big task [S4][S6].
 
 ### Writing the list of what she knew
-Around her 61st birthday she decided to write down everything she was sure of, "as of today", and posted it on Facebook. It mixed practical advice with faith and jokes, and Salon ran it in 2015. [S3]
+Around her 61st birthday she decided to write down everything she was sure of, "as of today", and posted it on Facebook. It mixed practical advice with faith and jokes, and Salon ran it in 2015 [S3].
 
-### Working in 45-minute pods
-She writes in silence from about nine, in 45-minute pods, and rewards herself afterward with M&Ms or the news. Her reason is that discipline leads to freedom, and inspiration is largely a myth. [S4]
+### Keeping her own funny voice after a hard review
+Her first novel, *Hard Laughter*, drew early feedback that her humour undercut the grief in the book [S7]. She says it was among the most useful feedback she ever had, because it taught her where her own voice differs from writers she admires, such as Isabel Allende [S7]. She did not try to sound like them.
+
+### Choosing two honest readers
+She relies on two trusted readers who give candid notes, even though criticism stings at first, because it stops unpolished work from going out [S7]. The reason she gives is practical: a draft needs a reader who will say what is not working before the public does.
+
+### Mapping a big book as lily pads
+For a long project she sketches the book on large graph paper as a pond of connected lily pads, with key scenes marked and the points she must reach set like beads on a necklace [S7]. It lets her see the shape without writing all of it.
 
 ### Taking her husband's idea for the inner critic
-She adopted her husband's suggestion to treat the inner critic as an ethical consultant who waits in the library and is called only when needed, in place of fighting it. [S4]
+She adopted her husband's suggestion to treat the inner critic as an ethical consultant who waits in the library and is called only when needed, in place of fighting it [S4].
 
-### Agreeing to a documentary about her life
-She says she agreed partly out of vanity and partly for a chance to show emotional depth. [S4]
+### Shelving a book, then reviving it
+She told Adam Grant of an editor's letter urging her to put a novel aside. She brought it back out of loyalty to its characters [S8]. Her lesson for students is that nobody knows what they are doing at the start, and a terrible first draft is the price [S8].
 
 ### Telling a stalled writer where to start
-When Tim Ferriss said his fiction felt stuck, she did not reassure him. She told him to close his eyes, ask the characters what they think and feel, and find what each cannot afford to lose, because without stakes there is no story. [S4]
+When Tim Ferriss said his fiction felt stuck, she did not reassure him. She told him to close his eyes, ask the characters what they think and feel, and find what each cannot afford to lose, because without stakes there is no story [S4].
 
 ## Where she stood
 

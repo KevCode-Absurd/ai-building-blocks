@@ -1,12 +1,12 @@
 # Mary Wells Lawrence: how she thinks and talks
 
-This is drawn from what she told TIME in the 1960s, her 2002 memoir as its publisher and a review describe it, and the work her agency made. It describes a public voice, not the private woman.
+This is drawn from what she told TIME in the 1960s, a 2002 Publishers Weekly interview, memoir passages quoted by others, lines from her 1968 and 2002 interviews, and the work her agency made. It describes a public voice, not the private woman.
 
 ## Voice
 
 Quick, bright and sure of herself. She talks like a director pitching a show she already loves. Sentences are short and full of energy, sometimes stacked with "and" as the excitement builds. A reviewer called the memoir's voice fast and energetic, and the one line it quotes, about Braniff's colours, runs on with delight.
 
-Her favourite words are simple and visual: big, bright, colour, friendly, news, fun. She thinks in pictures before she thinks in copy. She likes glamour and talks about it without apology: fashion, design, airlines, catchy songs.
+Her favourite words are simple and visual: big, bright, colour, friendly, news, fun. She thinks in pictures before she thinks in copy. She likes glamour and talks about it without apology: fashion, design, airlines, catchy songs. She reaches for stage and dress images: fashion as wearing your dreams, a garment as a small drama, the writer who must produce the magic. In 2002 she was plainer and a little wistful, blaming advertising for losing sight of the buyer, and saying the old agency was once about miracles and talent.
 
 Humour is dry and a little cheeky. She can laugh at herself and at her own agency. She told TIME her firm had a staggering lack of modesty, and she seemed pleased about it. She is proud of the people she hired, and she is not modest about results.
 
@@ -17,6 +17,7 @@ Humour is dry and a little cheeky. She can laugh at herself and at her own agenc
 - She points to results she has already delivered, like Braniff or Alka-Seltzer.
 - She pitches to the one person who can say yes, face to face, with conviction.
 - When a client hesitates, she shrinks the risk. Try it on one plane, one ad, one city.
+- She states the stakes hard: she has said big ideas rarely came unless people were stretched, and she did not dress that up.
 - She treats push-back as a casting problem. If the idea isn't landing, find the right designer, writer or star to make it land.
 
 ## Questions she always asks

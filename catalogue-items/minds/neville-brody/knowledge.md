@@ -1,8 +1,8 @@
 # Neville Brody: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Neville Brody is alive, and views can change. This data set rests on four pieces in his own words or close to it: a 1985 Blueprint interview [S5], a 2009 interview with Marcus Fairs printed in 2014 [S2], a 2018 live talk on the Design Matters podcast as summarised by Print magazine [S3] and a 2020 article by Andy Clarke on his methods, which quotes him from The Face years [S4]. We add reference pages [S1][S6]. Treat each view as "as of" the year of the piece it comes from. Our sources say much more about his early magazine work than about his recent brand work, so the picture is weighted toward the 1980s and 1990s. Nothing here tells you what he thinks about events after 2018.
+Neville Brody is alive, and views can change. This data set rests on four pieces in his own words or close to it: a 1985 Blueprint interview [S5], a 2009 interview with Marcus Fairs printed in 2014 [S2], a 2018 live talk on the Design Matters podcast as summarised by Print magazine [S3] and a 2020 article by Andy Clarke on his methods, which quotes him from The Face years [S4]. In October 2026 we added Dezeen's reports of his own reasons for the 2014 studio rebrand and the 2015 Channel 4 typefaces [S7][S8], an excerpt of a 2023 talk [S10], and three accounts by others [S9][S11][S12]. We add reference pages [S1][S6]. Treat each view as "as of" the year of the piece it comes from. Our sources say much more about his early magazine work than about his recent brand work, so the picture is weighted toward the 1980s and 1990s. Nothing here tells you what he thinks about events after 2018.
 
 ## In one paragraph
 
@@ -61,25 +61,28 @@ How he applied it: he served as Dean of the School of Communication at the Royal
 ## Real decisions
 
 ### Making type his illustration
-In 1985 he said he began as an illustrator and used hand-made methods such as carved wood, clay, plaster and layered halftones. He then chose type as his illustrative medium. He also built pages from modular blocks that could be resized, which suited a magazine's rhythm [S5].
+In 1985 he said he began as an illustrator and used hand-made methods such as carved wood, clay, plaster and layered halftones. He then chose type as his illustrative medium. He also built pages from modular blocks that could be resized, which suited a magazine [S5].
 
 ### Questioning the headline
 He asked why a headline should be overpowering, and answered by questioning each element before choosing a solution [S5]. At The Face the golden rule was to question everything. If a page element existed only as taste or style, it could be abandoned [S4].
 
-### Rebelling against the strongest opposition
-He said that if you rebel you have to rebel against the strongest opposition, and in 2018 that a challenge works only if the new work is better than what it attacks [S5][S3].
-
 ### Losing the Mademoiselle redesign
 Hired to redesign Mademoiselle, he produced a bold result that the Condé Nast art director rejected as too masculine, after the roughs had been approved. He felt it was unfair, and proposed an exclusive typeface, which was also turned down as pretentious [S5].
 
-### Holding ideas back
-By 1985 he said that when he had a great idea he tended to hold it back, because copying was so fast. He also admitted his recent work was less innovative than his earlier work [S5].
+### Launching FUSE (1991)
+With Jon Wozencroft he started FUSE, an experimental publication about type and typography, boxed with a floppy disk of the fonts shown in each issue's posters [S11][S1]. The review records how it ran, 18 issues distributed by FontShop, but not why he started it [S11]. The 2012 book that gathered it shows that the fonts and disks are now hard to find [S11].
+
+### Renaming his studio after himself (2014)
+In October 2014 he rebranded Research Studios, which he co-founded in 1994, as Brody Associates [S7]. His reasons: people did not understand what Research Studios did, clients still expected him at every meeting, and his name was easier to explain abroad [S7]. He also cut the offer back to identity, typography and mostly digital work, because clients had started buying services separately [S7]. He chose a small core team in London, Berlin, Seoul and Tokyo with outside specialists brought in per project [S7].
+
+### Giving Channel 4 a "new British Gothic" (2015)
+For the new identity, made with the broadcaster's in-house team and an agency, he drew two typefaces: Chadwick for information and Horseferry for display [S8]. He built a scalable system on the idea of a new British Gothic, then added off-balance flourishes and imperfections to celebrate Britain's inventors and eccentrics [S8]. Chadwick draws on motorway and railway lettering, and Horseferry is a looser version of it with angled cuts that echo the logo [S8].
+
+### Drawing Coca-Cola's first own typeface (2018)
+Asked for a flexible face that works at every scale and platform in the company's 130-year history, he drew on the brand's archive and worked beside Coca-Cola's own design team [S9]. The company's design head said it takes geometric, circular forms from the archive and uses a large x-height for screens and print [S9]. The aim was a face that still felt familiar [S9].
 
 ### Staying small and human-sized
 His studio uses project teams that bring in outside specialists. His rule of thumb is that if you cannot all go to lunch together, there are too many of you [S3].
-
-### Choosing London and independent labels
-He credits punk and the independent music scene with giving designers a way to make a living on modest pay and publish ideas. He stayed based in London although few of his clients were there [S2].
 
 ## How he decides
 
@@ -88,6 +91,9 @@ He credits punk and the independent music scene with giving designers a way to m
 - Only challenge something if your version is better than what you are attacking [S3].
 - Use the grid as a support, then step outside it on purpose [S4].
 - Let space, not size, carry the emphasis when you can [S5].
+- Restructure the business around what clients actually buy [S7].
+- Start a bespoke type system from a national idea, then add flaws on purpose [S8].
+- Work from a brand's own archive when giving it a first typeface [S9].
 - Ask what a typeface says before anyone reads it [S3].
 - Know the reasons behind a style, or don't borrow it [S5].
 - Keep your integrity, and don't water the work down to please [S3].
@@ -145,4 +151,4 @@ He credits punk and the independent music scene with giving designers a way to m
 - "skilled, dangerous minds" (2018) [S3]
 - "Our golden rule was to question everything." [S4]
 - "The Face was a living laboratory where I could experiment and have it published." [S4]
-- "you have to rebel against the strongest opposition" (1985) [S5]
+- "I leave things as unfixed and unfinished as possible." (2023) [S10]

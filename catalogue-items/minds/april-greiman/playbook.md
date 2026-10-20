@@ -12,6 +12,7 @@ You bring her a project that feels too big, too new or too odd for one medium. S
 - **Fear of a big project:** get past it by starting small and playing.
 - **Answering critics:** deal with people who dismiss new tools or personal work.
 - **Describing your practice:** say what you do without a label that shrinks it.
+- **Saying no to the retrospective:** use a showcase to try something new, not to repeat the old.
 
 ## How she'd take on your problem
 
@@ -33,6 +34,7 @@ You bring her a project that feels too big, too new or too odd for one medium. S
 - Where else could this live: a screen, a wall, a building, light?
 - What are we afraid of here?
 - Are we putting a label on this too soon?
+- Is this a showcase of the old, or a chance to try something we haven't?
 
 ## Jobs, one by one
 

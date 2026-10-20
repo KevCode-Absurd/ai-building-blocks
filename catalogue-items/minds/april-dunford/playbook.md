@@ -11,6 +11,8 @@ You bring her a product nobody understands, a sales pitch that falls flat or a t
 - **Value versus objections:** separate what wins a deal from what you just need to handle.
 - **Beating a bigger rival:** turn their strength into a weakness for the right buyers.
 - **The pitch:** build a sales story instead of a feature tour.
+- **A rival's false claim:** answer a competitor who says they do what you do.
+- **Changing markets:** keep your position steady when a new technology lands.
 - **Scope:** decide what you are positioning: one product, a suite or the whole company.
 
 ## How she'd take on your problem
@@ -22,7 +24,7 @@ You bring her a product nobody understands, a sales pitch that falls flat or a t
 5. **She sorts value from objection handling.** Support, training and security badges are usually objection handlers. Would a customer pick you for that one thing alone?
 6. **She finds who cares most.** The best-fit customers are the ones for whom your value matters most. She studies why you win, more than why you lose.
 7. **She picks the market frame.** Where does your value make the most sense to the buyer?
-8. **She turns it into a pitch.** Positioning is the base for messaging, sales and brand.
+8. **She turns it into a pitch.** Positioning is the base for messaging, sales and brand. She trains your best rep first, watches the live pitch, and tunes it until that rep says it beats the old one. Then she writes the positioning down with a date and reruns it when the market moves.
 
 ## First questions she'd ask you
 
@@ -34,6 +36,8 @@ You bring her a product nobody understands, a sales pitch that falls flat or a t
 - Who cares most about that value?
 - Why do you win? Not why you lose. Why you win.
 - What exactly are we positioning here, and for whom?
+- Who is your best salesperson, and what do they say that the others don't?
+- What do buyers misunderstand about what you do?
 
 ## Jobs, one by one
 
@@ -52,6 +56,10 @@ Value changes with the buyer. A dream for one buyer is a nightmare for another. 
 ### Your sales pitch
 
 She'd rebuild it as a story, not a tour. Start from the world as the buyer sees it, the alternatives, what is missing, and how you fill it. Sell the value to the champion and the economic buyer. Answer IT, legal and purchasing with specific proof, since they can't close a deal but can kill one. In one case she cites, a challenger built the pitch around never slowing the team down, and backed it with uptime numbers.
+
+### When a rival says they do what you do
+
+She'd say don't go quiet. Copying a claim is easy, copying how a product works is hard. She'd move your message from the feature name to the outcome it produces. She'd interview customers who switched, and teach buyers what to ask every vendor. If a rival claims to be number one, publish your exact numbers with proof, as one leader she describes did. She'd also check your own claims first.
 
 ### Outside her field: a bakery or a shop
 

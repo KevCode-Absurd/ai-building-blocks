@@ -20,7 +20,7 @@ seats:
   - {seat: "Inherent drama", asks: "What is the drama already inside this product, and are we telling it plainly?"}
   - {seat: "Creative standards", asks: "Is this our best work, done well for its own sake, or a shortcut for a quick profit?"}
 pairs_with: [david-ogilvy, bill-bernbach, walt-disney, claude-hopkins, rory-sutherland]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Leo Burnett", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Leo_Burnett", kind: reference}
   - {n: 2, title: "When to Take My Name Off the Door (speech, December 1, 1967)", by: "Leo Burnett, reprinted by ProRhetoric", url: "https://prorhetoric.com/when-to-take-my-name-off-the-door/", kind: own-words}
@@ -31,6 +31,10 @@ sources:
   - {n: 7, title: "Leo Burnett Company, Inc.", by: "Encyclopedia.com", url: "https://www.encyclopedia.com/books/politics-and-business-magazines/leo-burnett-company-inc", kind: reference}
   - {n: 8, title: "Leo Burnett", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Leo_Burnett", kind: reference}
   - {n: 9, title: "Marlboro Man", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marlboro_Man", kind: reference}
+  - {n: 10, title: "Speech to the Magazine Publishers Association (opening and middle, reprinted in Sponsor, 12 December 1959)", by: "Leo Burnett, Sponsor", url: "https://lantern.mediahist.org/catalog/sponsor134052spon_0888", kind: own-words}
+  - {n: 11, title: "Burnett Detroit newspaper series 'The Vanishing American' (Broadcasting, 23 December 1957)", by: "Broadcasting magazine", url: "https://lantern.mediahist.org/catalog/broadcastingtele53unse_0_1453", kind: secondary}
+  - {n: 12, title: "The Marlboro Story (1969 film log, with Burnett on the cowboy concept)", by: "Philip Morris and Leo Burnett, catalogued by Periscope Film", url: "https://stock.periscopefilm.com/?p=353086", kind: secondary}
+  - {n: 13, title: "The Advertising Wisdom of Leo Burnett (rules gathered, undated, post of October 2010)", by: "Branding Strategy Insider", url: "https://brandingstrategyinsider.com/the-advertising-wisdom-of-leo-burnett/", kind: secondary}
 tests:
   - {kind: use, prompt: "Create a friendly character for a small family-run plumbing company, with a name, a look and three things it would say."}
   - {kind: use, prompt: "Find the inherent drama in a plain bag of rice and write a short print ad around it."}

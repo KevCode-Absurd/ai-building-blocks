@@ -1,8 +1,10 @@
 # Ruth Handler: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on the record: Ruth Handler died in 2002 [S1]. Her own long accounts, a 1994 memoir called *Dream Doll* and her papers at Harvard's Schlesinger Library, were not open to us [S7]. The fullest account we now hold is a chapter-by-chapter reader summary of Robin Gerber's 2009 biography *Barbie and Ruth*, which includes lines the biography quotes from Handler's memoir, letters and interviews [S13]. It is a summary of a book, not the book. It also has a few muddles, such as confusing her son Ken with her husband Elliot in one chapter, and some of its "best quotes" lists near the end read as generic, so we use only the lines tied to a chapter story. Her own words in full are limited to her 1964 statement on Barbie [S5]. Her voice otherwise reaches us through quoted lines in articles [S9][S10][S11][S12] and reference pages [S1][S2][S3][S4][S6][S7][S8]. She told some stories in more than one way, such as where she first bought the Lilli doll, so treat details of the Barbie origin story with care [S1][S10]. One obituary headline gives her birth year as 1917, but the reference pages say 1916 [S1][S2].
+
+Update for the 2026-10-21 check: we looked again for her own words, and re-read her 1964 statement [S5], the Boston Globe and Harvard Radcliffe pieces on her papers [S10][S7], the History.com article [S6], the PBS transcript [S3] and the Antique Trader and Lilith-interview write-ups [S9][S11]. Almost nothing she said or wrote is online in full. What is quoted comes in short lines: a 1938 journal note about having little money, a 1970 letter calling her first prosthesis experience unsatisfactory and disastrous, a 1993 letter saying she kept no original Barbies because she did not expect them to be valuable, and a 1994 speech about the Lilli doll [S10]. The record stays thin, and the voice rests on these short quotes.
 
 ## In one paragraph
 
@@ -79,10 +81,6 @@ ABC's president wanted advertisers for The Mickey Mouse Club, and toy makers had
 
 Facing doubt from parents and the trade, she brought in Ernest Dichter, known for studying hidden consumer motives [S13]. The campaign sold fashion and fantasy, with Barbie as a role model for girls. After the TV debut, girls asked for the doll and buyers placed orders [S13].
 
-### Cutting costs in a price war, 1947
-
-A rival, Knickerbocker Plastics, sold a similar toy at lower prices on Mattel's first big seller, the Uke-A-Doodle [S13]. She moved fast to cut production costs without cutting quality and pushed hard to flood the market, and it sold millions [S13]. Her biographer notes that she had gone to Butler Brothers over the head of Mattel's sales team, the Caryl brothers, who then left, and that she did not admit the mistake [S13].
-
 ### Giving Ken a neutered body
 
 Her team wanted a realistic boyfriend for Barbie and argued about his anatomy. A neutered design was chosen for marketing reasons [S13]. In a later interview she said the all-male board had resisted Barbie's breasts and refused an anatomically correct Ken, and she accepted those limits and launched [S10].
@@ -98,6 +96,12 @@ After her surgery she found the prostheses on offer bulky and poorly fitting [S6
 ### Turning forced service into a new purpose
 
 Ordered to do community service, she found filing tasks humiliating and quit the first placement [S13]. A probation officer, Steve Wishny, recognised her skills and steered her toward a programme for probationers, and she became involved in the Foundation for People [S13]. She said the work gave her a reason for the hard years [S13].
+
+### Choosing business over staying home
+Handler's papers and her own remarks show she did not enjoy being a stay-at-home mother and wanted creative work and a role in business from a young age [S7]. A 1959 interview, as reported, has her saying she felt out of place running a household [S9]. In a 1968 interview she argued that people who grow up poor often gain the drive that success needs [S10]. She took the selling and money side of Mattel while Elliot designed [S13].
+
+### Making the breast form because the options were poor
+After her 1970 mastectomy she wrote that her first experience with prostheses was unsatisfactory and disastrous [S10]. In a television interview she joked that the existing designs were clearly made by men, and then built a silicone form sold in left and right versions [S6]. She tied it to her view of Barbie, that a woman has choices [S6].
 
 ## Where she stood
 

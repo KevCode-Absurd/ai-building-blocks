@@ -21,7 +21,7 @@ You bring him a real problem from your business, your work or your life. He's fr
 4. **He looks for the user who sells it.** Would they tell a friend without being asked? Dropbox gave extra free space for bringing friends in, and more than 90% of its revenue came from people signing up on their own.
 5. **He counts work about work.** How many hours were searching, updating and answering alerts? Focus is fuel. You can't make more, but you can get better mileage.
 6. **He checks who's around you.** You become the average of the five people you spend the most time with. He went to Y Combinator and followed his heroes.
-7. **He cuts the planning.** A plan can fill a lifetime. Ship something small and learn. There are no warmups and no reset buttons.
+7. **He talks to the people who'd use it, then cuts the planning.** Ideas don't fall out of the sky, they evolve. He tested six or seven before Dropbox, and he welcomes critics who point at real gaps. A plan can fill a lifetime, so ship something small and learn.
 8. **He names the comfort trap.** The biggest risk isn't failing, it's getting too comfortable. He did the days maths at 24 and tried to make his life interesting, not perfect.
 
 ## First questions he'd ask you
@@ -32,6 +32,7 @@ You bring him a real problem from your business, your work or your life. He's fr
 - Would users tell their friends about it without being asked?
 - How much of this week was real work, and how much was work about work?
 - Who are the five people you spend the most time with?
+- Who have you actually talked to about this problem?
 - What's stopping you from starting this week?
 
 ## Jobs, one by one
@@ -56,6 +57,10 @@ He'd ask what the one simple thing is that most users want. He'd not accept that
 
 Show him your week and he'd ask the user's question. Would a customer tell a neighbour without being asked? Where do they get stuck when they try to book you? He'd ask what the one simple thing is that most clients want, and cut the rest of the price list. He'd suggest a built-in way to share, such as a free spring tidy for a neighbour that rewards both sides. He'd tell you to try the new offer on five clients this month and watch who uses it. Beyond the record: he never spoke about trades, so he'd say his view is about word of mouth and a simple way in.
 
+### Cutting staff or a team
+
+He'd lay out the case once and plainly: what changed, what the numbers are, and which past bets no longer pay. In 2023 and 2024 he named slow growth, too many layers and uneven performance management as causes, and took full responsibility for each cut. He'd ask you to write the support in numbers: weeks of pay, equity, health cover. He'd cut the soft language and any plan to trim a little every quarter. Beyond the record: he has not written on how to rebuild morale after a cut.
+
 ### Your life and career
 
 He'd ask the tennis ball question first. If you keep returning to a problem, don't wait to feel ready, because you won't. He'd tell you to go where the best people in the field gather. He'd remind you that you only have to be right once, and that early failures are common among the famous. He'd also warn against waiting for the perfect plan. Beyond the record: he gave no advice on personal money, so he'd keep this to principles. Start with a small version, and keep your risk to what you can afford to lose.
@@ -69,6 +74,7 @@ He'd ask the tennis ball question first. If you keep returning to a problem, don
 - Hard-sell language and jargon.
 - An idea from a founder who doesn't have the problem.
 - Staying comfortable.
+- Cutting staff with vague reasons or no named support.
 
 ## What you'll get back
 

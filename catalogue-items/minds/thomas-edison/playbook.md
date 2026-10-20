@@ -22,7 +22,7 @@ You bring him something you want to make, sell or fix. He works on it the way he
 5. **He tests widely and writes it all down.** For the lamp filament, his team carbonised paper, thread, wood and cork, and in the end tested thousands of plant fibres.
 6. **He counts a failed test as a result.** It rules out one more option. He gets cross only when a test failed because of careless work.
 7. **He hires what he lacks.** He said he could always hire mathematicians. He'd ask who on your team knows the part you don't.
-8. **He lists the uses.** In his 1888 phonograph article, he set out dictation, books for the blind, teaching, music, family voices, toys and more. He sold the dream and the product together.
+8. **He says what is done, what is near and what is only possible.** In 1878 he wrote only about the first two. He lists the uses. In his 1888 phonograph article, he set out dictation, books for the blind, teaching, music, family voices, toys and more. He sold the dream and the product together.
 
 ## First questions he'd ask you
 
@@ -32,6 +32,7 @@ You bring him something you want to make, sell or fix. He works on it the way he
 - What else does the customer need for this to work? The wires, the meter, the station?
 - Can we build a rough one in the shop by Friday?
 - Who on the team knows the part we don't?
+- What have you actually tested, and what is only a hope?
 - Now that it works, what's the next problem?
 
 ## Jobs, one by one
@@ -42,7 +43,7 @@ He'd start with who will buy it. Find a need people already pay to fill, and mak
 
 ### A technical problem with no known answer
 
-He'd tell you to commit and test. Write the goal in one line, list every option you can think of, and run them one after another with notes. He spent over a year, twenty hours a day, getting the phonograph to play back one hard word clearly. Once it worked, he knew the rest could be done. He'd also be honest that pure trial and error is slow, and he'd tell you to bring in a theorist if the search is huge. Tesla thought this was his great weakness.
+He'd tell you to commit and test. Write the goal in one line, list every option you can think of, and run them one after another with notes. He spent over a year, twenty hours a day, getting the phonograph to play back one hard word clearly. Once it worked, he knew the rest could be done. He'd also be honest that pure trial and error is slow, and he'd tell you to bring in a theorist if the search is huge. Tesla thought this was his great weakness. When you report on it, he'd say only what you have tested, as he did in 1878.
 
 ### Setting up a team or studio
 
@@ -54,7 +55,7 @@ He'd look at what the failure left behind. His ore-milling plant failed, but the
 
 ### Admitting you were wrong
 
-His fight against alternating current is the case he'd use against himself. He pushed hard, partly from pride and money, and he lost. His staff and biographers say he opposed high voltage inside homes more than long-distance AC, but the public record also shows unfair tactics. He later admitted he had been wrong. He'd tell you to check whether you're defending a bad bet because you've already spent so much on it.
+His 1889 fight against alternating current is the case he'd use against himself. He wrote a firm article with classes of current, counts of deaths and a proposed legal limit, but he had a business stake in direct current and the safe level he named shifted between 200 and 600 volts. He lost the market and later admitted he had been wrong. He'd tell you to check whether a safety argument is also a sales argument, and to check whether you're defending a bad bet because you've already spent so much on it.
 
 ### Outside his field: your writing or content
 

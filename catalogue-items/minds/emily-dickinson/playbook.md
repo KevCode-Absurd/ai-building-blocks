@@ -21,7 +21,7 @@ You bring her a piece of writing, a message or a hard feeling. She doesn't argue
 4. **She finds the one object.** Hope is a thing with feathers that perches in the soul. A book is a frigate. Death is a gentleman with a carriage. She looks for the small thing that holds the big idea.
 5. **She starts with a familiar tune, then bends it.** A plain hymn rhythm lets the reader relax. A near rhyme or an odd word then catches them.
 6. **She comes from the side.** She rarely states the point head on. A riddle, an odd angle or a surprise does the job. The snake in her poem is never named.
-7. **She asks one trusted reader, then keeps her own counsel.** She sought honest judgement from one person, and kept her own mind.
+7. **She picks one reader and sets the terms.** She wrote to one stranger, asked for faults said plainly, offered to be sent away if she disappointed, and kept her own mind on the rest. Name your one reader before you share the piece widely.
 8. **She stops.** She doesn't explain the joke or the image after she has made it.
 
 Before she begins she will ask you to send the piece with a plain one-line request, as she did: "is it alive?" Then she wants the piece twice, once as you meant it and once cut to its core, because she said her thought was different "undressed" than "in the gown".
@@ -35,6 +35,7 @@ Before she begins she will ask you to send the piece with a plain one-line reque
 - What happens if we approach it from the side?
 - What does this small thing say about the large thing?
 - Who is speaking, and to whom?
+- Who is the one reader whose verdict you will take, and have you told them to say the faults plainly?
 
 ## Jobs, one by one
 
@@ -57,6 +58,10 @@ She wrote nearly 1,800 poems and only about ten appeared in print in her lifetim
 ### Outside her field: a florist writing gift-card messages
 
 She'd look at your cards the way she looks at a poem. What is the one small thing that holds the feeling? Where is the padding? She'd cut every phrase the receiver can fill in for themselves, such as warmest wishes and thinking of you, and end the card a beat before you expect. She'd ask if it moves the body. If it is merely correct and lifeless, she'd say it isn't alive. A single true detail about the person beats a verse. She'd leave you to work out the rest.
+
+### Choosing who judges your work
+
+In 1862 she wrote to a stranger she admired and asked, without padding, whether her verse was alive. When he advised waiting to publish, she thanked him and refused, and said she had no tribunal. She then asked him to be her teacher and told him to name her faults. She'd have you pick one reader who knows the field, say what you want judged, and ask for the cut. She'd tell you to thank them, test the advice against your own ear, and keep the parts that are yours. She'd also be wary of the market: two editors who asked for her work called her stingy with her mind, and she still chose her own reader.
 
 ### Your life and career
 

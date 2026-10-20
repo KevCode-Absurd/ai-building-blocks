@@ -1,10 +1,8 @@
 # Sam Walton: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Honesty note (2026-10-20 check): the local record is the Wikipedia article on Walton plus short excerpts of the 10 rules and the memoir quotes page. The 10 rules [S1] and the Walmart history pages [S2][S3][S6] were summarised in an earlier build and could not be re-read on disk, so treat them as less checked than the dated facts from Wikipedia [S4]. Very little of his own voice is available online, which is why this record has only two own-words sources.
-
-A note on method: Walton died on 5 April 1992 [S4]. His fullest statement of his ideas is his memoir, *Sam Walton: Made in America* (1992, written with John Huey) [S4]. The memoir is copyrighted and we couldn't open a full public copy, so this data set leans on Walmart's own published version of his "10 Rules for Building a Business" [S1], short lines from the memoir on a public quotes page [S7], Walmart's history pages [S2][S3][S6], and reference pages [S4][S5]. Where Walmart describes its founder, read it as the company's view of him.
+Honesty note (2026-10-21, second pass): Walton died on 5 April 1992 [S4]. His memoir, *Sam Walton: Made in America* (1992, with John Huey), is copyrighted and not open to us, so we have not read it in full. His own words reach us through five routes: Walmart's version of his 10 rules [S1], short memoir lines on a quotes page [S7], a long 1989 letter to associates on exceeding customer expectations that a newsletter reprinted [S8], a short passage from his 1992 medal remarks [S9][S10], and reviews and summaries of the memoir that carry his reasons and a few lines [S11][S12][S13][S14]. Where a page is someone else's summary, we say so and paraphrase. Walmart's own pages are the company's view of its founder [S2][S3][S6]. The record of his voice is still thin: no full interview or speech is free to read.
 
 ## In one paragraph
 
@@ -58,7 +56,7 @@ How he applied it: running stores at a distance forced him to delegate to local 
 
 ### Exceed customer expectations
 
-The eighth rule is to give customers a little more than they expect, and to make good on every mistake [S1]. Don't make excuses. Apologise [S1]. Walton also built a "servant leadership" idea into the company, based on his faith [S4].
+The eighth rule is to give customers a little more than they expect, and to make good on every mistake [S1]. Don't make excuses. Apologise [S1]. Walton also built a "servant leadership" idea into the company, based on his faith [S4]. In a 1989 letter he went further. He wrote that exceeding customer expectations must be the company's strategy, because specialty chains such as Office Depot and Toys-R-Us were taking on Walmart one department at a time [S8]. His example of a good result was a lawn and garden manager who drove about 20 miles with the missing hardware for a customer's picnic table and helped her put it together, which Walton said won a customer for life [S8]. His fix for a bad return trip was a rule he called replace, plus one: replace the shoes, and add something such as socks to make up for the hassle [S8].
 
 How he applied it: the company cheer ends by asking who is number one, and answering that it's the customer [S3].
 
@@ -81,23 +79,29 @@ How he applied it: he went to small towns when others went to cities [S4]. He al
 
 ## Real decisions
 
-### Buying a variety store in Newport at 26
-In 1945, after the army, Walton bought a Ben Franklin variety store in Newport, Arkansas, with a $20,000 loan from his father-in-law and $5,000 he had saved [S4]. He learned the franchise's methods, then added a second store next door to his main competitor [S4]. Sales grew from $80,000 to $225,000 in three years [S4].
+### Buying a variety store in Newport at 26, and buying direct
+In 1945, after the army, Walton bought a Ben Franklin variety store in Newport, Arkansas, with a $20,000 loan from his father-in-law and $5,000 he had saved [S4]. He took the franchisor's two-week training, then found he could buy goods cheaper from other suppliers than from the franchisor [S11][S13]. His method was to price low and sell much more, so profit came from volume rather than margin [S11][S13]. Sales grew from $80,000 to $225,000 in three years, and he repaid his father-in-law within 30 months [S4][S11].
 
 ### Losing the Newport lease and starting again
-The Newport lease had no renewal option and cost 5% of sales. The landlord, who wanted the store for his own son, refused to renew, though he paid $50,000 for the stock and fixtures, which Walton called fair [S4]. Walton took it as an early business lesson and moved to Bentonville, where he opened a new store on 9 May 1950. The landlord next door refused six times to give him the lease he needed until his father-in-law quietly paid $20,000 [S4].
+The Newport lease cost 5% of sales and had no renewal option. The landlord, who wanted the store for his own son, refused to renew, though he paid $50,000 for the stock and fixtures, which Walton called fair [S4][S11]. Walton said he read his leases much more carefully after that [S11]. He moved to Bentonville and opened a new store on 9 May 1950. Walmart's account says he chose it because his wife Helen liked small-town life and the hunting was good [S2][S4].
 
-### Matching big-town prices in small towns
-His idea was that if he sold at prices as good as or better than stores four hours away in the city, people would shop at home [S4]. In the discount format he put stores in small towns, not big cities, because competition was thin and a large store could discourage other merchants from entering [S4].
+### Leaving Ben Franklin to start Walmart (1962)
+By 1960 he ran 15 stores with about $1.4 million in sales and was looking for a bigger payoff [S12]. The franchisers would not back discounting, so he went his own way [S13]. He studied discounters such as FedMart, ignored the view that discounting needed big towns, and opened the first Walmart in Rogers, Arkansas, in 1962 at age 44 [S4][S12]. He wrote that many of his best opportunities were created out of necessity: with little money, he went to small towns the big chains skipped [S12]. The first store earned far less than top discounters, but the gap showed him a large opening [S13].
 
-### Flying to scout and giving managers a stake
-Tired of driving between stores, he bought a small second-hand plane to scout sites, as his brother and later his son did too [S4]. He also asked managers to invest in their own store, often up to about $1,000, so they would act as owners [S4].
+### Flying to scout, and giving managers a stake
+Tired of driving between stores, he bought a small second-hand plane to scout sites [S4]. He asked managers to invest in their own store, often up to about $1,000, so they would act as owners [S4]. He admitted he had been too strict on pay early on, then loosened policy, first for partner managers and later for the rank and file, who shared in profits and stock gains [S12]. Encyclopedia.com says he first paid the minimum wage and that his wife Helen persuaded him to add incentive bonuses, stock discounts and profit sharing [S15]. Reviewers note he came to believe that well-treated employees treat customers better [S13].
 
 ### Building the warehouse and trucks first
-To make small-town stores work, he placed them within a day's drive of regional warehouses and ran his own trucks. Buying in volume and efficient delivery let him sell discounted name brands. The chain grew from 190 stores in 1977 to 800 in 1985 [S4].
+To make small-town stores work, he placed them within a day's drive of regional warehouses and ran his own trucks [S4]. Delivering to stores directly was inefficient, so a central warehouse became the base for expansion [S13]. A reviewer notes that an executive had to push him to buy key equipment because he disliked spending [S13]. He took the company public in 1970 to pay off the debt from expansion [S13]. The chain grew from 190 stores in 1977 to 800 in 1985 [S4].
 
-### Copying a rival's format
-He said openly that his one-stop shopping format was based on Meijer's original idea [S4]. The first true Walmart opened in Rogers, Arkansas on 2 July 1962, with a drive to find American makers whose prices could meet foreign competition [S4].
+### Studying rivals with a notepad, then copying
+Walton visited rivals' stores constantly, from the Sterling store across the street in Newport to Kmart, which he called his laboratory [S11][S13]. He asked clerks questions and wrote the answers on a yellow pad [S13]. He told managers to look for what rivals did right and take it [S13]. He said openly that his one-stop format came from Meijer and that Sam's Club came from Sol Price's warehouse model [S4][S12]. He dropped failed trials such as Hypermart quickly [S14].
+
+### Bringing a factory cheer to the stores (c. 1975)
+Walton visited a manufacturing plant near Seoul where workers began the day with a company cheer, and he brought the idea home [S6]. Walmart's museum records his reason: a cheer puts everyone on the same level, and nobody should be too important or too puffed up to lead one [S6]. The date is uncertain, because a May 1976 company letter about trips to Japan, Korea and Taiwan casts doubt on 1975 [S6].
+
+### Writing to associates: make exceeding expectations the plan (1989)
+After a Saturday morning meeting on how specialty chains were attacking each department, Walton wrote to all associates [S8]. He proposed a pledge that every customer would get a greeting from at least ten associates. He proposed letting service desk associates handle refunds and exchanges on the spot, with manager approval perhaps only at $25 and above. He wanted knowledgeable staff in specialty departments for twelve hours a day. He asked for fewer hassles and a "do it right the first time" approach, and said the company must also find the system failures behind unhappy customers [S8]. His reason was that survival would depend on exceeding what customers expect as rivals improve. He closed by admitting the letter was a little heavy and signed it "Sam" [S8].
 
 ## Where he stood
 
@@ -140,12 +144,13 @@ He said openly that his one-stop shopping format was based on Meijer's original 
 - Low price above all can squeeze workers, suppliers and towns. Pair him with a voice that weighs those costs [S5].
 - His rules praise sharing with staff, while his record on pay and unions was criticised. Check the gap between the words and the practice [S1][S5].
 - His playbook suits a business that can win on scale and cost. A small premium brand may need a different game.
+- His thrift cut both ways: reviewers say Walmart lagged on distribution centres and that he resisted some equipment until others pushed [S12][S13].
 - He saw the world through the store. Big shifts outside it, such as online shopping, came after him [S3].
 
 ## Short phrases on the record
 
 - "Believe in it more than anybody else." (10 rules) [S1]
 - "We make a decision. Then we act on it." (*Made in America*, 1992) [S7]
-- "The more they know, the more they'll understand." (10 rules) [S1]
+- "Replace, plus one" (1989 letter to associates) [S8]
 - "Make good on all your mistakes" (10 rules) [S1]
-- "no one is too important or too puffed up to lead a cheer" (as quoted by Walmart) [S6]
+- "Many of our best opportunities were created out of necessity." (*Made in America*, as quoted in a review) [S12]

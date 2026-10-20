@@ -1,8 +1,8 @@
 # Richard Branson: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Richard Branson is alive, and views can change. His views here come from his books *Losing My Virginity* (1998) and *The Virgin Way* (2014), as quoted on public quote pages [S1][S2], from interviews and blog lines collected with their sources [S3], from a TED interview transcript, where he talks about saying yes first and learning after [S7], and from reference pages [S4][S5][S6]. His books are copyrighted, so we use only a few short lines. Treat each view as "as of" its source. Nothing here covers his private life or his current plans.
+Richard Branson is alive, and views can change. His books *Losing My Virginity* (1998) and *The Virgin Way* (2014) are copyrighted, and we know them only through quote pages [S1][S2][S3]. The longer record is three interviews where he answers at length: a Freakonomics conversation [S8] and two Globe and Mail Q&As [S9][S10]. We also use a TED interview transcript [S7], a press piece on why he started the airline [S11] and reference pages [S4][S5][S6]. The interview texts were read through a web summary, so we quote none of their wording. Treat each view as "as of" its source. Nothing here covers his private life or his current plans.
 
 ## In one paragraph
 
@@ -24,24 +24,6 @@ How he applied it: when Virgin Atlantic was in trouble in 2020, he put up his Ne
 
 **Say yes, then figure it out.** In his TED interview, Branson says he is known as "Dr. Yes". He would rather accept the chance and learn the skill afterwards [S7]. He says most jobs can be learned on the job in a couple of months, so he hires for personal qualities more than credentials [S7]. He describes life as a long education, and says that over a whole life boldness is safer than caution [S7]. How he applied it: he tells the story of his mother pushing him out of the car as a child to find his own way, and the failed Virgin Cola stunt in New York, which he tells as a joke on himself [S7]. He also says presentations should come from people being themselves, not from a heap of slides [S7].
 
-### Take on the big, sleepy incumbent
-
-Branson has said he wants to fight big companies [S3]. The Virgin pattern is to enter a market where large firms have grown lazy, and offer something more fun, more human or better value.
-
-How he applied it: Virgin went into airlines, trains and mobile phones, all markets with powerful incumbents [S4][S5]. He also argued that weak companies should be allowed to fail instead of being propped up, as he put it in a 2009 interview [S3].
-
-### Keep companies small
-
-Branson wrote that when a Virgin venture got too big, he split it into smaller units [S1]. He wanted each company to stand on its own feet [S1]. He liked to give people the chance to run a new company, making them managing director, sales director and marketing director all at once [S1].
-
-How he applied it: Virgin Group is a mix of companies with different owners, many using the brand under licence [S5]. Some brands, like Virgin Records, were sold to others [S4][S5].
-
-### Stretch the brand, and guard its name
-
-Virgin's name has been put on records, planes, trains, phones, gyms, hotels, cruises and rockets [S5]. Branson wrote that once you have a great product, you must protect its reputation closely [S1]. He also warned that you can be very rich, but if you lose your good name you'll never be happy [S1].
-
-How he applied it: the group uses licensing, so other firms can run under the Virgin name if they meet its standards [S5].
-
 ### Publicity beats paid ads
 
 Branson has written that a good PR story is far more effective than a front-page ad [S3]. Virgin's launches often came with stunts and stories that got free press.
@@ -54,17 +36,29 @@ In *The Virgin Way*, Branson calls listening a sign of courage and says it makes
 
 How he applied it: he also argues that you can't train attitude, so you have to hire for it [S2].
 
-### Make mistakes, but make them fast
+### Build the exit in before you jump
 
-Branson accepts that you and everyone around you will make mistakes [S3]. His advice is to make them quickly, learn and start again [S2][S3]. He relies more on gut feel than on piles of statistics [S1].
+When Virgin went into airlines, Branson said he negotiated with Boeing for the right to hand the aircraft back after 12 months [S10]. That let him test the market without putting the rest of the group at risk [S10]. He called protecting the downside one of the most important phrases in his life [S10]. In tough times, he said, make sure no single bad decision can sink the whole business [S9].
 
-How he applied it: Virgin Cola, Virgin Cars and other ventures didn't work out, and he has described failure as a way to learn [S4][S5].
+### Only enter a market if you can shake it up, and if it fits the brand
 
-### Put money back
+Branson said he enters an industry only when he can shake it up and when the move strengthens the Virgin brand [S10]. He turns away anything that could damage the brand, even if it would pay [S10]. Ventures often start with a gap he notices as a customer, and the money details come later [S10].
 
-Branson wrote that people who make money from society should put it back, not sit on it [S1]. He has said he would rather invest spare money in new ventures than leave it idle [S3].
+How he applied it: he disliked the service on existing airlines and decided to start his own, saying the industry was abysmally run [S11].
 
-How he applied it: he co-founded The B Team and supports The Elders, and he has campaigned against the death penalty [S4].
+### A new venture needs a real point of difference
+
+Looking back on Virgin Cola, he said it faltered because cola offered nothing fundamentally different, unlike airlines [S9]. For him the test of a new venture is a clear reason to switch [S9].
+
+### Delegate until you can put yourself out of business
+
+Branson told young founders to delegate early so they can think about the bigger picture [S8]. He prefers to promote from within, because an outside executive can upset a company's atmosphere [S8]. He looks for leaders who motivate, care about people and praise more than they criticise [S8][S10]. A company, he said, is its people, since rivals buy the same aircraft [S10].
+
+How he applied it: he handed most CEO roles to others and stayed on as founder, brand steward and adventurer [S8]. He kept a small investment committee to vet proposals and a lean team so he stayed close to customers [S9].
+
+### Gut first, notebook always
+
+He said he relies on intuition more than on business analysis and has rarely used accountants to decide whether to start something [S9]. He keeps a notebook for ideas, advises learning every department, and tests an idea on trusted people before asking for money [S9]. He compares building a company to painting, where you want to end up proud of the work [S9].
 
 ## How he decides
 
@@ -77,30 +71,26 @@ How he applied it: he co-founded The B Team and supports The Elders, and he has 
 - If it's not working, can we stop fast [S2]?
 
 ## Real decisions
+### Starting an airline because the service was bad (1984)
+Branson travelled a lot and disliked the poor service and seats on existing airlines, so he decided to start his own, even though the industry was known for costly failures [S11]. He said he finds it hard to say no to a challenge [S11]. To limit the risk he negotiated the right to return the first aircraft to Boeing after 12 months [S10]. Freddie Laker advised him to add a business class cabin so rivals could not win on price alone [S11]. Virgin Atlantic launched in 1984 [S4].
 
-### Starting a record shop by mail, then a label
+### Releasing Tubular Bells on his own label
+For Mike Oldfield's *Tubular Bells*, Branson chose to release the album through his own label and not take a distributor's deal [S9]. That meant more risk, and he took it to keep more of the upside [S9]. The record helped build Virgin Records, which he founded in 1972 [S4].
 
-Branson began with a magazine called *Student*, then a mail-order record business, and in 1972 he founded Virgin Records [S4]. Records were the base the Virgin name grew from [S4][S5].
+### Launching Virgin Cola
+He challenged Coca-Cola, a move he later said faltered because cola offered nothing fundamentally different [S9]. He tells a story of the New York launch stunt as a joke on himself [S7]. The lesson he drew was that a new venture needs a real point of difference [S9].
 
-### Entering the airline market in 1984
+### Partnering on mobile phones instead of building a network
+Virgin lacked the money to build its own mobile network, so Branson took a 50% partnership with T-Mobile and put Virgin's strength, marketing and brand, to work [S8].
 
-He launched Virgin Atlantic in 1984, taking on the large established airlines with a more fun and human offer [S4]. He later joked that the way to become a millionaire is to start with a billion and launch an airline, which shows he knew the risk [S3].
+### Carrying on with Virgin Galactic despite doubts
+Branson said Virgin Galactic had weak profit prospects and doubts from his board, and that he kept going because it was a personal dream and a way to open space to people [S8]. He said it had taken 12 years by then [S8]. The project suffered a fatal test crash on 31 October 2014 and flew him to the edge of space on 11 July 2021 [S6].
 
-### Selling the record label
+### Stepping back from running companies
+Branson handed day-to-day control of most companies to capable leaders so he could focus on new ventures and the brand [S8]. His line to young entrepreneurs was to put yourself out of business [S8]. He also moved to mobile and games as digital music closed most of Virgin's roughly 300 record stores [S8].
 
-In 1992 he sold the Virgin record label to EMI [S4]. The group moved from music into airlines, trains and phones, and kept the name through licensing and separate companies [S4][S5].
-
-### Splitting companies when they grow
-
-When a Virgin venture got too big, he split it into smaller units so each could stand on its own feet and give people the chance to run a company [S1]. The group became a mix of separately owned and licensed businesses [S5].
-
-### Putting his island up to save the airline
-
-In 2020, when Virgin Atlantic was in trouble, he put up Necker Island as security for a loan to help save it [S4]. This sits oddly beside his 2009 view that weak companies should be allowed to fail [S3].
-
-### Flying to space himself
-
-On 11 July 2021 he flew to the edge of space on Virgin Galactic's *Unity* [S6]. He had made himself the public face of the brand and its stunts [S3][S4]. The regulator briefly grounded the fleet after the flight because *Unity* strayed outside its cleared airspace [S6].
+### Putting his island up to save the airline (2020)
+When Virgin Atlantic was in trouble in 2020, he put up Necker Island as security for a loan to help save it [S4]. This sits oddly beside his 2009 view that weak companies should be allowed to fail [S3].
 
 ## Where he stood
 

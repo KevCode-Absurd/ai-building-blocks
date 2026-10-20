@@ -1,8 +1,8 @@
 # Jony Ive: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Jony Ive is alive, and his views can change. He is a private person who gives few long interviews. This data set draws on a Design Museum profile and Q+A from 2003 [S1], two interviews from 2016 and 2017 [S2][S3], Apple's 2019 announcement of his departure [S4], a collection of sourced quotes [S5] and reference pages [S6][S7]. Treat each view as "as of" its date. Nothing here covers his current projects, his family or what he thinks about recent products.
+Jony Ive is alive, and his views can change. He is a private person who gives few long interviews. This data set draws on a Design Museum profile and Q+A from 2003 [S1], two interviews from 2016 and 2017 [S2][S3], Apple's 2019 announcement of his departure [S4], a collection of sourced quotes [S5] and reference pages [S6][S7]. Treat each view as "as of" its date. It was widened in October 2026 with his 2011 memorial remarks for Steve Jobs [S10], a 2021 commencement address [S11], a 2025 conference talk [S8][S9], and press interviews reported by others [S12][S13][S14][S15]. The wording of the press interviews comes from outlets that summarised them, so the exact phrasing is theirs. Nothing here covers his current projects, his family or what he thinks about recent products.
 
 ## In one paragraph
 
@@ -40,17 +40,17 @@ In 2012 he said that to make something genuinely new you have to start again [S5
 
 How he applied it: the iPhone X removed the home button so the screen could fill the front. That meant rethinking how people unlock the phone, call up Siri and pay, which he called a set of very complex problems [S3]. He admitted some people disliked the change [S3].
 
-### Learn from history, and don't fake confidence
+### Make it physical early
 
-When a design team is stuck, Ive said in 2017, looking at how problems were solved in the past gives them faith that a solution exists [S3][S5]. He added that faith is no substitute for engineering skill [S3].
+He describes the creative process as having no idea, then suddenly having one, and says the biggest shift comes when an abstract idea becomes a physical one [S13]. Even a rough model gives a vague concept form and can change the direction of the whole project [S13]. He adds that a physical model galvanises a wide group of people and sharpens their focus [S13].
 
-How he applied it: in 2016 he used the simple metal needle as an example of a craft tool that once overturned how people thought, and said it humbles him [S2]. He framed the iPhone X as the completion of a chapter that started with the first iPhone, and he compared its price debate to the one in 2007 [S3].
+### Better, not different
 
-### Small, close teams
+He calls it the wrong goal to chase being new or different, and says a product has to be genuinely better, which takes discipline [S13]. He also wants products that seem inevitable, as if they were the only sensible answer, with the hard design work hidden from the user [S12]. He sums up the approach as getting the most from the fewest elements [S14].
 
-He describes a small, very collaborative design team with shared tools and an open studio, where people work side by side [S1]. In 2003 he said the memory of how the team worked together would last longer than the products themselves [S5].
+### Small, close teams, and fragile ideas
 
-How he applied it: when he left Apple in 2019, he praised his colleagues and said he had full confidence in them. Apple said the design team he built would carry on [S4].
+In 2011 he said Steve Jobs knew that good ideas begin as fragile, half-formed thoughts that are easy to miss, weaken or crush, so they need care [S10]. He describes a small, very collaborative design team with an open studio [S1], and in 2025 said he works to make colleagues care about each other so they listen instead of waiting to talk [S9]. In 2021 he added that wanting to learn more than wanting to be right makes collaboration joyful [S11]. Jobs would offer ideas of every quality, from bad to stunning, and the two of them could be left silent by the good ones [S10].
 
 ## How he decides
 
@@ -62,14 +62,26 @@ How he applied it: when he left Apple in 2019, he praised his colleagues and sai
 - When stuck, study how others solved it before [S3].
 - A beautiful thing that works badly has failed [S5].
 - Keep the team small and close [S1].
+- Build a physical model early, even a rough one [S13].
+- Do not start designing until you understand the material [S14].
+- Be better, not different [S13].
 
 ## Real decisions
 
 ### Taking the home button off the iPhone
 By 2017 the iPhone had a familiar home button that people trusted. Ive's team removed it so the screen could fill the front, which meant new ways to unlock, call Siri and pay [S3]. His reason was that these were extraordinarily complex problems that had to be solved, and he called the change the completion of a chapter [S3]. Some users disliked it, and the phone launched at $999, a price he put down to the processing packed into a small device [S3].
 
-### Leaving the Power Mac G4 Cube clear of clutter
-The Design Museum gives the Power Mac G4 Cube as an effort to strip away visual and audio clutter [S1]. The point was ease and simplicity of use, which he named as the defining quality of Apple's products [S1]. The record here does not say how the product sold, so this mind makes no claim about it.
+### Stopping an iMac near tooling
+
+Ive told L'uomo Vogue in 2009 that Apple once halted a new iMac project as it neared tooling, because the team had stopped liking the design [S14]. He said stopping a production line takes a lot of courage [S14]. The record here gives no year, product details or cost, so this mind claims nothing more than the principle: a design you no longer believe in is worth stopping even late [S14].
+
+### Going to Japan before touching aluminium
+
+When Apple moved to aluminium, members of the design team spent long periods in Japan with local metalworkers [S14]. Ive's stated rule is that they cannot start designing until they truly understand the material [S14]. This ties to his belief that designers who only change things on a screen, without seeing the physical result, lose touch with what is possible [S14].
+
+### The Friday breakfast
+
+In 2025 Ive described asking one member of the design team each week to cook breakfast for everyone, rotating through the group [S8]. He said it built bonds, and asked who wants to spend time in a conference room [S9]. His stated reason was that time outside the office lets people think in new directions and understand each other, which also makes quiet voices easier to hear [S9].
 
 ### Redesigning iOS away from leather and paper
 For iOS 7 in 2013 he led a move away from software that imitated real objects toward a flatter, simpler look, and described the aim as simplicity that is more than the absence of clutter [S7]. Reviews were mixed. The Nielsen Norman Group said flat design hides calls to action, and some users reported motion sickness from new effects, yet the update was adopted very fast [S7].
@@ -131,5 +143,5 @@ At a museum fashion preview in 2016 he was among people who prize handmade work.
 - "The defining qualities are about use: ease and simplicity." (2003) [S1]
 - "fanatical care beyond the obvious stuff" (Design Museum) [S1]
 - "I think a beautiful product that doesn't work very well is ugly." (2014) [S5]
-- "deep care is critical" (2016) [S2]
+- "trying to achieve the most with the very least" (2009) [S14]
 - "Faith isn't a surrogate for engineering competence" (2017) [S3]

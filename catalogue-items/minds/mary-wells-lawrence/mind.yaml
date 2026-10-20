@@ -20,7 +20,7 @@ seats:
   - {seat: "Making it news", asks: "Would a reporter want to write about this, or would only our customers notice?"}
   - {seat: "The honest joke", asks: "What's the awkward truth about this product, and can we make people smile about it?"}
 pairs_with: [david-ogilvy, rory-sutherland, al-ries, seth-godin, walt-disney]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Mary Wells Lawrence", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mary_Wells_Lawrence", kind: reference}
   - {n: 2, title: "Wells Rich Greene", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wells_Rich_Greene", kind: reference}
@@ -31,6 +31,12 @@ sources:
   - {n: 7, title: "Braniff International Airways", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Braniff_International_Airways", kind: reference}
   - {n: 8, title: "I Love New York", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/I_Love_New_York", kind: reference}
   - {n: 9, title: "A Big Life (In Advertising), review", by: "Kirkus Reviews", url: "https://www.kirkusreviews.com/book-reviews/mary-wells-lawrence/a-big-life-in-advertising/", kind: secondary}
+  - {n: 10, title: "PW Talks with Mary Wells Lawrence (interview on her memoir, 8 April 2002)", by: "Publishers Weekly", url: "https://www2.publishersweekly.com/pw/print/20020408/27817-pw-talks-with-mary-wells-lawrence.html", kind: own-words}
+  - {n: 11, title: "You must have the words, you must produce the magic: Mary Wells Lawrence (memoir passages quoted and summarised)", by: "Laura McLaws Helms, Substack", url: "https://laurakitty.substack.com/p/mary-wells-lawrence", kind: own-words}
+  - {n: 12, title: "The Women Who Built DDB, 7: Mary Wells (with her words from 1968 and 2002 interviews)", by: "Dave Dye", url: "https://davedye.com/2021/04/19/the-women-who-built-ddb-7-mary-wells", kind: secondary}
+  - {n: 13, title: "Review: A Big Life (in advertising) (2021 review of the 2002 memoir)", by: "Bob Trube, Bob on Books", url: "https://bobonbooks.com/tag/mary-wells-lawrence/", kind: secondary}
+  - {n: 14, title: "Mary Wells Lawrence, high-profile advertising pioneer, dies at 95 (obituary, 11 May 2024)", by: "The Boston Globe", url: "https://www.bostonglobe.com/2024/05/11/metro/mary-wells-lawrence-high-profile-advertising-pioneer-dies-95", kind: reference}
+  - {n: 15, title: "Something About Mary (profile on her memoir, opening only)", by: "Noreen O'Leary, Adweek", url: "https://www.adweek.com/brand-marketing/something-about-mary-55774/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write three campaign ideas for a small local bus company that everyone thinks is dull and slow."}
   - {kind: use, prompt: "Write a short, funny ad for a coffee shop whose only seating is three hard stools."}

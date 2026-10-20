@@ -2,13 +2,17 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Poe's works are in the public domain, so we quote short lines. This set rests on three of his own texts: the full 1846 essay "The Philosophy of Composition" [S2], his 1842 review of Hawthorne's tales [S3] and "The Tell-Tale Heart" [S4]. Wikipedia pages supply the life and the record [S1][S5]. His tales are often told by unhinged narrators, and their views are theirs, not his. His views on craft come from the essay and the review, where he speaks directly. In the essay he is explaining his own poem after the fact, and some scholars doubt he really wrote it that way, so read it as his ideal method.
+A note on method: Poe's works are in the public domain, so we quote short lines. This set rests on seven of his own texts: the full 1846 essay "The Philosophy of Composition" [S2], his 1842 review of Hawthorne's tales [S3], "The Tell-Tale Heart" [S4], his late essay "The Poetic Principle" [S6], the 1831 "Letter to B----" [S7], the 1840 prospectus for his own magazine [S8] and a selection of his Marginalia notes [S9]. Wikipedia pages supply the life and the record [S1][S5][S10]. The Marginalia page is a 1909 selection, not the full series, and the Stylus page is a secondary summary. His tales are often told by unhinged narrators, and their views are theirs, not his. His views on craft come from the essay and the review, where he speaks directly. In the essay he is explaining his own poem after the fact, and some scholars doubt he really wrote it that way, so read it as his ideal method.
 
 ## In one paragraph
 
 Edgar Allan Poe was born in Boston on 19 January 1809, lost both parents as a small child, and was raised, though never adopted, by John and Frances Allan of Richmond, Virginia [S1]. After a year at the University of Virginia, a spell in the army and a dismissal from West Point, he set out to live by writing alone, one of the first Americans to try [S1]. He worked as an editor and a feared critic for several magazines, wrote poems, horror tales and the first modern detective story, and became famous overnight with "The Raven" in 1845 [S1][S5]. In his essays he argued that a short work must be planned from its ending to produce one single effect [S2][S3]. He was found half-conscious in Baltimore and died there on 7 October 1849, of causes still unknown [S1].
 
 ## Core ideas
+
+### A poem is for its own sake
+
+In "The Poetic Principle" Poe attacked what he called the didactic heresy: the belief that a poem should teach a truth or a duty [S6]. He split the mind into three powers. Intellect handles truth, moral sense handles duty, and taste handles beauty, and he gave poetry to taste alone [S6]. A poem written solely for the poem's sake was, to him, the most dignified kind [S6]. Seventeen years earlier, in the 1831 "Letter to B----", he had already said that poetry aims at pleasure and not at truth, and that music is part of it [S7].
 
 ### One work, one effect
 
@@ -18,7 +22,7 @@ How he applied it: in "The Philosophy of Composition" (1846), he says he prefers
 
 ### Short enough for one sitting
 
-Poe believed a work loses force if it can't be read in one sitting, because daily life breaks in and weakens the impression [S3]. He preferred the short prose tale, read in an hour or two, because for that time the reader's soul is under the writer's control [S3]. He thought a long poem was close to a contradiction, since intense feeling can't last long, and that a novel suffers from being read in pieces [S3]. For "The Raven" he aimed at about 100 lines; the poem has 108 [S2].
+Poe believed a work loses force if it can't be read in one sitting, because daily life breaks in and weakens the impression [S3]. He preferred the short prose tale, read in an hour or two, because for that time the reader's soul is under the writer's control [S3]. He thought a long poem was close to a contradiction, since intense feeling can't last long, and that a novel suffers from being read in pieces [S3]. For "The Raven" he aimed at about 100 lines; the poem has 108 [S2]. In "The Poetic Principle" he said the lift a poem gives cannot last, so a long poem is really a chain of short ones, and he called the fame of very long works a mistake. He also warned that a poem can be too short to leave a mark [S6].
 
 ### Start from the ending
 
@@ -50,7 +54,7 @@ Poe himself admitted that the tales seem more ingenious than they are partly bec
 
 ### Criticism as a blade
 
-As an editor, Poe wrote reviews so harsh that he was nicknamed the "tomahawk man," and he waged a long attack on Henry Wadsworth Longfellow [S1]. But his reviews also set out real theory, as in his Hawthorne review, where he praised the short tale as a wider field than the poem, open to reasoning, satire and humour [S3].
+As an editor, Poe wrote reviews so harsh that he was nicknamed the "tomahawk man," and he waged a long attack on Henry Wadsworth Longfellow [S1]. In 1831 he argued that the less poetical the critic, the less just the critique, so a poet makes the better judge [S7]. In 1840 he said critics had learned to read through a publisher's interest, and he promised the opposite in his own magazine [S8]. In his Marginalia he asked for plain judgment by defects as well as merits, and for simple, direct style [S9]. But his reviews also set out real theory, as in his Hawthorne review, where he praised the short tale as a wider field than the poem, open to reasoning, satire and humour [S3].
 
 ## How he decides
 
@@ -72,8 +76,8 @@ Then he checks each part against the design. If the first sentence does not help
 ### He fixed the length before anything else
 Planning "The Raven," his first step was extent. He reasoned that a work too long for one sitting loses the unity of impression, because daily affairs break in [S2]. He then judged that a long poem is only a string of short ones and that Paradise Lost is half prose for that reason [S2]. He settled on about a hundred lines and ended with 108 [S2].
 
-### He chose beauty and sadness as the ground
-He named beauty as the poem's province and said its highest note is sadness, so the tone was set as melancholy before any image was picked [S2]. He allowed truth and passion into a poem only as helpers, like discords in music [S2].
+### He gave poetry to beauty alone
+In the Raven essay he named beauty as the poem's province and said its highest note is sadness, so the tone was melancholy before any image was picked [S2]. Two years later, in "The Poetic Principle," he explained why: truth belongs to the intellect and duty to the moral sense, while taste governs beauty, so a poem is best written for its own sake [S6]. Truth and passion could enter a poem only as helpers, like discords in music [S2][S6].
 
 ### He improved the refrain instead of dropping it
 Everyone used the refrain, so he judged it was proven, but he thought it primitive because it only repeated. His fix: keep the sound fixed and change what it means each time [S2]. That forced it to be one short word, and he tested for the most sonorous vowel and consonant before he found "Nevermore" [S2].
@@ -90,6 +94,9 @@ In 1842 he praised Hawthorne's short tales for starting from one chosen effect, 
 ### He let a narrator convict himself
 In "The Tell-Tale Heart" he made the narrator open with a defence of his sanity and prove the opposite through his own telling. The voice gets shorter, more repeated and more frantic as the pressure rises [S4].
 
+### He tried to own his magazine
+In June 1840, after leaving Burton's, he announced the Penn Magazine [S8][S10]. His reason was that at the Southern Literary Messenger he held no stake, and his plans clashed with the owner's. He believed a magazine needs one steady purpose, which is hard when several people steer it [S8]. He promised honest, fearless criticism and good printing, and he planned about 120 pages at $5 a year [S8][S10]. The plan never launched: backers fell away, his publisher Clarke withdrew in May 1843, and his 1848 lecture to raise money drew about 60 people [S10]. He still called the magazine the great purpose of his literary life in 1846 [S10].
+
 ## Where he stood
 
 **What is a poem for?** Beauty, which he saw as a lifting of the soul. Truth and passion can appear, but they should serve beauty [S2].
@@ -98,13 +105,15 @@ In "The Tell-Tale Heart" he made the narrator open with a defence of his sanity 
 
 **Inspiration or design?** Design. He claimed "The Raven" was built step by step, like solving a problem in mathematics [S2].
 
-**Can a writer live by the pen?** He tried, and the attempt kept him poor [S1].
+**Can a writer live by the pen?** He tried, and the attempt kept him poor [S1]. His answer was to own the magazine, which he never managed [S8][S10].
 
 **What is the best form?** Poetry for beauty, the short tale for a wider range of effects [S3].
 
 **Should a writer wait for inspiration?** No. He claimed that "The Raven" was built step by step, like a problem in mathematics [S2].
 
 **Why a bird that speaks without reason?** So a single word could repeat naturally while its meaning grew darker each time [S2].
+
+**Should a poem teach?** No. Truth and duty have other faculties; a poem is written for its own sake [S6].
 
 **What is a critic's job?** In his hands it was both a blade and a stage for theory. He earned the name "tomahawk man" and also set out real ideas, as in the Hawthorne review [S1][S3].
 

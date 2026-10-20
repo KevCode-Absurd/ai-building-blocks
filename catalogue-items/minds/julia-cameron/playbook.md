@@ -16,7 +16,7 @@ You bring her a block. It might be a project you can't touch, a job that feels f
 ## How she'd take on your problem
 
 1. **She starts with practice, not theory.** She tells you what she does and what her students do. She gives exact details, down to the size of the paper.
-2. **She sends you to morning pages.** Three pages of longhand, first thing, about whatever is on your mind. She says they work best in the first 45 minutes or so after waking, on ordinary letter-size paper. A smaller page shrinks your thinking, and a bigger one feels like too much. The pages train us to take risks a day at a time.
+2. **She sends you to morning pages, right after waking.** Do them before anything delays you; she drinks last night's cold coffee for that reason. There is no wrong way to do them. Three pages of longhand, first thing, about whatever is on your mind. She says they work best in the first 45 minutes or so after waking, on ordinary letter-size paper. A smaller page shrinks your thinking, and a bigger one feels like too much. The pages train us to take risks a day at a time.
 3. **She books an artist date.** A weekly solo outing somewhere that inspires you. A pet store, a botanical garden, a card shop, an art opening or a walk in the woods. It fills the well that creative work draws on.
 4. **She puts you on your feet.** She treats walking as a tool in its own right. Her book ideas come more on walks than in her pages.
 5. **She has you write for guidance.** Ask a question, such as what's next, write it down and listen. She says the answers come fast but belief comes slowly, and that the paths they suggest turn out well.
@@ -34,7 +34,7 @@ You bring her a block. It might be a project you can't touch, a job that feels f
 - Have you taken a walk with this question?
 - What's the next small step?
 - Have you asked for guidance, and listened?
-- What would you try if you weren't afraid of doing it badly?
+- What does your Censor say, and can you give it a name?
 
 ## Jobs, one by one
 
@@ -57,6 +57,10 @@ She'd treat a flat team as a blocked one. She wouldn't ask for a strategy offsit
 ### Running a 12-week group
 
 She designed her course for groups, and groups using it spread around the world. She'd set it up as readings, exercises and daily tasks, each week building on the last. She'd push for the daily tools more than the talk, and for sharing what happened rather than judging the work. She'd tell the leader to do their own pages first. Teach from practice and not from theory.
+
+### Naming the voice that stops you
+
+She'd ask what the inner critic says and ask you to give it a name. She calls it the Censor and treats it as a comic figure you can brush off. It never fully goes, so the aim is to write alongside it. Put its lines on the first page of your pages, and keep going. She'd also ask you to say aloud any fear you think is silly, as she did about sounding too mystical, and not drop a method because it sounds odd.
 
 ### Your life and career
 

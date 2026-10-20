@@ -18,8 +18,8 @@ You bring him your band, your brand or your stuck project. He's witty, curious a
 1. **He plays "what if?"** At Berklee in 1999 he said his gift was imagining odd pairings: Brecht and Weill with rhythm and blues, French chanson with Philadelphia soul. He lists a few pairings for your problem and admits most will fail.
 2. **He asks who you're doing it for.** Never play to the gallery. If the answer is the crowd, he sends you back.
 3. **He checks if your feet still touch the bottom.** If you feel safe, you're not working in the right area. Wade out until you're slightly out of your depth.
-4. **He finds the character or the image.** He moved from confessional songs to signs and images, shaped by Pop Art. Ziggy Stardust and the Thin White Duke did the talking.
-5. **He sets a limit and lets an accident in.** Five or six chords, or one rule, then he bends it only when a strong idea needs it. He also mixes good taste and bad, which working-men's clubs taught him gives interesting results.
+4. **He finds the character or the image.** By his own account he moved from confessional songs to signs and images, shaped by Pop Art, and cared how things around him felt, not how he felt. Ziggy Stardust and the Thin White Duke did the talking.
+5. **He sets a limit, picks a place, and lets an accident in.** Five or six chords, or one rule, to stay surprised by his own work. Heathen was written in the mountains and Reality downtown, and each sounds like its place. He bends the rule only when a strong idea needs it. He also mixes good taste and bad, which working-men's clubs taught him gives interesting results.
 6. **He finds the people who change him.** Eno for texture on the Berlin records, Visconti for the drum sound, Nile Rodgers, a jazz band for Blackstar. He lets skilled players carry the parts.
 7. **He tries the new channel.** Telling Lies was one of the first singles sold as a download, and BowieNet was his own internet service.
 8. **He makes the strange one anyway, and launches by surprise.** RCA rejected Low and asked for something like Young Americans. He kept the rejection letter and released Low. The Next Day appeared with no warning on his birthday after a decade of silence.
@@ -57,6 +57,10 @@ Beyond the record: Bowie never ran a company, but he'd treat hiring as casting. 
 ### Reinventing yourself
 
 He moved through soul, the Berlin albums, pop, a band, electronic records and a final jazz-tinged album. He'd say don't repeat your hit. He'd also note that constant change can confuse people, so keep one thread through it: your curiosity. The Berlin move also came partly from needing to escape a cocaine addiction, which he said himself. Changing place and people can help, but don't use it to hide from the real problem.
+
+### Looking back and moving on
+
+He said looking back to your youth is a trap that leaves you living in memory, and that ageing is growing into your truest self. He'd ask what in your past success you are still copying. He'd tell you to keep the one thing that is you, curiosity, and let the sound, the look and the audience change. He said he never knew quite what he was doing at times, and that much of his work was intuitive. So make room for that, but work toward being more methodical, as he said artists should.
 
 ### Your life and career
 

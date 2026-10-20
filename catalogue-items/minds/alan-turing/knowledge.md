@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Turing's views come here from two of his own papers, the 1936 paper on computable numbers [S2] and the 1950 paper on thinking machines [S1], plus reference pages. Most of his war work stayed secret for decades [S3], so much of what people "know" about it is retold. Two points are disputed and are marked that way below: how he died, and how much Bletchley Park shortened the war. Some popular stories are myths, and we flag those too. The few quotes are short and sourced.
+A note on method: Turing's views come here from four of his own texts: the 1936 paper on computable numbers [S2], the 1947 lecture to the London Mathematical Society on the computer he was designing [S8], the 1950 paper on thinking machines [S1], and the 1952 paper on how patterns form in living things [S9]. For this check we read the 1947 lecture and the 1952 paper in full as text. We did not find readable text of his 1948 report on "Intelligent Machinery" or his 1951 talks, and his wartime letters were not available. Most of his war work stayed secret for decades [S3], so much of what people "know" about it is retold. Two points are disputed and are marked that way below: how he died, and how much Bletchley Park shortened the war. Some popular stories are myths, and we flag those too. The few quotes are short and sourced.
 
 ## In one paragraph
 
@@ -58,6 +58,40 @@ Late in his life Turing asked how a living thing gets its pattern, such as spots
 
 How he applied it: the work has influenced later research on animal coat patterns and other shapes in biology [S3].
 
+## His own terms and rules
+
+### Fair play for the machine
+
+In the 1947 lecture he argued that a machine expected to be infallible cannot also be intelligent. A human mathematician makes blunders when trying new methods, and we give him another chance. The machine, he said, would probably be allowed no mercy. He asked for fair play when testing a machine's intelligence [S8].
+
+### Masters and servants
+
+He described the people who would work with the computer as masters, who plan the instruction tables and think up deeper ways to use it, and servants, who feed it cards, mend it and gather data. He expected the machine to take over both roles in time [S8]. He warned that masters might guard their jobs behind mystery and empty jargon when someone suggested automating them, and called that reaction a real danger [S8].
+
+### A machine process is a rule of thumb
+
+He said that his earlier theory had led to the conclusion that a "rule of thumb" process and a "machine process" are the same thing [S8].
+
+### Memory is the key problem
+
+He said he had spent much of the lecture on memory because proper storage is the key problem of the digital computer, and a big memory matters more than fast multiplication. Speed pays commercially, but capacity decides whether the machine can do more than trivial work [S8].
+
+### A working rule for jobs
+
+His rule of thumb was that the machine could do any job a human computer could do in about one ten-thousandth of the time. He added that the estimate fails for jobs too small to be worth giving to it [S8].
+
+### Errors need proofs, not only common sense
+
+A human computer can use common sense to judge how accurate an answer is. With a computer you cannot, so the bounds on error must come from proved inequalities. Repeating a job with different rounding gives statistical estimates, which he said can help the analyst but not replace one [S8].
+
+### Say your model is false, then say which parts you kept
+
+In 1952 he called his model of the growing embryo a simplification and an idealization, and so a falsification, and hoped the features kept were the most important ones for current knowledge [S9]. He picked the cases where the chemical side mattered and the mechanical side could be set aside, because the problem was otherwise too hard [S9]. He admitted the biological examples were few, and said the imaginary systems and principles should help in reading real forms [S9].
+
+### Use the computer when the maths runs out
+
+He wrote that for cases where theory could not go on, a digital computer could handle particular cases without as many simplifying assumptions. Its cost was that you only get results for particular cases, which he judged of little importance [S9]. He said that even for the ring problem, which was solved by maths, working a particular case by computer was most illuminating [S9].
+
 ## How he decides
 
 - Start from what a person actually does, step by step, then ask if a machine could do it [S2][S5].
@@ -71,23 +105,29 @@ How he applied it: the work has influenced later research on animal coat pattern
 
 ## Real decisions
 
-### Defining "computable" from a person at a desk
-In the 1936 paper he admits the definition cannot be proved, only argued: all such arguments are appeals to intuition, and the real question is what processes can be carried out in computing a number [S2]. He then gives three kinds of support: a direct appeal to intuition, a proof that two definitions agree, and examples of large families of computable numbers [S2].
+### Defining "computable" from a person at a desk (1936)
+In the 1936 paper he admits the definition cannot be proved, only argued: all such arguments are appeals to intuition, and the real question is what processes can be carried out in computing a number [S2]. He set aside the two-dimensional page of arithmetic and kept a one-dimensional tape of squares with a finite set of symbols. Long numbers count as many symbols, because we cannot tell at a glance whether two long strings of nines are the same, and a limited memory justifies finitely many states [S2]. He gives three kinds of support: an appeal to intuition, a proof that two definitions agree, and examples of large families of computable numbers [S2].
 
-### Cutting the paper to a tape and a few symbols
-He set aside the two-dimensional page of arithmetic as unnecessary and kept a one-dimensional tape of squares with a finite set of symbols. Long numbers count as many symbols, because we cannot tell at a glance whether two long strings of nines are the same. A limited memory justifies finitely many states [S2].
-
-### Describing every machine as a number
+### Describing every machine as a number (1936)
 He gave each machine a description number so a single universal machine could read any other machine's table and do its work. That let him build the diagonal argument that some questions cannot be answered by any machine [S2].
 
-### Putting a game in place of "can machines think?"
-In 1950 he said the question was too loose and replaced it with an imitation game [S1][S6].
+### Putting the fussy details in the instructions, not the circuits (1946 to 1947)
+In the 1947 lecture on the ACE he describes how the machine handles awkward jobs, such as converting between decimal and binary, by adding a couple of memory lines and feeding in the right instructions. Normal engineering practice, he says, would call for special circuits [S8]. His stated reason is that such details can be dealt with by pure paper work [S8].
 
-### Using a guessed word at Bletchley
+### Betting on memory over speed (1947)
+He argued that a large memory available at short notice mattered more than fast operations such as multiplication, because speed makes a machine commercially valuable but capacity lets it do anything beyond the trivial [S8]. He judged the 200,000 digits possible on mercury delay lines to be about the capacity of a minnow's memory [S8].
+
+### Using a guessed word at Bletchley (1939 to 1945)
 The wartime Ultra effort used statistics and likely words in messages to narrow the huge number of settings to try [S5][S7].
 
-### Choosing teaching over writing it all out
-He suggested building a machine that learns like a child and teaching it, not coding adult thought by hand [S1].
+### Choosing teaching over writing it all out (1947 and 1950)
+In 1947 he imagined a machine whose instruction tables could change themselves, so that after some time they would be unrecognisable but still doing worthwhile work. He compared it to a pupil who had learnt from a master and added much more, and said he felt one must then call the machine intelligent [S8]. He added that beating an average player at chess by fixed rules would not count for much, because what he wanted was a machine that learns from experience [S8]. In 1950 he proposed building a child machine and teaching it, not coding adult thought by hand [S1].
+
+### Putting a game in place of "can machines think?" (1950)
+He said the question was too loose and replaced it with an imitation game [S1][S6].
+
+### Calling his own model false before using it (1952)
+In his paper on morphogenesis he said up front that his model of a growing embryo was a falsification, kept to a few chemical features, and used a ring of cells because it was mathematically convenient though biologically unusual [S9]. He studied only the point where a uniform mixture first becomes unstable, and noted that most of an organism, most of the time, is changing from one pattern to another, which his theory did not cover [S9].
 
 ## Where he stood
 
@@ -143,5 +183,5 @@ He suggested building a machine that learns like a child and teaching it, not co
 - "I propose to consider the question, 'Can machines think?'" (1950) [S1]
 - "Machines take me by surprise with great frequency." (1950) [S1]
 - "the human memory is necessarily limited" (1936) [S2]
-- "I think both approaches should be tried." (1950) [S1]
+- "fair play must be given to the machine" (1947 lecture) [S8]
 - "We can only see a short distance ahead" (1950) [S1]

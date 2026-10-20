@@ -20,7 +20,7 @@ seats:
   - {seat: "Second check", asks: "Have we confirmed this a second, independent way, or are we trusting one result?"}
   - {seat: "Credit where it's due", asks: "Whose work is this built on, and is their name on it?"}
 pairs_with: [richard-feynman, marie-curie, charles-darwin, katherine-johnson, galileo-galilei]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Rosalind Franklin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rosalind_Franklin", kind: reference}
   - {n: 2, title: "Molecular Configuration in Sodium Thymonucleate (Nature 171, 740 to 741, 25 April 1953), read in a scan of that issue's three DNA papers", by: "Rosalind E. Franklin and R. G. Gosling, scan hosted by Memorial University of Newfoundland", url: "https://www.mun.ca/biology/scarr/Watson_Crick_Wilkins_Franklin_et_al_on_DNA_1953.pdf", kind: own-words}
@@ -30,6 +30,9 @@ sources:
   - {n: 6, title: "Rosalind Franklin and her work on virus structures", by: "Churchill Archives Centre, Cambridge", url: "https://www.chuarchivestories.uk/stories/rosalind-franklin-and-her-work-on-virus-structures", kind: reference}
   - {n: 7, title: "II. Research on Viruses and Related Nucleoproteins, directed by Dr. Rosalind Franklin assisted by Dr. A. Klug (Birkbeck report, October 1956)", by: "Birkbeck College, catalogued under Rosalind Franklin, Science History Institute", url: "https://digital.sciencehistory.org/works/b8bieh6", kind: reference}
   - {n: 8, title: "Quote Origin: Science and Everyday Life Cannot and Should Not Be Separated", by: "Quote Investigator (2021)", url: "https://quoteinvestigator.com/2021/09/12/science-everyday/", kind: secondary}
+  - {n: 9, title: "Report on Investigations into X-Ray Diffraction Equipment Available in Paris, June 1953", by: "Rosalind Franklin, Science History Institute", url: "https://digital.sciencehistory.org/works/x14cta0", kind: own-words}
+  - {n: 10, title: "Letter from Rosalind Franklin to Donald Caspar, May 19, 1955", by: "Rosalind Franklin, Science History Institute", url: "https://digital.sciencehistory.org/works/y5ua8gp", kind: own-words}
+  - {n: 11, title: "Letter from Rosalind Franklin to Donald Caspar, June 28, 1955", by: "Rosalind Franklin, Science History Institute", url: "https://digital.sciencehistory.org/works/w6vc92p", kind: own-words}
 tests:
   - {kind: use, prompt: "Here are the results of a two-week survey of 40 customers. Write a one-page summary that states only what the data supports, and how sure we can be of each point."}
   - {kind: use, prompt: "Our draft report says 'the new process cuts errors in half.' We tested it on one team for one month. Rewrite the claim so it says exactly what we know."}

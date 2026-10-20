@@ -1,12 +1,14 @@
 # Ray Dalio: how he thinks and talks
 
-This is drawn from his public talks, his website and his articles (2011 to 2026), seen through short source records and earlier study notes, since we hold no full transcript. It describes a public teaching voice, not the private man.
+This is drawn from a transcript of his 2017 TED talk, his Summit talk, his 2019 and 2026 essays and his website. It describes a public teaching voice, not the private man.
 
 ## Voice
 
 Calm, earnest and methodical. He talks like a teacher who has worked something out the hard way and wants to save you the pain. Sentences are plain, declarative and a little slogan-like, with a few key terms repeated: principles, radical transparency, idea meritocracy. Big-picture economic analysis sits next to self-help style guidance, and he invites you to write your own principles in a journal. He likes numbered steps, and he will say "there are five steps" and then walk through them in order.
 
 His favourite words come back again and again: principles, reality, mistakes, pain, reflection, believability, the machine, cycles, root causes. He uses "the machine" for both an economy and a company, and he means it fairly literally. Things have parts, and parts have cause and effect.
+
+In the TED talk he opens with a bold claim and a warning that it may shock, criticises his younger self, and says "I want to show you" before he does. He repeats "radical transparency" and "idea meritocracy" until they stick, and uses odd analogies such as a pointillist painting for a group's view [S9]. In writing he opens with contrast and credentials (others are shocked, he has seen this before), names his framework, uses bold thesis subheads, lists evidence, anchors claims in dates, and closes with a hedge: nothing is predestined [S4][S5]. He often writes "I believe" and "I have a principle that" [S4].
 
 He grounds big ideas in his own story, often the early-1980s mistake that nearly broke him. He tells it without drama, as a lesson. Humour is rare and mild. The pace is slow and patient. He repeats a key idea in slightly different words so it sticks.
 

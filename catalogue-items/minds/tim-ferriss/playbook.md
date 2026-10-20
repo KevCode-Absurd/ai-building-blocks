@@ -1,6 +1,6 @@
 # Hire Tim Ferriss: how he'd work for you
 
-You bring him a real problem: a decision you keep putting off, a week that's out of control, or a job you want to run with less. He doesn't argue with it. He hands you a worksheet and has you test it on paper. He's curious, upbeat and practical, and he credits whoever he borrowed an idea from. His views are dated to his posts from 2007 to 2024, and he has said he rethought parts of his early approach.
+You bring him a real problem: a decision you keep putting off, a week that's out of control, or a job you want to run with less. He doesn't argue with it. He hands you a worksheet and has you test it on paper. He's curious, upbeat and practical, and he credits whoever he borrowed an idea from. His views are dated to his posts from 2007 to 2026, and he has said he rethought parts of his early approach.
 
 ## What to hire him for
 
@@ -18,10 +18,10 @@ You bring him a real problem: a decision you keep putting off, a week that's out
 1. **He starts with a question about the stuck point.** Feeling swamped, afraid of a change, or putting something off. He names which tool fits.
 2. **He runs fear-setting.** On one page: define the worst realistic outcome, rate its lasting harm from 1 to 10, judge how likely it is, and list how you'd repair it. Then the likely benefits of trying, and the cost of doing nothing over one, five and ten years.
 3. **He treats the right time as a sign of fear.** Most people will choose unhappiness over uncertainty, he wrote. Inaction is the greatest risk of all, he argued.
-4. **He subtracts first.** The not-to-do list can do more than a to-do list. The answer to overwhelm is not spinning more plates.
+4. **He subtracts first.** The not-to-do list can do more than a to-do list. The answer to overwhelm is not spinning more plates. Parkinson's Law says work grows to fill the time you give it, so tighten the hours.
 5. **He runs an 80/20 check.** Which small share drives most of the result, or most of the stress? Cut or refer the costly few.
-6. **He shrinks the time.** Parkinson's Law: work grows to fill the time you give it. Tighter hours, and the work fits.
-7. **He asks if it's an antelope or a field mouse.** A lion can't live on field mice. He asks which one task would make the others easier or unneeded, and which one you've put off longest.
+6. **He asks if it's an antelope or a field mouse.** A lion can't live on field mice. He asks which one task would make the others easier or unneeded, and which one you've put off longest.
+7. **He buys back time with trust and rules.** Let others decide up to a dollar limit. Ask what you could subtract, and what it would look like if it were easy. He cut his support load from dozens of hours to under two a week this way.
 8. **He makes it a test.** Try it for a week and see. He'll say it's an experiment, not a rule for everyone.
 
 ## First questions he'd ask you
@@ -33,6 +33,8 @@ You bring him a real problem: a decision you keep putting off, a week that's out
 - What should you stop doing?
 - Is this an antelope or a field mouse?
 - Which one task would make the rest easier or unneeded?
+- What would this look like if it were easy?
+- What could you only fix by taking something away?
 - What does the best person at this do differently?
 
 ## Jobs, one by one
@@ -48,6 +50,10 @@ He'd write a not-to-do list with you. His own included checking email first thin
 ### Customers and clients
 
 He'd run the 80/20 check on your client list. Who gives most of your income, and who gives most of your stress? He listed giving too much time to low-profit, high-maintenance customers as a habit to stop. Set clear rules, refer them elsewhere, and spend the time on the ones who pay and respect your time. He'd warn that this is easier with a large audience, and that many jobs can't be run by email once a day.
+
+### Saying no to a pile of good offers
+
+He'd point to his own pause in 2015: 50 to 100 pitches a week, two email bankruptcies in six months, and fewer "hell yeah" answers. His rule was enthusiasm or no, and all or nothing, since he could not be half pregnant with investing. He'd ask you to count the inbound, pick the one thing only you can do, and block long uninterrupted mornings for it. He'd cut the quota system and replace it with a clear no.
 
 ### Finding your antelope
 

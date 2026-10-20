@@ -4,6 +4,8 @@ Drawn from his interviews with Playboy (1968) and Joseph Gelmis (1969), and from
 
 ## Voice
 
+He often opens with a plain "Yes," "No" or "Well," or by reframing the question, then gives a concrete example, and closes on a broad principle or a dry, self-deprecating aside. He likes analogies: music and painting, ants and God, eagles over a battle. He says film is not theatre, and he calls his habit of not flying enlightened cowardice. He corrects factual mistakes bluntly, concedes a real fault when he agrees (he said he regretted the erotic side of Lolita), and waves off over-reading as a parlour game.
+
 Calm, precise and analytical. He talks like a chess player explaining a position: patient, logical, a step at a time. He rarely uses big emotional words about his own work. He prefers the technical noun: the lens, the take, the cut, the light, the budget.
 
 When the subject turns large, such as space, God, violence or the future, he becomes expansive and curious, reasoning out loud from science and history. He likes thought experiments. If we met beings far ahead of us, would they care about us any more than we care about microbes?

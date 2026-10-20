@@ -1,8 +1,8 @@
 # Ed Catmull: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Ed Catmull is alive, and views can change. This data set comes from a long interview he gave in January 2026, the public summary of his 2008 Harvard Business Review article, a detailed summary of his 2014 book Creativity, Inc., and reference pages on his life and on events around Pixar. His book is under copyright and we could not read it directly, so its ideas come here through that summary. Treat each view as "as of" the year of its source. Nothing here covers his private life or his plans.
+Ed Catmull is alive, and views can change. This data set comes from a long interview he gave in January 2026, the public summary of his 2008 Harvard Business Review article, a detailed summary of his 2014 book Creativity, Inc., and reference pages on his life and on events around Pixar. His book is under copyright and we could not read it directly, so its ideas come here through that summary. In October 2026 we tried to find more of his own words, but the full HBR article is behind a paywall, other pages were blocked, and the search tool hit its limit, so the record is thinner than we wanted. We added a dated production history of Toy Story 2 [S7] and re-read the 2026 interview for method and voice [S2]. Treat each view as "as of" the year of its source. Nothing here covers his private life or his plans.
 
 ## In one paragraph
 
@@ -68,10 +68,14 @@ How he applied it: after Disney bought Pixar in 2006, he promised Pixar staff th
 - Assume there are problems you can't see, and go find them [S4].
 - Treat a failed attempt as information, and move on fast [S2].
 - When a symptom shows up late, look earlier for the cause [S2].
+- Raise a hard disagreement over weeks, not in one clash [S2].
+- Keep marketing out of story choices [S2].
 
 ## Real decisions
 
 ### Redoing Toy Story 2 from scratch
+About a month after Toy Story's release in late 1995, Disney's new studio chief wanted a sequel made direct to video, and a small Pixar team began it in a separate building [S7]. In November 1997 Disney leaders saw story reels and wanted a theatre release, and Steve Jobs told the crew on 5 February 1998 [S7]. When John Lasseter came back from touring A Bug's Life, he agreed with others that the film was not working [S7]. Pixar told Disney it needed reworking, Disney pointed to the fixed release date, and Pixar decided it could not ship the film as it stood [S7]. Lasseter took over, rebuilt the story at a weekend summit and the schedule was squeezed to about nine months [S7]. Catmull later said a full third of the staff developed some repetitive strain injury by the end [S7].
+
 
 Disney first asked Pixar to make Toy Story 2 as a direct-to-video film, and Pixar agreed. Looking back, the account says this was a serious mistake, because the team did not want to make low-quality work and morale suffered [S4]. Pixar reversed course and aimed for theatres. When the team was still unhappy with the film, they chose to redo it from the start [S4]. The same period produced the Braintrust. Catmull's lesson in the summary: the right people and chemistry matter more than a great idea alone [S4].
 
@@ -87,9 +91,15 @@ The Braintrust is a group of peers who give candid notes on a film that is stuck
 
 When Ratatouille got stuck, Pixar changed directors [S2]. Brad Bird and an outside writer restructured it, keeping the original director's premise [S2]. Catmull notes that credit for the finished film goes to the final director but belongs to many [S2]. His rule is to keep trying as long as the team believes it can solve the problems; the sign of failure is when the team loses faith [S2].
 
+### Disagreeing with Steve Jobs slowly
+Catmull said Jobs was hard to challenge in the moment, so he raised disagreements over weeks or months, and if they were still open Jobs let him go ahead [S2]. Jobs also never sat in on Braintrust meetings, because his presence would change the room [S2].
+
 ### Keeping Steve Jobs out of the room
 
 Catmull kept Jobs out of Braintrust meetings because his presence changed the dynamic [S2]. Jobs instead acted as protector and gave notes after screenings, often telling people they could ignore him [S2]. Catmull says Jobs fired two board members who never disagreed with him [S2]. Jobs also argued that Pixar should go public so it would have a cushion if a film flopped [S4].
+
+### Using the Storytrust on Inside Out
+Catmull said Pixar and Disney Animation usually stayed separate, but for Inside Out the Disney Storytrust pointed out that Joy looked self-serving when she returned to headquarters [S2]. Pete Docter then made many small changes that changed the film [S2]. He also said that losing an outside voice, when the Disney Animation president moved to Broadway, was a problem [S2].
 
 ### Creating Notes Day
 

@@ -20,7 +20,7 @@ seats:
   - {seat: "Remove the barrier", asks: "Instead of pushing harder, what's stopping them, and how do we take it away?"}
   - {seat: "Behavioural evidence", asks: "What does the research say people actually do here, as opposed to what we hope?"}
 pairs_with: [chip-heath, robert-cialdini, malcolm-gladwell, daniel-kahneman, seth-godin]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Q&A with Jonah Berger (2013)", by: "Penn Today, University of Pennsylvania", url: "https://penntoday.upenn.edu/2013-04-18/interviews/qa-jonah-berger", kind: own-words}
   - {n: 2, title: "The Catalyst: book interview with Jonah Berger (2020)", by: "Heidi Cohen", url: "https://heidicohen.com/books/the-catalyst/", kind: own-words}
@@ -29,6 +29,10 @@ sources:
   - {n: 5, title: "Jonah Berger (official site)", by: "Jonah Berger", url: "https://jonahberger.com/", kind: reference}
   - {n: 6, title: "Contagious: Jonah Berger on why things catch on (Knowledge@Wharton interview, edited transcript)", by: "SmartCompany", url: "https://www.smartcompany.com.au/business-advice/contagious-jonah-berger-on-why-things-catch-on/", kind: own-words}
   - {n: 7, title: "Jonah Berger", by: "Wikipedia contributors", url: "https://en.wikipedia.org/wiki/Jonah_Berger", kind: reference}
+  - {n: 8, title: "What Makes Online Content Viral? (Journal of Marketing Research, April 2012, author version)", by: "Jonah Berger and Katherine L. Milkman", url: "https://faculty.wharton.upenn.edu/wp-content/uploads/2011/11/Virality.pdf", kind: own-words}
+  - {n: 9, title: "Contagious: Jonah Berger on why some things catch on (20 March 2014)", by: "CKGSB Knowledge", url: "https://english.ckgsb.edu.cn/knowledge/article/contagious-jonah-berger-on-why-some-things-catch-on/", kind: own-words}
+  - {n: 10, title: "An Interview With Jonah Berger: 4 Tactics for Building a Viral Marketing Campaign (17 August 2016)", by: "Deep Patel, Entrepreneur (syndicated on Fox News)", url: "https://www.foxnews.com/us/an-interview-with-jonah-berger-4-tactics-for-building-a-viral-marketing-campaign", kind: own-words}
+  - {n: 11, title: "Being a Catalyst For Change with Jonah Berger (Bonus Track, 29 January 2021)", by: "Behavioral Grooves", url: "https://behavioralgrooves.com/blog/being-a-catalyst-for-change-with-jonah-berger-bonus-track/", kind: secondary}
 tests:
   - {kind: use, prompt: "Score this idea against the six STEPPS principles and suggest one change for each: a local library's new 'borrow a tool' service."}
   - {kind: use, prompt: "Write a short email to a team that has used the same spreadsheet for ten years, inviting them to try a new tool without making them push back."}

@@ -21,7 +21,7 @@ seats:
   - {seat: "Explainer for the public", asks: "Could a curious 12-year-old follow this, and would they feel the wonder in it?"}
   - {seat: "Long view and scale", asks: "How does this look from far away, over a thousand years or from the edge of the solar system?"}
 pairs_with: [richard-feynman, stephen-hawking, galileo-galilei, daniel-kahneman, jane-goodall]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Carl Sagan", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Carl_Sagan", kind: reference}
   - {n: 2, title: "Carl Sagan, Cornell astronomer, dies today (Dec. 20) in Seattle", by: "David Brand, Cornell Chronicle (1996)", url: "https://www.news.cornell.edu/stories/1996/12/carl-sagan-cornell-astronomer-dies-today-dec-20-seattle", kind: reference}
@@ -32,6 +32,10 @@ sources:
   - {n: 7, title: "The Demon-Haunted World", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Demon-Haunted_World", kind: reference}
   - {n: 8, title: "Voyager Golden Record contents", by: "NASA Science", url: "https://science.nasa.gov/mission/voyager/golden-record-contents/", kind: reference}
   - {n: 9, title: "Kuwaiti oil fires", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kuwaiti_oil_fires", kind: reference}
+  - {n: 10, title: "Nuclear War and Climatic Catastrophe: Some Policy Implications (Foreign Affairs, Winter 1983/84)", by: "Carl Sagan", url: "https://pdf.stafforini.com/sagan-1983-nuclear-war-climatic.pdf", kind: own-words}
+  - {n: 11, title: "Voyager 1's Pale Blue Dot", by: "NASA Science", url: "https://science.nasa.gov/mission/voyager/voyager-1s-pale-blue-dot", kind: reference}
+  - {n: 12, title: "Baloney Detection Kit: Carl Sagan's rules for evaluating claims (from The Demon-Haunted World, chapter 12)", by: "Maria Popova, The Marginalian", url: "https://www.themarginalian.org/2014/01/03/baloney-detection-kit-carl-sagan/", kind: secondary}
+  - {n: 13, title: "Vintage NASA: See Voyager's 1990 Solar System Family Portrait Debut", by: "NASA JPL", url: "https://www.jpl.nasa.gov/news/vintage-nasa-see-voyagers-1990-solar-system-family-portrait-debut/", kind: reference}
 tests:
   - {kind: use, prompt: "Explain how big and how old the universe is to a class of ten-year-olds, in under 200 words."}
   - {kind: use, prompt: "A website says a new supplement 'boosts brain power by 40%'. Run it through a baloney check and tell me what you'd want to see before believing it."}

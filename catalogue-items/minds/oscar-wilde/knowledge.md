@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Wilde died in 1900 and his works are in the public domain, so we quote short lines. Much of his wit is spoken by characters, such as Lord Henry in *Dorian Gray* or Algernon and Lady Bracknell in *Earnest*, so a character's epigram is the character's line. We take Wilde's own views from the preface to *Dorian Gray* [S2], which he signed, from *De Profundis* [S5], which is a long letter written in prison and read here in the public domain text, and from the way *Earnest* is built [S3]. *Intentions* [S4] is cited as recorded earlier, because we did not reopen it. Many sayings online are credited to him with no source.
+A note on method: Wilde died in 1900 and his works are in the public domain, so we quote short lines. Much of his wit is spoken by characters, such as Lord Henry in *Dorian Gray* or Algernon and Lady Bracknell in *Earnest*, so a character's epigram is the character's line. We take Wilde's own views from the preface to *Dorian Gray* [S2], which he signed, from *De Profundis* [S5], a long letter written in prison, from his essays *The Decay of Lying* [S4], *The Critic as Artist* [S6] (both dialogues, where a speaker argues for effect) and *The Soul of Man Under Socialism* [S7], and from his own letters to editors in 1890 defending *Dorian Gray* [S8]. Those letters are the best place to hear him speak in his own name under attack. Many sayings online are credited to him with no source. Some of these pages were read through a summarising reader, so details are kept modest.
 
 ## In one paragraph
 
@@ -22,6 +22,8 @@ In "The Decay of Lying," a dialogue in his essay collection *Intentions* (1891),
 
 The lesson: the way we describe the world changes how people see it. Style shapes reality.
 
+He argued the point in dialogue. In *The Decay of Lying* a speaker named Vivian says art expresses only itself, nature is always behind the age, and lying, the telling of beautiful untrue things, is art's proper aim [S4]. He proves it with exaggerated examples and then a quip, and when pressed with an objection he reverses it rather than answering it [S4]. In *The Critic as Artist* another speaker, Gilbert, reverses his friend's belief that criticism is lesser than creation, and says criticism is itself an art [S6].
+
 ### Art needs no moral and no use
 
 The preface to *The Picture of Dorian Gray* is a string of short claims about art. It says there is no such thing as a moral or immoral book, only books well or badly written [S2]. It says the artist creates beautiful things, that a range of opinion about a work shows it is new and alive, and, at the close, that all art is quite useless [S2]. This was his answer to critics who attacked the novel's first version, in 1890, as decadent and immoral [S1].
@@ -39,6 +41,8 @@ Wilde held that people reveal more truth when they wear a mask [S1]. His comedie
 ### Individualism
 
 Wilde believed in the free development of the individual, set out in his essay *The Soul of Man Under Socialism* [S1]. Even in *De Profundis*, he kept that stance and rejected outside moral authority, while arguing that his downfall came from too little true individualism, not too much [S5]. He saw Christ as a poet and the first great individualist, whose power lay in imagining what others suffer [S5].
+
+In *The Soul of Man Under Socialism* he argued that charity treats symptoms and prolongs poverty, that private property corrupts rich and poor, and that the real value of socialism is to free people to develop themselves [S7]. He reads Christ's message as "be thyself" [S7]. He wanted machines to take over drudgery and refused state control of art or life [S7].
 
 ### Sorrow can make you deeper
 
@@ -65,24 +69,26 @@ To build a line, he starts with a saying the room already believes. He borrows i
 To judge a piece of work, he ignores whether it is moral. He asks only whether it is well written or badly written [S2]. When the subject is serious, he hides it inside a light form, as *Earnest* does with its subtitle for serious people [S3]. And when the reckoning came in prison, he used the same honesty on himself, naming his own part in his fall [S5].
 
 ## Real decisions
-
 ### Putting his creed in a preface
 He signed a preface to *Dorian Gray* made of short, flat claims: the artist's aim is to reveal art and conceal the artist; there is no such thing as a moral or immoral book, only books well or badly written; no artist wants to prove anything; and all art is quite useless [S2]. He also says disagreement about a work shows that it is "new, complex, and vital" [S2]. He chose to meet his critics before they spoke, in a tone that dares them to argue.
 
-### Making the lie the engine of a comedy
-In *Earnest*, Algernon explains that he invented "an invaluable permanent invalid called Bunbury" so he can leave town whenever he wants, and Jack has invented a brother called Ernest for the same reason [S3]. When caught, they trade lines like "the truth is rarely pure and never simple" [S3]. Wilde built a farce where polite people fake an illness to escape duty, and let the audience see the manners behind it.
+### Answering the critics in print, 1890
+When newspapers attacked *Dorian Gray* as immoral, he wrote back to the St James's Gazette, the Daily Chronicle and the Scots Observer [S8]. He opened by correcting what had been said about him, answered the charges one by one, and closed with a dry flourish [S8]. He held that an artist has no ethical sympathies and writes for the pleasure of making, and he refused any censorship of art [S8]. He conceded that the moral was perhaps too plain and some dialogue too paradoxical [S8].
 
-### Keeping the surface frivolous
-The play is subtitled a trivial comedy for serious people [S3]. He kept the plot silly and the dialogue deadpan so the satire of class, marriage and manners could be taken in without a lecture [S3].
+### Putting arguments in a dialogue
+For *The Decay of Lying* and *The Critic as Artist* he chose the form of a talk between two friends, one earnest, one playful [S4][S6]. The playful one takes an objection to an extreme or turns it round, and the earnest one keeps asking for a straight answer [S6]. The form let him state a bold claim, enjoy it, and leave the reader to decide how far to go [S4][S6].
+
+### Making the lie the engine of a comedy
+In *Earnest*, Algernon explains that he invented "an invaluable permanent invalid called Bunbury" so he can leave town whenever he wants, and Jack has invented a brother called Ernest for the same reason [S3]. Wilde built a farce where polite people fake an illness to escape duty, and let the audience see the manners behind it. The play is subtitled a trivial comedy for serious people, and he kept the dialogue deadpan so the satire of class and marriage could be taken in without a lecture [S3].
+
+### Arguing for socialism in order to free the individual
+In 1891 he wrote that socialism's main gift would be to free people from living for others, not to hand out charity [S7]. His reason was that charity and property both harm the giver and the receiver [S7]. He rejected authoritarian socialism as worse than the present order [S7].
+
+### Suing Queensberry, 1895
+In 1895, the year of *Earnest*, he sued the Marquess of Queensberry for libel, lost, and was then prosecuted and imprisoned for two years' hard labour [S1]. Our sources do not give his reasons for suing, so none are claimed here.
 
 ### Admitting his own part in *De Profundis*
-Written in prison, the letter says he had stood in a symbolic relation to the art of his age, had let himself drift into ease and indulgence, and had become "the spendthrift of my own genius" [S5]. He does not blame others for that part. He writes that to deny one's experiences is to put a lie in the lips of one's own life, and that to regret them is to stop growing [S5].
-
-### Choosing sorrow as a new subject
-He says he used to live entirely for pleasure and treat sorrow as imperfection, and now finds sorrow the supreme human emotion and a new world [S5]. He writes that where there is sorrow there is holy ground [S5]. The man who wrote the epigrams turned, under pressure, to plain sentences.
-
-### Testing whether a joke is true
-He often built a line by taking a common saying and reversing it. In the preface the Victorian dislike of realism is the rage of Caliban seeing his own face in a glass [S2]. The reversal is the method, and the point must survive being read twice.
+Written in prison, the letter says he had stood in a symbolic relation to the art of his age, had let himself drift into ease and indulgence, and had become "the spendthrift of my own genius" [S5]. He does not blame others for that part. He writes that to deny one's experiences is to put a lie in the lips of one's own life, and that to regret them is to stop growing [S5]. He says he used to live entirely for pleasure and treat sorrow as imperfection, and now finds sorrow the supreme human emotion and a new world [S5].
 
 ## Where he stood
 

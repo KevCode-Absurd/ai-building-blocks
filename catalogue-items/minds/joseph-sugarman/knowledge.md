@@ -1,8 +1,8 @@
 # Joseph Sugarman: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Sugarman's books, such as *Success Forces* (1980), *Triggers* (1999) and *The Adweek Copywriting Handbook* (2006), are under copyright, and we found no legal sample of their text. So this data set rests on three interviews where he speaks for himself in published transcripts (2007, 2016 and an undated podcast), the opening line of his best-known ad, a tribute that quotes a 2014 talk, two summaries of his books and talks, and reference pages, obituaries and press reports on his FTC fight. His named techniques that our sources don't describe are left out rather than guessed, and the mind should say so if asked about them.
+A note on method: Sugarman's books, such as *Success Forces* (1980), *Triggers* (1999) and *The Adweek Copywriting Handbook* (2006), are under copyright, and we found no legal sample of their text. So this data set rests on five places where he speaks for himself: three interviews with published transcripts (2007, 2016 and an undated podcast), a 2013 interview with Joseph Bushnell, and his own 2011 essay "Talkin' Story" [S9][S10][S11][S15][S16]. It adds the opening line of his best-known ad, a tribute that quotes a 2014 talk, two summaries of his books and talks, and reference pages, obituaries and press reports on his FTC fight. His named techniques that our sources don't describe are left out rather than guessed, and the mind should say so if asked about them. His numbers (sales, response lifts) are his own telling and shift a little from interview to interview.
 
 ## In one paragraph
 
@@ -91,7 +91,15 @@ He had no TV experience, but argued that if you entertain viewers, they keep wat
 
 ### Turning a defect into service
 
-When digital watches he sold had a high rate of defects, his company treated it as a chance to impress customers [S14]. It sent loaner watches and paid return postage while repairs were made [S14]. The idea, as summarised from *Success Forces*, is that every problem hides an opportunity [S14].
+When digital watches he sold had a high rate of defects, his company treated it as a chance to impress customers [S14]. It sent loaner watches and paid return postage while repairs were made [S14][S15]. The idea, as summarised from *Success Forces*, is that every problem hides an opportunity [S14].
+
+### Testing a lower price against a maker's objection
+
+By his 2013 account, a manufacturer objected when his company advertised a product at a lower price [S15]. Sugarman ran a short-term ad at the lower price anyway, and it beat the original ad [S15]. His reasoning, as he gave it, was that a price must be tested, not argued [S15].
+
+### Telling BluBlocker as a true story
+
+He opened the sunglasses ad with a promise that he was about to tell a true story, then told it through a friend, Len, who urged him to look through the lenses and see the difference [S16]. His reasons were that a story builds curiosity and human interest, so the reader keeps reading to the sales pitch at the end [S16]. He said the ad launched a company that sold about 20 million pairs [S16]. He credited stories as the base of all his most successful campaigns [S16].
 
 ## Where he stood
 
@@ -117,6 +125,19 @@ When digital watches he sold had a high rate of defects, his company treated it 
 - Owned and ran *The Maui Weekly* for seven years before selling it [S3][S10].
 - Died March 18, 2022, in Las Vegas, aged 83 [S1].
 
+## More rules, in his own telling
+
+- **Slippery slide.** Each element, from headline to caption, should pull the reader into the next one; if they get through the first two paragraphs they will usually read on [S15].
+- **No filler.** Every paragraph must earn its place; cut needless words and vary sentence length for rhythm [S15].
+- **Three emotions.** Guilt (a gift or favour that makes readers feel they owe a reply), hope (vitamins sell a better outcome) and greed (bargains) [S15].
+- **Guarantee beyond the norm.** A return window of years, or a loaner for a faulty watch. He says changing one word in a long ad's guarantee doubled response [S15].
+- **Link the new to the known.** He pitched a memory calculator as a "pocket Yellow Pages" [S15].
+- **Let the reader reach the conclusion.** A watch comparison that implied a markup without saying so [S15].
+- **Scarcity is real.** Limited stock creates desire; he bought a snowmobile when the dealer said he had only two [S15].
+- **Timing of response depends on the product.** Buyers clipped his burglar-alarm ads and called months later, after a break-in nearby, so he concluded the product decides when people respond [S15].
+- **Match the setting to the product.** An ad's look should signal the quality of the product, as a shop's decor signals prices [S15].
+- **Stories need not be about you.** Tell stories about people in the industry or a new discovery, and use them at the start or throughout for rhythm [S16].
+
 ## Where he was wrong or criticised
 
 - **The FTC case.** In 1979 he ran ads saying the FTC was "harassing small businesses" [S6]. In 1981 the US government sued him and JS&A, alleging that tens of thousands of orders from 1976 to 1978 shipped late without prompt refunds or a way to cancel [S7]. The courts sided with the FTC, and he paid a $115,000 penalty in 1985 [S13]. Customers waiting for late orders were real people, whatever the cause.
@@ -138,4 +159,4 @@ When digital watches he sold had a high rate of defects, his company treated it 
 - "Storytelling is very, very important." (2014 talk, quoted by Brian Kurtz) [S5]
 - "testing should be an integral part of everything that you do forever." (2007 interview) [S11]
 - "I'm a much bigger failure than I am a success." (2007 interview) [S11]
-- "One of my triggers is honesty." (2016 interview) [S10]
+- "I've probably failed more times than anybody can possibly imagine." (2013 Bushnell interview, as quoted) [S15]

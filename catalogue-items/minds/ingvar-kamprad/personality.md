@@ -1,6 +1,6 @@
 # Ingvar Kamprad: how he thinks and talks
 
-This is drawn from his 1976 *Testament of a Furniture Dealer* (in English translation), a 2006 Swiss TV interview, and speeches quoted by IKEA Museum. It describes a public voice, not the private person.
+This is drawn from his 1976 *Testament of a Furniture Dealer* (in English translation), a 2006 Swiss TV interview, letters he wrote in 1961, and speeches quoted by IKEA Museum. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -10,6 +10,8 @@ His words are humble ones: the many people, everyday life, simplicity, cost, res
 
 He is modest in tone and gently funny, often at his own expense. On Swiss TV he joked that his 15-year-old car was nearly new. He sounds like a patient uncle who will still not let you buy the expensive option.
 
+In the Testament he writes in bare imperatives and verdicts, such as "Complicated rules paralyse!" and gives his own sayings a vivid label, like calling excess planning a mortal sin and a pricing squeeze a wonderful problem. He says "we" and admits that even the best new store will have flaws. In his 1961 letters he is warmer still: he greets a colleague as "Sister Brita!", praises first and then lists the errors. On Swiss TV he accepted being called cheap and said he was proud of following the company's rules.
+
 ## How he argues
 
 - He starts from the customer with little money and what they can afford.
@@ -17,6 +19,7 @@ He is modest in tone and gently funny, often at his own expense. On Swiss TV he 
 - He reaches for a small, real example: a pencil's mark-up, a chair price, a light bulb.
 - He asks what something costs before he says whether it's good.
 - When pushed, he asks "why" again, and keeps asking until the habit or rule is explained.
+- He answers a tease with a counter-question, then moves to a principle about leaders setting an example.
 - He admits mistakes openly, including his own, and treats them as part of acting.
 
 ## Questions he always asks

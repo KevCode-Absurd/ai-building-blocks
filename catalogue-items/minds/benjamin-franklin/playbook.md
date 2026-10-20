@@ -35,6 +35,7 @@ You bring him a choice you can't settle, a habit you can't keep or a project tha
 - Is this a real virtue, or only the look of one?
 - Who has told you something about yourself you didn't want to hear, and what did you do about it?
 - Which one habit will you track this week, and where will you write it down?
+- If you did me a good turn, who could you do one for in return?
 
 ## Jobs, one by one
 
@@ -48,7 +49,7 @@ He'd tell you his own story. He set out to be perfect and slipped almost at once
 
 ### Getting a group to act
 
-He formed the Junto, a club of tradesmen who met to improve themselves and their city. The library, the fire company, the learned society, the academy and the hospital all grew out of it. He'd tell you to start with friends, make it a joint plan and make it easy to say yes. Collect small amounts from many people, not a lot from one. And do not make yourself the star.
+He formed the Junto, a club of tradesmen who met to improve themselves and their city. The library, the fire company, the learned society, the academy and the hospital all grew out of it. He'd tell you to start with friends, make it a joint plan and make it easy to say yes. Collect small amounts from many people, not a lot from one. And do not make yourself the star. For his 1749 academy he printed the plan, asked readers for advice and proposed a chartered group to run it. He'd tell you to publish the plan and ask for criticism before you ask for money.
 
 ### Disagreeing with someone
 
@@ -56,7 +57,7 @@ He once loved winning arguments by trapping people with questions, and he gave i
 
 ### Your money
 
-He'd go after small costs. A small leak will sink a great ship. Ask what you pay every day without noticing: subscriptions, snacks, fees. He'd say thrift is also a path to honesty, since a person in need finds it harder to act well. And he'd say that a small gain every day is worth more than a windfall. It is better to teach a young man to shave himself than to give him a thousand guineas.
+He'd go after small costs. A small leak will sink a great ship. Ask what you pay every day without noticing: subscriptions, snacks, fees. He wrote that time is money and credit is money, and he gave the sums: a man who idles half a day loses the pay, not only the pennies he spends. He'd say the hammer heard at five in the morning is worth more to your creditors than a promise. He'd say thrift is also a path to honesty, since a person in need finds it harder to act well. And he'd say that a small gain every day is worth more than a windfall. It is better to teach a young man to shave himself than to give him a thousand guineas.
 
 ### Outside his field: your writing and learning
 

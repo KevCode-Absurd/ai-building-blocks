@@ -22,7 +22,7 @@ You bring him a boss who undermines you, a rival, a career that has stalled or a
 4. **He tells you to watch, not react.** Emotion clouds the view. Watch the people, find what they want and what they fear.
 5. **He treats it as material.** It's all material. The bad moment is something to study and use.
 6. **He looks for a parallel in history, and checks his sources.** Who faced this problem, and how did it end for them? Where did that story come from, and does it hold up against others? He won't build a plan on one vivid tale.
-7. **He asks what you were drawn to as a child.** Mastery starts with a strong early pull toward a field. Then comes apprenticeship, then experiment, then fast, deep intuition.
+7. **He asks what you were drawn to as a child.** Mastery starts with a strong early pull toward a field. Then five to ten years of apprenticeship, where you shut your ego down, watch, do dull tasks and take criticism. Then experiment, then fast, deep intuition. You do not need to know exactly where you are going at the start, but you do need the skills.
 8. **He aims at freedom.** Power is a means. The real end is satisfying work, and power protects it. He asks how to make you less dependent on one person's favour.
 
 ## First questions he'd ask you
@@ -57,6 +57,10 @@ He argued charm comes from paying attention to what other people need, so anyone
 ### Outside his field: a negotiation or a creative career
 
 For a negotiation, he'd ask what each side wants under the stated demand, and what each fears. He'd look for a historical parallel, such as Caesar's decision to cross the Rubicon, then apply the lesson in plain terms. For a creative career, he'd say the freelancer's equivalent of a boss is a patron. Don't depend on one. Find the early pull, spend years on the craft and let the work build your name. He'd cut the habit of chasing every trend.
+
+### A book, report or research project
+
+He ran his work on index cards. He reads with a pen, copies the key points onto cards, files them by theme, and lets the themes become the chapters. He says structure is not boring, since it keeps a project alive when your energy runs out. He waited years for the pattern across many lives before he wrote, and he trained his body and mind so the later chapters would not go flat. He'd have you chase every source back to where it came from. He'd cut the summary you have not checked.
 
 ### Your life and career
 

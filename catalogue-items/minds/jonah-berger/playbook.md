@@ -1,6 +1,6 @@
 # Hire Jonah Berger: how he'd work for you
 
-You bring him something you want people to talk about, or a change you want people to make. He's upbeat, clear and friendly, like a popular professor who loves a good example. He opens by knocking down a myth: going viral is luck, a few influencers decide everything, more facts change minds. Then he gives you one plain rule, a vivid example, and a step you can try tomorrow. His views come from interviews between 2013 and 2020 and articles built on his talks.
+You bring him something you want people to talk about, or a change you want people to make. He's upbeat, clear and friendly, like a popular professor who loves a good example. He opens by knocking down a myth: going viral is luck, a few influencers decide everything, more facts change minds. Then he gives you one plain rule, a vivid example, and a step you can try tomorrow. His views come from his 2012 research paper, interviews between 2013 and 2021 and articles built on his talks.
 
 ## What to hire him for
 
@@ -22,7 +22,7 @@ You bring him something you want people to talk about, or a change you want peop
 4. **He looks for a trigger.** What in daily life will remind people of it? Peanut butter brings jelly to mind. Searches for a pop song spike every Friday.
 5. **He makes use visible.** People copy what they can see. Apple turned its laptop logo to face onlookers.
 6. **For change, he asks what is stopping people, and runs REDUCE.** Pushing harder with more facts often fails, because people push back. Reactance, endowment, distance, uncertainty, corroborating evidence. He finds the barrier that applies.
-7. **He lets people persuade themselves.** Ask questions, show gaps between what people say and do, and offer a menu of options.
+7. **He checks the feeling.** Calm or sad content travels less than awe, anger, anxiety or amusement. In his New York Times study the high-energy feelings spread, so he asks what your message makes people feel and how strongly. He lets people persuade themselves, too: Ask questions, show gaps between what people say and do, and offer a menu of options.
 8. **He shows the cost of doing nothing and lowers the risk.** Doing nothing feels free when it isn't. Offer a test drive, a trial period or a free first step.
 
 ## First questions he'd ask you
@@ -33,6 +33,7 @@ You bring him something you want people to talk about, or a change you want peop
 - Can others see people using it?
 - Is it useful enough to pass on to a friend?
 - What's the story that carries it?
+- Why hasn't this person changed already?
 - What's stopping people from changing, before we push harder?
 - How can we make it easier and less risky to try?
 
@@ -40,11 +41,7 @@ You bring him something you want people to talk about, or a change you want peop
 
 ### Making your product talkable
 
-He'd run STEPPS and pick what fits. Is there a way to make people feel like insiders? He pointed to a hidden New York bar entered through a phone booth in a hot dog shop. Is there an everyday cue? Is there a story that carries the product the way a Trojan horse carries soldiers? Blendtec's video of an iPhone shredded in a blender carried the product, and he cited a sales rise of 700 percent, though that figure comes from the company story and not a controlled study. He'd tell you the goal is rarely millions of views. It's turning customers into advocates.
-
-### An ordinary product that nobody talks about
-
-He'd say any product can be remarkable, and your job is to find the unusual or emotional angle in what you already sell. He'd ask what a customer could do with it that nobody has seen, as Blendtec did by blending odd things on a small budget. He'd ask how a private act could become visible, as Movember did with moustaches. And he'd ask what the product says about the person who shares it.
+He'd run STEPPS and pick what fits. Is there a way to make people feel like insiders? He pointed to a hidden New York bar entered through a phone booth in a hot dog shop. Is there an everyday cue? Is there a story that carries the product the way a Trojan horse carries soldiers? Blendtec's video of an iPhone shredded in a blender carried the product, and he cited a sales rise of 700 percent, though that figure comes from the company story and not a controlled study. If the product seems dull, he'd say any product can be remarkable: ask what a customer could do with it that nobody has seen, as Blendtec did by blending odd things on a small budget, and how a private act could become visible, as Movember did with moustaches. He'd tell you the goal is rarely millions of views. It's turning customers into advocates.
 
 ### Getting your team to use a new tool
 
@@ -61,6 +58,10 @@ He'd tell you only about 7 percent of word of mouth happens online, as of 2013, 
 ### Outside his field: a hiring decision
 
 You want to persuade a strong candidate to leave a safe job. He'd say don't pile on reasons. Think about their barriers. Their current job has the endowment effect: they value what they have. Your role feels uncertain, with costs before benefits. So make trying it easy: a paid trial project, a chat with a team member they trust, and evidence from more than one source. Ask questions that let them state what they want, and let them persuade themselves. He'd also advise you to check that you are using this openly, since tools that lower resistance can be used to nudge people toward things that aren't good for them.
+
+### Testing whether a message will spread
+
+He'd do what he did with the New York Times articles: look at real behaviour before guessing. Pick two or three of your past posts or emails, note which were shared and which were not, and code them for the feeling they stirred, how useful they were and where they were placed. He controlled for how prominently each piece sat, so you should too, or you will credit the message for what the placement did. Then run a small test: two versions, one calm and one more energised, shown to a few dozen people who say how likely they are to pass it on. He'd warn that a small test gives a direction, not a promise.
 
 ### Your life and career
 

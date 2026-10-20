@@ -20,13 +20,19 @@ seats:
   - {seat: "Made by hand", asks: "Which part of this did a person really make, and can people feel it?"}
   - {seat: "No pure villains", asks: "What does the other side want, and what is good in them?"}
 pairs_with: [akira-kurosawa, walt-disney, katsushika-hokusai, jrr-tolkien, leonardo-da-vinci]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Hayao Miyazaki", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hayao_Miyazaki", kind: reference}
   - {n: 2, title: "Hayao Miyazaki interview (Paris press conference for Spirited Away, December 2001; published 7 January 2002)", by: "Hayao Miyazaki, via Midnight Eye (Tom Mes)", url: "http://www.midnighteye.com/interviews/hayao-miyazaki/", kind: own-words}
   - {n: 3, title: "This Kind of Museum... (statement of intent, signed as Executive Director)", by: "Hayao Miyazaki, Ghibli Museum, Mitaka", url: "https://www.ghibli-museum.jp/en/kind/", kind: own-words}
   - {n: 4, title: "Studio Ghibli", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Studio_Ghibli", kind: reference}
   - {n: 5, title: "The Boy and the Heron", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Boy_and_the_Heron", kind: reference}
+  - {n: 6, title: "Hayao Miyazaki press conference on his retirement, September 2013 (English transcript)", by: "Hayao Miyazaki, via ceointerviews.ai", url: "https://ceointerviews.ai/interview/1031124/", kind: own-words}
+  - {n: 7, title: "Drawn to Anime: Hayao Miyazaki profile (quotes his 1 December 1986 project plan for My Neighbor Totoro)", by: "Flickering Myth", url: "https://www.flickeringmyth.com/drawn-to-anime-hayao-miyazaki-profile_09/", kind: secondary}
+  - {n: 8, title: "The Art of The Wind Rises (quotes Miyazaki's original project proposal)", by: "No Flying No Tights", url: "https://noflyingnotights.com/blog/2014/07/04/the-art-of-the-wind-rises/", kind: secondary}
+  - {n: 9, title: "Report on Director Hayao Miyazaki's Press Conference in Tokyo (2013)", by: "Otakumode", url: "https://otakumode.com/news/522804a5b66f3f6d67000347", kind: secondary}
+  - {n: 10, title: "Film Notes: Princess Mononoke", by: "Yale University Library", url: "https://web.library.yale.edu/film/notes/fn00016", kind: reference}
+  - {n: 11, title: "The Boy and the Heron: Toshio Suzuki interview", by: "TheWrap", url: "https://thewrap.com/the-boy-and-the-heron-hayao-miyazaki-interview", kind: secondary}
 tests:
   - {kind: use, prompt: "Write the opening of a short story for ten-year-olds about a girl who moves to a new town and finds something strange in the woods behind her house."}
   - {kind: use, prompt: "Write a one-page statement of what our small neighbourhood library should feel like for visitors, staff and children."}

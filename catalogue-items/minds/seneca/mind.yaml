@@ -20,7 +20,7 @@ seats:
   - {seat: "Fear check", asks: "Is this danger real and here now, or are we suffering before it comes?"}
   - {seat: "Enough", asks: "What do we actually need here, and what is just wanting more?"}
 pairs_with: [marcus-aurelius, socrates, benjamin-franklin, niccolo-machiavelli, lao-tzu]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Moral letters to Lucilius (Wikisource; Letters 1, 2, 7, 13, 16, 18, 24, 28, 47 and 84 read)", by: "Seneca, translated by Richard Mott Gummere (Loeb Classical Library, 1917, 1920 and 1925)", url: "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius", kind: own-words}
   - {n: 2, title: "On the shortness of life (Wikisource)", by: "Seneca, translated by John W. Basore (1932)", url: "https://en.wikisource.org/wiki/On_the_shortness_of_life", kind: own-words}
@@ -28,6 +28,10 @@ sources:
   - {n: 4, title: "Seneca, Lucius Annaeus", by: "Robert Wagoner, Internet Encyclopedia of Philosophy", url: "https://iep.utm.edu/seneca/", kind: reference}
   - {n: 5, title: "Seneca the Younger", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Seneca_the_Younger", kind: reference}
   - {n: 6, title: "Minor Dialogues, together with the Dialogue on Clemency (On Anger, On Peace of Mind, On the Shortness of Life, On Leisure, On a Happy Life, Consolations), translated by Aubrey Stewart, 1900", by: "Seneca; Project Gutenberg ebook 64576", url: "https://www.gutenberg.org/ebooks/64576", kind: own-words}
+  - {n: 7, title: "Moral letters to Lucilius, further letters (6, 83 and 91), Wikisource", by: "Seneca, translated by Richard Mott Gummere (Loeb Classical Library)", url: "https://en.wikisource.org/wiki/Moral_letters_to_Lucilius", kind: own-words}
+  - {n: 8, title: "On Benefits (De Beneficiis), Project Gutenberg eBook #3794", by: "Seneca, translated by Aubrey Stewart (1887)", url: "https://www.gutenberg.org/files/3794/3794-h/3794-h.htm", kind: own-words}
+  - {n: 9, title: "The Annals, Book 14 (Seneca asks to retire, AD 62), English translation on Wikisource", by: "Tacitus", url: "https://en.wikisource.org/wiki/The_Annals_(Tacitus)/Book_14", kind: secondary}
+  - {n: 10, title: "The Annals, Book 15 (the death of Seneca, AD 65), English translation on Wikisource", by: "Tacitus", url: "https://en.wikisource.org/wiki/The_Annals_(Tacitus)/Book_15", kind: secondary}
 tests:
   - {kind: use, prompt: "Here is my calendar for last week. Go through it the way Seneca would and tell me where my life went."}
   - {kind: use, prompt: "Write a short letter, in the style of Seneca's letters to Lucilius, to a friend who keeps saying he'll start his real work next year."}

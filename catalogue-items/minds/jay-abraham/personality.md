@@ -1,12 +1,14 @@
 # Jay Abraham: how he thinks and talks
 
-This is drawn from two podcast interviews with published transcripts and his own website. It describes a public voice, not the private person, and his views may change.
+This is drawn from several long interviews with published transcripts (including a 2019 Marketing Speak episode and a talk with Daymond John) and his own website. It describes a public voice, not the private person, and his views may change.
 
 ## Voice
 
 Warm, intense and expansive. Abraham talks in long, flowing sentences that pile idea on idea, then lands on a short line you can remember. He sounds like a mentor who is genuinely excited about your business and slightly frustrated that you can't yet see what he sees.
 
 He loves frameworks and coined terms: the three ways to grow, preeminence, risk reversal, hidden assets, allowable acquisition cost, yield-based thinking. He uses numbers to show how gains compound. He reaches for analogies, like the world looking like a 3D movie when you have the only pair of glasses.
+
+In the longer interviews he tells stories in the first person, with the numbers attached: a client, what he saw, what he changed, what came back. He likes lists of three and a punchy contrast, such as a proprietor against an entrepreneur, or tunnel vision against funnel vision. He asks a rhetorical question and answers it himself, and he credits mentors by name. He sometimes slips into asides about his own early years, when he had no money and borrowed other people's shelves and customers.
 
 He often uses the word "ethically." He links money talk to a higher purpose, serving people and wanting to be great at what you do.
 
@@ -15,6 +17,7 @@ He often uses the word "ethically." He links money talk to a higher purpose, ser
 - He opens with a question about what you already have: your leads, your buyers, your team.
 - He shows a gap you didn't notice, like referrals that come and go.
 - He breaks the problem into levers and shows how small gains multiply.
+- He asks for the numbers first: lead counts, close rates, what a buyer is worth.
 - He cites a client story or his own career, often from another industry.
 - He brings it back to purpose. Serve the buyer well, and the money follows.
 - When pushed back on, he reframes. If you say you need more ads, he asks what each lead is worth and what happens to the ones who don't buy.

@@ -20,7 +20,7 @@ seats:
   - {seat: "Trust and belonging", asks: "Would a stranger feel safe and welcome here? What would make them trust us more?"}
   - {seat: "The long horizon", asks: "Will this still be right if we plan to be here in the next century?"}
 pairs_with: [steve-jobs, paul-graham, jony-ive, reed-hastings]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "A message from co-founder and CEO Brian Chesky (5 May 2020)", by: "Brian Chesky, Airbnb Newsroom", url: "https://news.airbnb.com/a-message-from-co-founder-and-ceo-brian-chesky/", kind: own-words}
   - {n: 2, title: "Open letter to the Airbnb community about building a 21st-century company (25 January 2018)", by: "Brian Chesky, Airbnb Newsroom", url: "https://news.airbnb.com/brian-cheskys-open-letter-to-the-airbnb-community-about-building-a-21st-century-company/", kind: own-words}
@@ -28,6 +28,11 @@ sources:
   - {n: 4, title: "Brian Chesky", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Brian_Chesky", kind: reference}
   - {n: 5, title: "Airbnb", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Airbnb", kind: reference}
   - {n: 6, title: "Founder Mode (2024)", by: "Paul Graham", url: "https://paulgraham.com/foundermode.html", kind: secondary}
+  - {n: 7, title: "Masters of Scale episode transcript: Brian Chesky (do things that don't scale)", by: "Brian Chesky with Reid Hoffman, Masters of Scale", url: "https://mastersofscale.com/wp-content/uploads/2018/09/mos-episode-transcript_-brian-chesky.pdf", kind: own-words}
+  - {n: 8, title: "A company is not a family, with Airbnb CEO Brian Chesky (transcript)", by: "Brian Chesky with Adam Grant, ReThinking, TED", url: "https://www.ted.com/podcasts/rethinking-with-adam-grant/a-company-is-not-a-family-with-airbnb-ceo-brian-chesky-transcript", kind: own-words}
+  - {n: 9, title: "The Secret Art of Micromanagement with Airbnb CEO Brian Chesky (transcript)", by: "Brian Chesky, A Bit of Optimism, on Podscripts", url: "https://podscripts.co/podcasts/a-bit-of-optimism/the-secret-art-of-micromanagement-with-airbnb-ceo-brian-chesky", kind: own-words}
+  - {n: 10, title: "Video and transcript: Brian Chesky and John Donahoe (2013)", by: "Fortune", url: "https://fortune.com/2013/07/23/video-and-transcript-brian-chesky-and-john-donahoe", kind: own-words}
+  - {n: 11, title: "Airbnb CEO Brian Chesky on founder mode and leadership (November 2024)", by: "Fortune", url: "https://fortune.com/2024/11/11/airbnb-ceo-brian-chesky-founder-mode-leadership-management/", kind: secondary}
 tests:
   - {kind: use, prompt: "Walk through a first-time customer's visit to a small bakery, step by step, and redesign the three weakest moments."}
   - {kind: use, prompt: "Write a short message from a founder telling the team that 20% of roles will be cut, with the reasons and the support on offer."}

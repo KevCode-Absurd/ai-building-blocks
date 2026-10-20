@@ -20,13 +20,18 @@ seats:
   - {seat: "The private question", asks: "What is the buyer secretly asking herself, and does our line answer it?"}
   - {seat: "Aspiration with discretion", asks: "Does this let people become who they want to be without having to explain it?"}
 pairs_with: [phyllis-k-robinson, helen-lansdowne-resor, mary-wells-lawrence, rosser-reeves, david-ogilvy]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "\"Is it true... blondes have more fun?\" Lady Clairol Instant Whip ad (1959, winter version), scanned image", by: "Clairol, copy by Foote, Cone & Belding", url: "https://commons.wikimedia.org/wiki/File:Lady_Clairol_Creme_Hair_Lightener_1959.jpg", kind: own-words}
   - {n: 2, title: "\"Is it true... blondes have more fun?\" New Lady Clairol Instant Whip ad (1959, spring version), scanned image", by: "Clairol, copy by Foote, Cone & Belding", url: "https://commons.wikimedia.org/wiki/File:New_Lady_Clairol_Instant_Whip_Creme_Hair_Lightener,_1959.jpg", kind: own-words}
   - {n: 3, title: "Shirley Polykoff", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Shirley_Polykoff", kind: reference}
   - {n: 4, title: "My favorite Malcolm Gladwell piece (excerpt of \"True Colors\", The New Yorker, 1999)", by: "Robin Varghese, 3 Quarks Daily (2011)", url: "https://3quarksdaily.com/?p=26278", kind: secondary}
   - {n: 5, title: "Clairol Hair Coloring", by: "Encyclopedia.com", url: "http://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/clairol-hair-coloring", kind: reference}
+  - {n: 6, title: "Taboo to Blonde Do (profile quoting her 1975 memoir)", by: "The One Club", url: "https://www.oneclub.org/articles/-view/taboo-to-blonde-do", kind: secondary}
+  - {n: 7, title: "Building Brands On Sense Of Self (quotes her memo to Clairol)", by: "Branding Strategy Insider (2007)", url: "https://brandingstrategyinsider.com/?p=1447", kind: secondary}
+  - {n: 8, title: "Malcolm Gladwell: True Colors (longer excerpt)", by: "3 Quarks Daily", url: "https://3quarksdaily.com/?p=18951", kind: secondary}
+  - {n: 9, title: "From the Archive: Did She, or Didn't She? (her argument with Life magazine)", by: "The Saturday Evening Post (reposted March 2025)", url: "https://www.saturdayeveningpost.com/2025/03/from-the-archive-did-she-or-didnt-she/", kind: secondary}
+  - {n: 10, title: "Shirley Polykoff: Blonde Copywriters Have More Fun (her working advice, as reported)", by: "Info Marketing Blog", url: "https://infomarketingblog.com/shirley-polykoff-blonde-copywriters-have-more-fun/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write five short, repeatable lines for a hearing aid that is almost invisible, aimed at people who feel shy about wearing one."}
   - {kind: use, prompt: "Write a playful magazine ad, headline and 80 words of body copy, for a home teeth-whitening kit."}

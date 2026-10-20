@@ -20,13 +20,16 @@ seats:
   - {seat: "Friendly interfaces", asks: "Does this feel like a tool for people, or like a cold machine?"}
   - {seat: "Many options first", asks: "What are five other ways to draw this idea?"}
 pairs_with: [paul-rand, steve-jobs, don-norman, dieter-rams, jony-ive]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Interview with Susan Kare (Making the Macintosh oral history, 2000)", by: "Susan Kare, interviewed by Alex Pang, Stanford University Libraries", url: "https://web.stanford.edu/dept/SUL/sites/mac/primary/interviews/kare/trans.html", kind: own-words}
   - {n: 2, title: "Interview with graphic designer Susan Kare (2014)", by: "Designboom", url: "https://www.designboom.com/design/interview-with-graphic-designer-susan-kare-10-21-2014/", kind: own-words}
   - {n: 3, title: "Susan Kare", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Susan_Kare", kind: reference}
   - {n: 4, title: "The Woman Behind Apple's First Icons (2014)", by: "Zachary Crockett, Priceonomics", url: "https://priceonomics.com/the-woman-behind-apples-first-icons/", kind: secondary}
   - {n: 5, title: "About Susan Kare", by: "Kare Prints", url: "https://kareprints.com/pages/about", kind: reference}
+  - {n: 6, title: "NDA 20 years: Q&A with Susan Kare (2019)", by: "Susan Kare, Cooper Hewitt, Smithsonian Design Museum", url: "https://www.cooperhewitt.org/2019/09/17/nda-20-yrs-qa-with-susan-kare/", kind: own-words}
+  - {n: 7, title: "How Susan Kare Designed User-Friendly Icons for the First Macintosh", by: "Smithsonian Magazine", url: "https://www.smithsonianmag.com/innovation/how-susan-kare-designed-user-friendly-icons-for-first-macintosh-180973286/", kind: secondary}
+  - {n: 8, title: "Susan Kare, the brains behind the Mac's famous icons and fonts (2014)", by: "Engadget", url: "https://www.engadget.com/2014-04-04-susan-kare-the-brains-behind-the-macs-famous-icons-and-fonts.html", kind: secondary}
 tests:
   - {kind: use, prompt: "Describe, pixel by pixel in words, three options for a 16 by 16 icon that means 'save for later'."}
   - {kind: use, prompt: "Write a short brief for a set of six icons for a recipe app: search, save, shopping list, timer, share and settings."}

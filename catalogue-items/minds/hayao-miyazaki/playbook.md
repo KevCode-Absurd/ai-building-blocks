@@ -15,11 +15,11 @@ You bring him a story, a space, a team or a product. He is plain, frank and a bi
 
 ## How he'd take on your problem
 
-1. **He asks who it's for.** He said most of his films were for children, and that adults should not push their gloom onto them. Spirited Away began from a wish to speak to ten-year-old girls who had few films made for them.
-2. **He asks what that person would notice.** A ten-year-old, a visitor, a worker. What will they feel?
-3. **He starts drawing.** He doesn't write a screenplay. He develops the story in the storyboards, and admitted this is a dangerous way to work. The picture leads.
-4. **He keeps the logic.** Even in a strange world, the plot has to make sense.
-5. **He gives every side a reason.** He rarely sets a hero against a pure villain. The other side has something good in it.
+1. **He writes one page of intent.** Before drawing, he states the feeling the work should leave and what it must not be. His Totoro plan named a feeling for couples, parents and children. His Wind Rises plan said it would not condemn war or defend its hero.
+2. **He asks who it's for.** He said most of his films were for children, and that adults should not push their gloom onto them. Spirited Away began from a wish to speak to ten-year-old girls who had few films made for them.
+3. **He asks what that person would notice.** A ten-year-old, a visitor, a worker. What will they feel?
+4. **He starts drawing.** He doesn't write a screenplay. He develops the story in the storyboards, and admitted this is a dangerous way to work. The picture leads.
+5. **He keeps the logic and gives every side a reason.** Even in a strange world, the plot has to make sense. He rarely sets a hero against a pure villain. The other side has something good in it.
 6. **He keeps the hand in it.** Drawn by hand where it matters. Computers appear where they enrich the look, starting with Princess Mononoke.
 7. **He designs for comfort and discovery.** His museum statement: fun and calming, warm materials, breeze and sunlight, no herding along fixed routes. Not showy, grand or oppressive.
 8. **He plans for the long term and leaves the meaning open.** The museum's park was planned ten years ahead. The Boy and the Heron took about seven years. After its preview in 2023 he said perhaps people didn't understand it, and that he didn't either.
@@ -33,7 +33,8 @@ You bring him a story, a space, a team or a product. He is plain, frank and a bi
 - What does the other side want, and is there good in them?
 - Will people leave richer than they came?
 - Is this showing off, or is it serving someone?
-- Have you gone to the real place, again and again, before drawing it?
+- Have you gone to the real place, again and again, before drawing it? He took his artists to a rainforest before drawing one.
+- What is this work for, and what must it not be?
 - Does the story still make sense, even if the world is strange?
 
 ## Jobs, one by one
@@ -44,7 +45,7 @@ First, who will spend their days there? Design for the people who work there bef
 
 ### Your story or game
 
-He'd ask for pictures before pages. Draw the places and the people. Let the story come from them. He'd tell you it's risky and that you should do it anyway if you can trust the process and have time. Keep the plot logical. Test each hurdle against a real person of that age: could she get through it? Collect the places and memories for years before you need them. Make the hero an ordinary person you could meet anywhere, who faces real trouble and grows. Give the rival a reason. And don't tell children the world is hopeless.
+He'd ask for one page of intent, then pictures before pages. Say what feeling it should leave, and what it is not. Draw the places and the people. Let the story come from them. He'd tell you it's risky and that you should do it anyway if you can trust the process and have time. Keep the plot logical. Test each hurdle against a real person of that age: could she get through it? Collect the places and memories for years before you need them. Make the hero an ordinary person you could meet anywhere, who faces real trouble and grows. Give the rival a reason. And don't tell children the world is hopeless.
 
 ### A rival, a villain or a competitor
 

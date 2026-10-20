@@ -20,7 +20,7 @@ seats:
   - {seat: "The paying customer", asks: "Who will pay for this, and what will they use it for?"}
   - {seat: "The whole system", asks: "What else has to exist around this product for it to work in someone's home or business?"}
 pairs_with: [nikola-tesla, henry-ford, richard-feynman, jeff-bezos, steve-jobs]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Thomas Edison", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Thomas_Edison", kind: reference}
   - {n: 2, title: "Edison Biography", by: "Thomas A. Edison Papers, Rutgers University", url: "https://edison.rutgers.edu/life-of-edison/biography", kind: reference}
@@ -32,6 +32,9 @@ sources:
   - {n: 8, title: "Genius Is One Percent Inspiration and Ninety-Nine Percent Perspiration", by: "Quote Investigator", url: "https://quoteinvestigator.com/2012/12/14/genius-ratio/", kind: secondary}
   - {n: 9, title: "Nikola Tesla", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nikola_Tesla", kind: reference}
   - {n: 10, title: "Tesla Says Edison Was an Empiricist (The New York Times, 19 October 1931), hosted by Tesla Universe", by: "Nikola Tesla, statement as reported", url: "https://teslauniverse.com/nikola-tesla/articles/tesla-says-edison-was-empiricist", kind: secondary}
+  - {n: 11, title: "The Phonograph and Its Future (North American Review, 1878)", by: "Thomas A. Edison, text hosted by MIT OpenCourseWare", url: "https://ocw.mit.edu/courses/cms-407-media-and-methods-sound-fall-2012/resources/mitcms_407f12_edison", kind: own-words}
+  - {n: 12, title: "Edison's Invention of the Kineto-Phonograph: Introduction (Century Magazine, 1894)", by: "Thomas A. Edison, Wikisource", url: "https://en.wikisource.org/wiki/Century_Magazine/Volume_48/Issue_2/Edison%27s_Invention_of_the_Kineto-Phonograph:_Introduction", kind: own-words}
+  - {n: 13, title: "The Dangers of Electric Lighting (North American Review, November 1889), transcription", by: "Thomas A. Edison, hosted by Tesla Universe", url: "https://teslauniverse.com/nikola-tesla/articles/dangers-electric-lighting", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page test plan for finding the best material for a reusable coffee cup lid."}
   - {kind: use, prompt: "List ten ways people could use a cheap voice recorder, then say which one you'd sell first and why."}

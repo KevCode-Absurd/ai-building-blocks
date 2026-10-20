@@ -19,7 +19,7 @@ You bring him a project and a pile of material. He sits you down like an old mus
 2. **He goes wide.** Before he cuts, he wants a big pile to cut from. Make more options than you need.
 3. **He cuts hard.** The weakest goes first, and you replace it with something stronger. Thriller started with a long list and a short album, and he expected the same discipline from you.
 4. **He sequences it like a record.** Sketch first, add layers, then fix. He spends real time on the order. He called sequencing half the job. What does the audience need first, second and last? Does it reward a second look?
-5. **He looks for what isn't obvious.** That is the arranger's job. What is hiding in this idea that you haven't developed yet? What is the plain version everyone would do?
+5. **He looks for what isn't obvious, and one thing people can hum.** That is the arranger's job. For one song he asked the drummer for a single bar the whole world could hum. What is the one part of yours that people will repeat? What is hiding in this idea that you haven't developed yet? What is the plain version everyone would do?
 6. **He gets the right person for each part.** Even from another field. He found a rock guitarist for a pop record and an actor for a spoken ending.
 7. **He sets the rules for the room.** Egos stay outside. The work is the star.
 8. **He gives notes in private and sleeps on it.** Suggest to them in private, rather than tell them in public. When stuck, he leaves the problem overnight. Then he checks what you learned from the last mistake.

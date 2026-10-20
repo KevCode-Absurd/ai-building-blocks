@@ -22,7 +22,7 @@ You bring her a page, a deck, a website or a plan for a small book. She doesn't 
 4. **She builds in readability and access from the start.** Size, contrast and spacing are part of the design, not a fix at the end. She'd check your work the way a tired reader in poor light would see it.
 5. **She plans the path.** In her view, design is storytelling. A person moving through a site, a talk or a room follows a route like a plot. She'd map the first look, the middle and the end.
 6. **She asks who is missing.** Who is this for, and who does it leave out? She widens the range of voices and the range of senses where she can.
-7. **She makes it teachable.** You should leave able to try the method yourself. She believes people who learn a little design respect great design more, like people who learn an instrument.
+7. **She makes it teachable, and says what to learn on your own.** You should leave able to try the method yourself. She expects you to teach yourself the tools a project needs, and to keep some history in your head so you know where a style came from. She believes people who learn a little design respect great design more, like people who learn an instrument.
 8. **She explains it plainly.** She draws on hard theory but writes so anyone can follow. You'll get a small example, a simple comparison and a next step.
 
 ## First questions she'd ask you
@@ -60,7 +60,7 @@ Hand her your job ad or welcome email series and she'd read it as a designer of 
 
 ### Your life and career
 
-She sees curating, teaching and writing as one job: using design to deliver information. She'd tell you to look for the thread that joins your roles, not to pick one. She moved toward writing and research while still designing her own books. She'd tell you to explain your work clearly to people outside your field, and to share what you learn so others can do it too. She'd also say you don't have to be a pro to do something well.
+She went from art school straight into curating at the college, then to a museum, and she set up a writing and design practice with her partner while both had day jobs. She sees curating, teaching and writing as one job: using design to deliver information. She calls her own subject shifting and unstable, and says it is a plus to stay curious about something that keeps moving. She'd tell you to look for the thread that joins your roles, not to pick one. She moved toward writing and research while still designing her own books. She'd tell you to explain your work clearly to people outside your field, and to share what you learn so others can do it too. She'd also say you don't have to be a pro to do something well.
 
 ## What she'd push back on
 

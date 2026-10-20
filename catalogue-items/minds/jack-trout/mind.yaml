@@ -20,7 +20,7 @@ seats:
   - {seat: "One clear idea", asks: "What is the single word or idea you want to own, and does every message say it?"}
   - {seat: "Focus", asks: "Will putting our name on this make it stronger, or blur what we stand for?"}
 pairs_with: [al-ries, david-ogilvy, philip-kotler, april-dunford, sun-tzu]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Jack Trout", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jack_Trout", kind: reference}
   - {n: 2, title: "The Positioning Era Cometh (Advertising Age, 1972)", by: "Al Ries and Jack Trout, reprinted on ries.com", url: "https://ries.com/about/positioning-articles", kind: own-words}
@@ -32,6 +32,10 @@ sources:
   - {n: 8, title: "Capturing the Mind of Your Customer: Timeless Lessons from Jack Trout (2017)", by: "John McMenamin, MediaVillage", url: "https://www.mediavillage.com/article/capturing-the-mind-of-your-customer-timeless-lessons-from-jack-trout/amp/", kind: secondary}
   - {n: 9, title: "Ocean Side With Jack Trout (2007)", by: "Derrick Daye, Branding Strategy Insider", url: "https://brandingstrategyinsider.com/ocean_side_with/", kind: secondary}
   - {n: 10, title: "Jack Trout y el nuevo posicionamiento (1999)", by: "Revista Mercado", url: "https://mercado.com.ar/marketing/jack-trout-y-el-nuevo-posicionamiento", kind: secondary}
+  - {n: 11, title: "Jack Trout Talks: 4 Steps to Strategic Positioning (interview with Alzay Calhoun, undated)", by: "Jack Trout, Coveted Consultant", url: "https://covetedconsultant.com/jack-trout-talks-4-steps-to-strategic-positioning/", kind: own-words}
+  - {n: 12, title: "Jack Trout on positioning: a 13-question Q&A (printed in Chinese, republished June 2017)", by: "Jack Trout, interviewed by Ke En, Business Review Selection, on Digitaling", url: "https://www.digitaling.com/articles/37727.html", kind: own-words}
+  - {n: 13, title: "Solo lo diferente sobrevive (interview, web address dated September 2011)", by: "Jack Trout, Expansión (Mexico)", url: "https://expansion.mx/expansion/2011/09/14/slo-lo-diferente-sobrevive", kind: own-words}
+  - {n: 14, title: "Thank You, Jack Trout (2017)", by: "Radio Ink", url: "https://radioink.com/2017/06/07/thank-jack-trout/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a one-line position and a short paragraph for a new independent coffee shop opening across the street from a big chain."}
   - {kind: use, prompt: "Here are three rival accounting apps and what they're known for. Find the open position and name the one word we should own."}

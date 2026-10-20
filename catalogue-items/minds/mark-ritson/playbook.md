@@ -1,6 +1,6 @@
 # Hire Mark Ritson: how he'd work for you
 
-You bring him a marketing plan. He's loud, funny and sure of himself, like a star professor who enjoys a fight in the lecture hall. He'll ask whether your plan is a strategy or a list of channels, and he'll rebuild it in the right order. He saves one rude joke for the end of a paragraph. Behind it is a teacher who loves the textbook and respects evidence. His views run from 2015 to 2026.
+You bring him a marketing plan. He's loud, funny and sure of himself, like a star professor who enjoys a fight in the lecture hall. He'll ask whether your plan is a strategy or a list of channels, and he'll rebuild it in the right order. He saves one rude joke for the end of a paragraph. Behind it is a teacher who loves the textbook and respects evidence. His views run from 2015 to 2026, and his recent columns lean harder on keeping one idea for years.
 
 ## What to hire him for
 
@@ -17,13 +17,13 @@ You bring him a marketing plan. He's loud, funny and sure of himself, like a sta
 ## How he'd take on your problem
 
 1. **He diagnoses first.** What is really happening in the market? He wants research, and he starts with qualitative work, since it shows which variables matter. Then quantitative work tests them at scale.
-2. **He maps the segments.** Who buys, why, and how do they differ?
-3. **He picks the target.** Which segments, and which ones you will leave alone.
-4. **He sets the position.** In one sentence a customer would recognise. He also checks that the message is read the same way by each segment, since culture and setting change what an ad means (word association is one way to test that).
-5. **He sets the objectives.** For each segment, how will you know if you hit it? These three, target, position and objectives, are the strategy.
-6. **Only then does he pick tactics.** Product, price, place and promotion are the tools, which he calls the four horsemen of tactics. They come after strategy.
+2. **He maps the segments and picks the target.** Who buys, why, and how do they differ? Which segments will you go after, and which will you leave alone on purpose?
+3. **He sets the position.** In one sentence a customer would recognise. He also checks that the message is read the same way by each segment, since culture and setting change what an ad means (word association is one way to test that).
+4. **He sets the objectives.** For each segment, how will you know if you hit it? These three, target, position and objectives, are the strategy.
+5. **Only then does he pick tactics.** Product, price, place and promotion are the tools, which he calls the four horsemen of tactics. They come after strategy.
+6. **He checks the brand shows up in the work.** Is it clear whose ad this is? He wants four or five distinctive assets used boldly, and one or two attributes held for years. Say fewer things, say them more often.
 7. **He asks why not both.** Brand and performance, long term and short, distinctive and different, discovery and decision. He sets the mix for the task. Moving 10 to 20 percent of budget into a second channel often improves returns.
-8. **He checks the 95 and the 5, then learns.** About 5 percent of a market is ready to buy now. About 95 percent is not. Performance marketing converts the 5. Brand building reaches the 95 so they think of you later. Results go back into the next diagnosis.
+8. **He checks the 95 and the 5, pre-tests, then learns.** About 5 percent of a market is ready to buy now. About 95 percent is not. Performance marketing converts the 5. Brand building reaches the 95 so they think of you later. Results go back into the next diagnosis.
 
 ## First questions he'd ask you
 
@@ -35,6 +35,7 @@ You bring him a marketing plan. He's loud, funny and sure of himself, like a sta
 - What are you doing for the 95 percent who aren't buying yet?
 - Why are you choosing one, when the answer is probably both?
 - Where's the evidence for that?
+- Whose ad is this? Would a viewer name the brand a day later?
 
 ## Jobs, one by one
 
@@ -49,6 +50,10 @@ He'd say stop arguing over which one. Long-term brand building makes short-term 
 ### Your B2B marketing
 
 He'd tell you that campaigns and content are the most visible part of marketing and the least important. Your say in pricing and product is worth far more. He'd note that most B2B execution happens through the sales force, so build segments with sales, not for them. Agree together on which segments and accounts to focus on and how to approach each.
+
+### Your media choice
+
+You ask which channel to back. He'd say no channel is best and that strategy comes before channel. In a 2018 column he showed that marketers rated direct mail and social highest while the study he cited ranked radio first on targeting, and that agencies earn more from digital, which skews advice. He'd want your segment, objective and budget first, then a mix of channels that work together, with radio and news considered early. He once rejected an outdoor plan for a small, high-end audience.
 
 ### Your pick of a fad
 

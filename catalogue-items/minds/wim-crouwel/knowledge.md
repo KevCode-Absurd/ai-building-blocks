@@ -1,8 +1,8 @@
 # Wim Crouwel: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Crouwel gave many interviews late in life. We read two short English question-and-answer interviews from 2013 and 2015 [S2] and a long report of his 2011 talk with Rick Poynor at London's Design Museum, which quotes him at length [S3]. His 1972 debate with Jan van Toorn was published in English in 2015, but the extracts we could open are mostly third-person description, not his replies, so we use them for his work and not for his arguments [S5][S6][S7]. Reports differ on dates in places (the Q&A pages show 2013 and 2016 tags) [S2]. He died in Amsterdam in September 2019, aged 90 [S1][S4].
+A note on the record: we now have a good run of Crouwel in his own words. That is two short English interviews from 2013 and 2015 [S2], a long report of his 2011 talk with Rick Poynor [S3], a 2011 account of his career told to Tony Brook [S8], a 1996 speech on the New Alphabet [S9], a 2011 Eye interview [S11], a 1974 talk [S12], a 1980 essay [S13] and a 1993 text [S14]. His 1972 debate with Jan van Toorn is covered by a published extract that paraphrases his replies [S10], and by earlier third-person accounts [S5][S6][S7]. Reports differ on dates in places (the Q&A pages show 2013 and 2016 tags) [S2]. He died in Amsterdam in September 2019, aged 90 [S1][S4].
 
 ## In one paragraph
 
@@ -14,7 +14,7 @@ Crouwel was a Dutch graphic and type designer, born in Groningen, who trained as
 
 Crouwel said creating structure was among the most important tools a designer has. He named structure as the main lesson he took from the Swiss designers he admired, above all Josef Müller-Brockmann [S2].
 
-How he applied it: for the Stedelijk he built a modular grid that gave all the museum's printed matter one look [S2]. From 1968 he used a strict grid with the Univers typeface for its posters [S3].
+He called finding the basic logic pattern about 90% of the job, with the rest left to others [S12]. How he applied it: for the Stedelijk he built a modular grid that gave all the museum's printed matter one look [S2]. From 1968 he used a strict grid with the Univers typeface for its posters [S3].
 
 ### Good design does its job, plainly
 
@@ -32,17 +32,17 @@ How he applied it: on his museum posters he said he never wanted to stand betwee
 
 Crouwel's posters were often type alone. He found the idea for each one in the content of the show and expressed it through letters [S3]. Compared with Van Toorn, who favoured images, he leaned toward purely typographic answers [S6].
 
-How he applied it: on one poster for a photographers' group he wanted to point out a single letter, the f, and built the design around it [S3]. His 1968 poster for a design exhibition was the only one that showed its grid openly [S3].
+At the Van Abbemuseum he often built a poster around one key word from the show [S8]. How he applied it: on one poster for a photographers' group he wanted to point out a single letter, the f, and built the design around it [S3]. His 1968 poster for a design exhibition was the only one that showed its grid openly [S3].
 
 ### Design for the medium's limits
 
 He saw new technology as something to design for, not to fear. His New Alphabet of 1967 was made for early cathode ray screens, which drew curves badly, so he used only straight lines and diagonals [S2][S3]. He saw it as a comment on how new machines affect type, and called it never meant to be really used [S1][S2].
 
-How he applied it: he designed Gridnik in 1974 for Olivetti typewriters. It was never used on them, but a version appeared on Dutch stamps [S4][S6]. His number stamps for the Dutch post office were in use from 1976 to 2002 [S1]. Late in life he said computers are tremendously time saving: you can have an idea on screen with variations within an hour and so make sharper choices [S3].
+He drew a line between experimental typography, which is expressive and never solves a particular problem, and research, which tests variations against a goal such as legibility. He wanted the two kept apart even though one designer can do both [S13]. How he applied it: he designed Gridnik in 1974 for Olivetti typewriters. It was never used on them, but a version appeared on Dutch stamps [S4][S6]. His number stamps for the Dutch post office were in use from 1976 to 2002 [S1]. Late in life he said computers are tremendously time saving: you can have an idea on screen with variations within an hour and so make sharper choices [S3].
 
 ### Systems save time and keep quality
 
-Within Total Design, Crouwel developed grids and set standard typefaces and paper sizes. That saved time and kept quality high [S5]. A colleague called him the "system-general" [S5]. He said Total Design grew fast because big clients preferred to work with an institution rather than one designer [S3].
+Within Total Design, Crouwel developed grids and set standard typefaces and paper sizes. That saved time and kept quality high [S5]. In a 1974 talk he compared design to football: eleven players who each chase the ball their own way lose, so designers need shared rules and a visible grammar. He asked for four or five basic typefaces, the A paper range and one metric type system, and said a letterhead is A4 and it is nonsense to make it different [S12]. A colleague called him the "system-general" [S5]. He said Total Design grew fast because big clients preferred to work with an institution rather than one designer [S3].
 
 How he applied it: his catalogues formed a series, each one instantly known as the Stedelijk's, yet each still came out a little differently inside the system [S5].
 
@@ -50,7 +50,7 @@ How he applied it: his catalogues formed a series, each one instantly known as t
 
 Crouwel argued that you can't make timeless work, because everything reflects its time [S3]. The world changes, he said, but the principles of design stay the same [S2].
 
-How he applied it: he redesigned the Dutch telephone directory using lowercase letters. It was heavily criticised at launch [S3]. He was wary of design being treated as art and disliked post-modern design [S3].
+In 1993 he wrote that style alone had brought new combinations but never great ideas, and that the first question is why something is made, before how it looks [S14]. How he applied it: he redesigned the Dutch telephone directory using lowercase letters. It was heavily criticised at launch [S3]. He was wary of design being treated as art and disliked post-modern design [S3].
 
 ### Stay alert and choose for yourself
 
@@ -66,29 +66,37 @@ How he applied it: he followed the museum director Edy de Wilde from the Van Abb
 
 ## Real decisions
 
-### Translating each show into type at the Van Abbemuseum
-For posters at the Eindhoven museum he avoided images of the artwork and turned each exhibition into typography, with little contact with the artists. His reason: he never wanted to stand between the artist and the museum [S3].
+### Teaching himself type with newspaper cut-outs (early 1950s)
+After working on exhibition design he realised he knew nothing about typography, so he took evening classes for two years [S8]. Swiss Akzidenz Grotesk was not sold in Holland, so he cut its letters from Swiss newspapers, pasted them up and photographed the result as artwork [S8]. He used this for his first posters for the Van Abbemuseum, where he often built a poster around one key word from the show [S8]. The pattern is a habit he kept: take the idea from the content, and make the tool work with what you can get [S8][S3].
 
-### Fixing Univers and a grid at the Stedelijk
-At the Stedelijk he adopted one grid and the Univers typeface, whose weights share one x-height so they can sit on a single line. Emphasis came from bold or italic, not size. The 1968 design exhibition poster was the only one to show its grid, because the show was about design [S3][S5].
+### Breaking with Sandberg at the Stedelijk (1960s)
+When Edy de Wilde moved to the Stedelijk, Crouwel chose on purpose to break with Willem Sandberg's painterly style [S8]. He fixed a grid of 8-point type on a 4-point line space, derived the catalogue sizes from it and kept poster sizes near Sandberg's because the same noticeboards were used [S8]. He used Univers for most posters, and the 1968 *Vormgevers* poster showed the grid itself, his one real exception [S8][S3]. He said he held to the grid even when it looked worse, and that he never let himself go for aesthetic reasons [S8].
 
-### Setting up Total Design as an institution
-Founded in 1963, Total Design grew because few Dutch studios existed and big clients liked to deal with an institution: a single designer might drop dead. Style guides were strict at first, then dropped, because designers want their own inventions and bend rules [S3].
+### Copying a studio model for Total Design (1962 to 1963)
+In 1962 he visited Britain with Friso Kramer and Benno Wissing, and chose to copy the structure of Fletcher, Forbes and Gill: several teams with their own signatures inside one firm [S11][S8]. Total Design opened in 1963 with money from the Schwarz brothers, and grew fast because big companies wanted corporate identities [S11]. Its rules were sans-serif type, a grid for every client, clear photography and strong logotypes, with no decorative artistry; "information was number one" [S8]. When Wissing proposed shares for all staff, Crouwel refused, saying it would soon end the company [S11].
 
-### Lowercase telephone directory
-His redesign of the Dutch phone directory, using lowercase to save space and time, drew massive criticism. The post office kept it for eight to ten years [S3].
+### Drawing letters only from straight lines (1966 to 1967)
+At the 1966 DRUPA fair in Düsseldorf he saw the Hell Digiset, which built letters from dots on a fixed grid [S9]. Under magnification he saw that curves changed shape between sizes, and only straight lines and 45-degree corners held [S9][S8]. He built the New Alphabet from those parts and published it in Pieter Brattinga's *Quarterprints* in 1967 [S9]. He said he meant it as a basis for discussion, not for use, and noted that critics often reviewed it without reading his text [S9].
 
-### Drawing New Alphabet from straight lines
-Early cathode ray screens had large pixels that drew curves badly, so he used only horizontal and vertical strokes and diagonals. He called it an experiment on how technology changes type, never meant to be really used, and was bemused when Joy Division used it without knowing its purpose. An assistant later made it more legible [S2][S3].
+### A typeface for a typewriter that never shipped (1973 to 1974)
+Olivetti commissioned an electric typewriter face in 1973, and he used the New Alphabet's diagonals with rounded corners to suit the machine's coarse resolution [S8]. Olivetti dropped the project when electronic typewriters arrived [S8]. The next year he used the face for the word "Nederland" and the numbers on Dutch stamps [S8]. Decades later it was digitised as Gridnik, named for a 1970s nickname for people who used grids all the time [S8][S12].
 
-### Standard type for the post office
-In 1976 he drew number stamps in a modified Gridnik, with eleven variants printed in two opposing gradients. They stayed in circulation until 2002 [S6].
+### Letting the telephone directory criticism pass (1970s)
+In the 1970s the journalist Renate Rubinstein attacked modernist design, and Crouwel's 1977 phone directory became a target [S11]. His first reaction was to let it go, but when a public debate was organised he took part even though the room was hostile [S11]. He recalled that in the graphic design field he was seen as the enemy [S11].
+
+### Defending the neutral designer against Van Toorn (1972)
+In the 9 November 1972 debate at Museum Fodor, he held that design is ordering information, and that clear order needs an underlying principle [S10]. Van Toorn argued that reading habits are learned and that grids interest mostly professionals; Crouwel replied that sincerity does not excuse weak design, and called the 1968 Paris protest posters amateurish [S10]. He said museum catalogues should tell the museum's story and not the artist's, and admitted he got stuck reading Van Toorn's catalogues [S10]. Later he softened toward work he had opposed, though he still called himself a functionalist [S10].
+
+### Taking the Boijmans job, and who would design for it (1985 to 1993)
+After a month's thought, and with his wife's push, he accepted the directorship of the Boijmans Van Beuningen museum [S8]. He asked his former assistant to design the catalogues, and she declined [S8]. Two young Dutch designers produced catalogues that did not read as one series, so he hired the studio 8vo and set one rule: use Futura, the museum's face [S8]. He retired in 1993 with an exhibition built around 1928, the year of his birth, and bought his first computer then [S8][S14].
 
 ## How he decides
 
 - Find the structure first, then build on a grid [S2].
 - Ask whether the design does its job in a straight way [S2].
 - Keep yourself out of the message [S3][S7].
+- Ask why it is made before asking how it looks [S14].
+- Treat a shared grammar as the basis for variety, not the enemy of it [S12].
 - Use one typeface and few variations across a series [S5].
 - Let the content suggest the idea, in type where possible [S3].
 - Design for the real limits of the medium [S2].
@@ -108,6 +116,8 @@ In 1976 he drew number stamps in a modified Gridnik, with eleven variants printe
 **What makes good design?** Doing its job plainly and well [S2].
 
 **Should a poster show the art?** Not necessarily. He often translated a show's content into type alone, so the poster would not compete with the work on the walls [S3].
+
+**Is design causing harm?** In 1974 he said the flood of unrelated printed matter pollutes the visual world, and blamed the cult of originality and advertising for it [S12].
 
 **Have the rules of design changed?** The world has changed, he said, but the principles have not [S2].
 
@@ -134,6 +144,7 @@ In 1976 he drew number stamps in a modified Gridnik, with eleven variants printe
 - **Systems that hide the subject.** One account says his rigid catalogue system partly suppressed the personality of each artist, who was the real subject of the book [S5].
 - **The telephone directory.** His lowercase directory was heavily criticised when it came out [S3].
 - **Hard to read.** He conceded that the New Alphabet was not meant for real use [S1][S2]. It was later used on a record sleeve anyway, in 1988 [S1].
+- **Fierce on originality.** In 1974 he mocked designers who want a signature solution, and in the 1972 debate he called the protest posters of Paris 1968 amateurish, a judgment that some saw as dismissive of work with a purpose of its own [S10][S12].
 - **Dislike of new styles.** His dislike of post-modernism can make him dismissive of more expressive work [S3].
 
 ## Blind spots to watch
@@ -149,4 +160,4 @@ In 1976 he drew number stamps in a modified Gridnik, with eleven variants printe
 - "For me, creating structure is a most important means." (Designculture interview) [S2]
 - "You can't make timeless work." (Design Museum talk, 2011) [S3]
 - "I never wanted to stand between the artist and the museum." (Design Museum talk, 2011) [S3]
-- "Keep your radar turning in order to see everything that happens." (Designculture interview) [S2]
+- "Finding the basic logic pattern is 90% of the job." (1974 talk, A Vision on Design) [S12]

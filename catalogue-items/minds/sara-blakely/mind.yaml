@@ -18,7 +18,7 @@ seats:
   - {seat: "Bootstrapping a product", asks: "What's the cheapest way to prove someone will pay for this before we spend real money?"}
   - {seat: "The customer's eye", asks: "Would you use this yourself, and does the person making it?"}
 pairs_with: [phil-knight, richard-branson, oprah-winfrey, mary-kay-ash, alex-hormozi]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Sara Blakely", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sara_Blakely", kind: reference}
   - {n: 2, title: "Spanx", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Spanx", kind: reference}
@@ -30,6 +30,12 @@ sources:
   - {n: 8, title: "Spanx founder Sara Blakely on her billion-dollar idea (interview and 2013 Most Powerful Women Summit remarks)", by: "Sara Blakely, Fortune", url: "https://fortune.com/article/spanx-founder-sara-blakely-billion-dollar-idea-started-with-5000-in-savings/", kind: own-words}
   - {n: 9, title: "Interview with Sara Blakely, CEO of Spanx (14 March 2014), article on an audio interview with Kai Ryssdal", by: "Marketplace, WBEZ", url: "https://www.wbez.org/marketplace/2014/03/14/interview-with-sarah-blakely-ceo-of-spanx", kind: secondary}
   - {n: 10, title: "FSU confers honorary degree on Sara Blakely, who urges graduates to invest in you (1 May 2026), news report of her commencement speech", by: "Florida State University", url: "https://news.fsu.edu/news/university-news/2026/05/01/fsu-confers-honorary-degree-on-alumna-and-spanx-founder-sara-blakely-who-urges-graduates-to-invest-in-you/", kind: secondary}
+  - {n: 11, title: "Business Is Not a Battlefield with SPANX Sara Blakely (Confessions of a Female Founder, undated page with transcript)", by: "Sara Blakely with Megan, Lemonada Media", url: "https://lemonadamedia.com/podcast/business-is-not-a-battlefield-with-spanxs-sara-blakely/", kind: own-words}
+  - {n: 12, title: "How Sara Blakely Built Spanx and Found Her Next Big Purpose (6 August 2025), podcast with transcript", by: "Sara Blakely with Chip Conley, The Midlife Chrysalis", url: "https://www.iheart.com/podcast/269-the-midlife-chrysalis-278421428/episode/how-sara-blakely-built-spanx-and-288769561/", kind: own-words}
+  - {n: 13, title: "Sara Blakely on fax machines, investors and career advice (20 September 2025), report of her School of Hard Knocks interview", by: "Fortune", url: "https://fortune.com/2025/09/20/sara-blakely-spanx-fax-machines-investors-career-advice", kind: own-words}
+  - {n: 14, title: "Sara Blakely, National Inventors Hall of Fame inductee page (her quotes and the patent story)", by: "National Inventors Hall of Fame", url: "https://www.invent.org/inductees/sara-blakely", kind: own-words}
+  - {n: 15, title: "Ep. 211: What I Learned From Spanx Founder Sara Blakely (about early 2017), show notes", by: "James Altucher", url: "https://archive.jamesaltucher.com/podcast/sara-blakely/", kind: secondary}
+  - {n: 16, title: "Grit with Spanx Founder Sara Blakely (Super U Podcast), host summary of her seven tips", by: "Erik Qualman", url: "https://equalman.com/grit-with-spanx-founder-sarah-blakely/", kind: secondary}
 tests:
   - {kind: use, prompt: "I hate how my reusable water bottle leaks in my bag. Turn that into a product idea and a plan to test it for under $500."}
   - {kind: use, prompt: "Write the five-minute in-person pitch I'd give a buyer at a local boutique for my new handmade candle line."}

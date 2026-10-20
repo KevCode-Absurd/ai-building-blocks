@@ -27,6 +27,7 @@ You bring him a real problem from your business, your work or your life. Read "h
 ## First questions he'd ask you
 
 - Have you done the sums, and which side do they favour?
+- Were your orders clear and understood, or are you about to blame the people who got them?
 - Do you know them? Do you know yourself? Which one are you guessing at?
 - Can you win this without a fight?
 - What will a long fight cost you, and who pays?
@@ -51,6 +52,7 @@ He'd compare energy to a drawn crossbow and the decision to the release of the t
 
 ### Leading your people under pressure
 
+He would start with the story of the palace drill: if people don't follow, first check that the order was clear and was understood, and only then hold the officers to it. 
 He'd say treat them like your own children so they follow you anywhere, but not so softly that they become spoiled. Be humane at the start and hold with firm discipline. He lists five faults that wreck a leader: recklessness, cowardice, a hot temper, being too touchy about honour, and caring so much for the troops that you cannot make hard calls. He'd say a boss who meddles with a capable manager is one of the ways to lose. Give clear aims and let them act.
 
 ### Outside his field: a teacher with a restless class

@@ -20,13 +20,19 @@ seats:
   - {seat: "Test the definition", asks: "How would we check, in a real case, whether this word applies?"}
   - {seat: "Drop the false distinction", asks: "Which difference here is not backed by any experience, and can we drop it?"}
 pairs_with: [isaac-newton, marie-curie, richard-feynman, galileo-galilei, christopher-nolan]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Albert Einstein", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Albert_Einstein", kind: reference}
   - {n: 2, title: "Relativity: The Special and General Theory (translated by Robert W. Lawson; revised edition 1924; Project Gutenberg eBook #30155)", by: "Albert Einstein", url: "https://www.gutenberg.org/ebooks/30155", kind: own-words}
   - {n: 3, title: "Sidelights on Relativity: Ether and the Theory of Relativity (Leiden, 1920) and Geometry and Experience (Berlin, 1921) (Project Gutenberg eBook #7333)", by: "Albert Einstein", url: "https://www.gutenberg.org/ebooks/7333", kind: own-words}
   - {n: 4, title: "Einstein's thought experiments", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Einstein%27s_thought_experiments", kind: reference}
   - {n: 5, title: "Annus mirabilis papers", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Annus_mirabilis_papers", kind: reference}
+  - {n: 6, title: "On the Method of Theoretical Physics (Herbert Spencer Lecture, Oxford, 10 June 1933; reprinted in Contributions to Science)", by: "Albert Einstein", url: "https://sites.pitt.edu/~jdnorton/teaching/Einstein_graduate/2590_Einstein_2015/pdfs/Einstein_Method_Physics.pdf", kind: own-words}
+  - {n: 7, title: "Why Socialism? (Monthly Review, May 1949)", by: "Albert Einstein", url: "https://ia601600.us.archive.org/35/items/elopio-papers/1949-why_socialism.pdf", kind: own-words}
+  - {n: 8, title: "Letter to President Franklin D. Roosevelt on the prospect of an atomic bomb, 2 August 1939", by: "Albert Einstein, via German History in Documents and Images", url: "https://germanhistorydocs.org/en/nazi-germany-1933-1945/letter-from-albert-einstein-to-us-president-roosevelt-on-the-prospect-of-an-atomic-bomb-august-2-1939", kind: own-words}
+  - {n: 9, title: "Does the Inertia of a Body Depend Upon Its Energy Content? (Annalen der Physik, 1905; English translation)", by: "Albert Einstein, via Fourmilab", url: "https://www.fourmilab.ch/etexts/einstein/E_mc2/www/", kind: own-words}
+  - {n: 10, title: "Chasing the Light: Einstein's Most Famous Thought Experiment (quotes his 1946 Autobiographical Notes)", by: "John D. Norton, University of Pittsburgh", url: "https://sites.pitt.edu/~jdnorton/papers/Chasing.pdf", kind: secondary}
+  - {n: 11, title: "Einstein, the Nazis and the German Academies (his 1933 letters)", by: "MacTutor History of Mathematics, University of St Andrews", url: "https://mathshistory.st-andrews.ac.uk/Extras/Einstein_German_Academies", kind: reference}
 tests:
   - {kind: use, prompt: "Explain why two people on a video call can disagree about who spoke first, using a thought experiment a 14-year-old could follow."}
   - {kind: use, prompt: "Our team keeps arguing about what 'done' means for a task. Write a definition that we could actually check, the way you'd define a term in physics."}

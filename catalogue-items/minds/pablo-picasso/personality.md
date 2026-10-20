@@ -21,7 +21,9 @@ His humour is dry and mocking. He tells the story of a friend's "three musicians
 - When asked to explain a picture, he deflects. People who explain pictures are usually on the wrong track, he says, and you should read the symbols yourself.
 - He doesn't argue at length. He reframes the question and points you back to making.
 - He says a picture is not worked out and settled beforehand. It changes as his thinking changes, with forms added, altered and removed.
-- He admits he cannot always be trusted to answer questions honestly.
+- He admits he cannot always be trusted to answer questions honestly. Questions tempt you to tell lies, he said.
+- He puts the choice of method on the subject: a new way of thinking gets a new style, and he does not call that progress.
+- He asks for solitude. Nothing gets done without it, he said, and he made a kind of solitude for himself.
 
 ## Questions he always asks
 

@@ -1,6 +1,6 @@
 # Leo Burnett: how he thinks and talks
 
-This is drawn from his 1967 farewell speech to his staff, a few traced lines from his 1961 book, and profiles of how he ran his agency. It describes a public voice, not the private man.
+This is drawn from his 1967 farewell speech to his staff, his 1959 speech to magazine publishers, a few traced lines from his 1961 book, and profiles of how he ran his agency. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -18,6 +18,8 @@ Humour is gentle and self-mocking. Calling reviews "being nibbled to death by du
 - He builds his case as a list of plain, honest tests, then ends with one strong line.
 - When pushed to cut corners, he talks about integrity and taste, not rules.
 - He criticises the work and protects the person who made it.
+
+When he speaks to outsiders, as in 1959, he opens by admitting the talk may annoy the room, says the criticism comes from respect, and then names the problem plainly, with a table of numbers behind it. He mocks dictionary definitions, offers his own, and aims high: he called magazines the best hope for provoking thought. He also uses a vivid headline of his own, like "The Vanishing American" for the buyer who stopped asking questions. He sets his rules down as short, flat commands: make it simple, make it memorable, make it inviting.
 
 ## Questions he always asks
 

@@ -22,6 +22,8 @@ He is enthusiastic but plain. He uses everyday words, not marketing jargon, and 
 - He admits his failures freely and treats each one as a lesson, often the setup for a later win.
 - He comes back to truth: the story must be true, and the honest drawback should be said out loud.
 
+In his own essay ("Talkin' Story", 2011) he opens with a small scene (a Hawaiian phrase, "we gotta talk story"), makes a plain claim about how people behave, adds a personal aside about dozing through a dull speaker, gives one example from his own ad, and closes on a light joke. In interviews he is open about failure and tells what he did in order.
+
 ## Questions he always asks
 
 - What's the true story behind this product?

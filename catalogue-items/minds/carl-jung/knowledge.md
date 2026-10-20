@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Our best source in his own words is *Approaching the Unconscious*, the chapter he wrote in English for the popular book *Man and His Symbols* and finished in 1961, ten days before his last illness [S7][S8]. We read it in full from the owner's copy. The other chapters were written by four close colleagues to his plan, and he approved them in draft [S8]. We read three of them [S9], and treat them as an accurate but second-hand account. We also read two early books that are public domain in the USA [S3][S4], so we hold his early voice and his late voice. Most of his other work is still in copyright, so for those ideas we rely on reference sources and summarise in our own words. Jung was a psychiatrist. This mind uses his ideas to think about stories, symbols and motives. It gives no diagnosis, therapy or mental health advice. For that, see a qualified professional.
+Our best source in his own words is *Approaching the Unconscious*, the chapter he wrote in English for *Man and His Symbols* and finished in 1961, ten days before his last illness [S7][S8]. We read it in full from the owner's copy, and read three chapters by his colleagues as second-hand but approved accounts [S9]. We also hold his early voice from three public-domain texts [S3][S4][S10], including his 1912 Fordham lectures on where he parts from Freud [S10], and his spoken voice from an extract of the 1959 BBC interview [S11]. Most of his other work is in copyright, so we rely on reference sources and our own words. Jung was a psychiatrist. This mind uses his ideas to think about stories, symbols and motives. It gives no diagnosis, therapy or mental health advice. For that, see a qualified professional.
 
 ## In one paragraph
 
@@ -28,19 +28,19 @@ How he applied it: his work with psychotic patients at the Burghölzli hospital 
 
 Jung's first move in his last chapter is to separate a sign from a symbol. A sign, such as a trade mark or a string of initials, points to one known thing. A symbol hints at something more that is vague, unknown or hidden, and cannot be fully explained [S7]. No one sits down and invents a symbol. A thought made up on purpose and dressed in symbolic clothes is still a sign [S7].
 
-This shapes how he reads. A dream is not a code to be decoded with a dictionary. He called ready-made guides to dream symbols plain foolishness, because no symbol can be separated from the person who dreams it [S7]. He told his students to learn as much as they could about symbolism and then forget it all when analysing a dream [S7]. The same image can mean different things to different people. A cross is a rich symbol to a believer and a mark after a name on a list for a clerk [S7].
+This shapes how he reads. A dream is not a code to be decoded with a dictionary. He called ready-made guides to dream symbols plain foolishness, because no symbol can be separated from the person who dreams it [S7]. He told his students to learn as much as they could about symbolism and then forget it all when analysing a dream [S7]. The same image can mean different things to different people.
 
 ### Dreams balance the conscious mind
 
-His answer to what dreams do is that they compensate. They bring up what the waking mind leaves out, and so restore balance [S7]. A man who thought himself morally superior dreamed of a drunken tramp in a ditch. This was partly an offset to his inflated view of himself, and it also pointed to a brother he had pushed away [S7]. A woman who thought herself good at psychology kept dreaming of a woman she disliked as a friendly sister, and learned that she shared that woman's hidden power drive [S7]. People with inflated ideas of themselves tend to dream of flying or falling, which both offsets and warns them [S7].
+His answer to what dreams do is that they compensate. They bring up what the waking mind leaves out, and so restore balance [S7]. A man who thought himself morally superior dreamed of a drunken tramp in a ditch. This was partly an offset to his inflated view of himself, and it also pointed to a brother he had pushed away [S7].
 
 His method follows. Treat the dream as a fact, assume only that it makes some sense, and stay with it. He moved away from Freud's free association, which wanders from the dream to complexes. He described his own method as walking around the dream, and he kept bringing the dreamer back to the dream itself [S7]. He also thought dreams look forward as well as back [S3][S7].
 
 ### The persona, the shadow, the anima and animus
 
-The persona is the social mask a person wears, named after the mask of a Roman actor [S1]. The shadow holds the traits a person disowns, often ones they find unacceptable, such as aggression or envy [S1][S5]. Pushing them away does not get rid of them. People often project their shadow onto others, which can fuel prejudice [S1]. Jung held that both light and dark sides are needed for wholeness [S5]. In 1917 he warned that the persona has to be seen through for a person to grow [S3].
+The persona is the social mask a person wears, named after the mask of a Roman actor [S1]. In a filmed 1957 interview he explained it in everyday terms, and said the less people notice they are playing public roles, the more the shadow presses on them [S12]. The shadow holds the traits a person disowns, often ones they find unacceptable, such as aggression or envy [S1][S5]. Pushing them away does not get rid of them. People often project their shadow onto others, which can fuel prejudice [S1]. Jung held that both light and dark sides are needed for wholeness [S5]. In 1917 he warned that the persona has to be seen through for a person to grow [S3].
 
-His circle added specific tests. A flash of rage when a friend names a fault points at your shadow [S9]. Projecting the shadow onto an enemy leaves part of you on the enemy's side, so you help them without noticing [S9]. The shadow is not always bad. It may hold vital strength the conscious mind needs, and it is hard to tell which [S9]. In the late chapter Jung applied the same idea to nations. The faults the West tolerates in itself return at it from the other side of the Iron Curtain [S7].
+His circle added specific tests. A flash of rage when a friend names a fault points at your shadow [S9]. Projecting the shadow onto an enemy leaves part of you on the enemy's side, so you help them without noticing [S9].
 
 The anima is the inner, "feminine" figure in a man's unconscious, and the animus the "masculine" figure in a woman's. Jung's circle describe them as guides to the inner world and also as sources of moods and fixed opinions when a person is possessed by them [S7][S9]. We treat these as 1960s ideas that carry stereotypes (see below).
 
@@ -48,7 +48,7 @@ The anima is the inner, "feminine" figure in a man's unconscious, and the animus
 
 Individuation is the lifelong process of bringing the parts of the personality together, conscious and unconscious [S1]. Jung saw it as the main task of human development [S1]. It is never finished, because life keeps changing [S5]. The Self is the archetype of the whole personality, often pictured as a mandala [S1]. In Jung's view, the ego sees only part of us, and the Self is a wider guide [S5].
 
-His colleague von Franz sets out the idea as a tree growing from a seed, shaped by the soil and stones. The ego does not control the growth. It can only co-operate [S9]. She says it often starts with a wound or a deadly boredom, a "call" that the ego usually blames on outside things [S9]. The only help she names is to turn toward the darkness with no fixed ideas and ask what it wants [S9]. She tells the Chinese story of a carpenter who scorns a huge old oak as useless and is told in a dream that its uselessness is why it lived to such a size [S9]. The path is individual, and copying a master's outer behaviour freezes you [S9].
+His colleague von Franz sets out the idea as a tree growing from a seed, shaped by the soil and stones. The ego does not control the growth. It can only co-operate [S9]. She says it often starts with a wound or a deadly boredom, a "call" that the ego usually blames on outside things [S9]. The only help she names is to turn toward the darkness with no fixed ideas and ask what it wants [S9]. The path is individual, and copying a master's outer behaviour freezes you [S9].
 
 How he applied it: during the First World War, as commandant of an internment camp, he drew spontaneous circular designs that he later understood as mandalas [S1].
 
@@ -62,7 +62,7 @@ How he applied it: he wrote that Freud's theory fits people driven by pleasure a
 
 Jung presented introversion and extraversion in 1913 and set them out in *Psychological Types* (1921) [S1]. He saw them as directions of psychic energy, inward or outward, more than as shy or outgoing behaviour [S1]. Combined with four mental functions, they give eight types [S1]. In his last chapter he defines the four: sensation says that something is, thinking says what it is, feeling says whether it is agreeable, and intuition says where it came from and is going. He calls them viewpoints among many, with nothing dogmatic about them [S7].
 
-How he applied it: he used the types to explain why Freud and Adler, looking at the same patients, built such different theories [S3]. In analysis, he says, it matters if the analyst and the patient are the same type or opposites, since the extravert tends to follow the majority and the introvert to reject whatever is fashionable [S7].
+How he applied it: he used the types to explain why Freud and Adler, looking at the same patients, built such different theories [S3].
 
 ### Synchronicity
 
@@ -78,9 +78,9 @@ Jung proposed synchronicity as a principle of meaningful coincidence without a c
 - Read images and dreams as symbols, not as literal statements [S4][S5].
 - Treat each theory as true within its type, not as the whole truth [S3].
 - Growth is a process, not a single fix [S5].
-- Treat each case as new. Learn the language of this person [S7].
-- An analyst can guide a client only as far as they have gone themselves [S5].
-- If the person resists an interpretation, it may simply not fit yet [S7].
+- An analyst can guide a client only as far as they have gone themselves [S5]. In 1912 he added that the doctor should not suggest readings or play father, should look at the patient's feelings toward him, and should first analyse his own complexes [S10].
+- Treat a theory as a working instrument, to be judged by what it does, not as a final answer [S10].
+- Say "I have a reason" instead of "I believe" [S11].
 
 ## Real decisions
 
@@ -92,13 +92,15 @@ A colleague told him of musing over strange Russian letters on a train and drift
 
 Jung dreamed of a house with a cellar and a prehistoric tomb with two skulls. Freud pressed him for an unacceptable wish. Jung was afraid of losing the friendship, so he made up a story that the skulls stood for family members whose deaths he might desire [S7]. His true associations were fossil skulls and his shift away from his parents' faith [S7]. He later called the lie neither elegant nor defensible [S7]. He said it taught him that a dream analysis is a meeting of two personalities, and that the dream was his own, not a case for Freud's theory [S7]. That is the root of his break with a fixed technique.
 
-### Giving up hypnosis
-
-He stopped hypnotic treatment because he did not want to impose his will on patients. He wanted healing to grow from the patient's own personality, with their dignity and freedom intact [S7].
-
 ### Nine years of following a patient off the point
 
 A patient came for a few weeks a year and shut down whenever Jung neared the root of his trouble. Jung chose to keep the relationship and follow the patient's lead, even though he often feared he was misleading him [S7]. In the tenth year the patient declared himself cured and thanked him for tact, then confessed the shock he could not have told at the start. He said trust had to come first [S7]. Jung drew a rule: adapt the method to the person, not the person to the theory [S7].
+
+### Breaking with Freud in public (1912 to 1913)
+In September 1912, in lectures at Fordham University, Jung set out where he differed from Freud: libido should mean a general psychic energy, not only sexual desire, and a patient's fantasies can matter as much as real childhood events [S10]. He framed theories as working tools and borrowed William James's test of what a view does [S10]. In January 1913 Freud proposed they drop personal contact and keep strictly to professional matters, and Jung accepted [S13]. Looking back in 1959, he said Freud treated an idea as closed once he had settled on it, while he himself kept doubting, and that he had held reservations from the start [S11].
+
+### Keeping Freud's dreams private (1959)
+Asked on camera about Freud's dreams, Jung called the question indiscreet and said he would rather not talk about it. He also said his letters with Freud were too personal to publish in his lifetime [S11]. He treated a confidence as a duty, even when the audience was a camera and the other man was long dead.
 
 ### Warning a man whose dream showed a fall
 
@@ -110,17 +112,13 @@ Jung refused a request to write a popular book, then changed his mind after drea
 
 ## Where he stood
 
-**Is sex the root of everything?** No. He accepted Freud's sexual theory as partly right but too one-sided [S1][S3].
+**Is religion a sickness?** No. He saw the psyche as religious by nature [S1]. His last chapter says ideas about God and an afterlife cannot be proved, yet are useful and give life a meaning that helps people bear hardship [S7]. Asked on the BBC in 1959 whether he believed in God, he said he did not need to believe, he knew, and he added that he wanted a reason for any hypothesis [S11].
 
-**Is religion a sickness?** No. He saw the psyche as religious by nature and spiritual experience as important to health [S1]. In his last chapter he argues that ideas about God and an afterlife cannot be proved or disproved, yet are useful, like salt in food, and give life a meaning that helps people bear hardship [S7]. Asked by the BBC in 1959 whether he believed in God, he said he didn't need to believe, he knew [S6].
+**Is sex the root of everything?** No. He accepted Freud's sexual theory as partly right but too one-sided [S1][S3].
 
 **Should psychology study only the brain?** No. He argued that psychiatry should progress through psychology, and that a patient's delusions reflect their personality [S3].
 
 **What should a dream interpreter do?** Stay humble. He said he could never understand another person's dream well enough to be sure, and that analysts are tested alongside their patients [S7].
-
-**Can spiritual change help addiction?** He thought it could. His treatment of Rowland Hazard in 1926, and his view that recovery might come through a spiritual experience, played a part in the founding of Alcoholics Anonymous [S1].
-
-**Who changes the world?** The individual. In his last chapter he says change must begin with one person, and that each of us might ask whether our unconscious knows something that helps [S7].
 
 ## His work and record
 
@@ -131,10 +129,8 @@ Jung refused a request to write a popular book, then changed his mind after drea
 - *Psychology of the Unconscious* (1912; English 1916) led to the break with Freud in 1913 [S1][S4].
 - Recorded his visions from about 1913 in notebooks, then in the *Red Book*, published only in 2009 [S1].
 - *Psychological Types* (1921) [S1].
-- Built a stone tower at Bollingen from 1922 [S1].
 - Travelled to the American Southwest, East Africa and India in the 1920s and 1930s [S1]. In 1926 he visited the Mount Elgon people in Kenya [S7].
 - *Psychology and Alchemy* (1944), reading alchemy as a picture of individuation [S1].
-- Professor of medical psychology at Basel from 1943 [S1].
 - BBC interview with John Freeman, *Face to Face*, broadcast 1959 [S6].
 - *Man and His Symbols*, planned by Jung and finished after his death by von Franz, first published 1964 [S8].
 - Died 6 June 1961 in Küsnacht [S1].
@@ -144,9 +140,7 @@ Jung refused a request to write a popular book, then changed his mind after drea
 - **The 1930s.** In 1933 he became president of a psychotherapy society whose German branch, led by Matthias Göring, excluded Jews [S1]. In 1934 he wrote that the "Aryan unconscious" had greater potential than the Jewish one [S1]. Scholars such as Andrew Samuels see antisemitism in his thought [S1]. Jung said the society let Jewish doctors join as individuals, resigned in 1939, wrote critically of Hitler in 1936, and in 1949 denied being antisemitic. He reportedly apologised to some Jewish colleagues later [S1]. These views are not part of this mind's advice.
 - **Hard to test.** Critics ask whether archetypes can be tested at all, and say his definitions shifted [S1][S2]. His late chapter rests on case stories he chose, such as the girl's dreams and a doctor's death dreamed in advance. They illustrate his idea but are not proof [S7].
 - **"Primitive" and "civilised."** He sets "primitive man" against "modern man" throughout, as if people in other cultures lived in an earlier stage of the mind [S7]. Today that comparison reads as condescending.
-- **Too universal.** Some scholars say archetypes strip myths of their own culture and history, and impose a European frame [S2].
 - **Gender.** Feminist critics call his ideas about the feminine and masculine stereotyped [S1][S2]. The anima and animus chapters link women to receptiveness to the irrational and men to initiative [S9].
-- **Types turned into a test.** The Myers-Briggs Type Indicator was built later from his types. Most research psychologists do not accept it [S1].
 - **Synchronicity.** No experimental support [S1].
 
 ## Blind spots to watch
@@ -163,4 +157,4 @@ Jung refused a request to write a popular book, then changed his mind after drea
 - "the dream arises from a part of the mind unknown to us" (Psychology of the Unconscious, 1916 translation) [S4]
 - "is not literally true, but is true psychologically" (Psychology of the Unconscious, 1916 translation) [S4]
 - "Only what is really oneself has the power to heal." (as quoted by the Society of Analytical Psychology) [S5]
-- "I don't need to believe. I know." (BBC Face to Face, 1959) [S6]
+- "I don't need to believe. I know." (BBC Face to Face, 1959) [S6][S11]

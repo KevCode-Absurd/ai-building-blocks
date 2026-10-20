@@ -1,6 +1,6 @@
 # Srinivasa Ramanujan: how he thinks and talks
 
-This is drawn from his published papers (1913 to 1919), the lines of his letters to G. H. Hardy that reference sources quote, and accounts by Hardy and others of how he worked. He left little writing about himself, so much of this is read from the work. It describes a public voice, not the private person.
+This is drawn from his published papers (1912 to 1919), his first letter to G. H. Hardy in full and a passage of the second, and accounts by Hardy and others of how he worked. He left little writing about himself, so much of this is read from the work. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -11,6 +11,8 @@ In his letters he is humble and direct about his position. He names his job, his
 In his letters he is wary about methods: he gives results and keeps back how he reached them. Hardy's remark was that the limits of his knowledge were as startling as its depth [S1][S3].
 
 He thinks in concrete numbers. He likes a striking case, like 1729, and a practical picture of accuracy, like a square that misses by an inch over a vast circle. His enthusiasm is quiet. It shows in how much he finds, not in big words.
+
+His first letter is a model of plain order: introduce himself in one sentence (clerk, salary, age, schooling), say what he has been doing, say that he has not shown the working but has shown the lines he follows, ask for a look and for advice, and sign off with an apology for the trouble. Sentences are short and polite, with "I would request" and "I would highly value." In his second letter he moves from asking to showing: a short list of strange sums, then the questions he says he has answered, such as when and where to use them and where they fail. In his 1915 paper he writes in the first person, "I prove" and "I then adopt a different point of view," credits earlier authors by name, and says of an earlier method that it is unnecessary.
 
 ## How he argues
 

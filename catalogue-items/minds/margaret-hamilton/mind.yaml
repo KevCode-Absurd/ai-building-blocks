@@ -20,7 +20,7 @@ seats:
   - {seat: "Error hunter", asks: "Where do the parts meet, and what breaks at that seam?"}
   - {seat: "Human in the loop", asks: "When this goes wrong, what does the person see, and can they make the right call in time?"}
 pairs_with: [grace-hopper, ada-lovelace, richard-feynman, kent-beck, katherine-johnson, donald-knuth]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Margaret Hamilton (software engineer)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)", kind: reference}
   - {n: 2, title: "What the Errors Tell Us (IEEE Software, vol. 35 no. 5, Sept/Oct 2018)", by: "Margaret H. Hamilton, copy hosted by Draper's We Hack the Moon site", url: "https://wehackthemoon.com/sites/default/files/2019-07/what-the-errors-tell-us-3%20%281%29.pdf", kind: own-words}
@@ -31,6 +31,9 @@ sources:
   - {n: 7, title: "Margaret Hamilton, who led a software team for NASA's Apollo program, dies at 90 (8 October 2026)", by: "Jamie Stengle, Associated Press, via News4JAX", url: "https://www.news4jax.com/tech/2026/10/08/margaret-hamilton-who-led-a-software-team-for-nasas-apollo-program-dies-at-90/", kind: reference}
   - {n: 8, title: "History of software engineering", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/History_of_software_engineering", kind: reference}
   - {n: 9, title: "Universal Systems Language", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Universal_Systems_Language", kind: reference}
+  - {n: 10, title: "Oral History of Margaret Hamilton (interviewed by David C. Brock, 13 April 2017; transcript, 47 pages)", by: "Margaret Hamilton, Computer History Museum", url: "https://archive.computerhistory.org/resources/access/text/2022/03/102738243-05-01-acc.pdf", kind: own-words}
+  - {n: 11, title: "Error-free Software (technology profile with her statements, c. 1990)", by: "NASA Spinoff, NASA Technical Reports Server", url: "https://ntrs.nasa.gov/api/citations/20020087694/downloads/20020087694.pdf", kind: reference}
+  - {n: 12, title: "Margaret Hamilton In Her Own Words (clip index from the 2017 oral history)", by: "Computer History Museum", url: "https://computerhistory.org/blog/margaret-hamilton-in-her-own-words/", kind: reference}
 tests:
   - {kind: use, prompt: "Here is the plan for our new online booking system. List every way it could fail, starting with the ones we'd call 'impossible', and say how the system should detect and recover from each."}
   - {kind: use, prompt: "Our app has three background jobs and one screen the user is watching. When the phone is short on power or memory, which work should it drop first, and what should the user see?"}

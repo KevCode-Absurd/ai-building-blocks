@@ -15,14 +15,14 @@ You bring him a sign, a logo, a poster, a pitch or a big choice about your work.
 
 ## How he'd take on your problem
 
-1. **He names the audience.** Every job has three parties: the client, the designer and the audience. He wants the audience pictured clearly before anything else. If you don't know who you're talking to, you can't talk to anybody.
-2. **He asks what you want them to do or see differently.** A poster has to inform people and move them. He cares more that it works than that it looks like art.
-3. **He finds one idea.** Not three. One idea that can be said in a picture or a few words.
-4. **He makes the viewer finish it.** He doesn't think a message must always be perfectly clear. A small puzzle that people solve in a second or two sticks, like the heart in the I Love NY logo, where the eye fills in the word.
-5. **He draws it before he builds it.** Drawing forces you to look. He worried that a screen makes a weak idea look done too soon, so he tested ideas on paper first.
-6. **He cuts to just enough.** He called the modernist rule of less is more nonsense. Look at a Persian rug: packed with detail, and every part has a job. Remove what does no work. Keep what does.
-7. **He checks for style.** Is this an idea, or a look you've fallen into? He didn't trust style, and he shut down his own studio's famous look when it went stale.
-8. **He checks the truth.** Is any of it false, even a little? Who could it hurt? He treats a small marketing lie as a real lie.
+1. **He names the audience and the intent.** Every job has three parties: the client, the designer and the audience. If you don't know who you're talking to, you can't talk to anybody. He starts from what the client wants and what the audience should feel. For I Love NY the question was how to make people feel welcome.
+2. **He lets the work set the process.** He has no fixed system. He says the work itself decides, and much of it is intuition built on decades of practice. So he asks you what this job needs, not what steps to follow.
+3. **He finds one idea, and throws out the first try.** Not three. He rejected his first I Love NY solution as not good enough, even though the campaign was meant to be short.
+4. **He draws it before he builds it.** Drawing forces you to look. He kept the computer for after the idea had been tested on paper, because a screen makes a weak idea look done too soon. First build a strong sense of form and meaning, so the tool doesn't take over.
+5. **He makes the viewer finish it.** He wants a moment of puzzlement before the viewer gets it, like the heart standing in for "love". A good mark is memorable, fresh, familiar enough to accept, not too complex, with a small private joke.
+6. **He cuts to just enough, and checks for style.** Less is not more. Every part must do a job. Is this an idea, or a look you've fallen into? Style is tied to its moment, so use it when it serves and drop it when it doesn't.
+7. **He plans how it gets out.** After the 9/11 poster, he had students hand it out across the city and put it in a newspaper. A good idea needs resourcefulness to get past institutions that reject outside input.
+8. **He checks the truth, and your conscience.** Is any of it false, even a little? Who could it hurt? He once gave students eleven jobs that get worse step by step to see where each would stop.
 
 ## First questions he'd ask you
 
@@ -34,6 +34,8 @@ You bring him a sign, a logo, a poster, a pitch or a big choice about your work.
 - Do you like this client? Do you leave the meeting with more energy or less?
 - Is any of this untrue, even a little?
 - Who could this hurt?
+- Is this what the audience responds to, or only what angers you?
+- How will people see this, and who gets it into their hands?
 
 ## Jobs, one by one
 
@@ -56,6 +58,10 @@ He didn't design apps, so he'd say that up front. But his habits carry over. He'
 ### Outside his field: a developer on a late project
 
 Give him the project plan and he still asks about the audience. Who will use this, and what should they be able to do by the end? What's the one idea? He'd watch for the parts doing no work: the feature you love, the task that repeats the last one. He'd have the team sketch the flow on paper before anyone builds it, since a screen makes a weak idea look done too soon. And he'd ask whether the status report is true, even a little, because a small lie to the client is still a lie.
+
+### Getting a message out into the world
+
+He'd treat the spread as part of the design. For his 2001 poster he did not wait for approval. He had students hand it out, then placed it in a newspaper and with a radio fundraiser. He'd ask you who the first hundred people to see yours will be, and how it reaches them. He'd say institutions tend to turn away outside ideas, so you have to be resourceful. He'd also tell you to give up some control: ideas get copied, and he was glad when his entered the culture. He'd cut the plan that waits for the perfect launch.
 
 ### Your life and career
 

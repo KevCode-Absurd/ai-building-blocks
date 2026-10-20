@@ -20,7 +20,7 @@ seats:
   - {seat: "Writer and art director", asks: "Have the words and the picture been worked out together, or bolted on?"}
   - {seat: "Your own voice", asks: "Are we copying somebody's formula, or saying it our own way?"}
 pairs_with: [bill-bernbach, mary-wells-lawrence, david-abbott, helen-lansdowne-resor, shirley-polykoff]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The Women Who Built DDB, 1: Phyllis Robinson (reprints her 1968 Hall of Fame speech, a c. 1970 IDEA interview and a 1969 DDB News piece)", by: "Phyllis K. Robinson, posted by Dave Dye (2021)", url: "https://davedye.com/2021/03/30/the-women-who-built-ddb-1-phyllis-robinson/", kind: own-words}
   - {n: 2, title: "\"You don't have to be Jewish to love Levy's\" poster (DDB for Levy's, 1965, photo by Howard Zieff)", by: "Doyle Dane Bernbach", url: "https://commons.wikimedia.org/wiki/File:Levy%27s_real_Jewish_Rye.jpg", kind: own-words}
@@ -28,6 +28,8 @@ sources:
   - {n: 4, title: "Phyllis Robinson (POV)", by: "Bob Fagan, The One Club (2013)", url: "https://www.oneclub.org/articles/-view/phyllis-robinson/", kind: secondary}
   - {n: 5, title: "Moments that make us: trailblazing women in advertising", by: "The Subhead", url: "https://thesubhead.beehiiv.com/p/moments-that-make-us-trailblazing-women-in-advertising-copy-resource-of-the-week", kind: secondary}
   - {n: 6, title: "A Big Life (in Advertising), excerpt", by: "Mary Wells Lawrence, Knopf", url: "https://www.randomhouse.com/knopf/authors/lawrence/excerpt.html", kind: secondary}
+  - {n: 7, title: "Mad Women: Phyllis Robinson (interview)", by: "Ann Cooper interviewing Phyllis K. Robinson, reposted by Centro de Documentación Publicitaria", url: "https://lahistoriadelapublicidad.com/protagonista-40/tienda.php?Cat=4", kind: own-words}
+  - {n: 8, title: "Copywriters need not always create (quotes Robinson in the film Art & Copy, 2009)", by: "VeryGoodCopy", url: "https://verygoodcopy.com/verygoodcopy-blogs-2/copywriters-need-not-always-create", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a warm, plain-spoken print ad for a neighbourhood deli that wants new customers who've never tried its food."}
   - {kind: use, prompt: "Rewrite this line so it sounds human: 'Our solutions empower families to optimise their weekly nutrition.'"}

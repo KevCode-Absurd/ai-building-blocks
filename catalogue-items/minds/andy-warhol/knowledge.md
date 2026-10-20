@@ -1,8 +1,8 @@
 # Andy Warhol: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Warhol's art and books are in copyright. His own words here come from statements with named sources, such as a 1963 *Art News* interview and his 1975 book *The Philosophy of Andy Warhol*, as compiled with citations by Wikiquote, and from a 1977 interview with Glenn O'Brien in *Interview* magazine [S7]. Wikiquote also gives page-level sources for his *POPism* (1980) remarks and the 1968 catalogue line [S2]. No full text of his books was available, so the voice leans on the 1977 interview and the sourced lines.
+A note on method: Warhol's art and books are in copyright. His own words here come from statements with named sources, such as a 1963 *Art News* interview and his 1975 book *The Philosophy of Andy Warhol*, as compiled with citations by Wikiquote, and from a 1977 interview with Glenn O'Brien in *Interview* magazine [S7]. Wikiquote also gives page-level sources for his *POPism* (1980) remarks and the 1968 catalogue line [S2]. No full text of his books was available, so the voice leans on the 1977 interview, which we re-read for this check [S7], and the sourced lines. The reasons behind his choices are mostly his own offhand remarks: the Warhol Museum's life page gives none of his reasons, and the soup-can sales story comes from a magazine piece [S8] and an interview with the dealer Irving Blum [S9].
 
 ## In one paragraph
 
@@ -124,23 +124,35 @@ In the O'Brien interview he says he ate Campbell's soup for lunch for about twen
 
 ### Leaving illustration for fine art
 
-In the 1950s he was a highly successful commercial illustrator [S1]. In the early 1960s he moved into fine art [S4]. His soup cans were shown at the Ferus Gallery in July 1962, were mocked in the press, and only a handful sold before a dealer bought the set [S3]. He kept going.
+In the 1950s he was a highly successful commercial illustrator [S1]. In the early 1960s he moved into fine art [S4]. Asked why soup, he said he used to drink it, and had the same lunch for twenty years [S8]. The 32 soup cans were shown at the Ferus Gallery in Los Angeles on 9 July 1962 [S8]. Critics called him a fool or a charlatan [S8]. He kept going.
+
+### Painting all 32 flavours
+
+When the dealer Irving Blum visited in February 1962 and saw three soup can paintings, he asked why only three. Warhol said he would paint all 32 varieties [S9]. The set, hung on narrow shelves like supermarket stock, was the point [S8][S9].
+
+### Selling the set for a thousand dollars
+
+Blum sold four or five of the paintings and then bought them back, because they worked best as one group. Warhol agreed to sell all 32 for $1,000, paid at $100 a month over ten months [S8][S9]. Warhol took the small sum and the sale of the whole body of work, not a handful of single pieces [S8][S9]. MoMA bought the set in 1996 [S8].
 
 ### Choosing the silkscreen
 
-In 1962 he took up silkscreen printing, which pushes ink through a mesh image again and again for an assembly-line effect [S1]. He used it for *Marilyn Diptych* the same year [S5]. In 1963 he said he painted this way because he wanted to be a machine [S2].
+In 1962 he took up silkscreen printing, which pushes ink through a mesh image again and again for an assembly-line effect [S1][S8]. He used it for *Marilyn Diptych* the same year [S5]. In 1963 he said he painted this way because he wanted to be a machine [S2].
 
 ### Opening the Factory
 
 From about 1963 he ran a studio that was a workshop, a film set and a social scene at once [S6]. Assistants helped make the work under his direction [S1][S6]. The cost was blurred authorship and a drug-heavy scene around it [S1][S6].
 
+### Running film like a weekly production line
+
+In 1977 he described his early films as a weekly production, with scripts nobody followed and reels of about half an hour [S7]. He began making films in 1963, including *Sleep* and *Empire* [S4]. By 1977 he said he preferred earning money through film to painting, which he found tedious [S7]. He added that new things are better than old ones, and that his old films are better to talk about than to see [S7].
+
 ### Declaring business art
 
-In 1975 he wrote that good business is the most fascinating kind of art [S2]. He said he wanted to be a business artist, and by the 1970s he charged $25,000 for a commissioned portrait [S1]. In 1977 he still said he preferred earning money through film to painting, which he found tedious [S7].
+In 1975 he wrote that good business is the most fascinating kind of art [S2]. He said he wanted to be a business artist, and by the 1970s he charged $25,000 for a commissioned portrait [S1].
 
 ### Starting a magazine and a box habit
 
-He co-founded *Interview* magazine in 1969 [S1]. From 1974 he packed everyday things into more than 600 cardboard boxes he called Time Capsules [S4]. Both turned his daily contact with other people into material.
+He co-founded *Interview* magazine in 1969, the year after the 1968 shooting [S1][S4]. From 1974 he packed everyday things into more than 600 cardboard boxes he called Time Capsules [S4]. Both turned his daily contact with other people into material.
 
 ## Blind spots to watch
 

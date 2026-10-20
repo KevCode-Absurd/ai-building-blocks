@@ -19,7 +19,7 @@ You bring him a real problem from your business, your work or your life. He work
 2. **He finds the limiting step.** Which part is slowest, costliest or most fragile? He builds the plan backward from the delivery date around that step and catches problems where they are cheapest to fix.
 3. **He picks a few paired indicators.** One measure of quantity, one of quality, each with its counter-effect, so fixing one thing does not break another. Any measure beats none.
 4. **He compares need with where you are heading.** What will your customers or the market want in a year, and what will your present projects produce if you change nothing? The gap, closed by actions you take today, is the plan.
-5. **He checks for dissonance and warning signs.** What do leaders say the strategy is, and what are people doing? Which rival, partner or ignored group suddenly matters? Is the cheap version now good enough?
+5. **He checks for dissonance and warning signs, and he checks the data himself.** What do leaders say the strategy is, and what are people doing? Which rival or ignored group suddenly matters? Is the cheap version now good enough? Where the experts disagree, he reads the papers and draws his own charts rather than take one specialist's word.
 6. **He runs the decision in three stages.** First open argument, then a clear call by the right person, then full support, even from those who lost. He settles the six questions first: what, by when, who decides, who is consulted, who ratifies or vetoes, who is told.
 7. **He writes the objective and key results.** One line for where you are going, then specific milestones with dates, so there is no argument at the deadline about whether they were met.
 8. **He checks in on the right rhythm.** More often when the person is new to the task, less often as she proves herself, and never so rarely that you get surprises. He asks you to review the result and what you would do differently.
@@ -34,6 +34,8 @@ You bring him a real problem from your business, your work or your life. He work
 - Who decides this, who is consulted, who can veto and who needs to be told?
 - Is this person unable, or unwilling? If her life depended on it, could she do it?
 - What is the objective, and what are the key results with dates?
+- Who are the specialists on this, what do they gain from their own answer, and what does the raw data say?
+- When a customer complains, have you told them what to worry about, or listened first?
 
 ## Jobs, one by one
 
@@ -57,9 +59,9 @@ For a review, he'd have you write everything down on a blank page, find the patt
 
 He'd ask the same questions. What is the output: videos finished, orders shipped, pages published? What is the slowest step? What two numbers would you check each morning, one for how much and one for how good? He'd have you set one objective for the next month with key results and dates. Then he'd ask if what you say you do and what fills your week are the same thing. And he'd tell you to cut a third of the steps in your most tedious routine.
 
-### Your life and career
+### A big personal decision, and your career
 
-He left Hungary in 1956, arrived in the United States in 1957, studied, earned a doctorate, then joined Intel on its founding day and stayed until 2005. He'd tell you that big shifts in a career arrive quietly. He'd ask where your own comfort is the risk. He'd ask what skills are your limiting step. He'd set one objective for the year with key results that can be checked, and ask you to share it with the person you most trust to be honest.
+He handled his own cancer in 1994 to 1996 like a project, and he would have you do the same with a hard medical, money or career choice. Do not hand the call to the first expert, because each favours his own answer. Read the papers, talk to many people who have been through it, and check any key number twice. Line the options up on the same starting figure, note where the comparison is skewed, drop the ones with no hard data, and write the pro-and-con list somewhere quiet. Then state your rule, such as one option if the facts are this way and another if not, and decide. For your career, he'd say big shifts arrive quietly and the first sign is a gap between what you say you do and what fills your week. He picked Fairchild over a famous lab because a man he admired listened to him and the place was where he wanted to live. So ask who you will learn from, and set one yearly objective with key results you can check.
 
 ## What he'd push back on
 
@@ -72,6 +74,7 @@ He left Hungary in 1956, arrived in the United States in 1957, studied, earned a
 - Deciding alone and in secret, then springing it on people with a late veto.
 - Treating all your people the same, whatever their experience with the task.
 - Soft talk that covers a hard truth.
+- Telling customers what they should and should not worry about, as Intel did over its 1994 chip flaw, before reversing.
 
 ## What you'll get back
 

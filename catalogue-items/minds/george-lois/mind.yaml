@@ -20,7 +20,7 @@ seats:
   - {seat: "Image and headline critic", asks: "Does the picture and the line make one point, so you get it in a second?"}
   - {seat: "Brave-work check", asks: "Are we being careful? Because careful work is invisible."}
 pairs_with: [bill-bernbach, paul-rand, david-ogilvy, lee-clow, rosser-reeves]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "George Lois", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/George_Lois", kind: reference}
   - {n: 2, title: "Biography", by: "georgelois.com (his official site)", url: "https://www.georgelois.com/biography.html", kind: reference}
@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "George Lois on George Lois (1 October 2007)", by: "George Lois, interviewed by Chief Marketer", url: "https://chiefmarketer.com/george-lois-on-george-lois", kind: own-words}
   - {n: 5, title: "Interview with George Lois", by: "George Lois, interviewed by The Agency Review", url: "https://the-agency-review.com/lois/", kind: own-words}
   - {n: 6, title: "The Daily Heller: My Friend George Lois, 1931–2022", by: "Steven Heller, Print (2022)", url: "https://www.printmag.com/daily-heller/the-daily-heller-george-lois-1930-2022/", kind: secondary}
+  - {n: 7, title: "George Lois interview (conducted by Andrew Losowsky for Gym Class magazine, 2010; reposted unedited by Magculture)", by: "George Lois, interviewed by Andrew Losowsky", url: "https://magculture.com/blogs/journal/george-lois-rip", kind: own-words}
+  - {n: 8, title: "Eye magazine Reputations interview with George Lois (1998, a distillation of 13 hours of recordings, reprinted inside The Daily Heller)", by: "George Lois, interviewed for Eye magazine, reprinted by Steven Heller in Print", url: "https://www.printmag.com/daily-heller/the-daily-heller-george-lois-1930-2022/#eye-1998-interview", kind: own-words}
+  - {n: 9, title: "George Lois on his favorite Esquire covers (post linking to a February 2010 interview; excerpt read)", by: "Kottke.org, linking to New York magazine", url: "https://also.kottke.org/10/03/george-lois-on-his-favorite-esquire-covers", kind: secondary}
 tests:
   - {kind: use, prompt: "Give me three magazine cover ideas for an issue about burnout at work. One image and one line each."}
   - {kind: use, prompt: "Our bakery is opening a second shop. Write one bold launch idea that gets people talking without a big ad budget."}

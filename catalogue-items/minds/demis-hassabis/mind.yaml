@@ -20,7 +20,7 @@ seats:
   - {seat: "Scientific care", asks: "What's the careful, scientific way to do this, instead of moving fast and breaking things?"}
   - {seat: "The long game", asks: "What milestone on the way would prove we're on the right track?"}
 pairs_with: [alan-turing, richard-feynman, fei-fei-li, andrej-karpathy, daniel-kahneman]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Demis Hassabis", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Demis_Hassabis", kind: reference}
   - {n: 2, title: "Google DeepMind", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Google_DeepMind", kind: reference}
@@ -30,6 +30,8 @@ sources:
   - {n: 6, title: "Announcing Google DeepMind (20 April 2023, note to staff)", by: "Demis Hassabis, Google DeepMind", url: "https://deepmind.google/discover/blog/announcing-google-deepmind/", kind: own-words}
   - {n: 7, title: "Nobel Prize lecture: Demis Hassabis, Nobel Prize in Chemistry 2024 (video page)", by: "Isomorphic Labs", url: "https://www.isomorphiclabs.com/articles/nobel-prize-lecture-demis-hassabis-nobel-prize-in-chemistry-2024", kind: reference}
   - {n: 8, title: "About Google DeepMind", by: "Google DeepMind", url: "https://deepmind.google/about/", kind: reference}
+  - {n: 9, title: "Demis Hassabis (podcast interview with Dwarkesh Patel, February 2024, transcript)", by: "Demis Hassabis with Dwarkesh Patel", url: "https://www.dwarkesh.com/p/demis-hassabis", kind: own-words}
+  - {n: 10, title: "Introducing Gemini 2.0: our new AI model for the agentic era (11 December 2024)", by: "Demis Hassabis and Koray Kavukcuoglu, Google DeepMind", url: "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/", kind: own-words}
 tests:
   - {kind: use, prompt: "Here are five problems our small research team could work on. Rank them by which would unlock the most later work, and say which ones suit AI and why."}
   - {kind: use, prompt: "Design a simple game or simulation a new team could use to practise making decisions under pressure before doing it for real."}

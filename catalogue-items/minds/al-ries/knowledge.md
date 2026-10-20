@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Al Ries's books are still in copyright, and many were written with a partner, first Jack Trout and later his daughter Laura Ries [S1]. So when we say "Ries argued," the idea often belongs to a partnership. His own words here come from three places: the 1972 positioning articles he wrote with Trout [S2], a 2006 interview [S3][S4], and a 2009 article under his own name [S5]. Facts about his life and career come from reference pages, including his firm's own site [S6][S7][S8]. Some dates differ between sources, and we say so where they do. His long-running Advertising Age column was not open to us, so it isn't used.
+A note on method: Al Ries's books are still in copyright, and many were written with a partner, first Jack Trout and later his daughter Laura Ries [S1]. So when we say "Ries argued," the idea often belongs to a partnership. His own words here come from four places: the 1972 positioning articles he wrote with Trout [S2], a 2006 interview [S3][S4], a 2009 article under his own name [S5], and five columns he wrote for Branding Strategy Insider between July and November 2010 [S12] to [S16]. Facts about his life and career come from reference pages, including his firm's own site [S6][S7][S8]. Some dates differ between sources, and we say so where they do. His long-running Advertising Age column was not open to us, so it isn't used.
 
 ## In one paragraph
 
@@ -58,6 +58,14 @@ In 2006 Ries argued that a brand lives or dies in the prospect's mind, and that 
 
 How he applied it: he told firms with many brands to still give the parent company some attention, about 10 to 15% of their effort. People buy brands, but the stock market buys the company [S4].
 
+**Marketing sense is subtractive.** In 2010 Ries set "common sense", which says to keep adding new messages, against "marketing sense", which says a second idea competes with the first and weakens it [S12]. He told brand owners to ask why they are changing a message that works, and to repeat one clear idea [S12]. His case: Little Caesars was named best ad campaign of 1994 and became the second-largest US pizza chain, then tried Italian Kitchens, Pizza by the Foot and Big! Big! Pizzas, and by 2009 had fallen to fourth with sales down 42% in 15 years; Papa John's repeated "better ingredients" and grew 365% [S12].
+
+**A new category needs a new name.** When a real new category appears, Ries held, an existing brand stretched into it usually loses, because the name still anchors people in the old category [S13]. He pointed to Nokia and Palm in smartphones, and to Dell and Compaq in PCs, and to Lexus, L'eggs, Dockers and DeWalt as separate names that worked [S13].
+
+**Slogans need feeling, so length is allowed.** He argued short slogans often fail because they lack emotional pull, and that memorable lines are often seven to twelve words [S14]. He said a narrow focus gives a slogan its force, and pointed to Folgers owning breakfast while Maxwell House's broader line fell flat [S14].
+
+**Give a brand two names.** He recommended a formal name plus a casual nickname: formal first, nickname after, as in Chevrolet and Chevy [S15]. He warned that companies dropping to initials, like KFC, risk future customers not knowing what the letters mean, and that a nickname cannot be ordered, as Radio Shack's "The Shack" push showed [S15].
+
 ## How he decides
 
 - Start with what is already in the customer's mind, not with the product [S2][S7].
@@ -88,6 +96,12 @@ Ries said he advised the American Heart Association to focus on obesity, the lar
 
 ### Writing off the iPhone, 2007
 In 2007 he published a piece arguing the iPhone would fail, because devices that combine many functions have a history of failure [S1]. The iPhone did not fail. It is a fair warning that his rules look back at past patterns [S1].
+
+### Calling Comcast's Xfinity a mistake, July 2010
+When Comcast moved its services under the new name Xfinity, Ries wrote that it was a classic error [S16]. His reason was that a new name entered a crowded, noisy market where Verizon, AT&T and Sprint were shouting about their networks, and its promise of "more" got lost [S16]. He said Comcast should have fought a category battle and explained why cable is a better way to get digital services than satellite or phones [S16]. His test for any brand was to name the category it owns, and he added that leaders can often break the rules while challengers cannot [S16].
+
+### Telling carmakers to launch electric cars under new names, October 2010
+Ries argued that carmakers launching electric cars under their old names, such as Nissan with the Leaf, were repeating the mistake of the bicycle maker Columbia, which put its name on a car and failed while Ford's Model T from a start-up won [S13]. His stated rule was that for revolutionary categories you should launch a new brand [S13]. We can check this view against what happened later; Ries's own record shows rules built on past patterns, as with the iPhone call above [S1].
 
 ## Where he stood
 
@@ -140,6 +154,6 @@ In 2007 he published a piece arguing the iPhone would fail, because devices that
 
 - "the mind is the battleground" (with Jack Trout, 1972) [S2]
 - "It's better to be first than it is to be better." (2006) [S4]
-- "Advertising doesn't have the credibility to launch new brands." (2006) [S4]
-- "Brands live or die along with the category." (2006) [S4]
-- "Divergence is the least understood, most powerful force in the universe." (2009) [S5]
+- "Marketing sense is subtractive." (2010) [S12]
+- "Why tinker with success?" (2010) [S12]
+- "Two names are better than one." (2010) [S15]

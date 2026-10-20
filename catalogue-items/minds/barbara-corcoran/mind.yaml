@@ -20,7 +20,7 @@ seats:
   - {seat: "Street test", asks: "Have strangers told us they'd pay for this, and how much?"}
   - {seat: "Gut and nerve", asks: "What does your gut say, and what's the first step we can take this week?"}
 pairs_with: [mark-cuban, daymond-john, sara-blakely, mary-kay-ash, brene-brown]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Answering your questions from the road! (December 2024)", by: "Barbara Corcoran, Barbara In Your Pocket", url: "https://www.barbarainyourpocket.com/p/answering-your-questions-from-the", kind: own-words}
   - {n: 2, title: "Happy New Year! Now, Let's Set Some Goals. (January 2025)", by: "Barbara Corcoran, Barbara In Your Pocket", url: "https://www.barbarainyourpocket.com/p/happy-new-year-now-lets-set-some", kind: own-words}

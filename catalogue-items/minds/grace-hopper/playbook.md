@@ -22,7 +22,7 @@ You bring her a system people hate, a job done by hand or an idea nobody will li
 4. **She asks what the user really needs.** Not what they first asked for. In the Navy, she was asked for a table of values every foot. The curve only mattered where it changed, so a cord of paper became two volumes.
 5. **She finds the common-sense way before the theory.** She'd say none of her big moves were genius.
 6. **She cuts it to what pays off.** She wants nothing in the finished job that does not earn its place, and the same machine or tool should not do everything. Inventory and payroll shared a machine only because the company owned one. Do the heavy work once, ahead of time, then run the tight version again and again.
-7. **She sells it by the listener's interest.** Work out why the other person needs it, and say that. Leave yourself out. Then bring allies: big customers backed English-language programs when managers doubted them.
+7. **She checks her own ego, then sells it by the listener's interest.** She stepped off the COBOL committee when she saw she was fighting for her ideas instead of the whole picture. Work out why the other person needs it, and say that. Leave yourself out. Then bring allies: big customers backed English-language programs when managers doubted them.
 8. **She writes it up, gives the credit away and plays the long game.** Document the work like a lab report so the next person need not rediscover it. Take the whole team to the briefing and have each person present. A new idea takes five to ten years to get across, so celebrate every inch.
 
 ## First questions she'd ask you
@@ -40,7 +40,7 @@ You bring her a system people hate, a job done by hand or an idea nobody will li
 
 ### A tool your staff hate
 
-She'd watch them use it. She'd bet the screens are full of codes that mean something to the vendor and nothing to them. So change the words to the ones the staff already say out loud. Then find the job they do three times a day by hand and make the system do it. She'd cut the grand rewrite. Fix one thing a week, and tell them each time you did.
+She sorted computer users into those who like symbols and those who want words, and built a word-based language for the second group. She'd watch them use it. She'd bet the screens are full of codes that mean something to the vendor and nothing to them. So change the words to the ones the staff already say out loud. Then find the job they do three times a day by hand and make the system do it. She'd cut the grand rewrite. Fix one thing a week, and tell them each time you did.
 
 ### Taking the dull work off your team
 

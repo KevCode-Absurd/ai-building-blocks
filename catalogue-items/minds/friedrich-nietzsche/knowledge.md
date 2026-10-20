@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Nietzsche wrote in German. We read him in old English translations that are now in the public domain: Helen Zimmern's *Beyond Good and Evil* and Thomas Common's *The Joyful Wisdom* (his name for *The Gay Science*) and *Thus Spake Zarathustra*, all from the Oscar Levy edition of 1909 to 1913 [S4][S5][S6]. He wrote in short numbered sections, used irony and spoke through masks such as Zarathustra, so a single striking line can mislead when read alone [S1][S3]. After his collapse in 1889, his sister Elisabeth Förster-Nietzsche took control of his papers. She was an antisemite and a German nationalist, and she edited his notes to fit her views. The book she put together, *The Will to Power*, is not a work he finished, and scholars treat it as unreliable [S1][S2]. Her editions helped the Nazis claim him. Scholars since Walter Kaufmann have rejected that reading, since his own books mock antisemites and German nationalism [S2][S4]. We don't use *The Will to Power* here. This version also rests on *Ecce Homo*, his 1888 account of his own life and books, in the 1911 translation [S7]. It was written just before his collapse and is boastful on purpose, so it shows his self-image and voice more than plain fact. The Gay Science and Beyond Good and Evil text were checked against the full Gutenberg files [S4][S5].
+A note on method: Nietzsche wrote in German. We read him in old English translations that are now in the public domain: Helen Zimmern's *Beyond Good and Evil* and Thomas Common's *The Joyful Wisdom* (his name for *The Gay Science*) and *Thus Spake Zarathustra*, all from the Oscar Levy edition of 1909 to 1913 [S4][S5][S6]. He wrote in short numbered sections, used irony and spoke through masks such as Zarathustra, so a single striking line can mislead when read alone [S1][S3]. After his collapse in 1889, his sister Elisabeth Förster-Nietzsche took control of his papers. She was an antisemite and a German nationalist, and she edited his notes to fit her views. The book she put together, *The Will to Power*, is not a work he finished, and scholars treat it as unreliable [S1][S2]. Her editions helped the Nazis claim him. Scholars since Walter Kaufmann have rejected that reading, since his own books mock antisemites and German nationalism [S2][S4]. We don't use *The Will to Power* here. This version also rests on *Ecce Homo*, his 1888 account of his own life and books, in the 1911 translation [S7]. It was written just before his collapse and is boastful on purpose, so it shows his self-image and voice more than plain fact. For his choices we now also read the prefaces he added in 1886 to *Human, All-Too-Human* and *Daybreak* [S8][S11], where he looks back on his break from his teachers and his work underground, plus *Twilight of the Idols* [S9], *The Case of Wagner* with *Nietzsche contra Wagner* [S10] and the second part of *Untimely Meditations* [S12]. Letters in English were not freely available, so the Basel years rest on a medical history article [S13].
 
 ## In one paragraph
 
@@ -33,18 +33,6 @@ How he applied it: he described his own life as a slow gathering of abilities th
 In *Ecce Homo* he writes that nothing uses up a person faster than resentment: the grudge, the thirst for revenge, the mortified feeling that cannot act. For the sick, he says, it is the special danger and the most natural habit [S7]. For a person who is fundamentally rich, he says, it is a superfluous feeling, and staying free of it is almost proof of richness [S7]. He cites Buddha's teaching that hostility ends through friendship, which he calls hygiene, not morality [S7].
 
 How he applied it: in his own weak years he forbade himself grudges because they cost strength, and he chose a plain acceptance he called Russian fatalism when he could not act [S7].
-
-#### Practical matters first: food, place, rest
-
-He opens the clever-chapter of *Ecce Homo* by brushing off theology and putting nutrition first: how exactly must you feed yourself to reach your greatest power [S7]? He gave rules from his own trials, such as a light diet, water over drink, and the places where the air suited his mind. He says his mistakes here came from the German culture he grew up in, which taught him to chase ideals and lose sight of actual things [S7].
-
-How he applied it: he picked places to live and work by what they did to his thinking and health, and wrote that his body decided things before his ideas did [S7].
-
-#### Doubt the pairs of opposites
-
-In the first chapter of *Beyond Good and Evil* he says the basic belief of the metaphysicians is a belief in opposite values: that truth cannot come from error or a generous act from selfishness. He asks whether such opposites exist at all, or are only provisional views taken from one angle, a "frog perspective" [S4].
-
-How he applied it: he suggested that pretence, delusion and even selfishness might hold more value for life than the supposedly pure side [S4].
 
 ### Every philosophy is a confession
 
@@ -82,6 +70,18 @@ In *Thus Spake Zarathustra*, the prophet Zarathustra tells a crowd that man is s
 
 How he applied it: in *The Joyful Wisdom* he urges seekers of knowledge to live in danger and "build your cities on the slope of Vesuvius" [S5]. He addresses the line to "knowing ones," people who pursue knowledge [S5].
 
+## In his later prefaces and essays
+
+**Philosophizing with a hammer.** In *Twilight of the Idols* he describes his task as tapping idols, the beliefs everyone treats as solid, to hear whether they ring hollow [S9]. He reads a moral or philosophical judgment as a symptom: what state of life produced it, rising or declining? He asks whether the wisest men of Greece were themselves tired and in decline [S9]. He warns against taking the first cause that comforts us for the real one, and says grammar smuggles in belief in a self and a true world behind appearances [S9]. He distrusts tidy systems as a lack of honesty [S9].
+
+**The free spirit as company.** In 1886 he looks back at *Human, All-Too-Human* and says he invented free spirits to keep himself cheerful through illness, loneliness and idleness, a stand-in for the friends he lacked [S8]. He admits he once looked past Schopenhauer's faults and deceived himself about Wagner [S8]. Illness, he writes, became a tool for knowledge, and recovery brings a freer, more detached view. Take health in small doses [S8]. A free spirit should treat his own virtues as tools to weigh, not masters [S8].
+
+**Slow reading and the mole.** The 1886 preface to *Daybreak* pictures his method as a mole's, digging in the dark to test the old faith in morality, which he says philosophers built on while claiming to pursue pure truth [S11]. He calls himself a teacher of slow reading and asks his reader to read carefully with the mental doors ajar [S11].
+
+**History serves life.** In *The Use and Abuse of History* he asks what history can do for living, not what it can justify. Learn from great lives for inspiration, not as templates. Know when to forget, and dare to believe in yourself [S12].
+
+**Diagnosing an artist.** In *The Case of Wagner* and *Nietzsche contra Wagner* he reads art as a sign of health or decline in a person and a culture. He says he shares his age's decadence but has fought it, which gives him the standing to judge [S10].
+
 ## How he decides
 
 - Ask where a value came from, and whose needs it served [S1][S4].
@@ -97,25 +97,26 @@ How he applied it: in *The Joyful Wisdom* he urges seekers of knowledge to live 
 
 ## Real decisions
 
-### Leaving the professor's chair
+### Leaving the professor's chair (1879)
+In 1879, in poor health, he resigned from Basel at 34 and lived on a pension, moving between Swiss and Italian towns [S1][S2]. His stated reason in *Ecce Homo* is that he had to find the climate, food and rest that suited his work, since these decided his power to think [S7]. A medical history says that in the years after, he lived alone in a bare room with his papers on the floor, in pain and losing his sight, and still wrote most of his books [S13].
 
-In 1879, with bad health, he resigned from Basel at 34 and lived on a pension, moving between Swiss and Italian towns [S1][S2]. His stated reason in *Ecce Homo* is that he had to find the climate, food and rest that suited his work, since these decided his power to think [S7].
+### Choosing company he could make up (1886 preface)
+Cut off from friends by his independence, he says he invented free spirits as imagined companions, believing he was not alone in his outlook, and that this kept him cheerful through sickness and loneliness [S8]. He also describes a long recovery in which illness became a tool for knowledge [S8]. The decision turned isolation into material for his books.
 
-### Breaking with Wagner
+### Breaking with Wagner, in two steps
+He was close to Wagner from 1868 and had cut ties by 1878 [S1][S2]. In 1886 he says he had fooled himself about Wagner's romanticism [S8]. In 1888 he wrote *The Case of Wagner* (drafted in Turin in May) and *Nietzsche contra Wagner* (December) [S10]. His reasons: Wagner's art, he thought, promoted decadence, relied on theatre and overwhelming effects, and carried a Christian outlook of redemption. He said he used Wagner's name as an example of the age, not as a personal attack. The public mostly read it as a feud [S10].
 
-He was close to Richard Wagner from 1868 and had cut ties by 1878 [S1][S2]. In *Ecce Homo* he looks back on the years of his friendship as a loss that he turned into a lesson about distance and recovery [S7].
+### Digging underground (Daybreak, 1881)
+The book was written in a Genoese spring in 1881, and he put the examination of morality at the centre of his task [S11]. In the preface of 1886 he says that five or six years make little difference to a book and a problem that are in no hurry [S11]. He chose slow, patient work over a quick system.
 
-### Printing a book at his own cost
-
+### Printing a book at his own cost (1886)
 *Beyond Good and Evil* was printed at his own cost in 1886 after a split with his publisher, partly over the publisher's antisemitism [S2][S4]. He wrote on without waiting for readers.
 
-### Turning an illness into a method
-
-In *Ecce Homo* he credits his long illness with two things: his freedom from resentment and a sharper eye for what makes people sick or well [S7].
-
-### Setting himself a rule for the year
-
+### Setting himself a rule for the year (1882)
 On New Year's, in Genoa in 1882, he made amor fati his rule for the year: to see what is necessary as beautiful, to wage no war on ugliness, and to be only a yea-sayer [S5].
+
+### Turning an illness into a method
+In *Ecce Homo* he credits his long illness with two things: his freedom from resentment and a sharper eye for what makes people sick or well [S7]. He forbade himself grudges in weak years because they cost strength [S7].
 
 ## Where he stood
 
@@ -139,7 +140,7 @@ On New Year's, in Genoa in 1882, he made amor fati his rule for the year: to see
 - Close to Richard Wagner from 1868, then broke with him by 1878 [S1][S2].
 - *The Birth of Tragedy* (1872), on Apollo and Dionysus in Greek tragedy [S1][S2].
 - *Untimely Meditations* (1873 to 1876) and *Human, All Too Human* (1878) [S1].
-- Resigned from Basel in 1879 because of illness [S1][S2].
+- Resigned from Basel in 1879 because of illness [S1][S2][S13].
 - *Daybreak* (1881), *The Gay Science* (1882, expanded 1887) [S1].
 - *Thus Spoke Zarathustra* (1883 to 1885) [S1].
 - *Beyond Good and Evil* (1886, printed at his own cost) and *On the Genealogy of Morality* (1887) [S1][S2].
@@ -154,7 +155,7 @@ On New Year's, in Genoa in 1882, he made amor fati his rule for the year: to see
 - **Contradictions.** Critics ask how he can deny objective truth while making strong truth claims, and how a foe of systems can offer a cosmology [S1][S3].
 - **Weak proofs.** His attempts to prove the eternal recurrence are weak, and Kaufmann thought it not worth serious thought [S3].
 - **Scholarship.** Classical scholars, led by Wilamowitz, attacked *The Birth of Tragedy*, and it hurt his standing [S2][S3].
-- **Misuse.** His sister's editing and the Nazi use of his name gave him a reputation that scholars reject [S1][S2]. Russell's warning shows why: his talk of masters and rank is easy to bend toward cruel politics [S2].
+- **Misuse.** His sister's editing and the Nazi use of his name gave him a reputation that scholars reject [S1][S2].
 
 ## Blind spots to watch
 

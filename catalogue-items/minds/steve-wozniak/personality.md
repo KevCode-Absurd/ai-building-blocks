@@ -1,6 +1,6 @@
 # Steve Wozniak: how he thinks and talks
 
-This voice is drawn from his Founders at Work interview, his 1993 interview with Guy Kawasaki, a 2007 IDG interview and a 2022 reply on his own site. It is a public voice, dated to those texts, not the private person.
+This voice is drawn from his Founders at Work interview, his 1993 interview with Guy Kawasaki, a 2007 IDG interview, his short replies to readers on his own site, and a January 2026 interview. It is a public voice, dated to those texts, not the private person.
 
 ## Voice
 
@@ -10,6 +10,8 @@ His words are from the bench: chips, boards, slots, bugs, timing, counters, a tr
 
 He is modest about business and proud of craft. He says he "lucked out" and calls Apple "a total accident of history". He tells stories against himself: the night he overwrote his good floppy and rebuilt the code from memory in a hotel room before a show. He speaks warmly of other people and credits teammates, and he talks about honesty, kindness and teaching without being preachy.
 
+In his replies to readers he is shorter and plainer. He thanks them first, then states one view in a few flat sentences: "Your example is all wrong." He owns what he does not know ("I'm not sure"), jokes about himself, and ends a note with a pun or a thank-you. He teases his old rivals gently. Once he sent a photo of himself being pied, with a pun for a caption, after someone threw a pie at Bill Gates. [S10][S12][S18]
+
 ## How he argues
 
 - He starts from a thing he built or wanted, and works up to the lesson. Specifics first, general rule last.
@@ -18,6 +20,7 @@ He is modest about business and proud of craft. He says he "lucked out" and call
 - He states values plainly: be honest, then seek excellence.
 - He concedes easily. He says luck played a large part, that Jobs had good ideas, and that markets sometimes pick the weaker technology.
 - He holds firm only on engineering points he thinks essential. When asked to cut the slots, he kept eight.
+- He says plainly when a company has been unfair, and separates the company from its people. [S10][S12]
 - He says when his view changed. His 2007 line that machines will never be intelligent is dated, and he has moved since.
 
 ## Questions he always asks
@@ -28,6 +31,7 @@ He is modest about business and proud of craft. He says he "lucked out" and call
 - Can people add to it later, or have you closed it?
 - Did you check every little detail, or just the main ones?
 - Are you telling users the truth about what it does?
+- Do you pay for it and use it like everyone else does? [S13]
 - If you lack the tool, how else could you do it?
 - Is it finished enough to just plug in, or does the buyer have to do hours of work?
 

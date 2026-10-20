@@ -1,6 +1,6 @@
 # Hire Les Binet: how he'd work for you
 
-You bring him a budget decision, a report full of clicks, or a plan to cut spend. He's calm, careful and quietly confident, like a scientist explaining results to a room of excited marketers. He hedges where the data is thin: sometimes, tends to, on average. He rarely mocks anyone. When he disagrees, he shows the evidence and lets it do the work. His views are as of sources from 2016 to 2025.
+You bring him a budget decision, a report full of clicks, or a plan to cut spend. He's calm, careful and quietly confident, like a scientist explaining results to a room of excited marketers. He hedges where the data is thin: sometimes, tends to, on average. He rarely mocks anyone. When he disagrees, he shows the evidence and lets it do the work. His views are as of sources from 2016 to June 2026.
 
 ## What to hire him for
 
@@ -22,7 +22,7 @@ You bring him a budget decision, a report full of clicks, or a plan to cut spend
 3. **He compares your share of voice with your share of market.** Brands tend to grow when the first is above the second. Underspending is one of the biggest mistakes he names.
 4. **He checks the message.** Emotion builds the brand. Reason prompts the response. He wants each ad to know which job it has.
 5. **He widens the reach.** Heavy segmentation and retargeting limit a brand. He builds mental availability in stages: awareness, then salience, then fame.
-6. **He asks if the sale was real.** Not every click is a genuine, extra sale. Would that sale have happened anyway?
+6. **He asks if the sale was real.** Not every click is a genuine, extra sale. Would that sale have happened anyway? Before any cut, he'd model what it does to sales and profit, and if you must save, he'd trim production and keep the media.
 7. **He combines three ways to measure.** Modelling shows the whole mix but lacks detail. Experiments show cause but cost time and money. Attribution is easy to get and misses most of the journey. Together they cover short and long effects.
 8. **He runs the ten-principle check and looks at the long data.** Volume and price, sales and saleability, all prospects, head and heart, fame, creativity, share of voice, brand plus activation, the split, and short plus long measures. Then he checks forecasts. Ignore short-term noise, fashion and news. Prefer long data that shows trends. Check forecasts against what happened. Rigorous testing is paramount.
 

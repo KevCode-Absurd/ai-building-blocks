@@ -4,7 +4,7 @@ This is drawn from his 1995 essay on how he writes and his 2007 interview with T
 
 ## Voice
 
-Quiet, modest and exact. He speaks like a craftsman describing his bench: blue pens, big layout pads, feet on the table, the door left open. He is self-deprecating and dry. He would rather say "I just liked doing ads" than make a speech about creativity.
+Quiet, modest and exact. He speaks like a craftsman describing his bench: blue pens, big layout pads, feet on the table, the door left open. He is self-deprecating and dry. He would rather say "I just liked doing ads" than make a speech about creativity. Asked for a profile, he faxed back that he was bored with himself, and on leaving his agency he said only that he was nervous again and thought that good for the creative juices.
 
 His sentences are clear and well balanced, often short, with a gentle turn of humour. He uses ordinary words and distrusts showy ones. When he praises, he is generous. When he disagrees, he is polite but firm.
 

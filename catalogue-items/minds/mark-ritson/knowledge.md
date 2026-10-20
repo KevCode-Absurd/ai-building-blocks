@@ -1,8 +1,8 @@
 # Mark Ritson: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Mark Ritson is alive, and views can change. This data set draws on two pieces he wrote, a 2016 Marketing Week column and a 2026 article on "bothism," plus Marketing Week's own round-ups of his columns, a write-up of a podcast, and speaker biographies [S1][S2][S3][S4][S5][S6][S7]. His birth year isn't in our sources. He has written many columns we didn't open, so treat this as a sample of his views. We also used study notes on a 2018 conference-debate report and a 2024 interview summary, which carry his live voice but not the audio [S8][S9], and a 2006 academic paper he co-wrote on how one ad gets read in different ways [S10]. The paper is a literature review, not a how-to; we use it only for what it says about testing meaning. Treat each view as "as of" the date of its source, from 2006 to 2026.
+Mark Ritson is alive, and views can change. This data set draws on two pieces he wrote, a 2016 Marketing Week column and a 2026 article on "bothism," plus Marketing Week's own round-ups of his columns, a write-up of a podcast, and speaker biographies [S1][S2][S3][S4][S5][S6][S7]. His birth year isn't in our sources. He has written many columns we didn't open, so treat this as a sample of his views. We also used study notes on a 2018 conference-debate report and a 2024 interview summary, which carry his live voice but not the audio [S8][S9], and a 2006 academic paper he co-wrote on how one ad gets read in different ways [S10]. The paper is a literature review, not a how-to; we use it only for what it says about testing meaning. On 2026-10-21 we read seven more of his Marketing Week columns, from 2018 to 2025 (one only in part, because of a paywall), which now carry most of the method and the examples [S11][S12][S13][S14][S15][S16][S17]. We also read four trade-press reports of his talks from 2023 and 2024; those are a journalist's wording of his claims, so we use them for positions, not phrasing [S18][S19][S20][S21]. Treat each view as "as of" the date of its source, from 2006 to 2026.
 
 ## In one paragraph
 
@@ -44,13 +44,17 @@ How he applied it: on a B2B podcast he said that 70% to 80% of the time, the bra
 
 A long marketing argument asks whether brands should be distinctive, easy to recognise and quick to come to mind, or differentiated, standing for something buyers value. Ritson refuses to pick [S2]. A brand needs to come to mind first and also hold the associations that tip a purchase [S2]. The same goes for discovery and decision. A brand should be there when people first find a category and again when they make the final choice [S2].
 
-How he applied it: he pointed to B2B software firm ServiceNow, which pairs lead generation with high-profile brand campaigns, as bothism at work [S2].
+How he applied it: he pointed to B2B software firm ServiceNow, which pairs lead generation with high-profile brand campaigns, as bothism at work [S2]. In 2019 he argued that salience is a bigger job than differentiation, and that brands earn the right to play with their codes only after decades of consistency [S13]. By 2023 he was pushing "relative differentiation": not uniqueness, which is rare and copied, but having more of one valued attribute than rivals, backed by one positioning idea held for years [S18][S20]. His example of discipline was KitKat, which keeps to one idea, "Have a break" [S19][S20].
+
+The brand also has to show up in the work. In a 2019 column on a Renault ad he argued that a good, well-made film is wasted if viewers can't tell whose it is, and he cited a figure that most ads fail linkage tests a day later [S12]. His rule is that consumers must know the brand behind the ad: put the four or five distinctive assets in the work and build the creative around them [S12]. In 2022 he added that a brand colours how people judge the product itself, using the Wordle backlash against the New York Times and a blind beer test as examples [S14].
+
+He also said that as Renault's marketer he would have insisted the agency use the brand's assets far more heavily [S12].
 
 ### Research: qual first, then quant
 
 He argues that qualitative research comes first. It is inductive and shows what's happening and which variables matter. Then quantitative research tests those variables at scale [S2]. Skipping the first step leads to bloated surveys, so doing both can mean less work overall [S2].
 
-How he applied it: his diagnosis stage depends on this kind of research before any segment map or plan [S1][S2].
+How he applied it: his diagnosis stage depends on this kind of research before any segment map or plan [S1][S2]. In a 2018 column he used a media study to show that marketers' beliefs about which channels work often differ from the evidence, then said no channel is best: the choice depends on segment, objective, positioning and budget, and strategy comes before channel [S11].
 
 ### Marketing is more than communications
 
@@ -90,6 +94,14 @@ He left in-house work at LVMH in 2015 after 13 years and founded the Mini MBA in
 
 In 2006, with two colleagues, he reviewed psychology, semiotics and reader-response theory to list what makes the same ad mean different things to different people, such as culture, social setting, media setting and who holds power over the meaning. They argued that how an ad is read should count as a way to split an audience into segments. They suggested testing it with word association and with recognition tests that include wrong answers matching other readings [S10].
 
+### Leaving out the people who would click
+
+For the Mini MBA's own ads, he wrote in 2025, he did not let platforms optimise purely for open rates, because that would draw growth marketers in India and the UAE who are unlikely to pay for the course [S16]. He called this a strategic, resource-based choice about who not to serve, and used it to rebut the claim that AI and algorithms make targeting unnecessary [S16]. He added that the platforms that once sold hyper-targeting now sell broad reach [S16]. The lesson for you is to decide who you are going after, and who you are not, before the brief [S16].
+
+### Changing his mind on ad wear-out and pre-testing
+
+Ritson said in 2024 that he had become a convert to pre-testing, with faster tools such as System1, and that even a small advertiser should test before spending [S21]. He also reversed what he was taught about wear-out: newer research suggests good ads do not wear out, so he told brands to keep a working ad running, plan creative and media over several years, and make fewer, better ads [S21][S15]. His 2025 column used Glenmorangie, which built a three-year business case with finance to fund its creative upfront [S15]. He kept caveats: a weak ad stays weak, and ads should be pulled when product or price changes [S15].
+
 ## How he decides
 
 - Diagnose before you prescribe [S1][S4].
@@ -99,6 +111,10 @@ In 2006, with two colleagues, he reviewed psychology, semiotics and reader-respo
 - Start research with qual, then test with quant [S2].
 - Treat "digital" as part of the plan, not a separate plan [S3].
 - Be wary of fashionable ideas with no evidence [S3].
+- Say fewer things, say them more often, and hold them for years [S18][S20].
+- Make the brand unmistakable in the ad before you worry about the idea [S12].
+- Do price research before setting a price, and judge value, not cost plus markup [S20].
+- Pre-test, and keep an ad that works [S21][S15].
 
 ## Where he stood
 
@@ -118,6 +134,10 @@ In 2006, with two colleagues, he reviewed psychology, semiotics and reader-respo
 
 **Does an ad mean one thing?** Not for everyone. The 2006 paper says audiences read the same ad differently depending on culture, social setting and media setting, and that managers who assume a narrow, positive reading can be wrong. It adds that bored or frustrated viewers can read an ad against its maker's intent [S10].
 
+**Is segmentation useful?** Often not, as he put it in 2023: markets are more alike than marketers think, so the best ad for one group is usually the best for all. He still wants a clear target, and broad brand reach with targeted activation where budgets allow [S19][S16].
+
+**Does creativity win?** It matters most for promotion. In 2024 he argued marketers had overstated it and neglected product and price [S20].
+
 **Is marketing just advertising?** No. Pricing, product and sales alignment can matter more than campaigns, especially in B2B [S4].
 
 ## His work and record
@@ -128,6 +148,7 @@ In 2006, with two colleagues, he reviewed psychology, semiotics and reader-respo
 - Was in-house professor for LVMH from 2002 to 2015, working with brands including Louis Vuitton and Hennessy [S6][S7].
 - Consulted for firms including PepsiCo, Johnson & Johnson, McKinsey and De Beers [S7].
 - Wrote a Marketing Week column for over a decade; the magazine marked ten years of it in 2021 [S5].
+- Wrote the 2025 Marketing Week column praising Coca-Cola's consistent playbook, local tests then global scale, and a 151-word brief behind Share a Coke [S17].
 - Won Business Columnist of the Year at the PPA Press Awards three times, and a BSME award in 2018 [S7].
 - Founded the Mini MBA in Marketing, which has trained over 35,000 executives [S6].
 

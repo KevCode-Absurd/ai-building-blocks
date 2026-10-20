@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Kent Beck is alive, and his views can change. He has changed them in public before: the second edition of his book on Extreme Programming reworked the first [S2][S8]. This file draws on his own newsletter posts from 2022 to 2025 [S4][S5][S6], the Agile Manifesto he co-wrote [S3], notes of his 2014 debate on testing [S10], and reference pages. Treat each view as "as of" the date of its source. The most recent is from June 2025. Nothing here tells you what he thinks about events after that. His books and posts are in copyright, so this is our summary, with a few short quotes.
+Kent Beck is alive, and his views can change. He has changed them in public before: the second edition of his book on Extreme Programming reworked the first [S2][S8]. This file draws on his own newsletter posts from 2022 to 2026 [S4][S5][S6][S11][S12][S13][S14], the free openings of two more [S16][S17], his test-qualities page [S15], the Agile Manifesto he co-wrote [S3], notes of his 2014 debate on testing [S10], and reference pages. Treat each view as "as of" the date of its source. The newest are from autumn 2026, and many posts are partly behind a paywall, so we only use what is public. His books are in copyright, so this is our summary, with a few short quotes.
 
 ## In one paragraph
 
@@ -50,6 +50,8 @@ How he applied it: his list of TDD mistakes includes mixing inside design into t
 
 For Beck the goal of tests is that programmers can trust their code works [S10]. TDD is one way to get there, and he mixes TDD and non-TDD work freely [S10]. He said a ratio of test code to real code is a poor measure, and that tests which add nothing unique can be deleted [S10].
 
+His test page lists twelve qualities a test can have, such as fast, deterministic, readable, specific and predictive. Some reinforce each other and some pull against each other, so you choose the trade-offs on purpose, and composable tests can ease some conflicts [S15].
+
 How he applied it: he listed the ways people fake progress in TDD. Writing tests with no checks just to raise coverage. Deleting checks so a test passes. Pasting the program's output in as the expected answer [S4]. He also said his steps are a description, not a rule, and nobody gets a prize for following them exactly [S4].
 
 ### Augmented coding
@@ -58,22 +60,45 @@ In 2025 Beck wrote about building software with an AI agent [S5]. He called it "
 
 How he applied it: he built a B+ tree library in Rust and Python, typing little of the code himself [S5]. His instructions told the agent to work in red-green-refactor cycles, one test at a time, with structure and behaviour changes kept apart and small commits [S5]. He watched for warning signs: loops, features he hadn't asked for, and the agent cheating by disabling or deleting tests [S5]. As of June 2025 he found the work more enjoyable, with more big decisions and fewer chores, though he was not happy with the code's extra complexity [S5].
 
+### Growth has three stages
+
+Beck says a new idea grows along an S-shaped curve, and that the three parts of the curve need different ways of working [S11]. Early on you explore: run many cheap experiments with tiny teams until one clearly beats the rest. Then you expand: remove whichever bottleneck shows up next, even if that means throttling growth or cutting features. Last you extract: grow profitably with small, low-risk moves [S11].
+
+How he applied it: he says using one stage's habits in another can kill the idea, and that profitable late-stage products should pay for early experiments [S11]. In July 2026 he floated the idea that XP is "long volatility", meaning the practices leave a team better off when plans meet surprises [S12]. Soon after he added the exception: in a coin-flip thought experiment, a mature product should rebalance after every move, bank gains and keep changes reversible, while an early experiment can go all in [S13].
+
 ## Real decisions
 
-### Writing down what "Canon TDD" means
+### Writing down what "Canon TDD" means (2023)
+
 By 2023 critics were attacking versions of TDD he did not recognise. He wrote the workflow out as five steps: make a list of cases, write one real test, make it pass, optionally refactor, repeat until the list is empty. He said part of the blame was his own earlier lack of clarity, and that many objections came from people skipping the list step. He also said that if another way works for you, that is fine. [S4]
 
-### Handing the AI a plan file
+### Handing the AI a plan file (2025)
+
 Building a B+ tree library in 2025, he found that when the agent was left alone it piled up complexity and stalled. He took more control of the design, kept an ordered list of tests in a plan file, and gave one short command meaning "take the next unmarked test and do only that." He tied the agent to the same rules as a human pair: simplest failing test, least code to pass, refactor only on green. [S5]
 
-### Switching language to get unstuck
+### Switching language to get unstuck (2025)
+
 When the Rust version grew too complex, he had the agent build the same thing in Python against the same tests, then move it back to Rust. When Python was too slow, the agent proposed a C extension and wrote it. He reported that the code quality still fell short of what he wanted. [S5]
 
-### Backing the strawman-proof list
-He wrote in 2023 that he does not claim authority over how anyone programs, and that if a different workflow works for you, that is fine. He tied the five steps to four goals: old behaviour still works, new behaviour works, the system is ready for the next change, and the team feels confident. [S4]
+### Calling structure changes cheap (2022)
 
-### Calling structure changes cheap
 In 2022 he argued that you can try a structure change freely, since extracting a helper can be undone by inlining it. A behaviour change, such as mailing 100,000 notices with a wrong number, may not be undone. So he puts the checking effort before the irreversible step, not after. [S6]
+
+### Trading early access for the habit of writing (2023)
+
+In July 2023 he said he began paid subscriptions as a swap: readers pay and get early material, and he gets a reason to keep writing. He reports it worked. He finished a draft, wrote steadily, and used reader feedback to tighten the outline and chapters. [S17]
+
+### Splitting run-on tests before they stay (2026)
+
+Beck says he writes long "run-on" tests while exploring a design, since each step is a new discovery. He does not leave them in the code. He copies the test, keeps the setup and the first check, names it for what a failure would mean, then repeats with a longer prefix until the last check, and deletes the original. His reason is that a colleague cannot tell which step broke. The set keeps the same coverage as long as the tests run and pass together. [S14]
+
+### Explaining an idea badly, again and again (2026)
+
+He keeps a backlog of about a hundred half-formed ideas and looks at them daily. When one is ready he does not polish it alone. He says you learn to explain a thing well by explaining it badly many times. He gave the 3X idea about twenty times in two weeks while teaching programming in Africa, and no two tellings matched. [S12]
+
+### Restarting a book that events overtook (2026)
+
+He had planned to finish a book on tidying in teams about a year earlier, with an outline and only the writing left. By the second half of the previous year the material was being overtaken by events, and he reboots the project. He jokes about his own schedule and owns the miss. [S16]
 
 ## How he decides
 
@@ -85,6 +110,8 @@ In 2022 he argued that you can try a structure change freely, since extracting a
 - Let repeated code wait until the right abstraction is clear [S4].
 - If code is hard to test, look for a better design idea [S10].
 - Choose working software and people over paperwork and process [S3].
+- Pick the way of working that fits the stage: explore, expand or extract [S11].
+- Trade test qualities on purpose, since speed, prediction and writability pull against each other [S15].
 
 ## Where he stood
 
@@ -114,6 +141,7 @@ In 2022 he argued that you can try a structure change freely, since extracting a
 - 2014: debated "Is TDD Dead?" with David Heinemeier Hansson and Martin Fowler [S10].
 - 2019: joined Gusto as a software fellow and coach [S1].
 - 2023: *Tidy First?* [S1][S7].
+- 2023 to 2026: the *Software Design: Tidy First?* newsletter, with the Canon series on TDD and on 3X [S4][S11][S17].
 
 ## Where he was wrong or criticised
 

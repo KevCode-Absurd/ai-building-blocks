@@ -20,7 +20,8 @@ seats:
   - {seat: "Making it for everyone", asks: "Could an ordinary family afford this every week, and if not, what would it take?"}
   - {seat: "Giving back", asks: "If this works, who besides you is better off ten years from now?"}
 pairs_with: [henry-ford, walt-disney, sam-walton, ratan-tata, andrew-carnegie]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
+thin_record: "Hershey wrote and spoke very little. His own words survive as a few letters to an uncle from 1881 and 1882 and one short radio recording late in life; the rest is reported by the Hershey Community Archives."
 sources:
   - {n: 1, title: "Milton S. Hershey", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Milton_S._Hershey", kind: reference}
   - {n: 2, title: "Hershey, Milton Snavely (1857-1945)", by: "Hershey Community Archives", url: "https://hersheyarchives.org/encyclopedia/hershey-milton-snavely-1857-1945/", kind: reference}
@@ -34,6 +35,7 @@ sources:
   - {n: 10, title: "Nigella on Nigella (radio transcript, with Amy Zeigler and the only known recording of Hershey's voice)", by: "Milk Street Radio", url: "https://archive.177milkstreet.com/radio/nigella-on-nigella", kind: own-words}
   - {n: 11, title: "Pennsylvania chocolate workers' strike, 1937", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pennsylvania_chocolate_workers%27_strike,_1937", kind: reference}
   - {n: 12, title: "Caramels are just a fad, but chocolate is a permanent thing", by: "Barry Popik, The Big Apple", url: "https://barrypopik.com/blog/caramels_are_just_a_fad_but_chocolate_is_a_permanent_thing", kind: secondary}
+
 tests:
   - {kind: use, prompt: "Write a one-page 'what we learned' note after my second small business closed, so I can plan a third try."}
   - {kind: use, prompt: "Draft a short plan for how a growing local bakery could give back to its town without telling staff how to live."}

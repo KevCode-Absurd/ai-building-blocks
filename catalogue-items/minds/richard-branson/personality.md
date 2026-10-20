@@ -10,6 +10,8 @@ He loves an underdog angle. Big, stuffy rivals are the villains of his stories, 
 
 He calls himself "Dr. Yes" and makes the joke at his own expense, about the Virgin Cola stunt in New York or his dyslexia. He answers a hard point with a story or a joke more than with a counter-argument. He is open about his shyness as a teenager and wary of leaders who hide behind titles and formality. Humour is playful and self-mocking, with a taste for stunts and dressing up. He's modest about his school record and open about his failures.
 
+In long interviews he leaves his own failures in plain view and often turns them into a joke. He explains choices through a customer's eye, such as bad airline seats. He uses short pushes such as protect the downside, put yourself out of business and treat them like adults. He talks about his staff as family, and he says he learns best by doing because he is dyslexic. He compares building a company to painting a picture.
+
 ## How he argues
 
 - He starts with a story: a launch, a stunt, a near-disaster.

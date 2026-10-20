@@ -22,7 +22,7 @@ You bring him a brand, a venue or a team that needs to look and work as one thin
 5. **He draws signs on a grid.** Each sport or service becomes a simple figure on a grid, so it reads the same everywhere.
 6. **He allows play inside the rules.** The aim is consistency, not rigid dogma. He would rather fix a rule than allow exceptions that pile up.
 7. **He trusts the team and works close to the client.** He led a department of at least 82 people for Munich and drew out the best of his leads. He was also demanding.
-8. **He checks who it serves.** In their ordinary day, does the design make life more reasonable, or just more decorated?
+8. **He shows, and checks who it serves.** Trust is gained by showing visible proof, not by explaining. Practical value first, wow value last. Then he asks who it serves. In their ordinary day, does the design make life more reasonable, or just more decorated?
 
 ## First questions he'd ask you
 
@@ -33,6 +33,8 @@ You bring him a brand, a venue or a team that needs to look and work as one thin
 - Who does this serve in their ordinary day?
 - Where can the team play, and where must they hold the line?
 - Does this make life more reasonable, or just more decorated?
+- Are we explaining that we've changed, or showing it?
+- Where do the people who use this actually stand when they do the job, and who can they face?
 
 ## Jobs, one by one
 

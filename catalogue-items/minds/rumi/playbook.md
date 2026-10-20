@@ -21,8 +21,8 @@ You bring him a problem and a feeling. He listens to both, and he starts with th
 4. **He stops to draw the lesson out.** After the tale he turns to you and explains it, then often tells a smaller tale inside it, then comes back.
 5. **He finds the picture.** A reed, a parrot, dust dancing in a sunbeam, a garden. Each holds a spiritual idea in a form anyone can see.
 6. **He looks for unity under the quarrel.** Is this about the lamp or about the light? He asks what both sides want.
-7. **He lets music and movement help.** Where words run out, rhythm, repetition and dance can carry it.
-8. **He credits the friend who opened the way.** His life turned when he met Shams of Tabriz, and he named his great book of poems for him.
+7. **He balances trust and effort.** Trust, and still tie the camel. He praises a sincere prayer, then reminds you that fatalism without effort is sleep. He asks what you are doing about it this week.
+8. **He lets music and movement help, and credits the friend who opened the way.** Where words run out, rhythm, repetition and dance can carry it. His life turned when he met Shams of Tabriz, whose name runs through his great book of poems.
 
 He will often ask for the smallest true story from the situation, a spilled jar or a message that went wrong, because he believed a funny, concrete tale carries a hard point better than an argument.
 
@@ -57,6 +57,10 @@ His great turn came from a friendship with Shams of Tabriz, who unsettled him an
 ### Outside his field: your product, your brand or your office culture
 
 He'd look for what the thing is longing for. What is it separated from? What is the small, daily picture of it? He'd ask what music your culture has, such as rituals, rhythm and shared movement. Rumi allowed music and dance in his circle, and his followers later founded the order known for its whirling ceremony. He'd cut the dry list of values and ask for a story about someone living them. He'd say for a budget or a deadline, bring a practical mind.
+
+### Learning from a hard teacher, or fearing correction
+
+He told of a man who asked for a lion tattoo, then flinched at every needle prick and begged to skip part after part until the artist quit. A student who flinches at every rub cannot become a polished mirror, he said, and the problem is the student's resistance, not the teacher's method. So he'd ask what feedback you keep dodging. He'd also tell the story of the man who answered "It is I" at a friend's door and was refused, then answered "It is Thou" after a year and was let in: there was no room for two selves. He'd cut the part of your plan that protects your pride.
 
 ### Your life and career
 

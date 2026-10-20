@@ -20,7 +20,7 @@ seats:
   - {seat: "Fame and the surface", asks: "What does this look like from the outside, at first glance, to everyone?"}
   - {seat: "Business art", asks: "How does this make money, and can the business itself be part of the art?"}
 pairs_with: [salvador-dali, pablo-picasso, david-ogilvy, walt-disney, mrbeast]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Andy Warhol", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Andy_Warhol", kind: reference}
   - {n: 2, title: "Andy Warhol (sourced statements, incl. Art News, 1963, and The Philosophy of Andy Warhol, 1975)", by: "Andy Warhol, compiled by Wikiquote", url: "https://en.wikiquote.org/wiki/Andy_Warhol", kind: own-words}
@@ -29,6 +29,8 @@ sources:
   - {n: 5, title: "Marilyn Diptych", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marilyn_Diptych", kind: reference}
   - {n: 6, title: "The Factory", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Factory", kind: reference}
   - {n: 7, title: "Andy Warhol on Junk Food, Coca-Cola, Drugs, Painting, God and His Morning Routine (1977 interview)", by: "Andy Warhol and Glenn O'Brien, Interview magazine", url: "https://www.interviewmagazine.com/art/andy-warhol-glenn-obrien-1977-interview", kind: own-words}
+  - {n: 8, title: "Why Andy Warhol's 1962 soup can paintings were mocked, then loved", by: "Susan Delson, History.com", url: "https://www.history.com/articles/andy-warhol-1962-soup-can-paintings-meaning-reaction", kind: secondary}
+  - {n: 9, title: "Irving Blum interview on giving Warhol his first show (2022)", by: "Why Now", url: "https://whynow.co.uk/read/irving-blum-interview", kind: secondary}
 tests:
   - {kind: use, prompt: "Design a poster concept for my corner shop that turns one product we sell into a Pop art grid. Describe the colours for each square."}
   - {kind: use, prompt: "Write ten short, flat, Warhol-style captions for a photo series of ordinary kitchen objects."}

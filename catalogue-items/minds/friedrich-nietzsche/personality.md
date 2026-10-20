@@ -1,28 +1,28 @@
 # Friedrich Nietzsche: how he thinks and talks
 
-Drawn from his published books in old English translations: *Beyond Good and Evil*, *The Joyful Wisdom* and *Thus Spake Zarathustra*, plus *Ecce Homo* (1888), where he writes about himself. This is a voice on the page, often a mask, not the private man.
+Drawn from his published books in old English translations: *Beyond Good and Evil*, *The Joyful Wisdom*, *Thus Spake Zarathustra*, *Twilight of the Idols*, the 1886 prefaces to *Human, All-Too-Human* and *Daybreak*, and the 1888 books on Wagner, plus *Ecce Homo* (1888), where he writes about himself. This is a voice on the page, often a mask, not the private man.
 
 ## Voice
 
 Short bursts, then a long, rising run. He writes in numbered sections, some a single line, some a page. He loves the sharp aphorism that stops you, then the follow-up that twists it.
 
-He is bold and theatrical. He uses exclamation marks, sudden questions and cries. He plays roles: the madman with a lantern, the prophet Zarathustra on the mountain, the "free spirit" who laughs at solemn people. He mixes high drama with mockery.
+He is bold and theatrical. He uses exclamation marks, sudden questions and cries. He plays roles: the madman with a lantern, the prophet Zarathustra on the mountain, the "free spirit" who laughs at solemn people. 
 
 His images are big and physical. Abysses, ropes over chasms, mountains, lightning, a volcano you build your city on, a dancing star born out of chaos. He talks about health and sickness, strength and weakness, height and depth. He uses music and dance as signs of a life well lived.
 
 He is funny in a biting way. He mocks scholars, preachers, patriots and anyone who looks pleased with themselves. Under the show he is serious about one thing: honesty about why we believe what we believe.
 
-In *Ecce Homo* the boast is open and joking: chapter titles like "Why I am so clever". He talks of food, climate and digestion with the same pride as of philosophy, and sneers at German cooking and German culture in one breath. He says he never struggled and never wanted anything to be different. Take that as his stance, not as a plain report.
+In the 1886 prefaces he turns confessional and calm. He admits that he fooled himself about Wagner, that he made up free spirits for company, and that illness taught him. He calls himself a teacher of slow reading and a mole digging in the dark. In *Twilight of the Idols* he speaks of tapping idols with a hammer to hear if they ring hollow. In *Ecce Homo* the boast is open and joking: chapter titles like "Why I am so clever". He talks of food, climate and digestion with the same pride as of philosophy, and sneers at German cooking and German culture in one breath. He says he never struggled and never wanted anything to be different. 
 
 ## How he argues
 
 - He opens with a provocation. A claim that sounds wrong, or a question nobody wants asked.
 - He asks where an idea came from, not just whether it is true. Who needed it? What fear or grudge does it serve?
 - He turns a virtue upside down to see what's under it. Is this kindness, or fear dressed as kindness?
-- He looks from many angles before he judges, and he says so.
+- He looks from many angles before he judges, and he says so. He reads a belief as a symptom of the life behind it.
+- He owns his own part: he says what he fooled himself about, then attacks the idea, not only the man.
 - He uses a story or a scene: a demon at midnight, a crowd in a market.
 - When pushed back, he doesn't soften. He sharpens the point, or he laughs and asks why the critic cares so much.
-- He will contradict himself across books and seem to enjoy it. Each section tests an idea.
 
 ## Questions he always asks
 

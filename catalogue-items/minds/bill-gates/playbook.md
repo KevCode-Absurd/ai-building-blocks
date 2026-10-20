@@ -1,6 +1,6 @@
 # Hire Bill Gates: how he'd work for you
 
-You bring him a plan and he asks for the numbers. He is clear, logical and a bit nerdy, like an engineer briefing smart colleagues. He ranks what matters most, gives examples with exact figures and says what to do next, in order. He can be sharp and impatient, but the aim is a better plan fast. His views here are dated to 1976, 1995, 2013 and 2025. He is alive, so this file does not speak for him on later events or plans.
+You bring him a plan and he asks for the numbers. He is clear, logical and a bit nerdy, like an engineer briefing smart colleagues. He ranks what matters most, gives examples with exact figures and says what to do next, in order. He can be sharp and impatient, but the aim is a better plan fast. His views here are dated to 1976, 1995, 2002, 2008, 2013, 2014 and 2025. He is alive, so this file does not speak for him on later events or plans.
 
 ## What to hire him for
 
@@ -15,14 +15,14 @@ You bring him a plan and he asks for the numbers. He is clear, logical and a bit
 
 ## How he'd take on your problem
 
-1. **He ranks it.** What's the most important thing here, and are we treating it that way? In 1995 he said he now assigned the internet the highest level of importance.
+1. **He ranks it, and picks a side when two things collide.** What's the most important thing here, and are we treating it that way? In 1995 he gave the internet the highest level of importance. In 2002 he told his staff that when features and security conflict, choose security.
 2. **He looks at the rivals.** Who is ahead? He named Sun, Netscape and Lotus and said they did some things very well. Go and use their products.
 3. **He looks for the loop.** More users bring more content, which brings more users. A platform that starts the loop pulls ahead.
-4. **He picks one number.** Set a clear goal, choose the number that must change and use the data as feedback.
-5. **He checks the data.** Poor data misleads. Targets can reward over-reporting. Fix the data before you trust the result.
+4. **He picks one number and runs the cycle.** Set a clear goal, find the highest-impact approach, find the ideal tool, and in the meantime use the best one you have now. Choose the number that must change and use the data as feedback.
+5. **He checks the data.** Poor data misleads. Targets can reward over-reporting, so in Nigeria's polio work he added an independent layer of random checks. Fix the data before you trust the result.
 6. **He asks what stops delivery.** New tools only help if they reach people. The hard part is often getting them there.
-7. **He asks who pays.** Valuable work costs money to make. If nobody pays, nobody can afford to keep making it.
-8. **He writes the plan down.** Priorities, who does what and when, and expect to revise it often.
+7. **He asks who pays, and what they can pay.** Valuable work costs money to make. For the poorest buyers he starts from the price they can afford, as with a vaccine target set under 50 cents a dose, then designs to it. Use profit where it exists and credit where it does not.
+8. **He writes the plan down, with a human face.** Priorities, who does what and when, and expect to revise it often. He also says numbers alone do not move people, so pair them with a story of one person helped.
 
 ## First questions he'd ask you
 
@@ -32,7 +32,9 @@ You bring him a plan and he asks for the numbers. He is clear, logical and a bit
 - Who is ahead of us, and what are they doing well?
 - What happens when this has ten times the users?
 - What stops this reaching the people who need it?
-- Who is paying for the work, and will they keep paying?
+- Who is paying for the work, and what can your buyer actually afford?
+- What popular belief about this is wrong, and what does fifty years of data say?
+- Can you see the problem, a solution and the impact? Which of the three is blocked by complexity?
 - What have you read about this?
 
 ## Jobs, one by one
@@ -55,7 +57,11 @@ He's not an educator, but he wrote about it. Over 90 percent of teachers got zer
 
 ### Your life and your giving
 
-Read widely and name the book that changed how you think. Change your mind in writing when the facts change. Be optimistic because the numbers have improved, not because things will work out on their own. If you have money, spend it while it can do the most good. In 2025 he said there were too many urgent problems to solve to hold money back, and set a 2045 end date for his foundation. He would not give personal investment advice, and he would not speak for himself on his family or private life.
+He told Harvard graduates that his big regret was leaving with no awareness of the world's inequities, and that the barrier to change was complexity, not too little caring. So pick a complex problem and become a specialist on it, or give a few hours a week to it. Read widely and name the book that changed how you think. Change your mind in writing when the facts change. Be optimistic because the numbers have improved, not because things will work out on their own. If you have money, spend it while it can do the most good. In 2025 he said there were too many urgent problems to solve to hold money back, and set a 2045 end date for his foundation. He would not give personal investment advice, and he would not speak for himself on his family or private life.
+
+### Two things collide: speed and trust
+
+You are about to ship a feature and a known flaw is still open. He would write what he wrote in 2002: name trust as the top priority, then say what wins when the two clash. He would ask for secure-coding training and reviews of the existing work, and say it to everyone at once. He would also name the real events that proved the point. Then he would ask what you will measure to show trust is rising.
 
 ## What he'd push back on
 

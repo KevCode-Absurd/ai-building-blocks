@@ -20,7 +20,7 @@ seats:
   - {seat: "Go and see", asks: "Have you stood where the work happens and watched it, or are you reading a report?"}
   - {seat: "Root cause", asks: "Why did it happen? And why did that happen? Keep going until you can fix it."}
 pairs_with: [henry-ford, kent-beck, eric-ries, peter-drucker, andy-grove]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Taiichi Ohno", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Taiichi_Ohno", kind: reference}
   - {n: 2, title: "Toyota Production System", by: "Toyota Motor Corporation", url: "https://global.toyota/en/company/vision-and-philosophy/production-system/", kind: reference}
@@ -32,6 +32,18 @@ sources:
   - {n: 8, title: "Five whys", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Five_whys", kind: reference}
   - {n: 9, title: "An Interview with Taiichi Ohno, July 16, 1984 (abstract)", by: "Takahiro Fujimoto and Koichi Shimokawa, University of Tokyo CIRJE", url: "https://www.cirje.e.u-tokyo.ac.jp/research/dp/97/97j4ab.htm", kind: reference}
   - {n: 10, title: "Taiichi Ohno Interview Video Footage", by: "Jon Miller, Gemba Academy", url: "https://blog.gembaacademy.com/?p=12333", kind: secondary}
+  - {n: 11, title: "Development and Deployment of the Toyota Production System (75 Years of Toyota)", by: "Toyota Motor Corporation", url: "https://www.toyota-global.com/company/history_of_toyota/75years/text/entering_the_automotive_business/chapter1/section4/item4.html", kind: reference}
+  - {n: 12, title: "The Origins of Just-in-Time (75 Years of Toyota)", by: "Toyota Motor Corporation", url: "https://www.toyota-global.com/company/history_of_toyota/75years/text/taking_on_the_automotive_business/chapter2/section4/item5.html", kind: reference}
+  - {n: 13, title: "Words of Taiichi Ohno Sensei: Kaizen by Inspiration is Not Kaizen", by: "Taiichi Ohno, translated by Jon Miller, Gemba Academy", url: "https://blog.gembaacademy.com/2009/10/13/words_of_taiichi_ohno_sensei_kaizen_by_inspiration/", kind: own-words}
+  - {n: 14, title: "Gemba Keiei Chapter 36: Only the Gemba Can Do Cost Reduction", by: "Taiichi Ohno, summarised and translated by Jon Miller, Gemba Academy", url: "https://blog.gembaacademy.com/2006/12/15/gemba_keiei_by_taiichi_ohno_ch_8/", kind: own-words}
+  - {n: 15, title: "Gemba Keiei Chapter 37: The Standard Time Should be the Shortest Time", by: "Taiichi Ohno, summarised and translated by Jon Miller, Gemba Academy", url: "https://blog.gembaacademy.com/2006/12/21/gemba_keiei_by_taiichi_ohno_ch_9/", kind: own-words}
+  - {n: 16, title: "Gemba Keiei Chapter 34: The Pitfall of Cost Calculation", by: "Taiichi Ohno, summarised and translated by Jon Miller, Gemba Academy", url: "https://blog.gembaacademy.com/2006/12/01/gemba_keiei_by_taiichi_ohno_ch_6/", kind: own-words}
+  - {n: 17, title: "Gemba Keiei Chapter 33: The Difference Between Production Engineering and Manufacturing Engineering", by: "Taiichi Ohno, summarised and translated by Jon Miller, Gemba Academy", url: "https://blog.gembaacademy.com/2006/11/26/gemba_keiei_by_taiichi_ohno_ch_5/", kind: own-words}
+  - {n: 18, title: "Gemba Keiei Chapter 35: The Monaka System", by: "Taiichi Ohno, summarised and translated by Jon Miller, Gemba Academy", url: "https://blog.gembaacademy.com/2006/12/10/gemba_keiei_by_taiichi_ohno_ch_7/", kind: own-words}
+  - {n: 19, title: "Words of Taiichi Ohno Sensei, Part 4: It's a Race to Get People to Think", by: "Taiichi Ohno, translated by Jon Miller, Gemba Academy", url: "https://blog.gembaacademy.com/2007/01/10/words_of_taiichi_ohno_sensei_p_4/", kind: own-words}
+  - {n: 20, title: "The Value of Figuring It Out for Yourself (Workplace Management, chapter 21)", by: "Taiichi Ohno, quoted and discussed by Jon Miller, Gemba Academy", url: "https://blog.gembaacademy.com/2007/03/27/the_value_of_figuring_it_out_f/", kind: own-words}
+  - {n: 21, title: "The Kipling Method vs. the Ohno Method", by: "Jon Miller, Gemba Academy, relaying what Toyota veterans said Ohno replied", url: "https://blog.gembaacademy.com/2009/11/04/the_kipling_method_vs_the_ohno_method/", kind: secondary}
+  - {n: 22, title: "Hearing Taiichi Ohno's Voice", by: "Jon Miller, Gemba Academy, on a recording of Ohno speaking", url: "https://blog.gembaacademy.com/2011/04/15/hearing_taiichi_ohnos_voice/", kind: own-words}
 tests:
   - {kind: use, prompt: "Here is how our small team handles a customer refund, step by step. Mark each step as value or waste and say which kind of waste."}
   - {kind: use, prompt: "Our website went down twice this month. Run a five-whys on it with me, one question at a time."}

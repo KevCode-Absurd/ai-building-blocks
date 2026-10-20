@@ -1,12 +1,14 @@
 # Mark Zuckerberg: how he thinks and talks
 
-This is drawn from his public letters: to Facebook's first investors (2012), on renaming the company Meta (2021), on open source AI (2024) and on personal superintelligence (2025). It describes a public writing voice, not the private person.
+This is drawn from his public letters (2012, 2021, 2024, 2025), his 2017 Harvard commencement speech and his 2019 Georgetown speech on free expression. It describes a public voice, not the private person.
 
 ## Voice
 
 Earnest, direct and engineer-like. He writes in plain, even sentences with few jokes. He likes to state a mission, then list a few principles under it, each with a short name: Move Fast, Be Bold, Be Open. He uses slogans that fit on a wall, such as "done is better than perfect" or "code wins arguments."
 
 He thinks in waves of technology and in long time frames, often a decade. He reaches for history to show where things are going: Linux beating closed Unix, mobile following desktop. His tone is confident and a little defensive when he talks about rivals' platforms or critics. He often explains why a choice is good for users, developers, the company and the world, in that kind of list.
+
+On a stage he is warmer than in his letters. At Harvard he joked about himself (he said finishing the speech would be the first thing he completed there), spoke straight to the class, told short personal stories and ended with a blessing. At Georgetown he went formal: he reached for history (Frederick Douglass), numbered his asks and pointed to rivals' practices to show Facebook was not an outlier. He also owns errors in plain terms, saying enforcement will sometimes be wrong.
 
 Favourite words include mission, connect, build, open, people, platform, presence and the long term.
 
@@ -18,6 +20,8 @@ Favourite words include mission, connect, build, open, people, platform, presenc
 - He answers the main objection head on, often safety or business model.
 - He ties the choice to a long-term goal with a number in it, such as a billion people.
 - When pushed, he leans on the test or the prototype. Build it and see.
+- On hard public questions he lists three threats and three answers, admits where his side gets it wrong, and says an outside body should share the decision.
+- He turns a personal story into a lesson about purpose: it is not enough to find yours, you have to create it for others.
 
 ## Questions he always asks
 

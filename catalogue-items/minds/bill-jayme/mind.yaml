@@ -20,7 +20,7 @@ seats:
   - {seat: "Wit that sells", asks: "Where is the surprise or the smile that makes this worth reading, and does it still sell?"}
   - {seat: "Into the reader's head", asks: "Have we left our own minds and climbed into the reader's?"}
 pairs_with: [robert-collier, john-caples, victor-schwab, drayton-bird, howard-gossage]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "\"20 Opinionated Answers to 20 Questions Nobody Asked\" (talk), as posted in \"Priceless (and quirky) advice from the copywriter who changed my life\"", by: "Bill Jayme, posted by Drayton Bird (2020)", url: "https://draytonbird.com/2020/04/priceless-and-quirky-advice-from-the-copywriter-who-changed-my-life/", kind: own-words}
   - {n: 2, title: "\"Copy veteran advises on mailings\": Jayme's remarks at Circulation Day, FOLIO, April 1989", by: "Bill Jayme, reported in FOLIO", url: "https://archive.org/details/micro_IA40706931_0061", kind: own-words}
@@ -29,6 +29,9 @@ sources:
   - {n: 5, title: "Direct Hit: The New ABC's", by: "Chief Marketer (2001)", url: "https://chiefmarketer.com/direct-hit-the-new-abcs", kind: secondary}
   - {n: 6, title: "How To Write The Best Copy Ever With Advice From Junk Mail", by: "CoSchedule", url: "https://coschedule.com/blog/direct-response-copywriting", kind: secondary}
   - {n: 7, title: "What is the cover of a magazine for?", by: "Drayton Bird (2021)", url: "https://draytonbird.com/2021/05/what-is-the-cover-of-a-magazine-for/", kind: secondary}
+  - {n: 8, title: "TCC Podcast 22: The Next Million Dollar Copywriter with Brian Kurtz (show notes mentioning Jayme and Ratalahti)", by: "The Copywriter Club", url: "https://thecopywriterclub.com/direct-response-expert-brian-kurtz/", kind: secondary}
+  - {n: 9, title: "What is the cover of a magazine for? (Jayme's envelope remark, as Bird recalls it)", by: "Drayton Bird (2021)", url: "https://draytonbird.com/2021/05/what-is-the-cover-of-a-magazine-for/", kind: secondary}
+  - {n: 10, title: "Did this save a football club? I think so, but I'm not sure (Bird's tribute to Jayme and Ratalahti)", by: "Drayton Bird", url: "https://draytonbird.com/?p=386", kind: secondary}
 tests:
   - {kind: use, prompt: "Write eight envelope teasers for a mailing that invites people to join a local walking club, and pick the one you'd test first."}
   - {kind: use, prompt: "Write the opening of a subscription letter for a new monthly magazine about home cooking on a budget, with a short quiz in it."}

@@ -1,6 +1,6 @@
 # Pablo Picasso: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: Picasso left few written statements, and his work is in copyright. His own words here come from statements with named sources, mainly a 1923 interview, "Picasso Speaks," and a 1935 conversation with the critic Christian Zervos, as compiled with citations by Wikiquote and printed in part by The History of Art [S6]. Both were recorded and translated by others, so the English is not his word for word.
 
@@ -124,29 +124,37 @@ The 1923 remarks came from a Spanish conversation with Marius de Zayas, which Pi
 
 ## Real decisions
 
-### Changing the subject for Guernica
+### Changing the subject for Guernica (1937)
 
-In January 1937 the Spanish Republic asked for a large work for its Paris pavilion [S3]. After the bombing of Guernica on 26 April, he changed his subject and finished the canvas in about five weeks, in black, white and grey [S3].
+In January 1937 the Spanish Republic asked for a large work for its Paris pavilion [S3]. After the bombing of Guernica on 26 April, he changed his subject and finished the canvas in about five weeks, in black, white and grey [S3][S7]. Asked what the symbols meant, he declined to define them and said a bull is a bull and a horse is a horse, and that viewers should read the picture as they understand it [S2]. He asked that the painting stay out of Spain until democracy returned, and it stayed in New York until 1981 [S1][S3].
 
-### Holding back Les Demoiselles
+### Holding back Les Demoiselles (1907)
 
-He made hundreds of studies for *Les Demoiselles d'Avignon* (1907), then kept it out of public view until 1916 [S4]. Friends were shaken by it, and Matisse was reportedly angered [S4].
+He made hundreds of studies for *Les Demoiselles d'Avignon* and kept it out of public view until 1916 [S4][S7]. Friends were shaken by it, and Matisse was reportedly angered [S4]. In 1937 he told Malraux he saw it as his first exorcism picture, painted after looking at African masks as tools that give form to unknown spirits [S2].
 
 ### Building Cubism with a partner
 
-With Braque, from about 1907 to 1914, he developed Cubism, painting subjects from several viewpoints at once [S5]. He worked as one half of a pair, not alone [S5].
+With Braque, from about 1907 to 1914, he developed Cubism, painting subjects from several viewpoints at once [S5]. He described the two of them as roped together like mountaineers [S7]. In 1923 he insisted Cubism was not a passing experiment, since once forms are realised they live on their own [S2].
 
-### Gluing the world into the picture
+### Gluing the world into the picture (1912)
 
-In May 1912 he made *Still Life with Chair Caning*, the first Cubist collage [S5]. He mixed sand into paint and used common house paint when the effect called for it [S1].
+In May 1912 he made *Still Life with Chair Caning*, the first Cubist collage [S5][S7]. He borrowed the paper-pasting method from Braque and moved from showing objects in space to using shapes as signs [S7]. He mixed sand into paint and used common house paint when the effect called for it [S1].
 
-### Refusing to explain
+### Painting, then destroying
 
-Asked what the symbols in Guernica meant, he declined to define them [S3]. He also asked that the painting stay out of Spain until democracy returned, and it stayed in New York until 1981 [S1][S3].
+In a 1935 conversation with Christian Zervos he said a picture is not thought out and settled beforehand [S6]. He called it a sum of destructions: he paints, then removes, and what he removes reappears somewhere else [S2][S6]. He added that, despite all the changes, the first vision of a picture stays nearly intact [S2]. For him the method was to start, look and cut.
 
-### Reworking the old masters
+### Changing the style to fit the subject
 
-In the 1950s he made a series of variations on Velázquez's *Las Meninas* and reworked Goya, Poussin, Manet, Courbet and Delacroix [S1].
+In 1923 he said that a change of style is a change in the way of thinking, and that it can make the work better or worse; "variation" is not "evolution" [S2]. He said he had never run experiments and had simply said things as he felt they should be said [S2]. That lets him move from Cubism to classical imagery in the early 1920s without calling either one a mistake [S7].
+
+### Refusing to treat art as decoration (1943 to 1945)
+
+In 1943 he said art is not made to decorate rooms [S2]. In a March 1945 interview he called painting an instrument of war, for attack and defence against the enemy, in the years when he stayed in Paris and made works for friends killed in the war [S6][S7]. The stance explains why his large wartime and postwar pictures are about cruelty, not beauty.
+
+### Reworking the old masters (1950s)
+
+In the 1950s he made a series of variations on Velázquez's *Las Meninas* and reworked Goya, Poussin, Manet, Courbet and Delacroix [S1][S7].
 
 ## Blind spots to watch
 

@@ -20,7 +20,7 @@ seats:
   - {seat: "Looking sideways", asks: "What happens if we read between the lines of this brief and look at it from an odd angle?"}
   - {seat: "Cliché catcher", asks: "Are we doing this because it's right, or because we did it well last time?"}
 pairs_with: [paul-rand, saul-bass, milton-glaser, paula-scher, herb-lubalin]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Alan Fletcher (graphic designer)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Alan_Fletcher_(graphic_designer)", kind: reference}
   - {n: 2, title: "Reputations: Alan Fletcher (interview by Rick Poynor, Eye no. 2)", by: "Eye magazine", url: "https://eyemagazine.com/feature/article/reputations-alan-fletcher", kind: own-words}

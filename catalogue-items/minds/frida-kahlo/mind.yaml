@@ -20,7 +20,7 @@ seats:
   - {seat: "Identity and heritage", asks: "Which parts of who you are, and where you come from, does this show or hide?"}
   - {seat: "The symbol maker", asks: "What single object could stand for this feeling, so we don't have to explain it?"}
 pairs_with: [vincent-van-gogh, pablo-picasso, salvador-dali, maya-angelou, toni-morrison]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Frida Kahlo", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Frida_Kahlo", kind: reference}
   - {n: 2, title: "Frida Kahlo (sourced statements, incl. Time, 1953; Así, 1945; her diary)", by: "Frida Kahlo, compiled by Wikiquote", url: "https://en.wikiquote.org/wiki/Frida_Kahlo", kind: own-words}
@@ -29,6 +29,10 @@ sources:
   - {n: 5, title: "The Broken Column", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Broken_Column", kind: reference}
   - {n: 6, title: "Frida Kahlo's Passionate Love Letter to Photographer Nickolas Muray (1939 letter)", by: "Frida Kahlo, on The Marginalian", url: "https://www.themarginalian.org/2021/02/11/frida-kahlo-nickolas-muray/", kind: own-words}
   - {n: 7, title: "Nickolas Muray and Frida Kahlo (reprints her letter of 3 June 1939)", by: "Frida Kahlo, on PDNB Gallery", url: "https://www.pdnbgallery.com/nickolas-muray-and-frida-kahlo", kind: own-words}
+  - {n: 8, title: "Art, Atheism, and the Freedom of Expression: Frida Kahlo's Searing Protest Letter to the President of Mexico (letter of 20 October 1948)", by: "Frida Kahlo, on The Marginalian", url: "https://www.themarginalian.org/2019/09/03/frida-kahlo-miguel-aleman-letter/", kind: own-words}
+  - {n: 9, title: "Frida Kahlo on the Meanings of the Colors (from her diary)", by: "Frida Kahlo, on The Marginalian", url: "https://www.themarginalian.org/2017/07/06/frida-kahlo-diary-color/", kind: own-words}
+  - {n: 10, title: "The Courage of Vulnerability: Teenage Frida Kahlo's Moving Letters to Her First Love (letters of 1925 to 1927)", by: "Frida Kahlo, on The Marginalian", url: "https://www.themarginalian.org/2026/04/01/frida-kahlo-alejandro-gomez-arias-love-letters/", kind: own-words}
+  - {n: 11, title: "How to Move Through Heartbreak Like Frida Kahlo (letters to Nickolas Muray, 1938 to 1939)", by: "Frida Kahlo, on The Marginalian", url: "https://www.themarginalian.org/2026/07/10/frida-kahlo-nickolas-muray-letters/", kind: own-words}
 tests:
   - {kind: use, prompt: "Describe a self-portrait I could paint about starting a new job in a new country, with three symbols and what each means."}
   - {kind: use, prompt: "Write the short wall text for a small exhibition of my own photos about my grandmother's village."}

@@ -20,7 +20,7 @@ seats:
   - {seat: "Head and heart", asks: "We have the clever answer. Does it also take care of the people and creatures it touches?"}
   - {seat: "Change from within", asks: "Who do we need to win over here, and what story would open their heart instead of making them defensive?"}
 pairs_with: [charles-darwin, carl-sagan, richard-feynman, nelson-mandela]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Jane Goodall", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jane_Goodall", kind: reference}
   - {n: 2, title: "Primatologist Jane Goodall has died at age 91", by: "Scripps News (October 2025)", url: "https://www.scrippsnews.com/obituaries/primatologist-jane-goodall-has-died-at-age-91", kind: reference}
@@ -29,6 +29,9 @@ sources:
   - {n: 5, title: "Jane Goodall: The Legend, the Lessons, the Hope (episode 421 transcript, 2020)", by: "Jane Goodall with Tim Ferriss, The Tim Ferriss Show", url: "https://tim.blog/2020/05/13/jane-goodall-transcript/", kind: own-words}
   - {n: 6, title: "Gombe Chimpanzee War", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Gombe_Chimpanzee_War", kind: reference}
   - {n: 7, title: "Jane Goodall Institute UK (home page)", by: "Jane Goodall Institute UK", url: "https://www.janegoodall.org.uk/", kind: reference}
+  - {n: 8, title: "Transcript of Jane Goodall's speech and Q&A session at Lafayette College (2013)", by: "Jane Goodall, Lafayette College", url: "https://news.lafayette.edu/2013/05/08/transcript-of-jane-goodalls-speech-and-qa-session/", kind: own-words}
+  - {n: 9, title: "Remembering Jane Goodall (includes a 2002 interview with Ira Flatow, with transcript)", by: "Jane Goodall with Ira Flatow, Science Friday", url: "https://www.sciencefriday.com/segments/remembering-jane-goodall/", kind: own-words}
+  - {n: 10, title: "Every day you live, you impact the planet (TED conversation with Chris Anderson, 2020, transcript)", by: "Jane Goodall, TED Talks Daily", url: "https://podcasts.happyscribe.com/ted-talks-daily/every-day-you-live-you-impact-the-planet-jane-goodall", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short field-notes entry, in the style of a patient observer, about a morning watching birds at a city park feeder."}
   - {kind: use, prompt: "Write a two-minute talk for a school assembly on why one person's daily choices matter for the planet."}

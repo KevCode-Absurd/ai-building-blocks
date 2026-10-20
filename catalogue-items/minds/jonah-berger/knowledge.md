@@ -1,8 +1,8 @@
 # Jonah Berger: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Jonah Berger is alive, and views can change. This data set comes from two interviews he gave, about *Contagious* in 2013 and *The Catalyst* in 2020, plus two articles built on his talks and interviews, and his own website [S1][S2][S3][S4][S5]. He was 32 in April 2013, which puts his birth around 1980 [S1]. His books themselves weren't opened here, and his later book *Magic Words* is only named on his site [S5]. We also drew on notes from a Wharton interview reprinted by SmartCompany, which carries his stories and phrasing [S6], and a Wikipedia article for the list of his books, degrees and papers [S7]. Our file for this person is thin: apart from the notes we hold only short records and the Wikipedia text, so his voice and method here rest mostly on earlier reading of the five main sources, not on full texts we could recheck. Treat each view as "as of" the date of its source.
+Jonah Berger is alive, and views can change. This data set comes from his own words in interviews about *Contagious* (2013 and 2014), *Invisible Influence* (2016) and *The Catalyst* (2020), plus the full text of his 2012 research paper with Katherine Milkman on what makes online content viral, which we read in its published form [S1][S2][S6][S8][S9][S10]. We also used two articles built on his talks, a 2021 podcast write-up, his own website and Wikipedia for the list of his books, degrees and papers [S3][S4][S5][S7][S11]. He was 32 in April 2013, which puts his birth around 1980 [S1]. His books themselves weren't opened, and his later book *Magic Words* is only named on his site [S5]. Interviews are often summaries, so exact figures are the interviewers' wording unless we say otherwise. Treat each view as "as of" the date of its source.
 
 ## In one paragraph
 
@@ -71,19 +71,31 @@ How he applied it: he compared a few flies in the house, which nobody calls an e
 
 ## Real decisions
 
-These are choices and cases he described, lightly sourced [S6][S7].
+These are choices in his research and advice, taken from his own paper [S8], his interviews [S2][S6][S9][S10] and a podcast write-up [S11].
 
-### Studying why things get shared
+### Studying real sharing, not guesses (the New York Times study)
 
-He earned a degree in human judgment and decision making and then a marketing PhD at Stanford, and built his research on why people talk about and pass on things. Papers in the record include "What Makes Online Content Viral?" with Katherine Milkman (2012) and one on when negative reviews help sales (2010) [S7].
+With Katherine Milkman, he asked why some online articles get shared more than others, and treated the claim that virality is random as something to test [S8]. They used a web crawler that checked the Times home page every 15 minutes between 30 August and 30 November 2008, which caught 6,956 articles, and noted which reached the "most e-mailed" list; 20% did [S8]. A random sample of 2,566 was coded by people who did not know the hypothesis [S8]. They also controlled for where and how long each article sat on the home page, because prominence alone could explain sharing, and newsroom staff told them those placement choices were made independently of the e-mailed list [S8].
 
-### Refusing both "random" and "cats"
+### Looking at arousal, not only "positive versus negative"
 
-In the Wharton interview he rejects the view that virality is luck and the view that it is just cat videos. He says there are evidence-based reasons things spread, but admits no one can promise a huge audience and that understanding the psychology only raises the odds [S6].
+Their expectation was that positive stories would travel more, and that was borne out [S8]. But they also argued that emotions differ in how much they energise a reader, so anger and anxiety (negative but activating) and awe (positive and activating) should spread, while sadness (negative and calming) should not [S8]. The field data fitted: a one-step rise in anger raised the odds of making the list by about a third, and sadness lowered them [S8]. They kept testing the idea because they wanted cause, not only correlation [S8].
 
-### Building from behaviour, not from platforms
+### Running lab tests to check the cause
 
-He tells businesses to focus on why people share, since those reasons last longer than any platform or tool. The six drivers he gives are social currency, triggers, emotion, public, practical value and stories, and he says you need not use all six, though more help [S6].
+To check that arousal really drives sharing, they ran small experiments with 49, 45 and 47 people [S8]. People read a story about an ad campaign or a customer service experience that was written to make them feel amused, angry or sad, and said how likely they were to share it [S8]. More amusement or anger raised sharing and more arousal, while sadness cut both [S8]. He drew a practical point: a safe, relaxed ad may be shared less than one that amuses, and an anxious story, like BMW's chase films, can still spread [S8].
+
+### Saying half of *The Tipping Point* is wrong
+
+In a 2014 interview Berger said he had been inspired by Malcolm Gladwell but that about half the book was wrong, because there is no evidence a small set of special people drives viral spread [S9]. His own work looked at the message, not the messenger [S9]. His reason, in his forest-fire comparison, was that how far a fire spreads depends on how ready the forest is, not on the size of the spark [S9].
+
+### Using a daily cue (Kit Kat and coffee)
+
+To show how a trigger works, he described Hershey tying Kit Kat to coffee in 2007 with the tagline "A break's best friend" [S9]. The interviewer reported that sales then rose about 8% by the end of 2007 and about a third by the end of 2008 [S9]. The sales figures come from the article's retelling, not a controlled test.
+
+### Telling firms to look past follower counts
+
+He told business audiences that only about 7% of word of mouth happens online, and that most happens face to face [S9][S10]. His reason was that companies overvalue Facebook fan counts because they are easy to measure, when the same psychology drives talk offline [S9][S10]. He also argued that ads and word of mouth should work together, since ads are fast and people trust each other more than ads [S10].
 
 ### Finding the remarkable angle in an ordinary product
 
@@ -91,7 +103,7 @@ His answer to "my product is dull" is that any product can be remarkable. He poi
 
 ### Moving from contagion to change
 
-After *Contagious* (2013) and *Invisible Influence* (2016), his 2020 book *The Catalyst* turned to how to change a mind, and later came *Magic Words* (2023) [S7]. In the book interview he says the way to change someone is to remove barriers, not to push [S2].
+After *Contagious* (2013) and *Invisible Influence* (2016), his 2020 book *The Catalyst* turned to how to change a mind [S7]. In interviews he says that piling on more facts often backfires, because people push back, and that most smokers already know every reason to quit, so their barrier is not information [S2][S11]. He tells change agents to ask why a person has not changed already and what is in the way, using Kurt Lewin's idea that behaviour depends on the person and the setting [S11]. Later came *Magic Words* (2023) [S7].
 
 ## How he decides
 
@@ -103,6 +115,9 @@ After *Contagious* (2013) and *Invisible Influence* (2016), his 2020 book *The C
 - Are we pushing, or letting them choose? [S3]
 - What's the cost of doing nothing? [S3]
 - How can they try it with less risk? [S3]
+- Does it stir a high-energy feeling, such as awe, anger or excitement, and not a calm or sad one? [S8]
+- Are we judging reach by online numbers when most talk happens offline? [S9][S10]
+- Why hasn't this person changed already? [S11]
 
 ## Where he stood
 
@@ -143,7 +158,7 @@ After *Contagious* (2013) and *Invisible Influence* (2016), his 2020 book *The C
 ## Short phrases on the record
 
 - "No one wants to share an advertisement." (Penn Today Q&A, 2013) [S1]
-- "We're not mindless automatons, but we are predictable." (Penn Today Q&A, 2013) [S1]
-- "Rather than going along when pushed, people often push back." (2020 interview) [S2]
+- "Why hasn't this person changed already?" (as quoted, Behavioral Grooves, 2021) [S11]
+- "Only 7% of word of mouth is online." (CKGSB interview, 2014) [S9]
 - "Seeds of doubt slow the winds of change." (2020 interview) [S2]
 - "Terrible things get replaced, but mediocre things stick around" (First Round Review) [S3]

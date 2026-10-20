@@ -20,7 +20,7 @@ seats:
   - {seat: "Search before you scale", asks: "Have we found a repeatable, scalable model yet, or are we hiring to execute a plan nobody has proved?"}
   - {seat: "Founder on the front line", asks: "When did a founder last hear a customer say no, and what did we learn?"}
 pairs_with: [eric-ries, clayton-christensen, marty-cagan, peter-drucker, noah-kagan]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Steve Blank", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Steve_Blank", kind: reference}
   - {n: 2, title: "About Steve Blank", by: "steveblank.com", url: "https://steveblank.com/about/", kind: reference}
@@ -28,6 +28,12 @@ sources:
   - {n: 4, title: "What's A Startup? First Principles (January 25, 2010)", by: "Steve Blank", url: "https://steveblank.com/2010/01/25/whats-a-startup-first-principles/", kind: own-words}
   - {n: 5, title: "Search versus Execute (March 5, 2012)", by: "Steve Blank", url: "https://steveblank.com/2012/03/05/search-versus-execute/", kind: own-words}
   - {n: 6, title: "Lean startup", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lean_startup", kind: reference}
+  - {n: 7, title: "When Hell Froze Over, in the Harvard Business Review (April 16, 2013)", by: "Steve Blank", url: "https://steveblank.com/2013/04/16/when-hell-froze-over-in-the-harvard-business-review/", kind: own-words}
+  - {n: 8, title: "Failure and Redemption (February 26, 2013)", by: "Steve Blank", url: "https://steveblank.com/2013/02/26/failure-and-redemption/", kind: own-words}
+  - {n: 9, title: "Ardent 2: Get Out of My Building (October 8, 2009)", by: "Steve Blank", url: "https://steveblank.com/2009/10/08/get-out-of-my-building/", kind: own-words}
+  - {n: 10, title: "Perfection by Subtraction: The Minimum Feature Set (March 4, 2010)", by: "Steve Blank", url: "https://steveblank.com/2010/03/04/perfection-by-subtraction-the-minimum-feature-set/", kind: own-words}
+  - {n: 11, title: "Ardent War Story 6: Listen more, talk less (October 22, 2009)", by: "Steve Blank", url: "https://steveblank.com/2009/10/22/ardent-war-stories-6-listen-more-talk-less/", kind: own-words}
+  - {n: 12, title: "Hacking for Defense in Silicon Valley (March 31, 2015)", by: "Steve Blank", url: "https://steveblank.com/2015/03/31/hacking-for-defense-in-silicon-valley/", kind: own-words}
 tests:
   - {kind: use, prompt: "Here's my one-page plan for a mobile car-wash business. List every guess it rests on and how I'd test each one with real customers in two weeks."}
   - {kind: use, prompt: "Write ten interview questions for my first conversations with possible customers for a bookkeeping service for freelancers."}

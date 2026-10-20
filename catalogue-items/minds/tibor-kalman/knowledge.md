@@ -1,8 +1,8 @@
 # Tibor Kalman: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Tibor Kalman died in 1999. His longest recorded words that we could open are a 1996 Eye interview, recorded in 1993 just before he moved to Rome [S1], and a short statement on his page at the Alliance Graphique Internationale [S2]. The rest comes from reference pages, an obituary and critical essays by other designers and writers. His 1998 monograph, *Perverse Optimist*, and a 1998 television interview were not available to us. Sources disagree on when he closed M&Co's New York office: Salon says 1991 [S6], while Wikipedia, the AGI and the Eye interview say 1993 [S1][S2][S3]. We follow 1993. His words are under copyright, so we quote only a few short phrases.
+Tibor Kalman died in 1999. His longest recorded words that we could open are a 1996 Eye interview, recorded in 1993 just before he moved to Rome [S1], and a short statement on his page at the Alliance Graphique Internationale [S2]. We have since read a longer exchange in his own words: his answers in a 1991 Print debate with the designer Joe Duffy [S11]. A 1998 exhibition review adds his views on annual reports, packaging and real estate branding [S12]. The rest comes from reference pages, an obituary and critical essays by other designers and writers. His 1998 monograph, *Perverse Optimist*, and a 1998 television interview were not available to us. Sources disagree on when he closed M&Co's New York office: Salon says 1991 [S6], while Wikipedia, the AGI and the Eye interview say 1993 [S1][S2][S3]. We follow 1993. His words are under copyright, so we quote only a few short phrases.
 
 ## In one paragraph
 
@@ -73,6 +73,10 @@ How he applied it: after his illness he rebuilt M&Co as a smaller studio focused
 - Borrow from everyday life, not from design annuals [S3][S5].
 - Use commercial tools to sell good ideas [S1].
 - Say the uncomfortable thing in public [S5].
+- Turn down about as much work as you accept; walk away from a project that turns into a disaster [S11].
+- Do not polish a client's weak manuscript: write or hire the words yourself [S11].
+- Go to the top decision-maker, who takes more creative risks [S11].
+- Treat packaging as a place where fake nostalgia can lie to buyers [S11].
 
 ## Real decisions
 
@@ -90,6 +94,18 @@ He used computer graphics to change the races of famous people in an issue of *C
 
 ### Working through illness
 Back in New York in 1995 after his diagnosis, he kept working [S2]. He pressed the AIGA to make members do charity work, and oversaw two books in his last years, including *Perverse Optimist* [S6]. A colleague said his illness made him easier to work with [S6].
+
+### Turning down work, and quitting the annual reports
+
+In the 1991 Print debate Kalman said M&Co turned down nearly as much work as it accepted, and walked away from projects that looked like a disaster mid-process [S11]. In its early years the firm took weak corporate work to survive, while doing cultural, music and unpaid work for smaller clients [S11]. He said M&Co had done the Limited annual reports for several years and would probably not take the next one [S11]. Later he called annual reports and packaging tools for distorting content [S12]. His reason was that a designer should not polish a client's message just because it is paid for [S11].
+
+### Making the AIDS card a statement
+
+Asked to design a card for a charity event, M&Co made a stark political statement about AIDS, "THEM=US", not a pretty card [S11]. For a related cake project the team wrote President Reagan's remarks about AIDS on the cake, in an angry piece, not a cute one [S11]. Kalman said the firm's work was ethical, political and moral at once [S11]. The choice makes the client's cause the content.
+
+### Walking out of Edible Architecture
+
+When M&Co proposed an AIDS-themed piece for the Edible Architecture show, the sponsor refused it [S11]. M&Co then did not take part [S11]. Kalman gave this as an example of the firm pulling out when the message it cared about was refused [S11].
 
 ## Where he stood
 
@@ -139,5 +155,5 @@ Back in New York in 1995 after his diagnosis, he kept working [S2]. He pressed t
 - "the real issue is what you use that language to do" (1993 interview) [S1]
 - "Editors have a responsibility to seduce their audiences to promulgate the truth." (1993 interview) [S1]
 - "We're here to inject art into commerce." (AGI statement) [S2]
-- "We're here to be bad." (AGI statement) [S2]
+- "I think packages are liars; that's what they do." (1991 Print debate) [S11]
 - "I use contrary-ism in every part of my life." (1998, as quoted by Salon) [S6]

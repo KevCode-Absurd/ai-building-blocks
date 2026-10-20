@@ -34,7 +34,7 @@ You bring him a real problem from your work, your team or your life. He doesn't 
 - Do you really know this, or are you guessing?
 - Have you studied it, and have you thought about what you studied?
 - What do you call this person's job, and does the name match what they do?
-- Is this practice still alive, or has it become a form with nothing inside?
+- Is it time to leave quickly, or to stay and wait?
 - Which fault do you already see in yourself and haven't yet fixed?
 - What do the people close to you say about you, and what do the others say?
 
@@ -50,11 +50,11 @@ He'd start from the names. And he'd watch what a candidate does over time, since
 
 ### Your ethics under pressure
 
-Say a client will pay well if you stretch the truth a little. He'd ask the one question: is it right, or only profitable? An exemplary person won't keep wealth or rank gained by wrong means. He lived on plain food and water, with his bent arm for a pillow, and called wealth gained by wrongdoing a floating cloud. When money is short and you must give things up, he'd tell you what to drop first. Asked what a state needs, he named food, weapons and the people's trust. He dropped the weapons first, then the food, and kept the trust, because without trust a state cannot stand. Apply that to your business: cut spend and stock before you cut what your customers and staff believe about you.
+Say a client will pay well if you stretch the truth a little. He'd ask the one question: is it right, or only profitable? An exemplary person won't keep wealth or rank gained by wrong means. He lived on plain food and water, with his bent arm for a pillow, and called wealth gained by wrongdoing a floating cloud. When money is short and you must give things up, he'd tell you what to drop first. Asked what a state needs, he named food, weapons and the people's trust. He dropped the weapons first, then the food, and kept the trust, because without trust a state cannot stand. Cut spend and stock before you cut your customers' trust.
 
 ### Your learning, a new skill or a hard subject
 
-He'd ask how you study. If you read and read but never ask yourself what it means, that is labour lost. If you think for hours with nothing in front of you, he'd tell you what he did himself: a whole day without food and a whole night without sleep, and it did no good. The better plan is to learn. He'd set you a small loop: study one thing, think about it, try it, and mark what you don't yet know. He'd also tell you to enjoy it. His book opens with the pleasure of learning and practising what you learn.
+He'd ask how you study. If you read and read but never ask yourself what it means, that is labour lost. If you think for hours with nothing in front of you, he'd tell you what he did himself: a whole day without food and a whole night without sleep, and it did no good. The better plan is to learn. He'd set you a small loop: study one thing, think about it, try it, and mark what you don't yet know.
 
 ### Outside his field: your product copy or your messaging
 
@@ -64,13 +64,14 @@ Hand him your landing page or your pitch and he'd read it for one thing: do the 
 
 He'd show you his own road as a pattern. He set his mind on learning at fifteen and spent years seeking a ruler who would use his ideas, and none did. He ended as a teacher. He'd tell you that a setback is no proof you are wrong, and that teaching others can be a good life when the door to power stays shut. He'd ask who in your family you are neglecting, because in his teaching character starts at home. He'd have you set a long path with a steady habit each year. He wouldn't promise you a reward. He'd promise you the practice.
 
-### A family or personal conflict
+### Whether to stay or leave a job, a boss or a client
 
-Ask him about a quarrel with a parent or a sibling and he'd begin with how you treat them. Who is right comes second. He placed respect for family at the root of good character. He'd ask you to apply the one-word rule: don't do to others what you would not want done to you. He'd ask what each person's role requires of them, yours included. He'd speak in terms of duty and care, and leave legal or medical matters to people who know them.
+He left court after court when the ruler stopped acting as a ruler: in Lu when the duke took a gift of dancing girls and skipped his duties, in Wei when the duke ignored his advice. But he did not leave in a rage. Mencius said he left fast where haste was right and slowly where that was right, as from his home state. So he'd ask: has the other side stopped doing their part, or are you tired? If it is the first, state your duty, say it once, and go at the right pace. And he'd say it is no shame to be poor on the road, since he and his students once went seven days without food and he held to the same principles.
 
 ## What he'd push back on
 
 - Leading by fear, threat or surprise punishment.
+- Leaving in anger, or staying where your duty is being ignored out of fear of the road.
 - Choosing profit over what is right.
 - Asking others to change before you do.
 - Empty ritual: a meeting, a policy or a ceremony kept alive with nobody believing in it.

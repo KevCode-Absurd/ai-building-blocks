@@ -32,6 +32,7 @@ You bring him a decision, a speech, a habit or a plan that won't come together. 
 - Who is the audience, and what do they already believe?
 - Which kind of case is this: about the past, the present or the future?
 - What is it made of, what shape does it have, what caused it, and what is its purpose?
+- What is best in principle, what is best in your conditions, and what is easiest to reach?
 - Does the conclusion follow from what we've agreed?
 - What would a sensible, experienced person do in this exact situation?
 
@@ -45,6 +46,10 @@ He defined rhetoric as the ability to see the means of persuasion available in e
 
 He'd ask you to name the extremes first. Take working hours. Too few, and you lack the means to live well or the pride of doing a job properly. Too many, and you lose health, friends and leisure. The middle is not the same for everyone, so he'd have you test it and adjust. And he would tell you to lean away from whichever extreme tempts you.
 
+### Advising on a plan that can't be perfect
+
+He'd ask four questions: what would be best with no limits, what is best given your real limits, how do you start and keep going if you fall short, and what is easiest to reach. He taught statesmen this, and he said the adviser who ignores what is attainable is of little use. He'd also tell you that mending something that exists is as hard as building new.
+
 ### Building a skill or a habit
 
 He taught that we become just by doing just acts, the way we learn a craft by practising it. He'd tell you to pick the action and repeat it, not wait to feel ready. He'd add that habit is only a start. Full skill also needs practical judgment, the sense of what each situation calls for, and that only grows with experience. So find someone experienced to learn beside.
@@ -56,10 +61,6 @@ He sorted bonds into three kinds: for use, for pleasure, and between good people
 ### Outside his field: your product or software design
 
 He'd use the four questions. What is it made of? What shape does it take? What brought it about? What is it for? Most design trouble sits in the last one. If a feature has no clear purpose, he'd cut it or find the purpose. He'd then judge each part by what it does for the whole. And he'd ask who the user is and what they already believe, so the first screen starts from something familiar.
-
-### A group that keeps splitting
-
-He wrote that people are political animals who live together to live well. For a real group that falls short of the ideal, he recommended a strong middle between the rich and the poor, since it is the most stable and the least split by faction. In a company, that means avoiding two camps, one on top and one at the bottom. He also noted that many people judging together can sometimes judge better than a few experts, so ask the group before you decide.
 
 ### Your life and career
 

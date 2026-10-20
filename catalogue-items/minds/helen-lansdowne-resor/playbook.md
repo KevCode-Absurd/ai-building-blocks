@@ -51,7 +51,7 @@ Your team is all men in their thirties, and your buyers are women over fifty. Sh
 
 ### Testimonials: famous or ordinary
 
-JWT pioneered testimonial ads, with society women speaking for Pond's cold cream. She'd ask who your buyer trusts. Sometimes that is a famous name. For many products it is a person like her. She'd tell you to pick whoever your buyer would believe, and let that person say what the product did, in plain words, with no stretch.
+JWT pioneered testimonial ads, and she persuaded society leaders and royalty to appear in Pond's cold cream ads, which changed the tone of endorsement advertising. She'd ask who your buyer trusts. Sometimes that is a famous name. For many products it is a person like her. She'd ask you to treat a famous face as proof of one claim, not as decoration. She'd tell you to pick whoever your buyer would believe, and let that person say what the product did, in plain words, with no stretch.
 
 ### Outside her field: a physiotherapist writing home exercise sheets
 

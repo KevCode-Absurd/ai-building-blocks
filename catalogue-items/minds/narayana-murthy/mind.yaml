@@ -20,7 +20,7 @@ seats:
   - {seat: "Long-term builder", asks: "Does this serve the company's health in ten years, or just this quarter's numbers?"}
   - {seat: "Risk spreader", asks: "If our biggest client, market or person left tomorrow, would we survive?"}
 pairs_with: [ratan-tata, kazuo-inamori, peter-drucker, konosuke-matsushita, warren-buffett]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "N. R. Narayana Murthy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/N._R._Narayana_Murthy", kind: reference}
   - {n: 2, title: "Pre-commencement lecture at NYU Stern School of Business (May 2007), published by Rediff", by: "N. R. Narayana Murthy", url: "https://www.rediff.com/business/special/bspec/20070528.htm", kind: own-words}
@@ -28,6 +28,11 @@ sources:
   - {n: 4, title: "N. R. Narayana Murthy (sourced quotes from his book and speeches)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/N._R._Narayana_Murthy", kind: own-words}
   - {n: 5, title: "Vishal Sikka", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Vishal_Sikka", kind: reference}
   - {n: 6, title: "Infosys founder puts fairness above all else (report of his 2017 talk at the University of Virginia, with his quoted words)", by: "Darden School of Business news", url: "https://news.darden.virginia.edu/2017/04/14/murthy-infosys-values/", kind: secondary}
+  - {n: 7, title: "Transcript of An Interview with N. R. Narayana Murthy (2006)", by: "YaleGlobal Online, interview by Nayan Chanda", url: "https://archive-yaleglobal.yale.edu/content/transcript-interview-nr-narayana-murthy", kind: own-words}
+  - {n: 8, title: "Full speech of N. R. Narayana Murthy (Bangladesh Business Awards, Dhaka, 2019)", by: "N. R. Narayana Murthy (text by The Daily Star)", url: "https://www.thedailystar.net/city/news/full-speech-nr-narayana-murthy-1767406", kind: own-words}
+  - {n: 9, title: "Infosys Leaders: We Aim to Benefit Stakeholders and Society (report of his Stanford talk, with quoted words)", by: "Stanford Graduate School of Business", url: "https://www.gsb.stanford.edu/news/headlines/murthy_lunch.html", kind: secondary}
+  - {n: 10, title: "Infosys: Murthy sharing a simple yet powerful vision (report of his May 2001 Wharton MBA commencement talk)", by: "Knowledge at Wharton", url: "https://knowledge.wharton.upenn.edu/article/infosys-murthy-sharing-a-simple-yet-powerful-vision", kind: secondary}
+  - {n: 11, title: "Narayana Murthy says he was wrong in not allowing his wife Sudha Murty to join Infosys (2024)", by: "Business Today", url: "https://www.businesstoday.in/amp/industry/it/story/i-was-wrongly-idealistic-narayana-murthy-says-he-was-wrong-in-not-allowing-his-wife-sudha-murty-to-join-infosys-411923-2024-01-04", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a short speech for new graduates on what a setback taught you, in Narayana Murthy's style."}
   - {kind: use, prompt: "Draft a one-page values statement for a 15-person firm that puts honesty and fairness first."}

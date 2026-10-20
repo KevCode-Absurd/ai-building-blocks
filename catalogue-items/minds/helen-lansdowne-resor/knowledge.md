@@ -1,8 +1,8 @@
 # Helen Lansdowne Resor: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Helen Lansdowne Resor died in 1964 [S1]. She left very little in her own name. We found no essays, speeches or interview transcripts by her in public sources. Her own words, as far as the record goes, are the ads she is credited with writing [S6][S8]. The ads and the 1911 *Woodbury Book* were unsigned, as ads were then, so we can't be sure she wrote every line [S7]. I read the full scanned text of the 1911 *Woodbury Book* itself, so the booklet's structure and wording are firsthand, while who wrote it is not [S7]. Most of what follows about her comes from reference pages and later accounts of her campaigns [S1][S3][S4]. Some "firsts" claimed for her are not well sourced, and we mark them. Her ads from 1911 to the 1920s are in the public domain, so we quote a few short lines.
+A note on method: Helen Lansdowne Resor died in 1964 [S1]. She left very little in her own name. We found no essays, speeches or interview transcripts by her in public sources. Her own words, as far as the record goes, are the ads she is credited with writing [S6][S8]. The ads and the 1911 *Woodbury Book* were unsigned, as ads were then, so we can't be sure she wrote every line [S7]. I read the full scanned text of the 1911 *Woodbury Book* itself, so the booklet's structure and wording are firsthand, while who wrote it is not [S7]. Most of what follows about her comes from reference pages and later accounts of her campaigns [S1][S3][S4]. On a second pass on 2026-10-21 we still found no essay, speech or interview by her. The new sources are the Advertising Hall of Fame page [S11] and a 2026 agency blog post [S12]; the first gives short remarks about her and her work, and the second repeats a one-line view of copy and a wartime claim with no cited source. Some "firsts" claimed for her are not well sourced, and we mark them. Her ads from 1911 to the 1920s are in the public domain, so we quote a few short lines.
 
 ## In one paragraph
 
@@ -103,6 +103,14 @@ She hired Edward Steichen for a 1923 Jergens lotion campaign, at a reported $1,0
 ### Deciding by agreement
 
 One account says she preferred agreement to orders from the top, and trusted her feel for the reader while her husband leaned on research [S3][S9].
+
+### Getting society leaders into Pond's ads
+
+For Pond's Cold Cream she persuaded society leaders and royalty to appear in the ads [S11]. The Hall of Fame page says this changed the tone of endorsement advertising [S11]. The page gives no date, fee or result, and does not give her reason. The idea fits her rule that copy must be believable: a trusted face stands in for a claim [S3][S12].
+
+### A wartime call to women workers
+
+A 2026 blog post credits her with a Second World War campaign, "Women must work to win the war," and says it drew about 3 million women into work [S12]. Wikipedia says only that the campaign is credited to her team [S1]. Treat the 3 million figure as a claim, not a measured result.
 
 ## Where she stood
 

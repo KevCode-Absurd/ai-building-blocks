@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Christie's later books are still in copyright, so we summarise them and keep quotes short. Her first two novels are public domain in the United States, and we read them directly: the full text of *The Mysterious Affair at Styles* [S3], including the closing explanation, and *The Secret Adversary* [S4]. We found no essay or interview of hers in her own words, so her working method comes from the reference pages [S1][S2][S5], and her taste for clues and tricks is read from the books themselves. What Poirot or her other characters say belongs to them.
+A note on method: Christie's later books are still in copyright, so we summarise them and keep quotes short. Several early books are public domain in the United States, and we read them directly: *The Mysterious Affair at Styles* [S3], *The Secret Adversary* [S4], *Poirot Investigates* [S9], *The Murder on the Links* [S10] and *The Murder at the Vicarage* [S11]. The detectives in them are her characters, so what they say about method is her fiction. We use it as a window on how she thought, and say so. Her own voice outside the novels is thin. We found no full interview. The closest are a short report of a 1955 BBC radio interview [S12] and her 1972 list of favourites, passed on by her official site [S7], together with its pages on how she wrote [S6][S8]. Her working method otherwise comes from the reference pages [S1][S2][S5] and from family accounts on the official site [S6]. Where the official site reports her view, we cite it and do not put new words in her mouth.
 
 ## In one paragraph
 
@@ -16,11 +16,15 @@ Christie's method began with the cast and the setting. Then she listed the scene
 
 The lesson: a twist only works if the writer knows exactly where it is going. Plan backward from the reveal.
 
+She said herself that the real work is in thinking out how the story develops, and that a book took about three months once the ideas were in place [S12]. The official site adds that she spent most of her time on a book before writing it, kept notebooks (73 survive) and found plans rarely survived drafting [S6]. She then dictated the book to a machine, a secretary typed it, and she corrected by hand [S6]. Her family were her first audience: she read chapters aloud after dinner and watched their faces [S6].
+
 ### Every small fact matters
 
 In *Styles*, Poirot tells Hastings that everything matters, and the plot proves him right [S3]. The clues are small, physical and easy to miss: a coffee cup crushed to powder, a stain of candle grease, a green thread, a strange substance in a cup of cocoa [S3]. Poirot later lists and numbers them [S3]. The book even includes floor plans and copies of a burnt scrap of a will, so readers can check the evidence for themselves [S3].
 
 How she applied it: the reader sees what the detective sees. The trick is in what the reader thinks the facts mean.
+
+Her detectives state the method for her. Poirot loves order and method, and he is shown arranging books by height [S9]. He tests a client's story against the facts, such as a rent too low to be true, and reads a small slip like a widow's rouged eyelids [S9]. In *The Murder on the Links* he mocks a rival who crawls over the ground for tiny clues, and says the work is done by thinking, with the little grey cells [S10]. Miss Marple works the other way: she compares a crime to a village scandal she remembers, expects little of people and keeps her opinion to herself until she has proof [S11].
 
 ### Hide the clue in plain sight with a trusted narrator
 
@@ -62,6 +66,9 @@ When she adapted her novels for the stage, she sometimes removed Poirot, believi
 - Save the full explanation for the last chapter [S3].
 - Keep prose plain and dialogue brisk [S4].
 - Use real knowledge, such as poisons or places, for the details [S1][S2].
+- Think the story through before writing, then test it on a small audience [S6][S12].
+- Never intrude yourself. She valued this advice from a fellow novelist, Eden Philpotts [S2].
+- Let a plan give way to the draft when the draft is better [S6].
 
 Put together, her habit was to work from the end back to the start. She chose the culprit and the method, then built the cast and setting around that choice [S1]. She listed the scenes where each clue would come out and moved them until the trail was fair but hard to follow [S1]. Only after that did she draft, and much of the dialogue was already worked out in her head [S1].
 
@@ -69,32 +76,37 @@ For details she used what she knew. Her dispensary work gave her poisons, and he
 
 ## Real decisions
 
-### Making the detective a man of method
-In *Styles*, Poirot is introduced as a retired Belgian detective, and Hastings recalls him saying good detective work is a matter of method [S3]. Poirot's highest praise for anyone is that he is "a man of method", and he says the case must be solved from within, by the little grey cells, not by chasing the letter that might have settled it [S3]. Christie made the thinking itself the hero.
+The first group are her own choices as the official site records them [S6][S7][S8]. The last is her bet on the trusted narrator, in *Roger Ackroyd*.
 
-### Clearing away manufactured clues first
-Mid-book, Poirot says the poison clue was planted, so he sets those aside and hunts the real ones: who could have passed the coffee, who could have posed as the husband [S3]. The reader is shown the planted trail and the real one together. The decision to reveal that some evidence was staged is what turns the plot.
+### Wrote a first detective novel on a bet
+She wrote *The Mysterious Affair at Styles* after her sister challenged her to write a detective story [S6][S8]. Six publishers turned it down, and it appeared in 1920 [S8][S1]. She worked out the plot first and then "found" her murderer on a tram in Torquay [S2]. An editor insisted on one spelling, and she gave way because she was a new novelist [S8].
 
-### Reading the victim's mood, not only the facts
-Poirot builds his answer from a timeline of the victim's feelings: calm and angry at four, in distress at five, anxious to burn her new will [S3]. He says he reasoned "psychologically" and saw that the second scandal she spoke of was about herself [S3]. The twist depended on a feeling the reader had been shown but not weighed.
+### Kept her serious novels under another name
+As Mary Westmacott she wrote six personal novels outside crime, and her authorship stayed secret for almost twenty years [S8]. The site gives no reason. Elsewhere it says she felt free to write more personal work under the name [S2][S1].
 
-### The killer who wants to be arrested
-The *Styles* solution is a double bluff. The guilty man planted evidence against himself, wanted to be tried, and planned to produce an alibi so he could never be tried again for the same crime [S3]. She chose a plot where the obvious suspect is a trap he set himself.
+### Took Poirot off the stage and the cover
+When she adapted four Poirot novels for the theatre, she left Poirot out [S8]. She also discouraged publishers from putting him on book jackets [S8]. The site says she felt he drew attention away from the plot [S2].
 
-### Using an advert as the engine
-In *The Secret Adversary*, two broke friends draft a newspaper advertisement for "two young adventurers for hire", cutting a line that looks too eager [S4]. A later ad asking for news of Jane Finn brings the replies that drive the plot [S4]. A small, ordinary act in the first chapter starts the whole machine.
+### Said yes to the Detection Club, with one condition
+In 1958 she accepted the presidency of the Detection Club on condition that she would never have to give a speech [S8].
 
-### Naming the threat and keeping it unseen
-The villain is "Mr. Brown", a name the other characters speak with dread long before anyone sees him. The last chapters tell us only that he commands and also serves, which means he is someone near the heroes [S4]. A plain name plus a hint that he is among them keeps the whole cast under suspicion.
+### Turned a radio play into The Mousetrap
+The play grew out of a radio play, *Three Blind Mice*, which she wrote at Queen Mary's request for her birthday [S8]. It opened as a stage play in 1952 and became the longest-running play [S1].
 
-### Pushing the narrator trick to the limit
-In *The Murder of Roger Ackroyd* she made the trusted narrator the killer. Some readers felt cheated and others said she broke no rule [S5]. Her choice was to bet that fair play meant every sentence true, not every fact told [S1][S5].
+### Kept writing at 75
+At 75 she considered retiring, but sales were strong, so she decided to carry on for at least five more years [S8]. She wrote until about a year before her death at 86 [S8].
+
+### Named her favourite, and said it could change
+In 1972, answering a Japanese fan's list, she put down *Endless Night* as her favourite at that time and ranked ten books [S7]. She gave reasons: *And Then There Were None* for a technical challenge she enjoyed, *Towards Zero* because the story builds toward a murder and does not start from it, and *Ordeal by Innocence* because she had held the idea for a long time [S7]. She added that rereading old books could change her mind [S7].
+
+### Betting that fair play meant true sentences, not every fact
+In *The Murder of Roger Ackroyd* she made the trusted narrator the killer. Some readers felt cheated and others said she broke no rule [S5]. His account leaves out the key act without stating anything false [S5].
 
 ## Where she stood
 
 **What is a fair mystery?** One where the clues are all there for the reader to find. Her most daring book tested how far a writer can go while still playing fair, and she kept the facts on the page [S5].
 
-**Is writing art or work?** Her official site says writing became a profession, not just a pleasure, after a hard period in the late 1920s [S2]. She was highly productive, writing two or three books a year in the 1930s [S2].
+**Is writing art or work?** Her official site says writing became a profession, not just a pleasure, after *The Mystery of the Blue Train* in 1928 [S2]. In 1955 she is reported to have said that boredom is what makes you write [S12]. She was highly productive, writing two or three books a year in the 1930s [S2].
 
 **Why write under another name?** As Mary Westmacott she wrote six more personal novels outside crime, which gave her freedom from readers' expectations [S1][S2].
 
@@ -145,3 +157,4 @@ In *The Murder of Roger Ackroyd* she made the trusted narrator the killer. Some 
 - "One fact leads to another" (Poirot, *The Mysterious Affair at Styles*) [S3]
 - "Two young adventurers for hire. Willing to do anything, go anywhere." (*The Secret Adversary*) [S4]
 - "Ten people had to die without it becoming ridiculous or the murderer being obvious." (Christie on *And Then There Were None*) [S1]
+- "There's nothing like boredom to make you write." (1955 radio interview, as reported) [S12]

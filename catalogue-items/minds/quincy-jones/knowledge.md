@@ -1,6 +1,6 @@
 # Quincy Jones: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
 Quincy Jones died on 3 November 2024, aged 91 [S1]. His views here rest on three interviews in his own words: one for the Academy of Achievement in 2000 [S2], a 2010 masterclass published in 2023 [S3], and a 2011 AARP interview [S6]. The first two are read from the publishers' pages and a write-up of the masterclass, so the wording is theirs and the ideas are his. The reference pages give dates and album facts only [S1][S4][S5]. Treat each view as "as of" its date. He told many stories over a long life, and some numbers vary between tellings; where they do, this file says so.
 
@@ -73,27 +73,38 @@ He told musicians to listen more than they talk and to stay humble [S3]. He warn
 - Set the room's rules before the work starts. A sign on the door did that for We Are the World [S4].
 - Write the warnings down. For that session the team asked artists not to copy or share the tape [S4].
 
-## Real decisions (enriched minds)
+## Real decisions
 
-### Turning down a scholarship to tour with Hampton
-Jones left Berklee's forerunner to go on the road with Lionel Hampton [S3]. In 2000 he described learning by playing in bands from age 13 and on the road with Hampton [S2]. It was with Hampton that his arranging talent first showed [S3].
+### Choosing the trumpet (as a teenager)
+
+In 2000 he said he tried the trombone first because of where it sat on the stage, but his heart was with the trumpets, which were too far back, so he chose the trumpet because that was what he really felt [S2]. His advice for beginners was to blow into it and sound bad for about a year and then a little better [S2]. He went on the road at 18 with Lionel Hampton, where his arranging first showed [S3][S7].
 
 ### Moving to Paris to study composition (1957)
+
 He went to Paris to study with Nadia Boulanger and to work for a record company [S2]. From Boulanger he took the lesson that there are only twelve notes, so study what everyone has done with them [S2]. She also said a musician needs a full life to have something to say [S3].
 
 ### Taking the Mercury vice presidency
-Jones accepted a vice presidency at Mercury Records to pay off debts and learn the business [S2]. He became the first African American in that role [S1]. He advised musicians to learn the business side [S3].
+
+Jones accepted a job at Mercury Records so that he could pay some of his debts back, after his big band failed [S2]. He became a vice president in 1964, the first African American in that role [S1][S7]. He called it a great education from the other side of the business [S2]. He advised musicians to learn the business side [S3].
 
 ### Cutting about 800 songs to nine for Thriller (1982)
-He and the team recorded far more songs than the album needed, then chose honestly, replacing weak finalists with stronger ones and putting ego aside [S3]. He called sequencing half the job [S3]. Reference accounts say the pool was about 30 songs, so treat his figure as a story [S5].
+
+He said the team reviewed about 800 songs and chose nine [S3]. He told producers to find the weakest songs in a finished set and either replace or strengthen them, and he added four tracks late for that reason [S3]. He said he picks artists he loves, because love lets him judge their range honestly, and that Michael Jackson went to a vocal teacher for Thriller [S3]. He called sequencing half the job, and thought of the album as a journey [S3]. Reference accounts say the pool was about 30 songs, so treat his figure as a story [S5].
+
+### Building a record in layers
+
+Jones compared making an album to painting: a rough sketch first, then watercolour, then oil to make it permanent [S3]. A record should reward repeated listening, with depth that shows on later plays [S3]. For one song he asked the drummer for a one-bar lick that the whole world could hum [S3]. When stuck he set the problem aside and let it work on him overnight [S3].
 
 ### Keeping the Sinatra set list private (1966)
-In Las Vegas, Sinatra wanted to open the set with a song Jones disagreed with. Jones objected softly in rehearsal and offered a different order in private, and Sinatra took it [S3]. His reason: let a star keep their standing in public [S3].
 
-### Returning half the fee (the Basie story)
-In the 2000 interview he told of a Basie concert where half the fee was given back [S2]. He tells it as a story about fairness to the people paying you [S2].
+In Las Vegas, Sinatra wanted to close the set with a song Jones disagreed with. Jones argued softly in the dressing room and offered a different order in private, and Sinatra took it [S3]. His reason: suggest to stars in private, so they keep their standing in public [S3].
+
+### Answering the "sellout" charge
+
+When jazz musicians said his work with Michael Jackson was a sellout, he replied that he had been doing this all his life and asked what they meant [S2]. His reason was that moving between styles was not even a stretch for him [S2]. He treated the criticism as a question about what good music is, and not about borders between genres.
 
 ### Writing the ground rules for We Are the World (1985)
+
 A sign on the studio door told stars to check their egos there [S4]. The team picked a guide vocal with less thought in it, warned against self-congratulation, and asked artists not to share the tape [S4]. The song raised over $80 million [S4].
 
 ## Where he stood

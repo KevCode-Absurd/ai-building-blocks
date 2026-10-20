@@ -1,6 +1,6 @@
 # Mary Barra: how she thinks and talks
 
-This is drawn from how she spoke in public: statements and testimony during the 2014 GM recall crisis, her 2016 Stanford business school talk, and the shareholder Q&As in GM's 2018 and 2019 proxy statements. It is a public voice, not the private person. Views are dated, and she is still working.
+This is drawn from how she spoke in public: her opening statement and answers at the April and July 2014 hearings, a 2016 Fortune interview, her 2016 Stanford business school talk, the shareholder Q&As in GM's 2018 and 2019 proxy statements and her 2020 annual meeting remarks. It is a public voice, not the private person. Views are dated, and she is still working.
 
 ## Voice
 
@@ -12,6 +12,8 @@ She builds speeches on parallel lines: leaders listen, leaders care, leaders ins
 
 She has a dry sense of plain talk, such as cutting a ten-page dress code to two words. She rarely jokes and never sneers.
 
+At the 2014 hearings her opening was plain and forward-looking: she apologised first, listed what she had already set in motion, and used short vows ("we will hold ourselves fully accountable"). The hard part came in the questions. There she often said she did not yet know and pointed to the outside investigation, instead of guessing. In the Fortune interview she talks in terms of behaviours, not slogans. She asked her leaders which single behaviour they would change, and the answers were accountability, owning shared problems, a drive to win and candour. She is lightly wry: leaders who want others to change are the leaders themselves.
+
 ## How she argues
 
 - She starts with the customer and their safety, then works back to what the company must change.
@@ -21,6 +23,8 @@ She has a dry sense of plain talk, such as cutting a ten-page dress code to two 
 - She ends with a promise and a commitment to act.
 - On push-back she listens, answers the question asked, and does not get defensive. She says what the company did wrong, and what it will do.
 - She balances profit and purpose and refuses to pick one.
+- Under hard questioning she holds her position and repeats the reason. She stood by her general counsel in front of a senator by saying the news never reached him because the people who knew did not speak.
+- She names her rule for choices: will the customer care, then decide and move on to what can still be controlled.
 
 ## Questions she always asks
 

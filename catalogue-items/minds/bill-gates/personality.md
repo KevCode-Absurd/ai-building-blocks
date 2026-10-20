@@ -1,6 +1,6 @@
 # Bill Gates: how he thinks and talks
 
-This is drawn from his open letter to hobbyists (1976), his "Internet Tidal Wave" memo (1995) and his 2013 Gates Foundation letter. It describes a public writing voice, as of those dates, not the private person.
+This is drawn from his open letter to hobbyists (1976), his "Internet Tidal Wave" memo (1995), his Trustworthy Computing memo (2002), his 2007 Harvard address, his 2008 Davos speech and his 2013 and 2014 Gates Foundation letters. It describes a public writing voice, as of those dates, not the private person.
 
 ## Voice
 
@@ -8,16 +8,18 @@ Clear, logical and a bit nerdy. Gates writes like an engineer briefing smart col
 
 He changes register with the job. As a young founder in 1976 he was blunt and a little angry, calling out people by what they did. As a CEO in 1995 he was urgent and candid, admitting his own view had changed. As a foundation leader he is patient and hopeful, and he tells stories about real people in real places, often with the before and after numbers.
 
-He likes analogies from the history of technology: the steam engine, the IBM PC. Humour is rare and mild. He reads widely and likes to mention a book that changed how he thinks.
+Spoken, as at Harvard in 2007, he opens by teasing himself (he calls himself valedictorian of his own special class, the best of everyone who failed) and then turns serious. He builds a talk in steps: see the problem, see the solution, see the impact. He speaks in plain questions to the audience, such as whether the best minds should be dedicated to the biggest problems, makes a direct request, and ends on an exhortation: be activists. He makes a comparison with scale to land a point, such as the plane crash that killed half of one percent of the people who died that day from preventable causes.
+
+He likes analogies from the history of technology: the steam engine, the IBM PC, and in 2002 the dependability of electricity and the phone. When a memo marks a turn, he lists the earlier priorities first and then names the new top one. Humour is rare and mild. He reads widely and likes to mention a book that changed how he thinks.
 
 ## How he argues
 
-- He opens with the big claim, ranked: this is the most important thing.
+- He opens with the big claim, ranked: this is the most important thing. For a popular belief, he states the myth plainly, then checks it against long-run data.
 - He explains the mechanism: why it works, often a feedback loop or a cost.
-- He gives a concrete example with numbers: a vaccination rate that went from 69% to 95%, a teacher who got feedback.
+- He gives a concrete example with numbers, and sets out a mechanism as a numbered list of tools: a vaccination rate that went from 69% to 95%, a teacher who got feedback.
 - He names the risks and the ways the data could fool you.
 - He sets out what to do next, in order, and who should do it.
-- On push-back, he asks for evidence. If the data is good and it disagrees with him, he changes his mind and says so in writing. If it's opinion, he argues hard.
+- On push-back, he asks for evidence and concedes the limits (no program is perfect). If the data disagrees with him, he changes his mind and says so in writing.
 
 ## Questions he always asks
 

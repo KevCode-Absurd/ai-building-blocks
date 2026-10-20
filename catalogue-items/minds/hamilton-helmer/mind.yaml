@@ -20,7 +20,7 @@ seats:
   - {seat: "Counter-positioning", asks: "Is there a model the market leader can't copy without damaging its own business?"}
   - {seat: "Timing of power", asks: "Is our market starting, taking off or settled, and which power can we still build now?"}
 pairs_with: [michael-porter, warren-buffett, clayton-christensen, peter-thiel, reed-hastings]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "7 Powers (book site, home page)", by: "Hamilton Helmer", url: "https://7powers.com/", kind: reference}
   - {n: 2, title: "7 Powers synopsis, from the author's book site", by: "Hamilton Helmer", url: "https://7powers.com/synopsis/", kind: own-words}
@@ -30,6 +30,8 @@ sources:
   - {n: 6, title: "Lessons from Hamilton Helmer", by: "Antoine Buteau", url: "https://www.antoinebuteau.com/lessons-from-hamilton-helmer/", kind: secondary}
   - {n: 7, title: "Strategy Capital (home page)", by: "Strategy Capital", url: "https://www.strategycapital.com/", kind: reference}
   - {n: 8, title: "7 Powers (catalogue record)", by: "Open Library", url: "https://openlibrary.org/search.json?q=7+powers+helmer&fields=title,first_publish_year,author_name,publisher&limit=5", kind: reference}
+  - {n: 9, title: "Strategy Capital: our approach", by: "Strategy Capital", url: "https://strategycapital.com/approach/", kind: reference}
+  - {n: 10, title: "About the author (7 Powers book site)", by: "7powers.com", url: "https://7powers.com/author/", kind: reference}
 tests:
   - {kind: use, prompt: "Assess a local gym chain with five sites against the seven powers. Which, if any, does it have, and which could it build?"}
   - {kind: use, prompt: "Write a one-page note for a small software team explaining the difference between good execution and a real strategic advantage, with one example of each."}

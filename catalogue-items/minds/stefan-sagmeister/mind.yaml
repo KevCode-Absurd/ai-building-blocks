@@ -20,7 +20,7 @@ seats:
   - {seat: "Beauty and form", asks: "Have we taken the form as seriously as the function?"}
   - {seat: "Time to experiment", asks: "When did we last try something no one asked us for?"}
 pairs_with: [tibor-kalman, jessica-walsh, milton-glaser, paula-scher, brene-brown]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Answers", by: "Stefan Sagmeister", url: "https://sagmeister.com/answers/", kind: own-words}
   - {n: 2, title: "Stop concentrating on your own happiness and start looking out for the happiness of others (interview, 2018)", by: "Catherine Hazotte, Forward Festival", url: "https://www.forward-festival.com/article/stop-concentrating-on-your-own-happiness-and-start-looking-out-for-the-happiness-of-others-interview-with-stefan-sagmeister", kind: own-words}
@@ -33,6 +33,9 @@ sources:
   - {n: 9, title: "Beauty = Function (project page)", by: "Sagmeister & Walsh", url: "https://sagmeister.com/work/beauty--function/", kind: reference}
   - {n: 10, title: "The power of time off (TEDGlobal 2009, talk page)", by: "TED", url: "https://www.ted.com/talks/stefan_sagmeister_the_power_of_time_off/transcript", kind: reference}
   - {n: 11, title: "You Are Not a Storyteller (2014)", by: "Joe Marine, No Film School", url: "https://nofilmschool.com/2014/08/you-are-not-a-storyteller", kind: secondary}
+  - {n: 12, title: "Stefan Sagmeister on sabbaticals (Time Sensitive, episode 8, interview transcript, recorded Feb 14, 2019)", by: "Stefan Sagmeister, Time Sensitive", url: "https://www.timesensitive.fm/episode/graphic-designer-stefan-sagmeister-sabbatical", kind: own-words}
+  - {n: 13, title: "Stefan Sagmeister: if all a design does is solve a problem for you then it will be mediocre and bad (interview, 2021)", by: "Stefan Sagmeister, U-tad", url: "https://u-tad.com/en/stefan-sagmeister-if-all-a-design-does-is-solve-a-problem-for-you-then-it-will-be-mediocre-and-bad/", kind: own-words}
+  - {n: 14, title: "POD sessions interview with Stefan Sagmeister (2016)", by: "De Vorm and designboom", url: "https://www.designboom.com/?p=322006", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a brief for a poster that turns the lesson 'worrying solves nothing' into a striking piece of type."}
   - {kind: use, prompt: "Plan a one-week experiment break for my three-person design team, with what we'd try and how we'd use it later."}

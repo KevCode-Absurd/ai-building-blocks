@@ -20,7 +20,7 @@ seats:
   - {seat: "Crisis and accountability", asks: "What exactly went wrong, who will we tell, and what will we change so it can't happen again?"}
   - {seat: "Culture and trust", asks: "Would someone on the front line feel safe telling us this was a problem?"}
 pairs_with: [satya-nadella, lisa-su, henry-ford, peter-drucker, kim-scott]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Mary Barra", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mary_Barra", kind: reference}
   - {n: 2, title: "GM 2019 proxy statement, boardroom Q&A with Mary Barra", by: "Mary Barra, General Motors (SEC filing)", url: "https://sec.gov/Archives/edgar/data/1467858/000119312519110751/d613802ddef14a.htm", kind: own-words}
@@ -29,6 +29,10 @@ sources:
   - {n: 5, title: "General Motors", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/General_Motors", kind: reference}
   - {n: 6, title: "Beyond business school: General Motors CEO Mary Barra (June 2017)", by: "Jillian Markowitz, Clear Admit", url: "https://www.clearadmit.com/2017/06/beyond-business-school-general-motors-ceo-mary-barra/", kind: secondary}
   - {n: 7, title: "Mary Barra: what every B-school graduate should know (2016 commencement talk)", by: "Mary Barra, Stanford Graduate School of Business", url: "https://www.gsb.stanford.edu/insights/mary-barra-what-every-b-school-graduate-should-know", kind: own-words}
+  - {n: 8, title: "The GM Ignition Switch Recall: Why Did It Take So Long? (House hearing transcript, April 1, 2014)", by: "Mary Barra, U.S. House Energy and Commerce subcommittee, via GovInfo", url: "https://www.govinfo.gov/content/pkg/CHRG-113hhrg89888/html/CHRG-113hhrg89888.htm", kind: own-words}
+  - {n: 9, title: "Mary Barra is Changing GM's Culture, Now Can She Move Its Stock? (interview, September 2016)", by: "Mary Barra, Fortune", url: "https://fortune.com/longform/mary-barra-general-motors-interview/", kind: own-words}
+  - {n: 10, title: "General Motors CEO Mary Barra tells shareholders they will be the most inclusive company in the world (annual meeting, 2020)", by: "Mary Barra, WXYZ Detroit", url: "https://wxyz.com/money/auto-news/general-motors-ceo-mary-barra-tells-shareholders-they-will-be-the-most-inclusive-company-in-the-world", kind: own-words}
+  - {n: 11, title: "CEO Mary Barra defends GM's top lawyer, blames fired employees for deadly defect failures (Senate hearing, July 17, 2014)", by: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/ceo-mary-barra-defends-gms-top-lawyer-senate-hearing", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short public statement for a small bakery that sold a batch of bread with an allergen missing from the label. Own it, explain the fix, and say what changes."}
   - {kind: use, prompt: "Rewrite this four-page office policy on working hours as one short rule plus a note to managers on how to apply it."}

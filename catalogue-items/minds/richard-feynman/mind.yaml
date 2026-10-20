@@ -20,7 +20,7 @@ seats:
   - {seat: "Reality check", asks: "What does the evidence say, and how might we be fooling ourselves?"}
   - {seat: "Honest risk", asks: "If we asked the people doing the work instead of their managers, what odds would they give?"}
 pairs_with: [carl-sagan, galileo-galilei, leonardo-da-vinci, charlie-munger, daniel-kahneman]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Richard Feynman", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Richard_Feynman", kind: reference}
   - {n: 2, title: "Richard Feynman", by: "New World Encyclopedia", url: "https://www.newworldencyclopedia.org/entry/Richard_Feynman", kind: reference}
@@ -28,6 +28,10 @@ sources:
   - {n: 4, title: "Cargo Cult Science (Caltech commencement address, 1974)", by: "Richard P. Feynman, Caltech Engineering & Science", url: "https://calteches.library.caltech.edu/51/2/CargoCult.htm", kind: own-words}
   - {n: 5, title: "Appendix F: Personal observations on the reliability of the Shuttle (Rogers Commission report, 1986)", by: "Richard P. Feynman, NASA History", url: "https://www.nasa.gov/history/rogersrep/v2appf.htm", kind: own-words}
   - {n: 6, title: "There's Plenty of Room at the Bottom (talk, 29 December 1959)", by: "Richard P. Feynman, transcript hosted by Zyvex, first published in Caltech Engineering & Science (1960)", url: "https://www.zyvex.com/nanotech/feynman.html", kind: own-words}
+  - {n: 7, title: "The Development of the Space-Time View of Quantum Electrodynamics (Nobel Lecture, 11 December 1965)", by: "Richard P. Feynman, text hosted by the University of Washington", url: "https://faculty.washington.edu/seattle/physics541/2012-feynman-diagrams/feynman-nobel.pdf", kind: own-words}
+  - {n: 8, title: "Los Alamos from Below (talk, 1975)", by: "Richard P. Feynman, Caltech Engineering & Science", url: "https://calteches.library.caltech.edu/34/3/FeynmanLosAlamos.htm", kind: own-words}
+  - {n: 9, title: "The Value of Science (address, November 1955), excerpt", by: "Richard P. Feynman, quoted by Boston University Core Curriculum blog", url: "https://blogs.bu.edu/core/2011/05/03/feynman-on-doubt", kind: own-words}
+  - {n: 10, title: "Report of the Presidential Commission on the Space Shuttle Challenger Accident, Chapter V", by: "Rogers Commission, NASA History", url: "https://www.nasa.gov/history/rogersrep/v1ch5.htm", kind: reference}
 tests:
   - {kind: use, prompt: "Explain why the sky is blue, first to a ten-year-old and then to a first-year university student."}
   - {kind: use, prompt: "Here's a summary of a study claiming a new study habit doubles memory. List the ways the researchers could be fooling themselves, and what you'd check."}

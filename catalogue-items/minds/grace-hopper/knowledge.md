@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Rebuilt 2026-10-20 from the full text of the two oral histories [S2][S3]; the 1980 transcript is an edited interview.
+Rebuilt 2026-10-20 from the full text of the two oral histories [S2][S3]; the 1980 transcript is an edited interview. On 2026-10-21 we re-read the 1980 transcript for more decisions and added a reporter's account of her 1987 talk at Ohio State, where her remarks appear in quotes inside someone else's article [S7]. We could not open her 1952 and 1978 papers (access blocked), and found no full transcript of her later talks.
 
 A note on method: Hopper gave long interviews about her life, and two of them are our main sources: one with the Smithsonian in July 1968 [S3] and one for the Computer History Museum in December 1980 [S2]. These are her own memories, told decades later, and she liked a good story. Where she claims credit, we say it's her claim. Two popular stories need care. She didn't find the famous moth "bug" herself, and the word "bug" is older than computers [S1][S6]. She is often called the inventor of COBOL, but COBOL was designed by a committee she advised [S1][S2]. Her views on women's rights are her views as of 1980, given here because they are on the record [S2].
 
@@ -80,13 +80,10 @@ Hopper said a new idea takes five to ten years to get across. It did for compile
 ## Real decisions
 
 ### Writing the compiler instead of copying code by hand (1952)
-Programmers copied pieces of code from a library by hand and often miscopied them or added up addresses wrong. Her stated reason for acting was that copying is exactly what a computer does well, so why not make it do that [S2]. She says her nerve came partly from Betty Holberton having already written a program that wrote a program [S2]. People did not believe it and the idea took years to be used [S2].
+Programmers copied pieces of code from a library by hand and often miscopied them or added up addresses wrong. Her stated reason for acting was that copying is exactly what a computer does well, so why not make it do that [S2]. She says her nerve came partly from Betty Holberton having already written a program that wrote a program [S2]. People did not believe it and the idea took years to be used [S2]. Her group also built a small model compiler of about twenty statements, with all the controls, to win funding, and then decided to do more once it looked trivial next to the budget they had asked for [S2].
 
-### Building a small model compiler to win a budget
-Her group built a preliminary compiler that took only about twenty statements but had all the controls, so they could get funding. She says the more they looked, the more trivial it seemed next to the biggest budget they had asked for, so they decided to do more first [S2].
-
-### Using French and German words in the demonstration
-Her group made every statement start with a verb, then swapped in French and German words and ran the same program to show the language was not tied to English. Marketing and non-technical management rejected it, saying a computer built in Philadelphia could not understand German [S2]. She later pointed out that COBOL programs worldwide mixed English verbs and connecting words with local nouns [S2].
+### Giving data processors words, not symbols (1950s)
+She decided there were two kinds of people trying to use computers: those who liked symbols, such as mathematicians, and data processing people who hated them and wanted words. So she argued for two languages, and FLOW-MATIC B-0 was the word-based one that became an ancestor of COBOL [S2]. Her group made every statement start with a verb, then swapped in French and German words and ran the same program to show the language was not tied to English. Management rejected it, saying a computer built in Philadelphia could not understand German [S2]. She later pointed out that COBOL programs worldwide mixed English verbs and connecting words with local nouns [S2].
 
 ### Giving credit to a rival language to win support for COBOL
 She says FLOW-MATIC was about ninety-five per cent of COBOL 60, yet she backed describing it as a mix of FLOW-MATIC and the rival Commercial Translator. Her reason was practical: if the rival's backers got credit they would join, and if not they would fight. She sums it up as "you can always afford to" give credit [S2]. This is her own account.
@@ -97,8 +94,28 @@ She disagreed with colleagues who wanted a compiler that kept absorbing new gene
 ### Cutting a table of values from a cord of paper to two volumes (wartime Navy)
 When a Navy group asked for values every foot along a curve, the team worked out the printout would fill a cord of paper. They explained that the numbers were needed only where the curve changed, and cut the job to two volumes [S3].
 
+### Pulling inventory off the big machine (1980 view)
+In 1980 she described a salesman whose customer phones to ask if five large anchors are in stock: he cannot leave the customer waiting for ten minutes. Her reason for wanting inventory on its own small computer was that it had shared a machine with payroll only because the company owned one machine. A set of small computers, each dedicated to its job, would cost less and go faster [S2].
+
+### Stepping off the COBOL committee (date not given)
+She had been the Univac representative on the COBOL committee until she noticed she was fighting for her own ideas instead of looking at the whole picture, and asked for someone else to be put on. Her stated lesson was that you can get too wrapped up in your own ideas [S2].
+
 ### Writing the Mark I manual when told to
 Aiken told her she was going to write a book. She said she had never written one, and he answered that she was in the Navy now. She wrote it, and says she picked the chapter headings carefully [S3][S2].
+
+## Her own rules, as she said them
+
+### Lead, don't only manage
+
+In 1980 she said the last thirty years had gone too far toward managing everything. She pointed out that in the armed services you cannot manage someone into combat, and that a manager cannot expect people to arrive on time unless he does. Young people, she said, want freedom within defined limits and will test the limits [S2].
+
+### Don't throw away what you knew
+
+She noted that when the vacuum tube computers went away, programmers threw out everything they knew and started over, and many of the old ideas, such as structured programming, were coming back [S2].
+
+### Humans resist change
+
+In a 1987 talk, as reported, she said people are allergic to change, and that she kept a clock on her wall that ran backwards as a reminder [S7]. The same article has her saying she was once told computers could only do arithmetic, even after she had a working compiler [S7].
 
 ## Where she stood
 

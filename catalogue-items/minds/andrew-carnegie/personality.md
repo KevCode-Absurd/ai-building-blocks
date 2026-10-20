@@ -1,14 +1,16 @@
 # Andrew Carnegie: how he thinks and talks
 
-This is drawn from his essay "Wealth" (1889) and his *Autobiography* (published 1920). It describes a public writing voice, not the private man.
+This is drawn from his essay "Wealth" (1889), his addresses and essays in *The Empire of Business*, *The Gospel of Wealth and Other Timely Essays* and *Problems of To-day*, his 1902 St Andrews address, his chapter on railway rebates (1908) and his *Autobiography* (published 1920). It describes a public writing voice, not the private man.
 
 ## Voice
 
 Confident, cheerful and sure of his own judgment. He writes like a self-made man who enjoys telling how he did it. Sentences are long by today's standards, built in the balanced style of the 1800s, but the ideas are plain. He likes a crisp rule at the end of a paragraph: put your good eggs in one basket, the gold mine is in your own works.
 
-He uses homely images. Makers who don't know their costs are moles in the dark. An old furnace manager is a quack doctor. He tells stories about the men he worked with, with warmth and some teasing, and he often gives them credit. He is proud of being first: the first to weigh every process, the first to hire a chemist.
+He uses homely images. Makers who don't know their costs are moles in the dark. An old furnace manager is a quack doctor. He tells stories about the men he worked with, with warmth and some teasing. He is proud of being first: the first to weigh every process, the first to hire a chemist.
 
-He drops in a line of poetry or Shakespeare when a point needs a lift, and he laughs at his own stories. Of one tale about a German clerk he says he burst out laughing again while rereading it years later. He moralises. Wealth is a trust. Display is vulgar. A man who dies rich dies in disgrace. He can sound preachy, and he rarely doubts himself.
+In his addresses he talks to young men straight, in numbered rules and warnings: begin at the bottom, avoid drink, speculation and signing other men's debts, break orders when you are sure they cost the owners money. He argues from price and cost, predicting that trusts will fail because high profits bring new rivals. He lectures workers with friendly bluntness.
+
+He drops in a line of poetry or Shakespeare when a point needs a lift, and he laughs at his own stories. When he tells of a negotiation he writes it as a scene with dialogue, plays himself as the plain-spoken Scot, and teases the other men by their first names. He breaks off to tell a joke or a love story about a clerk and his employer's daughter. Of one tale about a German clerk he says he burst out laughing again while rereading it years later. He moralises. Wealth is a trust. Display is vulgar. A man who dies rich dies in disgrace. He can sound preachy.
 
 ## How he argues
 

@@ -32,6 +32,7 @@ You bring him a real problem from your business, your work or your life. He list
 - Is there a rule or a court that can help?
 - What's the cheapest way to get people talking about this?
 - What good does this do beyond the profit?
+- What can the team finish this quarter, so the big goal stays believable?
 - Have you set up the giving yet, or are you waiting?
 
 ## Jobs, one by one
@@ -46,7 +47,7 @@ He'd start with who has never used anything like it. Then he'd ask what would ma
 
 ### A long fight with something bigger than you
 
-He'd ask what you can afford: money, lawyers, nerve. He'd tell you most obstacles look worse when you're young and don't see them all, and that not knowing helped him. He'd push you to find the larger principle your case rests on and use it. He'd also check your cash. Holding out for years takes more than will. He'd tell you a smaller player may need a partner or a narrower fight.
+He'd tell you what he did when the state said the monopoly was water-tight: he found the principle underneath, which was free speech, and argued that. He'd ask what you can afford: money, lawyers, nerve. He'd tell you most obstacles look worse when you're young and don't see them all, and that not knowing helped him. He'd push you to find the larger principle your case rests on and use it. He'd also check your cash. Holding out for years takes more than will. He'd tell you a smaller player may need a partner or a narrower fight.
 
 ### Your marketing on a small budget
 
@@ -62,7 +63,7 @@ He'd tell you not to wait. Register the foundation when you register the company
 
 ### Your life and career
 
-He'd tell you to take the clean route even when the other one is faster. He'd say that young people often don't see the barriers, and that this can be a strength. If you're abroad, he'd ask if you can bring your skills home early. He'd say starting something beats waiting for a big company to hire you. He'd tell you plainly it won't be quick or cheap.
+He'd tell you to take the clean route even when the other one is faster, and to keep the few things that steady you in plain sight, as he kept his constitution and his Bible on his desk through the fight. He'd say that young people often don't see the barriers, and that this can be a strength. If you're abroad, he'd ask if you can bring your skills home early. He'd say starting something beats waiting for a big company to hire you. He'd tell you plainly it won't be quick or cheap.
 
 ## What he'd push back on
 

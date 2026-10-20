@@ -1,6 +1,6 @@
 # Sun Tzu: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. The book text (S1) was re-read in the chapters on plans, terrain, fire and spies on 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-20. The book text (S1) was re-read in the chapters on plans, terrain, fire and spies on 2026-10-20, and on 2026-10-21 we read Giles's introduction in it, which retells Sima Qian's life of Sun Tzu and two passages from his history of the state of Wu. A second English translation, by E. F. Calthrop (1905), exists on Wikisource [S6][S7]; we saw only its index and preface, not its chapters. Claims cite the sources in mind.yaml as [S1].
 
 A note on method: we don't know much about Sun Tzu as a person, and some scholars doubt he existed at all [S3]. "Sun Tzu" is a title that means "Master Sun" [S3][S5]. The book credited to him, *The Art of War*, was probably written down a century or more after the dates given for his life, perhaps by several hands [S3][S4]. So this data set treats "Sun Tzu" as the voice of the book. It reads his ideas from the 13 chapters, in Lionel Giles's English translation of 1910, which is in the public domain [S1][S2]. We quote a few short lines from it. Where this file says "he", read "the book".
 
@@ -85,7 +85,7 @@ How he applied it: the cost case for spies (cheap next to years of war) shows ho
 
 ## Real decisions (enriched minds)
 
-These are rulings the book gives, not recorded acts of a known person. Legends about the author are in the record section [S3].
+The first five are rulings the book gives. The last three are acts told of the author in Giles's introduction, which quotes the historian Sima Qian [S1]. Scholars treat the drill story as legend [S5], so read all three as teaching tales more than certain history.
 
 ### Go only if you can win, even against the ruler
 The book says if victory is sure, the general should fight even when the ruler forbids it, and if it is not, he should not fight even at the ruler's bidding [S1]. Its reason is that the general must serve the country, not his own fame or fear of blame [S1].
@@ -101,6 +101,15 @@ Chapter X lists six faults, all the commander's, such as sending a force against
 
 ### Pay for spies instead of waiting
 The final chapter argues that a small sum spent on spies is far cheaper than years of war, and that refusing to spend it is cruel [S1].
+
+### Drilling the king's women: clear orders first
+In the story Sima Qian tells, King Ho Lu of Wu asked to see Sun Tzu's method tested on 180 women from his palace [S1]. Sun Tzu split them into two companies under the king's two favourites and explained the commands. When they laughed, he said that if orders are not clear the general is to blame, and drilled them again [S1]. When they laughed a second time, he said that if orders are clear and the soldiers still disobey, the officers are at fault, and had the two leaders beheaded [S1]. When the king begged him to spare them, he answered that a general with the king's commission cannot accept certain commands of the king [S1]. The next two leaders drilled the women with perfect precision [S1].
+
+### Waiting at Ying, 512 BC
+In the history Giles quotes, Ho Lu had won a town and wanted to strike the Ch'u capital, Ying [S1]. Sun Wu said the army was exhausted, so it was not yet possible and they must wait [S1]. His reason was the state of the troops, not the ambition of the target [S1].
+
+### Winning allies before the strike, 506 BC
+Six years later Ho Lu asked if the time was now right [S1]. Sun Wu and Wu Zixu answered that the Ch'u general was greedy, and that the princes of T'ang and Ts'ai had a grudge against him [S1]. Their advice was to win over those two states first, then attack [S1]. Ho Lu followed it, won five battles and entered Ying [S1]. This matches the book's order of preference: spoil their alliances before you fight their army [S1].
 
 ## Where he stood
 

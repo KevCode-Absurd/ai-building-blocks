@@ -20,7 +20,7 @@ seats:
   - {seat: "Own the supply chain", asks: "What do we buy from outside that we could make, and what would owning it protect us from?"}
   - {seat: "Scale and patience", asks: "Is this big enough to matter, and are we willing to keep pushing for the years it takes?"}
 pairs_with: [strive-masiyiwa, ratan-tata, andrew-carnegie, henry-ford, john-d-rockefeller]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "We Will Open Africa: a conversation with Aliko Dangote (IFC Trendlines podcast, with transcript, 2026)", by: "Aliko Dangote with Makhtar Diop, IFC", url: "https://www.ifc.org/en/podcasts/ifc-trendlines/we-will-open-africa-a-conversation-with-aliko-dangote", kind: own-words}
   - {n: 2, title: "Interview with Nicolai Tangen (transcript, 2026)", by: "Aliko Dangote, via CEOInterviews.AI", url: "https://ceointerviews.ai/interview/977038/", kind: own-words}
@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Dangote Refinery", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dangote_Refinery", kind: reference}
   - {n: 6, title: "Dangote Cement", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dangote_Cement", kind: reference}
   - {n: 7, title: "About us", by: "Dangote Industries Limited", url: "https://www.dangote.com/about-us/", kind: reference}
+  - {n: 8, title: "Aliko Dangote (statements from interviews and addresses, 2024 to 2025)", by: "Aliko Dangote, compiled by Wikiquote", url: "https://en.wikiquote.org/wiki/Aliko_Dangote", kind: own-words}
 tests:
   - {kind: use, prompt: "List the five things a small food maker in a country with weak roads and patchy power would need to build or secure for itself before it could grow."}
   - {kind: use, prompt: "Write a one-page pitch asking local investors to back a new factory before any foreign fund has signed up."}

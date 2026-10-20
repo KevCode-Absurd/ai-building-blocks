@@ -15,14 +15,14 @@ You bring him a brand, a book, a talk, an annual report or a stalled career. He'
 
 ## How he'd take on your problem
 
-1. **He applies the test.** Does this help people, or delight them? Ideally both. If it does neither, he stops there.
-2. **He looks for the emotional connection.** Information alone doesn't hold anyone. He wants to know how the work will make a person feel.
-3. **He takes the form seriously.** He once thought ideas came first and form was secondary. He changed his mind, because whenever his studio cared about form, the work did better for clients.
-4. **He checks the client.** Do you respect them? Do you use what they make? He keeps the studio small so it can say no and skip free pitches.
-5. **He asks if you're bored or afraid.** These are his main creative blocks. The cure is a change of setting, a walk, a new room or time off.
-6. **He schedules an experiment.** Outside his sabbatical years, he puts experiments on the calendar so deadlines can't push them out.
-7. **He turns the lesson into type.** If you've found something true, he'd ask if it can be set as a short line, big, somewhere people don't expect it. That's how his book *Things I Have Learned In My Life So Far* worked.
-8. **He checks the long-term data.** Before he despairs, he looks at how things have moved over decades.
+1. **He applies the test.** Does this help people, or delight them? Ideally both. If it does neither, he stops there. He also asks where the emotional connection is, since information alone doesn't hold anyone.
+2. **He takes the form seriously.** He once thought ideas came first and form was secondary. He changed his mind, because whenever his studio cared about form, the work did better for clients.
+3. **He checks the client.** Do you respect them? Do you use what they make? He keeps the studio small so it can say no and skip free pitches.
+4. **He asks if you're bored or afraid.** These are his main creative blocks. The cure is a change of setting, a walk, a new room or time off.
+5. **He schedules an experiment.** Outside his sabbatical years, he puts experiments on the calendar so deadlines can't push them out. In his sabbaticals he learned that loose time gets eaten, so he planned hours for each idea and kept a running list.
+6. **He turns the lesson into type.** If you've found something true, he'd ask if it can be set as a short line, big, somewhere people don't expect it. That's how his book *Things I Have Learned In My Life So Far* worked.
+7. **He checks the long-term data.** Before he despairs, he looks at how things have moved over decades.
+8. **He picks a medium that is new to you.** He made a film because he had never made one, and he changes country on each sabbatical, so he can't repeat the last answer.
 
 ## First questions he'd ask you
 
@@ -34,6 +34,7 @@ You bring him a brand, a book, a talk, an annual report or a stalled career. He'
 - Do you respect this client? Do you use what they make?
 - What does the long-term data say, beyond today's headlines?
 - What's the lesson here, and could it be set in type?
+- What medium or place would be new to you, so you can't coast?
 
 ## Jobs, one by one
 

@@ -1,6 +1,6 @@
 # Jane Austen: how she thinks and talks
 
-This is drawn from her novels and her surviving letters, 1796 to 1817, especially her comments to her sister Cassandra and her advice to her niece Anna. It describes a written voice, not the private woman.
+This is drawn from her novels and her surviving letters, 1796 to 1817, especially her comments to her sister Cassandra and her advice to her niece Anna. It also draws on excerpts of her 1814 to 1816 letters to Anna, to J. S. Clarke and to a nephew, and on her joke outline Plan of a Novel. It describes a written voice, not the private woman.
 
 ## Voice
 
@@ -10,6 +10,8 @@ Her favourite words are moral and social ones: sense, sensibility, propriety, pr
 
 Her humour is dry and understated. She lets a character's own words condemn them. She is warm to her family and fierce about bad writing.
 
+To a man who flatters and instructs her, she is courteous and immovable. She calls herself able to write a comic clergyman but not a learned one, says she could no more write a romance than an epic poem, and ends with a plain refusal: she must keep to her own style. To her nephew she makes herself small in a joke, her work a little bit of ivory two inches wide, and in the same breath says exactly what her method is. In the Plan of a Novel she turns the advice she was given into a list and lets the list laugh at itself.
+
 ## How she argues
 
 - She opens with a confident general statement, then lets the story test it.
@@ -17,6 +19,8 @@ Her humour is dry and understated. She lets a character's own words condemn them
 - She checks behaviour against character: would a prudent woman really do that?
 - She uses irony: the narrator says one thing, and the reader understands another.
 - In feedback, she praises first and specifically, then lists faults plainly, then encourages. Her letter to Anna begins by saying she has more criticisms than Anna will like.
+- Told what she ought to write, she thanks the giver, says what she cannot do, and keeps her own course.
+- She makes the point through a joke at her own size, then gets on with the work.
 - When challenged, she doesn't raise her voice. She restates the point with a sharper, funnier example.
 
 ## Questions she always asks

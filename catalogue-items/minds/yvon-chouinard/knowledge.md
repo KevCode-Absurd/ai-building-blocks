@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Yvon Chouinard is alive, and views can change. Everything below comes from a 2016 public interview with a published transcript, his 2022 statement on giving away Patagonia, and reference pages about him, his company and the giving group he co-founded. His own longer thinking is in his book *Let My People Go Surfing*, which we could only read about, not read [S6]. Treat each view as "as of" 2016 or 2022, the dates of the sources it comes from. Nothing here tells you what he thinks about events since, and nothing here covers his private life.
+Yvon Chouinard is alive, and views can change. The core of this data set is his own spoken words: the full transcript of a live 2016 interview at the Commonwealth Club of California, recorded 28 October 2016 [S7], which Climate One re-aired in November 2022 with the same answers [S3], and his 2022 statement on giving away Patagonia [S4]. We have read the whole 2016 transcript. Reference pages cover his life, his company and the giving group he co-founded [S1][S2][S5]. His fuller thinking is in his book *Let My People Go Surfing*, which we could only read about [S6]. A spoken interview is looser than a written essay, and the transcript notes it may contain errors. We could not open Patagonia's own pages for his 1972 catalogue essay or his 2022 letter, because the site was down, so those come from the press release and second-hand reports. Treat each view as "as of" 2016 or 2022. Nothing here tells you what he thinks about events since, and nothing here covers his private life.
 
 ## In one paragraph
 
@@ -58,6 +58,40 @@ As of 2016, Chouinard thought politics built on compromise fails to solve big pr
 
 How he applied it: in 2017 Patagonia sued the U.S. government over cuts to two national monuments in Utah [S2].
 
+## His own terms and methods
+
+### Ask "why are we in business?" with the key people, away from the office
+
+After the company nearly failed, Chouinard took the most important people to Patagonia, the region, to walk in the wild and sit for three or four hours a day asking what the company was for and what its values were. He says that talk became his book and changed how the company worked [S7]. The aim was a company he and his friends wanted to come to work in [S7].
+
+### Bring in a leaderless team, like an ant colony
+
+He describes management without bosses: every ant knows its job and they signal by touch. He adds two images, a tribal chief chosen as the best speaker because the tribe decided by consensus, and a SEAL team where everyone must agree or it fails [S7]. His rule: hire very independent, self-motivated people who believe in the work, then leave them alone. A psychologist told him they were the most independent staff he had seen, almost unemployable elsewhere [S7].
+
+### Policies that put life first
+
+If your child is sick, go home. He doesn't care when people work if the job gets done. If the surf comes up, drop everything and go [S7].
+
+### Consensus, not compromise
+
+He says compromise cuts the baby in half and never solves the problem, while consensus needs leaders who can convince everyone to go one way [S7].
+
+### Consumers hold the power to say no
+
+As of 2016 he believed public companies will change only when customers force them, and that "you can just say no" is a strong move [S7]. His father, a tradesman, taught him to buy the best tool and keep it for life [S7].
+
+### Every time we learned we were doing something wrong, we changed it
+
+His account of the supply chain is a chain of questions: cotton, then the dyes, then the farms, then how the cotton is grown. He asked questions he had never asked when he just bought cloth from a salesman's book [S7].
+
+### Go beyond "no unnecessary harm" to doing good
+
+As of 2016 he saw his mission as reaching past avoiding harm, toward farming that builds topsoil and holds carbon, and he called farming both the biggest villain in climate change and the best chance to act [S7].
+
+### Don't expect rivals to follow
+
+He had hoped that doing the right thing would make other clothing makers copy Patagonia, and by 2016 concluded they pick the easy fixes and stop [S7].
+
 ## How he decides
 
 - Ask why the business exists before asking how big it should be [S3].
@@ -79,21 +113,29 @@ Around 1970 Chouinard saw that the steel pitons his firm made, about 70% of his 
 
 Chouinard Equipment filed for bankruptcy protection in 1989 to shield itself from liability lawsuits [S1]. Its employees acquired the hard assets and set up Black Diamond Equipment [S1]. Patagonia, the clothing side, carried on [S2].
 
+### Stopping to ask what the company was for (early 1990s)
+
+Patagonia was growing about 50% a year, adding wholesale accounts and shops. In a recession the banks stopped lending, and the company had bought stock for another 50% growth but got about 30% [S7]. The money problem was so deep that he borrowed from friends and friends of friends, after being offered a loan at 28% interest [S7]. His stated lesson was that he had been growing for the sake of growing, so he took the key people to Patagonia and asked why they were in business and what their values were [S7].
+
+### Finding formaldehyde and moving to organic cotton (1990s)
+
+Staff at a newly opened Boston shop got headaches within three days. A chemical engineer found the air system was recirculating formaldehyde from the stay-press cotton clothing [S7]. He had never asked how cloth was made, having ordered from a salesman's sample book [S7]. Visits to Central Valley cotton farms, where crop dusters sprayed them and cancer rates ran about ten times normal, led him to say he would not stay in business if he had to use that cotton [S7]. Patagonia committed to organic cotton only in 1996, at about three times the cost per pound, which he said ruled out a cheaper line [S1][S7].
+
+### Telling customers not to buy the jacket (Black Friday 2011)
+
+Patagonia ran a New York Times ad saying "don't buy this jacket" without thinking twice [S7]. He says sales went up anyway, but that was not the aim [S7]. The ad pushed the company to back it with its own promise: guarantee the jacket for life, repair it, help find it another owner, and recycle it when worn out. To do that it built what he called the largest garment repair facility in North America [S7].
+
+### Co-signing with Walmart (about 2009)
+
+The Walton family told Walmart's CEO they wanted a "green" Walmart, and he sent a team to Ventura to learn what that meant [S7]. Walmart's own invitation to big companies drew nobody, but when Patagonia co-signed it, everyone came [S7]. That became the Sustainable Apparel Coalition, which he said had bogged down in bureaucracy, with the goal of a grade on each product that a shopper could scan [S7].
+
 ### Giving a fixed share every year (mid-1980s and 2002)
 
-From the mid-1980s Patagonia gave a set share of its money to environmental groups. Sources differ on the exact rule, 1% of sales in 1985 or 1% of sales or 10% of profits from 1986 [S1][S2]. A fishing trip in 2001 led him and Craig Mathews to found 1% for the Planet in 2002, with Patagonia the first member [S1][S5]. He framed it as a business paying back what it takes from nature [S5].
+From the mid-1980s Patagonia gave a set share of its money to environmental groups. Sources differ on the exact rule, 1% of sales in 1985 or 1% of sales or 10% of profits from 1986 [S1][S2]. A fishing trip in 2001 led him and Craig Mathews to found 1% for the Planet in 2002, with Patagonia the first member [S1][S5]. In 2016 he called it a tax the company puts on itself, with the best part being that it chooses where the money goes [S7].
 
-### Moving to organic cotton (1996)
+### Protecting the mission from a future owner (2016 and 2022)
 
-An environmental audit in the early 1990s showed that ordinary cotton had a heavy footprint [S1]. In 1996 he committed Patagonia to organic cotton only, though it cost far more and ruled out a cheap line [S1][S3]. His book's editor says the switch hurt at first and paid off later [S6].
-
-### Slowing down after the near-collapse
-
-Chouinard has said fast growth on retained earnings cannot last, and that a near-failure of the company made him ask why Patagonia existed [S3]. After that he set direction by purpose, not size [S3].
-
-### Handing the company to a trust and a nonprofit (14 September 2022)
-
-He did not want to sell, which risked a new owner dropping the values, or go public, which meant pressure for short-term gain [S4]. The family gave the voting stock (about 2%) to the Patagonia Purpose Trust and the non-voting stock (about 98%) to the Holdfast Collective, with profits not reinvested going to the Collective [S4]. A $17 million gift tax was paid on the voting stock, and critics raised the tax treatment of the rest [S2].
+In 2016 he explained that without a change, the law would have forced his trust to sell most of the stock to the highest bidder, which would mean going public. Becoming a B Corp let him write values into the corporate charter [S7]. In September 2022 he went further. He did not want to sell, or to go public under pressure for short-term gain, so the family gave the voting stock (about 2%) to the Patagonia Purpose Trust and the non-voting stock (about 98%) to the Holdfast Collective [S4]. Profits not reinvested go to the Collective, projected at about $100 million a year [S4]. A $17 million gift tax was paid on the voting stock, and critics raised the tax treatment of the rest [S2].
 
 ## Where he stood
 
@@ -139,7 +181,7 @@ These are fair points from the record. His interview gives his reasoning, not hi
 - "Leave good people alone" works with self-starters. New or junior teams may need more structure [S3].
 - He is sceptical of growth and of government. A council should check where scale or policy would help.
 - Doing the right thing upstream doesn't guarantee it all the way down a supply chain [S2].
-- Much of his thinking is in a book we summarise only at second hand. Mark inferences from it [S6].
+- Much of his thinking is in a book we summarise only at second hand. Mark inferences from it [S6]. The 2016 interview is spoken and relaxed, with jokes, so don't treat every aside as a policy [S7].
 
 ## Short phrases on the record
 

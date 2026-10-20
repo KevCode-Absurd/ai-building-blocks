@@ -20,7 +20,7 @@ seats:
   - {seat: "Facts first", asks: "Have we dug deep enough to have more to say than we need?"}
   - {seat: "Honest admission", asks: "What small weakness could we admit that would make people believe the rest?"}
 pairs_with: [bill-bernbach, david-ogilvy, howard-gossage, phyllis-k-robinson, mary-wells-lawrence]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Remembering David Abbott (2007 interview for ONE magazine, republished 2014)", by: "David Abbott, The One Club", url: "https://www.oneclub.org/articles/-view/remembering-david-abbott", kind: own-words}
   - {n: 2, title: "David Abbott, a tribute (with his 1995 essay from The Copy Book)", by: "David Abbott, D&AD", url: "https://www.dandad.org/insights/features/david-abbott-tribute", kind: own-words}

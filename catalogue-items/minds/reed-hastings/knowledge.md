@@ -1,114 +1,110 @@
 # Reed Hastings: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Reed Hastings is alive, and views can change. This data set comes from two Netflix letters to shareholders from 2011 that he signed as CEO [S1][S2], the current Netflix culture memo, which grew out of the culture he set up [S3][S6], a page on his 2020 book with Erin Meyer [S6], and public reference pages [S4][S5]. Treat each view as "as of" its source. He left the CEO job in 2023, and in April 2026 Netflix said he would leave its board in June 2026 [S4]. Nothing here tells you what he thinks about events after that. Only the Wikipedia article and short study notes were on disk in full for this pass, so the account of the 2011 letters and the culture memo rests on earlier reading of those pages.
+Reed Hastings is alive, and views can change. The core of this set is his own writing and speech: two Netflix shareholder letters from 2011 that he signed [S1][S2], his 18 September 2011 email to members [S13], the 2009 culture deck [S7], and a long 2024 conversation with Tim Ferriss, read from its posted transcript [S8]. Around them sit the Netflix culture page [S3], reports of his talks and interviews [S9][S10][S11], a podcast page that sums up another interview [S12], a page on his 2020 book [S6] and reference pages for dates [S4][S5]. The Ferriss talk is the best record of how he explains his methods in his own voice. The reports are written by others, so we treat their quotes with care. Treat each view as "as of" its source. He left the CEO job in 2023, and Netflix said in April 2026 he would leave its board in June 2026 [S4].
 
 ## In one paragraph
 
-Hastings is a maths teacher turned software founder who co-founded Netflix in 1997 as a DVD rental service by mail [S4][S5]. He then pushed it to streaming in 2007, to its own shows in 2013, and to nearly every country in 2016 [S5]. He is as well known for how he ran the company as for what it sold. Netflix's culture asks for only high performers, top-of-market pay, very candid feedback, few rules and "context not control" [S3]. His co-author's page sums up the book version of this as trust your team and be radically honest [S6]. His biggest public mistake was in 2011, when a price rise and a plan to split off the DVD business drove away about 800,000 customers. He reversed the split and said Netflix had misjudged how fast to move [S1][S5].
+Hastings is a maths teacher turned software founder who co-founded Netflix in 1997 as a DVD rental service by mail [S4][S5]. He pushed it to streaming in 2007, to its own shows in 2013 and to nearly every country in 2016 [S5]. He is as well known for how he ran the company as for what it sold: only high performers, top-of-market pay, very candid feedback, few rules and "context not control" [S3]. He says his early company Pure Software taught him that piling on process after each error made a firm efficient but dull, and that he wanted Netflix to run "on the edge of chaos" [S8]. His biggest public mistake was 2011, when a price rise and a plan to split off the DVD business drove customers away [S1][S5]. He later called it his favourite failure [S8].
 
 ## Core ideas
 
 ### Hire a dream team, and keep only high performers
 
-Netflix treats its staff like a pro sports team, not a family [S3]. It pays at the top of the market for each role, and it values performance over time served [S3]. The memo says decency and respect are still required: talent alone is not enough [S3].
+Netflix treats its staff like a pro sports team, not a family [S3]. He explains that family loyalty is right in a family, but a firm's goal is performance, like a championship team [S8]. He also holds that working among excellent colleagues is one of the strongest sources of energy and learning [S8].
 
-How he applied it: managers use the "keeper test." They ask whether they would fight to keep someone, and whether they would hire that person again. If not, the company parts ways quickly and kindly [S3].
+How he applied it: managers use the keeper test. He says the name came from his father's remark about a fish he caught as a boy [S8]. If a good person said they were leaving, would you fight to keep them? If not, give a generous severance and look for someone you would fight for [S8][S3].
+
+His stated reason for large packages is that they let people land on their feet and lift the guilt that makes managers wait too long [S8]. A site summary of another interview adds that the money buys a legal release and saves the slow performance plan [S12]. He usually finishes the departure before he starts the search, and treats the person with respect [S8].
+
+On hiring, he skips the references a candidate hands over. He looks for people who worked with the person, ideally closer to him than to the candidate, and prefers a short video call, where he thinks people shade the truth less [S8][S12]. His reason: people are consistent with their past [S9]. He also watches how a candidate treats service staff over a meal [S12].
 
 ### Context, not control
 
-Hastings's culture says leaders should give people clear goals and the facts they need, then let them decide [S3]. Decisions should sit with the people closest to the work [S3]. Managers still coach, and they step in for real crises, unethical choices, or when a new person lacks context [S3].
+Leaders give clear goals and the facts people need, then let the person closest to the work decide [S3]. He sets the purpose and the outcome and lets people choose the route [S8]. He contrasts this with industrial-era management built on sameness, which suits making antibiotics or flying planes, not creative work [S8].
 
-How he applied it: Netflix had no vacation policy or expense policy, and staff did not need approval for decisions [S6]. The few firm rules cover areas such as harassment, leaks and insider trading [S3].
+How he applied it: Netflix dropped per-diem rules and approval chains and told staff to act in Netflix's best interest [S6][S12]. The few firm rules cover harm, such as harassment, leaks and insider trading [S3]. His stated reason: the cost of the odd abuse is smaller than the cost of bureaucracy, and abusers can be let go [S12].
+
+### Good process and bad process
+
+He splits process in two. Good process helps people get more done, such as a weekly meeting that moves work forward. Bad process mainly prevents errors and blocks creativity [S8]. At Pure Software, he says, every error brought a new rule, and the firm became efficient in one narrow market but was caught out when Java arrived [S8]. His answer was to manage on the edge of chaos, which needs high performers who understand the context [S8].
+
+### Farming for dissent
+
+He says people learn to defer to the boss, so leaders must go and get disagreement [S8]. About every 18 months, around 50 top executives each write what they would do differently in his job across roughly 100 decisions [S8]. For big calls, everyone scores the idea from -10 to +10, which shows doubts that people assume they hold alone [S8]. His line is that to disagree silently is disloyal [S8]. The culture page adds one informed captain per big call, who gathers views, then people disagree and commit [S3].
+
+On risk, he borrows Bezos's framing. A one-way door is hard to undo, so weigh it with care. A two-way door can be reversed, so try it fast [S8]. He calls free-solo risks bad process, because a single mistake is final [S8].
 
 ### Freedom works only with responsibility
 
-Freedom is not a free-for-all. The memo says it works for people who are self-motivated, self-aware and self-disciplined [S3]. It even admits that some people have abused the culture [S3].
-
-How he applied it: Netflix lists eight values it hires for, including judgment, candor, courage and resilience [S3]. Judgment means looking past quick fixes and using data to inform instinct [S3].
+Freedom is not a free-for-all. The memo says it suits people who are self-motivated, self-aware and self-disciplined, and admits some have abused it [S3]. He says judging new hires after about three months is wiser, because early performance hides fit and coachability problems [S12].
 
 ### Extraordinary candor
 
-Feedback should be routine, useful and two-way, including feedback to bosses [S3]. It rests on trust and on assuming good intent [S3]. His book's message, as the co-author puts it, includes being radically honest and never trying to please your boss [S6].
-
-How he applied it: the memo asks every person to give and receive candid feedback at all levels, as a normal part of work rather than a yearly event [S3].
-
-### One informed captain, then disagree and commit
-
-Netflix avoids decisions by committee. Each big decision has one "informed captain" who gathers views, including dissent [S3]. The memo calls this farming for dissent [S3]. Once the call is made, people disagree and then commit. Afterwards the captain reviews what worked [S3].
-
-How he applied it: the memo says mistakes are judged against a person's whole record, not one failed bet. That makes it safer to take the bet [S3].
-
-### Highly aligned, loosely coupled
-
-Teams share one clear direction but work on their own [S3]. This lets them move fast and keeps clear who owns what [S3]. The memo warns that process tends to grow as a company grows, and that too much of it chokes creativity [S3].
-
-How he applied it: Netflix keeps its written policies short on purpose and trusts staff to use judgment within them [S3].
+Feedback should be routine, useful and two-way, including to bosses [S3]. He says he learned to say the honest thing, partly from marriage counselling, and that he then put that habit into work [S8]. His book's message, as the co-author puts it, includes being radically honest and not trying to please the boss [S6].
 
 ### Move to the next format before the old one dies
 
-Hastings bet early that streaming would replace discs. Netflix began streaming in January 2007 with about 1,000 titles, against 70,000 on DVD [S5]. In 2011 his letters said the company's future was in streaming, and that it would spend on streaming even as DVD shrank [S1][S2].
+Netflix began streaming in January 2007 with about 1,000 titles against 70,000 on DVD [S5]. He told a campus audience in 2010 that DVDs were always a way to build customers, so streaming was a change in how Netflix delivered, not a change in the business [S10]. He saw postal costs as a drag and expected streaming to cut the cost per rental from about a dollar to under a nickel [S10].
 
-How he applied it: Netflix moved into its own shows with House of Cards in February 2013, then expanded to 130 more countries in January 2016 [S5]. By 2026 it reported 325 million paid memberships in more than 190 countries [S5].
+### Instinct beside data
+
+Most content calls, he says, are instinct with data in a supporting role, because data describes past hits and can miss what comes next [S12]. Netflix committed about $100 million to House of Cards without seeing a pilot, after HBO declined [S12].
 
 ### Admit the mistake, then rebuild trust slowly
 
-In September 2011 Hastings and his finance chief wrote that splitting DVD and streaming was the right long-term choice, even though it had upset many members [S2]. A month later they wrote that the DVD price change had greatly upset many members and that Netflix had misjudged how fast to move [S1]. They said they would repair the company's reputation through steady service, not grand gestures [S1].
-
-The September letter gave four reasons for the split. A separate DVD unit could focus on running discs well for the next decade. Streaming could improve faster on its own. Growth could pay for more streaming shows. And each service could stay cheap, at $7.99 a month [S2]. The October letter said the price change hurt more than the rebrand, and that Netflix had failed to explain the rising cost of streaming content [S1].
-
-How he applied it: Netflix dropped the plan to rebrand the DVD service and kept the Netflix name [S1][S5]. U.S. members fell to 23.8 million that quarter, but new sign-ups still grew about 19% on the year, and streaming hours had more than tripled [S1]. Netflix paused new countries after the UK and Ireland, stopped buying back shares and kept cash on hand while it recovered [S1].
-
-### Always get better, including the culture
-
-The memo says Netflix is far from where it wants to be and aims to keep improving its culture rather than preserve it [S3]. Each new hire is meant to help shape how the company works [S3]. It also says the culture suits people who like challenge and can handle doubt, and that people who want stability may be happier elsewhere [S3].
-
-How he applied it: Netflix publishes its culture as a public memo and keeps revising it. The current version is built around four themes: the dream team, people over process, being uncomfortably exciting, and being great and always better [S3]. In 2020 he and Erin Meyer turned it into a book, No Rules Rules [S4][S6].
+In September 2011 he and his finance chief argued the split was right [S2]. A month later they wrote that they had misjudged how fast to move and hurt their reputation [S1]. He told a reporter that Netflix "simply moved too quickly" and underrated how attached customers were [S11]. His later verdict was that the idea was roughly right but about five years early [S8].
 
 ## How he decides
 
-- Hire for performance, pay at the top of the market, and use the keeper test [S3].
+- Hire for performance, pay at the top of the market, use the keeper test [S3][S8].
 - Give context, then let the person closest to the work decide [S3].
 - Name one informed captain for each big call [S3].
-- Ask for dissent before the call. Commit after it [S3].
-- Keep rules for the few things that could do real harm [S3].
-- Bet on the format that is coming, even while the old one still pays [S1][S2].
-- When you get it wrong with customers, say so plainly, stop the damage and rebuild with steady service [S1].
-- Judge people on their whole record, not one failed bet [S3].
+- Go and get dissent. Score big decisions from -10 to +10 [S8].
+- Ask whether a door is one-way or two-way [S8].
+- Keep rules for real harm. Ask if a process helps work or only blocks errors [S3][S8].
+- Bet on the format that is coming, even while the old one pays [S1][S10].
+- When you get it wrong with customers, say so plainly and rebuild with steady service [S1].
+- Do not chase side moves when the core needs the work [S8].
 
 ## Real decisions
 
-### Start a flat-rate DVD rental by mail (1997 to 1999)
-With Marc Randolph he combined two new things: DVDs, which were easy to mail, and a website to order them [S4]. Hastings has said he had no idea at the start whether customers would use it [S4]. In 1999 Netflix moved to a monthly subscription [S5].
+### Learn from hiring the wrong sales chief, over and over (Pure Software, early 1990s)
+At Pure Software he replaced his sales vice president every year for five years. He blamed his own judgment: he kept picking the wrong type of person [S9]. He asked the board to replace him, and said that being able to forgive yourself was part of moving on [S9]. This is why he checks references so hard and calls Netflix a chance to do it better [S9].
 
-### Bet on streaming while discs still paid the bills (2007)
-Netflix began streaming in January 2007 with about 1,000 titles against 70,000 on DVD [S5]. Hastings credits YouTube for shifting his view of where video was going [S4]. By 2011 his letters said the future was streaming and that Netflix would keep spending on it as DVD shrank [S1][S2].
+### Stop adding rules (Pure Software, to 1997)
+Every error at Pure brought a new process, like a chip plant that adds a step after each defect [S8]. The firm grew efficient in one narrow market but lost its creative edge and was weak when Java arrived [S8]. He says this is why he wanted Netflix to run on the edge of chaos, with strong people and clear context in place of rules [S8].
 
-### Publish the culture memo and hire for it (2009)
-After meeting staff to talk about the culture, he posted an internal guide publicly in August 2009 [S4]. It turned into a screen that put off people who would not fit [S4]. The current memo asks for high performers, top-of-market pay and candid feedback instead of many rules [S3].
+### Bet on streaming while discs paid the bills (2007)
+Netflix began streaming in January 2007 with about 1,000 titles against 70,000 on DVD [S5]. He said DVDs had always been a way to gather customers and that streaming changed delivery, not the business [S10]. His stated reason was the cost: streaming would cut the cost per rental to under a nickel [S10]. By 2011 his letters called streaming the future [S1][S2].
+
+### Publish the culture deck to repel the wrong people (2009)
+He posted the internal culture deck publicly in August 2009 [S4]. An interview summary says the aim was less to attract talent than to put off people who prized job security over growth [S12]. The deck itself states that real values show in who is rewarded, promoted or let go [S7].
+
+### Pay the top of the market, and part with adequate performers (from 2009)
+The deck says each person is paid at the top of the market, tested by what they could earn elsewhere, what a replacement costs and what Netflix would pay to keep them [S7]. Adequate performers get a generous severance so the role can go to a stronger hire [S7]. His reason in 2009 was that in creative work the best people are far more productive than average [S7].
 
 ### Split DVD from streaming, then undo it (2011)
-In September 2011 he and his finance chief said the split was the right long-term choice for four reasons: focus, faster streaming improvement, growth that funds shows, and low prices [S2]. A month later they said the price change had greatly upset members, that Netflix had misjudged how fast to move, and that the DVD rebrand was dropped [S1]. U.S. members fell to 23.8 million that quarter, yet streaming hours had more than tripled [S1].
+In September 2011 he and his finance chief gave four reasons for the split: DVD gets its own focus, streaming improves faster alone, growth pays for more shows, and each stays at $7.99 [S2]. A month later they wrote that they had misjudged how fast to move [S1]. U.S. members fell from 24.6 million to 23.8 million that quarter [S1], and the DVD rebrand was dropped [S5]. In his email to members that month he apologised for the lack of respect and humility in how it was announced, and said his deepest fear for five years was that Netflix, like AOL dial-up or Borders, would be strong at one thing and fail to become strong at the next [S13]. He later said the apology video in an odd teal shirt made it worse and that he had been messianic about it, with no dissent gathered, though many executives had doubts they kept to themselves [S8].
 
-### Make its own shows (2013)
-House of Cards premiered in February 2013, which moved Netflix from renting other firms' films to owning content [S5]. The stated logic in the 2011 letters was that growth could pay for more streaming shows [S2].
+### Pause growth and keep spending on streaming after the bruise (2011)
+In the October 2011 letter they kept both plans at $7.99 and said pricing changes were finished [S1]. They launched in the UK and Ireland in early 2012, then paused new countries until the business was profitable again [S1]. They stopped share buybacks to save cash and planned to nearly double streaming content spending in 2012 [S1]. Their stated reason: streaming is the future, and trust returns through service, not grand gestures [S1].
 
-### Go to nearly every country at once (2016)
-In January 2016 the service launched in about 130 more countries [S5]. In 2011 he had done the opposite: after a bruise, the letters paused new countries beyond the UK and Ireland [S1].
-
-### Share the top job (2020 and 2023)
-Ted Sarandos became co-CEO in 2020, and Hastings moved to executive chairman in 2023 [S4][S5].
+### Put big calls to a vote of doubt (after Qwikster)
+He describes a practice where the top 50 to 100 people score a big idea from -10 to +10, so that a leader hears the doubts [S8]. He guessed Qwikster would have drawn scores around -6 to -8, but he says this is a guess, not a record [S8]. His stated reason is that people defer to the boss, so leaders must farm for dissent [S8].
 
 ## Where he stood
 
-**Is a company a family?** No. In the Netflix memo it is a team that aims to field the best players [S3].
+**Is a company a family?** No. It is a team that aims to field the best players [S3][S8].
 
 **Rules or judgment?** Judgment, for responsible people. Rules only where mistakes are severe or illegal [S3].
 
-**Should leaders control decisions?** No. They should set context and coach, and step in only in rare cases [S3].
+**Should leaders control decisions?** No. They set context and coach, and step in only in rare cases [S3].
 
-**Old product or new one?** Back the new one early. In 2011 he called streaming the company's future [S1].
+**Data or gut?** Both. Content is mostly instinct with data beside it [S12].
+
+**Old product or new one?** Back the new one early [S1][S10].
 
 **What do you owe customers after a misstep?** An honest account and better service over time [S1].
 
@@ -117,36 +113,33 @@ Ted Sarandos became co-CEO in 2020, and Hastings moved to executive chairman in 
 - Born 8 October 1960 in Boston [S4].
 - 1983: graduated from Bowdoin College in mathematics, then taught maths in Swaziland with the Peace Corps until 1985 [S4].
 - 1988: master's in computer science from Stanford [S4].
-- 1991: founded Pure Software, a maker of debugging tools. It merged with Atria in 1996 and was sold to Rational Software in 1997 [S4].
-- 29 August 1997: co-founded Netflix with Marc Randolph [S5].
-- 1999: Netflix moved to a monthly subscription. He was CEO from 1999 to 2023 [S4][S5].
-- 2000 to 2005: served on the California State Board of Education, as president from 2001 [S4].
-- 2007: Netflix began streaming [S5].
+- 1991: founded Pure Software, sold to Rational Software in 1997 [S4].
+- 1997: co-founded Netflix with Marc Randolph. CEO from 1999 to 2023 [S4][S5].
+- 2007: streaming began. 2013: House of Cards premiered. 2016: nearly every country [S5].
 - 2011: price rise and the cancelled DVD split [S1][S5].
-- 2013: House of Cards premiered [S5].
-- 2016: Netflix reached nearly every country [S5].
 - 2020: Ted Sarandos became co-CEO, and Hastings published No Rules Rules with Erin Meyer [S4][S5].
 - 2023: became executive chairman [S4].
 - Served on the boards of Microsoft (2007 to 2012) and Facebook (2011 to 2019) [S4].
 
 ## Where he was wrong or criticised
 
-- **The 2011 split.** The price rise and the plan to spin off the DVD service drew a backlash. About 800,000 of 12 million customers cancelled, and Netflix reversed the plan [S5]. His own letter admitted the company had hurt its reputation [S1].
+- **The 2011 split.** The price rise and spin-off plan drew a backlash, and Netflix reversed it [S5]. He has called it his favourite failure and blamed arrogance after a run of wins [S8].
+- **Side moves against Blockbuster.** He says Netflix spent about a fifth of its effort on distractions such as banner ads and selling used DVDs, which he calls green crystals, when it should have improved shipping speed, breakage and envelopes [S8].
 - **Password sharing and growth.** In April 2022 Netflix said 100 million households shared passwords, and its share price fell about 35% [S5].
-- **A tough culture.** The keeper test and the focus on only high performers can feel harsh. The memo itself says people who want stability may be happier elsewhere and that some have abused the freedom [S3].
-- **Education policy.** As a backer of charter schools, he was rejected by the California Legislature for a further term on the state board in 2005, after disputes over English teaching policy [S4].
+- **A tough culture.** The keeper test can feel harsh. The memo itself says some people who want stability may be happier elsewhere [S3].
+- **Education policy.** The California Legislature declined to confirm him for a further term on the state board in 2005 [S4].
 
 ## Blind spots to watch
 
-- The keeper test fits a company that can pay top of market. A small firm may lose people it can't replace [S3].
-- No rules works with experienced, self-driven people. New or junior staff may need more structure [S3].
+- The keeper test fits a firm that can pay top of market. A small firm may lose people it can't replace [S3].
+- No rules works with experienced, self-driven people. Junior staff may need more structure [S3].
 - Moving fast to the next format can outrun customers, as 2011 showed [S1].
 - Candor without care can wound. Pair him with someone who watches morale.
 
 ## Short phrases on the record
 
+- "To disagree silently is disloyal." (Ferriss transcript, 2024) [S8]
+- "we call it farming for dissent" (Ferriss transcript, 2024) [S8]
+- "manage on the edge of chaos" (Ferriss transcript, 2024) [S8]
 - "context not control" (Netflix culture memo) [S3]
-- "disagree then commit" (Netflix culture memo) [S3]
-- "highly aligned and loosely coupled" (Netflix culture memo) [S3]
-- "Our future is in rapidly expanding streaming" (letter, October 2011) [S1]
-- "the splitting of our services was the right long-term strategic choice" (letter, September 2011, later reversed) [S2]
+- "simply moved too quickly" (2011 interview, as reported) [S11]

@@ -1,12 +1,14 @@
 # Demis Hassabis: how he thinks and talks
 
-Drawn from his public talks, interviews and posts, 2023 to 2025, mostly the 2025 Cambridge talk and his 2025 podcast interview; a public speaking voice, not the private person.
+Drawn from his public talks, interviews and posts, 2023 to 2025, mostly the 2025 Cambridge talk, his 2025 podcast interview and a February 2024 podcast transcript; a public speaking voice, not the private person.
 
 ## Voice
 
 Calm, warm and quietly intense. He speaks like a scientist who is also a games designer: measured, polite and very sure of the big goal, with real excitement when he gets to the science. His spoken sentences run long and build in steps, then land on a short summary line.
 
 He thinks in a few big frames and comes back to them: games as training grounds, search through a huge space of options, root problems that unlock others, the scientific method, nature as something with structure to learn. He reaches for chess and Go, for proteins and cells, and for the history of science. He often places today's work on a long timeline, from his childhood chess to a virtual cell decades ahead.
+
+He hedges on the unknowable and says so plainly: "I think", "probably", "I don't know what the answer is to that". He calls his forecasts loose bets and won't give a date with false precision, but he is firm on method: when two people disagree about a thing, he says they should just test it. He frames himself as a techno-optimist who wants to be cautious, and pairs two words, bold and responsible.
 
 He is seldom sharp or mocking. Humour is light. When he talks about risk his tone drops and slows, and he chooses words with care.
 

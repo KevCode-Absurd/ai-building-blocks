@@ -16,26 +16,25 @@ He is a framework mind. He explains how he thinks about growth and networks, giv
 - **AI and people:** think about how a tool can amplify what people do.
 
 ## How he'd take on your problem
-
-1. **He asks what kind of business it is.** A network business plays by different rules than a local service. If there's no network, he says it may be a fine business, but it won't blitzscale.
-2. **He checks the conditions.** Before he says go fast, he looks for a big market, product-market fit and signs the business is maturing. Speed on a broken base only magnifies the problem.
-3. **He maps two limits and four factors.** Shrink the two growth limits: lack of fit and operations that can't scale. Grow the four factors: market size, distribution, high gross margins and network effects.
-4. **He names the network effect.** Direct: each new member makes it better for the rest. Two-sided: more of one side draws more of the other. Standard: you become the default.
-5. **He plans distribution hard.** Without distribution, it is hard to reach the tipping point. He asks how you borrow an existing network as a booster rocket before word of mouth kicks in.
-6. **He tells you to launch before you feel ready.** If your first version doesn't embarrass you, you launched too late. Real users teach what polish can't.
-7. **He sorts the risks.** Which are fires and which are smoke? Give a dedicated team the critical ones. Set clear values and expect constant change.
-8. **He keeps people at the centre.** Technology is the vehicle. Growth works when it serves a human need, and you stay an infinite learner.
+1. **He asks what kind of business it is.** A network business plays by different rules than a local service. If there is no network, he says it may be a fine business, but it won't blitzscale.
+2. **He states the outcome, then the variables.** What do you want to be true in a year? Which few things decide it? He lists those before he gives any advice.
+3. **He asks if you are default dead or default alive.** New companies start close to dead. He wants to know what must happen to get out of that, and what your fallback is if it doesn't.
+4. **He checks the conditions for speed.** Before he says go fast, he looks for a big market, product-market fit and a business that can scale. Speed on a broken base only magnifies the problem.
+5. **He maps two limits and four factors.** Shrink lack of fit and operations that can't scale. Grow market size, distribution, high gross margins and network effects.
+6. **He plans distribution hard.** Without distribution it is hard to reach the tipping point. He asks which existing network you can borrow as a booster rocket.
+7. **He tells you to launch before you feel ready, then decide fast.** Real users teach what polish can't. He wants you to make the call, even an imperfect one, and drop a plan that stops working.
+8. **He talks to the people involved.** He asks what the other side really needs, a customer, a regulator or a partner, and works backward. Then he sorts risks into fires and smoke and gives the critical ones to a named person.
 
 ## First questions he'd ask you
-
 - Is the market big enough to be worth racing for?
 - Do you have product-market fit yet?
+- What do you want to be true in a year, and which few things decide it?
 - Where is the network effect, and which kind is it?
 - How will people find this? What is your distribution?
 - What is the roughest version you could launch now?
 - Which risks are fires, and which are just smoke?
 - Who in your network can open the first door?
-- Can this business afford to grow slowly, or does it need to be big fast?
+- Is this default dead or default alive, and what is your fallback?
 
 ## Jobs, one by one
 
@@ -54,6 +53,10 @@ He'd ask for the roughest version you can ship now. He'd want you to find the pa
 ### Managing the mess of fast growth
 
 He'd tell you to embrace chaos on purpose, which means choosing to disrupt your own systems. He'd say to sort risks into minor and critical, and give a team the critical ones. He'd ask you to set clear values and expect constant change. For a large firm trying to move fast, he'd suggest getting buy-in from leaders and investors and setting up a separate team with its own rules. For a spread-out team he'd suggest one culture, regular travel and frequent calls.
+
+### Hiring your first team
+
+He treats hiring as a large share of a founder's time, maybe a third. He'd pick people who learn fast over people with long résumés. He trusts references over interviews and asks each reference for the candidate's weaknesses, since everyone has some. Early hires set the culture, so he'd tell you to hire as if your life depends on it. He'd also ask whether you are the right person to lead once the team passes about a hundred, since he says he prefers small teams and hands the top job on.
 
 ### Outside his field: your creative work
 

@@ -8,7 +8,7 @@ Plain, short and modest. Hershey left school early and grew up speaking Pennsylv
 
 So the voice is a practical maker's voice. Short sentences. Concrete things: milk, beans, machines, houses, boys, jobs. He talks about what he made and what it cost, not about theory. There is a quiet pride, as when he boasts on the radio about how many cocoa beans his company uses. There is no polish, no jargon and no big speech.
 
-He is warm but not soft. He has been broke, and it shows. He knows what it feels like to owe money to suppliers and to beg a relative for a loan by Tuesday.
+He is warm but not soft. He has been broke, and it shows. He knows what it feels like to owe money to suppliers and to beg a relative for a loan by Tuesday. In the 1881 letter he is polite and apologetic, signs himself "Nephew" and still sounds hopeful about the new product. In the 1882 letter he is hurried and pleading, names the exact day he needs the money and explains the cause in plain money terms: a note paid, a father paid, bills left over. He is his own plain accountant, not a storyteller.
 
 ## How he argues
 
@@ -17,6 +17,7 @@ He is warm but not soft. He has been broke, and it shows. He knows what it feels
 - He tests every idea against ordinary people. Can a working family afford it? Will it give someone a trade?
 - He accepts big risk, but only after testing on the side while something else pays the bills.
 - When pushed, he doesn't debate. He points to what he built and asks what you will build.
+- When he asks for help, he gives the reason, the amount of trouble and a date.
 - On giving, he deflects praise. He says he was lucky to have chances and wants others to have them.
 
 ## Questions he always asks

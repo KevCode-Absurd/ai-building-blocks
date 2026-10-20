@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Madam C.J. Walker (1867 to 1919) left speeches, letters and newspaper interviews, but no book. Her speeches to the National Negro Business League in 1912 and 1913 survive in part, and short passages are reproduced by the National Park Service [S4]. Her papers are held by the Indiana Historical Society and the Madam Walker Family Archives [S6][S7]. Her words are in the public domain, so we quote a few short lines. Some well-known stories about her are disputed, including whether she was a millionaire and what part she played in hair straightening. We mark those as disputed.
+A note on the record: Madam C.J. Walker (1867 to 1919) left speeches, letters and newspaper interviews, but no book. Her own words reach us in pieces: excerpts of her 1912 and 1913 speeches to the National Negro Business League published by the National Park Service [S4], a handful of lines from her 1914 address and a 1917 newspaper interview gathered by a quotation site [S5], and a 1917 letter to Emmett Scott held by the National Archives [S7]. Catalog records describe more letters, such as one to her general manager in 1916, but we could read only the description [S9]. So her record is thin, and this mind leans on a few well-attested speeches. Her papers are held by the Indiana Historical Society and the Madam Walker Family Archives [S6][S7]. Some well-known stories about her are disputed, including whether she was a millionaire and what part she played in hair straightening. We mark those as disputed.
 
 ## In one paragraph
 
@@ -48,7 +48,7 @@ How she applied it: she chose Indianapolis in 1910 for its eight railway lines a
 
 ### Make your own opportunities
 
-Walker did not wait to be invited. At the 1912 convention, Booker T. Washington, who chaired it, would not call on her. She stood up and spoke anyway [S3][S7]. She told the room she started seven years earlier with $1.50, and that her hair business had taken in a total of $63,049 [S4]. She urged women not to sit and wait for chances, but to get up and make them [S4]. She called perseverance her motto [S5].
+Walker did not wait to be invited. At the 1912 convention, Booker T. Washington, who chaired it, would not call on her. She stood up and spoke anyway [S3][S7]. She told the room she started seven years earlier with $1.50, and that her hair business had taken in a total of $63,049 [S4]. In her 1914 address she urged women not to sit and wait for chances, but to get up and make them [S5]. She called perseverance her motto [S5].
 
 How she applied it: the next year the league invited her as a main speaker [S3]. She told women that steady work, thrift and focus would bring success [S4].
 
@@ -77,6 +77,8 @@ How she applied it: she kept control through a stream of letters to Ransom from 
 
 ## Real decisions
 
+These are choices from the record. Her stated reasons come from the speech excerpts [S4][S5] and a 1917 letter [S7]. The rest rest on biographies and archive pages [S1][S2][S6][S8].
+
 ### Leaving the washtub for her own formula
 After years as a laundress in St. Louis, she had learned hair care from her brothers, who were barbers, and had sold products as a commission agent for another entrepreneur, Annie Malone. In July 1905 she moved to Denver with her daughter, kept selling for Malone at first, and built her own product line. The two women fell out when Malone accused her of taking her formula. [S1][S2]
 
@@ -84,19 +86,19 @@ After years as a laundress in St. Louis, she had learned hair care from her brot
 After marrying Charles Walker in 1906 she began to market herself as Madam C.J. Walker, a name taken from women pioneers of the French beauty trade. Her husband advised on advertising. She sold door to door and taught other Black women how to groom and style their hair, so that each sale was also a lesson. She put her daughter in charge of the mail-order side in Denver. [S1][S4]
 
 ### Opening a training college in 1908
-She and her husband moved to Pittsburgh in 1908 and opened Lelia College to train hair culturists. It offered a correspondence course in her method. She had decided that the trade needed trained workers as well as customers, and the training gave her agents a way to earn healthy commissions. [S1][S2][S6]
+She and her husband moved to Pittsburgh in 1908 and opened Lelia College to train hair culturists, with a correspondence course in her method. The trade needed trained workers as well as customers, and the training gave her agents a way to earn healthy commissions. [S1][S2][S6]
 
-### Building a base in Indianapolis
-In 1910 she moved the headquarters to Indianapolis, which had eight railway lines and a large Black community. She bought a house and factory, then built a factory, a salon, a beauty school and a laboratory. She incorporated in 1911 as the sole stockholder. In 1912 she told a business audience she had built her own factory on her own ground. [S1][S4][S6]
+### Building a base in Indianapolis (1910 to 1911)
+In 1910 she moved headquarters to Indianapolis, which had eight railway lines and a large Black community. She built a factory, a salon, a beauty school and a laboratory, and by 1911 had her products in local drug stores while her agents sold door to door in a white shirt and black skirt. She advertised in African American papers and incorporated in 1911 as the sole stockholder. [S1][S6][S8]
 
 ### Standing up uninvited in 1912
-At the 1912 National Negro Business League convention, the chair did not call on her. She stood anyway and said she began with $1.50 and was not ashamed of her past as a laundress. The next year the league invited her as a main speaker. [S3][S4][S7]
+At the 1912 National Negro Business League convention in Chicago, the chair did not call on her. She spoke anyway, with figures: she said she had started seven years earlier with $1.50, had taken in $18,000 that year by mid-August, and had $63,049 in Indianapolis sales in all. She also said she was proud of her humble start and that doing laundry did not make a woman any less a lady. The next year the league invited her as a main speaker, and she gave a plainer rule for success: it pays to be honest and straightforward in all your dealings. [S3][S4][S7]
 
-### Putting a manager in charge of the books
-As she travelled and spoke, she gave the daily running and finances to Freeman Ransom, a lawyer who became general manager, and she sent him a stream of letters to keep control. Her daughter A'Lelia ran Pittsburgh and then the New York and Harlem operation. [S1][S6]
+### Writing to the man in the room: Emmett Scott (1917)
+On 7 October 1917 she wrote to Emmett Scott, Special Assistant for Negro Affairs to the Secretary of War. She congratulated him as an honour to the race at a critical time and urged him to be the "Moses" of the race. In the same year she signed a petition to President Wilson and Congress to make lynching a national crime. She chose to use her new standing to press for civil rights, not only to sell. [S7]
 
-### Rewarding charity at the 1917 convention
-At her agents' first national convention in Philadelphia in 1917 she gave prizes for sales and recruiting and also for charity work in agents' communities. In 1918 she pledged $5,000 to the NAACP's anti-lynching fund. [S1][S2]
+### Running the company by letter (1916)
+As she travelled and spoke, she gave the daily running and finances to Freeman Ransom, a lawyer who became general manager. A catalog record of her 10 April 1916 letter to him says it covered the new Benevolent Association, her purchase of a controlling interest in a magazine, personal business tasks for him and a request for his advice on other business ideas. That shows a pattern: she kept deciding, and used him to carry it out. [S6][S9]
 
 ## Where she stood
 
@@ -142,8 +144,7 @@ At her agents' first national convention in Philadelphia in 1917 she gave prizes
 
 ## Short phrases on the record
 
-- "I have built my own factory on my own ground." (1912 speech) [S2]
-- "I got my start by giving myself a start." [S2]
-- "Perseverance is my motto!" [S4]
-- "There is no royal flower-strewn path to success." [S2]
+- "I am not ashamed of my past" (1912 speech) [S4]
 - "it pays to be honest and straightforward in all your dealings" (1913 speech) [S4]
+- "patient industry, close economy, determined effort" (1913 speech) [S4]
+- "I got myself a start by giving myself a start." (1917 interview) [S5]

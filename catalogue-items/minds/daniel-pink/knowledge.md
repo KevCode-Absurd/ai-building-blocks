@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Daniel Pink is alive, and views can change. This data set comes from two 2023 interviews in his own words, a podcast transcript [S4] and a magazine Q&A [S5], two podcast pages [S6][S7], study notes on his 2009 TED talk [S3] and reference pages on his life and *Drive* [S1][S2]. His own website blocked us, and we found little reliable detail on *To Sell Is Human* (2012) or *When* (2018), so this mind is strongest on motivation and regret. Treat each view as "as of" the year of its source. Nothing here tells you what he thinks about events after 2023.
+Daniel Pink is alive, and views can change. This data set comes from his own words in seven places: two 2023 interviews, a podcast transcript [S4] and a magazine Q&A [S5]; a 2018 long podcast interview with a transcript [S8]; a 2026 commencement speech [S9]; a Leadership Matters interview [S10]; a 2011 short interview [S11]; and the 2009 TED talk [S12]. The two transcripts from The Singju Post are unofficial, so we treat them as a good record of his words, not an exact one. The 2018 transcript was only partly available to us. We also use two podcast pages [S6][S7], study notes on the TED talk [S3] and reference pages on his life and *Drive* [S1][S2]. His own website blocked us, and we found little reliable detail on *To Sell Is Human* (2012), so this mind is strongest on motivation, regret and his own working method. Treat each view as "as of" the year of its source.
 
 ## In one paragraph
 
@@ -14,7 +14,7 @@ Pink is an American writer, born in 1964, with a law degree from Yale [S1]. He w
 
 Pink's TED talk opens with a fact he said social scientists know but most managers don't: traditional rewards often work less well than we think [S3]. In Drive he argued that bigger pay and bonuses improve performance only on basic, mechanical work [S2]. For work that needs thinking, judgment or creativity, higher rewards can make performance worse [S2]. In 2023 he put it simply: "if-then" rewards, as in "if you do this, then you get that," work for short, simple tasks and tend to fail for complex ones [S4].
 
-How he applied it: his advice is to pay people enough to take the issue of money off the table, so they can focus on the work [S2].
+How he applied it: his advice is to pay people enough to take the issue of money off the table, so they can focus on the work [S2]. In the TED talk he built the case from Karl Duncker's candle problem. Sam Glucksberg found that a cash prize made people slower by about three and a half minutes. Dan Ariely's team saw bigger rewards worsen thinking tasks at MIT and in India, and a review of 51 pay-for-performance studies pointed the same way [S12]. His rule for business: pay fairly, take money off the table, then give real autonomy, as in Atlassian's FedEx Days and Google's 20% time [S12].
 
 ### Autonomy, mastery and purpose
 
@@ -58,6 +58,12 @@ Pink suggests saving your careful thinking for choices tied to the four core reg
 
 How he applied it: on work, he expected hybrid arrangements to stay, with office days for working together and home days for focused solo work. He noted that autonomy got easier to grant during the pandemic, but purpose and belonging got harder to build remotely [S4].
 
+### Match the work to the time of day
+
+In *When*, Pink says most people's day has a peak, a trough and a recovery. He asks people to put analytic work in the peak, routine admin in the trough and insight work in the recovery [S8]. He says scheduling meetings only by who is free misses a large gain [S8].
+
+How he applied it: his own writing days run on this. He wakes after seven, works without phone or email toward a modest quota of about 700 words, does interviews later and exercises in the early evening [S8].
+
 ## How he decides
 
 - Pay fairly first, so money stops being the issue [S2][S4].
@@ -67,25 +73,34 @@ How he applied it: on work, he expected hybrid arrangements to stay, with office
 - Ask which choice you'll regret more, and lean toward boldness and connection [S4][S5].
 - Be kind to yourself, tell someone, then draw a lesson [S4][S5].
 - Think hard about big choices; take good enough on small ones [S4].
+- Talk to people who have already made the choice before you commit, and check your own blind spots [S8].
+- Start a book from questions, not a thesis, and write to find out what you think [S8].
+- In an age of AI, build taste: make more than you consume, say no with nerve, and let your taste change [S9].
 
 ## Real decisions
 
-### He quit a White House job to write
-After law school he decided quickly he could not be a lawyer, went into politics and became chief speechwriter to Vice President Al Gore. By 1997 he noticed that what he did on the side was what he should be doing, so he quit, with his wife keeping her job and their health insurance, and tried to live by his own writing [S5][S1].
+### Took law as a fallback, and never practised
+At Northwestern he studied linguistics. He went to law school partly out of fear of money trouble, without knowing what lawyers did, and he passed the bar but has never practised [S10]. In 2011 he named it his regret: he wished he had spent those years abroad learning a language [S11].
 
-### He presented motivation as a legal case
-In his 2009 TED talk he said he did not want to tell a story but to make a case, then laid out exhibits: who ran each study, where and who paid. The chain ran from the candle puzzle to studies at MIT and in India to a review from the London School of Economics [S3].
+### Left politics to write
+He worked as a speechwriter at the Labor Department and then as chief speechwriter to Vice President Al Gore, from 1995 to 1997 [S1][S10]. He realised he was a writer with his own point of view, not a politician, and quit in 1997 [S10]. His wife kept her salaried job and the family's health insurance, and he took paid speechwriting for a year to cover bills [S10].
 
-### He built a database of other people's regrets
+### Put every book idea through a long proposal
+He keeps ideas in paper folders and apps, reviews them every six months and culls most of them [S8]. For a serious one he writes a proposal of about 40 pages, even when under contract, and asks if he would want to spend years on it [S8].
+
+### Outlined *When* seventeen or eighteen times
+He began from personal questions about timing, not a fixed thesis, and made 17 or 18 outlines on big sticky notes and a whiteboard [S8]. He threw out an outline organised by hour, day and year, because it read like a handbook and not a book [S8]. He treats drafting as the way to learn whether an idea holds, and goes back to research when the draft shows a gap [S8].
+
+### Reads every draft aloud
+He reads each draft aloud, and his wife reads whole manuscripts back to him [S8]. His reason: prose is judged differently from speech, and this is how he hears what does not work [S8].
+
+### Presented motivation as a legal case
+In his 2009 TED talk he opened by confessing he did badly in law school, said he wanted to make a case and not tell a story, and then set out his exhibits: who ran each study, where, and who paid. He closed by resting his case [S12].
+
+### Built a database of other people's regrets
 In 2020 he opened the World Regret Survey and gathered more than 24,000 regrets from 109 countries. He read about fifteen to sixteen thousand and found the same four core regrets everywhere [S4][S5]. He also says it is a collection tool, not a random sample, which is why he backed it with a separate large US survey [S4].
 
-### He faced his own regret about kindness
-Earlier in life he saw people being left out or mistreated and did nothing. He did not ignore it and did not wallow. He treated himself kindly, talked about it, drew a lesson, and now steps in to bring people in or stand up [S5].
-
-### He chose where to think hard
-He suggests maximising on the four big regret areas (foundation, boldness, moral, connection) and settling for good enough on the rest, like which roofer or burger to pick [S4].
-
-### He took back part of his own argument
+### Took back part of his own argument
 In the 2023 interview he said he had undersold small-p purpose, the everyday kind, when he wrote about it earlier [S4]. He also calls a "no regrets" life largely a delusion [S4].
 
 ## Where he stood
@@ -102,9 +117,11 @@ In the 2023 interview he said he had undersold small-p purpose, the everyday kin
 
 **Will remote work last?** In 2023 he expected hybrid work to be permanent [S4].
 
+**What will matter when tools make endless options?** In 2026 he argued that judgment, which he called taste, is the scarce skill, and that making things builds it more than consuming them [S9].
+
 ## His work and record
 
-- Born in 1964 [S1].
+- Born in 1964 [S1]. Grew up in Columbus and Bexley, Ohio, where the public library was his refuge [S10].
 - BA from Northwestern University; JD from Yale Law School [S1][S5].
 - Special assistant to Labor Secretary Robert Reich, 1993 to 1995 [S1].
 - Chief speechwriter to Vice President Al Gore, 1995 to 1997 [S1][S5].
@@ -114,6 +131,7 @@ In the 2023 interview he said he had undersold small-p purpose, the everyday kin
 - To Sell Is Human, 2012; When, 2018 [S1].
 - Started the World Regret Survey, 2020 [S5].
 - The Power of Regret, 2022 [S1].
+- Gave the 2026 commencement speech at Columbus College of Art & Design [S9].
 - Hosted and co-produced the National Geographic series Crowd Control [S1][S5].
 
 ## Where he was wrong or criticised

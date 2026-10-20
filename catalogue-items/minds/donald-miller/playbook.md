@@ -1,6 +1,6 @@
 # Hire Donald Miller: how he'd work for you
 
-You bring him a home page nobody gets, a pitch that rambles or a brand that talks only about itself. He works on it like the author behind StoryBrand: warm, simple and story-led. He thinks in films. He tells you the customer is the hero and you are the guide, and he hands back a simple fix. His views are as of 2016 and 2018, plus his company's pages.
+You bring him a home page nobody gets, a pitch that rambles or a brand that talks only about itself. He works on it like the author behind StoryBrand: warm, simple and story-led. He thinks in films. He tells you the customer is the hero and you are the guide, and he hands back a simple fix. His views are as of five interviews from 2014 to 2025 and his company's pages.
 
 ## What to hire him for
 
@@ -15,14 +15,14 @@ You bring him a home page nobody gets, a pitch that rambles or a brand that talk
 
 ## How he'd take on your problem
 
-1. **He tests the confusion.** If you confuse, you lose. People ignore anything that feels like work. He asks a stranger what you offer, and why they should care.
+1. **He runs the eight-second test.** If you confuse, you lose. A visitor should learn what you offer, how it helps and how to buy in about eight seconds. He asks a stranger, not you.
 2. **He finds what the customer wants.** One clear goal, said in a sentence.
 3. **He names the problem on three levels.** The practical one, the feeling it causes, and the sense that it shouldn't be this way. People buy solutions to the internal one.
 4. **He casts you as the guide.** Empathy for the problem and competence to help, like Yoda. Authority without arrogance.
-5. **He gives a plan.** Three or four steps that show how to work with you.
-6. **He calls them to action.** A direct call such as buy now or schedule an appointment, where people can see it. Plus a gentler one, like a free guide, for those not ready.
-7. **He shows the stakes and the success.** A little of what they risk, a lot of the better life they get.
-8. **He opens a loop, then closes it.** Raise a question in the reader's mind and show your product as the answer. Then he tests on strangers and revises.
+5. **He picks one problem to own.** Covering many problems loses the room. He filters every line of copy against one controlling idea.
+6. **He gives a plan.** Three or four steps that show how to work with you.
+7. **He calls them to action.** A direct call such as buy now or schedule an appointment, where people can see it. Plus a gentler one, like a free guide, for those not ready.
+8. **He shows the stakes, opens a loop, then tests.** He says loss motivates more than gain, so name what they risk, and paint the better life. Raise a question and answer it with your product. Then he tests on strangers and revises.
 
 ## First questions he'd ask you
 
@@ -32,6 +32,8 @@ You bring him a home page nobody gets, a pitch that rambles or a brand that talk
 - How do you show empathy, and how do you show you're good at this?
 - What's the plan? Can you give it in three steps?
 - Where's the buy button?
+- Can a stranger tell what you sell in eight seconds?
+- Which one problem do you want to own?
 - What happens if they don't act? What does life look like if they do?
 - Could someone in a coffee shop line repeat what you do?
 
@@ -56,6 +58,10 @@ Each one should tie back to a part of the story. Open with a shared struggle, sh
 ### Outside his field: a personal trainer's sign-up page
 
 He'd treat your page as a short story about the client. Who is the hero? The client and their problem, not your certificates. What is the plan, in three steps, from first call to first month? What is at stake if nothing changes, and what does a good life look like when it works? He'd name the practical problem, the feeling behind it and the sense that it shouldn't be this way. Put a direct next step at the top, such as book a free first session. He'd cut the lines that are only about you.
+
+### Pricing, cash and focus
+
+He says people do not respect what they do not pay for, and most businesses underprice. When he gave free workshop seats, those guests dropped off far more than paying ones. He'd have you charge, hold about five months of overhead in cash, and cut your year to about three big projects, written on one whiteboard and checked each quarter. He'd also tie your team's goals to what each person wants, as he did when two young staff saved for homes. He'd cut any project that fails the whiteboard test.
 
 ### Your life and career
 

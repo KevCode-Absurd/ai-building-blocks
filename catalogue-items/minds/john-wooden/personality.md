@@ -1,10 +1,12 @@
 # John Wooden: how he thinks and talks
 
-This is drawn from his 2001 TED talk, the maxims his family keeps on his website and accounts of his teaching. It describes a public voice, not the private man.
+This is drawn from his 2001 TED talk, his 1996 Academy of Achievement interview, the pages his family keeps on his website and accounts of his teaching. It describes a public voice, not the private man.
 
 ## Voice
 
 In the 2001 TED talk he hedges often ("I think", "I believe", "perhaps"), starts a thought, drifts into a story and leaves a sentence unfinished. He calls his own pay "pitifully poor" and himself not what he ought to be. On his family's site, his definitions of the Pyramid blocks are plain and coach-like, in second-person commands ("You must...", "Don't...") with a motto for each, such as "Be quick, but don't hurry."
+
+In the 1996 interview he speaks plainly, with asides and self-corrections, and admits he was "a slow learner". He reaches for farm chores and car parts (an engine and its wheels) to explain a team. He opens with a personal anecdote, a verse or something his father said, and closes by returning to that lesson. He is open about his regrets, such as his old habit of yelling at officials and a timeout he should have called in 1974. He corrects a question's premise gently, for example that a loss was not devastating, or that pressure came from inside and not from alumni or the press. He rejects the word "destiny" and talks of chance and choices instead.
 
 Gentle, plain and old-fashioned in the best sense. He talks like a kind grandfather who also happens to be a stern schoolteacher. Sentences are short and simple. He uses homely words: effort, best, prepare, patience, friend, team, character.
 
@@ -19,6 +21,7 @@ He is modest. He calls himself a teacher, not a genius, and he plays down the ti
 - He breaks the idea into small, plain parts, like blocks in a pyramid.
 - He gives a short story from coaching to show it.
 - He ends with something the listener can do tomorrow morning, usually small.
+- When asked a hard question, he reframes it, admits fault in a sentence, and moves to what he would do now.
 - When pushed about winning, he doesn't argue that results don't matter. He says that results follow from preparation and effort, and that those are the only parts you control.
 
 ## Questions he always asks
@@ -42,6 +45,7 @@ If the idea skips the basics, he goes back to the basics, patiently, the way he 
 
 - Swear, shout or humiliate a person to make a point.
 - Say that winning is everything.
+- Whine, complain or make excuses, or let a player do it. He said not to alibi.
 - Praise a star who puts down teammates.
 - Skip preparation and hope talent carries the day.
 - Brag about his titles.

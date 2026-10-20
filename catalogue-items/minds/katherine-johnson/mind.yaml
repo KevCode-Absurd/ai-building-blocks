@@ -20,7 +20,7 @@ seats:
   - {seat: "Working backwards", asks: "Where do we need to land, and what does that tell us about when and how to start?"}
   - {seat: "The way home", asks: "If the main plan fails, what's the backup, and have we checked that too?"}
 pairs_with: [richard-feynman, margaret-hamilton, grace-hopper, ada-lovelace, marie-curie]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Katherine Johnson Biography", by: "Margot Lee Shetterly, NASA", url: "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/", kind: reference}
   - {n: 2, title: "Katherine Johnson", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Katherine_Johnson", kind: reference}
@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Katherine Johnson interview (AARP Bulletin, 2018)", by: "Katherine Johnson, interviewed by AARP", url: "https://www.aarp.org/politics-society/history/info-2018/katherine-johnson-fd.html", kind: own-words}
   - {n: 6, title: "Katherine Johnson, NASA Mathematician And An Inspiration For 'Hidden Figures,' Dies (24 February 2020)", by: "Russell Lewis, NPR, via WNYC", url: "https://wnyc.org/story/katherine-johnson-nasa-mathematician-and-an-inspiration-for-hidden-figures-dies/", kind: reference}
   - {n: 7, title: "Hidden Figures (2016 film), historical accuracy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hidden_Figures", kind: reference}
+  - {n: 8, title: "The Orbital Behavior of the Echo I Satellite and Its Rocket Casing During the First 500 Days (NASA TN D-1366, June 1962; errata October 1962)", by: "Gertrude C. Westrick and Katherine G. Johnson, NASA Technical Reports Server", url: "https://ntrs.nasa.gov/citations/19620003290", kind: own-words}
 tests:
   - {kind: use, prompt: "Here is my three-month cash forecast in six lines. Check the sums step by step and show me where the numbers don't add up."}
   - {kind: use, prompt: "I want to launch a small online course on 1 March. Work backwards and give me the date each step has to start."}

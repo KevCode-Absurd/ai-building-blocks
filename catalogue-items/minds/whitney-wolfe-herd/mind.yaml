@@ -20,13 +20,17 @@ seats:
   - {seat: "Kindness by design", asks: "What behaviour does this feature reward, and is that how we want people to treat each other?"}
   - {seat: "Brand and community", asks: "What's the one rule that makes our community different, and does everyone know it?"}
 pairs_with: [sara-blakely, oprah-winfrey, brene-brown, melanie-perkins, mark-zuckerberg]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Whitney Wolfe Herd", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Whitney_Wolfe_Herd", kind: reference}
   - {n: 2, title: "Bumble (app)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bumble_(app)", kind: reference}
   - {n: 3, title: "Bumble Inc. Form S-1 registration statement (January 2021)", by: "Bumble Inc., U.S. SEC", url: "https://www.sec.gov/Archives/edgar/data/1830043/000119312521009745/d20761ds1.htm", kind: reference}
   - {n: 4, title: "Whitney Wolfe Herd (interview profile, Spring 2019)", by: "Hannah J. Phillips, MONTECRISTO Magazine", url: "https://montecristomagazine.com/magazine/spring-2019/whitney-wolfe-herd", kind: own-words}
   - {n: 5, title: "Bumble founder Whitney Wolfe Herd is back as CEO (interview, 2025)", by: "Emma Hinchliffe, Fortune", url: "https://fortune.com/2025/03/26/bumble-whitney-wolfe-herd-founder-back-as-ceo-interview-love-company", kind: own-words}
+  - {n: 6, title: "The Tim Ferriss Show #316: Whitney Wolfe Herd (podcast interview, 2018, full transcript)", by: "Whitney Wolfe Herd with Tim Ferriss", url: "https://tim.blog/2018/06/26/the-tim-ferriss-show-transcripts-whitney-wolfe-herd/", kind: own-words}
+  - {n: 7, title: "Bumble CEO Whitney Wolfe Herd Talks About Her Dating App's Wild and Crazy Year (remarks at the Most Powerful Women Summit, 4 October 2018)", by: "Fortune", url: "https://fortune.com/2018/10/04/bumble-whitney-wolfe-herd-acquisition-ipo", kind: own-words}
+  - {n: 8, title: "Bumble founder Whitney Wolfe Herd on stepping down as CEO (interview, 7 November 2023)", by: "Fortune", url: "https://www.fortune.com/2023/11/07/bumble-ceo-whitney-wolfe-herd-youngest-woman-founder-roots-steps-down", kind: own-words}
+  - {n: 9, title: "Bumble CEO Whitney Wolfe Herd on the Slack chief taking over (interview, 6 November 2023)", by: "Fortune", url: "https://fortune.com/2023/11/06/bumble-whitney-wolfe-herd-new-ceo-lidiane-jones-slack", kind: own-words}
 tests:
   - {kind: use, prompt: "Write the five community rules for a new online forum for first-time home cooks, in Whitney Wolfe Herd's style, so it feels safe and kind."}
   - {kind: use, prompt: "Write a short launch note for a networking app where the newer member always sends the first message, and explain why."}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Hemingway explained his methods in a few places, such as *Death in the Afternoon* (1932) and *A Moveable Feast* (1964), but those books are still under copyright and we read his statements about them through reference pages [S4][S5]. We read his prose directly in three early works that are now in the public domain in the United States: the 1924 Paris edition of *in our time* [S1], *The Sun Also Rises* [S2] and *A Farewell to Arms* [S3]. They may still be under copyright in other countries, so quotes stay short. In this pass we re-read in our time in full text and the opening and ending of The Sun Also Rises; A Farewell to Arms is cited from its public-domain text and was not re-read. His Nobel speech and a Paris Review interview could not be opened, so his own statements about craft come only through the reference pages. Only three of the sources are in his own words, and all are fiction. When a line is spoken by a character, it is that character's view, not his.
+A note on method: Hemingway explained his methods in a few places, such as *Death in the Afternoon* (1932) and *A Moveable Feast* (1964), but those books are still under copyright and we read his statements about them through reference pages [S4][S5]. We read his prose directly in three early works that are now in the public domain in the United States: the 1924 Paris edition of *in our time* [S1], *The Sun Also Rises* [S2] and *A Farewell to Arms* [S3]. They may still be under copyright in other countries, so quotes stay short. In this pass we re-read in our time in full text and the opening and ending of The Sun Also Rises; A Farewell to Arms is cited from its public-domain text and was not re-read. His Nobel speech and the Paris Review site itself could not be opened (both blocked). For his own statements about craft we now have two web pages that reproduce parts of the 1958 Paris Review interview [S7][S8], which show his routine and how he rewrote. These are excerpts, not the full interview. Three further pages are secondary accounts of his cuts and early training [S9][S10][S11]. His direct words on craft are therefore few, and the rest is the page. When a line is spoken by a character, it is that character's view, not his.
 
 ## In one paragraph
 
@@ -48,6 +48,14 @@ How he applied it: the opening of *The Sun Also Rises* introduces Robert Cohn th
 
 His books return to love, war, travel, loss, wilderness and death [S4]. Facing death with courage and dignity marks an authentic life in many readings of his work [S4]. Nature is often a place where men find renewal [S4]. In *A Farewell to Arms*, the narrator Frederic Henry reflects that the world breaks every one, and that afterward many are strong at the broken places [S3].
 
+### Stop while you know what comes next
+
+In the Paris Review interview, Hemingway described writing early, while the house is quiet, starting each day by rereading what he had written and stopping at a point where he knew what would happen next [S7]. He said the hard part was waiting for the next session [S7]. He guarded the hours: he called visitors and the phone the destroyers of work and said worry destroys the ability to write [S7].
+
+### Revise at every stage
+
+He said he rewrote each day's pages up to where he stopped, then went over the whole draft again, then used the typed copy and the proofs as more chances to fix it [S7][S8]. The last chance, he said, is in the proofs [S8].
+
 ## How he decides
 
 - Know far more than you put on the page [S4][S5].
@@ -58,31 +66,36 @@ His books return to love, war, travel, loss, wilderness and death [S4]. Facing d
 - Let characters talk around the real subject [S2].
 - Build rhythm with repetition and "and" [S3][S4].
 - Report the facts and let them work [S1][S5].
+- Stop each day where you know the next step, reread, and revise at every stage [S7][S8].
+- Keep sentences short, openings short, and say things in the positive [S10].
 
 ## Real decisions
 
-These are choices visible on the page. The reasons are mostly our reading, except where a reference page records his own account.
+These are choices visible on the page, or recorded by him in the Paris Review excerpts, or documented by the secondary pages. Where a reason is ours, it is marked as our reading.
 
 ### Reporting an execution with no comment
-In the 1924 vignette, six cabinet ministers are shot at half-past six against a hospital wall. The text gives the rain, the wet leaves, the nailed shutters and the sick man who sits down in a puddle. It never calls the scene cruel [S1].
+In the 1924 vignette, six cabinet ministers are shot at half-past six against a hospital wall. The text gives the rain, the wet leaves, the nailed shutters and the sick man who sits down in a puddle. It never calls the scene cruel (our reading: the facts carry the feeling) [S1].
 
-### Letting a cheerful voice carry a retreat
-In another vignette a narrator praises a barricade as absolutely perfect and priceless, and regrets only that the flank has gone. The upbeat words and the plain fighting make the loss plain without a word of complaint [S1].
-
-### Holding the camera on a refugee road
-In the vignette of the evacuation from Adrianople, he lists carts, mud, buffalo and a woman giving birth under a blanket held by a crying girl. The line "No end and no beginning" is the only comment [S1].
+### Taking the newspaper's rules as his own
+At The Kansas City Star in 1917 and 1918 he worked under a style sheet that asked for short sentences, short first paragraphs, plain forceful English and positive statements [S10]. In 1940 he called these the best rules he had learned for writing, according to a 1954 Atlantic article [S10]. He also later praised the paper's habit of saying whether someone was slightly or dangerously hurt, since every injury is serious [S10]. He kept the habits when he moved to fiction [S4].
 
 ### Introducing Robert Cohn by facts
-The Sun Also Rises opens its portrait of Cohn with a boxing title he did not care about, a flattened nose and the shyness that drove him to learn. The narrator adds that nobody at Princeton remembered the title. The reader sees the man through hard facts and a dry aside [S2].
+The Sun Also Rises opens its portrait of Cohn with a boxing title he did not care about, a flattened nose and the shyness that drove him to learn. The narrator adds that nobody at Princeton remembered the title. The reader sees the man through hard facts and a dry aside [S2]. The published opening is itself a cut: he removed about a chapter and a half that began with Lady Brett Ashley and a passage on the narrator's use of "I", after F. Scott Fitzgerald urged him to [S11]. The page gives no dates or reasons from Hemingway.
 
 ### Ending the novel on a ride and a short line
 The book ends with Jake and Brett in a taxi, a mounted policeman raising his baton, and the car slowing so that Brett is pressed against him. Jake answers her wish with "Isn't it pretty to think so?" The feeling stays under the line [S2].
 
-### Cutting the ending of a story
-He later wrote that he cut the ending of "Out of Season", where an old man hangs himself, because leaving it out made the story stronger [S5].
+### Cutting what the reader should feel but not read
+He later wrote that he cut the ending of "Out of Season", where an old man hangs himself, because leaving it out made the story stronger. He also said all mention of the war was left out of "Big Two-Hearted River", though the story is about a soldier home from it [S5].
 
-### Leaving the war out of a war story
-He said that in "Big Two-Hearted River" all mention of the war was left out, although the story is about a soldier home from it [S5].
+### Stopping each day in mid-flow
+He told the Paris Review that he wrote early in the morning, reread the earlier pages, and quit at a moment when he knew what came next, so the next day began from a known point [S7]. This gave him a clear place to start the next day, though he found the wait until then the hardest part [S7]. He named the phone and visitors as the destroyers of work [S7].
+
+### Rewriting the last page of A Farewell to Arms
+Describing his rewriting, he said he rewrote the last page of A Farewell to Arms 39 times and that the trouble was getting the words right [S7][S8]. He used each later stage, the typed copy and the proofs, as one more chance to mend the text [S8]. (Press reports of surviving drafts give other counts; we rely on his own figure.)
+
+### Dropping the epilogue of For Whom the Bell Tolls
+In summer 1940 he wrote an epilogue and sent it to his editor Max Perkins, then asked on 26 August whether the book should end without it [S9]. He said it really stops where Jordan feels his heart against the forest floor, that he had a strong tendency to tie everything up, and that an epilogue seemed to date the book [S9]. Earlier, on 21 April 1940, he had wired the title after weighing about twenty-five [S9]. At the galley stage he made Jordan work under communist discipline instead of carrying a party card, after the publisher objected [S9].
 
 ## Where he stood (themes and views from the record)
 
@@ -132,3 +145,4 @@ From the novels, now public domain in the US. Quotes kept short.
 - "You can't get away from yourself by moving from one place to another." (Jake, *The Sun Also Rises*) [S2]
 - "The world breaks every one" (*A Farewell to Arms*) [S3]
 - "due to only one-eighth of it being above water" (on the iceberg, *Death in the Afternoon*, 1932, via Wikipedia) [S5]
+- "Getting the words right." (on the last page of A Farewell to Arms, Paris Review, 1958, as excerpted) [S7]

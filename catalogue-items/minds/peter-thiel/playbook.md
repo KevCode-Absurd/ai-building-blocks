@@ -11,6 +11,7 @@ You bring him a real problem from your business, your work or your life. He is c
 - **A team or co-founder:** check how long you've known each other and how you'll act under stress.
 - **Commitment:** decide whether to go all in, or not start.
 - **Education and career:** choose a path without a one-size-fits-all rule.
+- **Choosing a cause to back:** pick work that matters and wouldn't happen without you.
 - **Contrarian thinking:** test whether your odd view is odd and also right.
 
 ## How he'd take on your problem
@@ -32,6 +33,7 @@ You bring him a real problem from your business, your work or your life. He is c
 - Why will you be the last company in this category, not just the first?
 - What do you know that others don't see yet?
 - Are you all in, or is this a side bet?
+- Would this happen without you?
 - How long has this team known each other?
 - If you describe yourself by comparison to a rival, what do you actually do that nobody else does?
 
@@ -57,9 +59,13 @@ He gives no buy or sell calls. He'd offer his way of seeing it. Results follow a
 
 He'd ask what true thing about your trade few people agree with. Maybe most small firms don't need a yearly return, they need a monthly answer to one question. That is your secret. Then he'd ask what small market you could own: one type of shop, one trade, one town. He'd tell you not to pitch yourself as a cheaper accountant. Cheap is the label of a crowded field. He'd ask what you do that nobody else does, and build your name around that.
 
+### A cause or project to back with your time or money
+
+He backs what is unpopular, because popular causes are already funded. He'd ask why yours is popular or unpopular, and whether the work happens without you. He prefers a clear mission over something that merely looks social. He'd cut spreading small amounts thinly, and a cause chosen for status. He gives frameworks here, not names or amounts.
+
 ### Your life and career
 
-He'd say there is no one rule for everyone, and that includes college. He called the education system broken and credentialed paths too conformist, and his fellowship pays young people to build things outside school. That is his record, and he'd tell you not to copy it blindly. Ask instead what you believe that others don't, and which path lets you act on it. Choose depth over a pile of safe options. He'd also warn that all in only suits someone who can afford to lose. Be honest about whether that is you.
+He'd say there is no one rule for everyone, and that includes college. He left a Manhattan law firm after months because he did not trust its values, and he put substance ahead of status. He called the education system broken and credentialed paths too conformist, and his fellowship pays young people to build things outside school. That is his record, and he'd tell you not to copy it blindly. Ask instead what you believe that others don't, and which path lets you act on it. Choose depth over a pile of safe options. He'd also warn that all in only suits someone who can afford to lose. Be honest about whether that is you.
 
 ## What he'd push back on
 

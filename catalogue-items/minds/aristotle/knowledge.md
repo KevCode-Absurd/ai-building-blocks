@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Aristotle may have written around 200 works, and about 31 survive [S1]. The polished books he wrote for the public, including dialogues, are almost all lost [S1][S5]. What we have reads like lecture notes, drafts and research files for his own students [S1]. Many were edited by later followers. His logic books, for example, were gathered into one set around 40 BC [S5]. The *Nicomachean Ethics* seems to be lecture notes, and three of its books are the same as three books of his other ethics, the *Eudemian Ethics* [S11]. The *Rhetoric* is also a set of lecture notes, built up over many years, and its third book may have been joined to the first two later [S3][S10]. So the texts can be terse, and some arguments seem to jump. We used W. D. Ross's translation of the *Nicomachean Ethics*, first published in 1908 [S9], and W. Rhys Roberts's translation of the *Rhetoric*, published in 1924 [S10]. Quotes from them are short.
+A note on method: Aristotle may have written around 200 works, and about 31 survive [S1]. The polished books he wrote for the public, including dialogues, are almost all lost [S1][S5]. What we have reads like lecture notes, drafts and research files for his own students [S1]. Many were edited by later followers. His logic books, for example, were gathered into one set around 40 BC [S5]. The *Nicomachean Ethics* seems to be lecture notes, and three of its books are the same as three books of his other ethics, the *Eudemian Ethics* [S11]. The *Rhetoric* is also a set of lecture notes, built up over many years, and its third book may have been joined to the first two later [S3][S10]. So the texts can be terse, and some arguments seem to jump. We used W. D. Ross's translation of the *Nicomachean Ethics*, first published in 1908 [S9], and W. Rhys Roberts's translation of the *Rhetoric*, published in 1924 [S10]. Quotes from them are short. We also read, in the public-domain translations on the MIT Classics Archive, the opening of the *Metaphysics* [S15], the first book of *On the Parts of Animals* [S13] and parts of the *Politics* [S14][S16], which show his own method at work. Where we say what Aristotle did in his life, the facts come from the Stanford Encyclopedia entry, and the entry gives few reasons [S1].
 
 ## In one paragraph
 
@@ -14,7 +14,7 @@ Aristotle was a Greek thinker who studied for twenty years in Plato's Academy, t
 
 Aristotle began an inquiry by setting out how things appear and what respected people believe about them. Then he worked through the puzzles those views raise [S1]. He used this kind of reasoning from accepted opinions, called dialectic, to work towards first principles [S1].
 
-How he applied it: he spent about two years studying the sea life of Lesbos, especially the Pyrrha lagoon [S5]. He described how one arm of the male octopus is used in mating, which people doubted until the 19th century [S5]. In ethics, he set out the views of others, including his teacher Plato, before giving his own. He said that as a lover of wisdom he had to honour truth above his friends [S6].
+How he applied it: he spent about two years studying the sea life of Lesbos, especially the Pyrrha lagoon [S5]. He described how one arm of the male octopus is used in mating, which people doubted until the 19th century [S5]. In ethics, he set out the views of others, including his teacher Plato, before giving his own. He said that as a lover of wisdom he had to honour truth above his friends [S6]. He opened the *Metaphysics* by saying that people by nature want to know, and that the craftsman is wiser than the person with experience alone because he knows the causes and can teach [S15]. In *On the Parts of Animals* he said no animal should be skipped out of distaste, and that the thing to look for is the purpose, as the real aim of building is the house and not the bricks [S13].
 
 ### Everything aims at some good
 
@@ -66,24 +66,33 @@ How he applied it: he said a young person is not a fit student of politics, beca
 
 Aristotle held that people are by nature political animals who want to live together [S4][S5]. The city comes into being so that people can live, but it exists so that they can live well [S4]. He sorted governments by whether one, a few or many rule, and by whether they rule for everyone or only for themselves [S4].
 
-How he applied it: for real cities that fall short of the ideal, he recommended a large middle class between rich and poor, as the most stable and least split by faction [S4]. He also argued that many people judging together can sometimes judge better than a few experts [S4].
+How he applied it: for real cities that fall short of the ideal, he recommended a large middle class between rich and poor, as the most stable and least split by faction [S4]. He also argued that many people judging together can sometimes judge better than a few experts [S4]. He began the *Politics* by breaking the city into its smallest parts and studying it from its first growth [S14], and he told advisers to ask what is best, what is best for these conditions, and what is easiest to reach, because the best is often out of reach [S16].
 
 ## Real decisions
 
-### Deliberate about means, not ends
-In Book III he separates what we weigh up from what we take as given. A doctor does not deliberate whether to heal, nor an orator whether to persuade. They fix the goal and then search for the means, preferring the easiest and most creditable, and working back until they reach the first thing they must do. The last step of the analysis is the first step of the doing. If the search hits an impossibility, such as needing money you cannot get, they drop the plan. For large matters we bring in advisers, since we distrust our judgement alone. [S12]
+### Staying twenty years, then leaving after Plato's death
+Aristotle went to Plato's Academy as a teenager and stayed associated with it until Plato died in 347 BC [S1]. Then he left for Assos in Asia Minor [S1]. Our source gives no reason beyond the timing, so we don't offer one [S1].
 
-### Do not deliberate about everything
-He also says we do not deliberate about eternal things, or about small facts of sense, such as whether this is bread or is cooked, because endless deliberation never ends. Deliberation fits matters that follow general rules but have uncertain results in a given case. After deliberation, the option preferred is what he calls moral choice. [S12]
+### Turning to the sea and the animals
+At Assos and then Lesbos, with Theophrastus, he did research that was largely about living things, including sea life [S1][S5]. His own method note is blunt: study every kind of animal without distaste, because every realm of nature is marvellous, and a student who avoids lowly creatures out of disgust will miss what they show [S13]. He also chose to describe common features at the level of a whole group, so as not to repeat them for each species, and he rejected strict two-way splitting because it breaks natural groups such as birds apart [S13].
 
-### Put friendship inside the study of how to live
-In Books VIII and IX he stops the argument to treat friendship, saying nobody would choose to live without friends even with every other good. He gives practical reasons: the rich need friends to use and keep their good fortune, the poor and unlucky need a refuge, the young are kept from error, the old are helped, and people in their prime act better in pairs. He adds that rulers care about friendship more than about justice, and that where people are friends, little justice is needed. [S12]
+### Taking the job of tutoring Alexander
+In 343 BC, at King Philip's request, he left Lesbos for Pella to teach the 13-year-old Alexander [S1]. The tutoring probably lasted two or three years, though some think longer [S1]. He then spent about five more years in Stagira or Macedon [S1].
 
-### Test the claim against what is said
-In Book I he sets out the leading opinions on what the good life is (pleasure, honour, wealth) and weighs each against what people actually value before giving his own account, which he ties to doing things well over a whole life, not a moment. [S6]
+### Founding his own school in 335
+He returned to Athens in 335 and founded the Lyceum, a school in a public exercise ground, whose followers were later called Peripatetics [S1]. He stayed thirteen years [S1].
 
-### Start an ethics lecture from how to live
-He opens the *Ethics* by asking what the good is at which all action aims, and settles for the level of precision the subject allows. He then says the aim of the study is action, not knowledge. [S6][S12]
+### Leaving Athens in 323
+When Alexander died in 323, anti-Macedonian feeling rose in Athens, and Aristotle, with his Macedonian ties, probably feared for his safety [S1]. He withdrew to Chalcis, where he died the next year [S1].
+
+### Advising a statesman with four questions
+In the *Politics*, he argued that the person who advises on government must ask four things: what is best in principle, what is best given the conditions, how to form and keep a state that falls short of the best, and what is easiest for most states to reach [S16]. His reason was that a theorist who ignores what is attainable is of little use, and that mending an existing constitution is as hard as building a new one, so the adviser must know many forms [S16].
+
+### Splitting a big thing into its smallest parts
+He opened the *Politics* by breaking the city into its simplest unions, such as the household and the village, and by studying it from its first growth [S14]. He rejected the view that a king, a householder and a master differ only in how many people they rule, saying they differ in kind [S14].
+
+### Choosing means, not ends, to deliberate about
+In Book III of the *Ethics*, he says we weigh the means to a goal and not the goal itself. A doctor does not deliberate whether to heal. We work back from the end to the first thing we must do, and drop the plan if the search hits an impossibility [S12]. We also do not deliberate about eternal things or small facts of sense, because endless deliberation never ends [S12].
 
 ## How he decides
 
@@ -93,6 +102,9 @@ He opens the *Ethics* by asking what the good is at which all action aims, and s
 - Look for the middle, as it applies to this person and this case [S7].
 - Lean away from the extreme you're most tempted by [S7].
 - Know the facts of the matter before you advise [S8].
+- Ask what is best in principle, what is best here, and what is easiest to reach [S16].
+- Break a big thing into its smallest parts and watch it grow [S14].
+- Don't skip a subject out of distaste; look for its purpose [S13].
 - Fit the argument to what the audience already believes [S3].
 
 ## Where he stood

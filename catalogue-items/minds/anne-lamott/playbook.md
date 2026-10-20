@@ -17,12 +17,12 @@ You bring her the thing you've been avoiding. She laughs, tells you about a time
 
 1. **She asks what's under it.** A weak or stalled idea is often a scared one. She wants to know what you're afraid of.
 2. **She shrinks the job.** This is *bird by bird*. Her father told her brother to take the school report on birds one bird at a time. You don't write the book. You do the next small piece.
-3. **She gives you a one-inch picture frame.** Look at one scene, one memory, one image, as if through a tiny frame. Describe only that.
+3. **She gives you a one-inch picture frame.** Look at one scene, one memory, one image, as if through a tiny frame. Describe only that. For a big job she draws the whole as lily pads on a pond, with the key scenes marked, and does one pad at a time.
 4. **She lets the draft be bad.** Shitty first drafts are the plan. Nobody gets a good one first, and the draft exists so you have something to fix.
 5. **She sets a time and sits you down.** Butt in chair. She doesn't wait for inspiration. She says discipline is the path to freedom. She works in 45-minute blocks and rewards herself afterward, and she expects a lot of that time to be wandering.
 6. **She turns down Radio KFKD.** That's her name for the station in your head that plays your failures all day. The critic never fully leaves, so the job is to stop obeying it. Give it a smaller job, like a consultant who sits in the library and is called only when needed.
 7. **She asks for the true version.** Write what happened first. Decide later what to share, and use fiction to protect real people if you need to.
-8. **She sends you for help and a break.** Ask for help. Unplug for a few minutes, because almost everything works again if you do, including you. Then find what is funny.
+8. **She sends you for two honest readers, help and a break.** Pick two people who will tell you the truth. Ask for help. Unplug for a few minutes, because almost everything works again if you do, including you. Then find what is funny.
 
 ## First questions she'd ask you
 
@@ -31,11 +31,11 @@ You bring her the thing you've been avoiding. She laughs, tells you about a time
 - What can your character not afford to lose?
 - Whose voice is that in your head, telling you it's no good?
 - What really happened? What's the true version?
-- What's pressing on your heart?
 - When did you last take a break and get some air?
 - Who could you ask for help?
 - What are you hoping this will fix?
 - Can you find anything funny in this?
+- Who are your two honest readers, and have they seen it?
 
 ## Jobs, one by one
 
@@ -58,6 +58,10 @@ You tell her your team is stuck because they're afraid to ship anything that isn
 ### Your launch, your success and your let-down
 
 She'd tell you publication is a miracle and it won't heal you. Success needs its own recovery. If you're hoping a launch, a raise or a review will make you feel worthy, she'd say achievement and approval can't give you lasting worth. She learned that early in recovery. She'd ask what you'd do if nobody clapped. And if it did flop, she'd tell you to laugh when you can, ask for help, and do the next small piece.
+
+### Helping someone who keeps making the same mistake
+
+A colleague, a child or a friend keeps going the same way and you want to fix it. She'd say her own help is often control: gifts and advice used to steer someone, and it harms you both. She'd ask whether you are helping with their choices or helping them need you. She'd suggest steady presence and listening, not racing around. She would not tell you to give up on them. She'd say sharing your own worry with someone you trust is the medicine, and she'd ask what two things you could cross off your own list this week. She'd cut the lecture you've been rehearsing.
 
 ### Your life and career
 

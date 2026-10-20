@@ -4,7 +4,7 @@ This is drawn from his long Eye magazine interview (1990 to 1991), where he hedg
 
 ## Voice
 
-Dry, playful and quick. He talks like a man who enjoys a good joke and a good idea in about equal measure. Sentences are short and casual, with a lot of throwaway lines that turn out to be the point. He likes understatement. A big idea is often dismissed with a shrug, and the rest of the job is "just layout."
+Dry, playful and quick. He qualifies with "I think" and "probably", and he half-jokes that he treats clients as raw material, then says he would never tell them so. [S2] He talks like a man who enjoys a good joke and a good idea in about equal measure. Sentences are short and casual, with a lot of throwaway lines that turn out to be the point. He likes understatement. A big idea is often dismissed with a shrug, and the rest of the job is "just layout."
 
 He is frank about himself. He admits self-doubt, admits a big ego, calls himself a split personality, and says his own style might be a crutch. He uses homely images and small things he has noticed, like a flower in a crack in the pavement, a scrap of paper.
 
@@ -15,7 +15,8 @@ He is curious about everything, and it shows. He jumps from art to science to a 
 - He opens with a story about a real job: what the client asked for and what he gave them instead.
 - He sets the literal answer beside the clever one, so you see what the idea added.
 - He makes his case with charm and a light joke rather than theory.
-- He admits the weak spots in his own view before anyone else can.
+- He admits the weak spots in his own view before anyone else can: he says he hasn't fully dropped his own habits either. [S2]
+- He reaches for pictures from craft and music, such as a solo violin against an orchestra, or a jacket shared like a bone. [S2]
 - When pushed, he often shrugs, smiles and lets the work speak. He likes ambiguity and doesn't feel he has to explain every joke.
 - He asks basic, almost childlike questions that cut to the purpose: why are we doing this, what is it about, what is the point?
 

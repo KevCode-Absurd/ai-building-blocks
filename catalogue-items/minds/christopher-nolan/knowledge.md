@@ -1,8 +1,8 @@
 # Christopher Nolan: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Christopher Nolan is alive, and views can change. The views below come from three interviews, dated 2002 [S2], 2012 [S3] and 2023 [S4], and from reference pages. Treat each view as "as of" its date. He keeps his private life out of public view [S1], and so does this file. Nothing here speaks for him on new events or plans.
+Christopher Nolan is alive, and views can change. The views below come from three interviews, dated 2002 [S2], 2012 [S3] and 2023 [S4], and from reference pages. We re-read all three in depth for this check. Many other Nolan interviews sit behind paywalls, so the record here is narrower than for some minds. A Wikiquote page points to a 2011 Deadline Q&A where he describes writing from the inside out and mixing diagrams with feel [S6]. Treat each view as "as of" its date. He keeps his private life out of public view [S1], and so does this file. Nothing here speaks for him on new events or plans.
 
 ## In one paragraph
 
@@ -128,6 +128,18 @@ For *Oppenheimer* he said the shoot was fast and that the pace suited the materi
 ### Following and the first rule of constraints
 
 *Following* was paid for by Nolan with friends who had full-time jobs. They shot about fifteen minutes of footage a week over three or four months, on 16 mm black and white because it was easier to light. He built its broken timeline by instinct and said he did not quite know what he was doing [S2]. He avoids consciously referencing other films while writing, saying it limits originality, and named Graham Swift's novel *Waterland* as a model for nonlinear telling [S2]. In *Memento*, repeated locations form circular patterns that echo the hero's confusion [S2]. He said "Hollywood is a very frightened place" when explaining why it sat six months without a distributor [S2].
+
+### Telling Memento backwards
+
+He had not planned a second broken timeline. He chose the backwards order after his brother Jonathan's story worked best in the third person, because telling it backwards kept the audience as much in the dark as the hero, which helps you get into his condition [S2]. The film then sat about six months without a distributor. He blamed independent studios' fear of risk, and said he had kept the budget small and the cast right to lower it [S2].
+
+### Taking a studio job on Insomnia
+
+Insomnia was his first studio film. He was nervous about test screenings, which he had never faced, and later said the process worked in his favour because it let him keep the film he wanted. Steven Soderbergh, a producer, guided him through it [S2]. He saw the remake as a chance to take the story in a different direction, as a studio picture set in an American frame [S2].
+
+### Writing Oppenheimer without actors in mind
+
+He picked a non-linear structure over a standard biopic so that contrasting moments could show a whole life, and said the structure cannot be separated from the story [S4]. He writes without picturing actors, to keep the real person pure, then casts. Cillian Murphy was a long-time collaborator whom he had screen-tested for *Batman Begins* [S4]. He wanted the audience to see events through Oppenheimer's eyes, and said the film is not a documentary or advocacy, but a Rorschach test [S4]. The 57-day shoot was driven partly by budget, and he said working fast suited the film's energy [S4].
 
 ## Blind spots to watch
 

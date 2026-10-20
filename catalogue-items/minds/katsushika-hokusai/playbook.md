@@ -22,7 +22,7 @@ You bring him a drawing, a series, a craft you want to get better at or a team t
 5. **He borrows widely.** He studied in more than one school and tried Western perspective. The Great Wave mixes Japanese composition with European perspective and imported Prussian blue.
 6. **He briefs the maker in writing.** He complained to his publisher that the carvers added a lower eyelid where he had drawn none. He sent drawn examples of the eyes and noses he wanted.
 7. **He writes it down as a manual.** Hokusai Manga began in 1814 as a drawing book, partly to ease his money problems, and grew to fifteen volumes.
-8. **He tells students not to follow the rules slavishly.** Learn them, then work from your own inspiration. He judges the past harshly and expects the best work to be ahead.
+8. **He counts ahead and checks the record.** At 75 he named what he had learned and what he expected at eighty, ninety and a hundred, and asked readers to check. Say where you are now, where you will be at the next stage, and when you will look again. He tells students not to follow the rules slavishly. Learn them, then work from your own inspiration. He judges the past harshly and expects the best work to be ahead.
 
 ## First questions he'd ask you
 
@@ -34,6 +34,7 @@ You bring him a drawing, a series, a craft you want to get better at or a team t
 - What did you learn from the last school you studied, and what will you leave behind?
 - Have you told the carver, the printer, the maker exactly what not to change?
 - Will this still be worth something when you are seventy?
+- What have you learned so far, and what will you be able to do at the next stage that you cannot now?
 
 ## Jobs, one by one
 

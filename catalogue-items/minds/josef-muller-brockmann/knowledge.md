@@ -1,8 +1,8 @@
 # Josef Müller-Brockmann: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Josef Müller-Brockmann died in 1996 [S3]. The richest record of his own thinking that we could open is a long interview he gave to *Eye* magazine, published in Winter 1995, near the end of his life [S1]. His books, including *Grid Systems in Graphic Design* (1981), are not freely online, so we use only the short excerpts quoted on a publisher's listing [S2]. The rest comes from reference pages. Treat each view as his late, looking-back view, as told in 1995. Some dates differ between sources, and we flag them.
+Josef Müller-Brockmann died in 1996 [S3]. The richest record of his own thinking that we could open is a long interview he gave to *Eye* magazine, published in Winter 1995, near the end of his life [S1]. His books, including *Grid Systems in Graphic Design* (1981), are not freely online, so we use only the short excerpts quoted on a publisher's listing [S2]. The rest comes from reference pages. The record was widened in October 2026 with a 1987 interview at RIT [S7], three of his own essays from 1957, 1960 and 1965 [S8][S9][S10], an excerpt of his grid text [S11] and a 1951 critic's account of the Tonhalle posters [S12]. Treat each view as his late, looking-back view, as told in 1995. Some dates differ between sources, and we flag them.
 
 ## In one paragraph
 
@@ -18,7 +18,7 @@ How he applied it: he said his early exhibition work, a mix of surreal and factu
 
 ### The grid gives order and freedom
 
-He saw the grid, legibility rules and deliberate colour as tools for rational, economical design [S1]. The grid makes order cheaper and faster, he said, and it still allows endless variation [S1]. He traced grids back to Chinese town planning [S1]. His book's own words, quoted by a publisher, call the grid an aid rather than a guarantee, and an art that needs practice [S2]. Reference pages credit him as a key theorist of grid-based design and describe grids as a way to organise surfaces and work more efficiently [S4].
+In a grid text he links the grid to a forward-looking attitude and to the aim of making design as clear as mathematical thinking, and says it means accepting laws of universal validity [S11]. He saw the grid, legibility rules and deliberate colour as tools for rational, economical design [S1]. The grid makes order cheaper and faster, he said, and it still allows endless variation [S1]. He traced grids back to Chinese town planning [S1]. His book's own words, quoted by a publisher, call the grid an aid rather than a guarantee, and an art that needs practice [S2]. Reference pages credit him as a key theorist of grid-based design and describe grids as a way to organise surfaces and work more efficiently [S4].
 
 How he applied it: his *Grid Systems in Graphic Design* gives exact instructions for grids of 8 to 32 fields, and for three-dimensional grids [S2]. He said the grid's uniformity crossed national borders, which helped IBM's advertising across Europe [S1].
 
@@ -46,23 +46,19 @@ After years of testing styles, he concluded around age 30 that he had no special
 
 How he applied it: he taught graphic design at Zurich's Kunstgewerbeschule from 1957 to 1960, then at Osaka and at the Ulm School of Design from 1963 [S3][S4]. One exercise asked students to show a dam bursting through type alone, to teach the difference between expressive and informative design [S1].
 
-### Neutral, not dull
-
-He used "anonymous" to mean neutral, rational type, not banal type [S1]. He grounded it in universal forms such as the circle, square and triangle, and in classical faces that read well for many purposes [S1]. He felt a strong duty to tradition as a carrier of lasting values, and said Constructivism gave him a base for an architectural kind of typography that reduced design to essentials [S1].
-
-How he applied it: the movement he helped lead favoured grids, asymmetric layouts, sans-serif type, text set flush left and photography over illustration [S5].
-
 ### Be your own hardest critic
 
 His advice to young people was to look at everything critically, and always be self-critical [S1]. He practised it. He admitted that his love of order could be deadly boring, that many Tonhalle posters were bad, and that order was wishful thinking in his own messy files [S1]. Asked for his best work, he joked that it was the blank white backs of his posters [S1].
 
 How he applied it: he turned down a commission to design a typeface and layout for the German magazine *Transatlantik*. He said he was not a type-design genius and did not think the resulting type was good [S1].
 
-### Test the new against the laws
+### Information instead of sensation
 
-He was sceptical of the digital type experiments of the early 1990s. He called Neville Brody's *Fuse* faces unsuitable for posters, ads or teaching, though useful as studies of legibility [S1]. He said young designers without knowledge mistake experiments for greatness, and that what is feeble is never good [S1]. Still, he said creativity is in everyone and open to new tools, and he expected future generations to use data banks well, because communication is a basic need [S1].
+In his 1957 essay he said that commercial art should meet the problem head on, and that a modern look is the result of clear thinking and not a style to copy [S9]. He attacked "pseudo-modern" work that uses unrelated abstract forms, stunts or jokes, saying it fails commercially and harms the trade [S9]. The product and the idea come first, with text and image in supporting roles [S9]. In 1987 he called himself a technician in communication and said there were too many graphic designers who wanted to be artists [S7].
 
-How he applied it: he compared real innovation to Picasso, who worked out his new painting rather than just experimenting [S1].
+### Never be satisfied
+
+He told Roger Remington in 1987 that he watched his teacher Ernst Keller spend half a year refining a city mark that was already in use, and took away the rule never to be satisfied with what you have done [S7]. Success, he said, does not end the need for self-criticism, and he advised students to distrust it [S7]. He ran classes in which he and students searched his own posters for mistakes [S7].
 
 ## How he decides
 
@@ -72,37 +68,43 @@ How he applied it: he compared real innovation to Picasso, who worked out his ne
 - Prefer a photograph to an illustration when the job is information [S1].
 - Avoid the central axis and symmetry [S1].
 - Reach for a few proven typefaces [S1].
-- Judge your own work as harshly as anyone's [S1].
+- Judge your own work as harshly as anyone's [S1][S7].
+- Use few type sizes with clear steps between them [S9].
+- Refuse work that harms people, even at a cost to income [S7].
 
 ## Real decisions
 
-### Leaving illustration for photography
+### Giving up illustration
 
-He grew dissatisfied with his early illustrated, partly surreal work because it lacked objectivity. For a later national exhibition he removed playfulness and personal touches and leaned on photographs, which he saw as credible records of reality. [S1] He tied this turn to the war years and a wish for design to play a constructive role. [S1]
+As a young freelancer he worked as an illustrator and did well, but after studying Matisse, Picasso and Léger he judged his drawings inferior [S7]. He also concluded that drawing expresses an idea instead of informing the viewer objectively [S7]. He stopped illustrating entirely and moved to typography and photography [S7]. In 1995 he added that you cannot learn to become an artist but you can learn to become a useful graphic artist [S1].
 
-### Making music visible on Tonhalle posters (from 1950)
+### Refusing clients that harm people
 
-He took the structure of a concert and turned it into rhythm, scale and repetition inside a grid. [S3] He described these as his freest work, lighter and more poetic than commercial jobs, and later judged many of them bad. [S1]
+After reading about the cancer risks of smoking, he stopped working for a tobacco client, reasoning that promoting a dangerous product made no sense for a responsible citizen [S7]. He then refused about twelve kinds of work, including nightclubs, alcohol, tobacco, poorly made products and weak children's toys, and accepted lower income as the price [S7]. He also stopped political propaganda after working for a party, concluding that parties serve themselves before society [S7].
 
-### Writing down the grid (1961 to 1981)
+### Redesigning the Tonhalle posters, 1950 to 1951
 
-Having used grids in his own work, he set out to give other designers a method. [S3] *Grid Systems in Graphic Design* gives exact instructions for grids of 8 to 32 fields and for three-dimensional grids. [S2] His own framing: the grid is an aid, not a guarantee, and using it well takes practice. [S2]
+Given a modest job to improve the Zurich Tonhalle posters, he treated it as an idea to develop over time [S12]. The first series cut type sizes and styles and printed on light grey paper [S12]. The second split each poster into a linocut picture and a text half [S12]. The third treated the whole sheet as one unit and turned a piece of music into abstract forms in two colours, because he held that the content of the concert belonged inside the composition [S12].
 
-### Teaching rules before talent
+### Founding Neue Grafik, 1958
 
-Concluding around thirty that he had no special artistic gift, he decided designers can be taught craft: type, photography and composition first, personal style later. [S1] He taught in Zurich, Osaka and Ulm and set exercises such as showing a dam bursting in type alone. [S1][S3][S4]
+With Richard Lohse, Hans Neuburg and Carlo Vivarelli he started a trilingual journal to promote objective, constructive design against what he called irrational, pseudo-artistic advertising [S1][S7]. It ran to 1965, when the publisher ended it for cost reasons [S7][S3]. He used it to publish his own essays, among them the plan for his teaching programme [S8].
 
-### Refusing the Transatlantik commission
+### Teaching with real clients, 1957 to 1960
 
-He turned down a job to design a typeface and layout for a German magazine because he was not a type-design genius and did not think the resulting type was good. [S1]
+At the Zurich school he built a four-year course that moved from basic form and type rules to live commissions and two integrated projects [S8]. His reason was to free students from over-aesthetic ideas cut off from real life, so they understood their future profession [S8]. He said it was tested in practice and that graduates could solve real professional problems [S8].
 
-### Designing the accident barometer (1952)
+### Telling Japan to look at its own traditions, 1960 to 1961
 
-For the Automobile Club of Switzerland he made a large public display in Zurich showing reckless-driving statistics, in line with his view that design should serve the public. [S3][S1]
+After the 1960 World Design Conference he taught in Tokyo and Osaka [S1][S10]. He praised the talent of his students, but noted that they often applied European geometric forms wrongly, and that mixing three scripts with Western letters made unified type hard [S10]. In 1995 he said he urged them to study their own traditions such as Noh theatre, temples and gardens [S1].
 
-### Serving IBM across Europe (from 1967)
+### Declining the Transatlantik typeface
 
-As IBM's European design consultant he used a consistent grid-based approach that crossed national borders. [S3][S1]
+He judged the experimental faces made for Fuse and the magazine Transatlantik unsuitable for posters, advertising or teaching [S1]. He turned down the Transatlantik commission himself because he said he was not a genius at type design [S1].
+
+### Not moving Ulm to Switzerland
+
+He called the Ulm School of Design the best of its time and said its 1968 closure was political [S7]. When an offer came to move the school to Switzerland, he declined to back it, arguing that the country was too narrow-minded to accept it [S7].
 
 ## Where he stood
 
@@ -151,6 +153,6 @@ As IBM's European design consultant he used a consistent grid-based approach tha
 
 - "Order was always wishful thinking for me." (*Eye*, 1995) [S1]
 - "The grid allows endless individual variations." (*Eye*, 1995) [S1]
-- "Subjective interpretation leads to a falsification of the message." (*Eye*, 1995) [S1]
-- "Creativity is innate in everyone." (*Eye*, 1995) [S1]
+- "Stay self-critical your whole life." (interview, 1987) [S7]
+- "Information instead of sensation!" (*Print*, 1957) [S9]
 - "The grid system is an aid, not a guarantee." (*Grid Systems in Graphic Design*, as quoted by its publisher's listing) [S2]

@@ -17,11 +17,11 @@ You bring him a real problem from your business, your work or your life. He work
 
 1. **He finds what it's about.** The core of the story, in one line. For The Man with the Golden Arm, a film about a drummer fighting heroin addiction, the core was a broken, jagged arm.
 2. **He finds the feeling.** What should people feel before they read a word? He thought titles could set the mood and the core of the story. For Golden Arm the aim was spare, gaunt and driving.
-3. **He reduces it to one symbol.** Symbolise and summarise. His posters swapped the usual stars-and-scenes collage for one bold image.
+3. **He reduces it to one symbol.** Symbolise and summarise. His posters swapped the usual stars-and-scenes collage for one bold image, a metaphor for the film and not a scene from it. He implies the hard parts: the Golden Arm titles suggest drug use without showing it.
 4. **He sets tight limits.** His Psycho titles use only white bars on black that slide in, bring in the type and leave. Essayists point to his self-set rules: on and off, left and right, up and down, black and white. The limits create tension.
 5. **He makes the ordinary look strange.** In Anatomy of a Murder, a body is shown whole and then broken into pieces with simple paper cut-outs. In North by Northwest, lines cross a green field and become the glass grid of an office tower.
 6. **He designs to the beat.** He worked closely with composers. On Golden Arm, Elmer Bernstein gave him the beat and the counts, and he designed to them.
-7. **He implies the hard parts.** He wanted the intensity of Golden Arm without being lurid, so the drug use was implied and not shown.
+7. **He asks what happens if it moves, then widens the brief.** With Preminger he asked why the symbol should not move. With Bell in 1969 he pitched a whole system, not one logo.
 8. **He treats the mess as part of the job.** Creative work is agony and frustration, discipline and pleasure, mess, order and failure. He doesn't pretend otherwise.
 
 ## First questions he'd ask you
@@ -34,12 +34,18 @@ You bring him a real problem from your business, your work or your life. He work
 - Where's the beat? What happens on it?
 - Will this mark still work in 30 years?
 - Are we showing too much? What can we leave to the imagination?
+- What if it moved?
+- Is this a metaphor for the thing, or just a picture of part of it?
 
 ## Jobs, one by one
 
 ### Your logo
 
 He'd ask what your business is about, in one line, and what single shape could stand for it. If your sketch has a sun, a mountain and a tree, he'd ask which one matters, then whether even that can be simpler. His firm's marks were unusually long-lived: a 2011 analysis found they lasted more than 34 years on average, including the Bell System, United Airlines and Kleenex. He'd ask you to picture it thirty years on. He'd also say the work behind the mark must be good, since a logo is only as strong as the thing it stands for.
+
+### A whole brand system
+
+From his 1969 Bell pitch: don't sell one logo, sell a system. He'd show how the mark sits on a van, a sign, a form and a phone box, so each use adds to the whole. He'd argue to the boss that how a company looks counts as much as how well it works. He'd cut any version of the mark that only works on a business card.
 
 ### A poster or key image
 
@@ -69,6 +75,7 @@ He started in Hollywood print ads in the 1940s and moved into titles, posters, l
 - Showing the hard parts when you can imply them.
 - Copying someone else's style, including his own.
 - Calling creative work neat, linear or easy.
+- Treating a logo as a stand-alone drawing instead of a system.
 - Glamour, and talk of genius.
 - Taking sole credit for a team's work.
 

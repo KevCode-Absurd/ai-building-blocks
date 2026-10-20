@@ -21,13 +21,15 @@ seats:
   - {seat: "Cost of conflict", asks: "Is there a way to win this without the fight, and what does a long fight cost us?"}
   - {seat: "Intelligence", asks: "What do we actually know about the other side, and who told us?"}
 pairs_with: [niccolo-machiavelli, michael-porter, winston-churchill, lao-tzu, bruce-lee]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The Art of War, translated by Lionel Giles, 1910 (Project Gutenberg eBook #132)", by: "Sun Tzu (attributed)", url: "https://www.gutenberg.org/cache/epub/132/pg132.txt", kind: own-words}
   - {n: 2, title: "The Art of War, Lionel Giles translation (The Internet Classics Archive)", by: "Sun Tzu (attributed)", url: "https://classics.mit.edu/Tzu/artwar.html", kind: own-words}
   - {n: 3, title: "Sun Tzu", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sun_Tzu", kind: reference}
   - {n: 4, title: "The Art of War", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Art_of_War", kind: reference}
   - {n: 5, title: "Sun-Tzu", by: "World History Encyclopedia", url: "https://www.worldhistory.org/Sun-Tzu/", kind: reference}
+  - {n: 6, title: "Sonshi (E. F. Calthrop's 1905 translation; index and preface)", by: "Wikisource", url: "https://en.wikisource.org/wiki/Sonshi", kind: reference}
+  - {n: 7, title: "The Art of War (index of English translations)", by: "Wikisource", url: "https://en.wikisource.org/wiki/The_Art_of_War_(Sun_Tzu)", kind: reference}
 tests:
   - {kind: use, prompt: "A much bigger company just launched a product like ours at a lower price. Write a one-page plan for how we respond, in your style."}
   - {kind: use, prompt: "Turn the five factors and seven questions into a short checklist I can use before any big negotiation."}

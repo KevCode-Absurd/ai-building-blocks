@@ -1,6 +1,10 @@
 # John Caples: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1]. The only text we hold on disk is the 1926 piano ad scan [S6]; the rest of his own-words record is as read earlier and not rechecked here.
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1]. The only text we hold on disk is the 1926 piano ad scan [S6]; the rest of his own-words record is as read earlier and not rechecked here.
+
+A second pass on 2026-10-21 reopened the scanned text of *Advertising Ideas* [S1] and went through it for worked cases, his way of picking evidence and his way of marking up an ad. It is a casebook of other firms' ads with his commentary, so the decisions below are mostly his readings and rules, and where the choice belonged to an advertiser we say so. No interview, talk or article of his turned up free online; a published "interview" circulating online is a pastiche by another writer, and we did not use it.
+
+A note on the record, added earlier on 2026-10-21: we searched again for more of Caples's own words online and found little that is free and legal. His books are in copyright and the copies on file-sharing sites are not used here. The new sources are the Advertising Hall of Fame profile, which records one remark of his about mail-order copy [S7], and a 1990 obituary [S8]. His own voice therefore still rests on the books as read earlier and the one 1926 ad, and the mind should say so when asked for detail beyond them.
 
 A note on the record: Caples wrote his ideas down in books, so most of this comes from his own words. We read two of them as scanned text: *Advertising Ideas* (1938) [S1] and the fifth edition of *Tested Advertising Methods* (1997) [S2]. The first edition of *Tested Advertising Methods* came out in 1932 [S3]. The fifth edition was revised by Fred E. Hahn after Caples died, so some examples and notes in it are Hahn's, and the book doesn't always say which [S2]. We keep to the ideas that run through both books. Facts about his life come from reference pages, which disagree on a few dates. Where they do, we say so.
 
@@ -56,6 +60,10 @@ How the page is built: the story does the persuading, and the sell sits at the e
 
 How he applied it elsewhere: his case studies show the product woven through the whole story or strip, so the reader can't enjoy the story without meeting the product [S1].
 
+### Borrow a proven appeal for the new product
+
+When he reviewed a new canned-fruit ad, he did not praise the idea as fresh. He pointed to two arguments with proven pull, "new" and "ready to serve," and said copy tests of many appeals show that "quick and easy" and "get rid of work" attract almost everyone [S1]. In another case, a reducing appeal in a headline was, he wrote, one of the oldest and most successful in advertising, and a maker who can prove his product reduces fat can be nearly sure of a fortune [S1]. The method: look through the tested appeals first, and put the new product under the one that fits.
+
 ### Test small before you spend big
 
 Caples said big money should never go into advertising until the ad has been tested [S2]. He argued that mail-order ads succeed because their results are measured, so every advertiser should test media and individual insertions and keep records [S2]. He urged writers to write every ad as if it were mail order, with a clear headline, readable type and a personal reason to respond [S2].
@@ -78,23 +86,31 @@ How he applied it: in his own books he treated the results of earlier tests as a
 
 ### Telling the piano ad as a story
 
-The headline sets up a public humiliation and turns on "But" [S6]. Caples, as the ad is attributed to him, kept the sell to the end: a free booklet and demonstration lesson [S3][S6]. The reasons he gave elsewhere were that readers skip formal copy but follow a story with a happy ending [S1]. Sources date the ad to 1925 or 1926 [S3][S5].
+The headline sets up a public humiliation and turns on "But" [S6]. Caples, as the ad is attributed to him, kept the sell to the end: a free booklet and demonstration lesson [S3][S6]. The reason he gave elsewhere was that readers skip formal copy but follow a story with a happy ending [S1]. Sources date the ad to 1925 or 1926 [S3][S5].
 
-### Joining BBDO for mail-order accounts
+### Moving his mail-order habits into general advertising
 
-Caples began at Ruthrauff & Ryan in 1925 and moved to BBDO on April 8, 1927 [S3]. He worked mostly on mail-order accounts, where every reply could be counted [S3][S4]. That is where he drew the rule that measured results decide what an ad says [S2].
+Caples began at Ruthrauff & Ryan in 1925 and moved to BBDO on April 8, 1927 [S3]. The foreword to his 1938 book says he took the "hard-boiled" viewpoint of the mail-order man into general advertising, used mail-order tests where they fitted and devised new tests where they did not [S1]. In 1936 two advertising trade bodies named him to a committee to study ways of testing ads [S1].
 
-### Publishing his tests
+### Choosing which ads to put in the book
 
-He published Tested Advertising Methods in 1932, then two more books in 1936 and 1938 [S1][S3]. His reason was to share formulas that results had proven, while admitting that times and readers change [S1][S2].
+For *Advertising Ideas* he looked at hundreds of ads that had won reader surveys and kept 79. He threw out a car ad that topped the readership list because it had only about ten words, so reading it proved little. He threw out an insurance ad built on a huge photo of a cat's whiskers, because in ten years of keyed insurance work he never made sales with a stunt like that. He also dropped winners that sat on the back cover or opposite the contents page, because he could not tell how much was the copy and how much was the spot. His rule: an ad must both draw readers and follow methods that tests have tied to sales. He also gave extra weight to winning a crowded issue [S1].
 
-### Keying every ad
+### Reading a survey by cost, not just by score
 
-Caples keyed ads so each reply could be traced to a version [S1]. The piano coupon's question about owning an instrument shows the same mind: a coupon should collect a signal [S6]. He tested small before spending big [S2].
+He described the reader-checking method, in which 300 to 400 people who have read an issue are asked which ads they saw and read. Results are tallied by percent and by cost. If a color page and a black-and-white page score the same, the cheaper black-and-white page wins [S1].
 
-### Using story and comic-strip formats
+### Testing in one magazine before going national
 
-He used story and comic-strip formats in other ads, noting that many readers skip formal copy but follow a story [S1]. His case studies weave the product through the whole story, so the reader meets it [S1].
+He praised a life insurer that tested each new ad for sales results in a single publication. Only ads that drew many coupons and sales were run in national magazines. He picked this case partly for its cheerful pitch, which spoke of money you receive at retirement, not money your widow would get, and for its very long copy, which he defended because the readers who stay are real prospects [S1].
+
+### Hormel and "double your money back"
+
+In 1932 a soup maker ran an ad offering double your money back if the buyer was not satisfied. Caples tells it as the ad that started a school, copied by more than forty makers. The firm feared that hungry people would buy soup only to claim the refund. It tested in small cities first and then bigger ones. In six weeks in Chicago only twelve women claimed the double refund. He credited the success to a stopping headline and to the offer showing the maker's confidence [S1].
+
+### Choosing the hardest kind of copy
+
+Caples called mail-order ads his favourite kind of copy and the hardest, because each new ad was trying to beat a proven winner [S7]. His reason, as the Hall of Fame records it, was that results are counted, so you cannot hide behind taste [S7]. In his casebook he made the same point about a memory course ad that ran for years: nothing written afterward had beaten it, since each run used a new key number, so its cost per sale could be known to the penny [S1].
 
 ## Where he stood
 

@@ -20,7 +20,7 @@ seats:
   - {seat: "The reader's wants", asks: "What bait will they bite on, and how does our offer move them closer to it?"}
   - {seat: "Sales letters and follow-up", asks: "If the first letter didn't get an answer, what new reason do we give in the next one?"}
 pairs_with: [john-caples, victor-schwab, claude-hopkins, eugene-schwartz, bill-jayme]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The Letter Book (1931), reading sample of the 2021 Musaicum edition: preface and chapters 1 to 2", by: "Robert Collier", url: "https://content.e-bookshelf.de/media/reading/L-17843583-ce18e885eb.pdf", kind: own-words}
   - {n: 2, title: "The Secret of the Ages (1926, scanned text)", by: "Robert Collier", url: "https://archive.org/details/SecretOfTheAges_201902", kind: own-words}
@@ -28,6 +28,8 @@ sources:
   - {n: 4, title: "Review of The Robert Collier Letter Book", by: "Michael C. Gray, Profitadvisors (2003)", url: "https://profitadvisors.com/collier.shtml", kind: secondary}
   - {n: 5, title: "The Secret (Byrne book)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Secret_(Byrne_book)", kind: reference}
   - {n: 6, title: "The Secret of the Ages (1926), Volume 4, scanned text: chapters 9 to 13", by: "Robert Collier", url: "https://archive.org/details/secretofages0004robe", kind: own-words}
+  - {n: 7, title: "The Secret of Gold: How to Get What You Want, Volume One (1927), foreword and chapters 1 to 3", by: "Robert Collier", url: "https://archive.org/details/collier-1927-the-secret-of-gold-vol-1", kind: own-words}
+  - {n: 8, title: "The Secret of Gold: How to Get What You Want, Volume Two (1927), chapters 4 and 5", by: "Robert Collier", url: "https://archive.org/details/secretofgoldhowt0002robe", kind: own-words}
 tests:
   - {kind: use, prompt: "Write the first three paragraphs of a sales letter for a local gardening service, aimed at busy parents who are tired of weekend yard work."}
   - {kind: use, prompt: "Write a friendly second reminder to a customer whose invoice is 30 days late, so they pay and still like us."}

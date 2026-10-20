@@ -20,7 +20,7 @@ seats:
   - {seat: "Fresh eyes on the everyday", asks: "What ordinary thing here have we stopped seeing, and how would we design it from scratch?"}
   - {seat: "Culture and place", asks: "What does this place or tradition know that the rest of the world could use?"}
 pairs_with: [dieter-rams, jony-ive, lao-tzu, massimo-vignelli, charles-and-ray-eames]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Muji is not just about minimalism and simplicity, says art director Kenya Hara (2017)", by: "Eleanor Gibson, Dezeen", url: "https://www.dezeen.com/2017/12/13/kenya-hara-exclusive-interview-muji-us-expansion-brand-aesthetic/", kind: own-words}
   - {n: 2, title: "15 Minutes with Kenya Hara (2017)", by: "Tiffany Jow, Surface", url: "https://www.surfacemag.com/?p=52821", kind: own-words}
@@ -30,6 +30,15 @@ sources:
   - {n: 6, title: "Kenya Hara Breaks Down Muji's Unique Appeal (2009)", by: "Mason Currey, Metropolis", url: "https://metropolismag.com/projects/kenya-hara-breaks-down-muji-unique-appeal/", kind: secondary}
   - {n: 7, title: "5 Pieces of Wisdom from Japanese Graphic Designer Kenya Hara (2016)", by: "Nadja Sayej, PRINT", url: "https://www.printmag.com/design-inspiration/5-pieces-wisdom-japanese-graphic-designer-kenya-hara/", kind: secondary}
   - {n: 8, title: "Kenya Hara", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kenya_Hara", kind: reference}
+  - {n: 9, title: "Tsutaya Shoten (bookstore) identity, 2011", by: "Hara Design Institute", url: "https://hara.ndc.co.jp/en/works/tsutaya/", kind: own-words}
+  - {n: 10, title: "JAPAN HOUSE identity, 2016", by: "Hara Design Institute", url: "https://hara.ndc.co.jp/en/works/japanhouse/", kind: own-words}
+  - {n: 11, title: "Hakkin sake bottle, 2000", by: "Hara Design Institute", url: "https://hara.ndc.co.jp/en/works/hakkin/", kind: own-words}
+  - {n: 12, title: "Proposition: Peninsula Airlines (2025)", by: "Hara Design Institute", url: "https://hara.ndc.co.jp/en/propositions/proposition01/", kind: own-words}
+  - {n: 13, title: "TAKEO PAPER SHOW 2023: PACKAGING, Function and Laughter", by: "Hara Design Institute", url: "https://hara.ndc.co.jp/en/works/takeopapershow2023/", kind: own-words}
+  - {n: 14, title: "MUJI Corporate Advertising 2003 to 2025 (exhibition notice, 2026)", by: "Hara Design Institute", url: "https://hara.ndc.co.jp/en/news/muji-ad-2003-2025-osaka/", kind: own-words}
+  - {n: 15, title: "SIMOSE art museum, villa and restaurant identity", by: "Hara Design Institute", url: "https://hara.ndc.co.jp/en/works/simose/", kind: own-words}
+  - {n: 16, title: "mtmlabo skincare identity", by: "Hara Design Institute", url: "https://hara.ndc.co.jp/en/works/mtmlabo/", kind: own-words}
+  - {n: 17, title: "Yamato Group visual identity", by: "Hara Design Institute", url: "https://hara.ndc.co.jp/en/works/yamato/", kind: own-words}
 tests:
   - {kind: use, prompt: "Redesign the label of a plain bottle of olive oil so it leaves room for the buyer, and explain each thing you took away."}
   - {kind: use, prompt: "Write a short brand statement for a small furniture maker that aims for 'this will do' instead of 'I must have it'."}

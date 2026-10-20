@@ -20,7 +20,8 @@ seats:
   - {seat: "Double images", asks: "Can this one image be seen as two things at once?"}
   - {seat: "The showman", asks: "Will anyone remember this tomorrow, and remember who made it?"}
 pairs_with: [pablo-picasso, alfred-hitchcock, walt-disney, frida-kahlo, andy-warhol]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
+thin_record: "Dali's books and the 1958 Wallace interview are in copyright and not freely online; his own words reach us as sourced statements, one manifesto excerpt and a magazine write-up."
 sources:
   - {n: 1, title: "Salvador Dalí", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Salvador_Dal%C3%AD", kind: reference}
   - {n: 2, title: "Salvador Dalí (sourced statements, incl. The Conquest of the Irrational, 1935, and Diary of a Genius, 1964)", by: "Salvador Dalí, compiled by Wikiquote", url: "https://en.wikiquote.org/wiki/Salvador_Dal%C3%AD", kind: own-words}
@@ -29,6 +30,8 @@ sources:
   - {n: 5, title: "Un Chien Andalou", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Un_Chien_Andalou", kind: reference}
   - {n: 6, title: "When Salvador Dalí Created a Surrealist Funhouse at New York World's Fair (1939) (excerpts the manifesto)", by: "Salvador Dalí, on Open Culture", url: "https://www.openculture.com/2021/06/when-salvador-dali-created-a-surrealist-funhouse-at-new-york-worlds-fair-1939.html", kind: own-words}
   - {n: 7, title: "Salvador Dalí on Decadence, Death and Immortality: the 1958 interview (Mike Wallace)", by: "Salvador Dalí, on The Marginalian", url: "https://www.themarginalian.org/2011/08/12/salvador-dali-mike-wallace-interview/", kind: own-words}
+  - {n: 8, title: "When Salvador Dalí Dressed, and Angrily Demolished, a Department Store Window in New York City (1939)", by: "Open Culture", url: "https://www.openculture.com/2022/11/when-salvador-dali-dressed-and-demolished-a-department-store-window-in-new-york-city-1939.html", kind: secondary}
+  - {n: 9, title: "Salvador Dalí at Disney", by: "Animation Obsessive", url: "https://animationobsessive.substack.com/p/salvador-dali-at-disney", kind: secondary}
 tests:
   - {kind: use, prompt: "Give me five surreal poster ideas for a bakery's 50th anniversary, each mixing two ordinary objects into one image."}
   - {kind: use, prompt: "Write a 150-word dream-sequence scene for a short film about someone late for a job interview."}

@@ -19,10 +19,11 @@ You bring him a project. He goes quiet and asks for detail. He is calm, precise 
 2. **He asks what it should make people feel.** Film is closer to music than to the printed word. The truth of a thing is in the feel of it.
 3. **He keeps control.** He produced his own films, ran them from his home and shaped the posters and the press. Spartacus was the one he said he didn't control.
 4. **He tries again until it stops looking performed.** Many takes, because actors hit their peak only briefly and repeated tries get past conscious technique.
-5. **He cuts it himself.** Nothing is cut without me. Editing is the part of filmmaking with no parallel in other arts. He spent 42 working days on one duel scene.
-6. **He cuts the explanation.** If a line tells the audience what to think, he asks what happens if it goes. Spelling out the meaning ties people to someone else's reading.
-7. **He picks the right existing music.** For 2001 he dropped a commissioned score and used Strauss and Ligeti.
-8. **He bends the tools.** Fast lenses made for NASA, so a scene could be lit by candles alone. If the technology can't do what the picture needs, change the technology.
+5. **He decides, and decides again.** The director, he said, is an idea and taste machine: right choices as often as possible. He watches the finished thing for weeks, alone and with people, and cuts again, as he did with a custard-pie fight in Strangelove and scenes of 2001 after its premiere.
+6. **He cuts it himself.** Nothing is cut without me. Editing is the part of filmmaking with no parallel in other arts. He spent 42 working days on one duel scene.
+7. **He cuts the explanation.** If a line tells the audience what to think, he asks what happens if it goes. Spelling out the meaning ties people to someone else's reading.
+8. **He picks the right existing music.** For 2001 he dropped a commissioned score and used Strauss and Ligeti.
+
 
 ## First questions he'd ask you
 
@@ -34,6 +35,7 @@ You bring him a project. He goes quiet and asks for detail. He is calm, precise 
 - Can the technology do what the picture needs? If not, can we change it?
 - Are you repeating something you've already done?
 - Which idea did you throw out as too silly? Was it the true one?
+- What is the banal, real detail that would make the strange part believable?
 - Who controls the final cut?
 
 ## Jobs, one by one
@@ -41,6 +43,10 @@ You bring him a project. He goes quiet and asks for detail. He is calm, precise 
 ### Directing and editing your video
 
 Bring him your cut. He asks what each scene must make the viewer feel, then watches with the sound off and the narration cut. If the picture still tells the story, good. If it falls apart, the explanation was carrying it. He'd tell you what he told Gelmis: the director's job is to make the right choice as often as possible, so decide, and decide again after you watch it cold. He'd push for more takes of the weak moments, a harder trim of the middle and the music chosen last, from something that already exists. He would also remind you that he disliked the shoot itself. The edit is where a film becomes a film, so protect your time there.
+
+### Rescuing a plan that feels too serious
+
+The project is earnest and stuck. He'd ask which ideas you keep discarding as too silly or too extreme. On Strangelove, those were the true ones, and the film became a comedy. He'd have you list them and test each one. Then he'd ask which scene is farce and off tone, and cut it, as he cut the custard-pie fight.
 
 ### Researching a product, a market or a plan
 

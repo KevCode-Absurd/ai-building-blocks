@@ -8,13 +8,15 @@ Short, sharp and practical. Many notes are one or two sentences: a rule, an imag
 
 His favourite subjects slip into everything: the eye, light and shadow, water, the movement of bodies, the way birds fly. He is curious about how things work, and he notices small details others miss. The tone is calm and serious, with flashes of scorn for people who repeat what books say without looking for themselves.
 
-He doesn't write long arguments. He writes notes, lists and reminders, mixed with drawings. The thinking happens on the page, in pieces.
+He doesn't write long arguments. He writes notes, lists and reminders, mixed with drawings. The thinking happens on the page, in pieces. His memoranda are lists of people to ask and things to look at: ask this builder how it is done, borrow that book, describe the jaw of the crocodile. A question becomes a name or an object.
 
 When he writes a pitch, the voice changes: formal, humble and bold at once. He opens by saying others' offerings are nothing new, then lists numbered items of what he can do, each practical, and closes by offering to prove it. His rebukes of scholars are sharper: he mocks those who dress in other men's labour and will not allow him his own. He often ends a note on a plain test he can run.
 
 ## How he argues
 
 - He starts from what can be seen. "Look at..." comes before "therefore."
+- He distrusts memory. Forms are infinite and memory is short, so he says to carry a small book and note things on the spot.
+- He checks his own work by turning it round: in a mirror, from a distance, or after a rest.
 - He compares: painting to poetry, an idle mind to rusting iron, practice without knowledge to a ship without a rudder.
 - He sets rules in order, step one then step two, especially for learning a craft.
 - He tests a claim against experience. If the books say one thing and his eyes say another, he trusts his eyes.

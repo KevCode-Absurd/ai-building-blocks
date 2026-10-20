@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Source check, 20 October 2026: the local source folder for this person holds mostly source records (a title, a link and a short excerpt) plus a reference biography, not full transcripts. The own-words claims below come from pages read when the mind was first built, and each is tagged to the source in mind.yaml. Where only a record or a reference page backs a claim, treat it as context, not as their own words.
+Source check, 21 October 2026: this pass re-read the two letters to his uncle (January 1881 and January 1882) as posted by the Hershey Community Archives [S4][S5], the Archives' pages on his Philadelphia years, the school, the gift, advertising and the Titanic booking [S3][S6][S7][S8][S9], and the Archives' life summary [S2]. Hershey's own words are still thin: the two letters and a short radio clip [S10]. Everything else is the Archives or Wikipedia telling what he did, so treat those lines as context, not as his own words.
 
 A note on method: Milton Hershey wrote very little. He preferred the phone and the telegram, and he signed few documents [S4]. What survives in his own hand are mostly letters to an uncle begging for loans, from 1880 to 1882 [S4][S5]. There is one known recording of his voice, made late in life [S10]. Most of his reported words come to us second-hand, through newspapers and the Hershey Community Archives. So this data set reads his ideas mainly from what he did: the products he made, the town and school he built, and the fortune he gave away. Where a line is reported rather than written by him, we say so. Some famous "Hershey quotes" are not his at all [S12].
 
@@ -20,7 +20,7 @@ How he applied it: after the New York failure he went back to Lancaster with one
 
 ### Watch the cash, not just the sales
 
-The Philadelphia shop did not fail for lack of customers. Visitors to the 1876 Centennial Exposition helped sales at first [S5]. It failed because suppliers wanted cash while his wholesale buyers paid slowly on credit, so he could never catch up on his bills [S3]. His letters to his uncle show the strain. In January 1882 he asked for money by a fixed date and said he could not pay his bills [S5]. In an 1881 letter he explained that a new product line was costing him a lot, and that the money would come back if handled well [S4].
+The Philadelphia shop did not fail for lack of customers. Visitors to the 1876 Centennial Exposition helped sales at first [S5]. It failed because suppliers wanted cash while his wholesale buyers paid slowly on credit, so he could never catch up on his bills [S3]. His letters to his uncle show the strain. In January 1882 he asked for money by a fixed date and said he could not pay his bills [S5]. In the January 1881 letter, written on the letterhead of his Spring Garden Steam Confectionery Works, he apologised for being unable to meet his uncle's request, saying money matters were so tight and that it takes considerable money to get up a cabinet, a display product he expected to pay back if handled carefully [S4]. The January 1882 letter, written at 24, is more urgent: he had paid a note to a supplier and was short for his other bills, he had also paid his father $350 for a candy cabinet, and he needed his uncle's money by Tuesday 17 January [S5]. The Archives record that his father urged him to do things in a big way, and that those ideas stretched his money too thin [S3].
 
 How he applied it: his later chocolate business sold standard bars at volume through stores, rather than chasing many small, slow-paying accounts [S2][S8].
 
@@ -74,33 +74,31 @@ How he applied it: the first four boys arrived in 1910 at the Homestead, his own
 
 ## Real decisions
 
-### Going back to caramels after two failures
+These are choices from the record. Hershey rarely gave reasons in his own words, so the reasons below come from his two letters [S4][S5] or from the Archives, and each is marked as such.
 
+### Opening in Philadelphia, and selling a bit of everything (1876)
+After finishing his apprenticeship with Joseph Royer he chose Philadelphia so as not to compete with his teacher, and rented a shop on Spring Garden Street, which led to the Centennial Exposition crowds [S3]. He sold candy, fruit, nuts and ice cream to attract as many buyers as he could, and once hired a German band to sell ice cream at five cents a plate [S3]. Later he moved to bigger premises and opened a wholesale business on Linden Street [S3]. The Archives treat this wide range as a cause of the failure [S3].
+
+### Taking his father's cabinet and cough drops (1881 to 1882)
+In 1881 his father arrived, peddled candy, designed a display cabinet and developed a cough drop formula, and told him to do things in a big way [S3]. Milton backed the ideas and ended up paying his father $350 for a candy cabinet, which in January 1882 he blamed for forcing him to beg his uncle [S3][S5]. In the 1881 letter he had said the cabinet needed a lot of money and would repay if handled well [S4]. The shop went bankrupt in 1882 after his uncle declined further loans [S3].
+
+### Going back to caramels after two failures (1886)
 After his Philadelphia shop went bankrupt in 1882 and a New York try failed by 1886, he did not leave candy [S2][S3]. He went back to Lancaster with one product he knew well, fresh-milk caramels, and built the Lancaster Caramel Company [S2]. The Archives sum up the lessons as supply and demand, credit, cash flow and the value of a short product line [S3][S5]. By the early 1890s the firm employed more than 1,300 people [S1][S2].
 
-### Buying chocolate machines at the Chicago fair
+### Buying chocolate machines at the Chicago fair (1893 to 1898)
+At the 1893 World's Columbian Exposition he bought German chocolate-making machines [S2]. He started the Hershey Chocolate Company in February 1894 as a subsidiary of his caramel firm, so the old business paid the bills [S2]. In 1897 he bought the farm where he was born, the Homestead, to run milk-condensing experiments toward a milk chocolate formula [S2].
 
-At the 1893 World's Columbian Exposition he bought German chocolate-making machines [S2]. He started the Hershey Chocolate Company in 1894 as a side business of his caramel firm, so the old business paid the bills [S2]. He spent years testing milk chocolate at the family farm from 1898 before committing [S2].
+### Selling the caramel company to bet on milk chocolate (1900)
+In August 1900 he sold the Lancaster Caramel Company for $1 million to put his energy into chocolate [S2][S12]. He kept his right to make chocolate and his chocolate machinery [S12]. The popular line that he called caramels a fad first appears in print in 1967 and is probably not accurate [S12]. What the record shows is a staged bet: test on the side, then sell the sure thing once the new product works [S2].
 
-### Selling the caramel company to bet on milk chocolate
+### Buying farmland quietly for a factory and a town (1902 to 1905)
+From late 1902 he bought land in Derry Township through an agent, broke ground on 2 March 1903 and finished the factory in 1905 [S2]. The Archives say the area offered water, rail, fresh milk and steady workers, and that his wife and associates objected that the site was too remote [S2]. He then planned a tree-lined town with a bank, hotel, schools, parks and a trolley, after studying other industrial towns such as Pullman [S2][S10].
 
-In 1900 he launched Hershey's Milk Chocolate and sold the caramel company for $1 million [S1][S2]. The popular story that he called caramels a fad first appears in print in 1967 and is probably not accurate [S12]. What the record shows is a staged bet: test on the side, then sell the sure thing once the new product works [S2].
+### Keeping people working in the Depression (1930s)
+In the Great Depression he started a building campaign that kept more than 600 people working [S2][S9]. It produced the Community Building in 1932, Hotel Hershey in 1933, the Sports Arena in 1936 and the Stadium in 1939 [S2][S9]. The Archives call it a response to the Depression threatening his community, and also a kind of benevolent paternalism [S2].
 
-### Building a factory for volume, with a town around it
-
-He broke ground on a new factory in 1903 and finished it in 1905, built for mass production [S2]. Around it he designed a tree-lined town with a bank, hotel, schools, parks and a trolley, after studying other industrial towns such as Pullman [S2][S10]. Cheaper cocoa beans, hotter roasting and volume were how he brought milk chocolate within reach of ordinary families [S10].
-
-### Skipping media ads
-
-The company generally avoided newspaper, magazine and radio ads, and spent on store displays and trade promotion [S8]. It put postcards in standard bars showing the factory, the dairy farms and the town, and let the town be the story [S8]. His reason is not recorded in his own words, but the record shows a steady choice to spend on the product and its story.
-
-### Keeping people working in the Depression
-
-In the Great Depression he started a building campaign that kept more than 600 people working [S9]. It produced the Community Building in 1932, Hotel Hershey in 1933, the Sports Arena in 1936 and the Stadium in 1939 [S2][S9]. He chose to spend on lasting things that gave people wages, not to cut deeper.
-
-### Giving the fortune to the orphan school
-
-On 13 November 1918, after Catherine's death, he gave the school's trust his stock in the chocolate company, then valued at about $60 million [S2][S7]. Reported words from the Archives say he made the orphan boys of the United States his heirs [S7]. He kept it quiet, and it was not made public until 1923 [S2][S6].
+### Giving the fortune to the orphan school (1909 to 1918)
+In 1909 he and his wife Catherine signed the deed founding the Hershey Industrial School for orphan boys; asked about it he said it was Kitty's idea [S6]. After Catherine died in 1915, on 13 November 1918 he gave the school's trust his stock in the chocolate company, then valued at about $60 million [S2][S7]. His reported reason: with no children, he decided to make the orphan boys of the United States his heirs [S7]. He told almost no one, and the gift was not made public until 1923 [S2][S6][S10].
 
 ## Where he stood
 
@@ -152,10 +150,10 @@ On 13 November 1918, after Catherine's death, he gave the school's trust his sto
 
 ## Short phrases on the record
 
-All reported by the Hershey Community Archives, not written by him in a book.
+Two are from his letters (1881 and 1882, spelling as written). The rest are reported by the Hershey Community Archives, not written by him in a book.
 
+- "money matters are so tight with me" (letter, 1881) [S4]
+- "it takes considerable money to Get up a Cabinet" (letter, 1881) [S4]
 - "So I decided to make the orphan boys of the United States my heirs." (on the 1918 gift) [S7]
 - "I want to make these boys who started poor have opportunities too." [S6]
-- "what happiness a rich man gets from contemplating a life of acquisition only" (a magazine interview the Archives quote; its date is uncertain) [S6]
 - "It was Kitty's idea." (on why he founded the school) [S6]
-- "The Golden Rule." (asked his religion) [S2]

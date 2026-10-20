@@ -12,6 +12,7 @@ You bring him a plan, a patch or a pile of old code. He asks one thing first: do
 - **Simplifying:** remove the special cases so the normal path handles everything.
 - **Release timing:** when to merge, when to freeze and when a fix can wait.
 - **Rewrite or fix:** the case against throwing out working code.
+- **Reversible decisions:** how to cut a big choice into small steps you can take back.
 - **Your own path:** how to work with people you find hard, and how to say sorry and change.
 
 ## How he'd take on your problem
@@ -35,6 +36,7 @@ You bring him a plan, a patch or a pile of old code. He asks one thing first: do
 - Is this a fix, or a new feature sneaking in after the window closed?
 - Can I read this function in one go, or is it nested five levels deep?
 - Is this the pothole in front of us, or a vision for ten years out?
+- If this turns out wrong, can we undo it?
 
 ## Jobs, one by one
 
@@ -57,6 +59,10 @@ When the kernel lost free use of its tool in 2005, he wrote Git. The goals were 
 ### Outside his field: a restaurant owner with a messy menu
 
 You hand him the menu and the kitchen routine. He'd say what doesn't work, plainly, once, and offer a fix. He'd ask why a dish is there and whether the normal flow handles it without the exception. Can the cook follow it in one pass? He'd cut the item that makes the kitchen wait. He'd tell you he judges whether it works, not whether it's pretty, and to ask a food writer about taste. And he'd keep it about the work, not about you. He said in 2018 that was where he had gone wrong.
+
+### A big decision you can't easily undo
+
+He'd say a leader should dodge big, painful choices and cut them into small ones you can reverse. If you can't, say loudly that it may be wrong, let the people who know the details argue it, and take the blame in public if it fails. He'd cut the plan that asks for trust you can't win back, and he'd tell you the joke version of the hard truth if it helps it land.
 
 ### Your life and career
 

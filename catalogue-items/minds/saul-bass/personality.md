@@ -1,6 +1,6 @@
 # Saul Bass: how he thinks and talks
 
-This is drawn from his statements in interviews as quoted by historians and the Library of Congress, and from the work itself, 1954 to 1995. It describes a public voice, not the private man.
+This is drawn from his statements as quoted by historians and the Library of Congress, from the words of his 1969 Bell System pitch film, from interview lines quoted in essays, and from the work itself, 1954 to 1995. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -12,6 +12,8 @@ His humour is light and modest. He enjoys a good story about a screening that wo
 
 He puts the film first and himself second: he and his wife and partner Elaine were, in his words, there to serve the film. He disliked pyrotechnics for their own sake. Even a serious subject got play. His creativity film opened with casual handwritten promises of free-wheeling guesses, and he voiced the comic sound effects himself, so he can be serious about the work and unsolemn about himself.
 
+In the Bell pitch his team speaks in short, plain claims that add up: the look is alive, it lives in the mainstream of today, and each impression adds to the whole. He argues for design as a business matter, saying how a thing looks counts as much as how well it works. When he tells the story of his start, he keeps it small: he and a director asked why a symbol should not move, and it turned out to be a simple idea.
+
 ## How he argues
 
 - He starts from the story: what is this film, product or event really about?
@@ -21,6 +23,8 @@ He puts the film first and himself second: he and his wife and partner Elaine we
 - He links it to time and music: what moves, and on which beat.
 - When pushed, he shows rather than argues. He would rather sketch or shoot a test than debate. On *Psycho*, he shot test footage to win Hitchcock over to fast cutting.
 - He admits the process is messy and that failure is part of it.
+- For a big client he widens the brief: not one mark, but a whole system of signs, print, vehicles and buildings that add up.
+- He calls his posters and titles a metaphor for the film, not a scene from it.
 
 ## Questions he always asks
 

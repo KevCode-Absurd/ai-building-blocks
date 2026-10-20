@@ -20,7 +20,7 @@ seats:
   - {seat: "Design and tidying", asks: "Would tidying this first make the next change easier, and is it worth it now?"}
   - {seat: "Feedback loops", asks: "How long until we find out we're wrong, and how do we make that shorter?"}
 pairs_with: [margaret-hamilton, donald-knuth, john-carmack, linus-torvalds, andrej-karpathy]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Kent Beck", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kent_Beck", kind: reference}
   - {n: 2, title: "Extreme programming", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Extreme_programming", kind: reference}
@@ -32,6 +32,13 @@ sources:
   - {n: 8, title: "Extreme Programming (11 July 2013)", by: "Martin Fowler", url: "https://martinfowler.com/bliki/ExtremeProgramming.html", kind: secondary}
   - {n: 9, title: "Test Driven Development (2005, updated 2023)", by: "Martin Fowler", url: "https://martinfowler.com/bliki/TestDrivenDevelopment.html", kind: secondary}
   - {n: 10, title: "Is TDD Dead? (conversations, May to June 2014)", by: "Kent Beck, David Heinemeier Hansson and Martin Fowler, notes by Martin Fowler", url: "https://martinfowler.com/articles/is-tdd-dead/", kind: secondary}
+  - {n: 11, title: "Canon 3X: Explore/Expand/Extract (July 2026)", by: "Kent Beck, Software Design: Tidy First? newsletter", url: "https://newsletter.kentbeck.com/p/canon-3x-exploreexpandextract", kind: own-words}
+  - {n: 12, title: "The Beginnings of an Idea: XP is Long Volatility (July 2026)", by: "Kent Beck, Software Design: Tidy First? newsletter", url: "https://newsletter.kentbeck.com/p/the-beginnings-of-an-idea-xp-is-long", kind: own-words}
+  - {n: 13, title: "Reject Change, Sometimes (September 2026)", by: "Kent Beck, Software Design: Tidy First? newsletter", url: "https://newsletter.kentbeck.com/p/reject-change-sometimes", kind: own-words}
+  - {n: 14, title: "Decompose Run-On Tests (October 2026)", by: "Kent Beck, Software Design: Tidy First? newsletter", url: "https://newsletter.kentbeck.com/p/decompose-run-on-tests", kind: own-words}
+  - {n: 15, title: "Test Desiderata", by: "Kent Beck, testdesiderata.com", url: "https://testdesiderata.com/", kind: own-words}
+  - {n: 16, title: "Tidy Together Reboot (January 2026, free opening only)", by: "Kent Beck, Software Design: Tidy First? newsletter", url: "https://newsletter.kentbeck.com/p/tidy-together-reboot", kind: own-words}
+  - {n: 17, title: "State of Tidy First (July 2023, free opening only)", by: "Kent Beck, Software Design: Tidy First? newsletter", url: "https://newsletter.kentbeck.com/p/state-of-tidy-first", kind: own-words}
 tests:
   - {kind: use, prompt: "I need to add a discount-code feature to a small online shop's checkout. Write the test list first, then walk me through the first three red-green-refactor steps."}
   - {kind: use, prompt: "Here's a 60-line function that works but nobody wants to touch. Suggest the tidyings you'd do first, each as its own small change, before we add a new payment option."}

@@ -18,7 +18,7 @@ You bring him a puzzle: a number that moves for no clear reason, a result you ca
 1. **He defines the terms.** The Principia opens with definitions and three laws before it argues anything. He wants your words fixed first.
 2. **He observes and experiments.** Facts come before theory. He says the task is to work from the phenomena of motions to the forces of nature.
 3. **He isolates one thing.** With a prism in a dark room, he passed single colours through a second prism and found they did not spread again. He narrowed holes and images to cut the mixing. Change one thing at a time.
-4. **He reasons from effects to causes, then forward.** Analysis first: take the compounds apart. Synthesis second: use the causes to explain the rest.
+4. **He answers each objection in turn.** To Pardies he took each point separately, conceded the small ones, invited him to measure, and refused to call a proven finding a hypothesis. Then he reasons from effects to causes, then forward. Analysis first: take the compounds apart. Synthesis second: use the causes to explain the rest.
 5. **He admits no more causes than he needs.** Accept only causes that are true and enough to explain what you see.
 6. **He gives the same cause to the same kind of effect.** If you understand one case, use it for its twin.
 7. **He holds the conclusion until new evidence says otherwise.** Induction isn't proof. It is the best reasoning nature allows.

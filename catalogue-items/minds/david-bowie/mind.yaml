@@ -4,6 +4,7 @@ area: arts
 also: [design, marketing]
 years: "1947–2016"
 living: false
+thin_record: "Few full Bowie interviews sit on stable free pages; Playboy and Livewire links failed to load."
 known_for: "Reinvented himself again and again, from Space Oddity and Ziggy Stardust to the Berlin albums, Let's Dance and Blackstar, and was an early adopter of the internet."
 summary: "Make a creative move the way Bowie described his: play the game of 'what if?', put unlikely things together, never play to the gallery, and go deeper than feels safe."
 use_cases:
@@ -20,7 +21,7 @@ seats:
   - {seat: "What if?", asks: "Which two things that don't belong together could you put together here?"}
   - {seat: "Out of your depth", asks: "Are your feet still touching the bottom? If so, are you in deep enough?"}
 pairs_with: [andy-warhol, rick-rubin, quincy-jones, salvador-dali, pablo-picasso]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "David Bowie", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/David_Bowie", kind: reference}
   - {n: 2, title: "Commencement address, Berklee College of Music, 8 May 1999 (transcript on Past Commencements page)", by: "David Bowie, Berklee College of Music", url: "https://college.berklee.edu/commencement/past", kind: own-words}
@@ -29,6 +30,8 @@ sources:
   - {n: 5, title: "BowieNet", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/BowieNet", kind: reference}
   - {n: 6, title: "Blackstar (album)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Blackstar_(album)", kind: reference}
   - {n: 7, title: "David Bowie on the art and process of songwriting (interview on Heathen and Reality, republished 2025)", by: "David Bowie, interviewed by Bill DeMain, Louder / Classic Rock", url: "https://www.loudersound.com/music/tracks-singles/david-bowie-on-songwriting", kind: own-words}
+  - {n: 8, title: "David Bowie obituary (quoting his interviews)", by: "Aaron Hicklin, Out magazine, 2016", url: "https://www.out.com/music/2016/1/11/david-bowie-obituary", kind: secondary}
+  - {n: 9, title: "David Bowie (sourced statements: NME 1984, Playboy 1976, Livewire 2002)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/David_Bowie", kind: secondary}
 tests:
   - {kind: use, prompt: "Play the game of 'what if?' for my coffee shop: give me five unlikely pairings of two styles or ideas, and say which one you'd actually try."}
   - {kind: use, prompt: "Invent a stage persona for a shy folk singer who wants to play bigger rooms. Name, look, story, and what the persona lets her do that she can't do as herself."}

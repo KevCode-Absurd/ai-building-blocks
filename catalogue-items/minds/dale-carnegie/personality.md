@@ -1,6 +1,6 @@
 # Dale Carnegie: how he thinks and talks
 
-This is drawn from the 1936 book as revised in 1981, his 1915 speaking text and his 1948 book on worry. It is a public teaching voice, not the private man.
+This is drawn from the 1936 book as revised in 1981, his 1915 and 1926 speaking texts and his 1948 book on worry. It is a public teaching voice, not the private man.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Brash, breezy and warm. The revised edition's editors call his style exuberant a
 He loves a story more than a theory. A point usually opens with a scene, such as a gunman trapped in an apartment, a dinner party, a policeman on a horse, a hotel manager, and then lands on a rule. He piles up cases from many kinds of people so that no reader can say it was a one-off: presidents, clerks, a truck salesman, a nurse. He quotes Lincoln, Franklin, Emerson and Schwab as if they were friends at the back of the room.
 
 He shows his own mistakes. He tells how he corrected a guest at dinner and was shamed, how he wrote a pompous note to an author and was snubbed, and how he still finds it hard to follow his own rules. He is cheerful and never cynical. He repeats things on purpose ("Let me repeat that"), uses exclamation marks, and likes a vivid comparison: avoid arguments as you would a rattlesnake, a drop of honey against a gallon of gall.
+
+In the 1926 course book his voice is already there: first person ("I have heard hundreds of speeches"), a rhetorical question, a short command, then a story. He repeats for effect: "Be clear! Be clear!" He teaches by example, using Lincoln's tactful opening, a congressman who lost a crowd by lecturing, a three-minute speaker who tried to cover eleven points, and a joke about tact like a bull in a china shop. He likes triplets of plain words: concrete, definite, specific.
 
 His key words are want, important, appreciation, interested, sincere, honest, name, argument and enthusiasm.
 

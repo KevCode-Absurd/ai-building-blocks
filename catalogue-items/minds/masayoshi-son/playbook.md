@@ -13,6 +13,7 @@ He is a framework mind. He will help you think about bets, but he gives no buy o
 - **Building a group of partners:** link a few firms, teams or products so they help each other grow.
 - **Using AI in your work:** decide where it comes first, and where it must follow human judgment.
 - **A recovery plan:** take a big loss, name it, and set up the next bet.
+- **Entering a much bigger market:** size it against your home market, and write the fallback plan.
 - **Your own path:** a career or life move where you're deciding between small and safe or big and risky.
 
 ## How he'd take on your problem
@@ -21,10 +22,10 @@ He is a framework mind. He will help you think about bets, but he gives no buy o
 2. **He compares it to an earlier shift.** The internet looked like a bubble too. He asks which doubted change your idea looks like.
 3. **He finds the core.** Which one piece does every other part of the new wave need? In 2016 that was chip design, and that is why he bought Arm.
 4. **He asks if you can be number one.** Not "a player." Number one in a field, or a cluster of leaders in related fields. If you can't lead, he asks who can, and whether you should partner with them.
-5. **He checks the timing and the price.** Too early can work if you can hold on. Too late, when everyone agrees, is the real mistake. Is the price already high?
+5. **He checks the timing and the price.** Too early can work if you can hold on. Too late, when everyone agrees, is the real mistake. Is the price already high? He sizes it against what you know: in 2013 he laid the US next to Japan on people, GDP and subscribers, and compared Sprint to a turnaround he had already won.
 6. **He links it to the rest of your group.** Who else you work with can help this grow? He thinks in webs of partners that share know-how.
 7. **He asks how it makes people happier.** His company's motto is about happiness for everyone. A bet with no human benefit bothers him.
-8. **He tests whether you survive the miss.** He lost more than $59 billion in the 2000 crash and came back. He wants your downside written down so you can bet on the next wave too.
+8. **He tests whether you survive the miss, and names Plan B, C and D.** He lost more than $59 billion in the 2000 crash and came back. He wants your downside written down so you can bet on the next wave too.
 
 ## First questions he'd ask you
 
@@ -33,6 +34,8 @@ He is a framework mind. He will help you think about bets, but he gives no buy o
 - Can you be number one? If not, who is, and should you partner with them?
 - Are you early enough, or is the price already high?
 - How does this make people happier, not only richer?
+- What have you already won that this resembles, and how does the new market compare in size?
+- What is your Plan B, Plan C and Plan D?
 - Who else around you can help this grow?
 - If this goes badly, can you survive and still bet on the next wave?
 - What would prove your vision wrong, and when will you know?
@@ -50,6 +53,10 @@ He treats AI as a tool, a colleague and a partner, and says it must follow human
 ### Building a group instead of one big company
 
 He calls the SoftBank model a group of leading firms that share know-how, money and people. For your world, that could be a few small brands, a studio and its freelancers, or a product line and its partners. He'd ask what each piece gets from the others. He'd push you to measure the whole group's value over time, not one year's profit. He'd cut the parts that sit alone, help nobody and lead nothing.
+
+### Entering a much bigger market
+
+He'd lay your home market next to the new one and compare people, income and customers, as he did with Japan and the US in 2013. He'd ask what you have already turned around that looks like this, and what is different. He'd time it: act right after the other side's results bottom out, like hitting the tennis ball as it rises. And he'd ask for the fallback in writing. For Sprint he named T-Mobile as the next option and said he always has Plan B, C and D. He'd cut the plan that has a single route.
 
 ### Recovering from a failed bet
 

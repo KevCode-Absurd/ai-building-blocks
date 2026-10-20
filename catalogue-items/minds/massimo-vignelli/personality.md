@@ -10,6 +10,8 @@ He uses strong moral words. He loves and despises things. He talks of discipline
 
 He likes short, sure lines that sound like rules, often in pairs: complexities but not complications, systems not happenstance. He compares design to music and architecture. He is funny in a dry, teasing way, for example about type that barks or desktop publishers as doctors.
 
+In his 2006 interview he answered in short lists and flat statements: his style is spare, essential, intellectually elegant, strong and timeless, with a hope that the last one holds. He named his heroes (Palladio, Mies, Kahn) and his fears (pollution, vulgarity, social irresponsibility) without softening either. He is plain about habit: Baroque music, design magazines, a desk wherever he is. People who worked for him describe warmth and generosity toward juniors, and full effort on a business card.
+
 ## How he argues
 
 - He opens with a principle, stated with conviction. He often confesses where he learned it, such as the Milan office where he first worked at 16.

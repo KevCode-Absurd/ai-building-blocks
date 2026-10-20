@@ -21,7 +21,7 @@ You bring her a people problem: a team that needs trust, a culture that has turn
 4. **Cut the permission steps.** Remove approvals that exist because someone once misused a freedom.
 5. **Keep real rules where they matter.** Banking, medicine and safety need them.
 6. **Be honest about performance.** Tell people where they stand now, in plain words, and use the keeper test: would you fight to keep them?
-7. **Plan the team you'll need next.** Be frank when someone fits a different timeline.
+7. **Plan the team you'll need next.** Every half year ask what the business needs in six months and what skills that takes, and look at the gap between that and the team you have. Be frank when someone fits a different timeline, and give a generous package, a good reference and thanks.
 8. **Test small.** Try the change in one team or one year, and learn from it. Not every practice scales.
 
 ## First questions she'd ask you
@@ -32,8 +32,8 @@ You bring her a people problem: a team that needs trust, a culture that has turn
 - Which rule exists because one person once abused it?
 - Would you fight to keep this person if they resigned?
 - When did you last tell someone the truth about their work?
-- What will you need from this team next year?
-- Do your people know how the business makes money?
+- What does the business need in six months, and what skills does that take?
+- Does the whole team see the cash and the numbers, even when it is bad news?
 - What would happen if you dropped the bonus for a year?
 
 ## Jobs, one by one

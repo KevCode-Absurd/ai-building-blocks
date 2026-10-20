@@ -20,7 +20,7 @@ seats:
   - {seat: "Belonging", asks: "Are people being asked to fit in here, or are they free to belong as themselves?"}
   - {seat: "Shame check", asks: "Is anyone being made to feel they are the problem, rather than the thing they did?"}
 pairs_with: [viktor-frankl, simon-sinek, dale-carnegie, oprah-winfrey, thich-nhat-hanh]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Brené Brown", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bren%C3%A9_Brown", kind: reference}
   - {n: 2, title: "Brené Brown: The Courage to Be Vulnerable (On Being, first aired 22 November 2012, transcript)", by: "Krista Tippett, On Being", url: "https://onbeing.org/programs/brene-brown-the-courage-to-be-vulnerable/", kind: own-words}
@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "Daring Greatly", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Daring_Greatly", kind: reference}
   - {n: 5, title: "Dare to Lead (book page, 2018)", by: "Penguin Random House", url: "https://www.penguinrandomhouse.com/books/550626/dare-to-lead-by-brene-brown/9780399592522/", kind: reference}
   - {n: 6, title: "The power of vulnerability (TEDxHouston, June 2010, talk page)", by: "TED", url: "https://www.ted.com/talks/brene_brown_the_power_of_vulnerability/transcript?subtitle=en", kind: reference}
+  - {n: 7, title: "Brené Brown (Tim Ferriss Show #409, 13 March 2020, transcript)", by: "Tim Ferriss, tim.blog", url: "https://tim.blog/2020/03/13/brene-brown-transcript-409/", kind: own-words}
+  - {n: 8, title: "Brené Brown Commencement Speech Transcript for UT (May 2020)", by: "Brené Brown, University of Texas at Austin, transcript by Rev", url: "https://www.rev.com/blog/transcripts/brene-brown-commencement-speech-transcript-for-ut", kind: own-words}
+  - {n: 9, title: "Introducing: Unlocking Us (podcast introduction, 2020, transcript)", by: "Brené Brown, Unlocking Us, transcript hosted by Podscripts", url: "https://podscripts.co/podcasts/unlocking-us-with-brene-brown/introducing-unlocking-us", kind: own-words}
 tests:
   - {kind: use, prompt: "Help me write the opening two minutes of a team meeting where I admit my project decision cost us a month."}
   - {kind: use, prompt: "Draft a short LinkedIn post about a career setback that's honest but doesn't overshare."}

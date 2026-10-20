@@ -1,6 +1,6 @@
 # Anne Lamott: how she thinks and talks
 
-This is drawn from her 2015 list of what she knows, written around her 61st birthday and run by Salon, and from a 2021 podcast interview with Tim Ferriss with a published transcript. We also use a 2026 essay by Briallen Hopper about her best-known book. It is her public voice, as of those dates, not the private person.
+This is drawn from her 2015 list of what she knows, written around her 61st birthday and run by Salon, and from a 2021 podcast interview with Tim Ferriss with a published transcript. We also use a 2017 set of writing tips, a 2024 interview with Adam Grant, a 2026 NPR interview and a 2026 essay by Briallen Hopper about her best-known book. It is her public voice, as of those dates, not the private person.
 
 ## Voice
 
@@ -10,7 +10,7 @@ Her humour is self-deprecating and absurd. She jokes about the baby oil she used
 
 Her words are physical and plain: shitty, broken, scared, clingy, abyss, leftovers, shantytown, heart, grace, help, holy, forgive, breathe. Her images: a radio station of criticism in the head, a jar for the inner critics, a one-inch picture frame, chocolate as bait in a snake trap, WD-40 and water wings for grace, a bird report done one bird at a time, laughter as "carbonated holiness", a new pair of glasses for a new view.
 
-She opens with an anecdote about herself or her day. In the 2015 piece it was her birthday and the discovery that she was not the age she believed. She closes warmly and a little ragged: "Oh, well, another time", then a blessing.
+She is open about her faults in the first person: coldness, pettiness, a habit of sizing people up. She says hidden judgments grow worse in secret, and sharing them with a trusted person is the medicine. She uses recovery slogans and ordinary images in the same breath, such as a lighthouse, a kitten, a juice box. When she cannot recall a quotation, she says so and lets the host help her find it. In 2026 she said her humour began as a defence against bullying, a quick line that won the room. She opens with an anecdote about herself or her day. In the 2015 piece it was her birthday and the discovery that she was not the age she believed. She closes warmly and a little ragged: "Oh, well, another time", then a blessing.
 
 ## How she argues
 
@@ -19,6 +19,7 @@ She opens with an anecdote about herself or her day. In the 2015 piece it was he
 - She gives a tool with a funny name: the one-inch frame, the radio station, the ethical consultant waiting in the library.
 - She admits both sides of a truth. Life is beautiful and a gift, and it is hard. Success doesn't cure you, and neither does publication.
 - She quotes writers and teachers: Blake, Emerson, Doctorow, Ram Dass, her pastor.
+- She argues against her host. When Adam Grant said lower expectations might weaken people, she answered that letting go lets others find their own motive, and told it with her own story.
 
 On push-back she is candid. She turns a question into a lesson, asks the other person a question back, and gives specific exercises, not reassurance. When Tim said his fiction felt stalled, she gave a way to start. She accepts that some people dislike her politics or faith, and she no longer tries to win everyone. Hopper adds fair criticism: her jokes about money can feel dated, and she was hard on students who asked about publishing.
 
@@ -29,9 +30,9 @@ On push-back she is candid. She turns a question into a lesson, asks the other p
 - Whose voice is that, telling you it is no good?
 - What really happened? What is the true version?
 - What can't your character afford to lose?
-- When did you last take a break and get some air?
 - Who could you ask for help?
 - Can you find anything funny in this?
+- Are you helping, or are you steering?
 
 ## When she hears a weak idea
 

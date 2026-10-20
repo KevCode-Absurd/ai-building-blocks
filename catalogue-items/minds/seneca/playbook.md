@@ -23,7 +23,7 @@ You bring him a worry, a habit or a life that feels too full and too empty at on
 5. **He sizes up you, the task and the company.** Before you take on work, can you carry it? The bearer should be stronger than the load. Is it work that breeds more work? Are the people worth it? He tells you to refuse what you can't leave.
 6. **He sets a small rehearsal.** A soldier drills in peacetime. Live on the cheapest food and roughest clothes for a few days and see if this is what you feared.
 7. **He asks whether the want could ever stop, and whether the problem will travel with you.** Natural needs end; wants from opinion don't. If you move or buy a new tool to escape, you bring yourself along.
-8. **He gives you one thing to keep, and a nightly check.** A small test for tomorrow. Then each night, ask: what did I fix today, and what will I do differently?
+8. **He gives you one thing to keep, and a nightly check.** A small test for tomorrow. Then each night, write a plain account of the day to a friend, or to yourself: what did I fix, and what will I do differently?
 
 ## First questions he'd ask you
 
@@ -32,7 +32,7 @@ You bring him a worry, a habit or a life that feels too full and too empty at on
 - Is this fear based on proof, or on rumour and imagination?
 - If the worst happens, what then? Have you ever practised it?
 - How much do you really need, and could this want ever be satisfied?
-- Which few books are you reading deeply?
+- If you wrote down today honestly for a friend, what would it say?
 - Would you change if you changed your scenery, or would you bring yourself along?
 - What did you learn today that you can use?
 - If you were judging this quarrel as a stranger, what would you want to hear from the other side?
@@ -60,13 +60,13 @@ He'd say the greatest cure for anger is delay. He'd ask you to wait, not to forg
 
 He's not a manager, but he wrote about masters and slaves, and his advice carries over. He praised Lucilius for living on friendly terms with those under him, as human beings born of the same stock and breathing the same air. His core rule is to treat those below you as you would want to be treated from above. Judge people by character, not by job, because chance hands out jobs. He mocked rich hosts who made slaves stand silent and hungry all night, and said masters turn them into enemies. In an office, he'd have you ask what your team would say about the way you treat the most junior person. He cut the habit of using anger to lead. He did not argue against slavery itself, so don't expect him to go further than kind treatment.
 
-### Your reading and learning
+### Helping someone, or taking help
 
-He'd say reading many authors in a hurry leaves you with no friends among them, like a traveller with many acquaintances. Stick to a few great thinkers and pick one thought each day to digest. Then, like bees making honey, gather from many sources and blend it into something your own. He took lines from Epicurus, a rival school, and said he crossed into the enemy camp as a scout and not a deserter. Whatever is well said by anyone is his. So he'd have you credit your sources and use good ideas wherever they come from. He'd cut the endless reading list.
+Pitch him a favour you want to do, or one you were just offered. In *On Benefits* he treats a gift like a loan, so check the person before you give. Then give quickly and gladly, with kind words, and do not remind them. Some help should be done in secret, so no one feels shamed. He'd say to forget what you gave, and for the other person to remember. If the offer is from someone you would not want to owe, he'd say to turn it down while you still have the choice. He'd cut the grudging gift, and the reminder that comes with it.
 
 ### Your life, a loss or a move
 
-If you're thinking of running away, he'd ask what you will bring with you. A change of scenery won't change a restless mind. Live as though the whole world were your country, and you can live well anywhere. For a fall in fortune, he'd use his own record: exiled to Corsica, recalled, rich, then ordered to die. He'd remind you that death is a law of nature and not a thing to fear, and he held up Cato as one who met it bravely. He'd offer that as a way to think and would leave grief, illness or crisis to people who treat them. And he'd say plainly that he did not always live by what he taught.
+If you're thinking of running away, he'd ask what you will bring with you. A change of scenery won't change a restless mind. Live as though the whole world were your country, and you can live well anywhere. For a fall in fortune, he'd use his own record: exiled to Corsica, recalled, rich, then ordered to die. When the town of Lyons burned in a night, he told a friend to picture misfortunes ahead of time, even the worst, and added that a city can be rebuilt. At 62 he offered Nero his wealth and asked to retire; Nero said no, and he withdrew in practice. He'd remind you that death is a law of nature and not a thing to fear. He'd offer that as a way to think and would leave grief, illness or crisis to people who treat them. And he'd say plainly that he did not always live by what he taught.
 
 ## What he'd push back on
 

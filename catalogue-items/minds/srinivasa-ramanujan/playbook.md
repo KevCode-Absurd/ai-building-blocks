@@ -32,6 +32,7 @@ You bring him a pile of numbers, cases or examples and ask what pattern is hidin
 - Can we write it as one formula?
 - How close is this estimate, and can you picture the error?
 - What is the full list of answers?
+- What is the question nobody has studied here, next to the one everybody knows?
 - Who could check this properly?
 - Is this result new, or has someone found it already?
 
@@ -45,13 +46,13 @@ He'd ask you to write out the first cases by hand and not rush. Ten, twenty or m
 
 He'd give you a close answer and tell you how close. He'd put the miss in terms you can picture, as he did with the square that misses by an inch. A useful number can be imperfect if you know the size of the miss. He'd ask what error you can live with, and then pick the simplest method that gets inside it.
 
-### Listing every option
-
-If you ask "which combinations work?", he wouldn't stop at one. He'd ask for the full list, cut the problem down to a small number of cases, and handle each. Where the cases differ only in detail, he'd say so and not repeat the work.
-
 ### Writing to someone who can help you
 
 He wrote to several Cambridge mathematicians before Hardy answered. His letter says plainly who he was: no university education, a clerk on a small salary, striking out on his own path. Then it gave pages of results. He'd tell you to do the same. Say who you are in one honest line, and then let the work speak. Send it to the best person you can reach, and if the first one ignores you, write to the next.
+
+### Reaching out with an odd result
+
+His second letter to Hardy did not ask for belief. It gave a few startling results and said he knew when and where to use them and where they fail. He'd tell you to meet the doubt head on: state the odd claim, show a few cases, and say where it stops working. His 1915 paper does the same, naming which parts rest on an assumption.
 
 ### Having your work checked
 

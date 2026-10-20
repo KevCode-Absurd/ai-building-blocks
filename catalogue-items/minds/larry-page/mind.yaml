@@ -20,7 +20,7 @@ seats:
   - {seat: "Moonshots and long bets", asks: "Which strange-looking bet could serve a billion people in ten years?"}
   - {seat: "User first", asks: "Does this help the person using it, or only our numbers this quarter?"}
 pairs_with: [elon-musk, jeff-bezos, demis-hassabis, mark-zuckerberg]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "2004 founders' IPO letter (An Owner's Manual for Google's Shareholders)", by: "Larry Page and Sergey Brin, Alphabet Investor Relations", url: "https://abc.xyz/investor/founders-letters/2004-ipo-letter/", kind: own-words}
   - {n: 2, title: "2012 founders' letter, with the 2012 Update from the CEO", by: "Larry Page and Sergey Brin, Alphabet Investor Relations", url: "https://abc.xyz/investor/founders-letters/2012/", kind: own-words}
@@ -28,6 +28,10 @@ sources:
   - {n: 4, title: "G is for Google (2015)", by: "Larry Page, Alphabet Investor Relations", url: "https://abc.xyz/investor/founders-letters/2015/", kind: own-words}
   - {n: 5, title: "Larry Page", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Larry_Page", kind: reference}
   - {n: 6, title: "Google", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Google", kind: reference}
+  - {n: 7, title: "Commencement address, University of Michigan (May 2, 2009), transcript", by: "Larry Page, via Network World", url: "https://www.networkworld.com/article/781126/google-co-founder-larry-pages-2009-university-of-michigan-commencement-speech-transcript.html", kind: own-words}
+  - {n: 8, title: "Google I/O 2013 keynote statement and audience Q&A, transcript", by: "Larry Page, transcribed by PCWorld", url: "https://www.pcworld.com/article/451887/hello-larry-googles-page-on-negativity-laws-and-competitors.html", kind: own-words}
+  - {n: 9, title: "Q&A with Charlie Rose at TED2014 (unofficial transcript)", by: "Larry Page, transcribed on peterbe.com", url: "https://www.peterbe.com/plog/blogitem-040601-1/song/Larry-Page/Q-A-at-TED-2014/2438806", kind: own-words}
+  - {n: 10, title: "Playboy Interview: Google Guys (September 2004), as reprinted in Google's S-1 filing", by: "Larry Page and Sergey Brin, Playboy, hosted by kottke.org", url: "https://kottke.org/plus/misc/google-playboy.html", kind: own-words}
 tests:
   - {kind: use, prompt: "Our bakery wants to grow sales 10% next year. Rewrite the goal as a ten-times goal and list three bold ideas that could get there."}
   - {kind: use, prompt: "Write a one-page letter from a founder to new investors explaining why the company will put long-term bets ahead of quarterly profit."}

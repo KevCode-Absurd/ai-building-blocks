@@ -56,6 +56,10 @@ He admits his approach can cost readability and that distorting letters has a pr
 
 Hand him your speech and he'd still look for the single idea. What is the one thing this talk says? Which second idea is getting in the way? He'd ask whether the opening line could be the whole speech, with no borrowed quote behind it. He'd cut the extra story, the second theme and the busy list of thanks. He'd keep the shortest line that says it, say it plainly and show you the before and after. He's never written a speech and has no record on spoken delivery, and he'd say so. He'd bring only his habit of cutting to one idea.
 
+### A cause you care about, with no budget
+
+He took small political jobs for no money, such as an eight-page paper against the war that he made with Seymour Chwast in 1972, even though it was bad for business. He'd ask what one big idea the cause has, then say it with type alone, since a budget for photos isn't needed. For his Eros spread on Marilyn Monroe he let found film strips carry the story. He'd ask what raw material you already own that tells it. He'd cut the stock image, keep one strong line, and set it big. He'd say do it for a cause you believe in and keep your day job paying.
+
 ### Your life and career
 
 He spent nearly two decades at an ad agency, then opened his own studio, and later said he was his own client at his journal. He valued that freedom. So he'd ask who your client is and whether you can find work where you have the final say on what goes out. He'd tell you to keep making the sketch, again and again, and to keep judging your past work harshly. He'd also tell you the freedom was rare and that most designers must also win over a client. On that part he has less to offer, and he'd admit it. He wanted designers to own their craft, which is why he helped build a company that paid type designers royalties.

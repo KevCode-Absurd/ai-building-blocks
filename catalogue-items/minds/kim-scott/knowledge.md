@@ -1,8 +1,8 @@
 # Kim Scott: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Kim Scott is alive, and views can change. This data set comes from two posts she wrote on her company's blog in August and October 2026, her company's description of its approach, a 2015 write-up of her talk on Radical Candor, her book and author sites, and a reference page on her first book. Her books are under copyright and we did not read them directly. Treat each view as "as of" the year of its source. Our sources do not confirm her birth year. Nothing here covers her private life or her plans.
+Kim Scott is alive, and views can change. This data set comes from six posts she wrote on her company's blog in 2026 (August, September and October) [S3][S4][S8][S9][S10][S11], her company's description of its approach, a 2015 write-up of her talk on Radical Candor, her book and author sites, and a reference page on her first book. Her books are under copyright and we did not read them directly. Treat each view as "as of" the year of its source. Our sources do not confirm her birth year. Nothing here covers her private life or her plans.
 
 ## In one paragraph
 
@@ -46,9 +46,14 @@ Scott warns managers against carrying complaints between people who are in confl
 
 How she applied it: she described this as a way to make it easier to speak truth to power [S1].
 
+### Gauge it: impact, not intent
+Scott's third step after getting and giving feedback is to watch how it landed and adjust, since feedback is judged by how it is received, not how it was meant [S11]. If someone gets upset, she would pause to show care without backing off the message [S11]. She warns against formulas such as fixed praise-to-criticism ratios or the praise sandwich, because forced feedback sounds insincere, and patronising praise harms trust as much as harsh criticism [S11]. Her test from a colleague at Apple: spend as long checking your facts before praising as before criticising [S11].
+
+How she applied it: with a boss, she says ask permission before raising a concern, and drop it if the answer is no [S9]. If a boss yells, pause and wait for things to cool, since someone in that state cannot take in feedback [S9]. If the same bad reaction keeps coming, her advice is that you deserve a better boss [S9].
+
 ### Candour is not a licence to be a jerk
 
-Scott has spent years correcting a misreading of her idea. Saying "in the spirit of Radical Candor" while being rude is still being rude [S2]. In 2026 she said some people read "radical" as permission to be harsh, and that TV satire and comic strips had shown bosses using her phrase as cover for cruelty [S3]. She now also offers the name "Compassionate Candor" for the same framework, and says it is not a rebrand [S3]. She separates her idea from Ray Dalio's "radical transparency", which she says leaves little room for caring personally [S3].
+Scott has spent years correcting a misreading of her idea. Saying "in the spirit of Radical Candor" while being rude is still being rude [S2]. In 2026 she said some people read "radical" as permission to be harsh, and that TV satire and comic strips had shown bosses using her phrase as cover for cruelty [S3]. She now also offers the name "Compassionate Candor" for the same framework, and says it is not a rebrand [S3]. In August 2026 she described how a fast-growing team slips: close friends who challenge each other early drift into silence as new hires arrive, harsh behaviour that gets results starts to win, and people flatter upward and bully downward [S10]. She separates her idea from Ray Dalio's "radical transparency", which she says leaves little room for caring personally [S3].
 
 How she applied it: she tells teams that if people around them use "Radical Candor" to excuse rudeness, they can call it Compassionate Candor instead [S3].
 
@@ -69,32 +74,41 @@ How she applied it: the book first came out as Just Work in 2021 and was reissue
 - Make praise specific enough that people know what to repeat [S2].
 - Send people in conflict to talk to each other first [S1].
 - Look after yourself, so you have the energy to do this well [S1].
+- Judge feedback by its impact, not your intent [S11].
+- Make the go-to question sound like you and fit the person [S8].
+- Thank the first person who speaks up, in public, and show what changed [S11].
+- With a boss, ask permission first, start small, and drop it if told no [S9].
+- Get curious, not furious, when someone is angry [S9].
 
 ## Real decisions
 
 ### Taking the "um" feedback as a kindness
 
-After a presentation that went well, a senior colleague at Google told Scott she said "um" constantly [S1]. Scott brushed it off until the colleague said, bluntly, that it made her sound stupid [S1]. She took that as a kindness, worked with a speaking coach and fixed the habit [S1]. Her stated reason it landed: the colleague had already shown she cared about her [S1]. This became her model for caring personally and challenging directly together.
+Soon after she joined Google, Scott gave a talk that went well, and her boss Sheryl Sandberg praised it and then said she used "um" a lot [S1]. Scott brushed it off and turned down the offer of a speech coach, until Sandberg said bluntly that the habit made her sound stupid [S1][S11]. Scott took that as the kindest thing her boss could have done, saw a coach and fixed the habit [S1]. Her stated reason it worked: Sandberg already cared about her, for example by inviting her to a book group and encouraging her to take time off for a sick relative [S1]. It took Sandberg three tries to be clear, which Scott uses to say that impact matters more than intent [S11].
 
 ### Not telling Bob for ten months
 
-Scott avoided criticising an underperforming employee for about ten months to spare his feelings [S1]. It hurt the team and in the end she had to fire him [S1]. He asked why no one had told him sooner [S1]. Her takeaway was that she had failed to build a team where people could tell him he was off track, which is the mistake she calls ruinous empathy [S1][S2].
+Scott avoided criticising an underperforming employee for nearly a year to spare his feelings, reassuring him whenever he worried [S1]. His weak work spread to the team and she risked losing strong performers [S1]. When she fired him after about ten months, he asked why no one had told him [S1]. Her takeaway was that she had failed to build a team where people would tell Bob the truth, which is the mistake she calls ruinous empathy [S1][S2].
+
+### Asking a silent room in Tokyo
+
+At her first meeting with the AdSense team in Tokyo she asked what she could do to make it easier to work with her, and got silence, even after she counted to six and then ten [S11]. She told the story of Toyota's red square on the factory floor, where new hires must name three problems before leaving it, and joked that she should buy red paint [S11]. The joke worked, and someone complained about the office tea [S11]. She thanked that person in public, sent a handwritten note and paid for better tea, so people could see that speaking up paid off [S11]. Over time they raised bigger issues [S11].
 
 ### Refusing to be the go-between
 
-When two people on a team are in conflict, she says a manager should not carry messages back and forth [S1]. Have them talk directly first, and step in only when both are present and direct talk has failed [S1]. Her reason is to make backstabbing impossible and to find a solution that serves both people [S1].
+When two people on a team are in conflict, she says a manager should not carry messages back and forth [S1]. Have them talk directly first, and step in only when both are present and direct talk has failed [S1]. Her reason is to stop backstabbing and to find a fix that serves both people [S1].
 
-### Setting up manager guidance sessions
+### Running manager guidance sessions
 
-To help people tell the truth to a boss, she describes meetings where a manager's team gives feedback anonymously to a skip-level leader [S1]. The leader takes the notes, shares them quickly, asks the team to pick one or two behaviours to change, builds an action plan with the manager and follows up [S1]. Her stated aim is to make it easier to speak truth to power [S1].
+To help people tell the truth to a boss, she describes meetings where a manager's team gives feedback to a more senior leader without attribution [S1]. She tells the managers first that the aim is to help them, takes the notes herself so people can correct them, and shares them with the manager right after the meeting [S1]. She asks each person for only one or two things to change, because one 45-minute meeting cannot change a personality [S1]. The manager then picks actions, tells the team more often than seems needed, and follows up [S1].
 
 ### Changing her own go-to question
 
-Her standard feedback question is what she could do or stop doing to make it easier to work with her [S4]. Her co-founder found it too broad, so she changed it for their meetings [S4]. She says the point is to find wording that sounds like you, and to count to six in silence and not rescue the other person [S4].
+Her standard question asks what she could do or stop doing to make it easier to work with her [S4]. She tests a good question three ways: it can't be answered with a quick no, it sounds like you, and it fits the other person [S8]. Christa Quarles, then CEO of OpenTable, would not say her wording, and used "Tell me why I'm wrong" instead, though she softened it for staff who found it too aggressive [S8]. Her co-founder Jason Rosoff found the open question too broad, so she now asks him about specific events from the past week [S8].
 
-### Putting her own mask on first
+### Going to speak at a company she disagreed with
 
-During a stressful stretch she kept up her daily run, even in a storm [S1]. She uses this to argue that leaders must look after their own wellbeing to lead well [S1]. The tip also shows a habit: she tells stories where she was the one who got it wrong.
+A couple of years before August 2026, she was invited to speak at a company whose policies she strongly opposed, and was tempted to decline [S10]. She decided refusing went against Radical Candor, since beliefs left unchallenged harden into prejudice, and went without planning to change anyone's mind [S10]. She wanted to understand their views and find common ground [S10]. Afterwards an attendee told her she didn't seem like an evil person, a thought she admitted she had had herself [S10].
 
 ## Where she stood
 
@@ -124,6 +138,7 @@ During a stressful stretch she kept up her daily run, even in a storm [S1]. She 
 - **Easy to misuse.** Her own word "radical" invited people to read the idea as permission to be harsh, and she has spent years correcting it [S3].
 - **Silicon Valley lens.** A review in Vice called Radical Candor feminist-adjacent but limited, arguing that she accepts the tech world's belief in merit, which stops the book from dealing with deeper problems [S5].
 - **Built on big companies.** Her stories come mostly from Google and Apple, where managers had time, training and resources [S1].
+- **A formula risk.** She herself warns against turning feedback into ratios or sandwiches, yet a four-box chart and an acronym are easy to apply mechanically [S11].
 - **Selling the solution.** The framework is also the product her company sells in talks and workshops [S2][S6].
 
 ## Blind spots to watch

@@ -20,7 +20,7 @@ seats:
   - {seat: "Build it for yourself", asks: "Would anyone on this team want to own this? If not, what would they want?"}
   - {seat: "Honest engineering", asks: "Are we being open and truthful with the people who'll use this?"}
 pairs_with: [steve-jobs, donald-knuth, john-carmack, dieter-rams, grace-hopper]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Steve Wozniak", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Steve_Wozniak", kind: reference}
   - {n: 2, title: "Steve Wozniak interview, Founders at Work", by: "Steve Wozniak, interviewed by Jessica Livingston", url: "https://www.foundersatwork.com/steve-wozniak.html", kind: own-words}
@@ -29,6 +29,17 @@ sources:
   - {n: 5, title: "The Apple ][ (letter and reply, 1 April 2022)", by: "Steve Wozniak, woz.org", url: "https://woz.org/the-apple/", kind: own-words}
   - {n: 6, title: "Steve Wozniak, inductee page", by: "National Inventors Hall of Fame", url: "https://www.invent.org/inductees/steve-wozniak", kind: reference}
   - {n: 7, title: "Woz U: Former students and employees raise concerns (1 October 2018)", by: "CBS News", url: "https://www.cbsnews.com/news/woz-u-steve-wozniak-former-students-employees-raise-concerns/", kind: secondary}
+  - {n: 8, title: "Woz HP BASIC (reader letter and reply)", by: "Steve Wozniak, woz.org", url: "https://woz.org/woz-hp-basic/", kind: own-words}
+  - {n: 9, title: "Our timing was quite good (reader letter and reply, 4 January 2018)", by: "Steve Wozniak, woz.org", url: "https://woz.org/timing-quite-good/", kind: own-words}
+  - {n: 10, title: "Good people work for Microsoft too (reader letter and reply)", by: "Steve Wozniak, woz.org", url: "https://woz.org/good-people-work-microsoft/", kind: own-words}
+  - {n: 11, title: "Apple in schools (reader letter and reply)", by: "Steve Wozniak, woz.org", url: "https://woz.org/apple-in-schools/", kind: own-words}
+  - {n: 12, title: "Microsoft being a monopoly (reader letter and reply)", by: "Steve Wozniak, woz.org", url: "https://woz.org/microsoft-being-a-monopoly/", kind: own-words}
+  - {n: 13, title: "Apple products (reader letter and reply)", by: "Steve Wozniak, woz.org", url: "https://woz.org/apple-products/", kind: own-words}
+  - {n: 14, title: "Betamax (reader letter and reply)", by: "Steve Wozniak, woz.org", url: "https://woz.org/betamax/", kind: own-words}
+  - {n: 15, title: "Surely you must be joking, Mr. Feinman (reader letter and reply)", by: "Steve Wozniak, woz.org", url: "https://woz.org/surely-must-joking-mr-feinman/", kind: own-words}
+  - {n: 16, title: "You could have started Apple. Clearly. (reader letter and reply)", by: "Steve Wozniak, woz.org", url: "https://woz.org/started-apple-clearly/", kind: own-words}
+  - {n: 17, title: "What is an idea? Steve Wozniak talks to Pictet Asset Services (January 2026)", by: "Steve Wozniak, interview published on woz.org", url: "https://woz.org/wp-content/uploads/2026/01/PictetBankInterview-2026.pdf", kind: own-words}
+  - {n: 18, title: "I wish that Bill Gates had my sense of humor (reader letter and reply)", by: "Steve Wozniak, woz.org", url: "https://woz.org/wish-bill-gates-sense-humor/", kind: own-words}
 tests:
   - {kind: use, prompt: "Here's the feature list for my home budgeting app. Cut it down to the fewest features that still do the job, and say why each one stays."}
   - {kind: use, prompt: "Explain how a computer adds two numbers, for a class of 11-year-olds."}

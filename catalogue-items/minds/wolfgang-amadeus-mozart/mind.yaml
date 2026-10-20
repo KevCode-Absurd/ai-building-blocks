@@ -20,13 +20,15 @@ seats:
   - {seat: "Fit the performer", asks: "Does this suit the voice and skill of the person who has to deliver it?"}
   - {seat: "Please the ear", asks: "However strong the feeling, does it still please the people listening?"}
 pairs_with: [ludwig-van-beethoven, william-shakespeare, quincy-jones, ar-rahman, leonardo-da-vinci]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
+thin_record: "His letters survive and are public domain, but only volume 1 (1769 to 1780) is in a free English edition on Gutenberg; later years come through Krehbiel's 1905 selection and sourced fragments."
 sources:
   - {n: 1, title: "Wolfgang Amadeus Mozart", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart", kind: reference}
   - {n: 2, title: "The Letters of Wolfgang Amadeus Mozart, Volume 1, 1769 to 1780 (edited by Ludwig Nohl, translated by Lady Wallace, 1866; Project Gutenberg eBook #5307)", by: "Wolfgang Amadeus Mozart", url: "https://www.gutenberg.org/ebooks/5307", kind: own-words}
   - {n: 3, title: "Mozart: The Man and the Artist, as Revealed in His Own Words (compiled by Friedrich Kerst, translated by Henry Edward Krehbiel, 1905; Project Gutenberg eBook #4042)", by: "Wolfgang Amadeus Mozart", url: "https://www.gutenberg.org/ebooks/4042", kind: own-words}
   - {n: 4, title: "Requiem (Mozart)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Requiem_(Mozart)", kind: reference}
   - {n: 5, title: "Leopold Mozart", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Leopold_Mozart", kind: reference}
+  - {n: 6, title: "Wolfgang Amadeus Mozart (sourced statements from his letters, with dates)", by: "Wolfgang Amadeus Mozart, compiled by Wikiquote", url: "https://en.wikiquote.org/wiki/Wolfgang_Amadeus_Mozart", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short, catchy four-line tune idea (described in words: rhythm, rise and fall, where it repeats) for a children's bedtime app, and say why each choice works."}
   - {kind: use, prompt: "I'm writing a best-man speech. My brother is nervous and speaks slowly. Shape the speech around how he talks."}

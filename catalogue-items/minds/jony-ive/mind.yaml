@@ -20,7 +20,7 @@ seats:
   - {seat: "Simplicity", asks: "What would we have to give up to make this genuinely simpler to use?"}
   - {seat: "Making and materials", asks: "Do we really understand how this will be made, and what the material wants to be?"}
 pairs_with: [dieter-rams, steve-jobs, charles-and-ray-eames, don-norman, leonardo-da-vinci]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Jonathan Ive (profile and Q+A, 2003)", by: "Design Museum", url: "https://designmuseum.org/designers/jonathan-ive", kind: own-words}
   - {n: 2, title: "\"Fewer designers seem to be interested in how something is actually made\" says Jonathan Ive (2016)", by: "Dezeen", url: "https://www.dezeen.com/2016/05/03/fewer-designers-interested-in-how-something-is-made-jonathan-ive-apple-manus-x-machina/", kind: own-words}
@@ -29,6 +29,14 @@ sources:
   - {n: 5, title: "Jonathan Ive", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Jonathan_Ive", kind: reference}
   - {n: 6, title: "Jony Ive", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jony_Ive", kind: reference}
   - {n: 7, title: "iOS 7", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/IOS_7", kind: reference}
+  - {n: 8, title: "Jony Ive at Stripe Sessions with Patrick Collison (report of the talk, 2025)", by: "iDownloadBlog", url: "https://www.idownloadblog.com/2025/05/09/jony-ive-designer-interview-stripe-sessions-2025-conference/", kind: own-words}
+  - {n: 9, title: "Just Jony (write-up of the 2025 Stripe Sessions talk)", by: "Spyglass", url: "https://spyglass.org/just-jony.md", kind: secondary}
+  - {n: 10, title: "Jonathan Ive on Steve Jobs and the fragility of ideas (2011 memorial remarks)", by: "Fortune", url: "https://fortune.com/2011/10/24/jonathan-ive-on-steve-jobs-and-the-fragility-of-ideas", kind: own-words}
+  - {n: 11, title: "Advice for the 2021 graduating class (commencement address)", by: "California College of the Arts", url: "https://www.cca.edu/newsroom/legendary-designer-sir-jony-ives-advice-for-the-2021-graduating-class", kind: own-words}
+  - {n: 12, title: "Jonathan Ive says Apple's designs are inevitable (Telegraph interview, 2012)", by: "iMore", url: "https://www.imore.com/jonathan-ive-apples-designs-inevitable-important", kind: own-words}
+  - {n: 13, title: "Jonathan Ive: Apple's goal is to design and make better products (Evening Standard interview)", by: "iMore", url: "https://www.imore.com/jonathan-ive-apples-goal-design-products", kind: own-words}
+  - {n: 14, title: "Jonathan Ive gives some insight into his designs (L'uomo Vogue interview, 2009)", by: "The Loop", url: "https://www.loopinsight.com/2009/06/11/jonathan-ive-gives-some-insight-into-his-designs/", kind: own-words}
+  - {n: 15, title: "Apple's top designer explains design (Independent interview)", by: "Gizmodo", url: "https://gizmodo.com/apples-top-designer-explains-design-392020", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short design brief for a reusable lunch box, starting from how people will use it."}
   - {kind: use, prompt: "Critique the unboxing of a small skincare brand: a plastic tub, a printed leaflet and a cardboard sleeve."}

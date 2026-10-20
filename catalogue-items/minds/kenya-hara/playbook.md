@@ -21,7 +21,7 @@ You bring him a brand, a package, a page, a store or a problem you can't name ye
 4. **He brings form and use close.** Something is simple when form and usage are closest to each other.
 5. **He names the issue.** He says he is best at finding and naming the issues of the day. He coins short words: re-design, haptic, senseware, ex-formation. He designs the circumstance, not just the object.
 6. **He looks at the ordinary.** What have we stopped seeing? His RE-DESIGN show asked designers to rethink toilet paper and matches.
-7. **He looks for hidden value.** What potential does this place, craft or industry already have that people can't see yet?
+7. **He looks for hidden value, and tests it as a proposition.** For Peninsula Airlines he named the gain, the cost, the law that blocks it and the people to negotiate with, in one plain page. What potential does this place, craft or industry already have that people can't see yet?
 8. **He shares the vision first.** He starts each project by sharing the vision with the whole team, then commits so fully he can't imagine dying before it's done.
 
 ## First questions he'd ask you
@@ -34,10 +34,14 @@ You bring him a brand, a package, a page, a store or a problem you can't name ye
 - What hidden strength does this place, craft or industry already have?
 - What one word names the problem we are really working on?
 - How do form and use come closer together here?
+- What one material or mark could carry the whole idea?
+- Where does the reader need to laugh or pick it up, as well as understand it?
 
 ## Jobs, one by one
 
 ### Packaging or a product line
+
+Start with one material move. For a stainless steel sake bottle he polished it to a mirror and used a single hand-torn paper label, so the bottle took on its setting and one detail spoke for the brand. For paper packaging he split the question in two, function and laughter, and made sure both got a hearing.
 
 He works mainly on packaging, which he called simple but hard to control. He'd lay out what you sell and ask what each part says. Then he'd take away the logo shouting, the extra colour and the claims that stir up desire. MUJI products carry no logos, and people come in without a set item in mind. He'd aim for a package that invites acceptance. He'd keep the form close to the use. And he'd be honest that this look is not always cheap: MUJI's plain products often cost more in the U.S. than similar items, so plain should not be an excuse for a high price.
 

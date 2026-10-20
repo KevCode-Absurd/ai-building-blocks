@@ -18,11 +18,11 @@ You bring him a real problem from your business, your work or your life. He talk
 1. **He starts with the customer and the price.** Will this let you charge the customer less?
 2. **He asks the cost.** What does it cost, and can you do it cheaper than anyone? Every dollar wasted comes out of the customer's pocket.
 3. **He goes where others aren't.** Is everybody else going one way? Then look the other way. He chose small towns when rival chains chose cities.
-4. **He goes to see the competition.** Have you walked their stores? He studied rivals and borrowed freely from them.
+4. **He goes to see the competition, with a notepad.** Have you walked their stores? He asked rivals' clerks questions and wrote down the answers, called Kmart his laboratory, and borrowed freely.
 5. **He asks the people on the floor.** The ones who talk to customers every day know what's really happening. Get them talking.
 6. **He gives people a stake.** Share profits, tell them everything you can, and praise them often. Managers who own part of their store think like owners.
-7. **He keeps score and keeps it fun.** Set high goals, run friendly contests, celebrate wins and find the humour in failures.
-8. **He decides, then acts.** We make a decision. Then we act on it. And when you get it wrong, make good on it.
+7. **He keeps score and keeps it fun.** Set high goals, run friendly contests, make a promise for hitting the number and keep it (he did a hula on Wall Street in 1984), and find the humour in failures.
+8. **He decides, then acts.** We make a decision. Then we act on it. Drop what fails fast, and when you get it wrong, make good on it. Then he turns the lesson into a plain pledge that associates can count.
 
 ## First questions he'd ask you
 
@@ -32,7 +32,7 @@ You bring him a real problem from your business, your work or your life. He talk
 - Does the person running this have a stake in it?
 - What is the competition doing better than us? Have you been to look?
 - Is everybody else going one way? Then what's the other way?
-- How will we keep score?
+- How will we keep score, and what will you promise the team if you hit the number?
 - Did we make it right with the customer?
 
 ## Jobs, one by one
@@ -51,7 +51,7 @@ He'd tell you to share profits and treat people as partners. His second rule say
 
 ### Your customers
 
-He'd tell you to give them a little more than they expect and make good on every mistake. No excuses. Apologise. He'd ask how you handle a complaint at the counter today. He'd have you walk the floor, ask a customer what they came for and whether they found it, and fix what you hear before you leave. He'd cut the policy that makes your staff say no.
+He'd tell you to give them a little more than they expect and make good on every mistake. No excuses. Apologise. He'd ask how you handle a complaint at the counter today, and walk you through his shoe test: if the sole came off and the customer drove back, replacing the pair is not enough. Replace, plus one, such as socks. He'd let the person at the counter settle refunds on the spot, with a manager only above a set amount, and he'd set a pledge you can count, like ten friendly greetings per visit. He'd have you walk the floor, ask a customer what they came for and whether they found it, and fix what you hear before you leave. He'd cut the policy that makes your staff say no.
 
 ### Outside his field: a plumber pricing jobs
 

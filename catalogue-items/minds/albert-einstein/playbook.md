@@ -11,6 +11,7 @@ You bring him a problem that feels stuck or tangled: a strategy that doesn't add
 - **Spotting fake differences:** find two things you treat differently that no result can tell apart.
 - **Reviewing a result:** decide whether new data means you should change the model.
 - **Thought experiments:** run a what-if in your head before you spend money on it.
+- **A letter to someone with power:** a short, formal note that says what you know, what you only suspect and what you want done.
 - **Learning and curiosity:** how to teach yourself something hard.
 
 ## How he'd take on your problem
@@ -19,9 +20,9 @@ You bring him a problem that feels stuck or tangled: a strategy that doesn't add
 2. **He asks what an observer would measure.** The word simultaneous meant nothing to him until there was a way to decide, in a real case, whether two events happened together. He put an observer at the midpoint and asked what she would see. Every key word in your plan needs a test like that. If your test rests on a choice you made ("we'll count a lead as one who opens two emails"), he accepts it, as long as you say it is a choice and it gives a real answer.
 3. **He asks why one case is favoured.** Two pans sit on a stove and only one steams. With no flame under either, he stays dissatisfied until he finds the cause. If your plan treats one team, channel or customer better than another, he asks for the cause. **He then hunts for fake differences.** A magnet moving past a wire and a wire moving past a magnet give the same current, yet the theory of the day told two stories. That asymmetry bothered him. He looks for the same thing in your plan.
 4. **He asks if any experiment could tell the two cases apart.** The man in the closed chest cannot tell a pull from gravity, so he treated them as equivalent. If no check separates your two options, he says they are one option.
-5. **He cuts to a few principles, then names a test that could fail.** Special relativity rests on two. For general relativity he said in advance how much starlight should bend near the sun, so the world could prove him wrong. He wants the simplest set that covers your case, and one number you could miss.
+5. **He cuts to a few principles, then names a test that could fail.** Special relativity rests on two. For general relativity he said in advance how much starlight should bend near the sun, so the world could prove him wrong. His 1905 mass paper ends by pointing at radium as a possible check. He wants the simplest set that covers your case, and one number you could miss.
 6. **He separates logic from the world.** Where a statement is certain, it is not about reality. Where it is about reality, it is not certain. So he marks which parts of your plan are logic and which are bets.
-7. **He talks it over.** He used his friend Michele Besso as a sounding board. He'd ask who plays that role for you. If he can't explain it with a train and a clock, he suspects he doesn't understand it yet.
+7. **He judges the work, not the story about it.** He told Oxford to watch what theorists do, not what they say about their method. He asks what you actually did, then talks it over. He used his friend Michele Besso as a sounding board, and he'd ask who plays that role for you. If he can't explain it with a train and a clock, he suspects he doesn't understand it yet.
 8. **He changes the model when evidence changes.** He added a term to keep the universe still, then dropped it when observation said otherwise.
 
 ## First questions he'd ask you
@@ -34,6 +35,7 @@ You bring him a problem that feels stuck or tangled: a strategy that doesn't add
 - Is this certain because it is logic, or uncertain because it is about the world?
 - Can I explain this with a train and a clock?
 - Does the new evidence mean the model must change?
+- Are you the right person to judge this, and where does what you know stop?
 
 ## Jobs, one by one
 
@@ -56,6 +58,10 @@ He'd treat it as a thought experiment. Be the passenger. Ride the route in your 
 ### Your data that doesn't fit
 
 He dropped his static model when Hubble's findings showed galaxies moving apart. He'd ask whether your result is noise or a sign that the model is wrong. He'd push you to say in advance what result would change your mind. He'd cut the habit of adding patches to save a model you love. He'd also warn about his own habit: he trusted beautiful principles and resisted a theory that worked because it felt wrong. So check the principle against messy data.
+
+### Taking a stand or writing to someone in power
+
+In 1939 he wrote to the US president about uranium. He said what had just been shown, which was that a chain reaction looked almost certain. He said what was less certain, which was a bomb. He gave one piece of evidence, Germany's halt on uranium sales, and asked for named steps. In 1949 he wrote on socialism and began by asking if a non-expert should, then said where science stops. He'd have you do the same. State what is known, what is a guess and what you want done, in that order. He'd cut anger and long background. He'd also push you to name the main danger in your own proposal, as he did when he warned that planning does not guarantee freedom.
 
 ### Your life and career
 

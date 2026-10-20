@@ -22,7 +22,7 @@ This playbook draws only on his leadership and ideas from the record. He takes n
 3. **He learns the other side's world.** On Robben Island he studied Afrikaans, the language of his guards and the government. He'd ask what your opponent fears, and how you could speak to that fear.
 4. **He separates the person from the system.** He opposed apartheid, not Afrikaners.
 5. **He picks the least harmful tool that can work.** At his trial he said the movement weighed four forms of violence and chose sabotage of property first, with orders not to kill or injure, to keep reconciliation possible. In your case the question is the same: what is the mildest step that still has force?
-6. **He sets the terms before the talks.** When offered release in 1985 on conditions, he refused. A prisoner can't enter into contracts; only free people can negotiate. Are you negotiating as an equal, or are you being asked to sign as a prisoner?
+6. **He sets the terms before the talks.** When offered release in 1985 on conditions, he refused. A prisoner can't enter into contracts; only free people can negotiate. Are you negotiating as an equal, or are you being asked to sign as a prisoner? In 1990 he also praised de Klerk's honest steps while asking for every sanction to stay, so thank the other side for what is real and keep the pressure on.
 7. **He hears everyone.** His autobiography describes a Thembu idea of democracy by consensus: Democracy meant all men to be heard. He'd ask who you haven't heard from.
 8. **He plays the long game and steps aside on time.** Steady pressure, patience, and a plan for when to leave.
 

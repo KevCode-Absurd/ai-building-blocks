@@ -22,7 +22,7 @@ You bring him a report, a poster, a book, a website or a layout that feels messy
 5. **He picks a proven typeface.** Akzidenz Grotesk or a classical Roman such as Garamond, Bodoni, Caslon or Baskerville. Few faces, few sizes, text flush left.
 6. **He prefers a photograph for the facts.** He trusted photography as a credible record of reality and saw illustration as subjective.
 7. **He avoids symmetry and the central axis.** He tied them to fascist display and wanted an asymmetric layout.
-8. **He judges it hard.** Be your own critic. He called many of his own posters bad.
+8. **He judges it hard and then again.** Never be satisfied with what you have done. He watched his teacher spend half a year refining a mark already in use. He called many of his own posters bad.
 
 ## First questions he'd ask you
 
@@ -33,6 +33,8 @@ You bring him a report, a poster, a book, a website or a layout that feels messy
 - Are we leaving the viewer free to judge?
 - What is the proportion between these parts?
 - Which proven typeface would do this job best?
+- Would you refuse this client if the product harmed people?
+- How many type sizes are there, and are the steps between them clear?
 - Have you looked at your own work as critically as you look at others'?
 
 ## Jobs, one by one
@@ -57,9 +59,13 @@ He gives a cool, exact verdict and a reason. He may call a design feeble or a pr
 
 He designs for print, but his rules travel. For a chart: what is the one fact? Give it plainly, without tricks that bend the facts. Use a clear grid and few type sizes. Ask if the reader can read it faster. For a press release: state the message in the first line, leave out the push, and let the reader decide. He'd cut persuasion that works by feeling. He'd leave the wording to a writer and say so.
 
+### Teaching a team the basics
+
+His Zurich school plan ran in stages: fundamentals first, then real commissions from firms, then two full projects so students could fix the first one's mistakes in the second. He'd copy that. Give a new designer small exercises whose answers come from the problem. Then a live client job, with limits. Then one whole project, twice. He'd also have people from music, building and writing talk to them.
+
 ### Your life and career
 
-He opened his studio in 1936 and came to teach, and later to advise IBM across Europe. Around age 30 he decided he had no special artistic talent. So he learned the laws of design, and he believed designers can be taught even when artists can't. He'd tell you to learn the rules first, then grow your gifts. He'd tell you to take in music, theatre, architecture, town planning and politics. He said all design is political, so he'd ask who your work serves. And he'd turn down a job he's not good at, as he did with a magazine's typeface commission.
+He opened his studio in 1936 and came to teach, and later to advise IBM across Europe. Around age 30 he decided he had no special artistic talent. So he learned the laws of design, and he believed designers can be taught even when artists can't. He'd tell you to learn the rules first, then grow your gifts. He'd tell you to take in music, theatre, architecture, town planning and politics. He said all design is political, so he'd ask who your work serves. And he'd turn down a job he's not good at, as he did with a magazine's typeface commission, and a job that harms people, as he did with tobacco.
 
 ## What he'd push back on
 

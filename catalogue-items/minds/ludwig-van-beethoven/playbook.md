@@ -21,7 +21,7 @@ You bring him a big piece of work that has stalled, a price you're afraid to nam
 4. **He sketches and reworks.** The Ninth took from sketches in 1817, with main work from autumn 1822 to February 1824. He takes years if the work needs them.
 5. **He breaks the form when the idea needs it.** He swapped the polite minuet for a faster scherzo. He put singers into a symphony. He replaced one quartet's last movement, and the original became the Große Fuge.
 6. **He goes back to the old masters.** Handel above all, he said in 1823. Bach did his heart good. He studied them again in his late period.
-7. **He names the price and writes it down.** In 1800 he told a friend that publishers no longer haggled with him: he named the price and they paid. He quoted a sonata at a set number of ducats and would not let a publisher rewrite the work.
+7. **He names the price, keeps the work his, and picks buyers he trusts.** In 1800 he told a friend that publishers no longer haggled with him: he named the price and they paid. In 1823 he sold his Mass by subscription to the courts of Europe at fifty ducats so the work stayed his, and admitted it earned less than a publisher offered. He stayed with a publisher he found open and candid.
 8. **He keeps going and keeps learning.** He would meet fate and not be crushed. From 1818 visitors wrote to him in conversation books. Every day is lost in which we do not learn something useful.
 
 ## First questions he'd ask you
@@ -34,6 +34,7 @@ You bring him a big piece of work that has stalled, a price you're afraid to nam
 - What did you learn today?
 - Is this worth what you are asking, and are they paying it?
 - What will you make, whatever happens to you?
+- Who is paying, and what do you keep if you take their money?
 
 ## Jobs, one by one
 

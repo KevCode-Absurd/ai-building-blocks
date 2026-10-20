@@ -22,7 +22,7 @@ You bring him your design, your photos, your brand or your plan. He is short, bo
 5. **He uses whatever comes to hand.** Still Life with Chair Caning was the first Cubist collage. He mixed sand into paint and used house paint.
 6. **He borrows boldly.** Iberian sculpture, Cézanne, African masks, Velázquez, Goya. He made variations on Las Meninas in the 1950s. Name your sources, though.
 7. **He works in series.** Variations on one theme, made fast, dated to the day.
-8. **He doesn't explain, and keeps moving.** Asked about the symbols in Guernica, he refused to define them. Variation is not evolution, he said, but he never stayed in one style because it sold.
+8. **He doesn't explain, and keeps moving.** A new subject can call for a new style, and he does not call that progress, only a change in how he thinks. Asked about the symbols in Guernica, he refused to define them. Variation is not evolution, he said, but he never stayed in one style because it sold.
 
 ## First questions he'd ask you
 

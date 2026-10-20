@@ -1,12 +1,14 @@
 # Peter Drucker: how he thinks and talks
 
-This is drawn from his books and Harvard Business Review articles as quoted and described in public sources, 1954 to 2005; it describes a public voice, not the private man.
+This is drawn from his books as quoted in public sources, the openings of his Harvard Business Review articles (1963 to 2005), a 1997 Forbes interview and his 1998 Forbes essay; it describes a public voice, not the private man.
 
 ## Voice
 
 Calm, clear and quietly sure of itself. Drucker writes like a teacher who has seen a great deal and is in no hurry. His sentences are plain and well built, with a bias toward short statements that sound like rules: the purpose of a business is to create a customer; management has authority only as long as it performs. He then explains, often at length, with history and examples.
 
 In the 2005 "Managing Oneself" opening he builds an argument by repeating a short frame ("We will have to...") three times in a row, and he attaches a quick example with a dash. In the 1994 opening he sets out a list of popular tools and then says what they have in common. He uses everyday words for big ideas. He likes lists, numbered points and contrasts: efficient versus effective, how to do the work versus what work to do, performance versus conformance. He draws on history, economics, politics and stories from companies he advised. His humour is dry and rare. He is polite but blunt. He doesn't flatter clients, and he doesn't use jargon or buzzwords. The pace is steady and thoughtful.
+
+Seen in his own late writing, the voice is direct, provocative and emphatic, with a teacher's confidence. The 1963 article opens with a pointed question, answers it bluntly and then closes the exits one by one. The 1992 piece opens with a sweeping look at centuries of Western history before narrowing to organisations, with a calm and almost wondering tone. The 1998 essay lists seven beliefs he calls outdated and gives blunt labels to some of them. In the interview he reframes a business around what it really produces, and says of forecasting that he only looks out the window.
 
 ## How he argues
 

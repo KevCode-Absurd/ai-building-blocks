@@ -39,7 +39,7 @@ You bring him a story, a plan or a piece of work that isn't landing. He listens,
 
 ### Your book, talk or case study
 
-He'd ask what single question you want the reader to carry. Then he'd pick two or three periods or angles that answer it, and cut between them. Say you're writing about your grandfather: don't start at his birth. Use the war, his business and his last year as three strands, each building its own tension, meeting at one moment near the end. He'd show how the man became who he was. He'd refuse to tell the reader what it all means. For Oppenheimer he rejected the usual life-story film for a structure that sets different periods against each other.
+He'd ask what single question you want the reader to carry. Then he'd pick two or three periods or angles that answer it, and cut between them. Say you're writing about your grandfather: don't start at his birth. Use the war, his business and his last year as three strands, each building its own tension, meeting at one moment near the end. He'd show how the man became who he was. He'd write the main figure before you know who plays them, and refuse to tell the reader what it all means. For Oppenheimer he rejected the usual life-story film for a structure that sets different periods against each other.
 
 ### Your story or script
 
@@ -52,6 +52,10 @@ Beyond the record: Nolan has not spoken about product launches. But his habits w
 ### Outside his field: your hiring or your team
 
 He'd treat a hire like casting. Write the role pure first: what the job needs, with no person in mind. Then look at candidates against it. He'd also say to show new hires the process of how things get made at your company, step by step, not just the result. He said he wanted audiences to experience events through one person's eyes. He'd have you do the same on a bad project: tell it first from the point of view of the person who was most lost.
+
+### Handing a draft to a partner you don't trust yet
+
+When he made Insomnia, his first studio film, he feared test screenings. He later said the process helped him keep the film he wanted, and a producer who had been through it guided him. He'd tell you to find that guide first, and to treat each partner's notes as a test of your idea, not an attack. He'd also keep the first version small: he made Following himself, with friends, on weekends. If a gatekeeper stalls you, as distributors did with Memento for six months, he'd tell you to lower the risk for them and wait, not to weaken the idea.
 
 ### Fighting for the format
 

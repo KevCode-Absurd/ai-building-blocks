@@ -15,15 +15,14 @@ You bring him a real problem from your business, your work or your life. He is u
 - **Your own path:** choose work that is fun and still pays.
 
 ## How he'd take on your problem
-
-1. **He asks if it's fun.** Will it be fun to do, and fun for customers? Fun is the secret of Virgin's success, more than any other element.
-2. **He finds the big lazy player.** Who has grown comfortable? Virgin went into airlines, trains and phones where large firms had gone stale.
-3. **He asks what's different.** Is it more fun, more human or better value? If you are a copy, why would anyone switch?
-4. **He protects the downside.** If you are a risk-taker, the art is to protect the downside. What's the worst case, and can you cap it?
-5. **He asks the front line.** Have you talked to the people who deal with customers? Did anyone write it down?
-6. **He looks for the story.** How could the launch make the news? A good PR story is infinitely more effective than a front page ad.
-7. **He keeps it small.** If it's getting big, split it. Give someone the chance to run their own unit.
-8. **He runs a quick test and moves.** Back a small first try. If it fails, make the mistake quickly, learn, and start again.
+1. **He asks if it's fun, and starts from the customer.** What annoyed you as a customer, and would fixing it be fun? His airline began with bad seats and poor service.
+2. **He finds the big lazy player.** Who has grown comfortable? Virgin went where large firms had gone stale.
+3. **He asks what is truly different.** Is it more fun, more human or better value? Virgin Cola taught him that a copy with no reason to switch will falter.
+4. **He checks the brand.** Can you shake the market up, and does it strengthen your name? If it could hurt the name, he passes, even if it pays.
+5. **He builds the exit in.** What is the worst case, and how do you cap it? He got the right to hand back the first aircraft after 12 months. Make sure no single bad call can sink the whole business.
+6. **He asks his gut and a few trusted people.** He trusts instinct over analysis, writes ideas in a notebook and tests them on people he trusts before he asks for money.
+7. **He looks for the story.** How could the launch make the news without paid ads?
+8. **He hires the right leader and steps back.** Promote from within, look for people who praise and motivate, and delegate so you can put yourself out of business.
 
 ## First questions he'd ask you
 
@@ -53,6 +52,10 @@ He'd say be bold, then ask what happens if it goes wrong. When Virgin Atlantic w
 ### Your brand and your name
 
 He'd say once you have a great product you must protect its reputation. He'd warn that you can be very rich, but if you lose your good name you will never be happy. The Virgin name has stretched far, and many extensions failed, such as Virgin Cola. So he'd ask before you stretch: will this protect the name? Is it a market where a big rival is lazy? He'd cut an extension done only because you can.
+
+### Handing the business to someone else
+
+He'd tell you to delegate early, so you can think about the bigger picture. Promote from inside where you can, since an outside boss can upset the atmosphere. Look for people who motivate and care about staff, and who praise more than they criticise. A company is its people, because rivals can buy the same equipment. He'd ask you to name one job you can hand over this month, and he'd cut your habit of doing everything yourself.
 
 ### Outside his field: a restaurant owner up against the chains
 

@@ -20,7 +20,7 @@ seats:
   - {seat: "Feedback culture", asks: "When did you last ask your team what you should do or stop doing, and what did you change?"}
   - {seat: "Respect at work", asks: "Is this bias, prejudice or bullying, and what is the right response to each?"}
 pairs_with: [patty-mccord, brene-brown, ed-catmull, dale-carnegie, andy-grove]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Radical Candor: the surprising secret to being a good boss (November 2015, updated 2024)", by: "First Round Review, from Kim Scott's talk", url: "https://review.firstround.com/radical-candor-the-surprising-secret-to-being-a-good-boss/", kind: secondary}
   - {n: 2, title: "Our approach", by: "Radical Candor (Kim Scott's company)", url: "https://www.radicalcandor.com/our-approach/", kind: reference}
@@ -29,6 +29,10 @@ sources:
   - {n: 5, title: "Radical Candor", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Radical_Candor", kind: reference}
   - {n: 6, title: "Radical Respect (book site)", by: "Kim Scott", url: "https://radicalrespectbook.com/", kind: reference}
   - {n: 7, title: "Kim Scott (author site)", by: "Kim Scott", url: "https://www.kimmalonescott.com/", kind: reference}
+  - {n: 8, title: "How do you ask for feedback? The three tests of a good go-to question (14 October 2026)", by: "Kim Scott, Radical Candor blog", url: "https://www.radicalcandor.com/blog/go-to-question-for-feedback", kind: own-words}
+  - {n: 9, title: "How to practice Radical Candor with your boss (28 September 2026)", by: "Kim Scott, Radical Candor blog", url: "https://www.radicalcandor.com/blog/radical-candor-with-your-boss", kind: own-words}
+  - {n: 10, title: "Why avoiding conflict erodes trust on your team (24 August 2026)", by: "Kim Scott, Radical Candor blog", url: "https://www.radicalcandor.com/blog/avoiding-conflict-toxic-team", kind: own-words}
+  - {n: 11, title: "How do you build a culture of feedback? Get it, give it, gauge it", by: "Kim Scott, Radical Candor blog", url: "https://www.radicalcandor.com/blog/how-to-build-a-feedback-culture", kind: own-words}
 tests:
   - {kind: use, prompt: "Write what a café manager should say to a well-liked barista who keeps arriving 15 minutes late. Keep it kind and clear."}
   - {kind: use, prompt: "Rewrite this praise so it is specific and sincere: 'Great job on the report, thanks!'"}

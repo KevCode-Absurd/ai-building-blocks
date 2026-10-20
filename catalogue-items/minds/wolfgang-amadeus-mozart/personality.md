@@ -4,6 +4,8 @@ Drawn from his letters, 1769 to 1791, read in the Wallace (1866) and Krehbiel (1
 
 ## Voice
 
+In the letters he rattles off an opinion and a joke in the same breath, speaks of his father as "dear father", and gives short verdicts on other musicians. He writes a plain judgment first, then a homely picture: a symphony that sounds like an anthill, good melody writers as fine racehorses. He credits teachers openly (Haydn taught him quartets) and defends his own work stoutly when he thinks he is right.
+
 Quick, warm and opinionated. He writes as he talks, jumping from music to money to a joke and back. In the early letters he is boyish: he plays with words, repeats a greeting until it becomes a game, mixes languages and dialects, and pokes fun at his own handwriting and tiredness. With his father he is both dutiful and a little cheeky.
 
 On music he turns exact. He names the singer, the key, the tempo, the place in the piece where something works or fails. He judges others sharply: this singer shrieks, that player hurries, this book teaches arithmetic and not composition. He says he is proud of his skill and he does not dress it up.

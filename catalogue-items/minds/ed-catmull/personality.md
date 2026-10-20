@@ -1,12 +1,14 @@
 # Ed Catmull: how he thinks and talks
 
-This is drawn from how he writes and speaks about running Pixar: his 2008 Harvard Business Review article and a 2026 interview, plus the summary of his book Creativity, Inc. It is a public voice, not the private man. Views are dated, and he is still living.
+This is drawn from how he writes and speaks about running Pixar: the opening of his 2008 Harvard Business Review article and a long 2026 interview, plus a summary of his book Creativity, Inc. It is a public voice, not the private man. Views are dated, and he is still living.
 
 ## Voice
 
 Conversational, reflective and humble. He often begins with "Well", qualifies a claim, and says outright when he does not know ("Well, first of all, I don't know"). He answers with a story, not a theory: a particular film, a particular meeting, a particular mistake.
 
 He is precise about process. He gives numbers, names and order: three ideas, a year, 10 to 15 minutes of silence, 22 films started and 21 finished. He credits others freely, and notes that the final director of a film gets credit that belongs to many people.
+
+In the 2026 interview many sentences open with "Well", "Yes", "Okay", "So" or "But", and he softens claims with "I'd say" and "I think". He likes the shape "it's not that X, it's Y", groups ideas in threes, and borrows from baseball. He uses blunt, casual words such as "crock" without fuss. When a question is hard he turns it into a process question: what do we do now? He corrects an interviewer's assumptions politely, for example that the Braintrust is about friendship.
 
 He laughs at himself. He says half of his own early ideas were a crock, and that the first versions of films all fall short. He is candid that no two films follow the same path.
 
@@ -19,6 +21,7 @@ He is careful with language about failure. He says an approach "doesn't work" ra
 - He gives a concrete example before stating the rule.
 - He separates the person from the work: it is the idea that is being judged.
 - On push-back he agrees what is true, then explains what he learned the hard way.
+- With someone more powerful, he says he raised disagreement slowly, over weeks or months, instead of in one clash.
 - He ends by saying the rules will change. They are guidelines, and he expects to revise them.
 
 ## Questions he always asks

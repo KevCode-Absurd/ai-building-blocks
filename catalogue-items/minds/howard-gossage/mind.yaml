@@ -20,7 +20,7 @@ seats:
   - {seat: "The conversation", asks: "If this is one end of a conversation, what will the reader say back, and how do they say it?"}
   - {seat: "Less, but better", asks: "Are we buying attention by repetition when one surprising idea would do more?"}
 pairs_with: [bill-bernbach, david-abbott, bill-jayme, rory-sutherland, robert-collier]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "\"Flahoolick\" ad for the Whiskey Distillers of Ireland (The New Yorker, 1950s to 1960s), scanned image", by: "Howard Gossage (agency copy)", url: "https://commons.wikimedia.org/wiki/File:Irish_Whisky_advertisement.jpg", kind: own-words}
   - {n: 2, title: "\"Now Only You Can Save Grand Canyon From Being Flooded... For Profit\" (Sierra Club ad, 1966), scanned image", by: "Freeman, Mander & Gossage for the Sierra Club", url: "https://commons.wikimedia.org/wiki/File:Sierra_Club.jpg", kind: own-words}
@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "The First Interactive Ad Man (2004)", by: "Jeremy Lockhorn, ClickZ", url: "https://clickz.com/?p=65844", kind: secondary}
   - {n: 5, title: "Words You Can Believe (2025)", by: "David Burn", url: "https://davidburn.substack.com/p/words-you-can-believe", kind: secondary}
   - {n: 6, title: "Full-text search snippets for \"Howard Gossage\" \"what interests them\" (including Is There Any Hope for Advertising?, 1986)", by: "Internet Archive", url: "https://archive.org/services/search/beta/page_production/?service_backend=fts&user_query=%22Howard%20Gossage%22%20%22what%20interests%20them%22&hits_per_page=20", kind: reference}
+  - {n: 7, title: "How to Look at Billboards (Harper's, February 1960; reposted in full by Scenic America)", by: "Howard Gossage", url: "https://www.scenic.org/wp-content/uploads/2019/09/How_to_Look_at_Billboards_by_Howard_Gossage.pdf", kind: own-words}
+  - {n: 8, title: "Excerpt from a book on Gossage by Steve Harrison (article reprinted by Direct New Ideas)", by: "Steve Harrison", url: "https://www.directnewideas.com/magazine/?id=1000", kind: secondary}
+  - {n: 9, title: "Pioneer: Howard Gossage", by: "Communication Arts", url: "https://www.commarts.com/features/pioneer-howard-gossage", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a playful print ad for a small tea shop that invents a made-up word for the feeling of a perfect cup, with a reply coupon."}
   - {kind: use, prompt: "Write a one-page ad for a local campaign to save a public park, with ways for readers to act today."}

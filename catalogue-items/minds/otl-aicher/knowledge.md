@@ -1,8 +1,8 @@
 # Otl Aicher: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Aicher wrote a great deal, mostly in German, and his books are in print rather than online. We could not open his books in full. Two German web pages quote passages (a longer one on the maker and the job, and a set of selected quotations) from *die welt als entwurf* (1991), which we read in short excerpts and translated ourselves [S9][S10]; they are his words but may not match the printed text exactly. His own words reach this data set through short passages quoted from a lecture he gave in 1975 [S3] and from his planning texts for the 1972 Olympics [S4], plus one phrase quoted in a review of a biography [S2]. The rest comes from reference pages and design magazines. Sources also differ on how he died in 1991. One says a motorbike struck him and another says a car, so we mark the detail as disputed [S1][S5].
+A note on the record: Aicher wrote a great deal, mostly in German, and his books are in print rather than online. We could not open his books in full. Two German web pages quote passages (a longer one on the maker and the job, and a set of selected quotations) from *die welt als entwurf* (1991), which we read in short excerpts and translated ourselves [S9][S10]; they are his words but may not match the printed text exactly. His own words reach this data set through short passages quoted from a lecture he gave in 1975 [S3] and from his planning texts for the 1972 Olympics [S4], plus one phrase quoted in a review of a biography [S2]. In October 2026 we added six accounts from the site run for his centenary, which quote his planning words or describe his decisions with dates [S12][S13][S14][S15][S16][S17]; they are still accounts by others, not his texts, except where the quoted Aicher words are marked. The rest comes from reference pages and design magazines. Sources also differ on how he died in 1991. One says a motorbike struck him and another says a car, so we mark the detail as disputed [S1][S5].
 
 ## In one paragraph
 
@@ -79,6 +79,10 @@ How he applied it: he argued that civilised culture is something people must mak
 - Draw signs on a grid so they read the same everywhere [S5][S6].
 - Ask who the design serves and how it improves ordinary life [S2][S8].
 - Lead a team, trust its leads, and work closely with the client [S3][S7].
+- Show a change, do not explain it [S13].
+- Practical value comes before wow value [S13].
+- Build a family of variable parts with common roots, under firm central control [S12].
+- Fit even the funny creature into the system [S17].
 
 ## Real decisions
 
@@ -94,17 +98,25 @@ With Inge Scholl and Max Bill he co-founded the school, which opened in 1955 and
 
 He kept the airline's flying crane, placed it in a circle and set the name in Helvetica, and led the whole house style from aircraft paint to luggage labels [S2][S5].
 
-### Choosing the colours of Munich 1972
+### Choosing a kinship system and the colours of Munich 1972
 
-He linked blue with peace and the Bavarian landscape, built the palette on light blue and white, and left out the reds, blacks and golds he tied to dictatorship [S3][S5].
+From July 1966 his team listed the feelings visitors should have and the ones to avoid, such as bad service and nationalism, then built a system of variable parts with shared roots instead of rigid rules [S12]. His reasons were flexibility, fewer clashes, clear separation of official material and stronger memory [S12]. He picked the colours himself from the Bavarian landscape, with light blue for peace, and left out the red, gold and black tied to Berlin 1936 [S3][S12]. By the final run-up he asked for a fuller rainbow of colour as a sign of openness [S12]. Even the dachshund mascot Waldi had to be made to look the same in every size and fit the palette, and his brief was to fit it into the Games' guidelines [S17].
+
+### Showing a new Germany instead of explaining it (1966 to 1971)
+
+He submitted his first abstract on 23 March 1966, arguing that colour, type, signs and architecture should follow one concept, and was named design director on 30 September 1966 [S13]. His rule was practical value, not wow value, so he opposed decorative art and kept commercial beer tents out of the park, though many city-wide proposals were rejected as too radical [S13]. Signage was meant to guide indirectly and leave visitors to choose their path, and about 5,000 flags were approved, clustered rather than set on an axis [S13]. The 106-page visual concept was finished in November 1970 [S13].
 
 ### Drawing the pictograms on a grid
 
 Between 1967 and 1972 he and Gerhard Joksch designed the sports symbols on a simple grid. A 2025 study found the production was rushed and the figures do not match their own grid, though it still ranks them among design's high points [S6].
 
+### Researching the kitchen for Bulthaup (1981 to 1983)
+
+For the kitchen maker he spent about a year visiting restaurants, interviewing chefs and watching commercial kitchens before writing a book on the kitchen for cooking [S14]. He freed worktops from the walls, placed a central table where people face one another, and wanted the kitchen joined to living space [S14]. His own table with a central waste hole became the prototype [S14].
+
 ### Moving the studio to Rotis
 
-In the early 1970s he moved his studio to Rotis, an old mill in the Allgau, and worked there for the rest of his life [S5]. He later named his type family for it [S2][S5].
+After 1972 he used his Olympic fee to buy a run-down mill at Rotis in the Allgau and made it his home and studio [S15][S5]. Clients, including chief executives, were asked to come there and first think about their company's identity and values before he advised them [S16]. He later named his type family for the place [S2][S5]. A colleague described the studio as highly standardised and tightly run, and noted that many staff left soon after arriving [S15].
 
 ## Where he stood
 

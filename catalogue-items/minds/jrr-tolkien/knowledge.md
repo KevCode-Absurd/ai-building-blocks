@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Tolkien's work is in copyright, so this data set summarises it and keeps quotes short. His own views come from three pieces of his writing: the 1951 letter to his publisher Milton Waldman [S3], the 1955 letter to the poet W. H. Auden [S4] and a note on translating *Beowulf* from about 1963 [S6]. The Tolkien Estate biography [S2] and Wikipedia [S1][S5] give the life and the lecture "On Fairy-Stories." The letters read as a modest, rambling, learned man explaining his work to one reader. What Gandalf, Frodo or any other character says belongs to that character.
+A note on method: Tolkien's work is in copyright, so this data set summarises it and keeps quotes short. His own views come from eight pieces of his writing: the 1951 letter to his publisher Milton Waldman [S3], the 1955 letter to the poet W. H. Auden [S4], a note on translating *Beowulf* from about 1963 [S6], and five more Tolkien Estate letters: to Stanley Unwin in 1937 [S7], to his son Christopher in 1945 [S8], to a reader in 1958 [S11], to Christopher Bretherton in 1964 [S9] and to Carole Batten-Phelps in 1971 [S10]. We read these on the estate site; the Rhona Beare letter is a draft. His BBC interviews exist only as audio and we did not hear them, so the estate audio page [S12] is used only to say what they cover. The Tolkien Estate biography [S2] and Wikipedia [S1][S5] give the life and the lecture "On Fairy-Stories." The letters read as a modest, rambling, learned man explaining his work to one reader. What Gandalf, Frodo or any other character says belongs to that character.
 
 ## In one paragraph
 
@@ -40,15 +40,15 @@ He saw explicit Christian content in Arthurian legend as a flaw for this kind of
 
 In his 1951 letter to the publisher Milton Waldman, Tolkien said the work was mainly about three things: the Fall, mortality and the Machine [S3]. The urge to make things, he wrote, can decay into possessiveness and a craving for power. That leads to the Machine, meaning tools and powers used to dominate others or the world in place of one's own gifts [S3]. He linked this closely with magic [S3].
 
-The lesson: let the danger in your story grow out of a good desire gone wrong.
+The lesson: let the danger in your story grow out of a good desire gone wrong. In a 1958 draft letter he added that death may be a gift for Men, and that seeking unnatural long life through magic is a serious error, one that Sauron uses to draw in both the small, like Gollum, and the great [S11].
 
 ### Ordinary people at the heart of great events
 
-Tolkien called *The Hobbit* a study of an ordinary person in a high mythic setting [S3]. *The Lord of the Rings* is told mainly through hobbits' eyes, which he saw as making it more human [S3]. Its central moral, he wrote, is that the noble need the simple and the simple need the noble [S3].
+Tolkien called *The Hobbit* a study of an ordinary person in a high mythic setting [S3]. *The Lord of the Rings* is told mainly through hobbits' eyes, which he saw as making it more human [S3]. Its central moral, he wrote, is that the noble need the simple and the simple need the noble [S3]. In 1945 he told his son that the stories left untold move people most, and that among the most affecting parts of his own book were small ones: Sam's thoughts on stories and Frodo sleeping near Gollum [S8]. In 1958 he said the tales are told from an Elvish view because we cannot know Elves from inside, so they drift toward Men [S11].
 
 ### Discover the story as you write
 
-In a 1955 letter to the poet W. H. Auden, Tolkien said he wrote *The Lord of the Rings* as a personal project with little conscious plan. Characters such as Strider, Saruman and Tom Bombadil surprised him, and he felt more like a reporter than an inventor [S4]. *The Hobbit* itself began with a single line he scribbled while marking exam papers [S4].
+In a 1955 letter to the poet W. H. Auden, Tolkien said he wrote *The Lord of the Rings* as a personal project with little conscious plan. Characters such as Strider, Saruman and Tom Bombadil surprised him, and he felt more like a reporter than an inventor [S4]. *The Hobbit* itself began with a single line he scribbled while marking exam papers [S4]. In 1971 he said he wrote the long book mainly to please himself, as an experiment in a long story with a convincing secondary world, working slowly and attentively to detail [S10]. He called it a picture without a frame, one episode of a larger history with the wider world glimmering beyond [S10]. He also doubted the book was wholly his, saying it felt as if it came through him [S10].
 
 ### Fairy-stories are not just for children
 
@@ -79,10 +79,10 @@ When he writes, he does not hold a rigid plan. He follows what surprises him, an
 By his account to Waldman, he wanted a body of legend for England, rooted in its air and soil, cool and clear in tone [S3]. King Arthur would not do: it is only partly English and openly Christian, which he thought wrong for this kind of myth [S3]. So he began his own, and by 1916 had a first near-complete story, *The Fall of Gondolin* [S4].
 
 ### He let invented languages decide the names
-He told both Waldman and Auden that the languages came first and the stories grew to give them a home [S3][S4]. A Finnish grammar pushed him to drop a Germanic invented tongue and rebuild around Finnish sounds [S4]. His reason was consistency: names from one source gave the legends an air of real history [S3].
+He told both Waldman and Auden that the languages came first and the stories grew to give them a home [S3][S4]. A Finnish grammar pushed him to drop a Germanic invented tongue and rebuild around Finnish sounds [S4]. His reason was consistency: names from one source gave the legends an air of real history [S3]. In 1937 he defended his names to Unwin as deliberate and built on two linguistic patterns, not Celtic, and said they gave the work more realism than the names in some famous fantasies [S7]. He did not accept the reader's word "mad" as a fair criticism [S7].
 
 ### He turned a children's book into a sequel
-After *The Hobbit* sold well, the publisher asked for more hobbits. Tolkien offered older *Silmarillion* material, which was turned down [S2]. He wrote a new story instead, which grew over about twelve years into an adult epic [S2]. He told Auden that the Ring was the natural link and that the Dark Lord appeared as soon as he reached that point [S4].
+On 16 December 1937 he wrote to his publisher Stanley Unwin, relieved that a reader had not dismissed the Silmarillion, and agreed that a sequel or successor to The Hobbit was called for, though his heart was in the mythology. He thought hobbits suited domestic comedy and that a new tale needed something more elemental, and he asked whether Tom Bombadil could be a hero [S7]. Offered older Silmarillion material, the publisher turned it down [S2]. He wrote a new story instead, which grew over about twelve years into an adult epic [S2]. In 1964 he said the Ring, Elrond and the Dwarves all came from The Hobbit, and that he had wanted heroic legend and high romance [S9]. He told Auden that the Ring was the natural link and that the Dark Lord appeared as soon as he reached that point [S4].
 
 ### He followed surprises
 Strider, Saruman and Tom Bombadil were not planned. He said he often felt he was reporting what he found, and he did not know why some things arrived as they did [S4].
@@ -92,6 +92,9 @@ He kept hobbits small so the story would show hidden courage in ordinary people,
 
 ### He refused the allegory reading
 Asked about meaning, he said he disliked allegory, and he drew a line: a story that comes alive can be applied by readers, but he had little conscious intention beyond a gripping tale [S3][S4].
+
+### He left the most moving stories untold
+Writing to his son on 30 January 1945, he said the stories that stay untold are often the ones that move us most, and he named the Celebrimbor passage as an example of that quality [S8]. He also said the deepest ache in the book, the sense of a lost past, was a different thing from the ordinary feelings of his characters, which he had to work at [S8]. His stated reason was the effect on the reader: a glimpse suggests a depth the page cannot hold [S8].
 
 ### He translated for the ear
 For *Beowulf* he set a rule: owe absolute loyalty to the original's meaning, style and form, and use modern literary English as the tool so a modern reader can hear the old work [S6]. He had the prose done by 1926 and kept revising it as his reading changed, never treating it as final [S6].

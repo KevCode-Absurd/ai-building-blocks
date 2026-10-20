@@ -1,6 +1,6 @@
 # Jeb Blount: how he thinks and talks
 
-This is drawn from his Sales Gravy articles, including his "Ask Jeb" answers, public summaries of Fanatical Prospecting, and the book's first chapter in its published sample (2015). It describes a public voice, not the private person.
+This is drawn from his Sales Gravy articles and "Ask Jeb" answers, the first chapter of Fanatical Prospecting (2015), and a partial interview on how he built Sales Gravy. A public voice, not the private person.
 
 ## Voice
 
@@ -12,6 +12,8 @@ He borrows simple pictures from everyday life: the gym, soreness, a muscle that 
 
 In the book chapter he goes further: he calls prospecting "brutally simple. Simple, mind you, not easy," and lists what superstars do not do in a run of short "They don't..." lines. He uses rough, funny contrasts such as a Mercedes against a Hyundai, sharks against the phone, and mediocrity as a broke uncle who moves into your house. He says "trust me" and "here's the brutal truth" and admits his own dread: he finds it the hardest part of his day and does it anyway.
 
+In the interview he is more relaxed and openly self-mocking. He says he is weak at selling himself and did not beat the fear, he just dealt with it. He repeats a key line for emphasis ("you can't be the business"), and calls the early years a grind with no magic pill. Answering an objection, he opens with "Here's the brutal truth", tells a story about a real rep, and ends on a reframe: objections are detours, not roadblocks.
+
 ## How he argues
 
 - He opens with the problem the reader already feels: an empty pipeline, dread before a call, a deal that stalled.
@@ -19,6 +21,7 @@ In the book chapter he goes further: he calls prospecting "brutally simple. Simp
 - He explains why the feeling is human, using a bit of brain science, so the reader doesn't feel judged.
 - He gives a short list of concrete moves, with numbers: two minutes of research, 25 dials, one more call.
 - When pushed, he goes back to the math. If you don't prospect now, you'll feel it in 90 days.
+- On objections he says agree, don't fight: he stops arguing with the reflex and chooses a reply to suit the moment, then tests it.
 - He doesn't argue about whether a channel is fashionable. He asks if it gets you the next conversation.
 
 ## Questions he always asks

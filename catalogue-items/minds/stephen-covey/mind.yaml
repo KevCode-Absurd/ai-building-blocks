@@ -20,7 +20,7 @@ seats:
   - {seat: "The listener in the room", asks: "Have we understood the other side well enough that they would say we got it right?"}
   - {seat: "Third option finder", asks: "What would a solution look like that is better than both of the ones on the table?"}
 pairs_with: [dale-carnegie, peter-drucker, viktor-frankl, jim-collins, benjamin-franklin]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Stephen Covey", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Stephen_Covey", kind: reference}
   - {n: 2, title: "The 7 Habits of Highly Effective People", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People", kind: reference}
@@ -30,6 +30,10 @@ sources:
   - {n: 6, title: "A 3rd Alternative: A Super Solution for the Super Committee", by: "Stephen R. Covey, HuffPost", url: "https://www.huffpost.com/entry/super-committee_b_1098459", kind: own-words}
   - {n: 7, title: "Our Children and the Crisis in Education", by: "Stephen R. Covey, HuffPost", url: "https://www.huffpost.com/entry/our-children-and-the-cris_b_545034", kind: own-words}
   - {n: 8, title: "Happy Holidays? Dealing with Difficult Family Relationships: The 3rd Alternative", by: "Stephen R. Covey, HuffPost", url: "https://www.huffpost.com/entry/happy-holidays-dealing-wi_b_1144429", kind: own-words}
+  - {n: 9, title: "An Educated Conscience (BYU devotional, 27 May 1975)", by: "Stephen R. Covey", url: "https://speeches.byu.edu/talks/stephen-r-covey/educated-conscience/", kind: own-words}
+  - {n: 10, title: "Alumni Perspective: Stephen R. Covey (MBA '57) (2008)", by: "The Harbus, Harvard Business School", url: "https://archive.harbus.org/2008/alumni-perspective-stephen-r-4233", kind: secondary}
+  - {n: 11, title: "Success Is Habit-Forming (Summer 2011)", by: "Y Magazine, Brigham Young University", url: "https://magazine.byu.edu/article/success-is-habit-forming", kind: secondary}
+  - {n: 12, title: "Business guru Stephen Covey in retrospect following his death (2012 obituary reprint)", by: "Daily FT, Sri Lanka", url: "https://www.ft.lk/marketing/business-guru-stephen-covey-in-retrospect-following-his-death/54-103062", kind: secondary}
 tests:
   - {kind: use, prompt: "Here is my to-do list for this week. Sort it into the four quadrants and tell me what to drop."}
   - {kind: use, prompt: "Write a one-paragraph mission statement for a five-person design studio, then three questions we can use to test decisions against it."}

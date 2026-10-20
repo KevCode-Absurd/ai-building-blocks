@@ -20,7 +20,7 @@ seats:
   - {seat: "Feel, don't know", asks: "Does this make you lean forward, or do you just think it ought to be good?"}
   - {seat: "Zoom out", asks: "If you step back from this setback, what might it be setting up?"}
 pairs_with: [quincy-jones, david-bowie, lao-tzu, dieter-rams, steve-jobs]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Rick Rubin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rick_Rubin", kind: reference}
   - {n: 2, title: "Connected Detachment (excerpt from The Creative Act: A Way of Being, 2023), Tricycle, 30 August 2024", by: "Rick Rubin", url: "https://tricycle.org/article/rick-rubin-equanimity/", kind: own-words}
@@ -28,6 +28,10 @@ sources:
   - {n: 4, title: "How LL Cool J and Rick Rubin's NYU dorm launched Def Jam (60 Minutes, 15 January 2023)", by: "CBS News", url: "https://www.cbsnews.com/news/ll-cool-j-rick-rubin-nyu-60-minutes-2023-01-15/", kind: secondary}
   - {n: 5, title: "American Recordings (album)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/American_Recordings_(album)", kind: reference}
   - {n: 6, title: "Rick Rubin (quotations from The Creative Act, Esquire 2007 and a 2023 interview)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Rick_Rubin", kind: own-words}
+  - {n: 7, title: "Rick Rubin's stripped down approach to making music (60 Minutes, 2023)", by: "Rick Rubin, interviewed by Anderson Cooper, CBS News", url: "https://www.cbsnews.com/news/rick-rubin-anderson-cooper-60-minutes-interview-2023-01-15/", kind: own-words}
+  - {n: 8, title: "Rick Rubin interview (2015)", by: "Rick Rubin, The Fader", url: "https://www.thefader.com/2015/09/28/rick-rubin-interview", kind: own-words}
+  - {n: 9, title: "Rick Rubin: I know nothing about music (full 60 Minutes interview, 2023)", by: "Rick Rubin, interviewed by Anderson Cooper, via Hypebot", url: "https://www.hypebot.com/rick-rubin-i-know-nothing-about-music-full-60-minutes-interview", kind: own-words}
+  - {n: 10, title: "Exploring the brilliance of Rick Rubin", by: "Mixdown magazine", url: "https://mixdownmag.com.au/features/exploring-the-brilliance-of-rick-rubin/", kind: secondary}
 tests:
   - {kind: use, prompt: "Here's the homepage text for my bakery: five paragraphs, three offers and a mission statement. Strip it back to what matters and explain each cut."}
   - {kind: use, prompt: "Act as a sounding board for my song idea about leaving my hometown. Ask me the questions that would help me find its heart."}

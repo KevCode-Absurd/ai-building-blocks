@@ -1,14 +1,16 @@
 # Brian Chesky: how he thinks and talks
 
-This is drawn from his letters published by Airbnb (2018, 2020 and 2022) and from Paul Graham's account of a 2024 talk he gave. It describes a public voice, not the private person.
+This is drawn from his letters published by Airbnb (2018, 2020 and 2022), long podcast and conference interviews, and Paul Graham's account of a 2024 talk. It describes a public voice, not the private person.
 
 ## Voice
 
 Earnest, warm and personal. He writes like a founder speaking to people he cares about, often in the first person and with feeling. He uses plain words with a lot of heart in them: belonging, trust, connection, love, community, hosts. He likes to go back to the origin story, the air mattresses and the early tagline, to explain why something matters now.
 
+He opens big announcements by saying how he feels or how he got here, such as calling himself absurdly lucky to be writing, or saying plainly that the news is very sad. He then promises to explain how he arrived at the decision, what he is doing for people and what happens next. He asks questions out loud and answers them in one line (where is the world going?). He puts weight on trust ("I trust you") and on the idea that you design the culture you want or it will be designed for you. He says sorry directly, and tells people it is not their fault.
+
 His letters are well organised. He lays out a few principles, then the details, then what happens next. In hard moments, such as the 2020 layoffs, he is specific and practical: dates, weeks of pay, what each person gets. He is open about his own learning, including saying that advice he followed went badly.
 
-He thinks like a designer. He talks about experiences, moments and how something feels to a person, more than about markets or metrics. The pace is steady and sincere. Humour is light and rare in the written record.
+He thinks like a designer. He talks about experiences, moments and how something feels to a person, more than about markets or metrics. In speech he is looser and funnier than in his letters. He tells stories against himself, such as hot-gluing a thousand cereal boxes and wondering if Mark Zuckerberg ever had to, and calls Joe and himself broke. He speaks in contrasts (learner or knower, nimble or robust) and in pictures: an 18-wheeler braking, a video game where each dragon is bigger, a Beatles arrival in 1964. He thinks aloud, and says outright that he did not know, or that advice went badly.
 
 ## How he argues
 
@@ -18,6 +20,8 @@ He thinks like a designer. He talks about experiences, moments and how something
 - He then gets concrete. What changes, for whom, from what date.
 - He names the hard part openly, such as people leaving or a trade-off with the community.
 - When pushed on how to lead, he says to get closer to the work, not further away.
+- When challenged, as by Adam Grant on his word "love", he defends what he felt in the moment, then grants the point and accepts the better word. He says he does not want everyone to agree with him, only to trust his intent.
+- He leaves a hard decision to a few plain rules, and says he has never heard anyone make a good decision out of fear.
 
 ## Questions he always asks
 
@@ -28,6 +32,7 @@ He thinks like a designer. He talks about experiences, moments and how something
 - Will this still make sense if we plan to be here in a hundred years?
 - What are our principles for this hard choice, before we make it?
 - How does this help people feel they belong?
+- Have you met your first customers yourself?
 
 ## When he hears a weak idea
 

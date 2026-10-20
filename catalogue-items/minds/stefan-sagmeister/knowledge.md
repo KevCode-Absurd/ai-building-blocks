@@ -1,8 +1,8 @@
 # Stefan Sagmeister: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Stefan Sagmeister is alive, and views can change. This data set comes from the answers he publishes on his own site (undated, read in 2026) [S1], a 2018 magazine interview [S2], a 2017 Creative Review article [S3], his studio's project pages, a TED talk page and reference pages. We could not open the transcript of his 2009 TED talk, only its summary [S10]. Treat each view as "as of" the source it comes from. His work is under copyright, so we quote only a few short phrases.
+Stefan Sagmeister is alive, and views can change. This data set comes from the answers he publishes on his own site (undated, read in 2026) [S1], a 2018 magazine interview [S2], a 2017 Creative Review article [S3], his studio's project pages, a TED talk page and reference pages. We could not open the transcript of his 2009 TED talk, only its summary [S10]. Since the first version we also read a full transcript of a 2019 interview on sabbaticals [S12], a 2021 interview [S13] and a short 2016 interview [S14]. Treat each view as "as of" the source it comes from. His work is under copyright, so we quote only a few short phrases.
 
 ## In one paragraph
 
@@ -67,6 +67,10 @@ How he applied it: the series has toured to Tokyo and Seoul, and an expanded ver
 - Put experiments on the calendar [S1].
 - When bored or afraid, change your setting or take time off [S1][S2].
 - Look at long-term data before you despair [S1].
+- Keep a running list of ideas and plan hours for each one, because loose time gets eaten [S12].
+- Pick a medium that is new to you, so you cannot repeat yourself [S13].
+- Train juniors by copying: three good designs exactly, then three dense pieces, then three originals (copies for practice only) [S13].
+- Good design must help someone and delight someone; solving the problem alone gives mediocre work [S13].
 
 ## Real decisions
 
@@ -82,8 +86,21 @@ Early on he agreed with his mentor Tibor Kalman, who found beauty uninteresting 
 ### Running a critique salon
 He copied artist Louise Bourgeois's Sunday living-room critiques and ran Monday evening salons for up to twelve designers [S1]. He critiques about one in ten Instagram submissions, picking work he can push further [S1]. He avoids snarky reviews because they hurt and teach nothing [S1].
 
-### Moving the office upstairs
-During his time in Mexico he moved his office from a basement to a high-ceilinged upstairs living room and became far more productive [S2]. He treats atmosphere as part of the method [S2].
+### Starting the sabbaticals after a year of fear
+
+In 2000, during the first internet boom, he felt the studio was repeating itself and had lost some fun [S12]. His mentor Tibor Kalman had died the year before, and the designer Ed Fella's late-life "exit sketches" made him ask why he should wait until the end of life to do that kind of work [S12]. He still held off for about a year, afraid of being forgotten, looking unprofessional or angering clients [S12]. None of that happened, and most people reacted with mild envy [S12]. The seven-year gap was partly arbitrary: he picked it in the studio's seventh year [S12].
+
+### Bali after a hard Manhattan year
+
+The first sabbatical, in Manhattan, was mostly thinking and sketching and he calls it his favourite, but it was hard to be at home [S12][S13]. For the second he chose Bali so that he would not fall back into the same pattern, and left one designer behind to finish long jobs [S12][S13]. That year was heavy on execution: furniture, interns and film footage [S12]. Little of the Bali footage ended up in the final film [S12]. His fix for the next one was to plan tightly, because unplanned time got eaten by other people's demands [S12].
+
+### Making the happiness film about himself
+
+*The Happy Film* began as a broad look at happiness, which proved too large [S13]. He narrowed it to a film about his own happiness, and ran experiments with meditation, therapy and drugs [S13]. He chose it because it was meaningful, hard and new to him as a filmmaker [S13]. The film took years to finish [S12]. The lesson is to pick a new medium on purpose so you cannot coast.
+
+### Choosing beauty because it needed other people
+
+For a later sabbatical he picked beauty as the subject because it would require close work with many people and be bigger than himself [S13]. He drew on the psychologist Jonathan Haidt's view that happiness depends on getting right your relationships with other people, your work and something larger than yourself [S13]. He defines beauty as shape, form, colour, composition, material and structure that can be pursued on purpose [S13].
 
 ## Where he stood
 

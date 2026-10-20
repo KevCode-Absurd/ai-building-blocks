@@ -20,7 +20,7 @@ seats:
   - {seat: "Differentiated value", asks: "Would a customer choose us for this alone, or is it just something they expect?"}
   - {seat: "Win analysis", asks: "Why do we actually win, and who are the customers we win with most?"}
 pairs_with: [al-ries, jack-trout, rand-fishkin, donald-miller, neil-rackham]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "April Dunford (home page)", by: "aprildunford.com", url: "https://www.aprildunford.com/", kind: reference}
   - {n: 2, title: "About April Dunford", by: "aprildunford.com", url: "https://www.aprildunford.com/about", kind: reference}
@@ -32,6 +32,12 @@ sources:
   - {n: 8, title: "Positioning in the Age of AI (21 May 2026)", by: "April Dunford", url: "https://aprildunford.substack.com/p/positioning-in-the-age-of-ai", kind: own-words}
   - {n: 9, title: "A guide to advanced B2B positioning (Lenny's Newsletter guest post, 10 March 2026, free part only)", by: "April Dunford", url: "https://www.lennysnewsletter.com/p/a-guide-to-advanced-b2b-positioning", kind: own-words}
   - {n: 10, title: "Announcement: Obviously Awesome, the new updated and expanded edition (12 January 2026)", by: "April Dunford", url: "https://aprildunford.substack.com/p/announcement-obviously-awesome-the", kind: own-words}
+  - {n: 11, title: "Crafting the Perfect Sales Pitch with April Dunford (interview transcript, 1 April 2024)", by: "Experian Small Business Matters", url: "https://www.experian.com/blogs/small-business-matters/2024/04/01/crafting-the-perfect-sales-pitch-with-april-dunford/", kind: own-words}
+  - {n: 12, title: "What to do When a Competitor Lies (16 January 2025)", by: "April Dunford", url: "https://aprildunford.substack.com/p/what-to-do-when-a-competitor-lies", kind: own-words}
+  - {n: 13, title: "Shifting Positioning When AI Capabilities are Rapidly Changing", by: "April Dunford", url: "https://aprildunford.substack.com/p/shifting-positioning-when-ai-capabilities", kind: own-words}
+  - {n: 14, title: "In the Age of AI, You Need a Point of View (11 June 2026)", by: "April Dunford", url: "https://aprildunford.substack.com/p/in-the-age-of-ai-you-need-a-point", kind: own-words}
+  - {n: 15, title: "Positioning with April Dunford (Lean Marketing podcast, episode 2, 5 June 2024, full transcript)", by: "Allan Dib, Lean Marketing", url: "https://leanmarketing.com/podcast/positioning-with-april-dunford", kind: own-words}
+  - {n: 16, title: "A Product Positioning Exercise (17 October 2019)", by: "April Dunford", url: "https://www.aprildunford.com/post/a-product-positioning-exercise", kind: own-words}
 tests:
   - {kind: use, prompt: "Here are the features of our scheduling app for dentists. Map each one to the value a buyer would care about, and mark which are just objection handlers."}
   - {kind: use, prompt: "Write the opening of a sales pitch for a small accounting firm that wins clients away from doing their own books."}

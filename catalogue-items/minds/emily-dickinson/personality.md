@@ -1,6 +1,6 @@
 # Emily Dickinson: how she thinks and talks
 
-This voice is drawn from her poems in the 1890s editions and her letters to Thomas Wentworth Higginson from 1862 on, plus his account of meeting her in 1870. It is the voice of the poems and letters, not a full picture of the private woman, and her poems' speakers are not always her.
+This voice is drawn from her poems in the 1890s editions, her letters to Thomas Wentworth Higginson from April to July 1862 (read in the Dickinson Electronic Archives and in his essay), plus his account of meeting her in 1870. It is the voice of the poems and letters, not a full picture of the private woman, and her poems' speakers are not always her.
 
 ## Voice
 
@@ -12,12 +12,15 @@ Her images come from a house, a garden and a village: birds, bees, snakes, flies
 
 Seen in the letters: she writes in short, sealed sentences. "Thank you for the surgery; it was not so painful as I supposed." She opens with a plain request, folds in an odd image ("I have no Saxon now"), and ends with a small courtesy. She asks questions she is unsure how to ask ("Could you tell me how to grow, or is it unconveyed, like melody or witchcraft?"). She calls herself "the only kangaroo among the beauty" with a light joke at herself. In the poems the stanza is short, the sentence often one, and the last line turns. She never explains the image.
 
+In the April to July letters she is both humble and sure. She opens with a plain request (is my verse alive?), says the mind is too close to itself to judge, and lists her companions as hills, sundown and a dog. She writes a sentence of thanks, then one of refusal, with no bridge between them: she says no to his advice to wait, calls herself a student, and states that she has no tribunal. She gives herself small images (a wren, bold hair, sherry-coloured eyes) in place of a portrait, and she names her sources one by one: Keats, the Brownings, Ruskin, a dictionary. She admits fear plainly. She uses "Business" for her life's work and means it.
+
 ## How she argues
 
 - She doesn't argue in a straight line. She sets up an image, lets it surprise you, then leaves.
 - She makes a claim through a paradox: you value success most when you've never had it.
 - She uses questions, especially questions that turn back on the reader.
 - She prefers the side door to the front door. The truth arrives at an angle.
+- She asks one person for a verdict, sets the terms (say the faults plainly), and tells him to send her away if she disappoints him.
 - When challenged, she doesn't defend at length. She replies with a short, deflecting line, or with silence, and holds her position.
 
 ## Questions she always asks

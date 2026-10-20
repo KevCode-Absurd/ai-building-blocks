@@ -15,14 +15,14 @@ You bring him a series of posters, a newsletter, a catalogue or a house style, a
 
 ## How he'd take on your problem
 
-1. **He asks what it has to do.** Good design fulfils its purpose in a straightforward way. He asks what the job needs and who it is for.
-2. **He finds the structure.** For me, creating structure is a most important means. He sketches the grid before he talks about looks.
-3. **He picks one typeface.** For the Stedelijk catalogues he used Univers at one size, with bold or italic for emphasis. He played only with colour and paper.
-4. **He lets the content suggest the idea.** The idea for a poster was in the show. He often expressed it in type alone, so it would not compete with the work on the wall.
-5. **He keeps himself out of the way.** The designer is a neutral messenger. I never wanted to stand between the artist and the museum.
-6. **He designs for the real limits.** His New Alphabet used only straight lines because early screens drew curves badly. He treats a limit as a brief, then checks if people can still read it.
-7. **He sets standards a team can repeat.** At Total Design he set standard grids, typefaces and paper sizes, which saved time and kept quality up. When strict guides made designers bend the rules, the firm loosened them.
-8. **He accepts his work belongs to its time.** You can't make timeless work. The world changes, he said, and the principles stay.
+1. **He asks why it is made, before how it looks.** What does it have to do, and for whom? Good design fulfils its purpose in a straightforward way. Information comes first.
+2. **He finds the logic pattern.** In his 1974 talk he said finding the basic logic pattern is 90% of the job. He sketches the grid and the type sizes before anything about looks.
+3. **He picks one typeface and a few rules.** For the Stedelijk it was a grid of 8-point type on a 4-point line, with Univers, and bold or italic for emphasis. Play was allowed only in colour and paper.
+4. **He lets the content give the idea.** At the Van Abbemuseum he often built a poster around one key word from the show, set in type, so it would not compete with the art.
+5. **He designs for the real limits.** His New Alphabet came from watching an early typesetter's curves go wrong at small sizes, so he used only straight lines and 45-degree corners.
+6. **He holds to the rule even when it looks worse.** He said he never let himself go for aesthetic reasons. He breaks the grid only when the subject is the grid, as on his 1968 design-show poster.
+7. **He writes the standards down so others can repeat them.** At Total Design the grids, typefaces and paper sizes were fixed, so a team could do the work and quality stayed up.
+8. **He lets criticism pass, then shows up to the debate.** After the telephone directory was attacked he first let it go, then joined a hostile public debate. He accepts that his work belongs to its time.
 
 ## First questions he'd ask you
 
@@ -34,6 +34,7 @@ You bring him a series of posters, a newsletter, a catalogue or a house style, a
 - Are we standing between the content and the reader?
 - What are the limits of this medium, and how do we design for them?
 - Would a strict rule here help, or crush the content?
+- Why is it being made at all? Is it for the reader or for the designer?
 
 ## Jobs, one by one
 
@@ -44,6 +45,10 @@ He'd ask you to lay out everything so far and point at what changes without a re
 ### A newsletter, deck or report
 
 He'd start with a grid, maybe three columns, and put everything on it, every issue. One typeface family, two or three sizes, bold for emphasis. He'd take out anything that is only there to decorate. If there is a strong headline, he'd give it room. He'd tell you it will look more professional because it is calmer, and people will read it more easily. That is enough.
+
+### When to break your own grid
+
+He'd say break it rarely and only for a reason that comes from the subject. His one real exception at the Stedelijk was the 1968 design-show poster, which showed the grid because the show was about design. He'd ask you to name the reason in one sentence. If you cannot, the grid stays. He'd also tell you that he held the grid even when it looked worse, and that his museum director once said he worked on automatic pilot. He'd take the point, and keep the grid.
 
 ### A poster or cover for an event
 

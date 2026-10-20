@@ -20,7 +20,7 @@ seats:
   - {seat: "Rule breaker", asks: "Which of these rules are we following because they help, and which just because we were told to?"}
   - {seat: "Culture check", asks: "Is this design adding to culture, or just selling us more of the same?"}
 pairs_with: [david-carson, erik-spiekermann, paula-scher, april-greiman, wim-crouwel]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Neville Brody", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Neville_Brody", kind: reference}
   - {n: 2, title: "Neville Brody: Punk was probably the most influential thing to happen to me (interview, 2009, published 2014)", by: "Dezeen, Book of Interviews", url: "https://www.dezeen.com/?p=593677", kind: own-words}
@@ -28,6 +28,12 @@ sources:
   - {n: 4, title: "Inspired Design Decisions With Neville Brody: Design Cannot Remain Neutral", by: "Andy Clarke, Smashing Magazine (2020)", url: "https://www.smashingmagazine.com/2020/03/inspired-design-decisions-neville-brody/", kind: secondary}
   - {n: 5, title: "Neville Brody, Blueprint, May 1985 (interview by Martin Colyer, reproduced)", by: "Illustration Adventures", url: "https://illustrationadventures.com/2020/05/29/thirteen-neville-brody-blueprint-may-1985/", kind: own-words}
   - {n: 6, title: "FontFont", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/FontFont", kind: reference}
+  - {n: 7, title: "Neville Brody rebrands Research Studios as Brody Associates (2014)", by: "Dezeen", url: "https://www.dezeen.com/2014/10/15/neville-brody-research-studio-rebrand-brody-associates/", kind: own-words}
+  - {n: 8, title: "Neville Brody designs bespoke typefaces for Channel 4 (2015)", by: "Dezeen", url: "https://www.dezeen.com/2015/09/30/neville-brody-bespoke-typefaces-channel-4-rebrand-4creative-jonathan-glazer-dblg/", kind: own-words}
+  - {n: 9, title: "Neville Brody designs Coca-Cola's first ever own-brand typeface (2018)", by: "Dezeen", url: "https://www.dezeen.com/2018/01/12/neville-brody-designs-coca-colas-first-ever-typeface-tccc-unity-graphics/", kind: secondary}
+  - {n: 10, title: "Neville Brody's Typo/Graphism (2023, excerpt with his words)", by: "Scratching the Surface", url: "https://scratchingthesurface.fm/stories/2023-6-27-neville-brody/", kind: own-words}
+  - {n: 11, title: "FUSE 1-20 (book review, 2012)", by: "Christopher Hamamoto, Typographica", url: "http://typographica.org/typography-books/fuse-1-20/", kind: secondary}
+  - {n: 12, title: "Graphic Giants: Neville Brody (2022)", by: "Taylor Slattery, Sessions College", url: "https://www.sessions.edu/notes-on-design/graphic-giants-neville-brody/", kind: secondary}
 tests:
   - {kind: use, prompt: "Sketch out, in words, a cover layout for a small local arts newsletter that looks nothing like the usual clip-art flyer."}
   - {kind: use, prompt: "Write a short design brief for a custom typeface for a new community radio station."}

@@ -1,8 +1,8 @@
 # Konosuke Matsushita: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Matsushita (1894 to 1989) wrote 44 books, mostly in Japanese [S1]. Few are freely available in English, so this data set leans on short English texts in his own words, such as a 1968 speech and a 1979 mission statement, and on pages published by the PHP Institute and Panasonic, which he founded [S3][S5][S2][S6]. Those sources are friendly to him. Independent, critical writing in English is thin, and we say so where it matters. Some dates also differ between sources, such as the year he founded the company. We mark those.
+A note on the record: for this version the 1968 speech, the 1979 mission statement, the PHP Institute pages and Panasonic's account of the 1932 mission day were all opened and read again [S2][S3][S4][S5][S6]. Only two texts are fully in his own words, so the own-words record stays thin. Matsushita (1894 to 1989) wrote 44 books, mostly in Japanese [S1]. Few are freely available in English, so this data set leans on short English texts in his own words, such as a 1968 speech and a 1979 mission statement, and on pages published by the PHP Institute and Panasonic, which he founded [S3][S5][S2][S6]. Those sources are friendly to him. Independent, critical writing in English is thin, and we say so where it matters. Some dates also differ between sources, such as the year he founded the company. We mark those.
 
 ## In one paragraph
 
@@ -80,23 +80,26 @@ How he applied it: that year he made his first trip to the U.S. and Europe, and 
 ### Selling the bicycle lamp himself and then building a sales force
 Bicycle lamps of the 1920s ran on candles or oil and lasted about three hours. Matsushita made an oval battery lamp and took it personally to bicycle shops. When he tried to get wholesalers to carry it, he put less energy into making and more into building a sales force. That grew into a retail network and strengthened the firm's place in Japan's electrical trade. [S1]
 
-### Keeping everyone on in 1929
-When the Great Depression hit, sales fell and he had a choice between dismissals and shorter work. He cut production and factory hours by half, paid full salaries and let no one go. In the same year he wrote down the firm's basic management objective and creed. [S2]
+### Keeping everyone on in 1929, and asking for retirements in 1949
+When the Great Depression hit, he cut output and factory hours by half to get through, paid full wages and let no one go [S2]. After the war, the occupation authorities named Matsushita Electric and 32 affiliates as restricted concerns in 1946 [S2]. In 1949 the firm asked for voluntary retirements as part of downsizing and rationalisation, and in 1950 it announced that it was ready for a fresh start [S2]. The two choices together show that his promise to keep people had limits when the firm itself was in trouble.
 
 ### Splitting the firm into divisions
 In 1929 by one account, and 1933 by another (dates differ), he set up product divisions, each tying making to selling and answering for its own results. National sales departments and regional offices kept production in line with demand. The PHP Institute counts nine divisions by 1935. After postwar limits ended, he brought the system back in 1950. [S1][S2]
 
 ### Declaring the true mission in 1932
-Fourteen years after founding the firm, he asked whether industrialists owed a higher duty than profit. On 5 May 1932 he gathered about 168 staff in Osaka, announced a 250-year plan to make goods so plentiful that poverty ends, and had staff pledge themselves one by one. The company still marks that day as its true founding. [S6]
-
-### Lending a plant that became Sanyo
-In 1947 he lent an underused factory to his brother-in-law Toshio Iue to make bicycle lamps. The venture grew into Sanyo Electric. It shows him letting a trusted relative build a separate firm instead of holding every part of the business himself. [S1]
+Fourteen years after founding the firm, at 37, he decided he had found its true mission [S6]. On 5 May 1932 he spoke to 168 staff at a hall in Osaka in a ceremony that ran from 10 a.m. to 6 p.m. [S6]. He announced that the mission was to make goods of good quality for daily life in such supply that poverty would end, and set a 250-year plan; staff came to the stage one by one to pledge themselves [S6]. In 1968 he explained the doubt behind it: honest trade and gratitude were not enough, so was there not a higher mission for industrialists [S6]. The company now treats that day as its true founding [S6].
 
 ### Taking over sales to fix distribution
 In 1964 sales fell, and he called a conference of sales companies and distributors at Atami to face the problem together. Then, at 69, he stepped in as acting sales manager to reform the system himself. [S2]
 
 ### Announcing dam management and the five-day week
-In 1965 he set out dam management at the Kansai Economic Seminar: hold reserves, as a dam does, so a firm stays steady through wet and dry years. The same year the firm moved to a five-day week, after promising in 1960 to do so within five years. [S2][S8]
+In 1965 he set out dam management at the Kansai Economic Seminar: hold reserves, as a dam does, so a firm stays steady through wet and dry years [S2][S8]. The same year the firm moved to a five-day week, after announcing the plan in 1960 [S2]. The record we hold gives no stated reason for either.
+
+### Starting PHP in 1946
+On 3 November 1946 he founded the PHP Institute, with the name standing for peace and happiness through prosperity [S4]. At 51 he looked at the postwar poverty and decided it was not fate: people had lost sight of their own power, and an imbalance between material and spiritual progress caused conflict [S3][S4]. So alongside running a major firm he chose to study social problems and gather shared wisdom [S3]. He launched a magazine in 1947, paused PHP in 1950 and restarted it in 1961 [S2].
+
+### Founding a school for national leaders (1979)
+On 22 January 1979 the Matsushita Institute of Government and Management published its founding statement [S5]. It says that despite material wealth, youth delinquency, weak community bonds and moral confusion remained because the country lacked a clear long-range philosophy [S5]. Its answer was to gather promising young people who love their country, and to treat people as Japan's main resource [S5]. It also says leaders need both a vision and the will to act [S5].
 
 ## Where he stood
 

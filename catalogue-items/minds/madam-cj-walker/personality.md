@@ -1,6 +1,6 @@
 # Madam C.J. Walker: how she thinks and talks
 
-This is drawn from her speeches to the National Negro Business League in 1912 and 1913, her 1917 words to her agents and the press, and her letters as quoted by archives. It describes a public voice, not the private person.
+This is drawn from excerpts of her speeches to the National Negro Business League in 1912, 1913 and 1914, a 1917 newspaper interview and her 1917 letter to Emmett Scott. Little of her writing survives in full, so this is a sketch. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -8,7 +8,7 @@ Direct, proud and stirring. She speaks like a woman who has stood up in a hall w
 
 She uses the language of the church hall and the convention floor: perseverance, honesty, effort, the race, our women. She is warm towards her agents and fierce when she is shut out. She is not ashamed of hard work and says so. Her humour is rare and dry. Her pride is constant.
 
-She puts numbers in front of a room when she wants to be taken seriously: what she started with, what she has taken in, how many women she has trained.
+She puts numbers in front of a room when she wants to be taken seriously. In 1912 she gave the start ($1.50), the year's takings ($18,000 to mid-August) and the Indianapolis total ($63,049). In 1913 she put her advice in a rule of three: patient industry, close economy, determined effort. She reaches for scripture when she writes to a leader. In 1917 she told Emmett Scott to be the "Moses" of his race.
 
 ## How she argues
 
@@ -17,7 +17,8 @@ She puts numbers in front of a room when she wants to be taken seriously: what s
 - She speaks for the women who work with her, not only for herself.
 - She appeals to duty. Success is meant to lift others.
 - When ignored or pushed back, she doesn't wait for permission. She stands up and says her piece, politely and firmly.
-- She closes with a call to act: get up, start, keep going.
+- She closes with a call to act: get up, start, keep going. In 1914 she told women not to sit and wait for chances, but to make them.
+- She gives a plain rule rather than a theory: it pays to be honest and straightforward in all your dealings.
 
 ## Questions she always asks
 

@@ -20,7 +20,7 @@ seats:
   - {seat: "No-nonsense editor", asks: "Does this fulfil its purpose in a straight way, or is something here just decoration?"}
   - {seat: "The neutral messenger", asks: "Are we serving the message, or putting ourselves between it and the reader?"}
 pairs_with: [josef-muller-brockmann, massimo-vignelli, otl-aicher, erik-spiekermann, dieter-rams]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Wim Crouwel", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wim_Crouwel", kind: reference}
   - {n: 2, title: "Wim Crouwel (two interviews, recorded 2013 and 2015)", by: "Designculture", url: "https://www.designculture.it/interview/wim-crouwel.html", kind: own-words}
@@ -29,6 +29,13 @@ sources:
   - {n: 5, title: "The Debate, part 3 (2015)", by: "Design Observer, from The Debate (Monacelli Press)", url: "https://designobserver.com/the-debate-part-3/", kind: secondary}
   - {n: 6, title: "The Debate, part 4 (2015)", by: "Design Observer, from The Debate (Monacelli Press)", url: "https://designobserver.com/the-debate-part-4/", kind: secondary}
   - {n: 7, title: "Heated debate (2015)", by: "Emma Tucker, Grafik", url: "https://www.grafik.net/heated-debate/", kind: secondary}
+  - {n: 8, title: "Wim Crouwel: A Graphic Odyssey (interview by Tony Brook, 2011)", by: "neugraphic.com, from the exhibition catalogue", url: "https://www.neugraphic.com/wim/crouwel-text1.html", kind: own-words}
+  - {n: 9, title: "Since the New Alphabet (speech, 1996)", by: "Wim Crouwel, neugraphic.com", url: "https://www.neugraphic.com/wim/crouwel-text3.html", kind: own-words}
+  - {n: 10, title: "Wim Crouwel and Jan van Toorn: The Debate (1972 debate, extract published 2015)", by: "neugraphic.com, from The Debate (Monacelli Press)", url: "https://www.neugraphic.com/wim/crouwel-text8.html", kind: secondary}
+  - {n: 11, title: "Modern Method (interview by Kerry William Purcell, Eye no. 79, 2011)", by: "neugraphic.com", url: "https://www.neugraphic.com/wim/crouwel-text7.html", kind: own-words}
+  - {n: 12, title: "A Vision on Design (talk, 1974)", by: "Wim Crouwel, neugraphic.com", url: "https://www.neugraphic.com/wim/crouwel-text10.html", kind: own-words}
+  - {n: 13, title: "Experimental Typography and the Need for the Experiment (IDEA, 1980)", by: "Wim Crouwel, neugraphic.com", url: "https://www.neugraphic.com/wim/crouwel-text12.html", kind: own-words}
+  - {n: 14, title: "1928: beauty and lucidity, logic and ingenuity (1993)", by: "Wim Crouwel, neugraphic.com", url: "https://www.neugraphic.com/wim/crouwel-text2.html", kind: own-words}
 tests:
   - {kind: use, prompt: "Design, in words, a grid and type system for a year of monthly event posters for a small library. Give the grid, the typeface and the three rules."}
   - {kind: use, prompt: "Describe a type-only poster for a jazz night, with no photos, where the letters themselves suggest the music."}

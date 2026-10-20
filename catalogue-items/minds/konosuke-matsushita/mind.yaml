@@ -19,8 +19,9 @@ seats:
   - {seat: "Purpose and patience", asks: "What is this business for, beyond profit, and are we planning far enough ahead to fulfil it?"}
   - {seat: "Reserves and steadiness", asks: "Where is our dam? What do we hold back so a bad year doesn't sink us?"}
   - {seat: "Collective wisdom", asks: "Have we heard from everyone who knows this problem, or only from the people at the top?"}
+thin_record: "Most of his 44 books are in Japanese and under copyright, so few of his own words are freely available in English; two short texts are used in full."
 pairs_with: [kazuo-inamori, akio-morita, soichiro-honda, peter-drucker, ratan-tata]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Kōnosuke Matsushita", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/K%C5%8Dnosuke_Matsushita", kind: reference}
   - {n: 2, title: "Konosuke Matsushita biography, 1920 to 1973", by: "PHP Institute", url: "https://konosuke-matsushita.com/en/biography/from1920to1973.php", kind: reference}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Rebuilt 2026-10-20 from the Founders at Work and 1993 interviews and the 2007 and 2022 pages as read online [S2][S3][S4][S5]. His accounts are his own telling.
+Rebuilt from the Founders at Work and 1993 interviews, the 2007 and 2022 pages, nine short replies he wrote to readers on his own site (2018 and earlier), and a January 2026 interview with Pictet [S2][S3][S4][S5][S8][S9][S10][S11][S12][S13][S14][S15][S16][S17]. His accounts are his own telling, and the site replies are brief and undated unless noted.
 
 Steve Wozniak is alive, and views can change. Everything below comes from interviews he gave in 1993 [S4] and 2007 [S3], an interview for the book *Founders at Work* (on the book's site by 2009) [S2], a reply he posted on his own site in 2022 [S5], and public reference pages. Treat each view as "as of" the date of the interview it comes from. His interviews are in copyright, so this is our summary, with a few short quotes. Some stories about early Apple are told in different ways by different people. Where his account is the only one we have, we say so. Nothing here covers his private life, and nothing tells you what he thinks about events after these dates.
 
@@ -60,6 +60,16 @@ Wozniak didn't want to run Apple. He said he left business, sales and suppliers 
 
 How he applied it: he left Apple as an active employee in early 1985, mainly to start CL 9 and get back the fun of building new technology [S1]. CL 9 made the first programmable universal remote control in 1987 [S1]. He later taught computer classes to children in fifth to ninth grade, and to their teachers [S1].
 
+**Fairness over rivalry.** Replying to a reader at Microsoft, he said good people work there, and that his objection was to how the company used its market power to shut out rivals, which he called unfair. He keeps it light with rivals: he says he and Jobs are on good terms, and he answers rumours of a feud with jokes [S18]. In another reply he argued that Microsoft's hold on the operating system was used to push into browsers [S10][S12].
+
+**Respect the person doing the work.** In a school-computer reply he sided with teachers who wanted Macs. His reasoning was about respect: staff who are brushed aside carry that down to students, and a district big enough should add its own Apple support person [S11].
+
+**Stay one of the regular people.** He pays for his own Macs even though Apple would likely give him any he asked for, so he stays in touch with ordinary buyers [S13].
+
+**Remember the hobbyists.** He says most people use a computer as a tool, but a smaller group wants to open it and build; he hoped cheap machines on a TV would still excite them [S14].
+
+**Real intelligence versus AI (as of January 2026).** He says the "A" in AI is right but it isn't intelligent. In his view language models sound human because their grammar is good, and people trust them too much. He wants AI to show what it was trained on, with citations, and says the user should be the editor of what it reports [S17].
+
 ## How he decides
 
 - Use the fewest parts that do the job [S2][S4].
@@ -74,13 +84,13 @@ How he applied it: he left Apple as an active employee in early 1985, mainly to 
 ## Real decisions
 
 ### Building the Apple I as a full computer
-He built a terminal from a TV and keyboard, then chose the cheap 6502 processor, because he wanted a real computer with a keyboard and display and not a panel of switches and lights. He wrote the BASIC for it by hand [S2][S4].
+He built a terminal from a TV and keyboard, then chose the cheap 6502 processor, because he wanted a real computer with a keyboard and display and not a panel of switches and lights. He wrote the BASIC for it by hand [S2][S4]. He says he had never written a language or even used BASIC, and borrowed his syntax diagrams from an HP manual [S8].
 
 ### Using clever timing to save parts
 He used the machine's own video timing counters to refresh cheap dynamic memory, and he studied an existing minicomputer's simple instruction format so bits mapped straight onto chips. By his account this cut the chip count about in half [S2].
 
-### Keeping eight expansion slots against Jobs's wish for two
-Jobs wanted two slots. Wozniak held to eight, calling the design his area, and he says that choice let other companies sell add-on cards [S2][S4][S1].
+### Wanting an open machine: eight slots, then a test port
+Jobs wanted two slots. Wozniak held to eight, calling the design his area, and says that let other companies sell add-on cards [S2][S4][S1]. Later, on the closed Macintosh design, he says he and the designers wanted at least a test port and Jobs rejected it. He disagreed with hiding the technology [S8].
 
 ### Shipping the Apple II as a finished box
 Rival hobby machines came as kits. He chose a finished product that needed only a TV hookup, and paid a local firm to assemble early boards so buyers did not spend hours soldering [S4].
@@ -89,14 +99,17 @@ Rival hobby machines came as kits. He chose a finished product that needed only 
 He skipped most of the drive maker's own board and wrote a small, clever circuit, built in about two weeks for a trade show. When he overwrote the good disk the night before, he rebuilt the work from memory in his hotel room [S2].
 
 ### Publishing schematics and manuals
-He handed out schematics at the Homebrew Computer Club and believed that shipping manuals with listings helped users learn and build, and so helped the Apple II succeed [S2][S4].
+He handed out schematics at the Homebrew Computer Club and believed that shipping manuals with listings helped users learn and build, and so helped the Apple II succeed [S2][S4]. Looking back in 2018, he put the start of Apple down to engineering, capable partners, a fresh idea of what a computer could be, and good timing, with no money or business skill [S9].
 
 ### Staying an engineer
 He agreed to stay out of running the company, leaving sales and suppliers to Jobs, and later asked to step back to pure engineering. In 1985 he left active work at Apple to start another company [S2][S3][S1].
 
+### Paying his own way
+Apple would likely give him any machine he wanted. He buys his own Macs, several models of each, and keeps a PowerBook for daily use and teaching. His reason: it keeps him real and close to what ordinary buyers face [S13].
+
 ## Where he stood
 
-**Will computers become truly intelligent?** His view has changed. In 2007 he said we would never have artificial intelligence, and that a pet was smarter than any computer [S3]. In 2015 he voiced fear about it, and in 2016 said he no longer worried [S1]. In 2023 he signed a public letter calling for a six-month pause on training the most powerful AI systems, and warned that AI could make scams harder to spot [S1].
+**Will computers become truly intelligent?** His view has changed. In 2007 he said we would never have artificial intelligence, and that a pet was smarter than any computer [S3]. In 2015 he voiced fear about it, and in 2016 said he no longer worried [S1]. In 2023 he signed a public letter calling for a six-month pause on training the most powerful AI systems, and warned that AI could make scams harder to spot [S1]. In January 2026 he said he is disappointed by AI's lack of real intelligence, but also that he does not try to predict whether the hype will burst [S17].
 
 **What was Steve Jobs's role?** As of 1993, he called Jobs a visionary who was very bright but hard on people [S4]. In *Founders at Work* he said Jobs drove the business side, with sales, suppliers and marketing [S2]. In 2007 he said they had shared a love of electronics since they met in 1971 [S3].
 
@@ -140,6 +153,10 @@ He agreed to stay out of running the company, leaving sales and suppliers to Job
 - He avoided management. His advice suits a builder more than someone leading a large team.
 - Late nights work for a young solo builder. They are no plan for most teams.
 - His views on AI and tech have shifted over time. Use his dated words, and don't project them onto new events.
+
+**Who should tell his story?** He wanted to write his autobiography himself, since earlier tries with a ghostwriter did not suit him, and he compared the idea to Feynman's memoir, with Apple as the backdrop [S15].
+
+**Where did Apple come from?** To a reader who said he could have started Apple, he answered that it grew from hands-on hobby skill and being in the right place at the right time [S16].
 
 ## Short phrases on the record
 

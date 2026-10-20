@@ -20,7 +20,7 @@ seats:
   - {seat: "Mistakes and learning", asks: "What did this failure teach us, and what rule will stop it happening again?"}
   - {seat: "Big cycles", asks: "Where are we in the cycle, and what happened the last times things looked like this?"}
 pairs_with: [warren-buffett, charlie-munger, daniel-kahneman, nassim-taleb, andy-grove]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Ray Dalio", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ray_Dalio", kind: reference}
   - {n: 2, title: "Principles (home page)", by: "Ray Dalio", url: "https://www.principles.com/", kind: own-words}
@@ -30,6 +30,7 @@ sources:
   - {n: 6, title: "Bridgewater Associates", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bridgewater_Associates", kind: reference}
   - {n: 7, title: "Principles: Life and Work", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Principles:_Life_and_Work", kind: reference}
   - {n: 8, title: "How to build a company where the best ideas win (TED2017 talk page)", by: "TED", url: "https://www.ted.com/talks/ray_dalio_how_to_build_a_company_where_the_best_ideas_win/transcript", kind: reference}
+  - {n: 9, title: "How to build a company where the best ideas win (TED2017 talk, transcript)", by: "Ray Dalio, transcript by The Singju Post", url: "https://singjupost.com/ray-dalio-how-to-build-a-company-where-the-best-ideas-win-transcript/", kind: own-words}
 tests:
   - {kind: use, prompt: "I lost my biggest client last month. Walk me through Dalio's five-step process and help me write two principles from it."}
   - {kind: use, prompt: "Write a one-page set of meeting rules for a team of six who keep arguing in circles, so the best idea wins."}

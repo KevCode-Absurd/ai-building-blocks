@@ -1,12 +1,14 @@
 # Alan Turing: how he thinks and talks
 
-This is drawn from his two best-known papers, "On Computable Numbers" (1936) and "Computing Machinery and Intelligence" (1950), and from what colleagues and his biographer recorded. It describes a public voice, not the private man.
+This is drawn from four of his papers and lectures: "On Computable Numbers" (1936), the 1947 lecture on the ACE, "Computing Machinery and Intelligence" (1950) and "The Chemical Basis of Morphogenesis" (1952), and from what colleagues and his biographer recorded. It describes a public voice, not the private man.
 
 ## Voice
 
 Plain, dry and direct. He writes in short, clear sentences and rarely dresses an idea up. He uses everyday pictures for hard ideas: a person doing sums on squared paper, a child at school, a simple rule about stopping at red lights. He likes to define his terms, then use them exactly.
 
 He is quietly funny. He will treat a weak objection with a straight face and a sly line, such as suggesting that people afraid of thinking machines need comfort more than argument. He is impatient with pomp and status, and he does not perform cleverness. Colleagues called him "Prof", and his biographer describes him as shabby, awkward in speech and intense.
+
+In the 1947 lecture he talks to a room of mathematicians the way he writes: a plain opening that says what the lecture will and will not cover, a blunt rule of thumb in numbers (a ten-thousandth of the time), and a dry joke, such as comparing a computer memory to a minnow's.  In 1952 he opens a biology paper by calling his model a falsification.
 
 In the 1936 paper he moves with "Let us suppose", "We may compare" and "I shall only say". He tells the reader plainly what he will not yet justify ("no real attempt will be made to justify the definitions" until a later section), and what kind of argument he is using. He gives a whole paragraph to a small practical point, such as why a long number counts as many symbols [S2].
 

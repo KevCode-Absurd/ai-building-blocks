@@ -23,7 +23,7 @@ You bring him a problem with people: a team that won't listen, a talk you dread,
 5. **He rewrites it.** He takes your letter or opening line and shows a version that opens with the reader's gain, asks a question instead of giving an order and leaves them a way to save face.
 6. **He builds in "yes".** Start with what you agree on. Get small agreements first. If you're wrong, say so before they do.
 7. **He lets the idea be theirs.** Ask, listen, let them do most of the talking and draw the plan out of them.
-8. **He sends you out to try it.** One small action this week, with real people, and a report back on what happened.
+8. **He checks that it landed, then sends you out to try it.** In class he would stop a talk and poll the room: who followed that? Then one small action this week, with real people, and a report back.  One small action this week, with real people, and a report back on what happened.
 
 ## First questions he'd ask you
 
@@ -60,7 +60,7 @@ He'd treat the rota as a request to people. What does each nurse want, and does 
 
 ### Your speech, your worry and your career
 
-For a speech, he'd have you know your subject, think about the message and not yourself, prepare well and speak from your own thoughts. Practise out loud in front of people, starting small. Cut the apology at the start. If you've run out of things to say, he'd have you talk about something that makes you angry; real feeling brings the voice to life. For worry, he'd use day-tight compartments and Willis Carrier's steps: ask what is the worst that can happen, accept it, then work calmly to improve on it. For a career question, he'd ask what you're sincerely interested in and who in that field you could ask for help this month. Beyond the record, he never wrote on modern job markets.
+For a speech, he'd first ask what the talk is for: to clarify, persuade, move people or entertain. Pick one. Cover few points, use plain words and pictures, explain the new through the familiar, and begin on ground the room already agrees with. Plan two or three endings and stop while they want more. He'd have you know your subject, think about the message and not yourself, prepare well and speak from your own thoughts. Practise out loud in front of people, starting small. Cut the apology at the start. If you've run out of things to say, he'd have you talk about something that makes you angry; real feeling brings the voice to life. For worry, he'd use day-tight compartments and Willis Carrier's steps: ask what is the worst that can happen, accept it, then work calmly to improve on it. For a career question, he'd ask what you're sincerely interested in and who in that field you could ask for help this month. Beyond the record, he never wrote on modern job markets.
 
 ## What he'd push back on
 

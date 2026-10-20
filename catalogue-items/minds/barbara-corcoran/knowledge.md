@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Barbara Corcoran is alive, and views can change. This data set comes from her own words on her website and her members' newsletter, mainly a written question-and-answer post from December 2024 and a January 2025 post [S1][S2][S3], plus her site's own descriptions of her story, talks and Shark Tank deals [S4][S5][S6]. The strongest material is a long 2024 interview with Tim Ferriss, where she tells her stories in her own voice [S8]; our notes on it cover the first part of the transcript. Facts about the Corcoran Group and Shark Tank come from a licensed Wikipedia article [S7]. The local files for [S1] and [S2] are link records only, so lines tagged to them come from our earlier read. Her books, including Shark Tales (2011), are a richer record of her methods [S7], but we did not use them directly. Treat each view as "as of" its source. Nothing here tells you what she thinks about events after these dates, and nothing here is property or investment advice.
+Barbara Corcoran is alive, and views can change. This data set comes from her own words on her website and her members' newsletter, mainly a written question-and-answer post from December 2024 and a January 2025 post [S1][S2][S3], plus her site's own descriptions of her story, talks and Shark Tank deals [S4][S5][S6]. The strongest material is a long 2024 interview with Tim Ferriss, where she tells her stories in her own voice [S8]. We read the whole transcript for this version, and the real decisions below come from it. Facts about the Corcoran Group and Shark Tank come from a licensed Wikipedia article [S7]. The local files for [S1] and [S2] are link records only, so lines tagged to them come from our earlier read. Her books, including Shark Tales (2011), are a richer record of her methods [S7], but we did not use them directly. Treat each view as "as of" its source. Nothing here tells you what she thinks about events after these dates, and nothing here is property or investment advice.
 
 ## In one paragraph
 
@@ -74,32 +74,47 @@ How she applied it: she also teaches how to spot and recruit talent, drawing on 
 - Trust your gut once you've done the work [S1].
 - Start before it's perfect [S2].
 - Keep moving when the market turns [S5].
+- Rate every customer on need alone: when do you need it for? [S8]
+- If you have an idea on Monday, put it on the street by Tuesday, and check first whether anyone else is doing it [S8].
+- Make the offer scarce: one desk, one price, a line that is bigger than the stock [S8].
+- Ask of a fight how much energy it will take and for how long, then decide [S8].
+- Pick the adviser who tells you why you will win, not that you will [S8].
+- Never hire an unhappy person again, and get tough on complainers early [S8].
+- Turn everything you do twice into a system, using colour and pictures, not words [S8].
 
 ## Real decisions
 
-### Starting a firm on a $1,000 loan
+### Splitting the firm on a Friday and opening on Monday
 
-In 1973 she was a receptionist for a New York real estate company when she co-founded her first firm with her boyfriend, who lent her $1,000 [S7][S8]. In her telling the deal gave him 51 percent [S8]. Seven years later he left her for her secretary [S7][S8]. She split the company and started again, which she uses as her proof that recovery is most of life [S8].
+Her first partner, who had lent her $1,000 for 51 percent of the shares, left her for her secretary about seven years in, when the rental business had about 14 agents [S8]. The next morning she told him they were ending the business that day: he picked the first person, she picked the second, until the team was cut in half [S8]. She took seven people, found a landlord with an 11th-floor space, had phones installed over the weekend and bought desks on 42nd Street. On Monday she was open for business as the Corcoran Group, a name she chose because she knew her cash and skills would need help from "the group" [S8]. She says the breakup broke her confidence more than her heart, and that she held no grudge, because without him she would not have started [S8].
 
-### Running a same-price sale to sell 88 apartments
+### Turning an eviction notice into an exclusive
 
-She tells of a sale of 88 apartments at one price, framed as picking from the litter, which sold out in about three hours [S8]. The point she draws is that scarcity and a clear rule make people act fast [S8].
+Early on she ran her first business out of her apartment, and the building's landlord posted an eviction notice because he took the stream of male clients for something else [S8]. Instead of just defending herself, she visited him and told him how a neighbouring landlord rented apartments faster by walling off an L-shaped living room to make a one-bedroom plus den, at $40 more a month [S8]. He gave her the listings for all his apartments and fired his agent of many years [S8]. She did not think of it as a sales call, she says, but as a defence call, and it was her first real exclusive [S8].
 
-### Advertising one empty desk
+### The one-price sale of 88 apartments
 
-When recruiting, she ran an ad for a single empty desk rather than a general job notice [S8]. Her reason was scarcity: one seat made it feel like a prize [S8].
+In a market with 18 percent interest rates, she was handed 88 weak apartments owned by Prudential and a developer, and was told no auction [S8]. She copied what she had seen a farmer do with puppies: oversubscribe the line so people leave angry. She priced every apartment at $59,900, told each of her agents to bring only their two best customers and warned that there were not enough to go around, then ran a bus called "Deals on wheels" [S8]. Close to 180 people showed up, she had contracts pre-stacked, and the apartments were gone in about three hours, earning her $1.225 million and funding two new offices [S8]. She had no ad budget, and says she checked that there was no law against it [S8].
 
-### Grading buyers A, B and C
+### One empty desk and a pencil-or-pen career night
 
-She sorted buyers by how soon they needed to move and dropped the C's [S8]. This saved her agents' time for people who would act [S8].
+For recruiting she used a double-height ad that read "One empty desk," with no mention of pay, only that the team was fun and winning [S8]. Her reason was that people want what they cannot get [S8]. When she needed 15 to 20 agents at once, she held a "career night" and handed good-looking candidates a pen to sign in, and the rest a pencil [S8]. She then called back only the pen people, about 30 percent, for interviews [S8].
 
-### Fighting the commission lawsuit
+### Giving 10% to the opposite of herself
 
-She says she fights only when a moral principle and real money are both at stake, and first asks how much energy a fight will take and for how long [S8]. She won a commission dispute with a well-known developer, and the returned flowers marked "Rejected" are a story she tells with relish [S8].
+She met Esther when a business card went into her purse, which held a labelled filing system [S8]. She offered Esther a job as right hand and a 10 percent share of the business, and taught her everything she knew about selling [S8]. Her reason was that Esther did well everything she did badly, and the reverse, and she says she could not have built the business without her [S8].
 
-### Selling the firm in 2001
+### Grading buyers by need, and the reverse close
 
-She sold the Corcoran Group to NRT for $66 million in 2001 and left the company soon after [S7]. In 1973 she had wanted to be her own boss, and she did not stay on as an employee [S7].
+She taught agents one question for every caller: when do you need it for? [S8] A buyer with a deadline is an A, a buyer who might be soon is a B, and a buyer with no timeline is a C, who should not be called back [S8]. At the first showing she asked buyers to promise not to buy anything that day, which made them beg to buy [S8]. She says her customers were happy and sent referrals, so she believed she was doing right by them [S8].
+
+### Sharing listings and getting complained about by the trade
+
+In a New York market where brokers hoarded listings, she created a central listing system to share them, which her own agents opposed and customers took two years to notice [S8]. Her industry board went after her for false advertising on the claim that listing with her reached every broker while listing elsewhere reached about three percent [S8]. She says that, looking back, she would not do it again, because it did not pay off [S8]. It is her example of a different idea that failed.
+
+### Suing Donald Trump over a commission
+
+When Donald Trump would not pay a commission she had earned, she sued, in the one year the firm made a real profit, and the case cost about $500,000 [S8]. She says she fights only when someone insults her and when both principle and big money are at stake, and that she interviewed four top litigators and chose the one who explained why he would win, not just that he would [S8]. She won, but it took five years of $55,555 payments, and she sent flowers with each one while he sent them back marked "Rejected" [S8]. Her wider rule is to ask how much energy a fight will take, because she believes litigious people are unhappy and nobody really wins [S8].
 
 ## Where she stood
 
@@ -130,6 +145,7 @@ The sources we opened contain little criticism of her. Points to weigh:
 
 - **By her own account,** she held back from fully trusting her judgement until about 30 [S1].
 - **Shark Tank results are mixed.** Her site highlights winners [S6], which says little about deals that failed. Treat success stories as a partial picture.
+- **Her own failed idea.** By her account, the shared-listing system she started cost her a trade-board complaint and two years of little return, and she would not do it again [S8].
 - **Her advice is personal.** It comes from one founder's path in one city's property market [S4][S7].
 
 ## Blind spots to watch
@@ -143,6 +159,6 @@ The sources we opened contain little criticism of her. Points to weigh:
 
 - "Everything that ever happened in my life came on the heels of failure." (barbaracorcoran.com) [S3]
 - "Having one customer willing to pay is the best proof" (newsletter, 2024) [S1]
-- "Don't ask family and friends." (newsletter, 2024) [S1]
 - "You don't have to get it right, you just have to get it going!" (newsletter, 2025) [S2]
-- "bad times are the best times to move ahead" (her speaking page) [S5]
+- "recovering from failure, in my book, is 95 percent of life" (Tim Ferriss Show, 2024) [S8]
+- "When do you need it for?" (Tim Ferriss Show, 2024) [S8]

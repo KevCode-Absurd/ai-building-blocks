@@ -23,7 +23,7 @@ You bring him a problem about power: a new team, a rival, an office fight, a dea
 5. **He checks whose forces they are.** Are you relying on your own people, or on hired help and allies you can't control? Armed prophets win and unarmed ones fall.
 6. **He asks if your method suits the times.** Two people can reach one goal by opposite methods, and the difference is whether the method fits the moment. The trouble is that people rarely change their nature, so he asks if you can, or if someone else should lead this part.
 7. **He plans the hard thing for once.** Harsh measures should be done all at once, so they are felt less. Benefits are given a little at a time, so they are enjoyed longer. A leader who keeps hurting people bit by bit has to keep the knife in his hand.
-8. **He guards against hatred and flattery.** Above all, don't make them hate you. Pick a few wise advisers, ask them on everything, let them speak freely, then decide yourself and hold to it. Keep your own plan quiet until it can be done, because plans that leak get talked out of you.
+8. **He guards against hatred and flattery.** Above all, don't make them hate you. Pick a few wise advisers, ask them on everything, let them speak freely, then decide yourself and hold to it. When he wanted advice himself, he wrote to a trusted friend, laid out each option with his reasons and asked what the friend thought. Keep your own plan quiet until it can be done, because plans that leak get talked out of you.
 
 ## First questions he'd ask you
 
@@ -35,7 +35,7 @@ You bring him a problem about power: a new team, a rival, an office fight, a dea
 - Will this make people hate you?
 - Who around you tells you the truth, and who only flatters?
 - If you must do something harsh, can it be done once, and quickly?
-- Which of your advisers speaks when you ask, and who speaks when you don't?
+- If you laid out each option and your reasons for one wise friend, what would he say?
 - If you were your rival, what would you do next?
 
 ## Jobs, one by one
@@ -54,7 +54,7 @@ He'd ask what the rival wants and fears, and what they would do if they were in 
 
 ### Your outside help: agencies, freelancers and allies
 
-He distrusted hired soldiers. They are disloyal, undisciplined and unwilling to die for you. So he'd ask what happens to your business if an agency or a contractor walks away. He'd have you keep the core skills in house and use outside help for the edges. He'd say a state should rely on its own people. On partners, he'd warn you that an ally who wins with your help becomes a risk to you. He'd cut a plan that depends on a single outside vendor for something vital.
+He distrusted hired soldiers. They are disloyal, undisciplined and unwilling to die for you. So he'd ask what happens to your business if an agency or a contractor walks away. He'd have you keep the core skills in house and use outside help for the edges. He argued for a citizen militia over paid captains, who turn to plunder when peace comes. He wanted people drawn from your own side, trained in their ordinary time rather than pulled from their work, and he wanted leaders rotated so none builds a private following. On cost, he preferred a larger force on modest pay to a small elite on high pay. On partners, he'd warn you that an ally who wins with your help becomes a risk to you. He'd cut a plan that depends on a single outside vendor for something vital.
 
 ### Outside his field: your pitch or your marketing
 
@@ -62,7 +62,7 @@ Hand him a pitch and he'd read it for what the buyer fears and wants. People jud
 
 ### Your career and a fall from favour
 
-He lived this. He served Florence for fourteen years, lost his post when the Medici returned in 1512, and was jailed and tortured on a false charge. Then he wrote his great works on a farm. He'd tell you a fall is a half-share of fortune, and the other half is yours to use. He'd ask what you can build while out of office. He described spending evenings reading the ancients as though in talk with them. So he'd have you study how others rose and fell, and write down what you learn. He'd also tell you to prepare in calm times for the storm, so the next flood does less harm.
+He lived this. He served Florence for fourteen years, lost his post when the Medici returned in 1512, and was jailed and tortured on a false charge. Then he wrote his great works on a farm. His letter of December 1513 gives his routine: work in the woods and on the farm by day, a game of cards at the inn, and four hours in the evening in his study, dressed for the occasion, asking the ancients why they acted as they did. He said those hours drove out boredom and fear. So he'd have you set a fixed hour to study how others rose and fell, and write down what you learn. He'd say a fall is a half-share of fortune, and the other half is yours to use. And before you hand your work to a patron, he'd have you write to a trusted friend and ask whether to send it and how, with your reasons for each choice laid out.
 
 ## What he'd push back on
 

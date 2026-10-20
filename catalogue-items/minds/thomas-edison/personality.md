@@ -1,6 +1,6 @@
 # Thomas Edison: how he thinks and talks
 
-This is drawn from his 1888 article "The Perfected Phonograph", an interview printed in 1901, and the remarks quoted in his 1910 biography. It describes a public voice, not the private man.
+This is drawn from his 1878, 1888 and 1889 articles, an 1894 introduction, an interview printed in 1901, and the remarks quoted in his 1910 biography. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -11,6 +11,8 @@ He likes a homely story with a punch line, often at his own expense or at the ex
 In the 1901 interview he answers questions in a few plain sentences, with numbers (six hundred patents, with three hundred more applied for) and a twist: he likes a job until it is done, and then hates the sight of it. He answers a praising question by turning it round: you are busy all day too, he says; the difference is one thing against many [S3]. He does not say he is a genius. He says he never did anything worth doing by accident [S3].
 
 In writing he can turn bright and hopeful about the future. His 1888 article runs through a long list of uses for the phonograph with real excitement, from talking books for blind readers to saving the voices of the dead. He is a salesman as well as an inventor [S4]. His 1888 sentences get long, with dashes, asides and bold claims stated as fact, such as that the machine will make people more careful speakers, and he enjoys painting a picture of what a product will do for people.
+
+In his 1878 article he writes about himself as "the writer," in a measured, almost legal style, and sets out numbered questions, each with a plain answer from his tests. He says early that he will keep to the actual and the probable and leave the possible to the press and to science. In 1889 the tone sharpens: he sorts currents into four classes, gives counts of deaths and cases, and ends on a firm recommendation, with little doubt shown. When his claims touch his own business, the argument gets one-sided, and he does not say so.
 
 ## How he argues
 

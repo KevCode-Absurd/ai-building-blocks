@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-April Dunford is alive, and views can change. Everything below comes from her own website and from posts she wrote between 2024 and 2026 on her Substack newsletter and as a guest elsewhere [S1][S2][S4][S9]. We could not read her books in full, so we describe them from her own pages and posts. One guest post is partly behind a paywall, and we used only the free part [S9]. Treat each view as "as of" the post it comes from. Nothing here covers her private life or her plans.
+April Dunford is alive, and views can change. Everything below comes from her own website, her newsletter posts from 2019 to 2026, a guest post, and two interviews with full transcripts: one with Experian in 2024 [S11] and one on the Lean Marketing podcast in 2024 [S15]. We could not read her books in full, so we describe them from her own pages and posts. One guest post is partly behind a paywall, and we used only the free part [S9]. The "Real decisions" section mixes choices she made in her own business, told in her interview [S15], and client cases she tells without naming the client [S12][S16]. Treat each view as "as of" the post it comes from. Nothing here covers her private life or her plans.
 
 ## In one paragraph
 
@@ -50,6 +50,8 @@ How she applied it: she cites Salesforce entering the small-business market that
 
 In 2026 she set out decisions to make before a positioning exercise [S7]. Check the timing: positioning before launch is only a thesis to test with the market [S7]. Agree that you are positioning for customers, not investors or staff. Decide the scope: one product, a suite or the whole company. And write for the deal champion, the person who builds the shortlist and recommends to the buyer [S7].
 
+Her 2019 post adds that positioning cannot be a one-and-done exercise: write it down with a date, test it with customers and revisit it when the market moves [S16]. Early customers usually show which assumptions were wrong, so keep the first version loose and test one well-defined segment at a time [S15].
+
 How she applied it: the updated *Obviously Awesome* is organised into prep work, five steps matching the five components, and the work that follows, including turning positioning into a sales pitch and messaging [S7][S10].
 
 ### The pitch follows the positioning
@@ -60,7 +62,7 @@ How she applied it: in one case, a challenger facing an unstable incumbent built
 
 ### When markets shift, take a point of view
 
-In May 2026 she said AI was changing products, competitors and markets all at once, faster than any shift since COVID [S8]. Buyers are confused, so vendors need a clear view of where things are heading [S8]. She warned against hype that outruns what the product does today, and against ignoring the future, which makes a company look out of date [S8]. Even so, she said the core principles of positioning don't change [S8].
+In May 2026 she said AI was changing products, competitors and markets all at once, faster than any shift since COVID [S8]. Buyers are confused, so vendors need a clear view of where things are heading [S8]. She warned against hype that outruns what the product does today, and against ignoring the future, which makes a company look out of date [S8]. Even so, she said the core principles of positioning don't change [S8]. In June 2026 she added that a point of view about where the market is heading is separate from product vision, because customers pay only for today's product, and it should rest on what you do better than anyone [S14].
 
 How she applied it: she advised positioning against the alternatives prospects consider now, while building the product to beat likely future rivals [S8].
 
@@ -74,6 +76,40 @@ How she applied it: she advised positioning against the alternatives prospects c
 - Target the customers who care most about your unique value [S4].
 - Bring marketing, sales, product, customer success and the founder into one room [S4][S9].
 - Treat pre-launch positioning as a thesis to test [S7].
+
+## Real decisions
+
+### Building her own method
+
+After a startup relaunch worked and the company was bought, Dunford was handed several failing products and told to repeat the result [S15]. She found that most senior marketers she asked had simply tried things until one worked [S15]. A positioning course she took gave her a fill-in-the-blank statement but no way to choose the answers, and the instructor told her to trust her gut when she asked how to pick a category [S15]. She rejected that and built her own steps, which became the five components she teaches [S15][S16].
+
+### Moving a database tool to business intelligence
+
+She tells of a startup run by database experts whose tool analysed very large datasets fast [S16]. Buyers compared it with Oracle and saw a weak database [S16]. The team moved it to a business intelligence category and aimed at banks, security firms and ad-tech companies with huge volumes of machine data [S16]. Her stated reason was that the new frame made the value obvious to the buyers who cared most [S16].
+
+### Choosing the best rep to test a pitch
+
+When a team rebuilds its pitch, she does not ask the whole sales team for opinions, because that tends to breed resistance [S11]. She trains the strongest rep who won with the old pitch [S11]. That rep gives the new pitch to qualified prospects while she watches, and they review what worked and what confused people [S11]. They repeat until the rep says the new pitch beats the old one, and only then do the recordings train the rest of the team [S11].
+
+### Telling buyers the difference between a real and a stretched claim
+
+In a case from 2025, a client sold a truly integrated platform while a rival, built from acquisitions, also called itself a platform [S12]. Buyers assumed the two were equal [S12]. The client moved its message to what integration gives you, such as shared data, better reporting and easier automation [S12]. In a second case, interviews with customers who had switched showed a rival's "real-time" feature was too hard to set up to be used, so the client told buyers to ask every vendor what setup involves, and the rival dropped the claim [S12].
+
+### Answering a "number one" claim with numbers
+
+A market leader with about ten times the active customers of its nearest rival faced a well-funded challenger calling itself number one [S12]. The leader did not argue. It published its exact deployment numbers and added analyst reports, review counts and case studies [S12]. The challenger later changed its homepage [S12]. Her point is that real strengths should keep being promoted, and buyers should be taught to ask for proof [S12].
+
+### Declining a podcast sponsor and ending a course
+
+Dunford ran a 26-episode podcast season and a sponsor offered a small payment [S15]. She turned it down because the money did not justify the work [S15]. The show brought little new business, but clients' teams listened before workshops, so she kept it for that use and planned a second season with more guests [S15]. She also sold an online course with a partner, judged that one workshop could earn as much as the course did in a year, and planned to wind it down [S15].
+
+### Pricing and narrowing her focus
+
+She first priced workshops low, comparing herself with small agencies [S15]. When a prospect accepted $50,000 without negotiating, after she had expected to quote $15,000, she saw she had been underselling [S15]. She now publishes one price [S15]. She also chose to work alone, narrow to B2B tech companies with sales teams, list what she does not do, and drop Twitter, Instagram and TikTok because her buyers were elsewhere [S15]. She says the narrower focus drove her growth [S15].
+
+### Keeping the position through AI changes
+
+In 2026 founders at a roundtable she hosted worried that each new model release would date their positioning [S13]. She told them to rerun three steps rather than start over: have the alternatives changed, have the unique capabilities changed, and has the value changed [S13]. Usually the answer is no, because new capabilities tend to back a value theme the company already owns [S13]. If a release creates value the company could not deliver before, the positioning must be reworked [S13].
 
 ## Where she stood
 
@@ -118,8 +154,8 @@ We found no major public criticism of her work in the sources we read. Some fair
 
 ## Short phrases on the record
 
-- "Positioning is about making your differentiated value obvious to buyers." (2024) [S4]
+- "Every company I have ever worked with has struggled to make their awesomeness obvious." (2019) [S16]
+- "We do not live in a magical land where everyone sells to everyone." (2025) [S12]
 - "Understanding why we win is more important than understanding why we lose." (2024) [S4]
 - "One buyer's dream can be another buyer's nightmare." (2024) [S5]
-- "The prospect's view of competitive alternatives is the only one that matters." (2026) [S9]
-- "We have to sell what's on the truck." (2026) [S9]
+- "The positioning itself does not need to change." (2026) [S13]

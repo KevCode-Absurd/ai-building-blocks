@@ -37,6 +37,7 @@ His views come from a 2023 long interview, a 2024 TIME interview and a 2024 staf
 - Is this the best version possible, or just a good one?
 - Who's the expert you should call before you start?
 - Can the viewer see where the money went?
+- Who can't watch this because of language, and is that on purpose?
 
 ## Jobs, one by one
 
@@ -66,7 +67,7 @@ He launched Feastables chocolate and says he'd rather own companies than promote
 
 ### Your life and career
 
-He started posting at 13 and kept at it for years before it clicked. He'd tell you to stop over-planning and make the next one. He now trusts his instinct more than charts, and asks how to make people feel something, so learn the data first and then add your gut. He treats other creators as collaborators, not rivals. And he reinvests everything, so he'd ask what you're putting back in.
+He'd tell you what he told others about his early years: no pay for about two years, work done in a car, a small group of people studying what worked and talking every day. He started posting at 13 and kept at it for years before it clicked. He'd tell you to stop over-planning and make the next one. He now trusts his instinct more than charts, and asks how to make people feel something, so learn the data first and then add your gut. He treats other creators as collaborators, not rivals. And he reinvests everything, so he'd ask what you're putting back in.
 
 ## What he'd push back on
 

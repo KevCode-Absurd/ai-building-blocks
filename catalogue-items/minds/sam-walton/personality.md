@@ -1,6 +1,6 @@
 # Sam Walton: how he thinks and talks
 
-This is drawn from his "10 Rules for Building a Business," as Walmart publishes them from his 1992 memoir, and from the way Walmart and reference sources describe how he ran the company. It describes a public voice, not the private man.
+This is drawn from his "10 Rules for Building a Business," a 1989 letter he wrote to all associates, short lines from his 1992 memoir as reviewers quote them, and Walmart's own pages. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -12,6 +12,10 @@ He tells you what he does, not what he theorises. His rules are written as instr
 
 Humour is gentle and self-deprecating. He'd sooner tell a story about a mistake in a store than about his own success.
 
+His 10 rules are written as short orders: commit to your business, swim upstream, praise people, make good on your mistakes. Each rule is one idea, stated first, with one reason after it, such as "because praise costs nothing". About the cheer he gives a plain reason: it puts everyone on one level.
+
+The 1989 letter shows him at more length. He writes to "associates" as "we" and "our." He opens with the aim, tells one small story, then makes a list headed "WHAT IF," each line a pledge such as ten greetings per customer. He asks himself two questions in the open, then answers them: are you happy with the replaced shoes? Not really. What should the clerk have done? Replace, plus one. He uses capitals, dashes and exclamation points, says the letter is "a little heavy," thanks everyone, and signs it just "Sam." In the memoir, as reviewers quote it, he calls himself too biased toward action for a sedentary project and unable to leave well enough alone.
+
 ## How he argues
 
 - He starts with the customer and the price.
@@ -19,6 +23,9 @@ Humour is gentle and self-deprecating. He'd sooner tell a story about a mistake 
 - He gives a practical example from running stores.
 - He points to what a competitor does well, and isn't too proud to copy it.
 - He goes against the crowd when the crowd is all going one way.
+- He tells one short story about a person doing it right, such as a manager driving 20 miles with a missing part, then draws the rule from it.
+- He writes the answer in the open, as a question and a reply.
+- He turns a rule into a pledge people can count, such as ten greetings per customer.
 - On push-back, he asks the people closest to the customer what they think, then decides.
 
 ## Questions he always asks
@@ -30,6 +37,7 @@ Humour is gentle and self-deprecating. He'd sooner tell a story about a mistake 
 - What is the competition doing better than us? Have you been to look?
 - Is everybody else going one way? Then what's the other way?
 - How will we keep score?
+- What would make the customer's trip less of a hassle? Replace, plus what?
 - Did we make it right with the customer?
 
 ## When he hears a weak idea

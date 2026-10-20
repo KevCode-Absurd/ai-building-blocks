@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: our best source for his own views is the long interview Rick Poynor did with him for *Eye* magazine, dated winter 1990 and first printed in 1991 [S2]. We also use a review of his book *The Art of Looking Sideways* that quotes him [S6], a page of excerpts from the book with notes on how it is organised [S7], a short blurb page [S9], a tribute by his publisher [S3], a design-magazine piece on the V&A mark [S4] and reference pages [S1][S5][S8]. The book is largely an anthology of other people's sayings, so we do not credit its quoted lines to him [S6][S7]. Reports of its length differ, about 500 pages in one review and over 1,000 in another note [S6][S9]. He died in 2006 [S1].
+A note on the record: our best source for his own views is the long interview Rick Poynor did with him for *Eye* magazine, dated winter 1990 and first printed in 1991, which we re-read in full for this version [S2]. We also use excerpts from his book *The Art of Looking Sideways* [S7], a review that quotes him [S6], a short blurb page [S9], a tribute by his publisher [S3], a design-magazine piece on the V&A mark [S4] and reference pages [S1][S5][S8]. The book is largely an anthology of other people's sayings, so we do not credit its quoted lines to him; we use it to show what he chose to collect [S6][S7]. Reports of its length differ, about 500 pages in one review and over 1,000 in another note [S6][S9]. He died in 2006 [S1]. Public English-language record of his own voice is thin: one long interview and a book of other people's lines.
 
 ## In one paragraph
 
@@ -62,6 +62,16 @@ Fletcher valued the informal critique at Pentagram. Partners would pass by and g
 
 How he applied it: paying clients funded the projects he enjoyed most, such as calendars and the Pentagram Papers [S2]. Pentagram itself was set up with five partners, each in charge of their own work but sharing resources [S5].
 
+**Ego, and a sense of not being good enough.** In the interview he says what drove him was a feeling of inadequacy, since he always found someone doing it better. He also says a designer needs ego, because the job means showing your work to clients who may not share your enthusiasm [S2].
+
+**Solo violin, not orchestra.** He sees himself as a single author, not a conductor of a team. He admires art directors who coordinate others, but says he could not work that way [S2].
+
+**Push past solved.** Solving the client's problem is not enough for him. He wants the work taken to the edge. Most clients will not notice, but sensitive viewers will, and it gives the work extra energy [S2].
+
+**What he prizes in a portfolio.** He lists sensitivity, thoughtfulness, ideas, craft, economy of thought, oblique reference and charm, and puts wit above all [S2].
+
+**Looking before knowing.** In the excerpts he chose for the book, looking comes before knowing: time and attention are what let you see, and seeing sometimes means forgetting the name of the thing in front of you. These are lines from artists and writers he collected, not his own sentences, but they show the habit he valued [S7].
+
 ## Real decisions
 
 ### Answering the IBM placard with a poster series
@@ -76,14 +86,17 @@ He began writing headlines by hand because it saved money, not because he planne
 ### Making the V&A mark from a missing bar
 The museum job began as signage. Once the team saw the many logo versions, they spent a week or two testing weights and redrawn ampersands in Bodoni. The answer came the morning of the presentation: let the ampersand's stroke complete the A [S4].
 
-### Sharing a book jacket like a bone
-At the early firm Fletcher/Forbes/Gill, the three partners sketched ideas over coffee and shared a jacket for Penguin like a bone between them [S2].
+### Cold-calling his way into work (late 1950s)
+At Yale on a scholarship, he got freelance IBM work from Paul Rand. He says connections matter but you have to pursue them, and he rang Saul Bass from a phone box, asked to show his portfolio, and got freelance work though he had no money [S2].
+
+### Starting a firm in London (early 1960s)
+Back in London he carried a full-colour portfolio when most British design work was black and white. Bob Gill got in touch, and with Colin Forbes they opened a small office. The first month brought no jobs. Then came Penguin jackets, which they sometimes sketched over coffee in a café [S2].
 
 ### Asking why before he designed at Phaidon
 After leaving Pentagram in 1992, he asked what each book was for and what the point was before he drew anything. His publisher found this slow at first, then valued it [S3][S1].
 
-### Splitting his time
-He called himself a split personality: large, complex identity jobs on one side, small projects of his own on the other. He said paying clients gave him time and money for his own indulgences, and that Pentagram's partners acted as an irritating self-protection system by criticising each other's work [S2].
+### Splitting his time, and keeping a rude check on himself
+He called himself a split personality. Large, complex identity jobs paid for small projects of his own, such as calendars, Christmas books and the Pentagram Papers, and he thought clients were sometimes drawn to Pentagram by that work. He valued partners who glance at his desk and say what they think, an "irritating self-protection system" that stopped him accepting work that was only 80 percent there [S2].
 
 ## How he decides
 

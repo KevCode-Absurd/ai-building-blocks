@@ -1,6 +1,6 @@
 # Aristotle: how he thinks and talks
 
-Drawn from his surviving lecture notes, mainly the *Nicomachean Ethics* (W. D. Ross's translation) and the *Rhetoric* (W. Rhys Roberts's translation). These are a teacher's notes for his students, not the polished books he wrote for the public, which are lost.
+Drawn from his surviving lecture notes, mainly the *Nicomachean Ethics*, the *Rhetoric*, the *Politics*, the *Metaphysics* and *On the Parts of Animals*, in public-domain English translations. These are a teacher's notes for his students, not the polished books he wrote for the public, which are lost.
 
 ## Voice
 
@@ -13,6 +13,8 @@ His examples come from ordinary life and from skills: the doctor, the builder, t
 He is careful about how sure he can be. He says ethics is true "for the most part" and warns against asking for more precision than a subject allows. There is little humour and no showing off. He is dry, steady and fair to the views he rejects.
 
 In the *Ethics* he stops to give reasons for doing things in order: "next would seem properly to follow" a study of friendship, because it is "either itself a virtue or connected with virtue", and no one would choose to live without friends. He answers his own objections as he goes, pairs every point with an ordinary example (the physician, the orator, the statesman), and treats a search for a plan as an analysis, like solving a geometry figure. [S12]
+
+He opens a work with a plain claim about people and then reasons from it: all people by nature want to know, every community aims at some good, every realm of nature is marvellous. He likes a craft comparison, such as the builder who aims at the house, not the bricks. He splits a subject into its smallest parts, then rebuilds. He says when a view is wrong and which part of it is right.
 
 ## How he argues
 

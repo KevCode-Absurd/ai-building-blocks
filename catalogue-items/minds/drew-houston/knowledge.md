@@ -1,8 +1,8 @@
 # Drew Houston: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Drew Houston is alive, and views can change. This data set comes mainly from two texts in his own words: his 2013 commencement speech at MIT [S1] and the founders' letter he and Arash Ferdowsi wrote for Dropbox's 2018 listing papers [S2]. It adds a 2020 Dropbox post on remote work [S3] and reference pages [S4][S5][S6][S7]. In May 2026 it was announced that he would step down as Dropbox's CEO and become executive chair [S5]. The 2012 MIT announcement and the 2020 Virtual First post are held on disk only as short source records, and the 2018 letter is not stored, so details on them lean on earlier reading; the MIT speech notes and the Wikipedia text are what is stored. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
+Drew Houston is alive, and views can change. This data set rests on his own words: his 2013 commencement speech at MIT [S1], the founders' letter he and Arash Ferdowsi wrote for Dropbox's 2018 listing papers [S2] (re-read this round), his 2007 comments on the Y Combinator news site, where he answered critics of the first Dropbox pitch [S8], and his staff notes announcing job cuts in April 2023 and October 2024 [S9][S10]. It adds Dropbox's 2020 Virtual First post, credited to the company team [S3], and reference pages [S4][S5][S6][S7]. In May 2026 it was announced that he would step down as Dropbox's CEO and become executive chair [S5]. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
 
 ## In one paragraph
 
@@ -46,17 +46,17 @@ In the speech he repeated the idea that you become the average of the five peopl
 
 How he applied it: he went to Y Combinator in its summer 2007 batch, and Dropbox has been called YC's most successful investment [S5][S7].
 
-### Stop getting ready
+### Stop getting ready, and don't get comfortable
 
-Houston told graduates that learning matters, but doing is the fastest way to learn [S1]. He admitted he never felt ready, and described the shock of getting his company's first large investment [S1]. Real life has no grade average, he said, and mistakes don't go on a permanent record. Planning and studying for a dream can fill a lifetime, so the answer is to get started [S1].
+Houston told graduates that learning matters, but doing is the fastest way to learn. He admitted he never felt ready, and described the shock of seeing his company's first large investment land in his account [S1]. Real life has no grade average, he said, and mistakes don't go on a permanent record [S1]. His biggest warning was that the real danger is not failing but getting comfortable. Bill Gates and Steve Jobs both had early failures, and you only have to be right once [S1].
 
-How he applied it: he started an SAT prep company, Accolade, while still at MIT, and learned business by reading books on his fraternity roof and handing out business cards [S1][S4].
+How he applied it: he started an SAT prep company, Accolade, while still at MIT [S1][S4]. At about 24 he worked out that he had already used about 9,000 of his roughly 30,000 days, and said he stopped trying to make life perfect and tried to make it interesting [S1].
 
-### Getting too comfortable is the real risk
+### Ideas evolve, so talk to customers
 
-His biggest warning to graduates was that the real danger is not failing but getting comfortable [S1]. He pointed out that Bill Gates and Steve Jobs both had early failures, and that you only have to be right once [S1].
+In 2007, answering critics of the first Dropbox pitch, he wrote that ideas don't fall out of the sky, they evolve. He had tested six or seven ideas by talking to potential customers [S8]. He explained the design in plain terms: a normal local folder that syncs in the background, so work stays fast and available offline, because remote drives feel slow [S8]. He also said he had built the first version alone but would build a team, since playing superman gets old [S8].
 
-How he applied it: at about 24 he worked out that he had already used about 9,000 of his roughly 30,000 days. He said he stopped trying to make his life perfect and tried to make it interesting instead [S1].
+How he applied it: he conceded where the product fell short, such as not replacing a USB drive in every case, and treated critics as input [S8].
 
 ### Design work around focus
 
@@ -74,6 +74,8 @@ How he applied it: Dropbox cited a study it paid for, which found people were mo
 - Act before you feel ready; doing teaches faster than preparing [S1].
 - Don't let comfort hold you in place [S1].
 - Judge work by results, not hours [S3].
+- Test ideas by talking to the people who would use them [S8].
+- When you cut, make the decision once, say the reasons, name the support and take full ownership [S9][S10].
 
 ## Real decisions
 
@@ -92,11 +94,14 @@ After burning out on his first company, he built a poker bot for fun and got so 
 ### Let users invite users
 Instead of paying to reach people, Dropbox used a referral programme that gave users extra free space for bringing in friends [S6]. Most growth came from shared files and in-product invites, and more than 90% of revenue came from self-serve sign-ups [S2].
 
-### Buy Mailbox, then close it
-In 2013 Dropbox bought the email app Mailbox for a reported $100 million and shut it and Carousel in 2015 [S6]. His public record explains the move through the work-about-work goal [S2], but not the closure decision in his own words.
-
 ### Go Virtual First
 In 2020 Dropbox made remote work the default, with offices turned into studios for team work and shared overlap hours for teams [S3]. The post rejected hybrid because it could create two classes of employee [S3]. In May 2026 he was announced to step down as CEO into an executive chair role [S5].
+
+### Cut 16 percent in 2023
+On 27 April 2023 he told staff Dropbox would cut about 16 percent of its workforce, roughly 500 people. His stated reasons: growth was slowing, some past investments were no longer sustainable, AI was changing computing, and the company needed different skills. He also said performance management had not been tight enough in places. He wrote that he took full ownership of the decision, said he was sorry, and listed 16 weeks of pay plus a week per year of service, equity vesting and health cover [S9].
+
+### Cut 20 percent in 2024
+On 30 October 2024 he cut about 20 percent, or 528 people, and flattened the structure. He said the core file business had matured and demand was soft, the organisation had too many management layers, and the market needed more urgency in the next phase of growth, built around the Dash product. As CEO he took full responsibility, apologised, and set out pay, equity and healthcare terms [S10].
 
 ## Where he stood
 
@@ -130,7 +135,7 @@ In 2020 Dropbox made remote work the default, with offices turned into studios f
 - **Security.** In 2011 a bug made passwords optional for four hours. In 2016 data from 68 million accounts from an earlier breach leaked, and in 2017 a bug was found to have kept deleted files for years [S6].
 - **Privacy.** Dropbox does not use end-to-end encryption, and in 2014 Edward Snowden advised people to use a rival service [S6].
 - **Products that didn't last.** Dropbox bought the email app Mailbox for a reported $100 million in 2013, then shut it and the photo app Carousel in 2015 [S6].
-- **Layoffs.** Dropbox cut 315 jobs in 2021, about 500 in 2023 as it shifted toward AI skills, and about 528 in 2024 [S6].
+- **Layoffs.** Dropbox cut 315 jobs in 2021, about 500 in 2023 as it shifted toward AI skills, and about 528 in 2024. In 2023 he named gaps in performance management as one cause [S6][S9][S10].
 - **Losses before profit.** Dropbox lost $325.9 million in 2015 and $111.7 million in 2017 before its free cash flow turned positive in 2016 [S2].
 
 ## Blind spots to watch
@@ -146,4 +151,4 @@ In 2020 Dropbox made remote work the default, with offices turned into studios f
 - "you only have to be right once" (MIT, 2013) [S1]
 - "there are no warmups, no practice rounds, no reset buttons" (MIT, 2013) [S1]
 - "We can't make more of this fuel. But we can get better mileage." (founders' letter, 2018) [S2]
-- "We all deserve a fulfilling work life." (founders' letter, 2018) [S2]
+- "ideas don't really fall out of the sky, they evolve" (Hacker News comment, 2007) [S8]

@@ -1,8 +1,8 @@
 # William Zinsser: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: William Zinsser died in 2015 [S1]. His best-known book, *On Writing Well* (1976), is known here through reference pages [S1][S2]. His own words come from four pieces in *The American Scholar*, where he wrote a weekly column late in life [S1]: a 2009 talk to foreign journalism students [S3], a 2012 talk on the same theme [S6], an essay on memoir [S4] and an essay on writing in 300 words [S5]. Some of these were reposted by the magazine after his death, so the posting date isn't always the writing date. Nothing here tells you what he would think about writing tools or media after 2015. We have no interview of him, so his voice rests on these essays.
+A note on method: William Zinsser died in 2015 [S1]. His best-known book, *On Writing Well* (1976), is known here through reference pages and through his own account of how he built and revised it [S1][S2][S7]. His own words come from essays and talks: a 2009 talk to foreign journalism students [S3], a 2012 talk on the same theme [S6], essays on memoir [S4][S8][S9], on writing in 300 words [S5], on description [S10], on email [S13], on a writer he admired [S14], and two pieces about teaching and revising his book [S7][S12]. He wrote a weekly column for *The American Scholar* late in life, and some pieces were reposted after his death, so a posting date isn't always the writing date. We have no full interview of him; one Poynter piece is a reporter's summary of a phone interview [S15]. We rely on his essays and on no record of his views after 2015.
 
 ## In one paragraph
 
@@ -28,9 +28,8 @@ Zinsser split English vocabulary into two families. Words from Latin, especially
 
 How he applied it: he compared "John saw the boys" with "the boys were seen by John" to show the passive is longer and weaker [S3]. He then turned a sentence from Thoreau's *Walden* into the passive. It lost its energy, and Thoreau vanished from his own sentence [S3].
 
-### One thought per sentence
 
-He argued that most bad writing comes from muddled thinking, not bad grammar [S3]. His fix was to keep asking what the reader needs to know next, and to give each sentence one thought [S3]. He called the full stop a writer's friend [S3].
+**One thought per sentence.** He argued that most bad writing comes from muddled thinking, not bad grammar [S3]. His fix was to keep asking what the reader needs to know next, and to give each sentence one thought [S3]. He called the full stop a writer's friend [S3].
 
 How he applied it: he told journalism students that video and online stories still need lean, clear scripts, because the same rules of order apply [S3].
 
@@ -46,9 +45,7 @@ In memoir and in short pieces, he warned against hunting for "important" events 
 
 How he applied it: rather than write about the Second World War, in which he served in North Africa and Italy, he wrote about a six-day trip in a railway boxcar across North Africa. That trip, he said, shaped his lifelong interest in other cultures [S1][S4].
 
-### Gather more than you use
-
-He believed any text can be cut to 300 words [S5]. To write short, though, you need to collect far more than you will use, because you never know which detail you will need [S5].
+**Gather more than you use.** He believed any text can be cut to 300 words [S5]. To write short, though, you need to collect far more than you will use, because you never know which detail you will need [S5].
 
 How he applied it: for a 300-word piece on Ellis Island, he spent a full day there and took as many notes as he would for a 5,000-word article. He also interviewed the site's superintendent, since he thought places get their meaning from the people who care for them [S5].
 
@@ -58,11 +55,27 @@ Zinsser told foreign students that "good writing" is not universal. Each languag
 
 How he applied it: he told Spanish-speaking journalists writing in English to break long sentences into short ones with concrete nouns and active verbs [S6]. He admired the other styles. He only said they would weigh down a reporter writing plain English [S6].
 
-### Learn by copying good models
-
-He urged writers to learn by imitation and to study writers they admire [S3]. He pointed students to Gay Talese, Joan Didion and one of his own *New Yorker* pieces as models [S3].
+**Learn by copying good models.** He urged writers to learn by imitation and to study writers they admire [S3]. He pointed students to Gay Talese, Joan Didion and one of his own *New Yorker* pieces as models [S3].
 
 How he applied it: in memoir, he pointed to books that look back with love and forgiveness, such as *The Liars' Club* and *Angela's Ashes*, as better models than memoirs of complaint [S4].
+
+### Crafts are not learned by listening
+
+Zinsser started the Yale workshop in 1971 and expected his lectures to work. After the first term he saw that only about a fifth of his principles showed up in student papers. He decided that people learn a craft when their own errors are pointed out in their own drafts [S12]. So he put his effort into detailed written comments on every paper and read the best work aloud each week, naming the good and keeping the weak anonymous [S12].
+
+### Let the subject tell you what it is about
+
+In "Hold the Emotion!" he says he never tries to be moving. He starts from a small, concrete fact, such as an odd phone call meant for his late father's shellac business, and lets the themes arrive by themselves [S8]. His rule: if you aim for the heart on purpose, you tug at no hearts [S8].
+
+### Trust the reader, cut what they can infer
+
+At *The New Yorker*, editor William Shawn cut his explanations. From that he learned to delete anything a reader can work out alone, and to drop adverbs that judge a sentence before the reader gets there [S7]. He added a chapter on trusting the material in the 1985 edition [S7].
+
+**Know your temperament.** In "Flunking Description" he admits that lush description is not his strength. He prefers facts and anecdote, and he knows who he is as a writer [S10]. He does not tell every writer to copy him.
+
+**Write for yourself and your family first.** He defended the right to write a memoir that is never published. Descendants should know where they came from, and writing helps you cope and discover [S9]. He thought most such books should stay in the family, because many are raw or self-absorbed, and he said the memoirs that last look back with love and forgiveness [S9].
+
+**Optimism over hedging.** In "Yes, But" he mocks headlines that undercut themselves and says he is a "probably" person, not a "but" person [S11]. This is a view of work as much as of newspapers: bold things get done by people who ignore the doubt [S11].
 
 ## How he decides
 
@@ -77,23 +90,26 @@ How he applied it: in memoir, he pointed to books that look back with love and f
 
 ## Real decisions
 
+### 1974: writing a book that complements, not competes
+In June 1974 Zinsser had run out of things to write about, and his wife suggested a book about writing. He had taught at Yale for four years. He saw *The Elements of Style* as principles without context, so he decided to apply principles to many kinds of nonfiction, and to write in the first person as a teacher, with Alec Wilder's personal book on popular song as his model. He kept his quoted excerpts to 300 words or less so he could use many writers without paying for permission. The book came out in spring 1976 at 151 pages. [S7]
+
+### 1971: changing the Yale course after one term
+The English department expected 15 students and 170 signed up. Zinsser first leaned on lectures, then saw that students repeated the errors he had warned against. He concluded that crafts don't get learned by listening, and he began working through actual drafts with detailed written comments and weekly read-alouds. Students from the course went on to become major writers and editors. [S12]
+
+### 1985: learning from a New Yorker editor to cut what readers infer
+After his work for *The New Yorker*, where William Shawn removed his explanations, Zinsser decided to cut anything readers could infer on their own. He added a section on trusting the material to the third edition. His stated reason was that explanation insults a reader who already understands. [S7]
+
+### 1990: removing the male-centred language
+For the fourth edition he took out more than 100 uses of "he", "him" and "man", dropped some older male writers, added more women writers, and added a memoir chapter and a chapter on organizing a long article. By then the book had sold half a million copies. His reason was that a long-lived teaching book must change with its author and with the world, or it becomes an old man's book. [S7]
+
 ### Writing the 300 words about a site near home
-An editor asked for short essays on American sites. Zinsser first offered to condense old chapters, then agreed to write a 300-word piece from scratch on one condition: the site had to be near home. He chose Ellis Island, reachable by subway and ferry. [S5]
-
-### Reporting far more than he would use
-For those 300 words he interviewed the superintendent, because a place becomes meaningful through the people who care for it, then walked the grounds for a day and took notes as if for a 5,000-word article. His reason: you can't predict which details will earn their place. [S5]
-
-### Giving each paragraph one job
-The finished piece had three paragraphs. One set the place and its weight, one filled the empty rooms with the people and the food that surprised them, and one gave the immigrants' faces and voices. It ends on a human voice, not a summary. [S5]
-
-### Telling a student to follow her own search
-He taught a student, Helen Blatt, who could not rebuild her father's early life as a Holocaust survivor. He helped her see that her search for that past was itself the story. He presents the result with evident admiration. [S4]
+An editor asked for short essays on American sites. Zinsser agreed to write a 300-word piece from scratch on one condition: the site had to be near home. He chose Ellis Island, reachable by subway and ferry. For those 300 words he interviewed the superintendent, because a place becomes meaningful through the people who care for it, and spent a day taking notes as if for a 5,000-word article. His reason: you can't predict which details will earn their place. [S5]
 
 ### Choosing the boxcar over the war
 For his own memories he skipped the war and wrote about a six-day ride in a crowded French boxcar across North Africa. It showed him that small, vivid episodes carry more than big subjects, and he says the ride shaped his love of travel. [S4]
 
-### Rewriting Thoreau in the passive
-In his talk to foreign students he took a passage from *Walden*, built from active verbs and mostly one-syllable words, and rewrote it in the passive. Thoreau disappeared from it. He used it to teach why active verbs matter. [S3]
+### Turning down email
+Late in life he chose not to use email, calling it a deliberate life choice. His reasons were the clutter it brings (jokes, recipes, manuscripts, group messages) and the weight of a handwritten letter, which he kept from a former student. He kept his online column, since it helped his writing. [S13]
 
 ## Where he stood
 
@@ -140,6 +156,6 @@ In his talk to foreign students he took a passage from *Walden*, built from acti
 
 - "Clutter is the disease of American writing." (*On Writing Well*, as quoted by Wikipedia) [S1]
 - "Short is always better than long." (2009 talk) [S3]
-- "One thought per sentence." (2009 talk) [S3]
+- "The story itself just gradually told me what it was about." ("Hold the Emotion!") [S8]
 - "Be yourself and your readers will follow you anywhere." (essay on memoir) [S4]
 - "I believe that anything can be cut to 300 words." (column) [S5]

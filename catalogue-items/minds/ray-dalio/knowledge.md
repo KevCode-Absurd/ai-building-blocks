@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Ray Dalio is alive, and views can change. Everything below comes from his own talks and articles, his website, and public reference pages. On disk we hold the Wikipedia page on him in full, the short excerpt records for his site and talk, and earlier study notes; we found no full transcript of a talk or chapter of his books, so his method is described from those summaries and not from reading his books [S1][S2][S3]. Treat each view as "as of" the date of the source it comes from. Nothing here tells you what he thinks about events after March 2026, and nothing here is advice to buy or sell anything. This mind explains his frameworks only.
+Ray Dalio is alive, and views can change. This data set draws on his own words: a transcript of his 2017 TED talk [S9], the Summit talk and Q&A on principles [S3], his 2019 essay on capitalism, read again for its method [S4], his March 2026 commentary on the big cycle [S5], and his website [S2]. We could not open his books or the free 2011 principles text, so his method comes from these talks and essays and from reference pages [S1][S6][S7][S8]. Treat each view as "as of" the date of the source it comes from. Nothing here tells you what he thinks about events after March 2026, and nothing here is advice to buy or sell anything. This mind explains his frameworks only.
 
 ## In one paragraph
 
@@ -48,7 +48,7 @@ At Bridgewater he wanted neither a democracy nor a top-down rule by the boss, bu
 
 His TED2017 talk made the case that open, even blunt, feedback about each other's thinking leads to better group decisions, and that calling out the boss is part of the normal process [S8].
 
-The honesty is meant to be radical. Almost all Bridgewater meetings were recorded, and staff could watch them unless the topic was private business [S6]. Dalio says this removes spin [S3]. He admits it is hard. About a third of new people can't get through it, and many need a period of adjustment that he calls getting to the other side [S3]. He explains the struggle as "two yous": a thinking self that wants honest feedback and an emotional self that resists it [S3].
+The honesty is meant to be radical. Almost all Bridgewater meetings were recorded, and staff could watch them unless the topic was private business [S6]. Dalio says this removes spin [S3]. He admits it is hard. Estimates range from a quarter to a third of new people who can't get through it, and many need a period of adjustment that he calls getting to the other side [S3]. He explains the struggle as "two yous": a thinking self that wants honest feedback and an emotional self that resists it [S3].
 
 ### Believability weighting
 
@@ -83,7 +83,10 @@ Dalio studies history to find patterns that repeat. His short film *How the Econ
 In 1975 he founded Bridgewater in his Manhattan apartment as an advisory firm, serving corporate clients he kept from his earlier job [S1][S6]. It sold a paid research report called Daily Observations [S1]. Its break came when McDonald's became a client, and larger pension-fund clients followed [S1]. We have no stated reason beyond what he says of himself, that he got there by writing down what worked [S2].
 
 ### Making a public call that went wrong
-In the early 1980s he warned that banks had lent poor countries more than they could repay, and Mexico defaulted in August 1982 [S3]. He was also publicly sure about what would happen next to the economy, and he was wrong, right at the market bottom [S3]. He lost money for clients, let staff go, and borrowed $4,000 from his father [S3]. His stated reason for telling the story is that it taught him to ask how he knows he is right, and that pain plus reflection equals progress [S3].
+In the early 1980s he warned that banks had lent poor countries more than they could repay, and Mexico defaulted in August 1982 [S3]. He was invited to testify to Congress and appear on TV, and he was also publicly sure about what would happen next to the economy. He was wrong, right at the market bottom [S3][S9]. He lost heavily, shut down most of his operation, let staff go, and borrowed $4,000 from his father [S3][S9]. His stated reason for telling the story is that it taught him to ask how he knows he is right, and that pain plus reflection equals progress [S3].
+
+### Asking how he knows he is right
+After the 1982 mistake, he said the lesson was to ask himself how he knows he is right, and to seek out people who would challenge him [S9]. He chose to build a firm run on open debate, where the best argument wins whatever the rank [S9]. He described the cost: some people cannot take it, and he put the share at about a quarter to a third [S3][S9].
 
 ### Writing the rules down and publishing them
 He turned the lessons into written rules for Bridgewater staff, and put a short version online in 2011, which was downloaded more than three million times before the full book appeared in 2017 [S7]. The stated idea is that principles are ways of dealing with reality that can be reused, tested and passed on [S2][S3].
@@ -91,11 +94,11 @@ He turned the lessons into written rules for Bridgewater staff, and put a short 
 ### Recording meetings and rating each other
 Bridgewater recorded almost all meetings so staff could watch them, and staff rated each other's thinking in real time with a tool called the Dot Collector [S6][S3]. His reason was to remove spin and weight each view by how believable the person is on that topic [S3]. He admits that about a third of new people could not get through it [S3]. Critics, including a 2016 complaint and a 2023 book, said it produced fear and public shaming, which Bridgewater disputes [S6][S7].
 
+### Running rules alongside people
+Bridgewater wrote down the principles learned from mistakes and turned them into computer rules, then ran them next to human decisions to compare results [S9]. His stated reason was to learn from each difference between the rule and the person [S9][S3].
+
 ### Launching All Weather
 In 1996 he launched All Weather, a fund that balanced a portfolio by risk rather than by dollar amounts, an approach later called risk parity [S1][S6]. His stated reason is that a mix of good, unrelated bets lifts return for each unit of risk, which he calls the holy grail of investing [S3]. This is a description of his framework only, not a recommendation to hold anything.
-
-### Handing control over in steps
-He gave up the CEO title in 2011, stepped back as co-CEO in 2017 after a company shakeup, handed his voting rights to the board in September 2022, and sold his last shares and left the board in 2025 [S1][S6]. Our sources do not give his reasons, so we do not guess at them.
 
 ### Arguing in 2019 that capitalism needs reform
 In April 2019 he wrote that capitalism, as it then worked in the US, was failing most people, citing flat incomes for the bottom 60 percent since 1980 [S4]. He called the gap a national emergency and asked for a cross-party commission and clear measures [S4]. He still held that capitalism is generally the best system if reformed [S1][S4].
@@ -146,4 +149,4 @@ In April 2019 he wrote that capitalism, as it then worked in the US, was failing
 - "pain plus reflection equals progress" (Principles for Success talk) [S3]
 - "knowing how to deal with your not knowing" (Principles for Success talk) [S3]
 - "capitalists typically don't know how to divide the pie well" (LinkedIn, April 2019) [S4]
-- "nothing is predestined" (Fortune commentary, March 2026) [S5]
+- "How do I know I'm right?" (TED2017 talk) [S9]

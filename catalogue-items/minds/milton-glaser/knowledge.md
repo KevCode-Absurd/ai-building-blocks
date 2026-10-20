@@ -1,8 +1,8 @@
 # Milton Glaser: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Milton Glaser died in 2020. This data set comes from talks he gave between 2001 and 2005, which his studio publishes as essays [S1], from interviews his studio also publishes [S2], from his studio's biography [S3], from Wikipedia [S4] and from a Washington Post obituary [S5]. The interviews on his site carry no dates, so we don't date those views. His work is under copyright, so we quote only a few short phrases.
+Milton Glaser died in 2020. This data set comes from talks he gave between 2001 and 2005, which his studio publishes as essays [S1][S6], four long interviews in his own voice, from The Believer, AIGA Dallas, designboom and Smashing Magazine [S10][S11][S12][S13], and interviews his studio publishes [S2]. A blog post quotes his dislike of questions about inspiration and process [S14]. Reference pages and a 2009 profile give dates and context [S3][S4][S5][S7][S8][S9]. Only some interviews are dated, so we date a view only where the source does. We read the four new interviews as web pages and did not find the full audio of his conversations with Debbie Millman. His work is under copyright, so we quote only a few short phrases.
 
 ## In one paragraph
 
@@ -26,6 +26,8 @@ How he applied it: in our reading, the I Love NY logo works this way. "Love" is 
 
 In "Ten Things I Have Learned" (2001) Glaser called the modernist motto "less is more" nonsense [S1]. A Persian rug is packed with detail, yet every part does a job. His version was that just enough is more [S1].
 
+He also rejected the modernist ban on ornament as a moral claim that does not hold up, and saw decoration and reduction trade places over time [S12].
+
 How he applied it: Push Pin celebrated what modernists had taught designers to avoid, such as surreal touches and objects at wildly different scales [S5]. He said that studying in Italy with the painter Giorgio Morandi, on a Fulbright, freed him from modernism as his only resource. History became a source, not an enemy [S3][S5].
 
 ### Don't trust style
@@ -37,6 +39,8 @@ How he applied it: he left Push Pin when he felt its work had become repetitive.
 ### Drawing is thinking
 
 Glaser saw drawing as the most direct way to understand form, and as training for attention. When you draw something, you have to really look at it [S1][S2]. He worked out ideas by hand and only moved to the computer once they had been tested [S2]. He worried that a computer makes things look finished too soon, so a weak idea can be polished before anyone checks it [S2].
+
+He tied drawing to attention. In 2010 he said art helps people survive by making them attentive, since we go numb to what we see daily. His own example was drawing his mother at 17 and finding he did not know her face. His test for art is whether it changes how you notice, whatever the medium or the museum [S13].
 
 How he applied it: he cited research showing that violin lessons changed children's brains, as support for the claim that how you live and practise changes how you think [S1]. He said expressive drawing can't be taught directly, though a teacher can set up the conditions for it [S2].
 
@@ -60,6 +64,10 @@ How he applied it: he pointed out that a doctor's duty is to do no harm, and sug
 
 ## How he decides
 
+- Let the work set the process. Start from the client's intent and what the audience should feel [S11].
+- Ask what is appropriate to the situation before you reach for a rule [S12].
+- Do not let the fee set your effort [S13].
+- Teach and work as part of a group, not as a lone genius [S11].
 - Name the audience first, then the message [S2].
 - Ask whether the design works for its audience, then whether it is beautiful [S2].
 - Find one idea and let the viewer finish it [S1].
@@ -68,23 +76,35 @@ How he applied it: he pointed out that a doctor's duty is to do no harm, and sug
 - Choose clients you like and trust [S1][S2].
 - Doubt your certainties. Solving the problem matters more than being right [S1].
 - Check the message for small lies before it goes out [S1].
+- Take the long view: making things for a purpose is what people do, and design should stand for more than salesmanship [S6].
+- Ask what the audience actually responds to, not what makes you angry [S7].
+- In a personal intervention, the design problem is how to become visible and enter the bloodstream of the culture [S1].
 
 ## Real decisions
 
-### Drawing the heart in a taxi, 1977
-New York State asked for a logo for a tourism campaign meant to lift spirits during a crime wave and a money crisis. Glaser sketched the heart for "love" in red crayon in a taxi and took a small fee, because he expected the campaign to last a few months [S5]. He later said people everywhere were keen to say they loved something [S5]. The mark outlived the campaign and now sits in the Museum of Modern Art [S5].
+### Drawing the heart, and rejecting the first try (1977)
+New York State's commerce department had a phrase and a tourism slump, and asked how to give it a look [S11]. He rejected his first solution as not good enough, even though he expected a short campaign, and drew the heart version in red crayon in a taxi [S10][S5]. He took no fee, because he wanted work with a good effect on the city, though one 2009 profile and the obituary say he took a small one, so sources differ [S10][S5][S7]. His test for a good logo: memorable, fresh, familiar enough to accept, not too complex, with a small private joke, and a moment of puzzlement before the viewer gets it [S13].
 
-### Moving on from a house style
-Push Pin Studios, which he co-founded in 1954, grew into a look people could spot from across a room [S3][S5]. Glaser distrusted that, and said he did not trust style [S5]. He set up Milton Glaser Inc. in 1974 and moved on [S3][S4]. His reason, in his own essay, was that style often follows money and a designer must change without losing integrity [S1].
+### Sending his work out every month or two (Push Pin, 1950s and 60s)
+At Push Pin he mailed the Pushpin Graphic to art directors and agencies every month or two, while rivals sent an occasional promotion [S10]. He gives this steady contact as the main reason the studio was noticed early [S10]. He later kept his own studio small, about seven people, so that he could turn work down and so that no single client could carry it [S10].
 
-### Making a poster after the 2001 attacks
-In his 2005 talk he said designers had a stake in human survival, and that modernism began in social reform [S1]. He described a poster he made after the attacks. Design students handed it out, and it was wrapped around a million copies of a daily paper [S1]. His stated problem was getting civic work into the bloodstream of the culture [S1]. He also drew the I Love NY heart wounded, with the words "more than ever" [S5].
+### Leaving a house style behind (1974)
+Push Pin grew into a look people could spot from across a room [S3][S5]. He did not trust style, and said so [S5]. He set up Milton Glaser Inc. in 1974 and moved on [S3][S4]. In 2000s interviews he gave the reason that style has no fixed truth, is tied to its moment, and should be used when it serves the job and dropped when it does not [S12].
 
-### Testing the designer's conscience
-In "Ambiguity & Truth" he gave students a "Road to Hell" list of eleven jobs that grow worse step by step, from packaging tricks to ads for harmful products. He reported that only three or four in twenty would go all the way [S1]. He used it to make students notice what their work does, not to dictate answers [S1][S2].
+### Dylan, 1966
+Columbia Records wanted a poster to go inside copies of a Bob Dylan greatest hits album, and the art director gave the job to Glaser, who had made only three or four posters [S9]. He took the profile from a 1957 Duchamp self-portrait, turned the hair into saturated colour in the manner of rock posters and drew a custom typeface for the single name [S9]. The album sold more than six million copies [S9].
+
+### Getting the 9/11 heart into the street (2001)
+Watching from his studio window, he added a mark on the heart and the words "more than ever" within days [S8]. His reason, as he tells it, was that healing starts with admitting the pain [S12]. When officials were lukewarm, he got SVA students to hand the poster out across the city and then placed it in the Daily News and with a WNYC fundraiser [S10][S12]. His stated reason: good ideas need resourcefulness to get through institutions, which tend to reject outside input [S10]. A newspaper wrapped it around a million copies [S1].
+
+### Refusing to cut the heart, and answering a legal threat
+When a Commerce Department official wanted the logo without its key element, he refused, saying the mark was the point [S10]. When a state agency later claimed a trademark problem, he documented that he had earned nothing from it and that the proceeds he did get went to the firefighters' fund and WNYC, then wrote to the governor. The agency backed down [S10]. He says he is not bitter about unlicensed use and chose not to license it so no one profited from it [S10].
 
 ### Keeping the computer at arm's length
-Glaser worked out ideas with pen, brush and paper, and went to the computer only after an idea had been tested [S2]. His reason was that screens make a weak idea look finished too soon, a loss of what he called fuzziness [S2]. A Macworld interviewer pushed back, and Glaser gave ground without dropping the point [S2].
+He worked out ideas with pen, brush and paper, and went to the computer only after an idea had been tested, usually through assistants [S2][S10]. His reason was that screens make a weak idea look finished too soon, and the hand and mind swap a "fuzziness" that screens lack [S10]. In 2010 he added a rule: build a strong sense of form, colour and meaning first, or the tool will take over your judgment [S13]. A Macworld interviewer pushed back, and he granted that screen work also depends on looking [S2].
+
+### Putting the designer's conscience to a test
+In "Ambiguity & Truth" he gave students a "Road to Hell" list of eleven jobs that grow worse step by step, from packaging tricks to ads for harmful products. He reported that only three or four in twenty would go all the way [S1]. In interviews he called it a personal, citizen-level judgment and not a rule from outside, and he disliked moralising critics [S10]. For the 2004 AIGA Design Legends dinner he adapted a medieval text on what a surgeon ought to be into a code for designers [S6].
 
 ## Where he stood
 
@@ -135,5 +155,5 @@ Our sources contain almost no criticism of his work. The obituary is warm throug
 - "Just enough is more." (2001) [S1]
 - "It is far more important for posters to be effective than artistic." (interview, undated) [S2]
 - "If you don't know who you're talking to, you can't talk to anybody." (interview, undated) [S2]
-- "Meaningful work presses through regardless of the constraints." (interview, undated) [S2]
+- "Our dog in this fight may be human survival." (AIGA talk, 2005) [S1]
 - "I don't trust style." (as quoted in his 2020 obituary) [S5]

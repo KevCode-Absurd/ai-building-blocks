@@ -1,8 +1,8 @@
 # Herb Kelleher: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Herb Kelleher died in January 2019 [S1]. His own words here come from two long interviews: a 2004 Q&A with *strategy+business* and a 2017 conversation with Tom Gardner of The Motley Fool, published with a transcript [S2][S3]. Facts about his life and the airline come from reference pages [S1][S4][S5]. He spoke a great deal in public but wrote little, so this data set leans on what he said, not on books or letters. He can't speak to anything that happened after 2019.
+A note on the record: Herb Kelleher died in January 2019 [S1]. His own words here come from a 2004 Q&A with *strategy+business*, a 2017 conversation with Tom Gardner of The Motley Fool (with transcript), and a 2001 to 2002 interview with J.B. Bird for the University of Texas business school [S2][S3][S6]. Facts about his life and the airline come from reference pages and two press accounts [S1][S4][S5][S7][S8]. He spoke a great deal but wrote little, so there are no books or letters to draw on. He can't speak to anything after 2019.
 
 ## In one paragraph
 
@@ -74,32 +74,43 @@ How he applied it: in 1992 a trademark dispute over the slogan "Just Plane Smart
 - Keep cash and a strong balance sheet for the bad years [S3].
 - Fix problems person to person, not with new rules [S3].
 - Act first, refine as you go [S2].
+- Skip long-range plans and labels, which he said hem in your thinking; the plan is doing things, and strategy means defining it again as you go [S2].
+- Before adding a control, check that the fix costs less than the loss [S2].
+- Learn first when you buy or enter a business: he called the Morris Air visit a learning trip [S2].
 
 ## Real decisions
 
-### Fighting four years of lawsuits to fly (1967 to 1971)
+### Fighting for four years to get airborne (1967 to 1971)
 
-After he and Rollin King incorporated the airline in 1967, rival carriers sued to stop it [S1]. Key court wins came in December 1970 and June 1971, and the first flights took off on 18 June 1971 [S1]. He chose to keep going through the delay rather than give up the plan of cheap flights linking three Texas cities [S1].
+After he and Rollin King incorporated the airline in 1967, Braniff, Continental and Trans-Texas went to court to stop it [S1][S7]. In 2017 he put the fight at about four and a half years and said rivals also worked through the legislature and Congress, so legal and political skill were needed [S3]. When the board said in 1969 the money had run out, he offered to work unpaid and cover legal costs himself [S3]. Southwest first flew on 18 June 1971 [S1].
 
-### One plane type, point to point, fast turns
+### Matching Braniff's $13 fare with a bottle of whiskey (1972)
 
-Southwest flew only Boeing 737s for most of its history, flew point to point instead of through hubs, and aimed for gate turnarounds of about 15 minutes [S1][S4][S5]. He said a plane earns money only in the air [S3]. Union contracts let staff cross over between jobs, and he personally approved spending over $1,000 [S4].
+On the Houston to Dallas route, Braniff cut fares to $13 to drive the smaller airline out [S8]. Southwest let buyers pick: the same $13 fare, or a $26 fare that came with a bottle of premium liquor [S8]. Airline lore says Southwest became the state's biggest liquor seller for two months before Braniff backed off [S8]. The account does not give his reasoning, so treat it as a story about how he fought, not a stated rule [S8].
 
-### Settling a slogan dispute with an arm-wrestle (1992)
+### Low fares as a founding rule: add flights, not price
 
-When another company claimed the slogan "Just Plane Smart," Kelleher settled it by arm-wrestling the other firm's boss in a match billed as "Malice in Dallas" [S1]. He lost, Southwest kept the slogan and money went to charity [S1].
+He said low fares were a commitment from the start, whatever rivals did [S2]. When planes stayed full, Southwest added flights and seats instead of raising the fare [S2]. His evidence was a route where the fare dropped sharply and traffic jumped, and a city pair that grew from about 125,000 passengers a year to a million [S3][S6]. He also said he would take a small, profitable share over a big share that lost money [S3].
 
-### Adding flights, not raising fares
+### Dropping the manuals for "Guidelines for Leaders"
 
-When planes filled, Southwest added flights rather than raising fares [S2]. His reason was that low fares create new travellers, lifting traffic on a route by 100% to 300% in a year [S3]. He preferred a small profitable share to a large losing one [S3].
+Kelleher swapped thick manuals for a short set of guidelines whose opening line told leaders to feel free to break them [S3]. Colleen Barrett's "Flexibility Policy" carried the same idea [S3]. His stated reason was that people closest to a problem should fix it one on one, not through a new rule for everyone [S3]. He added that putting labels on things stops people thinking widely [S2].
 
-### Replacing rule books with guidelines
+### Letting a small loss go: "Let them steal $18,000"
 
-He described swapping thick operations manuals for short guidelines for leaders, which said they could be broken when needed [S3]. When a service problem came up he preferred to talk to the employee involved rather than write a new rule for everyone [S3].
+In 2004 he told of a company that spent about $65,000 a year on controls to stop $18,000 in losses [S2]. His view was that this was poor business judgment and that he would accept the small loss [S2]. The same interview shows his worry that compliance can crowd out strategy at the board table [S2]. It is a good test for any rule: does the cure cost more than the problem?
 
-### Planning for bad years, and protecting jobs
+### Keeping every job through the 2001 shock
 
-He credited the airline's record of no furloughs to keeping a strong balance sheet and not over-hiring in a boom [S3]. After the September 11 attacks, staff helped stranded crews and passengers [S3]. He stepped down as CEO in March 2001 and as chairman in 2008 [S1].
+In 2001, while American, United and Delta cut nearly 50,000 jobs, Southwest kept a no-layoff policy and kept growing [S6]. He had planned to cut back his own duties on 1 October 2001, but stayed on after the September attacks because the emergency needed everyone [S6]. Southwest started flying again on 14 September, and staff raised money quickly and looked after stranded crews [S3]. He tied the record to cash, a strong balance sheet and slow hiring in boom years [S3].
+
+### Pay and profit sharing for staff
+
+After the first annual profit, Southwest started the industry's first employee profit-sharing plan [S7]. His reason was that happy employees treat customers well, which keeps passengers and shareholders happy [S7][S2]. By 2004 he said total pay made staff the best paid in the industry, and that through the 1990 to 1994 industry losses, 84% of employees held on to their Southwest stock [S2]. He kept his own pay near the middle of airline bosses and turned down big stock grants [S3].
+
+### Stepping back, but not away (2001 to 2008)
+
+He stopped being CEO in March 2001 and chairman in May 2008 [S1][S7]. In 2017 he said he gave his successor full authority and kept a low profile as chairman [S3]. He also chose an interior office with no window, because he said people fight over space and what matters is where your mind is [S6].
 
 ## Where he stood
 

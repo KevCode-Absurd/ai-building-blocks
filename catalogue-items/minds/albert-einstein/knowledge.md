@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-The own-words sources here are two of Einstein's public-domain books in English translation: his popular account Relativity (first published 1916; Lawson's translation, revised 1924) [S2], and the 1920 and 1921 lectures collected as Sidelights on Relativity [S3]. Many "Einstein quotes" in circulation are misattributed, and Wikipedia itself flags disputed ones [S1]. This file uses only what its sources show.
+The own-words sources here are two public-domain books in English translation: his popular account Relativity (1916; Lawson's translation, revised 1924) [S2], and the 1920 and 1921 lectures in Sidelights on Relativity [S3]. Since the last check we also read his 1933 Oxford lecture on method [S6] (from a scan of its reprint), his 1949 essay Why Socialism? [S7], his 1939 letter to Roosevelt [S8] and his 1905 paper on mass and energy [S9]. The Wikipedia pages [S1][S4][S5] and the two other pages [S10][S11] give dates and context. His later writing is still under copyright, so we paraphrase it. Many "Einstein quotes" in circulation are misattributed, and Wikipedia itself flags disputed ones [S1]. This file uses only what its sources show.
 
 ## In one paragraph
 
@@ -12,7 +12,7 @@ Einstein was a theoretical physicist, born in Ulm, Germany, on 14 March 1879, wh
 
 ### Think it through as a picture
 
-Einstein's thinking was highly visual. He used imagined scenarios to expose contradictions, test principles and build intuition [S4]. At about 16 he pictured himself chasing a beam of light and asked what he would see; late in life he called this the seed of special relativity, though historians note his memory may have been coloured by hindsight [S4].
+Einstein's thinking was highly visual. He used imagined scenarios to expose contradictions, test principles and build intuition [S4]. At about 16 he pictured himself chasing a beam of light and asked what he would see; late in life he called this the seed of special relativity, though historians note his memory may have been coloured by hindsight [S4], and Norton adds that he had not yet learned Maxwell's theory at that age, so the later account may blend in later thinking [S4][S10].
 
 How he applied it: in 1907 he pictured a person in free fall, who feels no weight. He later called this the happiest thought of his life, and it led to the principle of equivalence and general relativity [S4]. Around 1912, a spinning disc showed him that gravity bends geometry, and that he needed new mathematics, which he learned with help from his friend Marcel Grossmann [S4].
 
@@ -28,21 +28,13 @@ Einstein disliked theories that treat two cases differently when no experiment c
 
 How he applied it: special relativity rests on two principles, that the laws of physics are the same for all observers moving steadily, and that the speed of light is constant, and it needs no ether [S5].
 
-### Mathematics is a free creation; reality decides
-
-In Geometry and Experience (1921), Einstein wrote that as far as the laws of mathematics refer to reality, they are not certain; and as far as they are certain, they don't refer to reality [S3]. Axioms are free creations of the human mind [S3]. Only geometry combined with physics can be tested against experience [S3].
-
-How he applied it: he showed, with pictures of discs on a sphere and shadows on a plane, that a finite but unbounded space can be imagined, so our intuition is not trapped in Euclid's geometry [S3]. He proposed checking the question with observations of star motions [S3].
+In Relativity he also pictured a man in a closed chest in space, pulled up by a rope, who sees dropped objects fall alike. No test inside could tell this from gravity, so he treated the two as equivalent [S2].
 
 ### Explain it so anyone with patience can follow
 
 Einstein wrote Relativity for readers with no training in theoretical physics, asking only for a school-leaving education and a fair amount of patience and force of will [S2]. He repeated himself on purpose for clarity, and set elegance aside, quoting the physicist Boltzmann that elegance should be left to tailors and cobblers [S2].
 
 How he applied it: the book is full of everyday images: a railway carriage and an embankment, a raven flying past a train, a man walking along a moving carriage, clocks and measuring rods [S2]. He used the train and lightning example as his favourite way to explain simultaneity to the public [S4].
-
-### Same effect, same cause: the man in the chest
-
-In Relativity, Einstein describes a man in a closed chest far out in space, pulled steadily upward by a rope. He feels pressed to the floor and sees dropped objects fall at the same rate, so he may fairly conclude he is at rest in a gravity field [S2]. Since no experiment inside can tell the difference, Einstein treated acceleration and gravity as equivalent, which also explains why inertial and gravitational mass are equal [S2].
 
 ### Doubt the theory even when it works
 
@@ -51,6 +43,24 @@ Einstein accepted that quantum mechanics made correct predictions, but believed 
 ### Revise when the evidence changes
 
 In 1917 he added a cosmological constant to his equations so the universe could stay static [S1]. After Hubble's 1929 findings that galaxies are moving apart, he dropped the static model, calling the constant theoretically unsatisfactory [S1]. The story that he called it his "biggest blunder" rests on George Gamow's account, which the astrophysicist Mario Livio has doubted [S1].
+
+### Reason builds the system, experience is the judge
+
+In Geometry and Experience (1921) he put the same point about mathematics: where its laws are certain they do not describe reality, and its axioms are free creations of the mind [S3]. In his 1933 Oxford lecture Einstein said that thought alone cannot give knowledge of the real world: all knowledge of reality starts from experience and ends in it [S6]. Reason's job is to build the system. A theory is a set of concepts, a few basic laws and the conclusions drawn from them, and only the conclusions have to match experience [S6]. The basic laws themselves are free inventions of the mind that cannot be justified in advance, so their only value is that the conclusions fit what we see [S6]. He credited Galileo with driving this lesson home [S6].
+
+How he applied it: he told the Oxford audience that Newton still believed his basic concepts came from experience, yet felt uneasy about absolute space and forces acting at a distance. Newton's huge practical success may have hidden how invented those foundations were [S6].
+
+### Aim for fewer, simpler basic elements
+
+Einstein called it the grand aim of theory to make the basic elements as simple and as few as possible, without giving up the ability to describe any real fact [S6]. He noted a price: the simpler the foundation, the longer the chain of thought from principle to testable result [S6]. He said past experience justified his belief that nature realises the simplest mathematical ideas, and that experience can hint at the right mathematics but cannot produce it. Experience stays the only judge of whether a construction is useful to physics [S6].
+
+How he applied it: he showed that by asking for the simplest laws a four-dimensional field could obey, one arrives at his gravity theory and at Maxwell's equations [S6].
+
+### Speak outside your field, and say where your field stops
+
+Why Socialism? opens by asking whether a non-expert should write on the subject, and answers yes, with two limits [S7]. Economics has facts that are tangled by many causes, and the facts we have come from a stage of history that socialism aims to leave behind [S7]. Also, science can supply means but cannot set the ends of a society, so experts have no monopoly on those questions [S7]. He then states a personal view, admits that feelings and aims are often contradictory, and says no easy formula covers them [S7].
+
+How he applied it: he used a conversation with a man who shrugged at the idea of humanity ending to show the loneliness he thought drove the crisis of his time [S7].
 
 ## How he decides
 
@@ -62,36 +72,43 @@ In 1917 he added a cosmological constant to his equations so the universe could 
 - Explain it with ordinary things: trains, clocks, rulers [S2].
 - Talk it over with a trusted friend; Michele Besso was his sounding board [S5].
 - Change the model when observation changes [S1].
+- Judge theorists by what they do, not what they say about their method [S6].
+- Name the check before the result comes in, and say how big a result would count [S8][S9].
+- Know where your expertise ends, and say so before you give a view [S7].
 
-## Real decisions (enriched minds)
+## Real decisions
 
 ### Defining "at the same time" by a procedure
 
-Faced with the claim that two lightning strokes were simultaneous, Einstein refused to accept the word until there was a way to decide it by experiment. He put an observer at the midpoint between the two places and asked whether the flashes arrive together. He then raised the objection himself: this assumes light travels both halves at the same speed, which seemed to need a clock already. His answer was that the equal speed is not a discovery but a stipulation made freely, because the only demand on a definition is that it gives an empirical decision in a real case. [S2]
+Faced with the claim that two lightning strokes were simultaneous, Einstein refused to accept the word until there was a way to decide it by experiment. He put an observer at the midpoint between the two places and asked whether the flashes arrive together. He then raised the objection himself: this assumes light travels both halves at the same speed, which seemed to need a clock already. His answer was that the equal speed is not a discovery but a free choice, because a definition only has to give an empirical decision in a real case. [S2]
 
 ### Asking why one case is favoured
 
 He objected that classical mechanics and the special theory both favour some reference bodies with no cause shown. He compared it to two pans on a gas range, one steaming and one not, with no flame under either: he would stay dissatisfied until some circumstance explained the difference. He said Newton saw the objection, Mach saw it most clearly, and only a theory valid for every body of reference could remove it. [S2]
 
-### The chest in empty space
-
-To link gravity and acceleration he imagined a chest pulled upward by a rope far from any star. The man inside feels pressure on his feet and sees all dropped bodies fall alike, so he may reasonably say he is at rest in a gravity field. Einstein drew from this that light must bend in a gravity field, and he warned the reader that gravity is not always only apparent: only special fields can be removed by choosing another reference body. [S2]
-
 ### Naming a test that could fail
 
-He stated that light passing the sun at grazing incidence should be bent by about 1.7 seconds of arc, visible in star positions during a total eclipse, and called checking this a problem of the greatest importance for astronomers. A note in the revised edition records that the 1919 eclipse expeditions confirmed a deflection. He also stated, from the same theory, that Mercury's orbit should turn by 43 seconds of arc a century. [S2]
-
-### Keeping rods and clocks, knowing they are provisional
-
-In 1921 he said Poincare was right in the long run: rods and clocks are not irreducible elements, but built from deeper physics. He still chose to keep them as separate ideas for now, because physics had no exact theory of solid bodies and clocks to put in their place. [S3]
+In Relativity he stated that light grazing the sun should bend by about 1.7 seconds of arc, visible in star positions during a total eclipse, and called checking this a problem of the greatest importance for astronomers. A note in the revised edition records that the 1919 eclipse expeditions confirmed a deflection. From the same theory he also said Mercury's orbit should turn by 43 seconds of arc a century. [S2]
 
 ### Dropping the state of rest for the ether
 
-In his 1920 Leiden address he argued that the ether of general relativity may exist, but cannot be given a state of motion. Giving it one would add a distinction with no physical meaning, so he kept the word and dropped the property. He called a unified field theory a great advance if it could be found, and doubted a rival attempt by Weyl would match reality. [S3]
+In his 1920 Leiden address he argued that the ether of general relativity may exist, but cannot be given a state of motion. Giving it one would add a distinction with no physical meaning, so he kept the word and dropped the property. [S3]
 
-### Showing that Euclid is not forced on us
+### Ending the 1905 mass paper with a test
 
-To show that a finite but unbounded space is thinkable, he used flat discs and shadows on a plane and rigid figures on a sphere. His point was that whether real space is Euclidean is a question for measurement, not for pure thought. [S3]
+In the short 1905 paper that followed special relativity, he imagined a body sending out two equal light pulses in opposite directions and compared the energy books from two points of view. He concluded that a body giving off energy as light loses mass in proportion. He generalised that the mass of a body measures its energy. Then he ended by suggesting that bodies whose energy changes a great deal, such as radium salts, might allow a check, and called the test not impossible. [S9]
+
+### Writing to Roosevelt in 1939
+
+In August 1939 Einstein wrote to the US president, after Fermi and Szilard had shown him work suggesting that uranium might become a new source of energy. He said a chain reaction in a large mass of uranium now looked almost certain, and that bombs of a new kind were possible, though he called that much less certain. He advised a standing link between the government and the physicists, help in securing uranium ore, and quicker experiments through private funds and industry labs. His stated worry was that Germany had stopped selling uranium from the Czech mines it had taken over. The letter reached Roosevelt only in mid-October because war began in Europe. [S8]
+
+### Leaving Germany in 1933
+
+On 10 March 1933 Einstein said he would live only in a country with political liberty, toleration and equality before the law, and that Germany no longer had them. On 28 March he resigned from the Prussian Academy before it could act against him, and he later wrote that he did not want to belong to a society that stood by silently while colleagues lost their work. When the Academy accused him of spreading atrocity stories, he denied it in writing on 5 April. He also declined to sign a French protest against German antisemitism, saying a Jew should not be judge in his own case. [S11]
+
+### Speaking up in Why Socialism? (1949)
+
+For the first issue of a new journal, Einstein chose to give his view on socialism even though he was not an economist. His stated reasons were that economics rests on a narrow slice of history and that science cannot choose society's ends. He named the problem as the tie between the individual and society, blamed what he called the anarchy of the capitalist economy, and argued for a socialist economy plus schooling aimed at social goals. He added a warning: a planned economy is not yet socialism, and the rights of the individual still need protection against bureaucracy. [S7]
 
 ## Where he stood
 
@@ -140,10 +157,11 @@ To show that a finite but unbounded space is thinkable, he used flat discs and s
 
 ## Short phrases on the record
 
-From public-domain translations of his own writing, except the last.
+From his own writing, quoted briefly.
 
 - "a fair amount of patience and force of will" (Relativity, preface, trans. Lawson) [S2]
-- "matters of elegance ought to be left to the tailor and to the cobbler" (Relativity, quoting Boltzmann) [S2]
 - "As far as the laws of mathematics refer to reality, they are not certain" (1921) [S3]
 - "These axioms are free creations of the human mind." (1921) [S3]
-- "the happiest thought of my life" (on the falling observer, as quoted on Wikipedia) [S4]
+- "don't listen to their words, fix your attention on their deeds" (1933 Oxford lecture) [S6]
+- "experience is the alpha and the omega of all our knowledge of reality" (1933 Oxford lecture) [S6]
+

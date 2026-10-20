@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Sagan's books, essays and interviews are still in copyright, so this is our summary of his ideas. The few quotes are short and sourced. He died in 1996, so nothing here tells you what he would think of later events [S1][S2]. His "baloney detection kit" is described here from a reference summary of his book, not copied from it [S7]. One famous line, "billions and billions", is a parody. He never said it in that form [S1].
+Sagan's books, essays and interviews are still in copyright, so this is our summary of his ideas. His own words come from his 1994 Pale Blue Dot passage [S4], the 1996 Charlie Rose interview [S5], the 1987 skepticism essay [S6] and his 1983 Foreign Affairs article on nuclear war and climate, which we read in full [S10]. We have not read The Demon-Haunted World itself, only descriptions of it and of the kit [S7][S12], and NASA pages that quote him on the 1990 photo [S11][S13]. The few quotes are short and sourced. He died in 1996, so nothing here tells you what he would think of later events [S1][S2]. His "baloney detection kit" is described here from summaries of his book, not copied from it [S7][S12]. One famous line, "billions and billions", is a parody. He never said it in that form [S1].
 
 ## In one paragraph
 
@@ -38,11 +38,9 @@ In *The Demon-Haunted World* (1995), Sagan offered a set of thinking tools for t
 
 He paired the kit with a list of about twenty common errors in reasoning. They include attacking the person, appeal to authority, counting only the hits, drawing big conclusions from small samples, confusing correlation with cause, the straw man, the false choice between two extremes, and hiding inconvenient evidence [S7]. The name of the kit came from his friend Arthur Felberbaum [S7].
 
+The dragon in the garage story shows why untestable claims are empty: He says a fire-breathing dragon lives in his garage. You ask to see it, and he says it is invisible. You suggest flour on the floor to catch footprints, and he says it floats. You suggest an infrared camera, and he says its fire gives off no heat. Every test gets an excuse [S7]. His point was that if no possible experiment could count against a claim, the claim tells you nothing. Failing to disprove something is not the same as proving it [S7].
+
 How he applied it: the book walks the kit through real cases, including alien abduction stories, faith healing and hoaxes that fooled news outlets [S7].
-
-### The dragon in the garage
-
-Sagan told a story to show why an untestable claim is empty [S7]. He says a fire-breathing dragon lives in his garage. You ask to see it, and he says it is invisible. You suggest flour on the floor to catch footprints, and he says it floats. You suggest an infrared camera, and he says its fire gives off no heat. Every test gets an excuse [S7]. His point was that if no possible experiment could count against a claim, the claim tells you nothing. Failing to disprove something is not the same as proving it [S7].
 
 ### Extraordinary claims need extraordinary evidence
 
@@ -66,6 +64,12 @@ Sagan believed scientists should speak up when they see a danger to everyone. In
 
 How he applied it: he co-founded the Planetary Society in 1980 to build public support for exploring space, and served as its first president [S1]. It grew to about 100,000 members [S2].
 
+### Say how sure you are, then say what to do anyway
+
+In his 1983 Foreign Affairs article Sagan wrote for lay readers and argued that the stakes were too high to let comfort or blame shape the assessment [S10]. He told readers what was solid and what was not. He wrote that the full effect of a war could not be known, that some unknown effect might soften it, yet that past surprises in this field had mostly gone toward the worse [S10]. His rule was that when the matter is this grave and the worst case is not very unlikely, it is wise to plan for the worst [S10]. He ended with a policy ask, deep cuts to the arsenals, and an image: cherish a fragile world as we do our children [S10].
+
+How he applied it: the study he reported on ran dozens of scenarios and tested the range of uncertainty in each key number, instead of giving one prediction [S10].
+
 ### Send a message about who we are
 
 Sagan cared about how humans present themselves to the cosmos. He put together the first physical message sent into space, a plaque on Pioneer 10 in 1972 [S1]. In 1977 he chaired the committee that chose the contents of the Voyager Golden Record. It held 115 images, natural sounds, music from many cultures and greetings in 55 languages [S8]. He called the launch a hopeful act for life on this planet [S8].
@@ -81,35 +85,35 @@ Sagan cared about how humans present themselves to the cosmos. He put together t
 - Judge the argument, not the person or their rank [S7].
 - Explain it to the public, because citizens must be able to judge science [S5].
 
-## Real decisions (enriched minds)
+## Real decisions
 
-### Listing what Venus could be, then backing the hot answer
+### Pushing for a picture of Earth with no science payoff
 
-In the early 1960s no one knew the basic conditions on Venus's surface. Sagan listed the possibilities in a report and argued for a very hot surface caused by a greenhouse effect. The Mariner 2 probe supported him in 1962. [S1]
+Sagan had the idea in 1981 of turning a Voyager camera back to photograph Earth, and he knew at the time that from so far away the picture might show very little [S11]. He and others on the team still wanted people to see how small and fragile Earth looks [S11]. On 14 February 1990 Voyager 1 took the images, and at the 6 June 1990 press conference he gave Earth the name "Pale Blue Dot" [S13][S4]. His stated reason was moral, not scientific: the image should push us to treat each other more kindly and to protect the only home we know [S11][S4].
 
-### Asking NASA for a photograph with no science payoff
+### Writing the nuclear winter paper for non-scientists
 
-He pressed NASA to turn Voyager 1's camera back to take a picture of Earth from the edge of the solar system. The 1990 image shows Earth as a speck, and his 1994 book used it to argue for kindness and care of the only home we know. [S1][S4]
+In late 1983 Sagan published a plain-language account in Foreign Affairs of the climate studies he and colleagues had finished and presented at conferences that autumn [S10]. He argued that the stakes were too high to let comfort or blame shape the assessment. He openly said that we cannot know the worst would happen, but argued for acting on it because the stakes were so high. His conclusion was to cut the world's arsenals to a small share of their present size [S10]. Critics such as Edward Teller said he was using incomplete data to persuade, and some scientists disliked the use of the media [S1].
 
-### Chairing what a message to the stars should hold
+### Predicting Kuwait's smoke, then admitting he was wrong
 
-He designed the Pioneer plaque with others in 1972 and chaired the committee for the Voyager Golden Record in 1977, which held images, natural sounds, music from many cultures and greetings in 55 languages. [S1][S8]
+In 1991 he warned on television that Kuwait's burning oil wells could cool the climate like a small nuclear winter. The smoke stayed low and the effects were mostly regional [S9]. He conceded the error in The Demon-Haunted World [S9][S7]. For a mind that preaches testing, this is the case where the test went against him and he said so.
+
+### Offering the kit, with a warning
+
+In The Demon-Haunted World he gave readers a toolkit for judging claims, plus a long list of reasoning errors, and described them as tools for building an argument and, above all, for spotting a false one [S12]. He also warned that the kit can be misused or used instead of thinking, and said it is best used to check your own argument before presenting it. His opening was personal: being fooled does not make you stupid, it means you need better tools [S12].
+
+### Chairing the Golden Record committee
+
+In 1977 he chaired the group that chose what Voyager would carry: pictures, natural sounds, music from many cultures and greetings in 55 languages. He had helped design the Pioneer plaque in 1972 [S1][S8]. The choice was to make a message about who we are, not just where we are.
 
 ### Moving to Cornell after Harvard said no
 
-In 1968 Harvard denied him tenure. Reasons given included that he spread his interests across many fields. He moved to Cornell, where he became a professor, directed the planetary studies lab and edited Icarus. [S1][S2][S3]
-
-### Taking nuclear winter to the public
-
-He promoted the idea that a nuclear war could set off a deep cooling, and used the media to do it. Some scientists objected that an uncertain idea was being spread too loudly. Edward Teller likened it to a propagandist using incomplete data. [S1]
-
-### Predicting the Kuwait smoke, then admitting he was wrong
-
-In 1991 he warned on TV that Kuwait's burning oil wells could cool the climate like a small nuclear winter. The smoke stayed low and the effects were mostly regional. He admitted the error in The Demon-Haunted World. [S9][S7]
+In 1968 Harvard denied him tenure, and reasons given included that he spread his interests across many fields. He moved to Cornell, where he became a professor, directed the planetary studies lab and edited Icarus [S1][S2][S3].
 
 ### Warning that a public without science hands over its power
 
-In his 1996 interview he said superstition has always existed, but the stakes are new because we live in a society built on science and technology. He pointed to few members of Congress with science training and the closing of the Office of Technology Assessment. He cited Jefferson: a constitution is not enough without educated, skeptical citizens. [S5]
+In his 1996 interview he said superstition has always existed, but the stakes are new because we live in a society built on science and technology. He pointed to few members of Congress with science training and the closing of the Office of Technology Assessment. He cited Jefferson: a constitution is not enough without educated, skeptical citizens [S5].
 
 ## Where he stood
 
@@ -166,4 +170,5 @@ In his 1996 interview he said superstition has always existed, but the stakes ar
 - "science is more than a body of knowledge. It's a way of thinking" (Charlie Rose interview, 1996) [S5]
 - "this combustible mixture of ignorance and power" (Charlie Rose interview, 1996) [S5]
 - "If you are only skeptical, then no new ideas make it through to you." (The Burden of Skepticism, 1987) [S6]
-- "Extraordinary claims require extraordinary evidence" (his best-known maxim, the "Sagan standard") [S1]
+- "it is wise to contemplate the worst" (Foreign Affairs, 1983) [S10]
+

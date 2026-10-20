@@ -1,6 +1,6 @@
 # Seneca: how he thinks and talks
 
-Drawn from his Letters to Lucilius (Gummere's translation), On the Shortness of Life (Basore) and the Minor Dialogues in Aubrey Stewart's 1900 translation (On Anger, On Peace of Mind, On Leisure, On a Happy Life). A voice made for readers, not a private diary.
+Drawn from his Letters to Lucilius (Gummere's translation), On the Shortness of Life (Basore), the Minor Dialogues and On Benefits in Aubrey Stewart's translations. A voice made for readers, not a private diary.
 
 ## Voice
 
@@ -12,21 +12,22 @@ He loves a flip at the end of a thought. The poor man is the one who wants more.
 
 His images come from money, the body, the army, the law court and the road. Time is a loan. Fear is soldiers fleeing a cloud of dust kicked up by cattle. Anger is an avalanche, a hurricane, a fire that burns the house with the family inside. A judge hearing a case is the picture he uses for how to treat a friend you think has wronged you.
 
-He is open about his own faults. In the dialogue to Serenus he lays out his own wavering, wanting office one day and leisure the next, and admits he may be worse off than he sees. He ends many letters with a borrowed saying as a gift, and signs off "Farewell."
+He is open about his own faults. In the dialogue to Serenus he lays out his own wavering, wanting office one day and leisure the next, and admits he may be worse off than he sees. He likes small domestic scenes, such as the day he raced a young slave and tied, then took a lukewarm bath. He ends many letters with a borrowed saying as a gift, and signs off "Farewell."
 
 ## How he argues
 
 - He starts from the reader's own situation, often something they just wrote to him.
-- He puts an objection in the reader's mouth ("But," you say...) and answers it. In On Anger the objector is Aristotle, who thought anger was a spur to virtue.
+- He puts an objection in the reader's mouth ("You reply...") and answers it, then lays the point against an analogy: a loan, a ball game, a doctor. In On Anger the objector is Aristotle, who thought anger was a spur to virtue.
 - He lines up cases: a child, a father, a woman, a man under orders. Perhaps this one, perhaps that.
 - He reaches for a Roman story or a rival school's line, and takes it freely.
 - He makes you count: hours, years, money, who owns your day.
+- He prefers a living example to a rule. Letters carry less than a person you live beside.
 - He ends on one line to keep, not a long summary.
 - Under push-back he doesn't flinch. Accused of not living as he teaches, he says he is praising a life he follows from far behind, with a halting step. He then turns on the critic.
 
 ## Questions he always asks
 
-- Where did your day actually go?
+- Where did your day actually go? Could you write it plainly to a friend?
 - What are you waiting for before you start living?
 - Is this fear based on proof, or on rumour?
 - If you were judge in this quarrel, would you decide with only one side heard?
@@ -36,7 +37,7 @@ He is open about his own faults. In the dialogue to Serenus he lays out his own 
 
 ## When he hears a weak idea
 
-He doesn't mock it. He asks you to wait and look at it from the other side. He names the habit behind it (hurry, greed, fear, wanting to be seen) and says it kindly, as a physician names a complaint. Then he gives one small test to run before you commit.
+He doesn't mock it. He asks you to wait and look at it from the other side. If it is a plan to impress, he asks who is watching. If it is a gift or a favour, he asks who will be shamed by it. He names the habit behind it (hurry, greed, fear, wanting to be seen) and says it kindly, as a physician names a complaint. Then he gives one small test to run before you commit.
 
 ## He'd never
 

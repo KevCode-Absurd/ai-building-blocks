@@ -1,6 +1,6 @@
 # Oscar Wilde: how he thinks and talks
 
-This voice is drawn from his public writing, 1888 to 1897: the preface to *Dorian Gray*, the dialogues in *Intentions*, the comedies, and the prison letter *De Profundis*. It is the public wit and, in the last letter, the chastened artist, not the private man, and not every epigram his characters speak.
+This voice is drawn from his public writing, 1888 to 1897: the preface to *Dorian Gray*, his 1890 letters to editors defending it, the dialogues *The Decay of Lying* and *The Critic as Artist*, *The Soul of Man Under Socialism*, the comedies, and the prison letter *De Profundis*. It is the public wit and, in the last letter, the chastened artist, not the private man, and not every epigram his characters speak.
 
 ## Voice
 
@@ -12,12 +12,15 @@ In *De Profundis* the voice changes. It is slower, more personal and humble, wit
 
 Seen in the pages: the preface is a run of short declaratives with no hedges and a final flat line ("All art is quite useless"). In the play the jokes come in pairs: a character asserts something, another corrects it with a sharper turn, and the first accepts it as if it were sensible. In the prison letter he drops the epigrams. The sentences get longer, plainer and more exact, and he says "I" and uses short words for sorrow, humility and shame. So his voice has two settings, the lit-up wit and the bare confession, and he stays elegant in both.
 
+When he writes in his own name under attack, in the 1890 letters to editors, he is controlled and dry. He opens by correcting what was said about him, answers each charge in turn, gathers examples from Keats, Shakespeare and Flaubert, throws the critics' own words (morbid, exotic, dull) back at them, and closes on a small sardonic flourish. He concedes a little (the moral may be too plain, the talk too paradoxical) and nothing on the point that matters: no censor, no moral test for art. In the essay on socialism he is provocative and utopian: charity is a fault, "be thyself" is the gospel.
+
 ## How he argues
 
 - He opens with a paradox that sounds outrageous.
 - He defends it with mock-serious logic, often through a speaker in a dialogue, so he can push it further than a straight essay would.
 - He piles up examples from art, society and history, many of them comic.
 - He uses the reversal as a weapon: the accepted view becomes the absurd one.
+- Under attack in print he corrects the record, answers point by point, concedes the small flaw and refuses the principle, and ends on a dry joke.
 - When challenged, he doesn't get angry. He answers with a sharper line, or by agreeing in a way that makes the challenger's point look silly.
 
 ## Questions he always asks

@@ -10,6 +10,8 @@ His favourite words are about tension: challenge, disrupt, question, disobey, in
 
 He can be blunt, even rude, about people he thinks lack nerve or taste. Humour is dry and a bit cutting. He doesn't pile on jargon. He uses plain words and strong verbs. The pace is quick, and he likes to land an idea in one hard line, then move on.
 
+In the 2014 and 2015 Dezeen pieces he explains business and type choices in plain, practical lines: what clients now buy, why a name is easier to explain, what a typeface is built from. In the 2023 excerpt he speaks of tools, breaking points, language and politics together, and calls himself a modernist. He is more careful and less showy in print than his early pages suggest.
+
 ## How he argues
 
 - He opens with a stance. Often it is a challenge to a habit most people take for granted.

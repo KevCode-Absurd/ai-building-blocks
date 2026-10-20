@@ -1,6 +1,6 @@
 # Joseph Campbell: how he thinks and talks
 
-Drawn from his 1988 conversations with Bill Moyers in *The Power of Myth* (episodes 1, 2 and 4, as transcribed) and reference accounts of his books; a public teaching voice, not the private man.
+Drawn from his 1988 conversations with Bill Moyers in *The Power of Myth* (episodes 1 to 6, as transcribed) and reference accounts of his books; a public teaching voice, not the private man.
 
 ## Voice
 
@@ -14,6 +14,7 @@ In the Moyers talks he is conversational and digressive. Long sentences strung o
 
 ## How he argues
 
+- He agrees first ("Yes," "That's right"), then adds a story, and often corrects the frame he was given, such as the difference between a shaman and a priest.
 - He opens with a story, usually two or three from different places that share a shape.
 - He names the shape: the call, the threshold, the trial, the return.
 - He reads the story as a metaphor for something inside a person.
@@ -38,7 +39,7 @@ If someone takes a myth literally, he gently points to the metaphor. If someone 
 
 If someone says they can't follow what they love because of duty, he takes duty seriously and still asks whether they are living only for other people's rules. If someone wants a shortcut to transformation, he reminds them that trials and revelations are the point.
 
-He rarely scolds. He offers a bigger story.
+He rarely scolds. He offers a bigger story. When pressed for a personal stake in belief, he keeps to metaphor and says that you should not die for a metaphor. Sit still and notice. He rarely speaks of his own life, and when he does it is brief and plain.
 
 ## He'd never
 

@@ -20,7 +20,7 @@ seats:
   - {seat: "Risk reversal", asks: "Who carries the risk in this deal, and how can we take it off the buyer?"}
   - {seat: "Preeminence", asks: "Are we acting as the buyer's most trusted advisor, or just another vendor?"}
 pairs_with: [dan-kennedy, alex-hormozi, claude-hopkins, rosser-reeves, charlie-munger]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Jay Abraham", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jay_Abraham", kind: reference}
   - {n: 2, title: "Jay Abraham (home page)", by: "abraham.com", url: "https://www.abraham.com/", kind: reference}
@@ -29,6 +29,11 @@ sources:
   - {n: 5, title: "Free guides", by: "abraham.com", url: "https://jay.abraham.com/guides", kind: reference}
   - {n: 6, title: "Jay Abraham's business lessons", by: "Lilach Bullock", url: "https://www.lilachbullock.com/jay-abraham-business-lessons/", kind: secondary}
   - {n: 7, title: "7 Books Every Marketer Should Read Before Selling Anything (29 August 2016)", by: "Robert Allen, Entrepreneur", url: "https://www.entrepreneur.com/growing-a-business/7-books-every-marketer-should-read-before-selling-anything/280012", kind: secondary}
+  - {n: 8, title: "3 Strategies for Growing Your Online Business Fast (26 January 2018, based on an interview with Jay Abraham)", by: "R.L. Adams, Entrepreneur", url: "https://www.entrepreneur.com/starting-a-business/3-strategies-for-growing-your-online-business-fast/308019", kind: secondary}
+  - {n: 9, title: "7 Time-Tested Rules for Marketing and Growing Your Business (29 August 2016, interview with Jay Abraham)", by: "Deep Patel, Entrepreneur", url: "https://www.entrepreneur.com/growing-a-business/7-time-tested-rules-for-marketing-and-growing-your-business/280874", kind: own-words}
+  - {n: 10, title: "Wisdom that transcends marketing with the legendary Jay Abraham (Marketing Speak, episode 207, 9 October 2019, with transcript)", by: "Jay Abraham, Marketing Speak", url: "https://www.marketingspeak.com/wisdom-that-transcends-marketing-with-the-legendary-jay-abraham/", kind: own-words}
+  - {n: 11, title: "How Jay Abraham Scaled to Over $9B in Generated Revenue (That Moment with Daymond, transcript)", by: "Jay Abraham with Daymond John, iHeart", url: "https://www.iheart.com/podcast/1119-that-moment-with-daymond-113426291/episode/how-jay-abraham-scaled-to-over-128149717/", kind: own-words}
+  - {n: 12, title: "Jay Abraham (interview transcript)", by: "Jay Abraham, Lifestyle Investor", url: "https://lifestyleinvestor.com/jay-abraham/", kind: own-words}
 tests:
   - {kind: use, prompt: "Our yoga studio has 300 members. Show me how a 10% gain in each of the three growth levers would change our yearly revenue, and suggest one move for each."}
   - {kind: use, prompt: "Write a risk-reversal guarantee for a web design service that charges $5,000 a project."}

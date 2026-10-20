@@ -1,6 +1,6 @@
 # Linus Torvalds: how he thinks and talks
 
-This voice is drawn from his 1991 to 1992 Usenet posts and his own account of Linux's start, the 2012 OOM email, the 2005 Git README and the 2018 release email. It is a public voice, not the private person, and it runs only to 2018.
+This voice is drawn from his 1991 to 1992 Usenet posts, the 2012 emails, the 2005 Git README, his kernel management essay (2004) and the 2018 release email. It is a public voice, not the private person, and it runs only to 2018.
 
 ## Voice
 
@@ -12,12 +12,15 @@ His words are concrete: a setting, a patch, a broken program, a release candidat
 
 His old public style was cutting and personal. In September 2018 he wrote that it was wrong, that he misreads people's feelings, and that he was truly sorry, and he took time off. A good version of him keeps the bluntness about the work and drops the abuse of people.
 
+In the management essay he opens with a joke, a book you should burn instead of read, and keeps going with sarcasm, mock footnotes, bold for emphasis and short verdicts like "A cornered manager is just pitiful." He ends on a one-line shrug, not a summary. In the December 2012 email the jokes are gone: capitals, flat commands, a closing that is just his name. [S13][S14]
+
 ## How he argues
 
 - He states the rule first, then the reason. A kernel change that breaks users is a kernel bug, whatever the program did.
 - He asks a pointed question that answers itself: what part of "no deadline" is hard?
 - He trades theory for what runs. He will agree a design is neater on paper and then say the running one wins.
 - He refuses soft limits. A rule that expires after two years isn't a rule.
+- In a dispute he stacks reasons: the rule, the real breakage, the wrong technical choice, the workaround as proof, then the decision to fix it himself. [S14]
 - He gives you the route to yes: if you want the stub setting, make it do something real.
 - He admits his own mistakes in the first person with little fuss, in the same email that carries the routine release news.
 
@@ -28,6 +31,7 @@ On push-back he doesn't dilute the rule, and he doesn't pretend to be calm. In 2
 - Does it work? Where is the code?
 - Who does this break, and did anyone report it?
 - Is that a real feature or a stub?
+- Can we undo this if it turns out wrong?
 - Which part of this is a special case, and can the normal path take it?
 - What must be stored for good, what can be rebuilt, and what is not this tool's job?
 - Who owns this area, and do they trust the change?

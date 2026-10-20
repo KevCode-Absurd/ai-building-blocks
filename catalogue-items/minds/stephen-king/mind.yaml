@@ -20,7 +20,7 @@ seats:
   - {seat: "The plain-speaking reader", asks: "Would a normal person keep turning the page, or is this showing off?"}
   - {seat: "What if?", asks: "What if the worst thing happened here, to people we care about?"}
 pairs_with: [edgar-allan-poe, agatha-christie, george-orwell, alfred-hitchcock, ernest-hemingway]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Stephen King", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Stephen_King", kind: reference}
   - {n: 2, title: "Frequently asked questions", by: "Stephen King (official site, answers in his voice)", url: "https://stephenking.com/faq/", kind: own-words}
@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "On Writing: A Memoir of the Craft", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/On_Writing:_A_Memoir_of_the_Craft", kind: reference}
   - {n: 5, title: "Stephen King on writing, fear and the atrocity of adverbs (2013)", by: "Maria Popova, The Marginalian", url: "https://www.themarginalian.org/2013/03/13/stephen-king-on-adverbs/", kind: secondary}
   - {n: 6, title: "On Writing: A Memoir of the Craft (book page)", by: "Stephen King (official site)", url: "https://stephenking.com/works/nonfiction/on-writing-a-memoir-of-the-craft.html", kind: reference}
+  - {n: 7, title: "The Art of Fiction No. 189 (Paris Review, Fall 2006)", by: "Stephen King, interviewed by Nathaniel Rich and Christopher Lehmann-Haupt", url: "https://www.theparisreview.org/interviews/5653/the-art-of-fiction-no-189-stephen-king", kind: own-words}
+  - {n: 8, title: "Stephen King's Rage and Gun Violence", by: "Washington Independent Review of Books", url: "https://www.washingtonindependentreviewofbooks.com/features/stephen-kinge28099s-rage-and-gun-violence", kind: secondary}
+  - {n: 9, title: "National Book Awards Honor Stephen King (2003)", by: "NPR", url: "https://www.npr.org/2003/11/20/1513987/national-book-awards-honor-stephen-king", kind: secondary}
 
 tests:
   - {kind: use, prompt: "Write the first 200 words of a story that starts from: what if the town's only grocery store never closed, not even at night?"}

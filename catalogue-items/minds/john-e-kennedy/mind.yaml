@@ -20,7 +20,7 @@ seats:
   - {seat: "Reason why", asks: "Why exactly should this reader buy, in plain words they would believe?"}
   - {seat: "Judge by sales", asks: "What will this sell, at what cost, and how will we know?"}
 pairs_with: [claude-hopkins, john-caples, rosser-reeves, david-ogilvy, victor-schwab]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The Book of Advertising Tests: A Group of Articles that Actually Say Something About Advertising (Lord & Thomas, about 1905)", by: "John E. Kennedy, for Lord & Thomas", url: "https://archive.org/details/bookofadvertisin00lordrich", kind: own-words}
   - {n: 2, title: "\"To Increase Earning Power for Advertisers\" (December 1908), reprinted in Economic Advertising, Toronto, August 1909", by: "John E. Kennedy", url: "https://archive.org/details/marketing1909toro", kind: own-words}
@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Advertising & Selling announcement of a new Kennedy series, Printers' Ink, May 9, 1912", by: "Advertising & Selling", url: "https://archive.org/details/sim_marketing-communications-1888_1912-05-09_79_6", kind: secondary}
   - {n: 5, title: "John E. Kennedy", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/John_E._Kennedy", kind: reference}
   - {n: 6, title: "John E. Kennedy, inductee", by: "Advertising Hall of Fame", url: "https://advertisinghalloffame.org/inductee/john-e-kennedy/", kind: reference}
+  - {n: 7, title: "Intensive Advertising (report for publishers, 1914; public-domain text in a free ebook edition)", by: "John E. Kennedy, via The Copy Alchemist", url: "https://thecopyalchemist.com/wp-content/uploads/2012/11/Intensive-Advertising.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short reason-why ad for a refillable water filter jug, aimed at families watching their budget."}
   - {kind: use, prompt: "Our ad says 'Don't waste your weekends cleaning.' Rewrite it the way Kennedy rewrote the washing machine ad."}

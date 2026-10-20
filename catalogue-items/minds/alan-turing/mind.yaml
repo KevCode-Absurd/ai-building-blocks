@@ -20,7 +20,7 @@ seats:
   - {seat: "Fair test", asks: "Can we replace this vague question with a test that anyone could run and judge?"}
   - {seat: "Objection handler", asks: "What is the strongest objection here, and what is our honest answer to it?"}
 pairs_with: [ada-lovelace, grace-hopper, richard-feynman, demis-hassabis, andrej-karpathy]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Computing Machinery and Intelligence (Mind, 1950)", by: "A. M. Turing, Oxford University Press", url: "https://academic.oup.com/mind/article/LIX/236/433/986238", kind: own-words}
   - {n: 2, title: "On Computable Numbers, with an Application to the Entscheidungsproblem (1936), HTML transcription", by: "A. M. Turing, transcribed by Roman Verostko", url: "https://verostko.com/turing/1936-paper.html", kind: own-words}
@@ -29,6 +29,8 @@ sources:
   - {n: 5, title: "Alan Turing", by: "Andrew Hodges, Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/turing/", kind: reference}
   - {n: 6, title: "Turing test", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Turing_test", kind: reference}
   - {n: 7, title: "Ultra (cryptography)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ultra_(cryptography)", kind: reference}
+  - {n: 8, title: "Lecture to the London Mathematical Society on the Automatic Computing Engine (20 February 1947, text)", by: "A. M. Turing, seminarTEXT edition, ed. Eberhard von Goldammer", url: "https://www.vordenker.de/downloads/turing-vorlesung.pdf", kind: own-words}
+  - {n: 9, title: "The Chemical Basis of Morphogenesis (Philosophical Transactions of the Royal Society B, vol. 237, 14 August 1952)", by: "A. M. Turing, course copy hosted by Caltech", url: "https://www.dna.caltech.edu/courses/cs191/paperscs191/turing.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Write step-by-step instructions for sorting a pile of 50 exam papers by surname, so simple that someone who can't read English could follow them using only the shapes of the letters."}
   - {kind: use, prompt: "My team argues about whether our new chatbot is 'smart'. Design a fair five-minute test we could run with ten people to settle it."}

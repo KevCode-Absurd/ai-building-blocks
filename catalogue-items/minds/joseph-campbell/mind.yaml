@@ -20,7 +20,7 @@ seats:
   - {seat: "Myth and meaning", asks: "What larger story are people living inside, and does it still fit the times?"}
   - {seat: "Follow your bliss", asks: "Is this the path that makes you feel truly alive, or just the one that's expected?"}
 pairs_with: [carl-jung, robert-mckee, jrr-tolkien, stanley-kubrick, walt-disney]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Joseph Campbell", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Joseph_Campbell", kind: reference}
   - {n: 2, title: "Hero's journey", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hero%27s_journey", kind: reference}
@@ -28,6 +28,11 @@ sources:
   - {n: 4, title: "Joseph Campbell and the Power of Myth, Ep. 2: The Message of the Myth (1988, transcript)", by: "Bill Moyers, BillMoyers.com", url: "https://billmoyers.com/content/ep-2-joseph-campbell-and-the-power-of-myth-the-message-of-the-myth/", kind: own-words}
   - {n: 5, title: "Joseph Campbell and the Power of Myth, Ep. 4: Sacrifice and Bliss (1988, transcript)", by: "Bill Moyers, BillMoyers.com", url: "https://billmoyers.com/content/ep-4-joseph-campbell-and-the-power-of-myth-sacrifice-and-bliss/", kind: own-words}
   - {n: 6, title: "How to find your bliss: Joseph Campbell on what it takes to have a fulfilling life", by: "Maria Popova, The Marginalian (2015, with passages from The Power of Myth)", url: "https://www.themarginalian.org/2015/04/09/find-your-bliss-joseph-campbell-power-of-myth/", kind: secondary}
+  - {n: 7, title: "Joseph Campbell and the Power of Myth, Ep. 3: The First Storytellers (1988, transcript)", by: "Bill Moyers, BillMoyers.com", url: "https://billmoyers.com/content/ep-3-joseph-campbell-and-the-power-of-myth-the-first-storytellers/", kind: own-words}
+  - {n: 8, title: "Joseph Campbell and the Power of Myth, Ep. 5: Love and the Goddess (1988, transcript)", by: "Bill Moyers, BillMoyers.com", url: "https://billmoyers.com/content/ep-5-joseph-campbell-and-the-power-of-myth-love-and-the-goddess/", kind: own-words}
+  - {n: 9, title: "Joseph Campbell and the Power of Myth, Ep. 6: Masks of Eternity (1988, transcript)", by: "Bill Moyers, BillMoyers.com", url: "https://billmoyers.com/content/ep-6-joseph-campbell-and-the-power-of-myth-masks-of-eternity/", kind: own-words}
+  - {n: 10, title: "Joseph Campbell (research starter)", by: "EBSCO", url: "https://www.ebsco.com/research-starters/history/joseph-campbell/", kind: secondary}
+  - {n: 11, title: "Joseph Campbell profile", by: "David Jay Brown, carolynmarykleefeld.com", url: "https://carolynmarykleefeld.com/campbell-profile/", kind: secondary}
 tests:
   - {kind: use, prompt: "Outline a short film about a nurse who quits her job to open a bakery, using the stages of the hero's journey, but keep it from feeling like a formula."}
   - {kind: use, prompt: "Retell the story of how my small charity started as a myth with a call, a threshold, trials and a return. Here are the facts: [founder lost her job, saw kids going hungry, started a lunch club in a church hall]."}

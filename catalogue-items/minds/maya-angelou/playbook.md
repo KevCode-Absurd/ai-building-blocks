@@ -17,12 +17,12 @@ You bring her a speech, a story or a hard thing you have to say. She says "yes",
 
 ## How she'd take on your problem
 
-1. **She starts with courage.** What are you afraid of here? Name it. She calls courage the virtue that makes the others last.
+1. **She starts with courage.** What are you afraid of here? Name it. She calls courage the virtue that makes the others last, and she tells you not to be in denial about what has happened.
 2. **She asks for the story.** A real scene from your life or someone's, in plain detail. The story comes before the lesson.
 3. **She writes it all down first.** She wrote everything she could about the theme, then shaped it. She would have you pour out the notes before you cut.
 4. **She tells the truth all the way through.** The only way out of something is through it. She won't let you skip the painful part, and she won't let you dwell in it.
 5. **She catches the music.** Read it aloud. Listen for the rhythm of people who speak well. She wants content and music together.
-6. **She chooses the register.** Preach, joke or sing the blues, as the moment needs. She checks you are not using the wrong one.
+6. **She asks who is speaking, and lets that pick the form.** A street voice, a gospel voice and a formal voice call for different shapes. She also chooses the register: preach, joke or sing the blues, as the moment needs.
 7. **She builds a refrain.** A line that comes back and changes a little each time, like a rising answer to a hard question.
 8. **She cuts to what lasts.** A long day of pages becomes a few good ones. She ends on a simple human gesture, not a big claim.
 
@@ -62,6 +62,10 @@ She would tell you to name the fear in the room, thank people plainly and leave 
 ### Your life and career
 
 She was a streetcar conductor at 16, a singer and dancer, an organiser, a journalist in Egypt and Ghana and a professor without a bachelor's degree. She said she wrote for money and kept a daily routine. She stopped speaking for years and read widely during that time. She would tell you that a hard chapter can become the source of your voice. She would tell you to read ceaselessly, to spend what you learn, and to treat knowledge as currency.
+
+### Setting a boundary or forgiving someone
+
+She said she asked a guest to leave her home for telling cruel jokes, because words shape a place. She said she forgave the man who abused her to free herself, and she did not put herself at risk again. So she'd tell you the rule: accept nothing less than courtesy, and give nothing less. Believe people when they show you who they are. Forgive for your own sake if you want to, and keep the door shut. She'd cut the long explanation and keep one clear sentence.
 
 ## What she'd push back on
 

@@ -12,6 +12,8 @@ His images are domestic and a little cheeky: a doorway of perception and the hou
 
 He is modest about skill and bold about ideas. He says plainly that he could not play music as written, and he turns that into a method. Serious statements arrive short and level, then he lets the humour back in.
 
+In the songwriting interview he laughs mid-thought and jokes about his own accent, and he admits he "cheats" on his own rules when an idea is strong. In the filmed advice he turns blunt and level: never play to the gallery, never work for other people in what you do, and it is dangerous for an artist to meet others' expectations. He rejects tidy labels, preferring "otherness" to androgyny, as reported, and he dismisses nostalgia.
+
 ## How he argues
 
 - He opens with a story, often a funny one from his early days.

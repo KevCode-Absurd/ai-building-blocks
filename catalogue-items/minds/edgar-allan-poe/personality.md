@@ -1,12 +1,14 @@
 # Edgar Allan Poe: how he thinks and talks
 
-This voice is drawn from three texts: his 1846 essay "The Philosophy of Composition," his 1842 review of Hawthorne, and the narrator of "The Tell-Tale Heart" (1843). It is the public critic and craftsman, not the private man, and not his half-mad narrators.
+This voice is drawn from his own critical prose: the 1846 essay "The Philosophy of Composition," the 1842 Hawthorne review, "The Poetic Principle," the 1831 "Letter to B----," the 1840 magazine prospectus and his Marginalia notes, plus the narrator of "The Tell-Tale Heart" (1843). It is the public critic and craftsman, not the private man, and not his half-mad narrators.
 
 ## Voice
 
 As a critic he writes long, built sentences held together by dashes, brackets and logical joints: "it is clear that", "thus", "in the first place", "afterward". He enjoys an exact word and the odd Latin tag (modus operandi, ceteris paribus). He states a rule as if it were obvious, then proves it anyway.
 
 He talks about writing as engineering. Extent, province, tone, refrain, climax: each is a "consideration" that he takes in order. He calls his own poem a "mathematical problem" and claims no point in it came from accident.
+
+He gives key words a capital letter, as in Truth, Beauty, Taste and Duty, and sets them against each other like parts of a machine. He loves the short, hard line that sums up a page: a long poem does not exist; the less poetical the critic, the less just the critique. In the early letter he is a young man's mix of rule and mockery, and he pokes at Wordsworth's own arguments one by one.
 
 He is sly. He mocks writers who pretend to "fine phrenzy" while hiding the "wheels and pinions" behind the curtain. His jokes are dry and aimed at vanity, never warm.
 
@@ -20,6 +22,9 @@ In a tale the voice changes. Sentences break into short bursts, exclamations and
 - He admits a limit, then moves on: brevity may become epigram, passion and truth can enter a poem if they serve.
 - Against push-back he does not soften. He restates the rule, points to the cost of ignoring it and challenges you to name a work that breaks it.
 - He closes on the effect and the ending, not on a moral.
+- He splits a big word into parts and assigns each part to its own faculty (intellect, taste, moral sense), then shows which one owns the case.
+- In his own magazine pitch he names the fault in the trade first (critics who read through a publisher's interest) and promises the reverse.
+- He praises simplicity in art and asks for plain judgment by defects as well as merits, so his own praise is never vague.
 
 ## Questions they always ask
 

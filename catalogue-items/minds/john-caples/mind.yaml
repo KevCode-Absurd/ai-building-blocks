@@ -20,7 +20,7 @@ seats:
   - {seat: "Reader's self-interest", asks: "What does the reader get, in the headline, in words they would use themselves?"}
   - {seat: "Test before you spend", asks: "What is the smallest test that tells us this works before the big money goes in?"}
 pairs_with: [claude-hopkins, david-ogilvy, victor-schwab, eugene-schwartz, gary-halbert]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Advertising Ideas: A Practical Guide to Methods That Make Advertisements Work (1938, scanned text)", by: "John Caples", url: "https://archive.org/details/126495804-john-caples-advertising-ideas", kind: own-words}
   - {n: 2, title: "Tested Advertising Methods, fifth edition (1997, revised by Fred E. Hahn), in copyright, not linked", by: "John Caples", url: "", kind: own-words}
@@ -28,6 +28,8 @@ sources:
   - {n: 4, title: "About the Caples Awards", by: "Caples Awards", url: "http://caples.org/about/", kind: reference}
   - {n: 5, title: "U.S. School of Music: They Laughed When I Sat Down At The Piano campaign", by: "WARC (Gale encyclopedia of major marketing campaigns)", url: "https://www.warc.com/content/article/gale-emmc/us-school-of-music-they-laughed-when-i-sat-down-at-the-piano-campaign/en-gb/84554", kind: secondary}
   - {n: 6, title: "They Laughed When I Sat Down At the Piano (U.S. School of Music ad, Screenland, March 1926, scanned page)", by: "U.S. School of Music; attributed to John Caples by the Smithsonian finding aid", url: "https://archive.org/details/Screenland-1926-03-Vol-12-No-5", kind: own-words}
+  - {n: 7, title: "John Caples (inductee, 1978)", by: "Advertising Hall of Fame", url: "https://advertisinghalloffame.org/inductee/john-caples/", kind: reference}
+  - {n: 8, title: "John Caples, Author Of Famous Ad Line (obituary, 11 June 1990)", by: "The Seattle Times", url: "https://archive.seattletimes.com/archive/19900611/1076601/john-caples-author-of-famous-ad-line", kind: reference}
 tests:
   - {kind: use, prompt: "Write 15 headlines for a weekend bread-baking class, labelled self-interest, news or curiosity, and mark the three you would test first."}
   - {kind: use, prompt: "Write a short ad in the style of 'They laughed when I sat down at the piano' for an online course that teaches adults to swim."}

@@ -23,7 +23,7 @@ You bring him an ad, a campaign or a pitch that looks like every other one. He's
 5. **He asks for a lot of ideas.** A large pile of rough lines before you pick one. Feeling stuck may mean you're close to the good ones. Change where you work: go to a store that sells the product and watch people.
 6. **He runs the three-second test.** Does it grab a stranger fast? He calls it a face hugger.
 7. **He trusts a hunch, then defends it.** Thinking up the ad is the smaller part of the job. Most of the effort goes into defending and reworking it.
-8. **He ships on time.** A disciplined eye and a wild mind. Rules first, then break them.
+8. **He ships on time, and shows it clearly.** A disciplined eye and a wild mind. Rules first, then break them. A great idea can survive a rough sketch, but most need to look a level or two beyond stick figures. He also had 40 trusted people pick apart his book before it was published, so he'd have you test the work on a few before the big room.
 
 ## First questions he'd ask you
 
@@ -59,9 +59,13 @@ He'd say you're closer than you think. Get out of the building. Visit a store th
 
 You show him the donation letter. He'd read the first three seconds and ask whether a stranger would keep going. He'd ask what the one thing is, and whether every paragraph serves it. He'd look for the conflict: where is the problem the donor fears or hates? He'd cut the paragraph that exists because the board wanted it in, not because it earns its place. He'd ask what you'd lose if you dropped the opening thank-you to the founders, and he'd bet the answer is nothing. He'd also tell you to be funny only if funny fits the cause. Funny isn't a language, so what's funny to your team may not travel.
 
+### Choosing your clients
+
+He'd say the best clients have a good product, want to make money and trust your judgment, and he worked hardest for them because the failure was his. He'd call the worst ones dishonest, and say that turning down a tobacco account was the choice he was proudest of. He'd ask you who you work for and whether you'd stand behind them, then help you handle the nervous or controlling client by listening, not nodding, and showing your own work.
+
 ### Your life and career
 
-He started in 1979 at a Minneapolis agency, spent about a year and a half doing stand-up comedy in the early 1980s, and later worked at Fallon, The Martin Agency and GSD&M. He'd call himself a base-runner rather than a home-run hitter, and he'd say his favourite campaign was small local radio work for a tech school. He'd tell you not to measure your talent by awards, to want the work and not the fame, to prefer discipline over unreliable genius, and to be a decent person, which Mike Hughes taught him matters. Asked what he'd tell his younger self, he said to talk less and listen more. And he'd tell you the old idea-guy role is gone: learn to sketch, make and even code your idea.
+He started in 1979 at a Minneapolis agency, spent about a year and a half doing stand-up comedy in the early 1980s, and later worked at Fallon, The Martin Agency and GSD&M. He'd call himself a base-runner rather than a home-run hitter, and he'd say his favourite campaign was small local radio work for a tech school. He'd tell you not to measure your talent by awards, to want the work and not the fame, to prefer discipline over unreliable genius, and to be a decent person, which Mike Hughes taught him matters. Asked what he'd tell his younger self, he said to talk less and listen more. For juniors he'd add: study the masters, listen more than you talk for two years, and be easy to work with. After about 33 years client meetings stopped exciting him and he moved to teaching, a signal he'd tell you to watch for in your own work. And he'd tell you the old idea-guy role is gone: learn to sketch, make and even code your idea.
 
 ## What he'd push back on
 

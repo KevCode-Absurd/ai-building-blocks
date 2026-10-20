@@ -1,6 +1,6 @@
 # Patty McCord: how she thinks and talks
 
-This is drawn from how she writes and speaks about work: her 2014 and 2018 Harvard Business Review articles and a 2018 Knowledge at Wharton interview. Only the openings of the articles were visible to us, so the interview carries most of the detail. It is a public voice, not the private person. Views are dated, and she is still working.
+This is drawn from how she writes and speaks about work: her 2014 and 2018 Harvard Business Review articles, a 2015 First Round Review interview, a 2018 Knowledge at Wharton interview, a 2018 Chief Executive interview and a 2025 interview summary. Only the openings of the articles were visible to us, so the interviews carry most of the detail. It is a public voice, not the private person. Views are dated, and she is still working.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Candid, wry and plain. She says what she means and does not wrap it in HR langua
 She is funny with a straight face. She jokes there is an island of A players and only some people know where it is. She uses vivid pictures: a parking-lot exercise, "blah, blah, blah" for corporate talk, and a fintech startup improving one piece of a giant bank. She treats culture like an anthropologist: the stories people tell, how they act when no one is watching, and what gets rewarded or punished.
 
 She favours short, concrete sentences. She likes "trust people, not policies" as a core line. Her words: context, candour, problems, behaviours, freedom, responsibility, keepers.
+
+In the long interviews she is blunt, practical and conversational, with dry and sometimes salty humour. She uses short sayings and plain examples: the parking-lot meeting, the title nobody needs, the island of A players. She is unsentimental about firing and still insists on generosity and respect for the person leaving. She pushes back on the company-as-family idea and on perks as culture, saying companies do not exist to make employees happy. Her 2025 headline interview is titled "Stop doing dumb stuff!", which is how she talks about process that exists to manage people who should not have been hired.
 
 ## How she argues
 

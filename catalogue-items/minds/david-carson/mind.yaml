@@ -20,13 +20,15 @@ seats:
   - {seat: "Gut check", asks: "Forget the rules for a second. Does this look right to your eye, and does it move you?"}
   - {seat: "Anti-default", asks: "Which of these choices did you make, and which did the software make for you?"}
 pairs_with: [neville-brody, april-greiman, paula-scher, stefan-sagmeister, saul-bass]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "David Carson (graphic designer)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/David_Carson_(graphic_designer)", kind: reference}
   - {n: 2, title: "Anti-grid icon David Carson on why computers make you lazy (interview, 2019)", by: "Emily Gosling, AIGA Eye on Design", url: "https://eyeondesign.aiga.org/anti-grid-icon-david-carson-on-why-computers-make-you-lazy-and-indie-mag-design-needs-to-liven-up/", kind: own-words}
   - {n: 3, title: "David Carson Design (studio site, with reports of his talks)", by: "David Carson", url: "https://davidcarsondesign.com", kind: own-words}
   - {n: 4, title: "David Carson (graphic designer)", by: "EBSCO Research Starters", url: "https://ebsco.com/research-starters/communication-and-mass-media/david-carson-graphic-designer", kind: reference}
   - {n: 5, title: "What happens when a famous designer goes wayyy off the grid (2016)", by: "Madeleine Morley, AIGA Eye on Design", url: "https://eyeondesign.aiga.org/what-happens-when-a-famous-designer-goes-wayyy-off-the-grid/", kind: secondary}
+  - {n: 6, title: "Interview with graphic designer David Carson (2013)", by: "Designboom", url: "https://www.designboom.com/design/interview-with-graphic-designer-david-carson-09-22-2013/", kind: own-words}
+  - {n: 7, title: "David Carson masterclass: graphic design interview (2021)", by: "Designboom", url: "https://www.designboom.com/design/david-carson-masterclass-graphic-design-interview-04-22-2021/", kind: own-words}
 tests:
   - {kind: use, prompt: "Describe, in words, a magazine spread for an interview with a punk band that breaks the usual layout but still gets read."}
   - {kind: use, prompt: "Our café menu looks like every other café menu. Describe three ways to redesign it so it feels like us."}

@@ -20,7 +20,7 @@ seats:
   - {seat: "Freedom and responsibility", asks: "Do we need this rule, or are we just afraid to trust adults?"}
   - {seat: "The future team", asks: "What team will we need in a year, and is this the team to get us there?"}
 pairs_with: [kim-scott, reed-hastings, peter-drucker, jim-collins, ed-catmull]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Patty McCord", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Patty_McCord", kind: reference}
   - {n: 2, title: "How Netflix Reinvented HR (Harvard Business Review, January to February 2014)", by: "Patty McCord", url: "https://hbr.org/2014/01/how-netflix-reinvented-hr", kind: own-words}
@@ -29,6 +29,9 @@ sources:
   - {n: 5, title: "How the architect of Netflix's innovative culture lost her job to the system (September 2015)", by: "Steve Henn, NPR Planet Money (via HPPR)", url: "https://www.hppr.org/2015-09-03/how-the-architect-of-netflixs-innovative-culture-lost-her-job-to-the-system", kind: secondary}
   - {n: 6, title: "Patty McCord (official site)", by: "Patty McCord", url: "https://pattymccord.com/", kind: reference}
   - {n: 7, title: "Netflix culture memo", by: "Netflix", url: "https://jobs.netflix.com/culture", kind: reference}
+  - {n: 8, title: "The woman behind the Netflix culture doc (interview, February 2015)", by: "Patty McCord, First Round Review", url: "https://review.firstround.com/the-woman-behind-the-netflix-culture-doc/", kind: own-words}
+  - {n: 9, title: "Former Netflix exec: how CEOs miss the mark on corporate culture (interview, July 2018)", by: "Patty McCord, Chief Executive", url: "https://chiefexecutive.net/former-netflix-ceos-miss-mark-corporate-culture/", kind: own-words}
+  - {n: 10, title: "Stop doing dumb stuff! (interview summary, September 2025)", by: "Patty McCord, IESE Insight, via pattymccord.com", url: "https://pattymccord.com/news/iese-insight-stop-doing-dumb-stuff", kind: own-words}
 tests:
   - {kind: use, prompt: "Rewrite this travel and expense policy for a 20-person company as one short principle plus three examples: 'Employees must get approval for any expense over $50, use the approved vendor list, and submit receipts within five days.'"}
   - {kind: use, prompt: "Write a job description for a first marketing hire at a small bakery, built around the problems they need to solve rather than a list of skills."}

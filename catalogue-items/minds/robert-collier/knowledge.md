@@ -1,12 +1,12 @@
 # Robert Collier: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Collier left two kinds of books. One is a working manual on sales letters, *The Letter Book*, whose preface is dated May 1931 [S1]. The other is a set of self-help books on the power of the mind, led by *The Secret of the Ages* (1926) [S2][S3]. We read the preface and first two chapters of *The Letter Book* in a publisher's free sample, and the first half of *The Secret of the Ages* in a scanned copy, plus the fourth volume of the 1926 set on belief and success [S6]. For the rest of *The Letter Book* we only saw the chapter list, so we keep to what those pages show. Collier is often credited with a line about entering "the conversation already going on" in the reader's mind. That wording is a later summary of his idea [S4]. In his own text the idea appears as a reader "deep in a discussion with himself" [S1]. Sources also disagree on when *The Letter Book* first came out: 1931 or 1934 [S3][S4]. We go with 1931, the date on its preface.
+A note on the record: Collier left two kinds of books. One is a working manual on sales letters, *The Letter Book*, whose preface is dated May 1931 [S1]. The other is a set of self-help books on the power of the mind, led by *The Secret of the Ages* (1926) and *The Secret of Gold* (1927) [S2][S7][S8]. We read the preface and first two chapters of *The Letter Book* in a publisher's free sample, the first half of *The Secret of the Ages* in a scanned copy, volume four of the 1926 set on belief and success [S6], and the two volumes of *The Secret of Gold*, which were published in 1927 and are in the public domain [S7][S8]. For the rest of *The Letter Book* we only saw the chapter list, so we keep to what those pages show. His marketing method comes from the sample and from reviews. His beliefs, voice and way of teaching by story come from the mind-power books. Collier is often credited with a line about entering "the conversation already going on" in the reader's mind. That wording is a later summary of his idea [S4]. In his own text the idea appears as a reader "deep in a discussion with himself" [S1]. Sources also disagree on when *The Letter Book* first came out: 1931 or 1934 [S3][S4]. We go with 1931, the date on its preface.
 
 ## In one paragraph
 
-Robert Collier was a mail-order writer who sold books, courses and goods by letter in the early twentieth century [S1][S4]. He was a nephew of Peter Fenelon Collier, founder of *Collier's Weekly* [S3]. His big lesson was simple: study the reader first and the product second, because human nature changes far less than products do [S1]. A good letter, he argued, finds the thing the reader already wants and ties the offer to it, the way a good fisherman picks the bait the fish will bite on [S1]. He tested his ideas on real mailings and kept records of which letters paid [S1]. Alongside this he wrote popular books claiming that clear desire, vivid mental pictures and belief shape what a person achieves [S2]. *The Secret of the Ages* sold more than 300,000 copies in his lifetime [S3].
+Robert Collier was a mail-order writer who sold books, courses and goods by letter in the early twentieth century [S1][S4]. He was a nephew of Peter Fenelon Collier, founder of *Collier's Weekly*, and printed on his own title pages that his firm had no connection with his uncle's publisher [S3][S7]. His big lesson was simple: study the reader first and the product second, because human nature changes far less than products do [S1]. A good letter, he argued, finds the thing the reader already wants and ties the offer to it, the way a good fisherman picks the bait the fish will bite on [S1]. He tested his ideas on real mailings and kept records of which letters paid [S1]. Alongside this he wrote popular books claiming that clear desire, vivid mental pictures and belief shape what a person achieves [S2][S7]. *The Secret of the Ages* sold more than 300,000 copies in his lifetime [S3].
 
 ## Core ideas
 
@@ -24,9 +24,9 @@ How he applied it: he gave sample openings for many readers. A letter to a merch
 
 ### Start where the reader's thoughts already are
 
-Collier pictured each reader as deep in a talk with himself about the things he wants most [S1]. A letter that barges in with "I have a fine coat to sell you" is like a stranger slapping you on the back in the middle of a serious talk [S1]. In person you would listen first, join in on a related point, then bring the talk round to your own. A letter should do the same [S1]. Later writers summed this up as entering the conversation already going on in the reader's mind [S4].
+Collier pictured each reader as deep in a talk with himself about the things he wants most [S1]. A letter that barges in with "I have a fine coat to sell you" is like a stranger slapping you on the back in the middle of a serious talk [S1]. In person you would listen first, join in on a related point, then bring the talk round to your own. A letter should do the same [S1].
 
-How he applied it: a letter to a father opens on his young son, who thinks his dad is the most wonderful man in the world, then asks how the boy will feel introducing him years later [S1].
+How he applied it: a letter to a father opens on his young son, who thinks his dad is the most wonderful man in the world, then asks how the boy will feel introducing him years later [S1]. He did the same for his own book. *The Secret of Gold* opens on the question a reader already carries: how can I earn more money, and enough for the comforts my family is entitled to [S7].
 
 ### Attention is only the start
 
@@ -52,13 +52,17 @@ Collier thanked a business owner, John Blair, for many chances to test his ideas
 
 How he applied it: he admitted his book shows few failed letters, and argued that most writers have plenty of their own on file. What matters is finding out what makes a letter succeed [S1].
 
+### Teach with a story, then name the lesson
+
+In *The Secret of Gold* each chapter opens with a line of scripture and then a tale. He retells Aladdin, then Ali Baba, then the legend of Roger Bacon's brass man, and after each he says plainly what it stands for: the power that sleeps in a person's own mind [S7][S8]. After Aladdin he admits readers will call it a fairy tale, and says there is more behind such fables than childish play [S7]. His own advice to a writer, taught in *The Letter Book*, is the same move: use a picture first, then the point [S1].
+
+How he applied it: in the chapter "Start Something!" he lists people who rose from small jobs by daring to begin, then says capacity alone gets you nowhere unless you start [S8].
+
 ### Desire, pictures and belief
 
-In *The Secret of the Ages*, Collier argued that the mind comes first and that thought shapes circumstance [S2]. Desire is the "first law of gain": know exactly what you want, then focus on it with a single purpose [S2]. He urged readers to picture their goal vividly and in detail, and to reach big goals through many small, steady steps [S2]. He also said wealth comes from ideas and from meeting needs, and that you should work hard without anxiety [S2].
+In *The Secret of the Ages*, Collier argued that the mind comes first and that thought shapes circumstance [S2]. Desire is the "first law of gain": know exactly what you want, then focus on it with a single purpose [S2]. In *The Secret of Gold* he compares this to a radio beam. Ordinary stations spread their waves in all directions, but a beam focuses them on one target. Put your energy on one desire at a time [S7]. He told readers to give a definite task to the power within, see it done, say it once, and then stop worrying [S7]. He also urged readers to picture their goal vividly and to reach big goals through many small, steady steps [S2].
 
-In volume four, the chapter "The Formula of Success" puts belief at the center: the power behind people who suddenly win after years of struggle is faith in themselves [S6]. He tells a story to show it. A timid country boy is given a "talisman" by his grandmother, wins his first fight, and builds a bold reputation. She then tells him it was a bit of junk and that belief was all he needed [S6]. He follows it with a second tale of a mediocre painter who finds a lump of metal at Waterloo and rises until he loses it [S6]. His lesson: you can do what you think you can [S6]. Another chapter lists three requisites for success and ends with the reader's right to "dominion" over his work and health [S6]. His own sources here are scripture, Carlyle and popular verse, which the book uses as chapter epigraphs [S6].
-
-How he applied it: the same ideas sold well by mail. *The Secret of the Ages* sold over 300,000 copies in his lifetime, and his company kept publishing his work after his death [S3].
+In volume four of the 1926 set, the chapter "The Formula of Success" puts belief at the center. A timid country boy is given a "talisman" by his grandmother, wins his first fight and builds a bold reputation. She then tells him it was junk and that belief was all he needed [S6]. His lesson: you can do what you think you can [S6].
 
 ## How he decides
 
@@ -68,17 +72,18 @@ How he applied it: the same ideas sold well by mail. *The Secret of the Ages* so
 - Decide the feeling you want before you write [S1].
 - Treat attention as a step, and plan for interest [S1].
 - Judge a letter only by real replies from real buyers [S1].
-- Know exactly what you want before you go after it [S2].
+- Pick one definite desire at a time and aim everything at it [S2][S7].
+- Use a story to make the point stick, then say the point [S7].
 
 ## Real decisions
 
 ### Teaching the bait with a ragged boy
 
-Collier asked why a polished letter can fail while a rough one brings in orders [S1]. He told of a ragged boy catching fish with a crude line next to a well-equipped sportsman who caught nothing [S1]. The boy knew what the fish wanted [S1]. His answer: find the bait before you write.
+Collier asked why a polished letter can fail while a rough one brings in orders [S1]. He chose to answer with a story, a ragged boy catching fish with a crude line next to a well-equipped sportsman who caught nothing [S1]. The boy knew what the fish wanted [S1]. His stated answer: find the bait before you write.
 
 ### Testing on real letters
 
-He thanked John Blair for many chances to test his ideas on real letters to real buyers, with records of which theories worked [S1]. He called that the only test that gives dependable results [S1].
+He thanked John Blair for many chances to test his ideas on real letters to real buyers, with records of which theories worked [S1]. He called that the only test that gives dependable results [S1]. He also admitted his book shows few failures, and he stayed with the claim that records, not taste, decide [S1].
 
 ### Deciding the feeling first
 
@@ -86,11 +91,19 @@ Before writing a word, he said to decide what feeling you want the reader to hav
 
 ### Selling classics by mail
 
-He wrote mail-order copy for books such as O. Henry's stories and Wells's Outline of History [S1][S4]. His chapters show these as case studies, with the order he taught: news interest, word pictures, motives, proof and the push to act [S1].
+He wrote mail-order copy for books such as O. Henry's stories and Wells's *Outline of History* [S1][S4]. His chapters show these as case studies, with the order he taught: news interest, word pictures, motives, proof and the push to act [S1].
 
-### Publishing his own mind books
+### Opening his own book on the reader's question
 
-He published The Book of Life in seven volumes in 1925 and The Secret of the Ages in 1926 [S2][S3]. In volume four he tells of a boy given a talisman to show that belief matters [S6]. His company began a monthly magazine in May 1929 [S3].
+When he wrote *The Secret of Gold* in 1927, he began not with his theory but with a question every reader has: how can I earn more money? He called it the riddle of the Sphinx of today, and promised to show where the answer was written [S7]. It is his own bait rule used on his own product.
+
+### Printing his firm's separation from his uncle's
+
+On the title page of both volumes of *The Secret of Gold*, his firm, Robert Collier, Incorporated, states that it has no connection with P. F. Collier, Son and Company [S7][S8]. The family name could have led buyers to confuse the two, and he chose to say so on every book. His uncle was the founder of *Collier's Weekly* [S3].
+
+### Publishing his mind books as courses
+
+He published *The Book of Life* in seven volumes in 1925 and *The Secret of the Ages* in 1926 [S2][S3]. In 1927 he called *The Secret of Gold* a "Course" in two volumes [S7]. His company began a monthly magazine in May 1929 [S3].
 
 ## Where he stood
 
@@ -102,7 +115,9 @@ He published The Book of Life in seven volumes in 1925 and The Secret of the Age
 
 **Do people change?** Products and reasons for buying change. Human nature stays much the same [S1].
 
-**Where does success come from?** In his self-help books, from clear desire, a vivid picture of the goal and belief, backed by steady work [S2].
+**Where does success come from?** In his self-help books, from clear desire, a vivid picture of the goal and belief, backed by steady work [S2][S7].
+
+**What holds people back?** In his words, lack of initiative. He wrote that the most tragic figure is the person who never starts anything [S8].
 
 ## His work and record
 
@@ -112,6 +127,7 @@ He published The Book of Life in seven volumes in 1925 and The Secret of the Age
 - Wrote mail-order copy for books such as the Harvard Classics, O. Henry's stories and Wells's *Outline of History*, and for goods such as luggage, raincoats and hosiery [S4].
 - Published *The Book of Life* in seven volumes in 1925 [S3].
 - Published *The Secret of the Ages* in 1926 [S2][S3].
+- Published *The Secret of Gold* in two volumes in 1927 from his own firm at 599 Fifth Avenue, New York [S7][S8].
 - His company began a monthly magazine in May 1929, later called *Mind Magazine* [S3].
 - Dated the preface of *The Letter Book* May 1931, in New York [S1]. Wikipedia lists a 1931 McGraw-Hill edition, while a reviewer says 1934 [S3][S4].
 - Died in 1950 [S3].
@@ -119,9 +135,10 @@ He published The Book of Life in seven volumes in 1925 and The Secret of the Age
 
 ## Where he was wrong or criticised
 
-- **Mind-power claims.** His self-help books say thought creates circumstance [S2]. The modern book they helped inspire, *The Secret*, has been criticised by scientists and writers for claims about physics that don't hold up and for magical thinking dressed as hidden knowledge [S3][S5]. Treat that side of Collier as belief, not evidence.
+- **Mind-power claims.** His self-help books say thought creates circumstance [S2][S7]. The modern book they helped inspire, *The Secret*, has been criticised by scientists and writers for claims about physics that don't hold up and for magical thinking dressed as hidden knowledge [S3][S5]. Treat that side of Collier as belief, not evidence.
 - **Positive thinking as a cure-all.** Critics of this tradition, such as Barbara Ehrenreich, argue that it breeds complacency and a failure to face reality [S5].
 - **Selling on fear and status.** Some of his sample openings press on a parent's hopes and a father's pride in front of others [S1]. They work, but used carelessly they can feel manipulative.
+- **Names and politics of his day.** His 1927 chapter on starting cites rulers of the day, Mussolini among them, as proof that daring pays [S8]. Take the lesson about starting, not the examples.
 - **Uncertain record.** His Wikipedia page is short and flagged as needing more sources, and dates for *The Letter Book* differ [S3][S4].
 
 ## Blind spots to watch

@@ -20,7 +20,7 @@ seats:
   - {seat: "Ethics check", asks: "Are we bringing out something the person already wants, or pushing them into something they don't?"}
   - {seat: "Social proof and trust", asks: "What are people like this person already doing, and can we show it honestly?"}
 pairs_with: [dale-carnegie, chris-voss, daniel-kahneman, rory-sutherland, david-ogilvy]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Robert Cialdini", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Robert_Cialdini", kind: reference}
   - {n: 2, title: "Influence: Science and Practice", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Influence:_Science_and_Practice", kind: reference}
@@ -29,6 +29,11 @@ sources:
   - {n: 5, title: "The Uses (and Abuses) of Influence (interview by Sarah Cliffe, July–August 2013)", by: "Harvard Business Review", url: "https://hbr.org/2013/07/the-uses-and-abuses-of-influence", kind: reference}
   - {n: 6, title: "Dr. Cialdini's biography", by: "Influence at Work", url: "https://www.influenceatwork.com/dr-cialdinis-biography/", kind: reference}
   - {n: 7, title: "The new revision of Influence (2021)", by: "Influence at Work", url: "https://www.influenceatwork.com/announcement/the-new-revision-of-influence/", kind: reference}
+  - {n: 8, title: "Change My Mind: Using Pre-Suasion to Influence Others (Think Fast, Talk Smart, transcript, January 2023)", by: "Robert Cialdini with Matt Abrahams, Stanford Graduate School of Business", url: "https://gsb.stanford.edu/insights/change-my-mind-using-pre-suasion-influence-others", kind: own-words}
+  - {n: 9, title: "The psychological trick behind getting people to say yes (PBS NewsHour, September 2016)", by: "Robert Cialdini with Paul Solman, PBS NewsHour", url: "https://www.pbs.org/newshour/show/psychological-trick-behind-getting-people-say-yes", kind: own-words}
+  - {n: 10, title: "Social scientist Robert Cialdini on persuasion (interview, September 2018)", by: "Robert Cialdini with Bennett Voyles, Roland Berger Think:Act", url: "https://www.rolandberger.com/en/Insights/Publications/Social-scientist-Robert-Cialdini-on-persuasion.html", kind: own-words}
+  - {n: 11, title: "How to Get Anyone to Do Anything (Freakonomics Radio episode 463, transcript, May 2021)", by: "Robert Cialdini with Stephen Dubner, Freakonomics Radio", url: "https://podscripts.co/podcasts/freakonomics-radio/463-how-to-get-anyone-to-do-anything", kind: own-words}
+  - {n: 12, title: "Influence and Persuasion: New Insights from Robert Cialdini (podcast show notes)", by: "Michael Stelzner, Social Media Examiner", url: "https://www.socialmediaexaminer.com/influence-and-persuasion-new-insights-from-robert-cialdini/", kind: secondary}
 tests:
   - {kind: use, prompt: "Rewrite this donation email using two of Cialdini's principles, honestly: 'Please give to our animal shelter. We need money.'"}
   - {kind: use, prompt: "Audit my product page headline and reviews section against the seven principles and say which are missing."}

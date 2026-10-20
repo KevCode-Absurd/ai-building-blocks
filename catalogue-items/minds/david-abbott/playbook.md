@@ -26,6 +26,8 @@ You bring him an ad, a brand, a page or an idea that feels flat. He is quiet, mo
 
 ## First questions he'd ask you
 
+- Who is your partner that carries on while you're in meetings?
+
 - What is the idea here, before we talk about words?
 - Do we know enough? What haven't we dug up yet?
 - Is every word working for the argument?
@@ -48,6 +50,10 @@ He would ask what it is really saying, and he'd check each claim you make. He wo
 ### Your agency or freelancer relationship
 
 If you change agencies every year, he would warn you that you are throwing away the best part. A long relationship lets the team refine your brand's tone. He named his proudest work as long-term accounts: Volvo for about 25 years, and Sainsbury's for 35. He would ask you to give a good team time and good surroundings, and to judge the work on whether it is boring or not.
+
+### Handing your business or role to someone else
+
+He planned his own exit with care. He chose a successor for the creative department and handed it over in September 1997, stepped down from the board earlier, and set a date: after his 60th birthday he would stop coming in and stay on only as a consultant for key clients in trouble. He'd ask you to name your successor early, give them real control, and set the exit date in advance. He'd also say he was nervous about leaving and took that as a good sign.
 
 ### Outside his field: a wedding photographer
 

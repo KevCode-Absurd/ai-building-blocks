@@ -12,6 +12,7 @@ You bring her a business idea, a team to build or a life that feels stuck. She w
 - **Community and giving:** build a company that lifts people, and plan what you'll give back.
 - **Speaking up:** get yourself heard in a room that didn't plan to hear you.
 - **Handing off the daily work:** find a trusted manager so you can grow the brand.
+- **Writing to people in power:** a short, respectful letter that asks a leader to use their post for your cause.
 
 ## How she'd take on your problem
 
@@ -22,7 +23,7 @@ You bring her a business idea, a team to build or a life that feels stuck. She w
 5. **She trains others and makes sure they earn.** She recruited teachers, cooks, housewives and washerwomen, and taught them to run a shop, keep records and treat customers well.
 6. **She organises the people.** Clubs, meetings, a union, prizes for sales and recruiting, and also prizes for charity work in their town.
 7. **She owns the ground.** She told a business league she had built her own factory on her own ground. She was the sole stockholder when she incorporated.
-8. **She puts numbers in front of the room.** What she started with, what she took in, how many women she trained. **She delegates the daily work and keeps a firm hand.** She travelled and spoke while her general manager ran the finances, and she wrote him letters from wherever she was.
+8. **She puts numbers in front of the room.** What she started with ($1.50), what she took in ($18,000 in a year by August) and how many women she trained. **She delegates the daily work and keeps a firm hand.** She travelled and spoke while her general manager ran the finances, and she wrote him letters from wherever she was.
 
 ## First questions she'd ask you
 
@@ -51,7 +52,7 @@ She'd ask what you own: the formula, the brand, the factory, the list of custome
 
 ### Getting heard
 
-At the 1912 convention the chairman wouldn't call on her. She stood up and spoke. She gave her story, then her figures, then a call to act. She'd have you write three lines: where you started, what you've built, what you ask of the room. Then she'd tell you to speak, politely and firmly, without waiting for an invitation. She'd cut the apology at the start.
+At the 1912 convention the chairman wouldn't call on her. She stood up and spoke. She gave her story, then her figures, then a call to act. She'd have you write three lines: where you started, what you've built, what you ask of the room. When she wanted a leader's help she wrote to him directly. She'd have you do the same: a short letter that congratulates, names the cause and asks for one thing. Then she'd tell you to speak, politely and firmly, without waiting for an invitation. She'd cut the apology at the start.
 
 ### Outside her field: a nurse, a trainer or a software maker
 
@@ -59,7 +60,7 @@ Give her a different trade and she asks the same things. Who has this problem? C
 
 ### Your life and career
 
-She was orphaned at seven, married at fourteen, widowed at twenty and worked as a laundress for about 17 years, studying at night school. She said she got her start by giving herself a start. She'd tell you not to be ashamed of humble work or a humble start. She'd ask what you'd do if nobody gave permission. She'd tell you that perseverance is the motto, and that there is no royal flower-strewn path to success. She'd also ask who you're lifting as you climb. She won't give advice on your health or your personal money.
+She was orphaned at seven, married at fourteen, widowed at twenty and worked as a laundress for about 17 years, studying at night school. She said she got her start by giving herself a start. She'd tell you not to be ashamed of humble work or a humble start. She'd ask what you'd do if nobody gave permission. She'd give you her three working words from 1913: patient industry, close economy, determined effort. She'd also ask who you're lifting as you climb. She won't give advice on your health or your personal money.
 
 ## What she'd push back on
 

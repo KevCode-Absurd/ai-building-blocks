@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Stephen Covey died in 2012 [S1]. His main ideas come from his books, above all *The 7 Habits of Highly Effective People* (1989), which we know here through reference pages that summarise it [S2][S3][S5]. His own words come from three short columns he wrote for HuffPost late in life, on a budget fight in Washington, schools and family conflict [S6][S7][S8]. FranklinCovey's own page sets out the seven habits as the firm now teaches them [S5]. We have no interview or long talk of his, so his voice rests on those columns, and the results he reports in them are his own claims, not outside studies. He was a practising member of The Church of Jesus Christ of Latter-day Saints, and some critics read his "universal" principles as religious ones [S1][S3]. We note that where it matters. Nothing here tells you what he would think about events after 2012.
+A note on method: Stephen Covey died in 2012 [S1]. His main ideas come from his books, above all *The 7 Habits of Highly Effective People* (1989), which we know here through reference pages that summarise it [S2][S3][S5]. His own words come from three short columns he wrote for HuffPost late in life, on a budget fight in Washington, schools and family conflict [S6][S7][S8], and one full talk, a 1975 devotional to students at Brigham Young University [S9]. Three secondary pieces add his spoken views: a 2008 Harvard Business School student-paper profile [S10], a 2011 BYU alumni magazine report of a student visit [S11], and an obituary that quotes interviews he gave to the Daily Telegraph, Fortune and the New Yorker [S12]. We have no long recorded interview or transcript of his, so his spoken voice rests on the 1975 talk and on quotations in those pieces. The results he reports in his columns are his own claims, not outside studies. He was a practising member of The Church of Jesus Christ of Latter-day Saints, and the 1975 talk is a religious address to church students, so we use it for his method and not for doctrine [S1][S3][S9]. Some critics read his "universal" principles as religious ones, and we note that where it matters. Nothing here tells you what he would think about events after 2012.
 
 ## In one paragraph
 
@@ -10,17 +10,13 @@ Covey was a teacher, author and consultant who argued that lasting success comes
 
 ## Core ideas
 
-### Principles are natural laws, values are personal
+### Principles are natural laws, and change starts inside
 
 Covey drew a firm line between principles and values. Principles work like natural laws outside us, such as honesty or fairness. Values are what we each hold inside [S1][S3]. Values steer how we act, but principles decide what happens as a result [S1]. So a person can value something that clashes with a principle and still pay the price.
 
 How he applied it: he used a map image. Trying to find your way around Chicago with a map of Detroit fails, however hard you try or however upbeat you feel. You need the right map first [S3]. Changing the map is what he called a paradigm shift [S3].
 
-### Inside out: private victory before public victory
-
-Covey said change starts inside the person and works outward [S3]. The first three habits build a "private victory" of self-mastery. Habits four to six build a "public victory" of working well with others [S5]. He saw this as a path from dependence, through independence, to interdependence [S1][S5].
-
-How he applied it: in the schools that used his model, teachers and staff learned and lived the habits themselves before they taught them to children [S7].
+He also said change starts inside the person and works outward. The first three habits build a "private victory" of self-mastery, and habits four to six build a "public victory" of working well with others, a path from dependence to independence to interdependence [S1][S5]. In schools that used his model, teachers and staff learned and lived the habits before they taught them to children [S7].
 
 ### Be proactive
 
@@ -64,6 +60,12 @@ The seventh habit is renewal. Covey said a person has to keep looking after thei
 
 How he applied it: his later book *The 8th Habit* (2004) argued that being effective is no longer enough. The next step is to find your own voice and help others find theirs [S1][S3].
 
+### Contribution, stewardship and a flexible mission
+
+In a visit to BYU reported in 2011, Covey said the key to success is contribution, not accumulation [S11]. He told students a personal mission statement should cover body, mind, heart and spirit, and that it can change as they learn: write your present view, then update it [S11]. In a 1975 talk he used the word stewardship for a duty you accept, then report on. He taught a rhythm of listening, committing to what you hear, then returning to report on how it went [S9]. He told Harvard students to build their lives on principles that point north, and to strive for real contributions in their circle of influence, not rely on a degree [S10].
+
+How he applied it: he advised a student unsure of the future to be patient and not decide the end all at once [S11].
+
 ## How he decides
 
 - Check the principle first. If a choice breaks a principle, the result will follow, whatever your values say [S1].
@@ -74,28 +76,44 @@ How he applied it: his later book *The 8th Habit* (2004) argued that being effec
 - Refuse the false choice between two options. Look for a third [S6].
 - Work on yourself before you try to fix others [S3][S7].
 - Treat trust as a balance you build with kept promises [S2].
+- Ask a question, ask people to pause and sense their own answer, then commit to act and report back [S9].
+- Put family ahead of work, and accept short seasons of imbalance [S10].
 - Don't argue until the other person feels understood. Don't prepare a reply while they talk, and don't defend yourself [S8].
 - Ask open "what if" questions together before you pick a plan [S6].
 
 ## Real decisions
 
-### Telling a President that accountability alone is not enough
-In the school column he says he told President George W. Bush that a hard focus on accountability could produce better test-takers instead of fuller people. His reason was that the root of the problem is each child's capacity to lead their own life, not the score. [S7]
+### Choosing to train leaders instead of joining the family business
 
-### Taking his habits into a school near closing
-He describes A.B. Combs Elementary in Raleigh, a struggling magnet school facing closure. Staff adopted the seven habits as a leadership theme, wove them into every subject and gave every child a leadership role, including children with special needs. He reports big gains in test passes, enrolment and discipline, and a later spread to more than 200 schools. The figures are his own account. [S7]
+After his business degree in 1952, Covey planned to join his family's chain of hotels and restaurants [S12]. A two-year church mission in England changed that. He was asked to train the leaders of new congregations and discovered he loved it, which he later said became his whole life's mission [S12]. He went on to graduate study and teaching at Brigham Young University [S1][S3].
 
-### Telling a Congress committee to widen the mandate
-In 2011 the Super Committee faced a $1.2 trillion target and automatic cuts if it failed. Covey did not pick a side on tax or benefits. He said the deadlock came from different worldviews, and urged the members to put every option on the table, look for a solution better than any of them had imagined and act in good faith. He gave no policy detail. [S6]
+### Leaving the university to teach organisations
 
-### Advising brothers to listen before they bargain
-In the family column, one brother lent $20,000, then refused more when it was spent. The business failed and they stopped speaking for years. The lender finally invited his brother to talk by the fire, listened without answering back and saw how deeply he had hurt him. Only then did he ask for a third way. They brought in an investor and the business grew. [S8]
-
-### Leaving the university to teach the work in business
-In 1984 he left Brigham Young University to found the Covey Leadership Center, to take his principle-centred approach to organisations. [S3]
+In 1984 he left BYU to found the Covey Leadership Center, which took his principle-centred approach to companies [S3]. The record gives the move but not a long statement of his reasons beyond the work he wanted to do [S3]. The centre merged with Franklin Quest in 1997 [S3][S4].
 
 ### Merging with a planner company
-His centre joined Franklin Quest in 1997 to form FranklinCovey. The record shows a hard result: the stock fell from about $20 to under $1 by early 2003, and the company later closed its stores and sold its paper planner business. [S3][S4]
+
+The 1997 merger created FranklinCovey, a training firm that also sold planners [S3][S4]. The result was hard. The stock fell from about $20 to under $1 by early 2003, and the firm later closed its stores and sold its paper planner business [S3][S4]. Business press blamed bureaucracy, poor planning and infighting [S4].
+
+### Asking students to listen to their own conscience
+
+In a 1975 devotional at BYU, Covey did not lecture. He asked students four questions and told them to pause and sense the answers inwardly: how to draw closer to their faith, be better in their family, serve in their church role and do their job as a student [S9]. His stated reason was that people already know many things they should do, and that the wait is the problem [S9]. When a student asked how to tell a true inner voice from wishful thinking, he told her to forget the question and just do those things, and she later reported a clear difference [S9].
+
+### Putting family ahead of work
+
+Covey told Harvard Business School's student paper in 2008 that no success makes up for failure at home [S10]. He said he would pay whatever price it took to keep his family close, while accepting that some seasons are out of balance [S10]. His reason was that focusing on the important rather than the urgent lets work and family help each other [S10].
+
+### Telling a President that accountability is not enough
+
+In his school column, Covey says he told President George W. Bush that a hard focus on accountability could produce better test-takers rather than fuller people [S7]. His reason was that the root of the problem is each child's capacity to lead their own life, not the score [S7].
+
+### Taking his habits into a school near closing
+
+He describes A.B. Combs Elementary in Raleigh, a struggling magnet school facing closure [S7]. Staff took the seven habits as a leadership theme, wove them into every subject and gave every child a leadership role [S7]. He reports large gains in test passes, enrolment and discipline, and a spread to more than 200 schools [S7]. The figures are his own account, not an outside study [S7].
+
+### Widening the mandate of a congress committee
+
+In 2011 a US Congress Super Committee faced a $1.2 trillion target and automatic cuts if it failed [S6]. Covey did not pick a side on tax or benefits. He said the deadlock came from different worldviews, and urged the members to put every option on the table and look for a solution better than any of them had imagined [S6]. He gave no policy detail [S6].
 
 ## Where he stood
 
@@ -144,8 +162,8 @@ These points are about the business he built and the evidence behind his claims.
 
 ## Short phrases on the record
 
-- "Find your voice and inspire others to find theirs." (*The 8th Habit*, as given by Wikipedia) [S1]
-- "leadership is a choice, not a position" (HuffPost column on schools) [S7]
-- "Like most dilemmas, the deficit dilemma is false." (HuffPost column on the 2011 deficit fight) [S6]
+- "The key to success is not accumulation but contribution." (reported in a 2011 BYU magazine) [S11]
+- "No success can compensate for failure in the home" (2008 interview) [S10]
+- "what's common sense just isn't common practice" (his reply to a critic, as quoted in an obituary) [S12]
+- "principles which always point north" (2008 interview) [S10]
 - "A 3rd Alternative is not a compromise" (HuffPost column on the 2011 deficit fight) [S6]
-- "a listening ear wins a heart" (HuffPost column on family conflict) [S8]

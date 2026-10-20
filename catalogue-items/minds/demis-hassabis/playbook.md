@@ -23,7 +23,7 @@ You bring him a goal or a stuck project. He listens calmly, then asks what the r
 5. **He pairs a narrower with a search.** A learned model cuts the options to a few promising ones. Then a search picks the best in the time you have. As he put it, it's all about making this search tractable.
 6. **He designs each experiment so failure teaches.** A good experiment splits the possible answers. He says good questions are harder to find than good answers.
 7. **He sets milestones and an outside judge.** AlphaFold was scored by a blind contest and aimed at the accuracy experts said they needed. If progress flattens for years, he rebuilds the approach. AlphaGo and AlphaFold were each a clear test of whether the methods worked. What is yours?
-8. **He checks the risks, then shares widely.** Before the protein database went out, more than 30 experts in biosecurity and ethics were consulted. No moving fast and breaking things with a powerful tool.
+8. **He tests for danger before release, then shares widely.** He finds dangerous behaviour early with evaluations and red teams, with outsiders too, and says he wouldn't live A/B test anything consequential. Before the protein database went out, more than 30 experts in biosecurity and ethics were consulted. No moving fast and breaking things with a powerful tool.
 
 ## First questions he'd ask you
 

@@ -1,12 +1,14 @@
 # Tibor Kalman: how he thinks and talks
 
-This is drawn from his 1993 Eye interview, his short AGI statement, and how colleagues, critics and obituaries described him. It describes a public voice, not the private man.
+This is drawn from his 1993 Eye interview, his 1991 Print debate with Joe Duffy, his short AGI statement, and how colleagues, critics and obituaries described him. It describes a public voice, not the private man.
 
 ## Voice
 
 Blunt, funny and restless. He talks in short, punchy lines and likes a slogan with an edge: "We're here to be bad." He mixes street talk with big ideas, and slides from typefaces to racism, AIDS and corporate power in the same breath. He is impatient with polish, jargon and self-congratulation, including his own profession's.
 
 He likes to turn things upside down to see if they improve. Humour is a weapon: absurd office design, barking-dog sounds at a design event, a doctored photo of the Queen. Underneath the jokes he is serious, even moral. He often speaks as an outsider, a child refugee who looked at America from the side.
+
+In the Print debate he is more candid about money and compromise than his slogans suggest. He admits he is in the business by accident, that the firm does boring work that pays for suits, and that M&Co is a business, not an art studio, while he still says design should be practised more like an art. He argues against a rival by naming a specific job and what he would not do on it.
 
 ## How he argues
 

@@ -20,7 +20,8 @@ seats:
   - {seat: "Going global", asks: "Would this name, this product and this message work just as well in another country?"}
   - {seat: "Creativity by target", asks: "What one hard target can we give the engineers that forces something new?"}
 pairs_with: [steve-jobs, konosuke-matsushita, soichiro-honda, phil-knight, jony-ive]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
+thin_record: "Morita's long book is in copyright; only a 1983 interview profile, quoted passages and short interview answers are freely readable, and Sony's own history pages could not be fetched."
 sources:
   - {n: 1, title: "Akio Morita", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Akio_Morita", kind: reference}
   - {n: 2, title: "Chronology of Akio Morita", by: "Tengai Foundation (official Akio Morita site)", url: "https://akiomorita.com/en/chronology/", kind: reference}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Wright wrote a great deal over 60 years. This data set reads two of his early texts in full, both now in the public domain: the 1901 lecture "The Art and Craft of the Machine" [S1] and his 1912 essay *The Japanese Print: An Interpretation* [S2]. Facts about his life, buildings and critics come from reference pages [S3][S4][S5][S6]. His later books, such as *An Autobiography* (1932), are not covered here. Because the early texts are in the public domain, we quote a few short lines from them.
+A note on method: Wright wrote a great deal over 60 years. This data set reads four texts of his, three in the public domain: the 1901 lecture "The Art and Craft of the Machine" [S1], his 1912 essay *The Japanese Print: An Interpretation* [S2], and the two essays "In the Cause of Architecture" from *Architectural Record*, March 1908 and May 1914 [S7][S8]. It also uses his 1957 television interview with Mike Wallace, in a page that carries the transcript [S9]. Facts about his life, buildings and critics come from reference pages [S3][S4][S5][S6][S10][S11][S12]. His later books, such as *An Autobiography* (1932), are not covered here. Because the early texts are in the public domain, we quote a few short lines from them. We read the 1908, 1914 and 1957 pages through a summarising tool, so we quote from them only where the phrase appeared in quotation marks. Details of the Fallingwater, Johnson Wax and Guggenheim stories rest on Wikipedia pages that cite the standard histories, so treat dates as the pages give them.
 
 ## In one paragraph
 
@@ -65,25 +65,47 @@ From the 1930s Wright designed Usonian houses: small, one-storey homes for middl
 - Make the interior space the real building [S6].
 - Bring good design to people of modest means [S5].
 
+### One house for each person
+
+In 1908 Wright said a person deserves a home that expresses them, so there should be as many house styles as there are people [S7]. He asked "what is style?" rather than "what style?" [S7]. A client shows individuality chiefly by choosing the architect, who should then idealize the client's character [S7]. He also said wealthy, cultured clients often cared less for a house's integrity than for fashion [S7].
+
+How he applied it: he designed each Prairie house for its lot and family, keeping a few fixed rules, such as few rooms around a central living room, built-in furniture and low roofs [S7].
+
+### Organic means from the inside out
+
+In 1914 Wright defined organic architecture as architecture that develops from within outward, as opposed to forms applied from outside [S8]. He said the ideal is demanding, not a licence to do what you like, and that only earnest artist integrity can produce lasting work [S8]. He named Louis Sullivan as his master and said his forms came from careful study of materials and of the machine, which he called the real tool for giving shape to ideals [S8]. He also warned that brokers and imitators were exploiting the cause, and that someone should say so plainly [S8].
+
+How he applied it: he designed the ground plan and the elevation together in three dimensions, rather than letting a perspective sketch fix the plan [S7].
+
+### Answer critics with a question
+
+In the 1957 Mike Wallace interview he met a challenge by reframing it: when Wallace called him arrogant, he said anyone with faith in himself will be called arrogant by his fellows [S9]. When told the Guggenheim looked like a washing machine, he said he had heard such criticism often and thought it worthless [S9]. He asked questions back, such as what the idea is, to put the work on the other person [S9]. He called the New York skyline unplanned, a race for rent, and a monument to money in place of ideas [S9].
+
 ## Real decisions
 
-### Putting Fallingwater above the falls
-Edgar Kaufmann expected a house facing the waterfall from downstream. Wright placed it over the falls so the family would live with the water, not just look at it [S4]. Breezes and the sound of the water reach the rooms, and he built braces around existing trees [S4].
+### Writing down his rules for the house (1894, published 1908)
+In 1908 Wright set out six propositions he said he had written in 1894: simplicity and repose, individuality, a building that grows from its site, colours taken from woods and fields, materials left to show their nature, and sincerity of character [S7]. His reason was that a house with character gains value as it ages, while a fashionable one goes stale [S7]. He then listed the houses that carried them out, from the Winslow and Willits houses to the Larkin Building [S7]. He added that most of his support came from businessmen with common sense, who value their own independent judgment [S7].
 
-### Overruling the engineers
-The client's engineers listed at least eight problems at Fallingwater and Wright overruled them. Contractors added steel he had rejected [S4]. The terraces later sagged about seven inches and needed a $4 million repair in 2001 to 2002 [S4]. It is a case of his confidence costing the client.
+### Putting Fallingwater above the falls (1934 to 1935)
+Edgar Kaufmann expected a house downstream of the waterfall, facing it. Wright visited in December 1934, asked for a survey of the area around the falls, and placed the house above them [S4]. He said he wanted the family to live with the waterfall, not look at it [S4]. When Kaufmann phoned in September 1935 to say he was coming, Wright's sketches were reportedly done by the time he arrived, and he sent preliminary plans on 15 October 1935 [S4]. Breezes and the sound of the water reach the rooms, and he built braces around existing trees [S4].
 
-### Standing up for the machine in 1901
-Speaking to the Chicago Architectural Club, he praised William Morris, then disagreed with him: the machine, he said, was a marvelous simplifier and would serve democracy if artists took it up [S1]. His reason was that the artist had to solve the riddle of the machine, not run from it [S1].
+### Overruling the engineers at Fallingwater (1936)
+In February 1936 Pittsburgh engineers hired by Kaufmann reviewed the plans and advised against building, citing at least eight structural problems [S4]. In August 1936 Kaufmann asked for extra steel in the terrace, and Wright rejected it, thinking it would overload the terraces [S4]. Contractors added the steel anyway, and when Wright found out he wrote that he had put so much more into the house than any client had a right to expect [S4]. The first-floor terrace sank about 1.75 inches when its forms came off, the final cost was $155,000, nearly four times the budget, and a $4 million repair came in 1999 to 2001 [S4]. It is a case of his confidence costing the client.
 
-### Proposing a society that studies factories
-In the same talk he proposed an arts and crafts society whose first work would be to study factories and processes, and he criticised art schools for not teaching the tools students would use [S1].
+### Testing a column to win the Johnson Wax permit (1937)
+In 1936 Herbert Johnson dropped another architect's design and hired Wright, who offered a building at $200,000 and promised it would not be what the client expected [S10]. In 1937 state officials refused the slim mushroom columns for the great workroom as too thin. Wright built one full-size column and poured it in late May, and it carried 60 short tons before it showed strain, so he ordered it pulled down and the state approved [S10]. His aim was a workroom that lifted its workers, with light and few windows, as in his earlier Larkin Building [S10].
 
-### Building small houses for the middle class
+### Holding to Pyrex tubing against warnings (1938)
+Wright spent a year in 1937 adjusting the details of the glass tubing for the Johnson Wax walls and skylights [S10]. His apprentices and the builder warned that the Pyrex skylights would leak, but he refused other materials [S10]. Herbert Johnson secretly ordered ordinary glass, and used the Pyrex only after Wright threatened to resign [S10]. The caulking peeled and the roof leaked for years, and the tower he built later, from 1947 to 1950, was left without sprinklers by his choice because he disliked how they looked, with Johnson agreeing to pay a higher insurance rate [S10].
+
+### Founding the Taliesin Fellowship (1932)
+In October 1932, at 65, Wright gathered 23 young men at Taliesin in Wisconsin to live and work with him [S12]. He had had few paying clients for years, the Depression had cut building, and his home had burned [S12]. The apprentices learned architecture from the ground up and ran a self-sufficient community, growing food, cutting lumber, quarrying stone and building their own quarters [S12]. They later helped build Fallingwater and the Johnson Wax headquarters, and in 1937 he led them in a caravan to Arizona, where they built the winter quarters later called Taliesin West [S12]. He believed design should come from fresh young minds [S12].
+
+### Drawing the Guggenheim as a ramp (1943 to 1959)
+Hilla Rebay and Solomon Guggenheim wrote to Wright in 1943, and he was hired in June [S11]. He made four designs by early 1944, one hexagonal and three circular, and chose a continuous ramp rising six stories around an atrium, so visitors would ride up and walk down [S11]. His stated aim was to show the plasticity of organic forms, and he saw the spiral as organic progress [S11]. He made more than 700 sketches and six sets of working drawings, the city rejected his permit in 1953, and the cost doubled [S11]. Construction began in 1956 and the museum opened in October 1959, six months after he died [S11].
+
+### Making small houses for the middle class (from the 1930s)
 From the 1930s he made more than 300 Usonian designs, about 140 of them built, with open plans, carports, radiant heating and native materials [S5]. The Jacobs House in Madison (1937) is often called the first [S5]. The aim was good design at low cost for families on middle incomes [S5].
-
-### Reading Japanese prints as structure
-In 1912 he wrote that Japanese prints show simplification by eliminating the insignificant, with geometry as the skeleton [S2]. He used them to teach architects to build from an inner idea, not copy old styles [S2].
 
 ## Where he stood
 
@@ -130,10 +152,10 @@ In 1912 he wrote that Japanese prints show simplification by eliminating the ins
 
 ## Short phrases on the record
 
-From works in the public domain, except the last.
+From works in the public domain, except the last two.
 
 - "the machine is a marvelous simplifier" (1901) [S1]
-- "the forerunner of democracy" (on the machine, 1901) [S1]
 - "a stringent simplification by elimination of the insignificant" (1912) [S2]
 - "Geometry is the grammar, so to speak, of the form" (1912) [S2]
 - "I want you to live with the waterfall, not to look at it." (to the Kaufmanns, as reported) [S4]
+- "I put a capital N on Nature, and call it my Church." (1957 interview) [S9]

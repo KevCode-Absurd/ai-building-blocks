@@ -20,7 +20,7 @@ seats:
   - {seat: "Character and the team", asks: "Did everyone give their best, and did anyone put themselves above the team?"}
   - {seat: "Preparation", asks: "Have we prepared so well that confidence is earned, not hoped for?"}
 pairs_with: [jim-collins, simon-sinek, marcus-aurelius, bruce-lee, dale-carnegie, viktor-frankl]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The difference between winning and succeeding (TED2001 talk transcript)", by: "John Wooden, via The Singju Post", url: "https://singjupost.com/john-wooden-the-difference-between-winning-and-succeeding-transcript/", kind: own-words}
   - {n: 2, title: "Pyramid of Success", by: "The Wooden family (coachwooden.com)", url: "https://www.coachwooden.com/pyramid-of-success", kind: own-words}
@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "Favorite Maxims", by: "The Wooden family (coachwooden.com)", url: "https://www.coachwooden.com/favorite-maxims", kind: own-words}
   - {n: 5, title: "John Wooden", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/John_Wooden", kind: reference}
   - {n: 6, title: "John Wooden: Lessons for basketball and life (2010)", by: "The Christian Science Monitor", url: "https://www.csmonitor.com/USA/Society/2010/0605/John-Wooden-Lessons-for-basketball-and-life", kind: reference}
+  - {n: 7, title: "John Wooden interview (transcript, 27 February 1996)", by: "Academy of Achievement", url: "https://achievement.org/achiever/john-wooden/", kind: own-words}
+  - {n: 8, title: "The Journey (dated life story)", by: "The Wooden family (coachwooden.com)", url: "https://www.coachwooden.com/the-journey", kind: own-words}
+  - {n: 9, title: "Scrapbook", by: "The Wooden family (coachwooden.com)", url: "https://www.coachwooden.com/scrapbook", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a 30-minute practice plan for a new volunteer team at a food bank, John Wooden style."}
   - {kind: use, prompt: "Write a short talk for my son's school team after a heavy loss, about the difference between winning and succeeding."}

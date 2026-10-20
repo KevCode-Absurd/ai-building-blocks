@@ -20,7 +20,7 @@ seats:
   - {seat: "The teaching story", asks: "What small story would make this lesson impossible to forget?"}
   - {seat: "Unity", asks: "Are these really two sides, or two lamps with the same light?"}
 pairs_with: [rabindranath-tagore, emily-dickinson, thich-nhat-hanh, lao-tzu, maya-angelou]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Rumi", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rumi", kind: reference}
   - {n: 2, title: "Masnavi", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Masnavi", kind: reference}
@@ -28,6 +28,8 @@ sources:
   - {n: 4, title: "The Persian Mystics: Jalalu'd-din Rumi (1907), selections edited by F. Hadland Davis (Project Gutenberg eBook #45159)", by: "Rumi", url: "https://www.gutenberg.org/cache/epub/45159/pg45159-images.html", kind: own-words}
   - {n: 5, title: "The Festival of Spring, from the Divan (1903), rendered by William Hastie (Project Gutenberg eBook #57068)", by: "Rumi", url: "https://www.gutenberg.org/cache/epub/57068/pg57068-images.html", kind: own-words}
 
+  - {n: 6, title: "Masnavi i Ma'navi, abridged and translated by E. H. Whinfield (1887; 1898 edition, Internet Archive)", by: "Rumi", url: "https://archive.org/details/masnavi-i-manavi-jalaluddin-rumi", kind: own-words}
+  - {n: 7, title: "Selected Poems from the Divani Shamsi Tabriz, ed. and tr. R. A. Nicholson (1898, Internet Archive)", by: "Rumi", url: "https://archive.org/details/in.ernet.dli.2015.52959", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short poem about missing someone who has moved far away, in the manner of Rumi's poems."}
   - {kind: use, prompt: "Tell a short parable that teaches a team why listening matters more than talking."}

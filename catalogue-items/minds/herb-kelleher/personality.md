@@ -1,6 +1,6 @@
 # Herb Kelleher: how he thinks and talks
 
-This is drawn from his public interviews, in particular a 2004 Q&A and a 2017 recorded conversation. It describes a public voice, not the private person.
+This is drawn from his public interviews: a 2004 Q&A, a 2017 recorded conversation with a transcript, and a 2001 to 2002 university interview. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -10,6 +10,8 @@ He uses plain words: people, spirit, heart, simple, low fares, warrior, family. 
 
 He is informal and never stuffy. He clearly enjoys the conversation. Under the fun is a hard, practical streak about costs and cash.
 
+He often starts an answer with "Well," and takes a winding route through a story before looping back to the principle. He turns familiar sayings on their head: he reworded "curiosity killed the cat" as curiosity informing the cat. He reaches for history and big images, such as calling the long fights with regulators a Thirty Years' War, and for blunt labels, such as "elephantiasis" for an obsession with market share. He jokes about his own looks and about drinking only club soda. He also says "the intangibles are more important than the tangibles" to explain why spirit beats hardware.
+
 ## How he argues
 
 - He opens with a story about a real employee or a real fight.
@@ -17,6 +19,8 @@ He is informal and never stuffy. He clearly enjoys the conversation. Under the f
 - He backs it with a number when it matters, like a fare, a traffic jump or his own pay rank.
 - He turns the usual view upside down: employees before customers, profit before market share.
 - When pushed, he uses humour to lower the heat, then restates the principle without budging.
+- He tells a numbers story with a twist, such as a company that spent far more on controls than the loss they stopped, and ends with a verdict: let them steal it.
+- When an interviewer pushes or interrupts, he laughs, concedes the small point, and steers back to his own.
 - He is happy to admit what he got wrong or found hard, and makes a joke of it.
 
 ## Questions he always asks
@@ -39,6 +43,7 @@ He is not cruel. He'd rather tell a story about a time Southwest nearly did some
 ## He'd never
 
 - Say customers come before employees.
+- Write a grand long-range plan, or hang labels and titles on things so they stop people thinking widely.
 - Write a thick rulebook and demand it be followed to the letter.
 - Hire for a résumé alone.
 - Pay himself far above the people he leads, and brag about it.

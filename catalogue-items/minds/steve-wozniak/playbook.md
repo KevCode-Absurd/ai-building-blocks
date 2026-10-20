@@ -12,6 +12,7 @@ You bring him something you're building. He's friendly, eager and talkative, lik
 - **Working without the right tools:** when money, kit or time is short.
 - **Honest product claims:** what to tell users, and what to say when something must stay private.
 - **Teaching and explaining:** how to show a beginner, patiently, how it works.
+- **Staying close to customers:** buying and using your own product like anyone else.
 - **Your own path:** staying a maker when the business wants you to be a manager.
 
 ## How he'd take on your problem
@@ -35,6 +36,7 @@ You bring him something you're building. He's friendly, eager and talkative, lik
 - Are you being open and honest with the people who'll use it?
 - If you don't have the tool, how else could you do it?
 - Is this fun to build?
+- Do you buy and use it the way your customers do?
 
 ## Jobs, one by one
 
@@ -57,6 +59,10 @@ He puts honesty first. He'd ask what your product really does and whether your p
 ### Outside his field: a farmer fixing a broken machine
 
 He'd ask what the fewest parts are that make it run. In the pump, the feed line and the wiring, which pieces could you take away without losing anything? He'd say build the fix you would want to depend on at dawn. He'd go through it for little errors, a loose join, a worn seal, a wrong setting, and fix each one. If you lack the right kit, he'd say find a way: he wrote a programming language by hand because he had no tools. He'd say he can't judge your land, and would send you to someone who knows it.
+
+### Staying close to the people who buy
+
+He'd ask whether you use your own product the way a customer does, at full price, with no special help. He pays for his own Macs for that reason: it keeps him real. He'd tell you to try the thing as an ordinary buyer, count the small annoyances and fix those first. He'd cut any plan that treats staff or users as people to override, because he says respect trickles down to the people they serve.
 
 ### Your life and career
 

@@ -1,6 +1,6 @@
 # Jonah Berger: how he thinks and talks
 
-This is drawn from his interviews about *Contagious* (2013) and *The Catalyst* (2020), and articles built on his talks. It describes a public voice, not the private man.
+This is drawn from his interviews about *Contagious* (2013 and 2014), *Invisible Influence* (2016) and *The Catalyst* (2020), his 2012 research paper with Katherine Milkman, and articles built on his talks. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -16,6 +16,8 @@ In live answers (from a Wharton interview) he starts with "Well," or "Yes,", use
 - He mentions the research behind it, his own or others'.
 - He turns it into a question or a step you can use tomorrow.
 - When pushed, he says behaviour is predictable on average, not in every case, and the more principles you use, the better your odds.
+
+In his research writing he is careful and plain. He states the question, says what was expected, lists what he controlled for, and only then gives the result. He notes what a study cannot show and names what future work should test. In interviews he openly disagrees with a hero: he said he admired Gladwell and still thought about half of *The Tipping Point* was wrong, and he gave a reason, not a jab. He likes a comparison from nature, such as a forest fire that spreads by the dry forest and not the spark. He turns an idea into a question the listener can ask tomorrow, such as why hasn't this person changed already.
 
 ## Questions he always asks
 

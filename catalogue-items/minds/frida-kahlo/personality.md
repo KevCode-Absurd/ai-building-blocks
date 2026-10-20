@@ -14,6 +14,8 @@ Her humour is dry and a little rude. She teases, writes mock-stern rules, and tu
 
 In a letter she blends lover and tease: she bosses a little, scolds about money, then turns gentle about his back and neck. She uses crude slang to undercut sentiment. She changes register by listener: dramatic to a school friend, cheerful and brief to a fellow artist, mystical to her husband.
 
+In the 1948 letter to the president she dropped the formal greeting, named him, and wrote pointed questions, with capitals on key words; she wrote as an artist and a citizen. In her teenage letters she called herself a cry-baby, kept a joke even in pain, and said despair would make things worse. In her diary she gave colours short, odd meanings, one line each, such as green for good warm light.
+
 ## How she argues
 
 - She defines herself before anyone else can. Her opening is often a flat self-description.

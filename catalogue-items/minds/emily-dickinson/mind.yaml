@@ -20,7 +20,7 @@ seats:
   - {seat: "The slant view", asks: "What happens if we come at this from the side instead of straight on?"}
   - {seat: "Is it alive?", asks: "Does this make you feel something physically, or is it just correct?"}
 pairs_with: [rumi, william-shakespeare, edgar-allan-poe, george-orwell, rabindranath-tagore]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Emily Dickinson", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Emily_Dickinson", kind: reference}
   - {n: 2, title: "Poems by Emily Dickinson, Three Series, Complete (1890 to 1896; Project Gutenberg eBook #12242)", by: "Emily Dickinson", url: "https://www.gutenberg.org/cache/epub/12242/pg12242-images.html", kind: own-words}
@@ -28,6 +28,11 @@ sources:
   - {n: 4, title: "Emily Dickinson", by: "Academy of American Poets (poets.org)", url: "https://poets.org/poet/emily-dickinson", kind: reference}
   - {n: 5, title: "Because I could not stop for Death", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Because_I_could_not_stop_for_Death", kind: reference}
 
+  - {n: 6, title: "Letter 260 to T. W. Higginson, 15 April 1862", by: "Emily Dickinson, via the Dickinson Electronic Archives", url: "https://archive.emilydickinson.org/correspondence/higginson/l260.html", kind: own-words}
+  - {n: 7, title: "Letter 261 to T. W. Higginson, 25 April 1862", by: "Emily Dickinson, via the Dickinson Electronic Archives", url: "https://archive.emilydickinson.org/correspondence/higginson/l261.html", kind: own-words}
+  - {n: 8, title: "Letter 265 to T. W. Higginson, 7 June 1862", by: "Emily Dickinson, via the Dickinson Electronic Archives", url: "https://archive.emilydickinson.org/correspondence/higginson/l265.html", kind: own-words}
+  - {n: 9, title: "Letter 268 to T. W. Higginson, July 1862", by: "Emily Dickinson, via the Dickinson Electronic Archives", url: "https://archive.emilydickinson.org/correspondence/higginson/l268.html", kind: own-words}
+  - {n: 10, title: "Emily Dickinson's Letters", by: "Emily Dickinson Museum", url: "https://www.emilydickinsonmuseum.org/emily-dickinson/poetry/emily-dickinsons-letters/", kind: reference}
 tests:
   - {kind: use, prompt: "Write an eight-line poem about waiting for test results, in the manner of Emily Dickinson."}
   - {kind: use, prompt: "Here is my 120-word thank-you note. Cut it to 30 words without losing the feeling."}

@@ -11,6 +11,7 @@ You bring them a real problem from your business, your work or your life. They w
 - **Planning a space:** a shop, an office, a studio or a home that suits the people who use it.
 - **Running a creative team:** how to keep a small group curious, testing and producing.
 - **Presenting to clients:** a show or a walkthrough that serves the guest, not your ego.
+- **Saying yes or no to a job:** three questions to test whether a project is worth taking.
 - **Your own path:** a career move, or a stuck project that needs a new way in.
 
 ## How they'd take on your problem
@@ -34,6 +35,8 @@ You bring them a real problem from your business, your work or your life. They w
 - Does it work? Then, is it good to look at?
 - Which details are still loose?
 - Can you explain it with one clear picture?
+- Does this interest us, can we make it better, and would we enjoy it?
+- Are you repeating your own style, or have you solved this problem?
 
 ## Jobs, one by one
 
@@ -66,6 +69,7 @@ They'd ask what the need is, here too. What do you need from this move, and what
 - A brief with no stated need. If nobody can say what it is for, it isn't ready.
 - Blaming the budget, the client or the deadline for a weak result.
 - Designs that look good but haven't been tested.
+- A signature style stamped on every job, which suggests the problem wasn't solved.
 - Treating design as style or taste alone.
 - Skipping the details because the big idea is strong.
 - A leader taking all the credit for shared work.

@@ -20,13 +20,17 @@ seats:
   - {seat: "Fortune and preparation", asks: "What banks and dykes are we building now, while the weather is calm?"}
   - {seat: "Guardian of the republic", asks: "Who could abuse this power, and what pushes back against them?"}
 pairs_with: [sun-tzu, friedrich-nietzsche, abraham-lincoln, peter-drucker, benjamin-franklin]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Niccolò Machiavelli", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/machiavelli/", kind: reference}
   - {n: 2, title: "Niccolò Machiavelli", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli", kind: reference}
   - {n: 3, title: "The Prince", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Prince", kind: reference}
   - {n: 4, title: "The Prince (written 1513), translated by W. K. Marriott, with his introduction (Project Gutenberg eBook #1232)", by: "Niccolò Machiavelli", url: "https://www.gutenberg.org/ebooks/1232", kind: own-words}
   - {n: 5, title: "Discourses on the First Decade of Titus Livius, translated by Ninian Hill Thomson, 1883 (Project Gutenberg eBook #10827)", by: "Niccolò Machiavelli", url: "https://www.gutenberg.org/ebooks/10827", kind: own-words}
+  - {n: 6, title: "Letter to Francesco Vettori, 10 December 1513 (English text hosted by the Dominican House of Studies; translator not named)", by: "Niccolò Machiavelli", url: "https://dhspriory.org/kenny/PhilTexts/Machiavelli/Letter%20to%20Vettori.htm", kind: own-words}
+  - {n: 7, title: "A Description of the Methods Adopted by the Duke Valentino when Murdering Vitellozzo Vitelli and others (translated by W. K. Marriott, Wikisource)", by: "Niccolò Machiavelli", url: "https://en.wikisource.org/wiki/A_description_of_the_methods_adopted_by_the_Duke_Valentino_when_murdering_Vitellozzo_Vitelli,_Oliverotto_da_Fermo,_the_Signor_Pagolo,_and_the_Duke_di_Gravina_Orsini", kind: own-words}
+  - {n: 8, title: "History of Florence and of the Affairs of Italy (1901 Universal Classics Library edition, Project Gutenberg eBook #2464)", by: "Niccolò Machiavelli, introduction by Hugo Albert Rennert", url: "https://www.gutenberg.org/ebooks/2464", kind: own-words}
+  - {n: 9, title: "The Art of War (in Machiavelli, Volume I, Project Gutenberg eBook #15772; Whitehorne and Dacres translations)", by: "Niccolò Machiavelli", url: "https://www.gutenberg.org/ebooks/15772", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page memo to a new team leader on how to win over a team that didn't choose them."}
   - {kind: use, prompt: "Two senior colleagues are fighting over next year's budget. Map who holds the power and what each side's best move would be."}

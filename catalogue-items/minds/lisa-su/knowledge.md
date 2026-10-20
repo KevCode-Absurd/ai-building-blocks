@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Lisa Su is alive, and views can change. This data set comes from her own words in a 2025 Stanford interview with a published transcript and her 2026 MIT commencement address, from two long magazine profiles based on interviews in 2024, and from a reference page on her career. Treat each view as "as of" the year of its source, from 2024 to 2026. The Stanford transcript was machine-made and lightly edited, so small wording errors are possible. Nothing here covers her private life or her future plans.
+Lisa Su is alive, and views can change. This data set comes from her own words in five places: her first interview as CEO (VentureBeat, October 2014) [S6], a 2020 leadership webinar [S8], a long Stratechery interview from June 2024 [S7], a 2025 Stanford interview with a published transcript [S3] and her 2026 MIT commencement address [S2]. It also uses two long magazine profiles based on interviews in 2024 [S4][S5] and a reference page on her career [S1]. Some of her words reach us through a page summary, so the exact short phrases are few. Treat each view as "as of" the year of its source, from 2024 to 2026. The Stanford transcript was machine-made and lightly edited, so small wording errors are possible. Nothing here covers her private life or her future plans.
 
 ## In one paragraph
 
@@ -46,6 +46,16 @@ In her 2026 MIT speech, Su said the best advice she ever received came from an e
 
 How she applied it: she took the AMD job even though some mentors called it risky [S2][S3]. Early in the turnaround she asked engineers for a processor 40% faster than the one before, and started looking at chips for the world's fastest supercomputers [S5]. By November 2024, the El Capitan supercomputer ran on AMD chips and was named the most powerful in the world [S5].
 
+On not defining yourself by a rival: in her first interview as CEO, Su said AMD would not define itself in the shadow of its bigger rival [S6]. She described the turnaround as a multistage change: first reset and restructure, then bet on technology [S6]. She named AMD's assets as its technology, its people and its customer relationships, which could serve many markets and not only PCs [S6].
+
+How she applied it: by 2014 about 40% of AMD's business already came from game consoles, dense servers and embedded chips, up from under 10% in 2012 [S6].
+
+On winning the roadmap and not one product: Su told Stratechery in 2024 that the best product wins in large data centres, but that it is not enough to win once [S7]. Trust comes from execution across several generations [S7]. She also said she is not a believer in one-size-fits-all, and expects several tailored systems over the next three to five years [S7]. Custom work only makes sense where the volume justifies it, such as game consoles or big AI deployments [S7].
+
+### Weigh the input, then use judgment
+
+Looking back on her first general-manager job, Su said she missed plan by about half within three months, because she took in advice without weighing risks or choosing where to take them [S8]. Her rule since then: listen widely, decide where to take risk, build an execution plan and judge the most likely outcome [S8]. She builds milestones into the business to catch trouble early, and reviews weekly signals from customers, partners and staff [S8]. She likes stretch goals but adjusts them as markets move [S8]. She measures remote teams on results and lets people choose the method [S8].
+
 ### Leaders are trained, not born
 
 Su told TIME that she believes leaders are trained rather than born [S5]. She told Stanford students that leadership grows from varied experience, with new roles every couple of years [S3]. She urges leaders to take chances on people they are not fully sure of, and to give them strong support [S3].
@@ -74,11 +84,11 @@ How she applied it: AMD backs an open software ecosystem with partners such as M
 
 ### Saying no to phones
 
-When she became CEO in 2014, AMD was in debt, had cut a quarter of its staff and held only a sliver of the server market [S4][S5]. Some board members wanted AMD to make low-power chips for phones, which were booming [S3][S5]. She declined. Her reason was that the company should bet on what it was best at, which was high-performance computing [S3][S5]. She said being the cheap alternative was a path to permanent second place [S4].
+When she became CEO in 2014, AMD was in debt, had cut a quarter of its staff and held only a sliver of the server market [S4][S5]. Some board members wanted AMD to make low-power chips for phones, which were booming [S3][S5]. She declined. Her reason was that the company should bet on what it was best at, which was high-performance computing [S3][S5]. She said being the cheap alternative was a path to permanent second place [S4]. Looking back in 2024 she said that in 2014 AMD had the parts for high-performance computing but lacked a plan and an execution engine, and that AMD is not a phone company [S7].
 
 ### Starting the processor over
 
-Instead of polishing an old design, her engineers started clean and built around chiplets, small circuits joined together, under the Zen name [S4][S5]. She told the board it would take about three product generations to reach the top, and showed proof points along the way [S3][S4]. Zen 2 arrived early [S4]. She said competitors now use the same approach [S4].
+Instead of polishing an old design, her engineers started clean and built around chiplets, small circuits joined together, under the Zen name [S4][S5]. She told the board it would take about three product generations to reach the top, and showed proof points along the way [S3][S4]. Zen 2 arrived early [S4]. She said competitors now use the same approach [S4]. In 2024 she called chiplets a bet-the-company decision made with her technology chief, Mark Papermaster, for more cores, better cost and flexibility [S7]. Zen 1 was okay, Zen 2 better and Zen 3 where AMD hit its stride, and rivals who mocked it as glue later adopted it [S7].
 
 ### Paying for the long project with short ones
 
@@ -95,6 +105,10 @@ After ChatGPT arrived in 2022, AMD built a more powerful data-centre graphics ch
 ### Cutting 4% to focus
 
 In November 2024 AMD announced layoffs of 4% of its workforce, framed as focusing on AI opportunities [S5]. Even after a strong run, she kept to the idea that the company should put its people on the biggest bet [S5].
+
+### Ending the wafer deal with GlobalFoundries
+
+AMD had been tied to its old factory partner for wafer supply. Su told Stratechery that ending that agreement and dropping its 7nm work was right for both sides [S7]. Leading-edge chipmaking needs scale, and each company could focus on what it did best [S7]. She prefers deep partnerships with manufacturers and customers over owning everything [S7].
 
 ## Where she stood
 
@@ -141,7 +155,7 @@ In November 2024 AMD announced layoffs of 4% of its workforce, framed as focusin
 ## Short phrases on the record
 
 - "Run toward the hardest problems." (mentor's advice she shared, MIT, 2026) [S2]
-- "Technology itself does not decide what the future looks like." (MIT, 2026) [S2]
 - "we learn more from our mistakes than we learn from our successes" (Stanford, 2025) [S3]
-- "We're not building to be second-best." (Chief Executive, 2024) [S4]
-- "I don't believe leaders are born. I believe leaders are trained" (TIME, 2024) [S5]
+- "We're not going to define ourselves in somebody else's shadow." (VentureBeat, 2014) [S6]
+- "it's not enough to win once" (Stratechery, 2024) [S7]
+- "the best product wins" (Stratechery, 2024) [S7]

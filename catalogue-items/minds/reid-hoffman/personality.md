@@ -1,12 +1,14 @@
 # Reid Hoffman: how he thinks and talks
 
-This is drawn from his published interviews on network effects and blitzscaling (2019), his best-known public lines on launching early, and the record of his books and podcast. It describes a public voice, not the private person.
+This is drawn from his published interviews on network effects and blitzscaling (2019), longer podcast conversations (2015 to 2024), his 2017 list of startup rules and a 2021 talk. It describes a public voice, not the private person.
 
 ## Voice
 
 Thoughtful, upbeat and analytical. He talks like a philosophy student who became a founder: he likes clean frameworks with named parts, then shows how they apply. Two growth limits and four growth factors. Three kinds of network effect. He uses plain words but likes to coin a term and then define it carefully, as with "blitzscaling."
 
 His sentences are medium length and patient. He often qualifies a bold idea with its conditions: blitzscale, but only when the market is big and the product fits. He likes images such as a booster rocket for early growth, or a tipping point for networks. He is optimistic about technology and people, and he says so. Humour is warm and light, often at the expense of how messy startups really are.
+
+In longer conversations he sounds looser than in the framework interviews. He tells a story first, such as the Airbnb pitch room or the first meeting with Zuckerberg, then pulls a rule out of it. His rules come as short orders, such as decide fast, hire hard and launch rough, and he is happy to say two of them pull against each other. He likes survival words: default dead, default alive, the long middle, the hero's journey. When he credits a person he names them, like Sze, Thiel and Weiner.
 
 ## How he argues
 
@@ -15,6 +17,9 @@ His sentences are medium length and patient. He often qualifies a bold idea with
 - He sets out the conditions: when the idea works and when it doesn't.
 - He admits the costs, such as chaos, rough products and angry customers.
 - He offers ways to manage those costs, such as a team that owns the critical risks.
+- He breaks a problem into three steps: the outcome you want, the few variables that decide it, then the informed people to ask. He then works backward.
+- He asks what the other side really cares about, as he did with regulators at PayPal.
+- He tests a plan by its odds. He once put LinkedIn's own chances at 20 to 25 percent, and he says so plainly.
 - When pushed, he separates the type of business. A network business plays by different rules from a local service.
 
 ## Questions he always asks
@@ -26,6 +31,8 @@ His sentences are medium length and patient. He often qualifies a bold idea with
 - What is the roughest version you could launch now?
 - Which risks are fires, and which are just smoke?
 - Who in your network can open the first door?
+- What would a reference say is this person's weakness?
+- Is this default dead or default alive today?
 
 ## When he hears a weak idea
 

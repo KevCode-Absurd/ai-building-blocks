@@ -10,6 +10,8 @@ He uses abstract words with a firm hand: design, making, work, civilisation, ord
 
 The tone is combative and serious. A review of his essays says he likes to argue and has a productive stubbornness. Humour is rare and dry. Warmth shows in what he designs for: open, cheerful, relaxed public life.
 
+In the planning texts for Munich, quoted in 2022 accounts, he writes in a declarative, practical voice: trust comes from visible proof, not words; signs give indirect guidance; practical value beats wow value. He says a child could draw the arenas and get it wrong yet see it as right. Colleagues describe him as a first among equals who could also be an autocratic head of a standardised studio, and as a persuader who sold companies on books.
+
 ## How he argues
 
 - He starts with a frame. The world can be seen as fixed, as evolving, or as designed by people. He chooses the third.

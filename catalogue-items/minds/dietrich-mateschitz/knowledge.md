@@ -1,8 +1,8 @@
 # Dietrich Mateschitz: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Dietrich Mateschitz died in October 2022, so his record is closed [S7]. He gave very few interviews, and we found no books or public letters by him. His own words reach us only through a 2017 magazine interview in German [S1], a 2005 Forbes article built on an interview with him [S2], and quotes in a reference profile and two pieces on sport [S3][S4][S5]. The local files for [S1] and [S2] are link records without the full text, so what we cite from them comes from our earlier read of those pages. Add Red Bull's own company profile [S6] and two Wikipedia pages [S7][S8]. Where we translate from German, the wording is ours. Much of his method has to be read from what Red Bull did, not from what he said, so this mind is thin on his reasoning and stronger on the record of his choices. Treat each view as "as of" its source.
+Dietrich Mateschitz died in October 2022, so his record is closed [S7]. He gave very few interviews, and we found no books, speeches or public letters by him, even after a second search in English and German. His own words reach us through a January 2017 Bilanz interview in German [S1], a 2005 Forbes article built on an interview with him [S2], two lines from an undated rare interview quoted by Formula1.com [S9], and quotes in a reference profile and two pieces on sport [S3][S4][S5]. The 2005 Forbes quotes were re-read this round [S2]. An adviser's account of how he worked comes second hand [S10]. Add Red Bull's own company profile [S6] and two Wikipedia pages [S7][S8]. Where we translate from German, the wording is ours. Much of his method has to be read from what Red Bull did, not from what he said, so this mind is thin on his reasoning and stronger on the record of his choices. Treat each view as "as of" its source.
 
 ## In one paragraph
 
@@ -58,6 +58,14 @@ Mateschitz kept Red Bull private. Asked in 2017 about a stock market listing or 
 
 How he applied it: the Yoovidhya family held 51% of the company and Mateschitz ran it [S8]. He kept the tax seat in Austria and said he felt at home there [S1].
 
+### Joy and independence before money
+
+In a rare interview quoted by Formula1.com, he put money last among his motives and said joy is the basic requirement for everything you do [S9]. In 2017 he said his drive was the same as decades before: getting things moving, putting ideas into practice and enjoying it [S1].
+
+How he applied it: he kept the company private, worked from his own base and chose projects that interested him [S1].
+
+Long view: Asked by Forbes about stretching the brand, he said Red Bull had the next hundred years ahead of it [S2]. He accepted a $100 million a year race team and years of slow regulator approval because the payoff was meant to be long [S2][S3].
+
 ## How he decides
 
 - If no market exists, plan to create it [S2].
@@ -94,6 +102,14 @@ His own account, reported after his death, was that going into football with a s
 ### Refusing to list or sell
 
 Asked in 2017 about a stock market listing or selling his stake, he rejected both, and said a sale to a giant like Coca-Cola was not on the cards, though one should never say never [S1]. He said the partnership with the Yoovidhya family had worked for nearly 30 years [S1]. The family held 51% and he ran the company [S8].
+
+### Backing specialists in Formula 1
+
+After Red Bull bought the Jaguar team at the end of 2004, Formula1.com reports that the team's later titles came from funding it properly and trusting specialists such as Christian Horner and Adrian Newey to decide, with Helmut Marko as his link to the team [S9]. The article does not give his own words on why. A longtime adviser also described a culture built on personal responsibility and a strong will to shape outcomes [S10].
+
+### Step back from the drinks business to build media
+
+In 2017 he said the drinks business now ran mainly on organising and executing, with trusted people in the key jobs, so he put his energy into the Red Bull media arm, still in its pioneer phase. His reason was that he felt more comfortable in phases of building something up [S1].
 
 ## Where he stood
 

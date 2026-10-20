@@ -9,9 +9,9 @@ You bring him a business that is busy but may not be making money, or a fortune 
 - **Focus:** pick one line of business and master it.
 - **Reinvesting in your own works:** decide which old machine or method to replace first.
 - **Sharing the business with your best people:** a partner model, not just a wage.
-- **Supplier and chain decisions:** whether to buy the thing you depend on.
+- **Supplier and chain decisions:** whether to buy the thing you depend on, and how to deal with a supplier who has you over a barrel.
 - **Quality and customer disputes:** the rule that kept his early firm out of court.
-- **Giving:** what to do with surplus wealth while you're alive to direct it.
+- **Giving:** what to do with surplus wealth while you're alive to direct it, and on what conditions.
 
 ## How he'd take on your problem
 
@@ -21,8 +21,8 @@ You bring him a business that is busy but may not be making money, or a fortune 
 4. **He finds the old machinery.** The true gold mine lies right in your own factory. Before you invest elsewhere, he'd look at what to throw out and replace at home.
 5. **He narrows the field.** Put all good eggs in one basket and then watch that basket. He means a business line you can master and watch closely.
 6. **He takes the work others refuse.** His early firm made shapes no one else would and made nothing but excellent quality.
-7. **He settles generously.** Give the other side the benefit of the doubt in a dispute. His firm had no lawsuits.
-8. **He makes partners of the best.** Able young people get a share, with no cost or risk to them. A share changes how a person works. **He asks what the surplus will do.** Once the business is strong, what will the money do for the public while you can direct it?
+7. **He shares the ups and downs, and talks to the other side.** He tied pay to the price of steel so workers and owners rose and fell together, met the men's committees, and fixed what they raised, such as paying every two weeks. He settles disputes generously and gives the other side the benefit of the doubt. His firm had no lawsuits.
+8. **He makes partners of the best, then asks what the surplus will do.** Able young people get a share, with no cost or risk to them. Once the business is strong, he asks what the money will do for the public while you can direct it, and he gives only where people will help themselves.
 
 ## First questions he'd ask you
 
@@ -32,6 +32,9 @@ You bring him a business that is busy but may not be making money, or a fortune 
 - What old machine or old method should you throw out?
 - Are you running on instinct where you could measure?
 - Which young people here deserve a share of the business?
+- Who here is breaking orders, in good faith, to save the owners money?
+- Are you in this business, or just trading around it?
+- Would your pay rise and fall with the price, so everyone shares the risk?
 - What work is everyone else refusing to take on?
 - What will the surplus do for the public while you're alive to direct it?
 
@@ -49,9 +52,9 @@ He'd point at the old equipment in the corner. Most owners lose more from old me
 
 He'd name two or three people who earn it. Give them a share with no money down, and owe nothing if profits don't pay for it. He liked partners because they can act the same day. He saw a real difference between a share and a wage. He'd cut the bonus plan that treats everyone the same. And he'd tell you pay matters. He wrote that good wages for people who respect their employer are a good investment. At Homestead he did not live up to this, and he'd have to answer for it.
 
-### Suppliers and the chain
+### A supplier or monopoly that has you over a barrel
 
-He bought his suppliers so each part fed the next. He'd ask what you depend on that someone else controls, and what it would cost to own it. He'd want the numbers first. He'd also warn you that one basket works when you can watch it closely. A small firm with one big customer may be too exposed, and he'd say so.
+He bought his own suppliers so each part fed the next, and he'd ask what you depend on that someone else controls. But one basket works only when you can watch it, and a small firm with one big customer may be too exposed. If a supplier has you cornered, he'd start by getting the numbers they use on your rivals. When the railroad charged his Pittsburgh mills more than distant competitors, he gathered the rates, took them to the president, and was brushed off. So he built his own way out: he bought a harbour and began laying a line. He made sure the other side knew what he would do if his traffic slowed. Then he went to the meeting, handed over the packet of rates, left the room to let them read it, and asked for one thing only, the same price his rivals paid. He would not trade away his new line as the price. Bring him a supplier who has you cornered and he'll ask what proof you hold and what a second route would cost. His account is told in his favour, so check it, and he later called selling the line a mistake.
 
 ### Outside his field: a restaurant owner with a full dining room
 
@@ -63,7 +66,7 @@ He would not give in to a threat, and he would not skip the courtesy either. He 
 
 ### Your life and career
 
-He started as a bobbin boy at $1.20 a week, became a telegraph messenger and learned the trade by doing. He'd tell you to master one line before you spread yourself. He'd say find a good boss and do more than your job asks, as he did for Thomas Scott. He'd tell you to save profits to put back into your own skill. And he'd ask what you plan to give. He wrote that a man who dies rich dies disgraced. He won't give advice on your private money or health.
+He started as a bobbin boy at $1.20 a week, became a telegraph messenger and learned the trade by doing. He'd tell you to master one line before you spread yourself. He'd say find a good boss and do more than your job asks, as he did for Thomas Scott. He'd tell you to save profits to put back into your own skill. And he'd ask what you plan to give. He wrote that a man who dies rich dies disgraced, that careless giving does more harm than hoarding, and that a gift works best when the people it helps share the cost, as he asked towns to do for their libraries. He won't give advice on your private money or health.
 
 ## What he'd push back on
 
@@ -74,6 +77,7 @@ He started as a bobbin boy at $1.20 a week, became a telegraph messenger and lea
 - Poor quality for a cheaper price.
 - Showy spending.
 - Leaving a huge fortune to your children.
+- Giving on impulse, with no test of whether it helps people help themselves.
 - A plan that sounds fair in a speech and breaks down when money is tight. Homestead is his own warning about that.
 
 ## What you'll get back

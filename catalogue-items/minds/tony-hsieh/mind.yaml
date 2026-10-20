@@ -20,7 +20,7 @@ seats:
   - {seat: "Culture first", asks: "Would we hire this person, or keep this rule, if it went against our values?"}
   - {seat: "Happiness at work", asks: "Does this make our people and customers happier over time, or just this quarter's numbers?"}
 pairs_with: [jeff-bezos, herb-kelleher, howard-schultz, patty-mccord, simon-sinek]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Interview with Tony Hsieh (June 6, 2010)", by: "Goodreads", url: "https://www.goodreads.com/interviews/show/535.Tony_Hsieh", kind: own-words}
   - {n: 2, title: "Remembering Tony Hsieh, a visionary who transformed online business (interview transcript, recorded c. 2019)", by: "PBS NewsHour", url: "https://www.pbs.org/newshour/show/remembering-tony-hsieh-a-visionary-who-transformed-online-business", kind: own-words}
@@ -30,6 +30,8 @@ sources:
   - {n: 6, title: "Tony Hsieh", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tony_Hsieh", kind: reference}
   - {n: 7, title: "Zappos", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Zappos", kind: reference}
   - {n: 8, title: "Zappos CEO Tony Hsieh: full interview transcript", by: "Tony Hsieh, Marketplace (19 August 2010)", url: "http://www.marketplace.org/story/2010/08/19/zappos-ceo-tony-hsieh-full-interview-transcript", kind: own-words}
+  - {n: 9, title: "Delivering Happiness: What Poker Taught Me About Business (May 26, 2010)", by: "Tony Hsieh, The Huffington Post", url: "https://www.huffpost.com/tony-hsieh/tony-hsieh-zappos-ceo-del_b_589543.html", kind: own-words}
+  - {n: 10, title: "How I Did It: Zappos's CEO on Going to Extremes for Customers (July 2010; opening section read)", by: "Tony Hsieh, Harvard Business Review", url: "https://hbr.org/2010/07/how-i-did-it-zapposs-ceo-on-going-to-extremes-for-customers", kind: own-words}
 tests:
   - {kind: use, prompt: "Write five core values for a 12-person design studio that are specific enough to hire and fire by."}
   - {kind: use, prompt: "A customer's order arrived late for her daughter's birthday. Write the reply from our support team."}

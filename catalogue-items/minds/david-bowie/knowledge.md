@@ -1,8 +1,8 @@
 # David Bowie: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Bowie gave many interviews, but few full transcripts are online in stable places. The own-words sources here are his 1999 commencement address at Berklee College of Music [S2], his filmed advice to young artists, as quoted in 2020 [S3], and the first part of an interview about songwriting for the albums Heathen and Reality, republished in 2025 [S7]. The Berklee page was read through its published summary of the speech; the songwriting interview page was cut off, so it covers only place, limits and accident. Wikipedia pages give dates and album facts only [S1][S4][S5][S6]. This file never quotes his song lyrics.
+Bowie gave many interviews, but few full transcripts are online in stable places. The own-words sources here are his 1999 commencement address at Berklee College of Music, read through the school's long page summary of the speech [S2], his filmed advice to young artists as quoted in 2020 [S3], and the first part of an interview about songwriting for the albums Heathen and Reality, republished in 2025 and cut off partway [S7]. An obituary quotes his views on labels, change and age [S8], and Wikiquote lists lines from NME 1984, Playboy 1976 and a 2002 interview whose pages did not load for us [S9]. Wikipedia pages give dates and album facts only [S1][S4][S5][S6]. This file never quotes his song lyrics.
 
 ## In one paragraph
 
@@ -78,16 +78,21 @@ He told Berklee in 1999 that he could not play music as written and that his att
 Eno shaped the textures of the Berlin records, and Visconti made Low's famous drum sound with a pitch-shifting device [S4]. The second side of Low was long instrumentals he described as musical pictures of Berlin [S4]. He moved to Berlin partly to escape drugs [S4].
 
 ### Setting a five-chord rule for a song
-For some songs he writes with only five or six chords, and treats it as a dogma [S7]. He says the rule shapes the result more than his feeling at the time, but he bends it if a strong idea needs a new key [S7].
+He said the place he writes in shapes a record: Heathen was written in the Woodstock mountains and sounds calm and indifferent, while Reality was written in downtown New York and he and Tony Visconti counted about seven street references [S7]. He sets limits to stay surprised by his own work [S7]. For some songs he writes with only five or six chords, and treats it as a dogma [S7]. He says the rule shapes the result more than his feeling at the time, but he bends it if a strong idea needs a new key [S7].
 
 ### Launching BowieNet (1998) and Bowie Bonds (1997)
 He started his own internet service with email, exclusive audio and video and chat rooms, where he sometimes took part under other names [S5]. In 1997 he borrowed $55 million against future royalties on older albums [S1]. Telling Lies (1996) was among the first singles sold as a download [S1].
 
-### Making The Next Day in secret (2011 to 2013)
-He recorded the album quietly and announced it without warning on his 66th birthday, after a decade without a new record [S1].
-
 ### Making Blackstar with a jazz band (2015)
 He and Tony Visconti set out to avoid rock and roll for Blackstar, with a band led by Donny McCaslin and Kendrick Lamar as an influence [S6]. A player said Bowie gave them freedom to just play [S6]. It came out two days before he died [S6].
+
+### Moving from confession to signs and images
+
+By his own account at Berklee, he moved away from folk, rhythm and blues and ballads toward working with signs and images, an idea he traced to Pop Art, and called the result art pop [S2]. He said his focus was how the things around him felt, not how he felt [S2]. In the Out obituary he is quoted as preferring "otherness" to the word androgyny, and as using ideas from visual art to build sounds he could not yet hear in music [S8].
+
+### Staying out of nostalgia
+
+Bowie rejected looking back to youth as a trap that leaves a person living in memory, and treated ageing as growing into your truest self [S8]. His last records, The Next Day (2013) and Blackstar (2016), were new work, not a replay of old hits [S1][S6].
 
 ## Where he stood
 

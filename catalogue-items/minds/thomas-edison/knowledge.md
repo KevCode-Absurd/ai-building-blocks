@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Edison's own words here come from a magazine article he wrote in 1888 [S4] and an interview printed in 1901 [S3]. Both are in the public domain. The 1910 biography by Frank Dyer and Thomas Martin quotes him often, but Dyer was general counsel for the Edison laboratory and the book calls itself an authorized record, so read its praise with care [S5]. Edison is the subject of many myths, and some need flags. He did not invent the first electric light bulb. Others made lamps before him, and his work was a long-lasting lamp and a full lighting system [S1][S2]. He had nothing to do with the 1903 killing of Topsy the elephant [S7]. The story that he offered Nikola Tesla a $50,000 bonus and broke his word is disputed. Tesla's own account blames a manager, not Edison [S9]. His famous line about genius being mostly perspiration was printed in several versions (disputed wording) [S8]. A popular line about finding thousands of ways that don't work is widely quoted, but we could not trace it to a source we opened, so it is left out.
+A note on method: Edison's own words here come from magazine articles he wrote in 1878 [S11], 1888 [S4] and 1889 [S13], an introduction he wrote in 1894 [S12] and an interview printed in 1901 [S3]. All are in the public domain. The 1889 text is read in a transcription on Tesla Universe, whose scan we could not open, so wording may differ slightly [S13]. The 1910 biography by Frank Dyer and Thomas Martin quotes him often, but Dyer was general counsel for the Edison laboratory and the book calls itself an authorized record, so read its praise with care [S5]. Edison is the subject of many myths, and some need flags. He did not invent the first electric light bulb. Others made lamps before him, and his work was a long-lasting lamp and a full lighting system [S1][S2]. He had nothing to do with the 1903 killing of Topsy the elephant [S7]. The story that he offered Nikola Tesla a $50,000 bonus and broke his word is disputed. Tesla's own account blames a manager, not Edison [S9]. His famous line about genius being mostly perspiration was printed in several versions (disputed wording) [S8]. A popular line about finding thousands of ways that don't work is widely quoted, but we could not trace it to a source we opened, so it is left out.
 
 ## In one paragraph
 
@@ -58,6 +58,9 @@ His 1890s plant to pull iron from low-grade ore was his best-known business fail
 
 How he applied it: the same partner said Edison treated his own loss lightly. He joked that he could always get a job as a telegraph operator for $75 a month [S5]. Within about three years the cement and battery work had paid off the old debts [S5].
 
+### Say what is done, what is near, and what is only possible
+In his 1878 article he sorted the phonograph's future into the actual, the probable and the merely possible, and agreed to write only about the first two [S11]. He treated each claim as a question to be answered by a test, and admitted which parts were not yet solved [S11].
+
 ## How he decides
 
 - Start from a real need someone will pay for [S3][S5].
@@ -67,6 +70,7 @@ How he applied it: the same partner said Edison treated his own loss lightly. He
 - Build the whole system around the product [S2][S5].
 - Put a shop next to the lab so ideas get built fast [S2].
 - Hire experts for what you lack [S5].
+- Write only about what is done and what is close, and mark the rest [S11].
 - Move to the next problem once one works. He said a finished success bored him [S3].
 
 ## Real decisions
@@ -75,16 +79,22 @@ How he applied it: the same partner said Edison treated his own loss lightly. He
 His first patent, a vote recorder, was shown to a committee chairman who said it was the one invention they did not want. He decided from then on to invent only what could sell [S5]. In the 1901 interview he said he had kept strictly to commercially useful inventions and had no time for novelties that only catch the popular fancy [S3].
 
 ### Choosing one object and sticking to it
-Asked about his eighteen-hour days, he answered that everyone is busy all day, but most people spread the hours over many things while he put them into one. He said people fail for want of one thing to which they stick, letting all else go [S3].
+Asked about his long days, he answered that everyone is busy all day, but most people spread the hours over many things while he put them into one. He said people fail for want of one thing to which they stick, letting all else go [S3].
 
 ### Following up the pricked finger
 The one invention he said came by accident was the phonograph: the point on a telephone mouthpiece pricked his finger as he sang, and he told his assistants to build a machine that would work accurately [S3]. He did not stop at the surprise. He turned it into a design job.
 
+### Telling the public only what was real, in 1878
+In 1878 he wrote his first article in his own name on the phonograph, because the press was full of wild forecasts [S11]. He chose to cover only what had been done and what was close, and left the merely possible to others [S11]. He set out the key questions one by one, such as whether a plate could hold the complexity of speech and whether a record could be moved and replayed, and answered each with what he had tested [S11]. His proof was that his assistants had read a newspaper column from a record without missing a word [S11]. He also listed what was still unsettled, such as how long a record would last, and proposed fixes (a softer plate and a hard stone point) with a claim of 50 to 100 plays [S11].
+
 ### Waiting ten years, then perfecting it
 In 1888 he wrote that the phonograph was now ready for the public, with wax cylinders, a motor and separate recording and playing parts, and answered the rumour that he had dropped it for the electric light [S4]. He used the article to list uses, from dictation to books for the blind to mailed cylinders [S4].
 
-### Reading Faraday by night
-As a young telegrapher in Boston he bought Faraday's works and read them through the night. A friend said he mastered mechanics, chemistry and electricity from odd hours of reading [S3].
+### Arguing for a voltage limit, and against alternating current, in 1889
+In November 1889, after deaths from live wires, Edison published an article arguing that high-pressure and alternating systems were dangerous and unneeded [S13]. He sorted lighting currents into four classes, from low-pressure steady current (harmless) to alternating current of 1,000 volts and up (fatal), and said that fluctuation, not only voltage, made a current deadly [S13]. He cited deaths, a crossing of wires in New York and animal tests, and recommended a legal cap on pressure and state inspection, like the rules for boilers [S13]. He also said his own company had bought patents for an alternating system and that he had opposed using them [S13]. The article is not neutral: he had a business stake in direct current, and he set the safe level at about 200 volts in one place and 600 to 700 in another [S13]. Alternating current won the market, and he later admitted he had been wrong [S6].
+
+### Extending the phonograph to pictures
+In his 1894 introduction on the kinetoscope, he described a machine that would do for the eye what the phonograph does for the ear [S12]. He built on the zoetrope toy and on the photographs of Muybridge and Marié, named them, and called the machine a small model showing the present stage of progress, with more expected [S12]. He credited Dickson, who had worked on it with him [S12].
 
 ### Choosing electricity as the field to bet on
 In 1901 he called electricity the field of fields, holding secrets that would reorganize life, while saying he had learned very little next to the possibilities [S3].

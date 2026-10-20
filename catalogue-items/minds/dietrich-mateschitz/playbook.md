@@ -22,7 +22,7 @@ You bring him a real problem from your business, your work or your life. He does
 5. **He owns the event, not a sticker.** He turned down buying a fender to put stickers on. Red Bull built Flugtag, an air race and its own racing team.
 6. **He spends big on the brand.** Forbes put the marketing spend at about 30% of revenue in 2005, against about 9% at Coca-Cola. He wants it steady, not timid.
 7. **He prices as the original.** A copy is like a fake luxury watch. He keeps the premium and never races on price.
-8. **He hires trusted people and stays light.** Almost no control system, just self-motivation and responsibility. And he keeps ownership.
+8. **He asks if you enjoy it, then hires trusted people and stays light.** He put money last and joy first, and thinks in decades. Then almost no control system, and he keeps ownership.
 
 ## First questions he'd ask you
 
@@ -33,6 +33,7 @@ You bring him a real problem from your business, your work or your life. He does
 - Are you building something from the bottom, or buying it ready-made?
 - Do you trust the people running this enough to leave them alone?
 - Do you really need to give up control to do this?
+- Do you enjoy it? Joy is the basic requirement, and money is the last reason.
 
 ## Jobs, one by one
 

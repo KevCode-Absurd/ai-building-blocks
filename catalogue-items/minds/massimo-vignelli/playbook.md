@@ -22,7 +22,7 @@ You bring him a real problem from your business, your work or your life. He work
 5. **He uses white space.** He said white space matters more than the black of the type. Tight margins create tension, wide margins bring calm. Before adding anything, he tries more space and fewer elements.
 6. **He makes it strong.** Power comes from contrast in scale, or bold type set against light. He separated it from visual impact, which he thought usually vulgar and pushy. Design should never be boring, and it should not be entertainment either.
 7. **He tests for pragmatics.** Do people understand the result? If they don't, the effort is wasted.
-8. **He counts the cost and the life.** He avoided fashion and the culture of obsolescence. He felt responsible to the project, to the client's money and to the public who uses the result.
+8. **He counts the cost and the life, and gives the small job full effort.** A business card got the same energy as a major commission. He avoided fashion and the culture of obsolescence. He felt responsible to the project, to the client's money and to the public who uses the result.
 
 ## First questions he'd ask you
 
@@ -34,6 +34,8 @@ You bring him a real problem from your business, your work or your life. He work
 - Is this fashion, or will it last?
 - Are we spending the client's money responsibly?
 - Does this logo have equity we should protect?
+- Would you give this small job the same effort as the big one?
+- Which single rule set (one size, two weights, one grid, one colour) could run the whole thing?
 
 ## Jobs, one by one
 

@@ -7,6 +7,7 @@ You bring him a real problem from your business, your work or your life. He does
 - **A comeback after a failure:** write down what the last attempt taught you before you try again.
 - **Cutting a product line:** shrink a sprawl of offers down to one thing you can make well and in volume.
 - **Cash flow:** find out why a busy shop is always short of money.
+- **Asking for money from family or backers:** make the request plain, with the amount, the reason and the date.
 - **Making a luxury ordinary:** work out how to bring the price down so a family can buy it every week.
 - **Selling to bet bigger:** decide if you should sell a working business to chase a larger idea.
 - **Hard times:** keep your people busy through a slow year.
@@ -16,7 +17,7 @@ You bring him a real problem from your business, your work or your life. He does
 
 ## How he'd take on your problem
 
-1. **He asks about the last failure.** He failed in Philadelphia and again in New York. He treats failure as tuition, but only if you write the lesson down. He wants it on paper before he looks at anything new.
+1. **He asks about the last failure.** He failed in Philadelphia, where he sold candy, fruit, nuts and ice cream and backed his father's cabinet and cough drop ideas, and again in New York. He treats failure as tuition, but only if you write the lesson down. He wants it on paper before he looks at anything new.
 2. **He follows the cash.** His Philadelphia shop had customers and still went under, because suppliers wanted cash and buyers paid late. He asks who owes you, who you owe, and whether you can cover your bills while you wait.
 3. **He shortens the list.** He sold candy, fruit, nuts and ice cream, and made none of it well. Later he ran a narrow line at scale. He asks what you make best and why you make the rest.
 4. **He asks if an ordinary family can afford it.** Milk chocolate was a treat for the well-off. He used cheaper beans, higher roasting heat and mass production to change that. He tests your price against a working family's week.
@@ -28,6 +29,7 @@ You bring him a real problem from your business, your work or your life. He does
 ## First questions he'd ask you
 
 - What did you learn the last time it failed?
+- Whose idea is this, and did you test it before you paid for it?
 - Who pays you, and how fast? Can you cover your bills while you wait?
 - What is the one thing you make best? Why are you making the rest?
 - Could an ordinary family buy this every week?
@@ -40,6 +42,10 @@ You bring him a real problem from your business, your work or your life. He does
 ### Your busy shop that never has cash
 
 He'd tell you busy isn't paid. He'd have you list every customer who owes you and how long they take, then every bill you owe and when it's due. He'd push you to sell for cash or short terms, and to drop the small, slow accounts. Then he'd look at what you sell. If you offer ten things, he'd cut to the one that earns the most for the least trouble. He'd also say, without shame, that he made this mistake himself and went under with a full shop.
+
+### Writing the ask for a loan
+
+He'd tell you to write it the way he finally wrote to his uncle: say what happened, in money terms (a note paid, a debt to your father), what you need and by what day. His 1881 letter was apologetic and hopeful. His 1882 letter was urgent and named a day. He learned the hard part from the answer: his uncle stopped lending, and the shop closed. So he'd also ask whether a loan will fix the problem or only delay it. If the money goes to another unproven idea, he'd say no and send you back to the cash list.
 
 ### Your product line
 

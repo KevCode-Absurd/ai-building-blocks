@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Confucius did not write the book we know him by. The *Analects* (in Chinese, *Lunyu*) is a set of short sayings and scenes in twenty books, put together by his followers [S1]. An early historian, Ban Gu, said the first and second generations of his disciples compiled it [S1]. The cover note of D. C. Lau's translation says the pupils gathered it shortly after his death [S7], but modern scholars think the work went on much longer, into the Han dynasty, centuries later [S2]. Lau's footnotes show the seams: some sayings appear twice, and he judges the closing passage of kings' speeches (20:1) unlikely to be Confucius [S7]. The translator Lionel Giles noted that the sayings were passed on by word of mouth at first, and that their crisp style suggests they are not his exact words [S5]. Some passages, including the best-known version of the golden rule, may be later additions (disputed) [S1]. All the sources about his life come decades or centuries after it, and later texts added legends [S2]. So "Confucius says" here means "the *Analects* has him say." The main text we read in full is Lau's translation, with his notes, from the owner's file [S7], which we cite as Lau 2:15 and so on. It is a modern, copyrighted translation, so we paraphrase it. We also used James Legge's translation of 1861, revised 1893 [S4][S6], and Lionel Giles's selection of 1910 [S5]. Both are in the public domain, so we quote a few short lines from them. Passage numbers follow Legge unless marked Lau, and can differ by one in other editions. Giles compared one saying to the golden rule of Christ [S5].
+A note on method: Confucius did not write the book we know him by. The *Analects* (*Lunyu*) is a set of short sayings and scenes in twenty books, put together by his followers [S1]. Modern scholars think the work grew over centuries, into the Han dynasty [S2]. D. C. Lau's footnotes show the seams: some sayings appear twice, and he doubts the closing passage of kings' speeches (20:1) [S7]. Lionel Giles noted the sayings were passed on by word of mouth first, so their crisp style is probably not his exact words [S5]. All the sources on his life come decades or centuries later, and legends were added [S2]. So "Confucius says" here means "the *Analects* has him say." We read Lau's translation in full from the owner's file (cited as Lau 2:15) and paraphrase it, since it is in copyright [S7]. James Legge's 1861 translation (revised 1893) and Lionel Giles's 1910 selection are public domain, and we quote a few short lines from them [S4][S5][S6]. Passage numbers follow Legge unless marked Lau. For dates and the wandering years we now also use Legge's life of Confucius, which follows the historian Sima Qian, written some four centuries after the death [S8], and Mencius's remarks on how Confucius left a court [S9]. These two are accounts by others, not his words, so the record in his own voice stays one book of sayings recorded by his pupils.
 
 ## In one paragraph
 
@@ -81,28 +81,25 @@ How he applied it: he held that filial piety is more than feeding your parents, 
 ## Real decisions
 
 ### Giving two students opposite answers
-
-Zilu and Ran Qiu each asked whether to act at once on what they had heard. Confucius told one to wait because his father and brothers were alive and told the other to go ahead (Lau 11:22) [S7]. A third student, Gongxi Hua, asked why. His reason was that Ran Qiu holds himself back and Zilu has the energy of two men [S7]. The lesson is that he treated advice as medicine for a person, not a rule for everyone.
+Zilu and Ran Qiu each asked whether to act at once on what they had heard. Confucius told one to wait because his father and brothers were alive and told the other to go ahead (Lau 11:22) [S7]. A third student, Gongxi Hua, asked why. His reason was that Ran Qiu holds himself back and Zilu has the energy of two men [S7]. He treated advice as medicine for a person, not a rule for everyone.
 
 ### Refusing to talk strategy for a duke
-
 Duke Ling of Wei asked him about battle formations. Confucius answered that he knew about sacrificial vessels but had not studied how to command troops, and he left the next day (Lau 15:1) [S7]. He stayed inside what he knew and let the offer go rather than pretend, which fits his rule about saying you do not know [S7].
 
-### Reporting a murder he could not punish
+### Leaving courts that did not take him seriously
+In Qi, Duke Jing said he could not give Confucius the rank of the Ji family, offered a middle place, then said he was too old to use his talents. Confucius left (Lau 18:3) [S7]. In Lu, the head of the Ji family accepted a gift of singing and dancing girls from Qi and skipped court for three days. Confucius left that too (Lau 18:4) [S7]. Legge, following Sima Qian, dates the leaving of Lu to 497 BC and says Confucius judged that the duke had given up his duties [S8]. Mencius notes the pace: from Qi Confucius left in such haste that he left while still rinsing his rice, and from Lu, his home, he went slowly. He left fast when haste was right and stayed when staying was right, which is why Mencius called him the sage of timeliness [S9].
 
-When a powerful minister killed his lord, Duke Jian of Qi, Confucius washed, went to court and asked Duke Ai of Lu to send an army (Lau 14:21) [S7]. The duke told him to tell the three noble families, who held the real power. He did, and they refused. His stated reason was that, because he ranked after the counsellors, he had a duty to report it [S7]. He did the duty even though he expected to fail.
+### Leaving Wei and enduring hunger
+After Lu, Legge's account has him in Wei, where a stipend ended when the duke ignored his teaching, and where in 495 BC he left over a scandal at court [S8]. In 490 BC his party ran out of food for about seven days on the road to Ts'ai, and he said the exemplary person endures want while the small person runs wild [S8]. The Analects carries the same contrast (Legge 15.1) [S4]. He kept a principle when it cost him comfort.
 
 ### Disowning a student for raising taxes
+His student Ran Qiu worked for the Ji family, who were already richer than the Duke of Zhou, and helped them collect more tax. Confucius said he was no disciple of his and told the others to attack him openly (Lau 11:17) [S7]. Legge dates the new levy to 482 BC [S8]. A teacher with a good student in a bad post said so in public.
 
-His student Ran Qiu worked for the Ji family, who were already richer than the Duke of Zhou, and helped them collect more tax. Confucius said he was no disciple of his and told the others to attack him openly (Lau 11:17) [S7]. A teacher with a good student in a bad post said so in public.
+### Reporting a murder he could not punish
+When a powerful minister killed his lord, Duke Jian of Qi, Confucius washed, went to court and asked Duke Ai of Lu to send an army (Lau 14:21) [S7]. The duke told him to tell the three noble families, who held the real power. He did, and they refused. His stated reason was that, because he ranked after the counsellors, he had a duty to report it [S7]. Legge dates the event to 481 BC [S8]. He did the duty even though he expected to fail.
 
-### Leaving courts that did not take him seriously
-
-In Qi, Duke Jing said he could not give Confucius the rank of the Ji family, offered a middle place, then said he was too old to use his talents. Confucius left (Lau 18:3) [S7]. In Lu, the head of the Ji family accepted a gift of singing and dancing girls from Qi and skipped court for three days. Confucius left that too (Lau 18:4) [S7]. The histories date his leaving Lu to about 497 BC, but these scenes carry no dates in the text [S1][S3].
-
-### Answering the invitations of rebels
-
-Two rebels who held towns, Gongshan Furao and Bi Xi, summoned him, and he wanted to go. Zilu objected, reminding him that he had said a gentleman won't enter the territory of a wrongdoer (Lau 17:5, 17:7) [S7]. Confucius replied that he might build a Zhou in the east, that white things withstand dye, and that he did not want to hang unused like a gourd [S7]. The passages do not say whether he went. They show that he wanted a chance to act and weighed his own rule against it.
+### Coming home and turning to scholarship
+Around 483 BC, aged about 69, he was called back to Lu, after the family head had sent officers to Wei [S8]. He held no real power, so he gave his time to ordering the odes, the rites and the music, and to the Book of Changes, which he studied until the binding wore out three times [S8]. He said the music was put right after he returned from Wei (Legge 9.14) [S4]. His record as a failed adviser became his record as a teacher.
 
 ## Where he stood
 
@@ -122,7 +119,7 @@ Two rebels who held towns, Gongshan Furao and Bi Xi, summoned him, and he wanted
 
 - Born about 551 BC near Zou, in the state of Lu, in modern Shandong [S1][S3]. His given name was Kong Qiu [S3].
 - His father died when he was young, and he grew up poor, from the *shi* class between nobles and commoners [S1][S3].
-- Held minor posts, then, according to the histories, became a town governor in 501 BC and later Minister of Crime in Lu [S1][S3].
+- Held minor posts, then, according to the histories, became a town governor in 501 BC and later Minister of Crime in Lu [S1][S3][S8].
 - Tried to weaken the strongholds of three powerful families in Lu. The attempt partly failed [S3].
 - Left Lu around 497 BC and travelled to states including Wei, Song, Chen, Cai and Chu [S1][S3].
 - Returned to Lu at about 68 and spent his last years teaching [S3].
@@ -135,10 +132,7 @@ Two rebels who held towns, Gongshan Furao and Bi Xi, summoned him, and he wanted
 
 - **Hierarchy.** His model of social life puts ruler over subject, parent over child and husband over wife [S2]. Reformers in early 20th-century China rejected him for the hierarchies they saw in his teaching [S1].
 - **Women.** One saying groups girls with servants as the hardest people to deal with [S4].
-- **Looking backward.** He said he passed on old ways rather than making new ones, and tradition was his measure of what was proper [S2].
 - **Family over fairness.** The sheep story shows him putting family loyalty above reporting a crime [S1][S4].
-- **Ritual detail.** The poet Ezra Pound mocked the attention paid to small rules of ritual [S1].
-- **Rival schools.** The Legalists, who relied on strict laws and punishments, took a different path, and the Qin state used their ideas to unify China in 221 BC [S3].
 - **Unwilling to explain.** Lau 8:9 says common people can be made to follow a path but not to understand it. Readers read this as elitist or as a plain remark, and it is disputed [S7].
 - **Contempt for practical craft.** He called a student petty for asking to learn farming, and said a ruler who is good needs no such skill (Lau 13:4) [S7]. He was harsh with Zai Yu for napping by day, calling him a piece of rotten wood (Lau 5:10) [S7].
 - **Hard to pin down.** The *Analects* has no system. Its sayings fit particular moments, so general rules are hard to draw from it [S1].
@@ -150,7 +144,6 @@ Two rebels who held towns, Gongshan Furao and Bi Xi, summoned him, and he wanted
 - Loyalty to family and group can slide into covering for wrongdoing.
 - He is strong on character and weak on systems, data and rules. Pair him with Aristotle or a process thinker.
 - His views on women and servants belong to his time. Leave them out of modern advice.
-- He is rude about farming, craft and women. Don't repeat that as advice [S7].
 - Many sayings online are wrongly credited to him. Use only the lines below.
 
 ## Short phrases on the record

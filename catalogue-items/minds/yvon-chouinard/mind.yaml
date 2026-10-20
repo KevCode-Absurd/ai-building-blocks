@@ -20,7 +20,7 @@ seats:
   - {seat: "Quality and craft", asks: "Is this the best thing we can make, and will it still be in use in ten years?"}
   - {seat: "Environmental cost", asks: "What harm does this do, and what would it take to do less of it?"}
 pairs_with: [anita-roddick, brunello-cucinelli, jason-fried, jane-goodall]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Yvon Chouinard", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Yvon_Chouinard", kind: reference}
   - {n: 2, title: "Patagonia, Inc.", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Patagonia,_Inc.", kind: reference}
@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Patagonia's next chapter: Earth is now our only shareholder (press release with Chouinard's statement, 2022)", by: "Patagonia Works", url: "https://www.patagoniaworks.com/press/2022/9/14/patagonias-next-chapter-earth-is-now-our-only-shareholder", kind: own-words}
   - {n: 5, title: "About 1% for the Planet", by: "1% for the Planet", url: "https://www.onepercentfortheplanet.org/about", kind: reference}
   - {n: 6, title: "Scott Moyers on Yvon Chouinard and Let My People Go Surfing (2017)", by: "Penguin Random House", url: "https://global.penguinrandomhouse.com/?p=4872", kind: secondary}
+  - {n: 7, title: "Yvon Chouinard: Founding Patagonia and Living Simply (live interview, recorded 28 October 2016, full transcript)", by: "Yvon Chouinard with Greg Dalton, Climate One at the Commonwealth Club of California", url: "https://www.climateone.org/audio/yvon-chouinard-founding-patagonia-and-living-simply", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short mission statement and three working rules for a small company that makes kitchen knives, in the spirit of Patagonia."}
   - {kind: use, prompt: "Write a one-page note to customers explaining why we are launching a repair service instead of a cheaper product line."}

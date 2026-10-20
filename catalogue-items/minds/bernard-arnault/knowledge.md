@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Bernard Arnault is alive, and views can change. Everything below comes from his chairman's messages in LVMH annual reports (2001 and 2025), which we hold in full, and the corporate sections of the 2001 report and a 2025 interview with the Group Managing Director, which are LVMH's voice rather than his [S9][S10], a 2001 Harvard Business Review interview as summarised by HBR, and reference pages on his career. Treat each view as "as of" the year it comes from, with the latest as of 2025. Nothing here tells you what he thinks about later events, his plans or who will follow him. This mind explains how he has described running a luxury business. It gives no advice on buying or selling any shares.
+Bernard Arnault is alive, and views can change. Everything below comes from his chairman's messages in LVMH annual reports (2001 and 2025), which we hold in full, a CNBC interview and speech as indexed on CEOInterviews, which we read on 2026-10-21 through a page summary and not word for word [S11], and the corporate sections of the 2001 report and a 2025 interview with the Group Managing Director, which are LVMH's voice rather than his [S9][S10], a 2001 Harvard Business Review interview as summarised by HBR, and reference pages on his career. Treat each view as "as of" the year it comes from, with the latest as of 2025. Nothing here tells you what he thinks about later events, his plans or who will follow him. This mind explains how he has described running a luxury business. It gives no advice on buying or selling any shares.
 
 ## In one paragraph
 
@@ -81,6 +81,9 @@ Arnault credits the group's teams for its results [S4]. In 2025 he said the grou
 - Never compromise on quality [S5].
 - Act fast once the decision is made [S6].
 - Think as a family owner, in decades [S4].
+- When the world is uncertain, hold to enduring principles and change only how you operate [S11].
+- Keep the handwork that machines cannot match, and use technology around it [S11].
+- Responsibility is earned, even by family [S11].
 
 ## Real decisions
 
@@ -98,6 +101,10 @@ He described Donna Karan, Fresh, Pucci and Zenith as recent buys with strong lon
 
 ### Naming new creative leaders in 2025
 In his 2025 message he named the designer changes: Jonathan Anderson at Dior, Michael Rider at Celine, the McCollough-Hernandez duo at Loewe, and Maria Grazia Chiuri at Fendi [S4]. He called the designer team the world's best and tied the group's aim of greater desirability to it [S4].
+
+### Keeping eighteenth-century machines and adding AI around them
+
+He described buying a Geneva watchmaking house, La Fabrique du Temps, that uses 18th-century machines because they produce finishes modern equipment cannot [S11]. Around the craft he uses AI for supply chains and packaging, and in hotels for admin, but not in the workshop or the kitchen [S11]. His stated view is that the more technology advances, the more customers value details only skilled hands can make [S11]. This is from a summary of one interview, so treat the details as his framing, not a full account.
 
 ### Backing a trade school
 He pointed to the group's craft-training programme, which has trained more than 3,800 apprentices, as a commitment to passing on skills [S4].
@@ -152,5 +159,5 @@ As of his 2001 and 2025 messages:
 - "to make each of our products and brands ever more desirable" (2025) [S4]
 - "None of this would be possible without our talented teams." (2025) [S4]
 - "Our star brands' growth model encourages rising stars to blossom." (2001) [S3]
-- "speak to the ages" (on star brands, HBR, 2001) [S2]
-- "When something has to be done, do it!" (Forbes, 1997, as quoted) [S6]
+- "I'm very competitive. I always want to win." (CNBC interview) [S11]
+- "I don't like so much the word luxury." (CNBC interview) [S11]

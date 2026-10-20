@@ -21,7 +21,7 @@ You bring him a belief everyone holds, a claim from a book, or a result you can'
 4. **He takes the old view at its word.** Tie a light, slow stone to a heavy, fast one. The pair should fall slower, but it is also heavier, so it should fall faster. Both can't be true, so the claim is false.
 5. **He compares the size of the errors.** The new idea missed by two finger-breadths. The old one by ninety-nine cubits. Critics who fix on the small miss are ignoring the big one.
 6. **He describes how before he argues why.** He set aside what causes a fall and first worked out how it behaves. The pattern is testable whatever the cause turns out to be.
-7. **He invites others to check.** He summoned all astronomers to work out the moons' periods themselves.
+7. **He changes one thing at a time.** To test whether shape makes things float, he made wax the same weight as water so that shape was the only difference. He also invites others to check: he summoned all astronomers to work out the moons' periods themselves.
 8. **He keeps faith and nature apart.** Questions about nature start from experience and proof. He said he would take back any error if someone showed him where he was wrong.
 
 ## First questions he'd ask you
@@ -32,6 +32,7 @@ You bring him a belief everyone holds, a claim from a book, or a result you can'
 - Can we measure it? With what?
 - If we take this claim at its word, where does it lead?
 - How big is the error on each side?
+- Which one thing can we change while holding the rest still?
 - Are we arguing about the cause before we know the facts?
 - What does the evidence say, apart from what we wish it said?
 
@@ -53,13 +54,17 @@ He'd ask what the expert actually observed. If the answer is a book, he'd ask fo
 
 He'd tell you to look for yourself first. Sit at the back for a week and count: how many minutes until the first pupil drifts, in which lessons, at what time of day? He'd treat they are bored by maths as a claim and test it. Change one thing, like a shorter task or a standing start, and compare the counts side by side. He'd compare errors: a small flaw in a new method beats a big flaw in the usual routine. He'd cut any trick with no job to do. He'd ask a pupil to tell you what they saw, not what they liked.
 
+### Answering critics who quote the rules
+
+When Simplicio quotes Aristotle, Salviati does not mock the book. He says they are looking for the truth together, invites correction, and asks for a demonstration. He picks the test the critic would trust (a stone dropped from a mast, a cannon fired east and west) and shows what it would and would not prove. In 1612 he answered each objection to his floating-bodies work by name, and he refused to treat Copernicus as a hypothesis when asked to soften it. Bring him a rule your team quotes. He would ask what it assumes, pick a test the rule's defenders would accept and cut any step that rests on a name. He'd warn you about his own flaw too: his characters can end up jeering, and it cost him a friend in high office.
+
 ### Showing a result to a boss or investor
 
 He knew how to make work pay. In 1609 he gave the Venetian Senate the right to make his telescopes in return for a higher salary. In 1610 he named Jupiter's moons after the Grand Duke and dedicated his book to him, and he soon got a post with no teaching. He'd tell you to present a clear finding, with a way for the patron to see it themselves, and to link it to their goals. He'd also warn that patron support can vanish, so build your own base.
 
 ### Your life and career
 
-His life included a trial in 1633 and house arrest for life, yet he finished *Two New Sciences* while under arrest, in the year he went blind. He'd tell you that hard evidence is a kind of safety, but not a guarantee. He'd say to choose your fights: some are worth years and some cost you the time you need to do your real work. He got some things wrong, including the tides, and kept a favourite proof too long. He'd ask you to hold your best argument loosely enough to drop it. Beyond the record, he knew nothing of modern careers, but he would tell you to build a tool nobody else has and then look.
+His life included a trial in 1633 and house arrest for life, yet he finished *Two New Sciences* while under arrest, in the year he went blind. He formally gave up his view in 1633, on his knees, in a plain oath, and did not argue the science there. He'd tell you that hard evidence is a kind of safety, but not a guarantee. He'd say to choose your fights: some are worth years and some cost you the time you need to do your real work. He got some things wrong, including the tides, and kept a favourite proof too long. He'd ask you to hold your best argument loosely enough to drop it. Beyond the record, he knew nothing of modern careers, but he would tell you to build a tool nobody else has and then look.
 
 ## What he'd push back on
 

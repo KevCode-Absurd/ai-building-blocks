@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Chanel left no essays or books of her own. Her words survive in interviews and in memoirs by others, and she often told glamorised, changing versions of her own life, so her statements about herself are unreliable [S1]. The one long stretch of her speaking that we now hold is a late-life French TV interview with Micheline Sandrel, recorded after 20 July 1969 and kept by France's INA archive [S9]. We have it only as a blogger's English translation, posted in 2012, so the wording is the translator's and some French terms are glossed. In it she is about 85 or 86, speaking off the cuff, and some of her views are those of a very old woman, not of the designer of the 1920s. Beyond that, her voice comes from a Wikiquote page whose lines are each tied to a named book or interview, such as Marcel Haedrich's 1971 book and a 1957 *LIFE* piece [S2], a review that quotes Paul Morand's notes of her talk in 1946 [S7], and a trace of her 1965 *McCall's* interview [S8]. Those lines were chosen and translated by others. Many sayings credited to her online have no good source. Most of what we say about what she did rests on Wikipedia and the Victoria and Albert Museum [S1][S3][S4][S5][S6]. Her wartime record is serious and partly disputed. We set out what the sources say and mark what is contested.
+A note on method: Chanel left no essays or books of her own. Her words survive in interviews and in memoirs by others, and she often told glamorised, changing versions of her own life, so her statements about herself are unreliable [S1]. The one long stretch of her speaking that we now hold is a late-life French TV interview with Micheline Sandrel, recorded after 20 July 1969 and kept by France's INA archive [S9]. We have it only as a blogger's English translation, posted in 2012, so the wording is the translator's and some French terms are glossed. In it she is about 85 or 86, speaking off the cuff, and some of her views are those of a very old woman, not of the designer of the 1920s. Beyond that, her voice comes from a Wikiquote page whose lines are each tied to a named book or interview, such as Marcel Haedrich's 1971 book and a 1957 *LIFE* piece [S2], a review that quotes Paul Morand's notes of her talk in 1946 [S7], and a trace of her 1965 *McCall's* interview [S8]. Those lines were chosen and translated by others. A search in October 2026 for more of her own spoken or written words, such as press interviews or a Morand text we could read, found nothing further that is free to read, so her record in her own voice stays thin: the 1969 translation, the Wikiquote lines and one traced interview. Many sayings credited to her online have no good source. Most of what we say about what she did rests on Wikipedia and the Victoria and Albert Museum [S1][S3][S4][S5][S6]. Her wartime record is serious and partly disputed. We set out what the sources say and mark what is contested.
 
 ## In one paragraph
 
@@ -71,40 +71,33 @@ After closing in 1939 and spending years in Switzerland after the war, she reope
 - Repeat a few signatures until they become the brand [S4].
 - Follow what customers truly need, even where it goes against your taste [S9].
 - Put your name on more than one kind of product, but keep control of it [S1][S6].
+- State a claim about yourself or your rule flat, with no hedge and no reason: she woke up famous in 1919, nothing is ugly as long as it is alive, fashion fades and style remains [S2].
 
 ## Real decisions
 
-### Making jersey the fabric of a house
+### Making jersey the fabric of a house (mid-1910s)
+In the mid-1910s she made silk jersey tunics and suits for the resorts of Deauville and Biarritz, in a cloth that had been used mainly for men's sportswear and underwear [S3][S4]. In November 1915 a New York paper called her jersey suits almost a Deauville uniform, and in 1916 *Vogue* wrote that her art resided in jersey [S3][S4]. Her working method was to drape directly on the figure, study how the cloth fell, and have models move so she could cut away whatever restricted them [S3]. The result was a plain material turned into the thing people wanted.
 
-She took a cheap knit used for underwear and sportswear and made it fashionable womenswear from the 1910s. By 1915 her jersey suits were close to a uniform at Deauville [S1][S3][S4].
+### Putting women in black (1920s)
+She promoted black as modern and chic, not only for mourning [S4]. In October 1926 American *Vogue* showed her black crêpe de chine day dress and predicted it would be the frock all the world would wear, and it came to be called the Ford of fashion [S4]. A review of Morand's notes has her saying, bluntly, that she would dress women in black, and that she was shocked by gaudy, revived colours [S7]. In another remark she said black and white hold every colour [S2].
 
-### Putting women in black
+### Choosing sample number five and a plain bottle (1921)
+She picked the fifth of the scent samples made by Ernest Beaux, wanting a modern scent that did not smell of a single flower [S6]. She asked for a plain bottle in place of ornate crystal, and launched Chanel No. 5 on 5 May 1921 [S6]. The interlocking Cs first appeared on the stopper and later became the brand's shorthand [S4]. Her reason, as the sources have it, was that a woman's perfume should smell of a woman and look modern [S6].
 
-*Vogue* showed her black day dress in 1926 and predicted every woman would wear it [S4]. A review of Morand's notes has her saying, in blunt words, that she would dress women in black. It also has her saying she was shocked by gaudy, revived colours [S7]. In another remark she said black and white hold every colour [S2].
+### Licensing her name, then fighting for it (1924 to 1947)
+In 1924 she licensed her name to Parfums Chanel, owned 70% by Pierre and Paul Wertheimer and 20% by Théophile Bader, and kept 10% for herself [S6]. She later spent more than twenty years trying to regain control [S6]. In 1941 she petitioned German officials to take over the company as Jewish property, though the Wertheimers had already passed control to a non-Jewish businessman [S1][S6]. A 1947 settlement gave her about 2% of worldwide sales [S6]. The deal is the best case for her own rule that you should keep control of your name, and the 1941 petition is part of the troubling record [S1][S6].
 
-### Choosing sample number five and a plain bottle
+### Closing in 1939 and coming back at seventy
+She closed the house in 1939 and spent years abroad after the war [S1]. In 1954, at about 71, she reopened in Paris with funding from Pierre Wertheimer [S1][S3]. Some critics said the collection looked like her old work, but French *Elle* and American *Vogue* saw its merits [S3]. Her suit was built for wearability and instant smartness and needed none of the structured underwear of Dior's New Look; in 1964 *Vogue* called it the world's prettiest uniform [S3][S4].
 
-She picked the fifth of the scent samples Ernest Beaux made, wanted a modern scent that did not smell of one flower, and asked for a plain bottle in place of ornate crystal [S6].
+### Doing without ornament, and with fake pearls
+She kept the line central and let detail show in small touches [S3]. From the early 1920s her boutiques sold costume jewellery to wear with her plain clothes, and imitation pearls became a signature [S4]. In 1931 she was described as largely responsible for the vogue for artificial pearls [S4]. The review of Morand has her saying a beautiful gem can look artificial, and that fixating on stones is pointless, like wearing a cheque round your neck [S7].
 
-### Licensing her name, then fighting for it
+### Launching the 2.55 bag (1955)
+Launched in February 1955 and named for the month and year, the quilted bag came in three sizes with a gilt chain strap, a lipstick compartment and a red lining that makes contents easy to see [S4]. The quilting came from equestrian wear [S4]. It is her rule in object form: a useful detail someone can find in the dark, repeated for decades [S4].
 
-In 1924 she licensed her name to Parfums Chanel and kept 10% [S6]. She later spent more than twenty years trying to regain control, and a 1947 settlement gave her about 2% of worldwide sales [S6].
-
-### Closing in 1939 and coming back at about seventy
-
-She closed the house in 1939 and reopened in 1954 with funding from Pierre Wertheimer [S1]. Her practical suit needed no restrictive underwear and found its market against the stiff, corseted New Look [S3][S4].
-
-### Doing without ornament
-
-She kept the line central and let detail show in small touches [S3]. Of jewellery, the review of Morand has her saying a beautiful gem can look artificial and that fixating on stones is pointless, like wearing a cheque round your neck [S7].
-
-### Making trousers when customers wanted them
-
-In 1969 she said she had made trousers for beach and country use, and disliked seeing most women in them at evening dinners. She added that they suit very young people and look like a try at youth later. Yet she said that if women need trousers, she will make trousers, because they want them. She noted that two years earlier she would have said to hell with what they need [S9].
-
-### Fighting short skirts
-
-By her account in 1969, she had spent two years arguing with other couturiers against short dresses. She called the knee a joint that should be shown only if perfect, as an elbow would be, and said men in restaurants applauded her stand [S9]. This was a judgment of taste and of women's bodies, and other couturiers were showing short dresses anyway. Treat it as a view of her time, not a rule.
+### Making trousers when customers wanted them (1969)
+In 1969 she said she had made trousers for beach and country use and disliked seeing most women in them at evening dinners, adding that they suit very young people and look like a try at youth later [S9]. Yet she said that if women need trousers, she will make trousers, because they want them [S9]. She noted that two years earlier she would have said to hell with what they need [S9]. She also spent two years arguing against short skirts, a view of her time and not a rule [S9].
 
 ## Where she stood
 

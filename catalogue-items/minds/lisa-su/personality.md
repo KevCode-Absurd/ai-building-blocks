@@ -1,6 +1,6 @@
 # Lisa Su: how she thinks and talks
 
-This is drawn from how she spoke in recent public settings: the 2026 MIT commencement address, a 2025 Stanford GSB interview, a 2024 Chief Executive interview and TIME's 2024 profile. It is a public voice, not the private person. Views are dated, and she is still working.
+This is drawn from how she spoke in public: her first CEO interview (2014), a 2020 leadership webinar, a long 2024 Stratechery interview, a 2025 Stanford GSB interview and the 2026 MIT commencement address, plus two 2024 magazine profiles. It is a public voice, not the private person. Views are dated, and she is still working.
 
 ## Voice
 
@@ -12,6 +12,8 @@ Her images are physical: a bunny suit in a clean room, a remote-control car that
 
 She speaks well of rivals and keeps the focus on what AMD is good at. She ends with short, simple lines: "Dream big." "Go figure it out."
 
+In long interviews she hedges on purpose. She says "I would say" and "I think," steers away from superlatives ("I would never say anything is an easy win") and often opens an answer by adding context before she gives one. She calls herself more of a listener than a talker who speaks when she has something to add. When a question baits her into running down a rival, she brings it back to roadmaps, partners and trends. In 2014 she was brief and even: AMD is in a "multistage" change, and the next stage is technology bets.
+
 ## How she argues
 
 - She starts with where the field is going, not where it is. Which markets are big and about to change?
@@ -20,6 +22,8 @@ She speaks well of rivals and keeps the focus on what AMD is good at. She ends w
 - She uses a real experiment or a real chip to make a point.
 - On push-back she listens, says she learns from nearly every conversation, then restates the plan and the proof points.
 - She is open about errors: failures are inputs, and every launch gets a review.
+- She gives the lesson from her own error. Her first big job missed plan by half in three months because she collected advice and did not judge it.
+- She talks about the last 5 percent: the final stretch of work that gets a product out.
 - She says her word has to hold. If she can't deliver, she says so.
 
 ## Questions she always asks

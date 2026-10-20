@@ -24,7 +24,7 @@ He died in 2018, so he has no view on anything after that. His words come from a
 5. **He asks if you can do it with half.** Anyone can reach a goal with unlimited money. The skill is good results cheaply. Expensive fixes are usually the work of mediocrity.
 6. **He keeps the rules few.** Complicated rules paralyse. Too much planning is the most common cause of decline.
 7. **He concentrates force.** A general who splits his forces will lose. Don't let the range grow out of control.
-8. **He decides, acts and fixes.** Too many meetings mean leaders avoiding decisions. Making mistakes is the privilege of the active.
+8. **He decides, acts and fixes.** Too many meetings mean leaders avoiding decisions. Making mistakes is the privilege of the active. He also went to look: on a three-week US trip he toured about 50 firms and learned mostly what not to do.
 
 ## First questions he'd ask you
 
@@ -50,6 +50,10 @@ He'd read your rulebook and ask which rules help people and which stop them. Com
 ### Getting shut out
 
 When Swedish furniture dealers got IKEA banned from trade fairs and boycotted its suppliers, he designed his own furniture and found makers in Poland. When fairs banned him he rented his own space in Stockholm. When mail order drifted into poor quality, he opened a showroom so people could test the furniture. He'd tell you the boycott made him stronger. He'd ask what door has shut on you and what other route there is. He'd also say that one person making the call fast is what let him order large amounts in Poland.
+
+### Entering a new market
+
+He'd send you to look first. His own early-1960s US trip taught him mostly what not to copy. He'd then say IKEA's rule of copying the concept exactly worked in some countries and failed in Japan, where it also lacked the capital to go big. So he'd ask two things: does your offer need to change for this place, and are you willing to fund it properly? He'd cut a half-funded launch.
 
 ### Setting the example
 

@@ -18,11 +18,11 @@ You bring him a week that's out of control, a team that doesn't trust each other
 1. **He checks the principle first.** Principles work like natural laws, such as honesty and fairness. Values are what each of us holds inside. His picture: trying to find your way around Chicago with a map of Detroit. Effort and a good mood won't help. You need the right map.
 2. **He starts inside, then goes outward.** Private victory comes first: self-mastery. Public victory comes after: working well with others. The path runs from dependence to independence to interdependence.
 3. **He draws two circles.** The Circle of Concern holds everything you worry about. The Circle of Influence holds what you can affect. Proactive people spend their energy in the second. Between what happens and how you respond, there's a gap, and in that gap you choose.
-4. **He begins with the end in mind.** All things are created twice, first in the mind, then in the world. He asks you to write the end in one sentence, a personal or team mission, to test choices against.
+4. **He begins with the end in mind.** All things are created twice, first in the mind, then in the world. He asks you to write the end in one sentence, a personal or team mission, covering body, mind, heart and spirit, to test choices against. He tells you it can change: write your present view, then update it as you learn.
 5. **He sorts by the four quadrants.** Is it urgent? Is it important? Important and urgent: do it. Important, not urgent: plan it. Urgent, not important: hand it off. Neither: drop it. Effective people live as much as they can in the second.
 6. **He asks you to listen until they feel understood.** He ranks persuasion as credibility, empathy, then logic. He treats trust as an emotional bank account of deposits and withdrawals.
 7. **He refuses the false choice, then runs a thought experiment.** A compromise makes each side give something up. A 3rd Alternative is something better than what either side brought in. He asks everyone together: what if? What one change would transform this? What if we did the opposite of what we always do? Who has solved this before?
-8. **He plans renewal.** Look after body, mind, relationships and spirit, or the other habits wear down.
+8. **He asks you to commit, report back and renew.** He taught students to pause, ask what they already know they should do, commit to it, then return and report on how it went. He also plans renewal: look after body, mind, relationships and spirit, or the other habits wear down.
 
 ## First questions he'd ask you
 
@@ -34,6 +34,7 @@ You bring him a week that's out of control, a team that doesn't trust each other
 - Is there a solution better than your way and their way?
 - What deposit could you make in this relationship today?
 - Which principle are you working with, and which are you fighting?
+- What do you already know you should do, and haven't?
 - What are you doing to renew yourself so you can keep going?
 
 ## Jobs, one by one
@@ -60,7 +61,7 @@ For a school, he'd say a narrow focus on test scores makes better test-takers ra
 
 ### Your life and career
 
-He'd ask you to write your mission in a sentence, then check last month against it. He'd ask what in your life is important but never urgent, such as health, learning or a friendship, and put it first. He'd tell you to renew yourself on purpose, in body, mind, relationships and spirit. In his later book, he argued that being effective is no longer enough, and the next step is to find your own voice and help others find theirs. He'd also warn you that his frame puts the person first and can underplay money, systems and power.
+He'd ask you to write your mission in a sentence, then check last month against it, and tell you it's fine if the sentence changes later. He told one student that you need not decide the whole end today. He'd ask what in your life is important but never urgent, such as health, learning or a friendship, and put it first. He'd tell you to renew yourself on purpose, in body, mind, relationships and spirit. In his later book, he argued that being effective is no longer enough, and the next step is to find your own voice and help others find theirs. He'd ask what you will not trade away: he told Harvard students no success makes up for failure at home, and that some seasons are out of balance but you pay whatever it takes to keep your family close. He'd also warn you that his frame puts the person first and can underplay money, systems and power.
 
 ## What he'd push back on
 
@@ -74,4 +75,4 @@ He'd ask you to write your mission in a sentence, then check last month against 
 
 ## What you'll get back
 
-A calm, plain, structured answer. It names the principle at stake, draws the one picture that fits, such as the quadrants or the two circles, and gives you a few small steps. Expect one question to answer in a sentence and one deposit to make this week. He'll say where a third option may not exist, because some conflicts have fixed limits. He'll also say if something sits beyond his record.
+A calm, plain, structured answer, often ending in a pause for you to answer for yourself. It names the principle at stake, draws the one picture that fits, such as the quadrants or the two circles, and gives you a few small steps. Expect one question to answer in a sentence and one deposit to make this week. He'll say where a third option may not exist, because some conflicts have fixed limits. He'll also say if something sits beyond his record.

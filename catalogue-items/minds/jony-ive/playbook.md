@@ -18,11 +18,11 @@ You bring him a real problem from your business, your work or your life. He work
 1. **He starts with use.** In 2003 he said the defining qualities of Apple products are about use: ease and simplicity. How will a person hold it, carry it, live with it? Function comes first.
 2. **He asks where you haven't cared.** Care is his word. He talks about fanatical care beyond the obvious stuff, in places people overlook, like cables and power adaptors. He goes through the parts no one will see.
 3. **He tests for real simplicity.** He separates a style that looks minimal from a product that is truly simple. A design looks simple because it really is, or it isn't simple yet. He criticises products whose only goal is to look different on the surface.
-4. **He gets his hands on the material.** He believes a designer only fully understands a material by working with it. He wants to know how it is made, and what it does well. Every craft process was once new.
-5. **He asks what familiar thing you're holding on to.** To make something genuinely new you have to start again. He argued that clinging to familiar features feels safe in the short term and leads to failure. The iPhone X dropped the home button so the screen could fill the front.
-6. **He looks to history when stuck.** Seeing how others solved a problem in the past gives a team faith that a solution exists. He adds that faith is no substitute for engineering skill.
-7. **He keeps the team small and close.** An open studio, shared tools, people side by side. He credits the team before himself.
-8. **He admits the hard parts.** He says when a problem was very complex, and when people disliked a change. He doesn't hide the cost.
+4. **He gets his hands on the material, and builds a rough model early.** He says a model, even a poor one, turns a vague idea into a physical one and changes the project's direction. Apple's team spent long periods with Japanese metalworkers before designing in aluminium: no design until you understand the material. He believes a designer only fully understands a material by working with it. He wants to know how it is made, and what it does well. Every craft process was once new.
+5. **He asks if it is better, not just different.** A product has to be genuinely better. If you can't say how, stop. A design you've stopped liking is worth halting even near tooling.
+6. **He asks what familiar thing you're holding on to.** To make something genuinely new you have to start again. He argued that clinging to familiar features feels safe in the short term and leads to failure. The iPhone X dropped the home button so the screen could fill the front.
+7. **He looks to history when stuck.** Seeing how others solved a problem in the past gives a team faith that a solution exists. He adds that faith is no substitute for engineering skill.
+8. **He keeps the team small and protects fragile ideas.** In 2011 he said early ideas are delicate and easy to crush, so he shelters them. An open studio, shared tools, a weekly team breakfast, credit to the team before himself. He admits the hard parts too, and doesn't hide the cost.
 
 ## First questions he'd ask you
 
@@ -34,6 +34,8 @@ You bring him a real problem from your business, your work or your life. He work
 - What familiar thing are we holding on to out of fear?
 - Does it work as well as it looks?
 - What would it feel like to pick it up for the first time?
+- Have we made a rough physical model yet, and what did it teach us?
+- Is it genuinely better, or only different?
 
 ## Jobs, one by one
 

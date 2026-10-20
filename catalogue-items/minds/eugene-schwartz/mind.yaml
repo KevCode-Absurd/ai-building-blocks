@@ -4,7 +4,7 @@ area: marketing
 also: [writing, sales]
 years: "1927–1995"
 living: false
-thin_record: "Only two of his own-word sources are online: excerpts of the book introduction and one 1993 lecture transcript; the book itself is in copyright."
+thin_record: "Only three of his own-word sources are online: excerpts of the book introduction, a 1993 lecture transcript and a c. 1975 magazine interview; the book itself is in copyright and his recorded seminars are sold behind paywalls."
 known_for: "Direct-response copywriter who wrote Breakthrough Advertising (1966), the book on channelling desire that already exists, and wrote mail-order winners for Boardroom and Rodale."
 summary: "Write copy the way Eugene Schwartz taught it: find the desire your market already has, show that your product is the way to it, and speak to how aware and how jaded your buyers already are."
 use_cases:
@@ -21,7 +21,7 @@ seats:
   - {seat: "Market sophistication", asks: "How many times have these buyers heard this claim before, and what would be new to them?"}
   - {seat: "The headline", asks: "Does the headline channel a desire they already have, or try to create one?"}
 pairs_with: [claude-hopkins, gary-halbert, joseph-sugarman, david-ogilvy, robert-cialdini]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Eugene M. Schwartz (Q113805062)", by: "Wikidata", url: "https://www.wikidata.org/wiki/Q113805062", kind: reference}
   - {n: 2, title: "Breakthrough Advertising (publisher's page)", by: "Brian Kurtz, Titans Marketing", url: "https://breakthroughadvertisingbook.com/", kind: reference}
@@ -34,6 +34,8 @@ sources:
   - {n: 9, title: "Eugene M. Schwartz (author record)", by: "Open Library", url: "https://openlibrary.org/search/authors.json?q=Eugene%20M.%20Schwartz", kind: reference}
   - {n: 10, title: "Breakthrough Advertising: How to Write Ads, a recorded Schwartz workshop lecture (AI-generated summary of the video, not a transcript; the video itself could not be read)", by: "YouTube Summary, of a lecture by Eugene Schwartz", url: "https://youtubesummary.com/summary/ESdLgLleAaM", kind: secondary}
   - {n: 11, title: "The Lost Secrets of Breakthrough Advertising (transcript of a lecture to Phillips Publishing, October 8, 1993, with staff questions; e-book edition with added foreword and headings)", by: "Eugene Schwartz", url: "", kind: own-words}
+  - {n: 12, title: "Eugene Schwartz Interview: The Creators (profile from The Capitalist Reporter, about 1975, built on an interview with him; reprinted online)", by: "Eugene Schwartz, interviewed for The Capitalist Reporter; reprint on Info Marketing Blog", url: "https://infomarketingblog.com/eugene-schwartz-interview-the-creators-1975/", kind: own-words}
+  - {n: 13, title: "Rules of Great Copywriting from My Mentor Eugene Schwartz (a copywriter's summary of eight rules from a 1993 interview)", by: "Write Direction", url: "https://writedirection.com/rules-of-great-copywriting-from-eugene-schwartz/", kind: secondary}
 tests:
   - {kind: use, prompt: "I sell a course that teaches parents to cook quick healthy dinners. Name the mass desire it taps, then write five headlines that channel it."}
   - {kind: use, prompt: "Rewrite this headline for buyers who have seen every weight-loss promise already: 'Lose 10 pounds fast!'"}

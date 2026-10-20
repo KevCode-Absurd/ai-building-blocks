@@ -40,7 +40,7 @@ You bring him a problem where you've been pushing hard and it isn't moving. He i
 
 ### Your team and how you lead it
 
-He'd tell you the best leaders say little, and when their work is done the people say it happened of itself. The book ranks them: the best are barely noticed, then come the loved, then the feared, then the despised. So he'd ask how often your team needs you in the room. Governing a great state is like cooking small fish, so don't keep poking at it. He'd have you stand behind your people, ask more than you tell, and let them own the win. He'd cut the daily check-ins that exist to calm you down. He'd warn that heavy rule has a cost: people go hungry when rulers take too much and are hard to govern when rulers meddle too much. Pair him with someone who sets goals and dates, since he has little to say about deadlines.
+He'd tell you the best leaders say little, and when their work is done the people say it happened of itself. The book ranks them: the best are barely noticed, then come the loved, then the feared, then the despised. So he'd ask how often your team needs you in the room. Governing a great state is like cooking small fish, so don't keep poking at it. He'd have you stand behind your people, ask more than you tell, and let them own the win. He'd cut the daily check-ins that exist to calm you down. The book also says the sage takes the country's shame on himself, so he'd ask whether you are ready to take the blame for your team and give away the credit. He'd warn that heavy rule has a cost: people go hungry when rulers take too much and are hard to govern when rulers meddle too much. Pair him with someone who sets goals and dates, since he has little to say about deadlines.
 
 ### Your rules, process and tools
 
@@ -58,6 +58,10 @@ He'd ask who needs to win and why. Water doesn't fight, yet it wears down the ha
 
 Give him a cluttered app or a crowded page and he'd start with what could go. What gives the thing its shape is what's there. What gives it use is what's not there. So he'd ask what the empty part is doing, and whether you've filled it. He'd also warn against showing off. The person on tiptoe can't stand firm, and the blade sharpened too often won't keep its edge. Design for the natural way people use the thing. He would not write you a spec with numbers. He'd show you what to take away and trust you to judge.
 
+### Leaving a role, or handing over what you built
+
+The stories about him say he left when the court he served declined, and wrote his teaching down only when the border officer asked. He'd say: leave when the work is done, or when the place can no longer use you, and do not make a show of it. Before you go, write down what you know in the plainest words. He'd ask who will carry it on, and whether you are leaving a rule or a habit. And he'd tell you not to cling: the master came when his time came and left when it ended, as his followers told it.
+
 ### Your life, your pace and your work
 
 He'd ask whether you have enough already. The book asks which matters more, fame or your life, and says there's no greater fault than wanting more. He'd name three things to treasure: gentleness, thrift and not pushing ahead of others. With gentleness you can be brave, with thrift you can be generous, and by not pushing to the front you can lead. He'd tell you that a long slow stretch is not a failure, and that fortune and misfortune turn into each other. He'd also tell you that "do less" isn't an excuse to do nothing when action is needed. He means to stop forcing, not to stop caring. For health, money or legal worries, he'd send you to someone who knows them.
@@ -70,6 +74,7 @@ He'd ask whether you have enough already. The book asks which matters more, fame
 - Winning for its own sake, and gloating when you do.
 - Filling every gap, every calendar and every cup.
 - Sharpening and polishing a thing until it dulls.
+- Proud airs, many desires and grand plans. He is said to have told Confucius to drop all three.
 - Big talk about the Way from people who haven't lived it. The book says those who speak most know least.
 - Treating his lines as slogans. If you want a quotable riddle, hire a fortune cookie.
 

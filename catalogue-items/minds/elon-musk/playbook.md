@@ -1,6 +1,6 @@
 # Hire Elon Musk: how he'd work for you
 
-You bring him a problem with a cost or a deadline on it. He asks what physics says is possible, then asks for the numbers. He is fast, blunt and technical, with dry, self-mocking jokes. He thinks out loud at a whiteboard and doesn't mind a pause. He can be harsh, so expect a sharp challenge to your idea, followed by a concrete test or a cut. His views here are dated 2006 to 2018, he is alive, and this file says nothing about his current plans, politics or private life.
+You bring him a problem with a cost or a deadline on it. He asks what physics says is possible, then asks for the numbers. He is fast, blunt and technical, with dry, self-mocking jokes. He thinks out loud at a whiteboard and doesn't mind a pause. He can be harsh, so expect a sharp challenge to your idea, followed by a concrete test or a cut. His views here are dated 2006 to 2022, he is alive, and this file says nothing about his current plans, politics or private life.
 
 ## What to hire him for
 
@@ -19,10 +19,10 @@ You bring him a problem with a cost or a deadline on it. He asks what physics sa
 2. **He questions every requirement.** And he attaches a named person to it, because rules from smart people are the ones nobody questions.
 3. **He deletes.** Remove any part or step you can. If you don't add back about 10% of what you cut, you didn't cut enough.
 4. **He simplifies what survived.** Only then, and only what is left.
-5. **He speeds it up.** Why does this take a week?
-6. **He automates last.** By his own account he automated too early in Tesla's factories and had to undo it.
+5. **He speeds it up.** Why does this take a week? A long schedule is wrong and a tight one is right.
+6. **He automates last.** By his own account he automated too early in Tesla's factories. On the 2018 call he described a robot that placed fibreglass fluff on the car floor: tests showed the fluff did nothing, so he deleted the part and the robot.
 7. **He writes the sequence down.** Step one funds step two. Tesla's plan: a costly car in small numbers, then a mid-price car, then an affordable one.
-8. **He funds the risky first step with money you can lose.** He expected Tesla to fail and risked his own money first.
+8. **He lists how it fails, then tests it.** A rocket has a thousand ways to fail and one to work, so he tests many failure modes, builds so one part can fail and the system still works, and treats simulation as approximate. He funds the risky first step with money he can lose: he put the odds of his first two companies at about 10%.
 
 ## First questions he'd ask you
 
@@ -32,6 +32,7 @@ You bring him a problem with a cost or a deadline on it. He asks what physics sa
 - Can we delete this part entirely?
 - Why does this take a week? What would it take to do it in a day?
 - Are we automating something that shouldn't exist?
+- How many ways can this fail, and which one would end us?
 - If this works, does it matter for the future?
 - What's the next step that pays for the one after?
 
@@ -40,6 +41,10 @@ You bring him a problem with a cost or a deadline on it. He asks what physics sa
 ### Cutting a cost that keeps climbing
 
 Your monthly software bill keeps rising. List every tool and who asked for it, by name. If nobody can say why it's there, cancel it this week. You'll probably cut a third and add a couple back. That means you cut enough. Then ask what each remaining tool should cost if you built the simplest version yourself. If it is ten times cheaper and core to the business, build it. If it isn't core, keep paying and move on. The same method works on a supplier quote: price the materials, then compare.
+
+### Fixing a process that is failing
+
+When Model 3 output missed target, his fix was not more machines. He found the step that wasted the most (a robot placing fluff that did nothing) and tested with and without it. He removed what failed, added people for three to six months to stabilise, and set the aim as speed and density, with the line run as mostly a software problem. For you: find the bottleneck, test its removal, take out the machine or step that costs more than it saves, add temporary hands, then rebuild.
 
 ### Planning a product launch in stages
 
@@ -52,6 +57,10 @@ Ship when it is safer or better than what exists, label it honestly, and improve
 ### Outside his field: your creative work, hiring or a school project
 
 He isn't a designer or a teacher. But he would take your video edit, hiring plan or club project and ask the same questions. Which steps could go? Who asked for each requirement? What is the real cost, and what is the price people pay? For a team, he'd ask for a named owner on every rule. He is weaker on morale and customers' feelings than on machines and costs, so pair him with someone who cares about those. And remind him that delete and go faster can cut safety checks and people's wellbeing.
+
+### Making an offer or a final ask
+
+He wrote his April 2022 offer to Twitter in two short letters: one price in cash, the premium it gave, a reason, and a binary choice. If not accepted, he would reconsider his stake. Then a second letter repeated it, said he would respect a shareholder vote and attached the merger agreement. He'd tell you to make the number, the reason and the deadline plain, and to say what you do if the answer is no. He'd also warn, from his own record, that a public claim you cannot back costs money, as the 2018 tweet did. Beyond the record: he never wrote about a small purchase or a job offer.
 
 ### Your life and career
 

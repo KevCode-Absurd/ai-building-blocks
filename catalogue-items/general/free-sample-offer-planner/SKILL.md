@@ -23,7 +23,7 @@ This skill runs on its own. What's below makes the result better, but none of it
 How to start:
 1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too: a brand brain is a folder with `00-start-here.md` in it (often `brand-brain/`). If it's there, read that file and the files above. Look for the other things by name.
 2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with your brand brain. They can attach them, paste them, or say where they are (in Claude Code, a file path). Name the recommended steps above as a suggestion, with their links. Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.
-3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.
+3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.
 
 **Tools that do this best:**
 - **Any good chat AI:** Writing an offer and a cost check is text work any strong chat AI does with this skill.
@@ -51,7 +51,7 @@ How to start:
    - Samples the budget buys = budget ÷ cost of one sample.
    - Buyers needed to break even = total sample spend ÷ profit per customer (first sale profit plus repeat profit they can show).
    - Break-even rate = buyers needed ÷ samples sent, as a percentage.
-   If a figure is missing, write `MISSING:` for it, then show the same sums at two or three plain example values, labelled as examples to replace (for instance a sample cost of 4, 6 and 8). Never present an example value as their number. Set a cap on total spend, and a stop rule tied to the break-even rate, such as "stop after the first 200 samples if fewer than 1 in 20 have bought". If the break-even rate looks out of reach, change the sample or the audience and say which.
+   If a figure is missing, write `MISSING:` for it, then show the same sums at two or three plain example values, labelled as examples to replace (for instance a sample cost of 4, 6 and 8). Never present an example value as their number. Set a cap on total spend, and a stop rule tied to the break-even rate, set just under the break-even rate you worked out, such as "if break-even is 15 in 100, stop after the first 200 samples if fewer than 10 in 100 have bought". If the break-even rate looks out of reach, change the sample or the audience and say which.
 10. **Check it.** Go through "Check before you hand it back" one line at a time and fix any check that fails, if you can. Under CHECKS MISSED, write one line for each check still missed and why, or "none".
 
 ## What you hand back

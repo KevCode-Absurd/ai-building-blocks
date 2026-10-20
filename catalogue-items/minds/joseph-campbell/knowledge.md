@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Campbell's books and the 1988 *Power of Myth* series are in copyright. We read three episode transcripts published by Bill Moyers and summarise them in our own words, with a few short quotes. The rest comes from reference sources.
+Campbell's books and the 1988 *Power of Myth* series are in copyright. We read six of the series' transcripts published by Bill Moyers (episodes 1 to 6) [S3][S4][S5][S7][S8][S9], and a longer piece with passages from the series [S6], and summarise them in our own words, with a few short quotes. In those talks Campbell mostly answers through stories and rarely tells of his own choices, so his life decisions come from two biographical pages [S10][S11] and two or three remarks he made on air. Where a reason is Campbell's own, we say so. The rest comes from reference sources.
 
 ## In one paragraph
 
@@ -67,25 +67,31 @@ He described marriage as an ordeal, not a love affair: a sacrifice of ego to the
 
 ## Real decisions
 
-Campbell rarely told of choices in his own life in these sources. What we have are the stands he took and the readings he chose when pressed, in the Moyers talks and the sacred-space passage.
+Campbell seldom spoke of his own choices on air, so the first five come from biographical pages and are the writers' account unless we say a reason is his own [S10][S11].
 
-### Water, whale and dragon (episode 1)
-He read the whale's belly and the sea as the unconscious, and the dragon as the ego, so that the monster to beat is inside the hero: his line was that the real dragon is in you [S3]. He gave three kinds of call: chosen (Telemachus setting out to find his father), accidental (following a deer into unknown woods) and imposed (being drafted) [S3]. After the trial the hero absorbs the power he faced, as Siegfried does when he tastes the dragon's blood, then returns to share what he learned [S3].
+### Leaving the doctorate (1929)
+After a fellowship in France and Germany from 1927, Campbell came back to Columbia in 1929 wanting to study how art, dreams and myth connect [S10]. The university turned down that plan, and he left the doctoral programme [S10]. It is the one reason for a life choice that the biographical pages give.
 
-### Star Wars as a modern case (episode 1)
+### Five years of reading in Woodstock (1929 to 1934)
+He lived on his savings in Woodstock, New York, and read about nine to twelve hours a day, with a year in California in 1931 to 1932 [S10][S11]. The sources differ on the daily hours and give no stated reason beyond independent study [S10][S11]. Years later he would tell students to follow what gives them meaning, since drifting from it for money costs them their life [S9].
+
+### Taking the teaching job (1934)
+He accepted an invitation to teach at Sarah Lawrence College and stayed 38 years [S10]. He taught comparative religion, and drew on Jung, Joyce, Goethe and others [S9]. Neither page records why he said yes.
+
+### Seven months in Kyoto
+He spent seven months in Kyoto studying temple gardens, which he says shaped his sense of the sublime [S9]. He used it later to push back on Moyers's claim that beauty must come with a moment of insight: he introduced the sublime instead [S9].
+
+### Retiring from teaching (1972)
+He retired and gave himself to writing and speaking [S10]. He says that once he stopped teaching he moved from pursuing achievement to enjoying and appreciating life, and that myths helped him accept ageing [S7].
+
+### Saying no to the "absolute other"
+When Moyers pressed him on faith, Campbell said he reads symbols as poetry, not history, and called the idea of God as an absolute other ridiculous [S8][S4]. He asked why the Church could not sanctify a marriage that two people chose [S8]. He consistently chose a metaphor over a doctrine.
+
+### Reading Star Wars as a modern myth (episode 1)
 He used the film to show the pattern still works: Obi-Wan as the teacher, Han Solo moving from mercenary to hero, the trash compactor as the whale's belly, and Vader as a man who has given himself to a system [S3].
 
-### Many Indras (episode 2)
-In the Indra story a boy shows the proud god that many Indras have come and gone, which Campbell used to say each person is the Indra of their own life [S4]. He compared creation stories (Genesis, Pima, Upanishad, Bassari) and noted how the Bassari version passes blame along [S4]. He held that myths must change with their age; going back to "old-time religion" is wrong, and the West needs new metaphors, including ones for machines, which have not formed yet because change is too fast [S4]. He gave four functions of myth: opening us to mystery, giving a picture of the universe, backing a society's customs, and guiding a person through life, which he thought mattered most today [S4].
-
-### Sacrifice and marriage (episode 4)
-He read sacrifice in planting cultures as a death that gives rise to new life, and tied it to ordinary heroism: a rescuer, a parent, a worker who bears hardship for family [S5]. He called marriage an ordeal in which two people give up self-centredness for the bond, with the line about cracking eggs to make an omelet [S5]. He used Gawain facing the Green Knight and Nietzsche's camel, lion and child to describe moving from obedience to rebellion to a self-directed life [S5].
-
-### The sacred space (The Marginalian)
-He said everyone needs a room or hour with no news, no duties and no social role, a place for creative incubation. Nothing may happen at first, but steady use brings something out [S6]. He used Sinclair Lewis's Babbitt as the picture of a life lived to other people's expectations [S6].
-
-### How he took pushback
-When Moyers asked whether his reading threatened Christian faith, Campbell said he reads the symbols as poetry, not literal history, and agreed that old forms cannot simply be restored [S4]. When pushed on changing society, he said to live within the system as a human being instead of being absorbed by it, and that saving yourself is how a fully alive person changes the world [S3]. A teacher, he said, is like a lighthouse, and the last step is always your own [S3].
+### Taking pushback by widening the view
+When Moyers asked whether his reading threatened Christian faith, Campbell said he reads the symbols as poetry and agreed that old forms cannot simply be restored [S4]. When pushed on changing society, he said to live within the system as a human being instead of being absorbed by it [S3]. A teacher, he said, is like a lighthouse, and the last step is always your own [S3].
 
 ## How he decides
 
@@ -111,7 +117,7 @@ When Moyers asked whether his reading threatened Christian faith, Campbell said 
 
 - Born 26 March 1904 in White Plains, New York [S1].
 - BA (1925) and MA (1927) from Columbia University, then study in Paris and Munich [S1].
-- Read on his own in Woodstock, New York, from 1929 to 1934 [S1].
+- Left the Columbia doctoral programme in 1929 and read on his own in Woodstock, New York, until 1934 [S1][S10].
 - Taught at Sarah Lawrence College from 1934 to 1972 [S1].
 - Co-translated *The Gospel of Sri Ramakrishna* (1942) [S1].
 - *A Skeleton Key to Finnegans Wake* (1944), with Henry Morton Robinson [S1].

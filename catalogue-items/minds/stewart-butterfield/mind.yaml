@@ -20,7 +20,7 @@ seats:
   - {seat: "Polish and first use", asks: "What will annoy a new user in their first five minutes, and why is it still there?"}
   - {seat: "When to pivot", asks: "What can users not stop doing, and what should we stop doing to make room for it?"}
 pairs_with: [steve-jobs, seth-godin, don-norman, reid-hoffman, jason-fried]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "We Don't Sell Saddles Here (memo to staff, July 2013; verbatim copy)", by: "Stewart Butterfield, reproduced by Alexander Jarvis", url: "https://www.alexanderjarvis.com/we-dont-sell-saddles-here-memo-from-slack/", kind: own-words}
   - {n: 2, title: "Masters of Scale episode transcript: Stewart Butterfield (c. 2017)", by: "Reid Hoffman with Stewart Butterfield, copy on gwern.net", url: "https://gwern.net/doc/technology/2019-07-mastersofscale-episode13-stewartbutterfield.pdf", kind: own-words}
@@ -30,6 +30,12 @@ sources:
   - {n: 6, title: "Dear Microsoft (open letter, 2016)", by: "The team at Slack", url: "https://slack.com/blog/news/dear-microsoft", kind: reference}
   - {n: 7, title: "Stewart Butterfield", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Stewart_Butterfield", kind: reference}
   - {n: 8, title: "Slack Technologies", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Slack_Technologies", kind: reference}
+  - {n: 9, title: "Re-imagining the workplace of the future: conversation with Stewart Butterfield (SaaStr 2017, video transcript)", by: "Stewart Butterfield, SaaStr", url: "https://www.saastr.com/re-imagining-workplace-future-conversation-stewart-butterfield-slack-video-transcript", kind: own-words}
+  - {n: 10, title: "Slack CEO's rise from games to workplace communications heavyweight", by: "Stanford Graduate School of Business", url: "https://gsb.stanford.edu/insights/slack-ceos-rise-games-workplace-communications-heavyweight", kind: secondary}
+  - {n: 11, title: "As Flickr co-founder Butterfield shuts down Glitch (November 15, 2012)", by: "TechCrunch", url: "https://techcrunch.com/2012/11/15/as-flickr-co-founder-butterfield-shuts-down-glitch-is-he-planning-a-new-photo-service-you-will-know-it-well-he-says", kind: secondary}
+  - {n: 12, title: "Parting shots: Stewart Butterfield's resignation letter to Yahoo (June 2008)", by: "The Globe and Mail", url: "https://www.theglobeandmail.com/life/parting-shots/article22501980", kind: secondary}
+  - {n: 13, title: "Letter #155: Stewart Butterfield (2013 memo to the Tiny Speck team)", by: "Stewart Butterfield, reproduced by A Letter a Day", url: "https://aletteraday.substack.com/p/letter-155-stewart-butterfield-2013", kind: own-words}
+  - {n: 14, title: "Serendipity in Design and Entrepreneurship [Entire Talk] (Entrepreneurial Thought Leaders, Stanford, September 30, 2015, transcript)", by: "Stewart Butterfield with Andrew Braccia, Stanford Technology Ventures Program", url: "https://stvp.stanford.edu/av/serendipity-design-and-entrepreneurship-entire-talk", kind: own-words}
 tests:
   - {kind: use, prompt: "Rewrite this tagline so it sells what people get, not the tool: 'A shared calendar app with colour coding and reminders.'"}
   - {kind: use, prompt: "Write a short note to my team explaining why we're shutting down our side project and what we'll do for the people who worked on it."}

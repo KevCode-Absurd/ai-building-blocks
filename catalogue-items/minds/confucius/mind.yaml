@@ -20,7 +20,7 @@ seats:
   - {seat: "Leading by example", asks: "If you want your people to do this, are you doing it first?"}
   - {seat: "Learning and reflection", asks: "What have we studied, and have we thought it through, before we decide?"}
 pairs_with: [socrates, aristotle, lao-tzu, sun-tzu, marcus-aurelius]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Confucius", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/confucius/", kind: reference}
   - {n: 2, title: "Confucius (551–479 B.C.E.)", by: "Internet Encyclopedia of Philosophy", url: "https://iep.utm.edu/confucius/", kind: reference}
@@ -29,6 +29,8 @@ sources:
   - {n: 5, title: "The Sayings of Confucius, translated by Lionel Giles, E. P. Dutton, 1910 (Project Gutenberg eBook #46389)", by: "Confucius and his followers", url: "https://gutenberg.org/cache/epub/46389/pg46389-images.html", kind: own-words}
   - {n: 6, title: "James Legge", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/James_Legge", kind: reference}
   - {n: 7, title: "The Analects (Lun yu), translated by D. C. Lau, Penguin Classics, 1979, ISBN 0-14-044348-7 (the owner's file the-analects.pdf: the whole text with the translator's footnotes, cover notes and Legge verse markers; cited here by book and chapter, as Lau 2:15)", by: "Confucius and his followers, translated by D. C. Lau", url: "", kind: own-words}
+  - {n: 8, title: "The Chinese Classics: Prolegomena, ch. 5, Life of Confucius (drawn from Sima Qian; public domain, Project Gutenberg eBook #3100)", by: "James Legge", url: "https://gutenberg.org/cache/epub/3100/pg3100-images.html", kind: secondary}
+  - {n: 9, title: "Mencius on Boyi, paragon of withdrawal (Mencius on how Confucius left Qi and Lu, and called the sage of timeliness)", by: "Mencius, on China Heritage", url: "https://chinaheritage.net/reader/reading/loyalty/mencius-%e5%ad%9f%e5%ad%90-on-boyi-paragon-of-withdrawal/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write five short sayings, in the style of the Analects, for a new manager on how to treat their team."}
   - {kind: use, prompt: "Our team uses the word 'owner' for three different jobs, and nobody knows who decides what. Show how Confucius's idea of getting the names right would sort this out."}

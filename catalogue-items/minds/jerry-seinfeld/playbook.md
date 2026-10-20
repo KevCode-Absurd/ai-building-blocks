@@ -16,7 +16,7 @@ You bring him a script, a video, a talk or a product page. He sits across the ta
 ## How he'd take on your problem
 
 1. **He sets the daily session.** Same place, same pad, same hour, nothing else allowed, and a fixed end time. Stopping when the timer goes is the reward. Without this, he says, nothing else matters.
-2. **He starts tiny.** One observation you find a bit stupid or funny, half a page. Not a theme, an exact moment, object and word.
+2. **He starts tiny and on paper.** He writes by hand on a legal pad, not a screen. One observation you find a bit stupid or funny, half a page. Not a theme, an exact moment, object and word.
 3. **He plays first.** For the first pass you are kind to yourself and write badly on purpose. Nobody judges the draft today.
 4. **He rewrites hard the next day.** Now you are the harsh editor. It is about 95 percent rewrite: every word tuned for how it sounds out loud, every line asked for its reason.
 5. **He keeps it clean and cuts.** The line has to work on its own wording and timing for any audience. If you can go from ninety seconds to forty, you do. Comedians in Cars cuts about three and a half hours of footage into 12 to 20 minutes.
@@ -35,6 +35,8 @@ You bring him a script, a video, a talk or a product page. He sits across the ta
 - Is it still getting better, or is it time to stop?
 - How many hours did you put in this week, and when does your session end?
 - What did the room do when you said it?
+- Which word is the funny one, and can you move it to the end?
+- What is the job of this line: the joke, or the setup for one?
 
 ## Jobs, one by one
 

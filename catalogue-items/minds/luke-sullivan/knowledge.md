@@ -1,8 +1,8 @@
 # Luke Sullivan: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Luke Sullivan is alive, and views can change. His main work is the book *Hey Whipple, Squeeze This*, first published in 1998 and since revised several times [S1][S5]. We couldn't open the book or his blog, so this data set draws on what he said in a 2009 email interview and a podcast from about 2018, a write-up of a 2013 talk, a review of the book, and two short biographies [S1][S2][S3][S4][S5][S6]. The talk write-up was built from live tweets, so its wording is the blogger's [S3]. His birth year isn't in our sources. We also read a machine transcript of the full audio of the podcast, which is unchecked and may mishear names, so we use it for method and stories only [S7]. Treat each view as "as of" the date of its source.
+Luke Sullivan is alive, and views can change. His main work is the book *Hey Whipple, Squeeze This*, first published in 1998 and since revised several times [S1][S5]. We couldn't open the book or his blog, so this data set draws on what he said in a 2009 email interview and a podcast from about 2018, a write-up of a 2013 talk, a review of the book, and two short biographies [S1][S2][S3][S4][S5][S6]. The talk write-up was built from live tweets, so its wording is the blogger's [S3]. His birth year isn't in our sources. We also read a machine transcript of the full audio of the podcast, which is unchecked and may mishear names, so we use it for method and stories only [S7]. On 2026-10-21 we added three more of his own interviews: one from about 2011, one from 10 March 2011 and a later Q&A on the sixth edition [S8][S9][S10]. These are summaries of the pages, not word-for-word reads, so we use them for method and decisions. Treat each view as "as of" the date of its source.
 
 ## In one paragraph
 
@@ -50,6 +50,8 @@ How he applied it: his favourite campaign of his own was a local radio campaign 
 
 He would rather hire a hard-working person with decent talent than a genius who can't be relied on [S1]. Creative minds need balancing with disciplined ones, and he quotes Steve Jobs on shipping on time [S1]. You learn the rules before you break them [S1].
 
+He also says creatives need curiosity and outside passions more than raw talent, and reading is his main source of ideas [S8]. For juniors: study the masters, listen far more than you talk for the first couple of years, and don't be hard to work with [S8].
+
 How he applied it: at his first agency, Bozell and Jacobs in Minneapolis, he learned the basics: a decent headline, staying on strategy, and building tension and release in radio [S1]. Tom McElligott taught him to build "friction" into work, so it asks something of the audience [S2].
 
 ### Sell the idea without being slick
@@ -88,9 +90,17 @@ He says a reviewer clicks the first campaign and wants it to leap out, and decid
 
 He advises students to find an art director or associate creative director, not the chief creative officer, and to ask to send an idea from time to time without bombarding them. He pays forward the help two mentors gave him in 1979 and after [S7].
 
-### Adding a co-author for the fifth edition
+### Letting 40 people tear apart the first draft
 
-By the fifth edition of the book he decided he was not an expert in the newest media, so he invited Edward Boches to write the chapters on social and interactive. In the third edition he had a direct marketing chapter that he cut in the fourth to make room for the web [S7].
+Sullivan built the book from speeches and articles he had saved for years, and a talk at the Portfolio Center in Atlanta grew out of that file [S9]. He saw that most advertising books of the time were weak, and wrote it mainly to get it out of his system [S9]. Before he looked for a publisher he gave the manuscript to about 40 respected people in the business, from creatives to account people, and took their criticism [S9][S10]. He then taught himself how to pitch a book by buying proposal guides [S9]. It has sold well, though not as a blockbuster [S9].
+
+### Refusing a tobacco account
+
+Asked about his most rewarding choice in the business, Sullivan named refusing to work on a tobacco account [S8]. He also named the clients he preferred: ones with a good product who want to make money and trust the agency's judgment, so that a failure was his to own [S8]. The worst, he said, were dishonest clients [S8]. His stated lesson for juniors is that who you work for is a choice you make [S8].
+
+### Leaving agencies for teaching
+
+After about 33 years he noticed he no longer felt excited about client meetings, and that pushed him toward teaching [S10]. He took the chair at the Savannah College of Art and Design, where his book was already in use, and said he felt relief at leaving daily big-idea deadlines while still worrying whether students were learning [S8][S10]. The move also fed the book: for the sixth edition he added chapters on generating ideas and branded content and rewrote the portfolio chapter from his years teaching career strategy [S10].
 
 ## How he decides
 
@@ -101,6 +111,7 @@ By the fifth edition of the book he decided he was not an expert in the newest m
 - Have we had enough ideas yet, or just the obvious ones? [S4]
 - Is the brief a question, or a pre-written answer? [S1]
 - Will we ship it on time? [S1]
+- Is the idea shown clearly enough? Exceptional ideas can get by in rough form, but most need a level or two beyond stick figures [S9]
 
 ## Where he stood
 
@@ -119,6 +130,10 @@ By the fifth edition of the book he decided he was not an expert in the newest m
 **What would he do differently?** Asked for advice to his younger self, he said he would talk less and listen more [S1].
 
 **Does good work rise?** Mostly. Even with subjective judging, he said in 2009 that the best work usually reaches the top. He also warned that judges distrust entries that look like they never really ran [S2].
+
+**Does polish matter?** A little. Truly exceptional ideas can survive rough execution, but most work doesn't get that pass, and he admits that is unfair [S9].
+
+**What does a portfolio need?** He once liked a graduate book with little traditional advertising because it was full of interesting creative content, and he still wants a commercial purpose and strategy behind each piece [S9].
 
 **Research or instinct?** He leans on instinct and warns that research is often wrong [S4].
 

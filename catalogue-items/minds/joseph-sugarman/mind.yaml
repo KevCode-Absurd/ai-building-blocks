@@ -22,7 +22,7 @@ seats:
   - {seat: "Testing and rollout", asks: "Where can we try this small first, and what result would make us roll it out?"}
   - {seat: "Storytelling", asks: "What true story could open this, even if it barely mentions the product?"}
 pairs_with: [claude-hopkins, eugene-schwartz, gary-halbert, david-ogilvy, joe-girard]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Joseph Sugarman", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Joseph_Sugarman", kind: reference}
   - {n: 2, title: "With a knack for narrative, Joseph Sugarman used words to move products (obituary, March 2022)", by: "David Roeder, Chicago Sun-Times", url: "https://chicago.suntimes.com/obituaries/2022/3/25/22996929/joseph-sugarman-obituary-mail-order-products-blublocker-sunglasses", kind: reference}
@@ -38,6 +38,8 @@ sources:
   - {n: 12, title: "Spotlight: Regulatory Reformer (June 1980)", by: "Robert Poole, Reason", url: "https://reason.com/1980/06/01/regulatory-reformer/", kind: reference}
   - {n: 13, title: "Before LabMD There Was JS&A (2014)", by: "Chris Hoofnagle, UC Berkeley School of Law", url: "https://hoofnagle.berkeley.edu/2014/09/11/before-labmd-there-was-jsa/", kind: secondary}
   - {n: 14, title: "The six success forces (summary of Sugarman's 1980 book Success Forces, May 25, 2011)", by: "John Wood, AWAI", url: "https://www.awai.com/2011/05/the-six-success-forces/", kind: secondary}
+  - {n: 15, title: "7 Figure Secrets of a Marketing Legend: An Interview with Joe Sugarman (4 December 2013)", by: "Joe Sugarman with Joseph Bushnell", url: "https://josephbushnell.com/joe-sugarman-interview/", kind: own-words}
+  - {n: 16, title: "Talkin' Story (essay, 24 October 2011)", by: "Joe Sugarman, American Writers and Artists Institute", url: "https://www.awai.com/2011/10/talkin-story/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write the first 150 words of a long sales letter for a handmade wooden chess set, opening with a true-sounding story in Sugarman's style. Mark any invented details as placeholders."}
   - {kind: use, prompt: "Rewrite this dull product blurb as a short story-led ad: 'Our blender has a 1,200-watt motor and six speeds.'"}

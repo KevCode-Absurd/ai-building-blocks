@@ -20,7 +20,7 @@ seats:
   - {seat: "Serving the unserved", asks: "Who has never had this before, and what would it take to make them trust it?"}
   - {seat: "Business with a purpose", asks: "What good does this do beyond the profit, and is it built into the plan or bolted on later?"}
 pairs_with: [aliko-dangote, nelson-mandela, richard-branson, ratan-tata]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Africa's Farms of the Future (Project Syndicate, 2014; opening section read)", by: "Strive Masiyiwa", url: "https://www.project-syndicate.org/commentary/strive-masiyiwa-calls-for-agricultural-policies-and-investments-to-sustain-the-continent-s-economic-growth", kind: own-words}
   - {n: 2, title: "The Power of Mini-Grids (Project Syndicate, 2017; opening section read)", by: "Strive Masiyiwa and Richard Branson", url: "https://www.project-syndicate.org/commentary/mini-grids-africa-electrification-by-strive-masiyiwa-and-richard-branson-2017-06", kind: own-words}
@@ -31,6 +31,8 @@ sources:
   - {n: 7, title: "Strive Masiyiwa", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Strive_Masiyiwa", kind: reference}
   - {n: 8, title: "Econet Wireless", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Econet_Wireless", kind: reference}
   - {n: 9, title: "GLS18 session notes: Strive Masiyiwa one-on-one with Bishop T. D. Jakes (Global Leadership Summit, 2018)", by: "Global Leadership Summit", url: "https://www.globalleadership.org/article/gls18-session-notes-strive-masiyiwa-one-on-one-with-bishop-t-d-jakes", kind: secondary}
+  - {n: 10, title: "Funding Africa's Education Revolution (Project Syndicate, October 11, 2018; opening section read)", by: "Strive Masiyiwa", url: "https://www.project-syndicate.org/commentary/africa-education-for-all-funding-by-strive-masiyiwa-2018-10", kind: own-words}
+  - {n: 11, title: "Bridging Africa's Health-Care Divide (Project Syndicate, October 29, 2021; opening section read)", by: "Strive Masiyiwa and Gordon Brown", url: "https://www.project-syndicate.org/commentary/africa-vaccine-shortfalls-health-care-capacity-by-strive-masiyiwa-and-gordon-brown-2021-10", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short, polite reply to a middleman who says my permit will move faster if I pay a 'facilitation fee'."}
   - {kind: use, prompt: "Plan a low-cost word-of-mouth campaign to get people who don't trust banks to try a new savings app."}

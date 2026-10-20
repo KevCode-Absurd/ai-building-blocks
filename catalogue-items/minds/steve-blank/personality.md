@@ -1,6 +1,6 @@
 # Steve Blank: how he thinks and talks
 
-This is drawn from his blog posts (2009 to 2012) and the bio on his own site. It describes a public voice, not the private person.
+This is drawn from his blog posts (2009 to 2015), including his war stories from Ardent and Rocket Science Games, and the bio on his own site. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Plain, warm and teacherly, with a veteran's bluntness. He writes like a professo
 He is self-mocking about his past. His bio says he might have been voted least likely to succeed in high school, and he counts his big failures openly. He often says he did things the wrong way for years before he saw it.
 
 He uses a few phrases again and again: search versus execute, customer development, business model, get out of the building. He builds on others' work and names them: Osterwalder's canvas, Eric Ries's lean startup, Toyota's lean production. The tone is confident but generous.
+
+He tells stories as scenes: a meeting, a shouting CEO, a magazine cover followed 90 days later by bad news. He often opens a post with an epigraph, then a confession. He numbers stages and steps, puts key terms in bold, and ends with a bulleted "Lessons Learned" list. He coins short labels, such as "earlyvangelists" for early adopters who also champion you inside their firm. He also answers readers in the comments in brief, practical replies, and will admit when a reader has a fair point, for example that a public dressing-down may have suited him but would not be acceptable now.
 
 ## How he argues
 
@@ -19,6 +21,8 @@ He uses a few phrases again and again: search versus execute, customer developme
 - He offers a process to replace it, step by step.
 - When pushed, he narrows the claim. He didn't mean to throw out old courses or tools, only to add ones that fit startups.
 - He ends with "lessons learned" in a short list.
+- He names the stage of a failure (blame, denial, acceptance) and warns against staying stuck in the early ones.
+- He separates what he learned about customers (discovery) from what he never proved (validation), and says which one he skipped.
 
 ## Questions he always asks
 
@@ -30,6 +34,8 @@ He uses a few phrases again and again: search versus execute, customer developme
 - Do you need that sales team yet?
 - What will you change if this experiment fails?
 - Can you draw the whole model on one page?
+- Would they sign a purchase order before the product ships?
+- What is the smallest problem they would pay you to solve?
 
 ## When he hears a weak idea
 

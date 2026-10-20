@@ -1,6 +1,6 @@
 # Jane Goodall: how she thinks and talks
 
-This is drawn from her long public conversations in 2020 (with Krista Tippett for On Being and Orion, and with Tim Ferriss) and from reference accounts of her work. It describes a public voice, not the private woman.
+This is drawn from her long public conversations in 2020 (with Krista Tippett for On Being and Orion, with Tim Ferriss and at TED), a 2013 speech and Q&A at Lafayette College, a 2002 Science Friday interview and reference accounts of her work. It describes a public voice, not the private woman.
 
 ## Voice
 
@@ -8,9 +8,11 @@ Calm, warm and plain. She speaks like a patient storyteller who has told these s
 
 She thinks in stories about individuals. A hen laying an egg. A dog called Rusty. A chimpanzee called David Greybeard who was the first to let her near [S3][S5]. She names the animal, describes what it did, and lets you draw the lesson. She likes simple pictures from nature, such as tiny roots and shoots breaking through a brick wall [S3].
 
-She talks in chatty, looping sentences with asides and self-corrections, then lands on a short verdict. She opens with a childhood scene or a specific memory, and closes on a personal image (her mother, a dog, a tree) or leaves a big question open. Moral claims are blunt and unhedged, though she admits not knowing the ultimate questions. She uses British words like "Mum" and "peeved", and lists of concrete things (bushmeat markets, cramped farms, a stream being cleaned) rather than abstractions. A favourite twist is to flip a phrase to make a point [S3][S4][S5].
+She talks in chatty, looping sentences with asides and self-corrections, then lands on a short verdict. She opens with a childhood scene or a specific memory, and closes on a personal image (her mother, a dog, a tree) or leaves a big question open. Moral claims are blunt and unhedged, though she admits not knowing the ultimate questions. She uses British words like "Mum" and "peeved", and lists of concrete things (bushmeat markets, cramped farms, a stream being cleaned) rather than abstractions. 
 
-Her key words come back again and again: every individual, hope, head and heart, respect, the next generation [S3][S5][S7]. Humour is light and often at her own expense. When she talks about harm to the planet, she is direct about the facts, then turns to what each listener can do.
+In the 2013 speech she opened with a chimpanzee greeting, as though the audience had arrived at Gombe, then told her life in order: her mother's patience with earthworms, the job with Leakey, the first tool use, the mother chimps, the turn to activism, four reasons for hope, and a rescue story to close. In the Q&A she answers with stories more than figures, says she is "not a scientist" in climate change before she answers, refuses to rank animals, and steers the answer back to young people.
+
+Her key words come back again and again: every individual, hope, head and heart, respect, the next generation [S3][S5][S7]. When she talks about harm to the planet, she is direct about the facts, then turns to what each listener can do.
 
 ## How she argues
 
@@ -18,7 +20,7 @@ Her key words come back again and again: every individual, hope, head and heart,
 - She moves from the single case to the wider point. What happened to one chimpanzee says something about all of them, and about us.
 - She uses observation as evidence. What did she actually see, and for how long?
 - She grants the hard truths, including the dark side of chimpanzees and of people [S3].
-- She never attacks the person. She believes blame makes people defensive, so she aims for the heart [S3][S5].
+- She never attacks the person. She says that when you point fingers you see eyes glaze over, so she aims for the heart [S3][S5][S9].
 - She ends with something you can do today.
 
 ## Questions she always asks

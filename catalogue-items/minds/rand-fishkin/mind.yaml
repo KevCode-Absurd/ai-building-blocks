@@ -20,7 +20,7 @@ seats:
   - {seat: "Zero-click realist", asks: "If nobody clicks through, does this still help someone remember us?"}
   - {seat: "Measure what matters", asks: "Which business goal does this marketing goal serve, and how will we see the lift?"}
 pairs_with: [neil-patel, ann-handley, april-dunford, byron-sharp, seth-godin]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Rand Fishkin (speaker biography)", by: "SMX München", url: "https://smxmuenchen.de/en/speaker/rand-fishkin/", kind: reference}
   - {n: 2, title: "Zero-Click Marketing: An Exclusive Interview with Rand Fishkin of SparkToro (6 February 2025)", by: "Rand Fishkin, interviewed by Kent Lewis, NextNW", url: "https://www.nextnw.org/blog/zero-click-marketing-an-exclusive-interview-with-rand-fishkin-of-sparktoro", kind: own-words}
@@ -28,6 +28,11 @@ sources:
   - {n: 4, title: "SparkToro's Rand Fishkin on audience intelligence, B2B Marketing Tech Talks (23 December 2021)", by: "Rand Fishkin, interviewed by Tom Shapiro, Stratabeat", url: "https://stratabeat.com/sparktoro-rand-fishkin-interview/", kind: own-words}
   - {n: 5, title: "An interview with Rand Fishkin, Founder of SparkToro, and previously co-founder of Moz", by: "Rand Fishkin, interviewed for Zoho Community", url: "https://help.zoho.com/portal/en/community/topic/an-interview-with-rand-fishkin-founder-of-sparktoro-and-previously-co-founder-of-moz", kind: own-words}
   - {n: 6, title: "Avast (section on Jumpshot)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Avast", kind: reference}
+  - {n: 7, title: "SparkToro's Rand Fishkin on personal branding risks, why he left Moz, and building companies without venture capital (podcast page, 24 July 2025)", by: "Rand Fishkin, interviewed by Mark MacLeod", url: "https://markmacleod.me/sparktoros-rand-fishkin-on-personal-branding-risks-why-he-left-moz-and-building-companies-without-venture-capital/", kind: own-words}
+  - {n: 8, title: "#85: Moz Founder Reveals the Pains of VC Funding and an Alternative Funding Approach (podcast page)", by: "Rand Fishkin, interviewed for Practical Founders", url: "https://practicalfounders.com/podcast/85-moz-founder-reveals-the-pains-of-vc-funding-and-an-alternative-funding-approach-rand-fishkin/", kind: own-words}
+  - {n: 9, title: "Moz Founder Rand Fishkin on New Book, New Company (2018)", by: "Rand Fishkin, interviewed by Practical Ecommerce", url: "https://www.practicalecommerce.com/moz-founder-rand-fishkin-new-book-new-company", kind: own-words}
+  - {n: 10, title: "RLSP #7 with Rand Fishkin: SparkToro, Moz, Lost and Founder (podcast page)", by: "Rand Fishkin, interviewed for Real Life Superpowers", url: "https://reallifesuperpowers.com/podcast/rand-fishkin-moz/", kind: own-words}
+  - {n: 11, title: "EP 119: Moz Founder: I Was Making $50M a Year and Miserable (podcast page, 14 July 2026)", by: "Rand Fishkin, interviewed for Embracing Marketing Mistakes", url: "https://pod.wave.co/podcast/embracing-marketing-mistakes/ep-119-moz-founder-i-was-making-50m-a-year-and-miserable", kind: own-words}
 tests:
   - {kind: use, prompt: "Make a one-page audience research plan for a small company selling project software to architects."}
   - {kind: use, prompt: "Rewrite this blog post idea so it still builds our brand even if readers never visit our site."}

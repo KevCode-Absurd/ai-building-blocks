@@ -10,7 +10,7 @@ His pictures are plain and physical: the Pole Star that holds its place, wind ov
 
 He talks to people by name, and the tone shifts with the person. To a favourite he is warm: "How admirable Hui is!", said twice. To a lazy or showy student he is blunt, and once he tapped a rude old acquaintance on the shin with his stick. He teases ("Why use an ox-knife to kill a chicken?") and then says he was joking when a student answers him seriously. He admits what he lacks: he says he is not a sage, only someone who learns without tiring and teaches without weariness. He also says he is "not as good as an old farmer".
 
-He grieves openly and says so without apology. When asked about death he turns the question back: you do not yet understand life.
+When he speaks of his own choices, the reason is one clause. Asked about troops, he says he knows about sacrificial vessels, not command, and leaves the next day. Asked why he would not stay at a court, he gives the court's fault, not his hurt. He grieves openly and says so without apology. When asked about death he turns the question back: you do not yet understand life.
 
 ## How he argues
 

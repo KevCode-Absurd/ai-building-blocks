@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Angelou's poems and memoirs are in copyright. This data set describes them in our own words and quotes only a few words. Her views come from three kinds of source in her own words: the long 1997 Academy of Achievement interview [S2], the Bill Moyers documentary Facing Evil and a later Moyers episode [S8], and the shape of two poems read in full on poets.org [S5][S6]. Reference pages give the facts of her life. We did not read her memoirs. In her memoirs the "I" is Angelou, but she shaped her life story with the tools of fiction, so the books are not a strict record of fact.
+A note on method: Angelou's poems and memoirs are in copyright. This data set describes them in our own words and quotes only a few words. Her views come from her own spoken words: the long 1997 Academy of Achievement interview [S2], the Bill Moyers documentary and episode on facing evil [S8], Moyers's Creativity interview [S10], a 2013 interview in The Rumpus [S9], a life-lessons conversation with Oprah Winfrey [S11], and interviews with Marianne Schnall [S12] and Psychology Today [S13]. We also read two poems on poets.org [S5][S6]. Reference pages give the facts of her life. We did not read her memoirs. In them the "I" is Angelou, but she shaped her life story with the tools of fiction, so the books are not a strict record of fact. The interview pages were read through a summarising reader, so details are kept modest.
 
 ## In one paragraph
 
@@ -52,6 +52,10 @@ She urged young people to read without stopping and to work through library read
 
 Angelou wrote in rented hotel rooms with the pictures taken down, lying on the bed with legal pads, a thesaurus, a Bible, a deck of cards and a bottle of sherry [S1]. She wrote from early morning into the afternoon [S4]. She averaged 10 to 12 pages a day and cut them down to three or four [S1]. She also said plainly that she wrote for money, as Balzac had [S1].
 
+### Words are things, and courtesy is a rule
+
+In the Oprah conversation she said words are things: they shape people and places, so she would not let racist or cruel jokes be told in her home [S11]. She taught the same rule to young women: accept nothing less than courtesy and give nothing less [S12][S13]. She said that when someone shows you who they are, believe them, and that gossip says more about the speaker than about you [S11]. She also said not to be in denial, to look at what you have lived through, and to remember what you have already survived [S12][S13].
+
 ## How she decides
 
 - Start with courage: name the fear and face it [S2].
@@ -64,21 +68,26 @@ Angelou wrote in rented hotel rooms with the pictures taken down, lying on the b
 - Speak to everyone, and leave no one out [S5].
 
 ## Real decisions
-
-### Reading and memorising during five years of silence
-After being raped as a child she stopped speaking for about five years. She read widely and memorised poems and plays in that time [S8]. She later said she had a voice and refused to use it, and she credits a teacher with bringing her back to speech through books [S2][S1].
+### Reading and reciting during five years of silence
+After being raped as a child she stopped speaking for about five years. She read widely and memorised poems and plays in that time [S8]. She said she believed her voice had caused harm, and a local woman, Mrs. Flowers, pushed her toward books and poetry until she found her voice by reciting alone [S10][S11]. She later said she had a voice and refused to use it [S2].
 
 ### Boycotting the movie house in Arkansas
 As a child she was sent up the side steps of a movie house to a cramped seating area, while white children were sold tickets at the front. She decided to boycott movies [S2].
 
 ### Taking on a book the editor called nearly impossible
-An editor told her it was almost impossible to write autobiography as literature. She took it as a challenge and wrote I Know Why the Caged Bird Sings, using dialogue, character and theme and arranging it in short episodes [S3].
+An editor told her it was almost impossible to write autobiography as literature. She took it as a challenge and wrote *I Know Why the Caged Bird Sings*, using dialogue, character and theme in short episodes [S3].
+
+### Forgiving, without going back
+She said she forgave the man who had abused her, not to excuse him but to free herself from the weight of resentment [S11]. She also said she would not put herself at risk again [S11]. Her stated reason was to be free, not to forget.
+
+### Asking a guest to leave over jokes
+She said she once asked a guest to leave her home for telling racist and homophobic jokes [S11]. Her reason was that such jokes are poison that dehumanise people, and that words shape the place they are said in [S11].
+
+### Letting the subject choose the form
+She said the subject of a poem shapes its form, and she lets a poem sit until it feels done, sometimes revising it into something quite different [S9]. She picks the voice by asking who is speaking: a street voice or a gospel voice gives a different form than a formal one [S9]. As she got older she wrote more slowly and used less rhyme [S9].
 
 ### Writing the inaugural poem from notes
 For the 1993 inauguration she followed her usual routine. She wrote down all she could about America, then shaped the notes into a poem with three voices, a rock, a river and a tree, that speak to every kind of person. The poem ends on a plain greeting [S4][S5].
-
-### Calming a young man on a film set
-On the set of Poetic Justice she talked a young man down when he was about to fight, and he later greeted her warmly. She also tells of calming a frightened passenger on a bumpy flight by reaching out, and says helping others also frees you from fear [S2].
 
 ### Writing in a hotel room, cutting hard
 She rented a plain hotel room, took the pictures off the walls, and wrote on legal pads from early morning. She wrote 10 to 12 pages a day and cut them to three or four [S1].
@@ -131,5 +140,6 @@ She rented a plain hotel room, took the pictures off the walls, and wrote on leg
 
 - "Courage is the most important of all the virtues" (Academy of Achievement interview, 1997) [S2]
 - "Read ceaselessly." (Academy of Achievement interview, 1997) [S2]
-- "catch the music" (on the preacher's voice, Academy of Achievement interview, 1997) [S2]
-- "Good morning" (closing words, "On the Pulse of Morning," 1993) [S5]
+- "Words are things. I'm convinced." (Oprah conversation) [S11]
+- "Don't be in denial." (Schnall and Psychology Today interviews) [S12][S13]
+- "Your legacy is every life you touch." (Oprah conversation) [S11]

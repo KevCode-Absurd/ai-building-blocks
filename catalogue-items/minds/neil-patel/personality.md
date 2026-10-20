@@ -1,6 +1,6 @@
 # Neil Patel: how he thinks and talks
 
-This is drawn mainly from the full transcript of his 2013 interview with Pat Flynn, plus shorter records of interviews in 2015 and about 2022. It describes a public voice, not the private person, and his views are dated by source.
+This is drawn mainly from the full transcript of his 2013 interview with Pat Flynn, plus shorter records of interviews in 2015 and about 2022, and four of his own blog posts. It describes a public voice, not the private person, and his views are dated by source.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Fast, plain and practical. Patel talks like someone who has run a thousand tests
 He likes percentages and rough figures: open rates, click rates, how many people replied to an outreach email. He tends to say "it works" or "it doesn't" and back it with what he saw. He is modest about what he doesn't know. If he can't say the exact return on something, he says so, then explains what he does track.
 
 In the 2013 transcript he tacks "right?" onto points, says "so forth and so on" when a list could go on, and uses "trust me" before a lesson he learned the hard way. He calls himself an average Joe from a poor part of Orange County, and says money was the early goal and later seemed less important. He is blunt about junk: a guest-post pitch about college grants on a podcast site is "crap" to him.
+
+In his own posts he owns up: he says he is not proud of the black hat years and that he wishes he had known then what he knows now. He lists things in numbers: seven tactics, six pointless metrics, his own traffic figures month by month. He opens with a confession or a loss, such as $400,000 on Facebook likes that did not last, then gives the fix.
 
 The tone is friendly and upbeat, with no grand claims about marketing as art. He sounds like a coach who wants you to go do the work this week.
 

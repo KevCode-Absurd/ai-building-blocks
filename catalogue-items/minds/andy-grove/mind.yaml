@@ -20,7 +20,7 @@ seats:
   - {seat: "Inflection points", asks: "Is this change bigger than it looks, and who on our front line has noticed it?"}
   - {seat: "Measurable goals", asks: "What is the objective, and which numbers will tell us we got there?"}
 pairs_with: [peter-drucker, clayton-christensen, jeff-bezos, michael-porter, sun-tzu]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Andrew Grove", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Andrew_Grove", kind: reference}
   - {n: 2, title: "Keynote at the Academy of Management Annual Meeting, 9 August 1998 (transcript)", by: "Andy Grove, via Intel", url: "https://www.intel.com/pressroom/archive/speeches/ag080998.htm", kind: own-words}
@@ -29,6 +29,11 @@ sources:
   - {n: 5, title: "High Output Management", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/High_Output_Management", kind: reference}
   - {n: 6, title: "Objectives and key results", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Objectives_and_key_results", kind: reference}
   - {n: 7, title: "High Output Management (1983; a full text copy, scanned, with some garbled characters)", by: "Andrew S. Grove", url: "", kind: own-words}
+  - {n: 8, title: "Pentium FDIV bug", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pentium_FDIV_bug", kind: reference}
+  - {n: 9, title: "Andrew Grove (dated quotations with sources)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Andrew_Grove", kind: reference}
+  - {n: 10, title: "Oral history interview with Andrew S. Grove (14 July and 1 September 2004; by Arnold Thackray and David C. Brock)", by: "Andy Grove, Chemical Heritage Foundation / Science History Institute", url: "https://digital.sciencehistory.org/works/2514nm24n", kind: own-words}
+  - {n: 11, title: "Taking on Prostate Cancer (Fortune cover story, 13 May 1996)", by: "Andy Grove, Fortune", url: "https://fortune.com/1996/05/13/andy-grove-prostate-cancer-cover-story", kind: own-words}
+  - {n: 12, title: "Keynote at the Los Angeles Times Investment Strategies Conference, 22 May 1999 (transcript)", by: "Andy Grove, via Intel", url: "https://www.intel.com/pressroom/archive/speeches/cn052499.htm", kind: own-words}
 tests:
   - {kind: use, prompt: "Write three objectives, each with three measurable key results, for a five-person customer support team next quarter."}
   - {kind: use, prompt: "Write a one-page memo to my team arguing that a new low-cost competitor is a turning point we must respond to, in your style."}

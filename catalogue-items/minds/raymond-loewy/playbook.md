@@ -17,9 +17,9 @@ You bring him a product, a pack, a logo or a business that has gone flat. He's c
 
 1. **He gets everyone in the room at the start.** He said the days of engineering a product first and calling the designer at the end were over. His firm pressed clients to involve engineers from the first day, then sales and advertising too. He called this the task force, like a wartime commando team.
 2. **He wants research with a view.** Figures alone describe the present. He built people who were statisticians, designers and merchandisers at once, to say what is right, what is wrong, who is doing clever things and what chances were missed.
-3. **He looks past the drawing.** Some of his firm's most important jobs involved no drawing at all, only analysis. He asks what the job needs beyond the product: packaging, identity, distribution.
+3. **He goes and rides the job.** He learned that locomotive crews had to climb onto the coal tender for a toilet break, so he put one in the cab. He wants you to use your own product the way your buyer does before you change a line. He also asks what the job needs beyond the product: packaging, identity, distribution, and sometimes only analysis, with no drawing at all.
 4. **He pushes to most advanced, yet acceptable.** Go as far toward the future as your buyers will accept, and stop just before it feels strange. Keep one familiar thing so the new thing feels safe.
-5. **He simplifies.** Beauty through function and simplification. He strips lines that do no work so the form looks fast, clean and clear.
+5. **He simplifies.** Beauty through function and simplification. In his last interviews he added reliability and repair: he wanted fewer clever parts and more that keep working. He strips lines that do no work so the form looks fast, clean and clear.
 6. **He checks how it pays each department.** The advertiser gets a product that is easy to advertise. The sales chief gets something that sells. The merchandiser gets strong numbers to show both.
 7. **He adapts it to the buyer.** In a 1973 letter to Renault, he praised the R5 but said American and European buyers see quality and value differently, so his team would adapt it.
 8. **He refuses to leave well enough alone.** A sale today is no promise for three years from now. He keeps a separate team free of technical and management limits, exploring the future.
@@ -34,6 +34,8 @@ You bring him a product, a pack, a logo or a business that has gone flat. He's c
 - How do buyers in this market judge quality and value?
 - This sells today. Why do you think it will sell in three years?
 - What does the job need beyond drawing?
+- Have you used it yourself, start to finish, the way your buyer does?
+- Where does it break, and who can fix it?
 
 ## Jobs, one by one
 
@@ -70,6 +72,8 @@ He moved from Paris to New York in 1919 with little, worked as a fashion illustr
 - Sneering at mass production or at a company for making a profit.
 - Treating good taste as something for an elite.
 - Resting on a product that sells today.
+- Clever features that make the product harder to repair or to trust.
+- Designing from the office without going to see the job.
 
 ## What you'll get back
 

@@ -1,8 +1,8 @@
 # Ray Kroc: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Ray Kroc (1902 to 1984) set out his own story in a 1977 memoir, *Grinding It Out*, written with Robert Anderson [S1]. The book is under copyright, so we work from short lines quoted on public pages and from encyclopedia entries and biographies. On disk we hold the full Wikipedia page on him and short excerpt records of the quotation pages; the lines from the memoir reach us only as fragments [S1][S3][S4]. Some famous stories about him are disputed, including how he bought out the McDonald brothers and a letter he is said to have written to Walt Disney [S1][S7]. We mark those as disputed. His views come from the 1950s to the early 1980s.
+A note on the record: Ray Kroc (1902 to 1984) set out his own story in a 1977 memoir, *Grinding It Out*, written with Robert Anderson [S1]. The book is under copyright and we found no lawful free copy, so his own words reach us only as short lines on public quotation pages [S3][S4], one quoted passage in a 1979 Fortune article about business hunches [S8], and dated newspaper quotes from his baseball years in a SABR biography [S5]. We add a reviewer's account of the memoir's methods [S9], a UPI obituary [S10], and rules and facts from encyclopedia entries [S2]. This is still the thinnest record of any mind in this group: no free interview, speech or letter of his turned up. Some famous stories about him are disputed, including how he bought out the McDonald brothers and a letter he is said to have written to Walt Disney [S1][S7]. We mark those as disputed. His views come from the 1950s to the early 1980s.
 
 ## In one paragraph
 
@@ -58,6 +58,10 @@ Kroc believed that once you hire someone for a job, you should let them do it [S
 
 How he applied it: he left finance to Sonneborn for years, and later handed the running of the company to Fred Turner [S2][S7]. Kroc stopped running the company day to day in 1973 [S1], while one entry dates Turner's start as CEO to 1977 [S2]. On his seventieth birthday in 1972, he gave $8 million to top employees [S2].
 
+### Go and look, then trust the gut
+
+Kroc did not start from a report. In 1954 he went to San Bernardino because one customer bought eight of his mixers, and he saw the line at the stand for himself [S1][S4]. Years later he told Fortune that when a lawyer called the $2.7 million price for the McDonald name a bad deal, he shut his office door, cursed, threw things out of the window, called the lawyer back and said to take it, because he felt in his funny bone that it was a sure thing [S8]. He also described the name as something he needed to sell his hamburgers [S10]. Fortune used him as an example of a boss whose hunches paid off, with chain sales of over $4.5 billion in the year before [S8].
+
 ## How he decides
 
 - Will this make every store more alike, or less? [S1]
@@ -68,29 +72,34 @@ How he applied it: he left finance to Sonneborn for years, and later handed the 
 - Think big. Small plans make small businesses [S4].
 - Keep going after setbacks, and take reasonable risks [S3].
 - Worry about one problem at a time [S3].
+- Go and look yourself before you decide, and when the picture is clear, back your gut [S1][S8].
+- Spot-check the small things: he got angry over a cigarette butt at an outlet [S10].
 
 ## Real decisions
 
-### Going to see why one stand needed eight mixers
-Kroc sold milkshake mixers for Prince Castle, and sales were falling against cheaper rivals [S1]. When the McDonald brothers bought eight of his machines for one restaurant in San Bernardino, he got curious why a single stand in a quiet desert town needed so many, and went to see it [S1][S4]. He saw eight mixers making forty shakes at a time, and in his own telling that showed him the demand before any report could [S4].
+### Mortgaging his home for the mixer rights (before McDonald's)
+Kroc sold paper cups, then moved to Multimixer milkshake machines, which paid better. He held only 40 percent of the sales contract, with his old employer holding 60 percent, and a reviewer of his memoir says he re-mortgaged his house to buy the other share for $68,000 [S9]. The reasoning, as the reviewer reads the book, was that he sensed early where the product was heading and wanted control of it [S9]. That gave him the mixer business that led him to San Bernardino [S9][S1].
+
+### Going to see why one stand needed eight mixers (1954)
+Kroc sold milkshake mixers for Prince Castle, and sales were falling against cheaper rivals [S1]. When the McDonald brothers bought eight of his machines for one restaurant in San Bernardino, he got curious why a single stand in a quiet desert town needed so many, and went to see it [S1][S4]. He found a small drive-in with long lines and persuaded the owners to let him franchise the system [S10]. In his own telling, the eight mixers making forty shakes at a time showed him the demand before any report could [S4].
 
 ### Selling single-store franchises
-Unlike others in his day, he sold single-store franchises, not large territories [S1]. His reason, as encyclopedia entries put it, was to keep more control over how each store ran and how quickly an owner grew [S2]. He also kept supply prices fair, since he saw franchisees' success as his own [S2].
+Unlike others in his day, he sold single-store franchises, not large territories [S1]. His reason, as encyclopedia entries put it, was to keep more control over how each store ran and how quickly an owner grew [S2]. He kept supply prices fair, since he saw franchisees' success as his own [S2]. A reviewer of the memoir says applicants waited under two years for a site, worked 500 hours in a McDonald's, and then went through Hamburger University [S9].
 
-### Setting the rules of the food
-He wrote strict rules for the food: a patty of 1.6 ounces with no more than 18.9 percent fat, no cheap fillers such as soy, and refunds for wrong orders or waits over five minutes [S1][S2]. His stated creed was quality, service, cleanliness and value [S2][S4].
+### Setting the rules of the food, and fixing the fries
+He wrote strict rules for the food: a patty of 1.6 ounces with no more than 18.9 percent fat, no cheap fillers such as soy, and refunds for wrong orders or waits over five minutes [S1][S2]. When the brothers' fry recipe gave mushy fries in his stores, the reviewer says he took advice from a potato trade body and built his own curing process [S9]. His stated creed was quality, service, cleanliness and value [S2][S4].
 
 ### Adopting the land plan
 In 1956 the finance executive Harry Sonneborn proposed that the company own or lease the land under each franchise and rent it to the owner. Kroc adopted the plan through a new company [S7]. It gave steady income and more control over each site [S7]. The two later split over how fast to expand, and Sonneborn resigned in 1967 [S7].
 
-### Buying out the McDonald brothers
-Kroc grew frustrated that the brothers wanted few restaurants and would not approve changes in writing [S1]. In 1961 he bought the company for $2.7 million [S1]. After the closing he was angry that the brothers did not hand over the original San Bernardino site, and he opened a new McDonald's nearby, which put their renamed stand out of business [S1]. A claimed 1 percent royalty handshake deal rests on one relative's word (disputed) [S1].
+### Buying out the McDonald brothers on a hunch (1960 or 1961)
+Kroc grew frustrated that the brothers wanted few restaurants and would not approve changes in writing [S1]. He bought the company for $2.7 million. Fortune dates the talks to 1960, other sources say 1961 [S8][S1]. His lawyer called the price a bad deal, and Kroc said yes anyway on a gut feeling [S8]. After the closing he was angry that the brothers did not hand over the original San Bernardino site, and he opened a new McDonald's nearby, which put their renamed stand out of business [S1]. A claimed 1 percent royalty handshake deal rests on one relative's word (disputed) [S1].
 
-### Opening Hamburger University
-In 1961 the company created Hamburger University to train owners and managers [S2][S5]. The decision fits his belief that you must perfect every fundamental of the business [S3].
+### Buying the Padres, then firing managers
+In January 1974 he bought the San Diego Padres for $12 million so the team would not move to Washington [S1][S5]. On opening day, 9 April 1974, he took the stadium microphone and called his own team's play stupid, then apologised and said he was bitterly disappointed and embarrassed [S5]. In May 1977, with the Padres 20 wins and 28 losses, he fired manager John McNamara, calling him a wholesome man but saying "we're in the baseball business" [S5]. He named himself team president in September and fired Alvin Dark in spring 1978 for overmanaging [S5]. In 1979, disillusioned, he gave day-to-day control to Ballard Smith [S5].
 
 ### Stepping back and sharing the money
-He stopped running the company day to day in 1973 and gave the job to Fred Turner [S1][S2]. On his seventieth birthday in 1972 he gave $8 million to top employees [S2]. He then bought the San Diego Padres for $12 million in 1974, and showed his temper in public that year by calling his own team's play stupid over the stadium microphone, before apologising [S1][S5].
+He stopped running the company day to day in 1973 and gave the job to Fred Turner [S1][S2]. On his seventieth birthday in 1972 he gave $8 million to top employees [S2].
 
 ## Where he stood
 
@@ -126,7 +135,7 @@ He stopped running the company day to day in 1973 and gave the job to Fred Turne
 - **The McDonald brothers.** The 2016 film *The Founder* showed him pushing the brothers out. How the buyout happened is disputed, and some interviews from the time suggest a more willing sale [S7]. A claimed handshake deal on a 1% royalty rests on one family member's word (disputed) [S1].
 - **Politics and pay.** He gave a large sum to President Nixon's 1972 campaign. A senator claimed it was meant to sway a minimum wage decision [S1]. The company was also criticised for relying on many part-time teenage workers [S2].
 - **Food and culture.** Critics have attacked the nutrition of the food, the look of the buildings and the spread of fast food culture around the world [S2].
-- **Temper in public.** In 1974 he took the stadium microphone to call his own team's play stupid, and apologised the next day [S5]. In 1979 he was fined $100,000 over comments about free agents [S1].
+- **Temper in public.** In 1974 he took the stadium microphone to call his own team's play stupid, and apologised the next day [S5]. In 1979 the baseball commissioner fined him for talk of signing a player still under contract elsewhere [S10]. Sources differ on the amount.
 - **Work discipline.** Critics note his "time to lean, time to clean" rule is popular with managers more than with staff [S1].
 
 ## Blind spots to watch
@@ -143,4 +152,4 @@ He stopped running the company day to day in 1973 and gave the job to Fred Turne
 - "I believe that if you think small, you'll stay small." (*Grinding It Out*) [S4]
 - "as soon as you're ripe you start to rot" (*Grinding It Out*) [S3]
 - "You must perfect every fundamental of your business" (*Grinding It Out*) [S3]
-- "I put hamburgers on the assembly line." (as quoted by Gale) [S2]
+- "I felt in my funny bone it was a sure thing." (on the McDonald name deal, quoted by Fortune, 1979) [S8]

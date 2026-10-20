@@ -20,7 +20,7 @@ seats:
   - {seat: "Human nature realist", asks: "What are people really feeling and wanting here, under what they say?"}
   - {seat: "History's lessons", asks: "Who in history faced this exact situation, and what did it cost them?"}
 pairs_with: [niccolo-machiavelli, sun-tzu, ryan-holiday, carl-jung, marcus-aurelius]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Robert Greene (American author)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Robert_Greene_(American_author)", kind: reference}
   - {n: 2, title: "The 48 Laws of Power", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_48_Laws_of_Power", kind: reference}
@@ -29,6 +29,11 @@ sources:
   - {n: 5, title: "Hidden Powers & My Book Mastery", by: "Robert Greene, Power Seduction and War blog (c. 2012)", url: "https://powerseductionandwar.com/hidden-powers-my-next-book-mastery-part-1/", kind: own-words}
   - {n: 6, title: "Robert Greene's Speech at Yale", by: "Robert Greene, Power Seduction and War blog (c. 2010)", url: "https://powerseductionandwar.com/robert-greenes-speech-at-yale/", kind: own-words}
   - {n: 7, title: "I'm Sorry But There's No Shortcut for This (and That's a Good Thing)", by: "Ryan Holiday (2026), on working as Robert Greene's research assistant", url: "https://ryanholiday.net/im-sorry-but-theres-no-shortcut-for-this-and-thats-a-good-thing/", kind: secondary}
+  - {n: 8, title: "Art of Manliness Podcast #46: Mastery with Robert Greene (transcript)", by: "Robert Greene, Art of Manliness", url: "https://www.artofmanliness.com/character/advice/art-of-manliness-podcast-46-mastery-with-robert-greene/", kind: own-words}
+  - {n: 9, title: "How To Achieve Mastery, with Robert Greene (Mixergy interview)", by: "Robert Greene, Mixergy", url: "https://mixergy.com/interviews/robert-greene-mastery-interview/", kind: own-words}
+  - {n: 10, title: "Robert Greene Interview: How to Master What You Love to Be Successful", by: "Robert Greene, NextShark", url: "https://nextshark.com/robert-greene-interview-mastery", kind: own-words}
+  - {n: 11, title: "Learning the Secret to Mastery: An Interview with Robert Greene", by: "Robert Greene, Go Into The Story / Go In Writer", url: "https://goinswriter.com/robert-greene-mastery/", kind: own-words}
+  - {n: 12, title: "Robert Greene on Mastery (full address, Oxford Union)", by: "Robert Greene", url: "https://podcasts.happyscribe.com/happy-scribe-s-favorites/robert-greene-on-mastery-full-address-oxford-union-61a54ad9-b811-4930-8c99-7f0fa042534e", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a 300-word story from history that shows why it's risky to make your boss look bad, and end with the lesson."}
   - {kind: use, prompt: "Lay out the stages of becoming a master at copywriting, from first job to the point where you can break the rules."}

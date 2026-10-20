@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Feynman's books and talks are still in copyright, so this is our summary of his ideas. The few quotes are short and sourced. His popular memoirs were compiled with Ralph Leighton from stories he told, so treat their anecdotes as his own telling, not as checked history [S1].
+Feynman's books are still in copyright, so this is our summary of his ideas, with only a few short sourced phrases. The record now includes his own words in six places: the 1974 Caltech address [S4], the Challenger appendix [S5], the 1959 talk [S6], his 1965 Nobel lecture about how he really got to his results [S7], his 1975 Los Alamos talk [S8] and an excerpt of his 1955 address on doubt [S9], plus the official Rogers Commission report [S10]. His popular memoirs were compiled with Ralph Leighton from stories he told, so we use them only as his own telling, not as checked history [S1]. The excerpt of the 1955 address [S9] is partial.
 
 ## In one paragraph
 
@@ -44,10 +44,6 @@ He was known as the "Great Explainer" [S2]. He held that a topic you can't expla
 
 How he applied it: his lectures to Caltech undergraduates in the early 1960s were edited into *The Feynman Lectures on Physics* [S1]. They sold well for decades, though they were never widely adopted as textbooks [S1]. He won the Oersted Medal for teaching [S2].
 
-### Draw it
-
-Feynman diagrams are simple sketches that track how particles interact. They let physicists see and organise calculations that had been very hard to handle [S1][S3]. He developed this approach at Cornell in the late 1940s. Some physicists were sceptical at first [S1].
-
 ### Ask what physics allows
 
 In a 1959 talk, "There's Plenty of Room at the Bottom," Feynman asked how small we could make things. He worked out that the whole *Encyclopaedia Britannica* could fit on the head of a pin, and argued that nothing in the laws of physics forbids arranging atoms one by one [S6]. The barrier was engineering, not natural law [S6]. He offered two $1,000 prizes: one for shrinking a page of text 25,000 times so an electron microscope could read it, and one for a working electric motor no bigger than 1/64 of an inch on each side [S6].
@@ -55,6 +51,9 @@ In a 1959 talk, "There's Plenty of Room at the Bottom," Feynman asked how small 
 ### Tell the public the truth
 
 Feynman thought scientists owe the public an honest account of their work, even when that makes funding harder [S4]. He criticised publishing only the results that look good, and giving government advice that only supports what officials already want [S4]. His Challenger appendix made the same point for NASA: be realistic about weaknesses, cost and schedule, and be honest with the public, even if it costs support [S5].
+
+### Show the dead ends, and guess before you prove
+In his Nobel lecture he complained that journal papers hide the blind alleys, so he chose to describe how he really got there, wrong starts included [S7]. He guessed rules first, tried them, then checked them against every solved case before trusting them [S7]. He thought the real problem in research is to find any method at all, and advised students to keep several ways of seeing the same theory, since each suggests different next steps [S7].
 
 ## How he decides
 
@@ -66,37 +65,35 @@ Feynman thought scientists owe the public an honest account of their work, even 
 - Treat surprises and small failures as clues [S5].
 - Test the parts before you trust the whole [S5].
 - Explain it to a beginner. If you can't, go back and understand it better [S2].
+- Give people the reasons behind a rule, so they can think when it runs out [S8].
+- Say how sure you are: knowledge comes in degrees, and none of it is absolutely certain [S9].
 - Check what nature actually forbids before you call something impossible [S6].
 
-## Real decisions (enriched minds)
+## Real decisions
 
-### Going to the engineers, not the managers
+### Taking over the computing group at Los Alamos
+At Los Alamos a plan to run calculations through IBM punched-card machines had stalled, because its designer, Stanley Frankel, got lost in clever tricks [S8]. Feynman took over the group. He chose to explain the physics to the drafted engineers who ran the machines, on the view that people who know what the numbers mean find faster ways to get them [S8]. They began to run several card decks out of step and to redo only small parts after an error. By his own account, output went from about three problems in nine months to nine problems in three [S8].
 
-On the Challenger inquiry he did not rely on the official reports alone. He interviewed the range safety officer, talked with engineers and managers at Marshall and Rocketdyne, visited Johnson for avionics, and compared how the booster, engine and avionics teams worked. He set management's failure estimate (about 1 in 100,000 for the engines) beside the engineers' (1 in 300 to 1 in 10,000 depending on who he asked) and treated the gap as the finding. [S5]
+### Opening the machines
+The hand calculators kept breaking, and sending each one to the factory took too long. Feynman and his colleagues opened the covers and fixed the simple faults themselves, sending back only the hard ones [S8]. His reason was plain: working machines mattered more than the rule against touching them [S8].
 
-### Calling erosion a warning, not a margin
+### Being the person who argued with Bethe
+Hans Bethe wanted someone who would fight his ideas, and Feynman did it bluntly [S8]. He says this led to his promotion to group leader under Bethe [S8]. Years later, at Cornell, the same habit shows up in his Nobel lecture. After the Lamb shift result, he went to Bethe to learn how to work out an electron's self-energy, because he had built a whole theory without ever doing that calculation [S7]. He was honest that he had ignored a colleague's advice to find out first what the theory was useful for [S7].
 
-NASA called the partial erosion of an O-ring a safety factor of three. He said that is wrong: a crack a third of the way through a bridge beam is a design failure, not a margin, and the erosion was a clue that something was off. He also pointed out that a curve fitted to scattered erosion data does not make the answer believable. [S5]
+### Picking locks to make a point about security
+Feynman opened padlocks and combination safes at Los Alamos, partly for the challenge and partly to show that the secrets were poorly guarded [S8]. He used the reputation to press for better practice [S8]. The act was a demonstration, not a prank: it gave managers a concrete failure to look at.
 
-### Checking claims against flight history
+### Briefing Oak Ridge on safety
+After a report of dangerous practices at the Oak Ridge plant, Feynman was sent to explain how neutrons behave in water and how that could lead to an accident [S8]. He insisted that the plant staff be given the physics, not only a list of rules, so they could reason about safe storage themselves [S8]. He persuaded the colonel in charge to allow this [S8].
 
-He noted that solid rockets had failed about 1 in 25 times across nearly 2,900 flights and judged a mature rocket closer to 1 in 50. He objected that NASA used history to show success but would not use it to measure risk. [S5]
+### Showing his half-built idea to Wheeler
+As a graduate student, Feynman worked out what a shaken charge would do to a second charge and hoped it would explain radiation resistance. It did not come out right, but he took it to John Wheeler anyway [S7]. Wheeler showed him why it failed, and then turned it into a larger idea that used waves arriving from the future [S7]. Feynman's stated lesson is that a clever partner can turn a wrong idea into a good one. He did not hide the mistake, and that is why he got the help [S7].
 
-### Repeating the baseline first
+### Checking every new rule many ways
+When Feynman found a simplifying rule in his work on quantum electrodynamics, he did not trust it yet. He compared it to every problem already solved in the field, and later to meson theory, until he was sure it always agreed [S7]. He also said his early rules were half guesswork, tried first and justified after [S7]. The method was to guess freely and check hard.
 
-In his 1974 address he told of a psychology student who wanted to change a condition in a rat experiment. His advice was to repeat the original experiment in her own lab first, so any difference could be tied to the change. [S4]
-
-### Looking for what the subject is really responding to
-
-He praised Young's 1937 rat work: Young found rats were using door textures, smell, light and the sound of the floor, and only sand on the floor removed the cue. Feynman noted the field then ignored the method. [S4]
-
-### Offering prizes to start a field
-
-In 1959 he named two $1,000 prizes: a book page shrunk by 25,000 times in linear scale that an electron microscope can read, and a working motor in a cube 1/64 inch on a side. He said he had not prepared the ground, so concrete goals would draw people in. [S6]
-
-### Scaling by hand-over, stage by stage
-
-He proposed master-slave hands at one-quarter scale to build hands at one-sixteenth, each stage making the tools for the next, and copies in parallel. He admitted he did not know the practical way to do the small work and left it to the audience. [S6]
+### Making the engineers' view the finding
+The Rogers Commission report shows what Feynman later aimed at. On the night before launch, Thiokol's engineers asked for no launch below 53 degrees, the coldest of any earlier flight, and some strongly opposed launch [S10]. After a managers-only caucus, Thiokol's position reversed and a launch recommendation was faxed, which the Commission found came at Marshall's urging and against the engineers' views [S10]. In his own appendix, Feynman went to the working engineers for the odds and found them near 1 in 100, far from management's 1 in 100,000 [S5]. He made the gap between the two the main finding [S5].
 
 ## Where he stood
 
@@ -146,3 +143,4 @@ He proposed master-slave hands at one-quarter scale to build hands at one-sixtee
 - "nature cannot be fooled" (Appendix F, 1986) [S5]
 - "Erosion was a clue that something was wrong." (Appendix F, 1986) [S5]
 - "there is plenty of room at the bottom" (talk, 1959) [S6]
+- "I would go back and I would check it so many ways" (Nobel lecture, 1965) [S7]

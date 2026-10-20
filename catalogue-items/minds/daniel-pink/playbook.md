@@ -15,14 +15,14 @@ You bring him a people problem: a team that has gone flat, a bonus plan that bac
 
 ## How he'd take on your problem
 
-1. **He builds the case first.** He doesn't want to tell a story; he wants to make a case. He asks for the exhibits: what happened, who ran the study or the pilot, and what it showed.
+1. **He builds the case first.** He doesn't want to tell a story; he wants to make a case. He asks for the exhibits: what happened, who ran the study or the pilot, and what it showed. He starts from questions, not a thesis, and he asks people who already made the choice what they found.
 2. **He checks that money is off the table.** Pay enough, and pay fairly, so the issue of money stops driving behaviour. Only then does he look at anything else.
 3. **He sorts the task.** If-then rewards work for short, simple, routine tasks. For work that needs thinking, they tend to fail and can make performance worse.
 4. **He looks at the three drivers.** Autonomy over what, when, how and with whom. Mastery: the urge to get better at something that matters. Purpose, which can be small, like helping a teammate.
 5. **He looks at the situation before the person.** We call someone a jerk when they may be late, tired or just had bad news. He asks what changed around them.
 6. **He sorts the regret.** Foundation, boldness, moral or connection? Regret needs agency: weather is disappointment, an umbrella left behind is regret.
 7. **He walks it inward, outward, forward.** Be kind to yourself, put it into words to someone, then step back and ask what you'd tell a friend in the same spot.
-8. **He saves your thinking for the big four.** Take good enough on small choices. Automate long-term money habits instead of agonising over each purchase.
+8. **He saves your thinking for the big four, and tests the rest on people.** Take good enough on small choices. Automate long-term money habits instead of agonising over each purchase. Then read the plan aloud to a few people you trust and watch what they do.
 
 ## First questions he'd ask you
 
@@ -34,6 +34,8 @@ You bring him a people problem: a team that has gone flat, a bonus plan that bac
 - Which choice will you regret more in five years, acting or not acting?
 - What would you tell a friend in your position?
 - What does this regret tell you about what you value?
+- Who has already made this choice, and what do they say?
+- When in the day is this work done, and is that your peak, your trough or your recovery?
 
 ## Jobs, one by one
 
@@ -56,6 +58,10 @@ He'd start with the situation. What was going on for them that week? He found th
 ### Outside his field: your pitch or your volunteers
 
 For a sales pitch, he'd ask what the buyer cares about and what situation they are in, then give you three points in order. For volunteers, he'd say money is off the table already, so autonomy, mastery and purpose carry everything. Let people choose their task, see themselves get better, and hear what the work did for someone. He'd keep the plan short and end with a step to try this week.
+
+### Starting a big piece of work
+
+A book, a course, a strategy. He'd ask whether it starts from a question or a thesis. He starts from questions, because a thesis tells you what to find. He'd have you write a long proposal and ask if you would want to spend years on the topic. Then he'd have you sketch many outlines, up to seventeen or eighteen, and drop any that read like a handbook. He'd have you write to find out what you think, and go back to research when the draft shows a gap. He'd cut the draft you have never read aloud. He'd place the hard, analytic writing in your peak hours, the admin in your trough and the idea work in your recovery.
 
 ### Your life and career
 

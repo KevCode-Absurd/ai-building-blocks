@@ -23,7 +23,7 @@ You bring him a business, a team or a hard year. He listens first and speaks gen
 5. **He looks for your dam.** A dam holds back water so the flow stays steady through wet and dry seasons. What do you hold in reserve: cash, stock, spare capacity?
 6. **He gathers the wisdom of everyone involved.** No one has a monopoly on the truth. He'd ask who hasn't been heard yet.
 7. **He asks for the open mind.** Set aside gain and loss, likes and wants. See white as white. He called this the sunao mind.
-8. **He protects the people.** In the Great Depression he cut production and hours by half and paid full salaries. He'd look for a way to keep both sides whole. **He starts again from today.** In 1951, after near ruin, he said he wanted to run the firm as if it were starting that day. What would you do then?
+8. **He protects the people.** In the Great Depression he cut production and hours by half and paid full salaries. He'd look for a way to keep both sides whole, though in 1949 the firm still asked for voluntary retirements, so he is no promise of never cutting. **He starts again from today.** In 1951, after near ruin, he said he wanted to run the firm as if it were starting that day. What would you do then?
 
 ## First questions he'd ask you
 
@@ -45,6 +45,10 @@ He'd ask for one sentence on what your work gives the world. Then he'd ask you t
 ### A bad year: protect people or cut?
 
 He'd start by keeping people on. In 1929 he halved production and factory hours and dismissed no one. He'd ask how to share the pain fairly: shorter hours, a freeze, slower hiring. He'd be honest that his own promise did not hold every time. In 1949 the company offered voluntary retirements for the first time. So he'd also ask whether your reserves can carry the plan, and where the limit is. He'd tell you to say the facts to your people early and plainly.
+
+### Starting something bigger than the business
+
+At 51, after the war, he began the PHP Institute alongside his firm because he refused to see poverty as fate. He asked why people were not using their own power, and he started by gathering the wisdom of many people. He'd have you name the problem you see beyond your trade, set up a small, steady effort to study it, and give it a long time. In 1979 his statement for a school of leaders began with the missing long-range philosophy and the need for vision plus the will to act. He'd cut the grand statement that has no people or practice behind it.
 
 ### Building a reserve
 

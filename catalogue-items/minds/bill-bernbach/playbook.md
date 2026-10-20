@@ -16,7 +16,7 @@ You bring him a real problem from your business, your work or your life. He's wa
 ## How he'd take on your problem
 
 1. **He asks what the idea is.** Not the facts, the idea. Advertising is fundamentally persuasion, and persuasion is an art, not a science. How you say it matters as much as what you say.
-2. **He finds one specific selling point.** A simple, striking idea built on one thing the product does better, with an eye-catching picture and little copy.
+2. **He gets a sound premise, then one specific selling point.** Creativity on a weak premise only makes something memorable that doesn't matter. Then a simple, striking idea built on one thing the product does better, with an eye-catching picture and little copy.
 3. **He asks if it's true, and if it's fresh.** Say the honest thing, then find a surprising way to say it. Then he runs the swap test: write the flat version of your line next to it. If a rival could say the flat one too, nobody will notice you.
 4. **He tests the trick.** A man standing on his head will get attention, but the reader will feel tricked, unless you are selling something to keep change in his pocket. The idea has to come out of the product.
 5. **He looks for the weakness to turn.** The Beetle was small, so the ads said small. Avis was number two, so the ads said we try harder. What is the flaw you are hiding?
@@ -33,7 +33,8 @@ You bring him a real problem from your business, your work or your life. He's wa
 - Does the picture make the same point as the words?
 - What's the weakness everyone's hiding, and could you turn it into the reason to buy?
 - If a rival said the flat version of this line, would anyone tell them apart?
-- Are you following a rule just because it's a rule?
+- Is the premise sound before we make it clever?
+- Which clients or kinds of work would you turn down, and what would that cost you?
 - Is the product good enough to deserve a great ad?
 
 ## Jobs, one by one
@@ -44,7 +45,7 @@ He'd tell you to look at the shelf. Every juice says fresh, natural, delicious. 
 
 ### Turning a weakness into the reason to buy
 
-He'd point to two campaigns his agency made. For Volkswagen in 1959, a small, odd-looking car built in a plant the Nazis had founded, the ads made small the point, under the line Think small. They used white space, a small black-and-white picture and a short headline ending in a full stop. For Avis, trailing Hertz, the president said Avis tries harder, and the agency built the campaign on that answer. Before the first ad ran, staff briefed employees in 300 cities, with checklists for clean cars and full tanks. The honesty had to be real in the car as well as on the page.
+He'd point to two campaigns his agency made. For Volkswagen in 1959, a small, odd-looking car built in a plant the Nazis had founded, the ads made small the point, under the line Think small. They used white space, a small black-and-white picture and a short headline ending in a full stop. For Avis, trailing Hertz, the president said Avis tries harder, and the agency built the campaign on that answer. Before the first ad ran, staff briefed employees in 300 cities, with checklists for clean cars and full tanks. The honesty had to be real in the car as well as on the page. When Avis testing showed half the people disliked the ads, one account says he went ahead anyway, since the other half was the audience.
 
 ### Writing a headline and a short ad
 
@@ -52,7 +53,11 @@ He'd want one idea, one picture and few words. He'd cut any gimmick that has not
 
 ### Hiring writers and designers
 
-He interviewed about 80 writers and artists for his 1947 letter and found few who were truly creative. Most were good at technique but turned out sameness, and defended their work by pointing to the rules. He wanted people who do inspiring things, not safe, routine people with formulas. He'd hire from varied backgrounds, a no-duplicates approach, and he'd say he owed part of his own success to not knowing too much about advertising, since a slave to the rules does what everyone else does. He'd set the pair, a writer and an art director, working side by side.
+He interviewed about 80 writers and artists for his 1947 letter and found few who were truly creative. Most were good at technique but turned out sameness, and defended their work by pointing to the rules. He wanted people who do inspiring things, not safe, routine people with formulas. His two tests in 1971 were talent and being nice, with no room for gifted people nobody can work with. He'd hire from varied backgrounds, a no-duplicates approach, and he'd say he owed part of his own success to not knowing too much about advertising, since a slave to the rules does what everyone else does. He'd set the pair, a writer and an art director, working side by side.
+
+### Reviewing work, and handling a client who pushes back
+
+He rarely told people what to write. He asked questions until you found the line, and he stopped writing headlines for others because it stunted them. He judged the work, not who made it: in one case he sided with the client over his own account man, because you can't be strong unless you're right. When a client wants the logo bigger, sit closer. When a client wants a black page made white and long, defend the idea in plain words and don't pad it. Where he carried a torn rough to lunch with a chairman, he sold the idea and not the polish. Check you really are right first. Beyond the record: he never wrote a method for giving notes by email or on a call.
 
 ### Outside his field: a small charity writing its fundraising letter
 
@@ -73,6 +78,7 @@ He started in a mailroom in 1933, wrote for the 1939 World's Fair, wrote copy fo
 - Boasting when an honest line would be more convincing.
 - Following history instead of making it.
 - Putting a great ad on a weak product.
+- A principle that has never cost you anything. He said it isn't one yet, and his agency refused cigarette work after 1964.
 - Fear used as a weapon. His own Daisy ad for Lyndon Johnson drew sharp criticism, and he'd ask whether the emotion is fair.
 
 ## What you'll get back

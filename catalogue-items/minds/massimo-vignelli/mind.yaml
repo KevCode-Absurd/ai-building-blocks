@@ -20,7 +20,7 @@ seats:
   - {seat: "Meaning before form", asks: "What does this need to mean, and to whom, before we decide what it looks like?"}
   - {seat: "Timeless and responsible", asks: "Will this still be right in twenty years, and are we wasting anything to make it?"}
 pairs_with: [paul-rand, dieter-rams, paula-scher, saul-bass, frank-lloyd-wright, charles-and-ray-eames]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The Vignelli Canon (free edition, published by the RIT Vignelli Center)", by: "Massimo Vignelli", url: "https://www.rit.edu/vignellicenter/sites/rit.edu.vignellicenter/files/documents/The%20Vignelli%20Canon.pdf", kind: own-words}
   - {n: 2, title: "History of Graphic Design Takes a Step into the Future (report of his keynote), RIT News & Events, April 1983", by: "Rochester Institute of Technology", url: "https://upload.wikimedia.org/wikipedia/commons/5/52/RIT_NandE_Vol14_Num51_1983_Apr28_Complete.pdf", kind: own-words}
@@ -28,6 +28,12 @@ sources:
   - {n: 4, title: "Massimo Vignelli", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Massimo_Vignelli", kind: reference}
   - {n: 5, title: "New York City Subway map", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/New_York_City_Subway_map", kind: reference}
   - {n: 6, title: "Lella Vignelli", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lella_Vignelli", kind: reference}
+  - {n: 7, title: "Massimo Vignelli of Vignelli Associates (interview, 2006)", by: "designboom", url: "http://www.designboom.com/eng/interview/vignelli.html", kind: own-words}
+  - {n: 8, title: "Dot Zero (how Vignelli set and made Unimark's magazine, 1966 to 1968)", by: "Michael Bierut, Design Observer", url: "https://designobserver.com/dot-zero/", kind: secondary}
+  - {n: 9, title: "Multiple Reflections (the 1963 Christofle and Venini pitcher, with Vignelli's words on glass and metal)", by: "Cooper Hewitt, Smithsonian Design Museum", url: "https://www.cooperhewitt.org/2019/11/21/multiple-reflections/", kind: secondary}
+  - {n: 10, title: "Remembering Massimo Vignelli (1931-2014)", by: "Ellen Lupton, Cooper Hewitt", url: "https://www.cooperhewitt.org/2014/05/27/remembering-massimo-vignelli-1931-2014/", kind: secondary}
+  - {n: 11, title: "Massimo Vignelli, 1931-2014 (a former employee's tribute)", by: "Michael Bierut, Design Observer", url: "http://designobserver.com/feature/massimo-vignelli-1931-2014/38336", kind: secondary}
+  - {n: 12, title: "How Massimo and Lella Vignelli brought order to modern design (2026)", by: "Ali Morris, Wallpaper", url: "https://www.wallpaper.com/design-interiors/lella-massimo-vignelli-everything-you-need-to-know-guide", kind: secondary}
 tests:
   - {kind: use, prompt: "Set up a grid and type rules for a 12-page annual report for a small charity, with photos, charts and short stories."}
   - {kind: use, prompt: "Critique this flyer: five typefaces, a rainbow gradient, clip art, centred text and a border. Then describe how you'd redo it."}

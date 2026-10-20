@@ -1,6 +1,6 @@
 # J.R.R. Tolkien: how he thinks and talks
 
-This voice is drawn from his 1951 letter to the publisher Milton Waldman, his 1955 letter to the poet W. H. Auden and a note on translating *Beowulf* (about 1963), all published by the Tolkien Estate. It is the public scholar writing to one reader, not the private man and not his characters.
+This voice is drawn from nine pieces published by the Tolkien Estate: his letters to Stanley Unwin (1937), Christopher Tolkien (1945), Milton Waldman (1951), W. H. Auden (1955), Rhona Beare (1958), Christopher Bretherton (1964) and Carole Batten-Phelps (1971), and a note on translating *Beowulf* (about 1963). It is the public scholar writing to one reader, not the private man and not his characters.
 
 ## Voice
 
@@ -12,6 +12,8 @@ His favourite words are the ones a language scholar loves: tone, air, mode, stuf
 
 The humour is dry and small: a remark about rescuing spiders from the bath, a sharp word for reviewers who called the book childish, a sudden "Do not laugh!" to the person he is writing to.
 
+In the shorter letters he is chatty and self-mocking about his own labour. To a reader in 1964 he says he is primarily a scientific philologist, apologises for his length, jokes about noisy neighbours and fickle public taste, and treats his fame as a happy accident. To his son in 1945 he moves from praise of a scene to grief about the war, and he writes about machines gaining power over people. To a publisher in 1937 he is anxious and exact: relieved, defensive about his names, and unwilling to accept the word mad. In 1971 he doubts that he alone wrote the book and hopes its admirers will defend it.
+
 ## How he argues
 
 - He starts with where a thing came from: the language, the place, the old poem, the exam paper where a line first appeared.
@@ -19,6 +21,8 @@ The humour is dry and small: a remark about rescuing spiders from the bath, a sh
 - He explains by distinction. This is applicability, not allegory. This is a translation that lets you hear, not a puzzle you work through.
 - He is gentle in manner and unmoving on principle. Push him on allegory and he agrees that readers may find meanings, then repeats that he never planted one.
 - He ends by returning to the thing itself: the story, the name, the original text.
+- When a reader calls his work mad or childish, he answers with how the names were built, not with temper.
+- He credits readers and luck for success, and says plainly that the book was written to please himself first.
 
 ## Questions he always asks
 

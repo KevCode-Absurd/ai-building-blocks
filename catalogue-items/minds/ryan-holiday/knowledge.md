@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Ryan Holiday is alive, and views can change. Everything below comes from reference pages on him and his books [S1][S2], an introduction to Stoicism on the Daily Stoic site [S3], and three essays on his own blog from September and October 2026 [S4][S5][S6]. Treat each view as "as of 2026", the date of those essays. His books are known here through reference summaries, not read in full. Nothing here tells you what he thinks about events after October 2026, and nothing here covers his private life. The two reading essays end with promotions for his reading course, which we leave out.
+Ryan Holiday is alive, and views can change. Everything below comes from reference pages on him and his books [S1][S2], an introduction to Stoicism on the Daily Stoic site [S3], and six essays from his own blog: three from September and October 2026 [S4][S5][S6], a 2014 post on his note-taking [S7], and two undated posts about dropping paid advertising and opening a bookstore [S8][S9]. Treat each view as "as of 2026" for the newest essays, and older for the rest. His books are known here through reference summaries, not read in full. The real decisions below come from his own accounts, so the reasons are his, and the results he reports are his claims. Nothing here tells you what he thinks about events after October 2026, and nothing here covers his private life. The two reading essays end with promotions for his reading course, which we leave out.
 
 ## In one paragraph
 
@@ -34,23 +34,11 @@ Holiday said he first came to Stoicism at 19 hoping it would make him more produ
 
 How he applied it: he described asking whether a business choice helps others, not only whether it is good for business. He gave examples such as stopping paid advertising and speaking against injustice even when it cost him [S4].
 
-### Discipline includes saying no
+### Say no, and know when you have enough
 
-As his books took off, Holiday kept saying yes to every offer [S4]. The pandemic made him count the cost. He closed his marketing company and cut back on talks, travel and consulting [S4]. Saying no to some things, he argued, is how you commit to others.
+As his books took off, Holiday kept saying yes to every offer [S4]. The pandemic made him count the cost, so he closed his marketing company and cut back on talks, travel and consulting [S4]. Saying no to some things, he argued, is how you commit to others [S4]. Seneca called endless wanting a kind of poverty, and Holiday wrote that his own goals kept moving after each success, so his happiness kept moving too [S4]. Comparing yourself with others drains the value from what you have done [S4].
 
-How he applied it: he described keeping a sign that says "No" on his wall as a reminder [S4].
-
-### Know when you have enough
-
-Seneca called endless wanting a kind of poverty [S4]. Holiday wrote that his own goals kept moving after each success, so his happiness kept moving too [S4]. Comparing yourself with others, he warned, drains the value from what you have done.
-
-How he applied it: he noted that another author's book sold more in its first year than *The Daily Stoic* had sold in its whole life, and used that to show how comparison robs you [S4].
-
-### Small steps, every day
-
-Holiday cited Zeno's teaching that well-being comes through small steps, and Seneca's aim to find one small thing each day that made him wiser [S4]. Daily Stoic calls Stoicism a practice and a routine, built on exercises such as journaling, choosing discomfort on purpose, imagining setbacks in advance and reflecting on death [S3].
-
-How he applied it: he designed *The Daily Stoic* as a page-a-day book, much as Marcus wrote daily notes to himself in the *Meditations* [S4].
+How he applied it: he keeps a sign that says "No" on his wall, and he noted that another author's book sold more in its first year than *The Daily Stoic* had in its whole life, and used that to show how comparison robs you [S4].
 
 ### No shortcuts to wisdom
 
@@ -58,11 +46,25 @@ Holiday argues that real learning is slow and hard, and that the difficulty is w
 
 How he applied it: he described reading thousands of letters and documents himself for a biography, even with research help, following the historian Robert Caro's advice to turn every page [S6].
 
-### Learn from a master
+### Write it on a card, then sort it later
 
-Holiday says he learned how to read from Robert Greene, for whom he worked as a research assistant [S6]. Greene pushed him to ask where a quote came from, whether the source was reliable and whether other sources agreed [S6]. Good reading, Holiday says, means questioning, checking, following footnotes and keeping a system for notes [S5][S6].
+Holiday keeps his research on 4 by 6 inch cards. He marks a book as he reads, waits a few weeks, then copies the best passages onto cards, one idea per card, with a theme in the top right corner [S7]. The wait is a kind of editing, because many marked pages stop looking important [S7]. He copies the system from Robert Greene, for whom he worked as a research assistant, and calls his own version messier [S7][S6]. Greene taught him to ask where a quote came from and whether other sources agree [S6]. He warns that it may not suit everyone [S7].
 
-How he applied it: he pointed to commonplace books kept by Joan Didion and Emerson, and to notes in the margins by Montaigne and John Adams, as the habits of active readers [S5].
+How he applied it: for *The Obstacle Is the Way* he filled thousands of cards, sorted by the themes the book would cover [S7]. He also keeps personal categories, "Life" and "Me", for advice he needs to hear himself [S7].
+
+### Make things that matter, not ads that convert
+
+Holiday says he once spent six figures a year on Facebook ads for Daily Stoic, and also paid publicists and for extra bookstore placement [S8]. Then he moved the money into making things, such as a podcast, videos and articles [S8]. His test is not return on spend. It is whether the work would leave anything behind if he stopped [S8]. He does not call ads worthless, and says he still runs some at the foot of emails [S8].
+
+How he applied it: he hired a videographer, a social media manager and another researcher, and he ties the choice to a card on his wall asking if he is a good steward of Stoicism [S8].
+
+### Treat every big bet as an experiment
+
+When Holiday asked Tim Ferriss about opening a bookstore, he was told to try it for two years and walk away if it failed or he hated it [S9]. He calls that advice freeing, because it capped the downside [S9]. He also likes a rule he heard from Matthew McConaughey: say no fast, but give a yes about two weeks in each frame of mind, then see what keeps you up at night [S9]. He thinks "yes or no" is too simple. Dropping out of college felt about 51 to 49, and the bookstore simply scared him [S9].
+
+He pairs this with an edit rule: for everything you add, take something away, as in the story of Steve Jobs telling a new Nike chief to cut the weak products [S9]. He also warns about mission creep, since his store was meant to carry a couple of hundred favourites and kept growing [S9].
+
+How he applied it: the store doubles as his office and studio, and he rents part of it to a record shop, so a failure would not cost everything [S9]. When sales dip he moves the stock around [S9].
 
 ## How he decides
 
@@ -74,26 +76,41 @@ How he applied it: he pointed to commonplace books kept by Joan Didion and Emers
 - Focus on the task in front of you, not the whole mountain [S2].
 - Do the slow work yourself. Be wary of anything that promises a shortcut [S5][S6].
 - Re-read the old books. You change, so they read differently [S4].
+- Take small steps every day, as Zeno and Seneca did, and design the routine as a page a day [S4].
+- Put every idea on a card the moment you have it, and sort later [S7].
+- Judge spending by what it leaves behind if you stop [S8].
+- Cap the downside of a big bet by calling it a time-boxed experiment [S9].
+- For everything you add, take something away [S9].
 
 ## Real decisions
 
-### Closing his marketing firm
-Early success had taught him to say yes to everything. In the pandemic he shut his marketing company and cut back on travel and consulting. His stated reason was that refusing things protects what matters. He keeps a wall display of his children with a "No" sign between the photos as a reminder. [S4]
+### Learning the notecard system from Robert Greene
 
-### Dropping paid advertising
-He says his business choices are now filtered by whether they serve others, even when that costs money or popularity, and he names dropping paid advertising and backing causes as examples. [S4]
+As a young research assistant, Holiday was taught a card system by Robert Greene, and about seven years before he wrote about it in 2014 he adopted his own messier version [S7]. His reason was output: he credits it with three books in three years and many articles [S7]. He kept it on paper on purpose. He says something about physical books and cards is irreplaceable, and he turns down Evernote for himself [S7]. After a break-in at his house, he worried about losing the boxes, and sometimes keeps them in a fireproof safe [S7].
 
-### Revisiting every page of his own book
-For the tenth-anniversary edition of *The Daily Stoic*, he and his co-author Steve Hanselman went back over every page. His reason: the book stays the same and the reader changes. He says he only understood Marcus on plague and fear for a child after living through a pandemic and raising children. [S4]
+### Moving from ads to making content
 
-### Reading all of the archive himself
-For a major biography, researchers collect letters, speeches and archive material, but he insists on reading all of it himself, citing Robert Caro's rule. He says he enjoys it, and that his competence comes from years of that work. [S6]
+Holiday says that after years of paid ads and publicists, he saw the spending as empty, since it would leave almost nothing if he stopped [S8]. He took the whole advertising budget and used it to hire a content team, which built a podcast, videos, explainers and a daily email [S8]. He admits this was more work and cost hundreds of thousands of dollars, and that it is not a cheaper swap [S8]. His reason was that he could not sleep well spending on ads and wanted money to go into work that helps people [S8].
 
-### Choosing slow reading over speed
-He rejects speed reading, triple-speed audio and AI shortcuts. He keeps handwritten notes and commonplace books, writes in margins, and treats time and money spent on books as well spent. [S5][S6]
+### Opening The Painted Porch bookstore
 
-### Setting aside what others have achieved
-He compares himself, at one point, with a peer whose book sold more in a year than his had in its lifetime. His lesson from that was to stop letting others shrink his own success, and to know when he has enough. [S4]
+In fall 2019 Holiday was weighing a bookstore in Bastrop, Texas. Friends he respected told him not to, and he thinks they were probably right on the money [S9]. He went ahead because he wanted to use success for something he cared about, and because Tim Ferriss framed it as a two-year experiment [S9]. Two years in, he said he still loved it, and also warned himself not to stop listening to doubters because this bet paid off [S9].
+
+### Keeping safety rules when it cost sales
+
+The store delayed opening in the worst days of COVID and kept safety rules after the state dropped its own [S9]. People got angry and he thinks it cost business [S9]. His reasoning was that protecting staff and the community is good for business in the long run, and that his conscience was clear [S9].
+
+### Closing the marketing company in the pandemic
+
+Early success had taught him to say yes to everything [S4]. During the pandemic he counted the cost, closed his marketing company, and cut back on travel, talks and consulting [S4]. His stated reason was that refusing some things is how you commit to the people and work that matter [S4]. He keeps a wall display of his children with a "No" sign as a reminder [S4].
+
+### Revising every page of The Daily Stoic
+
+For the tenth anniversary edition, he and his co-author went back over every page [S4]. His reason was that the book stays the same while the reader changes. He says he only understood some of Marcus on fear and loss after living through a pandemic and raising children [S4].
+
+### Reading the archive himself
+
+For a major biography, researchers gather letters and speeches, but Holiday insists on reading all of it himself, following Robert Caro's rule to turn every page [S6]. He says he enjoys it and that his skill comes from years of that work [S6]. He applies the same logic to AI shortcuts, saying that having someone else lift the weight does not make you strong [S6].
 
 ## Where he stood
 
@@ -118,7 +135,7 @@ He compares himself, at one point, with a peer whose book sold more in a year th
 - *Ego Is the Enemy* and *The Daily Stoic* (with Stephen Hanselman), 2016 [S1].
 - *Perennial Seller*, 2017; *Conspiracy*, 2018; *Stillness Is the Key*, 2019; *Lives of the Stoics*, 2020 [S1].
 - The Stoic virtues series: *Courage Is Calling* (2021), *Discipline Is Destiny* (2022), *Right Thing, Right Now* (2024), *Wisdom Takes Work* (2025) [S1].
-- Has hosted *The Daily Stoic Podcast* since 2018 and owns an independent bookstore in Texas [S1].
+- Has hosted *The Daily Stoic Podcast* since 2018 and owns an independent bookstore in Texas [S1]. The shop, The Painted Porch in Bastrop, was first weighed in fall 2019 and was running at the two-year mark [S9].
 - A tenth anniversary edition of *The Daily Stoic*, revised page by page, in 2026 [S4].
 
 ## Where he was wrong or criticised
@@ -138,8 +155,8 @@ He compares himself, at one point, with a peer whose book sold more in a year th
 
 ## Short phrases on the record
 
-- "What stands in the way becomes the way." (Marcus Aurelius, as quoted by Daily Stoic) [S3]
-- "Am I being a good steward of Stoicism?" (a card on his wall, 2026) [S4]
-- "A student in a hurry learns the slowest." (2026 essay) [S5]
-- "Great readers take their time." (2026 essay) [S5]
-- "There are no shortcuts, no hacks, no way around it." (2026 essay) [S5]
+- "Am I Being a Good Steward of Stoicism?" (a card on his wall) [S8]
+- "If you have an idea, put it on a damn card." (2014 post) [S7]
+- "Waiting helps you separate the wheat from the chaff." (2014 post) [S7]
+- "think of it as an experiment" (Tim Ferriss's advice, as Holiday tells it) [S9]
+- "If you're going to do something, I say, do something real." [S8]

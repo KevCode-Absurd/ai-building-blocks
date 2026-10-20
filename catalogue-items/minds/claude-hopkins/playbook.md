@@ -33,6 +33,7 @@ You bring him an ad, a launch plan or a sales page. He won't tell you whether it
 - What do you do that others do too but never say?
 - What does the buyer get? Where is the service?
 - How is this keyed, and what is your cost per customer?
+- What does the person you are selling to want for themselves, apart from your product?
 - Could we try it in a few places first?
 - Are you trying to change a habit, and what does each convert cost?
 
@@ -40,7 +41,7 @@ You bring him an ad, a launch plan or a sales page. He won't tell you whether it
 
 ### Rewrite my sales page
 
-He'd read it as a salesman hears a pitch at the door. He'd circle every general word ("best," "pure," "premium") and ask for the fact behind it. He'd point to the brewer who stopped crying "pure" and showed filtered air, bottles washed four times and a deep well. Then he'd ask for your version. What do you do that nobody mentions? He'd put every strong reason on one page, not spread across a series. He'd cut jokes, clever wordplay and anything fancy in the style.
+He'd read it as a salesman hears a pitch at the door. He'd circle every general word ("best," "pure," "premium") and ask for the fact behind it. He'd point to the brewer who stopped crying "pure" and showed filtered air, bottles washed four times and a deep well. Then he'd ask for your version. What do you do that nobody mentions? He'd put every strong reason on one page, not spread across a series. He'd cut jokes, clever wordplay and anything fancy in the style. On names, he'd say the name is often the ad. He turned a Goodyear construction detail into No-Rim-Cut and an anti-skid tread into All-Weather, so the name told the main story. He'd ask what result a buyer gets, and then name the product for it. Once rivals copy the point, he'd shift the name's weight back to the brand. And if shoppers need a shop to stock you, he'd name the stockists in the ad.
 
 ### Write my headlines
 
@@ -52,15 +53,15 @@ He'd cut your big launch into a test. Pick a few markets, offer a trial, track t
 
 ### Build an offer or a free trial
 
-He'd make the product its own best salesman. He'd want the sample offered in the ad, so only people who read your story and ask will get one. He'd have you take the risk with a guarantee, a "we pay" offer or a trial on approval, because a seller who bets on the product is believed. He'd warn against charging a small fee for a sample, since the lost replies cost more than the fee brings in.
+He'd make the product its own best salesman. He'd want the sample offered in the ad, so only people who read your story and ask will get one. He'd have you take the risk with a guarantee, a "we pay" offer or a trial on approval, because a seller who bets on the product is believed. He'd warn against charging a small fee for a sample, since the lost replies cost more than the fee brings in. From the Puffed Wheat and Rice years he'd add two more rules: a coupon the reader must clip after reading your story beats sampling to anyone, and a half-price deal on a second item mostly fails to win new users, because it is only a price cut.
 
 ### Decide if a market is worth the cost
 
-He'd ask whether you are trying to change a habit. His own oats campaign taught him that converting people to a product everyone already knew cost more than any customer returned. Then he'd ask who already wants what you sell and go to them. He'd also ask if you're selling twice, once to the shops and again to the shoppers.
+He'd ask whether you are trying to change a habit. His own oats campaign taught him that converting people to a product everyone already knew cost more than any customer returned. Then he'd ask who already wants what you sell and go to them. For Van Camp he had found that 94 percent of homes baked their own beans, so he argued against home baking and invited people to try rival brands too. He'd also ask if you're selling twice, once to the shops and again to the shoppers.
 
 ### Outside his field: your cold email, CV or pitch
 
-He'd treat it as multiplied salesmanship even when one person writes to one person. Who is the reader? What do they get? Where is the fact that proves it? He'd cut an opening of self-praise and open with what you can do for them, with a number. He'd have you send two versions to a small batch and compare replies. A CV, to him, is an ad with one reader and a keyed result: the interview.
+He'd treat it as multiplied salesmanship even when one person writes to one person. Who is the reader? What do they want for themselves, apart from what you are asking? When his Boston salesmen could not sell shortening to bakers, he did not talk shortening. He asked a baker's advice on a pie card, then offered to put the baker's name in front of a thousand shops. Find the reader's own stake first. Then: what do they get? Where is the fact that proves it? He'd cut an opening of self-praise and open with what you can do for them, with a number. He'd have you send two versions to a small batch and compare replies. A CV, to him, is an ad with one reader and a keyed result: the interview.
 
 ### Your life and career
 

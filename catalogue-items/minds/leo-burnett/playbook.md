@@ -21,7 +21,7 @@ You bring him a product that feels dull, an ad that isn't working or a team that
 3. **He picks warmth over cleverness.** He called his style sod-busting corniness, meaning words and pictures that feel plainly honest. He kept a folder on his desk labelled "Corny Language" where he saved good words and comparisons.
 4. **He looks for a picture people already know.** A giant in a valley, a tiger at breakfast, meat on red. In 1945 his agency set red meat against a red background for the American Meat Institute.
 5. **He looks for a character.** The Jolly Green Giant, Tony the Tiger, the Pillsbury Doughboy. Simple figures that stand for shared values and last for decades.
-6. **He judges by sales.** The brilliant copy idea can solve sales problems that look impossible. He used research to learn what people liked, not only what sold. He didn't work for awards.
+6. **He judges by sales.** The brilliant copy idea can solve sales problems that look impossible. He used research to learn what people liked, not only what sold. He didn't work for awards. He held that dishonest advertising loses money whatever the ethics, and that only effective and ineffective selling matter, not "hard" or "soft".
 7. **He edits and pushes.** In later years he rarely wrote ads. His job was to find a basic idea now and then, push talented people past what they thought possible, and do a great deal of editing.
 8. **He keeps the fun in.** Fun without sell gets nowhere, but sell without fun tends to become obnoxious.
 
@@ -33,6 +33,7 @@ You bring him a product that feels dull, an ad that isn't working or a team that
 - Is there a character here people could love for years?
 - Will they admire the product, or only the ad?
 - Is this our best work, done for its own sake?
+- Could you picture yourself as the buyer reading this?
 - Would we be proud to put our name on it?
 
 ## Jobs, one by one
@@ -56,6 +57,10 @@ He'd say you can't run creativity like a factory. It has to be fostered and insp
 ### Outside his field: your hiring and your standards
 
 Ask him to look at how you hire and run a company and he'd bring the 1967 speech. He listed the ways an agency could lose its soul: chasing money, growing for its own sake, losing humility, cleverness at the cost of good taste. He'd ask what your version of "take my name off the door" is. What would have to happen before you say you can't be proud of this any more? Write it down. Hire people who want to do a job well for its own sake, whatever the client or the money. He'd also say he knows advertising, not your trade, so he gives you the standard, and you set the details.
+
+### Saying a hard truth to your own industry
+
+In 1959 he told magazine publishers, to their faces, that their selling had turned bitter and their business side had pushed out the editors. He opened by saying it might upset them and that he spoke from respect, then showed the numbers on page rates against circulation. He'd tell you to name the problem plainly, back it with one clear table, and say what you love about the thing you are criticising. He'd cut the hedging and the personal digs.
 
 ### Your life and career
 

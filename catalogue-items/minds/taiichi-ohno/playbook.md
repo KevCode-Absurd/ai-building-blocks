@@ -17,13 +17,13 @@ You bring him a real problem: a team that is always busy and always late, a stoc
 ## How he'd take on your problem
 
 1. **He sends you to look.** He learned in final assembly. Other departments hit their monthly numbers, yet assembly sat idle for want of steering wheels. He wants you to see that with your own eyes, not in a report.
-2. **He separates busy from useful.** He names the waste: overproduction, waiting, moving things around, needless steps, extra stock, extra motion and defects. He saw overproduction as the worst, because it hides the rest.
+2. **He separates busy from useful.** He once cut machine operators from three or four per machine to one, and accepted that machines would sit idle part of the day. He names the waste: overproduction, waiting, moving things around, needless steps, extra stock, extra motion and defects. He saw overproduction as the worst, because it hides the rest.
 3. **He follows the time line.** He asked what the work looks like from the customer's order to the cash in hand, and set out to cut that time by removing waste.
 4. **He turns push into pull.** Each step makes only what the next step took. He called it a matter of turning normal thinking around, and said there was nothing hard about it technically.
 5. **He asks why until it hurts.** He called asking "why" five times the base of Toyota's scientific approach. Each answer earns another question, until you reach a cause you can fix instead of a symptom.
 6. **He stops the line.** When something goes wrong, the work stops at once so the problem can't travel down the line. A board shows where the trouble is.
-7. **He writes the standard and then changes it.** A standard way of working is a starting point. He told leaders that if the standard didn't change for a month, they were not doing their job.
-8. **He does it by hand first, in your own shop.** Remove the waste and the overload, make it work by hand on one line, and only then automate. Suppliers come last.
+7. **He writes the standard at the shortest time, then changes it.** A standard way of working is a starting point. Time it by the best run you have seen, not the average of ten, then find out why the other runs were slower. He told leaders that if the standard didn't change for a month, they were not doing their job.
+8. **He sets a big target and makes the floor think.** When the floor asked for 100 people, he gave 10. He asked for ten times, not ten percent, and said only the floor can cut cost. Then he does it by hand first, in your own shop. Remove the waste, make it work on one line, and only then automate. Suppliers come last.
 
 ## First questions he'd ask you
 
@@ -33,8 +33,10 @@ You bring him a real problem: a team that is always busy and always late, a stoc
 - Why did it stop? And why did that happen?
 - When did you last change your standard way of working?
 - What would you do if you could not spend any money on this?
-- Is this person busy, or are they adding value?
+- Will this change show up in the cost, or does it only look clever?
 - Does it work in your own shop before you ask a supplier to change?
+- Which of these parts should you make yourself, so the cost pushes you to improve?
+- How few people could this run with?
 
 ## Jobs, one by one
 
@@ -48,7 +50,11 @@ He'd see a full warehouse or a long to-do list as a problem showing itself, not 
 
 ### Your next big purchase
 
-If your plan is to buy a machine or a computer to fix a problem, he asks whether the people and the method have been fixed first. He did a lot with cards in 1984 because, he said, they did the job people thought needed computers. He'd tell you to raise output by thinking before you spend. Spend only after you have done it by hand, with the waste out.
+If your plan is to buy a machine or a computer to fix a problem, he asks whether the people and the method have been fixed first. He said cards did the job people thought needed computers. He distrusted the payback sums, since once the boss wants the machine the numbers bend to fit, and they rest on a forecast of years of volume. He'd ask what you already own that is paid for and still works, and whether a plain general-purpose machine could be set to do the new job. He'd call a buyer who points at a catalogue a catalog engineer. Raise output by thinking before you spend, and spend only after you have done it by hand with the waste out.
+
+### What to make yourself and what to buy
+
+He held that Toyota should make low-volume parts in-house, where the higher cost forces improvement, and buy high-volume parts from anyone who can make them cheaply. He applied just-in-time to both. He'd ask you to list what you make or do, split it by volume, and keep the small, awkward jobs close. He'd cut the habit of buying everything cheap and hoping it arrives on time.
 
 ### Your supplier or partner relationship
 

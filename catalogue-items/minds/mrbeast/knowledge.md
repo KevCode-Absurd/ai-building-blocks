@@ -1,8 +1,8 @@
 # MrBeast (Jimmy Donaldson): what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-MrBeast is alive, and views can change. Everything below comes from his long talk with Lex Fridman in January 2023 [S1], a TIME interview from February 2024 [S2], a 2024 internal guide for his staff that leaked online [S3], and public reference pages. Treat each view as "as of" the date of its source. The podcast transcript we used is machine-made and sometimes garbled, so we lean on its ideas more than its exact wording [S1]. We read the leaked guide through a careful summary with quotes, not the PDF itself [S3]. Nothing here covers his private life, his health or his plans, and nothing here tells you what he thinks about events after these dates.
+MrBeast is alive, and views can change. Everything below comes from his long talk with Lex Fridman in January 2023 [S1], a TIME interview from February 2024 [S2], a 2024 internal guide for his staff that leaked online [S3], and public reference pages. Treat each view as "as of" the date of its source. The podcast transcript we used is machine-made and sometimes garbled, so we lean on its ideas more than its exact wording [S1]. We read the leaked guide through a careful summary with quotes, not the PDF itself [S3]. On 2026-10-21 we looked again for more of his own words. Most of his long interviews (Diary of a CEO, Rolling Stone, the Wall Street Journal, a second TIME piece) are paywalled, transcript-free or blocked to our reader, so the only addition is a news report of his 2022 Joe Rogan appearance, with a few quotes, and a Wikiquote page [S10][S11]. His own-words record here is still two interviews and the staff guide. Nothing here covers his private life, his health or his plans, and nothing here tells you what he thinks about events after these dates.
 
 ## In one paragraph
 
@@ -73,7 +73,7 @@ How he applied it: in June 2017 he gave the $10,000 fee from his first brand dea
 ## Real decisions
 
 ### He kept going for years before a hit
-His channel ran for about five years before the counting video took off in January 2017 [S4]. That video took 40 hours to film [S4]. He now says he studies a flop calmly, looks at where viewers left and at the thumbnail, and moves on [S1].
+His channel ran for about five years before the counting video took off in January 2017 [S4]. That video took 40 hours to film [S4]. He now says he studies a flop calmly, looks at where viewers left and at the thumbnail, and moves on [S1]. A report of his 2022 Rogan talk quotes him saying he acted as if he was going to community college while he worked on videos in his car, and that he earned nothing for about two years [S10]. He credits a small group of creators who studied what made videos work and talked daily, which he describes as a total commitment [S10].
 
 ### He gave away his first brand deal
 In June 2017 he gave the $10,000 fee from his first brand deal to a homeless person [S4]. Giving then became part of the show, through Team Trees in 2019 and Beast Philanthropy in 2020 [S4][S9].
@@ -90,6 +90,10 @@ He said safety experts and long testing come before big stunts, such as the Anta
 ### He took the format to television
 In March 2024 he announced Beast Games with Amazon MGM Studios and a $5 million prize [S6]. It premiered in December 2024 and became Prime Video's most-watched unscripted series, with about 50 million viewers in 25 days [S6].
 
+### He took the content to other languages
+
+On the 2022 Rogan show he said that fewer than 10 percent of people speak English, so most of the world cannot enjoy English-only content [S10]. That was his stated reason for pushing into other languages. The report gives no figures on the result [S10]. The lesson for a small creator is to ask who is shut out of your work by language [S10].
+
 ## Where he stood
 
 **What matters most on YouTube?** The click and the watch time. Titles and thumbnails earn the click, and holding attention earns the reach [S3]. As of 2023 he said one great video is worth more than many average ones [S1].
@@ -99,6 +103,8 @@ In March 2024 he announced Beast Games with Amazon MGM Studios and a $5 million 
 **Should you plan or ship?** Ship. Make the next video, then improve one thing [S1].
 
 **Is fast, busy editing the answer?** Less so over time. Critics tied a wave of fast "retention editing" to his style, and in 2024 he said he wanted to move past the overstimulating era of content [S4].
+
+**Is a nicer car and bigger house the goal?** As of 2022, he called chasing a nicer car and a bigger box to live in a poor way to run a life [S10]. In a 2026 report he said he reinvests nearly everything and has little cash of his own [S8][S11].
 
 **Sell ads or own the product?** Own the product. In 2024 he said he would ideally own several companies instead of promoting other people's [S2]. Feastables launched in January 2022, and Lunchly followed in 2024 with KSI and Logan Paul [S4][S7].
 

@@ -1,8 +1,8 @@
 # Jay Abraham: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Jay Abraham is alive, and views can change. Everything below comes from two podcast interviews with published transcripts, his own website and guides page, a reference page and two people who summarise his ideas [S1][S2][S3][S4][S5][S6][S7]. Neither interview shows a date, so we can't date those views precisely. We read them as his views in recent years, up to 2026. We could not read his books in full. Many of the results he cites come from his own company and are not independently checked. Nothing here covers his private life or plans.
+Jay Abraham is alive, and views can change. Everything below comes from his own words in long interviews with transcripts or close write-ups (the Copywriter Club and the Business Credit and Financing Show, both undated, plus Entrepreneur in 2016, Marketing Speak in October 2019, and two later undated transcripts) [S3][S4][S9][S10][S11][S12], plus his own website, a reference page and people who summarise his ideas [S1][S2][S5][S6][S7][S8]. Where an interview is undated we read it as his views in recent years, up to 2026. We could not read his books in full. Many of the results he cites come from his own company and are not independently checked. Nothing here covers his private life or plans.
 
 ## In one paragraph
 
@@ -74,32 +74,46 @@ How he applied it: he researches buyers' language by reading the headlines, chap
 - Serve as the buyer's trusted advisor [S3][S4].
 - Make referrals a system, not luck [S4].
 - Test small, model best and worst cases, then commit [S4].
+- Ask for a share of the gain you create, not only a flat fee [S11][S12].
+- Break even on the first sale and earn on the repeat sales [S11].
+- Use other people's customers, shelves and sales forces before your own money [S11].
+- Look for a bigger problem you can solve for someone else; your problem is often their opportunity [S11].
 
 ## Real decisions
 
-### Learning from a mentor and the old masters
+These are his own accounts, told in interviews. The numbers are self-reported and not independently checked.
 
-Abraham learned direct response basics from a mentor, Dan Rosenthal [S3]. He then studied older copywriters, among them Claude Hopkins, Victor Schwab and Robert Collier [S3]. His reason was that proven methods from other eras still work when moved to a new field [S3].
+### Paying radio and TV with a share of the first sale (Icy Hot)
 
-### Becoming a synthesiser
+In his twenties, with two young children, Abraham took work paid only on results. His first big client was Icy Hot, a small mail-order arthritis rub bought out of bankruptcy, with sales of about $20,000 a year [S11]. He had no ad budget, so he offered radio, TV and print outlets the whole of the first sale plus a small extra payment, and gave them free jars to try and backup stock if customers complained [S11]. His reason was that outlets would run the ads once he took away their product, payment and fulfilment worries [S11]. By his account the product grew to hundreds of thousands of orders, because most buyers reordered within a month, and he kept the customer names [S11].
 
-He noticed that what was normal in one industry was unknown in another [S3]. He chose to combine ideas from many fields into something new, which he separates from copying [S3]. He tells marketers to study outside their own field [S3].
+### Selling eight-track tapes on credit
 
-### Taking a share of the extra profit
+Early on he had no money, so he pitched a chain of about 50 convenience stores on stocking tapes at no cost to them, with the stores taking a share of sales [S11]. He then persuaded a distributor to supply roughly $200,000 of tapes on credit [S11]. His stated lesson was that a shortage of money could be solved by using other people's shelves, stock and customers [S11].
 
-Instead of only a flat fee, Abraham has taken part of his consulting pay as a share of the extra profit he helps create [S2][S6]. His reason is that buyers hesitate because they carry the risk [S2][S6].
+### Buying customers at break-even
+
+Abraham told Daymond John that direct response gives an effectively unlimited budget, as long as each sale pays back what it cost to win [S11]. He aimed to break even on the first sale and profit from the buyers who came back [S11]. He also found that a small ad inserted in a trusted newsletter cost a fraction of direct mail and carried the publisher's implied endorsement [S11].
+
+### Repackaging old reports at Entrepreneur magazine
+
+At Entrepreneur, he saw about 100 archived reports sitting unused [S12]. He had them repackaged as start-up manuals and sold as a membership, which he says earned about $1 million in the first year, with more from resale [S12]. His reason was that the asset already existed and only the packaging and the offer were missing [S12].
+
+### Rewriting a gold ad around the buyer's benefit
+
+A client ran bank-financed gold ads in major financial papers [S12]. Abraham rewrote the headline around what the customer gained, and says response rose about five times in the same space [S12]. He asked for 25% of the increase rather than a flat fee [S12]. Elsewhere he says he has asked for half of any gain on existing marketing and a third to half of new revenue [S11].
+
+### Testing 33 ways to greet a shopper
+
+A furniture store with about 1,000 visitors a week tested 33 greetings at the door [S12]. By his telling, the best greeting tripled the share of visitors who bought, raised the average sale, and lifted repeat and referral business [S9][S12]. His point was that copying rivals is not a method and a small test beats an opinion [S9].
+
+### Adding a cheaper product to protect the dear one
+
+An Australian software firm received about 1,000 leads a month and closed 3% while spending heavily on marketing [S12]. Abraham found a lower-priced product, licensed it under a royalty deal, and used it as a fallback offer for people who said no [S12]. His reason was that the expensive product could then stay a high-margin sale [S12].
 
 ### Researching the buyer's own words
 
 To learn what buyers want, he reads the headlines, chapter titles and one-star and five-star reviews of the top books in a field [S3]. He looks for strong feeling, because it shows what people want and fear [S3]. He says this feeds the concept, which he thinks matters more than the copy [S3].
-
-### Stumbling into seminars
-
-He says he entered the seminar business by chance, when an event he expected to draw 15 people drew 350 [S3]. This is his own account, and the numbers are not independently checked.
-
-### Preferring value to free offers
-
-Abraham says free offers carry less weight now [S3]. He prefers to offer valuable ideas or experiences [S3]. He holds that a great concept can carry weaker copy [S3].
 
 ## Where he stood
 
@@ -124,6 +138,16 @@ Abraham says free offers carry less weight now [S3]. He prefers to offer valuabl
 - His site says he has advised more than 18,000 businesses in over 1,000 industries [S2].
 - A documentary about him, named after his first book, appeared around 2018 or 2019 [S1].
 
+## More of his method, in his own telling
+
+- **Entrepreneur, not proprietor.** A proprietor sells a standard product to make a living. An entrepreneur starts from a picture of a better customer experience and raises the bar [S9].
+- **Examine your methods.** Most firms copy rivals without asking if it is the best way. He suggests borrowing tactics from other industries [S9].
+- **No money? Find a partner, not a loan.** Look for a complementary business with spare capacity or a sales network [S9].
+- **Funnel vision, not tunnel vision.** Breakthroughs come from proven ideas in other fields [S12].
+- **Small steps.** Grow by safe steps rather than one leap from poor to great, and find a mentor to hold you to it [S10].
+- **Funnel stages.** In a later write-up: acquire (front-end offers, even at a loss), ascend (lead buyers up to bigger offers), and raise frequency, but only if each step gives real value [S8].
+- **Several revenue pillars.** One source of income is risky, so he suggests building several [S12].
+
 ## Where he was wrong or criticised
 
 We found no detailed independent critique of his work in the sources we read. Some fair limits:
@@ -131,6 +155,7 @@ We found no detailed independent critique of his work in the sources we read. So
 - **Unchecked results.** His site claims more than $75 billion in client profits and lists big case results without naming clients [S2]. These are self-reported.
 - **Loose maths.** He said doubling all three levers gives 800% growth [S4]. Doubling three factors gives eight times the revenue, which is a 700% rise. The idea holds, but check his numbers.
 - **High price.** His paid programmes start at $25,000 and run past $350,000 a year, as of 2026 [S2]. Most small firms will use his ideas, not his services.
+- **Told from memory.** His interview stories (Icy Hot, the furniture store, the gold ads) have figures that shift between tellings, and the transcripts are machine-made, so some numbers are garbled [S11][S12].
 - **Hard to date.** His interviews and site pages are often undated [S3][S4]. Treat his figures with care.
 
 ## Blind spots to watch

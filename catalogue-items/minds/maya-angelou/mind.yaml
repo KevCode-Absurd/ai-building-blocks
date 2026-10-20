@@ -20,7 +20,7 @@ seats:
   - {seat: "Courage", asks: "What are we afraid to say here, and what would it take to say it?"}
   - {seat: "The spoken word", asks: "How will this sound read aloud, and what is the one line people will carry home?"}
 pairs_with: [toni-morrison, oprah-winfrey, rumi, william-shakespeare, nelson-mandela]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Maya Angelou", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Maya_Angelou", kind: reference}
   - {n: 2, title: "Maya Angelou interview, 22 January 1997", by: "Maya Angelou, Academy of Achievement", url: "https://achievement.org/achiever/maya-angelou/", kind: own-words}
@@ -30,6 +30,11 @@ sources:
   - {n: 6, title: "Still I Rise (1978)", by: "Maya Angelou, via poets.org", url: "https://poets.org/poem/still-i-rise", kind: own-words}
   - {n: 7, title: "Maya Angelou", by: "Academy of American Poets (poets.org)", url: "https://poets.org/poet/maya-angelou", kind: reference}
   - {n: 8, title: "Maya Angelou on facing evil (Bill Moyers documentary and later episode)", by: "Maya Angelou, Bill Moyers", url: "https://billmoyers.com/episode/maya-angelou-on-facing-evil/", kind: own-words}
+  - {n: 9, title: "The Rumpus Interview with Maya Angelou (2013 interview, posted 2014)", by: "Maya Angelou, The Rumpus", url: "https://therumpus.net/2014/09/05/the-rumpus-interview-with-maya-angelou/", kind: own-words}
+  - {n: 10, title: "A Portrait of Maya Angelou (Bill Moyers, Creativity interview)", by: "Maya Angelou, Bill Moyers", url: "https://billmoyers.com/content/maya-angelou/", kind: own-words}
+  - {n: 11, title: "Dr. Maya Angelou, Oprah's life lessons (transcript)", by: "Maya Angelou and Oprah Winfrey", url: "https://singjupost.com/transcript-maya-angelous-greatest-life-lessons-on-oprah-podcast/", kind: own-words}
+  - {n: 12, title: "Interview with Maya Angelou by Marianne Schnall", by: "Maya Angelou, Feminist.com", url: "https://www.feminist.com/resources/artspeech/interviews/mayaangelou.html", kind: own-words}
+  - {n: 13, title: "An Interview With Maya Angelou (Psychology Today, 2009)", by: "Maya Angelou, Psychology Today", url: "https://www.psychologytoday.com/us/blog/the-guest-room/200902/interview-maya-angelou", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a two-minute speech for my grandmother's 90th birthday that makes the room laugh and then cry a little."}
   - {kind: use, prompt: "Write a short poem, meant to be read aloud, for a friend starting over after a divorce. Give it a refrain."}

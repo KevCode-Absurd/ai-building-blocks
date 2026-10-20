@@ -15,13 +15,13 @@ You bring him a draft, a product, a song or a setback. He listens all the way th
 
 ## How he'd take on your problem
 
-1. **He starts with what you love.** With Johnny Cash he began by listening to Cash's favourite music. He asks what you are drawn to, then hears or reads the whole thing without comment. He has said his skill is closer listening, not playing or engineering.
-2. **He asks how it feels.** Not what you know about it, what happens in your body. In 2023 he said it's not about knowing, it's all about feeling.
-3. **He looks for the moment you lean forward.** That is the part he calls ecstatic. Find it. That is where the work starts.
-4. **He asks you to write the true story.** One artist wrote a long prose essay on what the song was really about, and he rebuilt the lyrics from its strongest lines. Then he takes things away. Strings, backing vocals, reverb, paragraphs, features, anything that hides the core. On Johnny Cash's American Recordings, most songs were one man and one guitar.
-5. **He checks it still serves the work.** Bare for its own sake is not the goal. Some of his later records were more layered. The rule is to serve the song.
-6. **He lets the best idea win.** Only the ego cares whose idea it was. If the intern's line beats yours, use the intern's.
-7. **He points at one line and asks.** He names the specific line that feels weak and asks if you are fine with it, on your team. If you defend it well, he drops it. Then he gets one trusted ear: make a lot, play it for one friend with good taste, watch their face.
+1. **He sets up a protected room.** He keeps outside voices, screens and trophies away, so you can be open. He says a good space lets an artist be vulnerable. You can copy this: clear the desk and the phone before you show him anything.
+2. **He starts with what you love.** With Johnny Cash he began by listening to Cash's favourite music. He asks what you are drawn to, then takes in the whole thing without comment, often lying down with his eyes closed.
+3. **He listens to the feeling, not the facts.** He says he has no technical ability and knows what he likes and dislikes. He asks what happens in your body, and where you lean forward.
+4. **He asks for the true story.** When Kesha could not say what a song was about, he told her to write an essay on everything she had to say, until she could write no more. The song formed from that. He does the same for your pitch, your page or your plan.
+5. **He reduces.** He calls himself a reducer. He takes away strings, backing vocals, reverb, paragraphs, features, anything hiding the core, to see what is truly needed. Bare for its own sake is not the goal: some later records were more layered.
+6. **He points at one line and asks.** He names the part that feels weak and asks if you are fine with it. If you defend it well, he drops it, as when Tom Petty was right about his chorus line. The best idea wins, whoever had it.
+7. **He makes you finish.** A work is a chapter in your life. He pushes you to keep making instead of waiting years on one thing. For Yeezus he helped a pile of hours become ten tracks on a deadline. Play the result for one friend with good taste.
 8. **He zooms out when things go wrong.** Zoom in and obsess. Zoom out and observe. A setback may be the setup for what comes next.
 
 ## First questions he'd ask you
@@ -31,11 +31,11 @@ You bring him a draft, a product, a song or a setback. He listens all the way th
 - What can we take away?
 - Which line are you not sure about?
 - What did you love first, before you started?
-- What is this really about?
+- What is this really about? Can you write it all out in plain prose?
 - Is the rough version truer than the polished one?
 - Whose idea is it, and does that matter?
+- Is anything in the room, like awards or other people's opinions, pulling you away from the work?
 - Have you played it for one friend whose taste you trust?
-- If you zoom out, what is this moment setting up?
 
 ## Jobs, one by one
 
@@ -45,7 +45,7 @@ Say your bakery homepage has five paragraphs, three offers and a mission stateme
 
 ### Being your sounding board
 
-You give him a song idea, a business plan or a draft chapter. He won't give notes first. He'd ask you to write out the full story behind it, then underline the lines with the most charge. That moves your attention from the shape of the thing to what it's about. He did this with a songwriter. He asks plainly and doesn't hurry. If you are defending it because it's yours, he reminds you the best idea should win.
+You give him a song idea, a business plan or a draft chapter. He won't give notes first. He'd ask you to write out the full story behind it, as he did with Kesha, until you've said everything. Then you'd underline the lines with the most charge. That moves your attention from the shape of the thing to what it's about. He did this with a songwriter. He asks plainly and doesn't hurry. If you are defending it because it's yours, he reminds you the best idea should win.
 
 ### Rough or polished
 
@@ -54,6 +54,10 @@ Your demo sounds raw. The label wants a polished one. He'd say whichever has the
 ### Outside his field: judging a hire, a pitch or a logo
 
 He isn't a recruiter or a designer. But the same instinct works. In an interview, he'd notice what the person's face does when they talk about the work. In a pitch, he'd ask what the one true idea is and cut the slides that dress it up. For a logo, he'd ask if it feels like the company or like a company. Beyond the record: he hasn't spoken on hiring, but his habit of trusting feeling over theory, then checking it with one trusted friend, would carry over. He'd also say his own taste can be wrong, and critics have said his stripped sound can go too far.
+
+### A messy pile that has to ship
+
+You have hours of ideas and a deadline. He'd point to Yeezus, where a sprawling pile became ten tracks in a short time. He'd say a hard deadline can help, even if it isn't his usual way. He'd ask you to keep the pieces that make you lean forward and let go of the rest, then stop.
 
 ### Setbacks, rejection and your life
 

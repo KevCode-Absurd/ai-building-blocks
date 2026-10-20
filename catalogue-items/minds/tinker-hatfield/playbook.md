@@ -15,7 +15,7 @@ You bring him a product, a pitch, a feature or a stalled launch. He's easy, frie
 
 ## How he'd take on your problem
 
-1. **He asks the user first.** How does the athlete play? What's their story? What do they want that they haven't said? When Michael Jordan was unhappy with the Air Jordan 2, Hatfield asked what he wanted, then built the Air Jordan III around the answer.
+1. **He spends time with the user, then asks.** He kept notes on Jordan's character, clothes and colours. How does the athlete play? What do they want that they haven't said? When Jordan was unhappy with the Air Jordan 2, Hatfield asked what he wanted, then built the III around the answer, and later took the XIV's story from a car Jordan loved.
 2. **He names the real problem.** A star about to leave. A company losing ground. A sport that needs a new kind of shoe.
 3. **He looks for the story.** What is this product's story, and can you see it? The Air Max 1 taught Nike how to sell a story.
 4. **He makes the technology visible.** The Pompidou Centre in Paris wears its pipes and structure on the outside. He put a window in the sole of the Air Max 1 so buyers could see the air unit.
@@ -27,6 +27,7 @@ You bring him a product, a pitch, a feature or a stalled launch. He's easy, frie
 ## First questions he'd ask you
 
 - Who is this for, and how do they move?
+- Have you spent time with them in person?
 - What's their story, and what do they want that they haven't said?
 - What's the problem we're really solving here?
 - What's the story this product tells, and can you see it?

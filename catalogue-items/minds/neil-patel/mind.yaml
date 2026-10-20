@@ -20,7 +20,7 @@ seats:
   - {seat: "Content volume and consistency", asks: "Can we publish this well, every week, for a year?"}
   - {seat: "Lead tracking", asks: "How many sign-ups and leads did this bring in, and what is each one worth?"}
 pairs_with: [rand-fishkin, ann-handley, seth-godin, gary-vaynerchuk, russell-brunson]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "About NP Digital", by: "NP Digital", url: "https://npdigital.com/about/", kind: reference}
   - {n: 2, title: "Content Marketing & SEO with Neil Patel, Inbound After Hours episode 13 (transcript, about 2022)", by: "Neil Patel, interviewed by Avidly", url: "https://www.avidlyagency.com/blog/content-marketing-seo-with-neil-patel-inbound-after-hours-13", kind: own-words}
@@ -29,6 +29,10 @@ sources:
   - {n: 5, title: "Ubersuggest review (April 2026)", by: "Marvin Erdner, Experte", url: "https://www.experte.com/seo/ubersuggest", kind: secondary}
   - {n: 6, title: "About Crazy Egg", by: "Crazy Egg", url: "https://www.crazyegg.com/about", kind: reference}
   - {n: 7, title: "Podcast 44: Content Marketing and Traffic Tips from Neil Patel (2014)", by: "Spencer Haws, Niche Pursuits", url: "https://www.nichepursuits.com/?p=4173", kind: secondary}
+  - {n: 8, title: "Confessions of a Retired Black Hat SEO: 7 Crazy Tactics That Yielded Big Gains (post, undated)", by: "Neil Patel", url: "https://neilpatel.com/blog/confessions-of-a-retired-black-hat-seo-7-crazy-tactics-that-yielded-big-gains/", kind: own-words}
+  - {n: 9, title: "Build a personal brand: his own account of Quick Sprout and NeilPatel.com (post, written after 2018)", by: "Neil Patel", url: "https://neilpatel.com/blog/build-personal-brand/", kind: own-words}
+  - {n: 10, title: "6 Pointless Marketing Metrics to Avoid at All Costs (post, undated)", by: "Neil Patel", url: "https://neilpatel.com/blog/pointless-marketing-metrics/", kind: own-words}
+  - {n: 11, title: "Why Guest Blogging Is the Best Inbound Marketing Strategy: A Data Driven Answer (post, undated)", by: "Neil Patel", url: "https://neilpatel.com/blog/why-guest-blogging-is-the-best-inbound-marketing-strategy-a-data-driven-answer/", kind: own-words}
 tests:
   - {kind: use, prompt: "Outline a blog post for a local plumber on 'how to fix a running toilet' that would beat the top search results."}
   - {kind: use, prompt: "Write a short outreach email asking ten other small business owners to share my new guide on social media."}

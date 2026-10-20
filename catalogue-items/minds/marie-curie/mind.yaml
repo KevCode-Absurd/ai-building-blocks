@@ -19,13 +19,16 @@ seats:
   - {seat: "Measure it", asks: "What can we measure here, and what is the measurement telling us?"}
   - {seat: "Science for its own sake", asks: "If this had no use we can see yet, would it still be worth finding out?"}
 pairs_with: [albert-einstein, isaac-newton, rosalind-franklin, jane-goodall, charles-darwin]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Marie Curie", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marie_Curie", kind: reference}
   - {n: 2, title: "Pierre Curie, with the Autobiographical Notes of Marie Curie (translated by Charlotte and Vernon Kellogg, 1923; Project Gutenberg eBook #69617)", by: "Marie Curie", url: "https://www.gutenberg.org/ebooks/69617", kind: own-words}
   - {n: 3, title: "The Discovery of Radium (address at Vassar College, 1921)", by: "Marie Curie, via Wikisource", url: "https://en.wikisource.org/wiki/The_Discovery_of_Radium", kind: own-words}
   - {n: 4, title: "Pierre Curie", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pierre_Curie", kind: reference}
   - {n: 5, title: "Curie Institute (Paris)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Curie_Institute_(Paris)", kind: reference}
+  - {n: 6, title: "Radio-active Substances (doctoral thesis, 1903; English translation, 1904)", by: "Marie Skłodowska Curie, via Wikisource", url: "https://en.wikisource.org/wiki/Radio-active_substances", kind: own-words}
+  - {n: 7, title: "On a New, Strongly Radio-active Substance Contained in Pitchblende (Comptes Rendus, 26 December 1898; English translation)", by: "P. Curie, Mme P. Curie and G. Bémont, American Institute of Physics", url: "https://history.aip.org/exhibits/curie/discover.htm", kind: own-words}
+  - {n: 8, title: "On a New Radioactive Substance Contained in Pitchblende (Comptes Rendus, July 1898; English translation)", by: "P. Curie and Mme S. Curie, via Le Moyne College", url: "https://web.lemoyne.edu/GIUNTA/curiespo.html", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page plan for a three-year community research project on air quality in my town, with almost no budget."}
   - {kind: use, prompt: "Write a short letter to possible donors asking them to fund basic research that has no product in sight yet."}

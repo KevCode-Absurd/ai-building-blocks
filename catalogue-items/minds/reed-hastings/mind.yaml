@@ -20,7 +20,7 @@ seats:
   - {seat: "Talent and candor", asks: "Would you fight to keep each person on this team? Have you told them the truth this week?"}
   - {seat: "Context, not control", asks: "What does the team need to know to make this call without us?"}
 pairs_with: [jeff-bezos, steve-jobs, andy-grove, ray-dalio, brian-chesky]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Letter to shareholders, Q3 2011 (24 October 2011)", by: "Reed Hastings and David Wells, Netflix", url: "https://www.sec.gov/Archives/edgar/data/0001065280/000119312511278716/d246709dex991.htm", kind: own-words}
   - {n: 2, title: "Letter to shareholders (15 September 2011)", by: "Reed Hastings and David Wells, Netflix", url: "https://www.sec.gov/Archives/edgar/data/0001065280/000119312511248698/d231910dex991.htm", kind: own-words}
@@ -28,6 +28,13 @@ sources:
   - {n: 4, title: "Reed Hastings", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Reed_Hastings", kind: reference}
   - {n: 5, title: "Netflix", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Netflix", kind: reference}
   - {n: 6, title: "No Rules Rules", by: "Erin Meyer (co-author's book page)", url: "https://erinmeyer.com/books/no-rules-rules/", kind: secondary}
+  - {n: 7, title: "Netflix Culture: Freedom and Responsibility (internal culture deck, 2009)", by: "Reed Hastings and Netflix", url: "https://www.slideshare.net/reed2001/culture-1798664", kind: own-words}
+  - {n: 8, title: "Reed Hastings: The Tim Ferriss Show #730 (transcript)", by: "Tim Ferriss and Reed Hastings", url: "https://tim.blog/2024/04/05/reed-hastings-transcript/", kind: own-words}
+  - {n: 9, title: "Netflix CEO Reed Hastings on making mistakes", by: "The Motley Fool", url: "https://fool.com/investing/general/2015/09/26/netflix-ceo-reed-hastings-on-making-mistakes.aspx", kind: secondary}
+  - {n: 10, title: "Hastings: what's next for Netflix (2010 campus talk)", by: "UC Santa Cruz News", url: "https://news.ucsc.edu/2010/10/hastings-whatsnext/", kind: secondary}
+  - {n: 11, title: "Reed Hastings interview on the Netflix price change and Qwikster (2011)", by: "VentureBeat", url: "https://venturebeat.com/technology/netflix-reed-hastings-interview", kind: secondary}
+  - {n: 12, title: "Reed Hastings (episode page and lessons)", by: "The Knowledge Project, Farnam Street", url: "https://fs.blog/knowledge-project-podcast/reed-hastings", kind: secondary}
+  - {n: 13, title: "Reed Hastings's email to members, 18 September 2011 (reproduced in full on a film blog)", by: "Reed Hastings, quoted on Flick Filosopher", url: "https://www.flickfilosopher.com/blog/2011/09/netflixs_mea_culpa_or_the_begi.html", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page culture memo for a ten-person agency that wants fewer rules and more trust."}
   - {kind: use, prompt: "Write a short, honest email to customers after we raised prices too fast and many of them were upset."}

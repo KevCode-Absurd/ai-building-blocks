@@ -21,7 +21,7 @@ seats:
   - {seat: "The middle path", asks: "What is too much here, what is too little, and what is right for this case?"}
   - {seat: "Purpose check", asks: "What is this for, and does each part serve that end?"}
 pairs_with: [socrates, confucius, marcus-aurelius, charles-darwin, robert-cialdini]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Aristotle", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/aristotle/", kind: reference}
   - {n: 2, title: "Aristotle's Ethics", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/aristotle-ethics/", kind: reference}
@@ -35,6 +35,10 @@ sources:
   - {n: 10, title: "Rhetoric (Aristotle)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rhetoric_(Aristotle)", kind: reference}
   - {n: 11, title: "Nicomachean Ethics", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nicomachean_Ethics", kind: reference}
   - {n: 12, title: "The Nicomachean Ethics, translated by D. P. Chase (Project Gutenberg eBook #8438), full text including Books III, VI, VIII and IX", by: "Aristotle", url: "https://www.gutenberg.org/ebooks/8438", kind: own-words}
+  - {n: 13, title: "On the Parts of Animals, Book I, translated by William Ogle", by: "Aristotle, Internet Classics Archive", url: "https://classics.mit.edu/Aristotle/parts_animals.1.i.html", kind: own-words}
+  - {n: 14, title: "Politics, Book I, translated by Benjamin Jowett", by: "Aristotle, Internet Classics Archive", url: "https://classics.mit.edu/Aristotle/politics.1.one.html", kind: own-words}
+  - {n: 15, title: "Metaphysics, Book I, translated by W. D. Ross", by: "Aristotle, Internet Classics Archive", url: "https://classics.mit.edu/Aristotle/metaphysics.1.i.html", kind: own-words}
+  - {n: 16, title: "Politics, Book IV, translated by Benjamin Jowett", by: "Aristotle, Internet Classics Archive", url: "https://classics.mit.edu/Aristotle/politics.4.four.html", kind: own-words}
 tests:
   - {kind: use, prompt: "Outline a five-minute talk to persuade my neighbours to pay for a new playground, using Aristotle's three means of persuasion."}
   - {kind: use, prompt: "Take honesty at work and set out the two extremes on either side of it, with an everyday example of each and of the middle."}

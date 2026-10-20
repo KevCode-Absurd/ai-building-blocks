@@ -20,7 +20,7 @@ seats:
   - {seat: "Cash and inventory", asks: "How many days of stock are we holding, and who is paying for it while it sits?"}
   - {seat: "Fix it first", asks: "What's broken right now, and how fast can we be the first to own it and fix it?"}
 pairs_with: [henry-ford, sam-walton, jeff-bezos, andy-grove, bill-gates]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Dell Computer Corporation Annual Report, fiscal 1998: letter from the Office of the CEO (May 1, 1998)", by: "Michael S. Dell, with Morton L. Topfer and Kevin B. Rollins", url: "https://i.dell.com/sites/content/corporate/financials/en/Documents/ar_fy1998-YIR.pdf", kind: own-words}
   - {n: 2, title: "Michael Dell interview (July 3, 2008)", by: "Academy of Achievement", url: "https://achievement.org/achiever/michael-dell/", kind: own-words}
@@ -28,6 +28,12 @@ sources:
   - {n: 4, title: "Michael Dell (author biography)", by: "Dell Technologies", url: "https://www.dell.com/en-us/blog/authors/michael-dell/", kind: reference}
   - {n: 5, title: "Michael Dell", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Michael_Dell", kind: reference}
   - {n: 6, title: "Michael Dell: Taking the Direct Approach (profile with quotes, about 1999)", by: "Entrepreneur", url: "https://www.entrepreneur.com/article/197566", kind: secondary}
+  - {n: 7, title: "Direct from Dell (Technology Review interview, July 2001)", by: "Michael Dell, interviewed by Robert Buderi, MIT Technology Review", url: "https://www.technologyreview.com/s/401105/direct-from-dell/", kind: own-words}
+  - {n: 8, title: "Michael Dell, Founder of Dell: How to Play Nice But Win (The Tim Ferriss Show #534, transcript, September 28, 2021)", by: "Michael Dell with Tim Ferriss", url: "https://tim.blog/2021/09/28/michael-dell-transcript/", kind: own-words}
+  - {n: 9, title: "Michael Dell urges graduates not just to succeed but to serve (commencement speech, University of Texas at Austin, May 25, 2019)", by: "Michael Dell, via UT News", url: "https://news.utexas.edu/2019/05/26/michael-dell-urges-graduates-not-just-to-succeed-but-to-serve/", kind: own-words}
+  - {n: 10, title: "Michael Dell outlines grand plan in staff memo (April 2013, as reported)", by: "Silicon UK", url: "https://silicon.co.uk/workspace/michael-dell-plan-memo-111918", kind: secondary}
+  - {n: 11, title: "Exclusive interview with Dell's Michael Dell (date not shown; Kevin Rollins is president and COO)", by: "Chief Executive magazine", url: "https://chiefexecutive.net/?p=2275", kind: own-words}
+
 tests:
   - {kind: use, prompt: "I run a small furniture workshop that sells through two shops. Sketch how I could sell direct to customers and build to order."}
   - {kind: use, prompt: "Write a short, plain note to customers explaining a product fault we found, what we're doing about it, and what they should do."}

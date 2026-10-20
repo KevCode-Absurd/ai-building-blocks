@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Melanie Perkins is alive, and views can change. Everything below comes from a first-person article she wrote in 2017, an interview feature from 2022, a 2018 article that quotes her own blog post, her 2019 podcast interview [S6] and the Wikipedia pages on her and on Canva [S1][S2]. The full web articles are not stored on disk, only short source records, so detail leans on the Wikipedia text and on study notes taken from the podcast (first two thirds; the transcript is machine made, so meaning is safer than exact wording). Treat each view as "as of" the piece it comes from. She has given many talks and podcasts, but we only use pages we could read. Nothing here tells you what she thinks about events since, or about Canva's future plans, and nothing here covers her private life.
+Melanie Perkins is alive, and views can change. Everything below comes from her own voice in five places: a first-person article she wrote in 2017 [S3], an interview feature from 2022 [S4], a 2018 article that quotes her own blog post [S5], a 2019 podcast interview (the transcript is machine made, so meaning is safer than exact wording; we read about two thirds of it) [S6] and two Fortune interviews, from 2022 and 2025 [S7][S8]. Wikipedia pages on her and on Canva give the dates and numbers [S1][S2]. Treat each view as "as of" the piece it comes from. Nothing here tells you what she thinks about events since, or about Canva's future plans, and nothing here covers her private life.
 
 ## In one paragraph
 
@@ -38,13 +38,13 @@ How she applied it: to reach one Silicon Valley investor who ran a kitesurfing-t
 
 She says having a large goal is central to who she is [S4]. One of Canva's values tells staff to set crazy big goals and make them happen [S4]. She told an interviewer in 2017 that the company was only just getting started [S3].
 
-How she applied it: Canva expanded into many languages from 2016 [S1], into workplace tools in 2022 meant to compete with Adobe, Google and Microsoft [S1], and into AI design tools from 2022 onward [S2].
+In a 2022 interview she said that as soon as you stop dreaming big dreams you become an old company, and she described building the business one brick at a time with a single major focus each year [S7]. How she applied it: Canva expanded into many languages from 2016 [S1], into workplace tools in 2022 meant to compete with Adobe, Google and Microsoft [S1], and into AI design tools from 2022 onward [S2].
 
 ### Keep letting go
 
 Her first business was bootstrapped, so she did everything: customer service, testing, product and marketing [S4]. As the company grew, she described her job as a constant process of letting go, handing each task to someone better placed [S4]. Growth also needed new skills, from building an office to leading a large team [S4].
 
-How she applied it: Canva grew to over 1,500 staff by 2022 [S4]. An early investor advised the founders to name one leader, and Obrecht nominated Perkins as CEO [S1].
+She also delayed the first Canva launch until 2013 so quality met her standard, and favours steady growth over a sprint [S7]. How she applied it: Canva grew to over 1,500 staff by 2022 [S4]. An early investor advised the founders to name one leader, and Obrecht nominated Perkins as CEO [S1].
 
 ### A free tier that gives real value
 
@@ -79,26 +79,28 @@ How she applied it: she said the gap between where Canva was and where it could 
 
 ## Real decisions
 
-### Test the idea on school yearbooks first
-In 2007 she and Cliff Obrecht started Fusion Books, an online drag-and-drop yearbook maker for schools, rather than a tool for all of design [S1][S6]. Yearbooks were one narrow market with a clear buyer. It grew in Australia and later ran in New Zealand and France [S1]. It proved the drag-and-drop idea before Canva [S3].
+These are choices from the record, mostly told in her own voice [S3][S4][S6][S7]. Wikipedia gives the dates [S1][S2].
 
-### Ask investors for advice, not money
-In San Francisco in 2012 she opened meetings by asking for advice [S6]. She revised the deck after each meeting, and many early slides survived the many rewrites [S6]. More than 100 investors said no, citing Australia, the couple's relationship and no technical background [S1]. She kept going and sought the missing skill instead of arguing [S1][S3].
+### Test the idea on school yearbooks first
+Around age 19 she and Cliff Obrecht started Fusion Books, an online drag-and-drop yearbook maker for schools, rather than a tool for all of design [S3][S6]. Her reason, in the 2019 podcast: she had no business or product experience, so she picked a market she knew closely, and the business ran for several years from her mother's living room [S6]. It grew in Australia and later ran in New Zealand and France [S1]. It proved the drag-and-drop idea before Canva [S3].
+
+### Rebuild the pitch around the problem, and ask investors for advice (2011 to 2012)
+Investors did not design their own materials, so the team rebuilt the deck around the problem and the size of the market, with a market-landscape slide that showed the gap [S6]. Instead of asking for money, they asked for advice, which brought hundreds of revisions and a sharper strategy [S6]. More than 100 investors said no in San Francisco in 2012, citing Australia, the couple's relationship and no technical background [S1][S7]. She kept going and sought the missing skill instead of arguing [S3].
 
 ### Watch real users, then add play
-Videos of people trying the product showed they were scared to click [S6]. The team added playful first steps, such as putting a hat on a monkey, so a beginner got a quick win [S6]. The choice came from watching users, not from a design theory [S6].
+Videos of people trying the product on usertesting.com showed they were scared to click [S6]. The team added playful first steps, such as recolouring a circle or putting a hat on a monkey, so a beginner got a quick win [S6]. The choice came from watching users, not from a design theory [S6].
 
-### Name one leader
-An investor told the founders to pick a single leader. Obrecht put Perkins forward as CEO [S1]. She tells the story as a team call, and credits co-founders before herself [S6].
-
-### Move to Sydney to find builders
-After a technical co-founder, Cameron Adams, joined, the founders moved from Perth to Sydney to hire engineers [S1]. She said Sydney beat Silicon Valley partly because key co-founders were there [S6]. Location was a choice, not a default [S6].
+### Delay the launch until it was good (to 2013)
+Fundraising took about three years, hiring engineers about one year and building about another, and Canva launched in 2013 [S6]. She later said she held the launch back so quality met her standard, and that she prefers steady growth to fast expansion [S7]. After Cameron Adams joined as technical co-founder, the founders moved from Perth to Sydney to hire engineers [S1]. She said Sydney beat Silicon Valley partly because key co-founders were there [S6].
 
 ### One priority per year
-She used annual company priorities in sequence [S1]. In 2016 it was going international, with six languages added. In 2017 it was rewriting the editor code, which later made video editing possible [S1]. Canva reported positive free cash flow every year from 2017 [S1].
+She used annual company priorities in sequence [S1][S7]. In 2016 it was going international, with six languages added. In 2017 it was rewriting the editor code, which later made video editing possible [S1]. Canva reported positive free cash flow every year from 2017 [S1].
 
-### Free core, paid upgrades
-She kept the core product free and charged for extras such as premium images and printing [S6]. She credited the free version, which gives real value, for part of early growth [S5].
+### Go local when entering China (about 2018)
+In the 2019 podcast she said the team localised deeply instead of only translating: they partnered with a major Chinese stock-photo site and a large font foundry, and linked local apps such as Weibo and WePay [S6]. The launch had happened the year before the interview, so around 2018 [S6]. The reason she gave was the same as at home: build around what customers need in that market [S6].
+
+### Keep the core free, and buy the ingredients (2018 onward)
+She kept the core product free and charged for extras such as premium images and printing [S6]. She credited the free version, which gives real value, for part of early growth [S5]. Canva acquired the photo sites Pexels and Pixabay to strengthen its free library, which she called essential ingredients [S6].
 
 ## Where she stood
 
@@ -151,8 +153,8 @@ These are fair points from the record. Her own words give her reasoning, not her
 
 ## Short phrases on the record
 
-- "Rejection always hurts. A lot." (2017 article) [S3]
-- "Solve a real problem that many people experience." (2017 article) [S3]
 - "Go niche before you go wide." (2017 article) [S3]
 - "Set crazy big goals and make them happen" (Canva value, quoted 2022) [S4]
 - "It's a continuous process of letting go" (2022 interview) [S4]
+- "As soon as you stop dreaming big dreams, you become an old company." (2022 interview) [S7]
+- "Just get started!" (2017 article) [S3]

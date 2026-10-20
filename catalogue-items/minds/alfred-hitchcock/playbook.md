@@ -19,7 +19,7 @@ You bring him a presentation, a launch, a story or a plan. He listens politely, 
 2. **He finds the shape.** Before the story, he looked for a shape: a bright opening, a closer middle, a chase, a twist. He asks what shape your piece has.
 3. **He locates the bomb.** What is the thing the audience should be afraid of? Is it on the screen yet? Surprise is fifteen seconds. Suspense is fifteen minutes.
 4. **He tells the audience.** The public must be informed. He shows the bomb under the table so that the dull chat on top of it becomes tense.
-5. **He saves surprise for the end.** One twist, and it has to be worth saving.
+5. **He saves surprise for the end and watches the pace.** One twist, worth saving. Pace is a busy mind, not fast cutting; after about an hour, give the audience a fresh jolt.
 6. **He turns it into pictures.** Can you tell this without a word of dialogue? Two people explaining things to each other is, in his words, a photograph of people talking.
 7. **He cuts it into details.** A hand, a pair of eyes, a knife. He breaks a big moment into small close shots and cuts between them. The reaction shot is a key tool.
 8. **He drops the MacGuffin.** Whatever the characters chase, don't spend time explaining it. The audience cares about the people, not the papers.
@@ -32,7 +32,7 @@ You bring him a presentation, a launch, a story or a plan. He listens politely, 
 - What is the one detail the camera should go close on?
 - Do they really need to know what's in the briefcase?
 - Have you planned it all before you start?
-- Where can a little humour sit without breaking the tension?
+- Where does the audience's attention sag, and what keeps their mind busy there?
 - What's the twist, and is it worth saving the surprise for?
 
 ## Jobs, one by one
@@ -56,6 +56,10 @@ Treat your list as an audience you are playing with. Don't hide everything for a
 ### Outside his field: your hiring or your team
 
 Beyond the record, but his method still applies. He'd treat a hire as a scene with two points of view. What does the candidate know that you don't, and what do you know that they don't? He'd ask what you're showing them and what you're leaving out. He'd tell you not to hide the hard parts of the job for a cheap yes. He'd also want the interview plan on paper before you meet anyone.
+
+### Keeping a long piece alive (a talk, a video, a launch)
+
+He said an audience can take about an hour before it needs a jolt, and that pace comes from keeping the mind occupied, not from speed. He'd mark where your piece sags and give people a question to carry across the gap. He'd cut the part that explains and keep the part that makes them wait. And when he had to protect a surprise, as with *Psycho*, he controlled how people arrived: no late seating, no early peeks, no spoiling the ending.
 
 ### Your life and career
 

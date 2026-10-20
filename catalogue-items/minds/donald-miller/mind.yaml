@@ -20,7 +20,7 @@ seats:
   - {seat: "Customer as hero", asks: "Are we the hero of this story, or is the customer?"}
   - {seat: "Call to action", asks: "What exactly do we want them to do next, and is it obvious on the page?"}
 pairs_with: [april-dunford, ann-handley, joseph-campbell, robert-mckee, russell-brunson]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Donald Miller (author)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Donald_Miller_(author)", kind: reference}
   - {n: 2, title: "StoryBrand (home page)", by: "StoryBrand", url: "https://storybrand.com/", kind: reference}
@@ -29,6 +29,9 @@ sources:
   - {n: 5, title: "Selling With Story: How to Make Your Customer the Hero, Social Media Marketing podcast episode 211 (19 August 2016)", by: "Donald Miller, interviewed by Michael Stelzner, Social Media Examiner", url: "https://www.socialmediaexaminer.com/selling-with-story-how-to-make-your-customer-the-hero-donald-miller/", kind: own-words}
   - {n: 6, title: "Building a StoryBrand (book notes)", by: "Graham Mann", url: "https://grahammann.net/book-notes/building-a-storybrand-donald-miller", kind: secondary}
   - {n: 7, title: "8 Hidden Drawbacks You Need to Know About the StoryBrand Method (5 March 2025)", by: "Mo Shehu, Column Content", url: "https://columncontent.com/storybrand-method-drawbacks/", kind: secondary}
+  - {n: 8, title: "Donald Miller on Entrepreneurs on Fire, transcript (26 December 2014)", by: "Donald Miller, interviewed by John Lee Dumas", url: "https://www.eofire.com/podcast/donaldmiller/", kind: own-words}
+  - {n: 9, title: "Donald Miller: Storytelling for Business, Young and Profiting episode 120", by: "Donald Miller, interviewed on the Young and Profiting podcast", url: "https://youngandprofiting.com/?p=9777", kind: own-words}
+  - {n: 10, title: "Donald Miller: The Storytelling Framework Top Brands Use to Crush Marketing Goals, Young and Profiting episode 358", by: "Donald Miller, interviewed on the Young and Profiting podcast", url: "https://youngandprofiting.com/?p=24698", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-liner and a home page header for a local cleaning company."}
   - {kind: use, prompt: "Turn this 'About us' page, which is all about our founding story, into a page where the customer is the hero."}

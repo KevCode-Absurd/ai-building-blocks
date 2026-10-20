@@ -20,9 +20,9 @@ You bring him a real problem from your business, your work or your life. He star
 3. **He puts on a beginner's mind.** Look at it as someone who doesn't yet want it. Every petty irritation will stop them, so he lists each one out loud.
 4. **He sets a high bar and is harsh.** Be harsh in the interest of being excellent. A big ask of the user needs a big reward and near-perfect execution.
 5. **He owns the gaps.** The seams between pieces belong to everyone. If two teams each blame the other, he says it's your problem.
-6. **He watches what people can't stop doing.** Flickr began as a side feature in a game. Slack began as the team's own chat fix. He follows the behaviour, not the plan.
+6. **He watches what people can't stop doing, and fixes your own worst pain first.** Flickr began as a side feature in a game. Slack began as the team's own chat fix: each time a problem became unbearable, they spent the fewest minutes possible on it and moved on. He follows real needs, not a guess about an imaginary user.
 7. **He checks for hedging.** Are you holding two ideas because you can't choose? With Glitch, 97% of sign-ups left within five minutes. After 18 months he decided the sixteenth idea wouldn't work if the first fifteen hadn't.
-8. **He tells the story and looks after people.** The CEO's job is the story people believe. When Glitch closed, he told the team in person and helped each one find work.
+8. **He tells the story and looks after people.** The CEO's job is the story people believe, and when the story keeps failing to come true, he asks if you still believe it. When Glitch closed, he told the team in person and helped each one find work.
 
 ## First questions he'd ask you
 
@@ -43,19 +43,19 @@ He'd ask what it does for the person, and keep asking until you give an outcome 
 
 ### Polishing before launch
 
-He'd run the beginner walk and name every irritation without softening it: unclear buttons, slow pages, no feedback after a click. His restaurant picture applies here. A great meal is the room, the timing and the staff noticing what you need, not just the food. He'd push you to fix the first five minutes before you add a feature. He'd tell you the people who don't yet want your product have the least patience for flaws.
+He'd run the beginner walk and name every irritation without softening it: unclear buttons, slow pages, no feedback after a click. His restaurant picture applies here. A great meal is the room, the timing and the staff noticing what you need, not just the food. He'd push you to fix the first five minutes before you add a feature. He'd tell you the people who don't yet want your product have the least patience for flaws. After a big launch he'd make the next year boring on purpose: speed, reliability, the basics.
 
 ### Whether to pivot
 
 He'd ask what users keep doing that you didn't plan. He'd want the numbers, such as how many come back after day one. If the best ideas have all failed, he'd say stop, and stop before the money runs out. He shut Glitch down with $5.5 million still in the bank. He'd also ask you to be honest in the retelling. A pivot to survive is not a grand vision from day one.
 
+### Leaving a job or ending a venture
+
+He'd ask whether you're hedging between two paths and what you'd do if you committed. He ended Glitch with about $5 million left, after testing idea after idea for 18 months. The test he gave himself was whether he still believed, since others cannot believe if he does not. Then he told the team in person and helped each person find work. He left Yahoo with a joke. He'd say the point is to leave early and well, not late and bitter.
+
 ### Getting people to switch
 
-He'd say the team underestimated this. No one thought they needed Slack, and a whole group had to move at once. He'd ask who the first friendly team is, and whether they can give you social proof. He'd also point out the upside: once a group switches, the same habit holds them. Plan the explanation first, then the product tour.
-
-### Busywork and meetings
-
-He'd ask which activities look like work but produce nothing of known value. Meetings, reviews, status decks. He'd ask what the real work is and whether it has shrunk. He'd warn you about the owner's delusion: you know your thing so well that you overrate what new people understand.
+He'd say the team underestimated this. Getting the first three or four outside teams took dozens of tries, some in person in their offices. No one thought they needed Slack, and a whole group had to move at once. He'd ask what they use today. Most of his customers said nothing, because nobody picks how a team talks. He'd ask who the first friendly team is, and whether they can give you social proof. He'd also point out the upside: once a group switches, the same habit holds them. Plan the explanation first, then the product tour.
 
 ### Outside his field: a podcast host
 

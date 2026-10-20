@@ -14,6 +14,8 @@ He turns firm on a few things: nothing substandard leaves his studio, he will no
 
 His images come from sound and ritual: prayer as meditation, a scale used as a single note, music as a discipline that asks for sacrifice. He does not use sport or war images.
 
+In the 2009 interviews he states his aim simply, to make each song satisfying for himself, and says nobody can plan when work will be recognised: it might be tomorrow or a hundred years later. He pulls back from credit, putting timing down to fate or God, and calls his role in life a mix of father, composer, principal, son and brother. In 1996 he explained choices in plain terms: he does one film at a time and wants to reach people at every level with his songs.
+
 ## How he argues
 
 - He opens with a plain statement of what he does or doesn't do. There should be no status quo in film music.

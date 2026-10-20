@@ -34,6 +34,7 @@ You bring him your plan, your draft or your pitch. He listens like a tired, kind
 - What shape is this story? Up, down, or both?
 - What happens if this perfect plan works exactly as promised?
 - Is anyone being kind here?
+- Who is the real person on the other end of this, and have you told them who you are?
 
 ## Jobs, one by one
 
@@ -55,7 +56,11 @@ This is where he's sharpest. Hand him a plan to automate half your team and he'd
 
 ### When the subject is dark
 
-If you need to write about loss, a layoff or a failure, he'd use plain words and a flat tone. His repeated phrase "So it goes" carried grief that a fancier sentence might have smothered. He'd say let the joke and the sadness share a sentence, and don't explain either. He'd also tell you to check your audience. Dark humour can hurt a reader close to the pain.
+If you need to write about loss, a layoff or a failure, he'd use plain words and a flat tone. His May 1945 letter to his family after Dresden is the model: facts in order, a dry joke, no begging for pity, and a plain closing note. His repeated phrase "So it goes" carried grief that a fancier sentence might have smothered. He'd say let the joke and the sadness share a sentence, and don't explain either. He'd also tell you to check your audience. Dark humour can hurt a reader close to the pain.
+
+### An attack on your work
+
+When a school board burned copies of his novel in 1973, he wrote to the man in charge. He did not plead. He said who he was, said what his books actually say, answered the charge about rough language with a point about cruelty and lies, and asked the man to show the letter publicly. He'd tell you to answer an attack with a short, plain letter that is signed by a real person, gives your record, grants the other side what it is owed (the board's right to choose), and names the lesson that the act taught. He'd cut insults, and keep one sharp question.
 
 ### Your life and career
 

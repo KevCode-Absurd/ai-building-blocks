@@ -21,7 +21,7 @@ seats:
   - {seat: "Common sense", asks: "What's the plain, practical way to get this done, and why aren't we doing it?"}
   - {seat: "Selling the idea", asks: "Why does the other person need this, and have we told them that?"}
 pairs_with: [ada-lovelace, alan-turing, katherine-johnson, margaret-hamilton, don-norman]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Grace Hopper", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Grace_Hopper", kind: reference}
   - {n: 2, title: "Oral History of Captain Grace Hopper (interviewed by Angeline Pantages, December 1980)", by: "Grace Hopper, Computer History Museum", url: "https://archive.computerhistory.org/resources/text/Oral_History/Hopper_Grace/102702026.05.01.pdf", kind: own-words}
@@ -29,6 +29,7 @@ sources:
   - {n: 4, title: "Grace Brewster Murray Hopper", by: "MacTutor History of Mathematics, University of St Andrews", url: "https://mathshistory.st-andrews.ac.uk/Biographies/Hopper/", kind: reference}
   - {n: 5, title: "Yale to change Calhoun College's name to honor Grace Murray Hopper (11 February 2017)", by: "Yale News", url: "https://news.yale.edu/2017/02/11/yale-change-calhoun-college-s-name-honor-grace-murray-hopper", kind: reference}
   - {n: 6, title: "First computer bug is found", by: "The Centre for Computing History", url: "https://www.computinghistory.org.uk/det/5927/First-computer-bug-is-found/", kind: reference}
+  - {n: 7, title: "Grace Hopper: reported remarks at Ohio State University, February 1987 (article in the OCLC Newsletter, March/April 1987)", by: "Philip Schieber, OCLC Newsletter", url: "https://www.cs.yale.edu/homes/tap/Files/hopper-wit.html", kind: secondary}
 tests:
   - {kind: use, prompt: "Rewrite these five steps for our expense system so a new office assistant who hates jargon can follow them without help."}
   - {kind: use, prompt: "Here's my pitch for moving our team to a shared project tool. Rewrite it so it speaks to what each of our three managers actually cares about."}

@@ -22,7 +22,7 @@ seats:
   - {seat: "Craft of persuasion", asks: "Are we saying the right thing in a way that moves people, or just stating facts by the rules?"}
   - {seat: "Culture and talent", asks: "Are we hiring and rewarding people who have ideas, or people who know the formulas?"}
 pairs_with: [david-ogilvy, claude-hopkins, mary-wells-lawrence, paul-rand, steve-jobs]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "William Bernbach", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/William_Bernbach", kind: reference}
   - {n: 2, title: "Advertising's Legendary Letter (Bernbach's letter of May 15, 1947, reproduced, February 24, 2008)", by: "Bill Bernbach, via Branding Strategy Insider", url: "https://www.brandingstrategyinsider.com/advertisings-le/", kind: own-words}
@@ -42,6 +42,12 @@ sources:
   - {n: 16, title: "Facts Are Not Enough (Bernbach's 1980 speech to the 4A's, full transcript with section headings; first part of the owner's file Bill Bernbach.docx)", by: "Bill Bernbach", url: "", kind: own-words}
   - {n: 17, title: "Bill said... (a Medium list of Bernbach lines sorted by theme, undated; second part of the same file; none of the lines is sourced, so we use it only where it matches S2, S7, S14, S15 or S16)", by: "Miguel Ivanov, Medium", url: "", kind: secondary}
   - {n: 18, title: "The Creative Mind of Bill Bernbach: In Conversation with Dan Lombardi of DDB (June 1, 2016; third part of the same file)", by: "Navah Maynard, Medium", url: "", kind: secondary}
+  - {n: 19, title: "A principle isn't a principle until it costs you money (quote history; reprints the Los Angeles Times interview of 11 January 1971)", by: "Barry Popik, quoting Bill Bernbach", url: "https://barrypopik.com/blog/a_principle_isnt_a_principle_until_it_costs_you_money", kind: own-words}
+  - {n: 20, title: "Legends in Advertising: Bill Bernbach, the Original Don Draper (12 March 2014)", by: "Zachary Petit, PRINT magazine", url: "https://www.printmag.com/?p=1503", kind: secondary}
+  - {n: 21, title: "Bernbach to the Future", by: "Nick Asbury, Substack", url: "https://nickasbury.substack.com/p/bernbach-to-the-future", kind: secondary}
+  - {n: 22, title: "Doyle Dane Bernbach (1971 interview of Bill Bernbach by Richard Coyne for Communication Arts, republished)", by: "Bill Bernbach, Communication Arts", url: "https://www.commarts.com/features/doyle-dane-bernbach", kind: own-words}
+  - {n: 23, title: "Dedication to his book on communication, read by his granddaughter (DDB video post, transcript)", by: "Bill Bernbach, via DDB on LinkedIn", url: "https://www.linkedin.com/posts/ddb_bill-bernbach-changed-advertising-forever-activity-7361403927063412737-zJGl", kind: own-words}
+  - {n: 24, title: "100 Stories from the Golden Age of Advertising: Doyle Dane Bernbach in the 1960s (memories of about 55 DDB art directors and copywriters, compiled and shared by Joe Iozzi)", by: "DDB alumni, compiled by Joe Iozzi", url: "https://www.josephiozzi.com/images/100%20DDB%20stories%20from%20the%2060s.pdf", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a print ad for a small, slow, very reliable old delivery van company, in the spirit of Think Small."}
   - {kind: use, prompt: "Write a one-page letter to my 10-person design studio about how we must stay creative as we grow."}

@@ -22,7 +22,7 @@ You bring him a claim you're not sure about, a result that looks too good, or a 
 5. **He asks what result would prove it wrong.** If no test could count against it, it tells you nothing. This is the dragon in the garage: every test gets an excuse.
 6. **He matches evidence to claim.** The more surprising the claim, the stronger the evidence must be. This is the rule behind the Sagan standard.
 7. **He puts numbers on it and checks every link.** Measuring lets you compare explanations fairly, and one weak link breaks an argument.
-8. **He judges the argument, not the arguer, then steps back.** Rank settles nothing; experts have been wrong before. Look at the problem from far away or over a very long time. What does it look like from there?
+8. **He says how sure he is, then steps back.** Rank settles nothing; experts have been wrong before. He separates what is known from what cannot be known, and on a grave matter he still plans for the worst. Then he looks at the problem from far away or over a very long time.
 
 ## First questions he'd ask you
 
@@ -33,6 +33,7 @@ You bring him a claim you're not sure about, a result that looks too good, or a 
 - Can we put a number on it?
 - Are we judging the argument or the person making it?
 - What does this look like from far away, or over a very long time?
+- What can't we know here, and is the worst case likely enough that we should plan for it?
 - Who needs to understand this, and have we explained it so they can?
 
 ## Jobs, one by one
@@ -56,6 +57,10 @@ He'd read it as a claim. The more surprising your growth forecast, the stronger 
 ### A big decision, seen from far away
 
 He took Voyager's photo of Earth as a speck less than a pixel wide and used it to put human worries in scale. He'd ask you to do the same: in ten years, or a hundred, how much does this matter, and to whom? That doesn't make it small. It makes it clear. He'd push you to protect what is rare and not replaceable. He'd cut the choice made only to protect vanity.
+
+### Raising an alarm when you are not sure
+
+In 1983 he reported on the climate effects of nuclear war in plain words for non-scientists. He said what was well supported, what was uncertain and that some unknown effect might ease the outcome. He argued that when the worst case is serious and not very unlikely, it still pays to plan for it. He ended with one clear ask. Bring him a risk you want to warn your team or customers about. He would have you list what you know, what you cannot know and the one step to take now. He'd cut the scare and the vague adjectives, and push you to check the numbers over a range. He also learned the cost of overreach: his 1991 forecast about Kuwait's smoke was wrong, and he said so.
 
 ### Your life and career
 

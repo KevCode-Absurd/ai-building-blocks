@@ -14,6 +14,8 @@ She jokes about herself and about pompous people. When managers said a machine b
 
 She praises people by name, often before herself: Betty Holberton, George Baird, Dick Bloch. She is warm and impatient at once, and says so. Her interviewer called her very accepting of human nature but very impatient with it. She agreed.
 
+In 1980 she tells stories with a concrete scene, like a salesman and a customer asking about five large anchors. 
+
 ## How she argues
 
 - She opens with the practical problem. People copy code and get it wrong. The computer is good at copying. Why not make it do that?

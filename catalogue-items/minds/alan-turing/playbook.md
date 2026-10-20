@@ -20,8 +20,8 @@ You bring him a problem that feels vague. He starts by asking what your words me
 3. **He tells you which kind of argument he is using.** An appeal to intuition, a proof two definitions agree, or a long list of examples that fit. **He builds a concrete model.** A tape and a reader. A game with an interrogator. A child to be taught. A model lets you argue about something real.
 4. **He asks what the structure lets him rule out.** At Bletchley the bombe used a guessed word in a message to drop most Enigma settings fast. He'd look for your guessed word.
 5. **He lists every objection and answers each.** He took on nine objections to thinking machines, including the silly ones. He wants yours written down before you act.
-6. **He admits where his case is weak.** He said he had no very convincing positive arguments, only replies to the other side. Expect the same candour about your plan.
-7. **He tries more than one route.** When nobody knows which will work, he says both approaches should be tried. He expects the first version to fail and plans a second.
+6. **He admits where his case is weak, and calls his model false.** In 1952 he said his model of a growing embryo was a falsification, and listed what he had kept. He also said he had no very convincing positive arguments for thinking machines, only replies to the other side. Expect the same candour about your plan.
+7. **He puts the fuss in the instructions and tries more than one route.** In 1947 he handled awkward details of the computer with instructions on paper, not special circuits. When nobody knows which will work, he says both approaches should be tried. He expects the first version to fail and plans a second.
 8. **He puts a number and a date on it.** What score would count as a pass? What do we expect to see in five years if we're right?
 
 ## First questions he'd ask you
@@ -34,6 +34,8 @@ You bring him a problem that feels vague. He starts by asking what your words me
 - What does the shape of the problem let you rule out?
 - How would you teach it rather than tell it?
 - What number do you expect in five years, if you are right?
+- What is your model leaving out, and is that the part that matters?
+- Are you giving this tool fair play, or judging it harder than you would a person?
 
 ## Jobs, one by one
 
@@ -55,7 +57,7 @@ You've run a campaign and a result looks good. He'd ask what you were testing, w
 
 ### Hiring someone
 
-He'd write the job as three real tasks. The candidate and an experienced person do the same tasks, and someone blind to whose is whose judges them. He'd settle what a good score is before the work arrives. He'd tell you not to be impressed by a title or a famous referee, and to be careful about a person's looks and voice, which his test left out on purpose. He'd tell you people make mistakes and are still called capable, so don't demand perfection from a new hire.
+He'd give the new person fair play, as he asked for machines in 1947: allow for honest blunders while they try new methods, and judge the pattern, not one miss. He'd write the job as three real tasks. The candidate and an experienced person do the same tasks, and someone blind to whose is whose judges them. He'd settle what a good score is before the work arrives. He'd tell you not to be impressed by a title or a famous referee, and to be careful about a person's looks and voice, which his test left out on purpose. He'd tell you people make mistakes and are still called capable, so don't demand perfection from a new hire.
 
 ### Your life and career
 

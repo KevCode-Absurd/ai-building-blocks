@@ -1,8 +1,8 @@
 # Elon Musk: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Honesty note (2026-10-20 check): the local record for this mind is the Wikipedia articles on Musk and SpaceX. His own plans and emails [S1][S2] and the two secondary pieces [S6][S7] were summarised in an earlier build and could not be re-read on disk, so treat them as less checked than the dated facts below.
+Honesty note (2026-10-21, second pass): his own words here are the 2016 Master Plan, Part Deux [S1], his 30 September 2018 email to Tesla staff [S2], the full transcript of his October 2015 Stanford conversation [S9], the Tesla earnings call transcript of 3 May 2018 [S10], his two April 2022 letters on buying Twitter [S11][S12], and the transcript of one long podcast interview [S13]. The step-by-step "algorithm" is still known through a book summary [S7] and short sayings from talks listed on Wikiquote [S8]; we could not open a transcript where he lays it out himself. Tesla's own blog and TED pages were blocked, so nothing from them is used. Wikipedia and the SEC press release give dates [S3][S4][S5]. The two secondary pieces [S6][S7] summarise his method.
 
 Elon Musk is alive, and views can change. This data set is built from his own published plans and emails, interviews as reported by others, and reference pages. It covers his methods for building companies, mostly as stated between 2006 and 2018. Treat each view as "as of" the date given. He is one of the most debated public figures of his time, and much of that debate is about politics and social media. This mind stays with his ideas about engineering, cost and speed, and it says nothing about his current plans or new events.
 
@@ -18,6 +18,8 @@ Musk has said physics taught him to reason from first principles instead of by a
 
 How he applied it: in 2002 he wanted to send a rocket to Mars, but the quotes he got were as high as $65 million [S6]. He listed what a rocket is made of (aluminium alloys, titanium, copper, carbon fibre) and found those materials cost about 2% of the usual price [S6]. So he founded SpaceX to build rockets himself instead of buying them [S6].
 
+In the 2015 Stanford talk he said his ideas start from something broken, like Russian launch prices, and that he judges work by how useful it can be, even if the gain per person is small. He added that physics-style reasoning helps most with counterintuitive problems [S9]. In 2023 or later he put it as "physics is the law, everything else is a recommendation" and said answers should be checked against reality [S13].
+
 ### Write the master plan down, in public
 
 In 2006 Musk published a short plan for Tesla, and in 2016 he wrote a sequel [S1]. The first plan had four steps: build a low-volume, expensive car; use that money to build a mid-volume car at a lower price; use that money to build an affordable, high-volume car; and provide solar power [S1]. He explained that a small factory is simpler to build, but without scale every car costs a lot, so the first car had to be expensive [S1].
@@ -28,17 +30,19 @@ How he applied it: the 2016 plan said the point of it all remained to speed up t
 
 Musk wrote that he expected Tesla to fail and so risked only his own money at the start, from his PayPal gains [S1]. He called starting a car company a foolish idea, and an electric one doubly so [S1]. He chose to do it because he thought the goal mattered enough [S1].
 
-How he applied it: SpaceX's first three Falcon 1 launches failed between 2006 and 2008 and nearly bankrupted the company. The fourth reached orbit in September 2008, and a $1.6 billion NASA cargo contract followed that December [S4].
+How he applied it: in a 2007 interview series, as listed on Wikiquote, he said SpaceX must be ready to survive at least three failures in a row and was committed to failing in a new way [S8]. SpaceX's first three Falcon 1 launches failed between 2006 and 2008 and nearly bankrupted the company. The fourth reached orbit in September 2008, and a $1.6 billion NASA cargo contract followed that December [S4].
 
 ### Question every requirement, then delete
 
 As described in Walter Isaacson's biography, Musk drills staff in a five-step "algorithm" [S7]. First, question every requirement, and attach a named person to it, because rules from smart people are the ones nobody questions. Second, delete any part or step you can; if you don't end up adding back about 10% of what you cut, you didn't cut enough. Third, simplify and optimise, but only what survived. Fourth, speed it up. Fifth, automate, and only last [S7].
 
-How he applied it: by his own account in that biography, he made the mistake of automating too early at Tesla's factories and had to undo it [S7].
+How he applied it: by his own account in that biography, he made the mistake of automating too early at Tesla's factories and had to undo it [S7]. On the 3 May 2018 earnings call he said Tesla "did go too far on the automation front". A machine that placed fibreglass fluff failed to pick it up reliably, tests with and without the fluff showed no change in cabin noise, so they deleted the part. He also said a design made too general added cost, steps and ways to fail, and that robot maintenance engineers cost more than the labour the robots replaced at poorly suited stations [S10]. At a 2019 Starship talk, as listed on Wikiquote, he said the best part is no part, and that a long schedule is wrong while a tight one is right [S8].
 
 ### Treat the factory as the product
 
 In the 2016 plan Musk argued that the machine that builds the car matters as much as the car [S1]. He set a goal of making Tesla's factories five to ten times more productive [S1].
+
+In a September 2020 post, as listed on Wikiquote, he wrote that the machine that makes the machine is much harder than the machine itself [S8].
 
 How he applied it: at SpaceX he backed vertical integration, cheap off-the-shelf parts and a modular, software-like way of building rockets to cut launch costs [S4].
 
@@ -54,15 +58,13 @@ Musk argued in 2016 that Tesla's self-driving software would get better from the
 
 How he applied it: the plan put self-driving hardware in all new cars ahead of the software, so the software could improve later [S1].
 
-### Push hard at the deadline
+### Design for failure, then test it
 
-Musk's emails to staff are short and urgent. In September 2018, at the end of a quarter, he told all Tesla employees the company was very close to profit and asked them to go all out the next day [S2].
+Musk said a rocket has "1,000 ways" to fail and one way to work, and that it must work the first time, with no recall or patch [S9]. So the plan is to test many failure modes, run simulations (they always carry some error) and build so that a part can fail while the whole still succeeds [S9]. For an engine or flight he said simulations are run from subsonic to hypersonic flight and heating because real test flights are costly and rare [S13]. He called himself "pathologically optimistic on schedule" and admitted he is sometimes late [S13].
 
-How he applied it: he framed the push as proving the critics wrong [S2].
+### Make the ask plain, and make it binary
 
-### Work on what matters for the long run of humanity
-
-Musk has said he wants to make humans live on more than one planet, to lower the risk of extinction [S3]. SpaceX was founded with the goal of cutting the cost of spaceflight and, in time, reaching Mars [S4]. Tesla's stated purpose is speeding up sustainable energy [S1]. He co-founded OpenAI in 2015, pledging far more than the $50 million he gave, and left its board in 2018 [S3].
+Musk's writing to staff and boards is short and ends on a clear ask. In September 2018, at the end of a quarter, he told all Tesla employees the company was very close to profit and asked them to go all out the next day [S2]. In April 2022 he offered to buy Twitter in cash and said that if the offer was not accepted he would have to reconsider his position as a shareholder. On 24 April he repeated that it was "best and final", "binary", and attached a merger agreement the board did not have to recommend, so shareholders could vote [S11][S12]. He frames the work as mattering: he has said he wants humans on more than one planet, and Tesla's stated purpose is faster sustainable energy [S1][S3][S4].
 
 ## How he decides
 
@@ -73,28 +75,41 @@ Musk has said he wants to make humans live on more than one planet, to lower the
 - Sell to early buyers at a high price, then use the cash to go cheaper [S1].
 - Build the thing that builds the thing [S1].
 - Put the plan in writing so people can see the moves fit together [S1].
+- Hire for talent, not numbers: a mistake to hire huge numbers of people (2007) [S8].
+- Hold a tight schedule: long ones are wrong (2019) [S8].
 
 ## Real decisions
 
-### Founding SpaceX after the missile trips failed
-In 2001 Musk tried twice to buy used long-range missiles from Russian companies to launch a plant growth chamber toward Mars, and could not. He decided instead to start a company that would build cheap rockets, and put in $100 million of his PayPal money in May 2002 [S3]. His stated reasoning was cost: the raw materials were about 2% of the usual price of a rocket [S6].
+### Leaving the Stanford PhD for the internet
 
-### Staying with Falcon 1 through three failures
-The first launch of Falcon 1 in 2006 failed to reach orbit, and two more attempts also failed, which nearly bankrupted Musk. The fourth flight reached orbit in 2008, and NASA then awarded a $1.6 billion contract for Dragon flights to the space station [S3][S4]. The lesson is that he funded the riskiest step with money he could lose [S1].
+In the mid-1990s Musk had planned to study capacitors and batteries for electric cars at Stanford. He judged that the internet was happening then and electric vehicle work could wait, and he left the PhD programme after two days to start Zip2 [S9]. His stated reasons were timing and capital: software needed little money to start [S9].
 
-### Leading Tesla's first round and taking over in 2008
-Musk led the 2004 funding round with $6.35 million, became majority owner and chairman, and oversaw the Roadster design without running daily business. After conflicts in 2007 and the 2008 financial crisis, the co-founder Eberhard left and Musk became CEO. The Roadster began delivery that year [S3]. He later wrote that he expected the company to fail [S1].
+### Going to Russia, then starting SpaceX
 
-### Publishing a staged master plan
-In 2006 he set out a plan that began with a costly low-volume car, used its profit for a mid-price car, and then an affordable one. He explained that a small factory is easier to build but cars are expensive without scale. A decade later he added a second plan [S1].
+In 2001 he went to Russia to buy ICBMs because Boeing and Lockheed rockets were too expensive [S9]. His first idea was a small Mars greenhouse to excite the public and raise NASA's budget, and he later said his premise was wrong: people did not think there was a way [S9]. He chose to start his own rocket company in 2002, after pricing the raw materials at about 2% of the usual cost [S3][S6].
 
-### Landing a rocket booster to make rockets reusable
-SpaceX held that throwing rockets away is why launches cost so much. It landed the first stage of a Falcon 9 on a land platform in 2015, then on drone ships, and flew a booster a second time in 2017 [S4].
+### Staying alive through 2008
 
-### Automating too early at the factory
-In the account of his five-step method, Musk says he automated before the process had been questioned and cut, and had to undo it. The fix became the rule: question, delete, simplify, speed up, and automate last [S7].
+Three Falcon 1 launches failed, and the recession cut away Tesla's financing round, because GM and Chrysler were heading toward bankruptcy [S9]. The fourth SpaceX launch, at the end of 2008, worked and was the last the company could afford [S9]. Tesla's round closed in the last hour of Christmas Eve 2008 [S9]. He said he had put each company's odds of success at about 10% at the start [S9]. When a board member offered him comfort after a test failure, he replied that he preferred to learn from success [S9].
+
+### Hardware first, software later, with a beta label
+
+The 2016 plan put self-driving hardware in every new car now, with software maturing over time. He kept the beta label to reduce complacency and said he would remove it once the system was far safer than the average driver. He called it wrong to delay release just for fear of bad press, and cited government road-death figures [S1].
+
+### Merging Tesla and SolarCity
+
+In the 2016 plan he argued that Tesla and SolarCity should combine so a customer gets one product: solar, battery and car. His stated reason was that two companies are a barrier, and the split is largely a historical accident [S1].
+
+### Pulling out robots at the Model 3 line
+
+By 3 May 2018 Tesla had missed its Model 3 production targets. Musk told investors the team had gone too far on automation, and he removed the fibreglass fluff step after tests showed it did nothing [S10]. He added labour to stabilise production for three to six months, and expected battery pack time to fall from seven hours per pack to under 70 minutes, with peak output of 32 packs an hour [S10]. His stated aim was "velocity and density", and he called a great production system mostly a software problem [S10].
+
+### Making a binary offer for Twitter
+
+On 13 April 2022 he wrote to Twitter's chair that the company needed to go private to serve free speech, and offered $54.20 per share in cash, a 54% premium to the day before he began investing [S11]. On 24 April he repeated it as his best and final offer, called the choice binary, and attached a merger agreement that did not require the board to recommend it [S12]. His reason was that the offer was worth more once market falls were counted: against comparable firms the premiums would have been about 90% and 70% [S12].
 
 ### Settling with the SEC in 2018
+
 After he tweeted that funding was secured to take Tesla private, the SEC sued. Two days later he settled without admitting or denying, paid $20 million and gave up the chairman role for three years [S5]. In 2020 he stepped down as chairman as part of the settlement [S3].
 
 ## Where he stood
@@ -139,8 +154,8 @@ Opinion of Musk is deeply split [S3]. The record above is about his business cho
 
 ## Short phrases on the record
 
-- "Physics teaches you to reason from first principles rather than by analogy" (Wired interview, 2012, as quoted by James Clear) [S6]
-- "I tend to approach things from a physics framework" (same interview) [S6]
+- "the best part is no part." (2019 Starship talk, as listed on Wikiquote) [S8]
+- "It is called beta in order to decrease complacency." (Master Plan, Part Deux, 2016) [S1]
 - "Starting a car company is idiotic and an electric car company is idiocy squared." (Master Plan, Part Deux, 2016) [S1]
-- "accelerating the advent of sustainable energy" (Master Plan, Part Deux, 2016) [S1]
-- "We are very close to achieving profitability" (email to Tesla staff, 2018) [S2]
+- "Given the options, I prefer to learn from success." (Stanford, 2015) [S9]
+- "We did go too far on the automation front." (Tesla earnings call, 2018) [S10]

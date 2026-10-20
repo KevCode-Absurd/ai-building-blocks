@@ -20,7 +20,7 @@ seats:
   - {seat: "Cut the filler", asks: "Is there a reason for every line, or can this be shorter?"}
   - {seat: "Quit on top", asks: "Is this still getting better, or is it time to end it while it's good?"}
 pairs_with: [mark-twain, oscar-wilde, alfred-hitchcock, rick-rubin, david-ogilvy]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Jerry Seinfeld", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jerry_Seinfeld", kind: reference}
   - {n: 2, title: "Seinfeld", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Seinfeld", kind: reference}
@@ -30,6 +30,11 @@ sources:
   - {n: 6, title: "Jerry Seinfeld talks comedy for 90 minutes with Howard Stern (2013)", by: "The Comic's Comic", url: "https://thecomicscomic.com/2013/06/27/jerry-seinfeld-talks-comedy-for-90-minutes-with-howard-stern/", kind: secondary}
   - {n: 7, title: "Jerry Before Seinfeld", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jerry_Before_Seinfeld", kind: reference}
   - {n: 8, title: "The Tim Ferriss Show #485: Jerry Seinfeld (transcript, 2020)", by: "Tim Ferriss, with Jerry Seinfeld", url: "https://tim.blog/2020/12/09/jerry-seinfeld-transcript/", kind: own-words}
+  - {n: 9, title: "Jerry Seinfeld on his place in American sitcom history (American Masters interview, 2008)", by: "Jerry Seinfeld, PBS American Masters", url: "https://www.pbs.org/wnet/americanmasters/jerry-seinfeld-on-his-place-in-american-sitcom-history/32818", kind: own-words}
+  - {n: 10, title: "Jerry Seinfeld on the science of laughter (interview with Jeffrey Brown)", by: "Jerry Seinfeld, PBS NewsHour", url: "https://www.pbs.org/newshour/show/jerry-seinfeld-on-the-science-of-laughter", kind: own-words}
+  - {n: 11, title: "Jerry Seinfeld Explains How He Writes Jokes (on his New York Times video, 2012)", by: "Writers Write", url: "https://www.writerswrite.com/jerry-senfeld-explains-writing-jokes-122220121", kind: secondary}
+  - {n: 12, title: "Jerry Seinfeld: how to write a joke", by: "Cup of Jo", url: "https://cupofjo.com/2013/01/jerry-seinfeld-how-to-write-a-joke/", kind: secondary}
+  - {n: 13, title: "Why Seinfeld isn't a fan of writing onstage (on his talk with Tom Papa)", by: "Funny How, Substack", url: "https://funnyhow.substack.com/p/why-seinfeld-isnt-a-fan-of-writing", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a 60-second clean stand-up bit about self-checkout machines at the supermarket."}
   - {kind: use, prompt: "Cut this 400-word welcome email for new gym members down to the lines that actually earn their place, and make the opening line funny."}

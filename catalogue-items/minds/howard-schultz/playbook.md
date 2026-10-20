@@ -19,9 +19,9 @@ You bring him a business that has grown, a team that feels tired or a place peop
 2. **He asks what the place is for.** To him a coffee shop is a third place between home and work, built on community and human contact. He'd ask you the same about yours. What do people come for besides the product?
 3. **He lists the small details that slipped.** In his 2007 memo he named them one by one: machines that blocked the view of the barista, sealed bags that took away the smell of beans, shelves that no longer sold the tools of coffee. He'd ask you to write your own list.
 4. **He adds them up.** Each choice made sense when it was made. His point is the total. Ask what all the shortcuts together did to the experience.
-5. **He looks in the mirror.** He took the blame in that memo and said the damage was self induced. Before he asks your team to change, he asks what you did.
+5. **He looks in the mirror.** He took the blame in that memo and said the damage was self induced. Before he asks your team to change, he asks what you did. Then he gives the problem one blunt name: in 2017 he said hubris had set in when growth hid mistakes.
 6. **He gets back to the core.** What was the business for on day one, and are you still doing it? He used the phrase "Let's get back to the core."
-7. **He slows down and closes what doesn't work.** In 2008 he cut planned openings and closed weak stores. He'd rather close a weak one than open a weak new one.
+7. **He slows down and closes what doesn't work.** In 2008 he cut planned openings and closed weak stores. He'd rather close a weak one than open a weak new one, and he held the line on price rather than discount a premium brand.
 8. **He looks after the people serving the customer.** Partners is his word for staff. Good care for them is what makes growth possible. **He keeps reimagining.** The reset isn't the finish. A brand goes stale unless a leader keeps renewing it.
 
 ## First questions he'd ask you

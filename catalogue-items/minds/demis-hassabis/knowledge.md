@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Demis Hassabis is alive, and his views can change. Everything below comes from his talks, interviews and posts from 2023 to 2025, and from public reference pages. Treat each view as "as of" the source it comes from. Nothing here tells you what he thinks about events after mid-2025.
+Demis Hassabis is alive, and his views can change. Everything below comes from his talks, interviews and posts from 2023 to 2025, including a February 2024 podcast transcript [S9] and a December 2024 Gemini post he co-wrote [S10], and from public reference pages. Interview transcripts are loose speech, so we use them for his reasoning and habits more than for exact claims. Treat each view as "as of" the source it comes from. Nothing here tells you what he thinks about events after mid-2025.
 
 In July 2025 he said the hardest part of science is picking the right question, and that a well-designed experiment that splits the possible answers leaves no true failure. He also prefers to test a disagreement with an experiment rather than argue from principle. [S4]
 
@@ -80,10 +80,45 @@ He picked the CASP contest, where answers are checked against structures not yet
 The team predicted the shapes of about 200 million known proteins and gave them away through EMBL-EBI. Before release they asked more than 30 experts in biosecurity and ethics for views. [S3]
 
 ### Merge two labs to move faster
-In April 2023 he told staff that DeepMind and Google Brain would become one unit. His stated reasons were pooled talent and computing power, quicker decisions and a focus on building more general AI safely and responsibly. [S6]
+In April 2023 he told staff that DeepMind and Google Brain would become one unit. His stated reasons were pooled talent and computing power, quicker decisions and a focus on building more general AI safely and responsibly [S6]. In 2024 he added that frontier systems need a great deal of world-class engineering, and pooling compute, ideas and engineers makes many things more efficient. He called Gemini the first fruit [S9].
 
 ### Build Gemini to handle many kinds of input from the start
-For Gemini he described a model built from the beginning to work across text, code, audio, images and video, in three sizes for data centres, everyday use and phones. Before release the largest model got outside red-teaming, human-feedback tuning and safety tests for bias, toxicity and misuse risks, with filters on top. [S5]
+For Gemini he described a model built from the beginning to work across text, code, audio, images and video, in three sizes for data centres, everyday use and phones. Before release the largest model got outside red-teaming, human-feedback tuning and safety tests for bias, toxicity and misuse risks, with filters on top [S5].
+
+### Put search on top of the language model (2024)
+He chose to add AlphaZero-style planning and tree search over large models rather than rely on scale alone, since models alone are probably not enough [S9]. His reasoning was that a better world model makes search cheaper, as human grandmasters show [S9].
+
+### Test for danger before release, and pause if needed (2024)
+He said DeepMind would keep internal safety councils, publish more formal frameworks, and run evaluations and red teaming, including by outside government institutes and academics [S9]. If a model showed deception or went beyond what it was told, he said he would investigate before continuing to train it [S9]. His stated reason was that public commitments make the process more transparent [S9].
+
+### Release agents in steps, with a human at the final step (December 2024)
+With Gemini 2.0 he and Koray Kavukcuoglu described giving early versions to developers and trusted testers first, using AI-assisted red teaming and outside expert input. For the browser agent Project Mariner, the user must confirm before sensitive actions such as purchases [S10]. Their stated aim was to keep humans in the loop and be responsible from the start [S10].
+
+## His own terms and habits
+
+### "Necessary but probably insufficient"
+
+In 2024 he said large language models are a necessary part of general AI but probably not enough on their own, and that he would add planning and search of the AlphaZero kind on top, where the model guides which branches to explore [S9]. His reason was that a better world model needs less search: strong human players look at a few hundred moves while brute-force engines look at millions [S9].
+
+### Half scaling, half invention
+
+He described splitting effort roughly between scaling what works and inventing new methods. New ideas are only worth much if they still work at scale, and the test is at a reasonable size, not a toy one [S9]. He cautioned that predictions often break when extended by several orders of magnitude, so you need points in between [S9].
+
+### Hold timelines loosely
+
+He said he had no prescribed numbers for when general AI would arrive, because there are many unknowns. DeepMind was set up in 2010 as a 20-year project, and he said it was on track [S9]. He called his views loose bets and said he would not be surprised by AGI-like systems within a decade [S9].
+
+### Bold and responsible
+
+His phrase for how to work is bold and responsible. He called himself a techno-optimist who wants caution, and said "move fast and break things" has suited the tech world but is wrong for this technology [S9].
+
+### Test it, don't A/B it live
+
+His rule for a powerful new system is to find dangerous capabilities early through evaluations, benchmarks and red teams, including outside government institutes and academics, and to fix problems before wide release [S9]. Fixes he named included changing the model's rules, adding guardrails or more human feedback, or removing training data [S9]. He is against live A/B testing of consequential systems [S9].
+
+### Openness, with some balance
+
+He called DeepMind a proponent of open science, citing AlphaFold and the transformer. He also said he had not heard a good answer to how bad actors are stopped from reusing open general-purpose systems, so he argued for some balance [S9].
 
 ## How he decides
 

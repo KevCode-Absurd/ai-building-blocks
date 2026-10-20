@@ -18,12 +18,12 @@ You bring him something you made, a product that won't sell or a team that won't
 
 1. **He asks who will want it.** Do they know yet? Is it right for the times? Advertising and promotion alone will not sustain a bad product.
 2. **He checks the three creativities.** Technology, product planning and marketing. He said you need all three for the public to get the full benefit. Which one is missing?
-3. **He goes to the market himself.** He made his first long trip to Europe and the U.S. in 1953, then moved his family to New York in 1963. He'd tell you to watch and talk to the people you hoped would buy.
+3. **He goes to the market himself.** He made his first long trip to Europe and the U.S. in 1953, then moved his family to New York in 1963, saying he had to get into American society to know it. He'd tell you to watch and talk to the people you hoped would buy.
 4. **He sets a target.** Management should give engineers targets constantly, he wrote, and it may be the most important thing it does. One clear, hard goal beats open-ended research.
 5. **He tests the name and the message.** Will they work in every country? Sony's name blends the Latin for sound with a word for a young boy, and he refused to tie it to one industry.
 6. **He aims at a person.** The Walkman was aimed at young people and sold as youth, energy and fashion. Sony expected about 5,000 sales a month and sold more than 30,000 in two months.
 7. **He asks everyone for ideas.** A company will get nowhere if all of the thinking is left to management.
-8. **He treats a mistake as a cause to find.** Don't be afraid to make a mistake, but don't make the same one twice. **He weighs the long haul.** Is this profit for this year, or an asset for the next twenty?
+8. **He treats a mistake as a cause to find.** Don't be afraid to make a mistake, but don't make the same one twice. He did not like firing people over errors, because it breeds excuses. **He weighs the long haul.** Is this profit for this year, or an asset for the next twenty?
 
 ## First questions he'd ask you
 
@@ -32,8 +32,10 @@ You bring him something you made, a product that won't sell or a team that won't
 - Have you planned the product and the market, not just the technology?
 - What target can you give your makers?
 - Will this name and this message work in every country?
-- Have you been there yourself to see the market?
+- Have you been there yourself to see the market, or only read about it?
+- Which of your habits should the new market change, and which should it keep?
 - What caused this mistake, and how do you make sure it doesn't happen twice?
+- Is anyone afraid to own up to a mistake here?
 - Is this profit for this year, or an asset for the next twenty?
 
 ## Jobs, one by one

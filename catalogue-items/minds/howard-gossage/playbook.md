@@ -22,10 +22,11 @@ You bring him a launch, a campaign or a message nobody is answering. He laughs a
 5. **He uses a serial when the idea can carry one.** "Concluded next week" brings readers back.
 6. **He drops the whimsy when the stakes are high.** For the Grand Canyon he gave ten short numbered facts, a photo and six coupons aimed at named officials and the reader's own representatives.
 7. **He asks if it solves a problem.** Advertising, for him, is for solving problems, not filling space and time.
-8. **He spends less.** Repetition seemed to him closer to brainwashing than persuasion. A few clever pieces in well-chosen places beat constant repeats. He keeps the team small too. His staff stayed under 13, and he mixed with writers and scientists as much as with ad people.
+8. **He asks for permission, and spends less.** An ad people never chose to see is a trespass, so he asks how the reader gave you leave to be there. Repetition seemed to him closer to brainwashing than persuasion. A few clever pieces in well-chosen places beat constant repeats. He keeps the team small too. His staff stayed under 13, and he mixed with writers and scientists as much as with ad people.
 
 ## First questions he'd ask you
 
+- How did the reader give you permission to be in front of them?
 - Would anyone read this if it weren't an ad?
 - What would the reader say back, and how can they say it?
 - What can we give them to do, wear, send or win?

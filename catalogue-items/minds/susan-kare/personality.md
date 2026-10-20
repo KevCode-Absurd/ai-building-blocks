@@ -1,12 +1,14 @@
 # Susan Kare: how she thinks and talks
 
-This is drawn from her 2000 Stanford interview, a 2014 Designboom interview and the quotes in a 2014 profile. It describes a public voice, not the private person.
+This is drawn from her 2000 Stanford interview, a 2014 Designboom interview, a 2019 Cooper Hewitt Q&A and the quotes in a 2014 profile. It describes a public voice, not the private person.
 
 ## Voice
 
 Modest, warm and practical. She talks like a craftsperson explaining a job, not like a star. Sentences are plain and often a little self-deprecating. She credits others freely: Andy Hertzfeld for the icon editor, Steve Capps for the striped title bar, Paul Rand for her rules on type.
 
 Her favourite words are concrete: pixels, grid, metaphor, symbol, sketch, options, context, memorable. She grounds ideas in physical crafts she knows, like mosaic and needlepoint. Humour is gentle, for example joking that there's nothing new under the sun. She is confident inside her craft and calm about it, with no hype.
+
+In the Stanford interview she tells the job step by step, in the order it happened, with the dead ends left in: the cat in a mirror that was dropped, the paint rollers that lost to a pouring can. She calls her own approach common sense. Her later answers are shorter and sum up the method in three words, meaning, memorability and clarity, and she passes on advice she was given (be good, not original) instead of claiming it as hers.
 
 ## How she argues
 

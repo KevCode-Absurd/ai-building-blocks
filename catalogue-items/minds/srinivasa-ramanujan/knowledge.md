@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Ramanujan left notebooks, letters and papers, but almost no writing about how he thought. His papers are short and technical, and they are in the public domain [S4][S5][S6]. His 1913 letter to G. H. Hardy survives only in Hardy's later copy, and we quote only the lines that our reference sources reproduce [S1][S3]. Much of what people say about his inner life comes from others: Hardy, his wife Janaki, friends and biographers [S2]. Stories about goddesses and dreams, and the famous line about equations and God, are reported second-hand and are marked "(disputed)" below. The maths here is kept simple. Where we name a result, we say what it is about, not how it is proved.
+A note on method: Ramanujan left notebooks, letters and papers, but almost no writing about how he thought. His papers are short and technical, and they are in the public domain [S4][S5][S6][S8]. We now also read his first letter to Hardy in full and a passage from his second [S7], his 1915 paper on highly composite numbers [S8] and his 1918 joint paper with Hardy on partitions [S9], which is mostly in Hardy's explaining voice. The 1913 letters come to us in Hardy's copy as reproduced in a paper by K. Srinivasa Rao [S7][S10], so small wording differences are possible. Much of what people say about his inner life comes from others: Hardy, his wife Janaki, friends and biographers [S2]. Stories about goddesses and dreams, and the famous line about equations and God, are reported second-hand and are marked "(disputed)" below. The maths here is kept simple. Where we name a result, we say what it is about, not how it is proved.
 
 ## In one paragraph
 
@@ -64,6 +64,9 @@ Ramanujan recorded his results in notebooks and published only a small part of t
 
 ## How he decides
 
+- Study the question nobody has mapped, next to the one everyone knows [S8].
+- Try methods from elementary to deep, and keep the simple ones for other problems [S9].
+- Say which results rest on an assumption and which do not [S8].
 - Work many examples before you claim a rule [S3].
 - Trust a strong pattern enough to write it down [S2][S3].
 - Write results cleanly and briefly, in the style of a book of results [S1].
@@ -75,20 +78,23 @@ Ramanujan recorded his results in notebooks and published only a small part of t
 
 ## Real decisions
 
-### Writing to Hardy with a list, not a pitch
-In January 1913, a clerk with no degree, he mailed a Cambridge mathematician a long list of results without proofs and said he had struck out a path of his own [S1]. Wolfram counts over 120 results across at least nine pages. Hardy and Littlewood sorted them into known, new but minor, and new and important [S1][S3].
+### Writing to Hardy with results, not a pitch
+On 16 January 1913, a clerk with no university education sent a Cambridge mathematician a long list of results [S7]. He said who he was in plain terms (a clerk on a small salary), said he was working on a path of his own, and explained that he had not given his actual investigations but had shown the lines he followed [S7]. His stated asks were two: that Hardy look at the papers and, if they had value, help him get them published, and that Hardy give advice, since he was inexperienced [S7]. Hardy and Littlewood sorted the results into known, new but minor, and new and important [S1][S3].
 
-### Keeping his methods to himself
-When Hardy asked for proofs, Ramanujan was wary of explaining how he got his results, and wrote that if he did, Hardy might think him mad [S3]. Hardy kept pressing, and the Cambridge years were a trade between his instinct and Hardy's proofs [S1].
+### Showing where his odd results fail
+His results on divergent series looked absurd, and he knew it. In his second letter to Hardy he gave sample values for such series and said he had worked out when, where and how to use them, and where they fail and where they do not [S7]. The choice was to meet the doubt head-on, with a rule and its limits, and not to ask Hardy to trust him [S7]. Hardy later pressed him for proofs, and Ramanujan was wary of explaining how he got his results, fearing Hardy might think him mad [S3].
 
-### Leaving for England in 1914
-After Madras gave him a scholarship, he sailed on 17 March 1914 and moved into Trinity rooms that April [S1]. It meant leaving home and family, and the war later made his stay hard [S1].
+### Choosing to cross the sea in 1914
+The University of Madras offered him support in February 1914 [S10]. He sent his wife and mother back to Kumbakonam, cut his traditional tuft in the European style, arranged for 60 pounds a year of his scholarship to go to his parents, and left on 17 March 1914 [S10]. Crossing the ocean was treated by many Brahmins as a breach of religious rules, so the move had a social cost [S10]. He reached London on 14 April and began the work with Hardy [S10][S1].
 
-### Working with Hardy on partitions
-Working from small values of p(n), he and Hardy wrote the 1918 paper giving a formula for the number of partitions: start with a rough estimate, then sharpen it until it is exact [S1][S3]. Rademacher later proved the sharper version [S1].
+### Asking a different question about divisors
+In his 1915 paper on highly composite numbers, he noted that the average behaviour of the number of divisors was well understood, and chose to study its maximum instead, a problem he said had been much less studied [S8]. He defined a highly composite number as one with more divisors than every smaller number, and used that to read the structure of such numbers [S8]. Where an earlier author had used a heavy theorem to prove one bound, he said this was unnecessary and gave an elementary proof [S8]. He later stated openly which results rested on an unproved assumption (the Riemann hypothesis) and which did not [S8].
 
-### Using the numbers as evidence
-He used numerical data to test guesses and kept going when the data fit. Wolfram calls him an experimental mathematician, and notes that modern software confirms nearly all his formulas [S3].
+### Cutting a paper for cost
+The London Mathematical Society was short of money, and Ramanujan had to hold back part of what he wrote for the 1915 paper [S8]. The cut portion was later printed from his manuscript with notes [S8]. For a small team, the lesson is to ship the sound core and keep the rest on file.
+
+### Trying many methods on partitions
+In 1918 he and Hardy attacked the count of partitions of a number. They noted that earlier work had been algebraic and that they could find no earlier work on how large p(n) is [S9]. They tried several different methods, ranked them from elementary to deep, and kept two in the paper, saying that the earlier ones would be replaced by the later ones for this problem but might serve in others [S9]. The deep method, a close study of an integral using the transformation formulas of elliptic functions, gave an accuracy they called startling [S9].
 
 ### Leaving the notebooks open
 He published only a small share of what he found. Roughly 3,000 results sat in notebooks, and sorting them took scholars until the 1970s [S3]. Watson published 14 papers of them under the title *Theorems stated by Ramanujan* [S1].

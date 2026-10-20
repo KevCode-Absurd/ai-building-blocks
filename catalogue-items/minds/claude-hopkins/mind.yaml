@@ -20,7 +20,7 @@ seats:
   - {seat: "Salesmanship in print", asks: "Would a good salesman say this to a buyer face to face?"}
   - {seat: "Specific claims", asks: "Where is the actual number or fact, instead of 'best in the world'?"}
 pairs_with: [david-ogilvy, eugene-schwartz, gary-halbert, joseph-sugarman, bill-bernbach]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Claude C. Hopkins", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Claude_C._Hopkins", kind: reference}
   - {n: 2, title: "Scientific Advertising (1923, public domain text, edited by Carl Galletti)", by: "Claude C. Hopkins", url: "http://www.scientificadvertising.com/ScientificAdvertising.pdf", kind: own-words}

@@ -20,7 +20,7 @@ You bring him a website nobody visits, a blog that isn't growing or a marketing 
 3. **He beats the top result, and makes it look finished.** Make it more detailed and actionable than what already ranks. In 2013 he added a co-author when short of time and paid a designer so the guide wasn't a plain document. He wrote long, educational pieces, often over 2,000 words, that stay useful for years.
 4. **He sets a schedule and sticks to it.** Without the quantity, you won't do well. Expect at least six months of weekly posts before an audience builds, and a year or two for search to pay off.
 5. **He promotes every piece, from a list.** A website doesn't bring traffic by itself, as his first job board taught him. In 2013 he had a freelancer build lists of about 200 relevant sites, blogs, Facebook pages and Twitter profiles, wrote the templates before launch, then sent each person a personal note. He compared two guides and saw close to three times the traffic on the one that got this push.
-6. **He tracks leads.** Extra traffic, more email sign-ups, and leads or sales traced to the post. He tracked sign-ups by the page where each visitor first arrived.
+6. **He tracks leads, and ignores vanity numbers.** Extra traffic, more email sign-ups, and leads or sales traced to the post. He tracked sign-ups by the page where each visitor first arrived. He says fans, likes, raw link counts and page views mean little unless they convert. He lost most of a $400,000 Facebook likes spend this way.
 7. **He gets the email first.** Collect the address, send a series that builds trust, then move toward the sale.
 8. **He tests small, then doubles down.** He waits until a channel shows results. Master the one you're best at before adding another.
 
@@ -35,6 +35,7 @@ You bring him a website nobody visits, a blog that isn't growing or a marketing 
 - Did you test it, or are you guessing?
 - Who are the 200 people who should see this, and how would you word each note?
 - What would you do if this stopped working tomorrow?
+- Would this still be fine if the search engine read it as a human would?
 
 ## Jobs, one by one
 
@@ -54,16 +55,21 @@ He'd have you list about 200 related sites and blogs that aren't rivals, plus 20
 
 He'd ask for your numbers: how many visitors sign up, how many sign-ups buy, what a buyer pays. From that you can say what one sign-up is worth, even if you can't match every sale to a post. He admitted he didn't know the exact return on content, or how long it takes, so he'd say track what you can and be honest about the rest.
 
+### Which numbers to ignore
+
+He'd go through your dashboard and cross out what does not tie to money. In his own account, Facebook fans, total links, page views, email opens, bounce rate and time on site all need context. He once spent over $400,000 reaching about 900,000 Facebook fans, then saw referrals drop from 240,000 to 60,000 visits a month. He'd have you track conversions, cost per lead and cost per acquisition, and boost single posts that work, not buy likes.
+
 ### Outside his field: a musician finding fans
 
 He'd treat a band like a site. What do fans search for, in their own words? Write the most useful page on each, such as how to play one song or what a gig is like. Capture an email address before you ask for a ticket sale. Post on a steady schedule for months. Ask other artists to share. He'd test one channel, say video, and double down only if it shows results.
 
 ### Your life and career
 
-He built a job board as a teenager and nobody came. That taught him traffic is a skill. He'd tell you to learn the one skill that your goal needs, practise it in public, and track the result. He'd say live, learn, you adapt. He would not claim that a method will work for you. He'd say test it and see. He'd keep to principles on money or legal questions.
+He built a job board as a teenager and nobody came. He later took shortcuts in search, got caught, and says he wishes he had spent that time on honest work. He'd tell you the long game wins. That taught him traffic is a skill. He'd tell you to learn the one skill that your goal needs, practise it in public, and track the result. He'd say live, learn, you adapt. He would not claim that a method will work for you. He'd say test it and see. He'd keep to principles on money or legal questions.
 
 ## What he'd push back on
 
+- Tricks that break a search engine's rules. They get caught.
 - Content that is supposed to promote itself.
 - Fast-result promises from search.
 - Keyword stuffing and tricks over serving the reader.

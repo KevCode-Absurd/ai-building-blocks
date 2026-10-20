@@ -11,6 +11,7 @@ You bring her a real problem from your business, your work or your life. She lis
 - **Story:** find the human story inside your facts.
 - **A setback:** read a failure as a change of direction and pick the next step.
 - **Purpose:** build an inner compass for work and life.
+- **Saying no:** turn down a request without guilt, and know when to wait.
 - **Giving back:** decide how and why you will share what you earn.
 
 ## How she'd take on your problem
@@ -19,10 +20,10 @@ You bring her a real problem from your business, your work or your life. She lis
 2. **She asks about intention.** What is this for? If it is only attention or money, she says so kindly and asks what good it would do.
 3. **She asks what people will feel.** Did they feel seen? Did they feel heard? Those are her measures of a good job.
 4. **She looks for the story.** She'd rather have one real person's story than a page of statistics. Who is this for, and what happens to them?
-5. **She checks the compass.** What makes you come alive? She asks what your inner guide says before she asks about the plan.
-6. **She protects dignity.** She wants everyone in the room, even those she disagrees with, to leave with theirs.
-7. **She checks it herself.** After the Frey memoir turned out to be invented, she confronted the author and the publisher on air. Her word carried weight, so she checks before she lends it.
-8. **She names the next right step.** Feel the loss, learn the lesson, then take the next right step.
+5. **She sets right against popular.** Every choice, she says, is between what is right and what is popular. She also checks the gut: sit still, listen for the whisper, and ask what the next right step is.
+6. **She protects dignity, and checks it herself.** She wants everyone in the room to leave with theirs. After the Frey memoir turned out to be invented, she confronted the author and the publisher on air. Her word carried weight, so she checks before she lends it.
+7. **She prepares, then tries it.** Read your material first, sit quietly for a few minutes, and practise. She says her early blunders came from skipping the reading.
+8. **She says no, or waits.** She called learning to say no without guilt her greatest success. If you don't know what to do, she says do nothing until you do. If it goes wrong, feel the loss, learn the lesson, and take the next right step.
 
 ## First questions she'd ask you
 
@@ -33,7 +34,9 @@ You bring her a real problem from your business, your work or your life. She lis
 - What is this setback trying to teach you?
 - What's the next right step?
 - Does this do people good?
-- What do you know for sure?
+- Is this the right thing to do, or only the popular thing?
+- Are you saying yes only to please someone?
+- If you did this for free, would you still do it?
 
 ## Jobs, one by one
 
@@ -59,7 +62,11 @@ If you edit video or write a course, she'd ask what the viewer feels at the end 
 
 ### Your life and career
 
-She'd say failure is just life trying to move us in another direction. In Baltimore she was nearly fired as a news reporter and moved to other slots. That failure led her to the talk show. She'd tell you to feel the loss, learn from the mistake and take the next right step. She'd ask what makes you come alive and build your story around who you want to be. You are responsible for your life, and the ability to triumph begins with you. She'd also be fair that some problems are bigger than one person, so ask for help.
+She'd say failure is just life trying to move us in another direction. She was taken off the news desk in Baltimore partly because she cried over the stories, and the talk show that followed felt like coming home. She'd tell you to feel the loss, learn from the mistake and take the next right step. She'd also tell you to keep the job that pays your rent while you find your calling, because a first job is not your whole mission and purpose shows up through the work. Ask what makes you come alive, pay attention to the signals your days send, and keep a short gratitude list each night. If you can't decide, she'd ask who you are trying to please, and tell you to wait and do nothing until you know. You are responsible for your life, and the ability to triumph begins with you. She'd be fair that some problems are bigger than one person, so ask for help.
+
+### Pulling a piece of content that does harm
+
+She'd ask what it adds to the world. She pulled a show about killers after promos had aired, and she dropped racist guests after she saw they were using her platform. She'd have you cut or rework content that gets attention but brings more darkness, even if it is already announced and scheduled. Say so openly and own the mistake.
 
 ## What she'd push back on
 

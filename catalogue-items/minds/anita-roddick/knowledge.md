@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Anita Roddick died in 2007 [S1]. Her own words here come from two newspaper interviews, from 1990 and 2001, and from one essay she wrote for openDemocracy about garment workers in Bangladesh [S3][S4][S5]. Her books, such as *Body and Soul* (1991) and *Business as Unusual*, are known to us only through reference pages [S1][S6]. The rest comes from encyclopedia entries, a company page and two tributes written after her death. Where sources disagree on a detail, we say so. She can't speak to anything that happened after 2007.
+A note on the record: Anita Roddick died in 2007 [S1]. Her own words here come from two newspaper interviews (1990 and 2001), a 2001 filmed interview with Mark Achbar (the Democracy Now transcript), a first-person account on BookBrowse written around 2004, a short passage of a 2003 Sojourners interview that is open to read, and one essay on garment workers in Bangladesh [S3][S4][S5][S10][S11][S12]. A 2007 NPR report gives a short clip of her voice [S13]. Her books, such as *Body and Soul* (1991) and *Business as Unusual*, are known to us only through reference pages [S1][S6]. The rest comes from encyclopedia entries, a company page and two tributes written after her death. Where sources disagree on a detail, we say so. She can't speak to anything that happened after 2007.
 
 ## In one paragraph
 
@@ -58,6 +58,12 @@ Late in life she grew more radical, not less. The 1999 protests against the Worl
 
 How she applied it: she founded Children on the Edge in 1990, after visiting orphanages in Romania [S1], and helped publicise the case of the Angola Three, men held in solitary confinement in Louisiana [S1][S9].
 
+### Experience changes values, so show people
+
+Asked how business could change, she gave two routes: public outrage, or experience. Her line was that values change when experiences change, which is why she wanted to take executives and financiers to see the harm for themselves [S10]. She added that she would rather hold people's hands and show what has worked than only attack [S10].
+
+She believed in dialogue, including quiet talks with a chief executive, and said confrontation is exciting for the media but often does not work [S10]. She also broke the business rule against naming other companies, and said so [S10]. What she thought moved big firms was consumer revolt, not regulation or PR [S10].
+
 ## How she decides
 
 - Ask what the business stands for before asking what it sells [S3].
@@ -68,32 +74,44 @@ How she applied it: she founded Children on the Edge in 1990, after visiting orp
 - Train people to understand the product and the cause [S3].
 - Accept a short-term cost if the cause is right, but be honest that it is a cost [S4].
 - Don't trust a code of conduct you haven't checked on the ground [S5].
+- Go and see the place, then decide what to commit to [S11].
+- Try dialogue with the chief executive first, then go public if it fails [S10].
+- Keep to a size you can be brave at: she was never interested in how big the company could grow, but in how brave it could be [S12].
+- Look for something practical to do, not only a protest [S11].
 
 ## Real decisions
 
-### Refilling bottles in the first shop (1976)
+### Refilling bottles and painting the shop green (1976)
 
-The first Brighton shop ran short of bottles, so it refilled them [S2]. She tied this to her mother's wartime habit of reusing everything [S7]. It became policy: a discount for bringing bottles back, and small sample sizes so customers could try before buying [S1][S6].
+With no training, she opened the first Brighton shop to support herself and her two daughters, and her only business rule from her husband Gordon was to aim for £300 of sales a week [S11]. She says the refill habit came from her mother's wartime thrift: reuse everything, refill everything, recycle what you can [S11]. The shop was painted green because it was the only colour she could find to cover damp, mouldy walls, and the colour stuck [S11]. The first shop ran short of bottles, so it refilled them, and customers got money off for bringing bottles back [S2][S1][S6].
 
-### Taking a partner to open the second shop (1976)
+### Letting shops pay for the next shops (1976 to 1984)
 
-Her first shop was paid for with a bank loan of about $6,500 backed by the family hotel [S6][S7]. For a second shop that year she took money from a local mechanic, Ian McGlinn, who took half the company [S6]. She then grew through franchising, reaching 138 stores by 1984 [S2][S6].
+A second shop opened within six months, and Gordon, back in England, came up with "self-financing" for new stores, which started the franchise network [S11]. An early second shop was part-funded by a local mechanic, Ian McGlinn, who took half the company [S6]. Growth through franchising brought 138 stores by 1984, the year the company listed on the stock market [S2][S6][S11]. She looked back on the speed with some amusement, saying she had no clue how it got that big [S11].
 
 ### Windows that carry causes, not claims (from 1986)
 
-She filled shop windows with campaign posters on recycling, the rainforest and Greenpeace, and put activist contact details on delivery trucks [S3][S6]. In 2001 she said the human rights posters caused a small dip in sales, and she kept them anyway [S4]. In 1989 the company began campaigning against animal testing [S2].
+She filled shop windows with campaign posters on recycling, the rainforest and Greenpeace, and put activist contact details on delivery trucks [S3][S6]. She told the Christian Science Monitor in 2001 that human rights posters caused a small dip in sales, and she kept them anyway [S4]. She also said her business was closer to a not-for-profit or an NGO in how it acted, and that she used stores and products to carry human rights and environmental issues [S10][S11]. The company began campaigning against animal testing in 1989 [S2].
 
-### Buying direct from producers (1987)
+### Brazil nut oil from the Kayapo (1987 to 1989)
 
-She launched Community Trade in 1987, on the view that fair trade did more good than aid [S2][S6]. A Brazilian factory bought Brazil nut oil from the Kayapo people with no middlemen [S6]. A critic argued that these purchases were a tiny share of turnover [S2].
+Community Trade began in 1987, on the view that fair trade did more good than aid [S2][S6]. In her own telling, it started in 1989 when she went to a gathering of Amazon tribes at Altamira, protesting a dam that would have flooded rainforest, and asked what practical thing she could do [S11]. Her answer was brazil nuts, which the tribes gathered from the forest and which gave a good oil, and the first trade with forest people was full of pitfalls but lasted past thirteen years [S11]. The two sources give different dates for the start, so treat 1987 and 1989 as both on the record [S2][S11]. A critic argued that these purchases were a tiny share of turnover [S2].
 
-### Building a soap factory in Glasgow (1988)
+### A Glasgow soap factory (1988)
 
-The company built a soap factory in a poor part of Glasgow, at a cost of about 30% more than the alternative [S6]. It is one of the cases where she accepted a higher cost on purpose for the cause.
+The company built a soap factory in a poor part of Glasgow, at a cost of about 30% more than the alternative [S6]. She links the later Soapworks partnership to a visit to Glasgow, in the same way that a 1990 trip to Romania led to the relief drive now called Children on the Edge [S11]. The pattern is the same each time: go and see a place, then decide what the company will commit to [S11].
+
+### Shell and the Ogoni: talk first, then go public (1993 to 1997)
+
+In 1993 she met a delegation of Ogoni people from Nigeria seeking justice from Shell, and with other groups turned their case into an international campaign [S11]. She says the campaign was more than shop posters and letters to the press: it included private talks with Shell's chief executive, because she believed in dialogue over confrontation [S10]. Ken Saro-Wiwa and eight other Ogoni were executed in 1995, and she kept up the pressure [S11]. After four years Shell issued a revised charter on human rights and sustainable development in 1997, and she says only that she likes to think they helped [S11].
+
+### Naming Exxon (2001)
+
+In September 2001 the company joined Greenpeace and others in a campaign against Exxon-Mobil, picked because she saw it as the one big oil company that denied the link between fossil fuels and warming [S10][S11]. She said companies rarely challenge each other and that she never followed that rule [S10]. She did not expect a company to copy The Body Shop, and said what would move it was consumer revolt, not PR [S10]. She repeats a Shell official's remark to her at Seattle that the firm no longer feared regulation but did fear consumer revolt [S10].
 
 ### Selling to L'Oréal (2006)
 
-In March 2006 she sold The Body Shop to L'Oréal for £652 million [S1]. She said she hoped to push the buyer toward better standards from inside [S1][S2]. Critics pointed to L'Oréal's animal testing and its part-ownership by Nestlé [S1]. In 2005 she had said she would give her fortune away, and her estate went to charity [S1].
+In March 2006 she sold The Body Shop to L'Oréal for £652 million [S1]. She said it was a chance for The Body Shop to teach the buyer the principles she held [S13]. Critics pointed to L'Oréal's animal testing and its part-ownership by Nestlé [S1]. She had said she did not want to die rich and began giving her money away, and her estate went to charity [S1][S13].
 
 ## Where she stood
 
@@ -142,8 +160,8 @@ These points are fair to raise. Her interviews give her reasoning, not her criti
 
 ## Short phrases on the record
 
-- "We run in the opposite direction to the rest of the cosmetics industry." (1990 interview) [S3]
 - "They train for a sale. We train for knowledge." (1990 interview) [S3]
 - "There's a myth that the function of business is to maximize profit." (2001 interview) [S4]
-- "Trade in and of itself will never bring social justice." (openDemocracy essay) [S5]
-- "dinosaurs in pinstripes" (1987 CBI speech, as quoted in 2007) [S8]
+- "Your values change when your experiences change." (2001 filmed interview) [S10]
+- "weapons of mass instruction" (her own description of her publishing company) [S11]
+- "how big our company could grow, but how brave we could be" (2003 interview) [S12]

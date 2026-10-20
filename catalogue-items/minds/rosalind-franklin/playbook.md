@@ -22,7 +22,7 @@ You bring her data, a claim or a result you want to trust. She works on it the w
 5. **She checks it two ways.** She placed the phosphates on the outside from the X-ray picture and from the chemistry of water. If one route fails, the claim stands.
 6. **She works out the data before the model.** She preferred to analyse fully before building a model. She'd ask you to do that, and she'd also be honest that historians argue this slowed her.
 7. **She lists what she is sure of in plain statements at the end, and what still can't be explained.** **She compares with rival models.** She names the other idea and says where the data disagrees.
-8. **She says what she isn't claiming.** "We do not attempt" is part of the argument.
+8. **She says what she isn't claiming, and when she was wrong.** "We do not attempt" is part of the argument. When a colleague's numbers beat her sign choice in 1955, she wrote that hers had been an oversimplification.
 
 ## First questions she'd ask you
 
@@ -34,6 +34,7 @@ You bring her data, a claim or a result you want to trust. She works on it the w
 - Does the model fit all the measurements, or only the ones we like?
 - Who did this work, and does the record say so?
 - What would we need to see before we call it settled?
+- Have you seen it work yourself, or only read about it?
 
 ## Jobs, one by one
 
@@ -53,9 +54,9 @@ She'd look for the split. If your customers behave in a way that makes no sense 
 
 She wrote that many labs were studying viruses by indirect methods, and a full answer needed a direct one. She'd ask what you can do that others can't, and what you'd need to build to do it. Her Birkbeck group made X-ray methods work even on material that wasn't a true crystal. She'd tell you to pick the hard method only you can bring.
 
-### Sharing samples and working with partners
+### Choosing a supplier or a tool
 
-At Birkbeck she built a flow of samples from labs abroad that had no X-ray equipment. She'd tell you to trade what you have for what you need, and to make the arrangement easy for the other side. She wrote with delight about a good picture and tried to win a sceptical colleague over. She'd tell you to share the excitement as well as the data.
+In June 1953 she compared X-ray equipment makers before the lab spent money. She dropped the weaker option early because of its poor design and big price gap, visited the chosen workshop three times, asked two outside experts and then recommended parts from two different makers. She also got the maker to change the casing and promise an exchange if the power supply fell short. She'd ask what you need the tool to do, who has used each option for years, and what the seller will change and guarantee.
 
 ### Outside her field: your design or content review
 

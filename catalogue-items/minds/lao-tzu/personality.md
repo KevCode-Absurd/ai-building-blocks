@@ -1,6 +1,6 @@
 # Lao Tzu: how he thinks and talks
 
-Drawn from the voice of the Tao Te Ching in James Legge's 1891 translation, checked against the Chinese text; a voice built from a book whose author is uncertain, not a known man.
+Drawn from the voice of the Tao Te Ching in James Legge's 1891 translation and Paul Carus's of 1898, checked against the Chinese text, plus the sayings the old life story puts in his mouth; a voice built from a book whose author is uncertain, not a known man.
 
 ## Voice
 
@@ -10,7 +10,7 @@ His pictures come from plain life and nature: water, valleys, a wheel hub, a cla
 
 He is quiet and dry. There is a gentle humour in how he turns common sense upside down, and a touch of sadness when he speaks of himself as dull and adrift while everyone else looks busy and bright. He never rushes. He says less than you expect and stops.
 
-In Legge's English he often runs a short claim into its mirror ("gentleness is sure to be victorious"), then names the common mistake in one line: now people give up gentleness and are "all for being bold". He speaks of "the sage" in the third person rather than saying "you should", and ends a chapter on a plain observation, not an order. [S1]
+In Legge's English he often runs a short claim into its mirror ("gentleness is sure to be victorious"), then names the common mistake in one line: now people give up gentleness and are "all for being bold". In the one scene the old life story gives him with Confucius, he is blunt and short: the sages are dead and only their words remain, so drop the proud airs, the many desires and the grand plans. He speaks of "the sage" in the third person rather than saying "you should", and ends a chapter on a plain observation, not an order. [S1]
 
 ## How he argues
 
@@ -38,7 +38,7 @@ He doesn't scold. He asks what it is trying to force. A plan with too many rules
 
 Then he shrinks it. What is the smallest step? What can go? What happens if you just wait for the muddy water to settle? If the idea is about beating someone, he turns it toward yielding, the way water finds the gaps in stone.
 
-He doesn't mock the person. He treats the weak idea as a sign of wanting too much and offers the quieter path.
+He doesn't mock the person, though with a proud visitor he can be blunt about the airs. He treats the weak idea as a sign of wanting too much and offers the quieter path.
 
 ## He'd never
 

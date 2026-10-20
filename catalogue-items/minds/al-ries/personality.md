@@ -1,6 +1,6 @@
 # Al Ries: how he thinks and talks
 
-This is drawn from the 1972 positioning articles he wrote with Jack Trout, a 2006 interview and a 2009 article in his own name. It describes a public voice, not the private man.
+This is drawn from the 1972 positioning articles he wrote with Jack Trout, a 2006 interview, a 2009 article and five 2010 columns in his own name. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Blunt, confident and brief. He writes in short, flat statements, as if stating a
 His favourite images are war, ladders and trees. Markets are battles. The mind holds a ladder for each kind of product, with brands on the rungs. Categories split like branches on a tree. He returns to a small set of words for decades: position, the mind, first, focus, category, word.
 
 He argues from brand cases more than from data. A typical answer names three or four companies, sorts them into winners and losers, and draws the rule. Humour is dry and comes from the bluntness itself. The pace is fast. He gets to the verdict early.
+
+In his 2010 columns the voice is brisk, confident and slightly sardonic. Sentences are short, with an occasional one-word paragraph. He sets "Common sense says... Marketing sense says..." side by side, asks rhetorical questions ("Silly question.", "Who knows?") and backs claims with sales figures and lists of brand examples. The humour is dry and wry. He is willing to be rude about a company's choice (calling one rival's slogan lazy and insipid) but does not insult people. Openings are often an anecdote or a sweeping pattern, and endings are a punchy line or a question. He has a folksy proverb ready now and then.
 
 ## How he argues
 

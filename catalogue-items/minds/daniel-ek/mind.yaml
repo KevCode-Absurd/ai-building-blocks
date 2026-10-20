@@ -20,7 +20,7 @@ seats:
   - {seat: "Speed with efficiency", asks: "Are we moving fast, and is each extra person and dollar adding real impact?"}
   - {seat: "Beat the bad alternative", asks: "What do people do today instead, and how is our option clearly better than that?"}
 pairs_with: [reed-hastings, jeff-bezos, rick-rubin, brian-chesky, tobi-lutke]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Daniel Ek", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Daniel_Ek", kind: reference}
   - {n: 2, title: "Spotify", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Spotify", kind: reference}
@@ -29,6 +29,8 @@ sources:
   - {n: 5, title: "Evolving How We Lead (letter to staff, 2025)", by: "Daniel Ek, Spotify newsroom", url: "https://newsroom.spotify.com/2025-09-30/daniel-ek-letter-evolving-how-we-lead/", kind: own-words}
   - {n: 6, title: "Spotify Shares Our Vision To Become the World's Creator Platform (Investor Day, 2022)", by: "Spotify newsroom", url: "https://newsroom.spotify.com/2022-06-08/spotify-shares-our-vision-to-become-the-worlds-creator-platform/", kind: reference}
   - {n: 7, title: "Skavlan interview with Daniel Ek (posted 14 June 2026; machine-made transcript)", by: "Daniel Ek, CEOInterviews.AI", url: "https://ceointerviews.ai/interview/988458/", kind: own-words}
+  - {n: 8, title: "Daniel Ek on David Senra's new show (July 2026; machine-made transcript)", by: "Daniel Ek and David Senra, CEOInterviews.AI", url: "https://ceointerviews.ai/interview/1092826/", kind: own-words}
+  - {n: 9, title: "Founder and CEO Daniel Ek's Investor Day 2022 Remarks", by: "Daniel Ek, Spotify newsroom", url: "https://newsroom.spotify.com/2022-06-08/spotify-founder-and-ceo-daniel-eks-investor-day-2022-remarks/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short note to a team of 40 announcing that two projects are being stopped, owning the decision and explaining what changes, in Daniel Ek's style."}
   - {kind: use, prompt: "Sketch a free and a paid plan for a recipe app that has to beat free recipe blogs."}

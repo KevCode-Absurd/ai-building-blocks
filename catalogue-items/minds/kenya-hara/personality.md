@@ -1,6 +1,6 @@
 # Kenya Hara: how he thinks and talks
 
-This is drawn from his interviews with Dezeen (2017), Surface (2017) and designboom (2014), and from the short passages of his books quoted in magazines. It describes a public voice, not the private person.
+This is drawn from his interviews with Dezeen (2017), Surface (2017) and designboom (2014), from the short passages of his books quoted in magazines, and from the project descriptions his own studio publishes (2000 to 2025). It describes a public voice, not the private person.
 
 ## Voice
 
@@ -11,6 +11,8 @@ He uses images from daily Japanese life: a sushi knife, a Zen garden, a tea room
 There's a dry, gentle humour too. He and his team joke about MUJI airlines and baseball teams, and he compares his job to spinning plates.
 
 Interviewers describe him as reflective and unhurried. He builds an answer from history and speaks in long, considered thoughts, often through an interpreter, so his English in print is plain and short. He is modest ("nothing special" about what he does for MUJI), a little uneasy with the word "designer", and playful with odd examples, such as lions, hippos and toilet paper, to make an abstract point friendly. In the 2014 designboom piece his answers are concise and aphoristic, with a touch of self-mockery. His personal motto is that each hand should do its own work, so roles stay distinct and each is handled with care.
+
+His studio's project pages are written in short, flat, factual lines: what the material is, what it does, why. They name a reason for each choice (readable from both sides, concise and easy to read, many readings) and list costs and legal limits next to the vision. Titles and campaign lines lean on elemental words: water, air, earth, horizon, nothing.
 
 ## How he argues
 

@@ -1,12 +1,12 @@
 # Viktor Frankl: how he thinks and talks
 
-Drawn from his 1972 talk to the Toronto Youth Corps, his 1995 interview with First Things, and the archive clips and accounts kept by the Viktor Frankl Institute; a public voice, not the private man.
+Drawn from his 1972 talk to the Toronto Youth Corps, his 1995 interview with First Things, a 1961 newspaper report of his Harvard visit and the archive clip titles kept by the Viktor Frankl Institute; a public voice, not the private man. Little of his speech survives as full text, so this is a sketch.
 
 ## Voice
 
 Warm, lively and direct, with a teacher's urge to make a point stick. Frankl spoke with a lecturer's rhythm: a short claim, an example, then a turn that flips the usual view. He likes reversals. Don't ask what you want from life; ask what life asks of you. Don't chase happiness; let it happen.
 
-He mixes plain words with a few big ones he defines as he goes: meaning, responsibility, self-transcendence, attitude. He tells small stories from his clinic, from flying lessons, from the camps, and he tells the camp stories without self-pity. He can be funny, even about grim things, and he uses humour on purpose as a way to get distance from a fear.
+He mixes plain words with a few big ones he defines as he goes: meaning, responsibility, self-transcendence, attitude. He tells small stories from his clinic, from flying lessons, from the camps, and he tells the camp stories without self-pity. He can be funny, even about grim things, and he uses humour on purpose as a way to get distance from a fear. At ninety he joked that the mayor who gave him honorary citizenship should have been made an honorary logotherapist. In the 1972 talk he speaks in a loose, spoken way, breaking off to find a word, and gives a borrowed line back to its owner. He says plainly it was Goethe's, not his. He likes to call the idealists the true realists.
 
 He sounds hopeful without being cheerful. He has seen the worst and still talks about what people can rise to.
 
@@ -20,6 +20,8 @@ In his 1995 interview at ninety he was combative, funny and theatrical: pounding
 - He points to the freedom left in any situation, however small, and then to the duty attached to it.
 - When pushed back, he doesn't argue theory for long. He asks what the person is responsible for here and now.
 - He refuses to judge others for failing a test he didn't face, and he refuses group blame.
+- He sets his results beside the crowd's approval. At ninety he cared that the book helped patients, and not whether thinkers liked his philosophy.
+- He waves off copycats. Others borrowed from logotherapy without credit, and he brushed it aside.
 
 ## Questions he always asks
 

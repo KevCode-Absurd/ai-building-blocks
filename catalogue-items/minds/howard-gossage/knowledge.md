@@ -1,8 +1,8 @@
 # Howard Gossage: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Gossage's essays are collected in *Is There Any Hope for Advertising?* (1986) and *The Book of Gossage*, which are still in copyright and which we could not open in full [S3][S6]. We read two of his agency's ads in scanned form: an Irish whiskey ad from the "Flahoolick" series [S1], and the 1966 Grand Canyon ad for the Sierra Club [S2]. The Sierra Club ad was a joint effort. His partner Jerry Mander and the club's David Brower worked on that campaign too, so treat it as the agency's work under his lead [S2][S3]. His best-known sayings reach us through reference pages, articles and search snippets of his books [S3][S4][S5][S6]. We keep to ideas that show up across several of these.
+A note on the record: Gossage's essays are collected in *Is There Any Hope for Advertising?* (1986) and *The Book of Gossage*, which are still in copyright and which we could not open in full [S3][S6]. On 2026-10-21 we also read his 1960 *Harper's* essay "How to Look at Billboards" in full, reposted by Scenic America [S7]. That is the one long piece in his own voice that we hold. Two secondary pieces add dated facts about how he ran the agency [S8][S9]. The Harrison piece is an excerpt that promotes his book about Gossage, so we use it only for facts. We read two of his agency's ads in scanned form: an Irish whiskey ad from the "Flahoolick" series [S1], and the 1966 Grand Canyon ad for the Sierra Club [S2]. The Sierra Club ad was a joint effort. His partner Jerry Mander and the club's David Brower worked on that campaign too, so treat it as the agency's work under his lead [S2][S3]. His best-known sayings reach us through reference pages, articles and search snippets of his books [S3][S4][S5][S6]. We keep to ideas that show up across several of these.
 
 ## In one paragraph
 
@@ -56,7 +56,9 @@ How he applied it: he favoured a few clever print ads in well-chosen places, suc
 
 He opposed billboards, joking that he liked outdoor advertising but thought it ought not to be outdoors [S3]. Our reading of the joke: a billboard is an ad that people never chose to look at, which cuts against his idea of the ad as a welcome conversation [S3][S4].
 
-How he applied it: he wrote a 1960 *Harper's* essay, "How to Look at Billboards", against them [S3].
+His 1960 *Harper's* essay gives the reasoning. A magazine ad is seen only after a string of choices you made: you bought the magazine, opened it, turned the page and could close it [S7]. A billboard asks for none of that, so he said it is not a medium at all but isolated advertising, and that it sells your field of vision, which is not the seller's to sell [S7]. He also said that attacking billboards for being ugly was a mistake, because looks have nothing to do with whether they should be there [S7].
+
+How he applied it: he wrote that essay against billboards in February 1960, and ended it with a ballot for readers to fill in and mail [S3][S7].
 
 ### Stay small and curious
 
@@ -73,6 +75,36 @@ How he applied it: the firehouse became a gathering place where ideas from outsi
 - Use facts, numbered and plain, when a cause is at stake [S2].
 - Spend on fewer, better ads, not more repeats [S3].
 - Keep the team small enough to think [S3].
+
+## Real decisions
+
+### Opening a small agency in a firehouse
+
+In 1957 he set up his agency in a former firehouse, Engine Company No. 1, on Pacific Avenue in San Francisco, and it ran there until 1969 [S3]. He kept the staff under 13 and turned work away to hold it there [S3][S8]. He wanted ideas, not ad time, to be what clients paid for, and he objected to the 15 percent media commission because it rewarded agencies for pushing clients to spend more [S8].
+
+### Choosing clients by product and audience
+
+He took accounts for the kind of product or cause and the readers it would reach, not for the size of the budget [S9]. His agency hosted lunches at the firehouse for guests such as John Steinbeck, Buckminster Fuller and Marshall McLuhan [S9]. The reasoning in the sources is that good ideas come from outside the trade.
+
+### Ending an ad mid-sentence
+
+For the Irish whiskey account he ended one ad mid-sentence and finished the story the following week, and one ad with no offer drew about 2,000 replies [S8]. He put coupons on press ads even when no sale needed one, to start a reply from the reader [S8]. He tested each ad and let the response shape the next, instead of fixing a long campaign in advance [S8]. The figures are from Harrison's account and unchecked.
+
+### Betting $6,000 on Marshall McLuhan
+
+In 1965 he put $6,000 of his own money into promoting McLuhan, and Harrison credits it with helping build McLuhan's name [S8]. His reason is not given in the source, but it matches the habit of mixing with thinkers and bringing their ideas to business leaders [S3][S9].
+
+### Taking on the Grand Canyon dam
+
+In May 1966 David Brower of the Sierra Club asked for help, and the agency ran a full page in the *New York Times* with coupons addressed to the President, the Interior Secretary, a House committee head and local legislators [S8][S2]. By December 1966 the dam plans had been dropped [S8]. He dropped the whimsy for this job and used plain numbered facts [S2].
+
+### Arguing against billboards on permission, not looks
+
+In 1960 he chose to argue that outdoor ads have no right to exist, rather than that they look bad [S7]. His stated reason: a beauty argument turns into a row about taste that never ends, while the permission argument asks who owns your view [S7]. He also noted how small a force it takes to move a big company, and how readily an agency can get two letters of praise to cancel one letter of complaint [S7].
+
+### Naming Friends of the Earth
+
+When Brower left the Sierra Club, Gossage is reported to have suggested the name Friends of the Earth and offered the new group free office space [S8].
 
 ## Where he stood
 

@@ -18,7 +18,7 @@ seats:
   - {seat: "Retail and thrift", asks: "Where are we spending a dollar the customer wouldn't want us to spend?"}
   - {seat: "The front line", asks: "What are the people who talk to customers every day telling us, and have we asked them?"}
 pairs_with: [jeff-bezos, warren-buffett, henry-ford, mary-kay-ash, peter-drucker]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "10 Rules for Building a Better Business", by: "Sam Walton, published by Walmart", url: "https://corporate.walmart.com/about/sam-walton/10-rules-for-building-a-better-business", kind: own-words}
   - {n: 2, title: "Sam Walton", by: "Walmart", url: "https://corporate.walmart.com/about/sam-walton", kind: reference}
@@ -27,6 +27,14 @@ sources:
   - {n: 5, title: "Criticism of Walmart", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Criticism_of_Walmart", kind: reference}
   - {n: 6, title: "50 years of cheers", by: "Walmart Museum", url: "https://corporate.walmart.com/about/walmart-museum/50-year-cheer", kind: reference}
   - {n: 7, title: "Sam Walton: Made in America quotes (from the 1992 memoir)", by: "Sam Walton, collected by Goodreads", url: "https://www.goodreads.com/work/quotes/13270", kind: own-words}
+  - {n: 8, title: "Letter to associates on exceeding customer expectations (1989), reprinted in A Letter a Day, no. 94", by: "Sam Walton, reprinted by Kevin Gee", url: "https://aletteraday.substack.com/p/letter-94-sam-walton-1989", kind: own-words}
+  - {n: 9, title: "The highlight of Sam Walton's career: the Presidential Medal of Freedom", by: "Walmart, quoting Walton's 1992 acceptance remarks", url: "https://corporate.walmart.com/news/2014/03/27/the-highlight-of-sam-waltons-career-the-presidential-medal-of-freedom", kind: own-words}
+  - {n: 10, title: "Remarks on presenting the Presidential Medal of Freedom to Sam Walton (March 17, 1992)", by: "George H. W. Bush, Public Papers of the Presidents", url: "https://www.govinfo.gov/content/pkg/PPP-1992-book1/html/PPP-1992-book1-doc-pg464.htm", kind: reference}
+  - {n: 11, title: "Sam Walton: Great From the Start", by: "Harvard Business School Working Knowledge, on Richard Tedlow's research", url: "https://www.library.hbs.edu/working-knowledge/sam-walton-great-from-the-start", kind: secondary}
+  - {n: 12, title: "Made in America: Sam Walton's Story (review of the 1992 memoir, with Walton's lines)", by: "The Rational Walk", url: "https://rationalwalk.com/made-in-america-sam-waltons-story/", kind: secondary}
+  - {n: 13, title: "How Sam Walton Turned a Tiny, Failing Variety Store Into Walmart (summary of the memoir)", by: "Falltide", url: "https://www.falltide.com/p/sam-walton-made-in-america", kind: secondary}
+  - {n: 14, title: "Wisdom from Wal-Mart (notes on the memoir)", by: "David Perell", url: "https://perell.com/essay/wal-mart/", kind: secondary}
+  - {n: 15, title: "Sam Walton", by: "Encyclopedia.com", url: "https://www.encyclopedia.com/people/social-sciences-and-law/business-leaders/sam-walton", kind: reference}
 tests:
   - {kind: use, prompt: "Write a one-page weekly update from the owner of a hardware shop to her eight staff, sharing the numbers and praising two people by name."}
   - {kind: use, prompt: "List ten ways a small grocery could cut costs without making the shop worse for customers."}

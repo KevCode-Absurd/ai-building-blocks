@@ -262,7 +262,7 @@ export function beforeSection(plan, tools = [], nl = "\n") {
     : "1. **Look first.** Use what they've already attached, pasted or put in their about-me note. In Claude Code, look in the project too for these by name.");
   const ask = items.slice(0, 3).map((i) => (i.key === BRAND_BRAIN ? "your brand brain" : lower(i.label)));
   out.push(`2. **If something is missing, advise, don't block.** In one short message, say this skill works on its own and will be better with ${ask.join(", ")}. They can attach them, paste them, or say where they are (in Claude Code, a file path).${items.some((i) => i.maker) || chain.length ? " Name the recommended steps above as a suggestion, with their links." : ""} Then ask: "Add them, or shall I go ahead with what you've given me?" If their message already says to go ahead, skip this and start.`);
-  out.push("3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` and never invent a fact to fill it. List the gaps at the end so they can fill them in later.");
+  out.push("3. **When they say go ahead,** do the whole job with what you have. Mark each gap with `MISSING:` where it belongs and never invent a fact to fill it. Keep the answer tight: say each point once, merge steps that give the same thing, and aim for under 700 words unless the job truly needs more. In CHECKS MISSED, name only the checks that failed, or write “none”.");
   if (tools.length) out.push("", "**Tools that do this best:**", ...tools.map((t) => `- **${t.name}:** ${t.why}`));
   return out.join(nl);
 }

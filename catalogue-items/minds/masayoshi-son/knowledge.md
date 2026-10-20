@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Masayoshi Son is alive, and views can change. This data set comes from SoftBank Group's own pages, including his signed message as chairman and CEO [S1], his statements in company press releases [S2], reports of what he told shareholders in 2013 and 2026 [S8][S9], and public reference pages [S3][S4][S5]. Treat each view as "as of" the date of its source, mostly 2016 to 2026. He is an investor as well as a founder, so this mind explains how he thinks about bets. It never gives buy or sell advice.
+Masayoshi Son is alive, and views can change. This data set comes from SoftBank Group's own pages, including his signed message as chairman and CEO [S1], his statements in company press releases [S2], reports of what he told shareholders in 2013 and 2026 [S8][S9], a transcript of his June 2013 shareholder talk about Sprint (from an English interpretation, so wording may be off) [S10], a page on his 2010 Next 30-Year Vision [S11], and public reference pages [S3][S4][S5]. Treat each view as "as of" the date of its source, mostly 2016 to 2026. He is an investor as well as a founder, so this mind explains how he thinks about bets. It never gives buy or sell advice.
 
 ## In one paragraph
 
@@ -46,6 +46,8 @@ Son is known for very large cheques and heavy borrowing. In 2006 SoftBank bought
 
 How he applied it: the Vodafone deal turned SoftBank into a major phone company. In 2008 it became the only official carrier for Apple's iPhone in Japan, a deal that lasted until 2011 [S4]. The 2013 report credits that turnaround and the iPhone deal for SoftBank's rise [S9].
 
+In his 2013 shareholder talk on Sprint he argued by comparison and ratio: the US had about 2.5 times Japan's people, 2.6 times its GDP and 2.5 times its mobile subscribers, using the same phones and networks [S10]. He compared Sprint to the Vodafone Japan turnaround he had already won, said its earnings had hit the bottom, and used a tennis image: hit the ball as it rises, so act right after performance bottoms out [S10]. He said he always keeps Plan B, Plan C and Plan D, and named T-Mobile as the fallback if Sprint failed [S10].
+
 ### Take the hit, then come back
 
 Son has lost huge sums and kept going. He lost more than $59 billion in the 2000 crash [S3]. In 2020 SoftBank launched an emergency sale of about ¥4.5 trillion in assets to fund buybacks and pay down debt [S4]. In 2022 he said he was "embarrassed" and "ashamed" of how the Vision Fund had done [S5].
@@ -71,25 +73,27 @@ How he applied it: in 2025 SoftBank agreed to buy ABB's robotics division, appro
 
 ## Real decisions
 
+These are choices from the record. His own words give the reason only for Sprint and Arm [S2][S10]. The rest rest on Wikipedia and reports [S3][S4][S5][S9].
+
 ### Flying to Tokyo to see Den Fujita at 16
 As a teenager he admired the founder of McDonald's Japan and could not get through to him. He bought a plane ticket to Tokyo and turned up at the headquarters, and got fifteen minutes. Fujita told him to learn English and computer science and to study in the United States. He left high school, moved to California at 16, and later graduated from Berkeley in 1980. [S3]
 
-### Funding himself as a student
-While still at Berkeley he built an electronic translator with the help of professors and sold it to Sharp for $1.7 million. He also imported used video game machines from Japan on credit and placed them in dormitories and restaurants, making a further $1.5 million. These early deals gave him the money and nerve to found SoftBank in 1981. [S3][S4]
-
-### Putting $20 million into Alibaba
+### Putting $20 million into Alibaba (2000)
 In 2000 he backed a young Chinese e-commerce firm. The stake later rose in value to many billions, which paid for most of the group's later moves. The bet came in the same year that SoftBank shares fell sharply in the dot-com crash, which cost him more than $59 billion on paper. [S3][S4]
 
-### Borrowing $15.1 billion for Vodafone Japan
-In 2006 SoftBank bought Vodafone's struggling Japan arm for about $15.1 billion, paid largely with loans. Son then changed the name to SoftBank Mobile. In 2008 it became the only carrier for the iPhone in Japan, which a 2013 report credits for the company's rise. According to that report, he moved staff in on the Monday after the deal, so there was no old culture to fall back on. [S4][S9]
+### Borrowing $15.1 billion for Vodafone Japan (2006)
+SoftBank bought Vodafone's struggling Japan arm for about $15.1 billion, paid largely with loans, and Son renamed it SoftBank Mobile. In 2008 it became the only carrier for the iPhone in Japan, which a 2013 report credits for the company's rise. According to that report, he moved staff in on the Monday after the deal, so there was no old culture to fall back on. [S4][S9] In 2013 he pointed back to it as his proof that a bottomed-out telco can be turned round, and said SoftBank's phone connection rate had passed NTT Docomo's by May 2013 [S10].
 
-### Buying Arm right after Brexit
+### Buying Sprint, and keeping Plan B (2012 to 2013)
+SoftBank agreed to buy Sprint in the US, and by June 2013 Dish had withdrawn a counterproposal and Sprint's shareholder vote was set for 25 June [S10]. Son's stated case rested on market size (about 2.5 times Japan on people, GDP and subscribers), on Sprint's earnings having hit bottom and on cost savings he put at over $2 billion a year on average for fiscal 2014 to 2017 [S10]. He said he always had Plan B, C and D, with T-Mobile as the fallback [S10]. He also tied the deal to the 30-year vision he set out in 2010, which aimed to put SoftBank among the world's top ten firms by market value [S10][S11].
+
+### Buying Arm right after Brexit (July 2016)
 In July 2016 he announced the purchase of the British chip designer Arm for about £24 billion, just after the UK's referendum on leaving the EU. His press release tied the deal to the coming Internet of Things and called it one of the most important deals SoftBank had made. [S2][S3]
 
-### Launching the $100 billion Vision Fund
-In 2017 he started a fund backed by Saudi Arabia's public fund to invest in emerging technology. It took stakes in dozens of firms, many with cheques over $100 million. By 2022 it had posted a record loss, and Son said he was embarrassed and ashamed of the results. [S3][S5]
+### Launching the $100 billion Vision Fund (2017)
+He started a fund backed by Saudi Arabia's public fund to invest in emerging technology. It took stakes in dozens of firms, many with cheques over $100 million. By 2022 it had posted a record loss, and Son said he was embarrassed and ashamed of the results. [S3][S5]
 
-### Selling and shifting to AI
+### Selling and shifting to AI (2020 to 2025)
 After the losses, SoftBank sold stakes in Uber and Alibaba, listed Arm in 2023 and moved its money toward AI. In 2025 he became chairman of the Stargate AI infrastructure venture, and SoftBank agreed to buy ABB's robotics unit. He says he intends to lead in what he calls ASI. [S1][S3][S4]
 
 ## Where he stood
@@ -145,5 +149,5 @@ In fairness, the same style produced the Alibaba, Arm and Yahoo! Japan wins, and
 - "ASI must be more than high intelligence." (message as CEO) [S1]
 - "I do not believe ASI will replace humans." (message as CEO) [S1]
 - "This is one of the most important acquisitions we have ever made." (on Arm, 2016) [S2]
+- "I always have Plan B, Plan C, and Plan D" (2013 shareholder meeting, interpreted) [S10]
 - "I look ahead, 50 steps beyond, 50 steps ahead." (2026 shareholder meeting, as reported) [S8]
-- "the fish that got away was big" (on the Nvidia stake, as reported) [S5]

@@ -1,8 +1,8 @@
 # Massimo Vignelli: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Vignelli set out his rules himself in *The Vignelli Canon*, which he released free and which the Vignelli Center at RIT still publishes [S1][S4]. That book is the backbone of this data set. We add a report of a 1983 keynote talk [S2], a page of sourced quotes [S3] and reference pages [S4][S5][S6]. Much of the work was shared with his wife and partner, Lella Vignelli, who led the firm's three-dimensional design [S1][S6]. The book is still under copyright, so quotes stay short.
+A note on method: Vignelli set out his rules himself in *The Vignelli Canon*, which he released free and which the Vignelli Center at RIT still publishes [S1][S4]. That book is the backbone of this data set. We add a report of a 1983 keynote talk [S2], a page of sourced quotes [S3] and reference pages [S4][S5][S6]. Much of the work was shared with his wife and partner, Lella Vignelli, who led the firm's three-dimensional design [S1][S6]. The book is still under copyright, so quotes stay short. In October 2026 the set was widened with a 2006 interview in his own words [S7], and four accounts of his working life by others [S8][S9][S10][S11][S12]. Public interview and lecture transcripts by him are scarce online, so this mind still leans on the Canon.
 
 ## In one paragraph
 
@@ -54,6 +54,10 @@ How he applied it: for Ford, and for CIGA Hotels, Cinzano and Lancia, his firm p
 
 At 16 he worked as a draughtsman for the Castiglioni brothers in Milan, who designed everything "from the spoon to the city" [S1][S4]. He learned that if you master the discipline of design, you can design anything [S1]. Design is a discipline, not a style [S1]. He and Lella worked on glass, metal, wood, ceramics, plastics, print, packaging, furniture, interiors, clothing and stage sets [S1].
 
+### Good work leads to good work
+
+Michael Bierut, who worked for Vignelli for ten years, recalled that Vignelli gave a business card the same energy as a large commission [S11]. Bierut said the lesson was that good work leads to more good work and bad work to more bad work, easy to forget under pressure to compromise [S11]. Vignelli also treated junior staff and visitors with respect and ran an open studio [S11]. In a 2006 interview he said his work had stayed consistent and grown more essential, and told young designers to learn from the past, think about the present and dream of the future [S7].
+
 ## How he decides
 
 - Find the meaning first [S1][S2].
@@ -65,6 +69,9 @@ At 16 he worked as a draughtsman for the Castiglioni brothers in Milan, who desi
 - Spend the client's money wisely [S1].
 - Keep a logo that has earned its place [S1].
 - Make it understandable without explanation [S1].
+- Give the small job the same effort as the big one [S11].
+- Run to a fixed rule set, for example one type size, two weights, a grid, one colour [S8].
+- Test materials by their light: glass transmits, smooth metal reflects, rough surface refracts [S9].
 
 ## Real decisions
 
@@ -85,6 +92,14 @@ Early in his career he developed a binding of two boards around white pages with
 
 ### Going to work at sixteen for the Castiglioni
 At 16 he joined the Castiglioni office in Milan as a draughtsman, where he saw architects design everything from the spoon to the city [S1][S4]. He took from it the idea that mastering one discipline lets you design anything [S1].
+
+### Setting Unimark's magazine in one size, one grid (Dot Zero, 1966 to 1968)
+
+Vignelli set the look of Dot Zero, the quarterly Unimark published, with one type size in two weights of Helvetica, a grid and one colour on uncoated white paper [S8]. He had full freedom and was never pushed toward a second colour [S8]. The aim was to give the firm its own intellectual voice [S8]. It ran five issues and ended because Unimark could not fund it alone and sponsors preferred direct advertising [S8].
+
+### Making metal and glass vessels that the first client refused (1963)
+
+During a fellowship at Towle Silversmiths he made his own prototypes and learned that polished metal reflects light as glass does [S9]. His rule was to play with a material's properties to enhance it [S9]. Towle tested the market and rejected the vessels, so he offered them to Christofle after returning to Europe, which sold the line for several years [S9][S12]. The episode is one reason given for his later distrust of market research [S12].
 
 ## Where he stood
 

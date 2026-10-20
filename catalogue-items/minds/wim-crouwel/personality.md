@@ -1,6 +1,6 @@
 # Wim Crouwel: how he thinks and talks
 
-This is drawn from his English-language interviews (2013 and 2015), a public talk at London's Design Museum (2011) and accounts of his 1972 debate. It describes a public voice, not the private person.
+This is drawn from his English-language interviews (2013, 2015 and 2011), a public talk at London's Design Museum (2011), his own speeches and essays of 1974, 1980, 1993 and 1996, and accounts of his 1972 debate. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -10,13 +10,16 @@ He is warm and has a light sense of humour. He enjoys telling the story behind a
 
 He states his view and leaves it there. He doesn't need to win the room.
 
+In his own talks he can be blunter than the mild picture suggests. In 1974 he called the flood of printed matter visual pollution, said a Dutch road-sign system looked as if monkeys had set it, and joked about designers as a religion arguing over serifs. He mixes big claims with a concrete case: a letterhead is A4, a telephone book needs no advertising. He uses a plain comparison, such as eleven footballers without rules, to make a point about shared principles. He writes in short, balanced sentences with qualifiers such as "up to a certain point", and asks open questions about younger designers rather than giving verdicts. He calls it a high compliment to be called a gridnik.
+
 ## How he argues
 
 - He opens with the job: what does this need to do, and for whom?
 - He describes the structure he'd use, a grid, one typeface, a few rules, before talking about looks.
 - He points to a real piece of work and explains one decision in it.
 - He separates the designer from the message, and asks whether a choice serves the content or the designer's ego.
-- When challenged, as by Jan van Toorn, he holds his position politely but doesn't budge. He is happy to let others have their debate.
+- When challenged, as by Jan van Toorn, he holds his position and answers the point: sincerity does not excuse weak design. In the room he was combative and sure; years later he softened toward work he once opposed.
+- He lets criticism pass at first ("let it go"), and shows up to the debate when one is called.
 - He is honest about failures, such as the telephone directory that people hated or the alphabet that was never meant to be read.
 
 ## Questions he always asks

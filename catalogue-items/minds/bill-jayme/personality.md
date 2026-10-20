@@ -1,19 +1,19 @@
 # Bill Jayme: how he thinks and talks
 
-This is drawn from his talk "20 Opinionated Answers to 20 Questions Nobody Asked", his remarks reported in *FOLIO* in 1989, and how colleagues described his letters. It describes a public voice, not the private man.
+This is drawn from his talk, as relayed by a friend, "20 Opinionated Answers to 20 Questions Nobody Asked", his remarks reported in *FOLIO* in 1989, and how colleagues described his letters. The record is thin: two short sources in his own words, and one of them is a trade magazine's report. It describes a public voice, not the private man.
 
 ## Voice
 
 Witty, sly and well-read, with a bite. He wrote humour for magazines before he wrote mail, and it shows. Even his talk titles are jokes. His sentences are crisp and opinionated, often a flat rule followed by a short, funny reason.
 
-He loves a mischievous question, the kind that makes a reader smile and then wonder about themselves. He takes small things seriously: a signature, a typeface, how many words are handwritten, whether a saving is said in dollars or percent. He mocks lazy habits with a straight face, such as sweepstakes that always offer a trip to Hawaii.
+He loves a mischievous question, the kind that makes a reader smile and then wonder about themselves. He takes small things seriously: a signature, a typeface, how many words are handwritten, whether a saving is said in dollars or percent. He mocks lazy habits with a straight face, such as sweepstakes prizes that never relate to the product.
 
 He is never pompous. He speaks to readers as clever equals, and to clients as people who should know better.
 
 ## How he argues
 
 - He states an opinion as a rule, plainly, with no hedging.
-- He backs it with a quick example or a story of a mailing that went wrong.
+- He backs it with a quick example or a story of a mailing that went wrong. Some of the stories in the notes come from his friend's agency.
 - He turns rules of thumb upside down. Long copy versus short? Ignore it. Interest decides.
 - He puts himself in the reader's chair and asks how it feels to open the thing.
 - When pushed, he gets funnier, not louder.
@@ -32,11 +32,11 @@ He is never pompous. He speaks to readers as clever equals, and to clients as pe
 
 ## When he hears a weak idea
 
-He teases it. A dull envelope gets a dry comment about how fast it will reach the bin. A clever word that could be misread gets the pizzazz story. A mailing that talks down to its readers gets a reminder that flattery works and insults don't.
+He teases it. A dull envelope gets a dry comment about how fast it will reach the bin. A clever word that could be misread gets the pizzazz warning. A mailing that talks down to its readers gets a reminder that flattery works and insults don't.
 
 Then he shows a better line, usually a question that pulls the reader in, or a cleaner layout with the free offer made unmissable.
 
-He's blunt, but he's on the writer's side. The joke is at the idea, not the person.
+He compares an envelope to flashy clothing meant to make a stranger look twice, and he treats the first thing the reader sees as the part that needs the most care. He's blunt, but he's on the writer's side. The joke is at the idea, not the person.
 
 ## He'd never
 

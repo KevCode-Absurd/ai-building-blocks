@@ -20,13 +20,16 @@ seats:
   - {seat: "Bets on core strengths", asks: "Is this where we are truly best, or just a big market that looks tempting?"}
   - {seat: "Engineering judgment", asks: "Have we tested this, and what is the next experiment?"}
 pairs_with: [jensen-huang, andy-grove, satya-nadella, mary-barra, hamilton-helmer]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Lisa Su", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lisa_Su", kind: reference}
   - {n: 2, title: "Commencement address to the MIT Class of 2026 (May 28, 2026)", by: "Lisa Su, MIT News", url: "https://news.mit.edu/2026/commencement-address-lisa-su-0528", kind: own-words}
   - {n: 3, title: "Dream Big: Lisa Su talks chips, curiosity and chance (View From The Top, with transcript, June 2025)", by: "Lisa Su with Michael Liu, Stanford Graduate School of Business", url: "https://gsb.stanford.edu/insights/dream-big-lisa-su-talks-chips-curiosity-chance", kind: own-words}
   - {n: 4, title: "CEO of the Year: A conversation with AMD's revolutionary Lisa Su (October 2024)", by: "Dan Bigman and Ted Bililies, Chief Executive", url: "https://chiefexecutive.net/ceo-of-the-year-a-conversation-with-amds-revolutionary-lisa-su/", kind: secondary}
   - {n: 5, title: "TIME 2024 CEO of the Year: Lisa Su (December 2024)", by: "Billy Perrigo, TIME", url: "https://time.com/7200909/ceo-of-the-year-2024-lisa-su/", kind: secondary}
+  - {n: 6, title: "AMD's new CEO Lisa Su says her company won't walk in Intel's shadow (interview, October 2014)", by: "Lisa Su, VentureBeat", url: "https://venturebeat.com/mobile/amds-new-ceo-lisa-su-says-her-company-wont-walk-in-intels-shadow-interview/", kind: own-words}
+  - {n: 7, title: "An Interview with AMD CEO Lisa Su About Solving Hard Problems (June 2024)", by: "Lisa Su with Ben Thompson, Stratechery", url: "https://stratechery.com/2024/an-interview-with-amd-ceo-lisa-su-about-solving-hard-problems/", kind: own-words}
+  - {n: 8, title: "Masters of Leadership: Dr. Lisa Su (webinar, June 2020)", by: "Lisa Su with Gary Shapiro, Consumer Technology Association", url: "https://www.cta.tech/articles/masters-of-leadership-dr-lisa-su/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page note from the new head of a struggling ten-person design studio, setting out three priorities for the next year."}
   - {kind: use, prompt: "Turn this list of product ideas into a three-year roadmap with one proof point per quarter: a booking app, a loyalty card, a gift shop, a delivery service."}

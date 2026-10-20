@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Newton's books are in the public domain. The own-words sources here are Opticks (4th edition, 1730) [S2] and the Principia in Andrew Motte's English translation [S3]. A few well-known lines, such as his letter to Robert Hooke and the first Rule of Reasoning, are quoted as Wikipedia gives them [S1]. Dates follow the New Style calendar unless noted.
+Newton's books are in the public domain. The own-words sources here are Opticks (4th edition, 1730) [S2], the Principia in Andrew Motte's English translation [S3], three letters to Henry Oldenburg of the Royal Society from 1671 to 1673 [S6][S7][S8], and his 1717 report to the Treasury on gold and silver coin [S9]. The letters were read in the Newton Project's old-spelling transcriptions, and part of the 1672 letter is in Latin, which we read through a summary. The first Rule of Reasoning is described as Wikipedia gives it [S1]. Dates follow the New Style calendar unless noted.
 
 ## In one paragraph
 
@@ -15,10 +15,6 @@ Newton was an English mathematician, physicist and astronomer, born at Woolsthor
 In the preface to the Principia, Newton says the main task of natural philosophy is to work from the phenomena of motion to the forces of nature, and then use those forces to explain other phenomena [S3]. Book III applies this to the system of the world: the forces that hold the planets, comets, moon and tides [S3]. He hoped the same method would one day explain many other things through forces between small particles [S3].
 
 How he applied it: one law of universal gravitation, falling off with the square of distance, explained the motions of planets, comets, the moon and the tides [S3][S4].
-
-### State the rules plainly
-
-The Principia opens with definitions and three laws of motion [S3]. A body stays at rest or moves straight on at a steady speed unless a force acts on it. The change in motion is in proportion to the force and in its direction. To every action there is an equal and opposite reaction [S3]. Opticks also begins with definitions and axioms before any experiment [S2].
 
 ### Admit no more causes than you need
 
@@ -40,13 +36,17 @@ In Opticks, Newton passed sunlight through a prism in a dark room and found a co
 
 How he applied it: he narrowed the holes and images to cut down the mixing until the light was close to a single colour [S2].
 
+### Answer critics point by point, concede the small, hold the core
+
+Newton's replies to critics follow a pattern. To Pardies in 1672 he worked through each objection in turn: he showed the objection assumed unequal bending in the prism when he had measured equal bending, and he invited Pardies to repeat the measurement [S6]. He conceded the point about the width of the hole, but showed it would cause an error of only about two seconds of arc [S6]. He accepted that some mixed liquids may turn opaque, but said chemical action made them a poor test [S6]. He would not accept the word "hypothesis" for his claims about light: he said they were properties he thought easy to prove, and he would throw them out if false [S6]. To Huygens in 1673 he restated the argument as definitions and numbered propositions, called the claims a matter of fact, and admitted that Slusius may have had the tangent method first [S7].
+
 ### Leave open questions as questions
 
 Newton ended Opticks with a list of Queries, added in later editions, that set out open questions rather than claims [S2]. Some reached into theology: in the last query he argued that God first formed matter as hard, solid particles and keeps the order of the world [S2].
 
-### Build on others, and say so
+### Compare across places before you change a rule
 
-In a February 1675 letter to Hooke, Newton wrote that if he had seen further, it was by standing on the shoulders of giants [S1]. Some historians read the line as a sly dig at Hooke during a quarrel over optics [S1]. In the Principia he still acknowledged Wren, Hooke and Halley [S4].
+In his 1717 report to the Treasury, asked why silver coin was being melted down and sent abroad, Newton set out the ratio of gold to silver in Spain, Portugal, France, Holland, the German states, Sweden, China and India, and showed that Europe stood at about 15 to 1 while England's guinea valued gold higher [S9]. His rule: silver flows to where it fetches the most in gold, and gold gathers where it is valued highest [S9]. He put aside "extraordinary cases", such as the fleet arriving in Spain, and said so [S9].
 
 ### Test the samples: Newton at the Mint
 
@@ -62,35 +62,35 @@ As Warden and then Master of the Royal Mint from 1696, Newton estimated that a f
 - Don't dress a guess as a finding; ask it as a question [S2].
 - Use mathematics to tie the law to the data [S3][S4].
 
-## Real decisions (enriched minds)
+## Real decisions
+
+### Answering Pardies without giving ground
+
+In April 1672 Pardies, a French Jesuit, argued that the long coloured image from a prism could come from the width of the Sun's disc. Newton replied that the objection assumed unequal bending at the prism's two faces, and that his crucial experiment used equal angles through two small fixed holes. By his figures the blue and violet rays still spread by almost three degrees, far more than the Sun's apparent width could explain [S6]. He conceded minor points and told Pardies to measure for himself [S6]. His stated reason for caring was that he held his claims to be proved facts, not a hypothesis [S6].
+
+### Answering Huygens and then stepping back
+
+In June 1673, replying to Huygens, Newton rebuilt his argument as definitions and numbered propositions, and said he found it "a little ungratefull" to meet objections he had already answered [S7]. He gave up one thing, the claim to the tangent method, as Slusius may have had it first. He gave up nothing on light, and he said he meant to withdraw from philosophical correspondence [S7]. The result was a pattern: he published little and answered critics only when pressed.
+
+### Sending a telescope and admitting its faults
+
+In March 1671 Oldenburg reported that the reflecting telescope Newton sent was faulty. Newton agreed it had imperfections but said it was capable of improvement, and that a newer instrument of the same design performed better, letting him read print at a hundred feet [S8]. He asked that the new results go with the instrument's description in the Transactions, because it might help others trying the same work [S8].
 
 ### Holding back Opticks to avoid disputes
 
-Part of Opticks was written in 1675 for the Royal Society, and the rest about twelve years later. In his 1704 note he says he delayed printing to avoid being drawn into disputes, and published only because friends pressed him. He added that any stray copies were imperfect, written before he had tried all the experiments. [S2]
-
-### Publishing the unfinished part and handing it on
-
-He left the third book of Opticks incomplete, saying he had not tried every experiment he meant to, nor repeated some until satisfied about all their circumstances. His stated aim was to pass on what he had tried and leave the rest for others to investigate. [S2]
+Part of Opticks was written in 1675 for the Royal Society, and the rest about twelve years later. In his 1704 note he says he delayed printing to avoid being drawn into disputes, and published only because friends pressed him. He left the third book incomplete, saying he had not tried every experiment he meant to and wished to pass on what he had tried and leave the rest for others. [S2]
 
 ### Putting the cause of gravity as a question
 
 For the 1717 edition he added a query on the cause of gravity, and said this was to show he did not take gravity as an essential property of bodies. He chose a question, he wrote, because he was not satisfied for want of experiments. [S2]
 
-### Showing the white light was a mix, by a reflection test
+### Reporting to the Treasury on the guinea
 
-To argue that sunlight is compounded of rays that bend differently, he watched a prism's base reflect light. As the angle changed, violet and blue were totally reflected first, then green, yellow and red, each adding to the light on the paper. He reasoned that the reflected beam is compounded of rays differently refrangible, and since reflection alters nothing, so is the sun's own light. [S2]
-
-### Fixing the glass instead of dropping the design
-
-For his reflecting telescope he tested whether the concave side's reflection would disturb vision. It did no sensible harm, so he concluded that only good workmen who could grind truly spherical glasses were missing. He once improved a London-made object glass himself with pitch and putty, using a light touch, and warned against heavy pressure that bends the glass. [S2]
+In 1717 the Treasury ordered Newton, as Master of the Mint, to report on the coins in weight and fineness, the value of gold against silver and how to stop silver coin being melted down. He compared the ratio across Europe and Asia, concluded that the high value of gold in England drew silver out, and advised taking about ten or twelve pence off the guinea, with six pence as a first step if the Treasury preferred caution [S9]. The guinea's value was cut, and the new rate lasted until the early twentieth century apart from the Napoleonic wars [S9].
 
 ### Going after the coiners
 
 At the Mint, he treated fraud as a case to be built from evidence. He is credited with questioning suspects over a hundred times and prosecuting 28 coiners, and from 1707 he brought in sample testing of coins. [S1]
-
-### Writing the Principia after Halley's visit
-
-In 1684 Halley called and Newton sent a short paper on orbits. He then worked it up into the Principia, which Halley paid to print. [S4]
 
 ## Where he stood
 
@@ -142,5 +142,6 @@ All from public-domain texts.
 - "from the phænomena of motions to investigate the forces of nature" (Principia, preface, trans. Motte) [S3]
 - "To every action there is always opposed an equal reaction" (Principia, third law, trans. Motte) [S3]
 - "Hypotheses are not to be regarded in experimental Philosophy" (Opticks, Query 31) [S2]
-- "If I have seen further it is by standing on the shoulders of giants." (letter to Hooke, 1675, as quoted on Wikipedia) [S1]
-- "no more causes of natural things than are both true and sufficient" (Principia, Rule I, as quoted on Wikipedia) [S1]
+- "it may be of some use to those that shall endeavour" (letter to Oldenburg, 1671, old spelling kept in the source) [S8]
+- "To avoid being engaged in Disputes about these Matters" (Opticks, 1704 note) [S2]
+

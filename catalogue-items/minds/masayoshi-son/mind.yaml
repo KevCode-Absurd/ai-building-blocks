@@ -20,7 +20,8 @@ seats:
   - {seat: "Paradigm shifts", asks: "Is this the start of a new wave, and which piece of it will everything else need?"}
   - {seat: "Number one or nothing", asks: "Can we be the clear number one here? If not, why are we playing?"}
 pairs_with: [jack-ma, jensen-huang, charlie-munger, warren-buffett]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
+thin_record: "Son rarely gives long spoken or written reasoning online in English. Only his signed messages, a 2016 press release and an interpreted 2013 shareholder transcript were readable."
 sources:
   - {n: 1, title: "Message from Chairman & CEO", by: "Masayoshi Son, SoftBank Group", url: "https://group.softbank/en/philosophy/message", kind: own-words}
   - {n: 2, title: "Press release on the acquisition of ARM Holdings, with statements by Masayoshi Son (2016)", by: "SoftBank Group", url: "https://group.softbank/en/news/press/20160718", kind: own-words}
@@ -31,6 +32,8 @@ sources:
   - {n: 7, title: "Strategy", by: "SoftBank Group", url: "https://group.softbank/en/philosophy/strategy", kind: reference}
   - {n: 8, title: "The world according to SoftBank CEO Masayoshi Son (2026 shareholder meeting)", by: "Constellation Research", url: "https://www.constellationr.com/insights/news/world-according-softbank-ceo-masayoshi-son", kind: secondary}
   - {n: 9, title: "SoftBank aims for global No. 1 position (2013)", by: "Eurotechnology Japan", url: "https://www.eurotechnology.com/2013/05/08/softbank-aims-for-global-no-1-position-acquiring-sprint-on-the-way-to-the-top/", kind: secondary}
+  - {n: 10, title: "Transcript of SoftBank Corp. 33rd Annual General Meeting of Shareholders (June 2013), from simultaneous English interpretation, filed with the U.S. SEC", by: "Masayoshi Son, SoftBank Corp.", url: "https://www.sec.gov/Archives/edgar/data/1065521/000119312513268183/d558970d425.htm", kind: own-words}
+  - {n: 11, title: "Next 30-Year Vision, digest video page (presentation of June 25, 2010)", by: "SoftBank Group", url: "https://group.softbank/en/news/webcast/next30_en", kind: reference}
 tests:
   - {kind: use, prompt: "Write a one-page 30-year vision for a small design studio, then list the three things it should do this year."}
   - {kind: use, prompt: "Write a short, honest note from a founder to their team after a big bet failed and cost the company a year of profit."}

@@ -1,8 +1,8 @@
 # George Lois: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: George Lois died in November 2022 [S1]. His views here come from interviews he gave in 2007 and later, and from reference pages and a tribute by his friend Steven Heller [S3][S4][S5][S6]. He also wrote many books, from *George, Be Careful* (1972) to *Damn Good Advice* (2012) [S1][S2], but we have not quoted from them. Lois told big stories about his own work, and some of his claims of credit are disputed. Where a claim is his own account, we say so.
+A note on method: George Lois died in November 2022 [S1]. His views here come from interviews he gave in 2007 and later, and from reference pages and a tribute by his friend Steven Heller [S3][S4][S5][S6]. He also wrote many books, from *George, Be Careful* (1972) to *Damn Good Advice* (2012) [S1][S2], but we have not quoted from them. Two longer interviews in his voice add detail: a 2010 magazine interview about the *Esquire* covers [S7] and a 1998 *Eye* interview, a distillation of 13 hours of recordings, reprinted online by Steven Heller [S8]. Both are edited, and the *Eye* piece may not be word for word. Lois told big stories about his own work, and some of his claims of credit are disputed. Where a claim is his own account, we say so.
 
 ## In one paragraph
 
@@ -64,10 +64,42 @@ How he applied it: a name like Lean Cuisine says what the product is and why you
 - Look for the one idea that solves the business problem, not a pretty layout [S5].
 - Judge it by one test: will people remember it and talk about it [S3][S4]?
 - Make the image and the line carry one point together [S3].
-- Don't let a test or a survey kill a bold idea [S6].
+- Don't let a test or a survey kill a bold idea [S6][S8].
+- A good ad is understood on one viewing; if an ordinary person cannot explain the idea, it has failed [S8].
+- The idea should come from you, then a strong writer can refine it [S8].
 - If a client dilutes the work, push back, and walk away from clients who won't say yes to a big idea [S3][S5].
 - Use a famous face only if they believe in it and won't look like a shill [S4].
 - Spend less, and let the work spread on its own [S3][S4].
+
+## Real decisions
+
+### Leaving the flower shop for design school
+
+As a teenager Lois worked in his father's flower shop, going to the flower market at 4 a.m., while he was drawn to design [S8]. His father thought drawing was unmanly [S8]. After a poor first year at Pratt, a teacher urged him to leave and pointed him to the designer Reba Sochis [S8]. On the first day of term in his second year he told his father he was going to college and would not take over the store [S8]. His studio work with Sochis led to CBS and to the rest of his career [S8].
+
+### Making an earwax ad in a day
+
+At Doyle Dane Bernbach his first account was Kerid, an earwax remover with almost no product facts [S8]. He made a set of ads in one day with no writer, including one of an ear stuffed with pencils and paper clips [S8]. The next morning Bill Bernbach offered to write the copy, which Lois says Bernbach had not done for anyone in about fifteen years [S8]. The lesson for a small team is that a picture can carry the idea first and a writer can sharpen it after.
+
+### Taking Esquire covers on his own terms
+
+Harold Hayes met Lois at the Four Seasons and asked for help with *Esquire* covers [S9]. Lois told Hayes to hire a designer who understood politics, culture and film, and agreed to do one cover [S9]. In his 2010 account he was an ad man, not the magazine's art director, and he often worked out the cover idea on the walk back to his agency after a monthly lunch with Hayes [S7]. He told Hayes he would walk if a cover was refused [S7]. For his first cover he predicted Sonny Liston would beat Floyd Patterson and showed Patterson as if left for dead in an empty arena, over the publisher's objection [S7].
+
+### Putting Liston in a Santa hat
+
+When Hayes asked for something Christmassy, Lois posed Liston as Santa [S7]. By his account senators denounced it and *Esquire* lost about a dozen advertisers, then gained others a month later [S7]. He said he wanted covers that showed the magazine was exciting, and read trouble as a sign it was working [S7]. This is his own account of the loss and the gain.
+
+### Taking Xerox to television
+
+In the 1960s he persuaded Xerox's chief executive, Joe Wilson, to use TV and drop the Haloid name [S8]. Wilson thought only about 5,000 people needed to be reached, and fired Lois after the pitch, then called the next morning and approved it [S8]. The spot showed a little girl making copies on the 914 [S8]. After a rival complained that a child could not copy so easily, the FCC sent a cease-and-desist; Lois offered to reshoot with a chimpanzee, and both versions ran [S8]. He says the account grew from $350,000 to $9 million in two months [S8].
+
+### Flaunting it against the research
+
+For Braniff he wrote the "When you've got it, flaunt it" campaign and warned the chief executive, Harding Lawrence, that research would sink it [S8]. Test groups disliked it, and by Lois's account 84 percent of people who had flown Braniff said they would not fly it again [S8]. Lawrence approved it anyway, and Lois says business rose 80 percent [S8]. His reason: great ideas test badly because they feel unfamiliar [S8].
+
+### Choosing the smallest account: MTV
+
+Bob Pittman, then 27, offered Lois a choice of the Movie Channel (about $6 million), Nickelodeon (about $3 million) or MTV (about $250,000) [S8]. Lois insisted on MTV because young viewers would take to it, though he disliked rock music, and he adapted his Maypo line into "I want my MTV" with Mick Jagger [S8]. After four spots ran on a Thursday night, a San Francisco cable operator reported heavy phone traffic and agreed to carry the channel [S8]. These figures are his recollection and unchecked.
 
 ## Where he stood
 

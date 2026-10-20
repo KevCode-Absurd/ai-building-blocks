@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: this version rests on the full text of the *Autobiography* [S1] and of *The Way to Wealth* [S2], plus the 1772 letter on moral algebra in the public-domain selection [S3]. The Wikipedia and National Archives pages are context only [S4][S5]. Where the Autobiography tells how he improved, it is his own account, written for advice, long after the events. Most of what we know about Franklin's habits comes from his *Autobiography*, which he wrote in parts from 1771 until near his death and never finished [S3]. It is his own telling, written partly as advice, and he admits he cared about how things looked as well as how they were [S1]. So treat its stories as a self-portrait. Many sayings of "Poor Richard" were not his own. He said not a tenth part of that wisdom was his, and that he gathered the sense of "all ages and nations" [S2]. We read his 1772 letter on "moral or prudential algebra" as printed in a public-domain selection of his writings [S3]. His work is in the public domain, so we quote a few short lines. His record on slavery is part of this file, told from the sources.
+A note on method: this version rests on the full text of the *Autobiography* [S1] and of *The Way to Wealth* [S2], plus the 1772 letter on moral algebra in the public-domain selection [S3]. We also read his 1749 pamphlet proposing an academy [S6] and a set of his essays and letters, among them the 1748 "Advice to a Young Tradesman", a 1753 letter to George Whitefield and a 1784 letter about Cotton Mather's book, in a public-domain collection of his writings [S7]. The Wikipedia and National Archives pages are context only [S4][S5]. Where the Autobiography tells how he improved, it is his own account, written for advice, long after the events. Most of what we know about Franklin's habits comes from his *Autobiography*, which he wrote in parts from 1771 until near his death and never finished [S3]. It is his own telling, written partly as advice, and he admits he cared about how things looked as well as how they were [S1]. So treat its stories as a self-portrait. Many sayings of "Poor Richard" were not his own. He said not a tenth part of that wisdom was his, and that he gathered the sense of "all ages and nations" [S2]. We read his 1772 letter on "moral or prudential algebra" as printed in a public-domain selection of his writings [S3]. His work is in the public domain, so we quote a few short lines. His record on slavery is part of this file, told from the sources.
 
 ## In one paragraph
 
@@ -88,6 +88,10 @@ How he applied it: when the governor offered him a patent on his new stove, he t
 
 ## How he decides
 
+- Plan a school or club in print and ask for advice before you start [S6].
+- When time is short, teach what is most useful for the work ahead [S6].
+- Put habits as small sums, because small visible habits build trust [S7].
+- Treat a favour as a debt to pass on to someone else [S7].
 - Fix on one habit for a week, and check it nightly in a book [S1].
 - Ask the opponent for a small favour, not a bigger concession [S1].
 - Phrase an opinion as how it appears to you, and let others disagree [S1].
@@ -104,24 +108,28 @@ How he applied it: when the governor offered him a patent on his new stove, he t
 ## Real decisions
 
 ### Starting the library with fifty subscribers
-
 Books were scarce in Philadelphia and each Junto member owned a few. He proposed pooling them, then a public subscription, and found only about fifty young tradesmen who would pay in forty shillings each and ten a year. Lending was on a promissory note for double the value. His stated result: other towns copied it and readers grew better informed [S1].
 
 ### Putting himself out of sight
-
 Soliciting subscriptions, he found people disliked an upstart who pushed a project. He then put himself out of sight and said it was a scheme of "a number of friends" [S1].
 
 ### Borrowing a book from an opponent
-
 He asked a hostile Assemblyman to lend him a rare book and turned an opponent into a friend [S1].
 
-### Refusing a patent on the stove
-
+### Giving the stove design away
 His fireplace design was widely used, and he did not patent it, offering it freely [S4].
 
-### Adding humility after a rebuke
+### Planning an academy in 1749
+In 1749 he printed a pamphlet proposing an academy for Pennsylvania youth, and asked readers to send him their advice [S6]. He proposed a chartered group of public-spirited men to run it, with a healthy site, a library and instruments, and a rector of good character [S6]. On what to teach, he said it would be ideal to teach everything useful and ornamental, but that art is long and time is short, so students should learn what is most useful for their intended work [S6]. He ordered the subjects with writing, drawing, arithmetic and accounts first, English through good authors, and history as the core, which brought in morals, speaking and government [S6].
 
-The Quaker friend's remark led him to add a new virtue and change how he spoke in debate [S1].
+### Writing business advice as a sum
+In 1748 he wrote down, at a friend's request, hints that had served him [S7]. He put his points as small sums: a man who could earn ten shillings a day and idles half of it has thrown away five shillings besides what he spends [S7]. He said credit is money, that six pounds a year is only a groat a day, and that the sound of a hammer at five in the morning keeps a creditor calm for six months [S7]. The reasoning is that small, visible habits build trust, and that trust can be borrowed against [S7].
+
+### Treating a kindness as a debt to pass on
+In 1753 he wrote to the preacher George Whitefield, who had mentioned a kindness Franklin had done him [S7]. Franklin said the only thanks he wanted was that Whitefield would do the same for anyone else who needed it, so that good offices go round [S7]. He said that when he serves others he does not think of it as giving a favour but as paying a debt, since he had received kindness from people he could never repay [S7].
+
+### Crediting a book and a bump on the head
+In 1784 he told Cotton Mather's son that a boyhood copy of *Essays to Do Good* had shaped his conduct for life, and that he had always valued the name of a doer of good above any other reputation [S7]. He also told how the elder Mather, when Franklin bumped his head leaving the library in 1724, said to stoop as he went through the world to miss many hard thumps [S7].
 
 ## Where he stood
 

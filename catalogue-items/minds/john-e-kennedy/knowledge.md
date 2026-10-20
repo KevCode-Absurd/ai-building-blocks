@@ -1,8 +1,8 @@
 # John E. Kennedy: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Kennedy wrote little under his own name, and much of what he wrote ran as Lord & Thomas advertising. Our main own-words source is *The Book of Advertising Tests*, a set of articles the agency published around 1905 [S1]. It is signed "Lord & Thomas". Albert Lasker, who ran the agency, said in 1926 that Kennedy wrote it [S3]. We also read an essay printed under Kennedy's name in a Toronto trade paper in 1909 [S2]. His better-known "Reason-Why" and "Intensive Advertising" series are named in our sources, but we could not open them [S2][S4]. The story of how he met Lasker comes from Lasker's own memory, told over 20 years later [S3]. All of these texts are in the public domain, so we quote them briefly. Sources disagree on whether the meeting was in 1904 or 1905 [S3][S5].
+A note on the record: Kennedy wrote little under his own name, and much of what he wrote ran as Lord & Thomas advertising. Our main own-words source is *The Book of Advertising Tests*, a set of articles the agency published around 1905 [S1]. It is signed "Lord & Thomas". Albert Lasker, who ran the agency, said in 1926 that Kennedy wrote it [S3]. We also read an essay printed under Kennedy's name in a Toronto trade paper in 1909 [S2]. On 2026-10-21 we re-read *Intensive Advertising*, and Chapter 5 gives his step-by-step method for planning and writing an ad, which the playbook now follows. It is the report he wrote in 1914 when publishers paid him to advise on advertisers' results, in a public-domain text carried as a free ebook [S7]. His "Reason-Why" book itself we could still not open from a clean source [S2][S4]. The story of how he met Lasker comes from Lasker's own memory, told over 20 years later [S3]. All of these texts are in the public domain, so we quote them briefly. Sources disagree on whether the meeting was in 1904 or 1905 [S3][S5].
 
 ## In one paragraph
 
@@ -96,17 +96,18 @@ For goods sold in shops, the agency's book told advertisers to pick two similar 
 
 For mail-order work the book told advertisers to key each ad in each magazine with a slightly different reply address [S1]. They then divided the cost of space by the inquiries for each piece of copy [S1]. The next month they swapped the ads between magazines, so each ad had a fair turn in each place [S1]. It added that the same follow-up should go to every inquiry, so the share that bought would show true profit [S1].
 
-### Aiming at readers who can pay
+### Taking fifty times the time on one ad (1914)
+In his report for publishers, Kennedy told writers that one strong, convincing piece of copy sells more than fifty pieces of "eye-deep" publicity, so take fifty times the time if you must [S7]. He told them to put every selling point they have into the one ad being written and not save any for a later ad in the series. Then prune: cut every needless word first, then every selling thought that can be spared. Last, read it coldly from the buyer's side and ignore what the advertising trade thinks [S7]. His stated reason: the trade knows far less about your product than you do, so its opinion does not matter if the copy sells at a profit [S7].
 
-An article using 1900 census figures argued that many readers of a paper can never afford a piano [S1]. For costly goods Kennedy's agency chose the right class of readers over the largest audience [S1]. It said catchy copy that draws crowds is wasted on them [S1]. Goods the masses can use have many more possible buyers [S1].
+### Planning an ad from the buyer's objections (1914)
+His formula began with a closed door and a pencil. List the natural buyers, interview some, ask why they have not already bought or bought more, and list the objections a salesman would meet and the best answer to each [S7]. Then list the selling points and build the argument on the exclusive ones, giving numbers: how much ice, in what time, at what cost per ton, and why [S7]. He chose the point most likely to touch this buyer and made it the pivot, and he wrote the ad as if it were the only one [S7]. His reason: get the buyer reading with you and not against you [S7].
 
-### Choosing six strong pieces over fifty-two weak ones
+### Closing on one action (1914)
+He said most otherwise good ads fail in their last lines [S7]. His choice was to plant the spur to action in the last sentence only, and to make the reader do something definite toward buying, even a small step [S7]. His stated reason: a reader moved to act has partly committed to your claims and is more open to later selling, in print or in person [S7].
 
-In 1908 he wrote that six strong pieces of copy rotated through a year earn far more than 52 weak space-fillers [S2]. He said four years and more than 35 campaigns showed that repeating good copy did not much reduce its pull [S2]. His reason was that space is only a vehicle and its value depends on the selling force put into it [S2].
+### Telling publishers that "keeping the name before the people" wastes space
 
-### Leaving the agency to freelance
-
-He stayed at Lord & Thomas just over two years [S6]. He then worked as a highly paid freelance adviser and writer [S4][S5][S6]. By 1912 four national advertisers paid him $10,000 a year each for a week a month of his time [S4]. B.F. Goodrich paid him $20,000 a year for half-time work [S6].
+In 1914 a group of publishers paid him $25,000 to advise what advertisers could do to get better results, and the advice became *Intensive Advertising* [S7]. His claim was that space is only a multiplier: put in 2% selling and 98% filler and you multiply the 2%, put in 98% selling and you get far more from the same space [S7]. He used the dead mascots of the day ("Sunny Jim", "Spotless Town") as proof that name-only advertising fades once the money stops [S7]. His choice was to argue in the buyers' own language, with an image of French market gardens that earn many times more per acre by working a small plot hard [S7].
 
 ## Where he stood
 
@@ -141,6 +142,19 @@ He stayed at Lord & Thomas just over two years [S6]. He then worked as a highly 
 - Was paid $20,000 a year for half-time work by B.F. Goodrich [S6].
 - Died January 8, 1928, in Michigan [S5].
 - Entered the Advertising Hall of Fame in 1999 [S6].
+
+## More from *Intensive Advertising* (1914)
+
+- **Good advertising is news.** Display without news interest is not read; a heading with live news for the people who might buy lets you use plain type and little white space [S7].
+- **Length follows content.** An ad should be just long enough to reach the sale, no longer and no shorter. A dull ad should be short, a good one can run as long as a magazine article [S7].
+- **Do not advertise the advertising.** Clever catch phrases leave the reader remembering the phrase, not the goods [S7].
+- **Study the buyers first.** List typical buyers, interview them, ask why they have not bought or bought more, list their likely objections, then find the strongest answer to each [S7].
+- **Lead with what is exclusive.** Saying a machine cuts ice is useless against rivals that also cut ice; say how much, at what cost, and why [S7].
+- **Dig the news out of the subject.** The heading's news must be real to the buyer; far-fetched headings leave the reader feeling tricked [S7].
+- **Plain words.** Write so a child of twelve could follow; he says elaborate phrasing seems to breed suspicion [S7].
+- **Put everything in one ad.** Write each ad as though it were the only one, then cut needless words and then spare selling thoughts [S7].
+- **Strong ending.** Close by making it easy to take a step towards buying [S7].
+- **Repeat what works.** One strong piece beats fifty weak ones, and good mail-order ads run for years unchanged [S7].
 
 ## Where he was wrong or criticised
 

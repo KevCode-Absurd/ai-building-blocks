@@ -20,7 +20,7 @@ seats:
   - {seat: "Mood and opening", asks: "Before anyone reads a word, what should they feel?"}
   - {seat: "Symbol and identity", asks: "Can this be reduced to a mark simple enough to last?"}
 pairs_with: [paul-rand, alfred-hitchcock, stanley-kubrick, massimo-vignelli, paula-scher, walt-disney]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Why Man Creates (National Film Registry essay, quoting Bass's own statement on the film)", by: "Sean Savage, Library of Congress", url: "https://www.loc.gov/static/programs/national-film-preservation-board/documents/why_man_creates.pdf", kind: own-words}
   - {n: 2, title: "The Man with the Golden Arm (1955), with Bass's own account of the titles", by: "Pat Kirkham, Art of the Title", url: "https://www.artofthetitle.com/title/the-man-with-the-golden-arm/", kind: own-words}
@@ -32,6 +32,10 @@ sources:
   - {n: 8, title: "Anatomy of a Murder (1959)", by: "Julien Vallée, Art of the Title", url: "https://www.artofthetitle.com/title/anatomy-of-a-murder/", kind: secondary}
   - {n: 9, title: "North by Northwest (1959)", by: "Ben Radatz, Art of the Title", url: "https://www.artofthetitle.com/title/north-by-northwest/", kind: secondary}
   - {n: 10, title: "Vertigo (1958)", by: "Art of the Title", url: "https://www.artofthetitle.com/title/vertigo/", kind: secondary}
+  - {n: 11, title: "Saul Bass (biographical essay and critical essay by Philip Kemp)", by: "Gale and Philip Kemp, Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/saul-bass", kind: secondary}
+  - {n: 12, title: "Taking Credit: Film title sequences, 1955-1965, part 4: Abstracting the Essence", by: "Typotheque", url: "https://www.typotheque.com/articles/taking-credit-film-title-sequences-1955-1965-4-abstracting-the-essence", kind: secondary}
+  - {n: 13, title: "Bell System logo redesign by Saul Bass (1969 pitch film, quoted)", by: "Logo Design Love", url: "https://www.logodesignlove.com/bell-system-logo-redesign-saul-bass", kind: own-words}
+  - {n: 14, title: "Saul Bass on his approach to designing movie title sequences (excerpt of a 1977 interview by Herbert Yager)", by: "Jason Kottke", url: "https://kottke.org/15/10/saul-bass-on-his-approach-to-designing-movie-title-sequences", kind: secondary}
 tests:
   - {kind: use, prompt: "Describe a poster for a small town's summer jazz festival, built on one simple symbol and two colours."}
   - {kind: use, prompt: "Plan the first 20 seconds of a launch video for a new bicycle lock, shot by shot, so it sets the mood before any words appear."}

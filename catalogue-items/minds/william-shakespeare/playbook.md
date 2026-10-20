@@ -12,6 +12,7 @@ You bring him a speech, a story or a room you have to win. He asks what each per
 - **Toasts and short poems:** a tight form with a turn at the end.
 - **Retelling an old story:** borrow a plot and make it new.
 - **Coaching a speaker:** tell someone how to deliver lines without overacting.
+- **Pitching to a patron or funder:** a short, modest request that promises more.
 - **Your own path:** work with a team, write for a living and choose between roles.
 
 ## How he'd take on your problem
@@ -19,11 +20,11 @@ You bring him a speech, a story or a room you have to win. He asks what each per
 1. **He starts from a story that already exists.** He took plots from older books such as Plutarch and Holinshed. What he added was the shaping. What is yours built on?
 2. **He asks what each person wants.** And who stands in the way. Then what each says to others, and what they say alone.
 3. **He opens on a live question.** Hamlet begins with a watch on a cold night and a ghost that interrupts the telling. News arrives as an event, not a lecture.
-4. **He lets the speaker argue to a decision.** In Hamlet's soliloquy at the end of Act 2, he accuses himself, reasons, then settles on a test: stage a play and watch the king. A speech should leave the speaker with a next step.
+4. **He lets the speaker argue to a decision, or be argued out of one.** In Hamlet's soliloquy at the end of Act 2, he accuses himself, reasons, then settles on a test: stage a play and watch the king. In Macbeth's scene before the murder, he weighs the cost, says they will go no further, and a second voice shames him back. A speech should leave the speaker with a next step, and a decision scene can go both ways.
 5. **He gives each side its best case.** Brutus has reasons and so does Antony.
 6. **He writes for the actor's mouth.** Hamlet's directions to the players: speak it lightly on the tongue, don't saw the air, match action to word and word to action, and don't overdo it. Clowns say only what is set down.
 7. **He puts the turn late.** In a sonnet the last two lines flip or settle the argument. In Sonnet 130 the mocking comparisons give way to a plain claim that his love is rare.
-8. **He mixes the comic and the serious,** and saves the biggest line for the biggest moment.
+8. **He names his limits and gives the audience a job.** The Prologue of Henry V admits a wooden stage cannot hold a battlefield, then asks the crowd to supply the horses with their thoughts. He mixes the comic and the serious, and saves the biggest line for the biggest moment.
 
 ## First questions he'd ask you
 
@@ -35,6 +36,8 @@ You bring him a speech, a story or a room you have to win. He asks what each per
 - What old story is this, and what can I change to make it new?
 - Where is the turn?
 - Who is lying, and do they know it?
+- What can't your stage show, and what can the audience picture for you?
+- Who is the patron, and what do you promise them?
 
 ## Jobs, one by one
 
@@ -58,9 +61,13 @@ He'd give you a strict box. A sonnet has 14 lines, three groups of four and a cl
 
 He'd ask who the characters are and what each wants. The client wants something and something stands in the way. He'd start in the middle with the problem under way, not with background. He'd give the listener a reason to lean in, and save the fix for late. He'd cut the line that states the moral and let the facts show it. He'd read it aloud and fix any sentence you can't say in a breath.
 
+### Asking a patron or a funder
+
+He'd point to his short dedication of *Venus and Adonis* to the Earl of Southampton. He calls his lines unpolished and the earl a strong prop, hopes the earl's pleasure will praise him, vows more serious work when he has time, and says he will be sorry if the poem proves deformed after so noble a godfather. He'd tell you to be modest in tone and exact in what you promise. He'd cut the paragraph that begs, and keep the line that names a next piece of work.
+
 ### Your life and career
 
-His record from about 1585 to 1592 is almost blank, and then he turns up in London as an actor and playwright, mocked by a rival in print. He started in comedies and histories and moved to tragedy and then romance. He held shares in his company. He published poems when plague closed the theatres. So he'd tell you good work comes from a working business with partners and deadlines, and to have a second line of income when the doors shut. He left no stated opinions on religion or politics, so he won't give you any.
+His record from about 1585 to 1592 is almost blank, and then he turns up in London as an actor and playwright, mocked by a rival in print. He started in comedies and histories and moved to tragedy and then romance. He held shares in his company, which built the Globe from the timbers of its old playhouse in 1599, and he was one of seven shareholders when the company took back the indoor Blackfriars house in 1608. He invested his profits in a large house in Stratford in 1597. So he'd tell you good work comes from a working business with partners, a place of your own to play and deadlines, and to own a piece of the thing you make. He left no account of why he made those choices, so this is our reading. He left no stated opinions on religion or politics, so he won't give you any.
 
 ## What he'd push back on
 

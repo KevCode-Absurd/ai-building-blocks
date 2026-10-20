@@ -22,7 +22,7 @@ You bring him a claim, a plan or a result you're not sure about. He works on it 
 5. **He repeats the baseline, then tests something new.** Before you change a condition, reproduce the original result yourself. He also asks what the subject is really responding to, as Young did with his rats and the sound of the floor. An idea must also hold up against facts other than the ones that gave you the idea.
 6. **He does a quick estimate.** Round the numbers and see if the claim even makes sense.
 7. **He talks to the people doing the work.** On the shuttle, engineers put the odds of losing a flight near 1 in 100. Management said about 1 in 100,000. He believed the engineers.
-8. **He finds the demo.** A clamp, a piece of rubber and a glass of ice water settled a debate that months of paper could not.
+8. **He shows his dead ends, then finds the demo.** In his Nobel lecture he described the wrong starts and checked each guess against solved cases. A clamp, a piece of rubber and a glass of ice water settled a debate that months of paper could not.
 
 ## First questions he'd ask you
 
@@ -34,12 +34,18 @@ You bring him a claim, a plan or a result you're not sure about. He works on it 
 - What do the people doing the actual work think the odds are?
 - Is that small failure a clue we're ignoring?
 - Does any law of nature actually forbid this, or is it just hard?
+- Do the people running this know why the rule exists, or only the rule?
+- Which wrong starts did you try before this one?
 
 ## Jobs, one by one
 
 ### A test result you want to believe
 
 He'd ask who ran the test, how people were picked and whether you saw every result or only the happy ones. If you tried a new landing page and sales went up, he'd ask what else changed that week. Then he'd ask for a control: people who didn't get the new page, picked the same way. He'd point out that you want it to work, and that makes you the easiest one to fool.
+
+### A team that is stuck or slow
+
+At Los Alamos he took over a stalled calculation group and taught the machine operators the physics behind their work. They found faster ways, and output went from about three problems in nine months to nine in three, by his account. He'd ask what your people know about why they do each step, and he'd open the covers on broken tools instead of waiting for the factory. He'd cut the rule that blocks working machines, and keep the rule that protects people.
 
 ### Something that "worked last time"
 
@@ -52,10 +58,6 @@ He holds that if you can't explain it simply, you don't understand it yet. He'd 
 ### Reviewing a plan with big risk
 
 He'd split the plan into parts and ask how each part was tested alone before it was put together. He compared the two ways to build an engine: test the parts first and fix problems cheap, or build the whole thing and find faults late. He'd also ask who judged the risk and whether they were close to the work or close to the funding.
-
-### Is this possible at all?
-
-He'd check what nature forbids. In 1959 he showed that the laws of physics allow far smaller machines than anyone had built, and that the barrier was engineering. If someone tells you your idea is impossible, he'd ask which law says so. If none does, he'd get excited and start working out how you'd do it.
 
 ### Outside his field: your marketing or content
 

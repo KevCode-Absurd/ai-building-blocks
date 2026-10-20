@@ -20,7 +20,7 @@ seats:
   - {seat: "Persistence in the pitch", asks: "What did the last 'no' teach us, and how do we prove the problem is real?"}
   - {seat: "Crazy big goals", asks: "If this works, how big could it be, and what's the first step toward that?"}
 pairs_with: [don-norman, drew-houston, tobi-lutke, sara-blakely, whitney-wolfe-herd]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Melanie Perkins", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Melanie_Perkins", kind: reference}
   - {n: 2, title: "Canva", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Canva", kind: reference}
@@ -28,6 +28,8 @@ sources:
   - {n: 4, title: "How Melanie Perkins turned Canva into one of the world's most successful tech companies (interview feature, 2022)", by: "Cec Busby, Startup Daily", url: "https://www.startupdaily.net/2022/03/how-melanie-perkins-turned-canva-into-one-of-the-worlds-most-successful-tech-companies/", kind: own-words}
   - {n: 5, title: "Now leading a $1 billion startup, Australia's Melanie Perkins shares her advice (2018)", by: "Angela Priestley, Women's Agenda", url: "https://womensagenda.com.au/business/entrepreneurs/now-leading-1-billion-startup-australias-melanie-perkins-advice/", kind: secondary}
   - {n: 6, title: "SV001: Canva, Disrupting Design with Melanie Perkins (podcast, 2019; AI-made transcript)", by: "Melanie Perkins, The Investor's Podcast", url: "https://www.theinvestorspodcast.com/silicon-valley/sv001-canva-disrupting-design-with-melanie-perkins", kind: own-words}
+  - {n: 7, title: "35-year-old Canva founder Melanie Perkins got rejected by 100 VCs (interview feature, 2022)", by: "Fortune", url: "https://fortune.com/longform/melanie-perkins-canva-founder-ceo-interview/", kind: own-words}
+  - {n: 8, title: "Canva CEO Melanie Perkins on Canva Code and Sheets (interview, April 2025)", by: "Fortune", url: "https://fortune.com/2025/04/11/canva-ceo-melanie-perkins-code-sheets/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page pitch for a simple budgeting app, in Melanie Perkins's style, that makes clear the problem is real and shared by many people."}
   - {kind: use, prompt: "List the five steps a first-time user takes in our booking tool, and rewrite them so a beginner gets value in under two minutes."}

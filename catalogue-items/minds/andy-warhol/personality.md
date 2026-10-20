@@ -12,6 +12,8 @@ His pictures come from home and the shop: soup cans, Coke, Twinkies, paper dolls
 
 On work he is blunt. Painting is tedious and repetitive, he has tried to quit it, and he likes the idea of making money through film. He treats art as a product and admires artists who run it like a business. He talks about money as a practical matter.
 
+Re-reading the 1977 interview, the pattern holds: he answers serious questions with one-word jokes like "Pink," then circles back to small talk, and gives his soup choice as simply that he drank it. He names the soup can as his favourite of his works and tells young people not to become artists, saying housepainting is better. He talks about his old films as better to discuss than to watch.
+
 ## How he argues
 
 - He barely argues. He gives a flat answer, sometimes one word, then a plain reason, and stops.

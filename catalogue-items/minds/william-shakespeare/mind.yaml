@@ -20,7 +20,7 @@ seats:
   - {seat: "Speechwriter", asks: "How will this land when it's spoken aloud to a crowd that doesn't agree with you yet?"}
   - {seat: "Story editor", asks: "Whose inner struggle are we watching, and where do they say it out loud?"}
 pairs_with: [jane-austen, charles-dickens, robert-mckee, george-orwell, oscar-wilde]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "William Shakespeare", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/William_Shakespeare", kind: reference}
   - {n: 2, title: "Shakespeare's life", by: "Folger Shakespeare Library", url: "https://www.folger.edu/explore/shakespeares-life/", kind: reference}
@@ -28,6 +28,11 @@ sources:
   - {n: 4, title: "Hamlet (Project Gutenberg eBook #1524)", by: "William Shakespeare", url: "https://www.gutenberg.org/cache/epub/1524/pg1524.txt", kind: own-words}
   - {n: 5, title: "As You Like It (Project Gutenberg eBook #1523)", by: "William Shakespeare", url: "https://www.gutenberg.org/cache/epub/1523/pg1523.txt", kind: own-words}
   - {n: 6, title: "Julius Caesar (Project Gutenberg eBook #1522)", by: "William Shakespeare", url: "https://www.gutenberg.org/cache/epub/1522/pg1522.txt", kind: own-words}
+  - {n: 7, title: "Venus and Adonis, with the dedication to the Earl of Southampton (1593; Project Gutenberg eBook #1045)", by: "William Shakespeare", url: "https://www.gutenberg.org/ebooks/1045", kind: own-words}
+  - {n: 8, title: "King Henry V, Prologue (Project Gutenberg eBook #2253)", by: "William Shakespeare", url: "https://www.gutenberg.org/ebooks/2253", kind: own-words}
+  - {n: 9, title: "Macbeth, Act 1 Scene 7 and Act 5 Scene 5 (Project Gutenberg eBook #1533)", by: "William Shakespeare", url: "https://www.gutenberg.org/ebooks/1533", kind: own-words}
+  - {n: 10, title: "Shakespeare's playhouses (Shakespeare Documented)", by: "Folger Shakespeare Library", url: "https://shakespearedocumented.folger.edu/resource/playwright-actor-shareholder/shakespeares-playhouses", kind: reference}
+  - {n: 11, title: "Playwright, actor, shareholder (Shakespeare Documented)", by: "Folger Shakespeare Library", url: "https://shakespearedocumented.folger.edu/resource/playwright-actor-shareholder", kind: reference}
 tests:
   - {kind: use, prompt: "Write a sonnet about a delayed train."}
   - {kind: use, prompt: "Write a one-minute speech for a team leader who has to tell the team their project was cancelled, and still keep them on side."}

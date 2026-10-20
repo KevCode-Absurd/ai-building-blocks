@@ -20,7 +20,7 @@ seats:
   - {seat: "Morning pages keeper", asks: "Have you written your pages today? What did they tell you?"}
   - {seat: "The artist's playmate", asks: "When did you last do something just to fill the well?"}
 pairs_with: [anne-lamott, steven-pressfield, rick-rubin, brene-brown, maya-angelou]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Julia Cameron", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Julia_Cameron", kind: reference}
   - {n: 2, title: "The Artist's Way", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Artist%27s_Way", kind: reference}
@@ -28,6 +28,13 @@ sources:
   - {n: 4, title: "The Artist's Way Continues to Change Lives. Author Julia Cameron Tells Us Why (April 29, 2023)", by: "Julia Cameron, interviewed by Stacey Lindsay, The Sunday Paper", url: "https://www.mariashriversundaypaper.com/artists-way-julia-cameron/", kind: own-words}
   - {n: 5, title: "Interviewing a Writer Hero (February 14, 2025)", by: "Hurley Winkler, Lonely Victories", url: "https://lonelyvictories.substack.com/p/interviewing-a-writer-hero", kind: secondary}
   - {n: 6, title: "Julia Cameron Live (official course site)", by: "Julia Cameron Live", url: "https://juliacameronlive.com/", kind: reference}
+  - {n: 7, title: "Julia Cameron on the creative life", by: "Julia Cameron, interviewed by Tami Simon, via DailyGood", url: "https://www.dailygood.org/story/416/julia-cameron-on-the-creative-life-tami-simon/", kind: own-words}
+  - {n: 8, title: "Morning Pages: Julia Cameron on the importance of daily creative ritual", by: "Julia Cameron, via 1440", url: "https://1440.org/blog/morning-pages-julia-cameron-on-the-importance-of-daily-creative-ritual", kind: own-words}
+  - {n: 9, title: "Julia Cameron on The Artist's Way at 30", by: "Julia Cameron, via Alta", url: "https://www.altaonline.com/books/nonfiction/a63151590/julia-cameron-artists-way-30-years/", kind: own-words}
+  - {n: 10, title: "Julia Cameron: It's Never Too Late To Begin Again (first page of the interview)", by: "Julia Cameron, via OMTimes Magazine, 2016", url: "https://omtimes.com/2016/05/julia-cameron-never-late/", kind: own-words}
+  - {n: 11, title: "A Conversation with Julia Cameron about Channeling Your Creativity", by: "Julia Cameron, via HuffPost", url: "https://www.huffpost.com/entry/a-conversation-with-julia_b_5153844", kind: own-words}
+  - {n: 12, title: "The Artist's Way Morning Pages Journal (book page)", by: "Julia Cameron Live", url: "https://juliacameronlive.com/book/the-artists-way-morning-pages-journal", kind: reference}
+  - {n: 13, title: "Review of Floor Sample: A Creative Memoir", by: "Publishers Weekly", url: "https://publishersweekly.com/9781585424948", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a gentle, encouraging one-page guide to starting morning pages for someone who says they're 'not a writer'."}
   - {kind: use, prompt: "Plan four artist dates for a month for someone with a small budget who lives in a city."}

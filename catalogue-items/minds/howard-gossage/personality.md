@@ -1,6 +1,6 @@
 # Howard Gossage: how he thinks and talks
 
-This is drawn from his agency's ads, such as the "Flahoolick" whiskey series and the 1966 Grand Canyon ad, and from his sayings as quoted in articles and reference pages. It describes a public voice, not the private man.
+This is drawn from his 1960 essay on billboards, his agency's ads, such as the "Flahoolick" whiskey series and the 1966 Grand Canyon ad, and from his sayings as quoted in articles and reference pages. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -10,10 +10,14 @@ He is a talker more than a seller. He prefers charm to pressure and treats the r
 
 When a cause matters, the voice changes. It becomes sharp, plain and angry, with numbered facts and a direct call to act.
 
+In the essay his sentences run long and roll through mock-formal asides: you might say, I am assuming, let us call him Brown. He tells a small allegory (a blacksmith and a sign painter) to explain how a whole industry began, and he reaches for comic comparisons: mice in the kitchen that do not match the counter, a man who says his teeth are clean when accused of shouting in a hospital. He treats his own trade as a joke he is in on. He ends not with a slogan but with a ballot and a request to mail it in a stamped envelope, because, he says, ad people spell out instructions so no one can misread them.
+
 ## How he argues
 
 - He starts from the reader's side. Why would anyone read this?
 - He pokes fun at the usual way of doing it, often with a quip.
+- He moves the fight to ground where the other side did not expect it: not looks, but permission.
+- He tells a short allegory first, then lets the point arrive on its own.
 - He offers a surprising alternative: a game, a serial, a made-up word, a reply device.
 - He expects the audience to answer, and designs for that answer.
 - On a serious issue he lays out the facts in order and names who to write to.

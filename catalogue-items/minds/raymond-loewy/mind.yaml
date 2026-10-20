@@ -20,7 +20,7 @@ seats:
   - {seat: "Design that sells", asks: "Does this make the product easier to advertise and easier to sell?"}
   - {seat: "Never leave well enough alone", asks: "It sells today. What will a sharper rival do to it in three years?"}
 pairs_with: [henry-ford, dieter-rams, jony-ive, paul-rand, rory-sutherland]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Essen speech (typed draft, Paris, September 21, 1955)", by: "Raymond Loewy, via Transatlantic Perspectives (German Historical Institute)", url: "https://www.transatlanticperspectives.org/wp-content/uploads/2018/07/05-loewy-speech.pdf", kind: own-words}
   - {n: 2, title: "Letter to Michel Erussard of Renault (December 13, 1973)", by: "Raymond Loewy, via Transatlantic Perspectives (Hagley Museum and Library)", url: "https://www.transatlanticperspectives.org/wp-content/uploads/2018/07/06-loewy-renault.pdf", kind: own-words}
@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "\"I'm An American\": Raymond Loewy (NBC radio, May 11, 1941, catalogue record)", by: "United States Holocaust Memorial Museum, via EHRI", url: "https://portal.ehri-project.eu/units/us-005578-irn615676-irn620835", kind: reference}
   - {n: 6, title: "Speech by Raymond Loewy, Essen (Germany), 1955 (document page)", by: "Transatlantic Perspectives", url: "https://www.transatlanticperspectives.org/documents/loewy-speech/", kind: reference}
   - {n: 7, title: "Raymond Loewy (quotations with cited sources)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Raymond_Loewy", kind: secondary}
+  - {n: 8, title: "Raymond Loewy: a message from a grand old man (interview, Design magazine, May 1980)", by: "Raymond Loewy, via woudhuysen.com", url: "https://woudhuysen.com/raymond-loewy-a-message-from-a-grand-old-man", kind: own-words}
 tests:
   - {kind: use, prompt: "Redesign the label of a 40-year-old jam brand so it feels new to young buyers but long-time fans still recognise it. Describe it in words."}
   - {kind: use, prompt: "Write a one-page critical review of our main competitor's product, pointing out what they did well, what they missed and where trends are moving."}

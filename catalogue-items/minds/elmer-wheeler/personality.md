@@ -1,6 +1,6 @@
 # Elmer Wheeler: how he thinks and talks
 
-This is drawn from his books Sizzlemanship (1940) and Tested Direct Selling (1942), and from how others quoted and described his 1937 book and talks. It describes a public voice, not the private person.
+This is drawn from his books Sizzlemanship (1940) and Tested Direct Selling (1942), and from how others quoted and described his 1937 book and talks. In 2026 we read more of Sizzlemanship; there are no speeches or interviews of his online that we could open. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -11,6 +11,8 @@ His examples are small, real scenes from shop floors, petrol stations, soda foun
 He uses plain, homely images: steaks, cavemen, watchdogs, little dogs with one bark. He's warm with the reader, often speaking straight to "you", and he enjoys a joke. The pace is quick. He gets to the line, shows the result and moves on.
 
 In *Tested Direct Selling* he addresses the reader as "friends," capitalises his named ideas (Tested Sales Talk, Sizzle, Fizzle, Wheelerpoints) and puns freely: send your sizzle R.F.D. and it goes cold, perfume your words but don't daub it on, be a Question Mark salesperson, not an Exclamation Point one. He teases himself and the reader, and drops in a story from his sizzle schools or a trip to Mexico or Cuba. Rules are stated in bold one-liners: it isn't what you sell, it's how you sell it.
+
+He names the people and firms behind his stories (a store executive, a barber called Joe, an airline, a razor maker) and gives the old line and the new one side by side, then a number. He also scolds with a smile: no gushing, no flattery that isn't sincere, no high pressure, no frightening people with threats. He coins neat rules such as "Sell Nellie, not Elmer" (the wife often decides) and a four-verb close (you want it, like it, need it and can afford it).
 
 ## How he argues
 

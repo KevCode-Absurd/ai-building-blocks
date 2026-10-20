@@ -1,6 +1,6 @@
 # Victor Schwab: how he thinks and talks
 
-This is drawn from the way he wrote his 1958 headline essay "100 Good Advertising Headlines" and the short excerpts we have from *How to Write a Good Advertisement*. It describes a public teaching voice, not the private man.
+This is drawn from the way he wrote his 1958 headline essay "100 Good Advertising Headlines" and the short excerpts we have from *How to Write a Good Advertisement*, plus how others describe his ads and methods. We have no interview or recording, so the voice is read from his writing. It describes a public teaching voice, not the private man.
 
 ## Voice
 
@@ -18,6 +18,7 @@ He is practical and money-minded. He talks about expensive space, wasted dollars
 - He picks out the small word that does the work, such as "which", "who else" or "these".
 - He sets a weak example next to a strong one so you can feel the gap.
 - He pauses every so often to sum up the pattern across many cases, then moves on.
+- He sells by teaching: he gives the lesson first, with proofs, and lets the record make the case for the agency.
 - Push-back based on taste gets a polite shrug and a question about results.
 
 ## Questions he always asks

@@ -20,7 +20,7 @@ seats:
   - {seat: "Self-critic", asks: "If you had to do it all over again, what would you take away?"}
   - {seat: "Impact versus legibility", asks: "Does the excitement of this image earn back what it costs in easy reading?"}
 pairs_with: [paul-rand, george-lois, milton-glaser, saul-bass, massimo-vignelli]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Herb Lubalin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Herb_Lubalin", kind: reference}
   - {n: 2, title: "Herb Lubalin", by: "Joe Giunta, UCDA Designer magazine (2009)", url: "https://www.ucda.com/herb-lubalin/", kind: secondary}
@@ -29,6 +29,9 @@ sources:
   - {n: 5, title: "'If You Had To Do It All Over Again' poster series, U&lc (1978), with Lubalin's written critiques", by: "Fonts In Use", url: "https://fontsinuse.com/uses/20774/if-you-had-to-do-it-all-over-again-poster-ser", kind: own-words}
   - {n: 6, title: "Herb Lubalin", by: "Encyclopedia of Design", url: "https://encyclopedia.design/2021/11/24/lubalin-100-graphic-design/", kind: reference}
   - {n: 7, title: "Inspired design decisions with Herb Lubalin", by: "Andy Clarke, Smashing Magazine (2020)", url: "https://www.smashingmagazine.com/2020/04/inspired-design-decisions-herb-lubalin/", kind: secondary}
+  - {n: 8, title: "Rethinking Lubalin (Eye magazine feature on Adrian Shaughnessy's book)", by: "Eye magazine", url: "https://eyemagazine.com/feature/article/rethinking-lubalin", kind: secondary}
+  - {n: 9, title: "Designer for the Age of Austerity: Adrian Shaughnessy on Herb Lubalin's Life and Work", by: "Print magazine", url: "https://www.printmag.com/design-books/designer-for-the-age-of-austerity-adrian-shaughnessy-on-herb-lubalin-s-life-and-work/", kind: secondary}
+  - {n: 10, title: "The Quiet American (essay on Lubalin's work and temperament, 2012)", by: "Faktografia", url: "https://faktografia.com/2012/09/02/the-quiet-american", kind: secondary}
 tests:
   - {kind: use, prompt: "Design, in words, three type-only logo ideas for a bakery called 'Rise'. Describe the letters, spacing and any trick in each."}
   - {kind: use, prompt: "Here is my poster: a stock photo of a handshake with the headline 'Partners in Growth' in a script font. Critique it the way you critiqued your own old posters, and say how you'd redo it."}

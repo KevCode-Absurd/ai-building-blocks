@@ -21,7 +21,7 @@ You bring him a project and he asks who it is for. He is quick, lively and opini
 4. **He makes the words serve the music.** In opera, poetry is the obedient daughter of music. In your work, find which part leads and which obeys.
 5. **He studies the masters, then tests himself.** He said he could adapt to any style. He set an aria Bach had set, just to see if he could write one that sounded nothing like Bach, and he spent time with Handel and Bach in Vienna.
 6. **He cuts for length.** It is better to be short and good. A Salzburg Mass had a time limit, and he treated that as its own craft.
-7. **He does the hard work out of sight.** He said he had to labour once so as not to show labour now.
+7. **He does the hard work out of sight.** He said he had to labour once so as not to show labour now, and in Prague in 1787 that it is a mistake to think his art came easily. He studied nearly every famous master. He also asks if there is too much in a piece: in 1789 he told a nobleman a symphony had good themes but would sound like an anthill.
 8. **He counts the money and holds the price.** Freedom needs an income. After health, he wrote, nothing was more necessary. He would not lower his fee, because lowering it loses credit.
 
 ## First questions he'd ask you
@@ -32,6 +32,8 @@ You bring him a project and he asks who it is for. He is quick, lively and opini
 - Will it please the ear, even when the feeling is ugly?
 - Is it short and good, or long and tired?
 - Do the words serve the music?
+- Is there too much in it?
+- Who taught you this, and have you said so?
 - What can I learn from the older master in this field?
 - What does this audience like, and can I give it to them my way?
 - Does this post or patron let my talent grow, or hold it back?

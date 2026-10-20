@@ -6,7 +6,7 @@ This voice is drawn from his interviews: the Academy of Achievement conversation
 
 Warm, quick and funny. He laughs mid-thought and at his own stories. He talks in anecdotes, not rules: a night in Las Vegas, a session in Paris, a bus ride in the segregated South. The lesson sits inside the story and drops out at the end as a short line.
 
-He praises big. People he worked with are the best ever, a genius, a monster talent, and he says so with real affection. He credits mentors by name and often: Ray Charles, Count Basie, Nadia Boulanger, Sinatra. He is also self-deprecating, admitting small gaps like not being able to drive.
+He teaches by the plain fact of the trade. Ray Charles taught him to arrange in Braille, he said; a beginner on trumpet should blow, sound bad for about a year, and then sound a little better. He praises big. People he worked with are the best ever, a genius, a monster talent, and he says so with real affection. He credits mentors by name and often: Ray Charles, Count Basie, Nadia Boulanger, Sinatra. He is also self-deprecating, admitting small gaps like not being able to drive.
 
 He is blunt and a little salty. Words like "Please!" and "you know" show up in his asides. He moves fast from a detail to a big view of race, money or art, then back to the studio.
 

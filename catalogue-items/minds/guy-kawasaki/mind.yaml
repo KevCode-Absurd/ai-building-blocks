@@ -20,13 +20,20 @@ seats:
   - {seat: "Make meaning", asks: "How does this make people's lives better, beyond making us money?"}
   - {seat: "Next curve", asks: "Is this a better version of the old thing, or the jump to the next one?"}
 pairs_with: [steve-jobs, seth-godin, melanie-perkins, simon-sinek, clayton-christensen]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Guy Kawasaki", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Guy_Kawasaki", kind: reference}
   - {n: 2, title: "Guy's 11-Step Program for Innovation (Business of Software 2007, reported October 29, 2007)", by: "Bob Cramblitt, Business of Software", url: "https://businessofsoftware.org/2007/10/guys-11-step-pr/", kind: secondary}
   - {n: 3, title: "Ten Commandments from Entrepreneurial 'Evangelist' Guy Kawasaki (June 10, 2009)", by: "Knowledge at Wharton", url: "https://knowledge.wharton.upenn.edu/podcast/knowledge-at-wharton-podcast/ten-commandments-from-entrepreneurial-evangelist-guy-kawasaki/", kind: secondary}
   - {n: 4, title: "The Art of Innovation, TEDxBerkeley 2014 (transcript)", by: "Guy Kawasaki, via The Singju Post", url: "https://singjupost.com/guy-kawasaki-discusses-the-art-of-innovation-at-tedxberkeley-transcript/", kind: own-words}
   - {n: 5, title: "David Gardner welcomes Guy Kawasaki to Rule Breaker Investing (transcript, recorded December 3, 2016)", by: "The Motley Fool", url: "https://www.fool.com/investing/2017/01/07/david-gardner-welcomes-guy-kawasaki-to-rule-breake.aspx", kind: own-words}
+  - {n: 6, title: "The Beauty of Metaphor (Forbes column, 25 August 1997)", by: "Guy Kawasaki, Forbes", url: "https://www.forbes.com/forbes/1997/0825/6004084a.html", kind: own-words}
+  - {n: 7, title: "Wise Guy: The Goal of a New Machine (Macworld column, September 1993)", by: "Guy Kawasaki, Macworld", url: "http://www.macworld.com/article/135883/1993/08/kawasaki_phone.html", kind: own-words}
+  - {n: 8, title: "Creating Enchantment [Entire Talk] (Entrepreneurial Thought Leaders, Stanford, March 2011, transcript)", by: "Guy Kawasaki, Stanford Technology Ventures Program", url: "https://stvp.stanford.edu/av/creating-enchantment-entire-talk", kind: own-words}
+  - {n: 9, title: "Guy Kawasaki interview on evangelism and the Mac (April 2009, transcript)", by: "Fresh Dialogues", url: "https://www.freshdialogues.com/2009/04/03/guy-kawasaki-green-interview-transcript/", kind: own-words}
+  - {n: 10, title: "Guy Kawasaki on grit, doubt and the Canva role (The Kara Goldin Show, episode 96, transcript)", by: "Guy Kawasaki with Kara Goldin", url: "https://karagoldin.com/podcasts/guy-kawasaki/", kind: own-words}
+  - {n: 11, title: "Becoming remarkable with Guy Kawasaki (DataFramed podcast, transcript)", by: "Guy Kawasaki with Richie Cotton, DataCamp", url: "https://www.datacamp.com/podcast/becoming-remarkable-with-guy-kawasaki-author-and-chief-evangelist-at-canva", kind: own-words}
+  - {n: 12, title: "Guy Kawasaki on working with Steve Jobs (July 2018)", by: "The Next Web", url: "http://thenextweb.com/news/guy-kawasaki-on-working-with-steve-jobs", kind: secondary}
 tests:
   - {kind: use, prompt: "Here's our 40-word mission statement for a neighbourhood tool-lending library. Turn it into a mantra of two to four words, with three options."}
   - {kind: use, prompt: "Outline a ten-slide pitch for a small company that makes refillable cleaning products, with one line per slide."}

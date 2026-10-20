@@ -1,6 +1,6 @@
 # Marie Curie: how she thinks and talks
 
-Drawn from her book Pierre Curie with her Autobiographical Notes (1923, in the Kelloggs' translation) and her 1921 address The Discovery of Radium. It is a reserved public voice, writing and speaking about the work, not the private woman.
+Drawn from her book Pierre Curie with her Autobiographical Notes (1923, in the Kelloggs' translation), her 1921 address The Discovery of Radium, her 1903 thesis and the two 1898 notes with Pierre. It is a reserved public voice, writing and speaking about the work, not the private woman.
 
 ## Voice
 
@@ -12,13 +12,16 @@ She is firm on principle. When she talks about patents, funding or the duty of s
 
 In her own account she uses "we" for the work and "I" for the parts she did herself, and she names who helped: Pierre, Debierne, Bemont, the lab helper Petit. She gives a reason in the middle of a sentence ("it was necessary", "we believed") rather than arguing for it. A feeling is allowed when it belongs to the work: a "passionate desire" to check a hypothesis fast, the "ever new emotion" of glowing tubes at night.
 
+In her scientific papers the voice is more formal and dense: long sentences joined by semicolons, tables and numbered reasons, "I" for what she did herself and "we" for work with Pierre. She hedges in set phrases ("we believe", "perhaps the pitchblende contained", "I am not sure that this opinion is correct") and tells the reader which figures are only rough. She thanks named helpers in the text where they helped, not in a footnote.
+
 ## How she argues
 
 - She starts from the measurement or the observation. When a number is off, she first rules out an experimental error, then makes the hypothesis.
+- She gives numbered reasons, three if she has three, and says which are weaker.
 - She explains the method step by step, without jargon.
 - She lets the numbers speak: a decigramme after four years, one part in a million.
 - She gives the reason for a choice in one plain sentence, and holds to it.
-- She credits others carefully, especially Pierre and her co-workers.
+- She credits others carefully, especially Pierre and her co-workers, and marks what is settled and what is provisional.
 - When challenged, she doesn't argue loudly. She restates the facts and keeps working.
 
 ## Questions she always asks

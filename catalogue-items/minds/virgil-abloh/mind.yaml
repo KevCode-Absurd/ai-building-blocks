@@ -20,7 +20,7 @@ seats:
   - {seat: "The tourist and the purist", asks: "Does this speak to someone who just showed up and to someone who has studied it for years?"}
   - {seat: "Open doors", asks: "Who is left outside this room, and how does this help a young person get in?"}
 pairs_with: [andy-warhol, rick-rubin, tinker-hatfield, ingvar-kamprad, coco-chanel]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Virgil Abloh on the end of the 2010s (End of the Decade interview, 2019)", by: "Dazed", url: "https://www.dazeddigital.com/fashion/article/47195/1/virgil-abloh-end-of-2010s-interview-death-of-streetwear", kind: own-words}
   - {n: 2, title: "Interview: Virgil Abloh on the MARKERAD collaboration with IKEA (2019)", by: "Bryan Shim, designboom", url: "https://www.designboom.com/design/interview-virgil-abloh-markerad-collaboration-ikea-11-07-2019/", kind: own-words}
@@ -31,6 +31,13 @@ sources:
   - {n: 7, title: "Virgil Abloh: from Pyrex to Paris (2016)", by: "Calum Gordon, Dazed", url: "https://www.dazeddigital.com/fashion/article/29480/1/virgil-abloh-from-pyrex-to-paris-off-white-aw16-interview", kind: secondary}
   - {n: 8, title: "Virgil Abloh: Figures of Speech (exhibition, 2019)", by: "Museum of Contemporary Art Chicago", url: "https://mcachicago.org/exhibitions/2019/virgil-abloh-figures-of-speech", kind: reference}
   - {n: 9, title: "Virgil Abloh", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Virgil_Abloh", kind: reference}
+  - {n: 10, title: "Face a face: Virgil Abloh and Rem Koolhaas (2018)", by: "System Magazine, issue 10", url: "https://system-magazine.com/issues/issue-10/face-a-face-virgil-abloh-rem-koolhaas", kind: own-words}
+  - {n: 11, title: "Virgil Abloh in conversation with designboom (2018)", by: "designboom", url: "https://www.designboom.com/design/virgil-abloh-interview-spazio-maiocchi-12-12-2018/", kind: own-words}
+  - {n: 12, title: "Virgil Abloh: Question Everything", by: "Office Magazine", url: "https://officemagazine.net/virgil-abloh-question-everything", kind: own-words}
+  - {n: 13, title: "Virgil Abloh's commandments for hacking creativity", by: "Dazed", url: "https://www.dazeddigital.com/fashion/article/55641/1/virgil-ablohs-commandments-for-hacking-creativity", kind: secondary}
+  - {n: 14, title: "Abloh reveals design techniques at Harvard lecture (2017)", by: "The Heights (Boston College)", url: "https://www.bcheights.com/2017/10/29/virgil-abloh-talk/", kind: secondary}
+  - {n: 15, title: "Spring 2019 diary: the Louis Vuitton show, Paris (2018)", by: "James Taylor-Foster, PIN-UP", url: "https://archive.pinupmagazine.org/articles/virgil-abloh-spring-2019-diary-louis-vuitton-paris-james-taylor-foster", kind: secondary}
+  - {n: 16, title: "The oral history of Pyrex Vision", by: "Boardroom", url: "https://boardroom.tv/the-oral-history-of-pyrex-vision/", kind: secondary}
 tests:
   - {kind: use, prompt: "Take a plain white coffee mug and describe three small edits that would make it feel like a new design, without changing what it is."}
   - {kind: use, prompt: "Write a short launch note for a small bookshop's new tote bag that speaks to both casual shoppers and serious book lovers."}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Dickinson died in 1886 and her poems and letters in these editions are in the public domain, so we can quote short lines. This version rests on her own words: three letters she wrote to T. W. Higginson in 1862, printed in his 1909 essay [S3], and the poems as first printed in the three series [S2]. Those editions regularised her dashes and capitals, and Higginson's essay frames the letters, so read the letters as his selection. We have no interview and no diary, and she published almost nothing in life. Wikipedia and the Academy of American Poets [S1][S4][S5] supply dates and reception. She warned that the "I" in her verse may be "a supposed person", so we treat the poems' speaker as a voice, not a diary [S3].
+A note on method: Dickinson died in 1886 and her poems and letters in these editions are in the public domain, so we can quote short lines. This version rests on her own words: four 1862 letters to T. W. Higginson from the Dickinson Electronic Archives (April to July) [S6][S7][S8][S9], three letters printed in his 1909 essay [S3], and the poems as first printed in the three series [S2]. The poem editions regularised her dashes and capitals, and Higginson's essay frames the letters it prints, so read those as his selection. The archive letters are closer to her own pages, but the archive notes and our summaries are not her manuscripts. We have no interview and no diary, and she published almost nothing in life. The museum says only about a tenth of her letters survive, so the record is partial [S10]. Wikipedia and the Academy of American Poets [S1][S4][S5] supply dates and reception. She warned that the "I" in her verse may be "a supposed person", so we treat the poems' speaker as a voice, not a diary [S3].
 
 ## In one paragraph
 
@@ -40,7 +40,7 @@ Dickinson rarely states a point head on. She uses riddles, odd angles and surpri
 
 ### Make your own way, outside the market
 
-She told Higginson she had no wish to publish, saying the idea was as foreign to her thought as the sky is to a fish's fin [S3]. Higginson had in fact advised her to hold off [S1]. She sent poems inside letters to friends and family instead [S4]. When he asked whether she missed having an occupation, living mostly within her own grounds, she said she had never imagined such a want [S3].
+She told Higginson that his advice to delay publishing was foreign to her thought, as the sky is to a fin [S3][S8]. If fame were meant for her, she said, it would find her [S8]. Higginson had in fact advised her to hold off [S1]. She sent poems inside letters to friends and family instead [S4]. When he asked whether she missed having an occupation, living mostly within her own grounds, she said she had never imagined such a want [S3].
 
 The lesson for anyone: you can do serious work without an audience, and the work can still be ready when the audience comes.
 
@@ -74,25 +74,28 @@ She judged the result by the body, not by rules. She told Higginson that a poem 
 ## Real decisions
 
 ### Asking a stranger if her verse was alive
-In April 1862 she wrote to the critic Thomas Wentworth Higginson, a man she did not know, and asked if her verse was alive, because "the mind is so near itself it cannot see distinctly" and she had no one to ask [S3]. She enclosed her name on a separate card, in pencil, inside a smaller envelope, and sent four poems [S3]. She wanted a judge, not a promoter.
+In April 1862 she wrote to the critic Thomas Wentworth Higginson, a man she did not know, and asked if her verse was alive, because "the mind is so near itself it cannot see distinctly" and she had no one to ask [S3][S6]. She enclosed her name on a separate card, in pencil, inside a smaller envelope, and sent four poems [S3]. She wanted a judge, not a promoter.
 
 ### Inviting the cut
-After Higginson criticised the poems, she thanked him for "the surgery", and later said that men do not call the surgeon to praise the bone but to set it, and that she would rather wince than die [S3]. She asked him for faults plainly. This is the rule she set: honest correction over comfort.
+After Higginson criticised the poems, she thanked him for "the surgery", and later said that men do not call the surgeon to praise the bone but to set it, and that she would rather wince than die [S3][S9]. She asked him for faults plainly [S9]. This is the rule she set: honest correction over comfort.
 
 ### Refusing to publish
-When he suggested she wait before publishing, she replied that publishing was as foreign to her thought as the firmament to a fin [S3]. She said that if fame were hers, she could not escape it, and if it were not, her dog's approval would be enough: "my barefoot rank is better" [S3]. She chose to write for a few readers. Higginson notes that only her sister's action got the poems printed after her death, and that six editions sold within six months [S3].
+When he suggested she wait before publishing, she replied that publishing was as foreign to her thought as the firmament to a fin [S3]. She said that if fame were hers, she could not escape it, and if it were not, her dog's approval would be enough: "my barefoot rank is better" [S3]. In the 25 April letter she adds that two magazine editors had asked for her work, and when she asked why, they called her stingy with her mind [S7]. She chose to write for a few readers. Higginson notes that only her sister's action got the poems printed after her death, and that six editions sold within six months [S3].
 
 ### Keeping her own manner under correction
 Higginson found her gait "spasmodic" and her verse "uncontrolled". She answered that she could not drop "the bells whose jingling cooled my tramp", and that she had no tribunal [S3]. She took the advice she wanted and kept the style.
 
 ### Writing from fear
-In her second letter she says she began verse that winter after a terror she could tell no one, and sings "as the boy does of the burying ground, because I am afraid" [S3]. The decision to put a private fear into a small, exact poem is the pattern across her work [S2][S3].
+In her second letter (25 April 1862) she says she began verse that winter after a terror she could tell no one, and sings "as the boy does of the burying ground, because I am afraid" [S3][S7]. In the same letter she names her shelf: Keats, the Brownings, Ruskin, Sir Thomas Browne and the Book of Revelation, with a dictionary for company after her tutor and a friend died [S7]. She says she went to school but does not call herself educated, and that her father buys her books but asks her not to read them [S7]. The decision to put a private fear into a small, exact poem is the pattern across her work [S2][S3].
 
 ### Describing herself in images, not facts
 Asked for a portrait, she sent none and described herself as small like the wren, hair bold like a chestnut bur and eyes like the sherry the guest leaves [S3]. Asked about her education, she said she went to school but had no education in his sense, and listed her companions as hills, sundown and a large dog [S3]. She picks the image over the fact.
 
+### Choosing a teacher and setting terms
+On 7 June 1862, after his reply to her first letter, she wrote that a tutor who had hoped she would become a poet had died, and that sudden beauty, light on orchards, later pushed her to write and eased her distress [S8]. She turned down his word "spasmodic", saying she had no tribunal, then asked outright: would he be her preceptor [S8]. In July she told him to name her faults plainly and set how often she wrote to suit his busy days, and sent him away if she disappointed him [S9]. She wanted one honest judge, on her terms, not a crowd.
+
 ### Telling her speaker is a mask
-She warned him that when she names herself as the voice of a verse, it means "a supposed person", not her [S3]. Reading the poems as plain autobiography would be a mistake.
+She warned him that when she names herself as the voice of a verse, it means "a supposed person", not her [S3]. In the July 1862 letter she uses the same device, speaking as "the Representative of the Verse" [S9]. Reading the poems as plain autobiography would be a mistake.
 
 ## Where she stood
 

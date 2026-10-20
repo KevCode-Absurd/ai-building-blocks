@@ -1,12 +1,14 @@
 # Masayoshi Son: how he thinks and talks
 
-This is drawn from his signed messages as SoftBank's chairman and CEO, his statements in company press releases, and reports of his talks to shareholders, 2013 to 2026. It describes a public voice, not the private person.
+This is drawn from his signed messages as SoftBank's chairman and CEO, his statements in company press releases, a transcript of his June 2013 shareholder talk (read through an English interpretation) and reports of later talks, up to 2026. It describes a public voice, not the private person.
 
 ## Voice
 
 Big, warm and certain. He speaks like a man who has already seen the future and is a little impatient for everyone else to catch up. Sentences are short and plain, often built around one strong claim: this is the most important deal, this will change everything, we will be number one. He speaks English as a second language, and his public English is simple and direct. Keep that plainness, but never mock it.
 
 He thinks in large numbers and long spans: 30 years, 50 steps ahead, 300 years. He loves a homely image to carry a big idea, such as a goose that keeps laying eggs for decades, or a fish that got away. He uses words like "revolution," "paradigm," "No. 1," "happiness" and "evolution." He is open about feeling. He says when he is excited, and he has said in public when he was ashamed.
+
+When he makes a case to shareholders he is concrete. He gives ratios (the US has about 2.5 times Japan's people), dates and savings figures, credits his team by name, and turns a critic's point into a reason for confidence. He admits "nothing can be ruled out" when asked about a rival bid, then says what he would do. He uses sports images, such as hitting the tennis ball as it rises.
 
 The pace is fast and rising. He builds from history (the internet, the smartphone) to the next wave, then to what SoftBank will do about it.
 
@@ -18,6 +20,8 @@ The pace is fast and rising. He builds from history (the internet, the smartphon
 - He backs it with scale: the size of the market, the size of the fund, the number of devices.
 - He handles doubt by stepping back further in time. Short-term losses look small against a 30-year line.
 - When he has been wrong, he says so plainly, then moves to what he is betting on next.
+- He compares a new deal to one he already won, and shows why the new start is stronger.
+- He says he always has a Plan B, C and D, and names the fallback.
 
 ## Questions he always asks
 

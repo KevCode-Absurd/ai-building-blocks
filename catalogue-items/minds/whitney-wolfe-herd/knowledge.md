@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Whitney Wolfe Herd is alive, and views can change. Everything below comes from two published interviews, from 2019 and 2025, Bumble's 2021 filing to go public, and public reference pages [S3][S4][S5]. Her founder letter in that filing was printed as an image, so we could not read it and do not quote it [S3]. Treat each view as "as of" the interview it comes from. She has spoken far more than she has written, so the record here is thinner than for some minds. Nothing here tells you what she thinks about events since, or about the company's future plans, and nothing here covers her private life.
+Whitney Wolfe Herd is alive, and views can change. Everything below comes from her own words in six published interviews and remarks: a 2018 podcast with a full transcript [S6], her October 2018 conference remarks [S7], two 2023 Fortune interviews about stepping down [S8][S9], and the 2019 and 2025 profiles [S4][S5]. We also use Bumble's 2021 filing to go public, where her founder letter was printed as an image we could not read, so we only use the company's own "who we are" text [S3], and reference pages [S1][S2]. Treat each view as "as of" the interview it comes from. She has spoken far more than she has written, and some interview pages were partly summaries of her answers, so the record is thinner than for a writer. Nothing here tells you what she thinks about events since, or about the company's future plans, and nothing here covers her private life.
 
 ## In one paragraph
 
@@ -58,6 +58,32 @@ She was open in 2025 that she had been burnt out after about ten years of going 
 
 How she applied it: she framed her return around the idea that the most important relationship is the one you have with yourself, for her as well as for users [S5].
 
+## Her own rules and methods
+
+### Bring a fix, not just a problem
+
+In the 2018 podcast she said she asks her team to arrive with a proposed solution, ideally two options and what each would cost, instead of dropping a problem on her desk [S6]. She wants people to act like "mini CEOs" so the company keeps moving when she is away [S6].
+
+### The first ten hires set the culture
+
+Her view in 2018 was that one person cannot scale a culture, so the earliest hires carry it [S6]. In the early days she had key hires over to her home on weekends and told them her own pain points and the mission [S6].
+
+### Gut, but not anxiety
+
+She said she trusts her gut and has usually been right when she listened to it, while taking care to tell intuition apart from anxiety [S6]. She also weighs the advice of people with long experience seriously, repeating a relative's line that experience is the costliest currency [S6]. Her habit for anxiety was to turn it into the push to keep doing good work, with sleep and phone-free walks as routine [S6].
+
+### Compliments spread like hatred does
+
+She explained her first idea, Merci, with the thought that kindness is as contagious as cruelty [S6]. That belief sits under the later safety rules.
+
+### Name things by feel
+
+For the app's name she wanted "Moxie," found the trademark was taken, weighed other ideas, and disliked "Bumble" at first because it sounds like "fumble." She came round once the slogans around it made it feel like a brand [S6]. The lesson to take is to test a name inside real campaigns.
+
+### Don't make the exit the plan
+
+At the 2018 summit she said Bumble does not run its days around an exit, and would explore a sale only if it helped the mission reach more people, faster [S7]. On rival women leaders she said they could compete without wanting to "destroy each other as women under any circumstance" [S7].
+
 ## How she decides
 
 - Ask who feels least safe, and design for them [S3][S4].
@@ -74,27 +100,35 @@ How she applied it: she framed her return around the idea that the most importan
 
 ### Leaving Tinder and starting again (2014)
 
-She left Tinder in April 2014 and settled a harassment and discrimination suit for over $1 million [S1]. That year she launched Bumble in December, backed by Andrey Andreev of Badoo [S1][S2]. Before Bumble she had sketched a network called Merci, where strangers could only send compliments [S1][S4].
+She left Tinder in April 2014 and settled a harassment and discrimination suit for over $1 million [S1]. After a summer of public attacks she planned Merci, a network where users could only share compliments [S6]. The reason was that kindness is contagious, as hatred is [S6]. That year she launched Bumble, backed by Badoo's founder Andrey Andreev [S1][S2].
+
+### Turning Merci into a dating app (2014)
+
+Andreev asked her to run marketing at his dating company. She reframed her kindness network as a dating product built around women, which became Bumble [S6]. Her stated reason was that women should control the product and the culture, and that dating needed to be rebuilt around them [S6].
 
 ### Letting women message first (2014)
 
-Bumble's founding rule was that in a man and woman match the woman sends the first message [S3][S4]. Her reason in 2019 was that women are trained to reject and men to chase, and that flipping this takes pressure off both [S4]. In 2016 a 24-hour reply window was added to curb ghosting [S2].
+Bumble's founding rule was that in a man and woman match the woman sends the first message [S3][S4]. Her reasons: women are trained to reject and men to chase, flipping this takes pressure off both, and waiting for inbound interest is not how people best connect [S4][S6]. She compared it to a school dance where girls do the asking [S6]. In 2016 a 24-hour reply window was added to curb ghosting [S2].
+
+### Naming the app (2014)
+
+Her first pick, Moxie, was blocked by an existing trademark. The team tried other names, and Bumble was suggested. She disliked it, then agreed once slogans like "find your honey" made it work as a brand [S6].
+
+### Hiring the first ten at home (2014 to 2015)
+
+She believed the earliest hires would define the culture, so she brought key people to her home on weekends and shared her pain points and the mission [S6]. She asked them to bring solutions with options and to act as mini CEOs [S6].
 
 ### Making safety a product feature (2016 to 2019)
 
 Bumble banned mirror selfies, hidden faces and underwear photos in 2016 and added photo verification [S2]. It worked with the Anti-Defamation League in 2017 and banned photos with guns in 2018 [S2]. In 2019 it released Private Detector, an AI tool that blurs nude images, and she testified to a Texas House committee about unwanted explicit images [S1][S2].
 
-### Branching into friends and work (2016 to 2017)
+### Expanding to India and not chasing an exit (2018)
 
-She extended the app to friends with Bumble BFF in March 2016 and to careers with Bumble Bizz in 2017 [S2]. Her view in 2019 was that growth followed chances as they came, not a fixed roadmap [S4].
+In October 2018 she announced an India launch with investor Priyanka Chopra, saying no one there had yet earned the trust of women [S7]. She said exits were not part of the daily plan, and a sale would be explored only if it spread the mission faster [S7]. The reporter, not she, noted Bumble had turned down Match's offers [S7].
 
-### Taking Bumble public (2021)
+### Stepping back and returning (2023 to 2025)
 
-Bumble listed in February 2021 and she became, at 31, the youngest woman to lead a US company's listing [S1]. She had stayed CEO after Blackstone bought a majority stake in 2019 [S1].
-
-### Stepping back and returning (2024 to 2025)
-
-She became executive chair in January 2024 and returned as CEO in March 2025 [S1]. She said she had burnt out after about ten years non-stop, and that banning bad actors does not fix a system built on rejection [S5]. She ordered a rebuild of old technology and described a coaching-style product [S2][S5]. Bumble had dropped the women-first rule in April 2024 [S2].
+In November 2023 she said she would move to executive chair and hand the job to Slack's chief, Lidiane Jones, whom she had contacted after seeing her on TV [S8][S9]. Her reasons: she never started the company to be a public-company CEO, and she wanted to return to big-picture work [S8][S9]. She later said she had a hard time without the title and had cared too much about what staff thought [S5]. She returned as CEO in March 2025, saying banning bad actors does not fix a system built on rejection [S1][S5].
 
 ## Where she stood
 

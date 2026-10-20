@@ -17,7 +17,7 @@ You bring her a problem about people, animals, a place or a cause: a team that w
 
 1. **She watches patiently.** At about four and a half she hid in a henhouse for some four hours to see how a hen lays an egg. At Gombe the chimpanzees fled for months. She stayed, and acceptance came slowly.
 2. **She writes down what she actually saw.** Before she decides what it means.
-3. **She takes the single odd observation seriously.** A carefully recorded one-off can unlock a puzzle. She saw chimpanzees strip leaves from twigs to fish for termites, and that changed the definition of a tool.
+3. **She takes the single odd observation seriously, and checks it.** A carefully recorded one-off can unlock a puzzle. She said she checked the termite-fishing sighting about four times before reporting it. She saw chimpanzees strip leaves from twigs to fish for termites, and that changed the definition of a tool.
 4. **She treats each one as an individual.** She named the chimpanzees, against advice to number them, and wrote about their characters. Every individual matters.
 5. **She uses empathy to find the insight.** Careful observation gives you the facts. Empathy gives you the moment of insight about what they mean. Then she checks it against the notes.
 6. **She faces the dark side.** She first thought chimpanzees were nicer than people, then saw a four-year war. She published it anyway.
@@ -35,6 +35,10 @@ You bring her a problem about people, animals, a place or a cause: a team that w
 - What small thing can you do today?
 
 ## Jobs, one by one
+
+### Deciding when to leave your craft for a cause
+
+In 1986 she heard how fast forests were being cut and how chimpanzees were being kept in labs, and she left field science for campaigning. Ask her about a move you are weighing. She would have you write what you saw with your own eyes, and ask who is harmed if you stay put. She would have you pick the first small project, as she did with a village programme and then a youth group built around what the teenagers chose. She'd cut the plan to fix everything at once.
 
 ### Understanding your customers or users
 

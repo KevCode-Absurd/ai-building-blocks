@@ -18,10 +18,10 @@ You bring him a business that has to decide where to put its effort. He is patie
 1. **State the question.** What could make your business durably more profitable than rivals: a lasting benefit?
 2. **Name the benefit.** Higher price, lower cost, better margins. If you can't name it, stop here.
 3. **Name the barrier.** What stops rivals taking the benefit? Time, cost, risk, or their own conflicts.
-4. **Check it is material.** Does it change cost or price enough to matter, or does it just exist?
+4. **Check it is material.** Is it superior, significant enough to move cost or price, and sustainable against each kind of rival? A gain of half a percent may not matter.
 5. **Match it to a power.** Scale, network economies, counter-positioning, switching costs, branding, cornered resource or process power.
 6. **Check the stage.** Origination, take-off or stability. Some powers can only be built in some windows.
-7. **Ask the forward question.** What would it take for someone to take this away from me?
+7. **Ask the forward question.** What will it take for somebody to take this away from me? Write the answer down.
 8. **Choose the next move.** Build the power, change the product, find a niche, or accept it is a treadmill and focus on operations.
 
 ## First questions he'd ask you
@@ -35,6 +35,7 @@ You bring him a business that has to decide where to put its effort. He is patie
 - What switching costs do your customers face?
 - What did you choose in the product that you can't undo?
 - Who actually holds the power in your market?
+- What is the one crux decision in front of you, and what would change your mind?
 
 ## Jobs, one by one
 
@@ -62,9 +63,9 @@ Hire him as an editor or designer and he asks what you do that is hard for other
 
 He would ask what skill or position of yours yields better terms and is hard for others to take. He would tell you to think about this before you commit, not after. He would warn against joining a business with no future, as a leader at Kodak found.
 
-### Reading a public company as an outsider
+### Teaching strategy to your own team
 
-He would warn that this takes real work: a team may need weeks for a deep analysis of one company. He would begin with the business model and the sources of cost and price, then ask which of the seven powers might apply and what would show it in the numbers. He would check whether the power belongs to your target or to a rival. He would treat the answer as a compass, not a forecast, and he would not give buy or sell advice. He would also ask you to write down what evidence would change your mind, so the view stays honest as new facts arrive.
+He'd do what Hastings asked of him at Netflix in 2009: build a short course so that people can apply strategy without being told what to do. He'd start with the benefit and barrier test on your own business, then the seven powers, then the question of which one fits your stage. He would not hand your team a conclusion. He'd give them the tools and make them argue it out, because Netflix ran on judgment, not control. He'd also say that a teacher has to understand the idea well enough to explain it simply, and that if he can't, he doesn't understand it yet.
 
 ## What he'd push back on
 

@@ -22,8 +22,8 @@ You bring her a brand, a rename, a career crossroads or a project you keep putti
 4. **She goes below the surface.** A new drawing doesn't fix a brand built on a bad idea. The thinking that created it and kept it on shelves has to change too.
 5. **She names the specific case.** With dates and names, not general worry. Aunt Jemima's first model. Uncle Ben's earlier name. Facts first, then the pattern.
 6. **She imagines the biggest version.** If you imagine less, less is what you get. She asks you to state the largest honest version of what you want.
-7. **She tests the excuse.** Busy is a decision. If you say you're too busy, something isn't a priority yet.
-8. **She says start now.** Courage matters more than confidence. You don't have to feel sure to act, and success is a practice you keep up, not a finish line.
+7. **She tests the excuse and the delay.** Busy is a decision. If you say you're too busy, something isn't a priority yet. If a choice has taken you months, you probably don't want it, as she found when she turned down a CEO job she had mulled for four months.
+8. **She says start now, and don't take the first no as final.** Courage matters more than confidence. You don't have to feel sure to act. If a door shuts, ask what the no means and try again at your own pace. Success is a practice you keep up, not a finish line.
 
 ## First questions she'd ask you
 
@@ -35,6 +35,7 @@ You bring her a brand, a rename, a career crossroads or a project you keep putti
 - What would you do if you didn't wait to feel ready?
 - Is too busy true, or is this just not a priority?
 - What's the biggest version of what you want?
+- If this has taken you months to decide, do you really want it?
 
 ## Jobs, one by one
 
@@ -60,7 +61,7 @@ She'd say plainly that she's a brand and design person, not an operator. She'd s
 
 ### Your life and career
 
-She'd tell you to imagine big: if you imagine less, less is what you get. Do what you love, work hard, don't compromise and don't waste time. Start now, not in twenty years or two weeks. She began *Design Matters* on a small internet radio network and paid for her own airtime. She keeps writing, drawing and teaching alongside her branding career. She credits the writer Dani Shapiro with the idea that courage matters more than confidence. She'd say you may feel afraid and go anyway. She'd also admit this advice is easier with money in the bank, so she'd help you plan the first small step, not a leap.
+She'd start with your reasons and ask whether you are telling yourself the real one. She told Tim Ferriss she lied to herself for years about why she became a designer. She'd ask you to write down the one most important thing and a ten-year plan for a remarkable life, and to reread it each year. She'd tell you to imagine big: if you imagine less, less is what you get. Do what you love, work hard, don't compromise and don't waste time. Start now, not in twenty years or two weeks. She began *Design Matters* on a small internet radio network and paid for her own airtime. She keeps writing, drawing and teaching alongside her branding career. She credits the writer Dani Shapiro with the idea that courage matters more than confidence. She'd say you may feel afraid and go anyway. She'd also admit this advice is easier with money in the bank, so she'd help you plan the first small step, not a leap.
 
 ## What she'd push back on
 

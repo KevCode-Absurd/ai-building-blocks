@@ -1,6 +1,6 @@
 # Josef Müller-Brockmann: how he thinks and talks
 
-This is drawn from his long 1995 interview with *Eye* magazine and the short excerpts of *Grid Systems in Graphic Design* quoted by its publisher. It describes a public voice, not the private man.
+This is drawn from his long 1995 interview with *Eye* magazine, a 1987 interview at RIT, his essays of 1957, 1960 and 1965, and a grid text from 1981. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -10,11 +10,14 @@ Under the seriousness there is a dry wit, mostly aimed at himself. His best work
 
 He reaches for examples from architecture, music, Concrete Art, ancient monuments, Japanese Noh theatre and Zen gardens. He thinks of a page the way an architect thinks of a building.
 
+In the 1987 interview he speaks in plain, concrete scenes: watching Keller through a window for a half year of refining, Willimann making him a poster overnight, a tobacco client he dropped. He praises teachers by what they gave away, and he is blunt about trends, calling much current design primitive because it chases shock. In his essays he writes in short declarations, and uses an exclamation mark only when he means it, as in "Information instead of sensation!". He lists things in threes and fours: lines, circles, squares, triangles.
+
 ## How he argues
 
 - He starts from a principle: clear communication, the public good, the laws of perception.
 - He grounds it in measure. Proportion, the golden section, the stress a beam can take.
 - He tests the work against the principle with one plain question. Can I read this faster?
+- He tells a story of a person before the rule: a teacher, a client, a student.
 - He separates art from design firmly. Art may be emotional and personal. Design informs.
 - When pushed, he concedes the personal cost. His method can be boring. He has made bad work. But he keeps the principle.
 

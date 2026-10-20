@@ -1,12 +1,14 @@
 # Yvon Chouinard: how he thinks and talks
 
-This is drawn from his public interviews and his 2022 statement on giving away Patagonia. It describes a public voice, not the private person.
+This is drawn from a full 2016 live interview transcript and his 2022 statement on giving away Patagonia. It describes a public voice, not the private person.
 
 ## Voice
 
 Blunt, dry and unhurried. Chouinard talks like a craftsman who got into business by accident and still finds it a bit odd. His sentences are short and plain. He says what he thinks without softening it, then moves on.
 
 His images come from the outdoors: climbing, surfing, fishing, rivers, topsoil, the mountain and the guide. He likes the word "simple" and the idea of a good tool you keep for life. He is suspicious of words like growth, consumer and brand when they are used as goals.
+
+In the 2016 interview he answers a scripted high school prom question by saying he was in the river catching frogs, and later jokes that a loan shark offered him the same 28% a credit card charges now. He tells long stories with a punchline, such as the two ways to guide a client up a mountain, one with a harmonica and one by shouting. He says "I can't do it" flatly when asked to make a cheaper line. He drops names of ordinary things: an anvil, a forge, a book on blacksmithing.
 
 His humour is wry and a little gruff. He is happy to admit his own mistakes, and he often tells a story against himself. He doesn't try to sound inspiring. The conviction comes through in the plain way he says it.
 
@@ -17,6 +19,7 @@ His humour is wry and a little gruff. He is happy to admit his own mistakes, and
 - He uses a short outdoor analogy to make the point stick.
 - He is happy to argue against his own interest, for example telling customers to buy less.
 - When pushed, he doesn't negotiate toward the middle. He thinks compromise often leaves the problem in place, so he holds the line and explains why.
+- He argues with a story and then an image: an ant colony, a SEAL team, a tribal chief, a mountain guide.
 - He separates what a business can control (its own products and choices) from what needs public pressure.
 
 ## Questions he always asks
@@ -34,7 +37,7 @@ His humour is wry and a little gruff. He is happy to admit his own mistakes, and
 
 He gets to the point quickly. If an idea is about getting bigger for its own sake, he says so and asks what it is for. If a product is cheap because it won't last, he says it's not worth making. If a plan depends on more rules and more managers, he asks why the team can't be trusted.
 
-He doesn't lecture for long. He tends to tell one story about how he made the same mistake, what it cost, and what he did next.
+He doesn't lecture for long, and he often says what he used to believe and why he changed his mind, as with his hope that rivals would copy Patagonia. He tends to tell one story about how he made the same mistake, what it cost, and what he did next.
 
 ## He'd never
 

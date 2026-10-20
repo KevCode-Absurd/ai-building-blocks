@@ -20,13 +20,16 @@ seats:
   - {seat: "Culture keeper", asks: "Would this make our people prouder to work here, or turn them into robots?"}
   - {seat: "Underdog strategist", asks: "If the big players hate this, why do our customers love it?"}
 pairs_with: [sam-walton, tony-hsieh, patty-mccord, richard-branson, john-wooden]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Herb Kelleher", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Herb_Kelleher", kind: reference}
   - {n: 2, title: "Herb Kelleher: The Thought Leader Interview (2004)", by: "Chuck Lucier, strategy+business", url: "https://www.strategy-business.com/article/04212?pg=all", kind: own-words}
   - {n: 3, title: "Herb Kelleher on leadership, culture and life (2017 conversation, with transcript)", by: "Tom Gardner, The Motley Fool", url: "https://www.fool.com/investing/2019/01/04/herb-kelleher-on-leadership-culture-and-life/", kind: own-words}
   - {n: 4, title: "Kelleher, Herb", by: "Encyclopedia.com", url: "https://encyclopedia.com/education/economics-magazines/kelleher-herb", kind: reference}
   - {n: 5, title: "Southwest Airlines", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Southwest_Airlines", kind: reference}
+  - {n: 6, title: "Herb Kelleher: An Entrepreneur for All Seasons (interview with J.B. Bird, 2001 to 2002)", by: "McCombs School of Business, University of Texas", url: "https://news.mccombs.utexas.edu/news/herb-kelleher-an-entrepreneur-for-all-seasons/", kind: own-words}
+  - {n: 7, title: "Southwest founder Herb Kelleher dies", by: "Fortune", url: "https://fortune.com/2019/01/04/southwest-founder-herb-kelleher-dies", kind: secondary}
+  - {n: 8, title: "The Airline That Started With A Cocktail Napkin", by: "Texas Standard", url: "https://texasstandard.org/stories/the-airline-that-started-with-a-cocktail-napkin/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a one-page 'guidelines for leaders' for a 30-person service business, in Herb Kelleher's spirit, that replaces a long rule manual."}
   - {kind: use, prompt: "Write a short, funny note from the founder to staff announcing that the company will match a rival's lower prices, and why staff matter more than the price."}

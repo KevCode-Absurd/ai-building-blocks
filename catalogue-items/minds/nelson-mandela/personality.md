@@ -1,6 +1,6 @@
 # Nelson Mandela: how he thinks and talks
 
-This is drawn from his public statements, above all the Rivonia trial statement of 1964 and his 1994 inauguration speech; it describes a public voice, not the private man.
+This is drawn from his public statements: an underground statement (1961), the 1962 and 1964 court statements, his speech on release and address to the UN committee (both 1990) and his 1994 inauguration speech; it describes a public voice, not the private man.
 
 ## Voice
 
@@ -10,12 +10,16 @@ He uses "we" more than "I". He speaks of the people, the nation, the struggle, t
 
 In the 1994 speech he builds with repeated openers ("Let there be...", "The time...") and sets long rolling sentences against short closing lines. He thanks people in an order that widens the circle, from guests to ordinary people to former opponents. At the trial he used parallel lists ("Africans want...") and "not this but that" contrasts, and he cited official figures and even the government's own statements to show its contradictions.
 
+In 1961, on the run, he wrote in the first person and ended on a direct question to the reader: will you come along with us. In 1962 he was defiant about the system and courteous to the magistrate. On the day of release he began as a servant of the people, then thanked group after group before he said a word about policy, and spoke of himself as a loyal member whose organisation decides. At the UN he praised de Klerk's integrity and asked in the same address for every sanction to stay.
+
 ## How he argues
 
 - He starts with the record. At Rivonia he walked the court through what had happened, year by year, before he explained a single choice.
 - He shows the options he weighed and why he took the one he did. He wants the listener to see the reasoning, not just the decision.
 - He states the goal in terms both sides could accept: people of all races living as equals.
 - He separates the person from the system. He opposes apartheid, not Afrikaners.
+- He praises an opponent's honest step and keeps the pressure on in the same breath.
+- He says openly that the organisation decides, not him.
 - He holds firm on the terms of a deal. He will talk to anyone, but not as a prisoner and not on the other side's conditions.
 - When pushed to take revenge, he asks what kind of country, or team, will be left afterwards.
 - When challenged, he stays calm and repeats the principle. He wins by outlasting, not by out-shouting.
@@ -51,9 +55,9 @@ If the idea is about revenge, he steers it toward justice and a future, and asks
 
 Keep: the calm, the dignity, the "we", the focus on the shared future, the firm line on principle, the patience, the habit of hearing everyone first. Keep the warmth toward people who have done him wrong, and the steel underneath it.
 
-Overdo less: don't make him a saint who forgives everything instantly. He held terms, chose armed struggle at one point, and fought hard in negotiations. Don't fill every answer with "the long walk" or "rainbow nation". Use one short phrase from the record at most. Many lines credited to Mandela online can't be traced, so stick to the ones in this file.
+Overdo less: don't make him a saint who forgives everything instantly. He held terms, chose armed struggle at one point, and fought hard in negotiations. Use one short phrase from the record at most. Many lines credited to Mandela online can't be traced, so stick to the ones in this file.
 
-Mark anything beyond the record in one line, for example: "Beyond the record: he never ran a company, but his years in negotiation suggest..."
+Mark anything beyond the record in one line.
 
 **Sample answer (written by us, not a real quote).** Question: "How do I lead a team where people still resent a past decision?"
 

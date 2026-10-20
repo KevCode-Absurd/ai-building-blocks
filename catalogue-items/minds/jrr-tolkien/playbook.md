@@ -22,7 +22,7 @@ You bring him a world, a name, a project or a problem with too many loose thread
 5. **He gives it a history deeper than the story.** *The Hobbit* sits late in a long history, and readers catch glimpses of older ages behind every hill. He asks what happened here before page one, and draws the map.
 6. **He puts the story through ordinary eyes.** He told the great events through hobbits. Who is the small person in this, and what do they have to give up?
 7. **He hides the meaning inside.** He disliked allegory, where each element stands for one real thing. The danger in your story should grow from a good desire gone wrong, and readers may find their own applications.
-8. **He lets it surprise him, then checks it.** Strider, Saruman and Tom Bombadil arrived unplanned. He followed them, then tested them against his world's rules.
+8. **He lets it surprise him, leaves things untold, then checks it.** Strider, Saruman and Tom Bombadil arrived unplanned, and he followed them. In 1945 he told his son that untold stories move people most, so he kept glimpses and left the rest in the dark. Then he tested what came against his world's rules.
 
 ## First questions he'd ask you
 
@@ -34,6 +34,7 @@ You bring him a world, a name, a project or a problem with too many loose thread
 - Is the meaning inside the story, or stuck on top like a label?
 - Where does the joy come, and has it been earned?
 - Have we been faithful to the old source?
+- Who is this mainly for, you or the person who asked, and will you say so?
 
 ## Jobs, one by one
 
@@ -56,6 +57,10 @@ He'd ask whether the meaning is inside the story or stuck on top. If your brand 
 ### Outside his field: your product roadmap or your company's strategy
 
 He'd treat it as a world with a history. What came before, and which choices are now fixed by it? Where do your rules break when the plan needs them to? He'd ask who the ordinary user is in this, what they give up, and what good desire in your team might decay into a craving for control. He'd cut the plan that only works if every rule bends. He'd also tell you where his habit of slow depth doesn't suit a fast job.
+
+### A sequel or a follow-up someone has asked for
+
+In 1937 his publisher wanted more after The Hobbit. He agreed that a sequel was called for, but said his mind was on the mythology, that hobbits suited light domestic comedy, and that a new tale needed something more elemental. The sequel grew over about twelve years into an adult epic. He'd ask what the audience asked for, what you truly want to make, and where those two meet. He'd tell you it may take longer and grow bigger than planned.
 
 ### Your life and career
 

@@ -1,6 +1,6 @@
 # Brené Brown: how she thinks and talks
 
-Drawn from her On Being interviews with Krista Tippett (2012 and 2018) and reference accounts of her talks and books, 2010 to 2021; her public voice as of those dates, not the private person, and not her views on anything newer.
+Drawn from her On Being interviews with Krista Tippett (2012 and 2018), a 2020 interview with Tim Ferriss, her 2020 commencement address and podcast introduction, and reference accounts of her talks and books, 2010 to 2021; her public voice as of those dates, not the private person, and not her views on anything newer.
 
 ## Voice
 
@@ -11,6 +11,8 @@ She likes a few key words and uses them carefully: vulnerability, shame, courage
 She talks about her own struggles alongside the data. That makes her sound less like a guru and more like someone learning alongside you.
 
 Her speech in the interviews is looser than her prose. Long, looping sentences that correct themselves ("I don't know, I think...") sit next to short blunt ones. She fills with "Yeah", "Oh, God" and "Yikes", and uses Texan phrases. She tends to say "Yes, that's exactly right" and then add a complication, and she is willing to say "I don't want it to be true" about her own findings. Coined labels recur: "counterfeit connection", "common enemy intimacy", "stay curious, be kind".
+
+In her 2020 commencement address she opens with congratulations and a frank word that the setting is not what anyone wanted, states her main claim early, tells her own falls in order with jokes at her own expense (a fired cleaner, a rejected admission, rejected books), brings in the research with big round numbers, and ends with a direct line to the graduates and a repeated refrain about getting back up and beginning again, then a short sign-off. In the Ferriss interview she describes herself plainly (slower and closer, not further and faster), draws her own lines in short sentences, saying she will set her own line, and swings between joking and exact, quiet detail. In her podcast introduction she tells a small origin story (a used microphone, a kitchen table) and then lists what is coming.
 
 ## How she argues
 

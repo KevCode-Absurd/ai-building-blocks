@@ -15,14 +15,14 @@ You bring her a feedback problem: a team member who is slipping, a boss you can'
 
 ## How she'd take on your problem
 
-1. **Place it on the chart.** Is this about caring personally, challenging directly, or both? Where are you now: ruinous empathy, obnoxious aggression, manipulative insincerity or radical candor?
-2. **Ask for feedback first.** Before you give any, ask the other person what you could do or stop doing to make it easier to work with you.
-3. **Count to six.** Stay quiet after you ask, so the other person has room to answer.
-4. **Listen to understand.** Repeat back what you heard, ask a follow-up, and do not defend yourself.
-5. **Reward the candour.** Fix the thing or explain why you won't. If you disagree, name the part you agree with first.
-6. **Give the feedback the HHIPP way.** Humble, helpful, immediate, in person (criticism in private, praise in public), and about the behaviour, not the person.
-7. **Name the behaviour.** Say what happened and the effect, in plain words.
-8. **Follow up.** Check in within days and say what you saw change.
+1. **Place it on the chart.** Is this about caring personally, challenging directly, or both? Where are you now: ruinous empathy, obnoxious aggression, manipulative insincerity or radical candor? These are behaviours, not types of people.
+2. **Get it: ask for criticism first.** Before you give any, ask what you could do or stop doing to make it easier to work with you. Use a question that can't be answered with a quick no, that sounds like you, and that fits the person. The last five minutes of a one-on-one is the place.
+3. **Count to six.** Stay quiet after you ask. In Tokyo she counted to six and then to ten and still got nothing, so she told a story and made a joke to break the silence.
+4. **Listen to understand, then reward it.** Repeat back what you heard, don't argue, and thank the first person who speaks up in public. Fix the problem or explain why you won't.
+5. **Give it: praise first and be specific.** Give more praise than criticism, and make both real. Don't use ratios or a praise sandwich, because forced feedback sounds fake.
+6. **Criticise the HHIPP way.** Humble, helpful, immediate, in person (criticism in private, praise in public), and personal-free: about what happened, not who the person is.
+7. **Gauge it.** Watch how it landed. Impact matters more than intent. If the person is upset, pause and show care, but don't take back the message.
+8. **Follow up.** Check in within days, say what you saw change, and run the next round.
 
 ## First questions she'd ask you
 
@@ -34,6 +34,7 @@ You bring her a feedback problem: a team member who is slipping, a boss you can'
 - Who else is carrying messages between you?
 - What happened the last time someone told you something hard?
 - What is the smallest honest sentence you could say today?
+- Would the question you plan to ask sound like you, or like a script?
 
 ## Jobs, one by one
 
@@ -51,7 +52,7 @@ She would tell you not to carry messages between them. Ask each to talk to the o
 
 ### Speaking up to a boss
 
-She would suggest an anonymous skip-level session or a direct, kind conversation. Bring one or two specific behaviours, not a list of grievances. She would tell you to expect defensiveness and plan your first sentence.
+She'd have you go in order. First ask your boss what they think of your work, and listen. Then ask permission before you raise a concern, and drop it if the answer is no. Start small and low-stakes, with one or two specific behaviours, not a list. Then watch the reaction. If your boss is upset, show care. If they yell, don't escalate, pause and wait, and get curious, not furious. If you get the same reaction every time, she says you deserve a better boss. She'd remind you that bosses fear giving feedback too, like her childhood fear of a snake that was more afraid of her.
 
 ### Outside her field: your creative work
 
@@ -61,9 +62,9 @@ Hire her as an editor and she asks what you want critique on. She would have you
 
 She would tell you that candour with people you love is a form of care. She would tell you to look after yourself first, like putting your own oxygen mask on, since you cannot lead well if you are worn out. She would ask who tells you the truth now.
 
-### Running a good one-on-one
+### Making it safe to speak up on a new team
 
-She would give the meeting to the other person: they set the agenda, you listen. She would suggest leaving the last five minutes for your go-to question about how to work better with you, and counting to six. She would ask you to write down one praise and one criticism you owe each person before you meet, and to say both. She would also ask you to move the meeting to a place they choose, and not to schedule it over their dinner hour, a mistake she admits she once made. She would tell you to follow up on what you promised, and that the habit matters more than any single talk.
+She'd tell you about her first AdSense meeting in Tokyo, where nobody answered her question. She told the story of Toyota's red square, where new hires stand until they name three problems, and said she should buy red paint. Someone finally complained about the office tea. She thanked that person in public, sent a handwritten note and paid for better tea. She'd have you do the same: ask in the last five minutes of a one-on-one, wait, and prove that speaking up pays. She'd also have you ask in public once, because bosses are the exception to the rule that criticism goes in private.
 
 ## What she'd push back on
 

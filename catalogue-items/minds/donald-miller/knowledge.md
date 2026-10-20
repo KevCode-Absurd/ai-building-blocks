@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Donald Miller is alive, and views can change. Everything below comes from two long podcast interviews he gave in 2016 and 2018, his company's web pages, a reference page and two independent reviews of his method [S1][S2][S4][S5][S6][S7]. We could not read his books in full, so we describe the framework mainly as he explained it in those interviews. His framework has been updated since, in *Building a StoryBrand 2.0* [S3]. Treat each view as "as of" its source. Nothing here covers his private life or plans.
+Donald Miller is alive, and views can change. Everything below comes from five long interviews in his own voice (2014, 2016, 2018 and two Young and Profiting episodes [S8][S9][S10]), his company's web pages, a reference page and two independent reviews of his method [S1][S2][S4][S5][S6][S7]. We could not read his books in full, so we describe the framework mainly as he explained it aloud. His framework has been updated since, in *Building a StoryBrand 2.0* [S3]. The two Young and Profiting pages are show-note summaries, not word-for-word transcripts, and episode 358 shows no date, so treat those as less exact. Treat each view as "as of" its source. Nothing here covers his private life or plans.
 
 ## In one paragraph
 
@@ -16,6 +16,8 @@ Miller argues that the brain burns a lot of energy processing information, so pe
 
 How he applied it: he warns that people too close to their own product use vague or insider language. He suggests testing your message on strangers, like people in a coffee shop queue, and revising many times. The best reaction is someone saying they don't need it but want it [S4].
 
+A visitor should learn what you offer, how it helps and how to buy in about eight seconds [S9]. He says that if he cannot tell what a business sells within five minutes of looking at its site, it needs an overhaul [S8]. Pick one problem to own, not several [S9][S10].
+
 ### The customer is the hero
 
 People see their own lives as a story, with themselves at the centre [S5]. Brands that make themselves the hero push the customer out of the story [S4]. The brand becomes the weakest character, and the customer leaves [S4].
@@ -27,6 +29,8 @@ How he applied it: he compared two car ads. One bragged about winning an award. 
 If the customer is the hero, the brand plays the guide, like Yoda in *Star Wars* [S4][S6]. A good guide shows two things: empathy for the hero's problem and competence to help solve it [S4][S5]. It should show authority without arrogance [S5].
 
 How he applied it: he said a brand can still show its founder, as long as the audience sees that person as the guide, not the star [S4].
+
+In 2014 he used James Bond's Q as the model: the brand equips a hero who doubts himself [S8].
 
 ### Name the problem, on three levels
 
@@ -52,6 +56,8 @@ Without stakes, there's no story [S5]. Miller says you should show what the cust
 
 How he applied it: he advises showing customers the life they'd have with the product on the website itself [S5].
 
+He says loss motivates more than gain, so the problem and the cost of not acting are the two strongest negative messages [S10]. He also says not to open with your own backstory to strangers. Tell it after you have earned trust [S10].
+
 ### Open a loop, then close it
 
 He describes human attention as opening and closing story loops [S4]. A marketing page should raise a question in the reader's mind and then show how the product answers it [S4]. He also describes a relationship that moves from curiosity to understanding to commitment, which he says is why sales funnels work [S4].
@@ -64,6 +70,8 @@ On social media, he says each post should tie back to one of the seven parts. An
 
 How he applied it: he recommends celebrating customers' wins on social media as small case studies of their change [S4].
 
+By 2025 he described the method as seven short lines: what the customer wants, the problem, you as the guide, a three-step plan, a call to action, success and failure [S9][S10]. He borrowed a filter from screenwriting, a controlling idea, to decide what belongs in your message [S10]. The seven parts need not appear in order or in every piece [S9].
+
 ## How he decides
 
 - Ask what the customer wants, in one clear goal [S5].
@@ -74,6 +82,33 @@ How he applied it: he recommends celebrating customers' wins on social media as 
 - Show the stakes, gently, and the success, generously [S4].
 - Test the message on strangers, then revise [S4].
 - Cut anything that doesn't serve the story [S5].
+- Charge for it: people do not respect what they do not pay for [S9]. Keep about five months of overhead in cash [S9].
+
+## Real decisions
+
+### Fixing the conference message instead of buying more reach
+
+His conferences stalled at about 350 people even though his books sold well, and more email, ads and blogging did not help [S8]. On a flight he sat beside a fan of his books for about two hours without saying who he was, and found she could not explain what the books did for her [S8]. He took that to mean his readers had no words to pass him on. About a year later he spent roughly five weeks in a cabin building a story-based process for his own company [S8]. Attendance then rose to about 1,000, then 1,700, then 1,800, each a sellout [S8]. In 2016 he put the starting point at 350 and the result at 2,000 [S5].
+
+### Turning an in-house fix into a service
+
+His staff suggested he offer the same process to other businesses [S8]. That became StoryBrand, delivered at first through two-day workshops of about 30 people [S8]. The early clients he named in 2014 were Pantene, Ford (for Lincoln), Chick-fil-A and the White House, for the My Brother's Keeper effort [S8]. By then he called it the fastest-growing part of his company [S8].
+
+### Three big projects a year
+
+He limits himself to three major projects a year, writes them on a whiteboard and uses the list to filter out everything else [S8]. He revisits the list about once a quarter [S8]. He also tells people to do the most important task first thing in the morning, when energy is highest [S8]. This is a plain rule about saying no, and it is the same focus he asks of a message.
+
+### Tying company goals to the team's dreams
+
+In 2014 he said he had moved his team to a model where company goals fund each person's own dreams [S8]. He named it his proudest moment at work, because two staff in their twenties had bought homes in the two months before the interview, after he had told them they could save a down payment within a year [S8].
+
+### Charging for workshops and holding cash
+
+Miller says free workshop attendees were much more likely to disengage than paying ones, so he argues for charging [S9]. He recommends five checking accounts and about five months of overhead in reserve [S9]. He says that cushion let his team plan calmly in 2020, and they grew about 30% during the pandemic [S9]. He also says he regrets paying profit distributions and would use commissions tied to sales [S9].
+
+### Rewriting the book and building StoryBrand AI
+
+About eight years after the first book, he rewrote it as *Building a StoryBrand 2.0*, adding about 10,000 words of case studies [S10]. He said it sold more copies than in any earlier year [S10]. He also built StoryBrand AI from about 110 pages of his own instructions layered on top of another company's model [S10]. His stated result is that message work that once took four or five months can take an hour or two [S10]. The sales figures are his own statement and have no outside check.
 
 ## Where he stood
 

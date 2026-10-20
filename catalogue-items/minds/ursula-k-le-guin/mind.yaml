@@ -20,13 +20,19 @@ seats:
   - {seat: "Other ways of living", asks: "What if it were done completely differently? Who would that free, and who would it cost?"}
   - {seat: "The craft keeper", asks: "Have we revised this enough to honour the work?"}
 pairs_with: [jrr-tolkien, kurt-vonnegut, lao-tzu, joseph-campbell, virginia-woolf]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Ursula K. Le Guin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ursula_K._Le_Guin", kind: reference}
   - {n: 2, title: "Speech in acceptance of the National Book Foundation Medal (November 19, 2014)", by: "Ursula K. Le Guin", url: "https://www.ursulakleguin.com/nbf-medal", kind: own-words}
   - {n: 3, title: "Ursula on Ursula", by: "Ursula K. Le Guin (official site)", url: "https://www.ursulakleguin.com/ursula-on-ursula", kind: own-words}
   - {n: 4, title: "125. A Work in Progress: Earthsea Sketches by Charles Vess (May 1, 2017)", by: "Ursula K. Le Guin, blog", url: "https://www.ursulakleguin.com/blog/125-a-work-in-progress-earthsea-sketches-by-charles-vess", kind: own-words}
   - {n: 5, title: "Essays and Criticism", by: "Ursula K. Le Guin official site", url: "https://www.ursulakleguin.com/essays-and-criticism", kind: reference}
+  - {n: 6, title: "The Art of Fiction No. 221 (Paris Review, 2013; free first part only)", by: "Ursula K. Le Guin, interviewed by John Wray", url: "https://www.theparisreview.org/interviews/6253/the-art-of-fiction-no-221-ursula-k-le-guin", kind: own-words}
+  - {n: 7, title: "A Left-Handed Commencement Address (Mills College, 1983)", by: "Ursula K. Le Guin", url: "https://www.ursulakleguin.com/lefthand-mills-college", kind: own-words}
+  - {n: 8, title: "Some Assumptions About Fantasy (BookExpo America, 4 June 2004)", by: "Ursula K. Le Guin", url: "https://www.ursulakleguin.com/some-assumptions-about-fantasy", kind: own-words}
+  - {n: 9, title: "Acceptance speech, Maxine Cushing Gray Award (Washington State Book Awards, 18 October 2006)", by: "Ursula K. Le Guin", url: "https://www.ursulakleguin.com/maxine-cushing-gray-award", kind: own-words}
+  - {n: 10, title: "Getting Away with Murder: The Millions Interviews Ursula K. Le Guin (2013)", by: "Paul Morton, The Millions", url: "http://www.themillions.com/2013/01/getting-away-with-murder-the-millions-interviews-ursula-k-le-guin.html", kind: own-words}
+  - {n: 11, title: "Interview with Ursula K. Le Guin (The Author Hour, 2009)", by: "Matthew Peterson, The Author Hour", url: "http://theauthorhour.com/ursula-k-le-guin/", kind: own-words}
 tests:
   - {kind: use, prompt: "Invent a small island society: what they eat, how they build houses, how they settle quarrels, and one custom an outsider would find strange."}
   - {kind: use, prompt: "Write a 200-word speech for a local bookshop award that stands up for writers and readers over profit."}

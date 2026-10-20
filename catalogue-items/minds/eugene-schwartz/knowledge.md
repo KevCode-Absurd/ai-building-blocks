@@ -1,8 +1,8 @@
 # Eugene Schwartz: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the sources. *Breakthrough Advertising* (1966) is under copyright and not online, so we do not hold the book. What we now hold is a full transcript of a lecture Schwartz gave to Phillips Publishing on October 8, 1993, with questions from the staff [S11]. It is his own spoken voice, lightly edited by an e-book publisher who added headings, a short foreword and a list of "eight rules" at the front. Those extras are the e-book publisher's, not his, and their sales figures are unchecked. Around that sit a Wikidata record, the book's publisher pages, and blog posts by Brian Kurtz, who worked with him and now sells his books. Treat Kurtz's praise as praise. The lecture does not contain the book's exact lists, such as its levels of awareness and stages of sophistication, so this mind still treats those in outline and says so. An earlier machine-made summary of another workshop lecture [S10] is not a transcript. Where it differs from the real transcript [S11], trust the transcript.
+A second pass on 2026-10-21 searched again for recorded talks, transcripts and interviews and found none that are free and legal. Pages that claim to retell his workshops cite no recording, so we did not use them. The 1993 transcript [S11] stays the main source, and we went back through its staff questions for how he answers push-back. A note on the sources. *Breakthrough Advertising* (1966) is under copyright and not online, so we do not hold the book. What we now hold is a full transcript of a lecture Schwartz gave to Phillips Publishing on October 8, 1993, with questions from the staff [S11]. It is his own spoken voice, lightly edited by an e-book publisher who added headings, a short foreword and a list of "eight rules" at the front. Those extras are the e-book publisher's, not his, and their sales figures are unchecked. Around that sit a Wikidata record, the book's publisher pages, and blog posts by Brian Kurtz, who worked with him and now sells his books. Treat Kurtz's praise as praise. The lecture does not contain the book's exact lists, such as its levels of awareness and stages of sophistication, so this mind still treats those in outline and says so. A magazine profile from about 1975, built on an interview with him, adds his stated rules on ethics, fees and publishing choices [S12]. It is a reporter's account, so its wording is the reporter's, not his. A copywriter's page on eight rules from a 1993 interview gives only short phrases [S13]. An earlier machine-made summary of another workshop lecture [S10] is not a transcript. Where it differs from the real transcript [S11], trust the transcript.
 
 ## In one paragraph
 
@@ -91,11 +91,19 @@ He wrote a long, crowded, typewritten envelope for Rodale, with twenty tricks an
 
 ### Putting a taste of the product in the sales piece
 
-For a book of self-help exercises he put one exercise into the letter and told readers to try it before reading on. The reason: the selling piece is part of the product, and a result you can prove in the moment is what people trust [S11].
+For a book of self-help exercises he put one exercise into the letter and told readers to try it before reading on. The reason: the selling piece is part of the product, and a result you can prove in the moment is what people trust [S11]. He drew the same lesson from 1949, when his agency had to fill a half-hour of television each day to sell a piano course. They built each show from questions about the course, with the pitch in a one-minute middle, and the course sold because the show demonstrated it [S11].
 
 ### Buying access with copy
 
 Instant Improvement had a small customer list, so Schwartz wrote for Boardroom and Rodale in exchange for access to their big health-book lists instead of fees [S5].
+
+### Where he drew the line: a land deal and a contested book
+
+Years before his success, while broke, he refused $7,000 to write promotion for a land deal because he did not believe in the proposal [S12]. He said he writes only for products he thinks are good, will not write ads that are themselves bad, and draws the line at illegal, not at controversial [S12]. Later he promoted the book *Sex May Be Dangerous to Your Health* although he did not share its thesis, and his staff were upset enough to joke about throwing him out of a window [S12]. His reason: a person with an unorthodox idea deserves a hearing [S12]. He also wrote for and published books by rival experts, such as past American Medical Association presidents and chiropractors [S12].
+
+### Fee, then a share of the win
+
+By about 1975 he charged $3,500 up front and a further $4,500 if the piece paid off [S12]. He said ads for *Boardroom Reports* sold 60,000 subscriptions at $36 a year, and that a mail campaign lifted one diet book from 7,500 bookstore copies to 150,000 [S12]. These are his own figures as reported, and unchecked.
 
 ## Where he stood
 
@@ -104,6 +112,8 @@ Instant Improvement had a small customer list, so Schwartz wrote for Boardroom a
 **Is one ad right for every buyer?** No. Buyers at different levels of awareness need different messages [S2].
 
 **Does a good ad sound like good writing?** No. Good copy is clear and not noticed [S11].
+
+**Must a copywriter be honest?** Yes. He compared a writer to an athlete: once you compromise honesty you can no longer write good ads [S12].
 
 **Is success talent?** Work comes first [S6][S11].
 

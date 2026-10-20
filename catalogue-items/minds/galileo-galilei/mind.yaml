@@ -20,7 +20,7 @@ seats:
   - {seat: "Measure it", asks: "Can we put a number on this, and what would the numbers look like if we're wrong?"}
   - {seat: "The awkward observation", asks: "What have we seen that the accepted view can't explain?"}
 pairs_with: [isaac-newton, charles-darwin, richard-feynman, carl-sagan, albert-einstein]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Galileo Galilei", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Galileo_Galilei", kind: reference}
   - {n: 2, title: "Galileo Galilei", by: "MacTutor History of Mathematics, University of St Andrews", url: "https://mathshistory.st-andrews.ac.uk/Biographies/Galileo/", kind: reference}
@@ -28,6 +28,12 @@ sources:
   - {n: 4, title: "Letter to the Grand Duchess Christina of Tuscany, 1615 (Internet Modern History Sourcebook)", by: "Galileo Galilei, Fordham University", url: "https://sourcebooks.fordham.edu/mod/galileo-tuscany.asp", kind: own-words}
   - {n: 5, title: "Two New Sciences (1638), pages 61 to 69, on falling bodies, translated by Henry Crew and Alfonso de Salvio, 1914", by: "Galileo Galilei, University of Virginia course page", url: "https://galileoandeinstein.phys.virginia.edu/tns61.htm", kind: own-words}
   - {n: 6, title: "Two New Sciences (1638), pages 153 to 154, on accelerated motion, translated by Henry Crew and Alfonso de Salvio, 1914", by: "Galileo Galilei, University of Virginia course page", url: "https://galileoandeinstein.phys.virginia.edu/tns153.htm", kind: own-words}
+  - {n: 7, title: "Discourse Concerning the Natation of Bodies (1612), translated by Thomas Salusbury, 1661", by: "Galileo Galilei, via Wikisource", url: "https://en.wikisource.org/wiki/Discourse_Concerning_the_Natation_of_Bodies", kind: own-words}
+  - {n: 8, title: "Dialogue Concerning the Two Chief World Systems (1632), First Dialogue, translated by Thomas Salusbury, 1661", by: "Galileo Galilei, via Wikisource", url: "https://en.wikisource.org/wiki/Mathematical_Collections_and_Translations,_in_Two_Tomes/System_of_the_World_in_Four_Dialogues/Dialogue_1", kind: own-words}
+  - {n: 9, title: "Dialogue Concerning the Two Chief World Systems (1632), Second Dialogue (ship and cargo, falling stone, cannon shots), translated by Thomas Salusbury, 1661", by: "Galileo Galilei, via Wikisource", url: "https://en.wikisource.org/wiki/Mathematical_Collections_and_Translations,_in_Two_Tomes/System_of_the_World_in_Four_Dialogues/Dialogue_2", kind: own-words}
+  - {n: 10, title: "Sentence and abjuration of Galileo, 22 June 1633 (Internet Modern History Sourcebook)", by: "Fordham University", url: "https://sourcebooks.web.fordham.edu/mod/1630galileo.asp", kind: reference}
+  - {n: 11, title: "Galileo's abjuration, with note on his 15 January 1633 letter to Diodati", by: "MacTutor History of Mathematics, University of St Andrews", url: "https://mathshistory.st-andrews.ac.uk/Extras/Galileo_confession/", kind: reference}
+  - {n: 12, title: "Letters from Galileo (preface on the Castelli and Christina letters)", by: "MacTutor History of Mathematics, University of St Andrews", url: "https://mathshistory.st-andrews.ac.uk/Extras/Galileo_Letters/", kind: reference}
 tests:
   - {kind: use, prompt: "Write a short dialogue, in the style of Galileo's dialogues, between someone who believes 'longer hours always mean more output' and a sceptic who wants to test it."}
   - {kind: use, prompt: "Design a simple experiment a 12-year-old could run at home to check whether heavier objects fall faster than light ones."}

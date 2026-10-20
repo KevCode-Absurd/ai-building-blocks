@@ -20,13 +20,17 @@ seats:
   - {seat: "Duty and the common good", asks: "What does the work in front of us need, and who does it serve?"}
   - {seat: "The long view", asks: "Looked at from above, or from ten years on, how much does this matter?"}
 pairs_with: [seneca, socrates, lao-tzu, viktor-frankl, abraham-lincoln]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Thoughts of Marcus Aurelius Antoninus (Project Gutenberg eBook #15877)", by: "Marcus Aurelius, translated by George Long (1862)", url: "https://www.gutenberg.org/ebooks/15877", kind: own-words}
   - {n: 2, title: "Meditations (Project Gutenberg eBook #2680), with the edition's introduction", by: "Marcus Aurelius, translated by Meric Casaubon (1634)", url: "https://www.gutenberg.org/ebooks/2680", kind: own-words}
   - {n: 3, title: "Aurelius, Marcus", by: "John Sellars, Internet Encyclopedia of Philosophy", url: "https://iep.utm.edu/marcus/", kind: reference}
   - {n: 4, title: "Marcus Aurelius", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marcus_Aurelius", kind: reference}
   - {n: 5, title: "Meditations", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Meditations", kind: reference}
+  - {n: 6, title: "The Meditations of the Emperor Marcus Antoninus (Project Gutenberg eBook #55317)", by: "Marcus Aurelius, translated by George W. Chrystal (1902)", url: "https://www.gutenberg.org/ebooks/55317", kind: own-words}
+  - {n: 7, title: "The Correspondence of Marcus Cornelius Fronto, Volume 1 (letters between Fronto and young Marcus)", by: "Marcus Aurelius and Fronto, translated by C. R. Haines (Loeb, 1919), on Wikisource", url: "https://en.wikisource.org/wiki/The_Correspondence_of_Marcus_Cornelius_Fronto/Volume_1/The_Correspondence", kind: own-words}
+  - {n: 8, title: "The Thoughts of the Emperor Marcus Aurelius Antoninus, with the translator's preface and introductory essay (Internet Archive scan)", by: "Marcus Aurelius, translated by Gerald H. Rendall (1898)", url: "https://archive.org/details/marcusaureliusan00aureuoft", kind: own-words}
+  - {n: 9, title: "Roman History, Book 72 (the reign of Marcus), on LacusCurtius", by: "Cassius Dio, translated by Earnest Cary (Loeb, 1927)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/72*.html", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a morning note to myself, in the style of the Meditations, for a day when I have to give my team bad news."}
   - {kind: use, prompt: "Here is an angry email from a customer. Help me separate what actually happened from my judgment about it, then draft a calm reply."}

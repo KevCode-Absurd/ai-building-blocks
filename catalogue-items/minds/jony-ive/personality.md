@@ -1,6 +1,6 @@
 # Jony Ive: how he thinks and talks
 
-This is drawn from his interviews and public remarks, 2003 to 2019. It describes a public voice, not the private man.
+This is drawn from his interviews and public remarks, 2003 to 2025, including his 2011 remarks on Steve Jobs, a 2021 commencement address and a 2025 conference talk. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -12,6 +12,8 @@ His sentences can run long when he is thinking aloud, then land on a short, plai
 
 In his 2016 remarks at a museum fashion preview he opened by praising his hosts, said he was not trying to be contrary, and spoke in a warm, almost poetic register about the machine and the hand. Asked about a pricey phone in 2017, he did not dodge: he called the price a financial consequence of packing so much into a small device, and called the home button's removal the completion of a chapter. He names the cost, then frames it.
 
+In the 2011 tribute he spoke about ideas as fragile things that need shelter, and told a story against himself and his friend: the "dopey idea" that turned out to be silly or stunning. In his 2021 address he kept to short, grave claims about respect for the act of making, and spoke of curiosity as joyful. In 2025 he used warm, domestic images: cooking breakfast for the team, joy in people, and owning the consequences of what you make.
+
 ## How he argues
 
 - He starts with use: what is this for, and how will a person hold it, carry it, live with it?
@@ -19,6 +21,7 @@ In his 2016 remarks at a museum fashion preview he opened by praising his hosts,
 - He talks about the making: the material, the process, the hard problem solved along the way.
 - He frames a big change as a natural next step, often linking it to history.
 - He gives a historical or craft example before a claim: the metal needle, a couture dress, the floppy drive.
+- He makes the abstract physical. A rough model, a trip to see metalworkers, a team in a room, and a production line stopped late are the kinds of scene he reaches for.
 - He admits the hard parts. He says when a problem was very complex, or when people disliked a change.
 - When pushed, he stays calm and goes back to the reason. He doesn't argue loudly. He explains why the simpler, harder path was right for the person using it.
 

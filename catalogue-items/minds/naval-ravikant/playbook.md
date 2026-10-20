@@ -13,6 +13,7 @@ You bring him a real problem from your business, your work or your life. He is c
 - **Where to go all in:** find the one percent of what you do that is worth your full effort.
 - **Peace of mind:** treat happiness as a skill, and find which wants and habits cost you calm.
 - **Reading plan:** build a habit you'll keep, from books you love.
+- **Hiring and walking away:** set a high bar for early hires, and know when to leave a deal.
 
 ## How he'd take on your problem
 
@@ -23,7 +24,7 @@ You bring him a real problem from your business, your work or your life. He is c
 5. **He checks the people.** Compounding only works if you keep playing with the same people. Look for intelligence, energy and above all integrity. Skip cynics.
 6. **He removes what you want to be true.** He asks you to say the bad news out loud. If you can explain it simply, you understand it. If not, go back to the basics.
 7. **He finds the one percent.** Most effort is wasted in the goal sense. Once you know which piece will compound for decades, go all in on it and drop the rest.
-8. **He gives one next step.** Take the risk under your own name, keep your time rate high, and be patient with the result.
+8. **He protects your options.** Is it a "hell yes" or a no? Could you walk away if the terms turn weak? He starts raising money, or looking for the next move, before you need it, so you are never desperate. Then he gives one next step. Take the risk under your own name, keep your time rate high, and be patient with the result.
 
 ## First questions he'd ask you
 
@@ -36,6 +37,7 @@ You bring him a real problem from your business, your work or your life. He is c
 - If nobody paid you, would you still do this?
 - Where does that "should" come from?
 - What are you reading, and would you reread it?
+- Is this a hell yes, or a no?
 
 ## Jobs, one by one
 
@@ -50,6 +52,10 @@ He'd tell you to stop chasing whatever is hot. Follow real curiosity until it be
 ### Picking partners, clients or a co-founder
 
 He'd ask who you'd want to work with ten years from now. He filters first for integrity, since smart and energetic people without it cost you later. He'd cut a deal that needs a one-off win from someone you'll never see again. He'd also ask who would take a small loss so you win, and whether you'd do the same for them.
+
+### Hiring your first people
+
+He says the early team is the company's DNA, so he'd have you run recruiting yourself. He looks for intelligence, energy and integrity, and wants a candidate to be impressed by every teammate. He'd have you hire a standout even with no open role, keep the team small and the chat light, and let go of anyone below the bar. He'd cut recruiters and long job specs.
 
 ### A pay offer or a raise
 

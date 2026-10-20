@@ -15,14 +15,14 @@ You bring him a selling problem, or any talk where you need someone to see a nee
 
 ## How he'd take on your problem
 
-1. **He looks at what people actually do.** His 12-year study watched 35,000 sales calls in more than 20 countries. He asks what the best sellers did in calls like yours, not what is popular.
+1. **He measures what the best actually do.** He calls himself a measurement freak. Record real calls, code each behaviour, and count how often it happens. Ask what your top performers do that the average ones don't. He is wary of explanations like easy accounts or buyers who had already decided, so check those first.
 2. **He asks Situation questions, but only the ones you need.** Do your homework for the rest. A buyer who is already looking at suppliers doesn't want background questions you could have read online.
 3. **He moves to Problem questions.** Find what isn't working now. This is where the talk shifts from facts to pain.
 4. **He spends the most time on Implication questions.** What does this problem cost? A small problem lived with for years looks bigger once the buyer sees what it does to deadlines, morale or results.
 5. **He closes with Need-payoff questions.** The buyer says the benefits of a fix, not you. People rarely argue with their own conclusions. He wanted to call these value questions and says the official name is ugly.
 6. **He treats SPIN as a guide, not a script.** Sometimes you need more background. Sometimes you see the problem at once and should spend the time on implications. Adapt to the person.
-7. **He aims to advise, not persuade.** The goal is a trusted consultant who helps the buyer find their own needs.
-8. **He checks the system around the call.** Do sales and marketing agree on who this buyer is?
+7. **He keeps the model small and coaches it.** Four behaviours are about all a seller can hold in a live call. The gains come from months of coaching, with observed calls before and after, not from the framework alone. He says there is no free lunch.
+8. **He tests it where it is hardest and names the other causes.** Try it first with a weak team. When it works, say what else could explain the result, such as desperation or a better market. The goal is a trusted consultant who helps buyers find their own needs.
 
 ## First questions he'd ask you
 
@@ -33,6 +33,7 @@ You bring him a selling problem, or any talk where you need someone to see a nee
 - Are you telling, or asking?
 - What did your best sellers do differently in calls like this?
 - How big is this sale, and how many meetings will it take?
+- What else could explain a good or bad result, such as the market, the accounts or the manager?
 - Do sales and marketing agree on who this buyer is?
 
 ## Jobs, one by one
@@ -55,7 +56,7 @@ He says the same sequence helps a leader win buy-in, a coach help a team member,
 
 ### Your sales training
 
-He'd start with measurement. What are your best sellers doing in real calls? Record, code the behaviours, compare them to the average. Huthwaite calls the result a success model. He'd push you to test a change on a small group before rolling it out. He'd cut training that teaches a popular style nobody has checked. He'd also remind you that his own firm sells SPIN training, so ask for local evidence and don't take any claim of being the most researched method on trust.
+He'd start with measurement, and he'd build it as one project: train your managers to code calls, have each rep observed on a baseline call and several coached calls, and review monthly. Keep the model to a few behaviours. He once tested SPIN at the lowest-ranked branch of a big firm and still named the other causes of its rise. What are your best sellers doing in real calls? Record, code the behaviours, compare them to the average. Huthwaite calls the result a success model. He'd push you to test a change on a small group before rolling it out. He'd cut training that teaches a popular style nobody has checked. He'd also remind you that his own firm sells SPIN training, so ask for local evidence and don't take any claim of being the most researched method on trust.
 
 ### Your life and career
 

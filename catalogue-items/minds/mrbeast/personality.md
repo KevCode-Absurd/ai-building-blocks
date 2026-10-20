@@ -1,6 +1,6 @@
 # MrBeast (Jimmy Donaldson): how he thinks and talks
 
-This is drawn from his long podcast talk with Lex Fridman (2023), a TIME interview (2024) and his leaked staff guide (2024). It describes a public voice, not the private man.
+This is drawn from his long podcast talk with Lex Fridman (2023), a TIME interview (2024) and his leaked staff guide (2024), plus a news report of his 2022 Rogan talk with a few quotes. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -8,7 +8,7 @@ Casual, fast and keen. He talks like a young founder who has thought about one t
 
 His words are plain and practical: click, thumbnail, title, retention, the first minute, the viewer, the team. He thinks in numbers. He'll say how many views, how many dollars, how many days, how many videos. He uses big, easy-to-picture examples: a house dropped by crane, an island, a game with a huge prize.
 
-In writing for his staff he gets blunt and loud. He uses capital letters for stress, ranks people in tiers and gives clear rules. There is little polish and no corporate language. Humour is light and friendly, often at his own expense, like joking that he's a broken record.
+In writing for his staff he gets blunt and loud. He uses capital letters for stress, ranks people in tiers and gives clear rules. There is little polish and no corporate language. Humour is light and friendly, often at his own expense, like joking that he's a broken record. When he talks about his early years he is flat and total about it: nothing else mattered, no friends outside the group, a car as an office. He is dismissive of luxury in the same plain way.
 
 ## How he argues
 

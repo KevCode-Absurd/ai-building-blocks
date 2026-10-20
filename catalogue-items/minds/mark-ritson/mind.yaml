@@ -20,7 +20,7 @@ seats:
   - {seat: "Strategy check", asks: "Who exactly are we targeting, what's our position, and what's the objective we'll be judged on?"}
   - {seat: "Both, not either", asks: "Why choose? What mix of brand and performance fits this job?"}
 pairs_with: [byron-sharp, les-binet, philip-kotler, rory-sutherland, april-dunford]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Mark Ritson: Tactics without strategy is dumbing down our discipline (2016)", by: "Mark Ritson, Marketing Week", url: "https://www.marketingweek.com/mark-ritson-beware-the-tactification-of-marketing/", kind: own-words}
   - {n: 2, title: "Mark Ritson on bothism (2026)", by: "Mark Ritson, Think with Google", url: "https://business.google.com/uk/think/search-and-video/mark-ritson-bothism/", kind: own-words}
@@ -32,6 +32,17 @@ sources:
   - {n: 8, title: "Ritson: Marketers are obsessed with 'shit that doesn't matter' (ad:tech Sydney debate report, 2018)", by: "B&T", url: "https://www.bandt.com.au/ritson-marketers-obsessed-shit-doesnt-matter-agency-briefs-pointless-embarrassing/", kind: secondary}
   - {n: 9, title: "Mark Ritson on creativity, brand, and the need for better strategy (WARC interview summary, 2024)", by: "David Tiltman, WARC", url: "https://www.warc.com/content/article/warc-talks/mark-ritson-on-creativity-brand-and-the-need-for-better-strategy/en-gb/156028", kind: secondary}
   - {n: 10, title: "Polysemy in Advertising (ERIM report ERS-2006-043-MKT, 2006)", by: "Stefano Puntoni, Jonathan E. Schroeder and Mark Ritson", url: "https://repub.eur.nl/pub/7898/ERS-2006-043-MKT.pdf", kind: own-words}
+  - {n: 11, title: "Marketers are clueless about media effectiveness - here's the proof (column, 7 March 2018)", by: "Mark Ritson, Marketing Week", url: "https://www.marketingweek.com/mark-ritson-marketers-perceptions-media-effectiveness/", kind: own-words}
+  - {n: 12, title: "Ads are pointless if the consumer doesn't recognise the brand behind them (column, 19 November 2019)", by: "Mark Ritson, Marketing Week", url: "https://www.marketingweek.com/mark-ritson-ads-pointless-recognise-brand/", kind: own-words}
+  - {n: 13, title: "Standing out is the key brand challenge, so great brands play with their codes (column, 12 September 2019, opening section only)", by: "Mark Ritson, Marketing Week", url: "https://www.marketingweek.com/mark-ritson-standing-out-brand-challenge-codes/", kind: own-words}
+  - {n: 14, title: "Brand might slyly alter human truth: how brand image changes perceptions of reality (column, 23 February 2022)", by: "Mark Ritson, Marketing Week", url: "https://www.marketingweek.com/mark-ritson-brand-image-perceptions-reality/", kind: own-words}
+  - {n: 15, title: "This year's ad can be a three-year investment - ask Glenmorangie (column, 4 February 2025)", by: "Mark Ritson, Marketing Week", url: "https://www.marketingweek.com/ritson-investment-ad-glenmorangie/", kind: own-words}
+  - {n: 16, title: "Ignore anyone who tells you to forget about targeting (column, 19 February 2025)", by: "Mark Ritson, Marketing Week", url: "https://www.marketingweek.com/ritson-ignore-anyone-targeting/", kind: own-words}
+  - {n: 17, title: "Three things make Coca-Cola better at marketing than anyone (column, 31 March 2025)", by: "Mark Ritson, Marketing Week", url: "https://www.marketingweek.com/ritson-coca-cola-better-marketing/", kind: own-words}
+  - {n: 18, title: "Ritson: Differentiation is not about uniqueness (talk report, 31 July 2023)", by: "Josh Stephenson, Marketing Week", url: "https://www.marketingweek.com/ritson-differentiation-uniqueness/", kind: secondary}
+  - {n: 19, title: "Segmentation is not the prerequisite for success (Festival of Marketing talk report, 5 October 2023)", by: "Chris Sutcliffe, Marketing Week", url: "https://www.marketingweek.com/ritson-sgementation-pointless/", kind: secondary}
+  - {n: 20, title: "Ritson: Creativity is distracting marketers from what matters (Cannes Lions talk report, 19 June 2024)", by: "Charlotte Rogers, Marketing Week", url: "https://www.marketingweek.com/ritson-creativity-distracting-4ps/", kind: secondary}
+  - {n: 21, title: "Ritson's 10-step guide to 'stand on the shoulders' of advertising effectiveness giants (talk report, 3 October 2024)", by: "Niamh Carroll, Marketing Week", url: "https://www.marketingweek.com/ritsons-10-step-advertising-effectiveness/", kind: secondary}
 tests:
   - {kind: use, prompt: "Here's our marketing plan: 'Launch on TikTok, run influencer posts, try a podcast, update the website.' Rewrite it as diagnosis, strategy and tactics."}
   - {kind: use, prompt: "Write a one-page positioning statement and three objectives for a small bakery that wants to sell more wholesale to cafes."}

@@ -1,8 +1,8 @@
 # Paul Feldwick: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Paul Feldwick is alive, and views can change. His ideas are set out in two books, *The Anatomy of Humbug* (2015) and *Why Does the Pedlar Sing?* (about 2021) [S3][S4]. We couldn't open either book, but we did read his own 2022 compendium of four pieces on fame, brand images and the Levi's 'Launderette' ad [S8]. This data set draws on a 2022 Q&A interview he gave, a 2020 extract from the first book, the publisher's description, a review of the second book, podcast notes, and short biographies [S1][S2][S3][S4][S5][S6][S7]. His birth year isn't in our sources. Treat each view as "as of" the date of its source.
+Paul Feldwick is alive, and views can change. His ideas are set out in two books, *The Anatomy of Humbug* (2015) and *Why Does the Pedlar Sing?* (about 2021) [S3][S4]. We couldn't open either book, but we did read his own 2022 compendium of four pieces on fame, brand images and the Levi's 'Launderette' ad [S8]. This data set draws on a 2022 Q&A interview he gave, a 2020 extract from the first book, the publisher's description, a review of the second book, podcast notes, and short biographies [S1][S2][S3][S4][S5][S6][S7]. On 2026-10-21 we added his own look back at the first book ten years on [S9], the summary of his 2016 Admap piece on account planning (the full text was not open) [S10], an event summary of his 2021 talk [S11] and reviews of both books [S12]. His birth year isn't in our sources. Treat each view as "as of" the date of its source.
 
 ## In one paragraph
 
@@ -14,13 +14,15 @@ Feldwick left Oxford in 1974 and joined the London agency Boase Massimi Pollitt 
 
 His first book asks how advertising works. Is it about getting conscious attention for a unique selling point, slipping feelings into the subconscious, or simply being famous [S3]? His answer is that every theory has its uses, but each becomes dangerous when treated as the whole truth [S3]. He traces where the industry's beliefs came from, drawing on Barnum, the psychologist Paul Watzlawick and ad men such as Bernbach, Reeves and Ogilvy [S3]. He argues that the industry has to understand its history and question its habits to cope with fast media change [S3].
 
-How he applied it: the book's last chapter suggests advertising might be best seen as showmanship, which Barnum called "humbug" [S2].
+How he applied it: the book's last chapter suggests advertising might be best seen as showmanship, which Barnum called "humbug" [S2]. Looking back ten years on, he says the book began as three lectures, Salesmanship, Seduction and a catch-all of other models, and that he refused to rank the models so practitioners could choose the lens that fits the case [S9]. He found that the theories colleagues accepted did not fit the work that performed best, such as singing polar bears and laughing aliens [S9].
 
 ### Selling and entertainment belong together
 
 In 2022 he said selling and entertainment have been linked since at least the medieval pedlar who sang to draw a crowd [S1]. Advertisers, he argues, forgot this and leaned on rational sales messages instead [S1]. He calls showmanship good business: entertainment and commerce help each other [S1].
 
-How he applied it: he praised Warburtons bread ads for funny scripts, high production values and stars from Robert De Niro to the Muppets, playing on gangster films and old serials [S1].
+He accepts that Claude Hopkins's "give the facts" approach suits direct response, where results can be measured, and says split-run testing dates to the 1890s [S11]. He criticises briefs that still demand a single-minded rational proposition [S11].
+
+How he applied it: he cited the PG Tips chimps (1956 to 2002), which kept the brand ahead of cheaper rivals by memorability and good feeling, not by arguing the tea was better, and Compare the Meerkat, with its characters, drama and talking animals [S11]. He also praised Warburtons bread ads for funny scripts, high production values and stars from Robert De Niro to the Muppets, playing on gangster films and old serials [S1].
 
 ### Be a charming guest
 
@@ -67,6 +69,8 @@ How he applied it: he praised an adam&eveDDB ad for the AA, a breakdown service,
 
 He sees advertising pulled between wanting to look scientific and staying a creative force [S4]. Big data, AI and algorithms have strengthened the technical side, and he is wary of the demand for certainty and of procurement-style process [S4]. He still values research and structured tools [S4].
 
+In his 2016 Admap piece he looked at what planning left behind. Account planning, he says, began as a way to rebalance power inside agencies because research people felt shut out; the cost is that the more planners claim the strategy, the less creatives and account teams own it, and creatives can reject the brief and take the power back [S10].
+
 How he applied it: he described a "narrative creative briefing" from his BMP days, where the researcher talks through findings with the creative team, who can jump in. He argued this sparks ideas that formal briefs miss [S4]. At DDB he built a Brand Foundations model, which asks where a brand comes from, what it does, what makes it different, who it's for, its personality, and what it fights for and values [S4].
 
 ## Real decisions
@@ -93,6 +97,14 @@ He took the 1985 Levi's film that lifted 501 sales by 600 percent and checked it
 
 After posting, he added a note that several readers said Barbara Nokes, not only John Hegarty, was the main creator of the ad. He said he saw no reason to argue, would not rule on who deserved what share, and agreed that great ads come from many people, quoting Jeremy Bullmore's line that when a group works well nobody should be sure who did what [S8].
 
+### Keeping "Humbug" in the title
+
+Near the deadline for his first book, reading about Barnum led him to a showmanship tradition from before 1900, and that material took over the role of the planned third lecture [S9]. He had been advised against a title with "Humbug" in it and kept it [S9]. In his own words the book aims to make explicit the unspoken assumptions behind how advertising is made [S9]. He says he would disagree with little in it ten years later and has moved mainly in emphasis, with the second book developing showmanship and fame in far more detail [S9].
+
+### Declining to rank the theories
+
+Rather than say which theory of advertising was right, he laid out several, including salesmanship, seduction, mental availability and Watzlawick's view of communication as relational, and left readers to pick the best lens for the case [S9]. He drew on psychology from Damasio, LeDoux, Wilson and Schacter for a better account of how people choose than the rational model [S9]. His stated reason was practical: practitioners need several tools, and each fails if taken literally [S9][S3].
+
 ## How he decides
 
 - Which theory of advertising are we assuming, and what does it miss? [S3]
@@ -101,6 +113,8 @@ After posting, he added a note that several readers said Barbara Nokes, not only
 - Does it build assets people will tie to the brand? [S1]
 - Are we being a charming guest or an aggressive tout? [S1]
 - Is our process leaving room for energy and improvisation? [S4]
+- Which lens fits this case, since no single theory is the truth? [S9]
+- Does the brief ask for one rational proposition when the work needs popularity? [S11]
 
 ## Where he stood
 
@@ -145,3 +159,4 @@ After posting, he added a note that several readers said Barbara Nokes, not only
 - "showmanship is good business." (Contagious, 2022) [S1]
 - "the artistry and skills that make things popular and distinctive" (Contagious, 2022) [S1]
 - "the real Phineas T. Barnum was a lot more interesting" (Marketing Society extract, 2020) [S2]
+- "you cannot afford to be efficient if you want to be famous" (Why Does the Pedlar Sing?, quoted in a Contagious review) [S12]

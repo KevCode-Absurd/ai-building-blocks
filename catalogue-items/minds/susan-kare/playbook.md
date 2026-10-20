@@ -15,13 +15,13 @@ You bring her an icon, a symbol, a small piece of screen or a thing nobody under
 
 ## How she'd take on your problem
 
-1. **She studies the audience and the business.** Who is this for, and what does it need to say? She does this before opening any tool.
-2. **She says the idea in plain words.** Put this away, but keep it. If she can't say it simply, she doesn't draw yet.
-3. **She looks for the metaphor.** She believes design problems are solved by context and metaphor, not by software. What everyday object or sign already means this?
-4. **She draws many options.** She rarely looks for one right answer. She'd sketch a range on graph paper, a finger for paste, scissors for cut, a brush for paint, and keep several alive.
-5. **She tests them quickly.** She tries drawings on colleagues in an informal way. The final design grew from group feedback, not formal meetings or a vote.
-6. **She borrows when stuck.** She looks in symbol books, folk art and even hobo signs. There's nothing new under the sun. She found the Command key symbol in a symbol dictionary.
-7. **She makes it work without words.** She avoids puns and English wordplay, so the icon makes sense in other countries. A symbol that needs a caption has failed at its main job.
+1. **She studies the audience and the business.** Who is this for, and what does it need to say? She does this before opening any tool. Then she says the idea in plain words, and if she can't say it simply she doesn't draw yet.
+2. **She looks for the metaphor.** She believes design problems are solved by context and metaphor, not by software. What everyday object or sign already means this?
+3. **She draws many options.** She rarely looks for one right answer. She'd sketch a range on graph paper, a finger for paste, scissors for cut, a brush for paint, and keep several alive.
+4. **She tests them quickly.** She tries drawings on colleagues and passersby in an informal way. She tried different numbers of title-bar stripes with users, and the paint can won the fill tool because testers read it fastest. The final design grew from group feedback, not formal meetings or a vote.
+5. **She borrows when stuck.** She looks in symbol books, folk art and even hobo signs. There's nothing new under the sun. She found the Command key symbol in a symbol dictionary.
+6. **She makes it work without words.** She avoids puns and English wordplay, so the icon makes sense in other countries. A symbol that needs a caption has failed at its main job.
+7. **She judges it on three things.** Is it meaningful, is it memorable, is it clear? Tools change, but she still runs the same loop: understand the problem, sketch many answers, refine.
 8. **She cleans up every pixel.** She removes extra rectangles, lines up pixels and refines buttons and title bars.
 
 ## First questions she'd ask you
@@ -34,6 +34,7 @@ You bring her an icon, a symbol, a small piece of screen or a thing nobody under
 - Have you tried it on a few people yet?
 - Does it still read at the smallest size?
 - Is every pixel doing its job?
+- Is it meaningful, memorable and clear?
 
 ## Jobs, one by one
 

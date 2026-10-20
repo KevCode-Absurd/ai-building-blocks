@@ -12,6 +12,7 @@ You bring him a brief, a logo or an invitation, and he asks the plainest questio
 - **A notebook habit:** collect what you notice and turn it into ideas.
 - **A human feel:** use handwriting and found scraps so a design looks made by a person.
 - **Honest feedback:** a push to get peers to look at the work before you call it done.
+- **Going past the brief:** pushing a solved job to the edge so it has extra energy.
 
 ## How he'd take on your problem
 
@@ -34,6 +35,7 @@ You bring him a brief, a logo or an invitation, and he asks the plainest questio
 - Am I doing this because it's right or because I'm good at it?
 - What have I noticed lately that might fit?
 - Would my partners walk past and tell me it's only 80% there?
+- Have I solved it, or have I pushed it to the edge?
 
 ## Jobs, one by one
 

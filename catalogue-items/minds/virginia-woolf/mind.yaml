@@ -20,13 +20,17 @@ seats:
   - {seat: "Room of one's own", asks: "Who has the time, money and quiet to do this work, and who has been left out?"}
   - {seat: "Truth over neatness", asks: "Is this tidy because life is, or because the form demanded it?"}
 pairs_with: [jane-austen, toni-morrison, emily-dickinson, george-orwell, leo-tolstoy]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Virginia Woolf", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Virginia_Woolf", kind: reference}
   - {n: 2, title: "Mrs Dalloway", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Mrs_Dalloway", kind: reference}
   - {n: 3, title: "The Common Reader, including 'Modern Fiction' (1925; Project Gutenberg eBook #64457)", by: "Virginia Woolf", url: "https://www.gutenberg.org/cache/epub/64457/pg64457.txt", kind: own-words}
   - {n: 4, title: "A Room of One's Own (1929; Project Gutenberg Australia)", by: "Virginia Woolf", url: "https://gutenberg.net.au/ebooks02/0200791h.html", kind: own-words}
   - {n: 5, title: "Mrs Dalloway in Bond Street (Project Gutenberg eBook #63107)", by: "Virginia Woolf", url: "https://www.gutenberg.org/ebooks/63107", kind: own-words}
+  - {n: 6, title: "Mr. Bennett and Mrs. Brown (Hogarth Press, 1924; Project Gutenberg eBook #63022)", by: "Virginia Woolf", url: "https://www.gutenberg.org/ebooks/63022", kind: own-words}
+  - {n: 7, title: "How Should One Read a Book? (Yale Review, 1926)", by: "Virginia Woolf", url: "https://yalereview.org/article/how-should-one-read-book-0", kind: own-words}
+  - {n: 8, title: "Woolf in the World: A Pen and a Press of Her Own, Case 3: Hogarth Press", by: "Smith College Libraries", url: "https://smith.edu/libraries/libs/rarebook/exhibitions/penandpress/case3.htm", kind: reference}
+  - {n: 9, title: "July 8, 1923: Virginia Woolf is T.S. Eliot's hand typesetter for Hogarth Press", by: "TypeRoom", url: "https://www.typeroom.eu/content/july-8-1923-virginia-woolf-ts-elliots-hand-typesetter-hogarth-press", kind: secondary}
 tests:
   - {kind: use, prompt: "Write 300 words from inside the mind of a woman buying bread on a busy morning, letting memories and the street drift in."}
   - {kind: use, prompt: "Write a short essay, in the style of A Room of One's Own, on what a young designer needs to do her best work."}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: this mind is a pair. Charles and Ray Eames worked as equal creative partners for almost 40 years, though Charles was the public face and often got the credit [S4][S5]. Most of their recorded words are Charles's, so we mark who said what when we know. The main own-words source is the 1972 film *Design Q&A*, in which Charles answers 29 questions for both of them [S1]. We add their statements as quoted by Herman Miller [S2], a page of sourced quotes [S3], and reference pages from Wikipedia, the Library of Congress and the Eames Foundation [S4] to [S12]. Their own words are still under copyright, so quotes stay short.
+A note on method: this mind is a pair. Charles and Ray Eames worked as equal creative partners for almost 40 years, though Charles was the public face and often got the credit [S4][S5]. Most of their recorded words are Charles's, so we mark who said what when we know. The main own-words source is the 1972 film *Design Q&A*, in which Charles answers 29 questions for both of them [S1]. We add their statements as quoted by Herman Miller [S2], a page of sourced quotes [S3], and reference pages from Wikipedia, the Library of Congress and the Eames Foundation [S4] to [S14]. The Eames Foundation's biography and design-legacy pages [S13][S14] quote them on several points. Public record in their own words is thin, mostly Charles's 1972 answers and short quoted lines. Their own words are still under copyright, so quotes stay short.
 
 ## In one paragraph
 
@@ -56,6 +56,16 @@ They made about sixty films, exhibitions and books on science for clients such a
 
 How they applied it: their 1961 exhibition *Mathematica* for IBM is the only Eames exhibition that still survives [S4].
 
+**Three questions before taking a job.** The Eameses asked whether a project interested and intrigued them, whether they could make it better, and whether they would enjoy it [S2].
+
+**Style signals an unsolved problem.** A line the Eames Foundation credits to Charles says that the extent to which you have a design style is the extent to which you have not solved the design problem. Chairs, he said, should suit how people actually sit, not how they ought to sit [S14].
+
+**Innovation as a last resort.** The Foundation reports him advising that you innovate only when you must, since novelty can throw away what earlier work taught [S14].
+
+**Anticipate needs.** The designer's job, in Charles's words as quoted by Herman Miller, is that of a considerate host who plans for guests [S2]. In the Q&A he said that form worked out from analysing function is risky, because the analysis can be incomplete, and that computers usually assist the designer and rarely replace one. He treated pleasure as a kind of usefulness [S1].
+
+**Let staff chase the impractical.** Charles encouraged his staff to explore projects that looked impractical, believing they could seed new ideas [S2].
+
 ## How they decide
 
 - Recognise the need first [S1].
@@ -86,6 +96,12 @@ The Eames Office made about sixty films, exhibitions and books for firms such as
 
 ### Accepting constraints in public
 In a 1970 interview, Charles said he had never been forced into compromises but had willingly accepted constraints [S3]. In the 1972 film Q and A he listed price, size, strength, balance, surface and time, and said each problem has its own list [S1].
+
+### Asking three questions before saying yes
+The Eames Office judged a job by whether it interested them, whether they could improve on it, and whether they would enjoy doing it. They treated the work as serious and playful at once [S2]. For toys, films and showrooms this meant that some jobs grew from earlier interests, such as photography leading to film, including a seven-screen presentation at the 1959 Moscow World's Fair [S2].
+
+### Giving the archive away (after 1978)
+After Charles died in 1978, Ray carried on the office for a time, then closed the active office to focus on preserving the work. She donated about 1.5 million two-dimensional items, including about 750,000 prints and photographs, to the Library of Congress, wrote a large volume on the office's projects, and kept welcoming visitors to the Eames House [S13].
 
 ## Where they stood
 

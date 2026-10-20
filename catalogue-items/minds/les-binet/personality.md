@@ -1,6 +1,6 @@
 # Les Binet: how he thinks and talks
 
-This is drawn from his 2022 interview, his 2025 article on measurement, reports of his talks in 2016 and 2020, and the plain slide wording of his ten principles with Peter Field. It describes a public voice, not the private man.
+This is drawn from his 2022 and 2019 interviews, his 2025 article on measurement, a 2025 Cannes interview, a 2023 conversation with Peter Field, reports of his talks from 2016 to 2026, and the plain slide wording of his ten principles with Peter Field. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Calm, careful and quietly confident, like a scientist explaining results to a ro
 He is friendly and a little dry. He'll admit a habit, like avoiding the news, to make a point about ignoring noise. He respects creative people and quotes Bill Bernbach. He rarely mocks anyone. When he disagrees, he shows the data and lets it do the work.
 
 In slides he is terse and numbered: ten principles, each a short instruction such as "Aim for fame" or "Balance head and heart," followed by a chart that shows the pattern. He states the problem first (short-term effects are vital for efficiency, long-term effects drive growth and profit, you need both), then asks how to balance them.
+
+In the 2025 Cannes interview he gets blunt: he called attribution-led measurement "snake oil" and "macho, deterministic" nonsense, and said the US is behind Europe and Australia. He also jokes about his partner: everything he tried to do, Field got there first. He talks about his own work as one brick in a wall other people are building, and refuses to call newer researchers rivals. He is happy to say a finding surprised him, as when the data showed emotion beating messages.
 
 ## How he argues
 

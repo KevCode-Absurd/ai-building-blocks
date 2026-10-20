@@ -1,8 +1,8 @@
 # Soichiro Honda: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Soichiro Honda (1906 to 1991) wrote memoirs in Japanese, but little of his own writing is freely available in English. This data set uses a few lines quoted in English books and collected on Wikiquote [S2], the design briefs and principles Honda Motor publishes in his name [S3][S4][S5], and reference pages. The company's pages are friendly to their founder. His views date from the 1940s to the 1980s.
+A note on the record: Soichiro Honda (1906 to 1991) wrote memoirs in Japanese, but little of his own writing is freely available in English. This check re-read Wikiquote's sourced lines [S2], Honda's own history pages for the 1950s, 1960s and 1970s [S3][S4][S8] and its philosophy page [S5], and added Wikipedia's account of the Honda 1300, which cites Honda's own launch page [S7]. The Honda pages quote him only in short design briefs; the philosophy page does not name him. We found no speech, interview or letter in full. The company's pages are friendly to their founder, and the quotes on Wikiquote come from business books. His views date from the 1940s to the 1980s. Treat the record as thin.
 
 ## In one paragraph
 
@@ -28,18 +28,6 @@ Honda used the world's toughest contests to pull his company up. A small firm, h
 
 How he applied it: in 1954 Honda declared it would enter the Isle of Man TT, the most famous motorcycle race. He handed the project to a team of young staff in their twenties, who knew how far behind they were [S3]. They won the manufacturers' prize in 1959 and the race in 1961 [S3]. In 1964, as the last Japanese maker to start building cars, Honda entered Formula 1 [S4].
 
-### Bet on tools for the future
-
-Honda was willing to spend far beyond his means on the tools that would let him build better products. He saw machines and research as investments in what the company could become.
-
-How he applied it: in 1952 Honda decided to buy imported machine tools worth 450 million yen, when the company's capital was only 6 million yen [S3]. One of those machines was still in use more than 60 years later [S3].
-
-### Keep research free of short-term pressure
-
-Honda wanted inventors to work on the future without being dragged by this year's sales. He believed new, original technology needs a protected space [S4].
-
-How he applied it: in 1960 he spun off the research centre as a separate company, Honda R&D, so that research could be separated from day-to-day business and pursued freely [S4].
-
 ### The maker needs a seller
 
 Honda knew his strengths. He was the maker. He found a partner, Takeo Fujisawa, who was the seller, and they trusted each other to run their halves [S3].
@@ -58,11 +46,19 @@ Honda published "The Three Joys" in the company's monthly report in 1951 [S3]. T
 
 How he applied it: his first company principle, written in 1956, promised products excellent in performance yet low in price, made with an international view, in response to customers' needs [S3].
 
-### Clean products and quality
+### Hold a bold technical belief, then fight to make it work
 
-Honda believed good products come from clean workplaces [S5]. He was also blunt about quality. One story has him shouting at staff to tighten a loose nut, because they were selling motorcycles, not clothes [S2].
+For the Honda 1300 of 1968 Honda insisted on an air-cooled engine, not a water-cooled one [S7]. His stated reasoning was that a water-cooled engine ends up using air to cool the water, so you might as well use air from the start, which avoids leaks and eases upkeep [S7]. The set challenge was to cut the noise air-cooled engines usually make [S7]. Hideo Sugiura, then head of the research centre, remembered a culture of no surrender and not giving up halfway [S7].
 
-How he applied it: in the 1970s Honda built the CVCC, a low-emission engine, and the Civic that carried it sold strongly in Japan and the U.S. [S6].
+How he applied it: the first prototype of the new design was finished in July 1968, and the car went on sale in Japan in May 1969 [S7]. The later Life and Civic cars used water-cooled engines [S7].
+
+### Answer a rule or a crisis with new technology
+
+When emission rules and the oil crises hit, Honda built the CVCC, a low-emission engine [S8]. Full details were announced in 1972 and the engine met the strict US Muskie Act standards in 1975 [S8]. The Civic, launched in 1972 as a worldwide "People's Car", carried a CVCC version from 1973 and sold well in Japan and the US [S8].
+
+### Success is the one percent
+
+In the line Wikiquote traces to a business book, Honda said success is the 1% of your work that comes from the 99% called failure [S2]. He tied it to reflection: you only get the one percent if you look hard at the ninety-nine [S2].
 
 ## How he decides
 
@@ -78,7 +74,6 @@ How he applied it: in the 1970s Honda built the CVCC, a low-emission engine, and
 - Put the people first and the machine second when you lay out a design [S4].
 
 ## Real decisions
-
 ### Selling what was left and starting again
 In 1944 a bomber raid destroyed his piston ring plant, and in 1945 an earthquake collapsed the other. After the war he sold the salvageable remains to Toyota for 450,000 yen and used the money to found the Honda Technical Research Institute in 1946. He did not rebuild the old firm. He moved to motorised bicycles and then his own engines. [S1]
 
@@ -91,17 +86,17 @@ In 1952 the firm had 6 million yen of capital, and Honda decided to buy imported
 ### Declaring for the Isle of Man TT and handing it to the young
 In 1954 he announced that Honda would enter the Isle of Man TT, then the most famous motorcycle race, when the firm was far behind. He gave the project to a team of staff in their twenties who knew how big the gap was. They won the manufacturers' prize in 1959 and the race in 1961. [S3]
 
-### Briefing the Super Cub
-His brief for the Super Cub was a machine that fits the hand of the rider. The 1958 design used a four-stroke 50cc engine that was thought hard to mass-produce, and an automatic clutch so riders needed no clutch lever. The result reached far more buyers than a racing-style bike would have. [S3]
-
-### Separating research in 1960
-He spun the research centre off as its own company, Honda R&D, so that new technology could be worked on without being pulled around by this year's sales. [S4]
-
 ### Entering Formula 1 in 1964
-As the last Japanese maker to start building cars, Honda entered Formula 1 in 1964. The first race, the German Grand Prix, went badly. The team kept at it and won its first race in Mexico the next year. Honda's stated belief was that success comes from repeated failure and honest reflection. [S2][S4]
+As the last Japanese maker to start building cars, Honda entered Formula 1 in 1964, though no other Japanese carmaker had tried. The first race, the German Grand Prix, went badly. The team kept at it and won its first race in Mexico the next year. Honda's stated belief was that success comes from repeated failure and honest reflection. [S2][S4]
+
+### Insisting on an air-cooled engine (1968)
+Honda held that the Honda 1300 should be air-cooled, and gave his reason that a water-cooled engine ends up using air anyway, so air cooling from the start avoided leaks and simplified upkeep [S7]. He set the team the job of cutting the usual noise [S7]. The car reached sale in May 1969, and the later Life and Civic used water-cooled engines [S7].
+
+### Building the CVCC low-emission engine
+Faced with new emission rules and the oil crises, Honda developed the CVCC and announced its details in 1972 [S8]. It met the US Muskie Act standards in 1975 and was fitted to the Civic, which sold strongly in Japan and the US [S8].
 
 ### Stepping down with his partner in 1973
-He retired as president in 1973, together with Fujisawa, and stayed on as an adviser. Wikipedia also records that in his memoirs he said he regretted being rude to employees, at times humiliating or even slapping them. [S1][S6]
+He retired as president in 1973, together with Fujisawa, and stayed on as an adviser. Wikipedia also records that in his memoirs he said he regretted being rude to employees, at times humiliating or even slapping them. [S1][S6][S8]
 
 ## Where he stood
 

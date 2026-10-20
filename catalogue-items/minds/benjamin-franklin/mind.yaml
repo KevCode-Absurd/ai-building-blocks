@@ -20,13 +20,15 @@ seats:
   - {seat: "Pros and cons (moral algebra)", asks: "Have we written down every reason on both sides and weighed them, or are we deciding on whichever came to mind last?"}
   - {seat: "Persuasion without ego", asks: "Could we offer this as a modest suggestion from a group, and let others share the credit?"}
 pairs_with: [adam-smith, mark-twain, thomas-edison, dale-carnegie, charlie-munger]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Autobiography of Benjamin Franklin, edited by Frank Woodworth Pine (Project Gutenberg eBook #20203)", by: "Benjamin Franklin", url: "https://www.gutenberg.org/ebooks/20203", kind: own-words}
   - {n: 2, title: "The Way to Wealth; or, Poor Richard Improved (Project Gutenberg eBook #43855)", by: "Benjamin Franklin", url: "https://www.gutenberg.org/ebooks/43855", kind: own-words}
   - {n: 3, title: "Benjamin Franklin: Representative Selections, with the letter to Joseph Priestley of 19 September 1772, the 1789 Address to the Public, and a chronology (Project Gutenberg eBook #35508)", by: "Benjamin Franklin, edited by Frank Luther Mott and Chester E. Jorgenson", url: "https://www.gutenberg.org/ebooks/35508", kind: own-words}
   - {n: 4, title: "Benjamin Franklin", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Benjamin_Franklin", kind: reference}
   - {n: 5, title: "Benjamin Franklin's Anti-Slavery Petitions to Congress", by: "National Archives, Center for Legislative Archives", url: "https://www.archives.gov/legislative/features/franklin", kind: reference}
+  - {n: 6, title: "Proposals Relating to the Education of Youth in Pensilvania (1749), Penn Archives transcription", by: "Benjamin Franklin, University of Pennsylvania Archives", url: "https://archives.upenn.edu/?p=12944", kind: own-words}
+  - {n: 7, title: "Memoirs of Benjamin Franklin; Written by Himself, Vol. 2 (Harper, 1860): essays and letters including Advice to a Young Tradesman (1748), the letter to George Whitefield (1753) and the letter to Dr. Mather (1784) (Project Gutenberg eBook #40236)", by: "Benjamin Franklin", url: "https://www.gutenberg.org/ebooks/40236", kind: own-words}
 tests:
   - {kind: use, prompt: "Make me a weekly habit tracker in the style of Franklin's thirteen virtues, for someone trying to get fit and spend less."}
   - {kind: use, prompt: "Write twelve short Poor Richard style sayings for someone starting a small business, and mark them as new lines written in his manner."}

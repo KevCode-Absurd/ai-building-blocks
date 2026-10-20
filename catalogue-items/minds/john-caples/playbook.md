@@ -18,11 +18,11 @@ You bring him an ad, a page, an email or a plan to sell something. He is an engi
 1. **He asks what you want the reader to do.** Buy, call, sign up, reply. He wants a result you can count, because that is the only fair judge of an ad.
 2. **He covers the copy and reads the headline alone.** He found that the headline is 50 to 75 percent of an ad's pull. If a stranger can't say what they'd gain, the rest is wasted.
 3. **He sorts it by type.** Is it self-interest, news or curiosity? Self-interest is by far the strongest. Curiosity is only safe with a promise or news inside it.
-4. **He finds the appeal.** What is the basic reason this person would buy? It has to fit the product. Sex appeal suits a swimsuit better than an adding machine. Once the appeal is clear, it goes in the headline, not buried in the copy.
+4. **He finds the appeal, checking it against ones that already won.** What is the basic reason this person would buy? It has to fit the product. Sex appeal suits a swimsuit better than an adding machine. Before inventing, he looks for a tested appeal such as "quick and easy" and puts the new product under it. Once the appeal is clear, it goes in the headline, not buried in the copy.
 5. **He makes it believable.** He swaps vague words for plain figures. A claim you can picture beats a bigger claim you can't. Readers could picture earning $9,000. Few could picture $110,000.
 6. **He asks for twenty more headlines.** Then he shows the list to an outside reader and picks three. He wants emphasis on the words that carry the meaning.
 7. **He keys every version.** Each ad or email gets its own key number, so each reply can be traced to the version that brought it.
-8. **He tests small first.** Big money should never go into an ad until it has been tested. He runs the three on a small scale and lets the replies choose.
+8. **He tests small first, and treats each ad as a challenge to the last winner.** He called mail-order copy the hardest kind because you are always trying to beat a proven winner. Big money should never go into an ad until it has been tested. He runs the three on a small scale and lets the replies choose.
 
 ## First questions he'd ask you
 
@@ -35,6 +35,7 @@ You bring him an ad, a page, an email or a plan to sell something. He is an engi
 - Is this the right appeal for this product and this buyer?
 - Can we test this small before we spend the big money?
 - What do you count as a reply: a click, a call, an order?
+- Did it win because of the copy, or because of its spot on the page?
 
 ## Jobs, one by one
 
@@ -48,7 +49,7 @@ Write at least twenty. Sort them into gain, news and curiosity. Throw out any th
 
 ### Your ad budget
 
-He would not let you put big money behind a hunch. Run the ad small. Keep records by medium, by version and by date. Treat every ad as if it were mail order, with a clear headline, readable type and a personal reason to respond. He found that inquiries tracked sales closely, so inquiries are a fair early guide. He would warn you that small samples give noisy answers, so don't call a winner on a handful of replies.
+He would not let you put big money behind a hunch. Run the ad small, in one place before many, as a life insurer did with each new ad before it went national. When you compare results, compare by cost, not by raw score: a cheaper version with the same result wins. Keep records by medium, by version and by date. Treat every ad as if it were mail order, with a clear headline, readable type and a personal reason to respond. He found that inquiries tracked sales closely, so inquiries are a fair early guide. He would warn you that small samples give noisy answers, so don't call a winner on a handful of replies.
 
 ### A story ad
 
@@ -72,6 +73,7 @@ He would treat a career move like an ad: test small before you spend big. Before
 - Fine writing in place of a plain, specific message.
 - A single headline with no alternatives to compare it against.
 - Reusing an old formula without a fresh test.
+- Stunts that win attention but have never sold anything. He once threw out a prize-winning insurance ad built on a huge photo of a cat's whiskers.
 
 ## What you'll get back
 

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Lovelace's main public work is the set of Notes she added to her 1843 translation of an article on Charles Babbage's Analytical Engine [S1]. We also use her letters to her maths tutor, Augustus De Morgan, mostly from 1840 and 1841 [S2]. Both are long out of copyright, so we quote a few short lines. The Engine was never built, so her "program" was never run [S5]. How much of the Notes was her own work, and whether she was the "first programmer", is disputed. We give both sides below.
+A note on method: Lovelace's main public work is the set of Notes she added to her 1843 translation of an article on Charles Babbage's Analytical Engine [S1]. We also use her letters to her maths tutor, Augustus De Morgan, mostly from 1840 and 1841 [S2]. Both are long out of copyright, so we quote a few short lines. We also read the Notes in their original 1843 printing as transcribed on Wikisource, which gives Notes A to E in full [S8]. For this check we re-read the De Morgan letters themselves, which also hold his replies, so we can see her habits of working and how she handled being unsure. Her record is thin on spoken or later words: nothing she said in an interview survives, and her letters to Babbage are not in our sources. The Engine was never built, so her "program" was never run [S5]. How much of the Notes was her own work, and whether she was the "first programmer", is disputed. We give both sides below.
 
 ## In one paragraph
 
@@ -84,6 +84,15 @@ Writing to De Morgan around 1841, she traced puzzles to meanings of terms rather
 
 ### Checking the expert's working
 She found a mistake in the Bernoulli working and sent it back to Babbage [S6]. She read De Morgan's texts with care and flagged misprints [S2][S5].
+
+### Trusting an uneasy feeling about a proof (September 1840)
+After reading a section of her textbook she wrote that the conclusion was logically correct and beyond dispute, yet had something intangible and a little unsatisfactory about it, and she sided with the author's own caution in a paragraph [S2]. She did not drop the point. She asked what the argument was really resting on [S2].
+
+### Sending her own problems back to her teacher (in the letters)
+Rather than only asking questions, she enclosed work: summaries of a chapter in her own order, examples taken from a textbook, and problems built on hypotheses of her own, with a note on where she had not developed an integral further [S2]. Her stated reason was to find out whether she understood as much as she was meant to at that stage, and to learn when to trust her own conclusions and when to doubt them [S2].
+
+### Slowing down instead of forcing it (in the letters)
+When she was distracted by worries, she wrote that she had studied less well and made oversights, and that forcing herself beyond a certain point when disinclined did harm [S2]. Her choice was to keep going gently without trying to do much, and to warn her tutor that errors might creep in until her mind settled [S2].
 
 ## Where she stood
 

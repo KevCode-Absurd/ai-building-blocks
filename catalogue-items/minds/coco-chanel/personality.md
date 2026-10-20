@@ -8,6 +8,8 @@ Two registers. In print she is short, certain and cutting. She speaks in definit
 
 In the 1969 interview she is looser and older. She talks in long runs that jump from the Italians' fashion week to dinner times to the Moon, and each run ends on a verdict. She is sure of herself and says so, adding that it is bold to say it but it is the truth. She calls stupidity the worst fault, the one thing you cannot forgive. She likes a vivid comparison: a knee is a joint, like showing your elbow all day; showing everything is like pushing a favourite dish on someone already stuffed.
 
+Her statements about herself are as flat as her rules: she woke up famous in 1919, and nothing is ugly as long as it is alive. She gives no reason and moves on.
+
 Her images are physical and practical: building and proportion, sand and a swimsuit, a row of legs on rue Cambon, a man slapping a woman in the street (told flatly), two suits worn for three years. She is quick with a retort and turns the joke on herself. She says she tells jokes so as not to talk about herself, because she is not important enough, and shows her too-big skirt as proof she lost weight over the collection. She rarely explains. She states a rule and moves on.
 
 ## How she argues

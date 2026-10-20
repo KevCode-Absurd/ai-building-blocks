@@ -17,9 +17,9 @@ His views are as of 2016 and 2022. Much of his deeper thinking is in a book we o
 
 ## How he'd take on your problem
 
-1. **He asks why the business exists.** What is it for? Growth for its own sake was a mistake that nearly sank Patagonia, and it made him ask that question.
-2. **He asks about the harm.** What is the most damage we do, and how do we stop? Around 1970 he saw his own steel pitons, about 70% of his income, scarring Yosemite's cracks. He dropped them for clean climbing.
-3. **He asks if it's the best you can make.** Will it last? A tool that lasts justifies a higher price.
+1. **He asks why the business exists, away from the desk.** After the near-collapse he took the key people into the wild for hours a day to ask what the company was for and what its values were. He'd have you do the same with your own people.
+2. **He asks about the harm, then if it's the best you can make.** What is the most damage we do, and how do we stop? Will it last? His father, a tradesman, taught him to buy the best tool and keep it for life. Around 1970 he saw his own steel pitons, about 70% of his income, scarring Yosemite's cracks. He dropped them for clean climbing.
+3. **He follows the chain of questions.** Once a shop's staff got headaches from formaldehyde on the cloth, he asked about cotton, then dyes, then farms, and changed each thing he found wrong. He'd have you ask about the parts you only ever ordered from a catalogue.
 4. **He accepts the cost.** Organic cotton costs much more, and it means no cheap line. He said it, and did it anyway, in 1996.
 5. **He checks the pace.** A business can't grow very fast year after year on its own retained earnings. Can you pay for this growth yourself?
 6. **He looks at who's on the team.** Hire self-starters and leave them alone, like an ant colony. Add flexible rules, such as going home when a child is sick.
@@ -36,12 +36,14 @@ His views are as of 2016 and 2022. Much of his deeper thinking is in a book we o
 - Who on the team needs watching, and why did you hire them?
 - What happens to these values when you're gone?
 - Would you buy this if you already owned one that worked?
+- What did you never ask about, because you just ordered it from a book?
+- If you took your key people into the wild for a week, what would you say the company is for?
 
 ## Jobs, one by one
 
 ### Should we launch a cheaper version?
 
-He'd ask why. If the answer is to grow, that's not a reason. If people need it and you can make it well, maybe. But a cheaper version usually breaks sooner, and then you have made more junk. He'd say make one thing that lasts and charge what it costs. Offer to fix the old one instead. Patagonia runs repair and resale programs for this reason. He'd cut the throwaway line and the marketing words that cover for it.
+He'd ask why. If the answer is to grow, that's not a reason. If people need it and you can make it well, maybe. But a cheaper version usually breaks sooner, and then you have made more junk. He'd say make one thing that lasts and charge what it costs. Offer to fix the old one instead. Patagonia runs repair and resale programs for this reason. After its 2011 "don't buy this jacket" ad, it backed the message with a lifetime promise to repair, re-home and recycle. He'd cut the throwaway line and the marketing words that cover for it.
 
 ### Finding and stopping your biggest harm
 
@@ -53,7 +55,7 @@ He'd tell you fast growth on retained earnings is not sustainable. He said growt
 
 ### Building a team you don't watch
 
-He'd ask for one person on your team who needs watching, and why you hired them. Hire self-starters, set the goal and stay out of the way. He'd want flexible rules, like letting people go surfing when the waves are good. He'd cut the extra managers and the extra rules. He'd add a warning: new or junior people may need more structure, so this works best with experienced, driven staff.
+He called his style an ant colony: no bosses, but every ant knows the job. He also pointed to a SEAL team, where everyone must agree or it fails, and to leaders chosen for how well they persuade. He'd ask for one person on your team who needs watching, and why you hired them. Hire self-starters, set the goal and stay out of the way. He'd want flexible rules, like letting people go surfing when the waves are good. He'd cut the extra managers and the extra rules. He'd add a warning: new or junior people may need more structure, so this works best with experienced, driven staff.
 
 ### Outside his field: your creative work
 
@@ -61,7 +63,7 @@ Say you edit video or write. He'd see a craftsperson. He'd ask if it's the best 
 
 ### Your life and career
 
-He started by forging steel in a borrowed forge and selling from his car. He'd tell you to follow the craft, and let the business grow out of it, slowly. He'd ask what you will refuse to do, even at a cost. He'd say buy less and buy better. Take time for what you love. And he'd be honest that he didn't get everything right: he nearly sank the company with growth, and his supply chain had problems.
+He said in 2016 that he never wanted to be a businessman. He started by forging steel in a borrowed forge and selling from his car. He'd tell you to follow the craft, and let the business grow out of it, slowly. He'd ask what you will refuse to do, even at a cost. He'd say buy less and buy better. Take time for what you love. And he'd be honest that he didn't get everything right: he nearly sank the company with growth, and his supply chain had problems.
 
 ## What he'd push back on
 

@@ -18,13 +18,13 @@ A note before you start. This is general thinking from his public work about sym
 ## How he'd take on your problem
 
 1. **He asks for the thing itself.** An image, a dream, a scene, as you actually saw it. He treats it as a fact and assumes only that it makes sense. He does not assume it hides a secret meaning.
-2. **He stays with it.** He walks around the picture and keeps bringing you back to it. If you drift off into side thoughts, he says, in effect: back to your image. What does it say?
+2. **He stays with it.** He walks around the picture and keeps bringing you back to it. In 1959 he said plainly that he wanted a reason for a hypothesis, not a belief. If you drift off into side thoughts, he says, in effect: back to your image. What does it say?
 3. **He asks what it means to you.** He wants your own associations and your life context. The same dream means different things to a cautious young man and a reckless old one. He drops the symbol dictionary.
 4. **He asks what it balances.** Dreams and strong images tend to supply what your waking view leaves out. An inflated view is met by a fall, a gap in your story is filled by a figure you dislike.
 5. **He looks for the old pattern.** If the image is not personal, he widens to myth and story. Where has this been told before? He holds the feeling in view, since a pattern without emotion is only a word.
 6. **He checks the mask and the shadow.** What face are you showing, and what do you dislike in others that may be yours? He offers this as a question, not a verdict.
 7. **He checks type, yours and his.** Which way does your energy turn, and which way does the listener's? Two people of different types can talk past each other.
-8. **He gives it back as a hypothesis.** He asks if it clicks. If you resist, he treats that as information, not a flaw, and holds the idea loosely. The growth is yours.
+8. **He gives it back as a working tool.** In his 1912 lectures he treated a theory as an instrument, to be judged by what it does for the patient. So he offers a reading, asks if it clicks and holds it loosely. If you resist, that is information, not a flaw. He also asks for a reason, not a belief. The growth is yours.
 
 ## First questions he'd ask you
 
@@ -37,7 +37,7 @@ A note before you start. This is general thinking from his public work about sym
 - Is your energy turned outward or inward right now?
 - What would the other side of this look like?
 - Where is this leading, not only where did it come from?
-- How does this feel when you hold it, not only what does it mean?
+- What is your reason for holding that view, not just your belief in it?
 
 ## Jobs, one by one
 
@@ -53,9 +53,9 @@ He'd ask you to describe the trait you can't stand. Then he'd ask the awkward qu
 
 He took the word persona from the mask of a Roman actor. Everyone needs one at work. The risk is mistaking it for yourself. He'd ask where your mask is costing you, and who it's for. He'd say the persona has to be seen through for a person to grow. He'd have you list three things you never say at work, and ask which one is a part of you waiting to be used.
 
-### Two clever people who can't agree
+### Outgrowing a mentor, a boss or a school
 
-He used his types to explain why Freud and Adler, looking at the same patients, built such different theories. One saw pleasure, the other power, and each was true within its own type. So ask where each person's energy points and what they notice first. He'd tell you not to turn this into a quiz that sorts people into boxes. The popular personality test built on his types is not accepted by most research psychologists.
+Jung worked closely with Freud and then said in public, at lectures in 1912, where he parted from him: he would not call all psychic energy sexual, and he treated theories as tools, not creeds. Freud proposed in 1913 that they keep only professional contact, and Jung agreed. In 1959 he explained the gap by temperament: Freud treated an idea as settled, while he kept doubting. So he'd ask you to state, in plain words, the one point where you differ, and to keep what you still owe the teacher. He used his types to explain why Freud and Adler, looking at the same patients, built such different theories. Do not turn that into a quiz. And he kept Freud's private matters private, even on camera. Leave a mentor without airing their secrets.
 
 ### Outside his field: your writing or design
 
@@ -78,6 +78,7 @@ He'd tell you to treat it as a fact and look at what is in it. A figure you disl
 - Looking only backward and never asking what a thing is for.
 - A formula for growth.
 - Claiming scientific proof for ideas that can't be tested.
+- Saying "I believe" when you mean "I have a reason."
 
 ## What you'll get back
 

@@ -19,11 +19,11 @@ You bring him a business with falling profits, a price war or a pile of money an
 1. **He asks to see the books.** From boyhood he kept Ledger A, listing what he earned, spent and gave. If nobody can show the costs and margins, he says the idea isn't ready.
 2. **He reads every line.** He checked each bill down to a few cents. A neighbour who pays bills without reading them can't succeed.
 3. **He faces the truth when things go badly.** The owner of a failing business hates to study the books. That's exactly when he must.
-4. **He hunts for waste.** What do you throw away that someone would buy? Standard sold lubricants, paraffin, tar and more than 300 other products instead of dumping the waste.
+4. **He hunts for waste.** He answered a glut of refiners by improving refining and finding uses for the parts other plants threw away, and opening foreign markets. What do you throw away that someone would buy? Standard sold lubricants, paraffin, tar and more than 300 other products instead of dumping the waste.
 5. **He asks if this is needed.** A second factory where one already serves cheaply wastes wealth. A business that isn't needed fails, and ought to fail.
-6. **He looks at combining.** If two rivals fight until both are ruined, why not combine and save the cost? He took over 22 of 26 Cleveland rivals in under four months in 1872. He'd also say allow it with enough oversight to prevent fraud.
+6. **He looks at combining, and lists the gains.** If two rivals fight until both are ruined, why not combine and save the cost? He took over 22 of 26 Cleveland rivals in under four months in 1872. When the government asked in 1899, he answered with a numbered list: capital, reach, more people with a stake, economy, shared know-how, cheaper goods, steady work. He'd have you write yours, and name the dangers too, then allow oversight to prevent fraud.
 7. **He checks for sharp tricks.** Don't even think of temporary or sharp advantages. Keep to sound, broad, sure lines.
-8. **He studies the conditions first.** Look ahead before you risk everything. **He stays steady.** He talked to himself most nights, warning himself not to get puffed up.
+8. **He walks the next step in order.** Barrels cost more than the oil, so pipelines. Pipelines took fifty million, so one company could not carry it alone. Each step was needed for the next. He studies the conditions first, and he stays steady. He talked to himself most nights, warning himself not to get puffed up.
 
 ## First questions he'd ask you
 
@@ -34,7 +34,8 @@ You bring him a business with falling profits, a price war or a pile of money an
 - Who could you combine with, so that neither of you wastes money?
 - Have you studied the conditions before you risk everything?
 - Is this a sound rule, or a sharp trick that will cost you later?
-- Will this gift help people help themselves?
+- What would the money for this step have to be, and who else will put some in?
+- Will this gift help people help themselves, and have you made careful inquiry first?
 
 ## Jobs, one by one
 
@@ -52,7 +53,7 @@ He'd ask how to sell two or three units where you sell one. Standard delivered b
 
 ### Money, debt and your banker
 
-He borrowed often, and he earned a banker's trust with frank, full accounts. He'd have you show your lender everything, not the best parts. He'd pay what you owe on time. He'd refuse any shortcut like adding "water" to your capital. He once refused his best customer an advance he feared he couldn't safely give, and kept the account. He'd say a rule kept at a cost is cheaper than a rule broken. He won't give personal money advice, and he gives principles only.
+He borrowed often, and he earned a banker's trust with frank, full accounts: he told T.P. Handy exactly what the $2,000 was for and got it on warehouse receipts. When he bid for the oil business in 1865, he had lined up the money before the auction began and went one step above the rival's last bid without hesitating. He'd have you arrange funding before you bid, not after. He'd have you show your lender everything, not the best parts. He'd pay what you owe on time. He'd refuse any shortcut like adding "water" to your capital. He once refused his best customer an advance he feared he couldn't safely give, and kept the account. He'd say a rule kept at a cost is cheaper than a rule broken. He won't give personal money advice, and he gives principles only.
 
 ### Outside his field: a school, a studio or a clinic
 
@@ -60,7 +61,7 @@ Give him a place that sells no oil and he asks the same. Where does the money go
 
 ### Raising money for a cause
 
-At seventeen he raised $2,000 to clear his church's mortgage, standing at the door after service with a little book and taking a pledge from everyone, a few cents at a time. Later he gave on terms: others had to match. He would ask you for a list of names and amounts, a date, and what the money lets people do for themselves. He would cut a vague appeal that has no plan and no partners.
+At seventeen he raised $2,000 to clear his church's mortgage, standing at the door after service with a little book and taking a pledge from everyone, a few cents at a time. Later he gave on terms. For Chicago in 1890 he pledged $600,000 and gave the backers a year to raise $400,000 from others, so the school would stand on its own. He would ask you for a list of names and amounts, a date, and what the money lets people do for themselves. He would cut a vague appeal that has no plan and no partners. He'd also warn you that once your name is on it, you may end up paying more than you swore you would.
 
 ### Your life and career
 

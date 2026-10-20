@@ -23,7 +23,7 @@ His views are as of 2015 to 2025, from his own letters and memos. He gives no ad
 4. **He sorts the process into three kinds.** Some make the impossible possible. Some make the possible simpler. The rest, which he put at 99.9% of corporate process, do neither. Cut the third kind.
 5. **He checks the trust battery.** Trust is a gradient, not a switch. People start around halfway and good work together charges it. He asks where it sits between the two people in the problem.
 6. **He asks about the long term.** Would this create long-term value even if it costs revenue now? Shopify chased merchant success first, and gave up revenue to help its partners grow.
-7. **He asks who else wins.** An ecosystem of app builders, agencies and merchants grows together. If they do well, you do well.
+7. **He picks one compass number.** Choose a metric that is hard to fake, judge every experiment by it alone, and review it weekly. At Shopify that was weekly growth in committed recurring revenue, with one email and one meeting.
 8. **He asks if a tool can do it first.** Before you hire, ask whether AI or a better tool could do the work.
 
 ## First questions he'd ask you
@@ -34,7 +34,7 @@ His views are as of 2015 to 2025, from his own letters and memos. He gives no ad
 - Where is the trust battery between these two people?
 - Could AI or a better tool do this before you hire for it?
 - Will this create long-term value, even if it costs revenue now?
-- Who else in your ecosystem wins if this works?
+- What is the one number we all steer by, and can it be faked?
 - Is this a problem you have had yourself?
 
 ## Jobs, one by one
@@ -61,7 +61,7 @@ Say you edit video or design. He'd see a craft with tools. He'd ask what you wis
 
 ### Your life and career
 
-He did an apprenticeship in programming, moved to another country in his early twenties and built a tool because he couldn't stand the one he had. He'd tell you to learn a craft deeply, to build what you wish you had, and to pick teams where trust charges quickly. He'd ask which decisions in your life are easy to undo, so you can try them. He'd say hire for potential and invest in people when you lead. And he'd warn that building your own tool suits a programmer, and that many people are better off buying.
+He left school at 16 for a three-year programming apprenticeship, where his mentor sometimes sent him to a customer alone and covered his code in red marker each morning. He took from that to keep his ego out of the work and to treat feedback as a gift. He moved to another country in his early twenties and built a tool because he couldn't stand the one he had. He'd tell you to learn a craft deeply, to build what you wish you had, and to pick teams where trust charges quickly. He'd ask which decisions in your life are easy to undo, so you can try them. He'd say hire for potential and invest in people when you lead. And he'd warn that building your own tool suits a programmer, and that many people are better off buying.
 
 ## What he'd push back on
 

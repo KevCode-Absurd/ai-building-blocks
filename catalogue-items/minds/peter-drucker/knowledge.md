@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Drucker wrote 39 books and decades of articles [S2]. Almost all of it is under copyright and behind paywalls, so this data set leans on reference pages about his work, the openings of three of his Harvard Business Review articles, and short lines from his books as collected, with page numbers, on Wikiquote. In October 2026 we re-opened the three Harvard Business Review pages and the Wikiquote page; the three articles are behind a paywall and gave only their openings, so nothing here claims to know the full method of those articles. Drucker himself admitted he used stories to make a point rather than to record history [S1], so treat his anecdotes as teaching tools.
+A note on method: Drucker wrote 39 books and decades of articles [S2]. Almost all of it is under copyright and behind paywalls, so this data set leans on reference pages about his work, the openings of six of his Harvard Business Review articles [S3][S4][S5][S11][S12][S13], and short lines from his books as collected on Wikiquote [S6]. Two pieces we could read in full are a 1997 Forbes interview [S9] and his 1998 Forbes essay "Management's New Paradigms" [S10]. The HBR articles are behind a paywall and gave only their openings, so nothing here claims to know their full method. Drucker himself admitted he used stories to make a point rather than to record history [S1], so treat his anecdotes as teaching tools.
 
 ## In one paragraph
 
@@ -39,6 +39,10 @@ How he applied it: he listed what makes knowledge workers productive. Ask first 
 In "Managing Oneself" (in the January 2005 Harvard Business Review), Drucker argued that success in a knowledge economy goes to people who know themselves: their strengths, their values and how they work best [S3]. Great achievers always did this, he wrote, but now most people would have to [S3]. Careers would last about 50 years, so people must find where they can contribute most and stay alert and engaged, even if that means changing the kind of work they do [S3].
 
 How he applied it: he taught his last class in 2002, at 92, and kept writing almost to the end [S1].
+
+**What he told executives to do in his late interviews.** In 1997 he said computers make managers more inwardly focused, and advised chief executives to spend time working in the marketplace [S9]. He said a leader should ask what the institution most needs and not what the leader likes, and he named Truman and Jack Welch as examples [S9]. He said big companies would struggle to attract strong graduates [S9]. He said being global and being diversified do not mix, and cited Coca-Cola as a model of focus [S9]. Asked to predict, he said he only looks out the window and sees what is visible but not yet seen [S9].
+
+**Management is not only for business.** In 1998 he wrote that management is no more business management than medicine is obstetrics [S10]. He traced it to the military, government and nonprofits, and held that the differences between kinds of organisation are small, about a tenth of the work [S10]. In 1989 he had already argued that American nonprofits were becoming its management leaders on strategy and on board effectiveness [S11].
 
 ### Planned abandonment
 
@@ -95,6 +99,18 @@ When *The Wall Street Journal* reported in 1987 that he sometimes got facts wron
 
 Drucker advised the Red Cross and the Girl Scouts and in 1991 created an award for innovation by nonprofits [S2]. His stated view was that nonprofits could be run very well and that volunteering gave people purpose and a sense of community [S1][S2].
 
+### Telling ServiceMaster what its business really was
+
+In the 1997 interview he recalled telling ServiceMaster's leaders that their real business was to train the least-skilled workers and make them able to do the job [S9]. He used the case to show his habit of reframing a business around the people and results it actually produces, not the product on the price list [S9]. This is his basic question, what is our business, applied to a cleaning firm.
+
+### Sending chief executives into the marketplace
+
+He argued that computers were making managers more focused on the inside of the firm, and so advised CEOs to spend time working in the marketplace [S9]. His reason was that results exist outside the walls, among customers and non-customers [S9]. The 1963 article opens in the same spirit: the manager's first duty is to get the best economic result from the resources at hand, and everything else depends on it [S13].
+
+### Managing experts as associates, like volunteers
+
+In 1998 he held that knowledge workers often know more about their specialty than their boss does, so they cannot be managed as subordinates: they are associates, and you lead them [S10]. He suggested treating them like volunteers, giving them challenge, mission, training and visible results, since pay mostly prevents dissatisfaction and does not drive performance [S10]. He also asked for one clear boss per person, a flat structure and a transparent chain of authority [S10].
+
 ### Choosing to teach and write into old age
 
 He taught his last class at 92 and kept writing almost to the end, which fits his view that a working life now runs about 50 years and the person must keep themselves engaged [S1][S3].
@@ -144,6 +160,6 @@ He taught his last class at 92 and kept writing almost to the end, which fits hi
 
 - "There is only one valid definition of a business purpose: to create a customer." (*The Practice of Management*, 1954) [S6]
 - "Success always obsoletes the very behavior that achieved it." (*Management: Tasks, Responsibilities, Practices*, 1973) [S6]
-- "Management has authority only as long as it performs." (*Management: Tasks, Responsibilities, Practices*, 1973) [S6]
-- "The first managerial skill is, therefore, the making of effective decisions." (*Management*, 1973) [S6]
 - "I use anecdotes to make a point, not to write history." (to *The Wall Street Journal*, 1987) [S1]
+- "I never predict." (Forbes interview, 1997) [S9]
+- "One leads them." (on knowledge workers, Forbes, 1998) [S10]

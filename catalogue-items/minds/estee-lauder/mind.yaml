@@ -20,7 +20,8 @@ seats:
   - {seat: "Sampling and word of mouth", asks: "What will she take home today that makes her tell a friend tomorrow?"}
   - {seat: "Brand prestige", asks: "Is this a place, a price or a deal that makes our product look less than it is?"}
 pairs_with: [mary-kay-ash, madam-cj-walker, coco-chanel, howard-schultz, joe-girard]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
+thin_record: "No speeches, transcribed interviews or letters by her are online; her 1985 memoir is under copyright, so only short quoted lines and a page-cited summary of it are available."
 sources:
   - {n: 1, title: "Estée Lauder (businesswoman)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Est%C3%A9e_Lauder_(businesswoman)", kind: reference}
   - {n: 2, title: "Our Founder", by: "The Estée Lauder Companies", url: "https://elcompanies.com/en/who-we-are/our-heritage/our-founder", kind: reference}
@@ -29,6 +30,17 @@ sources:
   - {n: 5, title: "Estée Lauder quotes", by: "Estée Lauder, collected by Goodreads", url: "https://www.goodreads.com/author/quotes/801995.Estee_Lauder", kind: own-words}
   - {n: 6, title: "Estée: A Success Story (1985), book page with excerpts", by: "Estée Lauder, listed on Goodreads", url: "https://www.goodreads.com/book/show/1748531.Est_e", kind: own-words}
   - {n: 7, title: "Lessons from Estée Lauder", by: "Antoine Buteau", url: "https://www.antoinebuteau.com/lessons-from-estee-lauder/", kind: secondary}
+  - {n: 8, title: "Building a Powerful Prestige Brand", by: "Harvard Business School, Working Knowledge", url: "https://www.library.hbs.edu/working-knowledge/building-a-powerful-prestige-brand", kind: secondary}
+  - {n: 9, title: "Estée Lauder: From One Woman's Passion to Cosmetics Empire", by: "The American Business History Center", url: "https://americanbusinesshistory.org/estee-lauder-from-one-womans-passion-to-cosmetics-empire/", kind: secondary}
+  - {n: 10, title: "Sweet smell of succession", by: "Fortune", url: "https://fortune.com/article/estee-lauder-succession-archives/", kind: secondary}
+  - {n: 11, title: "Estée Lauder (house profile with her quoted words)", by: "The Perfume Society", url: "https://perfumesociety.org/perfume-house/estee-lauder/", kind: secondary}
+  - {n: 12, title: "Josephine Esther: America's (First) Cosmetics Queen", by: "Foundation for Economic Education", url: "https://fee.org/articles/josephine-esther-americas-first-cosmetics-queen/", kind: secondary}
+  - {n: 13, title: "Estée Lauder Inc. (company history)", by: "Encyclopedia.com", url: "https://www.encyclopedia.com/books/politics-and-business-magazines/estee-lauder-inc", kind: reference}
+  - {n: 14, title: "Estée Lauder", by: "Jewish Virtual Library", url: "https://jewishvirtuallibrary.org/est-eacute-e-lauder", kind: reference}
+  - {n: 15, title: "Estée Lauder porcelain powder box (with her 1985 documentary words)", by: "Collectors Weekly", url: "https://www.collectorsweekly.com/stories/90871-estee-lauder-porcelain-powder-box", kind: secondary}
+  - {n: 16, title: "Estée Lauder Inc. (biography entry)", by: "Encyclopedia.com", url: "https://www.encyclopedia.com/people/social-sciences-and-law/business-leaders/estee-lauder-inc", kind: reference}
+  - {n: 17, title: "Estée Lauder (research starter)", by: "EBSCO", url: "https://www.ebsco.com/research-starters/biography/estee-lauder", kind: reference}
+
 tests:
   - {kind: use, prompt: "Write a two-minute script for a market stall owner selling handmade soap, from the first hello to the moment the customer tries it on her hands."}
   - {kind: use, prompt: "Design a gift-with-purchase offer for a small tea shop, and say what it should and shouldn't include."}

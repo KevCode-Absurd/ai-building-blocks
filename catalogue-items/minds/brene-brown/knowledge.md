@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Brené Brown is alive and still working, so her views can change. What follows comes from two long radio interviews with published transcripts (2012 and 2018), reference pages on her career and books, and her publisher's page for *Dare to Lead* (2018). Read each view as "as of" those dates. Her books are in copyright, so this is our own summary with a few short quotes.
+Brené Brown is alive and still working, so her views can change. What follows comes from two long radio interviews with published transcripts (2012 and 2018) [S2][S3], a long 2020 podcast interview with Tim Ferriss [S7], her 2020 commencement address at the University of Texas [S8] and the introduction to her own 2020 podcast [S9], plus reference pages on her career and books and her publisher's page for *Dare to Lead* (2018). The Ferriss, commencement and podcast pages are transcripts and summaries that we read only in part, and we left out her private-life detail. Read each view as "as of" those dates. Her books and talks are in copyright, so this is our own summary with a few short quotes.
 
 She is a social work researcher, and her subjects are shame, vulnerability and belonging. This mind offers general ideas from her public work for everyday life and work. It is not therapy, counselling or mental health advice. Anyone who is struggling should talk to a qualified professional.
 
@@ -68,26 +68,38 @@ She began by studying shame, first with women only, and widened to men after a c
 
 ## Real decisions
 
+As of 2020, from her own telling.
+
+### Proving herself to get into UT
+In the commencement address she gave in 2020, Brown said that after a hard family year before college she worked odd jobs, then a night shift at AT&T, before trying to return to school [S8]. UT asked for more proof of her grades. She went to community college, earned a 4.0, was asked to show one more semester, did so and was admitted [S8]. She told it as a fall followed by getting back up [S8].
+
+### Self-publishing a rejected book
+Her first book was turned down repeatedly, so she self-published it, and a major publisher later picked it up [S8]. She counts the rejections among the falls she recovered from, and says her argument to graduates is that how many times you get back up matters more than a smooth plan [S8].
+
 ### Putting her own habits on the wrong list
 In 2006 and 2007, sitting at her kitchen table, she saw her perfectionism, her habit of treating exhaustion as a badge and her habit of measuring herself by output on the list of things the wholehearted had let go. She called it a breakdown and a spiritual awakening, went to therapy, and began practising vulnerability on purpose, including bringing her own weak spots into her work [S2]. Her stated reason: the data pointed at her too.
 
-### Treating the backlash as a test
-When the 2010 talk went viral and brought sharp criticism, she treated it as a live test of her own findings and noticed when she was putting on armour [S2][S6].
+### Asking for a counter-example
+She said she asked tens of thousands of people, including soldiers and athletes, to name an act of courage that did not involve vulnerability, and nobody could [S8]. She uses this as a test of her claim, not only an illustration [S8].
 
-### Naming belonging as four practices
-In 2018 she set out four elements of true belonging: move close to people you are tempted to hate, speak truth while staying civil, hold a strong back with a soft front and a wild heart, and share joy and pain even with strangers [S3]. She tested the ideas with focus groups, interviews and audience polls, and asked leaders the same questions [S3].
+### Declining investors to stay close to the work
+When investors wanted to scale her business, she chose not to take outside money [S7]. She described herself as a slower, closer person and not a further, faster one, and said fast growth made her feel worse [S7]. She shifted toward producing research and partnering with others who scale it [S7].
+
+### Splitting her time 30 and 70
+Planning ahead in 2020, she said she wanted about 30% of her time for leading her organisation and about 70% for creative, unscheduled research [S7]. Her reason was that deep work on what it means to be human needs room [S7]. For her podcast, she said the test is contribution: if a project does not add something, or only adds noise, she pulls it back [S7].
+
+### Starting the podcast again
+About twelve years before her 2020 relaunch, she had recorded a homemade podcast on empathy and shame at her kitchen table, and loved how close it felt to listeners [S9]. She chose to return to it for a decade of conversations that challenge what people think they know [S9]. She planned a mix: guests who teach, challenge or frustrate her, solo episodes on what she is learning, and listener questions [S9].
 
 ### Drawing a line on abuse
-Even while urging people to move in, she said she would not tolerate abuse or dehumanising language [S3].
-
-### Teaching parents to stop shielding
-She argued that how parents engage with the world matters more than technique, that hope is learned through struggle with trusted people nearby, and that the real harm is the isolation around a hard moment, not the moment itself. She used the example of parents calling HR about an adult child's review to show over-control [S2].
-
-### Taking leadership out of titles
-For *Dare to Lead* she drew on about two decades of research and about seven years with leaders, and held that leadership means taking responsibility for finding potential in people and ideas, not holding a title. She said daring leaders do not pretend to know everything, share power, and have tough conversations [S5].
+Even while urging people to move in, she said she would not tolerate abuse or dehumanising language, and that she would set the line herself [S3][S7].
 
 ## How she decides
 
+- Get back up and begin again; count the number of recoveries, not the smoothness of the plan [S8].
+- Test a claim by asking for a counter-example [S8].
+- Choose slower and closer over further and faster when growth would pull you from the work [S7].
+- Use contribution as the filter: if it adds only noise, pull it back [S7].
 - Ask what you're afraid to be seen doing, and whether that fear is blocking the brave choice [S2].
 - Name shame out loud. It can't survive being spoken [S2].
 - Choose belonging over fitting in [S3].

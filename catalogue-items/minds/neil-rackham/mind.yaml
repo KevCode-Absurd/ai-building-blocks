@@ -20,7 +20,7 @@ seats:
   - {seat: "Evidence on selling", asks: "What did the buyers actually do in calls like this, not what do we hope works?"}
   - {seat: "Sales and marketing together", asks: "Do sales and marketing agree on who the buyer is and what they need?"}
 pairs_with: [chris-voss, brian-tracy, robert-cialdini, peter-drucker, alex-hormozi]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Neil Rackham", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Neil_Rackham", kind: reference}
   - {n: 2, title: "Ending the War Between Sales and Marketing (July–August 2006)", by: "Philip Kotler, Neil Rackham and Suj Krishnaswamy, Harvard Business Review", url: "https://hbr.org/2006/07/ending-the-war-between-sales-and-marketing", kind: own-words}
@@ -29,6 +29,14 @@ sources:
   - {n: 5, title: "Rethinking SPIN: the universal framework for persuasive communication (May 22, 2025)", by: "Tony Hughes, Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/rethinking-spin-the-universal-framework", kind: secondary}
   - {n: 6, title: "The Science Behind SPIN Selling (whitepaper page)", by: "Huthwaite International", url: "https://www.huthwaiteinternational.com/the-science-behind-spin-selling", kind: reference}
   - {n: 7, title: "Huthwaite International (home page)", by: "Huthwaite International", url: "https://www.huthwaiteinternational.com/", kind: reference}
+  - {n: 8, title: "Overcoming resistance to SPIN Selling (interview transcript, March 2026)", by: "Neil Rackham with Tony Hughes, Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/overcoming-resistance", kind: own-words}
+  - {n: 9, title: "The origins of SPIN Selling (interview transcript, 2026)", by: "Neil Rackham with Tony Hughes, Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/origins-of-spin-selling", kind: own-words}
+  - {n: 10, title: "Neil Rackham's SPIN hypothesis (interview transcript, 2026)", by: "Neil Rackham with Tony Hughes, Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/neil-rackhams-spin-hypothesis", kind: own-words}
+  - {n: 11, title: "The SPIN Selling eureka moment (interview transcript, February 2026)", by: "Neil Rackham with Tony Hughes, Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/neil-rackham-spin-selling-eureka", kind: own-words}
+  - {n: 12, title: "Cricket and the SPIN methodology (interview transcript, 2026)", by: "Neil Rackham with Tony Hughes, Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/cricket-spin-methodology", kind: own-words}
+  - {n: 13, title: "Less is more in sales training (interview transcript, 2026)", by: "Neil Rackham with Tony Hughes, Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/less-is-more-sales-training", kind: own-words}
+  - {n: 14, title: "Reflecting on SPIN Selling (interview transcript, 2026)", by: "Neil Rackham with Tony Hughes, Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/reflecting-on-spin-selling", kind: own-words}
+  - {n: 15, title: "The research behind SPIN (interview transcript, April 2026)", by: "Neil Rackham with Tony Hughes, Huthwaite International", url: "https://www.huthwaiteinternational.com/blog/neil-rackham-research-spin", kind: own-words}
 tests:
   - {kind: use, prompt: "I sell accounting software to small firms. Write me four SPIN questions of each type for a first call with a 10-person architecture practice."}
   - {kind: use, prompt: "Rewrite this pitch as a set of questions: 'Our cleaning service is fast, cheap and eco-friendly.'"}

@@ -1,8 +1,8 @@
 # Andrew Carnegie: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Carnegie (1835 to 1919) wrote a great deal, and two of his works anchor this data set. His essay "Wealth" appeared in 1889 and is known as *The Gospel of Wealth* [S2]. His *Autobiography* was published in 1920, after his death [S1]. Both are in the public domain, so we quote a few short lines. His own account is not neutral. On the Homestead strike of 1892, for example, he defends himself, and other sources tell a harder story [S1][S5]. We give both.
+A note on the record: Carnegie (1835 to 1919) wrote a great deal, and everything in his own words here is public domain, so we use only a few short lines. His essay "Wealth" appeared in 1889 and is known as *The Gospel of Wealth* [S2]. His *Autobiography* was published in 1920, after his death [S1]. His addresses in *The Empire of Business* [S6], the 1900 collection *The Gospel of Wealth and Other Timely Essays* [S7], the 1908 chapter on railway rates and rebates [S8], *Problems of To-day* (1908) [S9] and his 1902 address at St Andrews [S10] add his plain rules for young men, owners and the rich, and one worked case of him negotiating. The railway chapter and the rules on giving are new in this pass. His own account is not neutral. On the Homestead strike of 1892 and on the rebate fight he tells the story in the best light, and other sources tell a harder one [S1][S5]. We give both.
 
 ## In one paragraph
 
@@ -50,7 +50,7 @@ How he applied it: one young German worker who rose to partner earned about $50,
 
 Carnegie built a chain of businesses that fed each other. He adopted the Bessemer process for cheap mass production and bought his suppliers, including the Homestead Steel Works in 1883 [S3]. He formed the Carnegie Steel Company in 1892 [S3].
 
-How he applied it: by the late 1880s his firm was the largest steel producer in the world [S3]. He also lobbied Congress for tariffs that protected his steel, which later court papers showed were worth a great deal to him [S3].
+How he applied it: by the late 1880s his firm was the largest steel producer in the world [S3]. He also lobbied Congress for tariffs that protected his steel [S3].
 
 ### Wealth is a trust
 
@@ -64,6 +64,32 @@ Carnegie wrote that higher wages paid to workers who respect their employers are
 
 How he applied it: he said the Edgar Thomson mills were his ideal of good relations between owners and workers [S1]. The Homestead strike, covered below, is the hard test of this belief [S5].
 
+## His own rules, from his addresses and essays
+
+### Start at the bottom and stand out
+
+Carnegie told young men to expect small jobs at first, to do small tasks thoroughly, and to ask what they could do beyond their duties [S6]. He told them to break orders when they were sure it would save the owners money [S6]. In his view few people can master more than one business, so put all your eggs in one basket and then watch the basket [S6]. Looking back, he said he would never have chosen business, but his father's loom work vanished when steam factories came, and at ten he resolved to drive the wolf of poverty from the door [S7].
+
+### Three dangers
+
+He named drink, speculation and signing other people's debts as the three main threats to a young man [S6]. He called speculation a parasite on real business, because it creates nothing and meets no want [S6].
+
+### Honesty and judgment in a partner
+
+In the chapter on business he called honesty the keystone of the arch, and said partners should be chosen for judgment, integrity and all-round character [S6]. He defined being "in business" as owning part of an enterprise and depending on its profit, not on a salary [S6]. He told students to take a risk only when trained for it and sure they could wade ashore and try again [S6].
+
+### Labour and capital are a three-legged stool
+
+He said capital, business ability and skilled labour are equal partners, like three legs of a stool, with no first or last [S6][S9]. He thought strikes and lockouts as senseless as a duel, and that most strikes come from not knowing the other side, so he met workers' committees [S6]. He cut pay days to every two weeks and set up a co-operative store after the men said monthly pay forced them into debt at local shops [S6].
+
+### Competition beats trusts
+
+He argued that trusts form when an industry is oversupplied and prices fall, and that they fail because high profits attract new rivals [S6]. He said free competition, not regulation, protects the buyer [S6]. At St Andrews in 1902 he said he had watched rival nations' output and costs for years, because anyone risking capital must weigh the future of competitors [S10].
+
+### Give it away while alive
+
+He called distributing surplus wealth during life the only noble use of it, and criticised leaving large inheritances to heirs [S6][S2]. He listed seven fields for giving: universities, libraries, hospitals and medical research, parks, halls, swimming baths and churches [S7].
+
 ## How he decides
 
 - Find the exact cost of each step before you judge anything [S1].
@@ -73,7 +99,6 @@ How he applied it: he said the Edgar Thomson mills were his ideal of good relati
 - Take the work others refuse, and never make poor quality [S1].
 - Settle disputes generously and stay out of court [S1].
 - Give your best people a share of the profits [S1].
-- Act fast when the chance appears [S1].
 - Give surplus wealth away while you are alive to direct it [S2].
 
 ## Real decisions
@@ -81,20 +106,23 @@ How he applied it: he said the Edgar Thomson mills were his ideal of good relati
 ### Leaving the railways to master iron
 In the early 1870s Carnegie had money in several western railway ventures with his Pennsylvania Railroad friends, and offers kept coming his way from finance and banking. He drifted out of all of it and put the surplus into his Pittsburgh iron and bridge works, choosing the opposite of the adage. His reason was that a man seldom reaches the top of money-making by being in many concerns, and that he could manage his own capital better than any board. The works grew into the base of the steel business. [S1]
 
-### Hiring a chemist and buying the ores others scorned
-He put a young clerk in charge of the Lucy Furnace and hired a German chemist, instead of trusting a manager who read the furnace by feel. The analyses showed that some famous ores were poor and that unloved ones, such as Pilot Knob, were rich if fluxed properly. The firm bought heavily of the despised ore, and the proprietors thanked them. He also had a young man buy a friend's discarded roll-scale for fifty cents a ton, as a joke at the friend's expense that turned out to be good business. [S1]
-
 ### Standing clear in the crash of 1873
 When his railway friends Scott and Thomson fell into trouble, the Pittsburgh banks wondered whether he was tied to their debts. He caught the night train, told the bankers he owned his Texas Pacific share outright and that his name stood on none of the paper, and offered to pledge everything for the firm. He said his credit became unassailable and money was offered to him more freely in later squeezes. His own account is that he had risked far less than people supposed, because big companies stood behind his larger moves. [S1]
 
-### Making partners of clerks
-William Borntraeger began as a clerk who built a cost statement by night, unasked, and rose to superintendent and then partner. William Abbott and Mr. Curry of the Lucy Furnaces followed. Carnegie's stated reason was that nothing builds a business like promoting those who give exceptional service. Borntraeger's income late in life was about $50,000 a year, and Carnegie said every cent was earned. [S1]
+### Tying wages to the price of steel
+Carnegie's firm moved to a sliding scale, under which pay rose and fell with the net price of the product [S6]. His reasoning, given to workers at Braddock, was that contracts are booked months ahead at old prices, so when prices jump the men ask for a share the mills cannot afford, and when they fall the owners cut and the men strike. A scale tied to price lets both sides rise and fall together [S6]. He said the first employer to cut wages is labour's enemy, and the last to cut may be its best friend [S6].
 
 ### Facing down the round-robin
 Furnace workers at his steel-rail works demanded a raise by four o'clock on a Monday, though their pay scale ran for months more. Carnegie took the night train, met all three works committees courteously, and asked each chairman whether an agreement stood. When the furnace chairman said he had signed without reading it, Carnegie told him to keep it and read the next one more carefully. He then gave the committee its answer before the deadline: they could leave, and the furnaces would stand idle before the firm yielded to a threat. The men went back to work. [S1]
 
+### Building his own railroad to beat the rebates
+Pittsburgh steel makers paid more to ship than rivals on other lines, because of secret rate deals. Carnegie Steel lost a shipbuilding contract when a Chicago rival's rate to Newport News was lower than the Pennsylvania Railroad's rate from Pittsburgh, a much shorter haul [S8]. He took a list of the cheaper rates to the railroad's president, who waved it away, so he bought a harbour at Conneaut and some track and began extending a line toward Pittsburgh, over his partners' fears [S8]. He warned the railroad's managers that any slowing of his traffic would shut his works and lead him to publish the rates to his workers [S8]. When they asked to meet, he handed them a packet of rival rates and left the room, and they agreed to charge him what his competitors paid [S8]. He refused to drop the lake line as a price, and the deal was estimated to save about a million and a half dollars a year [S8]. This is his own account, and he later called selling the line a mistake [S8].
+
 ### Offering to split the gain at Homestead
-The firm spent several million dollars rebuilding Homestead, and the new machinery made about 60% more steel. It offered the tonnage men a new scale that shared the gain, so their earnings would rise about 30% and the firm would keep the rest to repay its outlay. Carnegie calls the offer generous. The dispute that followed became the strike of July 1892, which happened while he was in Scotland. He says his partners asked him not to return. Other sources say he backed Frick's aim of breaking the union, so read his account with care. [S1][S5]
+The firm spent several million dollars rebuilding Homestead, and the new machinery made about 60% more steel. It offered the tonnage men a new scale that shared the gain, so their earnings would rise about 30% and the firm would keep the rest to repay its outlay. Carnegie calls it generous. The dispute that followed became the strike of July 1892, which happened while he was in Scotland. He says his partners asked him not to return. Other sources say he backed Frick's aim of breaking the union, so read his account with care. [S1][S5]
+
+### Giving libraries, on conditions
+After his 1889 essay Carnegie wrote that the first duty of a rich giver is to stop impulsive, careless giving, which he thought did more harm than hoarding, because it makes people depend on alms [S7]. He picked free libraries as the best gift, and his reason was personal: as a working boy he borrowed books on Saturdays from a Colonel Anderson, and he resolved to do the same for other poor boys [S7]. He set a condition, that the community must accept and keep the library as a public institution, because a gift that does everything for people is rarely used well [S7]. He praised a Baltimore library where the city paid five percent a year on the gift. He added that gifts should be made in life, since what is left at death is torn from a man, not given [S7].
 
 ### Selling in 1901 and turning to giving
 After his essay was published he resolved to stop piling up wealth and take on the harder task of giving it away well. When J.P. Morgan's offer came through his partners in March 1901, he agreed to sell. He asked for nothing in common stock, because he distrusted inflated mill sales to the public, and took bonds instead. He wrote that he had enough, and that distributing it would keep him busier than before. [S1][S3]
@@ -109,7 +137,7 @@ After his essay was published he resolved to stop piling up wealth and take on t
 
 **Should money be left to children?** Not in large amounts. He thought big inheritances harmed heirs [S2].
 
-**Should the state tax large estates?** Yes, heavily, at death [S2][S3].
+**Should the state tax large estates?** Yes, heavily, at death. In 1908 he repeated his 1889 call for a graduated tax, with half of estates above $5 million going to the state, and said President Roosevelt had written that he had it all seventeen years earlier [S2][S3][S9].
 
 **Do workers deserve good pay?** He said higher wages were a good investment, and that unions had their place [S1][S5]. His actions at Homestead did not match his words [S5].
 
@@ -133,7 +161,7 @@ After his essay was published he resolved to stop piling up wealth and take on t
 - **Tariffs.** He lobbied for tariffs that protected his own profits [S3].
 - **The Johnstown Flood.** He was one of more than 50 members of a club whose poorly kept dam failed in 1889, killing 2,209 people [S3].
 - **Giving.** Some historians argue his gifts helped justify how he made his money and the social order that made him rich [S3]. One argues that his libraries also served to control workers, and that many Homestead steelworkers despised theirs [S3].
-- **Peace.** In 1913 he predicted the end of war would come soon. The First World War began the next year [S3].
+- **Peace.** In 1913 he predicted war would soon end. The First World War began the next year [S3].
 
 ## Blind spots to watch
 

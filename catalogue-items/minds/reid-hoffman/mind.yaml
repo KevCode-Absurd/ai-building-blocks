@@ -20,7 +20,7 @@ seats:
   - {seat: "Distribution first", asks: "Great product, fine. How will people actually find it?"}
   - {seat: "Launch and learn", asks: "What's the roughest version we could put in front of real users this month?"}
 pairs_with: [peter-thiel, marc-andreessen, paul-graham, mark-zuckerberg]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Reid Hoffman on network effects, interview with James Currier (July 2019)", by: "Reid Hoffman, NFX", url: "https://www.nfx.com/post/reid-hoffman-network-effects-interview-james-currier", kind: own-words}
   - {n: 2, title: "Reid Hoffman on blitzscaling, GIC Meets interview (November 2019)", by: "Reid Hoffman, GIC ThinkSpace", url: "https://www.gic.com.sg/thinkspace/technology/reid-hoffman-on-blitzscaling/", kind: own-words}
@@ -28,6 +28,11 @@ sources:
   - {n: 4, title: "LinkedIn", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/LinkedIn", kind: reference}
   - {n: 5, title: "If you're not embarrassed by the first version of your product", by: "Rowan Simpson, quotes collection", url: "https://rowansimpson.com/quotes/embarassed/", kind: secondary}
   - {n: 6, title: "Blitzscaling (April 2016)", by: "Tim Sullivan, Harvard Business Review", url: "https://hbr.org/2016/04/blitzscaling", kind: secondary}
+  - {n: 7, title: "Reid Hoffman on The Diary of a CEO (transcript)", by: "Reid Hoffman and Steven Bartlett, via Happy Scribe", url: "https://podcasts.happyscribe.com/the-diary-of-a-ceo-with-steven-bartlett/reid-hoffman-linkedin-founder-it-s-time-to-quit-your-job-when-you-feel-this-selling-linkedin-for-26-billion-taught-me-this-about-life-trump-is-going-to-punish-me", kind: own-words}
+  - {n: 8, title: "The Oracle of Silicon Valley, Reid Hoffman, Tim Ferriss Show #101 (August 2015)", by: "Reid Hoffman and Tim Ferriss, via Podscripts", url: "https://podscripts.co/podcasts/the-tim-ferriss-show/101-the-oracle-of-silicon-valley-reid-hoffman-plus-michael-mccullough", kind: own-words}
+  - {n: 9, title: "Reid Hoffman's 10 commandments of startup success (2017)", by: "Reid Hoffman and Tim Ferriss", url: "https://tim.blog/2017/06/26/10-commandments-startup-success/", kind: own-words}
+  - {n: 10, title: "Reid Hoffman, profile", by: "Academy of Achievement", url: "https://achievement.org/achiever/reid-hoffman/", kind: reference}
+  - {n: 11, title: "LinkedIn cofounder Reid Hoffman talks entrepreneurship and investing (2021)", by: "Polsky Center, University of Chicago", url: "https://polsky.uchicago.edu/2021/03/03/linkedin-cofounder-reid-hoffman-talks-entrepreneurship-investing-in-tech-startups", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a one-page growth plan for a new local tutoring app, naming its network effects, its distribution plan and its biggest growth limit."}
   - {kind: use, prompt: "List the risks of doubling our team of 15 in six months, and sort them into 'live with it' and 'fix now'."}

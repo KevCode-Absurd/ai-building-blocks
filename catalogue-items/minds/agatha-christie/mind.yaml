@@ -20,13 +20,20 @@ seats:
   - {seat: "The detective", asks: "Which small fact doesn't fit, and why have we all ignored it?"}
   - {seat: "Fair play", asks: "If they work it out, will they feel clever, and if they don't, will they feel cheated?"}
 pairs_with: [alfred-hitchcock, edgar-allan-poe, charles-dickens, stephen-king, charlie-munger]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Agatha Christie", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Agatha_Christie", kind: reference}
   - {n: 2, title: "About Christie", by: "Agatha Christie Limited (official site)", url: "https://www.agathachristie.com/about-christie", kind: reference}
   - {n: 3, title: "The Mysterious Affair at Styles (Project Gutenberg eBook #863)", by: "Agatha Christie", url: "https://www.gutenberg.org/files/863/863-h/863-h.htm", kind: own-words}
   - {n: 4, title: "The Secret Adversary (Project Gutenberg eBook #1155)", by: "Agatha Christie", url: "https://www.gutenberg.org/files/1155/1155-h/1155-h.htm", kind: own-words}
   - {n: 5, title: "The Murder of Roger Ackroyd", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Murder_of_Roger_Ackroyd", kind: reference}
+  - {n: 6, title: "How Christie Wrote", by: "Agatha Christie Limited (official site)", url: "https://www.agathachristie.com/about-christie/how-christie-wrote", kind: reference}
+  - {n: 7, title: "Christie's Favourite Christie (her 1972 list of favourites, as given by the official site)", by: "Agatha Christie Limited (official site)", url: "https://www.agathachristie.com/about-christie/christies-favourite-christie", kind: reference}
+  - {n: 8, title: "100 Facts about Agatha Christie", by: "Agatha Christie Limited (official site)", url: "https://www.agathachristie.com/news/2020/100-facts-about-agatha-christie", kind: reference}
+  - {n: 9, title: "Poirot Investigates (Project Gutenberg eBook #61262)", by: "Agatha Christie", url: "https://www.gutenberg.org/ebooks/61262", kind: own-words}
+  - {n: 10, title: "The Murder on the Links (Project Gutenberg eBook #58866)", by: "Agatha Christie", url: "https://www.gutenberg.org/ebooks/58866", kind: own-words}
+  - {n: 11, title: "The Murder at the Vicarage (Project Gutenberg eBook #78220)", by: "Agatha Christie", url: "https://www.gutenberg.org/ebooks/78220", kind: own-words}
+  - {n: 12, title: "There's nothing like boredom to make you write: a rare interview with Agatha Christie (report on a 1955 BBC radio interview)", by: "Herald Times", url: "https://www.heraldtimes.org/2026/01/24/theres-nothing-like-boredom-to-make-you-write-a-rare-interview-with-the-elusive-agatha-christie/", kind: secondary}
 
 tests:
   - {kind: use, prompt: "Plot a short mystery set at an office party, with five suspects, three fair clues and one red herring. Give me the solution at the end."}

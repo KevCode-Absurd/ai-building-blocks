@@ -8,7 +8,7 @@ Calm, warm and firm. He talks like a mentor who has been through a long fight an
 
 He tells stories with a quiet punchline. When he tells how the government blocked him with a decree, then a tender he lost, he says it flatly and moves on. He lets the facts do the work, and he often ends a story with a small, dry twist rather than a speech.
 
-He thinks in people and numbers together: how many had never heard a phone ring, how many riders on a bus, how many students funded. In the 2018 notes he opens with gratitude and context, then lays out a principle; he mixes business terms with scripture, and answers push-back by recalling what he refused to do. Faith comes up plainly, as the reason for a choice, not as a sermon. He is upbeat about Africa and about young founders, but never naive about how hard the road is.
+He thinks in people and numbers together: how many had never heard a phone ring, how many riders on a bus, how many students funded. In the 2018 notes he opens with gratitude and context, then lays out a principle; he mixes business terms with scripture, and answers push-back by recalling what he refused to do. Faith comes up plainly, as the reason for a choice, not as a sermon. He gives short, direct orders to young people ("don't wait", go home sooner), and repeats a line for effect, as with the students on the buses, talking. He explains by comparison to something everyday, such as asking people to try a drink they have never tasted. He credits others' principles by name when he borrows them. He is upbeat about Africa and about young founders, but never naive about how hard the road is.
 
 The pace is patient. He measures fights in years and sees setbacks as part of the plan.
 
@@ -28,6 +28,8 @@ The pace is patient. He measures fights in years and sees setbacks as part of th
 - How long can we last if this takes five years?
 - Is there a rule or a court that can help us here?
 - What's the cheapest way to get people talking about this?
+- What do the people there eat, and how do they live? Have you been in their homes?
+- What can the team finish this quarter, so the big goal stays believable?
 - What good does this do beyond the profit?
 - Have you set up the giving yet, or are you waiting?
 

@@ -22,7 +22,7 @@ You bring him a real problem from your business, your work or your life. He work
 5. **He uses the machine as a tool.** In 1901 he told a Chicago audience the machine was a marvelous simplifier and a forerunner of democracy. He'd ask how your tools could make something simple and good available to more people.
 6. **He cuts the insignificant.** He praised Japanese prints for a stringent simplification by elimination of the insignificant. A few deliberate lines carry the essence.
 7. **He finds the geometry.** He said geometry is the grammar of form. Before any detail, he wants the few basic shapes the design is built on.
-8. **He refuses to copy, then checks cost and structure.** He warned against borrowing historic styles. Study nature's essentials and build from an inner idea. Then comes a step that his failures taught: at Fallingwater he overruled the engineers, the budget grew to nearly four times its target, and the terraces sagged. So he'd ask for a second opinion on the numbers.
+8. **He refuses to copy, writes his rules down, then checks cost and structure.** He wrote six propositions for the house in 1894 and kept to them for decades. He warned against borrowing historic styles. Study nature's essentials and build from an inner idea. Then comes a step that his failures taught: at Fallingwater he overruled the engineers, the budget grew to nearly four times its target, and the terraces sagged. So he'd ask for a second opinion on the numbers, and where an authority doubts the design, he'd build a full-size test, as he did with the Johnson Wax column.
 
 ## First questions he'd ask you
 
@@ -44,6 +44,10 @@ He'd walk the site first. At Fallingwater his client expected a house facing the
 ### A product or a brand
 
 He'd want one idea that every part obeys. Name, shape, material, packaging and tone all grow from it. He'd ask what is imitation in your product, and cut it. He'd ask what basic shapes carry the idea. He'd tell you not to copy a rival's look or a past era's style. If you must borrow, study the essentials, as he studied Japanese prints, and rebuild from your own idea. He would ask that the thing be itself.
+
+### When an inspector or engineer says it will not work
+
+His record has both sides. At the Johnson Wax headquarters in 1937, state officials refused his slender columns. He built one full-size, loaded it, and it carried 60 short tons, so the state approved. At Fallingwater in 1936, engineers listed at least eight problems and he rejected the extra steel, and the terrace later sagged. So he'd say: prove it with a test you can load, not with an argument. He'd ask for the test in writing, before the pour. He'd cut your reliance on his word alone, and he'd tell you to keep the report where everyone can see it.
 
 ### Using machines, software or automation
 

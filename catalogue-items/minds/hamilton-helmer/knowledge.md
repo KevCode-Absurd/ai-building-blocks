@@ -1,8 +1,8 @@
 # Hamilton Helmer: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Hamilton Helmer is alive, and views can change. This data set comes from a 2025 podcast interview with a published transcript, his book's website (its synopsis and Reed Hastings's foreword), two detailed summaries of his book 7 Powers, and the site of the investment firm he co-founded. The book is under copyright and we did not read it directly, so its ideas come here through the author's site and those summaries. Treat each view as "as of" the year of its source. Our sources do not confirm his birth year or his early career, so we leave those out. He is an investor. This data set explains his framework only and gives no advice on buying or selling any stock.
+Hamilton Helmer is alive, and views can change. This data set comes from a 2025 podcast interview with a published transcript, his book's website (its synopsis and Reed Hastings's foreword), two detailed summaries of his book 7 Powers, and the site of the investment firm he co-founded. The book is under copyright and we did not read it directly, so its ideas come here through the author's site and those summaries. In October 2026 we tried to add more of his own words from the book site's podcast list (Acquired, Invest Like the Best, 20VC, NFX, Venrock), but those pages carry only summaries and no transcript text, so the 2025 conversation [S4] and the synopsis [S2] remain his only own-words sources. We added the firm's description of its approach [S9] and his author page [S10], and we re-read the 2025 conversation for method and voice. Treat each view as "as of" the year of its source. Our sources do not confirm his birth year or his early career, so we leave those out. He is an investor. This data set explains his framework only and gives no advice on buying or selling any stock.
 
 ## In one paragraph
 
@@ -75,10 +75,19 @@ How he applied it: he advises firms to exploit the power they already have befor
 - Look for models the leader can't copy without hurting itself [S5][S6].
 - Treat great operations as necessary but not enough [S5].
 - Spend most time on execution, but guard the few strategic choices that close off options [S4].
+- Ask: what will it take for somebody to take this away from me [S4]?
+- Use a three-part test of a claimed edge: is it superior, is it significant, is it sustainable (his colleague Chenyi Shi's 3S test) [S4].
+- His firm says it estimates a company's long-run earning power from the seven powers and compares that with what the market is pricing (their description of their method, not advice) [S9].
 
 ## Real decisions
 
 Helmer advises and teaches more than he runs companies, so these entries are the strategic choices he analyses and the changes in his own method, as he describes them.
+
+### Opening a first meeting with the framework (2004)
+On 29 September 2004 Helmer and a colleague from Strategy Capital, a Netflix shareholder, met Reed Hastings [S3]. Instead of questioning management the way investors usually do, Helmer opened with his framework and used it to read Netflix's strategic priorities [S3]. Hastings found it so useful that the meeting became far more than a courtesy [S3].
+
+### Teaching strategy to Netflix's key people (about 2009)
+By 2009 Netflix had beaten Blockbuster, but DVD-by-mail was fading and much larger rivals were arriving [S3]. Hastings wanted staff to understand the levers of strategy well enough to apply them alone, since Netflix ran on judgment and context, not control [S3]. He chose Helmer after remembering that 2004 summary, partly because he believed strategy is hard to teach unless the teacher truly understands it [S3]. Helmer built a program for many of Netflix's key people, which Hastings says many still count among their best learning experiences [S3].
 
 ### Moving Netflix from DVDs to streaming
 

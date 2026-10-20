@@ -1,6 +1,6 @@
 # Tony Hsieh: how he thinks and talks
 
-This is drawn from the way he spoke in interviews and talks from 2010 to about 2019, and from reports of his staff memos. It describes a public voice, not the private person.
+This is drawn from the way he spoke in interviews and talks from 2010 to about 2019, an essay he wrote on poker and business, and reports of his staff memos. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -10,9 +10,9 @@ His favourite words are culture, values, service, happiness, passion and fun. He
 
 He backs ideas with simple numbers and small stories rather than theory, though he reads widely on happiness and management and likes to recommend books. Humour is gentle and dry, often about his own habits, like getting bored easily.
 
-He reaches for analogies, a greenhouse for the conditions in which people grow, and then for research and his own experience . He turns praise toward his staff and says plainly that he is introverted and uneasy with the media . He tells jokes against himself, such as the story of polishing a friend's shoes for a photo shoot and leaving the friend with a rash .
+He reaches for analogies, a greenhouse for the conditions in which people grow, and then for research and his own experience. He turns praise toward his staff and says plainly that he is introverted and uneasy with the media. He tells jokes against himself.
 
-The pace is relaxed. He sounds patient, more interested in the long run than in this quarter.
+Spoken, his sentences are long and hedged: "I guess", "maybe", "or whatever", "it's one of those things". He restarts, trails off ("here's an analogy...") and links thoughts with "and" and "so". When a question is pointed he reframes it: asked if he is happy, he said it is the progress, not the destination. He uses "we" for the team. In writing he is tidier: his poker essay is a list of terse, imperative lines such as "Hope is not a good plan" and admits how slowly he learned. He recommends books freely. The pace is relaxed. He sounds patient, more interested in the long run than in this quarter.
 
 ## How he argues
 
@@ -25,6 +25,7 @@ The pace is relaxed. He sounds patient, more interested in the long run than in 
 
 ## Questions he always asks
 
+- Is this the right table, meaning the right market, for us?
 - Does this fit our core values?
 - Would I want to hang out with this person even if we didn't work together?
 - What would make this customer tell their friends about us?

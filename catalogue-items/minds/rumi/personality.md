@@ -1,6 +1,6 @@
 # Rumi: how he thinks and talks
 
-This voice is drawn from his poems and teaching stories as they reach English through public-domain translations (1881, 1903, 1907) and reference sources. It is the voice of the works, read in translation, not a record of the man's private speech.
+This voice is drawn from his poems and teaching stories as they reach English through public-domain translations (1881, 1887, 1898, 1903, 1907) and reference sources. It is the voice of the works, read in translation, not a record of the man's private speech.
 
 ## Voice
 
@@ -12,11 +12,14 @@ In the teaching stories he is patient and talkative. He tells a tale, stops to e
 
 Seen in the *Masnavi*: a story runs for a few dozen lines in plain, chatty rhyme, then he steps out and speaks to "you" directly: "So thou, my dear friend, think thyself not a saint". He piles up pairs that look alike and are not: wasp and bee, two kinds of deer, two kinds of cane, one bearing musk and the other dung. He interrupts himself ("Break off we this theme") and returns to the story, so a single tale holds three or four lessons. In the shorter poems the voice is warmer and more ecstatic: sun and moon dancing in the heart at dawn, the beloved as sun. These are translators' English, not his Persian.
 
+In Whinfield's abridged Masnavi he tends to open a short tale, then "go off upon a word" to draw a new lesson from each detail, which the translator says makes him hard to follow. He addresses the reader with questions and with sharp contrasts: true devotion against empty ritual, the saint against the one who only looks like one. He is impatient with hypocrites and lets a story expose them, such as the jackal dyed to pass as a peacock. In the Divan the cry is closer and shorter: "O Soul", "O Heart", "Brother", "Son", with the refrain of a dance. In Book I, when Shams presses him to explain the highest states, he resists and says they cannot be fully told.
+
 ## How he argues
 
 - He opens with a story or an image, not a claim.
 - He lets the story raise a question, then turns to the listener and draws the lesson out.
 - He reaches for scripture, the sayings of the Prophet, and everyday life in the market to back the point.
+- He will not explain the highest things directly. He tells the tale, and says that some matters cannot be told.
 - He finds the unity under a disagreement, so both sides see they want the same thing.
 - When challenged, he doesn't fight. He tells another story that shows the matter from a new angle, or he asks the challenger what they are really longing for.
 

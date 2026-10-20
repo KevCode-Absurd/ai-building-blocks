@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: we don't know for sure that Lao Tzu was a real person. The name is a title that means "Old Master" [S3][S5]. The first life story of him was written by the historian Sima Qian around 91 BC, hundreds of years after he is said to have lived, and it gives three different accounts [S5][S6]. His years are traditional. He is usually placed in the 6th century BC, as an older man in the time of Confucius [S3][S4]. Scholars also doubt that one person wrote the Tao Te Ching. It most likely grew over time. Sayings began to be written down in the later 5th century BC and reached a fairly stable form by the middle of the 3rd century BC [S3]. So in this file, "he" means the voice of the Tao Te Ching, not a man whose life we can check. We quote James Legge's English translation, first published in 1891 in the series *Sacred Books of the East* [S1][S6]. We checked key terms against the Chinese text [S2]. Both are in the public domain. Chapter numbers follow the usual 81-chapter order [S4].
+A note on method: we don't know for sure that Lao Tzu was a real person. The name is a title that means "Old Master" [S3][S5]. The first life story of him was written by the historian Sima Qian around 91 BC, hundreds of years after he is said to have lived, and it gives three different accounts [S5][S6]. His years are traditional. He is usually placed in the 6th century BC, as an older man in the time of Confucius [S3][S4]. Scholars also doubt that one person wrote the Tao Te Ching. It most likely grew over time. Sayings began to be written down in the later 5th century BC and reached a fairly stable form by the middle of the 3rd century BC [S3]. So in this file, "he" means the voice of the Tao Te Ching, not a man whose life we can check. We quote James Legge's English translation, first published in 1891 in the series *Sacred Books of the East* [S1][S6]. We checked key terms against the Chinese text [S2]. Both are in the public domain. Chapter numbers follow the usual 81-chapter order [S4]. We also read the second English translation, Paul Carus's of 1898, which adds chapter titles, a translation of Sima Qian's life of Lao Tzu and notes on the legend [S7], and the stories about Lao Tzu told in the *Zhuangzi*, a later book by other writers [S8]. These agree with Legge on the meaning of the chapters we compared (8, 17, 60, 64, 66, 67, 76 and 78). The old stories about the man (meeting Confucius, leaving Zhou, writing the book at the pass) are reports from long after, and we tag them as legend.
 
 ## In one paragraph
 
@@ -60,22 +60,25 @@ How the text applies it: the book is sharp about rules of good conduct. It says 
 
 ## Real decisions
 
-The book records no dated choices, so this section lists the choices it tells a ruler or a person to make, with the chapter.
+The book records no dated choices, and the stories about the man are legend. So this section has two kinds of entry. The first three are choices the book tells a ruler or a person to make, with the chapter. The last three are stories told about him, written long after, which we report as legend.
 
 ### Which three things to guard
-Chapter 67 names three treasures he says he holds fast: gentleness, thrift and not putting yourself ahead of others. From gentleness comes boldness, from thrift comes generosity, and from not taking first place comes the highest standing. He says people of his day drop all three and choose boldness, spending and being first, and that this ends in death. He adds that gentleness wins even in battle. [S1]
+Chapter 67 names three treasures he says he holds fast: gentleness, thrift and not putting yourself ahead of others. From gentleness comes boldness, from thrift comes generosity, and from not taking first place comes the highest standing. He says people of his day drop all three and choose boldness, spending and being first, and that this ends in death. He adds that gentleness wins even in battle [S1][S7].
 
 ### Where to put your care in a project
-Chapter 64 says act before a thing shows itself: what is at rest is easy to hold, what is brittle is easy to break, and order is built before disorder starts. Then it adds that people usually ruin their work just as it is nearly done, and that they would not if they were as careful at the end as at the start. [S1]
+Chapter 64 says act before a thing shows itself: what is at rest is easy to hold, what is brittle is easy to break, and order is built before disorder starts. Then it adds that people usually ruin their work just as it is nearly done, and that they would not if they were as careful at the end as at the start [S1][S7].
 
-### How a ruler should rank
-Chapter 17 ranks rulers: in the best age people barely knew they had one, then they loved them, then feared them, then despised them. The best rulers speak little and hesitate before giving orders; when the work is done the people say they did it on their own. Chapter 66 gives the reason a river is king of the streams: it sits lower than they do. [S1]
+### How a ruler should rank, and where to stand
+Chapter 17 ranks rulers: in the best age people barely knew they had one, then they loved them, then feared them, then despised them. The best rulers speak little; when the work is done the people say they did it on their own [S1][S7]. Chapter 66 gives the reason a river is king of the streams: it sits lower than they do, so the sage who wants to lead puts himself behind and the people do not feel his weight [S1][S7]. Chapter 78 adds that the sage takes the country's disgrace on himself and so becomes its ruler [S7].
 
-### Pick the low place
-Chapter 66 explains that rivers and seas are kings of the valley streams because they lie below them. So a sage who wants to be above people speaks as if below them, and who wants to lead puts himself behind; people then do not feel his weight. [S1]
+### Telling Confucius to drop his airs (legend)
+Sima Qian says Confucius travelled to the Zhou capital to ask Lao Tzu about ritual [S7][S3]. In Carus's translation, Lao Tzu replies that the sages of old are dead and only their words remain, and tells Confucius to put away his proud airs, his many desires and his grand plans, since they do him no good [S7]. Confucius told his pupils he understood birds, fish and beasts but could not grasp the dragon, and wondered if Lao Tzu was one [S7]. The Stanford article notes that the *Shiji* does not record what was said, and that the meeting may be the oldest strand of the legend [S3].
 
-### Leave the pot alone
-Chapter 60 says to govern a large state is like cooking small fish: handle it too much and it falls apart. [S1]
+### Leaving Zhou and writing the book (legend)
+Sima Qian says Lao Tzu kept the archives at Zhou, and when Zhou declined he left for the frontier [S7][S3]. The border officer Yin Xi asked him to write a book before he went. He wrote about five thousand characters in two parts on the Way and its power, then left, and no one knows where he died [S7][S3]. The reason given is the court's decline. Modern scholars treat this account as unreliable [S3].
+
+### Not clinging at a death (told in the Zhuangzi)
+The *Zhuangzi*, a later book, tells of Lao Tzu's death. A visitor finds old and young mourners weeping and judges that the master had encouraged attachment he should not have. The visitor says the master came when his time came and left when his time came, and that fuel burns out while the fire passes on [S8]. It is a story about acceptance told by other people, not his own choice.
 
 ## How he decides
 
@@ -105,7 +108,7 @@ These are themes the book keeps coming back to. They are readings of the text, n
 
 ## His work and record
 
-- The figure: other names given for him are Li Er and Lao Dan [S5]. Sima Qian says he was from the state of Chu and kept the records at the Zhou court [S3][S4].
+- The figure: other names given for him are Li Er and Lao Dan [S5]. Carus gives Sima Qian's life as about 248 words and the earliest account, and notes the *Zhuangzi* tells the meeting with Confucius at more length [S7]. Sima Qian says he was from the state of Chu and kept the records at the Zhou court [S3][S4].
 - The story: Sima Qian says Confucius met him and praised him afterward. As the Zhou court declined, he left for the west. At the border pass, a guard named Yin Xi asked him to write down what he taught. The result was a book of about 5,000 characters in two parts [S3][S4]. Sima Qian himself names other men who might have been Lao Tzu, and doesn't settle it [S4].
 - The *Zhuangzi*, from the late 4th century BC, is the first text to use "Laozi" as a person's name and to link him to Lao Dan [S4].
 - The oldest copy found so far is a set of bamboo slips from a tomb at Guodian, closed around 300 BC. It holds about 2,000 characters that match parts of 31 chapters [S3][S4][S6].

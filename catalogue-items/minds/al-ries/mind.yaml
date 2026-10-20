@@ -20,7 +20,7 @@ seats:
   - {seat: "Category and focus", asks: "What category can we be first in, and what are we willing to give up to own one word?"}
   - {seat: "Launch plan", asks: "Who would write about this, and what will they say before we buy a single ad?"}
 pairs_with: [david-ogilvy, seth-godin, byron-sharp, michael-porter, steve-jobs]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Al Ries", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Al_Ries", kind: reference}
   - {n: 2, title: "The Positioning Era Cometh (Advertising Age articles, 1972)", by: "Al Ries and Jack Trout, on ries.com", url: "https://ries.com/about/positioning-articles", kind: own-words}
@@ -33,6 +33,11 @@ sources:
   - {n: 9, title: "Al Ries (2016 inductee)", by: "Marketing Hall of Fame, AMA New York", url: "https://www.marketinghalloffame.org/?p=6005", kind: reference}
   - {n: 10, title: "Positioning (marketing)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Positioning_(marketing)", kind: reference}
   - {n: 11, title: "Marketing Guru Al Ries Has Passed Away (14 October 2022)", by: "B&T", url: "https://www.bandt.com.au/marketing-guru-al-ries-has-passed-away/", kind: reference}
+  - {n: 12, title: "Marketing Sense Versus Common Sense (2 November 2010)", by: "Al Ries, Branding Strategy Insider", url: "https://brandingstrategyinsider.com/2010/11/marketing-sense-versus-common-sense/", kind: own-words}
+  - {n: 13, title: "Brands Weaken Through Line Extension (5 October 2010)", by: "Al Ries, Branding Strategy Insider", url: "https://brandingstrategyinsider.com/2010/10/brands-weaken-through-line-extension/", kind: own-words}
+  - {n: 14, title: "Strength In Length: The Long Slogan Advantage (20 September 2010)", by: "Al Ries, Branding Strategy Insider", url: "https://brandingstrategyinsider.com/2010/09/strength-in-length-the-long-slogan-advantage/", kind: own-words}
+  - {n: 15, title: "Brand Naming: The Advantage Of Two (12 August 2010)", by: "Al Ries, Branding Strategy Insider", url: "https://brandingstrategyinsider.com/2010/08/brand-naming-the-advantage-of-two/", kind: own-words}
+  - {n: 16, title: "Comcast Makes Classic Marketing Mistake (6 July 2010)", by: "Al Ries, Branding Strategy Insider", url: "https://brandingstrategyinsider.com/2010/07/comcast-makes-classic-marketing-mistake/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page positioning statement for a new budget gym opening across the road from a big, well-known chain."}
   - {kind: use, prompt: "Write a short memo to a family-owned hardware store that wants to add a cafe, a garden centre and a bike shop under its own name."}

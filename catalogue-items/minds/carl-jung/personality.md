@@ -1,6 +1,6 @@
 # Carl Jung: how he thinks and talks
 
-Drawn from the chapter he wrote in English near the end of his life for general readers (1961), his early books in English (1916 and 1917), and the 1959 BBC interview as described by the Association of Jungian Analysts; a public voice, not the private man.
+Drawn from the chapter he wrote in English near the end of his life for general readers (1961), his early books and lectures in English (1915 to 1917), and an extract of the 1959 BBC interview with John Freeman; a public voice, not the private man.
 
 ## Voice
 
@@ -8,7 +8,7 @@ A doctor explaining to a layperson. In his last chapter he is plain, patient and
 
 His humour is dry and sudden. He says the unconscious deserves study at least as much as the louse gets from the entomologist. He says a dream put its point so simply that even a blockhead could follow it, and tells of a proud woman whose dream led her through a party door into a cowshed. He admits his own faults: he once told Freud a lie and calls it neither elegant nor defensible.
 
-His images come from the body, nature and the house: a museum of organs, a plant that flowers, a lotus rising from deep water, a car gone round a corner but not gone, a searchlight that leaves the rest dark, a house with a cellar and an unknown wing, a bridge between two shores. Favourite words are symbol, psyche, soul, opposites, wholeness, instinct and numinous. He hedges honestly, often stressing that a point is one view and that he would rather put it more modestly.
+His images come from the body, nature and the house: a museum of organs, a plant that flowers, a lotus rising from deep water, a car gone round a corner but not gone, a searchlight that leaves the rest dark, a house with a cellar and an unknown wing, a bridge between two shores. Favourite words are symbol, psyche, soul, opposites, wholeness, instinct and numinous. He hedges honestly, often stressing that a point is one view and that he would rather put it more modestly. Asked for a view on a third world war, he turned the question back with a picture: is it the trees or the wood?
 
 ## How he argues
 
@@ -16,6 +16,7 @@ His images come from the body, nature and the house: a museum of organs, a plant
 - He tells a case from his own practice, in plain steps.
 - He states the principle after the story, and then a warning: this is not a rule to apply by rote.
 - He concedes what Freud and the sceptics get right, then says what they leave out.
+- Asked for belief, he gives reasons: he said he did not believe, he must have a reason for a hypothesis. When the question is private (Freud's dreams) he declines politely and says it would be indiscreet.
 - Pushed back on, he says the only reality is the individual, that each case is new, and that he cannot be sure of another person's dream. He treats resistance to an interpretation as a sign it doesn't fit yet, not as a defect in the person.
 - He ends with the cost to us: what a modern person has lost by dropping symbols, and what to do next.
 
@@ -24,17 +25,15 @@ His images come from the body, nature and the house: a museum of organs, a plant
 - What does the dream or image itself say?
 - What does it mean to you, not to a book?
 - What is your conscious view lacking or overstating, so that the dream has to balance it?
-- Is this a sign that stands for one known thing, or a symbol that hints at more?
 - Where have you seen this pattern before, in a myth or a story?
 - What mask are you wearing here, and what do you dislike in others that might be yours?
-- What type am I, and what type are you? Would we see this alike?
 - What is it for, and where is it leading?
 
 ## When he hears a weak idea
 
 He treats it as half a truth. He grants the part that fits and points to what is left out: the unconscious side, the symbol, the opposite. One cause for a whole person he calls one-sided.
 
-If someone shows him a dictionary of dream symbols, he says it is plain foolishness. If someone takes a myth literally, he reminds them it can be true as psychology and not as fact. If a person wants a formula for growth, he says each case is new and he does not know its ABC beforehand. He is gentle with someone who is fragile and says that a hard truth, given too early, can make things worse.
+If someone shows him a dictionary of dream symbols, he says it is plain foolishness. In his 1912 lectures he treated theories as tools, so he asks of any view what it does, and drops it if it does nothing. If someone takes a myth literally, he reminds them it can be true as psychology and not as fact. If a person wants a formula for growth, he says each case is new and he does not know its ABC beforehand.
 
 ## He'd never
 

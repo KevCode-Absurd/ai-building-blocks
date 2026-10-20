@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: the Meditations were private notes. Marcus wrote them in Greek to guide himself, probably never meant them to be published, and gave them no title [S5]. Names like "To Himself" were added later [S5]. Most were written while he was on campaign, in the 170s [S3][S5]. So the book is a man talking to himself, often scolding himself, not a lecture to us. When he writes "do this," he is telling himself, and he admits he often falls short [S1]. Our main text is George Long's English translation of 1862 [S1][S2]. Long chose a rough style on purpose, to match the hard Greek [S1]. We also checked Meric Casaubon's translation of 1634, the first in English [S2][S5]. Both are in the public domain, so we quote a few short lines. References like "8.47" mean book 8, section 47, as in Long [S1].
+A note on method: the Meditations were private notes. Marcus wrote them in Greek to guide himself, probably never meant them to be published, and gave them no title [S5]. Names like "To Himself" were added later [S5]. Most were written while he was on campaign, in the 170s [S3][S5]. So the book is a man talking to himself, often scolding himself, not a lecture to us. When he writes "do this," he is telling himself, and he admits he often falls short [S1]. We read four English translations: George Long's of 1862 [S1], Meric Casaubon's of 1634 [S2], George Chrystal's of 1902 [S6] and Gerald Rendall's of 1898, with its long introduction [S8]. Section numbers differ a little between them, so a number is a guide, not a proof. All four are in the public domain. His own letters survive only in the exchange with his teacher Fronto, written when he was a young man and translated in 1919 [S7]. Many "letters of Marcus" in other collections are later forgeries, so we leave them out. For his deeds as emperor we use Cassius Dio, a senator who wrote about 40 years after his death and who sometimes disliked what he described [S9], plus the encyclopedias [S3][S4]. Dio is our main source for the decisions below, so treat them as his account.
 
 ## In one paragraph
 
@@ -19,6 +19,8 @@ How he applied it: he coaches himself through bad luck. Should he say he is unha
 ### Get ready for difficult people in the morning
 
 Book 2 opens with a famous drill. Each morning he tells himself he will meet people who are meddling, ungrateful, arrogant, deceitful, envious and unfriendly (2.1) [S1]. They act this way because they don't know good from bad. But they share the same reason and the same spark of the divine as he does, so they can't truly harm him, and he can't hate them [S1]. We are made to work together, he says, like feet, hands, eyelids, and the upper and lower rows of teeth [S1].
+
+He adds that if someone wrongs him, the fault belongs to the other person, and his own task is to act as his nature directs (5.25) [S6]. Blame helps no one, so he says to instruct the person calmly until they see the mistake (6.27) [S6]. He pictures the offender as an opponent in the wrestling school: keep out of the way, with no suspicion and no hatred (6.20) [S6]. Being corrected himself costs him nothing, because the choice to change stays his own (8.16) [S6].
 
 How he applied it: these notes were written in army camps. Book 2 ends with the line "This in Carnuntum," a base on the Danube where he spent years during his northern wars [S1][S5].
 
@@ -58,24 +60,39 @@ Your mind takes on the colour of your usual thoughts, he writes, because the sou
 
 How he applied it: Book 1 is a list of what he learned from each person in his life [S1]. From his grandfather, good temper. From his teacher Rusticus, plain writing and a copy of the talks of the Stoic Epictetus. From his adoptive father, steadiness [S1][S3]. He was building a store of examples to copy.
 
+### Strip the glamour off a thing, then name its parts
+
+When something looks grand, he tells himself to reduce it to what it is made of. A fine meal is dead flesh and a purple robe is sheep's wool dyed with shellfish blood (6.13 in Chrystal's numbering) [S6]. For any impression that strikes him, he says to define it, list its parts and ask what virtue it calls for and how long it will last (3.11) [S6]. Rendall's introduction describes the same habit as letting an impression state its case before reason says yes or no [S8].
+
+How he applied it: he used it on his own pride. Power, fame and a fine table were, to him, material that would pass [S6][S8].
+
 ## Real decisions
 
-These are habits he sets himself in the notes, not dated events. The source is his private notebook, so each is his own account of what he meant to do.
+The first four are acts of his reign as Cassius Dio tells them [S9]. The last four come from his own pen, as a young man writing to Fronto [S7] and as the author of his notes [S2][S6]. The notebook entries are plans he sets himself, not dated events.
 
-### Thank by name
-Book 1 opens with a list of what he learned from each person in his life: gentleness from his grandfather, plain writing and an Epictetus text from Rusticus, and a love of equal justice from his brother Severus. He treats character as built from copied examples. [S2]
+### Sold the palace treasures instead of taxing the provinces
+In the long Danube wars, Marcus needed money for the army. Dio says he did not squeeze the subject peoples or break with precedent. He put the palace heirlooms and his wife's ornaments up for sale in the Forum [S9]. After the war he offered to take the goods back from buyers who returned them. Most did not, and he forced no one [S9].
 
-### Get up and do the work
-In Book 5 he scolds himself for not wanting to leave a warm bed. He asks if he was born to enjoy pleasure or to be busy, points to ants, bees and spiders each doing their part, and says that a tradesman or a dancer will skip a meal for their art, so he should do no less for the common good. He allows that rest is needed, but says he takes more than his share. [S2]
+### Refused the soldiers a bonus
+After a victory the troops asked for a donative. Marcus said no. Dio gives his reason as follows: any extra pay would be wrung from the blood of the soldiers' own parents and kinsmen [S9]. He chose a hard answer over a popular one.
 
-### Correct without shaming
-From his teacher Alexander the Grammarian he records the habit of repeating a mispronounced word correctly in his answer, with no remark, so the speaker learns without being rebuked. [S2]
+### Met the Cassius revolt with grief and mercy
+In 175 his general Avidius Cassius revolted. Marcus called his son Commodus to the camp and told his soldiers that he felt grief, not rage, and that he would yield power to Cassius if that was best for the state [S9]. When Cassius was killed, Marcus would not look at the head and had it buried. He burned the rebels' papers unread so that he would not learn who had plotted against him, and he asked the Senate to put no one to death [S9]. Dio puts it down to compassion and a wish not to be forced to hate [S9].
 
-### Never plead "I am not at leisure"
-From Alexander the Platonic he notes the rule of not often saying or writing to a friend that he has no time, and not using urgent business to put off what he owes people. [S2]
+### Banned new settlers from Italy after a rising at Ravenna
+Marcus had settled defeated tribes inside the empire, in Dacia, Pannonia, Moesia, Germany and Italy [S9]. When the settlers at Ravenna seized the city, he stopped bringing barbarians into Italy and sent out those already there [S9]. He had not stopped settling people. He changed one rule after one failure.
 
-### Take even unfair criticism seriously
-From Catulus he takes the rule not to wave away a friend's complaint even if it is unjust, but to try to bring the friend back round. From Rusticus, to be quick to make peace with anyone who has wronged him once they come looking for it, and to write letters plainly. [S2]
+### Wrote in Greek, because the corrections hurt
+Around 139 his teacher Fronto had criticised him for writing in Greek. Marcus answered that he would now write in Greek more than ever, to see whether the things he had not yet learned could help when what he had learned let him down [S7]. In the same period he told Fronto he was glad of the corrections, because they taught him to speak and to hear the truth [S7].
+
+### Set Ariston's books aside, and said why
+In his mid-twenties he told Fronto that the books of the Stoic Ariston both pleased and pained him, because they showed how far his own character fell short of them [S7]. He wrote that no cup of noble teaching had yet been drunk by his soul. He chose to let the books lie for a while, read some of Cicero's lesser speeches and do the writing Fronto had set [S7]. He treated his own gap as a fact to be worked on, not hidden.
+
+### Put study below duty, in small amounts
+He wrote that court duties and travel took whole days, and that he sat listening to lawyers until five o'clock [S7]. When his teacher was ill, he said he would give up the books he loved so long as Fronto got well. He still sent a short maxim and a daily commonplace to keep the habit alive [S7].
+
+### Thanked each person by name
+Book 1 of the notes lists what he learned from each person in his life: good temper from his grandfather, plain writing and an Epictetus text from Rusticus, equal justice from his brother Severus [S2]. In another habit from the same book, he repeated a mispronounced word correctly in his own answer, with no comment, so that the speaker learned without being shamed [S2].
 
 ## How he decides
 
@@ -87,6 +104,9 @@ From Catulus he takes the rule not to wave away a friend's complaint even if it 
 - Ask what good the act does for others [S1].
 - Change your mind when someone shows you are wrong. That is still your own free choice (8.16) [S1].
 - Don't wait for a perfect state. Be glad if the smallest thing goes well (9.29) [S1].
+- Judge each act by one test: does it serve the common good (7.5, 10.6) [S6]?
+- Treat events as a doctor's orders, even harsh ones, because they serve the health of the whole (5.8) [S6].
+- Start the day by asking how your acts will serve others (10.13) [S6].
 
 ## Where he stood
 

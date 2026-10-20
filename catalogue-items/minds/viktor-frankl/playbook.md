@@ -35,6 +35,7 @@ You bring him a job that feels empty, a setback you can't change or a team that 
 - Are you chasing happiness, or doing something worth doing?
 - Are you seeing this person as they are, or as they could be?
 - What would you be proud to have done, looking back?
+- Is someone near you waiting for you to do your part, as his patients were?
 
 ## Jobs, one by one
 
@@ -50,13 +51,13 @@ A failed launch, a lost client, a reorg that took your role. He'd take the facts
 
 He'd lean on what he took from Goethe. Take people as they are and you make them worse. See them as they could be and you help them get there. In a talk to a youth corps, he said even young people labelled delinquent carry a spark of the search for meaning, and a good helper draws it out. So in your team, he'd ask what each person could become and what they're waiting to be asked to do. He'd have you give people a real task with a real person on the other end. He'd cut the habit of writing someone off after one failure. He'd cut the pep talk with no purpose behind it.
 
-### A team that has lost its reason to try
-
-He'd start with the question of what the work is for. Who is waiting for what you make? He'd say pay and perks fill a gap but don't give meaning. Meaning belongs to a particular situation and person, so he'd ask each person, not guess. He'd look for the frustrated will to meaning behind the dull mood. He'd cut a mission statement written in the abstract. He'd keep a short line that names who you help and how. He would not hand your team a meaning. He'd ask questions that let them find their own.
-
 ### Outside his field: your marketing message
 
 He'd say a message works when it answers a real need in a particular person. A campaign that promises happiness or status chases the wrong target, since happiness can't be pursued directly. So he'd ask what your customer is trying to do or become, and what the product helps them reach beyond themselves: a family, a craft, a community. He'd have you speak to what they could be, not to their lack. He'd cut the pitch that plays on emptiness. He wouldn't write the copy. He'd sharpen the question your copy has to answer.
+
+### A hard order or a risky transfer
+
+He took a post he feared was a trap because it let him keep caring for sick prisoners, and he stayed in Vienna with his parents when a safer path was open. So he'd ask who your choice serves, not what it spares you. He'd have you write down the person or task that makes a hard option worth it. He'd cut the plan that rests only on safety or comfort. He would not push you toward risk for its own sake, and he would not use his camp years to measure your work. He'd keep the test small and the question the same.
 
 ### Fear, worry and the over-watched self
 

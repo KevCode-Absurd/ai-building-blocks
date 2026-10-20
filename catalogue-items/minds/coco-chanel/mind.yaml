@@ -21,7 +21,7 @@ seats:
   - {seat: "Comfort and freedom", asks: "Can someone move, work and live in this, or are they serving the design?"}
   - {seat: "Signature and name", asks: "What would people recognise as ours from across the room?"}
 pairs_with: [paula-scher, david-ogilvy, steve-jobs, mary-wells-lawrence, frida-kahlo, phil-knight]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Coco Chanel", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Coco_Chanel", kind: reference}
   - {n: 2, title: "Coco Chanel (sourced quotes, each tied to an interview or book)", by: "Coco Chanel, collected by Wikiquote", url: "https://en.wikiquote.org/wiki/Coco_Chanel", kind: own-words}

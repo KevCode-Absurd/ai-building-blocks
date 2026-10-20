@@ -20,7 +20,7 @@ seats:
   - {seat: "The outside view", asks: "How did projects like this one turn out for other people?"}
   - {seat: "Noise and process", asks: "Would two of us, judging this alone, reach the same answer?"}
 pairs_with: [richard-feynman, charlie-munger, nassim-taleb, rory-sutherland, robert-cialdini]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Daniel Kahneman", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Daniel_Kahneman", kind: reference}
   - {n: 2, title: "Thinking, Fast and Slow", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow", kind: reference}
@@ -30,6 +30,12 @@ sources:
   - {n: 6, title: "Reconstruction of a Train Wreck: How Priming Research Went off the Rails, with Kahneman's reply in the comments (14 February 2017)", by: "Ulrich Schimmack, Moritz Heene and Kamini Kesavan, Replicability-Index; reply by Daniel Kahneman", url: "https://replicationindex.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/comment-page-1/", kind: own-words}
   - {n: 7, title: "Before You Make That Big Decision (Harvard Business Review, June 2011, summary page)", by: "Daniel Kahneman, Dan Lovallo and Olivier Sibony", url: "https://hbr.org/2011/06/the-big-idea-before-you-make-that-big-decision", kind: own-words}
   - {n: 8, title: "How to stop noise undermining your decisions (review of Noise, 2 June 2021)", by: "Robin Powell, The Evidence-Based Investor", url: "https://www.evidenceinvestor.com/post/how-to-stop-noise-undermining-your-decisions", kind: secondary}
+  - {n: 9, title: "Master Class 2007: A Short Course in Thinking About Thinking (Edge transcript)", by: "Daniel Kahneman, Edge", url: "https://www.edge.org/3rd_culture/kahneman07/kahneman07_index.html", kind: own-words}
+  - {n: 10, title: "Deciding, Fast and Slow with Daniel Kahneman (interview with Annie Duke)", by: "Daniel Kahneman, Annie Duke substack", url: "https://annieduke.substack.com/p/deciding-fast-and-slow-with-daniel", kind: own-words}
+  - {n: 11, title: "Nobel laureate Daniel Kahneman: his latest findings on noise and flaws in human judgement (3 Takeaways, episode 27)", by: "Daniel Kahneman, 3 Takeaways", url: "https://podscripts.co/podcasts/3-takeaways/nobel-laureate-daniel-kahneman-his-latest-findings-on-noise-and-flaws-in-human-judgement-27", kind: own-words}
+  - {n: 12, title: "Conversations with Kahneman (Gary Klein on working with him)", by: "Gary Klein, Psychology Today", url: "https://www.psychologytoday.com/gb/blog/seeing-what-others-dont/202404/conversations-with-kahneman", kind: secondary}
+  - {n: 13, title: "Daniel Kahneman: how companies can improve their hiring process (summary of his Wall Street Journal piece)", by: "Association for Psychological Science", url: "https://www.psychologicalscience.org/news/daniel-kahneman-how-companies-can-improve-their-hiring-process.html", kind: secondary}
+  - {n: 14, title: "How to dispel your illusions (review of Thinking, Fast and Slow)", by: "Freeman Dyson, The New York Review of Books, 22 December 2011", url: "https://www.nybooks.com/articles/2011/12/22/how-dispel-your-illusions/", kind: secondary}
 tests:
   - {kind: use, prompt: "Here's my plan to launch a new online course in six weeks with a budget of $2,000. List the biases that might be making me too optimistic, and give me a more realistic estimate method."}
   - {kind: use, prompt: "Rewrite this survey question three ways and explain how each framing might push people toward a different answer: 'Do you support the new policy that saves 200 of 600 jobs?'"}

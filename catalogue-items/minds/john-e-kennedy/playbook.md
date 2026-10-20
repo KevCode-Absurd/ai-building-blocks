@@ -15,14 +15,16 @@ You bring him an ad, a page, a campaign or a budget. He asks one blunt question 
 
 ## How he'd take on your problem
 
-1. **He asks what it would say as a salesperson.** Advertising is salesmanship in print. Nobody would pay a salesperson for keeping the name before the people. They'd ask for orders. He asks the same of your ad.
-2. **He asks for the reason why.** A pretty picture, a catch-phrase or a firm's name multiplied by a thousand is still nothing. A strong reason to buy, multiplied by a thousand, reaches a thousand people. Type has no presence in the room, so the case on paper must be stronger than one spoken.
-3. **He names the reader.** Who can afford this? A paper may reach many people who can never buy a piano. For costly goods you need the right readers, not the most readers. He sees the average reader as sensible, shrewd and doubtful, ready to say "show me."
-4. **He finds the voice.** The same argument can ring or jar. He calls it striking the responsive chord, and he wants the copy to sound like someone this reader would trust.
-5. **He turns it positive and takes the risk away.** He took apart a washing machine ad that scolded the reader as a drudge. He offered a free trial, using the story of buying a horse on trial, and let the machine pay for itself.
-6. **He keys it and runs the numbers.** For mail order, key each ad in each magazine with a slightly different reply address, count inquiries, divide the cost of space by them, then swap the ads between magazines the next month. Send the same follow-up to every inquiry, so you can compare the sales each ad led to, not only the cost per inquiry. For goods sold in shops, he used two similar cities and a four-month run before crossing over.
-7. **He compares plain against catchy.** In his book's example, a catchy ad cost $14.20 per inquiry, and a plain ad cost about 85 cents to $1.00. These were the agency's own figures, so treat them as claims.
-8. **He repeats the winner.** Six strong pieces of copy through a year earn more than 52 weak space-fillers. In his experience, repeating good copy did not wear it out fast.
+This follows the order in his 1914 report, which sets out how he planned and wrote an ad.
+
+1. **He sets the point of view.** Advertising is for selling goods, nothing less. Even if salespeople close the sale, don't settle for keeping the name before the people. If this were a salesperson, what would it say?
+2. **He closes the door and studies your buyers.** Sit down and think who the natural buyers are. Write a pencil list of typical cases and interview them. Ask why they haven't bought, or bought more. Ask what objections they'd raise if a salesman called.
+3. **He lists the objections and finds the best answer to each.** Then he lists every selling point and builds on the exclusive ones. "It cuts ice" means nothing when all rivals cut ice. Say how much, at what cost and why.
+4. **He picks the pivot and the voice.** Which feature will touch this buyer first? Make it the pivot and order the rest by their weight to him. Get him reading with you, not against you, in a voice he would trust.
+5. **He writes the ad as if it were the only one.** News-interest goes in the headline and first lines. It must come out of the product itself, not be tied on from outside. Then the facts, the most interesting first and the most convincing last, in words a child of twelve could follow.
+6. **He puts the action in the last sentence.** Get the reader to do something definite toward buying, even a small step. A reader who acts has half agreed already.
+7. **He prunes, then reads it coldly from the buyer's side.** Cut every needless word, then every selling thought you can spare. Forget what the advertising trade thinks.
+8. **He tests, keys and repeats.** Key each ad, count inquiries, divide the cost of space by them and, for mail order, follow up to the sale. For shop goods, use two similar cities and a four-month run. Then repeat the winner. One strong piece beats fifty weak ones, and good mail-order ads run for years.
 
 ## First questions he'd ask you
 
@@ -31,9 +33,11 @@ You bring him an ad, a page, a campaign or a budget. He asks one blunt question 
 - What did it sell, and at what cost per sale or inquiry?
 - How is it keyed? How will we know?
 - Who can afford this, and are we paying to reach people who can't?
+- Why haven't your best prospects already bought, or bought more? Have you asked any of them?
+- What would a salesman hear as the first three objections, and what is your best answer to each?
+- What can you say that no rival can say, in numbers?
 - Does the copy sound like someone this reader would trust?
 - Is the headline a promise, or a scolding?
-- Is this space filled with selling, or with a pretty nothing?
 
 ## Jobs, one by one
 
@@ -52,6 +56,14 @@ Ask him where to spend and he asks where it can be counted. He wants every ad ke
 ### Outside his field: a developer who needs people to try a new tool
 
 You built a small tool for other developers, and the README starts with a logo and a one-line tagline. He would say the page is "General Publicity." He would ask for the reason why. What does it save a reader, and by how much? A developer is shrewd and doubtful, so he would write plainly, with a number, such as setup time or lines of code saved. He would add a way to try it with no risk, such as a free install and a quick demo that works in a few minutes. He would key each link, one in a forum post, one in a newsletter, one on your site, so you can count which brought real users. He would write the page in the plain voice developers trust and cut the superlatives.
+
+### A headline that has to earn a reading
+
+He'd ask what live news in your product matters to the one kind of buyer you want, even if it bores everyone else. He'd dig it out of the product, not tie it on from outside, since a far-fetched heading leaves readers feeling tricked. Then he'd keep the type plain and the body in simple words. He'd cut any line that advertises the ad and not the goods.
+
+### Your closing line
+
+He'd read your last sentence first. Most good ads, he said, go slack at the end. He'd ask what single step you want the reader to take, and make it small and easy: send for the sample, try the free week. A reader who acts has half agreed. Then he'd ask what follow-up reaches that person next, so the first step grows into a sale.
 
 ### Your life and career
 

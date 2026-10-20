@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Mary Barra is alive, and views can change. This data set comes from her answers in General Motors' 2018 and 2019 proxy statements to shareholders, a 2014 collection of her public statements during the ignition-switch recall, a 2017 profile, and reference pages on her and on GM. Treat each view as "as of" the year of its source, mostly 2014 to 2019. Later events at GM, such as the end of its robotaxi unit, come from reference pages, not from her own words. Nothing here covers her private life or her plans.
+Mary Barra is alive, and views can change. This data set comes from her own words: her opening statement and answers at the April 2014 House hearing on the recall [S8], a news report of her July 2014 Senate answers [S11], a September 2016 Fortune interview [S9], a 2016 Stanford talk [S7], answers in General Motors' 2018 and 2019 proxy statements [S2][S3], and a 2020 shareholder meeting as reported by a Detroit station [S10]. It also uses a 2014 collection of her statements, a 2017 profile and reference pages. Treat each view as "as of" the year of its source, mostly 2014 to 2020. Some words reach us through summaries, so exact quotes are few. Later events at GM, such as the end of its robotaxi unit, come from reference pages, not from her own words. Nothing here covers her private life or her plans.
 
 ## In one paragraph
 
@@ -72,15 +72,7 @@ How she applied it: she paired the electric and self-driving bets with what she 
 
 ### Hiring an outsider to find the cause
 
-Barra became CEO on 15 January 2014 and within weeks faced a recall over faulty ignition switches [S4]. GM hired a former federal prosecutor, Anton Valukas, to investigate [S4]. When his report in June was harshly critical of past practices, she fired 15 employees [S4]. Her reason was accountability at every level: the company had to own its failures, not just explain them [S4].
-
-### Telling the story to the engineers first
-
-On 31 March 2014 she held a town hall at GM's technical centre to introduce a new global safety chief [S4]. She told the engineers she knew they were upset and that the company would improve for customers [S4]. The choice shows her habit of speaking to the people who must fix a problem before the public hears it.
-
-### Paying victims through an independent expert
-
-She brought in a compensation expert to run a programme that paid claims to victims and families [S6]. She also said GM would not hide from the crisis but learn from the errors that caused it [S6]. She noted that investigators found no clear trade of cost against safety in the Cobalt case, yet she said no one had done enough to protect customers [S4].
+Barra became CEO on 15 January 2014 and within weeks faced a recall over faulty ignition switches [S4]. At the 1 April 2014 House hearing she apologised to the families, said the problem took too long to surface, and said she could not turn back the clock [S8]. She promised four things on the spot: an independent investigation by former US attorney Anton Valukas with no limits on scope, a new vice president of global vehicle safety with company-wide reach, help for owners through call centres and loaner cars, and a compensation expert, Kenneth Feinberg, to advise on a path forward [S8]. When pressed on facts, she often said she did not yet know and would wait for the investigation instead of guessing [S8]. When Valukas's report in June was harshly critical of past practices, she fired 15 employees [S4]. Her reason was accountability at every level: the problem had come to light on her watch, and the company had to own its failures, not just explain them [S4][S8].
 
 ### Widening the recall
 
@@ -89,6 +81,18 @@ On 30 June 2014 GM announced a recall of another 7.4 million vehicles, which she
 ### Cutting the dress code to two words
 
 She replaced a ten-page dress code with two words: dress appropriately [S6]. Her reason was that it signals management trusts employees, and she used it to set a new culture [S6]. She also told engineers and designers to stop building poor cars, and that budget and resource limits would no longer be excuses [S6].
+
+### Standing by her general counsel
+
+At the July 2014 Senate hearing, Senator Claire McCaskill pressed Barra on whether GM's top lawyer, Michael Millikin, should keep his job [S11]. Barra said he would stay. She argued he had a system in place, but that the people who knew about the defect did not tell him, and the lawyers who failed to speak up had been fired [S11]. This shows how she judged blame: she looked at who knew and why the news did not travel, then protected the person she believed was needed on the team [S11].
+
+### Leaving Russia and buying a startup
+
+In her 2016 Fortune interview, Barra cited the 2015 decision to leave Russia as an example of putting capital only where it earns a good return [S9]. In March 2016, GM bought the self-driving startup Cruise, to pair GM's scale with a startup's speed. She declined to give a launch date for self-driving cars and said safety would set the pace [S9]. In the same interview she said she asks whether the customer will care, makes the call and moves on to what she can still control [S9].
+
+### Protecting cash in the 2020 shutdown
+
+At GM's 2020 annual meeting, she described the steps taken in a hard second quarter: suspending the dividend, selling bonds and opening a credit line to ride out the production shutdown [S10]. Her reason was to protect the company through recovery, so GM could keep funding its new full-size SUVs and its electric and self-driving work, with about $20 billion planned for electric and autonomous vehicles and a goal of one million electric vehicles a year by 2025 [S10]. She paired this with a pledge on inclusion and against injustice [S10].
 
 ### Making the long-term case in public
 
@@ -138,8 +142,8 @@ In a 2016 talk to Stanford business graduates she set out four leadership habits
 
 ## Short phrases on the record
 
-- "nothing is more important than the safety of our customers" (2014 statement) [S4]
-- "brutally tough and deeply troubling" (on the 2014 recall report) [S4]
-- "We are a focused, more disciplined company" (2018 proxy) [S3]
-- "Our culture will determine the long-term success of the Company." (2019 proxy) [S2]
-- "We are fully committed to an all-electric future" (2019 proxy) [S2]
+- "I cannot turn back the clock" (House hearing, 2014) [S8]
+- "we will not shirk from our responsibilities now or in the future" (House hearing, 2014) [S8]
+- "He's the person I need on this team." (on her general counsel, Senate, 2014) [S11]
+- "The auto industry is cyclical." (Fortune, 2016) [S9]
+- "We will no longer ask why." (on inclusion, 2020 annual meeting) [S10]

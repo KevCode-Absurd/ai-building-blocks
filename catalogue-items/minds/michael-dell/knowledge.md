@@ -1,103 +1,112 @@
 # Michael Dell: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Michael Dell is alive, and views can change. This data set comes from two sources in his own words: the 1998 annual report letter he signed with his two vice chairmen [S1] and a long interview he gave the Academy of Achievement in 2008 [S2]. It adds a 2007 staff memo as reported in the press [S3], a journalist's profile from about 1999 with his quoted words [S6], his company biography [S4] and a reference page [S5]. He has also written two books, in 1999 and 2021 [S5], which we did not use. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
+Source check, second pass, 21 October 2026: Dell is alive, and views can change. His own words now come from six places: the 1998 annual report letter he signed with his two vice chairmen [S1], the Academy of Achievement interview of 2008 [S2], a 2001 Technology Review interview about how the direct model works inside the company [S7], the Tim Ferriss podcast transcript of 2021 [S8], his 2019 University of Texas commencement speech [S9], and a Chief Executive magazine interview whose date the page does not show [S11]. Around them sit a 2007 and a 2013 staff memo as reported in the press [S3][S10], a profile from about 1999 [S6], his company biography [S4] and a reference page [S5]. His two books are in copyright and were not used. Treat each view as "as of" its source. Nothing here tells you what he thinks about events after that.
 
 ## In one paragraph
 
-Dell started earning and investing money as a boy, sold newspaper subscriptions as a teenager, and began selling computer upgrade kits while a pre-med student at the University of Texas [S2][S5]. In 1984 he founded the company with about $1,000 [S2][S4]. His idea was to sell directly to the people who used computers, build each machine to order, and skip the shops and dealers who added cost and slowed things down [S1][S2]. Because customers paid when their order shipped and suppliers were paid later, the company needed very little cash to grow [S2]. By 1998 Dell held about seven days of stock while rivals and their resellers held 80 or more, and sold about $5 million a day through its website [S1]. He became the youngest CEO of a Fortune 500 company in 1992, took Dell private in 2013, bought EMC in 2016 and took the company public again in 2018 [S4][S5]. He admits his mistakes plainly and says the fix is to act fast [S2].
+Dell earned money as a boy, sold newspaper subscriptions by phone as a teenager, took apart his first computer at 14 and started selling upgrade kits from his dorm at the University of Texas [S2][S5][S8][S9]. In 1984 he founded the company with about $1,000 [S2][S4]. His idea was to sell directly to the people who used computers, build each machine to order and skip the dealers who added cost and slowed things down [S1][S2]. Customers paid when the order shipped, and suppliers were paid later, so the company needed very little cash to grow [S2]. He became the youngest CEO of a Fortune 500 company in 1992, stepped back in 2004, returned in 2007, took Dell private in 2013, bought EMC in 2016 and relisted the company in 2018 [S4][S5][S8]. He talks about his mistakes plainly and treats failure as a normal part of how a business learns [S2][S8].
 
 ## Core ideas
 
 ### Sell direct and cut out the middle
 
-Dell's core idea is to deal with the end customer directly. As a young buyer he saw that computer parts took too long to reach people and cost too much on the way [S2]. He believed selling straight to users would be cheaper and give better service, first by phone and later online [S2]. In 1998 his letter argued that rivals could copy Dell's buying and building methods, but not its direct link with every customer [S1].
+As a young buyer he saw computers take too long to reach people and cost too much on the way [S2]. He believed selling straight to users would be cheaper and give better service [S2]. His 1998 letter said rivals could copy how Dell bought and built, but not its direct link with every customer [S1]. In 2001 he added that the web was only the front end. Behind it sat design, building, delivery and service, so copying the site would not copy the business [S7]. His own image for the logic was that you do not buy the cow when all you want is the milk [S7]. The 1998 letter set three goals for dell.com: easier buying, lower costs on both sides and deeper ties with customers and suppliers [S1]. In 2001 he described the internet as a vacuum that sucks friction out of business [S7].
 
-How he applied it: in 1986 his fast machine sold for $1,995, while IBM's slower model cost $3,995 [S2]. By 1998 Dell had direct contact with more than 200,000 customers a day in the U.S. alone [S1].
+How he applied it: in 1986 his fast machine sold for $1,995 while IBM's slower model cost $3,995 [S2]. By 1998 Dell talked directly with more than 200,000 customers a day in the U.S., and dell.com sold about $5 million a day [S1]. For large clients it built private order pages, and Unilever's orders flowed from its own network to Dell's factories [S1].
 
 ### Build to order and hold almost no stock
 
-Dell built each computer after the customer ordered it, set up to that customer's needs [S1]. The 1998 report called this one-step build efficient for both sides, and said it raised quality because machines were handled fewer times [S1]. Low stock meant less money tied up and less risk of being stuck with old parts in a fast-moving industry [S1].
+Dell built each machine after the customer ordered it [S1]. In 2001 he said Dell held about five days of inventory against about 63 for HP, and that adding retail channel stock pushed rivals to roughly 85 to 90 days [S7]. His reason: parts lose roughly one percent of their value a week, and long feedback loops distort the demand signal, so slow stock turns are costly [S7]. Low stock meant less cash tied up and less risk of being stuck with old parts [S1].
 
-How he applied it: at the end of fiscal 1998, Dell held seven days of supply against 80 or more for companies that sold through resellers [S1]. When the Nasdaq stock market urgently needed servers during a 1997 crash, Dell built and shipped eight custom systems in 36 hours [S1].
+How he applied it: when the Nasdaq market urgently needed servers during a 1997 crash, Dell built and shipped eight custom systems in 36 hours [S1].
 
 ### Get paid before you pay
 
-Dell told the Academy of Achievement that he started with almost no money [S2]. What made it work was timing. Customers paid when goods shipped, but suppliers were paid later, so the business had a negative cash cycle [S2]. Growth still needed money, so he later used a credit line and a 1988 public share offering [S2][S1].
+Dell started with almost no money. What made it work was timing. Customers paid when goods shipped and suppliers were paid later, so the business ran a negative cash cycle [S2]. He later added a credit line and a 1988 share offering for growth [S2][S1].
 
-How he applied it: the 1998 letter reported $1.6 billion in cash from operations, used partly to buy back shares [S1]. The company's return on invested capital, the measure he said best showed value created, was 186% that year [S1].
+How he applied it: the 1998 letter reported $1.6 billion in cash from operations and a 186% return on invested capital, which he called the best measure of value created [S1]. He asked the company to balance growth, profit and liquidity, and not trade one away for another [S1][S8].
 
 ### Know your customers group by group
 
-Because Dell dealt with every customer itself, it could split them into clear groups with different needs [S1]. Large firms needed global service, while mid-sized firms valued help before and after the sale [S1]. Organising sales around these groups let Dell serve each faster and more precisely [S1].
+Because Dell dealt with every customer itself, it could split them into groups [S1]. Large firms needed global service, mid-sized firms valued help before and after the sale [S1]. In 1998 it split education from local government, and small business from home buyers [S1].
 
-How he applied it: in 1998 Dell split education from local government, and small business from home buyers. It then tripled its U.S. consumer marketing budget, and home sales rose 78% [S1].
+How he applied it: it tripled its U.S. consumer marketing budget and home sales rose 78% [S1].
 
 ### Customers buy more than price
 
-The 1998 letter pushed back on the idea that Dell won only by being cheap [S1]. Two-thirds of customers said they chose Dell for reasons other than price, such as services, advice on technology, product quality and a single point of contact [S1]. Price was part of the story, but not all of it [S1].
+Two-thirds of customers told Dell they chose it for reasons other than price, such as advice, service, quality and one point of contact [S1]. In 2021 he put the rule this way: you learn a lot more from your customers than from competitors [S8]. He also warned that measuring yourself against a weak rival sets the wrong bar, though rivals can show you what not to do [S8].
 
-How he applied it: Dell used on-site service through third-party networks as a way to stand out early, and he said 85 to 90% of problems could be solved by phone [S2].
+How he applied it: he used on-site service through third parties to stand out early, and said 85 to 90% of problems could be solved by phone [S2].
 
-### Listen, then make technology useful
+### Buy what is common, build what is yours
 
-Dell describes the company as listening closely to customers, with about two billion conversations a year shaping what it builds [S2]. He learned the hard way that clever technology is not enough. A server project called Olympic was too ambitious and customers weren't ready for it, so he concluded technology has to matter to the customer [S2].
+In 2001 he rejected "not invented here." Dell used Microsoft's operating-system work instead of copying it, and spent its own engineering on what was distinctive [S7]. He set the research budget from the products he wanted to build, not from a fixed share of revenue, which he called unsound [S7]. He favoured open standards, because a firm with fat margins on closed technology invites cheaper rivals, and he watched Dell's own margins as a warning sign [S7]. He preferred investing in partners over buying them [S7].
 
-How he applied it: the business moved from upgrade kits to whole computers when customers asked to buy the machines Dell used to format hard drives [S2].
+How he applied it: Dell Ventures backed a maker of a new display part and linked it to production partners, without buying the firm [S7].
 
-### Own mistakes and fix them fast
+### Treat technology as a means
 
-Dell is open about failure. In 1993 growth ran ahead of the company's systems, and he said the blame was his [S2]. He likes to be the first to act on a problem rather than wait [S2].
+Dell is skeptical of ideas that push technology at people who did not ask for it. He named pen computers and internet appliances as examples that lacked demand [S7]. His own early lesson was a late-1980s engineering project called Olympic, with several processors and many new inventions. He called it too bold and said it failed, and that the lesson was to be more pragmatic, even though the skills it built helped later products [S8][S2].
 
-How he applied it: in a battery recall involving cells made by Sony, he chose to act decisively, even though other companies faced the same issue later [S2].
+How he applied it: in 2001 he backed a notebook with a 15-inch screen over technical and market doubts, and it worked [S7].
 
-### Use the internet to go even more direct
+### Own mistakes and fix them early
 
-Dell saw the web as the next step for the direct model, not a separate business. The 1998 letter set three goals for dell.com: make it easier for customers to buy, cut costs on both sides, and deepen ties with customers and suppliers [S1]. It said the company had tapped only a fraction of what the internet could do [S1]. He had expected phone and then online buying to grow from the start [S2].
+Dell is open about failure. In 1993 growth ran ahead of systems and he said the blame was his [S2]. In 2021 he called failure an ingredient of success and described business as a loop of experiment, fail, learn and repeat [S8]. His working rule is to fix problems early, since fixing at the end costs far more [S2].
 
-How he applied it: by 1998 dell.com was selling about $5 million a day [S1]. For large clients Dell built private order pages. Unilever's orders flowed from its own network straight to Dell's factories, and Dell said this cut Unilever's costs by $20 million in two years [S1]. The same letter warned that the model is only as good as the people running it, and credited the company's 16,000 staff [S1].
+How he applied it: a supply mistake in the late 1980s, over a switch between types of memory chip, nearly sank the young company. He turned it into a strict habit of low stock and supply discipline [S8].
 
 ### A method is a tool, not a creed
 
-By 2007 the company had had a hard year. In a memo to staff, Dell said the direct model had been a revolution but should not be treated as a religion [S3]. He wanted to keep improving the model and move past it where needed, simplify IT for customers, and cut layers of management to speed decisions [S3].
+In 2007, after a hard year, he told staff the direct model was a revolution, not a religion, and that he would cut layers of management [S3]. In 2021 he used a different frame for devices and models alike: "an and, not an or" [S8]. In 2001 he said that when you stop experimenting you are dead [S7].
 
-How he applied it: he had returned as CEO at the board's request in January 2007, after stepping back in 2004 [S5]. In 2008 he said the company needed new directions in emerging markets, consumers, servers and storage, smaller businesses and mobile [S2].
+How he applied it: he went from direct-only to a mix of direct and partners for servers, storage and services [S2][S10].
 
 ## How he decides
 
 - Go direct to the customer whenever you can [S1][S2].
 - Build only what has been ordered [S1].
-- Measure days of stock and return on capital, not just sales [S1].
+- Count days of stock and return on capital, not just sales [S1][S7].
 - Get paid before you pay [S2].
 - Split customers into groups and organise around them [S1].
 - Ask why customers choose you, beyond price [S1].
-- Act first on a problem, and take the blame if it's yours [S2].
-- Don't let experts' doubts stop you [S2].
+- Listen to customers more than to competitors [S8].
+- Act first on a problem, and take the blame if it is yours [S2].
+- Fix problems when you find them [S2].
+- Weigh both sides, then land on a view and say it [S8].
+- Keep growth, profit and cash in balance [S1][S8].
+- Test a rival in person. He had dinner with a rival bidder to see if there was a real plan [S8].
 - Treat your own model as something to improve, not defend [S3].
 
 ## Real decisions
 
-### Sell to the people most likely to buy
-As a teenager selling newspaper subscriptions, he found that newlyweds and people moving were most likely to subscribe. He pulled their details from public records and sent direct mail, earning $18,000 in a year [S5]. The same targeting habit shows later in his computer business [S5][S2].
+His own accounts give the reasons: the 1998 letter, the 2001 interview, the 2008 and 2021 interviews [S1][S7][S2][S8]. The profile and Wikipedia fill in dates [S5][S6].
 
-### Drop out and sell direct
-He started with upgrade kits from a dorm room, and won state contracts by having no shop overhead [S5]. In January 1984 he saw that selling PCs direct would cut cost, and made machines only after getting an order [S5]. The profile adds that he sold about $180,000 in his first month before leaving college [S6].
+### Leave college to run the business (1983 to 1984)
+As a pre-med freshman he sold computer upgrades from his dorm, and around Thanksgiving 1983 his parents asked him to stop and focus on school. He kept going, negotiated a semester off, incorporated in May 1984 and left to run the business, at sales of about $80,000 a month [S2]. His reason was that the work excited him more than school, and he said it might have stayed a hobby if his parents had not pushed back [S2]. In 2019 he told graduates he dropped out after two semesters, and still urged them to finish and to learn patience [S9]. The profile gives a first-month figure of about $180,000, so the accounts of early sales differ [S6].
 
-### Bet on a commodity
-He reasoned that PCs were becoming a commodity, so price and delivery would count most, and a middleman only added cost [S6]. He aimed at business buyers, where margins were better, rather than a price war on units [S6].
+### Sell direct, build to order, hold almost no stock (1984 onward)
+He sold machines to buyers by phone, assembled each to order and priced them 10 to 15 percent below retail [S2]. He bought parts only against orders and had suppliers keep warehouses near his factories [S2]. His reasoning: skipping the middleman and the stock cut cost, and customers paying before suppliers funded growth [S2]. In 2021 he added that direct selling gives a truer demand signal, needs less stock and brings steady product feedback [S8]. By the end of fiscal 1998 Dell held seven days of supply against 80 or more for companies selling through resellers [S1].
 
-### Go on the web early
-Dell began selling over the web in 1996, and by March 1997 was reporting about $1 million a day from dell.com [S5]. By 1998 it was about $5 million a day [S1].
+### Turn the memory-chip mistake into supply discipline (late 1980s)
+Dell was shifting from one type of memory chip to another, and the company had designed products around the old one and got stuck [S8]. He called it a horrible mistake that nearly sank the young company and hurt its stock [S8]. He drew a lasting rule from it: tight, just-in-time inventory and supply-chain control [S8]. He said that discipline fuelled later growth [S8].
 
-### Call in veterans in 1993
-In 1993 stock fell, a notebook line failed, the CFO left and growth outran the company's systems [S6]. He said the fault was his, and brought in experienced managers, and the company returned to profit in about a year [S2][S6].
+### Own the 1993 crunch and bring in veterans
+Sales rose from under $900 million to over $2 billion in about a year, and systems, people and capital could not keep up [S2][S8]. He said the blame was his, that he had pursued too many initiatives at once, and that the company paused and narrowed its focus [S2]. With a new finance chief he balanced growth against cash and profit, arguing that slower growth would have left Dell too small to survive [S8]. The profile adds that the stock fell from $49 to $16 in 1993, and that experienced managers such as Mort Topfer and Kevin Rollins joined [S6].
 
-### Return as CEO, then rethink the model
-He stepped down as CEO in 2004 and came back in January 2007 at the board's request [S5]. In 2007 he told staff the direct model was a revolution, not a religion [S3].
+### Open the website with no promotion (July 1996)
+Dell took orders on its website from July 1996 without promoting it [S2]. He had not foreseen the internet, but direct selling suited online buying, and the site sold 30 to 50 computers a day at first [S2]. By 1998 dell.com was selling about $5 million a day [S1].
 
-### Take the company private, then buy EMC
-In 2013 he took Dell private with Silver Lake and Microsoft, over resistance from Carl Icahn, and kept a 75% stake [S5]. The company bought EMC for $67 billion in 2015, closing in 2016 [S5].
+### Push into servers and storage (2001 view)
+He said profit was shifting from PCs to servers and that rivals overcharged [S7]. By his figures, Dell's U.S. server share rose from about 2% to 22% in five years while Compaq's fell from 44% to 26% [S7]. He did it with open standards, a build-to-order process and the same cost discipline as in PCs [S7]. The same interview came during Dell's first layoffs, of roughly 4,700 to 5,700 jobs [S7].
+
+### Take the company private (2012 to 2013)
+Dell judged the public market was valuing the company by its PC business while it invested in software, services and security [S8]. He said going private would let public holders sell at a premium and would remove the quarterly "shot clock" on long-term investment [S8]. His April 2013 staff memo set targets: a top spot in servers, more spending on research and sales, and bolder moves in emerging markets [S10]. When investor Carl Icahn stepped in, Dell went to his home for dinner to test whether he had a real plan or just wanted a higher price, and concluded he had none [S8].
+
+### Buy EMC and VMware, then relist (2016 to 2018)
+After going private he bought EMC and VMware for about $67 billion, largely with debt, paying shareholders partly in cash and partly in a tracking stock [S8]. At a board meeting where directors questioned how Dell could fund it, he credits banker Jamie Dimon with backing the deal [S8]. He later merged the tracking stock back in and relisted in late 2018 to simplify the structure, pay down debt faster and gain an investment-grade rating [S8].
 
 ## Where he stood
 
@@ -105,48 +114,50 @@ In 2013 he took Dell private with Silver Lake and Microsoft, over resistance fro
 
 **Is price the whole story?** No. Most customers in 1998 said they chose Dell for other reasons [S1].
 
-**How should a company handle mistakes?** Admit them, and move fast and first [S2].
+**How should a company handle mistakes?** Admit them, move first and fast [S2].
 
-**What advice for young people?** Experiment, make mistakes, take the initiative, and follow what you care about rather than the money [S2].
+**Who do you learn from?** Customers, more than rivals [S8].
+
+**What advice for the young?** Experiment, make mistakes and take initiative. Many people hold back from fear of failure and a wish for perfection [S2][S8][S9]. Put people at the centre, not technology, and aim to serve [S9].
 
 **Is the direct model sacred?** No. As of 2007 he called it a revolution, not a religion [S3].
 
 ## His work and record
 
 - Born February 23, 1965, in Houston, Texas [S5].
-- At 16 earned about $18,000 in a year selling newspaper subscriptions, targeting people moving or marrying [S2][S5].
-- Enrolled in pre-med at the University of Texas in 1983 and sold upgrade kits from his dorm [S5].
-- Registered the business as PC's Limited in January 1984 and incorporated as Dell Computer Corporation in May 1984 [S5].
+- At 16 earned about $18,000 in a year selling newspaper subscriptions, targeting people moving or marrying [S2][S5][S8].
+- Enrolled in pre-med at the University of Texas in 1983 [S5].
+- Registered PC's Limited in January 1984 and incorporated as Dell Computer Corporation in May 1984 [S5].
 - Took the company public in June 1988 [S1].
-- Became the youngest CEO of a Fortune 500 company in 1992, at 27 [S4][S5].
+- Youngest CEO of a Fortune 500 company in 1992, at 27 [S4][S5].
 - Began selling online in 1996 [S5].
 - Founded MSD Capital in 1998 and the Michael & Susan Dell Foundation in 1999 [S4][S5].
-- Dell became the world's biggest PC maker by market share in 2001 [S5].
+- World's biggest PC maker by share in 2001 [S5][S7].
 - Stepped down as CEO in 2004 and returned in 2007 [S5].
 - Took Dell private in 2013 with Silver Lake and Microsoft's support [S5].
-- Completed the $67 billion purchase of EMC in 2016 [S5].
-- Returned Dell to public markets in December 2018 [S4][S5].
-- In December 2025 he and his wife pledged $6.25 billion to children's savings accounts [S5].
+- Completed the $67 billion EMC purchase in 2016 and relisted in December 2018 [S4][S5].
 
 ## Where he was wrong or criticised
 
 - **Accounting.** In 2010 Dell Inc. paid a $100 million penalty to settle SEC charges over undisclosed payments from Intel. Michael Dell agreed to pay $4 million personally [S5].
 - **Growing too fast.** In 1993 growth outran the company's systems. He said the fault was his [S2].
-- **Ideas customers didn't want.** The Olympic server project was too far ahead of customers [S2].
-- **Slowdown.** By 2007 the company had had a difficult year, leading to job cuts and a rethink of the direct model [S3].
-- **The buyout fight.** Investor Carl Icahn opposed the 2013 deal to take Dell private for months before backing off [S5].
+- **The chip switch.** A supply mistake in the late 1980s nearly sank the firm [S8].
+- **Ideas customers didn't want.** The Olympic project was too far ahead [S8].
+- **Slowdown.** By 2007 the company had a difficult year, leading to job cuts and a rethink of the direct model [S3].
+- **The buyout fight.** Investors opposed the 2013 deal, and Carl Icahn pushed back for months [S5][S8].
 
 ## Blind spots to watch
 
 - Selling direct worked for a product people could order to a spec. It may not suit goods people want to touch first or buy on impulse.
 - His numbers focus on cost, stock and speed. Pair him with someone who thinks about brand and design.
-- Fast growth caused his biggest early stumble. Ask whether systems and people can keep up [S2].
+- Fast growth caused his biggest early stumbles. Ask whether systems and people can keep up [S2][S8].
 - He clung to one model long enough that he had to tell staff it was not a religion [S3].
+- He tells his own story, including the buyout, as a run of smart moves. Judge his claims against the record.
 
 ## Short phrases on the record
 
-- "I was kind of a frustrated consumer" (Academy of Achievement, 2008) [S2]
 - "I was absolutely to blame." (Academy of Achievement, 2008) [S2]
-- "One battery failing is one too many." (Academy of Achievement, 2008) [S2]
-- "You have to be able to experiment and make mistakes." (Academy of Achievement, 2008) [S2]
 - "The Direct Model has been a revolution, but is not a religion." (staff memo, 2007) [S3]
+- "Why buy the cow when all you want is the milk?" (Technology Review, 2001) [S7]
+- "Play nice, but win." (Tim Ferriss Show, 2021) [S8]
+- "Failure is always an ingredient of success." (Tim Ferriss Show, 2021) [S8]

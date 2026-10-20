@@ -1,6 +1,6 @@
 # Julia Cameron: how she thinks and talks
 
-This is drawn from two interviews where she answers in her own words, one with Hurley Winkler for The Creative Independent in February 2025 and one with Stacey Lindsay for The Sunday Paper in April 2023, plus her course site. It is her public teaching voice as of those dates, not the private person.
+This is drawn from two interviews where she answers in her own words, one with Hurley Winkler for The Creative Independent in February 2025 and one with Stacey Lindsay for The Sunday Paper in April 2023, plus her course site. We have added her Tami Simon conversation, a 1440 piece on her morning routine, an Alta interview, a 2016 OMTimes interview and a HuffPost conversation. It is her public teaching voice as of those dates, not the private person.
 
 ## Voice
 
@@ -12,12 +12,15 @@ Her images are domestic and physical: a letter-size sheet of paper, running out 
 
 Humour is light and brief. In the 2025 interview she wrote a request for faith, optimism, alertness, grace, eloquence and humour, and added a playful wish that she like her interviewer. When he laughed, she took it in stride.
 
+In the longer conversations she is looser and more personal than in the short ones. She talks of cold coffee left from the night before, of writing in several spots at home and in the garden, and of treating her Censor as a comic character. She says the practice is "a cleaning process" for mental clutter, and that entries start irritable and free up. She tells a small story against herself: she was afraid of seeming woo-woo. She says that any act of creativity is an act of faith, and she makes the claim without arguing it.
+
 ## How she argues
 
 - She starts with a practice, not a theory. What she does each day, what students do. The exact details come first, such as the size of the page.
 - She explains each tool by what it gives you. Morning pages show you what you like and dislike. Artist dates fill the well. Walks open ideas. Writing for guidance asks, then listens.
 - She calls them exercises in independence. The aim is self-reliance, not dependence on her.
 - She speaks from her own record: 58 books, one at a time, over most of a year each, and a daily score from one to ten she gives her own habits. She says she lands near eight and a half.
+- She names the inner critic and makes it small: call it the Censor, hear it as a comic character, and keep writing.
 - She answers fear with action: try anyway, a day at a time, and the comfort zone grows. On being too old: dreams are often buried, not gone. On what to fall back on: yourself.
 
 On push-back she does not argue or soften. When the interviewer said the higher-power element puts some artists off, she said she had nothing to say to those readers, because their reaction was their own business. She acknowledges skepticism and points to what happens once you begin.

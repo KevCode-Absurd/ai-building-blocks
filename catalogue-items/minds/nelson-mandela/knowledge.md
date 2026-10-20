@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Re-read on 2026-10-20: the Rivonia statement (S3) and the 1994 inaugural address (S4) as full pages, plus the reference page on his autobiography (S6). The autobiography itself was not read.
+Own words used: the Rivonia statement of 1964 [S3] and the 1994 inaugural address [S4], plus four more speeches and statements read from the United Nations archive on 2026-10-21: his underground statement of 1961 [S8], his court statement of 1962 [S9], his speech on release in 1990 [S7] and his address to the UN committee against apartheid in June 1990 [S10]. The autobiography itself was not read; we know it only through a reference page [S6]. His 1993 Nobel lecture could not be fetched, so it is not used.
 
 A note on method: Mandela was a political leader, so this data set sticks to his leadership and ideas as the record shows them: his statement at the Rivonia trial, his 1994 inauguration speech, his autobiography as described by reference pages, and reference pages on his life. It says nothing about today's politics in South Africa or anywhere else. His words are under copyright, so quotes are short. He led an armed movement for a time and his record in office is debated; the criticism section covers both fairly.
 
@@ -17,6 +17,18 @@ Mandela was born in 1918 into the Thembu royal family, trained as a lawyer, and 
 Mandela treated reconciliation as the way to build a country that could last, not as a soft option. His inauguration speech said the time for healing the wounds had come, and called for a "rainbow nation" at peace with itself [S4]. He brought rival parties into a Government of National Unity, with de Klerk as a deputy and a ministry for the Inkatha leader Mangosuthu Buthelezi [S1].
 
 How he applied it: at the 1995 Rugby World Cup in South Africa, he handed the trophy to the captain, Francois Pienaar. The moment is widely seen as a major step in reconciliation [S1].
+
+**Speak for the group, not for yourself.**
+
+On the day of his release, Mandela opened as a servant of the people and then spent a long stretch thanking named groups: the ANC and its leader Oliver Tambo, fighters who died, the Communist Party, unions, churches, traditional leaders, youth, women, the front-line states and his family [S7]. He said he was a loyal ANC member, that leaders are chosen democratically and that big decisions belong to the organisation's structures, not to one person [S7]. In 1961 he had ended his underground statement with a question to the reader: will you come along with us, or stay neutral [S8].
+
+How he applied it: at the UN in 1990 he again thanked the Secretary-General, the General Assembly, Nigeria, SWAPO, the front-line states and ordinary people who had campaigned for his release [S10].
+
+**Talk and keep the pressure on at the same time.**
+
+In February 1990 he told the crowd his talks with the government were about easing the climate, not yet about the core demands, and that the armed struggle would continue for now, since its causes remained [S7]. He praised de Klerk's first steps but still asked for an end to the state of emergency and the release of all political prisoners [S7]. In June 1990 he told the UN committee to keep every sanction in place until apartheid was dismantled, while saying he thought de Klerk and his colleagues were people of integrity [S10]. He warned that white opponents of change, some in the army and police, and right-wing groups could wreck the process [S10].
+
+How he applied it: he asked European governments to honour the UN declaration of 1989, and pointed to Namibia's peaceful change as a model [S10].
 
 ### Learn your opponent's world
 
@@ -87,25 +99,28 @@ How he applied it: after leaving office he set up the Nelson Mandela Foundation 
 - In a crisis, speak to calm, then keep going [S1].
 - Leave on time [S2].
 
-## Real decisions (enriched minds)
+## Real decisions
+
+### Refusing to hand himself in (1961)
+A warrant was out for his arrest and his group's national council advised him not to surrender. Mandela saw giving himself up as an empty gesture that would help no one [S8]. He said life underground was harder and more dangerous than prison, and that he had left his family, closed his business and given up his profession to do it [S8]. He ended the statement by asking readers to come along with the cause or stay neutral [S8].
+
+### Putting the government's laws on trial (1962)
+At his 1962 trial in Pretoria he argued that the government had made laws without the consent of Africans, and that this should weigh on his sentence [S9]. He said his strike was peaceful, meant to press for a national convention after officials ignored his letters, and that the violence that followed was the government's doing [S9]. He said he doubted a white-run court could be fair on laws Africans had no part in making, yet he was respectful to the magistrate as a person [S9]. He said unjust laws tear people between their conscience and the law [S9].
 
 ### Putting the whole case on the record at Rivonia (1964)
-He chose to admit what he had done and deny what he had not, step by step, and to show that sabotage followed years of peaceful protest [S3]. He ended with the ideal he was ready to die for [S3].
-
-### Studying Afrikaans on Robben Island
-He learned the language of his guards and the government, to earn respect and, he hoped, win them over [S1].
+He chose to admit what he had done and deny what he had not, step by step, and to show that sabotage followed years of peaceful protest [S3]. He explained that the group weighed four forms of violence and picked sabotage of property first, with orders not to harm people, to keep reconciliation possible [S3]. He ended with the ideal he was ready to die for [S3].
 
 ### Refusing conditional release (1985)
 Botha offered release if he rejected violence outright. Through his daughter he replied that a prisoner cannot make contracts, only free people can [S1]. In 1988 he refused terms that asked the ANC to drop the armed struggle [S1].
 
 ### Opening secret talks (1989)
-Years later he held secret talks with justice minister Kobie Coetsee and met President P. W. Botha in July 1989 [S1].
+After years of studying the language of his guards, he held secret talks with justice minister Kobie Coetsee and met President P. W. Botha in July 1989 [S1].
 
-### Thanking and naming the former enemy at the 1994 inauguration
-He thanked guests, ordinary people and leaders from many groups, named F. W. de Klerk, and praised the security forces for helping the first free election [S4].
+### Speaking for the movement on the day of release (1990)
+On 11 February 1990 he named supporters and fallen fighters, spoke as a loyal member and said the organisation, not he, would decide [S7]. He asked white South Africans to build the new country, said the movement was a home for them too, and closed by returning to his words of 1964 [S7].
 
-### Setting up a truth commission (1995)
-The Truth and Reconciliation Commission was created under a 1995 law and chaired by Desmond Tutu, to hear what went wrong before anyone was judged [S5].
+### Asking the world to keep sanctions (June 1990)
+Four months after release, with talks under way, he asked the UN committee to keep all sanctions in force and to stay united, so that opponents of change would not feel encouraged [S10]. His stated reason was that apartheid had not yet been taken apart [S10]. He said he trusted de Klerk's integrity, yet saw obstacles ahead [S10].
 
 ## Where he stood
 
@@ -153,5 +168,5 @@ The Truth and Reconciliation Commission was created under a 1995 law and chaired
 - "I have fought against white domination, and I have fought against black domination." (Rivonia trial, 1964) [S3]
 - "it is an ideal for which I am prepared to die." (Rivonia trial, 1964) [S3]
 - "The time for the healing of the wounds has come." (Inauguration, 1994) [S4]
-- "a rainbow nation at peace with itself and the world" (Inauguration, 1994) [S4]
-- "Democracy meant all men to be heard" (*Long Walk to Freedom*, 1994) [S6]
+- "The struggle is my life." (statement, 1961) [S8]
+- "a black man in a white man's court" (court statement, 1962) [S9]

@@ -1,8 +1,8 @@
 # John D. Rockefeller: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Rockefeller (1839 to 1937) said little in public, but in 1909 he published *Random Reminiscences of Men and Events*, a short book on how he worked and how he gave [S1]. It is in the public domain, so we quote a few short lines. It is also a defence of Standard Oil, written after years of attack. The fullest attack came from the journalist Ida Tarbell in 1904 [S5]. We use both, and an archive biography for facts [S4]. Sources differ on some numbers, such as his share of the oil trade and the total he gave away. We note those gaps.
+A note on the record: Rockefeller (1839 to 1937) said little in public. His own words here come from four places. The first is his 1909 book *Random Reminiscences of Men and Events*, a short account of how he worked and how he gave [S1]. It is in the public domain, so we quote a few short lines, and it is also a defence of Standard Oil written after years of attack. The second is his written answers to the US Industrial Commission in 1899, where he gave his reasons for combination in seven plain points [S6]. The third is a set of his letters, to his son and in reply to begging letters, held by the Rockefeller Archive Center [S7][S8]. The fourth is a page of sourced sayings [S2]. The fullest attack on him came from the journalist Ida Tarbell in 1904 [S5], and a University of Chicago history shows how he handled his biggest early gift [S9][S10]. Facts come from an archive biography [S4]. Sources differ on some numbers, such as his share of the oil trade and the total he gave away. We note those gaps. His long 1917 to 1920 interviews with William Inglis exist only on microfilm, and we have not read them.
 
 ## In one paragraph
 
@@ -20,7 +20,7 @@ How he applied it: he treated his signature on a bill as a duty heavier than spe
 
 Rockefeller thought that open, crowded competition in a new industry led to ruin. In the early oil trade, he wrote, anyone could refine oil, so too much was made and prices fell until the trade was close to ruin [S1]. His answer was to combine. He and his partners bought the largest and best refiners and ran them from one centre to save money and work better [S1]. He believed combination was a necessity, and that its dangers, like those of steam, could be managed [S1].
 
-How he applied it: in under four months in 1872, Standard Oil took over 22 of its 26 Cleveland rivals [S3]. In 1882 its properties were merged into the Standard Oil Trust [S4]. He told an 1899 government commission that combinations should be allowed, with enough state oversight to prevent fraud [S1].
+How he applied it: in under four months in 1872, Standard Oil took over 22 of its 26 Cleveland rivals [S3]. In 1882 its properties were merged into the Standard Oil Trust [S4]. In 1899 he told the Industrial Commission it was too late to argue about the worth of big companies. He listed seven gains: capital, wider limits, more people with a stake, economy, shared know-how, cheaper and better goods, and steady work at good wages [S6]. He said the dangers, such as abuse of power or rigged stock prices, were real but no more an argument against combination than a boiler that may burst is against steam. His fix was federal incorporation or similar state laws, with enough oversight to stop fraud [S6].
 
 ### Win on volume through cheapness and merit
 
@@ -62,7 +62,7 @@ How he applied it: this belief sat behind his push to combine refiners rather th
 
 Rockefeller saw giving as a hard art that needed the same care as business [S1]. He believed the only thing of lasting benefit to a person is what they do for themselves, so the best gifts help people help themselves [S1]. He argued that combination should cut waste in charity just as it did in industry [S1].
 
-How he applied it: he gave from his first job, about six percent of his pay at sixteen and over ten percent by twenty [S3]. He hired Frederick T. Gates to run his giving on research and expert advice [S4]. He often gave on condition that others also gave. He offered $600,000 to help found the University of Chicago if others raised the rest of the first $1 million within 90 days [S4]. His Sanitary Commission fought hookworm in 11 southern states from 1909 to 1915 [S4].
+How he applied it: he gave from his first job, about six percent of his pay at sixteen and over ten percent by twenty [S3]. He hired Frederick T. Gates to run his giving on research and expert advice [S4]. He often gave on condition that others also gave, and he told his son to be sure he was right before he gave, then not be afraid to give [S7]. He offered $600,000 to help found the University of Chicago if others raised the rest of the first $1 million within 90 days [S4]. His Sanitary Commission fought hookworm in 11 southern states from 1909 to 1915 [S4].
 
 ## How he decides
 
@@ -77,25 +77,28 @@ How he applied it: he gave from his first job, about six percent of his pay at s
 ## Real decisions
 
 ### Refusing his best customer an advance
-Soon after the Clark & Rockefeller produce firm opened, its largest shipper asked to draw money against shipments not yet in hand. Rockefeller, who handled the money side, refused because it set a bad precedent. His partner was angry, and a personal visit to talk the man round failed. They held the line anyway, and the shipper stayed as if nothing had happened. Rockefeller later suspected a local banker had set it up as a test, and that the firm's stand did it good. [S1]
+Soon after the Clark & Rockefeller produce firm opened, its largest shipper asked to draw money against shipments not yet in hand. Rockefeller, who handled the money side, refused because it set a bad precedent. His partner was angry, and a personal visit to talk the man round failed. They held the line anyway, and the shipper stayed as if nothing had happened. Rockefeller later suspected a local banker had set it up as a test. [S1]
 
 ### Raising the church's $2,000 debt
-At seventeen or eighteen he was a trustee of a small mission church with a $2,000 mortgage that the creditor wanted paid. He stood at the door after service, took pledges from every member into his little book, and kept collecting for months in amounts as small as a few cents. He says it woke his ambition to earn more, and that he went at it with pride. [S1]
-
-### Telling himself to go steady
-As his first business began to win, he spoke to himself most nights before sleeping, warning that a small success could be followed by a fall. He says these private talks had a big effect on his life. His stated fear was that he could not stand prosperity. [S1]
+At seventeen or eighteen he was a trustee of a small mission church with a $2,000 mortgage that the creditor wanted paid. He stood at the door after service, took pledges from every member into his little book, and kept collecting for months in amounts as small as a few cents. He says it woke his ambition to earn more. [S1]
 
 ### Keeping honest books while rivals guessed
 In the early oil trade many refiners claimed their case was special and sold below cost, and some did not know whether a job made or lost money. Standard's managers kept books that showed gain and loss on each operation, and Rockefeller says they tried not to deceive themselves. He treated that as the base for everything else, including the decision to buy rivals. [S1]
 
+### Borrowing on frank accounts, then bidding in 1865
+To join Clark & Rockefeller he took $1,000 from his father at 10% interest. When the firm needed more, he told the banker T.P. Handy exactly what the loan was for and got $2,000 on warehouse receipts. He says the trust mattered more than the sum. [S1] When the oil partnership broke up in 1865, the partners agreed to bid among themselves with a lawyer calling the sale. He had arranged his funds in advance, and when the other side said $72,000 he said $72,500. He called this the real start of his oil business. [S1]
+
 ### Combining with refiners
-Rockefeller denied forcing partners into Standard and asked whether men forced in could stay friends for life. In the early 1870s the firm bought out most of the Cleveland refiners, 22 of 26 in under four months by one account. His reason was that open competition had made too much oil and ruined prices, and combination saved waste. Tarbell's account of the same years stresses rail rebates and pressure on rivals. [S1][S3][S5]
+Rockefeller denied forcing partners into Standard and asked whether men forced in could stay friends for life. In the early 1870s the firm bought out most of the Cleveland refiners, 22 of 26 in under four months by one account. His reason was that open competition had made too much oil and ruined prices, and combination saved waste. In 1899 he gave the same case to the government in seven points, and said local business alone would have meant failure years earlier. Tarbell's account of the same years stresses rail rebates and pressure on rivals. [S1][S3][S5][S6]
+
+### Going to pipelines, tank cars and export
+Rockefeller wrote in 1899 that oil in barrels could not last, because the barrel often cost more than the oil and the forests could not keep up. The firm turned to pipelines, which he said took about fifty million dollars of capital that only a combination could raise, then to tank cars and tank steamers. Local sales were not enough, so it sought export trade and built seaboard refineries. He also wanted every by-product sold rather than thrown away. His stated gain was cheaper, better light for the public and a profit for stockholders. Critics such as Tarbell tell these years as rebates and pressure. [S1][S5][S6]
+
+### Setting a deadline and a match for the Chicago gift
+In early 1889 Rockefeller preferred a small college to a university, saying he did not need a university to absorb his surplus. In spring 1890 he pledged $600,000 and gave the backers a year to raise $400,000 more from others. He wanted the school to stand on its own, not stay a ward. [S9] He first said he would never cover operating deficits, then paid $500,000 in October 1893 so salaries could be met, because he had put his name on the project. He skipped the 1892 opening, which the article reads as a sign of displeasure over the budget, and for years he avoided visiting so the university would not be tied too closely to his name. In 1895 he pledged $3 million. In 1897 he called it the best investment he ever made. [S9][S10]
 
 ### Replacing scattershot giving with a plan
-Around 1890 he was giving here and there as appeals arrived, and nearly broke down investigating them. He decided to organise giving like the business, with a staff and a set of principles. He hired Frederick Gates and funded research, schools and public health. His committee studied what advances civilisation and gave to the causes it judged most useful, rather than the loudest, and sometimes created institutions that did not exist. [S1][S4]
-
-### Giving on condition others give
-For the University of Chicago he offered $600,000 if others raised the rest of the first $1 million within 90 days. His stated rule was that the best help is help that lets people do for themselves, and that cooperation in giving should cut waste as combination did in trade. The Sanitary Commission then fought hookworm across southern states from 1909 to 1915. [S1][S4]
+By the late 1880s he was getting thousands of begging letters a week and wrote that he could not give with any satisfaction until he had made careful inquiry. Around 1890 he was giving here and there as appeals arrived, and nearly broke down investigating them. He decided to organise giving like the business, with a staff and principles, and hired Frederick Gates. His rule was to help people help themselves. The Sanitary Commission then fought hookworm across southern states from 1909 to 1915. In 1922 he told his son to go carefully and be sure he was right before he gave. [S1][S4][S7][S8]
 
 ## Where he stood
 
@@ -146,5 +149,5 @@ For the University of Chicago he offered $600,000 if others raised the rest of t
 - "Don't even think of temporary or sharp advantages." (*Random Reminiscences*) [S1]
 - "We knew how much we made and where we gained or lost." (*Random Reminiscences*) [S1]
 - "Commercial enterprises that are not needed fail, and ought to fail." (*Random Reminiscences*) [S1]
-- "if we can help people to help themselves" (*Random Reminiscences*) [S1]
-- "The day of combination is here to stay." (1880, as cited by Allan Nevins) [S2]
+- "It is too late to argue about the advantage of industrial corporations." (Industrial Commission, 1899) [S6]
+- "Combination is necessary and its abuses can be minimized" (Industrial Commission, 1899) [S6]

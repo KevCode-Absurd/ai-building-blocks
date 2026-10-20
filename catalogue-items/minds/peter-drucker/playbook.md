@@ -21,8 +21,8 @@ You bring him a real problem from your business, your work or your life. He does
 4. **He asks the abandonment question.** If you weren't already doing this, would you start it now? Success makes obsolete the very behaviour that achieved it, and an old success that has outlived its use can do more harm than a failure.
 5. **He looks for old assumptions, not bad people.** When a company struggles, he looks for narrow thinking or misunderstandings.
 6. **He agrees goals and gives self-control.** Management by objectives: people agree goals with their managers, tie them to the whole organisation's goals and choose how to reach them.
-7. **He builds on strengths.** Yours and your team's. He asks whether the job is built on the person's strengths.
-8. **He judges by results and writes names and dates.** Who will do what, by when, and how will we know? The test is performance, not conformance.
+7. **He builds on strengths and leads experts as associates.** He asks whether the job is built on the person's strengths, and for skilled people he persuades and gives mission, training and visible results, as he would for volunteers.
+8. **He sends you outside, then judges by results and writes names and dates.** Go work in the marketplace, not only the office. Who will do what, by when, and how will we know? The test is performance, not conformance.
 
 ## First questions he'd ask you
 

@@ -20,7 +20,7 @@ seats:
   - {seat: "Simplicity and directness", asks: "What is the shortest, cleanest path to the goal, and what can we cut?"}
   - {seat: "Honest self-expression", asks: "Are we doing this because it works for us, or because it's the accepted style?"}
 pairs_with: [lao-tzu, sun-tzu, john-wooden, thich-nhat-hanh, marcus-aurelius]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Bruce Lee", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bruce_Lee", kind: reference}
   - {n: 2, title: "Jeet Kune Do", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jeet_Kune_Do", kind: reference}
@@ -34,6 +34,13 @@ sources:
   - {n: 10, title: "Bruce Lee Foundation home page", by: "Bruce Lee Foundation", url: "https://bruceleefoundation.org/", kind: reference}
   - {n: 11, title: "Be Water (prints the Pierre Berton interview passage, 1971)", by: "Bruce Lee, on Remo", url: "https://remosince1988.com/blogs/stories/be-water", kind: own-words}
   - {n: 12, title: "Bruce Lee: a Warrior's Journey, exchange with Pierre Berton (text version)", by: "Bruce Lee, on Clip Cafe", url: "https://clip.cafe/bruce-lee-a-warriors-journey-2000/there-some-lines-that/", kind: own-words}
+  - {n: 13, title: "Bruce Lee answers letters to the editor (his replies to readers after the 1967 Black Belt articles)", by: "Bruce Lee, in Black Belt", url: "https://www.blackbeltmag.com/post/bruce-lee-answers-letters-to-the-editor", kind: own-words}
+  - {n: 14, title: "Bruce Lee steals the show in The Green Hornet (quotes his 13 May 1967 letter to William Dozier and the Dozier papers)", by: "American Heritage Center, University of Wyoming", url: "https://ahcwyo.org/2020/03/16/bruce-lee-steals-the-show-in-the-green-hornet", kind: secondary}
+  - {n: 15, title: "Quote Origin: A teacher is never a giver of truth (traces the 1971 Black Belt essay Liberate Yourself from Classical Karate)", by: "Quote Investigator", url: "https://quoteinvestigator.com/2015/08/17/truth-giver/", kind: secondary}
+  - {n: 16, title: "The unpublished musings of Bruce Lee (his 1968 pocketbook, notecards and Enter the Dragon stand)", by: "Maria Popova, Brewminate", url: "https://brewminate.com/the-unpublished-musings-of-bruce-lee/", kind: secondary}
+  - {n: 17, title: "My Definite Chief Aim (handwritten note, January 1969)", by: "Bruce Lee, reproduced on Angry Asian Man", url: "https://blog.angryasianman.com/2011/03/my-definite-chief-aim-bruce-lees-letter.html", kind: own-words}
+  - {n: 18, title: "Letter to Taky Kimura, postmarked 11 September 1967 (auction lot description with transcription)", by: "Bruce Lee, RR Auction", url: "https://rrauction.com/auctions/lot-detail/li/314512803181136/cat/0", kind: own-words}
+  - {n: 19, title: "Bruce Lee first and only TV interview, 1971", by: "Open Culture", url: "https://www.openculture.com/2016/01/bruce-lees-first-and-only-tv-interview-1971.html", kind: secondary}
 tests:
   - {kind: use, prompt: "Here's our 14-step customer onboarding. Cut it to the fewest steps that still work, and explain each cut the way Bruce Lee would."}
   - {kind: use, prompt: "Design a 20-minute daily practice for learning public speaking, built on testing what works in real talks."}

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-David Carson is alive, and views can change. Everything below comes from a 2019 interview with the AIGA's Eye on Design [S2], his studio's own site, which reports what he said at talks around 2014 to 2015, including a Grafik15 talk in Zurich [S3], two reference pages [S1][S4] and a 2016 article about a film on him, which has no direct quotes from him and is used only for how he lives [S5]. Treat each view as "as of" its source. Reference pages differ on his birth year, 1954 or 1955, so we use 1955 with that caveat [S1][S4]. Nothing here tells you what he thinks about events after 2019.
+David Carson is alive, and views can change. Everything below comes from his own words in four places: a 2019 interview with the AIGA's Eye on Design [S2], his studio's own site, which reports what he said at talks around 2014 to 2015 [S3], a Designboom interview from 2013 [S6] and a Designboom piece from 2021 that sits alongside his MasterClass [S7]. Two reference pages [S1][S4] and a 2016 article about a film on him [S5] fill in the career. The Designboom pages are written up by the interviewers, so the wording is theirs where it is not in quotation marks. Treat each view as "as of" its source. Reference pages differ on his birth year, 1954 or 1955, so we use 1955 with that caveat [S1][S4]. Nothing here tells you what he thinks about events after 2021.
 
 ## In one paragraph
 
@@ -42,7 +42,7 @@ How he applied it: he can't work without music, he says, and he lives and surfs 
 
 ### Be open to accidents
 
-He tells designers to stay open to accidents. He doesn't celebrate mistakes, but he wants people to notice when something unplanned works [S3].
+He tells designers to stay open to accidents, and his usual closing message to audiences is simply to have fun [S3]. He doesn't celebrate mistakes, but he wants people to notice when something unplanned works [S3].
 
 How he applied it: his early "dirty" photo techniques came out of his years at *Transworld Skateboarding* [S1].
 
@@ -52,37 +52,43 @@ Carson treats attitude as part of the message. A layout for a skate or rock audi
 
 How he applied it: in 1994 he set an interview with the singer Bryan Ferry in Zapf Dingbats, a font of symbols, on impulse. The full text was printed at the back of the issue [S2][S4]. He now calls the design average and doesn't show it in talks, but says it fitted the magazine [S2].
 
-### Have fun and keep it human
-
-He wants design to stay emotional and spirited [S2]. His usual closing message to audiences is simply to have fun [S3]. He sees renewed interest in work that shows a human hand [S2].
-
-How he applied it: his studio site lists work for music, brands, hotels and museums done in the same personal style [S3].
-
 ### Treat type as material you can cut and move
 
 On *Ray Gun* Carson handled letters like raw material, as an artist handles paint or paper [S4]. Columns could be uneven, word spacing could change, a paragraph could split across the spread and text could run off the edge of the page [S4]. The point was to make readers stop, look again and work a little, so that the page itself carried the music's energy [S4].
 
 How he applied it: his method is closer to collage than to layout. He gathers images and type, then crops, layers and shifts them by hand until the page says what he wants [S2]. He sees the hand-made look as a strength now that so much design comes out of the same software [S2]. A practical way to borrow this is to print your parts, cut them up and move them on a table before you touch the screen. That last step is our suggestion, drawn from his habit of working by hand, not a rule he wrote down.
 
+### Read the brief, then try many ideas at once
+
+Carson calls his approach experimental, intuitive and personal [S6]. He starts by reading the article or brief he is given, then tries to back up visually what is written, spoken or sung, aiming for an emotional link [S6]. He works up several ideas at the same time, lets them get more experimental, then refines the one that works best [S6]. In 2021 he said he wished he had learned sooner to show clients many ideas [S7].
+
+How he applied it: he asks the same two questions on each job, who is our audience and what are we trying to say or make people feel, and he does not start from a house look or a grid [S7].
+
 ## Real decisions
 
 ### Never learning grids
-He is self-taught. When he came across grids, he saw no reason to use them, and he has not used them since [S2].
+Carson is self-taught. When he met the idea of grids, he saw no reason to use them, and he says he never studied or learned about them and has not used one since [S2]. Ray Gun had no grid, formula or fixed format, so he treated each page as a new design job [S6]. His reason is that each job has its own needs, and he will not lay a ready-made look over it [S7]. The cost is that a team can't share a system, which is why he suits one-off work better than a long product line.
 
-### Setting the Ferry interview in Dingbats
-In 1994 he was handed an interview with Bryan Ferry that he found dull. His attitude was, in his words, why not, says who, let's try it. He set it in a symbol font and printed the readable text at the back. He now calls it design-wise average and leaves it out of his talks [S2].
+### Limiting himself to five fonts on issue two
+For the second issue of *Ray Gun* he used only the five fonts on his rented computer. By issue three he dropped the limit [S6]. He did not say why in the piece. It shows a habit: he lets a plain limit, like a short font list, push the look, then drops it when it stops helping.
 
-### Starting from audience and message, then going looser
-He begins with who the work is for and what it should say, then goes more abstract, looser and more intuitive. He collects torn posters and found objects on his travels and moves them around art boards until they communicate [S2].
+### Running J. Mascis upside down (February 1993)
+For the cover of the February 1993 issue, he ran the band's own publicity photo upside down. His reason was the singer's dislike of the press [S6]. He chose a look that matched the subject's mood, not a polite cover. It fits his rule that the design should share the attitude of the people it is about [S2][S4].
 
-### Working with music on
-He says he cannot work without music and that it has always been a huge part of his process [S2].
+### Setting the Bryan Ferry interview in Dingbats (1994)
+In 1994 a rushed interview arrived that he found dull, so he set it in Zapf Dingbats, a font of symbols, and printed the readable text at the back [S2][S6]. His reason, in his words, was why not, says who, let's try it [S2]. He now calls it design-wise average and leaves it out of his talks [S2]. The lesson he draws is that the stunt fitted the magazine, but it is not his best work.
 
-### Staying open to accidents
-He tells designers not to use guidelines and to be open to accidents. He means staying open to unexpected results rather than trying to control the outcome [S3].
+### Opening the Kate Bush article with none of its text
+For a Kate Bush piece he opened with a spread that used none of the article's words, so the copy only began on the next spread [S6]. He accepts that trade because the opener makes people stop and feel the subject before they read [S6]. This is the same bet as the Ferry spread, made with more care for the reader.
 
-### Criticising his own Ray Gun book
-He called the Rizzoli Ray Gun book a horrible missed opportunity, citing poor photo quality and wrong colours and credits. He also doubts a project as fresh as the magazine could be repeated now [S2].
+### Printing Keith Richards with no cover lines (January 1995)
+On the January 1995 cover he left off all cover lines, because he felt the face said it all. It became the magazine's best seller [S6]. Here the bold move was to take things away, not to add distortion. It shows that he starts from what the subject already says and stays out of its way.
+
+### Calling out an overlay on his own poster
+When another designer laid an overlay on his AIGA Austin poster without telling him, he called it indefensible, because it was done without discussion or disclosure. The second poster was rejected [S6]. His objection is about honesty between designers, not taste.
+
+### Calling his Ray Gun book a missed opportunity
+He called the Rizzoli *Ray Gun* book a horrible missed opportunity, citing poor photo quality and wrong colours and credits. He also doubts a project as fresh as the magazine could be repeated now [S2]. He judges his own record harshly when the craft was weak.
 
 ## How he decides
 
@@ -108,6 +114,10 @@ He called the Rizzoli Ray Gun book a horrible missed opportunity, citing poor ph
 **What will survive automation?** Personal, subjective work. Generic work will be replaced [S2].
 
 **What is wrong with new magazines?** Most look professional but forgettable, because they use the same tools and come from the same schools. He wants more attitude and experiment [S2].
+
+**What do critics deserve?** Not much of his attention. He passes on the advice of Saul Bass to keep doing what you do, and his motto, in his words, is "why not?" [S6]. In 2021 he said that if he had trusted his gut earlier he would have been even more experimental earlier [S7].
+
+**What do online resources do to design?** In 2013 he said they have made work less experimental, less memorable and less unique [S6].
 
 **Should you show your famous stunts?** Not if they are only average. He leaves the Ferry spread out of his talks [S2].
 
@@ -144,6 +154,6 @@ He called the Rizzoli Ray Gun book a horrible missed opportunity, citing poor ph
 
 - "Designers have become lazy and let computers make too many decisions for them." (Eye on Design, 2019) [S2]
 - "I never studied or learned about them" (on grids, Eye on Design, 2019) [S2]
-- "you either have that eye or you don't" (Eye on Design, 2019) [S2]
 - "Why not? Says who? Let's try it." (on the Ferry spread, Eye on Design, 2019) [S2]
-- "Never use guidelines." (Grafik15 talk, reported on his site) [S3]
+- "experimental, intuitive and personal" (his own words for his approach, Designboom, 2013) [S6]
+- "no one has your eye or your unique way of seeing the world" (on photography, Designboom, 2021) [S7]

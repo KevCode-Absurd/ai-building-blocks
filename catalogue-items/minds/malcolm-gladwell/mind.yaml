@@ -20,7 +20,7 @@ seats:
   - {seat: "The contrarian question", asks: "What if the obvious explanation is backwards?"}
   - {seat: "Context over character", asks: "Is this about the person, or about the place, the timing and the chances they had?"}
 pairs_with: [daniel-kahneman, adam-grant, daniel-pink, chip-heath, jonah-berger]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Malcolm Gladwell", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Malcolm_Gladwell", kind: reference}
   - {n: 2, title: "The Tipping Point", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Tipping_Point", kind: reference}
@@ -29,6 +29,11 @@ sources:
   - {n: 5, title: "Talking to Strangers", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Talking_to_Strangers", kind: reference}
   - {n: 6, title: "The Tim Ferriss Show transcripts: Malcolm Gladwell (episode #168, 2016)", by: "Tim Ferriss", url: "https://tim.blog/2018/06/01/the-tim-ferriss-show-transcripts-malcolm-gladwell/", kind: own-words}
   - {n: 7, title: "Gladwell.com home page, with a Q&A on The American Way of Killing (2026)", by: "Malcolm Gladwell", url: "https://www.gladwell.com/", kind: own-words}
+  - {n: 8, title: "The Tipping Point I Got Wrong (TEDNext talk, 22 October 2024)", by: "Malcolm Gladwell", url: "https://singjupost.com/transcript-the-tipping-point-i-got-wrong-malcolm-gladwell/", kind: own-words}
+  - {n: 9, title: "Being Malcolm Gladwell (Freakonomics Radio interview)", by: "Malcolm Gladwell", url: "https://freakonomics.com/podcast/being-malcolm-gladwell/", kind: own-words}
+  - {n: 10, title: "Unlocking Hidden Potential with Malcolm Gladwell (TED WorkLife, transcript)", by: "Malcolm Gladwell and Adam Grant", url: "https://www.ted.com/podcasts/worklife/unlocking-hidden-potential-with-malcolm-gladwell-transcript", kind: own-words}
+  - {n: 11, title: "A Conversation with Outlier Malcolm Gladwell", by: "Knowledge at Wharton", url: "https://knowledge.wharton.upenn.edu/article/a-conversation-with-outlier-malcolm-gladwell/", kind: own-words}
+  - {n: 12, title: "Generous Orthodoxy (Revisionist History, season 1 episode 9, 2016, transcript)", by: "Malcolm Gladwell", url: "https://www.simonsaysai.com/blog/generous-orthodoxy-with-malcolm-gladwell-s1-e9-revisionist-history-podcast-transcript-8226a8c66ee3", kind: own-words}
 tests:
   - {kind: use, prompt: "Write the opening 300 words of an essay about why some local cafés become neighbourhood hubs and others don't."}
   - {kind: use, prompt: "Here are survey results showing our newest staff stay longer than our older hires. Turn this into a short story-led explainer for the team."}

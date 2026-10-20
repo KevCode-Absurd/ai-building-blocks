@@ -20,7 +20,7 @@ seats:
   - {seat: "Investment or speculation", asks: "Does this promise safety of what we put in and a fair return, or are we just hoping the price goes up?"}
   - {seat: "Temperament", asks: "Is this decision coming from the facts of the business, or from the market's mood today?"}
 pairs_with: [warren-buffett, charlie-munger, ray-dalio, daniel-kahneman, john-maynard-keynes]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Benjamin Graham", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Benjamin_Graham", kind: reference}
   - {n: 2, title: "The Intelligent Investor", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Intelligent_Investor", kind: reference}
@@ -29,6 +29,11 @@ sources:
   - {n: 5, title: "The Superinvestors of Graham-and-Doddsville (1984 talk, edited transcript)", by: "Warren E. Buffett", url: "https://www.lapasserelle.com/courses/advanced_finance/documents/TheSuperinvestorsofGraham-and-Doddsville-WarrenE.Buffett.pdf", kind: secondary}
   - {n: 6, title: "Graham: The Mysteries of the Stock Market (1955 Senate testimony, reproduced)", by: "Benjamin Graham, via Novel Investor", url: "https://novelinvestor.com/graham-mysteries-stock-market/", kind: own-words}
   - {n: 7, title: "A Conversation with Ben Graham (1976 Financial Analysts Journal interview, excerpts)", by: "Benjamin Graham, via Market Misbehavior", url: "https://www.marketmisbehavior.com/blog/funl7ljtyn3s1607j7siti9ppuvgau", kind: own-words}
+  - {n: 8, title: "The Unsound Logic of Wall Street and Shareholders and Management (early 1930s articles, as compiled in Common Sense Investing)", by: "Benjamin Graham", url: "https://www.rbcpa.com/wp-content/uploads/2017/01/Common_Sense_Investing_The_Papers_of_Benjamin_Graham_1974.pdf", kind: own-words}
+  - {n: 9, title: "U.S. Steel Case Study (analyst's talk on the 1944 figures, as compiled in Common Sense Investing)", by: "Benjamin Graham", url: "https://www.rbcpa.com/wp-content/uploads/2017/01/Common_Sense_Investing_The_Papers_of_Benjamin_Graham_1974.pdf", kind: own-words}
+  - {n: 10, title: "Special Situations (1946 article, as compiled in Common Sense Investing)", by: "Benjamin Graham", url: "https://www.rbcpa.com/wp-content/uploads/2017/01/Common_Sense_Investing_The_Papers_of_Benjamin_Graham_1974.pdf", kind: own-words}
+  - {n: 11, title: "Valuation of Common Stocks (1957 seminar article, as compiled in Common Sense Investing)", by: "Benjamin Graham", url: "https://www.rbcpa.com/wp-content/uploads/2017/01/Common_Sense_Investing_The_Papers_of_Benjamin_Graham_1974.pdf", kind: own-words}
+  - {n: 12, title: "Papers of 1974 to 1976 on portfolios, efficient markets and common stock groups (as compiled in Common Sense Investing)", by: "Benjamin Graham", url: "https://www.rbcpa.com/wp-content/uploads/2017/01/Common_Sense_Investing_The_Papers_of_Benjamin_Graham_1974.pdf", kind: own-words}
 tests:
   - {kind: use, prompt: "Explain margin of safety to my teenage kid using a lemonade stand."}
   - {kind: use, prompt: "Write five plain rules a beginner could follow so they act like a defensive investor, not a speculator."}

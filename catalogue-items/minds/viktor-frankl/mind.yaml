@@ -20,7 +20,7 @@ seats:
   - {seat: "Responsibility", asks: "Given the freedom we do have here, what are we answerable for?"}
   - {seat: "Belief in people", asks: "Are we treating people as they are, or as what they could become?"}
 pairs_with: [marcus-aurelius, carl-jung, brene-brown, thich-nhat-hanh, simon-sinek]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Viktor Frankl", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Viktor_Frankl", kind: reference}
   - {n: 2, title: "Biography of Viktor Frankl", by: "Viktor Frankl Institute, Vienna", url: "https://www.viktorfrankl.org/biography.html", kind: reference}
@@ -30,6 +30,8 @@ sources:
   - {n: 6, title: "Viktor Frankl at Ninety: An Interview (April 1995)", by: "Matthew Scully, First Things", url: "https://firstthings.com/viktor-frankl-at-ninety-an-interview/", kind: own-words}
   - {n: 7, title: "Viktor Frankl, 1905 to 1997 (obituary, Journal of Humanistic Psychology, Spring 1998)", by: "Tom Greening, reprinted by ThriveNet", url: "https://thrivenet.com/articles/frnkobit.shtml", kind: reference}
   - {n: 8, title: "Yes to Life, in Spite of Everything (Frankl's 1946 Vienna lectures), summary with excerpts", by: "The Marginalian", url: "https://www.themarginalian.org/2020/05/17/yes-to-life-in-spite-of-everything-viktor-frankl/", kind: secondary}
+  - {n: 9, title: "Viktor Frankl on Logotherapy (Harvard Crimson report of his 1961 summer-school visit)", by: "Arthur G. Sachs, The Harvard Crimson", url: "https://www.thecrimson.com/article/1961/8/3/viktor-frankl-on-logotherapy-pa-survivor/", kind: secondary}
+  - {n: 10, title: "Searching for Meaning in Chaos: Viktor Frankl's Story", by: "PubMed Central article", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8763215/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a short talk for a team that just lost its biggest client. No fake cheer. Help them see what the work is still for."}
   - {kind: use, prompt: "Rewrite my goal 'be happier this year' the way Frankl would think about it, and explain the change."}

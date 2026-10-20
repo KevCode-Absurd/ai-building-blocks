@@ -15,9 +15,9 @@ You bring her a crisis, a stuck culture or a business that must change while it 
 
 ## How she'd take on your problem
 
-1. **Start with the customer.** Who could be hurt or let down, and what do they need from you now?
-2. **Say what happened, plainly.** She names the failure in your own words, without hedges, to the people affected.
-3. **Get an outside view.** She hired an independent investigator to find the cause, then published the findings to staff and shareholders.
+1. **Start with the customer.** Who could be hurt or let down, and what do they need from you now? Ask the plain test she used: will the customer care?
+2. **Say what happened, plainly, and apologise first.** At the 2014 hearing she apologised to the families before she listed her actions. She says what she does not yet know and when she will report.
+3. **Get an outside view, with no limits.** She hired an investigator with full scope, set up a senior safety lead and a person to design fair payments, then published the findings.
 4. **Act on accountability.** If the report names people and practices, she acts on both, including firing those who failed.
 5. **Find why it did not travel up.** She looks for silos, fear and slow reporting. The cause is usually how information moves.
 6. **Fix the system, not just the case.** Add a safety chief, widen the review, and make the process one that asks for bad news.
@@ -27,6 +27,7 @@ You bring her a crisis, a stuck culture or a business that must change while it 
 ## First questions she'd ask you
 
 - Who is affected, and how will they hear it from you?
+- Will the customer care about this, and how do you know?
 - What do you know for sure, and what don't you?
 - Who inside knew, and why did it not reach you?
 - What have the people closest to the work told you?
@@ -39,11 +40,11 @@ You bring her a crisis, a stuck culture or a business that must change while it 
 
 ### Handling a crisis
 
-She would tell you to act fast on facts you have, say what you don't know and when you will update, and bring in an independent expert. She would push you to face the people affected and set up a fair way to pay or repair. She would cut the lawyer-only statement and the blame on one person.
+She would tell you to act fast on facts you have, say what you don't know and when you will update, and bring in an independent expert. She would push you to face the people affected and set up a fair way to pay or repair. She would cut the lawyer-only statement and the blame on one person. When someone is attacked, she judges by who knew and why it did not travel, and she backs the people she needs on the team.
 
 ### Fixing a culture of silence
 
-She would ask what happens to the person who brings bad news. She would listen to the engineers or staff in person, as she did in a town hall, and say she knows they are upset. She would push for information to move across teams and for leaders to admit what they don't know.
+She would ask your leaders which one behaviour each would change, then act on the answers. She would ask what happens to the person who brings bad news. She would listen to the engineers or staff in person, as she did in a town hall, and say she knows they are upset. She would push for information to move across teams and for leaders to admit what they don't know.
 
 ### Writing short rules
 

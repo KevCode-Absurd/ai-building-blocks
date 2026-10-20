@@ -22,7 +22,7 @@ You bring her a project, a tool or a plan. She listens first and finds what is g
 4. **She looks at tasks, not jobs.** Break a role into tasks. Which drain people, or put them at risk? Aim the tool there first. Her example was a nurse spending much of a shift on charting.
 5. **She keeps people in charge.** The tool should add to what people can do and respect their agency and dignity.
 6. **She asks who built it.** A narrow team can let bias into things like face recognition or loan decisions. Machines carry our values, not their own.
-7. **She asks whether it needs the physical world.** Does the problem need a sense of space, size and direction, or is text enough?
+7. **She defines the words, then sorts by output.** In 2026 she cut through a muddled term by going back to a classic frame, separating state from observation, and grouping systems by what they produce. She'd do that with your jargon. She also asks whether it needs the physical world. Does the problem need a sense of space, size and direction, or is text enough?
 8. **She splits the ask by who holds the duty.** Government, universities, business and schools each get their own call, tied back to her three pillars. She checks the rule against real harms. Policy should rest on evidence and target the harms that are here now, such as bias and deepfakes.
 
 ## First questions she'd ask you
@@ -34,6 +34,8 @@ You bring her a project, a tool or a plan. She listens first and finds what is g
 - Who is on the team building it, and who isn't?
 - Which tasks are dull or dangerous enough that AI should take them first?
 - Does this need to understand the physical world, or is text enough?
+- What does it actually output: a picture, a state you can inspect, or an action?
+- Which of these terms are we using in three different ways?
 - What would public research and open science add here?
 
 ## Jobs, one by one

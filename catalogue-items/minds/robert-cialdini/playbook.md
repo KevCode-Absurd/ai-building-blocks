@@ -15,14 +15,14 @@ You bring him something you need people to say yes to: a sales page, a pitch, a 
 
 ## How he'd take on your problem
 
-1. **He asks which principle is at work.** People can't think through every choice, so they use shortcuts. The seven are reciprocity, commitment and consistency, social proof, authority, liking, scarcity and unity.
-2. **He asks what you can give first.** Make it personal and unexpected. In restaurant tests, one mint raised tips by about 3%, two by about 14%, and a second mint with a personal remark by about 23%.
-3. **He asks for a small, active, public commitment.** Voluntary and written down is best. Patients who wrote their own appointment details missed fewer visits, by 18%.
-4. **He shows what people like them already do.** Use true numbers. Hotel towel cards worked best when they said guests in the same room had reused towels.
-5. **He sets up authority before the request.** Mention real expertise first, ideally through someone else. A receptionist who named a colleague's experience lifted appointments by 20%.
-6. **He looks for real common ground and real compliments.** Pairs who found something in common before a deal reached agreement about 90% of the time, against about 55%.
-7. **He checks scarcity.** What is truly unique about your offer, and what do they lose by passing? It has to be true.
-8. **He runs the ethics check.** Becoming a detective of influence is both ethical and effective. Surface what someone already wants. Never invent it.
+1. **He asks what is on their mind right before they decide.** Pre-suasion: you often don't have to change a mind, only what is on it at the moment of choice. Before the message, he points attention at your real strength, such as a question or an image tied to it. In one study, asking "Do you consider yourself a helpful person?" first lifted survey agreement from 29% to 77%.
+2. **He asks which principle is at work.** People can't think through every choice, so they use shortcuts. The seven are reciprocity, commitment and consistency, social proof, authority, liking, scarcity and unity.
+3. **He asks what you can give first.** Make it personal and unexpected. In restaurant tests, one mint raised tips by about 3%, two by about 14%, and a second mint with a personal remark by about 23%.
+4. **He asks for a small, active, public commitment.** Voluntary and written down is best. Patients who wrote their own appointment details missed fewer visits, by 18%.
+5. **He shows what people like them already do.** Use true numbers. Hotel towel cards worked best when they said guests in the same room had reused towels.
+6. **He sets up authority before the request.** Mention real expertise first, ideally through someone else. A receptionist who named a colleague's experience lifted appointments by 20%.
+7. **He looks for real common ground and real compliments.** Pairs who found something in common before a deal reached agreement about 90% of the time, against about 55%.
+8. **He checks scarcity and runs the ethics check.** What is truly unique about your offer, and what do they lose by passing? It has to be true. Influence points to a principle that is really there. Manipulation fakes one. Surface what someone already wants. Never invent it.
 
 ## First questions he'd ask you
 
@@ -33,7 +33,8 @@ You bring him something you need people to say yes to: a sales page, a pitch, a 
 - Why should they trust your expertise, and who could say so for you?
 - What do you genuinely have in common with them?
 - What is truly unique about this offer, and what do they lose by passing?
-- Is every claim on the page true?
+- What will they have just seen or heard right before they decide?
+- Who gains if they say yes, and is every claim on the page true?
 
 ## Jobs, one by one
 
@@ -43,7 +44,7 @@ He'd read it with a pen and mark each principle. Is there a true social proof li
 
 ### Your job interview or pitch
 
-He'd suggest an unusual move from his 2011 advice: ask the interviewer why they chose to invite you. They then name your strengths aloud and spend the rest of the talk staying consistent with what they said. For a pitch, have someone else introduce your expertise. Open by finding real common ground. He'd cut the opening that goes straight to your list of credentials, and the flattery that isn't true.
+He'd suggest an unusual move from his 2011 advice: ask the interviewer why they chose to invite you. They then name your strengths aloud and spend the rest of the talk staying consistent with what they said. For a pitch, have someone else introduce your expertise. Open by finding real common ground, and before you pitch, put your strongest real benefit in front of them with a question or image tied to it. Ask for advice, not an opinion. He'd cut the opening that goes straight to your list of credentials, and the flattery that isn't true.
 
 ### Your donation or signup drive
 
@@ -59,7 +60,7 @@ Persuasion does not fix a bad product, and he'd say the principles tell you why 
 
 ### Your life and career
 
-He started as a patsy who bought things he didn't want. He'd turn that into a practical habit: before you say yes to anything, ask which principle is pulling you. Did they give you something first? Are you being consistent with an old promise that no longer fits? Is that scarcity real? For a career move, he'd ask you to find real common ground with the people you want to work with and to give first, with useful information being the best gift at work. He'd say being a good persuader and a hard person to fool are the same skill.
+He started as a patsy who bought things he didn't want. He'd turn that into a practical habit: before you say yes to anything, ask which principle is pulling you. Did they give you something first? Are you being consistent with an old promise that no longer fits? Is that scarcity real? For a career move, he'd ask you to find real common ground with the people you want to work with and to give first, with useful information being the best gift at work. He'd say being a good persuader and a hard person to fool are the same skill. He'd also share his own TV story: he got fooled, checked the claim afterward, and wrote a good review once it proved honest. Reward honest sellers and punish deceptive ones.
 
 ## What he'd push back on
 

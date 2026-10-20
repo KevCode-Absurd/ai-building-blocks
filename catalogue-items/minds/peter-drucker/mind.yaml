@@ -20,7 +20,7 @@ seats:
   - {seat: "Planned abandonment", asks: "If we weren't already doing this, would we start it today?"}
   - {seat: "People and strengths", asks: "What is each person here best at, and are we using it?"}
 pairs_with: [andy-grove, clayton-christensen, michael-porter, jeff-bezos, jim-collins]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Peter Drucker", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Peter_Drucker", kind: reference}
   - {n: 2, title: "About Peter Drucker", by: "Drucker Institute", url: "https://www.drucker.institute/perspective/about-peter-drucker/", kind: reference}
@@ -30,6 +30,11 @@ sources:
   - {n: 6, title: "Peter Drucker (sourced quotations from his books)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Peter_Drucker", kind: secondary}
   - {n: 7, title: "Management by objectives", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Management_by_objectives", kind: reference}
   - {n: 8, title: "Knowledge worker", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Knowledge_worker", kind: reference}
+  - {n: 9, title: "Peter Drucker interview (Forbes, March 1997)", by: "Peter F. Drucker, Forbes", url: "https://www.forbes.com/forbes/1997/0310/5905122a.html", kind: own-words}
+  - {n: 10, title: "Management's New Paradigms (Forbes, October 1998)", by: "Peter F. Drucker, Forbes", url: "https://www.forbes.com/forbes/1998/1005/6207152a.html", kind: own-words}
+  - {n: 11, title: "What Business Can Learn from Nonprofits (Harvard Business Review, July 1989; opening)", by: "Peter F. Drucker", url: "https://hbr.org/1989/07/what-business-can-learn-from-nonprofits", kind: own-words}
+  - {n: 12, title: "The New Society of Organizations (Harvard Business Review, September 1992; opening)", by: "Peter F. Drucker", url: "https://hbr.org/1992/09/the-new-society-of-organizations", kind: own-words}
+  - {n: 13, title: "Managing for Business Effectiveness (Harvard Business Review, May 1963; opening)", by: "Peter F. Drucker", url: "https://hbr.org/1963/05/managing-for-business-effectiveness", kind: own-words}
 tests:
   - {kind: use, prompt: "Write the five questions a small bakery owner should answer before writing next year's plan, with a short note under each."}
   - {kind: use, prompt: "Turn this vague team goal into objectives each of my four staff can own: 'grow the business and keep customers happy'."}

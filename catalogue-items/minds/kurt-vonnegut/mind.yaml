@@ -20,7 +20,7 @@ seats:
   - {seat: "The kind satirist", asks: "What would this look like if it went exactly as planned, and who would it hurt?"}
   - {seat: "Reader's friend", asks: "Have we pitied the reader, or made them work too hard?"}
 pairs_with: [mark-twain, george-orwell, william-zinsser, joseph-campbell, ursula-k-le-guin]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Kurt Vonnegut", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kurt_Vonnegut", kind: reference}
   - {n: 2, title: "Slaughterhouse-Five", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Slaughterhouse-Five", kind: reference}
@@ -29,6 +29,10 @@ sources:
   - {n: 5, title: "The Big Trip Up Yonder (Project Gutenberg eBook #30240; Galaxy, 1954)", by: "Kurt Vonnegut", url: "https://www.gutenberg.org/cache/epub/30240/pg30240.txt", kind: own-words}
   - {n: 6, title: "Kurt Vonnegut graphed the world's most popular stories", by: "Patrick Pittman, The Story", url: "https://thestory.au/articles/kurt-vonnegut-story-shapes/", kind: secondary}
   - {n: 7, title: "Kurt Vonnegut on the Shapes of Stories (his lecture, with transcript notes)", by: "Maria Popova, The Marginalian (2012)", url: "https://www.themarginalian.org/2012/11/26/kurt-vonnegut-on-the-shapes-of-stories/", kind: own-words}
+  - {n: 8, title: "Letter to his family from a repatriation camp, 29 May 1945", by: "Kurt Vonnegut, via Letters of Note", url: "https://news.lettersofnote.com/p/ive-been-a-prisoner-of-war-since", kind: own-words}
+  - {n: 9, title: "Letter to Charles McCarthy, chairman of the Drake, North Dakota, school board (1973)", by: "Kurt Vonnegut, via Farnam Street", url: "https://fs.blog/kurt-vonneguts-letter-book-burning/", kind: own-words}
+  - {n: 10, title: "Kurt Vonnegut writes home from World War II", by: "Open Culture", url: "https://www.openculture.com/2012/07/kurt_vonnegut_writes_home_from_world_war_ii.html", kind: secondary}
+  - {n: 11, title: "A commencement address by Kurt Vonnegut (Syracuse, 8 May 1994; page gives background only)", by: "3 Quarks Daily", url: "https://3quarksdaily.com/?p=198819", kind: reference}
 tests:
   - {kind: use, prompt: "Draw the shape of Cinderella as a simple text graph from good fortune to ill fortune, then do the same for my product launch story."}
   - {kind: use, prompt: "Write a 300-word satirical story about a company that invents a meeting so good nobody is allowed to leave."}

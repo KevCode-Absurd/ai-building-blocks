@@ -20,7 +20,7 @@ seats:
   - {seat: "Decision process", asks: "Are we stuck on whether or not? What are two other options we haven't put on the table?"}
   - {seat: "Moments and experience", asks: "Where is the peak in this experience, and where are we just sanding off the rough edges?"}
 pairs_with: [jonah-berger, robert-cialdini, daniel-kahneman, seth-godin, malcolm-gladwell]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Chip Heath", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Chip_Heath", kind: reference}
   - {n: 2, title: "Chip Heath, faculty profile", by: "Stanford Graduate School of Business", url: "https://www.gsb.stanford.edu/faculty-research/faculty/chip-heath", kind: reference}
@@ -34,6 +34,12 @@ sources:
   - {n: 10, title: "Make numbers count: how to translate data for your audience (Think Fast, Talk Smart podcast)", by: "Stanford GSB (2022)", url: "https://www.gsb.stanford.edu/insights/make-numbers-count-how-translate-data-your-audience", kind: own-words}
   - {n: 11, title: "Discredited 'Mozart effect' remains music to American ears", by: "Marina Krakovsky, Stanford GSB (2005)", url: "https://www.gsb.stanford.edu/insights/discredited-mozart-effect-remains-music-american-ears", kind: secondary}
   - {n: 12, title: "Dan Heath", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dan_Heath", kind: reference}
+  - {n: 13, title: "The Power of a Free Popsicle (Heath's spoken remarks on moments, 19 February 2018)", by: "Theodore Kinni, Stanford GSB Insights", url: "https://www.gsb.stanford.edu/insights/power-free-popsicle", kind: secondary}
+  - {n: 14, title: "Why Seeking Common Ground Can Backfire (study by Fast, Heath and Wu, 1 June 2009)", by: "Alice LaPlante, Stanford GSB Insights", url: "https://www.gsb.stanford.edu/insights/why-seeking-common-ground-can-backfire", kind: secondary}
+  - {n: 15, title: "Chip Heath (faculty page: publication list, books and media)", by: "Stanford Graduate School of Business", url: "https://www.gsb.stanford.edu/faculty-research/faculty/chip-heath", kind: reference}
+  - {n: 16, title: "Episode 113: Chip Heath, The Power of Moments (podcast with transcript)", by: "Bregman Partners", url: "https://bregmanpartners.com/podcast/chip-heath-the-power-of-moments/", kind: own-words}
+  - {n: 17, title: "How To Make Numbers Sticky: Chip Heath on Making Data Count (podcast with transcript)", by: "Throughline Group", url: "https://www.throughlinegroup.com/podcast/how-to-make-numbers-sticky-chip-heath-on-making-data-count/", kind: own-words}
+  - {n: 18, title: "Made to Stick (Harvard Business IdeaCast 33, March 2007, with transcript)", by: "Harvard Business Review", url: "https://hbr.org/podcast/2007/03/harvard-business-ideacast-33-m", kind: own-words}
 tests:
   - {kind: use, prompt: "Our company values are 'Excellence, Integrity, Innovation'. Rewrite them so a new hire would remember them and know what to do differently on Monday."}
   - {kind: use, prompt: "Turn this fact into something a room of non-experts will remember: our app now loads in 0.8 seconds instead of 3.2 seconds."}

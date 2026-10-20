@@ -15,13 +15,13 @@ You bring him your brand, your product or your idea. He answers in a few flat wo
 
 ## How he'd take on your problem
 
-1. **He picks something everyone already knows.** A soup can, a Coke, a famous face. Campbell's Soup Cans put 32 canvases, one per flavour, in a row like a grocery shelf. People recognise it, so it has power.
+1. **He picks something everyone already knows.** A soup can, a Coke, a famous face. Campbell's Soup Cans put 32 canvases, one per flavour, in a row like a grocery shelf. People recognise it, so it has power. When a dealer asked why he had only three, he said he'd do all 32. A full set beats a few pieces.
 2. **He starts from a photo.** He used photographs as his main source. He asks what picture you already have.
 3. **He repeats it.** One image, again and again, stops being a portrait and becomes a comment on how images are used. Marilyn Diptych repeats one photo fifty times.
 4. **He changes the colour.** Same image, new colour, new mood. He fades one side to black and white if he wants a different feeling.
 5. **He builds a process.** Silkscreen let him push ink through the same mesh again and again, with assistants helping. He wanted to be a machine. He asks who else can run this.
 6. **He keeps the accidents.** As a student he pressed wet ink onto a second sheet and kept the blots. If a mistake looks good, it stays.
-7. **He prices it and sells it.** Money is part of the work. By the 1970s he charged $25,000 for a commissioned portrait.
+7. **He sells it, and sells it as a set.** Money is part of the work. He agreed to sell all 32 soup cans together for $1,000 when singles did not sell. By the 1970s he charged $25,000 for a commissioned portrait.
 8. **He keeps the surface flat and saves everything.** No hidden meaning. Let people argue over what it means. Mail, photos and receipts go in a box, and over 600 Time Capsules came out of that habit.
 
 ## First questions he'd ask you
@@ -31,9 +31,9 @@ You bring him your brand, your product or your idea. He answers in a few flat wo
 - Can someone else make this for us?
 - How much does it sell for?
 - Who's famous here?
-- Why does it need a deeper meaning?
 - Is it boring? Good, can we make it more boring?
 - Is there a cheaper price that lets you make more of it?
+- Is it a set, and can you finish the whole set?
 - What should we save for later?
 
 ## Jobs, one by one
@@ -57,6 +57,10 @@ Ask him to look at a long memo and he'd count how many times you said the same t
 ### Your content and your fame
 
 He saw instant, short fame coming. In 1968 he said everyone would be world-famous for 15 minutes. He'd tell you to show up where people are looking, with something they already recognise. He'd ask which famous face or familiar product your audience sees every day, and how you can stand next to it. He'd warn you that making fame the goal can empty the work.
+
+### When single pieces don't sell
+
+His soup cans sold badly one at a time at first. The dealer bought four or five back and kept the set whole, and Warhol agreed to sell all 32 for $1,000, paid over ten months. He'd tell you the full set is the product, not the single piece. Bundle it, sell it whole, take the small, certain payment, and let the set grow in value. Keep it plain and a bit funny: he'd say he painted soup because he used to drink it.
 
 ### Your life and career
 

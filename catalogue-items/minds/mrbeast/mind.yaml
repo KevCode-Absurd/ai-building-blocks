@@ -20,7 +20,7 @@ seats:
   - {seat: "Packaging and the click", asks: "What's the title and thumbnail? If we can't picture them, is the idea ready?"}
   - {seat: "Building a creative team", asks: "Who on the team is obsessed with this, and what will they learn from the last one?"}
 pairs_with: [seth-godin, david-ogilvy, alex-hormozi, walt-disney, rory-sutherland]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Lex Fridman Podcast #351: MrBeast, Future of YouTube, Twitter, TikTok, and Instagram (transcript, 11 January 2023)", by: "MrBeast with Lex Fridman, transcript on Podscripts", url: "https://podscripts.co/podcasts/lex-fridman-podcast/351-mrbeast-future-of-youtube-twitter-tiktok-and-instagram", kind: own-words}
   - {n: 2, title: "MrBeast on His Swift Rise on YouTube and Beyond (TIME100 Leadership interview, 15 February 2024)", by: "Belinda Luscombe, TIME", url: "https://time.com/collections/time100-leadership-series/6693255/mrbeast-interview/", kind: own-words}
@@ -31,6 +31,8 @@ sources:
   - {n: 7, title: "Lunchly", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lunchly", kind: reference}
   - {n: 8, title: "Despite his $2.6 billion net worth, MrBeast says he's having to borrow cash (13 January 2026)", by: "Emma Burleigh, Fortune", url: "https://fortune.com/2026/01/13/mrbeast-jimmy-donaldson-billionaire-net-worth-in-the-red-has-to-borrow-cash-money/", kind: secondary}
   - {n: 9, title: "Who we are", by: "Beast Philanthropy", url: "https://www.beastphilanthropy.org/who-we-are", kind: reference}
+  - {n: 10, title: "MrBeast opens up about his YouTube success story on Joe Rogan's podcast (report with his quotes, 9 March 2022)", by: "Sportskeeda", url: "https://www.sportskeeda.com/pop-culture/i-used-make-dollar-day-mrbeast-opens-incredible-youtube-success-story-joe-rogan-s-podcast", kind: secondary}
+  - {n: 11, title: "MrBeast (collection of sourced quotes, including Rolling Stone 2022)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/MrBeast", kind: reference}
 tests:
   - {kind: use, prompt: "Give me ten title and thumbnail ideas for a video where a small bakery tries to bake 1,000 loaves in one day."}
   - {kind: use, prompt: "Here is the outline of my 8-minute video about fixing up an old bike. Rewrite the first 60 seconds so people don't leave."}

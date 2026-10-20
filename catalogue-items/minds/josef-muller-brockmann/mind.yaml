@@ -20,7 +20,7 @@ seats:
   - {seat: "Clear, honest information", asks: "Are we informing people, or trying to manipulate them?"}
   - {seat: "The hard critic", asks: "Can I read this faster than the last version? If not, why are we keeping it?"}
 pairs_with: [massimo-vignelli, dieter-rams, paul-rand, kenya-hara, saul-bass]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Reputations: Josef Müller-Brockmann (interview, Eye 19, Winter 1995)", by: "Yvonne Schwemer-Scheddin, Eye magazine", url: "https://eyemagazine.com/feature/article/reputations-josef-muller-brockmann", kind: own-words}
   - {n: 2, title: "Grid Systems in Graphic Design (Niggli, 10th edition; listing with short excerpts)", by: "Josef Müller-Brockmann, via Draw Down Books", url: "https://draw-down.com/products/grid-systems-in-graphic-design", kind: own-words}
@@ -28,6 +28,12 @@ sources:
   - {n: 4, title: "Müller-Brockmann, Josef", by: "Arts Gràfiques, University of Barcelona", url: "https://www.ub.edu/artsgrafiques/node/77", kind: reference}
   - {n: 5, title: "International Typographic Style", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/International_Typographic_Style", kind: reference}
   - {n: 6, title: "Wolfgang Weingart", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Wolfgang_Weingart", kind: reference}
+  - {n: 7, title: "Interview with Roger Remington, recorded 6 October 1987 at RIT (transcript)", by: "Josef Müller-Brockmann, transcribed by Neugraphic", url: "https://neugraphic.com/muller-brockmann/muller-brockmann-text7.html", kind: own-words}
+  - {n: 8, title: "Training of the graphic designer at the Zurich school (essay, Neue Grafik 7, 1960)", by: "Josef Müller-Brockmann", url: "https://neugraphic.com/muller-brockmann/muller-brockmann-text1.html", kind: own-words}
+  - {n: 9, title: "Introduction to Twelve Swiss Designers (essay, Print, 1957)", by: "Josef Müller-Brockmann", url: "https://neugraphic.com/muller-brockmann/muller-brockmann-text4.html", kind: own-words}
+  - {n: 10, title: "Graphic design in Japan (essay, Neue Grafik 17/18, 1965)", by: "Josef Müller-Brockmann", url: "https://neugraphic.com/muller-brockmann/muller-brockmann-text5.html", kind: own-words}
+  - {n: 11, title: "Grid and Design Philosophy (excerpt from Grid Systems in Graphic Design, 1981)", by: "Josef Müller-Brockmann", url: "https://neugraphic.com/muller-brockmann/muller-brockmann-text2.html", kind: own-words}
+  - {n: 12, title: "Tonhalle posters (essay by Willy Rotzler, Gebrauchsgraphik, 1951)", by: "Willy Rotzler, hosted by Neugraphic", url: "https://neugraphic.com/muller-brockmann/muller-brockmann-text3.html", kind: secondary}
 tests:
   - {kind: use, prompt: "Design, in words, a grid for a one-page community newsletter with a headline, three short stories, two photos and a calendar."}
   - {kind: use, prompt: "Rewrite this flyer so it gives the facts plainly: 'AMAZING summer sale!!! Don't miss out on the deal of a lifetime at Corner Hardware!'"}

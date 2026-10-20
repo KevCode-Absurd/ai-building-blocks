@@ -20,7 +20,7 @@ seats:
   - {seat: "Check your ego", asks: "Who needs to set their ego aside so the work can win?"}
   - {seat: "Cut to the best", asks: "If we started with ten times more ideas, would these still make the final cut?"}
 pairs_with: [rick-rubin, wolfgang-amadeus-mozart, ar-rahman, david-bowie, oprah-winfrey]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Quincy Jones", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Quincy_Jones", kind: reference}
   - {n: 2, title: "Quincy Jones interview (London, 28 October 2000)", by: "Quincy Jones, Academy of Achievement", url: "https://www.achievement.org/achiever/quincy-jones/", kind: own-words}
@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "We Are the World", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/We_Are_the_World", kind: reference}
   - {n: 5, title: "Thriller (album)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Thriller_(album)", kind: reference}
   - {n: 6, title: "Quincy Jones interview", by: "Quincy Jones, AARP The Magazine (January 2011)", url: "https://www.aarp.org/entertainment/music/info-01-2011/interview-quincy-jones.html", kind: own-words}
+  - {n: 7, title: "Quincy Jones (interview catalogue summary, Archive of American Television)", by: "Television Academy Foundation", url: "https://interviews.televisionacademy.com/interviews/quincy-jones", kind: secondary}
 tests:
   - {kind: use, prompt: "I have 40 song ideas for my band's first album. Give me a process to get down to 10 and put them in the right order."}
   - {kind: use, prompt: "Write the one-page brief and house rules for a one-day charity recording session with 20 well-known local musicians."}

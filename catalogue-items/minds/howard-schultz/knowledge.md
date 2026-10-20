@@ -1,8 +1,8 @@
 # Howard Schultz: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Howard Schultz is alive, and views can change. Everything below comes from his own words in a 2007 memo to Starbucks leaders, his statements when he returned as CEO in 2008, his 2018 farewell letter to staff as quoted by Starbucks, and from public reference pages. He last stepped down from running Starbucks in March 2023, when his time as interim CEO ended [S1]. On disk we hold the full 2018 farewell news release with his letter to partners [S5], the full Wikipedia pages [S1], and only short excerpt records of the 2007 memo and the 2008 results statement, so the memo and 2008 points rest on earlier reading of those pages [S3][S4]. We found no interview in his own voice. Treat each view as "as of" the document it comes from. Nothing here tells you what he thinks about events after 2023.
+Howard Schultz is alive, and views can change. Everything below comes from his own words in a 2007 memo to Starbucks leaders, his statements when he returned as CEO in 2008, a November 2008 Fortune interview, his 2017 Arizona State University commencement speech, his 2018 farewell letter to staff as quoted by Starbucks, and public reference pages. He last stepped down from running Starbucks in March 2023, when his time as interim CEO ended [S1]. The 2007 memo and 2008 results statement rest on earlier reading of those pages [S3][S4]. The speech and interview were opened in full this time [S6][S7]. We found no long oral history in his own voice. Treat each view as "as of" the document it comes from. Nothing here tells you what he thinks about events after 2023.
 
 ## In one paragraph
 
@@ -81,16 +81,16 @@ To start his own café he needed $400,000. He visited over 500 espresso bars in 
 Schultz did not believe in franchising and made Starbucks keep ownership of every domestic outlet [S1]. The record we hold gives no reason in his words. It fits his stress on control of the experience [S3]. Starbucks listed in June 1992, and the IPO raised $271 million, which financed doubling the store count [S1].
 
 ### Paying for benefits others skipped
-Starbucks, under his leadership, offered healthcare, stock ownership and free college tuition even to part-timers, and became the first US company to offer part-time workers healthcare [S1][S5]. His stated reason, in his 2018 letter, was to build a company his father, a blue-collar worker, never had a chance to work for [S5].
+Starbucks offered healthcare, stock ownership and free college tuition even to part-timers, and became the first US company to offer part-time workers healthcare [S1][S5]. In 2017 he said, by his own account, that it gave comprehensive health insurance about 30 years before the Affordable Care Act and stock options to all staff including part-timers [S6]. His reason: his father, a delivery driver, fell on ice in 1960 and was left with no workers' compensation, severance or health cover, and he wanted to build the company his father never had [S5][S6]. His rule was that success is best when shared [S6].
 
 ### Writing the 2007 memo
 In February 2007 he wrote to Starbucks leaders that a string of reasonable decisions had watered down the experience, calling the damage self induced and asking leaders to get back to the core [S3]. He named specific changes, such as the tall automatic machines that blocked the customer's view of the drink [S3].
 
 ### Coming back as CEO in 2008
-On January 7, 2008, during the financial crisis, he returned as CEO after eight years [S1]. He led a mass firing of executives and employees, closed hundreds of stores and temporarily closed all US locations to retrain staff in making espresso [S1]. He framed 2008 as a year of refocus and renewal [S4]. In March 2009 he and the board approved a $100 million settlement of a barista-led suit over tips [S1].
+In January 2008 he fired his predecessor and returned as CEO [S7]. On January 7, 2008, during the financial crisis, he returned as CEO after eight years [S1]. He led a mass firing of executives and employees, closed hundreds of stores and temporarily closed all US locations to retrain staff in making espresso [S1]. He framed 2008 as a year of refocus and renewal [S4]. By November 2008 about 600 US stores were being closed, with a focus on urban sites, and he ruled out price cuts because they would harm the premium brand [S7]. He refused the word turnaround and called it a "transformational agenda" built on "our core value, humanity" [S7]. Later he named the cause as hubris: growth had covered up mistakes until 2007, and the company lost sight of its purpose [S6]. In March 2009 he and the board approved a $100 million settlement of a barista-led suit over tips [S1].
 
-### Selling the SuperSonics
-In 2001 he led ten investors who bought the Seattle SuperSonics and Storm for $200 million. He was criticised for running the team as a business and for a feud with a star player [S1]. He sold them in 2006 for $350 million after failing to win public funding for a new arena, and later sued to undo the sale and dropped the suit [S1]. It is a case outside coffee, where his instinct for community did not carry over.
+### Sitting down with 50 new hires in Johannesburg
+Before Starbucks opened its first South African store, Schultz met the 50 young people hired to staff it, none of whom had held a job, and spent hours hearing each person's story [S6]. He asked them what ubuntu meant and was told it means "I am because of you" [S6]. He used the story in 2017 to say that leaders should listen first and that not every business decision is an economic one [S6]. It shows his habit of learning a business through its people, not its numbers.
 
 ## Where he stood
 
@@ -143,5 +143,5 @@ In 2001 he led ten investors who bought the Seattle SuperSonics and Storm for $2
 - "Let's get back to the core." (2007 memo) [S3]
 - "we desperately need to look into the mirror" (2007 memo) [S3]
 - "a year of refocus and renewal for Starbucks" (January 2008) [S4]
-- "laser focused on delivering what our customers want and expect" (January 2008) [S4]
 - "We did it together, by balancing profitability and social conscience" (2018 farewell letter) [S5]
+- "success in business and in life is best when it's shared" (2017 speech) [S6]

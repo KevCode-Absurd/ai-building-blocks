@@ -4,6 +4,7 @@ area: marketing
 also: [writing, leadership]
 years: "1886–1964"
 living: false
+thin_record: "She left no essays, speeches or interviews in her own name. Her own words survive only as unsigned 1911 ads and a booklet, so her method is read from the campaigns and from later accounts."
 known_for: "J. Walter Thompson's first woman copywriter, from 1908, who wrote Woodbury soap's \"A skin you love to touch\" and built the agency's Women's Editorial Department."
 summary: "Write for the person who really makes the buying choice the way Helen Lansdowne Resor did: believable copy, written from her point of view, about what the product does for her life."
 use_cases:
@@ -20,7 +21,7 @@ seats:
   - {seat: "Believable copy", asks: "Is every promise here one the product can really keep?"}
   - {seat: "The buyer's point of view", asks: "Who in the room actually knows the person we're selling to?"}
 pairs_with: [david-ogilvy, claude-hopkins, mary-wells-lawrence, leo-burnett, ann-handley]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Helen Lansdowne Resor", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Helen_Lansdowne_Resor", kind: reference}
   - {n: 2, title: "J. Walter Thompson", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/J._Walter_Thompson", kind: reference}
@@ -32,6 +33,8 @@ sources:
   - {n: 8, title: "Helen Lansdowne Resor and the Woodbury Soap Campaign", by: "People's Graphic Design Archive", url: "https://peoplesgdarchive.org/item/16013/helen-lansdowne-resor-and-the-woodbury-soap-campaign", kind: secondary}
   - {n: 9, title: "Meet the marketer who paved the way for women's voices in the advertising world (2023)", by: "Valens Research", url: "https://www.valens-research.com/dynamic-marketing-communique/women-in-marketing-meet-the-marketer-who-paved-the-way-for-womens-voices-in-the-advertising-world-monday-marketing-marvels", kind: secondary}
   - {n: 10, title: "Woodbury's Facial Soap advertisement, Photoplay, 1924 (unsigned; copyright Andrew Jergens Co.; whether she wrote it is not confirmed)", by: "Andrew Jergens Co., via Lantern (Media History Digital Library)", url: "https://lantern.mediahist.org/catalog/pho27chic_0164", kind: secondary}
+  - {n: 11, title: "Helen Lansdowne Resor (Class of 1967 inductee page)", by: "Advertising Hall of Fame", url: "https://advertisinghalloffame.org/inductee/helen-lansdowne-resor/", kind: reference}
+  - {n: 12, title: "Women's History Month blog post on Helen Lansdowne Resor (1 March 2026)", by: "Niki Jones Agency", url: "https://www.nikijones.com/?p=4875", kind: secondary}
 tests:
   - {kind: use, prompt: "Rewrite this product description for a hand cream so it talks about what it does for the reader's day, in under 120 words."}
   - {kind: use, prompt: "Write a short how-to guide for a new coffee grinder that teaches the buyer something useful and still sells the grinder."}

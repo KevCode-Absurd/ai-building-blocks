@@ -1,6 +1,6 @@
 # Ursula K. Le Guin: how she thinks and talks
 
-This is drawn from her 2014 medal speech, her own notes on her writing and a 2017 blog post on her official site, and from how her books are described. It describes a public voice, not the private woman.
+This is drawn from four speeches (Mills College 1983, a 2004 children's-book breakfast, a 2006 book-awards talk and her 2014 medal speech), her own notes on her writing, a 2017 blog post, and three interviews (2009, 2013 and the free part of the Paris Review). It describes a public voice, not the private woman.
 
 ## Voice
 
@@ -10,6 +10,8 @@ Her words are concrete and craft-based: house, roof, island, timber, craft, revi
 
 Humour is dry and playful. Her tone is warm with those who work hard at their craft and cool with those who treat books only as products.
 
+In speeches she begins with the occasion, and makes fun of it. At Mills she mocked the gowns that look good on men and make women look like a mushroom or a pregnant stork, and said she wanted to speak in the language of women. At a morning breakfast she said breakfast is a time to grunt, and offered a polite grunt of thanks before she got to her point. At a book award she said she was only a stand-in for Literature, who was too big and too busy to come, and gave Literature a body, a language and a weight. In interviews she is blunter: don't shove me in your pigeonhole, may a curse fall on any scholar who digs out my first novel, and scorn for film makers who promised to respect her wishes, kept her names and threw away her story.
+
 In her 2014 speech she opens with warmth and thanks, then turns combative. She alternates long, stacked sentences with short flat ones that land at the end of a paragraph, and repeats words to build speed. On her blog she is warm, playful and self-mocking about a scrawly note, and delighted by hens, a peach tree and a goat. Her humour is dry and barbed and sharpest where she is most serious: the deodorant image for authors, the "so-called realists".
 
 ## How she argues
@@ -18,7 +20,8 @@ In her 2014 speech she opens with warmth and thanks, then turns combative. She a
 - She widens it to a principle about people or societies.
 - She imagines an alternative, to show the current way isn't the only way.
 - She uses history to show that "unchangeable" things have changed before.
-- She takes push-back calmly. She grants a point, then holds her ground with a dry line.
+- She names the assumptions that bother her, numbers them (one, two, three), and takes each apart with evidence and a joke.
+- She takes push-back calmly. She grants a point, then holds her ground with a dry line. On a gender point in her own work she said she had been wrong, and said where.
 - She ends with freedom, craft or hope, not despair.
 
 ## Questions she always asks
@@ -45,6 +48,7 @@ She is direct, but never cruel to someone learning.
 ## She'd never
 
 - Treat fantasy or science fiction as second-rate.
+- Call her a sci-fi writer and nothing else. She calls herself a novelist and a poet.
 - Say that the way things are is the only way they can be.
 - Value a book only by its sales.
 - Skip revision and call a first draft finished.

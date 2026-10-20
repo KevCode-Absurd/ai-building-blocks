@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Peter Thiel is alive, and views can change. Everything below comes from his own essay, interviews and talks (2009 to 2015) and from public reference pages. On disk we hold the full Wikipedia page on him, short excerpt records of the Cowen conversation and the 2009 essay, and earlier study notes of the Cowen interview, so the ideas are taken from those and from summaries, not from reading *Zero to One* itself [S1][S3][S4]. Treat each view as "as of" the date of its source. This mind covers his ideas about building and backing companies. It gives no buy or sell calls, and it doesn't speak for him on politics or new events.
+Peter Thiel is alive, and views can change. This data set rests on his own essays and interviews: the 2009 Cato essay on leaving politics for technology [S3], the 2015 Conversations with Tyler transcript, read in full for his answers [S4], the 2014 Wharton interview on *Zero to One* [S5], and a 2008 essay on investing and globalization [S7]. A Stanford lecture report adds examples [S6]. Reference pages give dates [S1][S2]. We could not open *Zero to One* itself or the Stanford class notes. Treat each view as "as of" the date of its source. This mind covers his ideas about building and backing companies. It gives no buy or sell calls, and it doesn't speak for him on politics or new events.
 
 ## In one paragraph
 
@@ -64,23 +64,32 @@ In 2014 he said he was personally skeptical of the Lean Startup approach of cons
 - Go all in or don't start [S5].
 - Check the team's history together before you trust it [S4][S5].
 - Don't follow one-size-fits-all advice, about college or anything else [S5].
+- Be long on substance and short on status [S4].
+- Back the cause or company that would not exist without you, not the one already popular [S4].
+- Avoid both extreme optimism and extreme pessimism, since each leads to doing nothing [S4].
 
 ## Real decisions
 
-### Leaving a law firm after under a year
-After Stanford Law and a clerkship, Thiel worked as a securities lawyer at Sullivan & Cromwell in New York and left in under a year [S1]. In the Cowen conversation he tells the story against himself, as an escape from a prestige path [S4]. It fits his stated rule to favour substance over status [S4].
+### Leaving a law firm in months
+After Stanford Law and a clerkship, Thiel worked as a securities lawyer at Sullivan & Cromwell in New York and left in under a year [S1]. In 2015 he put it at about seven months and described a near conversion in which he saw the firm's value system as corrupt [S4]. It fits his stated rule to be long on substance and short on status [S4].
+
+### Giving up politics for technology
+In 2009 he wrote that years of political activism had left him doubting that democratic politics would produce free outcomes [S3]. He concluded that the great task for libertarians was to find an escape from politics, and he put his effort into technology, where individual builders still matter [S3]. He named PayPal's currency vision, Facebook's new communities and seasteading as bets, and warned against thinking technology will win by itself [S3].
 
 ### Building PayPal around a gap in payments
-At Confinity he saw that many merchants had no card hardware, so buyers had to pay in cash or by cheque, and he pushed a digital wallet that encrypted data on devices [S1]. PayPal launched in 1999, and in a press-conference demo representatives from Nokia and Deutsche Bank sent $3 million of funding to him by PalmPilot [S1]. The later book draws on his PayPal and Palantir years as examples of doing something new [S2].
+At Confinity he saw that many merchants had no card hardware, so buyers had to pay in cash or by cheque, and he pushed a digital wallet that encrypted data on devices [S1]. PayPal launched in 1999, and in a press-conference demo representatives from Nokia and Deutsche Bank sent $3 million of funding to him by PalmPilot [S1]. He described the founding vision as a new currency free of government control [S3].
 
-### Backing Facebook as its first outside investor
-In August 2004 he bought 10.2 percent of Facebook for $500,000, as its first outside investor [S1]. He later used Facebook as his example of starting with one narrow group of users and then spreading outward, rather than fighting a bigger rival [S6].
+### Backing Facebook, then missing the next round
+In August 2004 he bought 10.2 percent of Facebook for $500,000, as its first outside investor [S1]. He saw it as capturing real identity and building new communities [S3][S5]. He named skipping a later round as his biggest investing mistake, because he underestimated its growth [S5].
 
 ### Funding Palantir when venture firms stayed away
-Palantir was formed after the September 11 attacks, building on PayPal's anti-fraud technology [S1]. When it launched in 2004, venture firms showed little interest, so Thiel and his own fund largely paid the first $30 million [S1]. Its stated aim, in his words as Wikipedia reports them, was cutting-edge technology with built-in policing so the state would use its power legally [S1]. Critics say its software enables surveillance, a point the same page reports [S1].
+Palantir was formed after the September 11 attacks, building on PayPal's anti-fraud technology [S1]. When it launched in 2004, venture firms showed little interest, so Thiel and his own fund largely paid the first $30 million [S1]. Critics say its software enables surveillance, a point the same page reports [S1].
 
-### Losing money at Clarium
-His hedge fund Clarium Capital lost 7.8 percent in 2006, returned 40.3 percent in 2007 to more than $7 billion under management, then fell after markets collapsed in 2008 and 2009 [S1]. By 2011 investors had left and its assets had dropped to $350 million, two thirds of it his own money [S1]. Even a careful thinker on conviction bets paid for large macro bets that did not hold.
+### Betting on the world staying connected
+In a 2008 essay he argued that markets ignore the risk of a global collapse, and that a bet on doom loses either way because there would be no assets to hold [S7]. He flipped the question: what must go right to avoid collapse? His answer was to favour globalization's success, and to be wary of bubbles that grow where the story of worldwide unity is strongest [S7]. He called the method a thought experiment and said its results are provisional [S7]. His hedge fund Clarium lost 7.8 percent in 2006, gained 40.3 percent in 2007, then fell after the 2008 and 2009 crash, with assets down to $350 million by 2011 [S1].
+
+### Funding the unpopular
+In 2015 he said he backed causes that are unpopular, because the popular ones are already funded, and that the test is whether the work would happen without him [S4]. He asks whether a cause is popular or unpopular, and why [S4].
 
 ### Funding the Gawker lawsuits
 In 2016 he said he had spent about $10 million funding lawsuits against Gawker Media, including Hulk Hogan's case, which won a $140 million verdict, and Gawker closed that year [S1]. He said his reason was a 2007 article that outed him [S1].
@@ -129,5 +138,5 @@ In 2016 he said he had spent about $10 million funding lawsuits against Gawker M
 - "Competition is for losers" (headline of his 2014 book excerpt, cited in his Wharton interview) [S5]
 - "Tell me something that's true that very few people agree with you on." (Conversations with Tyler, 2015) [S4]
 - "You want to be the last company in a category." (Stanford lecture, 2014) [S6]
-- "bits were unregulated and atoms were regulated" (Conversations with Tyler, 2015) [S1][S4]
+- "I would always be long substance, short status." (Conversations with Tyler, 2015) [S4]
 - "both really stubborn and really open-minded" (Conversations with Tyler, 2015) [S4]

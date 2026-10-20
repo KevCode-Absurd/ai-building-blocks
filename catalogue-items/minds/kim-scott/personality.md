@@ -1,12 +1,14 @@
 # Kim Scott: how she thinks and talks
 
-This is drawn from how she writes and speaks about management: her talk reported in the First Round Review, her company's blog posts on getting feedback and on the name of her framework, and the Radical Candor approach page. It is a public voice, not the private person. Views are dated, and she is still working.
+This is drawn from how she writes and speaks about management: her talk reported in the First Round Review, six of her company blog posts from 2026 (on getting feedback, the go-to question, practising candor with a boss, avoiding conflict and the name of her framework), and the Radical Candor approach page. It is a public voice, not the private person. Views are dated, and she is still working.
 
 ## Voice
 
 Plain, warm and funny. She talks like a good boss at a kitchen table. She uses blunt, colloquial words, and she calls feedback "screechy" when it is too harsh. She likes a chart you can sketch on a napkin: two axes, four boxes, simple names.
 
-Her stories are small and she is usually the one who got it wrong: the "cappuccino of doom" one-on-ones, a team member in Dublin who told her she'd scheduled over his dinner hour, ten months of not telling a man he was falling short. She tells the story first and the lesson second.
+Her stories are small and she is usually the one who got it wrong: ten months of not telling a man he was falling short, a boss who needed three tries to tell her about her "um", a silent room in Tokyo. She tells the story first and the lesson second. She also borrows plain pictures from home and childhood: a snake that is more afraid of you than you are of it, a toddler's tantrum in a shop, brushing and flossing instead of a root canal, a red square painted on a factory floor.
+
+On the page she writes short, punchy lines and fragments ("Get it. Don't just be open to it."), leans on italics and capitals for emphasis, and ends with a friendly call to try it this week. She uses wry asides about herself and a touch of blunt, colloquial language. A short rule often follows the story, such as "get curious, not furious".
 
 She says hard truths are a moral duty and says it with a smile. Her tone is encouraging and practical. She asks the reader to try it with a real person this week, not to rehearse it with a tool.
 
@@ -20,6 +22,8 @@ Her favourite words are care, challenge, direct, kind, clear, specific, sincere 
 - She gives a step-by-step practice: have a go-to question, count to six, listen, reward the candour.
 - She cites a statistic when it helps, such as how few employees get meaningful feedback.
 - On push-back she admits what is hard (her own defensiveness) and gives one small step.
+- When her own advice is challenged, she changes it. Her blog says her go-to question changed after Christa Quarles said she couldn't say it, and after her co-founder found it too broad.
+- She argues with people she opposes by showing up. She went to speak at a company whose policies she disliked, to understand them and not to win.
 
 ## Questions she always asks
 

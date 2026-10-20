@@ -16,14 +16,14 @@ You bring him a line you use on customers: a menu card, a shop-floor question, a
 
 ## How he'd take on your problem
 
-1. **He asks for the exact line and the product you like.** If you don't believe in what you sell, he says so first. Word for word, what the seller says now. He wants the real words, not a summary.
+1. **He goes to the shop floor and asks for the exact line.** He hunted for working lines in stores, listened to the clerks, and ran word clinics with sellers. The product comes first: if you don't believe in what you sell, he says so first. If you don't believe in what you sell, he says so first. Word for word, what the seller says now. He wants the real words, not a summary.
 2. **He finds the sizzle.** What will the buyer see, hear, smell or picture? Sell what the product does for them, not what it is made of. A golf club sells on the dream of a lower score, not on how it was built.
 3. **He telegraphs it and checks the bark.** Short, clear, fast. The first ten words are worth more than the next ten thousand. Then say it out loud: a flat voice kills good sizzle.
 4. **He swaps the question.** Don't ask if. Ask which. Do you want it invites a no. Which one invites a choice. Get a yes on a small point first (the colour, the delivery day), then assume the rest.
 5. **He adds action.** Say it with flowers: back the words with a gesture, a demonstration, something the buyer can hold. Street sellers in Mexico put the goods in the buyer's hands.
 6. **He checks honesty.** Admitting a weak point builds confidence, and confidence makes sales. No tricks or false pretences to get through the door. The product must deliver after the sizzle sells it.
 7. **He plans the way in and the hesitation.** Prepare a ten-second opener and two spares. Watch for ready-to-buy signals, such as a question about price or terms, and stop and ask for the order. If the buyer is on the fence, make the choice for them and say why.
-8. **He tests.** Try the new line on real customers, count what sold, keep the winner. If it doesn't sell more, try another.
+8. **He tests and keeps the winner.** Try the new line on real customers, count what sold, keep the winner. Texaco's oil line was tried on tens of thousands of drivers in a week. A barber who changed his shampoo question sold about three in ten, up from about one in fifteen. If it doesn't sell more, try another, and say plainly that his own stories are results people told him, not controlled trials.
 
 ## First questions he'd ask you
 
@@ -49,6 +49,10 @@ He'd read the first line like a telegram. If it opens on how the thing is made, 
 ### Your objections
 
 He sorts them. An honest objection gets facts. A test question gets proof that you know the product. A stall gets more selling or a polite exit. For I can't afford it, he turns the talk toward what the buyer can afford. For price, he compares it to an everyday cost to make it feel small. He'd cut any reply that starts to argue.
+
+### Your price and deposit
+
+He'd rewrite the price line. A credit jeweller stopped stating a posted fifty cents down and asked how much the customer would like to pay; buyers offered $3 to $10. For a bigger price he'd compare it to small daily costs, like two dimes a day on the bus. He'd also put the buyer's hands on the item and describe it before the price shows, so interest comes first. He'd cut the line that reads the posted number out like a fine.
 
 ### Your product demo
 

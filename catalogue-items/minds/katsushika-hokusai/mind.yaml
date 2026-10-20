@@ -20,7 +20,7 @@ seats:
   - {seat: "Lifelong practice", asks: "What will you do every day so that your work is better in ten years?"}
   - {seat: "Respect the real form", asks: "Have you studied how this thing is really built, or are you drawing your idea of it?"}
 pairs_with: [leonardo-da-vinci, vincent-van-gogh, hayao-miyazaki, andy-warhol, pablo-picasso]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Hokusai", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hokusai", kind: reference}
   - {n: 2, title: "The Great Wave off Kanagawa", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Great_Wave_off_Kanagawa", kind: reference}
@@ -29,6 +29,8 @@ sources:
   - {n: 5, title: "Hokusai Manga", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hokusai_Manga", kind: reference}
   - {n: 6, title: "Hokousaï (1896; Project Gutenberg eBook #18724), which quotes Hokusai's letters to his publishers and the prefaces and postscripts of his books, in French", by: "Edmond de Goncourt, quoting Katsushika Hokusai", url: "https://www.gutenberg.org/ebooks/18724", kind: own-words}
   - {n: 7, title: "The Old Man, Mount Fuji and the Sea (prints the 1834 colophon)", by: "Katsushika Hokusai, in a National Gallery of Victoria essay", url: "https://www.ngv.vic.gov.au/essay/the-old-man-mount-fuji-and-the-sea/", kind: own-words}
+  - {n: 8, title: "Impressions of Ukiyo-ye, the school of the Japanese colour-print artists (1905; Project Gutenberg eBook #69418; chapter 'The Romance of Hokusai' translates his preface to Fugaku Hiak'kei, 1834)", by: "Dora Amsden, quoting Katsushika Hokusai", url: "https://www.gutenberg.org/ebooks/69418", kind: own-words}
+  - {n: 9, title: "Hokusai (attributed statement on progress at seventy-five)", by: "Wikiquote", url: "https://en.wikiquote.org/wiki/Hokusai", kind: reference}
 tests:
   - {kind: use, prompt: "Plan a series of twelve photos of the same bridge in my town, one for each month. Say where to stand, what time of day, and what ordinary people should be in each one."}
   - {kind: use, prompt: "Write a short note to the print shop that is making my poster, telling them exactly what not to change about my drawing."}

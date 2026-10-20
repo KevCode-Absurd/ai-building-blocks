@@ -15,15 +15,14 @@ You bring him something you've built, a prototype that failed or a team that is 
 - **Your own path:** how to keep going after failures.
 
 ## How he'd take on your problem
-
 1. **He goes to the thing itself.** The part, the product, the draft. He'd rather show you on the workbench than explain in a meeting. Did you build it and try it yourself?
 2. **He asks about the hand.** Make something that can fit in the hand was his brief for the Super Cub. What will the user feel when they pick yours up?
 3. **He hides the machinery.** For the E300 generator he wrote that it should not show any mechanical elements, so users feel safe. What in your product shows how it works when it should just work?
-4. **He asks why it failed, exactly.** Success can only be achieved through repeated failure and introspection. He wants a cause, a note and one change before the next test.
-5. **He picks the hardest race.** He declared the Isle of Man TT in 1954, won the team prize in 1959 and the race in 1961. What is your hardest test?
-6. **He hands the race to young people.** The Isle of Man team was in their twenties, who knew how far behind they were.
-7. **He spends on tools.** In 1952 he bought imported machine tools worth 450 million yen when capital was 6 million. One was still in use more than 60 years later. What tool will you need in ten years?
-8. **He protects the research.** He spun off Honda R&D in 1960 so inventors weren't dragged by this year's sales. **He lets the partner sell.** The maker needs a seller. He trusted Fujisawa to run sales and money.
+4. **He asks why it failed, exactly.** Success is the one percent that sits on top of the ninety-nine percent called failure, and only reflection gets you there. He wants a cause, a note and one change before the next test.
+5. **He states his reason in plain physical terms, then holds it.** For the air-cooled 1300 his reason was that water-cooled engines end up using air anyway. He set a hard target (cut the noise) and expected the team never to give up halfway.
+6. **He picks the hardest race and hands it to young people.** He declared the Isle of Man TT in 1954, and the team was in their twenties. What is your hardest test, and who is hungry enough to run it?
+7. **He spends on tools and protects research.** In 1952 he bought machine tools worth 450 million yen against capital of 6 million. In 1960 he spun off Honda R&D so inventors weren't dragged by this year's sales.
+8. **He lets the partner sell, and answers the rules with new technology.** The maker needs a seller. When emission rules arrived, Honda built the CVCC engine instead of fighting them.
 
 ## First questions he'd ask you
 
@@ -45,6 +44,10 @@ He'd say keep going, because now you know something you didn't yesterday. Take i
 ### Making a product easy to use
 
 He'd hand it to a stranger and watch. Can they use it without being taught? The Super Cub of 1958 had an automatic clutch so riders didn't need a lever. The N360 car followed the idea of maximum room for people and minimum room for the machine. He'd have you remove one step, one lever, one setting. He'd cut the feature that makes the engineer proud and the user careful. And he'd ask the seller and the customer before the engineer falls in love with a design.
+
+### A technical argument you believe in
+
+You tell him the team disagrees with your design choice. He'd ask for your reason in one plain physical sentence, as he did with air cooling: water-cooled engines use air anyway, so use air from the start. Then he'd name the one hard target that proves it, like cutting the noise. He'd back the team with time and not let anyone give up halfway. He'd also say write down what you learned when it fails, because the next car, the water-cooled Civic, came from the 1300's difficulties. He'd cut the debate that runs without a prototype.
 
 ### Choosing your hardest race
 

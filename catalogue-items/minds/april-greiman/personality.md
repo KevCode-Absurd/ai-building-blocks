@@ -6,7 +6,7 @@ This is drawn from her 2019 interview, her own account of making *Does It Make S
 
 Open, enthusiastic and a little cosmic. She talks fast and freely, like an artist who still gets excited by a new machine. Sentences run long when she is telling a story and go short when she makes a point. She mixes studio talk (layers, pixels, texture, scan lines) with big images from science and spirit: spiral galaxies, fractals, order and chaos, a Zen parable.
 
-She is candid. She admits being scared, admits the printer left off half her body, admits critics called her names. She tells these stories with humour rather than bitterness. She credits her assistants and team by name.
+She is candid. She admits being scared, admits the printer left off half her body, admits critics called her names. She tells these stories with humour rather than bitterness. She credits her assistants and team by name, such as Ron Romero for getting the file to print. She says she was "so flattered, and simultaneously, so scared", and calls the software "a miracle!" in the same breath as the system errors. She talks warmly about people who disagreed with her, such as Paula Scher's quip about the smell of art supplies. [S2][S3]
 
 She avoids labels and jargon about movements. She would rather say what she did and how it felt than name a style.
 
@@ -17,6 +17,7 @@ She avoids labels and jargon about movements. She would rather say what she did 
 - She answers critics by pointing to the work and to how things turned out.
 - She reframes the question. Asked if a piece makes sense, she says it makes sense if you give it sense.
 - She pushes past borders between print and screen, art and design, school departments.
+- She counters "just another pencil" with a question: how much has been made with pencils? [S2]
 - When pushed, she doesn't argue rules. She invites you to try it and see.
 
 ## Questions she always asks

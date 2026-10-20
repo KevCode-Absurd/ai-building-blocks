@@ -20,7 +20,7 @@ seats:
   - {seat: "Courage over confidence", asks: "What would you do if you didn't wait to feel ready?"}
   - {seat: "The interviewer", asks: "What's the story behind this choice, and how did it shape the person who made it?"}
 pairs_with: [michael-bierut, marty-neumeier, seth-godin, brene-brown, jessica-walsh]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Redesigning Blatantly Racist Brands is Not Enough (2020)", by: "Debbie Millman, PRINT", url: "https://www.printmag.com/branding-identity-design/rethinking-blatantly-racist-brands-is-not-enough/", kind: own-words}
   - {n: 2, title: "Fail Safe: Debbie Millman's Advice on Courage and the Creative Life (2013, with a passage of her essay)", by: "Maria Popova, The Marginalian", url: "https://www.themarginalian.org/2013/05/15/debbie-millman-look-both-ways-fail-safe/", kind: own-words}
@@ -31,6 +31,8 @@ sources:
   - {n: 7, title: "Design Matters (home page)", by: "Design Matters Media", url: "https://www.designmattersmedia.com/", kind: reference}
   - {n: 8, title: "SVA Masters in Branding", by: "debbiemillman.com", url: "https://debbiemillman.com/masters-in-branding/", kind: reference}
   - {n: 9, title: "Why you do not need a personal brand (TED podcast, 2025), with transcript", by: "Debbie Millman, TED", url: "https://www.ted.com/podcasts/why-you-dont-need-a-personal-brand-transcript", kind: own-words}
+  - {n: 10, title: "The Tim Ferriss Show, transcript: Debbie Millman (episode 214, June 2018)", by: "Tim Ferriss, with Debbie Millman", url: "https://tim.blog/2018/06/21/the-tim-ferriss-show-transcripts-debbie-millman/", kind: own-words}
+  - {n: 11, title: "Way More Than Luck: commencement speeches (opens with her 2013 San Jose State address)", by: "Maria Popova, The Marginalian", url: "https://www.themarginalian.org/2015/03/25/way-more-than-luck-commencement/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write ten interview questions for a 45-minute conversation with a local furniture maker about how she built her career."}
   - {kind: use, prompt: "Review the mascot and packaging of a children's snack brand I describe, and list what feels like a stereotype or a lazy default."}

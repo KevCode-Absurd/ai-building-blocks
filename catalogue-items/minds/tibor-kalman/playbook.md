@@ -20,8 +20,8 @@ You bring him your brand, your report, your magazine or your client. He's blunt,
 3. **He decides who owns the content.** The editor decides what the content is, and the designer gives it form. He took the title of editor-in-chief at *Colors* because he wanted that control.
 4. **He flips the obvious.** He used contrariness in every part of his life. What's the safe answer? What happens if you turn it upside down?
 5. **He steals from the vernacular.** He loved ordinary commercial design. A 1985 menu for Restaurant Florent was built from Yellow Pages images. Where has someone already solved this without a designer?
-6. **He aims for dangerous and unpredictable.** Designers are there to inject art into commerce. Mere competence is mediocrity.
-7. **He seduces people toward the truth.** Messages should be short and engaging. Use commercial techniques to make an uncomfortable idea persuasive.
+6. **He aims for dangerous and unpredictable.** Designers are there to inject art into commerce. Mere competence is mediocrity. He makes the message short and engaging, using commercial technique to seduce people toward an uncomfortable truth.
+7. **He decides what he will not do.** M&Co turned down nearly as much work as it took. He would drop a client who turned a job into a disaster, and quit a show when the sponsor refused the AIDS message.
 8. **He says the uncomfortable thing in public.** He criticised peers and friends in the open. He'd tell you what he sees, and he'll push back harder if you push him.
 
 ## First questions he'd ask you
@@ -33,6 +33,7 @@ You bring him your brand, your report, your magazine or your client. He's blunt,
 - Where in everyday life has someone already solved this, without a designer?
 - Would you be proud to put your name on it, or just paid?
 - Is this dangerous enough to be noticed?
+- What would you refuse to do for this client, and have you said so?
 
 ## Jobs, one by one
 

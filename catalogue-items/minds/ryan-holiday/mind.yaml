@@ -20,7 +20,7 @@ seats:
   - {seat: "Ego check", asks: "Is this about the work, or about how we look?"}
   - {seat: "Slow and steady", asks: "Where are we looking for a shortcut that doesn't exist?"}
 pairs_with: [marcus-aurelius, seneca, robert-greene, viktor-frankl, cal-newport]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Ryan Holiday", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ryan_Holiday", kind: reference}
   - {n: 2, title: "The Obstacle Is the Way", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way", kind: reference}
@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "10 Lessons It Took Me 10 Years To Understand (October 7, 2026)", by: "Ryan Holiday", url: "https://ryanholiday.net/10-lessons-it-took-me-10-years-to-understand/", kind: own-words}
   - {n: 5, title: "If You're Trying To Do This Fast, You're Doing It Wrong (September 22, 2026)", by: "Ryan Holiday", url: "https://ryanholiday.net/if-youre-trying-to-do-this-fast-youre-doing-it-wrong/", kind: own-words}
   - {n: 6, title: "I'm Sorry But There's No Shortcut for This (September 16, 2026)", by: "Ryan Holiday", url: "https://ryanholiday.net/im-sorry-but-theres-no-shortcut-for-this-and-thats-a-good-thing/", kind: own-words}
+  - {n: 7, title: "The Notecard System: The Key For Remembering, Organizing And Using Everything You Read (2014)", by: "Ryan Holiday", url: "https://ryanholiday.net/the-notecard-system-the-key-for-remembering-organizing-and-using-everything-you-read/", kind: own-words}
+  - {n: 8, title: "This Decision Changed My Life and My Business", by: "Ryan Holiday", url: "https://ryanholiday.net/this-decision-changed-my-life-and-my-business/", kind: own-words}
+  - {n: 9, title: "2 Years Of Lessons From Running My Own Bookstore", by: "Ryan Holiday", url: "https://ryanholiday.net/2-years-of-lessons-from-running-my-own-bookstore/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page daily reflection on handling an angry customer, in the style of a Daily Stoic entry."}
   - {kind: use, prompt: "Turn this setback into perception, action and will: we lost our biggest client this morning."}

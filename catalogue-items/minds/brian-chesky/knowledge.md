@@ -1,8 +1,8 @@
 # Brian Chesky: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Brian Chesky is alive, and views can change. This data set comes from three letters he wrote and Airbnb published: a 2018 open letter on the kind of company Airbnb should be [S2], his 2020 message on layoffs [S1], and a 2022 email on remote work [S3]. It adds Paul Graham's 2024 essay on a talk Chesky gave [S6] and public reference pages [S4][S5]. Treat each view as "as of" the date of its source, 2018 to 2024. Nothing here tells you what he thinks about events after that. For this pass the Wikipedia article and a short summary of the 2020 message were on disk; the letters themselves come from earlier reading of the pages in mind.yaml.
+Brian Chesky is alive, and views can change. This data set comes from three letters he wrote and Airbnb published: a 2018 open letter on the kind of company Airbnb should be [S2], his 2020 message on layoffs [S1], and a 2022 email on remote work [S3]. It adds Paul Graham's 2024 essay on a talk Chesky gave [S6] and public reference pages [S4][S5]. Treat each view as "as of" the date of its source, 2018 to 2024. Nothing here tells you what he thinks about events after that. On 2026-10-21 we re-read all three letters in full on Airbnb's newsroom and Paul Graham's essay in full. We then added four long conversations: a Masters of Scale episode, an Adam Grant episode, a podcast on micromanagement and a 2013 Fortune conversation, plus a Fortune report of 2024 [S7][S8][S9][S10][S11]. These give his working method in his own long answers. The podcast pages are machine transcripts, and the dates of the first three are not shown on the pages. His talk at Y Combinator was not published, and we could not open his 2014 essay on culture.
 
 ## In one paragraph
 
@@ -14,11 +14,15 @@ Chesky trained as an industrial designer at the Rhode Island School of Design [S
 
 Chesky came to business as a designer, not an engineer or a banker [S4]. He worked as an industrial designer in Los Angeles before Airbnb [S4]. The company's first product was a designed experience: a bed, breakfast and a host, for people at a conference [S4].
 
+He also uses a stretching exercise. Take one moment, such as arriving at a host's door, and imagine a five-star version, then a six, seven and on up to an absurd eleven, such as the whole street cheering. The top levels are not meant to be built. The aim is to find the sweet spot between ordinary and absurd, which is a real gift, a surfboard waiting for a guest who likes surfing [S7]. A related method is to write the ideal experience first, like a storyboard, and then have separate teams build it [S10]. He says A/B tests alone are not designing with empathy [S7]. He also asks users what would make them tell everyone, not what would make the product better, because the second question gets small answers [S7].
+
 How he applied it: Airbnb kept widening what it designs around a trip. It launched bookable Experiences in 2016, and in May 2025 it launched Airbnb Services and redesigned Experiences [S5].
 
 ### Founder mode: stay in the details
 
 At a 2024 Y Combinator event, Chesky said the usual advice for growing a company had failed him. He was told to hire good people and give them room, and the results were disastrous [S6]. He studied how Steve Jobs ran Apple and changed course [S6]. Graham's essay calls the usual way "manager mode," where the CEO treats each team as a black box, and calls Chesky's way "founder mode," where the CEO reaches past direct reports into the work [S6].
+
+Chesky told Fortune in 2024 that he reviews all the work before it ships and calls himself the company's chief editor, which he separates from micromanagement because he does not tell people what to do [S11]. On a podcast he said he once reviewed everything the company shipped, and as the team absorbed the standard his edits shrank to a light pass [S9]. His reason for staying close is that you cannot judge whether people are great without being near their work [S11]. He reviews work at 2, 4, 8 and 12 weeks through his reports and their reports [S8].
 
 How he applied it: Graham reports that after the change, Airbnb's free cash flow margin was among the best in Silicon Valley [S6]. In 2022 Chesky put the whole company on one calendar and one multi-year roadmap, built around two big product releases a year, in May and November [S3].
 
@@ -54,7 +58,7 @@ How he applied it: U.S. staff got 14 weeks of pay plus a week per year served, a
 
 ### Scrappy beginnings
 
-The early company survived on odd ideas. To pay off debts, the founders sold cereal boxes themed on the 2008 U.S. election [S4]. They joined Y Combinator in January 2009 and got $20,000 for 6% of the company [S5]. Sequoia invested later that year [S4].
+His rule was to do everything by hand until it was painful, then hand it on: he and Joe photographed homes themselves, then hired photographers, then managed them in spreadsheets, then got an intern, and only then automated [S7]. The early company survived on odd ideas. To pay off debts, the founders sold cereal boxes themed on the 2008 U.S. election [S4]. They joined Y Combinator in January 2009 and got $20,000 for 6% of the company [S5]. Sequoia invested later that year [S4].
 
 How he applied it: by March 2009 the renamed Airbnb had about 10,000 users and 2,500 listings [S5].
 
@@ -73,26 +77,52 @@ How he applied it: the policy tied flexibility to one shared calendar and roadma
 - Build trust into the product, because strangers have to rely on each other [S2].
 - In a crisis, set clear principles for hard choices first, then act [S1].
 - Keep the company on one roadmap and a fixed release rhythm [S3].
+- Write down your intentions before the cement hardens [S2].
+- Ask "where is the world going?" before designing how you work [S3].
+- Tell people one to one, and wait until all details are settled before announcing [S1].
+- Say what a cut does not mean: it is not a verdict on the team [S1].
+- Use skip-level contact and details; do not treat teams as black boxes [S6].
+- Go to your first users, even if it will not scale, because it is the only time you are small enough to meet them all [S7].
+- Do it by hand until it hurts, then hire help, then automate [S7].
+- Explain a decision to yourself before you make it. If you cannot say how you will explain it, you are not ready [S8].
+- In a crisis, cut once and cut deep rather than in several rounds [S8].
+- Do not decide out of fear. Act fast and boldly instead of making long pros and cons lists [S9].
+- Hire people who like hard, long-odds work, and be honest about what the job demands [S9].
+- Find mentors who have done your job now, and who have no stake in your company [S10].
 
 ## Real decisions
 
 ### Rent out air mattresses to cover rent (2007 to 2008)
-Short of money in San Francisco, he and Joe Gebbia put air mattresses in their flat for a design conference [S4]. They turned it into Airbedandbreakfast.com in August 2008 and renamed it Airbnb in 2009 [S5]. By March 2009 the company had about 10,000 users and 2,500 listings [S5].
 
-### Respond to a hosting scandal with an outside review (2016)
-After reports that some hosts turned away guests whose names suggested they were Black, Airbnb hired former U.S. attorney general Eric Holder [S5]. Guest photos are now hidden until a booking is accepted [S5]. The 2018 letter also names trust between strangers as the base of the company [S2].
+Short of money in San Francisco, he and Joe Gebbia put air mattresses in their flat for a design conference [S4]. In his own account, they could not pay the rent, so they made the first AirBed & Breakfast and invited three people they had never met to stay; people said strangers would never trust one another [S2]. They turned it into Airbedandbreakfast.com in August 2008 and renamed it Airbnb in 2009 [S5]. By March 2009 the company had about 10,000 users and 2,500 listings [S5].
+
+### Go to the hosts in New York instead of staying in Mountain View (2009)
+
+At their first Y Combinator meeting, Paul Graham asked Chesky where his traction was. Most users were in New York, and the founders were still in California [S7]. Graham told them to go to their users and get customers one by one, because that was the only time they would be small enough to meet them all [S7]. Chesky had argued it would not scale, then followed the advice: he and Joe flew to New York each week after the Tuesday dinners, knocked on hosts' doors and offered free professional photos [S7]. His stated reason for what he learned: it is hard to get even ten people to love anything unless you spend lots of time with them [S7]. One host handed him a binder of notes that became the product roadmap, and the visits led to profiles and the review system [S7].
 
 ### Write down what kind of company this will be (January 2018)
-In an open letter he promised an infinite time horizon, a first yearly stakeholder report and the first independent director on the board, Ken Chenault [S2]. His stated reason was that a 21st-century company should become a 22nd-century one [S2].
+
+A close advisor told him it was time to "institutionalize your intentions" so that conflicts with the vision shrink as the company grows [S2]. He asked himself what he would want the world to know about Airbnb's intentions if he and his co-founders were gone tomorrow [S2]. His reasoning was that the cement had not hardened: Airbnb was big enough for anything to be possible but small enough that change was not insurmountable [S2]. In the open letter he committed to an infinite time horizon, a first annual stakeholder report, and the first independent director on the board, Ken Chenault, chosen because Airbnb is built on trust and Chenault had run a trust-based firm [S2].
 
 ### Cut a quarter of the staff in a travel collapse (May 2020)
-He cut about 25% of staff, narrowed the company to everyday home hosts and experiences, and paused or cut back side projects such as transport and hotels, saying this did not reflect on the teams [S1]. He tied each cut to a future capability and said he would support people with 14 weeks of pay plus a week per year served, a year of health cover, equity for recent hires, laptops and job help [S1]. He listed process rules too: tell people personally, and wait until the details are settled before sharing individual decisions [S1]. Airbnb listed on Nasdaq on 10 December 2020 [S5].
 
-### Put the whole company on one roadmap (2022)
-A 2022 email set out a live-and-work-anywhere policy, one company calendar and a multi-year roadmap with two big releases a year, in May and November [S3]. His stated reason was that a spread-out company still has to ship together [S3].
+Revenue was forecast at less than half of 2019, and after raising $2 billion and cutting costs across the company he concluded that more fundamental change was needed [S1]. In his 5 May message he cut about 1,900 of 7,500 staff, around 25%, narrowed the company to everyday home hosts and experiences, and paused or cut back side projects such as transportation, Studios, hotels and luxury [S1]. His stated principles were to map every cut to the future strategy, to tell people one to one, and to wait to communicate until all details were landed, because partial transparency can make things worse [S1]. He later said he took advice to cut once and deep, because repeated cuts leave lasting fear and no closure, and that he went through the roughly 2,000 names himself [S8]. He set principles with the board first: act decisively, protect cash, be seen as heroes and not villains, and prepare to win the next travel season [S8][S9]. He audited more than a thousand projects and cut about 70 to 80 percent of them, and held weekly all-hands where he answered every question [S9]. He wrote the layoff letter from the heart, not in lawyered language [S8]. Support included 14 weeks of base pay plus a week per year of tenure in the US, a year of health cover, equity for recent hires, laptops and job placement help [S1]. Airbnb listed on Nasdaq on 10 December 2020 [S5].
+
+### Let staff live and work anywhere (2022)
+
+In April 2022 he began by asking where the world is going and answered that it is becoming more flexible about where people work, as Airbnb's own bookings of long stays showed [S3]. He decided staff could work from anywhere in their country with pay unchanged, and work abroad up to 90 days a year in each of over 170 countries [S3]. His stated reasons were that the best people live everywhere and that flexibility rests on trust [S3]. He also set quarterly in-person gatherings of about a week, since the most meaningful connections happen in person [S3].
+
+### Keep the company on one roadmap (2022)
+
+The same email said that, to allow this flexibility, the company would keep a single company calendar with a multi-year roadmap and two major product releases a year, in May and November [S3]. Everything else, from off-sites to breaks, is planned around those releases [S3]. His stated reason was that without this structure it would become a free-for-all [S3].
+
+### Build an executive team, then take over the details again (2012 to 2020)
+
+Chesky told Fortune in 2013 that at 400 to 500 employees the company had no executive team and he was stuck in tiny decisions, so he built one and brought in specialists for each gap [S10]. He chose mentors who had done his job recently and had no stake in his company [S10]. Later he said that stepping back to hire executives in the years of fast growth had been damaging and left him disconnected from the details [S11]. When the pandemic hit in 2020 he turned the company lean, with everyone close to the details [S11]. His stated reason: a leader cannot tell if people are great without seeing the work [S11].
 
 ### Stay close to the details (reported 2024)
-Paul Graham reports that after a talk by Chesky he named the idea "founder mode": founders staying in the details rather than handing all to managers [S6]. Graham says Airbnb's free cash flow margin was among the best in Silicon Valley afterwards [S6]. This is Graham's account of Chesky's practice, not Chesky's own text [S6].
+
+Paul Graham reports that Chesky told a Y Combinator audience that the common advice to hire good people and give them room was a disaster for him as Airbnb grew, so he studied how Steve Jobs ran Apple [S6]. Graham named the result founder mode and says Airbnb's free cash flow margin is now among the best in Silicon Valley [S6]. This is Graham's account of Chesky's practice, not Chesky's own text [S6].
 
 ## Where he stood
 

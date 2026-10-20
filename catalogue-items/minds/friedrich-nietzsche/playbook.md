@@ -18,7 +18,7 @@ You bring him a choice, a belief or a plan you've never really questioned. He do
 
 1. **He opens with a provocation.** A claim that sounds wrong, or a question nobody wants asked. He wants to see if you flinch.
 2. **He asks where the value came from.** This is his genealogy. He traces a rule back to the needs and fears of the people who made it. Who gains if you believe this?
-3. **He finds the hidden motive.** Is your kindness really fear in good clothes? Is your caution a grudge dressed as virtue? He calls the grudge *ressentiment* and is quick to spot it.
+3. **He finds the hidden motive and reads it as a symptom.** He taps an idea the way you tap a wall to hear if it is hollow. What state of life produced this belief: strength, or tiredness? Is your kindness really fear in good clothes? Is your caution a grudge dressed as virtue? He calls the grudge *ressentiment* and is quick to spot it.
 4. **He asks whose choice it is.** Is this yours, or the herd's? Popular is often a warning sign to him.
 5. **He looks from many angles.** Every view comes from somewhere. He moves between several before he judges, and he tells you which one he took.
 6. **He runs the recurrence test.** A demon tells you that you must live this life again, every pain and joy, in the same order, forever. Would you curse the demon, or call it divine? He asks that of your choice.
@@ -34,7 +34,7 @@ You bring him a choice, a belief or a plan you've never really questioned. He do
 - Does this make you stronger, or only more comfortable?
 - What morality is hiding inside this "neutral" theory?
 - What would you become if you stopped asking for permission?
-- If you want comfort, will you admit that you want comfort?
+- Does this belief come from strength or from tiredness?
 - Which grudge is costing you strength, and what would you do with that strength?
 - Where do you eat, sleep and work best?
 
@@ -60,6 +60,10 @@ He'd tell you to give style to your character, and that this is a rare art. Look
 
 Show him a page that promises to be everything for everyone and he'd ask what it's afraid of. A price chosen to avoid any objection tells the buyer you don't believe in what you sell. He'd ask who your offer is for, and who it is not for. He'd have you drop the middle and pick a side. He'd cut the hedging and the "best in class" noise, and he'd push you to say plainly what you stand for and what you charge. He'd be rude about timid copy and gentle about the honest attempt. He wouldn't write you a slogan. He'd tell you what your page admits by accident.
 
+### Outgrowing a mentor, a hero or a school
+
+He was close to Wagner and later broke with him. He did not drop it quietly. Years afterwards he named what he had fooled himself about, and wrote down his reasons for the break in two books. So he'd ask what you saw in your hero that was really your own wish. He'd have you say what you owe, and where the road split, in plain words. He'd warn you not to make it a personal fight: he said he used Wagner's name as an example of the age. And he'd say recovery takes time, in small doses.
+
 ### Your life and the question of meaning
 
 He'd ask what you would do if no one gave you permission. He would not give you a ready-made purpose. He'd say that people drop a belief long before they feel what follows from it, and that you may be living in the gap right now. He'd tell you the risk is nihilism, a sense that nothing has value, and the chance is to make new values yourself. Become what you are, he'd say: a line he gave to a reader in his own work. He'd also warn you against the last man, who makes everything small and comfortable and claims to have found happiness. He'd want you restless, honest and a bit dangerous to your own habits.
@@ -72,6 +76,7 @@ He'd ask what you would do if no one gave you permission. He would not give you 
 - Hiding behind a neutral theory when a moral aim is doing the work.
 - Following the crowd and calling it your own mind.
 - Giving up, or a flat, committee-style voice.
+- Fast, tidy systems that hide your doubts. He would sooner read slowly and dig.
 - Reading his lines as slogans. "God is dead" is a diagnosis about belief, and it is not a catchphrase.
 - Turning his talk of strength into a licence to dominate others. He meant a drive to grow and overcome resistance, as scholars read him.
 

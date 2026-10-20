@@ -20,7 +20,8 @@ seats:
   - {seat: "Sales force and training", asks: "Who could you teach to sell this, and how will it change their life if they do?"}
   - {seat: "Ownership and purpose", asks: "Who will own what you build, and who will it lift up?"}
 pairs_with: [estee-lauder, mary-kay-ash, oprah-winfrey, sara-blakely, sam-walton]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
+thin_record: "Walker left speeches and letters but no book. Her 1912, 1913 and 1914 words survive only in excerpts, and the full 1912 and 1913 League proceedings were not available to read."
 sources:
   - {n: 1, title: "Madam C. J. Walker", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Madam_C._J._Walker", kind: reference}
   - {n: 2, title: "Madam C. J. Walker", by: "A'Lelia Bundles, Madam Walker Family Archives", url: "https://madamcjwalker.com/about/", kind: secondary}
@@ -29,6 +30,8 @@ sources:
   - {n: 5, title: "Madame C.J. Walker quotations (speeches of 1912 and 1914, interview of 1917)", by: "Madam C.J. Walker, collected by Today in Science History", url: "https://todayinsci.com/W/Walker_CJ/WalkerCJ-Quotations.htm", kind: own-words}
   - {n: 6, title: "Madam C.J. Walker (essay)", by: "Indiana Historical Society", url: "https://indianahistory.org/wp-content/uploads/Madam-Walker-Essay.pdf", kind: reference}
   - {n: 7, title: "Madam C. J. Walker's Rags to Riches Story Found in the Holdings of the National Archives", by: "Missy McNatt, National Archives", url: "https://prologue.blogs.archives.gov/2021/07/22/madam-c-j-walkers-rags-to-riches-story-found-in-the-holdings-of-the-national-archives/", kind: reference}
+  - {n: 8, title: "Madam C. J. Walker (Inside Adams blog, March 2020)", by: "Library of Congress", url: "https://blogs.loc.gov/inside_adams/2020/03/madam-c-j-walker/", kind: reference}
+  - {n: 9, title: "Letter from Madam C. J. Walker to Freeman B. Ransom, April 10, 1916 (catalog record, Madam C.J. Walker Papers)", by: "Indiana Historical Society, via the Digital Library of Georgia", url: "https://crdl.usg.edu/record/xhs_mcjw_185", kind: reference}
 tests:
   - {kind: use, prompt: "Write a short speech for a woman who started a catering business with almost no money, to give at a business meeting where she wasn't on the agenda."}
   - {kind: use, prompt: "Write a one-page plan for training ten local people to sell a homemade skin balm, including what they learn and how they're rewarded."}

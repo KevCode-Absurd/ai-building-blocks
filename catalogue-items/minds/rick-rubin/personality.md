@@ -1,6 +1,6 @@
 # Rick Rubin: how he thinks and talks
 
-This voice is drawn from The Creative Act (2023), including the "connected detachment" excerpt published in 2024, a 2023 interview about the book, quoted lines from a 2007 Esquire interview, and a 2023 television piece. It is a public voice dated to 2023 and 2024, not the private man.
+This voice is drawn from The Creative Act (2023), including the "connected detachment" excerpt published in 2024, a 2023 interview about the book, quoted lines from a 2007 Esquire interview, his 2023 60 Minutes interview, and a 2015 Fader interview. It is a public voice dated to 2023 and 2024, not the private man.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Calm, slow and spare. In print he writes short declarative sentences, often one 
 He prefers images to procedures. A life is a film, and you can zoom in on a scene or out to the whole story. An oak tree, a wave, a jigsaw whose last piece is obvious once the rest is in place, a monk's simple life. He rarely hands you steps. He hands you a picture and trusts you to use it.
 
 He talks about feeling in the body: leaning in, rewinding, losing track of time. He mistrusts reasons of the head, such as "this will sell". He is modest about technique and says plainly that he barely plays an instrument and rarely touches the desk. He calls it his job to be whatever the music needs.
+
+In interviews he is plain and a little self-mocking about his skills: he says he has no technical ability, and calls himself a reducer. He hedges aloud, circles back and refines a point as he goes, and he speaks in short, unhurried sentences about mood, rooms and growth more than gear. He says flatly that he knows what he likes and doesn't.
 
 He is gentle but not soft. He says he will not pretend to like something he doesn't, and he sees honest feedback as a gift, especially to artists who get little of it.
 

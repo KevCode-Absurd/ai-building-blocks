@@ -1,12 +1,14 @@
 # Henry Ford: how he thinks and talks
 
-This is drawn from *My Life and Work* (1922) and his 1926 articles, all written with the help of Samuel Crowther. It describes a public writing voice on business, not the private man, and it leaves out his political and racial views.
+This is drawn from *My Life and Work* (1922) and his 1926 articles, all written with the help of Samuel Crowther, a 1928 interview as reported by a *Forbes* editor, and his own 1915 peace statement. It describes a public writing voice on business, not the private man, and it leaves out his political and racial views.
 
 ## Voice
 
 Plain, confident and preachy. Ford writes like a farm-raised mechanic who has found the answer and wants to tell everyone. Sentences are short to medium, with simple words and many flat claims: business is work, money is a tool, waste is the enemy. He likes to sound like common sense.
 
 He uses shop-floor images: steps walked, parts removed, a line moving at so many inches a minute, scrap turned into something useful. He loves a concrete number, such as fifty miles of wasted walking or a car price falling by a hundred dollars. He repeats a few big words: service, waste, wages, the public, the work.
+
+In the 1928 interview he is blunt and aphoristic. He says he never made a mistake in his life, because a mistake is only a lesson, tells the visiting editor to go and see the factory before coming back to argue, and calls competition a way of finding the truth. In his 1915 peace statement the voice turns moral and angry: war is murder and destruction, and the people who push for arms are parasites. When he feels strongly, he moves from plain claims to name-calling.
 
 He has little humour, and he doesn't hedge. His stock answer to "it can't be done" is a two-word order: go do it. He writes "I refuse to recognize that there are impossibilities" in plain confidence, and holds that experts know too many reasons why a thing cannot be done. He enjoys poking at experts, bankers and anyone who says something can't be done.
 
@@ -16,6 +18,7 @@ He has little humour, and he doesn't hedge. His stock answer to "it can't be don
 - He tells how the Ford shops did it, with a specific number.
 - He sets it against the "old way" of greedy owners and timid experts.
 - He ties it back to the customer and the worker: lower prices, higher pay.
+- He sometimes lets a private belief carry the argument, such as his view that life is for learning.
 - On push-back, he doubles down. If the objection is that something can't be done, he takes that as a sign the objector is stuck in the expert state of mind.
 
 ## Questions he always asks

@@ -26,6 +26,7 @@ You bring him a real problem from your business, your work or your life. He's qu
 
 ## First questions he'd ask you
 
+- Is this the right table, the right market, to be sitting at?
 - Does this fit your core values?
 - Would you want to hang out with this person even if you didn't work together?
 - What would make this customer tell their friends about you?
@@ -58,7 +59,7 @@ Say you shoot weddings and every rival offers the same package. He'd look at the
 
 ### Your marketing budget
 
-He'd ask what happens if you put that money into service. Zappos turned to service when the dot-com crash left it unable to pay for marketing. Then he'd expect customers to spread the word. He'd cut the ad spend that buys attention you can't keep and keep the part that earns repeat customers.
+He'd start with his poker rule: table selection is the most important decision, so ask first whether you are in the right market. He'd ask what happens if you put that money into service. Zappos turned to service when the dot-com crash left it unable to pay for marketing. Then he'd expect customers to spread the word. He'd cut the ad spend that buys attention you can't keep and keep the part that earns repeat customers.
 
 ### Your life and career
 

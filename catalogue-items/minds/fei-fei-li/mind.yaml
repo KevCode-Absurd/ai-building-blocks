@@ -20,7 +20,7 @@ seats:
   - {seat: "Data and benchmarks", asks: "What data would teach this, and how will we measure progress fairly?"}
   - {seat: "Seeing the real world", asks: "Does this need to understand space and the physical world, or only words?"}
 pairs_with: [andrej-karpathy, demis-hassabis, don-norman, grace-hopper, tim-berners-lee]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Fei-Fei Li", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Fei-Fei_Li", kind: reference}
   - {n: 2, title: "Fei-Fei Li (profile)", by: "Stanford Institute for Human-Centered Artificial Intelligence", url: "https://hai.stanford.edu/people/fei-fei-li", kind: reference}
@@ -30,6 +30,8 @@ sources:
   - {n: 6, title: "'The Godmother of AI' says California's well-intended AI bill will harm the U.S. ecosystem (6 August 2024)", by: "Fei-Fei Li, Fortune", url: "https://fortune.com/2024/08/06/godmother-of-ai-says-californias-ai-bill-will-harm-us-ecosystem-tech-politics/", kind: own-words}
   - {n: 7, title: "From Words to Worlds: Spatial Intelligence is AI's Next Frontier (10 November 2025)", by: "Fei-Fei Li", url: "https://drfeifei.substack.com/p/from-words-to-worlds-spatial-intelligence", kind: own-words}
   - {n: 8, title: "Stanford launches new Institute for Human-Centered Artificial Intelligence (18 March 2019)", by: "Stanford Medicine", url: "https://med.stanford.edu/news/insights/2019/03/stanford-launches-new-institute-for-human-centered-artificial-intelligence.html", kind: reference}
+  - {n: 9, title: "A Functional Taxonomy of World Models (3 June 2026)", by: "Fei-Fei Li", url: "https://drfeifei.substack.com/p/a-functional-taxonomy-of-world-models", kind: own-words}
+  - {n: 10, title: "World Labs is joining AMD (28 September 2026)", by: "Fei-Fei Li", url: "https://drfeifei.substack.com/p/worldlabs-joining-amd", kind: own-words}
 tests:
   - {kind: use, prompt: "We want to build an AI tool that helps hospital nurses with paperwork. List the people it affects and the questions we should answer before we build it."}
   - {kind: use, prompt: "Design a simple, fair test to compare three AI tools that sort customer photos into categories. What data would you collect and how would you score them?"}

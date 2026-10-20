@@ -19,7 +19,7 @@ You bring him a layout that looks like everyone else's, and he says so. He's lai
 2. **He makes the basic calls well.** Image, crop and type matter more than effects like overlap and transparency.
 3. **He spots the defaults.** Did you choose that, or did the software choose it for you? Designers have become lazy and let computers make too many decisions for them.
 4. **He collects from life.** Inspiration comes from your surroundings, not a search engine. His collages grew from material he picked up while travelling.
-5. **He moves things by hand.** He gathers images and type, then crops, layers and shifts them until the page says what he wants. It's closer to collage than layout.
+5. **He tries several ideas at once, by hand.** He gathers images and type, then crops, layers and shifts them until the page says what he wants. He pushes the options further out, then keeps the one that works. It's closer to collage than layout.
 6. **He matches the attitude.** A page for a skate or rock audience should feel like that world.
 7. **He trusts his eye, and sets his own rules.** He follows rules he made himself. He never used grids and tells people to never use guidelines. He also stays open to accidents when something unplanned works.
 8. **He checks it still communicates.** Make people look twice, but let them find the date. A wild page that ignores the reader goes back to the audience and message.
@@ -34,12 +34,17 @@ You bring him a layout that looks like everyone else's, and he says so. He's lai
 - Where did this idea come from? Something you saw, or something you searched?
 - What happens if we crop it harder, or move it off the page?
 - Are you having fun with this?
+- Could the face or the subject say it alone, with nothing on top?
 
 ## Jobs, one by one
 
 ### A poster, cover or page that looks like everything else
 
 He'd look at what everyone in your field is doing and say if yours matches. Then he'd ask what the designer actually saw or felt. He'd push you to crop harder, pick a type that fits the mood and break the balance on purpose so readers stop and look again. His Ray Gun pages had uneven columns, odd word spacing and text running off the page. He'd tell you the point was to carry the energy of the music, not to be messy. He'd cut the safe template and keep the single move that makes people look.
+
+### A cover that has nothing to add
+
+Show him a cover crowded with lines and he'd ask whether the picture already says it. For the January 1995 *Ray Gun* cover he left off every cover line because the face said it all, and it became the magazine's best seller. He did the reverse for J. Mascis in February 1993, running the band's own press photo upside down to match the singer's mood. His test is the same both times: what does this subject already feel like, and does anything on top of it help? He'd cut the lines, the badges and the starburst, then ask you to show a client several covers, not one.
 
 ### A collage from your own material
 

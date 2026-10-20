@@ -1,8 +1,8 @@
 # Hayao Miyazaki: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Miyazaki is alive, and views can change. Each view below is dated to the source it comes from: his December 2001 Paris press conference for Spirited Away [S2], his signed statement of intent for the Ghibli Museum [S3], and reference pages. He speaks Japanese, so his words reach us in translation. Nothing here tells you his current plans or his view of new events.
+Miyazaki is alive, and views can change. Each view below is dated to the source it comes from: his December 2001 Paris press conference for Spirited Away [S2], his signed statement of intent for the Ghibli Museum [S3], the English transcript of his September 2013 retirement press conference [S6], quotations from his own project plans as printed by writers [S7][S8], and reference pages. The plan quotations are second-hand, so treat their wording as approximate. He speaks Japanese, so his words reach us in translation. Nothing here tells you his current plans or his view of new events.
 
 ## In one paragraph
 
@@ -54,6 +54,12 @@ How he applied it: The Wind Rises (2013) tells the story of Jiro Horikoshi, desi
 
 The Boy and the Heron takes its Japanese title from a 1937 novel, How Do You Live?, without adapting it [S5]. In 2021 he said he was making the film because he did not have an answer to that question [S5]. It draws on his own childhood, including his family's wartime evacuation [S5]. After its preview in 2023 he sent a message saying that viewers perhaps didn't understand it, and that he didn't either [S5].
 
+### One page of intent first
+
+Before a film is storyboarded, Miyazaki writes a short project plan saying what the film is for. His plan for My Neighbor Totoro (1 December 1986) said it should be a happy, heartwarming film: couples would value each other more, parents would remember their own childhoods, and children would want to explore the thickets behind shrines and climb trees looking for a totoro [S7]. His proposal for The Wind Rises said what it was not: not a condemnation of war, not a way to stir up young Japanese with the Zero fighter, and not a defence of its hero [S8]. A plan like this states the effect on the audience and names the traps to avoid.
+
+His other habit is to stay at the desk. In 2013 he said he prefers being an animator to being a director. A wind or a light effect that works can make him happy for days, while directing means waiting for other people's verdicts [S6]. He said he has to draw things himself to put his ideas down, and that what had declined with age was his ability to keep up that concentration [S6]. He called himself a worker on the factory floor, not a "cultural person" [S6][S9].
+
 ## How he decides
 
 - Ask what a child would see and feel, and don't talk down [S2].
@@ -104,29 +110,33 @@ The Boy and the Heron takes its Japanese title from a 1937 novel, How Do You Liv
 
 ## Real decisions
 
-### How a character and a place get found
+### Planning a film around a feeling (1986)
 
-In 2001 he said he imagines himself as the character, visits the story's locations many times, and draws the character over and over, finishing just before the deadline. He said he keeps a store of landscapes and childhood memories for years, and that the forest setting of *Totoro* had been in his head for thirteen years [S2]. He keeps staff work even when it does not fit, and finds a use for it [S2].
+Studio Ghibli had struggled to finance Castle in the Sky, which was judged childish and short of conflict, and it took on the darker Grave of the Fireflies alongside Totoro [S7]. In his plan for Totoro, dated 1 December 1986, Miyazaki still asked for a happy, heartwarming film, and listed the feeling he wanted for couples, parents and children [S7]. The choice was to design the film around what viewers would carry out of the cinema, not around plot conflict. The film was released in 1988 [S1].
 
-### No ending in advance
+### Starting from one picture and then going to the forest (1990s)
 
-For *Spirited Away* he had planned about 1,200 shots and ended with 1,415. He did not know the ending in advance, saying the film makes itself and he must follow [S2]. He said a producer would warn of another year of work to push him on, which made him return to the desk faster [S2]. He found the meaning of the last train ride only while making it: the flooded land earlier sets it up, and the view from the train is blank, which matches how people remember a first trip alone [S2].
+Princess Mononoke grew from a single drawing made in the late 1970s of a princess living in a forest with a magical beast [S10]. He began storyboards in May 1995, and animation began that July [S10]. Before drawing the forest he took his art directors and lead animator to the Yakushima rainforest to study colour, shadow and light on water [S10]. He personally reviewed more than 144,000 cels and revised about 80,000 of them. Computer graphics were used for roughly five minutes of the film, added late to save time [S10].
 
-### Test every trial against a real girl
+### No ending in advance (2001)
 
-Chihiro was modelled on real ten-year-old girls he had watched, and he tested each challenge by asking whether a girl like a friend's daughter could manage it [S2]. He called himself a pessimist, but said he keeps that from children so they can form their own view [S2]. He said films for children can please adults, but not the other way round, because a children's story allows a fresh start and an adult story cannot undo what happened [S2]. Asked why his heroines are young girls, he joked that it was because he loves women very much, and he answered some questions with humour instead of at length [S2]. Asked whether success would change his methods, he said no, since the methods had worked [S2].
+For Spirited Away he had planned about 1,200 shots and ended with 1,415. He did not know the ending in advance, saying the film makes itself and he must follow [S2]. He said a producer's warning of another year of work pushed him back to the desk faster [S2]. He found the meaning of the last train ride only while making it [S2]. In 2013 he repeated that he had rarely known an ending when he began, and that he drew storyboards in instalments, so staff worked without knowing how it would end [S6].
 
-### Writing the museum list
+### Testing every trial against a real girl (2001)
 
-The statement also says the shop should not chase revenue and should sell original items found only there, and that the museum should keep taking in new ideas and pay for it [S3]. It should not be a retrospective of old films, and should commission new works, including original short films for the venue [S3]. The writing is in the first person, in short parallel lines, and ends with a list of what the museum must not be [S3].
+Chihiro was modelled on real ten-year-old girls he had watched. He tested each challenge by asking whether a girl like a friend's daughter could manage it [S2]. He called himself a pessimist but said he keeps that from children so they can form their own view [S2]. The test turned a vague audience into one person he could picture.
 
-### Making a film around a question he could not answer
+### Refusing to condemn or defend (2013)
 
-For *The Boy and the Heron* he took the Japanese title from a 1937 novel, *How Do You Live?*, and said in 2021 he was making the film because he had no answer to that question. The film took about seven years [S5].
+For The Wind Rises he made a film about Jiro Horikoshi, designer of the Zero fighter. His proposal said the film was not meant to condemn war or to excite young people about the Zero, and that he had no plans to defend his hero [S8]. What he wanted was a film that was realistic and fantastic, sometimes caricatured, and beautiful as a whole [S8]. He was inspired by Horikoshi's wish to make something beautiful [S1].
 
-### Keeping the staff's off-cuts
+### Stepping back from features (2013)
 
-He keeps staff work even when it does not fit the scene, and finds a use for it later, rather than throwing it out [S2][S4].
+At the September 2013 press conference Miyazaki said The Wind Rises took five years and a next film might take six or seven, which would use up the rest of his seventies [S6][S9]. His daily drawing time had fallen from 12 to 14 hours to about seven [S6]. He said his days of feature films were done, that he would keep coming to the studio while he could drive, and that he would work on the Ghibli Museum exhibits [S6][S9]. He later returned, and made The Boy and the Heron over about seven years [S5]. The studio set no deadline and let others check and redraw frames when he could not [S11].
+
+### Writing the museum as a list of nots (2001)
+
+For the Ghibli Museum he wrote a signed statement in short parallel lines. It said what the museum should be, then ended on a list of what it must not be: pretentious, grand, or treating its contents as more important than people [S3]. The shop should not chase revenue, and the park should be planned ten years ahead [S3].
 
 ## Blind spots to watch
 

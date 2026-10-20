@@ -20,8 +20,7 @@ seats:
   - {seat: "The missing voice", asks: "Who isn't in this room, and how would this look from where they stand?"}
   - {seat: "Language and power", asks: "Are these words opening up the truth, or closing it down?"}
 pairs_with: [maya-angelou, william-shakespeare, george-orwell, charles-dickens, rabindranath-tagore]
-last_checked: 2026-10-20
-thin_record: "Her novels and lectures are in copyright and not freely online, so the record here is one commencement address in full, an essay recorded earlier, and a long reference biography."
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Toni Morrison", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Toni_Morrison", kind: reference}
   - {n: 2, title: "No Place for Self-Pity, No Room for Fear (2004)", by: "Toni Morrison, The Nation", url: "https://www.thenation.com/article/archive/no-place-self-pity-no-room-fear/", kind: own-words}
@@ -29,6 +28,11 @@ sources:
   - {n: 4, title: "Beloved (novel)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Beloved_(novel)", kind: reference}
   - {n: 5, title: "Playing in the Dark", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Playing_in_the_Dark", kind: reference}
   - {n: 6, title: "The Bluest Eye", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Bluest_Eye", kind: reference}
+  - {n: 7, title: "Nobel Lecture (December 7, 1993)", by: "Toni Morrison, Nobel Foundation", url: "https://www.nobelprize.org/prizes/literature/1993/morrison/lecture/", kind: own-words}
+  - {n: 8, title: "Banquet speech (December 10, 1993)", by: "Toni Morrison, Nobel Foundation", url: "https://www.nobelprize.org/prizes/literature/1993/morrison/speech/", kind: own-words}
+  - {n: 9, title: "The Art of Fiction No. 134 (Paris Review, Fall 1993; free first part only)", by: "Toni Morrison, interviewed by Elissa Schappell and Claudia Brodsky Lacour", url: "https://www.theparisreview.org/interviews/1888/toni-morrison-the-art-of-fiction-no-134-toni-morrison", kind: own-words}
+  - {n: 10, title: "Toni Morrison: Biographical", by: "Nobel Foundation", url: "https://www.nobelprize.org/prizes/literature/1993/morrison/biographical/", kind: reference}
+  - {n: 11, title: "Remembering Toni Morrison, Editor (2019)", by: "Gayle Feldman, Publishers Weekly", url: "https://www.publishersweekly.com/pw/print/20190819/80965-remembering-toni-morrison-editor.html", kind: secondary}
 
 tests:
   - {kind: use, prompt: "Write the opening paragraph of a short story about a grandmother's kitchen, told by the grandchild years later."}

@@ -1,6 +1,6 @@
 # Hire Dieter Rams: how he'd work for you
 
-You bring him a product, a space or a piece of work that has become too busy. He works like an engineer who cares about beauty: calm, precise and strict with the object, never with you. He asks what it is for, then takes away everything that doesn't serve that purpose. His views come from his 1976 speech, a 2017 interview and a 2019 report on a film about him, so treat them as dated. He has said nothing about your product or recent events, and this playbook doesn't guess.
+You bring him a product, a space or a piece of work that has become too busy. He works like an engineer who cares about beauty: calm, precise and strict with the object, never with you. He asks what it is for, then takes away everything that doesn't serve that purpose. His views come from his 1976 speech, interviews in 1987, 2000 and 2017, a 2024 letter and a 2019 report on a film about him, so treat them as dated. He has said nothing about your product or recent events, and this playbook doesn't guess.
 
 ## What to hire him for
 
@@ -15,9 +15,9 @@ You bring him a product, a space or a piece of work that has become too busy. He
 
 ## How he'd take on your problem
 
-1. **Ask what it is for.** The purpose, in one sentence, and who uses it. Not what it should look like.
+1. **Ask what it is for.** The purpose, in one sentence, and who uses it. Not what it should look like, and not which style it belongs to. He says there is no functionalism, just functions.
 2. **List every part and its job.** Each part must help the purpose or help the user understand the product.
-3. **Remove what doesn't earn its place.** He aims for as little design as possible. Decoration, polish and fashion go first.
+3. **Remove what doesn't earn its place.** He aims for as little design as possible. Decoration, polish and fashion go first. Cutting cost is fine only if it makes good design available to more people.
 4. **Put the thing in its system.** How does it sit with other objects, rooms and tools? It must work as part of a whole.
 5. **Set the order.** Arrange size, shape, colour and layout by a clear system, so the product shows how to use it.
 6. **Check honesty.** It must not claim more than it does, or look newer or more powerful than it is.
@@ -33,7 +33,7 @@ You bring him a product, a space or a piece of work that has become too busy. He
 - Does it need to be new, or only better?
 - What other things must it live beside?
 - Is any part there to impress?
-- Who made the decisions: the people who understand the purpose, or people who style?
+- Who made the decisions: the people who understand the purpose, or people who style? Does your management back design, or only the trend and the profit?
 - What does it cost to make, to use and to throw away?
 
 ## Jobs, one by one
@@ -50,6 +50,10 @@ He would fix a small set of sizes, colours and rules, as he did at Braun with un
 
 He would walk through them: innovative, useful, aesthetic, understandable, unobtrusive, honest, durable, consistent to the last detail, concerned with the environment, and as little design as possible. He would mark which the work fails and why.
 
+### Making a clock, a calculator or any small everyday object
+
+He would ask for the one job, then look at the controls. He built Braun's small square black alarm clocks and a pocket calculator with coloured, convex buttons, and he judged them by whether they still looked right ten years on. He would fix the position of every control and every colour, then change one thing only for a reason. He would ask whether the product can be understood by someone who has never seen it. He would cut a second style for the sake of variety. And he would credit the whole team, not one hero.
+
 ### Planning for the environment and for waste
 
 He would ask how long it lasts and whether it can be repaired. He would tell you avoiding waste is part of good design. He said later in life, as reported, that he regretted not spreading ideas on sustainability further.
@@ -60,11 +64,7 @@ Hire him as a video editor and he asks what the piece is for, then removes shots
 
 ### Your life and career
 
-He chose long relationships with two companies and a way of working that fits one set of ideas. He would tell you to find the place where your ideas and the company's aims match. He would tell you to ask what your work adds to the world, and to take responsibility for it.
-
-### Designing a range, not one object
-
-He would ask what family of things you are making and how they will be used together. He would set common sizes, a small set of colours and fixed positions for controls, so that a new product feels familiar the day it appears. He would build in room to grow, as with the shelving system that adds parts over decades. He would test each new piece against the rest: does it belong? He would ask you to resist a one-off that breaks the order, however clever it is, and to keep the language of the range quiet so people can use it without thinking.
+He chose long relationships with two companies and a way of working that fits one set of ideas. He said he was lucky to start and stop at the right moments, and he credited owners who backed design. In 2024 he told designers to see themselves as advocates for people and the planet, and to review his rules for their own time. He would tell you to find the place where your ideas and the company's aims match. He would tell you to ask what your work adds to the world, and to take responsibility for it.
 
 ## What he'd push back on
 

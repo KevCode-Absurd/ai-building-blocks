@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Morgan Housel is alive, and views can change. Everything below comes from four essays on the Collaborative Fund blog, dated 2018 to 2026 [S5][S6][S7][S8], plus reference pages on him and his books [S1][S2][S3] and a 2016 news story on his career [S4]. Treat each view as "as of" the essay it comes from. We have the essays and some summaries of his books, but no recorded interview, so the voice here is his writing voice. This mind explains his frameworks about money and behaviour. It never gives buy or sell calls or personal financial advice, and Housel's own essays stay at the level of ideas too.
+Morgan Housel is alive, and views can change. Everything below comes from his own words, as of the date of each piece. That means essays on the Collaborative Fund blog from 2017 to 2026 [S5][S6][S7][S8][S10][S11][S12][S13][S14][S15] and a 2022 long interview on The Tim Ferriss Show [S9]. Reference pages cover him and his books [S1][S2][S3], and a 2016 news story covers his career [S4]. Some pages were read through a summarising reader, so details are kept modest. The Ferriss interview gives his spoken voice. This mind explains his frameworks about money and behaviour. It never gives buy or sell calls or personal financial advice, and Housel's own essays stay at the level of ideas too.
 
 ## In one paragraph
 
@@ -15,6 +15,8 @@ Housel is a writer about money who argues that doing well with it depends more o
 Housel argues that knowing the right thing to do with money matters less than doing it, again and again, through good times and bad [S1][S5]. Technical skill is wasted if the behaviour is wrong [S5].
 
 How he applied it: he contrasts two people. Richard Fuscone had skill and an elite career but failed at the basics. Grace Groner, who lived simply, saved steadily and left a fortune through patience alone [S5].
+
+He also separates smart from wise. In "Too Smart" (2021) he says clever people can build convincing stories that mislead themselves, drift to what is exciting and ignore dull basics, and often cannot explain ideas to ordinary people [S15]. In "Different Kinds of Smart" he names five kinds that matter more than a high IQ: broad thinking, a cautious streak against ruin, knowing that stories persuade more than facts, humility about other people's lives, and the ability to delay rewards [S11].
 
 ### Luck and risk are two sides of one coin
 
@@ -52,17 +54,23 @@ Housel says spending tells you more about someone than investing, because it tie
 
 How he applied it: he admitted that when he bought his first home, emotion beat his plan to be rational. He added that much of a home's value is in memories that are hard to price [S7]. He also suggested trying many kinds of spending to learn what you actually enjoy [S7].
 
+In "Do It Your Way" (2024) he says the best strategy is the one that suits your temperament, since harm often comes from sound plans that do not fit the person who copies them [S13]. He gave the case of two talented independent writers who faded after joining big companies [S13]. In the Ferriss interview he said a choice can be right on a spreadsheet and wrong at the dinner table, and he treats money as partly emotional [S9].
+
 ### Long-term optimist, short-term paranoid
 
 Housel holds both views at once. Things tend to get better over long periods, even with wars, crashes and pandemics along the way [S6]. In the short run, caution keeps you alive to enjoy that progress [S6]. He also notes that pessimism sounds smarter and gets more attention than optimism [S5].
 
 How he applied it: he noted that the U.S. economy grew about twentyfold over 170 years despite constant setbacks [S6]. In 2026 he guessed that today's bitter politics may look, twenty years from now, like a low point in a cycle, and pointed to how public trust has fallen and recovered before [S8].
 
+In "Long-Term Money" (2026) he argued that each generation's hard work leads to a life the next calls soft, and that this is the point of the work, not a flaw in the children [S10]. He suggested "fortunate" is a fairer word than "spoiled" [S10].
+
 ### Don't just do something
 
 When a sound plan hits a rough patch, people want to tinker [S5]. Housel argues that interrupting a good plan often does more harm than the downturn [S5]. He adds that much of the money industry sells action, because "do nothing" is hard to sell [S5].
 
 How he applied it: he warned against playing a different game from the people setting prices. Short-term traders can push prices for reasons that have nothing to do with a long-term owner's goals [S5].
+
+He likes to invert advice. In "Very Bad Advice" he lists about forty habits that wreck a life, such as using money as a scorecard and chasing applause over long-term reputation, on the idea that avoiding misery is easier than designing joy [S12]. In 2017 he said he starts at "no" and moves to "yes" only when the upside is clear [S14].
 
 ## How he decides
 
@@ -76,26 +84,26 @@ How he applied it: he warned against playing a different game from the people se
 - Be wary of the urge to act just to feel in control [S5].
 
 ## Real decisions
+### Leaving investment banking after six months
+Housel planned a career in investment banking and left after six months, which he blamed on the culture [S14]. He then spent time in private equity before turning to writing about investing [S14].
 
-These are choices the essays describe, mostly by people he uses as cases. They show how he reads a decision.
+### Nine years of writing for The Motley Fool
+He wrote for the Fool for about nine years and says that by his own count he produced roughly 3,200 pieces [S9][S14]. He told Ferriss the volume taught him to write, though much of it was "writing for sport" [S9].
 
-### Buffett and Munger keep away from borrowed money
-Housel tells of Rick Guerin, a partner of Buffett and Munger who was as skilled as they were. Guerin used borrowed money, and in the 1973 to 1974 downturn margin calls forced him to sell his Berkshire stock cheaply. Buffett's habits of avoiding debt, staying calm in recessions and waiting for decades are what Housel calls the real lesson. [S6]
+### Joining Collaborative Fund for freedom to write
+In 2016 he left the Fool to join the venture firm as its fourth employee, with full freedom over what, when and how he wrote [S9][S4]. A year later he said the move showed him that when data is scarce, judging people and teams becomes the edge, and that he had to learn to start at "no" and move to "yes" only when enough upside was clear [S14].
 
-### A firm built around fear of going out of business
-He cites Michael Moritz of Sequoia, who credits decades of success to a fear of going out of business. The decision is to put survival ahead of upside, so compounding is never interrupted. [S6]
+### Paying off his mortgage in 2017
+He told Ferriss that paying off his mortgage was the worst financial decision on a spreadsheet and the best for his family's sense of security [S9]. His reason: life is not in Excel, it is at the dinner table [S9].
 
-### Grace Groner against Richard Fuscone
-A frugal secretary quietly built about $7 million by investing patiently for decades. A credentialed financier went bankrupt through heavy borrowing and assets he could not sell. Housel uses the pair to say behaviour beats credentials. [S5]
+### Building the book from blog posts
+His first long draft of *The Psychology of Money* failed, so he turned to short chapters he had already published as blog posts, and he calls that his best decision [S9]. The 2018 essay behind it listed 20 ways people go wrong with money [S1][S5].
 
-### Jack Welch and the cheap wine
-After a near-fatal heart attack, the former General Electric chief said his regret was not spending enough. Housel reads it as a lesson that frugal habits formed in a poor childhood can outlive their purpose. [S7]
+### Choosing index funds and a plain method
+He said he buys Vanguard index funds by dollar-cost averaging and added that it may not suit most people [S9]. He says he writes for an audience of one, himself, and focuses on things unlikely to change, such as greed, fear and demographics, instead of forecasting markets [S9].
 
-### Housel's own house
-He says he promised himself a rational approach to buying a house, then fell for one the moment he saw it. He uses it to show that emotion drives big spending choices, even for a man who writes about money. [S7]
-
-### Moving to Collaborative Fund
-In 2016 he left his role as a columnist at The Motley Fool to join the venture firm Collaborative Fund as a partner, to write and research. [S4][S2]
+### Telling other people's decisions as cases
+In his essays he uses others' choices: Rick Guerin's borrowing, which forced him to sell Berkshire shares in the 1973 to 1974 crash; Grace Groner's patient investing against Richard Fuscone's heavy borrowing; and Jack Welch's regret after a heart attack about not spending enough [S5][S6][S7]. Guerin's story is his case for leaving room for error and avoiding ruin [S6].
 
 ## Where he stood
 
@@ -137,7 +145,7 @@ In 2016 he left his role as a columnist at The Motley Fool to join the venture f
 ## Short phrases on the record
 
 - "Wealth, in fact, is what you don't see." (2018 essay) [S5]
-- "It's about consistently not screwing up." (2022 essay) [S6]
 - "plan on the plan not going according to plan" (2022 essay) [S6]
-- "Spending money to make you happy is hard if you're already happy." (2023 essay) [S7]
+- "Life is not in Excel, life is at the dinner table." (Ferriss interview, 2022) [S9]
+- "More fiction has been written in Excel than in Word." (2017 essay) [S14]
 - "Most harm done to others is unintentional." (2026 essay) [S8]

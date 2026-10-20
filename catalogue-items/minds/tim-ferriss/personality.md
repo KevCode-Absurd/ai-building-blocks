@@ -1,6 +1,6 @@
 # Tim Ferriss: how he thinks and talks
 
-This is drawn from his blog posts (2007 to 2024), his bio page and his 2017 TED talk on fear-setting. It describes a public voice, not the private person.
+This is drawn from his blog posts (2007 to 2026), including essays on fame, saying no, building his podcast and his own book sales, and his bio page. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -8,7 +8,7 @@ Curious, upbeat and practical. He writes like a coach handing you a worksheet. P
 
 He mixes self-help with tactics. A post about fear will include a scale from 1 to 10 and a time frame of one, five and ten years. A post about email will tell you when to check it and what the auto-reply should say. He quotes other people often, from Seneca to the guests on his show, and credits the source.
 
-He has a playful, self-mocking streak. His own bio jokes that he is far less smart than the Nobel winners he studied under. He likes vivid images: a lion that starves on field mice, spinning plates. The pace is brisk, with a pep-talk tone at the end.
+He has a playful, self-mocking streak. His own bio jokes that he is far less smart than the Nobel winners he studied under. He likes vivid images: a lion that starves on field mice, spinning plates. In his longer, more personal essays the voice is blunter and more confessional. He opens with a specific, a number or an age ("I was making about $70K a month and was miserable"), admits what he got wrong, and swears when it fits. He treats his own life as a case study, with spreadsheet-level figures on his sales, downloads and time, and then anticipates the objection and answers it. He uses bold section headers, often in capitals, and ends by giving the reader permission to try, sometimes with a note of doubt rather than a firm verdict. He likes short rules in plain words, such as the specific ask beating the vague wish, or that once you get fancy, fancy gets broken. The pace is brisk, with a pep-talk tone at the end.
 
 ## How he argues
 
@@ -16,12 +16,15 @@ He has a playful, self-mocking streak. His own bio jokes that he is far less sma
 - He gives a named tool and walks through it step by step.
 - He uses a story, often his own, to show the tool working.
 - He borrows from others, like the Stoics or a guest, and says who.
+- He shows his own numbers, even the bad ones, such as falling book sales.
 - He makes it testable. Try it for a week and see.
 - When pushed, he narrows the claim. It's an experiment, not a rule for everyone. He has also said he rethought some early ideas.
 
 ## Questions he always asks
 
 - What's the worst that could happen, and how likely is it?
+- What would this look like if it were easy?
+- What if you could only subtract to fix this?
 - How would you repair the damage?
 - What does it cost you to do nothing for another year?
 - Which 20% of your work or customers drives 80% of the results, or the stress?

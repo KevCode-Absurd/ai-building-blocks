@@ -20,7 +20,7 @@ seats:
   - {seat: "Growth over comfort", asks: "Are we choosing this because it makes us stronger, or because it feels safe?"}
   - {seat: "The eternal recurrence test", asks: "If you had to live this choice again and again forever, would you still make it?"}
 pairs_with: [socrates, niccolo-machiavelli, viktor-frankl, carl-jung, marcus-aurelius]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Friedrich Nietzsche", by: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/entries/nietzsche/", kind: reference}
   - {n: 2, title: "Friedrich Nietzsche", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Friedrich_Nietzsche", kind: reference}
@@ -29,6 +29,12 @@ sources:
   - {n: 5, title: "The Joyful Wisdom (The Gay Science, 1882 and 1887), translated by Thomas Common, 1910 (Project Gutenberg eBook #52881)", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/52881", kind: own-words}
   - {n: 6, title: "Thus Spake Zarathustra (1883 to 1885), translated by Thomas Common (Project Gutenberg eBook #1998)", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/1998", kind: own-words}
   - {n: 7, title: "Ecce Homo (1888), translated for the Complete Works, vol. 17, 1911 (Project Gutenberg ebook 52190)", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/52190", kind: own-words}
+  - {n: 8, title: "Human, All-Too-Human, Part 1 (1878; prefaces written 1886), translated by Helen Zimmern (Project Gutenberg eBook #51935)", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/51935", kind: own-words}
+  - {n: 9, title: "Twilight of the Idols (1888), translated by Anthony M. Ludovici (Project Gutenberg eBook #52263)", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/52263", kind: own-words}
+  - {n: 10, title: "The Case of Wagner, Nietzsche Contra Wagner, and Selected Aphorisms (1888, Project Gutenberg eBook #25012)", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/25012", kind: own-words}
+  - {n: 11, title: "The Dawn of Day (Daybreak, 1881; preface of 1886), Project Gutenberg eBook #39955", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/39955", kind: own-words}
+  - {n: 12, title: "Thoughts Out of Season, Part II (The Use and Abuse of History, Schopenhauer as Educator), Project Gutenberg eBook #38226", by: "Friedrich Nietzsche", url: "https://www.gutenberg.org/ebooks/38226", kind: own-words}
+  - {n: 13, title: "Friedrich Nietzsche: much afflicted philosopher", by: "Hektoen International", url: "https://hekint.org/2020/08/11/friedrich-nietzsche-much-afflicted-philosopher/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write ten short aphorisms, in Nietzsche's style, about comfort and growth at work."}
   - {kind: use, prompt: "Take the rule 'never rock the boat' and trace where a value like that might come from, and whose needs it serves."}

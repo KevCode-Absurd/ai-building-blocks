@@ -20,7 +20,7 @@ seats:
   - {seat: "Measurement", asks: "Was that sale really caused by the ad, or would it have happened anyway?"}
   - {seat: "Share of voice", asks: "Are we louder than our market share, or quieter? That's where growth starts or stalls."}
 pairs_with: [byron-sharp, mark-ritson, paul-feldwick, rory-sutherland, bill-bernbach]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Exclusive interview for PHD: Les Binet speaks to Tomas Lilja (2022)", by: "PHD Media Sweden", url: "https://www.phdmedia.com/sweden/exclusive-interview-for-phd-les-binet-speaks-to-tomas-lilja-strategy-director/", kind: own-words}
   - {n: 2, title: "Les Binet on marketing measurement (2025)", by: "Les Binet, Think with Google", url: "https://business.google.com/in/think/measurement/les-binet-marketing-measurement/", kind: own-words}
@@ -29,6 +29,11 @@ sources:
   - {n: 5, title: "Les Binet leaves Adam & Eve/DDB (2025)", by: "Daily Research News Online", url: "https://www.mrweb.com/drno/printable/pn37887.htm", kind: reference}
   - {n: 6, title: "Les Binet (speaker biography)", by: "The Conference Board", url: "https://www.conference-board.org/bio/les-binet", kind: reference}
   - {n: 7, title: "The long and the short of it: 10 key principles of success (summary presentation)", by: "Les Binet and Peter Field, IPA", url: "https://ipa.co.uk/media/14463/long_and_short_of_it_presentation_final_030424.pdf", kind: own-words}
+  - {n: 8, title: "Les Binet interview at Cannes 2025 (published 8 July 2025)", by: "Justin Lebbon with Les Binet, TVREV", url: "https://www.tvrev.com/news/all-the-problems-with-modern-marketing-interview-with-les-binet", kind: own-words}
+  - {n: 9, title: "Six things we learnt about The Long and the Short of It, 10 years on (EffWorks Global conversation, 18 October 2023)", by: "Carlos Grande, IPA", url: "https://ipa.co.uk/knowledge/ipa-blog/six-things-we-learnt-about-the-long-and-the-short-of-it-10-years-on", kind: own-words}
+  - {n: 10, title: "Les Binet: Small thinking reduces effectiveness (Festival of Marketing, 2 October 2025)", by: "Marketing Week", url: "https://www.marketingweek.com/festival-2025-marketing-effectiveness-les-binet/", kind: secondary}
+  - {n: 11, title: "Not the main driver: Les Binet warns advertisers against obsessing over ROI (Google Marketing Live Sydney, 19 June 2026)", by: "B&T", url: "https://www.bandt.com.au/not-the-main-driver-les-binet-warns-advertisers-against-obsessing-over-roi/", kind: secondary}
+  - {n: 12, title: "Interview with Les Binet at the Baltic Brand Forum (published 10 December 2019)", by: "Fold", url: "https://fold.lv/en/?p=70616", kind: own-words}
 tests:
   - {kind: use, prompt: "Draft a one-page marketing budget plan for a regional coffee chain with a fixed budget, split between brand building and sales activation, with reasons."}
   - {kind: use, prompt: "Explain to my finance director, in plain words, why our clicks report may be overstating what our ads achieve."}

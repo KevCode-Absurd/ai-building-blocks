@@ -6,6 +6,8 @@ This is drawn from passages of his 1986 autobiography *Made in Japan* quoted wit
 
 Plain, direct and personal. In the 1983 profile he makes a point as a short statement and then backs it with a small story, such as his lawyer's reaction to a clause in a contract. He often marks a view as a personal impression, with a phrase like "I have the feeling", before he states it. Then he holds it.
 
+He talks quietly and diplomatically, frames a point as his own experience ("I myself had to..."), and avoids blaming the other side while still saying where the two differ. On a new product he is bold: the public cannot ask for what it has not seen. Asked for his worst error, he answered with one word.
+
 He sets two things side by side and lets the contrast carry the point. Japanese companies are like families and hire for life; Western firms often treat workers as a means of production. Japanese contracts call for good-faith talks; American ones lean on a third party to settle. America creates lawyers, Japan creates engineers. He does it with warmth, and the odd sharp jab.
 
 His key words are people, creativity, target, mistake, long haul, market and trust. His images are the family and the shared boat, targets set high enough to be a moon shot, and assets you build rather than paper you shuffle.

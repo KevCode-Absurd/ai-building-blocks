@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-**An honest note on the sources.** Matthew Dixon is alive, and views can change. The two interviews (2022 and 2023, S1 and S2) and the two Harvard Business Review articles (S3 and S4) were studied from their public pages earlier. In our folder today we hold only short excerpts of the two interviews, links to the articles, and a Wikipedia page on *The Challenger Sale* (S6) that we can check against saved text. So the book's date, authors and five-profile claim are firm, and his method points rest on the earlier study. They should be re-checked against full transcripts before anyone leans on a detail. Most of his work was written with co-authors, first at CEB, a research firm, and later with Ted McKenna. Treat each view as "as of" the year of its source. His books are under copyright, so this data set summarises them and does not quote them. Our sources do not confirm his birth year.
+**An honest note on the sources.** Matthew Dixon is alive, and views can change. His own words come from a full podcast transcript of 2023 [S1], a 2022 written interview [S2], a 2025 podcast transcript on client loyalty and his professional services research [S10], and two Harvard Business Review articles [S3][S4]. Four more pages (S11 to S14) are host summaries or write-ups with a few of his lines, so they carry less weight. The Challenger Sale, The Effortless Experience and The JOLT Effect are under copyright and we did not read them, so book-level claims rest on interviews, articles and reference pages. Most of his work was written with co-authors, first at CEB, a research firm, and later with Ted McKenna. Treat each view as "as of" the year of its source. This data set summarises and does not quote the books. Our sources do not confirm his birth year.
 
 ## In one paragraph
 
@@ -22,7 +22,7 @@ The book's central claim is that building relationships is no longer the best wa
 
 How he applied it: the four Challenger behaviours in Salesforce's summary are teaching, tailoring, taking control and building useful tension by naming uncomfortable truths [S8].
 
-### Customers no longer need the seller to find the solution
+**Customers no longer need the seller to find the solution**
 
 In a 2012 Harvard Business Review article with Adamson and Nick Toman, Dixon argued that solution selling was ending [S3]. Reps used to win by learning a customer's needs and selling a bundle of products and services as a "solution". That worked because buyers knew their problems but not how to fix them [S3]. Now procurement teams and consultants with good data let companies define their own solutions, so buyers need reps less [S3].
 
@@ -52,11 +52,27 @@ JOLT is four steps [S2]. Judge the level of indecision, and qualify and forecast
 
 How he applied it: in 2023 he named three sources of indecision: not knowing what to choose, feeling there is always more to research, and worrying the promised result won't arrive [S1]. He listed practical safety nets such as opt-out clauses, prorated refunds, services help and a clear roadmap for getting value [S1]. He compared the best sellers to a good travel agent who narrows the choice for you [S1].
 
-### Fear tactics backfire on stuck buyers
+**Fear tactics backfire on stuck buyers**
 
 When a buyer stalls, average sellers often add pressure: restating benefits, raising the fear of missing out, or offering a discount that expires [S1]. Dixon reports this backfires about 84% of the time, because it gives the worried buyer more to worry about [S2]. The JOLT approach first lowers the fear of buying, then deals with the fear of a mistake [S2].
 
 How he applied it: the gap showed in win rates. Against deeply indecisive buyers, average sellers converted 6% and top performers 31% [S2].
+
+### Ask which fear, then tell them what not to buy
+
+His team found that buyers fear messing up more than missing out. They say customers are not afraid of missing out; they are afraid of messing up [S11]. His rules for the seller: find the root cause of the hesitation before you push, be open even if that means recommending something smaller or cheaper, and say what a customer should not buy, even from your own range, since it builds trust. Avoid scare tactics and long menus, and give the buyer a sense of control [S11]. He separates mistakes of acting wrongly from mistakes of not acting [S11]. One host's takeaways add "pings and echoes": voice a possible worry aloud, like a sonar ping, and watch the echo of the buyer's reaction [S13].
+
+### Lead to your capabilities, not with them
+
+Looking at professional services, he reports that the best partners lead to their capabilities, not with them. They start from the client's world and arrive at what they can do [S10]. He found that clients' loyalty to a trusted firm had dropped: more than three quarters of top executives said they would return to a trusted firm automatically five years ago, about half do now, and he projects a third in five years [S10]. Many still return, but after an RFP or pitch [S10]. The best predictor of loyalty was whether clients think of the partner when no paid work is under way [S10].
+
+### Business, trust and personal value
+
+Dixon splits the value a client sees in three. Business value helps them save or make money, manage risk or win. Trust value is work done ethically, openly, on time and at a fair price. Personal value means knowing the client as a person and helping them beyond paid work, and he treats it as the main source of stickiness [S10]. His small-habit advice: spend a steady 15 minutes on business development, plan what you will do in it, connect clients with people in your network, and bring colleagues into the relationship so loyalty belongs to the firm [S10].
+
+**Controllers over empathizers in service**
+
+On the Effortless Experience, he says customers judge service mostly by the effort they felt, about two thirds of the verdict by his account, and that the last thing a customer who finally calls wants is an apology [S12]. His hiring call is for reps who take control of the problem and reach a fast solution (controllers) over those who lead with sympathy (empathizers) [S12]. He adds that just because there is nothing you can do, it doesn't mean there is nothing you can do, and that offering a choice, such as a refund now or a discount later, restores control [S12]. He also favours giving customers guidance, since they want the company to recommend the best channel [S14].
 
 ## How he decides
 
@@ -90,6 +106,12 @@ For The JOLT Effect, he and McKenna studied about 2.5 million recorded sales cal
 ### Dropping pressure for safety nets
 
 Faced with a stalled buyer, many sellers add urgency. Dixon reports this backfires about 84% of the time [S2]. His team's answer was to offer a personal recommendation and safety nets such as opt-out clauses or prorated refunds [S1]. Against deeply indecisive buyers, the data show average sellers converted 6% and top performers 31% [S2].
+
+### Walking out of a partner retreat with a new study
+About a year after The Challenger Sale (2011), a large strategy firm asked Dixon to present at a partner retreat of roughly 500 people. Partway through, the managing partner stopped him and said no one in the room was in sales [S10]. Dixon joked that the client's money still reaches the firm's bank account by a mysterious process and asked if they could call it a sale; the room laughed and he finished [S10]. He drew two conclusions: his findings were about salespeople, so he stopped accepting talks to lawyers and partners, and professional services deserved its own data [S10].
+
+### Studying partners at about 40 firms
+The professional services study began in 2022 and ran about two years, with data on roughly 3,000 partners at about 40 firms [S10]. It was published in Harvard Business Review in late 2023 and became the book The Activator Advantage in May 2025 [S10]. It found five partner profiles (experts, confidants, activators, debaters, realists), and the activators clearly did best [S10].
 
 ## Where he stood
 

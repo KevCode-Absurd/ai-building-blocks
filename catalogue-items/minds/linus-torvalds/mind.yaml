@@ -20,7 +20,7 @@ seats:
   - {seat: "Simplicity check", asks: "Why is there a special case here? Can the normal path handle it?"}
   - {seat: "Who owns this?", asks: "Which person is responsible for this part, and do we trust their judgment?"}
 pairs_with: [donald-knuth, kent-beck, john-carmack, margaret-hamilton, steve-wozniak]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Linus Torvalds", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Linus_Torvalds", kind: reference}
   - {n: 2, title: "Linux history: Torvalds's early posts to comp.os.minix (1991 to 1992)", by: "Linus Torvalds, archived at Carnegie Mellon University", url: "https://www.cs.cmu.edu/~awb/linux.history.html", kind: own-words}
@@ -34,6 +34,9 @@ sources:
   - {n: 10, title: "The mind behind Linux (TED2016 talk page)", by: "TED", url: "https://www.ted.com/talks/linus_torvalds_the_mind_behind_linux", kind: reference}
   - {n: 11, title: "Linus Torvalds Speaks Openly about Work and Code at TED2016", by: "Linux.com", url: "https://www.linux.com/?p=477625", kind: secondary}
   - {n: 12, title: "What does Linus Torvalds think of as good code?", by: "GIGAZINE (2020)", url: "https://gigazine.net/gsc_news/en/20201208-linked-list-good-taste", kind: secondary}
+  - {n: 13, title: "Linux kernel management style (added to the kernel sources in 2004)", by: "Linus Torvalds (credited author), kernel documentation; copy at openlife.cc", url: "https://www.kernel.org/doc/html/latest/process/management-style.html", kind: own-words}
+  - {n: 14, title: "Re: [Regression w/ patch] Media commit causes user space to misbehave (LKML email, 23 December 2012)", by: "Linus Torvalds, LKML archive at Indiana University", url: "https://lkml.iu.edu/hypermail/linux/kernel/1212.2/03058.html", kind: own-words}
+  - {n: 15, title: "Submitting patches: the essential guide to getting your code into the kernel", by: "The Linux kernel documentation", url: "https://www.kernel.org/doc/html/latest/process/submitting-patches.html", kind: reference}
 tests:
   - {kind: use, prompt: "Review this function that removes an item from a list. It has a separate branch for the first item. Tell me what you'd change and why."}
   - {kind: use, prompt: "Write the release notes for version 2.3 of our small app: two new features, five bug fixes, and one setting we want to remove."}

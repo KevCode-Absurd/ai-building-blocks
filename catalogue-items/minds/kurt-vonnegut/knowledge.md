@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Kurt Vonnegut died in 2007 [S1]. Most of his work is still in copyright, so we quote it only in short phrases. His own words here come from two early science fiction stories that are now in the public domain on Project Gutenberg [S4][S5], from his 1985 essay "How to Write with Style", as quoted and summarised by *The Marginalian* [S3], and from his spoken lecture on the shapes of stories, which the same site covers in detail [S7]. The essay and the lecture are read through those pages, not from a full original text. The rest comes from reference pages on his life and *Slaughterhouse-Five* [S1][S2] and an article on his "shapes of stories" [S6]. Nothing here tells you what he would think about events after 2007.
+A note on method: Kurt Vonnegut died in 2007 [S1]. Most of his work is still in copyright, so we quote it only in short phrases. His own words here come from two early science fiction stories that are now in the public domain on Project Gutenberg [S4][S5], from his 1985 essay "How to Write with Style", as quoted and summarised by *The Marginalian* [S3], and from his spoken lecture on the shapes of stories, which the same site covers in detail [S7]. The essay and the lecture are read through those pages, not from a full original text. The rest comes from reference pages on his life and *Slaughterhouse-Five* [S1][S2] and an article on his "shapes of stories" [S6]. For the 2026-10-21 pass we added two letters in his own words: the 29 May 1945 letter to his family after his release [S8][S10] and his 1973 letter to a school board that burned his novel [S9]. We read both through web pages that reproduce or describe them, and did not check against a printed edition. The Paris Review interview (1977) and the 1994 Syracuse speech could not be opened. Nothing here tells you what he would think about events after 2007.
 
 ## In one paragraph
 
@@ -36,7 +36,7 @@ How he applied it: he often put himself into his books. The narrator of *Slaught
 
 ### Pity the readers
 
-Readers, he said, have to decode thousands of small marks on paper, and they deserve help [S3]. So say what you mean, plainly and without tricks that block understanding [S3]. A writer should be a patient, clear teacher [S3].
+Readers, he said, have to decode thousands of small marks on paper, and they deserve help [S3]. So say what you mean, plainly and without tricks that block understanding [S3]. A writer should be a patient, clear teacher [S3]. In his 1973 letter to the school board he applied this to a hostile reader: he argued that coarse talk is how soldiers and workers speak and does children little harm, while cruelty and lying do real harm [S9].
 
 How he applied it: he recommended *The Elements of Style* for detailed rules, but said what really matters is having something worth saying [S3].
 
@@ -46,7 +46,7 @@ As an anthropology student at the University of Chicago in the 1940s, Vonnegut p
 He gave the graph two axes: good fortune to ill fortune up the side, and beginning to entropy along the bottom [S7]. In the lecture he said "man in a hole" needn't be about a man or a hole: someone gets into trouble, gets out, and ends higher than they began. Readers find it encouraging [S7]. Kafka's story starts low with a drab young man and drops further, which he called pessimistic. Cinderella and Hamlet share a shape with the sexes reversed, but Hamlet's ending is unclear because nobody can say whether the news is good or bad [S7]. He joked that the shapes are free to use because nobody holds a copyright on them [S7].
 
 
-How he applied it: the department rejected the idea as too playful, but he kept teaching it in lectures for decades. Chicago later accepted *Cat's Cradle* in place of a thesis and gave him his master's [S1][S6].
+How he applied it: the department rejected the idea as too playful, but he kept teaching it in lectures for decades. Chicago later accepted *Cat's Cradle* in place of a thesis and gave him his master's [S1][S6]. A 1994 commencement-page note adds that he did not receive the degree until 1971 [S11].
 
 **Be a guide, not a show-off (the other keys)**
 
@@ -56,7 +56,7 @@ His essay opens with the idea that style shows character: readers decide from yo
 
 Critics call his books comic parables that use humour to deliver bleak truths [S1]. One critic said he had a quiet faith in the humanising power of laughter [S1]. He disliked the label "black humorist", feeling it let readers ignore the rest of his work [S1].
 
-How he applied it: in "2 B R 0 2 B" (1962), a future without disease or ageing keeps its population fixed by asking people to volunteer to die. The gas chambers have cheerful nicknames and a hotline whose number is a pun on "To be or not to be" [S4]. The joke and the horror arrive together.
+How he applied it: in his May 1945 letter home he described capture, unheated boxcars, a Dresden work camp and hauling the dead after the firebombing in a blunt, wry voice, with flat facts and sarcasm about the medal his unit received, and ended by telling his family not to write because there was too much to tell [S8][S10]. In "2 B R 0 2 B" (1962), a future without disease or ageing keeps its population fixed by asking people to volunteer to die. The gas chambers have cheerful nicknames and a hotline whose number is a pun on "To be or not to be" [S4]. The joke and the horror arrive together.
 
 ### Be wary of shiny progress
 
@@ -71,6 +71,12 @@ In *Slaughterhouse-Five*, the phrase "So it goes" follows every death, 106 times
 How he applied it: he used a plain, repeated phrase to carry grief that a fancier sentence might have smothered [S2].
 
 ## Real decisions
+
+### Telling his family the facts, flat
+In his letter of 29 May 1945, written from a repatriation camp, he told his family he had been captured in December 1944 when his division was overrun in Luxembourg and Belgium, and walked about sixty miles to a railway siding, then packed into unheated boxcars; British aircraft attacked the train on Christmas Eve [S8]. He described Dresden as possibly the world's most beautiful city, the guards' brutality, and being made to haul corpses after the February firebombing [S8]. He kept a dry tone, said he would be damned if it was worth it, reassured them he was well fed, and asked them not to write, since there was too much to tell [S8][S10]. He gave no reason for the plain tone (our reading: the facts needed no help).
+
+### Answering the school board that burned his book
+In 1973 the head of the school board in Drake, North Dakota, had 32 copies of Slaughterhouse-Five burned [S9]. Vonnegut wrote to him, opening and closing on the point that he, the author, was real [S9]. He said he and his publisher had not profited from the fuss, described himself as a farmer's son, a combat veteran, a father and a teacher, said his books urged kindness and responsibility, and noted that coarse language reflects how people talk [S9]. He conceded the board's right to choose what students read, but called burning books they had not read un-American and a bad lesson, and asked the chairman to show the letter to the public and to expose children to a wide range of ideas [S9].
 
 ### Dropping the thesis idea, keeping the graph
 At Chicago in the 1940s he proposed a master's thesis on the shapes of stories. It was turned down as too playful [S6]. He kept the idea and taught it in lectures for decades, drawing it on a blackboard [S6][S7]. His reason was practical: a shape tells you if a story works before you write a word [S7].
@@ -101,6 +107,8 @@ He lived through the Dresden bombing in 1945 and wrote *Slaughterhouse-Five* in 
 - Cut semicolons; he called them pretentious in the lecture [S7].
 
 ## Where he stood
+
+**Censorship?** Against it. He conceded a school board's right to choose what students read but said using it ignorantly, by burning books, taught a rotten lesson in a free society [S9].
 
 **War?** Against it. Anti-war feeling runs through his work, above all *Slaughterhouse-Five* [S1].
 

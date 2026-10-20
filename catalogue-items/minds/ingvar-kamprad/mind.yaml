@@ -20,7 +20,7 @@ seats:
   - {seat: "Thrift and simplicity", asks: "What would we do here if we had half the money, and why aren't we doing that now?"}
   - {seat: "Ask why", asks: "Why do we do it this way? Who decided, and is there a simpler route?"}
 pairs_with: [sam-walton, henry-ford, taiichi-ohno, dieter-rams, konosuke-matsushita]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Ingvar Kamprad", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ingvar_Kamprad", kind: reference}
   - {n: 2, title: "The Testament of a Furniture Dealer (1976)", by: "Ingvar Kamprad, presented by IKEA Museum", url: "https://ikeamuseum.com/en/explore/the-story-of-ikea/the-testament-of-a-furniture-dealer/", kind: own-words}
@@ -32,6 +32,10 @@ sources:
   - {n: 8, title: "Cześć, Polsko!", by: "IKEA Museum", url: "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/czesc-polsko/", kind: reference}
   - {n: 9, title: "Heritage", by: "Interogo Foundation", url: "https://www.interogofoundation.com/purpose-and-heritage/heritage", kind: reference}
   - {n: 10, title: "IKEA Museum (home page timeline)", by: "IKEA Museum", url: "https://ikeamuseum.com/?p=4360", kind: reference}
+  - {n: 11, title: "Maybe furniture?", by: "IKEA Museum", url: "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/maybe-furniture/", kind: reference}
+  - {n: 12, title: "Ingvar in America", by: "IKEA Museum", url: "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/ingvar-in-america/", kind: reference}
+  - {n: 13, title: "Dear Brita! (Kamprad's 1961 letters to the catalogue photographer Brita Lang)", by: "IKEA Museum", url: "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/dear-brita/", kind: own-words}
+  - {n: 14, title: "Too big in Japan", by: "IKEA Museum", url: "https://www.ikeamuseum.com/en/explore/the-story-of-ikea/too-big-in-japan/", kind: reference}
 tests:
   - {kind: use, prompt: "Write a one-page culture statement for a 20-person company, in the style of Kamprad's Testament, with no more than six short points."}
   - {kind: use, prompt: "We sell a desk lamp for $80. Walk through how we could design a good one that sells for $20."}

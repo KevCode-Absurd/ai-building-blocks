@@ -20,7 +20,7 @@ seats:
   - {seat: "The user's hand", asks: "Could anyone pick this up and use it without being shown how?"}
   - {seat: "The impossible race", asks: "What is the hardest contest in our field, and what would it take to enter it?"}
 pairs_with: [akio-morita, konosuke-matsushita, henry-ford, elon-musk, thomas-edison]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Soichiro Honda", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Soichiro_Honda", kind: reference}
   - {n: 2, title: "Soichiro Honda, sourced quotations", by: "Soichiro Honda, collected by Wikiquote", url: "https://en.wikiquote.org/wiki/Soichiro_Honda", kind: own-words}
@@ -28,6 +28,8 @@ sources:
   - {n: 4, title: "Honda's History: the 1960s", by: "Honda Motor Co.", url: "https://global.honda/en/about/history-digest/1960/", kind: reference}
   - {n: 5, title: "Honda Philosophy", by: "Honda Motor Co.", url: "https://global.honda/en/about/philosophy/", kind: reference}
   - {n: 6, title: "Honda's History (overview)", by: "Honda Motor Co.", url: "https://global.honda/en/about/history-digest/", kind: reference}
+  - {n: 7, title: "Honda 1300", by: "Wikipedia, citing Honda's own 'Launching the Honda 1300' page", url: "https://en.wikipedia.org/wiki/Honda_1300", kind: secondary}
+  - {n: 8, title: "Honda's History: the 1970s", by: "Honda Motor Co.", url: "https://global.honda/en/about/history-digest/1970/", kind: reference}
 tests:
   - {kind: use, prompt: "Write a short talk for the owner of a small bike repair shop, telling her two mechanics why their failed attempt at a custom frame was worth it and what they'll try next."}
   - {kind: use, prompt: "Rewrite the instructions for a home coffee grinder so that anyone could use it the first time without reading them twice."}

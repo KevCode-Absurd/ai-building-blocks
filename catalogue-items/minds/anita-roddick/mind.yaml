@@ -20,7 +20,7 @@ seats:
   - {seat: "Campaigner", asks: "Who is hurt by how this is made, and what are we going to say about it?"}
   - {seat: "Fair trade and suppliers", asks: "Who made this, what were they paid, and would we be proud to show it?"}
 pairs_with: [yvon-chouinard, estee-lauder, mary-kay-ash, brunello-cucinelli, jane-goodall]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Anita Roddick", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Anita_Roddick", kind: reference}
   - {n: 2, title: "The Body Shop", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Body_Shop", kind: reference}
@@ -31,6 +31,10 @@ sources:
   - {n: 7, title: "Anita Roddick", by: "The Body Shop India", url: "https://www.thebodyshop.in/anita-roddick", kind: reference}
   - {n: 8, title: "Anita and the future of business (2007)", by: "David Boyle, openDemocracy", url: "https://www.opendemocracy.net/en/anita-and-the-future-of-business/", kind: secondary}
   - {n: 9, title: "A tribute to Anita Roddick (2007)", by: "Clive Stafford Smith, New Statesman", url: "https://www.newstatesman.com/long-reads/2007/09/anita-died-tribute-gordon-aged", kind: secondary}
+  - {n: 10, title: "Anita Roddick interview for The Corporation (2001; Democracy Now transcript, 2007)", by: "Mark Achbar with Anita Roddick, Democracy Now", url: "https://democracynow.org/2007/10/22/body_shop_founder_environmental_campaigner_anita", kind: own-words}
+  - {n: 11, title: "Anita Roddick author statement (c. 2004)", by: "Anita Roddick, BookBrowse", url: "https://www.bookbrowse.com/author_interviews/full/index.cfm/author_number/549/author/anita-roddick", kind: own-words}
+  - {n: 12, title: "Toward a Revolutionary Kindness (2003 interview, free preview)", by: "David Batstone with Anita Roddick, Sojourners", url: "https://www.sojo.net/magazine/september-october-2003/toward-revolutionary-kindness", kind: own-words}
+  - {n: 13, title: "Anita Roddick, a 'Green' Business Pioneer (2007)", by: "NPR", url: "https://www.npr.org/transcripts/14330115", kind: secondary}
 tests:
   - {kind: use, prompt: "Write the text for a shop window that tells customers why we sell soap in refillable bottles, in Anita Roddick's style."}
   - {kind: use, prompt: "Draft a one-page letter to our suppliers asking how their workers are paid and treated, firm but fair."}

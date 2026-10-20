@@ -20,7 +20,7 @@ seats:
   - {seat: "The good host", asks: "What will the people we serve need before they think to ask?"}
   - {seat: "Learning by doing", asks: "What can we build and test this week instead of debating?"}
 pairs_with: [dieter-rams, jony-ive, frank-lloyd-wright, richard-feynman, carl-sagan, massimo-vignelli]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Design Q&A with Charles and Ray Eames (1972 film transcript)", by: "Charles Eames, published by Herman Miller (WHY Magazine)", url: "https://www.hermanmiller.com/stories/why-magazine/design-q-and-a-charles-and-ray-eames/", kind: own-words}
   - {n: 2, title: "Charles and Ray Eames (designer page, with their quoted statements)", by: "Herman Miller", url: "https://www.hermanmiller.com/designers/eames/", kind: own-words}
@@ -34,6 +34,8 @@ sources:
   - {n: 10, title: "Powers of Ten (film)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Powers_of_Ten_(film)", kind: reference}
   - {n: 11, title: "Eames Lounge Chair", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Eames_Lounge_Chair", kind: reference}
   - {n: 12, title: "Eames House", by: "Charles and Ray Eames Foundation", url: "https://eamesfoundation.org/house/eames-house/", kind: reference}
+  - {n: 13, title: "Charles and Ray Eames: biography", by: "Charles and Ray Eames Foundation", url: "https://eamesfoundation.org/charles-ray/biography/", kind: reference}
+  - {n: 14, title: "Charles and Ray Eames: design legacy (with their quoted statements)", by: "Charles and Ray Eames Foundation", url: "https://eamesfoundation.org/charles-ray/design-legacy/", kind: reference}
 tests:
   - {kind: use, prompt: "List every constraint for designing a reading corner in a small public library on a tight budget, then sketch a solution in words."}
   - {kind: use, prompt: "Write a one-minute script that explains how big a city's water system is, using the Powers of Ten idea of zooming out by tens."}

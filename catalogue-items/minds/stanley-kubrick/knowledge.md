@@ -1,8 +1,8 @@
 # Stanley Kubrick: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Kubrick gave few interviews, and when he did he talked about method, not meaning. The own-words sources here are his 1968 Playboy interview [S2] and his 1969 interview with the critic Joseph Gelmis, printed in 1970 [S3]. Both are web transcripts of print interviews, so treat exact wording with care. The Playboy transcript is mostly about the ideas in 2001, not production, so method detail comes from the Gelmis interview.
+Kubrick gave few interviews, and when he did he talked about method, not meaning. The own-words sources here are his 1968 Playboy interview [S2] and his 1969 interview with the critic Joseph Gelmis, printed in 1970 [S3]. Both are web transcripts of print interviews, so treat exact wording with care. A page of sourced short statements adds a few lines on method [S6], and the archive article describes his working papers [S4]. Free long transcripts beyond these two were not found. The Playboy transcript is mostly about the ideas in 2001, not production, so method detail comes from the Gelmis interview.
 
 ## In one paragraph
 
@@ -56,6 +56,24 @@ Kubrick mostly used existing classical music rather than new scores [S1]. For 20
 
 He pushed film technology when a picture needed it. For Barry Lyndon he used very fast Zeiss lenses first made for NASA, so that scenes could be lit by candles alone [S1]. He was one of the first directors to use the Steadicam heavily, in The Shining, and built his own video playback system in the 1960s [S1]. 2001 used front projection and slit-scan photography, mostly done in the camera rather than with blue screen [S5].
 
+## His own rules
+
+### The director makes decisions
+
+He called the director an idea and taste machine, whose job is to make the right creative and technical decisions as often as possible [S3]. He said nothing is cut without him, that he marks every frame, and that most editing time goes on studying the takes [S3]. He ran a finished film for weeks, alone and with audiences, to judge its length [S3].
+
+### Filmmaking is simple, and you learn by doing
+
+In 1968 he said filmmaking needs only a camera, a tape recorder and imagination, and is terribly easy [S6]. In 1960 he said that reading Pudovkin's book on film technique opened his eyes to cutting before he had ever used a movie camera [S6]. To Gelmis he advised a beginner to make a short film [S3].
+
+### Show the strange as if it were plain
+
+A note in his papers for Full Metal Jacket said to include utter banalities [S6]. Another writer reports he liked to present slightly surreal situations in a realistic way [S6].
+
+### If it can be thought, it can be filmed
+
+In 1970 he said that if a thing can be written or thought, it can be filmed [S6].
+
 ## How he decides
 
 - Research the world of the film until nothing in it is guessed [S1][S4].
@@ -104,27 +122,35 @@ He pushed film technology when a picture needed it. For Barry Lyndon he used ver
 
 ### Turning a serious film into a comedy
 
-He set out to make a serious film about accidental nuclear war. He dropped that approach when he noticed that the ideas he kept throwing out as absurd were the truest ones, and he made *Dr. Strangelove* a black comedy [S3].
+He set out to make a serious film about accidental nuclear war. He kept throwing out ideas as too absurd, then noticed they were the truest ones, and he made *Dr. Strangelove* a black comedy [S3]. His notes show 27 script drafts across three storylines, and the title character came from the "Rise of Dr. Strangelove" version [S4]. After a screening he cut a custard-pie fight in the War Room, because it was farce and off the film's tone [S3].
 
 ### Fixing the structure of Lolita
 
-With Nabokov he opened the film with the murder of Quilty so the story would not lose pace in its second half. Later he said he wished he had given the erotic side of Humbert's obsession more weight [S3].
+He shot *Lolita* in England for financing reasons and to ease censorship trouble [S3]. With Nabokov he opened the film with the murder of Quilty so the story would not lose pace in its second half [S3]. Later he said he regretted not giving the erotic side of Humbert's obsession more weight, because of the pressure of the Production Code [S3].
 
 ### Removing the explainer from 2001
 
-The story went from a prose treatment to a script to a novel by Arthur C. Clarke, written partly from rushes. Kubrick cut the narrator and a scene that explained the monolith too literally, because a more magical image would work better [S3]. He said about 40 of the film's 139 minutes had dialogue, and that he wanted it to reach viewers below the level of words, as music does [S2].
+The story went from a prose treatment to a script to a novel by Arthur C. Clarke, written partly from rushes. Kubrick cut the narrator and a scene that taught the monolith's meaning too literally, because a more magical image would reach viewers below the level of words [S3][S2]. He said about 40 of the film's 139 minutes had dialogue [S2]. After the premiere he cut scenes again, since he said a finished film must be judged afresh [S3].
 
 ### Watching his own film cold
 
-After release he re-watched his films as if seeing them for the first time and cut what did not fit, as he did with a custard-pie scene in *Strangelove* [S3]. He called the director an "idea and taste machine" whose job is to make the right decisions as often as he can [S3].
+After release he re-watched his films as if seeing them for the first time and cut what did not fit [S3]. He said the slowest part of editing is choosing between takes, which he did by comparing segments of several [S3].
 
 ### Casting and rehearsal
 
-He defined the character fully first, then searched for the actor, weighing availability and how each choice affected the rest [S3]. He let actors see the day's rushes at lunch, because he thought it helped self-criticism, and he picked takes by comparing segments of several takes, the slowest part of editing [S3]. He said poor performances are usually the shared fault of actor and director [S3].
+He defined the character fully first, then searched for the actor, weighing availability and how each choice affected the rest [S3]. He let actors see the day's rushes at lunch, because he thought it helped self-criticism [S3]. He said poor performances are usually the shared fault of actor and director [S3].
 
 ### Answering the critics of 2001
 
-He brushed aside the bad reviews from four New York critics, saying reviews elsewhere were about 95 percent enthusiastic and that box office was strong. He said critics rarely shape public opinion [S2]. He declined to give his own reading, comparing it to a picture like the Mona Lisa, which needs no note from the painter [S2][S3]. He called HAL the central character of the film and dismissed a reading of a gay subtext as a parlour game [S3].
+He brushed aside the bad reviews from four New York critics, saying reviews elsewhere were about 95 percent enthusiastic and that box office was strong [S2]. He declined to give his own reading, comparing it to a picture like the Mona Lisa, which needs no note from the painter [S2][S3]. He called HAL the central character of the film and dismissed a reading of a gay subtext as a parlour game [S3].
+
+### Building a ruined city from photographs (Full Metal Jacket)
+
+For *Full Metal Jacket* his team altered photographs of the Beckton gasworks near London with collage and pencil to plan a ruined Vietnamese city [S4]. Billboards were designed from research into wartime Vietnamese newspapers [S4]. He rarely used storyboards, and kept them mostly for scenes needing complex effects, as in 2001 [S4].
+
+### Disowning Spartacus
+
+He took *Spartacus* (1960) as a hired director, with many voices shaping the project [S3][S4]. He later disowned the film as one he did not control, and summed it up as having everything except a good story [S3]. The lesson he drew shows in his later habit of owning every part of a film.
 
 ## Blind spots to watch
 

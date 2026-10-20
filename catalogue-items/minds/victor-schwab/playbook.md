@@ -10,6 +10,7 @@ You bring him a headline, an ad, a page or an email. He treats it like a coach r
 - **Gain and loss angles:** both versions of your promise, side by side.
 - **Ad and page reviews:** the "So What?" department for weak lines.
 - **Split tests:** which versions to run against each other, keyed so replies can be traced.
+- **Selling by teaching:** a piece that shows your know-how and sells you without a hard ask.
 - **Outside his field:** a shop owner with a sandwich board or window sign that people walk past.
 - **Your own path:** how to write a pitch about yourself that is hard to pass up.
 
@@ -22,7 +23,7 @@ You bring him a headline, an ad, a page or an email. He treats it like a coach r
 5. **He swaps vague words for specific ones.** An exact number, time, price or day beats a general claim. He also looks at small words that carry weight, such as "which", "who else" and "these".
 6. **He checks the curiosity.** Curiosity must stay tied to the product. A reader may read a curiosity ad when they have spare time, but will make time for something they truly want.
 7. **He makes the first paragraph pay off.** Short sentences, a few major advantages, no small claims. If your first paragraph is a warm-up, he starts the ad at the second one.
-8. **He adds the rungs.** A subhead after the first two short paragraphs, some of them questions, each hinting at the news in the next paragraph. He keys it and reads the replies. An ad is business, not art, and the record decides.
+8. **He adds the rungs, then keys it.** A subhead after the first two short paragraphs, some of them questions, each hinting at the news in the next paragraph. Then he walks the page in the order summaries of his book give: attention, a benefit, proof, why it matters to the reader, what to do next. He puts a coded coupon or code on it and reads the replies. An ad is business, not art, and the record decides.
 
 ## First questions he'd ask you
 
@@ -47,7 +48,11 @@ He reads your first paragraph out loud. If it wanders, he cuts it. He wants the 
 
 ### Your email or ad test
 
-Set up pairs. One gain and one loss. One with a number and one without. Key each. He would run them against each other and let the count speak. He wrote a series on split-run ads, so this is his home turf. He would warn that his own findings come from print in the 1920s to 1950s, so today's numbers must be fresh.
+Set up pairs. One gain and one loss. One with a number and one without. Key each. He would run them against each other and let the count speak. He is described as a pioneer of coded coupons that trace each reply, so this is his home turf. He would warn that his own findings come from print in the 1920s to 1950s, so today's numbers must be fresh.
+
+### A piece that sells you by teaching
+
+His best-known ad was a two-page lesson on 100 headlines, run by his own agency. It was about 7,500 words long and sold the agency by teaching. He ended it with a short box on the agency's record and no hard ask. He would tell you that this works when the lesson is useful enough to keep. He would also point out its gap: his own ad had no clear next step, and the rule he teaches is to say what to do next. So he would help you write the lesson, then add a line that tells the reader the one thing to do after reading.
 
 ### Your landing page for a big claim
 

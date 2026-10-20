@@ -1,8 +1,8 @@
 # Jack Trout: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Trout wrote or co-wrote more than a dozen books, all under copyright [S1]. We work from the 1972 Advertising Age articles he wrote with Al Ries, which are reprinted in full on the Ries firm's website [S2], a long 2013 interview [S3], reports of his talks, and reference pages. Several of his best-known ideas were shared with Ries, so we say "Ries and Trout" when the idea was joint. Who first came up with positioning is disputed [S5]. Trout died in 2017, so nothing here reflects later events.
+A note on method: Trout wrote or co-wrote more than a dozen books, all under copyright [S1]. We work from his own words in five places: the 1972 Advertising Age articles he wrote with Al Ries, reprinted on the Ries firm's website [S2]; a long 2013 interview [S3]; a question-and-answer interview with a consultant, where he lays out four steps for a position [S11]; a thirteen-question Q&A first printed in Chinese, which carries his case notes on AIG, IBM, Lotus and Blue Ocean Strategy [S12]; and an interview in a Mexican business magazine [S13]. Reports of his talks and a 2017 tribute fill the gaps [S6][S14]. Several of his best-known ideas were shared with Ries, so we say "Ries and Trout" when the idea was joint. Who first came up with positioning is disputed [S5]. Two of the interviews are undated: [S12] was republished in June 2017 and mentions events up to about 2008, and [S13] sits at a 2011 web address but talks about the dot-com years. [S12] reaches us as Chinese text, so we use our own English summary of it. Trout died in 2017, so nothing here reflects later events.
 
 ## In one paragraph
 
@@ -58,6 +58,30 @@ In 2013 Trout said that price and quality alone are not a position. Everyone cla
 
 How he applied it: he criticised advertising that leaned on stock formulas over product features and engineering [S3].
 
+### The four steps of a position
+
+Asked in a plain Q&A what the work involves, Trout gave four steps. First, know the competition and where it is strong and weak. Second, pick an idea you can own. Third, find your credentials for that idea, such as research or business you have already done, because "I'm here and I'm great" proves nothing. Fourth, tell the story, since he held that good marketing is good storytelling [S11].
+
+How he applied it: his advice to a client was to arrive with the position settled and keep control of it. He said to tell the agency not to be creative but to dramatize the idea, and not to ask the agency what it feels like doing [S11].
+
+**Attack the weakness that comes from the leader's strength.**
+
+In the Chinese-language Q&A he said every strong rival has a weakness, but the one to hit is the one that comes from its strength, not one somewhere else [S12]. Avis said its counter lines were shorter, and Hertz could not answer because long lines come with being the biggest [S12]. He said the same logic works against Campbell's, whose steel can rusts and whose canning plant is too costly to abandon [S12]. He added that managers resist this kind of negative idea because they prefer positive thinking [S12].
+
+How he applied it: for a software client facing a rival with excellent software and a big customer base, he found that the rival struggled with uncertainty, so the client aimed at the rival's higher cost and slower rollout [S12].
+
+**Too many choices make one clear idea worth more.**
+
+Trout argued that more choice does not attract buyers, it overwhelms them, and he used figures such as nearly 300 shoe models and more than 30 contact lens types where there had been one [S12]. He cited the psychologist Barry Schwartz on how too many options delay decisions and raise regret [S12]. His conclusion was that in a flood of options a brand must be easy to grasp, ideally one word, like safety for Volvo [S12].
+
+**Reposition by adjusting perceptions.**
+
+For Trout, repositioning adjusts how people see you or your rival. It does not change their minds from scratch [S12]. His cases: the kiwifruit renamed from Chinese gooseberry in the 1960s, a cider maker that moved from cheap bulk bottles to a premium drink, and Lotus rebuilt as a groupware company [S12]. His failures list was just as clear: Xerox in computers, New Coke, and Cadillac's small cars that looked like Chevrolets [S12].
+
+**Different rules for different ranks.**
+
+His advice depended on where you stand. A leader reinforces leadership. A number two attacks the leader where it is weak. A company making a new category plays a different game. A small player in a big category acts like a guerrilla and finds a small piece it can hold [S11]. He also stated a dual rule: over the long run a category in the mind holds about two brands [S12].
+
 ## How he decides
 
 - Study the competition first [S3].
@@ -72,20 +96,31 @@ How he applied it: he criticised advertising that leaned on stock formulas over 
 
 ## Real decisions
 
-### He wrote the idea down in 1972
-With Al Ries he co-wrote "The Positioning Era Cometh" in Advertising Age in April and May 1972 [S4]. The series held up Avis as the model challenger, which placed itself against Hertz as number two [S2].
+Trout was an adviser, so these are calls he made or argued for on other people's businesses, as he or his source told them. The business results are not independently checked.
 
-### He helped Papa John's find its angle
-He told small businesses to find an angle against the big players. Papa John's linked its pizza to a better sauce supplier, a story the giants could not claim, and Trout helped create its line "better ingredients, better pizza" [S3][S1].
+### Avis accepting second place
+In the 1972 article, he and Al Ries held up Avis as the model challenger [S2]. Avis lost money for 13 years, they wrote, then turned a profit once it accepted that it was number two and built its message around Hertz, the leader, instead of just saying it tried harder [S2]. Their reason: go around the leader and define yourself against it, not through it [S2]. Years later he gave the follow-up rule that the attack works because the leader cannot fix a weakness that comes from its size [S12].
 
-### He argued for separate names
-He contrasted United Technologies, which kept separate names like Otis and Carrier, with GE's one name on everything [S3][S6]. He said Wall Street's push for growth often dilutes brands [S6].
+### Papa John's and the sauce
+Trout told how he met Dino Cortopassi, whose tomato sauce supplied small pizzerias, and learned that John Schnatter of Papa John's was quietly using it [S3]. That gave Papa John's a better-tasting pizza and an ingredient story to tell, which became "Better ingredients, better pizza" [S3][S12]. His reason: a small business needs an angle against the big players, and a real product fact makes the angle [S3]. He said it drove major growth against Pizza Hut [S12].
 
-### He saw Kodak needing a new brand
-He treated Kodak's trouble with digital as a case where a new brand was needed [S3].
+### Telling Bajaj to keep its name for motorcycles
+In 2013 Trout called Bajaj's move from scooters to motorcycles a classic repositioning, hard because scooters had made the company famous [S3]. He credited Rajiv Bajaj with pushing it and said the Pulsar worked because it brought something new for younger buyers [S3]. His advice was to use the Bajaj name only on motorcycles and give other businesses, such as electrical fittings, their own brands, a message he admitted is hard to give a family [S3]. In the same interview he faulted Hero MotoCorp for dropping the Honda name and predicted a Bajaj and Honda two-horse race, a forecast we have not checked [S3].
 
-### He trained diplomats
-In 2002 he worked with the U.S. State Department to train diplomats on presenting America abroad [S1].
+### Kodak and a separate digital brand
+Trout argued that Kodak invented digital photography but held back because it threatened film, and that it should have launched digital under a separate brand [S3]. His rule: you cannot change a product radically under one name [S3]. In the Mexican interview he listed the same kind of call that he said he got right: Xerox would fail in computers, Chevrolet would lose share by stretching into luxury, sports and trucks, and Volkswagen would fail with big fast cars in the US [S13].
+
+### GE against United Technologies
+He contrasted GE, which sold everything under one name and which he called confused, with United Technologies, which kept separate brands such as Otis, Sikorsky, Pratt & Whitney and Carrier [S3]. He said the United Technologies model did better on positioning and shareholder returns, and he blamed Wall Street's demand for growth for much brand dilution [S3][S6]. In the later Q&A he added a limit: long-established leaders like GE and Siemens can hold one shared name longer because positions in the mind change slowly, but newcomers cannot [S12].
+
+### IBM and the switch from mainframes
+Trout advised IBM to move its position from mainframes to integrated computer services [S12]. His reasoning was that IBM ranked only second in hardware, software and chips but was the one firm with the full range of technology [S12]. He said this helped it change through years of losses [S12]. The 1972 article had already warned that RCA and GE could not beat IBM in computers head on [S2].
+
+### Lotus and the groupware reposition
+After Microsoft's bundling squeezed Lotus, Trout helped reposition it as a groupware company [S12]. He said the change cost more than a dozen vice presidents, and that it worked only because the chief executive championed it, cheered it on and stayed optimistic [S12]. His rule: a reposition needs the top person to carry it, since the people below will resist [S12].
+
+### AIG, the advice that went unused
+Trout named AIG as his main regret. He had advised positioning it as "America's Lloyd's," a specialist insurance marketplace, but it chased financial services and every product for every client instead [S12]. He tied its 2008 collapse in part to derivatives losses in a London unit of about 300 people [S12]. His lesson was that a firm which will not narrow itself pays later.
 
 ## Where he stood
 
@@ -103,6 +138,10 @@ In 2002 he worked with the U.S. State Department to train diplomats on presentin
 
 **What should a brand name do?** Carry the idea. The 1972 articles called the name the hook that hangs a brand on the mind's ladder, and warned that empty initials and local names can hold a company back [S2].
 
+**How is his advice different from Porter's?** He said many companies do not understand differentiation, and some understand it but cannot put it into practice. He said his work, unlike Michael Porter's, explains how [S13].
+
+**What happens when you have no position?** Price is all that is left, and he called a price fight the road to wreck and ruin [S11][S12].
+
 **What should a manager ask first?** The 1972 articles closed with six questions: what position you own now, what position you want, whom you must outgun, whether you have the money, whether you can stick with it, and whether your ads match the plan [S2].
 
 ## His work and record
@@ -118,6 +157,8 @@ In 2002 he worked with the U.S. State Department to train diplomats on presentin
 - Founded Trout & Partners in Greenwich, Connecticut [S1][S7].
 - Advised clients including AT&T, IBM, Procter & Gamble and Southwest Airlines [S1].
 - Worked with the U.S. State Department in 2002 to train diplomats on presenting America abroad [S1].
+- Ran client strategy sessions as focused war rooms in his own study, devices put away, as one radio executive remembered them [S14].
+- Spent his later years mostly on work in China [S11].
 - Died June 4, 2017, in Old Greenwich, Connecticut [S1].
 
 ## Where he was wrong or criticised

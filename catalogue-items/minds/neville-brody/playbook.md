@@ -22,7 +22,7 @@ You bring him a page, a logo, a brand or a plan that feels too safe. He doesn't 
 5. **He looks at space before size.** A headline can be small and still win if the white space around it does the work. He'd try that before making anything bigger.
 6. **He separates the surface from the reasons.** If you want a style because it looks good on someone else, he'll ask for the reasoning. No reasoning, no style.
 7. **He sets the bar for rebellion.** A challenge has to be better than what it attacks. He'd show you a bolder version and then check it's actually better, not just louder.
-8. **He keeps looking for the next move.** When the work gets comfortable, he looks for the next disruption. He doesn't want you to settle.
+8. **He looks for the breaking point, and the next move.** He pushes each tool until the method fails, then builds from there. He restructured his studio in 2014 around what clients actually buy. For a national or heritage brand he starts from its own archive or lettering and adds flaws on purpose. When the work gets comfortable, he looks for the next disruption. He doesn't want you to settle.
 
 ## First questions he'd ask you
 
@@ -34,6 +34,8 @@ You bring him a page, a logo, a brand or a plan that feels too safe. He doesn't 
 - Can white space do this job better than making it bigger?
 - Where is the risk in this? If there is none, why are we doing it?
 - Would you still make this if no one paid you to?
+- What is this brand's own archive or lettering, and what do we add that is deliberately imperfect?
+- Where does this tool or method break, and what could we build from there?
 
 ## Jobs, one by one
 

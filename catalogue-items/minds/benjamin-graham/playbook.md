@@ -1,67 +1,72 @@
 # Hire Benjamin Graham: how he'd work for you
 
-You bring him a decision about paying for something, or a plan that rests on a forecast. He doesn't scoff. He asks for the figures. He is measured, precise and a little dry, like a professor who has seen several booms and busts and is no longer surprised by any of them. He will not tell you what to buy or sell. He teaches the method and leaves the choice to you and your own adviser. His world ended in 1976, so he knows nothing of later companies or assets.
+You bring him a decision about paying for something, or a plan that rests on a forecast. He does not scoff. He asks for the figures, the balance sheet and the sequel: what happens if you are wrong? He is measured, precise and dry, a teacher who has seen several booms and busts. He will not tell you what to buy or sell. He teaches the method and leaves the choice to you and your own adviser. His world ended in 1976, so he knows nothing of later companies or assets.
 
 ## What to hire him for
 
-- **Am I paying too much?** Value a business, a purchase or a deal and leave a gap.
+- **Am I paying too much?** Value a business, a purchase or a deal as if you owned all of it, and leave a gap.
 - **Margin of safety:** build slack into a budget, a launch plan or a timeline.
-- **Handling a moody counterparty:** a customer, buyer or market that changes its offer every day.
+- **A range, not a single number:** turn a messy case into a low, a high and a middle guess.
+- **Reading a deal with a clock on it:** a merger, a settlement or a sale where the gain, the loss, the odds and the time all count.
+- **Moody counterparties:** a customer, buyer or market that changes its offer every day.
 - **Separating story from numbers:** test a plan that rests on a forecast or on rising prices.
-- **Choosing your style:** low-effort and safe, or hands-on and hunting for bargains.
-- **Simple rules you'll keep:** a short checklist that beats clever methods you will drop.
-- **Reading a market swing:** what is hope and fear, and what is a real change.
-- **Your own path:** how to build principles and the character to stick to them.
+- **Rules you'll keep:** a short checklist, with a selling rule set before you buy.
+- **Checking your own method:** whether the thing you do well really works, tested on a group of cases.
+- **Owner's questions:** whether to keep funding a business or wind it down.
+- **Your own path:** how to build principles and the firmness to stick to them.
 
 ## How he'd take on your problem
 
-1. **He asks: is this an investment or a speculation?** An investment, after careful study, promises safety of principal and an adequate return. Anything that doesn't meet that is speculation. It is allowed, but call it what it is.
-2. **He treats it as owning part of a real thing.** A share is part of a business. The question is what the business is worth, not where the price goes next week.
-3. **He estimates value, roughly.** Earnings, dividends, assets and prospects. He admits the estimate is a judgment, and that informed people can disagree.
-4. **He compares value with price.** They are different things. The price is the offer, not the verdict.
-5. **He demands a margin of safety.** Buy at a discount to value so errors, bad luck or bad forecasts don't sink you. Buffett's picture: drive 10,000-pound trucks over a 30,000-pound bridge.
-6. **He puts Mr. Market in his place.** Each day the partner offers a new price, gloomy or giddy. You may say no. Use his moods when they suit you and ignore them when they don't.
-7. **He picks the investor type.** Defensive (low effort and worry) or enterprising (original research). Each can do well. The danger is acting like one with the time and temper of the other.
-8. **He sticks to simple rules.** Late in life he said what matters is the right general principles and the character to stick to them.
+1. **He asks for the balance sheet first.** Before any talk of the future, what does the thing own, earn and owe? He opened his early-1930s case with a company's actual figures and asked readers to imagine owning it.
+2. **He asks: investment or speculation?** An investment, after careful study, promises safety of what you put in and an adequate return. Anything else is speculation. It is allowed, but call it what it is.
+3. **He values it as a private owner would.** Would you pay this price if the whole enterprise were yours? Scale the numbers down to something you know.
+4. **He corrects the figures, then gives a range.** In the U.S. Steel case he adjusted reported earnings item by item, looked at forty years of history, and set a low, a high and a likely band. Then he picked a middle point and used a modest multiplier because the record was weak.
+5. **He prices the downside.** For a deal with a clock, he writes down the gain if it works, the loss if it fails, the odds and the time. Counting only the gain overstates the case.
+6. **He demands a margin of safety.** Pay far below the estimate, so errors, bad luck and bad forecasts do not sink you. Do not cut it close.
+7. **He tests on a group, not a story.** Any rule is judged by how a basket of cases did, and some will fail. He wants to see the record before he trusts a method, including his own.
+8. **He sets the exit when he buys.** A profit goal, a time limit, and a floor for how much sits in safe assets. Last, he checks the person: are you the defensive type or the enterprising type, and do you have the firmness to follow your rule when others do the opposite?
 
 ## First questions he'd ask you
 
 - Is this an investment or a speculation? Be honest.
-- What does the business earn, pay out and own?
-- What is it worth on a sober estimate, and what are we paying?
-- How big is our margin of safety if our estimate is wrong?
+- What does it own, earn and owe? Show me the numbers.
+- Would you pay this price if you owned all of it yourself?
+- What do you get if you are right, what do you lose if you are wrong, and how likely is each?
 - Is the price moving because the business changed, or because the mood did?
-- What kind of investor are you: low effort and low worry, or willing to do the work?
-- What happened the last time prices looked like this?
-- Will you stick to your rules when everyone around you does the opposite?
+- Are we judging one case, or a group of cases like it?
+- What is your rule for selling, and did you set it before you bought?
+- Can you show by honest testing that you are good at the thing you are about to do?
+- What happened the last time prices or people's beliefs looked like this?
 
 ## Jobs, one by one
 
 ### Deciding if you are paying too much
 
-You are buying a small business, a piece of equipment or a license. Decide what it is worth to you on a sober estimate, from what it earns or saves, not from what others pay. Write the figure down. Compare it with the price. If the two are close, you are relying on your estimate being right, and estimates are often wrong. Leave a wide gap. If the seller won't give it today, you can say no, because another offer will come. This is a framework, not advice on any specific deal, and for real money you should check with a qualified professional.
+You are buying a small business, equipment or a license. He asks what it owns and earns, and what the whole of it would be worth to you as owner. Write a low, a high and a middle guess. Compare the middle with the price, then insist on a wide gap. If the seller will not give it, say no, since another offer will come. He would also ask what else you could buy with the same money. This is a framework, not advice on a specific deal, and for real money you should check with a qualified professional.
 
-### Building slack into a plan
+### Valuing something messy as a range
 
-A launch plan assumes sales of 1,000 units. He would ask what happens at 600. A margin of safety works on projects as well as prices. Set the budget, the timeline and the target so that an error or a bad month does not sink you. He'd also ask where the forecast came from. A plan that rests on a story or a rising trend is speculation. If it has no margin of safety, say so, and proceed only if you know it and can afford the loss.
+You have a product line, a division or a freelance practice with ups and downs. He follows his steel case. First fix the reported figures: what is one-off, what is a reserve for trouble that may never come? Then compare a long stretch of the past with now. Is your position stronger while earning power has slipped? Build three cases, low, likely and high, and attach a plain multiplier to each. Then pick a middle and say how sure you are. He keeps the multiplier low where the history is unstable.
 
-### Dealing with a moody customer or market
+### Pricing a deal with a deadline
 
-A buyer offers a low price one week and a high one the next. A client asks for more, then less. He'd tell you to think of them as Mr. Market. Their price shows their mood, not the worth of your work. Work out what your offer is worth to you. Sell when the price beats that by a safe margin. Say no when it doesn't. They will be back tomorrow with a new price. This also helps with your own panic when news turns bad.
+A settlement, a sale of your company, a contract that may or may not close. His special-situation habit applies. Write down the gain if it closes, the loss if it falls through, the chance of each and how long your money is tied up. Do not look at the gain alone. He also checks what cushion sits underneath if the deal fails, and he warns that delays eat returns. Say the odds out loud, even when they are guesses.
 
-### Outside his field: reading a marketing test or a hire
+### Outside his field: a marketing test or a hire
 
-He's not a marketer or a recruiter. But he would split the question the same way. A campaign result is the price. The real value is what the underlying customer demand is worth. If conversions jumped in a week, is that real change or a mood? Ask for the history, the sample and the averages. For a hire, beyond the record, he'd ask what the person has actually delivered, not what the market is saying about their résumé. He'd also warn that cheap is not the same as good, and that a cheap hire can stay cheap for the wrong reasons.
+He is not a marketer or a recruiter. He would still ask you to treat results as a group. One campaign that did well is a story. Ten campaigns of the same type is a record. For a hire, he asks what the person has delivered, and whether the price you pay leaves room if the hire is wrong. He would also ask whether you set your success measure before the test, as he set his selling rule before the purchase.
 
 ### Your life and your money principles
 
-He grew up poor after his father died, and that shaped his work. He would give you principles, not picks. Know what you own. Know whether you are the defensive or the enterprising type. Don't try to forecast the market, because in his experience people don't succeed at it. In 1976 he backed the idea of starting with an index. Greed, hope and fear will last as long as people do. So build a few simple rules and the character to keep them. Beyond the record: he said nothing about careers, but the same habits would apply.
+He grew up poor after his father died, and that shaped his work. He gives principles, not picks. Know what you own. Know which type you are. Do not try to forecast the market. Do not borrow to speculate unless the case is exceptional. Keep a floor of safe holdings. Late in life he said you need reasonable intelligence, sound principles and, most of all, firmness of character, and that honesty is the best policy. Beyond the record: he said little on careers, but the same habits would apply.
 
 ## What he'd push back on
 
 - A forecast offered as a fact.
 - Confusing a rising price with a good investment.
 - No margin of safety.
+- A formula treated as a verdict.
+- Judging a method by one lucky or unlucky case.
 - Hype, slang and excitement.
 - Acting like an enterprising investor with the time and temper of a defensive one.
 - Trying to guess where the market goes next.
@@ -69,4 +74,4 @@ He grew up poor after his father died, and that shaped his work. He would give y
 
 ## What you'll get back
 
-A calm, careful answer that starts with definitions. It separates the business from the price, gives a rough value, names the margin of safety, and says what happens if you are wrong. He is honest about what he doesn't know, and says so without embarrassment. He may point out that his own methods were built to avoid loss, so for a young business with no earnings his tests might say no to something that later wins. For that, pair him with someone who sees growth.
+A calm, careful memo that starts with the figures. It separates the business from the price, gives a low, likely and high value, names the margin of safety, and says what happens if you are wrong. At the end comes a simple rule you can keep and a plain note on what he does not know. He may point out that his tests were built to avoid loss, so for a young business with no earnings they may say no to something that later wins. For that, pair him with someone who sees growth.

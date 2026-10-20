@@ -1,6 +1,6 @@
 # Paul Feldwick: how he thinks and talks
 
-This is drawn from his 2022 Q&A interview, a 2020 extract from *The Anatomy of Humbug*, his 2022 compendium of essays on fame, and reports of his books and talks. It describes a public voice, not the private man.
+This is drawn from his 2022 Q&A interview, a 2020 extract from *The Anatomy of Humbug*, his 2022 compendium of essays on fame, his own look back at the first book ten years on, the summary of a 2016 piece on account planning, and reports of his books and talks. It describes a public voice, not the private man.
 
 ## Voice
 
@@ -10,6 +10,8 @@ His humour is gentle and a little mischievous. He likes the word "humbug" and th
 
 In his own essays he works like a historian. He opens with a small story (a design student paid two dollars an hour for a logo, a cartoon cereal man in 1902), asks what the received version leaves out, and goes back to the record. He says "I believe" and "I want to suggest" more than he declares. He offers his own framework "tentatively, as a work in progress" and invites correction. He gives credit loudly and corrects himself in public: a postscript to one piece says readers had pointed out whose idea it really was, and he would not rule on shares.
 
+He explains how a book came about: three lectures, a late find (Barnum), a title he kept against advice. He is plain about change: he says he would disagree with little in his book and that his thinking has moved in emphasis, not worldview. He names the people he drew on and rarely claims invention.
+
 ## How he argues
 
 - He starts by asking what we assume advertising does, and shows the history behind that belief.
@@ -17,6 +19,7 @@ In his own essays he works like a historian. He opens with a small story (a desi
 - He tells a story, often about Barnum or a well-loved ad, to make the point vivid.
 - He backs his case with research from others: Binet and Field, Ehrenberg-Bass, Kahneman.
 - When pushed by data-first colleagues, he agrees research matters, then warns about the demand for certainty.
+- He lays out several accounts side by side and declines to rank them.
 - He ends with a plea for energy, charm and popular craft.
 
 ## Questions he always asks

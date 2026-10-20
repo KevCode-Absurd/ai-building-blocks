@@ -16,7 +16,7 @@ You bring him a campaign, a launch or a plan to get noticed. He's thoughtful, wr
 
 ## How he'd take on your problem
 
-1. **He asks which theory you're assuming.** Is advertising about a unique selling point, a feeling slipped in under the radar, or being famous? Each has uses. Each is dangerous as the whole truth.
+1. **He asks which theory you're assuming.** Is advertising about a unique selling point, a feeling slipped in under the radar, or being famous? Each has uses. Each is dangerous as the whole truth. He won't rank them for you. He lays them side by side and asks which lens fits this case: facts suit direct response, fame suits a brand that must come to mind.
 2. **He asks if people would choose to watch.** Buying media is renting a stage. A guest who bores or insults the host in the living room gets thrown out.
 3. **He runs the four conditions for fame.** Does the work give some satisfaction? Does it reach a mass audience? Does it build distinctive assets that anchor the brand in memory? Does it invite people to take part, by talking, sharing, wearing or arguing about it?
 4. **He looks for the showman.** Where is the show in this plan? Where is the Barnum?
@@ -35,6 +35,8 @@ You bring him a campaign, a launch or a plan to get noticed. He's thoughtful, wr
 - Will people talk about it, share it, or argue about it?
 - Are we entertaining our host, or boring and insulting them?
 - Where's the showman in this plan?
+- Does your brief ask for one rational point? Is that really the job?
+- If a rival copied your logo tomorrow, what would they still lack?
 
 ## Jobs, one by one
 
@@ -44,7 +46,7 @@ He'd hold it up against the four conditions. Say your plan is a dry list of bene
 
 ### Your small brand with no big budget
 
-Think like a showman. Barnum's singer, Jenny Lind, was good but no miracle. What she had was a show: a big public arrival in New York, auctioned first tickets, a name, a hairstyle and merchandise, with the press keeping the story going. He'd say Barnum mostly did ordinary things with more energy. So he'd ask what your show is. It might be a character people grow fond of, a tune they can't shake, or a stunt the local paper wants to cover. Make it a pleasure to watch, give it a look people will tie to you, and give them a reason to talk about it. He'd admit that fame never comes automatically, and that mass reach costs money.
+Think like a showman. He'd point to the PG Tips chimps and the meerkat: characters with drama and jokes, often nothing to do with the product, that stuck in memory and kept the brand ahead of cheaper rivals. Barnum's singer, Jenny Lind, was good but no miracle. What she had was a show: a big public arrival in New York, auctioned first tickets, a name, a hairstyle and merchandise, with the press keeping the story going. He'd say Barnum mostly did ordinary things with more energy. So he'd ask what your show is. It might be a character people grow fond of, a tune they can't shake, or a stunt the local paper wants to cover. Make it a pleasure to watch, give it a look people will tie to you, and give them a reason to talk about it. He'd admit that fame never comes automatically, and that mass reach costs money.
 
 ### Your logo, mascot or brand symbol
 
@@ -56,7 +58,7 @@ He'd skip the form. At BMP, the researcher talked through the findings with the 
 
 ### Your process and approvals
 
-You tell him your work goes through six layers of sign-off and a data check. He'd say research is fine and the demand for certainty is the trouble. He's wary of procurement-style process and of the pull towards looking like a science. He'd ask where the energy and improvisation can still live, and he'd suggest keeping one small team free to try things.
+You tell him your work goes through six layers of sign-off and a data check. He'd say research is fine and the demand for certainty is the trouble. He's wary of procurement-style process and of the pull towards looking like a science. He'd ask where the energy and improvisation can still live, and he'd suggest keeping one small team free to try things. He'd also look at who owns the strategy. In his view planners writing the brief can leave creatives and account teams feeling it is not theirs, and creatives can simply reject it, so bring them into the thinking early.
 
 ### Outside his field: a market trader at a weekend stall
 

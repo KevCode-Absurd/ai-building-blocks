@@ -1,8 +1,8 @@
 # A. R. Rahman: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A. R. Rahman is alive, and views can change. The views below come from three interviews in his own words: a 1998 online chat [S2], a 1998 interview with Ananda Vikatan [S6] and a 2008 interview for Rolling Stone India, reposted by the interviewer [S3]. The first two are read through the publishers' pages and the third in part, since the repost is long. Reference pages give dates and film facts only [S1][S4][S5]. Treat each view as "as of" its date. This file covers his music and working life, not his family, and it doesn't speak for him on current projects or events.
+A. R. Rahman is alive, and views can change. The views below come from interviews in his own words: a 1996 interview for Sony Music [S9], a 1998 online chat [S2], a 1998 interview with Ananda Vikatan [S6], a 2008 interview for Rolling Stone India reposted by the interviewer [S3], and three 2009 interviews about Slumdog Millionaire and recognition [S7][S8][S10], all reposted on fan and publisher pages. We read them through those pages, not the original print. Reference pages give dates and film facts only [S1][S4][S5]. Treat each view as "as of" its date. This file covers his music and working life, not his family, and it doesn't speak for him on current projects or events.
 
 ## In one paragraph
 
@@ -74,7 +74,7 @@ Rahman's faith shapes how he talks about music. In 1998, asked about religious w
 ## Real decisions (enriched minds)
 
 ### Building his own studio before Roja
-Rahman set up Panchathan Record Inn so that the recording was in his hands, and Roja was recorded there [S1][S4]. His stated golden rules were good lyrics, thought, melody, recording and presentation, with each link mattering [S2]. Roja won the National Film Award and sold over 3 million copies in India [S4].
+Rahman set up Panchathan Record Inn so that the recording was in his hands, and Roja was recorded there [S1][S4]. He records a basic session first, then adds instruments one by one, which takes longer than the seven or eight hours he said other composers spent on a song [S9]. A full song takes him about a week, with about four days on the lyrics [S9]. His stated golden rules were good lyrics, thought, melody, recording and presentation, with each link mattering [S2]. Roja won the National Film Award and sold over 3 million copies in India [S4].
 
 ### Stopping and waiting when a song won't come
 In 2008 he said some songs refuse to come after hours of effort, so he stops and waits for inspiration [S3]. In 1998 he said that if a tune wasn't good enough he'd make another, rather than patch it [S6]. His reason was that interruptions and forcing both break the train of thought [S6].
@@ -85,8 +85,13 @@ Early on he felt bound to the director's vision [S3]. By 2008 he judged for hims
 ### Refusing a film over music rights
 In 2008 he said he declined Om Shanti Om over music publishing rights, as a statement about artists' rights and not only money [S3]. He also turns down projects where his name would raise expectations a small film can't meet [S3].
 
-### Planning Slumdog Millionaire as a sparse score (2008)
-With a clear brief from Danny Boyle for something edgy, he planned the score over about two months and finished it in about 20 days [S5]. It has 17 or 18 music cues against the 130 of a typical big Indian film [S5]. He co-wrote a track with M.I.A. [S5].
+### Taking Slumdog Millionaire for the director, not the fee
+
+Danny Boyle first wanted a single song. Rahman said that if he scored the film he would write the songs and the whole score, and Boyle agreed [S7]. He took it to work with Boyle, not for money, and said the small budget needed less than a symphony [S7]. He left another project for it before the film had a cast, and said he was paid £30,000 [S10]. They worked cue by cue, swapping versions, and he planned the score over about two months and finished it in about 20 days [S5][S7]. It has 17 or 18 music cues against the 130 of a typical big Indian film [S5]. He cut weaker ideas as he went, and said Boyle's trust made him stop second-guessing the director [S7].
+
+### Leaving keyboard work for ads and his own studio
+
+By his own account he found accompanying other music directors monotonous, so he turned to advertising jingles and then built a studio with a large library of sampled sounds [S9]. Mani Ratnam heard his tunes there and they agreed to work together before they had chosen a film. It turned out to be *Roja* [S9].
 
 ### Letting a different emotion drive Rang De Basanti
 He and the director brainstormed to avoid repeating earlier freedom-fighter films, treating each song's emotion differently, such as making a ferocious anthem sensuous [S3]. He gave the Bombay theme a Western classical approach that Mani Ratnam did not expect [S3].
@@ -103,6 +108,8 @@ He said he tells staff that substandard work should never go out of his studio [
 **The director's vision or his own? (2008)** Early on, the director's. Later, he trusted his own sense of when a song works [S3].
 
 **Is the competition other composers? (2008)** No. It's within himself [S3].
+
+**Are Indian composers paid fairly? (2002, 2011)** No: he said royalties abroad matter more than Indian up-front fees, as listed by Wikiquote from the Rediff and Time interviews [S11].
 
 **Fame? (2008)** Uneasy with it. He dislikes watching himself perform and guards his privacy [S3].
 

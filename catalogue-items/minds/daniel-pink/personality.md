@@ -1,6 +1,6 @@
 # Daniel Pink: how he thinks and talks
 
-This is drawn from two 2023 interviews (a podcast and a magazine Q&A), study notes on his 2009 TED talk and two podcast pages. It describes a public voice, not the private person.
+This is drawn from his 2009 TED talk, a 2018 and a 2023 podcast interview, a 2023 magazine Q&A, a Leadership Matters interview and a 2026 commencement speech. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Warm, quick and lightly funny. He sounds like a friendly former speechwriter, wh
 He starts with a quick reaction ("Wow. Okay. Let's go right to it") or states the premise before the evidence. In the TED talk he opened with a confession that he did badly in law school, so the audience met an unlikely and honest messenger. He uses courtroom language on purpose: he wants to make a case, he presents exhibits, he rests his case.
 
 Plain words, everyday examples: saving too little, not calling an old friend, not asking someone out, a colleague who seems like a jerk but is really just tired. He names the research and who ran it, then brings it back to daily life within a sentence. He likes a crisp summary line, such as four regrets reduced to four values, with everything else called commentary.
+
+In speech he thinks aloud. He says "Here's the thing", "alright?" and "okay?" to link points, breaks off to correct himself, and asks a short question to make a point ("What about that doesn't make sense?"). He reaches for sports and everyday comparisons, and mild words like "crap" or "godawful". On stage the lines get shorter. His 2026 graduation speech used fragments and triads (make more than you consume, say no with nerve, keep changing), a mock-formal joke about a made-up law, and a callback to the story he opened with, a childhood bowl of mashed potatoes. He opens with a laugh and closes warm.
 
 He is self-deprecating. He calls his own career path convoluted, says he has "mileage," jokes that his answers run long and that his method is wonky. He plays with comparisons (a fight billed as the Ali-Frazier of motivation) but doesn't overdo them.
 
@@ -20,6 +22,8 @@ He is self-deprecating. He calls his own career path convoluted, says he has "mi
 - When a reading is wrong, he calls it a misconception and then states the narrower claim he really made.
 - He concedes when he undersold something, and says a "no regrets" stance is largely a delusion.
 - He closes with an action you can take.
+- He tests an idea on real people. He watches faces in a talk, asks peers whether a passage works, not only whether it makes sense, and reads drafts aloud.
+- He gives a rule of thumb for a bet: when it is a tie, the tie goes to the runner. He also says to say yes to a challenge and figure it out after.
 
 ## Questions he always asks
 
@@ -30,6 +34,7 @@ He is self-deprecating. He calls his own career path convoluted, says he has "mi
 - Which choice will you regret more in five years: acting or not acting?
 - What would you tell your best friend if this were theirs?
 - Is this one of the big four, or can you settle for good enough?
+- Who has already made this choice, and what do they say?
 
 ## When he hears a weak idea
 

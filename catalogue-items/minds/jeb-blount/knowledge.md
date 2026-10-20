@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-**An honest note on the sources.** Jeb Blount is alive, and views can change. The firmest text we hold is the 8-page opening chapter of *Fanatical Prospecting*, which Wiley publishes as a sample [S8]. His Sales Gravy "Ask Jeb" articles (S1 to S3) were studied from the live pages earlier, and in our folder today we hold only short excerpts of two of them plus a short summary note on the research article (S2). The rest comes from a 2026 review of the book, his company's About page, his own site and a library catalogue. His books are under copyright, so we summarise them and quote only a few short lines. Treat each view as "as of" the year read, 2026 for the web pages and 2015 for the book chapter. Our sources do not confirm his birth year. Note that Wikipedia's "Jeb Blount" page is about a different man, a former American football quarterback, so don't mix the two up.
+**An honest note on the sources.** Jeb Blount is alive, and views can change. His own words here come from the 8-page opening chapter of *Fanatical Prospecting*, which Wiley publishes as a sample [S8], four Sales Gravy "Ask Jeb" articles and blog posts [S1][S2][S3][S10][S11], and an undated partial interview transcript about how he built Sales Gravy [S9]. The Business Excellence page [S12] is a summary with a few key lines, and the rest comes from a 2026 book review, his company's About page, his own site and a library catalogue. His books are under copyright, so we summarise them and quote only a few short lines. Treat each view as "as of" the year read. Our sources do not confirm his birth year. Wikipedia's "Jeb Blount" page is about a different man, a former American football quarterback, so don't mix the two up.
 
 ## In one paragraph
 
@@ -46,6 +46,14 @@ Blount explains rejection as an old survival response. Being pushed out of the g
 
 How he applied it: he teaches a set of habits. Notice the anxiety before you ask. Watch your self-talk and build a bounce-back routine. He keeps an index card on his desk that says "NEXT" [S1]. Memorise a reply to common objections so you can respond instead of freezing, which he calls the ledge technique [S1]. Build "obstacle immunity" by facing more rejection over time, and look after sleep, food and exercise, because emotional control takes energy [S1].
 
+### Agree with the reflex objection
+
+His rule for the usual brush-offs is to stop fighting them [S11]. If a prospect says "I'm in a meeting", his reasoning is that someone really in an important meeting usually won't pick up an unknown number, so they have more time than they say [S10]. He offers three ways to answer, chosen by your style, your show rates and the prospect's tone: a short pitch followed by heavy follow-up, a nod to their time with a request for a set slot, or a calm, slower voice and silence when they speed up (which he calls non-complementary behaviour) [S10]. Test all three, measure and keep what works [S10]. He also teaches an opener in three parts, which he calls Ledge, Disrupt and Ask: calm the prospect, break the pattern, then ask for the meeting [S11]. He advises leading with the prospect's problem, not your price [S11].
+
+**Fear is handled, not beaten**
+
+In that interview he says plainly that he did not overcome the fear, he just dealt with it [S9]. His early-career habit was to make one more call when tired, after a run of rejection, and at 4:30 on a Friday [S3]. One extra call a day is about 250 a year [S3].
+
 ### Asking is the core discipline
 
 For Blount, the most important habit in sales is asking: for the meeting, the next step, the deal [S1]. Objections are not rejection, but they feel like it, so reps hesitate. That hesitation is a main cause of call reluctance [S1]. He cites figures that 44% of salespeople quit after one rejection and 91% after four, while it takes about eight asks on average to get a yes [S1].
@@ -58,7 +66,7 @@ Blount sees prospecting as a numbers game in which skill multiplies the results 
 
 How he applied it: he points to research showing that reps who plainly state their reason for calling book meetings at about twice the rate of those who don't [S2]. He suggests using AI to help build lists and research, and checking anything you plan to say out loud [S2].
 
-### Failure in sales starts with an empty pipe
+**Failure in sales starts with an empty pipe**
 
 The book's first chapter says most sales leaders and trainers chase talent, skills and fads, when the top 20 percent who produce about 80 percent of sales share one habit: they prospect all the time [S8]. He lists what superstars do not do: make excuses, complain that leads are bad, live in fear of a no, or put it off [S8]. His blunt claim is that the number one reason for failure in sales is an empty pipeline, and the root cause is a failure to prospect [S8]. He calls this a "Paradox of Basics": so obvious it becomes invisible [S8].
 
@@ -96,6 +104,15 @@ He recommends a protected call block first thing in the morning, with nothing el
 ### Rejecting "don't take it personally"
 
 Instead of telling reps to toughen up, he explains rejection as an old survival response and teaches routines such as the NEXT card, a prepared reply to the usual objection, and building immunity through repeated asking [S1]. His reason is that you cannot rationalize rejection away [S1].
+
+### Starting Sales Gravy with no plan
+After a downsizing in the 2007 to 2008 recession, Blount, then in his late thirties and afraid he could not go back to corporate work, started Sales Gravy without a clear plan [S9]. Four months in he saw he needed one or the money would run out [S9]. He built much of the site himself to avoid a developer bill of roughly $50,000 [S9]. He first tried to earn from ads on a portal for salespeople, found that did not pay enough, and built a job board for steady income, which led the market around 2010 and brought about $100,000 a month in ad revenue at its peak [S9]. (Other pages date the company to 2006 [S5], so treat the start date as disputed.)
+
+### Winning clients the slow way
+To get consulting clients he called everyone he knew, crashed job fairs, cold-called and knocked on doors, and took low-priced work early for cash flow and references [S9]. It took about two years to land the first big client, ADP, after thirteen of its recruiters used his platform; Verizon, AT&T, Sprint and Edward Jones came later [S9]. He says his public profile took about twelve years to build [S9]. He admits he is weak at selling himself and brings in people who sell better than he does [S9].
+
+### Retainers over hourly, and the business over the man
+He dislikes hourly billing and one-off projects, since both make income uneven and make clients question invoices [S9]. He asks for monthly retainers so that income and the client's costs are predictable [S9]. He keeps the Sales Gravy brand separate from his own so the firm can outlive him, because a consultant who is the business owns only a lifestyle business that is hard to sell [S9]. He says the business comes first [S9].
 
 ## Where he stood
 

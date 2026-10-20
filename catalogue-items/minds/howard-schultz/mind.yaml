@@ -20,13 +20,15 @@ seats:
   - {seat: "People first", asks: "Would the person serving the customer say this company looks after them?"}
   - {seat: "Growth with a conscience", asks: "Does this plan make money in a way we'd be proud to explain to our own staff?"}
 pairs_with: [sam-walton, ray-kroc, walt-disney, indra-nooyi, jeff-bezos]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Howard Schultz", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Howard_Schultz", kind: reference}
   - {n: 2, title: "Starbucks", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Starbucks", kind: reference}
   - {n: 3, title: "The Commoditization of the Starbucks Experience (memo of February 14, 2007)", by: "Howard Schultz, reproduced by Alexander Jarvis", url: "https://www.alexanderjarvis.com/memo-the-commoditization-of-the-starbucks-experience/", kind: own-words}
   - {n: 4, title: "Starbucks first quarter fiscal 2008 results, with Schultz's statement on the transformation agenda (8-K, Exhibit 99.1)", by: "Starbucks Corporation and Howard Schultz", url: "https://www.sec.gov/Archives/edgar/data/829224/000089102008000019/v37401exv99w1.htm", kind: own-words}
   - {n: 5, title: "Howard Schultz to bid farewell to Starbucks after nearly 40 years (June 4, 2018, quoting his letter to partners)", by: "Starbucks Corporation and Howard Schultz", url: "https://s203.q4cdn.com/326826266/files/doc_news/Iconic-Leader-and-Visionary-Entrepreneur-Howard-Schultz-to-Bid-Farewell-to-Starbucks-after-Nearly-40-Years-2018.pdf", kind: own-words}
+  - {n: 6, title: "Commencement Speech for Arizona State University (8 May 2017)", by: "Howard Schultz, transcript on BizNews", url: "https://www.biznews.com/entrepreneur/ubuntu-starbucks-howard-schultz", kind: own-words}
+  - {n: 7, title: "Starbucks: Schultz on his execution challenge (interview with Patricia Sellers, November 2008)", by: "Fortune", url: "https://fortune.com/2008/11/04/starbucks-schultz-on-his-execution-challenge", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page memo from the owner of a small bakery chain to her managers, saying honestly how the shops have lost their warmth as they grew, and what to change first."}
   - {kind: use, prompt: "List ten small details that make a neighbourhood bookshop feel like a place people want to stay, and say which ones tend to vanish first when it opens more branches."}

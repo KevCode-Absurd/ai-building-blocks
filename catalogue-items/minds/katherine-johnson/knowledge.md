@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Katherine Johnson wrote technical reports, not essays about her ideas. Her own words here come from one of her NASA reports and from interviews she gave late in life, in 2008 and 2018. Those interviews are memories told decades after the events, so small details can differ between them. Her story is also best known through the 2016 film *Hidden Figures*, which changed some facts for the screen. We say below where the film and the record part ways [S7]. Quotes are short, and we only use words we saw on the page.
+A note on method: Katherine Johnson wrote technical reports, not essays about her ideas. Her own words here come from one of her NASA reports and from interviews she gave late in life, in 2008 and 2018. Those interviews are memories told decades after the events, so small details can differ between them. Since the last check we also read a second report, the 1962 Echo I note she wrote with Gertrude Westrick [S8], and went back over the 2008 and 2018 interviews [S3][S5]. We could not find a free full transcript of her longer oral histories, so the record of her own voice is still thin. Her story is also best known through the 2016 film *Hidden Figures*, which changed some facts for the screen. We say below where the film and the record part ways [S7]. Quotes are short, and we only use words we saw on the page.
 
 ## In one paragraph
 
@@ -15,6 +15,8 @@ Katherine Johnson was a mathematician who spent 33 years at NASA's Langley cente
 Johnson believed you should know how to solve a problem before you hand it to a computer. She told her grandchildren that you learn to work the problem first, and only then go use the machine [S5]. The point is that you can't judge an answer you couldn't have reached yourself.
 
 How she applied it: when NASA moved to electronic computers for John Glenn's orbital flight in 1962, officials asked her to check the computer's numbers [S3]. She worked through the equations by hand, to many places past the decimal point [S5]. She recalled simply that she checked it and it was correct [S3]. Her reputation for accuracy helped build trust in the new machines [S2].
+
+Her 1962 Echo I note with Gertrude Westrick shows the same habit on a different kind of job. It gathers 500 days of orbit data on the Echo I balloon satellite and its rocket casing from two tracking groups [S8]. It says plainly that the two groups list their data in different forms, with different reference times, and it plots their numbers uncorrected instead of quietly merging them [S8]. It notes that both programs go erratic when the orbit is nearly circular, and it uses the heavier rocket casing as a baseline to compare with the light balloon [S8].
 
 ### Work backwards from where you need to land
 
@@ -75,19 +77,32 @@ In her later years she tutored young people and talked with children about caree
 ## Real decisions
 
 ### Doing the return trip backwards
-For early flights she was asked to find the launch time that would bring a capsule down at a set spot. She started from the landing point and worked back, and called that her strong suit [S3].
+
+For early flights she was asked to find the launch time that would bring a capsule down at a set spot. She started from the landing point and worked back, and said that was her strength. Early flights followed a simple arc, so this worked [S3].
 
 ### Writing the report as a method with two worked cases
+
 Her 1960 report with Skopinski sets out expressions for the burnout direction that puts a satellite over a chosen place on a rotating, bulging Earth. The bulge enters as small corrections inside a repeated solution. It includes an eastward and a westward example, a comparison with a computer program, and a check of how small changes in direction and latitude shift the result [S4].
 
+### Laying out two sets of tracking data side by side
+
+In the 1962 Echo I note she and Westrick set out to present 500 days of orbit data in a form useful to others. The two tracking groups gave different reference times and units, so the authors listed the differences point by point and converted everything to statute miles [S8]. They said they plotted the data uncorrected and did not try to settle apparent conflicts, and that both programs became unreliable below an eccentricity of about 0.01, so they marked those stretches [S8]. They also included the rocket casing for comparison, because its weight to drag area ratio is about 900 times higher [S8]. An errata page issued in October 1962 fixed one number in the closing remarks, 0.80 to 0.08 [S8].
+
 ### Checking the computer before Glenn flew
-NASA asked her to verify the electronic computer's trajectory for the 1962 orbital flight. She confirmed it was correct, so the machine was checked by a person and the person by the machine [S3][S5].
+
+NASA asked her to verify the electronic computer's trajectory for the 1962 orbital flight. She confirmed it was correct. In 2018 she said she worked the calculation several places past the decimal point, and in 2008 that a computer could do much more and much faster but still had to be checked, so the machine was checked by a person [S3][S5].
 
 ### Asking for a seat in the briefings
+
 When told women did not attend, she asked whether there was a law, then joined and pressed on until she was in the room [S6].
 
-### Staying calm before Apollo 11
-She said she was nervous, but calm because she trusted the calculations [S3].
+### Ignoring the sign
+
+At work she and her colleagues dealt with segregated seating in the cafeteria by ignoring the sign and later eating at their desks. She said her father taught her that nobody is better than you, and that at work people were treated as equals [S5]. Records show segregated facilities in the computing pool until 1958 [S2].
+
+### Staying nervous but sure before Apollo 11
+
+She had checked her lunar calculations and was still nervous during the landing, because outcomes can be unpredictable. She wanted nothing to go wrong, and nothing did [S3].
 
 ## Where she stood
 
@@ -147,4 +162,5 @@ There is little criticism of Johnson's work on the record. The disputes are abou
 - "We wrote our own textbook, because there was no other text about space." (NASA interview, 2008) [S3]
 - "Well, is there a law?" (on asking to attend briefings, quoted by NPR, 2020) [S6]
 - "First you learn how to work the problem" (AARP interview, 2018) [S5]
-- "If you do your best, nobody can ask you to do it over again." (AARP interview, 2018) [S5]
+- "I found what I was looking for at Langley" (NASA interview, 2008) [S3]
+

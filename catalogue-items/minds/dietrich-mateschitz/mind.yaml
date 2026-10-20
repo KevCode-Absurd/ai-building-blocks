@@ -20,7 +20,8 @@ seats:
   - {seat: "Own the culture", asks: "Where do our people already spend their time, and how do we become part of it instead of a sticker on it?"}
   - {seat: "Premium and patience", asks: "Would people pay more for the original, and are we ready to wait years for them to get it?"}
 pairs_with: [phil-knight, richard-branson, al-ries, seth-godin, jack-trout]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
+thin_record: "He gave very few interviews and wrote no books or letters; his public own words are two interviews (Bilanz 2017, Forbes 2005) plus a few quoted lines."
 sources:
   - {n: 1, title: "Dietrich Mateschitz: man sollte ja niemals nie sagen (interview, January 2017)", by: "Dirk Ruschmann and Erich Gerbl, Bilanz", url: "https://www.bilanz.ch/unternehmen/portraits/dietrich-mateschitz-man-sollte-ja-niemals-nie-sagen/00rbg0v", kind: own-words}
   - {n: 2, title: "The Soda With Buzz (interview-based article, March 2005)", by: "Kerry A. Dolan, Forbes", url: "https://www.forbes.com/forbes/2005/0328/126.html", kind: own-words}
@@ -31,6 +32,8 @@ sources:
   - {n: 7, title: "Dietrich Mateschitz", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dietrich_Mateschitz", kind: reference}
   - {n: 8, title: "Red Bull", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Red_Bull", kind: reference}
 
+  - {n: 9, title: "Remembering Dietrich Mateschitz, Red Bull and AlphaTauri's quiet patriarch (obituary with two quotes from a rare interview)", by: "Formula1.com", url: "https://www.formula1.com/en/latest/article/obituary-remembering-dietrich-mateschitz-red-bull-and-alphatauris-quiet.7CNRiGEhYVanRPbQAx79y", kind: secondary}
+  - {n: 10, title: "Weitere Umsatzsprünge in Sicht (dpa report, 20 October 2023, drawing on his long-time adviser Volker Viechtbauer)", by: "dpa via CIO.de", url: "https://www.cio.de/article/3699437/weitere-umsatzspruenge-in-sicht.html", kind: secondary}
 tests:
   - {kind: use, prompt: "We make a new kind of cold tea. Write a one-page plan to launch it as its own category, not just another iced tea."}
   - {kind: use, prompt: "List ten low-cost events or stunts a small sportswear brand could run to become part of its local climbing scene."}

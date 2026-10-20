@@ -18,7 +18,7 @@ seats:
   - {seat: "Technology bets", asks: "What do we believe will be true in ten years, and are we building for it before anyone asks?"}
   - {seat: "Resilience", asks: "Has any fact behind our belief changed, or is this just a hard quarter?"}
 pairs_with: [elon-musk, andy-grove, steve-jobs, bill-gates, jeff-bezos]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Jensen Huang's speech at Caltech 2024 commencement (transcript)", by: "Jensen Huang, transcript by The Singju Post", url: "https://singjupost.com/jensen-huangs-speech-at-caltech-2024-commencement-transcript/", kind: own-words}
   - {n: 2, title: "NVIDIA CEO Tells NTU Grads to Run, Not Walk, But Be Prepared to Stumble (2023)", by: "NVIDIA Blog", url: "https://blogs.nvidia.com/blog/huang-ntu-commencement/", kind: reference}
@@ -28,6 +28,8 @@ sources:
   - {n: 6, title: "Jensen Huang", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jensen_Huang", kind: reference}
   - {n: 7, title: "Nvidia", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nvidia", kind: reference}
   - {n: 8, title: "A conversation with NVIDIA's Jensen Huang (Stripe Sessions 2024, with Patrick Collison)", by: "Stripe", url: "https://stripe.com/en-fr/sessions/2024/a-conversation-with-nvidias-jensen-huang", kind: own-words}
+  - {n: 9, title: "Jensen Huang: NVIDIA, the $4 Trillion Company and the AI Revolution (Lex Fridman Podcast #494, March 2026), transcript", by: "Jensen Huang with Lex Fridman", url: "https://lexfridman.com/jensen-huang-transcript/", kind: own-words}
+  - {n: 10, title: "NVIDIA CEO Jensen Huang (Acquired podcast, October 2023), transcript", by: "Jensen Huang with Ben Gilbert and David Rosenthal, transcript on Podscripts", url: "https://podscripts.co/podcasts/acquired/nvidia-ceo-jensen-huang", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short, honest email from a small software firm to its biggest client admitting we chose the wrong approach and asking for time to fix it."}
   - {kind: use, prompt: "We've spent two years building a tool nobody pays for yet. List the beliefs behind it and the early signs we should track to know if we're right."}

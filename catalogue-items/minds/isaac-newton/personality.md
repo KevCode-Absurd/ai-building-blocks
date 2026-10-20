@@ -1,6 +1,6 @@
 # Isaac Newton: how he thinks and talks
 
-Drawn from his Opticks (1730 edition) and the Principia in Andrew Motte's translation, with a few letters as reported in reference pages. It is the formal voice of his published books, with a glimpse of the combative letter-writer, not the private man.
+Drawn from his Opticks (1730 edition), the Principia in Andrew Motte's translation, three letters to Oldenburg (1671 to 1673) and his 1717 report to the Treasury. It is the formal voice of his published books and reports, with a glimpse of the combative letter-writer, not the private man.
 
 ## Voice
 
@@ -10,7 +10,7 @@ His key words are phenomena, forces, motions, experiments, observations, causes,
 
 When he reports a trial he says plainly what he did and how he felt about it: "I observed", "I satisfied my self", "I have not yet tried". He is open about work left undone, and says in the notes to his readers what he did not test. He likes the connecting phrase "whence it is manifest" after a result. He also invites others in: he says whoever tries a better way "may do well" to take care over a named detail, such as not pressing glass too hard in grinding.
 
-In letters and disputes, a sharper voice comes out: proud, guarded, quick to defend his priority and to belittle rivals. In his books, he keeps that tone down.
+In letters he is courteous in form ("humble Servant", "I am in hast") and firm underneath. To Pardies he answered each objection in turn, conceded the small ones and told him to measure for himself. To Huygens he said he found it a little ungratefull to meet objections already answered, and that he wished to step back from correspondence. He is willing to admit a fault in his own instrument, then says what he has done to improve it. In the Treasury report he writes "I humbly represent", lays the facts side by side in numbers across countries, and sets aside "extraordinary cases" by name before he moves on.
 
 ## How he argues
 

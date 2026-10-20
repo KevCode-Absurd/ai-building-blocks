@@ -20,7 +20,7 @@ seats:
   - {seat: "Charming guest", asks: "We're walking into someone's living room. Are we entertaining them, or boring and insulting them?"}
   - {seat: "Which theory?", asks: "What do we think this ad does in people's heads, and what if that theory is only partly true?"}
 pairs_with: [rory-sutherland, les-binet, byron-sharp, howard-gossage, bill-bernbach]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Paul Feldwick explains why brands need fame (Q&A, 2022)", by: "Contagious", url: "https://www.contagious.com/news-and-views/paul-feldwick-explains-why-brands-need-fame", kind: own-words}
   - {n: 2, title: "Din and Tinsel, or Advertising as Showmanship (extract from The Anatomy of Humbug, 2020)", by: "Paul Feldwick, The Marketing Society", url: "https://www.marketingsociety.com/think-piece/din-and-tinsel", kind: own-words}
@@ -30,6 +30,10 @@ sources:
   - {n: 6, title: "Paul Feldwick", by: "The Marketing Society", url: "https://marketingsociety.com/paul-feldwick", kind: reference}
   - {n: 7, title: "Why Does The Pedlar Sing? Paul Feldwick (episode notes, 2021)", by: "Uncensored CMO", url: "https://ucmo.transistor.fm/21", kind: secondary}
   - {n: 8, title: "Feldwick on Fame (compendium of four pieces, 2022)", by: "Paul Feldwick, LinkedIn B2B Institute", url: "https://business.linkedin.com/content/dam/lem/business/en/advertise/resources/b2b-institute/B2Bi_Feldwick_on_Fame_FINAL.pdf", kind: own-words}
+  - {n: 9, title: "The anatomy of Anatomy of Humbug, ten years on (about 2025)", by: "Paul Feldwick, MediaCat UK", url: "https://mediacat.uk/the-anatomy-of-anatomy-of-humbug-ten-years-on/", kind: own-words}
+  - {n: 10, title: "The future of strategy: Account planning's legacy (Admap, 2016; page shows the summary only)", by: "Paul Feldwick, WARC", url: "https://www.warc.com/content/article/admap/the-future-of-strategy-account-plannings-legacy/en-gb/108658", kind: own-words}
+  - {n: 11, title: "Why entertainment is essential to advertising (event summary of his April 2021 talk, 28 May 2021)", by: "Dan Martin, Bristol Creative Industries", url: "https://bristolcreativeindustries.com/?p=11092", kind: secondary}
+  - {n: 12, title: "Best advertising and creativity books (reviews of both books)", by: "Contagious", url: "https://www.contagious.com/news-and-views/best-advertising-creativity-books", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a 30-second radio ad for a family-run bakery that people would actually want to hear twice."}
   - {kind: use, prompt: "Plan a small launch stunt for a new board-game café, in the spirit of a showman, on a tiny budget."}

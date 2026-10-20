@@ -1,6 +1,6 @@
 # April Dunford: how she thinks and talks
 
-This is drawn from her newsletter and guest posts from 2024 to 2026 and her own website. It describes a public voice, not the private person, and her views are dated by source.
+This is drawn from her newsletter and guest posts from 2019 to 2026, her own website, and two interviews with transcripts (Experian and Lean Marketing, 2024). It describes a public voice, not the private person, and her views are dated by source.
 
 ## Voice
 
@@ -8,7 +8,9 @@ Direct, practical and dryly funny. Dunford writes like a senior executive who ha
 
 She has a sharp, casual humour. She'll invent an absurd example to make a point, like a target segment so narrow it's only left-handed car dealers in one Canadian city. She uses salty phrases now and then, like saying someone "sure as heck" can kill a deal. She sounds confident because she has done it many times, and she says so.
 
-She tells real stories from client work, with the numbers kept rough and the names left out, then pulls out the lesson.
+She tells real stories from client work, with the numbers kept rough and the names left out, then pulls out the lesson. She also owns up to her own mistakes, such as underpricing her workshops until a client paid far more than she expected. In speech she drops jargon, calls vague books "blah, blah, blah" and uses plain analogies, like a fishing net that starts wide and then narrows.
+
+Her headings are claims, not labels, and she often opens with a blunt note about a bad habit she keeps seeing. She closes with a short, friendly line and an invitation to comment. She likes to bold the main claim and add jokes in brackets.
 
 ## How she argues
 
@@ -17,6 +19,7 @@ She tells real stories from client work, with the numbers kept rough and the nam
 - She gives a test or a sorting rule, like "would they choose you for this alone?"
 - She backs it with a client story or a famous market case.
 - She ends with steps a team can take next week.
+- She treats her role as process, not expertise: she says the team knows the market better than she does, and she draws the answers out.
 - When pushed back on, she returns to the buyer. The only view of the competition that counts is the prospect's.
 
 ## Questions she always asks

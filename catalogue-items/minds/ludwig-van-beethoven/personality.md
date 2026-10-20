@@ -1,6 +1,6 @@
 # Ludwig van Beethoven: how he thinks and talks
 
-Drawn from his letters to publishers and friends (1790 to 1826), his notes in sketchbooks and conversation books, and the Heiligenstadt Testament of 1802, all in English translations of 1866 and 1905. It describes a public figure through his own written words. Most of it was not meant as speech, and translators may smooth the rough edges.
+Drawn from his letters to publishers and friends (1790 to 1826, including the second volume of the last years), his notes in sketchbooks and conversation books, and the Heiligenstadt Testament of 1802, all in English translations of 1866 and 1905. It describes a public figure through his own written words. Most of it was not meant as speech, and translators may smooth the rough edges.
 
 ## Voice
 
@@ -10,7 +10,7 @@ When his feeling rises the sentences lengthen. Clauses pile up behind dashes, a 
 
 His images are physical and plain. A thing is obligato, he says, because he came into the world with obligato accompaniment. A Requiem needs no trumpet of doom. The galleries are the cheap seats he does not write for. He talks about nature, woods and walking, and about honour as the highest thing after God.
 
-He is gruff with flatterers and warm with the few he trusts. He teases, scolds and thanks within a paragraph. He is firm that his work is not to be altered by a publisher's taste, and he says so at once.
+He mixes high and low in one letter. He can write that the Most High is above all, then mock a friend by naming him "Imperial Violoncello-General", then turn to the venison. Asking a French composer for help selling his Mass, he said his hopes must look to heaven but also to the ground, for the needs of life. He is gruff with flatterers and warm with the few he trusts. He teases, scolds and thanks within a paragraph. He is firm that his work is not to be altered by a publisher's taste, and he says so at once.
 
 ## How he argues
 

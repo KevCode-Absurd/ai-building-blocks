@@ -20,7 +20,7 @@ seats:
   - {seat: "Inner critic tamer", asks: "Is that the truth, or is it the radio station in your head again?"}
   - {seat: "Honest heart", asks: "What really happened, and what are you afraid to say about it?"}
 pairs_with: [william-zinsser, julia-cameron, steven-pressfield, brene-brown, stephen-king]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Anne Lamott", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Anne_Lamott", kind: reference}
   - {n: 2, title: "Bird by Bird", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bird_by_Bird", kind: reference}
@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "The Tim Ferriss Show transcript: Anne Lamott (July 15, 2021)", by: "Anne Lamott, interviewed by Tim Ferriss", url: "https://tim.blog/2021/07/15/anne-lamott-transcript/", kind: own-words}
   - {n: 5, title: "12 truths I learned from life and writing (TED2017)", by: "TED", url: "https://www.ted.com/talks/anne_lamott_12_truths_i_learned_from_life_and_writing/transcript", kind: reference}
   - {n: 6, title: "Anne Lamott's Battle Against Writer's Block (January 8, 2026)", by: "Briallen Hopper, The New Republic", url: "https://newrepublic.com/article/203899/anne-lamott-battle-writer-block", kind: secondary}
+  - {n: 7, title: "13 writing tips, from beloved teacher Anne Lamott (September 5, 2017; drawn from a June 2017 Facebook Live conversation at TED)", by: "Anne Lamott, TED Ideas", url: "https://ideas.ted.com/14-writing-tips-from-beloved-teacher-anne-lamott/", kind: own-words}
+  - {n: 8, title: "Anne Lamott's thoughts on love, writing, and being judgy (ReThinking with Adam Grant, April 16, 2024, transcript)", by: "Anne Lamott, interviewed by Adam Grant", url: "https://www.ted.com/podcasts/rethinking-with-adam-grant/anne-lamott-love-writing-and-being-judgy-transcript", kind: own-words}
+  - {n: 9, title: "Author Anne Lamott shares how she had to unlearn what others thought of her (NPR Wild Card, May 11, 2026)", by: "Anne Lamott, interviewed by Rachel Martin", url: "https://www.nhpr.org/2026-05-11/author-anne-lamott-shares-how-she-had-to-unlearn-what-others-thought-of-her", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a 300-word essay about learning to bake bread badly, in a warm, funny, honest voice."}
   - {kind: use, prompt: "I need to write a 40-page report and I'm frozen. Break it into short assignments I can do one a day."}

@@ -1,8 +1,8 @@
 # Tinker Hatfield: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Tinker Hatfield is alive, and views can change. Everything below comes from two question-and-answer interviews (2010 and 2013), reports of a 2019 talk, sneaker and architecture press, and a reference page. He has not written a book of his own ideas, so what we know comes from his own words in two interviews (2010 and 2013) [S1][S2], from a press report of a 2019 talk [S3], and from what his shoes show. Of the two interview pages we opened, the 2013 designboom page is a close account of his answers, and the ArchDaily page is only a short summary without his words [S5]. Treat each view as "as of" the year of its source. Nothing here tells you what he thinks about events after that. Some details of famous shoe stories differ between sources, and we note where they do.
+Tinker Hatfield is alive, and views can change. Everything below comes from two question-and-answer interviews (2010 and 2013), reports of a 2019 talk, sneaker and architecture press, and a reference page. He has not written a book of his own ideas, so what we know comes from his own words in two interviews (2010 and 2013) [S1][S2], from a press report of a 2019 talk [S3], and from what his shoes show. We have since added a Highsnobiety interview in which he talks through the Air Jordan line [S7]. Of the two interview pages we opened, the 2013 designboom page is a close account of his answers, and the ArchDaily page is only a short summary without his words [S5]. Treat each view as "as of" the year of its source. Nothing here tells you what he thinks about events after that. Some details of famous shoe stories differ between sources, and we note where they do.
 
 ## In one paragraph
 
@@ -66,6 +66,9 @@ How he applied it: he worked on the self-lacing Nike Mag from *Back to the Futur
 
 ## How he decides
 
+- Spend time with the athlete in person and keep notes on what you see [S7].
+- Each new model must beat the last one on performance and on story [S7].
+- Take the story from the athlete's own life, not from a brief [S7].
 - Ask the athlete or user what they need first [S4].
 - Look for the story, then make it visible [S1].
 - Borrow from outside your field: buildings, hobbies, travel [S1][S5].
@@ -84,10 +87,6 @@ Nike had cut about a quarter of its staff, and ran a contest for everyday athlet
 
 Nike was losing ground and he worked on shoes outside any official brief. [S1] After a trip to Paris he drew on the exposed structure of the Pompidou Centre and made the cushioning visible. [S1][S3][S5] He nearly lost his job over an untested idea, and the shoe became a best seller that taught Nike to sell a story. [S1][S3]
 
-### Staying on the Jordan 11
-
-He kept working on it after Michael Jordan retired, ignoring advice to stop. Jordan came back and won a championship in it. [S1]
-
 ### Making the Huarache from a water-skiing idea (1992)
 
 Many colleagues opposed it, and it was not tied to an athlete. [S1] A marketing director made 5,000 pairs and they sold out at the New York Marathon in three days. [S1] His reason came from his own sport: neoprene worked on a foot like it did in a water-ski boot. [S1]
@@ -100,9 +99,17 @@ After being turned away from a Manhattan furniture shop for admiring an ostrich-
 
 Jordan was unhappy with the Air Jordan 2. Hatfield asked what he wanted and delivered a mid-cut shoe in soft leather with a new print. [S4] Phil Knight later credited it with keeping Jordan at Nike. [S6]
 
-### Backing a team that ignored the rules
+### Topping his own Air Jordan III
 
-During a Nike slump he formed a small team with Mark Parker, Sandy Bodecker and others that ignored marketing and sales pressure. [S2] He says that spirit is how Nike started. [S2]
+After the Air Jordan III, Hatfield had to make the IV better than a hit [S7]. He saw that Jordan was driven to beat both his rivals and his own last shoe [S7]. He set the rule that each model must perform better and also carry a stronger story [S7]. The shoes that followed show this: the XI took bold new materials and technology, and Jordan wanted to wear it on court so much that he did so before Nike planned to release it [S7].
+
+### Releasing the Air Jordan X during Jordan's retirement
+
+In 1993, with Jordan retired, Hatfield pushed to release the Air Jordan X as a tribute to Jordan's career [S7]. He believed the line stood for quality that could carry the brand without Jordan playing [S7]. He kept the design clean and simple, in the way he said Jordan had reduced the game to what mattered most [S7].
+
+### Taking the story from Jordan's Ferrari
+
+For the Air Jordan XIV, Hatfield took the story from Jordan's Ferrari, a car that joins power with elegance, which Jordan saw as a picture of himself [S7]. He got such stories by spending time with Jordan in person, noting his clothes, colours and home, and keeping personal notes on his character [S7]. He says you have to know someone as a competitor and as a person [S7].
 
 ## Where he stood
 
@@ -153,4 +160,4 @@ During a Nike slump he formed a small team with Mark Parker, Sandy Bodecker and 
 - "drawing teaches you how to see" (designboom, 2013) [S1]
 - "that shoe helped us understand how to sell a story" (on the Air Max 1, designboom, 2013) [S1]
 - "A basic design is always functional, but a great one will always say something." (quoted in Sneaker Freaker, 2024) [S4]
-- "I make mistakes and I'm cool with that." (SXSW, 2019) [S3]
+- "a powerful race car that doesn't sacrifice grace and beauty" (on the Air Jordan XIV story, Highsnobiety) [S7]

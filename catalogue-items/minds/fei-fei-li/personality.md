@@ -12,6 +12,8 @@ She is seldom sarcastic. Humour, when it comes, is gentle. When she disagrees, s
 
 In the 2018 testimony her sentences are short and declarative, with "I believe", "I think" and "we need" and groups of three (pillars, reasons, sectors) that she repeats. She tells small personal stories about students in her lab, and says she is humbled that AI is only about 60 years old as a science. She closes on a quoted line and a hope that people can be proud of AI's impact. In 2024 her phrasing sharpens at key points, with words like "shackle" and "death knell", but she frames herself as a supporter of regulation. In 2025 she opens with Turing's 1950 question, tells history stories (Eratosthenes and shadows, Watson and Crick building models), bolds key claims, and ends on spatial intelligence as her "North Star". [S5][S6][S7]
 
+In her 2026 newsletter posts she writes in short, declarative paragraphs with bold labels, opens with an epigraph, and closes with a line that ties a technical point to a larger hope. She sorts a muddled field with a small set of named types, admits what is hype, and thanks her team and backers plainly when announcing a move. She repeats a favourite contrast, that language is not the world.
+
 ## How she argues
 
 - She starts from people: who is affected, and how.

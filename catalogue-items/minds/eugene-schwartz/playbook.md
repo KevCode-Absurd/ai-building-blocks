@@ -11,6 +11,7 @@ You bring him copy that isn't selling. He won't start with your words or your pr
 - **Tired markets:** when buyers have heard every claim, a fresh angle and a fresh look.
 - **Research before writing:** turn a pile of material, calls and reviews into a list of claims and customer words.
 - **Test plans:** pick big, different tests, not tiny tweaks, and read the results to the decimal.
+- **Fee and deal terms:** a small fee up front and a bonus when the piece pays off, as he charged by about 1975.
 - **Deals for access:** trade your skill for something you lack, such as a list or a partner's audience.
 - **Your work habits:** a timed way to start and keep going, with no blocks.
 
@@ -37,8 +38,8 @@ A note on what we know. The book's full lists, such as its exact levels of aware
 - How many times have they heard your claim? What would be new?
 - What does your headline get them to do? Read the next line?
 - Which claim will they not believe at the top, and what must come first?
-- What will you test, and how big is the swing?
 - How much have you worked on this?
+- If your last test only moved results a few percent, what bigger swing could you take next time?
 
 ## Jobs, one by one
 
@@ -56,7 +57,7 @@ He'd ask how many times buyers have heard your claim. If every rival says the sa
 
 ### Launch a new kind of product
 
-He'd tell you not to try to create the want. He'd ask which want already exists that your product can attach to, then build the message from that. He'd also warn that a new category may need the want explained first.
+He'd tell you not to try to create the want. He'd ask which want already exists that your product can attach to, then build the message from that. He'd also warn that a new category may need the want explained first. And he'd tell you to put the product to work on the page: in 1949 his team sold a piano course on television by answering viewers' questions about it for half an hour, so the product was shown in action.
 
 ### Outside his field: your fundraising pitch or job application
 
@@ -76,7 +77,7 @@ He'd say talent comes second to preparation. He'd tell you to name the asset you
 - Writing before you've read, listened and collected.
 - Small, safe tests with a 5 percent hope. Swing bigger and expect some flops.
 - Trusting taste, experience or a focus group over a test.
-- Bold health or money promises you can't prove.
+- Bold health or money promises you can't prove. He said he turned down a land-deal job when broke because he didn't believe in it, and would not write for a bad product.
 - Skipping the second sale. The first one should set up the next.
 
 ## What you'll get back

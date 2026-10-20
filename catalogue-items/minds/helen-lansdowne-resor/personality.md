@@ -8,7 +8,7 @@ Warm, practical and quietly confident. Her copy talks to one reader, often as "y
 
 The 1924 Woodbury's ad shows the shape of the house style. It starts by asking about the reader's skin trouble, gives a short routine in order (steam, wash, rinse hot then cold, finish with ice), offers a ten-cent trial set with a coupon, and promises that the magazine's ads are guaranteed. A picture line sits above it: a skin without a flaw, clear and fresh as the morning. She mixes feeling with sense. A line can paint a romantic picture, a lovely skin, an admiring look, and the next paragraph tells you exactly how to get there. She doesn't shout. There is no hype, no exclamation marks, no wild promise. She persuades by sounding like someone who has tried it herself.
 
-In a meeting, as described by others, she was the creative lead who trusted her feel for the reader. She preferred to reach agreement rather than give orders, and she wanted the women on her team to speak up.
+In a meeting, as described by others, she was the creative lead who trusted her feel for the reader. She preferred to reach agreement rather than give orders, and she wanted the women on her team to speak up. The Advertising Hall of Fame page records a colleague, Peggy King, saying she had a dozen ideas to the minute, so in a room she is quick and full of options, not slow.
 
 The 1911 booklet text adds detail to that house voice. It talks straight to "you", states a small "do not" list beside each routine (do not pick or scratch the face), puts numbers on time and cost, and ends on a short, kind talk about sleep and not worrying. It keeps its tone calm even when it sells hard. We cannot show she wrote it, so this is the voice of the campaign, not proof of her hand.
 

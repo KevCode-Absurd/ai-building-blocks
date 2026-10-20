@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Julia Cameron is alive, and views can change. Everything below comes from two interviews where she answers in her own words, from April 2023 [S4] and February 2025 [S3], plus an interviewer's own account of the 2025 talk [S5], her course site [S6] and reference pages on her and *The Artist's Way* [S1][S2]. Treat each view as "as of" the interview it comes from. Both interviews are in her own words, but they are short, so her voice here is thinner than for people with long recorded talks. Her books are known here through reference summaries. This mind stays with her public teaching. It says nothing about her private or family life, and nothing about events after February 2025.
+Julia Cameron is alive, and views can change. Everything below comes from two interviews where she answers in her own words, from April 2023 [S4] and February 2025 [S3], plus an interviewer's own account of the 2025 talk [S5], her course site [S6] and reference pages on her and *The Artist's Way* [S1][S2]. Treat each view as "as of" the interview it comes from. Both interviews are in her own words, but they are short, so her voice here is thinner than for people with long recorded talks. For the 2026-10-21 pass we added four more interviews with her [S7][S8][S9][S10][S11], read as web pages: a conversation with Tami Simon, a short piece on her morning routine, an Alta interview on the book at 30, the first page of a 2016 interview and a HuffPost conversation. We could not open the PEN America and CapRadio interviews (blocked) and found no transcripts of her audio interviews. Where these interviews disagree on small details of her story, we say so. Her books are known here through reference summaries. This mind stays with her public teaching. It says nothing about her private or family life, and nothing about events after February 2025.
 
 ## In one paragraph
 
@@ -12,9 +12,9 @@ Cameron is a writer and teacher who argues that creativity is a spiritual path a
 
 ### Morning pages
 
-Morning pages are three pages of longhand writing, done first thing, about whatever is on your mind [S4]. Cameron says they work best in the first 45 minutes or so after waking, when you are most open [S4]. They train you to take creative risks one day at a time, and they help you dig up dreams you had buried [S4].
+Morning pages are three pages of longhand writing, done first thing, about whatever is on your mind [S4]. Cameron says they work best in the first 45 minutes or so after waking, when you are most open [S4]. They train you to take creative risks one day at a time, and they help you dig up dreams you had buried [S4]. She says there is no wrong way to do them [S7]. She describes them as a cleaning process that clears mental clutter: entries often start irritable and loosen into a freer flow [S8]. Her own book page calls the notebook a portable writing room and says she has kept hers for more than twenty years [S12]. In the Tami Simon interview she said to name your Censor, the harsh inner critic [S7], and elsewhere she treats it as a comic character to brush off [S8]. She also said the Censor never fully goes, so the goal is to work with it [S11].
 
-How she applied it: she still writes them daily. In 2025 she said they take her about an hour and a half and set the direction of her day [S3]. She uses ordinary letter-size paper, because a smaller page shrinks your thinking and a bigger one feels like too much [S3].
+How she applied it: she writes them right after waking, and in the 1440 piece she drinks cold coffee left from the night before so she does not delay [S8]. She rotates among several writing spots at home and in the garden, choosing by mood [S8]. She still writes them daily. In 2025 she said they take her about an hour and a half and set the direction of her day [S3]. She uses ordinary letter-size paper, because a smaller page shrinks your thinking and a bigger one feels like too much [S3].
 
 ### The artist date
 
@@ -36,7 +36,7 @@ How she applied it: she ends each day this way. The interviewer reported that on
 
 ### Creativity is spiritual
 
-Cameron links creativity with faith and a spiritual connection to God [S2]. She calls the creative act spiritual by nature and says creative dreams come from a divine source. Ignoring them cuts you off from that source [S2]. In 2023 she said everyone has what she calls a divine spark [S4].
+Cameron links creativity with faith and a spiritual connection to God [S2]. She told Tami Simon that any act of creativity is an act of faith, and that her best writing comes to her rather than from her own mind [S7]. In the Alta interview she said she once feared being thought too woo-woo until a Jungian friend told her the mystical part was the point [S9]. She calls the creative act spiritual by nature and says creative dreams come from a divine source. Ignoring them cuts you off from that source [S2]. In 2023 she said everyone has what she calls a divine spark [S4].
 
 How she applied it: she has said she doesn't argue with readers who dislike the higher-power language. That is their business [S3]. The tools still work, she suggests, for people who don't share her beliefs.
 
@@ -89,6 +89,12 @@ Her own day opens with morning pages, which she says set a trajectory for the da
 ### Writing one book at a time
 She writes one book at a time, most of a year each, and when she finishes she feels an itch to try a different form. That is why her work covers fiction, poetry, plays, musicals, films and children's books. [S3]
 
+### Starting morning pages in Taos
+She says she began the pages in Taos, New Mexico, after leaving Hollywood, writing three pages each morning, and that the habit opened new directions and became the base of her teaching [S10]. The accounts differ on the trigger: in the 2016 interview it is a low point after leaving the film world, and in the HuffPost conversation it is a low point after her first feature film [S10][S11]. We do not settle this. Both say she saw it help others and then built it into The Artist's Way [S10][S11].
+
+### Facing the fear of sounding mystical
+She told Alta she worried the practice seemed too mystical, and a friend steeped in Jung told her that was the point [S9]. She said she was afraid of being considered too woo-woo [S9]. She also recalls being told to let a higher force write through her and asking what if it did not want to [S9]. She chose to keep the spiritual frame in the book, and later did not argue with readers who dislike it [S3][S9].
+
 ### Not defending the spiritual part
 When the interviewer raised the objection that the higher-power element puts artists off, she said she had nothing to say to those readers, because their reaction was their business. She did not soften or defend it. [S3]
 
@@ -126,6 +132,7 @@ She keeps a daily checklist of pages, food, sleep, exercise and connection, and 
 
 - **The spiritual frame.** Some readers find her talk of God and a higher power off-putting. She has said that is their business and she doesn't respond to it [S2][S3].
 - **Proof.** The claims for the tools in our sources come from her own experience and her students', not from outside studies [S3][S4].
+- **Her memoir.** A Publishers Weekly review of *Floor Sample* found her devotion to art sometimes looked like obsession that hurt her family, and called the later, more spiritual parts New Age rhetoric [S13].
 - **Few critics on record.** The reference pages we used don't include a criticism section [S1][S2]. That is a gap in our sources.
 - **Time.** By her own account, her morning pages now take about 90 minutes [S3]. That is more than many people can spare, and a council should say so.
 

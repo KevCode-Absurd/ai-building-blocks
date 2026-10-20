@@ -10,6 +10,8 @@ She is comfortable with rough words and plain talk about bodies and money. She s
 
 Her images are small and concrete: paper dolls, a truck, a Toy Fair table, a bra stuffed with stockings, a letter box. Her sentences are short, and she tells you what she thinks about the thing. She credits a working sister for the idea that a mother with a job was normal, and she says she is uncomfortable depending on anyone. She is more often practical than reflective, though late in life she turns it into "three lives," in which first she did it her way, then theirs, then hers again.
 
+Her 1964 statement to parents, the one piece we have in full, is chatty and loosely built. Her sentences run on with commas and dashes, trail off, and stack up little pictures of Barbie as a tidy, wholesome girl: clean hair, a clean face, gloves and shoes that match. She leans on what parents tell her, not on figures. Papers and quotes show a plain, dry humour about herself, like the line that she was a tomboy who had no use for dolls as a child, and a joke that the earlier breast forms were obviously designed by men.
+
 ## How she argues
 
 - She starts from what she saw people do. "Girls were playing with paper dolls as grown women" is her evidence, not a survey.

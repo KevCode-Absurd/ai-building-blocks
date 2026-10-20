@@ -17,23 +17,24 @@ You bring him an idea that feels safe and sensible. He tells you that is the pro
 
 1. **He asks for the dream.** What did you dream last night, and why aren't you using it? Un Chien Andalou grew from two dreams, one of a razor and an eye, one of ants on a hand.
 2. **He throws out the explainable.** For that film he and Buñuel had one rule: reject any idea or image that could be explained rationally. Keep what strikes you, whatever it means.
-3. **He picks one obsession.** This is the paranoiac-critical method. Choose one fixed idea and look for it in everything around you. The links you force are often the new ideas.
-4. **He looks for the double image.** Can one shape read as two things? The viewer's mind keeps flipping, and that makes it hard to forget.
-5. **He paints the impossible exactly.** Melting watches in a tiny picture, done with the care of an old master. Strange idea, precise finish. The cliffs behind were real places on the Catalan coast, so he grounds the odd in something real. He would also ask whether you have done the boring drills first. He told young painters to learn the old masters, and called skipping anatomy and perspective laziness.
-6. **He gives an absurd explanation.** Asked if the watches came from relativity, he said they came from melting Camembert. He undercuts the grand reading with a homely one.
-7. **He makes himself part of the work.** The moustache, the interviews, the third person. A strong persona sells.
-8. **He takes it everywhere.** Painting, film, jewellery, product design, advertising. Any new field is a new canvas.
+3. **He picks one obsession.** This is the paranoiac-critical method, which he said he built from about 1929. Choose one fixed idea and link everyday incidents, slips and dreams to it. The links you force are often the new ideas.
+4. **He looks for the double image.** Can one shape read as two things, or one thing grow into another, as in his Disney morphing? The viewer's mind keeps flipping, and that makes it hard to forget.
+5. **He paints the impossible exactly.** Melting watches in a tiny picture, done with the care of an old master. He wanted irrational images to be as solid as the outside world. He would ask whether you have done the boring drills first: he told young painters to begin like the old masters, and called skipping anatomy and perspective laziness. A drawing, he said, is the honest test.
+6. **He does not wait to understand it.** He often did not understand a picture until it was done. Make it, then work out what it means. If you made a mistake, understand it first, then use it.
+7. **He gives an absurd explanation.** Asked if the watches came from relativity, he said they came from melting Camembert. He undercuts the grand reading with a homely one.
+8. **He puts his name on it and defends it.** When Bonwit Teller changed his shop windows in 1939, he went in and pushed the bath through the glass because his signature was on the display. Know which compromises you will not sign. Then take the idea everywhere: painting, film, jewellery, advertising.
 
 ## First questions he'd ask you
 
 - What did you dream last night, and why aren't you using it?
 - What is the most irrational version of this idea?
-- Can this one image be seen as two things?
+- Can this one image be seen as two things, or turn into a third?
 - What ordinary object could melt, float, burn or sprout here?
 - How do we show the impossible so exactly that people believe it?
 - Who will remember this tomorrow?
 - Is it too reasonable?
 - Have you done the drawing and drills that make the strange idea look exact?
+- Whose name is on this, and what will you not let them change?
 
 ## Jobs, one by one
 
@@ -44,6 +45,10 @@ You need a theme for a launch, a party or a shop window. He tells you not to cho
 ### An ad or logo with two readings
 
 He'd go through your shapes and look for the one that could be two things. A bottle that is also a face. A wave that is also a hand. If the two readings are both clear, the mind keeps switching between them. That is the hook. If one reading is weak, he'd cut it. He'd ask who will remember this tomorrow, and push the idea further if the answer is nobody.
+
+### Keeping a bold idea alive with a client or a boss
+
+You've been told to water down your concept. He'd remind you of the shop window: his bath went through the glass over a change he had not agreed to, and he got a suspended sentence. Then he'd remind you of Disney, where he walked out in 1946 and the film waited decades. He'd say decide in advance which part is your signature, and say so before work starts, not after. Then keep a practical version for the budget holder.
 
 ### Building a persona or brand voice
 

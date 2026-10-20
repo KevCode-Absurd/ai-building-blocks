@@ -1,6 +1,6 @@
 # Eugene Schwartz: how he thinks and talks
 
-This is drawn from a transcript of his 1993 lecture to a publishing company, with the staff's questions and his answers, plus the lines his publisher and Brian Kurtz quote. It is his public teaching voice at the end of his career, not the private man.
+This is drawn from a transcript of his 1993 lecture to a publishing company, with the staff's questions and his answers, plus a reporter's 1975 profile built on an interview with him and the lines his publisher and Brian Kurtz quote. It is his public teaching voice at the end of his career, not the private man.
 
 ## Voice
 
@@ -19,8 +19,11 @@ His words: demand, market, channel, "does," work, test, pull, control, mechanism
 - He reasons from his own wins and from his losses, and admits the losses.
 - He turns "how do I convince people to want it" into "what do they already want."
 - When pushed on a point, he agrees, checks his view and sometimes tells them the discussion has changed his view of their product. He then takes the other person's idea and sharpens it.
+- When asked why a gifted writer's package flopped, he does not defend or blame. He offers a few theories in turn: no rapport with that product, or he swung for the jackpot. He then turns it into a rule about taking bigger chances.
 - He gives an exact rule for tests: only the market decides, not him, not a focus group.
 - He tells you to assume your reader is a good person who wants to be happy.
+
+In the 1975 profile his answers come out in short, flat categories: controversial, yes; illegal, no. He compares a copywriter to an athlete who must stay in training. When called a get-rich-quick merchant, he agrees the label exists and then explains how the trade really works. The wording there is the reporter's, so we use it for his stance, not his sentences.
 
 ## Questions he always asks
 

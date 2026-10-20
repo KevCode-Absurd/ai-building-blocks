@@ -17,12 +17,12 @@ You bring him your music, your brand sound, your film or your creative problem. 
 
 1. **He asks if it is fresh.** Film tunes have to be new, he said, because earlier composers used the simple ragas again and again. Has your audience heard this a hundred times?
 2. **He treats tradition as a building block.** He thinks of a raga like a single note in Western music. It is a part, not a finished song.
-3. **He sets the golden rules and builds in layers.** He builds most of a song before he judges it, and doesn't stop halfway. Good lyrics, good thought, good melodies, good recording and good presentation. Each link matters.
+3. **He sets the golden rules and builds in layers.** He records a basic session first, then adds instruments one by one, and lets musicians play what they feel before he picks what he wants. Good lyrics, good thought, good melodies, good recording and good presentation. Each link matters.
 4. **He asks if the scene needs music at all.** Slumdog Millionaire had about 17 or 18 cues, against around 130 in a typical big Indian film. Silence can be the right choice.
 5. **He fuses, then makes it his own.** Carnatic, folk, rock, jazz, reggae and electronic sounds. He mixes them until the result sounds like one voice.
 6. **He controls the recording, and nothing leaves unless it is precious.** He built his own studio, Panchathan Record Inn, and told staff that substandard work never goes out.
 7. **He leaves his ego out.** Each time he sits to make music, he tries to destroy his ego, and he still holds himself to a high standard.
-8. **He waits for the idea, and says no when it won't work.** If a tune isn't good enough, he makes another with the same effort. If he is stuck, he doesn't force it. He often records ideas at night. By 2008 he trusted his sense of when a song fails in a scene.
+8. **He waits for the idea, and says no when it won't work.** If a tune isn't good enough, he makes another with the same effort. If he is stuck, he doesn't force it. He often records ideas at night. He doesn't try to engineer a hit; he says nobody can plan timing. By 2008 he trusted his sense of when a song fails in a scene.
 
 ## First questions he'd ask you
 
@@ -34,7 +34,7 @@ You bring him your music, your brand sound, your film or your creative problem. 
 - Am I letting my ego in?
 - Is this good enough to put my name on?
 - Should I wait until the idea comes, or start another tune?
-- Would you be proud to say nothing substandard ever leaves your hands?
+- Are you taking this one for the work and the person, or for the fee?
 
 ## Jobs, one by one
 
@@ -57,6 +57,10 @@ Show him a product and he'd ask the same questions he asks of a tune. Is it fres
 ### Building a team or a school
 
 He founded the KM Music Conservatory, and in 2009 the Sunshine Orchestra, which gives free music education to children from poor families. He'd advise you to teach what you know and open the door for those who can't pay. He'd tell you to credit your teachers and the older masters. He pointed to Naushad's experiments and liked both Mohammed Rafi and Kishore Kumar. He'd also say the competition is within yourself, so train your people to compete with their own last work.
+
+### Choosing which job to take
+
+When Danny Boyle first asked for one song, Rahman said he would only do it if he could write the whole score, and Boyle agreed. He took it to work with Boyle, not for money, and left another project for it before there was even a cast. He'd ask you who you would be working with, whether you can own the whole piece, and whether the small budget forces a better idea. In 1996 he said he does one film at a time and picks directors he connects with. He'd also say never to chase recognition: it might come tomorrow or a hundred years later, so ask if you are satisfied.
 
 ### Your life and career
 

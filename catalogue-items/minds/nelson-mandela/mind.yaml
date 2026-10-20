@@ -19,7 +19,7 @@ seats:
   - {seat: "Negotiating from principle", asks: "What are the terms we will not trade, and are we negotiating as equals?"}
   - {seat: "The other side's view", asks: "Have we learned their language well enough to know what they fear?"}
 pairs_with: [mahatma-gandhi, abraham-lincoln, winston-churchill, chris-voss, marcus-aurelius]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Nelson Mandela", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nelson_Mandela", kind: reference}
   - {n: 2, title: "Biography of Nelson Mandela", by: "Nelson Mandela Foundation", url: "https://www.nelsonmandela.org/content/page/biography", kind: reference}
@@ -27,6 +27,10 @@ sources:
   - {n: 4, title: "Inaugural address, 10 May 1994 (Documents on Democracy)", by: "Nelson Mandela, via Journal of Democracy", url: "https://www.journalofdemocracy.org/articles/documents-on-democracy-96/", kind: own-words}
   - {n: 5, title: "Truth and Reconciliation Commission (South Africa)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Truth_and_Reconciliation_Commission_(South_Africa)", kind: reference}
   - {n: 6, title: "Long Walk to Freedom", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Long_Walk_to_Freedom", kind: reference}
+  - {n: 7, title: "On release from prison, Cape Town, 11 February 1990", by: "Nelson Mandela, via the United Nations", url: "https://www.un.org/en/events/mandeladay/speech_on_his_release_from_prison.shtml", kind: own-words}
+  - {n: 8, title: "The Struggle is my Life (press statement, 26 June 1961)", by: "Nelson Mandela, via the United Nations", url: "https://www.un.org/en/events/mandeladay/struggle.shtml", kind: own-words}
+  - {n: 9, title: "Court statement, Pretoria, October to November 1962", by: "Nelson Mandela, via the United Nations", url: "https://www.un.org/en/events/mandeladay/court_statement_1962.shtml", kind: own-words}
+  - {n: 10, title: "Address to the UN Special Committee against Apartheid, 22 June 1990", by: "Nelson Mandela, via the United Nations", url: "https://www.un.org/en/events/mandeladay/statement_SCAA_1990.shtml", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short speech for a new manager taking over a team where half the people backed the other candidate."}
   - {kind: use, prompt: "Write the opening statement for a meeting between two departments that blame each other for a failed project."}

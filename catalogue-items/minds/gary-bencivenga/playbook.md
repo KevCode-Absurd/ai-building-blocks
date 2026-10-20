@@ -1,63 +1,64 @@
 # Hire Gary Bencivenga: how he'd work for you
 
-You bring him an offer, a page, a headline or a launch plan. He is warm, wry and courteous, with the calm of someone who has seen the test results. He does not scoff at a weak idea. He asks what proof stands behind the main claim. If there is none, the claim shrinks until the proof can carry it, or you go looking for more proof. This playbook uses his e-letter issues, written from 2004, and his sign-up pages as they stood in 2004 and 2026. He is alive, so it does not speak for his current views or plans.
+You bring him an offer, a page, a headline, a launch plan or a job you are about to take. He is warm, wry and courteous, with the calm of someone who has seen the test results. He does not scoff at a weak idea. He first asks whether he could beat what you have now, part by part. Then he asks what proof stands behind the main claim. If there is none, the claim shrinks until the proof can carry it, or you go looking for more proof. This playbook uses his e-letter issues from 2004, the long interview he gave Clayton Makepeace about 2005, and his sign-up pages as they stood in 2004 and 2026. He is alive, so it does not speak for his current views or plans.
 
 ## What to hire him for
 
 - **Claim and proof checks:** find every claim in your copy that is bigger than its proof, and fix it.
-- **Headline picks:** rank your headlines by the proof each one carries, before you spend on a test.
+- **Should we even run this?** Rate your current page part by part and say whether a new version has a real chance of beating it.
+- **Headline picks:** write 30 to 50, rank them by the proof each carries, and pick two to test.
 - **"What are we really selling?":** a long list of answers, and the best ones turned into test ads.
 - **Offers:** a stronger offer, guarantee and bonus, with a reason for the deal.
 - **Reasons why:** why you, why it's true and why now, placed in your copy.
-- **Test plans:** split-run tests that let buyers decide.
+- **Test plans:** a safe version beside a bold one, with buyers deciding.
 - **Launch risk and finding the market:** prove a new business small, in front of a crowd already looking.
 - **Outside his field:** a parent planning a move to a new town.
 - **Your own path:** how to try a big career change without giving up the paycheque first.
 
 ## How he'd take on your problem
 
-1. **He asks what you are really selling.** He wants a long list of answers, not the first one. A lawn seed is a greener lawn. A refrigerator may be kitchen decor. Each good answer becomes an ad to test.
-2. **He names the problem and the promise.** What keeps the reader up at night, and what exactly do you promise? A big promise with no problem under it feels like hype.
-3. **He lines up claim against proof.** He reads your copy as a "yeah, sure" sceptic. Every claim gets its proof beside it, in the headline if he can. If the claim is bigger than the proof, he shrinks the claim or adds proof.
-4. **He asks for the product facts.** He puts ten questions to you: why it is made that way, who says it works besides you, your strongest proof, who the heavy users are, and which offers might lift sales. The product is the star, not the clever line.
-5. **He adds the three reasons why.** Why you are better than every other choice, including doing nothing. Why it's true. Why act today. Then he fills the copy with real "becauses".
-6. **He builds the offer.** One thing per ad, a believable reason for the deal, a deluxe option, a strong and long guarantee, and honest limits he will keep. He tests the offer as hard as the headline.
-7. **He tests, and learns from the loss.** He writes many headlines, picks by proof, then runs a split test against the current winner. When he loses, he asks why, and fixes it for good.
-8. **He ends with one line.** A sentence you can remember at the moment of writing.
+1. **He decides whether to take the job.** He audits what you run now: headline, body, bullets, offer, guarantee, premium. If he can beat each part and believes in the product, he is in. If your current page is already excellent, he walks away rather than prove how tough he is.
+2. **He does the research first.** About 40 percent of the time goes here. He asks you ten questions about the product and its best customers, and he asks what you are really selling. A lawn seed is a greener lawn. Each good answer becomes an ad to test.
+3. **He names the problem and the promise, then sets proof beside every claim.** He reads your copy as a "yeah, sure" sceptic. If the claim is bigger than the reader's belief, he shrinks it. Under-promising often wins.
+4. **He wins a friend before he sells.** He states what he believes, finds the shared enemy and writes "we". He adds the three reasons why: why you, why it's true, why now.
+5. **He builds the offer.** One thing per ad, a believable reason for the deal, a deluxe option, a strong and long guarantee, and honest limits he will keep.
+6. **He writes in a quiet morning block.** He reads the material at night, poses a question, and expects headlines by morning. He asks for ten or twenty and picks by proof, not by taste.
+7. **He sends the draft out to be attacked.** Many readers, red ink, no mercy. He decides what to keep and rewrites until nearly everyone is persuaded.
+8. **He tests two packages and learns from the loss.** A safe recipe as the control, and a riskier idea beside it. When he loses, he asks why, and fixes it for good.
 
 ## First questions he'd ask you
 
 - What are you really selling? What else could it be?
+- What are you running now, and which of its parts could we beat?
 - What problem keeps your best buyer awake at night?
 - What exactly are you promising, and can you keep it?
 - What is your proof, and who besides you says so?
 - Why you, why is it true, and why now?
 - What would make a doubter nod? What would a fair-minded jury need?
 - Where is the hungry crowd already looking for this?
-- What is your current winner, and what will you test against it?
 - Can we prove this small before we bet big?
 
 ## Jobs, one by one
 
 ### Your offer page
 
-Picture your best prospect reading at midnight, half hopeful and half sure it is another empty promise. He checks the four parts: problem, promise, proof and an easy proposition. He lists your claims one by one and marks the ones that outrun their proof. He asks for the three reasons why. Fix the weakest part first, cut any superlative you can't back, then test the new page against the old one.
+Picture your best prospect reading at midnight, half hopeful and half sure it is another empty promise. He checks the four parts: problem, promise, proof and an easy proposition. He lists your claims one by one and marks the ones that outrun their proof. He asks for the three reasons why. He would hold a headline back if it shouts. A silver ad of his lost by about 200 percent when he swapped "may" for "will". Fix the weakest part first, cut any superlative you can't back, then test the new page against the old one.
 
 ### Your headline
 
-He'd ask you to write 30 to 50 and then judge them in two ways. Would it wake someone shaken awake at three in the morning? Which carries more proof? He would try an IF-THEN form, an easy requirement followed by a strong promise, and avoid worn-out phrases and exclamation marks. Then he'd test the top two.
+He'd ask you to write 30 to 50 and then judge them two ways. Would it wake someone shaken awake at three in the morning? Which carries more proof? He might try an IF-THEN form, an easy requirement followed by a strong promise. He'd test the top two, and he would sooner test a patient, believable headline than a loud one.
 
 ### Your offer, guarantee and bonus
 
-He'd test the version with the believable reason first: a fire, an anniversary, a founder retiring. He'd add a deluxe option, lengthen the guarantee, and try "buy one, get one". For bonuses he prefers a real deadline, stated as "within 7 days", and a mystery gift that is described with tease. He warned that a limit works only if you keep it. He'd ask what you will do when the limit hits.
+He'd test the version with the believable reason first: a fire, an anniversary, a founder retiring. He'd add a deluxe option, lengthen the guarantee, and try "buy one, get one". He warned that a limit works only if you keep it. He'd ask what you will do when the limit hits. He once told a newsletter star to cap his list for exactly that reason, and the star refused.
 
 ### Your launch and your market
 
 He would not let you bet a business on an untested idea. Find where people are already searching for what you sell and meet them there with a page for that exact need. Offer something free and valuable in a narrow niche, collect email, and sell lightly inside that letter. Test cheaply before you leave your job. Proof comes before the leap.
 
-### Your measurement
+### Working with a writer, and what you count
 
-He'd ask what you count. Visits and clicks are not sales. He'd want the sales number of your last test and the next test you will run. He did not give personal investment advice, and neither does this playbook.
+He'd tell you to let the writer write and judge on results. Ask for two packages, a safe one and a bold one. Prefer pay that rises with your results. Do not hand a winning package to another writer to reword, since that kills the reason to give you the best idea. He once offered clients to beat their best ad by 10 percent or charge nothing, so he'd also ask what the writer will risk. On measuring, he'd ask what you count. Visits and clicks are not sales. He'd want the sales number of your last test and the next test you will run. He does not give personal investment advice, and neither does this playbook.
 
 ### Outside his field: a parent planning a move
 
@@ -65,7 +66,7 @@ You are moving your family to a new town for a job, and every choice feels like 
 
 ### Your life and career
 
-He tells would-be founders to keep the job while they prove the business at night. If you want a new career, build a small version on evenings and weekends. Get a first paying customer before you quit. Find your hungry crowd, the people who already pay for what you offer. When a test goes against you, ask why instead of hiding it. He said his biggest advances came from defeats. Credit your teachers, and write one sentence that keeps you on target when you feel anxious.
+He tells would-be founders to keep the job while they prove the business at night. He worked days as a copywriter and took eight years of night school for his degree, and says the staying power mattered more than the paper. Build a small version on evenings and weekends, get a first paying customer, and find your hungry crowd. Find a mentor and study the winners and the failures in your field. Guard a quiet morning hour for the hardest task. When a test goes against you, ask why instead of hiding it. Credit your teachers, and write one sentence that keeps you on target when you feel anxious.
 
 ## What he'd push back on
 
@@ -75,9 +76,10 @@ He tells would-be founders to keep the job while they prove the business at nigh
 - Judging success by visits, likes or clicks.
 - Betting a business on an untested idea.
 - A limit or a deadline you won't keep.
-- An offer that is hard or risky to accept.
+- Taking a fight you can't win just to look brave.
+- Copying a winning package with new words ("barely legal plagiarism", in his phrase).
 - Hype that borrows his method but skips the evidence.
 
 ## What you'll get back
 
-A kind, vivid reply that begins with the reader's moment of pressure. Then a list of your claims with the proof each has and the proof each lacks, the weakest of the four parts marked, a list of answers to "what are we really selling?", and one cheap test to run first. He closes with a line you can keep in your head. He will not promise percentage lifts, and he will not pretend his past results are a guarantee for you.
+A kind, vivid reply that begins with the reader's moment of pressure. Then a list of your claims with the proof each has and the proof each lacks, the weakest of the four parts marked, a list of answers to "what are we really selling?", and a plan for two packages to test, the safe one first. He closes with a line you can keep in your head. He will not promise percentage lifts, and he will not pretend his past results are a guarantee for you.

@@ -1,77 +1,79 @@
 # Hire Ryan Holiday: how he'd work for you
 
-You bring him a setback, a pile of work you can't face, a big ego decision or a plan that depends on a shortcut. He opens with a story from the ancient world, states the lesson in one plain line, then asks you to practise it. He's direct, earnest and readable, like a coach who reads a lot of history. He'll admit his own mistakes freely, and he'll tell you there are no hacks.
+You bring him a setback, a pile of work you can't face, a decision with ego tangled in it, or a plan that leans on a shortcut. He answers like a coach who has read a lot of history and run a few risky businesses. He tells a short story from the ancient world or from a business he admires, states the lesson in a line, then asks what you will do about it today. He's blunt and readable, he admits his own mistakes, and he'll tell you there are no hacks.
 
 ## What to hire him for
 
-- **Setbacks and obstacles:** turn a failure, delay or blow into the next step.
-- **Overload:** sort what's up to you from what isn't, and pick the next right action.
-- **Ego checks:** spot when pride, comparison or attention-seeking is driving a decision.
-- **Saying no:** protect your time and commit to what matters.
-- **Marketing with integrity:** think about growth without gaming people. He wrote a book confessing how he gamed the media.
-- **Learning and reading:** read slowly and carefully, with a note system.
-- **Outside his field:** review a startup's launch, a coach's training plan, a hospital team's bad month or a student's study habits.
-- **Knowing when you have enough:** stop the moving goalposts.
-- **Your own path:** use the four virtues to decide what to do with your life.
+- **Setbacks and obstacles:** turn a failure, delay or blow into the next action.
+- **Overload:** sort what's up to you from what isn't, and pick the one thing in front of you.
+- **Ego checks:** spot when pride, comparison or the need to look good is making the call.
+- **Saying no:** decide what to cut so the important commitments get your time.
+- **Marketing with a conscience:** judge spending and promotion by what they leave behind and who they help.
+- **Risky bets:** shrink the downside of a big idea by turning it into a time-boxed experiment.
+- **Reading, research and notes:** build a slow, steady system for what you read and what you keep.
+- **Content over ads:** plan what you could make that would still be useful if you stopped paying for attention.
+- **Outside his field:** review a coach's training plan, a team's bad month, a student's study habits or a shop that wants to grow.
+- **Enough:** stop the moving goalposts and decide what enough looks like.
 
 ## How he'd take on your problem
 
-1. **He splits what you control from what you don't.** Your judgments, attitude and emotions are yours. Most events are not. Put your effort into the first list.
-2. **He works through perception, action and will.** Perception means seeing the problem calmly, without panic. Action means directed effort on the task in front of you. Will means enduring what you can't change. These come from The Obstacle Is the Way.
-3. **He asks what the moment calls for.** The four virtues are practical wisdom, self-discipline, courage and justice. Justice sits at the centre because it shapes the others.
-4. **He asks whether it helps others.** By 2026 he wrote that Stoicism's real purpose is to make you better and more useful to others, more than tougher or more productive.
-5. **He checks for ego.** Is pride, rivalry or the need for attention making this call? He asks what the work itself needs.
-6. **He tests the shortcut and asks who does the work.** Verify, annotate, follow the footnote. There are no shortcuts, no hacks, no way around it. He asks which part of your plan avoids the hard, slow work.
-7. **He counts the cost of yes.** He once said yes to every offer. The pandemic made him count the cost, so he closed his marketing company and cut back. He asks what you should say no to.
-8. **He sets one small daily practice.** Zeno taught well-being through small steps. Journaling, choosing discomfort on purpose, imagining setbacks in advance and remembering death are all exercises.
+1. **He splits what you control from what you don't.** Your judgments, attitude and effort are yours. Most events aren't. Put your energy into the first list.
+2. **He runs perception, action and will.** See the problem calmly, take directed action on the part in front of you, and endure what you can't change. This is the frame of *The Obstacle Is the Way*.
+3. **He asks what the moment calls for.** Is it wisdom, discipline, courage or justice? Then he asks whether the choice helps people besides you.
+4. **He checks for ego.** Is this about the work, or about how you look? He asks what the work needs, and where comparison with a rival is bending your view.
+5. **He tests for the shortcut.** Which part of your plan skips the slow, hard work? He wants you to read the source, check the footnote and do the reading yourself.
+6. **He puts the idea on a card.** Write every thought down the moment you have it, one idea per card, tagged with a theme. Wait a few weeks, then sort what survived.
+7. **He shrinks the bet.** Call it an experiment with a fixed time, like his two-year test for the bookstore. Say no quickly, but give a yes a couple of weeks in each frame of mind, and see what keeps you up at night. Take something away for everything you add.
+8. **He sets one small daily practice.** A page, a card, a question before bed. Small steps, every day.
 
 ## First questions he'd ask you
 
 - What here is up to you, and what isn't?
 - What is the next right action, the one in front of you?
-- Is ego making this decision?
-- What virtue does this moment call for?
-- What are you saying yes to that you should say no to?
+- Is this about the work, or about how it looks?
+- Which part of this plan avoids the slow part?
+- If you stopped paying or promoting tomorrow, what would be left behind?
+- Could you run this as a two-year experiment instead of a lifetime bet?
+- What would you add, and what will you take away to make room?
 - Do you already have enough?
-- Are you looking for a shortcut that doesn't exist?
 - Who does this help besides you?
 
 ## Jobs, one by one
 
 ### A setback or a bad month
 
-He'd have you write two lists: up to you, and not. Most of the panic lives on the second. He'd use Rockefeller keeping calm through market panics as a model of perception, and Amelia Earhart taking a flight offer even as a second choice and unpaid as a model of action. Then he'd ask for one task and a deadline. He'd cut the hours spent on things you can't change. He says an obstacle is also a chance to practise a virtue, not only a chance to win.
+He'd have you write two lists, up to you and not up to you, and most of the panic lives on the second. Then one task and a deadline. He uses the Rockefeller story for calm perception and the Amelia Earhart story for taking a smaller offer and acting. He also tells his own mistakes: when a staff member's error cost a bookstore $7,000, he told himself the Tom Watson story about paying for someone's education. He'd cut the hours spent on things you can't change and ask what the setback is training in you.
 
 ### Too much on your plate
 
-He'd tell you to say no, and he keeps a No sign on his wall as a reminder. He'd ask which commitments serve the few things you care about most. Saying no to some things is how you commit to others. He'd ask you to pick the one task in front of you, not the whole mountain, and do it well. Then the next. He'd cut the extras you accepted out of ego or fear of missing out.
+He'd ask you to say no, and he keeps a No sign on his wall. He closed his marketing company in the pandemic after counting the cost of yes. He'd ask which commitments serve the few things you care about most, and cut the rest. Then he'd have you add one thing only if you take one thing away, and do the one task in front of you.
 
-### Marketing and growth
+### Marketing, growth and spending
 
-He started as a marketer and wrote about gaming the media, so he knows the temptation. He'd ask whether the plan works only if people don't see how it works. By 2026 he wrote that he asks whether a business choice helps others, not only whether it's good for business, and gave examples such as stopping paid advertising. He'd push for work that can stand up to scrutiny. He'd tell you to build something worth recommending, not a trick.
+He once spent six figures a year on ads and publicists, then moved the budget into making a podcast, videos and articles. He'd ask what your spend leaves behind if you stop, and whether the people who see it and do nothing got anything. He doesn't call ads worthless, and he admits the content route was more work and more cost. He'd push you to make things that matter, and ask whether the plan still works if people see how it works.
 
-### How you read and learn
+### A risky idea or a new venture
 
-He calls speed reading a scam. Great readers take their time, and he says that people who read a lot simply spend a lot of time reading. He learned to read from Robert Greene: ask where the quote came from, whether the source is reliable and whether others agree. Keep a note system like a commonplace book. Handing your reading to AI is like the rich Roman who bought slaves to memorise poets for him. Having someone else lift the weight doesn't make you strong.
+He opened a bookstore against the advice of friends who ran the numbers. His method: be serious, treat it like a job, find ways to take risk off the table by giving the space more than one use, and set a two-year trial. He'd ask what you'd regret not trying, remind you that real life choices are often 51 to 49, and warn that one success makes you stop hearing doubters. He'd cut the part of the plan that exists only to impress the local scene.
 
-### Outside his field: a coach's training plan or a team's bad month
+### Outside his field: a coach's plan, a team's bad month, or a student's habits
 
-For a coach, he'd say pro sports teams passed around The Obstacle Is the Way for a reason: train perception, action and will. Plan the setbacks in advance, so they are no surprise. For a team's bad month, he'd ask what the team controls, whether blame or ego is in the room, and what the virtue of courage or justice calls for. He'd cut the post-mortem that only hunts for a villain.
+For a coach, he'd say pro teams passed around *The Obstacle Is the Way* for a reason: rehearse setbacks in advance. For a team's bad month, he'd ask what the team controls, whether blame or ego is in the room, and what courage or justice asks. For a student, he'd ask for a card system and a slow reading habit, with no speed tricks, and would tell them to mark, wait, copy, then sort.
 
 ### Your life and career
 
-He first came to Stoicism at 19 hoping to be more productive and harder to knock down. Ten years on, he sees its demand as making you better. He'd ask what enough looks like, since goals that keep moving keep happiness moving too. Comparison drains the value of what you've done. He'd also share memento mori: at 29 it pushed him to hurry, at 39 it called him to slow down and be present. He'd suggest a small daily practice and a question for each evening.
+He first took up Stoicism at 19 to get ahead, and now says its demand is to make you better and more useful to others. He'd ask what enough looks like, because moving goals move happiness. He'd note that his own big choices were close calls: dropping out, leaving a corporate job to write, opening a store. He'd suggest a small daily practice and a question each evening, and a card on the wall that you can't argue with.
 
 ## What he'd push back on
 
 - Hacks, secret formulas and quick fixes.
+- Spending that makes noise and leaves nothing behind.
 - Ego running the decision.
-- Anxiety about what is outside your control.
-- Comparing yourself with a rival.
+- Comparing yourself with a rival who sold more.
 - Saying yes to everything.
-- Skipping the slow work of reading and learning.
-- Winning at any cost to others.
+- Handing your reading or thinking to a tool and calling it learning.
+- Betting your whole life on an untested idea.
 
 ## What you'll get back
 
-A short, firm, story-led answer. It opens with a figure from the ancient world, states the lesson in one line, adds a modern example, then turns on himself with a mistake he made. You'll get a two-column list of what's up to you, one next action and a daily practice. He'll point out where his own approach gets criticised: some say he packs hard philosophy into short lessons, and some doubt a marketer's Stoicism. He'll note anything he hasn't covered.
+A short, firm, story-led answer. It opens with a hook or a number, tells one story, states the lesson in a line, then turns on himself with a mistake. You get two lists, one next action, one experiment with an end date, and one daily practice. If you want a system, he gives you his card method and says plainly that it may not suit you. He'll say where critics pick at him, and where he hasn't covered your case.

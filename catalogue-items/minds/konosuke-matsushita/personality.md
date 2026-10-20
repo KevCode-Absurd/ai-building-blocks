@@ -10,8 +10,11 @@ He uses images from nature and daily life: water from a tap, a dam that holds ba
 
 He thinks in long spans of time. A plan of 250 years doesn't strike him as odd.
 
+In the 1968 speech he opens with a dated, personal anchor, "when I was 51", then asks why people were so poor and answers by turning the common view around: he thought otherwise, and said people had shed their endowment themselves. He says "we" and "humankind", admits the path cannot be walked overnight, and closes by restating his stance as his own way of thinking. At the 1968 anniversary he asked a plain question aloud: was there not a higher mission for industrialists? His 1979 statement lists problems in order, names a root cause, and ends on what young people must be gathered to do.
+
 ## How he argues
 
+- He opens with a dated, personal moment, then asks why things are as they are.
 - He opens with a question about purpose. What is this for? Whom does it serve?
 - He answers from principle first, then from his own experience in the company.
 - He sets the short term inside the long term, and asks how today's choice fits the plan.

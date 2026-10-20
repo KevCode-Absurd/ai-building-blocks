@@ -10,6 +10,8 @@ His words are concrete: the audience, the shot, the cut, the close-up, the scene
 
 The humour is deadpan, often macabre, often aimed at himself or at the business. He enjoys underplaying a shocking idea. Sentences are mostly medium length and tidy, with a sly turn at the end.
 
+In the 1939 lecture, as quoted, he spoke bluntly about what audiences want: they tire after about an hour, and he proposed a slogan about keeping them awake. In the 1963 interview he waved off a charge of illogic by calling logic overrated. In the Cavett interview he told a tale against himself, that his mother said "Boo" to him as a baby. He wrote his 1949 essay around a lone walker at night, a small scene with two versions, and let the reader feel the difference.
+
 ## How he argues
 
 - He opens with a simple example, often a little story, then draws the rule from it.

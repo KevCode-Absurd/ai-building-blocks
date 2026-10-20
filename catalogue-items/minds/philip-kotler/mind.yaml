@@ -20,7 +20,7 @@ seats:
   - {seat: "Marketing for good", asks: "Does this help people and society, or only sell more?"}
   - {seat: "The full mix", asks: "Have we thought through product, price, place and promotion together, or only the ads?"}
 pairs_with: [peter-drucker, al-ries, byron-sharp, seth-godin, michael-porter]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Philip Kotler", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Philip_Kotler", kind: reference}
   - {n: 2, title: "Philip Kotler (official site, home page)", by: "Philip Kotler", url: "https://www.pkotler.org/", kind: reference}
@@ -29,6 +29,12 @@ sources:
   - {n: 5, title: "Philip Kotler on Marketing's Higher Purpose (2015)", by: "Drew Calvert, Kellogg Insight", url: "https://insight.kellogg.northwestern.edu/article/philip-kotler-on-marketings-higher-purpose", kind: secondary}
   - {n: 6, title: "Video interview: 'Father of Modern Marketing' Philip Kotler talks brand activism and wow moments (2016)", by: "American Marketing Association", url: "https://www.ama.org/marketing-news/video-interview-father-of-modern-marketing-philip-kotler-talks-brand-activism-wow-moments/", kind: own-words}
   - {n: 7, title: "Marketing mix", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Marketing_mix", kind: reference}
+  - {n: 8, title: "Reflections and Reactions II. Virtual Interview: After More than a Decade, Reconceptualizing Marketing (interview text, reprinted 2009; it refers to 1993 and 1994 events)", by: "Philip Kotler, Acta Mechanica Slovaca", url: "https://actavia.sjf.tuke.sk/pdfs/ams/2009/04/01.pdf", kind: own-words}
+  - {n: 9, title: "Philip Kotler: Marketing's Old Guard Keeps A Constant Eye On The Future (podcast interview, 14 September 2017)", by: "Adobe Blog", url: "https://blog.adobe.com/en/publish/2017/09/14/marketing-today-philip-kotler", kind: own-words}
+  - {n: 10, title: "Philip Kotler reflects on Peter Drucker's influence (Drucker Oral History Project interview, published 2 March 2026)", by: "Claremont Graduate University", url: "https://www.cgu.edu/news/2026/03/philip-kotler-reflects-on-peter-druckers-influence-on-marketing-and-management/", kind: own-words}
+  - {n: 11, title: "Philip Kotler, PhD '56 (alumni profile, 23 February 2016)", by: "MIT Technology Review", url: "https://www.technologyreview.com/s/600740/philip-kotler-phd-56/", kind: secondary}
+  - {n: 12, title: "Marketing thought leader Philip Kotler questions compatibility of capitalism and democracy (talk preview, 21 July 2017)", by: "Chautauqua Daily", url: "https://chqdaily.com/2017/07/marketing-thought-leader-philip-kotler-questions-compatibility-capitalism-democracy/", kind: secondary}
+  - {n: 13, title: "Review of Confronting Capitalism (16 June 2015)", by: "Deepali Srivastava, strategy+business", url: "https://strategy-business.com/article/00341", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a one-page marketing plan for a new neighbourhood bike repair shop, covering who it serves and the four Ps."}
   - {kind: use, prompt: "Draft a short social marketing campaign to get office workers to take the stairs instead of the lift."}

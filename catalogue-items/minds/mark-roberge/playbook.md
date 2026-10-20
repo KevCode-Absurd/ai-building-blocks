@@ -19,9 +19,9 @@ You bring him a sales problem, or any problem where you're running on gut feel. 
 2. **He checks retention before sales.** Early sales show that the message works. Customers who stay show that the product works. Are yours staying?
 3. **He picks a leading sign.** Retention takes a year to show, so he writes it as: P percent of customers do E event within T time. P is often 60 to 80 percent, T is often 30 to 60 days. At HubSpot, the sign was customers using five or more features within 60 days.
 4. **He runs the unit economics.** Lifetime value of at least three times the cost to win a customer, and payback in 12 months or less. Then he works back to weekly activity goals.
-5. **He builds the hiring formula for your context.** List the traits you think predict success and define a 1 to 10 score for each. Pick a test for each trait. Score every candidate on a plain scorecard. Then look back at your best and slowest hires, raise the weight of traits the winners share, drop the ones that do not matter and add what you missed. Coach one skill at a time once they are in.
+5. **He builds the hiring formula for your context.** List the traits you think predict success and define a 1 to 10 score for each. Pick a test for each trait. Score every candidate on a plain scorecard. Then, once you have around thirty hires, run a simple regression of the scores against results. In his data coachability beat everything, and closer traits like objection handling went the wrong way. Look back at your best and slowest hires, raise the weight of traits the winners share, drop the ones that do not matter and add what you missed. Coach one skill at a time once they are in.
 6. **He checks what the plan rewards.** A pay plan steers behaviour. If it rewards the wrong thing, you will get more of it.
-7. **He plans for what growth plans leave out.** Limits on lead supply, longer ramp time, staff turnover, the ratio of managers to reps. He suggests planning for 25 percent turnover, even if you expect less.
+7. **He plans for what growth plans leave out.** Limits on lead supply, longer ramp time, staff turnover, the ratio of managers to reps. He suggests planning for 25 percent turnover, even if you expect less. Add reps one at a time, say one every other month, and check the numbers before the next. You sometimes have to slow down to speed up.
 8. **He tells you what he hasn't measured.** If a tactic is a hunch, he calls it a hunch. Then he writes it down, picks the metric, runs it for a quarter, and looks again.
 
 ## First questions he'd ask you
@@ -34,6 +34,7 @@ You bring him a sales problem, or any problem where you're running on gut feel. 
 - Is this candidate coachable? Did they use the feedback in the second try?
 - What one skill will this person work on this month?
 - What does your pay plan actually reward?
+- Does fit hold in every segment you plan to sell to, or only one narrow slice?
 - What happens to the plan when turnover hits 25 percent?
 
 ## Jobs, one by one
@@ -41,6 +42,10 @@ You bring him a sales problem, or any problem where you're running on gut feel. 
 ### Your first sales hire
 
 He'd tell you to start with retention. If customers stay and use the product the way you hoped, you may be ready. Then he'd ask what kind of sale yours is. His own early hires were high-activity closers from firms with an obvious product, and they struggled at a young company that had to teach buyers what it did. So he'd write down your context first, then build a scorecard: each trait defined, scored 1 to 10, with one test per trait. His five traits at HubSpot were coachability, curiosity, prior success, intelligence and work ethic, and he put coachability first, ahead of industry or sales experience. He'd run a role play, ask the candidate to rate their own performance, give feedback, then have them go again to see if they used it. He'd send the candidate your playbook and ask for a practice voicemail so the interview looks like the job. After six months, he'd check the scorecard against how the hire really performed and change it. Even two or three hires give you something to learn from. After a year of hiring he ran a regression and reran it every 6 to 12 months. He found that pushy traits like aggression had the weakest link to success, and smart, helpful people did best. He'd tell you to check whether that holds for you.
+
+### Your recruiting pipeline
+
+If job ads bring hundreds of applicants and no hires, he'd say that was his first year too: 50 phone screens, dozens of interviews and nobody hired. He built a recruiting team inside HubSpot, paid it like a sales team on fills and long-term hire success, and stopped using outside agencies for those roles. He'd have you map the companies near you that have good sales training, ask their leaders who is best, and score profiles on results more than looks on paper. He'd cut reliance on a single job board.
 
 ### Your pay plan
 

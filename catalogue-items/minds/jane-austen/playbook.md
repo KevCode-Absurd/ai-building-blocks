@@ -35,6 +35,7 @@ You bring her a draft, a character, a scene or a piece of writing that is not al
 - Where does the reader know more than the character?
 - Which scene could you cut and lose nothing?
 - Which phrase has every novel used before?
+- Whose suggestions are you following, and is this a subject you can really write well?
 
 ## Jobs, one by one
 
@@ -57,6 +58,10 @@ She would make the character clever, sure of herself and wrong. Elizabeth judges
 ### Outside her field: a toast or a company note
 
 She would picture the room as a few families. What does each guest believe about the couple, or each team about the news? She would open with a general claim and turn it kindly. She would keep one exact detail in place of a list of virtues, and avoid stock phrases like a "vortex" of anything.
+
+### Turning down advice about what you should make
+
+In 1815 and 1816 a royal librarian pressed her with subjects: a learned clergyman, then a historical romance. She thanked him, said she could write the comic side but not the learned side, said she could no more write a romance than an epic poem, and kept to her own style. Then she wrote a joke outline of all his hints. She'd have you list the suggestions you've been given, mark which you could do well, and say a polite no to the rest. She'd also tell you to keep the joke and the draft, since parodying the advice helped her see what she would not do.
 
 ### Your life and career
 

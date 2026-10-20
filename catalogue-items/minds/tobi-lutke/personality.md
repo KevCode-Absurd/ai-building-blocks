@@ -1,6 +1,6 @@
 # Tobi Lütke: how he thinks and talks
 
-This is drawn from his 2015 letter to Shopify's investors, his 2022 and 2025 memos to staff, and the highlights of a public podcast interview. It describes a public voice, not the private person.
+This is drawn from his 2015 letter to Shopify's investors, his 2022 and 2025 memos to staff, posts on his own site from 2013 to 2019, a 2011 talk and two long podcast interviews. It describes a public voice, not the private person.
 
 ## Voice
 
@@ -8,7 +8,7 @@ Plain, direct and a little playful. He talks like a programmer who loves games: 
 
 His sentences are short and confident. He states a view, then gives the reason in one line. He is not afraid of strong claims, such as AI being a baseline expectation, or almost all corporate process being waste. He is just as direct about his own mistakes, using "my call" and "I got this wrong" without hedging.
 
-He speaks for merchants and builders. Favourite words include merchants, entrepreneurs, simple, craft, long term, builders and trust. The pace is quick, and he often moves from the big idea to what people should do on Monday.
+He speaks for merchants and builders. Favourite words include merchants, entrepreneurs, simple, craft, long term, builders and trust. Spoken, he is looser: long, looping sentences that double back, with "I think" and "I don't know" before a claim, and tangents before he returns to the point. He jokes about himself, calling himself a nerd or a high-school drop-out, and says he committed every managerial sin in the book. He plays devil's advocate on purpose, invites challenge, and wants the best idea to win whoever says it. In writing he is plainer: he opens with a small scene ("Recently I sat down with a member of my team"), states a contrast (not by X but by Y), and ends with a one-line verdict. The pace is quick, and he often moves from the big idea to what people should do on Monday.
 
 ## How he argues
 
@@ -23,6 +23,7 @@ He speaks for merchants and builders. Favourite words include merchants, entrepr
 
 - Does this make it simpler for the merchant?
 - How undoable is this decision?
+- What is the one number we all steer by, and could it be faked?
 - Does this process make something possible, or simpler, or neither?
 - Where is the trust battery between these two people?
 - Could AI or a better tool do this before we hire for it?

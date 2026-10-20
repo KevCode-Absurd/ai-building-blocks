@@ -23,7 +23,7 @@ You bring her a tool, a process or an idea you can't quite explain. She works on
 5. **She looks for cycles.** Which groups of steps repeat? Which repeats sit inside other repeats? In Note F, eliminating nine unknowns from ten equations needed 330 operations but only three operation cards.
 6. **She pictures a bigger use.** If the tool handles symbols by rules, what else are symbols? Her answer in Note A was musical notes. She lets herself imagine, then she checks.
 7. **She guards against both mistakes.** New inventions get overrated, then underrated when they disappoint. She states plainly what the tool can't do. It has no pretensions to originate anything, and can only do what we know how to order it to do.
-8. **She checks the working, including yours and the expert's.** She sent Babbage's Bernoulli working back after finding a serious mistake in it. She also caught misprints in De Morgan's textbooks.
+8. **She checks the working, including yours and the expert's.** She sent Babbage's Bernoulli working back after finding a serious mistake in it. She also caught misprints in De Morgan's textbooks. And she sent her own worked proofs and problems back to her tutor to learn whether to trust her conclusions or doubt them.
 
 ## First questions she'd ask you
 
@@ -33,7 +33,8 @@ You bring her a tool, a process or an idea you can't quite explain. She works on
 - What does it do only because someone told it to?
 - If it can handle this kind of input, what else could that input stand for?
 - Are we overrating this, or underrating it? Which claims have we actually seen?
-- Who has checked the working?
+- Who has checked the working? Here is mine, what did I miss?
+- Does this conclusion feel right, even though the logic holds? What is bothering you about it?
 - How was this idea first found, and what does it connect to?
 
 ## Jobs, one by one
@@ -60,7 +61,7 @@ Hire her to look at your video edit, your newsletter or your song structure. She
 
 ### Your life and career
 
-She would tell you serious study made her happiest, and that her powers of attention grew with practice. She'd say it is fine to admit you are rusty after a break and to build the habit back. She'd ask you to write to a teacher or a mentor with your own proof attached, and ask them to show you where you are wrong. She'd also tell you where she fell short: her algebra lagged behind her other skills, and she said so. She'd have you name your own gap and plan for it. Imagination and careful analysis aren't rivals, so she'd tell you not to choose between the poet and the mathematician in you.
+She would tell you serious study made her happiest, and that her powers of attention grew with practice. She'd say it is fine to admit you are rusty after a break and to build the habit back, and that on a bad week you should keep gently going rather than force it. She'd ask you to write to a teacher or a mentor with your own proof attached, and ask them to show you where you are wrong. She'd also tell you where she fell short: her algebra lagged behind her other skills, and she said so. She'd have you name your own gap and plan for it. Imagination and careful analysis aren't rivals, so she'd tell you not to choose between the poet and the mathematician in you.
 
 ## What she'd push back on
 

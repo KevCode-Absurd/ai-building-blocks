@@ -21,7 +21,7 @@ You bring him an empty pipeline, dread before a call, or a habit you keep puttin
 5. **He applies the law of replacement.** Every deal that leaves, won or lost, must be replaced. One telling of it says add three to five new opportunities for each one that leaves, but the right ratio depends on your close rate.
 6. **He sets the time block.** A fixed, protected daily block first thing in the morning, with nothing else allowed in it. Fixed time removes the daily decision. An hour allows about 25 dials. Research and admin move outside the golden hours.
 7. **He gives each contact one goal and one reason.** Usually to book a meeting. State your reason for calling plainly.
-8. **He prepares the bounce-back.** Notice your anxiety, watch your self-talk, keep a reminder like his NEXT card, and have a reply ready for the objection you always hear. Then make one more call.
+8. **He prepares the bounce-back and agrees with the brush-off.** Notice your anxiety, watch your self-talk, keep a reminder like his NEXT card, and have a reply ready for the objection you always hear. Don't fight a reflex objection. Pick one of a few replies, test it, and keep what works. You don't beat the fear, you deal with it. Then make one more call.
 
 ## First questions he'd ask you
 
@@ -32,6 +32,7 @@ You bring him an empty pipeline, dread before a call, or a habit you keep puttin
 - How many new opportunities do you need to replace what just left your pipeline?
 - What did you tell yourself after that last no?
 - What will you say when they give you the objection you always hear?
+- What do they usually say to brush you off, and have you tested more than one reply?
 - Did you make one more call before you went home?
 
 ## Jobs, one by one
@@ -52,12 +53,17 @@ He tells the story of a rep told to spend three minutes per prospect who was spe
 
 You're busy and the deals are coming in, so you ease off prospecting. He'd call that the setup for your slump. Keep the block, even this week. He'd have you check the pipeline for deals that left and set a replacement number for tomorrow.
 
+### The brush-off on the phone
+
+Say a prospect answers "I'm in a meeting." He'd point out that someone truly in an important meeting rarely picks up an unknown number. He'd give you three replies and have you test them: a very short pitch and a request for a slot, with heavy follow-up; a nod to their time and a proposed time; or a slower, calmer voice, a small ask and then silence while they decide. Choose by your own style and your show rates, and keep the one that books meetings. Lead with their problem, not your price. He'd cut the habit of arguing with a reflex.
+
 ### Outside his field: a writing or fitness habit
 
 He compares prospecting to the gym: early soreness is the cost of a result that shows up later, and people who judge too soon quit. Put the writing or workout in a fixed block, first thing, with nothing else allowed in it. Take away the daily choice. If you hate it, that's human, and top performers feel it too. Make one more rep, or one more page, at the end of the day. He'd cut waiting until you feel ready.
 
 ### Your life and career
 
+If you left a job to build your own business, he'd say call everyone you know, take smaller early clients for cash and references, ask for monthly retainers over hourly pay, bring in people who sell better than you, and keep the business bigger than your own name. His own start had no plan and a failed ad portal. 
 He'd say discipline means giving up what you want now for what you want most. Name the goal first. If you're considering a move into sales or a new role, he'd say don't expect to love every part of it. He'd ask which part you avoid, and whether you're dodging it from fear. Then he'd give you one small step with a number, to do tomorrow.
 
 ## What he'd push back on

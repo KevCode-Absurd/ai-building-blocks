@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Two honesty notes before anything else. First, Lee's writing, interviews and notebooks are in copyright and are held by his estate, so we worked from reference pages, his family company's site and a sourced quotation collection, and summarise in our own words. We could not open a full public text of his own writing, so treat this file as a careful summary of the record, not a reading of his notebooks. Second, many sayings online are wrongly credited to him, and some lines in his books were copied into his notes from other writers [S6][S7]. We use only short phrases with a named source.
+Two honesty notes before anything else. First, Lee's books and notebooks are in copyright and held by his estate, so we have no full public text of them. What we could open in his own words is short: his replies to readers in *Black Belt* (1967) [S13], his 1967 letters to the producer William Dozier and to his student Taky Kimura [S14][S18], his handwritten aim note of January 1969 [S17], and two pages that print the water passage from his 1971 interview [S11][S12]. We summarise all of it in our own words and treat the rest as a careful reading of the record, not a reading of his notebooks. Second, many sayings online are wrongly credited to him, and some lines in his books were copied into his notes from other writers [S6][S7]. We use only short phrases with a named source.
 
 ## In one paragraph
 
@@ -36,7 +36,7 @@ How he applied it: he taught kicks aimed low, at the shins and midsection, by de
 
 ### Truth has no fixed path
 
-A line in *Tao of Jeet Kune Do* says truth has no path, because it is living and always changing [S6]. Wikiquote notes this probably comes from the philosopher Jiddu Krishnamurti, who said truth is a pathless land [S6]. Lee was especially drawn to Krishnamurti [S1]. The book also warns against rejecting the classical approach just as a reaction [S6]. The point is not to rebel but to see clearly.
+A line in *Tao of Jeet Kune Do* says truth has no path, because it is living and always changing [S6]. Wikiquote notes this probably comes from the philosopher Jiddu Krishnamurti, who said truth is a pathless land [S6]. Lee was especially drawn to Krishnamurti [S1]. The book also warns against rejecting the classical approach just as a reaction [S6]. The point is not to rebel but to see clearly. The 1971 *Black Belt* essay in which he describes the teacher as a guide who points and the student as the one who must find the truth is traced by Quote Investigator, which notes the magazine's 1988 reprint changed the wording [S15].
 
 ### Formlessness
 
@@ -59,6 +59,18 @@ In that 1971 interview he said that under the heavens there is but one family [S
 ## Training and teaching rules from the sourced sayings
 
 Wikiquote lists several lines tied to named books or interviews [S6]. A fighter, he wrote, moves through three stages: instinctive, then mechanical once technique is learned, then spontaneous when technique is no longer imposed and the fighter simply responds [S6]. He told Berton in 1971 to train every part of the body, since real fighting has no rules [S6]. For teachers, the written rules were to demonstrate what you ask of students and do more, to be patient with lack of ability but firm with lack of effort, and never to mock a student [S6]. He held that learning never ends [S6]. On fear, he wrote that accepting defeat frees the mind to flow, and that an opponent obsessed with a single aim is the most dangerous kind [S6]. In a 1967 letter to the producer William Dozier he credited *The Green Hornet* with teaching him to strip away the unessential [S6].
+
+## In his own letters, replies and notes
+
+**Replies to readers (1967).** After *Black Belt* ran two articles on him, readers wrote in and Lee answered several himself [S13]. A reader who said classical drills do not help in a real fight got a short agreement: practise against live opposition, hit a heavy bag, use your legs like your hands, spar. His line was that you have to get wet to learn to swim [S13]. A karate student who listed six objections got a point-by-point reply, mixing mockery with real argument. Lee even gave up one point, that karate has no passive blocks [S13]. A Wing Chun student was told to empty his cup first [S13]. A man who claimed to have beaten him got a two-word reply [S13]. A rumour that he had been killed in Hong Kong got dry humour [S13]. Rule of thumb: argue seriously with serious critics, laugh off the rest.
+
+**Letters to Dozier and Kimura (1967).** In a thank-you to Dozier after *The Green Hornet* ended, Lee thanked him for starting his career and said part of his job on the show had been hacking away the unessential [S14]. In a September 1967 note to Kimura he reported daily shooting, said the show was doing "50/50," and promised to teach Kimura his method over a week at Christmas [S18]. The tone is warm and practical.
+
+**The aim note (January 1969).** He wrote to himself that he would become the highest-paid Asian film star in the United States, using the word of his day, "Oriental." He set fame for 1970 and a fortune of $10 million by 1980, said he would live on his own terms and find inner harmony, and promised in return to deliver top acting and highly exciting performances. He signed it with his full name [S17].
+
+**Daily mind drills (1968).** In a pocketbook written before his 28th birthday he copied a self-improvement creed and noted how he wanted his will, emotions, reason, imagination and memory to work. He set himself 30 minutes a day to picture the person he meant to become and 10 minutes a day on self-confidence [S16]. On yellow index cards he wrote his firmest beliefs and signed them like contracts [S16].
+
+**The 1971 interview.** Open Culture notes that the 25-minute talk with Pierre Berton covered his Mandarin-language film success though he spoke only Cantonese, the difficulty of a career in a country hostile to China, and his work training Hollywood stars [S19].
 
 ## How he decides
 
@@ -113,29 +125,29 @@ In his December 1971 interview with Pierre Berton in Hong Kong, Lee recites a pa
 
 ## Real decisions
 
-### Changing how he trained
+### Cutting the show fights to the bone (The Green Hornet, 1966 to 1967)
+As Kato, Lee refused to stage fights like the slugging matches common in Westerns, because his art stressed efficiency [S14]. His moves were too fast for the TV cameras, so the fights were filmed in slow motion, and he reluctantly added flashier flying kicks [S14]. He later told Dozier that part of his job had been hacking away the unessential [S14]. The series was cancelled in March 1967 [S14]. The lesson is that he wasn't dogmatic: he gave the audience a showier kick but kept the logic of the fight.
 
-After a 1965 match with Wong Jack-man, Lee shifted to total fitness: strength, endurance, heart and lungs, and flexibility [S1]. He used bodybuilding methods but avoided extra muscle that would slow him down [S1].
+### Walking off the Batman crossover (1967)
+The first script had Batman and Robin win the fight with Kato. Lee objected and walked off, and Dozier rewrote the scene as a draw [S14]. The sources give the protest and the fix, not a long reason from Lee.
+
+### Answering critics one by one (Black Belt, 1967)
+When a karate student attacked his article point by point, Lee answered each point, mocked some, defended live sparring and dummy work for timing and distance, and conceded that karate has no passive blocks [S13]. To a reader who said drills are useless in real fights he said to spar and use a heavy bag [S13]. He told a Wing Chun man to empty his cup [S13]. He answered a baseless boast with two words [S13]. Giving a real answer to real critics and none to empty claims is a rule you can copy.
+
+### Putting a chief aim in writing (January 1969)
+After The Green Hornet and a run of small TV parts, Lee wrote himself a dated note with a goal, a start year, a money target and a promise of what he would give in return [S17]. He signed it. The note named 1970 for the start of fame, and his Hong Kong films from 1971 and *Enter the Dragon* followed [S17][S1]. He did not state a method in the note, only the aim and the price.
+
+### Training the mind on a schedule (1968)
+In his pocketbook he set daily minutes for picturing his future self and for self-confidence, with the stated thought that a steadily held desire finds a practical outlet [S16]. He also asked reason to test his wishes, because unchecked emotion can be dangerous [S16]. It shows he trained attitude like a muscle, with a timetable.
+
+### Holding out for the philosophy in *Enter the Dragon* (1973)
+One account says that when the studio wanted a plain action film, Lee refused to go on set for two weeks. He argued that kung fu and philosophy were bound together, and the studio gave way [S16]. We have only this one source for it, so treat the details as reported, not proven.
 
 ### Refusing to fix a name
-
 He was reluctant to name his approach, because a name fixes a living thing [S4]. In 1971 he called the name "just a name used, a boat to get one across" [S2].
 
-### Mixing arts, not picking one
-
-Jeet Kune Do drew on boxing, fencing, Wing Chun and other arts [S1][S2]. His notebooks cite Plato, Hume and Descartes alongside Lao-tzu, Chuang-tzu and Musashi [S1].
-
 ### Writing through a back injury
-
-A back injury in 1970 put him in bed for six months [S5]. He rebuilt his strength with his own programme and used the time to write the notes that became the *Tao* [S5][S7].
-
-### Giving his water speech on TV
-
-In the Berton interview in December 1971 he recited the passage on water taking the shape of a cup, a bottle or a teapot [S11][S12]. He used a plain image, not a theory, to explain adapting.
-
-### Speaking up on casting
-
-In the same 1971 interview he said he thought of himself as a human being, and said producers saw casting an Asian lead as a business risk [S8].
+A back injury in 1970 put him in bed for six months. He rebuilt his strength with his own programme and used the time to write the notes that became the *Tao* [S5][S7].
 
 ## Blind spots to watch
 
@@ -148,6 +160,6 @@ In the same 1971 interview he said he thought of himself as a human being, and s
 
 - "Be water, my friend." (lines written for Longstreet, 1971) [S3][S6]
 - "Using no way as way; having no limitation as limitation." (Jeet Kune Do principle, as quoted by Bruce Lee Enterprises) [S4]
-- "Jeet Kune Do is just a name used, a boat to get one across" (Black Belt, September 1971) [S2]
-- "Absorb what is useful. Reject what is useless." (as quoted by Bruce Lee Enterprises) [S4]
-- "Neither. I think of myself as a human being." (asked if he was American or Chinese) [S6][S8]
+- "just a name used, a boat to get one across" (Black Belt, 1971) [S2]
+- "hacking away the unessential" (letter to William Dozier, 1967) [S14]
+- "You have to get wet in order to learn to swim." (reply to a reader, 1967) [S13]

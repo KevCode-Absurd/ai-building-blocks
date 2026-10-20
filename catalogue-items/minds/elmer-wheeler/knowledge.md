@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Wheeler wrote close to 30 books between 1937 and the 1960s, most of them short, practical guides to selling and speaking [S3][S8]. The text we have read in full is *Tested Direct Selling* (1942), a door-to-door selling manual that the Internet Archive lists as out of copyright [S2]. It is the firmest basis for this data set. *Sizzlemanship* (1940) is held in our folder only as a link and a short excerpt, so claims tagged to it come from an earlier study of the book and should be re-checked [S1]. His best-known book, *Tested Sentences That Sell* (1937), is not freely readable, so its ideas come here from reviews and phrase histories [S5][S7]. Most sources give his birth year as 1903. One gives 1904 [S3][S5]. He died in October 1968 [S3].
+A note on the record: Wheeler wrote close to 30 books between 1937 and the 1960s, most of them short, practical guides to selling and speaking [S3][S8]. The two books we have read at length are *Sizzlemanship* (1940), where we read most of the text for this update [S1], and *Tested Direct Selling* (1942), a door-to-door selling manual [S2]. These are the firmest basis for this data set. His best-known book, *Tested Sentences That Sell* (1937), is not freely readable, so its ideas come from reviews and phrase histories [S5][S7]. His other books are still in copyright and we did not find full text, so our own-words record is thin: two books, no speeches or interviews. The case results he reports are his own or his clients', and Sizzlemanship itself gives no sample sizes or control groups, so treat them as stories, not studies. Most sources give his birth year as 1903. One gives 1904 [S3][S5]. He died in October 1968 [S3].
 
 ## In one paragraph
 
@@ -101,9 +101,14 @@ For a travel plan that sold $500 of flights for $425 cash in advance, the buyers
 
 When a buyer could not choose between two models, he told the seller to pick one and say why, even at the risk of a no [S2]. He gave the example of a suit seller who said the brown suit would go better with the customer's hat and shoes [S2]. His reason was that a buyer left on the fence puts off the decision, and later never comes [S2].
 
-### Starting a word laboratory
+### Selling "it won't rub off" for white shoe polish
+For a white shoe polish at Lansburgh's in Washington, Wheeler's chosen line was a short promise that it would not rub off [S1]. His reason was that durability was what buyers wanted to hear, not a description of the polish [S1]. A store executive told him sales rose from about 2,500 to 30,000 in two and a half months [S1].
 
-After losing his newspaper job in the Depression, he built a Tested Selling Institute and a laboratory to try sentences on real customers, and kept the ones that sold more [S3][S5]. His reason, as later accounts tell it, was that the same product can sell very differently depending on a few words [S5].
+### Changing "Is your oil safe?" for a petrol chain
+Texaco dealers had been asking motorists a blunt question about whether their oil was safe, and drivers pushed back [S1]. Wheeler's team changed it to ask whether the oil was at proper driving level, and later added "today" for repeat customers [S1]. The book says the line was used on nearly 500,000 motorists in one week and moved about 250,000 to buy at least a quart [S1].
+
+### Swapping a yes-or-no question for one with a built-in yes
+Remington Rand asked him to find the sizzle in its electric shavers [S1]. The old opener asked whether a man was interested in an electric shaver, which drew an automatic no [S1]. He swapped it for a question about whether the man liked a close shave, which most men answer yes to [S1]. His reason was that a question people say yes to starts the sale on agreement. The book gives no sales figures for this one [S1].
 
 ## Where he stood
 

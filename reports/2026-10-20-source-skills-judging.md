@@ -35,3 +35,24 @@ The average is 4.2 out of 5 (100 of 120 points). The judge was told to be hard t
 - Re-run these four jobs after the fixes and compare length and usefulness.
 - Add four new hires from different areas: a story skill, a design review, a sales call and a decision check.
 - Write a rule for every SKILL.md: what it hands back must not repeat itself.
+
+## Round 2, 2026-10-21
+
+We re-ran the same four jobs after the fixes, and the same judge standard was used.
+
+| Hire | Round 1 /30 | Round 2 /30 | Verdict |
+|---|---|---|---|
+| Fitzpatrick + Customer interview question writer | 25 | 24 | hire with fixes |
+| Hopkins + Free sample offer planner | 24 | 24 | hire with fixes |
+| Grove + One-on-one meeting planner | 26 | 27 | hire |
+| Munger + Incentive checker | 25 | 24 | hire with fixes |
+
+- **Scores:** the total went from 100 to 99 of 120, so overall it was flat.
+- **Fixes:** all four landed. The opening script is there, the break-even sums are written out, the weekly hours are totalled with the passed-over senior handled, and the incentive check is one table with a "tell the team" line.
+- **Length:** still the weak spot. Answers ran 1,100 to 1,500 words, for three reasons. Every step and every part of the hand-back became its own section. MISSING gaps appeared in the text and again in a list at the end. And the checks repeated earlier points.
+
+Changes since round 2:
+- **Every skill:** each of the 553 SKILL.md files now tells the AI to say each point once, merge steps that give the same thing, aim for under 700 words unless the job needs more, mark gaps once where they belong, and list only the checks that failed. This is written in by tools/lib/needs.mjs.
+- **Free sample offer planner:** the stop rule is now tied to the break-even rate it works out.
+
+Next round: re-run the four jobs to see if the length rule works, then add four new hires. The minds have since been rebuilt from much more of their own words (see `reports/2026-10-21-thin-sources.md`), so the "mind shows" scores are worth checking again too.

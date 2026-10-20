@@ -1,8 +1,8 @@
 # Jerry Seinfeld: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Jerry Seinfeld is alive, and views can change. The views below rest on his long 2020 conversation with Tim Ferriss [S8], where he describes his daily method in his own words, and on shorter interview records from 2010 [S5], 2013 [S6] and 2018 [S4], which are mostly excerpts and summaries. Reference pages on his career and shows supply the facts and dates. Treat each as "as of" its date. This file covers his comedy and his work, not his family or private life, and it doesn't speak for him on current events.
+Jerry Seinfeld is alive, and views can change. The views below rest on his long 2020 conversation with Tim Ferriss [S8], where he describes his daily method in his own words, on a 2008 PBS American Masters interview [S9] and a PBS NewsHour interview [S10] in his own words, and on shorter interview records from 2010 [S5], 2013 [S6] and 2018 [S4], which are mostly excerpts and summaries. His joke-writing habits are also taken from write-ups of his 2012 New York Times video [S11][S12]. Reference pages on his career and shows supply the facts and dates. Treat each as "as of" its date. This file covers his comedy and his work, not his family or private life, and it doesn't speak for him on current events.
 
 ## In one paragraph
 
@@ -75,16 +75,22 @@ NBC offered him about $5 million an episode, around $110 million, for a tenth se
 - Pick the setting that makes people talk. Coffee and a moving car did more than a studio set [S3][S4].
 - Study the people before you. He learned from the comedy records he owned as a teenager [S7].
 
-## Real decisions (enriched minds)
+## Real decisions
 
 ### Ending the show at season nine (1998)
-NBC offered about $5 million an episode for a tenth season [S2]. He said no, so the show would end while it was still good [S2]. In 2020 he compared the run to the Beatles' nine years and said he felt that length was the right portion, and that success is the enemy of a good ending [S8]. The finale was watched by an estimated 76.3 million people [S2].
+NBC offered about $5 million an episode for a tenth season [S2]. He said no, so the show would end while it was still good [S2]. In 2020 he said nobody asked him to stop; he compared the run to the Beatles' roughly nine years and said that length felt like the right portion, and that success is the enemy of a good ending [S8]. The finale was watched by an estimated 76.3 million people [S2].
 
-### Building a web series for phones (2012)
-Seinfeld launched Comedians in Cars Getting Coffee online, not on TV, and called it an experiment [S3]. He wanted episodes that were short and loose, with a reason for every shot [S4]. It ran eleven seasons and moved to Netflix in 2018 [S3].
+### Making a sitcom work like stand-up
+In 2008 he explained that he and Larry David treated the show as stand-up: try for a laugh in the first line and keep laughs coming through every scene [S9]. The characters were mostly props for the jokes, and the worse things got for them, the funnier it was [S9]. He turned away from the warmer, softer tone he linked with network executives, and said the show "devolved back to just funny" [S9]. His stated reason was that structure and discipline are what make the madness funny [S9].
 
-### Choosing coffee and a moving classic car (2012 on)
-He swapped long meals with comics for coffee after he had children, and found that coffee makes people talk [S4]. He picks a classic car by feel for each guest, such as a 1963 Corvette Sting Ray for President Obama [S4]. His reason for cars: they keep the show moving and have a personality that new cars lack [S4].
+### Writing by hand on a yellow pad
+He told the New York Times in 2012 that he writes on yellow pads and not on a computer, because he dislikes the blinking cursor that seems to ask what he has got [S11]. He compares the work to songwriting: he hunts for the exact word with the right number of syllables, and he finds the ending of a long joke the hardest part, since the biggest laugh has to land there [S11]. He has nursed single jokes for years, including one about Pop-Tarts that took about two years, and he trims sentences down to single syllables [S12].
+
+### Learning that stand-up is all writing
+He told PBS it took him about two years to see that stand-up is "all writing", and that comics who do not learn to write will die in the business [S10]. When a bit worked he put it in an accordion folder, and he said that once you know the exact words, that is 80 percent of it [S10]. He sees comedy as a feeling of connection with the audience, and says all you have is your jokes [S10].
+
+### Keeping new bits off the stage until they are written
+In a talk with Tom Papa, as summarised by a newsletter, he said the material is the gold and that he does not enjoy developing jokes live in front of an audience [S13]. New material is what makes him want to go on stage again [S13]. This sits beside his rule that the audience is the final judge once the bit is ready [S8].
 
 ### Turning a rejection into more hours (early career)
 After a Comedy Store owner rebuffed him, he raised his writing from three days a week to seven [S8]. His reason: the industry corrects itself, and only volume fixes a weak act [S8].
@@ -92,8 +98,8 @@ After a Comedy Store owner rebuffed him, he raised his writing from three days a
 ### Waiting a day before sharing new writing
 He told Ferriss he does not discuss what he wrote that day with anyone [S8]. His reason: early reactions can spoil the satisfaction of having made something [S8].
 
-### Going back to the start club (2017)
-In Jerry Before Seinfeld he returned to Comic Strip Live, where he began, and showed the records that taught him [S7]. The special was built around his early years and the comics who shaped him [S7].
+### Building a web series for phones (2012)
+Seinfeld launched Comedians in Cars Getting Coffee online, not on TV, and called it an experiment [S3]. He wanted episodes that were short and loose, with a reason for every shot [S4]. It ran eleven seasons and moved to Netflix in 2018 [S3].
 
 ## Where he stood
 

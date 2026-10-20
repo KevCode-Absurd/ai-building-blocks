@@ -20,13 +20,18 @@ seats:
   - {seat: "Focus", asks: "Are these all good eggs, and are they in one basket we can watch?"}
   - {seat: "Wealth as a trust", asks: "When this makes money, what good will the surplus do while we are still here to see it?"}
 pairs_with: [john-d-rockefeller, henry-ford, warren-buffett, taiichi-ohno, sam-walton]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Autobiography of Andrew Carnegie (1920), Project Gutenberg eBook #17976", by: "Andrew Carnegie", url: "https://www.gutenberg.org/cache/epub/17976/pg17976.txt", kind: own-words}
   - {n: 2, title: "Wealth (North American Review, June 1889), known as The Gospel of Wealth", by: "Andrew Carnegie, in the Fordham Modern History Sourcebook", url: "https://sourcebooks.fordham.edu/mod/1889carnegie.asp", kind: own-words}
   - {n: 3, title: "Andrew Carnegie", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Andrew_Carnegie", kind: reference}
   - {n: 4, title: "The Gospel of Wealth", by: "Carnegie Corporation of New York", url: "https://www.carnegie.org/about/our-history/gospelofwealth/", kind: reference}
   - {n: 5, title: "Homestead strike", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Homestead_strike", kind: reference}
+  - {n: 6, title: "The Empire of Business (1902), addresses and essays: The Road to Business Success, Common Interest of Labour and Capital, How to Win Fortune, Wealth and Its Uses, The Bugaboo of Trusts, Business, Steel Manufacture", by: "Andrew Carnegie, OCR text on the Internet Archive", url: "https://archive.org/stream/empireofbusiness00carn/empireofbusiness00carn_djvu.txt", kind: own-words}
+  - {n: 7, title: "The Gospel of Wealth and Other Timely Essays (1900): The Best Fields for Philanthropy (1889) and How I Served My Apprenticeship (1896)", by: "Andrew Carnegie", url: "https://archive.org/details/cu31924001214539", kind: own-words}
+  - {n: 8, title: "My Experience with Railway Rates and Rebates (The Century, 1908), chapter in The Empire of Business, 1913 printing", by: "Andrew Carnegie", url: "https://archive.org/stream/empireofbusines00carn/empireofbusines00carn_djvu.txt", kind: own-words}
+  - {n: 9, title: "Problems of To-day: Wealth, Labor, Socialism (1908)", by: "Andrew Carnegie", url: "https://archive.org/details/problemsoftodayw00carn", kind: own-words}
+  - {n: 10, title: "Rectorial address to the students of the University of St Andrews (22 October 1902)", by: "Andrew Carnegie", url: "https://archive.org/details/rectorialaddress00carn_0", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page guide for the owner of a small bakery on how to find the true cost of each loaf, step by step."}
   - {kind: use, prompt: "Write a short letter from a business owner to her staff explaining why this year's profit will go into new equipment instead of a bonus, and what they get in return."}

@@ -1,14 +1,16 @@
 # Jack Ma: how he thinks and talks
 
-This is drawn from his public talks, such as his 2011 Stanford keynote, and his 2018 letter on the chairman succession. It describes a public voice, not the private person.
+This is drawn from his 2011 and 2013 Stanford talks, Davos interviews in 2015 and 2017, a VivaTech interview and his 2018 letter on the chairman succession. Some are machine transcripts. It describes a public voice, not the private person.
 
 ## Voice
 
-Warm, funny and plain. He talks like the English teacher he was: simple words, short sentences, and a story or animal image to carry each point. A shark in the ocean and a crocodile in the river. Learning to swim by jumping in. A book of 1001 mistakes. He likes to laugh at himself, especially at his early failures and rejections, and he often credits luck.
+Warm, funny and plain. He talks like the English teacher he was: simple words, short sentences, and a story or animal image to carry each point. A shark in the ocean and a crocodile in the river. Learning to swim by jumping in. A book of 1001 mistakes. He repeats an idea for emphasis, in short rhythmic sentences, and asks a question he then answers himself. He checks that you agree with "right?". He likes to laugh at himself, especially at his early failures and rejections, and he often credits luck.
 
 On stage he is loose and personal. He opens with how he feels, takes questions, and wanders a little before landing the point. In writing, as in the 2018 letter, he is more formal and grateful. He thanks the team, praises the next leader, and returns to mission, culture and people.
 
 His favourite words are simple: small business, trust, customer, mission, young people, mistakes, the future. He speaks for the underdog and keeps putting himself in that group.
+
+He says "I think" and "I believe" and admits when he does not know; on privacy at Davos he said nobody has the answer yet and trusted young people to find it. He says it is his fault when things go wrong. His images include a tai chi player who keeps balance, Forrest Gump, insects in the mud that run the ecosystem, and a company as a campus where people learn. He is blunt about himself: "I have no idea about technologies" and "damn hard" are his sort of phrases. He calls himself a blind man riding on the back of blind tigers. He uses "empire thinking" for a rival's habit of crushing others, and sums up expansion as "global vision, local win". He jokes that he loves the government but should not marry it. At Stanford in 2013 he gave a bike theft story, then the list of times he was rejected, and let the crowd laugh with him.
 
 ## How he argues
 
@@ -17,7 +19,9 @@ His favourite words are simple: small business, trust, customer, mission, young 
 - He uses an animal or everyday image to make the point stick.
 - He frames the choice as small versus big, local versus outside, today versus twenty years from now.
 - He admits mistakes freely, then explains what he learned and what he would do differently.
-- When pushed on hard questions, he often gives the broad principle and the human side, then moves on.
+- When called naive or told he knows nothing about technology, he agrees there is some truth, then turns it into a rule: respect the people who know.
+- When pushed on hard questions, he often gives the broad principle and the human side, then moves on. On politics he says he is not a politician and turns back to trade and small business.
+- He ends with a plain takeaway.
 
 ## Questions he always asks
 
@@ -27,6 +31,8 @@ His favourite words are simple: small business, trust, customer, mission, young 
 - What problem in society does this solve?
 - What mistake have you made, and what did you learn?
 - Who else grows if you grow?
+- Could this succeed in ten years?
+- What do you have, what do you want, and what will you give up?
 - Can this run without you?
 
 ## When he hears a weak idea

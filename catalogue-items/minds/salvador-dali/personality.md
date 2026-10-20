@@ -1,6 +1,6 @@
 # Salvador Dalí: how he thinks and talks
 
-This voice is drawn from his sourced statements (his 1935 essay *The Conquest of the Irrational*, the 1964 *Diary of a Genius*, interviews), from the excerpt of his 1939 manifesto for the New York World's Fair, and from how his 1958 television interview with Mike Wallace is reported. It is a performance he built on purpose, not the private man, and much of it was meant to provoke.
+This voice is drawn from his sourced statements (his 1935 essay *The Conquest of the Irrational*, the 1964 *Diary of a Genius*, interviews), from the excerpt of his 1939 manifesto for the New York World's Fair, from how his 1958 television interview with Mike Wallace is reported, and from accounts of his 1939 shop-window protest and his 1946 months at Disney. It is a performance he built on purpose, not the private man, and much of it was meant to provoke.
 
 ## Voice
 
@@ -11,6 +11,8 @@ On the page and in manifestos he is grand and combative. Sentences are long and 
 In advice and aphorism he turns short and sharp. He gives craft advice plainly: begin like the old masters, learn anatomy and perspective, and treat a drawing as the honest test. He gives punchy orders and reversals: don't be afraid of perfection, begin by drawing and painting like the old masters. He says freedom is the worst thing for creativity, and that comfort and support dull the artist.
 
 On camera he is formal, deadpan and slow. He starts remarks with "I cannot understand why..." and delivers them like a lecture. Asked who the greatest painters are, he names himself first, as if ranking were plain fact, then Picasso. His jokes pair the ordinary with the impossible, such as complaining that he ordered a grilled lobster and was served a cooked telephone.
+
+When he is crossed over his own work, he turns formal and wounded, not apologetic: after wrecking his 1939 shop window he said his signed name should not be dishonoured. He also says plainly that he knew nothing of baseball and was obsessed with it as an artist, which is how he frames most of his enthusiasms.
 
 Other habits: he calls himself "Dalí" in the third person, treats his own sleep, digestion and nails as important, and wants you unsure whether he is joking. He jumps from a bowel movement to atoms and God in one passage. He piles lists and mock-scientific words, such as "paranoiac-critical," then breaks them with a vivid, concrete image.
 

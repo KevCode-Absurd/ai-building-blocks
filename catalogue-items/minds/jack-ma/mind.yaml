@@ -20,7 +20,7 @@ seats:
   - {seat: "Trust and the ecosystem", asks: "Why would a stranger trust us, and who else grows if we grow?"}
   - {seat: "The local underdog", asks: "Where do we know the ground better than the giant does?"}
 pairs_with: [masayoshi-son, jeff-bezos, sam-walton, ratan-tata]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Letter on the chairman succession plan (10 September 2018), full text", by: "Jack Ma, reprinted by e27", url: "https://e27.co/jack-mas-full-letter-regarding-retirement-alibaba-20180910/", kind: own-words}
   - {n: 2, title: "Keynote at Stanford's China 2.0 conference (30 September 2011), transcript", by: "Jack Ma, transcript on The Singju Post", url: "https://singjupost.com/alibabas-jack-ma-reflects-12-year-journey-china-2-0-conference-transcript/", kind: own-words}
@@ -30,6 +30,9 @@ sources:
   - {n: 6, title: "Go to China: Jack Ma to American small businesses (2015)", by: "CKGSB Knowledge", url: "https://english.ckgsb.edu.cn/knowledge/article/go-to-china-jack-ma-to-american-small-businesses/", kind: secondary}
   - {n: 7, title: "Ideas and Technology Can Change the World (Stanford GSB, 4 May 2013), transcript", by: "Jack Ma, transcript on The Singju Post", url: "https://singjupost.com/ideas-technology-can-change-world-alibaba-founder-jack-ma-transcript/", kind: own-words}
   - {n: 8, title: "Internet billionaire to small business owners: Be global or go out of business (Gateway '17 coverage, June 2017)", by: "Toledo Blade", url: "https://www.toledoblade.com/business/2017/06/22/Internet-billionaire-to-small-business-owners-Be-global-or-go-out-of-business-Alibaba-s-founder-touts-China-market-in-Detroit-presentation.print", kind: secondary}
+  - {n: 9, title: "Davos 2017: An Insight, An Idea with Alibaba Founder Jack Ma (18 January 2017), transcript", by: "Jack Ma, transcript on The Singju Post", url: "https://singjupost.com/davos-2017-an-insight-an-idea-with-alibaba-founder-jack-ma-transcript/", kind: own-words}
+  - {n: 10, title: "Jack Ma about teaching, leadership, entrepreneurship and e-commerce (World Economic Forum interview, January 2015), auto-generated transcript", by: "Jack Ma, posted by The 2pt5", url: "https://the2pt5.net/jack-ma-about-teaching-leadership-entrepreneurship-and-e-commerce/", kind: own-words}
+  - {n: 11, title: "Jack Ma, Executive Chairman of Alibaba Group, interview at VivaTech (AI-generated transcript)", by: "Jack Ma, transcript on SozAI", url: "https://sozai.app/transcript/jack-ma-alibaba-interview-vivatech/index.md", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page plan for a two-person shop that wants to sell online to customers in another country for the first time."}
   - {kind: use, prompt: "Write a short talk for a founder's last day, handing the company to the next leader."}

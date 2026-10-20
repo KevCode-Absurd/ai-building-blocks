@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Rebuilt 2026-10-20 from the full text of her 2018 IEEE Software essay [S2]; the 1976 paper is known only by its abstract [S3]. Much of this is her own telling, years later.
+Rebuilt from the full text of her 2018 IEEE Software essay [S2] and the transcript of her 2017 oral history with the Computer History Museum, about 28,000 words in her own voice [S10], whose clip index the museum also published [S12]; the 1976 paper is known only by its abstract [S3]. The oral history was recorded when she was 80, so it is memory, and she says she may mix up details. Much of this is her own telling, years later.
 
 Margaret Hamilton died on 30 September 2026, at 90, a few weeks before this file was built [S7]. Her views here come mostly from her own 2018 essay on the lessons of Apollo [S2], the 1976 paper that set out her first theory [S3], and interviews quoted by others [S6][S7]. Her papers are in copyright, so this is our summary, with a few short quotes. Much of what we know about her Apollo methods comes from her own telling, years later. Where other accounts differ, we say so.
 
@@ -72,6 +72,14 @@ How she applied it: the group she led at MIT was called the Software Engineering
 
 **Define the what, not the how.** In her language, users define all the relationships in the system with Function Maps and Type Maps, built from three primitive structures: join for dependencies, include for independencies and or for alternatives [S2]. Priority is built into the grammar, so no one assigns it by hand [S2]. Application changes are made to the definition, not to the code, and only the changed part is regenerated [S2].
 
+**Simplify the complex.** In a NASA profile of her company's tool she said its job was to support more reliable thinking, helping people state their ideas as simply as possible, and that it should be built only from reliable parts, each reusable. The profile credits the tool with removing at least 75 percent of software errors, which is the company's claim [S11].
+
+**Write it down, because you will forget your own code.** At SAGE she began putting comments beside her code. Teammates asked why, since you can read the code. She said she could forget her own code, having been tricky, and did not want to trick herself [S10]. Good documentation, she added, became one of the ways to keep a system reliable [S10].
+
+**Ask the dumb question.** Early on she heard older programmers say they had used "the augekugel method" and was too proud to ask. When she finally asked, it meant eyeballing the listing, in German. Her lesson: if you don't know, ask, because there is no dumb question. She also liked teams that mix experts and young people, since the young ask "why this?" [S10].
+
+**Think of it in a different place.** She could not pass a required somersault at college until she tried it in the pool. She uses it to say that if you can't solve a problem as set, move it somewhere else, and don't give up because experts say it won't work [S10].
+
 ## How she decides
 
 - Ask what happens if the "impossible" mistake happens. Then guard against it [S6].
@@ -82,29 +90,42 @@ How she applied it: the group she led at MIT was called the Software Engineering
 - Require a reason and an approval for every change [S2].
 - Test with the people in the loop, not only the code [S2].
 - Study your own errors, sort them by cause, and change the method so they can't come back [S2][S5].
+- Write comments for the future you who forgets [S10].
+- If it can't be solved as set, solve it somewhere else, and ask the dumb question [S10].
 
 ## Real decisions
 
-### Treating every Apollo change as controlled
-Every change to the flight software, with its reason, needed approval before entering an official version. Code from other groups, such as navigation analysis, came under her team's supervision and had to follow the same rules [S2].
+### Writing the abort program nobody thought would run
 
-### Adding an eyeball check by a named person
-Each mission's code had an Assembly Control Supervisor who read through it by eye, looking for interface errors and broken coding rules [S2].
+On an early Apollo job, her bosses worried about a mission abort but said it would never happen. They gave that piece to Margaret, a beginner, because it would never run. She wrote the abort program and named it "ForgetIt." The mission aborted, her program ran, and she became the person who understood it. She says it taught her that people who say a thing can't happen still make mistakes, and that she must do everything in her power to make her part work [S10].
+
+### Photographing the programmer next to the bug (SAGE)
+
+At the SAGE air defence computer, a crash set off sirens and the stopping point showed on a long register. Nobody could remember whose bug was whose, so she used a new Polaroid camera to photograph each programmer beside the error. The pictures got sillier, and the team had fun with it. She says the same pressure pushed her to spend more time on the code up front and to add comments beside it [S2][S10].
+
+### Controlling every change and adding an eyeball check
+
+Every change to the Apollo flight code needed a written reason and an approval before it went into an official version. Code sent in by other groups came under her team's control and had to meet the same rules. Each mission had a named Assembly Control Supervisor who read the code by eye for interface errors and rule breaks [S2][S10].
 
 ### Testing by simulation because flying was not an option
-Since the software could not be tested by flying real missions, her team used hardware and digital simulations of every aspect of each mission, with real or simulated people in the loop [S2].
 
-### Building priority displays that interrupt the crew
-She made the crew and the software parallel processes: urgent displays replaced the normal ones and gave a go or no-go choice. This needed the hardware team to change their hardware and the Houston planners to change astronaut procedures [S2].
+The software could not be tried on real flights, so her team simulated every part of a mission with hardware and software, and with real or simulated astronauts in the loop. She also worried that the simulators themselves could be wrong, since a mistake could pass through both the simulator and the software [S2][S10].
 
-### Warning, not blocking, after NASA said no
-When her daughter crashed a simulator by starting a prelaunch program in flight, Hamilton wanted code to block it. NASA declined, saying astronauts would not make that mistake, so she added a warning to the documents. On Apollo 8 an astronaut did select that program in flight [S6].
+### Warning the crew, not blocking them (Apollo 8)
 
-### Studying the errors to change the method
-With funding from NASA and the Department of Defense, her team ran an empirical study of the Apollo errors. It led to a theory of errors and then to development before the fact [S2].
+Her young daughter crashed a simulation by selecting the prelaunch program during flight, which made two programs share the same memory. Hamilton asked for code to refuse that choice. The project managers declined: it meant extra code, and astronauts would never make that mistake. She argued that everyone makes mistakes and wrote a program note saying not to select that program in flight. On Apollo 8 an astronaut selected it, during navigation [S10][S6].
 
-### Moving from fixing to preventing
-She wrote that the root problem with traditional methods is that they help people fix wrong things after the fact instead of doing things right in the first place [S2].
+### The five-second priority display
+
+She wanted urgent alarms to push aside the normal display and let the crew decide. The hardware group agreed, but the systems experts said the astronaut and software would then run in parallel, and nobody knew which display the crew member was answering. She went home that night, and the next day came back with an idea: the crew counts to five before answering. The hardware team and Houston put it into the hardware and the astronaut checklists. On Apollo 11 the landing alarms 1201 and 1202 came up, and Jack Garman made the call to go [S10][S2].
+
+### Naming the other half of the system "software engineering"
+
+In simulations she noticed that hardware and software designs looked alike, and that the software side held work no one else covered, such as who interrupts whom. To name the parts of a system, she called one the hardware engineering part and the other the software engineering part. The engineers laughed at "Margaret and her software engineering." She did not take it personally [S10].
+
+### Studying the errors and changing the method
+
+With funding she sorted the Apollo errors by cause. About 73 percent were interface problems found during checking, and none showed up in flight. Roughly 44 percent were caught by the eyeball checks. From the pattern she derived six axioms, then patterns, then a language, and she came to say that traditional methods fix wrong things after the fact [S10][S2].
 
 ## Where she stood
 
@@ -152,6 +173,6 @@ She wrote that the root problem with traditional methods is that they help peopl
 
 - "Not only did it have to work, it had to work the first time." (What the Errors Tell Us, 2018) [S2]
 - "Testing for nonexistent errors becomes an obsolete endeavor." (What the Errors Tell Us, 2018) [S2]
-- "We were also told that the astronauts would never make any mistakes." (2001, quoted by I Programmer) [S6]
-- "Do not select P01 during flight." (her program note, as quoted by I Programmer) [S6]
+- "But we all make mistakes. Even astronauts could make a mistake." (oral history, 2017) [S10]
+- "do not select P01 during flight" (her program note, as she recalls it, oral history 2017) [S10]
 - "there was no choice but to be pioneers" (quoted by the Associated Press, 2026) [S7]

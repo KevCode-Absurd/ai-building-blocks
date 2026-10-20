@@ -20,7 +20,7 @@ seats:
   - {seat: "Creative talent and discipline", asks: "Who is the best creative person for this, and how tightly will we run everything after the idea?"}
   - {seat: "Portfolio and the long game", asks: "Is this a star, a rising star or a distraction, and will it still matter in ten years?"}
 pairs_with: [coco-chanel, brunello-cucinelli, steve-jobs, phil-knight, warren-buffett]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Bernard Arnault", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Bernard_Arnault", kind: reference}
   - {n: 2, title: "Perfect Paradox of Star Brands: An Interview with Bernard Arnault of LVMH (2001, listing and summary)", by: "Harvard Business Review", url: "https://store.hbr.org/product/perfect-paradox-of-star-brands-an-interview-with-bernard-arnault-of-lvmh/R0109H", kind: secondary}
@@ -32,6 +32,7 @@ sources:
   - {n: 8, title: "Hermès", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Herm%C3%A8s", kind: reference}
   - {n: 9, title: "LVMH Annual Report 2001, company sections: Passionate about creativity, Developing the star brands, Cultivating the exceptional (corporate text, not signed by him)", by: "LVMH", url: "https://ddd.uab.cat/pub/infanu/30082/iaLVMHa2001ieng.pdf", kind: reference}
   - {n: 10, title: "Interview with the Group Managing Director, LVMH Annual Report 2025 (Stephane Bianchi)", by: "LVMH", url: "https://hosting.fluidbook.com/LVMH/2025interactiveannualreport/en/data/texts.pdf", kind: reference}
+  - {n: 11, title: "CNBC interview and speech with Bernard Arnault (transcript as indexed on CEOInterviews; read through a page summary)", by: "Bernard Arnault, CNBC", url: "https://ceointerviews.ai/interview/575185/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a one-page note to my team explaining how we will make our candle brand more desirable without cutting prices."}
   - {kind: use, prompt: "Here are the six products my small company sells. Sort them into stars, rising stars and distractions, and say why."}

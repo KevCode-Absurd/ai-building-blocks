@@ -1,8 +1,8 @@
 # Henry Ford: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Honesty note (2026-10-20 check): *My Life and Work* [S1] and *Today and Tomorrow* [S7] were read from full public-domain texts on disk, so claims tagged to them rest on his own words, though both were written with Samuel Crowther. The 1926 Britannica and magazine pieces [S2][S3] and the reference pages were taken from the earlier build.
+Honesty note (2026-10-21 check): *My Life and Work* [S1] and *Today and Tomorrow* [S7] were read from full public-domain texts on disk, so claims tagged to them rest on his own words, though both were written with Samuel Crowther. This round we also read two more pieces from Wikisource: a January 1928 *Literary Digest* piece reprinting Ford's remarks to a *Forbes* editor [S8], which is Ford's words as reported by a writer, and his own August 1915 statement to the *Detroit Free Press* on peace [S9]. The 1906 Selden patent advertisement [S10] is company advertising copy that speaks of Ford in the third person, so treat it as the company's claim. The 1926 Britannica and magazine pieces [S2][S3] and the reference pages were taken from the earlier build.
 
 A note on method: Ford died in 1947 [S4]. His views here come from his book *My Life and Work* (1922), written with Samuel Crowther and now in the public domain [S1], his 1926 encyclopedia article on mass production [S2], and a 1926 magazine article on the five-day week, also written with Crowther [S3]. Facts come from reference pages. Ford also used his newspaper to spread antisemitic propaganda for years [S5]. This mind takes his ideas on production, cost and wages only. It does not carry or excuse his hatred, and the record of it is set out below.
 
@@ -48,9 +48,11 @@ Ford wanted price cuts to come from better methods, not from falling demand [S1]
 
 How he applied it: in the slump of 1920 to 1921, Ford cut prices and took the loss on stock instead of holding prices up. He reports selling about 1.25 million cars at prices falling from $440 to $355 [S1].
 
-### Distrust the expert
+### Distrust the expert, and start from scratch
 
 Ford wrote that he never hired an expert "in full bloom," because people who think they are experts know too many reasons why things can't be done [S1]. Once you get into the expert state of mind, he argued, many things become impossible [S1].
+
+In 1928 he described the new car that replaced the Model T the same way: his team asked what a car is for and what it must have to do that, then started from scratch instead of refining the old one [S8]. He also said he welcomed competition because it is a way of discovering the truth, and that an organisation stays healthy only if it keeps in motion [S8].
 
 How he applied it: he preferred people who learned by doing, and he rejected rigid titles and organisation charts, saying a business is a group of people, not a machine [S1].
 
@@ -64,7 +66,7 @@ On standards, he argued in 1926 that standards fixed from outside industry would
 
 ### Keep finance in its place
 
-Ford saw money as a tool, not the point of a business [S1]. He thought work should come before finance, that borrowing can hide bad management, and that refinancing often means sending good money after bad [S1]. He wanted the business to fund itself from its own earnings [S1].
+Ford saw money as a tool, not the point of a business [S1]. In 1928 he told a *Forbes* editor that the only right use for money is to put it into industry, and that profit for its own sake means nothing [S8]. He thought work should come before finance, that borrowing can hide bad management, and that refinancing often means sending good money after bad [S1]. He wanted the business to fund itself from its own earnings [S1].
 
 How he applied it: he built River Rouge to make parts and by-products in-house and cut what he paid others [S1].
 
@@ -79,14 +81,14 @@ How he applied it: he built River Rouge to make parts and by-products in-house a
 - Ignore the experts who say it can't be done; put the job in the hands of people who have never learned it is impossible [S1][S7].
 - Name the price first, then make the cost fit it [S1].
 - Ask what you are in business for before asking what method suits your size [S7].
+- Ask what the thing is for, and start from scratch when the old design has run out [S8].
+- Test each unit hard, then take it apart to find the weak point [S8].
+- Count the cost of waste in war and weapons too, the same way as in a factory [S9].
 
 ## Real decisions
 
 ### Announcing a car for the great multitude
 Around 1908 Ford told his own sales people he would build a car large enough for a family, small enough for one person to run, made of the best materials and so low in price that no one on a good salary could not own one. Critics said he would be out of business in six months, since a good car could not be built cheaply. Sales of over ten thousand cars in 1908-1909 convinced him he needed a new factory to make it [S1].
-
-### Switching to vanadium steel after a wreck
-At a race in Palm Beach in 1905 a French car crashed, and Ford picked up a small valve stem that was light and strong. Nobody knew what it was made of, so he told his assistant to find out. The answer was vanadium steel. He used it to take weight out of the car while keeping strength, and later said a French government test found his steel stronger [S1].
 
 ### Setting the price first and making the cost fit
 His stated policy was to cut the price first, then extend operations, then improve the article. He said he did not take costs as fixed. He named a price that would bring more sales, then pushed the shop to meet it, because a very low price forces everyone to dig for savings. He also argued that no one knows what a cost ought to be [S1].
@@ -100,8 +102,14 @@ On 12 January 1914 Ford set a minimum of five dollars for an eight-hour day, and
 ### Giving plate glass to men who knew no glass
 Glass experts said a continuous ribbon process could not be done. Ford gave the task to men who had never been in a glass plant, who ran into every predicted trouble and then solved it. The later River Rouge plant made twelve million square feet a year in about half the space, with about a third as many men as the older plant, for nearly double the output [S7].
 
-### Chasing waste back to the labour in it
-When the salvage department grew to earn twenty million dollars a year, Ford asked why there was so much to salvage. His studies cut 80 million pounds of scrap steel a year, worth about three million dollars, or the labour of over two thousand men [S7].
+### Fighting the Selden patent
+In 1906 a Ford Motor Company advertisement said the company chose to fight the Selden patent claim in court and not pay a royalty on every car. It gave reasons of cost, of originality, and of price: it said the patent holders held back output and price, while Ford wanted to make the car a necessity and not a luxury. The ad is the company's claim, not Ford's words [S10].
+
+### Idling the plant to start from scratch
+By 1927 the Model T was being replaced. In January 1928 Ford told a *Forbes* editor that the new car was designed from scratch, that he held back output because he wanted the best car and not merely a good one, and that each car built on the line was tested and then taken apart to look for weaknesses. When critics said idling the plant lost him a hundred million dollars, he replied that a surplus should be put into industry and that giving it away does no good [S8].
+
+### Campaigning for peace in 1915
+In August 1915 Ford told the *Detroit Free Press* he would put his life and fortune behind a world campaign against war and military preparedness. His reasons: weapons become waste quickly, the country was protected by its position, and arms sellers profited from fear. He said he would refuse war profits even if he could make them [S9].
 
 ## Where he stood
 
@@ -111,7 +119,7 @@ When the salvage department grew to earn twenty million dollars a year, Ford ask
 
 **What is leisure for?** In 1926 he said leisure makes people want more, which keeps factories busy [S3].
 
-**Should a product keep changing?** Not once it is right. He kept the Model T nearly the same for nineteen years [S6].
+**Should a product keep changing?** Not once it is right, but start from scratch when it is time [S8].  He kept the Model T nearly the same for nineteen years [S6].
 
 ## His work and record
 
@@ -134,6 +142,7 @@ When the salvage department grew to earn twenty million dollars a year, Ford ask
 - **Intrusion.** His company's Social Department looked into workers' private lives [S4].
 - **Refusing to change.** He kept the Model T nearly unchanged while rivals offered comfort, style and payment plans, and it lost market share [S6][S4].
 - **Wartime.** He opposed US entry into World War II and kept doing business in Nazi Germany. The German subsidiary used prisoners of war as labourers [S4].
+- **The peace campaign.** His 1915 peace statement is sharp in tone, calling supporters of preparedness parasites, [S9].
 - **Failed projects.** Fordlândia, a rubber plantation in the Amazon, failed [S4].
 
 ## Blind spots to watch

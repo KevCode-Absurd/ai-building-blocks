@@ -1,8 +1,8 @@
 # Ludwig van Beethoven: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Beethoven's letters and notebooks are in the public domain and are his own words in English translation. Most of this file rests on Krehbiel's 1905 translation of Kerst's collection, which prints numbered sayings from letters, sketchbooks and conversation books with notes on who recorded them [S3], and on Lady Wallace's 1866 translation of the letters [S2]. Wikipedia pages supply dates and context only [S1][S4][S5]. The quotes below come from two old English translations: Lady Wallace's (1866) [S2] and Henry Krehbiel's (1905), which gathers his sayings by subject and flags doubtful ones [S3]. Many "Beethoven quotes" come from Bettina von Arnim or Anton Schindler, whose reports are doubtful or second-hand; this file treats them with care [S1][S3].
+Beethoven's letters and notebooks are in the public domain and are his own words in English translation. Most of this file rests on Krehbiel's 1905 translation of Kerst's collection, which prints numbered sayings from letters, sketchbooks and conversation books with notes on who recorded them [S3], and on Lady Wallace's 1866 translation of the letters [S2]. The 1802 Heiligenstadt Testament [S6] and the second volume of letters, which covers his last years [S7], add his own account of two big decisions. Wikipedia pages supply dates and context only [S1][S4][S5]. The quotes below come from two old English translations: Lady Wallace's (1866) [S2] and Henry Krehbiel's (1905), which gathers his sayings by subject and flags doubtful ones [S3]. Many "Beethoven quotes" come from Bettina von Arnim or Anton Schindler, whose reports are doubtful or second-hand; this file treats them with care [S1][S3].
 
 ## In one paragraph
 
@@ -69,27 +69,38 @@ How he applied it: from 1818 his hearing was so poor that visitors wrote to him 
 - Do not fix a text to improve the music if words and music already fit [S3].
 - Keep working through whatever fate sends [S2][S3].
 
-## Real decisions (enriched minds)
+## Real decisions
+
+### Staying alive for the work (1802)
+
+In the Heiligenstadt Testament, a letter to his brothers dated 6 October 1802, he wrote that he had been going deaf for six years and had withdrawn from people because he could not bring himself to tell them [S6]. He said only art held him back from ending his life, because he felt he could not leave the world before he had produced what he was called to make [S6]. He asked that his doctor describe his illness after his death so the world might be reconciled with him, and in an addendum of 10 October he asked Providence for one day of pure joy [S6]. He went on to write his most famous work for another 25 years [S1].
+
+### Selling the great Mass by subscription (1823)
+
+Beethoven finished his Grand Mass in D and, instead of selling it to a publisher, decided to offer handwritten copies to the courts of Europe at fifty ducats each [S7]. He told Archduke Rudolph that he had been advised to do so because of heavy debts and poor health, and that it was painful to him [S7]. The kings of France and Prussia subscribed, and the emperor of Russia followed [S7]. He admitted it did not bring in as much as a publisher had offered, and that the only gain was that the work remained his; he later called the scheme an unlucky speculation that left him with more debts [S7].
+
+### Choosing the candid publisher (1824)
+
+Writing to the publisher Schott in 1824, he said he valued Schott for being open and candid, qualities he had never found before in publishers [S7]. He promised a quartet and asked that payment be sent in good time, since he lived on money from abroad [S7]. His reason for sticking with one house was trust, not only price.
+
+### Naming his price and writing it down (1800 to 1801)
+
+Offering a sonata to Hofmeister in January 1801, he named 20 ducats [S3]. He told his friend Wegeler that publishers no longer haggled: he named the price and they paid [S2]. He also admitted he was a bad man of business and accountant [S2].
 
 ### Refusing to write for the galleries (1820)
+
 When a baron said Fidelio would one day win over the upper tiers, Beethoven answered that he did not write for the galleries [S3]. He never agreed to make concessions to the taste of the masses, according to the compiler's note [S3]. In an earlier remark he said true art is selfish and perverse and will not submit to the mould of flattery [S3].
 
 ### Titling the Pastoral Symphony as feeling, not painting (1808)
+
 His sketches for the Pastoral Symphony say the hearer should find the situations, and that it is more sentiment than tone painting [S3]. When he gave the work to the publisher he added a short explanation: more expression of feeling than painting [S3]. His reason: anyone who has known country life can imagine what the composer is after without many captions [S3].
 
 ### Refusing a publisher's change to the words (1811)
+
 The publisher Hartel wanted changes to the text of The Mount of Olives. Beethoven wrote back that an unfit word can spoil music, and that when words and music are one, they should be glad and not try to improve a commonplace text [S3]. His stated reason was that the words do not make the music [S3].
 
-### Dropping the metronome as a rule
-Reported in his later years, he said that anyone with sound feeling needs no metronome and anyone without it will not be helped, since he will run away with the orchestra anyway [S3]. This is a reported remark, and the compiler notes he had sent different metronome marks to different publishers [S3].
+### Cutting his plans to fit his income (1822)
 
-### Naming his price and writing it down (1800 to 1801)
-Offering a sonata to Hofmeister in January 1801, he named 20 ducats [S3]. He told his friend Wegeler that publishers no longer haggled: he named the price and they paid [S2]. He also admitted he was a bad man of business and accountant [S2].
-
-### Dismissing the "Moonlight" label
-He said people kept talking about the C-sharp minor sonata and that on his word he had written better ones, naming the F-sharp major sonata, Op. 78 [S3]. The compiler's note says the Moonlight title came from the critic Rellstab, not from Beethoven [S3].
-
-### Writing symphonies he could afford to write (1822)
 In 1822 he wrote to the publisher Peters that if his income brought in so little he would write nothing but grand symphonies, church music and perhaps quartets [S3]. His income had fallen from 4,000 to 800 florins because of the currency crash, says the note [S3]. He still took on the big works in his head, including two symphonies and an oratorio, and said it would take a long time [S3].
 
 ## Where he stood

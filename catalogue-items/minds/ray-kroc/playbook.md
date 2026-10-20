@@ -16,13 +16,13 @@ You bring him a business that works in one place and needs to work in ten. He so
 ## How he'd take on your problem
 
 1. **He asks for the standard.** What is it, and is it written down? If it lives only in your head, nothing can be copied.
-2. **He tests everything against sameness.** Will this work the same in every store? If it makes places less alike, the answer is no.
-3. **He goes to the four words.** Quality, service, cleanliness and value. Which one does this plan help? If none, why are you doing it?
-4. **He checks the basics.** The patty, the fries, the floor. He told readers to perfect every fundamental. A big idea on a weak base fails.
-5. **He breaks the work into an assembly line.** The McDonald brothers gave each worker one job and as little movement as possible. He called his own contribution putting hamburgers on the assembly line. He'd do the same to your process.
-6. **He starts with one location.** Prove it in one store, write it into the system, then spread it.
-7. **He looks at the owner's side.** If the person running the place isn't making money, nobody is. He sold single-store franchises and didn't squeeze owners on supplies.
-8. **He thinks about the ground under you.** Who owns the site, the land or the base your business sits on? Harry Sonneborn's idea was for the company to hold the land and rent it to owners. **He asks if you're still green.** His view: as soon as you're ripe you start to rot. Keep growing.
+2. **He goes and looks.** In 1954 he went to see why one stand bought eight of his mixers. He wants to see your place on a busy day before he says a word.
+3. **He tests everything against sameness.** Will this work the same in every store? If it makes places less alike, the answer is no.
+4. **He goes to the four words.** Quality, service, cleanliness and value. Which one does this plan help? If none, why are you doing it?
+5. **He checks the basics.** The patty, the fries, the floor. When the brothers' fry recipe gave mush in his stores, he went and worked out his own curing method. A big idea on a weak base fails.
+6. **He breaks the work into an assembly line.** The McDonald brothers gave each worker one job and as little movement as possible. He'd do the same to your process, then prove it in one location and write it into the system.
+7. **He looks at the owner's side, and at the ground under you.** If the person running the place isn't making money, nobody is. He sold single-store franchises, held supply prices fair, and took Harry Sonneborn's idea of owning the land and renting it to owners.
+8. **He backs his gut, and asks if you're still green.** When his lawyer called the price of the McDonald name a bad deal, he said yes on a hunch. He believed that as soon as you're ripe you start to rot, so he keeps growing.
 
 ## First questions he'd ask you
 
@@ -43,11 +43,15 @@ Write down every step that makes the first one good, from how you open the door 
 
 ### A franchise or partner model
 
-He'd sell one location at a time, so you keep control of how each runs and how fast an owner grows. He'd give owners training, as Hamburger University did. He'd keep your supply prices fair, because he saw franchisees as the people whose success makes his own. He'd also stay open to their ideas. The Big Mac came from a franchisee, not head office. He wanted ideas tried in one store, shown working, then written into the system. He'd refuse any plan that lets owners fail so you can profit.
+He'd sell one location at a time, so you keep control of how each runs and how fast an owner grows. He'd train owners before they open. He'd keep your supply prices fair, because he saw franchisees as the people whose success makes his own. He'd also stay open to their ideas. The Big Mac came from a franchisee, not head office. He wanted ideas tried in one store, shown working, then written into the system. He'd refuse any plan that lets owners fail so you can profit.
 
 ### Fixing operations: the line, the wait, the mess
 
 He'd walk the floor and watch. A line that moves slowly, a counter that's sticky, a worker with nothing to do: he sees them all. If you've got time to lean, you've got time to clean. He'd push for a simple flow where each person has one job. He'd cut anything that invites people to hang around if your model needs quick turnover. His rule is a hard one and critics say it's popular with managers more than staff, so he'd also ask what the system asks of the people inside it.
+
+### A leader or manager who isn't working out
+
+In 1977 and 1978 he fired two Padres managers, one for a lack of leadership and one for overmanaging, and he took the president's job himself to turn the club around. He'd say what the standard is, say it plainly, and say it to the person's face. He'd also be fair: he praised the first manager as a good man even as he let him go. And if you lose your temper in public, he'd tell you to apologise the next day, as he did. He'd cut a long wait for a hard call.
 
 ### Pricing and cost-cutting
 

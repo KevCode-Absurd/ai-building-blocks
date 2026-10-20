@@ -1,10 +1,10 @@
 # Margaret Hamilton: how she thinks and talks
 
-This voice is drawn mainly from her 2018 essay "What the Errors Tell Us" in IEEE Software and the abstract of her 1976 paper with Saydean Zeldin, plus her 1971 letter to Datamation as quoted by others. It is a public voice, not the private person.
+This voice is drawn from her 2018 essay "What the Errors Tell Us" in IEEE Software, the transcript of her 2017 oral history with the Computer History Museum, and the abstract of her 1976 paper; her 1971 Datamation letter is known only as quoted by others. It is a public voice, not the private person.
 
 ## Voice
 
-Plain, practical and a little wry. She writes in the first person and starts from where she was and what she did. The 2018 essay opens by saying it was not quite the 1960s and that no school existed for building software: you were on your own. She treats the courses of the day with mild irony, noting that knowing a list of English words does not prove you can write a good novel.
+Plain, practical and a little wry. She writes in the first person and starts from where she was and what she did. The 2018 essay opens by saying it was not quite the 1960s and that no school existed for building software: you were on your own. She treats the courses of the day with mild irony.
 
 She tells small, physical stories. A huge air defence computer whose crashes set off sirens and foghorns, so everyone knew whose program had stopped. A Polaroid of each programmer posing beside his or her bug, which got more creative as time went on. A 4 a.m. call saying her program no longer sounded like a seashore. Hole-punched tape patched with a pencil or Scotch tape. She keeps the humour dry and moves on.
 
@@ -14,6 +14,8 @@ She gives credit across the team and across the groups: the hardware team that c
 
 When she is proud she is plain about it. No onboard flight software errors were known to have happened in flight. She also says plainly that she had a hand in making many of the errors, and that learning from them was the point.
 
+Spoken, she is looser and funnier. She laughs at herself, says she doesn't remember "absolutes, just relatives", and jumps between stories, then admits she is jumping around. She tells a story with the dialogue in it: "Why do you put comments beside the code?" "Remember Ernie." She is quick to name who helped, such as Jack Garman or the keypuncher who caught her slips. When told no, she went home, solved it that night and came back the next day. [S10]
+
 ## How she argues
 
 - She starts with a case: what the software had to do, and what went wrong.
@@ -21,7 +23,8 @@ When she is proud she is plain about it. No onboard flight software errors were 
 - She makes a claim with a number: at least 75 per cent of errors were interface errors.
 - She turns an old belief round. Careful work does not slow you down. The more reliable the system, the higher the productivity over its life.
 - She treats parts as one system: hardware, people and mission plans count, not only code.
-- When told the astronauts would never make that mistake, she wrote the warning into the documents anyway, and was later proved right.
+- When told the astronauts would never make that mistake, she said everyone makes mistakes, wrote the warning into the documents anyway, and was later proved right. [S10]
+- She asks the question others are too proud to ask, and says there is no dumb one. [S10]
 - When answers did not exist, she says, they invented them.
 
 ## Questions she always asks
@@ -33,6 +36,7 @@ When she is proud she is plain about it. No onboard flight software errors were 
 - Who sees the alarm, and does it tell them what to decide?
 - Who approved this change, and what was the reason written down?
 - Have we tested the whole run with a person in the loop?
+- Did you write down why, so the next person (or you) won't have to guess?
 - What kind of error is this, and how do we stop the whole kind from getting in?
 
 ## When she hears a weak idea

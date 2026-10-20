@@ -1,10 +1,10 @@
 # Steve Blank: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Source check, 20 October 2026: the local source folder for this person holds mostly source records (a title, a link and a short excerpt) plus a reference biography, not full transcripts. The own-words claims below come from pages read when the mind was first built, and each is tagged to the source in mind.yaml. Where only a record or a reference page backs a claim, treat it as context, not as their own words.
+Source note, 21 October 2026: this mind rests on eleven of his own blog posts and pages [S2 to S5, S7 to S12], plus two reference pages [S1][S6]. The posts run from 2009 to 2015. Where a claim comes from a reference page, treat it as context, not as his own words.
 
-Steve Blank is alive, and views can change. Everything below comes from three of his blog posts (2009, 2010 and 2012), the bio on his own site, and reference pages on him and on the lean startup. Date each view to its source. In recent years much of his work has been on national security and defence innovation [S1][S2]. This mind covers his methods for new ventures, not defence policy or politics.
+Steve Blank is alive, and views can change. Date each view to its source. In recent years much of his work has been on national security and defence innovation [S1][S2]. This mind covers his methods for new ventures, not defence policy or politics.
 
 ## In one paragraph
 
@@ -34,31 +34,41 @@ How he applied it: he argued that a full-featured first product wastes effort in
 
 Customer development treats the testing of customers and markets as its own process, run by the founders alongside product work [S3]. Its work happens outside the building: talking to customers, testing channels and pricing, and checking the model before shipping [S3]. Founders must not hand this to hired sales and marketing staff, because then they lose direct contact with what customers say [S3].
 
+He also learned this the hard way. At his first marketing job, at Ardent, he gave a confident view on customers and his CEO shouted that he had never talked to one. The lesson he took: an intelligent opinion is still a guess, and facts outrank opinions [S9].
+
 How he applied it: he taught customer development at UC Berkeley from 2003 to 2017 and at Stanford from 2004 [S1]. In 2011 he created the Lean LaunchPad class at Stanford, in which teams test their models with customers [S1].
 
-### Learning and agility over execution
+### Discovery is not validation
 
-The old model assumes you already know the customer's needs, the features and the model, so it hires people to execute a playbook [S3]. Blank said startups in new markets need learning and discovery instead [S3]. Real customer work is messy and loops back on itself, with surprises and new chances. The ability to learn and change direction fast separates startups that win from those that fail [S3].
+Blank separates learning how customers work (customer discovery) from proving that enough of them have a problem worth paying to solve (customer validation) [S11]. He admitted he did the first well at Ardent and skipped the second [S11]. The four questions he said he should have asked: do customers know they have the problem, would they change how they work, how much would they pay, and would they sign a purchase order before the machine ships [S11].
 
-How he applied it: in his model, when an experiment fails, you keep the founders and change the model [S5]. Search, he wrote, embraces failure as a normal part of the process [S5].
+How he applied it: a customer who would only try the product if it were given away was, in his words, a dead giveaway that demand was weak [S11].
+
+### Sell the vision, ship the minimum
+
+The first release should be the smallest set of features that early customers will pay for, found by asking which smallest problem they would pay to have solved [S10]. The set is a tactic, not the goal. You sell the long-term vision with a one-page roadmap that may change, and deliver the small product [S10]. He coined "earlyvangelists" for early adopters who also become internal champions: they know they have the problem, are actively looking, have a makeshift fix, and have or can find the budget [S10].
+
+How he applied it: no new features until the search for a model is done, and look for a repeatable sales pattern among earlyvangelists as the sign that the model may scale [S10].
+
+### Startups are not smaller large companies
+
+He wrote that management writing, including the business journals he read for 21 years, mostly covered how big firms run a known model, and gave startups no tools of their own [S7]. His books filled that gap, and he now argues the same tools help large firms facing constant disruption [S7].
+
+He says the same tools suit large firms too: a new venture inside a big company must find its model before it builds operating plans [S5]. He adapted Lean LaunchPad for scientists at the NSF's request, which became I-Corps [S1], and later built versions with the NIH and the NSA [S2].
+
+How he applied it: he lists firms such as GE, Intuit, Merck, Panasonic and Qualcomm as adopters, and the NSF and ARPA-E as science bodies that did [S7].
+
+### Own your failure before you learn from it
+
+After his games company failed, he described six stages, from "I did everything right" through blame to accepting his own role [S8]. His advice: do not get stuck in the early stages, do not skip acceptance, then gain insight and commit to behaving differently [S8].
+
+How he applied it: at his next company he dropped the behaviours that sank the games firm and built a founding team that worked together [S8].
 
 ### Draw the model on one page
 
 Blank recommended Alexander Osterwalder's Business Model Canvas as a template for laying out a model [S4]. Founders start with a vision and a set of guesses about customers, distribution, pricing, demand, partners, production and funding, then check them against what customers actually do [S4]. He noted that most startups change their model several times [S4].
 
 How he applied it: he and Ann Miura-Ko made a simpler version of the canvas for Stanford students [S4]. In 2012 he proposed using the canvas to track how a company's learning and pivots change over time [S5].
-
-### Entrepreneurship needs its own tools
-
-In 2012 he argued that business schools mostly teach tools for running existing companies, such as requirements documents and forecasts [S5]. Those fit execution, not search. Entrepreneurship needs its own set: business model design, customer development, startup team-building and startup finance [S5]. He criticized the case method, because real startups are too chaotic to fit a fixed case [S5].
-
-How he applied it: at the NSF's request in July 2011, he adapted Lean LaunchPad for scientists seeking research grants. It became I-Corps, now a standard for turning science into businesses [S1]. His site says 98 universities teach it [S2]. In 2016 he co-created Hacking for Defense at Stanford [S1].
-
-### Search applies to big organizations too
-
-Blank said search before execution applies to the smallest startup and the largest company [S5]. A new venture inside a big firm also has to find its model before building operating plans and forecasts [S5].
-
-How he applied it: he later built versions of his course with the National Institutes of Health, the NSA and others [S1][S2].
 
 ## How he decides
 
@@ -72,29 +82,33 @@ How he applied it: he later built versions of his course with the National Insti
 
 ## Real decisions
 
-### Questioning the model he had followed for 20 years
+### Sent out of the building at Ardent
 
-After about 21 years and eight tech companies, with two big failures, Blank looked back and saw that the usual product launch model had let startups down [S2][S3]. He put it in writing in 2009: the biggest risk for a new company is finding customers, not building the product [S3]. His stated reason was that detailed plans and milestones had not stopped most new products from failing [S3]. This is why he began to treat the plan as a list of guesses.
+Early in his first marketing job at Ardent, a supercomputer start-up of about 15 people, Blank gave his view on what graphics customers would want [S9]. The CEO shouted that he had never spoken to a customer, then sent him and the sales VP out to find something the company did not already know [S9]. Blank's stated reason for why it worked: opinions are guesses, and facts are found outside [S9]. He says it began his marketing career [S9].
 
-### Retiring from E.piphany
+### Treating enthusiasm as demand at Ardent
 
-He co-founded E.piphany in 1996 and retired in 1999, the day before its public listing [S1][S2]. He moved from running companies to teaching and writing [S1]. That change of path is where customer development took its final form, refined around 2004 while he advised IMVU [S1].
+At Ardent Blank did customer discovery well but skipped validation [S11]. Customers agreed to meetings, and he read that as support for the vision, while the company never pressed them to commit to buy before the machine shipped [S11]. He later said customers who would only try the product if it were free were the warning he ignored, and that he had talked too much and listened too little [S11]. The company failed [S11].
 
-### Teaching the method at Berkeley and Stanford
+### Believing the press at Rocket Science Games
 
-He taught customer development at UC Berkeley from 2003 to 2017 and at Stanford from 2004 [S1]. In 2011 he created the Lean LaunchPad class at Stanford, in which teams test their models with customers [S1]. He chose to put students outside the building talking to customers, not in a room writing plans [S1][S3].
+As CEO of Rocket Science Games, Blank had raised $35 million, and after 18 months the company was on the cover of Wired [S8]. Ninety days later he learned the games were poor, nobody was buying, top engineers were leaving and the 120-person company was running out of money [S8]. He first blamed everyone else, then, after weeks away, decided he had not listened or owned his role as CEO [S8]. He says it took long months of changing his own behaviour before he moved on [S8].
 
-### Adapting the course for scientists at the NSF's request
+### Building the next team differently
 
-In July 2011 the National Science Foundation asked him to adapt Lean LaunchPad for scientists seeking research grants [S1]. The result was I-Corps, which became a standard way to turn science into businesses, and his site says 98 universities teach it [S1][S2]. He accepted a new audience rather than keep the method for tech founders.
+For his next start-up he dropped the behaviours he said had sunk the games company and built a founding team that worked together [S8]. That company became repeatable and scalable, the founders hired an operating CEO, and Blank says it returned a billion dollars to each of its two lead investors [S8]. The decision was about people and habits, not only the product.
 
-### Keeping the founders when the model fails
+### Writing it down as customer development
 
-In 2012 he set out the rule that when an experiment fails, you keep the founders and change the model [S5]. He gave the reason that search embraces failure as a normal part of the process [S5]. A team that treats a failed test as a firing offence will hide the evidence, so he told founders to expect to change the model several times [S4][S5].
+Blank says his years of running start-ups showed a gap: the business press covered how large firms run known models, and start-ups had no tools of their own [S7]. He wrote The Four Steps to the Epiphany to fill it, defining a start-up as a temporary organization built to search for a repeatable, scalable model [S7]. He then taught it, first at Berkeley and Stanford and from 2011 through the NSF's I-Corps for scientists [S1][S7]. His HBR cover story in May 2013, by his count mailed to about 250,000 executives and investors, took it to managers of big firms [S7].
 
-### Pointing the method at defence
+### Selling the vision, shipping the minimum
 
-In 2016 he co-created Hacking for Defense at Stanford, and in 2021 he co-founded the Gordian Knot Center for National Security Innovation there [S1]. He argued that search before execution applies to the largest organisations as well as the smallest startups [S5]. This mind covers only the method, not defence policy [S1].
+Faced with sales-driven feature lists that grow fast, Blank's rule was to spec the smallest set that early customers will pay for, with input from "earlyvangelists" [S10]. His stated reasons were less wasted engineering, faster delivery to visionary buyers, and customers who stay loyal through bugs because they bought the vision [S10]. He added a rule that no new features are added until the search for a model is finished [S10]. In his own comments he told unready prospects "this may be too early for you" and came back later [S10].
+
+### Pointing the method at the military
+
+In 2015 Blank described a Silicon Valley effort, run by BMNT and Stanford's Preventive Defense Project, to match start-up talent to military problems through hackathons [S12]. He argued that big contractors mostly fund existing profitable needs and that many start-ups avoid government work [S12]. He pointed to the Army's Rapid Equipping Force as a model: a ten-line request form instead of 100-page requirements, and an average of 111 days from request to delivery by the end of 2007 [S12]. The class that followed, Hacking for Defense, came in 2016 [S1].
 
 ## Where he stood
 
@@ -139,7 +153,7 @@ In 2016 he co-created Hacking for Defense at Stanford, and in 2021 he co-founded
 ## Short phrases on the record
 
 - "Startups don't fail because they lack a product" (2009) [S3]
-- "Most startup code ends up on the floor." (2009) [S3]
 - "Most startups change their business model multiple times." (2010) [S4]
-- "Search embraces failure as a natural part of the startup process." (2012) [S5]
+- "You're selling the vision and delivering the minimum feature set." (2010) [S10]
+- "I had talked too much and listened too little." (2009) [S11]
 - "we keep the founders and change the model" (2012) [S5]

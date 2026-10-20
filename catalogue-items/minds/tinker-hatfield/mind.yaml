@@ -20,7 +20,7 @@ seats:
   - {seat: "The user's voice", asks: "Have we asked the person who will use this what they need, and how they move?"}
   - {seat: "Bold bets", asks: "Is this new enough that some people will hate it at first? Good. Is it also useful?"}
 pairs_with: [phil-knight, virgil-abloh, jony-ive, dieter-rams, zaha-hadid]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Tinker Hatfield interview (2013)", by: "Andy Butler, designboom", url: "https://www.designboom.com/?p=137269", kind: own-words}
   - {n: 2, title: "Tinker Hatfield 'Air Safari' interview (2010)", by: "Sneaker Freaker", url: "https://www.sneakerfreaker.com/news/tinker-hatfield-air-safari-interview", kind: own-words}
@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Real Talk: Tinker Hatfield Is the GOAT of Sneaker Design (2024)", by: "Jessica Staheli, Sneaker Freaker", url: "https://sneakerfreaker.com/features/real-talk/real-talk-tinker-hatfield-is-the-goat-of-sneaker-design", kind: secondary}
   - {n: 5, title: "Tinker Hatfield: Pompidou Centre and Nike Air Max (2008)", by: "David Basulto, ArchDaily", url: "https://www.archdaily.com/3917/tinker-hatfield-pompidou-centre-and-nike-air-max", kind: secondary}
   - {n: 6, title: "Tinker Hatfield", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tinker_Hatfield", kind: reference}
+  - {n: 7, title: "Tinker Hatfield interview (on Michael Jordan and the Air Jordan line)", by: "Highsnobiety", url: "http://www.highsnobiety.com/2015/03/03/tinker-hatfield-michael-jordan-interview/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short design brief for a new backpack for city cyclists that tells a clear story through how it looks."}
   - {kind: use, prompt: "List the questions you would ask a busy nurse before designing a new work shoe for her."}

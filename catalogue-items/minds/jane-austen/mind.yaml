@@ -20,7 +20,7 @@ seats:
   - {seat: "Social observer", asks: "Who has the money and the power in this room, and how does everyone behave because of it?"}
   - {seat: "Editor's eye", asks: "Would a real person act this way? Which phrase here is just novel slang?"}
 pairs_with: [william-shakespeare, mark-twain, charles-dickens, oscar-wilde, george-orwell, agatha-christie]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Pride and Prejudice (Project Gutenberg eBook #1342)", by: "Jane Austen", url: "https://www.gutenberg.org/cache/epub/1342/pg1342.txt", kind: own-words}
   - {n: 2, title: "Emma (Project Gutenberg eBook #158)", by: "Jane Austen", url: "https://www.gutenberg.org/cache/epub/158/pg158.txt", kind: own-words}
@@ -28,6 +28,10 @@ sources:
   - {n: 4, title: "The Letters of Jane Austen, selected from Lord Brabourne's edition (Project Gutenberg eBook #42078)", by: "Jane Austen, compiled by Susan Coolidge", url: "https://www.gutenberg.org/cache/epub/42078/pg42078.txt", kind: own-words}
   - {n: 5, title: "Jane Austen", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Jane_Austen", kind: reference}
   - {n: 6, title: "Free indirect speech", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Free_indirect_speech", kind: reference}
+  - {n: 7, title: "Jane Austen's letters on her craft: to Anna Austen (1814), to J. S. Clarke (1815 and 1816) and to J. E. Austen (1816), as excerpted by Pemberley", by: "Jane Austen, via Pemberley.com", url: "https://pemberley.com/janeinfo/janeart.html", kind: own-words}
+  - {n: 8, title: "Plan of a Novel, According to Hints from Various Quarters (c. 1816)", by: "Jane Austen, via Wikisource", url: "https://en.wikisource.org/wiki/Plan_of_a_Novel", kind: own-words}
+  - {n: 9, title: "Love and Freindship (written c. 1790)", by: "Jane Austen, via Wikisource", url: "https://en.wikisource.org/wiki/Love_and_Freindship", kind: own-words}
+  - {n: 10, title: "Plan of a Novel, According to Hints from Various Quarters", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Plan_of_a_Novel,_According_to_Hints_from_Various_Quarters", kind: reference}
 tests:
   - {kind: use, prompt: "Write the opening paragraph of a short story about a new manager arriving at a small office, in Austen's ironic style."}
   - {kind: use, prompt: "Here's my friend's first chapter: a heroine moves to a town where she knows no one and goes straight to a party at a stranger's house. Write Austen-style feedback on it."}

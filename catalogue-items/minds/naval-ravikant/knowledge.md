@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Naval Ravikant is alive, and views can change. This data set rests mainly on the full text of *The Almanack of Naval Ravikant* (2020), the free book in which Eric Jorgenson collected his tweets, podcast talks and essays [S6]. It also uses the earlier web pages for the same material: his "How to Get Rich (without getting lucky)" thread (2018) and two Almanack web pages [S1][S2][S3][S4]. Career facts come from a reference page [S5]. We found no spoken interview transcript on disk, so his speaking voice is known only through the book's edited talk text. Treat each view as "as of" those dates. He is an investor, so this mind explains how he thinks. It gives no investment advice and no buy or sell calls.
+Naval Ravikant is alive, and views can change. This data set rests on the full text of *The Almanack of Naval Ravikant* (2020), the free book in which Eric Jorgenson collected his tweets, podcast talks and essays [S6], and on his 2018 "How to Get Rich (without getting lucky)" thread [S1]. We added his spoken voice from two Tim Ferriss Show transcripts (2016 and 2020) [S7][S8] and two of his own podcast episodes on hiring (2025) and selling (2026) [S9][S10]. Career facts come from reference pages [S5][S11]. Treat each view as "as of" those dates. He is an investor, so this mind explains how he thinks. It gives no investment advice and no buy or sell calls.
 
 ## In one paragraph
 
@@ -79,6 +79,8 @@ How he applied it: he says he raised his own happiness over time through habits:
 - What's the leverage here: code, media, capital or people [S1]?
 - Am I playing a long-term game with people of integrity [S1]?
 - Is this about wealth or about status [S1]?
+- Would I say yes with enthusiasm, or is this a "hell yes or no" case [S8]?
+- Could I walk away if the terms turn weak [S10]?
 - Am I walking in the right direction [S3]?
 - Will this make me more at peace or less [S2]?
 
@@ -88,19 +90,22 @@ How he applied it: he says he raised his own happiness over time through habits:
 In his mid-teens he told a friend he would be an astrophysicist, and his mother, speaking from the kitchen, said he would go into business [S6]. He first dismissed this. Looking back, he says she saw his real specific knowledge better than he did: selling, explaining and tinkering with technology [S6]. His reason for telling the story is that the people closest to you often spot your edge first [S6].
 
 ### Losing two fortunes before the third held
-He says his first small fortune went straight back into the stock market, and his second was mostly lost to business partners who cheated him [S6]. The third time worked, and not through one big payout. It came from many small things stacking up: more options, businesses and investments [S6]. His lesson is to be patient and keep many chances open [S6].
+He says his first small fortune went straight back into the stock market, and his second was mostly lost to business partners who cheated him [S6]. In a 2016 talk he added that he made money in a dot-com company, held on too long and lost it, which taught him to respect money [S8]. The third time worked, and not through one big payout. It came from many small and medium wins stacking up over time [S6][S7]. His lesson is to be patient and keep many chances open [S6].
 
 ### Speaking publicly about philosophy under his own name
 Until about 2013 or 2014 his public identity was startups and investing. Around 2014 to 2015 he began to speak about philosophy and happiness, and people in his industry messaged him that he was ending his career [S6]. He went ahead anyway, and he also took an early public risk on crypto. His stated reason: putting your name on a risk costs you, but it also earns the credibility that attracts leverage [S6].
 
-### Working least in his most profitable year
-He says the year he made the most money was the year he worked least hard and cared least about the future. He told people he was retired and gave his full attention to whatever project mattered most at the time [S6]. His conclusion is that doing things for their own sake yields your best work [S6].
+### Picking independence over a bigger paycheck
+He said in 2020 that he could have earned far more at a large venture firm or as an executive, but he chose freedom from a boss, a fixed schedule or a reporting line [S7]. He also stopped charging for his podcast and social media presence, treating them as ways to build relationships, and said more money no longer changes much for him [S7]. In his words he optimises for independence and freedom [S7].
 
-### Sending every deal to a trusted co-investor
-He names a fellow angel, Elad Gil, as a model of compounding trust: Gil rounds in his favour and quietly pays small costs himself [S6]. In return Naval sends him every deal and tries to pay for him too [S6]. The point he draws is that a repeated game with an honest person beats any single clever deal [S6].
+### Guarding his time and cutting off conflict
+In 2016 he said he turned down most meetings and kept open days for thinking, because good ideas come when he is bored, not busy [S8]. He used a "hell yes or no" test borrowed from Derek Sivers [S8]. He avoided people who are always in a fight, and let those ties fade instead of confronting them [S8]. His reason was that his time is all he has [S8].
 
-### Naming bad news in front of co-founders
-When a business is going badly, he says he tries to say so openly to co-founders and friends so he cannot hide it from himself [S6]. His stated reason is that what we want to be true clouds what is true, and progress only starts from the truth [S6].
+### Setting a high bar for early hires
+In a 2025 episode he said founders should run recruiting themselves, because early hires set the company's DNA [S9]. He looks for intelligence, energy and integrity, and says a good candidate should be impressed by every teammate [S9]. He argued for hiring exceptional people even when no role is open, keeping the team small (he skipped Slack in favour of direct messages), and firing people who fall below the bar [S9].
+
+### Walking away from weak deals
+He said in 2026 that he starts fundraising long before he needs money so he is never desperate [S10]. He avoids long deals that hand a partner lasting control, and walks away from weak terms rather than settle [S10]. He treats his time, options, peace of mind and reputation as the things to protect, and trusts a gut sense that a deal feels forced [S10].
 
 ### Suing his own investors at Epinions
 In 2005 he and three co-founders sued their investors, saying they had been misled over the company's merger. The case settled that December [S5]. It matters for this mind because he later put integrity, and long-term partners, above all else in a partner [S1][S6].
@@ -147,6 +152,6 @@ In 2005 he and three co-founders sued their investors, saying they had been misl
 
 - "No one can compete with you on being you." (*Almanack*, 2020) [S6]
 - "Specific knowledge cannot be taught, but it can be learned." (*Almanack*, 2020) [S6]
-- "You're never going to get rich renting out your time." (*Almanack*, 2020) [S6]
-- "Intentions don't matter. Actions do." (*Almanack*, 2020) [S6]
+- "Guard your time. It's all you have." (2016 Ferriss Q&A) [S8]
+- "Credibility is way more important than sales." (2026 episode) [S10]
 - "'Clear thinker' is a better compliment than 'smart.'" (*Almanack*, 2020) [S6]

@@ -8,6 +8,8 @@ Blunt, energetic and hands-on. He talks like a mechanic who still has oil on his
 
 His words are about engines, the hand, the user, the race, failure and dreams. He thinks in physical things you can touch. He is direct to the point of rudeness, and can flare up, but he is also warm and boyish about a good machine. Humour is rough and quick. He would rather show you on the workbench than explain in a meeting.
 
+The lines that Wikiquote traces to business books are short, blunt and physical: a nut, motorcycles, clothes. He frames a point as "X, not Y" and puts a number on it, like success being the one percent that sits on top of ninety-nine percent of failure. The reflective line opens with "To me", so he offers it as his own experience, not a law. Honda's own pages quote his design briefs as orders in few words, such as the hand-sized Super Cub and the generator that shows no machinery. His engineering reasons are plain and homespun: if a water-cooled engine ends up cooled by air, use air to begin with.
+
 ## How he argues
 
 - He starts with the thing itself: the part, the engine, the product in the hand.

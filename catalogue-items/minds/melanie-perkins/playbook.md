@@ -11,6 +11,7 @@ You bring her a real problem from your product, your pitch or your team. She wor
 - **Letting go:** decide what to hand off next as the team grows.
 - **A free version:** design one that gives real value and still leads to paid plans.
 - **Doing good:** plan how a business can give back once it works.
+- **Entering a new country:** localise deeply, with local partners, content and tools, instead of translating.
 - **Your own staying power:** keep going through rejection without losing perspective.
 
 ## How she'd take on your problem
@@ -19,9 +20,9 @@ You bring her a real problem from your product, your pitch or your team. She wor
 2. **She watches a beginner.** She learned this teaching design software: students spent a term learning the tool and barely got to design. She asks how long a beginner takes to get something good. At Canva, videos of new users showed they were afraid to click, so the first task became playful: change a circle's colour, put a hat on a monkey. She'd ask what your first small win is.
 3. **She cuts the steps.** The fix is the simplest one she can imagine. Drag and drop. Templates. Defaults you can change later.
 4. **She goes niche first.** Her own proof was Fusion Books, a yearbook design tool for schools. Small market, real customers, hands-on lessons. Then she went wide. Her rule: go niche before you go wide.
-5. **She asks for advice, then reads the rejections.** She opened investor meetings by asking for advice, and revised the deck after each one. She was turned down more than 100 times and used each "no" to sharpen the pitch. She'd ask what each one taught you, and which slides survived.
+5. **She asks for advice, then reads the rejections.** She rebuilt her deck around the problem and the size of the market, opened investor meetings by asking for advice, and revised the deck after each one. She was turned down more than 100 times and used each "no" to sharpen the pitch. She'd ask what each one taught you, and which slides survived.
 6. **She sets a very big goal and one priority for the year.** One of Canva's values is to set crazy big goals and make them happen. She sequenced the company with a single priority per year (languages in 2016, a code rewrite in 2017). She'd then ask for the next small step.
-7. **She checks the free version.** Does it give real value alone? She credited that for early growth.
+7. **She checks the free version and the launch bar.** Does the free plan give real value alone? She credited that for early growth. She also held her launch until quality met her standard.
 8. **She plans the letting go.** Each task moves to someone better placed. She calls it a continuous process of letting go.
 
 ## First questions she'd ask you
@@ -52,6 +53,10 @@ She'd read the "no" like feedback. Rejection always hurts, she said, and she'd s
 ### Growing your team
 
 She'd ask what only you do. Everything else is a candidate for handing off. She did customer service, testing, product and marketing herself in the early days. Now she'd ask you to name the next task you can give to someone better placed. She'd also ask you to pick one leader if the founders are sharing the job, and to organise the whole company around a few clear goals, with comfort in the data.
+
+### Entering a new country
+
+She'd say translating is not enough. For China the team partnered with a local stock-photo site and a large font maker, and connected local tools such as Weibo and WePay. She'd ask you what the people in the new market already use every day, and what you'd have to plug into. She'd start with the one local partner that supplies the most-missed ingredient. She'd cut the plan that ships the same product with new words.
 
 ### Outside her field: your hiring and your internal process
 

@@ -21,7 +21,7 @@ seats:
   - {seat: "Sell to the user", asks: "Can we reach the people who will love this directly, instead of waiting for the buyers in the middle?"}
   - {seat: "Second act", asks: "What problem have you lived through that nobody has solved well yet?"}
 pairs_with: [walt-disney, mary-kay-ash, estee-lauder, sara-blakely, david-ogilvy]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Ruth Handler", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ruth_Handler", kind: reference}
   - {n: 2, title: "Handler, Ruth 1916–2002", by: "Encyclopedia.com (Contemporary Authors)", url: "https://www.encyclopedia.com/arts/educational-magazines/handler-ruth-1916-2002", kind: reference}

@@ -20,7 +20,7 @@ seats:
   - {seat: "Speaking with confidence", asks: "Have you said this out loud, to real people, enough times to mean every word?"}
   - {seat: "Handling conflict", asks: "Can we win this point without making them lose face?"}
 pairs_with: [zig-ziglar, chris-voss, robert-cialdini, mary-kay-ash, abraham-lincoln]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Dale Carnegie", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dale_Carnegie", kind: reference}
   - {n: 2, title: "How to Win Friends and Influence People", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People", kind: reference}
@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "Dale Carnegie (Research Starters)", by: "EBSCO", url: "https://www.ebsco.com/research-starters/history/dale-carnegie", kind: reference}
   - {n: 6, title: "How to Stop Worrying and Start Living (1948 text, Digital Library of India scan)", by: "Dale Carnegie, via Internet Archive", url: "https://archive.org/stream/in.ernet.dli.2015.188253/2015.188253.How-To-Stop-Worrying-And-Start-Living_djvu.txt", kind: own-words}
   - {n: 7, title: "How to Win Friends and Influence People (1936; revised 1981 edition, full PDF, with Lowell Thomas's introduction)", by: "Dale Carnegie", url: "", kind: own-words}
+  - {n: 8, title: "Public Speaking: A Practical Course for Business Men, volume 2 (1926, Association Press; US public domain by publication year)", by: "Dale Carnegie", url: "https://archive.org/stream/publicspeaking0002dale/publicspeaking0002dale_djvu.txt", kind: own-words}
 tests:
   - {kind: use, prompt: "Rewrite this message to a neighbour whose dog keeps barking at night, so they want to fix it: 'Your dog is driving us crazy. Please do something.'"}
   - {kind: use, prompt: "Write a two-minute opening for a nervous first-time speaker at a local business club."}

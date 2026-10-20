@@ -1,8 +1,8 @@
 # Clayton Makepeace: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Clayton Makepeace died on March 24, 2020 [S4]. He wrote sales letters for clients rather than books for the public, so most of what he said about his craft survives in interviews and in teaching pieces published by AWAI, a copywriting school where he spoke for more than 20 years [S4]. AWAI also sold his training, so its pages praise him, and the sales figures they give are not checked by anyone else [S5]. His birth year is not firmly on the record. A reprinted interview has him at 53 after 33 years of work that began in 1974, which points to about 1953 [S3]. A 2005 AWAI survey report adds his own answers, in his words, on how he planned his day, researched a project and got past a stuck draft [S8]. It is a multi-writer report, so only his answers count here. This data set sticks to his methods, as he described them, and treats the big numbers as claims.
+A note on the record: Clayton Makepeace died on March 24, 2020 [S4]. He wrote sales letters for clients rather than books for the public, so most of what he said about his craft survives in interviews and in teaching pieces published by AWAI, a copywriting school where he spoke for more than 20 years [S4]. AWAI also sold his training, so its pages praise him, and the sales figures they give are not checked by anyone else [S5]. His birth year is not firmly on the record. A reprinted interview has him at 53 after 33 years of work that began in 1974, which points to about 1953 [S3]. A 2005 AWAI survey report adds his own answers, in his words, on how he planned his day, researched a project and got past a stuck draft [S8]. It is a multi-writer report, so only his answers count here. On 2026-10-21 we added a podcast with a full transcript, where he tells his early career and breakthroughs in his own words [S9], and re-read the 2005 Q&A [S1]. This data set sticks to his methods, as he described them, and treats the big numbers as claims.
 
 ## In one paragraph
 
@@ -87,19 +87,31 @@ When the 1973 oil embargo dried up his work as a film and video cameraman in Los
 
 ### Going out on his own
 
-In 1979 he left staff work and went freelance, writing fundraising appeals and promotions for investment newsletters [S1]. The fundraising habit stayed with him for good: with no product to sell, the letter had to make the giver feel something [S1].
+In 1979 he left staff work and went freelance (in the podcast he also tells of a list-brokerage owner who withheld a promised bonus and fired him, after which he took the clients he had brought in) [S9], writing fundraising appeals and promotions for investment newsletters [S1]. The fundraising habit stayed with him for good: with no product to sell, the letter had to make the giver feel something [S1].
 
 ### Resigning a client who cheated people
 
 Early in his career he found one client was defrauding customers. He resigned the account and wrote a scorching letter saying why. That client was later jailed for fraud [S2].
 
-### Telling the silver dollar as a story
-
-For the Morgan silver dollar promotion he told the coin's history as a story and kept the investment case in one small box, rather than leading with a table [S3].
-
 ### Swapping tasks when stuck
 
 When he struggles with a creative job such as an outline, heads or copy from scratch, he moves to a detail job like research, and swaps back later [S8]. He puts most blocks down to too much information, too broad a core idea or too poor an understanding of the topic [S8]. His 2005 interview adds that he never starts from a blank screen [S1].
+
+### Teaching himself from other people's mailings
+
+Early on he was paid to read the direct-response classics for a few weeks before writing any copy [S9]. He also subscribed to eight to ten financial newsletters under a different middle initial each, so he could see which mailings came to which name [S9]. He cut up the promotions and sorted headlines and openings into scrapbooks to study their structure [S9]. He named Gary Bencivenga and Jim Rutz as writers he learned from this way [S9].
+
+### Offering a free control for double pay
+
+He phoned a Phoenix newsletter publisher cold and offered to write a control promotion for nothing, for double the fee if it beat the current one [S9]. It did, and he went on to write controls for the publisher's other titles [S9]. His reasoning, as he told it, was to take the risk himself and follow the money [S9].
+
+### Turning rare coins into stories
+
+For a Minneapolis coin company he moved the pitch from technical investment grades to coins as historical objects with stories, opening by asking what stories the coin could tell [S9]. He said sales rose from about $3 million to $16 million a month within a year, which is his claim and not checked [S9]. For a Morgan silver dollar promotion he likewise told the coin's history as a story and kept the investment case in one small box [S3]. It fits his rule that emotion and story get the reader in and proof keeps them there [S1][S9].
+
+### Building the strategy before the copy
+
+In the 2005 Q&A he explained how he avoids a stuck draft: survey the trends likely to last months, map how the prospect feels about each, trace the prospect's history with the topic, and choose the strongest feeling [S1]. Then he ties the client, offer and product to that feeling, which positions the client as the reader's advocate [S1]. He called this "marketing jujitsu" and said a writer who has done it is never short of headline and outline ideas [S1].
 
 ## Where he stood
 

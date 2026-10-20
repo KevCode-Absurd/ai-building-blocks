@@ -20,7 +20,7 @@ seats:
   - {seat: "DIY testing", asks: "Have we watched three people try it this month, and what did we fix?"}
   - {seat: "Goodwill keeper", asks: "What on this page makes people trust us less, and can we stop doing it?"}
 pairs_with: [jakob-nielsen, don-norman, william-zinsser, ann-handley, peep-laja]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Steve Krug", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Steve_Krug", kind: reference}
   - {n: 2, title: "The Author of Don't Make Me Think Discusses UX Design's 20-Year Evolution (2020)", by: "Jeff Link, Built In", url: "https://builtin.com/design-ux/simplicity-ux-steve-krug-interview", kind: own-words}
@@ -28,6 +28,13 @@ sources:
   - {n: 4, title: "Usability Testing with Steve Krug (event, 2018)", by: "Digital.gov", url: "https://digital.gov/event/2018/06/14/usability-testing-with-steve-krug", kind: reference}
   - {n: 5, title: "Book Summary: Don't Make Me Think", by: "Readingraphics", url: "https://readingraphics.com/book-summary-dont-make-me-think/", kind: secondary}
   - {n: 6, title: "Podcast: Usability and Conversion Rate Optimization with Steve Krug", by: "Tim Ash, SiteTuners", url: "https://sitetuners.com/blog/podcast-usability-and-conversion-rate-optimization-with-steve-krug/", kind: secondary}
+  - {n: 7, title: "Book Review: Rocket Surgery Made Easy", by: "Lee Munro", url: "https://leemunroe.com/rocket-surgery-made-easy", kind: secondary}
+  - {n: 8, title: "5 tips on usability testing from Steve Krug (2015)", by: "Scottish Government digital team", url: "https://blogs.gov.scot/digital/2015/06/18/5-tips-usability-testing-steve-krug/", kind: secondary}
+  - {n: 9, title: "Rocket Surgery Made Easy (2010): free sample, opening remarks \"Call me Ishmael\" (archived copy)", by: "Steve Krug, New Riders / Pearson", url: "https://web.archive.org/web/2020id_/https://sensible.com/downloads/rsme-samplechapter.pdf", kind: own-words}
+  - {n: 10, title: "Usability test script, observer instructions, hall monitor guide, checklists and \"Things a therapist would say\" (free handouts from Rocket Surgery Made Easy, 2010)", by: "Steve Krug", url: "https://web.archive.org/web/2020/https://sensible.com/downloads/", kind: own-words}
+  - {n: 11, title: "What Do You Test, and When Do You Test It? (chapter 4 excerpt, Rocket Surgery Made Easy)", by: "Steve Krug, Peachpit", url: "https://www.peachpit.com/articles/article.aspx?p=1433954", kind: own-words}
+  - {n: 12, title: "Author Talk: Steve Krug on Mobile Recording and Usability Testing (podcast transcript)", by: "Steve Krug with Nancy Aldrich-Ruenzel, Peachpit", url: "https://www.peachpit.com/articles/article.aspx?p=2126861", kind: own-words}
+  - {n: 13, title: "Steve Krug interview with transcript (Boagworld podcast, about 2010)", by: "Steve Krug with Paul Boag", url: "http://boagworld.com/usability/steve-krug/", kind: own-words}
 tests:
   - {kind: use, prompt: "Here is the text of my home page. Rewrite it so a first-time visitor knows in five seconds what we do and where to click."}
   - {kind: use, prompt: "Write a short script I can read aloud to start a 30-minute user test of my booking form."}

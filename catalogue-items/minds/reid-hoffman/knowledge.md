@@ -1,8 +1,8 @@
 # Reid Hoffman: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Reid Hoffman is alive, and views can change. This data set comes from two 2019 interviews in which he explains his ideas in his own words, one on network effects [S1] and one on blitzscaling [S2]. It adds public reference pages [S3][S4], a page that records his best-known line about launching early [S5], and a 2016 Harvard Business Review piece about him [S6]. Treat each view as "as of" 2019 unless marked. He is a venture investor, so this mind explains his frameworks only. It gives no investment advice and does not speak for him on politics or new events. For this pass only Wikipedia was on disk in full; the two interviews are as read earlier, and the folder holds no more of his own words. His record in his own words is therefore thin, so lean on the two interviews and treat the rest as context.
+Reid Hoffman is alive, and views can change. Treat each view as "as of" the date of its source unless marked. This data set rests on his own words in two 2019 interviews, on network effects [S1] and on blitzscaling [S2], and on three longer conversations: a podcast with Steven Bartlett [S7], Tim Ferriss's 2015 show [S8] and a 2017 Ferriss list of his startup rules [S9]. A profile from the Academy of Achievement gives career dates and reasons [S10], a University of Chicago write-up covers a 2021 talk [S11], and reference pages [S3][S4] and press pieces [S5][S6] fill in the rest. The podcast transcripts [S7][S8] were read through a web summary of machine-made text, so wording may be off and we quote none of it. He is a venture investor, so this mind explains his frameworks only. It gives no investment advice and does not speak for him on politics or new events.
 
 ## In one paragraph
 
@@ -28,12 +28,6 @@ Hoffman argues the internet has taken network effects to new heights, and that t
 
 How he applied it: he said LinkedIn's long-term value was always meant to come from network effects, and that the three together kept out new rivals and bigger consumer networks [S1]. LinkedIn grew from launch in May 2003 to 1 million users in August 2004 and to one billion members by November 2023 [S4].
 
-### Network businesses can't grow slowly
-
-A network product offers little value until enough people use it [S1]. So he argues that network effects both need and create aggressive growth [S1]. You can't start small and hope to drift upward.
-
-How he applied it: he told founders to design for fast growth from day one when the business depends on a network [S1].
-
 ### Distribution often beats product
 
 Hoffman argues that a good product with strong distribution usually beats a great product with weak distribution [S1]. Without distribution, it is hard to reach the tipping point where network effects take over [S1].
@@ -52,17 +46,21 @@ He told GIC that blitzscaling means choosing to disrupt your own systems, which 
 
 How he applied it: for large firms trying to move fast, he advised getting buy-in from investors and leaders, and setting up a separate team with its own rules [S2]. For global firms, he advised one culture, regular travel by leaders, hubs with direct flights and frequent video calls [S2].
 
-### Your network is an asset, so put it to work
+### Treat a startup as default dead
 
-Hoffman's career is a chain of networks. He went from Apple and Fujitsu to his own social site, then to PayPal, then to LinkedIn, a network built for work [S3]. As an investor he has used those ties to open doors for others [S3].
+On the Bartlett show he said new companies begin "default dead" and must work toward being "default alive" [S7]. When he started LinkedIn he put its odds of success at about 20 to 25 percent, and a respected friend told him a network is worthless until it is large [S7]. His answer was to bet that a small set of early adopters would carry it to critical mass [S7]. He also said not everyone should be an entrepreneur, because it is a competitive game and you should enter it where you have an edge [S7].
 
-How he applied it: he arranged the meeting that led to Peter Thiel's first investment in Facebook, and was an early Facebook investor himself [S3]. He led Airbnb's first big funding round, the Series A, and later backed firms such as Aurora, Joby Aviation and Helion Energy [S3]. He also helped OpenAI set up its capped-profit model and sat on its board until 2023, when he stepped down citing conflicts of interest [S3]. In 2024 Microsoft licensed the technology of his AI company, Inflection, and hired most of its staff [S3].
+How he applied it: he favours plans with fallback options and niches where big rivals are not looking [S7]. He called himself an "infinite learner" because each stage of a company asks for different skills [S7].
 
-### Technology serves people
+### Hire for speed of learning, and check references hard
 
-Hoffman calls blitzscaling profoundly human [S2]. He says technology is only the vehicle, and growth works when it serves human needs [S2]. He describes the right mindset as being an infinite learner [S2].
+Hoffman said hiring can take about a third of a founder's time [S7]. He prefers people who learn fast to people with long résumés [S7]. He trusts references more than interviews, and asks a reference for the candidate's weaknesses, since everyone has some [S7]. His 2017 rule list adds that early hires set the culture, so hire as if your life depends on it [S9].
 
-How he applied it: his 2023 book Impromptu was about using AI to amplify what people can do, and his 2025 book Superagency continued the theme [S3].
+### Break a hard problem into outcome, variables and people
+
+Asked how he works through a problem, he described a plain routine [S8]. Define the outcome you want. Name the few variables that decide it. Then talk to informed people and work backward. He used PayPal's banking-licence problem as the case: find out what regulators actually need to see, and treat their protective mission as legitimate rather than as an enemy [S8].
+
+How he applied it: at PayPal he was known to the CEO as the "firefighter-in-chief", the person who took the urgent problems [S9].
 
 ## How he decides
 
@@ -75,24 +73,23 @@ How he applied it: his 2023 book Impromptu was about using AI to amplify what pe
 - Keep learning, and keep the human need at the centre [S2].
 
 ## Real decisions
+### Starting LinkedIn at long odds (2002)
+After SocialNet, Hoffman wanted to build a public professional identity that would widen people's economic options [S10]. He founded LinkedIn in late 2002 and it went live in May 2003 [S10]. He later said he gave it only a 20 to 25 percent chance, and that a respected friend warned him a network has no value until it is big [S7]. He went ahead on the bet that early adopters could reach critical mass [S7]. He ran it as CEO for its first four years and stayed on as chairman [S10].
 
-### Join a young payments firm full time (2000)
-After founding SocialNet in 1997, he joined PayPal full time in 2000 as COO, later senior vice president [S3]. He later tied his speed-first view to what he saw at PayPal [S2].
+### Not leading Facebook's first round (2004)
+Hoffman knew Facebook's product before he met Zuckerberg and arranged a first meeting at Peter Thiel's office [S8]. He said the meeting confirmed what he already believed, that Zuckerberg was very smart and learned fast, and he would have invested anyway [S8]. He did not lead the round, because LinkedIn made that a conflict, and Thiel took the lead and the board seat [S8][S10]. Hoffman has called this his most expensive decision, and said integrity was worth the cost [S10].
 
-### Found a professional network and build in network effects (December 2002)
-He co-founded LinkedIn on 10 December 2002 and it launched on 5 May 2003 [S4]. His stated aim, in the NFX interview, was that its long-term value would come from network effects [S1]. It had its first profitable month in 2006 and reached 1 million users in August 2004 [S4].
+### Backing Airbnb against a partner's warning
+After an Airbnb pitch, his Greylock partner David Sze warned that every investor needs a losing deal to learn from, and that this could be it [S9]. Hoffman took Sze seriously but was excited. He read the split in the room as a sign of a contrarian idea with large upside, since the best ideas often look silly at first [S9]. He judged that if Airbnb worked it could change how society runs, so the payoff justified the doubt [S11]. He led its first major round [S3].
 
-### Join a venture firm and back networks (2009)
-He joined Greylock in 2009 [S3]. He arranged the meeting that led to Peter Thiel's first investment in Facebook, was an early Facebook investor, and led Airbnb's Series A [S3].
+### Solving PayPal's banking-licence problem
+PayPal faced pressure to be treated as a bank. Hoffman's route was to ask what regulators needed to see before they would stop seeing it that way [S8]. He engaged them on their protective mission instead of fighting them [S8]. This is a clear case of his outcome, variables, informed people routine [S8].
 
-### Take LinkedIn public, then sell (2011 and 2016)
-LinkedIn went public on 19 May 2011 [S4]. Microsoft agreed to buy it for $26.2 billion in 2016 [S4]. He joined Microsoft's board in 2017 [S3].
+### Choosing not to be a long-term CEO
+Hoffman said he is at ease leading teams of roughly 10 to 100 people and less drawn to running very large organisations [S8]. He ran LinkedIn for four years and then handed the CEO job on [S10]. His advice to founders is to stay while they are useful and passionate, and to bring in a later-stage co-founder who shares the mission [S8]. He pointed to Jeff Weiner at LinkedIn as the model [S8].
 
-### Explain when to blitzscale and when not to (2018 and 2019)
-He wrote Blitzscaling with Chris Yeh in 2018 [S3]. In the interviews he says to blitzscale only when conditions are right, and to design the business model around them from the start [S1][S2]. He admits that fast growth brings rough products and complaints [S2].
-
-### Back AI early (2016 to 2023)
-He was among the first donors to OpenAI in 2016 and helped set up its capped-profit model [S3]. He co-founded Inflection AI with Mustafa Suleyman in 2022 [S3].
+### Approving the sale to Microsoft (2016)
+When Microsoft announced its $26.2 billion deal for LinkedIn in June 2016, Hoffman approved it as the largest shareholder [S10]. He joined Microsoft's board in 2017 [S3].
 
 ## Where he stood
 

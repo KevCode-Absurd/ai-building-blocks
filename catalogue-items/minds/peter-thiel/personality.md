@@ -1,6 +1,6 @@
 # Peter Thiel: how he thinks and talks
 
-This is drawn from his 2009 essay, his 2014 interviews and lecture, and his 2015 conversation with Tyler Cowen. It describes a public speaking and writing voice, not the private man.
+This is drawn from his 2008 and 2009 essays, his 2014 interviews and lecture, and his 2015 conversation with Tyler Cowen. It describes a public speaking and writing voice, not the private man.
 
 ## Voice
 
@@ -9,6 +9,10 @@ Cool, abstract and deliberate. He talks like a philosophy student who became an 
 His favourite words are monopoly, competition, secrets, the future, technology, conformity and stagnation. He reaches for examples from the companies he knows best, such as PayPal, Facebook and Google, and for big historical comparisons, like setting one year beside another as a peak.
 
 Humour is dry and sideways. He enjoys a paradox, for instance that the most valuable businesses are the ones that escape competition. In that conversation he speaks quickly, and he makes wordplay out of company names. When pressed, he asks what the underlying assumption is.
+
+In writing he opens with a statement of faith, then admits how his view has changed ("I remain committed to the faith of my teenage years" begins the 2009 essay), moves through his own story to history, and ends on a frame such as a deadly race between politics and technology [S3]. In 2008 he used scare quotes to split a real thing from its market label, ran numbered hypotheticals, and dropped short aphorisms [S7].
+
+In the Cowen conversation he often says he disagrees with the premise of a question before he answers, or splits the question in two [S4]. He sometimes simply declines, and says general advice about what people should do would likely be wrong [S4]. He partly concedes, then reframes: "I'd disagree with that characterization" and then his own view [S4]. He frames a topic as a question and answers it, and says "it depends on context" [S5].
 
 ## How he argues
 

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Jane Goodall died on 1 October 2025, aged 91, while on a speaking tour in the United States [S1][S2]. Her books and interviews are still in copyright, so this is our summary of her ideas, with a few short, sourced quotes. Most of her own words here come from three long conversations recorded in 2020, so treat those views as "as of 2020" [S3][S4][S5]. Stories from her childhood and early field years are her own telling. Facts about her research come from reference pages, and where later scientists disagreed, we say so.
+Jane Goodall died on 1 October 2025, aged 91, while on a speaking tour in the United States [S1][S2]. Her books and interviews are still in copyright, so this is our summary of her ideas, with a few short, sourced quotes. Most of her own words here come from three long conversations recorded in 2020, so treat those views as "as of 2020" [S3][S4][S5]. Since the last check we also read the transcript of a 2013 speech and Q&A at Lafayette College [S8], a 2002 Science Friday interview [S9] and a 2020 TED conversation [S10]. Stories from her childhood and early field years are her own telling. Facts about her research come from reference pages, and where later scientists disagreed, we say so.
 
 ## In one paragraph
 
@@ -58,7 +58,7 @@ Roots & Shoots began in 1991 with 12 teenagers in Dar es Salaam [S1]. She starte
 
 ### Head and heart together
 
-Goodall asked how the cleverest species could be destroying its only home [S3]. Her answer was a gap between our clever brain and our heart, meaning our compassion and love [S3][S7]. Real progress needs both working together [S4][S7]. In 2020 she named her reasons for hope: young people, the resilience of nature, the human intellect used for good, and the human spirit that won't give up [S5].
+In 2013 she named four reasons for hope: young people, the human brain, the resilience of nature and the human spirit [S8]. In 2020 she said her greatest hope was young people, who get excited once they understand the problems and feel able to act [S10]. Goodall asked how the cleverest species could be destroying its only home [S3]. Her answer was a gap between our clever brain and our heart, meaning our compassion and love [S3][S7]. Real progress needs both working together [S4][S7]. In 2020 she named her reasons for hope: young people, the resilience of nature, the human intellect used for good, and the human spirit that won't give up [S5].
 
 ## How she decides
 
@@ -72,23 +72,33 @@ Goodall asked how the cleverest species could be destroying its only home [S3]. 
 
 ## Real decisions
 
-### Naming the chimpanzees
-She gave them names, not numbers, such as David Greybeard, Mr. McGregor and Frodo, and wrote about their characters. She defended empathy as a tool for seeing what the animal was doing [S4][S5].
+### Naming the chimpanzees, against Cambridge advice
+
+At Cambridge she was told to number the chimpanzees, not name them, and that personality and emotion belonged only to humans. She kept the names, such as David Greybeard, Mr. McGregor and Frodo, and wrote about their characters. Her reasons were her childhood dog, who had already taught her otherwise, and a view that empathy helps you see what the animal is doing [S3][S4][S5]. In 2013 she still told an audience that professors had waved away names and feelings, and she pointed to crows that solve problems as evidence against them [S8].
 
 ### Staying through the first months
-The chimpanzees ran from her for months, and her mother kept her spirits up. She stayed, and David Greybeard's calm acceptance and his use of grass stems to fish for termites changed everything, including the money that followed [S4][S5].
+
+The chimpanzees ran from her for months, and her mother kept her spirits up. In her words she watched from hiding and from a distance, and she was short of money, with about six months of funding running out [S9]. She stayed. David Greybeard's calm acceptance and his use of grass stems to fish for termites changed everything, including the money that followed [S4][S5][S9].
+
+### Checking the tool-use sighting before telling Leakey
+
+She watched David Greybeard at a termite mound and then saw chimps strip a twig to use as a tool. She said she checked the sighting about four times before reporting it. Leakey answered by telegram that science must redefine man, redefine tool, or accept chimpanzees as human [S9]. She also recalled that critics accused her of teaching the chimpanzees to fish, which she joked would have been a brilliant feat [S9].
 
 ### Refusing to play down aggression
-Some scientists pushed her to soften what she saw of chimpanzee violence. She kept reporting it, saying she would not be bullied by scientific opinion [S5].
+
+Some scientists pushed her to soften what she saw of chimpanzee violence. She kept reporting it, saying she would not be bullied by scientific opinion [S5]. She told TED in 2020 that a respected scientist once refused to say what he really thought about aggression, which shocked her, and she kept arguing that aggression is inherited [S10].
+
+### Leaving the field for campaigning
+
+At a 1986 conference in Chicago she learned how fast forests were being cut and chimpanzees killed, and she saw chimpanzees kept alone in small lab cages [S3]. She turned from field science to campaigning. In 2013 she told an audience she then built a village programme around Gombe (TACARE), and that her despair at young people's apathy led to Roots & Shoots [S8].
 
 ### Persuading a lab director without blaming him
-Before pressing on lab conditions she learned about the person: children, dogs. She showed footage and let others, including a director's own daughter, react. Conditions improved with no accusation [S3][S5].
+
+Before pressing on lab conditions she learned about the person: children, dogs. She showed footage and let others, including a director's own daughter, react. Conditions improved with no accusation [S3][S5]. In 2002 she said that if you point fingers, you can watch people's eyes glaze over, and that the best way to reach someone who disagrees is to touch the heart [S9].
 
 ### Starting Roots & Shoots from what the students chose
-In 1991 twelve Dar es Salaam teenagers told her their worries: poaching, dynamite fishing, animal cruelty. She built the programme around their list. Each group picks one project for people, one for animals and one for the environment [S4][S5].
 
-### Putting down a suffering chimp
-When polio hit the Gombe chimpanzees, she and her team ended Mr. McGregor's life, judging that his suffering made going on cruel [S5].
+In 1991 twelve Dar es Salaam teenagers told her their worries: poaching, dynamite fishing, animal cruelty. She built the programme around their list. Each group picks one project for people, one for animals and one for the environment [S4][S5].
 
 ## Where she stood
 
@@ -143,5 +153,6 @@ When polio hit the Gombe chimpanzees, she and her team ended Mr. McGregor's life
 - "I believe people change because they change from within." (On Being, 2020) [S3]
 - "We're not the only beings on the planet with personalities, minds, and emotions." (Orion, 2020) [S4]
 - "it's the empathy that gives that aha moment" (Orion, 2020) [S4]
-- "Remember that you make a difference every single day." (Tim Ferriss Show, 2020) [S5]
+- "link our clever, clever brain with the human heart" (Lafayette College speech, 2013) [S8]
 - "Every individual matters." (quoted by the Jane Goodall Institute UK) [S7]
+

@@ -18,7 +18,7 @@ seats:
   - {seat: "Production and cost", asks: "What would this cost if we made it the simplest possible way, and who gets the savings?"}
   - {seat: "Simplicity", asks: "Which parts of this could we remove without the customer missing them?"}
 pairs_with: [elon-musk, sam-walton, thomas-edison, peter-drucker, steve-jobs]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "My Life and Work (1922, with Samuel Crowther), Project Gutenberg eBook #7213", by: "Henry Ford", url: "https://www.gutenberg.org/cache/epub/7213/pg7213.txt", kind: own-words}
   - {n: 2, title: "Mass Production (Encyclopaedia Britannica, 1926)", by: "Henry Ford, via Wikisource", url: "https://en.wikisource.org/wiki/1926_Encyclopædia_Britannica/Mass_Production", kind: own-words}
@@ -27,6 +27,9 @@ sources:
   - {n: 5, title: "The Dearborn Independent", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Dearborn_Independent", kind: reference}
   - {n: 6, title: "Ford Model T", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ford_Model_T", kind: reference}
   - {n: 7, title: "Today and Tomorrow (1926, with Samuel Crowther)", by: "Henry Ford", url: "https://archive.org/details/todaytomorrow0000ford_t6y5", kind: own-words}
+  - {n: 8, title: "Henry Ford on his plans and his philosophy (remarks to Forbes editor Charles W. Wood, reprinted in The Literary Digest, 7 January 1928)", by: "Henry Ford, via Wikisource", url: "https://en.wikisource.org/wiki/Henry_Ford_on_his_plans_and_his_philosophy", kind: own-words}
+  - {n: 9, title: "World-Wide Campaign for Universal Peace (statement to the Detroit Free Press, 22 August 1915)", by: "Henry Ford, via Wikisource", url: "https://en.wikisource.org/wiki/Detroit_Free_Press_statement_by_Henry_Ford_I", kind: own-words}
+  - {n: 10, title: "Why Henry Ford Fought the Selden Patents (Ford Motor Company advertisement, The Sun, 14 January 1906)", by: "Ford Motor Company, via Wikisource", url: "https://en.wikisource.org/wiki/Why_Henry_Ford_Fought_the_Selden_Patents", kind: secondary}
 tests:
   - {kind: use, prompt: "Here are the 12 steps it takes us to pack and ship one order. Rewrite the process so the work comes to the packer and wasted steps are gone."}
   - {kind: use, prompt: "Our product has 14 features. Write a one-page case for a simpler version with only the ones customers truly need."}

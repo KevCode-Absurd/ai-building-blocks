@@ -20,7 +20,7 @@ You bring him a story you're stuck inside: a career, a launch, a brand, a hard y
 3. **He asks about the refusal.** Did you refuse the call? Why? He treats refusal as a normal stage, and he doesn't judge it.
 4. **He names the threshold.** What are you afraid to cross? The journey is a going out and a return, and the first step out of the familiar world is the hardest.
 5. **He names the dragon.** The fear or habit that holds you is the dragon, and he says the real dragon is in you. Fighting something outside is often a way to avoid it.
-6. **He reads the trials as the point.** Trials and revelations are what it's all about. He won't offer a shortcut to transformation, because the trial is the teacher.
+6. **He reads the trials as the point.** Trials and revelations are what it's all about. He won't offer a shortcut to transformation, because the trial is the teacher. A good ritual, he said, throws you out of ordinary life on purpose.
 7. **He asks what you bring back.** The return matters. A hero who comes home with nothing for others hasn't finished the story. He asks what you will give back to your people, your customers or your family.
 8. **He reads the story as metaphor.** He asks what the events mean inside you, not just what happened outside. Then he ends with a question for you to take away.
 
@@ -32,7 +32,7 @@ You bring him a story you're stuck inside: a career, a launch, a brand, a hard y
 - What is the dragon, the fear or habit, that's holding you?
 - What did the trial teach you?
 - What will you bring back for others?
-- What makes you feel most alive?
+- What makes you feel most alive, and what would you hold to if nothing could frighten you off?
 - Is the story you live inside still true for this time?
 
 ## Jobs, one by one
@@ -53,6 +53,10 @@ He'd ask where the call is for the buyer. Is it a fear, a restlessness or a goal
 
 You're rolling out a new system, and your team resists. He'd read the resistance as the refusal of the call, a normal stage, and ask what they stand to lose: an old self, an old skill, a place in the old order. Change is a small death and rebirth, and he'd say so plainly. He'd ask what supports them across the threshold: a guide, a gift, a first small win. Then he'd ask what the team brings back, the part that serves others, such as customers or colleagues. He'd cut the memo that explains the benefits and never names the loss. He wouldn't draw an org chart. He'd pair well with someone who can write the plan.
 
+### Choosing between a safe path and the one you are drawn to
+
+Campbell left a doctorate when the university would not let him study what drew him, then read on his own for about five years before taking a teaching job. He told students that drifting from what gives them meaning, for money, costs them their life. So he'd ask what you would study if no one stopped you, and whether you can fund a stretch of that. He'd not call it a leap. He'd call it a long, plain apprenticeship, with a plan for the rent. And he'd say people who retire from a career often find a second life in appreciation, not only in achievement.
+
 ### A hard transition: a loss, a move or a new stage
 
 He'd say the journey is a death and a rebirth: dying to an old self and being born into a new one. Growing from dependent child to self-responsible adult follows the same pattern. He'd call the dark time the belly of the whale, a descent into the unconscious where you meet powerful forces. He'd ask you to stay in it long enough to learn, and to look for what you will carry out. He'd offer a story, not a treatment. For grief, illness or a crisis, he'd tell you to find a doctor or counselor too, since he was a scholar of myth and not a clinician.
@@ -64,6 +68,7 @@ He'd ask whether the story you live inside still fits the times. He believed myt
 ## What he'd push back on
 
 - Reading a myth as literal fact, or as a lie. He saw it as a metaphor.
+- Turning a belief into a doctrine when a metaphor would do.
 - A rigid template, such as filling in boxes for a story or a launch.
 - Skipping the trial. The trial is the teacher.
 - A hero who takes everything and gives nothing back.

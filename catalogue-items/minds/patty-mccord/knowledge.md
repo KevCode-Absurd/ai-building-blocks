@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Patty McCord is alive, and views can change. This data set comes from the public parts of two Harvard Business Review articles she wrote in 2014 and 2018, a 2018 interview transcript from Knowledge at Wharton, a 2015 NPR story about her, her own website, Netflix's current culture memo and a reference page. Her book Powerful (2018) is under copyright and we did not read it directly. Treat each view as "as of" the year of its source. Our sources do not confirm her birth year. Nothing here covers her private life or her plans.
+Patty McCord is alive, and views can change. This data set comes from her own words in a long 2015 First Round Review interview [S8], the public parts of two Harvard Business Review articles she wrote in 2014 and 2018 [S2][S3], a 2018 interview transcript from Knowledge at Wharton [S4], a 2018 Chief Executive interview [S9] and a short 2025 interview summary [S10]. It also uses a 2015 NPR story about her, her own website, Netflix's current culture memo and a reference page. The First Round and Chief Executive pieces reached us through page summaries, so exact quotes are few. Her book Powerful (2018) is under copyright and we did not read it directly. Treat each view as "as of" the year of its source. Our sources do not confirm her birth year. Nothing here covers her private life or her plans.
 
 ## In one paragraph
 
@@ -72,27 +72,27 @@ How she applied it: she and Hastings met each new group of about ten employees i
 ## Real decisions
 
 ### Writing the culture down as a living deck
+Instead of copying standard best practice, McCord and Reed Hastings wrote Netflix's norms into a slide deck [S4]. Her stated method was to write down the behaviours and skills the company expects of people, not generic values, because behaviours are what people do [S8][S4]. The deck was editable, so staff could suggest changes, and it was built chapter by chapter over about ten years and used to onboard new hires [S4]. The 127-slide deck was later viewed more than five million times online [S2].
 
-Instead of copying standard best practice, McCord and Reed Hastings wrote Netflix's norms into a slide deck [S4]. It was editable, so staff could suggest changes and the slides were revised [S4]. They built it chapter by chapter over about ten years and used it to onboard new hires, with the two of them meeting each new group of about ten [S4]. The 127-slide deck was later viewed more than five million times online [S2]. Her reason was that written norms make it easy to see what the company actually rewards [S4].
+### Cutting a third of the company in 2001
+After the dot-com bust, Netflix cut about a third of its roughly 120 staff [S8]. She let go of people who were not classically trained engineers and of anyone not focused on DVD-by-mail [S8]. Her stated lesson was to ask each half year what the business will need in six months and what skills that takes, then compare it with the team you have: the gap shows who should go [S8]. She said people in that gap usually feel it first and are often unhappy, so leaders should speak to them straight and not give repeated extra chances [S8].
 
-### Behaviours instead of values
+### Showing the whole company the payroll problem
+When Netflix nearly missed payroll in the early 2000s, she shared the news with everyone [S8]. The company held a weekly metrics meeting in the parking lot, handing out charts on cash, customers and basic finances so people could see payroll against revenue [S8]. Her reason: set clear context and do not micromanage; when something fails, ask first where the context broke down [S8].
 
-She stressed behaviours over values, because values are aspirational and behaviours are what people do [S4]. The first chapter of the deck listed the behaviours the company valued in teammates [S4]. A later chapter on high performance followed a major layoff, when a small, focused team worked well on its own [S4].
-
-### Letting people choose their own vacation
-
-One idea she pioneered was letting workers take whatever vacation time they felt was appropriate [S2]. At first it was seen as a little crazy until other companies adopted it [S2]. It follows from her wider rule to trust people with good judgment and give them context, and to scrub out processes that need permission [S4].
+### No vacation, travel or expense rules
+Netflix had no vacation policy. People chose when to take time and arranged cover with their managers and colleagues [S8][S2]. She said no one abused it, and that anyone who truly wanted months off would probably leave anyway [S8]. Travel had no approved hotels or per diems: staff were trusted to use judgment and to treat company money as their own [S8].
 
 ### Dropping improvement plans and questioning the annual review
+She criticised performance improvement plans when they are HR cover for a firing the manager has already decided on, or when the real issue is skill fit and not performance [S8]. Her alternative was honesty: tell the person what the role will need in six months, explain that the mismatch is about skills and not a flaw, and avoid public shame [S8]. When someone leaves, she favoured a generous package of about 60 to 90 days of pay, a strong reference and sincere thanks, and called it kinder than long deception [S8]. In 2018 she said feedback should be ongoing, as coaches prepare players before each game, and that CEOs should question old habits and stop doing the stupid stuff [S9].
 
-Netflix dropped performance improvement plans and questioned the annual review, and put the focus on clear expectations for the work [S4]. She argues that rules requiring permission contradict a culture of freedom [S4]. For a client whose bonuses paid out to everyone still employed, she suggested testing a year with no bonus, arguing the firm would survive and could fold the bonus into pay [S4].
+### Skipping performance bonuses
+Netflix avoided performance bonuses [S8]. Her reasons: they are hard to plan in a fast-changing startup, hard to run fairly, and risky to promise early [S8]. She held that the job itself is the incentive, since you are either employed or you are not [S8]. Her pay test asked what it would cost to replace the person, whether you would fight to keep them if they quit, and what rivals would pay them [S8]. She also held back titles early, because today's choice for a title may not fit a company several times larger, and Netflix kept every engineer a senior software engineer [S8].
 
 ### Hiring for the problem, not the checklist
-
-She defines the problem first and then hires people who want to solve it [S4]. She says she dislikes the term "A player" and jokes that there is an island with only A players but only some people know where it is [S3]. She argues that talent depends on context and that internal recruiters must be real partners to the business [S3].
+She defines the problem first and then hires people who want to solve it [S4]. She says she dislikes the term "A player" and jokes that there is an island with only A players but only some people know where it is [S3]. She argues that talent depends on context and that internal recruiters must be real partners to the business [S3]. In interviews she asked candidates about the riskiest, scariest things they had done, because people answer more honestly when asked personally [S8].
 
 ### Being honest about what did not work
-
 She says the freedom and responsibility model does not suit everyone [S4]. Early-career staff often needed guardrails, vague boundaries led to costly mistakes, and senior hires from rigid firms were hard to deprogram [S4]. She calls the deck an onboarding tool, not a manifesto, and says some practices scaled and some did not [S4].
 
 ## Where she stood
@@ -140,5 +140,5 @@ She says the freedom and responsibility model does not suit everyone [S4]. Early
 - "Trust people, not policies. Reward candor. And throw away the standard playbook." (HBR, 2014) [S2]
 - "They believe talent is fixed rather than contextual." (HBR, 2018, on most companies) [S3]
 - "Behaviors are what you actually do." (Wharton interview, 2018) [S4]
-- "You don't want an amazing person who's unhappy." (Wharton interview, 2018) [S4]
-- "A team, not a family" (her website) [S6]
+- "You'll see the delta" (First Round Review, 2015) [S8]
+- "companies don't exist to make happy employees" (Chief Executive, 2018) [S9]

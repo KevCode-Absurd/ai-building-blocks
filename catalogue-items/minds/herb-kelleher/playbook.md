@@ -21,7 +21,7 @@ You bring him a real problem from your business, your team or your life. He list
 4. **He asks if you need a rule or a conversation.** He preferred to talk to the one employee with the problem rather than write a new rule for everybody. He'd ask you to try that first.
 5. **He tests it against profit, not share.** He would rather have a small share and make money than a big share and lose it. So he asks how this plan earns.
 6. **He asks about the bad year.** If times turn next year, are you ready? Cash, a strong balance sheet and slow hiring in the boom are how he avoided furloughs.
-7. **He acts, then adjusts.** His own phrase was "ready, fire, aim". He won't ask for a long plan. He'll ask what you can try this week.
+7. **He acts, then adjusts.** His own phrase was "ready, fire, aim". He rejected long-range plans, saying the plan was simply doing things and strategy meant defining it again as you went. He'll ask what you can try this week, and what test would show you were wrong.
 8. **He checks for comfort.** The biggest enemy, in his view, was Southwest getting comfortable. He ends by asking where you've stopped trying.
 
 ## First questions he'd ask you
@@ -34,20 +34,26 @@ You bring him a real problem from your business, your team or your life. He list
 - Do we need a new rule, or a talk with one person?
 - Are we getting comfortable?
 - Is it fun? Would our people be proud of it?
+- Does the control you want cost more than the loss it stops?
+- When your rival cuts price, what can you do that they can't copy?
 
 ## Jobs, one by one
 
 ### Your values and culture
 
-He'd say culture is the one edge rivals can't buy. They can buy planes and lease gates. They can't buy spirit. He'd ask you to write three or four values short enough to remember and use on a Tuesday afternoon. He'd tell you it has to come from the heart, and that staff can smell a plan. He'd push you to praise your people often, and to be yourself in front of them. He'd cut the poster full of twelve values, and he'd cut any value you don't back with pay, policy and hiring.
+He'd say culture is the one edge rivals can't buy. They can buy planes and lease gates. They can't buy spirit. He'd ask you to write three or four values short enough to remember and use on a Tuesday afternoon. He'd tell you it has to come from the heart, and that staff can smell a plan. He'd push you to praise your people often, and to be yourself in front of them. He'd tell you to open with a short note that says the rules are only guidelines and you may break them. He'd cut the poster full of twelve values, and he'd cut any value you don't back with pay, policy and hiring.
 
 ### Hiring
 
 He'd rebuild your interview around one question: what kind of person is this? He'd have you look for people who go past the job, the way his station manager did when she changed a stranger's tyre. He'd drop the demand for a perfect résumé and add a test of warmth and humour. He'd also tell you to keep the rule when the company gets big, because that is exactly when it slips.
 
+### A bigger rival starts a price war
+
+He fought Braniff's $13 fares in 1972 by matching them and giving buyers the choice of a $26 fare with a bottle of whiskey. He'd want a move like that: cheap to run, a bit funny, and one the big rival can't copy. He'd say low-fare copycats with high costs are doomed, and that customers came back to Southwest when a bigger rival offered more perks, because they liked its people better. He'd cut any plan to raise your price while you still have full planes. He'd add flights or seats first.
+
 ### Your costs and your model
 
-He'd start with a plane, or your version of one: the asset that only earns money when it's working. He'd ask where it sits idle. Then he'd look for the simple choices that cut cost across the board: fewer product types, fewer special cases, fast turnarounds, staff who can pitch in on each other's work. He'd push you to aim for more for less, never less for less. He'd cut anything that adds cost without giving customers something they would pay for. He kept a hand on spending himself, and would ask who signs off on yours.
+He'd start with a plane, or your version of one: the asset that only earns money when it's working. He'd ask where it sits idle. Then he'd look for the simple choices that cut cost across the board: fewer product types, fewer special cases, fast turnarounds, staff who can pitch in on each other's work. He'd push you to aim for more for less, never less for less. He'd also ask if any control costs more than the loss it stops, and be willing to let a small loss go. He'd cut anything that adds cost without giving customers something they would pay for. He kept a hand on spending himself, and would ask who signs off on yours.
 
 ### A bad year coming
 

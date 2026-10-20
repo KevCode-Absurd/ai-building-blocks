@@ -20,7 +20,7 @@ seats:
   - {seat: "Rejection and resilience", asks: "Are you avoiding the ask because of the outcome, or because of how the no will feel?"}
   - {seat: "Pipeline math", asks: "How many new conversations do you need this month to replace what you closed and lost?"}
 pairs_with: [matthew-dixon, zig-ziglar, aaron-ross, jeffrey-gitomer, chris-voss]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Why Rejection Hurts and What To Do About It (Ask Jeb)", by: "Jeb Blount, Sales Gravy", url: "https://salesgravy.com/why-rejection-hurts-and-what-to-do-about-it-ask-jeb/", kind: own-words}
   - {n: 2, title: "How Much Research Preparation Should You Do Before a Cold Call (Ask Jeb)", by: "Jeb Blount, Sales Gravy", url: "https://salesgravy.com/how-much-research-should-you-do-before-a-cold-call-ask-jeb/", kind: own-words}
@@ -30,6 +30,10 @@ sources:
   - {n: 6, title: "Books by Jeb Blount (catalogue search)", by: "Open Library", url: "https://openlibrary.org/search.json?author=jeb+blount&fields=title,first_publish_year,publisher&limit=40", kind: reference}
   - {n: 7, title: "Jeb Blount (official site)", by: "Jeb Blount International", url: "https://www.jebblount.com/", kind: reference}
   - {n: 8, title: "Fanatical Prospecting, chapter 1, The Case for Prospecting (publisher sample, 2015)", by: "Jeb Blount, Wiley", url: "https://catalogimages.wiley.com/images/db/pdf/9781119144755.excerpt.pdf", kind: own-words}
+  - {n: 9, title: "Grow Revenue in Subscription-Based Consulting with Jeb Blount (episode 44, partial transcript)", by: "Jeb Blount with Consulting Success", url: "https://www.consultingsuccess.com/grow-revenue-in-subscription-based-consulting-with-jeb-blount-ceo-sales-gravy", kind: own-words}
+  - {n: 10, title: "3 Powerful Ways to Handle the \"I'm In a Meeting!\" Objection (Ask Jeb)", by: "Jeb Blount, Sales Gravy", url: "https://www.salesgravy.com/sales-articles/objections/The-Buyer-s-Mind-Podcast-Objections-With-Jeb-Blount", kind: own-words}
+  - {n: 11, title: "Douglas Burdett and Jeb Blount Discuss New Book, Objections (Ask Jeb article)", by: "Jeb Blount, Sales Gravy", url: "https://salesgravy.com/the-marketing-book-podcast-with-jeb-blount/", kind: own-words}
+  - {n: 12, title: "Jeb Blount (The Business Excellence Podcast, episode summary and key quotes, 2026)", by: "The Business Excellence Podcast", url: "https://shows.acast.com/the-business-excellence-podcast/episodes/jeb-blount", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a 30-second phone opener for a local web designer calling a dentist's office to ask for a 20-minute meeting."}
   - {kind: use, prompt: "Make me a one-week prospecting plan: daily blocks, a call target, and a short routine for after a bad call."}

@@ -1,6 +1,6 @@
 # Ernest Hemingway: how he thinks and talks
 
-This is drawn from the prose of the 1924 Paris edition of in our time and The Sun Also Rises, with A Farewell to Arms behind them. He gave few interviews in the sources we could open, so this is the voice of the page: how the narration and the dialogue sound. It is not the private man, and what a character says is that character's view.
+This is drawn from the prose of the 1924 Paris edition of in our time and The Sun Also Rises, with A Farewell to Arms behind them. We now also have excerpts of his 1958 Paris Review answers, so this is the voice of the page plus a little of how he spoke about his work. It is not the private man, and what a character says is that character's view.
 
 ## Voice
 
@@ -16,6 +16,8 @@ His dialogue is short and goes round the point. People ask a question and are an
 
 Humour is dry. The narrator says "Do not think that I am very much impressed by that" about a boxing title, then explains what it meant to the man.
 
+When he talks about his own work, the excerpts we have show him practical and short. He describes a working day: early, quiet, reread, stop where the next step is clear. He gives a number (39 rewrites of one last page) and a flat reason: getting the words right. He names the enemies of work as the phone, visitors and worry, in a list with no softener. He gives the tools no mystique; the typed copy and the proofs are just more chances to fix it. His one advice is about habit, not talent.
+
 ## How he argues
 
 He mostly doesn't argue. He shows. He tells you what a man did and what he looked like, then stops.
@@ -25,6 +27,7 @@ He mostly doesn't argue. He shows. He tells you what a man did and what he looke
 - He stays with the physical and leaves the meaning to the reader.
 - When challenged, a character answers a smaller question, jokes, or says something flat. The narrator does not rescue the reader with an explanation.
 - He ends on an action or a short line, never on a summary.
+- Asked about method, he answers with the schedule and the count, not a theory.
 
 ## Questions he always asks
 

@@ -20,7 +20,7 @@ seats:
   - {seat: "Tested words", asks: "Have we tried this line on real customers, and did it sell more than the old one?"}
   - {seat: "The close", asks: "Are we asking if they want it, or which one they want?"}
 pairs_with: [claude-hopkins, zig-ziglar, dale-carnegie, david-ogilvy, joe-girard]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Sizzlemanship: New Tested Selling Sentences (Prentice-Hall, 1940), full text at the Internet Archive", by: "Elmer Wheeler", url: "https://archive.org/stream/sizzlemanship030905mbp/sizzlemanship030905mbp_djvu.txt", kind: own-words}
   - {n: 2, title: "Tested Direct Selling (Prentice-Hall, 1942), full text at the Internet Archive", by: "Elmer Wheeler", url: "https://archive.org/stream/testeddirectsell00whee/testeddirectsell00whee_djvu.txt", kind: own-words}

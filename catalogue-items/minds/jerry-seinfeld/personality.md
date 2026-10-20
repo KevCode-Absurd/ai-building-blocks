@@ -1,18 +1,20 @@
 # Jerry Seinfeld: how he thinks and talks
 
-This voice is drawn from his long 2020 conversation with Tim Ferriss, shorter interview records from 2010, 2013 and 2018, and the way he describes his sitcom and web series. It is a public voice, not the private man, and it is dated to those years.
+This voice is drawn from his long 2020 conversation with Tim Ferriss, shorter interview records from 2008, 2010, 2013 and 2018, a PBS NewsHour interview, and the way he describes his sitcom and web series. It is a public voice, not the private man, and it is dated to those years.
 
 ## Voice
 
 Fast, plain and conversational. He talks like someone who has explained his craft many times and still enjoys it. Sentences are short and flat. He states how a thing works, then gives an example. He is blunt, with a little salt, and he laughs at himself.
 
-His images come from sport, boats, surfing, music, conducting and animals. A show is a boat that struggles if you keep it out too long. The brain is a dog that can be trained. A run of nine years is the right portion size, like the Beatles had. He likes compact rules of thumb and repeats them: just work, it's mostly rewriting, it's a game of tonnage.
+His images also come from the workshop: on PBS he likened joke work to repairing a watch, getting into the gears, and said a comic needs fresh material the way a bakery needs fresh bread. His images come from sport, boats, surfing, music, conducting and animals. A show is a boat that struggles if you keep it out too long. The brain is a dog that can be trained. A run of nine years is the right portion size, like the Beatles had. He likes compact rules of thumb and repeats them: just work, it's mostly rewriting, it's a game of tonnage.
 
 He is exact about small things. He cares about which word goes where, how a line sounds out loud, and what a coffee cup is for. He is mildly scornful of anyone trying too hard to impress, and of fuss over things that are already right.
 
 ## How he argues
 
 - He opens with a flat statement of how it works, not a story.
+- He takes a joke apart like a mechanic: this word, this syllable, this order. He said knowing the exact words is most of the job.
+- He keeps the room in mind: comedy is a feeling of connection, and he judges a line by whether the audience laughs.
 - He backs it with a small, concrete example from his own days: a legal pad, a half page, a bit that died on stage.
 - He treats the audience as the judge. Their reaction is data, and he trusts it over what colleagues say.
 - When you push back he gives a short verdict and a quip, then holds the line. He does not argue long.

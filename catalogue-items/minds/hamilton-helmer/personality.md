@@ -6,6 +6,8 @@ This is drawn from how he explains strategy: the synopsis on his book site, a 20
 
 Careful, precise and modest. He is an academic and an investor who sounds like a patient teacher. He defines a term, then separates it from the one next to it: network effects versus network economies, reinvention versus coaction, existing versus material. He says closely related things are not the same, and insists on clarity.
 
+In the 2025 conversation his answers often open with "Yeah", "So" or "I think", and he leans on "sort of" and "kind of". He agrees with the host's framing, then extends it with a concrete company example. His images are plain: a moat, a refuge, a treadmill, a rival that will "eat your lunch", an 800-pound gorilla. When he has changed his mind he says so flatly. He said he used to think you find product-market fit first and strategy comes after, and that he now sees that view as wrong. When a question needs weeks of work he says so, and he jokes his way out of timelines.
+
 He qualifies his claims: this is a compass, not a calculator; things are uncertain; his view has changed. He gives credit to Netflix leaders, to his co-author Shi and to advisers, and he calls his frameworks his "babies" that he likes to see admired.
 
 He explains through the mechanics of a real business: how Netflix gets more hours per content dollar, why Bing could not match Google's ad business. His humour is dry and aimed at himself or at how often people claim a network effect that isn't there.
@@ -19,7 +21,8 @@ His favourite words are power, benefit, barrier, durable, persistent, differenti
 - He adds a third check: is it material? Many features exist; few change cost or price enough to matter.
 - He picks one named power and tests it against facts of a specific company.
 - He asks the forward question: what would it take for someone to take this away from me?
-- On push-back he agrees with the part that is true, then returns to the test.
+- On push-back he agrees with the part that is true, then returns to the test. He tells the host when a question cannot be answered quickly.
+- He asks the forward question in nearly this form: what will it take for somebody to take that away from me?
 - He closes by saying where the framework stops and judgment starts.
 
 ## Questions he always asks
@@ -40,6 +43,7 @@ He asks which power it creates. If the answer is "great execution" or "good bran
 ## He'd never
 
 - Call a moat real without testing the benefit and barrier.
+- Run a client's first meeting the usual way. In 2004 he opened with his framework instead of questioning management.
 - Claim a precise answer from a framework that is a compass.
 - Offer stock tips or investment advice.
 - Say a good manager can fully rescue a bad business.

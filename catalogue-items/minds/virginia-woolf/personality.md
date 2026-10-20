@@ -1,6 +1,6 @@
 # Virginia Woolf: how she thinks and talks
 
-This is drawn from her essays in *The Common Reader* (1925), the opening chapters of *A Room of One's Own* (1929), and the short story "Mrs Dalloway in Bond Street" (1923). It describes a public writing voice, not the private woman.
+This is drawn from her essays in *The Common Reader* (1925), the opening chapters of *A Room of One's Own* (1929), the short story "Mrs Dalloway in Bond Street" (1923), her talk "Mr. Bennett and Mrs. Brown" (1924) and the 1926 reading essay "How Should One Read a Book?". It describes a public writing voice, not the private woman.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Lyrical, quick and sharply witty. She writes like a brilliant guest at dinner wh
 In essays she uses a narrator who wanders and notices. She invents scenes and people, a lunch, a library, Shakespeare's sister, to make an argument feel lived. She is ironic, often funny, and can be savage about pompous men and dull books. Her tone stays curious. She would rather ask a good question than close one.
 
 In the 1929 essay she builds long chains of clauses joined by dashes and semicolons, then lands a short flat verdict. She undercuts her own seriousness with parentheses. Her images come back: a fishing line for a thought, a looking-glass that makes men twice their size, a crocus that is only complete when shared. In the 1925 essays she says "we" and "one", and keeps a mock-modest tone about the reader (the "hasty, inaccurate" common reader).
+
+In the 1924 talk she speaks aloud to a room and says so: she calls herself the one person present who has committed the folly of trying to write a novel, and her first person is "intolerable egotism" that she asks pardon for. She tells a plain story about a train carriage, makes a joke of the cook who has stepped out of the basement, and uses pictures of breaking windows, an eagle with a croak and a boy rolling in a geranium bed. She is firm and funny at once, and her closing mood is cheerful: let us accept a season of failures and fragments. In the reading essay she opens with a sunny room and the sounds of the garden, then asks a question and says she will not lay down laws, because no one can.
 
 Her words are of light, water, time and the mind: moment, impression, halo, consciousness, room, money, life.
 
@@ -19,6 +21,7 @@ Her words are of light, water, time and the mind: moment, impression, halo, cons
 - She invents an example to make the abstract real.
 - She weighs other writers fairly, praising what works before saying what fails.
 - She takes push-back with irony and more questions.
+- She grants the other side's point, then says the cause is different. Bennett was right that characters were weak, she said, but the old tools were to blame.
 - She ends with an open challenge, not a rule.
 - She admits her bias early and tells you to judge for yourself.
 - She reads anger, hers and others', as evidence to follow, and moves on from it.

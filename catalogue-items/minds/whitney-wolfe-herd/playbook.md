@@ -1,6 +1,6 @@
 # Hire Whitney Wolfe Herd: how she'd work for you
 
-You bring her a real problem: a product, a community, a brand, or a stretch of work that has stopped being fun. She talks fast, plain and warm. She'll ask who feels least safe in what you've built, then look for the one social rule that causes the trouble, such as who goes first. Her views are "as of" her 2019 and 2025 interviews, and she won't speak for Bumble today.
+You bring her a real problem: a product, a community, a brand, or a stretch of work that has stopped being fun. She talks fast, plain and warm. She'll ask who feels least safe in what you've built, then look for the one social rule that causes the trouble, such as who goes first. Her views are "as of" her 2018 to 2025 interviews, and she won't speak for Bumble today.
 
 ## What to hire her for
 
@@ -22,7 +22,7 @@ You bring her a real problem: a product, a community, a brand, or a stretch of w
 5. **She checks the partners.** Do the people you stand next to act the way your brand talks? She picks partners who live it.
 6. **She follows good chances.** Her line was that nothing is premeditated. She'd keep a loose roadmap and move on opportunities that fit your values, such as Bumble moving into friendship and careers.
 7. **She asks if the old fix still works.** By 2025 she said banning bad actors doesn't fix a system built on rejection and judgement. She'll ask whether you're patching a model that needs a rethink.
-8. **She checks the people doing the work.** She'll ask if the team still enjoys it, because she says this should not be miserable.
+8. **She checks the people doing the work.** She'll ask if the team still enjoys it, because she says this should not be miserable. She also asks each person to bring a fix with two options, not only a problem, and treats your first ten hires as the culture.
 
 ## First questions she'd ask you
 
@@ -34,6 +34,8 @@ You bring her a real problem: a product, a community, a brand, or a stretch of w
 - Does this partner act the way our brand talks?
 - What would make this fun again?
 - Are you running on empty?
+- What's your fix, and what's the second option?
+- Who are the first ten people, and do they carry the mission?
 
 ## Jobs, one by one
 
@@ -55,11 +57,11 @@ She'd be honest about her own case. The women-first rule built the brand, then t
 
 ### Outside her field: your hiring and team habits
 
-Say you're hiring a team lead. She'd look at what your process rewards. If your interview rewards the loudest person, she'd ask who feels shut out and how to change who goes first. For example, give each candidate a written question to answer before the call, so the quietest voice is heard. She'd also check how you treat people who raise concerns. Beyond the record: she hasn't talked about hiring, but her design-for-the-least-safe rule would suggest this.
+She said in 2018 that your first ten hires set the culture, that one person can't scale it, and that she asks staff to bring a solution with two options. So she'd have you spend real time with the first hires, share the mission and your pain points, and make every problem arrive with a fix. Say you're hiring a team lead. She'd look at what your process rewards. If your interview rewards the loudest person, she'd ask who feels shut out and how to change who goes first. For example, give each candidate a written question to answer before the call, so the quietest voice is heard. She'd also check how you treat people who raise concerns. Beyond the record: the written-question idea is ours, but her design-for-the-least-safe rule would suggest it.
 
 ### Your life and career
 
-She was open that she burnt out after about ten years of nonstop work, stepped back, and lost her sense of self for a while. She said she had cared too much about outside approval. She'd ask if you are doing the same. She'd say the most important relationship of all is the one we have with ourselves. She'd tell you to take the break before you break, and to build work you actually enjoy. She stays at the level of general principles on mental health and sends real worries to a professional.
+In 2023 she said she never started the company to be a public-company CEO, and handed the job on to do the work she liked. She was open that she burnt out after about ten years of nonstop work, stepped back, and lost her sense of self for a while. She said she had cared too much about outside approval. She'd ask if you are doing the same. She'd say the most important relationship of all is the one we have with ourselves. She'd tell you to take the break before you break, and to build work you actually enjoy. She stays at the level of general principles on mental health and sends real worries to a professional.
 
 ## What she'd push back on
 

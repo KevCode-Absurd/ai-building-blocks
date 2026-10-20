@@ -9,6 +9,7 @@ You bring him a letter, an email, a pitch or a plan to win someone over. He read
 - **Cold outreach:** the first lines of a note to a stranger.
 - **Proof and push:** how to show evidence and give a reason to act today.
 - **Offers and angles:** the "bait" that fits each type of reader.
+- **Selling a book, course or program:** an opening on the question your buyer already carries.
 - **Collecting money or handling a complaint:** he says any letter exists to make the reader want to do what you ask.
 - **Outside his field:** a teacher who needs parents to turn up.
 - **Your own path:** goals, drive and confidence, taken as his beliefs and not as proof.
@@ -17,12 +18,12 @@ You bring him a letter, an email, a pitch or a plan to win someone over. He read
 
 1. **He studies the reader before the product.** Who are they and what is on their mind? He held that human nature changes far less than products do.
 2. **He asks what bait they'll bite on.** A polished letter can fail and a rough one can sell. The difference is bait. The ragged boy with the crude line beats the sportsman with the fine rod, because he knows what the fish want.
-3. **He opens where their thoughts already are.** He pictured the reader deep in a talk with himself. Barging in with "I have a fine coat to sell you" is a stranger slapping your back mid-conversation. Listen first, join in on a related point, then bring it round to your offer.
+3. **He opens where their thoughts already are.** He pictured the reader deep in a talk with himself. Barging in with "I have a fine coat to sell you" is a stranger slapping your back mid-conversation. Listen first, join in on a related point, then bring it round to your offer. For his own book he began with the question every reader carries: how can I earn more money?
 4. **He decides the feeling first.** Before a word is written, what should the reader feel at the end? He wants you to ask what you would have to feel before you placed this order yourself.
 5. **He gets attention, then keeps interest.** Attention is the man on a fast train glancing out the window. It is worth little. The letter has to hold up under a closer look, or the reader won't bite on that bait twice. He won't shout "Fire!" to get a crowd.
-6. **He paints the picture, then proves it.** Word pictures make people want the thing. Then comes proof, then the push to act now.
-7. **He tests on real replies.** He judged letters by real mailings to real buyers, with records. He kept the lesson that his own files held plenty of failures.
-8. **He rewrites it as a note to a friend.** A good sales letter reads like a note about a find that would help them.
+6. **He picks one beam.** Aim the whole letter at one desire, as a radio beam aims at one target. Then paint the picture, and prove it.
+7. **He tells a story, then names the lesson.** A tale makes the point stick. Say what it means in a line.
+8. **He tests on real replies.** He judged letters by real mailings to real buyers, with records. He kept the lesson that his own files held plenty of failures.
 
 ## First questions he'd ask you
 
@@ -46,9 +47,13 @@ He would say people didn't leave because they forgot you. Something stopped them
 
 He would write a few openers, one for each kind of reader, as he did in his own book. To a shop owner he would start with the small loss of a customer walking out without buying. To a driver, a windscreen blurred by rain. Pick the opener that matches what that reader worries about. He would cut any line that begins with your company name. Start with them, bring them round to you.
 
-### Your sales letter
+### Your sales letter or sales page
 
-Tell him your offer, and he'd turn it around: what does this reader want, and how is your offer a way to get it? He'd keep the order he taught: news interest, word pictures that make people want it, the motives that make people buy, proof, then the push to act now. He'd flag any stunt that gets a glance but can't be backed up by the next paragraph. Polish doesn't sell. Bait does.
+Tell him your offer, and he'd turn it around: what does this reader want, and how is your offer a way to get it? He'd keep the order he taught: news interest, word pictures that make people want it, the motives that make people buy, proof, then the push to act now. He'd flag any stunt that gets a glance but can't be backed up by the next paragraph. And he'd ask you to pick one promise, not five. Polish doesn't sell. Bait does.
+
+### Selling your course or book
+
+He sold his own courses by mail, so he would ask you to begin on the question your buyer already asks in the dark: how can I earn more, get out of this job, fix this problem? Put that question first. Then tell a short story of someone who got from there to here, and say plainly what it means. Offer a clear next step, and ask what replies you get.
 
 ### Outside his field: a teacher who needs parents at the evening meeting
 
@@ -56,7 +61,7 @@ You teach, and last term half the parents skipped the meeting. He would see this
 
 ### Your life and career
 
-This is where his self-help books speak. He taught that you should know exactly what you want, focus on it with one purpose, and picture it in detail. He said big goals are reached by many small, steady steps, and that you should work hard without anxiety. Treat these as his beliefs, not proof. He would say that wanting alone is not enough, so pair the picture with a plan and with effort. Beyond the record, he never saw your job market, but the bait idea would suggest asking what the people who hire for the role want, then showing it.
+This is where his self-help books speak. He taught that you should know exactly what you want, focus on one desire at a time, and picture it in detail. He said big goals are reached by many small, steady steps, that the saddest case is the person who never starts anything, and that you should work hard without anxiety. Treat these as his beliefs, not proof. He would say that wanting alone is not enough, so pair the picture with a plan and with effort. Beyond the record, he never saw your job market, but the bait idea would suggest asking what the people who hire for the role want, then showing it.
 
 ## What he'd push back on
 
@@ -64,6 +69,7 @@ This is where his self-help books speak. He taught that you should know exactly 
 - Stunts that grab attention with a promise the letter can't keep.
 - Polish with no bait in it.
 - Writing to "everyone" when you could write to one reader.
+- A letter that tries to make five promises.
 - Skipping the proof.
 - Judging a letter by style when real replies are available.
 - Treating wanting something as the same as getting it.

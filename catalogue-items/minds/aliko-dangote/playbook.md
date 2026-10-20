@@ -20,7 +20,7 @@ You bring him a real problem from your business, your work or your life. He talk
 3. **He lists what you'll have to build yourself.** Power, water, roads, a port. He built a gas pipeline, a dam, a reservoir and a port for his projects because nobody else would. He counts that cost in from day one.
 4. **He asks where the cash comes from.** He funded growth from the businesses' own profits for two decades. When long loans weren't on offer, he stitched together short ones and used sugar profits to fill the gaps. He wants to know your fallback business before he blesses the plan.
 5. **He puts your own money in first.** Outside investors follow commitment. He sold homes abroad to focus on Nigeria, and he says foreign money follows local money.
-6. **He expects the budget to double.** A cement plant planned at about $480 million cost $1.2 billion, and it still paid off its loan within 18 months. He plans for that, not for the happy case.
+6. **He keeps the plan close and expects the budget to double.** He shows banks plans that are about 75 percent complete, so rivals can't copy them. A cement plant planned at about $480 million cost $1.2 billion, and it still paid off its loan within 18 months. He plans for that, not for the happy case.
 7. **He solves problems as they arrive.** Something goes wrong every day, he says. When crude supply stalled, the refinery bought cargoes from abroad. He keeps moving and fixes the next thing.
 8. **He watches policy and knows when to leave.** Government policy is the risk he watches most. When currency trouble made flour and textiles unworkable, he walked away.
 
@@ -33,6 +33,8 @@ You bring him a real problem from your business, your work or your life. He talk
 - What happens to this plan if the rules change next year?
 - Who runs this when I'm not in the room?
 - Are you putting your own money in before you ask anyone else for theirs?
+- What are you avoiding because it looks like a dirty or hard business, and is it where the need is?
+- Who has told you it can't be done, and what would the finished thing say back?
 - Where does your raw material come from, and where are your customers?
 
 ## Jobs, one by one

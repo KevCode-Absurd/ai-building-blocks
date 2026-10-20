@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Fei-Fei Li is alive, and her views can change. Everything below comes from her 2018 testimony to the US Congress, a 2024 opinion piece, a 2025 essay, and public reference pages. Treat each view as "as of" the source it comes from. Nothing here tells you what she thinks about events after late 2025.
+Fei-Fei Li is alive, and her views can change. Everything below comes from her 2018 testimony to the US Congress, a 2024 opinion piece, a 2025 essay, two 2026 posts on her newsletter (June and September) [S9][S10], and public reference pages. Treat each view as "as of" the source it comes from. Nothing here tells you what she thinks about events after September 2026.
 
 A note on method: Li's best-known writing includes a 2023 memoir, *The Worlds I See*, a 2018 New York Times opinion piece, and TED talks. We could not open those texts, so we don't summarise them. We use her testimony, her 2024 Fortune piece and her 2025 essay instead, plus reference pages for facts. Her memoir covers her family life; we leave that out. Her words are in copyright, so this is our summary, with a few short quotes.
 
@@ -83,6 +83,30 @@ In 2025 she described Marble, her company's first product, as a way for creators
 ### Name three open problems for world models
 In 2025 she said a world model must be generative (consistent worlds), multimodal (images, video, text, actions in) and interactive (predict the next state given an action). Her research priorities were a universal training goal grounded in geometry and physics, large-scale data that mixes video with synthetic and depth data, and new architectures with 3D-aware memory. [S7]
 
+### Join a chip company to scale the research (September 2026)
+On 28 September 2026 she announced that World Labs, the spatial intelligence company she co-founded in early 2024, was joining AMD, with her becoming AMD's executive vice president and chief scientist [S10]. Her reasons: efficient AI at large scale needs a serious hardware effort, without which AI stays limited to the digital world; AMD's leaders had backed the company from early on; and the teams had already worked together on training and running models on AMD chips [S10]. She said the plan was to build a lasting frontier research group and to offer open models and platforms across hardware, software, models and data [S10].
+
+### Define world models by their output (June 2026)
+Rather than add another claim to a crowded field, she wrote an essay that sorted existing systems into renderers, simulators and planners, defined state and observation precisely, and said which part (simulation) mattered most [S9]. She was open that robotics demos were narrow and named data scarcity and the sim-to-real gap as open problems [S9].
+
+## Her own terms and methods (2026)
+
+### Define the term before you argue about it
+
+In June 2026 she wrote that "world model" had become an overloaded phrase. Her fix was to go back to a classic frame, an agent that acts, a world that changes, and the agent seeing only part of the hidden state, and to separate state from observation. Everything now called a world model, she said, is a different output of that loop [S9].
+
+### Sort by what it outputs
+
+She proposed three types, named by their output. Renderers produce what a person sees and are commercially mature, but can look right without capturing real 3D structure. Simulators produce state, with geometry and physics people and programs can inspect. Planners produce actions, and are promising but early [S9]. Her main claim was that simulation is the linchpin, because a model that understands the world's structure can support both rendering and planning, so she expected the three to merge [S9].
+
+### Say what is hype and what is open
+
+She noted that robotics demos are narrow and named open problems, such as scarce data and the gap between simulation and the real world [S9].
+
+### Language alone is not enough
+
+In her 2026 post on joining AMD she repeated that the universe isn't made of words, and that AI must understand the physical world for the spatial intelligence she works on [S10]. She also listed her aims: AI for real problems and human benefit, such as drug discovery, creativity, learning and robotics, and open sharing of work with the wider community [S10].
+
 ## How she decides
 
 - Ask who the work affects before asking what model to use [S5].
@@ -126,7 +150,7 @@ In 2025 she said a world model must be generative (consistent worlds), multimoda
 - Published the memoir *The Worlds I See*, 2023 [S1].
 - Co-founded World Labs, 2024 [S1].
 - Shared the Queen Elizabeth Prize for Engineering, 2025 [S1].
-- Wikipedia reports that in September 2026 AMD announced a deal to buy World Labs [S1]. Our other sources predate this.
+- Wikipedia reports that in September 2026 AMD announced a deal to buy World Labs [S1]. Her own post of 28 September 2026 says World Labs is joining AMD and that she becomes its chief scientist [S10]. Our earlier sources predate this, so check how it changes her view on open work and independence.
 
 ## Where she was wrong or criticised
 

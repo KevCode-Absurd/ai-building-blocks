@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-Mark Roberge is alive, and views can change. Everything below comes from his own first chapter, two transcripts of him talking (a 2020 Intercom interview and a SaaStr question-and-answer session), his HubSpot and Stage 2 Capital bios, and three write-ups of his book and talks by others. We could not find his birth year in our sources. The first chapter of *The Sales Acceleration Formula* (2015) is available as a publisher excerpt, and we read it in full [S8]. The rest of that book and *The Science of Scaling* are not online, so we know them only through summaries. Treat each view as "as of" about 2019 to 2022. Nothing here tells you what he thinks about events after that. He now invests in startups, and here he explains frameworks only, never which companies to back.
+Mark Roberge is alive, and views can change. His own words here come from the first chapter of *The Sales Acceleration Formula* (2015, publisher excerpt) [S8], a 2020 Intercom interview [S1], a SaaStr question-and-answer session [S2], a full SaaStr Annual 2019 talk transcript [S9] and a Gainsight podcast transcript [S10]. Two write-ups by others [S11][S12] add detail on his HubSpot decisions and the Stage 2 Capital fund. They lean on his book, so they carry less weight. We could not find his birth year. The rest of that book and *The Science of Scaling* are not online, so we know them only through these talks and summaries. Treat each view as "as of" about 2019 to 2024. He now invests in startups, and here he explains frameworks only, never which companies to back.
 
 ## In one paragraph
 
@@ -56,11 +56,23 @@ Roberge calls the retention and unit-economics signs a speedometer for how fast 
 
 How he applied it: he said a healthy rate of rep turnover is 10 to 20%, that under 10% may mean you are too soft on hiring, and that above 25% hurts both the culture and the numbers [S2].
 
-### Build around the buyer
+**Build around the buyer**
 
 His book describes a sales process built around the buyer's journey, not the seller's steps [S7]. Teams map buyer types and the content each one reads, and contact a complex buyer earlier and a simple buyer later [S7]. Marketing and sales agree a service-level deal: marketing commits to a number of leads by type and takes a revenue target, and sales commits to how it follows up [S7]. He favoured inbound selling, with salespeople building trust through useful content [S7].
 
 How he applied it: at HubSpot he taught the Inbound Sales Certification for HubSpot Academy [S3].
+
+### The "aha moment" as the first number
+
+For product-market fit he asks for one early customer action that predicts who stays: his examples are a team sending 2,000 messages (Slack), a file added to a folder (Dropbox) and a customer using five of 25 features (HubSpot) [S9]. Track the share of each monthly sign-up group that reaches it within 30 to 60 days, and make it the first slide in a board deck [S9]. In later talks he calls this a leading indicator of retention and says it matures from setup, to engagement, to measurable outcomes [S10]. Churn is a silent killer and too slow to learn from [S9].
+
+**Slow down to speed up**
+
+His scaling rule: add reps one at a time, such as one every other month, check the numbers, speed up if they hold and slow down when they break [S9]. Before scaling, check that fit holds across segments. In his example, a company with fit in one narrow slice raised $30 million, went from 10 to 15 reps, expanded into enterprise early and saw churn rise [S9]. For untested segments he suggests a small cross-functional experiment team, not a large new sales team [S9]. He cites Microsoft's 5-50-500 idea of adding reps in stages as milestones are met [S10].
+
+**Price high, skip the free trial, review calls together**
+
+In the first stage he judges customer success on setup and adoption, splits sales pay between revenue and setup, and recommends pricing high enough to signal commitment instead of a free trial [S9]. He suggests a nightly "film review" where sales, product, marketing and customer success go over recorded discovery calls [S9]. He also asks marketing and sales to share a pipeline goal and a daily "heartbeat" dashboard so problems show up early [S9].
 
 ### Specialise roles, then organise around customers
 
@@ -99,6 +111,15 @@ When a client blamed marketing for falling sales, he looked at a long-tenured re
 ### Promoting 19 reps to manager
 
 He promoted 19 reps and watched each start out coaching with too many critiques at once. He then had managers review their coaching choices with a director, and concluded the best sellers do not always make the best managers [S2].
+
+### Using regression to cut twelve hiring criteria to five
+Roberge first scored candidates on twelve criteria, then ran a regression across about thirty hires to see which predicted success [S9][S11]. Five survived: coachability, curiosity, prior success, intelligence and work ethic [S11]. Coachability was the strongest, ahead of curiosity, and traits typical of closers, such as closing and objection handling, were negatively linked to success in his data [S9]. His test for coachability was a role-play, then coaching, then a second run to see what the candidate did with the feedback [S9][S11].
+
+### Building a recruiting agency inside HubSpot
+Job-board ads in his first months drew hundreds of applications, 50 phone screens and dozens of interviews, but no hires. About ten outside agencies, at 15 to 20 percent of base pay, gave average results and would not triple the pace of hiring [S11]. So he hired a strong agency recruiter, asked her to build the firm inside HubSpot, paid the team agency-style with lower base pay and bonuses tied to fills and long-term hire success, and stopped using outside agencies for those roles [S11]. He also measured recruiters like a sales team: touches, connections, screens, interviews and hires [S11].
+
+### Gating headcount on a speedometer
+Instead of a fixed hiring plan, he ties each new wave of reps to the leading indicator and unit economics holding steady: LTV to CAC above 3 and payback under 12 months [S9]. His reason is that fixing retention while scaling is much harder than building it in first, and that you sometimes must slow down to speed up [S9]. In a Gainsight talk he repeats the logic: the question of when to scale should not rest on gut feel, and common proxies such as $500,000 in revenue or 100 customers can sit beside heavy churn [S10].
 
 ## Where he stood
 

@@ -2,7 +2,7 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Leo Tolstoy died in 1910 [S1]. We read *What Is Art?* in depth (its definition, three conditions and four counterfeits), the opening chapters and the mowing scene of *Anna Karenina*, and the start of *The Kingdom of God Is Within You*. His own words here come from three English translations on Project Gutenberg, all in the public domain: *What Is Art?* (preface dated 1898, translated by Aylmer Maude) [S3], *Anna Karenina* (1878, translated by Constance Garnett) [S4] and *The Kingdom of God Is Within You* (1893, translated by Aline Delano) [S5]. Facts about his life and *War and Peace* come from reference pages [S1][S2]. He wrote in Russian, so every quote here is a translator's English. When a character speaks in his novels, that is the character's view. His essays state his own views. Nothing here speaks for him on anything after 1910.
+A note on method: Leo Tolstoy died in 1910 [S1]. His own words here come from public-domain English translations and essays, so every quote is a translator's English. First the books: *What Is Art?* (preface dated 1898) [S3], *Anna Karenina* (1878) [S4] and *The Kingdom of God Is Within You* (1893) [S5]. We added more in the 2026-10-21 check: *A Confession* (written 1879 to 1880) [S6], his essay on Shakespeare [S7], his letters to Gandhi in 1909 and 1910 [S8], the essay *I Cannot Be Silent* (1908) [S9], a letter to a Chinese reader [S10], *What Shall We Do?* about his Moscow years [S11], and two family letters [S12][S13]. Facts about his life and *War and Peace* come from reference pages [S1][S2]. When a character speaks in his novels, that is the character's view. His essays and letters state his own. Some of these pages were read through a summarising reader, so details are kept modest. Nothing here speaks for him on anything after 1910.
 
 ## In one paragraph
 
@@ -50,7 +50,7 @@ His novels move between many people and keep each one vivid [S2][S4]. He stays c
 
 How he applied it: *Anna Karenina* opens on a household in chaos after a husband's affair is found out. The narration stays close to him as he wakes on a sofa and tries to get through the morning, then moves to his wife, the servants and the children [S4].
 
-### A plain, large opening truth
+**A plain, large opening truth**
 
 Tolstoy could open with one sentence that states a general truth, then test it against particular lives [S4]. The first line of *Anna Karenina* says that happy families are alike and each unhappy family is unhappy in its own way [S4].
 
@@ -62,7 +62,7 @@ In *War and Peace* Tolstoy rejected the "great man" idea that heroes drive histo
 
 How he applied it: he wove essays on war, power and history into the novel. Of its 361 chapters, 24 are philosophical [S2]. He said the book was not a novel, still less a poem or a chronicle [S2].
 
-### The wide view and the inner view
+**The wide view and the inner view**
 
 His narrative can sweep over a battlefield or a ballroom, then drop into one person's thoughts [S2]. Critics compare this to a film camera moving from a wide shot to a close-up [S2].
 
@@ -80,25 +80,51 @@ After the serfs were freed in 1861, Tolstoy founded 13 schools for peasant child
 
 How he applied it: his later moral writing and art theory both judge things by whether they serve ordinary people [S1][S3].
 
-## Real decisions
+### How he worked in essays and letters
 
+**Doubt your own life first: the method of *A Confession***
+
+In *A Confession* he judges his own life a failure by his own test, though he already had fame, money and a family [S6]. He kept asking a plain question: what will come of what I do today or tomorrow, and of my whole life? [S6] He tested the sciences against that one question and found that the experimental ones ignore it and the abstract ones raise it without answering [S6]. He told the old fable of a traveller hanging from a twig over a dragon while two mice gnaw the twig and he licks honey from the leaves, and said that was his own case [S6]. His way out was to look at how working people live and bear suffering, and to conclude that their faith gave life meaning [S6]. He then tried the Church's rites, found some of them false, and decided to examine scripture himself and keep what was true [S6].
+
+How he applied it: the same order shows up in his later essays. State the question, test the experts' answers against it, admit what fails, then go back to the plain facts of how people live [S6][S11].
+
+**Go and see, then admit the scheme failed**
+
+In 1881 he moved to Moscow and was shocked by the beggars he met there [S11]. In December 1883 a visit to a huge night shelter left him sure that he should not go on living the way he did [S11]. He planned a charity: raise money from rich donors, count the city's poor during the census, and cure poverty at its root [S11]. He took a district near the Rzhanov houses and found people more varied and more able than he had assumed [S11]. Few of the rich kept their promises. He gave away only a small sum and judged that the scheme had failed and even done harm, because money did not touch the real problem, which was how he and others understood how to live [S11].
+
+**Say the opposite of the crowd, and say why**
+
+On Shakespeare, he reread the plays over about fifty years to check his own reaction, the last time at seventy-five [S7]. He retold *King Lear* scene by scene, marking where he found the plot forced, the cruelty arbitrary and the speech stiff [S7]. He compared it with the older play *King Leir* and preferred that [S7]. His stated reason was that universal praise bends people's judgment of beauty and of right and wrong, so an honest dissent was worth the trouble [S7]. His tests were whether people act from their own natures, whether each speaks in their own way, and whether there is a sense of measure [S7].
+
+**Write the plain fact and own your shame**
+
+In *I Cannot Be Silent*, written after news that peasants had been hanged in Kherson, he described the executions in blunt detail: the soaped nooses, the officials who kept their distance, the doctor who certified the deaths [S9]. He argued that the state splits the guilt so thin that no one feels it [S9]. He opened with the newspaper's daily list of death sentences and closed on a short, flat verdict [S9]. He admitted he had once been proud that Russia had no capital punishment in law [S9].
+
+**Write to the person, warm and plain**
+
+To Gandhi he wrote as "dear friend" and signed as friend and brother [S8]. He said love is the highest law of life and force contradicts it, and set out a plain either-or: say religious ethics do not rule conduct, or end the machinery of force [S8]. To a Chinese reader he warned against copying Western states and armies, and urged a peaceful life on the land and refusal to serve the state [S10]. To his son Ilia he wrote that an earlier letter had been unfair and that he did not know his son as well as he should, then asked him to work with both head and conscience [S12]. Writing to his aunt about his children, he described each child's nature and admitted what he did not understand about the youngest [S13].
+
+## Real decisions
 ### Leaving the army after Sevastopol
-He served as an artillery officer at the siege of Sevastopol, wrote *Sevastopol Sketches* in 1855 and left the army appalled by the killing [S1].
+Tolstoy served as an artillery officer at the siege of Sevastopol, wrote *Sevastopol Sketches* in 1855, then left the army appalled by the killing [S1]. He later read war as a moral wrong, not a duty [S1][S5].
 
 ### Opening schools for peasant children
-After the serfs were freed in 1861, he founded 13 schools on his estate for peasant children [S1].
+After the serfs were freed in 1861, he founded 13 schools on his estate for peasant children [S1]. He did not hand a plan for the poor to experts. He taught on his own land, close to the people he wanted to serve [S1].
 
-### Building a novel from one broken household
-He opened *Anna Karenina* with a general truth about families and then went straight into one house: a wife who has learned of an affair, children running wild, a cook who walked off, servants giving notice [S4]. His reason, shown by what he did, was to test a large claim on small, real life.
+### Judging his own life a failure and going to the working people
+Around 1879 to 1880, famous and well off, he asked what would come of all his work and found no answer in science, art or comfort [S6]. He chose to look at how ordinary laborers lived and faced death, and decided their faith held the meaning his own class lacked [S6]. He then refused to take Church ritual whole and set out to test scripture for himself [S6]. His stated reason was that his despair came from a parasitic life, and that loving working people changed it [S6].
 
-### Sending a landowner to the field
-Late in *Anna Karenina*, Levin takes up a scythe to mow with his peasants. They tease him, the old man warns him, and he nearly gives out before the lead mower stops to sharpen. At the end of the row he feels very happy because he knows he can hold out [S4]. Tolstoy lets the labour speak and keeps the narration plain.
+### Joining the Moscow census and a charity scheme that failed
+After the night shelter in December 1883, he planned a charity drive tied to the Moscow census [S11]. He took a district near the Rzhanov houses, expecting need and finding people more capable than he thought [S11]. The rich who promised money mostly did not give it, and he called the scheme a failure that did harm [S11]. He drew from this that giving money was not enough and that he must change how he lived [S11].
 
-### Writing against the state's violence
-After the crisis of the 1870s he wrote *The Kingdom of God Is Within You* and sent it into a world where the censors had already banned his earlier religious book. It circulated in manuscript and later influenced Gandhi [S1][S5].
+### Telling the world Shakespeare was overrated
+He reread Shakespeare over about fifty years and then published a long dissent, prompted by an article by Ernest Crosby on Shakespeare and the working classes [S7]. He said he had long held the view but doubted himself for years before he trusted it [S7]. His reason: general praise warps taste and morals [S7]. Many readers think he was too harsh (disputed) [S7].
 
-### Turning his test on his own class's art
-In *What Is Art?* he applied the infection test to music and plays that his class admired, and found many lacking, including Wagner's *Ring* as a type of counterfeit [S3].
+### Refusing to stay silent on executions, 1908
+A newspaper reported in May 1908 that peasants had been hanged in Kherson, and he wrote *I Cannot Be Silent*, published on 15 July 1908 [S9]. When the toll was later corrected from twenty to twelve, he changed the number and kept the argument, since the wrong was the same [S9].
+
+### Writing to Gandhi, 1909 and 1910
+Gandhi wrote on 1 October 1909 and Tolstoy replied on 7 October [S8]. In September 1910 he sent a longer letter: love is the highest law and force denies it, and Russian conscientious objectors show the movement is real [S8]. On Gandhi's worry about his passages on rebirth, he offered to cut them but said belief in the soul's immortality restrains people, and he said money should have no place in a religious project [S8]. He died two months later [S1][S8].
 
 ## How he decides
 
@@ -164,6 +190,6 @@ All from works in the public domain, in English translation.
 
 - "Happy families are all alike; every unhappy family is unhappy in its own way." (*Anna Karenina*, tr. Garnett) [S4]
 - "The test of art is infection." (*What Is Art?*, tr. Maude) [S3]
-- "a means of union among men" (*What Is Art?*, tr. Maude) [S3]
-- "the armed camp of Europe is not Christian, but Pagan" (*The Kingdom of God Is Within You*) [S5]
-- "not a novel, even less is it a poem" (on *War and Peace*, as quoted by Wikipedia) [S2]
+- "the highest and indeed the only law of life" (letter to Gandhi, 1910) [S8]
+- "We should not go on living in this way!" (*What Shall We Do?*) [S11]
+- "This is awful!" (*I Cannot Be Silent*) [S9]

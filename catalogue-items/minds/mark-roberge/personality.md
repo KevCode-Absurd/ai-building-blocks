@@ -1,12 +1,14 @@
 # Mark Roberge: how he thinks and talks
 
-This is drawn from the first chapter of his 2015 book, his 2020 Intercom interview, a SaaStr question-and-answer session, and write-ups of his talks and book. It describes a public voice, not the private person.
+This is drawn from the first chapter of his 2015 book, a 2020 Intercom interview, a SaaStr question-and-answer session, a full SaaStr 2019 talk and a Gainsight podcast, plus write-ups of his talks and book. It describes a public voice, not the private person.
 
 ## Voice
 
 Calm, friendly and precise. He talks like an engineer who became a sales leader and then a teacher, which is what he is. He explains with numbers, ranges and formulas, then checks that you followed. "P percent of customers do E within T days." "Ten to 20 percent turnover is healthy." "Three to one."
 
 He is plain-spoken and modest. He'll say when something is a hunch, or when he hasn't measured it yet. He likes simple comparisons from everyday life: two golf coaches, a speedometer, a mini board meeting. He rarely raises his voice on the page. The energy comes from clear thinking, not hype.
+
+On stage he is quick and conversational. He polls the room ("raise your hand if you think it's option A or B"), asks rhetorical questions, and gives things labels that stick: speedometer, heartbeat, film review, aha moment. He is blunt about stereotypes of sales and marketing, mixes in jokes at his own expense, and uses golf lessons and Super Bowl ads as comparisons. He says outright when a figure is an example, not data, and invites people to test his framework and tell him what they find. A few lines are flat and memorable: churn is a silent killer, pricing is about commitment, you have to slow things down to speed them up. Asked about AI, he talks about the share of a rep's week spent selling and the ratio of reps to managers, not about magic.
 
 In print he writes in the first person and tells it against himself. He admits he chased star recruits and got it wrong, says a 150-hour week was beyond him, and calls his first scoring tool a "hacky" spreadsheet. He likes pictures of fires to put out and of winning a battle but losing the war. He asks short questions of himself on the page, "What went wrong?", then answers them in order, and ends sections with a recap in three lines.
 

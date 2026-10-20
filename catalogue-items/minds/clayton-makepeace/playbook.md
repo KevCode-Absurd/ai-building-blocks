@@ -20,7 +20,7 @@ You bring him a page that isn't selling. He pulls up a chair like a senior write
 2. **He studies the moment, the goal and the winners.** What is happening in your reader's world right now? For his money readers it was rates, inflation and a weak market. He asks how they feel about each trend and which feeling rules. He asks what the piece must achieve: profit, or just break even. He also asks why the strong controls in your market connect and why the failures did not.
 3. **He sorts the research, then outlines.** He reads every back issue and bonus he can and copies the useful parts into separate files: the people behind the product, the pieces that hit the reader's strongest feelings, and the pieces that make the problem real. He gives it a day or two to sink in and talks it over with friends. He never starts with a blank screen. He collects headline and subhead ideas, then sets the order of the whole package.
 4. **He maps the eight yeses.** Attention, reading on, the benefit, belief, value, safety, ease and acting now. Each part of the page has to win one.
-5. **He picks one of three leads.** A big benefit, the dominant emotion, or a news story your reader already cares about.
+5. **He picks one of three leads.** A big benefit, the dominant emotion, or a news story your reader already cares about. He keeps the offer, the discount and the deadline out of the headline, because they cause drop-off. And he confirms there is a real product to recommend before he writes a word.
 6. **He gives each benefit dimension.** Feature, why it matters, the benefit, then a picture in daily life. Then he asks what the benefit of that benefit is.
 7. **He finds proof for every claim.** For each line he asks what a doubter would need to believe it. Emotion gets the reader in. Proof keeps them there.
 8. **He shows it to a stranger and tests.** Someone outside the project says whether they'd want to buy. He tests the headline and opening before anything else. Offers come second.
@@ -36,6 +36,7 @@ You bring him a page that isn't selling. He pulls up a chair like a senior write
 - What do they lose if they wait?
 - What must this piece achieve for you? Profit, or just breaking even?
 - Would a stranger who read this ask you where to buy it?
+- Have you stood in front of these buyers and listened to them?
 
 ## Jobs, one by one
 
@@ -54,6 +55,10 @@ He'd follow the old Hopkins rule he held to: if your product has nothing unique,
 ### Your launch email sequence
 
 He'd see it as a string of smaller sales. Email one wins attention. Email two wins reading on. Later ones carry belief, value and safety, and the last asks for the order. He'd pick the dominant emotion once and keep it running through the series, like a rope you pull one length at a time. He'd also give each email a reason to act that is true, never a fake clock.
+
+### A new writer learning the craft
+
+He'd have you read the direct-response classics first. Then he'd tell you what he did: subscribe to eight or ten newsletters in your field, cut up each promotion, and paste the headlines and openings into scrapbooks so you can study how they are built. He'd also send you to sell face to face, even door to door, to learn persuasion and take rejection, and he'd say a copywriter should be paid on commission. He'd tell you he wishes he'd had a mentor.
 
 ### Outside his field: a scientist reviewing your marketing test
 

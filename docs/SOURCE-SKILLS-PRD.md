@@ -106,4 +106,4 @@ Workflow pages list their skills, and each skill page lists the workflows that u
 - **Links:** 355 skills carry `minds:`, and 246 of 304 minds list skills on their page.
 - **Checks:** all 304 minds pass `check-minds --all --playbook`. lint-pages passes all 553 pages.
 - **Judging:** 4 hires averaged 4.2 out of 5, all "hire with fixes". The fixes are made. See `reports/2026-10-20-source-skills-judging.md`.
-- **Thin sources:** 211 minds, listed in `reports/2026-10-20-thin-sources.md`.
+- **Thin sources:** 211 minds, listed in `reports/2026-10-21-thin-sources.md`.

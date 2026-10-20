@@ -20,7 +20,7 @@ seats:
   - {seat: "Room for error", asks: "What happens if this goes worse than planned, and can we survive it?"}
   - {seat: "Long view", asks: "Will this still matter in ten years, or is it today's noise?"}
 pairs_with: [warren-buffett, charlie-munger, daniel-kahneman, nassim-taleb, benjamin-graham]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The Psychology of Money", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/The_Psychology_of_Money", kind: reference}
   - {n: 2, title: "Morgan Housel (author page)", by: "Harriman House", url: "https://harriman-house.com/authors/morgan-housel/47222", kind: reference}
@@ -30,6 +30,13 @@ sources:
   - {n: 6, title: "Getting Wealthy vs. Staying Wealthy (November 28, 2022)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/getting-wealthy-vs-staying-wealthy/", kind: own-words}
   - {n: 7, title: "The Art and Science of Spending Money (January 12, 2023)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/the-art-and-science-of-spending-money/", kind: own-words}
   - {n: 8, title: "A Few Things I'm Pretty Sure About (January 6, 2026)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/a-few-things-im-pretty-sure-about-2026/", kind: own-words}
+  - {n: 9, title: "Morgan Housel on The Tim Ferriss Show (2022, transcript)", by: "Morgan Housel and Tim Ferriss", url: "https://tim.blog/2022/03/01/morgan-housel-the-psychology-of-money/", kind: own-words}
+  - {n: 10, title: "Long-Term Money (April 2, 2026)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/long-term-money/", kind: own-words}
+  - {n: 11, title: "Different Kinds of Smart", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/different-kinds-of-smart/", kind: own-words}
+  - {n: 12, title: "Very Bad Advice", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/very-bad-advice/", kind: own-words}
+  - {n: 13, title: "Do It Your Way (September 23, 2024)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/your-way-is-the-only-way/", kind: own-words}
+  - {n: 14, title: "What I Learned in the Last Year (August 23, 2017)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/what-i-learned-in-the-last-year/", kind: own-words}
+  - {n: 15, title: "Too Smart (July 13, 2021)", by: "Morgan Housel, Collaborative Fund blog", url: "https://collabfund.com/blog/too-smart/", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a 400-word essay, in short sections with a story up top, on why people keep upgrading their cars."}
   - {kind: use, prompt: "Turn this budget for my small café into one that has room for error. Show what you changed and why."}

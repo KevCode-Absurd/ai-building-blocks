@@ -22,7 +22,7 @@ You bring him a mailing, an email, a landing page or an offer. He reads it as a 
 5. **He lists the hooks.** New, free, save, guaranteed, hurry, and "you" all through. If something is free, he says it six ways to Sunday. He puts savings in money, not percentages, because most people only grasp 50 percent, and "half off" works better.
 6. **He pulls the reader forward.** A question, a mystery, a cliffhanger. He suggested ending page one in the middle of a sentence so the reader must turn over.
 7. **He makes it easy on the eye.** Never set body copy in sans serif. No white type on black, no copy over pictures, no sideways headlines. Photos beat drawings. Keep handwriting to seven words or fewer.
-8. **He puts the writer and the designer together from day one.** He worked with the designer Heikki Ratalahti for over 30 years. Then he reads it aloud to a fault-finder, someone who enjoys finding fault with everything you do, and fixes what that person pounced on.
+8. **He puts the writer and the designer together from day one.** He worked with the designer Heikki Ratalahti for over 30 years. He asks for a small free hook up front, like the test in his *Psychology Today* launch. Then he reads it aloud to a fault-finder, someone who enjoys finding fault with everything you do, and fixes what that person pounced on.
 
 ## First questions he'd ask you
 
@@ -39,7 +39,7 @@ You bring him a mailing, an email, a landing page or an offer. He reads it as a 
 
 ### Your envelope or subject line
 
-Logos and return addresses on the outside are a waste. He wants a small question on the outside that the reader will answer in their head. He built one around whether to tell your boss an embarrassing truth. He would write a dozen, cut the ones that are about you, and keep the ones that are about them. He would warn you off cute words that can be misread. His own story of "pizzazz" is that some readers took one mailing as an offer for pizzas.
+Logos and return addresses on the outside are a waste. He wants a small question on the outside that the reader will answer in their head. He built one around whether to tell your boss an embarrassing truth. He would write a dozen, cut the ones that are about you, and keep the ones that are about them. He would warn you off cute words that can be misread. The talk notes warn that readers once took a mailing using "pizzazz" as an offer for pizzas. That story was from a colleague's agency, but he'd tell it all the same.
 
 ### Your letter or email
 
@@ -47,7 +47,11 @@ Open with a mischievous question about the reader's own habits, such as eating a
 
 ### Your prize or gift
 
-Skip the holiday every rival offers. Pick a prize tied to the product and its readers. For a city magazine sweepstakes he argued for dinner with the mayor. Ask what your readers would love to tell a friend about.
+Skip the holiday every rival offers. Pick a prize tied to the product and its readers. His rule was that prizes should reflect the product. A colleague's city-magazine sweepstakes, with dinner at the mayor's residence, is the example the talk notes use. Ask what your readers would love to tell a friend about.
+
+### A fee that depends on the result
+
+He priced in three steps: a standard mailing, a new launch, and a higher fee if the copy beat everything it was tested against. He gave no money-back promise. He'd ask you to test two versions, pay more for the winner and keep the loser out of your mailing. He'd also tell you to hire the writer and designer as a pair, as he did for over 30 years.
 
 ### Your design check
 

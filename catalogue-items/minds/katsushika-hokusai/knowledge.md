@@ -1,8 +1,8 @@
 # Katsushika Hokusai: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Hokusai's own words reach us mostly through his letters, prefaces and postscripts. The main public-domain collection used here is Edmond de Goncourt's 1896 book, which gives them in French [S6]. Where this file quotes them, the English is our own translation of Goncourt's French, so treat the exact wording as ours. The 1834 colophon is read through a Melbourne museum essay that translates it, and the essay's readings of hidden meaning are the author's guesses [S7].
+Hokusai's own words reach us mostly through his letters, prefaces and postscripts. The main public-domain collection used here is Edmond de Goncourt's 1896 book, which gives them in French [S6]. Where this file quotes them, the English is our own translation of Goncourt's French, so treat the exact wording as ours. His age-75 preface is also read in Dora Amsden's 1905 English translation, which is in the public domain [S8]. The 1834 colophon is read through a Melbourne museum essay that translates it, and the essay's readings of hidden meaning are the author's guesses [S7].
 
 ## In one paragraph
 
@@ -122,25 +122,33 @@ At seventy-five, in the colophon to volume one of *One Hundred Views of Mount Fu
 
 ## Real decisions
 
-### Leaving the master's studio
+### Breaking from the master's studio
 
-He trained with the print master Katsukawa Shunshō from about 18 and was later pushed out, possibly for studying with the rival Kanō school [S1]. He said later that the shame drove his style forward [S1].
+He trained under the print master Katsukawa Shunshō from about 18 and took the name Shunrō there [S1][S8]. A rupture followed, partly caused by his enthusiasm for the bold black-and-white brushwork of the Kanō school [S1][S8]. After it he left the theatrical subjects that his master's school was known for [S8]. He said later that the shame drove his style forward [S1].
+
+### Learning to engrave, so he could judge the engravers
+
+Before he made his name he served about four years in the engravers' trade, which gave him a trained eye for mistakes in his craftsmen's work [S8]. He used it. In a letter he warned the engraver not to add an eyeball underneath where he had drawn none, and he sent drawn examples of the eyes and noses he wanted [S6][S8]. His reason was plain: the cut block has to carry the line he drew, with nothing added.
+
+### Briefing the printer in soup
+
+In an undated letter to his publisher he asked the printer to drop the soft gradations in the light ink, because the blocks give only about two hundred good impressions with a gradation [S6]. He asked for the pale ink to be as thin as clam soup and the mid-tone as thick as bean soup [S6]. The choice put the limit of the process first and the colour second.
 
 ### Letting the Fuji series grow
 
-*Thirty-six Views of Mount Fuji* was planned at 36 prints and grew to 46 because the early ones sold well [S3].
-
-### Writing to the carvers
-
-In letters of the 1830s he told his publisher the carvers must not add a lower eyelid where he had drawn none, and he sent drawn examples of the eyes and noses he wanted [S6][S1].
+*Thirty-six Views of Mount Fuji* was planned at 36 prints and grew to 46 because the early ones sold well [S3]. He worked the one subject from many places, seasons and weathers. He also used imported Prussian blue for its range of tone, which let him suggest depth without strict linear perspective [S7].
 
 ### Publishing the Manga
 
 The *Hokusai Manga* began in 1814 as a drawing-instruction book, partly to ease his money problems, and grew to fifteen volumes [S5].
 
-### Naming himself the old man
+### Asking for one carver (1834)
 
-From 1834 he signed as Gakyō Rōjin Manji, "the old man mad about art" [S1]. At about 75 he wrote the colophon to *One Hundred Views of Mount Fuji* and counted ahead to a hundred and ten, when each dot and stroke would seem alive [S4][S7].
+In a letter of 1834 to three publishers he wrote that he was still improving, and that at a hundred he would count among true draftsmen. He asked that one carver cut his next books, argued that a good carver encourages him to draw and makes the book earn more for the publisher, and added that he was not asking for a commission [S6]. He gave the publisher a reason that served the publisher, not only himself [S6].
+
+### Throwing out everything before seventy
+
+In his preface to *One Hundred Views of Mount Fuji*, written at 75, he said his drawing mania began at six, that he had published countless designs by fifty, and that nothing before seventy was worth counting [S8]. At 73, he said, he had learned a little about the true structure of nature, and he predicted steady gains at eighty, ninety and a hundred [S8]. He signed as "Gwakio-rojin", the old man mad about drawing [S8], and asked readers who lived as long as he did to see whether he kept his word [S7][S8][S9].
 
 ### Going on after the fire
 

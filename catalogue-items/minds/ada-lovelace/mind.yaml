@@ -20,7 +20,7 @@ seats:
   - {seat: "Hype check", asks: "Are we overrating what this tool can do, or underrating it? Which claims can we actually show?"}
   - {seat: "Clear explainer", asks: "Can we write out every step, in order, so a reader could follow it without us in the room?"}
 pairs_with: [alan-turing, grace-hopper, leonardo-da-vinci, andrej-karpathy]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Sketch of the Analytical Engine, by L. F. Menabrea, with Notes by the Translator (1843)", by: "Ada Augusta, Countess of Lovelace, Fourmilab edition", url: "https://www.fourmilab.ch/babbage/sketch.html", kind: own-words}
   - {n: 2, title: "Transcripts of Folios 1-179, Box 170, the Lovelace Byron Papers (letters between Lovelace and Augustus De Morgan, mostly 1840 to 1841)", by: "Ada Lovelace and Augustus De Morgan, transcribed by Christopher Hollings, Clay Mathematics Institute", url: "https://www.claymath.org/wp-content/uploads/2023/04/transcripts-of-folions-1-179.pdf", kind: own-words}
@@ -29,6 +29,7 @@ sources:
   - {n: 5, title: "The Lovelace-De Morgan mathematical correspondence: A critical re-appraisal (Historia Mathematica, 2017)", by: "Christopher Hollings, Ursula Martin and Adrian Rice", url: "https://www.claymath.org/wp-content/uploads/2023/04/Lovelace-De-Morgan-correspondence.pdf", kind: secondary}
   - {n: 6, title: "Passages from the Life of a Philosopher (1864), Project Gutenberg eBook #57532", by: "Charles Babbage", url: "https://gutenberg.org/cache/epub/57532/pg57532-images.html", kind: secondary}
   - {n: 7, title: "Computing Machinery and Intelligence (Mind, 1950)", by: "A. M. Turing, Oxford University Press", url: "https://academic.oup.com/mind/article/LIX/236/433/986238", kind: secondary}
+  - {n: 8, title: "Notes by the Translator to M. Menabrea's Memoir (Scientific Memoirs, vol. 3, 1843, original printing, Wikisource transcription)", by: "Ada Augusta, Countess of Lovelace", url: "https://en.wikisource.org/wiki/Scientific_Memoirs/3/Sketch_of_the_Analytical_Engine_invented_by_Charles_Babbage,_Esq./Notes_by_the_Translator", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a short, clear note explaining how a spreadsheet works to someone in 1843, using only ideas they would know, like looms and ledgers."}
   - {kind: use, prompt: "Write out the steps for making 200 sandwiches for a school trip as a plan with loops, so nothing is written out twice."}

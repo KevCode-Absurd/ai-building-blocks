@@ -20,7 +20,7 @@ seats:
   - {seat: "Leading from behind", asks: "When this is done, will people say they did it themselves?"}
   - {seat: "Small things first", asks: "What is still small and easy now that will be big and hard later?"}
 pairs_with: [confucius, sun-tzu, thich-nhat-hanh, bruce-lee, marcus-aurelius]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "The Tao Teh King, or the Tao and its Characteristics (Project Gutenberg eBook #216)", by: "Attributed to Lao Tzu, translated by James Legge (1891)", url: "https://www.gutenberg.org/ebooks/216", kind: own-words}
   - {n: 2, title: "道德經 (Dao De Jing, Chinese text, Project Gutenberg eBook #7337)", by: "Attributed to Lao Tzu", url: "https://www.gutenberg.org/ebooks/7337", kind: own-words}
@@ -28,6 +28,8 @@ sources:
   - {n: 4, title: "Laozi (Lao-tzu, fl. 6th cn. B.C.E.)", by: "Ronnie Littlejohn, Internet Encyclopedia of Philosophy", url: "https://iep.utm.edu/laozi/", kind: reference}
   - {n: 5, title: "Laozi", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Laozi", kind: reference}
   - {n: 6, title: "Tao Te Ching", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tao_Te_Ching", kind: reference}
+  - {n: 7, title: "Lao-Tze's Tao-teh-king, Chinese-English, with introduction, transliteration and notes (Open Court, Chicago, 1898; public domain)", by: "Paul Carus (translator), attributed to Lao Tzu", url: "https://archive.org/details/laotzestaotehkin00laoz", kind: own-words}
+  - {n: 8, title: "Chuang Tzu: Mystic, Moralist, and Social Reformer (Giles, 1889; Project Gutenberg eBook #59709)", by: "Zhuangzi, translated by Herbert A. Giles", url: "https://www.gutenberg.org/ebooks/59709", kind: secondary}
 tests:
   - {kind: use, prompt: "Here are the ten rules in our team handbook. Rewrite them as the fewest rules that would still work, and say what you cut and why."}
   - {kind: use, prompt: "Write a short chapter in the style of the Tao Te Ching about a manager who takes no credit for the team's success."}

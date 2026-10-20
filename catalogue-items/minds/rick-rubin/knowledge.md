@@ -1,8 +1,8 @@
 # Rick Rubin: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Rick Rubin is alive, and views can change. The views below come from his 2023 book The Creative Act, as excerpted in 2024 [S2], a 2023 interview about the book with the writer Eric Skelton [S3], a page of his quoted lines from the book and an Esquire interview in 2007 [S6], a 2023 TV piece [S4] and reference pages. Most of the first-hand material is excerpt or fragment, not a full book or transcript, so method claims here stay close to what these pieces say. Treat each as "as of" its date. Nothing here speaks for him on current projects or new events, and this file leaves out his private life.
+Rick Rubin is alive, and views can change. The views below come from his 2023 book The Creative Act, as excerpted in 2024 [S2], a 2023 interview about the book with the writer Eric Skelton [S3], a page of his quoted lines from the book and an Esquire interview in 2007 [S6], a 2023 TV piece [S4] and reference pages. Newer in this pass: his 2023 60 Minutes interview with Anderson Cooper [S7][S9] and a 2015 Fader interview about his studio and his work with Kanye West [S8], plus a magazine profile [S10]. Most of the first-hand material is still excerpt, fragment or interview, not a full book, so method claims here stay close to what these pieces say. Treat each as "as of" its date. Nothing here speaks for him on current projects or new events, and this file leaves out his private life.
 
 ## In one paragraph
 
@@ -54,6 +54,18 @@ He writes that art can snap people out of fixed stories about themselves and the
 
 Rubin describes creativity as something everyone does, not only professional artists [S3]. He spent about eight years on The Creative Act, trying to turn studio experience into something useful to others rather than a memoir [S3]. He also warns that the artist's life is demanding: it doesn't switch off [S3]. Success adds pressure that can bend the work, so he suggests going back to low-stakes making [S3].
 
+#### Reducer, not producer
+
+Rubin calls himself a reducer instead of a producer: the aim is to make the point with the least material, and to find what is truly needed in a song [S7][S9][S10]. He says he has no technical ability and barely plays an instrument. What he does bring is confidence in his taste and a willingness to say clearly what he likes and doesn't like [S9]. He says he listens to the feeling, and not to a Rubin sound, and wants the listener pulled into the artist's world [S7].
+
+#### Protect the room
+
+Rubin says his studio is built as a calm, protected place where an artist can be vulnerable [S8]. He keeps awards off the walls, because chasing accomplishments pulls attention from making the thing [S7]. He listens lying down, barefoot, eyes closed [S7].
+
+#### Work in chapters
+
+In 2015 he said a great piece of work is a chapter in your life [S8]. So an artist who waits years on one project risks missing the chapters that come after, and should keep making, even if that means writing more [S8].
+
 ## How he decides
 
 - Trust the feeling in your body over the theory in your head [S3].
@@ -68,28 +80,28 @@ Rubin describes creativity as something everyone does, not only professional art
 - Choose from a wide field. For Cash he drew songs from Cash himself, older recordings and new writers [S5].
 - Test an early draft on one person with good taste, not a crowd [S3].
 
-## Real decisions (enriched minds)
+## Real decisions
 
 ### Running Def Jam from a dorm (1984)
-Rubin was a student at New York University when early hip-hop was a niche taste that most people did not call music [S4]. He put out a record with the Def Jam address, his dorm, printed on it, and demo tapes began to arrive, including one from a teenage LL Cool J [S4]. He made LL Cool J's first record because of the music he heard [S4].
+Rubin was a student at New York University when early hip-hop was a niche taste that most people did not call music [S4]. He put out a record with his dorm address printed on it, and demo tapes began to arrive, including one from a teenage LL Cool J [S4]. A profile says the tape reached Def Jam through Ad-Rock of the Beastie Boys [S9]. He made LL Cool J's first record because of the music he heard [S4]. One profile says the credit on that first record read "Reduced by Rick Rubin" and that it sold over 120,000 copies [S10].
 
 ### Starting with Cash by listening (1993)
 Seeing Johnny Cash at a dinner theater in Orange County, Rubin saw a man who felt the world had passed him by [S4]. He began by spending time listening to Cash's favourite music, and offered a deal with no brief beyond doing what felt right [S4][S5]. Most songs on American Recordings were just Cash and an acoustic guitar, and the record won a Grammy [S5]. They made seven albums together before Cash died in 2003 [S4].
 
-### Naming a weak line with a question (Neil Young)
-Rubin questioned a lyric line for Neil Young. Young admitted he had let it slide, and the line was fixed [S3]. His approach was to point at the specific line and ask if the artist was fine with it, on the artist's team [S3].
+### Naming a weak line, and being wrong (Neil Young, Tom Petty)
+Rubin questioned a lyric line for Neil Young, who admitted he had let it slide, and the line was fixed [S3]. He called a chorus line lazy for Tom Petty, who defended it as the best line in the song [S3]. Rubin accepted that it was the core of the song and left it [S3]. His method is to point at the specific line and ask if the artist is fine with it, as a member of the artist's team [S3].
 
-### Being told he was wrong (Tom Petty)
-Rubin called a chorus line lazy. Petty defended it and said it was the best line in the song [S3]. Rubin accepted that the line was the core of the song, and left it [S3].
-
-### Rebuilding lyrics from an essay
-With one artist he asked her to write a long prose essay on the true story behind the song. He then pulled the strongest content from the essay to rebuild the lyrics [S3]. His reason was to get the work connected to what it was really about [S3].
+### Telling Kesha to write an essay
+When Kesha could not put a song into words, Rubin told her to write a full essay on everything she needed to say, until she could write no more [S7]. The song then began to form on its own [S7]. He had used the same trick to rebuild lyrics from an essay with another artist, in order to tie the work to what it was really about [S3].
 
 ### Favouring the rough version
 Asked about demos, Rubin said he often prefers an early, rough version to a polished one, like a sketch against a finished painting [S3]. He trusts bodily signals, such as leaning in, rewinding or losing track of time, over the thought that something will sell [S3]. He shares early work with one trusted friend of good taste [S3].
 
-### Pairing metal and rap on one label (1986 to 1988)
-Rubin co-produced Walk This Way with Run-DMC and Aerosmith, and Slayer's Reign in Blood, both in 1986 [S1]. His later label signed metal bands and rap acts side by side [S1].
+### Cutting Yeezus down to ten tracks (2013)
+Rubin was executive producer of Kanye West's Yeezus, and helped cut several hours of sprawling material into a ten-track, minimal album on a hard deadline [S8]. He said West works by trying many versions and that the deadline motivated him [S8]. Rubin said he does not usually work that way, but the experience showed him how to serve West better [S8].
+
+### Buying and testing Shangri-La (2011)
+Rubin bought the Malibu studio in 2011 when a buyer planned to tear it down, because he did not want to see it vanish [S8]. His team had tested studios blind: the same kick, snare, microphones and recorder in each room, with only the room changing, and Shangri-La won, which surprised him given its state [S8]. He argued that newer computer-designed rooms often sound cold [S8].
 
 ## Where he stood
 
@@ -145,8 +157,9 @@ Rubin co-produced Walk This Way with Run-DMC and Aerosmith, and Slayer's Reign i
 
 ## Short phrases on the record
 
-- "It's not about knowing. It's all about feeling" (2023) [S3]
-- "Only the ego cares about whether it's your idea or not" (2023) [S3]
-- "We are all translators for messages the universe is broadcasting." (2023) [S3]
-- "The outcome is not the outcome." (The Creative Act, as excerpted 2024) [S2]
 - "Zoom in and obsess. Zoom out and observe." (The Creative Act, as excerpted 2024) [S2]
+- "Only the ego cares about whether it's your idea or not" (2023) [S3]
+- "I'm listening to the feeling" (2023) [S7]
+- "A great piece of work is a chapter in your life." (2015) [S8]
+- "I know what I like and what I don't like." (2023) [S9]
+

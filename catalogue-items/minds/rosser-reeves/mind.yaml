@@ -20,7 +20,7 @@ seats:
   - {seat: "Proof and demonstration", asks: "How do we show this claim is true in a few seconds?"}
   - {seat: "Stick with it", asks: "Is this campaign really worn out, or are we just bored of it?"}
 pairs_with: [claude-hopkins, david-ogilvy, bill-bernbach, al-ries, george-lois]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Rosser Reeves", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rosser_Reeves", kind: reference}
   - {n: 2, title: "Unique selling proposition", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Unique_selling_proposition", kind: reference}
@@ -30,6 +30,11 @@ sources:
   - {n: 6, title: "The Living Room Candidate: 1952", by: "Museum of the Moving Image", url: "http://www.livingroomcandidate.org/commercials/1952", kind: reference}
   - {n: 7, title: "Reality in Advertising (review)", by: "The Agency Review", url: "https://the-agency-review.com/reality-in-advertising/", kind: secondary}
   - {n: 8, title: "Reality in advertising (catalogue record, Knopf 1961)", by: "Internet Archive", url: "https://archive.org/details/isbn_9780394442280", kind: reference}
+  - {n: 9, title: "The 30-Second President (PBS, 1984), transcript of Bill Moyers's interview with Rosser Reeves", by: "Rosser Reeves, interviewed by Bill Moyers", url: "https://billmoyers.com/?p=118114", kind: own-words}
+  - {n: 10, title: "The Thirty Second Candidate: From idea to ad", by: "PBS", url: "http://www.pbs.org/30secondcandidate/text/from_idea_to_ad/", kind: secondary}
+  - {n: 11, title: "I Am Legend: Rosser Reeves", by: "AgencySpy, Adweek", url: "https://www.adweek.com/agencyspy/i-am-legend-rosser-reeves/", kind: secondary}
+  - {n: 12, title: "Rosser Reeves (inductee page)", by: "Advertising Hall of Fame", url: "https://advertisinghalloffame.org/inductee/rosser-reeves/", kind: reference}
+  - {n: 13, title: "Haygood podcast: The Anti-Christ of Advertising", by: "Journalism History", url: "https://journalism-history.org/2019/11/19/haygood-podcast-the-anti-christ-of-advertising/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write three one-line selling propositions for a reusable water bottle, each built on a different benefit, and say which one you'd run."}
   - {kind: use, prompt: "Script a 30-second ad for a stain remover that proves its main claim with a demonstration."}

@@ -20,7 +20,7 @@ seats:
   - {seat: "Many viewpoints", asks: "What does this look like from the side, the back and the inside, all at once?"}
   - {seat: "The restless maker", asks: "What would we try if we weren't afraid of contradicting what we did last time?"}
 pairs_with: [vincent-van-gogh, salvador-dali, frida-kahlo, leonardo-da-vinci, steve-jobs]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Pablo Picasso", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pablo_Picasso", kind: reference}
   - {n: 2, title: "Pablo Picasso (sourced statements, incl. 'Picasso Speaks', The Arts, 1923, and the 1935 Zervos conversation)", by: "Pablo Picasso, compiled by Wikiquote", url: "https://en.wikiquote.org/wiki/Pablo_Picasso", kind: own-words}
@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Les Demoiselles d'Avignon", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Les_Demoiselles_d%27Avignon", kind: reference}
   - {n: 5, title: "Cubism", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cubism", kind: reference}
   - {n: 6, title: "Pablo Picasso quotes (prints lines from the 1923 de Zayas and 1935 Zervos conversations)", by: "Pablo Picasso, on The History of Art", url: "https://www.thehistoryofart.org/pablo-picasso/quotes/", kind: own-words}
+  - {n: 7, title: "Pablo Picasso (artist profile, with quoted remarks and a dated chronology)", by: "The Art Story", url: "https://www.theartstory.org/artist/picasso-pablo/", kind: secondary}
 tests:
   - {kind: use, prompt: "Describe three very different ways to redesign the poster for a local jazz night, each breaking the usual layout in a new way."}
   - {kind: use, prompt: "Plan a series of ten sketches that rework one ordinary object, a chair, so each one teaches something new."}

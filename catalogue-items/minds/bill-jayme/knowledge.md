@@ -1,8 +1,8 @@
 # Bill Jayme: what he knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Jayme spent his life writing other people's mail, and his letters belong to the magazines that paid for them. He wrote no book on his craft that we could find. His own words reach us in two places we could open: a talk he gave, "20 Opinionated Answers to 20 Questions Nobody Asked", posted in part by his friend Drayton Bird [S1], and his remarks at a 1989 industry day, reported in the trade magazine *FOLIO* [S2]. The *FOLIO* scan is damaged in places, so we use only the parts we could read. Facts about his life come from his Princeton memorial and trade obituaries [S3][S4]. He died in 2001 aged 75, so he was born in 1925 or 1926 [S3]. Some of his most famous envelope lines appear on the pages we read only as pictures, so we don't quote them.
+A note on the record: Jayme spent his life writing other people's mail, and his letters belong to the magazines that paid for them. He wrote no book on his craft that we could find. His own words reach us in two places we could open: a talk he gave, "20 Opinionated Answers to 20 Questions Nobody Asked", posted in part by his friend Drayton Bird [S1], and his remarks at a 1989 industry day, reported in the trade magazine *FOLIO* [S2]. The *FOLIO* piece is a short report of his remarks, and its scan is damaged in places, so we use only the parts we could read. Bird's post is his own record of the talk and not a transcript, and Bird mixes in examples from his own agency, which we now keep apart from Jayme's. The public record of Jayme in his own words stays thin: two short sources, plus friends' and trade accounts [S8][S9][S10]. Facts about his life come from his Princeton memorial and trade obituaries [S3][S4]. He died in 2001 aged 75, so he was born in 1925 or 1926 [S3]. Some of his most famous envelope lines appear on the pages we read only as pictures, so we don't quote them.
 
 ## In one paragraph
 
@@ -32,7 +32,7 @@ How he applied it: he wrote for upscale, curious readers of magazines such as *S
 
 He told the 1989 meeting that good copy should think, look and sound like the product it sells [S2]. A mailing for a food magazine should feel like that magazine. One for a psychology magazine should make you think about yourself [S2][S3].
 
-How he applied it: for a *New York* magazine sweepstakes, he argued for prizes tied to the city, such as dinner with the mayor, instead of the usual trip to Hawaii or a camper van [S1].
+How it looks in practice: Bird's post shows a *New York* magazine sweepstakes from his own agency, with prizes tied to the city such as dinner at Gracie Mansion, as an example of Jayme's rule [S1]. The rule is Jayme's. The mailing is Bird's.
 
 ### Make the free and the savings impossible to miss
 
@@ -75,6 +75,30 @@ How he applied it: the same habit runs through his small rules. He checked how a
 - Read the copy aloud to your harshest critic [S1].
 - Ignore fixed rules about length and format. People open and read what interests them [S1].
 
+## Real decisions
+
+These are business choices more than famous mailings, because the record of his individual packages is thin.
+
+### Teaming up with a designer
+
+In the late 1960s Jayme formed Jayme Ratalahti, Inc. with the designer Heikki Ratalahti, and they worked as a pair for over 30 years [S3]. A host of the Copywriter Club podcast, Brian Kurtz, says his career took off after the partnership, and uses him to show that great copywriters often work with a designer [S8]. In his talk Jayme told advertisers to bring the writer and art director in at the start, not hand finished words to a designer to make them look nice [S1].
+
+### Writing only for magazine subscriptions
+
+He wrote almost only for magazines, about 35 of them, and helped launch more than two dozen titles by 1989 [S2][S3]. He gave no reason for the narrow field that we could find. What he did say was that the key skill is leaving your own mind and entering another person's [S2]. He kept to one kind of reader, upscale and curious, and wrote up to them [S1][S3].
+
+### Setting the fee in three steps
+
+In the late 1970s he charged $20,000 for a standard mailing, $40,000 for a new magazine launch and $60,000 if his copy beat everything it was tested against [S1]. There was no money-back promise, so clients paid whether he won or lost [S1]. By the time he and Ratalahti retired, a friend recalls $20,000 to $40,000 a pack and an 18-month waiting list [S10].
+
+### Building the Psychology Today launch around a test
+
+For the launch of *Psychology Today* he wrote both the letter and the envelope copy [S6]. The package carried a free psychological test, and a reader could take it at once [S6]. A later writer notes that how readers answered did not matter, because the test pulled them in [S6]. The choice fits his rule that copy should make a psychology magazine's reader think about themselves [S2].
+
+### Spending the most care on the envelope
+
+Jayme argued that the outer envelope is where a prospect decides whether to stop, look and listen [S1]. Bird recalls him comparing a bold envelope to a loud piece of clothing meant to make a stranger look twice [S9]. His advice was to give the first thing a reader sees the most care [S9]. He told a 1989 audience that outer envelopes sell [S2].
+
 ## Where he stood
 
 **Long copy or short?** He distrusted rules of thumb about length or envelope size. Interest decides, not format [S1].
@@ -110,7 +134,7 @@ How he applied it: the same habit runs through his small rules. He checked how a
 
 - **Paid either way.** Jayme took his base fee whether a mailing worked or not [S1]. Drayton Bird, who admired him, contrasts this with an agency that offers money back [S1].
 - **A style that passed.** A trade column said his death marked the end of a style of writing, and that Time Inc. had stopped mailing his letters [S5]. Long, literate, witty letters suited his era of magazine mail. Not every audience or channel wants them.
-- **Cleverness can misfire.** His own story about the word "pizzazz" shows the risk: readers took one mailing as an offer for pizzas [S1].
+- **Cleverness can misfire.** The talk notes warn against the word "pizzazz": in Bird's own agency's mailing, readers took it as an offer for pizzas [S1]. The story is Bird's, used to back Jayme's rule.
 - **Narrow field.** He wrote almost only for magazine subscriptions [S1]. His rules come from that world.
 
 ## Blind spots to watch

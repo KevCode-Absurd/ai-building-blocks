@@ -1,8 +1,8 @@
 # Susan Kare: what she knew and believed
 
-Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
+Built from public sources, last checked 2026-10-21. Claims cite the sources in mind.yaml as [S1].
 
-Susan Kare is alive, and views can change. This data set comes from a long 2000 interview for Stanford's history of the Macintosh [S1], a 2014 Designboom interview [S2], a 2014 profile that quotes her [S4], Wikipedia [S3] and the bio on her print shop's site [S5]. Treat each view as "as of" the year of the source. Sources differ on a few dates. Her bio says she began at Apple in 1982 [S5], while Wikipedia says she was hired in January 1983 [S3]. The 2014 profile puts her move to NeXT in 1985 and her Facebook work from 2007 [S4], while Wikipedia says 1986 and 2006 [S3]. Her words are under copyright, so we quote only a few short phrases.
+Susan Kare is alive, and views can change. This data set comes from a long 2000 interview for Stanford's history of the Macintosh [S1], a 2014 Designboom interview [S2], a 2014 profile that quotes her [S4], Wikipedia [S3] and the bio on her print shop's site [S5]. We added a 2019 Cooper Hewitt Q&A in her own words [S6] and two magazine pieces that quote her [S7][S8]. Treat each view as "as of" the year of the source. Sources differ on a few dates. Her bio says she began at Apple in 1982 [S5], while Wikipedia says she was hired in January 1983 [S3]. The 2014 profile puts her move to NeXT in 1985 and her Facebook work from 2007 [S4], while Wikipedia says 1986 and 2006 [S3]. Her words are under copyright, so we quote only a few short phrases.
 
 ## In one paragraph
 
@@ -78,6 +78,11 @@ How she applied it: in 2014 she said she puts quality over originality, keeps go
 - Avoid words and puns that don't translate [S1].
 - Borrow from old symbol systems when stuck [S1].
 - Clean up every pixel and line [S1].
+- Judge a design by meaning, memorability and clarity [S6].
+- Know the method: understand the problem, sketch many answers, refine to the best one; tools change but this does not [S6].
+- Do not try to be original, try to be good (Paul Rand's advice to her) [S6].
+- Make work for non-technical users by building one consistent system [S6].
+- Build a portfolio with volunteer work, where causes give creative room [S6].
 
 ## Real decisions
 
@@ -95,6 +100,18 @@ The fill tool went through paint rollers before a pouring paint can felt most na
 
 ### Showing options to Jobs
 She learned not to show Jobs one design and ask if he liked it, because he usually said no. Several options worked better [S4].
+
+### Telling documents from applications
+
+Kare kept the folded-page document icon that came from Lisa, but gave applications a more active look, a hand holding a pencil over a diamond, so people could tell the two apart at a glance [S1]. For the control panel she used a rabbit and a tortoise for fast and slow mouse-click timing [S1]. Copying and undo were hard to draw, so she knew some ideas could not be pictured [S1].
+
+### Testing the title bar stripes with users
+
+Steve Capps proposed horizontal stripes for the window title bar, and Kare developed them so they stretched as the window resized [S1]. Different numbers of stripes were tried out with users [S1]. Testing was informal: she showed work to the software group and to people who walked by, and there were no formal meetings or votes [S1].
+
+### Leaving room in the font numbers
+
+Of the 256 font number sets available, only a few were used for the Mac's own fonts, which left room for fonts from other makers [S1]. Her first font was a Chicago-like one with the placeholder name Elefont [S1]. She drew the first fonts letter by letter, and moved to drawing icons in MacPaint because it showed both enlarged and actual-size views [S1].
 
 ## Where she stood
 

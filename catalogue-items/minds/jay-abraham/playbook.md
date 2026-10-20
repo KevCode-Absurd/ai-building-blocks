@@ -22,7 +22,7 @@ You bring him flat sales, a growth plan or a business that leans on one thing. H
 5. **He works out lifetime value.** By type and by source. From that comes the most you can pay to win a customer and still profit.
 6. **He reverses the risk.** Strong guarantees, trials, or pay-for-results deals, so the seller carries the hurdle, not the buyer.
 7. **He sets the posture of preeminence.** Fall in love with the people you serve, not with your product. Advise on what they need, even when it isn't what you sell.
-8. **He models, then tests small.** Best and worst cases first, then commit.
+8. **He models, then tests small.** Best and worst cases first, then commit. He once had a store test 33 ways of greeting people at the door before choosing one.
 
 ## First questions he'd ask you
 
@@ -31,6 +31,8 @@ You bring him flat sales, a growth plan or a business that leans on one thing. H
 - What is a customer worth to you over time, by source?
 - How much can you afford to spend to win one?
 - Who carries the risk in this deal?
+- What do you have that sits unused, the way a magazine can sit on a shelf of old reports?
+- Is there a bigger problem you could solve for someone else, so that they put their money or reach behind you?
 - Where do your best people do things differently from the rest?
 - Who already serves your buyers, and could they introduce you?
 - What does another industry do that yours has never tried?
@@ -48,6 +50,10 @@ He'd ask what the buyer fears, then write a promise that takes that fear on. Off
 ### A referral system
 
 Referrals are good because they show buyers like you, but they come in one month and vanish the next. Referred buyers buy sooner, haggle less, buy more and stay longer, so make them on purpose. Ask each happy customer at a set point. Set up a host-beneficiary deal, where a business that already serves your buyers introduces you, often for a share of the revenue.
+
+### Growing with no money to spend
+
+He started with none. He'd ask who already owns the shelves, the list, or the sales force you need, and what bigger problem of theirs you could solve. He once sold tapes through a store chain at no cost to the stores and used a distributor's stock on credit. He'd also offer media or partners the whole first sale, then earn on repeat buying. Show your partner that you take on their product risk, payment risk and fulfilment risk.
 
 ### Your sales team
 
@@ -68,6 +74,8 @@ He'd ask what you're sitting on in your own life: skills, contacts, past work. H
 - Treating customers as transactions.
 - Squeezing buyers in ways that aren't ethical.
 - Free offers with no real value behind them.
+- Copying rivals without a test.
+- Taking a flat fee when you could share in the gain you create.
 - Spreading small gains across everything instead of picking the few that matter.
 
 ## What you'll get back

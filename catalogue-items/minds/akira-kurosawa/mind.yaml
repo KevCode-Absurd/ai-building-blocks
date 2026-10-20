@@ -4,6 +4,7 @@ area: arts
 also: [writing]
 years: "1910–1998"
 living: false
+thin_record: "Kurosawa spoke and wrote in Japanese; his autobiography and interview books are copyrighted translations with no free full text online."
 known_for: "Directed Rashomon, Ikiru, Seven Samurai, Yojimbo and Ran, writing or co-writing every one of his 30 films and staging action with weather, movement and many cameras."
 summary: "Make a story the way Kurosawa did: write it yourself page by page, feed it from reading and memory, stage it in motion with wind and rain, and see the same event from more than one side."
 use_cases:
@@ -20,13 +21,19 @@ seats:
   - {seat: "Write it yourself", asks: "Have you written it out, page by page, before you ask anyone for money?"}
   - {seat: "Many sides of one event", asks: "How would each person involved tell this story, and why would they bend it?"}
 pairs_with: [william-shakespeare, stanley-kubrick, hayao-miyazaki, katsushika-hokusai, christopher-nolan]
-last_checked: 2026-10-20
+last_checked: 2026-10-21
 sources:
   - {n: 1, title: "Akira Kurosawa", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Akira_Kurosawa", kind: reference}
   - {n: 2, title: "Akira Kurosawa's Advice to Aspiring Filmmakers: Write, Write, Write and Read (with video of Kurosawa speaking)", by: "Akira Kurosawa, via Open Culture (Colin Marshall, 2016)", url: "https://www.openculture.com/2016/09/akira-kurosawas-advice-to-aspiring-filmmakers-write-write-write-and-read.html", kind: own-words}
   - {n: 3, title: "Notes from a legend: Akira Kurosawa's advice to young filmmakers (on his 1993 interview with Nagisa Ōshima)", by: "Akira Kurosawa, via Film Companion", url: "https://filmcompanion.in/features/notes-from-a-legend-akira-kurosawas-advice-to-young-filmmakers-rashomon-seven-samurai", kind: own-words}
   - {n: 4, title: "Seven Samurai", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Seven_Samurai", kind: reference}
   - {n: 5, title: "Rashomon", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rashomon", kind: reference}
+  - {n: 6, title: "Kurosawa biography, part 10 (Kagemusha years)", by: "akirakurosawa.info", url: "https://akirakurosawa.info/biography-part-10/", kind: secondary}
+  - {n: 7, title: "Kurosawa biography, part 8 (Hollywood years)", by: "akirakurosawa.info", url: "https://akirakurosawa.info/biography-part-8/", kind: secondary}
+  - {n: 8, title: "Kurosawa biography, part 11 (Ran and Dreams)", by: "akirakurosawa.info", url: "https://akirakurosawa.info/biography-part-11/", kind: secondary}
+  - {n: 9, title: "Watch Akira Kurosawa accept his first Oscar (1990 honorary award speech)", by: "Akira Kurosawa, via Far Out Magazine", url: "https://faroutmagazine.co.uk/akira-kurosawa-accepts-first-oscar/", kind: own-words}
+  - {n: 10, title: "Storyboards and screenplay of the epic film 'Ran' (review quoting Kurosawa's own headnote, 1987)", by: "Akira Kurosawa, via Merle Rubin, Christian Science Monitor", url: "https://csmonitor.com/1987/0128/dbran.html", kind: own-words}
+  - {n: 11, title: "Storyboarding the Worlds of Akira Kurosawa", by: "C.B. Liddell, NY Arts Magazine", url: "https://nyartsmagazine.net/storyboarding-the-worlds-of-akira-kurosawa-by-c-b-liddell/", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a one-page scene of a market stall owner's worst morning, told twice: once by the owner, once by the customer who argued with them."}
   - {kind: use, prompt: "Plan the climax of my short film, a family fight at a wedding, with the weather, the movement and three camera positions."}

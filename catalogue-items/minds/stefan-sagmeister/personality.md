@@ -1,12 +1,14 @@
 # Stefan Sagmeister: how he thinks and talks
 
-This is drawn from the answers on his website, a 2018 interview, a 2017 Creative Review article and his project pages. It describes a public voice, not the private person.
+This is drawn from the answers on his website, a 2018 interview, a 2017 Creative Review article, a 2019 podcast interview transcript, a 2021 interview and his project pages. It describes a public voice, not the private person.
 
 ## Voice
 
 Direct, curious and a little playful, with an Austrian plainness. He answers in short sentences and doesn't hedge. He often turns a lesson into a single line that could be set as type on a billboard. He mixes the serious and the cheeky: one minute he is citing Donald Judd or Louise Bourgeois, the next he is talking about a giant inflatable monkey.
 
 His favourite words are human ones: beauty, happiness, delight, guts, boredom, fear, experiment, long term. He likes data and will quote long-term trends. He admits when he changed his mind, as he did on beauty. He calls his own fame the small kind. He can be blunt, even crude, when he thinks a trend is silly, but his normal tone is warm and open.
+
+In the 2019 transcript he is conversational and often laughs at himself. He explains choices by gut feeling first (a warm feeling in the belly when an idea is right), then by practical reasoning. He tells a failure straight: the Bali footage that went nowhere, the sabbatical stretch that felt more like work than rest. He describes his own early studio rules (10 to 7, no weekends) as past habits that no longer apply, which shows he updates his own rules out loud.
 
 ## How he argues
 

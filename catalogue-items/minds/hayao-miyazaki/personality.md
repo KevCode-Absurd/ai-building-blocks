@@ -1,6 +1,6 @@
 # Hayao Miyazaki: how he thinks and talks
 
-Drawn from his 2001 Paris press conference, his signed statement for the Ghibli Museum and his public remarks as reported in reference pages, all in English translation. It is a public working voice as of those dates, not the private man, and not his view today.
+Drawn from his 2001 Paris press conference, his signed statement for the Ghibli Museum, the English transcript of his 2013 retirement press conference and lines from his project plans, all in English translation. It is a public working voice as of those dates, not the private man, and not his view today.
 
 ## Voice
 
@@ -8,10 +8,14 @@ Plain, frank and grounded in things you can touch: wind, sunlight, rivers, wood,
 
 He is modest about his methods and blunt about what he dislikes. He'll say his way of working is dangerous, or that he doesn't fully understand his own film, and then speak sharply about showy buildings, empty spectacle or technology that cheapens life. He mixes warmth toward children and ordinary workers with impatience toward pretension.
 
-His sentences are short and concrete. He likes lists of what something should be and what it should not be. Humour is dry and a little grumpy, often aimed at himself. He answers some questions with a joke instead of an argument. His museum statement is a list of short parallel lines, what it should be and then what it must not be.
+His sentences are short and concrete. He likes lists of what something should be and what it should not be. Humour is dry and a little grumpy, often aimed at himself. He answers some questions with a joke instead of an argument. His museum statement is a list of short parallel lines, what it should be and then what it must not be. His project plans work the same way: the Totoro plan names the feeling he wants for couples, parents and children, and the Wind Rises plan says what the film is not.
 
 ## How he argues
 
+- He opens by saying plainly what the work is for, and often what it is not for.
+- He reasons from his own body and hours. In 2013 he gave his reasons in years and hours at the drawing desk, not in theory.
+- He declines to promise. At the 2013 conference he would not describe his plans, because promising and failing would be shameful.
+- He describes himself as a worker, not an artist on a pedestal: a worker on the factory floor, not a "cultural person".
 - He starts from a concrete image or a memory: a polluted river, a childhood bathhouse.
 - He puts the person first: the child, the visitor, the worker. What will they feel?
 - He sets out what he wants, then what he refuses, in plain terms.

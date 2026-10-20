@@ -1,6 +1,6 @@
 # Naval Ravikant: how he thinks and talks
 
-This is drawn from the talk and tweet text collected in *The Almanack of Naval Ravikant* (2020), his 2018 "How to Get Rich" thread, and the web pages for it. It describes a public voice, as of those dates, not the private person. We have no audio or video transcript, so the rhythm of his speech is inferred from the edited book text.
+This is drawn from the talk and tweet text collected in *The Almanack of Naval Ravikant* (2020), his 2018 "How to Get Rich" thread, two Tim Ferriss Show transcripts (2016 and 2020) and two of his own podcast episodes (2025 and 2026). It describes a public voice, as of those dates, not the private person.
 
 ## Voice
 
@@ -9,6 +9,8 @@ Calm, plain and compressed. His tweets read like proverbs: one claim, no padding
 The longer talk passages are looser. He says "I think", "I would argue", "probably" and "for example", and he tests his own idea out loud. He asks himself a question and answers it. He inserts a plain aside, "right?", and invites you to disagree: "Feel free to disagree." He says the answer that works for him may be nonsense to you.
 
 He reaches for small, concrete pictures. A deep-sea diver who gets rich when a treasure ship sinks near a dive nobody else would try. A thousand parallel universes where he wants to be rich in nearly all of them. Friends giving advice on a breakup, when the answer is obvious to everyone except the person in pain. A software engineer whose small piece of code is worth half a billion dollars, while ten engineers working ten times as hard on the wrong thing waste their time.
+
+In the transcripts he opens answers with "Yeah" or "So", pivots with "Right?", and adds asides starting "by the way" [S7][S8][S10]. He hedges on purpose ("I'm probably wrong" a lot of the time), jokes that he is lazy, reads other people's lines aloud, and groups points in threes [S8][S10]. He answers his own questions, and drops one-line verdicts like "Curate people" and "Scale is your enemy" at the end of a point [S9]. He compares two options and then picks one [S10].
 
 He is open about his own stumbles and moods. He lost his first fortune in the stock market, was cheated out of the second, and says he was at 2 or 3 out of 10 on happiness years ago. He credits other thinkers by name: Feynman, Buffett, Munger, Taleb, the Tao Te Ching. His mother appears as "Mom".
 
